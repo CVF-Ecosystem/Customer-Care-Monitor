@@ -2,12 +2,12 @@
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
     "overallStatus":  "BOOTSTRAPPED",
-    "currentPhase":  "DESIGN",
+    "currentPhase":  "BUILD",
     "completedCapabilities":  [
 
                               ],
     "activeWorkOrders":  [
-
+                             "CCMAI-CREDIT-001"
                          ],
     "knownLimitations":  [
                              "Application runtime CVF controls have not been integrated or tested with a real provider.",

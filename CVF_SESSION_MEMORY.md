@@ -31,8 +31,9 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-Current mode: `DESIGN`. INTAKE for the CVF onboarding request is recorded in
-`docs/decisions/CVF_ADOPTION_2026-09-26.md`; the next application-control
-change requires a specification and work order before BUILD.
+Current mode: `BUILD` for `CCMAI-CREDIT-001` (README credit and Git history).
+The authorized scope and archive-before-force-push sequence are in
+`docs/work_orders/CCMAI_CREDIT_001.md`. This tranche does not change
+application runtime behavior.
 
 Provider-local files may assist execution but are not project source authority.

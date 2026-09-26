@@ -1,8 +1,8 @@
 ﻿{
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
-    "currentMode":  "DESIGN",
-    "activePhase":  "DESIGN",
+    "currentMode":  "BUILD",
+    "activePhase":  "BUILD",
     "phaseModel":  [
                        "INTAKE",
                        "DESIGN",
@@ -13,9 +13,9 @@
                        "FREEZE"
                    ],
     "activeHandoff":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-    "nextAllowedMove":  "Design the first bounded application-control change, then specify behavior and issue a work order before BUILD.",
+    "nextAllowedMove":  "Execute CCMAI-CREDIT-001 within README/provenance scope; verify archive and rewritten main before REVIEW.",
     "parkedOperatorCheckpoint":  null,
-    "activeRole":  "ORCHESTRATOR",
+    "activeRole":  "IMPLEMENTATION_WORKER",
     "roleRoute":  "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
     "updatedAt":  "2026-09-26"
 }

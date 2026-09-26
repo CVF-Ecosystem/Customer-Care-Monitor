@@ -2,7 +2,15 @@
 
 Ứng dụng giám sát chất lượng chăm sóc khách hàng cho **một công ty hoặc một cá nhân trên mỗi bản cài đặt**. Ứng dụng lấy hội thoại từ các kênh đã kết nối, dùng AI đánh giá chất lượng hoặc phân loại, và cho người phụ trách xem kết quả, chi phí và nhật ký hoạt động.
 
-Đây là bản phát triển độc lập từ [Chat Quality Agent (CQA)](https://github.com/Blackbird081/chat-quality-agent). Repo CQA gốc được giữ nguyên. Mã gốc mang giấy phép [MIT của SePay](LICENSE). Bản sao hiện chưa có Git remote; không tự động đẩy thay đổi về CQA.
+Đây là dự án riêng của [Blackbird081](https://github.com/Blackbird081), phát triển từ mã nguồn [Chat Quality Agent (CQA)](https://github.com/tanviet12/chat-quality-agent) của SePay theo [giấy phép MIT](LICENSE). Các thay đổi của sản phẩm này được quản lý trong [repo Customer Care Monitor AI](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI).
+
+## Người phát triển
+
+- **Blackbird081** — chủ repo, định hướng và phát triển sản phẩm.
+- **Claude** — agent hỗ trợ phát triển.
+- **Codex** — agent hỗ trợ phát triển.
+
+SePay được ghi công là **nguồn mã CQA**, tách biệt với nhóm phát triển sản phẩm mới. Lịch sử đóng góp của repo nguồn được giữ ở [CQA upstream](https://github.com/tanviet12/chat-quality-agent) và [nhánh lưu trữ lịch sử nhập mã](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/tree/archive/cqa-import-history-2026-09-26).
 
 ## Phạm vi sản phẩm
 
@@ -40,4 +48,4 @@ Mặc định truy cập `http://localhost:8088`. Lần đầu, trang Setup yêu
 
 ## Nguồn gốc và giấy phép
 
-Fork được tạo từ CQA tại commit `6546574b23aded18d292c6382a06727baacfe3fe`. Tên module Go `github.com/vietbui/chat-quality-agent` hiện được giữ để không làm vỡ import nội bộ; đổi tên khi có remote phát hành riêng. Xem [LICENSE](LICENSE) để biết điều khoản MIT và ghi công tác giả gốc.
+Mã nền được nhập từ CQA tại commit `6546574b23aded18d292c6382a06727baacfe3fe`. Tên module Go `github.com/vietbui/chat-quality-agent` hiện được giữ để không làm vỡ import nội bộ; việc đổi đường dẫn module sẽ là một thay đổi riêng. [LICENSE](LICENSE) giữ thông báo bản quyền SePay và CVF-Ecosystem theo điều khoản MIT.
