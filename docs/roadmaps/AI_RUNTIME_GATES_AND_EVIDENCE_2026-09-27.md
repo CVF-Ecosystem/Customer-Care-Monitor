@@ -2,6 +2,8 @@
 
 **Trạng thái:** DRAFT / REVIEW_PENDING. **Ngày:** 2026-09-27. **Work order lập kế hoạch:** `CCMAI-ROADMAP-001`. **Rủi ro dự kiến khi triển khai:** tối thiểu R2 cho dữ liệu khách hàng, provider/network và governance runtime. Roadmap này không cấp quyền BUILD các tranche sản phẩm, gọi provider, đưa dữ liệu ra ngoài, triển khai production hoặc tuyên bố CVF đã kiểm soát AI runtime.
 
+**Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
+
 ## Mục tiêu
 
 Source of Truth (SoT) và gate tại máy phải quyết định trước khi gọi bất kỳ Agent/AI/LLM nào. Chỉ dùng Claude/Gemini/OpenAI/xAI khi dữ liệu nguồn đáng tin, quyền và ngân sách cho phép, và tác vụ thực sự cần phân tích ngữ nghĩa sâu hoặc tạo nhận xét mà quy tắc tại máy không giải quyết được. Mỗi kết quả phải giữ được nguồn, phiên bản quy tắc, quyết định điều phối, chi phí và trạng thái kiểm tra của con người. Tối ưu **tổng chi phí cho một kết quả đúng và hữu ích**, không chỉ số lần gọi LLM.
@@ -47,12 +49,15 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 3. **Đo cả hai phía của gate:** ghi số hội thoại đi mỗi nhánh, false negative/false positive trên tập gán nhãn, CPU/thời gian gate tại máy, token và phí của **những LLM thật sự được gọi**, độ trễ p50/p95, thời gian review của người, lỗi/retry và tỷ lệ proposal được chấp nhận. Giá chưa biết phải mang trạng thái `UNKNOWN`, không cộng như 0 thật.
 4. **Bằng chứng nguồn:** kết quả AI phải trỏ đến `conversation_id`, message ID/span, source version/digest, rule/prompt version, model/provider, quyết định route và receipt chi phí. Không coi chuỗi trích dẫn do model viết là bằng chứng đã đối chiếu.
 5. **Giữ dữ liệu tối thiểu:** machine gate xử lý trong ranh giới ứng dụng. Chỉ nhánh LLM được phép mới chuẩn bị phần hội thoại cần thiết, sau kiểm PII, thời gian lưu và quyền xem receipt.
+6. **Tái dùng có ranh giới:** trạng thái evidence, provenance, kết quả gate có kiểu, trace, admission và receipt là ứng viên hợp đồng chung. Adapter, taxonomy QC, SoT owner, risk/PII policy, quyền duyệt và rule pack thuộc từng dự án. Chỉ tách thành thư viện chung sau khi có SPEC và bằng chứng trên một dự án thứ hai; không ghi vào CVF core từ work order này.
 
 ## Trình tự tranche đề xuất
 
 ### S0 — Baseline và tập đánh giá được phép dùng
 
 Lập inventory luồng `sync -> job -> provider -> result -> notification`, các SoT hiện có và nơi nguồn có thể bị sai/stale; chốt dữ liệu pilot được phép dùng, nhãn QC/classification, ca âm và ca rủi ro cao. Đo baseline số call Agent/AI/LLM, token, phí thật/UNKNOWN, latency và thời gian người review. Khóa tiêu chí chấp nhận, ngưỡng false negative, phương pháp so sánh và rollback **trước** pilot. Nếu chưa có dữ liệu được phép dùng, chỉ làm thiết kế/synthetic; không gửi dữ liệu khách hàng tới bất kỳ provider nào.
+
+Chốt bảng ánh xạ từ hợp đồng chung trong [quyết định SoT-first](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md) sang SoT owner, adapter, rule pack và quyền xác nhận riêng của Customer-Care-Monitor-AI; ghi phần nào cần thay đổi nếu áp dụng cho một dự án khác.
 
 **Exit:** có corpus/version và danh sách lỗi cần bắt, kể cả chat trùng, chat rỗng, thiếu lịch sử, khiếu nại, prompt injection, PII và trường hợp nguồn bị sửa sau phân tích. Chưa claim cải thiện chi phí hay độ chính xác.
 
@@ -65,6 +70,8 @@ Sửa checkpoint đồng bộ: lỗi từng hội thoại/tin nhắn không th�
 ### S2 — Gate xác định tại máy trước AI
 
 Tạo một entry point dùng chung cho mọi job path (đơn/batch, thủ công/theo lịch, chạy lại). Đọc SoT đã version hóa rồi kiểm nguồn/provenance, quyền và phạm vi, dữ liệu đủ/đúng, trùng lặp, điều kiện loại trừ chắc chắn, PII và trạng thái đồng bộ. Thiết kế các câu hỏi nội bộ hẹp có đáp án hữu hạn như `có_tin_mới?`, `dữ_liệu_đủ?`, `thuộc_loại_quy_tắc_nào?`, `cần_người_xem?`; trả kết quả có kiểu, lý do và source refs. Nhánh cuối có version: `NO_AI`, `RULES_ONLY`, `NEEDS_LLM`, `HUMAN_REVIEW`, hoặc `DENY`. `NO_AI` dành cho item không đủ điều kiện chạy; `RULES_ONLY` chỉ cho kết quả mà quy tắc xác định và SoT đủ chứng minh. Không biến nhãn `UNKNOWN` thành auto-skip. Điều kiện bỏ qua đang nằm trong prompt chỉ chuyển vào gate nếu có thể định nghĩa và kiểm thử xác định; phần mơ hồ vẫn không được tự bỏ.
+
+SPEC của S2 phải tách hợp đồng gate và trace có thể tái dùng khỏi rule CSKH cụ thể. `source_ref`, snapshot/version, policy/rule version, reason codes và outcome cần được kiểm trên từng path trước khi cân nhắc chia sẻ module cho Shift hay dự án khác.
 
 **Exit:** shadow run trước; đối chiếu mọi quyết định với SoT và tập gán nhãn. Không bật auto-skip cho ca rủi ro cao. Receipt ghi source digest, policy/rule version, reason an toàn, nhánh quyết định và quyền override của người. Đo zero external call ở các nhánh local; không suy từ code đơn lẻ rằng mọi đường chạy đều đã được chặn.
 
@@ -107,3 +114,5 @@ Sau khi pilot được chấp nhận, rà soát toàn bộ hướng dẫn CQA k�
 ## Cổng quản trị
 
 Mỗi S0–S7 mở bằng INTAKE → DESIGN → SPEC → WORK_ORDER → BUILD → REVIEW → FREEZE hoặc kế thừa bằng chứng được ghi rõ ở giai đoạn sớm nhất còn mở. R2 cần reviewer độc lập, scope/path/effect/credential cụ thể và rollback. Bất kỳ claim nào rằng CVF phân loại rủi ro, lọc dữ liệu, chặn call, route provider, validate output hoặc audit AI tại runtime đều cần gọi provider API thật và lưu request/response đã làm sạch theo `AGENTS.md`; mock chỉ dùng cho UI structure. Roadmap hiện tại và static checks không đáp ứng cổng đó.
+
+Khi phát triển ứng dụng, work order được cấp quyền, mã/test và evidence là thẩm quyền cho trạng thái triển khai; roadmap chỉ là ý định. Role transition, rủi ro, reviewer độc lập, claim boundary và continuity phải được ghi ở từng tranche. Áp dụng nguyên tắc CVF về tách chuẩn bị dữ liệu khỏi quyền kết luận: core SOT3 là nguồn tham khảo có phạm vi, chưa được tích hợp vào runtime của ứng dụng này.

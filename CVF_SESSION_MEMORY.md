@@ -40,4 +40,6 @@ independent content/provenance review and inherited usage-flow verification.
 
 `CCMAI-ROADMAP-001` adds a source-grounded proposal for SoT-first local machine gates and AI cost control at `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`. TypeSafe/Jev is a source of decision-design patterns only; there is no Jev API/SDK or intermediary-service plan. It remains in REVIEW; no product BUILD or real-provider runtime claim follows from the roadmap.
 
+Owner amendment in REVIEW: `docs/decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md` proposes a reusable SoT-first filtering contract, with project-specific source adapters/rules and CVF phase, risk, evidence, and independent-review controls for application development. It is a proposal only, not a shared library or CVF SOT3 integration. Independent R2 review remains open.
+
 Provider-local files may assist execution but are not project source authority.

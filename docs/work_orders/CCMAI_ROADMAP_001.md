@@ -24,3 +24,9 @@ Mỗi tranche triển khai trong roadmap cần work order riêng, phân loại R
 ## Owner correction trong REVIEW
 
 Chỉ đạo mới thay thế phương án Jev-as-a-service trong bản BUILD đầu (`5a994d1`). Phạm vi sửa vẫn là roadmap, work order và continuity hiện có; không mở tích hợp Jev, không thay source ứng dụng. Bản sửa tiếp tục chờ independent R2 review.
+
+## Owner amendment trong REVIEW: mẫu tái sử dụng và quy tắc CVF
+
+Owner xác nhận phương pháp lọc dữ liệu SoT-first là use case có thể áp dụng cho nhiều dự án tương tự và yêu cầu áp dụng các quy tắc tốt của CVF khi phát triển ứng dụng này. Đây là sửa đổi DESIGN/SPEC trong cùng mục tiêu lập roadmap; phạm vi tài liệu mở thêm `docs/decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md` và `docs/decisions/README.md`, cùng roadmap, work order và continuity. Không sửa CVF core hoặc mã runtime.
+
+Acceptance của đợt sửa: quyết định kiến trúc phân biệt evidence, dữ liệu chuẩn hóa, fact được xác nhận và policy authority; định nghĩa hợp đồng quyết định có kiểu, nhánh local/AI/human, dấu vết nguồn và quy tắc; chỉ ra phần lõi có thể tái dùng và phần cấu hình riêng từng dự án; ánh xạ các phase, risk, role, review và bằng chứng CVF vào việc phát triển ứng dụng. Roadmap phải dẫn quyết định này và giữ đúng ranh giới: mẫu thiết kế chưa phải thư viện dùng chung, CVF SOT3 chưa được tích hợp vào ứng dụng, và chưa có proof provider thật cho runtime gate. Kiểm `git diff --check`, catalog và workspace doctor; độc lập R2 review trước FREEZE.

@@ -13,7 +13,7 @@
                        "FREEZE"
                    ],
     "activeHandoff":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-    "nextAllowedMove":  "Independent R2 review of CCMAI-ROADMAP-001 at docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md and CCMAI-IDENTITY-001 against docs/reviews/PRODUCT_IDENTITY_2026-09-27.md; retain CCMAI-DOCS-001 and CCMAI-CREDIT-001 in REVIEW. Runtime S0-S7 require separate work orders.",
+    "nextAllowedMove":  "Independent R2 review of CCMAI-ROADMAP-001 at docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md and docs/decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md, plus CCMAI-IDENTITY-001 against docs/reviews/PRODUCT_IDENTITY_2026-09-27.md; retain CCMAI-DOCS-001 and CCMAI-CREDIT-001 in REVIEW. Runtime S0-S7 require separate work orders.",
     "parkedOperatorCheckpoint":  null,
     "activeRole":  "ORCHESTRATOR",
     "roleRoute":  "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
