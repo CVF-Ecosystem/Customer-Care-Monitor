@@ -20,6 +20,12 @@
 
 Tình trạng từng kiểm soát CVF, phần chưa triển khai và thứ tự nâng cấp nằm tại [định hướng sản phẩm](docs/PRODUCT_DIRECTION.md). Các trang hướng dẫn cũ trong `docs/` vẫn là tài liệu kế thừa CQA và cần được cập nhật trước khi dùng làm hướng dẫn chính thức cho sản phẩm này.
 
+## Kiểm soát CVF cho thay đổi tiếp theo
+
+Đọc [AGENTS.md](AGENTS.md), [manifest](.cvf/manifest.json), [policy](.cvf/policy.json), [session memory](CVF_SESSION_MEMORY.md) và [documentation index](docs/INDEX.md) trước khi sửa repo. Core CVF nằm ở thư mục sibling `../.Controlled-Vibe-Framework-CVF`; trên máy mới chạy `scripts/initialize_cvf_clone.ps1` để lấy đúng commit đã ghim.
+
+Bootstrap, phạm vi kiểm soát và giới hạn của lần áp dụng này được ghi ở [quyết định CVF](docs/decisions/CVF_ADOPTION_2026-09-26.md) và [kết quả kiểm tra](docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md). Doctor xác nhận cấu trúc quản trị repo; các kiểm soát CVF ở runtime vẫn cần thiết kế và kiểm chứng riêng.
+
 ## Chạy từ source
 
 Yêu cầu Docker Compose. Sao chép `.env.example` thành `.env`, điền các secret và cấu hình cần thiết, sau đó chạy:

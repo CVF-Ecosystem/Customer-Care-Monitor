@@ -1,0 +1,21 @@
+﻿{
+    "schemaVersion":  "1.0",
+    "projectName":  "Customer-Care-Monitor-AI",
+    "overallStatus":  "BOOTSTRAPPED",
+    "currentPhase":  "DESIGN",
+    "completedCapabilities":  [
+
+                              ],
+    "activeWorkOrders":  [
+
+                         ],
+    "knownLimitations":  [
+                             "Application runtime CVF controls have not been integrated or tested with a real provider.",
+                             "Application feature status has not yet been assessed under the CVF module catalog.",
+                             "Workspace-wide gate has failures in unrelated sibling repositories."
+                         ],
+    "evidence":  [
+                     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md"
+                 ],
+    "updatedAt":  "2026-09-26"
+}
