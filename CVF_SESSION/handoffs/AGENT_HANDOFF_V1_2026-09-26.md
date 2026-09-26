@@ -8,7 +8,7 @@ Status: ACTIVE
 - Current mode: REVIEW
 - Active phase: REVIEW
 - Active role: ORCHESTRATOR
-- Next allowed move: Independent R2 review of CCMAI-IDENTITY-001 against `docs/reviews/PRODUCT_IDENTITY_2026-09-27.md`; retain CCMAI-DOCS-001 and CCMAI-CREDIT-001 in REVIEW.
+- Next allowed move: Independent R2 review of CCMAI-ROADMAP-001 at `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md` and CCMAI-IDENTITY-001 against `docs/reviews/PRODUCT_IDENTITY_2026-09-27.md`; retain CCMAI-DOCS-001 and CCMAI-CREDIT-001 in REVIEW. Runtime S0-S7 need separate work orders.
 - Parked operator checkpoint: none
 
 ## Seven-Step Control Chain
@@ -109,3 +109,10 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Role route continued IMPLEMENTATION_WORKER -> COMMIT_STEWARD ->
   SESSION_SYNC_STEWARD -> ORCHESTRATOR. REVIEW is open for an independent R2
   reviewer; no FREEZE or runtime CVF governance claim.
+
+## Active Tranche: CCMAI-ROADMAP-001
+
+- INTAKE: owner requested a source-grounded roadmap for runtime AI governance, pre-LLM machine filtering and TypeSafe Jev evaluation, together with a separate Shift roadmap source correction.
+- DESIGN/SPEC/WORK_ORDER: `docs/work_orders/CCMAI_ROADMAP_001.md` (R2 planning; documentation only). Existing product evidence is inherited; no runtime code or provider call is authorized by this work order.
+- Tranche transition and role acknowledgment before BUILD: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER. Allowed paths are the new roadmap, roadmap index, this handoff and related continuity/status files. The prior CCMAI-IDENTITY-001, CCMAI-DOCS-001 and CCMAI-CREDIT-001 reviews remain open.
+- BUILD result: `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md` records current source truth and a staged deterministic gate / provider admission / optional Jev pilot / human review plan. No application code, provider call or data was changed. Role route continues IMPLEMENTATION_WORKER -> COMMIT_STEWARD -> SESSION_SYNC_STEWARD -> ORCHESTRATOR after local checks; independent REVIEWER remains required before FREEZE.

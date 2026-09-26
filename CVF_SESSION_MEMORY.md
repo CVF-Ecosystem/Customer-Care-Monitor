@@ -38,4 +38,6 @@ module identity correction merged as PR #6. Evidence:
 The older `CCMAI-DOCS-001` and `CCMAI-CREDIT-001` remain in REVIEW for
 independent content/provenance review and inherited usage-flow verification.
 
+`CCMAI-ROADMAP-001` adds a source-grounded proposal for AI runtime gates, cost control and optional Jev evaluation at `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`. It remains in REVIEW; no product BUILD or real-provider runtime claim follows from the roadmap.
+
 Provider-local files may assist execution but are not project source authority.
