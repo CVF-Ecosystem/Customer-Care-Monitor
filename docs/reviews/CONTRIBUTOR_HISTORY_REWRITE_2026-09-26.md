@@ -42,10 +42,19 @@ GitHub documents that contributor displays and statistics may take about
 still incorrect after that period, the repository owner should contact GitHub
 Support. See [GitHub's contributor documentation](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-a-projects-contributors#contributor-data-is-stale-after-history-changes).
 
-Do not merge `archive/cqa-import-history-2026-09-26` into `main`: doing so would
-make the old commits reachable from the default branch again. The archive is
-preserved solely for attribution and audit. A repository content PR cannot
-directly invalidate GitHub's Contributors sidebar cache.
+The old history is preserved solely for attribution and audit. A repository
+content PR cannot directly invalidate GitHub's Contributors sidebar cache.
+
+## Owner-directed archive ref cleanup
+
+The recently pushed archive branch caused GitHub to show a Compare & pull
+request suggestion. To remove that branch prompt while preserving provenance,
+the archive was moved to annotated tag `cqa-import-history-2026-09-26`.
+The tag peels to the same old-main commit
+`3a9f5e4bb2c6a7186f11ac734c8b82812e503276`. README now links the tag.
+The remote archive branch was deleted only after the tag target was verified.
+The tag must not be merged into `main` because it contains the inherited CQA
+commits.
 
 ## Open review
 

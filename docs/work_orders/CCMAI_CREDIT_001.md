@@ -20,3 +20,12 @@ Owner authorization: active request and explicit choice to rewrite `main` histor
 6. Record observed results and open limits in the review/handoff.
 
 Stop if source attribution is lost, the archive ref is missing, the remote tip changed unexpectedly, or the CVF checks fail.
+
+## Owner-directed follow-up, 2026-09-26
+
+The owner asked to remove GitHub's Compare & pull request prompt for the
+recently pushed archive branch. Preserve its exact old-main commit in an
+annotated tag, verify the tag target remotely, update current README and
+continuity references, then delete the archive branch. Keep `main` free of
+the old CQA commit ancestry. This changes the archive ref type only; the
+original source attribution requirement remains in force.

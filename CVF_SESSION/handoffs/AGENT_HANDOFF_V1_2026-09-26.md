@@ -57,10 +57,13 @@ independent reviewer.
 - Role route: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR ->
   IMPLEMENTATION_WORKER -> COMMIT_STEWARD (archive and main pushed) ->
   SESSION_SYNC_STEWARD (evidence and continuity synchronized) -> ORCHESTRATOR.
-- BUILD result: archive branch preserves old main at `3a9f5e4`; rewritten main
+- BUILD result: archive tag preserves old main at `3a9f5e4`; rewritten main
   reached `4d95f9a` with Blackbird081 as commit author and Claude/Codex
   co-author trailers. See `docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md`.
 - REVIEW remains open for independent human review and GitHub sidebar refresh.
+- Owner-directed follow-up: the archive branch was replaced by tag
+  `cqa-import-history-2026-09-26` at the same old-main commit to clear the
+  branch's Compare & pull request suggestion. README now links the tag.
 - Claim boundary: README and Git provenance only; no CVF runtime claim.
 
 ## Claim Boundary

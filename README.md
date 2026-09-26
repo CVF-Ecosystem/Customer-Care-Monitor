@@ -10,7 +10,7 @@
 - **Claude** — agent hỗ trợ phát triển.
 - **Codex** — agent hỗ trợ phát triển.
 
-SePay được ghi công là **nguồn mã CQA**, tách biệt với nhóm phát triển sản phẩm mới. Lịch sử đóng góp của repo nguồn được giữ ở [CQA upstream](https://github.com/tanviet12/chat-quality-agent) và [nhánh lưu trữ lịch sử nhập mã](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/tree/archive/cqa-import-history-2026-09-26).
+SePay được ghi công là **nguồn mã CQA**, tách biệt với nhóm phát triển sản phẩm mới. Lịch sử đóng góp của repo nguồn được giữ ở [CQA upstream](https://github.com/tanviet12/chat-quality-agent) và [tag lưu trữ lịch sử nhập mã](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/tree/cqa-import-history-2026-09-26).
 
 ## Phạm vi sản phẩm
 

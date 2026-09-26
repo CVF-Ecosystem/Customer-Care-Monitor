@@ -11,6 +11,6 @@ The owner requested that this repository present Blackbird081 as its human proje
 
 Preserve the current complete history in the remote branch `archive/cqa-import-history-2026-09-26`. Rebuild `main` from source-tree milestones as an independent product history, with Blackbird081 as project importer and Claude/Codex co-author trailers where their assistance actually occurred. Use `--force-with-lease` against the inspected remote tip. Keep the source reference and SePay copyright in README/LICENSE. Do not change application source or pretend the imported CQA code was originally written by the project owner.
 
-The archive branch retains the original authorship and commit chronology. GitHub may refresh the Contributors display asynchronously after the default branch changes. The repo's CVF runtime status is outside this tranche.
+The archive branch initially retained the original authorship and commit chronology. At the owner's later request to remove GitHub's Compare & pull request prompt, that ref was moved to annotated tag `cqa-import-history-2026-09-26` at the same commit. GitHub may refresh the Contributors display asynchronously after the default branch changes. The repo's CVF runtime status is outside this tranche.
 
 Source: [GitHub contributor graph rules](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-a-projects-contributors), [GitHub co-author trailers](https://docs.github.com/en/pull-requests/how-tos/commit-changes/creating-a-commit-with-multiple-authors).
