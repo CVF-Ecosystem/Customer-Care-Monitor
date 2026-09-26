@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR
-- Next allowed move: Independent human review of CCMAI-DOCS-001 and CCMAI-CREDIT-001; verify inherited usage flows with a running installation before removing warnings or FREEZE.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: IMPLEMENTATION_WORKER
+- Next allowed move: Restore Pages deployment for CCMAI-DOCS-001, verify GitHub Actions and public URL, then return to REVIEW; independent review of docs and contributor history remains open.
 - Parked operator checkpoint: none
 
 ## Seven-Step Control Chain
@@ -86,3 +86,6 @@ CVF controls the application runtime or that a provider-backed test passed.
   inherited unverified pages are marked. VitePress build passed with Node 24.
   Role route continued IMPLEMENTATION_WORKER -> COMMIT_STEWARD ->
   SESSION_SYNC_STEWARD -> ORCHESTRATOR. Independent REVIEWER is still needed.
+- Owner-directed Pages follow-up: the owner selected GitHub Actions as Pages
+  source. Pages API confirms workflow mode and target URL. Role transition
+  ORCHESTRATOR -> IMPLEMENTATION_WORKER acknowledged for restoring docs deploy.

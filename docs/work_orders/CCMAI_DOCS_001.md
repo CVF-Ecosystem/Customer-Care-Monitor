@@ -18,3 +18,7 @@ Không đổi mã ứng dụng, workflow phát hành, dữ liệu production, se
 ## Kết quả BUILD
 
 Các trang cốt lõi đã viết lại; các trang nghiệp vụ chưa kiểm chứng được gắn cảnh báo. `npm run docs:build` PASS với Node.js 24. Báo cáo và giới hạn: `docs/reviews/USER_DOCS_AUDIT_2026-09-26.md`. Chờ kiểm tra độc lập trước khi FREEZE hoặc bỏ cảnh báo kế thừa.
+
+## Owner-directed Pages follow-up
+
+Owner chọn GitHub Actions làm Pages source và yêu cầu tiếp tục xuất bản tài liệu. Khôi phục upload artifact/deploy trên `main`; pull request chỉ build. Xác nhận Pages API đã trả `build_type: workflow` và URL dự kiến `https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/`. Kiểm tra workflow, URL công khai và ghi giới hạn; không thay đổi nội dung ứng dụng hay tuyên bố CVF runtime.
