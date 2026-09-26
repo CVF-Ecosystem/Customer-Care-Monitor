@@ -25,6 +25,28 @@ Risk: R2; independent human review remains required.
   populated. GitHub's computed display must be checked again after refresh;
   this record does not claim that all three avatars already appear.
 
+## Follow-up: GitHub sidebar cache
+
+The owner observed a five-avatar Contributors sidebar after the rewrite: the
+two inherited CQA accounts remained visible alongside Blackbird081, Claude,
+and Codex. On recheck, the REST contributors endpoint returned Blackbird081
+with six contributions; the repository statistics endpoint returned HTTP 202
+while GitHub calculated the data. The six commits currently on `main` have
+Blackbird081 as primary author, and the old history remains on the archive
+branch only. Thus the sidebar currently disagrees with the default-branch
+history and API. This is an observed display discrepancy, not evidence that
+the rewrite failed.
+
+GitHub documents that contributor displays and statistics may take about
+24 hours to refresh after a force-push or history rewrite. If the display is
+still incorrect after that period, the repository owner should contact GitHub
+Support. See [GitHub's contributor documentation](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-a-projects-contributors#contributor-data-is-stale-after-history-changes).
+
+Do not merge `archive/cqa-import-history-2026-09-26` into `main`: doing so would
+make the old commits reachable from the default branch again. The archive is
+preserved solely for attribution and audit. A repository content PR cannot
+directly invalidate GitHub's Contributors sidebar cache.
+
 ## Open review
 
 An independent human reviewer should compare the archive and new main refs,
