@@ -1,6 +1,6 @@
 # CCMAI-IDENTITY-001: product identity and Go module
 
-Status: BUILD. Risk: R2 (Go import path and release identity touch build/runtime surfaces).
+Status: REVIEW. Risk: R2 (Go import path and release identity touch build/runtime surfaces).
 
 ## INTAKE / DESIGN / SPEC
 
@@ -16,3 +16,5 @@ The backend Go module lives under `backend/`, so its canonical module path is `g
 - No database schema or data migration, provider call, secrets, or CVF runtime governance claim.
 
 REVIEW requires checking that old Go import strings are gone, all builds pass, MIT notices remain, and public README no longer reads as a CQA migration note. Independent review remains required before FREEZE.
+
+Build evidence and remaining review boundary: `docs/reviews/PRODUCT_IDENTITY_2026-09-27.md`.

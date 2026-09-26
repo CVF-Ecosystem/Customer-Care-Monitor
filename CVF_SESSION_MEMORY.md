@@ -31,8 +31,10 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-Current mode: `BUILD` for `CCMAI-IDENTITY-001`: owner-directed README and Go
-module identity correction. Authority: `docs/work_orders/CCMAI_IDENTITY_001.md`.
+Current mode: `REVIEW` for `CCMAI-IDENTITY-001`: owner-directed README and Go
+module identity correction merged as PR #6. Evidence:
+`docs/reviews/PRODUCT_IDENTITY_2026-09-27.md`. Authority:
+`docs/work_orders/CCMAI_IDENTITY_001.md`.
 The older `CCMAI-DOCS-001` and `CCMAI-CREDIT-001` remain in REVIEW for
 independent content/provenance review and inherited usage-flow verification.
 
