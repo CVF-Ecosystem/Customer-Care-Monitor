@@ -46,4 +46,6 @@ Current owner-accepted direction (2026-09-27): finish the CSKH evidence-to-inter
 
 `CCMAI-DATABASE-001` changes the fresh-install MySQL schema default from `cqa` to `CCMA`; explicit legacy `DB_NAME=cqa` remains supported and no data migration is implied. `docs/specs/DATABASE_FILTER_PIPELINE_2026-09-27.md` places cheap SQL candidate selection before Go snapshot/policy/rule/admission and provider resolution. It absorbs projection, bounded batching/cache/spend/observability lessons from `Blackbird081/pg-jev` without adopting PostgreSQL, the pg-jev extension or TypeSafe API. BUILD validation is recorded at `docs/reviews/DATABASE_DEFAULT_AND_FILTER_DESIGN_2026-09-27.md`; independent R2 review remains open and the machine gate is still proposal-only.
 
+Docker follow-up (2026-09-27): an isolated fresh MySQL 8 Compose volume created exact schema `CCMA` with the expected `utf8mb4` / `utf8mb4_unicode_ci`; no application schema `cqa` was created. The configured application user passed a disposable DDL/DML probe. All validation project resources and the temporary `.env` were removed. This does not validate migration of an existing database.
+
 Provider-local files may assist execution but are not project source authority.

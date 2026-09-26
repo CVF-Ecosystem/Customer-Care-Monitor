@@ -18,12 +18,15 @@
 - `C:\Program Files\Go\bin\go.exe test ./config`: PASS.
 - `C:\Program Files\Go\bin\go.exe build ./...`: PASS.
 - `docker compose config --quiet` using a temporary ignored `.env` copied from `.env.example` and validation-only environment values: PASS. The temporary `.env` was removed.
+- Live fresh-volume Compose validation using isolated project `ccmai-db-validation-20260927a`: PASS. MySQL 8 reached `healthy`; `information_schema` returned exact schema `CCMA` with `utf8mb4` / `utf8mb4_unicode_ci`, and returned no application schema named `cqa`.
+- Application user validation: PASS. User `cqa` connected to database `CCMA`, observed the expected charset/collation, then created, inserted, selected and dropped `ccma_validation_probe`. The final table-existence count was `0`.
+- Isolation cleanup: PASS. The validation container, network and project-scoped volume were removed with Compose; label-based follow-up found no remaining project container or volume. The ignored `.env` containing validation-only values was removed.
 - `npm run docs:build` with the local Node path: PASS. Initial build exposed links from public docs to governance folders excluded by VitePress; those references were changed to source-repo paths and the rerun passed.
 - Governed catalog `-Check`: PASS.
 - Local Markdown link resolution for changed product/governance pages: PASS.
 - `git diff --check`: PASS at pre-commit validation.
 
-Docker Desktop was not running, so no MySQL container or data migration test was attempted. Compose rendering does not prove a fresh MySQL volume was initialized. No provider API was called; this artifact makes no CVF runtime-governance claim.
+The live check proves initialization behavior only for a new disposable MySQL volume. It does not test or authorize migration of an existing `cqa` database. No provider API was called; this artifact makes no CVF runtime-governance claim.
 
 ## Review focus
 

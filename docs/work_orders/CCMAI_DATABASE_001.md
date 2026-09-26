@@ -23,8 +23,12 @@ Allowed paths:
 
 Không sửa schema/table, không di chuyển/xóa database, không sửa provider runtime, không gọi API, không đưa credential vào repo. Integration-test fallback database `cqa` là test fixture độc lập và không thuộc default production config.
 
+Owner-directed validation follow-up (2026-09-27): được phép tạo một Compose project, container, volume và schema hoàn toàn cô lập bằng dữ liệu giả để kiểm chứng fresh install. Phép thử có thể tạo/ghi/xóa một probe table trong schema cô lập nhằm xác minh quyền AutoMigrate/DML của application user; phải dùng tên project riêng, không kết nối database hiện hữu, không dùng credential thật, và phải dọn container/volume cùng `.env` tạm sau phép thử.
+
 ## Evidence / failure conditions
 
 Chạy `go test ./config`, render/validate Compose config với secret giả cục bộ, catalog `-Check`, workspace doctor và `git diff --check`. Dừng nếu default không nhất quán, Compose không render, hoặc tài liệu có thể khiến bản cài cũ tự chuyển schema. BUILD xong chuyển REVIEW; independent reviewer cần kiểm upgrade boundary và claim về `pg-jev` trước FREEZE.
+
+Validation follow-up phải chứng minh schema được tạo đúng tên/case `CCMA`, charset/collation dự kiến, không tự tạo schema `cqa`, application user kết nối được và hoàn tất probe DDL/DML. Kết quả và cleanup được ghi vào BUILD evidence; đây không phải migration test hay bằng chứng CVF runtime governance.
 
 Role route: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER → COMMIT_STEWARD → SESSION_SYNC_STEWARD → ORCHESTRATOR. REVIEWER độc lập vẫn cần.
