@@ -12,9 +12,9 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
-	"github.com/vietbui/chat-quality-agent/config"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
 )
 
 // pairKey là một cặp (công việc, cuộc chat) — đơn vị mà quy tắc giữ lại áp dụng.

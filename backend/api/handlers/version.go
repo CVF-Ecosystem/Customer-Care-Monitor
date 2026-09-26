@@ -17,7 +17,7 @@ import (
 var AppVersion = "dev"
 
 const (
-	githubReleasesURL = "https://api.github.com/repos/tanviet12/chat-quality-agent/releases/latest"
+	githubReleasesURL = "https://api.github.com/repos/CVF-Ecosystem/Customer-Care-Monitor-AI/releases/latest"
 	cacheDuration     = 1 * time.Hour
 )
 

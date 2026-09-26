@@ -1,22 +1,24 @@
-# Giới thiệu
+# Giới thiệu Customer Care Monitor AI
 
-**Customer Care Monitor AI** là bản fork của [Chat Quality Agent (CQA)](https://github.com/tanviet12/chat-quality-agent) cho **một công ty hoặc cá nhân trên mỗi bản cài đặt**. Mã CQA của SePay là nền tảng; các quyền tác giả nguồn vẫn được giữ trong [LICENSE](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/blob/main/LICENSE).
+Customer Care Monitor AI giúp một công ty hoặc cá nhân theo dõi chất lượng chăm sóc khách hàng từ các hội thoại. Mỗi bản cài đặt có một workspace riêng. Chủ workspace cấu hình kênh, quy tắc đánh giá và người cùng làm việc.
 
-## Khác biệt với CQA
+## Luồng sử dụng
 
-| Chủ đề | CQA gốc | Bản fork này |
-|---|---|---|
-| Phạm vi | Nhiều công ty trên một hệ thống | Một workspace cố định, tạo khi Setup |
-| Quản trị công ty | Tạo, chuyển, xóa công ty | Không có các luồng này; API tạo/xóa trả lỗi |
-| Phân tích AI | Kết quả QC và phân loại | Kế thừa chức năng; bổ sung kiểm tra trường/bằng chứng và ghi kết quả nguyên tử trong analyzer |
-| CVF | Không là hợp đồng của bản fork | Có kiểm soát **thay đổi repository** qua manifest, policy, work order, review, doctor |
-| CVF runtime | Chưa có bằng chứng của bản fork | Chưa tích hợp gate rủi ro/phê duyệt/audit/provider theo CVF vào luồng AI; không được coi doctor là kiểm chứng runtime |
-| Phân phối | Script và Docker image CQA | Hiện chỉ hướng dẫn build từ source của repo này |
+1. Kết nối Zalo OA, Facebook Messenger hoặc Pancake và đồng bộ hội thoại.
+2. Tạo công việc đánh giá chất lượng hoặc phân loại theo quy tắc của bạn.
+3. Xem kết quả, lọc cuộc hội thoại cần chú ý và theo dõi chi phí AI.
+4. Đọc lại hội thoại và bằng chứng trước khi đưa ra quyết định.
 
-Ứng dụng kế thừa đồng bộ Zalo OA, Facebook Messenger, Pancake; công việc QC/phân loại; dashboard; thông báo; nhật ký chi phí. Kết quả AI là **đề xuất hỗ trợ người phụ trách**, chưa có hàng đợi phê duyệt và trạng thái xác nhận của con người. [Định hướng sản phẩm](/PRODUCT_DIRECTION) ghi chi tiết phần đã có và chưa có.
+Kết quả AI hiện là gợi ý. Ứng dụng chưa có hàng đợi phê duyệt hoặc trạng thái xác nhận chính thức của người duyệt.
 
-## Đọc tiếp
+## Phạm vi hiện tại
+
+Workspace và admin được tạo cùng lúc ở trang Setup. Có thể thêm người dùng trong workspace; không có luồng quản lý nhiều công ty trên cùng một bản cài đặt. Các cơ chế CVF hiện quản lý thay đổi trong repository, còn gate CVF ở luồng AI runtime là phần đang được phát triển. Xem [định hướng sản phẩm](/PRODUCT_DIRECTION).
+
+## Bắt đầu
 
 - [Cài đặt từ source](/guide/installation)
 - [Thiết lập lần đầu](/guide/initial-setup)
-- [Rà soát độ phù hợp của tài liệu kế thừa](/reviews/USER_DOCS_AUDIT_2026-09-26)
+- [Tình trạng các trang hướng dẫn](/reviews/USER_DOCS_AUDIT_2026-09-26)
+
+Sản phẩm được phát hành theo [MIT License](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/blob/main/LICENSE); các thông báo bản quyền cần thiết được giữ trong file đó.

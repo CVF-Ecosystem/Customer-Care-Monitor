@@ -11,11 +11,11 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/vietbui/chat-quality-agent/config"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
-	"github.com/vietbui/chat-quality-agent/pkg"
-	"github.com/vietbui/chat-quality-agent/storage"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/storage"
 )
 
 // Các khoá cài đặt của một công ty.

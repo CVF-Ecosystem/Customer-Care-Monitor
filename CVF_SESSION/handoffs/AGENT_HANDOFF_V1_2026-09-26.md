@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR
-- Next allowed move: Independent human review of CCMAI-DOCS-001 and CCMAI-CREDIT-001; verify inherited usage flows before removing warnings or FREEZE.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: IMPLEMENTATION_WORKER
+- Next allowed move: Execute CCMAI-IDENTITY-001: rewrite product README, rename Go module/imports, remove upstream release/docs routing, then validate and enter REVIEW.
 - Parked operator checkpoint: none
 
 ## Seven-Step Control Chain
@@ -93,3 +93,12 @@ CVF controls the application runtime or that a provider-backed test passed.
   home/installation/introduction/audit pages plus JS asset returned HTTP 200.
   Role route continued IMPLEMENTATION_WORKER -> COMMIT_STEWARD ->
   SESSION_SYNC_STEWARD -> ORCHESTRATOR. Independent content review remains open.
+
+## Active Tranche: CCMAI-IDENTITY-001
+
+- INTAKE: owner rejects migration-style README, wants a personal product and
+  SePay attribution confined to MIT LICENSE; asks to resolve inherited Go path.
+- DESIGN/SPEC/WORK_ORDER: `docs/work_orders/CCMAI_IDENTITY_001.md` (R2).
+- Role transition acknowledged: ORCHESTRATOR -> SPEC_AUTHOR ->
+  WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER. Source and build validation
+  precede COMMIT_STEWARD; independent review precedes FREEZE.

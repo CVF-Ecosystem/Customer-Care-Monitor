@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vietbui/chat-quality-agent/storage"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/storage"
 )
 
 // khoHong giả lập kho chính đang trục trặc.

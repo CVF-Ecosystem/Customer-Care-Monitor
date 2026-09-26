@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/vietbui/chat-quality-agent/ai"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai"
 )
 
 // MockAIProvider returns a predefined response without calling any API.

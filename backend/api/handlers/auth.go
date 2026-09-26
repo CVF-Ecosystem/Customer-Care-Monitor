@@ -9,11 +9,11 @@ import (
 	"unicode/utf8"
 
 	"github.com/gin-gonic/gin"
-	"github.com/vietbui/chat-quality-agent/api/middleware"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
-	"github.com/vietbui/chat-quality-agent/pkg"
-	"github.com/vietbui/chat-quality-agent/pkg/password"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg/password"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )

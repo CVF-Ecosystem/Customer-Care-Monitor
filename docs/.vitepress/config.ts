@@ -92,7 +92,7 @@ export default defineConfig({
 
     footer: {
       message: 'Phát hành theo giấy phép MIT',
-      copyright: 'Copyright 2026 CVF-Ecosystem; nguồn CQA © SePay',
+      copyright: 'Copyright 2026 Blackbird081',
     },
   },
 })

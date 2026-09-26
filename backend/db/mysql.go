@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/vietbui/chat-quality-agent/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

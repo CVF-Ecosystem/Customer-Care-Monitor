@@ -4,7 +4,7 @@
     <v-alert v-if="demoStatus && !demoStatus.has_data" type="info" variant="tonal" class="mb-4" prominent>
       <div>
         <div class="text-subtitle-1 font-weight-bold mb-1">Chào mừng! Bắt đầu với dữ liệu demo</div>
-        <div class="text-body-2 mb-3">Hệ thống chưa có dữ liệu. Nhập dữ liệu demo để trải nghiệm ngay cách AI đánh giá chất lượng CSKH và phân loại cuộc chat tự động. Dữ liệu giả lập ~220 cuộc chat từ SePay Coffee.</div>
+        <div class="text-body-2 mb-3">Hệ thống chưa có dữ liệu. Nhập dữ liệu demo để trải nghiệm cách AI đánh giá chất lượng CSKH và phân loại cuộc chat. Dữ liệu mẫu chỉ dùng để thử tính năng.</div>
         <v-btn color="primary" variant="flat" :loading="importingDemo" @click="importDemo">
           <v-icon start>mdi-database-import</v-icon>
           Nhập dữ liệu demo

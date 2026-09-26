@@ -6,8 +6,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
 )
 
 // TenantContext extracts tenant_id from URL param and verifies user has access.

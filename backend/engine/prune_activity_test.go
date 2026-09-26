@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
-	"github.com/vietbui/chat-quality-agent/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
 )
 
 // seedActivityLogs dựng nhật ký cũ và mới cho một tenant riêng.

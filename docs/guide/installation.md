@@ -1,6 +1,6 @@
 # Cài đặt từ source
 
-Repo này hiện **chưa có script cài đặt hoặc Docker image phát hành riêng**. Hãy build từ source của Customer Care Monitor AI. Không chạy `install.sh`, `docker-compose.hub.yml` hoặc image từ CQA gốc cho bản fork này.
+Hiện chưa có script cài đặt hoặc Docker image chính thức. Hãy build Customer Care Monitor AI từ source của repo này.
 
 ## Chuẩn bị
 
@@ -30,6 +30,6 @@ Trang Setup tạo **tên công ty/cá nhân, admin và workspace trong cùng m�
 
 ## Lưu ý dữ liệu cũ
 
-Bản fork chỉ chấp nhận tối đa một workspace trong database. Nếu đưa database CQA cũ có nhiều công ty vào, ứng dụng sẽ dừng khởi động thay vì tự chọn một công ty và che dữ liệu còn lại. Cần kế hoạch chuyển đổi riêng và sao lưu đã kiểm chứng trước khi nhập dữ liệu cũ.
+Ứng dụng chỉ chấp nhận tối đa một workspace trong database. Nếu nhập database có nhiều công ty, ứng dụng sẽ dừng khởi động thay vì tự chọn một công ty và che dữ liệu còn lại. Cần kế hoạch chuyển đổi riêng và sao lưu đã kiểm chứng trước khi nhập dữ liệu cũ.
 
 `docker compose down` dừng dịch vụ và giữ volume. `docker compose down -v` xóa các volume dữ liệu; chỉ dùng khi chủ động hủy bản cài đặt.

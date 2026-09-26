@@ -10,11 +10,11 @@ import (
 
 	"path/filepath"
 
-	"github.com/vietbui/chat-quality-agent/config"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
-	"github.com/vietbui/chat-quality-agent/storage"
-	"github.com/vietbui/chat-quality-agent/storagecfg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/storage"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/storagecfg"
 )
 
 // MigrateFiles chuyển file đính kèm đang nằm trên đĩa máy chủ lên S3.

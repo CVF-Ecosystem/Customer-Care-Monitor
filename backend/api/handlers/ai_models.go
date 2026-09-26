@@ -8,12 +8,12 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/vietbui/chat-quality-agent/ai/catalog"
-	"github.com/vietbui/chat-quality-agent/api/middleware"
-	"github.com/vietbui/chat-quality-agent/config"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
-	"github.com/vietbui/chat-quality-agent/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai/catalog"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
 )
 
 // Danh sách model đổi rất hiếm, nên bản lưu dùng được cả ngày.

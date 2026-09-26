@@ -274,7 +274,7 @@
                 color="primary"
                 size="small"
                 prepend-icon="mdi-book-open-variant"
-                href="https://tanviet12.github.io/chat-quality-agent/guide/s3-storage.html"
+                href="https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/guide/s3-storage.html"
                 target="_blank"
               >
                 {{ $t('storage_guide') }}

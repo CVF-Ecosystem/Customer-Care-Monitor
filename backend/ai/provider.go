@@ -3,7 +3,7 @@ package ai
 import (
 	"context"
 
-	"github.com/vietbui/chat-quality-agent/ai/pricing"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai/pricing"
 )
 
 // AIResponse contains the AI response text and usage metrics.

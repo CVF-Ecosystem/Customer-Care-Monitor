@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vietbui/chat-quality-agent/ai"
-	"github.com/vietbui/chat-quality-agent/config"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
-	"github.com/vietbui/chat-quality-agent/notifications"
-	"github.com/vietbui/chat-quality-agent/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/notifications"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
 )
 
 // Analyzer executes analysis jobs: loads messages, calls AI, saves results.

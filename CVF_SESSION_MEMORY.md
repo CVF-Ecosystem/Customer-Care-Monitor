@@ -31,11 +31,9 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-Current mode: `REVIEW` for the completed Pages publishing follow-up in
-`CCMAI-DOCS-001`. The active work order is `docs/work_orders/CCMAI_DOCS_001.md` and
-evidence is `docs/reviews/USER_DOCS_AUDIT_2026-09-26.md`. The older
-`CCMAI-CREDIT-001` remains in REVIEW for independent human review and a
-refreshed GitHub Contributors display. Neither tranche changes application
-runtime behavior.
+Current mode: `BUILD` for `CCMAI-IDENTITY-001`: owner-directed README and Go
+module identity correction. Authority: `docs/work_orders/CCMAI_IDENTITY_001.md`.
+The older `CCMAI-DOCS-001` and `CCMAI-CREDIT-001` remain in REVIEW for
+independent content/provenance review and inherited usage-flow verification.
 
 Provider-local files may assist execution but are not project source authority.

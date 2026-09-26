@@ -1,4 +1,4 @@
-module github.com/vietbui/chat-quality-agent
+module github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend
 
 go 1.26.0
 

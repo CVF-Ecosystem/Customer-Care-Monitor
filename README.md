@@ -1,64 +1,50 @@
 # Customer Care Monitor AI
 
-Ứng dụng giám sát chất lượng chăm sóc khách hàng cho **một công ty hoặc một cá nhân trên mỗi bản cài đặt**. Ứng dụng lấy hội thoại từ các kênh đã kết nối, dùng AI đánh giá chất lượng hoặc phân loại, và cho người phụ trách xem kết quả, chi phí và nhật ký hoạt động.
+**Theo dõi chất lượng chăm sóc khách hàng từ các cuộc hội thoại, trong một không gian làm việc của riêng bạn.**
 
-Đây là dự án riêng của [Blackbird081](https://github.com/Blackbird081), phát triển từ mã nguồn [Chat Quality Agent (CQA)](https://github.com/tanviet12/chat-quality-agent) của SePay theo [giấy phép MIT](LICENSE). Các thay đổi của sản phẩm này được quản lý trong [repo Customer Care Monitor AI](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI).
+Customer Care Monitor AI là sản phẩm của [Blackbird081](https://github.com/Blackbird081), dành cho một công ty hoặc cá nhân trên mỗi bản cài đặt. Ứng dụng tập hợp hội thoại từ các kênh đã kết nối, dùng AI hỗ trợ đánh giá chất lượng và phân loại nội dung, rồi trình bày kết quả để người phụ trách kiểm tra.
 
-## Người phát triển
+## Bạn có thể làm gì?
 
-- **Blackbird081** — chủ repo, định hướng và phát triển sản phẩm.
-- **Claude** — agent hỗ trợ phát triển.
-- **Codex** — agent hỗ trợ phát triển.
+- Kết nối Zalo OA, Facebook Messenger và Pancake; đồng bộ cuộc hội thoại và tin nhắn.
+- Tạo công việc đánh giá chất lượng hoặc phân loại hội thoại theo quy tắc của mình.
+- Xem kết quả, tìm cuộc hội thoại cần chú ý, theo dõi chi phí AI và nhật ký hoạt động.
+- Mời người cùng làm việc và phân quyền trong **một workspace** của bản cài đặt.
 
-SePay được ghi công là **nguồn mã CQA**, tách biệt với nhóm phát triển sản phẩm mới. Lịch sử đóng góp của repo nguồn được giữ ở [CQA upstream](https://github.com/tanviet12/chat-quality-agent) và [tag lưu trữ lịch sử nhập mã](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/tree/cqa-import-history-2026-09-26).
+Kết quả AI là **gợi ý để con người xem xét**. Ứng dụng hiện chưa có bước xác nhận chính thức của người duyệt; không nên dùng điểm số hoặc nhãn AI làm quyết định cuối cùng khi chưa kiểm tra hội thoại và bằng chứng.
 
-## Khác gì so với CQA gốc?
+## Bắt đầu
 
-| Nội dung | CQA gốc | Customer Care Monitor AI hiện tại |
-|---|---|---|
-| Đối tượng sử dụng | Một hệ thống có thể quản lý nhiều công ty | Một bản cài đặt dành cho một công ty hoặc cá nhân; workspace được tạo cùng admin đầu tiên |
-| Công ty/workspace | Có luồng tạo, chuyển và xóa công ty | Các luồng đó bị khóa; dữ liệu cũ có nhiều workspace bị chặn khi khởi động |
-| Mã và tính năng kế thừa | Đồng bộ kênh, công việc AI, kết quả, thống kê | Giữ nền tảng CQA và bổ sung kiểm tra đầu ra AI, trạng thái lỗi và ghi kết quả nguyên tử cho analyzer |
-| CVF trong quy trình phát triển | Không phải phạm vi của repo nguồn | Thay đổi repo đi qua manifest, policy, trạng thái phiên, work order, review và kiểm tra cấu trúc CVF |
-| CVF trong luồng AI của ứng dụng | Không có khẳng định từ bản fork | **Chưa tích hợp và chưa kiểm chứng** gate rủi ro, phê duyệt, audit và provider routing theo CVF ở runtime |
-| Cài đặt/phát hành | Script và image CQA gốc | Build từ source của repo này; chưa có image hoặc release chính thức cho bản fork |
-
-Vì vậy, “có CVF tham gia kiểm soát” hiện có nghĩa là **kiểm soát cách repo này được thay đổi và ghi bằng chứng**. Nó chưa có nghĩa rằng mọi phản hồi AI trong ứng dụng đã đi qua CVF. [Bản đồ trạng thái và lộ trình](docs/PRODUCT_DIRECTION.md) nêu rõ phần đã có, phần mới là kế hoạch.
-
-## Phạm vi sản phẩm
-
-- Một workspace được tạo cùng tài khoản quản trị đầu tiên. Có thể thêm nhiều nhân viên và phân quyền trong workspace đó.
-- Không có luồng tạo, chuyển hoặc xóa công ty/workspace qua giao diện hay API. Dữ liệu cũ có nhiều workspace sẽ bị chặn khi khởi động để xử lý chuyển đổi một cách có chủ đích.
-- Các cột `tenant_id` và đường dẫn API `/tenants/:tenantId` vẫn là khóa phạm vi nội bộ để giữ tương thích với mã CQA. Chúng không thể hiện mô hình SaaS nhiều công ty.
-- Kết quả AI là **đề xuất đánh giá** dựa trên hội thoại. Chưa có quy trình xác nhận của con người để biến kết quả thành kết luận chính thức.
-
-## Chức năng hiện có
-
-- Kết nối Zalo OA, Facebook Messenger và Pancake theo khả năng kế thừa từ CQA.
-- Đánh giá QC, phân loại hội thoại, thống kê, nhật ký chi phí AI và gửi thông báo.
-- Kiểm tra trường bắt buộc và bằng chứng trong phản hồi AI trước khi lưu. Batch phải trả đủ kết quả và giữ đúng liên kết với từng hội thoại.
-- Lưu các bản ghi kết quả của một hội thoại trong một transaction. Lượt chạy có lỗi được ghi `partial` hoặc `error` và không tiến mốc quét khi còn lỗi.
-
-Tình trạng từng kiểm soát CVF, phần chưa triển khai và thứ tự nâng cấp nằm tại [định hướng sản phẩm](docs/PRODUCT_DIRECTION.md). Xem [site hướng dẫn của bản fork](https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/) và [kết quả rà soát tài liệu](docs/reviews/USER_DOCS_AUDIT_2026-09-26.md) trước khi dùng các trang kế thừa CQA.
-
-## Kiểm soát CVF cho thay đổi tiếp theo
-
-Đọc [AGENTS.md](AGENTS.md), [manifest](.cvf/manifest.json), [policy](.cvf/policy.json), [session memory](CVF_SESSION_MEMORY.md) và [documentation index](docs/INDEX.md) trước khi sửa repo. Core CVF nằm ở thư mục sibling `../.Controlled-Vibe-Framework-CVF`; trên máy mới chạy `scripts/initialize_cvf_clone.ps1` để lấy đúng commit đã ghim.
-
-Bootstrap, phạm vi kiểm soát và giới hạn của lần áp dụng này được ghi ở [quyết định CVF](docs/decisions/CVF_ADOPTION_2026-09-26.md) và [kết quả kiểm tra](docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md). Doctor xác nhận cấu trúc quản trị repo; các kiểm soát CVF ở runtime vẫn cần thiết kế và kiểm chứng riêng.
-
-## Chạy từ source
-
-Yêu cầu Docker Compose. Sao chép `.env.example` thành `.env`, điền các secret và cấu hình cần thiết, sau đó chạy:
+Cần Docker và Docker Compose. Từ thư mục dự án:
 
 ```bash
+cp .env.example .env
+# Điền DB_PASSWORD, MYSQL_ROOT_PASSWORD, JWT_SECRET và ENCRYPTION_KEY trong .env
 docker compose up -d --build
 ```
 
-Mặc định truy cập `http://localhost:8088`. Lần đầu, trang Setup yêu cầu tên công ty hoặc cá nhân và tài khoản quản trị. Nếu dùng Let's Encrypt, đặt `HTTP_PORT=80` và `HTTPS_PORT=443` cùng domain hợp lệ. Script cài đặt, Compose image và release script của CQA đã được bỏ khỏi bản fork vì chúng triển khai image CQA gốc.
+Mở `http://localhost:8088`. Ở lần truy cập đầu tiên, nhập tên công ty hoặc cá nhân và tạo tài khoản quản trị. Workspace được tạo cùng tài khoản này; bạn không cần tạo thêm công ty sau khi đăng nhập.
 
-Để phát triển trực tiếp: backend dùng Go theo `backend/go.mod`, frontend dùng Node.js 24 và `npm ci` trong `frontend/`. Kiểm tra nhanh bằng `go test ./...` trong `backend/` và `npm run build` trong `frontend/`.
+Xem [hướng dẫn cài đặt và sử dụng](https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/). Bản này được build từ source; chưa có Docker image phát hành riêng.
 
-## Nguồn gốc và giấy phép
+## Phát triển dự án
 
-Mã nền được nhập từ CQA tại commit `6546574b23aded18d292c6382a06727baacfe3fe`. Tên module Go `github.com/vietbui/chat-quality-agent` hiện được giữ để không làm vỡ import nội bộ; việc đổi đường dẫn module sẽ là một thay đổi riêng. [LICENSE](LICENSE) giữ thông báo bản quyền SePay và CVF-Ecosystem theo điều khoản MIT.
+Backend dùng Go (module trong `backend/`), frontend dùng Vue và Node.js 24. Để kiểm tra khi sửa mã:
+
+```bash
+cd backend
+go test ./...
+go build ./...
+```
+
+```bash
+cd frontend
+npm ci
+npm run build
+```
+
+Blackbird081 định hướng và phát triển sản phẩm, với Claude và Codex là hai agent hỗ trợ. Các thay đổi trong repo được quản lý theo [quy trình CVF](AGENTS.md). CVF hiện kiểm soát **quy trình thay đổi mã và tài liệu**; các cơ chế CVF cho luồng AI khi ứng dụng chạy vẫn là phần [đang được thiết kế](docs/PRODUCT_DIRECTION.md).
+
+## Giấy phép
+
+Dự án được phát hành theo [giấy phép MIT](LICENSE). File LICENSE chứa điều khoản và các thông báo bản quyền cần giữ lại đối với mã được sử dụng trong sản phẩm.

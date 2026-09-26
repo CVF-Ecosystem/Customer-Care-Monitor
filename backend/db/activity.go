@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/vietbui/chat-quality-agent/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
 )
 
 // LogActivity records a system activity for audit trail.

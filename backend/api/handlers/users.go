@@ -6,9 +6,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"github.com/vietbui/chat-quality-agent/api/middleware"
-	"github.com/vietbui/chat-quality-agent/db"
-	"github.com/vietbui/chat-quality-agent/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
 	"golang.org/x/crypto/bcrypt"
 )
 
