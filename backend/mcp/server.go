@@ -134,7 +134,7 @@ func handleInitialize() interface{} {
 			Tools: &ToolsCapability{ListChanged: false},
 		},
 		"serverInfo": ServerInfo{
-			Name:    "Chat Quality Agent",
+			Name:    "Customer Care Monitor AI",
 			Version: "1.0.0",
 		},
 	}

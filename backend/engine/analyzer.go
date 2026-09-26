@@ -298,8 +298,6 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 				}
 				continue
 			}
-			analyzedCount++
-
 			// Log AI usage + cost
 			cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
 			if !priceKnown {
@@ -323,7 +321,10 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 			count, passed, err := a.saveResults(run.ID, job.TenantID, conv.ID, job.JobType, aiResp.Content)
 			if err != nil {
 				log.Printf("[analyzer] save results error for %s: %v", conv.ID, err)
+				errorCount++
+				continue
 			}
+			analyzedCount++
 			issuesFound += count
 			if passed {
 				passCount++
@@ -357,7 +358,7 @@ complete:
 	runStatus := "success"
 	if analyzedCount == 0 && errorCount > 0 {
 		runStatus = "error"
-		run.ErrorMessage = fmt.Sprintf("AI errors: %d/%d conversations failed", errorCount, len(conversations))
+		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, len(conversations))
 	} else if truncated {
 		runStatus = "partial"
 		run.ErrorMessage = fmt.Sprintf("Hết thời gian chạy, mới xử lý %d/%d cuộc chat. Phần còn lại vào lần chạy sau.",
@@ -369,6 +370,9 @@ complete:
 			runStatus = "cancelled"
 			run.ErrorMessage = "Cancelled by user"
 		}
+	} else if errorCount > 0 {
+		runStatus = "partial"
+		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, len(conversations))
 	}
 	// Critical: final status update — retry on failure to prevent stuck "running" state
 	for retry := 0; retry < 3; retry++ {
@@ -393,7 +397,7 @@ complete:
 		}
 		// Chỉ dời mốc quét khi chạy trọn vẹn. Lần chạy bị cắt giữa chừng mà vẫn dời mốc
 		// thì phần chưa xử lý bị bỏ qua vĩnh viễn.
-		if !truncated {
+		if !truncated && errorCount == 0 {
 			updates["last_run_at"] = &finishedAt
 		}
 		db.DB.Model(&job).Updates(updates)
@@ -492,6 +496,14 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 		}
 		aiResponse = strings.TrimSpace(aiResponse)
 	}
+	if err := validateAIResult(jobType, []byte(aiResponse)); err != nil {
+		return 0, false, err
+	}
+	tx := db.DB.Begin()
+	if tx.Error != nil {
+		return 0, false, tx.Error
+	}
+	defer tx.Rollback()
 
 	switch jobType {
 	case "qc_analysis":
@@ -534,11 +546,13 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 			Confidence:     1.0,
 			CreatedAt:      now,
 		}
-		db.DB.Create(&evalResult)
+		if err := tx.Create(&evalResult).Error; err != nil {
+			return 0, false, err
+		}
 
 		// SKIP conversations have no violations — stop here
 		if qcResult.Verdict == "SKIP" {
-			return 0, false, nil
+			return 0, false, tx.Commit().Error
 		}
 
 		// Save individual violations
@@ -563,7 +577,9 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 				Confidence:     1.0,
 				CreatedAt:      now,
 			}
-			db.DB.Create(&result)
+			if err := tx.Create(&result).Error; err != nil {
+				return 0, false, err
+			}
 			count++
 		}
 
@@ -599,7 +615,9 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 				Confidence:     t.Confidence,
 				CreatedAt:      now,
 			}
-			db.DB.Create(&result)
+			if err := tx.Create(&result).Error; err != nil {
+				return 0, false, err
+			}
 			count++
 		}
 
@@ -608,7 +626,7 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 			evalDetail, _ := json.Marshal(map[string]interface{}{
 				"summary": classResult.Summary,
 			})
-			db.DB.Create(&models.JobResult{
+			if err := tx.Create(&models.JobResult{
 				ID:             pkg.NewUUID(),
 				JobRunID:       runID,
 				TenantID:       tenantID,
@@ -620,7 +638,9 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 				AIRawResponse:  aiResponse,
 				Confidence:     1.0,
 				CreatedAt:      now,
-			})
+			}).Error; err != nil {
+				return 0, false, err
+			}
 		}
 
 		// No tags matched — mark conversation as SKIP
@@ -628,7 +648,7 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 			skipDetail, _ := json.Marshal(map[string]interface{}{
 				"summary": classResult.Summary,
 			})
-			db.DB.Create(&models.JobResult{
+			if err := tx.Create(&models.JobResult{
 				ID:             pkg.NewUUID(),
 				JobRunID:       runID,
 				TenantID:       tenantID,
@@ -640,11 +660,13 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 				AIRawResponse:  aiResponse,
 				Confidence:     1.0,
 				CreatedAt:      now,
-			})
+			}).Error; err != nil {
+				return 0, false, err
+			}
 		}
 	}
 
-	return count, passed, nil
+	return count, passed, tx.Commit().Error
 }
 
 // runBatchMode processes conversations in batches of batchSize, sending multiple conversations per AI call.
@@ -759,42 +781,24 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 			content = strings.TrimSpace(content)
 		}
 
-		var batchResults []json.RawMessage
-		if err := json.Unmarshal([]byte(content), &batchResults); err != nil {
-			// Fallback: try to parse as single result (batch of 1)
-			log.Printf("[analyzer-batch] failed to parse batch response as array, trying individual: %v", err)
-			for _, b := range batch {
-				count, passed, saveErr := a.saveResults(run.ID, job.TenantID, b.Conv.ID, job.JobType, content)
-				if saveErr != nil {
-					errorCount++
-				} else {
-					analyzedCount++
-					issuesFound += count
-					if passed {
-						passCount++
-					}
-				}
-			}
+		expectedIDs := make([]string, len(batch))
+		for j, b := range batch {
+			expectedIDs[j] = b.Conv.ID
+		}
+		batchResults, parseErr := parseBatchResults(expectedIDs, []byte(content))
+		if parseErr != nil {
+			log.Printf("[analyzer-batch] rejected batch starting at %d: %v", i, parseErr)
+			errorCount += len(batch)
+			batchHadError = true
 		} else {
 			// Process each result
 			for j, rawResult := range batchResults {
-				if j >= len(batch) {
-					break
-				}
 				convID := batch[j].Conv.ID
-
-				// Extract conversation_id from result if present, match by order otherwise
-				var resultMap map[string]interface{}
-				if json.Unmarshal(rawResult, &resultMap) == nil {
-					if cid, ok := resultMap["conversation_id"].(string); ok && cid != "" {
-						convID = cid
-					}
-				}
-
 				count, passed, saveErr := a.saveResults(run.ID, job.TenantID, convID, job.JobType, string(rawResult))
 				if saveErr != nil {
 					log.Printf("[analyzer-batch] save error for %s: %v", convID, saveErr)
 					errorCount++
+					batchHadError = true
 				} else {
 					analyzedCount++
 					issuesFound += count

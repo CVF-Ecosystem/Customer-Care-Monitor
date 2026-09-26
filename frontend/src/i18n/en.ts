@@ -1,6 +1,6 @@
 export default {
   // Common
-  app_name: 'Chat Quality Agent',
+  app_name: 'Customer Care Monitor AI',
   save: 'Save',
   cancel: 'Cancel',
   delete: 'Delete',

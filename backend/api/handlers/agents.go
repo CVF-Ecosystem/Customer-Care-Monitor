@@ -38,7 +38,7 @@ func ListAgents(c *gin.Context) {
 	agents := []AgentInfo{
 		{
 			Name:         "cqa.sync",
-			Description:  "Sync chat messages from external channels (Zalo OA, Facebook) into CQA database",
+			Description:  "Sync chat messages from external channels (Zalo OA, Facebook) into Customer Care Monitor AI",
 			Version:      "1.0.0",
 			Capabilities: []string{"sync_all", "sync_channel", "query:conversations", "query:messages"},
 		},

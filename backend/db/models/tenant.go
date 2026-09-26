@@ -2,6 +2,10 @@ package models
 
 import "time"
 
+// SingleWorkspaceID is an internal compatibility key. The product has one
+// organization; existing tenant-scoped tables still use this key for isolation.
+const SingleWorkspaceID = "single-workspace"
+
 type Tenant struct {
 	ID        string    `gorm:"type:char(36);primaryKey" json:"id"`
 	Name      string    `gorm:"type:varchar(255);not null" json:"name"`

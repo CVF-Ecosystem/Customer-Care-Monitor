@@ -115,7 +115,7 @@ var consentPageTmpl = template.Must(template.New("consent").Parse(`<!DOCTYPE htm
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chat Quality Agent — Xác thực MCP</title>
+<title>Customer Care Monitor AI — Xác thực MCP</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
@@ -137,7 +137,7 @@ var consentPageTmpl = template.Must(template.New("consent").Parse(`<!DOCTYPE htm
 </head>
 <body>
 <div class="card">
-  <h1>Chat Quality Agent</h1>
+  <h1>Customer Care Monitor AI</h1>
   <p class="subtitle">Xác thực để kết nối MCP</p>
   <div class="client-info">
     Ứng dụng <strong>{{.ClientName}}</strong> yêu cầu quyền truy cập dữ liệu của bạn.
@@ -493,13 +493,13 @@ func handleRevoke(c *gin.Context) {
 func handleOAuthMetadata(c *gin.Context) {
 	baseURL := getBaseURLFromRequest(c)
 	c.JSON(http.StatusOK, gin.H{
-		"issuer":                             baseURL,
-		"authorization_endpoint":             baseURL + "/oauth/authorize",
-		"token_endpoint":                     baseURL + "/oauth/token",
-		"revocation_endpoint":                baseURL + "/oauth/revoke",
-		"response_types_supported":           []string{"code"},
-		"grant_types_supported":              []string{"authorization_code", "refresh_token"},
-		"code_challenge_methods_supported":   []string{"S256"},
+		"issuer":                                baseURL,
+		"authorization_endpoint":                baseURL + "/oauth/authorize",
+		"token_endpoint":                        baseURL + "/oauth/token",
+		"revocation_endpoint":                   baseURL + "/oauth/revoke",
+		"response_types_supported":              []string{"code"},
+		"grant_types_supported":                 []string{"authorization_code", "refresh_token"},
+		"code_challenge_methods_supported":      []string{"S256"},
 		"token_endpoint_auth_methods_supported": []string{"client_secret_post"},
 	})
 }
@@ -507,8 +507,8 @@ func handleOAuthMetadata(c *gin.Context) {
 func handleProtectedResourceMetadata(c *gin.Context) {
 	baseURL := getBaseURLFromRequest(c)
 	c.JSON(http.StatusOK, gin.H{
-		"resource":               baseURL + "/mcp",
-		"authorization_servers":  []string{baseURL},
+		"resource":                 baseURL + "/mcp",
+		"authorization_servers":    []string{baseURL},
 		"bearer_methods_supported": []string{"header"},
 	})
 }

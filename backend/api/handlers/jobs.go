@@ -12,7 +12,6 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/xuri/excelize/v2"
 	"github.com/vietbui/chat-quality-agent/api/middleware"
 	"github.com/vietbui/chat-quality-agent/config"
 	"github.com/vietbui/chat-quality-agent/db"
@@ -20,6 +19,7 @@ import (
 	"github.com/vietbui/chat-quality-agent/engine"
 	"github.com/vietbui/chat-quality-agent/notifications"
 	"github.com/vietbui/chat-quality-agent/pkg"
+	"github.com/xuri/excelize/v2"
 )
 
 // jobCancelFuncs stores cancel functions for running jobs, keyed by job ID
@@ -425,7 +425,7 @@ func TestOutput(c *gin.Context) {
 			return
 		}
 		notifier := notifications.NewTelegramNotifier(req.BotToken, req.ChatID)
-		err := notifier.Send(ctx, "CQA - Test", "Đây là tin nhắn thử nghiệm từ Chat Quality Agent.\nKết nối Telegram thành công!")
+		err := notifier.Send(ctx, "Customer Care Monitor AI - Test", "Đây là tin nhắn thử nghiệm từ Customer Care Monitor AI.\nKết nối Telegram thành công!")
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 			return

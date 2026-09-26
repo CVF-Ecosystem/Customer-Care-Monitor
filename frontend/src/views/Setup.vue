@@ -1,8 +1,15 @@
 <template>
   <v-card class="pa-6" elevation="2">
-    <v-card-title class="text-h6 text-center pb-2">Chat Quality Agent</v-card-title>
-    <p class="text-body-2 text-center text-grey mb-4">Tạo tài khoản quản trị viên đầu tiên</p>
+    <v-card-title class="text-h6 text-center pb-2">Customer Care Monitor AI</v-card-title>
+    <p class="text-body-2 text-center text-grey mb-4">Thiết lập cho một công ty hoặc cá nhân</p>
     <v-form @submit.prevent="handleSetup">
+      <v-text-field
+        v-model="workspaceName"
+        label="Tên công ty hoặc cá nhân"
+        :error-messages="workspaceError"
+        required
+        class="mb-2"
+      />
       <v-text-field
         v-model="email"
         label="Email"
@@ -56,6 +63,8 @@ const authStore = useAuthStore()
 
 const email = ref('')
 const name = ref('')
+const workspaceName = ref('')
+const workspaceError = ref('')
 const password = ref('')
 const confirmPassword = ref('')
 const showPass = ref(false)
@@ -66,6 +75,12 @@ const confirmError = ref('')
 async function handleSetup() {
   confirmError.value = ''
   errorMsg.value = ''
+  workspaceError.value = ''
+
+  if (workspaceName.value.trim().length < 2) {
+    workspaceError.value = 'Nhập tên ít nhất 2 ký tự'
+    return
+  }
 
   if (password.value !== confirmPassword.value) {
     confirmError.value = 'Mật khẩu không khớp'
@@ -74,7 +89,7 @@ async function handleSetup() {
 
   loading.value = true
   try {
-    await authStore.setup(name.value, email.value, password.value)
+    await authStore.setup(name.value, email.value, password.value, workspaceName.value.trim())
     markSetupComplete()
     router.push('/')
   } catch (err: any) {

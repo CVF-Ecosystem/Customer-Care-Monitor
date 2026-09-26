@@ -1,15 +1,12 @@
-version: "3.8"
-
 services:
   nginx:
     build:
       context: .
       dockerfile: docker/Dockerfile.nginx
-    container_name: cqa-nginx
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      - "${HTTP_PORT:-8088}:80"
+      - "${HTTPS_PORT:-8443}:443"
     environment:
       - LEGO_DOMAIN=${LEGO_DOMAIN:-}
       - LEGO_EMAIL=${LEGO_EMAIL:-}
@@ -21,7 +18,6 @@ services:
 
   app:
     build: .
-    container_name: cqa-app
     restart: unless-stopped
     expose:
       - "8080"
@@ -44,7 +40,6 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: cqa-db
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -53,8 +48,6 @@ services:
       MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
       - mysql_data:/var/lib/mysql
-    ports:
-      - "127.0.0.1:3306:3306"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s

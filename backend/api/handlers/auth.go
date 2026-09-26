@@ -3,8 +3,10 @@ package handlers
 import (
 	"log"
 	"net/http"
+	"strings"
 	"sync"
 	"time"
+	"unicode/utf8"
 
 	"github.com/gin-gonic/gin"
 	"github.com/vietbui/chat-quality-agent/api/middleware"
@@ -13,6 +15,7 @@ import (
 	"github.com/vietbui/chat-quality-agent/pkg"
 	"github.com/vietbui/chat-quality-agent/pkg/password"
 	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
 )
 
 // Account lockout: 5 failed attempts → 15 min lockout
@@ -83,9 +86,10 @@ type RegisterRequest struct {
 }
 
 type SetupRequest struct {
-	Email    string `json:"email" binding:"required,email"`
-	Password string `json:"password" binding:"required"`
-	Name     string `json:"name"`
+	Email         string `json:"email" binding:"required,email"`
+	Password      string `json:"password" binding:"required"`
+	Name          string `json:"name"`
+	WorkspaceName string `json:"workspace_name" binding:"required,min=2,max=255"`
 }
 
 // SetupStatus returns whether initial setup is needed (no users exist yet)
@@ -113,6 +117,11 @@ func Setup(c *gin.Context) {
 	var req SetupRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_request", "details": err.Error()})
+		return
+	}
+	req.WorkspaceName = strings.TrimSpace(req.WorkspaceName)
+	if n := utf8.RuneCountInString(req.WorkspaceName); n < 2 || n > 255 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_workspace_name"})
 		return
 	}
 
@@ -143,8 +152,22 @@ func Setup(c *gin.Context) {
 		UpdatedAt:    time.Now(),
 	}
 
-	if err := db.DB.Create(&user).Error; err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "create_user_failed"})
+	// The fixed workspace key makes concurrent setup attempts contend on the
+	// same primary key. User, workspace and owner link commit together.
+	if err := db.DB.Transaction(func(tx *gorm.DB) error {
+		workspace := models.Tenant{
+			ID: models.SingleWorkspaceID, Name: req.WorkspaceName,
+			Slug: "workspace", Settings: "{}", CreatedAt: time.Now(), UpdatedAt: time.Now(),
+		}
+		if err := tx.Create(&workspace).Error; err != nil {
+			return err
+		}
+		if err := tx.Create(&user).Error; err != nil {
+			return err
+		}
+		return tx.Create(&models.UserTenant{UserID: user.ID, TenantID: workspace.ID, Role: "owner"}).Error
+	}); err != nil {
+		c.JSON(http.StatusConflict, gin.H{"error": "setup_failed_or_already_completed"})
 		return
 	}
 

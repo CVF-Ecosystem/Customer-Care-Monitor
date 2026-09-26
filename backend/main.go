@@ -27,7 +27,7 @@ func main() {
 		return
 	}
 
-	log.Printf("Chat Quality Agent %s", version)
+	log.Printf("Customer Care Monitor AI %s", version)
 	handlers.AppVersion = version
 
 	// Load config
@@ -48,6 +48,9 @@ func main() {
 	// Run migrations
 	if err := db.AutoMigrate(); err != nil {
 		log.Fatalf("Failed to run migrations: %v", err)
+	}
+	if err := db.EnsureSingleWorkspace(); err != nil {
+		log.Fatalf("Single-workspace check failed: %v", err)
 	}
 
 	// Nơi cất file đính kèm do từng công ty tự cấu hình trong giao diện, đọc
@@ -76,7 +79,7 @@ func main() {
 	router := api.SetupRouter(cfg)
 
 	// Start server
-	log.Printf("CQA server starting on %s (env: %s)", cfg.ListenAddr(), cfg.Env)
+	log.Printf("Customer Care Monitor AI server starting on %s (env: %s)", cfg.ListenAddr(), cfg.Env)
 	if err := router.Run(cfg.ListenAddr()); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}

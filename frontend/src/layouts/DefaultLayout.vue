@@ -2,7 +2,7 @@
   <!-- Mobile app bar -->
   <v-app-bar v-if="!mdAndUp" density="compact" color="primary" flat>
     <v-app-bar-nav-icon @click="drawer = !drawer" />
-    <v-app-bar-title class="text-body-1 font-weight-bold">Chat Quality Agent</v-app-bar-title>
+    <v-app-bar-title class="text-body-1 font-weight-bold">Customer Care Monitor AI</v-app-bar-title>
   </v-app-bar>
 
   <v-navigation-drawer
@@ -16,10 +16,10 @@
     <!-- Logo -->
     <v-list-item class="px-4 py-3">
       <v-list-item-title v-if="!isRail" class="text-subtitle-2 font-weight-bold text-primary" style="white-space: normal; line-height: 1.3">
-        Chat Quality Agent
+        Customer Care Monitor AI
       </v-list-item-title>
       <v-list-item-title v-else class="text-caption font-weight-bold text-primary text-center">
-        CQ
+        CM
       </v-list-item-title>
       <template #append>
         <v-btn v-if="mdAndUp && !rail" icon="mdi-chevron-left" variant="text" size="small" @click="rail = true" />
@@ -28,38 +28,12 @@
 
     <v-divider />
 
-    <!-- Company switcher -->
+    <!-- One workspace per installation -->
     <v-list-item v-if="tenantId && !isRail" class="px-4 py-1" density="compact">
-      <v-select
-        v-model="currentTenantId"
-        :items="tenantSelectItems"
-        item-title="name"
-        item-value="id"
-        density="compact"
-        variant="outlined"
-        hide-details
-        class="text-body-2"
-        @update:model-value="onTenantSelect"
-      />
+      <v-list-item-title class="text-body-2">{{ currentWorkspaceName }}</v-list-item-title>
     </v-list-item>
-
-    <!-- Create Tenant Dialog (from sidebar) -->
-    <v-dialog v-model="sidebarCreateDialog" max-width="500">
-      <v-card>
-        <v-card-title>Thêm công ty</v-card-title>
-        <v-card-text>
-          <v-text-field v-model="sidebarForm.name" label="Tên công ty" class="mb-4" />
-          <v-text-field v-model="sidebarForm.slug" label="Slug" hint="URL-friendly, vd: my-company" persistent-hint />
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn variant="text" @click="sidebarCreateDialog = false">Hủy</v-btn>
-          <v-btn color="primary" :loading="sidebarCreating" :disabled="!sidebarForm.name || !sidebarForm.slug" @click="createFromSidebar">Tạo</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
     <v-list-item v-if="tenantId && isRail" class="px-2 py-1" density="compact">
-      <v-avatar size="28" color="secondary" style="cursor: pointer" @click="router.push('/')">
+      <v-avatar size="28" color="secondary">
         <span class="text-white text-caption">{{ currentTenantInitial }}</span>
       </v-avatar>
     </v-list-item>
@@ -96,16 +70,6 @@
         <!-- Language -->
         <LanguageSwitcher v-if="!isRail" />
 
-        <!-- Docs + Version -->
-        <div v-if="!isRail" class="mt-2 d-flex align-center">
-          <v-btn size="small" variant="text" href="https://tanviet12.github.io/chat-quality-agent/guide/introduction.html" target="_blank" prepend-icon="mdi-file-document" class="text-none">Docs</v-btn>
-          <v-spacer />
-          <v-chip size="small" variant="tonal" :color="updateInfo?.has_update ? 'warning' : 'success'" href="https://tanviet12.github.io/chat-quality-agent/changelog.html" target="_blank" style="cursor: pointer;">
-            <v-icon start size="10" icon="mdi-circle" />
-            {{ updateInfo?.current || 'dev' }}
-          </v-chip>
-        </div>
-
         <!-- User info with clickable avatar for profile -->
         <div v-if="!isRail" class="mt-2 d-flex align-center">
           <v-avatar size="32" color="primary" class="mr-2 cursor-pointer" style="cursor: pointer" @click="profileDialog = true">
@@ -138,29 +102,6 @@
   <v-main class="bg-background">
     <v-container fluid class="pa-4 pa-md-6">
       <OnboardingWizard />
-
-      <!-- Update notification banner -->
-      <v-alert
-        v-if="updateInfo && updateInfo.has_update && !isUpdateDismissed"
-        type="info"
-        variant="tonal"
-        class="mb-4"
-        closable
-        @click:close="dismissUpdate"
-      >
-        <div class="d-flex align-center flex-wrap">
-          <span class="text-body-2">Có phiên bản mới: <a href="https://tanviet12.github.io/chat-quality-agent/changelog.html" target="_blank" class="text-primary font-weight-bold">{{ updateInfo.latest }}</a></span>
-          <span class="text-caption text-grey mx-2">|</span>
-          <span class="text-caption text-grey">Hiện tại: {{ updateInfo.current }}</span>
-          <span class="text-caption text-grey mx-2">|</span>
-          <span class="text-caption"><a href="https://tanviet12.github.io/chat-quality-agent/guide/installation.html#tu-%C4%91ong-cap-nhat-tuy-chon" target="_blank" class="text-primary">Cài Watchtower</a> để tự động cập nhật.</span>
-        </div>
-        <div class="d-flex align-center mt-2 ga-1">
-          <span class="text-caption text-grey">Cập nhật thủ công:</span>
-          <code class="text-caption pa-1 rounded" style="user-select: all; background: rgba(var(--v-theme-on-surface), 0.06); border: 1px solid rgba(var(--v-theme-on-surface), 0.18);">cd /opt/cqa && docker compose pull && docker compose up -d</code>
-          <v-btn icon="mdi-content-copy" size="x-small" variant="text" color="primary" @click="copyUpdateCmd" />
-        </div>
-      </v-alert>
 
       <slot />
     </v-container>
@@ -241,8 +182,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { ref, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { clearTenantCache, permissionDeniedMsg, clearPermissionDeniedMsg } from '../router'
 import { useTheme, useDisplay } from 'vuetify'
 import { useI18n } from 'vue-i18n'
@@ -252,7 +193,6 @@ import OnboardingWizard from '../components/OnboardingWizard.vue'
 import api from '../api'
 
 const route = useRoute()
-const router = useRouter()
 const authStore = useAuthStore()
 const theme = useTheme()
 const { mdAndUp } = useDisplay()
@@ -265,15 +205,10 @@ const isRail = computed(() => mdAndUp.value && rail.value)
 
 const tenantId = computed(() => route.params.tenantId as string)
 
-// Tenant switcher
 interface TenantItem { id: string; name: string; slug: string }
 const tenants = ref<TenantItem[]>([])
-const currentTenantId = ref('')
-
-const currentTenantInitial = computed(() => {
-  const t = tenants.value.find(t => t.id === currentTenantId.value)
-  return t ? t.name.charAt(0).toUpperCase() : '?'
-})
+const currentWorkspaceName = computed(() => tenants.value[0]?.name || 'Không gian làm việc')
+const currentTenantInitial = computed(() => currentWorkspaceName.value.charAt(0).toUpperCase())
 
 // Show permission denied toast when redirected by router guard
 watch(() => route.path, () => {
@@ -285,7 +220,6 @@ watch(() => route.path, () => {
 
 watch(tenantId, async (id) => {
   if (id) {
-    currentTenantId.value = id
     authStore.fetchTenantPermissions(id)
     if (!tenants.value.length) {
       try {
@@ -295,60 +229,6 @@ watch(tenantId, async (id) => {
     }
   }
 }, { immediate: true })
-
-const CREATE_TENANT_ID = '__create__'
-const MANAGE_TENANT_ID = '__manage__'
-
-const tenantSelectItems = computed(() => {
-  const items = [...tenants.value]
-  if (authStore.user?.is_admin) {
-    items.push({ id: CREATE_TENANT_ID, name: '+ Thêm công ty', slug: '' })
-  }
-  items.push({ id: MANAGE_TENANT_ID, name: 'Quản lý công ty', slug: '' })
-  return items
-})
-
-function onTenantSelect(newId: string) {
-  if (newId === CREATE_TENANT_ID) {
-    currentTenantId.value = tenantId.value
-    sidebarForm.value = { name: '', slug: '' }
-    sidebarCreateDialog.value = true
-    return
-  }
-  if (newId === MANAGE_TENANT_ID) {
-    currentTenantId.value = tenantId.value
-    router.push('/')
-    return
-  }
-  if (newId && newId !== tenantId.value) {
-    router.push(`/${newId}`)
-  }
-}
-
-const sidebarCreateDialog = ref(false)
-const sidebarCreating = ref(false)
-const sidebarForm = ref({ name: '', slug: '' })
-
-watch(() => sidebarForm.value.name, (name) => {
-  sidebarForm.value.slug = name
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/đ/g, 'd').replace(/Đ/g, 'd')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-})
-
-async function createFromSidebar() {
-  sidebarCreating.value = true
-  try {
-    const { data } = await api.post('/tenants', { name: sidebarForm.value.name, slug: sidebarForm.value.slug })
-    tenants.value.push(data)
-    sidebarCreateDialog.value = false
-    router.push(`/${data.id}`)
-  } catch { /* ignore */ } finally {
-    sidebarCreating.value = false
-  }
-}
 
 // Profile dialog
 const profileDialog = ref(false)
@@ -360,30 +240,6 @@ const snackColor = ref('success')
 
 const profileForm = ref({ name: '' })
 const passwordForm = ref({ currentPassword: '', newPassword: '', confirmPassword: '' })
-
-// Version update check
-const updateInfo = ref<any>(null)
-const isUpdateDismissed = computed(() => {
-  if (!updateInfo.value?.latest) return true
-  return localStorage.getItem('cqa_dismissed_version') === updateInfo.value.latest
-})
-function dismissUpdate() {
-  if (updateInfo.value?.latest) localStorage.setItem('cqa_dismissed_version', updateInfo.value.latest)
-}
-function copyUpdateCmd() {
-  navigator.clipboard.writeText('cd /opt/cqa && docker compose pull && docker compose up -d')
-}
-onMounted(async () => {
-  // Hỏi thẳng mỗi lần vào trang, không cache ở trình duyệt. Trước đây kết quả
-  // được giữ 1 tiếng trong localStorage, nên cập nhật xong banner "có phiên bản
-  // mới" vẫn còn đó cả tiếng và người dùng tưởng cập nhật hỏng. Phần tốn kém là
-  // lượt gọi GitHub thì máy chủ đã cache sẵn rồi.
-  try {
-    const { data } = await api.get('/version/check')
-    updateInfo.value = data
-  } catch { /* ignore */ }
-  localStorage.removeItem('cqa_version_check') // dọn cache của bản cũ
-})
 
 // Load profile data when dialog opens
 watch(profileDialog, (val) => {

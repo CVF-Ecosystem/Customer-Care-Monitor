@@ -66,7 +66,7 @@ func (d *Dispatcher) SendJobResults(ctx context.Context, job models.Job, run mod
 	failed := total - passed
 	issues := int(getFloat(summary, "issues_found"))
 
-	subject := fmt.Sprintf("[CQA] %s - %d issues found", job.Name, issues)
+	subject := fmt.Sprintf("[Customer Care Monitor AI] %s - %d issues found", job.Name, issues)
 
 	for _, output := range outputs {
 		notifier, err := d.createNotifier(output)
