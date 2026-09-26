@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: IMPLEMENTATION_WORKER
-- Next allowed move: Execute CCMAI-CREDIT-001 within README/provenance scope; verify archive and rewritten main before REVIEW.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: ORCHESTRATOR
+- Next allowed move: Obtain independent human review of CCMAI-CREDIT-001 history rewrite and verify GitHub Contributors after cache refresh; then decide FREEZE.
 - Parked operator checkpoint: none
 
 ## Seven-Step Control Chain
@@ -54,9 +54,13 @@ independent reviewer.
   product's milestones on `main`, and retain LICENSE/source links.
 - SPEC: `docs/specs/CONTRIBUTOR_CREDIT_2026-09-26.md`.
 - WORK_ORDER: `docs/work_orders/CCMAI_CREDIT_001.md` (R2, authorized in session).
-- Role route recorded before BUILD: ORCHESTRATOR -> SPEC_AUTHOR ->
-  WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER. The current role is
-  IMPLEMENTATION_WORKER; next transition is COMMIT_STEWARD after checks.
+- Role route: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR ->
+  IMPLEMENTATION_WORKER -> COMMIT_STEWARD (archive and main pushed) ->
+  SESSION_SYNC_STEWARD (evidence and continuity synchronized) -> ORCHESTRATOR.
+- BUILD result: archive branch preserves old main at `3a9f5e4`; rewritten main
+  reached `4d95f9a` with Blackbird081 as commit author and Claude/Codex
+  co-author trailers. See `docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md`.
+- REVIEW remains open for independent human review and GitHub sidebar refresh.
 - Claim boundary: README and Git provenance only; no CVF runtime claim.
 
 ## Claim Boundary

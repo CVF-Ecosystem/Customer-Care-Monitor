@@ -2,7 +2,7 @@
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
     "overallStatus":  "BOOTSTRAPPED",
-    "currentPhase":  "BUILD",
+    "currentPhase":  "REVIEW",
     "completedCapabilities":  [
 
                               ],
@@ -15,7 +15,8 @@
                              "Workspace-wide gate has failures in unrelated sibling repositories."
                          ],
     "evidence":  [
-                     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md"
+                     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
+                     "docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md"
                  ],
     "updatedAt":  "2026-09-26"
 }

@@ -31,9 +31,10 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-Current mode: `BUILD` for `CCMAI-CREDIT-001` (README credit and Git history).
-The authorized scope and archive-before-force-push sequence are in
-`docs/work_orders/CCMAI_CREDIT_001.md`. This tranche does not change
-application runtime behavior.
+Current mode: `REVIEW` for `CCMAI-CREDIT-001` (README credit and Git history).
+The archive branch and rewritten `main` have been pushed. Technical evidence
+is in `docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md`; independent
+human review and a refreshed GitHub Contributors display remain open. This
+tranche does not change application runtime behavior.
 
 Provider-local files may assist execution but are not project source authority.

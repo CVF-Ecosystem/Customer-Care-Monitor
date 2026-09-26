@@ -1,8 +1,8 @@
 ﻿{
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
-    "currentMode":  "BUILD",
-    "activePhase":  "BUILD",
+    "currentMode":  "REVIEW",
+    "activePhase":  "REVIEW",
     "phaseModel":  [
                        "INTAKE",
                        "DESIGN",
@@ -13,9 +13,9 @@
                        "FREEZE"
                    ],
     "activeHandoff":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-    "nextAllowedMove":  "Execute CCMAI-CREDIT-001 within README/provenance scope; verify archive and rewritten main before REVIEW.",
+    "nextAllowedMove":  "Obtain independent human review of CCMAI-CREDIT-001 history rewrite and verify GitHub Contributors after cache refresh; then decide FREEZE.",
     "parkedOperatorCheckpoint":  null,
-    "activeRole":  "IMPLEMENTATION_WORKER",
+    "activeRole":  "ORCHESTRATOR",
     "roleRoute":  "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
     "updatedAt":  "2026-09-26"
 }
