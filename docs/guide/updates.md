@@ -1,49 +1,20 @@
-# Cập nhật phiên bản
+# Cập nhật bản fork
 
-## Thông báo trên giao diện
+Bản fork hiện được build từ source; chưa có Docker image và kênh phát hành riêng được xác nhận. **Không dùng `docker compose pull`, Watchtower hoặc script cập nhật CQA gốc** để cập nhật bản này. Workflow release còn chứa đích image CQA cũ và không phải quy trình phát hành được chấp nhận cho sản phẩm này.
 
-CQA kiểm tra phiên bản mới mỗi lần bạn mở trang. Khi có bản cập nhật:
+Trước khi cập nhật một bản cài đang có dữ liệu, sao lưu và thử phục hồi database, đồng thời giữ bản `.env` và các volume file. Script `scripts/backup-db.sh` kế thừa CQA mặc định trỏ `/opt/cqa` và container `cqa-db`, trong khi Compose hiện tại không đặt tên container cố định; cần cấu hình lại và kiểm tra script riêng trước khi dùng làm bằng chứng sao lưu.
 
-- **Chip phiên bản** ở header chuyển sang màu vàng (bình thường là xanh)
-- **Banner thông báo** hiện bên dưới header với link đến changelog
-
-Bấm vào chip phiên bản để xem chi tiết thay đổi trong bản mới.
-
-Cập nhật xong, tải lại trang là banner biến mất. Phía máy chủ có giữ kết quả tra cứu trong
-1 giờ để đỡ gọi GitHub liên tục, nhưng bộ nhớ đó bị xoá khi ứng dụng khởi động lại — mà cập
-nhật thì luôn khởi động lại, nên không phải chờ.
-
-## Cập nhật thủ công
+Đối với môi trường thử nghiệm không có dữ liệu cần giữ:
 
 ```bash
-cd /opt/cqa
-docker compose pull
-docker compose up -d
+git fetch origin
+git switch main
+git pull --ff-only
+docker compose up -d --build
+docker compose ps
+docker compose logs --tail=100 app db nginx
 ```
 
-Lệnh trên sẽ pull image mới từ Docker Hub và restart container. Dữ liệu MySQL không bị ảnh hưởng.
+Với môi trường có dữ liệu, hãy kiểm tra thay đổi schema, phương án sao lưu/phục hồi và khả năng quay lui cho từng phiên bản trước khi chạy các lệnh trên. Không có lời hứa tương thích nâng cấp tự động từ database CQA nhiều công ty.
 
-## Tự động cập nhật (tùy chọn)
-
-Thêm [Watchtower](https://containrrr.dev/watchtower/) để VPS tự động pull image mới và restart khi có bản cập nhật.
-
-Chạy lệnh sau trên VPS để cập nhật file docker-compose.yml (đã bao gồm Watchtower + label):
-
-```bash
-cd /opt/cqa
-curl -sfL https://raw.githubusercontent.com/tanviet12/chat-quality-agent/main/docker-compose.hub.yml -o docker-compose.yml
-docker compose up -d
-```
-
-::: info Lệnh trên an toàn
-File `.env` (chứa secrets, database password) không bị ảnh hưởng. Dữ liệu MySQL nằm trong Docker volume, không bị mất.
-:::
-
-Watchtower sẽ kiểm tra Docker Hub mỗi 5 phút. Khi phát hiện image mới, tự pull và restart container **app + nginx** (có label). MySQL không có label nên không bị update, dữ liệu an toàn.
-
-::: tip Xem log Watchtower
-```bash
-docker compose logs watchtower -f
-```
-Thấy dòng `Found new ...` nghĩa là đã tự cập nhật thành công.
-:::
+Endpoint kiểm tra phiên bản trong mã hiện còn trỏ GitHub Releases của CQA gốc; chip/banner cập nhật trên giao diện **không phải tín hiệu phát hành của Customer Care Monitor AI** cho đến khi nguồn phát hành được đổi và kiểm chứng.

@@ -8,7 +8,7 @@ Status: ACTIVE
 - Current mode: REVIEW
 - Active phase: REVIEW
 - Active role: ORCHESTRATOR
-- Next allowed move: Obtain independent human review of CCMAI-CREDIT-001 history rewrite and verify GitHub Contributors after cache refresh; then decide FREEZE.
+- Next allowed move: Independent human review of CCMAI-DOCS-001 and CCMAI-CREDIT-001; verify inherited usage flows with a running installation before removing warnings or FREEZE.
 - Parked operator checkpoint: none
 
 ## Seven-Step Control Chain
@@ -70,3 +70,19 @@ independent reviewer.
 
 This handoff records repository governance onboarding. It does not claim that
 CVF controls the application runtime or that a provider-backed test passed.
+
+## Active Tranche: CCMAI-DOCS-001
+
+- INTAKE: owner requested a clear README comparison with CQA and a suitability
+  check of inherited user guides. Risk R2 because stale installation/update
+  instructions can affect deployments and data.
+- DESIGN/SPEC/WORK_ORDER: `docs/work_orders/CCMAI_DOCS_001.md`; source and
+  Compose are authority, uncertain inherited pages receive warnings.
+- Role route acknowledged before BUILD: ORCHESTRATOR -> SPEC_AUTHOR ->
+  WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER. Current role is
+  IMPLEMENTATION_WORKER; next is COMMIT_STEWARD after validation.
+- The previous contributor-history tranche remains open in REVIEW.
+- BUILD outcome: README and core guides now distinguish CQA from the fork;
+  inherited unverified pages are marked. VitePress build passed with Node 24.
+  Role route continued IMPLEMENTATION_WORKER -> COMMIT_STEWARD ->
+  SESSION_SYNC_STEWARD -> ORCHESTRATOR. Independent REVIEWER is still needed.

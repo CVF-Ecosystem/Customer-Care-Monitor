@@ -7,7 +7,8 @@
 
                               ],
     "activeWorkOrders":  [
-                             "CCMAI-CREDIT-001"
+                             "CCMAI-CREDIT-001",
+                             "CCMAI-DOCS-001"
                          ],
     "knownLimitations":  [
                              "Application runtime CVF controls have not been integrated or tested with a real provider.",
@@ -16,7 +17,8 @@
                          ],
     "evidence":  [
                      "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
-                     "docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md"
+                     "docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md",
+                     "docs/reviews/USER_DOCS_AUDIT_2026-09-26.md"
                  ],
     "updatedAt":  "2026-09-26"
 }

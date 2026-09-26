@@ -1,10 +1,25 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Chat Quality Agent',
-  description: 'Hệ thống phân tích chất lượng CSKH bằng AI',
+  title: 'Customer Care Monitor AI',
+  description: 'Giám sát chất lượng chăm sóc khách hàng cho một workspace',
   lang: 'vi-VN',
-  base: '/chat-quality-agent/',
+  base: '/Customer-Care-Monitor-AI/',
+  rewrites: {
+    'home.md': 'index.md',
+  },
+  srcExclude: [
+    'INDEX.md',
+    'CVF_BOOTSTRAP_LOG_*.md',
+    'catalog/**',
+    'decisions/**',
+    'roadmaps/**',
+    'specs/**',
+    'work_orders/**',
+    'reviews/CVF_*.md',
+    'reviews/CONTRIBUTOR_*.md',
+    'reviews/README.md',
+  ],
 
   head: [
     ['meta', { name: 'theme-color', content: '#1976D2' }],
@@ -12,9 +27,9 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: 'Hướng dẫn', link: '/guide/installation' },
-      { text: 'Sử dụng', link: '/usage/channels' },
-      { text: 'Tham khảo', link: '/reference/env-vars' },
+      { text: 'Bắt đầu', link: '/guide/installation' },
+      { text: 'Khác biệt & trạng thái', link: '/guide/introduction' },
+      { text: 'Rà soát tài liệu', link: '/reviews/USER_DOCS_AUDIT_2026-09-26' },
     ],
 
     sidebar: [
@@ -25,7 +40,6 @@ export default defineConfig({
           { text: 'Cài đặt', link: '/guide/installation' },
           { text: 'Cập nhật phiên bản', link: '/guide/updates' },
           { text: 'Tên miền & SSL', link: '/guide/domain-ssl' },
-          { text: 'Lưu file lên S3', link: '/guide/s3-storage' },
           { text: 'Thiết lập ban đầu', link: '/guide/initial-setup' },
         ],
       },
@@ -50,29 +64,26 @@ export default defineConfig({
         text: 'Quản trị',
         items: [
           { text: 'Người dùng & phân quyền', link: '/admin/users' },
-          { text: 'Quản lý đa công ty', link: '/admin/multi-tenant' },
-          { text: 'Kết nối MCP', link: '/admin/mcp' },
-          { text: 'Dữ liệu demo', link: '/admin/demo-data' },
+          { text: 'Phạm vi một workspace', link: '/admin/multi-tenant' },
         ],
       },
       {
         text: 'Tham khảo',
         items: [
           { text: 'Biến môi trường', link: '/reference/env-vars' },
-          { text: 'REST API', link: '/reference/api' },
+          { text: 'Rà soát tài liệu', link: '/reviews/USER_DOCS_AUDIT_2026-09-26' },
         ],
       },
       {
         text: 'Hỗ trợ',
         items: [
-          { text: 'FAQ & Xử lý lỗi', link: '/faq' },
-          { text: 'Changelog', link: '/changelog' },
+          { text: 'Định hướng sản phẩm', link: '/PRODUCT_DIRECTION' },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/tanviet12/chat-quality-agent' },
+      { icon: 'github', link: 'https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI' },
     ],
 
     search: {
@@ -81,7 +92,7 @@ export default defineConfig({
 
     footer: {
       message: 'Phát hành theo giấy phép MIT',
-      copyright: 'Copyright 2026 SePay',
+      copyright: 'Copyright 2026 CVF-Ecosystem; nguồn CQA © SePay',
     },
   },
 })

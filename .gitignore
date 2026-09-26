@@ -30,6 +30,7 @@ mysql_data/
 docs/node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+docs/.vitepress/.temp/
 
 # Internal / private files
 PRD.md

@@ -1,62 +1,22 @@
 # Giới thiệu
 
-**Chat Quality Agent (CQA)** là hệ thống mã nguồn mở giúp doanh nghiệp tự động phân tích chất lượng chăm sóc khách hàng (CSKH) qua các kênh chat.
+**Customer Care Monitor AI** là bản fork của [Chat Quality Agent (CQA)](https://github.com/tanviet12/chat-quality-agent) cho **một công ty hoặc cá nhân trên mỗi bản cài đặt**. Mã CQA của SePay là nền tảng; các quyền tác giả nguồn vẫn được giữ trong [LICENSE](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/blob/main/LICENSE).
 
-## Vấn đề CQA giải quyết
+## Khác biệt với CQA
 
-Khi doanh nghiệp có nhiều kênh chat (Zalo OA, Facebook Messenger, Pancake), việc kiểm tra chất lượng CSKH thủ công tốn nhiều thời gian và dễ bỏ sót. CQA tự động hóa quy trình này:
+| Chủ đề | CQA gốc | Bản fork này |
+|---|---|---|
+| Phạm vi | Nhiều công ty trên một hệ thống | Một workspace cố định, tạo khi Setup |
+| Quản trị công ty | Tạo, chuyển, xóa công ty | Không có các luồng này; API tạo/xóa trả lỗi |
+| Phân tích AI | Kết quả QC và phân loại | Kế thừa chức năng; bổ sung kiểm tra trường/bằng chứng và ghi kết quả nguyên tử trong analyzer |
+| CVF | Không là hợp đồng của bản fork | Có kiểm soát **thay đổi repository** qua manifest, policy, work order, review, doctor |
+| CVF runtime | Chưa có bằng chứng của bản fork | Chưa tích hợp gate rủi ro/phê duyệt/audit/provider theo CVF vào luồng AI; không được coi doctor là kiểm chứng runtime |
+| Phân phối | Script và Docker image CQA | Hiện chỉ hướng dẫn build từ source của repo này |
 
-- **Đọc hết mọi cuộc chat** — Đồng bộ tự động từ Zalo OA, Facebook Messenger và Pancake
-- **Đánh giá bằng AI** — AI đọc cuộc chat, chấm điểm 0-100, phát hiện vi phạm theo quy định CSKH của bạn
-- **Phân loại tự động** — Gán nhãn cho cuộc chat: khiếu nại, góp ý, hỏi giá, đặt bàn...
-- **Cảnh báo ngay** — Gửi thông báo qua Telegram hoặc Email khi phát hiện vấn đề
+Ứng dụng kế thừa đồng bộ Zalo OA, Facebook Messenger, Pancake; công việc QC/phân loại; dashboard; thông báo; nhật ký chi phí. Kết quả AI là **đề xuất hỗ trợ người phụ trách**, chưa có hàng đợi phê duyệt và trạng thái xác nhận của con người. [Định hướng sản phẩm](/PRODUCT_DIRECTION) ghi chi tiết phần đã có và chưa có.
 
-## Tính năng chính
+## Đọc tiếp
 
-| Tính năng | Mô tả |
-|-----------|-------|
-| Đồng bộ tin nhắn | Tự động lấy tin nhắn từ Zalo OA, Facebook Messenger và Pancake |
-| Đánh giá CSKH (QC) | AI chấm điểm, phân loại Đạt/Không đạt, chỉ ra lỗi cụ thể |
-| Phân loại chat | Phân loại theo chủ đề tùy chỉnh (khiếu nại, góp ý, hỏi giá...) |
-| Cảnh báo tự động | Gửi kết quả qua Telegram và Email theo lịch hẹn |
-| Batch AI mode | Gom nhiều cuộc chat/lần gọi AI, tiết kiệm 60-80% chi phí |
-| Dashboard | Biểu đồ, thống kê, cảnh báo gần đây |
-| Multi-tenant | Nhiều công ty trên 1 hệ thống, phân quyền Owner > Admin > Member |
-| Tích hợp MCP | Kết nối với Claude Web/Desktop để truy vấn dữ liệu |
-| SSL tự động | Let's Encrypt tự động tạo và gia hạn certificate |
-| Xuất dữ liệu | Xuất kết quả ra CSV, Excel; xuất tin nhắn ra TXT, CSV |
-| Dữ liệu demo | Import 220 mẫu hội thoại để trải nghiệm trước khi dùng thật |
-
-## Kiến trúc hệ thống
-
-```
-                  Người dùng (trình duyệt)
-                            |
-                     +------+------+
-                     |    Nginx    |
-                     | (SSL/Proxy) |
-                     +------+------+
-                            |
-+-----------+       +-------+-----+       +----------+
-| Zalo OA   |------>|             |------>| MySQL DB |
-+-----------+       |             |       +----------+
-+-----------+       |   CQA App   |
-| Facebook  |------>|    (Go)     |------> AI: Claude, Gemini, ChatGPT,
-+-----------+       |             |        Grok, API tương thích OpenAI
-+-----------+       |             |
-| Pancake   |------>|             |------> Thông báo: Telegram, Email
-+-----------+       +-------------+
-```
-
-## Yêu cầu hệ thống
-
-- **VPS**: Linux (Ubuntu 20.04+, Debian 11+, CentOS 8+)
-- **RAM**: Tối thiểu 1GB (khuyến nghị 2GB)
-- **Disk**: Tối thiểu 10GB
-- **Docker**: Docker Engine 20+ và Docker Compose v2
-- **AI API Key**: Claude (Anthropic), Gemini (Google), ChatGPT (OpenAI) hoặc Grok (xAI) — cần ít nhất 1 key. Dùng được cả API tương thích chuẩn OpenAI như OpenRouter, LiteLLM
-
-## Bước tiếp theo
-
-- [Cài đặt](/guide/installation) — Cài đặt CQA lên VPS
-- [Thiết lập ban đầu](/guide/initial-setup) — Tạo admin và cấu hình
+- [Cài đặt từ source](/guide/installation)
+- [Thiết lập lần đầu](/guide/initial-setup)
+- [Rà soát độ phù hợp của tài liệu kế thừa](/reviews/USER_DOCS_AUDIT_2026-09-26)

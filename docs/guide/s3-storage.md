@@ -1,3 +1,5 @@
+> **Tài liệu kế thừa CQA — cần đối chiếu trước khi vận hành.** Trang này chưa được xác minh toàn bộ cho Customer Care Monitor AI. Bản fork chỉ có một workspace, build từ source, và CVF runtime chưa được tích hợp. Xem [kết quả rà soát](/reviews/USER_DOCS_AUDIT_2026-09-26) và [hướng dẫn bắt đầu](/guide/installation).
+
 # Lưu file đính kèm lên S3
 
 Mặc định CQA lưu ảnh, video, tài liệu từ Zalo và Facebook vào đĩa máy chủ. Ảnh chat dồn lên khá

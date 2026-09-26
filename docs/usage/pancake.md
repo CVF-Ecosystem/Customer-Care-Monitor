@@ -1,3 +1,5 @@
+> **Tài liệu kế thừa CQA — cần đối chiếu trước khi vận hành.** Trang này chưa được xác minh toàn bộ cho Customer Care Monitor AI. Bản fork chỉ có một workspace, build từ source, và CVF runtime chưa được tích hợp. Xem [kết quả rà soát](/reviews/USER_DOCS_AUDIT_2026-09-26) và [hướng dẫn bắt đầu](/guide/installation).
+
 # Kết nối Pancake
 
 [Pancake](https://pancake.vn) gom tin nhắn của nhiều nền tảng — Facebook, Instagram, Zalo OA, TikTok, Shopee… — về một chỗ. Nếu đội CSKH của bạn đang trả lời khách trên Pancake, CQA đọc tin nhắn qua API công khai của Pancake mà không cần kết nối riêng từng nền tảng.

@@ -1,3 +1,5 @@
+> **Tài liệu kế thừa CQA — cần đối chiếu trước khi vận hành.** Trang này chưa được xác minh toàn bộ cho Customer Care Monitor AI. Bản fork chỉ có một workspace, build từ source, và CVF runtime chưa được tích hợp. Xem [kết quả rà soát](/reviews/USER_DOCS_AUDIT_2026-09-26) và [hướng dẫn bắt đầu](/guide/installation).
+
 # Nhật ký hệ thống
 
 Ghi lại các thao tác quan trọng diễn ra trong công ty: ai đăng nhập, công việc nào chạy, đồng bộ kênh thành công hay hỏng, ai xoá gì. Vào menu **Nhật ký hệ thống** ở sidebar để xem.

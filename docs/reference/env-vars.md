@@ -1,6 +1,11 @@
 # Biến môi trường
 
-Danh sách đầy đủ các biến môi trường trong file `.env`.
+Tham khảo cho bản build từ source; đối chiếu `.env.example`, `docker-compose.yml` và `backend/config/config.go` khi triển khai. Trang này kế thừa CQA và chưa được xác minh hết các biến tùy chọn.
+
+| Biến Compose | Mặc định | Ý nghĩa |
+|---|---|---|
+| `HTTP_PORT` | `8088` | Cổng HTTP trên host |
+| `HTTPS_PORT` | `8443` | Cổng HTTPS trên host |
 
 ## Bắt buộc
 

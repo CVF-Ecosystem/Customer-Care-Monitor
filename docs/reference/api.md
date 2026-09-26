@@ -1,11 +1,11 @@
 # REST API
 
-CQA cung cấp REST API đầy đủ. Tất cả endpoint yêu cầu JWT token trong header `Authorization: Bearer <token>`.
+Trang API này được kế thừa từ CQA và **chưa được đối chiếu toàn bộ endpoint** với bản fork. Dùng cùng [bản kiểm toán tài liệu](/reviews/USER_DOCS_AUDIT_2026-09-26). Endpoint Setup và đăng nhập là ngoại lệ không cần JWT; các endpoint nghiệp vụ khác yêu cầu xác thực và quyền phù hợp.
 
 ## Base URL
 
 ```
-https://cqa.yourdomain.com/api/v1
+http://localhost:8088/api/v1
 ```
 
 ## Setup (lần đầu)
@@ -19,10 +19,10 @@ Response: { "needs_setup": true }
 ### Tạo tài khoản admin đầu tiên
 ```
 POST /setup
-Body: { "email": "...", "password": "...", "name": "..." }
+Body: { "email": "...", "password": "...", "name": "...", "workspace_name": "..." }
 Response: { "access_token": "..." }
 ```
-Chỉ hoạt động khi chưa có user nào trong hệ thống.
+Chỉ hoạt động khi chưa có user nào; tạo luôn workspace duy nhất.
 
 ## Authentication
 
@@ -46,7 +46,7 @@ POST /auth/logout
 
 ## Tenant endpoints
 
-Tất cả endpoint dưới đây nằm trong scope tenant: `/api/v1/tenants/:tenantId/...`
+Các endpoint nghiệp vụ còn dùng scope nội bộ `/api/v1/tenants/:tenantId/...`; bản fork chỉ có một workspace. `POST /tenants` và `DELETE /tenants/:tenantId` bị khóa. Đừng dùng phần tên `tenant` để suy ra hỗ trợ nhiều công ty.
 
 ### Kênh chat
 | Method | Path | Mô tả |

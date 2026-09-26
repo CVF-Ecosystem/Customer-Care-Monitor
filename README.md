@@ -12,6 +12,19 @@
 
 SePay được ghi công là **nguồn mã CQA**, tách biệt với nhóm phát triển sản phẩm mới. Lịch sử đóng góp của repo nguồn được giữ ở [CQA upstream](https://github.com/tanviet12/chat-quality-agent) và [tag lưu trữ lịch sử nhập mã](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/tree/cqa-import-history-2026-09-26).
 
+## Khác gì so với CQA gốc?
+
+| Nội dung | CQA gốc | Customer Care Monitor AI hiện tại |
+|---|---|---|
+| Đối tượng sử dụng | Một hệ thống có thể quản lý nhiều công ty | Một bản cài đặt dành cho một công ty hoặc cá nhân; workspace được tạo cùng admin đầu tiên |
+| Công ty/workspace | Có luồng tạo, chuyển và xóa công ty | Các luồng đó bị khóa; dữ liệu cũ có nhiều workspace bị chặn khi khởi động |
+| Mã và tính năng kế thừa | Đồng bộ kênh, công việc AI, kết quả, thống kê | Giữ nền tảng CQA và bổ sung kiểm tra đầu ra AI, trạng thái lỗi và ghi kết quả nguyên tử cho analyzer |
+| CVF trong quy trình phát triển | Không phải phạm vi của repo nguồn | Thay đổi repo đi qua manifest, policy, trạng thái phiên, work order, review và kiểm tra cấu trúc CVF |
+| CVF trong luồng AI của ứng dụng | Không có khẳng định từ bản fork | **Chưa tích hợp và chưa kiểm chứng** gate rủi ro, phê duyệt, audit và provider routing theo CVF ở runtime |
+| Cài đặt/phát hành | Script và image CQA gốc | Build từ source của repo này; chưa có image hoặc release chính thức cho bản fork |
+
+Vì vậy, “có CVF tham gia kiểm soát” hiện có nghĩa là **kiểm soát cách repo này được thay đổi và ghi bằng chứng**. Nó chưa có nghĩa rằng mọi phản hồi AI trong ứng dụng đã đi qua CVF. [Bản đồ trạng thái và lộ trình](docs/PRODUCT_DIRECTION.md) nêu rõ phần đã có, phần mới là kế hoạch.
+
 ## Phạm vi sản phẩm
 
 - Một workspace được tạo cùng tài khoản quản trị đầu tiên. Có thể thêm nhiều nhân viên và phân quyền trong workspace đó.
@@ -26,7 +39,7 @@ SePay được ghi công là **nguồn mã CQA**, tách biệt với nhóm phát
 - Kiểm tra trường bắt buộc và bằng chứng trong phản hồi AI trước khi lưu. Batch phải trả đủ kết quả và giữ đúng liên kết với từng hội thoại.
 - Lưu các bản ghi kết quả của một hội thoại trong một transaction. Lượt chạy có lỗi được ghi `partial` hoặc `error` và không tiến mốc quét khi còn lỗi.
 
-Tình trạng từng kiểm soát CVF, phần chưa triển khai và thứ tự nâng cấp nằm tại [định hướng sản phẩm](docs/PRODUCT_DIRECTION.md). Các trang hướng dẫn cũ trong `docs/` vẫn là tài liệu kế thừa CQA và cần được cập nhật trước khi dùng làm hướng dẫn chính thức cho sản phẩm này.
+Tình trạng từng kiểm soát CVF, phần chưa triển khai và thứ tự nâng cấp nằm tại [định hướng sản phẩm](docs/PRODUCT_DIRECTION.md). Xem [hướng dẫn cho bản fork](docs/home.md) và [kết quả rà soát tài liệu](docs/reviews/USER_DOCS_AUDIT_2026-09-26.md) trước khi dùng các trang kế thừa CQA.
 
 ## Kiểm soát CVF cho thay đổi tiếp theo
 

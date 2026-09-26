@@ -13,7 +13,7 @@
                        "FREEZE"
                    ],
     "activeHandoff":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-    "nextAllowedMove":  "Obtain independent human review of CCMAI-CREDIT-001 history rewrite and verify GitHub Contributors after cache refresh; then decide FREEZE.",
+    "nextAllowedMove":  "Independent human review of CCMAI-DOCS-001 and CCMAI-CREDIT-001; verify inherited usage flows with a running installation before removing warnings or FREEZE.",
     "parkedOperatorCheckpoint":  null,
     "activeRole":  "ORCHESTRATOR",
     "roleRoute":  "SINGLE_AGENT_MULTI_ROLE_ALLOWED",

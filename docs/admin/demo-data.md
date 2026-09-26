@@ -1,3 +1,5 @@
+> **Tài liệu kế thừa CQA — cần đối chiếu trước khi vận hành.** Trang này chưa được xác minh toàn bộ cho Customer Care Monitor AI. Bản fork chỉ có một workspace, build từ source, và CVF runtime chưa được tích hợp. Xem [kết quả rà soát](/reviews/USER_DOCS_AUDIT_2026-09-26) và [hướng dẫn bắt đầu](/guide/installation).
+
 # Dữ liệu demo
 
 CQA cung cấp bộ dữ liệu demo gồm **220 cuộc hội thoại mẫu** từ kịch bản quán coffee. Giúp bạn trải nghiệm đầy đủ tính năng trước khi kết nối kênh chat thật.
