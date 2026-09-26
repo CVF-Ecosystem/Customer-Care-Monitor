@@ -9,6 +9,7 @@ Yêu cầu của owner: nêu rõ khác biệt giữa CQA cũ và bản fork có 
 ## Phạm vi BUILD
 
 - README, site tài liệu, các hướng dẫn cài đặt/Setup/cập nhật/đa công ty/SSL và điểm API/env đã xác nhận.
+- Workflow build tài liệu, để CI không cố publish vào GitHub Pages chưa bật.
 - Báo cáo audit và cảnh báo trên các trang CQA kế thừa chưa kiểm chứng.
 - Trạng thái/handoff CVF của tranche tài liệu.
 

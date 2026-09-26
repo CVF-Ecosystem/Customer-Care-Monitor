@@ -2,7 +2,9 @@
 
 Trạng thái: rà soát mã nguồn và cấu hình, chưa chạy E2E với provider hoặc kênh thật. Không dùng tài liệu này làm bằng chứng rằng CVF kiểm soát runtime AI.
 
-Kiểm tra tĩnh: `npm ci` và `npm run docs:build` trong `docs/` thành công với Node.js 24; VitePress build toàn bộ trang người dùng. `npm ci` báo 5 advisory (2 moderate, 3 high) trong cây dependency docs; đây là việc nâng cấp dependency riêng. Project doctor và catalog check cần được chạy lại trước commit. Không có thử nghiệm triển khai thật.
+Kiểm tra tĩnh: `npm ci` và `npm run docs:build` trong `docs/` thành công với Node.js 24; VitePress build toàn bộ trang người dùng. Project doctor đạt 25/25 và catalog check PASS. `npm ci` báo 5 advisory (2 moderate, 3 high) trong cây dependency docs; đây là việc nâng cấp dependency riêng. Không có thử nghiệm triển khai thật.
+
+GitHub Actions ở commit `306ea3f` build tài liệu thành công, nhưng bước `deploy-pages` thất bại HTTP 404 vì GitHub Pages chưa được bật cho repo. Workflow tài liệu được chuyển sang **build-only** trên PR và `main` cho đến khi chủ repo quyết định cấu hình xuất bản; báo cáo này không khẳng định site đã được deploy.
 
 ## Kết luận
 
