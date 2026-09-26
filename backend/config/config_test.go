@@ -10,10 +10,12 @@ func TestLoadConfig(t *testing.T) {
 	os.Setenv("JWT_SECRET", "test-jwt-secret-at-least-32-chars-long")
 	os.Setenv("ENCRYPTION_KEY", "12345678901234567890123456789012")
 	os.Setenv("DB_PASSWORD", "testpassword")
+	os.Setenv("DB_NAME", "")
 	defer func() {
 		os.Unsetenv("JWT_SECRET")
 		os.Unsetenv("ENCRYPTION_KEY")
 		os.Unsetenv("DB_PASSWORD")
+		os.Unsetenv("DB_NAME")
 	}()
 
 	cfg, err := Load()
@@ -24,8 +26,8 @@ func TestLoadConfig(t *testing.T) {
 	if cfg.ServerPort != "8080" {
 		t.Errorf("Default ServerPort should be 8080, got %s", cfg.ServerPort)
 	}
-	if cfg.DBName != "cqa" {
-		t.Errorf("Default DBName should be cqa, got %s", cfg.DBName)
+	if cfg.DBName != "CCMA" {
+		t.Errorf("Default DBName should be CCMA, got %s", cfg.DBName)
 	}
 }
 

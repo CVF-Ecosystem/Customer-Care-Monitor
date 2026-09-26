@@ -4,13 +4,14 @@
     "overallStatus":  "BOOTSTRAPPED",
     "currentPhase":  "REVIEW",
     "completedCapabilities":  [
-
+                                  "Fresh installations consistently default to MySQL schema CCMA in the environment template, Compose and backend config; explicit DB_NAME values remain supported."
                               ],
     "activeWorkOrders":  [
                              "CCMAI-CREDIT-001",
                              "CCMAI-DOCS-001",
                              "CCMAI-IDENTITY-001",
-                             "CCMAI-ROADMAP-001"
+                             "CCMAI-ROADMAP-001",
+                             "CCMAI-DATABASE-001"
                          ],
     "knownLimitations":  [
                              "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion.",
@@ -21,7 +22,8 @@
                      "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
                      "docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md",
                      "docs/reviews/USER_DOCS_AUDIT_2026-09-26.md",
-                     "docs/reviews/PRODUCT_IDENTITY_2026-09-27.md"
+                     "docs/reviews/PRODUCT_IDENTITY_2026-09-27.md",
+                     "docs/reviews/DATABASE_DEFAULT_AND_FILTER_DESIGN_2026-09-27.md"
                  ],
     "updatedAt":  "2026-09-27"
 }

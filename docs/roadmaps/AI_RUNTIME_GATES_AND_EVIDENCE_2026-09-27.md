@@ -38,6 +38,7 @@ adapter -> evidence -> snapshot có nguồn, vai trò, thời gian và trạng t
 
 | Bề mặt | Có trong mã hiện tại | Khoảng trống |
 |---|---|---|
+| Database | MySQL 8 + GORM lưu channel, conversation, message, job/run/result và usage. Fresh install mặc định schema `CCMA`; bản cài cũ có thể giữ `DB_NAME=cqa`. | Tên schema không tạo SoT semantics; chưa có snapshot digest/coverage và decision receipt cho gate. |
 | Kênh đầu vào | Zalo OA, Facebook và Pancake qua `ChannelAdapter` (`backend/channels/adapter.go`, `registry.go`). | Không quyết định chính sách AI; đồng bộ lỗi từng hội thoại vẫn có thể bị bỏ qua rồi ghi kênh là success (`backend/engine/sync.go`). |
 | Công việc AI | `Job` chọn kênh, QC hoặc classification, quy tắc, provider/model (`backend/db/models/job.go`). | `skip_conditions` được chèn vào prompt QC (`backend/ai/prompts.go`), chưa phải gate xác định trước khi gọi AI. |
 | Gọi provider | `Analyzer` tạo transcript/prompt rồi gọi `AnalyzeChat` hoặc batch; hỗ trợ Claude, Gemini, OpenAI, xAI (`backend/engine/analyzer.go`, `backend/ai/provider.go`). | Chưa có điểm admission chung để kiểm quyền, dữ liệu nhạy cảm, quyết định NO_AI/RULES_ONLY và ngân sách trước mọi lượt gọi. |
@@ -59,6 +60,7 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 6. **Tái dùng có ranh giới:** trạng thái evidence, provenance, kết quả gate có kiểu, trace, admission và receipt là ứng viên hợp đồng chung. Adapter, taxonomy QC, SoT owner, risk/PII policy, quyền duyệt và rule pack thuộc từng dự án. Chỉ tách thành thư viện chung sau khi có SPEC và bằng chứng trên một dự án thứ hai; không ghi vào CVF core từ work order này.
 7. **Tiếng Việt và chất lượng là cổng bắt buộc:** kiểm phủ định, nói giảm/nói tránh, mỉa mai, đại từ xưng hô, không dấu, viết tắt, tiếng địa phương, xen ngôn ngữ và ngữ cảnh nhiều lượt. Ví dụ “chăm sóc tốt quá, nhắn ba hôm chưa ai trả lời” không được rule từ khóa “tốt” tự kết luận tích cực. Mẫu này là ca thử thiết kế; corpus thực tế quyết định coverage, không mặc định tiếng Việt luôn khó hơn tiếng Anh.
 8. **Giữ đủ ngữ cảnh:** giảm payload phải giữ lượt liên quan, vai trò, ngày giờ, quan hệ trả lời và dấu hiệu thiếu ảnh/file/lịch sử. Khi không chắc, mở rộng ngữ cảnh, dùng LLM đủ năng lực theo policy hoặc chuyển người; không cắt cụt rồi báo PASS. Hết ngân sách thì giữ việc ở trạng thái chờ/escalate có người chịu trách nhiệm, không tự hạ chất lượng hay vượt ngân sách.
+9. **Database giữ cấu trúc, ứng dụng giữ quyết định:** MySQL lọc tenant/channel/time/status và snapshot đã xử lý. Go dựng projection tối thiểu, kiểm provenance/policy/rule/admission rồi mới resolve provider. Không đặt semantic network call trong database hoặc phụ thuộc vào tên schema để suy authority.
 
 ## Trình tự tranche đề xuất
 
@@ -85,6 +87,8 @@ Bảo toàn timestamp đầy đủ, vai trò người gửi, tin sửa/xóa theo
 ### S2 — Gate xác định tại máy trước AI
 
 Tạo một entry point dùng chung cho mọi job path (đơn/batch, thủ công/theo lịch, chạy lại). Kiểm nguồn, quyền, dữ liệu đủ, trùng lặp, PII và trạng thái đồng bộ; học cách chia câu hỏi hẹp, có kiểu và `unknown/no-match` từ Jev ngay tại S2. SPEC tách eligibility, execution, disposition; `WAIT_DATA` có owner/deadline/retry. Điều kiện bỏ qua từ prompt chỉ chuyển thành rule khi chứng minh được trên dữ liệu đích. Bộ lọc giữ ngữ cảnh cho AI/LLM xử lý nghĩa và tạo phản hồi; trường hợp không rõ không được tự skip.
+
+Thứ tự kỹ thuật là SQL predicate rẻ → snapshot/projection có digest → gate/rule → provider admission. Di chuyển việc resolve provider/API key xuống sau quyết định cần LLM. Áp dụng bài học có chọn lọc từ [pg-jev](https://github.com/Blackbird081/pg-jev): chỉ gửi trường cần thiết, batch/concurrency có trần, cache theo content + question/rule/model version, max rows/chars và usage stats. Triển khai tại Go/MySQL; không đổi sang PostgreSQL hay nhúng Jev extension vào database.
 
 SPEC của S2 phải tách hợp đồng gate và trace có thể tái dùng khỏi rule CSKH cụ thể. `source_ref`, snapshot/version, policy/rule version, reason codes và outcome cần được kiểm trên từng path trước khi cân nhắc chia sẻ module cho Shift hay dự án khác.
 

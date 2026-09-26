@@ -43,7 +43,7 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${DB_NAME:-cqa}
+      MYSQL_DATABASE: ${DB_NAME:-CCMA}
       MYSQL_USER: ${DB_USER:-cqa}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:

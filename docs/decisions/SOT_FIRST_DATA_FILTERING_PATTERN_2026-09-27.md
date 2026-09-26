@@ -55,6 +55,8 @@ Giữ Jev/TypeSafe là nguồn học cách chia câu hỏi hẹp, chọn dữ ki
 
 Đánh giá trên corpus tiếng Việt có phủ định, hàm ý, nói giảm, mỉa mai, xưng hô, không dấu, viết tắt, phương ngữ, xen ngôn ngữ và ngữ cảnh nhiều lượt. Giữ vai trò, ngày giờ và dữ kiện ảnh/file/lịch sử liên quan; không ép nhãn khi bộ lọc không hiểu. Chất lượng và ngưỡng bỏ sót theo rủi ro phải đạt trước khi chấp nhận tối ưu. Có thể giữ/tăng call khi cần để bảo vệ chất lượng trong ngân sách được duyệt. Lấy mẫu ngẫu nhiên phân tầng ở nhánh bỏ qua để kiểm false negative; preview rule trước khi bật; feedback cần review trước khi thành rule mới.
 
+[pg-jev](https://github.com/Blackbird081/pg-jev) cho thấy semantic judgment có thể ghép với predicate rẻ, projection nhỏ, batching, content cache và spend guard. Dự án hấp thụ các pattern đó trong Go để giữ MySQL, provider-neutral admission và audit ở application boundary. Không dùng PostgreSQL extension, `plpython3u`, superuser hoặc TypeSafe API trong database; chúng tạo dependency và external disclosure khác với kiến trúc đã chọn. Authority chi tiết: `docs/specs/DATABASE_FILTER_PIPELINE_2026-09-27.md`.
+
 ## Cách tái dùng giữa các dự án
 
 Phần có thể chuẩn hóa là trạng thái dữ liệu, cấu trúc provenance, câu trả lời có kiểu, quy tắc fail-safe, decision trace, admission boundary, chi phí và bằng chứng review. Mỗi dự án tự khai báo adapter nguồn, thẩm quyền SoT, taxonomy nghiệp vụ, ngưỡng rủi ro, chính sách PII/retention, rule pack, quyền xác nhận và provider được phép. Không đưa Pancake, Zalo, Facebook, CQA hoặc nhãn QC của ứng dụng này thành giả định trong lõi dùng lại.

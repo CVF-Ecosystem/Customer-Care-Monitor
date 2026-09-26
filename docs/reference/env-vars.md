@@ -33,7 +33,9 @@ Tham khảo cho bản build từ source; đối chiếu `.env.example`, `docker-
 | `DB_PORT` | MySQL port | `3306` |
 | `DB_USER` | MySQL username | `cqa` |
 | `DB_PASSWORD` | MySQL password | |
-| `DB_NAME` | Tên database | `cqa` |
+| `DB_NAME` | Tên database; fresh install dùng `CCMA`, bản cài cũ giữ tên schema hiện tại | `CCMA` |
+
+`DB_NAME` phân biệt cấu hình kết nối với dữ liệu thật. Đổi biến này không đổi tên hoặc sao chép schema trong volume MySQL. Bản cài kế thừa dùng `cqa` phải giữ `DB_NAME=cqa` cho tới khi có migration backup/restore riêng đã được kiểm chứng.
 
 ## Rate Limiting
 

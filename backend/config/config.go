@@ -63,7 +63,7 @@ func Load() (*Config, error) {
 		DBPort:           getEnv("DB_PORT", "3306"),
 		DBUser:           getEnv("DB_USER", "cqa"),
 		DBPassword:       getEnv("DB_PASSWORD", ""),
-		DBName:           getEnv("DB_NAME", "cqa"),
+		DBName:           getEnv("DB_NAME", "CCMA"),
 		JWTSecret:        getEnv("JWT_SECRET", ""),
 		EncryptionKey:    getEnv("ENCRYPTION_KEY", ""),
 		RateLimitPerIP:   getEnvInt("RATE_LIMIT_PER_IP", 500),

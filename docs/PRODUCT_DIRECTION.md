@@ -12,6 +12,8 @@ Bộ lọc SoT và phương pháp học từ skill Jev hỗ trợ chọn dữ ki
 
 SoT có thẩm quyền theo loại phát biểu: tin nhắn ghi nhận lời nói, nguồn giao dịch xác nhận giao dịch. Người duyệt chấp nhận đánh giá; suy luận vẫn khác sự kiện quan sát được và khác trạng thái xử lý vụ việc.
 
+Runtime tiếp tục dùng MySQL 8. Fresh install dùng schema mặc định `CCMA`; cấu hình `DB_NAME` vẫn cho phép bản cài cũ giữ `cqa`. Luồng lọc đặt SQL candidate selection trước, snapshot/policy/rule/admission trong Go, rồi mới resolve provider cho item cần LLM. Đặc tả quản trị nằm tại `docs/specs/DATABASE_FILTER_PIPELINE_2026-09-27.md` trong source repo.
+
 ## Áp dụng pattern CVF và Shift Operations Workspace
 
 | Pattern | Áp dụng cho chăm sóc khách hàng | Trạng thái |
@@ -34,7 +36,7 @@ Pattern tham chiếu từ tài liệu `shift-operations-workspace/docs/cvf/` tro
 4. Tối ưu sau khi có vòng phản hồi: preview tác động rule, kiểm mẫu các ca bị bỏ qua, tái dùng kết quả còn hiệu lực và giữ đủ ngữ cảnh khi chỉ phân tích phần thay đổi. Kiểm chất lượng trước chi phí; không ép giảm số call cần thiết.
 5. Pilot có kiểm soát, hoàn thiện outbox/retry, quyền, backup/restore và phát hành có bằng chứng. Sau nghiệm thu CSKH mới thử chuyển mẫu sang dự án thứ hai, rồi đề xuất chia sẻ module hoặc nâng nền CVF.
 
-Chi tiết và phụ thuộc S0–S7: [roadmap CSKH](roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md). Hợp đồng thiết kế: [quyết định SoT-first](decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Các mục nâng cấp trên chưa được triển khai; owner chấp nhận định hướng không thay thế independent R2 review.
+Chi tiết và phụ thuộc S0–S7 nằm tại `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`; hợp đồng thiết kế nằm tại `docs/decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md` trong source repo. Các mục nâng cấp trên chưa được triển khai; owner chấp nhận định hướng không thay thế independent R2 review.
 
 ## Giới hạn kiểm chứng hiện tại
 
