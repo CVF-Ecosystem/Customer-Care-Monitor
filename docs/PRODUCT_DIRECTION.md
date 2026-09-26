@@ -6,6 +6,12 @@ Một bản cài đặt phục vụ một công ty hoặc một cá nhân. Chủ
 
 Nguồn dữ liệu đầu vào là hội thoại từ các kênh. Bản ghi tin nhắn và phản hồi AI cần được lưu đủ để truy vết. Điểm QC, nhãn phân loại và cảnh báo AI là đề xuất hỗ trợ kiểm tra; các quyết định có tác động đến nhân viên/khách hàng cần người có quyền xác nhận theo chính sách của tổ chức.
 
+Mục tiêu phát triển được owner chấp nhận: giúp người phụ trách biết hội thoại nào cần can thiệp, vì sao, ai xử lý và đã giải quyết đến đâu. Hoàn thiện CSKH trước; sau nghiệm thu và vận hành, dùng bằng chứng của dự án để nhân rộng sang các project khác và cân nhắc nâng nền CVF theo work order riêng.
+
+Bộ lọc SoT và phương pháp học từ skill Jev hỗ trợ chọn dữ kiện, phân loại xác định và điều phối; AI/LLM tiếp tục phân tích ngữ nghĩa, tạo nhận xét và gợi ý phản hồi. Chất lượng/rủi ro khách hàng là điều kiện bắt buộc trước tối ưu chi phí. Ca tiếng Việt mơ hồ cần đủ ngữ cảnh và model/người phù hợp; không tự bỏ để giảm call. Gợi ý cho người phụ trách không mặc nhiên cấp quyền tự gửi trả lời tới khách hàng.
+
+SoT có thẩm quyền theo loại phát biểu: tin nhắn ghi nhận lời nói, nguồn giao dịch xác nhận giao dịch. Người duyệt chấp nhận đánh giá; suy luận vẫn khác sự kiện quan sát được và khác trạng thái xử lý vụ việc.
+
 ## Áp dụng pattern CVF và Shift Operations Workspace
 
 | Pattern | Áp dụng cho chăm sóc khách hàng | Trạng thái |
@@ -22,11 +28,13 @@ Pattern tham chiếu từ tài liệu `shift-operations-workspace/docs/cvf/` tro
 
 ## Thứ tự nâng cấp tiếp theo
 
-1. Định nghĩa hợp đồng kết quả QC/classification có version; lưu `conversation_id`, ID tin nhắn, trích dẫn, model và phiên bản rule. Thêm kiểm tra evidence đối chiếu tin nhắn gốc.
-2. Thêm trạng thái `proposed`, `confirmed`, `rejected`, `corrected` cho đánh giá; hàng đợi duyệt và chính sách ai được xác nhận. Dashboard/tin báo phải phân biệt rõ đề xuất với kết quả đã xác nhận.
-3. Chuẩn hóa audit append-only cho thay đổi rule, phê duyệt, sửa đánh giá và gửi thông báo. Có khóa idempotency để retry không nhân đôi tác động.
-4. Sửa đồng bộ kênh và gửi thông báo để checkpoint/trạng thái chỉ tiến khi tác vụ tương ứng thực sự thành công; thêm retry có giới hạn và quan sát lỗi.
-5. Đặt gate ngân sách, quyền và dữ liệu nhạy cảm trước khi gọi AI hoặc gửi dữ liệu ra kênh ngoài. Kiểm chứng với provider thật trước khi tuyên bố CVF governance hoạt động end-to-end.
+1. Chọn một kênh/use case pilot, xác định tiêu chí chất lượng, ca rủi ro và corpus tiếng Việt. Đo thời gian tới hành động, backlog review và chi phí; baseline provider thật cần work order và admission phù hợp.
+2. Sửa đồng bộ/checkpoint khi lỗi; bảo toàn ngày giờ, vai trò, nguồn/version và coverage của tin sửa/xóa/ảnh/file. Hợp đồng kết quả phải đối chiếu evidence với snapshot; bỏ giả định confidence bằng 1 khi chưa đo.
+3. Xây một luồng hoàn chỉnh gồm bộ lọc nội bộ học từ Jev, admission quyền/dữ liệu/ngân sách, AI/LLM, audit tối thiểu và hàng đợi review/giao xử lý. Tách đủ điều kiện, cách xử lý, trạng thái duyệt và trạng thái hành động; chờ có owner/deadline. Real-provider proof và independent review cần cho claim governance runtime.
+4. Tối ưu sau khi có vòng phản hồi: preview tác động rule, kiểm mẫu các ca bị bỏ qua, tái dùng kết quả còn hiệu lực và giữ đủ ngữ cảnh khi chỉ phân tích phần thay đổi. Kiểm chất lượng trước chi phí; không ép giảm số call cần thiết.
+5. Pilot có kiểm soát, hoàn thiện outbox/retry, quyền, backup/restore và phát hành có bằng chứng. Sau nghiệm thu CSKH mới thử chuyển mẫu sang dự án thứ hai, rồi đề xuất chia sẻ module hoặc nâng nền CVF.
+
+Chi tiết và phụ thuộc S0–S7: [roadmap CSKH](roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md). Hợp đồng thiết kế: [quyết định SoT-first](decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Các mục nâng cấp trên chưa được triển khai; owner chấp nhận định hướng không thay thế independent R2 review.
 
 ## Giới hạn kiểm chứng hiện tại
 

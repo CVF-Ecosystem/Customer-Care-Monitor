@@ -4,15 +4,18 @@
 
 ## Bối cảnh và quyết định
 
-Nhiều ứng dụng nhận dữ liệu từ kênh ngoài, phải phân loại trước khi dùng Agent/AI/LLM. Nếu đưa mọi bản ghi tới model, chi phí tăng và kết luận có thể vượt quá độ tin cậy của nguồn. Mẫu dùng lại là **nguồn có thẩm quyền → chuẩn bị xác định → gate có kiểu → chỉ gọi AI khi cần và được phép → kiểm chứng và người xác nhận**. Đây là hợp đồng thiết kế cho các dự án downstream; chưa phải module đã triển khai hoặc một dịch vụ chung.
+Quyết định hiện hành ưu tiên hoàn thiện Customer-Care-Monitor-AI: giúp người phụ trách xác định ca cần can thiệp, xem bằng chứng, giao xử lý và ghi kết quả. Khi CSKH đạt nghiệm thu/vận hành, mẫu đã chứng minh mới là use case để nhân rộng và đề xuất nâng nền CVF. Phần dùng chung không trở thành điều kiện làm chậm việc hoàn thiện ứng dụng.
+
+Mẫu thiết kế là **nguồn theo từng loại phát biểu → bộ lọc và quyết định có kiểu học từ Jev → AI/LLM phân tích ngữ nghĩa và tạo nhận xét/phản hồi → kiểm chứng, người duyệt và xử lý**. Local rules giải quyết phần xác định; LLM tiếp tục xử lý phần cần ngữ nghĩa. Chất lượng và rủi ro khách hàng là điều kiện trước tối ưu chi phí. Đây là thiết kế đề xuất, chưa phải module dùng chung hoặc runtime đã chứng minh.
 
 ```text
 source adapters → raw evidence → bản chuẩn hóa có provenance/version
   → kiểm nguồn, quyền, trạng thái, dữ liệu đủ và policy đã duyệt
   → quy tắc và phân loại xác định tại máy
-  → NO_AI | RULES_ONLY | HUMAN_REVIEW | NEEDS_LLM | DENY
-  → chỉ NEEDS_LLM qua admission quyền, dữ liệu và ngân sách → provider
-  → output được kiểm và lưu như proposal → human disposition → fact được xác nhận
+  → eligibility / execution / disposition theo policy
+  → local có căn cứ, chờ có owner/deadline, hoặc AI/LLM qua admission
+  → output được kiểm và lưu như proposal → human disposition
+  → đánh giá được chấp nhận → giao xử lý → kết quả hành động/correction
 ```
 
 ### Ranh giới thẩm quyền
@@ -26,19 +29,37 @@ source adapters → raw evidence → bản chuẩn hóa có provenance/version
 | Provider output | Đưa ra nhận xét hoặc phân loại ngữ nghĩa theo quyền đã cấp. | Tự xác nhận fact, cấp quyền hoặc thay policy. |
 | Human disposition | Xác nhận, bác bỏ, sửa kết quả theo vai trò; lưu before/after. | Xóa dấu vết nguồn và quyết định trước đó. |
 
-Khi nguồn thiếu, stale, xung đột hoặc rule không bao phủ, gate trả trạng thái chưa xác định và route theo policy tới `HUMAN_REVIEW` hoặc `DENY`; chỉ route `NEEDS_LLM` nếu quyền, dữ liệu và ngân sách cho phép. Không suy `NO_AI` từ sự vắng mặt của bằng chứng. `RULES_ONLY` cần rule ID/version và evidence refs đủ để kiểm lại.
+SoT gắn với từng loại phát biểu: hội thoại chứng minh ai đã nói gì; trạng thái giao dịch cần nguồn giao dịch. Phân biệt observed fact, inference và accepted assessment/decision. Người duyệt chấp nhận một đánh giá không biến nội dung suy luận thành sự thật khách quan; trạng thái “đã duyệt” cũng chưa có nghĩa vụ việc đã giải quyết. Ghi nhận dữ kiện quan sát được không bắt buộc người duyệt mọi bản ghi; tác động tới khách hàng/nhân viên theo quyền và policy riêng.
+
+Nguồn thiếu/stale dẫn tới chờ bổ sung hoặc escalation có owner/deadline. Dữ liệu đủ nhưng nghĩa chưa rõ cần LLM phù hợp hoặc người theo policy; LLM không bù được evidence đang thiếu. Không suy `NO_AI` từ vắng bằng chứng. `RULES_ONLY` cần rule ID/version và source refs, vẫn có thể yêu cầu người duyệt. Bất đồng giữa rule và LLM được lưu với cả hai căn cứ để xét lại, không tự ghi đè policy hoặc che mất bất đồng.
 
 ### Hợp đồng quyết định dự kiến
 
-Mỗi item có `source_ref`, snapshot digest/version, trạng thái đồng bộ, policy/rule version, scope và data classification. Gate trả một outcome đóng (`NO_AI`, `RULES_ONLY`, `HUMAN_REVIEW`, `NEEDS_LLM`, `DENY`), `reason_codes`, evidence refs và trace của các câu hỏi hẹp. Nhánh `NEEDS_LLM` bổ sung admission/dispatch receipt và cost status (`KNOWN`, `PENDING`, `UNKNOWN`); nhánh local ghi nhận **zero external call** khi đã đo trên mọi đường chạy. Output AI lưu cùng model/prompt version và liên kết span/ID tới snapshot để kiểm trước khi đưa ra proposal. Nguồn hoặc policy đổi phải đánh dấu các kết quả phụ thuộc là stale.
+Mỗi item có `source_ref`, snapshot digest/version, trạng thái/coverage đồng bộ, policy/rule version, scope và data classification. Thiết kế mới thay outcome đơn bằng ba trục có trace/reason codes:
+
+| Trục | Giá trị định hướng | Ý nghĩa |
+|---|---|---|
+| Eligibility | `ELIGIBLE`, `WAIT_DATA`, `DENY` | Đủ dữ liệu và được phép xử lý hay cần bổ sung/chặn. |
+| Execution | `NONE`, `RULES_ONLY`, `LLM` | Phần việc đã có kết quả hợp lệ, dùng rule, hoặc cần model. |
+| Disposition | `PENDING`, `REVIEW_REQUIRED`, `ACCEPTED`, `REJECTED`, `CORRECTED` | Trạng thái đánh giá và quyền chấp nhận. |
+
+SPEC phải quy định tổ hợp hợp lệ: `WAIT_DATA`/`DENY` không được dispatch LLM; execution là kế hoạch, chỉ chạy khi admission cho phép. `UNKNOWN` là trạng thái hiểu biết, không đồng nghĩa NONE/PASS. Chờ do ngân sách/provider có reason, owner, deadline, retry/escalation; không xóa việc hoặc tự hạ chất lượng. Action status (chưa giao/đang xử lý/đã giải quyết) độc lập với trạng thái đánh giá.
+
+Nhánh LLM có admission/dispatch receipt và cost status (`KNOWN`, `PENDING`, `UNKNOWN`). Nhánh local/chặn phải đo zero external call trong suite có nhánh provider thật theo AGENTS; luồng lấy mẫu audit có quyền/ngân sách và receipt riêng. Output AI có model/prompt version, evidence span/ID và snapshot. Thay nguồn, ý nghĩa rule/câu hỏi hoặc policy cần invalidation; đổi bộ lọc hiển thị/trọng số có thể tái dùng kết quả nếu căn cứ vẫn giữ nguyên.
 
 Schema, reason codes, policy precedence và quyền human override cần SPEC riêng trước khi BUILD; tên trường trên là hợp đồng định hướng, chưa phải API ổn định. Mọi nhánh phải quan sát được để đo false negative, false positive, chi phí local + provider + retry + human và latency.
+
+## Jev, LLM và ngữ cảnh tiếng Việt
+
+Giữ Jev/TypeSafe là nguồn học cách chia câu hỏi hẹp, chọn dữ kiện, trả kết quả có kiểu, `unknown/no-match` và kiểm lại. Bộ lọc nội bộ chuẩn bị/điều phối để AI/LLM phân tích và tạo phản hồi tốt hơn; không mặc định mọi việc phải kết thúc ở rule. Học skill không tái tạo khả năng ngữ nghĩa của model Jev. Hướng hiện hành vẫn không thêm Jev như một dịch vụ API/SDK trung gian. Phản hồi phục vụ người phụ trách; gửi trực tiếp tới khách cần thiết kế/quyền riêng.
+
+Đánh giá trên corpus tiếng Việt có phủ định, hàm ý, nói giảm, mỉa mai, xưng hô, không dấu, viết tắt, phương ngữ, xen ngôn ngữ và ngữ cảnh nhiều lượt. Giữ vai trò, ngày giờ và dữ kiện ảnh/file/lịch sử liên quan; không ép nhãn khi bộ lọc không hiểu. Chất lượng và ngưỡng bỏ sót theo rủi ro phải đạt trước khi chấp nhận tối ưu. Có thể giữ/tăng call khi cần để bảo vệ chất lượng trong ngân sách được duyệt. Lấy mẫu ngẫu nhiên phân tầng ở nhánh bỏ qua để kiểm false negative; preview rule trước khi bật; feedback cần review trước khi thành rule mới.
 
 ## Cách tái dùng giữa các dự án
 
 Phần có thể chuẩn hóa là trạng thái dữ liệu, cấu trúc provenance, câu trả lời có kiểu, quy tắc fail-safe, decision trace, admission boundary, chi phí và bằng chứng review. Mỗi dự án tự khai báo adapter nguồn, thẩm quyền SoT, taxonomy nghiệp vụ, ngưỡng rủi ro, chính sách PII/retention, rule pack, quyền xác nhận và provider được phép. Không đưa Pancake, Zalo, Facebook, CQA hoặc nhãn QC của ứng dụng này thành giả định trong lõi dùng lại.
 
-Muốn chuyển mẫu sang một dự án khác cần inventory nguồn và owner của nguồn, DESIGN/SPEC riêng, work order có scope/risk, kiểm trên corpus của dự án đó và review độc lập khi R2. Chỉ sau bằng chứng tái dùng mới đề xuất tách thư viện hoặc rule pack chia sẻ; việc sửa CVF core cần work order và quyết định ở CVF core. Mẫu này không thêm Jev/TypeSafe API, SDK hay dịch vụ phân loại trung gian; học từ skill của họ cách chia quyết định hẹp, kết quả có kiểu, nhánh `unknown/no-match` và giữ workflow trong code.
+Sau nghiệm thu/vận hành CSKH, muốn chuyển mẫu sang một dự án khác cần inventory nguồn và owner, DESIGN/SPEC riêng, work order có scope/risk, corpus của dự án đó và review độc lập khi R2. Chỉ sau bằng chứng tái dùng mới đề xuất tách thư viện hoặc rule pack chia sẻ; nâng nền CVF cần work order và quyết định ở CVF core. Kiến trúc hiện giữ các ranh giới rõ để thuận lợi cho bước sau, không mở thêm dự án nền tảng trong giai đoạn hoàn thiện CSKH.
 
 ## Áp dụng CVF vào phát triển ứng dụng này
 

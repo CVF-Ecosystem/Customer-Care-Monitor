@@ -42,4 +42,6 @@ independent content/provenance review and inherited usage-flow verification.
 
 Owner amendment in REVIEW: `docs/decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md` proposes a reusable SoT-first filtering contract, with project-specific source adapters/rules and CVF phase, risk, evidence, and independent-review controls for application development. It is a proposal only, not a shared library or CVF SOT3 integration. Independent R2 review remains open.
 
+Current owner-accepted direction (2026-09-27): finish the CSKH evidence-to-intervention workflow before reuse across projects or CVF uplift. Jev-inspired internal filtering complements downstream AI/LLM semantic analysis and response generation; no intermediary Jev service is planned. Quality/customer risk and Vietnamese context are hard acceptance conditions before cost savings. The revised roadmap keeps S0–S7 IDs but brings minimum S2/S3/S5 together before S4 optimization. Orthogonal decision states, owned/deadlined waiting, skipped-case sampling, rule preview and valid-result reuse are proposed; none is claimed implemented. Owner agreement to advisory critique does not close independent review. Direct autonomous replies to customers need a separate product specification and authority.
+
 Provider-local files may assist execution but are not project source authority.

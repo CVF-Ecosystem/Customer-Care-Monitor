@@ -13,7 +13,7 @@
                              "CCMAI-ROADMAP-001"
                          ],
     "knownLimitations":  [
-                             "Application runtime CVF controls have not been integrated or tested with a real provider; the AI runtime gates roadmap and reusable SoT-first filtering decision are proposals only.",
+                             "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion.",
                              "Application feature status has not yet been assessed under the CVF module catalog.",
                              "Workspace-wide gate has failures in unrelated sibling repositories."
                          ],

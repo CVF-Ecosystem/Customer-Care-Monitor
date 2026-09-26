@@ -1,4 +1,4 @@
-# Roadmap Source of Truth, machine gate và chi phí AI runtime
+# Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
 **Trạng thái:** DRAFT / REVIEW_PENDING. **Ngày:** 2026-09-27. **Work order lập kế hoạch:** `CCMAI-ROADMAP-001`. **Rủi ro dự kiến khi triển khai:** tối thiểu R2 cho dữ liệu khách hàng, provider/network và governance runtime. Roadmap này không cấp quyền BUILD các tranche sản phẩm, gọi provider, đưa dữ liệu ra ngoài, triển khai production hoặc tuyên bố CVF đã kiểm soát AI runtime.
 
@@ -6,28 +6,33 @@
 
 ## Mục tiêu
 
-Source of Truth (SoT) và gate tại máy phải quyết định trước khi gọi bất kỳ Agent/AI/LLM nào. Chỉ dùng Claude/Gemini/OpenAI/xAI khi dữ liệu nguồn đáng tin, quyền và ngân sách cho phép, và tác vụ thực sự cần phân tích ngữ nghĩa sâu hoặc tạo nhận xét mà quy tắc tại máy không giải quyết được. Mỗi kết quả phải giữ được nguồn, phiên bản quy tắc, quyết định điều phối, chi phí và trạng thái kiểm tra của con người. Tối ưu **tổng chi phí cho một kết quả đúng và hữu ích**, không chỉ số lần gọi LLM.
+Giúp người phụ trách trả lời: **hội thoại nào cần can thiệp, vì sao, ai xử lý và đã giải quyết đến đâu?** Hoàn thiện một luồng CSKH từ nguồn tới hành động có bằng chứng là ưu tiên đầu. Khi dự án vận hành và được chấp nhận, kết quả mới trở thành use case để nhân rộng sang dự án khác, rồi cân nhắc đóng góp nâng nền CVF theo work order riêng.
+
+SoT và gate tại máy kiểm nguồn, quyền, phạm vi và nhu cầu xử lý trước provider. Bộ lọc học từ skill/cách xử lý Jev chuẩn bị ngữ cảnh, câu hỏi hẹp và quyết định có kiểu; AI/LLM tiếp tục phân tích ngữ nghĩa và tạo nhận xét/phản hồi trên phần việc cần năng lực đó. Tối ưu **tổng chi phí cho một kết quả đúng và hữu ích**, với chất lượng và rủi ro khách hàng là điều kiện bắt buộc trước khi chấp nhận tiết kiệm. Không đặt mục tiêu cắt call bằng mọi giá hoặc coi LLM là dấu hiệu bộ lọc thất bại.
 
 Luồng đích:
 
 ```text
-adapter kênh -> raw evidence -> hội thoại/tin nhắn chuẩn hóa, có phiên bản
-  -> SoT gate: nguồn, provenance, trạng thái, quyền, phạm vi, dữ liệu đủ và chính sách riêng tư
-  -> machine gate tại máy: quy tắc xác định, chống trùng, phân loại có kiểu
-  -> NO_AI / RULES_ONLY / HUMAN_REVIEW / NEEDS_LLM / DENY
-  -> chỉ nhánh NEEDS_LLM: ngân sách + chọn provider/model -> LLM
-  -> kiểm schema, liên kết bằng chứng và lưu proposal
-  -> người có quyền review/confirm/correct -> báo cáo/thông báo
+adapter -> evidence -> snapshot có nguồn, vai trò, thời gian và trạng thái đầy đủ
+  -> SoT/policy gate + bộ lọc nội bộ học từ Jev
+  -> đủ điều kiện? / xử lý bằng gì? / cần ai duyệt?
+     -> chờ dữ liệu, chặn theo policy, hoặc local có căn cứ
+     -> cần ngữ nghĩa/nhận xét/phản hồi: admission -> AI/LLM
+  -> kiểm output, liên kết evidence -> proposal
+  -> hàng đợi ưu tiên -> người review/giao xử lý -> ghi kết quả/correction
 ```
 
-`NO_AI` và `RULES_ONLY` là **chế độ xử lý**, không phải tên một model. Gate xác định dùng dữ liệu SoT, quy tắc, từ điển, trạng thái đồng bộ và phép kiểm có cấu trúc tại máy; nó không gọi Jev, Agent, AI hay LLM. Từ skill TypeSafe/Jev, roadmap chỉ học cách chia bài toán thành quyết định hẹp, kết quả có kiểu, nhánh `unknown` và cách ghép quyết định bằng code. Không thêm Jev API/SDK, credential hoặc dịch vụ trung gian vào kiến trúc đích.
+`NO_AI` và `RULES_ONLY` chỉ áp dụng cho phần việc có thể kết thúc hợp lệ bằng local rules hoặc tái dùng kết quả còn hiệu lực. Chúng không thay thế nhu cầu AI/LLM của toàn sản phẩm. Jev đóng góp phương pháp thiết kế bộ lọc và xử lý quyết định; định hướng hiện tại vẫn là thiết kế lại trong ứng dụng, không thêm Jev API/SDK hay dịch vụ trung gian. Học skill không đồng nghĩa đã tái tạo model ngữ nghĩa Jev hoặc đạt hiệu năng của nó.
+
+“Phản hồi” trong đợt thiết kế này là nhận xét/gợi ý cho người phụ trách; tự gửi câu trả lời tới khách hàng cần SPEC và quyền phát hành riêng. Gate, AI và người duyệt phối hợp theo policy, không ghi đè kết luận của nhau âm thầm.
 
 ## Ranh giới Source of Truth
 
 - Payload từ kênh là **raw evidence**; bản chuẩn hóa đã lưu kèm nguồn, timestamp, version/digest và lịch sử đồng bộ là nguồn để đánh giá. Dữ liệu thiếu, lỗi đồng bộ hoặc provenance không rõ không được biến thành kết luận chắc chắn.
 - Chính sách và quy tắc đã duyệt có version là nguồn thẩm quyền cho quyền truy cập, loại trừ, phân loại xác định, ngân sách và mức cần người duyệt. Một nhãn do AI suy ra không thể ghi đè chính sách.
-- Kết quả `RULES_ONLY` phải nêu rule ID/version, điều kiện khớp và message/source refs. Phản hồi LLM là **proposal**; chỉ human disposition có thẩm quyền mới tạo trạng thái confirmed. Khi nguồn hoặc rule đổi, kết quả phụ thuộc phải được đánh dấu stale để xét lại.
-- Gate được phép trả `UNKNOWN` hoặc `HUMAN_REVIEW`. Không tự tạo xác suất hoặc nhãn “độ tin cậy” từ quy tắc xác định; chỉ dùng xác suất khi có một bộ phân loại đã được hiệu chuẩn và đo trên dữ liệu đích.
+- Phân biệt sự kiện quan sát được, suy luận và đánh giá/quyết định được tổ chức chấp nhận. Tin nhắn “đã hoàn tiền” chứng minh lời nói đã được ghi nhận; xác nhận hoàn tiền cần nguồn giao dịch có thẩm quyền. Human confirmation ghi người chấp nhận đánh giá, không tự biến suy luận thành sự thật khách quan.
+- Kết quả `RULES_ONLY` phải nêu rule ID/version, điều kiện khớp và message/source refs. Phản hồi LLM là **proposal**. Khi nguồn hoặc rule đổi, kết quả phụ thuộc phải được đánh dấu stale để xét lại. Dữ kiện quan sát được có thể lưu tự động; quyết định tác động khách hàng/nhân viên cần quyền duyệt tương ứng.
+- Tách eligibility (`ELIGIBLE`, `WAIT_DATA`, `DENY`), execution (`NONE`, `RULES_ONLY`, `LLM`) và disposition (`PENDING`, `REVIEW_REQUIRED`, `ACCEPTED`, `REJECTED`, `CORRECTED`) trong SPEC. Đây là tên định hướng, chưa phải API. `UNKNOWN` là trạng thái hiểu biết, không phải auto-skip; rule local cũng có thể cần người duyệt. Chờ phải có lý do, owner, hạn xem lại và cảnh báo quá hạn. Không gán confidence giả hoặc mặc định 1.0 cho kết luận chưa đo.
 
 ## Hiện trạng phải giữ đúng
 
@@ -40,6 +45,8 @@ adapter kênh -> raw evidence -> hội thoại/tin nhắn chuẩn hóa, có phi�
 | Chi phí | Có log token/model và tính chi phí (`backend/engine/analyzer.go`). | Chưa có reservation/budget gate; giá không biết được lưu thành `CostUSD=0`, gây hiểu nhầm trong tổng UI. |
 | CVF và Shift | CVF quản lý thay đổi repo; Shift có nền tảng `NO_AI`/`RULES_ONLY`/`EXTERNAL_AI` trong `packages/ai-providers`. | Nền tảng đó chưa được nối vào caller ứng dụng này; chưa có bằng chứng provider thật rằng CVF chặn/điều phối luồng AI của ứng dụng. |
 
+Phản biện source bổ sung: `sync.go/updateSyncStatus` cập nhật `last_sync_at` cả khi lỗi; upsert tin nhắn cũ hiện chỉ cập nhật attachment khi có local path. `analyzer.go` đưa giờ/phút vào transcript; `prompts.go/FormatChatTranscript` dùng tên người gửi thay vai trò khi có tên. Một số bản ghi QC lưu `Confidence: 1.0`. S1 cần xác minh và sửa các đường này cùng giới hạn coverage của adapter; đây là phát hiện từ source, chưa phải lỗi đã tái hiện qua runtime test.
+
 Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json`, mã được nêu trong bảng và `../shift-operations-workspace/packages/ai-providers/README.md`. Đây là rà soát source, không phải phép đo E2E.
 
 ## Nguyên tắc thiết kế và giới hạn
@@ -50,12 +57,18 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 4. **Bằng chứng nguồn:** kết quả AI phải trỏ đến `conversation_id`, message ID/span, source version/digest, rule/prompt version, model/provider, quyết định route và receipt chi phí. Không coi chuỗi trích dẫn do model viết là bằng chứng đã đối chiếu.
 5. **Giữ dữ liệu tối thiểu:** machine gate xử lý trong ranh giới ứng dụng. Chỉ nhánh LLM được phép mới chuẩn bị phần hội thoại cần thiết, sau kiểm PII, thời gian lưu và quyền xem receipt.
 6. **Tái dùng có ranh giới:** trạng thái evidence, provenance, kết quả gate có kiểu, trace, admission và receipt là ứng viên hợp đồng chung. Adapter, taxonomy QC, SoT owner, risk/PII policy, quyền duyệt và rule pack thuộc từng dự án. Chỉ tách thành thư viện chung sau khi có SPEC và bằng chứng trên một dự án thứ hai; không ghi vào CVF core từ work order này.
+7. **Tiếng Việt và chất lượng là cổng bắt buộc:** kiểm phủ định, nói giảm/nói tránh, mỉa mai, đại từ xưng hô, không dấu, viết tắt, tiếng địa phương, xen ngôn ngữ và ngữ cảnh nhiều lượt. Ví dụ “chăm sóc tốt quá, nhắn ba hôm chưa ai trả lời” không được rule từ khóa “tốt” tự kết luận tích cực. Mẫu này là ca thử thiết kế; corpus thực tế quyết định coverage, không mặc định tiếng Việt luôn khó hơn tiếng Anh.
+8. **Giữ đủ ngữ cảnh:** giảm payload phải giữ lượt liên quan, vai trò, ngày giờ, quan hệ trả lời và dấu hiệu thiếu ảnh/file/lịch sử. Khi không chắc, mở rộng ngữ cảnh, dùng LLM đủ năng lực theo policy hoặc chuyển người; không cắt cụt rồi báo PASS. Hết ngân sách thì giữ việc ở trạng thái chờ/escalate có người chịu trách nhiệm, không tự hạ chất lượng hay vượt ngân sách.
 
 ## Trình tự tranche đề xuất
+
+Giữ ID S0–S7 để truy vết, nhưng **ID không còn là thứ tự tuyến tính**: S0 → S1 → phần tối thiểu của S2 + S3 + S5 tạo một luồng hoàn chỉnh → S4 tối ưu trên phản hồi thực → S6 pilot → S7 hoàn thiện vận hành. S2/S3/S5 đều có scope/acceptance riêng; review UI và audit tối thiểu phải sẵn sàng trong luồng đầu, không đợi tối ưu xong. Kiểm quyền, bảo mật và bảo vệ dữ liệu cần thiết cho pilot phải hoàn tất trước S6; S7 mở rộng kiểm vận hành trước phát hành. Nhân rộng/CVF uplift đứng sau nghiệm thu sản phẩm.
 
 ### S0 — Baseline và tập đánh giá được phép dùng
 
 Lập inventory luồng `sync -> job -> provider -> result -> notification`, các SoT hiện có và nơi nguồn có thể bị sai/stale; chốt dữ liệu pilot được phép dùng, nhãn QC/classification, ca âm và ca rủi ro cao. Đo baseline số call Agent/AI/LLM, token, phí thật/UNKNOWN, latency và thời gian người review. Khóa tiêu chí chấp nhận, ngưỡng false negative, phương pháp so sánh và rollback **trước** pilot. Nếu chưa có dữ liệu được phép dùng, chỉ làm thiết kế/synthetic; không gửi dữ liệu khách hàng tới bất kỳ provider nào.
+
+Chọn một kênh và một use case can thiệp cụ thể cùng người dùng pilot; đo thêm thời gian tới hành động, số ca quan trọng được giải quyết, cảnh báo sai và backlog người review. Corpus tiếng Việt cần ca mơ hồ và nhãn có phân xử bất đồng; không lấy output model hoặc một lượt người duyệt làm ground truth mặc định. Mọi baseline call thật cần admission phù hợp trong work order đánh giá, kể cả trước khi S3 hoàn chỉnh.
 
 Chốt bảng ánh xạ từ hợp đồng chung trong [quyết định SoT-first](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md) sang SoT owner, adapter, rule pack và quyền xác nhận riêng của Customer-Care-Monitor-AI; ghi phần nào cần thay đổi nếu áp dụng cho một dự án khác.
 
@@ -65,31 +78,37 @@ Chốt bảng ánh xạ từ hợp đồng chung trong [quyết định SoT-firs
 
 Sửa checkpoint đồng bộ: lỗi từng hội thoại/tin nhắn không thể nâng mốc thành công toàn kênh; retry/replay có idempotency và trạng thái `partial`. Định nghĩa hợp đồng QC/classification version hóa, liên kết từng finding với message ID/span và xác minh trích dẫn trên snapshot nguồn trước khi lưu proposal. Run/item lưu trạng thái lỗi trung thực; transactional write không làm mất kết quả khác.
 
+Bảo toàn timestamp đầy đủ, vai trò người gửi, tin sửa/xóa theo khả năng adapter và coverage của ảnh/file/lịch sử; snapshot không đủ phải hiển thị thiếu. Tách confidence chưa đo khỏi xác suất đã hiệu chuẩn. Kiểm mốc sync khi lỗi và ghi chú rõ khả năng nào upstream không cung cấp; không suy adapter thành nguồn hoàn chỉnh mặc định.
+
 **Exit:** test lỗi từng bước, replay, duplicate, stale source, batch thiếu/thừa/sai ID và kết quả thiếu evidence. Từng thất bại có trạng thái quan sát được; không có false success.
 
 ### S2 — Gate xác định tại máy trước AI
 
-Tạo một entry point dùng chung cho mọi job path (đơn/batch, thủ công/theo lịch, chạy lại). Đọc SoT đã version hóa rồi kiểm nguồn/provenance, quyền và phạm vi, dữ liệu đủ/đúng, trùng lặp, điều kiện loại trừ chắc chắn, PII và trạng thái đồng bộ. Thiết kế các câu hỏi nội bộ hẹp có đáp án hữu hạn như `có_tin_mới?`, `dữ_liệu_đủ?`, `thuộc_loại_quy_tắc_nào?`, `cần_người_xem?`; trả kết quả có kiểu, lý do và source refs. Nhánh cuối có version: `NO_AI`, `RULES_ONLY`, `NEEDS_LLM`, `HUMAN_REVIEW`, hoặc `DENY`. `NO_AI` dành cho item không đủ điều kiện chạy; `RULES_ONLY` chỉ cho kết quả mà quy tắc xác định và SoT đủ chứng minh. Không biến nhãn `UNKNOWN` thành auto-skip. Điều kiện bỏ qua đang nằm trong prompt chỉ chuyển vào gate nếu có thể định nghĩa và kiểm thử xác định; phần mơ hồ vẫn không được tự bỏ.
+Tạo một entry point dùng chung cho mọi job path (đơn/batch, thủ công/theo lịch, chạy lại). Kiểm nguồn, quyền, dữ liệu đủ, trùng lặp, PII và trạng thái đồng bộ; học cách chia câu hỏi hẹp, có kiểu và `unknown/no-match` từ Jev ngay tại S2. SPEC tách eligibility, execution, disposition; `WAIT_DATA` có owner/deadline/retry. Điều kiện bỏ qua từ prompt chỉ chuyển thành rule khi chứng minh được trên dữ liệu đích. Bộ lọc giữ ngữ cảnh cho AI/LLM xử lý nghĩa và tạo phản hồi; trường hợp không rõ không được tự skip.
 
 SPEC của S2 phải tách hợp đồng gate và trace có thể tái dùng khỏi rule CSKH cụ thể. `source_ref`, snapshot/version, policy/rule version, reason codes và outcome cần được kiểm trên từng path trước khi cân nhắc chia sẻ module cho Shift hay dự án khác.
 
-**Exit:** shadow run trước; đối chiếu mọi quyết định với SoT và tập gán nhãn. Không bật auto-skip cho ca rủi ro cao. Receipt ghi source digest, policy/rule version, reason an toàn, nhánh quyết định và quyền override của người. Đo zero external call ở các nhánh local; không suy từ code đơn lẻ rằng mọi đường chạy đều đã được chặn.
+**Exit:** shadow run trước; đối chiếu với SoT và tập gán nhãn. Không bật auto-skip cho ca rủi ro cao. Receipt ghi source digest, rule/policy, lý do, cả ba trục quyết định và quyền override. Đo zero external call cho dispatch local/chặn trong suite có provider thật cho nhánh được phép; giữ audit sampling thành luồng đánh giá riêng có quyền/ngân sách. Lấy mẫu ngẫu nhiên phân tầng ở cả nhánh bị bỏ qua để đo false negative; không suy coverage từ riêng các ca được gate chọn.
 
 ### S3 — Admission provider, ngân sách và audit
 
 Đặt một điểm dispatch duy nhất sau gate cho Claude/Gemini/OpenAI/xAI: allowlist provider/model, hạn mức theo job/run/workspace, reserve trước call và settle sau usage, idempotency/reconciliation khi timeout hoặc crash, `KNOWN/UNKNOWN/PENDING` cho giá. Ghi audit bất biến cho rule, route, provider, version, human override và correction; giữ receipt đã làm sạch secret/PII. Không cho fallback từ provider lỗi sang provider khác nếu chưa có chính sách và ngân sách rõ.
 
+Luồng đầu chọn một provider/model phù hợp để kiểm chứng, giữ interface cho các provider khác. Hết ngân sách hoặc provider lỗi phải tạo pending/escalation có deadline và owner; không đánh dấu việc đã xử lý hoặc tự thay model yếu hơn. Khi rule và LLM bất đồng, giữ cả hai kết quả cùng căn cứ rồi áp dụng policy review; output model không ghi đè quyền/policy.
+
 **Exit:** refusal trước dispatch quan sát zero provider call; nhánh được chấp nhận có một call thật và request/response sanitized trong evidence artifact. Rà soát độc lập R2 và real-provider proof là điều kiện cho mọi claim CVF governance runtime.
 
 ### S4 — Học mẫu thiết kế quyết định có kiểu và tối ưu gate tại máy
 
-Rà [skill TypeSafe/Jev](https://github.com/typesafe-ai/skills/blob/main/skills/typesafe-ai/SKILL.md) như nguồn **phương pháp**: tách câu hỏi hẹp, định nghĩa lựa chọn đầy đủ với `unknown/no-match`, giữ quy tắc và phép tính trong code, nối các kết quả có kiểu thành nhánh xử lý, giữ provenance và chuyển ca không chắc cho người. Thiết kế lại thành `DecisionQuestion`, `DecisionAnswer`, `DecisionTrace` nội bộ; có thể dùng enum, boolean ba trạng thái và mức ưu tiên xác định từ SoT/rule. Không sao chép giả định rằng kết quả local có xác suất đã hiệu chuẩn. So sánh trên cùng corpus: (A) luồng hiện tại gọi LLM, (B) SoT + gate local + LLM chỉ khi cần, (C) biến thể local rule/index nếu B chưa đủ tốt. Chạy shadow trước, không thêm Jev API/SDK hoặc provider phân loại trung gian.
+Kế thừa cách chia câu hỏi, lựa chọn `unknown/no-match` và trace đã thiết kế tại S2 từ [skill TypeSafe/Jev](https://github.com/typesafe-ai/skills/blob/main/skills/typesafe-ai/SKILL.md); dùng phản hồi S5 để tối ưu `DecisionQuestion`, `DecisionAnswer`, `DecisionTrace` nội bộ. Không gán xác suất đã hiệu chuẩn cho enum/rule local. So sánh trên cùng corpus: (A) baseline LLM, (B) SoT + bộ lọc học từ Jev + LLM cho phần cần ngữ nghĩa/phản hồi, (C) biến thể local rule/index nếu có căn cứ cải thiện. Chạy shadow trước, giữ quyền/dữ liệu/ngân sách nhất quán giữa các phương án; không thêm dịch vụ phân loại trung gian.
 
-**Exit:** chứng minh trên holdout tiếng Việt và từng nhóm rủi ro rằng phương án B đạt tiêu chí chất lượng đã khóa ở S0, giảm số call Agent/AI/LLM và tổng chi phí theo mục tiêu đã khóa, không tạo đường bypass quyền/PII. Item `UNKNOWN`, xung đột nguồn hoặc ngoài coverage có nhánh người/LLM được kiểm soát; nếu gate local không đạt, sửa rule/SoT hoặc giữ luồng cũ thay vì âm thầm bỏ item.
+Trước khi bật rule mới, preview những quyết định thay đổi trên corpus, số ca cần review và chi phí ước tính có trạng thái bất định. Tái dùng kết quả theo snapshot, rule/policy, task/prompt và cấu hình model liên quan; thay ngưỡng hiển thị/trọng số không cần inference mới nếu ý nghĩa câu hỏi và evidence giữ nguyên. Nguồn mới/sửa hoặc policy đổi cần invalidation; phân tích phần thay đổi vẫn phải giữ ngữ cảnh đủ.
+
+**Exit:** so sánh trên holdout tiếng Việt theo từng nhóm rủi ro, có audit mẫu ca bị bỏ qua và độ bất định của phép đo. Chất lượng/evidence và giới hạn rủi ro khóa ở S0 phải đạt trước khi xét lợi ích chi phí. Không bắt buộc giảm số call nếu thêm call giúp xử lý đúng ca cần thiết; có thể chấp nhận chi phí tăng có giải trình và ngân sách được duyệt. Không dùng tỷ lệ tiết kiệm bù cho vượt ngưỡng bỏ sót; khi thất bại, rollback tối ưu và giữ việc cần xử lý.
 
 ### S5 — Review, correction và đầu ra có trách nhiệm
 
-Màn hình proposal có nguồn, trích dẫn, model, phiên bản rule, quyết định gate, chi phí và độ chắc chắn nếu có. Người được phân quyền xác nhận/từ chối/sửa, ghi actor/time/reason và before/after; dashboard và notification phân biệt proposal với confirmed. Gửi ra ngoài qua outbox theo từng người nhận, có retry/idempotency và không gửi dữ liệu nhạy cảm mặc định.
+Phần tối thiểu triển khai cùng S2/S3: hàng đợi can thiệp có nguồn, trích dẫn, ưu tiên, người phụ trách, hạn xử lý, model/rule/gate và chi phí. Người được phân quyền xác nhận/từ chối/sửa đánh giá, giao xử lý và ghi kết quả; giữ actor/time/reason và before/after. Đánh giá được chấp nhận khác với vụ việc đã giải quyết. Dashboard/notification phân biệt proposal, accepted assessment và action status. Feedback phục vụ đánh giá rule; không tự trở thành rule production. Phần outbox mở rộng có retry/idempotency theo từng người nhận, nội dung tối thiểu và quyền gửi rõ.
 
 **Exit:** không có AI output tự biến thành quyết định chính thức; sửa nguồn sau proposal làm evidence stale; thử quyền xem, phê duyệt, correction và notification lỗi từng đích.
 
@@ -105,11 +124,15 @@ Sau khi pilot được chấp nhận, rà soát toàn bộ hướng dẫn CQA k�
 
 **Exit:** independent review của tài liệu cài đặt/vận hành, thử backup-restore và rollback trên môi trường tách biệt, kiểm tra bảo mật và release gate có bằng chứng provider thật cho các claim governance runtime. Việc chấp nhận S6 không tự động cấp quyền triển khai S7.
 
-## TypeSafe/Jev: học kỹ năng thiết kế, không dùng dịch vụ
+### Sau khi hoàn thiện CSKH — nhân rộng và đề xuất nâng nền CVF
+
+Chỉ mở khi use case CSKH đạt nghiệm thu và yêu cầu vận hành của dự án. Rút hợp đồng đã chứng minh, thử trên một dự án thứ hai với policy/corpus riêng, rồi mới quyết định tách module/rule pack và đề xuất nâng nền CVF. Giữ trace nguồn và bài học từ Jev/CVF/Shift; phần dùng chung không được kéo chậm các yêu cầu hoàn thiện CSKH. Tranche này có work order riêng ngoài S0–S7.
+
+## TypeSafe/Jev kết hợp với AI/LLM
 
 - [Skill chính thức của TypeSafe](https://github.com/typesafe-ai/skills/blob/main/skills/typesafe-ai/SKILL.md) nêu “code owns the workflow”, giữ quy tắc/phép tính/lookups xác định trong code, chia câu hỏi thành phần nhỏ, có lựa chọn `no-match`, rồi kết hợp và xác minh kết quả. Đây là nguyên tắc tham khảo để thiết kế **module nội bộ** của dự án.
-- [Intent routing](https://docs.typesafe.ai/patterns/intent-routing) cho thấy một quyết định có thể dẫn tới code xác định, LLM hoặc người. Ở dự án này SoT và quy tắc local phải chạy trước; không dùng TypeSafe/Jev để thực hiện bước phân loại đầu.
-- [Confidence guidance](https://docs.typesafe.ai/confidence) là tài liệu cho output xác suất của model; không được gắn số confidence giả cho quyết định quy tắc. Nếu sau này có đề xuất dùng model phân loại, đó là thay đổi ranh giới dịch vụ mới cần INTAKE/work order và quyết định của owner riêng, không nằm trong roadmap đã duyệt ở đây.
+- [Intent routing](https://docs.typesafe.ai/patterns/intent-routing) là nguồn học cách nối quyết định tới code, LLM hoặc người. Trong dự án, bộ lọc nội bộ học phương pháp ấy giữ dữ kiện và điều phối; LLM tiếp tục thực hiện phân tích ngữ nghĩa, nhận xét và phản hồi cần thiết. Đây là phối hợp giữa các lớp, không phải loại Jev khỏi nguồn học hoặc thay toàn bộ AI bằng rule.
+- [Confidence guidance](https://docs.typesafe.ai/confidence) cần được phân biệt với rule local: không gắn số confidence giả, không suy output có kiểu là output đúng. Kế hoạch hiện dùng phương pháp từ skill; đưa model Jev hoặc một model phân loại thành dependency là thay đổi kiến trúc riêng, không mặc nhiên phát sinh từ việc học skill.
 
 ## Cổng quản trị
 
