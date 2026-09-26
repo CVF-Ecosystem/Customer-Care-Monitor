@@ -22,3 +22,5 @@ Các trang cốt lõi đã viết lại; các trang nghiệp vụ chưa kiểm c
 ## Owner-directed Pages follow-up
 
 Owner chọn GitHub Actions làm Pages source và yêu cầu tiếp tục xuất bản tài liệu. Khôi phục upload artifact/deploy trên `main`; pull request chỉ build. Xác nhận Pages API đã trả `build_type: workflow` và URL dự kiến `https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/`. Kiểm tra workflow, URL công khai và ghi giới hạn; không thay đổi nội dung ứng dụng hay tuyên bố CVF runtime.
+
+Kết quả: PR #5 merged; run `36256835973` build và deploy thành công, URL công khai và ba trang chính trả HTTP 200. REVIEW độc lập về nội dung hướng dẫn và kiểm thử các luồng kế thừa vẫn còn mở.

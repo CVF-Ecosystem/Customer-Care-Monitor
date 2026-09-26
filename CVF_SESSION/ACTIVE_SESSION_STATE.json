@@ -1,8 +1,8 @@
 ﻿{
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
-    "currentMode":  "BUILD",
-    "activePhase":  "BUILD",
+    "currentMode":  "REVIEW",
+    "activePhase":  "REVIEW",
     "phaseModel":  [
                        "INTAKE",
                        "DESIGN",
@@ -13,9 +13,9 @@
                        "FREEZE"
                    ],
     "activeHandoff":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-    "nextAllowedMove":  "Restore Pages deployment for CCMAI-DOCS-001, verify GitHub Actions and public URL, then return to REVIEW; independent review of docs and contributor history remains open.",
+    "nextAllowedMove":  "Independent human review of CCMAI-DOCS-001 and CCMAI-CREDIT-001; verify inherited usage flows before removing warnings or FREEZE.",
     "parkedOperatorCheckpoint":  null,
-    "activeRole":  "IMPLEMENTATION_WORKER",
+    "activeRole":  "ORCHESTRATOR",
     "roleRoute":  "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
     "updatedAt":  "2026-09-26"
 }

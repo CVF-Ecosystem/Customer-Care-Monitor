@@ -39,7 +39,7 @@ Vì vậy, “có CVF tham gia kiểm soát” hiện có nghĩa là **kiểm so
 - Kiểm tra trường bắt buộc và bằng chứng trong phản hồi AI trước khi lưu. Batch phải trả đủ kết quả và giữ đúng liên kết với từng hội thoại.
 - Lưu các bản ghi kết quả của một hội thoại trong một transaction. Lượt chạy có lỗi được ghi `partial` hoặc `error` và không tiến mốc quét khi còn lỗi.
 
-Tình trạng từng kiểm soát CVF, phần chưa triển khai và thứ tự nâng cấp nằm tại [định hướng sản phẩm](docs/PRODUCT_DIRECTION.md). Xem [hướng dẫn cho bản fork](docs/home.md) và [kết quả rà soát tài liệu](docs/reviews/USER_DOCS_AUDIT_2026-09-26.md) trước khi dùng các trang kế thừa CQA.
+Tình trạng từng kiểm soát CVF, phần chưa triển khai và thứ tự nâng cấp nằm tại [định hướng sản phẩm](docs/PRODUCT_DIRECTION.md). Xem [site hướng dẫn của bản fork](https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/) và [kết quả rà soát tài liệu](docs/reviews/USER_DOCS_AUDIT_2026-09-26.md) trước khi dùng các trang kế thừa CQA.
 
 ## Kiểm soát CVF cho thay đổi tiếp theo
 

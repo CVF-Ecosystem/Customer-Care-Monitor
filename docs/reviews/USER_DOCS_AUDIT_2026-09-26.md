@@ -6,6 +6,10 @@ Kiểm tra tĩnh: `npm ci` và `npm run docs:build` trong `docs/` thành công v
 
 GitHub Actions ở commit `306ea3f` build tài liệu thành công, nhưng bước `deploy-pages` thất bại HTTP 404 vì GitHub Pages chưa được bật cho repo. Workflow tài liệu được chuyển sang **build-only** trên PR và `main` cho đến khi chủ repo quyết định cấu hình xuất bản; báo cáo này không khẳng định site đã được deploy.
 
+## Pages deployment follow-up
+
+Sau khi owner chọn GitHub Actions trong Pages settings, Pages API xác nhận `build_type: workflow`. PR #5 khôi phục upload artifact và deploy trên `main`, còn PR chỉ build. Run [36256835973](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/actions/runs/36256835973) hoàn thành SUCCESS cho cả build và deploy. Kiểm tra trực tiếp `https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/` trả HTTP 200; trang cài đặt, giới thiệu, báo cáo audit và asset JavaScript cũng trả HTTP 200. Đây là bằng chứng xuất bản site tài liệu, không phải bằng chứng CVF runtime hay kiểm thử hướng dẫn với kênh/provider thật.
+
 ## Kết luận
 
 **Bộ hướng dẫn CQA cũ không còn phù hợp nguyên trạng.** Các trang cài đặt, Setup, cập nhật và đa công ty có chỉ dẫn sai đối với bản fork. Các trang nghiệp vụ khác mô tả phần lớn chức năng kế thừa, nhưng chưa được kiểm chứng bằng một bản cài chạy thật; chúng được gắn cảnh báo và cần kiểm tra theo từng luồng trước khi bỏ cảnh báo.
