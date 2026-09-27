@@ -1,6 +1,6 @@
 # Runtime foundation S0/S1: baseline và đồng bộ không báo thành công giả
 
-**Trạng thái:** BUILD_COMPLETE / REVIEW_PENDING · **Ngày:** 2026-09-27 · **Tranche:** `CCMAI-RUNTIME-001` · **Rủi ro:** R2.
+**Trạng thái:** REVIEWED — PASS_WITH_REPAIRS, chờ CLOSER · **Ngày:** 2026-09-27 · **Tranche:** `CCMAI-RUNTIME-001` · **Rủi ro:** R2.
 
 ## Mục tiêu và phạm vi
 

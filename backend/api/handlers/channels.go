@@ -248,6 +248,7 @@ func DeleteChannel(c *gin.Context) {
 			os.RemoveAll(dir)
 		}
 		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.Message{})
+		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.AnalysisSnapshot{})
 	}
 	db.DB.Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Delete(&models.Conversation{})
 	db.DB.Delete(&channel)
@@ -278,6 +279,7 @@ func PurgeChannelConversations(c *gin.Context) {
 	if len(convIDs) > 0 {
 		// Delete evaluation results linked to these conversations
 		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.JobResult{})
+		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.AnalysisSnapshot{})
 
 		// Delete messages
 		result := db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.Message{})

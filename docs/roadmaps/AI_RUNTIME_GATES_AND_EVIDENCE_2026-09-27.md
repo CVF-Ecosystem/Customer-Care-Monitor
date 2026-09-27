@@ -69,7 +69,7 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 | Stage | Trạng thái | Bằng chứng |
 |---|---|---|
 | S0 | BUILD_COMPLETE / REVIEW_PENDING | Corpus synthetic `s0-vi-intervention-v1`, baseline database và boundary tại `docs/reviews/RUNTIME_BASELINE_S0_2026-09-27.md`. Chưa có dữ liệu/call thật để đo chất lượng hoặc chi phí. |
-| S1 | IN_PROGRESS | `CCMAI-RUNTIME-001` hoàn tất lát cắt sync truth: partial failure không dời checkpoint, không kích after-sync job và hiển thị được. Snapshot/evidence contract vẫn mở. |
+| S1 | IN_PROGRESS | `CCMAI-RUNTIME-001` hoàn tất lát cắt sync truth: partial failure không dời checkpoint, không kích after-sync job và hiển thị được. `CCMAI-RUNTIME-002` BUILD snapshot digest/coverage/evidence refs cho single và batch; chờ Codex review độc lập. |
 | S2–S7 | NOT_STARTED | Chưa có runtime gate/provider admission/human disposition hoặc claim governance live. |
 
 Giữ ID S0–S7 để truy vết, nhưng **ID không còn là thứ tự tuyến tính**: S0 → S1 → phần tối thiểu của S2 + S3 + S5 tạo một luồng hoàn chỉnh → S4 tối ưu trên phản hồi thực → S6 pilot → S7 hoàn thiện vận hành. S2/S3/S5 đều có scope/acceptance riêng; review UI và audit tối thiểu phải sẵn sàng trong luồng đầu, không đợi tối ưu xong. Kiểm quyền, bảo mật và bảo vệ dữ liệu cần thiết cho pilot phải hoàn tất trước S6; S7 mở rộng kiểm vận hành trước phát hành. Nhân rộng/CVF uplift đứng sau nghiệm thu sản phẩm.

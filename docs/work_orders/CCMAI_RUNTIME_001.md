@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-001: S0 baseline và S1 sync truth
 
-**Trạng thái:** BUILD_COMPLETE / REVIEW_PENDING · **Rủi ro:** R2 · **Ngày:** 2026-09-27.
+**Trạng thái:** REVIEWED — PASS_WITH_REPAIRS (Gate A của `CCMAI-RUNTIME-002`), chờ CLOSER · **Rủi ro:** R2 · **Ngày:** 2026-09-27.
 
 ## Authority
 

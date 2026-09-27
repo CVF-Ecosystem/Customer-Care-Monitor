@@ -49,6 +49,7 @@ func AutoMigrate() error {
 		&models.Job{},
 		&models.JobRun{},
 		&models.JobResult{},
+		&models.AnalysisSnapshot{},
 		&models.AppSetting{},
 		&models.NotificationLog{},
 		&models.AIUsageLog{},

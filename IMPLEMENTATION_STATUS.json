@@ -2,10 +2,11 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
-    "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis."
+    "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
+    "S1 analysis snapshots: single and batch analysis share one snapshot builder with deterministic SHA-256 source digest, typed coverage and message-bound evidence refs validated before a transaction persists the snapshot and linked results; legacy results read as unverified. Verified with test doubles and MySQL only, not with a real provider; Codex independent review pending."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -28,7 +29,9 @@
     "docs/reviews/PRODUCT_IDENTITY_2026-09-27.md",
     "docs/reviews/DATABASE_DEFAULT_AND_FILTER_DESIGN_2026-09-27.md",
     "docs/reviews/RUNTIME_BASELINE_S0_2026-09-27.md",
-    "docs/reviews/RUNTIME_FOUNDATION_S0_S1_BUILD_2026-09-27.md"
+    "docs/reviews/RUNTIME_FOUNDATION_S0_S1_BUILD_2026-09-27.md",
+    "docs/reviews/CCMAI_RUNTIME_001_INDEPENDENT_REVIEW_2026-09-27.md",
+    "docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_BUILD_2026-09-27.md"
   ],
   "updatedAt": "2026-09-27"
 }

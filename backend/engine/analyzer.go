@@ -242,29 +242,16 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 			default:
 			}
 
-			// Load messages
-			var messages []models.Message
-			mq := db.DB.Where("conversation_id = ?", conv.ID)
-			if !since.IsZero() {
-				mq = mq.Where("sent_at > ?", since)
-			}
-			mq.Order("sent_at ASC").Find(&messages)
-
-			if len(messages) == 0 {
+			snap, err := loadConversationSnapshot(conv, since)
+			if err != nil {
+				log.Printf("[analyzer] snapshot error for conversation %s: %v", conv.ID, err)
+				errorCount++
 				continue
 			}
-
-			// Format transcript
-			chatMessages := make([]ai.ChatMessage, len(messages))
-			for i, m := range messages {
-				chatMessages[i] = ai.ChatMessage{
-					SenderType: m.SenderType,
-					SenderName: m.SenderName,
-					Content:    m.Content,
-					SentAt:     pkg.ToVN(m.SentAt).Format("15:04"),
-				}
+			if snap.Manifest.Coverage == coverageEmpty {
+				continue
 			}
-			transcript := ai.FormatChatTranscript(chatMessages)
+			transcript := snap.Transcript
 
 			// Build prompt based on job type
 			var systemPrompt string
@@ -318,7 +305,7 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 			db.DB.Create(&usageLog)
 
 			// Parse and save results
-			count, passed, err := a.saveResults(run.ID, job.TenantID, conv.ID, job.JobType, aiResp.Content)
+			count, passed, err := a.saveResults(run.ID, snap, job.JobType, aiResp.Content)
 			if err != nil {
 				log.Printf("[analyzer] save results error for %s: %v", conv.ID, err)
 				errorCount++
@@ -478,7 +465,12 @@ func (a *Analyzer) getProvider(job models.Job) (ai.AIProvider, error) {
 	}
 }
 
-func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiResponse string) (int, bool, error) {
+func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType, aiResponse string) (int, bool, error) {
+	if snap == nil {
+		return 0, false, fmt.Errorf("analysis snapshot is required")
+	}
+	tenantID := snap.Manifest.TenantID
+	conversationID := snap.Manifest.ConversationID
 	now := time.Now()
 	count := 0
 	passed := false
@@ -499,31 +491,73 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 	if err := validateAIResult(jobType, []byte(aiResponse)); err != nil {
 		return 0, false, err
 	}
+
+	var qcResult struct {
+		Verdict    string `json:"verdict"`
+		Violations []struct {
+			Severity     string        `json:"severity"`
+			Rule         string        `json:"rule"`
+			Evidence     string        `json:"evidence"`
+			EvidenceRefs []evidenceRef `json:"evidence_refs"`
+			Explanation  string        `json:"explanation"`
+			Suggestion   string        `json:"suggestion"`
+		} `json:"violations"`
+		Score   int    `json:"score"`
+		Review  string `json:"review"`
+		Summary string `json:"summary"`
+	}
+	var classResult struct {
+		Tags []struct {
+			RuleName     string        `json:"rule_name"`
+			Confidence   float64       `json:"confidence"`
+			Evidence     string        `json:"evidence"`
+			EvidenceRefs []evidenceRef `json:"evidence_refs"`
+			Explanation  string        `json:"explanation"`
+		} `json:"tags"`
+		Summary string `json:"summary"`
+	}
+
+	// Every finding must cite the snapshot before anything is written, so one
+	// bad ref rejects the whole conversation result.
+	switch jobType {
+	case "qc_analysis":
+		if err := json.Unmarshal([]byte(aiResponse), &qcResult); err != nil {
+			return 0, false, fmt.Errorf("failed to parse QC response: %w", err)
+		}
+		for i, v := range qcResult.Violations {
+			if err := snap.validateEvidenceRefs(v.EvidenceRefs); err != nil {
+				return 0, false, fmt.Errorf("violation %d: %w", i, err)
+			}
+		}
+	case "classification":
+		if err := json.Unmarshal([]byte(aiResponse), &classResult); err != nil {
+			return 0, false, fmt.Errorf("failed to parse classification response: %w", err)
+		}
+		for i, t := range classResult.Tags {
+			if err := snap.validateEvidenceRefs(t.EvidenceRefs); err != nil {
+				return 0, false, fmt.Errorf("tag %d: %w", i, err)
+			}
+		}
+	}
+
+	snapshotRow, err := snap.record(runID)
+	if err != nil {
+		return 0, false, fmt.Errorf("prepare analysis snapshot: %w", err)
+	}
+	snapshotID := snapshotRow.ID
+
 	tx := db.DB.Begin()
 	if tx.Error != nil {
 		return 0, false, tx.Error
 	}
 	defer tx.Rollback()
 
+	if err := tx.Create(&snapshotRow).Error; err != nil {
+		return 0, false, fmt.Errorf("persist analysis snapshot: %w", err)
+	}
+
 	switch jobType {
 	case "qc_analysis":
-		var qcResult struct {
-			Verdict    string `json:"verdict"`
-			Violations []struct {
-				Severity    string `json:"severity"`
-				Rule        string `json:"rule"`
-				Evidence    string `json:"evidence"`
-				Explanation string `json:"explanation"`
-				Suggestion  string `json:"suggestion"`
-			} `json:"violations"`
-			Score   int    `json:"score"`
-			Review  string `json:"review"`
-			Summary string `json:"summary"`
-		}
-		if err := json.Unmarshal([]byte(aiResponse), &qcResult); err != nil {
-			return 0, false, fmt.Errorf("failed to parse QC response: %w", err)
-		}
-
 		// Determine pass/fail (SKIP counts as not passed)
 		passed = qcResult.Verdict == "PASS"
 
@@ -534,17 +568,18 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 			"summary": qcResult.Summary,
 		})
 		evalResult := models.JobResult{
-			ID:             pkg.NewUUID(),
-			JobRunID:       runID,
-			TenantID:       tenantID,
-			ConversationID: conversationID,
-			ResultType:     "conversation_evaluation",
-			Severity:       qcResult.Verdict,
-			Evidence:       qcResult.Review,
-			Detail:         string(evalDetailJSON),
-			AIRawResponse:  aiResponse,
-			Confidence:     1.0,
-			CreatedAt:      now,
+			ID:                 pkg.NewUUID(),
+			JobRunID:           runID,
+			TenantID:           tenantID,
+			ConversationID:     conversationID,
+			AnalysisSnapshotID: &snapshotID,
+			ResultType:         "conversation_evaluation",
+			Severity:           qcResult.Verdict,
+			Evidence:           qcResult.Review,
+			Detail:             string(evalDetailJSON),
+			AIRawResponse:      aiResponse,
+			Confidence:         1.0,
+			CreatedAt:          now,
 		}
 		if err := tx.Create(&evalResult).Error; err != nil {
 			return 0, false, err
@@ -558,24 +593,26 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 		// Save individual violations
 		for _, v := range qcResult.Violations {
 			detailJSON, _ := json.Marshal(map[string]interface{}{
-				"explanation": v.Explanation,
-				"suggestion":  v.Suggestion,
-				"score":       qcResult.Score,
-				"summary":     qcResult.Summary,
+				"explanation":   v.Explanation,
+				"suggestion":    v.Suggestion,
+				"score":         qcResult.Score,
+				"summary":       qcResult.Summary,
+				"evidence_refs": v.EvidenceRefs,
 			})
 			result := models.JobResult{
-				ID:             pkg.NewUUID(),
-				JobRunID:       runID,
-				TenantID:       tenantID,
-				ConversationID: conversationID,
-				ResultType:     "qc_violation",
-				Severity:       v.Severity,
-				RuleName:       v.Rule,
-				Evidence:       v.Evidence,
-				Detail:         string(detailJSON),
-				AIRawResponse:  aiResponse,
-				Confidence:     1.0,
-				CreatedAt:      now,
+				ID:                 pkg.NewUUID(),
+				JobRunID:           runID,
+				TenantID:           tenantID,
+				ConversationID:     conversationID,
+				AnalysisSnapshotID: &snapshotID,
+				ResultType:         "qc_violation",
+				Severity:           v.Severity,
+				RuleName:           v.Rule,
+				Evidence:           v.Evidence,
+				Detail:             string(detailJSON),
+				AIRawResponse:      aiResponse,
+				Confidence:         1.0,
+				CreatedAt:          now,
 			}
 			if err := tx.Create(&result).Error; err != nil {
 				return 0, false, err
@@ -584,36 +621,25 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 		}
 
 	case "classification":
-		var classResult struct {
-			Tags []struct {
-				RuleName    string  `json:"rule_name"`
-				Confidence  float64 `json:"confidence"`
-				Evidence    string  `json:"evidence"`
-				Explanation string  `json:"explanation"`
-			} `json:"tags"`
-			Summary string `json:"summary"`
-		}
-		if err := json.Unmarshal([]byte(aiResponse), &classResult); err != nil {
-			return 0, false, fmt.Errorf("failed to parse classification response: %w", err)
-		}
-
 		for _, t := range classResult.Tags {
 			detailJSON, _ := json.Marshal(map[string]interface{}{
-				"explanation": t.Explanation,
-				"summary":     classResult.Summary,
+				"explanation":   t.Explanation,
+				"summary":       classResult.Summary,
+				"evidence_refs": t.EvidenceRefs,
 			})
 			result := models.JobResult{
-				ID:             pkg.NewUUID(),
-				JobRunID:       runID,
-				TenantID:       tenantID,
-				ConversationID: conversationID,
-				ResultType:     "classification_tag",
-				RuleName:       t.RuleName,
-				Evidence:       t.Evidence,
-				Detail:         string(detailJSON),
-				AIRawResponse:  aiResponse,
-				Confidence:     t.Confidence,
-				CreatedAt:      now,
+				ID:                 pkg.NewUUID(),
+				JobRunID:           runID,
+				TenantID:           tenantID,
+				ConversationID:     conversationID,
+				AnalysisSnapshotID: &snapshotID,
+				ResultType:         "classification_tag",
+				RuleName:           t.RuleName,
+				Evidence:           t.Evidence,
+				Detail:             string(detailJSON),
+				AIRawResponse:      aiResponse,
+				Confidence:         t.Confidence,
+				CreatedAt:          now,
 			}
 			if err := tx.Create(&result).Error; err != nil {
 				return 0, false, err
@@ -627,17 +653,18 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 				"summary": classResult.Summary,
 			})
 			if err := tx.Create(&models.JobResult{
-				ID:             pkg.NewUUID(),
-				JobRunID:       runID,
-				TenantID:       tenantID,
-				ConversationID: conversationID,
-				ResultType:     "conversation_evaluation",
-				Severity:       "PASS",
-				Evidence:       classResult.Summary,
-				Detail:         string(evalDetail),
-				AIRawResponse:  aiResponse,
-				Confidence:     1.0,
-				CreatedAt:      now,
+				ID:                 pkg.NewUUID(),
+				JobRunID:           runID,
+				TenantID:           tenantID,
+				ConversationID:     conversationID,
+				AnalysisSnapshotID: &snapshotID,
+				ResultType:         "conversation_evaluation",
+				Severity:           "PASS",
+				Evidence:           classResult.Summary,
+				Detail:             string(evalDetail),
+				AIRawResponse:      aiResponse,
+				Confidence:         1.0,
+				CreatedAt:          now,
 			}).Error; err != nil {
 				return 0, false, err
 			}
@@ -649,17 +676,18 @@ func (a *Analyzer) saveResults(runID, tenantID, conversationID, jobType, aiRespo
 				"summary": classResult.Summary,
 			})
 			if err := tx.Create(&models.JobResult{
-				ID:             pkg.NewUUID(),
-				JobRunID:       runID,
-				TenantID:       tenantID,
-				ConversationID: conversationID,
-				ResultType:     "conversation_evaluation",
-				Severity:       "SKIP",
-				Evidence:       "Cuộc chat không khớp với bất kỳ nhãn phân loại nào.",
-				Detail:         string(skipDetail),
-				AIRawResponse:  aiResponse,
-				Confidence:     1.0,
-				CreatedAt:      now,
+				ID:                 pkg.NewUUID(),
+				JobRunID:           runID,
+				TenantID:           tenantID,
+				ConversationID:     conversationID,
+				AnalysisSnapshotID: &snapshotID,
+				ResultType:         "conversation_evaluation",
+				Severity:           "SKIP",
+				Evidence:           "Cuộc chat không khớp với bất kỳ nhãn phân loại nào.",
+				Detail:             string(skipDetail),
+				AIRawResponse:      aiResponse,
+				Confidence:         1.0,
+				CreatedAt:          now,
 			}).Error; err != nil {
 				return 0, false, err
 			}
@@ -682,35 +710,22 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 		return
 	}
 
-	// Prepare all conversations with transcripts
-	type convWithTranscript struct {
-		Conv       models.Conversation
-		Transcript string
+	type convWithSnapshot struct {
+		Conv models.Conversation
+		Snap *conversationSnapshot
 	}
-	var prepared []convWithTranscript
+	var prepared []convWithSnapshot
 	for _, conv := range conversations {
-		var messages []models.Message
-		bmq := db.DB.Where("conversation_id = ?", conv.ID)
-		if !since.IsZero() {
-			bmq = bmq.Where("sent_at > ?", since)
-		}
-		bmq.Order("sent_at ASC").Find(&messages)
-		if len(messages) == 0 {
+		snap, err := loadConversationSnapshot(conv, since)
+		if err != nil {
+			log.Printf("[analyzer-batch] snapshot error for conversation %s: %v", conv.ID, err)
+			errorCount++
 			continue
 		}
-		chatMessages := make([]ai.ChatMessage, len(messages))
-		for i, m := range messages {
-			chatMessages[i] = ai.ChatMessage{
-				SenderType: m.SenderType,
-				SenderName: m.SenderName,
-				Content:    m.Content,
-				SentAt:     pkg.ToVN(m.SentAt).Format("15:04"),
-			}
+		if snap.Manifest.Coverage == coverageEmpty {
+			continue
 		}
-		prepared = append(prepared, convWithTranscript{
-			Conv:       conv,
-			Transcript: ai.FormatChatTranscript(chatMessages),
-		})
+		prepared = append(prepared, convWithSnapshot{Conv: conv, Snap: snap})
 	}
 
 	// Process in batches
@@ -737,7 +752,7 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 		for j, b := range batch {
 			items[j] = ai.BatchItem{
 				ConversationID: b.Conv.ID,
-				Transcript:     b.Transcript,
+				Transcript:     b.Snap.Transcript,
 			}
 		}
 
@@ -794,7 +809,7 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 			// Process each result
 			for j, rawResult := range batchResults {
 				convID := batch[j].Conv.ID
-				count, passed, saveErr := a.saveResults(run.ID, job.TenantID, convID, job.JobType, string(rawResult))
+				count, passed, saveErr := a.saveResults(run.ID, batch[j].Snap, job.JobType, string(rawResult))
 				if saveErr != nil {
 					log.Printf("[analyzer-batch] save error for %s: %v", convID, saveErr)
 					errorCount++

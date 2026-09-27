@@ -137,12 +137,8 @@ func (s *Scheduler) syncAllChannelsTask() {
 			}
 		}
 
-		// Skip if last sync was too recent
-		if ch.LastSyncAt != nil {
-			elapsed := now.Sub(*ch.LastSyncAt)
-			if elapsed < time.Duration(interval)*time.Minute {
-				continue
-			}
+		if !channelSyncDue(ch, interval, now) {
+			continue
 		}
 
 		if err := s.syncEngine.SyncChannel(ctx, ch); err != nil {
@@ -154,6 +150,21 @@ func (s *Scheduler) syncAllChannelsTask() {
 	if synced > 0 {
 		log.Printf("[scheduler] synced %d/%d channels", synced, len(chans))
 	}
+}
+
+// channelSyncDue throttles on the last attempt, not only the last success:
+// partial/error keep last_sync_at unchanged, so throttling on it alone would
+// retry a failing channel on every scheduler tick.
+func channelSyncDue(ch models.Channel, intervalMinutes int, now time.Time) bool {
+	lastAttempt := ch.LastSyncAt
+	if (ch.LastSyncStatus == "partial" || ch.LastSyncStatus == "error") &&
+		(lastAttempt == nil || ch.UpdatedAt.After(*lastAttempt)) {
+		lastAttempt = &ch.UpdatedAt
+	}
+	if lastAttempt == nil {
+		return true
+	}
+	return now.Sub(*lastAttempt) >= time.Duration(intervalMinutes)*time.Minute
 }
 
 // PruneActivityLogs xoá nhật ký hệ thống cũ hơn số ngày cấu hình. Bảng này chỉ

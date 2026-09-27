@@ -1,6 +1,16 @@
 package ai
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+// evidenceRefsRule is the shared contract for message-bound evidence. The
+// engine rejects the whole conversation result if any ref does not verify.
+const evidenceRefsRule = `- Mỗi vi phạm/nhãn BẮT BUỘC có "evidence_refs" gồm ít nhất một phần tử.
+- "message_id" phải là ID ghi sau "msg:" ở đầu dòng tin nhắn của CHÍNH cuộc hội thoại đang đánh giá.
+- "quote" phải là chuỗi con giữ nguyên từng ký tự (dấu, emoji, khoảng trắng) trong nội dung của tin nhắn đó; không lấy phần tiêu đề dòng.
+- Không cần trả "start"/"end"; nếu trả thì tính theo ký tự Unicode (code point) trong nội dung tin nhắn, start tính từ 0 và end không bao gồm.`
 
 // BuildQCPrompt creates the system prompt for QC analysis.
 func BuildQCPrompt(rulesContent, skipConditions string) string {
@@ -33,6 +43,9 @@ Trả về JSON với cấu trúc sau:
       "severity": "NGHIEM_TRONG" hoặc "CAN_CAI_THIEN",
       "rule": "Tên quy tắc bị vi phạm",
       "evidence": "Trích dẫn chính xác đoạn chat vi phạm",
+      "evidence_refs": [
+        {"message_id": "ID sau msg: của dòng chứa trích dẫn", "quote": "chuỗi con chính xác trong tin nhắn đó"}
+      ],
       "explanation": "Giải thích ngắn gọn tại sao đây là vi phạm",
       "suggestion": "Gợi ý cách trả lời đúng"
     }
@@ -44,7 +57,8 @@ Trả về JSON với cấu trúc sau:
 - "review": Nhận xét chi tiết về cuộc chat (2-3 câu), đánh giá chất lượng chăm sóc khách hàng
 - Nếu không có vi phạm: verdict="PASS", violations=[], score gần 100
 - Nếu có vi phạm nghiêm trọng: verdict="FAIL"
-CHỈ trả về JSON, không thêm text khác.`, rulesContent, skipSection)
+%s
+CHỈ trả về JSON, không thêm text khác.`, rulesContent, skipSection, evidenceRefsRule)
 }
 
 // BuildClassificationPrompt creates the system prompt for conversation classification.
@@ -65,6 +79,9 @@ Trả về JSON:
       "rule_name": "Tên rule đã match",
       "confidence": 0.0-1.0,
       "evidence": "Trích dẫn đoạn chat liên quan",
+      "evidence_refs": [
+        {"message_id": "ID sau msg: của dòng chứa trích dẫn", "quote": "chuỗi con chính xác trong tin nhắn đó"}
+      ],
       "explanation": "Giải thích ngắn gọn tại sao"
     }
   ],
@@ -74,7 +91,8 @@ Trả về JSON:
 - "summary" phải mô tả CỤ THỂ nội dung cuộc chat, không được viết chung chung như "Cuộc chat được phân loại: X"
 - Ví dụ tốt: "Khách hàng hỏi về tính năng webhook nhưng nhân viên không nắm rõ, hướng dẫn sai cách cấu hình. Khách phản hồi tiêu cực."
 - Ví dụ xấu: "Cuộc chat được phân loại: Góp ý tính năng"
-CHỈ trả về JSON, không thêm text khác.`, rulesConfigJSON)
+%s
+CHỈ trả về JSON, không thêm text khác.`, rulesConfigJSON, evidenceRefsRule)
 }
 
 // FormatBatchTranscript formats multiple conversations for batch analysis.
@@ -96,21 +114,28 @@ Format: [{"conversation_id": "xxx", ...kết quả...}, ...]
 CHỈ trả về JSON array, không thêm text khác.`, basePrompt, count, count)
 }
 
-// FormatChatTranscript formats messages into a readable transcript for AI analysis.
+// FormatChatTranscript formats messages into a readable transcript for AI
+// analysis. When MessageID is set, each line carries the source identity that
+// evidence refs must cite.
 func FormatChatTranscript(messages []ChatMessage) string {
-	result := ""
+	var b strings.Builder
 	for _, msg := range messages {
 		label := msg.SenderName
 		if label == "" {
 			label = msg.SenderType
 		}
-		result += fmt.Sprintf("[%s] %s: %s\n", msg.SentAt, label, msg.Content)
+		if msg.MessageID != "" {
+			fmt.Fprintf(&b, "[%s | msg:%s] %s (%s): %s\n", msg.SentAt, msg.MessageID, label, msg.SenderType, msg.Content)
+			continue
+		}
+		fmt.Fprintf(&b, "[%s] %s: %s\n", msg.SentAt, label, msg.Content)
 	}
-	return result
+	return b.String()
 }
 
 // ChatMessage is a simplified message for transcript formatting.
 type ChatMessage struct {
+	MessageID  string
 	SenderType string
 	SenderName string
 	Content    string

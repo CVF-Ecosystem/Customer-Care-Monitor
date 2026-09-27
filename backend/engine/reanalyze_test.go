@@ -17,13 +17,15 @@ import (
 // alwaysFailProvider trả về một vi phạm cố định, đủ để sinh bản ghi đánh giá.
 type alwaysFailProvider struct{ calls int }
 
-func (p *alwaysFailProvider) qcJSON() string {
+func (p *alwaysFailProvider) qcJSON(transcript string) string {
+	src := firstTranscriptRef(transcript)
 	b, _ := json.Marshal(map[string]interface{}{
 		"verdict": "FAIL",
 		"score":   45,
 		"review":  "Nhan vien xin so zalo nhung khong bao lai.",
 		"violations": []map[string]interface{}{
-			{"severity": "NGHIEM_TRONG", "rule": "Bao ket qua", "evidence": "NV: da chay zalo", "explanation": "Khong xac nhan lai."},
+			{"severity": "NGHIEM_TRONG", "rule": "Bao ket qua", "evidence": src.content, "explanation": "Khong xac nhan lai.",
+				"evidence_refs": []map[string]interface{}{{"message_id": src.messageID, "quote": src.content}}},
 		},
 		"summary": "Cuoc chat chua dat.",
 	})
@@ -32,14 +34,14 @@ func (p *alwaysFailProvider) qcJSON() string {
 
 func (p *alwaysFailProvider) AnalyzeChat(ctx context.Context, systemPrompt, transcript string) (ai.AIResponse, error) {
 	p.calls++
-	return ai.AIResponse{Content: p.qcJSON(), InputTokens: 100, OutputTokens: 50, Model: "mock-model", Provider: "mock"}, nil
+	return ai.AIResponse{Content: p.qcJSON(transcript), InputTokens: 100, OutputTokens: 50, Model: "mock-model", Provider: "mock"}, nil
 }
 
 func (p *alwaysFailProvider) AnalyzeChatBatch(ctx context.Context, systemPrompt string, items []ai.BatchItem) (ai.AIResponse, error) {
 	p.calls++
 	results := make([]json.RawMessage, 0, len(items))
-	for range items {
-		results = append(results, json.RawMessage(p.qcJSON()))
+	for _, it := range items {
+		results = append(results, json.RawMessage(p.qcJSON(it.Transcript)))
 	}
 	b, _ := json.Marshal(results)
 	return ai.AIResponse{Content: string(b), InputTokens: 100 * len(items), OutputTokens: 50 * len(items), Model: "mock-model", Provider: "mock"}, nil
@@ -91,6 +93,7 @@ func setupReanalyzeFixture(t *testing.T) *reanalyzeFixture {
 
 	t.Cleanup(func() {
 		db.DB.Exec("DELETE FROM job_results WHERE tenant_id = ?", f.tenantID)
+		db.DB.Exec("DELETE FROM analysis_snapshots WHERE tenant_id = ?", f.tenantID)
 		db.DB.Exec("DELETE FROM job_runs WHERE tenant_id = ?", f.tenantID)
 		db.DB.Exec("DELETE FROM ai_usage_logs WHERE tenant_id = ?", f.tenantID)
 		db.DB.Exec("DELETE FROM jobs WHERE id = ?", f.jobID)

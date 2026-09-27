@@ -351,11 +351,8 @@ async function createPancake() {
 async function syncNow(channelId: string) {
   syncing.value = channelId
   try {
-    const data = await channelStore.syncChannel(tenantId.value, channelId)
-    const msg = data?.conversations_synced != null
-      ? `${t('sync_now')}: ${data.conversations_synced} conversations, ${data.messages_synced} messages`
-      : t('success')
-    showSnack(msg, 'success')
+    await channelStore.syncChannel(tenantId.value, channelId)
+    showSnack('Đã bắt đầu đồng bộ; kết quả hiển thị ở trạng thái kênh', 'info')
     await channelStore.fetchChannels(tenantId.value)
   } catch (e: any) {
     showSnack(e?.response?.data?.error || t('error'), 'error')

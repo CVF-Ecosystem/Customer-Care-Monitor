@@ -84,3 +84,25 @@ func TestFormatChatTranscriptFallbackSenderType(t *testing.T) {
 		t.Error("Should fallback to sender_type when name is empty")
 	}
 }
+
+func TestFormatChatTranscriptCarriesSourceIdentity(t *testing.T) {
+	transcript := FormatChatTranscript([]ChatMessage{
+		{MessageID: "m-1", SenderType: "customer", SenderName: "Khách", Content: "Chờ 3 ngày rồi 😡", SentAt: "2026-09-27T14:30:00+07:00"},
+	})
+	want := "[2026-09-27T14:30:00+07:00 | msg:m-1] Khách (customer): Chờ 3 ngày rồi 😡\n"
+	if transcript != want {
+		t.Fatalf("transcript = %q, want %q", transcript, want)
+	}
+}
+
+func TestPromptsRequireEvidenceRefs(t *testing.T) {
+	for name, prompt := range map[string]string{
+		"qc":             BuildQCPrompt("rule", ""),
+		"classification": BuildClassificationPrompt("[]"),
+	} {
+		if !strings.Contains(prompt, `"evidence_refs"`) || !strings.Contains(prompt, "message_id") ||
+			!strings.Contains(prompt, "quote") || !strings.Contains(prompt, "code point") {
+			t.Errorf("%s prompt lacks the evidence_refs contract", name)
+		}
+	}
+}

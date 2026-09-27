@@ -197,6 +197,7 @@ func DeleteJob(c *gin.Context) {
 	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Pluck("id", &runIDs)
 	if len(runIDs) > 0 {
 		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{})
+		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{})
 	}
 	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.JobRun{})
 	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{})
@@ -230,6 +231,7 @@ func ClearJobResults(c *gin.Context) {
 	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Pluck("id", &runIDs)
 	if len(runIDs) > 0 {
 		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{})
+		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{})
 	}
 	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{})
 	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.NotificationLog{})
@@ -254,6 +256,7 @@ func ClearJobRuns(c *gin.Context) {
 	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Pluck("id", &runIDs)
 	if len(runIDs) > 0 {
 		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{})
+		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{})
 	}
 	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.JobRun{})
 	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{})

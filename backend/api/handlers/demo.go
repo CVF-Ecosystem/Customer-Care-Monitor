@@ -427,6 +427,7 @@ func ResetDemoData(c *gin.Context) {
 	// Delete in dependency order
 	tx.Where("tenant_id = ?", tenantID).Delete(&models.Message{})
 	tx.Where("tenant_id = ?", tenantID).Delete(&models.JobResult{})
+	tx.Where("tenant_id = ?", tenantID).Delete(&models.AnalysisSnapshot{})
 	tx.Where("tenant_id = ?", tenantID).Delete(&models.AIUsageLog{})
 	tx.Where("tenant_id = ?", tenantID).Delete(&models.NotificationLog{})
 	tx.Where("tenant_id = ?", tenantID).Delete(&models.ActivityLog{})
