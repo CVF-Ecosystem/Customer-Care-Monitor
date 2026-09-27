@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"context"
 	"errors"
 	"net/http"
 	"net/http/httptest"
@@ -31,6 +32,7 @@ type jobDispatchFixture struct {
 	testRunLaunches    int
 	testRunLaunchedCfg *config.Config
 	testRunLaunchedJob models.Job
+	testRunLimit       int
 
 	triggerLaunches    int
 	triggerLaunchedCfg *config.Config
@@ -54,18 +56,36 @@ func setupJobDispatchFixture(t *testing.T) *jobDispatchFixture {
 	exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Dispatch Test', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`,
 		f.jobID, f.tenantID)
 	t.Cleanup(func() {
+		jobCancelFuncs.Delete(f.jobID)
+		db.DB.Exec("DELETE FROM job_runs WHERE job_id = ?", f.jobID)
 		db.DB.Exec("DELETE FROM jobs WHERE id = ?", f.jobID)
 		for _, tenant := range []string{f.tenantID, f.otherTenantID} {
 			db.DB.Exec("DELETE FROM activity_logs WHERE tenant_id = ?", tenant)
 			db.DB.Exec("DELETE FROM tenants WHERE id = ?", tenant)
 		}
 	})
+	if f.jobRunCount(t) != 0 {
+		t.Fatalf("fixture job starts with job_runs rows")
+	}
+	if _, ok := jobCancelFuncs.Load(f.jobID); ok {
+		t.Fatalf("fixture job starts with a cancel handle")
+	}
+
+	// The stub launchers reproduce the real worker's observable side effects
+	// (cancel handle + job run) so the rejection assertions are not vacuous.
+	simulateWorkerStart := func(job models.Job) {
+		jobCancelFuncs.Store(job.ID, context.CancelFunc(func() {}))
+		exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, status, summary, created_at) VALUES (?, ?, ?, NOW(), 'running', '{}', NOW())`,
+			pkg.NewUUID(), job.ID, job.TenantID)
+	}
 
 	originalTestRun := startTestRunJob
-	startTestRunJob = func(job models.Job, cfg *config.Config) {
+	startTestRunJob = func(job models.Job, cfg *config.Config, limit int) {
 		f.testRunLaunches++
 		f.testRunLaunchedCfg = cfg
 		f.testRunLaunchedJob = job
+		f.testRunLimit = limit
+		simulateWorkerStart(job)
 	}
 	t.Cleanup(func() { startTestRunJob = originalTestRun })
 
@@ -75,6 +95,7 @@ func setupJobDispatchFixture(t *testing.T) *jobDispatchFixture {
 		f.triggerLaunchedCfg = cfg
 		f.triggerLaunchedJob = job
 		f.triggerParams = p
+		simulateWorkerStart(job)
 	}
 	t.Cleanup(func() { startTriggerJob = originalTrigger })
 
@@ -117,6 +138,39 @@ func (f *jobDispatchFixture) callTrigger(tenantID, query string) *httptest.Respo
 	return rec
 }
 
+func (f *jobDispatchFixture) jobRunCount(t *testing.T) int64 {
+	t.Helper()
+	var n int64
+	if err := db.DB.Model(&models.JobRun{}).Where("job_id = ?", f.jobID).Count(&n).Error; err != nil {
+		t.Fatalf("count job_runs: %v", err)
+	}
+	return n
+}
+
+// assertNoRunOrCancel checks the rejection side effects directly: no job run
+// row and no cancel handle exist for the fixture job.
+func (f *jobDispatchFixture) assertNoRunOrCancel(t *testing.T) {
+	t.Helper()
+	if n := f.jobRunCount(t); n != 0 {
+		t.Fatalf("%d job_runs rows created despite rejection", n)
+	}
+	if _, ok := jobCancelFuncs.Load(f.jobID); ok {
+		t.Fatalf("cancel handle registered despite rejection")
+	}
+}
+
+// assertWorkerStarted proves the side-effect detectors fire when a launch
+// does happen, so their absence on rejection is meaningful.
+func (f *jobDispatchFixture) assertWorkerStarted(t *testing.T) {
+	t.Helper()
+	if n := f.jobRunCount(t); n != 1 {
+		t.Fatalf("job_runs rows %d after accepted launch, want 1", n)
+	}
+	if _, ok := jobCancelFuncs.Load(f.jobID); !ok {
+		t.Fatalf("no cancel handle after accepted launch")
+	}
+}
+
 func (f *jobDispatchFixture) assertNoTestRunStart(t *testing.T, rec *httptest.ResponseRecorder) {
 	t.Helper()
 	if rec.Code < 400 {
@@ -125,6 +179,7 @@ func (f *jobDispatchFixture) assertNoTestRunStart(t *testing.T, rec *httptest.Re
 	if f.testRunLaunches != 0 {
 		t.Fatalf("test-run worker launched %d times despite rejection", f.testRunLaunches)
 	}
+	f.assertNoRunOrCancel(t)
 }
 
 func (f *jobDispatchFixture) assertNoTriggerStart(t *testing.T, rec *httptest.ResponseRecorder) {
@@ -135,6 +190,7 @@ func (f *jobDispatchFixture) assertNoTriggerStart(t *testing.T, rec *httptest.Re
 	if f.triggerLaunches != 0 {
 		t.Fatalf("trigger worker launched %d times despite rejection", f.triggerLaunches)
 	}
+	f.assertNoRunOrCancel(t)
 }
 
 // --- TestRunJob ---
@@ -186,6 +242,10 @@ func TestTestRunJobPassesValidatedConfigToWorker(t *testing.T) {
 	if f.testRunLaunchedJob.ID != f.jobID {
 		t.Fatalf("worker got job %q, want %q", f.testRunLaunchedJob.ID, f.jobID)
 	}
+	if f.testRunLimit != 3 {
+		t.Fatalf("test-run launched with limit %d, want 3", f.testRunLimit)
+	}
+	f.assertWorkerStarted(t)
 }
 
 func TestTestRunJobWrongTenantSkipsConfigLoad(t *testing.T) {
@@ -253,6 +313,7 @@ func TestTriggerJobPassesValidatedConfigAndParamsToWorker(t *testing.T) {
 	if f.triggerParams != want {
 		t.Fatalf("worker got params %+v, want %+v", f.triggerParams, want)
 	}
+	f.assertWorkerStarted(t)
 }
 
 func TestTriggerJobDefaultModeAndLimitReachWorkerUnchanged(t *testing.T) {

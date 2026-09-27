@@ -149,3 +149,92 @@ cross-path sync concurrency remain out of scope, per the SPEC.
 
 `REVIEW_PENDING` for independent Codex R2 REVIEW. No self-approval, FREEZE,
 or S1-closure claim is made by this BUILD.
+
+## Addendum: Repair round 1 (R009-R1)
+
+**Role:** REPAIR_WORKER (Claude) · **Base:** `c67904b` (Codex review of `e042d71`) · **Authority:** [independent review](CCMAI_RUNTIME_009_INDEPENDENT_REVIEW_2026-09-28.md) and the R009-R1 addendum in the [work order](../work_orders/CCMAI_RUNTIME_009.md). Paths touched: `backend/api/handlers/jobs.go`, `backend/api/handlers/job_config_admission_test.go`, this evidence file and R009 continuity files only.
+
+### Source change (behavior-preserving)
+
+- New `const testRunConversationLimit = 3`. `TestRunJob` passes it to
+  `startTestRunJob(job, cfg, testRunConversationLimit)`; the launcher
+  variable takes `limit int` and calls `analyzer.RunJobWithLimit(ctx, job, limit)`.
+  The value reaching the analyzer is still 3. The real launcher's timeout,
+  `jobCancelFuncs` registration/removal, panic recovery and log lines are
+  unchanged. Admission order, the `job_start_failed` rejection, 202 bodies,
+  config identity and trigger parameters are unchanged.
+
+### Test change
+
+- The stub launchers now reproduce the real worker's observable side effects
+  (store a cancel handle under the job ID in `jobCancelFuncs` and insert one
+  `job_runs` row for the job). Without this, "no cancel handle / no job run"
+  would hold trivially because stubs create nothing. Fixture setup asserts
+  the job starts with zero `job_runs` and no cancel handle. Cleanup removes
+  the handle and the job's runs.
+- `assertNoRunOrCancel` counts `job_runs WHERE job_id = <fixture job>`
+  (error-checked) and looks up `jobCancelFuncs`. Both `assertNoTestRunStart`
+  and `assertNoTriggerStart` call it, so it runs on all seven rejection
+  checks: error and nil config for each endpoint, wrong tenant for each
+  endpoint, and the real-`config.Load` invalid subtest (trigger).
+- `assertWorkerStarted` (1 run row, cancel handle present) runs in the
+  accepted test-run and trigger tests. This proves the detectors fire when
+  a launch occurs, so their silence on rejection is meaningful.
+- `TestTestRunJobPassesValidatedConfigToWorker` asserts the launch limit
+  equals the literal `3`, not the constant, so changing the constant fails.
+
+### Mutation check
+
+Repaired `jobs.go` was saved to the session scratchpad. Two temporary
+mutations were applied: `testRunConversationLimit = 4`, and a
+`startTestRunJob(...)` call inside `TestRunJob`'s config-rejection branch
+before the 500 response. Then
+`test-backend.ps1 -Packages ./api/handlers -Run 'TestTestRunJob' -VerboseTests`
+failed as expected:
+
+- `TestTestRunJobConfigFailureStartsNoWorker` and
+  `TestTestRunJobNilConfigIsNotAdmitted` failed with "test-run worker
+  launched 1 times despite rejection".
+- `TestTestRunJobPassesValidatedConfigToWorker` failed with "test-run
+  launched with limit 4, want 3".
+- `TestTestRunJobWrongTenantSkipsConfigLoad` passed, as expected, because
+  the 404 path is before both mutations.
+
+The backup was then restored, and `grep` confirmed limit `3` and no
+launcher call in either rejection branch. Build and vet were clean.
+
+Limitations of the mutation check:
+
+- The launch-on-rejection mutation was stopped first by the existing
+  launch-count `Fatalf`. The new side-effect assertions were not the first
+  to fail. Their sensitivity is shown instead by `assertWorkerStarted`
+  passing on accepted launches.
+- The matching trigger-side mutation (a launch in `TriggerJob`'s rejection
+  branch) was not run. The session's tool permission policy blocked that
+  temporary edit. It was not attempted another way.
+- The trigger rejection tests use the same `assertNoTriggerStart` →
+  `assertNoRunOrCancel` path, and it passes on the unmutated source.
+
+### Validation (repaired source)
+
+1. `go build ./...`, `go vet ./...`, and
+   `gofmt -l api/handlers/jobs.go api/handlers/job_config_admission_test.go`
+   (from `backend/`) were clean.
+2. The focused tests on disposable MySQL all passed:
+   `scripts/test-backend.ps1 -Packages ./api/handlers -Run 'TestTestRunJob|TestTriggerJob|TestJobDispatchUsesRealConfigValidation' -VerboseTests`.
+   That is 10 tests plus the `invalid`/`valid` subtests
+   (`ok ... 6.890s`). The script removed its container and network.
+3. The full backend suite on disposable MySQL (`scripts/test-backend.ps1`)
+   passed on the restored source. All 13 packages were `ok`, including
+   `api/handlers` (27.8s) and `engine` (13.0s). The script removed its
+   container and network.
+4. After the continuity sync, `IMPLEMENTATION_STATUS.json` and
+   `ACTIVE_SESSION_STATE.json` parse as valid JSON. The CVF workspace doctor
+   (`check_cvf_workspace_agent_enforcement.ps1 -ProjectPath <project root>`,
+   including the governed catalog `-Check`) returned
+   `RESULT: PASS (25/25 checks passed)`. `git diff --check` reported only
+   the known `core.autocrlf` LF→CRLF notices and no whitespace errors.
+
+The persistent Compose `ccma` stack was not touched. There was no provider
+call, real channel sync, customer data, deployment or push. Status is
+`REVIEW_PENDING` for Codex re-review. No FREEZE.

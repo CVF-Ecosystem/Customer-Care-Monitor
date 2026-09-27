@@ -359,7 +359,7 @@ func TestRunJob(c *gin.Context) {
 		return
 	}
 
-	startTestRunJob(job, cfg)
+	startTestRunJob(job, cfg, testRunConversationLimit)
 
 	c.JSON(http.StatusAccepted, gin.H{"message": "test_run_started"})
 }
@@ -414,11 +414,14 @@ func TriggerJob(c *gin.Context) {
 // load failure without touching real environment/config state.
 var loadJobDispatchConfig = config.Load
 
+// testRunConversationLimit caps how many conversations a test run analyzes.
+const testRunConversationLimit = 3
+
 // startTestRunJob launches the background test-run worker with the
-// configuration already validated for this request, limited to 3
-// conversations as before. It is a variable only so handler tests can
+// configuration already validated for this request and the conversation
+// limit chosen by the handler. It is a variable only so handler tests can
 // observe dispatch without running a real analyzer/provider.
-var startTestRunJob = func(job models.Job, cfg *config.Config) {
+var startTestRunJob = func(job models.Job, cfg *config.Config, limit int) {
 	go func() {
 		defer func() {
 			if r := recover(); r != nil {
@@ -430,7 +433,7 @@ var startTestRunJob = func(job models.Job, cfg *config.Config) {
 		defer cancel()
 		jobCancelFuncs.Store(job.ID, cancel)
 		defer jobCancelFuncs.Delete(job.ID)
-		if _, err := analyzer.RunJobWithLimit(ctx, job, 3); err != nil {
+		if _, err := analyzer.RunJobWithLimit(ctx, job, limit); err != nil {
 			log.Printf("[test-run] error for job %s: %v", job.Name, err)
 		}
 	}()
