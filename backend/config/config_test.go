@@ -11,11 +11,13 @@ func TestLoadConfig(t *testing.T) {
 	os.Setenv("ENCRYPTION_KEY", "12345678901234567890123456789012")
 	os.Setenv("DB_PASSWORD", "testpassword")
 	os.Setenv("DB_NAME", "")
+	os.Setenv("DB_USER", "")
 	defer func() {
 		os.Unsetenv("JWT_SECRET")
 		os.Unsetenv("ENCRYPTION_KEY")
 		os.Unsetenv("DB_PASSWORD")
 		os.Unsetenv("DB_NAME")
+		os.Unsetenv("DB_USER")
 	}()
 
 	cfg, err := Load()
@@ -28,6 +30,12 @@ func TestLoadConfig(t *testing.T) {
 	}
 	if cfg.DBName != "CCMA" {
 		t.Errorf("Default DBName should be CCMA, got %s", cfg.DBName)
+	}
+	if cfg.DBUser != "ccma" {
+		t.Errorf("Default DBUser should be ccma, got %s", cfg.DBUser)
+	}
+	if cfg.PricingSyncEnabled {
+		t.Error("Pricing sync should be disabled by default")
 	}
 }
 

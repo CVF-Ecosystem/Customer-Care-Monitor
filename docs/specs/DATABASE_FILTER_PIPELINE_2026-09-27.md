@@ -1,6 +1,6 @@
 # Đặc tả luồng MySQL và lọc trước AI
 
-**Trạng thái:** BUILD_COMPLETE / REVIEW_PENDING · **Ngày:** 2026-09-27 · **Work order:** `CCMAI-DATABASE-001` · **Rủi ro:** R2.
+**Trạng thái:** BUILD_COMPLETE / OWNER_REVIEW_ACCEPTED · **Ngày:** 2026-09-27 · **Work order:** `CCMAI-DATABASE-001` · **Rủi ro:** R2.
 
 ## Phạm vi
 
@@ -23,7 +23,7 @@ Tên schema không phải product boundary hoặc SoT authority. `CCMA` chỉ l�
 2. Bản cài đã có `.env` với `DB_NAME=cqa` tiếp tục kết nối schema `cqa` và không đổi hành vi.
 3. Đổi `DB_NAME` trên volume MySQL đã khởi tạo không tự tạo hoặc di chuyển schema. Muốn chuyển dữ liệu phải có backup/restore đã kiểm chứng và work order migration riêng.
 4. Không tự dò rồi đổi sang schema khác: hành vi đó có thể che lỗi cấu hình hoặc mở nhầm dữ liệu.
-5. `DB_USER=cqa` và đường dẫn file kế thừa chưa đổi trong tranche này; chúng độc lập với tên schema.
+5. Workspace phát triển mới dùng `DB_USER=ccma`; override vẫn được hỗ trợ cho môi trường triển khai có cấu hình riêng. Đường dẫn file kế thừa chưa đổi trong tranche này và độc lập với database identity.
 
 ## Luồng lọc đích
 
@@ -59,8 +59,8 @@ Không dùng trực tiếp extension vì sản phẩm đang chạy MySQL, `pg-je
 
 ## Acceptance
 
-- Mặc định `CCMA` nhất quán ở config, Compose, `.env.example`, test và tài liệu biến môi trường.
-- Tài liệu cài đặt cảnh báo rõ bản cài cũ giữ `DB_NAME=cqa`; không claim migration.
+- Mặc định database `CCMA` và application user `ccma` nhất quán ở config, Compose, `.env.example`, test và tài liệu biến môi trường.
+- Workspace phát triển dùng database mới; tài liệu không ngụ ý clone hoặc migration dữ liệu CQA.
 - Roadmap mô tả điểm lọc MySQL/Go/provider và bài học có chọn lọc từ `pg-jev`.
 - `go test ./config`, Compose config với biến tối thiểu, catalog check, workspace doctor và diff check đạt.
 - Không có provider call hoặc claim governance runtime từ tranche này.

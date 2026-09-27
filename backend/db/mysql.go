@@ -61,18 +61,20 @@ func AutoMigrate() error {
 		return fmt.Errorf("auto-migrate: %w", err)
 	}
 
-	// Add unique constraints that GORM can't express directly
-	addUniqueConstraints()
+	// Add unique constraints that GORM can't express directly.
+	if err := addUniqueConstraints(); err != nil {
+		return err
+	}
 
 	log.Println("Database migration completed")
 	return nil
 }
 
-func addUniqueConstraints() {
+func addUniqueConstraints() error {
 	constraints := []struct {
-		table      string
-		name       string
-		columns    string
+		table   string
+		name    string
+		columns string
 	}{
 		{"channels", "uq_channel_tenant_type_ext", "tenant_id, channel_type, external_id"},
 		{"conversations", "uq_conv_tenant_channel_ext", "tenant_id, channel_id, external_conversation_id"},
@@ -80,13 +82,20 @@ func addUniqueConstraints() {
 	}
 
 	for _, c := range constraints {
+		if DB.Migrator().HasIndex(c.table, c.name) {
+			continue
+		}
+
 		sql := fmt.Sprintf(
 			"ALTER TABLE `%s` ADD UNIQUE INDEX `%s` (%s)",
 			c.table, c.name, c.columns,
 		)
-		// Ignore errors if constraint already exists
-		DB.Exec(sql)
+		if err := DB.Exec(sql).Error; err != nil {
+			return fmt.Errorf("add unique index %s on %s: %w", c.name, c.table, err)
+		}
 	}
+
+	return nil
 }
 
 func Close() {

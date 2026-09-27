@@ -18,7 +18,7 @@ cp .env.example .env
 
 Trong `.env`, đặt `DB_PASSWORD`, `MYSQL_ROOT_PASSWORD`, `JWT_SECRET` (ít nhất 32 ký tự) và `ENCRYPTION_KEY` (32 byte; `openssl rand -hex 16` tạo 32 ký tự ASCII). Trên máy dùng PowerShell, sao chép bằng `Copy-Item .env.example .env`. Không commit `.env`.
 
-Bản cài mới dùng database MySQL tên `CCMA`. Nếu đang nâng cấp một bản cài cũ có dữ liệu trong schema `cqa`, giữ nguyên `DB_NAME=cqa` trong `.env`. Chỉ đổi tên sau khi có work order migration, bản sao lưu đã phục hồi thử và rollback; thay `DB_NAME` không tự chuyển dữ liệu, còn biến khởi tạo MySQL chỉ có hiệu lực khi volume được tạo lần đầu.
+Bản cài mới dùng database MySQL `CCMA` và application user `ccma`. Project này khởi tạo database phát triển mới, không nhập database CQA. Khi triển khai vào một môi trường đã có dữ liệu, phải đặt `DB_NAME`/`DB_USER` rõ ràng và xử lý việc nhập hoặc chuyển dữ liệu bằng kế hoạch riêng; biến khởi tạo MySQL chỉ có hiệu lực khi volume được tạo lần đầu.
 
 ```bash
 docker compose up -d --build

@@ -6,12 +6,13 @@ Tham khảo cho bản build từ source; đối chiếu `.env.example`, `docker-
 |---|---|---|
 | `HTTP_PORT` | `8088` | Cổng HTTP trên host |
 | `HTTPS_PORT` | `8443` | Cổng HTTPS trên host |
+| `COMPOSE_PROJECT_NAME` | `ccma` | Tên ổn định cho container, network và volume Compose |
 
 ## Bắt buộc
 
 | Biến | Mô tả | Ví dụ |
 |------|-------|-------|
-| `DB_PASSWORD` | Mật khẩu MySQL cho user CQA | `openssl rand -hex 16` |
+| `DB_PASSWORD` | Mật khẩu MySQL cho user `ccma` | `openssl rand -hex 16` |
 | `MYSQL_ROOT_PASSWORD` | Mật khẩu root MySQL | `openssl rand -hex 16` |
 | `JWT_SECRET` | Secret cho JWT tokens, tối thiểu 32 ký tự | `openssl rand -hex 32` |
 | `ENCRYPTION_KEY` | Key 32 bytes cho mã hóa AES-256-GCM | `openssl rand -hex 16` |
@@ -31,11 +32,11 @@ Tham khảo cho bản build từ source; đối chiếu `.env.example`, `docker-
 |------|-------|----------|
 | `DB_HOST` | MySQL host | `db` |
 | `DB_PORT` | MySQL port | `3306` |
-| `DB_USER` | MySQL username | `cqa` |
+| `DB_USER` | MySQL username | `ccma` |
 | `DB_PASSWORD` | MySQL password | |
 | `DB_NAME` | Tên database; fresh install dùng `CCMA`, bản cài cũ giữ tên schema hiện tại | `CCMA` |
 
-`DB_NAME` phân biệt cấu hình kết nối với dữ liệu thật. Đổi biến này không đổi tên hoặc sao chép schema trong volume MySQL. Bản cài kế thừa dùng `cqa` phải giữ `DB_NAME=cqa` cho tới khi có migration backup/restore riêng đã được kiểm chứng.
+Workspace phát triển của project khởi tạo mới với database `CCMA` và user `ccma`. `DB_NAME` và `DB_USER` vẫn có thể được đặt rõ khi triển khai vào một môi trường khác; đổi các biến này không tự đổi tên hoặc sao chép dữ liệu trong volume MySQL.
 
 ## Rate Limiting
 
@@ -76,13 +77,14 @@ Cần giữ dài hơn cho mục đích kiểm toán thì tăng số ngày, hoặ
 
 ## Đồng bộ bảng giá AI (tùy chọn)
 
-Chi phí AI hiển thị trong CQA được tính từ bảng đơn giá theo token. Bảng này có sẵn
-trong chương trình, đồng thời tự cập nhật định kỳ từ một nguồn công khai để không
-phải chờ bản phát hành mới mỗi khi nhà cung cấp đổi giá hoặc ra model mới.
+Chi phí AI hiển thị trong ứng dụng được tính từ bảng đơn giá theo token. Bảng này có
+sẵn trong chương trình và có thể cập nhật định kỳ từ một nguồn công khai khi được
+bật rõ ràng, để không phải chờ bản phát hành mới mỗi khi nhà cung cấp đổi giá hoặc
+ra model mới.
 
 | Biến | Mô tả | Mặc định |
 |------|-------|----------|
-| `PRICING_SYNC_ENABLED` | Bật/tắt đồng bộ. Tắt thì chỉ dùng bảng có sẵn trong chương trình | `true` |
+| `PRICING_SYNC_ENABLED` | Bật/tắt đồng bộ. Tắt thì chỉ dùng bảng có sẵn trong chương trình | `false` |
 | `PRICING_SYNC_URL` | Nguồn dữ liệu giá, bắt buộc HTTPS | Bảng giá công khai của LiteLLM |
 | `PRICING_SYNC_INTERVAL_HOURS` | Số giờ giữa hai lần đồng bộ | `168` (7 ngày) |
 
@@ -92,7 +94,7 @@ chỉ đọc hai con số đơn giá của mỗi model, loại bỏ bản ghi c�
 âm/quá lớn, và nếu số model hợp lệ thu được quá ít thì giữ nguyên bảng đang dùng.
 Đồng bộ hỏng không ảnh hưởng vận hành — bảng có sẵn trong chương trình vẫn phục vụ.
 
-Muốn cắt hoàn toàn kết nối ra ngoài thì đặt `PRICING_SYNC_ENABLED=false`. Khi đó
+Mặc định kết nối này tắt. Chỉ đặt `PRICING_SYNC_ENABLED=true` khi chủ động cho phép tải bảng giá công khai. Khi tắt,
 model mới chưa có trong bảng sẽ hiện là chưa rõ giá, chứ không bị tính nhầm theo
 giá của model khác.
 

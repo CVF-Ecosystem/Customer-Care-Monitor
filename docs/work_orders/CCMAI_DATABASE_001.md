@@ -1,6 +1,6 @@
 # CCMAI-DATABASE-001: database mặc định và luồng lọc MySQL
 
-**Trạng thái:** BUILD_COMPLETE / REVIEW_PENDING · **Rủi ro:** R2 · **Ngày:** 2026-09-27.
+**Trạng thái:** BUILD_COMPLETE / OWNER_REVIEW_ACCEPTED · **Rủi ro:** R2 · **Ngày:** 2026-09-27.
 
 ## INTAKE
 
@@ -25,10 +25,18 @@ Không sửa schema/table, không di chuyển/xóa database, không sửa provid
 
 Owner-directed validation follow-up (2026-09-27): được phép tạo một Compose project, container, volume và schema hoàn toàn cô lập bằng dữ liệu giả để kiểm chứng fresh install. Phép thử có thể tạo/ghi/xóa một probe table trong schema cô lập nhằm xác minh quyền AutoMigrate/DML của application user; phải dùng tên project riêng, không kết nối database hiện hữu, không dùng credential thật, và phải dọn container/volume cùng `.env` tạm sau phép thử.
 
+Owner-directed development setup follow-up (2026-09-27): workspace này không có dữ liệu CQA cần giữ hoặc migration. Được phép đổi default application database user từ `cqa` sang `ccma`, tạo `.env` git-ignored bằng secret sinh cục bộ, và khởi tạo/giữ Compose MySQL volume mặc định làm database phát triển thật của project. Không dùng dữ liệu hay credential production; không chạy toàn bộ application stack nếu chưa cần.
+
+Nếu live setup phát hiện healthcheck báo sẵn sàng trước khi MySQL hoàn tất init user/schema, được phép sửa healthcheck để xác thực bằng application user và database đích. Acceptance phải đợi authenticated query thành công, không chỉ dựa vào unauthenticated `mysqladmin ping`.
+
+Nếu restart trên persistent volume phát hiện AutoMigrate tạo lại index đã tồn tại, được phép sửa đường migration thủ công thành idempotent và trả lỗi thật thay vì bỏ qua mọi lỗi DDL. Xác minh bằng ít nhất một lần rebuild/restart trên chính volume phát triển.
+
+Nếu lần khởi động backend để AutoMigrate tự phát sinh kết nối ngoài không cần cho database setup, phải ghi nhận sự kiện, tắt mặc định kết nối đó và restart xác minh. Không được diễn giải metadata fetch là provider/LLM call hay governance proof.
+
 ## Evidence / failure conditions
 
-Chạy `go test ./config`, render/validate Compose config với secret giả cục bộ, catalog `-Check`, workspace doctor và `git diff --check`. Dừng nếu default không nhất quán, Compose không render, hoặc tài liệu có thể khiến bản cài cũ tự chuyển schema. BUILD xong chuyển REVIEW; independent reviewer cần kiểm upgrade boundary và claim về `pg-jev` trước FREEZE.
+Chạy `go test ./config`, render/validate Compose config với secret giả cục bộ, catalog `-Check`, workspace doctor và `git diff --check`. Dừng nếu default không nhất quán hoặc Compose không render. Owner review đã loại migration CQA khỏi phạm vi workspace này; claim về `pg-jev` vẫn phải giữ đúng ranh giới thiết kế, không biến thành dependency runtime.
 
 Validation follow-up phải chứng minh schema được tạo đúng tên/case `CCMA`, charset/collation dự kiến, không tự tạo schema `cqa`, application user kết nối được và hoàn tất probe DDL/DML. Kết quả và cleanup được ghi vào BUILD evidence; đây không phải migration test hay bằng chứng CVF runtime governance.
 
-Role route: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER → COMMIT_STEWARD → SESSION_SYNC_STEWARD → ORCHESTRATOR. REVIEWER độc lập vẫn cần.
+Role route: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR. Owner reviewed and corrected the live-development database scope; no separate database review remains. Runtime machine-gate and provider behavior remain outside this work order.

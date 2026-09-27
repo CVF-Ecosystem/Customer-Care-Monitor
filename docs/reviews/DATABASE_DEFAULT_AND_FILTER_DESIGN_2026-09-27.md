@@ -1,12 +1,12 @@
 # Bằng chứng BUILD: database mặc định và thiết kế filter pipeline
 
-**Work order:** `CCMAI-DATABASE-001` · **Ngày:** 2026-09-27 · **Kết quả:** BUILD_PASS / REVIEW_PENDING.
+**Work order:** `CCMAI-DATABASE-001` · **Ngày:** 2026-09-27 · **Kết quả:** BUILD_PASS / OWNER_REVIEW_ACCEPTED.
 
 ## Changed behavior
 
 - Fresh install defaults `DB_NAME`/`MYSQL_DATABASE`/backend fallback to `CCMA`.
-- An explicit `DB_NAME`, including legacy `cqa`, continues to override the default.
-- No schema/table/data migration or database-engine change was performed.
+- Explicit `DB_NAME`/`DB_USER` values continue to override the defaults for separately configured environments.
+- No prior CQA data was imported or migrated. The new persistent `CCMA` database was initialized with the application's current tables.
 - The MySQL → Go snapshot/gate → provider flow and selected `pg-jev` lessons are specified, not implemented as a runtime gate.
 
 ## Source review
@@ -21,13 +21,18 @@
 - Live fresh-volume Compose validation using isolated project `ccmai-db-validation-20260927a`: PASS. MySQL 8 reached `healthy`; `information_schema` returned exact schema `CCMA` with `utf8mb4` / `utf8mb4_unicode_ci`, and returned no application schema named `cqa`.
 - Application user validation: PASS. User `cqa` connected to database `CCMA`, observed the expected charset/collation, then created, inserted, selected and dropped `ccma_validation_probe`. The final table-existence count was `0`.
 - Isolation cleanup: PASS. The validation container, network and project-scoped volume were removed with Compose; label-based follow-up found no remaining project container or volume. The ignored `.env` containing validation-only values was removed.
+- Persistent development setup: PASS. Compose project `ccma` retains `ccma_mysql_data`; exact database `CCMA` and application user `ccma` authenticate successfully. The git-ignored local `.env` uses generated secrets.
+- Authenticated readiness: PASS. The Compose healthcheck now logs in as the application user and executes `SELECT 1` against the configured database, preventing the temporary initialization server from being treated as ready.
+- Application initialization: PASS. The backend image built and AutoMigrate created 16 tables in `CCMA`. The app and database containers remain running; the database volume was deliberately retained.
+- Restart idempotence: PASS after repair. The first restart exposed duplicate unique-index DDL in the inherited manual migration. `addUniqueConstraints` now skips indexes already present and returns unexpected DDL errors. Containerized Go 1.26 tests for `./config ./db` passed; rebuild/restart logs show a successful migration with no duplicate-index or connection error, and all three expected unique indexes remain present.
+- Outbound-default correction: the first backend start automatically fetched the public LiteLLM pricing dataset and logged 395 models. This was a metadata HTTP fetch without provider credential or customer content, not an LLM call. Because it was unnecessary for database initialization, `PRICING_SYNC_ENABLED` now defaults to `false` in config and `.env.example`; the retained local `.env` also disables it. Final restart logs confirm the static table path and no pricing fetch.
 - `npm run docs:build` with the local Node path: PASS. Initial build exposed links from public docs to governance folders excluded by VitePress; those references were changed to source-repo paths and the rerun passed.
 - Governed catalog `-Check`: PASS.
 - Local Markdown link resolution for changed product/governance pages: PASS.
 - `git diff --check`: PASS at pre-commit validation.
 
-The live check proves initialization behavior only for a new disposable MySQL volume. It does not test or authorize migration of an existing `cqa` database. No provider API was called; this artifact makes no CVF runtime-governance claim.
+The live checks prove fresh initialization and restart behavior on this workspace's retained development volume. They do not test migration of an existing external database. No AI/LLM provider API was called; the initial public pricing metadata fetch is disclosed above and was disabled by default afterward. This artifact makes no CVF runtime-governance claim.
 
-## Review focus
+## Disposition
 
-Independent R2 review should verify exact-case `CCMA` portability, the legacy `DB_NAME=cqa` upgrade warning, absence of implicit migration, and the boundary between patterns learned from `pg-jev` and dependencies actually adopted.
+The owner clarified that this workspace is a new product development environment with no CQA database content to preserve. The persistent `CCMA` setup and database identity are accepted; no standalone database review or CQA migration remains. Any future import of an external database, production deployment, machine-gate runtime or provider behavior is a separate governed scope.

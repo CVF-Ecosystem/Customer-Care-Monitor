@@ -4,7 +4,7 @@
     "overallStatus":  "BOOTSTRAPPED",
     "currentPhase":  "REVIEW",
     "completedCapabilities":  [
-                                  "Fresh installations consistently default to MySQL schema CCMA in the environment template, Compose and backend config; explicit DB_NAME values remain supported."
+                                  "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in."
                               ],
     "activeWorkOrders":  [
                              "CCMAI-CREDIT-001",

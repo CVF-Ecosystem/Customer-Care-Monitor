@@ -61,7 +61,7 @@ func Load() (*Config, error) {
 		ServerHost:       getEnv("SERVER_HOST", "127.0.0.1"),
 		DBHost:           getEnv("DB_HOST", "localhost"),
 		DBPort:           getEnv("DB_PORT", "3306"),
-		DBUser:           getEnv("DB_USER", "cqa"),
+		DBUser:           getEnv("DB_USER", "ccma"),
 		DBPassword:       getEnv("DB_PASSWORD", ""),
 		DBName:           getEnv("DB_NAME", "CCMA"),
 		JWTSecret:        getEnv("JWT_SECRET", ""),
@@ -76,7 +76,7 @@ func Load() (*Config, error) {
 
 		ExportMaxRows: getEnvInt("EXPORT_MAX_ROWS", DefaultExportMaxRows),
 
-		PricingSyncEnabled: getEnv("PRICING_SYNC_ENABLED", "true") == "true",
+		PricingSyncEnabled: getEnv("PRICING_SYNC_ENABLED", "false") == "true",
 		PricingSyncURL: getEnv("PRICING_SYNC_URL",
 			"https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"),
 		PricingSyncInterval: time.Duration(getEnvInt("PRICING_SYNC_INTERVAL_HOURS", 168)) * time.Hour,
