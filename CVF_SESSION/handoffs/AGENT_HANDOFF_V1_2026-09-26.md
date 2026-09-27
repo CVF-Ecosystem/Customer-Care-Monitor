@@ -17,6 +17,11 @@ Status: ACTIVE
 - UX-000/UX000-R1 `REVIEW_PASS`, FREEZE open. UX-002 and UX-001a were already REVIEW_PASS, so UX-010's dependency gate is satisfied. F1 onboarding styling and F3 older view-specific chips remain later-screen scope. No provider call or runtime governance proof.
 - Role transition REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex), local review/continuity commit only. Claude next acknowledges WORK_ORDER_AUTHOR for UX-010 before BUILD. No push, deployment or FREEZE.
 
+## Active Tranche: CCMAI-UX-010 (Job Detail BUILD)
+
+- Claude CVF Agent Declaration and tranche/role transition (2026-09-28, rehydrated at `005c02c`): phase WORK_ORDER → BUILD; risk ceiling R2; live evidence YES (UI only, mocked API only for structure tests, no provider); active handoff this file; parked checkpoint none; `BOOTSTRAP_MIGRATION_PENDING` non-blocking. Dependency gate: UX-000 (UX000-R1) and UX-001a REVIEW PASS. Role transition ORCHESTRATOR (Codex) → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER (Claude).
+- WORK_ORDER: `docs/work_orders/CCMAI_UX_010.md` (R2, commit `1b8c3a9`). It records two SPEC corrections found in source: live run progress exists in `job_runs.summary`, and the UX-04 110-vs-100 gap is SKIP exclusion, not two data sources. The accepted latest-run default is kept; Codex should confirm it still suits the narrower rationale.
+
 ## Repair: CCMAI-UX-000 UX000-R1
 
 - Claude CVF Agent Declaration and role transition (2026-09-28, rehydrated from files at `9133729`): project Customer-Care-Monitor-AI; CVF core `../.Controlled-Vibe-Framework-CVF` @ `19386f64e6bc36d1dcdbadca6ff97253feefb1bf`; phase REVIEW (`CHANGES_REQUIRED`) → same-scope repair UX000-R1; risk ceiling R2; live evidence YES (no governance claim, no provider); active handoff this file; parked checkpoint none; `BOOTSTRAP_MIGRATION_PENDING` non-blocking. State, handoff, review and work-order addendum agree. Role transition REVIEWER (Codex) → REPAIR_WORKER (Claude). First repair round for an independent finding. UX-010 is not built.
