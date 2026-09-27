@@ -1,6 +1,6 @@
 # Work order CCMAI-UX-000 — UI foundation
 
-**State:** `REVIEW_PENDING` after BUILD ([evidence](../reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner UI/UX delegation (2026-09-27), owner instruction of 2026-09-28 to run the redesign roadmap starting with UX-000, [SPEC](../specs/UI_FOUNDATION_UX000_2026-09-28.md), [design decision](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 0.
+**State:** `CHANGES_REQUIRED` after independent REVIEW ([finding UX000-R1](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner UI/UX delegation (2026-09-27), owner instruction of 2026-09-28 to run the redesign roadmap starting with UX-000, [SPEC](../specs/UI_FOUNDATION_UX000_2026-09-28.md), [design decision](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 0.
 
 ## Entry and role route
 
@@ -34,3 +34,7 @@ Not allowed: any backend, model, migration, API, store (`frontend/src/stores/**`
 ## External-effect ceiling
 
 Local source/docs/tests; `npm install` of one public font package; a disposable Compose project with synthetic demo data and throwaway credentials, removed after capture. No AI provider call (pure UI tranche), no real channel sync, no customer data, no change to the running `ccma` Compose project or its database, no deployment, no push, no FREEZE.
+
+## REVIEW repair addendum UX000-R1 (2026-09-28)
+
+Independent review found three existing `DefaultLayout.vue` avatar initials forced white on the new light dark-theme primary/secondary fills. Extend the allowed layout edit only to those three foreground classes, using theme `on-primary`/`on-secondary` tokens. Keep avatar behavior and all other scope unchanged. Add focused light/dark contrast assertions, recapture affected dark desktop/mobile layout, rerun frontend build/tests, diff check, catalog and doctor, and return a local repair/evidence commit as `REVIEW_PENDING` for Codex. No self-approval or FREEZE.

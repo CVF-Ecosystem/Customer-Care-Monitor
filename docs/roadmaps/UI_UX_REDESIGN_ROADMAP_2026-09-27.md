@@ -73,10 +73,10 @@ Không cần thiết kế mới, nên làm song song với Giai đoạn 0. Làm 
 
 | Tranche | Phát hiện | Phạm vi | Ghi chú |
 |---|---|---|---|
-| `CCMAI-UX-001a` | UX-01, UX-03 | Frontend: thời gian tương đối không âm; "nhãn" cho tác vụ phân loại | Dữ liệu demo sinh mốc thời gian tương lai nằm trong `demo.go`; phối hợp với tranche thương hiệu demo của Codex BUILD 2026-09-28 (thêm UX-05 và nhãn đúng cho UX-02), chờ Codex review ([bằng chứng](../reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md)) |
+| `CCMAI-UX-001a` | UX-01, UX-03 | Frontend: thời gian tương đối không âm; "nhãn" cho tác vụ phân loại | REVIEW PASS 2026-09-28 cho BUILD có UX-05 và nhãn đúng UX-02; phụ thuộc UX-000 còn mở ([review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md)) |
 | `CCMAI-UX-001b` | UX-02, UX-04, UX-05 | Backend chỉ đọc: số vấn đề chỉ đếm `qc_violation`; thống nhất nguồn số liệu Job Detail; gom nhóm ngày theo giờ +07:00 | Đổi ý nghĩa một trường API hiện có, phải ghi rõ trong SPEC **BLOCKED_API_CONTRACT** cho phần đếm lại UX-02; UX-04 cần quyết định nguồn số liệu; UX-05 đã làm ở UX-001a (chỉ frontend) |
 | `CCMAI-UX-001c` | UX-06 | Điều tra vì sao kênh chưa đồng bộ lại có trạng thái `error` | Gần phạm vi đồng bộ R001/R007/R008; làm sau hoặc cùng tranche đồng bộ đang mở Đã điều tra 2026-09-28: scheduler đồng bộ kênh demo có thông tin xác thực giả nên giải mã lỗi ([hồ sơ](../reviews/UX_001C_SYNC_STATUS_INVESTIGATION_2026-09-28.md)); sửa thuộc tranche runtime |
-| `CCMAI-UX-002` | UX-07 | Trang Kết quả: đặt ghi chú cục bộ phía trên danh sách, thêm tiêu đề cột "Nguồn" | Cùng loại với R006-R1. BUILD xong 2026-09-28, chờ Codex review ([bằng chứng](../reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md)) |
+| `CCMAI-UX-002` | UX-07 | Trang Kết quả: đặt ghi chú cục bộ phía trên danh sách, thêm tiêu đề cột "Nguồn" | REVIEW PASS 2026-09-28, FREEZE mở ([review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md)) |
 
 ### Giai đoạn 2 — Thiết kế từng màn hình
 
@@ -165,5 +165,5 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 ## Bước tiếp theo
 
 1. [Đã dựng bản đầu, 2026-09-28] Claude dựng canvas Giai đoạn 0: bảng màu light/dark, thang chữ, component dùng chung (chip kết luận, chip trạng thái nguồn, khung trạng thái nguồn, thẻ số liệu, thẻ kết quả mobile, hàng bảng, hộp thoại, menu ⋯) và bảng thuật ngữ.
-2. [UX-000: BUILD xong 2026-09-28, chờ Codex review — [SPEC](../specs/UI_FOUNDATION_UX000_2026-09-28.md), [bằng chứng](../reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md)] Claude viết SPEC/WORK_ORDER cho `CCMAI-UX-000` (hiện thực theme, font tự host, component, thuật ngữ, công cụ chụp ảnh) và cho `CCMAI-UX-002` (ghi chú cục bộ trên trang Kết quả). Mỗi tranche BUILD vẫn cần review độc lập của Codex trước FREEZE.
+2. [UX-000: Codex REVIEW `CHANGES_REQUIRED` UX000-R1 ngày 2026-09-28 — [review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md)] Claude sửa độ tương phản ba avatar trong layout, gửi lại `REVIEW_PENDING`. UX-002 và UX-001a đã REVIEW PASS, FREEZE vẫn mở. UX-010 chờ UX-000 qua review lại.
 3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.

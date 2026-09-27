@@ -30,7 +30,7 @@
 
 ## 3. UX-04 resolution (design decision; review attention)
 
-Baseline: "Tất cả: 110" (list: grouped conversations across **all** runs) disagrees with "Hội thoại đã phân tích: 100" (latest run summary). Decision: the Results tab defaults to the **latest run** so list counts and metrics describe the same run. A control "Lần chạy: Mới nhất ▾" switches to a specific earlier run or "Mọi lần chạy", and the caption always names the scope. This is frontend filtering by `job_run_id` on data the API already returns. No API change. If Codex judges the default change unacceptable, the fallback is to keep all-runs as default and caption both numbers with their scope.
+Baseline: "Tất cả: 110" (list: grouped conversations across **all** runs) disagrees with "Hội thoại đã phân tích: 100" (latest run summary). **Codex REVIEW decision, 2026-09-28:** the Results tab defaults to the **latest run** so list counts and metrics describe the same run. A control "Lần chạy: Mới nhất ▾" switches to a specific earlier run or "Mọi lần chạy", and the list caption/counts always name the selected scope. The four metric cards always retain their explicit latest-run caption; card drill-down first selects the latest run, then applies its filter. This is frontend filtering by `job_run_id` on data the API already returns. The existing export endpoint exports all runs and has no run filter, so its button must say "Xuất mọi lần chạy" and must not imply it exports the selected list. A run-scoped export requires a separate API contract or a separately specified client export. No API change in UX-010. Historical fallback if this decision is later revised: keep all-runs as default and caption both numbers with their scope.
 
 ## 4. Data and scope
 

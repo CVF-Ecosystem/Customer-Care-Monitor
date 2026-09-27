@@ -14,12 +14,12 @@
     "CCMAI-RUNTIME-007 REVIEW PASS / FREEZE OPEN: POST /channels/:channelId/sync returns 202 sync_started only after a tenant-and-channel scoped syncing write succeeds with exactly one affected row. A write error or zero rows returns 500 sync_start_failed without DB detail and starts no worker. Panic recovery logs only the panic type, writes a bounded tenant-scoped error status, and reports a failed write. Normal SyncEngine behavior is unchanged. Claude's full backend suite passed; Codex independently reran all seven new disposable-MySQL handler tests. No real channel sync or live governance claim.",
     "CCMAI-DEMO-BRAND-001 R1 REVIEW PASS / DEPLOY OPEN: the demo generator and channel example now use Coffee after a source-only wording follow-up. The active localhost:8088 synthetic CCMA data still uses Cà Phê Mẫu and has no remaining SePay text after the earlier tenant-scoped replacement. Demo row totals and IDs are preserved. The running app image was not rebuilt, so a reset/reimport through that image can recreate old wording until deployment.",
     "CCMAI-RUNTIME-008 REVIEW PASS / FREEZE OPEN: POST /channels/:channelId/sync validates configuration after the tenant-scoped lookup and before the R007 syncing write. An invalid or nil config returns generic 500 sync_start_failed with no status write, worker or config detail in body/log. The validated config is passed to the worker without reload. Claude's full backend suite passed; Codex independently reran focused R008/R007/channel handler tests on disposable MySQL. No real channel sync or live governance claim.",
-    "CCMAI-RUNTIME-009 REVIEW PASS / FREEZE OPEN: both job-dispatch endpoints validate configuration after tenant-scoped lookup and before goroutine/202, reject invalid/nil config generically, and pass the validated config without reload. R009-R1 repair added direct no-job-run/no-cancel assertions for rejected requests and an observed launch limit of 3 for test-run. Claude's focused and full backend suites passed on disposable MySQL; Codex independently reran focused tests and build/vet. No real analyzer/provider or live governance proof."
+    "CCMAI-RUNTIME-009 REVIEW PASS / FREEZE OPEN: both job-dispatch endpoints validate configuration after tenant-scoped lookup and before goroutine/202, reject invalid/nil config generically, and pass the validated config without reload. R009-R1 repair added direct no-job-run/no-cancel assertions for rejected requests and an observed launch limit of 3 for test-run. Claude's focused and full backend suites passed on disposable MySQL; Codex independently reran focused tests and build/vet. No real analyzer/provider or live governance proof.",
+    "CCMAI-UX-002 REVIEW PASS / FREEZE OPEN: Results displays the local-only source note above populated table/card lists and a visible Nguồn column header; independently checked source, tests and captures.",
+    "CCMAI-UX-001a REVIEW PASS / FREEZE OPEN, stacked on UX-000: relative time, demo timestamps, card/tag wording and Vietnam-day trend passed independent source/tests/capture review. UX-000 remains CHANGES_REQUIRED."
   ],
   "buildInProgress": [
-    "CCMAI-UX-000 BUILD REVIEW_PENDING (Claude): design tokens light/dark with explicit on-colors, self-hosted Be Vietnam Pro, 12 presentational shared components encoding R004/R005/R007 display semantics, format/review helpers, UI glossary, static /wireframes/design-system route and a disposable Docker/Chrome screenshot tool. Existing views, stores, backend and API are unchanged; views adopt the components in later screen tranches. 78 frontend tests, full vue-tsc and build pass; 48 screenshots (preview 12, app 36) with 0 JS errors. Awaiting independent Codex R2 REVIEW; no FREEZE.",
-    "CCMAI-UX-002 BUILD REVIEW_PENDING (Claude): Results shows the local-only source note above the list in table and card views and a visible 'Nguồn' source column header (finding UX-07, R006-R1 pattern). Template-only change; 3 new UI-structure tests with mocked API (mutation-checked against pre-change source); 81 frontend tests pass; Results screenshots desktop/mobile light/dark with 0 JS errors. Awaiting Codex R2 REVIEW; no FREEZE.",
-    "CCMAI-UX-001a BUILD REVIEW_PENDING (Claude, stacked on UX-000): dashboard relative time never negative; demo import places conversations on Vietnam business hours and before the demo runs (new disposable-MySQL test, mutation-checked); dashboard card relabelled 'Kết quả đánh giá' for what the API counts; classification cards say 'N nhãn'; Job Detail trend grouped and labelled by Vietnam day. Full backend suite and 86 frontend tests pass. UX-02 backend recount BLOCKED_API_CONTRACT; UX-04 needs a data-source decision."
+    "CCMAI-UX-000 independent REVIEW CHANGES_REQUIRED (UX000-R1): three DefaultLayout avatar initials remain forced white on the new light dark-theme fills. Claude repair and Codex re-review pending; no FREEZE."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -47,8 +47,8 @@
     "Workspace-wide gate has failures in unrelated sibling repositories.",
     "CCMAI-RUNTIME-007/008/009 passed independent REVIEW for manual sync and job-dispatch configuration admission. OAuth/credential paths in channels.go and agents.go remain separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them.",
-    "CCMAI-UX-000 changes the global theme and font only; existing screens keep their own markup, source-status colors and sync labels until their screen tranches (UX-010+). Findings F1 (onboarding bar light in dark mode) and F2 (avatar initials white on dark-theme primary) are recorded for later tranches.",
-    "UX-02 dashboard 'issues' API field still counts every job result (BLOCKED_API_CONTRACT; the UI label now says so). Existing demo rows keep their old timestamps until demo data is reset and re-imported."
+    "CCMAI-UX-000 changes the global theme and font only; existing screens keep their own markup, source-status colors and sync labels until their screen tranches (UX-010+). The F1 onboarding bar remains a later-screen item; avatar contrast is UX000-R1 and blocks UX-000 PASS.",
+    "UX-02 dashboard 'issues' API field still counts every job result; Codex decided to preserve it and add qc_violation_count in a separate R2 API tranche. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -92,7 +92,8 @@
     "docs/reviews/CCMAI_RUNTIME_009_REPAIR_R1_REREVIEW_2026-09-28.md",
     "docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md",
     "docs/reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md",
-    "docs/reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md"
+    "docs/reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md",
+    "docs/reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

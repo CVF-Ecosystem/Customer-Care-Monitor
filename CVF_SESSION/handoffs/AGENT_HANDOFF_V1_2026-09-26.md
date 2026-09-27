@@ -7,9 +7,17 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: ORCHESTRATOR (Claude for UI/UX tranches; Codex for runtime). `CCMAI-UX-000` (+A1), `CCMAI-UX-002` and `CCMAI-UX-001a` BUILDs are REVIEW_PENDING for Codex.
-- Next allowed move: `CCMAI-UX-000` (+A1), `CCMAI-UX-002` and `CCMAI-UX-001a` BUILDs are REVIEW_PENDING for independent Codex REVIEW; Claude continues unblocked UI/UX tranches, each returning REVIEW_PENDING. `CCMAI-RUNTIME-001` to `009` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config admission, sync overlap and crash recovery remain separate. Future real-provider tests require their own bounded work order and sanitized evidence; R009 review used no provider. No persistent Compose DB change, deployment, push or FREEZE occurred.
+- Active role: ORCHESTRATOR (Codex after independent R2 REVIEW; Claude next REPAIR_WORKER for UX000-R1). UX-002 and UX-001a are REVIEW PASS; UX-000 is CHANGES_REQUIRED.
+- Next allowed move: Claude repairs UX000-R1 avatar contrast within the UX-000 work-order addendum and returns a local REVIEW_PENDING commit for Codex re-review. UX-010 work order/BUILD wait for UX-000 PASS. Separate R2 backend/API and runtime work orders cover UX-02 and UX-06. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## Codex independent overnight UI REVIEW (2026-09-28)
+
+- Role transition ORCHESTRATOR → REVIEWER (Codex): independently inspected the UX-000/002/001a source, SPECs, work orders, BUILD evidence and captures. `npm test -- --run` 86/86, frontend build, diff check, focused Go demo tests on disposable MySQL, and doctor 25/25 passed. Disposable MySQL/network were removed. Review: `docs/reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md`.
+- UX-000 `CHANGES_REQUIRED` (UX000-R1): the new dark-theme primary/secondary fills sit behind three forced-white avatar initials in `DefaultLayout.vue`, below the 4.5:1 legibility target. The UX-000 work order now allows only a foreground-token repair for those avatars, with contrast test and dark captures. Same-scope repair remains under Claude's existing R2 authority; Claude must record REPAIR_WORKER transition before BUILD and return REVIEW_PENDING. No self-PASS.
+- UX-002 `REVIEW_PASS` (independent template-only source note/header); UX-001a `REVIEW_PASS` for its bounded change, with its UX-000 dependency still open. All three remain FREEZE open. UX-010 remains SPEC ready, BUILD waiting for UX-000 re-review PASS.
+- Orchestrator decisions: preserve dashboard `issues` semantics, add `qc_violation_count` in a separate R2 API tranche; skip only explicitly marked demo channels in a separate R2 runtime tranche; accept latest-run default in UX-010 with prior/all-run selector and clear list/metric scope. The existing export remains all-runs and must be labelled so. No provider call or runtime governance proof was made in this UI review.
+- Role transition REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex); local review/continuity commit only, no push or FREEZE.
 
 - Codex independent re-review of `10bebe8`: `PASS` for R2 REVIEW, closing R009-R1. Direct job-run/cancel assertions and observed test-run limit 3 satisfy the repair contract. Focused tests passed on separate disposable MySQL; build/vet passed and temporary resources were removed. Review: `docs/reviews/CCMAI_RUNTIME_009_REPAIR_R1_REREVIEW_2026-09-28.md`. Role route REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex). R009 and R001–R008 remain FREEZE open; S1 remains IN_PROGRESS.
 
