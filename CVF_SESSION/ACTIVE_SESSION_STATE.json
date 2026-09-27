@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-007 BUILD is complete as a local commit, REVIEW_PENDING. Manual sync now acknowledges 202 only after a tenant-scoped syncing write affects exactly one row; failure or zero rows returns 500 with no worker. Panic recovery is tenant-scoped, bounded and checked. Codex is next as independent REVIEWER. S1 remains IN_PROGRESS; R001-R006 remain REVIEW PASS / FREEZE open. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
+  "nextAllowedMove": "Codex independently reviewed CCMAI-RUNTIME-007 BUILD commit 0338fee: PASS for R2 REVIEW. Manual sync start-state truth and bounded tenant-scoped panic reporting are accepted. S1 remains IN_PROGRESS; R001-R007 are REVIEW PASS / FREEZE open. ORCHESTRATOR may issue another bounded S1 continuation or route a separate CLOSER/FREEZE evaluation. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE is authorized by this review.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude, CCMAI-RUNTIME-007 BUILD committed); next REVIEWER (Codex)",
+  "activeRole": "ORCHESTRATOR (Codex, after independent CCMAI-RUNTIME-007 REVIEW PASS)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
