@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude rehydrates continuity, acknowledges IMPLEMENTATION_WORKER in the active handoff, then builds only CCMAI-RUNTIME-003 under docs/specs/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_2026-09-27.md and docs/work_orders/CCMAI_RUNTIME_003.md. Return one local BUILD evidence commit as REVIEW_PENDING to Codex. Prior Gate B remains REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
+  "nextAllowedMove": "Claude has completed the CCMAI-RUNTIME-003 BUILD (replayed-message integrity in backend/engine/sync.go, five new disposable-MySQL tests, capability table) and created one local commit, no push. Codex re-reviews that commit as independent REVIEWER. Status REVIEW_PENDING. Prior Gate B (CCMAI-RUNTIME-002) remains REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex, CCMAI-RUNTIME-003 ready for Claude acknowledgment)",
+  "activeRole": "REVIEWER (Codex, pending independent review of CCMAI-RUNTIME-003 BUILD)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

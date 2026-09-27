@@ -338,24 +338,7 @@ func (s *SyncEngine) upsertMessage(tenantID, conversationID string, msg channels
 	result := db.DB.Where("tenant_id = ? AND conversation_id = ? AND external_message_id = ?",
 		tenantID, conversationID, msg.ExternalID).First(&existing)
 	if result.Error == nil {
-		// Message exists — update attachments if we have new local paths
-		hasLocalPath := false
-		for _, att := range msg.Attachments {
-			if att.LocalPath != "" {
-				hasLocalPath = true
-				break
-			}
-		}
-		if hasLocalPath {
-			attachmentsJSON, err := json.Marshal(msg.Attachments)
-			if err != nil {
-				return fmt.Errorf("marshal message attachments: %w", err)
-			}
-			if err := db.DB.Model(&existing).Update("attachments", string(attachmentsJSON)).Error; err != nil {
-				return err
-			}
-		}
-		return nil
+		return updateExistingMessage(&existing, msg)
 	}
 	if !errors.Is(result.Error, gorm.ErrRecordNotFound) {
 		return fmt.Errorf("find existing message: %w", result.Error)
@@ -385,6 +368,100 @@ func (s *SyncEngine) upsertMessage(tenantID, conversationID string, msg channels
 		CreatedAt:         time.Now(),
 	}
 	return db.DB.Create(&message).Error
+}
+
+// updateExistingMessage applies a same-external-ID replay onto an already
+// stored row. Only an explicitly supplied, nonempty/nonzero field overwrites
+// what is stored — an adapter that merely omits a field on this reply must
+// never erase a previously populated value, and this tranche does not infer
+// deletion from an empty reply. The message's internal ID and row count are
+// never touched. When nothing actually differs, no UPDATE is issued at all,
+// so a replay of an unchanged message causes no meaningful DB mutation.
+func updateExistingMessage(existing *models.Message, msg channels.SyncedMessage) error {
+	updates := map[string]interface{}{}
+
+	if msg.Content != "" && msg.Content != existing.Content {
+		updates["content"] = msg.Content
+	}
+	if msg.SenderType != "" && msg.SenderType != existing.SenderType {
+		updates["sender_type"] = msg.SenderType
+	}
+	if msg.SenderName != "" && msg.SenderName != existing.SenderName {
+		updates["sender_name"] = msg.SenderName
+	}
+	if msg.ContentType != "" && msg.ContentType != existing.ContentType {
+		updates["content_type"] = msg.ContentType
+	}
+	if !msg.SentAt.IsZero() && !msg.SentAt.Equal(existing.SentAt) {
+		updates["sent_at"] = msg.SentAt
+	}
+
+	mergedAttachments, changed, err := mergeAttachments(existing.Attachments, msg.Attachments)
+	if err != nil {
+		return fmt.Errorf("merge message attachments: %w", err)
+	}
+	if changed {
+		attachmentsJSON, err := json.Marshal(mergedAttachments)
+		if err != nil {
+			return fmt.Errorf("marshal message attachments: %w", err)
+		}
+		updates["attachments"] = string(attachmentsJSON)
+	}
+
+	if len(updates) == 0 {
+		return nil
+	}
+	return db.DB.Model(existing).Updates(updates).Error
+}
+
+// mergeAttachments applies a replay's attachment list onto what is already
+// stored, using the same identity (type, URL, name — see classifyAttachments)
+// the snapshot digest fingerprint already keys on. An attachment that keeps
+// the same identity as before keeps its previously downloaded LocalPath when
+// this reply didn't supply a new one; an attachment with a different identity
+// must never inherit a stranger's local path. An empty incoming list is
+// indistinguishable from an adapter that simply didn't include attachments in
+// this reply (as opposed to the source message losing them), so it never
+// erases a previously stored list — this tranche does not infer deletion from
+// it; that ambiguity is a documented adapter coverage limit, not a defect.
+func mergeAttachments(existingJSON string, incoming []channels.Attachment) (merged []channels.Attachment, changed bool, err error) {
+	var existing []channels.Attachment
+	trimmed := strings.TrimSpace(existingJSON)
+	if trimmed != "" && trimmed != "null" {
+		if err := json.Unmarshal([]byte(existingJSON), &existing); err != nil {
+			return nil, false, fmt.Errorf("parse stored attachments: %w", err)
+		}
+	}
+
+	if len(incoming) == 0 {
+		return existing, false, nil
+	}
+
+	type identity struct{ typ, url, name string }
+	priorLocalPath := make(map[identity]string, len(existing))
+	for _, att := range existing {
+		priorLocalPath[identity{att.Type, att.URL, att.Name}] = att.LocalPath
+	}
+
+	merged = make([]channels.Attachment, len(incoming))
+	copy(merged, incoming)
+	for i := range merged {
+		if merged[i].LocalPath == "" {
+			if oldPath, ok := priorLocalPath[identity{merged[i].Type, merged[i].URL, merged[i].Name}]; ok {
+				merged[i].LocalPath = oldPath
+			}
+		}
+	}
+
+	existingCanon, err := json.Marshal(existing)
+	if err != nil {
+		return nil, false, fmt.Errorf("re-encode stored attachments: %w", err)
+	}
+	mergedCanon, err := json.Marshal(merged)
+	if err != nil {
+		return nil, false, fmt.Errorf("encode merged attachments: %w", err)
+	}
+	return merged, string(existingCanon) != string(mergedCanon), nil
 }
 
 func buildSyncStatusUpdates(status, errMsg string, now time.Time) map[string]interface{} {
