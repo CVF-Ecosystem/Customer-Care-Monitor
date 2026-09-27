@@ -245,11 +245,16 @@
       </v-card>
 
       <!-- Bảng: cột quan trọng đứng trước -->
-      <v-card v-else-if="xemBang">
+      <template v-else-if="xemBang">
+        <!-- CCMAI-UX-002: local-only caveat above the list, as on Job Detail (R006-R1) -->
+        <v-alert type="info" variant="tonal" density="compact" class="mb-3 text-caption" data-testid="results-source-note">
+          {{ $t('results_source_note') }}
+        </v-alert>
+        <v-card>
         <v-table density="compact" hover>
           <thead>
             <tr>
-              <th style="width: 40px" :aria-label="$t('results_col_source')" :title="$t('results_col_source')"></th>
+              <th style="width: 64px" data-testid="results-source-header">{{ $t('results_col_source') }}</th>
               <th style="min-width: 130px">{{ $t('results_col_customer') }}</th>
               <template v-if="!laPhanLoai">
                 <th style="width: 110px">{{ $t('results_col_verdict') }}</th>
@@ -286,10 +291,15 @@
             </tr>
           </tbody>
         </v-table>
-      </v-card>
+        </v-card>
+      </template>
 
       <!-- Thẻ: bấm để xả nội dung ngay tại chỗ, không mở hộp thoại -->
       <div v-else>
+        <!-- CCMAI-UX-002: local-only caveat above the list, as on Job Detail (R006-R1) -->
+        <v-alert type="info" variant="tonal" density="compact" class="mb-3 text-caption" data-testid="results-source-note">
+          {{ $t('results_source_note') }}
+        </v-alert>
         <v-card v-for="r in items" :key="r.id" variant="outlined" class="mb-3">
           <div class="d-flex align-center flex-wrap ga-2 pa-3" style="cursor: pointer" @click="doiMoRong(r)">
             <v-chip v-if="!laPhanLoai" size="small" :color="mauKetQua(r.severity)" variant="tonal">{{ nhanKetQua(r.severity) }}</v-chip>

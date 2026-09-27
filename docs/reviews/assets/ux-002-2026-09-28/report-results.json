@@ -1,0 +1,60 @@
+{
+  "base": "http://127.0.0.1:18088",
+  "generatedAt": "2026-09-27T19:37:14.018Z",
+  "pages": [
+    {
+      "route": "/single-workspace/results",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "file": "results--desktop--light.png",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/results",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/single-workspace/results",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "file": "results--desktop--dark.png",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/results",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/single-workspace/results",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "file": "results--mobile--light.png",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/results",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/single-workspace/results",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "file": "results--mobile--dark.png",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/results",
+      "horizontalOverflow": false
+    }
+  ],
+  "summary": {
+    "pages": 36,
+    "pagesWithJsErrors": 0,
+    "pagesWithHorizontalOverflow": 0,
+    "externalRequests": []
+  }
+}

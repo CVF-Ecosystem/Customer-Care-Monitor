@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: ORCHESTRATOR (Claude for UI/UX tranches; Codex for runtime). `CCMAI-UX-000` BUILD is REVIEW_PENDING for Codex.
-- Next allowed move: `CCMAI-UX-000` BUILD is REVIEW_PENDING for independent Codex REVIEW; Claude continues unblocked UI/UX tranches, each returning REVIEW_PENDING. `CCMAI-RUNTIME-001` to `009` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config admission, sync overlap and crash recovery remain separate. Future real-provider tests require their own bounded work order and sanitized evidence; R009 review used no provider. No persistent Compose DB change, deployment, push or FREEZE occurred.
+- Active role: ORCHESTRATOR (Claude for UI/UX tranches; Codex for runtime). `CCMAI-UX-000` and `CCMAI-UX-002` BUILDs are REVIEW_PENDING for Codex.
+- Next allowed move: `CCMAI-UX-000` and `CCMAI-UX-002` BUILDs are REVIEW_PENDING for independent Codex REVIEW; Claude continues unblocked UI/UX tranches, each returning REVIEW_PENDING. `CCMAI-RUNTIME-001` to `009` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config admission, sync overlap and crash recovery remain separate. Future real-provider tests require their own bounded work order and sanitized evidence; R009 review used no provider. No persistent Compose DB change, deployment, push or FREEZE occurred.
 - Parked operator checkpoint: none
 
 - Codex independent re-review of `10bebe8`: `PASS` for R2 REVIEW, closing R009-R1. Direct job-run/cancel assertions and observed test-run limit 3 satisfy the repair contract. Focused tests passed on separate disposable MySQL; build/vet passed and temporary resources were removed. Review: `docs/reviews/CCMAI_RUNTIME_009_REPAIR_R1_REREVIEW_2026-09-28.md`. Role route REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex). R009 and R001–R008 remain FREEZE open; S1 remains IN_PROGRESS.
@@ -31,6 +31,7 @@ Status: ACTIVE
 - INTAKE: roadmap Phase 1 finding UX-07 — Results shows per-row source status but the local-only note appears only in the dialog, and the source column header is empty. Same class as R006-R1 on Job Detail. Not blocked: independent of UX-000 and of any open runtime tranche on `Results.vue`.
 - Tranche transition acknowledged (Claude, 2026-09-28, re-read state/handoff/memory/status at `5a850ff`; doctor 25/25 at the end of UX-000): phase SPEC → WORK_ORDER → BUILD; risk ceiling R2; live evidence required YES, but this tranche makes no governance claim and uses a mocked API only for a UI-structure test (allowed by policy); parked checkpoint none; `BOOTSTRAP_MIGRATION_PENDING` non-blocking. Role transition: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER (Claude).
 - SPEC/WORK_ORDER: `docs/specs/RESULTS_SOURCE_NOTE_UX002_2026-09-28.md`, `docs/work_orders/CCMAI_UX_002.md` (R2). Template-only change in `Results.vue` plus a component test.
+- BUILD result: note `results_source_note` rendered as a `v-alert` above the list in both table and card views (only when rows exist); source column header shows visible "Nguồn". 3 new UI-structure tests (mocked API, allowed for UI only) fail against the pre-change source and pass after; `vue-tsc -b --force`, build and 81 frontend tests pass; app-mode screenshots 36 pages / 0 JS errors, disposable env removed. Evidence `docs/reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md`. Route IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude, local only). REVIEW_PENDING for Codex; no FREEZE.
 
 ## Active Tranche: CCMAI-UX-000
 

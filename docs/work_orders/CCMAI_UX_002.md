@@ -1,6 +1,6 @@
 # Work order CCMAI-UX-002 — Results source note and column header
 
-**State:** `WORK_ORDER` (BUILD authorized) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner instruction of 2026-09-28 (run the redesign roadmap, continue unblocked tranches), [SPEC](../specs/RESULTS_SOURCE_NOTE_UX002_2026-09-28.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 1.
+**State:** `REVIEW_PENDING` after BUILD ([evidence](../reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner instruction of 2026-09-28 (run the redesign roadmap, continue unblocked tranches), [SPEC](../specs/RESULTS_SOURCE_NOTE_UX002_2026-09-28.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 1.
 
 ## Entry and role route
 

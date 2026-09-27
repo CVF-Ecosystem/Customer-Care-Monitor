@@ -17,7 +17,8 @@
     "CCMAI-RUNTIME-009 REVIEW PASS / FREEZE OPEN: both job-dispatch endpoints validate configuration after tenant-scoped lookup and before goroutine/202, reject invalid/nil config generically, and pass the validated config without reload. R009-R1 repair added direct no-job-run/no-cancel assertions for rejected requests and an observed launch limit of 3 for test-run. Claude's focused and full backend suites passed on disposable MySQL; Codex independently reran focused tests and build/vet. No real analyzer/provider or live governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-UX-000 BUILD REVIEW_PENDING (Claude): design tokens light/dark with explicit on-colors, self-hosted Be Vietnam Pro, 12 presentational shared components encoding R004/R005/R007 display semantics, format/review helpers, UI glossary, static /wireframes/design-system route and a disposable Docker/Chrome screenshot tool. Existing views, stores, backend and API are unchanged; views adopt the components in later screen tranches. 78 frontend tests, full vue-tsc and build pass; 48 screenshots (preview 12, app 36) with 0 JS errors. Awaiting independent Codex R2 REVIEW; no FREEZE."
+    "CCMAI-UX-000 BUILD REVIEW_PENDING (Claude): design tokens light/dark with explicit on-colors, self-hosted Be Vietnam Pro, 12 presentational shared components encoding R004/R005/R007 display semantics, format/review helpers, UI glossary, static /wireframes/design-system route and a disposable Docker/Chrome screenshot tool. Existing views, stores, backend and API are unchanged; views adopt the components in later screen tranches. 78 frontend tests, full vue-tsc and build pass; 48 screenshots (preview 12, app 36) with 0 JS errors. Awaiting independent Codex R2 REVIEW; no FREEZE.",
+    "CCMAI-UX-002 BUILD REVIEW_PENDING (Claude): Results shows the local-only source note above the list in table and card views and a visible 'Nguồn' source column header (finding UX-07, R006-R1 pattern). Template-only change; 3 new UI-structure tests with mocked API (mutation-checked against pre-change source); 81 frontend tests pass; Results screenshots desktop/mobile light/dark with 0 JS errors. Awaiting Codex R2 REVIEW; no FREEZE."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -35,7 +36,8 @@
     "CCMAI-RUNTIME-008",
     "CCMAI-RUNTIME-009",
     "CCMAI-DEMO-BRAND-001",
-    "CCMAI-UX-000"
+    "CCMAI-UX-000",
+    "CCMAI-UX-002"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -85,7 +87,8 @@
     "docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md",
     "docs/reviews/CCMAI_RUNTIME_009_INDEPENDENT_REVIEW_2026-09-28.md",
     "docs/reviews/CCMAI_RUNTIME_009_REPAIR_R1_REREVIEW_2026-09-28.md",
-    "docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md"
+    "docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md",
+    "docs/reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }
