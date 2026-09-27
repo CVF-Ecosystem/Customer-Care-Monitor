@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-006` BUILD committed); next REVIEWER (Codex)
-- Next allowed move: Codex independently reviews the `CCMAI-RUNTIME-006` BUILD commit (job-result source integrity; evidence `docs/reviews/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_BUILD_2026-09-27.md`). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001/002/003/004/005` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Active role: WORK_ORDER_AUTHOR (Codex, after independent `CCMAI-RUNTIME-006` CHANGES_REQUIRED); next REPAIR_WORKER (Claude)
+- Next allowed move: Claude may acknowledge `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` and repair only R006-R1 in `docs/work_orders/CCMAI_RUNTIME_006.md`, then return one local commit as REVIEW_PENDING for Codex re-review. `CCMAI-RUNTIME-001/002/003/004/005` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -217,6 +217,8 @@ CVF controls the application runtime or that a provider-backed test passed.
   - **Checks:** gofmt, `git diff --check`, catalog `-Check` and doctor 25/25 all clean.
   - **Cleanup:** container and network removed; persistent Compose `ccma` untouched.
 - Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. No FREEZE, S1 closure, S2/S3/S5 or upstream-freshness claim.
+- Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed `61a775a`; fresh disposable-MySQL focused job endpoint/export/failure and R004 regression tests PASS, and the temporary container/network were removed. Review `docs/reviews/CCMAI_RUNTIME_006_INDEPENDENT_REVIEW_2026-09-27.md` returns `CHANGES_REQUIRED` for R006-R1 only: `results_source_note` is visible in the Job Detail dialog but absent from the primary table/card results tab. The short badge label alone does not explain the local-only/upstream-history limit required by SPEC. Backend and export checks are accepted; no new backend defect was found.
+- Role transition after review: `REVIEWER (Codex) -> ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)`. A same-scope repair-round-1 addendum in `docs/work_orders/CCMAI_RUNTIME_006.md` limits Claude to `JobDetail.vue` plus evidence/continuity. Claude is next `REPAIR_WORKER`, then returns one local commit for Codex re-review. Status remains REVIEW_PENDING; no FREEZE or new provider/data/deployment authority.
 
 ## Active Tranche: CCMAI-DOCS-001
 

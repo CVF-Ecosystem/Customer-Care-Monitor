@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-006 — S1 job-result source integrity
 
-**State:** `REVIEW_PENDING` after BUILD (local commit; no path addition) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, next) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md), and accepted R004/R005 reviews.
+**State:** `REVIEW_PENDING / CHANGES_REQUIRED` after independent REVIEW of BUILD commit `61a775a` · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`, next) · **Independent reviewer:** Codex (`REVIEWER`, [finding R006-R1](../reviews/CCMAI_RUNTIME_006_INDEPENDENT_REVIEW_2026-09-27.md)) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md), and accepted R004/R005 reviews.
 
 ## Entry and role route
 
@@ -27,3 +27,11 @@ Allowed accompanying paths: new `docs/reviews/RUNTIME_JOB_RESULT_SOURCE_INTEGRIT
 After passing checks, transition `IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD`, synchronize continuity/status and create one local commit without push. Return `REVIEW_PENDING` to Codex. If any required check fails or an out-of-scope change is necessary, return `BUILD_BLOCKED` with exact evidence.
 
 **External-effect ceiling:** local source/docs/tests and disposable MySQL `CCMA` only. No provider API or credential, real channel sync, customer data, persistent Compose database change, deployment, push, S2/S3/S5 implementation, S1 closure or FREEZE.
+
+## Repair round 1 — R006-R1 local-only caveat visibility
+
+**Entry:** Codex independent REVIEW of `61a775a` accepted the backend/source status and export checks but found the local-only `results_source_note` appears only after opening the Job Detail dialog. The primary table/card view lacks the qualification required by the SPEC. Finding and evidence: `docs/reviews/CCMAI_RUNTIME_006_INDEPENDENT_REVIEW_2026-09-27.md`.
+
+Claude must rehydrate current continuity and acknowledge `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` in the active handoff before repair. Allowed implementation file: `frontend/src/views/Jobs/JobDetail.vue` only. Allowed accompanying files: existing R006 BUILD evidence, active state/handoff, `CVF_SESSION_MEMORY.md`, `IMPLEMENTATION_STATUS.json`, and this work-order status line. Place the existing bilingual `results_source_note` visibly in the results tab above the table/card presentation when results are shown; preserve badges and the dialog note. No backend, status logic, i18n key, frontend store, notification, DB, provider or CVF core edit.
+
+Verify placement by source inspection, run `npm run build`, the existing `i18n.spec.ts` test, catalog `-Check`, workspace doctor and `git diff --check`. Append exact commands/results and the no-provider boundary to R006 BUILD evidence. Then synchronize continuity/status, make one local commit without push and return `REVIEW_PENDING` for Codex re-review. If a new path/effect is needed or a check fails, report `BUILD_BLOCKED` with evidence. No self-approval or FREEZE.
