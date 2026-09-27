@@ -396,4 +396,8 @@ export default {
   ui_more_actions: 'Thao tác khác',
   ui_needs_review: 'Cần xem lại',
   ui_view_details: 'Xem chi tiết',
+  // CCMAI-UX-001a
+  dash_results_total: 'Kết quả đánh giá',
+  dash_results_total_hint: 'Mọi kết quả trong khoảng thời gian: đánh giá, vấn đề và nhãn',
+  tags_count_label: 'nhãn',
 }

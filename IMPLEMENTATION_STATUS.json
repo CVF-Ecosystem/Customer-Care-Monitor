@@ -18,7 +18,8 @@
   ],
   "buildInProgress": [
     "CCMAI-UX-000 BUILD REVIEW_PENDING (Claude): design tokens light/dark with explicit on-colors, self-hosted Be Vietnam Pro, 12 presentational shared components encoding R004/R005/R007 display semantics, format/review helpers, UI glossary, static /wireframes/design-system route and a disposable Docker/Chrome screenshot tool. Existing views, stores, backend and API are unchanged; views adopt the components in later screen tranches. 78 frontend tests, full vue-tsc and build pass; 48 screenshots (preview 12, app 36) with 0 JS errors. Awaiting independent Codex R2 REVIEW; no FREEZE.",
-    "CCMAI-UX-002 BUILD REVIEW_PENDING (Claude): Results shows the local-only source note above the list in table and card views and a visible 'Nguồn' source column header (finding UX-07, R006-R1 pattern). Template-only change; 3 new UI-structure tests with mocked API (mutation-checked against pre-change source); 81 frontend tests pass; Results screenshots desktop/mobile light/dark with 0 JS errors. Awaiting Codex R2 REVIEW; no FREEZE."
+    "CCMAI-UX-002 BUILD REVIEW_PENDING (Claude): Results shows the local-only source note above the list in table and card views and a visible 'Nguồn' source column header (finding UX-07, R006-R1 pattern). Template-only change; 3 new UI-structure tests with mocked API (mutation-checked against pre-change source); 81 frontend tests pass; Results screenshots desktop/mobile light/dark with 0 JS errors. Awaiting Codex R2 REVIEW; no FREEZE.",
+    "CCMAI-UX-001a BUILD REVIEW_PENDING (Claude, stacked on UX-000): dashboard relative time never negative; demo import places conversations on Vietnam business hours and before the demo runs (new disposable-MySQL test, mutation-checked); dashboard card relabelled 'Kết quả đánh giá' for what the API counts; classification cards say 'N nhãn'; Job Detail trend grouped and labelled by Vietnam day. Full backend suite and 86 frontend tests pass. UX-02 backend recount BLOCKED_API_CONTRACT; UX-04 needs a data-source decision."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -37,7 +38,8 @@
     "CCMAI-RUNTIME-009",
     "CCMAI-DEMO-BRAND-001",
     "CCMAI-UX-000",
-    "CCMAI-UX-002"
+    "CCMAI-UX-002",
+    "CCMAI-UX-001a"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -45,7 +47,8 @@
     "Workspace-wide gate has failures in unrelated sibling repositories.",
     "CCMAI-RUNTIME-007/008/009 passed independent REVIEW for manual sync and job-dispatch configuration admission. OAuth/credential paths in channels.go and agents.go remain separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them.",
-    "CCMAI-UX-000 changes the global theme and font only; existing screens keep their own markup, source-status colors and sync labels until their screen tranches (UX-010+). Findings F1 (onboarding bar light in dark mode) and F2 (avatar initials white on dark-theme primary) are recorded for later tranches."
+    "CCMAI-UX-000 changes the global theme and font only; existing screens keep their own markup, source-status colors and sync labels until their screen tranches (UX-010+). Findings F1 (onboarding bar light in dark mode) and F2 (avatar initials white on dark-theme primary) are recorded for later tranches.",
+    "UX-02 dashboard 'issues' API field still counts every job result (BLOCKED_API_CONTRACT; the UI label now says so). Existing demo rows keep their old timestamps until demo data is reset and re-imported."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -88,7 +91,8 @@
     "docs/reviews/CCMAI_RUNTIME_009_INDEPENDENT_REVIEW_2026-09-28.md",
     "docs/reviews/CCMAI_RUNTIME_009_REPAIR_R1_REREVIEW_2026-09-28.md",
     "docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md",
-    "docs/reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md"
+    "docs/reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md",
+    "docs/reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

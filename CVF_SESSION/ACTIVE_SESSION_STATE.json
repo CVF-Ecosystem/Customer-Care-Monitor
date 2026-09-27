@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-UX-000 and CCMAI-UX-002 BUILDs are REVIEW_PENDING for independent Codex R2 REVIEW (evidence docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md and docs/reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md); Claude does not self-approve or FREEZE. Claude may continue UI/UX tranches not blocked by a dependency, each with its own SPEC, work order, evidence and local commit, recording BLOCKED for API-contract change, real data/provider use, running-DB change, deployment or out-of-scope work. R001-R009 remain REVIEW PASS / FREEZE open and S1 IN_PROGRESS under Codex orchestration. No push.",
+  "nextAllowedMove": "CCMAI-UX-000 (with same-scope addendum A1), CCMAI-UX-002 and CCMAI-UX-001a (stacked on UX-000) BUILDs are REVIEW_PENDING for independent Codex R2 REVIEW; review UX-000 first. Claude does not self-approve or FREEZE. Open decisions for owner/Codex: UX-02 dashboard recount is BLOCKED_API_CONTRACT; UX-04 needs a data-source decision. Claude may continue unblocked UI/UX tranches (design/SPEC for later screens) with their own SPEC, work order, evidence and local commit. R001-R009 remain REVIEW PASS / FREEZE open and S1 IN_PROGRESS under Codex orchestration. No push.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Claude, UI/UX tranches; CCMAI-UX-000 and CCMAI-UX-002 REVIEW_PENDING for Codex)",
+  "activeRole": "ORCHESTRATOR (Claude, UI/UX tranches; UX-000, UX-002, UX-001a REVIEW_PENDING for Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

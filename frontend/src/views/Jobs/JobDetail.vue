@@ -464,7 +464,7 @@
                   {{ group.score }}/100
                 </v-chip>
               </template>
-              <span class="text-caption text-grey mr-2">{{ group.violations.length }} {{ $t('issues_label') }}</span>
+              <span class="text-caption text-grey mr-2">{{ group.violations.length }} {{ isClassification ? $t('tags_count_label') : $t('issues_label') }}</span>
               <v-icon>{{ expandedMap[group.conversationId] ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
             </div>
 
@@ -766,6 +766,7 @@ import { useDisplay } from 'vuetify'
 import { useJobStore, type JobResult, type SourceIntegrityStatus, distinctSourceIntegrity, SOURCE_INTEGRITY_LABEL_KEY, SOURCE_INTEGRITY_STYLE } from '../../stores/jobs'
 import { useAuthStore } from '../../stores/auth'
 import api from '../../api'
+import { qualityTrendByDay } from '../../utils/trend'
 import { Line } from 'vue-chartjs'
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Filler, Legend } from 'chart.js'
 
@@ -921,43 +922,15 @@ const aggregateStats = computed(() => {
   }
 })
 
-// Trend chart — group theo ngày cuộc chat (conversation date), đếm theo conversation
+// Trend chart — group theo ngày cuộc chat (conversation date), đếm theo conversation.
+// CCMAI-UX-001a (UX-05): grouped and labelled by the same Vietnam calendar day.
 const trendChartData = computed(() => {
-  const results = jobStore.jobResults
-  // Bước 1: Group results theo conversation_id → xác định pass/fail/skip per conversation
-  const convMap = new Map<string, { date: string; hasViolation: boolean; isSkip: boolean }>()
-  for (const r of results) {
-    const existing = convMap.get(r.conversation_id) || {
-      date: r.conversation_date || r.created_at,
-      hasViolation: false,
-      isSkip: false,
-    }
-    if (r.result_type === 'qc_violation') existing.hasViolation = true
-    if (r.result_type === 'conversation_evaluation' && r.severity === 'SKIP') existing.isSkip = true
-    convMap.set(r.conversation_id, existing)
-  }
-  // Bước 2: Group conversations theo ngày → đếm passed/failed
-  const byDate = new Map<string, { passed: number; failed: number; label: string }>()
-  for (const [, conv] of convMap) {
-    const d = new Date(conv.date)
-    const label = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`
-    const sortKey = d.toISOString().slice(0, 10)
-    const existing = byDate.get(sortKey) || { passed: 0, failed: 0, label }
-    if (conv.isSkip) {
-      // exclude SKIP from trend chart
-    } else if (conv.hasViolation) {
-      existing.failed += 1
-    } else {
-      existing.passed += 1
-    }
-    byDate.set(sortKey, existing)
-  }
-  const sorted = [...byDate.entries()].sort((a, b) => a[0].localeCompare(b[0]))
+  const sorted = qualityTrendByDay(jobStore.jobResults)
   return {
-    labels: sorted.map(([, v]) => v.label),
+    labels: sorted.map((v) => v.label),
     datasets: [
-      { label: 'Đạt', data: sorted.map(([, v]) => v.passed), borderColor: '#66BB6A', backgroundColor: '#66BB6A', fill: false, tension: 0.3, pointRadius: 4 },
-      { label: 'Không đạt', data: sorted.map(([, v]) => v.failed), borderColor: '#EF5350', backgroundColor: '#EF5350', fill: false, tension: 0.3, pointRadius: 4 },
+      { label: 'Đạt', data: sorted.map((v) => v.passed), borderColor: '#66BB6A', backgroundColor: '#66BB6A', fill: false, tension: 0.3, pointRadius: 4 },
+      { label: 'Không đạt', data: sorted.map((v) => v.failed), borderColor: '#EF5350', backgroundColor: '#EF5350', fill: false, tension: 0.3, pointRadius: 4 },
     ],
   }
 })

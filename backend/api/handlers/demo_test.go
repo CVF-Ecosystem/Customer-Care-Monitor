@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+	"time"
 
 	"github.com/gin-gonic/gin"
 
@@ -330,5 +331,78 @@ func TestImportDemoDataStoresNoInventedConfidence(t *testing.T) {
 		if m["confidence"] != nil || m["confidence_basis"] != models.ConfidenceBasisUnavailable {
 			t.Fatalf("demo tag serialized confidence=%v basis=%v", m["confidence"], m["confidence_basis"])
 		}
+	}
+}
+
+// TestImportDemoDataPlacesNothingInTheFuture covers CCMAI-UX-001a (finding
+// UX-01): with "today" pinned to 07:30 in Vietnam, same-day demo conversations
+// used to be scheduled up to 20:00 that day (and, via UTC midnight truncation,
+// even later), so the dashboard showed negative "minutes ago". Every demo
+// conversation must now start between 08:00 and 20:00 Vietnam time and end,
+// with its results, before the demo runs start and finish.
+func TestImportDemoDataPlacesNothingInTheFuture(t *testing.T) {
+	connectChannelsTestDB(t)
+	fixedNow := time.Date(2026, 9, 28, 0, 30, 0, 0, time.UTC) // 07:30 at UTC+07:00
+	prevNow := demoNow
+	demoNow = func() time.Time { return fixedNow }
+	t.Cleanup(func() { demoNow = prevNow })
+
+	tenantID := "demotime-" + pkg.NewUUID()[:8]
+	if err := db.DB.Exec(`INSERT INTO tenants (id, name, slug, settings, created_at, updated_at) VALUES (?, 'Demo Time Test', ?, '{}', NOW(), NOW())`, tenantID, tenantID).Error; err != nil {
+		t.Fatalf("fixture tenant: %v", err)
+	}
+	t.Cleanup(func() {
+		for _, table := range []string{"job_results", "analysis_snapshots", "ai_usage_logs", "messages", "conversations", "job_runs", "jobs", "channels", "activity_logs"} {
+			db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", tenantID)
+		}
+		db.DB.Exec("DELETE FROM tenants WHERE id = ?", tenantID)
+	})
+
+	gin.SetMode(gin.TestMode)
+	rec := httptest.NewRecorder()
+	c, _ := gin.CreateTestContext(rec)
+	c.Set("tenant_id", tenantID)
+	c.Request = httptest.NewRequest("POST", "/api/v1/demo/import", nil)
+	ImportDemoData(c)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("ImportDemoData status %d, body %s", rec.Code, rec.Body.String())
+	}
+
+	runsStart := fixedNow.Add(-2 * time.Hour)
+	runsFinish := fixedNow.Add(-30 * time.Minute)
+
+	var convs []models.Conversation
+	if err := db.DB.Where("tenant_id = ?", tenantID).Find(&convs).Error; err != nil {
+		t.Fatal(err)
+	}
+	if len(convs) == 0 {
+		t.Fatal("demo seeded no conversations; test would be vacuous")
+	}
+	vn := time.FixedZone("ICT", 7*60*60)
+	for _, cv := range convs {
+		start := cv.CreatedAt.In(vn)
+		if start.Hour() < 8 || start.Hour() > 20 {
+			t.Fatalf("conversation %s starts at %s, outside 08:00-20:00 Vietnam time", cv.ID, start.Format(time.RFC3339))
+		}
+		if cv.LastMessageAt == nil || cv.LastMessageAt.After(runsStart) {
+			t.Fatalf("conversation %s last message %v is not before the demo runs start %s", cv.ID, cv.LastMessageAt, runsStart)
+		}
+	}
+
+	count := func(sql string, args ...interface{}) int64 {
+		var n int64
+		if err := db.DB.Raw(sql, args...).Scan(&n).Error; err != nil {
+			t.Fatal(err)
+		}
+		return n
+	}
+	if n := count("SELECT COUNT(*) FROM messages WHERE tenant_id = ? AND sent_at > ?", tenantID, runsStart); n != 0 {
+		t.Fatalf("%d demo messages are later than the demo runs start", n)
+	}
+	if n := count("SELECT COUNT(*) FROM job_results WHERE tenant_id = ? AND created_at > ?", tenantID, runsFinish); n != 0 {
+		t.Fatalf("%d demo results are later than the demo runs finish", n)
+	}
+	if n := count("SELECT COUNT(*) FROM job_results WHERE tenant_id = ?", tenantID); n == 0 {
+		t.Fatal("demo seeded no results; test would be vacuous")
 	}
 }

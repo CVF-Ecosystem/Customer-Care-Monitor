@@ -73,8 +73,8 @@ Không cần thiết kế mới, nên làm song song với Giai đoạn 0. Làm 
 
 | Tranche | Phát hiện | Phạm vi | Ghi chú |
 |---|---|---|---|
-| `CCMAI-UX-001a` | UX-01, UX-03 | Frontend: thời gian tương đối không âm; "nhãn" cho tác vụ phân loại | Dữ liệu demo sinh mốc thời gian tương lai nằm trong `demo.go`; phối hợp với tranche thương hiệu demo của Codex |
-| `CCMAI-UX-001b` | UX-02, UX-04, UX-05 | Backend chỉ đọc: số vấn đề chỉ đếm `qc_violation`; thống nhất nguồn số liệu Job Detail; gom nhóm ngày theo giờ +07:00 | Đổi ý nghĩa một trường API hiện có, phải ghi rõ trong SPEC |
+| `CCMAI-UX-001a` | UX-01, UX-03 | Frontend: thời gian tương đối không âm; "nhãn" cho tác vụ phân loại | Dữ liệu demo sinh mốc thời gian tương lai nằm trong `demo.go`; phối hợp với tranche thương hiệu demo của Codex BUILD 2026-09-28 (thêm UX-05 và nhãn đúng cho UX-02), chờ Codex review ([bằng chứng](../reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md)) |
+| `CCMAI-UX-001b` | UX-02, UX-04, UX-05 | Backend chỉ đọc: số vấn đề chỉ đếm `qc_violation`; thống nhất nguồn số liệu Job Detail; gom nhóm ngày theo giờ +07:00 | Đổi ý nghĩa một trường API hiện có, phải ghi rõ trong SPEC **BLOCKED_API_CONTRACT** cho phần đếm lại UX-02; UX-04 cần quyết định nguồn số liệu; UX-05 đã làm ở UX-001a (chỉ frontend) |
 | `CCMAI-UX-001c` | UX-06 | Điều tra vì sao kênh chưa đồng bộ lại có trạng thái `error` | Gần phạm vi đồng bộ R001/R007/R008; làm sau hoặc cùng tranche đồng bộ đang mở |
 | `CCMAI-UX-002` | UX-07 | Trang Kết quả: đặt ghi chú cục bộ phía trên danh sách, thêm tiêu đề cột "Nguồn" | Cùng loại với R006-R1. BUILD xong 2026-09-28, chờ Codex review ([bằng chứng](../reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md)) |
 

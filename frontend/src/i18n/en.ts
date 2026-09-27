@@ -396,4 +396,8 @@ export default {
   ui_more_actions: 'More actions',
   ui_needs_review: 'Needs review',
   ui_view_details: 'View details',
+  // CCMAI-UX-001a
+  dash_results_total: 'Analysis results',
+  dash_results_total_hint: 'All results in the period: evaluations, issues and tags',
+  tags_count_label: 'tags',
 }

@@ -1,6 +1,6 @@
 # Work order CCMAI-UX-001a — display data fixes
 
-**State:** `WORK_ORDER` (BUILD authorized) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner instruction of 2026-09-28, [SPEC](../specs/DISPLAY_DATA_FIXES_UX001A_2026-09-28.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 1. The roadmap deferred this SPEC until R008 finished; R008 and R009 are REVIEW PASS, and the demo-brand tranche is REVIEW PASS, so no open tranche edits the same files.
+**State:** `REVIEW_PENDING` after BUILD ([evidence](../reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner instruction of 2026-09-28, [SPEC](../specs/DISPLAY_DATA_FIXES_UX001A_2026-09-28.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 1. The roadmap deferred this SPEC until R008 finished; R008 and R009 are REVIEW PASS, and the demo-brand tranche is REVIEW PASS, so no open tranche edits the same files.
 
 ## Entry and role route
 

@@ -56,7 +56,7 @@ func ImportDemoData(c *gin.Context) {
 		return
 	}
 
-	now := time.Now()
+	now := demoNow()
 	rng := rand.New(rand.NewSource(now.UnixNano()))
 
 	// === Channels ===
@@ -186,7 +186,7 @@ func ImportDemoData(c *gin.Context) {
 			agentName := agentNames[rng.Intn(len(agentNames))]
 			daysAgo := rng.Intn(14)
 			hoursAgo := rng.Intn(12) + 8 // 8-20h
-			baseTime := now.Add(-time.Duration(daysAgo) * 24 * time.Hour).Truncate(24 * time.Hour).Add(time.Duration(hoursAgo) * time.Hour)
+			baseTime := demoConversationStart(now, daysAgo, hoursAgo, len(tmpl.messages))
 
 			conv := models.Conversation{
 				ID: convID, TenantID: tenantID, ChannelID: channelID,
@@ -747,4 +747,27 @@ func buildDemoTemplates() []demoTemplate {
 			},
 		},
 	}
+}
+
+// demoNow is the demo writer's clock; tests replace it to pin "today".
+var demoNow = time.Now
+
+// demoLocation is Vietnam time (UTC+07:00, no DST). A fixed zone avoids depending
+// on tzdata being present in the container.
+var demoLocation = time.FixedZone("ICT", 7*60*60)
+
+// demoConversationStart places a demo conversation at hour (8-20) of a Vietnam
+// calendar day daysAgo before now. CCMAI-UX-001a: the day moves back until the
+// conversation's last message ends before the demo runs start (now - 2h), so no
+// demo message, conversation or result lies in the future.
+func demoConversationStart(now time.Time, daysAgo, hour, messageCount int) time.Time {
+	localNow := now.In(demoLocation)
+	day := time.Date(localNow.Year(), localNow.Month(), localNow.Day(), 0, 0, 0, 0, demoLocation).AddDate(0, 0, -daysAgo)
+	start := day.Add(time.Duration(hour) * time.Hour)
+	lastMessage := time.Duration(messageCount*2) * time.Minute
+	latest := now.Add(-2 * time.Hour)
+	for start.Add(lastMessage).After(latest) {
+		start = start.AddDate(0, 0, -1)
+	}
+	return start
 }

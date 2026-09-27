@@ -70,7 +70,7 @@
         <v-card class="pa-4">
           <div class="d-flex justify-space-between align-center">
             <div>
-              <div class="text-body-2 text-grey">{{ $t(stat.label) }}</div>
+              <div class="text-body-2 text-grey" :title="stat.hint ? $t(stat.hint) : undefined">{{ $t(stat.label) }}</div>
               <div class="text-h5 font-weight-bold mt-1">{{ stat.value }}</div>
             </div>
             <v-icon :color="stat.color" size="32" class="opacity-50">{{ stat.icon }}</v-icon>
@@ -253,6 +253,8 @@ import { useRoute, useRouter } from 'vue-router'
 import { Line } from 'vue-chartjs'
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend } from 'chart.js'
 import api from '../api'
+import { useI18n } from 'vue-i18n'
+import { formatRelative, type UiLocale } from '../utils/format'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
 
@@ -262,7 +264,8 @@ const tenantId = computed(() => route.params.tenantId as string)
 
 const stats = ref([
   { label: 'total_conversations', value: 0, icon: 'mdi-message-text', color: 'primary' },
-  { label: 'issues', value: 0, icon: 'mdi-alert-circle', color: 'error' },
+  // CCMAI-UX-001a (UX-02): the API value counts every result in the period, not only QC issues.
+  { label: 'dash_results_total', hint: 'dash_results_total_hint', value: 0, icon: 'mdi-clipboard-check-outline', color: 'error' },
   { label: 'active_jobs', value: 0, icon: 'mdi-briefcase-check', color: 'success' },
   { label: 'active_channels', value: 0, icon: 'mdi-connection', color: 'info' },
 ])
@@ -488,13 +491,10 @@ onMounted(() => {
   loadDashboard()
 })
 
+// CCMAI-UX-001a (UX-01): never negative; minutes, then hours, then days.
+const { locale } = useI18n()
 function timeAgo(dateStr: string) {
-  const diff = Date.now() - new Date(dateStr).getTime()
-  const mins = Math.floor(diff / 60000)
-  if (mins < 60) return `${mins} phút trước`
-  const hours = Math.floor(mins / 60)
-  if (hours < 24) return `${hours} giờ trước`
-  return `${Math.floor(hours / 24)} ngày trước`
+  return formatRelative(dateStr, locale.value as UiLocale)
 }
 
 function goToConversation(convId: string, tab?: string) {

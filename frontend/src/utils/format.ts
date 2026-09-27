@@ -62,3 +62,18 @@ export function formatCurrency(value: number | null | undefined, currency: 'VND'
   if (currency === 'VND') return `${amount} ₫`
   return locale === 'vi' ? `${amount} US$` : `$${amount}`
 }
+
+// CCMAI-UX-001a: calendar day in Vietnam time (UTC+07:00) as "YYYY-MM-DD", so charts group
+// and label by the same day regardless of the viewer's browser time zone.
+export function vnDateKey(value: string | number | Date | null | undefined): string | null {
+  const d = toDate(value)
+  if (!d) return null
+  const vn = new Date(d.getTime() + 7 * 60 * 60 * 1000)
+  return `${vn.getUTCFullYear()}-${pad(vn.getUTCMonth() + 1)}-${pad(vn.getUTCDate())}`
+}
+
+// "YYYY-MM-DD" -> "dd/mm" for chart axes.
+export function dayMonthLabel(key: string): string {
+  const [, m, d] = key.split('-')
+  return `${d}/${m}`
+}
