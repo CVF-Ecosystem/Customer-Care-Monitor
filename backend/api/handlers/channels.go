@@ -685,37 +685,76 @@ func SyncChannelNow(c *gin.Context) {
 		return
 	}
 
-	// Mark channel as syncing immediately
-	db.DB.Model(&channel).Updates(map[string]interface{}{
-		"last_sync_status": "syncing",
-		"last_sync_error":  "",
-		"updated_at":       time.Now(),
-	})
+	// 202 only means "start recorded and worker dispatched"; if the visible
+	// syncing state cannot be persisted, no worker starts.
+	if err := updateChannelSyncStatus(tenantID, channelID, "syncing", ""); err != nil {
+		log.Printf("[error] manual sync start for channel %s not recorded: %v", channelID, err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "sync_start_failed"})
+		return
+	}
 
 	// Run sync in background to avoid Nginx/proxy gateway timeout
-	go func() {
-		defer func() {
-			if r := recover(); r != nil {
-				log.Printf("[security] panic in sync goroutine for channel %s: %v", channel.Name, r)
-				db.DB.Model(&models.Channel{}).Where("id = ?", channelID).Updates(map[string]interface{}{
-					"last_sync_status": "error",
-					"last_sync_error":  fmt.Sprintf("panic: %v", r),
-					"updated_at":       time.Now(),
-				})
-			}
-		}()
+	startManualSync(tenantID, channel)
 
-		cfg, _ := config.Load()
-		syncEng := engine.NewSyncEngine(cfg)
+	c.JSON(http.StatusAccepted, gin.H{"message": "sync_started"})
+}
 
-		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
-		defer cancel()
-		if err := syncEng.SyncChannel(ctx, channel); err != nil {
-			log.Printf("[error] sync channel %s failed: %v", channelID, err)
+// startManualSync launches the background worker. It is a variable only so
+// handler tests can observe dispatch without running a real channel adapter.
+var startManualSync = func(tenantID string, channel models.Channel) {
+	go runManualSync(tenantID, channel)
+}
+
+func runManualSync(tenantID string, channel models.Channel) {
+	defer func() {
+		if r := recover(); r != nil {
+			_ = handleManualSyncPanic(tenantID, channel.ID, r)
 		}
 	}()
 
-	c.JSON(http.StatusAccepted, gin.H{"message": "sync_started"})
+	cfg, _ := config.Load()
+	syncEng := engine.NewSyncEngine(cfg)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
+	defer cancel()
+	if err := syncEng.SyncChannel(ctx, channel); err != nil {
+		log.Printf("[error] sync channel %s failed: %v", channel.ID, err)
+	}
+}
+
+// manualSyncPanicMessage is the fixed, bounded text persisted after a worker
+// panic; the raw panic value may carry request data or credentials.
+const manualSyncPanicMessage = "Đồng bộ thủ công dừng do lỗi nội bộ; xem nhật ký máy chủ."
+
+// handleManualSyncPanic logs only the panic's type, records a tenant-scoped
+// error status and returns (and logs) any failure to record it.
+func handleManualSyncPanic(tenantID, channelID string, r interface{}) error {
+	log.Printf("[error] manual sync worker for channel %s panicked (%T)", channelID, r)
+	if err := updateChannelSyncStatus(tenantID, channelID, "error", manualSyncPanicMessage); err != nil {
+		log.Printf("[error] manual sync panic status for channel %s not recorded: %v", channelID, err)
+		return err
+	}
+	return nil
+}
+
+// updateChannelSyncStatus writes the visible sync status for exactly one
+// tenant-owned channel. MySQL reports changed rows, and updated_at always
+// changes, so anything but one affected row means the channel was not updated.
+func updateChannelSyncStatus(tenantID, channelID, status, message string) error {
+	res := db.DB.Model(&models.Channel{}).
+		Where("id = ? AND tenant_id = ?", channelID, tenantID).
+		Updates(map[string]interface{}{
+			"last_sync_status": status,
+			"last_sync_error":  message,
+			"updated_at":       time.Now(),
+		})
+	if res.Error != nil {
+		return fmt.Errorf("update sync status: %w", res.Error)
+	}
+	if res.RowsAffected != 1 {
+		return fmt.Errorf("update sync status: %d rows affected", res.RowsAffected)
+	}
+	return nil
 }
 
 // FacebookOAuthCallback handles the OAuth callback from Facebook after user authorizes.

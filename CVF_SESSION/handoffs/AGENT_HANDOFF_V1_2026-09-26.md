@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: WORK_ORDER_AUTHOR (Codex, `CCMAI-RUNTIME-007`); next IMPLEMENTATION_WORKER (Claude)
-- Next allowed move: Claude implements the bounded `CCMAI-RUNTIME-007` manual sync start-state truth work order after rehydration and handoff acknowledgment, then locally commits BUILD evidence and returns REVIEW_PENDING to Codex. `CCMAI-RUNTIME-001/002/003/004/005/006` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-007` BUILD committed); next REVIEWER (Codex)
+- Next allowed move: Codex independently reviews the `CCMAI-RUNTIME-007` BUILD commit (manual sync start truth; evidence `docs/reviews/RUNTIME_MANUAL_SYNC_START_TRUTH_S1_BUILD_2026-09-27.md`). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001` to `006` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -235,6 +235,19 @@ CVF controls the application runtime or that a provider-backed test passed.
 - DESIGN: preserve asynchronous 202 semantics but require tenant-scoped, successful start-state persistence before worker launch; return non-2xx without launching on error/zero rows. Bound and check the panic error write. Do not widen to scheduler/agent single-flight, real channel sync or S1 closure.
 - SPEC: `docs/specs/RUNTIME_MANUAL_SYNC_START_TRUTH_S1_2026-09-27.md`. WORK_ORDER: `docs/work_orders/CCMAI_RUNTIME_007.md` (R2), limited to `backend/api/handlers/channels.go`, focused handler tests and governed evidence/continuity.
 - Role transition acknowledged: `ORCHESTRATOR (Codex) -> SPEC_AUTHOR (Codex) -> WORK_ORDER_AUTHOR (Codex)`; next `IMPLEMENTATION_WORKER (Claude)` must rehydrate and acknowledge before BUILD. Independent `REVIEWER (Codex)` follows one local BUILD/evidence commit; no self-approval, push or FREEZE.
+- Role transition acknowledged (2026-09-27): `WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude)`. Continuity was rehydrated at `630975e` from `.cvf/manifest.json`, `.cvf/policy.json`, `CVF_SESSION/ACTIVE_SESSION_STATE.json`, this handoff, `CVF_SESSION_MEMORY.md`, `IMPLEMENTATION_STATUS.json`, `docs/INDEX.md`, `docs/specs/RUNTIME_MANUAL_SYNC_START_TRUTH_S1_2026-09-27.md` and `docs/work_orders/CCMAI_RUNTIME_007.md`. All sources agree; R006 is REVIEW PASS; no `BLOCKED_CONTINUITY_DRIFT`. Scope is `backend/api/handlers/channels.go` (a small private test seam allowed) plus focused handler tests and evidence/continuity. No engine, model, adapter, scheduler, agent, provider, frontend or CVF core change; no real channel sync, credential, customer data, persistent Compose DB change, deploy, push or FREEZE.
+- BUILD result (no path addition).
+  - **Start write:** `SyncChannelNow` keeps the tenant-scoped lookup, then records `syncing` via the new `updateChannelSyncStatus` (tenant-and-channel predicate, error checked, exactly one affected row). On failure it returns `500 {"error":"sync_start_failed"}` with no DB text and starts no worker. Only after a successful write does it call `startManualSync` and return the unchanged 202 `sync_started`.
+  - **Test seam and worker:** `startManualSync` is a private function variable seam. The worker body moved unchanged into `runManualSync`, so `SyncEngine` behavior is unchanged.
+  - **Panic handling:** `handleManualSyncPanic` logs only the channel ID and panic type, writes a tenant-scoped `error` status with the fixed bounded `manualSyncPanicMessage`, and logs and returns any failed or zero-row write.
+  - Evidence: `docs/reviews/RUNTIME_MANUAL_SYNC_START_TRUTH_S1_BUILD_2026-09-27.md`.
+- BUILD validation.
+  - **Tests** (disposable `mysql:8.0`, `golang:1.26-alpine`; host Application Control not bypassed): 7 new tests in `sync_start_test.go` with a stubbed launcher and trigger-forced failures cover: 202 only after `syncing` is visible and before any response byte; write error or zero rows give non-2xx with no launch; another tenant gets 404; panic status bounded, tenant-scoped, secret-free and not silent on failure. The 3 existing channel tests also pass. `go test ./... -count=1 -p 1` passed all 13 packages.
+  - **Environment note:** the first run hit `Error 1419` because `log_bin_trust_function_creators` was set during MySQL's init restart. It was re-applied, verified as 1, and the rerun passed.
+  - **Non-vacuity:** a mutation ignoring the start-write result made 2 regressions fail.
+  - **Checks:** gofmt is clean on the new test. `channels.go` is flagged only for 3 pre-existing hunks that do not overlap this change. `git diff --check`, catalog `-Check` and doctor 25/25 all pass.
+  - **Cleanup:** container and network removed; persistent Compose `ccma` untouched.
+- Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. S1 residuals remain: cross-path single-flight, stale `syncing` after a crash, and the ignored worker `config.Load` error. No FREEZE or S1 closure.
 
 ## Active Tranche: CCMAI-DOCS-001
 

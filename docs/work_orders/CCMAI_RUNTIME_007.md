@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-007 — manual sync start truth
 
-**State:** `WORK_ORDER_READY / BUILD_PENDING` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_MANUAL_SYNC_START_TRUTH_S1_2026-09-27.md), and R001–R006 accepted review evidence.
+**State:** `REVIEW_PENDING` after BUILD (local commit; no path addition) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, next) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_MANUAL_SYNC_START_TRUTH_S1_2026-09-27.md), and R001–R006 accepted review evidence.
 
 ## Entry and role route
 
