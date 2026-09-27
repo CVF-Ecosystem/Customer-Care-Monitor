@@ -65,3 +65,59 @@ Owner đã cấp quyền thi công qua work order này. Claude được tạo lo
 Dừng Gate B nếu snapshot digest không deterministic, evidence sai vẫn được lưu, single/batch dùng hai contract khác nhau, migration làm mất dữ liệu hoặc khởi động lại thất bại. Dừng và báo boundary change nếu giải pháp cần provider/network, credential, dữ liệu thật, destructive database action, deploy hoặc file CVF core.
 
 Role route: ORCHESTRATOR/WORK_ORDER_AUTHOR (Codex) → REVIEWER (Claude, Gate A) → REPAIR_WORKER nếu cần → IMPLEMENTATION_WORKER (Claude, Gate B) → SESSION_SYNC_STEWARD/COMMIT_STEWARD (Claude) → REVIEWER (Codex, Gate B) → CLOSER sau khi review đạt.
+
+## Repair round 3 — R2-RR3 writer/deletion dependency edge
+
+**Execution state:** `READY_FOR_ASSIGNEE_ACK` · **Authority:**
+`docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND2_2026-09-27.md`.
+
+Claude phải rehydrate continuity và ghi nhận chuyển vai `REVIEWER (Codex) ->
+REPAIR_WORKER (Claude)` vào active handoff trước khi sửa. Đây là repair cùng mục
+tiêu, R2 risk và external-effect class của Gate B. Root cause mới độc lập nên
+round 3 được phép; nếu phát sinh round tiếp theo mà không có root cause độc lập
+mới, dừng và ghi `REVIEW_COST_ESCALATION_REQUIRED`.
+
+### Required implementation outcome
+
+1. `saveResults` phải tham gia cùng parent-lifecycle protocol với các đường xóa:
+   khóa và xác nhận `Conversation` cùng `JobRun` hợp lệ trong transaction trước
+   khi ghi snapshot/result, hoặc dùng invariant database tương đương có migration
+   an toàn. Không được có thời điểm writer commit evidence sau khi parent đã bị
+   xóa.
+2. Audit `DeleteChannel`, `PurgeChannelConversations`, `DeleteJob`,
+   `ClearJobRuns`, demo reset và analyzer `saveResults`. Mỗi path phải dùng cùng
+   lock order, transaction và error handling cần thiết; nếu path không cần sửa,
+   evidence phải ghi lý do dựa trên source/test.
+3. Giữ compatibility có chủ đích: `analysis_snapshot_id` nullable của legacy
+   result vẫn đọc được; migration phải phát hiện/xử lý row hiện hữu không hợp lệ
+   mà không tạo parent hoặc evidence giả. Mọi constraint hoặc cleanup mới phải
+   được mô tả rõ trong evidence.
+4. Thêm MySQL concurrency tests cho cả hai thứ tự:
+   - writer giữ parent trước, delete phải chờ và sau đó xóa sạch evidence;
+   - delete giữ/xóa parent trước, writer phải fail và không để orphan.
+5. Chạy lại regression của repair round 1/2, single/batch snapshot, evidence
+   validation, transaction rollback và AutoMigrate hai lần trên schema `CCMA`.
+
+### Allowed repair paths
+
+- `backend/engine/` và test liên quan đến `saveResults`/snapshot persistence;
+- `backend/db/models/`, `backend/db/mysql.go` và migration tests;
+- `backend/api/handlers/channels.go`, `jobs.go`, `demo.go` cùng tests;
+- helper nội bộ tối thiểu nếu cần để dùng chung lock/transaction protocol;
+- evidence Round 3, active handoff, state, session memory, implementation status
+  và catalog/index nếu source truth thay đổi.
+
+Không được mở S2, gọi provider/network, dùng credential/customer data, chạy
+channel sync, deploy, push hoặc sửa CVF core. Không được dùng mock để tuyên bố
+governance. Persistent Compose `ccma` chỉ được dùng cho migration/test có kiểm
+soát; không reset hay xóa volume.
+
+### Required delivery
+
+Tạo
+`docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_REPAIR_ROUND3_2026-09-27.md`
+với changed set, quyết định lock/constraint, audit từng deletion path, hai trace
+concurrency, migration/legacy handling, command và kết quả thật. Sau khi checks
+đạt, Claude chuyển vai `SESSION_SYNC_STEWARD -> COMMIT_STEWARD`, tạo **một local
+commit, không push**, rồi trả `REVIEW_PENDING` cho Codex. Claude không tự FREEZE
+Gate B.

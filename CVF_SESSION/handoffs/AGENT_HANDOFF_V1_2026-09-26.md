@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: REVIEWER (Codex, Gate B disposition issued)
-- Next allowed move: Claude acknowledges `REPAIR_WORKER` and repairs R2-B1/B2/B3 from `docs/reviews/CCMAI_RUNTIME_002_GATE_B_INDEPENDENT_REVIEW_2026-09-27.md`; then Codex re-reviews the repair commit. No FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.
+- Active role: ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex, repair round 3 packaged for Claude acknowledgment)
+- Next allowed move: Claude rehydrates continuity, acknowledges `REPAIR_WORKER` round 3 and executes the bounded Repair round 3 section of `docs/work_orders/CCMAI_RUNTIME_002.md` for R2-RR3; then Codex re-reviews the local repair commit. No FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -111,6 +111,7 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Repair round 2 validation: round 1's happy-path DeleteChannel test still PASS; new failure-path test PASS; `go test ./... -count=1` all 13 packages `ok`; `go build`/`go vet` clean; `gofmt` clean on every file touched this round except the same three pre-existing, unrelated spots in `channels.go` already noted in round 1; disposable `mysql:8.0` container removed after use, persistent Compose `ccma` stack untouched; workspace doctor PASS 25/25. No frontend/docs files touched.
 - Role route after repair round 2: `REPAIR_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status remains `REVIEW_PENDING`; Codex re-reviews this round as independent `REVIEWER`. No FREEZE, provider call, S2/S3/S5, deploy or push is authorized by this round.
 - Codex re-review of round-2 commit `a17b50a`: R2-RR1/R2-RR2 PASS, but new root cause R2-RR3 blocks Gate B. `saveResults` does not lock/verify conversation/job-run parents and evidence tables have no parent foreign keys, so a writer may recreate orphan evidence after channel/job deletion. Review: `docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND2_2026-09-27.md`. Repair round 3 is authorized because this is an independent new dependency-edge root cause; Gate B stays `REVIEW_PENDING`, with no FREEZE/S2/provider/deploy/push authority.
+- Codex role transition (2026-09-27): `REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR`. Round 3 execution has been packaged in the existing `docs/work_orders/CCMAI_RUNTIME_002.md`, including all deletion paths, two race orderings, legacy/migration handling and evidence/commit boundaries. Status is `READY_FOR_ASSIGNEE_ACK`; implementation ownership remains with Claude and Codex retains the subsequent independent review.
 
 ## Active Tranche: CCMAI-DOCS-001
 

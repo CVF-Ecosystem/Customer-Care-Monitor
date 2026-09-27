@@ -66,6 +66,8 @@ Codex re-review of repair commit `f924a6b` remains `CHANGES_REQUIRED_ROUND_2`: p
 
 Codex re-review of repair round 2 accepts R2-RR1/R2-RR2 but finds new root cause R2-RR3: evidence writers do not lock/verify conversation and job-run parents, and evidence tables lack parent constraints, so save completion can race after channel/job deletion and recreate orphan rows. Schema probe confirms an orphan snapshot insert currently succeeds. Repair round 3 is authorized under the same R2 boundary because this is an independent new dependency-edge root cause. Authority: `docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND2_2026-09-27.md`; Gate B remains `REVIEW_PENDING` and S2 remains closed.
 
+Codex has packaged the exact Round 3 execution contract into the existing `docs/work_orders/CCMAI_RUNTIME_002.md` and reconciled the stale current-state header in the active handoff. Claude is the next `REPAIR_WORKER`: rehydrate, acknowledge, implement and locally commit with Round 3 evidence; Codex then returns as independent `REVIEWER`. No provider call, customer data, channel sync, push, deployment, S2 or FREEZE is authorized.
+
 ## Local Provider Registry
 
 `CVF_SESSION/LOCAL_PROVIDER_SECRETS.json` — **gitignored, machine-local** — chứa API keys của các AI provider thực, dùng khi work order yêu cầu `liveGovernanceEvidenceRequired: true`. Mọi agent cần credential thực đều đọc file này. KHÔNG commit file này.
