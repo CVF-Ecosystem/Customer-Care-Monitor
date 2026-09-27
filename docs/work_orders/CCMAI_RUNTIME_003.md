@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-003 — S1 replayed message integrity
 
-**State:** `READY_FOR_ASSIGNEE_ACK` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** user “tiếp tục” after Gate B REVIEW PASS and `docs/specs/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_2026-09-27.md`.
+**State:** `REPAIR_READY_FOR_ASSIGNEE_ACK` after independent REVIEW `CHANGES_REQUIRED` · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** user “tiếp tục” after Gate B REVIEW PASS, `docs/specs/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_2026-09-27.md`, and `docs/reviews/CCMAI_RUNTIME_003_INDEPENDENT_REVIEW_2026-09-27.md`.
 
 ## Entry and role route
 
@@ -28,3 +28,16 @@ Record changed set, capability table, before/after regression, DB fixture/cleanu
 On success, Claude transitions `IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD`, updates continuity/status, creates one local commit without push, and returns `REVIEW_PENDING` to Codex. If tests fail or an acceptance condition remains open, report `BUILD_BLOCKED` with exact evidence and do not claim completion.
 
 **External-effect ceiling:** local source/docs/tests and disposable MySQL only. No provider API, credential, real channel sync, customer data, persistent Compose database reset, deployment, push, S2/S3/S5 implementation, cross-project edit or FREEZE.
+
+## Repair round 1 — R003-R1/R003-R2
+
+**Entry:** Codex independent review of BUILD commit `2a4e530` found two same-scope defects at `docs/reviews/CCMAI_RUNTIME_003_INDEPENDENT_REVIEW_2026-09-27.md`. Claude must rehydrate current continuity and append `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` to the active handoff before repair. This round continues the existing R2/no-external-effect/local-commit boundary; no new product or provider authority is granted.
+
+Allowed implementation files: `backend/engine/sync.go` and `backend/engine/sync_replay_test.go` only. Allowed accompanying files: the existing BUILD evidence, active handoff/state, session memory, implementation status and roadmap/spec status if needed. Do not touch channel adapters, provider, analyzer, DB model/migration, frontend or CVF core.
+
+1. On existing-row replay, serialize and validate nonempty supplied `RawData` before DB mutation. Persist changed valid raw JSON in the same update map as other fields; compare canonical JSON so an unchanged payload does not cause an UPDATE. Preserve stored raw JSON when the adapter omitted raw data. Define and test the empty-map handling; do not infer deletion from it or act on `is_removed`.
+2. Add DB-backed regressions proving changed raw data persists, an identical raw-data replay remains a no-op, and an unmarshalable raw value returns an error while the stored row remains unchanged. Keep the attachment/idempotency tests passing.
+3. Extend the central same-ID replay test to change and assert a valid `SenderType`, while retaining the changed Vietnamese/emoji content, sender name, timestamp, one-row/internal-ID and digest assertions. Include changed content type in a focused assertion if possible within the same fixture.
+4. Re-run all five existing replay regressions, new raw-data/role cases, `go test ./... -count=1`, `go build ./...`, `go vet ./...`, AutoMigrate twice on disposable MySQL `CCMA`, catalog `-Check`, workspace doctor and `git diff --check`. Append exact commands/results and the raw-data presence rule to `docs/reviews/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_BUILD_2026-09-27.md`.
+
+After passing checks, synchronize continuity/status, create one local commit without push, and return `REVIEW_PENDING` to Codex. If a requirement needs a new path/effect or tests fail, stop and report the boundary or failure; do not self-approve or FREEZE.

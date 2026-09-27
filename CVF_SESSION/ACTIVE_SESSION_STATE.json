@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude has completed the CCMAI-RUNTIME-003 BUILD (replayed-message integrity in backend/engine/sync.go, five new disposable-MySQL tests, capability table) and created one local commit, no push. Codex re-reviews that commit as independent REVIEWER. Status REVIEW_PENDING. Prior Gate B (CCMAI-RUNTIME-002) remains REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
+  "nextAllowedMove": "Claude rehydrates continuity, acknowledges REPAIR_WORKER, then repairs only R003-R1/R003-R2 under the addendum in docs/work_orders/CCMAI_RUNTIME_003.md. Return one local repair evidence commit as REVIEW_PENDING to Codex. Prior Gate B remains REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex, pending independent review of CCMAI-RUNTIME-003 BUILD)",
+  "activeRole": "ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex, R003-R1/R003-R2 repair packaged for Claude)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
