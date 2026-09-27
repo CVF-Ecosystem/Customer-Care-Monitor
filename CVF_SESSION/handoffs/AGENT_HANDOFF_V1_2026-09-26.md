@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-004` REVIEW PASS)
-- Next allowed move: Codex may issue a bounded next S1 work order or route a separate CLOSER/FREEZE evaluation. `CCMAI-RUNTIME-002/003/004` passed REVIEW and remain FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized by this review.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active role: WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER (Claude) for `CCMAI-RUNTIME-005`
+- Next allowed move: Claude may acknowledge `WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude)` and BUILD only `docs/work_orders/CCMAI_RUNTIME_005.md`, then return a local evidence commit as REVIEW_PENDING. `CCMAI-RUNTIME-001/002/003/004` passed REVIEW and remain FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose database change, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -163,6 +163,11 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Role route after repair round 2: `REPAIR_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex re-reviews as independent `REVIEWER`. No FREEZE, provider call, S2/S3/S5, deploy or push is authorized.
 - Role transition acknowledged (2026-09-27): `REPAIR_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed local test/evidence commit `e8ab021`; R004-R3-T1 is complete and `CCMAI-RUNTIME-004` is `PASS` for R2 REVIEW. Fresh disposable-MySQL export/page tests ran against real HTTP handlers, confirmed changed/unchanged CSV and XLSX labels and JSON failure with no partial file; temporary table restored and container removed. Review: `docs/reviews/CCMAI_RUNTIME_004_REPAIR_R2_FINAL_REREVIEW_2026-09-27.md`.
 - Role transition after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; `CCMAI-RUNTIME-001/002/003/004` are REVIEW PASS / FREEZE open. No live provider/governance proof, real channel sync, customer data, deployment, push, S2/S3/S5 implementation or FREEZE is claimed or authorized by this review.
+
+## Active Tranche: CCMAI-RUNTIME-005
+
+- Owner “next” after R004 independent REVIEW PASS opens a bounded S1 continuation. Source audit found `Confidence: 1.0` persisted for QC/evaluation rows in `backend/engine/analyzer.go`, a required numeric `JobResult.Confidence` exposed by job-result APIs, and a bare percentage for classification tags in `backend/notifications/dispatcher.go`. No calibration evidence exists. R001–R004 REVIEW evidence is inherited; each FREEZE remains open.
+- Role transition acknowledged (2026-09-27): `ORCHESTRATOR (Codex) -> SPEC_AUTHOR (Codex) -> WORK_ORDER_AUTHOR (Codex)`. DESIGN chooses explicit unknown/model-reported-uncalibrated semantics and historical-row preservation. SPEC: `docs/specs/RUNTIME_RESULT_CONFIDENCE_TRUTH_S1_2026-09-27.md`; R2 work order: `docs/work_orders/CCMAI_RUNTIME_005.md`. Claude is next `IMPLEMENTATION_WORKER` after rehydration and handoff acknowledgment, then returns one local BUILD/evidence commit to independent Codex REVIEW. No source BUILD, provider call, customer data, persistent DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this planning record.
 
 ## Active Tranche: CCMAI-DOCS-001
 
