@@ -40,3 +40,15 @@ Allowed implementation files: `backend/engine/snapshot.go`, `backend/engine/sour
 4. Re-run focused tests and `go test ./... -count=1` on disposable MySQL `CCMA` (set `log_bin_trust_function_creators=1` for existing trigger tests), `go build ./...`, `go vet ./...`, catalog `-Check`, workspace doctor and `git diff --check`. Append exact commands/results, fixture cleanup and any remaining limits to the R004 BUILD evidence. Frontend build is needed only if its source changes (which is outside this repair scope).
 
 After passing checks, synchronize continuity/status, create one local commit without push, and return `REVIEW_PENDING` to Codex. If a requirement needs a path or effect outside this repair class, or a required check fails, report the boundary/failure instead of claiming completion. No self-approval or FREEZE.
+
+## Repair round 2 — R004-R3-T1 test/evidence completion
+
+**Entry:** Codex independent re-review of repair commit `a074870` accepted R004-R1 and R004-R2 but found the original R004-R3 endpoint evidence incomplete at `docs/reviews/CCMAI_RUNTIME_004_REPAIR_R1_REREVIEW_2026-09-27.md`. Claude must rehydrate current continuity and append `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` acknowledgment to the active handoff before repair. This is the same R2 objective and external-effect class, repair round 2; no review-cost escalation is due.
+
+Allowed implementation file: `backend/api/handlers/results_test.go` only. Allowed accompanying files: existing R004 BUILD evidence, active handoff/state, session memory and implementation status. Do not change production source, DB models/migrations, frontend, provider, adapter, analyzer, scheduler or CVF core. If a product-source change becomes necessary, stop and return a bounded change request to Codex.
+
+1. Extend the actual `ExportResults` CSV and XLSX handler test so it checks both `bound_currentness_unverified` and `changed_since_analysis` after a source edit. Assert the status label in the exported data for each format; retain the existing page and export cap/filter tests.
+2. Exercise `ExportResults` with a forced snapshot/message batch-query failure and assert an observable non-2xx error, no success download header and no partial file body. Keep `TestListResultsSnapshotBatchQueryFailureIsObservable` passing. Restore any renamed disposable table in cleanup even on failure.
+3. Run the focused result tests and `go test ./... -count=1 -p 1` on disposable MySQL `CCMA` with `log_bin_trust_function_creators=1`, then catalog `-Check`, workspace doctor and `git diff --check`. Append exact commands/results and cleanup to `docs/reviews/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_BUILD_2026-09-27.md`. No frontend build is needed because frontend source is outside this repair scope.
+
+After passing checks, synchronize continuity/status, create one local commit without push, and return `REVIEW_PENDING` to Codex. No self-approval or FREEZE.

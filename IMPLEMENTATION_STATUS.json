@@ -8,7 +8,7 @@
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
     "S1 analysis snapshots: core single/batch snapshot and evidence validation plus cascade/fingerprint and parent-locking repairs are implemented. ResetDemoData now uses an error-checked transaction; snapshot-bound MySQL regressions prove rollback preservation and success-path deletion. Independent Gate B REVIEW passed at commit 20cfa55, but FREEZE remains open. The optional legacy demo fixture branch is not exercised by the current reset tests; engine tests cover legacy result interpretation. Test-double/MySQL evidence is not real-provider governance proof.",
     "CCMAI-RUNTIME-003 REVIEW PASS: a same-external-ID message replay updates changed content/sender/content-type/timestamp and merges attachments by (type, url, name) identity, preserving a stored local path only for a matching identity and never erasing a stored attachment list from an empty reply. Repair round 1 (R003-R1/R003-R2) added raw-data serialization with error checks (an unmarshalable value now returns an error instead of staying silently stale) and canonical-JSON comparison so an unchanged raw-data replay issues no write; the central replay test now also changes and asserts sender role and content type. Codex independently re-reviewed commit 1f290a6 and reran all 8 replay tests and the full backend suite on disposable MySQL CCMA. S1 remains IN_PROGRESS; FREEZE remains open.",
-    "CCMAI-RUNTIME-004 repair round 1 (R004-R1/R004-R2/R004-R3): a linked snapshot's own digest, schema, tenant/conversation/job-run identity and message count are now validated before any comparison, so a mismatched or corrupted snapshot reports verification_unavailable rather than a false locally-matching status. Added-earlier-message detection now compares the current earlier-message count against the manifest's recorded omitted count instead of silently ignoring every older message. New handler tests exercise the actual ListResults/ExportResults HTTP handlers, CSV/XLSX label equivalence, cross-tenant snapshot-link isolation, and a forced batch-query failure proving a non-2xx response. All 18 targeted engine tests, 19 targeted handler tests and the full 13-package backend suite pass on disposable MySQL. Status REVIEW_PENDING for Codex's independent re-review; no FREEZE."
+    "CCMAI-RUNTIME-004 repair round 1: linked snapshot digest/provenance validation and added-earlier-message count detection are accepted in independent REVIEW (R004-R1/R2). Fresh disposable-MySQL focused and full backend suites pass. R004-R3-T1 remains CHANGES_REQUIRED_ROUND_2: permanent endpoint tests still need changed-source CSV/XLSX status and ExportResults batch-query-failure coverage. Status REVIEW_PENDING for bounded test/evidence repair round 2; no FREEZE."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -50,7 +50,8 @@
     "docs/reviews/CCMAI_RUNTIME_003_INDEPENDENT_REVIEW_2026-09-27.md",
     "docs/reviews/CCMAI_RUNTIME_003_REPAIR_R1_REREVIEW_2026-09-27.md",
     "docs/reviews/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_BUILD_2026-09-27.md",
-    "docs/reviews/CCMAI_RUNTIME_004_INDEPENDENT_REVIEW_2026-09-27.md"
+    "docs/reviews/CCMAI_RUNTIME_004_INDEPENDENT_REVIEW_2026-09-27.md",
+    "docs/reviews/CCMAI_RUNTIME_004_REPAIR_R1_REREVIEW_2026-09-27.md"
   ],
   "updatedAt": "2026-09-27"
 }
