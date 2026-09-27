@@ -1,6 +1,6 @@
 # S1 snapshot và evidence contract
 
-**Trạng thái:** SPEC_APPROVED / BUILD_COMPLETE / REVIEW_PENDING · **Ngày:** 2026-09-27 · **Tranche:** `CCMAI-RUNTIME-002` · **Rủi ro:** R2.
+**Trạng thái:** SPEC_APPROVED / BUILD_COMPLETE / REVIEW_CHANGES_REQUIRED · **Ngày:** 2026-09-27 · **Tranche:** `CCMAI-RUNTIME-002` · **Rủi ro:** R2.
 
 ## Mục tiêu
 

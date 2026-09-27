@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: ORCHESTRATOR (Gate B handed to Codex as independent REVIEWER)
-- Next allowed move: Codex, as independent REVIEWER, reviews Gate B of CCMAI-RUNTIME-002 (local commit by Claude, not pushed) against docs/specs/RUNTIME_SNAPSHOT_EVIDENCE_S1_2026-09-27.md and docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_BUILD_2026-09-27.md; the owner/CLOSER decides FREEZE of CCMAI-RUNTIME-001 on docs/reviews/CCMAI_RUNTIME_001_INDEPENDENT_REVIEW_2026-09-27.md (PASS_WITH_REPAIRS). No provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.
+- Active role: REVIEWER (Codex, Gate B disposition issued)
+- Next allowed move: Claude acknowledges `REPAIR_WORKER` and repairs R2-B1/B2/B3 from `docs/reviews/CCMAI_RUNTIME_002_GATE_B_INDEPENDENT_REVIEW_2026-09-27.md`; then Codex re-reviews the repair commit. No FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -100,6 +100,7 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Gate B BUILD result: shared `loadConversationSnapshot`/`buildConversationSnapshot` used by single and batch; `ccma.snapshot.v1` manifest (IDs, metadata, content SHA-256, code-point length, attachment coverage) with SHA-256 digest and typed coverage (`complete`/`partial`/`empty` + reason codes); transcript lines carry `msg:<id>` and RFC3339 +07:00; QC/classification prompts require `evidence_refs`; all refs validated before one transaction writes the snapshot and linked results; `job_results.analysis_snapshot_id` nullable with derived `evidence_status` for legacy rows; deletion handlers cascade snapshots. BUILD finding: a MySQL `JSON` column re-serializes the manifest, so it is stored as `mediumtext` and a test asserts SHA-256(stored manifest) = digest.
 - Gate B validation: 34 engine tests PASS against disposable MySQL (none skipped); `golang:1.26-alpine` full `go test ./...` PASS with `GOPROXY=off`; frontend and docs builds PASS; Compose `ccma` rebuilt and restarted twice on `CCMA` (17 tables, migration clean, pricing sync off, 0 cron jobs, 0 business rows); disposable container/volume removed; `git diff --check` clean; after continuity sync catalog `-Check` PASS and workspace doctor PASS 25/25. Evidence: `docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_BUILD_2026-09-27.md`. No provider call, API key, channel sync, customer data, deploy or push.
 - Role route after BUILD: IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude, local commit only). Status `REVIEW_PENDING`; Codex is the independent REVIEWER for Gate B; Claude does not FREEZE `CCMAI-RUNTIME-002`. `CCMAI-RUNTIME-001` awaits CLOSER disposition on the Gate A record.
+- Gate B independent review (Codex, 2026-09-27): disposition `CHANGES_REQUIRED` at `docs/reviews/CCMAI_RUNTIME_002_GATE_B_INDEPENDENT_REVIEW_2026-09-27.md`. Core snapshot/evidence validation and MySQL transaction tests pass, but three findings block FREEZE: channel delete/prune create dangling or orphan evidence records; digest does not fingerprint attachment identity/content metadata; new DB tests fallback to a hardcoded CQA DSN. Same-scope repair is authorized for Claude as `REPAIR_WORKER`; no S2/provider/deploy/push authority is added. Next move is repair commit, evidence update and Codex re-review.
 
 ## Active Tranche: CCMAI-DOCS-001
 

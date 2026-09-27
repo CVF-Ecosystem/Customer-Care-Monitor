@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex, as independent REVIEWER, reviews Gate B of CCMAI-RUNTIME-002 (local commit by Claude, not pushed) against docs/specs/RUNTIME_SNAPSHOT_EVIDENCE_S1_2026-09-27.md and docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_BUILD_2026-09-27.md; the owner/CLOSER decides FREEZE of CCMAI-RUNTIME-001 on docs/reviews/CCMAI_RUNTIME_001_INDEPENDENT_REVIEW_2026-09-27.md (PASS_WITH_REPAIRS). No provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
+  "nextAllowedMove": "Claude acknowledges REPAIR_WORKER and repairs R2-B1/R2-B2/R2-B3 from docs/reviews/CCMAI_RUNTIME_002_GATE_B_INDEPENDENT_REVIEW_2026-09-27.md; then Codex re-reviews the local repair commit. No FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (handoff to Codex REVIEWER)",
+  "activeRole": "REVIEWER (Codex, Gate B changes required)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
