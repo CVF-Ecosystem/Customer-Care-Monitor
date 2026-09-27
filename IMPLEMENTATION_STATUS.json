@@ -15,6 +15,9 @@
     "CCMAI-DEMO-BRAND-001 R1 REVIEW PASS / DEPLOY OPEN: the demo generator and channel example now use Coffee after a source-only wording follow-up. The active localhost:8088 synthetic CCMA data still uses Cà Phê Mẫu and has no remaining SePay text after the earlier tenant-scoped replacement. Demo row totals and IDs are preserved. The running app image was not rebuilt, so a reset/reimport through that image can recreate old wording until deployment.",
     "CCMAI-RUNTIME-008 REVIEW PASS / FREEZE OPEN: POST /channels/:channelId/sync validates configuration after the tenant-scoped lookup and before the R007 syncing write. An invalid or nil config returns generic 500 sync_start_failed with no status write, worker or config detail in body/log. The validated config is passed to the worker without reload. Claude's full backend suite passed; Codex independently reran focused R008/R007/channel handler tests on disposable MySQL. No real channel sync or live governance claim."
   ],
+  "buildInProgress": [
+    "CCMAI-RUNTIME-009 BUILD complete, REVIEW_PENDING: POST /jobs/:jobId/test-run and POST /jobs/:jobId/trigger validate configuration (loadJobDispatchConfig) after the tenant-scoped job lookup and before launching a goroutine or returning 202. Invalid/nil config returns generic 500 job_start_failed with no worker, cancel registration or config detail in body/log. Valid config is passed by identity to startTestRunJob/startTriggerJob without reload; trigger's mode/date/limit parameters pass through triggerJobParams unchanged. 10 new focused tests plus all 13 backend packages pass on disposable MySQL; a git-stash mutation check proved the new tests fail to compile against pre-BUILD source. Evidence: docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md. Awaiting independent Codex R2 REVIEW."
+  ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
     "CCMAI-DOCS-001",
@@ -36,7 +39,7 @@
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
     "Application feature status has not yet been assessed under the CVF module catalog.",
     "Workspace-wide gate has failures in unrelated sibling repositories.",
-    "CCMAI-RUNTIME-007/008 passed independent REVIEW for manual sync start/configuration admission. CCMAI-RUNTIME-009 is a plan-only work order for ignored config.Load errors in jobs.go trigger/test-run; no job-dispatch fix is implemented yet. OAuth/credential paths in channels.go and agents.go remain separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
+    "CCMAI-RUNTIME-007/008 passed independent REVIEW for manual sync start/configuration admission. CCMAI-RUNTIME-009 BUILD is complete and REVIEW_PENDING: POST /jobs/:jobId/test-run and POST /jobs/:jobId/trigger now validate config.Load before launch/202. OAuth/credential paths in channels.go and agents.go remain separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them."
   ],
   "evidence": [
@@ -75,7 +78,8 @@
     "docs/reviews/CCMAI_RUNTIME_007_INDEPENDENT_REVIEW_2026-09-27.md",
     "docs/reviews/CCMAI_DEMO_BRAND_001_LOCAL_CLEANUP_2026-09-27.md",
     "docs/reviews/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_BUILD_2026-09-27.md",
-    "docs/reviews/CCMAI_RUNTIME_008_INDEPENDENT_REVIEW_2026-09-28.md"
+    "docs/reviews/CCMAI_RUNTIME_008_INDEPENDENT_REVIEW_2026-09-28.md",
+    "docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

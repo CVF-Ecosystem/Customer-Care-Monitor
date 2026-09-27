@@ -1,6 +1,8 @@
 # Work order CCMAI-RUNTIME-009 — job-dispatch configuration admission
 
-**State:** `WORK_ORDER_READY / BUILD_PENDING` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` → `SESSION_SYNC_STEWARD` → `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md), and R008 independent REVIEW PASS.
+**State:** `REVIEW_PENDING` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` → `SESSION_SYNC_STEWARD` → `COMMIT_STEWARD`, BUILD complete) · **Independent reviewer:** Codex (`REVIEWER`, next) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md), and R008 independent REVIEW PASS.
+
+**BUILD evidence:** [`docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md`](../reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md).
 
 ## Entry and role route
 

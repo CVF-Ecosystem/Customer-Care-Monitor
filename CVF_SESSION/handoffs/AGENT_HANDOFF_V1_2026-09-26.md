@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: WORK_ORDER_AUTHOR (Codex, `CCMAI-RUNTIME-009`; Claude next IMPLEMENTATION_WORKER)
-- Next allowed move: Claude rehydrates current CVF continuity, acknowledges the handoff and builds `CCMAI-RUNTIME-009` within its bounded work order, then returns one local commit as REVIEW_PENDING to Codex. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: IMPLEMENTATION_WORKER (Claude, `CCMAI-RUNTIME-009` BUILD complete); Codex next independent REVIEWER
+- Next allowed move: Codex independently reviews `CCMAI-RUNTIME-009` BUILD evidence and either passes or requests repair. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5, self-approval or FREEZE is authorized.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-009
@@ -16,6 +16,10 @@ Status: ACTIVE
 - INTAKE/DESIGN after owner “next”: source audit found `TestRunJob` and `TriggerJob` return 202 before goroutine-local `cfg, _ := config.Load()` can fail. The resulting nil config can reach `engine.NewAnalyzer`. R009 covers both job-dispatch endpoints only; channel OAuth/credential handlers, agent run, sync concurrency and crash recovery remain separate.
 - SPEC/WORK_ORDER: `docs/specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md` and `docs/work_orders/CCMAI_RUNTIME_009.md` (R2). Validate config after tenant-scoped lookup but before launch/202; reject failure without work or detail leakage; pass the accepted config unchanged into each worker. Existing job behavior and response bodies stay in place.
 - Role route: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR (Codex). Claude is next IMPLEMENTATION_WORKER after a fresh continuity read and handoff acknowledgment, followed by SESSION_SYNC_STEWARD and COMMIT_STEWARD. Return a local BUILD/evidence commit as REVIEW_PENDING for independent Codex REVIEW. No BUILD, provider call, customer data, deployment, push or FREEZE has occurred in this planning tranche.
+- Claude CVF Agent Declaration and role transition acknowledged (2026-09-28, rehydrated from files at `720f5b6`): project Customer-Care-Monitor-AI; CVF core `../.Controlled-Vibe-Framework-CVF` @ `19386f64e6bc36d1dcdbadca6ff97253feefb1bf`; phase WORK_ORDER → BUILD; risk ceiling R2; live evidence required YES (this tranche produces test-double/handler evidence only, not a live-governance claim, per SPEC); active handoff this file; next allowed move BUILD `CCMAI-RUNTIME-009` per the SPEC/work order, bounded to `backend/api/handlers/jobs.go` and focused tests; parked checkpoint none. `ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json` is absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking); state, memory, handoff and implementation status agree. Role transition: WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude).
+- BUILD result: `TestRunJob`/`TriggerJob` validate configuration via `loadJobDispatchConfig()` after the tenant-scoped lookup and before any goroutine/202; failure or nil config returns generic `500 job_start_failed` with no worker, cancel registration or detail leak. Validated config is passed by identity into new `startTestRunJob`/`startTriggerJob` launcher variables (no in-worker reload); `TriggerJob`'s mode/date/limit resolution is unchanged and threads through a new `triggerJobParams` struct; `TestRunJob`'s limit-3 behavior is unchanged. Both 202 bodies are byte-for-byte unchanged.
+- BUILD validation: 10 new focused tests in `backend/api/handlers/job_config_admission_test.go` pass on disposable MySQL (config-failure/no-leak, nil-config, wrong-tenant-skips-load, valid-config-identity/params, default-mode-unchanged, real-`config.Load` synthetic-env invalid/valid); a `git stash` mutation check on the production file alone proved the new tests fail to *compile* against pre-BUILD source. `go test ./... -count=1 -p 1` all 13 backend packages `ok` via `scripts/test-backend.ps1` on disposable MySQL (persistent Compose `ccma` untouched); `go build`/`go vet`/`gofmt`/`git diff --check` clean; CVF workspace doctor (includes governed catalog `-Check`) PASS 25/25. Evidence: `docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md`. No provider call, real channel sync, customer data, deploy or push.
+- Role route after BUILD: IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent REVIEWER; Claude does not self-approve or FREEZE `CCMAI-RUNTIME-009`.
 
 ## Owner commit request (2026-09-28)
 

@@ -348,23 +348,18 @@ func TestRunJob(c *gin.Context) {
 		return
 	}
 
-	// Run in background (async) — AI calls can take 30-120s and SDK may not respect context timeout
-	go func() {
-		defer func() {
-			if r := recover(); r != nil {
-				log.Printf("[security] panic in test-run goroutine for job %s: %v", job.Name, r)
-			}
-		}()
-		cfg, _ := config.Load()
-		analyzer := engine.NewAnalyzer(cfg)
-		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
-		defer cancel()
-		jobCancelFuncs.Store(job.ID, cancel)
-		defer jobCancelFuncs.Delete(job.ID)
-		if _, err := analyzer.RunJobWithLimit(ctx, job, 3); err != nil {
-			log.Printf("[test-run] error for job %s: %v", job.Name, err)
-		}
-	}()
+	// A job dispatch that cannot get a valid configuration must not be
+	// acknowledged: validate before launching any worker. The error is not
+	// logged or returned because validation messages describe secret
+	// configuration.
+	cfg, err := loadJobDispatchConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] test-run for job %s not admitted: configuration invalid", job.Name)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_start_failed"})
+		return
+	}
+
+	startTestRunJob(job, cfg)
 
 	c.JSON(http.StatusAccepted, gin.H{"message": "test_run_started"})
 }
@@ -398,34 +393,86 @@ func TriggerJob(c *gin.Context) {
 		}
 	}
 
-	// Run in background
+	// A job dispatch that cannot get a valid configuration must not be
+	// acknowledged: validate before launching any worker. The error is not
+	// logged or returned because validation messages describe secret
+	// configuration.
+	cfg, err := loadJobDispatchConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] trigger for job %s not admitted: configuration invalid", job.Name)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_start_failed"})
+		return
+	}
+
+	startTriggerJob(job, cfg, triggerJobParams{mode: mode, dateFrom: dateFrom, dateTo: dateTo, maxConv: maxConv})
+
+	c.JSON(http.StatusAccepted, gin.H{"message": "job_triggered"})
+}
+
+// loadJobDispatchConfig loads and validates configuration for a job dispatch
+// (test-run or trigger). It is a variable only so handler tests can force a
+// load failure without touching real environment/config state.
+var loadJobDispatchConfig = config.Load
+
+// startTestRunJob launches the background test-run worker with the
+// configuration already validated for this request, limited to 3
+// conversations as before. It is a variable only so handler tests can
+// observe dispatch without running a real analyzer/provider.
+var startTestRunJob = func(job models.Job, cfg *config.Config) {
+	go func() {
+		defer func() {
+			if r := recover(); r != nil {
+				log.Printf("[security] panic in test-run goroutine for job %s: %v", job.Name, r)
+			}
+		}()
+		analyzer := engine.NewAnalyzer(cfg)
+		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
+		defer cancel()
+		jobCancelFuncs.Store(job.ID, cancel)
+		defer jobCancelFuncs.Delete(job.ID)
+		if _, err := analyzer.RunJobWithLimit(ctx, job, 3); err != nil {
+			log.Printf("[test-run] error for job %s: %v", job.Name, err)
+		}
+	}()
+}
+
+// triggerJobParams carries TriggerJob's resolved mode/date/limit parameters
+// unchanged into startTriggerJob, so admission never alters trigger semantics.
+type triggerJobParams struct {
+	mode             string
+	dateFrom, dateTo string
+	maxConv          int
+}
+
+// startTriggerJob launches the background trigger worker with the
+// configuration already validated for this request. It is a variable only so
+// handler tests can observe dispatch without running a real
+// analyzer/provider.
+var startTriggerJob = func(job models.Job, cfg *config.Config, p triggerJobParams) {
 	go func() {
 		defer func() {
 			if r := recover(); r != nil {
 				log.Printf("[security] panic in trigger goroutine for job %s: %v", job.Name, r)
 			}
 		}()
-		cfg, _ := config.Load()
 		analyzer := engine.NewAnalyzer(cfg)
 		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
 		defer cancel()
 		jobCancelFuncs.Store(job.ID, cancel)
 		defer jobCancelFuncs.Delete(job.ID)
 		var err error
-		switch mode {
+		switch p.mode {
 		case "unanalyzed":
-			_, err = analyzer.RunJobUnanalyzed(ctx, job, maxConv)
+			_, err = analyzer.RunJobUnanalyzed(ctx, job, p.maxConv)
 		case "conditional":
-			_, err = analyzer.RunJobFullWithParams(ctx, job, dateFrom, dateTo, maxConv)
+			_, err = analyzer.RunJobFullWithParams(ctx, job, p.dateFrom, p.dateTo, p.maxConv)
 		default: // "since_last"
-			_, err = analyzer.RunJobSinceLast(ctx, job, maxConv)
+			_, err = analyzer.RunJobSinceLast(ctx, job, p.maxConv)
 		}
 		if err != nil {
 			log.Printf("[trigger] error for job %s: %v", job.Name, err)
 		}
 	}()
-
-	c.JSON(http.StatusAccepted, gin.H{"message": "job_triggered"})
 }
 
 func CancelJob(c *gin.Context) {

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-009 is WORK_ORDER_READY / BUILD_PENDING for the two job-dispatch endpoints. Claude is next IMPLEMENTATION_WORKER after CVF rehydration and handoff acknowledgment, then returns one local BUILD/evidence commit as REVIEW_PENDING for independent Codex R2 REVIEW. R001-R008 remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config.Load errors, sync concurrency and crash recovery remain separate. CCMAI-UXROADMAP-001 stays design-only under owner delegation. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
+  "nextAllowedMove": "CCMAI-RUNTIME-009 BUILD is complete and REVIEW_PENDING for the two job-dispatch endpoints; evidence at docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md. Codex is next independent REVIEWER. R001-R008 remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config.Load errors, sync concurrency and crash recovery remain separate. CCMAI-UXROADMAP-001 stays design-only under owner delegation. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation, self-approval or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex, CCMAI-RUNTIME-009; Claude next IMPLEMENTATION_WORKER)",
+  "activeRole": "IMPLEMENTATION_WORKER (Claude, CCMAI-RUNTIME-009 BUILD complete); Codex next REVIEWER",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }
