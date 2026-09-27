@@ -155,11 +155,21 @@ func (d *Dispatcher) buildNotificationBody(job models.Job, results []models.JobR
 			}
 			body += fmt.Sprintf("%s <b>%s</b> — %s\n📌 %s\n\n", emoji, r.Severity, r.RuleName, r.Evidence)
 		case "classification_tag":
-			body += fmt.Sprintf("🏷 <b>%s</b> (%.0f%%)\n📌 %s\n\n", r.RuleName, r.Confidence*100, r.Evidence)
+			body += fmt.Sprintf("🏷 <b>%s</b>%s\n📌 %s\n\n", r.RuleName, tagConfidenceNote(r), r.Evidence)
 		}
 	}
 
 	return body
+}
+
+// tagConfidenceNote shows a tag's number only when AfterFind exposed it as
+// model-reported, and always says it is the model's own uncalibrated estimate.
+// Unknown, invalid or legacy values produce no percentage at all.
+func tagConfidenceNote(r models.JobResult) string {
+	if r.ReportedConfidence == nil || r.ReportedConfidenceBasis != models.ConfidenceBasisModelReportedUncalibrated {
+		return ""
+	}
+	return fmt.Sprintf(" — mô hình tự ước lượng %.0f%%, chưa hiệu chuẩn", *r.ReportedConfidence*100)
 }
 
 func splitComma(s string) []string {

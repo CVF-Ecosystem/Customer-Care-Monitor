@@ -169,7 +169,6 @@ func themKetQua(tenantID, runID, convID, resultType, severity, ruleName, evidenc
 		RuleName:       ruleName,
 		Evidence:       evidence,
 		Detail:         detail,
-		Confidence:     1,
 		CreatedAt:      at,
 	})
 }

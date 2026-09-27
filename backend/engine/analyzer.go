@@ -576,6 +576,10 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 		return 0, false, fmt.Errorf("persist analysis snapshot: %w", err)
 	}
 
+	// QC evaluations/violations and classification evaluations have no
+	// measured confidence; store an explicit unknown rather than a placeholder.
+	noConfidence, unavailableBasis := models.UnavailableConfidence()
+
 	switch jobType {
 	case "qc_analysis":
 		// Determine pass/fail (SKIP counts as not passed)
@@ -598,7 +602,8 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 			Evidence:           qcResult.Review,
 			Detail:             string(evalDetailJSON),
 			AIRawResponse:      aiResponse,
-			Confidence:         1.0,
+			Confidence:         noConfidence,
+			ConfidenceBasis:    unavailableBasis,
 			CreatedAt:          now,
 		}
 		if err := tx.Create(&evalResult).Error; err != nil {
@@ -631,7 +636,8 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 				Evidence:           v.Evidence,
 				Detail:             string(detailJSON),
 				AIRawResponse:      aiResponse,
-				Confidence:         1.0,
+				Confidence:         noConfidence,
+				ConfidenceBasis:    unavailableBasis,
 				CreatedAt:          now,
 			}
 			if err := tx.Create(&result).Error; err != nil {
@@ -642,6 +648,9 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 
 	case "classification":
 		for _, t := range classResult.Tags {
+			// validateAIResult already rejected a missing or out-of-[0,1] value;
+			// what remains is the model's own uncalibrated estimate.
+			tagConfidence, tagBasis := models.ModelReportedConfidence(t.Confidence)
 			detailJSON, _ := json.Marshal(map[string]interface{}{
 				"explanation":   t.Explanation,
 				"summary":       classResult.Summary,
@@ -658,7 +667,8 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 				Evidence:           t.Evidence,
 				Detail:             string(detailJSON),
 				AIRawResponse:      aiResponse,
-				Confidence:         t.Confidence,
+				Confidence:         tagConfidence,
+				ConfidenceBasis:    tagBasis,
 				CreatedAt:          now,
 			}
 			if err := tx.Create(&result).Error; err != nil {
@@ -683,7 +693,8 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 				Evidence:           classResult.Summary,
 				Detail:             string(evalDetail),
 				AIRawResponse:      aiResponse,
-				Confidence:         1.0,
+				Confidence:         noConfidence,
+				ConfidenceBasis:    unavailableBasis,
 				CreatedAt:          now,
 			}).Error; err != nil {
 				return 0, false, err
@@ -706,7 +717,8 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 				Evidence:           "Cuộc chat không khớp với bất kỳ nhãn phân loại nào.",
 				Detail:             string(skipDetail),
 				AIRawResponse:      aiResponse,
-				Confidence:         1.0,
+				Confidence:         noConfidence,
+				ConfidenceBasis:    unavailableBasis,
 				CreatedAt:          now,
 			}).Error; err != nil {
 				return 0, false, err

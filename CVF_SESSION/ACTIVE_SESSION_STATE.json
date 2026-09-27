@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-005 is BUILD_BLOCKED before any source edit. Making JobResult.Confidence nullable (SPEC contract 1) breaks backend/api/handlers/demo.go, which writes invented demo confidence and is outside the allowed paths. A compile-only fixture literal in backend/api/handlers/results_test.go is also affected. Codex (WORK_ORDER_AUTHOR) must decide the bounded path addition recorded in the active handoff; then Claude resumes BUILD as IMPLEMENTATION_WORKER. S1 remains IN_PROGRESS; R001-R004 remain FREEZE open. No real provider call, channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-005 BUILD is complete as a local commit, REVIEW_PENDING. After an owner-approved bounded path addition (demo.go demo literals plus a compile-only results_test.go fixture), job results store confidence NULL/unavailable except tags with model_reported_uncalibrated. Legacy rows serialize null/unavailable without being rewritten, and notifications show no bare percentage. Codex is next as independent REVIEWER. S1 remains IN_PROGRESS; R001-R004 remain REVIEW PASS / FREEZE open. No real provider call, channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "IMPLEMENTATION_WORKER (Claude, CCMAI-RUNTIME-005 BUILD_BLOCKED); awaiting WORK_ORDER_AUTHOR (Codex) path decision",
+  "activeRole": "COMMIT_STEWARD (Claude, CCMAI-RUNTIME-005 BUILD committed); next REVIEWER (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

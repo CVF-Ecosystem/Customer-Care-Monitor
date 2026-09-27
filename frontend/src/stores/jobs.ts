@@ -45,7 +45,9 @@ export interface JobResult {
   rule_name: string
   evidence: string
   detail: string
-  confidence: number
+  // Model-reported and uncalibrated when present; null means unknown, never 0 or 100%.
+  confidence: number | null
+  confidence_basis: 'unavailable' | 'model_reported_uncalibrated'
   created_at: string
   conversation_date?: string
   customer_name?: string

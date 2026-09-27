@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: IMPLEMENTATION_WORKER (Claude, `CCMAI-RUNTIME-005` `BUILD_BLOCKED`); awaiting WORK_ORDER_AUTHOR (Codex) path decision
-- Next allowed move: Codex decides the bounded path addition in the R005 `BUILD_BLOCKED` entry (`backend/api/handlers/demo.go` demo `JobResult` literals + one compile-only fixture in `results_test.go`). Claude then resumes BUILD. `CCMAI-RUNTIME-001/002/003/004` remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-005` BUILD committed); next REVIEWER (Codex)
+- Next allowed move: Codex independently reviews the `CCMAI-RUNTIME-005` BUILD commit (confidence truth; evidence `docs/reviews/RUNTIME_RESULT_CONFIDENCE_TRUTH_S1_BUILD_2026-09-27.md`). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001/002/003/004` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -181,6 +181,21 @@ CVF controls the application runtime or that a provider-backed test passed.
     - (3) Optionally, focused handler tests for the demo reset/seed path in the existing `demo_test.go`.
   - **Planned design once unblocked:** persisted `Confidence *float64` plus `ConfidenceBasis *string` (varchar, nullable). Read-side exposure goes through derived non-persisted JSON fields computed in `AfterFind`, so the numeric value appears only for `classification_tag` + `model_reported_uncalibrated`. The stored value is never overwritten on read, so a later `Save` cannot rewrite history. `AutoMigrate` adds the nullable basis column; legacy rows keep their numbers with a NULL basis and therefore serialize as `null`/`unavailable`. Rollback: the old binary ignores the extra column and reads NULL confidence only on new rows. This would be checked on fresh and pre-existing-table disposable MySQL.
   - Risk, objective and external-effect class are unchanged (R2, local/disposable MySQL only). No source file was edited and no DB was touched. Status: `BUILD_BLOCKED` awaiting Codex's decision on the path addition.
+- Owner disposition (2026-09-27, “Bạn xử lý luôn đi”): the owner approved the bounded path addition as requested above: (1) `backend/api/handlers/demo.go`, only its 4 demo `JobResult` literals, all set to NULL/`unavailable`; (2) the compile-only fixture literal in `backend/api/handlers/results_test.go`; (3) focused tests in the existing `backend/api/handlers/demo_test.go`. Nothing else changes: the objective, R2 risk, disposable-MySQL-only effect ceiling, local-commit-only ownership and independent Codex REVIEW all stay as they were. `BUILD_BLOCKED` is lifted; Claude continues as `IMPLEMENTATION_WORKER`.
+- BUILD result:
+  - **Model:** `JobResult` keeps the stored `Confidence *float64` plus a new nullable `ConfidenceBasis` (`varchar(40)`), both `json:"-"`. JSON `confidence` / `confidence_basis` come from derived fields set in `AfterFind`. A number is exposed only for a `classification_tag` with basis `model_reported_uncalibrated` and value in `[0,1]`; everything else is `null` / `unavailable`. A later `Save` cannot rewrite stored history.
+  - **Writers:** the analyzer's four fabricated `1.0` writes and all four `demo.go` literals now store `NULL` / `unavailable`. Tags store the validated model number as `model_reported_uncalibrated`.
+  - **Consumers:** notifications show no bare percentage, only a labeled "mô hình tự ước lượng NN%, chưa hiệu chuẩn". The frontend `JobResult` type accepts `number | null` plus the basis.
+  - **Unchanged:** verdict, score, evidence refs, snapshot binding, tenant isolation and transactions.
+  - **Tests:** 5 engine DB tests, both job-result endpoints, the demo import, and the notification formatter. A mutation check showed the central regression fails when fabricated `1.0` is reintroduced.
+  - Evidence: `docs/reviews/RUNTIME_RESULT_CONFIDENCE_TRUTH_S1_BUILD_2026-09-27.md`.
+- BUILD validation (disposable `mysql:8.0`, isolated network, schemas `CCMA` and `CCMA_FRESH`):
+  - HEAD's `AutoMigrate` built a legacy table seeded with 4 legacy rows. The new `AutoMigrate` passed twice on that pre-existing table and twice on a fresh schema; legacy values were preserved with a NULL basis.
+  - Rollback: the old binary migrates and reads the new schema, but shows NULL confidence as `0`. This is a documented limit.
+  - Host Windows Application Control began blocking new Go test binaries mid-session. The policy was not bypassed; tests ran in `golang:1.26-alpine` with the module cache read-only and `GOPROXY=off`. Focused tests PASS and `go test ./... -count=1 -p 1` passed all 13 packages.
+  - Host `go build` / `go vet` are clean, and the frontend `npm run build` passes. gofmt is clean on changed lines; `demo.go` has only pre-existing hunks. `go.mod` / `go.sum` are unchanged. Catalog `-Check` PASS, workspace doctor PASS 25/25, `git diff --check` clean.
+  - Container, network and worktree were removed; persistent Compose `ccma` was untouched. No provider call, credential, channel sync, customer data, deploy or push.
+- Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. No FREEZE, S2/S3/S5 or calibration claim. `CCMAI-RUNTIME-001/002/003/004` remain REVIEW PASS / FREEZE open.
 
 ## Active Tranche: CCMAI-DOCS-001
 

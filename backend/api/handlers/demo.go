@@ -167,6 +167,8 @@ func ImportDemoData(c *gin.Context) {
 	var allConversations []models.Conversation
 	var allMessages []models.Message
 	var allResults []models.JobResult
+	// Demo rows are invented, not model output, so they carry no confidence.
+	noConfidence, unavailableBasis := models.UnavailableConfidence()
 	var allUsageLogs []models.AIUsageLog
 
 	convCount := 0
@@ -225,7 +227,7 @@ func ImportDemoData(c *gin.Context) {
 				allResults = append(allResults, models.JobResult{
 					ID: pkg.NewUUID(), JobRunID: qcRunID, TenantID: tenantID, ConversationID: convID,
 					ResultType: "conversation_evaluation", Severity: tmpl.verdict,
-					Evidence: tmpl.review, Detail: string(detail), Confidence: 0.92,
+					Evidence: tmpl.review, Detail: string(detail), Confidence: noConfidence, ConfidenceBasis: unavailableBasis,
 					CreatedAt: evalTime,
 				})
 				for _, v := range tmpl.violations {
@@ -233,7 +235,7 @@ func ImportDemoData(c *gin.Context) {
 					allResults = append(allResults, models.JobResult{
 						ID: pkg.NewUUID(), JobRunID: qcRunID, TenantID: tenantID, ConversationID: convID,
 						ResultType: "qc_violation", Severity: v.severity, RuleName: v.rule,
-						Evidence: v.evidence, Detail: string(vDetail), Confidence: 0.88,
+						Evidence: v.evidence, Detail: string(vDetail), Confidence: noConfidence, ConfidenceBasis: unavailableBasis,
 						CreatedAt: evalTime,
 					})
 				}
@@ -260,7 +262,7 @@ func ImportDemoData(c *gin.Context) {
 				allResults = append(allResults, models.JobResult{
 					ID: pkg.NewUUID(), JobRunID: classRunID, TenantID: tenantID, ConversationID: convID,
 					ResultType: "conversation_evaluation", Severity: verdict,
-					Evidence: summary, Detail: string(detail), Confidence: 0.90,
+					Evidence: summary, Detail: string(detail), Confidence: noConfidence, ConfidenceBasis: unavailableBasis,
 					CreatedAt: evalTime.Add(time.Minute),
 				})
 				for k, tag := range tmpl.classTags {
@@ -268,11 +270,10 @@ func ImportDemoData(c *gin.Context) {
 					if k < len(tmpl.classEvidence) {
 						evidence = tmpl.classEvidence[k]
 					}
-					tagDetail, _ := json.Marshal(map[string]interface{}{"confidence": 0.85 + float64(rng.Intn(15))*0.01})
 					allResults = append(allResults, models.JobResult{
 						ID: pkg.NewUUID(), JobRunID: classRunID, TenantID: tenantID, ConversationID: convID,
 						ResultType: "classification_tag", RuleName: tag, Evidence: evidence,
-						Detail: string(tagDetail), Confidence: 0.85 + float64(rng.Intn(15))*0.01,
+						Detail: "{}", Confidence: noConfidence, ConfidenceBasis: unavailableBasis,
 						CreatedAt: evalTime.Add(time.Minute),
 					})
 				}

@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-005 — S1 confidence truth
 
-**State:** `WORK_ORDER_READY` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), and [SPEC](../specs/RUNTIME_RESULT_CONFIDENCE_TRUTH_S1_2026-09-27.md).
+**State:** `REVIEW_PENDING` after BUILD (owner-approved path addition for demo.go and one compile-only results_test.go fixture; see the active handoff) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, next) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), and [SPEC](../specs/RUNTIME_RESULT_CONFIDENCE_TRUTH_S1_2026-09-27.md).
 
 ## Entry and role route
 

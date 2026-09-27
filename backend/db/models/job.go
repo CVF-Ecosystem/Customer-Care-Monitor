@@ -72,18 +72,61 @@ type JobResult struct {
 	Evidence           string     `gorm:"type:text" json:"evidence"`
 	Detail             string     `gorm:"type:json" json:"detail"`
 	AIRawResponse      string     `gorm:"type:text" json:"ai_raw_response,omitempty"`
-	Confidence         float64    `json:"confidence"`
 	NotifiedAt         *time.Time `json:"notified_at"`
 	CreatedAt          time.Time  `gorm:"not null;index:idx_result_tenant_type" json:"created_at"`
 
+	// Confidence and ConfidenceBasis are stored exactly as written and are
+	// never serialized directly. Rows written before confidence_basis existed
+	// keep their old number (often a placeholder 1.0) with a NULL basis, which
+	// means "provenance unknown" and is never exposed.
+	Confidence      *float64 `gorm:"column:confidence" json:"-"`
+	ConfidenceBasis *string  `gorm:"type:varchar(40)" json:"-"`
+
+	// ReportedConfidence/ReportedConfidenceBasis are what API JSON and
+	// notifications show, derived on read by AfterFind. Being separate from
+	// the stored columns, a later Save can never rewrite historical values.
+	ReportedConfidence      *float64 `gorm:"-" json:"confidence"`
+	ReportedConfidenceBasis string   `gorm:"-" json:"confidence_basis"`
+
 	// EvidenceStatus is derived on read: "snapshot_bound" or "legacy_unverified".
 	EvidenceStatus string `gorm:"-" json:"evidence_status"`
+}
+
+// Confidence basis values. There is deliberately no "calibrated" value: no
+// result confidence in this system has been measured against outcomes.
+const (
+	ConfidenceBasisUnavailable               = "unavailable"
+	ConfidenceBasisModelReportedUncalibrated = "model_reported_uncalibrated"
+)
+
+// UnavailableConfidence returns the stored pair for a result with no
+// numeric confidence (QC evaluations/violations, classification evaluations).
+func UnavailableConfidence() (*float64, *string) {
+	basis := ConfidenceBasisUnavailable
+	return nil, &basis
+}
+
+// ModelReportedConfidence returns the stored pair for a classification tag's
+// model-supplied number, which callers must already have validated to [0,1].
+func ModelReportedConfidence(v float64) (*float64, *string) {
+	basis := ConfidenceBasisModelReportedUncalibrated
+	return &v, &basis
 }
 
 func (r *JobResult) AfterFind(_ *gorm.DB) error {
 	r.EvidenceStatus = "legacy_unverified"
 	if r.AnalysisSnapshotID != nil && *r.AnalysisSnapshotID != "" {
 		r.EvidenceStatus = "snapshot_bound"
+	}
+
+	r.ReportedConfidence = nil
+	r.ReportedConfidenceBasis = ConfidenceBasisUnavailable
+	if r.ResultType == "classification_tag" &&
+		r.ConfidenceBasis != nil && *r.ConfidenceBasis == ConfidenceBasisModelReportedUncalibrated &&
+		r.Confidence != nil && *r.Confidence >= 0 && *r.Confidence <= 1 {
+		v := *r.Confidence
+		r.ReportedConfidence = &v
+		r.ReportedConfidenceBasis = ConfidenceBasisModelReportedUncalibrated
 	}
 	return nil
 }

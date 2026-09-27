@@ -268,3 +268,67 @@ END`, triggerName, failResultID)).Error; err != nil {
 		t.Errorf("demo flag bi xoa du reset that bai (khong atomic), settings = %q", tenant.Settings)
 	}
 }
+
+// TestImportDemoDataStoresNoInventedConfidence covers CCMAI-RUNTIME-005 for the
+// demo writer: demo rows are invented, not model output, so every seeded
+// result must store confidence NULL with basis "unavailable" and serialize
+// without a number. Before the tranche, demo rows stored 0.92/0.88/0.90 and a
+// random 0.85-0.99 for tags.
+func TestImportDemoDataStoresNoInventedConfidence(t *testing.T) {
+	connectChannelsTestDB(t)
+	tenantID := "demoimp-" + pkg.NewUUID()[:8]
+	if err := db.DB.Exec(`INSERT INTO tenants (id, name, slug, settings, created_at, updated_at) VALUES (?, 'Demo Import Test', ?, '{}', NOW(), NOW())`, tenantID, tenantID).Error; err != nil {
+		t.Fatalf("fixture tenant: %v", err)
+	}
+	t.Cleanup(func() {
+		for _, table := range []string{"job_results", "analysis_snapshots", "ai_usage_logs", "messages", "conversations", "job_runs", "jobs", "channels", "activity_logs"} {
+			db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", tenantID)
+		}
+		db.DB.Exec("DELETE FROM tenants WHERE id = ?", tenantID)
+	})
+
+	gin.SetMode(gin.TestMode)
+	rec := httptest.NewRecorder()
+	c, _ := gin.CreateTestContext(rec)
+	c.Set("tenant_id", tenantID)
+	c.Request = httptest.NewRequest("POST", "/api/v1/demo/import", nil)
+	ImportDemoData(c)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("ImportDemoData status %d, body %s", rec.Code, rec.Body.String())
+	}
+
+	type row struct {
+		ResultType      string
+		Confidence      *float64
+		ConfidenceBasis *string
+	}
+	var rows []row
+	if err := db.DB.Raw("SELECT result_type, confidence, confidence_basis FROM job_results WHERE tenant_id = ?", tenantID).Scan(&rows).Error; err != nil {
+		t.Fatal(err)
+	}
+	types := map[string]int{}
+	for _, r := range rows {
+		types[r.ResultType]++
+		if r.Confidence != nil || r.ConfidenceBasis == nil || *r.ConfidenceBasis != models.ConfidenceBasisUnavailable {
+			t.Fatalf("demo %s stored confidence=%v basis=%v, want NULL/unavailable", r.ResultType, r.Confidence, r.ConfidenceBasis)
+		}
+	}
+	for _, want := range []string{"conversation_evaluation", "qc_violation", "classification_tag"} {
+		if types[want] == 0 {
+			t.Fatalf("demo seeded no %s rows (%v); test would be vacuous", want, types)
+		}
+	}
+
+	var loaded []models.JobResult
+	if err := db.DB.Where("tenant_id = ? AND result_type = ?", tenantID, "classification_tag").Find(&loaded).Error; err != nil {
+		t.Fatal(err)
+	}
+	for _, r := range loaded {
+		b, _ := json.Marshal(r)
+		var m map[string]interface{}
+		json.Unmarshal(b, &m)
+		if m["confidence"] != nil || m["confidence_basis"] != models.ConfidenceBasisUnavailable {
+			t.Fatalf("demo tag serialized confidence=%v basis=%v", m["confidence"], m["confidence_basis"])
+		}
+	}
+}

@@ -428,7 +428,7 @@ func TestWriterHoldsParentLockDeleteWaitsThenCleansEvidence(t *testing.T) {
 		result := models.JobResult{
 			ID: pkg.NewUUID(), JobRunID: runID, TenantID: f.tenantID, ConversationID: conv.ID,
 			AnalysisSnapshotID: &snapRow.ID, ResultType: "qc_violation", Severity: "NGHIEM_TRONG",
-			RuleName: "r", Evidence: ref["quote"].(string), Detail: string(detail), Confidence: 1, CreatedAt: time.Now(),
+			RuleName: "r", Evidence: ref["quote"].(string), Detail: string(detail), CreatedAt: time.Now(),
 		}
 		if err := tx.Create(&result).Error; err != nil {
 			writerDone <- err
