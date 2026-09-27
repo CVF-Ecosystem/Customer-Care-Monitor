@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex independently re-reviewed CCMAI-RUNTIME-009 repair commit 10bebe8: PASS for R2 REVIEW; R009-R1 is closed. R001-R009 remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. Under the owner's UI/UX delegation, Claude may begin the UX-000 design/SPEC/work-order route, then bounded BUILDs returning REVIEW_PENDING for independent Codex review; no blanket FREEZE follows. OAuth/credential and agent config.Load errors, sync concurrency and crash recovery remain separate S1 work. No provider/channel sync, customer data, persistent Compose DB change, deployment or push occurred in R009 review. Future real Alibaba-provider tests require their own bounded work order and sanitized evidence.",
+  "nextAllowedMove": "CCMAI-UX-000 SPEC and R2 work order are written (docs/specs/UI_FOUNDATION_UX000_2026-09-28.md, docs/work_orders/CCMAI_UX_000.md). Claude, as IMPLEMENTATION_WORKER, may BUILD within that scope and return one local evidence commit as REVIEW_PENDING for independent Codex REVIEW; no self-PASS or FREEZE. R001-R009 remain REVIEW PASS / FREEZE open and S1 IN_PROGRESS under Codex orchestration. No provider call, running-DB change, deployment or push is authorized by UX-000.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex, after independent CCMAI-RUNTIME-009 REVIEW PASS)",
+  "activeRole": "WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER (Claude, CCMAI-UX-000)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }
