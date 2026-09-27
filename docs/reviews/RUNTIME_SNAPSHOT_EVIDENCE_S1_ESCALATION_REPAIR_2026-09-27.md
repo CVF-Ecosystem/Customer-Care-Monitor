@@ -116,7 +116,7 @@ other DB-backed test in this package.
 - No frontend or docs files were touched this repair, so the frontend build
   was not re-run (same reasoning as round 3's evidence).
 
-## Claim boundary
+## Claim boundary (escalation repair, commit `103650a`)
 
 No Claude/Gemini/OpenAI/xAI or other provider API was called and no API key
 was used. No channel sync, real customer data, deploy, or push. This repair
@@ -127,3 +127,99 @@ tests prove MySQL/InnoDB transaction-rollback behavior under this schema and
 this code; they are not a claim about any other database engine or about
 production load. Local commit only; Codex re-reviews the changed set and this
 evidence next.
+
+## Addendum: R3-E1-T1 test/evidence completion (2026-09-27)
+
+**Authority:** independent finding `R3-E1-T1` in
+`docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ESCALATION_REPAIR_2026-09-27.md`
+(re-review of commit `103650a`), narrowed contract appended to
+`docs/work_orders/CCMAI_RUNTIME_002.md` ("R3-E1 acceptance completion after
+Codex re-review") · **Repairer:** Claude (`REPAIR_WORKER`, allowed path
+`backend/api/handlers/demo_test.go` only, plus this evidence and continuity —
+no production source change authorized).
+
+### Gap this addendum closes
+
+Codex's independent re-review accepted the source fix in `ResetDemoData` but
+found the permanent failure-path test (`TestResetDemoDataFailureRollsBackEverything`)
+seeded a `job_result` with no `analysis_snapshot_id` and created no
+`analysis_snapshot` row at all. The test therefore exercised only the legacy
+result path and never asserted the work order's explicit snapshot-preservation
+acceptance ("leaves result, snapshot, run, job, conversation, channel and demo
+flag unchanged").
+
+### What changed (test/evidence only — no source touched)
+
+`backend/api/handlers/demo_test.go`:
+
+- `seedDemoResetFixture` is now parameterized through a `demoResetFixtureIDs`
+  struct with an explicit `msgID` and an optional `snapshotID`. When
+  `snapshotID` is non-empty it inserts an `analysis_snapshots` row for the same
+  tenant/job-run/conversation and sets the seeded `job_result.analysis_snapshot_id`
+  to it; when empty it keeps the prior legacy (unlinked) shape. This reuses the
+  one existing fixture helper rather than adding a second large fixture
+  function.
+- **`TestResetDemoDataHappyPathClearsAllTenantData`** now seeds a
+  snapshot-linked result and a named message ID, and asserts (via `.Count(...).Error`,
+  not just the count) that `channels`, `conversations`, `messages`, `jobs`,
+  `job_runs`, `job_results`, and `analysis_snapshots` are all `0` for the
+  tenant after a successful reset, plus the demo flag decodes to `{}`.
+- **`TestResetDemoDataFailureRollsBackEverything`** now seeds a
+  snapshot-linked result (satisfying R3-E1-T1 acceptance #1) and keeps the same
+  forced `job_results` `BEFORE DELETE` trigger. After the forced failure it
+  asserts, by ID and checking each query's `.Error`: the channel, conversation,
+  message, job, job run, job result, and analysis snapshot all still have count
+  `1`; the reloaded `job_result` row's `AnalysisSnapshotID` still points at the
+  seeded snapshot (not just that the snapshot row exists, but that the link
+  survived); and the tenant's demo flag still decodes `is_demo_data: true`.
+  This satisfies acceptance #1-#2 of the addendum, including the message-row
+  assertion the addendum asked for explicitly rather than "covered elsewhere".
+- Acceptance #3 ("preserve the existing legacy path coverage where
+  practical, without duplicating a large fixture") is satisfied by keeping
+  `seedDemoResetFixture`'s legacy (`snapshotID == ""`) branch available in the
+  same helper — no separate large fixture was added — while the
+  `JobResult.AfterFind` legacy/`snapshot_bound` derivation itself continues to
+  be covered by `backend/engine`'s existing `TestLegacyResultsAreMarkedUnverified`.
+
+**No source defect was exposed by the expanded assertions.** Both tests passed
+on the first run against the already-fixed `ResetDemoData`; this addendum did
+not need to escalate or widen scope beyond `demo_test.go`.
+
+### Verification (addendum)
+
+- `go build ./...`, `go vet ./...` — clean.
+- `gofmt -l api/handlers/demo_test.go` — clean; `git diff --check` on the
+  changed file — clean.
+- Fresh disposable `mysql:8.0` container on an isolated Docker network (no
+  host data; container and network removed after the run; persistent Compose
+  `ccma` was not started or touched this round since no application source
+  changed), `log_bin_trust_function_creators` set once via root for the
+  trigger-based test:
+  - `go test ./api/handlers -run 'TestResetDemoData' -v` — both updated tests
+    PASS with the snapshot assertions.
+  - `go test ./engine/... ./api/handlers/... ./cli/... -run 'TestSaveResultsFailsWhenParentDeletedFirst|TestWriterHoldsParentLockDeleteWaitsThenCleansEvidence|TestDeleteChannelFailureRollsBackWholeCascade|TestDeleteChannelRemovesResultsAndSnapshotsTogether|TestPurgeChannelConversationsRemovesEvidenceKeepsChannel|TestDeleteJobRemovesRunsAndEvidence|TestApplyPrunePlanCleansOrphanSnapshotsKeepsReferenced|TestSnapshotDigestChangesWithAttachmentIdentity' -v` —
+    every named round-1/round-2/round-3 regression and both writer/delete
+    race-ordering tests PASS unchanged.
+  - `go test ./... -count=1` — all 13 packages `ok`.
+  - `AutoMigrate` run twice back-to-back on the same disposable `CCMA` schema
+    (via a throwaway `go run`, this time **without** `-mod=mod`) — both clean,
+    no error; `git status` on `backend/go.mod`/`backend/go.sum` confirmed clean
+    both before and after, so the earlier transient reclassification did not
+    recur.
+- Downstream catalog check (`scripts/manage_cvf_downstream_catalog.ps1
+  -Check`) — PASS.
+- CVF workspace doctor
+  (`../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1
+  -ProjectPath .`) — PASS 25/25.
+- Cleanup: the disposable MySQL container and its dedicated Docker network
+  were stopped/removed after the run.
+
+### Claim boundary (addendum)
+
+No Claude/Gemini/OpenAI/xAI or other provider API was called and no API key
+was used. No channel sync, real customer data, deploy, or push. This addendum
+closes only finding `R3-E1-T1` (test/evidence completion) — it does not touch
+`ResetDemoData` or any other production source, and does not reopen,
+re-certify, or re-scope any other part of Gate B. It does not authorize
+S2/S3/S5, FREEZE, or any AI-runtime-governance claim. Local commit only;
+Codex re-reviews the changed set and this evidence next.
