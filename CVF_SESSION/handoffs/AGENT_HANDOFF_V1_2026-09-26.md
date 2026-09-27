@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-007` REVIEW PASS)
-- Next allowed move: Codex may issue another bounded S1 continuation or route a separate CLOSER/FREEZE evaluation. `CCMAI-RUNTIME-001` to `007` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this review.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active role: WORK_ORDER_AUTHOR (Codex, `CCMAI-RUNTIME-008`); next IMPLEMENTATION_WORKER (Claude)
+- Next allowed move: Claude implements the bounded `CCMAI-RUNTIME-008` manual sync configuration-admission work order after rehydration and handoff acknowledgment, then locally commits BUILD evidence and returns REVIEW_PENDING to Codex. `CCMAI-RUNTIME-001` to `007` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -250,6 +250,13 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. S1 residuals remain: cross-path single-flight, stale `syncing` after a crash, and the ignored worker `config.Load` error. No FREEZE or S1 closure.
 - Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed `0338fee`, source/test scope and R007 SPEC. Seven focused handler tests passed on a separate disposable MySQL database; the review container/network were removed. Review `docs/reviews/CCMAI_RUNTIME_007_INDEPENDENT_REVIEW_2026-09-27.md` returns PASS for R2 REVIEW. The actual goroutine panic path remains untested; the called recovery helper and its failure behavior are tested.
 - Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R007 are REVIEW PASS / FREEZE open. No real channel sync, provider/governance proof, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is claimed.
+
+## Active Tranche: CCMAI-RUNTIME-008
+
+- INTAKE: owner requested “tiếp” after R007 independent REVIEW PASS. The R007 residual audit found `runManualSync` ignores `config.Load()` failure after `syncing` has been recorded and 202 sent; a nil config can then enter the worker path.
+- DESIGN: validate config after tenant-scoped lookup but before the R007 start write; on failure send generic non-2xx without a worker or status mutation. Pass the validated config to the worker, preserving 202 and sync semantics. Defer cross-path single-flight, crash recovery and real channel behavior.
+- SPEC: `docs/specs/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_2026-09-27.md`. WORK_ORDER: `docs/work_orders/CCMAI_RUNTIME_008.md` (R2), limited to `backend/api/handlers/channels.go`, focused handler tests and governed evidence/continuity.
+- Role transition acknowledged: `ORCHESTRATOR (Codex) -> SPEC_AUTHOR (Codex) -> WORK_ORDER_AUTHOR (Codex)`; next `IMPLEMENTATION_WORKER (Claude)` must rehydrate and acknowledge before BUILD. Independent `REVIEWER (Codex)` follows one local BUILD/evidence commit; no self-approval, push or FREEZE.
 
 ## Active Tranche: CCMAI-DOCS-001
 
