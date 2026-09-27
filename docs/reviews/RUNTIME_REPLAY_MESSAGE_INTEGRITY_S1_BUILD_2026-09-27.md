@@ -147,7 +147,7 @@ files changed afterward.
   gates all remain deferred per the spec — this BUILD does not touch any of
   them.
 
-## Claim boundary
+## Claim boundary (initial BUILD, commit `2a4e530`)
 
 No Claude/Gemini/OpenAI/xAI or other provider API was called and no API key
 was used. No real channel sync, customer data, deployment, or push. This
@@ -157,3 +157,135 @@ asserted, and everything else is marked open. `CCMAI-RUNTIME-001/002` FREEZE
 remains separately open and is not affected by this tranche. Local commit
 only; Codex is the independent `REVIEWER` for this BUILD next, and Claude
 does not self-approve or FREEZE.
+
+## Addendum: Repair round 1 — R003-R1/R003-R2 (2026-09-27)
+
+**Authority:** Codex independent review of commit `2a4e530`,
+`docs/reviews/CCMAI_RUNTIME_003_INDEPENDENT_REVIEW_2026-09-27.md`
+(`CHANGES_REQUIRED`), narrowed contract appended to
+`docs/work_orders/CCMAI_RUNTIME_003.md` ("Repair round 1 — R003-R1/R003-R2") ·
+**Repairer:** Claude (`REPAIR_WORKER`, allowed paths `backend/engine/sync.go`
+and `backend/engine/sync_replay_test.go` only, plus this evidence and
+continuity).
+
+### R003-R1 — replay ignored supplied raw-data changes and serialization errors
+
+`updateExistingMessage` never read `msg.RawData` or `existing.RawData` at
+all, so a changed source raw payload (including a newly observed removal/edit
+marker such as Pancake's `is_removed`) stayed stale in storage with no
+error, and an unmarshalable incoming raw value could return success.
+
+**Fix:** new `mergeRawData(existingJSON string, incoming map[string]interface{})`
+in `backend/engine/sync.go`, wired into `updateExistingMessage`'s existing
+`updates` map alongside content/sender/content-type/timestamp/attachments:
+
+- A nonempty incoming map is treated as explicitly supplied. It is marshaled
+  first, with its error returned immediately (`fmt.Errorf("marshal message
+  raw data: %w", err)`) — this is the write-error path the repair acceptance
+  requires; a value the standard library cannot encode (a `NaN` float, used
+  only in the new test to force this) now surfaces as an error instead of
+  silently keeping stale data.
+- The incoming canonical JSON is compared against a re-marshaled canonical
+  form of the *stored* value (parsed back into a `map[string]interface{}`
+  and re-encoded), not a raw string compare — this avoids a false "changed"
+  purely from MySQL's own JSON-column reformatting of the stored text, the
+  same technique already used for `mergeAttachments`.
+- A nil or empty incoming map is indistinguishable from an adapter that
+  simply didn't attach raw data to this reply, so it is never treated as a
+  change and never erases a previously stored value. This tranche still does
+  not act on any removal/edit marker inside the payload (`is_removed` or
+  otherwise) — it is persisted as supplied, nothing more; that is explicitly
+  out of scope per the SPEC and the repair acceptance.
+
+### R003-R2 — sender-role acceptance lacked an executable assertion
+
+`TestUpsertMessageReplayUpdatesStaleContentAndDigest` changed `SenderName`
+but supplied the same `SenderType: "customer"` on both calls, so the SPEC's
+"changed sender role/name" acceptance bullet was only half-exercised.
+
+**Fix (test-only):** the same central test now also changes `SenderType`
+(`"customer"` → `"agent"`, a valid role transition) and `ContentType`
+(`"text"` → `"sticker"`) on the replay call, and asserts both the reloaded
+`SenderType` and `ContentType` alongside the existing content/sender-name/
+timestamp/one-row/internal-ID/digest assertions. No production behavior
+changed for this finding — the pre-existing nonempty/changed check for
+`sender_type` already covered it; only the missing assertion was added,
+confirmed by the before/after regression below (this specific test still
+passes on pre-repair source, exactly as the review's own analysis predicted).
+
+### New regression tests
+
+`backend/engine/sync_replay_test.go` gains three DB-backed tests:
+
+- **`TestUpsertMessageReplayUpdatesChangedRawData`** — a replay with a
+  changed, nonempty raw-data map (toggling a `is_removed`-style boolean)
+  persists the new value; exactly one row remains.
+- **`TestUpsertMessageIdenticalRawDataReplayIsNoOp`** — a structurally
+  identical (but distinct Go map value, as a real JSON-decoded replay would
+  be) raw-data replay causes no `UPDATE`, proven with the same
+  `BEFORE UPDATE`-trigger technique the other idempotency test already uses.
+- **`TestUpsertMessageUnmarshalableRawDataReturnsErrorAndLeavesRowUnchanged`**
+  — a raw-data map containing `math.NaN()` (unencodable by `encoding/json`)
+  returns a non-nil error, and the stored row is confirmed unchanged
+  (content and raw_data both compared before/after).
+
+### Verification
+
+- `go build ./...`, `go vet ./...` — clean.
+- Fresh disposable `mysql:8.0` container on an isolated Docker network (no
+  host data; container and network removed after the run); persistent
+  Compose `ccma` was not started (no schema/config change).
+  `log_bin_trust_function_creators` set once via root for the trigger-based
+  idempotency tests:
+  - `go test ./engine/... -run 'TestUpsertMessage' -v` — all 8 replay tests
+    PASS (5 existing + 3 new).
+  - `go test ./... -count=1` — all 13 packages `ok`.
+  - `AutoMigrate` run twice back-to-back on the same disposable `CCMA` schema
+    (throwaway `go run`, no `-mod=mod`) — both clean, no error;
+    `backend/go.mod`/`backend/go.sum` confirmed unchanged by `git status`
+    both before and after.
+- **Before/after regression:** `git stash push -- backend/engine/sync.go`
+  restored the pre-repair source (keeping the new tests); re-running
+  `go test ./engine/... -run 'TestUpsertMessage' -v` showed exactly
+  `TestUpsertMessageReplayUpdatesChangedRawData` and
+  `TestUpsertMessageUnmarshalableRawDataReturnsErrorAndLeavesRowUnchanged`
+  FAIL — precisely the two R003-R1 defects — while the R003-R2 assertion
+  addition and everything else still passed (matching the review's own
+  characterization that the source's `sender_type` handling was not
+  actually broken, only untested). `git stash pop` restored the fix, which
+  was then re-verified passing (8/8) before continuing.
+- `gofmt -l backend/engine/sync.go backend/engine/sync_replay_test.go` flags
+  both files, but only because `core.autocrlf=true` converted their
+  working-tree line endings to CRLF during an earlier `git stash pop` in
+  this session (confirmed via `file`); stripping `\r` and re-running `gofmt
+  -l` on both shows zero diagnostics, and Git's `autocrlf` normalizes back
+  to LF on commit regardless of the working-tree encoding, so the committed
+  blob is unaffected. `git diff --check` on both files — clean.
+- Downstream catalog check (`scripts/manage_cvf_downstream_catalog.ps1
+  -Check`) — PASS.
+- CVF workspace doctor
+  (`../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1
+  -ProjectPath .`) — PASS 25/25.
+
+### Raw-data presence rule (recorded per repair acceptance)
+
+An incoming `RawData` is considered "explicitly supplied" if and only if
+`len(msg.RawData) > 0`. A `nil` map and an empty (zero-length) map are
+indistinguishable in Go and are both treated as "the adapter did not attach
+raw data to this reply" — never as a signal to erase or ignore a previously
+stored value. This mirrors the identical rule already used for the
+attachment list (`mergeAttachments`) and for every other field in
+`updateExistingMessage` (nonempty string / nonzero time as the presence
+signal).
+
+### Claim boundary (repair round 1)
+
+No Claude/Gemini/OpenAI/xAI or other provider API was called and no API key
+was used. No real channel sync, customer data, deployment, or push. This
+repair closes only R003-R1 and R003-R2 as named in Codex's independent
+review — it does not touch any adapter, provider, analyzer, DB model/
+migration, frontend or CVF core file, and does not reopen, re-certify, or
+widen any other part of this tranche or of `CCMAI-RUNTIME-001/002` (FREEZE
+remains separately open for both). No S2/S3/S5 or governance-runtime claim is
+made. Local commit only; Codex re-reviews the changed set and this evidence
+next.

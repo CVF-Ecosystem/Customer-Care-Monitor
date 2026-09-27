@@ -408,10 +408,54 @@ func updateExistingMessage(existing *models.Message, msg channels.SyncedMessage)
 		updates["attachments"] = string(attachmentsJSON)
 	}
 
+	rawDataJSON, rawDataChanged, err := mergeRawData(existing.RawData, msg.RawData)
+	if err != nil {
+		return fmt.Errorf("serialize message raw data: %w", err)
+	}
+	if rawDataChanged {
+		updates["raw_data"] = rawDataJSON
+	}
+
 	if len(updates) == 0 {
 		return nil
 	}
 	return db.DB.Model(existing).Updates(updates).Error
+}
+
+// mergeRawData decides whether a replay's raw-data map should overwrite what
+// is stored. A nil or empty map is indistinguishable from an adapter that
+// simply didn't attach raw data to this reply, so it never erases stored raw
+// data and is not treated as a deletion signal. A nonempty map is explicitly
+// supplied: it is marshaled with an error check (R003-R1 — a value the
+// standard library cannot encode, such as a NaN float, must surface as an
+// error here rather than silently keeping stale data with no report) and
+// only written when it canonically differs from the stored value, so an
+// identical replay issues no UPDATE. This tranche does not act on any
+// removal/edit marker inside the raw payload (e.g. Pancake's "is_removed") —
+// it is stored as supplied, nothing more.
+func mergeRawData(existingJSON string, incoming map[string]interface{}) (value string, changed bool, err error) {
+	if len(incoming) == 0 {
+		return "", false, nil
+	}
+	incomingJSON, err := json.Marshal(incoming)
+	if err != nil {
+		return "", false, fmt.Errorf("marshal message raw data: %w", err)
+	}
+
+	trimmed := strings.TrimSpace(existingJSON)
+	if trimmed != "" && trimmed != "null" {
+		var existing map[string]interface{}
+		if err := json.Unmarshal([]byte(existingJSON), &existing); err == nil {
+			if existingCanon, err := json.Marshal(existing); err == nil && string(existingCanon) == string(incomingJSON) {
+				return "", false, nil
+			}
+		}
+		// A stored value that can't be parsed/re-encoded cleanly falls
+		// through to the write below: the incoming value is nonempty, valid
+		// and explicitly supplied, so it replaces a value this code can't
+		// even confirm is unchanged.
+	}
+	return string(incomingJSON), true, nil
 }
 
 // mergeAttachments applies a replay's attachment list onto what is already

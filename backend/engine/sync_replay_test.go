@@ -3,6 +3,7 @@ package engine
 import (
 	"encoding/json"
 	"fmt"
+	"math"
 	"testing"
 	"time"
 
@@ -125,9 +126,14 @@ func TestUpsertMessageReplayUpdatesStaleContentAndDigest(t *testing.T) {
 	sentAt2 := sentAt1.Add(3 * time.Minute)
 	newContent := "Đơn hàng của mình đâu rồi ạ 😡 — sao lâu thế!!"
 	newSender := "Khach A (đã đổi tên) 😅"
+	// R003-R2: the SPEC acceptance is a changed sender role/name together —
+	// a customer message getting corrected/relabeled as an agent one is an
+	// artificial but valid role transition for exercising the assertion.
+	newSenderType := "agent"
+	newContentType := "sticker"
 	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
-		ExternalID: extID, SenderType: "customer", SenderName: newSender,
-		Content: newContent, ContentType: "text", SentAt: sentAt2,
+		ExternalID: extID, SenderType: newSenderType, SenderName: newSender,
+		Content: newContent, ContentType: newContentType, SentAt: sentAt2,
 	}); err != nil {
 		t.Fatalf("replay upsert: %v", err)
 	}
@@ -141,6 +147,12 @@ func TestUpsertMessageReplayUpdatesStaleContentAndDigest(t *testing.T) {
 	}
 	if updated.SenderName != newSender {
 		t.Errorf("sender_name not updated by replay: %q", updated.SenderName)
+	}
+	if updated.SenderType != newSenderType {
+		t.Errorf("sender_type (role) not updated by replay: %q", updated.SenderType)
+	}
+	if updated.ContentType != newContentType {
+		t.Errorf("content_type not updated by replay: %q", updated.ContentType)
 	}
 	if !updated.SentAt.Equal(sentAt2) {
 		t.Errorf("sent_at not updated by replay: got %v want %v", updated.SentAt, sentAt2)
@@ -321,5 +333,112 @@ func TestUpsertMessageWriteFailureIsReturnedAndLeavesRowUnchanged(t *testing.T) 
 	after := f.loadMessage(t, extID)
 	if after.Content != before.Content || !after.SentAt.Equal(before.SentAt) {
 		t.Errorf("a failed write must not leave a partially applied row: before=%+v after=%+v", before, after)
+	}
+}
+
+// TestUpsertMessageReplayUpdatesChangedRawData is the R003-R1 regression: a
+// replay carrying a changed, nonempty raw-data map (here including a newly
+// observed Pancake-style "is_removed" marker) must actually persist, even
+// though raw data isn't part of the snapshot digest. This tranche does not
+// act on the marker's meaning — it is stored as supplied, nothing more.
+func TestUpsertMessageReplayUpdatesChangedRawData(t *testing.T) {
+	f := setupSyncReplayFixture(t)
+	eng := &SyncEngine{}
+	const extID = "m-rawdata-1"
+	sentAt := time.Now().Add(-6 * time.Minute).UTC().Truncate(time.Second)
+
+	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+		ExternalID: extID, SenderType: "customer", SenderName: "Khach E",
+		Content: "Tin nhan goc", ContentType: "text", SentAt: sentAt,
+		RawData: map[string]interface{}{"id": "raw-1", "is_removed": false},
+	}); err != nil {
+		t.Fatalf("initial upsert: %v", err)
+	}
+
+	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+		ExternalID: extID, SenderType: "customer", SenderName: "Khach E",
+		Content: "Tin nhan goc", ContentType: "text", SentAt: sentAt,
+		RawData: map[string]interface{}{"id": "raw-1", "is_removed": true},
+	}); err != nil {
+		t.Fatalf("replay upsert: %v", err)
+	}
+
+	if n := f.countMessages(t, extID); n != 1 {
+		t.Fatalf("replay produced %d rows for the same external ID, want exactly 1", n)
+	}
+	var stored map[string]interface{}
+	after := f.loadMessage(t, extID)
+	if err := json.Unmarshal([]byte(after.RawData), &stored); err != nil {
+		t.Fatalf("parse stored raw_data: %v", err)
+	}
+	if removed, _ := stored["is_removed"].(bool); !removed {
+		t.Errorf("changed raw_data was not persisted by replay: %+v", stored)
+	}
+}
+
+// TestUpsertMessageIdenticalRawDataReplayIsNoOp proves an identical raw-data
+// replay causes no UPDATE, using the same no-update trigger technique as the
+// content/attachment idempotency test.
+func TestUpsertMessageIdenticalRawDataReplayIsNoOp(t *testing.T) {
+	f := setupSyncReplayFixture(t)
+	eng := &SyncEngine{}
+	const extID = "m-rawdata-idem-1"
+	sentAt := time.Now().Add(-7 * time.Minute).UTC().Truncate(time.Second)
+	raw := map[string]interface{}{"id": "raw-2", "note": "khong doi"}
+
+	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+		ExternalID: extID, SenderType: "customer", SenderName: "Khach F",
+		Content: "Tin nhan on dinh", ContentType: "text", SentAt: sentAt,
+		RawData: raw,
+	}); err != nil {
+		t.Fatalf("initial upsert: %v", err)
+	}
+	before := f.loadMessage(t, extID)
+	f.failOnUpdateTrigger(t, "trg_ccma_test_replay_rawdata_noupdate_"+f.suffix, before.ID, "unexpected UPDATE on identical raw-data replay")
+
+	// Same content/sender/time/content-type and a structurally identical (but
+	// distinct map value) raw-data payload — a real replay would decode a
+	// fresh map from JSON each time, not reuse the same Go value.
+	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+		ExternalID: extID, SenderType: "customer", SenderName: "Khach F",
+		Content: "Tin nhan on dinh", ContentType: "text", SentAt: sentAt,
+		RawData: map[string]interface{}{"id": "raw-2", "note": "khong doi"},
+	}); err != nil {
+		t.Fatalf("identical raw-data replay should be a no-op; got an error (likely the no-update trigger firing): %v", err)
+	}
+}
+
+// TestUpsertMessageUnmarshalableRawDataReturnsErrorAndLeavesRowUnchanged is
+// the R003-R1 write-error regression: a source raw-data value the standard
+// library cannot encode (a NaN float, used only here to force the failure)
+// must surface as an error rather than silently keeping the row stale with
+// no report.
+func TestUpsertMessageUnmarshalableRawDataReturnsErrorAndLeavesRowUnchanged(t *testing.T) {
+	f := setupSyncReplayFixture(t)
+	eng := &SyncEngine{}
+	const extID = "m-rawdata-bad-1"
+	sentAt := time.Now().Add(-8 * time.Minute).UTC().Truncate(time.Second)
+
+	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+		ExternalID: extID, SenderType: "customer", SenderName: "Khach G",
+		Content: "Tin nhan hop le", ContentType: "text", SentAt: sentAt,
+		RawData: map[string]interface{}{"id": "raw-3"},
+	}); err != nil {
+		t.Fatalf("initial upsert: %v", err)
+	}
+	before := f.loadMessage(t, extID)
+
+	err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+		ExternalID: extID, SenderType: "customer", SenderName: "Khach G",
+		Content: "Tin nhan hop le", ContentType: "text", SentAt: sentAt,
+		RawData: map[string]interface{}{"id": "raw-3", "bad": math.NaN()},
+	})
+	if err == nil {
+		t.Fatal("expected an unmarshalable raw-data value to return an error, got nil")
+	}
+
+	after := f.loadMessage(t, extID)
+	if after.Content != before.Content || after.RawData != before.RawData {
+		t.Errorf("a raw-data marshal failure must not leave a partially applied row: before=%+v after=%+v", before, after)
 	}
 }
