@@ -39,6 +39,12 @@ services:
       TZ: Asia/Ho_Chi_Minh
     ports:
       - "127.0.0.1:${UISHOT_PORT:-18088}:8080"
+    # No outbound calls: the scheduler syncs every active channel every 5 minutes, and
+    # the demo channels carry dummy credentials. External DNS goes to a dead resolver,
+    # so Zalo/Facebook/Pancake/AI-provider hostnames cannot resolve; Docker's embedded
+    # DNS still resolves the "db" service name.
+    dns:
+      - 127.0.0.1
     depends_on:
       db:
         condition: service_healthy
