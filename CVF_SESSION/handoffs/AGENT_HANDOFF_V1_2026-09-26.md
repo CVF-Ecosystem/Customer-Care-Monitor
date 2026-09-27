@@ -7,9 +7,15 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: REPAIR_WORKER (Claude) done for UX000-R1; next REVIEWER (Codex). UX-002 and UX-001a are REVIEW PASS; UX-000 repair round 1 is REVIEW_PENDING.
-- Next allowed move: Codex re-reviews the UX000-R1 repair commit. UX-010 work order/BUILD wait for UX-000 PASS. Separate R2 backend/API and runtime work orders cover UX-02 and UX-06. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
+- Active role: ORCHESTRATOR (Codex after UX000-R1 independent REVIEW_PASS); Claude next WORK_ORDER_AUTHOR for UX-010. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
+- Next allowed move: Claude writes the UX-010 R2 work order from its approved SPEC/canvas, acknowledges the tranche/role transition, then performs bounded BUILD returning REVIEW_PENDING for Codex. Separate R2 backend/API and runtime work orders cover UX-02 and UX-06. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## Codex independent UX000-R1 re-review (2026-09-28)
+
+- Role transition ORCHESTRATOR → REVIEWER (Codex). At `d90c133`, the three avatar foregrounds use theme `on-secondary`/`on-primary`; source and new tests fit the same-scope addendum. Independently reran 92/92 frontend tests and forced vue-tsc, inspected the rendered contrast evidence (minimum 6.0:1 light, 8.11:1 dark), image captures and 36-page report (0 JS errors/overflow/external requests). No disposable screenshot container remains; diff check and doctor 25/25 pass. Review: `docs/reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md`.
+- UX-000/UX000-R1 `REVIEW_PASS`, FREEZE open. UX-002 and UX-001a were already REVIEW_PASS, so UX-010's dependency gate is satisfied. F1 onboarding styling and F3 older view-specific chips remain later-screen scope. No provider call or runtime governance proof.
+- Role transition REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex), local review/continuity commit only. Claude next acknowledges WORK_ORDER_AUTHOR for UX-010 before BUILD. No push, deployment or FREEZE.
 
 ## Repair: CCMAI-UX-000 UX000-R1
 
