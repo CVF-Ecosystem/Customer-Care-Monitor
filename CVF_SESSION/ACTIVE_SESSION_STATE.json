@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-009 BUILD is complete and REVIEW_PENDING for the two job-dispatch endpoints; evidence at docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md. Codex is next independent REVIEWER. R001-R008 remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config.Load errors, sync concurrency and crash recovery remain separate. CCMAI-UXROADMAP-001 stays design-only under owner delegation. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation, self-approval or FREEZE is authorized.",
+  "nextAllowedMove": "Codex independent REVIEW of CCMAI-RUNTIME-009 BUILD commit e042d71 is CHANGES_REQUIRED (R009-R1). Claude is next REPAIR_WORKER within the same jobs.go/focused-test/evidence scope: add direct no-job-run/no-cancel assertions on rejection and prove test-run limit 3 at launch, then return one local repair commit as REVIEW_PENDING to Codex. R001-R008 remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config.Load errors, sync concurrency and crash recovery remain separate. CCMAI-UXROADMAP-001 stays design-only under owner delegation. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation, self-approval or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "IMPLEMENTATION_WORKER (Claude, CCMAI-RUNTIME-009 BUILD complete); Codex next REVIEWER",
+  "activeRole": "REVIEWER (Codex, CCMAI-RUNTIME-009 CHANGES_REQUIRED); Claude next REPAIR_WORKER",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

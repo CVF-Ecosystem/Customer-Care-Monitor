@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-009 — job-dispatch configuration admission
 
-**State:** `REVIEW_PENDING` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` → `SESSION_SYNC_STEWARD` → `COMMIT_STEWARD`, BUILD complete) · **Independent reviewer:** Codex (`REVIEWER`, next) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md), and R008 independent REVIEW PASS.
+**State:** `REVIEW_PENDING / CHANGES_REQUIRED` ([R009-R1](../reviews/CCMAI_RUNTIME_009_INDEPENDENT_REVIEW_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER` next) · **Independent reviewer:** Codex (`REVIEWER` after repair) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md), and R008 independent REVIEW PASS.
 
 **BUILD evidence:** [`docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md`](../reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md).
 
@@ -28,3 +28,7 @@ Allowed accompanying paths: new `docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BU
 After checks pass, route `IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD`, synchronize continuity/status, and create one local commit without push. Return `REVIEW_PENDING` to Codex. The 202 response means dispatch accepted, not analysis completed.
 
 **External-effect ceiling:** local source/docs/tests and disposable MySQL only. No real AI provider, real channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S1 closure, S2/S3/S5 implementation or FREEZE.
+
+## Repair addendum R009-R1 (independent REVIEW, 2026-09-28)
+
+The initial BUILD passed focused and full tests, but the [independent review](../reviews/CCMAI_RUNTIME_009_INDEPENDENT_REVIEW_2026-09-28.md) found missing direct acceptance proof for rejection side effects and the test-run limit. Claude may edit `backend/api/handlers/jobs.go`, focused handler tests and R009 evidence/continuity files to add: (1) direct no-`job_runs` and no-`jobCancelFuncs` assertions for both endpoints' error and nil-config paths, and (2) a testable launch seam/helper that proves test-run still starts with limit 3, without calling a real analyzer/provider. Preserve the accepted source behavior. Re-run the required gates, append BUILD evidence, commit locally without push and return `REVIEW_PENDING` to Codex. No new effect or path authority is granted.

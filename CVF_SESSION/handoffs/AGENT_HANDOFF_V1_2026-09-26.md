@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: IMPLEMENTATION_WORKER (Claude, `CCMAI-RUNTIME-009` BUILD complete); Codex next independent REVIEWER
-- Next allowed move: Codex independently reviews `CCMAI-RUNTIME-009` BUILD evidence and either passes or requests repair. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5, self-approval or FREEZE is authorized.
+- Active role: REVIEWER (Codex, `CCMAI-RUNTIME-009` CHANGES_REQUIRED); Claude next REPAIR_WORKER
+- Next allowed move: Claude repairs R009-R1 under the existing work-order addendum and returns one local commit as REVIEW_PENDING for Codex re-review. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5, self-approval or FREEZE is authorized.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-009
@@ -20,6 +20,7 @@ Status: ACTIVE
 - BUILD result: `TestRunJob`/`TriggerJob` validate configuration via `loadJobDispatchConfig()` after the tenant-scoped lookup and before any goroutine/202; failure or nil config returns generic `500 job_start_failed` with no worker, cancel registration or detail leak. Validated config is passed by identity into new `startTestRunJob`/`startTriggerJob` launcher variables (no in-worker reload); `TriggerJob`'s mode/date/limit resolution is unchanged and threads through a new `triggerJobParams` struct; `TestRunJob`'s limit-3 behavior is unchanged. Both 202 bodies are byte-for-byte unchanged.
 - BUILD validation: 10 new focused tests in `backend/api/handlers/job_config_admission_test.go` pass on disposable MySQL (config-failure/no-leak, nil-config, wrong-tenant-skips-load, valid-config-identity/params, default-mode-unchanged, real-`config.Load` synthetic-env invalid/valid); a `git stash` mutation check on the production file alone proved the new tests fail to *compile* against pre-BUILD source. `go test ./... -count=1 -p 1` all 13 backend packages `ok` via `scripts/test-backend.ps1` on disposable MySQL (persistent Compose `ccma` untouched); `go build`/`go vet`/`gofmt`/`git diff --check` clean; CVF workspace doctor (includes governed catalog `-Check`) PASS 25/25. Evidence: `docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md`. No provider call, real channel sync, customer data, deploy or push.
 - Role route after BUILD: IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent REVIEWER; Claude does not self-approve or FREEZE `CCMAI-RUNTIME-009`.
+- Independent REVIEW (Codex) of `e042d71`: `CHANGES_REQUIRED` for R009-R1 only. The source admission logic and focused tests pass on separate disposable MySQL; `go build ./...`, `go vet ./...` and doctor 25/25 pass. Tests do not directly assert no `job_runs`/`jobCancelFuncs` on rejection or observe the test-run limit 3 at launch, both required by SPEC. Review: `docs/reviews/CCMAI_RUNTIME_009_INDEPENDENT_REVIEW_2026-09-28.md`. Role route REVIEWER (Codex) → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Codex), then REPAIR_WORKER (Claude) under the same-scope addendum. No FREEZE.
 
 ## Owner commit request (2026-09-28)
 
