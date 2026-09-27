@@ -7,9 +7,11 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: REPAIR_WORKER (Claude, `CCMAI-RUNTIME-009` R009-R1 complete); Codex next independent REVIEWER
-- Next allowed move: Codex re-reviews the R009-R1 repair commit (REVIEW_PENDING). `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5, self-approval or FREEZE is authorized.
+- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-009` REVIEW PASS)
+- Next allowed move: under owner delegation, Claude may start UX-000 design/SPEC/work-order work, then bounded BUILDs returning REVIEW_PENDING for independent Codex REVIEW. `CCMAI-RUNTIME-001` to `009` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config admission, sync overlap and crash recovery remain separate. Future real-provider tests require their own bounded work order and sanitized evidence; R009 review used no provider. No persistent Compose DB change, deployment, push or FREEZE occurred.
 - Parked operator checkpoint: none
+
+- Codex independent re-review of `10bebe8`: `PASS` for R2 REVIEW, closing R009-R1. Direct job-run/cancel assertions and observed test-run limit 3 satisfy the repair contract. Focused tests passed on separate disposable MySQL; build/vet passed and temporary resources were removed. Review: `docs/reviews/CCMAI_RUNTIME_009_REPAIR_R1_REREVIEW_2026-09-28.md`. Role route REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex). R009 and R001–R008 remain FREEZE open; S1 remains IN_PROGRESS.
 
 ## Active Tranche: CCMAI-RUNTIME-009
 

@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-009 — job-dispatch configuration admission
 
-**State:** `REVIEW_PENDING` (repair round 1 for [R009-R1](../reviews/CCMAI_RUNTIME_009_INDEPENDENT_REVIEW_2026-09-28.md) complete) · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`, done) · **Independent reviewer:** Codex (`REVIEWER`, re-review next) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md), and R008 independent REVIEW PASS.
+**State:** `REVIEW_PASS / FREEZE_OPEN` after [R009-R1 re-review](../reviews/CCMAI_RUNTIME_009_REPAIR_R1_REREVIEW_2026-09-28.md) · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`, done) · **Independent reviewer:** Codex (`REVIEWER`, PASS) · **Authority:** owner “next”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md), and R008 independent REVIEW PASS.
 
 **BUILD evidence:** [`docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md`](../reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md).
 

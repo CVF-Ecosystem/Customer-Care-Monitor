@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-009 repair round 1 (R009-R1) is complete and REVIEW_PENDING: direct no-job-run/no-cancel assertions on every rejection path and an observed test-run launch limit of 3 were added within the jobs.go/focused-test/evidence scope; evidence addendum in docs/reviews/RUNTIME_JOB_CONFIG_ADMISSION_S1_BUILD_2026-09-28.md. Codex is next independent REVIEWER for the repair commit. R001-R008 remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. OAuth/credential and agent config.Load errors, sync concurrency and crash recovery remain separate. CCMAI-UXROADMAP-001 stays design-only under owner delegation. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation, self-approval or FREEZE is authorized.",
+  "nextAllowedMove": "Codex independently re-reviewed CCMAI-RUNTIME-009 repair commit 10bebe8: PASS for R2 REVIEW; R009-R1 is closed. R001-R009 remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. Under the owner's UI/UX delegation, Claude may begin the UX-000 design/SPEC/work-order route, then bounded BUILDs returning REVIEW_PENDING for independent Codex review; no blanket FREEZE follows. OAuth/credential and agent config.Load errors, sync concurrency and crash recovery remain separate S1 work. No provider/channel sync, customer data, persistent Compose DB change, deployment or push occurred in R009 review. Future real Alibaba-provider tests require their own bounded work order and sanitized evidence.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REPAIR_WORKER (Claude, CCMAI-RUNTIME-009 R009-R1 complete); Codex next REVIEWER",
+  "activeRole": "ORCHESTRATOR (Codex, after independent CCMAI-RUNTIME-009 REVIEW PASS)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }
