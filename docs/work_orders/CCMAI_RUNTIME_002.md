@@ -155,3 +155,19 @@ This authorization does not permit changes to other deletion paths, schema,
 provider/runtime gates, channel sync, customer data, persistent database reset,
 deployment, push or CVF core. Claude may create one local commit and must return
 Gate B as `REVIEW_PENDING` for Codex; Claude may not FREEZE it.
+
+## R3-E1 acceptance completion after Codex re-review
+
+**Authority:** owner instruction on 2026-09-27 granting Codex orchestrator/reviewer authority to resolve this Gate B review and issue the next work order; independent finding `R3-E1-T1` in `docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ESCALATION_REPAIR_2026-09-27.md`. This completes the test/evidence portion of the already authorized narrow repair. Gate B remains `REVIEW_PENDING`.
+
+**Assignee:** Claude as `REPAIR_WORKER`, after rehydrating continuity and recording the role transition in the active handoff. Allowed implementation path: `backend/api/handlers/demo_test.go` only. Allowed accompanying paths: the existing escalation-repair evidence and required continuity/status records. No production source change is authorized by this addendum; if the expanded test exposes one, stop and report the evidence to Codex for a new bounded disposition.
+
+**Acceptance:**
+
+1. Seed an `analysis_snapshot` for the same tenant, conversation and job run, and link the seeded `job_result.analysis_snapshot_id` to it. Keep the existing forced `job_results` delete trigger.
+2. On that forced failure, assert a non-2xx response and all seeded result, snapshot, run, job, conversation, channel and demo flag remain. Also assert the message row remains or clearly document why it is covered elsewhere. Check query errors as well as counts.
+3. On ordinary success, assert the snapshot and linked result are deleted with the other seeded tenant rows, and the demo flag is cleared. Preserve the existing legacy path coverage where practical, without duplicating a large fixture.
+4. Run both demo tests, both Round-3 race-order tests, all named earlier repair regressions, `go test ./... -count=1`, AutoMigrate twice, catalog `-Check` and workspace doctor on disposable MySQL `CCMA`. Record exact commands/results, cleanup and claim boundaries in the existing repair evidence.
+5. Synchronize handoff, active state and session memory; create one local commit excluding unrelated worktree changes; do not push. Return Gate B as `REVIEW_PENDING` to Codex for independent re-review.
+
+No provider call, channel sync, customer data, persistent database reset, deployment, CVF core edit, S2/S3/S5 implementation or FREEZE is authorized.

@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude has applied and validated the owner-authorized narrow ResetDemoData atomicity repair (evidence: docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_ESCALATION_REPAIR_2026-09-27.md) and created one local commit, no push. Codex re-reviews that commit as independent REVIEWER for Gate B. Gate B stays REVIEW_PENDING. No broader repair, FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
+  "nextAllowedMove": "Claude rehydrates continuity, acknowledges REPAIR_WORKER, and completes only the snapshot-bound regression test/evidence contract in docs/work_orders/CCMAI_RUNTIME_002.md. One local commit, no push; return Gate B as REVIEW_PENDING to Codex. No production source change, broader repair, FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex, pending re-review of escalation repair commit)",
+  "activeRole": "ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex, R3-E1-T1 test/evidence completion packaged for Claude)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
