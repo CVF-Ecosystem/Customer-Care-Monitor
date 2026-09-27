@@ -3,12 +3,14 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"math/rand"
 	"net/http"
 	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
@@ -424,43 +426,70 @@ func ResetDemoData(c *gin.Context) {
 		return
 	}
 
-	tx := db.DB.Begin()
+	// Every step below runs inside db.DB.Transaction so any returned error rolls
+	// back the whole reset (R3-E1): the previous hand-rolled tx.Begin()/Commit()
+	// never checked each DELETE/UPDATE's .Error, so a mid-cascade failure (e.g. a
+	// blocked job_results delete) still committed, leaving orphan evidence behind
+	// deleted parents while returning HTTP 200.
+	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		// Lock conversations and job runs first — same parent-first protocol as
+		// DeleteChannel/DeleteJob (R2-RR3): a concurrent saveResults() holding one
+		// of these locks is waited out, and once it releases, the child deletes
+		// below (job_results, analysis_snapshots, messages) see everything it
+		// just wrote.
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("tenant_id = ?", tenantID).Find(&[]models.Conversation{}).Error; err != nil {
+			return fmt.Errorf("lock conversations: %w", err)
+		}
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("tenant_id = ?", tenantID).Find(&[]models.JobRun{}).Error; err != nil {
+			return fmt.Errorf("lock job runs: %w", err)
+		}
 
-	// Lock conversations and job runs first — same parent-first protocol as
-	// DeleteChannel/DeleteJob (R2-RR3): a concurrent saveResults() holding one of
-	// these locks is waited out, and once it releases, the child deletes below
-	// (job_results, analysis_snapshots, messages) see everything it just wrote.
-	if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
-		Where("tenant_id = ?", tenantID).Find(&[]models.Conversation{}).Error; err != nil {
-		tx.Rollback()
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-		return
-	}
-	if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
-		Where("tenant_id = ?", tenantID).Find(&[]models.JobRun{}).Error; err != nil {
-		tx.Rollback()
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-		return
-	}
+		// Delete in dependency order, checking every statement's error.
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.Message{}).Error; err != nil {
+			return fmt.Errorf("delete messages: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.JobResult{}).Error; err != nil {
+			return fmt.Errorf("delete job results: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.AnalysisSnapshot{}).Error; err != nil {
+			return fmt.Errorf("delete analysis snapshots: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.AIUsageLog{}).Error; err != nil {
+			return fmt.Errorf("delete AI usage logs: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.NotificationLog{}).Error; err != nil {
+			return fmt.Errorf("delete notification logs: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.ActivityLog{}).Error; err != nil {
+			return fmt.Errorf("delete activity logs: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.JobRun{}).Error; err != nil {
+			return fmt.Errorf("delete job runs: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.Job{}).Error; err != nil {
+			return fmt.Errorf("delete jobs: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.Conversation{}).Error; err != nil {
+			return fmt.Errorf("delete conversations: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.AppSetting{}).Error; err != nil {
+			return fmt.Errorf("delete app settings: %w", err)
+		}
+		if err := tx.Where("tenant_id = ?", tenantID).Delete(&models.Channel{}).Error; err != nil {
+			return fmt.Errorf("delete channels: %w", err)
+		}
 
-	// Delete in dependency order
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.Message{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.JobResult{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.AnalysisSnapshot{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.AIUsageLog{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.NotificationLog{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.ActivityLog{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.JobRun{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.Job{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.Conversation{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.AppSetting{})
-	tx.Where("tenant_id = ?", tenantID).Delete(&models.Channel{})
-
-	// Clear demo flag
-	tx.Model(&models.Tenant{}).Where("id = ?", tenantID).Update("settings", "{}")
-
-	if err := tx.Commit().Error; err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		// Clear demo flag
+		if err := tx.Model(&models.Tenant{}).Where("id = ?", tenantID).Update("settings", "{}").Error; err != nil {
+			return fmt.Errorf("clear demo flag: %w", err)
+		}
+		return nil
+	})
+	if err != nil {
+		log.Printf("[error] reset demo data for tenant %s: %v", tenantID, err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "reset_demo_data_failed"})
 		return
 	}
 
