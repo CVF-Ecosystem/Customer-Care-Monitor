@@ -86,3 +86,11 @@ Mobile light/dark design-system captures and Job Detail captures are in the same
 ## Boundaries
 
 No AI provider call (pure UI tranche). No real channel sync, customer data, persistent `ccma` Compose/DB change, deployment or push. The design-system route is a static wireframe with synthetic data. This evidence makes no CVF governance claim.
+
+## Addendum A1 — screenshot tool chart artifact (same-scope repair before review, 2026-09-28)
+
+While capturing UX-001a evidence, every Chart.js chart (Job Detail trend, dashboard daily charts) showed its points bunched against the left edge, although the axis spanned the full width. The 2026-09-27 baseline (different capture method) rendered the same charts correctly, and a 9-second wait did not help, so this was a capture artifact, not a product defect or an animation timing issue. Cause: `Page.captureScreenshot` with `captureBeyondViewport: true` resizes the viewport at capture time; Chart.js's resize observer then redraws and is caught mid-redraw.
+
+Fix in `scripts/ui-screenshots.mjs` (UX-000 scope): keep the target focused (`Page.bringToFront`, focus emulation), grow the device-metrics viewport to the full page height, wait 1.5 s, then capture without `captureBeyondViewport`. Verified on a kept disposable environment: Job Detail trend and dashboard charts render correctly at desktop and mobile. A side effect is that full-height captures now also show the navigation drawer at full height.
+
+The four committed `app-*.png` files and `report-app.json` in `assets/ux-000-2026-09-28/` were recaptured with the fixed tool (36 pages, 0 JS errors, 0 horizontal overflow, no external requests; disposable project removed). That tree also contains the committed `CCMAI-UX-002` Results change, so the Results image shows its note; UX-001a work was stashed during the capture and is not in these images. The design-system preview images were unaffected (no charts) and are unchanged. Earlier statements in this document about the app captures still hold; only the chart rendering in the images changed.

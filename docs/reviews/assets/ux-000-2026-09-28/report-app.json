@@ -1,6 +1,6 @@
 {
   "base": "http://127.0.0.1:18088",
-  "generatedAt": "2026-09-27T19:29:17.497Z",
+  "generatedAt": "2026-09-27T19:59:41.622Z",
   "pages": [
     {
       "route": "/single-workspace",
@@ -75,7 +75,7 @@
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "route": "/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "viewport": "desktop",
       "theme": "light",
       "jsErrors": [],
@@ -83,11 +83,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-qc--desktop--light.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "route": "/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "viewport": "desktop",
       "theme": "light",
       "jsErrors": [],
@@ -95,11 +95,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-classification--desktop--light.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "route": "/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "viewport": "desktop",
       "theme": "light",
       "jsErrors": [],
@@ -107,7 +107,7 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "channel-detail--desktop--light.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "horizontalOverflow": false
     },
     {
@@ -183,7 +183,7 @@
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "route": "/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "viewport": "desktop",
       "theme": "dark",
       "jsErrors": [],
@@ -191,11 +191,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-qc--desktop--dark.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "route": "/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "viewport": "desktop",
       "theme": "dark",
       "jsErrors": [],
@@ -203,11 +203,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-classification--desktop--dark.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "route": "/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "viewport": "desktop",
       "theme": "dark",
       "jsErrors": [],
@@ -215,7 +215,7 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "channel-detail--desktop--dark.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "horizontalOverflow": false
     },
     {
@@ -291,7 +291,7 @@
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "route": "/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "viewport": "mobile",
       "theme": "light",
       "jsErrors": [],
@@ -299,11 +299,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-qc--mobile--light.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "route": "/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "viewport": "mobile",
       "theme": "light",
       "jsErrors": [],
@@ -311,11 +311,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-classification--mobile--light.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "route": "/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "viewport": "mobile",
       "theme": "light",
       "jsErrors": [],
@@ -323,7 +323,7 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "channel-detail--mobile--light.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "horizontalOverflow": false
     },
     {
@@ -399,7 +399,7 @@
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "route": "/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "viewport": "mobile",
       "theme": "dark",
       "jsErrors": [],
@@ -407,11 +407,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-qc--mobile--dark.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/ecd0bb20-6e12-4c90-aa81-da7f75cabfb3",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4111f037-d33f-471f-8ad4-4428339e0501",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "route": "/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "viewport": "mobile",
       "theme": "dark",
       "jsErrors": [],
@@ -419,11 +419,11 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "jobdetail-classification--mobile--dark.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/727c5fdf-df8a-4dc8-a236-e35655c8b567",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/jobs/4936eb2f-9ebe-4894-8902-f3eaac17f96c",
       "horizontalOverflow": false
     },
     {
-      "route": "/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "route": "/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "viewport": "mobile",
       "theme": "dark",
       "jsErrors": [],
@@ -431,7 +431,7 @@
       "logErrors": [],
       "externalRequests": [],
       "file": "channel-detail--mobile--dark.png",
-      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/719ac3f0-dc17-4b98-bdf9-bb3eecaea282",
+      "finalUrl": "http://127.0.0.1:18088/single-workspace/channels/d933597e-5150-4418-a1e1-f36f1cd43530",
       "horizontalOverflow": false
     }
   ],

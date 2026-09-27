@@ -162,6 +162,10 @@ async function main() {
     await cdp.send('Runtime.enable')
     await cdp.send('Log.enable')
     await cdp.send('Network.enable')
+    // A background headless target throttles requestAnimationFrame, which leaves
+    // animated charts (Chart.js) mid-animation in the capture. Keep the page focused.
+    await cdp.send('Page.bringToFront')
+    await cdp.send('Emulation.setFocusEmulationEnabled', { enabled: true })
 
     let current = null
     cdp.on('Runtime.exceptionThrown', (p) => {
@@ -205,9 +209,18 @@ async function main() {
           const metrics = await cdp.send('Page.getLayoutMetrics')
           const size = metrics.cssContentSize ?? metrics.contentSize
           const height = Math.min(Math.max(Math.ceil(size.height), vp.height), MAX_CAPTURE_HEIGHT)
+          // Grow the viewport to the full page first and let the page settle: capturing
+          // beyond the viewport resizes it at capture time, and responsive charts
+          // (Chart.js) are then caught mid-redraw with their points bunched to one side.
+          await cdp.send('Emulation.setDeviceMetricsOverride', {
+            width: vp.width,
+            height,
+            deviceScaleFactor: vp.scale,
+            mobile: vp.mobile,
+          })
+          await sleep(1500)
           const shot = await cdp.send('Page.captureScreenshot', {
             format: 'png',
-            captureBeyondViewport: true,
             clip: { x: 0, y: 0, width: vp.width, height, scale: 1 },
           })
           const file = `${route.name}--${vpName}--${theme}.png`
