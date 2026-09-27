@@ -38,15 +38,15 @@ adapter -> evidence -> snapshot có nguồn, vai trò, thời gian và trạng t
 
 | Bề mặt | Có trong mã hiện tại | Khoảng trống |
 |---|---|---|
-| Database | MySQL 8 + GORM lưu channel, conversation, message, job/run/result và usage. Fresh install mặc định schema `CCMA`; bản cài cũ có thể giữ `DB_NAME=cqa`. | Tên schema không tạo SoT semantics; chưa có snapshot digest/coverage và decision receipt cho gate. |
-| Kênh đầu vào | Zalo OA, Facebook và Pancake qua `ChannelAdapter` (`backend/channels/adapter.go`, `registry.go`). | Không quyết định chính sách AI; đồng bộ lỗi từng hội thoại vẫn có thể bị bỏ qua rồi ghi kênh là success (`backend/engine/sync.go`). |
+| Database | MySQL 8 + GORM lưu channel, conversation, message, job/run/result, usage và `ccma.snapshot.v1` digest/coverage. Fresh install mặc định schema `CCMA`; bản cài cũ có thể giữ `DB_NAME=cqa`. | Tên schema không tạo SoT semantics; chưa có decision receipt cho gate. |
+| Kênh đầu vào | Zalo OA, Facebook và Pancake qua `ChannelAdapter` (`backend/channels/adapter.go`, `registry.go`). Lỗi từng item tạo `partial` và giữ checkpoint thành công. | Không quyết định chính sách AI; cùng external message ID được replay nhưng thay đổi nội dung vẫn có thể giữ row cũ (`backend/engine/sync.go`). |
 | Công việc AI | `Job` chọn kênh, QC hoặc classification, quy tắc, provider/model (`backend/db/models/job.go`). | `skip_conditions` được chèn vào prompt QC (`backend/ai/prompts.go`), chưa phải gate xác định trước khi gọi AI. |
 | Gọi provider | `Analyzer` tạo transcript/prompt rồi gọi `AnalyzeChat` hoặc batch; hỗ trợ Claude, Gemini, OpenAI, xAI (`backend/engine/analyzer.go`, `backend/ai/provider.go`). | Chưa có điểm admission chung để kiểm quyền, dữ liệu nhạy cảm, quyết định NO_AI/RULES_ONLY và ngân sách trước mọi lượt gọi. |
-| Kiểm đầu ra | Có kiểm JSON/giá trị và liên kết batch với conversation ID (`backend/engine/result_validation.go`). | `evidence` mới được kiểm có chữ, chưa đối chiếu span/ID tin nhắn và version nguồn; chưa có lifecycle proposal → human confirmed. |
+| Kiểm đầu ra | Có kiểm JSON/giá trị, batch conversation ID, evidence refs đối chiếu message/span và snapshot digest (`backend/engine/result_validation.go`, `snapshot.go`). | Chưa có lifecycle proposal → human confirmed; replay source có thể giữ nội dung cũ trước khi dựng snapshot. |
 | Chi phí | Có log token/model và tính chi phí (`backend/engine/analyzer.go`). | Chưa có reservation/budget gate; giá không biết được lưu thành `CostUSD=0`, gây hiểu nhầm trong tổng UI. |
 | CVF và Shift | CVF quản lý thay đổi repo; Shift có nền tảng `NO_AI`/`RULES_ONLY`/`EXTERNAL_AI` trong `packages/ai-providers`. | Nền tảng đó chưa được nối vào caller ứng dụng này; chưa có bằng chứng provider thật rằng CVF chặn/điều phối luồng AI của ứng dụng. |
 
-Phản biện source bổ sung: `sync.go/updateSyncStatus` cập nhật `last_sync_at` cả khi lỗi; upsert tin nhắn cũ hiện chỉ cập nhật attachment khi có local path. `analyzer.go` đưa giờ/phút vào transcript; `prompts.go/FormatChatTranscript` dùng tên người gửi thay vai trò khi có tên. Một số bản ghi QC lưu `Confidence: 1.0`. S1 cần xác minh và sửa các đường này cùng giới hạn coverage của adapter; đây là phát hiện từ source, chưa phải lỗi đã tái hiện qua runtime test.
+Rà soát source sau hai tranche S1: `partial/error` không còn cập nhật `last_sync_at`; transcript snapshot có message ID, vai trò và timestamp RFC3339 kèm timezone. `upsertMessage` vẫn chỉ cập nhật row cũ khi attachment có local path; replay nội dung đã sửa là scope của `CCMAI-RUNTIME-003`. Một số bản ghi QC vẫn lưu `Confidence: 1.0`; chưa có calibration. Giới hạn coverage của từng adapter cần được ghi rõ.
 
 Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json`, mã được nêu trong bảng và `../shift-operations-workspace/packages/ai-providers/README.md`. Đây là rà soát source, không phải phép đo E2E.
 
@@ -68,8 +68,8 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 
 | Stage | Trạng thái | Bằng chứng |
 |---|---|---|
-| S0 | BUILD_COMPLETE / REVIEW_PENDING | Corpus synthetic `s0-vi-intervention-v1`, baseline database và boundary tại `docs/reviews/RUNTIME_BASELINE_S0_2026-09-27.md`. Chưa có dữ liệu/call thật để đo chất lượng hoặc chi phí. |
-| S1 | IN_PROGRESS | `CCMAI-RUNTIME-001` hoàn tất lát cắt sync truth: partial failure không dời checkpoint, không kích after-sync job và hiển thị được. `CCMAI-RUNTIME-002` BUILD snapshot digest/coverage/evidence refs cho single và batch; chờ Codex review độc lập. |
+| S0 | REVIEW_PASS_WITH_REPAIRS / FREEZE_OPEN | Corpus synthetic `s0-vi-intervention-v1`, baseline database và Gate A review tại `docs/reviews/CCMAI_RUNTIME_001_INDEPENDENT_REVIEW_2026-09-27.md`. Chưa có dữ liệu/call thật để đo chất lượng hoặc chi phí. |
+| S1 | IN_PROGRESS | `CCMAI-RUNTIME-001` sync truth và `CCMAI-RUNTIME-002` snapshot digest/coverage/evidence refs đã qua independent REVIEW; cả hai còn FREEZE open. `CCMAI-RUNTIME-003` là work order replay/edited-message integrity tiếp theo, chưa BUILD. |
 | S2–S7 | NOT_STARTED | Chưa có runtime gate/provider admission/human disposition hoặc claim governance live. |
 
 Giữ ID S0–S7 để truy vết, nhưng **ID không còn là thứ tự tuyến tính**: S0 → S1 → phần tối thiểu của S2 + S3 + S5 tạo một luồng hoàn chỉnh → S4 tối ưu trên phản hồi thực → S6 pilot → S7 hoàn thiện vận hành. S2/S3/S5 đều có scope/acceptance riêng; review UI và audit tối thiểu phải sẵn sàng trong luồng đầu, không đợi tối ưu xong. Kiểm quyền, bảo mật và bảo vệ dữ liệu cần thiết cho pilot phải hoàn tất trước S6; S7 mở rộng kiểm vận hành trước phát hành. Nhân rộng/CVF uplift đứng sau nghiệm thu sản phẩm.

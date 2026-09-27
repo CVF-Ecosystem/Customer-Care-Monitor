@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Gate B REVIEW is PASS at docs/reviews/CCMAI_RUNTIME_002_GATE_B_FINAL_REREVIEW_2026-09-27.md. Await a separate governed CLOSER/FREEZE decision or bounded next work order; this review does not authorize FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim.",
+  "nextAllowedMove": "Claude rehydrates continuity, acknowledges IMPLEMENTATION_WORKER in the active handoff, then builds only CCMAI-RUNTIME-003 under docs/specs/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_2026-09-27.md and docs/work_orders/CCMAI_RUNTIME_003.md. Return one local BUILD evidence commit as REVIEW_PENDING to Codex. Prior Gate B remains REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex, after independent Gate B REVIEW PASS and continuity sync)",
+  "activeRole": "WORK_ORDER_AUTHOR (Codex, CCMAI-RUNTIME-003 ready for Claude acknowledgment)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
