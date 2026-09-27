@@ -9,6 +9,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm/clause"
+
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
@@ -423,6 +425,23 @@ func ResetDemoData(c *gin.Context) {
 	}
 
 	tx := db.DB.Begin()
+
+	// Lock conversations and job runs first — same parent-first protocol as
+	// DeleteChannel/DeleteJob (R2-RR3): a concurrent saveResults() holding one of
+	// these locks is waited out, and once it releases, the child deletes below
+	// (job_results, analysis_snapshots, messages) see everything it just wrote.
+	if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+		Where("tenant_id = ?", tenantID).Find(&[]models.Conversation{}).Error; err != nil {
+		tx.Rollback()
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+		Where("tenant_id = ?", tenantID).Find(&[]models.JobRun{}).Error; err != nil {
+		tx.Rollback()
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
 
 	// Delete in dependency order
 	tx.Where("tenant_id = ?", tenantID).Delete(&models.Message{})

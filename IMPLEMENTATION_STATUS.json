@@ -6,7 +6,7 @@
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
-    "S1 analysis snapshots: core single/batch snapshot and evidence validation plus repair-round-2 cascade/fingerprint fixes are implemented, but Gate B remains REVIEW_PENDING. Codex found a new writer/deletion concurrency root cause: evidence rows can commit after conversation/job-run deletion because saveResults does not lock/verify parents and schema lacks parent constraints. Repair round 3 is pending. Test-double/MySQL evidence is not real-provider governance proof."
+    "S1 analysis snapshots: core single/batch snapshot and evidence validation plus repair-round-2 cascade/fingerprint fixes are implemented, but Gate B remains REVIEW_PENDING. Repair round 3 closes the writer/deletion dependency edge: saveResults now locks and confirms its parent Conversation/JobRun before writing evidence, and every parent-deletion path (channel delete/purge, job delete/clear-runs, demo reset) locks its parents before deleting children in one transaction; two DB-backed concurrency tests prove both race orderings. Codex re-review of this round is pending. Test-double/MySQL evidence is not real-provider governance proof."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -36,7 +36,8 @@
     "docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_REPAIR_2026-09-27.md",
     "docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_2026-09-27.md",
     "docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_REPAIR_ROUND2_2026-09-27.md",
-    "docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND2_2026-09-27.md"
+    "docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND2_2026-09-27.md",
+    "docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_REPAIR_ROUND3_2026-09-27.md"
   ],
   "updatedAt": "2026-09-27"
 }

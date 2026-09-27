@@ -194,3 +194,85 @@ END`, triggerName, failResultID))
 		t.Errorf("analysis_snapshot khong con nguyen ven sau cascade that bai: %d", snapCount)
 	}
 }
+
+// TestPurgeChannelConversationsRemovesEvidenceKeepsChannel là regression test
+// cho R2-RR3: PurgeChannelConversations được viết lại thành transaction có
+// khoá conversation trước (cùng khuôn mẫu DeleteChannel) để đóng writer/
+// deletion race; test này xác nhận luồng bình thường vẫn xoá đúng evidence,
+// giữ nguyên channel, và reset trạng thái đồng bộ.
+func TestPurgeChannelConversationsRemovesEvidenceKeepsChannel(t *testing.T) {
+	connectChannelsTestDB(t)
+	suffix := pkg.NewUUID()[:8]
+	tenantID := "purge-" + suffix
+	channelID := "ch-purge-" + suffix
+	convID := "conv-purge-" + suffix
+	runID := "run-purge-" + suffix
+	snapID := pkg.NewUUID()
+	resultID := pkg.NewUUID()
+
+	exec := func(sql string, args ...interface{}) {
+		if err := db.DB.Exec(sql, args...).Error; err != nil {
+			t.Fatalf("fixture: %v", err)
+		}
+	}
+	exec(`INSERT INTO tenants (id, name, slug, settings, created_at, updated_at) VALUES (?, 'Purge Test', ?, '{}', NOW(), NOW())`,
+		tenantID, tenantID)
+	exec(`INSERT INTO channels (id, tenant_id, channel_type, name, external_id, credentials_encrypted, is_active, last_sync_status, metadata, created_at, updated_at) VALUES (?, ?, 'pancake', 'Kenh purge', 'fake', X'00', true, 'success', '{}', NOW(), NOW())`,
+		channelID, tenantID)
+	exec(`INSERT INTO conversations (id, tenant_id, channel_id, external_conversation_id, customer_name, last_message_at, message_count, metadata, created_at, updated_at) VALUES (?, ?, ?, 'ext-purge', 'Khach', NOW(), 1, '{}', NOW(), NOW())`,
+		convID, tenantID, channelID)
+	exec(`INSERT INTO messages (id, tenant_id, conversation_id, external_message_id, sender_type, sender_name, content, content_type, attachments, sent_at, created_at) VALUES (?, ?, ?, 'm1', 'customer', 'Khach', 'Xin chao', 'text', '[]', NOW(), NOW())`,
+		pkg.NewUUID(), tenantID, convID)
+	exec(`INSERT INTO analysis_snapshots (id, tenant_id, job_run_id, conversation_id, schema_version, digest, coverage, coverage_reasons, message_count, manifest, created_at) VALUES (?, ?, ?, ?, 'ccma.snapshot.v1', 'deadbeef', 'complete', '[]', 1, '{}', NOW())`,
+		snapID, tenantID, runID, convID)
+	exec(`INSERT INTO job_results (id, job_run_id, tenant_id, conversation_id, result_type, severity, rule_name, evidence, detail, confidence, analysis_snapshot_id, created_at) VALUES (?, ?, ?, ?, 'qc_violation', 'NGHIEM_TRONG', 'rule', 'evidence', '{}', 1, ?, NOW())`,
+		resultID, runID, tenantID, convID, snapID)
+
+	t.Cleanup(func() {
+		for _, table := range []string{"job_results", "analysis_snapshots", "messages", "conversations", "activity_logs"} {
+			db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", tenantID)
+		}
+		db.DB.Exec("DELETE FROM channels WHERE id = ?", channelID)
+		db.DB.Exec("DELETE FROM tenants WHERE id = ?", tenantID)
+	})
+
+	gin.SetMode(gin.TestMode)
+	w := httptest.NewRecorder()
+	c, _ := gin.CreateTestContext(w)
+	c.Set("tenant_id", tenantID)
+	c.Set("user_id", "u-test")
+	c.Set("user_email", "test@example.com")
+	c.Params = gin.Params{{Key: "channelId", Value: channelID}}
+	c.Request = httptest.NewRequest("POST", "/api/v1/channels/"+channelID+"/purge", nil)
+
+	PurgeChannelConversations(c)
+
+	if w.Code != http.StatusOK {
+		t.Fatalf("PurgeChannelConversations status = %d, body = %s", w.Code, w.Body.String())
+	}
+
+	var resultCount, snapCount, convCount, channelCount int64
+	db.DB.Model(&models.JobResult{}).Where("tenant_id = ?", tenantID).Count(&resultCount)
+	db.DB.Model(&models.AnalysisSnapshot{}).Where("tenant_id = ?", tenantID).Count(&snapCount)
+	db.DB.Model(&models.Conversation{}).Where("tenant_id = ?", tenantID).Count(&convCount)
+	db.DB.Model(&models.Channel{}).Where("id = ?", channelID).Count(&channelCount)
+	if resultCount != 0 {
+		t.Errorf("job_results con lai sau purge: %d", resultCount)
+	}
+	if snapCount != 0 {
+		t.Errorf("analysis_snapshots con lai sau purge: %d", snapCount)
+	}
+	if convCount != 0 {
+		t.Errorf("conversations con lai sau purge: %d", convCount)
+	}
+	if channelCount != 1 {
+		t.Errorf("channel bi xoa nham trong purge: %d", channelCount)
+	}
+	var ch models.Channel
+	if err := db.DB.First(&ch, "id = ?", channelID).Error; err != nil {
+		t.Fatalf("reload channel: %v", err)
+	}
+	if ch.LastSyncStatus != "" {
+		t.Errorf("last_sync_status khong duoc reset, con %q", ch.LastSyncStatus)
+	}
+}

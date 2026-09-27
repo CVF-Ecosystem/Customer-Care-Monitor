@@ -8,6 +8,8 @@ import (
 	"strings"
 	"time"
 
+	"gorm.io/gorm/clause"
+
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
@@ -551,6 +553,24 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 		return 0, false, tx.Error
 	}
 	defer tx.Rollback()
+
+	// R2-RR3: lock and confirm the parents are still there before writing any
+	// evidence. This FOR UPDATE read on the same Conversation/JobRun rows that
+	// every parent-deletion path (DeleteChannel, PurgeChannelConversations,
+	// DeleteJob, ClearJobRuns, demo reset) now locks first is what closes the
+	// writer/deletion race: whichever side gets there first is waited out by the
+	// other, so a snapshot/result can never commit referencing a conversation or
+	// job run that deletion has already removed (or is mid-removing).
+	var parentConv models.Conversation
+	if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+		Where("id = ? AND tenant_id = ?", conversationID, tenantID).First(&parentConv).Error; err != nil {
+		return 0, false, fmt.Errorf("conversation %s is gone, evidence not saved: %w", conversationID, err)
+	}
+	var parentRun models.JobRun
+	if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+		Where("id = ? AND tenant_id = ?", runID, tenantID).First(&parentRun).Error; err != nil {
+		return 0, false, fmt.Errorf("job run %s is gone, evidence not saved: %w", runID, err)
+	}
 
 	if err := tx.Create(&snapshotRow).Error; err != nil {
 		return 0, false, fmt.Errorf("persist analysis snapshot: %w", err)

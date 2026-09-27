@@ -312,40 +312,65 @@ func PurgeChannelConversations(c *gin.Context) {
 		return
 	}
 
-	// Get all conversation IDs for this channel
+	// Same parent-first locking protocol as DeleteChannel (R2-RR1/R2-RR3): lock
+	// conversations inside the transaction before touching any child evidence, so
+	// a concurrent saveResults() that already holds that lock is waited out — and
+	// once it releases, this purge's child deletes see everything it just wrote.
 	var convIDs []string
-	db.DB.Model(&models.Conversation{}).Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Pluck("id", &convIDs)
-
 	var messagesDeleted, convsDeleted int64
-	if len(convIDs) > 0 {
-		// Delete evaluation results linked to these conversations
-		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.JobResult{})
-		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.AnalysisSnapshot{})
-
-		// Delete messages
-		result := db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.Message{})
-		messagesDeleted = result.RowsAffected
-
-		// Delete local attachment files for each conversation
-		for _, convID := range convIDs {
-			dir := filepath.Join("/var/lib/cqa/files", tenantID, convID)
-			if err := os.RemoveAll(dir); err != nil {
-				log.Printf("[sync] failed to remove files dir %s: %v", dir, err)
-			}
+	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		var conversations []models.Conversation
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).
+			Find(&conversations).Error; err != nil {
+			return fmt.Errorf("lock conversations: %w", err)
 		}
+		for _, conv := range conversations {
+			convIDs = append(convIDs, conv.ID)
+		}
+
+		if len(convIDs) > 0 {
+			if err := tx.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.JobResult{}).Error; err != nil {
+				return fmt.Errorf("delete job results: %w", err)
+			}
+			if err := tx.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.AnalysisSnapshot{}).Error; err != nil {
+				return fmt.Errorf("delete analysis snapshots: %w", err)
+			}
+			msgResult := tx.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.Message{})
+			if msgResult.Error != nil {
+				return fmt.Errorf("delete messages: %w", msgResult.Error)
+			}
+			messagesDeleted = msgResult.RowsAffected
+		}
+
+		convResult := tx.Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Delete(&models.Conversation{})
+		if convResult.Error != nil {
+			return fmt.Errorf("delete conversations: %w", convResult.Error)
+		}
+		convsDeleted = convResult.RowsAffected
+
+		if err := tx.Model(&channel).Updates(map[string]interface{}{
+			"last_sync_at":     nil,
+			"last_sync_status": nil,
+			"last_sync_error":  "",
+			"updated_at":       time.Now(),
+		}).Error; err != nil {
+			return fmt.Errorf("reset channel sync state: %w", err)
+		}
+		return nil
+	})
+	if err != nil {
+		log.Printf("[error] purge channel %s conversations: %v", channelID, err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "purge_conversations_failed"})
+		return
 	}
 
-	// Delete conversations
-	result := db.DB.Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Delete(&models.Conversation{})
-	convsDeleted = result.RowsAffected
-
-	// Reset sync state so next sync fetches everything from scratch
-	db.DB.Model(&channel).Updates(map[string]interface{}{
-		"last_sync_at":     nil,
-		"last_sync_status": nil,
-		"last_sync_error":  "",
-		"updated_at":       time.Now(),
-	})
+	for _, convID := range convIDs {
+		dir := filepath.Join("/var/lib/cqa/files", tenantID, convID)
+		if err := os.RemoveAll(dir); err != nil {
+			log.Printf("[warn] purge channel %s: failed to remove attachment dir for conversation %s: %v", channelID, convID, err)
+		}
+	}
 
 	db.LogActivity(tenantID, middleware.GetUserID(c), middleware.GetUserEmail(c),
 		"channel.purge_conversations", "channel", channelID,

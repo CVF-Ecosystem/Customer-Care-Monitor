@@ -12,6 +12,9 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
+
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
@@ -192,17 +195,49 @@ func DeleteJob(c *gin.Context) {
 		return
 	}
 
-	// Cascade delete: results → runs → usage logs → notification logs → job
-	var runIDs []string
-	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Pluck("id", &runIDs)
-	if len(runIDs) > 0 {
-		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{})
-		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{})
+	// Cascade delete: results → runs → usage logs → notification logs → job, all
+	// inside one transaction. Job runs are locked (FOR UPDATE) first — same
+	// parent-first protocol as DeleteChannel/PurgeChannelConversations — so a
+	// concurrent saveResults() holding that lock is waited out, and once it
+	// releases, the child deletes below see everything it just wrote.
+	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		var runs []models.JobRun
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("job_id = ? AND tenant_id = ?", jobID, tenantID).
+			Find(&runs).Error; err != nil {
+			return fmt.Errorf("lock job runs: %w", err)
+		}
+		runIDs := make([]string, len(runs))
+		for i, r := range runs {
+			runIDs[i] = r.ID
+		}
+		if len(runIDs) > 0 {
+			if err := tx.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{}).Error; err != nil {
+				return fmt.Errorf("delete job results: %w", err)
+			}
+			if err := tx.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{}).Error; err != nil {
+				return fmt.Errorf("delete analysis snapshots: %w", err)
+			}
+		}
+		if err := tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.JobRun{}).Error; err != nil {
+			return fmt.Errorf("delete job runs: %w", err)
+		}
+		if err := tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{}).Error; err != nil {
+			return fmt.Errorf("delete ai usage logs: %w", err)
+		}
+		if err := tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.NotificationLog{}).Error; err != nil {
+			return fmt.Errorf("delete notification logs: %w", err)
+		}
+		if err := tx.Where("id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.Job{}).Error; err != nil {
+			return fmt.Errorf("delete job: %w", err)
+		}
+		return nil
+	})
+	if err != nil {
+		log.Printf("[error] delete job %s cascade: %v", jobID, err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "delete_job_failed"})
+		return
 	}
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.JobRun{})
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{})
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.NotificationLog{})
-	db.DB.Where("id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.Job{})
 
 	// Reload cron jobs after deletion
 	if job.ScheduleType == "cron" {
@@ -251,23 +286,52 @@ func ClearJobRuns(c *gin.Context) {
 		return
 	}
 
-	// Cascade delete: results → runs → usage logs → notification logs
-	var runIDs []string
-	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Pluck("id", &runIDs)
-	if len(runIDs) > 0 {
-		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{})
-		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{})
-	}
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.JobRun{})
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{})
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.NotificationLog{})
-
-	// Reset last_run_at
-	db.DB.Model(&job).Updates(map[string]interface{}{
-		"last_run_at":     nil,
-		"last_run_status": "",
-		"updated_at":      time.Now(),
+	// Cascade delete: results → runs → usage logs → notification logs, all inside
+	// one transaction. Job runs are locked (FOR UPDATE) first, same protocol as
+	// DeleteJob, so a concurrent saveResults() holding that lock is waited out and
+	// its evidence is caught by the child deletes once it releases.
+	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		var runs []models.JobRun
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("job_id = ? AND tenant_id = ?", jobID, tenantID).
+			Find(&runs).Error; err != nil {
+			return fmt.Errorf("lock job runs: %w", err)
+		}
+		runIDs := make([]string, len(runs))
+		for i, r := range runs {
+			runIDs[i] = r.ID
+		}
+		if len(runIDs) > 0 {
+			if err := tx.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{}).Error; err != nil {
+				return fmt.Errorf("delete job results: %w", err)
+			}
+			if err := tx.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{}).Error; err != nil {
+				return fmt.Errorf("delete analysis snapshots: %w", err)
+			}
+		}
+		if err := tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.JobRun{}).Error; err != nil {
+			return fmt.Errorf("delete job runs: %w", err)
+		}
+		if err := tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{}).Error; err != nil {
+			return fmt.Errorf("delete ai usage logs: %w", err)
+		}
+		if err := tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.NotificationLog{}).Error; err != nil {
+			return fmt.Errorf("delete notification logs: %w", err)
+		}
+		if err := tx.Model(&job).Updates(map[string]interface{}{
+			"last_run_at":     nil,
+			"last_run_status": "",
+			"updated_at":      time.Now(),
+		}).Error; err != nil {
+			return fmt.Errorf("reset job run state: %w", err)
+		}
+		return nil
 	})
+	if err != nil {
+		log.Printf("[error] clear job runs %s: %v", jobID, err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "clear_runs_failed"})
+		return
+	}
 
 	db.LogActivity(tenantID, middleware.GetUserID(c), middleware.GetUserEmail(c), "job.clear_runs", "job", jobID, "Cleared all runs for job: "+job.Name, "", c.ClientIP())
 

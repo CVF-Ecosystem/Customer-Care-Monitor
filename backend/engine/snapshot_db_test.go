@@ -11,6 +11,9 @@ import (
 	"testing"
 	"time"
 
+	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
+
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
@@ -278,6 +281,12 @@ func TestSaveResultsRollsBackSnapshotOnFailure(t *testing.T) {
 	payload["violations"].([]interface{})[0].(map[string]interface{})["rule"] = strings.Repeat("r", 300)
 	tooLong, _ := json.Marshal(payload)
 	runID := "run-rollback-" + pkg.NewUUID()[:8]
+	// R2-RR3: saveResults now locks/confirms the parent JobRun before writing
+	// evidence, so a real row must exist for it to find.
+	if err := db.DB.Exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, status, summary, created_at) VALUES (?, ?, ?, NOW(), 'running', '{}', NOW())`,
+		runID, f.jobID, f.tenantID).Error; err != nil {
+		t.Fatalf("fixture: insert job_run: %v", err)
+	}
 	if _, _, err := analyzer.saveResults(runID, snap, "qc_analysis", string(tooLong)); err == nil {
 		t.Fatal("expected insert failure for oversized rule name (is MySQL strict mode on?)")
 	}
@@ -297,6 +306,181 @@ func TestSaveResultsRollsBackSnapshotOnFailure(t *testing.T) {
 	}
 	if n := len(resultsFor(t, runID)); n != 2 {
 		t.Fatalf("duplicate save left %d results, want 2", n)
+	}
+}
+
+// deleteConversationLockingChildrenFirst mirrors DeleteChannel's parent-first
+// cascade for a single conversation: lock the conversation row, delete its
+// evidence, then delete the conversation itself, all in one transaction.
+func deleteConversationLockingChildrenFirst(tenantID, convID string) error {
+	return db.DB.Transaction(func(tx *gorm.DB) error {
+		var conv models.Conversation
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("id = ? AND tenant_id = ?", convID, tenantID).First(&conv).Error; err != nil {
+			return err
+		}
+		if err := tx.Where("conversation_id = ? AND tenant_id = ?", convID, tenantID).Delete(&models.JobResult{}).Error; err != nil {
+			return err
+		}
+		if err := tx.Where("conversation_id = ? AND tenant_id = ?", convID, tenantID).Delete(&models.AnalysisSnapshot{}).Error; err != nil {
+			return err
+		}
+		if err := tx.Where("conversation_id = ? AND tenant_id = ?", convID, tenantID).Delete(&models.Message{}).Error; err != nil {
+			return err
+		}
+		return tx.Delete(&conv).Error
+	})
+}
+
+// TestSaveResultsFailsWhenParentDeletedFirst is the "delete wins" ordering
+// from R2-RR3 acceptance #4: the conversation is gone before saveResults ever
+// starts, so its new locking check must fail cleanly and create nothing.
+func TestSaveResultsFailsWhenParentDeletedFirst(t *testing.T) {
+	f := setupSnapshotDBFixture(t, false)
+	var conv models.Conversation
+	if err := db.DB.First(&conv, "id = ?", f.convIDs[0]).Error; err != nil {
+		t.Fatal(err)
+	}
+	snap, err := loadConversationSnapshot(conv, time.Time{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	ref := (&refProvider{}).refFor([]string{snap.Transcript}, 0)
+	runID := "run-delfirst-" + pkg.NewUUID()[:8]
+	if err := db.DB.Exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, status, summary, created_at) VALUES (?, ?, ?, NOW(), 'running', '{}', NOW())`,
+		runID, f.jobID, f.tenantID).Error; err != nil {
+		t.Fatalf("fixture: insert job_run: %v", err)
+	}
+
+	if err := deleteConversationLockingChildrenFirst(f.tenantID, conv.ID); err != nil {
+		t.Fatalf("delete conversation: %v", err)
+	}
+
+	analyzer := NewAnalyzer(&config.Config{})
+	if _, _, err := analyzer.saveResults(runID, snap, "qc_analysis", string(qcFailWithRef(ref))); err == nil {
+		t.Fatal("saveResults accepted a snapshot for an already-deleted conversation")
+	}
+	if n := len(snapshotsFor(t, runID)); n != 0 {
+		t.Fatalf("orphan snapshot created for deleted conversation: %d rows", n)
+	}
+	if n := len(resultsFor(t, runID)); n != 0 {
+		t.Fatalf("orphan result created for deleted conversation: %d rows", n)
+	}
+}
+
+// TestWriterHoldsParentLockDeleteWaitsThenCleansEvidence is the "writer wins"
+// ordering from R2-RR3 acceptance #4: a transaction holding the same
+// Conversation/JobRun locks saveResults now takes must make a concurrent
+// delete wait, and once the writer commits, the delete's child-cleanup step
+// must catch the evidence it just wrote — nothing survives half-applied.
+func TestWriterHoldsParentLockDeleteWaitsThenCleansEvidence(t *testing.T) {
+	f := setupSnapshotDBFixture(t, false)
+	var conv models.Conversation
+	if err := db.DB.First(&conv, "id = ?", f.convIDs[0]).Error; err != nil {
+		t.Fatal(err)
+	}
+	snap, err := loadConversationSnapshot(conv, time.Time{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	ref := (&refProvider{}).refFor([]string{snap.Transcript}, 0)
+	runID := "run-writerfirst-" + pkg.NewUUID()[:8]
+	if err := db.DB.Exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, status, summary, created_at) VALUES (?, ?, ?, NOW(), 'running', '{}', NOW())`,
+		runID, f.jobID, f.tenantID).Error; err != nil {
+		t.Fatalf("fixture: insert job_run: %v", err)
+	}
+
+	writerLocked := make(chan struct{})
+	proceedToCommit := make(chan struct{})
+	writerDone := make(chan error, 1)
+
+	go func() {
+		// Reproduces saveResults' own locking prefix directly so the test can
+		// pause it between "lock acquired" and "commit" — saveResults itself has
+		// no such hook, and shouldn't grow one just for a test.
+		tx := db.DB.Begin()
+		defer tx.Rollback()
+		var lockedConv models.Conversation
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("id = ? AND tenant_id = ?", conv.ID, f.tenantID).First(&lockedConv).Error; err != nil {
+			writerDone <- err
+			return
+		}
+		var lockedRun models.JobRun
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("id = ? AND tenant_id = ?", runID, f.tenantID).First(&lockedRun).Error; err != nil {
+			writerDone <- err
+			return
+		}
+		close(writerLocked)
+		<-proceedToCommit
+
+		snapRow, err := snap.record(runID)
+		if err != nil {
+			writerDone <- err
+			return
+		}
+		if err := tx.Create(&snapRow).Error; err != nil {
+			writerDone <- err
+			return
+		}
+		detail, _ := json.Marshal(map[string]interface{}{"evidence_refs": []interface{}{ref}})
+		result := models.JobResult{
+			ID: pkg.NewUUID(), JobRunID: runID, TenantID: f.tenantID, ConversationID: conv.ID,
+			AnalysisSnapshotID: &snapRow.ID, ResultType: "qc_violation", Severity: "NGHIEM_TRONG",
+			RuleName: "r", Evidence: ref["quote"].(string), Detail: string(detail), Confidence: 1, CreatedAt: time.Now(),
+		}
+		if err := tx.Create(&result).Error; err != nil {
+			writerDone <- err
+			return
+		}
+		writerDone <- tx.Commit().Error
+	}()
+
+	select {
+	case <-writerLocked:
+	case <-time.After(5 * time.Second):
+		t.Fatal("writer never acquired its parent locks")
+	}
+
+	deleteDone := make(chan error, 1)
+	go func() {
+		deleteDone <- deleteConversationLockingChildrenFirst(f.tenantID, conv.ID)
+	}()
+
+	// The delete must not complete while the writer still holds the lock.
+	select {
+	case err := <-deleteDone:
+		t.Fatalf("delete completed before writer released its lock (err=%v) — locking did not block it", err)
+	case <-time.After(300 * time.Millisecond):
+	}
+
+	close(proceedToCommit)
+	if err := <-writerDone; err != nil {
+		t.Fatalf("writer failed: %v", err)
+	}
+
+	select {
+	case err := <-deleteDone:
+		if err != nil {
+			t.Fatalf("delete failed after writer released its lock: %v", err)
+		}
+	case <-time.After(10 * time.Second):
+		t.Fatal("delete did not complete after writer committed")
+	}
+
+	var resultCount, snapCount, convCount int64
+	db.DB.Model(&models.JobResult{}).Where("conversation_id = ? AND tenant_id = ?", conv.ID, f.tenantID).Count(&resultCount)
+	db.DB.Model(&models.AnalysisSnapshot{}).Where("conversation_id = ? AND tenant_id = ?", conv.ID, f.tenantID).Count(&snapCount)
+	db.DB.Model(&models.Conversation{}).Where("id = ?", conv.ID).Count(&convCount)
+	if resultCount != 0 {
+		t.Errorf("result the writer committed survived the delete: %d rows", resultCount)
+	}
+	if snapCount != 0 {
+		t.Errorf("snapshot the writer committed survived the delete: %d rows", snapCount)
+	}
+	if convCount != 0 {
+		t.Errorf("conversation survived its own delete: %d rows", convCount)
 	}
 }
 
