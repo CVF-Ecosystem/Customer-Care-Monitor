@@ -4,7 +4,7 @@
 
 ## Contract and scope
 
-Replace the inherited coffee-shop brand in the demo generator and in the two known local demo databases with neutral “Cà Phê Mẫu”. Include brand-derived sample Wi-Fi and voucher tokens. Preserve legal/source attribution to SePay in LICENSE, provenance records and CVF handoffs. Do not delete demo rows, reset a tenant, change user/workspace identity, invoke adapters/providers or alter analysis results/snapshots.
+Replace the inherited coffee-shop brand in the demo generator and confirmed local demo database with neutral “Cà Phê Mẫu”. A later source-only wording follow-up uses “Coffee”; the running database still contains “Cà Phê Mẫu”. Include brand-derived sample Wi-Fi and voucher tokens. Preserve legal/source attribution to SePay in LICENSE, provenance records and CVF handoffs. Do not delete demo rows, reset a tenant, change user/workspace identity, invoke adapters/providers or alter analysis results/snapshots.
 
 Allowed source paths: `backend/api/handlers/demo.go`, the inherited example in `docs/usage/channels.md`, and a storage-location note in `docs/admin/demo-data.md`. Allowed local DB targets: `ccma-db-1` (the `localhost:8088` stack) and `ccma-uxreview-db`, each only after verifying tenant `single-workspace` has `settings.is_demo_data=true` and channels use `demo-*` external IDs. The UX-review database was removed externally before mutation, so only `ccma-db-1` was updated. Update only matching text fields in `channels.name`, `jobs.rules_content`, `messages.sender_name`, `messages.content`, and `activity_logs.detail`, within a transaction per DB. No other container/database may be changed. No application restart/deployment is authorized by this work order.
 

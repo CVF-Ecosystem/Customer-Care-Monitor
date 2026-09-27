@@ -11,6 +11,11 @@ Status: ACTIVE
 - Next allowed move: Codex may scope a separate S1 continuation for ignored `config.Load` errors in other handlers or remaining sync residuals. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this review.
 - Parked operator checkpoint: none
 
+## Owner commit request (2026-09-28)
+
+- Role route: ORCHESTRATOR (Codex) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD. The UI/UX redesign roadmap was already committed in `c36b201` and updated in `12acef6`; it has no pending diff.
+- The remaining worktree includes a source-only demo wording follow-up (`Cà Phê Mẫu` to `Coffee`), a provider reference, and an ignore rule for local provider secrets. Read-only verification found the running `ccma-db-1` demo channels still named `Cà Phê Mẫu`; evidence and implementation status record that split. No database edit, app restart, provider call, deployment or push is part of this commit request. R008 REVIEW and S1 status are unchanged.
+
 ## Active Tranche: CCMAI-RUNTIME-001
 
 - INTAKE: owner declared basic CQA cleanup complete and authorized upgrading CCMA according to the accepted runtime roadmap.

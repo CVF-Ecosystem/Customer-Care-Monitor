@@ -129,7 +129,7 @@ Quyền **"Quản lý tin nhắn người dùng"** là **bắt buộc** để CQ
 1. Trong CQA, vào **Kênh chat** → click **"+ Kết nối kênh mới"**
 2. Điền các thông tin:
    - **Loại kênh**: chọn Zalo OA
-   - **Tên kênh**: đặt tên để phân biệt (ví dụ: Cà Phê Mẫu)
+   - **Tên kênh**: đặt tên để phân biệt (ví dụ: Coffee)
    - **App ID**: dán App ID đã lấy ở Bước 3
    - **App Secret**: dán Secret Key đã lấy ở Bước 3
    - **Chu kỳ đồng bộ**: chọn tần suất (mặc định: Mỗi 15 phút)

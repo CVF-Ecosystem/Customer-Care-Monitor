@@ -10,8 +10,10 @@ Before the database edit, a read-only search of every char/varchar/text/JSON col
 
 ## Change and verification
 
-The demo generator now uses `Cà Phê Mẫu`; its sample voucher/Wi-Fi tokens use `CAFEMAU50`, `CafeMau_Guest` and `cafemau2024`. The channel-name example and demo-data documentation were updated. Legal and source-provenance attribution to SePay was left in place.
+The demo generator now uses `Coffee`; its sample voucher/Wi-Fi tokens use `CAFEMAU50`, `CafeMau_Guest` and `cafemau2024`. The channel-name example and demo-data documentation were updated. Legal and source-provenance attribution to SePay was left in place.
 
 After confirming the demo flag and channel IDs, one transaction in `ccma-db-1` replaced only matching text for tenant `single-workspace`. Rows changed: channels 2, jobs 1, sender names 727, message content 135, activity details 2. Post-check: two identical channel IDs with names `Cà Phê Mẫu Facebook` and `Cà Phê Mẫu Zalo OA`; 2 channels, 2 jobs, 1,454 messages and 3 activity logs remain; demo flag remains true. A second scan of all text/JSON columns found zero `SePay` matches in this database. Source search found no old brand/tokens in `demo.go` or the updated channel example. `go build ./api/handlers` and `git diff --check` passed.
+
+Follow-up source edit changes the generator and channel example from `Cà Phê Mẫu` to `Coffee`. A read-only database check on 2026-09-28 confirmed the two existing demo channels still use `Cà Phê Mẫu`. This source edit was not imported into the running database, and the prior database-change counts above describe the original cleanup only.
 
 Changing current demo messages after analysis can correctly make prior snapshot-bound result status `changed_since_analysis`; no snapshot, saved verdict or evidence was rewritten to hide that. The running app image was not rebuilt: current imported data is clean after refresh, while a reset/reimport using the old running image could recreate the former wording until the changed source is deployed. No real channel, provider, customer data, CVF governance proof or app restart was involved.
