@@ -269,6 +269,17 @@ CVF controls the application runtime or that a provider-backed test passed.
   - **How it was produced:** an isolated disposable review stack (current `ccma-app` image, temporary MySQL, throwaway admin, demo data, and one synthetic changed-source snapshot in that DB only), captured by headless Chrome at desktop 1440px and mobile 390px, with 0 JS errors. The stack, account and profile were deleted afterwards; the real `ccma` environment was untouched.
   - **Findings:** 20 (UX-01–UX-20). Most urgent: wrong data on Dashboard/Job Detail (UX-01–06); the R004 Results list lacking the local-only note above the table (UX-07, same class as R006-R1); a broken mobile Job Detail (UX-10).
   - **Status:** review only. It grants no BUILD authority and changes no tranche state; each fix group needs its own SPEC/WORK_ORDER.
+- Owner-assigned planning `CCMAI-UXROADMAP-001` (2026-09-27, owner: “Phần lên roadmap chi tiết cho việc design sẽ do bạn thực hiện”).
+  - **Role:** Claude takes `ORCHESTRATOR / SPEC_AUTHOR` for the UI/UX redesign plan only; runtime tranche orchestration stays with Codex.
+  - **Prior step:** a trial design canvas on claude.ai (https://claude.ai/artifact/KkF8P2m1iGRpTRa3mkf4ii, private to the owner) confirmed the owner can review designs visually there.
+  - **Draft:** `docs/roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md`. It has five phases:
+    - 0: foundation — design system, shared components, glossary, screenshot tooling;
+    - 1: data-correctness tranches `CCMAI-UX-001a/b/c` and `CCMAI-UX-002` (UX-07);
+    - 2: per-screen canvas designs;
+    - 3: per-screen frontend tranches `CCMAI-UX-010+` with Codex review;
+    - 4: full screenshot comparison against the baseline.
+  - **Non-negotiables:** no API contract change, no weakening of R004–R007 semantics, no schema change, keep Vuetify 4.
+  - **Status:** DRAFT awaiting owner approval, plus three owner decisions (primary color, font, dark-mode level). Planning only: no BUILD authority, no tranche state change. `CCMAI-RUNTIME-008` remains assigned to Claude as `IMPLEMENTATION_WORKER` per Codex's work order.
 - Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed `0338fee`, source/test scope and R007 SPEC. Seven focused handler tests passed on a separate disposable MySQL database; the review container/network were removed. Review `docs/reviews/CCMAI_RUNTIME_007_INDEPENDENT_REVIEW_2026-09-27.md` returns PASS for R2 REVIEW. The actual goroutine panic path remains untested; the called recovery helper and its failure behavior are tested.
 - Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R007 are REVIEW PASS / FREEZE open. No real channel sync, provider/governance proof, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is claimed.
 
