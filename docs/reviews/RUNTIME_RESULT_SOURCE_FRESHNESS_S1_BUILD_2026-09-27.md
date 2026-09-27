@@ -256,3 +256,178 @@ not reopen, re-certify, or widen `CCMAI-RUNTIME-001/002/003` (all remain
 REVIEW PASS / FREEZE open, unaffected). No S2/S3/S5 implementation or FREEZE
 is authorized by this BUILD. Local commit only; Codex is the independent
 `REVIEWER` next, and Claude does not self-approve or FREEZE.
+
+## Addendum: Repair round 1 (R004-R1/R004-R2/R004-R3)
+
+**Entry:** Codex independent REVIEW of the BUILD commit above (`a9559e3`)
+returned `CHANGES_REQUIRED` at
+`docs/reviews/CCMAI_RUNTIME_004_INDEPENDENT_REVIEW_2026-09-27.md` for three
+same-scope findings. Role transition `REVIEWER (Codex) -> REPAIR_WORKER
+(Claude)` acknowledged in the active handoff before this round; scope is
+exactly the four files the repair addendum in
+`docs/work_orders/CCMAI_RUNTIME_004.md` allows.
+
+### R004-R1 — linked-snapshot provenance validation
+
+New exported `engine.VerifySnapshotProvenance(snap models.AnalysisSnapshot,
+resultTenantID, resultConversationID, resultJobRunID string) bool`
+(`backend/engine/snapshot.go`) checks, in order: the snapshot's own
+`SchemaVersion` is `ccma.snapshot.v1`; `snap.TenantID`/`ConversationID`/
+`JobRunID` match the result linking to it; SHA-256 of the stored manifest
+bytes equals `snap.Digest`; the parsed manifest's own `schema_version`,
+`tenant_id` and `conversation_id` fields also match; and `len(manifest.Messages)
+== snap.MessageCount`. `attachSourceIntegrity`
+(`backend/api/handlers/results.go`) now calls this before ever invoking
+`CompareSnapshotToCurrentMessages`; any failure becomes
+`verification_unavailable`, never a locally-matching result. The prior BUILD
+round's `results_test.go` fixture hardcoded digest `"deadbeef"` and
+`message_count: 1` regardless of the actual manifest — this repair replaces
+that with a real SHA-256 digest and a manifest-derived message count
+(`manifestMessageCount`), so the existing happy-path fixtures keep passing
+under the new validation instead of falsely becoming
+`verification_unavailable`.
+
+New regressions: 7 engine unit tests
+(`TestVerifySnapshotProvenanceAcceptsValidSnapshot` plus one rejection test
+each for corrupt digest, wrong conversation link, wrong job-run link,
+cross-tenant link, message-count mismatch, and unsupported schema) built
+against the exact `(*conversationSnapshot).record` path production code
+uses; 4 handler integration tests on disposable MySQL
+(`TestSourceIntegrityCorruptDigestIsVerificationUnavailable`,
+`TestSourceIntegrityWrongConversationLinkIsVerificationUnavailable`,
+`TestSourceIntegrityWrongJobRunLinkIsVerificationUnavailable`,
+`TestSourceIntegrityCrossTenantSnapshotLinkIsVerificationUnavailable`). The
+cross-tenant case is covered at both levels: the engine unit test exercises
+`VerifySnapshotProvenance`'s own tenant-ID comparison directly (the only way
+to reach that branch, since the real tenant-scoped SQL lookup in
+`attachSourceIntegrity` would never load a snapshot belonging to a different
+tenant in the first place); the handler test proves that first line of
+defense — the batched query itself — stays tenant-scoped after this repair.
+
+### R004-R2 — added-earlier-message detection
+
+`CompareSnapshotToCurrentMessages` (`backend/engine/snapshot.go`) now counts
+current messages older than the manifest's bounded comparison window
+(`earlierCount`) and compares that count against the manifest's own
+`OmittedEarlierMessages`. A mismatch — including the central counterexample
+from the review (zero omitted, one message inserted before the manifest's
+earliest timestamp) — now returns `changed_since_analysis` instead of being
+silently absorbed into `bound_currentness_unverified`. A matching count
+still cannot identify which individual earlier messages are involved from
+the stored manifest alone, so it is preserved as
+`bound_currentness_unverified` — the no-positive-freshness claim is
+unchanged.
+
+This required updating one pre-existing test,
+`TestCompareSnapshotIgnoresMessageOlderThanAnalyzedWindow`: it recorded
+`omitted_earlier_messages: 3` but only ever added one older current message,
+which the corrected count-comparison logic now (correctly) flags as a proven
+count change. It is replaced by
+`TestCompareSnapshotWithMatchingOmittedCountStaysBoundCurrentnessUnverified`,
+which adds exactly three older messages to match the recorded count and
+still asserts `bound_currentness_unverified` — preserving the original
+test's documented intent (an unidentifiable-but-unchanged earlier window)
+under semantics that no longer accept an unchecked count. Two new tests
+cover the R004-R2 acceptance directly: zero-omitted-count
+(`TestCompareSnapshotDetectsAddedEarlierMessageWithZeroOmittedCount`) and
+nonzero-omitted-count-mismatch
+(`TestCompareSnapshotDetectsEarlierMessageCountChangeWithNonzeroOmittedCount`).
+
+### R004-R3 — endpoint/export/isolation/error-path evidence
+
+Three new handler tests on disposable MySQL exercise the actual HTTP
+handlers via `httptest`/`gin.CreateTestContext`, not just `fetchRows`:
+- `TestListResultsResponseIncludesSourceIntegrityStatus` calls `ListResults`
+  directly and asserts the JSON page response's
+  `items[].source_integrity_status` for an edited-message row.
+- `TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn` calls
+  `ExportResults` for both `format=csv` and `format=xlsx` against the same
+  unchanged row and asserts both carry the identical
+  `sourceIntegrityLabel(bound_currentness_unverified)` value in their last
+  column (CSV as a substring match on the rendered file; XLSX opened with
+  `excelize.OpenReader` and read back via `GetRows`) — proving export-format
+  equivalence, not just that each format compiles.
+- `TestListResultsSnapshotBatchQueryFailureIsObservable` forces
+  `attachSourceIntegrity`'s first batched query (`analysis_snapshots`) to
+  fail by renaming that table for the duration of the test
+  (`RENAME TABLE analysis_snapshots TO analysis_snapshots_forced_failure`,
+  restored in `t.Cleanup` before the fixture's own row-deletion cleanup
+  runs, via Go's LIFO cleanup order) and asserts `ListResults` returns a
+  non-2xx status rather than a page that silently omits or
+  mis-states the affected rows. MySQL triggers (the technique this
+  codebase's other failure-injection tests use, e.g.
+  `TestDeleteChannelFailureRollsBackWholeCascade` and
+  `TestResetDemoDataFailureRollsBackEverything`) cannot intercept a `SELECT`
+  the way they intercept `DELETE`/`UPDATE`, so this uses a disposable
+  -MySQL-only table rename instead; it is scoped to one test, undone
+  unconditionally, and this package's tests run sequentially (no
+  `t.Parallel`), so no other test observes the renamed table. The
+  `messages` query in the same function follows an identical
+  fail-immediately pattern (`if err != nil { return fmt.Errorf(...) }`), so
+  this one representative case is treated as covering both; a second,
+  near-identical test renaming `messages` instead was judged to add
+  duplicate coverage rather than new proof and was not added.
+- The `TestSourceIntegrityCrossTenantSnapshotLinkIsVerificationUnavailable`
+  test listed under R004-R1 above also satisfies the work order's
+  tenant-isolation requirement for this feature's newly joined
+  snapshot/message reads.
+
+### Repair round 1 validation
+
+- `TEST_DB_DSN=<disposable mysql:8.0, isolated Docker network, no host
+  data, log_bin_trust_function_creators=1 set once via root> go test
+  ./engine/... -run 'TestCompareSnapshot|TestVerifySnapshotProvenance' -v`
+  — 18 tests PASS (9 pre-existing digest/coverage-neutral tests untouched by
+  this round were not in this filter; the 9 `TestCompareSnapshot*`/7
+  `TestVerifySnapshotProvenance*` tests targeted by this round all PASS,
+  2 of which are new-name replacements of the one test this round revised).
+- `go test ./api/handlers/... -run
+  'TestSourceIntegrity|TestFetchRows|TestVerdictCounts|TestLocTheoDiem|TestKhongLoDuLieu|TestListResults|TestExportResults'
+  -v` — 19 tests PASS (11 pre-existing plus 8 new).
+- `go test ./... -count=1 -p 1` — all 13 packages `ok`, no regressions in
+  any package this round did not touch.
+- Before/after proof: `git stash push -- backend/engine/snapshot.go
+  backend/api/handlers/results.go` (keeping both test files) then `go vet
+  ./engine/... ./api/handlers/...` failed to compile:
+  `vet.exe: engine\source_integrity_test.go:212:6: undefined:
+  VerifySnapshotProvenance` — the R004-R1 tests cannot even compile against
+  pre-repair source. `git stash pop` restored the fix, re-verified passing
+  above. (The R004-R2 count-comparison logic change could not be isolated
+  the same way without also removing the R004-R1 symbol the same file now
+  needs to compile; its behavior change was instead verified by tracing the
+  pre-repair function, which never counted or compared earlier-window
+  messages at all, so both new R004-R2 tests would have returned
+  `bound_currentness_unverified` — the compile-failure proof above already
+  demonstrates neither new test file is vacuous.)
+- `go build ./...`, `go vet ./...` — clean.
+- `gofmt -l` on all four changed files flags `engine/snapshot.go` and
+  `api/handlers/results.go` only because of the same `core.autocrlf`-driven
+  CRLF conversion documented in prior rounds; confirmed clean with `gofmt
+  -l` after stripping `\r` into a scratch copy. `git diff --check` — clean
+  (only the expected "LF will be replaced by CRLF" advisory notices, no
+  actual whitespace errors).
+- `AutoMigrate` run twice back-to-back against the same disposable schema
+  (throwaway `go run`, no `-mod=mod`) — both clean, no error;
+  `backend/go.mod`/`backend/go.sum` confirmed unchanged by `git status`
+  before and after.
+- Frontend: not touched this round (no allowed frontend path was needed for
+  these three findings), so no frontend build/test was re-run.
+- Downstream catalog check (`scripts/manage_cvf_downstream_catalog.ps1
+  -Check`) — PASS. CVF workspace doctor — PASS 25/25.
+- Cleanup: the disposable MySQL container and its dedicated Docker network
+  were stopped/removed after the run; the persistent Compose `ccma` stack
+  (`ccma-app-1`, `ccma-db-1`) was never started, reset or touched.
+
+### Repair round 1 remaining limitations
+
+- The bounded comparison window's older-message handling is now
+  count-based, not identity-based: a nonzero omitted count that stays the
+  same but has one earlier message silently swapped for a different one
+  (same count) remains undetectable from the stored manifest alone. This is
+  the same class of limitation the SPEC already names for adapter
+  history/removal coverage, narrowed rather than newly introduced by this
+  repair.
+- No production/runtime governance claim is made; `source_integrity_status`
+  remains a local, informational signal only. No S2/S3/S5, provider call,
+  real channel sync, customer data, deployment or FREEZE is authorized by
+  this repair round.

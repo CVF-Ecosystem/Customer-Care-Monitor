@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-004 — S1 result source freshness
 
-**State:** `REPAIR_READY_FOR_ASSIGNEE_ACK` after independent REVIEW `CHANGES_REQUIRED` · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner “next”, `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`, `docs/specs/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_2026-09-27.md`, and `docs/reviews/CCMAI_RUNTIME_004_INDEPENDENT_REVIEW_2026-09-27.md`.
+**State:** `REVIEW_PENDING` after repair round 1 (R004-R1/R004-R2/R004-R3 complete, local commit made) · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, re-review of repair round 1 next) · **Authority:** owner “next”, `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`, `docs/specs/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_2026-09-27.md`, and `docs/reviews/CCMAI_RUNTIME_004_INDEPENDENT_REVIEW_2026-09-27.md`.
 
 ## Entry and role route
 

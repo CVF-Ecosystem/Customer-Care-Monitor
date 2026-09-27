@@ -1,13 +1,20 @@
 package handlers
 
 import (
+	"bytes"
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
+	"net/http"
+	"net/http/httptest"
 	"os"
+	"strings"
 	"testing"
 	"time"
 	"unicode/utf8"
+
+	"github.com/gin-gonic/gin"
+	"github.com/xuri/excelize/v2"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
@@ -382,19 +389,54 @@ func (f *sourceIntegrityFixture) manifestJSON(t *testing.T, entries ...map[strin
 
 // insertSnapshotBoundResult inserts an analysis_snapshots row with the given
 // manifest and a conversation_evaluation job_results row linked to it —
-// exactly the shape ListResults/ExportResults read.
-func (f *sourceIntegrityFixture) insertSnapshotBoundResult(t *testing.T, manifest string) {
+// exactly the shape ListResults/ExportResults read. The digest is always the
+// real SHA-256 of the manifest bytes and message_count is derived from the
+// manifest's own "messages" array (R004-R1: VerifySnapshotProvenance now
+// rejects a mismatched digest/count, so a fixture using a placeholder like
+// the prior hardcoded "deadbeef" digest would falsely report every
+// otherwise-valid fixture as verification_unavailable). It returns the
+// inserted snapshot ID so a test can deliberately corrupt one field after
+// insertion.
+func (f *sourceIntegrityFixture) insertSnapshotBoundResult(t *testing.T, manifest string) string {
 	t.Helper()
+	return f.insertSnapshotBoundResultWithLink(t, manifest, f.convID, f.runID)
+}
+
+// insertSnapshotBoundResultWithLink is insertSnapshotBoundResult but lets a
+// test record the snapshot under a different conversation/job-run than the
+// linking result — the R004-R1 wrong-conversation/wrong-run provenance
+// regressions.
+func (f *sourceIntegrityFixture) insertSnapshotBoundResultWithLink(t *testing.T, manifest, snapshotConvID, snapshotRunID string) string {
+	t.Helper()
+	sum := sha256.Sum256([]byte(manifest))
+	digest := hex.EncodeToString(sum[:])
+	messageCount := manifestMessageCount(manifest)
+
 	snapID := pkg.NewUUID()
 	resultID := pkg.NewUUID()
-	if err := db.DB.Exec(`INSERT INTO analysis_snapshots (id, tenant_id, job_run_id, conversation_id, schema_version, digest, coverage, coverage_reasons, message_count, manifest, created_at) VALUES (?, ?, ?, ?, 'ccma.snapshot.v1', 'deadbeef', 'complete', '[]', 1, ?, NOW())`,
-		snapID, f.tenantID, f.runID, f.convID, manifest).Error; err != nil {
+	if err := db.DB.Exec(`INSERT INTO analysis_snapshots (id, tenant_id, job_run_id, conversation_id, schema_version, digest, coverage, coverage_reasons, message_count, manifest, created_at) VALUES (?, ?, ?, ?, 'ccma.snapshot.v1', ?, 'complete', '[]', ?, ?, NOW())`,
+		snapID, f.tenantID, snapshotRunID, snapshotConvID, digest, messageCount, manifest).Error; err != nil {
 		t.Fatalf("fixture snapshot: %v", err)
 	}
 	if err := db.DB.Exec(`INSERT INTO job_results (id, job_run_id, tenant_id, conversation_id, result_type, severity, rule_name, evidence, detail, confidence, analysis_snapshot_id, created_at) VALUES (?, ?, ?, ?, 'conversation_evaluation', 'PASS', '', 'Danh gia dat', '{"score":90}', 1, ?, NOW())`,
 		resultID, f.runID, f.tenantID, f.convID, snapID).Error; err != nil {
 		t.Fatalf("fixture result: %v", err)
 	}
+	return snapID
+}
+
+// manifestMessageCount best-effort parses a manifest's "messages" array
+// length; an unparsable manifest (the deliberately-corrupt-manifest test
+// case) yields 0, which is fine since VerifySnapshotProvenance rejects that
+// manifest on the JSON-unmarshal step regardless of the recorded count.
+func manifestMessageCount(manifest string) int {
+	var m struct {
+		Messages []json.RawMessage `json:"messages"`
+	}
+	if err := json.Unmarshal([]byte(manifest), &m); err != nil {
+		return 0
+	}
+	return len(m.Messages)
 }
 
 func (f *sourceIntegrityFixture) fetchOneRow(t *testing.T) resultRow {
@@ -545,5 +587,229 @@ func TestSourceIntegrityLabelCoversAllFourStatuses(t *testing.T) {
 		if label := sourceIntegrityLabel(status); label == "" {
 			t.Errorf("sourceIntegrityLabel(%q) is empty", status)
 		}
+	}
+}
+
+// --- R004-R1 repair: linked-snapshot provenance regressions ---
+//
+// engine.CompareSnapshotToCurrentMessages's own unit tests (source_integrity_test.go)
+// prove VerifySnapshotProvenance's field-level rejections directly. These
+// tests instead prove results.go's attachSourceIntegrity wiring actually
+// calls it before ever reporting bound_currentness_unverified.
+
+// TestSourceIntegrityCorruptDigestIsVerificationUnavailable covers a
+// snapshot row whose stored digest does not match its own manifest bytes
+// (e.g. a hand-edited manifest column) — this must never collapse into
+// "unchanged."
+func TestSourceIntegrityCorruptDigestIsVerificationUnavailable(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-8", "ext-8", "customer", "Khach", "Tin nhan", sentAt)
+	snapID := f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-8", "ext-8", "customer", "Khach", sentAt, "Tin nhan")))
+
+	corruptDigest := strings.Repeat("deadbeef", 8) // 64 hex chars, deliberately wrong
+	if err := db.DB.Exec(`UPDATE analysis_snapshots SET digest = ? WHERE id = ?`, corruptDigest, snapID).Error; err != nil {
+		t.Fatalf("corrupt digest: %v", err)
+	}
+
+	row := f.fetchOneRow(t)
+	if row.SourceIntegrityStatus != engine.SourceIntegrityVerificationUnavailable {
+		t.Fatalf("status = %q, want %q", row.SourceIntegrityStatus, engine.SourceIntegrityVerificationUnavailable)
+	}
+}
+
+// TestSourceIntegrityWrongConversationLinkIsVerificationUnavailable covers a
+// snapshot recorded (correct digest and message count) for a different
+// conversation than the result linking to it — a mislinked row, not
+// necessarily malicious, must never be presented as locally matching.
+func TestSourceIntegrityWrongConversationLinkIsVerificationUnavailable(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-9", "ext-9", "customer", "Khach", "Tin nhan", sentAt)
+	manifest := f.manifestJSON(t, snapshotMessageEntry("m-srcint-9", "ext-9", "customer", "Khach", sentAt, "Tin nhan"))
+	f.insertSnapshotBoundResultWithLink(t, manifest, "conv-khac-"+pkg.NewUUID()[:8], f.runID)
+
+	row := f.fetchOneRow(t)
+	if row.SourceIntegrityStatus != engine.SourceIntegrityVerificationUnavailable {
+		t.Fatalf("status = %q, want %q", row.SourceIntegrityStatus, engine.SourceIntegrityVerificationUnavailable)
+	}
+}
+
+// TestSourceIntegrityWrongJobRunLinkIsVerificationUnavailable is the same
+// regression as above for the job-run identity field.
+func TestSourceIntegrityWrongJobRunLinkIsVerificationUnavailable(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-9b", "ext-9b", "customer", "Khach", "Tin nhan", sentAt)
+	manifest := f.manifestJSON(t, snapshotMessageEntry("m-srcint-9b", "ext-9b", "customer", "Khach", sentAt, "Tin nhan"))
+	f.insertSnapshotBoundResultWithLink(t, manifest, f.convID, "run-khac-"+pkg.NewUUID()[:8])
+
+	row := f.fetchOneRow(t)
+	if row.SourceIntegrityStatus != engine.SourceIntegrityVerificationUnavailable {
+		t.Fatalf("status = %q, want %q", row.SourceIntegrityStatus, engine.SourceIntegrityVerificationUnavailable)
+	}
+}
+
+// TestSourceIntegrityCrossTenantSnapshotLinkIsVerificationUnavailable is the
+// R004-R1 cross-tenant regression: even though this fixture inserts a
+// snapshot with a well-formed digest/manifest and a job_results row of this
+// test's own tenant links to it by ID, the snapshot itself belongs to a
+// different tenant. attachSourceIntegrity's batched snapshot lookup stays
+// tenant-scoped, so it never loads that row, and the link is reported as
+// verification_unavailable rather than silently comparing across tenants.
+func TestSourceIntegrityCrossTenantSnapshotLinkIsVerificationUnavailable(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-10", "ext-10", "customer", "Khach", "Tin nhan", sentAt)
+
+	otherTenantID := "other-tenant-" + pkg.NewUUID()[:8]
+	manifest := f.manifestJSON(t, snapshotMessageEntry("m-srcint-10", "ext-10", "customer", "Khach", sentAt, "Tin nhan"))
+	sum := sha256.Sum256([]byte(manifest))
+	digest := hex.EncodeToString(sum[:])
+	snapID := pkg.NewUUID()
+	if err := db.DB.Exec(`INSERT INTO analysis_snapshots (id, tenant_id, job_run_id, conversation_id, schema_version, digest, coverage, coverage_reasons, message_count, manifest, created_at) VALUES (?, ?, ?, ?, 'ccma.snapshot.v1', ?, 'complete', '[]', 1, ?, NOW())`,
+		snapID, otherTenantID, f.runID, f.convID, digest, manifest).Error; err != nil {
+		t.Fatalf("fixture cross-tenant snapshot: %v", err)
+	}
+	t.Cleanup(func() { db.DB.Exec("DELETE FROM analysis_snapshots WHERE tenant_id = ?", otherTenantID) })
+
+	resultID := pkg.NewUUID()
+	if err := db.DB.Exec(`INSERT INTO job_results (id, job_run_id, tenant_id, conversation_id, result_type, severity, rule_name, evidence, detail, confidence, analysis_snapshot_id, created_at) VALUES (?, ?, ?, ?, 'conversation_evaluation', 'PASS', '', 'Danh gia', '{"score":90}', 1, ?, NOW())`,
+		resultID, f.runID, f.tenantID, f.convID, snapID).Error; err != nil {
+		t.Fatalf("fixture cross-tenant-linked result: %v", err)
+	}
+
+	row := f.fetchOneRow(t)
+	if row.SourceIntegrityStatus != engine.SourceIntegrityVerificationUnavailable {
+		t.Fatalf("status = %q, want %q", row.SourceIntegrityStatus, engine.SourceIntegrityVerificationUnavailable)
+	}
+}
+
+// --- R004-R3 repair: endpoint/export/isolation/error-path evidence ---
+
+// TestListResultsResponseIncludesSourceIntegrityStatus exercises the actual
+// ListResults handler (not just fetchRows) end to end, proving the page
+// response carries the same source_integrity_status the earlier
+// fetchRows-only tests checked directly.
+func TestListResultsResponseIncludesSourceIntegrityStatus(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-11", "ext-11", "customer", "Khach", "Tin nhan goc", sentAt)
+	f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-11", "ext-11", "customer", "Khach", sentAt, "Tin nhan goc")))
+	if err := db.DB.Exec(`UPDATE messages SET content = ? WHERE id = ?`, "Tin nhan da doi", "m-srcint-11").Error; err != nil {
+		t.Fatalf("edit message: %v", err)
+	}
+
+	gin.SetMode(gin.TestMode)
+	rec := httptest.NewRecorder()
+	c, _ := gin.CreateTestContext(rec)
+	c.Set("tenant_id", f.tenantID)
+	c.Request = httptest.NewRequest("GET", "/api/v1/results?job_type=qc_analysis", nil)
+
+	ListResults(c)
+
+	if rec.Code != http.StatusOK {
+		t.Fatalf("ListResults status = %d, body = %s", rec.Code, rec.Body.String())
+	}
+	var resp struct {
+		Items []struct {
+			SourceIntegrityStatus string `json:"source_integrity_status"`
+		} `json:"items"`
+	}
+	if err := json.Unmarshal(rec.Body.Bytes(), &resp); err != nil {
+		t.Fatalf("unmarshal response: %v", err)
+	}
+	if len(resp.Items) != 1 || resp.Items[0].SourceIntegrityStatus != engine.SourceIntegrityChangedSinceAnalysis {
+		t.Fatalf("items = %+v, want one item with status %q", resp.Items, engine.SourceIntegrityChangedSinceAnalysis)
+	}
+}
+
+// TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn proves both export
+// formats carry the same source-integrity label for the same underlying row
+// — CSV/XLSX equivalence, not just page-side coverage.
+func TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-12", "ext-12", "customer", "Khach", "Tin nhan goc", sentAt)
+	f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-12", "ext-12", "customer", "Khach", sentAt, "Tin nhan goc")))
+	wantLabel := sourceIntegrityLabel(engine.SourceIntegrityBoundCurrentnessUnverified)
+
+	gin.SetMode(gin.TestMode)
+
+	csvRec := httptest.NewRecorder()
+	cCSV, _ := gin.CreateTestContext(csvRec)
+	cCSV.Set("tenant_id", f.tenantID)
+	cCSV.Request = httptest.NewRequest("GET", "/api/v1/results/export?job_type=qc_analysis&format=csv", nil)
+	ExportResults(cCSV)
+	if csvRec.Code != http.StatusOK {
+		t.Fatalf("csv export status = %d, body = %s", csvRec.Code, csvRec.Body.String())
+	}
+	if !strings.Contains(csvRec.Body.String(), wantLabel) {
+		t.Fatalf("csv export missing source-integrity label %q, body = %s", wantLabel, csvRec.Body.String())
+	}
+
+	xlsxRec := httptest.NewRecorder()
+	cXLSX, _ := gin.CreateTestContext(xlsxRec)
+	cXLSX.Set("tenant_id", f.tenantID)
+	cXLSX.Request = httptest.NewRequest("GET", "/api/v1/results/export?job_type=qc_analysis&format=xlsx", nil)
+	ExportResults(cXLSX)
+	if xlsxRec.Code != http.StatusOK {
+		t.Fatalf("xlsx export status = %d, body = %s", xlsxRec.Code, xlsxRec.Body.String())
+	}
+	wb, err := excelize.OpenReader(bytes.NewReader(xlsxRec.Body.Bytes()))
+	if err != nil {
+		t.Fatalf("open xlsx: %v", err)
+	}
+	sheetRows, err := wb.GetRows("Results")
+	if err != nil {
+		t.Fatalf("read xlsx rows: %v", err)
+	}
+	if len(sheetRows) != 2 {
+		t.Fatalf("xlsx rows = %d, want 2 (header + 1 data row)", len(sheetRows))
+	}
+	lastCol := len(sheetRows[1]) - 1
+	if lastCol < 0 || sheetRows[1][lastCol] != wantLabel {
+		t.Fatalf("xlsx source-integrity cell = %+v, want last column %q", sheetRows[1], wantLabel)
+	}
+}
+
+// TestListResultsSnapshotBatchQueryFailureIsObservable proves
+// attachSourceIntegrity's batched snapshot query failing the whole request
+// is real, not just a documented intent: it forces that exact query to
+// error and checks the handler returns a non-2xx response instead of a
+// page that silently omits or mis-states the affected rows' status.
+//
+// MySQL triggers (used elsewhere in this codebase, e.g. demo_test.go and
+// channels_test.go, to force a DELETE/UPDATE to fail) cannot intercept a
+// SELECT, so this uses a disposable-MySQL-only technique instead: renaming
+// the table out from under the query for the duration of this one test. The
+// rename is undone in t.Cleanup (LIFO: before setupSourceIntegrityFixture's
+// own cleanup runs, so its DELETEs still find the table), regardless of
+// whether the test passes, panics or calls t.Fatal.
+func TestListResultsSnapshotBatchQueryFailureIsObservable(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-13", "ext-13", "customer", "Khach", "Tin nhan", sentAt)
+	f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-13", "ext-13", "customer", "Khach", sentAt, "Tin nhan")))
+
+	if err := db.DB.Exec("RENAME TABLE analysis_snapshots TO analysis_snapshots_forced_failure").Error; err != nil {
+		t.Fatalf("rename table to force failure: %v", err)
+	}
+	t.Cleanup(func() {
+		if err := db.DB.Exec("RENAME TABLE analysis_snapshots_forced_failure TO analysis_snapshots").Error; err != nil {
+			t.Fatalf("restore renamed table: %v", err)
+		}
+	})
+
+	gin.SetMode(gin.TestMode)
+	rec := httptest.NewRecorder()
+	c, _ := gin.CreateTestContext(rec)
+	c.Set("tenant_id", f.tenantID)
+	c.Request = httptest.NewRequest("GET", "/api/v1/results?job_type=qc_analysis", nil)
+
+	ListResults(c)
+
+	if rec.Code == http.StatusOK || rec.Code < 300 {
+		t.Fatalf("ListResults status = %d, muon loi khi bang snapshot khong doc duoc (khong duoc thanh cong mot phan), body = %s", rec.Code, rec.Body.String())
 	}
 }

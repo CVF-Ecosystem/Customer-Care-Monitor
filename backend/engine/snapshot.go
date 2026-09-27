@@ -261,15 +261,20 @@ const (
 // manifest in the first place — this is deliberate reuse, not a parallel
 // notion of "changed."
 //
-// The comparison window is bounded to current messages at or after the
-// earliest SentAt recorded in the manifest. The manifest's own
-// OmittedEarlierMessages already documents that earlier history may have
-// been excluded by design when the snapshot was built; without that original
-// cutoff recorded verbatim, treating every current message as in-scope would
-// misreport an already-known, never-analyzed older message as "added." A
-// message re-inserted with a timestamp older than anything the snapshot
-// recorded is therefore out of scope for this comparison — a documented
-// limitation, not a claim that such a change would be detected.
+// Individual comparison is bounded to current messages at or after the
+// earliest SentAt recorded in the manifest: without the snapshot's original
+// fetch cutoff recorded verbatim, treating every current message as in-scope
+// would misreport an already-known, never-analyzed older message as
+// "added." Messages older than that bound are instead counted and compared
+// against the manifest's own OmittedEarlierMessages: when the manifest
+// recorded zero omitted history, any earlier current message is a proven
+// change (it did not exist, or was not omitted, when the snapshot was
+// built). When the manifest recorded a nonzero omitted count, a change in
+// that count is equally a proven change; an unchanged count cannot identify
+// which individual earlier messages are involved from the stored manifest
+// alone, so it is not reported as a difference — a documented limitation,
+// not a claim that an in-place edit to an untracked earlier message would be
+// detected.
 //
 // This function is read-only and never mutates the snapshot, any result, or
 // any message. An unchanged comparison never returns more than
@@ -298,11 +303,16 @@ func CompareSnapshotToCurrentMessages(manifestJSON string, currentMessages []mod
 	}
 
 	currentByID := make(map[string]snapshotMessage, len(currentMessages))
+	var earlierCount int64
 	for _, m := range currentMessages {
 		if len(manifest.Messages) > 0 && m.SentAt.Before(minSentAt) {
+			earlierCount++
 			continue // outside the manifest's own declared window; see doc comment
 		}
 		currentByID[m.ID] = canonicalizeMessage(m)
+	}
+	if len(manifest.Messages) > 0 && earlierCount != manifest.OmittedEarlierMessages {
+		return SourceIntegrityChangedSinceAnalysis
 	}
 
 	for id, sm := range manifestByID {
@@ -317,6 +327,47 @@ func CompareSnapshotToCurrentMessages(manifestJSON string, currentMessages []mod
 		}
 	}
 	return SourceIntegrityBoundCurrentnessUnverified
+}
+
+// VerifySnapshotProvenance validates that a linked AnalysisSnapshot's own
+// recorded identity and stored bytes are exactly what they claim, before any
+// content comparison against current messages is attempted. It protects
+// against a hand-edited or corrupted manifest column (digest no longer
+// matches the stored bytes), a snapshot digest column that was altered
+// independently of its manifest, and a snapshot recorded for a different
+// tenant/conversation/job-run than the result that links to it. Tenant
+// scoping of the snapshot lookup query is the first defense against a
+// cross-tenant link; this is the second, applied even if that scoping were
+// ever bypassed or the row otherwise mislinked.
+//
+// A snapshot that fails this check must be reported as
+// SourceIntegrityVerificationUnavailable, never as a locally matching
+// result — see attachSourceIntegrity in backend/api/handlers/results.go.
+func VerifySnapshotProvenance(snap models.AnalysisSnapshot, resultTenantID, resultConversationID, resultJobRunID string) bool {
+	if snap.SchemaVersion != snapshotSchemaV1 {
+		return false
+	}
+	if snap.TenantID != resultTenantID || snap.ConversationID != resultConversationID || snap.JobRunID != resultJobRunID {
+		return false
+	}
+	sum := sha256.Sum256([]byte(snap.Manifest))
+	if hex.EncodeToString(sum[:]) != strings.ToLower(strings.TrimSpace(snap.Digest)) {
+		return false
+	}
+	var manifest snapshotManifest
+	if err := json.Unmarshal([]byte(snap.Manifest), &manifest); err != nil {
+		return false
+	}
+	if manifest.SchemaVersion != snapshotSchemaV1 {
+		return false
+	}
+	if manifest.TenantID != resultTenantID || manifest.ConversationID != resultConversationID {
+		return false
+	}
+	if len(manifest.Messages) != snap.MessageCount {
+		return false
+	}
+	return true
 }
 
 func (s *conversationSnapshot) record(runID string) (models.AnalysisSnapshot, error) {

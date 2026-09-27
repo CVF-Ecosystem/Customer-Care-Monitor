@@ -306,7 +306,9 @@ func (f resultFilter) fetchRows(limit, offset int) ([]resultRow, error) {
 // for every row, in at most two additional tenant-scoped batched queries
 // (linked snapshots, then their conversations' current messages) — never one
 // query per row. It never mutates a result, snapshot or message; a row-local
-// problem (broken link, malformed manifest) becomes
+// problem (broken link, malformed manifest, or a snapshot whose own digest,
+// tenant, conversation, job-run or message count does not match what it
+// claims — see engine.VerifySnapshotProvenance) becomes
 // engine.SourceIntegrityVerificationUnavailable rather than a false
 // "unchanged," while a batch query failure here fails the whole request so
 // the caller doesn't have to guess which page rows were actually checked.
@@ -357,7 +359,7 @@ func (f resultFilter) attachSourceIntegrity(rows []resultRow) error {
 			continue
 		}
 		snap, ok := snapshotByID[*r.AnalysisSnapshotID]
-		if !ok {
+		if !ok || !engine.VerifySnapshotProvenance(snap, f.tenantID, r.ConversationID, r.JobRunID) {
 			rows[i].SourceIntegrityStatus = engine.SourceIntegrityVerificationUnavailable
 			continue
 		}
