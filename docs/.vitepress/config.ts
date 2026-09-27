@@ -20,6 +20,9 @@ export default defineConfig({
     'reviews/CONTRIBUTOR_*.md',
     'reviews/README.md',
   ],
+  // Governance evidence under reviews/ links to specs/ and work_orders/, which
+  // exist in the repo but are excluded from the site above.
+  ignoreDeadLinks: [/(^|\/)(specs|work_orders)\//],
 
   head: [
     ['meta', { name: 'theme-color', content: '#1976D2' }],

@@ -16,20 +16,67 @@ Ghi lại hiện trạng giao diện của Customer Care Monitor AI để làm m
 
 ## Ảnh chụp
 
-| Màn hình | Desktop | Mobile |
-|---|---|---|
-| Đăng nhập | [01-login](assets/ui-ux-review-2026-09-27/01-login.png) | — |
-| Trang chủ | [02-dashboard](assets/ui-ux-review-2026-09-27/02-dashboard.png) | [21-mobile-dashboard](assets/ui-ux-review-2026-09-27/21-mobile-dashboard.png) |
-| Kênh chat | [03-channels](assets/ui-ux-review-2026-09-27/03-channels.png) | — |
-| Tin nhắn | [04-messages](assets/ui-ux-review-2026-09-27/04-messages.png) | — |
-| Danh sách tác vụ | [05-jobs](assets/ui-ux-review-2026-09-27/05-jobs.png) | — |
-| Job Detail QC (thẻ) | [06-jobdetail-qc-default](assets/ui-ux-review-2026-09-27/06-jobdetail-qc-default.png) | [23-mobile-jobdetail-qc](assets/ui-ux-review-2026-09-27/23-mobile-jobdetail-qc.png) |
-| Job Detail QC (bảng) | [08-jobdetail-qc-table](assets/ui-ux-review-2026-09-27/08-jobdetail-qc-table.png) | — |
-| Job Detail QC (hộp thoại) | [09-jobdetail-qc-dialog](assets/ui-ux-review-2026-09-27/09-jobdetail-qc-dialog.png) | — |
-| Job Detail phân loại | [10-jobdetail-classification](assets/ui-ux-review-2026-09-27/10-jobdetail-classification.png) | — |
-| Kết quả (tổng hợp) | [11-results](assets/ui-ux-review-2026-09-27/11-results.png) | [22-mobile-results](assets/ui-ux-review-2026-09-27/22-mobile-results.png) |
-| Kết quả (hộp thoại) | [12-results-dialog](assets/ui-ux-review-2026-09-27/12-results-dialog.png) | — |
-| Cài đặt | [13-settings](assets/ui-ux-review-2026-09-27/13-settings.png) | — |
+Ảnh gốc nằm trong `assets/ui-ux-review-2026-09-27/`. Mã UX-xx cho biết phát hiện nào có thể thấy trong ảnh.
+
+### Đăng nhập (desktop)
+
+![Đăng nhập (desktop)](./assets/ui-ux-review-2026-09-27/01-login.png)
+
+### Trang chủ (desktop) — UX-01, UX-02, UX-15, UX-19
+
+![Trang chủ (desktop) — UX-01, UX-02, UX-15, UX-19](./assets/ui-ux-review-2026-09-27/02-dashboard.png)
+
+### Trang chủ (mobile 390px) — UX-11
+
+![Trang chủ (mobile 390px) — UX-11](./assets/ui-ux-review-2026-09-27/21-mobile-dashboard.png)
+
+### Kênh chat — UX-06, UX-20
+
+![Kênh chat — UX-06, UX-20](./assets/ui-ux-review-2026-09-27/03-channels.png)
+
+### Tin nhắn — UX-16
+
+![Tin nhắn — UX-16](./assets/ui-ux-review-2026-09-27/04-messages.png)
+
+### Danh sách tác vụ — UX-12, UX-13, UX-14
+
+![Danh sách tác vụ — UX-12, UX-13, UX-14](./assets/ui-ux-review-2026-09-27/05-jobs.png)
+
+### Job Detail QC, dạng thẻ — UX-04, UX-05, UX-08
+
+![Job Detail QC, dạng thẻ — UX-04, UX-05, UX-08](./assets/ui-ux-review-2026-09-27/06-jobdetail-qc-default.png)
+
+### Job Detail QC, dạng bảng — UX-09, UX-18
+
+![Job Detail QC, dạng bảng — UX-09, UX-18](./assets/ui-ux-review-2026-09-27/08-jobdetail-qc-table.png)
+
+### Job Detail QC, hộp thoại — UX-17
+
+![Job Detail QC, hộp thoại — UX-17](./assets/ui-ux-review-2026-09-27/09-jobdetail-qc-dialog.png)
+
+### Job Detail QC (mobile 390px) — UX-10
+
+![Job Detail QC (mobile 390px) — UX-10](./assets/ui-ux-review-2026-09-27/23-mobile-jobdetail-qc.png)
+
+### Job Detail phân loại — UX-03
+
+![Job Detail phân loại — UX-03](./assets/ui-ux-review-2026-09-27/10-jobdetail-classification.png)
+
+### Kết quả tổng hợp — UX-07
+
+![Kết quả tổng hợp — UX-07](./assets/ui-ux-review-2026-09-27/11-results.png)
+
+### Kết quả, hộp thoại
+
+![Kết quả, hộp thoại](./assets/ui-ux-review-2026-09-27/12-results-dialog.png)
+
+### Kết quả (mobile 390px) — mẫu tốt cho mobile
+
+![Kết quả (mobile 390px) — mẫu tốt cho mobile](./assets/ui-ux-review-2026-09-27/22-mobile-results.png)
+
+### Cài đặt
+
+![Cài đặt](./assets/ui-ux-review-2026-09-27/13-settings.png)
 
 ## Phát hiện
 
