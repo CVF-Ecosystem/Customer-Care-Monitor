@@ -1,0 +1,9 @@
+# Keep LF in the working tree for files that run inside Linux containers or are
+# checked by LF-only tools, even on Windows checkouts with core.autocrlf=true.
+# A CRLF shebang ("#!/bin/sh\r") makes the nginx container fail with
+# "exec /entrypoint.sh: no such file or directory", and CRLF Go files make
+# gofmt -l report false formatting errors.
+*.sh        text eol=lf
+*.go        text eol=lf
+Dockerfile  text eol=lf
+docker/**   text eol=lf
