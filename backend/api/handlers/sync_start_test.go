@@ -11,6 +11,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
@@ -26,6 +27,13 @@ type syncStartFixture struct {
 	statusAtLaunch                     string
 	respondedBeforeLaunch              bool
 	rec                                *httptest.ResponseRecorder
+
+	// CCMAI-RUNTIME-008: the stubbed config loader returns cfg (or cfgErr) and
+	// counts calls; the stubbed launcher records the config it received.
+	cfg         *config.Config
+	cfgErr      error
+	cfgLoads    int
+	launchedCfg *config.Config
 }
 
 func setupSyncStartFixture(t *testing.T) *syncStartFixture {
@@ -52,12 +60,24 @@ func setupSyncStartFixture(t *testing.T) *syncStartFixture {
 	})
 
 	original := startManualSync
-	startManualSync = func(_ string, ch models.Channel) {
+	startManualSync = func(_ string, ch models.Channel, cfg *config.Config) {
 		f.launches++
+		f.launchedCfg = cfg
 		f.statusAtLaunch = f.channelStatus(t).LastSyncStatus
 		f.respondedBeforeLaunch = f.rec != nil && f.rec.Body.Len() > 0
 	}
 	t.Cleanup(func() { startManualSync = original })
+
+	f.cfg = &config.Config{Env: "test"} // synthetic; no real secrets or credentials
+	originalLoad := loadManualSyncConfig
+	loadManualSyncConfig = func() (*config.Config, error) {
+		f.cfgLoads++
+		if f.cfgErr != nil {
+			return nil, f.cfgErr
+		}
+		return f.cfg, nil
+	}
+	t.Cleanup(func() { loadManualSyncConfig = originalLoad })
 	return f
 }
 

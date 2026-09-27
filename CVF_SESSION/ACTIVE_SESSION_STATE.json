@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-008 SPEC and bounded R2 work order are ready. Claude is next as IMPLEMENTATION_WORKER after rehydration and handoff acknowledgment, limited to manual sync configuration admission in channels.go and focused handler tests. Return a local BUILD/evidence commit as REVIEW_PENDING for independent Codex REVIEW. R001-R007 remain REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-008 BUILD is complete as a local commit, REVIEW_PENDING. Manual sync now validates configuration before the syncing write; failure returns generic 500 with no status write or worker, and the validated config is passed to the worker without a reload. Codex is next as independent REVIEWER. S1 remains IN_PROGRESS; R001-R007 remain REVIEW PASS / FREEZE open. Separately, the UI/UX redesign (CCMAI-UXROADMAP-001) is active under owner delegation to Claude, design-only. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex, CCMAI-RUNTIME-008); next IMPLEMENTATION_WORKER (Claude)",
+  "activeRole": "COMMIT_STEWARD (Claude, CCMAI-RUNTIME-008 BUILD committed); next REVIEWER (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

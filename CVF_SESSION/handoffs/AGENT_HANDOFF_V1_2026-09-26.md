@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: WORK_ORDER_AUTHOR (Codex, `CCMAI-RUNTIME-008`); next IMPLEMENTATION_WORKER (Claude)
-- Next allowed move: Claude implements the bounded `CCMAI-RUNTIME-008` manual sync configuration-admission work order after rehydration and handoff acknowledgment, then locally commits BUILD evidence and returns REVIEW_PENDING to Codex. `CCMAI-RUNTIME-001` to `007` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-008` BUILD committed); next REVIEWER (Codex)
+- Next allowed move: Codex independently reviews the `CCMAI-RUNTIME-008` BUILD commit (manual sync config admission; evidence `docs/reviews/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_BUILD_2026-09-27.md`). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001` to `007` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -308,6 +308,22 @@ CVF controls the application runtime or that a provider-backed test passed.
 - DESIGN: validate config after tenant-scoped lookup but before the R007 start write; on failure send generic non-2xx without a worker or status mutation. Pass the validated config to the worker, preserving 202 and sync semantics. Defer cross-path single-flight, crash recovery and real channel behavior.
 - SPEC: `docs/specs/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_2026-09-27.md`. WORK_ORDER: `docs/work_orders/CCMAI_RUNTIME_008.md` (R2), limited to `backend/api/handlers/channels.go`, focused handler tests and governed evidence/continuity.
 - Role transition acknowledged: `ORCHESTRATOR (Codex) -> SPEC_AUTHOR (Codex) -> WORK_ORDER_AUTHOR (Codex)`; next `IMPLEMENTATION_WORKER (Claude)` must rehydrate and acknowledge before BUILD. Independent `REVIEWER (Codex)` follows one local BUILD/evidence commit; no self-approval, push or FREEZE.
+- Role transition acknowledged (2026-09-28): `WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude)`.
+  - **Rehydration:** at `12acef6`, from `.cvf/manifest.json`, `.cvf/policy.json`, `CVF_SESSION/ACTIVE_SESSION_STATE.json`, this handoff, `CVF_SESSION_MEMORY.md`, `IMPLEMENTATION_STATUS.json`, `docs/INDEX.md`, `docs/specs/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_2026-09-27.md` and `docs/work_orders/CCMAI_RUNTIME_008.md`. All sources agree; R007 is REVIEW PASS; no `BLOCKED_CONTINUITY_DRIFT`.
+  - **Scope:** `backend/api/handlers/channels.go` (a small private config-loader seam is allowed), `backend/api/handlers/sync_start_test.go`, and at most one more focused test file, plus evidence/continuity. No edit to `backend/config`, engine, models, adapters, scheduler, agents, provider, permissions, frontend or CVF core.
+  - **Parallel work excluded:** Codex's uncommitted `CCMAI-DEMO-BRAND-001` files (`backend/api/handlers/demo.go`, its docs) are a separate scope and will not be touched or staged.
+  - **Boundaries:** no real channel sync, credential/provider use, customer data, persistent Compose DB change, deploy, push or FREEZE.
+- BUILD result.
+  - **Admission:** `SyncChannelNow` keeps the tenant-scoped lookup, then calls a new private seam `loadManualSyncConfig` (default `config.Load`) **before** the R007 start write. An error or nil config logs only "configuration invalid" with the channel ID and returns the existing generic `500 sync_start_failed`, with no status write and no worker.
+  - **Worker:** `startManualSync(tenantID, channel, cfg)` passes the validated config to `runManualSync`, which no longer calls `config.Load`. Timeout, `SyncChannel`, R007 panic handling, 202 and 404 are unchanged.
+  - **Tests:** new `sync_config_admission_test.go` covers forced failure without leaking config text, nil config, same-pointer config passed to the worker with `syncing` persisted first, wrong tenant skipping config load, and the real `config.Load` with synthetic env (invalid and valid). The R007 fixture now restores both seams.
+  - Evidence: `docs/reviews/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_BUILD_2026-09-27.md`.
+- BUILD validation.
+  - `scripts/test-backend.ps1` (disposable MySQL with the trigger flag at startup, `golang:1.26-alpine`, `GOPROXY=off`): focused 15/15 PASS, including all R007 and channel regressions, with no `Error 1419`; full suite passed all 13 packages.
+  - **Non-vacuity:** disabling the admission check made 3 tests fail with a 202.
+  - Host build/vet clean; `go.mod`/`go.sum` unchanged. gofmt is clean on the new code; `channels.go` has only its 3 pre-existing hunks. `git diff --check` clean, catalog `-Check` PASS, doctor 25/25. Disposable resources were removed.
+  - **Residual noted:** other handlers still ignore `config.Load` errors (OAuth/credential paths in `channels.go`, `jobs.go` trigger/test-run, `agents.go`).
+- Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. No FREEZE or S1 closure.
 
 ## Parallel owner request: CCMAI-DEMO-BRAND-001
 

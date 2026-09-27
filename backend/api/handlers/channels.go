@@ -685,6 +685,16 @@ func SyncChannelNow(c *gin.Context) {
 		return
 	}
 
+	// A sync that cannot get a valid configuration must not be acknowledged:
+	// check it before any status write. The error is not logged or returned
+	// because validation messages describe secret configuration.
+	cfg, err := loadManualSyncConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] manual sync for channel %s not admitted: configuration invalid", channelID)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "sync_start_failed"})
+		return
+	}
+
 	// 202 only means "start recorded and worker dispatched"; if the visible
 	// syncing state cannot be persisted, no worker starts.
 	if err := updateChannelSyncStatus(tenantID, channelID, "syncing", ""); err != nil {
@@ -694,25 +704,29 @@ func SyncChannelNow(c *gin.Context) {
 	}
 
 	// Run sync in background to avoid Nginx/proxy gateway timeout
-	startManualSync(tenantID, channel)
+	startManualSync(tenantID, channel, cfg)
 
 	c.JSON(http.StatusAccepted, gin.H{"message": "sync_started"})
 }
 
-// startManualSync launches the background worker. It is a variable only so
-// handler tests can observe dispatch without running a real channel adapter.
-var startManualSync = func(tenantID string, channel models.Channel) {
-	go runManualSync(tenantID, channel)
+// loadManualSyncConfig loads and validates configuration for a manual sync.
+// It is a variable only so handler tests can force a load failure.
+var loadManualSyncConfig = config.Load
+
+// startManualSync launches the background worker with the configuration
+// already validated for this request. It is a variable only so handler tests
+// can observe dispatch without running a real channel adapter.
+var startManualSync = func(tenantID string, channel models.Channel, cfg *config.Config) {
+	go runManualSync(tenantID, channel, cfg)
 }
 
-func runManualSync(tenantID string, channel models.Channel) {
+func runManualSync(tenantID string, channel models.Channel, cfg *config.Config) {
 	defer func() {
 		if r := recover(); r != nil {
 			_ = handleManualSyncPanic(tenantID, channel.ID, r)
 		}
 	}()
 
-	cfg, _ := config.Load()
 	syncEng := engine.NewSyncEngine(cfg)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
