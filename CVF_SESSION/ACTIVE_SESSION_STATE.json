@@ -1,21 +1,21 @@
-﻿{
-    "schemaVersion":  "1.0",
-    "projectName":  "Customer-Care-Monitor-AI",
-    "currentMode":  "REVIEW",
-    "activePhase":  "REVIEW",
-    "phaseModel":  [
-                       "INTAKE",
-                       "DESIGN",
-                       "SPEC",
-                       "WORK_ORDER",
-                       "BUILD",
-                       "REVIEW",
-                       "FREEZE"
-                   ],
-    "activeHandoff":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-    "nextAllowedMove":  "Independent R2 review of CCMAI-RUNTIME-001 against docs/reviews/RUNTIME_FOUNDATION_S0_S1_BUILD_2026-09-27.md. After accepted repair/FREEZE, specify the remaining S1 snapshot/evidence contract before S2 gate work. Provider calls and AI-runtime governance claims remain unauthorized without separate S2/S3 work orders and live evidence.",
-    "parkedOperatorCheckpoint":  null,
-    "activeRole":  "ORCHESTRATOR",
-    "roleRoute":  "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
-    "updatedAt":  "2026-09-27"
+{
+  "schemaVersion": "1.0",
+  "projectName": "Customer-Care-Monitor-AI",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
+  "phaseModel": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER",
+    "BUILD",
+    "REVIEW",
+    "FREEZE"
+  ],
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
+  "nextAllowedMove": "Claude rehydrates CVF continuity, acknowledges REVIEWER responsibility in the active handoff, and executes Gate A of CCMAI-RUNTIME-002: independent review of CCMAI-RUNTIME-001. Gate B snapshot/evidence BUILD may begin only after Gate A passes or accepted repairs pass. No provider call, channel sync, customer data, deployment, push, S2 gate implementation, or AI-runtime governance claim is authorized.",
+  "parkedOperatorCheckpoint": null,
+  "activeRole": "ORCHESTRATOR/WORK_ORDER_AUTHOR",
+  "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
+  "updatedAt": "2026-09-27"
 }

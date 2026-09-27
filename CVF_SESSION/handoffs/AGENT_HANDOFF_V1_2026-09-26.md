@@ -82,6 +82,16 @@ independent reviewer.
 This handoff records repository governance onboarding. It does not claim that
 CVF controls the application runtime or that a provider-backed test passed.
 
+## Active Tranche: CCMAI-RUNTIME-002
+
+- INTAKE: owner assigned Codex as `ORCHESTRATOR/REVIEWER` and will hand the bounded implementation work order to Claude.
+- DESIGN/SPEC: preserve source version and message-bound evidence before S2. Use one channel-neutral snapshot builder for single/batch analysis, deterministic canonical digest, typed coverage and exact evidence refs. Persist snapshot identity/manifest once per conversation/run and link results to it; do not duplicate full transcript content merely for hashing.
+- WORK_ORDER: `docs/work_orders/CCMAI_RUNTIME_002.md` (R2), authority `docs/specs/RUNTIME_SNAPSHOT_EVIDENCE_S1_2026-09-27.md`.
+- Gate A: Claude must first act as independent `REVIEWER` for `CCMAI-RUNTIME-001` at commit `ade74addfd9890c3418c99ee02aecd6b73ee3b4a`. `PASS` or repaired `PASS_WITH_REPAIRS` is required before Gate B. Codex cannot independently review that prior tranche because Codex implemented it.
+- Gate B: after Gate A, Claude may transition to `IMPLEMENTATION_WORKER` and implement snapshot/evidence S1. Claude must append its CVF declaration and role transition acknowledgment here before BUILD. Current status is `READY_FOR_ASSIGNEE_ACK`; no acknowledgment is inferred from this work order.
+- Allowed external effect: local source/docs/test changes, local Compose migration/restart on the empty-development `CCMA` schema and one local commit using configured Blackbird081 identity. No provider call, key, real channel sync, customer data, S2/S3/S5, deploy, push or CVF core edit.
+- Review ownership: Claude supplies BUILD evidence and returns Gate B as `REVIEW_PENDING`; Codex remains independent `REVIEWER` for Gate B and no FREEZE is pre-approved.
+
 ## Active Tranche: CCMAI-DOCS-001
 
 - INTAKE: owner requested a clear README comparison with CQA and a suitability
