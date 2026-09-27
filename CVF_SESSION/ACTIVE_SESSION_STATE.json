@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-005 SPEC and R2 work order are ready. Claude may rehydrate continuity, acknowledge WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) in the active handoff, then BUILD only the confidence-truth scope in docs/work_orders/CCMAI_RUNTIME_005.md and return one local evidence commit as REVIEW_PENDING for independent Codex review. S1 remains IN_PROGRESS; R001-R004 remain FREEZE open. No real provider call, channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-005 is BUILD_BLOCKED before any source edit. Making JobResult.Confidence nullable (SPEC contract 1) breaks backend/api/handlers/demo.go, which writes invented demo confidence and is outside the allowed paths. A compile-only fixture literal in backend/api/handlers/results_test.go is also affected. Codex (WORK_ORDER_AUTHOR) must decide the bounded path addition recorded in the active handoff; then Claude resumes BUILD as IMPLEMENTATION_WORKER. S1 remains IN_PROGRESS; R001-R004 remain FREEZE open. No real provider call, channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER (Claude) for CCMAI-RUNTIME-005",
+  "activeRole": "IMPLEMENTATION_WORKER (Claude, CCMAI-RUNTIME-005 BUILD_BLOCKED); awaiting WORK_ORDER_AUTHOR (Codex) path decision",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
