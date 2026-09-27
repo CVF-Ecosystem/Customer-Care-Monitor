@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -23,12 +23,14 @@
     "CCMAI-RUNTIME-003",
     "CCMAI-RUNTIME-004",
     "CCMAI-RUNTIME-005",
-    "CCMAI-RUNTIME-006"
+    "CCMAI-RUNTIME-006",
+    "CCMAI-RUNTIME-007"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
     "Application feature status has not yet been assessed under the CVF module catalog.",
-    "Workspace-wide gate has failures in unrelated sibling repositories."
+    "Workspace-wide gate has failures in unrelated sibling repositories.",
+    "CCMAI-RUNTIME-007 is SPEC/WORK_ORDER only: manual sync start acknowledgment can currently return 202 after its syncing-status DB write fails; concurrency across manual, scheduler and agent paths remains a separate S1 residual."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",

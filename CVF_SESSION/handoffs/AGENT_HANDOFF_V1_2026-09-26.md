@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-006` REVIEW PASS)
-- Next allowed move: Codex may issue a bounded S1 continuation or route a separate CLOSER/FREEZE evaluation. `CCMAI-RUNTIME-001/002/003/004/005/006` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this review.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active role: WORK_ORDER_AUTHOR (Codex, `CCMAI-RUNTIME-007`); next IMPLEMENTATION_WORKER (Claude)
+- Next allowed move: Claude implements the bounded `CCMAI-RUNTIME-007` manual sync start-state truth work order after rehydration and handoff acknowledgment, then locally commits BUILD evidence and returns REVIEW_PENDING to Codex. `CCMAI-RUNTIME-001/002/003/004/005/006` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -228,6 +228,13 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Role route after repair round 1: `REPAIR_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex re-reviews as independent `REVIEWER`. No FREEZE, provider call, data effect or upstream-freshness claim.
 - Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently re-reviewed `682d88b`: only `JobDetail.vue` changed in product source; `results_source_note` now appears in the shared results-tab region before the table/card branches when result groups are shown, while badges and dialog note remain. Independent `npx vitest run src/__tests__/i18n.spec.ts` passed 8/8 and `npm run build` passed. Review `docs/reviews/CCMAI_RUNTIME_006_REPAIR_R1_REREVIEW_2026-09-27.md` returns PASS for R2 REVIEW; R006-R1 is closed.
 - Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R006 are REVIEW PASS / FREEZE open. No live provider/governance proof, upstream-completeness claim, customer data, deployment, push, S2/S3/S5 implementation or FREEZE is claimed.
+
+## Active Tranche: CCMAI-RUNTIME-007
+
+- INTAKE: owner requested “next” after R006 independent REVIEW PASS. Source audit found `SyncChannelNow` ignores its `syncing` DB update result, still starts a worker and returns 202; panic recovery also ignores a status-write result. This leaves an observable false start signal in S1.
+- DESIGN: preserve asynchronous 202 semantics but require tenant-scoped, successful start-state persistence before worker launch; return non-2xx without launching on error/zero rows. Bound and check the panic error write. Do not widen to scheduler/agent single-flight, real channel sync or S1 closure.
+- SPEC: `docs/specs/RUNTIME_MANUAL_SYNC_START_TRUTH_S1_2026-09-27.md`. WORK_ORDER: `docs/work_orders/CCMAI_RUNTIME_007.md` (R2), limited to `backend/api/handlers/channels.go`, focused handler tests and governed evidence/continuity.
+- Role transition acknowledged: `ORCHESTRATOR (Codex) -> SPEC_AUTHOR (Codex) -> WORK_ORDER_AUTHOR (Codex)`; next `IMPLEMENTATION_WORKER (Claude)` must rehydrate and acknowledge before BUILD. Independent `REVIEWER (Codex)` follows one local BUILD/evidence commit; no self-approval, push or FREEZE.
 
 ## Active Tranche: CCMAI-DOCS-001
 
