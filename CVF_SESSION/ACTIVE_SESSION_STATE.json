@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex independently reviewed CCMAI-RUNTIME-006 BUILD commit 61a775a: backend/API/export checks pass, but R006-R1 requires the local-only explanation to be visible on Job Detail's primary table/card views, not only its dialog. Claude may rehydrate continuity, acknowledge REVIEWER (Codex) -> REPAIR_WORKER (Claude), make the bounded same-scope frontend/evidence repair in docs/work_orders/CCMAI_RUNTIME_006.md, and return one local commit as REVIEW_PENDING for Codex re-review. S1 remains IN_PROGRESS; R001-R005 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
+  "nextAllowedMove": "Claude completed CCMAI-RUNTIME-006 repair round 1 (R006-R1) as REPAIR_WORKER. JobDetail.vue now shows the bilingual local-only results_source_note above the table/card switch whenever results are shown, and the dialog note and badges are kept. Frontend-only change; vitest 8/8, build, catalog and doctor pass. Local commit, REVIEW_PENDING; Codex is next as independent REVIEWER. S1 remains IN_PROGRESS; R001-R005 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex, after independent R006 CHANGES_REQUIRED); next REPAIR_WORKER (Claude)",
+  "activeRole": "COMMIT_STEWARD (Claude, R006 repair round 1 committed); next REVIEWER (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: WORK_ORDER_AUTHOR (Codex, after independent `CCMAI-RUNTIME-006` CHANGES_REQUIRED); next REPAIR_WORKER (Claude)
-- Next allowed move: Claude may acknowledge `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` and repair only R006-R1 in `docs/work_orders/CCMAI_RUNTIME_006.md`, then return one local commit as REVIEW_PENDING for Codex re-review. `CCMAI-RUNTIME-001/002/003/004/005` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-006` repair round 1 committed); next REVIEWER (Codex)
+- Next allowed move: Codex independently re-reviews the R006 repair-round-1 commit (R006-R1: local-only note visible on Job Detail table/card views). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001/002/003/004/005` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -219,6 +219,13 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. No FREEZE, S1 closure, S2/S3/S5 or upstream-freshness claim.
 - Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed `61a775a`; fresh disposable-MySQL focused job endpoint/export/failure and R004 regression tests PASS, and the temporary container/network were removed. Review `docs/reviews/CCMAI_RUNTIME_006_INDEPENDENT_REVIEW_2026-09-27.md` returns `CHANGES_REQUIRED` for R006-R1 only: `results_source_note` is visible in the Job Detail dialog but absent from the primary table/card results tab. The short badge label alone does not explain the local-only/upstream-history limit required by SPEC. Backend and export checks are accepted; no new backend defect was found.
 - Role transition after review: `REVIEWER (Codex) -> ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)`. A same-scope repair-round-1 addendum in `docs/work_orders/CCMAI_RUNTIME_006.md` limits Claude to `JobDetail.vue` plus evidence/continuity. Claude is next `REPAIR_WORKER`, then returns one local commit for Codex re-review. Status remains REVIEW_PENDING; no FREEZE or new provider/data/deployment authority.
+- Role transition acknowledged (2026-09-27): `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` for R006 repair round 1. Continuity was rehydrated at `3b31aeb` from `CVF_SESSION/ACTIVE_SESSION_STATE.json`, this handoff, `CVF_SESSION_MEMORY.md`, `IMPLEMENTATION_STATUS.json`, `docs/reviews/CCMAI_RUNTIME_006_INDEPENDENT_REVIEW_2026-09-27.md` and the repair addendum of `docs/work_orders/CCMAI_RUNTIME_006.md`. All sources agree; no `BLOCKED_CONTINUITY_DRIFT`. Scope is `frontend/src/views/Jobs/JobDetail.vue` only plus R006 BUILD evidence and continuity. No backend, status logic, i18n key, store, DB, provider or CVF core change.
+- Repair round 1 result (R006-R1).
+  - **Change:** `JobDetail.vue` now shows the existing bilingual `results_source_note` as an info alert inside the results tab, after the filter/toolbar row and before the table/card switch, whenever result groups are shown. It is therefore visible in the classification table, QC table and card views. Badges and the dialog note are kept.
+  - **Placement check:** source inspection shows lines 284 (results tab) → 341 (note) → 344/348/378/423 (empty state, tables, cards) → 640 (dialog note).
+  - **Checks:** vitest `i18n.spec.ts` 8/8, `npm run build` PASS, `git diff --check` clean, catalog `-Check` PASS, doctor 25/25. No backend change, so the backend suite was not re-run.
+  - Evidence appended to `docs/reviews/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_BUILD_2026-09-27.md`.
+- Role route after repair round 1: `REPAIR_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex re-reviews as independent `REVIEWER`. No FREEZE, provider call, data effect or upstream-freshness claim.
 
 ## Active Tranche: CCMAI-DOCS-001
 

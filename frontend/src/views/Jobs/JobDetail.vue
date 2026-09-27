@@ -336,6 +336,11 @@
           </v-btn>
         </div>
 
+        <!-- Local-only caveat for the source-integrity badges, visible in both table and card views -->
+        <v-alert v-if="filteredGroupedResults.length" type="info" variant="tonal" density="compact" class="mb-3 text-caption">
+          {{ $t('results_source_note') }}
+        </v-alert>
+
         <div v-if="!filteredGroupedResults.length" class="text-center text-grey pa-4">
           {{ $t('no_issues') }}
         </div>

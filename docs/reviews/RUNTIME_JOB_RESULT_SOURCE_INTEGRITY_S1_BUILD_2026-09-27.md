@@ -90,3 +90,33 @@ Cleanup: the disposable container and network were removed. The persistent Compo
 - The error path of the classification chat-text query is covered only indirectly: when `messages` is unreadable, the earlier results subquery fails first. Its own check is present in the source but is not isolated by a test.
 - The detail column uses full result IDs, which is long but traceable.
 - Conversation-specific APIs, notifications, re-analysis and S2/S3/S5 remain out of scope. No provider API, credential, customer data, deployment or push was used, and this is not live CVF governance proof.
+
+## Addendum: Repair round 1 (R006-R1 local-only caveat visibility)
+
+**Entry:** Codex REVIEW of `61a775a` (`docs/reviews/CCMAI_RUNTIME_006_INDEPENDENT_REVIEW_2026-09-27.md`, committed at `3b31aeb`) accepted the backend, API and export work. It returned `CHANGES_REQUIRED` for R006-R1 only: `results_source_note` was visible only inside the Job Detail dialog, not on the primary table and card views. Claude recorded `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` in the active handoff before editing.
+
+**Change:** `frontend/src/views/Jobs/JobDetail.vue` only. A `v-alert` (info, tonal) showing the existing bilingual `results_source_note` is placed inside the results tab, directly after the filter/toolbar row and before the table/card switch. It renders whenever result groups are shown (`v-if="filteredGroupedResults.length"`), so it is visible in both views, including classification and QC tables and cards. Status badges and the dialog note are unchanged. There is no change to status computation, backend, i18n keys, store or any other product behavior.
+
+**Placement by source inspection** (`grep -n` line numbers after the edit):
+
+```text
+284  <div v-if="activeTab === 'results'">                 results tab
+341  {{ $t('results_source_note') }}                      new always-visible note (alert opens at line 340)
+344  <div v-if="!filteredGroupedResults.length" ...>      empty state
+348  <div v-else-if="viewMode === 'table' && isClassification">
+378  <div v-else-if="viewMode === 'table'">               QC table
+423  <v-card v-for="group in paginatedResults" ...>       card view
+640  dialog note (unchanged)
+```
+
+**Verification:**
+
+```text
+frontend: npx vitest run src/__tests__/i18n.spec.ts                        8/8 PASS (label keys incl. results_source_note, grouping)
+frontend: npm run build (vue-tsc -b && vite build)                         PASS
+git diff --check                                                           clean
+scripts/manage_cvf_downstream_catalog.ps1 -Check                           PASS
+check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .                   PASS 25/25
+```
+
+No backend source changed, so the backend suite was not re-run this round; the prior run and Codex's independent run stand. The placement is checked by source inspection and the type-checked build, not by a rendered-component test; no component-mount test exists for this view. No provider API, credential, channel sync, customer data, database, deployment or push was used, and no upstream-completeness or live-governance claim is made. Status: `REVIEW_PENDING` for Codex re-review.
