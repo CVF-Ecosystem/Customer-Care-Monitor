@@ -100,3 +100,28 @@ The four committed `app-*.png` files and `report-app.json` in `assets/ux-000-202
 While investigating UX-06, I found that the backend scheduler syncs every active channel 5 minutes after start and every tick after that, including the imported demo channels. Most screenshot runs finished inside that first 5-minute window; the two kept-environment diagnostic runs lived longer. The sync attempt was checked on an isolated run: it fails at credential decryption (`sync error: decrypt failed: … cipher: message authentication failed`), because demo channels store the plaintext `{"demo":true}` as credentials. So no HTTP request to Zalo, Facebook or Pancake is reached. The earlier runs therefore made no outbound call either, but that was a property of the demo data, not of the tool.
 
 Hardening in `scripts/ui-screenshots/compose.yml` (UX-000 scope): the `app` service uses `dns: [127.0.0.1]`. External hostnames fail to resolve (`nslookup graph.facebook.com` → SERVFAIL; `wget https://openapi.zalo.me/` → bad address), while Docker's embedded DNS still resolves the `db` service. The app and capture run normally (9 desktop pages, 0 JS errors). This blocks name-based egress, which all channel adapters and AI providers use. It is not a firewall against raw IP connections.
+
+## Repair round 1 — UX000-R1 (Claude, `REPAIR_WORKER`, 2026-09-28)
+
+**Finding** ([independent review](./UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md)): three `DefaultLayout.vue` avatars forced `text-white` initials on the dark theme's light `primary`/`secondary` fills (about 2.2:1). This was recorded above as F2.
+
+**Change** (within the work-order addendum; three class swaps only): the tenant avatar (`color="secondary"`) now uses `on-secondary`, and both user avatars (`color="primary"`, expanded and rail) use `on-primary`, instead of `text-white`. Vuetify emits theme on-colors as `.on-<name>` utility classes (checked in `vuetify/lib/composables/theme.js`). The tokens set those colors explicitly (UX-000 deviation 2). Avatar size, click-to-open profile, rail logic and theme persistence are unchanged.
+
+**Tests.** New `frontend/src/__tests__/layout-avatars.spec.ts` (6 tests) reads the layout source (`?raw`). It asserts exactly three avatars, each with `on-<fill>` and no `text-white`. It checks `on-primary`/`primary` and `on-secondary`/`secondary` at ≥ 4.5:1 in light and dark, and records that white on the dark primary fails. Mutation check: against the pre-repair `DefaultLayout.vue` (stashed), the markup test fails (1 failed, 5 passed); source restored.
+
+**Gates.** `npx vue-tsc -b --force` exit 0; `npm run build` pass; `npm test` 8 files / 92 passed; `git diff --check` clean; catalog `-Check` PASS; workspace doctor 25/25.
+
+**Rendered check** (disposable app, isolated DNS, synthetic demo; removed afterwards, persistent `ccma` untouched). `ui-screenshots.ps1 -Mode app`: 36 pages, 0 JS errors, 0 overflow, no external requests. A scratch CDP script (not committed) opened the states in which avatars are visible (expanded drawer, rail mode, mobile drawer) and read computed colors from the DOM:
+
+| Theme | State | Avatar | Rendered contrast |
+|---|---|---|---|
+| dark | desktop expanded / mobile drawer | user, `on-primary` `#0F1217` on `#9AA6F0` | 8.12:1 |
+| dark | desktop rail | tenant, `on-secondary` `#0F1217` on `#A3ABB8`; user | 8.11:1; 8.12:1 |
+| light | desktop expanded / mobile drawer | user, `#FFFFFF` on `#3342A8` | 8.45:1 |
+| light | desktop rail | tenant, `#FFFFFF` on `#5B6470`; user | 6.00:1; 8.45:1 |
+
+Evidence: [`assets/ux-000-r1-2026-09-28/`](./assets/ux-000-r1-2026-09-28/) (`avatar-*--dark/light.png`, `avatar-contrast.json`, dark dashboard desktop/mobile, `report-app.json`).
+
+![Mobile drawer, dark: dark initials on the light primary avatar](./assets/ux-000-r1-2026-09-28/avatar-mobile-drawer--dark.png)
+
+F1 (onboarding banner light in dark mode) stays with the Dashboard screen tranche, as the review directed. Status: `REVIEW_PENDING` for Codex re-review; no self-approval or FREEZE. UX-010 not built.

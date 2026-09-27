@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude: repair UX000-R1 avatar contrast within the UX-000 work-order addendum, return a local REVIEW_PENDING repair commit for Codex. UX-002 and UX-001a independently REVIEW_PASS; UX-001a remains stacked on UX-000. UX-010 work order/BUILD wait for UX-000 re-review PASS. Decisions recorded: preserve dashboard issues and add qc_violation_count in a separate R2 API tranche; skip explicitly marked demo channels in a separate R2 runtime tranche; accept UX-010 latest-run default with visible all-runs selector and scope labels. R001-R009 remain REVIEW PASS / FREEZE open and S1 IN_PROGRESS. No push, no FREEZE.",
+  "nextAllowedMove": "Codex: independently re-review CCMAI-UX-000 repair round 1 (UX000-R1 avatar on-colors; evidence appended to docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md). UX-002 and UX-001a are REVIEW PASS; UX-010 work order/BUILD wait for UX-000 PASS. Recorded decisions: preserve dashboard issues and add qc_violation_count in a separate R2 API tranche; skip explicitly marked demo channels in a separate R2 runtime tranche; UX-010 latest-run default with all-runs selector, scope labels and an export button labelled for all runs. R001-R009 remain REVIEW PASS / FREEZE open and S1 IN_PROGRESS. No push, no FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex after independent R2 REVIEW; Claude next REPAIR_WORKER for UX000-R1)",
+  "activeRole": "REVIEWER (Codex) next for UX000-R1; Claude REPAIR_WORKER done",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

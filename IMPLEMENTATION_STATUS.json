@@ -19,7 +19,8 @@
     "CCMAI-UX-001a REVIEW PASS / FREEZE OPEN, stacked on UX-000: relative time, demo timestamps, card/tag wording and Vietnam-day trend passed independent source/tests/capture review. UX-000 remains CHANGES_REQUIRED."
   ],
   "buildInProgress": [
-    "CCMAI-UX-000 independent REVIEW CHANGES_REQUIRED (UX000-R1): three DefaultLayout avatar initials remain forced white on the new light dark-theme fills. Claude repair and Codex re-review pending; no FREEZE."
+    "CCMAI-UX-000 independent REVIEW CHANGES_REQUIRED (UX000-R1): three DefaultLayout avatar initials remain forced white on the new light dark-theme fills. Claude repair and Codex re-review pending; no FREEZE.",
+    "CCMAI-UX-000 repair round 1 (UX000-R1) REVIEW_PENDING (Claude): layout avatar initials use theme on-primary/on-secondary instead of forced white; rendered contrast 8.1:1 dark and at least 6.0:1 light; new mutation-checked avatar test; 92 frontend tests pass. Awaiting Codex re-review; UX-010 still not built."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",

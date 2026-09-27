@@ -1,0 +1,94 @@
+[
+  {
+    "theme": "dark",
+    "state": "desktop-expanded",
+    "avatars": [
+      {
+        "text": "U",
+        "spanClass": "on-primary text-caption",
+        "fg": "rgb(15, 18, 23)",
+        "bg": "rgb(154, 166, 240)",
+        "ratio": 8.12
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "state": "desktop-rail",
+    "avatars": [
+      {
+        "text": "C",
+        "spanClass": "on-secondary text-caption",
+        "fg": "rgb(15, 18, 23)",
+        "bg": "rgb(163, 171, 184)",
+        "ratio": 8.11
+      },
+      {
+        "text": "U",
+        "spanClass": "on-primary text-caption",
+        "fg": "rgb(15, 18, 23)",
+        "bg": "rgb(154, 166, 240)",
+        "ratio": 8.12
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "state": "mobile-drawer",
+    "avatars": [
+      {
+        "text": "U",
+        "spanClass": "on-primary text-caption",
+        "fg": "rgb(15, 18, 23)",
+        "bg": "rgb(154, 166, 240)",
+        "ratio": 8.12
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "state": "desktop-expanded",
+    "avatars": [
+      {
+        "text": "U",
+        "spanClass": "on-primary text-caption",
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(51, 66, 168)",
+        "ratio": 8.45
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "state": "desktop-rail",
+    "avatars": [
+      {
+        "text": "C",
+        "spanClass": "on-secondary text-caption",
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(91, 100, 112)",
+        "ratio": 6
+      },
+      {
+        "text": "U",
+        "spanClass": "on-primary text-caption",
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(51, 66, 168)",
+        "ratio": 8.45
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "state": "mobile-drawer",
+    "avatars": [
+      {
+        "text": "U",
+        "spanClass": "on-primary text-caption",
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(51, 66, 168)",
+        "ratio": 8.45
+      }
+    ]
+  }
+]

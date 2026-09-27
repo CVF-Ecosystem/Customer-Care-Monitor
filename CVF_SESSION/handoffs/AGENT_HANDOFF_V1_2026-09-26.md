@@ -7,9 +7,14 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex after independent R2 REVIEW; Claude next REPAIR_WORKER for UX000-R1). UX-002 and UX-001a are REVIEW PASS; UX-000 is CHANGES_REQUIRED.
-- Next allowed move: Claude repairs UX000-R1 avatar contrast within the UX-000 work-order addendum and returns a local REVIEW_PENDING commit for Codex re-review. UX-010 work order/BUILD wait for UX-000 PASS. Separate R2 backend/API and runtime work orders cover UX-02 and UX-06. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
+- Active role: REPAIR_WORKER (Claude) done for UX000-R1; next REVIEWER (Codex). UX-002 and UX-001a are REVIEW PASS; UX-000 repair round 1 is REVIEW_PENDING.
+- Next allowed move: Codex re-reviews the UX000-R1 repair commit. UX-010 work order/BUILD wait for UX-000 PASS. Separate R2 backend/API and runtime work orders cover UX-02 and UX-06. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## Repair: CCMAI-UX-000 UX000-R1
+
+- Claude CVF Agent Declaration and role transition (2026-09-28, rehydrated from files at `9133729`): project Customer-Care-Monitor-AI; CVF core `../.Controlled-Vibe-Framework-CVF` @ `19386f64e6bc36d1dcdbadca6ff97253feefb1bf`; phase REVIEW (`CHANGES_REQUIRED`) → same-scope repair UX000-R1; risk ceiling R2; live evidence YES (no governance claim, no provider); active handoff this file; parked checkpoint none; `BOOTSTRAP_MIGRATION_PENDING` non-blocking. State, handoff, review and work-order addendum agree. Role transition REVIEWER (Codex) → REPAIR_WORKER (Claude). First repair round for an independent finding. UX-010 is not built.
+- Repair result: three `DefaultLayout.vue` avatar spans now use `on-secondary`/`on-primary` instead of `text-white`; new `layout-avatars.spec.ts` (6 tests) fails against the pre-repair layout and passes after; vue-tsc/build pass; 92 frontend tests; rendered DOM contrast 8.1:1 in dark and at least 6.0:1 in light across expanded, rail and mobile-drawer states; 36 app captures with 0 JS errors; disposable env removed, `ccma` untouched. Evidence appended to `docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md`. Route REPAIR_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude, local only). REVIEW_PENDING for Codex; no FREEZE.
 
 ## Codex independent overnight UI REVIEW (2026-09-28)
 
