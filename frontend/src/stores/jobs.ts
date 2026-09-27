@@ -36,6 +36,48 @@ export interface JobRun {
   error_message: string
 }
 
+export type SourceIntegrityStatus =
+  | 'changed_since_analysis'
+  | 'verification_unavailable'
+  | 'legacy_unverified'
+  | 'bound_currentness_unverified'
+
+// Most concerning first, so a group's badges can never lead with a reassuring state.
+export const SOURCE_INTEGRITY_ORDER: SourceIntegrityStatus[] = [
+  'changed_since_analysis',
+  'verification_unavailable',
+  'legacy_unverified',
+  'bound_currentness_unverified',
+]
+
+// Every distinct status among a group's results, in SOURCE_INTEGRITY_ORDER.
+// A missing or unknown value counts as unavailable rather than being dropped.
+export function distinctSourceIntegrity(results: { source_integrity_status?: string }[]): SourceIntegrityStatus[] {
+  const present = new Set<string>(
+    results.map((r) =>
+      SOURCE_INTEGRITY_ORDER.includes(r.source_integrity_status as SourceIntegrityStatus)
+        ? (r.source_integrity_status as string)
+        : 'verification_unavailable',
+    ),
+  )
+  return SOURCE_INTEGRITY_ORDER.filter((s) => present.has(s))
+}
+
+// Same i18n keys as the aggregate Results page, so both surfaces read alike.
+export const SOURCE_INTEGRITY_LABEL_KEY: Record<SourceIntegrityStatus, string> = {
+  changed_since_analysis: 'results_source_changed',
+  verification_unavailable: 'results_source_unavailable',
+  legacy_unverified: 'results_source_legacy',
+  bound_currentness_unverified: 'results_source_unverified',
+}
+
+export const SOURCE_INTEGRITY_STYLE: Record<SourceIntegrityStatus, { color: string; icon: string }> = {
+  changed_since_analysis: { color: 'error', icon: 'mdi-alert-circle' },
+  verification_unavailable: { color: 'warning', icon: 'mdi-help-circle' },
+  legacy_unverified: { color: 'grey', icon: 'mdi-clock-outline' },
+  bound_currentness_unverified: { color: 'grey-lighten-1', icon: 'mdi-shield-alert-outline' },
+}
+
 export interface JobResult {
   id: string
   job_run_id: string
@@ -48,6 +90,8 @@ export interface JobResult {
   // Model-reported and uncalibrated when present; null means unknown, never 0 or 100%.
   confidence: number | null
   confidence_basis: 'unavailable' | 'model_reported_uncalibrated'
+  // Local comparison against current chat data only; never proof of upstream freshness.
+  source_integrity_status: SourceIntegrityStatus
   created_at: string
   conversation_date?: string
   customer_name?: string

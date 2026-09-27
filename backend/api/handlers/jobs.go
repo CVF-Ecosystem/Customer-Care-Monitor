@@ -503,60 +503,134 @@ func TestOutput(c *gin.Context) {
 	}
 }
 
+// JobResultWithIntegrity is a job result plus its read-time, local-only
+// source-integrity status (CCMAI-RUNTIME-004 semantics). R005 confidence
+// fields are carried unchanged by the embedded JobResult.
+type JobResultWithIntegrity struct {
+	models.JobResult
+	SourceIntegrityStatus string `json:"source_integrity_status"`
+}
+
 func ListJobResults(c *gin.Context) {
 	tenantID := middleware.GetTenantID(c)
 	runID := c.Param("runId")
 
 	var results []models.JobResult
-	db.DB.Where("job_run_id = ? AND tenant_id = ?", runID, tenantID).
-		Order("created_at DESC").Find(&results)
-
-	c.JSON(http.StatusOK, results)
-}
-
-// JobResultWithConvDate extends JobResult with the conversation's start date and customer name.
-type JobResultWithConvDate struct {
-	models.JobResult
-	ConversationDate *time.Time `json:"conversation_date"`
-	CustomerName     string     `json:"customer_name"`
-}
-
-// ListAllJobResults returns all results across all runs for a job.
-func ListAllJobResults(c *gin.Context) {
-	tenantID := middleware.GetTenantID(c)
-	jobID := c.Param("jobId")
-
-	// Get all run IDs for this job
-	var runIDs []string
-	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).
-		Pluck("id", &runIDs)
-
-	if len(runIDs) == 0 {
-		c.JSON(http.StatusOK, []interface{}{})
+	if err := db.DB.Where("job_run_id = ? AND tenant_id = ?", runID, tenantID).
+		Order("created_at DESC").Find(&results).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "query_failed"})
 		return
 	}
 
+	refs := make([]sourceIntegrityRef, len(results))
+	for i, r := range results {
+		refs[i] = sourceIntegrityRef{ConversationID: r.ConversationID, JobRunID: r.JobRunID, AnalysisSnapshotID: r.AnalysisSnapshotID}
+	}
+	statuses, err := computeSourceIntegrity(tenantID, refs)
+	if err != nil {
+		log.Printf("[jobs] source integrity: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "query_failed"})
+		return
+	}
+
+	out := make([]JobResultWithIntegrity, len(results))
+	for i, r := range results {
+		out[i] = JobResultWithIntegrity{JobResult: r, SourceIntegrityStatus: statuses[i]}
+	}
+	c.JSON(http.StatusOK, out)
+}
+
+// JobResultWithConvDate extends JobResult with the conversation's start date,
+// customer name and read-time source-integrity status.
+type JobResultWithConvDate struct {
+	models.JobResult
+	ConversationDate      *time.Time `json:"conversation_date"`
+	CustomerName          string     `json:"customer_name"`
+	SourceIntegrityStatus string     `gorm:"-" json:"source_integrity_status"`
+}
+
+// loadJobResultsWithIntegrity loads every result of the job's runs, newest
+// first, and attaches source_integrity_status. Any query error is returned so
+// callers fail before writing a response body or download headers.
+func loadJobResultsWithIntegrity(tenantID, jobID string) ([]JobResultWithConvDate, error) {
+	var runIDs []string
+	if err := db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).
+		Pluck("id", &runIDs).Error; err != nil {
+		return nil, fmt.Errorf("truy vấn lần chạy: %w", err)
+	}
+	if len(runIDs) == 0 {
+		return []JobResultWithConvDate{}, nil
+	}
+
 	var results []JobResultWithConvDate
-	db.DB.Model(&models.JobResult{}).
+	if err := db.DB.Model(&models.JobResult{}).
 		Select("job_results.*, (SELECT MIN(m.sent_at) FROM messages m WHERE m.conversation_id = job_results.conversation_id) as conversation_date, conversations.customer_name as customer_name").
 		Joins("LEFT JOIN conversations ON conversations.id = job_results.conversation_id").
 		Where("job_results.job_run_id IN ? AND job_results.tenant_id = ?", runIDs, tenantID).
 		Order("job_results.created_at DESC").
-		Find(&results)
+		Find(&results).Error; err != nil {
+		return nil, fmt.Errorf("truy vấn kết quả: %w", err)
+	}
 
+	refs := make([]sourceIntegrityRef, len(results))
+	for i, r := range results {
+		refs[i] = sourceIntegrityRef{ConversationID: r.ConversationID, JobRunID: r.JobRunID, AnalysisSnapshotID: r.AnalysisSnapshotID}
+	}
+	statuses, err := computeSourceIntegrity(tenantID, refs)
+	if err != nil {
+		return nil, err
+	}
+	for i := range results {
+		results[i].SourceIntegrityStatus = statuses[i]
+	}
+	return results, nil
+}
+
+// ListAllJobResults returns all results across all runs for a job.
+func ListAllJobResults(c *gin.Context) {
+	results, err := loadJobResultsWithIntegrity(middleware.GetTenantID(c), c.Param("jobId"))
+	if err != nil {
+		log.Printf("[jobs] list all results: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "query_failed"})
+		return
+	}
 	c.JSON(http.StatusOK, results)
 }
 
 // exportConvRow holds one grouped conversation row for export.
 type exportConvRow struct {
-	CustomerName     string
-	ConversationDate string
-	EvalDate         string
-	Review           string
-	Verdict          string
-	Score            string
-	Issues           string
+	CustomerName          string
+	ConversationDate      string
+	EvalDate              string
+	Review                string
+	Verdict               string
+	Score                 string
+	Issues                string
+	SourceIntegrity       string
+	SourceIntegrityDetail string
 }
+
+// exportIntegrity collects one conversation group's per-result statuses. The
+// export groups every run's results for a conversation, so a group can mix
+// statuses; all distinct ones are shown, most concerning first, plus a
+// per-result "id: label" detail for traceability.
+type exportIntegrity struct {
+	statuses []string
+	details  []string
+}
+
+func (e *exportIntegrity) add(r JobResultWithConvDate) {
+	e.statuses = append(e.statuses, r.SourceIntegrityStatus)
+	e.details = append(e.details, r.ID+": "+sourceIntegrityLabel(r.SourceIntegrityStatus))
+}
+
+func (e *exportIntegrity) summary() string { return distinctSourceIntegrityLabels(e.statuses) }
+func (e *exportIntegrity) detail() string  { return strings.Join(e.details, "; ") }
+
+const (
+	exportIntegrityHeader       = "Tính toàn vẹn nguồn"
+	exportIntegrityDetailHeader = "Chi tiết toàn vẹn nguồn (mã kết quả)"
+)
 
 // buildExportRows groups raw JobResultWithConvDate records by conversation and returns sorted rows.
 func buildExportRows(results []JobResultWithConvDate) []exportConvRow {
@@ -568,6 +642,7 @@ func buildExportRows(results []JobResultWithConvDate) []exportConvRow {
 		verdict          string
 		score            string
 		violations       []string
+		integrity        exportIntegrity
 	}
 	groups := map[string]*convGroup{}
 	order := []string{}
@@ -586,6 +661,7 @@ func buildExportRows(results []JobResultWithConvDate) []exportConvRow {
 			order = append(order, cid)
 		}
 		g := groups[cid]
+		g.integrity.add(r)
 		if r.ResultType == "conversation_evaluation" {
 			verdict := r.Severity
 			if verdict == "PASS" {
@@ -617,106 +693,101 @@ func buildExportRows(results []JobResultWithConvDate) []exportConvRow {
 	for _, cid := range order {
 		g := groups[cid]
 		rows = append(rows, exportConvRow{
-			CustomerName:     g.customerName,
-			ConversationDate: g.conversationDate,
-			EvalDate:         g.evalDate,
-			Review:           g.review,
-			Verdict:          g.verdict,
-			Score:            g.score,
-			Issues:           strings.Join(g.violations, "; "),
+			CustomerName:          g.customerName,
+			ConversationDate:      g.conversationDate,
+			EvalDate:              g.evalDate,
+			Review:                g.review,
+			Verdict:               g.verdict,
+			Score:                 g.score,
+			Issues:                strings.Join(g.violations, "; "),
+			SourceIntegrity:       g.integrity.summary(),
+			SourceIntegrityDetail: g.integrity.detail(),
 		})
 	}
 	return rows
 }
 
-// ExportJobResults returns all results as CSV or XLSX for download.
+// ExportJobResults returns all results as CSV or XLSX for download. Every
+// query (results, source integrity, job type, classification chat text) runs
+// and is checked before any download header or file byte is written.
 func ExportJobResults(c *gin.Context) {
 	tenantID := middleware.GetTenantID(c)
 	jobID := c.Param("jobId")
 	format := c.DefaultQuery("format", "csv")
 
-	var runIDs []string
-	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).
-		Pluck("id", &runIDs)
-
-	var results []JobResultWithConvDate
-	if len(runIDs) > 0 {
-		db.DB.Model(&models.JobResult{}).
-			Select("job_results.*, (SELECT MIN(m.sent_at) FROM messages m WHERE m.conversation_id = job_results.conversation_id) as conversation_date, conversations.customer_name as customer_name").
-			Joins("LEFT JOIN conversations ON conversations.id = job_results.conversation_id").
-			Where("job_results.job_run_id IN ? AND job_results.tenant_id = ?", runIDs, tenantID).
-			Order("job_results.created_at DESC").
-			Find(&results)
+	results, err := loadJobResultsWithIntegrity(tenantID, jobID)
+	if err != nil {
+		log.Printf("[jobs] export results: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "query_failed"})
+		return
 	}
 
-	// Detect job type
 	var jobType string
-	db.DB.Model(&models.Job{}).Where("id = ? AND tenant_id = ?", jobID, tenantID).Pluck("job_type", &jobType)
+	if err := db.DB.Model(&models.Job{}).Where("id = ? AND tenant_id = ?", jobID, tenantID).Pluck("job_type", &jobType).Error; err != nil {
+		log.Printf("[jobs] export job type: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "query_failed"})
+		return
+	}
 
 	if jobType == "classification" {
-		exportClassification(c, results, format)
+		exportClassification(c, tenantID, results, format)
 		return
 	}
 
 	rows := buildExportRows(results)
-	headers := []string{"Tên", "Ngày phát sinh chat", "Ngày đánh giá", "Kết quả đánh giá chi tiết", "Đánh giá", "Điểm", "Vấn đề"}
+	headers := []string{"Tên", "Ngày phát sinh chat", "Ngày đánh giá", "Kết quả đánh giá chi tiết", "Đánh giá", "Điểm", "Vấn đề", exportIntegrityHeader, exportIntegrityDetailHeader}
+	records := make([][]string, 0, len(rows))
+	for _, r := range rows {
+		records = append(records, []string{r.CustomerName, r.ConversationDate, r.EvalDate, r.Review, r.Verdict, r.Score, r.Issues, r.SourceIntegrity, r.SourceIntegrityDetail})
+	}
+	writeJobExport(c, "results", format, headers, records)
+}
 
+func writeJobExport(c *gin.Context, filename, format string, headers []string, records [][]string) {
 	if format == "xlsx" {
-		f := excelize.NewFile()
-		sheet := "Results"
-		f.SetSheetName("Sheet1", sheet)
-		for i, h := range headers {
-			cell, _ := excelize.CoordinatesToCellName(i+1, 1)
-			f.SetCellValue(sheet, cell, h)
-		}
-		for i, r := range rows {
-			row := i + 2
-			f.SetCellValue(sheet, cellName(1, row), r.CustomerName)
-			f.SetCellValue(sheet, cellName(2, row), r.ConversationDate)
-			f.SetCellValue(sheet, cellName(3, row), r.EvalDate)
-			f.SetCellValue(sheet, cellName(4, row), r.Review)
-			f.SetCellValue(sheet, cellName(5, row), r.Verdict)
-			f.SetCellValue(sheet, cellName(6, row), r.Score)
-			f.SetCellValue(sheet, cellName(7, row), r.Issues)
-		}
-		c.Header("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-		c.Header("Content-Disposition", "attachment; filename=results.xlsx")
-		f.Write(c.Writer)
+		writeResultsXLSX(c, filename, headers, records)
 		return
 	}
+	writeResultsCSV(c, filename, headers, records)
+}
 
-	// CSV format
-	c.Header("Content-Type", "text/csv; charset=utf-8")
-	c.Header("Content-Disposition", "attachment; filename=results.csv")
-	csvStr := "\xEF\xBB\xBF"
-	csvStr += strings.Join(headers, ",") + "\n"
-	for _, r := range rows {
-		escape := func(s string) string { return `"` + strings.ReplaceAll(s, `"`, `""`) + `"` }
-		csvStr += fmt.Sprintf("%s,%s,%s,%s,%s,%s,%s\n",
-			escape(r.CustomerName), escape(r.ConversationDate), escape(r.EvalDate),
-			escape(r.Review), escape(r.Verdict), escape(r.Score), escape(r.Issues))
+// loadChatTextByConversation reads each conversation's messages as they are
+// now (not the analyzed snapshot), in chunked tenant-scoped batches.
+func loadChatTextByConversation(tenantID string, convIDs []string) (map[string]string, error) {
+	lines := map[string][]string{}
+	for _, chunk := range chunkStrings(convIDs, sourceIntegrityBatchSize) {
+		var messages []models.Message
+		if err := db.DB.Where("tenant_id = ? AND conversation_id IN ?", tenantID, chunk).
+			Order("conversation_id ASC, sent_at ASC, id ASC").Find(&messages).Error; err != nil {
+			return nil, fmt.Errorf("truy vấn nội dung chat: %w", err)
+		}
+		for _, m := range messages {
+			if m.Content == "" {
+				continue
+			}
+			name := m.SenderName
+			if name == "" {
+				name = m.SenderType
+			}
+			lines[m.ConversationID] = append(lines[m.ConversationID], fmt.Sprintf("[%s] %s", name, m.Content))
+		}
 	}
-	c.String(http.StatusOK, csvStr)
+	chat := make(map[string]string, len(lines))
+	for cid, l := range lines {
+		chat[cid] = strings.Join(l, "\n")
+	}
+	return chat, nil
 }
 
 // exportClassification exports classification results with Tags + Issues + Chat content columns.
-func exportClassification(c *gin.Context, results []JobResultWithConvDate, format string) {
-	type classRow struct {
-		CustomerName     string
-		ConversationDate string
-		EvalDate         string
-		Tags             string
-		Issues           string
-		ChatContent      string
-	}
-
+func exportClassification(c *gin.Context, tenantID string, results []JobResultWithConvDate, format string) {
 	type convGroup struct {
 		customerName     string
 		conversationDate string
 		evalDate         string
-		convID           string
 		tags             []string
 		issues           []string
+		integrity        exportIntegrity
 	}
 	groups := map[string]*convGroup{}
 	order := []string{}
@@ -731,11 +802,11 @@ func exportClassification(c *gin.Context, results []JobResultWithConvDate, forma
 			groups[cid] = &convGroup{
 				customerName:     r.CustomerName,
 				conversationDate: convDate,
-				convID:           cid,
 			}
 			order = append(order, cid)
 		}
 		g := groups[cid]
+		g.integrity.add(r)
 		if r.ResultType == "conversation_evaluation" {
 			g.evalDate = r.CreatedAt.Format("2006-01-02 15:04")
 		} else if r.ResultType == "classification_tag" {
@@ -746,76 +817,30 @@ func exportClassification(c *gin.Context, results []JobResultWithConvDate, forma
 		}
 	}
 
-	// Fetch chat messages for each conversation
-	tenantID := middleware.GetTenantID(c)
-	chatMap := map[string]string{}
-	for _, cid := range order {
-		var messages []models.Message
-		db.DB.Where("conversation_id = ? AND tenant_id = ?", cid, tenantID).Order("sent_at ASC").Find(&messages)
-		var lines []string
-		for _, m := range messages {
-			name := m.SenderName
-			if name == "" {
-				name = m.SenderType
-			}
-			if m.Content != "" {
-				lines = append(lines, fmt.Sprintf("[%s] %s", name, m.Content))
-			}
-		}
-		chatMap[cid] = strings.Join(lines, "\n")
-	}
-
-	rows := make([]classRow, 0, len(order))
-	for _, cid := range order {
-		g := groups[cid]
-		rows = append(rows, classRow{
-			CustomerName:     g.customerName,
-			ConversationDate: g.conversationDate,
-			EvalDate:         g.evalDate,
-			Tags:             strings.Join(g.tags, "\n"),
-			Issues:           strings.Join(g.issues, "\n"),
-			ChatContent:      chatMap[cid],
-		})
-	}
-
-	headers := []string{"Tên", "Ngày phát sinh chat", "Ngày đánh giá", "Loại", "Vấn đề", "Nội dung chat"}
-
-	if format == "xlsx" {
-		f := excelize.NewFile()
-		sheet := "Results"
-		f.SetSheetName("Sheet1", sheet)
-		for i, h := range headers {
-			cell, _ := excelize.CoordinatesToCellName(i+1, 1)
-			f.SetCellValue(sheet, cell, h)
-		}
-		for i, r := range rows {
-			row := i + 2
-			f.SetCellValue(sheet, cellName(1, row), r.CustomerName)
-			f.SetCellValue(sheet, cellName(2, row), r.ConversationDate)
-			f.SetCellValue(sheet, cellName(3, row), r.EvalDate)
-			f.SetCellValue(sheet, cellName(4, row), r.Tags)
-			f.SetCellValue(sheet, cellName(5, row), r.Issues)
-			f.SetCellValue(sheet, cellName(6, row), r.ChatContent)
-		}
-		c.Header("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-		c.Header("Content-Disposition", "attachment; filename=classification.xlsx")
-		f.Write(c.Writer)
+	chatMap, err := loadChatTextByConversation(tenantID, order)
+	if err != nil {
+		log.Printf("[jobs] export classification chat: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "query_failed"})
 		return
 	}
 
-	// CSV
-	c.Header("Content-Type", "text/csv; charset=utf-8")
-	c.Header("Content-Disposition", "attachment; filename=classification.csv")
-	csvStr := "\xEF\xBB\xBF"
-	csvStr += strings.Join(headers, ",") + "\n"
-	escape := func(s string) string { return `"` + strings.ReplaceAll(s, `"`, `""`) + `"` }
-	for _, r := range rows {
-		csvStr += fmt.Sprintf("%s,%s,%s,%s,%s,%s\n",
-			escape(r.CustomerName), escape(r.ConversationDate), escape(r.EvalDate),
-			escape(r.Tags), escape(r.Issues), escape(r.ChatContent))
+	headers := []string{"Tên", "Ngày phát sinh chat", "Ngày đánh giá", "Loại", "Vấn đề",
+		exportChatHeader, exportIntegrityHeader, exportIntegrityDetailHeader}
+	records := make([][]string, 0, len(order))
+	for _, cid := range order {
+		g := groups[cid]
+		records = append(records, []string{
+			g.customerName, g.conversationDate, g.evalDate,
+			strings.Join(g.tags, "\n"), strings.Join(g.issues, "\n"), chatMap[cid],
+			g.integrity.summary(), g.integrity.detail(),
+		})
 	}
-	c.String(http.StatusOK, csvStr)
+	writeJobExport(c, "classification", format, headers, records)
 }
+
+// exportChatHeader makes clear the chat text is read at export time and may
+// differ from what was analyzed.
+const exportChatHeader = "Nội dung chat (đọc lúc xuất file, có thể khác bản đã phân tích)"
 
 func cellName(col, row int) string {
 	name, _ := excelize.CoordinatesToCellName(col, row)

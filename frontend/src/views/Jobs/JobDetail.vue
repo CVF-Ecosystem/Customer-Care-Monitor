@@ -348,6 +348,7 @@
                 <th>Ngày chat</th>
                 <th style="min-width: 200px">Loại</th>
                 <th style="min-width: 300px">Đánh giá chi tiết</th>
+                <th>{{ $t('job_source_col') }}</th>
               </tr>
             </thead>
             <tbody>
@@ -356,6 +357,13 @@
                 <td class="text-body-2 text-no-wrap">{{ formatTime(group.conversationDate) }}</td>
                 <td class="text-body-2" style="white-space: pre-line;">{{ group.tags.length ? group.tags.map(t => '- ' + t).join('\n') : group.verdict === 'SKIP' ? 'Bỏ qua' : '—' }}</td>
                 <td class="text-body-2" style="white-space: normal; max-width: 400px;">{{ classificationSummary(group) }}</td>
+                <td class="text-no-wrap">
+                  <v-tooltip v-for="s in group.sourceStatuses" :key="s" :text="$t(SOURCE_INTEGRITY_LABEL_KEY[s])" location="top">
+                    <template #activator="{ props }">
+                      <v-icon v-bind="props" size="small" class="mr-1" :color="SOURCE_INTEGRITY_STYLE[s].color" :aria-label="$t(SOURCE_INTEGRITY_LABEL_KEY[s])">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>
+                    </template>
+                  </v-tooltip>
+                </td>
               </tr>
             </tbody>
           </v-table>
@@ -372,6 +380,7 @@
                 <th style="max-width: 300px">Đánh giá</th>
                 <th>Điểm</th>
                 <th>Vấn đề</th>
+                <th>{{ $t('job_source_col') }}</th>
               </tr>
             </thead>
             <tbody>
@@ -393,6 +402,13 @@
                   <span v-else class="text-grey">—</span>
                 </td>
                 <td class="text-body-2">{{ group.violations.length > 0 ? group.violations.length + ' vấn đề' : '—' }}</td>
+                <td class="text-no-wrap">
+                  <v-tooltip v-for="s in group.sourceStatuses" :key="s" :text="$t(SOURCE_INTEGRITY_LABEL_KEY[s])" location="top">
+                    <template #activator="{ props }">
+                      <v-icon v-bind="props" size="small" class="mr-1" :color="SOURCE_INTEGRITY_STYLE[s].color" :aria-label="$t(SOURCE_INTEGRITY_LABEL_KEY[s])">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>
+                    </template>
+                  </v-tooltip>
+                </td>
               </tr>
             </tbody>
           </v-table>
@@ -415,6 +431,11 @@
                     <v-chip v-for="tag in group.tags" :key="tag" size="x-small" :color="tagColor(tag)" variant="tonal">{{ tag }}</v-chip>
                   </div>
                   <div v-if="classificationSummary(group) !== '—'" class="text-caption text-grey-darken-1 mt-1" style="max-width: 600px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{ classificationSummary(group) }}</div>
+                  <div class="d-flex flex-wrap ga-1 mt-1">
+                    <v-chip v-for="s in group.sourceStatuses" :key="s" size="x-small" :color="SOURCE_INTEGRITY_STYLE[s].color" variant="tonal">
+                      <v-icon start size="12">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>{{ $t(SOURCE_INTEGRITY_LABEL_KEY[s]) }}
+                    </v-chip>
+                  </div>
                 </div>
               </template>
               <!-- QC card header -->
@@ -428,6 +449,11 @@
                     <span class="text-caption text-grey">{{ formatTime(group.conversationDate) }}</span>
                   </div>
                   <div v-if="group.review" class="text-caption text-grey-darken-1 mt-1" style="max-width: 600px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{ group.review }}</div>
+                  <div class="d-flex flex-wrap ga-1 mt-1">
+                    <v-chip v-for="s in group.sourceStatuses" :key="s" size="x-small" :color="SOURCE_INTEGRITY_STYLE[s].color" variant="tonal">
+                      <v-icon start size="12">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>{{ $t(SOURCE_INTEGRITY_LABEL_KEY[s]) }}
+                    </v-chip>
+                  </div>
                 </div>
                 <v-chip v-if="group.score != null" size="x-small" :color="group.score >= 80 ? 'success' : group.score >= 50 ? 'warning' : 'error'" variant="tonal" class="mr-2">
                   {{ group.score }}/100
@@ -597,12 +623,16 @@
           </v-chip>
           <span class="text-body-1 font-weight-bold">{{ dialogGroup.customerName || dialogGroup.conversationId.substring(0, 8) + '...' }}</span>
           <span class="text-caption text-grey ml-2">{{ formatTime(dialogGroup.conversationDate) }}</span>
+          <v-chip v-for="s in dialogGroup.sourceStatuses" :key="s" size="x-small" :color="SOURCE_INTEGRITY_STYLE[s].color" variant="tonal" class="ml-2">
+            <v-icon start size="12">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>{{ $t(SOURCE_INTEGRITY_LABEL_KEY[s]) }}
+          </v-chip>
           <v-chip v-if="dialogGroup.score != null" size="x-small" :color="dialogGroup.score >= 80 ? 'success' : dialogGroup.score >= 50 ? 'warning' : 'error'" variant="tonal" class="ml-auto">
             {{ dialogGroup.score }}/100
           </v-chip>
         </v-card-title>
         <v-divider />
         <v-card-text class="pa-4">
+          <v-alert type="info" variant="tonal" density="compact" class="mb-3 text-caption">{{ $t('results_source_note') }}</v-alert>
           <v-row>
             <v-col cols="12" md="7">
               <div class="d-flex align-center mb-2">
@@ -728,7 +758,7 @@
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
-import { useJobStore, type JobResult } from '../../stores/jobs'
+import { useJobStore, type JobResult, type SourceIntegrityStatus, distinctSourceIntegrity, SOURCE_INTEGRITY_LABEL_KEY, SOURCE_INTEGRITY_STYLE } from '../../stores/jobs'
 import { useAuthStore } from '../../stores/auth'
 import api from '../../api'
 import { Line } from 'vue-chartjs'
@@ -969,6 +999,8 @@ interface ConversationGroup {
   review: string
   violations: JobResult[]
   tags: string[]
+  // Every distinct source-integrity status among the displayed results; a mixed group shows all of them.
+  sourceStatuses: SourceIntegrityStatus[]
 }
 
 async function toggleExpand(id: string) {
@@ -1039,9 +1071,12 @@ const groupedResults = computed<ConversationGroup[]>(() => {
   }
 
   const groups = new Map<string, ConversationGroup>()
+  const members = new Map<string, JobResult[]>()
   for (const r of results) {
     const cid = r.conversation_id
     if (r.job_run_id !== latestRunPerConv.get(cid)) continue
+    if (!members.has(cid)) members.set(cid, [])
+    members.get(cid)!.push(r)
 
     if (!groups.has(cid)) {
       groups.set(cid, {
@@ -1053,6 +1088,7 @@ const groupedResults = computed<ConversationGroup[]>(() => {
         review: '',
         violations: [],
         tags: [],
+        sourceStatuses: [],
       })
     }
     const g = groups.get(cid)!
@@ -1074,6 +1110,8 @@ const groupedResults = computed<ConversationGroup[]>(() => {
       g.violations.push(r)
     }
   }
+
+  for (const [cid, g] of groups) g.sourceStatuses = distinctSourceIntegrity(members.get(cid) || [])
 
   return Array.from(groups.values()).sort((a, b) => {
     return b.conversationDate.localeCompare(a.conversationDate)

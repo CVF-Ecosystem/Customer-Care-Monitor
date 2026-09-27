@@ -375,4 +375,5 @@ export default {
   results_source_unavailable: 'Could not verify',
   results_source_unverified: 'Not fully verified',
   results_source_note: 'This is a local comparison against current data only — it does not guarantee the full edit or deletion history at the source was checked.',
+  job_source_col: 'Source',
 }

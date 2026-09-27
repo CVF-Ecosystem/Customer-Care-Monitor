@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-006 SPEC and R2 work order are ready. Claude may rehydrate continuity, acknowledge WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) in the active handoff, then BUILD only the job-result source-integrity scope in docs/work_orders/CCMAI_RUNTIME_006.md and return one local evidence commit as REVIEW_PENDING for independent Codex review. S1 remains IN_PROGRESS; R001-R005 are REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-006 BUILD is complete as a local commit, REVIEW_PENDING. Job-result JSON endpoints, the QC/classification CSV/XLSX job exports and Job Detail now carry R004 local source-integrity status via one shared, chunked, tenant-scoped evaluator (the aggregate Results page is unchanged). Mixed groups show every distinct status, and query failures return a JSON 500 before any file bytes. Codex is next as independent REVIEWER. S1 remains IN_PROGRESS; R001-R005 remain REVIEW PASS / FREEZE open. No real provider call, channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 implementation or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER (Claude) for CCMAI-RUNTIME-006",
+  "activeRole": "COMMIT_STEWARD (Claude, CCMAI-RUNTIME-006 BUILD committed); next REVIEWER (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER (Claude) for `CCMAI-RUNTIME-006`
-- Next allowed move: Claude may acknowledge `WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude)` and BUILD only `docs/work_orders/CCMAI_RUNTIME_006.md`, then return one local evidence commit as REVIEW_PENDING. `CCMAI-RUNTIME-001/002/003/004/005` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-006` BUILD committed); next REVIEWER (Codex)
+- Next allowed move: Codex independently reviews the `CCMAI-RUNTIME-006` BUILD commit (job-result source integrity; evidence `docs/reviews/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_BUILD_2026-09-27.md`). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001/002/003/004/005` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -203,6 +203,20 @@ CVF controls the application runtime or that a provider-backed test passed.
 
 - Owner “next” after R005 independent REVIEW PASS opens a bounded S1 continuation. Source audit found `backend/api/handlers/jobs.go`'s `ListJobResults`, `ListAllJobResults` and QC/classification `ExportJobResults` return findings without R004's `source_integrity_status`; `JobDetail.vue` likewise shows no source-change warning, and classification export reads current chat text without distinguishing it from the analyzed snapshot. S1 closure is not ready on this presentation surface. R001–R005 REVIEW evidence is inherited; all FREEZE decisions remain open.
 - Role transition acknowledged (2026-09-27): `ORCHESTRATOR (Codex) -> SPEC_AUTHOR (Codex) -> WORK_ORDER_AUTHOR (Codex)`. DESIGN reuses R004's four local-only statuses and batched tenant-scoped verification, with distinct statuses for grouped exports and no mutation/provider call. SPEC: `docs/specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md`; R2 work order: `docs/work_orders/CCMAI_RUNTIME_006.md`. Claude is next `IMPLEMENTATION_WORKER` after rehydration and handoff acknowledgment, then returns one local BUILD/evidence commit to independent Codex REVIEW. This planning record adds no source BUILD, real-channel proof, provider/governance claim, persistent DB effect, deployment, push, S2/S3/S5 or FREEZE authority.
+- Role transition acknowledged (2026-09-27): `WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude)`. Continuity was rehydrated at `c24ec4f` from `.cvf/manifest.json`, `.cvf/policy.json`, `CVF_SESSION/ACTIVE_SESSION_STATE.json`, this handoff, `CVF_SESSION_MEMORY.md`, `IMPLEMENTATION_STATUS.json`, `docs/INDEX.md`, `docs/specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md` and `docs/work_orders/CCMAI_RUNTIME_006.md`. All sources agree; R005 is REVIEW PASS; no `BLOCKED_CONTINUITY_DRIFT`. Scope is exactly the work order's allowed paths (`jobs.go`, `results.go`, one shared helper and focused tests in `backend/api/handlers/`, `JobDetail.vue`, `stores/jobs.ts`, `i18n/vi.ts`/`en.ts`, and the directly relevant frontend test if present) plus evidence/continuity. Engine source is reused, not edited. No provider call, customer data, persistent Compose DB change, deploy, push, S2/S3/S5 or FREEZE.
+- BUILD result (no path addition needed).
+  - **Shared evaluator:** R004's evaluator is extracted to `backend/api/handlers/source_integrity.go` (`computeSourceIntegrity`: same provenance/comparison/status/error behavior, with IN lists chunked at 500). `results.go` now wraps it, and aggregate Results behavior and tests are unchanged.
+  - **JSON endpoints:** `ListJobResults` / `ListAllJobResults` return `source_integrity_status` per result. Every query error is checked and returns a JSON 500 before any success body. R005 confidence fields pass through.
+  - **Exports:** QC and classification exports add `Tính toàn vẹn nguồn` (every distinct status in the grouped conversation, most concerning first, never collapsed) and `Chi tiết toàn vẹn nguồn (mã kết quả)` (per-result traceability). The classification chat header states the text is read at export time. The chat read is batched instead of one query per conversation. All queries are checked before headers or bytes, and the CSV/XLSX writers are shared (CSV header cells are now quoted).
+  - **Job Detail:** the "Source" column in both tables, chips in both card headers, and chips plus the always-visible local-only note in the dialog. Every distinct status of the group is shown, via the pure `distinctSourceIntegrity` helper in `stores/jobs.ts`. New i18n key `job_source_col`.
+  - Evidence: `docs/reviews/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_BUILD_2026-09-27.md`.
+- BUILD validation.
+  - **Tests (disposable `mysql:8.0`, `golang:1.26-alpine`; host Application Control is still not bypassed):** focused endpoint, export (QC and classification × CSV and XLSX; mixed, legacy, corrupt, cross-tenant, tenant isolation) and forced `analysis_snapshots` / `messages` failure tests PASS, along with all R004 aggregate tests. `go test ./... -count=1 -p 1` passed all 13 packages.
+  - **Non-vacuity:** a mutation collapsing mixed groups made 3 assertions fail, and pre-change `jobs.go` makes the new tests fail to compile.
+  - **Frontend:** vitest 8/8 and `npm run build` PASS.
+  - **Checks:** gofmt, `git diff --check`, catalog `-Check` and doctor 25/25 all clean.
+  - **Cleanup:** container and network removed; persistent Compose `ccma` untouched.
+- Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. No FREEZE, S1 closure, S2/S3/S5 or upstream-freshness claim.
 
 ## Active Tranche: CCMAI-DOCS-001
 

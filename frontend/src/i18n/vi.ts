@@ -375,4 +375,5 @@ export default {
   results_source_unavailable: 'Không xác minh được',
   results_source_unverified: 'Chưa xác minh đầy đủ',
   results_source_note: 'So sánh cục bộ với dữ liệu hiện tại, không đảm bảo đã kiểm tra hết lịch sử chỉnh sửa hoặc xóa ở nguồn.',
+  job_source_col: 'Nguồn',
 }

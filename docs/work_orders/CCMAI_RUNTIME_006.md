@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-006 — S1 job-result source integrity
 
-**State:** `WORK_ORDER_READY` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md), and accepted R004/R005 reviews.
+**State:** `REVIEW_PENDING` after BUILD (local commit; no path addition) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, next) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md), and accepted R004/R005 reviews.
 
 ## Entry and role route
 

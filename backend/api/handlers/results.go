@@ -303,67 +303,21 @@ func (f resultFilter) fetchRows(limit, offset int) ([]resultRow, error) {
 }
 
 // attachSourceIntegrity computes CCMAI-RUNTIME-004's source_integrity_status
-// for every row, in at most two additional tenant-scoped batched queries
-// (linked snapshots, then their conversations' current messages) — never one
-// query per row. It never mutates a result, snapshot or message; a row-local
-// problem (broken link, malformed manifest, or a snapshot whose own digest,
-// tenant, conversation, job-run or message count does not match what it
-// claims — see engine.VerifySnapshotProvenance) becomes
-// engine.SourceIntegrityVerificationUnavailable rather than a false
-// "unchanged," while a batch query failure here fails the whole request so
-// the caller doesn't have to guess which page rows were actually checked.
+// for every row via the shared computeSourceIntegrity (source_integrity.go):
+// tenant-scoped batched reads, never one query per row, and a batch query
+// failure fails the whole request so the caller never guesses which page rows
+// were actually checked.
 func (f resultFilter) attachSourceIntegrity(rows []resultRow) error {
-	snapshotIDs := make([]string, 0, len(rows))
-	seenSnapshot := map[string]bool{}
-	convIDs := make([]string, 0, len(rows))
-	seenConv := map[string]bool{}
-	for _, r := range rows {
-		if r.AnalysisSnapshotID == nil || *r.AnalysisSnapshotID == "" {
-			continue
-		}
-		if !seenSnapshot[*r.AnalysisSnapshotID] {
-			seenSnapshot[*r.AnalysisSnapshotID] = true
-			snapshotIDs = append(snapshotIDs, *r.AnalysisSnapshotID)
-		}
-		if !seenConv[r.ConversationID] {
-			seenConv[r.ConversationID] = true
-			convIDs = append(convIDs, r.ConversationID)
-		}
-	}
-
-	snapshotByID := map[string]models.AnalysisSnapshot{}
-	if len(snapshotIDs) > 0 {
-		var snaps []models.AnalysisSnapshot
-		if err := db.DB.Where("tenant_id = ? AND id IN ?", f.tenantID, snapshotIDs).Find(&snaps).Error; err != nil {
-			return fmt.Errorf("truy vấn snapshot: %w", err)
-		}
-		for _, s := range snaps {
-			snapshotByID[s.ID] = s
-		}
-	}
-
-	messagesByConv := map[string][]models.Message{}
-	if len(convIDs) > 0 {
-		var msgs []models.Message
-		if err := db.DB.Where("tenant_id = ? AND conversation_id IN ?", f.tenantID, convIDs).Find(&msgs).Error; err != nil {
-			return fmt.Errorf("truy vấn tin nhắn: %w", err)
-		}
-		for _, m := range msgs {
-			messagesByConv[m.ConversationID] = append(messagesByConv[m.ConversationID], m)
-		}
-	}
-
+	refs := make([]sourceIntegrityRef, len(rows))
 	for i, r := range rows {
-		if r.AnalysisSnapshotID == nil || *r.AnalysisSnapshotID == "" {
-			rows[i].SourceIntegrityStatus = engine.SourceIntegrityLegacyUnverified
-			continue
-		}
-		snap, ok := snapshotByID[*r.AnalysisSnapshotID]
-		if !ok || !engine.VerifySnapshotProvenance(snap, f.tenantID, r.ConversationID, r.JobRunID) {
-			rows[i].SourceIntegrityStatus = engine.SourceIntegrityVerificationUnavailable
-			continue
-		}
-		rows[i].SourceIntegrityStatus = engine.CompareSnapshotToCurrentMessages(snap.Manifest, messagesByConv[r.ConversationID])
+		refs[i] = sourceIntegrityRef{ConversationID: r.ConversationID, JobRunID: r.JobRunID, AnalysisSnapshotID: r.AnalysisSnapshotID}
+	}
+	statuses, err := computeSourceIntegrity(f.tenantID, refs)
+	if err != nil {
+		return err
+	}
+	for i := range rows {
+		rows[i].SourceIntegrityStatus = statuses[i]
 	}
 	return nil
 }
