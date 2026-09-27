@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-003 — S1 replayed message integrity
 
-**State:** `REPAIR_READY_FOR_ASSIGNEE_ACK` after independent REVIEW `CHANGES_REQUIRED` · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** user “tiếp tục” after Gate B REVIEW PASS, `docs/specs/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_2026-09-27.md`, and `docs/reviews/CCMAI_RUNTIME_003_INDEPENDENT_REVIEW_2026-09-27.md`.
+**State:** `REVIEW_PASS / FREEZE_OPEN` after repair round 1 · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** user “tiếp tục” after Gate B REVIEW PASS, `docs/specs/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_2026-09-27.md`, and `docs/reviews/CCMAI_RUNTIME_003_REPAIR_R1_REREVIEW_2026-09-27.md`.
 
 ## Entry and role route
 
