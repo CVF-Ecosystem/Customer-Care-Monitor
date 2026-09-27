@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-008 — manual sync configuration admission
 
-**State:** `REVIEW_PENDING` after BUILD (local commit; no path addition) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, next) · **Authority:** owner “tiếp”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_2026-09-27.md), and accepted R007 review.
+**State:** `REVIEW_PASS / FREEZE_OPEN` after independent review of `edc6323` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, [PASS](../reviews/CCMAI_RUNTIME_008_INDEPENDENT_REVIEW_2026-09-28.md)) · **Authority:** owner “tiếp”, [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_2026-09-27.md), and accepted R007 review.
 
 ## Entry and role route
 

@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-008` BUILD committed); next REVIEWER (Codex)
-- Next allowed move: Codex independently reviews the `CCMAI-RUNTIME-008` BUILD commit (manual sync config admission; evidence `docs/reviews/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_BUILD_2026-09-27.md`). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001` to `007` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-008` REVIEW PASS)
+- Next allowed move: Codex may scope a separate S1 continuation for ignored `config.Load` errors in other handlers or remaining sync residuals. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this review.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -324,6 +324,8 @@ CVF controls the application runtime or that a provider-backed test passed.
   - Host build/vet clean; `go.mod`/`go.sum` unchanged. gofmt is clean on the new code; `channels.go` has only its 3 pre-existing hunks. `git diff --check` clean, catalog `-Check` PASS, doctor 25/25. Disposable resources were removed.
   - **Residual noted:** other handlers still ignore `config.Load` errors (OAuth/credential paths in `channels.go`, `jobs.go` trigger/test-run, `agents.go`).
 - Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. No FREEZE or S1 closure.
+- Role transition acknowledged (2026-09-28): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed `edc6323` against the R008 SPEC/work order and reran focused R008/R007/channel handler tests on a separate disposable MySQL database; PASS. Review: `docs/reviews/CCMAI_RUNTIME_008_INDEPENDENT_REVIEW_2026-09-28.md`. Other ignored `config.Load` calls remain separate findings, not R008 defects.
+- Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R008 are REVIEW PASS / FREEZE open. The separate UI/UX design delegation and demo-brand worktree edits are untouched by this review.
 
 ## Parallel owner request: CCMAI-DEMO-BRAND-001
 
