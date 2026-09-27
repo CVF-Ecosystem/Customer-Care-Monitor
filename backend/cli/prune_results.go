@@ -234,6 +234,21 @@ func ApplyPrunePlan(gdb *gorm.DB, plan *PrunePlan, batch int, progress func(done
 					return fmt.Errorf("xoá kết quả cũ của cuộc chat %s: %w", t.ConversationID, res.Error)
 				}
 				deleted += res.RowsAffected
+
+				// Snapshot của lượt chạy cũ chỉ bị xoá khi không còn job_result nào
+				// tham chiếu tới nó — có thể là do lượt chạy đó ghi nhiều result_type
+				// (evaluation + violation) đều dùng chung một snapshot đã vừa bị xoá ở
+				// trên, hoặc do một tương lai cho phép nhiều lượt dùng chung snapshot.
+				snapRes := tx.Where(
+					"tenant_id = ? AND conversation_id = ? AND job_run_id IN ? AND id NOT IN (?)",
+					t.TenantID, t.ConversationID, t.StaleRunIDs,
+					tx.Model(&models.JobResult{}).
+						Select("analysis_snapshot_id").
+						Where("analysis_snapshot_id IS NOT NULL"),
+				).Delete(&models.AnalysisSnapshot{})
+				if snapRes.Error != nil {
+					return fmt.Errorf("xoá snapshot mồ côi của cuộc chat %s: %w", t.ConversationID, snapRes.Error)
+				}
 			}
 			return nil
 		})

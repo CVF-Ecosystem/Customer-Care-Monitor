@@ -93,7 +93,7 @@ func connectTestDB(t *testing.T) {
 	t.Helper()
 	dsn := os.Getenv("TEST_DB_DSN")
 	if dsn == "" {
-		dsn = "cqa:cqa_password@tcp(127.0.0.1:3306)/cqa?charset=utf8mb4&parseTime=True&loc=UTC"
+		t.Skip("bo qua: TEST_DB_DSN chua duoc thiet lap")
 	}
 	if err := db.Connect(dsn, false); err != nil {
 		t.Skipf("bo qua: khong ket noi duoc DB test: %v", err)

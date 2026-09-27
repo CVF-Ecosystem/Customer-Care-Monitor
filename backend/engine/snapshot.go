@@ -36,16 +36,17 @@ const (
 )
 
 type snapshotMessage struct {
-	MessageID          string `json:"message_id"`
-	ExternalMessageID  string `json:"external_message_id"`
-	SenderType         string `json:"sender_type"`
-	SenderName         string `json:"sender_name"`
-	ContentType        string `json:"content_type"`
-	SentAt             string `json:"sent_at"`
-	ContentSHA256      string `json:"content_sha256"`
-	ContentCodePoints  int    `json:"content_code_points"`
-	AttachmentCoverage string `json:"attachment_coverage"`
-	AttachmentCount    int    `json:"attachment_count"`
+	MessageID             string `json:"message_id"`
+	ExternalMessageID     string `json:"external_message_id"`
+	SenderType            string `json:"sender_type"`
+	SenderName            string `json:"sender_name"`
+	ContentType           string `json:"content_type"`
+	SentAt                string `json:"sent_at"`
+	ContentSHA256         string `json:"content_sha256"`
+	ContentCodePoints     int    `json:"content_code_points"`
+	AttachmentCoverage    string `json:"attachment_coverage"`
+	AttachmentCount       int    `json:"attachment_count"`
+	AttachmentFingerprint string `json:"attachment_fingerprint,omitempty"`
 }
 
 // snapshotManifest is the canonical, digest-bearing record. Field order is
@@ -124,7 +125,7 @@ func buildConversationSnapshot(conv models.Conversation, messages []models.Messa
 		if contentType != "text" {
 			reasons[reasonUnsupportedContentType] = true
 		}
-		attCoverage, attCount := classifyAttachments(m.Attachments)
+		attCoverage, attCount, attFingerprint := classifyAttachments(m.Attachments)
 		switch attCoverage {
 		case attachmentNotRepresented:
 			reasons[reasonAttachmentNotRepresented] = true
@@ -133,16 +134,17 @@ func buildConversationSnapshot(conv models.Conversation, messages []models.Messa
 		}
 		sum := sha256.Sum256([]byte(m.Content))
 		manifest.Messages = append(manifest.Messages, snapshotMessage{
-			MessageID:          m.ID,
-			ExternalMessageID:  m.ExternalMessageID,
-			SenderType:         m.SenderType,
-			SenderName:         m.SenderName,
-			ContentType:        contentType,
-			SentAt:             m.SentAt.UTC().Format(time.RFC3339Nano),
-			ContentSHA256:      hex.EncodeToString(sum[:]),
-			ContentCodePoints:  utf8.RuneCountInString(m.Content),
-			AttachmentCoverage: attCoverage,
-			AttachmentCount:    attCount,
+			MessageID:             m.ID,
+			ExternalMessageID:     m.ExternalMessageID,
+			SenderType:            m.SenderType,
+			SenderName:            m.SenderName,
+			ContentType:           contentType,
+			SentAt:                m.SentAt.UTC().Format(time.RFC3339Nano),
+			ContentSHA256:         hex.EncodeToString(sum[:]),
+			ContentCodePoints:     utf8.RuneCountInString(m.Content),
+			AttachmentCoverage:    attCoverage,
+			AttachmentCount:       attCount,
+			AttachmentFingerprint: attFingerprint,
 		})
 		chat = append(chat, ai.ChatMessage{
 			MessageID:  m.ID,
@@ -183,19 +185,31 @@ func buildConversationSnapshot(conv models.Conversation, messages []models.Messa
 	}, nil
 }
 
-func classifyAttachments(raw string) (string, int) {
+// classifyAttachments returns coverage, count and a deterministic fingerprint
+// of the attachment metadata (not the raw payload). Valid JSON is fingerprinted
+// from typed fields (type/url/name/local_path) so a same-count, same-coverage
+// swap to a different attachment still changes the fingerprint and therefore
+// the snapshot digest. Invalid JSON is fingerprinted from its raw bytes so a
+// source change is never silently absorbed into "no change".
+func classifyAttachments(raw string) (coverage string, count int, fingerprint string) {
 	trimmed := strings.TrimSpace(raw)
 	if trimmed == "" || trimmed == "null" || trimmed == "[]" {
-		return attachmentNone, 0
+		return attachmentNone, 0, ""
 	}
 	var atts []channels.Attachment
 	if err := json.Unmarshal([]byte(trimmed), &atts); err != nil {
-		return attachmentInvalidJSON, 0
+		sum := sha256.Sum256([]byte(trimmed))
+		return attachmentInvalidJSON, 0, hex.EncodeToString(sum[:])
 	}
 	if len(atts) == 0 {
-		return attachmentNone, 0
+		return attachmentNone, 0, ""
 	}
-	return attachmentNotRepresented, len(atts)
+	parts := make([]string, len(atts))
+	for i, a := range atts {
+		parts[i] = a.Type + "\x1f" + a.URL + "\x1f" + a.Name + "\x1f" + a.LocalPath
+	}
+	sum := sha256.Sum256([]byte(strings.Join(parts, "\x1e")))
+	return attachmentNotRepresented, len(atts), hex.EncodeToString(sum[:])
 }
 
 func (s *conversationSnapshot) record(runID string) (models.AnalysisSnapshot, error) {

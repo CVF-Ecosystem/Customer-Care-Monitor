@@ -58,4 +58,13 @@ Owner-reviewed local setup (2026-09-27): this workspace has no CQA data to prese
 
 `CCMAI-RUNTIME-002` Gate B independent review by Codex is `CHANGES_REQUIRED`: core digest/evidence validation and MySQL transaction tests pass, but channel delete/prune can leave dangling or orphan evidence records, attachment replacement is not fingerprinted by the digest, and the new DB tests retain a hardcoded CQA fallback DSN. Authority and repair acceptance are in `docs/reviews/CCMAI_RUNTIME_002_GATE_B_INDEPENDENT_REVIEW_2026-09-27.md`. Claude may repair within the same R2 work order and local-commit boundary; Gate B remains in REVIEW and S2 remains closed.
 
+`CCMAI-RUNTIME-002` Gate B repair round 1 (Claude, `REPAIR_WORKER`, same-scope, no new authorization): `DeleteChannel` now deletes `JobResult` and `AnalysisSnapshot` inside one transaction with error checks (previously `JobResult` was never deleted there); `ApplyPrunePlan` deletes orphaned snapshots per stale run but keeps any snapshot a surviving result still cites; `classifyAttachments` adds a deterministic attachment fingerprint to the digest manifest so a same-count/same-coverage attachment swap changes the digest; the new DB test's hardcoded CQA fallback DSN is removed in favor of a skip. Three new regression tests added and passing; all 5 pre-existing Gate B DB tests unaffected; full `go test ./...` (13 packages) and workspace doctor (25/25) pass. Evidence: `docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_REPAIR_2026-09-27.md`. Status remains REVIEW_PENDING for Codex re-review; local commit only, not pushed; no provider call, customer data or governance/cost claim.
+
+## Local Provider Registry
+
+`CVF_SESSION/LOCAL_PROVIDER_SECRETS.json` — **gitignored, machine-local** — chứa API keys của các AI provider thực, dùng khi work order yêu cầu `liveGovernanceEvidenceRequired: true`. Mọi agent cần credential thực đều đọc file này. KHÔNG commit file này.
+
+Provider hiện có (ghi nhận 2026-09-27):
+- **alibaba_maas** — Alibaba Cloud MaaS workspace `ws-remplsp27g5oicq1`, OpenAI-compatible. Model khuyến nghị: `deepseek-v4.1-flash` (quota 1M, hết hạn 2026-12-12). Xem catalog đầy đủ tại `docs/references/ALIBABA_MAAS_PROVIDER.md`.
+
 Provider-local files may assist execution but are not project source authority.

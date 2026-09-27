@@ -70,6 +70,49 @@ func TestSnapshotDigestChangesWithSource(t *testing.T) {
 	}
 }
 
+func TestSnapshotDigestChangesWithAttachmentIdentity(t *testing.T) {
+	conv, msgs := snapshotFixture()
+	withAttachment := append([]models.Message(nil), msgs...)
+	withAttachment[0].Attachments = `[{"type":"image","url":"https://x/a.png","name":"a.png"}]`
+	base := mustSnapshot(t, conv, withAttachment, 0)
+
+	mutations := map[string]string{
+		"url":        `[{"type":"image","url":"https://x/b.png","name":"a.png"}]`,
+		"name":       `[{"type":"image","url":"https://x/a.png","name":"b.png"}]`,
+		"type":       `[{"type":"file","url":"https://x/a.png","name":"a.png"}]`,
+		"local_path": `[{"type":"image","url":"https://x/a.png","name":"a.png","local_path":"/tmp/a.png"}]`,
+	}
+	for name, raw := range mutations {
+		changed := append([]models.Message(nil), withAttachment...)
+		changed[0].Attachments = raw
+		snap := mustSnapshot(t, conv, changed, 0)
+		if snap.Digest == base.Digest {
+			t.Errorf("changing attachment %s did not change digest", name)
+		}
+		if snap.Manifest.Coverage != coveragePartial || !contains(snap.Manifest.CoverageReasons, reasonAttachmentNotRepresented) {
+			t.Errorf("attachment %s: unexpected coverage %+v", name, snap.Manifest)
+		}
+	}
+
+	// Same valid attachment JSON produces the same digest.
+	repeat := append([]models.Message(nil), msgs...)
+	repeat[0].Attachments = withAttachment[0].Attachments
+	if mustSnapshot(t, conv, repeat, 0).Digest != base.Digest {
+		t.Fatal("identical attachment JSON produced a different digest")
+	}
+
+	// Invalid JSON fingerprints the raw bytes, so a source change still moves the digest.
+	badA := append([]models.Message(nil), msgs...)
+	badA[0].Attachments = `{broken-a`
+	badB := append([]models.Message(nil), msgs...)
+	badB[0].Attachments = `{broken-b`
+	da := mustSnapshot(t, conv, badA, 0).Digest
+	db := mustSnapshot(t, conv, badB, 0).Digest
+	if da == db {
+		t.Fatal("two different invalid attachment payloads produced the same digest")
+	}
+}
+
 func TestSnapshotCoverage(t *testing.T) {
 	conv, msgs := snapshotFixture()
 	cases := []struct {

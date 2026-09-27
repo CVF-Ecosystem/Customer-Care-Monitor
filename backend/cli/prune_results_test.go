@@ -197,6 +197,107 @@ func TestDonBanDanhGiaTrungGiuLuotMoiNhat(t *testing.T) {
 	}
 }
 
+// TestApplyPrunePlanCleansOrphanSnapshotsKeepsReferenced là regression test cho
+// R2-B1: ApplyPrunePlan chỉ xoá job_results, để lại snapshot của lượt chạy cũ
+// làm mồ côi. Repair thêm bước xoá snapshot của đúng (tenant, conversation,
+// stale run) NHƯNG chỉ khi không còn job_result nào tham chiếu tới nó.
+func TestApplyPrunePlanCleansOrphanSnapshotsKeepsReferenced(t *testing.T) {
+	dsn := os.Getenv("TEST_DB_DSN")
+	if dsn == "" {
+		t.Skip("bo qua: TEST_DB_DSN chua duoc thiet lap")
+	}
+	if err := db.Connect(dsn, false); err != nil {
+		t.Skipf("bo qua: khong ket noi duoc DB test: %v", err)
+	}
+	if err := db.AutoMigrate(); err != nil {
+		t.Fatalf("AutoMigrate loi: %v", err)
+	}
+	gdb := db.DB.Session(&gorm.Session{Logger: logger.Discard})
+
+	suffix := pkg.NewUUID()[:8]
+	tenantID := "prunesnap-" + suffix
+	channelID := "ch-prunesnap-" + suffix
+	convA := "conv-prunesnap-a-" + suffix
+	convB := "conv-prunesnap-b-" + suffix
+	jobID := "job-prunesnap-" + suffix
+	runOld := "run-old-" + suffix
+	runNew := "run-new-" + suffix
+	snapOrphan := pkg.NewUUID()          // only its own (stale) result cites it -> must be deleted
+	snapKept := pkg.NewUUID()            // belongs to the retained run -> untouched
+	snapStillReferenced := pkg.NewUUID() // stale run's own snapshot, but a surviving result still cites it -> must NOT be deleted
+
+	exec := func(sql string, args ...interface{}) {
+		if err := gdb.Exec(sql, args...).Error; err != nil {
+			t.Fatalf("fixture: %v", err)
+		}
+	}
+	exec(`INSERT INTO tenants (id, name, slug, settings, created_at, updated_at) VALUES (?, ?, ?, '{}', NOW(), NOW())`,
+		tenantID, "Prune Snap Test", tenantID)
+	exec(`INSERT INTO channels (id, tenant_id, channel_type, name, external_id, credentials_encrypted, is_active, metadata, created_at, updated_at) VALUES (?, ?, 'zalo_oa', 'Kenh', 'fake', X'00', true, '{}', NOW(), NOW())`,
+		channelID, tenantID)
+	for _, conv := range []string{convA, convB} {
+		exec(`INSERT INTO conversations (id, tenant_id, channel_id, external_conversation_id, customer_name, last_message_at, message_count, metadata, created_at, updated_at) VALUES (?, ?, ?, ?, 'Khach', NOW(), 1, '{}', NOW(), NOW())`,
+			conv, tenantID, channelID, "ext-"+conv)
+	}
+	exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Job', 'qc_analysis', '[]', '', '[]', 'cron', true, '[]', NOW(), NOW())`,
+		jobID, tenantID)
+
+	base := time.Now().Add(-48 * time.Hour)
+	exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, finished_at, status, summary, created_at) VALUES (?, ?, ?, ?, ?, 'success', '{}', ?)`,
+		runOld, jobID, tenantID, base, base, base)
+	exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, finished_at, status, summary, created_at) VALUES (?, ?, ?, ?, ?, 'success', '{}', ?)`,
+		runNew, jobID, tenantID, base.Add(24*time.Hour), base.Add(24*time.Hour), base.Add(24*time.Hour))
+
+	addSnapshot := func(id, runID, convID string) {
+		exec(`INSERT INTO analysis_snapshots (id, tenant_id, job_run_id, conversation_id, schema_version, digest, coverage, coverage_reasons, message_count, manifest, created_at) VALUES (?, ?, ?, ?, 'ccma.snapshot.v1', ?, 'complete', '[]', 1, '{}', NOW())`,
+			id, tenantID, runID, convID, id)
+	}
+	addSnapshot(snapOrphan, runOld, convA)
+	addSnapshot(snapStillReferenced, runOld, convB)
+	addSnapshot(snapKept, runNew, convA)
+
+	addResult := func(runID, convID, snapID string) {
+		exec(`INSERT INTO job_results (id, job_run_id, tenant_id, conversation_id, result_type, severity, rule_name, evidence, detail, confidence, analysis_snapshot_id, created_at) VALUES (?, ?, ?, ?, 'qc_violation', 'NGHIEM_TRONG', 'r', 'e', '{}', 1, ?, NOW())`,
+			pkg.NewUUID(), runID, tenantID, convID, snapID)
+	}
+	addResult(runOld, convA, snapOrphan)          // pruned away -> snapOrphan becomes orphan
+	addResult(runNew, convA, snapKept)            // kept run -> snapKept untouched
+	addResult(runNew, convB, snapStillReferenced) // kept run's result cites the stale run's snapshot -> must survive
+
+	t.Cleanup(func() {
+		gdb.Exec("DELETE FROM job_results WHERE tenant_id = ?", tenantID)
+		gdb.Exec("DELETE FROM analysis_snapshots WHERE tenant_id = ?", tenantID)
+		gdb.Exec("DELETE FROM job_runs WHERE tenant_id = ?", tenantID)
+		gdb.Exec("DELETE FROM jobs WHERE tenant_id = ?", tenantID)
+		gdb.Exec("DELETE FROM conversations WHERE tenant_id = ?", tenantID)
+		gdb.Exec("DELETE FROM channels WHERE id = ?", channelID)
+		gdb.Exec("DELETE FROM tenants WHERE id = ?", tenantID)
+	})
+
+	plan := &PrunePlan{Targets: []staleTarget{
+		{TenantID: tenantID, ConversationID: convA, StaleRunIDs: []string{runOld}},
+		{TenantID: tenantID, ConversationID: convB, StaleRunIDs: []string{runOld}},
+	}}
+	if _, err := ApplyPrunePlan(gdb, plan, 200, nil); err != nil {
+		t.Fatalf("ApplyPrunePlan loi: %v", err)
+	}
+
+	exists := func(id string) bool {
+		var n int64
+		gdb.Model(&models.AnalysisSnapshot{}).Where("id = ?", id).Count(&n)
+		return n > 0
+	}
+	if exists(snapOrphan) {
+		t.Error("snapshot mo coi cua luot chay cu phai bi xoa")
+	}
+	if !exists(snapKept) {
+		t.Error("snapshot cua luot chay giu lai khong duoc xoa")
+	}
+	if !exists(snapStillReferenced) {
+		t.Error("snapshot con duoc mot result con lai tham chieu khong duoc xoa du thuoc luot chay cu")
+	}
+}
+
 // Lệnh chỉ được đụng tới job_results. Tin nhắn và cuộc chat phải nguyên vẹn.
 func TestDonKhongDungToiTinNhanVaCuocChat(t *testing.T) {
 	f := setupPruneFixture(t)

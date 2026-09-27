@@ -18,6 +18,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
+
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/channels"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
@@ -238,20 +240,42 @@ func DeleteChannel(c *gin.Context) {
 		return
 	}
 
-	// Cascade: delete files → messages → conversations → channel
+	// Cascade: delete files → results → snapshots → messages → conversations → channel.
+	// Results and their snapshots are deleted together, inside one transaction, so a
+	// mid-cascade failure never leaves a result pointing at a snapshot that no longer
+	// exists (or vice versa).
 	var convIDs []string
 	db.DB.Model(&models.Conversation{}).Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Pluck("id", &convIDs)
-	if len(convIDs) > 0 {
-		// Delete local attachment files
-		for _, convID := range convIDs {
-			dir := filepath.Join("/var/lib/cqa/files", tenantID, convID)
-			os.RemoveAll(dir)
+
+	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		if len(convIDs) > 0 {
+			for _, convID := range convIDs {
+				dir := filepath.Join("/var/lib/cqa/files", tenantID, convID)
+				os.RemoveAll(dir)
+			}
+			if err := tx.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.JobResult{}).Error; err != nil {
+				return fmt.Errorf("delete job results: %w", err)
+			}
+			if err := tx.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.AnalysisSnapshot{}).Error; err != nil {
+				return fmt.Errorf("delete analysis snapshots: %w", err)
+			}
+			if err := tx.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.Message{}).Error; err != nil {
+				return fmt.Errorf("delete messages: %w", err)
+			}
 		}
-		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.Message{})
-		db.DB.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.AnalysisSnapshot{})
+		if err := tx.Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Delete(&models.Conversation{}).Error; err != nil {
+			return fmt.Errorf("delete conversations: %w", err)
+		}
+		if err := tx.Delete(&channel).Error; err != nil {
+			return fmt.Errorf("delete channel: %w", err)
+		}
+		return nil
+	})
+	if err != nil {
+		log.Printf("[error] delete channel %s cascade: %v", channelID, err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "delete_channel_failed"})
+		return
 	}
-	db.DB.Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Delete(&models.Conversation{})
-	db.DB.Delete(&channel)
 
 	db.LogActivity(tenantID, middleware.GetUserID(c), middleware.GetUserEmail(c), "channel.delete", "channel", channelID, "Deleted channel: "+channel.Name, "", c.ClientIP())
 
