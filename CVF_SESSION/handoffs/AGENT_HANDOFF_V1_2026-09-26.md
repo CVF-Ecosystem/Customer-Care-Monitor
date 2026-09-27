@@ -280,6 +280,19 @@ CVF controls the application runtime or that a provider-backed test passed.
     - 4: full screenshot comparison against the baseline.
   - **Non-negotiables:** no API contract change, no weakening of R004–R007 semantics, no schema change, keep Vuetify 4.
   - **Status:** DRAFT awaiting owner approval, plus three owner decisions (primary color, font, dark-mode level). Planning only: no BUILD authority, no tranche state change. `CCMAI-RUNTIME-008` remains assigned to Claude as `IMPLEMENTATION_WORKER` per Codex's work order.
+- Owner design delegation (2026-09-27, owner: “Tôi không tham gia sâu vào việc redesign, đó là việc của bạn, thiết kế theo chuẩn hiện đại và chuyên nghiệp”).
+  - **Authority:** Claude now decides and approves designs; the owner may view or comment on canvases but is not a gate.
+  - **Unchanged boundaries:** implementation tranches still require independent Codex REVIEW before FREEZE. Non-negotiables stay: no API or schema change, no weakening of R004–R007 semantics.
+  - **Research and decisions:** market research (Zendesk QA/Klaus, MaestroQA, Level AI, Observe.AI, Scorebuddy; Intercom/Help Scout inbox patterns) and the settled decisions are recorded in `docs/decisions/UI_DESIGN_DIRECTION_2026-09-27.md`:
+    - primary `#3342A8` on cool neutrals;
+    - Be Vietnam Pro, self-hosted;
+    - dark mode at parity;
+    - status colors at WCAG AA (computed);
+    - verdict and source-status chips distinguished by style and icon, not hue;
+    - new frontend-only patterns (a "Cần xem lại" filter, two-column review with evidence highlighting, drill-down, a three-pane inbox);
+    - backend-dependent features (human override/disputes/calibration) explicitly deferred.
+  - **Roadmap:** updated to ACTIVE with Claude-owned design approval.
+  - **Next:** a Phase 0 foundation canvas, then SPEC/WORK_ORDER for `CCMAI-UX-000` and `CCMAI-UX-002`.
 - Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed `0338fee`, source/test scope and R007 SPEC. Seven focused handler tests passed on a separate disposable MySQL database; the review container/network were removed. Review `docs/reviews/CCMAI_RUNTIME_007_INDEPENDENT_REVIEW_2026-09-27.md` returns PASS for R2 REVIEW. The actual goroutine panic path remains untested; the called recovery helper and its failure behavior are tested.
 - Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R007 are REVIEW PASS / FREEZE open. No real channel sync, provider/governance proof, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is claimed.
 

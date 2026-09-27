@@ -1,10 +1,11 @@
 # Roadmap redesign UI/UX — Customer Care Monitor AI
 
-**Trạng thái:** DRAFT, chờ owner duyệt. **Ngày:** 2026-09-27. **Tác giả:** Claude (ORCHESTRATOR / SPEC_AUTHOR cho kế hoạch thiết kế, theo phân công của owner). **Mã kế hoạch:** `CCMAI-UXROADMAP-001`. **Rủi ro:** thiết kế trên canvas là R1; triển khai vào ứng dụng tối thiểu R2 vì giao diện hiển thị trạng thái nguồn, confidence và đồng bộ đã qua review.
+**Trạng thái:** ACTIVE. Owner ủy quyền toàn bộ phần thiết kế cho Claude (2026-09-27); Claude chốt thiết kế, còn triển khai vẫn qua review độc lập. **Ngày:** 2026-09-27. **Tác giả:** Claude (ORCHESTRATOR / SPEC_AUTHOR cho kế hoạch thiết kế, theo phân công của owner). **Mã kế hoạch:** `CCMAI-UXROADMAP-001`. **Rủi ro:** thiết kế trên canvas là R1; triển khai vào ứng dụng tối thiểu R2 vì giao diện hiển thị trạng thái nguồn, confidence và đồng bộ đã qua review.
 
 **Đầu vào:**
 - [Đánh giá UI/UX nền tảng](../reviews/UI_UX_REVIEW_BASELINE_2026-09-27.md): 20 phát hiện UX-01 đến UX-20 và 15 ảnh chụp.
 - Canvas thử nghiệm Job Detail trên claude.ai: https://claude.ai/artifact/KkF8P2m1iGRpTRa3mkf4ii (riêng tư, của owner).
+- [Quyết định hướng thiết kế](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md): tham chiếu thị trường, màu, chữ, dark mode, mẫu tương tác.
 - Ngữ nghĩa đã qua review độc lập ở R004–R007: bốn trạng thái nguồn, confidence để trống thay vì số giả, chỉ trả 202 sau khi đã ghi trạng thái `syncing`.
 
 Roadmap này chỉ là kế hoạch. Nó không cấp quyền BUILD; mỗi giai đoạn triển khai cần SPEC và WORK_ORDER riêng.
@@ -30,12 +31,13 @@ Người phụ trách CSKH mở ứng dụng trên máy tính hoặc điện tho
 
 ## Cách làm việc với canvas thiết kế
 
-Mỗi màn hình đi qua đúng chuỗi CVF, nhưng giai đoạn thiết kế diễn ra trên canvas claude.ai để owner xem trực quan:
+Mỗi màn hình đi qua đúng chuỗi CVF. Giai đoạn thiết kế diễn ra trên canvas claude.ai; Claude là người chốt thiết kế theo ủy quyền của owner, và owner có thể mở canvas xem hoặc góp ý bất cứ lúc nào:
 
 ```text
-Brief màn hình -> Canvas (desktop + mobile + các trạng thái) -> Owner góp ý trên canvas
-  -> Owner duyệt, ghi lại version id canvas -> SPEC màn hình -> WORK_ORDER
-  -> BUILD (frontend) -> REVIEW độc lập (Codex) -> Owner nghiệm thu trực quan -> FREEZE
+Brief màn hình -> Canvas (desktop + mobile + light/dark + các trạng thái)
+  -> Claude tự kiểm theo quyết định thiết kế, chốt và ghi version id canvas
+  -> SPEC màn hình -> WORK_ORDER -> BUILD (frontend)
+  -> REVIEW độc lập (Codex) -> FREEZE
 ```
 
 Quy ước:
@@ -60,9 +62,9 @@ Làm trước mọi màn hình. Mọi canvas sau dùng chung kết quả của g
 | Quy tắc định dạng | Ngày dd/mm/yyyy, 24 giờ, thời gian tương đối (không âm, đổi sang giờ/ngày), số và tiền theo ngôn ngữ | Mục trong SPEC nền tảng |
 | Công cụ chụp ảnh | Đưa quy trình chụp của bản review vào repo: môi trường tách biệt + dữ liệu demo + trạng thái nguồn tổng hợp + Chrome headless, desktop và mobile, ghi lỗi JS | `scripts/ui-screenshots.*` + hướng dẫn |
 
-**Quyết định cần owner chốt:** màu primary mới; font (Be Vietnam Pro như bản thử, hoặc giữ font mặc định); có giữ dark mode ở mức ngang light không.
+**Đã chốt** trong [quyết định hướng thiết kế](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md): primary `#3342A8`, nền trung tính lạnh, font Be Vietnam Pro tự host, dark mode ngang hàng light, bộ màu trạng thái đạt AA.
 
-**Hoàn thành khi:** owner duyệt Design System và bảng thuật ngữ; công cụ chụp ảnh tái tạo được bộ ảnh baseline.
+**Hoàn thành khi:** Claude chốt Design System và bảng thuật ngữ; công cụ chụp ảnh tái tạo được bộ ảnh baseline.
 
 ### Giai đoạn 1 — Sửa dữ liệu hiển thị sai (`CCMAI-UX-001`, `CCMAI-UX-002`)
 
@@ -77,7 +79,7 @@ Không cần thiết kế mới, nên làm song song với Giai đoạn 0. Làm 
 
 ### Giai đoạn 2 — Thiết kế từng màn hình
 
-Theo thứ tự ưu tiên. Mỗi màn: brief, canvas desktop và mobile đủ trạng thái, owner duyệt.
+Theo thứ tự ưu tiên. Mỗi màn: brief, canvas desktop và mobile đủ trạng thái, Claude chốt.
 
 | Thứ tự | Màn hình (route) | Phát hiện chính | Trọng tâm |
 |---|---|---|---|
@@ -90,7 +92,7 @@ Theo thứ tự ưu tiên. Mỗi màn: brief, canvas desktop và mobile đủ tr
 | 7 | Cài đặt, Người dùng, Đăng nhập/Thiết lập | — | Áp design system; kiểm tra biểu mẫu và thông báo lỗi |
 | 8 | Nhật ký hệ thống, Nhật ký chi phí, Lịch sử thông báo, Kết nối MCP | UX-15 | Bảng dài trên mobile, định dạng số/tiền |
 
-**Hoàn thành mỗi màn khi:** owner duyệt trên canvas, và version id được ghi vào SPEC của màn đó.
+**Hoàn thành mỗi màn khi:** thiết kế đạt các nguyên tắc ở trên và quyết định hướng thiết kế, Claude chốt, và version id canvas được ghi vào SPEC của màn đó.
 
 ### Giai đoạn 3 — Triển khai (`CCMAI-UX-010` trở đi, mỗi màn một tranche)
 
@@ -103,7 +105,7 @@ Mỗi tranche frontend:
   - 0 lỗi JS;
   - kiểm tra tương phản và vùng bấm.
 - **REVIEW độc lập (Codex):** đúng thiết kế đã duyệt, không làm yếu ngữ nghĩa trạng thái, không đổi hợp đồng API.
-- **Nghiệm thu:** owner xem ảnh chụp và bản chạy thật. Sau đó mới FREEZE.
+- **Nghiệm thu:** ảnh chụp sau triển khai khớp thiết kế đã chốt và không còn phát hiện liên quan trong baseline. Sau đó mới FREEZE.
 
 Khi có tranche runtime đang mở trên cùng file (ví dụ R008 đụng luồng đồng bộ và trang Kênh), tranche UX của màn đó chờ tranche runtime xong trước để tránh xung đột.
 
@@ -111,7 +113,7 @@ Khi có tranche runtime đang mở trên cùng file (ví dụ R008 đụng luồ
 
 - Chạy lại toàn bộ bộ ảnh chụp và lập bảng so sánh với baseline cho từng phát hiện UX-01 đến UX-20.
 - Cập nhật tài liệu hướng dẫn người dùng có ảnh màn hình cũ (`docs/usage/`, `docs/public/screenshots/`).
-- Owner nghiệm thu toàn bộ; ghi baseline mới cho các đợt sau.
+- Báo owner kết quả kèm link ảnh so sánh; ghi baseline mới cho các đợt sau.
 
 ## Ánh xạ phát hiện → giai đoạn
 
@@ -161,6 +163,6 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 
 ## Bước tiếp theo
 
-1. Owner duyệt roadmap này và chốt ba quyết định ở Giai đoạn 0 (màu primary, font, mức hỗ trợ dark mode).
-2. Claude lập brief và canvas Giai đoạn 0 (design system, component, bảng thuật ngữ) để owner duyệt trực quan.
-3. Song song, `CCMAI-UX-002` (ghi chú cục bộ trên trang Kết quả) và `CCMAI-UX-001a/b/c` được viết SPEC/WORK_ORDER, theo phân vai owner chọn.
+1. Claude dựng canvas Giai đoạn 0: bảng màu light/dark, thang chữ, component dùng chung (chip kết luận, chip trạng thái nguồn, khung trạng thái nguồn, thẻ số liệu, thẻ kết quả mobile, hàng bảng, hộp thoại, menu ⋯) và bảng thuật ngữ.
+2. Claude viết SPEC/WORK_ORDER cho `CCMAI-UX-000` (hiện thực theme, font tự host, component, thuật ngữ, công cụ chụp ảnh) và cho `CCMAI-UX-002` (ghi chú cục bộ trên trang Kết quả). Mỗi tranche BUILD vẫn cần review độc lập của Codex trước FREEZE.
+3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.
