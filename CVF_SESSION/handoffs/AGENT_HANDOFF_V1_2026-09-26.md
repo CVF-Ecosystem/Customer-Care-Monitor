@@ -8,8 +8,19 @@ Status: ACTIVE
 - Current mode: REVIEW
 - Active phase: REVIEW
 - Active role: ORCHESTRATOR
-- Next allowed move: Independent R2 review of `CCMAI-ROADMAP-001` and `CCMAI-IDENTITY-001`; retain `CCMAI-DOCS-001` and `CCMAI-CREDIT-001` in REVIEW. `CCMAI-DATABASE-001` local development setup is owner-reviewed and complete; no separate database review or CQA migration is pending. Machine-gate runtime implementation and provider calls require separate work orders.
+- Next allowed move: Independent R2 review of `CCMAI-RUNTIME-001` against `docs/reviews/RUNTIME_FOUNDATION_S0_S1_BUILD_2026-09-27.md`. After accepted repair/FREEZE, specify the remaining S1 snapshot/evidence contract before S2 gate work. Provider calls and AI-runtime governance claims remain unauthorized without separate S2/S3 work orders and live evidence.
 - Parked operator checkpoint: none
+
+## Active Tranche: CCMAI-RUNTIME-001
+
+- INTAKE: owner declared basic CQA cleanup complete and authorized upgrading CCMA according to the accepted runtime roadmap.
+- DESIGN: begin with S0 plus the first S1 reliability slice. Use synthetic Vietnamese corpus only, choose Pancake as the pilot adapter/use case source while keeping the contract channel-neutral, and fix false channel-level sync success before any provider gate work.
+- SPEC/WORK_ORDER: `docs/specs/RUNTIME_FOUNDATION_S0_S1_2026-09-27.md` and `docs/work_orders/CCMAI_RUNTIME_001.md` (R2).
+- Transition acknowledged before BUILD: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER. Allowed scope is sync truth/checkpoint logic, its UI status, synthetic corpus, local Compose validation and governed evidence/continuity. No real channel sync, customer data, provider call, AI response, deployment or CVF core edit is authorized.
+- Baseline: the persistent development schema has 16 tables and zero rows across tenant/channel/conversation/message/job/run/result/AI-usage surfaces. This means no runtime performance or quality baseline exists yet; it does not prove savings.
+- BUILD result: corpus `s0-vi-intervention-v1` validates 12/12 synthetic Vietnamese cases. Sync item/attachment/count failures now produce channel status `partial`; `partial`/`error` preserve the prior successful checkpoint, suppress after-sync analysis, return failure to callers and write a bounded operational summary. `SyncAllChannels` no longer hides channel errors. Conversation/message updates surface DB/JSON errors. Scheduler activity is owned by `SyncChannel`, avoiding duplicate success/error entries. Channel list/detail/history show partial as a warning.
+- Validation: containerized Go 1.26 engine tests and full backend build passed; frontend and docs builds passed; Compose rebuilt and restarted on the retained `CCMA` volume with healthy DB, clean migration, zero scheduled jobs and pricing sync disabled. No channel credential, customer data, real sync or provider API was used. Evidence: `docs/reviews/RUNTIME_BASELINE_S0_2026-09-27.md` and `docs/reviews/RUNTIME_FOUNDATION_S0_S1_BUILD_2026-09-27.md`.
+- Role route after BUILD: IMPLEMENTATION_WORKER -> COMMIT_STEWARD -> SESSION_SYNC_STEWARD -> ORCHESTRATOR. Status is REVIEW_PENDING for independent R2 review; full S1 and S2/S3/S5 remain open.
 
 ## Seven-Step Control Chain
 

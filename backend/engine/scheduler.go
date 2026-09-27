@@ -7,10 +7,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/go-co-op/gocron/v2"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/go-co-op/gocron/v2"
 )
 
 // Scheduler manages periodic tasks: channel sync, job analysis, output delivery.
@@ -147,10 +147,8 @@ func (s *Scheduler) syncAllChannelsTask() {
 
 		if err := s.syncEngine.SyncChannel(ctx, ch); err != nil {
 			log.Printf("[scheduler] sync channel %s failed: %v", ch.Name, err)
-			db.LogActivity(ch.TenantID, "", "system", "sync.error", "channel", ch.ID, "Sync failed: "+ch.Name, err.Error(), "")
 		} else {
 			synced++
-			db.LogActivity(ch.TenantID, "", "system", "sync.completed", "channel", ch.ID, "Sync completed: "+ch.Name, "", "")
 		}
 	}
 	if synced > 0 {

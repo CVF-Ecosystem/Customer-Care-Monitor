@@ -3,6 +3,7 @@ package engine
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -18,11 +19,64 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/storage"
+	"gorm.io/gorm"
 )
 
 // SyncEngine handles pulling messages from external channels into the database.
 type SyncEngine struct {
 	cfg *config.Config
+}
+
+const (
+	maxSyncFailureDetails     = 10
+	maxSyncFailureDetailRunes = 300
+	maxSyncErrorMessageRunes  = 4000
+)
+
+// syncProgress keeps the channel checkpoint honest. A channel run is only a
+// success when every selected conversation and message completed without an
+// observable failure.
+type syncProgress struct {
+	conversationsFetched int
+	conversationsSynced  int
+	messagesSynced       int
+	failures             []string
+}
+
+func (p *syncProgress) fail(scope, externalID string, err error) {
+	detail := []rune(fmt.Sprintf("%s %s: %v", scope, externalID, err))
+	if len(detail) > maxSyncFailureDetailRunes {
+		detail = append(detail[:maxSyncFailureDetailRunes], '…')
+	}
+	p.failures = append(p.failures, string(detail))
+}
+
+func (p syncProgress) finalStatus() string {
+	if len(p.failures) > 0 {
+		return "partial"
+	}
+	return "success"
+}
+
+func (p syncProgress) errorMessage() string {
+	if len(p.failures) == 0 {
+		return ""
+	}
+	visible := p.failures
+	if len(visible) > maxSyncFailureDetails {
+		visible = visible[:maxSyncFailureDetails]
+	}
+	message := strings.Join(visible, "; ")
+	if hidden := len(p.failures) - len(visible); hidden > 0 {
+		message += fmt.Sprintf("; và %d lỗi khác", hidden)
+	}
+	summary := fmt.Sprintf("%d/%d conversations hoàn tất, %d messages đã lưu; %d lỗi: %s",
+		p.conversationsSynced, p.conversationsFetched, p.messagesSynced, len(p.failures), message)
+	runes := []rune(summary)
+	if len(runes) > maxSyncErrorMessageRunes {
+		return string(runes[:maxSyncErrorMessageRunes]) + "…"
+	}
+	return summary
 }
 
 func NewSyncEngine(cfg *config.Config) *SyncEngine {
@@ -90,6 +144,7 @@ func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) er
 	}
 
 	log.Printf("[sync] channel %s: found %d conversations", channel.Name, len(conversations))
+	progress := syncProgress{conversationsFetched: len(conversations)}
 
 	// Check if file sync is enabled for this channel
 	syncFiles := false
@@ -103,12 +158,14 @@ func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) er
 	}
 	log.Printf("[sync] channel %s: sync_files=%v, metadata=%s", channel.Name, syncFiles, channel.Metadata)
 
-	totalMessages := 0
 	for _, conv := range conversations {
+		conversationFailed := false
+
 		// Upsert conversation
 		convID, err := s.upsertConversation(channel.TenantID, channel.ID, conv)
 		if err != nil {
 			log.Printf("[sync] error upserting conversation %s: %v", conv.ExternalID, err)
+			progress.fail("conversation", conv.ExternalID, err)
 			continue
 		}
 
@@ -116,39 +173,63 @@ func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) er
 		messages, err := adapter.FetchMessages(ctx, conv.ExternalID, since)
 		if err != nil {
 			log.Printf("[sync] error fetching messages for %s: %v", conv.ExternalID, err)
+			progress.fail("messages", conv.ExternalID, err)
 			continue
 		}
 
 		// Upsert messages
 		for _, msg := range messages {
 			if syncFiles {
-				s.downloadAttachments(channel.TenantID, convID, &msg)
+				if err := s.downloadAttachments(channel.TenantID, convID, &msg); err != nil {
+					log.Printf("[sync] attachment coverage incomplete for message %s: %v", msg.ExternalID, err)
+					progress.fail("attachments", msg.ExternalID, err)
+					conversationFailed = true
+				}
 			}
 			if err := s.upsertMessage(channel.TenantID, convID, msg); err != nil {
 				log.Printf("[sync] error upserting message %s: %v", msg.ExternalID, err)
+				progress.fail("message", msg.ExternalID, err)
+				conversationFailed = true
 			} else {
-				totalMessages++
+				progress.messagesSynced++
 			}
 		}
 
 		// Update conversation message count
 		var count int64
-		db.DB.Model(&models.Message{}).Where("conversation_id = ?", convID).Count(&count)
-		db.DB.Model(&models.Conversation{}).Where("id = ?", convID).Update("message_count", count)
+		if err := db.DB.Model(&models.Message{}).Where("conversation_id = ?", convID).Count(&count).Error; err != nil {
+			progress.fail("message_count", conv.ExternalID, err)
+			conversationFailed = true
+		} else if err := db.DB.Model(&models.Conversation{}).Where("id = ?", convID).Update("message_count", count).Error; err != nil {
+			progress.fail("message_count", conv.ExternalID, err)
+			conversationFailed = true
+		}
+
+		if !conversationFailed {
+			progress.conversationsSynced++
+		}
 	}
 
-	log.Printf("[sync] channel %s: synced %d conversations, %d messages", channel.Name, len(conversations), totalMessages)
+	log.Printf("[sync] channel %s: synced %d/%d conversations, %d messages, failures=%d",
+		channel.Name, progress.conversationsSynced, progress.conversationsFetched, progress.messagesSynced, len(progress.failures))
+
+	if progress.finalStatus() == "partial" {
+		return s.updateSyncStatus(channel.ID, "partial", progress.errorMessage())
+	}
+	if err := s.updateSyncStatus(channel.ID, "success", ""); err != nil {
+		return err
+	}
 
 	// Log activity
 	db.LogActivity(channel.TenantID, "", "system", "sync.completed", "channel", channel.ID,
-		fmt.Sprintf("Sync '%s': %d conversations, %d messages", channel.Name, len(conversations), totalMessages), "", "")
+		fmt.Sprintf("Sync '%s': %d conversations, %d messages", channel.Name, progress.conversationsSynced, progress.messagesSynced), "", "")
 
 	// Trigger after-sync jobs for this channel
 	if sched := GetDefaultScheduler(); sched != nil {
 		sched.TriggerAfterSyncJobs(channel.TenantID, channel.ID)
 	}
 
-	return s.updateSyncStatus(channel.ID, "success", "")
+	return nil
 }
 
 // luuFileDinhKem lưu một file, ưu tiên kho chính; kho chính hỏng thì ghi xuống
@@ -191,14 +272,18 @@ func luuFileDinhKem(ctx context.Context, chinh, duPhong storage.Store, key strin
 // SyncAllChannels syncs all active channels for a tenant.
 func (s *SyncEngine) SyncAllChannels(ctx context.Context, tenantID string) error {
 	var chans []models.Channel
-	db.DB.Where("tenant_id = ? AND is_active = true", tenantID).Find(&chans)
+	if err := db.DB.Where("tenant_id = ? AND is_active = true", tenantID).Find(&chans).Error; err != nil {
+		return fmt.Errorf("load active channels: %w", err)
+	}
 
+	var syncErrors []error
 	for _, ch := range chans {
 		if err := s.SyncChannel(ctx, ch); err != nil {
 			log.Printf("[sync] channel %s failed: %v", ch.Name, err)
+			syncErrors = append(syncErrors, fmt.Errorf("channel %s: %w", ch.ID, err))
 		}
 	}
-	return nil
+	return errors.Join(syncErrors...)
 }
 
 func (s *SyncEngine) upsertConversation(tenantID, channelID string, conv channels.SyncedConversation) (string, error) {
@@ -206,17 +291,25 @@ func (s *SyncEngine) upsertConversation(tenantID, channelID string, conv channel
 	result := db.DB.Where("tenant_id = ? AND channel_id = ? AND external_conversation_id = ?",
 		tenantID, channelID, conv.ExternalID).First(&existing)
 
-	metadataJSON, _ := json.Marshal(conv.Metadata)
+	metadataJSON, err := json.Marshal(conv.Metadata)
+	if err != nil {
+		return "", fmt.Errorf("marshal conversation metadata: %w", err)
+	}
 
 	if result.Error == nil {
 		// Update existing
-		db.DB.Model(&existing).Updates(map[string]interface{}{
+		if err := db.DB.Model(&existing).Updates(map[string]interface{}{
 			"customer_name":   conv.CustomerName,
 			"last_message_at": conv.LastMessageAt,
 			"metadata":        string(metadataJSON),
 			"updated_at":      time.Now(),
-		})
+		}).Error; err != nil {
+			return "", err
+		}
 		return existing.ID, nil
+	}
+	if !errors.Is(result.Error, gorm.ErrRecordNotFound) {
+		return "", fmt.Errorf("find existing conversation: %w", result.Error)
 	}
 
 	// Create new
@@ -254,14 +347,28 @@ func (s *SyncEngine) upsertMessage(tenantID, conversationID string, msg channels
 			}
 		}
 		if hasLocalPath {
-			attachmentsJSON, _ := json.Marshal(msg.Attachments)
-			db.DB.Model(&existing).Update("attachments", string(attachmentsJSON))
+			attachmentsJSON, err := json.Marshal(msg.Attachments)
+			if err != nil {
+				return fmt.Errorf("marshal message attachments: %w", err)
+			}
+			if err := db.DB.Model(&existing).Update("attachments", string(attachmentsJSON)).Error; err != nil {
+				return err
+			}
 		}
 		return nil
 	}
+	if !errors.Is(result.Error, gorm.ErrRecordNotFound) {
+		return fmt.Errorf("find existing message: %w", result.Error)
+	}
 
-	attachmentsJSON, _ := json.Marshal(msg.Attachments)
-	rawDataJSON, _ := json.Marshal(msg.RawData)
+	attachmentsJSON, err := json.Marshal(msg.Attachments)
+	if err != nil {
+		return fmt.Errorf("marshal message attachments: %w", err)
+	}
+	rawDataJSON, err := json.Marshal(msg.RawData)
+	if err != nil {
+		return fmt.Errorf("marshal message raw data: %w", err)
+	}
 
 	message := models.Message{
 		ID:                pkg.NewUUID(),
@@ -280,22 +387,36 @@ func (s *SyncEngine) upsertMessage(tenantID, conversationID string, msg channels
 	return db.DB.Create(&message).Error
 }
 
-func (s *SyncEngine) updateSyncStatus(channelID, status, errMsg string) error {
-	now := time.Now()
+func buildSyncStatusUpdates(status, errMsg string, now time.Time) map[string]interface{} {
 	updates := map[string]interface{}{
-		"last_sync_at":     &now,
 		"last_sync_status": status,
 		"last_sync_error":  errMsg,
 		"updated_at":       now,
 	}
-	db.DB.Model(&models.Channel{}).Where("id = ?", channelID).Updates(updates)
+	if status == "success" {
+		updates["last_sync_at"] = &now
+	}
+	return updates
+}
+
+func (s *SyncEngine) updateSyncStatus(channelID, status, errMsg string) error {
+	now := time.Now()
+	updates := buildSyncStatusUpdates(status, errMsg, now)
+	if err := db.DB.Model(&models.Channel{}).Where("id = ?", channelID).Updates(updates).Error; err != nil {
+		return fmt.Errorf("update sync status %s: %w", status, err)
+	}
 	if errMsg != "" {
-		// Log error to activity logs
+		action := "sync.error"
+		label := "Sync failed"
+		if status == "partial" {
+			action = "sync.partial"
+			label = "Sync partial"
+		}
 		var ch models.Channel
 		if db.DB.Where("id = ?", channelID).First(&ch).Error == nil {
-			db.LogActivity(ch.TenantID, "", "system", "sync.error", "channel", channelID, "Sync failed: "+ch.Name, errMsg, "")
+			db.LogActivity(ch.TenantID, "", "system", action, "channel", channelID, label+": "+ch.Name, errMsg, "")
 		}
-		return fmt.Errorf("sync failed: %s", errMsg)
+		return fmt.Errorf("sync %s: %s", status, errMsg)
 	}
 	return nil
 }
@@ -303,14 +424,13 @@ func (s *SyncEngine) updateSyncStatus(channelID, status, errMsg string) error {
 // downloadAttachments tải file đính kèm về nơi cất file đang cấu hình — đĩa
 // máy chủ hoặc S3. Khoá của file vẫn là "<tenant>/<cuộc chat>/<tên file>" như
 // trước, nên đổi nơi cất không phải đụng vào dữ liệu đã lưu.
-func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.SyncedMessage) {
+func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.SyncedMessage) error {
 	// Kho trên đĩa luôn dựng sẵn làm lưới an toàn. Mất một tấm ảnh là mất hẳn —
 	// link ảnh bên Zalo và Facebook hết hạn sau ít lâu, không tải lại được nữa —
 	// nên S3 trục trặc thì thà ghi tạm xuống đĩa rồi chuyển lên sau, hơn là bỏ.
 	duPhong, err := storage.NewLocal(s.cfg.StorageLocalDir)
 	if err != nil {
-		log.Printf("[sync] không dựng được kho trên đĩa: %v", err)
-		return
+		return fmt.Errorf("không dựng được kho trên đĩa: %w", err)
 	}
 
 	// Mỗi công ty có kho riêng: công ty này để trên S3, công ty kia vẫn trên đĩa.
@@ -320,6 +440,7 @@ func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.
 		store = duPhong
 	}
 
+	var failures []string
 	for i, att := range msg.Attachments {
 		if att.URL == "" {
 			continue
@@ -351,6 +472,7 @@ func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.
 		noiDaLuu, err := luuFileDinhKem(context.Background(), store, duPhong, key, tai)
 		if err != nil {
 			log.Printf("[sync] lưu file %s hỏng: %v", key, err)
+			failures = append(failures, fmt.Sprintf("%s: %v", name, err))
 			continue
 		}
 
@@ -359,4 +481,8 @@ func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.
 		msg.Attachments[i].LocalPath = key
 		log.Printf("[sync] downloaded %s → %s (%s)", att.URL, key, noiDaLuu)
 	}
+	if len(failures) > 0 {
+		return fmt.Errorf("%d attachment không lưu được: %s", len(failures), strings.Join(failures, "; "))
+	}
+	return nil
 }

@@ -13,7 +13,7 @@
                        "FREEZE"
                    ],
     "activeHandoff":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-    "nextAllowedMove":  "Independent R2 review of CCMAI-ROADMAP-001 and CCMAI-IDENTITY-001; retain CCMAI-DOCS-001 and CCMAI-CREDIT-001 in REVIEW. CCMAI-DATABASE-001 local development setup is owner-reviewed and complete; no separate database review or CQA migration is pending. Machine-gate runtime implementation and provider calls require separate work orders.",
+    "nextAllowedMove":  "Independent R2 review of CCMAI-RUNTIME-001 against docs/reviews/RUNTIME_FOUNDATION_S0_S1_BUILD_2026-09-27.md. After accepted repair/FREEZE, specify the remaining S1 snapshot/evidence contract before S2 gate work. Provider calls and AI-runtime governance claims remain unauthorized without separate S2/S3 work orders and live evidence.",
     "parkedOperatorCheckpoint":  null,
     "activeRole":  "ORCHESTRATOR",
     "roleRoute":  "SINGLE_AGENT_MULTI_ROLE_ALLOWED",

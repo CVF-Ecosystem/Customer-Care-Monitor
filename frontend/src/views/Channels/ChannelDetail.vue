@@ -41,8 +41,8 @@
         </v-col>
         <v-col cols="6" sm="3">
           <div class="text-caption text-grey">Trạng thái đồng bộ</div>
-          <v-chip size="small" :color="channel.last_sync_status === 'success' ? 'success' : channel.last_sync_status === 'error' ? 'error' : 'grey'" variant="tonal">
-            {{ channel.last_sync_status === 'success' ? 'Thành công' : channel.last_sync_status === 'error' ? 'Lỗi' : 'Chưa đồng bộ' }}
+          <v-chip size="small" :color="syncStatusColor(channel.last_sync_status)" variant="tonal">
+            {{ syncStatusLabel(channel.last_sync_status) }}
           </v-chip>
         </v-col>
         <v-col cols="6" sm="3">
@@ -96,8 +96,8 @@
           <tr v-for="log in channelStore.syncHistory" :key="log.id">
             <td>{{ formatDateTime(log.created_at) }}</td>
             <td>
-              <v-chip size="x-small" :color="log.action === 'sync.completed' ? 'success' : 'error'" variant="tonal">
-                {{ log.action === 'sync.completed' ? 'Thành công' : 'Lỗi' }}
+              <v-chip size="x-small" :color="syncLogColor(log.action)" variant="tonal">
+                {{ syncLogLabel(log.action) }}
               </v-chip>
             </td>
             <td class="text-caption">{{ log.detail?.substring(0, 120) }}</td>
@@ -228,6 +228,34 @@ function formatSyncInterval(mins: number) {
   return `${mins / 1440} ngày`
 }
 
+function syncStatusColor(status: string) {
+  if (status === 'success') return 'success'
+  if (status === 'partial') return 'warning'
+  if (status === 'error') return 'error'
+  if (status === 'syncing') return 'info'
+  return 'grey'
+}
+
+function syncStatusLabel(status: string) {
+  if (status === 'success') return 'Thành công'
+  if (status === 'partial') return 'Hoàn tất một phần'
+  if (status === 'error') return 'Lỗi'
+  if (status === 'syncing') return 'Đang đồng bộ'
+  return 'Chưa đồng bộ'
+}
+
+function syncLogColor(action: string) {
+  if (action === 'sync.completed') return 'success'
+  if (action === 'sync.partial') return 'warning'
+  return 'error'
+}
+
+function syncLogLabel(action: string) {
+  if (action === 'sync.completed') return 'Thành công'
+  if (action === 'sync.partial') return 'Một phần'
+  return 'Lỗi'
+}
+
 function goToMessages() {
   router.push(`/${tenantId.value}/messages?channel_id=${channelId.value}`)
 }
@@ -255,6 +283,8 @@ async function doSync() {
     const ch = channelStore.currentChannel
     if (ch?.last_sync_status === 'success') {
       syncResult.value = { type: 'success', message: 'Đồng bộ thành công' }
+    } else if (ch?.last_sync_status === 'partial') {
+      syncResult.value = { type: 'warning', message: ch.last_sync_error || 'Đồng bộ hoàn tất một phần; checkpoint chưa được cập nhật' }
     } else {
       syncResult.value = { type: 'error', message: ch?.last_sync_error || 'Đồng bộ thất bại' }
     }

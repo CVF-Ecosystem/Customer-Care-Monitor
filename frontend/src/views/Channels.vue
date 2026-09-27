@@ -38,7 +38,7 @@
           <div class="d-flex align-center justify-space-between mb-2">
             <span class="text-caption text-grey">{{ $t('sync_status') }}</span>
             <v-chip size="x-small" :color="syncColor(ch.last_sync_status)" variant="tonal">
-              {{ ch.last_sync_status || '—' }}
+              {{ syncLabel(ch.last_sync_status) }}
             </v-chip>
           </div>
           <div class="d-flex align-center justify-space-between mb-3">
@@ -395,8 +395,18 @@ async function remove(channelId: string) {
 
 function syncColor(status: string) {
   if (status === 'success') return 'success'
+  if (status === 'partial') return 'warning'
   if (status === 'error') return 'error'
+  if (status === 'syncing') return 'info'
   return 'grey'
+}
+
+function syncLabel(status: string) {
+  if (status === 'success') return 'Thành công'
+  if (status === 'partial') return 'Một phần'
+  if (status === 'error') return 'Lỗi'
+  if (status === 'syncing') return 'Đang đồng bộ'
+  return '—'
 }
 
 function showSnack(text: string, color: string) {
