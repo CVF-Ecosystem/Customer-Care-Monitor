@@ -431,3 +431,82 @@ handlers via `httptest`/`gin.CreateTestContext`, not just `fetchRows`:
   remains a local, informational signal only. No S2/S3/S5, provider call,
   real channel sync, customer data, deployment or FREEZE is authorized by
   this repair round.
+
+## Addendum: Repair round 2 (R004-R3-T1 test/evidence completion)
+
+**Entry:** Codex re-review of repair commit `a074870`
+(`docs/reviews/CCMAI_RUNTIME_004_REPAIR_R1_REREVIEW_2026-09-27.md`)
+accepted R004-R1/R004-R2 and returned `CHANGES_REQUIRED_ROUND_2` for
+R004-R3-T1 only. Role transition `REVIEWER (Codex) -> REPAIR_WORKER
+(Claude)` was acknowledged in the active handoff at `c7e4145`. The only
+changed source file is `backend/api/handlers/results_test.go`. No production
+source, model/migration, frontend or CVF core file changed, and no
+product-source defect was found.
+
+### Changes
+
+- `TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn` now has two
+  subtests. `unchanged` expects `bound_currentness_unverified`. `changed`
+  edits the source message after analysis and expects
+  `changed_since_analysis`. Each subtest calls the real `ExportResults`
+  handler for `format=csv` and `format=xlsx`. For CSV, the test parses the
+  output with `encoding/csv` after removing the BOM. For XLSX, it reads the
+  file back with `excelize`. In both formats it asserts that the header's
+  last column is `Tính toàn vẹn nguồn` and that the one data row's last cell
+  is exactly `sourceIntegrityLabel(<expected status>)`. Round 1 used a
+  substring match; these are exact per-column checks.
+- New `TestExportResultsSnapshotBatchQueryFailureIsObservable` forces the
+  batched `analysis_snapshots` SELECT to fail and calls `ExportResults` for
+  both `csv` and `xlsx`. For each format it asserts:
+  - the status is 4xx/5xx;
+  - there is no `Content-Disposition` download header;
+  - `Content-Type` is `application/json`;
+  - the body has no CSV BOM and no XLSX `PK` prefix;
+  - the body decodes to `{"error":"query_failed"}`.
+- The table-rename failure injection is now the shared
+  `forceSnapshotQueryFailure(t)` helper. The existing
+  `TestListResultsSnapshotBatchQueryFailureIsObservable` uses it with the
+  same behavior. The helper's cleanup restores the table before the
+  fixture's own DELETEs run, because Go runs cleanups in reverse order. A
+  restore failure is now reported with `t.Errorf` so the remaining cleanups
+  still run.
+
+### Validation (disposable MySQL)
+
+`mysql:8.0` container `ccma-r004-r2-db` on its own Docker network
+`ccma-r004-r2-net` (host port 33072, no host data), schema `CCMA`,
+`SET GLOBAL log_bin_trust_function_creators=1` via root.
+`TEST_DB_DSN=ccma:***@tcp(127.0.0.1:33072)/CCMA?...`, `GOFLAGS=-mod=readonly`.
+
+```text
+go vet ./api/handlers/                                                     clean
+go test ./engine ./api/handlers -run 'TestCompareSnapshot|TestVerifySnapshot|TestSourceIntegrity|TestListResults|TestExportResults|TestFetchRows|TestVerdictCounts|TestLocTheoDiem|TestKhongLoDuLieu' -count=1 -v
+    engine: 18 PASS; handlers: 21 top-level PASS, including
+    TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn/{unchanged,changed},
+    TestListResultsSnapshotBatchQueryFailureIsObservable,
+    TestExportResultsSnapshotBatchQueryFailureIsObservable/{csv,xlsx}
+go test ./... -count=1 -p 1                                                all 13 packages ok
+SHOW TABLES LIKE 'analysis_snapshots%' (after suite)                      analysis_snapshots only (rename restored)
+gofmt -l results_test.go (LF-normalized copy)                             clean
+git diff --check                                                           clean (autocrlf advisory only)
+backend/go.mod, backend/go.sum                                             unchanged
+scripts/manage_cvf_downstream_catalog.ps1 -Check                           PASS
+check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .                   PASS 25/25
+```
+
+Existing filter, count, order and tenant tests (`TestFetchRows*`,
+`TestVerdictCounts*`, `TestLocTheoDiem*`, `TestKhongLoDuLieu*`) still pass.
+The export-cap branch was not changed. No frontend build was run because
+frontend source is outside this round's scope.
+
+Cleanup: the disposable container and network were removed. The persistent
+Compose `ccma` stack (`ccma-app-1`, `ccma-db-1`) was not started, reset or
+touched.
+
+### Boundary
+
+This round adds test evidence only. No provider call, API key, real channel
+sync, customer data, deployment or push was used. This is not live CVF
+governance proof. It does not claim upstream source completeness. It
+authorizes no S2/S3/S5 work and no FREEZE. Status is `REVIEW_PENDING` for
+Codex's independent re-review.

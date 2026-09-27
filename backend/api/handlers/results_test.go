@@ -3,6 +3,7 @@ package handlers
 import (
 	"bytes"
 	"crypto/sha256"
+	"encoding/csv"
 	"encoding/hex"
 	"encoding/json"
 	"net/http"
@@ -724,39 +725,40 @@ func TestListResultsResponseIncludesSourceIntegrityStatus(t *testing.T) {
 	}
 }
 
-// TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn proves both export
-// formats carry the same source-integrity label for the same underlying row
-// — CSV/XLSX equivalence, not just page-side coverage.
-func TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn(t *testing.T) {
-	f := setupSourceIntegrityFixture(t)
-	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
-	f.insertMessage(t, "m-srcint-12", "ext-12", "customer", "Khach", "Tin nhan goc", sentAt)
-	f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-12", "ext-12", "customer", "Khach", sentAt, "Tin nhan goc")))
-	wantLabel := sourceIntegrityLabel(engine.SourceIntegrityBoundCurrentnessUnverified)
-
+func callExportResults(t *testing.T, tenantID, format string) *httptest.ResponseRecorder {
+	t.Helper()
 	gin.SetMode(gin.TestMode)
+	rec := httptest.NewRecorder()
+	c, _ := gin.CreateTestContext(rec)
+	c.Set("tenant_id", tenantID)
+	c.Request = httptest.NewRequest("GET", "/api/v1/results/export?job_type=qc_analysis&format="+format, nil)
+	ExportResults(c)
+	return rec
+}
 
-	csvRec := httptest.NewRecorder()
-	cCSV, _ := gin.CreateTestContext(csvRec)
-	cCSV.Set("tenant_id", f.tenantID)
-	cCSV.Request = httptest.NewRequest("GET", "/api/v1/results/export?job_type=qc_analysis&format=csv", nil)
-	ExportResults(cCSV)
-	if csvRec.Code != http.StatusOK {
-		t.Fatalf("csv export status = %d, body = %s", csvRec.Code, csvRec.Body.String())
+// csvLastColumn parses the exported CSV (BOM + header + data rows) and returns
+// the last cell of every data row, so the status is checked in its own column
+// rather than as a substring anywhere in the file.
+func csvLastColumn(t *testing.T, body []byte) []string {
+	t.Helper()
+	r := csv.NewReader(bytes.NewReader(bytes.TrimPrefix(body, []byte("\xEF\xBB\xBF"))))
+	records, err := r.ReadAll()
+	if err != nil {
+		t.Fatalf("parse csv: %v", err)
 	}
-	if !strings.Contains(csvRec.Body.String(), wantLabel) {
-		t.Fatalf("csv export missing source-integrity label %q, body = %s", wantLabel, csvRec.Body.String())
+	if len(records) < 1 || records[0][len(records[0])-1] != "Tính toàn vẹn nguồn" {
+		t.Fatalf("csv header = %+v, want last column %q", records, "Tính toàn vẹn nguồn")
 	}
+	out := make([]string, 0, len(records)-1)
+	for _, rec := range records[1:] {
+		out = append(out, rec[len(rec)-1])
+	}
+	return out
+}
 
-	xlsxRec := httptest.NewRecorder()
-	cXLSX, _ := gin.CreateTestContext(xlsxRec)
-	cXLSX.Set("tenant_id", f.tenantID)
-	cXLSX.Request = httptest.NewRequest("GET", "/api/v1/results/export?job_type=qc_analysis&format=xlsx", nil)
-	ExportResults(cXLSX)
-	if xlsxRec.Code != http.StatusOK {
-		t.Fatalf("xlsx export status = %d, body = %s", xlsxRec.Code, xlsxRec.Body.String())
-	}
-	wb, err := excelize.OpenReader(bytes.NewReader(xlsxRec.Body.Bytes()))
+func xlsxLastColumn(t *testing.T, body []byte) []string {
+	t.Helper()
+	wb, err := excelize.OpenReader(bytes.NewReader(body))
 	if err != nil {
 		t.Fatalf("open xlsx: %v", err)
 	}
@@ -764,13 +766,75 @@ func TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn(t *testing.T) {
 	if err != nil {
 		t.Fatalf("read xlsx rows: %v", err)
 	}
-	if len(sheetRows) != 2 {
-		t.Fatalf("xlsx rows = %d, want 2 (header + 1 data row)", len(sheetRows))
+	if len(sheetRows) < 1 || sheetRows[0][len(sheetRows[0])-1] != "Tính toàn vẹn nguồn" {
+		t.Fatalf("xlsx header = %+v, want last column %q", sheetRows, "Tính toàn vẹn nguồn")
 	}
-	lastCol := len(sheetRows[1]) - 1
-	if lastCol < 0 || sheetRows[1][lastCol] != wantLabel {
-		t.Fatalf("xlsx source-integrity cell = %+v, want last column %q", sheetRows[1], wantLabel)
+	out := make([]string, 0, len(sheetRows)-1)
+	for _, row := range sheetRows[1:] {
+		out = append(out, row[len(row)-1])
 	}
+	return out
+}
+
+// TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn proves both export
+// formats carry the same source-integrity label for the same underlying row,
+// for a nonchanged source and for a source edited after analysis.
+func TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn(t *testing.T) {
+	cases := []struct {
+		name       string
+		editSource bool
+		wantStatus string
+	}{
+		{"unchanged", false, engine.SourceIntegrityBoundCurrentnessUnverified},
+		{"changed", true, engine.SourceIntegrityChangedSinceAnalysis},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			f := setupSourceIntegrityFixture(t)
+			sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+			f.insertMessage(t, "m-srcint-12", "ext-12", "customer", "Khach", "Tin nhan goc", sentAt)
+			f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-12", "ext-12", "customer", "Khach", sentAt, "Tin nhan goc")))
+			if tc.editSource {
+				if err := db.DB.Exec(`UPDATE messages SET content = ? WHERE id = ? AND tenant_id = ?`, "Tin nhan da doi sau danh gia", "m-srcint-12", f.tenantID).Error; err != nil {
+					t.Fatalf("edit message: %v", err)
+				}
+			}
+			wantLabel := sourceIntegrityLabel(tc.wantStatus)
+
+			csvRec := callExportResults(t, f.tenantID, "csv")
+			if csvRec.Code != http.StatusOK {
+				t.Fatalf("csv export status = %d, body = %s", csvRec.Code, csvRec.Body.String())
+			}
+			if got := csvLastColumn(t, csvRec.Body.Bytes()); len(got) != 1 || got[0] != wantLabel {
+				t.Fatalf("csv source-integrity column = %q, want [%q]", got, wantLabel)
+			}
+
+			xlsxRec := callExportResults(t, f.tenantID, "xlsx")
+			if xlsxRec.Code != http.StatusOK {
+				t.Fatalf("xlsx export status = %d, body = %s", xlsxRec.Code, xlsxRec.Body.String())
+			}
+			if got := xlsxLastColumn(t, xlsxRec.Body.Bytes()); len(got) != 1 || got[0] != wantLabel {
+				t.Fatalf("xlsx source-integrity column = %q, want [%q]", got, wantLabel)
+			}
+		})
+	}
+}
+
+// forceSnapshotQueryFailure renames analysis_snapshots so attachSourceIntegrity's
+// batched snapshot SELECT fails. MySQL triggers cannot intercept a SELECT, so
+// this disposable-MySQL-only rename is used instead; it must be called after
+// setupSourceIntegrityFixture so the LIFO cleanup restores the table before the
+// fixture's own DELETEs run, even if the test fails or panics.
+func forceSnapshotQueryFailure(t *testing.T) {
+	t.Helper()
+	if err := db.DB.Exec("RENAME TABLE analysis_snapshots TO analysis_snapshots_forced_failure").Error; err != nil {
+		t.Fatalf("rename table to force failure: %v", err)
+	}
+	t.Cleanup(func() {
+		if err := db.DB.Exec("RENAME TABLE analysis_snapshots_forced_failure TO analysis_snapshots").Error; err != nil {
+			t.Errorf("restore renamed table: %v", err)
+		}
+	})
 }
 
 // TestListResultsSnapshotBatchQueryFailureIsObservable proves
@@ -778,28 +842,12 @@ func TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn(t *testing.T) {
 // is real, not just a documented intent: it forces that exact query to
 // error and checks the handler returns a non-2xx response instead of a
 // page that silently omits or mis-states the affected rows' status.
-//
-// MySQL triggers (used elsewhere in this codebase, e.g. demo_test.go and
-// channels_test.go, to force a DELETE/UPDATE to fail) cannot intercept a
-// SELECT, so this uses a disposable-MySQL-only technique instead: renaming
-// the table out from under the query for the duration of this one test. The
-// rename is undone in t.Cleanup (LIFO: before setupSourceIntegrityFixture's
-// own cleanup runs, so its DELETEs still find the table), regardless of
-// whether the test passes, panics or calls t.Fatal.
 func TestListResultsSnapshotBatchQueryFailureIsObservable(t *testing.T) {
 	f := setupSourceIntegrityFixture(t)
 	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
 	f.insertMessage(t, "m-srcint-13", "ext-13", "customer", "Khach", "Tin nhan", sentAt)
 	f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-13", "ext-13", "customer", "Khach", sentAt, "Tin nhan")))
-
-	if err := db.DB.Exec("RENAME TABLE analysis_snapshots TO analysis_snapshots_forced_failure").Error; err != nil {
-		t.Fatalf("rename table to force failure: %v", err)
-	}
-	t.Cleanup(func() {
-		if err := db.DB.Exec("RENAME TABLE analysis_snapshots_forced_failure TO analysis_snapshots").Error; err != nil {
-			t.Fatalf("restore renamed table: %v", err)
-		}
-	})
+	forceSnapshotQueryFailure(t)
 
 	gin.SetMode(gin.TestMode)
 	rec := httptest.NewRecorder()
@@ -811,5 +859,42 @@ func TestListResultsSnapshotBatchQueryFailureIsObservable(t *testing.T) {
 
 	if rec.Code == http.StatusOK || rec.Code < 300 {
 		t.Fatalf("ListResults status = %d, muon loi khi bang snapshot khong doc duoc (khong duoc thanh cong mot phan), body = %s", rec.Code, rec.Body.String())
+	}
+}
+
+// TestExportResultsSnapshotBatchQueryFailureIsObservable is the export-side
+// counterpart: with the batched snapshot query forced to fail, neither CSV nor
+// XLSX may return a success status, a download header or any partial file.
+func TestExportResultsSnapshotBatchQueryFailureIsObservable(t *testing.T) {
+	f := setupSourceIntegrityFixture(t)
+	sentAt := time.Now().Add(-2 * time.Hour).UTC().Truncate(time.Second)
+	f.insertMessage(t, "m-srcint-14", "ext-14", "customer", "Khach", "Tin nhan", sentAt)
+	f.insertSnapshotBoundResult(t, f.manifestJSON(t, snapshotMessageEntry("m-srcint-14", "ext-14", "customer", "Khach", sentAt, "Tin nhan")))
+	forceSnapshotQueryFailure(t)
+
+	for _, format := range []string{"csv", "xlsx"} {
+		t.Run(format, func(t *testing.T) {
+			rec := callExportResults(t, f.tenantID, format)
+			body := rec.Body.Bytes()
+
+			if rec.Code < 400 {
+				t.Fatalf("%s export status = %d, want a 4xx/5xx error, body = %q", format, rec.Code, body)
+			}
+			if cd := rec.Header().Get("Content-Disposition"); cd != "" {
+				t.Fatalf("%s export set download header %q on failure", format, cd)
+			}
+			if ct := rec.Header().Get("Content-Type"); !strings.HasPrefix(ct, "application/json") {
+				t.Fatalf("%s export content type = %q, want JSON error, not a file", format, ct)
+			}
+			if bytes.HasPrefix(body, []byte("\xEF\xBB\xBF")) || bytes.HasPrefix(body, []byte("PK")) {
+				t.Fatalf("%s export body starts like a CSV/XLSX file on failure: %q", format, body)
+			}
+			var resp struct {
+				Error string `json:"error"`
+			}
+			if err := json.Unmarshal(body, &resp); err != nil || resp.Error != "query_failed" {
+				t.Fatalf("%s export body = %q, want JSON {\"error\":\"query_failed\"} (unmarshal err: %v)", format, body, err)
+			}
+		})
 	}
 }

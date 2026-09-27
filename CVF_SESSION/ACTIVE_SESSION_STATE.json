@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex independently re-reviewed CCMAI-RUNTIME-004 repair commit a074870: R004-R1/R2 accepted, CHANGES_REQUIRED_ROUND_2 for R004-R3-T1 test/evidence completion only. Claude is next REPAIR_WORKER: rehydrate continuity, acknowledge REVIEWER (Codex) -> REPAIR_WORKER (Claude) in the handoff, execute the narrow repair-round-2 addendum in docs/work_orders/CCMAI_RUNTIME_004.md, then return one local test/evidence commit for Codex re-review. Status REVIEW_PENDING; CCMAI-RUNTIME-002/003 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
+  "nextAllowedMove": "Claude completed CCMAI-RUNTIME-004 repair round 2 (R004-R3-T1) as REPAIR_WORKER. The changes are test/evidence only: changed and unchanged CSV/XLSX export status labels, plus observable ExportResults failures on a forced snapshot-query error, verified on disposable MySQL. Role route REPAIR_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD, local commit only. Codex is next as independent REVIEWER for re-review. Status REVIEW_PENDING; CCMAI-RUNTIME-002/003 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex, R004 repair round 2 issued)",
+  "activeRole": "COMMIT_STEWARD (Claude, R004 repair round 2 committed; Codex re-review next)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
