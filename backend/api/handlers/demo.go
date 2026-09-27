@@ -64,14 +64,14 @@ func ImportDemoData(c *gin.Context) {
 	fbChannelID := pkg.NewUUID()
 	dummyCreds := []byte(`{"demo":true}`)
 	channels := []models.Channel{
-		{ID: zaloChannelID, TenantID: tenantID, ChannelType: "zalo_oa", Name: "SePay Coffee Zalo OA", ExternalID: "demo-zalo-oa", CredentialsEncrypted: dummyCreds, IsActive: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
-		{ID: fbChannelID, TenantID: tenantID, ChannelType: "facebook", Name: "SePay Coffee Facebook", ExternalID: "demo-fb-page", CredentialsEncrypted: dummyCreds, IsActive: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
+		{ID: zaloChannelID, TenantID: tenantID, ChannelType: "zalo_oa", Name: "Cà Phê Mẫu Zalo OA", ExternalID: "demo-zalo-oa", CredentialsEncrypted: dummyCreds, IsActive: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
+		{ID: fbChannelID, TenantID: tenantID, ChannelType: "facebook", Name: "Cà Phê Mẫu Facebook", ExternalID: "demo-fb-page", CredentialsEncrypted: dummyCreds, IsActive: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
 	}
 
 	// === QC Job ===
 	qcJobID := pkg.NewUUID()
 	qcRunID := pkg.NewUUID()
-	rulesContent := `# Quy tắc đánh giá chất lượng CSKH - SePay Coffee
+	rulesContent := `# Quy tắc đánh giá chất lượng CSKH - Cà Phê Mẫu
 
 ## 1. Chào hỏi lịch sự
 - Nhân viên phải chào hỏi khách hàng trong tin nhắn đầu tiên
@@ -144,7 +144,7 @@ func ImportDemoData(c *gin.Context) {
 		"Âu Văn Hùng", "Quách Thị Liên", "Thái Văn Minh", "Trịnh Thị Nhi", "Lê Văn Phúc",
 	}
 
-	agentNames := []string{"Linh - SePay Coffee", "Hùng - SePay Coffee", "Trang - SePay Coffee", "Đức - SePay Coffee"}
+	agentNames := []string{"Linh - Cà Phê Mẫu", "Hùng - Cà Phê Mẫu", "Trang - Cà Phê Mẫu", "Đức - Cà Phê Mẫu"}
 
 	// === Conversation templates ===
 	type convTemplate struct {
@@ -521,13 +521,13 @@ func buildDemoTemplates() []demoTemplate {
 			review: "Nhân viên chào hỏi lịch sự, trả lời nhanh và đầy đủ thông tin menu cho khách.",
 			messages: []struct{ sender, content string }{
 				{"customer", "Chào quán, cho mình hỏi menu cà phê với ạ"},
-				{"agent", "Chào anh/chị, cảm ơn đã liên hệ SePay Coffee ạ! Bên em có menu cà phê như sau:\n- Cà phê sữa đá: 35k\n- Bạc xỉu: 35k\n- Cappuccino: 45k\n- Latte: 45k\n- Americano: 40k\nAnh/chị muốn dùng món nào ạ?"},
+				{"agent", "Chào anh/chị, cảm ơn đã liên hệ Cà Phê Mẫu ạ! Bên em có menu cà phê như sau:\n- Cà phê sữa đá: 35k\n- Bạc xỉu: 35k\n- Cappuccino: 45k\n- Latte: 45k\n- Americano: 40k\nAnh/chị muốn dùng món nào ạ?"},
 				{"customer", "Cappuccino size lớn bao nhiêu nhỉ?"},
 				{"agent", "Dạ Cappuccino size L là 55k ạ. Bên em có thêm các topping như thạch cà phê +10k, shot espresso +15k. Anh/chị có muốn thêm gì không ạ?"},
 				{"customer", "Ok cho mình 1 Cappuccino L thêm shot espresso nhé"},
 				{"agent", "Dạ em ghi nhận 1 Cappuccino size L + shot espresso = 70k ạ. Anh/chị cho em địa chỉ giao hoặc đến quán lấy ạ?"},
 				{"customer", "Mình ghé quán lấy, tầm 15 phút nữa"},
-				{"agent", "Dạ em chuẩn bị sẵn cho anh/chị nhé. Cảm ơn anh/chị đã ủng hộ SePay Coffee ạ! Hẹn gặp anh/chị ạ 😊"},
+				{"agent", "Dạ em chuẩn bị sẵn cho anh/chị nhé. Cảm ơn anh/chị đã ủng hộ Cà Phê Mẫu ạ! Hẹn gặp anh/chị ạ 😊"},
 			},
 		},
 		// === QC PASS: Booking table (x12) ===
@@ -556,7 +556,7 @@ func buildDemoTemplates() []demoTemplate {
 				{"customer", "Lần trước cũng bị rồi đó, giao chậm quá"},
 				{"agent", "Dạ em thành thật xin lỗi anh/chị. Để bù đắp, em xin gửi anh/chị 1 voucher giảm 50% cho đơn tiếp theo ạ. Đồng thời em sẽ báo lại bộ phận giao hàng để cải thiện thời gian giao ạ."},
 				{"customer", "Ok vậy gửi voucher đi"},
-				{"agent", "Dạ em đã gửi mã voucher SEPAY50 qua tin nhắn cho anh/chị rồi ạ. Mã có hiệu lực 7 ngày. Một lần nữa em xin lỗi vì sự bất tiện này. Anh/chị cần hỗ trợ gì thêm không ạ?"},
+				{"agent", "Dạ em đã gửi mã voucher CAFEMAU50 qua tin nhắn cho anh/chị rồi ạ. Mã có hiệu lực 7 ngày. Một lần nữa em xin lỗi vì sự bất tiện này. Anh/chị cần hỗ trợ gì thêm không ạ?"},
 				{"customer", "Được rồi, cảm ơn"},
 				{"agent", "Dạ cảm ơn anh/chị đã thông cảm ạ. Chúc anh/chị ngày tốt lành!"},
 			},
@@ -570,7 +570,7 @@ func buildDemoTemplates() []demoTemplate {
 				{"customer", "Không gian quán cũng đẹp, phục vụ nhiệt tình lắm"},
 				{"agent", "Dạ cảm ơn anh/chị đã dành thời gian chia sẻ ạ! Bên em luôn cố gắng mang đến trải nghiệm tốt nhất cho khách hàng. Anh/chị có thể đánh giá 5 sao trên Google Maps giúp bên em được không ạ? 🙏"},
 				{"customer", "Ok để mình rate cho"},
-				{"agent", "Dạ cảm ơn anh/chị rất nhiều ạ! Hẹn gặp lại anh/chị ở SePay Coffee nhé. Chúc anh/chị cuối tuần vui vẻ ạ! ☕"},
+				{"agent", "Dạ cảm ơn anh/chị rất nhiều ạ! Hẹn gặp lại anh/chị ở Cà Phê Mẫu nhé. Chúc anh/chị cuối tuần vui vẻ ạ! ☕"},
 			},
 		},
 		// === QC FAIL: Slow response, rude (x10) ===
@@ -617,7 +617,7 @@ func buildDemoTemplates() []demoTemplate {
 			review: "Cuộc chat quá ngắn, chỉ có lời chào hoặc sticker, không đủ nội dung để đánh giá.",
 			messages: []struct{ sender, content string }{
 				{"customer", "Hello"},
-				{"agent", "Chào anh/chị, SePay Coffee xin nghe ạ!"},
+				{"agent", "Chào anh/chị, Cà Phê Mẫu xin nghe ạ!"},
 			},
 		},
 		// === Classification: Hỏi menu / Đặt bàn (x25) ===
@@ -665,9 +665,9 @@ func buildDemoTemplates() []demoTemplate {
 			classTags: []string{"Hỗ trợ chung"}, classEvidence: []string{"Khách hỏi về giờ mở cửa, wifi và chương trình thẻ thành viên."},
 			messages: []struct{ sender, content string }{
 				{"customer", "Quán mở cửa mấy giờ vậy?"},
-				{"agent", "Chào anh/chị! SePay Coffee mở cửa từ 7:00 sáng đến 22:00 tối hàng ngày, kể cả cuối tuần và ngày lễ ạ."},
+				{"agent", "Chào anh/chị! Cà Phê Mẫu mở cửa từ 7:00 sáng đến 22:00 tối hàng ngày, kể cả cuối tuần và ngày lễ ạ."},
 				{"customer", "Quán có wifi không? Password là gì?"},
-				{"agent", "Dạ có wifi miễn phí ạ!\n- Tên wifi: SePayCoffee_Guest\n- Mật khẩu: sepay2024\nTốc độ 50Mbps, anh/chị dùng thoải mái nhé ạ!"},
+				{"agent", "Dạ có wifi miễn phí ạ!\n- Tên wifi: CafeMau_Guest\n- Mật khẩu: cafemau2024\nTốc độ 50Mbps, anh/chị dùng thoải mái nhé ạ!"},
 				{"customer", "Mình thấy quán có thẻ thành viên phải không? Đăng ký sao vậy?"},
 				{"agent", "Dạ đúng rồi ạ! Bên em có chương trình thẻ thành viên:\n- Tích điểm: 1.000đ = 1 điểm\n- 100 điểm = đổi 1 ly cà phê miễn phí\n- Sinh nhật: tặng 1 ly bất kỳ\nAnh/chị chỉ cần cung cấp SĐT tại quầy để đăng ký miễn phí ạ!"},
 				{"customer", "Ok hay quá, lần tới mình đăng ký nhé"},
@@ -690,14 +690,14 @@ func buildDemoTemplates() []demoTemplate {
 		{count: 10, category: "class_skip", verdict: "SKIP",
 			messages: []struct{ sender, content string }{
 				{"customer", "👋"},
-				{"agent", "Chào anh/chị! SePay Coffee xin nghe ạ. Anh/chị cần hỗ trợ gì ạ?"},
+				{"agent", "Chào anh/chị! Cà Phê Mẫu xin nghe ạ. Anh/chị cần hỗ trợ gì ạ?"},
 			},
 		},
 		// === QC PASS: Technical support, patient (x8) ===
 		{count: 8, category: "qc_pass", verdict: "PASS", score: 85,
 			review: "Nhân viên hỗ trợ kỹ thuật kiên nhẫn, hướng dẫn chi tiết từng bước cho khách.",
 			messages: []struct{ sender, content string }{
-				{"customer", "Mình không đăng nhập được app SePay Coffee để tích điểm"},
+				{"customer", "Mình không đăng nhập được app Cà Phê Mẫu để tích điểm"},
 				{"agent", "Chào anh/chị, em sẽ hỗ trợ anh/chị ạ. Anh/chị dùng SĐT nào để đăng ký thẻ thành viên ạ?"},
 				{"customer", "0909123456"},
 				{"agent", "Dạ em kiểm tra thì tài khoản anh/chị vẫn hoạt động bình thường ạ. Anh/chị thử:\n1. Đóng app hoàn toàn\n2. Mở lại app\n3. Chọn 'Đăng nhập bằng SĐT'\n4. Nhập mã OTP gửi về SĐT\nAnh/chị thử và báo lại em nhé ạ."},
@@ -710,7 +710,7 @@ func buildDemoTemplates() []demoTemplate {
 			review: "Nhân viên cung cấp đầy đủ thông tin khuyến mãi, tư vấn nhiệt tình.",
 			messages: []struct{ sender, content string }{
 				{"customer", "Quán đang có khuyến mãi gì không ạ?"},
-				{"agent", "Chào anh/chị! Hiện SePay Coffee đang có chương trình:\n🎉 Mua 2 tặng 1 (áp dụng T2-T4, size M)\n🎂 Sinh nhật tháng: Giảm 50% 1 ly bất kỳ\n💳 Thanh toán qua app: Giảm 10%\nAnh/chị quan tâm chương trình nào ạ?"},
+				{"agent", "Chào anh/chị! Hiện Cà Phê Mẫu đang có chương trình:\n🎉 Mua 2 tặng 1 (áp dụng T2-T4, size M)\n🎂 Sinh nhật tháng: Giảm 50% 1 ly bất kỳ\n💳 Thanh toán qua app: Giảm 10%\nAnh/chị quan tâm chương trình nào ạ?"},
 				{"customer", "Mua 2 tặng 1 áp dụng cho tất cả đồ uống hả?"},
 				{"agent", "Dạ áp dụng cho tất cả đồ uống size M ạ. 2 ly có thể khác loại nhé. Ví dụ mua 1 cà phê sữa + 1 trà đào thì tặng thêm 1 ly size M bất kỳ ạ!"},
 				{"customer", "Hay ghê, thứ 3 tuần này mình ghé nhé"},

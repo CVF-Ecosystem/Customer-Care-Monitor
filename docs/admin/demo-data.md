@@ -4,6 +4,8 @@
 
 CQA cung cấp bộ dữ liệu demo gồm **220 cuộc hội thoại mẫu** từ kịch bản quán coffee. Giúp bạn trải nghiệm đầy đủ tính năng trước khi kết nối kênh chat thật.
 
+Mẫu được tạo trong `backend/api/handlers/demo.go`. Khi import, ứng dụng lưu chúng vào MySQL của workspace hiện tại (schema mặc định `CCMA`), chủ yếu ở các bảng `channels`, `conversations`, `messages`, `jobs`, `job_runs` và `job_results`; tên kênh trên giao diện được đọc từ database này. Sửa mẫu trong source chỉ ảnh hưởng lần import sau khi backend được build/deploy lại; dữ liệu đã import cần được cập nhật riêng.
+
 ## Import dữ liệu demo
 
 ### Từ Dashboard
