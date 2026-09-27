@@ -10,7 +10,7 @@
     :class="[`ccma-metric--${tone ?? 'neutral'}`, { 'ccma-metric--link': !!to }]"
   >
     <span class="ccma-metric__label">{{ label }}</span>
-    <span class="ccma-metric__value tabular-nums" data-testid="metric-value">{{ display }}</span>
+    <span class="ccma-metric__value tabular-nums" data-testid="metric-value">{{ display }}<span v-if="suffix && display !== '—'" class="ccma-metric__suffix">{{ suffix }}</span></span>
     <span v-if="hint" class="ccma-metric__hint">{{ hint }}</span>
     <v-icon v-if="to" class="ccma-metric__arrow" size="18" aria-hidden="true">mdi-arrow-right</v-icon>
   </component>
@@ -29,6 +29,8 @@ const props = defineProps<{
   hint?: string
   tone?: 'neutral' | 'fail' | 'warning' | 'pass'
   fractionDigits?: number
+  // Unit shown after a known value only, e.g. "%" or "/100" (never after "—").
+  suffix?: string
 }>()
 const { locale } = useI18n()
 
@@ -66,6 +68,12 @@ const display = computed(() => formatNumber(props.value ?? null, locale.value as
   font-size: 30px;
   font-weight: 700;
   line-height: 1.15;
+}
+.ccma-metric__suffix {
+  margin-left: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(var(--v-theme-text-muted));
 }
 .ccma-metric--fail .ccma-metric__value {
   color: rgb(var(--v-theme-fail));

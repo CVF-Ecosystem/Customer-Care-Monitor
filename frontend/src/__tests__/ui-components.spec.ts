@@ -107,6 +107,11 @@ describe('MetricCard', () => {
     expect(zero.find('[data-testid="metric-value"]').text()).toBe('0')
   })
 
+  it('shows a unit suffix only after a known value (UX-010)', () => {
+    expect(mountUi(MetricCard, { label: 'Tỉ lệ đạt', value: 80, suffix: '%' }).find('[data-testid="metric-value"]').text()).toBe('80%')
+    expect(mountUi(MetricCard, { label: 'Tỉ lệ đạt', value: null, suffix: '%' }).find('[data-testid="metric-value"]').text()).toBe('—')
+  })
+
   it('becomes a real link when it drills down', () => {
     const w = mountUi(MetricCard, { label: 'Không đạt', value: 4, to: '/results?verdict=fail' })
     expect(w.element.tagName).toBe('A')

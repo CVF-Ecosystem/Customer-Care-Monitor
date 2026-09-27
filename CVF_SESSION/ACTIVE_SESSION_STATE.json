@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude: author an R2 work order for CCMAI-UX-010 from its approved SPEC/canvas, acknowledge tranche and role transition in the handoff, then BUILD within that work order and return a local REVIEW_PENDING commit for independent Codex review. UX-000 (UX000-R1), UX-002 and UX-001a are independently REVIEW_PASS; FREEZE remains open. Preserve dashboard issues; separate R2 API tranche for qc_violation_count. Separate R2 runtime tranche for explicitly marked demo channels. UX-010 latest-run default, scope selector and all-runs export label remain required. R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "Codex: independently REVIEW CCMAI-UX-010 BUILD (Job Detail; evidence docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md), including the work order's two SPEC corrections and confirmation of the latest-run default rationale. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open. Separate R2 tranches still to be ordered: dashboard qc_violation_count API; scheduler skip for explicitly marked demo channels. R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex after independent UX000-R1 REVIEW_PASS; Claude next WORK_ORDER_AUTHOR for UX-010)",
+  "activeRole": "REVIEWER (Codex) next for CCMAI-UX-010; Claude IMPLEMENTATION_WORKER done",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

@@ -1,36 +1,261 @@
+<!--
+  Job Detail — CCMAI-UX-010 redesign (SPEC docs/specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md,
+  canvas version 1790540352-11c7). Data comes from the existing job, runs, results and messages
+  endpoints only; scope, grouping and evidence logic live in ./job-detail/logic.ts.
+-->
 <template>
-  <div>
+  <div class="jd">
     <!-- Header -->
-    <div class="d-flex align-center mb-4">
-      <v-btn icon="mdi-arrow-left" variant="text" size="small" :to="`/${tenantId}/jobs`" />
-      <h1 class="text-subtitle-1 text-md-h5 font-weight-bold ml-1 flex-grow-1" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ job?.name || '...' }}</h1>
-      <template v-if="authStore.canEdit('jobs')">
-        <v-tooltip v-if="!mdAndUp" text="Sửa" location="bottom">
-          <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" icon="mdi-pencil" size="small" :to="`/${tenantId}/jobs/${jobId}/edit`" class="ml-1" />
-          </template>
-        </v-tooltip>
-        <v-btn v-else variant="outlined" prepend-icon="mdi-pencil" size="small" :to="`/${tenantId}/jobs/${jobId}/edit`" class="ml-2">{{ $t('edit') }}</v-btn>
+    <header class="jd-header">
+      <div class="jd-header__titles">
+        <router-link :to="`/${tenantId}/jobs`" class="jd-back">
+          <v-icon size="18" aria-hidden="true">mdi-chevron-left</v-icon>{{ $t('jd_back') }}
+        </router-link>
+        <h1 class="jd-title">{{ job?.name || '…' }}</h1>
+        <div v-if="job" class="jd-meta">
+          <span>{{ isClassification ? $t('job_classification') : $t('job_qc') }}</span>
+          <span>· {{ formatSchedule(job.schedule_type, job.schedule_cron) }}</span>
+          <span>· {{ $t('jd_meta_channels', { n: parsedChannelCount }) }}</span>
+          <span v-if="tenantAIProvider">· {{ tenantAIProvider }}{{ tenantAIModel ? ' / ' + tenantAIModel : '' }}</span>
+          <span v-if="job.last_run_at">
+            · {{ $t('jd_meta_last_run', { time: fmtDateTime(job.last_run_at) }) }}
+            <span :class="`jd-run-text jd-run-text--${runStatusKind(job.last_run_status)}`">{{ $t(`jd_run_${runStatusKind(job.last_run_status)}`) }}</span>
+          </span>
+        </div>
+      </div>
+      <div v-if="authStore.canEdit('jobs')" class="jd-actions">
+        <v-btn
+          v-if="isJobRunning"
+          color="danger"
+          variant="outlined"
+          prepend-icon="mdi-stop"
+          class="jd-action"
+          :loading="cancelling"
+          @click="cancelJob"
+        >{{ $t('jd_stop') }}</v-btn>
+        <v-btn variant="outlined" class="jd-action" :disabled="isJobRunning" @click="testRun">
+          {{ mdAndUp ? $t('jd_run_test') : $t('jd_run_test_short') }}
+        </v-btn>
+        <v-btn color="primary" variant="flat" prepend-icon="mdi-play" class="jd-action" :disabled="isJobRunning" @click="openRunDialog">
+          {{ $t('run_now') }}
+        </v-btn>
+        <ActionMenu :items="menuItems" @select="onMenu" />
+      </div>
+    </header>
 
-        <v-tooltip v-if="!mdAndUp" text="Chạy thử" location="bottom">
-          <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" color="primary" icon="mdi-test-tube" size="small" :loading="isJobRunning" :disabled="isJobRunning" class="ml-1" @click="testRun" />
-          </template>
-        </v-tooltip>
-        <v-btn v-else variant="outlined" color="primary" prepend-icon="mdi-test-tube" size="small" :loading="isJobRunning" :disabled="isJobRunning" class="ml-2" @click="testRun">Chạy thử (3 hội thoại)</v-btn>
+    <!-- Running progress, from the counters the analyzer writes into the run summary -->
+    <v-alert v-if="progress" type="info" variant="tonal" class="mb-4" density="compact">
+      <v-progress-linear :model-value="progressPercent" color="primary" height="8" rounded class="mb-2" />
+      <div class="text-body-2">
+        {{ $t('jd_progress', { analyzed: progress.analyzed, found: progress.found }) }}
+        <span v-if="progress.errors"> · {{ $t('jd_progress_errors', { n: progress.errors }) }}</span>
+      </div>
+    </v-alert>
 
-        <v-tooltip v-if="!mdAndUp" text="Chạy ngay" location="bottom">
-          <template #activator="{ props }">
-            <v-btn v-bind="props" color="primary" icon="mdi-play" size="small" :disabled="isJobRunning" class="ml-1" @click="openRunDialog" />
-          </template>
-        </v-tooltip>
-        <v-btn v-else color="primary" prepend-icon="mdi-play" size="small" :disabled="isJobRunning" class="ml-2" @click="openRunDialog">{{ $t('run_now') }}</v-btn>
+    <v-alert v-if="loadError" type="error" variant="tonal" class="mb-4" role="alert">
+      <div class="d-flex align-center flex-wrap ga-3">
+        <span class="flex-grow-1">{{ $t('jd_load_error') }}</span>
+        <v-btn variant="outlined" color="error" class="jd-action" @click="reload">{{ $t('jd_retry') }}</v-btn>
+      </div>
+    </v-alert>
 
-        <v-btn v-if="isJobRunning" color="error" variant="outlined" prepend-icon="mdi-stop" size="small" class="ml-2" :loading="cancelling" @click="cancelJob">{{ mdAndUp ? 'Dừng' : '' }}</v-btn>
-      </template>
+    <!-- Loading -->
+    <div v-if="loading" class="jd-stack">
+      <div class="jd-metrics">
+        <v-skeleton-loader v-for="i in 4" :key="i" type="article" class="jd-skeleton" />
+      </div>
+      <v-skeleton-loader type="table-row@5" />
     </div>
 
-    <!-- Run options dialog -->
+    <!-- Never run -->
+    <section v-else-if="!loadError && !jobStore.jobRuns.length && !jobStore.jobResults.length" class="jd-empty">
+      <v-icon size="40" aria-hidden="true">mdi-play-circle-outline</v-icon>
+      <h2 class="jd-empty__title">{{ $t('jd_never_run_title') }}</h2>
+      <p class="jd-empty__desc">{{ $t('jd_never_run_desc') }}</p>
+      <div v-if="authStore.canEdit('jobs')" class="d-flex ga-2">
+        <v-btn variant="outlined" class="jd-action" @click="testRun">{{ $t('jd_run_test_short') }}</v-btn>
+        <v-btn color="primary" variant="flat" class="jd-action" @click="openRunDialog">{{ $t('run_now') }}</v-btn>
+      </div>
+    </section>
+
+    <template v-else-if="!loading">
+      <!-- Scope: which run the numbers and list describe -->
+      <div class="jd-scope">
+        <p class="jd-scope__caption">{{ scopeCaption }}</p>
+        <v-select
+          v-model="scopeRunId"
+          :items="scopeItems"
+          :label="$t('jd_scope_label')"
+          density="compact"
+          hide-details
+          class="jd-scope__select"
+        />
+      </div>
+
+      <!-- Metrics -->
+      <div class="jd-metrics">
+        <template v-if="!isClassification">
+          <MetricCard :label="$t('jd_m_evaluated')" :value="qc.evaluated" :hint="$t('jd_m_evaluated_hint', { total: qc.total, skipped: qc.skipped })" :to="filterLink('all')" />
+          <MetricCard :label="$t('jd_m_pass_rate')" :value="qc.passRate" suffix="%" :to="filterLink('pass')" />
+          <MetricCard :label="$t('jd_m_issues')" :value="qc.issues" tone="fail" :to="filterLink('fail')" />
+          <MetricCard :label="$t('jd_m_avg_score')" :value="qc.avgScore" suffix="/100" />
+        </template>
+        <template v-else>
+          <MetricCard :label="$t('jd_m_total')" :value="cls.total" :to="filterLink('all')" />
+          <MetricCard :label="$t('jd_m_classified')" :value="cls.classified" :to="filterLink('classified')" />
+          <MetricCard :label="$t('jd_m_skipped')" :value="cls.skipped" :to="filterLink('skip')" />
+          <MetricCard :label="$t('jd_m_top_tag')" :value="cls.topTag?.count ?? null" :hint="cls.topTag?.name" :to="cls.topTag ? filterLink(`tag:${cls.topTag.name}`) : undefined" />
+        </template>
+      </div>
+
+      <!-- Trend (QC) -->
+      <v-card v-if="!isClassification && scoped.length" class="jd-card">
+        <h2 class="jd-card__title">
+          <v-icon size="18" aria-hidden="true">mdi-chart-line</v-icon>{{ $t('job_trend') }}
+        </h2>
+        <div class="jd-trend">
+          <Line :data="trendChartData" :options="chartOptions" />
+        </div>
+      </v-card>
+
+      <!-- Tabs -->
+      <v-card class="jd-card">
+        <v-tabs v-model="activeTab" density="comfortable" class="mb-4">
+          <v-tab value="results">{{ $t('tab_results') }}</v-tab>
+          <v-tab value="history">{{ $t('run_history') }}</v-tab>
+        </v-tabs>
+
+        <!-- Results -->
+        <div v-if="activeTab === 'results'" class="jd-stack">
+          <SourceStatusPanel :statuses="panelStatuses" />
+          <p v-if="allLegacy" class="jd-note">{{ $t('jd_all_legacy') }}</p>
+
+          <div class="jd-toolbar">
+            <FilterBar :label="$t('jd_filter_label')" class="jd-toolbar__filters">
+              <v-chip
+                v-for="f in filters"
+                :key="f.key"
+                :variant="resultFilter === f.key ? 'flat' : 'outlined'"
+                :color="resultFilter === f.key ? 'primary' : undefined"
+                @click="setFilter(f.key)"
+              >{{ f.label }}: <span class="tabular-nums ml-1">{{ f.count }}</span></v-chip>
+            </FilterBar>
+            <div class="jd-toolbar__export">
+              <v-btn variant="outlined" size="small" prepend-icon="mdi-file-delimited-outline" @click="exportResults('csv')">{{ $t('jd_export_all_csv') }}</v-btn>
+              <v-btn variant="outlined" size="small" prepend-icon="mdi-file-excel-outline" @click="exportResults('xlsx')">{{ $t('jd_export_all_xlsx') }}</v-btn>
+            </div>
+          </div>
+
+          <p v-if="!groups.length" class="jd-muted">{{ $t('jd_no_results_in_scope') }}</p>
+          <p v-else-if="!filteredGroups.length" class="jd-muted">{{ $t('jd_no_match') }}</p>
+
+          <!-- Desktop table -->
+          <div v-else-if="mdAndUp" class="jd-table-wrap">
+            <v-table density="comfortable" hover>
+              <thead>
+                <tr>
+                  <th>{{ $t('job_source_col') }}</th>
+                  <th>{{ $t('jd_col_customer') }}</th>
+                  <th>{{ $t('jd_col_date') }}</th>
+                  <template v-if="!isClassification">
+                    <th>{{ $t('jd_col_verdict') }}</th>
+                    <th>{{ $t('jd_col_review') }}</th>
+                    <th class="text-right">{{ $t('jd_col_score') }}</th>
+                    <th>{{ $t('jd_col_issues') }}</th>
+                  </template>
+                  <template v-else>
+                    <th>{{ $t('jd_col_tags') }}</th>
+                    <th>{{ $t('jd_col_summary') }}</th>
+                  </template>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="g in pageGroups" :key="g.conversationId" class="jd-row" :class="{ 'jd-row--changed': isChanged(g) }" tabindex="0" @click="openDetail(g)" @keydown.enter="openDetail(g)">
+                  <td>
+                    <div class="d-flex flex-column ga-1 py-2">
+                      <SourceStatusChip v-for="s in g.sourceStatuses" :key="s" :status="s" small />
+                    </div>
+                  </td>
+                  <td class="font-weight-medium">{{ customerLabel(g) }}</td>
+                  <td class="jd-nowrap">{{ fmtDateTime(g.conversationDate) }}</td>
+                  <template v-if="!isClassification">
+                    <td><VerdictChip :verdict="verdictOf(g)" small /></td>
+                    <td class="jd-clamp-cell"><span class="jd-clamp">{{ g.review || '—' }}</span></td>
+                    <td class="text-right tabular-nums">{{ g.verdict === 'SKIP' || g.score === null ? '—' : g.score }}</td>
+                    <td class="jd-nowrap">{{ g.violations.length ? $t('jd_issue_count', { n: g.violations.length }) : '—' }}</td>
+                  </template>
+                  <template v-else>
+                    <td>
+                      <div v-if="g.tags.length" class="d-flex flex-wrap ga-1">
+                        <span v-for="t in g.tags" :key="t" class="jd-tag">{{ t }}</span>
+                      </div>
+                      <VerdictChip v-else :verdict="verdictOf(g)" small />
+                    </td>
+                    <td class="jd-clamp-cell"><span class="jd-clamp">{{ classificationSummary(g) }}</span></td>
+                  </template>
+                </tr>
+              </tbody>
+            </v-table>
+          </div>
+
+          <!-- Mobile cards -->
+          <div v-else class="jd-stack">
+            <ResultCard
+              v-for="g in pageGroups"
+              :key="g.conversationId"
+              :customer-name="customerLabel(g)"
+              :time="fmtDateTime(g.conversationDate)"
+              :verdict="verdictOf(g)"
+              :source-status="g.sourceStatuses[0]"
+              :summary="isClassification ? classificationSummary(g) : g.review"
+              :score="isClassification || g.verdict === 'SKIP' ? null : g.score"
+              :meta="countLabel(g)"
+              @open="openDetail(g)"
+            />
+          </div>
+
+          <v-pagination v-if="totalPages > 1" v-model="page" :length="totalPages" :total-visible="mdAndUp ? 7 : 3" density="comfortable" />
+        </div>
+
+        <!-- Run history -->
+        <div v-else class="jd-stack">
+          <p v-if="!jobStore.jobRuns.length" class="jd-muted">{{ $t('no_runs') }}</p>
+          <div v-else class="jd-table-wrap">
+            <v-table density="comfortable">
+              <thead>
+                <tr>
+                  <th>{{ $t('jd_runs_start') }}</th>
+                  <th>{{ $t('jd_runs_status') }}</th>
+                  <th>{{ $t('jd_runs_duration') }}</th>
+                  <th>{{ $t('jd_runs_conversations') }}</th>
+                  <th>{{ $t('jd_runs_summary') }}</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="r in pageRuns" :key="r.id">
+                  <td class="jd-nowrap tabular-nums">{{ fmtDateTime(r.started_at) }}</td>
+                  <td><span :class="`jd-run-chip jd-run-chip--${runStatusKind(r.status)}`">{{ $t(`jd_run_${runStatusKind(r.status)}`) }}</span></td>
+                  <td class="jd-nowrap tabular-nums">{{ durationLabel(r) }}</td>
+                  <td class="tabular-nums">{{ runConversations(r) }}</td>
+                  <td>
+                    <span v-if="r.error_message" class="jd-run-error">{{ r.error_message }}</span>
+                    <span v-else>{{ runSummary(r) }}</span>
+                  </td>
+                  <td class="text-right">
+                    <v-btn v-if="runHasResults(r.id)" variant="text" color="primary" size="small" @click="viewRun(r.id)">{{ $t('jd_run_view') }}</v-btn>
+                  </td>
+                </tr>
+              </tbody>
+            </v-table>
+          </div>
+          <v-pagination v-if="totalRunPages > 1" v-model="runPage" :length="totalRunPages" :total-visible="5" density="comfortable" />
+          <p class="jd-muted jd-small">{{ $t('jd_run_running_note') }}</p>
+        </div>
+      </v-card>
+    </template>
+
+    <!-- Run options dialog (behavior unchanged) -->
     <v-dialog v-model="runDialog" max-width="560">
       <v-card>
         <v-card-title>{{ $t('run_now') }}</v-card-title>
@@ -40,7 +265,7 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy cho những cuộc chat chưa được đánh giá</div>
-                  <div class="text-caption text-grey">Đánh giá tất cả cuộc chat chưa được công việc này phân tích lần nào, bất kể thời gian.</div>
+                  <div class="text-caption jd-muted">Đánh giá tất cả cuộc chat chưa được công việc này phân tích lần nào, bất kể thời gian.</div>
                 </div>
               </template>
             </v-radio>
@@ -48,7 +273,7 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy từ lần gần nhất</div>
-                  <div class="text-caption text-grey">Lấy cuộc chat gần nhất đã đánh giá làm mốc. Cuộc chat cũ hơn mốc sẽ không được đánh giá dù chưa phân tích.</div>
+                  <div class="text-caption jd-muted">Lấy cuộc chat gần nhất đã đánh giá làm mốc. Cuộc chat cũ hơn mốc sẽ không được đánh giá dù chưa phân tích.</div>
                 </div>
               </template>
             </v-radio>
@@ -56,46 +281,18 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy theo điều kiện</div>
-                  <div class="text-caption text-grey">Chọn điều kiện thời gian và/hoặc giới hạn số cuộc chat. Phải có ít nhất một điều kiện.</div>
+                  <div class="text-caption jd-muted">Chọn điều kiện thời gian và/hoặc giới hạn số cuộc chat. Phải có ít nhất một điều kiện.</div>
                 </div>
               </template>
             </v-radio>
           </v-radio-group>
-
-          <!-- Conditional fields -->
           <template v-if="runMode === 'conditional'">
             <div class="d-flex ga-3 mt-2">
-              <v-text-field
-                v-model="runDateFrom"
-                type="date"
-                label="Từ ngày"
-                density="compact"
-                :error-messages="runDateFromError"
-                hide-details="auto"
-              />
-              <v-text-field
-                v-model="runDateTo"
-                type="date"
-                label="Đến ngày"
-                density="compact"
-                :error-messages="runDateToError"
-                hide-details="auto"
-              />
+              <v-text-field v-model="runDateFrom" type="date" label="Từ ngày" density="compact" :error-messages="runDateFromError" hide-details="auto" />
+              <v-text-field v-model="runDateTo" type="date" label="Đến ngày" density="compact" :error-messages="runDateToError" hide-details="auto" />
             </div>
-            <v-text-field
-              v-model.number="runLimit"
-              type="number"
-              label="Giới hạn số cuộc chat"
-              density="compact"
-              hide-details="auto"
-              class="mt-3"
-              placeholder="Để trống nếu không muốn áp dụng"
-              :min="1"
-              clearable
-            />
-            <v-alert v-if="runConditionalError" type="error" variant="tonal" density="compact" class="mt-3 text-caption">
-              {{ runConditionalError }}
-            </v-alert>
+            <v-text-field v-model.number="runLimit" type="number" label="Giới hạn số cuộc chat" density="compact" hide-details="auto" class="mt-3" placeholder="Để trống nếu không muốn áp dụng" :min="1" clearable />
+            <v-alert v-if="runConditionalError" type="error" variant="tonal" density="compact" class="mt-3 text-caption">{{ runConditionalError }}</v-alert>
           </template>
         </v-card-text>
         <v-card-actions>
@@ -106,674 +303,191 @@
       </v-card>
     </v-dialog>
 
-    <!-- Job Info Card -->
-    <v-card class="pa-4 mb-4" v-if="job">
-      <div class="text-subtitle-1 font-weight-bold mb-3">
-        <v-icon start size="small">mdi-information</v-icon>
-        {{ $t('job_info') }}
-      </div>
-      <v-row dense>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('job_type') }}</div>
-          <v-chip size="small" :color="job.job_type === 'qc_analysis' ? 'primary' : 'secondary'" variant="tonal">
-            {{ job.job_type === 'qc_analysis' ? $t('job_qc') : $t('job_classification') }}
-          </v-chip>
-        </v-col>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('ai_model') }}</div>
-          <div class="text-body-2">{{ tenantAIProvider }} / {{ tenantAIModel }}</div>
-        </v-col>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('job_wizard_step_analysis_schedule') }}</div>
-          <div class="text-body-2">{{ formatSchedule(job.schedule_type, job.schedule_cron) }}</div>
-        </v-col>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('status') }}</div>
-          <v-chip size="small" :color="job.is_active ? 'success' : 'grey'" variant="tonal">
-            {{ job.is_active ? $t('active') : $t('inactive') }}
-          </v-chip>
-        </v-col>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('job_input_channels') }}</div>
-          <div class="text-body-2">{{ parsedChannelCount }} kênh</div>
-        </v-col>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('job_output') }}</div>
-          <div class="d-flex flex-wrap ga-1">
-            <v-chip v-for="(o, i) in parsedOutputs" :key="i" size="x-small" variant="tonal" :prepend-icon="o.type === 'telegram' ? 'mdi-send' : 'mdi-email'">
-              {{ o.type === 'telegram' ? 'Telegram' : 'Email' }}
-            </v-chip>
-            <span v-if="!parsedOutputs.length" class="text-body-2 text-grey">—</span>
-          </div>
-        </v-col>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('job_last_run') }}</div>
-          <div class="text-body-2" v-if="job.last_run_at">
-            {{ formatDateTime(job.last_run_at) }}
-            <v-chip size="x-small" :color="statusColor(job.last_run_status)" variant="tonal" class="ml-1">{{ job.last_run_status }}</v-chip>
-          </div>
-          <div v-else class="text-body-2 text-grey">—</div>
-        </v-col>
-        <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">{{ $t('job_created_at') }}</div>
-          <div class="text-body-2">{{ formatDateTime(job.created_at) }}</div>
-        </v-col>
-      </v-row>
-    </v-card>
+    <!-- Conversation detail -->
+    <AppDialog
+      v-if="dialogGroup"
+      :model-value="detailDialog"
+      :title="`${customerLabel(dialogGroup)} · ${fmtDateTime(dialogGroup.conversationDate)}`"
+      :max-width="1100"
+      @update:model-value="detailDialog = $event"
+    >
+      <template #meta>
+        <VerdictChip :verdict="verdictOf(dialogGroup)" small />
+        <span v-if="!isClassification && dialogGroup.score !== null && dialogGroup.verdict !== 'SKIP'" class="tabular-nums font-weight-bold">{{ dialogGroup.score }}/100</span>
+        <SourceStatusChip v-for="s in dialogGroup.sourceStatuses" :key="s" :status="s" small />
+      </template>
 
-    <!-- Progress bar for running job -->
-    <v-alert v-if="currentRunProgress" type="info" variant="tonal" class="mb-4">
-      <v-progress-linear :model-value="progressPercent" color="primary" height="8" rounded class="mb-2" />
-      <div class="text-body-2">
-        Đang phân tích {{ currentRunProgress.analyzed }}/{{ currentRunProgress.total }} cuộc hội thoại
-        <span v-if="currentRunProgress.passed"> — {{ currentRunProgress.passed }} đạt</span>
-        <span v-if="currentRunProgress.errors"> — {{ currentRunProgress.errors }} lỗi</span>
-      </div>
-    </v-alert>
-
-    <!-- KPI Stat Cards: QC -->
-    <v-row class="mb-4" v-if="groupedResults.length && !isClassification">
-      <v-col cols="6" sm="3">
-        <v-card class="pa-4">
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <div class="text-body-2 text-grey">{{ $t('conversations_analyzed') }}</div>
-              <div class="text-h5 font-weight-bold mt-1">{{ aggregateStats.analyzed }}</div>
-            </div>
-            <v-icon color="primary" size="32" class="opacity-50">mdi-message-text</v-icon>
+      <div class="jd-detail">
+        <section class="jd-detail__chat" :aria-label="$t('jd_transcript')">
+          <div class="jd-detail__head">
+            <h3 class="jd-h3">{{ $t('jd_transcript') }}</h3>
+            <span class="jd-muted jd-small">{{ $t('jd_transcript_hint') }}</span>
           </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6" sm="3">
-        <v-card class="pa-4">
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <div class="text-body-2 text-grey">{{ $t('job_pass_rate') }}</div>
-              <div class="text-h5 font-weight-bold mt-1">{{ aggregateStats.passRate }}%</div>
-            </div>
-            <v-icon color="success" size="32" class="opacity-50">mdi-check-circle</v-icon>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6" sm="3">
-        <v-card class="pa-4">
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <div class="text-body-2 text-grey">{{ $t('issues_found') }}</div>
-              <div class="text-h5 font-weight-bold mt-1">{{ aggregateStats.issues }}</div>
-            </div>
-            <v-icon color="error" size="32" class="opacity-50">mdi-alert-circle</v-icon>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6" sm="3">
-        <v-card class="pa-4">
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <div class="text-body-2 text-grey">{{ $t('job_avg_score') }}</div>
-              <div class="text-h5 font-weight-bold mt-1">{{ aggregateStats.avgScore }}/100</div>
-            </div>
-            <v-icon color="warning" size="32" class="opacity-50">mdi-star</v-icon>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- KPI Stat Cards: Classification -->
-    <v-row class="mb-4" v-if="groupedResults.length && isClassification">
-      <v-col cols="6" sm="4">
-        <v-card class="pa-4">
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <div class="text-body-2 text-grey">Tổng cuộc chat</div>
-              <div class="text-h5 font-weight-bold mt-1">{{ groupedResults.length }}</div>
-            </div>
-            <v-icon color="primary" size="32" class="opacity-50">mdi-message-text</v-icon>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6" sm="4">
-        <v-card class="pa-4">
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <div class="text-body-2 text-grey">Đã phân loại</div>
-              <div class="text-h5 font-weight-bold mt-1">{{ groupedResults.filter(g => g.verdict !== 'SKIP').length }}</div>
-            </div>
-            <v-icon color="secondary" size="32" class="opacity-50">mdi-tag-check</v-icon>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="6" sm="4">
-        <v-card class="pa-4">
-          <div class="d-flex justify-space-between align-center">
-            <div>
-              <div class="text-body-2 text-grey">Bỏ qua</div>
-              <div class="text-h5 font-weight-bold mt-1">{{ groupedResults.filter(g => g.verdict === 'SKIP').length }}</div>
-            </div>
-            <v-icon color="grey" size="32" class="opacity-50">mdi-tag-off</v-icon>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- Trend Chart (QC only) -->
-    <v-card class="pa-4 mb-4" v-if="jobStore.jobResults.length > 0 && !isClassification">
-      <div class="text-subtitle-1 font-weight-bold mb-3">
-        <v-icon start size="small">mdi-chart-line</v-icon>
-        {{ $t('job_trend') }}
-      </div>
-      <div style="max-height: 200px;">
-        <Line :data="trendChartData" :options="chartOptions" />
-      </div>
-    </v-card>
-
-    <!-- Tabbed Content: History + Results -->
-    <v-card class="pa-4">
-      <v-tabs v-model="activeTab" density="compact" class="mb-3">
-        <v-tab value="results">
-          <v-icon start size="small">mdi-magnify</v-icon>
-          {{ $t('tab_results') }}
-        </v-tab>
-        <v-tab value="history">
-          <v-icon start size="small">mdi-history</v-icon>
-          {{ $t('run_history') }}
-        </v-tab>
-      </v-tabs>
-
-      <!-- Tab: Results -->
-      <div v-if="activeTab === 'results'">
-        <!-- Filter + toolbar in one row -->
-        <div class="d-flex align-center flex-wrap ga-2 mb-3">
-          <!-- Filter chips: Classification -->
-          <template v-if="isClassification">
-            <v-chip size="small" :variant="resultFilter === 'classified' ? 'flat' : 'outlined'" :color="resultFilter === 'classified' ? 'secondary' : ''" @click="resultFilter = 'classified'; resultPage = 1">
-              Đã phân loại: {{ groupedResults.filter(g => g.verdict !== 'SKIP').length }}
-            </v-chip>
-            <v-chip size="small" :variant="resultFilter === 'all' ? 'flat' : 'outlined'" :color="resultFilter === 'all' ? 'primary' : ''" @click="resultFilter = 'all'; resultPage = 1">
-              {{ $t('filter_all') }}: {{ groupedResults.length }}
-            </v-chip>
-            <v-chip size="small" :variant="resultFilter === 'skip' ? 'flat' : 'outlined'" :color="resultFilter === 'skip' ? 'grey' : ''" @click="resultFilter = 'skip'; resultPage = 1">
-              Bỏ qua: {{ groupedResults.filter(g => g.verdict === 'SKIP').length }}
-            </v-chip>
-            <v-select
-              v-model="tagFilter"
-              :items="availableTags"
-              label="Lọc loại"
-              clearable
-              density="compact"
-              variant="outlined"
-              hide-details
-              style="max-width: 200px;"
-            />
-          </template>
-          <!-- Filter chips: QC -->
-          <template v-else>
-            <v-chip size="small" :variant="resultFilter === 'all' ? 'flat' : 'outlined'" :color="resultFilter === 'all' ? 'primary' : ''" @click="resultFilter = 'all'; resultPage = 1">
-              {{ $t('filter_all') }}: {{ groupedResults.length }}
-            </v-chip>
-            <v-chip size="small" :variant="resultFilter === 'fail' ? 'flat' : 'outlined'" :color="resultFilter === 'fail' ? 'error' : ''" @click="resultFilter = 'fail'; resultPage = 1">
-              {{ $t('filter_failed') }}: {{ groupedResults.filter(g => g.verdict === 'FAIL').length }}
-            </v-chip>
-            <v-chip size="small" :variant="resultFilter === 'pass' ? 'flat' : 'outlined'" :color="resultFilter === 'pass' ? 'success' : ''" @click="resultFilter = 'pass'; resultPage = 1">
-              {{ $t('filter_passed') }}: {{ groupedResults.filter(g => g.verdict === 'PASS').length }}
-            </v-chip>
-            <v-chip size="small" :variant="resultFilter === 'skip' ? 'flat' : 'outlined'" :color="resultFilter === 'skip' ? 'grey' : ''" @click="resultFilter = 'skip'; resultPage = 1">
-              Bỏ qua: {{ groupedResults.filter(g => g.verdict === 'SKIP').length }}
-            </v-chip>
-          </template>
-          <v-btn v-if="selectedRunId" variant="text" size="small" prepend-icon="mdi-refresh" color="primary" @click="loadAllResults">
-            {{ $t('all_results') }}
-          </v-btn>
-          <v-spacer />
-          <v-btn-toggle v-model="viewMode" mandatory density="compact" variant="outlined" class="mr-2">
-            <v-btn value="card" size="small"><v-icon size="small">mdi-view-list</v-icon></v-btn>
-            <v-btn value="table" size="small"><v-icon size="small">mdi-table</v-icon></v-btn>
-          </v-btn-toggle>
-          <v-btn variant="outlined" size="x-small" prepend-icon="mdi-file-delimited" @click="exportResults('csv')">CSV</v-btn>
-          <v-btn variant="outlined" size="x-small" prepend-icon="mdi-file-excel" @click="exportResults('xlsx')" class="mr-2">Excel</v-btn>
-          <v-btn variant="outlined" size="x-small" prepend-icon="mdi-delete-sweep" color="error" @click="clearResultsDialog = true">
-            Xóa kết quả
-          </v-btn>
-        </div>
-
-        <!-- Local-only caveat for the source-integrity badges, visible in both table and card views -->
-        <v-alert v-if="filteredGroupedResults.length" type="info" variant="tonal" density="compact" class="mb-3 text-caption">
-          {{ $t('results_source_note') }}
-        </v-alert>
-
-        <div v-if="!filteredGroupedResults.length" class="text-center text-grey pa-4">
-          {{ $t('no_issues') }}
-        </div>
-        <!-- Table view: Classification -->
-        <div v-else-if="viewMode === 'table' && isClassification">
-          <v-table density="compact" hover>
-            <thead>
-              <tr>
-                <th>Tên</th>
-                <th>Ngày chat</th>
-                <th style="min-width: 200px">Loại</th>
-                <th style="min-width: 300px">Đánh giá chi tiết</th>
-                <th>{{ $t('job_source_col') }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="group in paginatedResults" :key="group.conversationId" style="cursor:pointer" @click="openDetail(group)">
-                <td class="text-body-2">{{ group.customerName || group.conversationId.substring(0, 8) + '...' }}</td>
-                <td class="text-body-2 text-no-wrap">{{ formatTime(group.conversationDate) }}</td>
-                <td class="text-body-2" style="white-space: pre-line;">{{ group.tags.length ? group.tags.map(t => '- ' + t).join('\n') : group.verdict === 'SKIP' ? 'Bỏ qua' : '—' }}</td>
-                <td class="text-body-2" style="white-space: normal; max-width: 400px;">{{ classificationSummary(group) }}</td>
-                <td class="text-no-wrap">
-                  <v-tooltip v-for="s in group.sourceStatuses" :key="s" :text="$t(SOURCE_INTEGRITY_LABEL_KEY[s])" location="top">
-                    <template #activator="{ props }">
-                      <v-icon v-bind="props" size="small" class="mr-1" :color="SOURCE_INTEGRITY_STYLE[s].color" :aria-label="$t(SOURCE_INTEGRITY_LABEL_KEY[s])">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>
-                    </template>
-                  </v-tooltip>
-                </td>
-              </tr>
-            </tbody>
-          </v-table>
-          <v-pagination v-if="totalResultPages > 1" v-model="resultPage" :length="totalResultPages" :total-visible="5" density="compact" class="mt-3" />
-        </div>
-        <!-- Table view: QC -->
-        <div v-else-if="viewMode === 'table'">
-          <v-table density="compact" hover>
-            <thead>
-              <tr>
-                <th>Tên</th>
-                <th>Ngày chat</th>
-                <th>Kết quả</th>
-                <th style="max-width: 300px">Đánh giá</th>
-                <th>Điểm</th>
-                <th>Vấn đề</th>
-                <th>{{ $t('job_source_col') }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="group in paginatedResults" :key="group.conversationId" style="cursor:pointer" @click="openDetail(group)">
-                <td class="text-body-2">{{ group.customerName || group.conversationId.substring(0, 8) + '...' }}</td>
-                <td class="text-body-2 text-no-wrap">{{ formatTime(group.conversationDate) }}</td>
-                <td>
-                  <v-chip size="x-small" :color="group.verdict === 'PASS' ? 'success' : group.verdict === 'SKIP' ? 'grey' : 'error'" variant="tonal">
-                    {{ group.verdict === 'PASS' ? 'Đạt' : group.verdict === 'SKIP' ? 'Bỏ qua' : 'Không đạt' }}
-                  </v-chip>
-                </td>
-                <td class="text-body-2" style="max-width: 300px; white-space: normal;">
-                  <span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{ group.review }}</span>
-                </td>
-                <td>
-                  <v-chip v-if="group.score != null" size="x-small" :color="group.score >= 80 ? 'success' : group.score >= 50 ? 'warning' : 'error'" variant="tonal">
-                    {{ group.score }}/100
-                  </v-chip>
-                  <span v-else class="text-grey">—</span>
-                </td>
-                <td class="text-body-2">{{ group.violations.length > 0 ? group.violations.length + ' vấn đề' : '—' }}</td>
-                <td class="text-no-wrap">
-                  <v-tooltip v-for="s in group.sourceStatuses" :key="s" :text="$t(SOURCE_INTEGRITY_LABEL_KEY[s])" location="top">
-                    <template #activator="{ props }">
-                      <v-icon v-bind="props" size="small" class="mr-1" :color="SOURCE_INTEGRITY_STYLE[s].color" :aria-label="$t(SOURCE_INTEGRITY_LABEL_KEY[s])">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>
-                    </template>
-                  </v-tooltip>
-                </td>
-              </tr>
-            </tbody>
-          </v-table>
-          <v-pagination v-if="totalResultPages > 1" v-model="resultPage" :length="totalResultPages" :total-visible="5" density="compact" class="mt-3" />
-        </div>
-        <div v-else>
-          <v-card v-for="group in paginatedResults" :key="group.conversationId" variant="outlined" class="mb-3">
-            <!-- Conversation header -->
-            <div class="d-flex align-center pa-3" style="cursor: pointer" @click="toggleExpand(group.conversationId)">
-              <!-- Classification card header -->
-              <template v-if="isClassification">
-                <v-chip v-if="group.verdict === 'SKIP'" size="small" color="grey" variant="tonal" class="mr-3">Bỏ qua</v-chip>
-                <v-chip v-else size="small" color="success" variant="tonal" class="mr-3">Đã phân loại</v-chip>
-                <div class="flex-grow-1">
-                  <div class="d-flex align-center ga-2">
-                    <span class="font-weight-medium text-body-2">{{ group.customerName || group.conversationId.substring(0, 8) + '...' }}</span>
-                    <span class="text-caption text-grey">{{ formatTime(group.conversationDate) }}</span>
-                  </div>
-                  <div v-if="group.tags.length" class="d-flex flex-wrap ga-1 mt-1">
-                    <v-chip v-for="tag in group.tags" :key="tag" size="x-small" :color="tagColor(tag)" variant="tonal">{{ tag }}</v-chip>
-                  </div>
-                  <div v-if="classificationSummary(group) !== '—'" class="text-caption text-grey-darken-1 mt-1" style="max-width: 600px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{ classificationSummary(group) }}</div>
-                  <div class="d-flex flex-wrap ga-1 mt-1">
-                    <v-chip v-for="s in group.sourceStatuses" :key="s" size="x-small" :color="SOURCE_INTEGRITY_STYLE[s].color" variant="tonal">
-                      <v-icon start size="12">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>{{ $t(SOURCE_INTEGRITY_LABEL_KEY[s]) }}
-                    </v-chip>
-                  </div>
+          <p v-if="!dialogMessages" class="jd-muted">{{ $t('jd_loading_messages') }}</p>
+          <div v-else class="jd-transcript">
+            <div
+              v-for="msg in dialogMessages"
+              :id="`jd-msg-${msg.id}`"
+              :key="msg.id"
+              class="jd-msg"
+              :class="[msg.sender_type === 'agent' ? 'jd-msg--agent' : 'jd-msg--customer', { 'jd-msg--quoted': highlightedIds.has(msg.id) }]"
+            >
+              <div class="jd-msg__who">{{ msg.sender_name }} · {{ fmtDateTime(msg.sent_at) }}</div>
+              <div class="jd-msg__bubble">
+                <div v-if="msg.content">{{ msg.content }}</div>
+                <div v-if="msg.content_type === 'sticker'" class="font-italic">[Sticker]</div>
+                <div v-if="hasAttachments(msg)" class="mt-1">
+                  <template v-for="(att, ai) in parseAttachments(msg)" :key="ai">
+                    <div v-if="isImageAttachment(att)" class="mb-1">
+                      <img v-if="authImageCache[getAttachmentUrl(att)] && authImageCache[getAttachmentUrl(att)] !== 'loading'" :src="authImageCache[getAttachmentUrl(att)]" alt="" class="jd-msg__img" @click="lightboxSrc = authImageCache[getAttachmentUrl(att)]" />
+                      <v-progress-circular v-else-if="authImageCache[getAttachmentUrl(att)] === 'loading'" indeterminate size="20" width="2" class="ma-2" />
+                    </div>
+                    <v-chip v-else size="x-small" variant="tonal" class="mr-1" :href="getAttachmentUrl(att)" target="_blank"><v-icon start size="12">mdi-paperclip</v-icon>{{ att.name || 'File' }}</v-chip>
+                  </template>
                 </div>
-              </template>
-              <!-- QC card header -->
-              <template v-else>
-                <v-chip size="small" :color="group.verdict === 'PASS' ? 'success' : group.verdict === 'SKIP' ? 'grey' : 'error'" variant="tonal" class="mr-3">
-                  {{ group.verdict === 'PASS' ? $t('verdict_pass') : group.verdict === 'SKIP' ? 'Bỏ qua' : $t('verdict_fail') }}
-                </v-chip>
-                <div class="flex-grow-1">
-                  <div class="d-flex align-center ga-2">
-                    <span class="font-weight-medium text-body-2">{{ group.customerName || group.conversationId.substring(0, 8) + '...' }}</span>
-                    <span class="text-caption text-grey">{{ formatTime(group.conversationDate) }}</span>
-                  </div>
-                  <div v-if="group.review" class="text-caption text-grey-darken-1 mt-1" style="max-width: 600px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{ group.review }}</div>
-                  <div class="d-flex flex-wrap ga-1 mt-1">
-                    <v-chip v-for="s in group.sourceStatuses" :key="s" size="x-small" :color="SOURCE_INTEGRITY_STYLE[s].color" variant="tonal">
-                      <v-icon start size="12">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>{{ $t(SOURCE_INTEGRITY_LABEL_KEY[s]) }}
-                    </v-chip>
-                  </div>
-                </div>
-                <v-chip v-if="group.score != null" size="x-small" :color="group.score >= 80 ? 'success' : group.score >= 50 ? 'warning' : 'error'" variant="tonal" class="mr-2">
-                  {{ group.score }}/100
-                </v-chip>
-              </template>
-              <span class="text-caption text-grey mr-2">{{ group.violations.length }} {{ isClassification ? $t('tags_count_label') : $t('issues_label') }}</span>
-              <v-icon>{{ expandedMap[group.conversationId] ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                <div v-if="!msg.content && !hasAttachments(msg) && msg.content_type !== 'text'" class="font-italic">[{{ msg.content_type || 'File' }}]</div>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <!-- Expanded: Transcript + Violations side-by-side -->
-            <div v-if="expandedMap[group.conversationId]" class="px-3 pb-3">
-              <v-divider class="mb-3" />
-              <v-row>
-                <!-- Left: Chat transcript -->
-                <v-col cols="12" md="7">
-                  <div class="d-flex align-center mb-2">
-                    <div class="text-caption text-grey font-weight-bold">
-                      <v-icon size="x-small" class="mr-1">mdi-chat</v-icon>
-                      Diễn biến cuộc chat
-                    </div>
-                    <v-btn :to="`/${tenantId}/messages?conv=${group.conversationId}`" variant="text" size="x-small" color="primary" class="ml-2 pa-0" style="min-width: 0; height: auto;">
-                      <v-icon size="x-small" class="mr-1">mdi-open-in-new</v-icon>Xem tại Tin nhắn
-                    </v-btn>
-                  </div>
-                  <div v-if="!chatMessages[group.conversationId]" class="text-center pa-4">
-                    <v-progress-circular indeterminate size="24" />
-                    <div class="text-caption text-grey mt-2">Đang tải...</div>
-                  </div>
-                  <div v-else class="chat-transcript pa-2 rounded" style="background: rgba(var(--v-theme-on-surface), 0.04); max-height: 500px; overflow-y: auto;">
-                    <div v-for="msg in chatMessages[group.conversationId]" :key="msg.id" class="mb-2">
-                      <div
-                        class="pa-2 rounded"
-                        :class="msg.sender_type === 'agent' ? 'bg-blue-lighten-5 ml-8' : 'bg-white mr-8'"
-                        :style="isHighlighted(group, msg) ? 'border: 2px solid #ff9800;' : 'border: 1px solid #e0e0e0;'"
-                      >
-                        <div class="d-flex align-center mb-1">
-                          <span class="text-caption font-weight-bold" :class="msg.sender_type === 'agent' ? 'text-blue' : 'text-grey-darken-2'">
-                            {{ msg.sender_name }}
-                          </span>
-                          <v-spacer />
-                          <span class="text-caption text-grey">{{ formatTime(msg.sent_at) }}</span>
-                        </div>
-                        <div v-if="msg.content" class="text-body-2" style="font-size: 13px;">{{ msg.content }}</div>
-                        <div v-if="msg.content_type === 'sticker'" class="text-caption font-italic">[Sticker]</div>
-                        <div v-if="hasAttachments(msg)" class="mt-1">
-                          <template v-for="(att, ai) in parseAttachments(msg)" :key="ai">
-                            <div v-if="isImageAttachment(att)" class="mb-1">
-                              <img v-if="authImageCache[getAttachmentUrl(att)] && authImageCache[getAttachmentUrl(att)] !== 'loading'" :src="authImageCache[getAttachmentUrl(att)]" style="max-width: 180px; max-height: 180px; border-radius: 8px; cursor: pointer;" @click="lightboxSrc = authImageCache[getAttachmentUrl(att)]" />
-                              <v-progress-circular v-else-if="authImageCache[getAttachmentUrl(att)] === 'loading'" indeterminate size="20" width="2" class="ma-2" />
-                            </div>
-                            <v-chip v-else size="x-small" variant="tonal" class="mr-1" :href="getAttachmentUrl(att)" target="_blank"><v-icon start size="12">mdi-paperclip</v-icon>{{ att.name || 'File' }}</v-chip>
-                          </template>
-                        </div>
-                        <div v-if="!msg.content && !hasAttachments(msg) && msg.content_type !== 'text'" class="text-caption font-italic">[{{ msg.content_type || 'File' }}]</div>
-                      </div>
-                    </div>
-                  </div>
-                </v-col>
+        <section class="jd-detail__side">
+          <SourceStatusPanel :statuses="dialogGroup.sourceStatuses" />
 
-                <!-- Right: Violations -->
-                <v-col cols="12" md="5">
-                  <div class="text-caption text-grey font-weight-bold mb-2">
-                    <v-icon size="x-small" class="mr-1">mdi-alert-circle</v-icon>
-                    Đánh giá chi tiết
-                  </div>
-                  <v-alert v-if="group.review" :type="group.verdict === 'PASS' ? 'success' : 'warning'" variant="tonal" density="compact" class="mb-3 text-body-2">
-                    {{ group.review }}
-                  </v-alert>
-                  <div v-for="(v, idx) in group.violations" :key="idx" class="mb-3">
-                    <div class="d-flex align-center mb-1">
-                      <v-chip size="x-small" :color="v.severity === 'NGHIEM_TRONG' ? 'error' : 'warning'" variant="tonal" class="mr-2">
-                        {{ v.severity === 'NGHIEM_TRONG' ? $t('severity_critical') : $t('severity_warning') }}
-                      </v-chip>
-                      <span class="font-weight-medium text-body-2">{{ v.rule_name }}</span>
-                    </div>
-                    <div class="text-body-2 bg-orange-lighten-5 pa-2 rounded mb-1" style="font-size: 13px; border-left: 3px solid #ff9800;">
-                      {{ v.evidence }}
-                    </div>
-                    <div v-if="parseDetail(v.detail)?.explanation" class="text-caption text-grey-darken-1">
-                      {{ parseDetail(v.detail).explanation }}
-                    </div>
-                    <div v-if="parseDetail(v.detail)?.suggestion" class="text-caption text-success mt-1">
-                      <v-icon size="x-small" class="mr-1">mdi-lightbulb</v-icon>
-                      {{ parseDetail(v.detail).suggestion }}
-                    </div>
-                  </div>
-                  <div v-if="!group.violations.length && group.verdict === 'PASS'" class="text-center text-grey pa-4">
-                    <v-icon size="32" color="success">mdi-check-circle</v-icon>
-                    <div class="text-body-2 mt-2">Cuộc chat đạt chất lượng</div>
-                  </div>
-                </v-col>
-              </v-row>
+          <div class="jd-stack-sm">
+            <div class="d-flex align-center justify-space-between ga-2">
+              <h3 class="jd-h3">{{ $t('jd_review') }}</h3>
+              <AiGeneratedLabel />
             </div>
-          </v-card>
+            <p class="jd-review">{{ isClassification ? classificationSummary(dialogGroup) : dialogGroup.review || '—' }}</p>
+            <ConfidenceText :confidence="dialogGroup.confidence" :basis="dialogGroup.confidenceBasis" />
+          </div>
 
-          <v-pagination v-if="totalResultPages > 1" v-model="resultPage" :length="totalResultPages" :total-visible="5" density="compact" class="mt-3" />
-        </div>
+          <div class="jd-stack-sm">
+            <h3 class="jd-h3">{{ countLabel(dialogGroup) }}</h3>
+            <p v-if="!dialogGroup.violations.length && dialogGroup.verdict === 'PASS' && !isClassification" class="jd-muted">{{ $t('jd_no_issues_pass') }}</p>
+            <button
+              v-for="v in dialogGroup.violations"
+              :key="v.id"
+              type="button"
+              class="jd-issue"
+              :class="{ 'jd-issue--selected': selectedIssueId === v.id }"
+              :aria-pressed="selectedIssueId === v.id"
+              @click="selectIssue(v)"
+            >
+              <span class="d-flex align-center flex-wrap ga-2">
+                <span v-if="!isClassification" :class="`jd-sev jd-sev--${v.severity === 'NGHIEM_TRONG' ? 'critical' : 'warning'}`">
+                  {{ v.severity === 'NGHIEM_TRONG' ? $t('severity_critical') : $t('severity_warning') }}
+                </span>
+                <b>{{ v.rule_name }}</b>
+              </span>
+              <span v-if="v.evidence" class="jd-issue__evidence">{{ v.evidence }}</span>
+              <span v-if="parseDetail(v.detail).explanation && parseDetail(v.detail).explanation !== v.evidence" class="jd-muted jd-small">{{ parseDetail(v.detail).explanation }}</span>
+              <span v-if="parseDetail(v.detail).suggestion" class="jd-small"><b>{{ $t('jd_suggestion') }}:</b> {{ parseDetail(v.detail).suggestion }}</span>
+              <span v-if="selectedIssueId === v.id" class="jd-issue__quote" :class="{ 'jd-issue__quote--missing': !highlightedIds.size }">
+                {{ highlightedIds.size ? $t('jd_evidence_found') : $t('jd_evidence_missing') }}
+              </span>
+            </button>
+          </div>
+        </section>
       </div>
 
-      <!-- Tab: Run History -->
-      <div v-if="activeTab === 'history'">
-        <div class="d-flex align-center flex-wrap ga-2 mb-3">
-          <v-spacer />
-          <v-btn variant="outlined" size="small" prepend-icon="mdi-delete-sweep" color="error" @click="clearRunsDialog = true">
-            Xóa lịch sử chạy
-          </v-btn>
-        </div>
+      <template #actions>
+        <v-btn variant="outlined" :to="`/${tenantId}/messages?conv=${dialogGroup.conversationId}`" @click="detailDialog = false">{{ $t('jd_open_messages') }}</v-btn>
+        <v-btn color="primary" variant="flat" :disabled="!nextReviewGroup" @click="nextReviewGroup && openDetail(nextReviewGroup)">{{ $t('jd_next_review') }}</v-btn>
+      </template>
+    </AppDialog>
 
-        <v-table v-if="jobStore.jobRuns.length" density="compact">
-          <thead>
-            <tr>
-              <th>{{ $t('sent_at') }}</th>
-              <th>{{ $t('status') }}</th>
-              <th>{{ $t('conversations_analyzed') }}</th>
-              <th>{{ $t('conversations_passed') }}</th>
-              <th>{{ $t('issues_found') }}</th>
-              <th>{{ $t('actions') }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="run in paginatedRuns" :key="run.id">
-              <td class="text-body-2">{{ formatDateTime(run.started_at) }}</td>
-              <td>
-                <v-chip size="x-small" :color="statusColor(run.status)" variant="tonal">{{ run.status }}</v-chip>
-              </td>
-              <td>{{ parseSummary(run.summary).conversations_analyzed || 0 }}</td>
-              <td>
-                <span class="text-success font-weight-medium">{{ parseSummary(run.summary).conversations_passed || 0 }}</span>
-                <span class="text-grey"> / {{ parseSummary(run.summary).conversations_analyzed || 0 }}</span>
-              </td>
-              <td>{{ parseSummary(run.summary).issues_found || 0 }}</td>
-              <td>
-                <span v-if="run.error_message" class="text-caption text-error">{{ run.error_message }}</span>
-                <v-btn v-else size="small" variant="text" color="primary" @click="loadResults(run.id)">
-                  {{ $t('view_results') }}
-                </v-btn>
-              </td>
-            </tr>
-          </tbody>
-        </v-table>
-        <v-pagination v-if="totalRunPages > 1" v-model="runPage" :length="totalRunPages" :total-visible="7" density="compact" class="mt-2" />
-        <div v-if="!jobStore.jobRuns.length" class="text-center text-grey pa-4">{{ $t('no_runs') }}</div>
-      </div>
-    </v-card>
+    <ConfirmDialog
+      v-model="clearResultsDialog"
+      :title="$t('jd_confirm_clear_results_title')"
+      :message="$t('jd_confirm_clear_results_msg')"
+      :confirm-label="$t('jd_action_clear_results')"
+      :loading="clearingResults"
+      @confirm="clearResults"
+    />
+    <ConfirmDialog
+      v-model="clearRunsDialog"
+      :title="$t('jd_confirm_clear_runs_title')"
+      :message="$t('jd_confirm_clear_runs_msg')"
+      :confirm-label="$t('jd_action_clear_runs')"
+      :loading="clearingRuns"
+      @confirm="clearRuns"
+    />
 
-    <!-- Clear results dialog -->
-    <v-dialog v-model="clearResultsDialog" max-width="450">
-      <v-card class="pa-6">
-        <v-card-title class="text-error">Xóa tất cả kết quả</v-card-title>
-        <v-card-text>
-          Xóa toàn bộ kết quả đánh giá và chi phí AI. Lịch sử chạy vẫn được giữ lại. Hành động không thể hoàn tác.
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn @click="clearResultsDialog = false">{{ $t('cancel') }}</v-btn>
-          <v-btn color="error" :loading="clearingResults" @click="clearResults">{{ $t('delete') }}</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-
-    <!-- Detail dialog (table view row click) -->
-    <v-dialog v-model="detailDialog" max-width="1000" scrollable>
-      <v-card v-if="dialogGroup">
-        <v-card-title class="d-flex align-center pa-4">
-          <v-chip size="small" :color="dialogGroup.verdict === 'PASS' ? 'success' : dialogGroup.verdict === 'SKIP' ? 'grey' : 'error'" variant="tonal" class="mr-3">
-            {{ dialogGroup.verdict === 'PASS' ? 'Đạt' : dialogGroup.verdict === 'SKIP' ? 'Bỏ qua' : 'Không đạt' }}
-          </v-chip>
-          <span class="text-body-1 font-weight-bold">{{ dialogGroup.customerName || dialogGroup.conversationId.substring(0, 8) + '...' }}</span>
-          <span class="text-caption text-grey ml-2">{{ formatTime(dialogGroup.conversationDate) }}</span>
-          <v-chip v-for="s in dialogGroup.sourceStatuses" :key="s" size="x-small" :color="SOURCE_INTEGRITY_STYLE[s].color" variant="tonal" class="ml-2">
-            <v-icon start size="12">{{ SOURCE_INTEGRITY_STYLE[s].icon }}</v-icon>{{ $t(SOURCE_INTEGRITY_LABEL_KEY[s]) }}
-          </v-chip>
-          <v-chip v-if="dialogGroup.score != null" size="x-small" :color="dialogGroup.score >= 80 ? 'success' : dialogGroup.score >= 50 ? 'warning' : 'error'" variant="tonal" class="ml-auto">
-            {{ dialogGroup.score }}/100
-          </v-chip>
-        </v-card-title>
-        <v-divider />
-        <v-card-text class="pa-4">
-          <v-alert type="info" variant="tonal" density="compact" class="mb-3 text-caption">{{ $t('results_source_note') }}</v-alert>
-          <v-row>
-            <v-col cols="12" md="7">
-              <div class="d-flex align-center mb-2">
-                <div class="text-caption text-grey font-weight-bold">
-                  <v-icon size="x-small" class="mr-1">mdi-chat</v-icon>
-                  Diễn biến cuộc chat
-                </div>
-                <v-btn :to="`/${tenantId}/messages?conv=${dialogGroup.conversationId}`" variant="text" size="x-small" color="primary" class="ml-2 pa-0" style="min-width: 0; height: auto;" @click="detailDialog = false">
-                  <v-icon size="x-small" class="mr-1">mdi-open-in-new</v-icon>Xem tại Tin nhắn
-                </v-btn>
-              </div>
-              <div v-if="!chatMessages[dialogGroup.conversationId]" class="text-center pa-4">
-                <v-progress-circular indeterminate size="24" />
-                <div class="text-caption text-grey mt-2">Đang tải...</div>
-              </div>
-              <div v-else class="chat-transcript pa-2 rounded" style="background: rgba(var(--v-theme-on-surface), 0.04); max-height: 450px; overflow-y: auto;">
-                <div v-for="msg in chatMessages[dialogGroup.conversationId]" :key="msg.id" class="mb-2">
-                  <div
-                    class="pa-2 rounded"
-                    :class="msg.sender_type === 'agent' ? 'bg-blue-lighten-5 ml-8' : 'bg-white mr-8'"
-                    :style="isHighlighted(dialogGroup, msg) ? 'border: 2px solid #ff9800;' : 'border: 1px solid #e0e0e0;'"
-                  >
-                    <div class="d-flex align-center mb-1">
-                      <span class="text-caption font-weight-bold" :class="msg.sender_type === 'agent' ? 'text-blue' : 'text-grey-darken-2'">{{ msg.sender_name }}</span>
-                      <v-spacer />
-                      <span class="text-caption text-grey">{{ formatTime(msg.sent_at) }}</span>
-                    </div>
-                    <div v-if="msg.content" class="text-body-2" style="font-size: 13px;">{{ msg.content }}</div>
-                    <div v-if="msg.content_type === 'sticker'" class="text-caption font-italic">[Sticker]</div>
-                    <div v-if="hasAttachments(msg)" class="mt-1">
-                      <template v-for="(att, ai) in parseAttachments(msg)" :key="ai">
-                        <div v-if="isImageAttachment(att)" class="mb-1">
-                          <img v-if="authImageCache[getAttachmentUrl(att)] && authImageCache[getAttachmentUrl(att)] !== 'loading'" :src="authImageCache[getAttachmentUrl(att)]" style="max-width: 180px; max-height: 180px; border-radius: 8px; cursor: pointer;" @click="lightboxSrc = authImageCache[getAttachmentUrl(att)]" />
-                          <v-progress-circular v-else-if="authImageCache[getAttachmentUrl(att)] === 'loading'" indeterminate size="20" width="2" class="ma-2" />
-                        </div>
-                        <v-chip v-else size="x-small" variant="tonal" class="mr-1" :href="getAttachmentUrl(att)" target="_blank"><v-icon start size="12">mdi-paperclip</v-icon>{{ att.name || 'File' }}</v-chip>
-                      </template>
-                    </div>
-                    <div v-if="!msg.content && !hasAttachments(msg) && msg.content_type !== 'text'" class="text-caption font-italic">[{{ msg.content_type || 'File' }}]</div>
-                  </div>
-                </div>
-              </div>
-            </v-col>
-            <v-col cols="12" md="5">
-              <div class="text-caption text-grey font-weight-bold mb-2">
-                <v-icon size="x-small" class="mr-1">mdi-alert-circle</v-icon>
-                Đánh giá chi tiết
-              </div>
-              <v-alert v-if="dialogGroup.review" :type="dialogGroup.verdict === 'PASS' ? 'success' : 'warning'" variant="tonal" density="compact" class="mb-3 text-body-2">
-                {{ dialogGroup.review }}
-              </v-alert>
-              <div v-for="(v, idx) in dialogGroup.violations" :key="idx" class="mb-3">
-                <div class="d-flex align-center mb-1">
-                  <v-chip size="x-small" :color="v.severity === 'NGHIEM_TRONG' ? 'error' : 'warning'" variant="tonal" class="mr-2">
-                    {{ v.severity === 'NGHIEM_TRONG' ? $t('severity_critical') : $t('severity_warning') }}
-                  </v-chip>
-                  <span class="font-weight-medium text-body-2">{{ v.rule_name }}</span>
-                </div>
-                <div class="text-body-2 bg-orange-lighten-5 pa-2 rounded mb-1" style="font-size: 13px; border-left: 3px solid #ff9800;">{{ v.evidence }}</div>
-                <div v-if="parseDetail(v.detail)?.explanation" class="text-caption text-grey-darken-1">{{ parseDetail(v.detail).explanation }}</div>
-                <div v-if="parseDetail(v.detail)?.suggestion" class="text-caption text-success mt-1">
-                  <v-icon size="x-small" class="mr-1">mdi-lightbulb</v-icon>{{ parseDetail(v.detail).suggestion }}
-                </div>
-              </div>
-              <div v-if="!dialogGroup.violations.length && dialogGroup.verdict === 'PASS'" class="text-center text-grey pa-4">
-                <v-icon size="32" color="success">mdi-check-circle</v-icon>
-                <div class="text-body-2 mt-2">Cuộc chat đạt chất lượng</div>
-              </div>
-            </v-col>
-          </v-row>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn @click="detailDialog = false">Đóng</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-
-    <!-- AI not configured dialog -->
+    <!-- AI not configured (unchanged) -->
     <v-dialog v-model="aiNotConfiguredDialog" max-width="450">
       <v-card class="pa-6">
         <v-card-title>
           <v-icon start color="warning">mdi-alert</v-icon>
           Chưa cấu hình AI Provider
         </v-card-title>
-        <v-card-text>
-          Bạn cần cấu hình API key của AI Provider (Claude hoặc Gemini) trước khi chạy tác vụ phân tích.
-        </v-card-text>
+        <v-card-text>Bạn cần cấu hình API key của AI Provider (Claude hoặc Gemini) trước khi chạy tác vụ phân tích.</v-card-text>
         <v-card-actions>
           <v-spacer />
           <v-btn variant="text" @click="aiNotConfiguredDialog = false">Đóng</v-btn>
           <v-btn color="primary" variant="flat" :to="`/${tenantId}/settings`" @click="aiNotConfiguredDialog = false">
-            <v-icon start>mdi-cog</v-icon>
-            Đi tới cài đặt
+            <v-icon start>mdi-cog</v-icon>Đi tới cài đặt
           </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
 
-    <!-- Clear runs dialog -->
-    <v-dialog v-model="clearRunsDialog" max-width="450">
-      <v-card class="pa-6">
-        <v-card-title class="text-error">Xóa lịch sử chạy</v-card-title>
-        <v-card-text>
-          Xóa toàn bộ lịch sử chạy, kết quả đánh giá và chi phí AI của công việc này. Hành động không thể hoàn tác.
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn @click="clearRunsDialog = false">{{ $t('cancel') }}</v-btn>
-          <v-btn color="error" :loading="clearingRuns" @click="clearRuns">{{ $t('delete') }}</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-    <!-- Lightbox overlay for image zoom -->
     <div v-if="lightboxSrc" class="lightbox-overlay" @click="lightboxSrc = ''">
-      <img :src="lightboxSrc" class="lightbox-img" @click.stop />
-      <v-btn icon="mdi-close" variant="flat" color="white" size="small" class="lightbox-close" @click="lightboxSrc = ''" />
+      <img :src="lightboxSrc" alt="" class="lightbox-img" @click.stop />
+      <v-btn icon="mdi-close" variant="flat" color="white" size="small" class="lightbox-close" :aria-label="$t('ui_close')" @click="lightboxSrc = ''" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import { useDisplay } from 'vuetify'
-import { useJobStore, type JobResult, type SourceIntegrityStatus, distinctSourceIntegrity, SOURCE_INTEGRITY_LABEL_KEY, SOURCE_INTEGRITY_STYLE } from '../../stores/jobs'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useDisplay, useTheme } from 'vuetify'
+import { useI18n } from 'vue-i18n'
+import { useJobStore, type JobResult, type JobRun } from '../../stores/jobs'
 import { useAuthStore } from '../../stores/auth'
 import api from '../../api'
 import { qualityTrendByDay } from '../../utils/trend'
+import { formatDateTime, type UiLocale } from '../../utils/format'
+import { verdictFromSeverity, type Verdict } from '../../utils/review'
+import {
+  type ConversationGroup,
+  classificationMetrics,
+  defaultScopeRunId,
+  groupNeedsReview,
+  groupResults,
+  parseDetail,
+  primarySourceStatus,
+  qcMetrics,
+  resolveEvidence,
+  runDurationSeconds,
+  runProgress,
+  runStatusKind,
+  scopeResults,
+} from './job-detail/logic'
+import ActionMenu from '../../components/ui/ActionMenu.vue'
+import AppDialog from '../../components/ui/AppDialog.vue'
+import ConfirmDialog from '../../components/ui/ConfirmDialog.vue'
+import MetricCard from '../../components/ui/MetricCard.vue'
+import SourceStatusPanel from '../../components/ui/SourceStatusPanel.vue'
+import SourceStatusChip from '../../components/ui/SourceStatusChip.vue'
+import VerdictChip from '../../components/ui/VerdictChip.vue'
+import ResultCard from '../../components/ui/ResultCard.vue'
+import FilterBar from '../../components/ui/FilterBar.vue'
+import AiGeneratedLabel from '../../components/ui/AiGeneratedLabel.vue'
+import ConfidenceText from '../../components/ui/ConfidenceText.vue'
+import type { ActionMenuItem } from '../../components/ui/types'
 import { Line } from 'vue-chartjs'
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Filler, Legend } from 'chart.js'
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend } from 'chart.js'
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Filler, Legend)
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
 
 const route = useRoute()
+const router = useRouter()
 const { mdAndUp } = useDisplay()
+const theme = useTheme()
+const { t, locale } = useI18n()
 const jobStore = useJobStore()
 const authStore = useAuthStore()
 const tenantId = computed(() => route.params.tenantId as string)
@@ -783,27 +497,375 @@ const tenantAIProvider = ref('')
 const tenantAIModel = ref('')
 const isClassification = computed(() => job.value?.job_type === 'classification')
 
-const TAG_COLORS = ['#7E57C2', '#1E88E5', '#00897B', '#FB8C00', '#D81B60', '#00ACC1', '#3949AB', '#E64A19', '#7CB342', '#6D4C41']
-function tagColor(tag: string): string {
-  const tags = availableTags.value
-  const idx = tags.indexOf(tag)
-  return idx >= 0 ? TAG_COLORS[idx % TAG_COLORS.length] : TAG_COLORS[0]
-}
-const selectedRunId = ref<string | null>(null)
+const loading = ref(true)
+const loadError = ref(false)
 const cancelling = ref(false)
 const isJobRunning = computed(() => jobStore.jobRuns?.[0]?.status === 'running')
 let pollTimer: ReturnType<typeof setTimeout> | null = null
-const expandedMap = ref<Record<string, boolean>>({})
+
+function fmtDateTime(value: string | null | undefined) {
+  return formatDateTime(value, locale.value as UiLocale)
+}
+
+// ---- Scope: one run (default: latest with results) or every run ----
+const ALL_RUNS = '__all__'
+const scopeRunId = ref<string>(ALL_RUNS)
+const scopeInitialized = ref(false)
+const scoped = computed(() => scopeResults(jobStore.jobResults, scopeRunId.value === ALL_RUNS ? null : scopeRunId.value))
+const groups = computed(() => groupResults(scoped.value))
+const runsWithResults = computed(() => new Set(jobStore.jobResults.map((r) => r.job_run_id)))
+function runHasResults(id: string) {
+  return runsWithResults.value.has(id)
+}
+const latestRunWithResults = computed(() => defaultScopeRunId(jobStore.jobRuns, jobStore.jobResults))
+
+const scopeItems = computed(() => [
+  ...jobStore.jobRuns
+    .filter((r) => runHasResults(r.id))
+    .map((r) => ({
+      value: r.id,
+      title: `${fmtDateTime(r.started_at)}${r.id === latestRunWithResults.value ? ` (${t('jd_scope_latest')})` : ''} · ${t(`jd_run_${runStatusKind(r.status)}`)}`,
+    })),
+  { value: ALL_RUNS, title: t('jd_scope_all') },
+])
+const scopeCaption = computed(() => {
+  if (scopeRunId.value === ALL_RUNS) return t('jd_scope_caption_all')
+  const run = jobStore.jobRuns.find((r) => r.id === scopeRunId.value)
+  return t('jd_scope_caption_run', { time: fmtDateTime(run?.started_at) })
+})
+function initScope() {
+  if (scopeInitialized.value) return
+  scopeRunId.value = latestRunWithResults.value ?? ALL_RUNS
+  scopeInitialized.value = true
+}
+// A new run finishing moves an untouched latest-run scope forward.
+watch(latestRunWithResults, (id, prev) => {
+  if (id && scopeRunId.value === prev) scopeRunId.value = id
+})
+function viewRun(runId: string) {
+  scopeRunId.value = runId
+  activeTab.value = 'results'
+}
+
+// ---- Metrics ----
+const qc = computed(() => qcMetrics(groups.value))
+const cls = computed(() => classificationMetrics(groups.value))
+
+// ---- Filters (default "Cần xem lại" when there is anything to review) ----
+const activeTab = ref<'results' | 'history'>('results')
+const resultFilter = ref('all')
+const filterTouched = ref(false)
+const reviewCount = computed(() => groups.value.filter((g) => groupNeedsReview(g, isClassification.value)).length)
+
+const filters = computed(() => {
+  const gs = groups.value
+  const out: { key: string; label: string; count: number }[] = [{ key: 'review', label: t('ui_needs_review'), count: reviewCount.value }]
+  if (!isClassification.value) {
+    out.push(
+      { key: 'all', label: t('filter_all'), count: gs.length },
+      { key: 'fail', label: t('filter_failed'), count: gs.filter((g) => g.verdict !== 'SKIP' && verdictFromSeverity(g.verdict) === 'fail').length },
+      { key: 'pass', label: t('filter_passed'), count: gs.filter((g) => g.verdict === 'PASS').length },
+      { key: 'skip', label: t('verdict_skip'), count: gs.filter((g) => g.verdict === 'SKIP').length },
+    )
+  } else {
+    out.push(
+      { key: 'classified', label: t('ui_verdict_classified'), count: cls.value.classified },
+      { key: 'all', label: t('filter_all'), count: gs.length },
+      { key: 'skip', label: t('verdict_skip'), count: cls.value.skipped },
+      ...cls.value.tagCounts.map((tc) => ({ key: `tag:${tc.name}`, label: tc.name, count: tc.count })),
+    )
+  }
+  return out
+})
+
+const filteredGroups = computed(() => {
+  const f = resultFilter.value
+  const gs = groups.value
+  if (f === 'review') return gs.filter((g) => groupNeedsReview(g, isClassification.value))
+  if (f === 'pass') return gs.filter((g) => g.verdict === 'PASS')
+  if (f === 'skip') return gs.filter((g) => g.verdict === 'SKIP')
+  if (f === 'fail') return gs.filter((g) => g.verdict !== 'SKIP' && verdictFromSeverity(g.verdict) === 'fail')
+  if (f === 'classified') return gs.filter((g) => g.verdict !== 'SKIP')
+  if (f.startsWith('tag:')) return gs.filter((g) => g.tags.includes(f.slice(4)))
+  return gs
+})
+
+function setFilter(key: string) {
+  filterTouched.value = true
+  resultFilter.value = key
+  page.value = 1
+}
+function applyDefaultFilter() {
+  if (filterTouched.value) return
+  resultFilter.value = reviewCount.value > 0 ? 'review' : isClassification.value ? 'classified' : 'all'
+}
+watch([groups, isClassification], applyDefaultFilter)
+
+// Metric cards link to the list filtered within the current scope (route query ?filter=).
+function filterLink(key: string) {
+  return { query: { ...route.query, filter: key } }
+}
+watch(
+  () => route.query.filter,
+  (f) => {
+    if (typeof f === 'string' && f) {
+      setFilter(f)
+      activeTab.value = 'results'
+    }
+  },
+  { immediate: true },
+)
+
+// ---- Paging ----
+const page = ref(1)
+const perPage = 10
+const totalPages = computed(() => Math.ceil(filteredGroups.value.length / perPage))
+const pageGroups = computed(() => filteredGroups.value.slice((page.value - 1) * perPage, page.value * perPage))
+watch([scopeRunId, resultFilter], () => (page.value = 1))
+
+const runPage = ref(1)
+const runsPerPage = 8
+const totalRunPages = computed(() => Math.ceil(jobStore.jobRuns.length / runsPerPage))
+const pageRuns = computed(() => jobStore.jobRuns.slice((runPage.value - 1) * runsPerPage, runPage.value * runsPerPage))
+
+// ---- Source panel: each conversation counted once, under its most concerning status ----
+const panelStatuses = computed(() => groups.value.map(primarySourceStatus))
+const allLegacy = computed(() => groups.value.length > 0 && groups.value.every((g) => g.sourceStatuses.every((s) => s === 'legacy_unverified')))
+
+// ---- Row helpers ----
+function verdictOf(g: ConversationGroup): Verdict {
+  if (isClassification.value) return g.verdict === 'SKIP' ? 'skip' : 'classified'
+  return verdictFromSeverity(g.verdict)
+}
+function isChanged(g: ConversationGroup) {
+  return g.sourceStatuses.includes('changed_since_analysis')
+}
+function customerLabel(g: ConversationGroup) {
+  return g.customerName || g.conversationId.substring(0, 8) + '…'
+}
+function countLabel(g: ConversationGroup) {
+  const n = g.violations.length
+  return isClassification.value ? t('jd_tag_count', { n }) : t('jd_issue_count', { n })
+}
+function classificationSummary(g: ConversationGroup): string {
+  const evidences = g.violations.map((v) => v.evidence).filter((e) => e && !e.startsWith('Cuộc chat được phân loại'))
+  if (evidences.length) return evidences.join('; ')
+  const explanations = g.violations.map((v) => parseDetail(v.detail).explanation).filter(Boolean)
+  if (explanations.length) return explanations.join('; ')
+  return g.review || '—'
+}
+
+// ---- Runs ----
+const progress = computed(() => runProgress(jobStore.jobRuns[0]))
+const progressPercent = computed(() => (progress.value ? Math.round((progress.value.analyzed / progress.value.found) * 100) : 0))
+function durationLabel(r: JobRun) {
+  const s = runDurationSeconds(r)
+  if (s === null) return '—'
+  return s >= 60 ? t('jd_duration_ms', { m: Math.floor(s / 60), s: s % 60 }) : t('jd_duration_s', { s })
+}
+function runConversations(r: JobRun) {
+  if (r.status === 'running') {
+    const p = runProgress(r)
+    return p ? `${p.analyzed} / ${p.found}` : '—'
+  }
+  const n = parseDetail(r.summary).conversations_analyzed
+  return typeof n === 'number' ? String(n) : '—'
+}
+function runSummary(r: JobRun) {
+  if (r.status === 'running') return '—'
+  const s = parseDetail(r.summary)
+  if (typeof s.conversations_analyzed !== 'number') return '—'
+  return t('jd_run_summary_qc', { passed: s.conversations_passed ?? 0, analyzed: s.conversations_analyzed, issues: s.issues_found ?? 0 })
+}
+
+// ---- Trend (theme colors, Vietnam days) ----
+const trendChartData = computed(() => {
+  const points = qualityTrendByDay(scoped.value)
+  const c = theme.current.value.colors as Record<string, string>
+  return {
+    labels: points.map((p) => p.label),
+    datasets: [
+      { label: t('verdict_pass'), data: points.map((p) => p.passed), borderColor: c.pass, backgroundColor: c.pass, fill: false, tension: 0.3, pointRadius: 4 },
+      { label: t('verdict_fail'), data: points.map((p) => p.failed), borderColor: c.fail, backgroundColor: c.fail, fill: false, tension: 0.3, pointRadius: 4 },
+    ],
+  }
+})
+const chartOptions = computed(() => {
+  const c = theme.current.value.colors as Record<string, string>
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: true, position: 'bottom' as const, labels: { color: c['text-muted'] } } },
+    scales: {
+      x: { grid: { display: false }, ticks: { color: c['text-muted'] } },
+      y: { beginAtZero: true, ticks: { stepSize: 1, color: c['text-muted'] }, grid: { color: c.border } },
+    },
+  }
+})
+
+// ---- Header menu ----
+const menuItems = computed<ActionMenuItem[]>(() => [
+  { key: 'edit', label: t('jd_action_edit'), icon: 'mdi-pencil-outline' },
+  { key: 'clear-results', label: t('jd_action_clear_results'), icon: 'mdi-delete-sweep-outline', danger: true },
+  { key: 'clear-runs', label: t('jd_action_clear_runs'), icon: 'mdi-delete-clock-outline', danger: true },
+])
+function onMenu(key: string) {
+  if (key === 'edit') router.push(`/${tenantId.value}/jobs/${jobId.value}/edit`)
+  else if (key === 'clear-results') clearResultsDialog.value = true
+  else if (key === 'clear-runs') clearRunsDialog.value = true
+}
+
+// ---- Detail dialog and evidence ----
+const detailDialog = ref(false)
+const dialogGroup = ref<ConversationGroup | null>(null)
+const selectedIssueId = ref<string | null>(null)
+const chatMessages = ref<Record<string, any[]>>({})
+const dialogMessages = computed(() => (dialogGroup.value ? chatMessages.value[dialogGroup.value.conversationId] : undefined))
+const highlightedIds = computed(() => {
+  const g = dialogGroup.value
+  const msgs = dialogMessages.value
+  if (!g || !msgs || !selectedIssueId.value) return new Set<string>()
+  const v = g.violations.find((x) => x.id === selectedIssueId.value)
+  return new Set(v ? resolveEvidence(v, msgs).map((r) => r.message_id) : [])
+})
+const nextReviewGroup = computed(() => {
+  const list = groups.value.filter((g) => groupNeedsReview(g, isClassification.value))
+  const cur = dialogGroup.value
+  if (!cur) return list[0] ?? null
+  const i = list.findIndex((g) => g.conversationId === cur.conversationId)
+  return list[i + 1] ?? null
+})
+
+async function openDetail(g: ConversationGroup) {
+  dialogGroup.value = g
+  selectedIssueId.value = null
+  detailDialog.value = true
+  if (!chatMessages.value[g.conversationId]) {
+    try {
+      const { data } = await api.get(`/tenants/${tenantId.value}/conversations/${g.conversationId}/messages`)
+      chatMessages.value[g.conversationId] = data.messages || []
+    } catch {
+      chatMessages.value[g.conversationId] = []
+    }
+  }
+}
+async function selectIssue(v: JobResult) {
+  selectedIssueId.value = selectedIssueId.value === v.id ? null : v.id
+  await nextTick()
+  const first = [...highlightedIds.value][0]
+  if (first) document.getElementById(`jd-msg-${first}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+}
+
+// ---- Attachments (unchanged behavior) ----
+const lightboxSrc = ref('')
+const authImageCache = ref<Record<string, string>>({})
+function hasAttachments(msg: any) {
+  if (!msg.attachments || msg.attachments === '[]' || msg.attachments === 'null') return false
+  try { const arr = JSON.parse(msg.attachments); return Array.isArray(arr) && arr.length > 0 } catch { return false }
+}
+function parseAttachments(msg: any) {
+  try { return JSON.parse(msg.attachments) || [] } catch { return [] }
+}
+function isImageAttachment(att: any): boolean {
+  if (!att.type) return false
+  const ty = att.type.toLowerCase()
+  return ty.startsWith('image') || ty === 'photo' || ty === 'gif' || ty === 'sticker'
+}
+function getAttachmentUrl(att: any): string {
+  if (att.local_path) return `/api/v1/files/${att.local_path}`
+  return att.url || ''
+}
+async function loadAuthImage(url: string) {
+  if (!url || authImageCache.value[url]) return
+  if (!url.startsWith('/api/')) { authImageCache.value[url] = url; return }
+  authImageCache.value[url] = 'loading'
+  try {
+    const token = localStorage.getItem('cqa_access_token')
+    const resp = await fetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : {} })
+    if (resp.ok) { const blob = await resp.blob(); authImageCache.value[url] = URL.createObjectURL(blob) }
+    else { delete authImageCache.value[url] }
+  } catch { delete authImageCache.value[url] }
+}
+watch(chatMessages, (val) => {
+  for (const msgs of Object.values(val)) {
+    for (const msg of msgs || []) {
+      for (const att of parseAttachments(msg)) if (isImageAttachment(att)) { const u = getAttachmentUrl(att); if (u) loadAuthImage(u) }
+    }
+  }
+}, { deep: true })
+onUnmounted(() => {
+  stopPolling()
+  for (const url of Object.values(authImageCache.value)) { if (url?.startsWith('blob:')) URL.revokeObjectURL(url) }
+})
+
+// ---- Job fields ----
+const parsedChannelCount = computed(() => {
+  try { return JSON.parse(job.value?.input_channel_ids || '[]').length } catch { return 0 }
+})
+const dayNames = ['Chủ nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7']
+function formatSchedule(type: string, cron: string) {
+  if (type === 'manual' || !cron) return 'Thủ công'
+  const parts = cron.trim().split(/\s+/)
+  if (parts.length < 5) return cron
+  const [min, hour, dom, , dow] = parts
+  const time = `${hour.padStart(2, '0')}:${min.padStart(2, '0')}`
+  if (dow === '*' && dom === '*') return `Hàng ngày lúc ${time}`
+  if (dow === '1-5' && dom === '*') return `Thứ 2-6 lúc ${time}`
+  if (dow === '0-6' && dom === '*') return `Hàng ngày lúc ${time}`
+  if (dow !== '*' && dom === '*') return `${dow.split(',').map((d) => dayNames[parseInt(d)] || d).join(', ')} lúc ${time}`
+  if (dom !== '*' && dow === '*') return `Ngày ${dom} hàng tháng lúc ${time}`
+  return cron
+}
+
+// ---- Loading, polling and actions ----
+async function reload() {
+  loading.value = true
+  loadError.value = false
+  try {
+    job.value = await jobStore.fetchJob(tenantId.value, jobId.value)
+    await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+    await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
+    initScope()
+    applyDefaultFilter()
+  } catch {
+    loadError.value = true
+  } finally {
+    loading.value = false
+  }
+  try {
+    const { data } = await api.get(`/tenants/${tenantId.value}/settings`)
+    tenantAIProvider.value = data?.settings?.ai_provider || 'claude'
+    tenantAIModel.value = data?.settings?.ai_model || ''
+  } catch { /* the model line is optional */ }
+  if (isJobRunning.value) startPolling()
+}
+onMounted(reload)
+
+function startPolling() {
+  stopPolling()
+  async function tick() {
+    try {
+      await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+      if (!isJobRunning.value) {
+        await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
+        job.value = await jobStore.fetchJob(tenantId.value, jobId.value)
+        stopPolling()
+        return
+      }
+    } catch { /* retry next tick */ }
+    pollTimer = setTimeout(tick, 3000)
+  }
+  pollTimer = setTimeout(tick, 2000)
+}
+function stopPolling() {
+  if (pollTimer) { clearTimeout(pollTimer); pollTimer = null }
+}
+
 const runDialog = ref(false)
-const clearResultsDialog = ref(false)
-const clearRunsDialog = ref(false)
-const clearingResults = ref(false)
-const clearingRuns = ref(false)
 const runMode = ref<'unanalyzed' | 'since_last' | 'conditional'>('since_last')
 const runDateFrom = ref('')
 const runDateTo = ref('')
 const runLimit = ref<number | null>(null)
-
 const runDateFromError = computed(() => {
   if (runMode.value !== 'conditional') return ''
   if (runDateFrom.value && !runDateTo.value) return 'Cần chọn đến ngày'
@@ -818,364 +880,22 @@ const runDateToError = computed(() => {
 const runConditionalError = computed(() => {
   if (runMode.value !== 'conditional') return ''
   if (!runDateFrom.value && !runDateTo.value && !runLimit.value) return 'Vui lòng chọn ít nhất một điều kiện (thời gian hoặc số lượng)'
-  if (runDateFromError.value) return runDateFromError.value
-  if (runDateToError.value) return runDateToError.value
-  return ''
-})
-const activeTab = ref('results')
-const resultFilter = ref<'all' | 'fail' | 'pass' | 'skip' | 'classified'>('all')
-const tagFilter = ref<string | null>(null)
-const viewMode = ref<'card' | 'table'>('card')
-const detailDialog = ref(false)
-const dialogGroup = ref<ConversationGroup | null>(null)
-
-// Run history pagination
-const runPage = ref(1)
-const runsPerPage = 5
-const totalRunPages = computed(() => Math.ceil(jobStore.jobRuns.length / runsPerPage))
-const paginatedRuns = computed(() => {
-  const start = (runPage.value - 1) * runsPerPage
-  return jobStore.jobRuns.slice(start, start + runsPerPage)
+  return runDateFromError.value || runDateToError.value || ''
 })
 
-// Results pagination
-const resultPage = ref(1)
-const resultsPerPage = 10
-const totalResultPages = computed(() => Math.ceil(filteredGroupedResults.value.length / resultsPerPage))
-const paginatedResults = computed(() => {
-  const start = (resultPage.value - 1) * resultsPerPage
-  return filteredGroupedResults.value.slice(start, start + resultsPerPage)
-})
-
-// Chat messages cache
-const chatMessages = ref<Record<string, any[]>>({})
-const lightboxSrc = ref('')
-const authImageCache = ref<Record<string, string>>({})
-
-function hasAttachments(msg: any) {
-  if (!msg.attachments || msg.attachments === '[]' || msg.attachments === 'null') return false
-  try { const arr = JSON.parse(msg.attachments); return Array.isArray(arr) && arr.length > 0 } catch { return false }
-}
-function parseAttachments(msg: any) {
-  try { return JSON.parse(msg.attachments) || [] } catch { return [] }
-}
-function isImageAttachment(att: any): boolean {
-  if (!att.type) return false
-  const t = att.type.toLowerCase()
-  return t.startsWith('image') || t === 'photo' || t === 'gif' || t === 'sticker'
-}
-function getAttachmentUrl(att: any): string {
-  if (att.local_path) return `/api/v1/files/${att.local_path}`
-  return att.url || ''
-}
-async function loadAuthImage(url: string) {
-  if (!url || authImageCache.value[url]) return
-  if (!url.startsWith('/api/')) { authImageCache.value[url] = url; return }
-  authImageCache.value[url] = 'loading'
-  try {
-    const token = localStorage.getItem('cqa_access_token')
-    const resp = await fetch(url, { headers: token ? { 'Authorization': `Bearer ${token}` } : {} })
-    if (resp.ok) { const blob = await resp.blob(); authImageCache.value[url] = URL.createObjectURL(blob) }
-    else { delete authImageCache.value[url] }
-  } catch { delete authImageCache.value[url] }
-}
-function loadImagesForMessages(msgs: any[]) {
-  for (const msg of msgs) {
-    if (msg.attachments) {
-      try {
-        const atts = typeof msg.attachments === 'string' ? JSON.parse(msg.attachments) : msg.attachments
-        if (!Array.isArray(atts)) continue
-        for (const att of atts) { if (isImageAttachment(att)) { const url = getAttachmentUrl(att); if (url) loadAuthImage(url) } }
-      } catch { continue }
-    }
-  }
-}
-watch(chatMessages, (val) => { for (const msgs of Object.values(val)) { if (msgs?.length) loadImagesForMessages(msgs) } }, { deep: true })
-onUnmounted(() => {
-  stopPolling()
-  for (const url of Object.values(authImageCache.value)) { if (url?.startsWith('blob:')) URL.revokeObjectURL(url) }
-})
-
-// Parsed job fields
-const parsedOutputs = computed(() => {
-  try { return JSON.parse(job.value?.outputs || '[]') } catch { return [] }
-})
-const parsedChannelCount = computed(() => {
-  try { return JSON.parse(job.value?.input_channel_ids || '[]').length } catch { return 0 }
-})
-
-// Aggregate stats from results
-const aggregateStats = computed(() => {
-  const groups = groupedResults.value
-  if (!groups.length) return { analyzed: 0, passRate: 0, issues: 0, avgScore: 0 }
-  // Exclude SKIP from all stats
-  const evaluated = groups.filter(g => g.verdict !== 'SKIP')
-  const passed = evaluated.filter(g => g.verdict === 'PASS').length
-  const totalViolations = evaluated.reduce((sum, g) => sum + g.violations.length, 0)
-  const scores = evaluated.filter(g => g.score != null).map(g => g.score!)
-  const avgScore = scores.length ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0
-  return {
-    analyzed: evaluated.length,
-    passRate: evaluated.length ? Math.round(passed / evaluated.length * 100) : 0,
-    issues: totalViolations,
-    avgScore,
-  }
-})
-
-// Trend chart — group theo ngày cuộc chat (conversation date), đếm theo conversation.
-// CCMAI-UX-001a (UX-05): grouped and labelled by the same Vietnam calendar day.
-const trendChartData = computed(() => {
-  const sorted = qualityTrendByDay(jobStore.jobResults)
-  return {
-    labels: sorted.map((v) => v.label),
-    datasets: [
-      { label: 'Đạt', data: sorted.map((v) => v.passed), borderColor: '#66BB6A', backgroundColor: '#66BB6A', fill: false, tension: 0.3, pointRadius: 4 },
-      { label: 'Không đạt', data: sorted.map((v) => v.failed), borderColor: '#EF5350', backgroundColor: '#EF5350', fill: false, tension: 0.3, pointRadius: 4 },
-    ],
-  }
-})
-
-const chartOptions = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: { legend: { display: true, position: 'bottom' as const } },
-  scales: {
-    x: { grid: { display: false } },
-    y: { beginAtZero: true, ticks: { stepSize: 1 } },
-  },
-}
-
-// Filtered results
-// Available tags for classification filter dropdown
-const availableTags = computed(() => {
-  const tagSet = new Set<string>()
-  for (const g of groupedResults.value) {
-    for (const t of g.tags) tagSet.add(t)
-  }
-  return Array.from(tagSet).sort()
-})
-
-const filteredGroupedResults = computed(() => {
-  let results = groupedResults.value
-  if (resultFilter.value === 'pass') results = results.filter(g => g.verdict === 'PASS')
-  else if (resultFilter.value === 'fail') results = results.filter(g => g.verdict === 'FAIL')
-  else if (resultFilter.value === 'skip') results = results.filter(g => g.verdict === 'SKIP')
-  else if (resultFilter.value === 'classified') results = results.filter(g => g.verdict !== 'SKIP')
-  // Apply tag filter for classification
-  if (tagFilter.value) {
-    results = results.filter(g => g.tags.includes(tagFilter.value!))
-  }
-  return results
-})
-
-interface ConversationGroup {
-  conversationId: string
-  customerName: string
-  conversationDate: string
-  verdict: string
-  score: number | null
-  review: string
-  violations: JobResult[]
-  tags: string[]
-  // Every distinct source-integrity status among the displayed results; a mixed group shows all of them.
-  sourceStatuses: SourceIntegrityStatus[]
-}
-
-async function toggleExpand(id: string) {
-  expandedMap.value[id] = !expandedMap.value[id]
-  if (expandedMap.value[id] && !chatMessages.value[id]) {
-    try {
-      const { data } = await api.get(`/tenants/${tenantId.value}/conversations/${id}/messages`)
-      const messages = data.messages || []
-      chatMessages.value[id] = messages
-      // Extract customer name
-      if (messages.length) {
-        const customer = messages.find((m: any) => m.sender_type !== 'agent')
-        if (customer) {
-          const g = groupedResults.value.find(x => x.conversationId === id)
-          if (g) g.customerName = customer.sender_name
-        }
-      }
-    } catch {
-      chatMessages.value[id] = []
-    }
-  }
-}
-
-async function openDetail(group: ConversationGroup) {
-  dialogGroup.value = group
-  detailDialog.value = true
-  if (!chatMessages.value[group.conversationId]) {
-    try {
-      const { data } = await api.get(`/tenants/${tenantId.value}/conversations/${group.conversationId}/messages`)
-      chatMessages.value[group.conversationId] = data.messages || []
-    } catch { chatMessages.value[group.conversationId] = [] }
-  }
-}
-
-function isHighlighted(group: ConversationGroup, msg: any): boolean {
-  return group.violations.some(v => {
-    const evidence = (v.evidence || '').toLowerCase()
-    const content = (msg.content || '').toLowerCase()
-    return content.length > 10 && evidence.includes(content.substring(0, Math.min(30, content.length)))
-  })
-}
-
-const dayNamesShort = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7']
-
-function formatTime(dateStr: string): string {
-  try {
-    const d = new Date(dateStr)
-    const day = dayNamesShort[d.getDay()]
-    const dd = String(d.getDate()).padStart(2, '0')
-    const mm = String(d.getMonth() + 1).padStart(2, '0')
-    const hh = String(d.getHours()).padStart(2, '0')
-    const mi = String(d.getMinutes()).padStart(2, '0')
-    return `${day} ${dd}/${mm} ${hh}:${mi}`
-  } catch { return '' }
-}
-
-const groupedResults = computed<ConversationGroup[]>(() => {
-  const results = jobStore.jobResults
-  if (!results.length) return []
-
-  const latestRunPerConv = new Map<string, string>()
-  for (const r of results) {
-    const cid = r.conversation_id
-    const existing = latestRunPerConv.get(cid)
-    if (!existing || r.created_at > (results.find(x => x.job_run_id === existing && x.conversation_id === cid)?.created_at || '')) {
-      latestRunPerConv.set(cid, r.job_run_id)
-    }
-  }
-
-  const groups = new Map<string, ConversationGroup>()
-  const members = new Map<string, JobResult[]>()
-  for (const r of results) {
-    const cid = r.conversation_id
-    if (r.job_run_id !== latestRunPerConv.get(cid)) continue
-    if (!members.has(cid)) members.set(cid, [])
-    members.get(cid)!.push(r)
-
-    if (!groups.has(cid)) {
-      groups.set(cid, {
-        conversationId: cid,
-        customerName: r.customer_name || '',
-        conversationDate: r.conversation_date || r.created_at,
-        verdict: 'PASS',
-        score: null,
-        review: '',
-        violations: [],
-        tags: [],
-        sourceStatuses: [],
-      })
-    }
-    const g = groups.get(cid)!
-
-    if (r.result_type === 'conversation_evaluation') {
-      g.verdict = r.severity
-      g.review = r.evidence
-      const detail = parseDetail(r.detail)
-      g.score = detail?.score ?? null
-    } else if (r.result_type === 'classification_tag') {
-      g.tags.push(r.rule_name)
-      g.violations.push(r)
-      // Fallback: if no review yet, try to get summary from classification_tag detail
-      if (!g.review) {
-        const tagDetail = parseDetail(r.detail)
-        if (tagDetail?.summary) g.review = tagDetail.summary
-      }
-    } else {
-      g.violations.push(r)
-    }
-  }
-
-  for (const [cid, g] of groups) g.sourceStatuses = distinctSourceIntegrity(members.get(cid) || [])
-
-  return Array.from(groups.values()).sort((a, b) => {
-    return b.conversationDate.localeCompare(a.conversationDate)
-  })
-})
-
-onMounted(async () => {
-  job.value = await jobStore.fetchJob(tenantId.value, jobId.value)
-  if (job.value?.job_type === 'classification') resultFilter.value = 'classified'
-  await jobStore.fetchJobRuns(tenantId.value, jobId.value)
-  await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
-  // Load tenant AI settings (jobs use global settings)
-  try {
-    const { data } = await api.get(`/tenants/${tenantId.value}/settings`)
-    tenantAIProvider.value = data?.settings?.ai_provider || 'claude'
-    tenantAIModel.value = data?.settings?.ai_model || ''
-  } catch { /* fallback empty */ }
-  // Auto-start polling if job is currently running (e.g. after F5)
-  if (isJobRunning.value) {
-    startPolling()
-  }
-})
-
-function startPolling() {
-  stopPolling()
-  async function tick() {
-    try {
-      await jobStore.fetchJobRuns(tenantId.value, jobId.value)
-      if (!isJobRunning.value) {
-        // Job finished — fetch final results
-        await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
-        job.value = await jobStore.fetchJob(tenantId.value, jobId.value)
-        stopPolling()
-        return
-      }
-    } catch { /* ignore network errors, retry next tick */ }
-    pollTimer = setTimeout(tick, 3000)
-  }
-  // Small delay before first poll to let backend create the run record
-  pollTimer = setTimeout(tick, 2000)
-}
-
-function stopPolling() {
-  if (pollTimer) {
-    clearTimeout(pollTimer)
-    pollTimer = null
-  }
-}
-
-const currentRunProgress = computed(() => {
-  const run = jobStore.jobRuns[0]
-  if (!run || run.status !== 'running') return null
-  try {
-    const s = JSON.parse(run.summary || '{}')
-    if (!s.conversations_found) return null
-    return {
-      total: s.conversations_found,
-      analyzed: (s.conversations_analyzed || 0) + (s.conversations_errors || 0),
-      passed: s.conversations_passed || 0,
-      errors: s.conversations_errors || 0,
-      issues: s.issues_found || 0,
-    }
-  } catch { return null }
-})
-
-const progressPercent = computed(() => {
-  if (!currentRunProgress.value) return 0
-  return Math.round(currentRunProgress.value.analyzed / currentRunProgress.value.total * 100)
-})
-
-// AI provider check
 const aiNotConfiguredDialog = ref(false)
 async function checkAIConfigured(): Promise<boolean> {
   try {
     const { data } = await api.get(`/tenants/${tenantId.value}/settings`)
     if (data.settings?.ai_api_key) return true
-  } catch { /* ignore */ }
+  } catch { /* fall through */ }
   aiNotConfiguredDialog.value = true
   return false
 }
-
 async function openRunDialog() {
   if (!(await checkAIConfigured())) return
   runDialog.value = true
 }
-
 async function testRun() {
   if (!(await checkAIConfigured())) return
   try {
@@ -1185,7 +905,6 @@ async function testRun() {
     await jobStore.fetchJobRuns(tenantId.value, jobId.value)
   }
 }
-
 async function confirmRun() {
   if (runConditionalError.value) return
   runDialog.value = false
@@ -1202,7 +921,6 @@ async function confirmRun() {
     await jobStore.fetchJobRuns(tenantId.value, jobId.value)
   }
 }
-
 async function cancelJob() {
   cancelling.value = true
   try {
@@ -1210,25 +928,13 @@ async function cancelJob() {
     stopPolling()
     await jobStore.fetchJobRuns(tenantId.value, jobId.value)
     await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
-  } catch { /* ignore */ }
-  finally { cancelling.value = false }
+  } catch { /* ignore */ } finally { cancelling.value = false }
 }
 
-async function loadResults(runId: string) {
-  selectedRunId.value = runId
-  resultFilter.value = 'all'
-  resultPage.value = 1
-  activeTab.value = 'results'
-  await jobStore.fetchJobResults(tenantId.value, jobId.value, runId)
-}
-
-async function loadAllResults() {
-  selectedRunId.value = null
-  resultFilter.value = 'all'
-  resultPage.value = 1
-  await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
-}
-
+const clearResultsDialog = ref(false)
+const clearRunsDialog = ref(false)
+const clearingResults = ref(false)
+const clearingRuns = ref(false)
 async function clearResults() {
   clearingResults.value = true
   try {
@@ -1242,7 +948,6 @@ async function clearResults() {
     clearingResults.value = false
   }
 }
-
 async function clearRuns() {
   clearingRuns.value = true
   try {
@@ -1258,35 +963,8 @@ async function clearRuns() {
   }
 }
 
-const dayNames = ['Chủ nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7']
-
-function formatSchedule(type: string, cron: string) {
-  if (type === 'manual' || !cron) return 'Thủ công'
-  const parts = cron.trim().split(/\s+/)
-  if (parts.length < 5) return cron
-  const [min, hour, dom, , dow] = parts
-  const time = `${hour.padStart(2, '0')}:${min.padStart(2, '0')}`
-  if (dow === '*' && dom === '*') return `Hàng ngày lúc ${time}`
-  if (dow === '1-5' && dom === '*') return `Thứ 2-6 lúc ${time}`
-  if (dow === '0-6' && dom === '*') return `Hàng ngày lúc ${time}`
-  if (dow !== '*' && dom === '*') {
-    const days = dow.split(',').map(d => dayNames[parseInt(d)] || d).join(', ')
-    return `${days} lúc ${time}`
-  }
-  if (dom !== '*' && dow === '*') return `Ngày ${dom} hàng tháng lúc ${time}`
-  return cron
-}
-
-function formatDateTime(d: string) {
-  const dt = new Date(d)
-  const dd = String(dt.getDate()).padStart(2, '0')
-  const mm = String(dt.getMonth() + 1).padStart(2, '0')
-  const hh = String(dt.getHours()).padStart(2, '0')
-  const mi = String(dt.getMinutes()).padStart(2, '0')
-  return `${dd}/${mm}/${dt.getFullYear()} ${hh}:${mi}`
-}
-
-async function exportResults(format: string = 'csv') {
+// The export endpoint has no run filter, so the buttons say they export every run.
+async function exportResults(format: 'csv' | 'xlsx') {
   try {
     const { data } = await api.get(`/tenants/${tenantId.value}/jobs/${jobId.value}/results/export?format=${format}`, {
       responseType: format === 'xlsx' ? 'blob' : 'text',
@@ -1297,45 +975,359 @@ async function exportResults(format: string = 'csv') {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `results.${format === 'xlsx' ? 'xlsx' : 'csv'}`
+    a.download = `results.${format}`
     a.click()
     URL.revokeObjectURL(url)
   } catch { /* ignore */ }
 }
-
-function statusColor(status: string) {
-  if (status === 'success') return 'success'
-  if (status === 'error' || status === 'failed') return 'error'
-  if (status === 'partial') return 'warning'
-  return 'info'
-}
-
-function parseSummary(s: string) {
-  try { return JSON.parse(s) } catch { return {} }
-}
-
-function parseDetail(s: string) {
-  try { return JSON.parse(s) } catch { return {} }
-}
-
-function classificationSummary(group: any): string {
-  // Try to get detailed evidence from classification_tag violations
-  const evidences = group.violations
-    ?.map((v: any) => v.evidence)
-    .filter((e: string) => e && !e.startsWith('Cuộc chat được phân loại'))
-  if (evidences?.length) return evidences.join('; ')
-  // Fallback: try explanation from detail
-  const explanations = group.violations
-    ?.map((v: any) => parseDetail(v.detail)?.explanation)
-    .filter(Boolean)
-  if (explanations?.length) return explanations.join('; ')
-  // Last fallback
-  return group.review || '—'
-}
 </script>
 
 <style scoped>
-.lightbox-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 9999; cursor: pointer; }
+.jd {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1440px;
+}
+.jd-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 16px;
+  flex-wrap: wrap;
+}
+.jd-header__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1 1 360px;
+}
+.jd-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  align-self: flex-start;
+  min-height: 32px;
+  font-size: 14px;
+  color: rgb(var(--v-theme-primary));
+  text-decoration: none;
+}
+.jd-title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.jd-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+  font-size: 14px;
+  color: rgb(var(--v-theme-text-muted));
+}
+.jd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.jd-action {
+  min-height: 44px;
+}
+.jd-run-text--success { color: rgb(var(--v-theme-pass)); font-weight: 600; }
+.jd-run-text--error { color: rgb(var(--v-theme-fail)); font-weight: 600; }
+.jd-run-text--partial { color: rgb(var(--v-theme-src-changed)); font-weight: 600; }
+.jd-run-text--running { color: rgb(var(--v-theme-primary)); font-weight: 600; }
+.jd-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.jd-stack-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.jd-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.jd-skeleton {
+  border-radius: 12px;
+}
+.jd-scope {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+}
+.jd-scope__caption {
+  margin: 0;
+  font-size: 13px;
+  color: rgb(var(--v-theme-text-muted));
+}
+.jd-scope__select {
+  flex: 0 1 340px;
+  min-width: 240px;
+}
+.jd-card {
+  padding: 16px 20px;
+}
+.jd-card__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.jd-trend {
+  height: 200px;
+}
+.jd-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+}
+.jd-toolbar__filters {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+.jd-toolbar__export {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.jd-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+}
+.jd-row {
+  cursor: pointer;
+}
+.jd-row:focus-visible {
+  outline: 2px solid rgb(var(--v-theme-primary));
+  outline-offset: -2px;
+}
+.jd-row--changed td:first-child {
+  box-shadow: inset 4px 0 0 rgb(var(--v-theme-src-changed));
+}
+.jd-nowrap {
+  white-space: nowrap;
+}
+.jd-clamp-cell {
+  max-width: 420px;
+  white-space: normal;
+}
+.jd-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.jd-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: rgba(var(--v-theme-primary), 0.1);
+  color: rgb(var(--v-theme-primary));
+  font-size: 12px;
+  font-weight: 600;
+}
+.jd-muted {
+  margin: 0;
+  color: rgb(var(--v-theme-text-muted));
+}
+.jd-small {
+  font-size: 12px;
+}
+.jd-note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.jd-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+  color: rgb(var(--v-theme-text-muted));
+}
+.jd-empty__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(var(--v-theme-on-surface));
+}
+.jd-empty__desc {
+  margin: 0 0 4px;
+  max-width: 460px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.jd-run-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.jd-run-chip--success { background: rgb(var(--v-theme-pass-bg)); color: rgb(var(--v-theme-pass)); }
+.jd-run-chip--error { background: rgb(var(--v-theme-fail-bg)); color: rgb(var(--v-theme-fail)); }
+.jd-run-chip--partial { background: rgb(var(--v-theme-src-changed-bg)); color: rgb(var(--v-theme-src-changed)); }
+.jd-run-chip--running { background: rgba(var(--v-theme-primary), 0.1); color: rgb(var(--v-theme-primary)); }
+.jd-run-chip--cancelled,
+.jd-run-chip--unknown { background: rgb(var(--v-theme-skip-bg)); color: rgb(var(--v-theme-skip)); }
+.jd-run-error {
+  color: rgb(var(--v-theme-fail));
+  font-size: 13px;
+}
+.jd-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 20px;
+}
+.jd-detail__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.jd-detail__side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.jd-h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.jd-transcript {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(var(--v-theme-on-surface), 0.03);
+}
+.jd-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 82%;
+}
+.jd-msg--customer { align-self: flex-start; }
+.jd-msg--agent { align-self: flex-end; align-items: flex-end; }
+.jd-msg__who {
+  font-size: 11px;
+  color: rgb(var(--v-theme-text-muted));
+}
+.jd-msg__bubble {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  border: 1px solid rgb(var(--v-theme-border));
+  background: rgb(var(--v-theme-surface));
+  overflow-wrap: anywhere;
+}
+.jd-msg--agent .jd-msg__bubble {
+  background: rgba(var(--v-theme-primary), 0.08);
+}
+.jd-msg--quoted .jd-msg__bubble {
+  outline: 2px solid rgb(var(--v-theme-primary));
+  outline-offset: 2px;
+}
+.jd-msg__img {
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.jd-review {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.jd-issue {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+  color: rgb(var(--v-theme-on-surface));
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+.jd-issue--selected {
+  border: 2px solid rgb(var(--v-theme-primary));
+  background: rgba(var(--v-theme-primary), 0.06);
+}
+.jd-issue:focus-visible {
+  outline: 2px solid rgb(var(--v-theme-primary));
+  outline-offset: 2px;
+}
+.jd-issue__evidence {
+  font-size: 13px;
+  line-height: 1.45;
+}
+.jd-issue__quote {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(var(--v-theme-primary));
+}
+.jd-issue__quote--missing {
+  color: rgb(var(--v-theme-src-unavailable));
+}
+.jd-sev {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.jd-sev--critical { background: rgb(var(--v-theme-fail-bg)); color: rgb(var(--v-theme-fail)); }
+.jd-sev--warning { background: rgb(var(--v-theme-src-changed-bg)); color: rgb(var(--v-theme-src-changed)); }
+.lightbox-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); display: flex; align-items: center; justify-content: center; z-index: 9999; cursor: pointer; }
 .lightbox-img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; cursor: default; }
 .lightbox-close { position: fixed; top: 16px; right: 16px; }
+
+@media (max-width: 959px) {
+  .jd-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jd-detail { grid-template-columns: minmax(0, 1fr); }
+  .jd-title { font-size: 24px; }
+  .jd-scope__select { flex: 1 1 100%; min-width: 0; }
+  .jd-transcript { max-height: none; }
+}
 </style>

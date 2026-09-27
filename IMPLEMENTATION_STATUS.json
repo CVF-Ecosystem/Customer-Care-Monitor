@@ -19,7 +19,9 @@
     "CCMAI-UX-001a REVIEW PASS / FREEZE OPEN, stacked on UX-000: relative time, demo timestamps, card/tag wording and Vietnam-day trend passed independent source/tests/capture review. UX-000 dependency now REVIEW PASS.",
     "CCMAI-UX-000 REVIEW PASS / FREEZE OPEN after UX000-R1: all three layout avatar initials use theme on-colors; independent 92/92 frontend tests, forced typecheck, rendered contrast evidence and 36-page capture review passed. UX-010 may move to WORK_ORDER and bounded BUILD."
   ],
-  "buildInProgress": [],
+  "buildInProgress": [
+    "CCMAI-UX-010 BUILD REVIEW_PENDING (Claude): Job Detail rebuilt on UX-000 components with latest-run scope and selector, SKIP-aware metrics (UX-04), needs-review default filter, source panel, confirm-gated destructive actions in the ... menu, all-runs export labels, two-column detail dialog with exact evidence_refs highlighting (no guessing), run history with status mapping and live progress. 111 frontend tests pass; 36 app captures plus dialog/history states at desktop/mobile light/dark with 0 JS errors. Awaiting Codex review."
+  ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
     "CCMAI-DOCS-001",
@@ -38,7 +40,8 @@
     "CCMAI-DEMO-BRAND-001",
     "CCMAI-UX-000",
     "CCMAI-UX-002",
-    "CCMAI-UX-001a"
+    "CCMAI-UX-001a",
+    "CCMAI-UX-010"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -93,7 +96,8 @@
     "docs/reviews/RESULTS_SOURCE_NOTE_UX002_BUILD_2026-09-28.md",
     "docs/reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md",
     "docs/reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md",
-    "docs/reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md"
+    "docs/reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md",
+    "docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

@@ -1,6 +1,6 @@
 # Work order CCMAI-UX-010 — Job Detail screen redesign
 
-**State:** `WORK_ORDER` (BUILD authorized) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md) with canvas version `1790540352-11c7`; orchestrator decisions in the [overnight review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md) §"Orchestrator decisions"; dependency gate satisfied by [UX000-R1 re-review PASS](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md) and UX-001a REVIEW_PASS.
+**State:** `REVIEW_PENDING` after BUILD ([evidence](../reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md) with canvas version `1790540352-11c7`; orchestrator decisions in the [overnight review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md) §"Orchestrator decisions"; dependency gate satisfied by [UX000-R1 re-review PASS](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md) and UX-001a REVIEW_PASS.
 
 ## Entry and role route
 

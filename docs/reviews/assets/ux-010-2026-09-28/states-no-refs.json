@@ -1,0 +1,50 @@
+[
+  {
+    "theme": "light",
+    "viewport": "desktop",
+    "opened": true,
+    "issue": "Nghiêm trọng\nChào hỏi lịch sự\nNhân viên không chào hỏi khách trong tin nhắn đầu ",
+    "quoteNote": "Không tìm thấy trích dẫn trong hội thoại hiện tại",
+    "closedWithEscape": true,
+    "historyStatuses": [
+      "Thành công"
+    ],
+    "newErrors": []
+  },
+  {
+    "theme": "light",
+    "viewport": "mobile",
+    "opened": true,
+    "issue": "Nghiêm trọng\nChào hỏi lịch sự\nNhân viên không chào hỏi khách trong tin nhắn đầu ",
+    "quoteNote": "Không tìm thấy trích dẫn trong hội thoại hiện tại",
+    "closedWithEscape": true,
+    "historyStatuses": [
+      "Thành công"
+    ],
+    "newErrors": []
+  },
+  {
+    "theme": "dark",
+    "viewport": "desktop",
+    "opened": true,
+    "issue": "Nghiêm trọng\nChào hỏi lịch sự\nNhân viên không chào hỏi khách trong tin nhắn đầu ",
+    "quoteNote": "Không tìm thấy trích dẫn trong hội thoại hiện tại",
+    "closedWithEscape": true,
+    "historyStatuses": [
+      "Thành công"
+    ],
+    "newErrors": []
+  },
+  {
+    "theme": "dark",
+    "viewport": "mobile",
+    "opened": true,
+    "issue": "Nghiêm trọng\nChào hỏi lịch sự\nNhân viên không chào hỏi khách trong tin nhắn đầu ",
+    "quoteNote": "Không tìm thấy trích dẫn trong hội thoại hiện tại",
+    "closedWithEscape": true,
+    "historyStatuses": [
+      "Thành công"
+    ],
+    "newErrors": []
+  }
+]

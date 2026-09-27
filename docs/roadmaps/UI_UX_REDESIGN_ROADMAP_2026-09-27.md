@@ -84,7 +84,7 @@ Theo thứ tự ưu tiên. Mỗi màn: brief, canvas desktop và mobile đủ tr
 
 | Thứ tự | Màn hình (route) | Phát hiện chính | Trọng tâm |
 |---|---|---|---|
-| 1 | Job Detail (`/jobs/:id`), QC và phân loại | UX-04, 08, 09, 10, 17, 18 | Hoàn thiện từ bản thử: thêm tab lịch sử chạy, hộp thoại chi tiết, trạng thái rỗng/lỗi, bản phân loại Thiết kế chốt 2026-09-28 (canvas `1790540352-11c7`), [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md); điều kiện UX-000/001a đã qua REVIEW, chờ work order trước BUILD |
+| 1 | Job Detail (`/jobs/:id`), QC và phân loại | UX-04, 08, 09, 10, 17, 18 | Hoàn thiện từ bản thử: thêm tab lịch sử chạy, hộp thoại chi tiết, trạng thái rỗng/lỗi, bản phân loại Thiết kế chốt 2026-09-28 (canvas `1790540352-11c7`), [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md); [work order](../work_orders/CCMAI_UX_010.md); BUILD xong 2026-09-28, chờ Codex review ([bằng chứng](../reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md)) |
 | 2 | Kết quả (`/results`) và hộp thoại chi tiết | UX-07, 08, 09 | Bảng desktop, thẻ mobile, khung trạng thái nguồn dùng chung với Job Detail |
 | 3 | Trang chủ (`/`) | UX-01, 02, 11, 15, 19 | Số liệu đúng nghĩa, hoạt động gần đây, hướng dẫn bắt đầu hợp lý, banner demo trên mobile |
 | 4 | Kênh chat (`/channels`, `/channels/:id`) | UX-06, 20 | Trạng thái đồng bộ (chưa đồng bộ / đang đồng bộ / một phần / lỗi) đúng ngữ nghĩa R001/R007; "Kết nối lại" chỉ nổi bật khi cần |
