@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex re-reviews the local repair round 2 commit for CCMAI-RUNTIME-002 Gate B against docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_REPAIR_ROUND2_2026-09-27.md (R2-RR1/R2-RR2 repaired). Gate B stays REVIEW_PENDING. No FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
+  "nextAllowedMove": "Claude acknowledges REPAIR_WORKER round 3 and repairs R2-RR3 from docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND2_2026-09-27.md; then Codex re-reviews the local repair commit. Gate B stays REVIEW_PENDING. No FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REPAIR_WORKER (Claude, repair round 2 complete, local commit pending) -> awaiting Codex REVIEWER",
+  "activeRole": "REVIEWER (Codex, repair round 2 new root cause found)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }
