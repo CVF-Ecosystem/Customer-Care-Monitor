@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-003` REVIEW PASS)
-- Next allowed move: Codex may issue a bounded next work order or route a separate CLOSER/FREEZE evaluation. `CCMAI-RUNTIME-003` and prior Gate B passed REVIEW; FREEZE remains open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized by this review.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active role: WORK_ORDER_AUTHOR (Codex, handing `CCMAI-RUNTIME-004` to Claude)
+- Next allowed move: Claude rehydrates continuity, declares context and acknowledges `WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude)` in this handoff before bounded `CCMAI-RUNTIME-004` BUILD. Return one local evidence commit for independent Codex REVIEW; no self-approval or FREEZE. `CCMAI-RUNTIME-002/003` remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push or S2/S3/S5 implementation is authorized.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -141,6 +141,12 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Repair round 1 validation: three new DB-backed tests (`TestUpsertMessageReplayUpdatesChangedRawData`, `TestUpsertMessageIdenticalRawDataReplayIsNoOp`, `TestUpsertMessageUnmarshalableRawDataReturnsErrorAndLeavesRowUnchanged`) plus the five existing replay tests all PASS on disposable MySQL (8/8). `git stash`/`git stash pop` on only `sync.go` confirmed 2 of the 3 new tests — the changed-raw-data and unmarshalable-raw-data cases, exactly matching R003-R1 — fail against the pre-repair source; the fix was then restored and re-verified passing. `go test ./... -count=1` all 13 packages `ok`; `go build`/`go vet` clean; AutoMigrate run twice clean on disposable `CCMA` (`go.mod`/`go.sum` untouched); catalog `-Check` and workspace doctor both PASS (25/25); `git diff --check` clean. `gofmt -l` flags `sync.go`/`sync_replay_test.go` only because `core.autocrlf=true` converted the working-tree line endings to CRLF during an earlier `git stash pop` in this session — confirmed gofmt-clean once normalized to LF for comparison, and the committed blob is LF regardless of the working-tree encoding. Persistent Compose `ccma` was not started (no schema/config change). Evidence appended to `docs/reviews/RUNTIME_REPLAY_MESSAGE_INTEGRITY_S1_BUILD_2026-09-27.md`. No provider call, real channel sync, customer data, deploy or push.
 - Role transition acknowledged (2026-09-27): `REPAIR_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed local repair commit `1f290a6` and its BUILD evidence against the SPEC and repair addendum. R003-R1 and R003-R2 are resolved; all eight replay tests and the full backend suite passed again on fresh disposable MySQL `CCMA`. Disposition `PASS` at `docs/reviews/CCMAI_RUNTIME_003_REPAIR_R1_REREVIEW_2026-09-27.md`.
 - Role transition acknowledged after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. `CCMAI-RUNTIME-003` and prior Gate B are REVIEW PASS / FREEZE open; S1 remains in progress. No live provider/governance proof, real channel sync, customer data, deployment, push, S2/S3/S5 implementation or FREEZE is claimed or authorized by this review.
+
+## Active Tranche: CCMAI-RUNTIME-004
+
+- INTAKE (2026-09-27): owner said “next” after independent `CCMAI-RUNTIME-003` REVIEW PASS. S1 still has a source-freshness gap: `JobResult.AfterFind` calls any linked row `snapshot_bound`, while aggregate Results API/export and UI do not compare saved snapshot evidence with changed local source. R2 because this can mislead intervention review; source audit: `backend/db/models/job.go`, `backend/api/handlers/results.go`, `frontend/src/views/Results.vue`.
+- DESIGN: bound the next slice to a read-only, local-source integrity signal on the aggregate Results page and CSV/XLSX export. Separate `changed_since_analysis` from `bound_currentness_unverified`, `legacy_unverified`, and `verification_unavailable`; never claim full upstream freshness. Use existing `ccma.snapshot.v1` canonical facts, tenant-scoped bounded reads and disposable MySQL. Job-specific/conversation APIs and notifications remain later scope.
+- SPEC/WORK_ORDER: `docs/specs/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_2026-09-27.md` and `docs/work_orders/CCMAI_RUNTIME_004.md`. Role route recorded: `ORCHESTRATOR (Codex) -> SPEC_AUTHOR (Codex) -> WORK_ORDER_AUTHOR (Codex)`. Tranche inherits accepted S1 snapshot/replay evidence and enters BUILD only after Claude rehydrates and acknowledges `IMPLEMENTATION_WORKER` in this handoff. Risk ceiling R2; no live provider, real channel sync, customer data, persistent DB reset, deployment, push, S2/S3/S5 implementation or FREEZE. `CCMAI-RUNTIME-002/003` remain REVIEW PASS / FREEZE open.
 - Role route after repair round 1: `REPAIR_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status remains `REVIEW_PENDING`; Codex re-reviews this repair as independent `REVIEWER`. No FREEZE, provider call, S2/S3/S5, deploy or push is authorized by this repair; `CCMAI-RUNTIME-001/002` FREEZE remains separately open.
 
 ## Active Tranche: CCMAI-DOCS-001
