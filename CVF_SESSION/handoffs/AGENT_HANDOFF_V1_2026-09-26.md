@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-005` BUILD committed); next REVIEWER (Codex)
-- Next allowed move: Codex independently reviews the `CCMAI-RUNTIME-005` BUILD commit (confidence truth; evidence `docs/reviews/RUNTIME_RESULT_CONFIDENCE_TRUTH_S1_BUILD_2026-09-27.md`). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001/002/003/004` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-005` REVIEW PASS)
+- Next allowed move: Codex may issue a bounded S1 continuation or route a separate CLOSER/FREEZE evaluation. `CCMAI-RUNTIME-001/002/003/004/005` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this review.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -196,6 +196,8 @@ CVF controls the application runtime or that a provider-backed test passed.
   - Host `go build` / `go vet` are clean, and the frontend `npm run build` passes. gofmt is clean on changed lines; `demo.go` has only pre-existing hunks. `go.mod` / `go.sum` are unchanged. Catalog `-Check` PASS, workspace doctor PASS 25/25, `git diff --check` clean.
   - Container, network and worktree were removed; persistent Compose `ccma` was untouched. No provider call, credential, channel sync, customer data, deploy or push.
 - Role route after BUILD: `IMPLEMENTATION_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex is the independent `REVIEWER`. No FREEZE, S2/S3/S5 or calibration claim. `CCMAI-RUNTIME-001/002/003/004` remain REVIEW PASS / FREEZE open.
+- Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed commit `9a6ccc1` against SPEC, approved path addition, source and BUILD evidence. Fresh disposable-MySQL focused tests for QC/classification storage, legacy safety, both actual job-result endpoints, demo import and notification formatting passed; the container/network were removed. `CCMAI-RUNTIME-005` is `PASS` for R2 REVIEW. Review: `docs/reviews/CCMAI_RUNTIME_005_INDEPENDENT_REVIEW_2026-09-27.md`. The old binary's NULL-as-zero rollback limit remains documented, not a forward-contract failure.
+- Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R005 remain REVIEW PASS / FREEZE open. No live provider/governance proof, calibration, customer data, deployment, push, S2/S3/S5 implementation or FREEZE is claimed.
 
 ## Active Tranche: CCMAI-DOCS-001
 
