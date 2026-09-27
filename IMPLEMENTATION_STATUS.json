@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -29,13 +29,14 @@
     "CCMAI-RUNTIME-006",
     "CCMAI-RUNTIME-007",
     "CCMAI-RUNTIME-008",
+    "CCMAI-RUNTIME-009",
     "CCMAI-DEMO-BRAND-001"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
     "Application feature status has not yet been assessed under the CVF module catalog.",
     "Workspace-wide gate has failures in unrelated sibling repositories.",
-    "CCMAI-RUNTIME-007/008 passed independent REVIEW for manual sync start/configuration admission. Other handlers still ignore config.Load errors (OAuth/credential paths in channels.go, jobs.go trigger/test-run, agents.go); they require a separately scoped tranche. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
+    "CCMAI-RUNTIME-007/008 passed independent REVIEW for manual sync start/configuration admission. CCMAI-RUNTIME-009 is a plan-only work order for ignored config.Load errors in jobs.go trigger/test-run; no job-dispatch fix is implemented yet. OAuth/credential paths in channels.go and agents.go remain separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them."
   ],
   "evidence": [
@@ -76,5 +77,5 @@
     "docs/reviews/RUNTIME_MANUAL_SYNC_CONFIG_ADMISSION_S1_BUILD_2026-09-27.md",
     "docs/reviews/CCMAI_RUNTIME_008_INDEPENDENT_REVIEW_2026-09-28.md"
   ],
-  "updatedAt": "2026-09-27"
+  "updatedAt": "2026-09-28"
 }

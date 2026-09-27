@@ -5,11 +5,17 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-008` REVIEW PASS)
-- Next allowed move: Codex may scope a separate S1 continuation for ignored `config.Load` errors in other handlers or remaining sync residuals. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real channel sync, credential/provider use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this review.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active role: WORK_ORDER_AUTHOR (Codex, `CCMAI-RUNTIME-009`; Claude next IMPLEMENTATION_WORKER)
+- Next allowed move: Claude rehydrates current CVF continuity, acknowledges the handoff and builds `CCMAI-RUNTIME-009` within its bounded work order, then returns one local commit as REVIEW_PENDING to Codex. `CCMAI-RUNTIME-001` to `008` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. `CCMAI-UXROADMAP-001` stays owner-delegated to Claude, design-only. No real provider/channel sync, credential use, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized.
 - Parked operator checkpoint: none
+
+## Active Tranche: CCMAI-RUNTIME-009
+
+- INTAKE/DESIGN after owner “next”: source audit found `TestRunJob` and `TriggerJob` return 202 before goroutine-local `cfg, _ := config.Load()` can fail. The resulting nil config can reach `engine.NewAnalyzer`. R009 covers both job-dispatch endpoints only; channel OAuth/credential handlers, agent run, sync concurrency and crash recovery remain separate.
+- SPEC/WORK_ORDER: `docs/specs/RUNTIME_JOB_CONFIG_ADMISSION_S1_2026-09-28.md` and `docs/work_orders/CCMAI_RUNTIME_009.md` (R2). Validate config after tenant-scoped lookup but before launch/202; reject failure without work or detail leakage; pass the accepted config unchanged into each worker. Existing job behavior and response bodies stay in place.
+- Role route: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR (Codex). Claude is next IMPLEMENTATION_WORKER after a fresh continuity read and handoff acknowledgment, followed by SESSION_SYNC_STEWARD and COMMIT_STEWARD. Return a local BUILD/evidence commit as REVIEW_PENDING for independent Codex REVIEW. No BUILD, provider call, customer data, deployment, push or FREEZE has occurred in this planning tranche.
 
 ## Owner commit request (2026-09-28)
 
