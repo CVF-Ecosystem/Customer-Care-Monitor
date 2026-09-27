@@ -4,6 +4,7 @@
 
 **Đầu vào:**
 - [Đánh giá UI/UX nền tảng](../reviews/UI_UX_REVIEW_BASELINE_2026-09-27.md): 20 phát hiện UX-01 đến UX-20 và 15 ảnh chụp.
+- Canvas nền tảng thiết kế (Giai đoạn 0) trên claude.ai: https://claude.ai/artifact/DsSy7rS8zkAr4Gk6DB6vxt (riêng tư, của owner).
 - Canvas thử nghiệm Job Detail trên claude.ai: https://claude.ai/artifact/KkF8P2m1iGRpTRa3mkf4ii (riêng tư, của owner).
 - [Quyết định hướng thiết kế](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md): tham chiếu thị trường, màu, chữ, dark mode, mẫu tương tác.
 - Ngữ nghĩa đã qua review độc lập ở R004–R007: bốn trạng thái nguồn, confidence để trống thay vì số giả, chỉ trả 202 sau khi đã ghi trạng thái `syncing`.
@@ -163,6 +164,6 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 
 ## Bước tiếp theo
 
-1. Claude dựng canvas Giai đoạn 0: bảng màu light/dark, thang chữ, component dùng chung (chip kết luận, chip trạng thái nguồn, khung trạng thái nguồn, thẻ số liệu, thẻ kết quả mobile, hàng bảng, hộp thoại, menu ⋯) và bảng thuật ngữ.
+1. [Đã dựng bản đầu, 2026-09-28] Claude dựng canvas Giai đoạn 0: bảng màu light/dark, thang chữ, component dùng chung (chip kết luận, chip trạng thái nguồn, khung trạng thái nguồn, thẻ số liệu, thẻ kết quả mobile, hàng bảng, hộp thoại, menu ⋯) và bảng thuật ngữ.
 2. Claude viết SPEC/WORK_ORDER cho `CCMAI-UX-000` (hiện thực theme, font tự host, component, thuật ngữ, công cụ chụp ảnh) và cho `CCMAI-UX-002` (ghi chú cục bộ trên trang Kết quả). Mỗi tranche BUILD vẫn cần review độc lập của Codex trước FREEZE.
 3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.

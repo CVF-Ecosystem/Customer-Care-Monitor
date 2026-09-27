@@ -293,6 +293,12 @@ CVF controls the application runtime or that a provider-backed test passed.
     - backend-dependent features (human override/disputes/calibration) explicitly deferred.
   - **Roadmap:** updated to ACTIVE with Claude-owned design approval.
   - **Next:** a Phase 0 foundation canvas, then SPEC/WORK_ORDER for `CCMAI-UX-000` and `CCMAI-UX-002`.
+- Phase 0 foundation canvas (2026-09-28): https://claude.ai/artifact/DsSy7rS8zkAr4Gk6DB6vxt (private to the owner).
+  - **Artboards:** "Nền tảng" (color tokens light/dark with computed WCAG ratios, type scale, spacing/radius, glossary); "Component — light"; "Component — dark" (the same file imported with the dark tweak, so both stay in sync).
+  - **Components:** buttons and ⋯ menu; verdict chips (filled); all four R004 source-status chips (bordered, with icon); sync chips; a "Cần xem lại" filter; the source-status panel (local-only note plus counts); metric cards with drill-down; a mobile result card; table rows; a dialog header with the "Nhận xét do AI tạo" label and R005-labelled confidence; a destructive-action confirm dialog.
+  - **Fix:** the dark-mode danger red was changed to `#C9372C` (white text 5.16:1) after the first pick measured 4.40:1.
+  - **Terminology:** the glossary keeps "đánh giá" (not "chấm") to match the existing i18n; the trial Job Detail canvas still says "chấm" and uses warm neutrals, and will be revised to the foundation.
+  - **Recorded in:** decision doc and roadmap. Design-only; no BUILD.
 - Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed `0338fee`, source/test scope and R007 SPEC. Seven focused handler tests passed on a separate disposable MySQL database; the review container/network were removed. Review `docs/reviews/CCMAI_RUNTIME_007_INDEPENDENT_REVIEW_2026-09-27.md` returns PASS for R2 REVIEW. The actual goroutine panic path remains untested; the called recovery helper and its failure behavior are tested.
 - Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R007 are REVIEW PASS / FREEZE open. No real channel sync, provider/governance proof, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is claimed.
 

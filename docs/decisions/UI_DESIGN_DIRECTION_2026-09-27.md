@@ -36,6 +36,7 @@ Bỏ màu và chú thích kế thừa trong `frontend/src/plugins/vuetify.ts`. B
 | source-changed | chữ `#7A4100` / nền `#FFF1DC` | `#F5BE7A` / `#3A2A12` | Nguồn đã đổi sau khi chấm, đồng bộ một phần |
 | source-unavailable | chữ `#5B3A99` / nền `#F1EBFB` | `#C3A9F2` / `#2A2140` | Không xác minh được nguồn |
 | source-legacy | chữ `#5B6470`, không nền | `#A3ABB8` | Kết quả cũ, chưa xác minh |
+| danger | `#B42318` (chữ trắng 6.57:1) | `#C9372C` (chữ trắng 5.16:1) | Nút xác nhận thao tác phá hủy |
 
 Mọi cặp chữ/nền trạng thái đạt ≥ 5.7:1 ở light và ≥ 7.2:1 ở dark (đã tính theo WCAG). "Nguồn đã đổi" (cam) và "không đạt" (đỏ) có độ sáng gần như bằng nhau, nên **không** phân biệt bằng màu: chip kết luận là kiểu nền đặc, còn chip trạng thái nguồn là kiểu viền kèm biểu tượng tam giác cảnh báo. Mọi chip trạng thái đều có biểu tượng và chữ.
 
@@ -69,7 +70,11 @@ Mọi cặp chữ/nền trạng thái đạt ≥ 5.7:1 ở light và ≥ 7.2:1 �
 
 Người sửa điểm AI, khiếu nại điểm, hiệu chỉnh giữa người chấm, giao việc xem lại, bảng xếp hạng/huấn luyện theo nhân viên. Thiết kế **không** vẽ các tính năng này như thể đã có.
 
-## 3. Hệ quả
+## 3. Canvas nền tảng
+
+Bảng màu, thang chữ, bảng thuật ngữ và bộ component dùng chung (light và dark) được vẽ trên canvas claude.ai: https://claude.ai/artifact/DsSy7rS8zkAr4Gk6DB6vxt (riêng tư, của owner). Canvas và văn bản này là một cặp: đổi một bên phải cập nhật bên kia.
+
+## 4. Hệ quả
 
 - `CCMAI-UX-000` hiện thực bảng token (light/dark), font tự host, component dùng chung và bảng thuật ngữ theo quyết định này.
 - Canvas thiết kế các màn sau dùng đúng bảng màu và chữ ở trên. Bản thử Job Detail (nền ấm) sẽ chuyển sang nền trung tính lạnh.
