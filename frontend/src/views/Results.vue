@@ -249,6 +249,7 @@
         <v-table density="compact" hover>
           <thead>
             <tr>
+              <th style="width: 40px" :aria-label="$t('results_col_source')" :title="$t('results_col_source')"></th>
               <th style="min-width: 130px">{{ $t('results_col_customer') }}</th>
               <template v-if="!laPhanLoai">
                 <th style="width: 110px">{{ $t('results_col_verdict') }}</th>
@@ -263,6 +264,13 @@
           </thead>
           <tbody>
             <tr v-for="r in items" :key="r.id" style="cursor: pointer" @click="moChiTiet(r)">
+              <td>
+                <v-tooltip :text="nhanNguon(r.source_integrity_status)" location="top">
+                  <template #activator="{ props }">
+                    <v-icon v-bind="props" size="small" :color="mauNguon(r.source_integrity_status)">{{ iconNguon(r.source_integrity_status) }}</v-icon>
+                  </template>
+                </v-tooltip>
+              </td>
               <td class="font-weight-medium">{{ r.customer_name || '—' }}</td>
               <template v-if="!laPhanLoai">
                 <td>
@@ -287,6 +295,13 @@
             <v-chip v-if="!laPhanLoai" size="small" :color="mauKetQua(r.severity)" variant="tonal">{{ nhanKetQua(r.severity) }}</v-chip>
             <v-chip v-else-if="r.severity === 'SKIP'" size="small" color="grey" variant="tonal">{{ $t('verdict_skip') }}</v-chip>
             <v-chip v-else size="small" color="success" variant="tonal">{{ $t('results_classified') }}</v-chip>
+            <v-tooltip :text="$t('results_source_note')" location="top">
+              <template #activator="{ props }">
+                <v-chip v-bind="props" size="x-small" :color="mauNguon(r.source_integrity_status)" variant="tonal">
+                  <v-icon start size="12">{{ iconNguon(r.source_integrity_status) }}</v-icon>{{ nhanNguon(r.source_integrity_status) }}
+                </v-chip>
+              </template>
+            </v-tooltip>
 
             <div class="flex-grow-1" style="min-width: 200px">
               <div class="d-flex align-center flex-wrap ga-2">
@@ -504,6 +519,9 @@
           <v-chip v-if="!laPhanLoai" size="small" :color="mauKetQua(chiTiet.severity)" variant="tonal">{{ nhanKetQua(chiTiet.severity) }}</v-chip>
           <span class="font-weight-bold">{{ chiTiet.customer_name || '—' }}</span>
           <v-chip v-if="!laPhanLoai && chiTiet.severity !== 'SKIP' && chiTiet.score !== null" size="small" variant="tonal">{{ chiTiet.score }}/100</v-chip>
+          <v-chip size="small" :color="mauNguon(chiTiet.source_integrity_status)" variant="tonal">
+            <v-icon start size="14">{{ iconNguon(chiTiet.source_integrity_status) }}</v-icon>{{ nhanNguon(chiTiet.source_integrity_status) }}
+          </v-chip>
           <v-spacer />
           <v-btn icon variant="text" size="small" @click="moChiTietDialog = false">
             <v-icon>mdi-close</v-icon>
@@ -515,6 +533,9 @@
             {{ chiTiet.job_name }} · {{ chiTiet.channel_name }} ·
             {{ $t('results_col_date') }}: {{ hienNgayGio(chiTiet.conversation_at) }} ·
             {{ $t('results_date_eval') }}: {{ hienNgayGio(chiTiet.evaluated_at) }}
+          </div>
+          <div class="text-caption text-grey-darken-1 mb-3">
+            <v-icon size="12" class="mr-1">mdi-information-outline</v-icon>{{ $t('results_source_note') }}
           </div>
 
           <v-alert v-if="chiTiet.review" :type="chiTiet.severity === 'PASS' ? 'success' : 'warning'" variant="tonal" density="compact" class="mb-3 text-body-2">
@@ -580,6 +601,7 @@ interface ResultItem {
   score: number | null
   issues: IssueItem[]
   tags: string[]
+  source_integrity_status: string
 }
 
 interface JobFacet { id: string; name: string; job_type: string }
@@ -743,6 +765,29 @@ function nhanKetQua(severity: string) {
   if (severity === 'PASS') return t('verdict_pass')
   if (severity === 'SKIP') return t('verdict_skip')
   return t('verdict_fail')
+}
+
+// CCMAI-RUNTIME-004: cục bộ đối chiếu snapshot với tin nhắn hiện tại — không
+// bao giờ kết luận "an toàn"/"còn hiện hành", chỉ báo bốn trạng thái đã định.
+function mauNguon(status: string) {
+  if (status === 'changed_since_analysis') return 'error'
+  if (status === 'verification_unavailable') return 'warning'
+  if (status === 'legacy_unverified') return 'grey'
+  return 'grey-lighten-1' // bound_currentness_unverified
+}
+
+function iconNguon(status: string) {
+  if (status === 'changed_since_analysis') return 'mdi-alert-circle'
+  if (status === 'verification_unavailable') return 'mdi-help-circle'
+  if (status === 'legacy_unverified') return 'mdi-clock-outline'
+  return 'mdi-shield-alert-outline' // bound_currentness_unverified
+}
+
+function nhanNguon(status: string) {
+  if (status === 'changed_since_analysis') return t('results_source_changed')
+  if (status === 'verification_unavailable') return t('results_source_unavailable')
+  if (status === 'legacy_unverified') return t('results_source_legacy')
+  return t('results_source_unverified') // bound_currentness_unverified
 }
 
 function tomTatVanDe(r: ResultItem) {

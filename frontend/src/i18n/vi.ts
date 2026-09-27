@@ -369,4 +369,10 @@ export default {
   results_transcript_denied: 'Bạn không có quyền xem tin nhắn nên phần hội thoại được ẩn.',
   results_open_messages: 'Xem tại Tin nhắn',
   results_detail: 'Đánh giá chi tiết',
+  results_col_source: 'Nguồn',
+  results_source_changed: 'Nguồn đã đổi kể từ khi đánh giá',
+  results_source_legacy: 'Chưa xác minh (kết quả cũ)',
+  results_source_unavailable: 'Không xác minh được',
+  results_source_unverified: 'Chưa xác minh đầy đủ',
+  results_source_note: 'So sánh cục bộ với dữ liệu hiện tại, không đảm bảo đã kiểm tra hết lịch sử chỉnh sửa hoặc xóa ở nguồn.',
 }

@@ -15,6 +15,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/engine"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -216,6 +217,14 @@ type resultRow struct {
 	Score          *float64   `gorm:"-" json:"score"`
 	Issues         []issueRow `gorm:"-" json:"issues"`
 	Tags           []string   `gorm:"-" json:"tags"`
+
+	// AnalysisSnapshotID is read internally to compute SourceIntegrityStatus;
+	// it is not part of the API response (the snapshot itself, not its ID, is
+	// the thing a client could misuse).
+	AnalysisSnapshotID *string `json:"-"`
+	// SourceIntegrityStatus is one of engine.SourceIntegrity* — never a
+	// positive freshness claim. See CCMAI-RUNTIME-004.
+	SourceIntegrityStatus string `gorm:"-" json:"source_integrity_status"`
 }
 
 type issueRow struct {
@@ -224,7 +233,7 @@ type issueRow struct {
 	Severity string `json:"severity"`
 }
 
-const resultSelect = `jr.id, jr.conversation_id, jr.job_run_id, jr.severity, jr.evidence AS review,
+const resultSelect = `jr.id, jr.conversation_id, jr.job_run_id, jr.analysis_snapshot_id, jr.severity, jr.evidence AS review,
 	jr.detail, jr.created_at AS evaluated_at,
 	j.id AS job_id, j.name AS job_name,
 	c.channel_id, c.customer_name, c.last_message_at AS conversation_at,
@@ -286,7 +295,75 @@ func (f resultFilter) fetchRows(limit, offset int) ([]resultRow, error) {
 		}
 		rows[i].Issues = append(rows[i].Issues, issueRow{RuleName: d.RuleName, Evidence: d.Evidence, Severity: d.Severity})
 	}
+
+	if err := f.attachSourceIntegrity(rows); err != nil {
+		return nil, err
+	}
 	return rows, nil
+}
+
+// attachSourceIntegrity computes CCMAI-RUNTIME-004's source_integrity_status
+// for every row, in at most two additional tenant-scoped batched queries
+// (linked snapshots, then their conversations' current messages) — never one
+// query per row. It never mutates a result, snapshot or message; a row-local
+// problem (broken link, malformed manifest) becomes
+// engine.SourceIntegrityVerificationUnavailable rather than a false
+// "unchanged," while a batch query failure here fails the whole request so
+// the caller doesn't have to guess which page rows were actually checked.
+func (f resultFilter) attachSourceIntegrity(rows []resultRow) error {
+	snapshotIDs := make([]string, 0, len(rows))
+	seenSnapshot := map[string]bool{}
+	convIDs := make([]string, 0, len(rows))
+	seenConv := map[string]bool{}
+	for _, r := range rows {
+		if r.AnalysisSnapshotID == nil || *r.AnalysisSnapshotID == "" {
+			continue
+		}
+		if !seenSnapshot[*r.AnalysisSnapshotID] {
+			seenSnapshot[*r.AnalysisSnapshotID] = true
+			snapshotIDs = append(snapshotIDs, *r.AnalysisSnapshotID)
+		}
+		if !seenConv[r.ConversationID] {
+			seenConv[r.ConversationID] = true
+			convIDs = append(convIDs, r.ConversationID)
+		}
+	}
+
+	snapshotByID := map[string]models.AnalysisSnapshot{}
+	if len(snapshotIDs) > 0 {
+		var snaps []models.AnalysisSnapshot
+		if err := db.DB.Where("tenant_id = ? AND id IN ?", f.tenantID, snapshotIDs).Find(&snaps).Error; err != nil {
+			return fmt.Errorf("truy vấn snapshot: %w", err)
+		}
+		for _, s := range snaps {
+			snapshotByID[s.ID] = s
+		}
+	}
+
+	messagesByConv := map[string][]models.Message{}
+	if len(convIDs) > 0 {
+		var msgs []models.Message
+		if err := db.DB.Where("tenant_id = ? AND conversation_id IN ?", f.tenantID, convIDs).Find(&msgs).Error; err != nil {
+			return fmt.Errorf("truy vấn tin nhắn: %w", err)
+		}
+		for _, m := range msgs {
+			messagesByConv[m.ConversationID] = append(messagesByConv[m.ConversationID], m)
+		}
+	}
+
+	for i, r := range rows {
+		if r.AnalysisSnapshotID == nil || *r.AnalysisSnapshotID == "" {
+			rows[i].SourceIntegrityStatus = engine.SourceIntegrityLegacyUnverified
+			continue
+		}
+		snap, ok := snapshotByID[*r.AnalysisSnapshotID]
+		if !ok {
+			rows[i].SourceIntegrityStatus = engine.SourceIntegrityVerificationUnavailable
+			continue
+		}
+		rows[i].SourceIntegrityStatus = engine.CompareSnapshotToCurrentMessages(snap.Manifest, messagesByConv[r.ConversationID])
+	}
+	return nil
 }
 
 func parseScore(detail string) *float64 {
@@ -477,9 +554,9 @@ func ExportResults(c *gin.Context) {
 	isClassification := f.jobType == "classification"
 	var headers []string
 	if isClassification {
-		headers = []string{"Khách hàng", "Nhãn", "Vấn đề", "Ngày hội thoại", "Ngày đánh giá", "Tác vụ", "Kênh"}
+		headers = []string{"Khách hàng", "Nhãn", "Vấn đề", "Ngày hội thoại", "Ngày đánh giá", "Tác vụ", "Kênh", "Tính toàn vẹn nguồn"}
 	} else {
-		headers = []string{"Khách hàng", "Kết quả", "Điểm", "Vấn đề", "Nhận xét", "Ngày hội thoại", "Ngày đánh giá", "Tác vụ", "Kênh"}
+		headers = []string{"Khách hàng", "Kết quả", "Điểm", "Vấn đề", "Nhận xét", "Ngày hội thoại", "Ngày đánh giá", "Tác vụ", "Kênh", "Tính toàn vẹn nguồn"}
 	}
 
 	records := make([][]string, 0, len(rows))
@@ -493,6 +570,7 @@ func ExportResults(c *gin.Context) {
 				formatResultTime(&r.EvaluatedAt),
 				r.JobName,
 				r.ChannelName,
+				sourceIntegrityLabel(r.SourceIntegrityStatus),
 			})
 			continue
 		}
@@ -506,6 +584,7 @@ func ExportResults(c *gin.Context) {
 			formatResultTime(&r.EvaluatedAt),
 			r.JobName,
 			r.ChannelName,
+			sourceIntegrityLabel(r.SourceIntegrityStatus),
 		})
 	}
 
@@ -539,6 +618,22 @@ func verdictLabel(severity string) string {
 		return "Bỏ qua"
 	default:
 		return "Không đạt"
+	}
+}
+
+// sourceIntegrityLabel renders engine.SourceIntegrity* for the Vietnamese
+// CSV/XLSX export, matching the same four values the API returns and the
+// frontend labels via i18n. It never claims "unchanged" or "safe."
+func sourceIntegrityLabel(status string) string {
+	switch status {
+	case engine.SourceIntegrityChangedSinceAnalysis:
+		return "Nguồn đã đổi kể từ khi đánh giá"
+	case engine.SourceIntegrityLegacyUnverified:
+		return "Chưa xác minh (kết quả cũ)"
+	case engine.SourceIntegrityVerificationUnavailable:
+		return "Không xác minh được"
+	default: // engine.SourceIntegrityBoundCurrentnessUnverified
+		return "Chưa xác minh đầy đủ (so sánh cục bộ)"
 	}
 }
 

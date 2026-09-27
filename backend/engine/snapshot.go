@@ -118,34 +118,17 @@ func buildConversationSnapshot(conv models.Conversation, messages []models.Messa
 		if m.ConversationID != conv.ID || m.TenantID != conv.TenantID {
 			return nil, fmt.Errorf("message %s does not belong to conversation %s", m.ID, conv.ID)
 		}
-		contentType := m.ContentType
-		if contentType == "" {
-			contentType = "text"
-		}
-		if contentType != "text" {
+		sm := canonicalizeMessage(m)
+		if sm.ContentType != "text" {
 			reasons[reasonUnsupportedContentType] = true
 		}
-		attCoverage, attCount, attFingerprint := classifyAttachments(m.Attachments)
-		switch attCoverage {
+		switch sm.AttachmentCoverage {
 		case attachmentNotRepresented:
 			reasons[reasonAttachmentNotRepresented] = true
 		case attachmentInvalidJSON:
 			reasons[reasonAttachmentJSONInvalid] = true
 		}
-		sum := sha256.Sum256([]byte(m.Content))
-		manifest.Messages = append(manifest.Messages, snapshotMessage{
-			MessageID:             m.ID,
-			ExternalMessageID:     m.ExternalMessageID,
-			SenderType:            m.SenderType,
-			SenderName:            m.SenderName,
-			ContentType:           contentType,
-			SentAt:                m.SentAt.UTC().Format(time.RFC3339Nano),
-			ContentSHA256:         hex.EncodeToString(sum[:]),
-			ContentCodePoints:     utf8.RuneCountInString(m.Content),
-			AttachmentCoverage:    attCoverage,
-			AttachmentCount:       attCount,
-			AttachmentFingerprint: attFingerprint,
-		})
+		manifest.Messages = append(manifest.Messages, sm)
 		chat = append(chat, ai.ChatMessage{
 			MessageID:  m.ID,
 			SenderType: m.SenderType,
@@ -217,6 +200,123 @@ func classifyAttachments(raw string) (coverage string, count int, fingerprint st
 	}
 	sum := sha256.Sum256(canonical)
 	return attachmentNotRepresented, len(atts), hex.EncodeToString(sum[:])
+}
+
+// canonicalizeMessage is the single source of truth for a message's
+// digest-relevant facts: the exact fields buildConversationSnapshot puts in
+// the manifest, and the exact fields CompareSnapshotToCurrentMessages
+// compares a stored manifest against. Any caller wanting to know whether a
+// message "looks the same" as when it was snapshotted must go through this
+// function rather than re-deriving its own notion of sameness.
+func canonicalizeMessage(m models.Message) snapshotMessage {
+	contentType := m.ContentType
+	if contentType == "" {
+		contentType = "text"
+	}
+	attCoverage, attCount, attFingerprint := classifyAttachments(m.Attachments)
+	sum := sha256.Sum256([]byte(m.Content))
+	return snapshotMessage{
+		MessageID:             m.ID,
+		ExternalMessageID:     m.ExternalMessageID,
+		SenderType:            m.SenderType,
+		SenderName:            m.SenderName,
+		ContentType:           contentType,
+		SentAt:                m.SentAt.UTC().Format(time.RFC3339Nano),
+		ContentSHA256:         hex.EncodeToString(sum[:]),
+		ContentCodePoints:     utf8.RuneCountInString(m.Content),
+		AttachmentCoverage:    attCoverage,
+		AttachmentCount:       attCount,
+		AttachmentFingerprint: attFingerprint,
+	}
+}
+
+// Source-integrity status values for CCMAI-RUNTIME-004's read-time
+// comparison between a stored analysis snapshot and current source
+// messages. These are local, informational signals only — see
+// CompareSnapshotToCurrentMessages for exactly what they do and don't prove.
+const (
+	// SourceIntegrityChangedSinceAnalysis means the local comparison found a
+	// concrete difference: an edited message, a missing (deleted) message,
+	// or a message the snapshot never saw.
+	SourceIntegrityChangedSinceAnalysis = "changed_since_analysis"
+	// SourceIntegrityBoundCurrentnessUnverified means the local comparison
+	// found no difference, but that is not proof of full upstream
+	// currentness — adapter history/removal coverage and timing may be
+	// incomplete (see docs/specs/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_2026-09-27.md).
+	SourceIntegrityBoundCurrentnessUnverified = "bound_currentness_unverified"
+	// SourceIntegrityLegacyUnverified means the result has no snapshot link
+	// at all, so no comparison could be attempted.
+	SourceIntegrityLegacyUnverified = "legacy_unverified"
+	// SourceIntegrityVerificationUnavailable means a snapshot link exists but
+	// the comparison itself could not be trusted: a broken link, a
+	// malformed/unsupported manifest, or a row-local read error. This must
+	// never collapse into "unchanged."
+	SourceIntegrityVerificationUnavailable = "verification_unavailable"
+)
+
+// CompareSnapshotToCurrentMessages compares a stored ccma.snapshot.v1
+// manifest (as persisted in models.AnalysisSnapshot.Manifest) against the
+// conversation's current tenant-scoped messages, using exactly the same
+// per-message canonicalization canonicalizeMessage uses to build that
+// manifest in the first place — this is deliberate reuse, not a parallel
+// notion of "changed."
+//
+// The comparison window is bounded to current messages at or after the
+// earliest SentAt recorded in the manifest. The manifest's own
+// OmittedEarlierMessages already documents that earlier history may have
+// been excluded by design when the snapshot was built; without that original
+// cutoff recorded verbatim, treating every current message as in-scope would
+// misreport an already-known, never-analyzed older message as "added." A
+// message re-inserted with a timestamp older than anything the snapshot
+// recorded is therefore out of scope for this comparison — a documented
+// limitation, not a claim that such a change would be detected.
+//
+// This function is read-only and never mutates the snapshot, any result, or
+// any message. An unchanged comparison never returns more than
+// SourceIntegrityBoundCurrentnessUnverified: a local comparison cannot prove
+// the adapter's upstream history and removal coverage are complete.
+func CompareSnapshotToCurrentMessages(manifestJSON string, currentMessages []models.Message) string {
+	var manifest snapshotManifest
+	if err := json.Unmarshal([]byte(manifestJSON), &manifest); err != nil {
+		return SourceIntegrityVerificationUnavailable
+	}
+	if manifest.SchemaVersion != snapshotSchemaV1 {
+		return SourceIntegrityVerificationUnavailable
+	}
+
+	manifestByID := make(map[string]snapshotMessage, len(manifest.Messages))
+	var minSentAt time.Time
+	for i, sm := range manifest.Messages {
+		manifestByID[sm.MessageID] = sm
+		t, err := time.Parse(time.RFC3339Nano, sm.SentAt)
+		if err != nil {
+			return SourceIntegrityVerificationUnavailable
+		}
+		if i == 0 || t.Before(minSentAt) {
+			minSentAt = t
+		}
+	}
+
+	currentByID := make(map[string]snapshotMessage, len(currentMessages))
+	for _, m := range currentMessages {
+		if len(manifest.Messages) > 0 && m.SentAt.Before(minSentAt) {
+			continue // outside the manifest's own declared window; see doc comment
+		}
+		currentByID[m.ID] = canonicalizeMessage(m)
+	}
+
+	for id, sm := range manifestByID {
+		cur, ok := currentByID[id]
+		if !ok || cur != sm {
+			return SourceIntegrityChangedSinceAnalysis
+		}
+	}
+	for id := range currentByID {
+		if _, ok := manifestByID[id]; !ok {
+			return SourceIntegrityChangedSinceAnalysis
+		}
+	}
+	return SourceIntegrityBoundCurrentnessUnverified
 }
 
 func (s *conversationSnapshot) record(runID string) (models.AnalysisSnapshot, error) {

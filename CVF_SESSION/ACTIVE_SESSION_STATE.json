@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-004 SPEC and R2 work order are ready. Claude is next IMPLEMENTATION_WORKER: rehydrate continuity, declare context, acknowledge WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) in the active handoff, then BUILD only the bounded aggregate Results-page/export source-integrity slice with disposable MySQL. Return one local evidence commit for independent Codex REVIEW; no self-approval or FREEZE. CCMAI-RUNTIME-002/003 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push or S2/S3/S5 implementation is authorized.",
+  "nextAllowedMove": "Claude has completed the CCMAI-RUNTIME-004 BUILD (source_integrity_status on the aggregate Results page/export, backend engine comparison helper, frontend table/card/detail display) and created one local commit, no push. Codex re-reviews that commit as independent REVIEWER. Status REVIEW_PENDING. CCMAI-RUNTIME-002/003 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex, handing CCMAI-RUNTIME-004 to Claude)",
+  "activeRole": "REVIEWER (Codex, pending independent review of CCMAI-RUNTIME-004 BUILD)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

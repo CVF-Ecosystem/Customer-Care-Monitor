@@ -369,4 +369,10 @@ export default {
   results_transcript_denied: 'You do not have permission to view messages, so the transcript is hidden.',
   results_open_messages: 'Open in Messages',
   results_detail: 'Evaluation detail',
+  results_col_source: 'Source',
+  results_source_changed: 'Source changed since analysis',
+  results_source_legacy: 'Unverified (legacy result)',
+  results_source_unavailable: 'Could not verify',
+  results_source_unverified: 'Not fully verified',
+  results_source_note: 'This is a local comparison against current data only — it does not guarantee the full edit or deletion history at the source was checked.',
 }
