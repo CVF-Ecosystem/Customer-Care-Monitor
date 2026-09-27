@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude has completed the CCMAI-RUNTIME-004 BUILD (source_integrity_status on the aggregate Results page/export, backend engine comparison helper, frontend table/card/detail display) and created one local commit, no push. Codex re-reviews that commit as independent REVIEWER. Status REVIEW_PENDING. CCMAI-RUNTIME-002/003 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
+  "nextAllowedMove": "Codex independently reviewed CCMAI-RUNTIME-004 BUILD commit a9559e3: CHANGES_REQUIRED (R004-R1/R2/R3). Claude is next REPAIR_WORKER under the same R2 path/effect ceiling: rehydrate continuity, acknowledge REVIEWER (Codex) -> REPAIR_WORKER (Claude) in the handoff, repair only the addendum in docs/work_orders/CCMAI_RUNTIME_004.md, then return one local evidence commit for Codex re-review. Status REVIEW_PENDING; CCMAI-RUNTIME-002/003 remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex, pending independent review of CCMAI-RUNTIME-004 BUILD)",
+  "activeRole": "ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex, R004 repair round 1 issued)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

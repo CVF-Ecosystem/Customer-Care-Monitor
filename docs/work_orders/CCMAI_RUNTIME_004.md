@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-004 — S1 result source freshness
 
-**State:** `READY_FOR_ASSIGNEE_ACK` · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner “next”, `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`, and `docs/specs/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_2026-09-27.md`.
+**State:** `REPAIR_READY_FOR_ASSIGNEE_ACK` after independent REVIEW `CHANGES_REQUIRED` · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner “next”, `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`, `docs/specs/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_2026-09-27.md`, and `docs/reviews/CCMAI_RUNTIME_004_INDEPENDENT_REVIEW_2026-09-27.md`.
 
 ## Entry and role route
 
@@ -27,3 +27,16 @@ Allowed evidence/continuity paths: new `docs/reviews/RUNTIME_RESULT_SOURCE_FRESH
 On success, Claude transitions `IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD`, synchronizes continuity/status, creates one local commit without push, and returns `REVIEW_PENDING` to Codex. If a required check fails, a source signal is ambiguous, or a new path/effect is needed, report `BUILD_BLOCKED` with exact evidence instead of claiming completion.
 
 **External-effect ceiling:** local source/docs/tests and disposable MySQL `CCMA` only. No provider API or credential, real channel sync, customer data, persistent Compose database reset, deployment, push, S2/S3/S5 implementation or FREEZE.
+
+## Repair round 1 — R004-R1/R004-R2/R004-R3
+
+**Entry:** Codex independent REVIEW of BUILD commit `a9559e3` found the three same-scope findings at `docs/reviews/CCMAI_RUNTIME_004_INDEPENDENT_REVIEW_2026-09-27.md`. Claude must rehydrate current continuity and append `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` acknowledgment to the active handoff before repair. This round keeps the existing R2/local-disposable-MySQL/no-provider/no-push boundary; no new product authority is granted.
+
+Allowed implementation files: `backend/engine/snapshot.go`, `backend/engine/source_integrity_test.go`, `backend/api/handlers/results.go`, and `backend/api/handlers/results_test.go` only. Allowed accompanying files: existing R004 BUILD evidence, active handoff/state, session memory, implementation status, and roadmap/spec status if source truth changes. Do not change DB models/migrations, frontend, provider, analyzer, adapters, sync dispatch, job-specific/conversation APIs, notifications or CVF core.
+
+1. Validate linked snapshot provenance and integrity before reporting `bound_currentness_unverified`: exact manifest SHA-256 digest, supported schema, manifest/row/result tenant and conversation, run link, and manifest message count. Invalid row-local evidence returns `verification_unavailable`. Replace the valid-test fixture's `deadbeef` digest and add corrupt-digest, wrong conversation/run and cross-tenant regressions.
+2. Correct the added-message comparison for messages earlier than the manifest's earliest `sent_at` when `omitted_earlier_messages=0`; for windowed history, compare the recorded omitted count with the current earlier-message count and flag proven count changes. Where equal counts still leave earlier identities unknowable, retain the explicitly limited `bound_currentness_unverified` status. Add zero/nonzero omitted-count regressions. Preserve the no-positive-freshness claim.
+3. Execute handler-level `ListResults` and `ExportResults` tests, including CSV and XLSX content/status equivalence, tenant isolation for the new data reads, and observable failures from snapshot/message batch-query errors. Verify no partial success and preserve pagination, filters, count, sort and export cap.
+4. Re-run focused tests and `go test ./... -count=1` on disposable MySQL `CCMA` (set `log_bin_trust_function_creators=1` for existing trigger tests), `go build ./...`, `go vet ./...`, catalog `-Check`, workspace doctor and `git diff --check`. Append exact commands/results, fixture cleanup and any remaining limits to the R004 BUILD evidence. Frontend build is needed only if its source changes (which is outside this repair scope).
+
+After passing checks, synchronize continuity/status, create one local commit without push, and return `REVIEW_PENDING` to Codex. If a requirement needs a path or effect outside this repair class, or a required check fails, report the boundary/failure instead of claiming completion. No self-approval or FREEZE.
