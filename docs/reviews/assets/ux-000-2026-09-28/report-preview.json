@@ -1,0 +1,180 @@
+{
+  "base": "http://127.0.0.1:4173",
+  "generatedAt": "2026-09-27T19:28:29.581Z",
+  "pages": [
+    {
+      "route": "/wireframes/design-system",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system--desktop--light.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=review",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-dialog--desktop--light.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=review",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=confirm",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-confirm--desktop--light.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=confirm",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system--desktop--dark.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=review",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-dialog--desktop--dark.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=review",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=confirm",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-confirm--desktop--dark.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=confirm",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system--mobile--light.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=review",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-dialog--mobile--light.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=review",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=confirm",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-confirm--mobile--light.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=confirm",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system--mobile--dark.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=review",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-dialog--mobile--dark.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=review",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/wireframes/design-system?dialog=confirm",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:4173/api/v1/setup/status"
+      ],
+      "externalRequests": [],
+      "file": "design-system-confirm--mobile--dark.png",
+      "finalUrl": "http://127.0.0.1:4173/wireframes/design-system?dialog=confirm",
+      "horizontalOverflow": false
+    }
+  ],
+  "summary": {
+    "pages": 12,
+    "pagesWithJsErrors": 0,
+    "pagesWithHorizontalOverflow": 0,
+    "externalRequests": []
+  }
+}

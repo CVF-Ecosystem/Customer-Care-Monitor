@@ -1,0 +1,47 @@
+# CCMAI-UX-000: disposable environment for UI screenshots.
+# Started only by scripts/ui-screenshots.ps1 with a unique project name and throwaway
+# secrets from a temporary env file outside the repo. MySQL data lives in tmpfs, so
+# nothing persists; the project is removed after capture. Never reads the repo .env.
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${UISHOT_DB_ROOT_PASSWORD:?}
+      MYSQL_DATABASE: CCMA
+      MYSQL_USER: ccma
+      MYSQL_PASSWORD: ${UISHOT_DB_PASSWORD:?}
+    tmpfs:
+      - /var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_PASSWORD\" mysql -h localhost -u\"$$MYSQL_USER\" -D CCMA -e 'SELECT 1' >/dev/null"]
+      interval: 3s
+      timeout: 5s
+      retries: 60
+
+  app:
+    build:
+      context: ../..
+    environment:
+      APP_ENV: production
+      SERVER_PORT: "8080"
+      SERVER_HOST: 0.0.0.0
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_NAME: CCMA
+      DB_USER: ccma
+      DB_PASSWORD: ${UISHOT_DB_PASSWORD:?}
+      JWT_SECRET: ${UISHOT_JWT_SECRET:?}
+      ENCRYPTION_KEY: ${UISHOT_ENCRYPTION_KEY:?}
+      PRICING_SYNC_ENABLED: "false"
+      RATE_LIMIT_PER_IP: "5000"
+      RATE_LIMIT_PER_USER: "5000"
+      TZ: Asia/Ho_Chi_Minh
+    ports:
+      - "127.0.0.1:${UISHOT_PORT:-18088}:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    tmpfs:
+      - /tmp
+      - /var/lib/cqa/files

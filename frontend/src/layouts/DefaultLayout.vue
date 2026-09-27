@@ -191,6 +191,7 @@ import { useAuthStore } from '../stores/auth'
 import LanguageSwitcher from '../components/LanguageSwitcher.vue'
 import OnboardingWizard from '../components/OnboardingWizard.vue'
 import api from '../api'
+import { storeTheme } from '../styles/tokens'
 
 const route = useRoute()
 const authStore = useAuthStore()
@@ -275,6 +276,7 @@ const userInitials = computed(() => {
 
 function toggleTheme() {
   theme.global.name.value = isDark.value ? 'light' : 'dark'
+  storeTheme(theme.global.name.value)
 }
 
 function onNavClick() {

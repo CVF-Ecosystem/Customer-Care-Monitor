@@ -165,5 +165,5 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 ## Bước tiếp theo
 
 1. [Đã dựng bản đầu, 2026-09-28] Claude dựng canvas Giai đoạn 0: bảng màu light/dark, thang chữ, component dùng chung (chip kết luận, chip trạng thái nguồn, khung trạng thái nguồn, thẻ số liệu, thẻ kết quả mobile, hàng bảng, hộp thoại, menu ⋯) và bảng thuật ngữ.
-2. Claude viết SPEC/WORK_ORDER cho `CCMAI-UX-000` (hiện thực theme, font tự host, component, thuật ngữ, công cụ chụp ảnh) và cho `CCMAI-UX-002` (ghi chú cục bộ trên trang Kết quả). Mỗi tranche BUILD vẫn cần review độc lập của Codex trước FREEZE.
+2. [UX-000: BUILD xong 2026-09-28, chờ Codex review — [SPEC](../specs/UI_FOUNDATION_UX000_2026-09-28.md), [bằng chứng](../reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md)] Claude viết SPEC/WORK_ORDER cho `CCMAI-UX-000` (hiện thực theme, font tự host, component, thuật ngữ, công cụ chụp ảnh) và cho `CCMAI-UX-002` (ghi chú cục bộ trên trang Kết quả). Mỗi tranche BUILD vẫn cần review độc lập của Codex trước FREEZE.
 3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.

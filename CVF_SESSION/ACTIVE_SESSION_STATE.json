@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-UX-000 SPEC and R2 work order are written (docs/specs/UI_FOUNDATION_UX000_2026-09-28.md, docs/work_orders/CCMAI_UX_000.md). Claude, as IMPLEMENTATION_WORKER, may BUILD within that scope and return one local evidence commit as REVIEW_PENDING for independent Codex REVIEW; no self-PASS or FREEZE. R001-R009 remain REVIEW PASS / FREEZE open and S1 IN_PROGRESS under Codex orchestration. No provider call, running-DB change, deployment or push is authorized by UX-000.",
+  "nextAllowedMove": "CCMAI-UX-000 BUILD is REVIEW_PENDING for independent Codex R2 REVIEW (evidence docs/reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md); Claude does not self-approve or FREEZE. While waiting, Claude may continue UI/UX tranches not blocked by a dependency (each with its own SPEC, work order, evidence and local commit, returning REVIEW_PENDING), recording BLOCKED for any API-contract change, real data/provider use, running-DB change, deployment or out-of-scope work. R001-R009 remain REVIEW PASS / FREEZE open and S1 IN_PROGRESS under Codex orchestration. No push.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER (Claude, CCMAI-UX-000)",
+  "activeRole": "ORCHESTRATOR (Claude, UI/UX tranches; CCMAI-UX-000 REVIEW_PENDING for Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

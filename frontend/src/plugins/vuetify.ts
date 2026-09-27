@@ -1,41 +1,48 @@
 import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
 import { createVuetify } from 'vuetify'
+import { darkColors, lightColors, readStoredTheme } from '../styles/tokens'
 
+// CCMAI-UX-000: colors come from the design tokens; the theme choice persists per browser.
 export default createVuetify({
   theme: {
-    defaultTheme: 'light',
+    defaultTheme: readStoredTheme(),
     themes: {
       light: {
-        colors: {
-          primary: '#5C6BC0',      // Indigo — SePay Wiki AI style
-          secondary: '#7986CB',
-          accent: '#536DFE',
-          success: '#4CAF50',
-          warning: '#FF9800',
-          error: '#F44336',
-          info: '#2196F3',
-          background: '#F5F5F5',
-          surface: '#FFFFFF',
+        dark: false,
+        colors: lightColors,
+        variables: {
+          'border-color': '#1B1F24',
+          'border-opacity': 0.14,
         },
       },
       dark: {
-        colors: {
-          primary: '#7986CB',
-          secondary: '#9FA8DA',
-          accent: '#536DFE',
-          background: '#121212',
-          surface: '#1E1E1E',
+        dark: true,
+        colors: darkColors,
+        variables: {
+          'border-color': '#E7EAF0',
+          'border-opacity': 0.16,
         },
       },
     },
   },
   defaults: {
+    // Flat cards with a border; dialogs and menus keep a shadow so they read as layers.
     VCard: {
       rounded: 'lg',
-      elevation: 1,
+      elevation: 0,
+      border: true,
+    },
+    VDialog: {
+      VCard: { elevation: 8, border: false },
+    },
+    VMenu: {
+      VCard: { elevation: 6, border: false },
     },
     VBtn: {
+      rounded: 'lg',
+    },
+    VChip: {
       rounded: 'lg',
     },
     VTextField: {

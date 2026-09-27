@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
@@ -7,6 +8,10 @@ export default defineConfig({
     vue(),
     vuetify({ autoImport: true }),
   ],
+  // CCMAI-UX-000: component tests mount Vuetify, whose CSS imports must be processed by Vite.
+  test: {
+    server: { deps: { inline: ['vuetify'] } },
+  },
   server: {
     port: 3000,
     proxy: {

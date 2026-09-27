@@ -23,7 +23,7 @@ This tranche does **not** redesign any screen. Existing views keep their markup 
 
 ### 2.2 Font
 
-- F1. Add the dependency `@fontsource/be-vietnam-pro` (SIL OFL 1.1). Import only the `vietnamese` and `latin` subsets for weights 400/500/600/700. Files are bundled by Vite into `dist`; no request goes to Google Fonts or any CDN.
+- F1. Add the dependency `@fontsource/be-vietnam-pro` (SIL OFL 1.1). Import weights 400/500/600/700 through the package's per-weight CSS, which declares the `vietnamese`, `latin-ext` and `latin` subsets with `unicode-range` (BUILD correction: the single-subset files have no `unicode-range` and cannot be combined). Files are bundled by Vite into `dist`; no request goes to Google Fonts or any CDN.
 - F2. Set `--v-font-body` and `--v-font-heading` to `"Be Vietnam Pro"` with a system fallback stack. Numbers in the new components use `font-variant-numeric: tabular-nums`.
 
 ### 2.3 Shared components (`frontend/src/components/ui/`)

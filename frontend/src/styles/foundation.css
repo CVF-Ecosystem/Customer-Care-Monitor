@@ -1,0 +1,20 @@
+/* CCMAI-UX-000: self-hosted font and global foundation rules.
+   Be Vietnam Pro (SIL OFL 1.1) is bundled from @fontsource; no request leaves the app. */
+@import '@fontsource/be-vietnam-pro/400.css';
+@import '@fontsource/be-vietnam-pro/500.css';
+@import '@fontsource/be-vietnam-pro/600.css';
+@import '@fontsource/be-vietnam-pro/700.css';
+
+:root {
+  --v-font-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --v-font-heading: var(--v-font-body);
+}
+
+/* Cards use a 12px radius; buttons and chips stay at 8px. */
+.v-application .v-card.rounded-lg {
+  border-radius: 12px !important;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

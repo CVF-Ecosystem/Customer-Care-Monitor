@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('../wireframes/Results.vue'),
     },
     {
+      path: '/wireframes/design-system',
+      name: 'wf-design-system',
+      component: () => import('../wireframes/DesignSystem.vue'),
+    },
+    {
       path: '/setup',
       name: 'setup',
       component: () => import('../views/Setup.vue'),

@@ -1,6 +1,6 @@
 # Work order CCMAI-UX-000 — UI foundation
 
-**State:** `WORK_ORDER` (BUILD authorized) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner UI/UX delegation (2026-09-27), owner instruction of 2026-09-28 to run the redesign roadmap starting with UX-000, [SPEC](../specs/UI_FOUNDATION_UX000_2026-09-28.md), [design decision](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 0.
+**State:** `REVIEW_PENDING` after BUILD ([evidence](../reviews/UI_FOUNDATION_UX000_BUILD_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** owner UI/UX delegation (2026-09-27), owner instruction of 2026-09-28 to run the redesign roadmap starting with UX-000, [SPEC](../specs/UI_FOUNDATION_UX000_2026-09-28.md), [design decision](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md), [roadmap](../roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md) Phase 0.
 
 ## Entry and role route
 
