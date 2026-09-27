@@ -101,6 +101,38 @@ func TestSnapshotDigestChangesWithAttachmentIdentity(t *testing.T) {
 		t.Fatal("identical attachment JSON produced a different digest")
 	}
 
+	// Same typed values under different whitespace/key order still collapse to
+	// the same digest, because the fingerprint re-encodes the typed struct
+	// rather than hashing the original bytes.
+	reordered := append([]models.Message(nil), msgs...)
+	reordered[0].Attachments = `[ { "url" : "https://x/a.png" , "type": "image" , "name":"a.png" } ]`
+	if mustSnapshot(t, conv, reordered, 0).Digest != base.Digest {
+		t.Fatal("same typed attachment values under different whitespace/key order produced a different digest")
+	}
+
+	// R2-RR2: two different attachments whose fields, joined with an unescaped
+	// delimiter, previously collided to the same bytes and therefore the same
+	// digest. json.Marshal must distinguish them.
+	collisionA := append([]models.Message(nil), msgs...)
+	collisionA[0].Attachments = `[{"type":"a\u001fb","url":"c"}]`
+	collisionB := append([]models.Message(nil), msgs...)
+	collisionB[0].Attachments = `[{"type":"a","url":"b\u001fc"}]`
+	collDigestA := mustSnapshot(t, conv, collisionA, 0).Digest
+	collDigestB := mustSnapshot(t, conv, collisionB, 0).Digest
+	if collDigestA == collDigestB {
+		t.Fatal("delimiter-collision attachment pair produced the same digest")
+	}
+
+	// Invalid JSON is hashed from the untrimmed raw bytes: a whitespace-only
+	// change still moves the digest, since coverage/parsing never trims first.
+	badNoSpace := append([]models.Message(nil), msgs...)
+	badNoSpace[0].Attachments = `{broken`
+	badWithSpace := append([]models.Message(nil), msgs...)
+	badWithSpace[0].Attachments = ` {broken`
+	if mustSnapshot(t, conv, badNoSpace, 0).Digest == mustSnapshot(t, conv, badWithSpace, 0).Digest {
+		t.Fatal("whitespace-only change to invalid attachment JSON did not change digest")
+	}
+
 	// Invalid JSON fingerprints the raw bytes, so a source change still moves the digest.
 	badA := append([]models.Message(nil), msgs...)
 	badA[0].Attachments = `{broken-a`

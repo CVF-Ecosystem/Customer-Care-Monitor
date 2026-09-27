@@ -187,10 +187,16 @@ func buildConversationSnapshot(conv models.Conversation, messages []models.Messa
 
 // classifyAttachments returns coverage, count and a deterministic fingerprint
 // of the attachment metadata (not the raw payload). Valid JSON is fingerprinted
-// from typed fields (type/url/name/local_path) so a same-count, same-coverage
-// swap to a different attachment still changes the fingerprint and therefore
-// the snapshot digest. Invalid JSON is fingerprinted from its raw bytes so a
-// source change is never silently absorbed into "no change".
+// by re-encoding the typed []channels.Attachment slice with json.Marshal: fixed
+// struct field order plus JSON's own escaping of every field's content (quotes,
+// colons, commas, control characters) makes the encoding unambiguous, so a
+// same-count, same-coverage swap to a different attachment still changes the
+// fingerprint. A hand-joined delimiter string does not have that guarantee — two
+// different attachments can produce the same joined bytes when a field value
+// contains the delimiter itself, which is exactly the collision this replaces.
+// Invalid JSON is fingerprinted from the untrimmed raw bytes, so any source-byte
+// change — including a change to only leading/trailing whitespace — is never
+// silently absorbed into "no change".
 func classifyAttachments(raw string) (coverage string, count int, fingerprint string) {
 	trimmed := strings.TrimSpace(raw)
 	if trimmed == "" || trimmed == "null" || trimmed == "[]" {
@@ -198,17 +204,18 @@ func classifyAttachments(raw string) (coverage string, count int, fingerprint st
 	}
 	var atts []channels.Attachment
 	if err := json.Unmarshal([]byte(trimmed), &atts); err != nil {
-		sum := sha256.Sum256([]byte(trimmed))
+		sum := sha256.Sum256([]byte(raw))
 		return attachmentInvalidJSON, 0, hex.EncodeToString(sum[:])
 	}
 	if len(atts) == 0 {
 		return attachmentNone, 0, ""
 	}
-	parts := make([]string, len(atts))
-	for i, a := range atts {
-		parts[i] = a.Type + "\x1f" + a.URL + "\x1f" + a.Name + "\x1f" + a.LocalPath
+	canonical, err := json.Marshal(atts)
+	if err != nil {
+		sum := sha256.Sum256([]byte(raw))
+		return attachmentNotRepresented, len(atts), hex.EncodeToString(sum[:])
 	}
-	sum := sha256.Sum256([]byte(strings.Join(parts, "\x1e")))
+	sum := sha256.Sum256(canonical)
 	return attachmentNotRepresented, len(atts), hex.EncodeToString(sum[:])
 }
 

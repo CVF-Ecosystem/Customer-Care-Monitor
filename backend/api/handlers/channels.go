@@ -19,6 +19,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/channels"
@@ -240,19 +241,28 @@ func DeleteChannel(c *gin.Context) {
 		return
 	}
 
-	// Cascade: delete files → results → snapshots → messages → conversations → channel.
-	// Results and their snapshots are deleted together, inside one transaction, so a
-	// mid-cascade failure never leaves a result pointing at a snapshot that no longer
-	// exists (or vice versa).
+	// Cascade: results → snapshots → messages → conversations → channel, all inside
+	// one transaction. Conversation IDs are read with a locking SELECT (FOR UPDATE)
+	// on the same channel_id/tenant_id predicate the final DELETE conversations uses;
+	// under InnoDB REPEATABLE READ that locking read takes gap/next-key locks on the
+	// scanned range, so a conversation cannot be inserted for this channel mid-cascade
+	// and later deleted without its children being caught by the same ID list. File
+	// cleanup only runs after the transaction commits — a DB rollback cannot undo a
+	// deleted file, so deleting files first would leave real data loss behind a
+	// rolled-back cascade.
 	var convIDs []string
-	db.DB.Model(&models.Conversation{}).Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Pluck("id", &convIDs)
-
 	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		var conversations []models.Conversation
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).
+			Find(&conversations).Error; err != nil {
+			return fmt.Errorf("lock conversations: %w", err)
+		}
+		for _, conv := range conversations {
+			convIDs = append(convIDs, conv.ID)
+		}
+
 		if len(convIDs) > 0 {
-			for _, convID := range convIDs {
-				dir := filepath.Join("/var/lib/cqa/files", tenantID, convID)
-				os.RemoveAll(dir)
-			}
 			if err := tx.Where("conversation_id IN ? AND tenant_id = ?", convIDs, tenantID).Delete(&models.JobResult{}).Error; err != nil {
 				return fmt.Errorf("delete job results: %w", err)
 			}
@@ -275,6 +285,13 @@ func DeleteChannel(c *gin.Context) {
 		log.Printf("[error] delete channel %s cascade: %v", channelID, err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "delete_channel_failed"})
 		return
+	}
+
+	for _, convID := range convIDs {
+		dir := filepath.Join("/var/lib/cqa/files", tenantID, convID)
+		if err := os.RemoveAll(dir); err != nil {
+			log.Printf("[warn] delete channel %s: failed to remove attachment dir for conversation %s: %v", channelID, convID, err)
+		}
 	}
 
 	db.LogActivity(tenantID, middleware.GetUserID(c), middleware.GetUserEmail(c), "channel.delete", "channel", channelID, "Deleted channel: "+channel.Name, "", c.ClientIP())
