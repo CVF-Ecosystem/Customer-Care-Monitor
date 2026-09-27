@@ -1,6 +1,6 @@
 # Work order CCMAI-RUNTIME-006 — S1 job-result source integrity
 
-**State:** `REVIEW_PENDING` after repair round 1 for R006-R1 (local commit; Job Detail local-only note) · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, re-review next; [finding R006-R1](../reviews/CCMAI_RUNTIME_006_INDEPENDENT_REVIEW_2026-09-27.md)) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md), and accepted R004/R005 reviews.
+**State:** `REVIEW_PASS / FREEZE_OPEN` after independent repair-round-1 re-review of `682d88b` · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER` -> `COMMIT_STEWARD`) · **Independent reviewer:** Codex (`REVIEWER`, [PASS](../reviews/CCMAI_RUNTIME_006_REPAIR_R1_REREVIEW_2026-09-27.md)) · **Authority:** owner “next”, [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_2026-09-27.md), and accepted R004/R005 reviews.
 
 ## Entry and role route
 

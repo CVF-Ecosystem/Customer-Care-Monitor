@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-006` repair round 1 committed); next REVIEWER (Codex)
-- Next allowed move: Codex independently re-reviews the R006 repair-round-1 commit (R006-R1: local-only note visible on Job Detail table/card views). Status `REVIEW_PENDING`. `CCMAI-RUNTIME-001/002/003/004/005` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE.
+- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-006` REVIEW PASS)
+- Next allowed move: Codex may issue a bounded S1 continuation or route a separate CLOSER/FREEZE evaluation. `CCMAI-RUNTIME-001/002/003/004/005/006` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent Compose DB change, deployment, push, S2/S3/S5 or FREEZE is authorized by this review.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -226,6 +226,8 @@ CVF controls the application runtime or that a provider-backed test passed.
   - **Checks:** vitest `i18n.spec.ts` 8/8, `npm run build` PASS, `git diff --check` clean, catalog `-Check` PASS, doctor 25/25. No backend change, so the backend suite was not re-run.
   - Evidence appended to `docs/reviews/RUNTIME_JOB_RESULT_SOURCE_INTEGRITY_S1_BUILD_2026-09-27.md`.
 - Role route after repair round 1: `REPAIR_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex re-reviews as independent `REVIEWER`. No FREEZE, provider call, data effect or upstream-freshness claim.
+- Role transition acknowledged (2026-09-27): `COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently re-reviewed `682d88b`: only `JobDetail.vue` changed in product source; `results_source_note` now appears in the shared results-tab region before the table/card branches when result groups are shown, while badges and dialog note remain. Independent `npx vitest run src/__tests__/i18n.spec.ts` passed 8/8 and `npm run build` passed. Review `docs/reviews/CCMAI_RUNTIME_006_REPAIR_R1_REREVIEW_2026-09-27.md` returns PASS for R2 REVIEW; R006-R1 is closed.
+- Role route after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; R001-R006 are REVIEW PASS / FREEZE open. No live provider/governance proof, upstream-completeness claim, customer data, deployment, push, S2/S3/S5 implementation or FREEZE is claimed.
 
 ## Active Tranche: CCMAI-DOCS-001
 
