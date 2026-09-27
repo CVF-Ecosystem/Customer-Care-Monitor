@@ -6,7 +6,7 @@
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
-    "S1 analysis snapshots: core single/batch snapshot and evidence validation plus repair-round-2 cascade/fingerprint fixes are implemented, but Gate B remains REVIEW_PENDING. Repair round 3 added parent locking and two DB-backed race-order tests; Codex re-review found demo reset still ignores delete/update errors and can commit orphan evidence after a failed delete. Status is REVIEW_COST_ESCALATION_REQUIRED pending owner disposition. Test-double/MySQL evidence is not real-provider governance proof."
+    "S1 analysis snapshots: core single/batch snapshot and evidence validation plus repair-round-2 cascade/fingerprint fixes are implemented, but Gate B remains REVIEW_PENDING. Repair round 3 added parent locking and two DB-backed race-order tests; Codex re-review found demo reset still ignores delete/update errors and can commit orphan evidence after a failed delete. Owner resolved REVIEW_COST_ESCALATION_REQUIRED by authorizing a narrow demo-reset atomicity repair, now pending Claude implementation and Codex re-review. Test-double/MySQL evidence is not real-provider governance proof."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",

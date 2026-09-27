@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Owner resolves REVIEW_COST_ESCALATION_REQUIRED from docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND3_2026-09-27.md. No further repair is self-authorized. Gate B stays REVIEW_PENDING. No FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
+  "nextAllowedMove": "Claude rehydrates continuity, acknowledges REPAIR_WORKER and executes only the owner-authorized narrow ResetDemoData atomicity repair in docs/work_orders/CCMAI_RUNTIME_002.md; then Codex re-reviews the local commit. Gate B stays REVIEW_PENDING. No broader repair, FREEZE, provider call, channel sync, customer data, deployment, push, S2/S3/S5 implementation or AI-runtime governance claim is authorized.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex, repair round 3 blocked; REVIEW_COST_ESCALATION_REQUIRED)",
+  "activeRole": "ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex, owner-approved narrow escalation repair packaged for Claude)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-27"
 }

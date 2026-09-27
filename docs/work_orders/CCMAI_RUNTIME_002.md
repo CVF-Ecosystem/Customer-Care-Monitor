@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-002: independent review rồi xây snapshot/evidence S1
 
-**Trạng thái:** GATE_A_PASS_WITH_REPAIRS / GATE_B_REVIEW_COST_ESCALATION_REQUIRED · **Rủi ro:** R2 · **Ngày:** 2026-09-27 · **Assignee dự kiến:** agent do owner chọn (Claude).
+**Trạng thái:** GATE_A_PASS_WITH_REPAIRS / GATE_B_OWNER_AUTHORIZED_NARROW_REPAIR · **Rủi ro:** R2 · **Ngày:** 2026-09-27 · **Assignee:** Claude.
 
 ## Authority và mục tiêu
 
@@ -121,3 +121,37 @@ concurrency, migration/legacy handling, command và kết quả thật. Sau khi 
 đạt, Claude chuyển vai `SESSION_SYNC_STEWARD -> COMMIT_STEWARD`, tạo **một local
 commit, không push**, rồi trả `REVIEW_PENDING` cho Codex. Claude không tự FREEZE
 Gate B.
+
+## Owner-authorized narrow repair after review-cost escalation
+
+**Authorization:** owner approved on 2026-09-27 after Codex recorded
+`REVIEW_COST_ESCALATION_REQUIRED` in
+`docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND3_2026-09-27.md`.
+This resolves the escalation for the bounded work below only.
+
+Claude must rehydrate continuity and acknowledge `REPAIR_WORKER` before editing.
+Allowed implementation scope is limited to:
+
+- `backend/api/handlers/demo.go`: make `ResetDemoData` fail closed and rollback
+  when transaction begin, either parent lock, any delete, tenant-settings update
+  or commit fails;
+- `backend/api/handlers/*_test.go`: add a permanent MySQL failure injection test
+  equivalent to R3-E1;
+- repair evidence and required continuity/status records.
+
+Acceptance:
+
+1. A forced `job_results` delete failure returns a non-2xx response and leaves
+   result, snapshot, run, job, conversation, channel and demo flag unchanged.
+2. No `ResetDemoData` transaction statement may discard `.Error`; rollback and
+   response behavior must be explicit and testable.
+3. Existing demo happy path, both Round-3 race orderings, all earlier repair
+   regressions, `go test ./...`, AutoMigrate twice, catalog and workspace doctor
+   pass on disposable `CCMA`.
+4. Evidence goes to
+   `docs/reviews/RUNTIME_SNAPSHOT_EVIDENCE_S1_ESCALATION_REPAIR_2026-09-27.md`.
+
+This authorization does not permit changes to other deletion paths, schema,
+provider/runtime gates, channel sync, customer data, persistent database reset,
+deployment, push or CVF core. Claude may create one local commit and must return
+Gate B as `REVIEW_PENDING` for Codex; Claude may not FREEZE it.

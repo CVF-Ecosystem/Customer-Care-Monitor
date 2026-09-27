@@ -72,6 +72,8 @@ Codex has packaged the exact Round 3 execution contract into the existing `docs/
 
 Codex re-review of repair round 3 is `CHANGES_REQUIRED / REVIEW_COST_ESCALATION_REQUIRED`: the writer locks and both race orderings pass, but demo reset ignores child-delete/update errors. A real MySQL trigger failure proved it can return HTTP 200 while committing an orphan result after deleting its run/conversation. Review: `docs/reviews/CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND3_2026-09-27.md`. This is part of the existing R2-RR3 acceptance rather than an independent new root cause, so owner disposition is required before any further repair. Gate B remains `REVIEW_PENDING`; S2 remains closed.
 
+Owner resolved that escalation on 2026-09-27 by authorizing one narrow repair: make `ResetDemoData` rollback on every transaction error, preserve all rows/demo flag in the injected failure case, add the permanent MySQL regression and rerun the required Gate B checks. The bounded execution contract is appended to `docs/work_orders/CCMAI_RUNTIME_002.md`. Claude executes and locally commits; Codex re-reviews. No broader deletion, schema, provider, S2 or FREEZE scope is authorized.
+
 ## Local Provider Registry
 
 `CVF_SESSION/LOCAL_PROVIDER_SECRETS.json` — **gitignored, machine-local** — chứa API keys của các AI provider thực, dùng khi work order yêu cầu `liveGovernanceEvidenceRequired: true`. Mọi agent cần credential thực đều đọc file này. KHÔNG commit file này.

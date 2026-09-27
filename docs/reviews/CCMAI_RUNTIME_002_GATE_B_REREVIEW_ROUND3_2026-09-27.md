@@ -72,3 +72,10 @@ Nếu owner cho phép một repair hẹp, acceptance là:
 
 Gate B giữ `REVIEW_PENDING`. Không FREEZE, S2, provider call, channel sync,
 customer data, deployment hoặc push được phép từ review này.
+
+## Owner disposition
+
+Owner approved the exact narrow repair above on 2026-09-27. The escalation is
+resolved only for `ResetDemoData` atomic error handling, its permanent MySQL
+failure-path test, required regressions/evidence and continuity synchronization.
+No broader repair or product scope is authorized.
