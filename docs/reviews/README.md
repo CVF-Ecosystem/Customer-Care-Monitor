@@ -10,3 +10,4 @@ Store project-governed reviews artifacts here. Link active artifacts from docs/I
 - [CCMAI-RUNTIME-002 Gate B independent review](CCMAI_RUNTIME_002_GATE_B_INDEPENDENT_REVIEW_2026-09-27.md) — `CHANGES_REQUIRED`: repair retention lineage, attachment fingerprint và DB test DSN trước FREEZE.
 - [CCMAI-RUNTIME-002 Gate B re-review](CCMAI_RUNTIME_002_GATE_B_REREVIEW_2026-09-27.md) — repair round 1 đóng R2-B3 và prune path; channel atomic boundary cùng attachment collision cần repair round 2.
 - [CCMAI-RUNTIME-002 Gate B round-2 re-review](CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND2_2026-09-27.md) — round 2 đạt, nhưng writer/deletion concurrency còn tạo được orphan evidence; cần repair round 3.
+- [CCMAI-RUNTIME-002 Gate B round-3 re-review](CCMAI_RUNTIME_002_GATE_B_REREVIEW_ROUND3_2026-09-27.md) — parent locks và race tests đạt; demo reset vẫn có thể commit orphan evidence khi child delete lỗi, nên `REVIEW_COST_ESCALATION_REQUIRED` chờ owner xử lý.

@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-002: independent review rồi xây snapshot/evidence S1
 
-**Trạng thái:** GATE_A_PASS_WITH_REPAIRS / GATE_B_REVIEW_CHANGES_REQUIRED_ROUND_3 · **Rủi ro:** R2 · **Ngày:** 2026-09-27 · **Assignee dự kiến:** agent do owner chọn (Claude).
+**Trạng thái:** GATE_A_PASS_WITH_REPAIRS / GATE_B_REVIEW_COST_ESCALATION_REQUIRED · **Rủi ro:** R2 · **Ngày:** 2026-09-27 · **Assignee dự kiến:** agent do owner chọn (Claude).
 
 ## Authority và mục tiêu
 
