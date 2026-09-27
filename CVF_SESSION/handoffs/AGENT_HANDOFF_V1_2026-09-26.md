@@ -1,4 +1,4 @@
-﻿# Agent Handoff V1
+# Agent Handoff V1
 
 Status: ACTIVE
 
@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: COMMIT_STEWARD (Claude, `CCMAI-RUNTIME-004` repair round 2 committed)
-- Next allowed move: Codex independently re-reviews the R004 repair-round-2 test/evidence commit (R004-R3-T1: changed/unchanged CSV/XLSX export status and observable `ExportResults` failure). Status `REVIEW_PENDING`; `CCMAI-RUNTIME-002/003` remain REVIEW PASS / FREEZE open. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized.
+- Active role: ORCHESTRATOR (Codex, after independent `CCMAI-RUNTIME-004` REVIEW PASS)
+- Next allowed move: Codex may issue a bounded next S1 work order or route a separate CLOSER/FREEZE evaluation. `CCMAI-RUNTIME-002/003/004` passed REVIEW and remain FREEZE open; S1 remains IN_PROGRESS. No provider call, real channel sync, customer data, persistent database reset, deployment, push, S2/S3/S5 implementation or FREEZE is authorized by this review.
 - Parked operator checkpoint: none
 
 ## Active Tranche: CCMAI-RUNTIME-001
@@ -161,6 +161,8 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Repair round 2 result (R004-R3-T1): `TestExportResultsCSVAndXLSXIncludeSourceIntegrityColumn` now runs `unchanged` and `changed` subtests through the real `ExportResults` handler. It asserts the exact label in the parsed last column (`Tính toàn vẹn nguồn`) for both CSV and XLSX: `bound_currentness_unverified` and `changed_since_analysis`. New `TestExportResultsSnapshotBatchQueryFailureIsObservable` forces the snapshot SELECT to fail and proves that CSV and XLSX exports each return 4xx/5xx with no `Content-Disposition`, a JSON content type, no BOM/`PK` file prefix, and body `{"error":"query_failed"}`. The table-rename injection is now a shared helper, and `TestListResultsSnapshotBatchQueryFailureIsObservable` still passes. No production source changed and no defect was exposed.
 - Repair round 2 validation (fresh disposable `mysql:8.0`, `log_bin_trust_function_creators=1`, `GOFLAGS=-mod=readonly`): focused engine tests 18 PASS and handler tests 21 PASS; `go test ./... -count=1 -p 1` passed all 13 packages; the renamed table was restored after the suite; `go vet`, LF-normalized gofmt and `git diff --check` are clean; `go.mod`/`go.sum` are unchanged; catalog `-Check` PASS and workspace doctor PASS 25/25. The container and network were removed; persistent Compose `ccma` was untouched. Evidence: "Addendum: Repair round 2" in `docs/reviews/RUNTIME_RESULT_SOURCE_FRESHNESS_S1_BUILD_2026-09-27.md`.
 - Role route after repair round 2: `REPAIR_WORKER` -> `SESSION_SYNC_STEWARD` -> `COMMIT_STEWARD` (Claude, local commit only, no push). Status `REVIEW_PENDING`; Codex re-reviews as independent `REVIEWER`. No FREEZE, provider call, S2/S3/S5, deploy or push is authorized.
+- Role transition acknowledged (2026-09-27): `REPAIR_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Claude) -> REVIEWER (Codex)`. Codex independently reviewed local test/evidence commit `e8ab021`; R004-R3-T1 is complete and `CCMAI-RUNTIME-004` is `PASS` for R2 REVIEW. Fresh disposable-MySQL export/page tests ran against real HTTP handlers, confirmed changed/unchanged CSV and XLSX labels and JSON failure with no partial file; temporary table restored and container removed. Review: `docs/reviews/CCMAI_RUNTIME_004_REPAIR_R2_FINAL_REREVIEW_2026-09-27.md`.
+- Role transition after review: `REVIEWER (Codex) -> SESSION_SYNC_STEWARD (Codex) -> COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex)`. S1 remains IN_PROGRESS; `CCMAI-RUNTIME-001/002/003/004` are REVIEW PASS / FREEZE open. No live provider/governance proof, real channel sync, customer data, deployment, push, S2/S3/S5 implementation or FREEZE is claimed or authorized by this review.
 
 ## Active Tranche: CCMAI-DOCS-001
 
