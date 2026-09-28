@@ -1,6 +1,6 @@
 # SPEC — AI job list, create and edit (`CCMAI-UX-013`)
 
-**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_013](../work_orders/CCMAI_UX_013.md) · **Findings:** UX-12, UX-13, UX-14 in the [baseline](../reviews/UI_UX_REVIEW_BASELINE_2026-09-27.md) · **Roadmap:** screen 6. **Status:** BUILD done, `REVIEW_PENDING` ([evidence](../reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md)).
+**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_013](../work_orders/CCMAI_UX_013.md) · **Findings:** UX-12, UX-13, UX-14 in the [baseline](../reviews/UI_UX_REVIEW_BASELINE_2026-09-27.md) · **Roadmap:** screen 6. **Status:** `REVIEW_PASS`, FREEZE open ([review](../reviews/CCMAI_UX_013_INDEPENDENT_REVIEW_2026-09-28.md)).
 
 **Approved design:** canvas https://claude.ai/artifact/P6t4P6pboawbA9PFVTT276 (private to the owner), **version id `1790603381-76c3`**. Artboards: "Tác vụ — 1280 — danh sách", "— 390 dark — danh sách", "— 1280 — tạo, bước quy tắc", "— 390 — tạo, bước đầu ra (email chưa gửi thử được)", "— 390 — trạng thái: tải, rỗng, lỗi, xác nhận xóa, sửa không tải được".
 

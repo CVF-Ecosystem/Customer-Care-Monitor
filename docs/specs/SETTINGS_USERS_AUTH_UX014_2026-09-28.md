@@ -1,6 +1,6 @@
 # SPEC — Settings, Users, Login and Setup (`CCMAI-UX-014`)
 
-**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_014](../work_orders/CCMAI_UX_014.md) · **Roadmap:** screen 7. **Status:** BUILD done, `REVIEW_PENDING` ([evidence](../reviews/SETTINGS_USERS_AUTH_UX014_BUILD_2026-09-28.md)).
+**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_014](../work_orders/CCMAI_UX_014.md) · **Roadmap:** screen 7. **Status:** `REVIEW_PASS` after R1, FREEZE open ([review](../reviews/CCMAI_UX_014_R1_INDEPENDENT_REREVIEW_2026-09-28.md)).
 
 **Approved design:** canvas https://claude.ai/artifact/8E2fGLG5qEwcmZK6bGVJyS ("Cài đặt & phụ trợ", private to the owner), **version id `1790607141-5a73`**. Artboards: "Cài đặt — 1280 — cấu hình AI", "Cài đặt — 390 dark — lưu trữ file", "Người dùng — 1280 — danh sách", "Đăng nhập, Thiết lập, lỗi tải cài đặt — 390". UX-015 boards will be added to the same canvas under a later version.
 

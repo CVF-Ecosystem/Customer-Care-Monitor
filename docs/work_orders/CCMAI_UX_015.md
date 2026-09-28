@@ -19,3 +19,7 @@ Not allowed: layouts, shared components (imported only), stores, router, API mod
 ## Requirements, evidence, ceiling
 
 SPEC §2, §4 and §6. Local source/tests/docs and a disposable screenshot environment (removed afterwards); synthetic data only; no provider call, no notification send, no persistent `ccma` change, deployment, push or FREEZE. A gate that cannot pass within scope → `BUILD_BLOCKED`.
+
+## Independent review disposition (Codex, 2026-09-28)
+
+[UX-015 review](../reviews/CCMAI_UX_015_INDEPENDENT_REVIEW_2026-09-28.md): `REVIEW_PASS`, FREEZE open. The filtered cost total, activity-detail language, notification permission and per-company MCP scope remain separate contracts; this review does not authorize those changes.

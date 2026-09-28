@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex: review UX-015 (b45538d) and re-review UX-014 after repair R1. Claude: nothing pending in the UX-012..015 series; the stale-token /setup hang is recorded as a candidate for a separate tranche. UX-012/UX-013 REVIEW PASS / FREEZE open; UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "ORCHESTRATOR: scope the stale-token /setup hang as a separate R2 auth/router tranche, and correct the stale cqa-app command in docs/guide/s3-storage.md as a separate docs task. UX-012/013/014/015 REVIEW PASS / FREEZE open; UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections remain held. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) returned UX-015 and UX-014 R1 REVIEW_PENDING; REVIEWER (Codex) reviews each tranche independently",
+  "activeRole": "REVIEWER (Codex) passed UX-015 and UX-014 R1; SESSION_SYNC_STEWARD (Codex) records review disposition; ORCHESTRATOR routes separate follow-ups",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

@@ -1,6 +1,6 @@
 # SPEC — Messages screen redesign (`CCMAI-UX-012`)
 
-**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved by Claude under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_012](../work_orders/CCMAI_UX_012.md) · **Finding:** UX-16 (plus UX-12/13 formatting and terms) in the [baseline](../reviews/UI_UX_REVIEW_BASELINE_2026-09-27.md) · **Roadmap:** screen 5. **Status:** BUILD done, `REVIEW_PENDING` ([evidence](../reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md)).
+**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved by Claude under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_012](../work_orders/CCMAI_UX_012.md) · **Finding:** UX-16 (plus UX-12/13 formatting and terms) in the [baseline](../reviews/UI_UX_REVIEW_BASELINE_2026-09-27.md) · **Roadmap:** screen 5. **Status:** `REVIEW_PASS` after R1, FREEZE open ([review](../reviews/CCMAI_UX_012_R1_INDEPENDENT_REREVIEW_2026-09-28.md)).
 
 **Approved design:** canvas https://claude.ai/artifact/Q7KkTJMS95U9ShLJrfP9F4 (private to the owner), **version id `1790601057-3d67`**. Artboards: "Tin nhắn — 1280 — danh sách + hội thoại", "— 1280 — tab đánh giá chất lượng", "— 390 — danh sách", "— 390 dark — hội thoại, tab phân loại", "— 390 — trạng thái: tải, rỗng, không khớp, lỗi, xuất tin nhắn". The orange sticky lists the held items of §5.
 

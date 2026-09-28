@@ -1,6 +1,6 @@
 # SPEC — Activity logs, cost logs, notification history and MCP connections (`CCMAI-UX-015`)
 
-**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_015](../work_orders/CCMAI_UX_015.md) · **Roadmap:** screen 8. **Status:** BUILD done, `REVIEW_PENDING` ([evidence](../reviews/LOGS_COST_NOTIFY_MCP_UX015_BUILD_2026-09-28.md)).
+**Date:** 2026-09-28 · **Author:** Claude (`ORCHESTRATOR` by owner direction → `SPEC_AUTHOR`; design approved under the owner's design delegation) · **Risk:** R2 · **Work order:** [CCMAI_UX_015](../work_orders/CCMAI_UX_015.md) · **Roadmap:** screen 8. **Status:** `REVIEW_PASS`, FREEZE open ([review](../reviews/CCMAI_UX_015_INDEPENDENT_REVIEW_2026-09-28.md)).
 
 **Approved design:** canvas https://claude.ai/artifact/8E2fGLG5qEwcmZK6bGVJyS ("Cài đặt & phụ trợ", private to the owner), **version id `1790608303-0cb6`**. UX-015 artboards: "Nhật ký hệ thống — 1280", "Nhật ký chi phí — 1280 — tổng của trang", "Lịch sử thông báo — 390 dark — mở nội dung, lỗi tải", "Kết nối MCP — 1280 — secret vừa tạo". The UX-014 boards in the same canvas are unchanged from `1790607141-5a73`.
 
