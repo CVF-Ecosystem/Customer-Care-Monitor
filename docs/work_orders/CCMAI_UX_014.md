@@ -19,3 +19,7 @@ Not allowed: layouts (`AuthLayout.vue`, `DefaultLayout.vue`), shared components 
 ## Requirements, evidence, ceiling
 
 SPEC §2, §4 and §6. Local source/tests/docs and a disposable screenshot environment (removed afterwards); synthetic data only; no provider call, no external storage call, no persistent `ccma` change, deployment, push or FREEZE. A gate that cannot pass within scope → `BUILD_BLOCKED`.
+
+## Independent review UX014-R1 (Codex, 2026-09-28)
+
+`CHANGES_REQUIRED`: [R1-1 and R1-2](../reviews/CCMAI_UX_014_INDEPENDENT_REVIEW_2026-09-28.md). Correct the S3-off dialog's stale `docker exec cqa-app` command within `Settings.vue`, assert the displayed command in the focused test, and complete the missing Setup and S3-off-dialog visual evidence with synthetic disposable state. Keep the existing S3 confirmation and request behavior. Repair stays within the allowed paths and returns `REVIEW_PENDING`; no live provider or storage test.
