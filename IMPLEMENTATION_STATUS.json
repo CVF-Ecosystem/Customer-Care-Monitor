@@ -70,7 +70,7 @@
     "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction.",
     "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration.",
     "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical CVF-Ecosystem/Customer-Care-Monitor origin; Go/docs Actions and new GitHub Pages passed, with public home and key guides HTTP 200. Historical PR/run URLs and initial CQA import message remain provenance. Independent R2 REVIEW and FREEZE remain open; old repository deletion is the owner's separate action.",
-    "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; all old commit SHA citations in historical review documents remain observations, not reachable current-main SHAs. GitHub may retain old unreachable objects/cache temporarily. Current main tree and MIT LICENSE content were preserved; independent R2 REVIEW and FREEZE remain open."
+    "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; all old commit SHA citations in historical review documents remain observations, not reachable current-main SHAs. The GitHub commit API still returned HTTP 200 for the old unreachable root SHA after force push; server-side erasure is not claimed. Current main tree and MIT LICENSE content were preserved; independent R2 REVIEW and FREEZE remain open."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
