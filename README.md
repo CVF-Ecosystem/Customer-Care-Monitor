@@ -25,7 +25,7 @@ docker compose up -d --build
 
 Mở `http://localhost:8088`. Ở lần truy cập đầu tiên, nhập tên công ty hoặc cá nhân và tạo tài khoản quản trị. Workspace được tạo cùng tài khoản này; bạn không cần tạo thêm công ty sau khi đăng nhập.
 
-Xem [hướng dẫn cài đặt và sử dụng](https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/). Bản này được build từ source; chưa có Docker image phát hành riêng.
+Xem [hướng dẫn cài đặt và sử dụng](https://cvf-ecosystem.github.io/Customer-Care-Monitor/). Bản này được build từ source; chưa có Docker image phát hành riêng.
 
 ## Phát triển dự án
 

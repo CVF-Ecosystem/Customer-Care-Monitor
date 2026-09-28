@@ -4,7 +4,7 @@ export default defineConfig({
   title: 'Customer Care Monitor AI',
   description: 'Giám sát chất lượng chăm sóc khách hàng cho một workspace',
   lang: 'vi-VN',
-  base: '/Customer-Care-Monitor-AI/',
+  base: '/Customer-Care-Monitor/',
   rewrites: {
     'home.md': 'index.md',
   },
@@ -86,7 +86,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI' },
+      { icon: 'github', link: 'https://github.com/CVF-Ecosystem/Customer-Care-Monitor' },
     ],
 
     search: {

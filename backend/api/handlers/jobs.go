@@ -15,13 +15,13 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/api/middleware"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/engine"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/notifications"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/notifications"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 	"github.com/xuri/excelize/v2"
 )
 

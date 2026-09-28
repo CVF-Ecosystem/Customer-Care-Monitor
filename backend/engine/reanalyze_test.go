@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
 // alwaysFailProvider trả về một vi phạm cố định, đủ để sinh bản ghi đánh giá.

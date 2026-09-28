@@ -8,9 +8,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
 // OutputConfig represents a single output destination from job.outputs JSON.

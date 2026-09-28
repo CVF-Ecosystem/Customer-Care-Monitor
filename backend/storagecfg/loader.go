@@ -11,11 +11,11 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/storage"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storage"
 )
 
 // Các khoá cài đặt của một công ty.

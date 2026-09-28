@@ -29,7 +29,7 @@ The new test mounts `Results.vue` with the `api` module mocked (`vi.mock('../api
 
 ## Screenshots
 
-`scripts/ui-screenshots.ps1 -Mode app` (disposable Compose, synthetic demo data; removed afterwards, persistent `ccma` untouched): 36 pages, 0 JS errors, 0 horizontal overflow, no external requests. The Results captures are in [`assets/ux-002-2026-09-28/`](./assets/ux-002-2026-09-28/) with `report-results.json`.
+`scripts/ui-screenshots.ps1 -Mode app` (disposable Compose, synthetic demo data; removed afterwards, persistent `ccma` untouched): 36 pages, 0 JS errors, 0 horizontal overflow, no external requests. The Results captures are in [`assets/ux-002-2026-09-28/`](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/tree/main/docs/reviews/assets/ux-002-2026-09-28/) with `report-results.json`.
 
 These captures run on the current tree, which includes the UX-000 theme and font (still REVIEW_PENDING). UX-002 does not depend on UX-000: the change uses only existing Vuetify components and i18n keys, and the component test runs against the default Vuetify theme.
 

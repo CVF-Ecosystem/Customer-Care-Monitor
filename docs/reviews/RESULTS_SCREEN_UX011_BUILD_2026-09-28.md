@@ -47,7 +47,7 @@ Focused tests (UI-only mocks): page-scoped panel counts, scope and alert; text s
 - A scratch CDP script (not committed) searched for the seeded changed-source customer and opened the row. Then it opened a classification result, at desktop/mobile × light/dark (`states-final.json`). In all four cases: panel alert on, changed row marked, dialog hint and note present, transcript loaded, **no confidence element**, Esc closed the dialog, the classification dialog had tags and no issue list, no page overflow, 0 JS errors.
 - The seeded `verification_unavailable` row landed on a QC result in the final run, while the script looked for it on the classification tab, so the final run did not open it. The unavailable captures come from the previous run of the same dialog code (`states-unavailable-run.json`), where it was a classification result. All four cases showed the unavailable hint with 0 JS errors. Between that run and the final one, only the table column CSS changed.
 
-Images in [`assets/ux-011-2026-09-28/`](./assets/ux-011-2026-09-28/):
+Images in [`assets/ux-011-2026-09-28/`](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/tree/main/docs/reviews/assets/ux-011-2026-09-28/):
 
 ![Results desktop light](./assets/ux-011-2026-09-28/results--desktop--light.png)
 ![Changed source in the list, desktop dark](./assets/ux-011-2026-09-28/changed-list--desktop--dark.png)

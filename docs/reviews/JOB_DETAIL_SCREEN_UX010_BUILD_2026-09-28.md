@@ -19,7 +19,7 @@ No backend, API, model, store, other view or database change.
 
 - **Header:** back link, title, meta line (type · schedule · channels · model · last run and status). Actions: "Chạy thử", "Chạy ngay", "Dừng" while running, and `⋯` holding "Sửa tác vụ" plus the destructive "Xóa kết quả" / "Xóa lịch sử chạy". Both destructive items open `ConfirmDialog` (UX-18).
 - **Live progress** is kept (work-order correction 1): "Đang phân tích analyzed/found hội thoại" from the running run's summary, and the running row in run history shows `analyzed / found`.
-- **Scope:** defaults to the most recent run that has results, with the caption "Số liệu và danh sách của lần chạy <time>". The selector lists runs with results and "Mọi lần chạy" (the previous behavior). Metrics, trend, source panel, filters and list all follow the scope. When a new run finishes, an untouched latest-run scope moves to it; "Xem kết quả" in run history selects that run.
+- **Scope:** defaults to the most recent run that has results, with the caption "Số liệu và danh sách của lần chạy &lt;time&gt;". The selector lists runs with results and "Mọi lần chạy" (the previous behavior). Metrics, trend, source panel, filters and list all follow the scope. When a new run finishes, an untouched latest-run scope moves to it; "Xem kết quả" in run history selects that run.
 - **UX-04 (correction 2):** "Hội thoại đã đánh giá: 100" carries the hint "110 hội thoại, không tính 10 bỏ qua". Pass rate and average score show "—" (not 0) when nothing was evaluated or scored.
 - **Metric drill-down:** real links (`?filter=`) that apply the filter within the current scope.
 - **Source panel** above the list: each conversation counted once, under its most concerning status. The local-only note is always shown. All-legacy scopes add the rerun explanation.
@@ -49,7 +49,7 @@ No backend, API, model, store, other view or database change.
   - To render the positive path, the **disposable** DB's 70 demo violations were given one synthetic reference each (first agent message ≥ 20 characters, first 20 characters as the exact quote). All four cases then showed "Trích dẫn đang được tô…" with the quoted message outlined (`states-synthetic-refs.json`).
 - A defect seen in the first capture round was fixed before the final capture: the explanation duplicated the evidence text in demo data. The explanation now renders only when it differs.
 
-Images in [`assets/ux-010-2026-09-28/`](./assets/ux-010-2026-09-28/):
+Images in [`assets/ux-010-2026-09-28/`](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/tree/main/docs/reviews/assets/ux-010-2026-09-28/):
 
 ![Job Detail QC, desktop light](./assets/ux-010-2026-09-28/jobdetail-qc--desktop--light.png)
 ![Detail dialog with a resolved quote, desktop light](./assets/ux-010-2026-09-28/dialog-issue--desktop--light.png)

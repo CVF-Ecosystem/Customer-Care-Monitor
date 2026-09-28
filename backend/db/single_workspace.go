@@ -3,7 +3,7 @@ package db
 import (
 	"fmt"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 )
 
 // EnsureSingleWorkspace fails closed on a database from the multi-company app.

@@ -88,7 +88,7 @@
 
         <!-- Zalo OA -->
         <template v-if="newChannel.channel_type === 'zalo_oa'">
-          <v-btn variant="tonal" color="info" prepend-icon="mdi-book-open-variant" href="https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/usage/channels.html#zalo-oa" target="_blank" class="mb-3">
+          <v-btn variant="tonal" color="info" prepend-icon="mdi-book-open-variant" href="https://cvf-ecosystem.github.io/Customer-Care-Monitor/usage/channels.html#zalo-oa" target="_blank" class="mb-3">
             Hướng dẫn lấy App ID và Secret Key
           </v-btn>
           <v-text-field v-model="newChannel.creds.app_id" :label="$t('zalo_app_id')" density="compact" class="mb-2" hint="Lấy từ Cài đặt ứng dụng trên Zalo Developers" persistent-hint />
@@ -101,7 +101,7 @@
 
         <!-- Pancake -->
         <template v-else-if="newChannel.channel_type === 'pancake'">
-          <v-btn variant="tonal" color="info" prepend-icon="mdi-book-open-variant" href="https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/usage/pancake.html" target="_blank" class="mb-3">
+          <v-btn variant="tonal" color="info" prepend-icon="mdi-book-open-variant" href="https://cvf-ecosystem.github.io/Customer-Care-Monitor/usage/pancake.html" target="_blank" class="mb-3">
             Hướng dẫn kết nối Pancake
           </v-btn>
           <v-text-field v-model="newChannel.creds.page_id" :label="$t('pancake_page_id')" density="compact" class="mb-2" hint="ID của page trong Pancake" persistent-hint />
@@ -110,7 +110,7 @@
 
         <!-- Facebook -->
         <template v-else>
-          <v-btn variant="tonal" color="info" prepend-icon="mdi-book-open-variant" href="https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/usage/facebook.html" target="_blank" class="mb-3">
+          <v-btn variant="tonal" color="info" prepend-icon="mdi-book-open-variant" href="https://cvf-ecosystem.github.io/Customer-Care-Monitor/usage/facebook.html" target="_blank" class="mb-3">
             Hướng dẫn kết nối Facebook Fanpage
           </v-btn>
           <v-text-field v-model="newChannel.creds.page_id" :label="$t('fb_page_id')" density="compact" class="mb-2" hint="Page ID từ Cài đặt trang Facebook" persistent-hint />

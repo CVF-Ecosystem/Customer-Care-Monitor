@@ -11,8 +11,8 @@ Hiện chưa có script cài đặt hoặc Docker image chính thức. Hãy buil
 ## Khởi chạy
 
 ```bash
-git clone https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI.git
-cd Customer-Care-Monitor-AI
+git clone https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git
+cd Customer-Care-Monitor
 cp .env.example .env
 ```
 

@@ -53,7 +53,8 @@
     "CCMAI-UX-013",
     "CCMAI-UX-014",
     "CCMAI-UX-015",
-    "CCMAI-AUTH-001"
+    "CCMAI-AUTH-001",
+    "CCMAI-REPO-MIGRATE-001"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -66,7 +67,8 @@
     "UX-011 Results REVIEW PASS / FREEZE OPEN. Its source-status panel is page-scoped because /results computes source status per returned page; a needs-review/source-status filter, global source counts, confidence on Results, quote highlighting and page/run-scoped export remain BLOCKED_API_CONTRACT proposals in docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md §5. Dashboard QC count, demo scheduler/sync and backend/API/store/schema/provider remain outside UX-011.",
     "CCMAI-AUTH-001 REVIEW PASS covers the stale-token /setup frontend repair only. A failed /setup/status request still falls back to \"setup not needed\"; HttpOnly refresh-cookie invalidation across a reinstall is out of scope. Disposable browser captures were not retained, so independent disposition rests on source and executable tests.",
     "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction.",
-    "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration."
+    "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration.",
+    "CCMAI-REPO-MIGRATE-001 locally updates Go module/imports and current repository/documentation links for CVF-Ecosystem/Customer-Care-Monitor. Historical evidence URLs/commit messages remain provenance. Canonical origin push and new Pages deployment require remote verification; no old repository deletion or FREEZE."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -130,7 +132,8 @@
     "docs/reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md",
     "docs/specs/SETUP_STALE_TOKEN_RECOVERY_AUTH001_2026-09-28.md",
     "docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md",
-    "docs/reviews/CCMAI_CREDIT_002_TRIAL_PUSH_2026-09-29.md"
+    "docs/reviews/CCMAI_CREDIT_002_TRIAL_PUSH_2026-09-29.md",
+    "docs/reviews/CCMAI_REPO_MIGRATE_001_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

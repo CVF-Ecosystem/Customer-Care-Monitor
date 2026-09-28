@@ -29,7 +29,7 @@ i18n: 3 additive keys in both languages. No API, model, migration, store or othe
 | Mutation: trend day key switched back to the UTC `toISOString()` date | 1 test failed; restored |
 | Screenshots `ui-screenshots.ps1 -Mode app` (fixed tool, UX-000 A1) | 36 pages, 0 JS errors, 0 overflow, no external requests; disposable project removed |
 
-## Screenshots ([assets](./assets/ux-001a-2026-09-28/))
+## Screenshots ([assets](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/tree/main/docs/reviews/assets/ux-001a-2026-09-28/))
 
 The disposable environment imports demo data with the new placement, so the dashboard shows positive "giờ trước" values and the Job Detail trend has exactly one point per day.
 

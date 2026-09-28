@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/storage"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storage"
 )
 
 // khoHong giả lập kho chính đang trục trặc.

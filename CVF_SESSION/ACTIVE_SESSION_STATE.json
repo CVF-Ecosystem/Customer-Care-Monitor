@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-CREDIT-002 REVIEW_PENDING: GitHub contributor statistics for the new Customer-Care-Monitor repository now show Blackbird081, claude and codex. Inspect the rendered sidebar independently before disposition. Preserve original origin and CQA tag; S3 guide task follows separately. No FREEZE or product migration.",
+  "nextAllowedMove": "CCMAI-REPO-MIGRATE-001 BUILD is locally validated and awaiting independent R2 REVIEW after canonical main push and GitHub Pages verification. CREDIT-002 sidebar observation is resolved by owner screenshot (Blackbird081, claude, codex); no FREEZE. Old repository deletion remains owner action.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD -> SESSION_SYNC_STEWARD (Codex) recorded CCMAI-CREDIT-002 trial push; independent REVIEWER next",
+  "activeRole": "IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex); independent REVIEWER next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

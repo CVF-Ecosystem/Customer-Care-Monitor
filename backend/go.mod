@@ -1,4 +1,4 @@
-module github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend
+module github.com/CVF-Ecosystem/Customer-Care-Monitor/backend
 
 go 1.26.0
 

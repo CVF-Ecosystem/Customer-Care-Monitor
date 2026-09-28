@@ -21,4 +21,4 @@ Workspace và admin được tạo cùng lúc ở trang Setup. Có thể thêm n
 - [Thiết lập lần đầu](/guide/initial-setup)
 - [Tình trạng các trang hướng dẫn](/reviews/USER_DOCS_AUDIT_2026-09-26)
 
-Sản phẩm được phát hành theo [MIT License](https://github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/blob/main/LICENSE); các thông báo bản quyền cần thiết được giữ trong file đó.
+Sản phẩm được phát hành theo [MIT License](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/blob/main/LICENSE); các thông báo bản quyền cần thiết được giữ trong file đó.

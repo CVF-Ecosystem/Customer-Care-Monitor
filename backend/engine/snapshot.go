@@ -10,11 +10,11 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/ai"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/channels"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/pkg"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/channels"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
 const snapshotSchemaV1 = "ccma.snapshot.v1"

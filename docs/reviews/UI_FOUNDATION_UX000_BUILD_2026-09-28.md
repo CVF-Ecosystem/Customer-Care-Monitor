@@ -58,7 +58,7 @@ Tool: `scripts/ui-screenshots.ps1` (see [UI_SCREENSHOTS.md](../reference/UI_SCRE
 | `-Mode preview` (`/wireframes/design-system` + review dialog + confirm dialog) | 12 | 0 | 0 | none |
 | `-Mode app` (dashboard, channels, channel detail, messages, jobs, QC and classification job detail, results, settings) | 36 | 0 | 0 | none |
 
-Committed subset in [`assets/ux-000-2026-09-28/`](./assets/ux-000-2026-09-28/) with both `report-*.json` files:
+Committed subset in [`assets/ux-000-2026-09-28/`](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/tree/main/docs/reviews/assets/ux-000-2026-09-28/) with both `report-*.json` files:
 
 ![Design system, desktop light](./assets/ux-000-2026-09-28/design-system--desktop--light.png)
 ![Design system, desktop dark](./assets/ux-000-2026-09-28/design-system--desktop--dark.png)
@@ -120,7 +120,7 @@ Hardening in `scripts/ui-screenshots/compose.yml` (UX-000 scope): the `app` serv
 | light | desktop expanded / mobile drawer | user, `#FFFFFF` on `#3342A8` | 8.45:1 |
 | light | desktop rail | tenant, `#FFFFFF` on `#5B6470`; user | 6.00:1; 8.45:1 |
 
-Evidence: [`assets/ux-000-r1-2026-09-28/`](./assets/ux-000-r1-2026-09-28/) (`avatar-*--dark/light.png`, `avatar-contrast.json`, dark dashboard desktop/mobile, `report-app.json`).
+Evidence: [`assets/ux-000-r1-2026-09-28/`](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/tree/main/docs/reviews/assets/ux-000-r1-2026-09-28/) (`avatar-*--dark/light.png`, `avatar-contrast.json`, dark dashboard desktop/mobile, `report-app.json`).
 
 ![Mobile drawer, dark: dark initials on the light primary avatar](./assets/ux-000-r1-2026-09-28/avatar-mobile-drawer--dark.png)
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/config"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
 )
 
 // CCMAI-RUNTIME-008: a manual sync is admitted only with a validated

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor-AI/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 )
 
 // loadedTag builds a classification tag as the dispatcher sees it after

@@ -1,6 +1,6 @@
 # UI glossary — one term per concept
 
-**Tranche:** `CCMAI-UX-000` · **Date:** 2026-09-28 · **Source:** [UI design direction](../decisions/UI_DESIGN_DIRECTION_2026-09-27.md), existing i18n keys in `frontend/src/i18n/vi.ts` / `en.ts`.
+**Tranche:** `CCMAI-UX-000` · **Date:** 2026-09-28 · **Source:** [UI design direction](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/blob/main/docs/decisions/UI_DESIGN_DIRECTION_2026-09-27.md), existing i18n keys in `frontend/src/i18n/vi.ts` / `en.ts`.
 
 Screens redesigned from `CCMAI-UX-010` onward use exactly these words. When a screen still shows an older word, its screen tranche replaces it. Terms marked **fixed** carry reviewed semantics (R004–R007) and must not be reworded into something more reassuring.
 
