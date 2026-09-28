@@ -5,11 +5,16 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-AUTH-001 and UX-012..015 REVIEW PASS / FREEZE open)
-- Active role: REVIEWER (Codex) passed CCMAI-AUTH-001; SESSION_SYNC_STEWARD → COMMIT_STEWARD (Codex) records disposition; ORCHESTRATOR next
-- Next allowed move: ORCHESTRATOR scopes the stale cqa-app commands in docs/guide/s3-storage.md as a separate docs task. CCMAI-AUTH-001, UX-012..015 and R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections held. No push, deployment or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-CREDIT-002 trial push; prior AUTH/UX/runtime REVIEW PASS / FREEZE open)
+- Active role: ORCHESTRATOR → WORK_ORDER_AUTHOR (Codex) scoped CCMAI-CREDIT-002; COMMIT_STEWARD (Codex) next
+- Next allowed move: verify and push only local `main` to the owner-supplied empty Customer-Care-Monitor repository, then inspect its SHA and contributor APIs. Preserve original `origin` and CQA tag. S3 guide task follows separately; no FREEZE or product migration.
 - Parked operator checkpoint: none
+
+## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
+
+- Owner explicitly supplied `https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git` for a trial upload. INTAKE found it public and empty; the original repo remains the configured `origin` and has not been changed. DESIGN uses the current clean local `main` only; the old CQA archive tag is outside the push. Local `main` has no common ancestry with that tag and carries Blackbird081/Codex primary authors plus Claude co-author trailers.
+- `docs/work_orders/CCMAI_CREDIT_002.md` bounds the R2 public push and remote verification. Role transition acknowledged before BUILD: `ORCHESTRATOR (Codex) → WORK_ORDER_AUTHOR (Codex) → COMMIT_STEWARD (Codex)`. The next act is the exact named push after checks; record outcome as `SESSION_SYNC_STEWARD`. No FREEZE.
 
 ## CCMAI-AUTH-001 — first-time Setup with a stale browser token (2026-09-28)
 

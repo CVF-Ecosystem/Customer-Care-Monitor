@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "ORCHESTRATOR: scope the stale cqa-app commands in docs/guide/s3-storage.md as a separate docs task. CCMAI-AUTH-001, UX-012/013/014/015 and R001-R009 are REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections held. No push, deployment or FREEZE.",
+  "nextAllowedMove": "CCMAI-CREDIT-002: after bounded checks, push only local main to the owner-supplied empty Customer-Care-Monitor repository, verify remote SHA and contributor APIs, then record trial evidence. Preserve original origin and CQA provenance tag. S3 guide task follows separately; no FREEZE or production migration.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex) passed CCMAI-AUTH-001; SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex) records disposition; ORCHESTRATOR next",
+  "activeRole": "ORCHESTRATOR -> WORK_ORDER_AUTHOR (Codex) scoped CCMAI-CREDIT-002; COMMIT_STEWARD (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
