@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex after UX000-R1 independent REVIEW_PASS); Claude next WORK_ORDER_AUTHOR for UX-010. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
-- Next allowed move: Claude writes the UX-010 R2 work order from its approved SPEC/canvas, acknowledges the tranche/role transition, then performs bounded BUILD returning REVIEW_PENDING for Codex. Separate R2 backend/API and runtime work orders cover UX-02 and UX-06. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
+- Active role: REVIEWER (Codex) next for CCMAI-UX-010; Claude IMPLEMENTATION_WORKER done. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
+- Next allowed move: Codex independently REVIEWs CCMAI-UX-010 BUILD (Job Detail; evidence `docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md`), including the work order's two SPEC corrections and confirmation of the latest-run default rationale. Separate R2 tranches still to be ordered: dashboard `qc_violation_count` API; scheduler skip for explicitly marked demo channels. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
 
 ## Codex independent UX000-R1 re-review (2026-09-28)
