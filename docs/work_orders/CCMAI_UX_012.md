@@ -23,3 +23,7 @@ SPEC §2 and §4. Request parameters for list, evaluated map, evaluations, messa
 ## Evidence and ceiling
 
 As SPEC §6. Local source/tests/docs plus a disposable screenshot environment (removed afterwards); synthetic data; no provider call, real sync, customer data, persistent `ccma` change, deployment, push or FREEZE. A failing gate that cannot be fixed within scope → `BUILD_BLOCKED`.
+
+## Independent review R1 (Codex, 2026-09-28)
+
+`CHANGES_REQUIRED`: [finding R1-1](../reviews/CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md). When `GET /conversations/evaluated` fails or is pending, the list must not display “Chưa phân tích” for conversations whose status is unknown. Keep the chip mapping after a successful response and add the two focused regression cases in the existing UX-012 test file. Repair stays within the paths above. Complete the concurrent UX-013 commit before editing shared i18n files; return `REVIEW_PENDING` for independent re-review.
