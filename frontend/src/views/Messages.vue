@@ -1,343 +1,293 @@
+<!--
+  Trang Tin nhắn — danh sách hội thoại và nội dung từng hội thoại.
+  CCMAI-UX-012: dựng lại phần trình bày trên API hội thoại hiện có. Số đếm là số
+  hội thoại; "PASS" của lần phân tích gần nhất có thể là Đạt (chất lượng) hoặc
+  Đã phân loại, nên không bao giờ hiện là "Đạt" trơn.
+-->
 <template>
-  <div>
-    <h1 class="text-h5 font-weight-bold mb-4">{{ $t('nav_messages') }}
-      <span v-if="conversationStore.total" class="text-body-2 text-grey font-weight-regular ml-2">({{ conversationStore.total }})</span>
-    </h1>
+  <div class="mg-page">
+    <div class="mg-head">
+      <div class="mg-head__titles">
+        <h1 class="mg-title">{{ $t('nav_messages') }}</h1>
+        <p class="mg-muted mg-m0" data-testid="msgs-subtitle">{{ $t('msgs_subtitle', { n: conversationStore.total }) }}</p>
+      </div>
+      <v-btn
+        v-if="authStore.canEdit('messages')"
+        variant="outlined"
+        :height="mdAndUp ? 40 : 44"
+        prepend-icon="mdi-download"
+        data-testid="msgs-export-open"
+        @click="showExportDialog = true"
+      >{{ mdAndUp ? $t('msgs_export_open') : $t('msgs_export_short') }}</v-btn>
+    </div>
 
-    <v-row>
-      <!-- Conversation List -->
-      <v-col v-if="mdAndUp || !selectedConvId" cols="12" :md="selectedConvId ? 5 : 12" :lg="selectedConvId ? 4 : 12">
-        <!-- Filters -->
-        <v-card class="mb-4" variant="outlined">
-          <v-card-text class="pa-3">
-            <v-row dense>
-              <v-col cols="6" sm="3">
-                <v-select
-                  v-model="filterChannelType"
-                  :items="channelTypes"
-                  :label="$t('channel_type')"
-                  clearable
-                  density="compact"
-                  variant="outlined"
-                  hide-details
-                />
-              </v-col>
-              <v-col cols="6" sm="3">
-                <v-select
-                  v-model="filterChannelId"
-                  :items="channelOptions"
-                  :label="$t('msg_channel')"
-                  clearable
-                  density="compact"
-                  variant="outlined"
-                  hide-details
-                />
-              </v-col>
-              <v-col cols="6" sm="3">
-                <v-text-field
-                  v-model="searchQuery"
-                  :label="$t('search')"
-                  prepend-inner-icon="mdi-magnify"
-                  clearable
-                  density="compact"
-                  variant="outlined"
-                  hide-details
-                  @update:model-value="debouncedSearch"
-                />
-              </v-col>
-              <v-col cols="6" sm="3" class="d-flex ga-2 align-center">
-                <v-select
-                  v-model="filterEvaluation"
-                  :items="evaluationFilterOptions"
-                  label="Đánh giá"
-                  clearable
-                  density="compact"
-                  variant="outlined"
-                  hide-details
-                  class="flex-grow-1"
-                />
-                <v-btn v-if="authStore.canEdit('messages')" size="small" variant="tonal" color="primary" icon="mdi-export" @click="showExportDialog = true" />
-              </v-col>
-            </v-row>
-          </v-card-text>
-        </v-card>
+    <div class="mg-layout" :class="{ 'mg-layout--split': mdAndUp }">
+      <!-- Danh sách hội thoại -->
+      <section v-if="mdAndUp || !selectedConvId" class="mg-list" :aria-label="$t('nav_messages')">
+        <!-- Bộ lọc -->
+        <div class="mg-filters">
+          <v-text-field
+            v-model="searchQuery"
+            :placeholder="$t('msgs_search')"
+            :aria-label="$t('msgs_search')"
+            prepend-inner-icon="mdi-magnify"
+            clearable
+            density="comfortable"
+            variant="outlined"
+            hide-details
+            class="mg-filters__search"
+            @update:model-value="debouncedSearch"
+          />
+          <template v-if="mdAndUp">
+            <v-select v-model="filterChannelType" :items="channelTypes" :label="$t('msgs_filter_channel_type')" clearable density="compact" variant="outlined" hide-details />
+            <v-select v-model="filterChannelId" :items="channelOptions" :label="$t('msgs_filter_channel')" clearable density="compact" variant="outlined" hide-details />
+            <v-select v-model="filterEvaluation" :items="evaluationFilterOptions" :label="$t('msgs_filter_eval')" clearable density="compact" variant="outlined" hide-details class="mg-filters__wide" />
+          </template>
+          <v-btn v-else variant="outlined" height="48" :color="soLoc ? 'primary' : undefined" class="mg-btn" @click="moLocMobile = true">
+            <v-icon start size="small">mdi-filter-variant</v-icon>{{ $t('msgs_filters') }}<span v-if="soLoc" class="ml-1">· {{ soLoc }}</span>
+          </v-btn>
+        </div>
+        <div class="d-flex align-center justify-space-between ga-2">
+          <span v-if="conversationStore.conversations.length && !listError" class="mg-muted mg-small" data-testid="msgs-range">
+            {{ $t('msgs_range', { from: tuDong, to: denDong, total: conversationStore.total }) }}
+          </span>
+          <v-btn v-if="coLoc" variant="text" color="primary" class="mg-btn ml-auto" data-testid="msgs-clear" @click="xoaLoc">{{ $t('msgs_clear') }}</v-btn>
+        </div>
 
-        <!-- Export Dialog -->
-        <v-dialog v-model="showExportDialog" max-width="450">
-          <v-card>
-            <v-card-title>Export tin nhắn</v-card-title>
-            <v-card-text>
-              <div class="text-body-2 text-grey mb-3">Xuất toàn bộ cuộc chat trong khoảng thời gian để AI đọc và phân tích.</div>
-              <v-row dense>
-                <v-col cols="6">
-                  <v-text-field v-model="exportFrom" label="Từ ngày" type="date" density="compact" variant="outlined" hide-details />
-                </v-col>
-                <v-col cols="6">
-                  <v-text-field v-model="exportTo" label="Đến ngày" type="date" density="compact" variant="outlined" hide-details />
-                </v-col>
-              </v-row>
-              <v-select
-                v-model="exportFormat"
-                :items="[{ title: 'Text (cho AI đọc)', value: 'txt' }, { title: 'CSV (bảng tính)', value: 'csv' }]"
-                label="Định dạng"
-                density="compact"
-                variant="outlined"
-                hide-details
-                class="mt-3"
-              />
-              <v-select
-                v-model="exportChannelType"
-                :items="[{ title: 'Tất cả kênh', value: '' }, ...CHANNEL_TYPES.map(c => ({ title: c.label, value: c.value }))]"
-                label="Kênh"
-                density="compact"
-                variant="outlined"
-                hide-details
-                class="mt-3"
-              />
-            </v-card-text>
-            <v-card-actions>
-              <v-spacer />
-              <v-btn variant="text" @click="showExportDialog = false">Hủy</v-btn>
-              <v-btn color="primary" :loading="exporting" :disabled="!exportFrom || !exportTo" @click="doExport">
-                <v-icon start>mdi-download</v-icon> Tải về
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
+        <div v-if="listError" class="mg-error" role="alert" data-testid="msgs-list-error">
+          <span>{{ $t('msgs_load_error') }}</span>
+          <v-btn variant="outlined" color="error" height="44" @click="loadConversations">{{ $t('msgs_retry') }}</v-btn>
+        </div>
 
-        <!-- Conversations -->
-        <v-card variant="outlined">
-          <v-list v-if="filteredConversations.length > 0" lines="two" density="compact" class="pa-0">
-            <template v-for="(conv, index) in filteredConversations" :key="conv.id">
-              <v-list-item
-                :active="selectedConvId === conv.id"
-                color="primary"
-                class="px-3 py-1"
-                @click="selectConversation(conv.id)"
-              >
-                <template #prepend>
-                  <v-avatar :color="channelTypeInfo(conv.channel_type).color" size="32" class="mr-3">
-                    <v-icon color="white" size="16">
-                      {{ channelTypeInfo(conv.channel_type).icon }}
-                    </v-icon>
-                  </v-avatar>
-                </template>
+        <v-skeleton-loader v-else-if="loading && !conversationStore.conversations.length" type="list-item-avatar-two-line@5" />
 
-                <v-list-item-title class="text-body-2 font-weight-medium">
-                  {{ conv.customer_name || $t('msg_unknown_customer') }}
-                </v-list-item-title>
-                <v-list-item-subtitle class="text-caption">
-                  <v-chip size="x-small" :color="channelTypeInfo(conv.channel_type).color" variant="tonal" class="mr-1">
-                    {{ channelTypeInfo(conv.channel_type).short }}
-                  </v-chip>
-                  <v-chip v-if="evaluationMap[conv.id]" size="x-small" :color="evaluationMap[conv.id] === 'PASS' ? 'success' : 'error'" variant="tonal" class="mr-1">
-                    {{ evaluationMap[conv.id] === 'PASS' ? 'Đạt' : 'Không đạt' }}
-                  </v-chip>
-                  {{ conv.message_count }} tin · {{ timeAgo(conv.last_message_at) }}
-                </v-list-item-subtitle>
-              </v-list-item>
-              <v-divider v-if="index < filteredConversations.length - 1" />
-            </template>
-          </v-list>
+        <div v-else-if="!conversationStore.conversations.length && !coLoc" class="mg-empty" data-testid="msgs-empty">
+          <h2 class="mg-empty__title">{{ $t('msgs_empty_title') }}</h2>
+          <p class="mg-muted mg-m0">{{ $t('msgs_empty_desc') }}</p>
+          <v-btn color="primary" height="44" :to="`/${tenantId}/channels`">{{ $t('msgs_go_channels') }}</v-btn>
+        </div>
 
-          <v-card-text v-else-if="!loading" class="text-center py-8">
-            <v-icon size="48" color="grey-lighten-1">mdi-message-text-outline</v-icon>
-            <div class="text-grey-darken-1 mt-2">Tin nhắn sẽ hiện ở đây sau khi kết nối và đồng bộ kênh chat.</div>
-            <v-btn variant="text" color="primary" size="small" class="mt-2" :to="`/${tenantId}/channels`">Đi tới kênh chat</v-btn>
-          </v-card-text>
+        <div v-else-if="!conversationStore.conversations.length" class="mg-empty" data-testid="msgs-no-match">
+          <p class="mg-muted mg-m0">{{ $t('msgs_no_match') }}</p>
+          <v-btn variant="outlined" height="44" @click="xoaLoc">{{ $t('msgs_clear') }}</v-btn>
+        </div>
 
-          <v-card-text v-if="loading" class="text-center py-4">
-            <v-progress-circular indeterminate size="24" />
-          </v-card-text>
+        <div v-else class="mg-rows" :class="{ 'mg-rows--busy': loading }">
+          <button
+            v-for="conv in conversationStore.conversations"
+            :key="conv.id"
+            type="button"
+            class="mg-row"
+            :class="{ 'mg-row--active': selectedConvId === conv.id }"
+            :aria-current="selectedConvId === conv.id ? 'true' : undefined"
+            data-testid="msgs-row"
+            @click="selectConversation(conv.id)"
+          >
+            <span class="mg-badge" :title="channelTypeInfo(conv.channel_type).label">{{ channelTypeInfo(conv.channel_type).short }}</span>
+            <span class="mg-row__body">
+              <span class="mg-row__top">
+                <span class="mg-row__name">{{ conv.customer_name || $t('msg_unknown_customer') }}</span>
+                <span class="mg-muted mg-small mg-nowrap">{{ relative(conv.last_message_at) }}</span>
+              </span>
+              <span class="mg-row__meta">
+                <span class="mg-chip" :class="`mg-chip--${chipKind(evaluationMap[conv.id])}`" data-testid="msgs-chip">{{ chipLabel(evaluationMap[conv.id]) }}</span>
+                <span class="mg-muted mg-small">{{ $t('msgs_message_count', { n: conv.message_count }) }}</span>
+              </span>
+            </span>
+          </button>
+        </div>
 
-          <!-- Pagination -->
-          <v-divider v-if="totalPages > 1" />
-          <v-card-actions v-if="totalPages > 1" class="justify-center">
-            <v-pagination v-model="currentPage" :length="totalPages" :total-visible="7" density="compact" />
-          </v-card-actions>
-        </v-card>
-      </v-col>
+        <v-pagination v-if="totalPages > 1 && !listError" v-model="currentPage" :length="totalPages" :total-visible="mdAndUp ? 5 : 3" density="comfortable" />
+      </section>
 
-      <!-- Message Detail -->
-      <v-col v-if="selectedConvId" cols="12" md="7" lg="8">
-        <v-card variant="outlined" class="d-flex flex-column" style="height: calc(100vh - 140px)">
-          <!-- Header -->
-          <v-card-title class="d-flex align-center pa-4">
-            <v-btn icon="mdi-arrow-left" variant="text" size="small" class="d-md-none mr-2" @click="selectedConvId = null" />
-            <v-avatar :color="channelTypeInfo(selectedConvChannelType).color" size="36" class="mr-3">
-              <v-icon color="white" size="18">
-                {{ channelTypeInfo(selectedConvChannelType).icon }}
-              </v-icon>
-            </v-avatar>
-            <div class="flex-grow-1">
-              <div class="text-subtitle-1 font-weight-medium">
-                {{ conversationStore.currentConversation?.customer_name || $t('msg_unknown_customer') }}
-              </div>
-              <div class="text-caption text-grey">
-                {{ conversationStore.currentConversation?.message_count }} {{ $t('msg_messages_count') }}
-              </div>
-            </div>
-            <v-btn icon="mdi-share-variant" variant="text" size="small" color="primary" @click="shareConversation" />
-            <v-btn icon="mdi-download" variant="text" size="small" color="primary" @click="downloadConversation" />
-          </v-card-title>
+      <!-- Nội dung hội thoại -->
+      <section v-if="selectedConvId" class="mg-conv" :aria-label="currentName">
+        <header class="mg-conv__head">
+          <v-btn v-if="!mdAndUp" icon variant="text" size="44" :aria-label="$t('msgs_back')" @click="selectedConvId = null">
+            <v-icon>mdi-arrow-left</v-icon>
+          </v-btn>
+          <div class="mg-conv__titles">
+            <h2 class="mg-conv__title">{{ currentName }}</h2>
+            <p class="mg-muted mg-small mg-m0">
+              {{ selectedConvChannelName }}<template v-if="conversationStore.currentConversation"> · {{ $t('msgs_message_count', { n: conversationStore.currentConversation.message_count }) }}</template>
+            </p>
+          </div>
+          <template v-if="mdAndUp">
+            <v-btn variant="outlined" prepend-icon="mdi-link-variant" class="mg-btn" @click="shareConversation">{{ $t('msgs_copy_link') }}</v-btn>
+            <v-btn variant="outlined" prepend-icon="mdi-download" class="mg-btn" :disabled="!conversationStore.messages.length" @click="downloadConversation">{{ $t('msgs_download_txt') }}</v-btn>
+          </template>
+          <template v-else>
+            <v-btn icon variant="text" size="44" color="primary" :aria-label="$t('msgs_copy_link')" @click="shareConversation"><v-icon>mdi-link-variant</v-icon></v-btn>
+            <v-btn icon variant="text" size="44" color="primary" :aria-label="$t('msgs_download_txt')" :disabled="!conversationStore.messages.length" @click="downloadConversation"><v-icon>mdi-download</v-icon></v-btn>
+          </template>
+        </header>
 
-          <v-divider />
+        <v-tabs v-model="detailTab" :grow="!mdAndUp" class="mg-tabs">
+          <v-tab value="messages">{{ $t('msgs_tab_messages') }}</v-tab>
+          <v-tab value="qc">{{ $t(mdAndUp ? 'msgs_tab_qc' : 'msgs_tab_qc_short', { n: qcGroups.length }) }}</v-tab>
+          <v-tab value="classification">{{ $t('msgs_tab_class', { n: classGroups.length }) }}</v-tab>
+        </v-tabs>
 
-          <!-- Tabs: Messages | QC | Classification -->
-          <v-tabs v-model="detailTab" density="compact" class="px-2" style="flex-shrink: 0;">
-            <v-tab value="messages">
-              <v-icon start size="small">mdi-chat</v-icon>
-              Tin nhắn
-            </v-tab>
-            <v-tab value="qc">
-              <v-icon start size="small">mdi-clipboard-check</v-icon>
-              Đánh giá
-              <v-chip v-if="qcGroups.length" size="x-small" color="primary" variant="flat" class="ml-1">{{ qcGroups.length }}</v-chip>
-            </v-tab>
-            <v-tab value="classification">
-              <v-icon start size="small">mdi-tag-multiple</v-icon>
-              Phân loại
-              <v-chip v-if="classGroups.length" size="x-small" color="primary" variant="flat" class="ml-1">{{ classGroups.length }}</v-chip>
-            </v-tab>
-          </v-tabs>
+        <div v-if="convError" class="mg-error ma-4" role="alert" data-testid="msgs-conv-error">
+          <span>{{ $t('msgs_conv_load_error') }}</span>
+          <v-btn variant="outlined" color="error" height="44" @click="selectConversation(selectedConvId!, detailTab)">{{ $t('msgs_retry') }}</v-btn>
+        </div>
 
-          <v-divider />
-
-          <!-- Messages tab -->
-          <div v-show="detailTab === 'messages'" ref="messagesContainer" class="flex-grow-1 overflow-y-auto pa-4" style="background: rgba(0,0,0,0.02)">
-            <div v-if="loadingMessages" class="text-center py-8">
-              <v-progress-circular indeterminate />
-            </div>
-            <template v-else>
-              <div
-                v-for="msg in conversationStore.messages"
-                :key="msg.id"
-                class="d-flex mb-2"
-                :class="msg.sender_type === 'agent' ? 'justify-end' : 'justify-start'"
-              >
-                <div
-                  class="pa-2 rounded-lg"
-                  :class="msg.sender_type === 'agent' ? 'bg-primary text-white' : 'bg-surface'"
-                  style="max-width: 75%; word-break: break-word"
-                  :style="msg.sender_type !== 'agent' ? 'border: 1px solid rgba(0,0,0,0.12)' : ''"
-                >
-                  <div class="text-caption font-weight-medium" :class="msg.sender_type === 'agent' ? 'text-white' : 'text-primary'" style="font-size: 11px">
-                    {{ msg.sender_name }}
-                  </div>
-                  <div v-if="msg.content" class="text-body-2" style="white-space: pre-wrap; font-size: 13px; line-height: 1.4">{{ msg.content }}</div>
-                  <div v-if="msg.content_type === 'sticker'" class="text-caption font-italic">[Sticker]</div>
-                  <div v-if="hasAttachments(msg)" class="mt-1">
-                    <template v-for="(att, i) in parseAttachments(msg)" :key="i">
-                      <div v-if="isImageAttachment(att)" class="mb-1">
-                        <img
-                          v-if="authImageCache[getAttachmentUrl(att)] && authImageCache[getAttachmentUrl(att)] !== 'loading'"
-                          :src="authImageCache[getAttachmentUrl(att)]"
-                          style="max-width: 200px; max-height: 200px; border-radius: 8px; cursor: pointer;"
-                          @click="lightboxSrc = authImageCache[getAttachmentUrl(att)]"
-                          @error="onImageError($event, att)"
-                        />
-                        <v-progress-circular v-else-if="authImageCache[getAttachmentUrl(att)] === 'loading'" indeterminate size="24" width="2" class="ma-2" />
-                        <v-chip v-else-if="!getAttachmentUrl(att)" size="x-small" variant="tonal" color="grey">
-                          <v-icon start size="12">mdi-image</v-icon>
-                          {{ att.name || '[Ảnh]' }}
-                        </v-chip>
-                      </div>
-                      <v-chip v-else size="x-small" variant="tonal" class="mr-1" :href="getAttachmentUrl(att)" target="_blank">
-                        <v-icon start size="12">mdi-paperclip</v-icon>
-                        {{ att.name || att.type || 'File' }}
+        <!-- Tin nhắn -->
+        <div v-else-if="detailTab === 'messages'" ref="messagesContainer" class="mg-pane mg-transcript">
+          <div v-if="loadingMessages" class="text-center py-8"><v-progress-circular indeterminate /></div>
+          <template v-else>
+            <div
+              v-for="msg in conversationStore.messages"
+              :key="msg.id"
+              class="mg-msg"
+              :class="msg.sender_type === 'agent' ? 'mg-msg--agent' : 'mg-msg--customer'"
+            >
+              <div class="mg-msg__who">{{ msg.sender_name }} · {{ formatMessageTime(msg.sent_at) }}</div>
+              <div class="mg-msg__bubble">
+                <div v-if="msg.content" class="mg-msg__text">{{ msg.content }}</div>
+                <div v-if="msg.content_type === 'sticker'" class="font-italic">[Sticker]</div>
+                <div v-if="hasAttachments(msg)" class="mt-1">
+                  <template v-for="(att, i) in parseAttachments(msg)" :key="i">
+                    <div v-if="isImageAttachment(att)" class="mb-1">
+                      <img
+                        v-if="authImageCache[getAttachmentUrl(att)] && authImageCache[getAttachmentUrl(att)] !== 'loading'"
+                        :src="authImageCache[getAttachmentUrl(att)]"
+                        :alt="att.name || $t('msgs_image')"
+                        class="mg-msg__img"
+                        @click="lightboxSrc = authImageCache[getAttachmentUrl(att)]"
+                        @error="onImageError($event, att)"
+                      />
+                      <v-progress-circular v-else-if="authImageCache[getAttachmentUrl(att)] === 'loading'" indeterminate size="24" width="2" class="ma-2" />
+                      <v-chip v-else size="x-small" variant="tonal">
+                        <v-icon start size="12">mdi-image</v-icon>{{ att.name || $t('msgs_image') }}
                       </v-chip>
-                    </template>
-                  </div>
-                  <div v-if="!msg.content && msg.content_type === 'attachment' && !hasAttachments(msg)" class="text-caption font-italic">[File đính kèm]</div>
-                  <div class="mt-1" :class="msg.sender_type === 'agent' ? 'text-white-darken-2' : 'text-grey'" style="opacity: 0.6; font-size: 10px">
-                    {{ formatMessageTime(msg.sent_at) }}
-                  </div>
-                </div>
-              </div>
-            </template>
-          </div>
-
-          <!-- QC Evaluation tab -->
-          <div v-show="detailTab === 'qc'" class="flex-grow-1 overflow-y-auto pa-4">
-            <div v-if="loadingEvaluation" class="text-center py-8">
-              <v-progress-circular indeterminate />
-            </div>
-            <div v-else-if="qcGroups.length === 0" class="text-center py-8">
-              <v-icon size="48" color="grey-lighten-1">mdi-clipboard-text-off</v-icon>
-              <div class="text-grey mt-3">Cuộc chat này chưa được đánh giá chất lượng.</div>
-            </div>
-            <div v-else>
-              <v-card v-for="g in qcGroups" :key="g.job_run_id" variant="outlined" class="mb-3">
-                <v-card-text class="pa-3">
-                  <div class="d-flex align-center mb-2">
-                    <v-chip size="x-small" :color="getQcVerdict(g) === 'PASS' ? 'success' : getQcVerdict(g) === 'SKIP' ? 'grey' : 'error'" variant="tonal" class="mr-2">
-                      {{ getQcVerdict(g) === 'PASS' ? 'Đạt' : getQcVerdict(g) === 'SKIP' ? 'Bỏ qua' : 'Không đạt' }}
-                    </v-chip>
-                    <v-chip v-if="getQcScore(g) != null" size="x-small" variant="tonal" class="mr-2">{{ getQcScore(g) }}/100</v-chip>
-                    <span class="text-body-2 font-weight-medium flex-grow-1">{{ g.job_name }}</span>
-                    <span class="text-caption text-grey">{{ formatTime(g.evaluated_at) }}</span>
-                  </div>
-                  <div v-if="getQcReview(g)" class="text-body-2 text-grey-darken-1 mb-2" style="font-size: 13px;">{{ getQcReview(g) }}</div>
-                  <v-btn v-if="getQcViolations(g).length > 0" size="x-small" variant="text" color="primary" @click="toggleQcExpand(g.job_run_id)">
-                    {{ expandedQc[g.job_run_id] ? 'Thu gọn' : `Xem chi tiết (${getQcViolations(g).length} vấn đề)` }}
-                  </v-btn>
-                  <div v-if="expandedQc[g.job_run_id]" class="mt-2">
-                    <div v-for="(v, idx) in getQcViolations(g)" :key="idx" class="mb-2">
-                      <div class="d-flex align-center mb-1">
-                        <v-chip size="x-small" :color="v.severity === 'NGHIEM_TRONG' ? 'error' : 'warning'" variant="tonal" class="mr-2">
-                          {{ v.severity === 'NGHIEM_TRONG' ? 'Nghiêm trọng' : 'Cần cải thiện' }}
-                        </v-chip>
-                        <span class="font-weight-medium text-body-2">{{ v.rule_name }}</span>
-                      </div>
-                      <div class="text-body-2 bg-orange-lighten-5 pa-2 rounded" style="font-size: 13px; border-left: 3px solid #ff9800;">
-                        {{ v.evidence }}
-                      </div>
                     </div>
-                  </div>
-                </v-card-text>
-              </v-card>
-            </div>
-          </div>
-
-          <!-- Classification tab -->
-          <div v-show="detailTab === 'classification'" class="flex-grow-1 overflow-y-auto pa-4">
-            <div v-if="loadingEvaluation" class="text-center py-8">
-              <v-progress-circular indeterminate />
-            </div>
-            <div v-else-if="classGroups.length === 0" class="text-center py-8">
-              <v-icon size="48" color="grey-lighten-1">mdi-tag-off</v-icon>
-              <div class="text-grey mt-3">Cuộc chat này chưa được phân loại.</div>
-            </div>
-            <div v-else>
-              <v-card v-for="g in classGroups" :key="g.job_run_id" variant="outlined" class="mb-3">
-                <v-card-text class="pa-3">
-                  <div class="d-flex align-center mb-2">
-                    <span class="text-body-2 font-weight-medium flex-grow-1">{{ g.job_name }}</span>
-                    <span class="text-caption text-grey">{{ formatTime(g.evaluated_at) }}</span>
-                  </div>
-                  <div class="d-flex flex-wrap ga-1 mb-2">
-                    <v-chip v-for="tag in getClassTags(g)" :key="tag" size="small" :color="msgTagColor(tag)" variant="tonal">
-                      <v-icon start size="small">mdi-tag</v-icon>
-                      {{ tag }}
+                    <v-chip v-else size="x-small" variant="tonal" class="mr-1" :href="getAttachmentUrl(att)" target="_blank">
+                      <v-icon start size="12">mdi-paperclip</v-icon>{{ att.name || att.type || 'File' }}
                     </v-chip>
-                    <v-chip v-if="getClassTags(g).length === 0" size="small" color="grey" variant="tonal">
-                      Không phân loại được
-                    </v-chip>
-                  </div>
-                  <div v-if="getClassSummary(g)" class="text-body-2 text-grey-darken-1" style="font-size: 13px;">{{ getClassSummary(g) }}</div>
-                </v-card-text>
-              </v-card>
+                  </template>
+                </div>
+                <div v-if="!msg.content && msg.content_type === 'attachment' && !hasAttachments(msg)" class="font-italic">{{ $t('msgs_attachment') }}</div>
+              </div>
             </div>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-snackbar v-model="snackbar" color="success" timeout="2000">{{ snackText }}</v-snackbar>
+          </template>
+        </div>
 
-    <!-- Lightbox overlay -->
+        <!-- Đánh giá chất lượng -->
+        <div v-else-if="detailTab === 'qc'" class="mg-pane mg-stack" data-testid="msgs-qc">
+          <p class="mg-note" data-testid="msgs-source-note">
+            {{ $t('msgs_source_note') }} <router-link :to="`/${tenantId}/results`">{{ $t('msgs_source_link') }}</router-link>.
+          </p>
+          <div v-if="loadingEvaluation" class="text-center py-6"><v-progress-circular indeterminate /></div>
+          <p v-else-if="!qcGroups.length" class="mg-muted mg-m0">{{ $t('msgs_qc_empty') }}</p>
+          <article v-for="g in qcGroups" v-else :key="g.job_run_id" class="mg-card">
+            <div class="mg-card__head">
+              <VerdictChip v-if="getQcVerdict(g)" :verdict="verdictFromSeverity(getQcVerdict(g))" small />
+              <b v-if="getQcScore(g) != null && getQcVerdict(g) !== 'SKIP'" class="tabular-nums">{{ getQcScore(g) }}/100</b>
+              <span class="mg-card__job">{{ g.job_name }}</span>
+              <span class="mg-muted mg-small">{{ $t('msgs_evaluated_at', { time: formatTime(g.evaluated_at) }) }}</span>
+            </div>
+            <template v-if="getQcReview(g)">
+              <div class="d-flex align-center justify-space-between ga-2">
+                <h3 class="mg-h3">{{ $t('msgs_review') }}</h3>
+                <AiGeneratedLabel />
+              </div>
+              <p class="mg-body mg-m0">{{ getQcReview(g) }}</p>
+            </template>
+            <!-- Bỏ qua: không chấm nên không có mục vấn đề -->
+            <template v-if="getQcVerdict(g) !== 'SKIP'">
+              <h3 class="mg-h3">{{ $t('msgs_issues', { n: getQcViolations(g).length }) }}</h3>
+              <p v-if="!getQcViolations(g).length" class="mg-muted mg-m0">{{ $t('msgs_no_issues') }}</p>
+            </template>
+            <div v-for="(v, idx) in getQcViolations(g)" :key="idx" class="mg-issue">
+              <span class="d-flex align-center flex-wrap ga-2">
+                <span :class="`mg-sev mg-sev--${v.severity === 'NGHIEM_TRONG' ? 'critical' : 'warning'}`">
+                  {{ v.severity === 'NGHIEM_TRONG' ? $t('severity_critical') : $t('severity_warning') }}
+                </span>
+                <b>{{ v.rule_name }}</b>
+              </span>
+              <span v-if="v.evidence" class="mg-quote">{{ v.evidence }}</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Phân loại: nhãn, không bao giờ gọi là vấn đề -->
+        <div v-else class="mg-pane mg-stack" data-testid="msgs-class">
+          <p class="mg-note">
+            {{ $t('msgs_source_note') }} <router-link :to="`/${tenantId}/results`">{{ $t('msgs_source_link') }}</router-link>.
+          </p>
+          <div v-if="loadingEvaluation" class="text-center py-6"><v-progress-circular indeterminate /></div>
+          <p v-else-if="!classGroups.length" class="mg-muted mg-m0">{{ $t('msgs_class_empty') }}</p>
+          <article v-for="g in classGroups" v-else :key="g.job_run_id" class="mg-card">
+            <div class="mg-card__head">
+              <span class="mg-card__job">{{ g.job_name }}</span>
+              <span class="mg-muted mg-small">{{ $t('msgs_evaluated_at', { time: formatTime(g.evaluated_at) }) }}</span>
+            </div>
+            <div v-if="getClassTags(g).length" class="d-flex flex-wrap ga-2">
+              <span v-for="tag in getClassTags(g)" :key="tag" class="mg-tag">{{ tag }}</span>
+            </div>
+            <span v-else class="mg-chip mg-chip--skip align-self-start">{{ $t('msgs_class_skip') }}</span>
+            <template v-if="getClassSummary(g)">
+              <div class="d-flex align-center justify-space-between ga-2">
+                <h3 class="mg-h3">{{ $t('msgs_summary') }}</h3>
+                <AiGeneratedLabel />
+              </div>
+              <p class="mg-body mg-m0">{{ getClassSummary(g) }}</p>
+            </template>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bộ lọc trên mobile -->
+    <v-bottom-sheet v-model="moLocMobile">
+      <v-card>
+        <v-card-title class="d-flex align-center text-subtitle-1">
+          {{ $t('msgs_filters') }}
+          <v-spacer />
+          <v-btn icon variant="text" size="44" :aria-label="$t('ui_close')" @click="moLocMobile = false"><v-icon>mdi-close</v-icon></v-btn>
+        </v-card-title>
+        <v-divider />
+        <v-card-text class="d-flex flex-column ga-3 pt-4">
+          <v-select v-model="filterChannelType" :items="channelTypes" :label="$t('msgs_filter_channel_type')" clearable density="comfortable" variant="outlined" hide-details />
+          <v-select v-model="filterChannelId" :items="channelOptions" :label="$t('msgs_filter_channel')" clearable density="comfortable" variant="outlined" hide-details />
+          <v-select v-model="filterEvaluation" :items="evaluationFilterOptions" :label="$t('msgs_filter_eval')" clearable density="comfortable" variant="outlined" hide-details />
+        </v-card-text>
+        <v-divider />
+        <v-card-actions>
+          <v-btn variant="text" @click="xoaLoc">{{ $t('msgs_clear') }}</v-btn>
+          <v-spacer />
+          <v-btn color="primary" variant="flat" @click="moLocMobile = false">{{ $t('msgs_apply') }}</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-bottom-sheet>
+
+    <!-- Xuất tin nhắn -->
+    <AppDialog v-model="showExportDialog" :title="$t('msgs_export_title')" :max-width="480">
+      <div class="d-flex flex-column ga-3">
+        <p class="mg-muted mg-m0 mg-small-body" data-testid="msgs-export-desc">{{ $t('msgs_export_desc') }}</p>
+        <div class="d-flex ga-2">
+          <v-text-field v-model="exportFrom" :label="$t('msgs_export_from')" type="date" density="comfortable" variant="outlined" hide-details />
+          <v-text-field v-model="exportTo" :label="$t('msgs_export_to')" type="date" density="comfortable" variant="outlined" hide-details />
+        </div>
+        <v-select v-model="exportFormat" :items="exportFormats" :label="$t('msgs_export_format')" density="comfortable" variant="outlined" hide-details />
+        <v-select v-model="exportChannelType" :items="exportChannelTypes" :label="$t('msgs_filter_channel_type')" density="comfortable" variant="outlined" hide-details />
+      </div>
+      <template #actions>
+        <v-btn variant="text" @click="showExportDialog = false">{{ $t('msgs_cancel') }}</v-btn>
+        <v-btn color="primary" variant="flat" :loading="exporting" :disabled="!exportFrom || !exportTo" data-testid="msgs-export-download" @click="doExport">
+          <v-icon start>mdi-download</v-icon>{{ $t('msgs_export_download') }}
+        </v-btn>
+      </template>
+    </AppDialog>
+
+    <v-snackbar v-model="snackbar" :color="snackError ? 'error' : undefined" timeout="4000">{{ snackText }}</v-snackbar>
+
+    <!-- Lightbox -->
     <div v-if="lightboxSrc" class="lightbox-overlay" @click="lightboxSrc = ''">
-      <img :src="lightboxSrc" class="lightbox-img" @click.stop />
-      <v-btn icon="mdi-close" variant="flat" color="white" size="small" class="lightbox-close" @click="lightboxSrc = ''" />
+      <img :src="lightboxSrc" alt="" class="lightbox-img" @click.stop />
+      <v-btn icon="mdi-close" variant="flat" color="white" size="small" class="lightbox-close" :aria-label="$t('ui_close')" @click="lightboxSrc = ''" />
     </div>
   </div>
 </template>
@@ -347,12 +297,19 @@ import { channelTypeInfo, CHANNEL_TYPES } from '../composables/channelTypes'
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
+import { useI18n } from 'vue-i18n'
 import { useConversationStore, type Message } from '../stores/conversations'
 import { useChannelStore } from '../stores/channels'
 import { useAuthStore } from '../stores/auth'
 import api from '../api'
+import AppDialog from '../components/ui/AppDialog.vue'
+import AiGeneratedLabel from '../components/ui/AiGeneratedLabel.vue'
+import VerdictChip from '../components/ui/VerdictChip.vue'
+import { verdictFromSeverity } from '../utils/review'
+import { formatRelative, type UiLocale } from '../utils/format'
 
 const route = useRoute()
+const { t, locale } = useI18n()
 const { mdAndUp } = useDisplay()
 const conversationStore = useConversationStore()
 const channelStore = useChannelStore()
@@ -361,33 +318,74 @@ const authStore = useAuthStore()
 const tenantId = computed(() => route.params.tenantId as string)
 
 const loading = ref(false)
+const listError = ref(false)
 const loadingMessages = ref(false)
+const convError = ref(false)
 const selectedConvId = ref<string | null>(null)
 const selectedConvChannelType = ref('')
+const selectedConvChannelName = ref('')
 const currentPage = ref(1)
 const detailTab = ref('messages')
+const moLocMobile = ref(false)
 
 // Evaluation state
 const loadingEvaluation = ref(false)
 const evaluation = ref<any>(null)
 
-// Evaluation map: conversation_id -> verdict (PASS/FAIL)
+// Map hội thoại -> severity của lần phân tích gần nhất, mọi loại tác vụ
 const evaluationMap = ref<Record<string, string>>({})
 
 async function loadEvaluationMap() {
   try {
     const { data } = await api.get(`/tenants/${tenantId.value}/conversations/evaluated`)
     evaluationMap.value = data || {}
-  } catch { /* ignore */ }
+  } catch { /* chip hiện "chưa phân tích" thay vì đoán */ }
 }
 
-const filteredConversations = computed(() => conversationStore.conversations)
+// Phân loại cũng ghi PASS, nên PASS chỉ được gọi là "Đạt / đã phân loại".
+function chipKind(severity: string | undefined): 'pass' | 'fail' | 'skip' | 'other' | 'none' {
+  if (!severity) return 'none'
+  if (severity === 'PASS') return 'pass'
+  if (severity === 'FAIL') return 'fail'
+  if (severity === 'SKIP') return 'skip'
+  return 'other'
+}
+function chipLabel(severity: string | undefined) {
+  return t(`msgs_chip_${chipKind(severity)}`)
+}
 
-function shareConversation() {
-  const url = `${window.location.origin}/${tenantId.value}/messages?conv=${selectedConvId.value}`
-  navigator.clipboard.writeText(url)
-  snackText.value = 'Đã sao chép link'
+const currentName = computed(() => conversationStore.currentConversation?.customer_name || t('msg_unknown_customer'))
+
+function relative(s: string | null) {
+  return formatRelative(s, locale.value as UiLocale)
+}
+
+function toast(text: string, error = false) {
+  snackText.value = text
+  snackError.value = error
   snackbar.value = true
+}
+
+async function shareConversation() {
+  const url = `${window.location.origin}/${tenantId.value}/messages?conv=${selectedConvId.value}`
+  try {
+    await navigator.clipboard.writeText(url)
+    toast(t('msgs_link_copied'))
+  } catch {
+    toast(t('msgs_copy_failed'), true)
+  }
+}
+
+// Khi không có hội thoại nào, máy chủ trả 200 kèm JSON {error}; không được tải về như một file.
+function serverError(data: unknown): string {
+  if (typeof data !== 'string') return (data as { error?: string } | null)?.error || ''
+  const text = data.trim()
+  if (!text.startsWith('{')) return ''
+  try {
+    return JSON.parse(text)?.error || ''
+  } catch {
+    return ''
+  }
 }
 
 async function doExport() {
@@ -395,10 +393,10 @@ async function doExport() {
   try {
     let url = `/tenants/${tenantId.value}/conversations/export?from=${exportFrom.value}&to=${exportTo.value}&format=${exportFormat.value}`
     if (exportChannelType.value) url += `&channel_type=${exportChannelType.value}`
-    const { data } = await api.get(url, { responseType: exportFormat.value === 'csv' ? 'text' : 'text' })
-    if (data?.error) {
-      snackText.value = data.error
-      snackbar.value = true
+    const { data } = await api.get(url, { responseType: 'text' })
+    const loi = serverError(data)
+    if (loi) {
+      toast(loi, true)
       return
     }
     const blob = new Blob([data], { type: exportFormat.value === 'csv' ? 'text/csv;charset=utf-8' : 'text/plain;charset=utf-8' })
@@ -409,8 +407,7 @@ async function doExport() {
     URL.revokeObjectURL(a.href)
     showExportDialog.value = false
   } catch {
-    snackText.value = 'Lỗi export'
-    snackbar.value = true
+    toast(t('msgs_export_error'), true)
   } finally {
     exporting.value = false
   }
@@ -459,19 +456,6 @@ const classGroups = computed(() => {
   return evaluation.value.groups.filter((g: any) => g.job_type === 'classification')
 })
 
-const MSG_TAG_COLORS = ['#7E57C2', '#1E88E5', '#00897B', '#FB8C00', '#D81B60', '#00ACC1', '#3949AB', '#E64A19', '#7CB342', '#6D4C41']
-const allClassTags = computed(() => {
-  const tagSet = new Set<string>()
-  for (const g of classGroups.value) {
-    for (const t of getClassTags(g)) tagSet.add(t)
-  }
-  return Array.from(tagSet).sort()
-})
-function msgTagColor(tag: string): string {
-  const idx = allClassTags.value.indexOf(tag)
-  return idx >= 0 ? MSG_TAG_COLORS[idx % MSG_TAG_COLORS.length] : MSG_TAG_COLORS[0]
-}
-
 // QC group helpers
 function getQcVerdict(g: any): string {
   const ev = g.results?.find((r: any) => r.result_type === 'conversation_evaluation')
@@ -488,10 +472,6 @@ function getQcReview(g: any): string {
 }
 function getQcViolations(g: any): any[] {
   return (g.results || []).filter((r: any) => r.result_type === 'qc_violation')
-}
-const expandedQc = ref<Record<string, boolean>>({})
-function toggleQcExpand(runId: string) {
-  expandedQc.value[runId] = !expandedQc.value[runId]
 }
 
 // Classification group helpers
@@ -518,13 +498,22 @@ const exportFormat = ref('txt')
 const exportChannelType = ref('')
 const exportFrom = ref(new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10))
 const exportTo = ref(new Date().toISOString().slice(0, 10))
-const evaluationFilterOptions = [
-  { title: 'Đã đánh giá', value: 'evaluated' },
-  { title: 'Chưa đánh giá', value: 'not_evaluated' },
-  { title: 'Đạt', value: 'PASS' },
-  { title: 'Không đạt', value: 'FAIL' },
-]
+const exportFormats = computed(() => [
+  { title: t('msgs_export_txt'), value: 'txt' },
+  { title: t('msgs_export_csv'), value: 'csv' },
+])
+const exportChannelTypes = computed(() => [
+  { title: t('msgs_export_all_types'), value: '' },
+  ...CHANNEL_TYPES.map(c => ({ title: c.label, value: c.value })),
+])
+const evaluationFilterOptions = computed(() => [
+  { title: t('msgs_eval_evaluated'), value: 'evaluated' },
+  { title: t('msgs_eval_not_evaluated'), value: 'not_evaluated' },
+  { title: t('msgs_eval_pass'), value: 'PASS' },
+  { title: t('msgs_eval_fail'), value: 'FAIL' },
+])
 const snackbar = ref(false)
+const snackError = ref(false)
 const lightboxSrc = ref('')
 const snackText = ref('')
 const searchQuery = ref('')
@@ -543,6 +532,23 @@ const channelOptions = computed(() => {
 })
 
 const totalPages = computed(() => Math.ceil(conversationStore.total / perPage))
+const tuDong = computed(() => (currentPage.value - 1) * perPage + 1)
+const denDong = computed(() => (currentPage.value - 1) * perPage + conversationStore.conversations.length)
+const soLoc = computed(() => (filterChannelType.value ? 1 : 0) + (filterChannelId.value ? 1 : 0) + (filterEvaluation.value ? 1 : 0))
+const coLoc = computed(() => soLoc.value > 0 || !!searchQuery.value)
+
+function xoaLoc() {
+  const coTim = !!searchQuery.value
+  searchQuery.value = ''
+  filterChannelType.value = null
+  filterChannelId.value = null
+  filterEvaluation.value = null
+  // Các watch tự tải lại khi bộ lọc đổi; chỉ còn ô tìm là phải tải tay
+  if (coTim) {
+    currentPage.value = 1
+    loadConversations()
+  }
+}
 
 let searchTimeout: ReturnType<typeof setTimeout> | null = null
 function debouncedSearch() {
@@ -555,6 +561,7 @@ function debouncedSearch() {
 
 async function loadConversations() {
   loading.value = true
+  listError.value = false
   try {
     const params: Record<string, string | number> = {
       page: currentPage.value,
@@ -566,6 +573,8 @@ async function loadConversations() {
     if (filterEvaluation.value) params.evaluation = filterEvaluation.value
 
     await conversationStore.fetchConversations(tenantId.value, params)
+  } catch {
+    listError.value = true
   } finally {
     loading.value = false
   }
@@ -573,15 +582,21 @@ async function loadConversations() {
 
 async function selectConversation(convId: string, tab?: string) {
   selectedConvId.value = convId
-  detailTab.value = tab === 'evaluation' ? 'qc' : tab === 'classification' ? 'classification' : 'messages'
+  convError.value = false
+  detailTab.value = tab === 'evaluation' || tab === 'qc' ? 'qc' : tab === 'classification' ? 'classification' : 'messages'
   const conv = conversationStore.conversations.find(c => c.id === convId)
-  if (conv) selectedConvChannelType.value = conv.channel_type
+  if (conv) {
+    selectedConvChannelType.value = conv.channel_type
+    selectedConvChannelName.value = conv.channel_name || channelTypeInfo(conv.channel_type).label
+  }
 
   loadingMessages.value = true
   try {
     await conversationStore.fetchMessages(tenantId.value, convId)
     await nextTick()
     scrollToBottom()
+  } catch {
+    convError.value = true
   } finally {
     loadingMessages.value = false
   }
@@ -610,29 +625,17 @@ const dayNamesShort = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7']
 function formatTime(dateStr: string | null) {
   if (!dateStr) return '—'
   const d = new Date(dateStr)
-  const day = dayNamesShort[d.getDay()]
+  if (Number.isNaN(d.getTime())) return '—'
   const dd = String(d.getDate()).padStart(2, '0')
   const mm = String(d.getMonth() + 1).padStart(2, '0')
   const hh = String(d.getHours()).padStart(2, '0')
   const mi = String(d.getMinutes()).padStart(2, '0')
-  return `${day} ${dd}/${mm}/${d.getFullYear()} ${hh}:${mi}`
-}
-
-function timeAgo(dateStr: string | null) {
-  if (!dateStr) return '—'
-  const diff = Date.now() - new Date(dateStr).getTime()
-  const mins = Math.floor(diff / 60000)
-  if (mins < 1) return 'Vừa xong'
-  if (mins < 60) return `${mins} phút trước`
-  const hours = Math.floor(mins / 60)
-  if (hours < 24) return `${hours} giờ trước`
-  const days = Math.floor(hours / 24)
-  if (days < 30) return `${days} ngày trước`
-  return formatTime(dateStr)
+  return `${dd}/${mm}/${d.getFullYear()} ${hh}:${mi}`
 }
 
 function formatMessageTime(dateStr: string) {
   const d = new Date(dateStr)
+  if (Number.isNaN(d.getTime())) return '—'
   const day = dayNamesShort[d.getDay()]
   const dd = String(d.getDate()).padStart(2, '0')
   const mm = String(d.getMonth() + 1).padStart(2, '0')
@@ -650,7 +653,6 @@ function hasAttachments(msg: Message) {
     return false
   }
 }
-
 
 function getAttachmentUrl(att: any): string {
   if (att.local_path) return `/api/v1/files/${att.local_path}`
@@ -705,6 +707,7 @@ watch(() => conversationStore.messages, () => {
 }, { immediate: true })
 
 onUnmounted(() => {
+  if (searchTimeout) clearTimeout(searchTimeout)
   // Cleanup blob URLs to prevent memory leaks
   for (const blobUrl of Object.values(authImageCache.value)) {
     if (blobUrl && blobUrl.startsWith('blob:')) URL.revokeObjectURL(blobUrl)
@@ -717,14 +720,10 @@ function isImageAttachment(att: any): boolean {
   return t.startsWith('image') || t === 'photo' || t === 'gif' || t === 'sticker'
 }
 
-function onImageError(event: Event, att: any) {
-  const img = event.target as HTMLImageElement
-  // Replace broken image with fallback chip
-  const fallback = document.createElement('span')
-  fallback.className = 'v-chip v-chip--size-x-small v-theme--light v-chip--density-default v-chip--variant-tonal'
-  fallback.style.cssText = 'font-size: 10px; padding: 0 8px; height: 24px; display: inline-flex; align-items: center; border-radius: 12px; background: rgba(0,0,0,0.06);'
-  fallback.textContent = att.name || '[Ảnh]'
-  img.replaceWith(fallback)
+// Ảnh hỏng: bỏ đường dẫn khỏi bộ nhớ đệm để hiện chip tên file thay cho ảnh
+function onImageError(_event: Event, att: any) {
+  const url = getAttachmentUrl(att)
+  if (url) authImageCache.value[url] = ''
 }
 
 function parseAttachments(msg: Message) {
@@ -761,7 +760,9 @@ onMounted(async () => {
     filterChannelId.value = route.query.channel_id as string
   }
 
-  await channelStore.fetchChannels(tenantId.value)
+  try {
+    await channelStore.fetchChannels(tenantId.value)
+  } catch { /* danh sách kênh chỉ để lọc; thiếu thì vẫn xem được hội thoại */ }
   await loadConversations()
   await loadEvaluationMap()
 
@@ -782,12 +783,396 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.mg-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mg-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.mg-head__titles {
+  flex: 1 1 240px;
+}
+.mg-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.mg-muted {
+  color: rgb(var(--v-theme-text-muted));
+}
+.mg-m0 {
+  margin: 0;
+}
+.mg-small {
+  font-size: 12px;
+}
+.mg-small-body {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.mg-nowrap {
+  white-space: nowrap;
+}
+.mg-body {
+  font-size: 14px;
+  line-height: 1.55;
+}
+.mg-h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.mg-btn {
+  text-transform: none;
+  letter-spacing: 0;
+}
+.mg-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mg-layout--split {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  align-items: start;
+}
+.mg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.mg-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+.mg-layout--split .mg-filters {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.mg-layout--split .mg-filters__search,
+.mg-layout--split .mg-filters__wide {
+  grid-column: span 2;
+}
+.mg-rows {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+  overflow: hidden;
+}
+.mg-rows--busy {
+  opacity: 0.6;
+}
+.mg-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 10px 14px;
+  border: 0;
+  border-bottom: 1px solid rgb(var(--v-theme-border));
+  background: transparent;
+  color: rgb(var(--v-theme-on-surface));
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.mg-row:last-child {
+  border-bottom: 0;
+}
+.mg-row:hover {
+  background: rgba(var(--v-theme-on-surface), 0.03);
+}
+.mg-row:focus-visible {
+  outline: 2px solid rgb(var(--v-theme-primary));
+  outline-offset: -2px;
+}
+.mg-row--active {
+  background: rgba(var(--v-theme-primary), 0.08);
+  box-shadow: inset 3px 0 0 rgb(var(--v-theme-primary));
+}
+.mg-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: rgba(var(--v-theme-on-surface), 0.06);
+  font-size: 11px;
+  font-weight: 700;
+}
+.mg-row__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mg-row__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.mg-row__name {
+  font-size: 15px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mg-row__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.mg-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.mg-chip--pass {
+  background: rgba(var(--v-theme-primary), 0.1);
+  color: rgb(var(--v-theme-primary));
+}
+.mg-chip--fail {
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+}
+.mg-chip--skip {
+  background: rgb(var(--v-theme-skip-bg));
+  color: rgb(var(--v-theme-skip));
+}
+.mg-chip--other {
+  background: rgba(var(--v-theme-on-surface), 0.06);
+  color: rgb(var(--v-theme-on-surface));
+}
+.mg-chip--none {
+  border: 1px solid rgb(var(--v-theme-border));
+  color: rgb(var(--v-theme-text-muted));
+  font-weight: 500;
+}
+.mg-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgb(var(--v-theme-fail));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+  font-size: 14px;
+  font-weight: 600;
+}
+.mg-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 20px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+  text-align: center;
+  font-size: 14px;
+}
+.mg-empty__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.mg-conv {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+  overflow: hidden;
+}
+.mg-layout--split .mg-conv {
+  position: sticky;
+  top: 16px;
+  height: calc(100vh - 140px);
+  min-height: 480px;
+}
+.mg-conv__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgb(var(--v-theme-border));
+}
+.mg-conv__titles {
+  flex: 1;
+  min-width: 0;
+}
+.mg-conv__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.mg-tabs {
+  flex-shrink: 0;
+  border-bottom: 1px solid rgb(var(--v-theme-border));
+}
+.mg-pane {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px;
+}
+.mg-transcript {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(var(--v-theme-on-surface), 0.02);
+}
+.mg-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mg-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 78%;
+}
+.mg-msg--customer {
+  align-self: flex-start;
+}
+.mg-msg--agent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+.mg-msg__who {
+  font-size: 11px;
+  color: rgb(var(--v-theme-text-muted));
+}
+.mg-msg__bubble {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(var(--v-theme-border));
+  background: rgb(var(--v-theme-surface));
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.mg-msg--agent .mg-msg__bubble {
+  background: rgba(var(--v-theme-primary), 0.08);
+}
+.mg-msg__text {
+  white-space: pre-wrap;
+}
+.mg-msg__img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.mg-note {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-left: 4px solid rgb(var(--v-theme-src-legacy));
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.mg-note a {
+  color: rgb(var(--v-theme-primary));
+  font-weight: 600;
+}
+.mg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+}
+.mg-card__head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.mg-card__job {
+  flex: 1;
+  min-width: 120px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.mg-issue {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 10px;
+  font-size: 14px;
+}
+.mg-quote {
+  padding: 6px 10px;
+  border-left: 3px solid rgb(var(--v-theme-src-changed));
+  border-radius: 4px;
+  background: rgba(var(--v-theme-src-changed), 0.06);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.mg-sev {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.mg-sev--critical {
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+}
+.mg-sev--warning {
+  background: rgb(var(--v-theme-src-changed-bg));
+  color: rgb(var(--v-theme-src-changed));
+}
+.mg-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 8px;
+  background: rgba(var(--v-theme-primary), 0.1);
+  color: rgb(var(--v-theme-primary));
+  font-size: 13px;
+  font-weight: 600;
+}
 .lightbox-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;

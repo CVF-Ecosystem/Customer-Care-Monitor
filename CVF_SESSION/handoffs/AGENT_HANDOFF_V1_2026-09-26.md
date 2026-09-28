@@ -6,10 +6,17 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-UX-011 REVIEW_PENDING)
-- Active role: ORCHESTRATOR (Codex) after independent UX-011 REVIEW_PASS. UX-000, UX-002, UX-001a and UX-010 are REVIEW PASS / FREEZE open.
-- Next allowed move: route another independent UI/UX screen tranche under the owner's backend-intersection hold. UX-011 REVIEW PASS / FREEZE open. SPEC §5 `BLOCKED_API_CONTRACT` proposals, dashboard `qc_violation_count` and demo scheduler/sync stay for separately routed R2 tranches. `CCMAI-RUNTIME-001` to `009` REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.
+- Active phase: REVIEW (CCMAI-UX-012 REVIEW_PENDING; series UX-012..015 in progress)
+- Active role: COMMIT_STEWARD (Claude) returned UX-012 REVIEW_PENDING; Claude continues owner-directed UX-013; REVIEWER (Codex) reviews each tranche independently
+- Next allowed move: Claude: next owner-directed tranche UX-013 Tác vụ (list/create/edit), frontend only, disjoint from UX-012. Codex: independent REVIEW of UX-012 (docs/reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md). UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## Owner-directed UI screen series UX-012..UX-015 (2026-09-28, Claude)
+
+- Owner instruction: continue the UI roadmap with independent screens, one tranche per group, in order Tin nhắn (UX-012) → Tác vụ list/create/edit (UX-013) → Cài đặt, Người dùng, Đăng nhập/Thiết lập (UX-014) → Nhật ký hệ thống, chi phí, lịch sử thông báo, MCP (UX-015). Each tranche is frontend presentation only on existing APIs and semantics; Trang chủ, Kênh, `qc_violation_count`, demo scheduler, backend/API/store/schema/provider, permissions and data contracts are held; needs outside that are recorded as `BLOCKED_API_CONTRACT` / `BLOCKED_RUNTIME_DEPENDENCY`. Each tranche ends as a local `REVIEW_PENDING` commit for independent Codex review; no self-PASS, FREEZE or push. A later tranche must not depend on an earlier tranche's unreviewed change (tranches touch disjoint views; shared components stay unchanged; i18n additions use per-tranche key prefixes).
+- UX-012 Tin nhắn — CVF Agent Declaration (rehydrated at `0cb0483`): core `26c686c`, doctor 25/25, risk R2, live evidence YES but no governance claim (UI mocks, synthetic disposable data), parked checkpoint none, `BOOTSTRAP_MIGRATION_PENDING` non-blocking; state/memory/handoff agree (UX-011 REVIEW_PASS). Phase REVIEW (UX-011) → INTAKE (UX-012, bounded above) → DESIGN. Role transition ORCHESTRATOR (Claude, owner-directed routing) → SPEC_AUTHOR (Claude).
+- UX-012 DESIGN → SPEC → WORK_ORDER (Claude): canvas https://claude.ai/artifact/Q7KkTJMS95U9ShLJrfP9F4 frozen at `1790601057-3d67`; SPEC `docs/specs/MESSAGES_SCREEN_UX012_2026-09-28.md` (contract facts: PASS includes classification, export selects by last message and returns 200 `{error}` when empty; four `BLOCKED_API_CONTRACT` items); work order `docs/work_orders/CCMAI_UX_012.md` bounds BUILD to `Messages.vue`, additive `msgs_*` keys and one test file. Role transition SPEC_AUTHOR → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER (Claude) acknowledged before implementation.
+- UX-012 BUILD result (Claude): Messages.vue rebuilt on tokens; 60 additive `msgs_*` keys; 7 focused tests (mutation check 3/3 caught). Fixed presentation defects: conversation count labelled as messages (UX-16); PASS chip claiming 'Đạt' for classification-only results and SKIP shown as 'Không đạt'; 200 JSON `{error}` export body saved as a file; unhandled load errors. Gates 134/134 tests, vue-tsc, build, diff/catalog; doctor 25/25. Disposable captures: 36 pages + 24 plan states, 0 JS errors/overflow/external requests; environments removed. Evidence `docs/reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md`. Role transition IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude); local commit `REVIEW_PENDING`. No shared component changed, so UX-013..015 do not depend on it.
 
 ## Codex independent UX-011 REVIEW (2026-09-28)
 

@@ -1,0 +1,539 @@
+{
+  "summary": {
+    "states": 24,
+    "jsErrors": 0,
+    "overflow": 0,
+    "failedSteps": 0,
+    "external": []
+  },
+  "report": [
+    {
+      "state": "messages-list",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"msgs-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "(210)",
+          "ok": true
+        }
+      ],
+      "file": "messages-list--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-conv",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "expect": ".mg-msg",
+          "ok": true
+        }
+      ],
+      "file": "messages-conv--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-qc",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "lượng ·",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-source-note\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-qc--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-class",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "Phân loại",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-class\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-class--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-export",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-export-open\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-export-desc\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-export--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-nomatch",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[aria-label=\"Tìm tên khách\"]",
+          "value": "zzzz-khong-co",
+          "wait": 1500,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-no-match\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-nomatch--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-list",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"msgs-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "(210)",
+          "ok": true
+        }
+      ],
+      "file": "messages-list--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-conv",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "expect": ".mg-msg",
+          "ok": true
+        }
+      ],
+      "file": "messages-conv--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-qc",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "lượng ·",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-source-note\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-qc--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-class",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "Phân loại",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-class\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-class--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-export",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-export-open\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-export-desc\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-export--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-nomatch",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[aria-label=\"Tìm tên khách\"]",
+          "value": "zzzz-khong-co",
+          "wait": 1500,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-no-match\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-nomatch--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-list",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"msgs-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "(210)",
+          "ok": true
+        }
+      ],
+      "file": "messages-list--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-conv",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "expect": ".mg-msg",
+          "ok": true
+        }
+      ],
+      "file": "messages-conv--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-qc",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "lượng ·",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-source-note\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-qc--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-class",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "Phân loại",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-class\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-class--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-export",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-export-open\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-export-desc\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-export--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-nomatch",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[aria-label=\"Tìm tên khách\"]",
+          "value": "zzzz-khong-co",
+          "wait": 1500,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-no-match\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-nomatch--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-list",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"msgs-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "(210)",
+          "ok": true
+        }
+      ],
+      "file": "messages-list--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-conv",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "expect": ".mg-msg",
+          "ok": true
+        }
+      ],
+      "file": "messages-conv--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-qc",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "lượng ·",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-source-note\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-qc--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-class",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-row\"]",
+          "wait": 2200,
+          "ok": true
+        },
+        {
+          "clickText": "Phân loại",
+          "in": ".v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-class\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-class--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-export",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"msgs-export-open\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-export-desc\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-export--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "messages-nomatch",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[aria-label=\"Tìm tên khách\"]",
+          "value": "zzzz-khong-co",
+          "wait": 1500,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"msgs-no-match\"]",
+          "ok": true
+        }
+      ],
+      "file": "messages-nomatch--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    }
+  ]
+}

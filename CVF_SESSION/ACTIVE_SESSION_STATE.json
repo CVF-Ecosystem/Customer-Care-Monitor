@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "ORCHESTRATOR (Codex): route another independent UI/UX screen tranche under the owner's backend-intersection hold. UX-011 Results REVIEW PASS / FREEZE open, as are UX-000/002/001a/010 and R001-R009. The five UX-011 SPEC §5 BLOCKED_API_CONTRACT proposals, dashboard qc_violation_count and demo scheduler/sync require separately routed R2 tranches; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "Claude: next owner-directed tranche UX-013 Tác vụ (list/create/edit), frontend only, disjoint from UX-012. Codex: independent REVIEW of UX-012 (docs/reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md). UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex) after independent UX-011 REVIEW_PASS",
+  "activeRole": "COMMIT_STEWARD (Claude) returned UX-012 REVIEW_PENDING; Claude continues owner-directed UX-013; REVIEWER (Codex) reviews each tranche independently",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }
