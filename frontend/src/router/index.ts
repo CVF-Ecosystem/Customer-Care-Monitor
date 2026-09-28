@@ -170,9 +170,16 @@ router.beforeEach(async (to) => {
     setupChecked = true
   }
 
-  // Redirect to setup if needed
-  if (needsSetup && to.name !== 'setup') {
-    return { name: 'setup' }
+  // Máy chủ trả needs_setup=true thì Setup được ưu tiên trước mọi thông tin đăng nhập trên
+  // trình duyệt. Token còn lại thuộc bản cài trước: xóa nó, và không để luật "khách có token
+  // thì về /" bên dưới chạy, vì luật đó đẩy /setup → / → /setup mãi không dừng (CCMAI-AUTH-001).
+  // needsSetup chỉ đúng khi máy chủ trả lời rõ; lỗi mạng không mở Setup và không xóa gì.
+  if (needsSetup) {
+    const authStore = useAuthStore()
+    if (authStore.accessToken || localStorage.getItem('cqa_access_token') || localStorage.getItem('cqa_refresh_token')) {
+      authStore.clearLocalSession()
+    }
+    return to.name === 'setup' ? true : { name: 'setup' }
   }
   // Redirect away from setup if already completed
   if (!needsSetup && to.name === 'setup') {

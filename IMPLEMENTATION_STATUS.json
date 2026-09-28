@@ -25,7 +25,9 @@
     "CCMAI-UX-014 REVIEW PASS / FREEZE OPEN after R1 (Codex docs/reviews/CCMAI_UX_014_R1_INDEPENDENT_REREVIEW_2026-09-28.md): Settings/Users/Login/Setup presentation; S3-off dialog now uses the Compose service command; Setup and S3-off states captured with synthetic data. No provider or S3 call.",
     "CCMAI-UX-015 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_UX_015_INDEPENDENT_REVIEW_2026-09-28.md): activity/cost/notification logs and MCP UI; cost footer is page-scoped; one-time secret is cleared on dialog close. Filtered cost total and other API/permission changes remain held."
   ],
-  "buildInProgress": [],
+  "buildInProgress": [
+    "CCMAI-AUTH-001 REVIEW_PENDING: a positive needs_setup=true now takes precedence over browser credentials. The guard clears the stale local and in-memory session and resolves Setup without the /setup-to-root redirect loop; App waits for router.isReady() before any profile load. Configured-installation and status-error behavior unchanged; successful Setup keeps its new token. Real-guard regression 4 failed before / 7 passed after; 167/167 tests, vue-tsc, build; disposable browser check with a placeholder token: 12 page loads, 0 JS errors, no /profile or /auth/refresh."
+  ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
     "CCMAI-DOCS-001",
@@ -62,7 +64,7 @@
     "CCMAI-UX-000 changes the global theme and font; existing screens keep their own source-status colors and sync labels until screen tranches (UX-010+). The F1 onboarding bar remains a later-screen item; avatar contrast UX000-R1 passed independent re-review.",
     "UX-02 dashboard 'issues' API field still counts every job result; Codex decided to preserve it and add qc_violation_count in a separate R2 API tranche. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
     "UX-011 Results REVIEW PASS / FREEZE OPEN. Its source-status panel is page-scoped because /results computes source status per returned page; a needs-review/source-status filter, global source counts, confidence on Results, quote highlighting and page/run-scoped export remain BLOCKED_API_CONTRACT proposals in docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md §5. Dashboard QC count, demo scheduler/sync and backend/API/store/schema/provider remain outside UX-011.",
-    "A stale invalid browser token can hang /setup on a fresh unconfigured instance. CCMAI-AUTH-001 is scoped at WORK_ORDER after source inspection identified a /setup-to-root redirect loop and a possible stale-token profile/refresh path; no repair or reinstall-readiness claim yet.",
+    "CCMAI-AUTH-001 BUILD (REVIEW_PENDING) addresses the stale-token /setup hang in the frontend; until independent review it is not a reinstall-readiness claim. A failed /setup/status request still falls back to \"setup not needed\"; HttpOnly refresh-cookie invalidation across a reinstall is out of scope.",
     "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction."
   ],
   "evidence": [
@@ -123,7 +125,9 @@
     "docs/reviews/CCMAI_UX_013_INDEPENDENT_REVIEW_2026-09-28.md",
     "docs/reviews/CCMAI_UX_014_INDEPENDENT_REVIEW_2026-09-28.md",
     "docs/specs/LOGS_COST_NOTIFY_MCP_UX015_2026-09-28.md",
-    "docs/reviews/LOGS_COST_NOTIFY_MCP_UX015_BUILD_2026-09-28.md"
+    "docs/reviews/LOGS_COST_NOTIFY_MCP_UX015_BUILD_2026-09-28.md",
+    "docs/reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md",
+    "docs/specs/SETUP_STALE_TOKEN_RECOVERY_AUTH001_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

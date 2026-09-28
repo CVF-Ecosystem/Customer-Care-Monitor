@@ -15,3 +15,7 @@ Do not edit the existing UX-014 files/tests, backend, storage guide, provider se
 Meet SPEC §§1–2. First add an executable failing regression for the real guard's stale-token case, then make the smallest cohesive fix. Guard against both the `/setup ↔ /` redirect and the stale-token profile/refresh path. Preserve configured-installation auth behavior and successful Setup's new token. Use synthetic tokens and mocked API responses; do not use saved provider credentials, send notifications or claim live governance proof.
 
 BUILD evidence must state the exact source cause, changed paths, before/after regression result, complete acceptance matrix, commands/results, and any remaining limitation. Run focused and full frontend tests, forced `vue-tsc`, production build, `git diff --check`, catalog `-Check`, and project doctor. If a disposable browser environment is used, remove it and record cleanup. Review the changed set before local commit. No deployment, push or FREEZE.
+
+## BUILD result (Claude, 2026-09-28)
+
+Done within the allowed paths (`router/index.ts`, `stores/auth.ts`, `App.vue`, new `__tests__/setup-stale-token.spec.ts`; `api/index.ts` unchanged). `REVIEW_PENDING` for independent Codex review; see [BUILD evidence](../reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md). No push, deployment or FREEZE.

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER (CCMAI-AUTH-001; UX-012..015 REVIEW PASS / FREEZE open)
-- Active role: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR (Codex) scoped CCMAI-AUTH-001; IMPLEMENTATION_WORKER (Claude) next
-- Next allowed move: Claude rehydrates and acknowledges IMPLEMENTATION_WORKER for CCMAI-AUTH-001, then executes the bounded frontend BUILD and returns one local REVIEW_PENDING commit. Correct the stale cqa-app command in docs/guide/s3-storage.md as a separate later docs task. UX-012..015 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections remain held. No push, deployment or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW (CCMAI-AUTH-001 REVIEW_PENDING; UX-012..015 REVIEW PASS / FREEZE open)
+- Active role: IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude) returned CCMAI-AUTH-001 REVIEW_PENDING; REVIEWER (Codex) next
+- Next allowed move: Codex: independently review CCMAI-AUTH-001 (local REVIEW_PENDING commit; evidence docs/reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md). Correct docs/guide/s3-storage.md as a separate later docs task. UX-012/013/014/015 and R001-R009 remain REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections held. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-AUTH-001 — first-time Setup with a stale browser token (2026-09-28)
@@ -17,6 +17,8 @@ Status: ACTIVE
 - DESIGN: a successful public `/setup/status` response with `needs_setup=true` overrides browser credentials. Clear old local and in-memory auth state before Setup renders, prevent loop/refresh, and retain the newly issued token after successful Setup. Preserve configured-instance behavior and do not treat status failure as positive setup authority.
 - SPEC: `docs/specs/SETUP_STALE_TOKEN_RECOVERY_AUTH001_2026-09-28.md`. WORK_ORDER: `docs/work_orders/CCMAI_AUTH_001.md`, R2, frontend auth/router scope only. The source trace and UX-014 observation are planning evidence, not BUILD or live governance proof.
 - Role transition acknowledged: `ORCHESTRATOR (Codex) → SPEC_AUTHOR (Codex) → WORK_ORDER_AUTHOR (Codex)`. Next `IMPLEMENTATION_WORKER (Claude)` must rehydrate and record its own role transition before BUILD; it returns `REVIEW_PENDING` for independent Codex review. `docs/guide/s3-storage.md` is a separate docs task. No source implementation, provider call, push, deployment or FREEZE occurred in this planning tranche.
+- AUTH-001 BUILD acknowledgment (Claude, rehydrated at `546b81f`; state/handoff/memory agree; doctor 25/25; core `26c686c`; risk R2; live evidence required YES but no governance claim — mocked auth/setup routing tests only): role transition `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` recorded before BUILD. Scope exactly as `docs/work_orders/CCMAI_AUTH_001.md`; a necessary path outside it returns `BUILD_BLOCKED`.
+- AUTH-001 BUILD result (Claude): cause proven. (1) The guard redirected non-Setup routes to Setup and then applied the guest rule to Setup with any token, giving /setup → / → /setup in microtasks, which hangs the tab. (2) App.vue loaded the profile with the stale store token before the async status check could act, so a 401 led to a failed refresh and a full-page /login redirect. Fix: the guard clears the local and in-memory session and resolves Setup whenever the server answers needs_setup=true; new `clearLocalSession()` in the auth store (logout unchanged); App awaits `router.isReady()` before any profile load; `api/index.ts` unchanged. New `setup-stale-token.spec.ts` on the real router and store: 4 failed before (redirect loop detected) / 7 passed after; mutations M2–M5 caught, M1 equivalent. Gates: 167/167 tests, vue-tsc, build. Disposable browser check `ccma-uishot-auth-20260928235841` with a placeholder token: /setup, / and /login × 4 variants, 12 loads, 0 JS errors, no /profile or /auth/refresh, Setup shown; project removed. Evidence `docs/reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md`. Role transition IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude); one local commit `REVIEW_PENDING`.
 
 ## Owner-directed UI screen series UX-012..UX-015 (2026-09-28, Claude)
 

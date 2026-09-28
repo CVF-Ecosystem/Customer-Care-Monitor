@@ -86,5 +86,15 @@ export const useAuthStore = defineStore('auth', () => {
     localStorage.removeItem('cqa_refresh_token') // cleanup legacy
   }
 
-  return { user, accessToken, isAuthenticated, tenantPerms, canView, canEdit, fetchTenantPermissions, login, setup, fetchProfile, updateProfile, logout }
+  // Máy chủ báo chưa thiết lập: phiên còn trên trình duyệt thuộc bản cài trước, không dùng
+  // được. Quên nó mà không gọi máy chủ (CCMAI-AUTH-001).
+  function clearLocalSession() {
+    user.value = null
+    accessToken.value = ''
+    tenantPerms.value = { role: '', permissions: {} }
+    localStorage.removeItem('cqa_access_token')
+    localStorage.removeItem('cqa_refresh_token')
+  }
+
+  return { user, accessToken, isAuthenticated, tenantPerms, canView, canEdit, fetchTenantPermissions, login, setup, fetchProfile, updateProfile, logout, clearLocalSession }
 })
