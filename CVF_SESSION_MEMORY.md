@@ -195,3 +195,7 @@ Codex independent UX-011 Results REVIEW at `098e8c2`: `REVIEW_PASS`, FREEZE open
 `CCMAI-UX-012` repair R1 (Claude, 2026-09-28): evaluated-map failure no longer claims 'Chưa phân tích' (state pending/ok/error, unknown chip); 145/145 tests. REVIEW_PENDING for Codex re-review.
 
 `CCMAI-UX-014` Settings/Users/Login/Setup BUILD (Claude, 2026-09-28): canvas https://claude.ai/artifact/8E2fGLG5qEwcmZK6bGVJyS version `1790607141-5a73`; SPEC `docs/specs/SETTINGS_USERS_AUTH_UX014_2026-09-28.md`; work order `docs/work_orders/CCMAI_UX_014.md`. Settings hides forms after a failed load; saved-key test label; password rules aligned with server. Held: member delete permission, role-change confirmation. Evidence `docs/reviews/SETTINGS_USERS_AUTH_UX014_BUILD_2026-09-28.md`. REVIEW_PENDING.
+
+Codex reviews `e24da27` (2026-09-28): UX-012 R1 REVIEW_PASS, UX-013 REVIEW_PASS (FREEZE open); UX-014 CHANGES_REQUIRED UX014-R1 (S3-off dialog command, Setup/S3-off captures), repair after UX-015 under the UX-014 work order.
+
+`CCMAI-UX-015` Logs/cost/notifications/MCP BUILD (Claude, 2026-09-28): canvas version `1790608303-0cb6`; SPEC `docs/specs/LOGS_COST_NOTIFY_MCP_UX015_2026-09-28.md`; work order `docs/work_orders/CCMAI_UX_015.md`. Cost footer is the page total (filtered total BLOCKED_API_CONTRACT); load failures shown as alerts; revoke via ConfirmDialog. Evidence `docs/reviews/LOGS_COST_NOTIFY_MCP_UX015_BUILD_2026-09-28.md`. REVIEW_PENDING.

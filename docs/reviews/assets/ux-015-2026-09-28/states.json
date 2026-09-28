@@ -1,0 +1,321 @@
+{
+  "base": "http://127.0.0.1:18088",
+  "generatedAt": "2026-09-28T16:01:07.552Z",
+  "pages": [
+    {
+      "state": "activity-logs",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "activity-logs--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "cost-logs",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "cost-logs--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-open",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-open--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-error",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-error--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-list",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-list--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-secret",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-secret--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-revoke-confirm",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-revoke-confirm--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "activity-logs",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "activity-logs--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "cost-logs",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "cost-logs--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-open",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-open--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-error",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-error--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-list",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-list--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-secret",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-secret--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-revoke-confirm",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-revoke-confirm--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "activity-logs",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "activity-logs--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "cost-logs",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "cost-logs--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-open",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-open--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-error",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-error--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-list",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-list--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-secret",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-secret--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-revoke-confirm",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-revoke-confirm--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "activity-logs",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "activity-logs--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "cost-logs",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "cost-logs--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-open",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-open--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "notifications-error",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "notifications-error--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-list",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-list--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-secret",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-secret--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "mcp-revoke-confirm",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "mcp-revoke-confirm--mobile--dark.png",
+      "horizontalOverflow": false
+    }
+  ],
+  "summary": {
+    "captures": 28,
+    "jsErrors": 0,
+    "overflow": 0,
+    "failedSteps": 0,
+    "externalRequests": []
+  }
+}

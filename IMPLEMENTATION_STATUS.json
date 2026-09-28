@@ -19,12 +19,13 @@
     "CCMAI-UX-001a REVIEW PASS / FREEZE OPEN, stacked on UX-000: relative time, demo timestamps, card/tag wording and Vietnam-day trend passed independent source/tests/capture review. UX-000 dependency now REVIEW PASS.",
     "CCMAI-UX-000 REVIEW PASS / FREEZE OPEN after UX000-R1: all three layout avatar initials use theme on-colors; independent 92/92 frontend tests, forced typecheck, rendered contrast evidence and 36-page capture review passed. UX-010 may move to WORK_ORDER and bounded BUILD.",
     "CCMAI-UX-010 REVIEW PASS / FREEZE OPEN after UX010-R1: Job Detail's evaluated card now opens the exact non-SKIP filter; classification history uses analyzed/tag wording backed by engine counters. Independent 114/114 frontend tests, forced vue-tsc, diff/catalog checks, project doctor 25/25 and source/capture inspection passed.",
-    "CCMAI-UX-011 REVIEW PASS / FREEZE OPEN: Results presentation now names server-wide verdict counts, page-scoped source counts, total range and full-filter export while keeping the existing API request contract and local-only source caveat. Independent 127/127 frontend tests, forced vue-tsc, diff/catalog checks, project doctor 25/25 and capture/source review passed. Five API-dependent proposals remain held."
+    "CCMAI-UX-011 REVIEW PASS / FREEZE OPEN: Results presentation now names server-wide verdict counts, page-scoped source counts, total range and full-filter export while keeping the existing API request contract and local-only source caveat. Independent 127/127 frontend tests, forced vue-tsc, diff/catalog checks, project doctor 25/25 and capture/source review passed. Five API-dependent proposals remain held.",
+    "CCMAI-UX-012 REVIEW PASS / FREEZE OPEN after R1 (Codex re-review docs/reviews/CCMAI_UX_012_R1_INDEPENDENT_REREVIEW_2026-09-28.md): Messages never claims 'Chưa phân tích' when the evaluated map is pending or failed; mocked UI checks only.",
+    "CCMAI-UX-013 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_UX_013_INDEPENDENT_REVIEW_2026-09-28.md): Jobs list/create/edit presentation; email output test remains a held API contract."
   ],
   "buildInProgress": [
-    "CCMAI-UX-012 REVIEW_PENDING after repair R1 (evaluated-map state pending/ok/error; a failed request shows 'Không rõ trạng thái phân tích', never 'Chưa phân tích'; 145/145 tests). BUILD summary: Messages.vue redesigned on theme tokens within docs/work_orders/CCMAI_UX_012.md; heading counts conversations (UX-16); latest-analysis chip/filter name PASS as 'Đạt / đã phân loại' because classification also writes PASS; export 200 JSON {error} shown instead of downloaded; list/conversation error states; source note on evaluation tabs. 134/134 frontend tests, vue-tsc, build; disposable captures 24 states + 36 pages, 0 JS errors/overflow/external requests. Awaiting independent Codex REVIEW.",
-    "CCMAI-UX-013 REVIEW_PENDING: Jobs list/create/edit redesigned within docs/work_orders/CCMAI_UX_013.md; schedule in words, dd/mm/yyyy, Vietnamese run labels (UX-12/13/14); delete via ConfirmDialog naming the cascade; JobEdit no longer renders a default form after a failed load (prevented blank overwrite); email output shows the missing test support (BLOCKED_API_CONTRACT) with the gate unchanged; output type change resets its test flag. 142/142 frontend tests, vue-tsc, build; disposable captures 28 states + 36 pages, 0 JS errors/overflow/external requests. Awaiting independent Codex REVIEW.",
-    "CCMAI-UX-014 REVIEW_PENDING: Settings/Users/Login/Setup redesigned within docs/work_orders/CCMAI_UX_014.md; Settings hides every form after a failed load (prevented default overwrite); key test labelled as testing the saved key; missing settings_saved/save_failed keys replaced; user password rules aligned with the server (8+, uppercase, digit); Vietnamese roles and snacks; labelled menus and dialogs. 151/151 frontend tests, vue-tsc, build; disposable captures 28 states + 36 pages, 0 JS errors/overflow/external requests; no provider/S3 test pressed. Awaiting independent Codex REVIEW."
+    "CCMAI-UX-014 CHANGES_REQUIRED (Codex UX014-R1: stale docker exec cqa-app command in the S3-off dialog; missing Setup and S3-off dialog captures); repair follows the UX-015 BUILD under docs/work_orders/CCMAI_UX_014.md. Settings/Users/Login/Setup redesigned within docs/work_orders/CCMAI_UX_014.md; Settings hides every form after a failed load (prevented default overwrite); key test labelled as testing the saved key; missing settings_saved/save_failed keys replaced; user password rules aligned with the server (8+, uppercase, digit); Vietnamese roles and snacks; labelled menus and dialogs. 151/151 frontend tests, vue-tsc, build; disposable captures 28 states + 36 pages, 0 JS errors/overflow/external requests; no provider/S3 test pressed. Awaiting independent Codex REVIEW.",
+    "CCMAI-UX-015 REVIEW_PENDING: activity/cost/notification logs and MCP connections redesigned within docs/work_orders/CCMAI_UX_015.md; cost footer labelled as the page total with a note (filtered total BLOCKED_API_CONTRACT); provider filter lists claude/gemini/openai/xai; notification and MCP load failures show an alert instead of the empty state; revoke through ConfirmDialog; action filter covers settings.storage; filter change returns to page 1. 159/159 tests, vue-tsc, build; 28 disposable state captures, 0 JS errors/overflow/external requests; no provider call, notification send or real MCP secret."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -49,7 +50,8 @@
     "CCMAI-UX-011",
     "CCMAI-UX-012",
     "CCMAI-UX-013",
-    "CCMAI-UX-014"
+    "CCMAI-UX-014",
+    "CCMAI-UX-015"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -114,7 +116,12 @@
     "docs/reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md",
     "docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md",
     "docs/reviews/CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md",
-    "docs/reviews/SETTINGS_USERS_AUTH_UX014_BUILD_2026-09-28.md"
+    "docs/reviews/SETTINGS_USERS_AUTH_UX014_BUILD_2026-09-28.md",
+    "docs/reviews/CCMAI_UX_012_R1_INDEPENDENT_REREVIEW_2026-09-28.md",
+    "docs/reviews/CCMAI_UX_013_INDEPENDENT_REVIEW_2026-09-28.md",
+    "docs/reviews/CCMAI_UX_014_INDEPENDENT_REVIEW_2026-09-28.md",
+    "docs/specs/LOGS_COST_NOTIFY_MCP_UX015_2026-09-28.md",
+    "docs/reviews/LOGS_COST_NOTIFY_MCP_UX015_BUILD_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }
