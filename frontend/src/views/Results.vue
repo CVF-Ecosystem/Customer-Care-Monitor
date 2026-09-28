@@ -1,63 +1,82 @@
 <!--
   Trang Kết quả — gom kết quả của mọi tác vụ trong công ty.
   Lọc và phân trang chạy dưới database (GET /results), không tải hết về máy khách.
+  CCMAI-UX-011: dựng lại trên component UX-000; mọi số đếm ghi rõ phạm vi của nó
+  (chip kết quả = mọi trang theo bộ lọc, trạng thái nguồn = chỉ trang đang xem).
 -->
 <template>
-  <div>
-    <div class="d-flex align-center justify-space-between flex-wrap ga-3 mb-4">
-      <h1 class="text-h5 font-weight-bold">{{ $t('nav_results') }}</h1>
-      <div v-if="!trangRong" class="d-flex ga-2">
-        <v-btn variant="outlined" size="small" prepend-icon="mdi-file-delimited" :loading="dangXuat === 'csv'" @click="xuatFile('csv')">CSV</v-btn>
-        <v-btn variant="outlined" size="small" prepend-icon="mdi-file-excel" :loading="dangXuat === 'xlsx'" @click="xuatFile('xlsx')">Excel</v-btn>
+  <div class="rs-page">
+    <div class="rs-head">
+      <div class="rs-head__titles">
+        <h1 class="rs-title">{{ $t('nav_results') }}</h1>
+        <p class="rs-muted rs-subtitle">{{ $t('results_subtitle') }}</p>
+      </div>
+      <div v-if="!trangRong && !loiTai" class="rs-export">
+        <div v-if="mdAndUp" class="d-flex ga-2">
+          <v-btn variant="outlined" prepend-icon="mdi-download" :loading="dangXuat === 'csv'" data-testid="export-csv" @click="xuatFile('csv')">{{ $t('results_export_csv') }}</v-btn>
+          <v-btn variant="outlined" prepend-icon="mdi-download" :loading="dangXuat === 'xlsx'" data-testid="export-xlsx" @click="xuatFile('xlsx')">{{ $t('results_export_xlsx') }}</v-btn>
+        </div>
+        <v-menu v-else>
+          <template #activator="{ props }">
+            <v-btn v-bind="props" variant="outlined" height="44" prepend-icon="mdi-download" append-icon="mdi-menu-down" :loading="!!dangXuat">{{ $t('results_export') }}</v-btn>
+          </template>
+          <v-list density="comfortable">
+            <v-list-subheader class="rs-export__menu-caption">{{ $t('results_export_scope') }}</v-list-subheader>
+            <v-list-item @click="xuatFile('csv')"><v-list-item-title>{{ $t('results_export_csv') }}</v-list-item-title></v-list-item>
+            <v-list-item @click="xuatFile('xlsx')"><v-list-item-title>{{ $t('results_export_xlsx') }}</v-list-item-title></v-list-item>
+          </v-list>
+        </v-menu>
+        <span v-if="mdAndUp" class="rs-muted rs-small" data-testid="export-scope">{{ $t('results_export_scope') }}</span>
       </div>
     </div>
 
     <v-skeleton-loader v-if="dangTaiFacets" type="article, table" />
 
+    <!-- Không tải được danh sách tác vụ/kênh: không được coi là "chưa có tác vụ" -->
+    <div v-else-if="loiTai === 'facets'" class="rs-error" role="alert" data-testid="results-load-error">
+      <span class="rs-error__text"><v-icon size="20" aria-hidden="true">mdi-alert-circle-outline</v-icon>{{ $t('results_load_error') }}</span>
+      <v-btn variant="outlined" color="error" height="44" @click="thuLai">{{ $t('results_retry') }}</v-btn>
+    </div>
+
     <!-- Công ty chưa có tác vụ nào -->
-    <v-card v-else-if="trangRong" class="pa-10 text-center">
-      <v-icon size="48" color="grey-lighten-1">mdi-clipboard-text-search-outline</v-icon>
-      <div class="text-subtitle-1 font-weight-bold mt-3">{{ $t('results_empty_title') }}</div>
-      <div class="text-body-2 text-grey mt-1 mb-4">{{ $t('results_empty_desc') }}</div>
-      <v-btn color="primary" prepend-icon="mdi-robot" :to="`/${tenantId}/jobs`">{{ $t('nav_jobs') }}</v-btn>
-    </v-card>
+    <div v-else-if="trangRong" class="rs-empty">
+      <v-icon size="40" class="rs-muted" aria-hidden="true">mdi-clipboard-text-search-outline</v-icon>
+      <h2 class="rs-empty__title">{{ $t('results_empty_title') }}</h2>
+      <p class="rs-muted">{{ $t('results_empty_desc') }}</p>
+      <v-btn color="primary" height="44" prepend-icon="mdi-robot" :to="`/${tenantId}/jobs`">{{ $t('nav_jobs') }}</v-btn>
+    </div>
 
     <template v-else>
       <!-- Tab chỉ hiện khi công ty có cả hai loại tác vụ -->
-      <v-tabs v-if="hienTab" v-model="jobType" density="compact" class="mb-3">
-        <v-tab value="qc_analysis">
-          <v-icon start size="small">mdi-star-check</v-icon>
-          {{ $t('results_tab_qc') }}
-        </v-tab>
-        <v-tab value="classification">
-          <v-icon start size="small">mdi-tag-multiple</v-icon>
-          {{ $t('results_tab_classification') }}
-        </v-tab>
+      <v-tabs v-if="hienTab" v-model="jobType" class="rs-tabs" :grow="!mdAndUp">
+        <v-tab value="qc_analysis">{{ $t('results_tab_qc') }}</v-tab>
+        <v-tab value="classification">{{ $t('results_tab_classification') }}</v-tab>
       </v-tabs>
 
       <!-- Thanh lọc trên mobile: ô tìm + một nút mở bảng lọc -->
-      <div v-if="!mdAndUp" class="d-flex align-center ga-2 mb-3">
+      <div v-if="!mdAndUp" class="d-flex align-center ga-2">
         <v-text-field
           v-model="tuKhoa"
           :placeholder="$t('results_search')"
-          density="compact"
+          :aria-label="$t('results_search')"
+          density="comfortable"
           variant="outlined"
           prepend-inner-icon="mdi-magnify"
           hide-details
           clearable
           class="flex-grow-1"
         />
-        <v-btn variant="outlined" height="40" class="loc-nut" @click="moLocMobile = true">
-          <v-icon size="small">mdi-filter-variant</v-icon>
-          <v-chip v-if="soLoc" size="x-small" color="primary" variant="flat" class="ml-1">{{ soLoc }}</v-chip>
+        <v-btn variant="outlined" height="48" class="loc-nut" :color="soLoc ? 'primary' : undefined" @click="moLocMobile = true">
+          <v-icon start size="small">mdi-filter-variant</v-icon>{{ $t('results_filters') }}<span v-if="soLoc" class="ml-1 tabular-nums">· {{ soLoc }}</span>
         </v-btn>
       </div>
 
       <!-- Thanh lọc trên desktop: mỗi bộ lọc là một nút nhỏ mở menu riêng -->
-      <div v-else class="d-flex align-center flex-wrap ga-2 mb-3">
+      <div v-else class="d-flex align-center flex-wrap ga-2">
         <v-text-field
           v-model="tuKhoa"
           :placeholder="$t('results_search')"
+          :aria-label="$t('results_search')"
           density="compact"
           variant="outlined"
           prepend-inner-icon="mdi-magnify"
@@ -68,9 +87,8 @@
 
         <v-menu :close-on-content-click="false">
           <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" size="small" class="loc-nut">
-              {{ $t('results_filter_job') }}
-              <v-chip v-if="jobIDs.length" size="x-small" color="primary" variant="flat" class="ml-2">{{ jobIDs.length }}</v-chip>
+            <v-btn v-bind="props" variant="outlined" class="loc-nut" :color="jobIDs.length ? 'primary' : undefined">
+              {{ $t('results_filter_job') }}<span v-if="jobIDs.length" class="ml-1 tabular-nums">· {{ jobIDs.length }}</span>
               <v-icon end size="small">mdi-menu-down</v-icon>
             </v-btn>
           </template>
@@ -88,9 +106,8 @@
 
         <v-menu :close-on-content-click="false">
           <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" size="small" class="loc-nut">
-              {{ $t('results_filter_channel') }}
-              <v-chip v-if="channelIDs.length" size="x-small" color="primary" variant="flat" class="ml-2">{{ channelIDs.length }}</v-chip>
+            <v-btn v-bind="props" variant="outlined" class="loc-nut" :color="channelIDs.length ? 'primary' : undefined">
+              {{ $t('results_filter_channel') }}<span v-if="channelIDs.length" class="ml-1 tabular-nums">· {{ channelIDs.length }}</span>
               <v-icon end size="small">mdi-menu-down</v-icon>
             </v-btn>
           </template>
@@ -109,9 +126,8 @@
         <!-- Phân loại: lọc theo nhãn. Chất lượng CSKH: lọc theo điểm -->
         <v-menu v-if="laPhanLoai" :close-on-content-click="false">
           <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" size="small" class="loc-nut">
-              {{ $t('results_filter_tag') }}
-              <v-chip v-if="tags.length" size="x-small" color="primary" variant="flat" class="ml-2">{{ tags.length }}</v-chip>
+            <v-btn v-bind="props" variant="outlined" class="loc-nut" :color="tags.length ? 'primary' : undefined">
+              {{ $t('results_filter_tag') }}<span v-if="tags.length" class="ml-1 tabular-nums">· {{ tags.length }}</span>
               <v-icon end size="small">mdi-menu-down</v-icon>
             </v-btn>
           </template>
@@ -129,7 +145,7 @@
 
         <v-menu v-else :close-on-content-click="false">
           <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" size="small" class="loc-nut">
+            <v-btn v-bind="props" variant="outlined" class="loc-nut" :color="locDiem ? 'primary' : undefined">
               {{ locDiem ? `${$t('results_filter_score')} ${khoangDiem[0]}–${khoangDiem[1]}` : $t('results_filter_score') }}
               <v-icon end size="small">mdi-menu-down</v-icon>
             </v-btn>
@@ -147,7 +163,7 @@
 
         <v-menu :close-on-content-click="false">
           <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" size="small" class="loc-nut">
+            <v-btn v-bind="props" variant="outlined" class="loc-nut" :color="preset !== 'all' ? 'primary' : undefined">
               <v-icon start size="small">mdi-calendar</v-icon>
               {{ nhanThoiGian }}
               <v-icon end size="small">mdi-menu-down</v-icon>
@@ -177,7 +193,7 @@
 
         <v-menu>
           <template #activator="{ props }">
-            <v-btn v-bind="props" variant="outlined" size="small" class="loc-nut">
+            <v-btn v-bind="props" variant="outlined" class="loc-nut">
               <v-icon start size="small">mdi-sort</v-icon>
               {{ $t(nhanSapXep) }}
               <v-icon end size="small">mdi-menu-down</v-icon>
@@ -190,241 +206,133 @@
           </v-list>
         </v-menu>
 
-        <v-btn v-if="coLoc" size="small" variant="text" color="grey-darken-1" @click="xoaLoc">
+        <v-btn v-if="coLoc" variant="text" color="primary" class="loc-nut" @click="xoaLoc">
           {{ $t('results_clear_filter') }}
         </v-btn>
+
+        <v-spacer />
+        <v-btn-toggle v-model="cheDoXem" density="compact" variant="outlined" divided mandatory :aria-label="$t('results_view_label')">
+          <v-btn value="table" size="small" prepend-icon="mdi-table" :aria-pressed="cheDoXem === 'table'">{{ $t('results_view_table') }}</v-btn>
+          <v-btn value="card" size="small" prepend-icon="mdi-view-agenda-outline" :aria-pressed="cheDoXem === 'card'">{{ $t('results_view_card') }}</v-btn>
+        </v-btn-toggle>
       </div>
 
-      <!-- Chip đếm + chuyển chế độ xem -->
-      <div class="d-flex align-center justify-space-between ga-2 mb-3">
-        <div class="d-flex ga-2 hang-chip">
-          <template v-if="!laPhanLoai">
-            <v-chip size="small" :variant="verdict === 'all' ? 'flat' : 'outlined'" :color="verdict === 'all' ? 'primary' : ''" @click="datVerdict('all')">
-              {{ $t('filter_all') }}: {{ counts.all }}
-            </v-chip>
-            <v-chip size="small" :variant="verdict === 'fail' ? 'flat' : 'outlined'" :color="verdict === 'fail' ? 'error' : ''" @click="datVerdict('fail')">
-              {{ $t('filter_failed') }}: {{ counts.fail }}
-            </v-chip>
-            <v-chip size="small" :variant="verdict === 'pass' ? 'flat' : 'outlined'" :color="verdict === 'pass' ? 'success' : ''" @click="datVerdict('pass')">
-              {{ $t('filter_passed') }}: {{ counts.pass }}
-            </v-chip>
-            <v-chip size="small" :variant="verdict === 'skip' ? 'flat' : 'outlined'" :color="verdict === 'skip' ? 'grey' : ''" @click="datVerdict('skip')">
-              {{ $t('verdict_skip') }}: {{ counts.skip }}
-            </v-chip>
-          </template>
-          <template v-else>
-            <v-chip size="small" :variant="verdict === 'classified' ? 'flat' : 'outlined'" :color="verdict === 'classified' ? 'secondary' : ''" @click="datVerdict('classified')">
-              {{ $t('results_classified') }}: {{ counts.classified }}
-            </v-chip>
-            <v-chip size="small" :variant="verdict === 'all' ? 'flat' : 'outlined'" :color="verdict === 'all' ? 'primary' : ''" @click="datVerdict('all')">
-              {{ $t('filter_all') }}: {{ counts.all }}
-            </v-chip>
-            <v-chip size="small" :variant="verdict === 'skip' ? 'flat' : 'outlined'" :color="verdict === 'skip' ? 'grey' : ''" @click="datVerdict('skip')">
-              {{ $t('verdict_skip') }}: {{ counts.skip }}
-            </v-chip>
-          </template>
-        </div>
-        <v-btn-toggle v-if="mdAndUp" v-model="cheDoXem" density="compact" variant="outlined" divided mandatory>
-          <v-btn value="card" size="small"><v-icon size="small">mdi-format-list-bulleted</v-icon></v-btn>
-          <v-btn value="table" size="small"><v-icon size="small">mdi-table</v-icon></v-btn>
-        </v-btn-toggle>
+      <!-- Chip kết quả: số đếm của máy chủ trên mọi trang, theo các bộ lọc còn lại -->
+      <div class="rs-verdicts">
+        <FilterBar :label="$t('results_verdict_filter_label')" class="rs-verdicts__bar" data-testid="verdict-chips">
+          <v-chip
+            v-for="c in chipKetQua"
+            :key="c.value"
+            :variant="verdict === c.value ? 'flat' : 'outlined'"
+            :color="verdict === c.value ? 'primary' : undefined"
+            :aria-pressed="verdict === c.value"
+            @click="datVerdict(c.value)"
+          >{{ c.label }} · <span class="tabular-nums ml-1">{{ c.count }}</span></v-chip>
+        </FilterBar>
+        <span class="rs-muted rs-small" data-testid="counts-scope">{{ $t('results_counts_scope') }}</span>
       </div>
 
       <v-skeleton-loader v-if="dangTai" type="table-row@5" />
 
+      <div v-else-if="loiTai === 'results'" class="rs-error" role="alert" data-testid="results-load-error">
+        <span class="rs-error__text"><v-icon size="20" aria-hidden="true">mdi-alert-circle-outline</v-icon>{{ $t('results_load_error') }}</span>
+        <v-btn variant="outlined" color="error" height="44" @click="thuLai">{{ $t('results_retry') }}</v-btn>
+      </div>
+
       <!-- Có tác vụ nhưng chưa chạy lần nào -->
-      <v-card v-else-if="!items.length && !coLoc && !counts.all" class="pa-10 text-center">
-        <v-icon size="48" color="grey-lighten-1">mdi-play-circle-outline</v-icon>
-        <div class="text-subtitle-1 font-weight-bold mt-3">{{ $t('results_no_run_title') }}</div>
-        <div class="text-body-2 text-grey mt-1 mb-4">{{ $t('results_no_run_desc') }}</div>
-        <v-btn color="primary" prepend-icon="mdi-play" :to="`/${tenantId}/jobs`">{{ $t('nav_jobs') }}</v-btn>
-      </v-card>
+      <div v-else-if="!items.length && !coLoc && !counts.all" class="rs-empty">
+        <v-icon size="40" class="rs-muted" aria-hidden="true">mdi-play-circle-outline</v-icon>
+        <h2 class="rs-empty__title">{{ $t('results_no_run_title') }}</h2>
+        <p class="rs-muted">{{ $t('results_no_run_desc') }}</p>
+        <v-btn color="primary" height="44" prepend-icon="mdi-play" :to="`/${tenantId}/jobs`">{{ $t('nav_jobs') }}</v-btn>
+      </div>
 
-      <v-card v-else-if="!items.length" class="pa-10 text-center text-grey">
-        {{ $t('results_no_match') }}
-      </v-card>
+      <div v-else-if="!items.length" class="rs-empty" data-testid="results-no-match">
+        <p class="rs-muted">{{ $t('results_no_match') }}</p>
+        <v-btn variant="outlined" height="44" data-testid="no-match-clear" @click="xoaLoc">{{ $t('results_clear_filter') }}</v-btn>
+      </div>
 
-      <!-- Bảng: cột quan trọng đứng trước -->
-      <template v-else-if="xemBang">
-        <!-- CCMAI-UX-002: local-only caveat above the list, as on Job Detail (R006-R1) -->
-        <v-alert type="info" variant="tonal" density="compact" class="mb-3 text-caption" data-testid="results-source-note">
-          {{ $t('results_source_note') }}
-        </v-alert>
-        <v-card>
-        <v-table density="compact" hover>
-          <thead>
-            <tr>
-              <th style="width: 64px" data-testid="results-source-header">{{ $t('results_col_source') }}</th>
-              <th style="min-width: 130px">{{ $t('results_col_customer') }}</th>
-              <template v-if="!laPhanLoai">
-                <th style="width: 110px">{{ $t('results_col_verdict') }}</th>
-                <th style="width: 70px" class="text-right">{{ $t('results_col_score') }}</th>
-                <th style="width: 34%">{{ $t('results_col_issues') }}</th>
-              </template>
-              <th v-else style="width: 34%">{{ $t('results_col_tags') }}</th>
-              <th style="width: 105px">{{ $t('results_col_date') }}</th>
-              <th style="width: 170px" class="d-none d-lg-table-cell">{{ $t('results_col_job') }}</th>
-              <th style="width: 135px" class="d-none d-lg-table-cell">{{ $t('results_col_channel') }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="r in items" :key="r.id" style="cursor: pointer" @click="moChiTiet(r)">
-              <td>
-                <v-tooltip :text="nhanNguon(r.source_integrity_status)" location="top">
-                  <template #activator="{ props }">
-                    <v-icon v-bind="props" size="small" :color="mauNguon(r.source_integrity_status)">{{ iconNguon(r.source_integrity_status) }}</v-icon>
-                  </template>
-                </v-tooltip>
-              </td>
-              <td class="font-weight-medium">{{ r.customer_name || '—' }}</td>
-              <template v-if="!laPhanLoai">
-                <td>
-                  <v-chip size="x-small" :color="mauKetQua(r.severity)" variant="tonal">{{ nhanKetQua(r.severity) }}</v-chip>
+      <template v-else>
+        <!-- CCMAI-UX-002/UX-011: ghi chú "so sánh cục bộ" luôn ở trên danh sách; số đếm chỉ của trang này -->
+        <SourceStatusPanel
+          :statuses="items.map((r) => r.source_integrity_status)"
+          :scope="$t('results_source_scope_page', { n: items.length })"
+          data-testid="results-source-panel"
+        />
+
+        <!-- Bảng: cột Nguồn có chữ, không phải rê chuột mới đọc được -->
+        <div v-if="xemBang" class="rs-table-wrap">
+          <v-table density="comfortable" hover>
+            <thead>
+              <tr>
+                <th data-testid="results-source-header">{{ $t('results_col_source') }}</th>
+                <th class="rs-col-customer">{{ $t('results_col_customer') }}</th>
+                <template v-if="!laPhanLoai">
+                  <th>{{ $t('results_col_verdict') }}</th>
+                  <th class="text-right">{{ $t('results_col_score') }}</th>
+                  <th class="rs-col-wide">{{ $t('results_col_issues') }}</th>
+                </template>
+                <th v-else class="rs-col-wide">{{ $t('results_col_tags') }}</th>
+                <th>{{ $t('results_col_date') }}</th>
+                <th class="d-none d-lg-table-cell rs-col-job">{{ $t('results_col_job') }} · {{ $t('results_col_channel') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="r in items"
+                :key="r.id"
+                class="rs-row"
+                :class="`rs-row--${normalizeSourceStatus(r.source_integrity_status)}`"
+                tabindex="0"
+                @click="moChiTiet(r)"
+                @keydown.enter="moChiTiet(r)"
+                @keydown.space.prevent="moChiTiet(r)"
+              >
+                <td><SourceStatusChip :status="r.source_integrity_status" small /></td>
+                <td class="font-weight-medium">{{ r.customer_name || '—' }}</td>
+                <template v-if="!laPhanLoai">
+                  <td><VerdictChip :verdict="verdictOf(r)" small /></td>
+                  <td class="text-right tabular-nums font-weight-medium">{{ r.severity === 'SKIP' || r.score === null ? '—' : r.score }}</td>
+                  <td><span class="rs-clamp" :class="{ 'rs-muted': !r.issues.length }">{{ tomTatVanDe(r) }}</span></td>
+                </template>
+                <td v-else>
+                  <div v-if="r.tags.length" class="d-flex flex-wrap ga-1">
+                    <span v-for="t in r.tags" :key="t" class="rs-tag">{{ t }}</span>
+                  </div>
+                  <VerdictChip v-else-if="r.severity === 'SKIP'" verdict="skip" small />
+                  <span v-else class="rs-muted">—</span>
                 </td>
-                <td class="text-right">{{ r.severity === 'SKIP' || r.score === null ? '—' : r.score }}</td>
-                <td class="text-body-2"><div class="cat-dong">{{ tomTatVanDe(r) }}</div></td>
-              </template>
-              <td v-else class="text-body-2"><div class="cat-dong">{{ r.tags.length ? r.tags.join('; ') : '—' }}</div></td>
-              <td class="text-body-2 text-grey-darken-1" style="white-space: nowrap">{{ hienNgayGio(r.conversation_at) }}</td>
-              <td class="text-body-2 text-grey-darken-1 d-none d-lg-table-cell">{{ r.job_name }}</td>
-              <td class="text-body-2 text-grey-darken-1 d-none d-lg-table-cell">{{ r.channel_name }}</td>
-            </tr>
-          </tbody>
-        </v-table>
-        </v-card>
+                <td class="rs-muted rs-nowrap">{{ hienNgayGio(r.conversation_at) }}</td>
+                <td class="d-none d-lg-table-cell">
+                  <span class="rs-cell-2">{{ r.job_name }}</span>
+                  <span class="rs-cell-2 rs-muted rs-small">{{ r.channel_name }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </v-table>
+        </div>
+
+        <!-- Thẻ: bấm để mở hộp thoại chi tiết (có diễn biến cuộc chat) -->
+        <div v-else class="rs-cards">
+          <ResultCard
+            v-for="r in items"
+            :key="r.id"
+            :customer-name="r.customer_name"
+            :time="hienNgayGio(r.conversation_at)"
+            :verdict="verdictOf(r)"
+            :source-status="r.source_integrity_status"
+            :summary="tomTatThe(r)"
+            :score="!laPhanLoai && r.severity !== 'SKIP' ? r.score : null"
+            :meta="`${r.job_name} · ${r.channel_name}`"
+            @open="moChiTiet(r)"
+          />
+        </div>
+
+        <div class="rs-pager">
+          <span class="rs-muted rs-small" data-testid="results-range">{{ $t('results_range', { from: tuDong, to: denDong, total }) }}</span>
+          <v-pagination v-if="tongTrang > 1" v-model="page" :length="tongTrang" density="comfortable" :total-visible="mdAndUp ? 7 : 3" />
+        </div>
       </template>
-
-      <!-- Thẻ: bấm để xả nội dung ngay tại chỗ, không mở hộp thoại -->
-      <div v-else>
-        <!-- CCMAI-UX-002: local-only caveat above the list, as on Job Detail (R006-R1) -->
-        <v-alert type="info" variant="tonal" density="compact" class="mb-3 text-caption" data-testid="results-source-note">
-          {{ $t('results_source_note') }}
-        </v-alert>
-        <v-card v-for="r in items" :key="r.id" variant="outlined" class="mb-3">
-          <div class="d-flex align-center flex-wrap ga-2 pa-3" style="cursor: pointer" @click="doiMoRong(r)">
-            <v-chip v-if="!laPhanLoai" size="small" :color="mauKetQua(r.severity)" variant="tonal">{{ nhanKetQua(r.severity) }}</v-chip>
-            <v-chip v-else-if="r.severity === 'SKIP'" size="small" color="grey" variant="tonal">{{ $t('verdict_skip') }}</v-chip>
-            <v-chip v-else size="small" color="success" variant="tonal">{{ $t('results_classified') }}</v-chip>
-            <v-tooltip :text="$t('results_source_note')" location="top">
-              <template #activator="{ props }">
-                <v-chip v-bind="props" size="x-small" :color="mauNguon(r.source_integrity_status)" variant="tonal">
-                  <v-icon start size="12">{{ iconNguon(r.source_integrity_status) }}</v-icon>{{ nhanNguon(r.source_integrity_status) }}
-                </v-chip>
-              </template>
-            </v-tooltip>
-
-            <div class="flex-grow-1" style="min-width: 200px">
-              <div class="d-flex align-center flex-wrap ga-2">
-                <span class="font-weight-medium text-body-2">{{ r.customer_name || '—' }}</span>
-                <span class="text-caption text-grey">{{ hienNgayGio(r.conversation_at) }}</span>
-              </div>
-              <div v-if="laPhanLoai && r.tags.length" class="d-flex flex-wrap ga-1 mt-1">
-                <v-chip v-for="t in r.tags" :key="t" size="x-small" color="secondary" variant="tonal">{{ t }}</v-chip>
-              </div>
-              <div v-if="r.review" class="text-caption text-grey-darken-1 mt-1 cat-dong">{{ r.review }}</div>
-              <div class="text-caption text-grey mt-1">{{ r.job_name }} · {{ r.channel_name }}</div>
-            </div>
-
-            <v-chip v-if="!laPhanLoai && r.severity !== 'SKIP' && r.score !== null" size="x-small" :color="mauDiem(r.score)" variant="tonal">
-              {{ r.score }}/100
-            </v-chip>
-            <span v-if="!laPhanLoai" class="text-caption text-grey">{{ r.issues.length }} {{ $t('issues_label') }}</span>
-            <v-icon>{{ moRong[r.id] ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-          </div>
-
-          <div v-if="moRong[r.id]" class="px-3 pb-3">
-            <v-divider class="mb-3" />
-            <v-row>
-              <!-- Trái: diễn biến cuộc chat -->
-              <v-col cols="12" md="7">
-                <div class="d-flex align-center mb-2">
-                  <div class="text-caption text-grey font-weight-bold">
-                    <v-icon size="x-small" class="mr-1">mdi-chat</v-icon>
-                    {{ $t('results_transcript') }}
-                  </div>
-                  <v-btn
-                    :to="`/${tenantId}/messages?conv=${r.conversation_id}`"
-                    variant="text"
-                    size="x-small"
-                    color="primary"
-                    class="ml-2 pa-0"
-                    style="min-width: 0; height: auto"
-                  >
-                    <v-icon size="x-small" class="mr-1">mdi-open-in-new</v-icon>{{ $t('results_open_messages') }}
-                  </v-btn>
-                </div>
-
-                <div v-if="chat.khongCoQuyen.value" class="text-body-2 text-grey pa-3">
-                  {{ $t('results_transcript_denied') }}
-                </div>
-                <div v-else-if="!chat.messages.value[r.conversation_id]" class="text-center pa-4">
-                  <v-progress-circular indeterminate size="24" />
-                </div>
-                <div v-else-if="!chat.messages.value[r.conversation_id].length" class="text-body-2 text-grey pa-3">
-                  {{ $t('results_transcript_empty') }}
-                </div>
-                <div v-else class="pa-2 rounded khung-chat">
-                  <div v-for="msg in chat.messages.value[r.conversation_id]" :key="msg.id" class="mb-2">
-                    <div class="pa-2 rounded bong-chat" :class="msg.sender_type === 'agent' ? 'bg-blue-lighten-5 ml-8' : 'bg-surface mr-8'">
-                      <div class="d-flex align-center mb-1">
-                        <span class="text-caption font-weight-bold" :class="msg.sender_type === 'agent' ? 'text-blue' : 'text-grey-darken-2'">
-                          {{ msg.sender_name }}
-                        </span>
-                        <v-spacer />
-                        <span class="text-caption text-grey">{{ hienNgayGio(msg.sent_at) }}</span>
-                      </div>
-                      <div v-if="msg.content" class="text-body-2" style="font-size: 13px">{{ msg.content }}</div>
-                      <div v-if="msg.content_type === 'sticker'" class="text-caption font-italic">[Sticker]</div>
-                      <div v-if="chat.hasAttachments(msg)" class="mt-1">
-                        <template v-for="(att, ai) in chat.parseAttachments(msg)" :key="ai">
-                          <div v-if="chat.isImageAttachment(att)" class="mb-1">
-                            <img
-                              v-if="anhSanSang(att)"
-                              :src="chat.anhCache.value[chat.getAttachmentUrl(att)]"
-                              class="anh-dinh-kem"
-                              @click="anhPhongTo = chat.anhCache.value[chat.getAttachmentUrl(att)]"
-                            />
-                            <v-progress-circular v-else indeterminate size="20" width="2" class="ma-2" />
-                          </div>
-                          <v-chip v-else size="x-small" variant="tonal" class="mr-1" :href="chat.getAttachmentUrl(att)" target="_blank">
-                            <v-icon start size="12">mdi-paperclip</v-icon>{{ att.name || 'File' }}
-                          </v-chip>
-                        </template>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </v-col>
-
-              <!-- Phải: đánh giá chi tiết -->
-              <v-col cols="12" md="5">
-                <div class="text-caption text-grey font-weight-bold mb-2">
-                  <v-icon size="x-small" class="mr-1">mdi-alert-circle</v-icon>
-                  {{ $t('results_detail') }}
-                </div>
-                <v-alert v-if="r.review" :type="r.severity === 'PASS' ? 'success' : 'warning'" variant="tonal" density="compact" class="mb-3 text-body-2">
-                  {{ r.review }}
-                </v-alert>
-                <div v-for="(i, idx) in r.issues" :key="idx" class="mb-3">
-                  <div class="font-weight-medium text-body-2 mb-1">{{ i.rule_name }}</div>
-                  <div v-if="i.evidence" class="text-body-2 pa-2 rounded o-bang-chung">{{ i.evidence }}</div>
-                </div>
-                <div v-if="!r.issues.length && r.severity === 'PASS' && !laPhanLoai" class="text-center text-grey pa-4">
-                  <v-icon size="32" color="success">mdi-check-circle</v-icon>
-                  <div class="text-body-2 mt-2">{{ $t('no_issues') }}</div>
-                </div>
-                <v-btn variant="text" size="small" color="primary" class="mt-2 pa-0" style="min-width: 0" :to="`/${tenantId}/jobs/${r.job_id}`">
-                  {{ $t('results_open_job') }}
-                </v-btn>
-              </v-col>
-            </v-row>
-          </div>
-        </v-card>
-      </div>
-
-      <div v-if="tongTrang > 1" class="d-flex justify-center mt-4">
-        <v-pagination v-model="page" :length="tongTrang" density="compact" :total-visible="mdAndUp ? 7 : 3" />
-      </div>
     </template>
 
     <!-- Bảng lọc trên mobile -->
@@ -433,7 +341,7 @@
         <v-card-title class="d-flex align-center text-subtitle-1">
           {{ $t('results_filters') }}
           <v-spacer />
-          <v-btn icon variant="text" size="small" @click="moLocMobile = false">
+          <v-btn icon variant="text" size="44" :aria-label="$t('close')" @click="moLocMobile = false">
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </v-card-title>
@@ -522,57 +430,131 @@
       </v-card>
     </v-bottom-sheet>
 
-    <!-- Chi tiết một hội thoại -->
-    <v-dialog v-model="moChiTietDialog" max-width="720" scrollable>
-      <v-card v-if="chiTiet">
-        <v-card-title class="d-flex align-center flex-wrap ga-2 text-subtitle-1">
-          <v-chip v-if="!laPhanLoai" size="small" :color="mauKetQua(chiTiet.severity)" variant="tonal">{{ nhanKetQua(chiTiet.severity) }}</v-chip>
-          <span class="font-weight-bold">{{ chiTiet.customer_name || '—' }}</span>
-          <v-chip v-if="!laPhanLoai && chiTiet.severity !== 'SKIP' && chiTiet.score !== null" size="small" variant="tonal">{{ chiTiet.score }}/100</v-chip>
-          <v-chip size="small" :color="mauNguon(chiTiet.source_integrity_status)" variant="tonal">
-            <v-icon start size="14">{{ iconNguon(chiTiet.source_integrity_status) }}</v-icon>{{ nhanNguon(chiTiet.source_integrity_status) }}
-          </v-chip>
-          <v-spacer />
-          <v-btn icon variant="text" size="small" @click="moChiTietDialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </v-card-title>
-        <v-divider />
-        <v-card-text>
-          <div class="text-caption text-grey mb-3">
-            {{ chiTiet.job_name }} · {{ chiTiet.channel_name }} ·
-            {{ $t('results_col_date') }}: {{ hienNgayGio(chiTiet.conversation_at) }} ·
-            {{ $t('results_date_eval') }}: {{ hienNgayGio(chiTiet.evaluated_at) }}
-          </div>
-          <div class="text-caption text-grey-darken-1 mb-3">
-            <v-icon size="12" class="mr-1">mdi-information-outline</v-icon>{{ $t('results_source_note') }}
+    <!-- Chi tiết một kết quả -->
+    <AppDialog
+      v-if="chiTiet"
+      v-model="moChiTietDialog"
+      :title="chiTiet.customer_name || '—'"
+      :subtitle="`${chiTiet.job_name} · ${chiTiet.channel_name}`"
+      :max-width="1100"
+    >
+      <template #meta>
+        <VerdictChip :verdict="verdictOf(chiTiet)" small />
+        <span v-if="!laPhanLoai && chiTiet.severity !== 'SKIP' && chiTiet.score !== null" class="tabular-nums font-weight-bold rs-on-surface">{{ chiTiet.score }}/100</span>
+        <SourceStatusChip :status="chiTiet.source_integrity_status" small />
+      </template>
+
+      <div class="rs-detail" data-testid="results-dialog">
+        <section class="rs-detail__side">
+          <section
+            class="rs-src-block"
+            :class="`rs-src-block--${normalizeSourceStatus(chiTiet.source_integrity_status)}`"
+            :aria-label="$t('ui_source_panel_title')"
+          >
+            <div class="d-flex align-center flex-wrap ga-2">
+              <h3 class="rs-h3">{{ $t('ui_source_panel_title') }}</h3>
+              <SourceStatusChip :status="chiTiet.source_integrity_status" small />
+            </div>
+            <p v-if="goiYNguon(chiTiet)" class="rs-src-block__hint" data-testid="source-hint">{{ goiYNguon(chiTiet) }}</p>
+            <p class="rs-muted rs-small rs-m0" data-testid="results-dialog-source-note">{{ $t('results_source_note') }}</p>
+          </section>
+
+          <dl class="rs-dates">
+            <div><dt class="rs-muted">{{ $t('results_date_conv') }}</dt><dd>{{ ngayGioDay(chiTiet.conversation_at) }}</dd></div>
+            <div><dt class="rs-muted">{{ $t('results_date_eval') }}</dt><dd>{{ ngayGioDay(chiTiet.evaluated_at) }}</dd></div>
+          </dl>
+
+          <div v-if="chiTiet.review" class="rs-stack-sm">
+            <div class="d-flex align-center justify-space-between ga-2">
+              <h3 class="rs-h3">{{ $t('results_review') }}</h3>
+              <AiGeneratedLabel />
+            </div>
+            <p class="rs-body rs-m0">{{ chiTiet.review }}</p>
           </div>
 
-          <v-alert v-if="chiTiet.review" :type="chiTiet.severity === 'PASS' ? 'success' : 'warning'" variant="tonal" density="compact" class="mb-3 text-body-2">
-            {{ chiTiet.review }}
-          </v-alert>
-
-          <div v-if="laPhanLoai && chiTiet.tags.length" class="mb-3 d-flex flex-wrap ga-2">
-            <v-chip v-for="t in chiTiet.tags" :key="t" size="small" color="secondary" variant="tonal">{{ t }}</v-chip>
+          <!-- Chất lượng CSKH: vấn đề. Phân loại: nhãn và căn cứ gắn nhãn — không bao giờ gọi là "vấn đề" -->
+          <div v-if="!laPhanLoai" class="rs-stack-sm" data-testid="dialog-issues">
+            <h3 class="rs-h3">{{ $t('results_issues_title', { n: chiTiet.issues.length }) }}</h3>
+            <p v-if="!chiTiet.issues.length && chiTiet.severity !== 'SKIP'" class="rs-muted rs-m0">{{ $t('results_no_issues') }}</p>
+            <div v-for="(i, idx) in chiTiet.issues" :key="idx" class="rs-issue">
+              <span class="d-flex align-center flex-wrap ga-2">
+                <span v-if="i.severity === 'NGHIEM_TRONG' || i.severity === 'CAN_CAI_THIEN'" :class="`rs-sev rs-sev--${i.severity === 'NGHIEM_TRONG' ? 'critical' : 'warning'}`">
+                  {{ i.severity === 'NGHIEM_TRONG' ? $t('severity_critical') : $t('severity_warning') }}
+                </span>
+                <b>{{ i.rule_name }}</b>
+              </span>
+              <span v-if="i.evidence" class="rs-quote">{{ i.evidence }}</span>
+            </div>
           </div>
+          <template v-else>
+            <div class="rs-stack-sm" data-testid="dialog-tags">
+              <h3 class="rs-h3">{{ $t('results_tags_title', { n: chiTiet.tags.length }) }}</h3>
+              <div v-if="chiTiet.tags.length" class="d-flex flex-wrap ga-2">
+                <span v-for="t in chiTiet.tags" :key="t" class="rs-tag rs-tag--lg">{{ t }}</span>
+              </div>
+              <p v-else class="rs-muted rs-m0">—</p>
+            </div>
+            <div v-if="chiTiet.issues.length" class="rs-stack-sm" data-testid="dialog-tag-evidence">
+              <h3 class="rs-h3">{{ $t('results_tag_evidence') }}</h3>
+              <div v-for="(i, idx) in chiTiet.issues" :key="idx" class="rs-issue">
+                <b>{{ i.rule_name }}</b>
+                <span v-if="i.evidence" class="rs-quote rs-quote--tag">{{ i.evidence }}</span>
+              </div>
+            </div>
+          </template>
+        </section>
 
-          <div v-if="chiTiet.issues.length">
-            <div class="text-body-2 font-weight-medium mb-2">{{ $t('results_col_issues') }}</div>
-            <v-card v-for="(i, idx) in chiTiet.issues" :key="idx" variant="tonal" class="pa-3 mb-2">
-              <div class="text-body-2 font-weight-medium">{{ i.rule_name }}</div>
-              <div v-if="i.evidence" class="text-body-2 text-grey-darken-2 mt-1">{{ i.evidence }}</div>
-            </v-card>
+        <section class="rs-detail__chat" :aria-label="$t('results_transcript')">
+          <div class="d-flex align-center justify-space-between flex-wrap ga-2">
+            <h3 class="rs-h3">{{ $t('results_transcript') }}</h3>
+            <v-btn :to="`/${tenantId}/messages?conv=${chiTiet.conversation_id}`" variant="text" color="primary" prepend-icon="mdi-open-in-new">
+              {{ $t('results_open_messages') }}
+            </v-btn>
           </div>
-          <div v-else-if="!laPhanLoai" class="text-body-2 text-grey">{{ $t('no_issues') }}</div>
-        </v-card-text>
-        <v-divider />
-        <v-card-actions>
-          <v-btn variant="text" :to="`/${tenantId}/jobs/${chiTiet.job_id}`">{{ $t('results_open_job') }}</v-btn>
-          <v-spacer />
-          <v-btn variant="flat" color="primary" @click="moChiTietDialog = false">{{ $t('close') }}</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+          <p v-if="chat.khongCoQuyen.value" class="rs-muted rs-m0">{{ $t('results_transcript_denied') }}</p>
+          <div v-else-if="!chat.messages.value[chiTiet.conversation_id]" class="text-center pa-4">
+            <v-progress-circular indeterminate size="24" />
+          </div>
+          <p v-else-if="!chat.messages.value[chiTiet.conversation_id].length" class="rs-muted rs-m0">{{ $t('results_transcript_empty') }}</p>
+          <div v-else class="rs-transcript">
+            <div
+              v-for="msg in chat.messages.value[chiTiet.conversation_id]"
+              :key="msg.id"
+              class="rs-msg"
+              :class="msg.sender_type === 'agent' ? 'rs-msg--agent' : 'rs-msg--customer'"
+            >
+              <div class="rs-msg__who">{{ msg.sender_name }} · {{ hienNgayGio(msg.sent_at) }}</div>
+              <div class="rs-msg__bubble">
+                <div v-if="msg.content">{{ msg.content }}</div>
+                <div v-if="msg.content_type === 'sticker'" class="font-italic">[Sticker]</div>
+                <div v-if="chat.hasAttachments(msg)" class="mt-1">
+                  <template v-for="(att, ai) in chat.parseAttachments(msg)" :key="ai">
+                    <div v-if="chat.isImageAttachment(att)" class="mb-1">
+                      <img
+                        v-if="anhSanSang(att)"
+                        :src="chat.anhCache.value[chat.getAttachmentUrl(att)]"
+                        alt=""
+                        class="rs-msg__img"
+                        @click="anhPhongTo = chat.anhCache.value[chat.getAttachmentUrl(att)]"
+                      />
+                      <v-progress-circular v-else indeterminate size="20" width="2" class="ma-2" />
+                    </div>
+                    <v-chip v-else size="x-small" variant="tonal" class="mr-1" :href="chat.getAttachmentUrl(att)" target="_blank">
+                      <v-icon start size="12">mdi-paperclip</v-icon>{{ att.name || 'File' }}
+                    </v-chip>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <template #actions>
+        <v-btn variant="outlined" :to="`/${tenantId}/jobs/${chiTiet.job_id}`">{{ $t('results_open_job') }}</v-btn>
+        <v-btn variant="flat" color="primary" @click="moChiTietDialog = false">{{ $t('close') }}</v-btn>
+      </template>
+    </AppDialog>
 
     <v-dialog :model-value="!!anhPhongTo" max-width="900" @update:model-value="anhPhongTo = ''">
       <v-img :src="anhPhongTo" contain style="background: rgba(0, 0, 0, 0.9)" @click="anhPhongTo = ''" />
@@ -583,12 +565,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
 import { useI18n } from 'vue-i18n'
 import api from '../api'
 import { useChatTranscript } from '../composables/useChatTranscript'
+import AppDialog from '../components/ui/AppDialog.vue'
+import AiGeneratedLabel from '../components/ui/AiGeneratedLabel.vue'
+import FilterBar from '../components/ui/FilterBar.vue'
+import ResultCard from '../components/ui/ResultCard.vue'
+import SourceStatusChip from '../components/ui/SourceStatusChip.vue'
+import SourceStatusPanel from '../components/ui/SourceStatusPanel.vue'
+import VerdictChip from '../components/ui/VerdictChip.vue'
+import { normalizeSourceStatus, verdictFromSeverity, type Verdict } from '../utils/review'
+import { formatDateTime, type UiLocale } from '../utils/format'
 
 interface IssueItem {
   rule_name: string
@@ -618,7 +609,7 @@ interface JobFacet { id: string; name: string; job_type: string }
 interface ChannelFacet { id: string; name: string }
 
 const route = useRoute()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { mdAndUp } = useDisplay()
 
 const tenantId = computed(() => route.params.tenantId as string)
@@ -628,6 +619,8 @@ const dangTai = ref(false)
 const dangXuat = ref('')
 const baoLoi = ref(false)
 const noiDungLoi = ref('')
+// Lỗi tải hiện ngay tại chỗ có nút thử lại, không chỉ là snackbar thoáng qua
+const loiTai = ref<'' | 'facets' | 'results'>('')
 
 const facets = ref<{
   types: Record<string, { jobs: number; results: number }>
@@ -652,9 +645,14 @@ const page = ref(1)
 const pageSize = 25
 // Nhớ kiểu xem đã chọn để lần sau vào khỏi phải bấm lại
 const KHOA_KIEU_XEM = 'cqa_results_view'
-const cheDoXem = ref<'card' | 'table'>(
-  (localStorage.getItem(KHOA_KIEU_XEM) as 'card' | 'table') || 'table'
-)
+function docKieuXem(): 'card' | 'table' {
+  try {
+    return localStorage.getItem(KHOA_KIEU_XEM) === 'card' ? 'card' : 'table'
+  } catch {
+    return 'table'
+  }
+}
+const cheDoXem = ref<'card' | 'table'>(docKieuXem())
 const moLocMobile = ref(false)
 
 const items = ref<ResultItem[]>([])
@@ -664,8 +662,6 @@ const counts = ref({ all: 0, pass: 0, fail: 0, skip: 0, classified: 0 })
 const chiTiet = ref<ResultItem | null>(null)
 const moChiTietDialog = ref(false)
 
-// Thẻ xả nội dung ngay tại chỗ; bảng thì vẫn mở hộp thoại vì dòng bảng quá hẹp
-const moRong = ref<Record<string, boolean>>({})
 const anhPhongTo = ref('')
 const chat = useChatTranscript()
 
@@ -687,9 +683,27 @@ const laPhanLoai = computed(() => jobType.value === 'classification')
 const coQC = computed(() => (facets.value.types.qc_analysis?.jobs || 0) > 0)
 const coPhanLoai = computed(() => (facets.value.types.classification?.jobs || 0) > 0)
 const hienTab = computed(() => coQC.value && coPhanLoai.value)
-const trangRong = computed(() => !dangTaiFacets.value && !coQC.value && !coPhanLoai.value)
+const trangRong = computed(() => !dangTaiFacets.value && !loiTai.value && !coQC.value && !coPhanLoai.value)
 const xemBang = computed(() => mdAndUp.value && cheDoXem.value === 'table')
 const tongTrang = computed(() => Math.max(1, Math.ceil(total.value / pageSize)))
+// Khoảng dòng của trang đang xem, trên tổng số của máy chủ
+const tuDong = computed(() => (items.value.length ? (page.value - 1) * pageSize + 1 : 0))
+const denDong = computed(() => (page.value - 1) * pageSize + items.value.length)
+
+const chipKetQua = computed(() =>
+  laPhanLoai.value
+    ? [
+        { value: 'all', label: t('filter_all'), count: counts.value.all },
+        { value: 'classified', label: t('results_classified'), count: counts.value.classified },
+        { value: 'skip', label: t('verdict_skip'), count: counts.value.skip },
+      ]
+    : [
+        { value: 'all', label: t('filter_all'), count: counts.value.all },
+        { value: 'fail', label: t('filter_failed'), count: counts.value.fail },
+        { value: 'pass', label: t('filter_passed'), count: counts.value.pass },
+        { value: 'skip', label: t('verdict_skip'), count: counts.value.skip },
+      ],
+)
 
 const locDiem = computed(() => khoangDiem.value[0] !== 0 || khoangDiem.value[1] !== 100)
 const soLoc = computed(
@@ -720,6 +734,10 @@ function hienNgayGio(s: string | null) {
   if (Number.isNaN(d.getTime())) return '—'
   const hai = (n: number) => String(n).padStart(2, '0')
   return `${hai(d.getDate())}/${hai(d.getMonth() + 1)} ${hai(d.getHours())}:${hai(d.getMinutes())}`
+}
+
+function ngayGioDay(s: string | null) {
+  return formatDateTime(s, locale.value as UiLocale)
 }
 
 // Template đã tự bóc ref nên nhận thẳng mảng; sửa tại chỗ vẫn giữ tính phản ứng.
@@ -765,50 +783,29 @@ function datVerdict(v: string) {
   verdict.value = verdict.value === v ? 'all' : v
 }
 
-function mauKetQua(severity: string) {
-  if (severity === 'PASS') return 'success'
-  if (severity === 'SKIP') return 'grey'
-  return 'error'
+// Phân loại không chấm đạt/không đạt: chỉ "đã phân loại" hoặc "bỏ qua"
+function verdictOf(r: ResultItem): Verdict {
+  if (laPhanLoai.value) return r.severity === 'SKIP' ? 'skip' : 'classified'
+  return verdictFromSeverity(r.severity)
 }
 
-function nhanKetQua(severity: string) {
-  if (severity === 'PASS') return t('verdict_pass')
-  if (severity === 'SKIP') return t('verdict_skip')
-  return t('verdict_fail')
-}
-
-// CCMAI-RUNTIME-004: cục bộ đối chiếu snapshot với tin nhắn hiện tại — không
-// bao giờ kết luận "an toàn"/"còn hiện hành", chỉ báo bốn trạng thái đã định.
-function mauNguon(status: string) {
-  if (status === 'changed_since_analysis') return 'error'
-  if (status === 'verification_unavailable') return 'warning'
-  if (status === 'legacy_unverified') return 'grey'
-  return 'grey-lighten-1' // bound_currentness_unverified
-}
-
-function iconNguon(status: string) {
-  if (status === 'changed_since_analysis') return 'mdi-alert-circle'
-  if (status === 'verification_unavailable') return 'mdi-help-circle'
-  if (status === 'legacy_unverified') return 'mdi-clock-outline'
-  return 'mdi-shield-alert-outline' // bound_currentness_unverified
-}
-
-function nhanNguon(status: string) {
-  if (status === 'changed_since_analysis') return t('results_source_changed')
-  if (status === 'verification_unavailable') return t('results_source_unavailable')
-  if (status === 'legacy_unverified') return t('results_source_legacy')
-  return t('results_source_unverified') // bound_currentness_unverified
+// CCMAI-RUNTIME-004: chỉ giải thích hai trạng thái cần xem lại; không bao giờ nói "an toàn".
+function goiYNguon(r: ResultItem) {
+  const s = normalizeSourceStatus(r.source_integrity_status)
+  if (s === 'changed_since_analysis') return t('results_source_changed_hint')
+  if (s === 'verification_unavailable') return t('results_source_unavailable_hint')
+  return ''
 }
 
 function tomTatVanDe(r: ResultItem) {
-  if (!r.issues.length) return r.severity === 'SKIP' ? r.review || '—' : '—'
+  if (!r.issues.length) return r.severity === 'SKIP' ? t('results_skip_reason', { reason: r.review || '—' }) : '—'
   return r.issues.map(i => (i.evidence ? `${i.rule_name}: ${i.evidence}` : i.rule_name)).join('; ')
 }
 
-function doiMoRong(r: ResultItem) {
-  const dangMo = !moRong.value[r.id]
-  moRong.value[r.id] = dangMo
-  if (dangMo) chat.loadMessages(tenantId.value, r.conversation_id)
+function tomTatThe(r: ResultItem) {
+  if (laPhanLoai.value) return r.tags.length ? t('results_tags_summary', { tags: r.tags.join(', ') }) : r.review
+  if (r.issues.length) return t('results_issue_summary', { n: r.issues.length, names: r.issues.map(i => i.rule_name).join(', ') })
+  return r.review
 }
 
 function anhSanSang(att: { url?: string; local_path?: string }) {
@@ -817,15 +814,10 @@ function anhSanSang(att: { url?: string; local_path?: string }) {
   return !!cache && cache !== 'loading'
 }
 
-function mauDiem(score: number) {
-  if (score >= 80) return 'success'
-  if (score >= 50) return 'warning'
-  return 'error'
-}
-
 function moChiTiet(r: ResultItem) {
   chiTiet.value = r
   moChiTietDialog.value = true
+  chat.loadMessages(tenantId.value, r.conversation_id)
 }
 
 function thamSo() {
@@ -850,6 +842,7 @@ function thamSo() {
 
 async function taiFacets() {
   dangTaiFacets.value = true
+  loiTai.value = ''
   try {
     const { data } = await api.get(`/tenants/${tenantId.value}/results/facets`)
     facets.value = data
@@ -857,28 +850,36 @@ async function taiFacets() {
     if (!coQC.value && coPhanLoai.value) jobType.value = 'classification'
     else jobType.value = 'qc_analysis'
   } catch {
-    hienLoi(t('results_load_error'))
+    loiTai.value = 'facets'
   } finally {
     dangTaiFacets.value = false
   }
 }
 
 async function taiKetQua() {
-  if (trangRong.value) return
+  if (trangRong.value || loiTai.value === 'facets') return
   dangTai.value = true
+  loiTai.value = ''
   try {
     const { data } = await api.get(`/tenants/${tenantId.value}/results`, {
       params: { ...thamSo(), page: page.value, page_size: pageSize },
     })
-    moRong.value = {}
     items.value = data.items || []
     total.value = data.total || 0
     counts.value = data.counts || { all: 0, pass: 0, fail: 0, skip: 0, classified: 0 }
   } catch {
-    hienLoi(t('results_load_error'))
+    loiTai.value = 'results'
   } finally {
     dangTai.value = false
   }
+}
+
+async function thuLai() {
+  if (loiTai.value === 'facets') {
+    await taiFacets()
+    if (loiTai.value) return
+  }
+  await taiKetQua()
 }
 
 async function xuatFile(format: 'csv' | 'xlsx') {
@@ -946,83 +947,366 @@ onMounted(async () => {
   await taiFacets()
   await taiKetQua()
 })
+// Rời trang trong lúc đang chờ debounce thì không gửi thêm yêu cầu nữa
+onBeforeUnmount(() => {
+  if (henGio) clearTimeout(henGio)
+})
 </script>
 
 <style scoped>
-/* Hạ chiều cao ô tìm kiếm cho bằng nút lọc — Vuetify không có prop sẵn cho cỡ này */
-.loc-tim {
-  max-width: 200px;
+.rs-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.loc-tim :deep(.v-field) {
-  min-height: 28px;
-  font-size: 0.875rem;
+.rs-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 16px;
 }
-.loc-tim :deep(.v-field__input) {
-  min-height: 28px;
-  padding-top: 0;
-  padding-bottom: 0;
+.rs-head__titles {
+  flex: 1 1 280px;
+  min-width: 0;
 }
-.loc-tim :deep(.v-field__prepend-inner),
-.loc-tim :deep(.v-field__clearable) {
-  padding-top: 0;
+.rs-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.rs-subtitle {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+.rs-export {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.rs-export__menu-caption {
+  white-space: normal;
+  line-height: 1.4;
+  max-width: 280px;
+}
+.rs-muted {
+  color: rgb(var(--v-theme-text-muted));
+}
+.rs-on-surface {
+  color: rgb(var(--v-theme-on-surface));
+}
+.rs-small {
+  font-size: 12px;
+}
+.rs-m0 {
+  margin: 0;
+}
+.rs-body {
+  font-size: 14px;
+  line-height: 1.55;
+}
+.rs-h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.rs-stack-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rs-verdicts {
+  display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 12px;
 }
-.loc-tim :deep(.v-field__prepend-inner .v-icon) {
-  font-size: 18px;
+.rs-verdicts__bar {
+  min-width: 0;
+  max-width: 100%;
+}
+.rs-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgb(var(--v-theme-fail));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+}
+.rs-error__text {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.rs-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 20px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+  text-align: center;
+}
+.rs-empty p {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+.rs-empty__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.rs-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+}
+.rs-table-wrap :deep(th) {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: rgb(var(--v-theme-text-muted)) !important;
+  white-space: nowrap;
+}
+.rs-table-wrap :deep(th),
+.rs-table-wrap :deep(td) {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+.rs-table-wrap :deep(td) {
+  height: auto !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 14px;
+}
+.rs-col-wide {
+  width: 30%;
+  min-width: 180px;
+}
+.rs-col-customer {
+  min-width: 140px;
+}
+.rs-col-job {
+  min-width: 150px;
+}
+.rs-cell-2 {
+  display: block;
+  line-height: 1.4;
+}
+.rs-row {
+  cursor: pointer;
+}
+.rs-row:focus-visible {
+  outline: 2px solid rgb(var(--v-theme-primary));
+  outline-offset: -2px;
+}
+.rs-row--changed_since_analysis {
+  background: rgba(var(--v-theme-src-changed), 0.06);
+}
+.rs-row--changed_since_analysis td:first-child {
+  box-shadow: inset 4px 0 0 rgb(var(--v-theme-src-changed));
+}
+.rs-row--verification_unavailable td:first-child {
+  box-shadow: inset 4px 0 0 rgb(var(--v-theme-src-unavailable));
+}
+.rs-nowrap {
+  white-space: nowrap;
 }
 /* Vấn đề thường dài; cắt còn 2 dòng cho bảng dễ quét, bấm vào dòng xem đủ */
-.cat-dong {
-  line-height: 1.35;
+.rs-clamp {
+  line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.cat-dong-3 {
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.rs-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: rgba(var(--v-theme-primary), 0.1);
+  color: rgb(var(--v-theme-primary));
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
 }
-.khung-chat {
-  background: rgba(var(--v-theme-on-surface), 0.04);
-  max-height: 500px;
+.rs-tag--lg {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+.rs-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rs-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.rs-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+@media (min-width: 960px) {
+  .rs-detail {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+  /* Desktop: hội thoại bên trái như canvas; mobile: phần đánh giá đọc trước */
+  .rs-detail__chat {
+    order: -1;
+  }
+}
+.rs-detail__side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rs-detail__chat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.rs-src-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-left: 4px solid rgb(var(--v-theme-src-legacy));
+  border-radius: 12px;
+}
+.rs-src-block--changed_since_analysis {
+  border-left-color: rgb(var(--v-theme-src-changed));
+}
+.rs-src-block--verification_unavailable {
+  border-left-color: rgb(var(--v-theme-src-unavailable));
+}
+.rs-src-block__hint {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.rs-dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+  margin: 0;
+  font-size: 13px;
+}
+.rs-dates dd {
+  margin: 0;
+  font-weight: 600;
+}
+.rs-issue {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  font-size: 14px;
+}
+.rs-quote {
+  padding: 6px 10px;
+  border-left: 3px solid rgb(var(--v-theme-src-changed));
+  border-radius: 4px;
+  background: rgba(var(--v-theme-src-changed), 0.06);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.rs-quote--tag {
+  border-left-color: rgb(var(--v-theme-primary));
+  background: rgba(var(--v-theme-primary), 0.06);
+}
+.rs-sev {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.rs-sev--critical {
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+}
+.rs-sev--warning {
+  background: rgb(var(--v-theme-src-changed-bg));
+  color: rgb(var(--v-theme-src-changed));
+}
+.rs-transcript {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 60vh;
   overflow-y: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(var(--v-theme-on-surface), 0.03);
 }
-.bong-chat {
-  border: 1px solid rgba(var(--v-theme-on-surface), 0.12);
+.rs-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 82%;
 }
-.anh-dinh-kem {
+.rs-msg--customer {
+  align-self: flex-start;
+}
+.rs-msg--agent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+.rs-msg__who {
+  font-size: 11px;
+  color: rgb(var(--v-theme-text-muted));
+}
+.rs-msg__bubble {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  border: 1px solid rgb(var(--v-theme-border));
+  background: rgb(var(--v-theme-surface));
+  overflow-wrap: anywhere;
+}
+.rs-msg--agent .rs-msg__bubble {
+  background: rgba(var(--v-theme-primary), 0.08);
+}
+.rs-msg__img {
   max-width: 180px;
   max-height: 180px;
   border-radius: 8px;
   cursor: pointer;
 }
-.o-bang-chung {
-  font-size: 13px;
-  background: rgba(var(--v-theme-warning), 0.08);
-  border-left: 3px solid rgb(var(--v-theme-warning));
-}
-/* Hàng nào có vấn đề dài thì cần cao hơn mức mặc định của bảng compact */
-:deep(.v-table td) {
-  height: auto;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-.hang-chip {
-  overflow-x: auto;
-  scrollbar-width: none;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-}
-.hang-chip::-webkit-scrollbar {
-  display: none;
+/* Ô tìm kiếm cao bằng các nút lọc */
+.loc-tim {
+  max-width: 240px;
 }
 .loc-nut {
   text-transform: none;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 </style>

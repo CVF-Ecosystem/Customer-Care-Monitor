@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "DESIGN",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -20,7 +20,9 @@
     "CCMAI-UX-000 REVIEW PASS / FREEZE OPEN after UX000-R1: all three layout avatar initials use theme on-colors; independent 92/92 frontend tests, forced typecheck, rendered contrast evidence and 36-page capture review passed. UX-010 may move to WORK_ORDER and bounded BUILD.",
     "CCMAI-UX-010 REVIEW PASS / FREEZE OPEN after UX010-R1: Job Detail's evaluated card now opens the exact non-SKIP filter; classification history uses analyzed/tag wording backed by engine counters. Independent 114/114 frontend tests, forced vue-tsc, diff/catalog checks, project doctor 25/25 and source/capture inspection passed."
   ],
-  "buildInProgress": [],
+  "buildInProgress": [
+    "CCMAI-UX-011 REVIEW_PENDING: Results screen rebuilt on UX-000 components within docs/work_orders/CCMAI_UX_011.md (Results.vue, one additive SourceStatusPanel scope prop, additive results_* i18n keys, focused tests). Page-scoped source panel, text source chips, scope captions for chips/range/export, dialog with transcript, per-status hints, QC issues separated from classification tags, inline load error with retry; no confidence and no needs-review filter (BLOCKED_API_CONTRACT). 127/127 frontend tests, vue-tsc, build, diff check; disposable captures 36 pages with 0 JS errors/overflow/external requests plus dialog states. Awaiting independent Codex REVIEW."
+  ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
     "CCMAI-DOCS-001",
@@ -40,7 +42,8 @@
     "CCMAI-UX-000",
     "CCMAI-UX-002",
     "CCMAI-UX-001a",
-    "CCMAI-UX-010"
+    "CCMAI-UX-010",
+    "CCMAI-UX-011"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -50,7 +53,7 @@
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them.",
     "CCMAI-UX-000 changes the global theme and font; existing screens keep their own source-status colors and sync labels until screen tranches (UX-010+). The F1 onboarding bar remains a later-screen item; avatar contrast UX000-R1 passed independent re-review.",
     "UX-02 dashboard 'issues' API field still counts every job result; Codex decided to preserve it and add qc_violation_count in a separate R2 API tranche. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
-    "UX-011 Results is in DESIGN under docs/specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md. Owner directed independent redesign first: Claude's UX route excludes dashboard QC count, demo scheduler/sync, backend/API/stores/schema/provider and any new Results count/filter/export contract. No UX-011 BUILD or REVIEW claim yet."
+    "UX-011 Results BUILD is REVIEW_PENDING (not reviewed). Its source-status panel is page-scoped because /results computes source status per returned page; a needs-review/source-status filter, global source counts, confidence on Results, quote highlighting and page/run-scoped export are BLOCKED_API_CONTRACT proposals in docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md §5. Dashboard QC count, demo scheduler/sync and backend/API/store/schema/provider remain outside UX-011."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -99,7 +102,8 @@
     "docs/reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md",
     "docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md",
     "docs/reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md",
-    "docs/reviews/CCMAI_UX_010_REPAIR_R1_REREVIEW_2026-09-28.md"
+    "docs/reviews/CCMAI_UX_010_REPAIR_R1_REREVIEW_2026-09-28.md",
+    "docs/reviews/RESULTS_SCREEN_UX011_BUILD_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

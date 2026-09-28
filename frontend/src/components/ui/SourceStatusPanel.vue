@@ -7,6 +7,7 @@
     <div class="ccma-src-panel__head">
       <v-icon size="20" aria-hidden="true">{{ hasChanged ? 'mdi-alert-outline' : 'mdi-information-outline' }}</v-icon>
       <span class="ccma-src-panel__title">{{ t('ui_source_panel_title') }}</span>
+      <span v-if="scope" class="ccma-src-panel__scope" data-testid="source-scope">· {{ scope }}</span>
     </div>
     <p class="ccma-src-panel__note" data-testid="source-note">{{ t('results_source_note') }}</p>
     <ul v-if="counts.length" class="ccma-src-panel__counts">
@@ -25,7 +26,11 @@ import { useI18n } from 'vue-i18n'
 import SourceStatusChip from './SourceStatusChip.vue'
 import { countSourceStatuses } from '../../utils/review'
 
-const props = defineProps<{ statuses: (string | null | undefined)[] }>()
+const props = defineProps<{
+  statuses: (string | null | undefined)[]
+  // Optional scope of the counts, e.g. "trên trang này (25 kết quả)" (CCMAI-UX-011).
+  scope?: string
+}>()
 const { t } = useI18n()
 
 const counts = computed(() => countSourceStatuses(props.statuses))
@@ -46,7 +51,8 @@ const hasChanged = computed(() => counts.value.some((c) => c.status === 'changed
 .ccma-src-panel__head {
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 4px 8px;
 }
 .ccma-src-panel--alert .ccma-src-panel__head {
   color: rgb(var(--v-theme-src-changed));
@@ -54,6 +60,11 @@ const hasChanged = computed(() => counts.value.some((c) => c.status === 'changed
 .ccma-src-panel__title {
   font-size: 14px;
   font-weight: 600;
+}
+.ccma-src-panel__scope {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(var(--v-theme-text-muted));
 }
 .ccma-src-panel__note {
   margin: 4px 0 0;

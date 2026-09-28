@@ -85,6 +85,13 @@ describe('SourceStatusPanel', () => {
     expect(items[0].text()).toContain('2')
     expect(w.classes()).toContain('ccma-src-panel--alert')
   })
+
+  it('shows an optional scope only when given (CCMAI-UX-011, additive)', () => {
+    expect(mountUi(SourceStatusPanel, { statuses: ['legacy_unverified'] }).find('[data-testid="source-scope"]').exists()).toBe(false)
+    const w = mountUi(SourceStatusPanel, { statuses: ['legacy_unverified'], scope: 'trên trang này (1 kết quả)' })
+    expect(w.find('[data-testid="source-scope"]').text()).toBe('· trên trang này (1 kết quả)')
+    expect(w.find('[data-testid="source-note"]').text()).toBe(vi.results_source_note)
+  })
 })
 
 describe('SyncStatusChip', () => {

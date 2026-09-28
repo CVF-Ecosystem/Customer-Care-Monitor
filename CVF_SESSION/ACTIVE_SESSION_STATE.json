@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "DESIGN",
-  "activePhase": "DESIGN",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude: acknowledge CCMAI-UX-011 Results DESIGN / SPEC_AUTHOR in the active handoff, then follow docs/specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md. Prepare canvas and SPEC; write a bounded frontend-only WORK_ORDER before BUILD. Exclude dashboard qc_violation_count, demo scheduler/sync, backend/API/store/schema/provider and any other held intersection. Return local REVIEW_PENDING for independent Codex review. UX-010 and UX-000/002/001a REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "Codex: independent REVIEW of CCMAI-UX-011 Results BUILD (local REVIEW_PENDING commit) against docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md, docs/work_orders/CCMAI_UX_011.md and docs/reviews/RESULTS_SCREEN_UX011_BUILD_2026-09-28.md. The five SPEC §5 BLOCKED_API_CONTRACT proposals, dashboard qc_violation_count and demo scheduler/sync need separately routed R2 tranches. UX-010 and UX-000/002/001a REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex) routed UX-011 DESIGN; Claude SPEC_AUTHOR next",
+  "activeRole": "COMMIT_STEWARD (Claude) returned UX-011 REVIEW_PENDING; REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

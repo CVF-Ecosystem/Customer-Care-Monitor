@@ -16,6 +16,10 @@ vi.mock('../api', () => ({ default: { get: (...args: unknown[]) => apiGet(...arg
 
 import Results from '../views/Results.vue'
 
+// CCMAI-UX-011 moved the note into the shared SourceStatusPanel above the list, and cards
+// into ResultCard. Selectors follow the new structure; the three assertions are unchanged.
+const NOTE = '[data-testid="results-source-panel"] [data-testid="source-note"]'
+
 const facets = {
   types: { qc_analysis: { jobs: 1, results: 2 } },
   jobs: [{ id: 'j1', name: 'QC mẫu', job_type: 'qc_analysis' }],
@@ -85,7 +89,7 @@ describe('Results source note (UX-07)', () => {
     localStorage.setItem('cqa_results_view', 'table')
     setup([row('1', 'legacy_unverified'), row('2', 'changed_since_analysis')])
     const w = await mountResults()
-    const note = w.find('[data-testid="results-source-note"]')
+    const note = w.find(NOTE)
     expect(note.exists()).toBe(true)
     expect(note.text()).toBe(viMessages.results_source_note)
     const table = w.find('table')
@@ -100,10 +104,10 @@ describe('Results source note (UX-07)', () => {
     localStorage.setItem('cqa_results_view', 'card')
     setup([row('1', 'verification_unavailable')])
     const w = await mountResults()
-    const note = w.find('[data-testid="results-source-note"]')
+    const note = w.find(NOTE)
     expect(note.exists()).toBe(true)
     expect(w.find('table').exists()).toBe(false)
-    const firstCard = w.find('.v-card--variant-outlined')
+    const firstCard = w.find('.ccma-rcard')
     expect(firstCard.exists()).toBe(true)
     expect(note.element.compareDocumentPosition(firstCard.element) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
   })
@@ -111,6 +115,6 @@ describe('Results source note (UX-07)', () => {
   it('no rows: no note, because there is no status to qualify', async () => {
     setup([])
     const w = await mountResults()
-    expect(w.find('[data-testid="results-source-note"]').exists()).toBe(false)
+    expect(w.find(NOTE).exists()).toBe(false)
   })
 })
