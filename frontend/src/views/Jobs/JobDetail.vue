@@ -95,7 +95,7 @@
       <!-- Metrics -->
       <div class="jd-metrics">
         <template v-if="!isClassification">
-          <MetricCard :label="$t('jd_m_evaluated')" :value="qc.evaluated" :hint="$t('jd_m_evaluated_hint', { total: qc.total, skipped: qc.skipped })" :to="filterLink('all')" />
+          <MetricCard :label="$t('jd_m_evaluated')" :value="qc.evaluated" :hint="$t('jd_m_evaluated_hint', { total: qc.total, skipped: qc.skipped })" :to="filterLink('evaluated')" />
           <MetricCard :label="$t('jd_m_pass_rate')" :value="qc.passRate" suffix="%" :to="filterLink('pass')" />
           <MetricCard :label="$t('jd_m_issues')" :value="qc.issues" tone="fail" :to="filterLink('fail')" />
           <MetricCard :label="$t('jd_m_avg_score')" :value="qc.avgScore" suffix="/100" />
@@ -563,6 +563,7 @@ const filters = computed(() => {
   if (!isClassification.value) {
     out.push(
       { key: 'all', label: t('filter_all'), count: gs.length },
+      { key: 'evaluated', label: t('jd_filter_evaluated'), count: gs.filter((g) => g.verdict !== 'SKIP').length },
       { key: 'fail', label: t('filter_failed'), count: gs.filter((g) => g.verdict !== 'SKIP' && verdictFromSeverity(g.verdict) === 'fail').length },
       { key: 'pass', label: t('filter_passed'), count: gs.filter((g) => g.verdict === 'PASS').length },
       { key: 'skip', label: t('verdict_skip'), count: gs.filter((g) => g.verdict === 'SKIP').length },
@@ -584,6 +585,7 @@ const filteredGroups = computed(() => {
   if (f === 'review') return gs.filter((g) => groupNeedsReview(g, isClassification.value))
   if (f === 'pass') return gs.filter((g) => g.verdict === 'PASS')
   if (f === 'skip') return gs.filter((g) => g.verdict === 'SKIP')
+  if (f === 'evaluated') return gs.filter((g) => g.verdict !== 'SKIP')
   if (f === 'fail') return gs.filter((g) => g.verdict !== 'SKIP' && verdictFromSeverity(g.verdict) === 'fail')
   if (f === 'classified') return gs.filter((g) => g.verdict !== 'SKIP')
   if (f.startsWith('tag:')) return gs.filter((g) => g.tags.includes(f.slice(4)))
@@ -675,6 +677,13 @@ function runSummary(r: JobRun) {
   if (r.status === 'running') return '—'
   const s = parseDetail(r.summary)
   if (typeof s.conversations_analyzed !== 'number') return '—'
+  // Classification runs never set conversations_passed (engine/analyzer.go only
+  // marks `passed` for qc_analysis), so showing it here would read as a false "0 đạt".
+  // issues_found does hold a verified count for classification too — it is the
+  // number of classification_tag rows the run created — but it means tags, not "vấn đề".
+  if (isClassification.value) {
+    return t('jd_run_summary_classification', { analyzed: s.conversations_analyzed, tags: s.issues_found ?? 0 })
+  }
   return t('jd_run_summary_qc', { passed: s.conversations_passed ?? 0, analyzed: s.conversations_analyzed, issues: s.issues_found ?? 0 })
 }
 

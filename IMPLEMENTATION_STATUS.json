@@ -20,7 +20,7 @@
     "CCMAI-UX-000 REVIEW PASS / FREEZE OPEN after UX000-R1: all three layout avatar initials use theme on-colors; independent 92/92 frontend tests, forced typecheck, rendered contrast evidence and 36-page capture review passed. UX-010 may move to WORK_ORDER and bounded BUILD."
   ],
   "buildInProgress": [
-    "CCMAI-UX-010 BUILD CHANGES_REQUIRED after independent Codex REVIEW: Job Detail structure, latest-run scope, SKIP-aware metrics, exact evidence_refs highlighting and live progress are retained. UX010-R1 repair is authorized for two truth defects: the evaluated metric links to all results including SKIP, and classification run history uses QC pass/issue wording. 111 frontend tests and forced vue-tsc passed independent rerun; no FREEZE."
+    "CCMAI-UX-010 repair round UX010-R1 result (Claude, REPAIR_WORKER): the evaluated-count card now links to a new 'evaluated' filter (non-SKIP only, same expression as qc.evaluated), keeping the existing all/pass/fail/skip filters; classification run-history summaries use a new truthful analyzed/tag-count wording instead of QC pass/issue wording (classification never sets conversations_passed, and issues_found is a verified tag count under a misleading label). 3 new interaction tests (114 total) pass, with a mutation check proving both fail against the pre-repair source exactly as the findings describe. vue-tsc, build, diff check and catalog pass; disposable UI capture 36/36 pages 0 JS errors. Status REVIEW_PENDING for Codex re-review; no FREEZE."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",

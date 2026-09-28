@@ -64,3 +64,47 @@ Images in [`assets/ux-010-2026-09-28/`](./assets/ux-010-2026-09-28/):
 - Findings F1 (onboarding banner) and F3 (older status styling in other views) remain with later screen tranches.
 
 No provider call, real channel sync, customer data, persistent DB change, deployment or push.
+
+## Addendum: Repair round 1 (UX010-R1, 2026-09-28)
+
+**Repair worker:** Claude (`REPAIR_WORKER`) · **Authority:** [independent review](./CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md) findings `UX010-R1-F1`/`UX010-R1-F2`, addendum in [work order](../work_orders/CCMAI_UX_010.md#review-repair-addendum-ux010-r1-2026-09-28) · **Status:** `REVIEW_PENDING` for independent Codex re-review; no self-approval, no FREEZE.
+
+### UX010-R1-F1 — evaluated card opened the wrong set
+
+`frontend/src/views/Jobs/JobDetail.vue:98` linked the evaluated-count card (`qc.evaluated`, SKIP excluded) to `filterLink('all')`, whose destination filter (`:582`) includes SKIP. A new `evaluated` filter key was added to the QC filter list (`:566`) with count `gs.filter(g => g.verdict !== 'SKIP').length` — the exact expression `qc.evaluated` already uses in `job-detail/logic.ts` — and `filteredGroups` (`:589`) applies the matching predicate. The card now links to `filterLink('evaluated')` instead of `filterLink('all')`. The existing `all`, `pass`, `fail` and `skip` filter chips are unchanged and still available. New additive key `jd_filter_evaluated` ("Đã đánh giá" / "Evaluated") labels the chip.
+
+### UX010-R1-F2 — classification history used QC pass/issue semantics
+
+`runSummary()` (`:674`) always rendered `jd_run_summary_qc`, which shows `conversations_passed` and calls `issues_found` "vấn đề" (issues). Source-audited `backend/engine/analyzer.go`: `passed` (line 478) is declared `false` and is only ever set for `qc_analysis` (line 586); the `classification` branch of `saveResults` never sets it, so `conversations_passed` in a classification run's `job_runs.summary` is always `0` — showing it as "đạt" would read as a false "0 đạt" on a run that classified everything correctly. `issues_found` **is** a verified count for classification runs too: the outer loop (`analyzer.go:317,851`) accumulates it from `saveResults`'s return value, which for `classification` counts exactly the `classification_tag` rows created (`analyzer.go:646-677`) — a real, verified tag count, just mislabeled "vấn đề". `runSummary()` now branches on `isClassification.value`: QC runs keep `jd_run_summary_qc` unchanged; classification runs use a new key `jd_run_summary_classification` ("{analyzed} đã phân tích · {tags} nhãn được gắn" / "{analyzed} analyzed · {tags} tags assigned"), which never mentions "đạt" or "vấn đề" and reuses the same verified `conversations_analyzed`/`issues_found` fields under truthful labels.
+
+### Tests
+
+`frontend/src/__tests__/job-detail-view.spec.ts` (+3 tests, 111 → 114 total):
+- *"evaluated-count card links to, and navigating there shows, exactly the non-SKIP conversations"* — with fixture conversations a=FAIL, b=PASS, c=SKIP in the default scope: asserts the card's rendered value is 2 and its rendered `href` targets `filter=evaluated`; navigates the test router to that exact href (the same navigation a click performs) and asserts the destination shows Khách a and Khách b but not Khách c (SKIP), and the selected filter chip is "Đã đánh giá: 2".
+- *"run-history summary keeps QC pass/issue wording for QC jobs"* — unchanged QC fixture (`passed:1, analyzed:3, issues:1`) still renders "1 đạt / 3 đã đánh giá · 1 vấn đề" after switching to the run-history tab.
+- *"run-history summary uses truthful analyzed/tag wording for classification, even with conversations_passed 0"* — a classification job/run with `conversations_analyzed:5, conversations_passed:0, issues_found:7` renders "5 đã phân tích · 7 nhãn được gắn" and the page text contains neither "đạt" nor "vấn đề".
+
+`mountView()` now also returns the test router (`Object.assign(w, { router })`) so a test can follow a rendered link's real `href` instead of hand-building a route push; existing tests are unaffected since they still destructure only the wrapper.
+
+**Mutation check:** `git stash push -- frontend/src/views/Jobs/JobDetail.vue frontend/src/i18n/vi.ts frontend/src/i18n/en.ts` (keeping only the new tests), reran the file: both new interactive tests failed against pre-repair source exactly as the findings describe — the evaluated card's href resolved to `filter=all` (not `filter=evaluated`), and the classification run showed the fabricated `"0 đạt / 5 đã đánh giá · 7 vấn đề"`. The QC wording-preservation test passed unchanged, as expected. `git stash pop` restored the repair; the full suite was rerun clean afterward.
+
+### Gates
+
+| Gate | Result |
+|---|---|
+| Focused `job-detail-view.spec.ts` | 8/8 pass (repaired source); 6/8 pass, 2 fail as predicted (pre-repair source, mutation check) |
+| `npm test` (full suite) | 10 files, **114 passed** |
+| `npx vue-tsc -b --force` | exit 0 |
+| `npm run build` | pass |
+| `git diff --check` | clean |
+| Catalog `-Check` | PASS |
+| Workspace doctor (`manage_cvf_workspace.ps1 -Action Status`) | `REPAIR_REQUIRED` — pre-existing CVF-core profile-artifact drift only (unrelated core-repo template/doc files, e.g. `AGENT_HANDOFF_V63_2026-09-18.md`), already recorded as the known limitation "Workspace-wide gate has failures in unrelated sibling repositories"; not caused by, or touched by, this repair |
+| Rendered capture (`ui-screenshots.ps1 -Mode app`) | see below |
+
+### Rendered evidence
+
+Ran `scripts/ui-screenshots.ps1 -Mode app` (disposable Compose project, isolated DNS, synthetic demo data; torn down afterward, persistent `ccma` never touched): **36 pages, 0 JS errors, 0 horizontal overflow, 0 external requests** (`report-app-ux010-r1.json`).
+
+The default-load `jobdetail-qc` capture confirms the new "Đã đánh giá: 100" filter chip renders between "Tất cả: 110" and "Không đạt: 20" with no layout break, at desktop and mobile, light and dark (`jobdetail-qc--*.png`, refreshed in this round). This is the only element visually new at page-load; both fixes otherwise change a link target and a post-interaction (tab-switch) summary string, neither visible until acted on. `jobdetail-classification--*.png` (also refreshed) confirms the classification default view is unaffected — its metric cards and filters are on a separate `isClassification` branch untouched by this repair.
+
+The screenshot tool (`scripts/ui-screenshots.mjs`) captures one fixed page-load state per route; it has no built-in way to click a filter chip or switch the run-history tab after load, and extending it is outside this repair's allowed scope (only `JobDetail.vue`, `job-detail/logic.ts`, additive `jd_*` i18n keys, focused tests and this evidence are in scope). The two interaction states the findings actually concern — the evaluated-filtered destination list, and the classification run-history row — are proven instead by the focused Vitest interaction tests above, with a mutation check showing both fail against the pre-repair defect exactly as described. That is a stronger, deterministic signal for these specific text/link defects than a static screenshot would be.

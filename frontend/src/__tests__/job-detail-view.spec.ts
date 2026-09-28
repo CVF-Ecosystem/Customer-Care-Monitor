@@ -42,9 +42,9 @@ const results = [
   r('d', 'old', 'conversation_evaluation', 'PASS'), // only in the older run
 ]
 
-function setupApi(opts: { runs?: unknown[]; results?: unknown[] } = {}) {
+function setupApi(opts: { job?: unknown; runs?: unknown[]; results?: unknown[] } = {}) {
   apiGet.mockImplementation((url: string) => {
-    if (url.endsWith('/jobs/j1')) return Promise.resolve({ data: job })
+    if (url.endsWith('/jobs/j1')) return Promise.resolve({ data: opts.job ?? job })
     if (url.endsWith('/jobs/j1/runs')) return Promise.resolve({ data: opts.runs ?? runs })
     if (url.endsWith('/jobs/j1/results')) return Promise.resolve({ data: opts.results ?? results })
     if (url.endsWith('/settings')) return Promise.resolve({ data: { settings: { ai_provider: 'claude' } } })
@@ -70,7 +70,7 @@ async function mountView() {
     },
   })
   for (let i = 0; i < 4; i++) await flushPromises()
-  return w
+  return Object.assign(w, { router })
 }
 
 describe('Job Detail (UX-010)', () => {
@@ -122,5 +122,65 @@ describe('Job Detail (UX-010)', () => {
     const w = await mountView()
     expect(w.find('[role="alert"]').text()).toContain(viMessages.jd_load_error)
     expect(w.text()).toContain(viMessages.jd_retry)
+  })
+
+  // UX010-R1-F1: the evaluated-count card excludes SKIP (qc.evaluated), so its
+  // drill-down must open exactly the non-SKIP conversations, not "all" (which
+  // includes SKIP). Fixture: a=FAIL, b=PASS, c=SKIP in the default "new" run scope.
+  it('evaluated-count card links to, and navigating there shows, exactly the non-SKIP conversations', async () => {
+    setupApi()
+    const w = await mountView()
+    const card = w.findAll('a.ccma-metric').find((a) => a.text().includes(viMessages.jd_m_evaluated))
+    expect(card).toBeTruthy()
+    expect(card!.find('[data-testid="metric-value"]').text()).toContain('2') // a + b, not c (SKIP)
+    const href = card!.attributes('href')
+    expect(href).toContain('filter=evaluated') // the actual rendered link, not a hand-built one
+
+    // Follow the card's own real link, the same navigation a click performs.
+    await w.router.push(href!)
+    await flushPromises()
+
+    const selected = w.findAll('.v-chip').find((c) => c.classes().includes('v-chip--variant-flat'))
+    expect(selected?.text()).toContain(viMessages.jd_filter_evaluated)
+    expect(selected?.text()).toContain('2')
+    expect(w.text()).toContain('Khách a')
+    expect(w.text()).toContain('Khách b')
+    expect(w.text()).not.toContain('Khách c') // SKIP must not appear behind the evaluated card
+  })
+
+  // UX010-R1-F2: run-history summaries must not use QC pass/issue wording for a
+  // classification run, whose engine never sets conversations_passed (always 0)
+  // and whose issues_found is a verified *tag* count, not an "issue" count.
+  it('run-history summary keeps QC pass/issue wording for QC jobs', async () => {
+    setupApi()
+    const w = await mountView()
+    const historyTab = w.findAll('.v-tab').find((t) => t.text() === viMessages.run_history)
+    await historyTab!.trigger('click')
+    await flushPromises()
+    expect(w.text()).toContain('1 đạt / 3 đã đánh giá · 1 vấn đề')
+  })
+
+  it('run-history summary uses truthful analyzed/tag wording for classification, even with conversations_passed 0', async () => {
+    const classJob = { ...job, job_type: 'classification' }
+    const classRuns = [
+      {
+        id: 'new',
+        job_id: 'j1',
+        started_at: '2026-09-27T15:30:00Z',
+        finished_at: '2026-09-27T15:36:12Z',
+        status: 'success',
+        summary: '{"conversations_analyzed":5,"conversations_passed":0,"issues_found":7}',
+        error_message: '',
+      },
+    ]
+    setupApi({ job: classJob, runs: classRuns, results: [] })
+    const w = await mountView()
+    const historyTab = w.findAll('.v-tab').find((t) => t.text() === viMessages.run_history)
+    await historyTab!.trigger('click')
+    await flushPromises()
+    const text = w.text()
+    expect(text).toContain('5 đã phân tích · 7 nhãn được gắn')
+    expect(text).not.toContain('đạt')
+    expect(text).not.toContain('vấn đề')
   })
 })
