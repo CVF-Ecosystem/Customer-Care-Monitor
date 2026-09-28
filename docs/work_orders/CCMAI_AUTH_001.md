@@ -19,3 +19,7 @@ BUILD evidence must state the exact source cause, changed paths, before/after re
 ## BUILD result (Claude, 2026-09-28)
 
 Done within the allowed paths (`router/index.ts`, `stores/auth.ts`, `App.vue`, new `__tests__/setup-stale-token.spec.ts`; `api/index.ts` unchanged). `REVIEW_PENDING` for independent Codex review; see [BUILD evidence](../reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md). No push, deployment or FREEZE.
+
+## Independent REVIEW (Codex, 2026-09-29)
+
+[Review](../reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md): `REVIEW_PASS` for `6d6f85d`; FREEZE open. The BUILD result above records the worker's return status, now superseded by this independent disposition.

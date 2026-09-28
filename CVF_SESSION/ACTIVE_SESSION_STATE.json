@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex: independently review CCMAI-AUTH-001 (local REVIEW_PENDING commit; evidence docs/reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md). Correct docs/guide/s3-storage.md as a separate later docs task. UX-012/013/014/015 and R001-R009 remain REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections held. No push, deployment or FREEZE.",
+  "nextAllowedMove": "ORCHESTRATOR: scope the stale cqa-app commands in docs/guide/s3-storage.md as a separate docs task. CCMAI-AUTH-001, UX-012/013/014/015 and R001-R009 are REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections held. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude) returned CCMAI-AUTH-001 REVIEW_PENDING; REVIEWER (Codex) next",
+  "activeRole": "REVIEWER (Codex) passed CCMAI-AUTH-001; SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex) records disposition; ORCHESTRATOR next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

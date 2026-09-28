@@ -1,6 +1,6 @@
 # SPEC — Recover Setup when the browser retains an old token (`CCMAI-AUTH-001`)
 
-**Date:** 2026-09-28 · **Author:** Codex (`ORCHESTRATOR → SPEC_AUTHOR`) · **Risk:** R2 (authentication flow) · **Status:** BUILD done (Claude), `REVIEW_PENDING` for independent Codex review ([evidence](../reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md)).
+**Date:** 2026-09-28 · **Author:** Codex (`ORCHESTRATOR → SPEC_AUTHOR`) · **Risk:** R2 (authentication flow) · **Status:** `REVIEW_PASS`, FREEZE open ([review](../reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md)).
 
 ## 0. INTAKE and source facts
 
