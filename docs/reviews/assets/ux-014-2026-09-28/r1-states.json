@@ -1,0 +1,144 @@
+{
+  "note": "UX014-R1 disposable captures: Setup before initial setup (no stored token); S3-off dialog with synthetic S3 rows (endpoint on .invalid, no secret); no S3 request made",
+  "pages": [
+    {
+      "state": "setup",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "setup--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "setup",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "setup--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "setup",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "setup--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "setup",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "setup--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-storage-s3",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-storage-s3--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-s3-off-dialog",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-s3-off-dialog--desktop--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-storage-s3",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-storage-s3--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-s3-off-dialog",
+      "viewport": "desktop",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-s3-off-dialog--desktop--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-storage-s3",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-storage-s3--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-s3-off-dialog",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-s3-off-dialog--mobile--light.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-storage-s3",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-storage-s3--mobile--dark.png",
+      "horizontalOverflow": false
+    },
+    {
+      "state": "settings-s3-off-dialog",
+      "viewport": "mobile",
+      "theme": "dark",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "externalRequests": [],
+      "failedSteps": [],
+      "file": "settings-s3-off-dialog--mobile--dark.png",
+      "horizontalOverflow": false
+    }
+  ],
+  "summary": {
+    "captures": 12,
+    "jsErrors": 0,
+    "overflow": 0,
+    "failedSteps": 0,
+    "externalRequests": []
+  }
+}

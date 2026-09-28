@@ -49,3 +49,32 @@
 ## Held (SPEC §5)
 
 A delete permission (`d`) for members (permission contract); a confirmation for role changes (behavior change); server-side provider URL validation.
+
+## Repair R1 — UX014-R1 (Claude, `REPAIR_WORKER`, 2026-09-28)
+
+**Authority:** [independent review](./CCMAI_UX_014_INDEPENDENT_REVIEW_2026-09-28.md) findings R1-1 and R1-2, UX-014 work order (same paths). First repair round. No boundary change. No provider test, S3 request, push or FREEZE.
+
+**R1-1 — S3-off command.** The dialog previously showed `docker exec cqa-app …`, but `docker-compose.yml` defines service `app` with no `container_name`. It now shows `docker compose exec app /app/cqa-server migrate-files -down -apply`, with a new line: "Chạy trong thư mục cài đặt ứng dụng (nơi có docker-compose.yml)" (additive key `st_s3_off_cmd_where`). The command was checked against the source. The binary is `/app/cqa-server` (`Dockerfile`), and `migrate-files` accepts `-down` and `-apply` (`backend/cli/migrate_files.go`). The confirmation flow is unchanged: the dialog opens only when a company on S3 turns the switch off, "Hủy" restores the switch, and "Vẫn tắt" saves. The stale command in `docs/guide/s3-storage.md` is left for a separate documentation correction, as the review directs.
+
+**Focused test:** the new case "the S3-off dialog shows the Compose command and still asks before saving" loads a synthetic S3 configuration, turns the switch off, and asserts:
+- the exact displayed command;
+- no `cqa-app` anywhere;
+- the where-to-run line;
+- no PUT or POST.
+
+A mutation that restores the old command fails the test.
+
+**Gates:** UX-014 focused tests 7/7; `npm test` 15 files, 160 passed; `npx vue-tsc -b --force` exit 0; `npm run build` exit 0.
+
+**R1-2 — captures.** They were made in the disposable Compose project `ccma-uishot-r1-20260928230850`, which has been removed; persistent `ccma` was not touched.
+- **Setup** was captured before initial setup (`needs_setup: true`) at desktop/mobile × light/dark.
+- Initial setup was then completed through the API. **Synthetic S3 rows** were written to the disposable database only: endpoint `https://s3.example.invalid`, bucket `synthetic-bucket`, a placeholder access key and no secret. The Settings storage section and the S3-off dialog were captured at desktop/mobile × light/dark. The dialog was opened but not confirmed.
+- App logs show only `GET /settings/storage` for storage: no storage test, save or S3 call.
+- Result: **12 captures, 0 JS errors, 0 overflow, 0 failed steps, 0 external requests** (`r1-states.json`).
+
+**Observation outside this scope:** the first Setup capture attempt stored a placeholder access token (`none`) before loading `/setup` on a not-yet-set-up instance. The tab's main thread then stopped responding: the page loaded, `/auth/refresh` returned 401, and screenshot and evaluate calls never returned. Without a stored token the page renders normally, and that is what a new installation sees. A stale invalid token in the browser after a reinstall could reproduce the stuck tab. The cause is in the auth store, API interceptor or router, which the UX-014 work order does not allow changing. It was not investigated further and is recorded for a separate tranche.
+
+![Setup, desktop light](./assets/ux-014-2026-09-28/r1-setup--desktop--light.png)
+![Setup, mobile dark](./assets/ux-014-2026-09-28/r1-setup--mobile--dark.png)
+![S3-off dialog, desktop light](./assets/ux-014-2026-09-28/r1-settings-s3-off-dialog--desktop--light.png)
+![S3-off dialog, mobile dark](./assets/ux-014-2026-09-28/r1-settings-s3-off-dialog--mobile--dark.png)

@@ -210,7 +210,9 @@
       <div class="st-stack">
         <p class="st-warn">{{ $t('storage_off_warn') }}</p>
         <p class="st-m0">{{ $t('storage_off_keep') }}</p>
-        <pre class="st-code"><code>docker exec cqa-app /app/cqa-server migrate-files -down -apply</code></pre>
+        <!-- UX014-R1: service Compose là `app` (không đặt container_name), nên dùng docker compose exec. -->
+        <pre class="st-code" data-testid="st-s3-off-cmd"><code>{{ S3_DOWN_COMMAND }}</code></pre>
+        <p class="st-intro st-m0">{{ $t('st_s3_off_cmd_where') }}</p>
         <p class="st-intro">{{ $t('storage_off_keys') }}</p>
       </div>
       <template #actions>
@@ -269,6 +271,7 @@ const storage = reactive({
   secret_key_da_luu: false,
 })
 const dungS3 = ref(false)
+const S3_DOWN_COMMAND = 'docker compose exec app /app/cqa-server migrate-files -down -apply'
 const confirmTatS3 = ref(false)
 const testResult = ref<{ ok: boolean; message: string } | null>(null)
 

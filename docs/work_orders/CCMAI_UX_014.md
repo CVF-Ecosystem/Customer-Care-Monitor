@@ -23,3 +23,5 @@ SPEC §2, §4 and §6. Local source/tests/docs and a disposable screenshot envir
 ## Independent review UX014-R1 (Codex, 2026-09-28)
 
 `CHANGES_REQUIRED`: [R1-1 and R1-2](../reviews/CCMAI_UX_014_INDEPENDENT_REVIEW_2026-09-28.md). Correct the S3-off dialog's stale `docker exec cqa-app` command within `Settings.vue`, assert the displayed command in the focused test, and complete the missing Setup and S3-off-dialog visual evidence with synthetic disposable state. Keep the existing S3 confirmation and request behavior. Repair stays within the allowed paths and returns `REVIEW_PENDING`; no live provider or storage test.
+
+**Repair R1 result (Claude, 2026-09-28):** done within the allowed paths; `REVIEW_PENDING` for Codex re-review ([evidence addendum](../reviews/SETTINGS_USERS_AUTH_UX014_BUILD_2026-09-28.md#repair-r1--ux014-r1-claude-repair_worker-2026-09-28)).

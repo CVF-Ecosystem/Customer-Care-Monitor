@@ -35,6 +35,7 @@ g.visualViewport ??= { width: 1280, height: 800, offsetLeft: 0, offsetTop: 0, pa
 
 let failSettings = false
 let failUsers = false
+let storageS3 = false
 const users = [
   { user_id: 'u1', email: 'chu@example.invalid', name: 'Chủ', role: 'owner', permissions: '' },
   { user_id: 'u2', email: 'nv@example.invalid', name: 'Nhân viên', role: 'member', permissions: '{"channels":"r"}' },
@@ -44,7 +45,7 @@ function setup() {
   apiGet.mockImplementation((url: string) => {
     if (url.endsWith('/settings')) return failSettings ? Promise.reject(new Error('x')) : Promise.resolve({ data: { settings: { ai_provider: 'claude', ai_model: 'claude-sonnet-5', ai_api_key: '••••••••' }, tenant: { name: 'Cửa hàng mẫu', timezone: 'Asia/Ho_Chi_Minh', language: 'vi' } } })
     if (url.endsWith('/settings/ai/models')) return Promise.reject(new Error('offline'))
-    if (url.endsWith('/settings/storage')) return Promise.resolve({ data: { backend: 'local', local_bytes: 0, local_files: 0 } })
+    if (url.endsWith('/settings/storage')) return Promise.resolve({ data: storageS3 ? { backend: 's3', endpoint: 'https://s3.example.invalid', bucket: 'synthetic-bucket', region: 'auto', access_key: 'SYNTHETIC', prefix: '', force_path_style: true } : { backend: 'local', local_bytes: 0, local_files: 0 } })
     if (url.endsWith('/users')) return failUsers ? Promise.reject(new Error('x')) : Promise.resolve({ data: users.map((u) => ({ ...u })) })
     return Promise.resolve({ data: {} })
   })
@@ -84,6 +85,7 @@ describe('Settings, Users, Login (UX-014)', () => {
     apiGet.mockReset(); apiPost.mockReset(); apiPut.mockReset()
     failSettings = false
     failUsers = false
+    storageS3 = false
     setup()
   })
   afterEach(() => {
@@ -109,6 +111,21 @@ describe('Settings, Users, Login (UX-014)', () => {
     expect(w.find('[data-testid="st-test-key"]').text()).toBe(viMessages.st_test_saved_key)
     expect(w.text()).toContain(viMessages.st_test_saved_note)
     expect(w.text()).toContain(viMessages.st_key_saved_note)
+    expect(apiPost).not.toHaveBeenCalled()
+  })
+
+  it('settings: the S3-off dialog shows the Compose command and still asks before saving (UX014-R1)', async () => {
+    storageS3 = true
+    const w = await mountAt(Settings, '/t1/settings', '/:tenantId/settings')
+    await w.findAll('button').find((b) => b.text().includes(viMessages.storage_settings))!.trigger('click')
+    for (let i = 0; i < 3; i++) await flushPromises()
+    w.find('[data-testid="st-storage"]').findComponent({ name: 'VSwitch' }).vm.$emit('update:modelValue', false)
+    for (let i = 0; i < 3; i++) await flushPromises()
+    const cmd = document.body.querySelector('[data-testid="st-s3-off-cmd"]')!
+    expect(cmd.textContent).toBe('docker compose exec app /app/cqa-server migrate-files -down -apply')
+    expect(document.body.textContent).not.toContain('cqa-app')
+    expect(document.body.textContent).toContain(viMessages.st_s3_off_cmd_where)
+    expect(apiPut).not.toHaveBeenCalled()
     expect(apiPost).not.toHaveBeenCalled()
   })
 

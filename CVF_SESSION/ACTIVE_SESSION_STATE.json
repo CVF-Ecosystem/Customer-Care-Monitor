@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude: UX014-R1 repair under docs/work_orders/CCMAI_UX_014.md (Settings.vue S3-off command, focused test, Setup and S3-off captures), then REVIEW_PENDING. Codex: review UX-015 (logs, cost, notifications, MCP) and re-review UX-014 after R1. UX-012/UX-013 REVIEW PASS / FREEZE open; UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "Codex: review UX-015 (b45538d) and re-review UX-014 after repair R1. Claude: nothing pending in the UX-012..015 series; the stale-token /setup hang is recorded as a candidate for a separate tranche. UX-012/UX-013 REVIEW PASS / FREEZE open; UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) returned UX-015 REVIEW_PENDING; Claude continues as REPAIR_WORKER for UX014-R1; REVIEWER (Codex) reviews each tranche independently",
+  "activeRole": "COMMIT_STEWARD (Claude) returned UX-015 and UX-014 R1 REVIEW_PENDING; REVIEWER (Codex) reviews each tranche independently",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

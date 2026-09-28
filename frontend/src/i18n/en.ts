@@ -758,6 +758,7 @@ export default {
   au_error: 'Something went wrong',
   au_show_password: 'Show password',
   au_hide_password: 'Hide password',
+  st_s3_off_cmd_where: 'Run it from the application install folder (where docker-compose.yml is).',
   // CCMAI-UX-015: activity logs, cost logs, notification history, MCP connections
   lg_retry: 'Retry',
   lg_all: 'All',

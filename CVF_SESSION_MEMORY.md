@@ -199,3 +199,5 @@ Codex independent UX-011 Results REVIEW at `098e8c2`: `REVIEW_PASS`, FREEZE open
 Codex reviews `e24da27` (2026-09-28): UX-012 R1 REVIEW_PASS, UX-013 REVIEW_PASS (FREEZE open); UX-014 CHANGES_REQUIRED UX014-R1 (S3-off dialog command, Setup/S3-off captures), repair after UX-015 under the UX-014 work order.
 
 `CCMAI-UX-015` Logs/cost/notifications/MCP BUILD (Claude, 2026-09-28): canvas version `1790608303-0cb6`; SPEC `docs/specs/LOGS_COST_NOTIFY_MCP_UX015_2026-09-28.md`; work order `docs/work_orders/CCMAI_UX_015.md`. Cost footer is the page total (filtered total BLOCKED_API_CONTRACT); load failures shown as alerts; revoke via ConfirmDialog. Evidence `docs/reviews/LOGS_COST_NOTIFY_MCP_UX015_BUILD_2026-09-28.md`. REVIEW_PENDING.
+
+`CCMAI-UX-014` repair R1 (Claude, 2026-09-28): the S3-off dialog uses `docker compose exec app …`; Setup and the S3-off dialog captured in a disposable project; 160/160 tests. REVIEW_PENDING for Codex re-review. Out-of-scope observation: a stale stored token hangs /setup on a pre-setup instance.

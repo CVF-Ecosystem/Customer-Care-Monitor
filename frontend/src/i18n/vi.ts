@@ -758,6 +758,7 @@ export default {
   au_error: 'Có lỗi xảy ra',
   au_show_password: 'Hiện mật khẩu',
   au_hide_password: 'Ẩn mật khẩu',
+  st_s3_off_cmd_where: 'Chạy trong thư mục cài đặt ứng dụng (nơi có docker-compose.yml).',
   // CCMAI-UX-015: nhật ký hệ thống, chi phí, lịch sử thông báo, kết nối MCP
   lg_retry: 'Thử lại',
   lg_all: 'Tất cả',
