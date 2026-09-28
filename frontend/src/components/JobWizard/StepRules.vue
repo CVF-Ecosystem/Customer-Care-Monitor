@@ -1,70 +1,68 @@
+<!-- CCMAI-UX-013: bước 3 — quy tắc (chất lượng CSKH) hoặc nhãn (phân loại). Dữ liệu lưu giữ nguyên. -->
 <template>
-  <div>
-    <h3 class="text-h6 mb-2">{{ $t('job_wizard_step_rules') }}</h3>
-    <div class="text-body-2 text-grey-darken-1 mb-4">
-      {{ form.job_type === 'qc_analysis'
-        ? 'Nhập quy tắc đánh giá chất lượng. AI Agent sẽ phân tích từng cuộc hội thoại dựa trên các quy tắc này để đánh giá nhân viên. Ví dụ: Nhân viên phải chào hỏi lịch sự, trả lời đầy đủ câu hỏi khách hàng...'
-        : 'Cấu hình các nhãn phân loại. AI Agent sẽ tự động phân loại cuộc chat theo các nhãn bạn định nghĩa (feedback, hỏi giá, khiếu nại...).' }}
+  <div class="ws-stack">
+    <div>
+      <h2 class="ws-h2">{{ $t('job_wizard_step_rules') }}</h2>
+      <p class="ws-intro">{{ form.job_type === 'qc_analysis' ? $t('jw_rules_intro_qc') : $t('jw_rules_intro_class') }}</p>
     </div>
 
     <!-- QC Analysis: markdown rules -->
-    <div v-if="form.job_type === 'qc_analysis'">
+    <template v-if="form.job_type === 'qc_analysis'">
       <v-textarea
         v-model="form.rules_content"
+        :label="$t('jw_rules_label')"
         :placeholder="$t('rules_placeholder')"
         rows="12"
         auto-grow
-        class="font-mono"
+        variant="outlined"
+        class="ws-mono"
       />
-      <v-btn variant="text" size="small" color="primary" class="mt-2" @click="loadTemplate">
-        <v-icon start size="small">mdi-file-document</v-icon>
-        Dùng mẫu quy định CSKH
+      <v-btn variant="outlined" height="40" prepend-icon="mdi-file-document-outline" class="align-self-start" @click="loadTemplate">
+        {{ $t('jw_rules_template') }}
       </v-btn>
 
-      <v-divider class="my-4" />
-      <div class="text-subtitle-2 font-weight-bold mb-1">
-        <v-icon start size="small" color="grey">mdi-skip-next-circle</v-icon>
-        Điều kiện bỏ qua (không đánh giá)
-      </div>
-      <div class="text-caption text-grey-darken-1 mb-2">
-        Mô tả các trường hợp cuộc chat không cần đánh giá. AI sẽ đánh dấu "Bỏ qua" thay vì Đạt/Không đạt.
+      <v-divider class="my-2" />
+      <div>
+        <h3 class="ws-h3">{{ $t('jw_skip_title') }}</h3>
+        <p class="ws-intro">{{ $t('jw_skip_desc') }}</p>
       </div>
       <v-textarea
         v-model="form.skip_conditions"
-        placeholder="Ví dụ: Cuộc chat không có tin nhắn từ OA, cuộc chat dưới 2 tin nhắn, khách chỉ gửi sticker hoặc file..."
+        :placeholder="$t('jw_skip_placeholder')"
+        :aria-label="$t('jw_skip_title')"
         rows="3"
         auto-grow
         variant="outlined"
-        density="compact"
       />
-      <v-btn variant="text" size="small" color="grey-darken-1" class="mt-1" @click="loadSkipTemplate">
-        <v-icon start size="small">mdi-file-document</v-icon>
-        Tải mẫu điều kiện bỏ qua
+      <v-btn variant="text" height="40" prepend-icon="mdi-file-document-outline" class="align-self-start" @click="loadSkipTemplate">
+        {{ $t('jw_skip_template') }}
       </v-btn>
-    </div>
+    </template>
 
-    <!-- Classification: dynamic rules -->
-    <div v-else>
-      <v-card v-for="(rule, idx) in rules" :key="idx" variant="outlined" class="pa-3 mb-3">
-        <div class="d-flex align-center mb-2">
-          <span class="text-subtitle-2 font-weight-bold">Rule {{ idx + 1 }}</span>
-          <v-spacer />
-          <v-btn icon="mdi-close" size="x-small" variant="text" @click="removeRule(idx)" />
+    <!-- Classification: danh sách nhãn -->
+    <template v-else>
+      <article v-for="(rule, idx) in rules" :key="idx" class="ws-item" data-testid="jw-tag">
+        <div class="ws-item__head">
+          <h3 class="ws-h3">{{ $t('jw_tag_n', { n: idx + 1 }) }}</h3>
+          <v-btn icon variant="text" size="44" :aria-label="$t('jw_tag_remove', { n: idx + 1 })" @click="removeRule(idx)">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
         </div>
-        <v-text-field v-model="rule.name" :label="$t('rule_name')" density="compact" class="mb-2" />
-        <v-textarea v-model="rule.description" :label="$t('rule_description')" rows="2" density="compact" class="mb-2" />
+        <v-text-field v-model="rule.name" :label="$t('jw_tag_name')" variant="outlined" density="comfortable" hide-details="auto" />
+        <v-textarea v-model="rule.description" :label="$t('jw_tag_desc')" rows="2" auto-grow variant="outlined" density="comfortable" hide-details="auto" />
         <v-select
           v-model="rule.severity"
-          :label="$t('rule_severity')"
+          :label="$t('jw_tag_severity')"
           :items="[{ title: $t('severity_critical'), value: 'NGHIEM_TRONG' }, { title: $t('severity_warning'), value: 'CAN_CAI_THIEN' }]"
-          density="compact"
+          variant="outlined"
+          density="comfortable"
+          hide-details
         />
-      </v-card>
-      <v-btn variant="outlined" color="primary" @click="addRule">
-        <v-icon start>mdi-plus</v-icon>
-        {{ $t('add_rule') }}
+      </article>
+      <v-btn variant="outlined" color="primary" height="44" prepend-icon="mdi-plus" class="align-self-start" @click="addRule">
+        {{ $t('jw_tag_add') }}
       </v-btn>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -95,6 +93,7 @@ function removeRule(idx: number) {
   rules.value.splice(idx, 1)
 }
 
+// Nội dung mẫu là dữ liệu người dùng có thể sửa, không phải chữ giao diện.
 const defaultTemplate = `# Quy định chất lượng CSKH
 
 ## 1. Thời gian phản hồi
@@ -127,3 +126,44 @@ function loadSkipTemplate() {
   form.value.skip_conditions = defaultSkipTemplate
 }
 </script>
+
+<style scoped>
+.ws-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ws-h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.ws-h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.ws-intro {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(var(--v-theme-text-muted));
+}
+.ws-mono :deep(textarea) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+.ws-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 12px 14px 16px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+}
+.ws-item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+</style>

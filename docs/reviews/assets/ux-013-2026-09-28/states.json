@@ -1,0 +1,943 @@
+{
+  "summary": {
+    "states": 28,
+    "jsErrors": 0,
+    "overflow": 0,
+    "failedSteps": 0,
+    "external": []
+  },
+  "report": [
+    {
+      "state": "jobs-list",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jl-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "success",
+          "ok": true
+        }
+      ],
+      "file": "jobs-list--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-delete-confirm",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Xóa tác vụ",
+          "in": ".v-list-item",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "lịch sử thông báo",
+          "ok": true
+        }
+      ],
+      "file": "jobs-delete-confirm--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-edit",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Sửa",
+          "in": ".v-list-item",
+          "wait": 2800,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-edit-form\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-edit--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step1",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step1--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step3",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "Dùng mẫu quy định CSKH",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step3--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step4",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Thêm đầu ra",
+          "wait": 1000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-output\"]",
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step4--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step6",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-summary\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step6--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-list",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jl-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "success",
+          "ok": true
+        }
+      ],
+      "file": "jobs-list--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-delete-confirm",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Xóa tác vụ",
+          "in": ".v-list-item",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "lịch sử thông báo",
+          "ok": true
+        }
+      ],
+      "file": "jobs-delete-confirm--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-edit",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Sửa",
+          "in": ".v-list-item",
+          "wait": 2800,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-edit-form\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-edit--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step1",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step1--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step3",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "Dùng mẫu quy định CSKH",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step3--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step4",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Thêm đầu ra",
+          "wait": 1000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-output\"]",
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step4--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step6",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-summary\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step6--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-list",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jl-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "success",
+          "ok": true
+        }
+      ],
+      "file": "jobs-list--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-delete-confirm",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Xóa tác vụ",
+          "in": ".v-list-item",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "lịch sử thông báo",
+          "ok": true
+        }
+      ],
+      "file": "jobs-delete-confirm--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-edit",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Sửa",
+          "in": ".v-list-item",
+          "wait": 2800,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-edit-form\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-edit--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step1",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step1--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step3",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "Dùng mẫu quy định CSKH",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step3--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step4",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Thêm đầu ra",
+          "wait": 1000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-output\"]",
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step4--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step6",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-summary\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step6--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-list",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jl-row\"]",
+          "ok": true
+        },
+        {
+          "expectNoText": "success",
+          "ok": true
+        }
+      ],
+      "file": "jobs-list--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-delete-confirm",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Xóa tác vụ",
+          "in": ".v-list-item",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "lịch sử thông báo",
+          "ok": true
+        }
+      ],
+      "file": "jobs-delete-confirm--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-edit",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "click": "[data-testid=\"action-menu\"]",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "clickText": "Sửa",
+          "in": ".v-list-item",
+          "wait": 2800,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-edit-form\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-edit--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step1",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step1--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step3",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expectText": "Dùng mẫu quy định CSKH",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step3--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step4",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Thêm đầu ra",
+          "wait": 1000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-output\"]",
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-reason\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step4--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "jobs-create-step6",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"text\"]",
+          "value": "Tác vụ thử giao diện",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "input[type=\"checkbox\"]",
+          "wait": 600,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "clickText": "Dùng mẫu quy định CSKH",
+          "wait": 800,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"jw-next\"]",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"jw-summary\"]",
+          "ok": true
+        }
+      ],
+      "file": "jobs-create-step6--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    }
+  ]
+}

@@ -1,88 +1,64 @@
+<!--
+  Sửa tác vụ AI.
+  CCMAI-UX-013: nếu không tải được tác vụ thì KHÔNG hiện biểu mẫu — trước đây biểu mẫu
+  hiện giá trị mặc định và bấm Lưu sẽ ghi đè tác vụ bằng dữ liệu trống. Dữ liệu gửi đi
+  khi lưu giữ nguyên.
+-->
 <template>
-  <div>
-    <div class="d-flex align-center mb-6">
-      <v-btn icon="mdi-arrow-left" variant="text" :to="`/${tenantId}/jobs/${jobId}`" />
-      <h1 class="text-h5 font-weight-bold ml-2">{{ $t('edit_job') }}</h1>
+  <div class="jw-page">
+    <div>
+      <router-link :to="`/${tenantId}/jobs/${jobId}`" class="jw-back"><v-icon size="18">mdi-chevron-left</v-icon>{{ loadedName || $t('jw_back_list') }}</router-link>
+      <h1 class="jw-title">{{ $t('jw_edit_title') }}</h1>
     </div>
 
-    <div v-if="loading" class="text-center py-8">
-      <v-progress-circular indeterminate />
+    <v-skeleton-loader v-if="loading" type="article, article" />
+
+    <div v-else-if="loadError" class="jw-error jw-error--row" role="alert" data-testid="jw-edit-load-error">
+      <span>{{ $t('jw_edit_load_error') }}</span>
+      <v-btn variant="outlined" color="error" height="44" @click="load">{{ $t('jl_retry') }}</v-btn>
     </div>
 
-    <template v-else-if="form">
-      <v-expansion-panels v-model="openPanels" multiple>
-        <!-- Basic Info -->
+    <template v-else>
+      <v-expansion-panels v-model="openPanels" multiple class="jw-panels" data-testid="jw-edit-form">
         <v-expansion-panel value="info">
-          <v-expansion-panel-title>
-            <v-icon start size="small">mdi-information</v-icon>
-            {{ $t('job_info') }}
-          </v-expansion-panel-title>
-          <v-expansion-panel-text>
-            <StepType v-model:form="form" />
-          </v-expansion-panel-text>
+          <v-expansion-panel-title>{{ $t('jw_step_type') }}</v-expansion-panel-title>
+          <v-expansion-panel-text><StepType v-model:form="form" /></v-expansion-panel-text>
         </v-expansion-panel>
-
-        <!-- Input Channels -->
         <v-expansion-panel value="input">
           <v-expansion-panel-title>
-            <v-icon start size="small">mdi-chat</v-icon>
             {{ $t('job_wizard_step_input') }}
-            <v-chip size="x-small" variant="tonal" class="ml-2">{{ form.input_channel_ids?.length || 0 }}</v-chip>
+            <span class="jw-count">{{ $t('jw_selected', { n: form.input_channel_ids?.length || 0 }) }}</span>
           </v-expansion-panel-title>
-          <v-expansion-panel-text>
-            <StepInput v-model:form="form" />
-          </v-expansion-panel-text>
+          <v-expansion-panel-text><StepInput v-model:form="form" /></v-expansion-panel-text>
         </v-expansion-panel>
-
-        <!-- Rules -->
         <v-expansion-panel value="rules">
-          <v-expansion-panel-title>
-            <v-icon start size="small">mdi-robot</v-icon>
-            {{ $t('job_wizard_step_rules') }}
-          </v-expansion-panel-title>
-          <v-expansion-panel-text>
-            <StepRules v-model:form="form" />
-          </v-expansion-panel-text>
+          <v-expansion-panel-title>{{ $t('job_wizard_step_rules') }}</v-expansion-panel-title>
+          <v-expansion-panel-text><StepRules v-model:form="form" /></v-expansion-panel-text>
         </v-expansion-panel>
-
-        <!-- Output -->
         <v-expansion-panel value="output">
           <v-expansion-panel-title>
-            <v-icon start size="small">mdi-send</v-icon>
             {{ $t('job_wizard_step_output') }}
-            <v-chip size="x-small" variant="tonal" class="ml-2">{{ outputCount }}</v-chip>
+            <span class="jw-count">{{ $t('jw_sum_outputs_n', { n: outputCount }) }}</span>
           </v-expansion-panel-title>
-          <v-expansion-panel-text>
-            <StepOutput v-model:form="form" />
-          </v-expansion-panel-text>
+          <v-expansion-panel-text><StepOutput v-model:form="form" /></v-expansion-panel-text>
         </v-expansion-panel>
-
-        <!-- Schedule -->
         <v-expansion-panel value="schedule">
-          <v-expansion-panel-title>
-            <v-icon start size="small">mdi-clock</v-icon>
-            {{ $t('job_wizard_step_schedule') }}
-          </v-expansion-panel-title>
-          <v-expansion-panel-text>
-            <StepOutputSchedule v-model:form="form" />
-          </v-expansion-panel-text>
+          <v-expansion-panel-title>{{ $t('job_wizard_step_schedule') }}</v-expansion-panel-title>
+          <v-expansion-panel-text><StepOutputSchedule v-model:form="form" /></v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>
 
-      <div class="d-flex justify-end mt-6">
-        <v-btn variant="text" :to="`/${tenantId}/jobs/${jobId}`" class="mr-2">
-          {{ $t('cancel') }}
-        </v-btn>
-        <v-btn color="primary" :loading="saving" @click="saveJob">
-          <v-icon start>mdi-content-save</v-icon>
-          {{ $t('save_job') }}
+      <div v-if="saveError" class="jw-error" role="alert" data-testid="jw-save-error">{{ $t('jw_save_error') }}</div>
+
+      <div class="jw-actions">
+        <v-btn variant="text" height="44" :to="`/${tenantId}/jobs/${jobId}`">{{ $t('jw_cancel') }}</v-btn>
+        <v-btn color="primary" height="44" :loading="saving" prepend-icon="mdi-content-save-outline" data-testid="jw-save" @click="saveJob">
+          {{ $t('jw_save') }}
         </v-btn>
       </div>
-
-      <v-snackbar v-model="showSuccess" color="success" :timeout="2000">
-        {{ $t('job_updated') }}
-      </v-snackbar>
     </template>
+
+    <v-snackbar v-model="showSuccess" :timeout="2000">{{ $t('jw_updated') }}</v-snackbar>
   </div>
 </template>
 
@@ -104,9 +80,12 @@ const tenantId = computed(() => route.params.tenantId as string)
 const jobId = computed(() => route.params.jobId as string)
 
 const loading = ref(true)
+const loadError = ref(false)
 const saving = ref(false)
+const saveError = ref(false)
 const showSuccess = ref(false)
 const openPanels = ref(['info'])
+const loadedName = ref('')
 
 const form = ref<Record<string, any>>({
   name: '',
@@ -132,7 +111,9 @@ const outputCount = computed(() => {
   } catch { return 0 }
 })
 
-onMounted(async () => {
+async function load() {
+  loading.value = true
+  loadError.value = false
   try {
     const job = await jobStore.fetchJob(tenantId.value, jobId.value)
     // Map job data to form
@@ -153,13 +134,19 @@ onMounted(async () => {
       schedule_type: job.schedule_type || 'cron',
       schedule_cron: job.schedule_cron || '0 7 * * *',
     }
+    loadedName.value = job.name || ''
+  } catch {
+    loadError.value = true
   } finally {
     loading.value = false
   }
-})
+}
+
+onMounted(load)
 
 async function saveJob() {
   saving.value = true
+  saveError.value = false
   try {
     await jobStore.updateJob(tenantId.value, jobId.value, {
       name: form.value.name,
@@ -181,10 +168,64 @@ async function saveJob() {
     })
     showSuccess.value = true
     setTimeout(() => router.push(`/${tenantId.value}/jobs/${jobId.value}`), 1500)
-  } catch (err) {
-    console.error('Update job failed:', err)
+  } catch {
+    saveError.value = true
   } finally {
     saving.value = false
   }
 }
 </script>
+
+<style scoped>
+.jw-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.jw-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: rgb(var(--v-theme-primary));
+  font-size: 14px;
+  text-decoration: none;
+}
+.jw-title {
+  margin: 2px 0 0;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.jw-panels :deep(.v-expansion-panel-title) {
+  font-weight: 600;
+  min-height: 56px;
+}
+.jw-count {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(var(--v-theme-text-muted));
+}
+.jw-error {
+  padding: 12px 14px;
+  border: 1px solid rgb(var(--v-theme-fail));
+  border-radius: 10px;
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.jw-error--row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.jw-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+</style>

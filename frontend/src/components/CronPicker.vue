@@ -55,9 +55,7 @@
     </div>
 
     <!-- Preview -->
-    <v-alert v-if="preview" type="info" variant="tonal" density="compact" class="mt-3 text-body-2">
-      {{ preview }}
-    </v-alert>
+    <p v-if="preview" class="cron-preview" role="status">{{ preview }}</p>
   </div>
 </template>
 
@@ -79,7 +77,8 @@ const hours = Array.from({ length: 24 }, (_, i) => ({ title: String(i).padStart(
 const minutes = [0, 5, 10, 15, 20, 30, 45].map(m => ({ title: String(m).padStart(2, '0'), value: m }))
 const daysOfMonth = Array.from({ length: 31 }, (_, i) => ({ title: `${t('cron_day')} ${i + 1}`, value: i + 1 }))
 
-const dayLabels = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7']
+// CCMAI-UX-013: tên ngày theo ngôn ngữ đang chọn (trước đây luôn là tiếng Việt)
+const dayLabels = computed(() => [0, 1, 2, 3, 4, 5, 6].map((d) => t(`jl_day_${d}`)))
 
 const cronExpression = computed(() => {
   const m = minute.value
@@ -104,7 +103,7 @@ const preview = computed(() => {
     case 'daily':
       return `${t('cron_preview_daily')} ${timeStr}`
     case 'weekly': {
-      const dayNames = selectedDays.value.sort().map(d => dayLabels[d]).join(', ')
+      const dayNames = selectedDays.value.sort().map(d => dayLabels.value[d]).join(', ')
       return `${t('cron_preview_weekly')} ${dayNames} ${t('cron_at')} ${timeStr}`
     }
     case 'monthly':
@@ -142,3 +141,14 @@ watch(cronExpression, (val) => {
   modelValue.value = val
 })
 </script>
+
+<style scoped>
+/* CCMAI-UX-013: câu mô tả lịch là ghi chú nhẹ theo token, không phải hộp cảnh báo */
+.cron-preview {
+  margin: 12px 0 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(var(--v-theme-primary), 0.06);
+  font-size: 13px;
+}
+</style>

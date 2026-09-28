@@ -102,7 +102,7 @@ Theo thứ tự ưu tiên. Mỗi màn: brief, canvas desktop và mobile đủ tr
 | 3 | Trang chủ (`/`) | UX-01, 02, 11, 15, 19 | Số liệu đúng nghĩa, hoạt động gần đây, hướng dẫn bắt đầu hợp lý, banner demo trên mobile |
 | 4 | Kênh chat (`/channels`, `/channels/:id`) | UX-06, 20 | Trạng thái đồng bộ (chưa đồng bộ / đang đồng bộ / một phần / lỗi) đúng ngữ nghĩa R001/R007; "Kết nối lại" chỉ nổi bật khi cần |
 | 5 | Tin nhắn (`/messages`) và chi tiết hội thoại | UX-16 | Đếm đúng hội thoại, bộ lọc có nhãn, đọc hội thoại trên mobile. `CCMAI-UX-012`: canvas `1790601057-3d67`, [SPEC](../specs/MESSAGES_SCREEN_UX012_2026-09-28.md), [work order](../work_orders/CCMAI_UX_012.md); BUILD xong, `REVIEW_PENDING` ([evidence](../reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md)) |
-| 6 | Tác vụ (`/jobs`, tạo/sửa tác vụ) | UX-12, 13, 14 | Thuật ngữ, định dạng ngày, trạng thái chạy bằng tiếng Việt, biểu mẫu tạo/sửa trên mobile |
+| 6 | Tác vụ (`/jobs`, tạo/sửa tác vụ) | UX-12, 13, 14 | Thuật ngữ, định dạng ngày, trạng thái chạy bằng tiếng Việt, biểu mẫu tạo/sửa trên mobile. `CCMAI-UX-013`: canvas `1790603381-76c3`, [SPEC](../specs/JOBS_SCREENS_UX013_2026-09-28.md), [work order](../work_orders/CCMAI_UX_013.md); BUILD xong, `REVIEW_PENDING` ([evidence](../reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md)) |
 | 7 | Cài đặt, Người dùng, Đăng nhập/Thiết lập | — | Áp design system; kiểm tra biểu mẫu và thông báo lỗi |
 | 8 | Nhật ký hệ thống, Nhật ký chi phí, Lịch sử thông báo, Kết nối MCP | UX-15 | Bảng dài trên mobile, định dạng số/tiền |
 
