@@ -5,16 +5,18 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER (CCMAI-CREDIT-002 trial push; prior AUTH/UX/runtime REVIEW PASS / FREEZE open)
-- Active role: ORCHESTRATOR → WORK_ORDER_AUTHOR (Codex) scoped CCMAI-CREDIT-002; COMMIT_STEWARD (Codex) next
-- Next allowed move: verify and push only local `main` to the owner-supplied empty Customer-Care-Monitor repository, then inspect its SHA and contributor APIs. Preserve original `origin` and CQA tag. S3 guide task follows separately; no FREEZE or product migration.
+- Current mode: REVIEW
+- Active phase: REVIEW (CCMAI-CREDIT-002 display trial REVIEW_PENDING; prior AUTH/UX/runtime REVIEW PASS / FREEZE open)
+- Active role: COMMIT_STEWARD → SESSION_SYNC_STEWARD (Codex) recorded CCMAI-CREDIT-002 trial push; independent REVIEWER next
+- Next allowed move: GitHub's new-repo contributor statistics now show Blackbird081, claude and codex; inspect the rendered sidebar independently before disposition. Preserve original `origin` and CQA tag; S3 guide task follows separately. No FREEZE or product migration.
 - Parked operator checkpoint: none
 
 ## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
 
 - Owner explicitly supplied `https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git` for a trial upload. INTAKE found it public and empty; the original repo remains the configured `origin` and has not been changed. DESIGN uses the current clean local `main` only; the old CQA archive tag is outside the push. Local `main` has no common ancestry with that tag and carries Blackbird081/Codex primary authors plus Claude co-author trailers.
 - `docs/work_orders/CCMAI_CREDIT_002.md` bounds the R2 public push and remote verification. Role transition acknowledged before BUILD: `ORCHESTRATOR (Codex) → WORK_ORDER_AUTHOR (Codex) → COMMIT_STEWARD (Codex)`. The next act is the exact named push after checks; record outcome as `SESSION_SYNC_STEWARD`. No FREEZE.
+- BUILD/verification: `git push` of only `HEAD:refs/heads/main` succeeded. The new remote has exactly one ref, `main` at `9479d9fa2e49e73061925b4df0b4d2b04bd6f2e0`, matching the pushed tip. The old `origin` and CQA tag were preserved. GitHub `/contributors` immediately showed Blackbird081 and codex as primary authors; `/stats/contributors` returned HTTP 202 twice, so three-avatar display is not yet verified. Evidence: `docs/reviews/CCMAI_CREDIT_002_TRIAL_PUSH_2026-09-29.md`. Role transition `COMMIT_STEWARD → SESSION_SYNC_STEWARD` (Codex); `REVIEW_PENDING` for independent result assessment, no FREEZE.
+- Follow-up GitHub computation: `/stats/contributors` returned HTTP 200 with exactly Blackbird081 (108), claude (51), and codex (19). The API result supports the three-person contributor set; visual sidebar inspection remains open. The SHA above is the first pushed tip; a follow-up evidence/continuity commit may advance the same `main` ref without changing the branch/tag scope.
 
 ## CCMAI-AUTH-001 — first-time Setup with a stale browser token (2026-09-28)
 

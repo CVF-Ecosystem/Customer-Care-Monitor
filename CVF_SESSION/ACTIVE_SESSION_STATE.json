@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-CREDIT-002: after bounded checks, push only local main to the owner-supplied empty Customer-Care-Monitor repository, verify remote SHA and contributor APIs, then record trial evidence. Preserve original origin and CQA provenance tag. S3 guide task follows separately; no FREEZE or production migration.",
+  "nextAllowedMove": "CCMAI-CREDIT-002 REVIEW_PENDING: GitHub contributor statistics for the new Customer-Care-Monitor repository now show Blackbird081, claude and codex. Inspect the rendered sidebar independently before disposition. Preserve original origin and CQA tag; S3 guide task follows separately. No FREEZE or product migration.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR -> WORK_ORDER_AUTHOR (Codex) scoped CCMAI-CREDIT-002; COMMIT_STEWARD (Codex) next",
+  "activeRole": "COMMIT_STEWARD -> SESSION_SYNC_STEWARD (Codex) recorded CCMAI-CREDIT-002 trial push; independent REVIEWER next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

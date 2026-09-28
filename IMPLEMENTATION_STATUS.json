@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -65,7 +65,8 @@
     "UX-02 dashboard 'issues' API field still counts every job result; Codex decided to preserve it and add qc_violation_count in a separate R2 API tranche. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
     "UX-011 Results REVIEW PASS / FREEZE OPEN. Its source-status panel is page-scoped because /results computes source status per returned page; a needs-review/source-status filter, global source counts, confidence on Results, quote highlighting and page/run-scoped export remain BLOCKED_API_CONTRACT proposals in docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md §5. Dashboard QC count, demo scheduler/sync and backend/API/store/schema/provider remain outside UX-011.",
     "CCMAI-AUTH-001 REVIEW PASS covers the stale-token /setup frontend repair only. A failed /setup/status request still falls back to \"setup not needed\"; HttpOnly refresh-cookie invalidation across a reinstall is out of scope. Disposable browser captures were not retained, so independent disposition rests on source and executable tests.",
-    "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction."
+    "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction.",
+    "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -128,7 +129,8 @@
     "docs/reviews/LOGS_COST_NOTIFY_MCP_UX015_BUILD_2026-09-28.md",
     "docs/reviews/SETUP_STALE_TOKEN_RECOVERY_AUTH001_BUILD_2026-09-28.md",
     "docs/specs/SETUP_STALE_TOKEN_RECOVERY_AUTH001_2026-09-28.md",
-    "docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/CCMAI_CREDIT_002_TRIAL_PUSH_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }
