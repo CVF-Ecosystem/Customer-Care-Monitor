@@ -13,6 +13,9 @@
 - The candidate before evidence synchronization was `4e0099de827c51b669235f1e958be8f409c8464c`. Old and candidate commit counts were both 119. Every paired commit had identical tree hash, author name, author email and author timestamp. The final tree hash was identical at `9927b4c3ef8f4d1fbe35b4b663ec79469aa33d84`; `git diff main rewrite_candidate` was empty. The distinct co-author trailer set was unchanged.
 - A case-insensitive scan of candidate commit messages found no root import title, upstream URL, archive branch or archive tag claim. The historical review documents still contain old SHA references; the message rewrite does not relabel them as new SHA records.
 
-## Remote completion
+## Remote completion and limits
 
-Exact-lease push, remote ref confirmation, CI/Pages status and temporary-ref cleanup are recorded below after observation. This is a message rewrite, not a source change or CVF governance proof. The old repository remains the owner's separate deletion task; GitHub may retain unreachable old commit objects/cache temporarily after a force update.
+- The inspected remote `main` was still `bb1f24cc5ef69451f25af0042ca251bceb810cfb`. An exact-lease push (`--force-with-lease=refs/heads/main:bb1f24c...`) updated only `main` to the evidence-bearing candidate `73ee01fbf01af149e337a3f011054bb1b3a7218a`. Remote `ls-remote` matched and showed no tags.
+- Local `main` now tracks that remote SHA. The temporary `rewrite_candidate` branch and `refs/original/refs/heads/rewrite_candidate` backup ref were removed; local branch list contains only `main`, and there are no local tags. The worktree is clean.
+- The final candidate adds this evidence and continuity to the tree-identical message rewrite. Historical review documents still contain old SHA references; those are old observations rather than resolvable commit identifiers on the new `main`. GitHub may retain unreachable old commit objects/cache temporarily after the force update. The old repository remains the owner's separate deletion task.
+- CI/Pages status for the new SHA is checked separately after the push. This is a message rewrite, not a source change or CVF governance proof.

@@ -1,6 +1,6 @@
 # CCMAI-CREDIT-003 — remove obsolete source-import messages from main history
 
-**Date:** 2026-09-29 · **Authority:** owner explicitly requested removal of the root commit's CQA import title, source URL, upstream SHA and archive-history claim, and similar commit messages · **Risk ceiling:** R2 under the accepted contributor-history rewrite precedent · **Status:** WORK_ORDER / BUILD authorized.
+**Date:** 2026-09-29 · **Authority:** owner explicitly requested removal of the root commit's CQA import title, source URL, upstream SHA and archive-history claim, and similar commit messages · **Risk ceiling:** R2 under the accepted contributor-history rewrite precedent · **Status:** BUILD complete / REVIEW_PENDING.
 
 ## INTAKE, DESIGN and SPEC
 

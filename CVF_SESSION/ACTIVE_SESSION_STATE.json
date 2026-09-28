@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-CREDIT-003 authorized: reword four obsolete import/archive commit messages on a local candidate, validate identical trees/authors and exact lease, then update new origin/main; independent R2 REVIEW next. Preserve LICENSE and no FREEZE.",
+  "nextAllowedMove": "CCMAI-CREDIT-003 BUILD message rewrite is on new origin/main with exact-lease verification; independent R2 REVIEW of commit-message scope, tree/author identity and remote result is next. No FREEZE. Old repository deletion remains owner action.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR -> IMPLEMENTATION_WORKER (Codex); independent REVIEWER next",
+  "activeRole": "COMMIT_STEWARD -> SESSION_SYNC_STEWARD (Codex); independent REVIEWER next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
