@@ -1,6 +1,6 @@
 # Work order CCMAI-UX-010 — Job Detail screen redesign
 
-**State:** `REVIEW_PENDING` after BUILD ([evidence](../reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md)) · **Risk:** R2 · **Assignee:** Claude (`IMPLEMENTATION_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md) with canvas version `1790540352-11c7`; orchestrator decisions in the [overnight review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md) §"Orchestrator decisions"; dependency gate satisfied by [UX000-R1 re-review PASS](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md) and UX-001a REVIEW_PASS.
+**State:** `CHANGES_REQUIRED` after [independent BUILD review](../reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md); repair `UX010-R1` authorized · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md) with canvas version `1790540352-11c7`; orchestrator decisions in the [overnight review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md) §"Orchestrator decisions"; dependency gate satisfied by [UX000-R1 re-review PASS](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md) and UX-001a REVIEW_PASS.
 
 ## Entry and role route
 
@@ -41,3 +41,12 @@ SPEC §1–§5 with the corrections above, plus orchestrator decisions:
 ## External-effect ceiling
 
 Local source/tests/docs; the disposable screenshot environment (isolated DNS, removed afterwards). No provider call, real channel sync, customer data, persistent `ccma` change, deployment, push or FREEZE.
+
+## REVIEW repair addendum UX010-R1 (2026-09-28)
+
+Independent review found two truth defects; see [UX-010 review](../reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md). Same objective, risk and external-effect ceiling apply. Allowed implementation paths: `frontend/src/views/Jobs/JobDetail.vue`, `frontend/src/views/Jobs/job-detail/logic.ts` if a pure helper is useful, additive `jd_*` keys in `frontend/src/i18n/vi.ts` and `en.ts`, and focused tests in `frontend/src/__tests__/`. Also allowed: UX-010 BUILD evidence addendum, this work order, roadmap/continuity/status/catalog sync. Do not alter backend, API, stores, other views or unrelated UI behavior.
+
+1. The QC evaluated card must open a visible filter containing exactly non-SKIP conversations within the selected run scope. Keep existing all, pass, fail and skip filters. Test the actual card interaction and destination count with PASS/FAIL/SKIP data.
+2. Run-history summaries must distinguish QC from classification. Classification must never show “đạt” or QC “vấn đề” counts; use verified classification counters and a truthful translation in both languages. Test both job types, including classification with `conversations_passed: 0`.
+
+Record the `REVIEWER → REPAIR_WORKER` role transition and tranche acknowledgment in the active handoff before editing implementation. Rerun focused and full frontend tests, forced vue-tsc, build, i18n parity, diff check, catalog check and doctor; capture affected QC metric and classification history states in the disposable UI environment if available. Return one local repair/evidence/continuity commit as `REVIEW_PENDING` for independent Codex re-review. Do not self-PASS, FREEZE or push.

@@ -20,7 +20,7 @@
     "CCMAI-UX-000 REVIEW PASS / FREEZE OPEN after UX000-R1: all three layout avatar initials use theme on-colors; independent 92/92 frontend tests, forced typecheck, rendered contrast evidence and 36-page capture review passed. UX-010 may move to WORK_ORDER and bounded BUILD."
   ],
   "buildInProgress": [
-    "CCMAI-UX-010 BUILD REVIEW_PENDING (Claude): Job Detail rebuilt on UX-000 components with latest-run scope and selector, SKIP-aware metrics (UX-04), needs-review default filter, source panel, confirm-gated destructive actions in the ... menu, all-runs export labels, two-column detail dialog with exact evidence_refs highlighting (no guessing), run history with status mapping and live progress. 111 frontend tests pass; 36 app captures plus dialog/history states at desktop/mobile light/dark with 0 JS errors. Awaiting Codex review."
+    "CCMAI-UX-010 BUILD CHANGES_REQUIRED after independent Codex REVIEW: Job Detail structure, latest-run scope, SKIP-aware metrics, exact evidence_refs highlighting and live progress are retained. UX010-R1 repair is authorized for two truth defects: the evaluated metric links to all results including SKIP, and classification run history uses QC pass/issue wording. 111 frontend tests and forced vue-tsc passed independent rerun; no FREEZE."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -97,7 +97,8 @@
     "docs/reviews/DISPLAY_DATA_FIXES_UX001A_BUILD_2026-09-28.md",
     "docs/reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md",
     "docs/reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md",
-    "docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md"
+    "docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md",
+    "docs/reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

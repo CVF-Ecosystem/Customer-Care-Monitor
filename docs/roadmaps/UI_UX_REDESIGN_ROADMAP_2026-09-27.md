@@ -166,4 +166,5 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 
 1. [Đã dựng bản đầu, 2026-09-28] Claude dựng canvas Giai đoạn 0: bảng màu light/dark, thang chữ, component dùng chung (chip kết luận, chip trạng thái nguồn, khung trạng thái nguồn, thẻ số liệu, thẻ kết quả mobile, hàng bảng, hộp thoại, menu ⋯) và bảng thuật ngữ.
 2. [UX-000: Codex re-review `REVIEW_PASS` UX000-R1 ngày 2026-09-28 — [review](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md)] Ba avatar đạt tương phản; UX-000, UX-002 và UX-001a đều REVIEW PASS, FREEZE vẫn mở. Claude có thể viết work order UX-010 rồi BUILD theo SPEC đã chốt, trả `REVIEW_PENDING` cho Codex.
+2a. [UX-010: Codex review `CHANGES_REQUIRED` ngày 2026-09-28 — [review](../reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md)] Giữ thiết kế phạm vi lần chạy mới nhất; sửa UX010-R1 trong cùng work order: thẻ “đã đánh giá” phải lọc đúng hội thoại không SKIP, lịch sử phân loại phải dùng ngữ nghĩa phân loại. Claude trả `REVIEW_PENDING` để Codex review lại; chưa FREEZE.
 3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.

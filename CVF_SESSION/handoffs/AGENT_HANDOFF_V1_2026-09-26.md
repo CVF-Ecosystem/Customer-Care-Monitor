@@ -7,9 +7,15 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: REVIEWER (Codex) next for CCMAI-UX-010; Claude IMPLEMENTATION_WORKER done. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
-- Next allowed move: Codex independently REVIEWs CCMAI-UX-010 BUILD (Job Detail; evidence `docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md`), including the work order's two SPEC corrections and confirmation of the latest-run default rationale. Separate R2 tranches still to be ordered: dashboard `qc_violation_count` API; scheduler skip for explicitly marked demo channels. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
+- Active role: ORCHESTRATOR (Codex) routed UX010-R1; Claude REPAIR_WORKER next. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
+- Next allowed move: Claude acknowledges the `REVIEWER (Codex) → REPAIR_WORKER` transition here, then repairs UX010-R1 under the [work-order addendum](../../docs/work_orders/CCMAI_UX_010.md) and returns a local `REVIEW_PENDING` commit for independent Codex re-review. Separate R2 tranches still to be ordered: dashboard `qc_violation_count` API; scheduler skip for explicitly marked demo channels. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## Codex independent UX-010 BUILD REVIEW (2026-09-28)
+
+- Role transition ORCHESTRATOR → REVIEWER (Codex). Reviewed `4c8af9e` BUILD and `44536eb` continuity repair. Independently reran 111/111 frontend tests and forced vue-tsc; inspected source, backend counter semantics, BUILD evidence and desktop/mobile light/dark captures. Doctor 25/25 and diff check passed. Latest-run default accepted for scope clarity; live-progress and SKIP-exclusion SPEC corrections confirmed. No provider or CVF governance proof claim.
+- Disposition `CHANGES_REQUIRED`, repair round UX010-R1: evaluated metric excludes SKIP but links to all results; classification run history uses QC pass/issue summary although classification has no pass semantics. Review: `docs/reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md`; bounded repair addendum in `docs/work_orders/CCMAI_UX_010.md`. No FREEZE.
+- Role transition REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex), local review/continuity commit only. Claude next records `REPAIR_WORKER` acknowledgment before implementation. No push or deployment.
 
 ## Codex independent UX000-R1 re-review (2026-09-28)
 
