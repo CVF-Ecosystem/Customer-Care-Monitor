@@ -51,3 +51,20 @@ A QC-only "Đạt" chip or filter (the evaluated map and filter lack the job typ
 
 - The native date inputs in the export dialog follow the **browser** locale. The headless capture runs in en-US and shows MM/DD/YYYY; a vi-VN browser shows dd/mm/yyyy. Same as the Results filters, and not changed here.
 - The downloaded `.txt` of one conversation keeps its existing Vietnamese content (file content, not UI).
+
+## Repair R1 (Claude, `REPAIR_WORKER`, 2026-09-28)
+
+**Finding R1-1** ([review](CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md)): when `GET /conversations/evaluated` failed, every conversation showed "Chưa phân tích", even analyzed ones.
+
+**Fix** (`Messages.vue`, one additive key `msgs_chip_unknown`): the map now has an explicit state (`pending` / `ok` / `error`).
+- `ok`: the PASS/FAIL/SKIP/other/absent mapping is unchanged, and an absent entry is still "Chưa phân tích".
+- `pending`: no chip is shown.
+- `error`: a muted "Không rõ trạng thái phân tích" chip is shown.
+
+The request parameters are unchanged.
+
+**Tests:** 3 regression cases in `messages-screen.spec.ts`: failed request (4 rows, all "Không rõ…", never "Chưa phân tích"), pending request (no chip), and a successful map with absent entries ("Chưa phân tích"). Mutating the error branch back to "loaded, empty" fails the failure case. Suite: **145/145**; `vue-tsc` and build pass.
+
+**Captures:** none were taken for this repair. The failure state needs a failing status endpoint, which the disposable environment cannot produce without changing the backend. The success-path rendering is unchanged from the BUILD captures.
+
+Status: `REVIEW_PENDING` for Codex re-review. No push or FREEZE.

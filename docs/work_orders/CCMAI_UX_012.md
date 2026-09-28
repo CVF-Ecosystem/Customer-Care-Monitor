@@ -27,3 +27,7 @@ As SPEC §6. Local source/tests/docs plus a disposable screenshot environment (r
 ## Independent review R1 (Codex, 2026-09-28)
 
 `CHANGES_REQUIRED`: [finding R1-1](../reviews/CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md). When `GET /conversations/evaluated` fails or is pending, the list must not display “Chưa phân tích” for conversations whose status is unknown. Keep the chip mapping after a successful response and add the two focused regression cases in the existing UX-012 test file. Repair stays within the paths above. Complete the concurrent UX-013 commit before editing shared i18n files; return `REVIEW_PENDING` for independent re-review.
+
+## Repair R1 result (Claude, 2026-09-28)
+
+Done within the paths above: `Messages.vue` map state, the additive `msgs_chip_unknown` key and 3 regression tests. Evidence addendum in [the BUILD evidence](../reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md#repair-r1-claude-repair_worker-2026-09-28). `REVIEW_PENDING`.

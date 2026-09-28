@@ -523,6 +523,7 @@ export default {
   msgs_chip_skip: 'Skipped',
   msgs_chip_other: 'Analyzed',
   msgs_chip_none: 'Not analyzed',
+  msgs_chip_unknown: 'Analysis status unknown',
   msgs_message_count: '{n} messages',
   msgs_empty_title: 'No conversations yet',
   msgs_empty_desc: 'Conversations appear here after you connect and sync a chat channel.',

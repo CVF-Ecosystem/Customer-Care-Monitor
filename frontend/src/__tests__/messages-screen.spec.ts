@@ -49,7 +49,7 @@ const evaluations = {
   ],
 }
 
-type Opts = { failList?: boolean; items?: unknown[]; total?: number; exportBody?: string }
+type Opts = { failList?: boolean; items?: unknown[]; total?: number; exportBody?: string; map?: 'fail' | 'pending' | Record<string, string> }
 let opts: Opts = {}
 
 function setup(o: Opts = {}) {
@@ -61,7 +61,11 @@ function setup(o: Opts = {}) {
       const items = opts.items ?? convs
       return Promise.resolve({ data: { data: items, total: opts.total ?? 210 } })
     }
-    if (url.endsWith('/conversations/evaluated')) return Promise.resolve({ data: evalMap })
+    if (url.endsWith('/conversations/evaluated')) {
+      if (opts.map === 'fail') return Promise.reject(new Error('boom'))
+      if (opts.map === 'pending') return new Promise(() => {})
+      return Promise.resolve({ data: opts.map ?? evalMap })
+    }
     if (url.endsWith('/messages')) return Promise.resolve({ data: { conversation: { id: 'c2', customer_name: 'Khách Hai', message_count: 10 }, messages: [{ id: 'm1', sender_type: 'customer', sender_name: 'Khách Hai', content: 'Xin chào', content_type: 'text', attachments: '[]', sent_at: '2026-09-27T09:00:00Z' }] } })
     if (url.endsWith('/evaluations')) return Promise.resolve({ data: evaluations })
     if (url.includes('/conversations/export')) return Promise.resolve({ data: opts.exportBody ?? 'nội dung' })
@@ -120,6 +124,30 @@ describe('Messages screen (UX-012)', () => {
     const chips = w.findAll('[data-testid="msgs-chip"]').map((c) => c.text())
     expect(chips).toEqual([viMessages.msgs_chip_pass, viMessages.msgs_chip_fail, viMessages.msgs_chip_skip, viMessages.msgs_chip_none])
     expect(chips).not.toContain('Đạt')
+  })
+
+  it('R1: a failed status request never claims "Chưa phân tích"', async () => {
+    setup({ map: 'fail' })
+    const w = await mountView()
+    const chips = w.findAll('[data-testid="msgs-chip"]').map((c) => c.text())
+    expect(chips).toHaveLength(4)
+    expect(chips.every((c) => c === viMessages.msgs_chip_unknown)).toBe(true)
+    expect(w.text()).not.toContain(viMessages.msgs_chip_none)
+  })
+
+  it('R1: while the status request is pending no status is claimed', async () => {
+    setup({ map: 'pending' })
+    const w = await mountView()
+    expect(w.findAll('[data-testid="msgs-row"]')).toHaveLength(4)
+    expect(w.findAll('[data-testid="msgs-chip"]')).toHaveLength(0)
+    expect(w.text()).not.toContain(viMessages.msgs_chip_none)
+  })
+
+  it('R1: after a successful response an absent entry is "Chưa phân tích"', async () => {
+    setup({ map: { c1: 'FAIL' } })
+    const w = await mountView()
+    const chips = w.findAll('[data-testid="msgs-chip"]').map((c) => c.text())
+    expect(chips).toEqual([viMessages.msgs_chip_fail, viMessages.msgs_chip_none, viMessages.msgs_chip_none, viMessages.msgs_chip_none])
   })
 
   it('keeps list request parameters and debounced search', async () => {

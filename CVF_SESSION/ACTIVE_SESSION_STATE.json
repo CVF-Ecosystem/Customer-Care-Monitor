@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude: UX-012 repair R1 (docs/reviews/CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md) within the UX-012 work order, return REVIEW_PENDING; then UX-014 and UX-015 as owner directed. Codex: independent REVIEW of UX-013 (docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md) and re-review of UX-012 after R1. UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "Claude: owner-directed UX-014 (Cài đặt, Người dùng, Đăng nhập/Thiết lập), then UX-015. Codex: re-review UX-012 R1 and review UX-013 (docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md). UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) returned UX-013 REVIEW_PENDING; next REPAIR_WORKER (Claude) for UX-012 R1; REVIEWER (Codex) reviews each tranche independently",
+  "activeRole": "COMMIT_STEWARD (Claude) returned UX-012 R1 and UX-013 REVIEW_PENDING; Claude continues owner-directed UX-014; REVIEWER (Codex) reviews independently",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

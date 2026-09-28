@@ -90,7 +90,9 @@
                 <span class="mg-muted mg-small mg-nowrap">{{ relative(conv.last_message_at) }}</span>
               </span>
               <span class="mg-row__meta">
-                <span class="mg-chip" :class="`mg-chip--${chipKind(evaluationMap[conv.id])}`" data-testid="msgs-chip">{{ chipLabel(evaluationMap[conv.id]) }}</span>
+                <!-- UX-012 R1: chỉ kết luận "chưa phân tích" khi đã tải được trạng thái; lỗi thì ghi "không rõ", đang tải thì chưa hiện -->
+                <span v-if="mapState === 'ok'" class="mg-chip" :class="`mg-chip--${chipKind(evaluationMap[conv.id])}`" data-testid="msgs-chip">{{ chipLabel(evaluationMap[conv.id]) }}</span>
+                <span v-else-if="mapState === 'error'" class="mg-chip mg-chip--none" data-testid="msgs-chip">{{ $t('msgs_chip_unknown') }}</span>
                 <span class="mg-muted mg-small">{{ $t('msgs_message_count', { n: conv.message_count }) }}</span>
               </span>
             </span>
@@ -332,14 +334,22 @@ const moLocMobile = ref(false)
 const loadingEvaluation = ref(false)
 const evaluation = ref<any>(null)
 
-// Map hội thoại -> severity của lần phân tích gần nhất, mọi loại tác vụ
+// Map hội thoại -> severity của lần phân tích gần nhất, mọi loại tác vụ.
+// UX-012 R1: tách "đã tải xong, không có mục" khỏi "đang tải / tải lỗi" để không bao giờ
+// ghi "Chưa phân tích" cho hội thoại mà thực ra ta không biết trạng thái.
 const evaluationMap = ref<Record<string, string>>({})
+const mapState = ref<'pending' | 'ok' | 'error'>('pending')
 
 async function loadEvaluationMap() {
+  mapState.value = 'pending'
   try {
     const { data } = await api.get(`/tenants/${tenantId.value}/conversations/evaluated`)
     evaluationMap.value = data || {}
-  } catch { /* chip hiện "chưa phân tích" thay vì đoán */ }
+    mapState.value = 'ok'
+  } catch {
+    evaluationMap.value = {}
+    mapState.value = 'error'
+  }
 }
 
 // Phân loại cũng ghi PASS, nên PASS chỉ được gọi là "Đạt / đã phân loại".

@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (UX-012 CHANGES_REQUIRED R1; UX-013 REVIEW_PENDING; series UX-012..015 in progress)
-- Active role: COMMIT_STEWARD (Claude) returned UX-013 REVIEW_PENDING; next REPAIR_WORKER (Claude) for UX-012 R1; REVIEWER (Codex) reviews each tranche independently
-- Next allowed move: Claude: UX-012 repair R1 (docs/reviews/CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md) within the UX-012 work order, return REVIEW_PENDING; then UX-014 and UX-015 as owner directed. Codex: independent REVIEW of UX-013 (docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md) and re-review of UX-012 after R1. UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.
+- Active phase: REVIEW (UX-012 R1 and UX-013 REVIEW_PENDING; series UX-012..015 in progress)
+- Active role: COMMIT_STEWARD (Claude) returned UX-012 R1 and UX-013 REVIEW_PENDING; Claude continues owner-directed UX-014; REVIEWER (Codex) reviews independently
+- Next allowed move: Claude: owner-directed UX-014 (Cài đặt, Người dùng, Đăng nhập/Thiết lập), then UX-015. Codex: re-review UX-012 R1 and review UX-013 (docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md). UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
 
 ## Owner-directed UI screen series UX-012..UX-015 (2026-09-28, Claude)
@@ -21,6 +21,8 @@ Status: ACTIVE
 - UX-013 DESIGN → SPEC → WORK_ORDER (Claude): canvas https://claude.ai/artifact/P6t4P6pboawbA9PFVTT276 frozen at `1790603381-76c3`; SPEC `docs/specs/JOBS_SCREENS_UX013_2026-09-28.md`; work order `docs/work_orders/CCMAI_UX_013.md` (Jobs views, JobWizard, CronPicker, new `job-list/` helpers, additive `jl_*`/`jw_*` keys, one test file). Role transition SPEC_AUTHOR → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER (Claude) acknowledged before implementation.
 - Codex independent UX-012 REVIEW (`fed1fd4`, recorded here by Claude as SESSION_SYNC_STEWARD on the owner's relay): `CHANGES_REQUIRED` R1-1 — when `GET /conversations/evaluated` fails or is pending, the list must not claim 'Chưa phân tích'. Repair follows the UX-013 commit under the UX-012 work order.
 - UX-013 BUILD result (Claude): Jobs list/create/edit, JobWizard steps and CronPicker redesigned; 115 additive `jl_*`/`jw_*` keys; `job-list/schedule.ts` helpers; 8 focused tests (4 meaningful mutations caught). Fixed: JobEdit rendering a default form after a failed load (a Save would overwrite the job with blanks); email output test that can never pass (now explained; gate unchanged, BLOCKED_API_CONTRACT); output type change now resets its tested flag; US dates and English run status; native English delete confirm. Capture rounds also caught a missing `jl_confirm_ok` key and wrapped cells, both fixed. Gates 142/142 tests, vue-tsc, build; disposable captures 36 pages + 28 plan states, 0 JS errors/overflow/external requests; environments removed. Evidence `docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md`. Role transition IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude); local commit `REVIEW_PENDING`.
+- UX-012 repair R1 acknowledgment (Claude, rehydrated at `b248a5f`; state/handoff/review agree): role transition REVIEWER (Codex) → REPAIR_WORKER (Claude), first repair round for independent finding R1-1, same UX-012 work order paths (`Messages.vue`, additive `msgs_*` keys, `messages-screen.spec.ts`, evidence/continuity). No boundary change.
+- UX-012 repair R1 result (Claude): evaluated-map state `pending`/`ok`/`error`; failure shows 'Không rõ trạng thái phân tích', pending shows no chip, success mapping unchanged; additive `msgs_chip_unknown`; 3 regression tests (mutation caught); 145/145 tests, vue-tsc, build. No capture (failure state needs a failing endpoint). Role transition REPAIR_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude); local commit `REVIEW_PENDING` for Codex re-review.
 
 ## Codex independent UX-011 REVIEW (2026-09-28)
 

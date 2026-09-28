@@ -523,6 +523,7 @@ export default {
   msgs_chip_skip: 'Bỏ qua',
   msgs_chip_other: 'Đã phân tích',
   msgs_chip_none: 'Chưa phân tích',
+  msgs_chip_unknown: 'Không rõ trạng thái phân tích',
   msgs_message_count: '{n} tin nhắn',
   msgs_empty_title: 'Chưa có hội thoại',
   msgs_empty_desc: 'Hội thoại sẽ hiện ở đây sau khi kết nối và đồng bộ kênh chat.',
