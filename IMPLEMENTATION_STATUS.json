@@ -68,7 +68,7 @@
     "CCMAI-AUTH-001 REVIEW PASS covers the stale-token /setup frontend repair only. A failed /setup/status request still falls back to \"setup not needed\"; HttpOnly refresh-cookie invalidation across a reinstall is out of scope. Disposable browser captures were not retained, so independent disposition rests on source and executable tests.",
     "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction.",
     "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration.",
-    "CCMAI-REPO-MIGRATE-001 locally updates Go module/imports and current repository/documentation links for CVF-Ecosystem/Customer-Care-Monitor. Historical evidence URLs/commit messages remain provenance. Canonical origin push and new Pages deployment require remote verification; no old repository deletion or FREEZE."
+    "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical CVF-Ecosystem/Customer-Care-Monitor origin; Go/docs Actions and new GitHub Pages passed, with public home and key guides HTTP 200. Historical PR/run URLs and initial CQA import message remain provenance. Independent R2 REVIEW and FREEZE remain open; old repository deletion is the owner's separate action."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",

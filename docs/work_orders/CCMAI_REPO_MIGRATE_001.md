@@ -1,6 +1,6 @@
 # CCMAI-REPO-MIGRATE-001 — move the active project to the new repository
 
-**Date:** 2026-09-29 · **Authority:** owner confirmed the three-person contributor display and directed migration to `CVF-Ecosystem/Customer-Care-Monitor` · **Risk ceiling:** R2 · **Status:** WORK_ORDER / BUILD authorized.
+**Date:** 2026-09-29 · **Authority:** owner confirmed the three-person contributor display and directed migration to `CVF-Ecosystem/Customer-Care-Monitor` · **Risk ceiling:** R2 · **Status:** BUILD complete / REVIEW_PENDING.
 
 ## INTAKE, DESIGN and SPEC
 

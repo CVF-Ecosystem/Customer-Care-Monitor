@@ -13,7 +13,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-REPO-MIGRATE-001 BUILD is locally validated and awaiting independent R2 REVIEW after canonical main push and GitHub Pages verification. CREDIT-002 sidebar observation is resolved by owner screenshot (Blackbird081, claude, codex); no FREEZE. Old repository deletion remains owner action.",
+  "nextAllowedMove": "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical new origin; GitHub Go/docs CI and Pages deployment passed; independent R2 REVIEW next. CREDIT-002 owner screenshot resolves three-person sidebar observation but remains separately REVIEW_PENDING. No FREEZE. Old repository deletion remains owner action.",
   "parkedOperatorCheckpoint": null,
   "activeRole": "IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex); independent REVIEWER next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
