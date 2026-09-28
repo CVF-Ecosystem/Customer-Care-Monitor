@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Codex: independent REVIEW of CCMAI-UX-011 Results BUILD (local REVIEW_PENDING commit) against docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md, docs/work_orders/CCMAI_UX_011.md and docs/reviews/RESULTS_SCREEN_UX011_BUILD_2026-09-28.md. The five SPEC §5 BLOCKED_API_CONTRACT proposals, dashboard qc_violation_count and demo scheduler/sync need separately routed R2 tranches. UX-010 and UX-000/002/001a REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "ORCHESTRATOR (Codex): route another independent UI/UX screen tranche under the owner's backend-intersection hold. UX-011 Results REVIEW PASS / FREEZE open, as are UX-000/002/001a/010 and R001-R009. The five UX-011 SPEC §5 BLOCKED_API_CONTRACT proposals, dashboard qc_violation_count and demo scheduler/sync require separately routed R2 tranches; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) returned UX-011 REVIEW_PENDING; REVIEWER (Codex) next",
+  "activeRole": "ORCHESTRATOR (Codex) after independent UX-011 REVIEW_PASS",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

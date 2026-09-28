@@ -18,11 +18,10 @@
     "CCMAI-UX-002 REVIEW PASS / FREEZE OPEN: Results displays the local-only source note above populated table/card lists and a visible Nguồn column header; independently checked source, tests and captures.",
     "CCMAI-UX-001a REVIEW PASS / FREEZE OPEN, stacked on UX-000: relative time, demo timestamps, card/tag wording and Vietnam-day trend passed independent source/tests/capture review. UX-000 dependency now REVIEW PASS.",
     "CCMAI-UX-000 REVIEW PASS / FREEZE OPEN after UX000-R1: all three layout avatar initials use theme on-colors; independent 92/92 frontend tests, forced typecheck, rendered contrast evidence and 36-page capture review passed. UX-010 may move to WORK_ORDER and bounded BUILD.",
-    "CCMAI-UX-010 REVIEW PASS / FREEZE OPEN after UX010-R1: Job Detail's evaluated card now opens the exact non-SKIP filter; classification history uses analyzed/tag wording backed by engine counters. Independent 114/114 frontend tests, forced vue-tsc, diff/catalog checks, project doctor 25/25 and source/capture inspection passed."
+    "CCMAI-UX-010 REVIEW PASS / FREEZE OPEN after UX010-R1: Job Detail's evaluated card now opens the exact non-SKIP filter; classification history uses analyzed/tag wording backed by engine counters. Independent 114/114 frontend tests, forced vue-tsc, diff/catalog checks, project doctor 25/25 and source/capture inspection passed.",
+    "CCMAI-UX-011 REVIEW PASS / FREEZE OPEN: Results presentation now names server-wide verdict counts, page-scoped source counts, total range and full-filter export while keeping the existing API request contract and local-only source caveat. Independent 127/127 frontend tests, forced vue-tsc, diff/catalog checks, project doctor 25/25 and capture/source review passed. Five API-dependent proposals remain held."
   ],
-  "buildInProgress": [
-    "CCMAI-UX-011 REVIEW_PENDING: Results screen rebuilt on UX-000 components within docs/work_orders/CCMAI_UX_011.md (Results.vue, one additive SourceStatusPanel scope prop, additive results_* i18n keys, focused tests). Page-scoped source panel, text source chips, scope captions for chips/range/export, dialog with transcript, per-status hints, QC issues separated from classification tags, inline load error with retry; no confidence and no needs-review filter (BLOCKED_API_CONTRACT). 127/127 frontend tests, vue-tsc, build, diff check; disposable captures 36 pages with 0 JS errors/overflow/external requests plus dialog states. Awaiting independent Codex REVIEW."
-  ],
+  "buildInProgress": [],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
     "CCMAI-DOCS-001",
@@ -53,7 +52,7 @@
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them.",
     "CCMAI-UX-000 changes the global theme and font; existing screens keep their own source-status colors and sync labels until screen tranches (UX-010+). The F1 onboarding bar remains a later-screen item; avatar contrast UX000-R1 passed independent re-review.",
     "UX-02 dashboard 'issues' API field still counts every job result; Codex decided to preserve it and add qc_violation_count in a separate R2 API tranche. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
-    "UX-011 Results BUILD is REVIEW_PENDING (not reviewed). Its source-status panel is page-scoped because /results computes source status per returned page; a needs-review/source-status filter, global source counts, confidence on Results, quote highlighting and page/run-scoped export are BLOCKED_API_CONTRACT proposals in docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md §5. Dashboard QC count, demo scheduler/sync and backend/API/store/schema/provider remain outside UX-011."
+    "UX-011 Results REVIEW PASS / FREEZE OPEN. Its source-status panel is page-scoped because /results computes source status per returned page; a needs-review/source-status filter, global source counts, confidence on Results, quote highlighting and page/run-scoped export remain BLOCKED_API_CONTRACT proposals in docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md §5. Dashboard QC count, demo scheduler/sync and backend/API/store/schema/provider remain outside UX-011."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -103,7 +102,8 @@
     "docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md",
     "docs/reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md",
     "docs/reviews/CCMAI_UX_010_REPAIR_R1_REREVIEW_2026-09-28.md",
-    "docs/reviews/RESULTS_SCREEN_UX011_BUILD_2026-09-28.md"
+    "docs/reviews/RESULTS_SCREEN_UX011_BUILD_2026-09-28.md",
+    "docs/reviews/CCMAI_UX_011_INDEPENDENT_REVIEW_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }
