@@ -1,371 +1,239 @@
+<!--
+  Cài đặt công ty: cấu hình AI, phân tích, lưu trữ file, thông tin chung.
+  CCMAI-UX-014: trình bày lại; dữ liệu gửi đi giữ nguyên. Nếu không tải được cài đặt thì
+  KHÔNG hiện biểu mẫu — trước đây biểu mẫu hiện giá trị mặc định và bấm Lưu sẽ ghi đè.
+-->
 <template>
-  <div>
-    <h1 class="text-h5 font-weight-bold mb-6">{{ $t('settings') }}</h1>
+  <div class="st-page">
+    <h1 class="st-title">{{ $t('settings') }}</h1>
 
-    <v-row>
-      <v-col cols="12" md="3">
-        <v-card class="pa-2">
-          <v-list density="compact" nav>
-            <v-list-item
-              v-for="tab in tabs"
-              :key="tab.value"
-              :active="activeTab === tab.value"
-              :prepend-icon="tab.icon"
-              :title="$t(tab.label)"
-              rounded="lg"
-              color="primary"
-              @click="activeTab = tab.value"
-            />
-          </v-list>
-        </v-card>
-      </v-col>
+    <v-skeleton-loader v-if="loading" type="article, article" />
 
-      <v-col cols="12" md="9">
-        <!-- AI Config -->
-        <v-card v-if="activeTab === 'ai'" class="pa-6">
-          <div class="text-subtitle-1 font-weight-bold mb-4">
-            <v-icon start size="small">mdi-robot</v-icon>
-            {{ $t('ai_config') }}
-          </div>
+    <div v-else-if="loadError" class="st-error st-error--row" role="alert" data-testid="st-load-error">
+      <span>{{ $t('st_load_error') }}</span>
+      <v-btn variant="outlined" color="error" height="44" @click="init">{{ $t('st_retry') }}</v-btn>
+    </div>
 
-          <v-select
-            v-model="aiSettings.provider"
-            :label="$t('ai_provider')"
-            :items="providerOptions"
-            class="mb-3"
-            @update:model-value="onProviderChange"
-          />
+    <div v-else class="st-layout" :class="{ 'st-layout--split': mdAndUp }">
+      <nav v-if="mdAndUp" class="st-nav" :aria-label="$t('st_sections')">
+        <button
+          v-for="tab in tabs"
+          :key="tab.value"
+          type="button"
+          class="st-nav__item"
+          :class="{ 'st-nav__item--on': activeTab === tab.value }"
+          :aria-current="activeTab === tab.value ? 'page' : undefined"
+          @click="activeTab = tab.value"
+        >
+          <v-icon size="20" aria-hidden="true">{{ tab.icon }}</v-icon>{{ $t(tab.label) }}
+        </button>
+      </nav>
+      <v-tabs v-else v-model="activeTab" show-arrows class="st-tabs">
+        <v-tab v-for="tab in tabs" :key="tab.value" :value="tab.value">{{ $t(tab.label) }}</v-tab>
+      </v-tabs>
 
-          <div class="d-flex align-start ga-2 mb-3">
-            <v-select
-              v-model="aiSettings.model"
-              :label="$t('ai_model')"
-              :items="modelOptions"
-              hide-details="auto"
-              class="flex-grow-1"
-            />
-            <v-btn
-              icon="mdi-refresh"
-              variant="text"
-              size="small"
-              class="mt-2"
-              :loading="refreshingModels"
-              :title="$t('refresh_model_list')"
-              @click="refreshModelList"
-            />
-          </div>
-          <div v-if="modelsSource === 'static'" class="text-caption text-grey mb-3">
-            {{ $t('model_list_static') }}
-          </div>
+      <!-- Cấu hình AI -->
+      <section v-if="activeTab === 'ai'" class="st-card" data-testid="st-ai">
+        <header>
+          <h2 class="st-h2">{{ $t('ai_config') }}</h2>
+          <p class="st-intro">{{ $t('st_intro_ai') }}</p>
+        </header>
 
-          <v-text-field
-            v-model="aiSettings.apiKey"
-            :label="$t('api_key')"
-            :type="showKey ? 'text' : 'password'"
-            :append-inner-icon="showKey ? 'mdi-eye-off' : 'mdi-eye'"
-            @click:append-inner="showKey = !showKey"
-            class="mb-3"
-          />
+        <v-select v-model="aiSettings.provider" :label="$t('ai_provider')" :items="providerOptions" variant="outlined" hide-details @update:model-value="onProviderChange" />
 
-          <v-switch
-            v-model="useCustomBaseUrl"
-            label="Tùy chỉnh API URL"
-            color="primary"
-            density="compact"
-            hide-details
-            class="mt-1 mb-2"
-          />
-          <div v-if="!useCustomBaseUrl" class="text-caption text-grey mb-2">Bật khi cần dùng proxy (OpenRouter, LiteLLM, CLIProxy) hoặc máy chủ tự dựng</div>
-          <div v-else class="text-caption text-grey mb-2">Điền xong hãy lưu cài đặt rồi bấm nút làm mới cạnh ô Model AI, danh sách model sẽ lấy theo đúng proxy này</div>
+        <div class="d-flex align-start ga-2">
+          <v-select v-model="aiSettings.model" :label="$t('ai_model')" :items="modelOptions" variant="outlined" hide-details="auto" class="flex-grow-1" />
+          <v-btn icon variant="outlined" size="56" rounded="lg" :loading="refreshingModels" :aria-label="$t('refresh_model_list')" :title="$t('refresh_model_list')" @click="refreshModelList">
+            <v-icon>mdi-refresh</v-icon>
+          </v-btn>
+        </div>
+        <p v-if="modelsSource === 'static'" class="st-note">{{ $t('model_list_static') }}</p>
 
-          <v-text-field
-            v-if="useCustomBaseUrl"
-            v-model="aiSettings.baseUrl"
-            label="Base URL"
-            :placeholder="baseUrlPlaceholder"
-            hint="Để trống để dùng mặc định"
-            persistent-hint
-            clearable
-            :rules="[
-              v => !!v || 'Vui lòng nhập URL hoặc tắt tùy chỉnh',
-              v => !v || v.startsWith('http://') || v.startsWith('https://') || 'URL phải bắt đầu bằng http:// hoặc https://',
-            ]"
-            class="mb-3"
-          />
+        <v-text-field
+          v-model="aiSettings.apiKey"
+          :label="$t('api_key')"
+          :type="showKey ? 'text' : 'password'"
+          :append-inner-icon="showKey ? 'mdi-eye-off' : 'mdi-eye'"
+          autocomplete="off"
+          variant="outlined"
+          hide-details
+          @click:append-inner="showKey = !showKey"
+        />
+        <p v-if="hasSavedKey" class="st-note">{{ $t('st_key_saved_note') }}</p>
 
-          <div class="d-flex ga-2">
-            <v-btn color="primary" :loading="savingAI" @click="saveAI">{{ $t('save_settings') }}</v-btn>
-            <v-btn variant="outlined" :loading="testingKey" @click="testKey">{{ $t('test_api_key') }}</v-btn>
-          </div>
-        </v-card>
+        <v-switch v-model="useCustomBaseUrl" :label="$t('st_custom_url')" color="primary" density="compact" hide-details />
+        <p class="st-note">{{ useCustomBaseUrl ? $t('st_custom_url_on') : $t('st_custom_url_off') }}</p>
+        <v-text-field
+          v-if="useCustomBaseUrl"
+          v-model="aiSettings.baseUrl"
+          :label="$t('st_base_url')"
+          :placeholder="baseUrlPlaceholder"
+          :hint="$t('st_base_url_hint')"
+          persistent-hint
+          clearable
+          variant="outlined"
+          :rules="[
+            (v: string) => !!v || $t('st_base_url_required'),
+            (v: string) => !v || v.startsWith('http://') || v.startsWith('https://') || $t('st_url_scheme'),
+          ]"
+        />
 
-        <!-- General -->
-        <!-- Analysis Settings -->
-        <v-card v-if="activeTab === 'analysis'" class="pa-6">
-          <div class="text-subtitle-1 font-weight-bold mb-4">
-            <v-icon start size="small">mdi-chart-bar</v-icon>
-            Cài đặt phân tích
-          </div>
+        <footer class="st-actions">
+          <v-btn color="primary" height="44" :loading="savingAI" data-testid="st-save-ai" @click="saveAI">{{ $t('save_settings') }}</v-btn>
+          <v-btn variant="outlined" height="44" :loading="testingKey" data-testid="st-test-key" @click="testKey">{{ $t('st_test_saved_key') }}</v-btn>
+          <span class="st-note">{{ $t('st_test_saved_note') }}</span>
+        </footer>
+      </section>
 
-          <div class="text-subtitle-2 mb-2">Chế độ Batch (tối ưu chi phí)</div>
-          <v-switch
-            v-model="aiSettings.batchMode"
-            label="Bật chế độ Batch"
-            hint="Gom nhiều cuộc chat vào 1 lần gọi AI. Tiết kiệm token nhưng có thể giảm độ chính xác."
-            persistent-hint
-            density="compact"
-            color="primary"
-            class="mb-3"
-          />
-          <v-select
-            v-if="aiSettings.batchMode"
-            v-model="aiSettings.batchSize"
-            label="Số cuộc chat / batch"
-            :items="[3, 5, 10, 15, 20, 30]"
-            density="compact"
-            class="mb-4"
-            style="max-width: 200px"
-          />
+      <!-- Phân tích -->
+      <section v-if="activeTab === 'analysis'" class="st-card">
+        <header>
+          <h2 class="st-h2">{{ $t('analysis_settings') }}</h2>
+          <p class="st-intro">{{ $t('st_intro_analysis') }}</p>
+        </header>
+        <h3 class="st-h3">{{ $t('st_batch_title') }}</h3>
+        <v-switch v-model="aiSettings.batchMode" :label="$t('st_batch_toggle')" :hint="$t('st_batch_hint')" persistent-hint density="compact" color="primary" />
+        <v-select v-if="aiSettings.batchMode" v-model="aiSettings.batchSize" :label="$t('st_batch_size')" :items="[3, 5, 10, 15, 20, 30]" variant="outlined" hide-details class="st-narrow" />
+        <footer class="st-actions">
+          <v-btn color="primary" height="44" :loading="savingAnalysis" @click="saveAnalysis">{{ $t('save_settings') }}</v-btn>
+        </footer>
+      </section>
 
-          <v-btn color="primary" :loading="savingAnalysis" @click="saveAnalysis">Lưu cài đặt</v-btn>
-        </v-card>
+      <!-- Lưu trữ file -->
+      <section v-if="activeTab === 'storage'" class="st-card" data-testid="st-storage">
+        <header>
+          <h2 class="st-h2">{{ $t('storage_settings') }}</h2>
+          <p class="st-intro">{{ $t('storage_intro') }}</p>
+        </header>
 
-        <!-- Storage -->
-        <v-card v-if="activeTab === 'storage'" class="pa-6">
-          <div class="text-subtitle-1 font-weight-bold mb-1">
-            <v-icon start size="small">mdi-folder-multiple-image</v-icon>
-            {{ $t('storage_settings') }}
-          </div>
-          <div class="text-body-2 text-grey mb-5">{{ $t('storage_intro') }}</div>
+        <div v-if="storageError" class="st-error st-error--row" role="alert">
+          <span>{{ $t('st_storage_load_error') }}</span>
+          <v-btn variant="outlined" color="error" height="44" @click="loadStorage">{{ $t('st_retry') }}</v-btn>
+        </div>
 
-          <v-alert
-            :type="storage.backend === 's3' ? 'success' : 'info'"
-            variant="tonal"
-            density="comfortable"
-            class="mb-5"
-          >
-            <span v-if="storage.backend === 's3'">
-              {{ $t('storage_now_s3') }} <strong>{{ storage.bucket }}</strong> · {{ storageHost }}
-            </span>
-            <span v-else>
-              {{ $t('storage_now_local') }}<template v-if="storageLocalUsage"> — {{ storageLocalUsage }}</template>
-            </span>
-          </v-alert>
+        <template v-else>
+          <p class="st-status" :class="{ 'st-status--s3': storage.backend === 's3' }">
+            <template v-if="storage.backend === 's3'">{{ $t('storage_now_s3') }} <strong>{{ storage.bucket }}</strong> · {{ storageHost }}</template>
+            <template v-else>{{ $t('storage_now_local') }}<template v-if="storageLocalUsage"> — {{ storageLocalUsage }}</template></template>
+          </p>
 
-          <v-switch
-            v-model="dungS3"
-            color="primary"
-            density="compact"
-            hide-details
-            class="mb-2"
-            :label="$t('storage_use_s3')"
-            @update:model-value="onToggleS3"
-          />
+          <v-switch v-model="dungS3" color="primary" density="compact" hide-details :label="$t('storage_use_s3')" @update:model-value="onToggleS3" />
 
           <v-expand-transition>
-            <div v-if="dungS3">
-              <v-divider class="my-4" />
-
-              <v-text-field
-                v-model="storage.endpoint"
-                :label="$t('storage_endpoint')"
-                placeholder="https://s3.nha-cung-cap.vn"
-                density="comfortable"
-                class="mb-3"
-                hide-details="auto"
-                @update:model-value="testResult = null"
-              />
-
-              <v-row dense>
-                <v-col cols="12" sm="7">
-                  <v-text-field
-                    v-model="storage.bucket"
-                    :label="$t('storage_bucket')"
-                    density="comfortable"
-                    hide-details="auto"
-                    @update:model-value="testResult = null"
-                  />
-                </v-col>
-                <v-col cols="12" sm="5">
-                  <v-text-field
-                    v-model="storage.region"
-                    :label="$t('storage_region')"
-                    density="comfortable"
-                    hide-details="auto"
-                    @update:model-value="testResult = null"
-                  />
-                </v-col>
-              </v-row>
-
-              <v-text-field
-                v-model="storage.access_key"
-                label="Access Key"
-                density="comfortable"
-                class="mt-3"
-                hide-details="auto"
-                @update:model-value="testResult = null"
-              />
-
+            <div v-if="dungS3" class="st-stack">
+              <v-divider />
+              <v-text-field v-model="storage.endpoint" :label="$t('storage_endpoint')" placeholder="https://s3.nha-cung-cap.vn" variant="outlined" hide-details="auto" @update:model-value="testResult = null" />
+              <div class="st-grid">
+                <v-text-field v-model="storage.bucket" :label="$t('storage_bucket')" variant="outlined" hide-details="auto" @update:model-value="testResult = null" />
+                <v-text-field v-model="storage.region" :label="$t('storage_region')" variant="outlined" hide-details="auto" @update:model-value="testResult = null" />
+              </div>
+              <v-text-field v-model="storage.access_key" label="Access Key" autocomplete="off" variant="outlined" hide-details="auto" @update:model-value="testResult = null" />
               <v-text-field
                 v-model="storage.secret_key"
                 label="Secret Key"
                 type="password"
-                density="comfortable"
-                class="mt-3"
-                hide-details="auto"
+                autocomplete="new-password"
+                variant="outlined"
                 :placeholder="storage.secret_key_da_luu ? '••••••••' : ''"
                 :hint="storage.secret_key_da_luu ? $t('storage_secret_saved') : ''"
                 persistent-hint
                 @update:model-value="testResult = null"
               />
 
-              <v-expansion-panels variant="accordion" class="mt-4">
+              <v-expansion-panels variant="accordion">
                 <v-expansion-panel elevation="0">
-                  <v-expansion-panel-title class="text-body-2">{{ $t('advanced_options') }}</v-expansion-panel-title>
+                  <v-expansion-panel-title>{{ $t('advanced_options') }}</v-expansion-panel-title>
                   <v-expansion-panel-text>
-                    <v-text-field
-                      v-model="storage.prefix"
-                      :label="$t('storage_prefix')"
-                      density="comfortable"
-                      hide-details="auto"
-                      @update:model-value="testResult = null"
-                    />
-                    <v-switch
-                      v-model="storage.force_path_style"
-                      color="primary"
-                      density="compact"
-                      hide-details
-                      class="mt-2"
-                      :label="$t('storage_path_style')"
-                      @update:model-value="testResult = null"
-                    />
+                    <v-text-field v-model="storage.prefix" :label="$t('storage_prefix')" variant="outlined" hide-details="auto" @update:model-value="testResult = null" />
+                    <v-switch v-model="storage.force_path_style" color="primary" density="compact" hide-details class="mt-2" :label="$t('storage_path_style')" @update:model-value="testResult = null" />
                   </v-expansion-panel-text>
                 </v-expansion-panel>
               </v-expansion-panels>
 
-              <v-alert
-                v-if="testResult"
-                :type="testResult.ok ? 'success' : 'error'"
-                variant="tonal"
-                density="comfortable"
-                class="mt-4"
-              >
-                {{ testResult.message }}
-              </v-alert>
+              <p v-if="testResult" class="st-result" :class="testResult.ok ? 'st-result--ok' : 'st-result--bad'" role="status">{{ testResult.message }}</p>
 
-              <div class="d-flex flex-wrap align-center ga-3 mt-5">
-                <v-btn variant="outlined" :loading="testingStorage" prepend-icon="mdi-lan-connect" @click="testStorage">
-                  {{ $t('storage_test') }}
-                </v-btn>
-                <v-btn color="primary" :disabled="!testResult?.ok" :loading="savingStorage" @click="saveStorage">
-                  {{ $t('save_settings') }}
-                </v-btn>
-                <span v-if="!testResult?.ok" class="text-caption text-grey">{{ $t('storage_must_test') }}</span>
-              </div>
+              <footer class="st-actions">
+                <v-btn variant="outlined" height="44" :loading="testingStorage" prepend-icon="mdi-lan-connect" @click="testStorage">{{ $t('storage_test') }}</v-btn>
+                <v-btn color="primary" height="44" :disabled="!testResult?.ok" :loading="savingStorage" @click="saveStorage">{{ $t('save_settings') }}</v-btn>
+                <span v-if="!testResult?.ok" class="st-note">{{ $t('storage_must_test') }}</span>
+              </footer>
 
-              <v-divider class="my-6" />
-              <div class="text-body-2 font-weight-medium mb-1">{{ $t('storage_old_files_title') }}</div>
-              <div class="text-body-2 text-grey mb-3">
+              <v-divider />
+              <h3 class="st-h3">{{ $t('storage_old_files_title') }}</h3>
+              <p class="st-intro">
                 {{ $t('storage_old_files_desc') }}
                 <template v-if="storageUsageParts"> {{ $t('storage_old_files_now', storageUsageParts) }}</template>
-              </div>
+              </p>
               <v-btn
                 variant="text"
                 color="primary"
-                size="small"
                 prepend-icon="mdi-book-open-variant"
+                class="align-self-start"
                 href="https://cvf-ecosystem.github.io/Customer-Care-Monitor-AI/guide/s3-storage.html"
                 target="_blank"
-              >
-                {{ $t('storage_guide') }}
-              </v-btn>
+              >{{ $t('storage_guide') }}</v-btn>
             </div>
           </v-expand-transition>
 
-          <div v-if="!dungS3 && storage.backend === 's3'" class="mt-4">
-            <v-btn color="primary" :loading="savingStorage" @click="saveStorage">{{ $t('save_settings') }}</v-btn>
-          </div>
-        </v-card>
+          <footer v-if="!dungS3 && storage.backend === 's3'" class="st-actions">
+            <v-btn color="primary" height="44" :loading="savingStorage" @click="saveStorage">{{ $t('save_settings') }}</v-btn>
+          </footer>
+        </template>
+      </section>
 
-        <!-- General -->
-        <v-card v-if="activeTab === 'general'" class="pa-6">
-          <div class="text-subtitle-1 font-weight-bold mb-4">
-            <v-icon start size="small">mdi-cog</v-icon>
-            {{ $t('general') }}
-          </div>
+      <!-- Chung -->
+      <section v-if="activeTab === 'general'" class="st-card">
+        <header>
+          <h2 class="st-h2">{{ $t('general') }}</h2>
+          <p class="st-intro">{{ $t('st_intro_general') }}</p>
+        </header>
+        <v-text-field v-model="generalSettings.companyName" :label="$t('company_name')" variant="outlined" hide-details />
+        <v-select v-model="generalSettings.timezone" :label="$t('timezone')" :items="['Asia/Ho_Chi_Minh', 'Asia/Bangkok', 'UTC', 'America/New_York']" variant="outlined" hide-details />
+        <v-select v-model="generalSettings.language" :label="$t('language')" :items="[{ title: 'Tiếng Việt', value: 'vi' }, { title: 'English', value: 'en' }]" variant="outlined" hide-details />
+        <v-text-field v-model.number="generalSettings.exchangeRate" :label="$t('exchange_rate_vnd')" type="number" :suffix="$t('st_rate_suffix')" variant="outlined" hide-details />
+        <v-text-field
+          v-model="generalSettings.appUrl"
+          :label="$t('st_app_url')"
+          placeholder="https://cqa.yourdomain.com"
+          :hint="$t('st_app_url_hint')"
+          persistent-hint
+          :rules="appUrlRules"
+          variant="outlined"
+        />
+        <footer class="st-actions">
+          <v-btn color="primary" height="44" :loading="savingGeneral" @click="saveGeneral">{{ $t('save_settings') }}</v-btn>
+        </footer>
+      </section>
+    </div>
 
-          <v-text-field v-model="generalSettings.companyName" :label="$t('company_name')" class="mb-3" />
-          <v-select
-            v-model="generalSettings.timezone"
-            :label="$t('timezone')"
-            :items="['Asia/Ho_Chi_Minh', 'Asia/Bangkok', 'UTC', 'America/New_York']"
-            class="mb-3"
-          />
-          <v-select
-            v-model="generalSettings.language"
-            :label="$t('language')"
-            :items="[{ title: 'Tiếng Việt', value: 'vi' }, { title: 'English', value: 'en' }]"
-            class="mb-3"
-          />
+    <AppDialog v-model="confirmTatS3" :title="$t('storage_off_title')" :max-width="560">
+      <div class="st-stack">
+        <p class="st-warn">{{ $t('storage_off_warn') }}</p>
+        <p class="st-m0">{{ $t('storage_off_keep') }}</p>
+        <pre class="st-code"><code>docker exec cqa-app /app/cqa-server migrate-files -down -apply</code></pre>
+        <p class="st-intro">{{ $t('storage_off_keys') }}</p>
+      </div>
+      <template #actions>
+        <v-btn variant="text" @click="huyTatS3">{{ $t('cancel') }}</v-btn>
+        <v-btn color="warning" variant="flat" @click="xacNhanTatS3">{{ $t('storage_off_confirm') }}</v-btn>
+      </template>
+    </AppDialog>
 
-          <v-text-field
-            v-model.number="generalSettings.exchangeRate"
-            :label="$t('exchange_rate_vnd')"
-            type="number"
-            suffix="VND = 1 USD"
-            class="mb-3"
-          />
-
-          <v-text-field
-            v-model="generalSettings.appUrl"
-            label="URL ứng dụng"
-            placeholder="https://cqa.yourdomain.com"
-            hint="Cấu hình URL để hệ thống gửi link chính xác qua Telegram và Email"
-            persistent-hint
-            :rules="appUrlRules"
-            class="mb-3"
-          />
-
-          <v-btn color="primary" :loading="savingGeneral" @click="saveGeneral">{{ $t('save_settings') }}</v-btn>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-dialog v-model="confirmTatS3" max-width="560">
-      <v-card>
-        <v-card-title class="text-h6">{{ $t('storage_off_title') }}</v-card-title>
-        <v-card-text>
-          <v-alert type="warning" variant="tonal" density="comfortable" class="mb-4">
-            {{ $t('storage_off_warn') }}
-          </v-alert>
-          <div class="text-body-2 mb-2">{{ $t('storage_off_keep') }}</div>
-          <v-sheet color="grey-lighten-4" rounded class="pa-3 mb-2" style="overflow-x: auto">
-            <code class="text-caption text-no-wrap">
-              docker exec cqa-app /app/cqa-server migrate-files -down -apply
-            </code>
-          </v-sheet>
-          <div class="text-body-2 text-grey">{{ $t('storage_off_keys') }}</div>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn variant="text" @click="huyTatS3">{{ $t('cancel') }}</v-btn>
-          <v-btn color="warning" variant="flat" @click="xacNhanTatS3">{{ $t('storage_off_confirm') }}</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-
-    <v-snackbar v-model="snackbar" :color="snackColor" timeout="3000">{{ snackText }}</v-snackbar>
+    <v-snackbar v-model="snackbar" :color="snackColor === 'error' ? 'error' : undefined" timeout="3000">{{ snackText }}</v-snackbar>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { useDisplay } from 'vuetify'
 import { useI18n } from 'vue-i18n'
 import api from '../api'
+import AppDialog from '../components/ui/AppDialog.vue'
 
 const route = useRoute()
 const { t } = useI18n()
+const { mdAndUp } = useDisplay()
 const tenantId = computed(() => route.params.tenantId as string)
 
 const activeTab = ref('ai')
@@ -373,6 +241,11 @@ const showKey = ref(false)
 const snackbar = ref(false)
 const snackText = ref('')
 const snackColor = ref('success')
+
+// CCMAI-UX-014: chỉ hiện biểu mẫu sau khi tải cài đặt thành công
+const loading = ref(true)
+const loadError = ref(false)
+const storageError = ref(false)
 
 const savingAI = ref(false)
 const testingKey = ref(false)
@@ -421,10 +294,10 @@ async function xacNhanTatS3() {
 const storageHost = computed(() => storage.endpoint.replace(/^https?:\/\//, '').replace(/\/$/, ''))
 
 const tabs = [
-  { label: 'ai_config', value: 'ai', icon: 'mdi-robot' },
+  { label: 'ai_config', value: 'ai', icon: 'mdi-robot-outline' },
   { label: 'analysis_settings', value: 'analysis', icon: 'mdi-chart-bar' },
   { label: 'storage_settings', value: 'storage', icon: 'mdi-folder-multiple-image' },
-  { label: 'general', value: 'general', icon: 'mdi-cog' },
+  { label: 'general', value: 'general', icon: 'mdi-cog-outline' },
 ]
 
 // Danh sách đối chiếu ngày 2026-09-15. Model thế hệ cũ vẫn giữ lại để ai đang
@@ -466,8 +339,8 @@ const aiSettings = reactive({ provider: 'claude', model: 'claude-sonnet-5', apiK
 const generalSettings = reactive({ companyName: '', timezone: 'Asia/Ho_Chi_Minh', language: 'vi', exchangeRate: 26000, appUrl: '' })
 
 const appUrlRules = [
-  (v: string) => !v || /^https?:\/\/.+/.test(v) || 'URL phải bắt đầu bằng http:// hoặc https://',
-  (v: string) => !v || !v.endsWith('/') || 'URL không nên có dấu / ở cuối',
+  (v: string) => !v || /^https?:\/\/.+/.test(v) || t('st_url_scheme'),
+  (v: string) => !v || !v.endsWith('/') || t('st_url_trailing'),
 ]
 
 const baseUrlPlaceholder = computed(() => {
@@ -509,7 +382,7 @@ const modelOptions = computed(() => {
   const fallback = fallbackModels(aiSettings.provider)
   // Model đang dùng phải luôn có mặt, nếu không ô chọn sẽ hiện trống.
   if (aiSettings.model && !fallback.some(m => m.value === aiSettings.model)) {
-    return [{ title: `${aiSettings.model} (đang dùng)`, value: aiSettings.model }, ...fallback]
+    return [{ title: t('st_model_current', { model: aiSettings.model }), value: aiSettings.model }, ...fallback]
   }
   return fallback
 })
@@ -532,7 +405,7 @@ async function refreshModelList() {
     const { data } = await api.post(`/tenants/${tenantId.value}/settings/ai/models/refresh`)
     fetchedModels.value = data.models || []
     modelsSource.value = data.source || ''
-    showSnack(`Đã cập nhật ${fetchedModels.value.length} model`, 'success')
+    showSnack(t('st_models_updated', { n: fetchedModels.value.length }), 'success')
   } catch (err: any) {
     const res = err.response?.data
     showSnack(res?.message || res?.error || t('error'), 'error')
@@ -549,30 +422,27 @@ function onProviderChange() {
   modelsSource.value = ''
 }
 
+// Ném lỗi ra ngoài để init() biết mà chặn biểu mẫu.
 async function loadSettings() {
-  try {
-    const { data } = await api.get(`/tenants/${tenantId.value}/settings`)
-    if (data.settings.ai_provider) aiSettings.provider = data.settings.ai_provider
-    if (data.settings.ai_model) aiSettings.model = data.settings.ai_model
-    if (data.settings.ai_api_key) {
-      aiSettings.apiKey = data.settings.ai_api_key
-      hasSavedKey.value = true
-    }
-    if (data.settings.ai_base_url) {
-      aiSettings.baseUrl = data.settings.ai_base_url
-      useCustomBaseUrl.value = true
-    }
-    if (data.settings.ai_batch_mode) aiSettings.batchMode = data.settings.ai_batch_mode === 'true'
-    if (data.settings.ai_batch_size) aiSettings.batchSize = parseInt(data.settings.ai_batch_size) || 5
-    if (data.settings.exchange_rate_vnd) generalSettings.exchangeRate = parseFloat(data.settings.exchange_rate_vnd) || 26000
-    if (data.settings.app_url) generalSettings.appUrl = data.settings.app_url
-    if (data.tenant) {
-      generalSettings.companyName = data.tenant.name || ''
-      generalSettings.timezone = data.tenant.timezone || 'Asia/Ho_Chi_Minh'
-      generalSettings.language = data.tenant.language || 'vi'
-    }
-  } catch {
-    // Settings not yet saved
+  const { data } = await api.get(`/tenants/${tenantId.value}/settings`)
+  if (data.settings.ai_provider) aiSettings.provider = data.settings.ai_provider
+  if (data.settings.ai_model) aiSettings.model = data.settings.ai_model
+  if (data.settings.ai_api_key) {
+    aiSettings.apiKey = data.settings.ai_api_key
+    hasSavedKey.value = true
+  }
+  if (data.settings.ai_base_url) {
+    aiSettings.baseUrl = data.settings.ai_base_url
+    useCustomBaseUrl.value = true
+  }
+  if (data.settings.ai_batch_mode) aiSettings.batchMode = data.settings.ai_batch_mode === 'true'
+  if (data.settings.ai_batch_size) aiSettings.batchSize = parseInt(data.settings.ai_batch_size) || 5
+  if (data.settings.exchange_rate_vnd) generalSettings.exchangeRate = parseFloat(data.settings.exchange_rate_vnd) || 26000
+  if (data.settings.app_url) generalSettings.appUrl = data.settings.app_url
+  if (data.tenant) {
+    generalSettings.companyName = data.tenant.name || ''
+    generalSettings.timezone = data.tenant.timezone || 'Asia/Ho_Chi_Minh'
+    generalSettings.language = data.tenant.language || 'vi'
   }
 }
 
@@ -585,9 +455,9 @@ async function saveAnalysis() {
       batch_mode: aiSettings.batchMode ? 'true' : 'false',
       batch_size: String(aiSettings.batchSize),
     })
-    showSnack(t('success'), 'success')
+    showSnack(t('st_saved'), 'success')
   } catch (err: any) {
-    showSnack(err.response?.data?.error || t('error'), 'error')
+    showSnack(err.response?.data?.error || t('st_save_failed'), 'error')
   } finally {
     savingAnalysis.value = false
   }
@@ -598,11 +468,11 @@ async function saveAI() {
   // giữ nguyên key cũ, nhờ vậy đổi model hay cỡ lô không phải nhập lại key.
   const apiKeyToSend = aiSettings.apiKey === '••••••••' ? '' : aiSettings.apiKey
   if (!apiKeyToSend && !hasSavedKey.value) {
-    showSnack('Vui lòng nhập API Key', 'error')
+    showSnack(t('st_need_key'), 'error')
     return
   }
   if (useCustomBaseUrl.value && !aiSettings.baseUrl) {
-    showSnack('Vui lòng nhập Base URL hoặc tắt tùy chỉnh', 'error')
+    showSnack(t('st_base_url_required'), 'error')
     return
   }
   savingAI.value = true
@@ -615,14 +485,15 @@ async function saveAI() {
       batch_mode: aiSettings.batchMode ? 'true' : 'false',
       batch_size: String(aiSettings.batchSize),
     })
-    showSnack(t('success'), 'success')
+    showSnack(t('st_saved'), 'success')
   } catch (err: any) {
-    showSnack(err.response?.data?.error || t('error'), 'error')
+    showSnack(err.response?.data?.error || t('st_save_failed'), 'error')
   } finally {
     savingAI.value = false
   }
 }
 
+// Kiểm tra key ĐÃ LƯU trên máy chủ (gọi nhà cung cấp thật), không phải giá trị đang gõ.
 async function testKey() {
   testingKey.value = true
   try {
@@ -671,12 +542,16 @@ const storageLocalUsage = computed(() => {
 })
 
 async function loadStorage() {
+  storageError.value = false
   try {
     const { data } = await api.get(`/tenants/${tenantId.value}/settings/storage`)
     Object.assign(storage, data, { secret_key: '' })
     dungS3.value = data.backend === 's3'
     testResult.value = null
-  } catch { /* giữ mặc định lưu trên máy chủ */ }
+  } catch {
+    // Không biết công ty đang lưu ở đâu thì không cho sửa phần này
+    storageError.value = true
+  }
 }
 
 function storagePayload() {
@@ -710,9 +585,9 @@ async function saveStorage() {
   try {
     await api.put(`/tenants/${tenantId.value}/settings/storage`, storagePayload())
     await loadStorage()
-    showSnack(t('settings_saved'), 'success')
+    showSnack(t('st_saved'), 'success')
   } catch (e: any) {
-    showSnack(e.response?.data?.message || t('save_failed'), 'error')
+    showSnack(e.response?.data?.message || t('st_save_failed'), 'error')
   } finally {
     savingStorage.value = false
   }
@@ -728,9 +603,9 @@ async function saveGeneral() {
       exchange_rate_vnd: generalSettings.exchangeRate,
       app_url: generalSettings.appUrl,
     })
-    showSnack(t('success'), 'success')
+    showSnack(t('st_saved'), 'success')
   } catch (err: any) {
-    showSnack(err.response?.data?.error || t('error'), 'error')
+    showSnack(err.response?.data?.error || t('st_save_failed'), 'error')
   } finally {
     savingGeneral.value = false
   }
@@ -742,10 +617,199 @@ function showSnack(text: string, color: string) {
   snackbar.value = true
 }
 
-onMounted(async () => {
-  await loadSettings()
+async function init() {
+  loading.value = true
+  loadError.value = false
+  try {
+    await loadSettings()
+  } catch {
+    loadError.value = true
+    return
+  } finally {
+    loading.value = false
+  }
   // Nạp sau khi đã biết nhà cung cấp và model đang chọn
   loadModelList()
   loadStorage()
-})
+}
+
+onMounted(init)
 </script>
+
+<style scoped>
+.st-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.st-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+.st-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.st-layout--split {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 760px);
+  gap: 20px;
+  align-items: start;
+}
+.st-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+}
+.st-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: rgb(var(--v-theme-on-surface));
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+.st-nav__item:hover {
+  background: rgba(var(--v-theme-on-surface), 0.04);
+}
+.st-nav__item:focus-visible {
+  outline: 2px solid rgb(var(--v-theme-primary));
+}
+.st-nav__item--on {
+  background: rgba(var(--v-theme-primary), 0.1);
+  color: rgb(var(--v-theme-primary));
+  font-weight: 600;
+}
+.st-tabs {
+  border-bottom: 1px solid rgb(var(--v-theme-border));
+}
+.st-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 24px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-surface));
+  min-width: 0;
+}
+.st-h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.st-h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.st-intro {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(var(--v-theme-text-muted));
+}
+.st-m0 {
+  margin: 0;
+}
+.st-note {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgb(var(--v-theme-text-muted));
+}
+.st-narrow {
+  max-width: 240px;
+}
+.st-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.st-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.st-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgb(var(--v-theme-border));
+}
+.st-status {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-left: 4px solid rgb(var(--v-theme-src-legacy));
+  border-radius: 10px;
+  font-size: 14px;
+}
+.st-status--s3 {
+  border-left-color: rgb(var(--v-theme-primary));
+}
+.st-result {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.st-result--ok {
+  background: rgb(var(--v-theme-pass-bg));
+  color: rgb(var(--v-theme-pass));
+}
+.st-result--bad {
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+}
+.st-warn {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 4px solid rgb(var(--v-theme-src-changed));
+  border-radius: 6px;
+  background: rgb(var(--v-theme-src-changed-bg));
+  font-size: 14px;
+  line-height: 1.5;
+}
+.st-code {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(var(--v-theme-on-surface), 0.06);
+  font-size: 12px;
+  overflow-x: auto;
+}
+.st-error {
+  padding: 14px 16px;
+  border: 1px solid rgb(var(--v-theme-fail));
+  border-radius: 12px;
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.st-error--row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+</style>

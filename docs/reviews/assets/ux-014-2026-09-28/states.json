@@ -1,0 +1,643 @@
+{
+  "summary": {
+    "states": 28,
+    "jsErrors": 0,
+    "overflow": 0,
+    "failedSteps": 0,
+    "external": []
+  },
+  "report": [
+    {
+      "state": "settings-ai",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"st-ai\"]",
+          "ok": true
+        },
+        {
+          "expectText": "Kiểm tra key đã lưu",
+          "ok": true
+        }
+      ],
+      "file": "settings-ai--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-analysis",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Phân tích",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "Chế độ gom",
+          "ok": true
+        }
+      ],
+      "file": "settings-analysis--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-storage",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Lưu trữ file",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"st-storage\"]",
+          "ok": true
+        }
+      ],
+      "file": "settings-storage--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-general",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Chung",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "URL ứng dụng",
+          "ok": true
+        }
+      ],
+      "file": "settings-general--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-list",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"us-row\"]",
+          "ok": true
+        },
+        {
+          "expectText": "(bạn)",
+          "ok": true
+        },
+        {
+          "expectNoText": "Owner",
+          "ok": true
+        }
+      ],
+      "file": "users-list--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-create",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Tạo người dùng",
+          "in": "button",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"us-invite\"]",
+          "ok": true
+        }
+      ],
+      "file": "users-create--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "login-error",
+      "vpName": "desktop",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"email\"]",
+          "value": "sai@example.invalid",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "type": "input[type=\"password\"]",
+          "value": "SaiMatKhau1",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"au-submit\"]",
+          "wait": 2000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"au-error\"]",
+          "ok": true
+        }
+      ],
+      "file": "login-error--desktop--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-ai",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"st-ai\"]",
+          "ok": true
+        },
+        {
+          "expectText": "Kiểm tra key đã lưu",
+          "ok": true
+        }
+      ],
+      "file": "settings-ai--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-analysis",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Phân tích",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "Chế độ gom",
+          "ok": true
+        }
+      ],
+      "file": "settings-analysis--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-storage",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Lưu trữ file",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"st-storage\"]",
+          "ok": true
+        }
+      ],
+      "file": "settings-storage--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-general",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Chung",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "URL ứng dụng",
+          "ok": true
+        }
+      ],
+      "file": "settings-general--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-list",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"us-row\"]",
+          "ok": true
+        },
+        {
+          "expectText": "(bạn)",
+          "ok": true
+        },
+        {
+          "expectNoText": "Owner",
+          "ok": true
+        }
+      ],
+      "file": "users-list--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-create",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Tạo người dùng",
+          "in": "button",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"us-invite\"]",
+          "ok": true
+        }
+      ],
+      "file": "users-create--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "login-error",
+      "vpName": "desktop",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"email\"]",
+          "value": "sai@example.invalid",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "type": "input[type=\"password\"]",
+          "value": "SaiMatKhau1",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"au-submit\"]",
+          "wait": 2000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"au-error\"]",
+          "ok": true
+        }
+      ],
+      "file": "login-error--desktop--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-ai",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"st-ai\"]",
+          "ok": true
+        },
+        {
+          "expectText": "Kiểm tra key đã lưu",
+          "ok": true
+        }
+      ],
+      "file": "settings-ai--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-analysis",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Phân tích",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "Chế độ gom",
+          "ok": true
+        }
+      ],
+      "file": "settings-analysis--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-storage",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Lưu trữ file",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"st-storage\"]",
+          "ok": true
+        }
+      ],
+      "file": "settings-storage--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-general",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Chung",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "URL ứng dụng",
+          "ok": true
+        }
+      ],
+      "file": "settings-general--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-list",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "expect": "[data-testid=\"us-row\"]",
+          "ok": true
+        },
+        {
+          "expectText": "(bạn)",
+          "ok": true
+        },
+        {
+          "expectNoText": "Owner",
+          "ok": true
+        }
+      ],
+      "file": "users-list--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-create",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "clickText": "Tạo người dùng",
+          "in": "button",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"us-invite\"]",
+          "ok": true
+        }
+      ],
+      "file": "users-create--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "login-error",
+      "vpName": "mobile",
+      "theme": "light",
+      "steps": [
+        {
+          "type": "input[type=\"email\"]",
+          "value": "sai@example.invalid",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "type": "input[type=\"password\"]",
+          "value": "SaiMatKhau1",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"au-submit\"]",
+          "wait": 2000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"au-error\"]",
+          "ok": true
+        }
+      ],
+      "file": "login-error--mobile--light.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-ai",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"st-ai\"]",
+          "ok": true
+        },
+        {
+          "expectText": "Kiểm tra key đã lưu",
+          "ok": true
+        }
+      ],
+      "file": "settings-ai--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-analysis",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Phân tích",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "Chế độ gom",
+          "ok": true
+        }
+      ],
+      "file": "settings-analysis--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-storage",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Lưu trữ file",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"st-storage\"]",
+          "ok": true
+        }
+      ],
+      "file": "settings-storage--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "settings-general",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Chung",
+          "in": ".st-nav__item, .v-tab",
+          "wait": 900,
+          "ok": true
+        },
+        {
+          "expectText": "URL ứng dụng",
+          "ok": true
+        }
+      ],
+      "file": "settings-general--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-list",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "expect": "[data-testid=\"us-row\"]",
+          "ok": true
+        },
+        {
+          "expectText": "(bạn)",
+          "ok": true
+        },
+        {
+          "expectNoText": "Owner",
+          "ok": true
+        }
+      ],
+      "file": "users-list--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "users-create",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "clickText": "Tạo người dùng",
+          "in": "button",
+          "wait": 1200,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"us-invite\"]",
+          "ok": true
+        }
+      ],
+      "file": "users-create--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    },
+    {
+      "state": "login-error",
+      "vpName": "mobile",
+      "theme": "dark",
+      "steps": [
+        {
+          "type": "input[type=\"email\"]",
+          "value": "sai@example.invalid",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "type": "input[type=\"password\"]",
+          "value": "SaiMatKhau1",
+          "wait": 300,
+          "ok": true
+        },
+        {
+          "click": "[data-testid=\"au-submit\"]",
+          "wait": 2000,
+          "ok": true
+        },
+        {
+          "expect": "[data-testid=\"au-error\"]",
+          "ok": true
+        }
+      ],
+      "file": "login-error--mobile--dark.png",
+      "overflow": false,
+      "jsErrors": [],
+      "externalRequests": []
+    }
+  ]
+}

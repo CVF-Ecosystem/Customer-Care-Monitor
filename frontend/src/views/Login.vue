@@ -1,31 +1,36 @@
+<!-- CCMAI-UX-014: đăng nhập. Luồng xác thực và thông báo lỗi giữ nguyên; chỉ trình bày lại. -->
 <template>
-  <v-card class="pa-6" elevation="2">
-    <v-card-title class="text-h6 text-center pb-4">{{ $t('login_title') }}</v-card-title>
-    <v-alert v-if="errorMsg" type="error" variant="tonal" density="compact" class="mb-4">{{ errorMsg }}</v-alert>
-    <v-form @submit.prevent="handleLogin">
+  <section class="au-card" :aria-label="$t('login_title')">
+    <h2 class="au-title">{{ $t('login_title') }}</h2>
+    <p v-if="errorMsg" class="au-error" role="alert" data-testid="au-error">{{ errorMsg }}</p>
+    <v-form class="au-form" @submit.prevent="handleLogin">
       <v-text-field
         v-model="email"
         :label="$t('email')"
         type="email"
-        prepend-inner-icon="mdi-email"
+        autocomplete="username"
+        prepend-inner-icon="mdi-email-outline"
+        variant="outlined"
+        hide-details="auto"
         required
-        class="mb-2"
       />
       <v-text-field
         v-model="password"
         :label="$t('password')"
         :type="showPass ? 'text' : 'password'"
-        prepend-inner-icon="mdi-lock"
+        autocomplete="current-password"
+        prepend-inner-icon="mdi-lock-outline"
         :append-inner-icon="showPass ? 'mdi-eye-off' : 'mdi-eye'"
-        @click:append-inner="showPass = !showPass"
+        variant="outlined"
+        hide-details="auto"
         required
-        class="mb-4"
+        @click:append-inner="showPass = !showPass"
       />
-      <v-btn type="submit" color="primary" block size="large" :loading="loading">
+      <v-btn type="submit" color="primary" block height="48" :loading="loading" data-testid="au-submit">
         {{ $t('login') }}
       </v-btn>
     </v-form>
-  </v-card>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -65,3 +70,36 @@ async function handleLogin() {
   }
 }
 </script>
+
+<style scoped>
+.au-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid rgb(var(--v-theme-border));
+  border-radius: 16px;
+  background: rgb(var(--v-theme-surface));
+}
+.au-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.au-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.au-error {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgb(var(--v-theme-fail));
+  border-radius: 10px;
+  background: rgb(var(--v-theme-fail-bg));
+  color: rgb(var(--v-theme-fail));
+  font-size: 14px;
+  font-weight: 600;
+}
+</style>

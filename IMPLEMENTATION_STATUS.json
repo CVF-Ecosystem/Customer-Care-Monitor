@@ -23,7 +23,8 @@
   ],
   "buildInProgress": [
     "CCMAI-UX-012 REVIEW_PENDING after repair R1 (evaluated-map state pending/ok/error; a failed request shows 'Không rõ trạng thái phân tích', never 'Chưa phân tích'; 145/145 tests). BUILD summary: Messages.vue redesigned on theme tokens within docs/work_orders/CCMAI_UX_012.md; heading counts conversations (UX-16); latest-analysis chip/filter name PASS as 'Đạt / đã phân loại' because classification also writes PASS; export 200 JSON {error} shown instead of downloaded; list/conversation error states; source note on evaluation tabs. 134/134 frontend tests, vue-tsc, build; disposable captures 24 states + 36 pages, 0 JS errors/overflow/external requests. Awaiting independent Codex REVIEW.",
-    "CCMAI-UX-013 REVIEW_PENDING: Jobs list/create/edit redesigned within docs/work_orders/CCMAI_UX_013.md; schedule in words, dd/mm/yyyy, Vietnamese run labels (UX-12/13/14); delete via ConfirmDialog naming the cascade; JobEdit no longer renders a default form after a failed load (prevented blank overwrite); email output shows the missing test support (BLOCKED_API_CONTRACT) with the gate unchanged; output type change resets its test flag. 142/142 frontend tests, vue-tsc, build; disposable captures 28 states + 36 pages, 0 JS errors/overflow/external requests. Awaiting independent Codex REVIEW."
+    "CCMAI-UX-013 REVIEW_PENDING: Jobs list/create/edit redesigned within docs/work_orders/CCMAI_UX_013.md; schedule in words, dd/mm/yyyy, Vietnamese run labels (UX-12/13/14); delete via ConfirmDialog naming the cascade; JobEdit no longer renders a default form after a failed load (prevented blank overwrite); email output shows the missing test support (BLOCKED_API_CONTRACT) with the gate unchanged; output type change resets its test flag. 142/142 frontend tests, vue-tsc, build; disposable captures 28 states + 36 pages, 0 JS errors/overflow/external requests. Awaiting independent Codex REVIEW.",
+    "CCMAI-UX-014 REVIEW_PENDING: Settings/Users/Login/Setup redesigned within docs/work_orders/CCMAI_UX_014.md; Settings hides every form after a failed load (prevented default overwrite); key test labelled as testing the saved key; missing settings_saved/save_failed keys replaced; user password rules aligned with the server (8+, uppercase, digit); Vietnamese roles and snacks; labelled menus and dialogs. 151/151 frontend tests, vue-tsc, build; disposable captures 28 states + 36 pages, 0 JS errors/overflow/external requests; no provider/S3 test pressed. Awaiting independent Codex REVIEW."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -47,7 +48,8 @@
     "CCMAI-UX-010",
     "CCMAI-UX-011",
     "CCMAI-UX-012",
-    "CCMAI-UX-013"
+    "CCMAI-UX-013",
+    "CCMAI-UX-014"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -111,7 +113,8 @@
     "docs/reviews/CCMAI_UX_011_INDEPENDENT_REVIEW_2026-09-28.md",
     "docs/reviews/MESSAGES_SCREEN_UX012_BUILD_2026-09-28.md",
     "docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md",
-    "docs/reviews/CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md"
+    "docs/reviews/CCMAI_UX_012_INDEPENDENT_REVIEW_2026-09-28.md",
+    "docs/reviews/SETTINGS_USERS_AUTH_UX014_BUILD_2026-09-28.md"
   ],
   "updatedAt": "2026-09-28"
 }

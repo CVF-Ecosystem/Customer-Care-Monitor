@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude: owner-directed UX-014 (Cài đặt, Người dùng, Đăng nhập/Thiết lập), then UX-015. Codex: re-review UX-012 R1 and review UX-013 (docs/reviews/JOBS_SCREENS_UX013_BUILD_2026-09-28.md). UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "Claude: owner-directed UX-015 (Nhật ký hệ thống, chi phí, lịch sử thông báo, MCP). Codex: re-review UX-012 R1 (702c5e3), review UX-013 (b248a5f) and UX-014. UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) returned UX-012 R1 and UX-013 REVIEW_PENDING; Claude continues owner-directed UX-014; REVIEWER (Codex) reviews independently",
+  "activeRole": "COMMIT_STEWARD (Claude) returned UX-014 REVIEW_PENDING; Claude continues owner-directed UX-015; REVIEWER (Codex) reviews each tranche independently",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }
