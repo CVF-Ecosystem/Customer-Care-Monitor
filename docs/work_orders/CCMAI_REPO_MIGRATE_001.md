@@ -17,4 +17,8 @@ Acceptance: Go builds under the new module path; active clone/source/docs links 
 
 The screenshot supplied by the owner resolves the CREDIT-002 rendered-sidebar observation: exactly Blackbird081, claude and codex are visible. CREDIT-002 remains separately reviewable; this migration does not silently FREEZE it.
 
+## Owner correction: CQA archive is unnecessary
+
+After migration, the owner confirmed that the separate original CQA history need not be retained. The new repository has no archive branch or tag; remove the now-unused **local** `cqa-import-history-2026-09-26` tag after verifying its target and the remote refs. Keep the current product `main`, its reviewed commits and `LICENSE` intact. The first main commit's import note and historical evidence remain records of what happened; rewriting every product commit just to alter that note would invalidate review SHAs and is outside this bounded cleanup. The owner will delete the old repository separately. Risk remains R2; no provider or deployment is involved.
+
 Role route: `ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD` (Codex). An independent R2 REVIEW follows BUILD; no self-approval or FREEZE.
