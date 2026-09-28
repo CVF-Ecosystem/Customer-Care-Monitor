@@ -7,9 +7,14 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: REVIEWER (Codex) next for CCMAI-UX-010 repair round UX010-R1; Claude REPAIR_WORKER done. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
-- Next allowed move: Codex independently re-reviews the UX010-R1 repair (evaluated-card filter fix, classification run-history wording fix; evidence addendum in `docs/reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md`), confirming both findings `UX010-R1-F1`/`UX010-R1-F2` are closed. Separate R2 tranches still to be ordered: dashboard `qc_violation_count` API; scheduler skip for explicitly marked demo channels. `CCMAI-RUNTIME-001` to `009` remain REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
+- Active role: ORCHESTRATOR (Codex) after independent UX010-R1 REVIEW_PASS. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
+- Next allowed move: Codex routes the next bounded UI/UX screen tranche from the redesign roadmap after continuity rehydration, or separately authorizes dashboard `qc_violation_count` / demo-scheduler runtime tranches. UX-010 and `CCMAI-RUNTIME-001` to `009` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## Codex independent UX010-R1 re-review (2026-09-28)
+
+- Role transition ORCHESTRATOR → REVIEWER (Codex). At `cca7111`, both findings close: evaluated-card link, visible filter and list all exclude SKIP; classification history uses analyzed/tag wording backed by analyzer counters. Independently reran 114/114 frontend tests and forced vue-tsc, inspected source/capture, checked diff and catalog, and ran the project agent-enforcement doctor (25/25 PASS). The separate workspace-status `REPAIR_REQUIRED` noted by Claude was not changed by this UI repair. Review: `docs/reviews/CCMAI_UX_010_REPAIR_R1_REREVIEW_2026-09-28.md`.
+- UX-010 `REVIEW_PASS`, FREEZE open. No provider call or governance proof. Role transition REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex), local review/continuity commit only. No push or deployment.
 
 ## Repair: CCMAI-UX-010 UX010-R1
 

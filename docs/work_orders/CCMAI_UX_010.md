@@ -1,6 +1,6 @@
 # Work order CCMAI-UX-010 — Job Detail screen redesign
 
-**State:** `CHANGES_REQUIRED` after [independent BUILD review](../reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md); repair `UX010-R1` authorized · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md) with canvas version `1790540352-11c7`; orchestrator decisions in the [overnight review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md) §"Orchestrator decisions"; dependency gate satisfied by [UX000-R1 re-review PASS](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md) and UX-001a REVIEW_PASS.
+**State:** `REVIEW_PASS` after [independent UX010-R1 re-review](../reviews/CCMAI_UX_010_REPAIR_R1_REREVIEW_2026-09-28.md); FREEZE open · **Risk:** R2 · **Assignee:** Claude (`REPAIR_WORKER`) · **Independent reviewer:** Codex (`REVIEWER`) · **Authority:** [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md) with canvas version `1790540352-11c7`; orchestrator decisions in the [overnight review](../reviews/UI_OVERNIGHT_BUILDS_INDEPENDENT_REVIEW_2026-09-28.md) §"Orchestrator decisions"; dependency gate satisfied by [UX000-R1 re-review PASS](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md) and UX-001a REVIEW_PASS.
 
 ## Entry and role route
 
