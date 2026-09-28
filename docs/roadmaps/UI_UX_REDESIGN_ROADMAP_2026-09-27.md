@@ -11,6 +11,19 @@
 
 Roadmap này chỉ là kế hoạch. Nó không cấp quyền BUILD; mỗi giai đoạn triển khai cần SPEC và WORK_ORDER riêng.
 
+## Ranh giới với roadmap backend (owner xác nhận 2026-09-28)
+
+Tiến hành các phần redesign độc lập trước. Claude chỉ thiết kế/triển khai giao diện trên hợp đồng API và ngữ nghĩa runtime đã được review. Phần nào cần sửa backend, dữ liệu hoặc hợp đồng API thì **Claude không thực hiện trong tranche UX**; ghi `BLOCKED_API_CONTRACT` hoặc đề xuất riêng, để Codex điều phối tranche R2 tương ứng. Không làm giả số liệu hoặc trạng thái trong frontend để lấp khoảng trống backend.
+
+| Điểm giao | Quyết định ranh giới |
+|---|---|
+| Trang chủ: số vi phạm QC (`UX-02`) | Giữ `issues` theo nghĩa hiện tại. `qc_violation_count` là API đọc mới trong tranche backend riêng; hoãn phần thẻ/đường dẫn phụ thuộc số này. |
+| Kênh demo và trạng thái đồng bộ (`UX-06`) | Scheduler bỏ qua kênh demo được đánh dấu rõ là tranche runtime riêng. Hoãn phần hành vi hoặc trạng thái UI phụ thuộc fix đó. |
+| Trạng thái nguồn, confidence, kết quả AI | Chỉ trình bày các trường và giới hạn đã có từ R004–R006. Không đổi cách xác minh, phân loại, tính confidence, gọi provider hay hợp đồng kết quả. |
+| Lọc, phân trang, số đếm, export Trang Kết quả | Tuân theo API hiện có; không tạo số toàn cục từ một trang dữ liệu hoặc hứa export theo scope khi endpoint không hỗ trợ. Nhu cầu API mới đưa sang tranche backend riêng. |
+
+Tranche độc lập kế tiếp là [UX-011 Results INTAKE](../specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md), bắt đầu từ DESIGN rồi SPEC và WORK_ORDER trước BUILD. Dashboard/Kênh không được đưa vào work order UX-011. Các màn tiếp theo chỉ mở khi xác định được phần giao với backend theo cùng quy tắc.
+
 ## Mục tiêu
 
 Người phụ trách CSKH mở ứng dụng trên máy tính hoặc điện thoại và trả lời được ngay: **hội thoại nào cần xem lại, vì sao, số liệu có đáng tin không.** Cụ thể:
@@ -85,7 +98,7 @@ Theo thứ tự ưu tiên. Mỗi màn: brief, canvas desktop và mobile đủ tr
 | Thứ tự | Màn hình (route) | Phát hiện chính | Trọng tâm |
 |---|---|---|---|
 | 1 | Job Detail (`/jobs/:id`), QC và phân loại | UX-04, 08, 09, 10, 17, 18 | Hoàn thiện từ bản thử: thêm tab lịch sử chạy, hộp thoại chi tiết, trạng thái rỗng/lỗi, bản phân loại Thiết kế chốt 2026-09-28 (canvas `1790540352-11c7`), [SPEC](../specs/JOB_DETAIL_SCREEN_UX010_2026-09-28.md); [work order](../work_orders/CCMAI_UX_010.md); BUILD xong 2026-09-28, chờ Codex review ([bằng chứng](../reviews/JOB_DETAIL_SCREEN_UX010_BUILD_2026-09-28.md)) |
-| 2 | Kết quả (`/results`) và hộp thoại chi tiết | UX-07, 08, 09 | Bảng desktop, thẻ mobile, khung trạng thái nguồn dùng chung với Job Detail |
+| 2 | Kết quả (`/results`) và hộp thoại chi tiết | UX-07, 08, 09 | Bảng desktop, thẻ mobile, khung trạng thái nguồn dùng chung với Job Detail. UX-011 đã mở INTAKE, DESIGN tiếp theo; không sửa API/backend ([ranh giới](../specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md)). |
 | 3 | Trang chủ (`/`) | UX-01, 02, 11, 15, 19 | Số liệu đúng nghĩa, hoạt động gần đây, hướng dẫn bắt đầu hợp lý, banner demo trên mobile |
 | 4 | Kênh chat (`/channels`, `/channels/:id`) | UX-06, 20 | Trạng thái đồng bộ (chưa đồng bộ / đang đồng bộ / một phần / lỗi) đúng ngữ nghĩa R001/R007; "Kết nối lại" chỉ nổi bật khi cần |
 | 5 | Tin nhắn (`/messages`) và chi tiết hội thoại | UX-16 | Đếm đúng hội thoại, bộ lọc có nhãn, đọc hội thoại trên mobile |
@@ -168,4 +181,5 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 2. [UX-000: Codex re-review `REVIEW_PASS` UX000-R1 ngày 2026-09-28 — [review](../reviews/UI_FOUNDATION_UX000_R1_INDEPENDENT_REREVIEW_2026-09-28.md)] Ba avatar đạt tương phản; UX-000, UX-002 và UX-001a đều REVIEW PASS, FREEZE vẫn mở. Claude có thể viết work order UX-010 rồi BUILD theo SPEC đã chốt, trả `REVIEW_PENDING` cho Codex.
 2a. [UX-010: Codex review `CHANGES_REQUIRED` ngày 2026-09-28 — [review](../reviews/CCMAI_UX_010_INDEPENDENT_REVIEW_2026-09-28.md)] Giữ thiết kế phạm vi lần chạy mới nhất; sửa UX010-R1 trong cùng work order: thẻ “đã đánh giá” phải lọc đúng hội thoại không SKIP, lịch sử phân loại phải dùng ngữ nghĩa phân loại. Claude trả `REVIEW_PENDING` để Codex review lại; chưa FREEZE.
 2b. [UX-010: Codex re-review `REVIEW_PASS` UX010-R1 ngày 2026-09-28 — [review](../reviews/CCMAI_UX_010_REPAIR_R1_REREVIEW_2026-09-28.md)] Hai finding đã đóng; FREEZE còn mở. Orchestrator có thể điều phối tranche màn hình tiếp theo theo roadmap.
+2c. [UX-011 Results: INTAKE hoàn tất ngày 2026-09-28 — [brief](../specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md)] Claude được tiến hành DESIGN → SPEC → WORK_ORDER → BUILD **chỉ** trong phạm vi giao diện độc lập; mọi giao điểm backend/API/runtime giữ ngoài tranche, trả `REVIEW_PENDING` cho Codex.
 3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.

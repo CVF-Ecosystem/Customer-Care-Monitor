@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "DESIGN",
+  "activePhase": "DESIGN",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "ORCHESTRATOR (Codex): route the next bounded UI/UX screen tranche from docs/roadmaps/UI_UX_REDESIGN_ROADMAP_2026-09-27.md after continuity rehydration, or separately authorize the dashboard qc_violation_count / demo-scheduler runtime tranches. CCMAI-UX-010 UX010-R1 is REVIEW PASS; UX-000/002/001a and R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
+  "nextAllowedMove": "Claude: acknowledge CCMAI-UX-011 Results DESIGN / SPEC_AUTHOR in the active handoff, then follow docs/specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md. Prepare canvas and SPEC; write a bounded frontend-only WORK_ORDER before BUILD. Exclude dashboard qc_violation_count, demo scheduler/sync, backend/API/store/schema/provider and any other held intersection. Return local REVIEW_PENDING for independent Codex review. UX-010 and UX-000/002/001a REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex) after independent UX010-R1 REVIEW_PASS",
+  "activeRole": "ORCHESTRATOR (Codex) routed UX-011 DESIGN; Claude SPEC_AUTHOR next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-28"
 }

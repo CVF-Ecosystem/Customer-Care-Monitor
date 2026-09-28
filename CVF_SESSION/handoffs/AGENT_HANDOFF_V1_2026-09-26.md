@@ -5,11 +5,16 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR (Codex) after independent UX010-R1 REVIEW_PASS. UX-000, UX-002 and UX-001a are REVIEW PASS / FREEZE open.
-- Next allowed move: Codex routes the next bounded UI/UX screen tranche from the redesign roadmap after continuity rehydration, or separately authorizes dashboard `qc_violation_count` / demo-scheduler runtime tranches. UX-010 and `CCMAI-RUNTIME-001` to `009` are REVIEW PASS / FREEZE open; S1 remains IN_PROGRESS. No push, deployment or FREEZE.
+- Current mode: DESIGN
+- Active phase: DESIGN
+- Active role: ORCHESTRATOR (Codex) routed UX-011 DESIGN; Claude SPEC_AUTHOR next. UX-000, UX-002, UX-001a and UX-010 are REVIEW PASS / FREEZE open.
+- Next allowed move: Claude acknowledges UX-011 Results DESIGN / SPEC_AUTHOR here, then follows `docs/specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md`: canvas → SPEC → bounded frontend-only WORK_ORDER → BUILD → local REVIEW_PENDING for Codex. Dashboard `qc_violation_count`, demo scheduler/sync, backend/API/stores/schema/provider and other runtime intersections remain outside Claude's UX authority. `CCMAI-RUNTIME-001` to `009` REVIEW PASS / FREEZE open; S1 IN_PROGRESS. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## UX-011 Results independent redesign route (2026-09-28)
+
+- Owner direction: proceed with independent redesign first; do not assign Claude any section that intersects the backend roadmap. Codex rehydrated continuity, checked project doctor 25/25, and as ORCHESTRATOR closed UX-011 INTAKE in `docs/specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md`. Phase transition REVIEW (UX-010 passed) → INTAKE (UX-011 bounded) → DESIGN. Role transition ORCHESTRATOR (Codex) → SPEC_AUTHOR (Claude) next; Claude records acknowledgment before design work.
+- Scope: Results screen and detail dialog presentation on existing paginated `/results` API; UX-000/002/010 components and reviewed source/confidence meanings. Explicit holds: dashboard QC count/API, demo-channel scheduler/sync, backend/API/store/schema/provider, and any new Results count/filter/export contract. Claude may author SPEC and frontend-only WORK_ORDER before BUILD, then return REVIEW_PENDING. No self-PASS, FREEZE, push or deployment.
 
 ## Codex independent UX010-R1 re-review (2026-09-28)
 
