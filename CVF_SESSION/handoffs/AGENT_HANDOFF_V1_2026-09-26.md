@@ -5,11 +5,18 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (UX-012..015 REVIEW PASS / FREEZE open)
-- Active role: REVIEWER (Codex) passed UX-015 and UX-014 R1; SESSION_SYNC_STEWARD (Codex) records disposition; ORCHESTRATOR routes separate follow-ups
-- Next allowed move: ORCHESTRATOR scopes the stale-token /setup hang as a separate R2 auth/router tranche and corrects the stale cqa-app command in docs/guide/s3-storage.md as a separate docs task. UX-012..015 REVIEW PASS / FREEZE open; UX-000/002/001a/010/011 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections remain held. No push, deployment or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-AUTH-001; UX-012..015 REVIEW PASS / FREEZE open)
+- Active role: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR (Codex) scoped CCMAI-AUTH-001; IMPLEMENTATION_WORKER (Claude) next
+- Next allowed move: Claude rehydrates and acknowledges IMPLEMENTATION_WORKER for CCMAI-AUTH-001, then executes the bounded frontend BUILD and returns one local REVIEW_PENDING commit. Correct the stale cqa-app command in docs/guide/s3-storage.md as a separate later docs task. UX-012..015 REVIEW PASS / FREEZE open; R001-R009 REVIEW PASS / FREEZE open; S1 IN_PROGRESS. Backend/API intersections remain held. No push, deployment or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-AUTH-001 — first-time Setup with a stale browser token (2026-09-28)
+
+- INTAKE: owner said “tiếp” after UX-014/015 REVIEW PASS. The UX-014 R1 disposable capture observed `/setup` hanging with a placeholder browser token; deleting it allowed rendering. Independent source inspection finds that `needs_setup=true` redirects `/` to Setup while the guest guard redirects token-bearing Setup to `/`. `App.vue` can also load a profile from the stale store token, with the API interceptor refreshing on 401 and navigating to `/login` after failure. This identifies candidate source paths; browser root cause remains to be proven in BUILD.
+- DESIGN: a successful public `/setup/status` response with `needs_setup=true` overrides browser credentials. Clear old local and in-memory auth state before Setup renders, prevent loop/refresh, and retain the newly issued token after successful Setup. Preserve configured-instance behavior and do not treat status failure as positive setup authority.
+- SPEC: `docs/specs/SETUP_STALE_TOKEN_RECOVERY_AUTH001_2026-09-28.md`. WORK_ORDER: `docs/work_orders/CCMAI_AUTH_001.md`, R2, frontend auth/router scope only. The source trace and UX-014 observation are planning evidence, not BUILD or live governance proof.
+- Role transition acknowledged: `ORCHESTRATOR (Codex) → SPEC_AUTHOR (Codex) → WORK_ORDER_AUTHOR (Codex)`. Next `IMPLEMENTATION_WORKER (Claude)` must rehydrate and record its own role transition before BUILD; it returns `REVIEW_PENDING` for independent Codex review. `docs/guide/s3-storage.md` is a separate docs task. No source implementation, provider call, push, deployment or FREEZE occurred in this planning tranche.
 
 ## Owner-directed UI screen series UX-012..UX-015 (2026-09-28, Claude)
 
