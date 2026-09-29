@@ -17,6 +17,11 @@ type Channel struct {
 	CreatedAt            time.Time  `gorm:"not null" json:"created_at"`
 	UpdatedAt            time.Time  `gorm:"not null" json:"updated_at"`
 
+	// SyncRunID identifies the admitted run that currently owns "syncing"
+	// (CCMAI-RUNTIME-014). Internal only: never serialized, never backfilled;
+	// NULL on idle rows and on legacy rows created before this column existed.
+	SyncRunID *string `gorm:"type:varchar(36)" json:"-"`
+
 	Tenant Tenant `gorm:"foreignKey:TenantID" json:"tenant,omitempty"`
 }
 

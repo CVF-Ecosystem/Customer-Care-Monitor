@@ -748,7 +748,8 @@ func SyncChannelNow(c *gin.Context) {
 	// 202 only means "start recorded and worker dispatched". The reservation
 	// is the shared conditional admission (CCMAI-RUNTIME-013): a busy channel
 	// answers 409 and, like any failed reservation, starts no worker.
-	if err := engine.ReserveChannelSync(tenantID, channelID); err != nil {
+	reservation, err := engine.ReserveChannelSync(tenantID, channelID)
+	if err != nil {
 		switch {
 		case errors.Is(err, engine.ErrSyncAlreadyRunning):
 			c.JSON(http.StatusConflict, gin.H{"error": "sync_already_running"})
@@ -762,7 +763,7 @@ func SyncChannelNow(c *gin.Context) {
 	}
 
 	// Run sync in background to avoid Nginx/proxy gateway timeout
-	startManualSync(tenantID, channel, cfg)
+	startManualSync(reservation, channel, cfg)
 
 	c.JSON(http.StatusAccepted, gin.H{"message": "sync_started"})
 }
@@ -774,14 +775,14 @@ var loadManualSyncConfig = config.Load
 // startManualSync launches the background worker with the configuration
 // already validated for this request. It is a variable only so handler tests
 // can observe dispatch without running a real channel adapter.
-var startManualSync = func(tenantID string, channel models.Channel, cfg *config.Config) {
-	go runManualSync(tenantID, channel, cfg)
+var startManualSync = func(reservation engine.SyncReservation, channel models.Channel, cfg *config.Config) {
+	go runManualSync(reservation, channel, cfg)
 }
 
-func runManualSync(tenantID string, channel models.Channel, cfg *config.Config) {
+func runManualSync(reservation engine.SyncReservation, channel models.Channel, cfg *config.Config) {
 	defer func() {
 		if r := recover(); r != nil {
-			_ = handleManualSyncPanic(tenantID, channel.ID, r)
+			_ = handleManualSyncPanic(reservation, r)
 		}
 	}()
 
@@ -790,7 +791,7 @@ func runManualSync(tenantID string, channel models.Channel, cfg *config.Config) 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
 	defer cancel()
 	// The channel was reserved before dispatch; do not reserve it again.
-	if err := syncEng.SyncReservedChannel(ctx, channel); err != nil {
+	if err := syncEng.SyncReservedChannel(ctx, channel, reservation); err != nil {
 		log.Printf("[error] sync channel %s failed: %v", channel.ID, err)
 	}
 }
@@ -801,9 +802,10 @@ const manualSyncPanicMessage = "Đồng bộ thủ công dừng do lỗi nội b
 
 // handleManualSyncPanic logs only the panic's type, records a tenant-scoped
 // error status and returns (and logs) any failure to record it.
-func handleManualSyncPanic(tenantID, channelID string, r interface{}) error {
+func handleManualSyncPanic(reservation engine.SyncReservation, r interface{}) error {
+	channelID := reservation.ChannelID
 	log.Printf("[error] manual sync worker for channel %s panicked (%T)", channelID, r)
-	if err := updateChannelSyncStatus(tenantID, channelID, "error", manualSyncPanicMessage); err != nil {
+	if err := updateChannelSyncStatus(reservation, "error", manualSyncPanicMessage); err != nil {
 		log.Printf("[error] manual sync panic status for channel %s not recorded: %v", channelID, err)
 		return err
 	}
@@ -811,16 +813,22 @@ func handleManualSyncPanic(tenantID, channelID string, r interface{}) error {
 }
 
 // updateChannelSyncStatus writes the visible sync status for exactly one
-// tenant-owned channel that is still syncing, so a finished, missing or
-// transferred channel is never overwritten. MySQL reports changed rows, and
+// tenant-owned channel that is still syncing under this reservation's run ID,
+// and clears the ID in the same write. A finished, missing, transferred or
+// re-reserved channel is never overwritten. MySQL reports changed rows, and
 // updated_at always changes, so anything but one affected row means the
 // channel was not updated.
-func updateChannelSyncStatus(tenantID, channelID, status, message string) error {
+func updateChannelSyncStatus(reservation engine.SyncReservation, status, message string) error {
+	if reservation.TenantID == "" || reservation.ChannelID == "" || reservation.RunID == "" {
+		return fmt.Errorf("update sync status: empty reservation")
+	}
 	res := db.DB.Model(&models.Channel{}).
-		Where("id = ? AND tenant_id = ? AND last_sync_status = ?", channelID, tenantID, "syncing").
+		Where("id = ? AND tenant_id = ? AND last_sync_status = ? AND sync_run_id = ?",
+			reservation.ChannelID, reservation.TenantID, "syncing", reservation.RunID).
 		Updates(map[string]interface{}{
 			"last_sync_status": status,
 			"last_sync_error":  message,
+			"sync_run_id":      gorm.Expr("NULL"),
 			"updated_at":       time.Now(),
 		})
 	if res.Error != nil {

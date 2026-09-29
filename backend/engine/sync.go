@@ -92,7 +92,24 @@ var (
 	// ErrSyncNotAdmitted: admission could not be recorded (database failure or
 	// an unexpected zero-row write).
 	ErrSyncNotAdmitted = errors.New("sync not admitted")
+	// ErrSyncReservationMismatch: an already-reserved entry was given an empty
+	// reservation or one that does not belong to its channel.
+	ErrSyncReservationMismatch = errors.New("sync reservation does not match channel")
 )
+
+// SyncReservation is the proof of one admitted run: the tenant and channel it
+// was admitted for and the run ID stored on the channel row. Only
+// ReserveChannelSync creates a valid one; every terminal write of that run must
+// present its RunID.
+type SyncReservation struct {
+	TenantID  string
+	ChannelID string
+	RunID     string
+}
+
+func (r SyncReservation) valid() bool {
+	return r.TenantID != "" && r.ChannelID != "" && r.RunID != ""
+}
 
 // Test seams (CCMAI-RUNTIME-013): the adapter factory and the after-sync
 // trigger are variables so tests can observe dispatch without a real channel.
@@ -110,66 +127,80 @@ var (
 // moves exactly one tenant-owned channel to "syncing" only if it is not
 // already syncing (NULL counts as not syncing). A read afterwards only
 // classifies a zero-row result and never decides admission.
-func ReserveChannelSync(tenantID, channelID string) error {
+//
+// The same update assigns a fresh run ID (CCMAI-RUNTIME-014), which is returned
+// only when exactly one row was changed.
+func ReserveChannelSync(tenantID, channelID string) (SyncReservation, error) {
+	runID := pkg.NewUUID()
 	res := db.DB.Model(&models.Channel{}).
 		Where("id = ? AND tenant_id = ? AND (last_sync_status IS NULL OR last_sync_status <> ?)", channelID, tenantID, "syncing").
 		Updates(map[string]interface{}{
 			"last_sync_status": "syncing",
 			"last_sync_error":  "",
+			"sync_run_id":      runID,
 			"updated_at":       time.Now(),
 		})
 	if res.Error != nil {
 		log.Printf("[sync] reservation for channel %s failed: write error", channelID)
-		return ErrSyncNotAdmitted
+		return SyncReservation{}, ErrSyncNotAdmitted
 	}
 	if res.RowsAffected == 1 {
-		return nil
+		return SyncReservation{TenantID: tenantID, ChannelID: channelID, RunID: runID}, nil
 	}
 	if res.RowsAffected > 1 {
 		log.Printf("[sync] reservation for channel %s changed %d rows", channelID, res.RowsAffected)
-		return ErrSyncNotAdmitted
+		return SyncReservation{}, ErrSyncNotAdmitted
 	}
 
 	var rows []struct{ LastSyncStatus *string }
 	if err := db.DB.Model(&models.Channel{}).Select("last_sync_status").
 		Where("id = ? AND tenant_id = ?", channelID, tenantID).Limit(1).Scan(&rows).Error; err != nil {
 		log.Printf("[sync] reservation for channel %s not classified: read error", channelID)
-		return ErrSyncNotAdmitted
+		return SyncReservation{}, ErrSyncNotAdmitted
 	}
 	if len(rows) == 0 {
-		return ErrSyncChannelMissing
+		return SyncReservation{}, ErrSyncChannelMissing
 	}
 	if rows[0].LastSyncStatus != nil && *rows[0].LastSyncStatus == "syncing" {
-		return ErrSyncAlreadyRunning
+		return SyncReservation{}, ErrSyncAlreadyRunning
 	}
 	log.Printf("[sync] reservation for channel %s not applied although the channel is idle", channelID)
-	return ErrSyncNotAdmitted
+	return SyncReservation{}, ErrSyncNotAdmitted
 }
 
 // SyncChannel reserves the channel and then syncs it. Every caller that has
 // not already reserved the channel must use this entry point.
 func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) error {
-	if err := ReserveChannelSync(channel.TenantID, channel.ID); err != nil {
+	reservation, err := ReserveChannelSync(channel.TenantID, channel.ID)
+	if err != nil {
 		return err
 	}
-	return s.SyncReservedChannel(ctx, channel)
+	return s.SyncReservedChannel(ctx, channel, reservation)
 }
 
 // SyncReservedChannel runs a sync for a channel the caller has already
 // reserved with ReserveChannelSync (the manual handler does this before it
-// answers 202). It never reserves again, and it always tries to leave the
-// channel out of "syncing": if it exits without a recorded final status
-// (failed write, zero rows, panic) it attempts a tenant-scoped error
-// transition without hiding the original failure. A stuck "syncing" after a
-// process crash is not handled here (separate recovery tranche).
-func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Channel) (runErr error) {
+// answers 202). It never reserves again. The reservation must belong to this
+// channel; otherwise the run is rejected before any adapter work. Every
+// terminal write, including the deferred error transition, presents the run ID
+// of that reservation, so a stale worker cannot overwrite a newer run. If it
+// exits without a recorded final status (failed write, zero rows, panic) it
+// attempts an error transition under the same ID without hiding the original
+// failure. A stuck "syncing" after a process crash is not handled here
+// (separate recovery tranche), and conversation/message/token side effects of
+// a stale worker are not fenced.
+func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Channel, reservation SyncReservation) (runErr error) {
+	if !reservation.valid() || reservation.TenantID != channel.TenantID || reservation.ChannelID != channel.ID {
+		log.Printf("[sync] channel %s rejected: reservation does not match", channel.ID)
+		return ErrSyncReservationMismatch
+	}
 	recorded := false
 	defer func() {
 		if recorded {
 			return
 		}
 		r := recover()
-		if _, terr := s.recordSyncStatus(channel.TenantID, channel.ID, "error", "Đồng bộ dừng trước khi ghi nhận kết quả; xem nhật ký máy chủ."); terr != nil {
+		if _, terr := s.recordSyncStatus(reservation, "error", "Đồng bộ dừng trước khi ghi nhận kết quả; xem nhật ký máy chủ."); terr != nil {
 			log.Printf("[sync] channel %s could not leave syncing state: %v", channel.ID, terr)
 		}
 		if r != nil {
@@ -178,7 +209,7 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	}()
 	// finish records the final status; only a successful write counts as recorded.
 	finish := func(status, errMsg string) error {
-		wrote, err := s.recordSyncStatus(channel.TenantID, channel.ID, status, errMsg)
+		wrote, err := s.recordSyncStatus(reservation, status, errMsg)
 		if wrote {
 			recorded = true
 		}
@@ -619,16 +650,22 @@ func buildSyncStatusUpdates(status, errMsg string, now time.Time) map[string]int
 }
 
 // recordSyncStatus writes the final status of a reserved run. The write is
-// scoped to the tenant and to the current "syncing" state and must affect
-// exactly one row; otherwise wrote is false and the error says the status was
-// not recorded (a missing, transferred or already-finished row is never
-// overwritten). When wrote is true, err is nil for success and the reported
-// failure text for partial/error runs.
-func (s *SyncEngine) recordSyncStatus(tenantID, channelID, status, errMsg string) (wrote bool, err error) {
+// scoped to the tenant, the current "syncing" state and the run's own ID, and
+// must affect exactly one row; otherwise wrote is false and the error says the
+// status was not recorded (a missing, transferred, already-finished or
+// re-reserved row is never overwritten). The same write clears the run ID.
+// When wrote is true, err is nil for success and the reported failure text for
+// partial/error runs.
+func (s *SyncEngine) recordSyncStatus(reservation SyncReservation, status, errMsg string) (wrote bool, err error) {
+	if !reservation.valid() {
+		return false, fmt.Errorf("update sync status %s: %w", status, ErrSyncReservationMismatch)
+	}
+	tenantID, channelID := reservation.TenantID, reservation.ChannelID
 	now := time.Now()
 	updates := buildSyncStatusUpdates(status, errMsg, now)
+	updates["sync_run_id"] = gorm.Expr("NULL")
 	res := db.DB.Model(&models.Channel{}).
-		Where("id = ? AND tenant_id = ? AND last_sync_status = ?", channelID, tenantID, "syncing").
+		Where("id = ? AND tenant_id = ? AND last_sync_status = ? AND sync_run_id = ?", channelID, tenantID, "syncing", reservation.RunID).
 		Updates(updates)
 	if res.Error != nil {
 		return false, fmt.Errorf("update sync status %s: %w", status, res.Error)

@@ -8,6 +8,7 @@ import (
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine"
 )
 
 // CCMAI-RUNTIME-013: the manual handler and both agent sync actions share the
@@ -67,9 +68,9 @@ func TestSyncChannelNowReservationFailureKeepsGenericResponses(t *testing.T) {
 func TestRunManualSyncDoesNotReserveAgain(t *testing.T) {
 	f := setupSyncStartFixture(t)
 	cfg := &config.Config{Env: "test", EncryptionKey: "synthetic-32-byte-key-0123456789"}
-	f.markSyncing(t)
+	res := f.reserve(t)
 
-	runManualSync(f.tenantID, f.channelStatus(t), cfg)
+	runManualSync(res, f.channelStatus(t), cfg)
 
 	ch := f.channelStatus(t)
 	if ch.LastSyncStatus != "error" || !strings.Contains(ch.LastSyncError, "decrypt failed") {
@@ -79,7 +80,8 @@ func TestRunManualSyncDoesNotReserveAgain(t *testing.T) {
 
 func TestHandleManualSyncPanicDoesNotOverwriteFinishedRow(t *testing.T) {
 	f := setupSyncStartFixture(t) // fixture status is "success", not syncing
-	if err := handleManualSyncPanic(f.tenantID, f.channelID, panicSecret); err == nil {
+	forged := engine.SyncReservation{TenantID: f.tenantID, ChannelID: f.channelID, RunID: "forged-run-id"}
+	if err := handleManualSyncPanic(forged, panicSecret); err == nil {
 		t.Fatal("a panic recovery reported success on a row that was not syncing")
 	}
 	if got := f.channelStatus(t).LastSyncStatus; got != "success" {

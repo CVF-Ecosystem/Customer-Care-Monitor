@@ -52,9 +52,6 @@ func (a *sfAdapter) FetchRecentConversations(_ context.Context, _ time.Time, _ i
 	a.f.mu.Lock()
 	a.f.fetches[a.id]++
 	a.f.mu.Unlock()
-	if a.f.onFetch != nil {
-		a.f.onFetch(a.id)
-	}
 	if a.f.gateFor == a.id {
 		a.f.entered <- struct{}{}
 		select { // bounded, so a broken admission fails the test instead of hanging it
@@ -62,6 +59,9 @@ func (a *sfAdapter) FetchRecentConversations(_ context.Context, _ time.Time, _ i
 		case <-time.After(10 * time.Second):
 			return nil, errors.New("gated fetch not released")
 		}
+	}
+	if a.f.onFetch != nil {
+		a.f.onFetch(a.id)
 	}
 	if a.f.fetchErr != nil {
 		return nil, a.f.fetchErr
@@ -213,7 +213,7 @@ func TestReserveChannelSyncSameChannelHasExactlyOneWinner(t *testing.T) {
 		go func(i int) {
 			defer wg.Done()
 			<-start
-			results[i] = ReserveChannelSync(f.tenantID, f.chA)
+			_, results[i] = ReserveChannelSync(f.tenantID, f.chA)
 		}(i)
 	}
 	close(start)
@@ -242,23 +242,23 @@ func TestReserveChannelSyncIsTenantAndChannelScoped(t *testing.T) {
 	f := setupSFFixture(t)
 	before := f.statusOf(t, f.chA)
 
-	if err := ReserveChannelSync(f.otherTenantID, f.chA); !errors.Is(err, ErrSyncChannelMissing) {
+	if _, err := ReserveChannelSync(f.otherTenantID, f.chA); !errors.Is(err, ErrSyncChannelMissing) {
 		t.Fatalf("other tenant got %v, want ErrSyncChannelMissing", err)
 	}
 	if after := f.statusOf(t, f.chA); after != before {
 		t.Fatalf("another tenant changed the channel: %+v -> %+v", before, after)
 	}
-	if err := ReserveChannelSync(f.tenantID, "ch-does-not-exist"); !errors.Is(err, ErrSyncChannelMissing) {
+	if _, err := ReserveChannelSync(f.tenantID, "ch-does-not-exist"); !errors.Is(err, ErrSyncChannelMissing) {
 		t.Fatalf("missing channel got %v", err)
 	}
 
-	if err := ReserveChannelSync(f.tenantID, f.chA); err != nil {
+	if _, err := ReserveChannelSync(f.tenantID, f.chA); err != nil {
 		t.Fatalf("first reservation: %v", err)
 	}
-	if err := ReserveChannelSync(f.tenantID, f.chB); err != nil {
+	if _, err := ReserveChannelSync(f.tenantID, f.chB); err != nil {
 		t.Fatalf("independent channel of the same tenant must admit: %v", err)
 	}
-	if err := ReserveChannelSync(f.otherTenantID, f.chX); err != nil {
+	if _, err := ReserveChannelSync(f.otherTenantID, f.chX); err != nil {
 		t.Fatalf("channel of another tenant must admit independently: %v", err)
 	}
 }
@@ -266,13 +266,13 @@ func TestReserveChannelSyncIsTenantAndChannelScoped(t *testing.T) {
 func TestReserveChannelSyncAdmitsEmptyAndNullStatus(t *testing.T) {
 	f := setupSFFixture(t)
 	f.setStatus(t, f.chA, "")
-	if err := ReserveChannelSync(f.tenantID, f.chA); err != nil {
+	if _, err := ReserveChannelSync(f.tenantID, f.chA); err != nil {
 		t.Fatalf("empty status: %v", err)
 	}
 	if err := db.DB.Exec("UPDATE channels SET last_sync_status = NULL WHERE id = ?", f.chB).Error; err != nil {
 		t.Skipf("column does not accept NULL here: %v", err)
 	}
-	if err := ReserveChannelSync(f.tenantID, f.chB); err != nil {
+	if _, err := ReserveChannelSync(f.tenantID, f.chB); err != nil {
 		t.Fatalf("NULL status must be admitted: %v", err)
 	}
 }
@@ -284,7 +284,7 @@ func TestReserveChannelSyncWriteFailureAndZeroRowsAdmitNothing(t *testing.T) {
 		before := f.statusOf(t, f.chA)
 		logs := captureEngineLog(t)
 
-		err := ReserveChannelSync(f.tenantID, f.chA)
+		_, err := ReserveChannelSync(f.tenantID, f.chA)
 		if !errors.Is(err, ErrSyncNotAdmitted) || strings.Contains(err.Error(), "forced") || strings.Contains(logs.String(), "forced") {
 			t.Fatalf("got %v (log %q), want a generic ErrSyncNotAdmitted", err, logs.String())
 		}
@@ -294,8 +294,8 @@ func TestReserveChannelSyncWriteFailureAndZeroRowsAdmitNothing(t *testing.T) {
 	})
 	t.Run("zero rows on an idle channel", func(t *testing.T) {
 		f := setupSFFixture(t)
-		f.addTrigger(t, f.chA, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at;")
-		if err := ReserveChannelSync(f.tenantID, f.chA); !errors.Is(err, ErrSyncNotAdmitted) {
+		f.addTrigger(t, f.chA, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at; SET NEW.sync_run_id = OLD.sync_run_id;")
+		if _, err := ReserveChannelSync(f.tenantID, f.chA); !errors.Is(err, ErrSyncNotAdmitted) {
 			t.Fatalf("got %v, want ErrSyncNotAdmitted (not busy, not admitted)", err)
 		}
 	})
@@ -347,10 +347,11 @@ func TestSyncChannelAdmittedRunSucceedsAndAdvancesCheckpoint(t *testing.T) {
 // channel must run rather than report busy (a second acquire would).
 func TestSyncReservedChannelDoesNotReserveAgain(t *testing.T) {
 	f := setupSFFixture(t)
-	if err := ReserveChannelSync(f.tenantID, f.chA); err != nil {
+	reservation, err := ReserveChannelSync(f.tenantID, f.chA)
+	if err != nil {
 		t.Fatal(err)
 	}
-	if err := NewSyncEngine(f.cfg).SyncReservedChannel(context.Background(), f.channel(t, f.chA)); err != nil {
+	if err := NewSyncEngine(f.cfg).SyncReservedChannel(context.Background(), f.channel(t, f.chA), reservation); err != nil {
 		t.Fatalf("reserved run: %v", err)
 	}
 	if got := f.statusOf(t, f.chA); got.Status != "success" || f.fetchCount(f.chA) != 1 {

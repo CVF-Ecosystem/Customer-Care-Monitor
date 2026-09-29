@@ -31,7 +31,8 @@
     "CCMAI-RUNTIME-013 REVIEW PASS / FREEZE OPEN: manual, scheduler and agent sync paths share a tenant/channel-scoped conditional MySQL reservation; busy manual returns 409 without dispatch, scheduler skips busy, agents report non-success. Final writes require the same row still syncing. Codex independently reran focused engine/handler tests on disposable MySQL and doctor 25/25. Crash recovery and run-generation fencing remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "S1 remains IN_PROGRESS: CCMAI-RUNTIME-014 is WORK_ORDER for internal sync run identity and final-write ownership only. Automatic crash recovery, in-flight side-effect fencing and backend-dependent UI/API intersections are separate tranches; no R014 runtime implementation is claimed."
+    "CCMAI-RUNTIME-014 BUILD complete / REVIEW_PENDING (local commit, not pushed): every new channel sync reservation now stores an internal, nullable sync_run_id (added by the ordinary AutoMigrate, never backfilled, never serialized) assigned in the same conditional update and returned as a typed reservation. The reservation is carried through SyncChannel/SyncReservedChannel and the manual launcher, worker and panic handler; every terminal write requires id, tenant, syncing and the run ID and clears the ID atomically, so a stale worker cannot overwrite, checkpoint or trigger over a newer run. Focused tests (138 pass) and all 14 backend packages pass on disposable MySQL with synthetic adapters, including old/new schema migration run twice, a NULL-ID legacy syncing row and a deterministic two-generation race; four mutations failed the new tests and were restored. Evidence docs/reviews/RUNTIME_SYNC_RUN_OWNERSHIP_S1_BUILD_2026-09-29.md. This is final-write fencing only: conversation/message/attachment/token-refresh side effects of a stale worker are not fenced, and no automatic recovery, lease or timeout takeover exists. Codex independent REVIEW next; no real channel/provider call, governance claim, push or FREEZE.",
+    "S1 remains IN_PROGRESS: recovery of a stuck syncing state (evidence of worker death or side-effect fencing) and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -158,7 +159,8 @@
     "docs/reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_012_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_013_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_013_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/RUNTIME_SYNC_RUN_OWNERSHIP_S1_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

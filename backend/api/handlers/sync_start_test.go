@@ -14,6 +14,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
@@ -34,6 +35,9 @@ type syncStartFixture struct {
 	cfgErr      error
 	cfgLoads    int
 	launchedCfg *config.Config
+
+	// CCMAI-RUNTIME-014: the reservation the handler handed to the launcher.
+	launchedRes engine.SyncReservation
 }
 
 func setupSyncStartFixture(t *testing.T) *syncStartFixture {
@@ -60,8 +64,9 @@ func setupSyncStartFixture(t *testing.T) *syncStartFixture {
 	})
 
 	original := startManualSync
-	startManualSync = func(_ string, ch models.Channel, cfg *config.Config) {
+	startManualSync = func(res engine.SyncReservation, ch models.Channel, cfg *config.Config) {
 		f.launches++
+		f.launchedRes = res
 		f.launchedCfg = cfg
 		f.statusAtLaunch = f.channelStatus(t).LastSyncStatus
 		f.respondedBeforeLaunch = f.rec != nil && f.rec.Body.Len() > 0
@@ -160,7 +165,7 @@ func TestSyncChannelNowWriteFailureStartsNoWorker(t *testing.T) {
 // it must not be treated as a recorded start.
 func TestSyncChannelNowZeroRowUpdateStartsNoWorker(t *testing.T) {
 	f := setupSyncStartFixture(t)
-	f.addChannelTrigger(t, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at;")
+	f.addChannelTrigger(t, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at; SET NEW.sync_run_id = OLD.sync_run_id;")
 	f.assertNoStart(t, f.callSync(f.tenantID))
 }
 
@@ -182,6 +187,17 @@ func (f *syncStartFixture) markSyncing(t *testing.T) {
 	}
 }
 
+// reserve takes a real reservation on the fixture channel, as the handler
+// does before it launches a worker.
+func (f *syncStartFixture) reserve(t *testing.T) engine.SyncReservation {
+	t.Helper()
+	res, err := engine.ReserveChannelSync(f.tenantID, f.channelID)
+	if err != nil {
+		t.Fatalf("reserve: %v", err)
+	}
+	return res
+}
+
 func captureLog(t *testing.T) *bytes.Buffer {
 	t.Helper()
 	var buf bytes.Buffer
@@ -195,10 +211,10 @@ const panicSecret = "access_token=SECRET-DO-NOT-LEAK"
 
 func TestHandleManualSyncPanicRecordsBoundedTenantScopedStatus(t *testing.T) {
 	f := setupSyncStartFixture(t)
-	f.markSyncing(t)
+	res := f.reserve(t)
 	logs := captureLog(t)
 
-	if err := handleManualSyncPanic(f.tenantID, f.channelID, panicSecret); err != nil {
+	if err := handleManualSyncPanic(res, panicSecret); err != nil {
 		t.Fatalf("recording panic status: %v", err)
 	}
 	ch := f.channelStatus(t)
@@ -215,10 +231,11 @@ func TestHandleManualSyncPanicRecordsBoundedTenantScopedStatus(t *testing.T) {
 
 func TestHandleManualSyncPanicWrongTenantIsNotSilent(t *testing.T) {
 	f := setupSyncStartFixture(t)
-	f.markSyncing(t)
+	res := f.reserve(t)
+	res.TenantID = f.otherTenantID
 	logs := captureLog(t)
 
-	if err := handleManualSyncPanic(f.otherTenantID, f.channelID, panicSecret); err == nil {
+	if err := handleManualSyncPanic(res, panicSecret); err == nil {
 		t.Fatal("another tenant's recovery reported success")
 	}
 	if got := f.channelStatus(t).LastSyncStatus; got != "syncing" {
@@ -231,11 +248,11 @@ func TestHandleManualSyncPanicWrongTenantIsNotSilent(t *testing.T) {
 
 func TestHandleManualSyncPanicWriteFailureIsReturnedAndLogged(t *testing.T) {
 	f := setupSyncStartFixture(t)
-	f.markSyncing(t)
+	res := f.reserve(t)
 	f.addChannelTrigger(t, "SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'forced panic status write failure';")
 	logs := captureLog(t)
 
-	if err := handleManualSyncPanic(f.tenantID, f.channelID, panicSecret); err == nil {
+	if err := handleManualSyncPanic(res, panicSecret); err == nil {
 		t.Fatal("failed status write reported success")
 	}
 	if !strings.Contains(logs.String(), "not recorded") || strings.Contains(logs.String(), "SECRET") {
