@@ -26,7 +26,9 @@
     "CCMAI-UX-015 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_UX_015_INDEPENDENT_REVIEW_2026-09-28.md): activity/cost/notification logs and MCP UI; cost footer is page-scoped; one-time secret is cleared on dialog close. Filtered cost total and other API/permission changes remain held.",
     "CCMAI-AUTH-001 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md): positive needs_setup=true clears stale browser and in-memory credentials before Setup; App waits for initial router readiness before profile loading. Real-guard 7/7 and full frontend 167/167 tests, forced typecheck, build and doctor 25/25 passed independently. No backend/API or live governance claim."
   ],
-  "buildInProgress": [],
+  "buildInProgress": [
+    "CCMAI-RUNTIME-010 BUILD complete, REVIEW_PENDING: CreateChannel, TestChannelConnection, ReauthChannel, ZaloOAuthCallback and FacebookOAuthCallback load configuration once via loadChannelSecurityConfig after the existing request/tenant checks and before any encryption, decryption, state signing/verification, outbound exchange or channel write. An invalid or nil config returns the route's existing generic 500 or the Authorization failed redirect, with no config detail in body/log. Focused synthetic/disposable-MySQL tests plus accepted-path detectors pass; the full backend suite, build and vet pass. No real OAuth/provider call or governance claim."
+  ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
     "CCMAI-CREDIT-002",
@@ -72,7 +74,7 @@
     "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration.",
     "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical CVF-Ecosystem/Customer-Care-Monitor origin; Go/docs Actions and new GitHub Pages passed, with public home and key guides HTTP 200. Historical PR/run URLs and initial CQA import message remain provenance. Independent R2 REVIEW and FREEZE remain open; old repository deletion is the owner's separate action.",
     "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; all old commit SHA citations in historical review documents remain observations, not reachable current-main SHAs. The GitHub commit API still returned HTTP 200 for the old unreachable root SHA after force push; server-side erasure is not claimed. Current main tree and MIT LICENSE content were preserved; independent R2 REVIEW and FREEZE remain open.",
-    "CCMAI-RUNTIME-010 is WORK_ORDER only: five channel credential/OAuth config.Load error/nil paths remain unimplemented until Claude BUILD and Codex independent REVIEW. Agent config admission, cross-path sync single-flight and crash recovery remain separate S1 residuals."
+    "CCMAI-RUNTIME-010 BUILD is complete and REVIEW_PENDING (not accepted): the five channel credential/OAuth config.Load paths now fail closed, pending Codex independent REVIEW. Only a synthetic transport was used, not real OAuth/Pancake endpoints; callback success paths still ignore the final channel-update error (separate scope). Agent config admission, cross-path sync single-flight and crash recovery remain separate S1 residuals."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -138,7 +140,8 @@
     "docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/CCMAI_CREDIT_002_TRIAL_PUSH_2026-09-29.md",
     "docs/reviews/CCMAI_REPO_MIGRATE_001_BUILD_2026-09-29.md",
-    "docs/reviews/CCMAI_CREDIT_003_MESSAGE_REWRITE_2026-09-29.md"
+    "docs/reviews/CCMAI_CREDIT_003_MESSAGE_REWRITE_2026-09-29.md",
+    "docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

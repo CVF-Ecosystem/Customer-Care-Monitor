@@ -33,6 +33,11 @@ import (
 // Shared HTTP client with timeout for external API calls
 var httpClientWithTimeout = &http.Client{Timeout: 30 * time.Second}
 
+// loadChannelSecurityConfig loads and validates the configuration holding the
+// credential encryption key and OAuth state secret. It is a variable only so
+// handler tests can force a load failure.
+var loadChannelSecurityConfig = config.Load
+
 type CreateChannelRequest struct {
 	ChannelType string          `json:"channel_type" binding:"required,oneof=zalo_oa facebook pancake"`
 	Name        string          `json:"name" binding:"required,min=2,max=255"`
@@ -93,8 +98,16 @@ func CreateChannel(c *gin.Context) {
 
 	tenantID := middleware.GetTenantID(c)
 
+	// Without a validated configuration nothing is encrypted, exchanged or
+	// stored. The error is not logged because it describes secret settings.
+	cfg, err := loadChannelSecurityConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] create channel for tenant %s not admitted: configuration invalid", tenantID)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "create_channel_failed"})
+		return
+	}
+
 	// Encrypt credentials
-	cfg, _ := config.Load()
 	encrypted, err := pkg.Encrypt([]byte(req.Credentials), cfg.EncryptionKey)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "encryption_failed"})
@@ -394,8 +407,14 @@ func TestChannelConnection(c *gin.Context) {
 		return
 	}
 
+	cfg, err := loadChannelSecurityConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] connection test for channel %s not admitted: configuration invalid", channelID)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "decrypt_failed"})
+		return
+	}
+
 	// Decrypt credentials
-	cfg, _ := config.Load()
 	credBytes, err := pkg.Decrypt(channel.CredentialsEncrypted, cfg.EncryptionKey)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "decrypt_failed"})
@@ -443,7 +462,12 @@ func ZaloOAuthCallback(c *gin.Context) {
 		return
 	}
 
-	cfg, _ := config.Load()
+	cfg, err := loadChannelSecurityConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] zalo OAuth callback not admitted: configuration invalid")
+		redirectWithError(c, "", "Authorization failed")
+		return
+	}
 	tenantID, channelID, err := verifyOAuthState(state, cfg.JWTSecret)
 	if err != nil {
 		log.Printf("[security] invalid OAuth state: %v", err)
@@ -631,7 +655,12 @@ func ReauthChannel(c *gin.Context) {
 		return
 	}
 
-	cfg, _ := config.Load()
+	cfg, err := loadChannelSecurityConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] re-auth for channel %s not admitted: configuration invalid", channelID)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Decrypt failed"})
+		return
+	}
 	credBytes, err := pkg.Decrypt(channel.CredentialsEncrypted, cfg.EncryptionKey)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Decrypt failed"})
@@ -781,7 +810,12 @@ func FacebookOAuthCallback(c *gin.Context) {
 		return
 	}
 
-	cfg, _ := config.Load()
+	cfg, err := loadChannelSecurityConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[error] facebook OAuth callback not admitted: configuration invalid")
+		redirectWithError(c, "", "Authorization failed")
+		return
+	}
 	tenantID, channelID, err := verifyOAuthState(state, cfg.JWTSecret)
 	if err != nil {
 		log.Printf("[security] invalid Facebook OAuth state: %v", err)
