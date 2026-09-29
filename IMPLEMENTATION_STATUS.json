@@ -25,10 +25,10 @@
     "CCMAI-UX-014 REVIEW PASS / FREEZE OPEN after R1 (Codex docs/reviews/CCMAI_UX_014_R1_INDEPENDENT_REREVIEW_2026-09-28.md): Settings/Users/Login/Setup presentation; S3-off dialog now uses the Compose service command; Setup and S3-off states captured with synthetic data. No provider or S3 call.",
     "CCMAI-UX-015 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_UX_015_INDEPENDENT_REVIEW_2026-09-28.md): activity/cost/notification logs and MCP UI; cost footer is page-scoped; one-time secret is cleared on dialog close. Filtered cost total and other API/permission changes remain held.",
     "CCMAI-AUTH-001 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md): positive needs_setup=true clears stale browser and in-memory credentials before Setup; App waits for initial router readiness before profile loading. Real-guard 7/7 and full frontend 167/167 tests, forced typecheck, build and doctor 25/25 passed independently. No backend/API or live governance claim.",
-    "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: the five channel credential/OAuth routes reject failed or nil config before secret use, DB write or outbound exchange. Codex independently inspected source and ran six focused test groups and 26 leaf cases on disposable MySQL; doctor 25/25 passed. No real channel/provider or governance proof."
+    "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: the five channel credential/OAuth routes reject failed or nil config before secret use, DB write or outbound exchange. Codex independently inspected source and ran six focused test groups and 26 leaf cases on disposable MySQL; doctor 25/25 passed. No real channel/provider or governance proof.",
+    "CCMAI-RUNTIME-011 REVIEW PASS / FREEZE OPEN after R1/R2: AgentRun rejects invalid or nil configuration before sync/analysis dispatch. Focused tests directly observe no tenant job run, channel write or outbound request on rejection and detect all three effects on accepted synthetic stubs. BUILD provenance corrected; Codex independently reran focused tests and doctor 25/25. No real engine, channel, provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-011 repair R011-R1/R011-R2 is REVIEW_PENDING (local commit, not pushed): the agent admission test now has direct tenant-scoped job_runs and zero-outbound observers, made non-vacuous by the accepted-path detector, and the BUILD evidence base commit is corrected to 10af2c6. agents.go unchanged; focused and full backend tests, build, vet, catalog and doctor pass. Codex re-review next; no provider/channel call, governance claim, push or FREEZE.",
     "S1 remains IN_PROGRESS: cross-path sync single-flight, crash recovery, callback final DB-write errors and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -67,7 +67,7 @@
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
     "Application feature status has not yet been assessed under the CVF module catalog.",
     "Workspace-wide gate has failures in unrelated sibling repositories.",
-    "CCMAI-RUNTIME-007/008/009/010 passed independent REVIEW for manual sync, job-dispatch and channel credential/OAuth configuration admission. Agent configuration admission remains separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
+    "CCMAI-RUNTIME-007/008/009/010/011 passed independent REVIEW for manual sync, job-dispatch, channel credential/OAuth and agent-run configuration admission. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them.",
     "CCMAI-UX-000 changes the global theme and font; existing screens keep their own source-status colors and sync labels until screen tranches (UX-010+). The F1 onboarding bar remains a later-screen item; avatar contrast UX000-R1 passed independent re-review.",
     "UX-02 dashboard 'issues' API field still counts every job result; Codex decided to preserve it and add qc_violation_count in a separate R2 API tranche. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
@@ -148,7 +148,8 @@
     "docs/reviews/CCMAI_CREDIT_003_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_010_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_AGENT_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_011_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_011_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/CCMAI_RUNTIME_011_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }
