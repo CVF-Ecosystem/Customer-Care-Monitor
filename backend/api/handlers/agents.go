@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"context"
+	"errors"
 	"log"
 	"net/http"
 	"time"
@@ -167,6 +168,10 @@ func handleSyncAgent(ctx context.Context, cfg *config.Config, req AgentRunReques
 			return AgentRunResponse{Status: "error", Errors: []string{"channel not found"}}
 		}
 		err := syncEngine.SyncChannel(ctx, channel)
+		if errors.Is(err, engine.ErrSyncAlreadyRunning) {
+			// Another entry path owns this channel: not a success, bounded reason.
+			return AgentRunResponse{Status: "error", Errors: []string{"sync_already_running"}}
+		}
 		if err != nil {
 			return AgentRunResponse{Status: "error", Errors: []string{err.Error()}}
 		}

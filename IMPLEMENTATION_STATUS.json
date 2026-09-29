@@ -30,7 +30,8 @@
     "CCMAI-RUNTIME-012 REVIEW PASS / FREEZE OPEN: Zalo/Facebook OAuth callbacks report success only after exactly one tenant-scoped final credential update succeeds. Forced MySQL error, tenant-reassignment zero-row race and accepted synthetic token persistence passed; Codex independently reran focused tests and doctor 25/25. No real OAuth/provider call or governance proof."
   ],
   "buildInProgress": [
-    "S1 remains IN_PROGRESS: CCMAI-RUNTIME-013 is WORK_ORDER for cross-path sync single-flight; crash recovery and backend-dependent UI/API intersections are separate tranches. No R013 runtime implementation is claimed."
+    "CCMAI-RUNTIME-013 BUILD complete / REVIEW_PENDING (local commit, not pushed): manual, scheduler and both agent sync actions share one conditional MySQL reservation by id AND tenant AND not syncing; a busy manual request returns exact 409 sync_already_running without launching, a busy scheduler channel is skipped, a busy agent action or sync_all member is non-success. Final status writes and panic recovery are tenant-scoped and conditional on syncing with checked row counts; a run that exits without a recorded status attempts a bounded syncing-to-error transition. Focused tests (113 pass) and all 13 backend packages pass on disposable MySQL with synthetic adapters; four mutations failed the new tests and were restored. Evidence docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md. Crash recovery and run-generation fencing remain separate; Codex independent REVIEW next; no real channel/provider call, governance claim, push or FREEZE.",
+    "S1 remains IN_PROGRESS: crash recovery of a stuck syncing state (with run ownership/lease) and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -154,7 +155,8 @@
     "docs/reviews/CCMAI_RUNTIME_011_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_011_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_012_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_012_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

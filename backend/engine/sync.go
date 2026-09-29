@@ -83,19 +83,119 @@ func NewSyncEngine(cfg *config.Config) *SyncEngine {
 	return &SyncEngine{cfg: cfg}
 }
 
-// SyncChannel syncs a single channel: fetches conversations + messages and upserts into DB.
+// Errors returned by ReserveChannelSync. They carry no SQL or credential text.
+var (
+	// ErrSyncAlreadyRunning: the channel is already marked syncing.
+	ErrSyncAlreadyRunning = errors.New("sync_already_running")
+	// ErrSyncChannelMissing: no such channel for the expected tenant.
+	ErrSyncChannelMissing = errors.New("sync channel not found for tenant")
+	// ErrSyncNotAdmitted: admission could not be recorded (database failure or
+	// an unexpected zero-row write).
+	ErrSyncNotAdmitted = errors.New("sync not admitted")
+)
+
+// Test seams (CCMAI-RUNTIME-013): the adapter factory and the after-sync
+// trigger are variables so tests can observe dispatch without a real channel.
+var (
+	newSyncAdapter   = channels.NewAdapter
+	triggerAfterSync = func(tenantID, channelID string) {
+		if sched := GetDefaultScheduler(); sched != nil {
+			sched.TriggerAfterSyncJobs(tenantID, channelID)
+		}
+	}
+)
+
+// ReserveChannelSync is the one admission point shared by the manual,
+// scheduler and agent sync paths. The conditional UPDATE is the arbiter: it
+// moves exactly one tenant-owned channel to "syncing" only if it is not
+// already syncing (NULL counts as not syncing). A read afterwards only
+// classifies a zero-row result and never decides admission.
+func ReserveChannelSync(tenantID, channelID string) error {
+	res := db.DB.Model(&models.Channel{}).
+		Where("id = ? AND tenant_id = ? AND (last_sync_status IS NULL OR last_sync_status <> ?)", channelID, tenantID, "syncing").
+		Updates(map[string]interface{}{
+			"last_sync_status": "syncing",
+			"last_sync_error":  "",
+			"updated_at":       time.Now(),
+		})
+	if res.Error != nil {
+		log.Printf("[sync] reservation for channel %s failed: write error", channelID)
+		return ErrSyncNotAdmitted
+	}
+	if res.RowsAffected == 1 {
+		return nil
+	}
+	if res.RowsAffected > 1 {
+		log.Printf("[sync] reservation for channel %s changed %d rows", channelID, res.RowsAffected)
+		return ErrSyncNotAdmitted
+	}
+
+	var rows []struct{ LastSyncStatus *string }
+	if err := db.DB.Model(&models.Channel{}).Select("last_sync_status").
+		Where("id = ? AND tenant_id = ?", channelID, tenantID).Limit(1).Scan(&rows).Error; err != nil {
+		log.Printf("[sync] reservation for channel %s not classified: read error", channelID)
+		return ErrSyncNotAdmitted
+	}
+	if len(rows) == 0 {
+		return ErrSyncChannelMissing
+	}
+	if rows[0].LastSyncStatus != nil && *rows[0].LastSyncStatus == "syncing" {
+		return ErrSyncAlreadyRunning
+	}
+	log.Printf("[sync] reservation for channel %s not applied although the channel is idle", channelID)
+	return ErrSyncNotAdmitted
+}
+
+// SyncChannel reserves the channel and then syncs it. Every caller that has
+// not already reserved the channel must use this entry point.
 func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) error {
+	if err := ReserveChannelSync(channel.TenantID, channel.ID); err != nil {
+		return err
+	}
+	return s.SyncReservedChannel(ctx, channel)
+}
+
+// SyncReservedChannel runs a sync for a channel the caller has already
+// reserved with ReserveChannelSync (the manual handler does this before it
+// answers 202). It never reserves again, and it always tries to leave the
+// channel out of "syncing": if it exits without a recorded final status
+// (failed write, zero rows, panic) it attempts a tenant-scoped error
+// transition without hiding the original failure. A stuck "syncing" after a
+// process crash is not handled here (separate recovery tranche).
+func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Channel) (runErr error) {
+	recorded := false
+	defer func() {
+		if recorded {
+			return
+		}
+		r := recover()
+		if _, terr := s.recordSyncStatus(channel.TenantID, channel.ID, "error", "Đồng bộ dừng trước khi ghi nhận kết quả; xem nhật ký máy chủ."); terr != nil {
+			log.Printf("[sync] channel %s could not leave syncing state: %v", channel.ID, terr)
+		}
+		if r != nil {
+			panic(r)
+		}
+	}()
+	// finish records the final status; only a successful write counts as recorded.
+	finish := func(status, errMsg string) error {
+		wrote, err := s.recordSyncStatus(channel.TenantID, channel.ID, status, errMsg)
+		if wrote {
+			recorded = true
+		}
+		return err
+	}
+
 	log.Printf("[sync] starting sync for channel %s (%s)", channel.Name, channel.ChannelType)
 
 	// Decrypt credentials
 	credBytes, err := pkg.Decrypt(channel.CredentialsEncrypted, s.cfg.EncryptionKey)
 	if err != nil {
-		return s.updateSyncStatus(channel.ID, "error", fmt.Sprintf("decrypt failed: %v", err))
+		return finish("error", fmt.Sprintf("decrypt failed: %v", err))
 	}
 
-	adapter, err := channels.NewAdapter(channel.ChannelType, credBytes)
+	adapter, err := newSyncAdapter(channel.ChannelType, credBytes)
 	if err != nil {
-		return s.updateSyncStatus(channel.ID, "error", fmt.Sprintf("adapter init failed: %v", err))
+		return finish("error", fmt.Sprintf("adapter init failed: %v", err))
 	}
 
 	// Set token refresh callback for Zalo — persist new tokens to DB after refresh
@@ -140,7 +240,7 @@ func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) er
 	// Fetch recent conversations
 	conversations, err := adapter.FetchRecentConversations(ctx, since, 100)
 	if err != nil {
-		return s.updateSyncStatus(channel.ID, "error", fmt.Sprintf("fetch conversations failed: %v", err))
+		return finish("error", fmt.Sprintf("fetch conversations failed: %v", err))
 	}
 
 	log.Printf("[sync] channel %s: found %d conversations", channel.Name, len(conversations))
@@ -214,9 +314,9 @@ func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) er
 		channel.Name, progress.conversationsSynced, progress.conversationsFetched, progress.messagesSynced, len(progress.failures))
 
 	if progress.finalStatus() == "partial" {
-		return s.updateSyncStatus(channel.ID, "partial", progress.errorMessage())
+		return finish("partial", progress.errorMessage())
 	}
-	if err := s.updateSyncStatus(channel.ID, "success", ""); err != nil {
+	if err := finish("success", ""); err != nil {
 		return err
 	}
 
@@ -224,10 +324,8 @@ func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) er
 	db.LogActivity(channel.TenantID, "", "system", "sync.completed", "channel", channel.ID,
 		fmt.Sprintf("Sync '%s': %d conversations, %d messages", channel.Name, progress.conversationsSynced, progress.messagesSynced), "", "")
 
-	// Trigger after-sync jobs for this channel
-	if sched := GetDefaultScheduler(); sched != nil {
-		sched.TriggerAfterSyncJobs(channel.TenantID, channel.ID)
-	}
+	// Trigger after-sync jobs for this channel (only after a recorded success)
+	triggerAfterSync(channel.TenantID, channel.ID)
 
 	return nil
 }
@@ -520,11 +618,23 @@ func buildSyncStatusUpdates(status, errMsg string, now time.Time) map[string]int
 	return updates
 }
 
-func (s *SyncEngine) updateSyncStatus(channelID, status, errMsg string) error {
+// recordSyncStatus writes the final status of a reserved run. The write is
+// scoped to the tenant and to the current "syncing" state and must affect
+// exactly one row; otherwise wrote is false and the error says the status was
+// not recorded (a missing, transferred or already-finished row is never
+// overwritten). When wrote is true, err is nil for success and the reported
+// failure text for partial/error runs.
+func (s *SyncEngine) recordSyncStatus(tenantID, channelID, status, errMsg string) (wrote bool, err error) {
 	now := time.Now()
 	updates := buildSyncStatusUpdates(status, errMsg, now)
-	if err := db.DB.Model(&models.Channel{}).Where("id = ?", channelID).Updates(updates).Error; err != nil {
-		return fmt.Errorf("update sync status %s: %w", status, err)
+	res := db.DB.Model(&models.Channel{}).
+		Where("id = ? AND tenant_id = ? AND last_sync_status = ?", channelID, tenantID, "syncing").
+		Updates(updates)
+	if res.Error != nil {
+		return false, fmt.Errorf("update sync status %s: %w", status, res.Error)
+	}
+	if res.RowsAffected != 1 {
+		return false, fmt.Errorf("update sync status %s: %d rows affected", status, res.RowsAffected)
 	}
 	if errMsg != "" {
 		action := "sync.error"
@@ -534,12 +644,12 @@ func (s *SyncEngine) updateSyncStatus(channelID, status, errMsg string) error {
 			label = "Sync partial"
 		}
 		var ch models.Channel
-		if db.DB.Where("id = ?", channelID).First(&ch).Error == nil {
+		if db.DB.Where("id = ? AND tenant_id = ?", channelID, tenantID).First(&ch).Error == nil {
 			db.LogActivity(ch.TenantID, "", "system", action, "channel", channelID, label+": "+ch.Name, errMsg, "")
 		}
-		return fmt.Errorf("sync %s: %s", status, errMsg)
+		return true, fmt.Errorf("sync %s: %s", status, errMsg)
 	}
-	return nil
+	return true, nil
 }
 
 // downloadAttachments tải file đính kèm về nơi cất file đang cấu hình — đĩa

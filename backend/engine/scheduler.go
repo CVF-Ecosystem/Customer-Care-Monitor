@@ -3,6 +3,7 @@ package engine
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"time"
@@ -141,7 +142,11 @@ func (s *Scheduler) syncAllChannelsTask() {
 			continue
 		}
 
-		if err := s.syncEngine.SyncChannel(ctx, ch); err != nil {
+		if err := s.syncEngine.SyncChannel(ctx, ch); errors.Is(err, ErrSyncAlreadyRunning) {
+			// Another entry path is already syncing this channel: skip it
+			// without counting it or touching its status.
+			log.Printf("[scheduler] channel %s is already syncing; skipped", ch.Name)
+		} else if err != nil {
 			log.Printf("[scheduler] sync channel %s failed: %v", ch.Name, err)
 		} else {
 			synced++

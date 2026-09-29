@@ -173,6 +173,15 @@ func TestSyncChannelNowOtherTenantCannotStart(t *testing.T) {
 	f.assertNoStart(t, rec)
 }
 
+// markSyncing puts the fixture channel in the state a panicking worker would
+// leave it (the panic status write is conditional on "syncing").
+func (f *syncStartFixture) markSyncing(t *testing.T) {
+	t.Helper()
+	if err := db.DB.Exec("UPDATE channels SET last_sync_status = 'syncing' WHERE id = ?", f.channelID).Error; err != nil {
+		t.Fatalf("mark syncing: %v", err)
+	}
+}
+
 func captureLog(t *testing.T) *bytes.Buffer {
 	t.Helper()
 	var buf bytes.Buffer
@@ -186,6 +195,7 @@ const panicSecret = "access_token=SECRET-DO-NOT-LEAK"
 
 func TestHandleManualSyncPanicRecordsBoundedTenantScopedStatus(t *testing.T) {
 	f := setupSyncStartFixture(t)
+	f.markSyncing(t)
 	logs := captureLog(t)
 
 	if err := handleManualSyncPanic(f.tenantID, f.channelID, panicSecret); err != nil {
@@ -205,12 +215,13 @@ func TestHandleManualSyncPanicRecordsBoundedTenantScopedStatus(t *testing.T) {
 
 func TestHandleManualSyncPanicWrongTenantIsNotSilent(t *testing.T) {
 	f := setupSyncStartFixture(t)
+	f.markSyncing(t)
 	logs := captureLog(t)
 
 	if err := handleManualSyncPanic(f.otherTenantID, f.channelID, panicSecret); err == nil {
 		t.Fatal("another tenant's recovery reported success")
 	}
-	if got := f.channelStatus(t).LastSyncStatus; got != "success" {
+	if got := f.channelStatus(t).LastSyncStatus; got != "syncing" {
 		t.Fatalf("another tenant changed the channel to %q", got)
 	}
 	if !strings.Contains(logs.String(), "not recorded") || strings.Contains(logs.String(), "SECRET") {
@@ -220,6 +231,7 @@ func TestHandleManualSyncPanicWrongTenantIsNotSilent(t *testing.T) {
 
 func TestHandleManualSyncPanicWriteFailureIsReturnedAndLogged(t *testing.T) {
 	f := setupSyncStartFixture(t)
+	f.markSyncing(t)
 	f.addChannelTrigger(t, "SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'forced panic status write failure';")
 	logs := captureLog(t)
 
@@ -229,7 +241,7 @@ func TestHandleManualSyncPanicWriteFailureIsReturnedAndLogged(t *testing.T) {
 	if !strings.Contains(logs.String(), "not recorded") || strings.Contains(logs.String(), "SECRET") {
 		t.Fatalf("failure not logged safely: %s", logs.String())
 	}
-	if got := f.channelStatus(t).LastSyncStatus; got != "success" {
+	if got := f.channelStatus(t).LastSyncStatus; got != "syncing" {
 		t.Fatalf("status changed to %q despite failed write", got)
 	}
 }

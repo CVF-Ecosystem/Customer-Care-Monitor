@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-013 BUILD under docs/work_orders/CCMAI_RUNTIME_013.md by Claude after rehydration and role acknowledgment; one local commit returns REVIEW_PENDING for independent Codex review. No push, real provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-013 BUILD is a local REVIEW_PENDING commit (shared conditional channel-sync reservation across manual, scheduler and agent paths; evidence docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md). Codex performs independent R2 REVIEW: inspect the diff, rerun focused engine/handler tests on disposable MySQL and the doctor, record a disposition. No push, provider call or FREEZE until review; S1 remains IN_PROGRESS and crash recovery stays a separate tranche.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex) completed CCMAI-RUNTIME-013; IMPLEMENTATION_WORKER (Claude) next",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

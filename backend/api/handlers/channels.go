@@ -6,6 +6,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -744,11 +745,19 @@ func SyncChannelNow(c *gin.Context) {
 		return
 	}
 
-	// 202 only means "start recorded and worker dispatched"; if the visible
-	// syncing state cannot be persisted, no worker starts.
-	if err := updateChannelSyncStatus(tenantID, channelID, "syncing", ""); err != nil {
-		log.Printf("[error] manual sync start for channel %s not recorded: %v", channelID, err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "sync_start_failed"})
+	// 202 only means "start recorded and worker dispatched". The reservation
+	// is the shared conditional admission (CCMAI-RUNTIME-013): a busy channel
+	// answers 409 and, like any failed reservation, starts no worker.
+	if err := engine.ReserveChannelSync(tenantID, channelID); err != nil {
+		switch {
+		case errors.Is(err, engine.ErrSyncAlreadyRunning):
+			c.JSON(http.StatusConflict, gin.H{"error": "sync_already_running"})
+		case errors.Is(err, engine.ErrSyncChannelMissing):
+			c.JSON(http.StatusNotFound, gin.H{"error": "channel_not_found"})
+		default:
+			log.Printf("[error] manual sync start for channel %s not recorded", channelID)
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "sync_start_failed"})
+		}
 		return
 	}
 
@@ -780,7 +789,8 @@ func runManualSync(tenantID string, channel models.Channel, cfg *config.Config) 
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
 	defer cancel()
-	if err := syncEng.SyncChannel(ctx, channel); err != nil {
+	// The channel was reserved before dispatch; do not reserve it again.
+	if err := syncEng.SyncReservedChannel(ctx, channel); err != nil {
 		log.Printf("[error] sync channel %s failed: %v", channel.ID, err)
 	}
 }
@@ -801,11 +811,13 @@ func handleManualSyncPanic(tenantID, channelID string, r interface{}) error {
 }
 
 // updateChannelSyncStatus writes the visible sync status for exactly one
-// tenant-owned channel. MySQL reports changed rows, and updated_at always
-// changes, so anything but one affected row means the channel was not updated.
+// tenant-owned channel that is still syncing, so a finished, missing or
+// transferred channel is never overwritten. MySQL reports changed rows, and
+// updated_at always changes, so anything but one affected row means the
+// channel was not updated.
 func updateChannelSyncStatus(tenantID, channelID, status, message string) error {
 	res := db.DB.Model(&models.Channel{}).
-		Where("id = ? AND tenant_id = ?", channelID, tenantID).
+		Where("id = ? AND tenant_id = ? AND last_sync_status = ?", channelID, tenantID, "syncing").
 		Updates(map[string]interface{}{
 			"last_sync_status": status,
 			"last_sync_error":  message,
