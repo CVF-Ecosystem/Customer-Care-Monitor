@@ -20,6 +20,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storage"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 // SyncEngine handles pulling messages from external channels into the database.
@@ -97,6 +98,17 @@ var (
 	ErrSyncReservationMismatch = errors.New("sync reservation does not match channel")
 )
 
+// RunWriteDB returns a session for the writes that carry a run ID: the
+// reservation, the run-ID-fenced terminal writes and the manual panic write.
+// GORM's logger interpolates query values, so at Info, on errors and on slow
+// queries it would print the run ID, the SQL values and the raw driver error
+// to the process output. This session is silent for exactly those statements;
+// every other statement keeps the application's normal DB logging, and the
+// caller reports failures as bounded classes instead.
+func RunWriteDB() *gorm.DB {
+	return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Silent)})
+}
+
 // SyncReservation is the proof of one admitted run: the tenant and channel it
 // was admitted for and the run ID stored on the channel row. Only
 // ReserveChannelSync creates a valid one; every terminal write of that run must
@@ -132,7 +144,7 @@ var (
 // only when exactly one row was changed.
 func ReserveChannelSync(tenantID, channelID string) (SyncReservation, error) {
 	runID := pkg.NewUUID()
-	res := db.DB.Model(&models.Channel{}).
+	res := RunWriteDB().Model(&models.Channel{}).
 		Where("id = ? AND tenant_id = ? AND (last_sync_status IS NULL OR last_sync_status <> ?)", channelID, tenantID, "syncing").
 		Updates(map[string]interface{}{
 			"last_sync_status": "syncing",
@@ -664,11 +676,12 @@ func (s *SyncEngine) recordSyncStatus(reservation SyncReservation, status, errMs
 	now := time.Now()
 	updates := buildSyncStatusUpdates(status, errMsg, now)
 	updates["sync_run_id"] = gorm.Expr("NULL")
-	res := db.DB.Model(&models.Channel{}).
+	res := RunWriteDB().Model(&models.Channel{}).
 		Where("id = ? AND tenant_id = ? AND last_sync_status = ? AND sync_run_id = ?", channelID, tenantID, "syncing", reservation.RunID).
 		Updates(updates)
 	if res.Error != nil {
-		return false, fmt.Errorf("update sync status %s: %w", status, res.Error)
+		// Bounded class only: the driver error can echo SQL values and the run ID.
+		return false, fmt.Errorf("update sync status %s: write failed", status)
 	}
 	if res.RowsAffected != 1 {
 		return false, fmt.Errorf("update sync status %s: %d rows affected", status, res.RowsAffected)

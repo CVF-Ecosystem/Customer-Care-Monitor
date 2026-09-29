@@ -822,7 +822,7 @@ func updateChannelSyncStatus(reservation engine.SyncReservation, status, message
 	if reservation.TenantID == "" || reservation.ChannelID == "" || reservation.RunID == "" {
 		return fmt.Errorf("update sync status: empty reservation")
 	}
-	res := db.DB.Model(&models.Channel{}).
+	res := engine.RunWriteDB().Model(&models.Channel{}).
 		Where("id = ? AND tenant_id = ? AND last_sync_status = ? AND sync_run_id = ?",
 			reservation.ChannelID, reservation.TenantID, "syncing", reservation.RunID).
 		Updates(map[string]interface{}{
@@ -832,7 +832,8 @@ func updateChannelSyncStatus(reservation engine.SyncReservation, status, message
 			"updated_at":       time.Now(),
 		})
 	if res.Error != nil {
-		return fmt.Errorf("update sync status: %w", res.Error)
+		// Bounded class only: the driver error can echo SQL values and the run ID.
+		return fmt.Errorf("update sync status: write failed")
 	}
 	if res.RowsAffected != 1 {
 		return fmt.Errorf("update sync status: %d rows affected", res.RowsAffected)
