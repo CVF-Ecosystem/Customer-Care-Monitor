@@ -17,7 +17,7 @@ Tiến hành các phần redesign độc lập trước. Claude chỉ thiết k�
 
 | Điểm giao | Quyết định ranh giới |
 |---|---|
-| Trang chủ: số vi phạm QC (`UX-02`) | Giữ `issues` theo nghĩa hiện tại. R017 đã qua review cho API đọc `qc_violation_count`; UX-016 frontend dùng trường đó đang `REVIEW_PENDING` cho Claude review độc lập. Không dùng `issues` làm số vi phạm QC. |
+| Trang chủ: số vi phạm QC (`UX-02`) | Giữ `issues` theo nghĩa hiện tại. R017 đã qua review cho API đọc `qc_violation_count`; UX-016 frontend dùng trường đó đã `REVIEW_PASS` ([review](../reviews/CCMAI_UX_016_INDEPENDENT_REVIEW_2026-09-29.md)); FREEZE còn mở. Không dùng `issues` làm số vi phạm QC. |
 | Kênh demo và trạng thái đồng bộ (`UX-06`) | Scheduler bỏ qua kênh demo được đánh dấu rõ là tranche runtime riêng. Hoãn phần hành vi hoặc trạng thái UI phụ thuộc fix đó. |
 | Trạng thái nguồn, confidence, kết quả AI | Chỉ trình bày các trường và giới hạn đã có từ R004–R006. Không đổi cách xác minh, phân loại, tính confidence, gọi provider hay hợp đồng kết quả. |
 | Lọc, phân trang, số đếm, export Trang Kết quả | Tuân theo API hiện có; không tạo số toàn cục từ một trang dữ liệu hoặc hứa export theo scope khi endpoint không hỗ trợ. Nhu cầu API mới đưa sang tranche backend riêng. |

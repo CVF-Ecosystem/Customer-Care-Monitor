@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-UX-016 frontend Dashboard QC card BUILD is REVIEW_PENDING for independent Claude R2 review. Codex's local BUILD uses R017's reviewed qc_violation_count, displays unavailable instead of stale/invalid data, and leaves the backend issues contract unchanged. Evidence docs/reviews/DASHBOARD_QC_VIOLATION_CARD_UX016_BUILD_2026-09-29.md. No self-PASS, push, provider/channel call or FREEZE; S1 remains IN_PROGRESS.",
+  "nextAllowedMove": "CCMAI-UX-016 REVIEW_PASS / FREEZE_OPEN (independent Claude review of 0af8881, docs/reviews/CCMAI_UX_016_INDEPENDENT_REVIEW_2026-09-29.md; non-blocking F1: no committed out-of-order response test). Codex/owner routes the next tranche. No push, provider/channel call or FREEZE without a separate decision; S1 remains IN_PROGRESS.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Codex); REVIEWER (Claude) next",
+  "activeRole": "COMMIT_STEWARD (Claude); ORCHESTRATOR (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
