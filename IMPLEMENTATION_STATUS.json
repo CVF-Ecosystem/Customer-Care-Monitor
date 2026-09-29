@@ -28,7 +28,8 @@
     "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: the five channel credential/OAuth routes reject failed or nil config before secret use, DB write or outbound exchange. Codex independently inspected source and ran six focused test groups and 26 leaf cases on disposable MySQL; doctor 25/25 passed. No real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "S1 remains IN_PROGRESS: agent config admission, cross-path sync single-flight, crash recovery and backend-dependent UI/API intersections are separate tranches."
+    "CCMAI-RUNTIME-011 is at WORK_ORDER, not implemented: AgentRun config admission is bounded to agents.go and focused tests, with Claude BUILD and independent Codex REVIEW next.",
+    "S1 remains IN_PROGRESS: cross-path sync single-flight, crash recovery, callback final DB-write errors and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -59,7 +60,8 @@
     "CCMAI-AUTH-001",
     "CCMAI-REPO-MIGRATE-001",
     "CCMAI-CREDIT-003",
-    "CCMAI-RUNTIME-010"
+    "CCMAI-RUNTIME-010",
+    "CCMAI-RUNTIME-011"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",

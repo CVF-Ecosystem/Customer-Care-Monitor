@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-010 independent REVIEW_PASS / FREEZE open; next governed S1 move is a bounded agent config-admission tranche or an explicit CLOSER decision. CCMAI-CREDIT-003 independent REVIEW_PASS / FREEZE open; two local refs/rewrites refs were removed by CLOSER, but GitHub may still serve the old SHA. No push, provider call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-011 SPEC and work order are ready. Claude rehydrates, records WORK_ORDER_AUTHOR (Codex) to IMPLEMENTATION_WORKER (Claude) acknowledgment in the active handoff before BUILD, implements only the bounded agent config-admission scope, tests with synthetic config/disposable MySQL, and returns one local REVIEW_PENDING commit. Codex reviews independently. No push, provider call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex) completed CCMAI-RUNTIME-010; CLOSER (Codex) resolved CREDIT-003 local ref observation; ORCHESTRATOR next",
+  "activeRole": "ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next after rehydration/acknowledgment",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
