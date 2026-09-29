@@ -55,7 +55,8 @@
     "CCMAI-UX-015",
     "CCMAI-AUTH-001",
     "CCMAI-REPO-MIGRATE-001",
-    "CCMAI-CREDIT-003"
+    "CCMAI-CREDIT-003",
+    "CCMAI-RUNTIME-010"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -70,7 +71,8 @@
     "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction.",
     "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration.",
     "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical CVF-Ecosystem/Customer-Care-Monitor origin; Go/docs Actions and new GitHub Pages passed, with public home and key guides HTTP 200. Historical PR/run URLs and initial CQA import message remain provenance. Independent R2 REVIEW and FREEZE remain open; old repository deletion is the owner's separate action.",
-    "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; all old commit SHA citations in historical review documents remain observations, not reachable current-main SHAs. The GitHub commit API still returned HTTP 200 for the old unreachable root SHA after force push; server-side erasure is not claimed. Current main tree and MIT LICENSE content were preserved; independent R2 REVIEW and FREEZE remain open."
+    "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; all old commit SHA citations in historical review documents remain observations, not reachable current-main SHAs. The GitHub commit API still returned HTTP 200 for the old unreachable root SHA after force push; server-side erasure is not claimed. Current main tree and MIT LICENSE content were preserved; independent R2 REVIEW and FREEZE remain open.",
+    "CCMAI-RUNTIME-010 is WORK_ORDER only: five channel credential/OAuth config.Load error/nil paths remain unimplemented until Claude BUILD and Codex independent REVIEW. Agent config admission, cross-path sync single-flight and crash recovery remain separate S1 residuals."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
