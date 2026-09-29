@@ -80,6 +80,8 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 
 **Tranche đã qua review, FREEZE còn mở:** `CCMAI-RUNTIME-013` dùng một bước nhận quyền chạy có điều kiện theo tenant/channel trong MySQL cho manual, scheduler và agent; [SPEC](../specs/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_2026-09-29.md), [work order](../work_orders/CCMAI_RUNTIME_013.md), [BUILD evidence](../reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md), [review độc lập](../reviews/CCMAI_RUNTIME_013_INDEPENDENT_REVIEW_2026-09-29.md). Test synthetic/MySQL tạm đã pass; chưa có real-channel hoặc CVF governance proof. Trạng thái `syncing` còn kẹt sau crash, run-generation fencing và các giao điểm UI/API vẫn là việc riêng.
 
+**Tranche kế tiếp ở WORK_ORDER:** `CCMAI-RUNTIME-014` thêm định danh nội bộ cho mỗi lượt sync mới và ràng buộc lệnh ghi trạng thái/checkpoint cuối theo định danh đó; [SPEC](../specs/RUNTIME_SYNC_RUN_OWNERSHIP_S1_2026-09-29.md), [work order](../work_orders/CCMAI_RUNTIME_014.md). Chưa BUILD hoặc REVIEW. Đây là điều kiện chuẩn bị cho recovery; chưa tự phục hồi `syncing` sau crash hay chặn mọi side effect của worker cũ. Giao điểm UI/API vẫn riêng.
+
 Giữ ID S0–S7 để truy vết, nhưng **ID không còn là thứ tự tuyến tính**: S0 → S1 → phần tối thiểu của S2 + S3 + S5 tạo một luồng hoàn chỉnh → S4 tối ưu trên phản hồi thực → S6 pilot → S7 hoàn thiện vận hành. S2/S3/S5 đều có scope/acceptance riêng; review UI và audit tối thiểu phải sẵn sàng trong luồng đầu, không đợi tối ưu xong. Kiểm quyền, bảo mật và bảo vệ dữ liệu cần thiết cho pilot phải hoàn tất trước S6; S7 mở rộng kiểm vận hành trước phát hành. Nhân rộng/CVF uplift đứng sau nghiệm thu sản phẩm.
 
 ### S0 — Baseline và tập đánh giá được phép dùng

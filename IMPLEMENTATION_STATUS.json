@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -31,7 +31,7 @@
     "CCMAI-RUNTIME-013 REVIEW PASS / FREEZE OPEN: manual, scheduler and agent sync paths share a tenant/channel-scoped conditional MySQL reservation; busy manual returns 409 without dispatch, scheduler skips busy, agents report non-success. Final writes require the same row still syncing. Codex independently reran focused engine/handler tests on disposable MySQL and doctor 25/25. Crash recovery and run-generation fencing remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "S1 remains IN_PROGRESS: crash recovery of a stuck syncing state (with run ownership/lease) and backend-dependent UI/API intersections are separate tranches."
+    "S1 remains IN_PROGRESS: CCMAI-RUNTIME-014 is WORK_ORDER for internal sync run identity and final-write ownership only. Automatic crash recovery, in-flight side-effect fencing and backend-dependent UI/API intersections are separate tranches; no R014 runtime implementation is claimed."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -65,7 +65,8 @@
     "CCMAI-RUNTIME-010",
     "CCMAI-RUNTIME-011",
     "CCMAI-RUNTIME-012",
-    "CCMAI-RUNTIME-013"
+    "CCMAI-RUNTIME-013",
+    "CCMAI-RUNTIME-014"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",

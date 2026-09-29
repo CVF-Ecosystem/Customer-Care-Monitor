@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-013 independent REVIEW_PASS / FREEZE open. S1 remains IN_PROGRESS; next governed move is to bound crash-state recovery with run ownership/fencing, or a separate backend-dependent UI/API tranche. No push, real provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-014 BUILD under docs/work_orders/CCMAI_RUNTIME_014.md by Claude after rehydration and role acknowledgment; one local commit returns REVIEW_PENDING for independent Codex review. R014 adds run identity and final-write ownership only; crash recovery remains separate. No push, real provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex) completed CCMAI-RUNTIME-013; ORCHESTRATOR next",
+  "activeRole": "WORK_ORDER_AUTHOR (Codex) completed CCMAI-RUNTIME-014; IMPLEMENTATION_WORKER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
