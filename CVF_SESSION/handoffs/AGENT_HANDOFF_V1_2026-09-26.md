@@ -6,15 +6,17 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-017 BUILD done, REVIEW_PENDING; R001–R016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
-- Next allowed move: Codex independent R2 REVIEW of R017 BUILD. No frontend edit, push, live provider/channel call, self-PASS or FREEZE.
+- Active phase: REVIEW (CCMAI-RUNTIME-017 REVIEW_PASS / FREEZE open; R001–R016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR (Codex)
+- Next allowed move: Codex scopes the next separate S1 tranche when requested. Dashboard frontend still uses `issues`; no push, live provider/channel call or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-RUNTIME-017 — Dashboard qc_violation_count (2026-09-29)
 
 - CVF Agent Declaration and role transition (Claude, rehydrated from files at `b8750fb`; state, handoff, memory, implementation status and SPEC/work order agree; no `BLOCKED_CONTINUITY_DRIFT`; `BOOTSTRAP_MIGRATION_PENDING` non-blocking): project Customer-Care-Monitor-AI; CVF core `../.Controlled-Vibe-Framework-CVF` @ `26c686cc99b8be965d2760f27fe875b03376c643` (matches manifest; doctor 25/25); phase WORK_ORDER → BUILD; risk ceiling R2; live evidence required YES, but R017 is a database API metric with no governance claim (synthetic disposable MySQL only); active handoff this file; next allowed move per `docs/work_orders/CCMAI_RUNTIME_017.md`; parked checkpoint none. Role transition: `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` recorded before any source edit. Scope: `backend/api/handlers/dashboard.go` and focused handler tests only; no frontend, provider/channel call, push or FREEZE.
 - BUILD result (Claude): `GetDashboard` adds `qc_violation_count` (tenant + exact `result_type='qc_violation'` + same effective `created_at BETWEEN` interval, no join, numeric 0 when empty); a failure of that count returns generic 500 `dashboard_unavailable` with no false zero or SQL. `issues` and all other keys unchanged; no frontend change. 4 real-handler tests on disposable MySQL (mixed types, two tenants, two findings on one conversation, both interval edges and 1 s outside, empty period, positive detector, forced count failure with body inspection); mutations M1 (drop type), M2 (drop tenant), M3 (swallow error) each caught. Full backend 14 packages PASS, build/vet/diff-check clean, MySQL removed. Evidence `docs/reviews/RUNTIME_DASHBOARD_QC_VIOLATION_COUNT_S1_BUILD_2026-09-29.md`. Role transition IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude); one local commit, `REVIEW_PENDING` for Codex; no self-PASS, FREEZE, push or provider call.
+- Independent R2 REVIEW start (Codex, 2026-09-29): rehydrated manifest, policy, active state, handoff, memory, status and index at `986d00d`; pinned core matches `origin/main` and doctor passes 25/25. `BOOTSTRAP_MIGRATION_PENDING` is a non-blocking note. Role transition `COMMIT_STEWARD (Claude) → REVIEWER (Codex)` acknowledged before independent source and test checks. Scope: exact `b8750fb..986d00d` BUILD against the R017 SPEC/work order; no frontend edit, provider/channel call, push or FREEZE.
+- Independent R2 REVIEW result (Codex): `REVIEW_PASS / FREEZE_OPEN`. Exact diff is backend-only and the additive COUNT is tenant/type/date scoped without a join; `issues` and prior response keys are unchanged, and count failure gives a generic 500. Codex independently reran four real-handler tests on disposable MySQL (exit 0, handlers 5.101s; container/network removed), catalog and doctor 25/25. Evidence: `docs/reviews/CCMAI_RUNTIME_017_INDEPENDENT_REVIEW_2026-09-29.md`. Role route `REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR` for review records. Frontend use of the new field stays a separate tranche. S1 IN_PROGRESS; no push, provider/channel call or FREEZE.
 
 ## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
 

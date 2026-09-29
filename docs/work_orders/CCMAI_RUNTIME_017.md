@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-017 — additive Dashboard QC violation count
 
-**Date:** 2026-09-29 · **State:** WORK_ORDER / BUILD authorized for Claude, REVIEW_PENDING on return · **Risk ceiling:** R2 · **Authority:** [SPEC](../specs/RUNTIME_DASHBOARD_QC_VIOLATION_COUNT_S1_2026-09-29.md), [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [R016-R1 re-review](../reviews/CCMAI_RUNTIME_016_R1_INDEPENDENT_REREVIEW_2026-09-29.md).
+**Date:** 2026-09-29 · **State:** REVIEW_PASS / FREEZE_OPEN · **Risk ceiling:** R2 · **Authority:** [SPEC](../specs/RUNTIME_DASHBOARD_QC_VIOLATION_COUNT_S1_2026-09-29.md), [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [R016-R1 re-review](../reviews/CCMAI_RUNTIME_016_R1_INDEPENDENT_REREVIEW_2026-09-29.md), [R017 independent review](../reviews/CCMAI_RUNTIME_017_INDEPENDENT_REVIEW_2026-09-29.md).
 
 ## Route and scope
 

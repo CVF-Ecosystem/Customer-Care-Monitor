@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-017 BUILD is REVIEW_PENDING (Claude local commit). Codex independent R2 REVIEW of the additive Dashboard qc_violation_count (tenant/result-type/date scope, generic 500 on count failure, issues unchanged). No frontend edit, provider/channel call, push, self-PASS or FREEZE; S1 remains IN_PROGRESS.",
+  "nextAllowedMove": "CCMAI-RUNTIME-017 independent R2 REVIEW_PASS / FREEZE_OPEN at BUILD commit 986d00d; evidence docs/reviews/CCMAI_RUNTIME_017_INDEPENDENT_REVIEW_2026-09-29.md. Codex ORCHESTRATOR may scope the next separate S1 tranche when requested. Dashboard frontend still uses the existing issues metric; Zalo/legacy recovery remains open. No push, provider/channel call or FREEZE; S1 remains IN_PROGRESS.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
