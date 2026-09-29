@@ -33,7 +33,8 @@
   ],
   "buildInProgress": [
     "CCMAI-RUNTIME-015 REVIEW PASS / FREEZE OPEN (Claude re-review of BUILD de0616c + repair 904454d): run-owned conversation/message/count and refreshed-Zalo-credential writes are fenced by a locked SELECT FOR UPDATE ownership guard; attachment reuse/attempt-unique keys and reference-checked cleanup hold; a storage Exists error now falls back to a fresh download instead of aborting; a mid-loop takeover stops A with sync_ownership_lost. Focused 107 PASS and full backend 14 packages PASS on disposable MySQL; independent FOR UPDATE and R1 restore mutations failed their tests. Not crash recovery or live-provider proof; reclaim remains R016.",
-    "S1 remains IN_PROGRESS: recovery of a stuck syncing state (evidence of worker death or side-effect fencing) and backend-dependent UI/API intersections are separate tranches."
+    "CCMAI-RUNTIME-016 WORK_ORDER (Codex): conditional DB-time lease recovery is specified only for facebook/pancake GET-only sync runs with an R016 lease marker; Zalo, unknown types, pre-R016 and legacy rows remain blocked. BUILD is not started; no actual reclaim, rollout, provider call or FREEZE. SPEC docs/specs/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_2026-09-29.md and work order docs/work_orders/CCMAI_RUNTIME_016.md await Claude implementation and independent Codex review.",
+    "S1 remains IN_PROGRESS: safe recovery of Zalo/legacy syncing rows and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -69,7 +70,8 @@
     "CCMAI-RUNTIME-012",
     "CCMAI-RUNTIME-013",
     "CCMAI-RUNTIME-014",
-    "CCMAI-RUNTIME-015"
+    "CCMAI-RUNTIME-015",
+    "CCMAI-RUNTIME-016"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
