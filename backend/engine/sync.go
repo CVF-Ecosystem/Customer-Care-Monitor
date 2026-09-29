@@ -11,6 +11,7 @@ import (
 	"path"
 	"path/filepath"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/channels"
@@ -123,6 +124,34 @@ type SyncReservation struct {
 	TenantID  string
 	ChannelID string
 	RunID     string
+	// Leased reports that the admitting write stored an R016 lease deadline
+	// (GET-only channel types only). Only a leased run sends heartbeats.
+	Leased bool
+}
+
+// CCMAI-RUNTIME-016: lease recovery is allowed only for channel types whose
+// sync adapters issue read-only (GET) outbound requests. This allowlist is an
+// audited source contract: if either adapter gains a mutating request or a
+// token rotation, it must be removed from here until independently reviewed.
+// zalo_oa is deliberately absent (single-use token refresh POST).
+var leaseEligibleChannelTypes = []interface{}{"facebook", "pancake"}
+
+// Lease timing. Variables only so tests can shorten them; the heartbeat must
+// run well inside the lease.
+var (
+	syncLeaseDuration      = 5 * time.Minute
+	syncHeartbeatInterval  = time.Minute
+	syncLeaseRecoveryBatch = 100
+	// leaseRecoveryBeforeRelease is a test seam that runs between the scan and
+	// a row's conditional release; nil in production.
+	leaseRecoveryBeforeRelease func(channelID string)
+)
+
+const syncLeaseReleasedMessage = "Lượt đồng bộ trước bị thu hồi vì hết hạn lease; kết quả của lượt đó không được ghi nhận."
+
+// leaseDeadlineExpr is the lease deadline computed by the database clock.
+func leaseDeadlineExpr() clause.Expr {
+	return gorm.Expr("NOW(3) + INTERVAL ? MICROSECOND", syncLeaseDuration.Microseconds())
 }
 
 func (r SyncReservation) valid() bool {
@@ -199,14 +228,30 @@ func ReserveChannelSync(tenantID, channelID string) (SyncReservation, error) {
 			"last_sync_status": "syncing",
 			"last_sync_error":  "",
 			"sync_run_id":      runID,
-			"updated_at":       time.Now(),
+			// R016: the lease marker is written by the same admitting update,
+			// from the row's current type and the database clock. Any other
+			// type gets NULL and can never be released by expiry.
+			"sync_lease_until": gorm.Expr("CASE WHEN channel_type IN ? THEN NOW(3) + INTERVAL ? MICROSECOND ELSE NULL END",
+				leaseEligibleChannelTypes, syncLeaseDuration.Microseconds()),
+			"updated_at": time.Now(),
 		})
 	if res.Error != nil {
 		log.Printf("[sync] reservation for channel %s failed: write error", channelID)
 		return SyncReservation{}, ErrSyncNotAdmitted
 	}
 	if res.RowsAffected == 1 {
-		return SyncReservation{TenantID: tenantID, ChannelID: channelID, RunID: runID}, nil
+		reservation := SyncReservation{TenantID: tenantID, ChannelID: channelID, RunID: runID}
+		// Informational read of what the admitting write stored. On a read
+		// failure no heartbeat starts: a leased run may then expire and be
+		// released, and R015's ownership fence stops this worker's writes.
+		var marks []struct{ Leased bool }
+		if err := RunWriteDB().Model(&models.Channel{}).Select("sync_lease_until IS NOT NULL AS leased").
+			Where("id = ? AND tenant_id = ? AND sync_run_id = ?", channelID, tenantID, runID).Scan(&marks).Error; err != nil {
+			log.Printf("[sync] lease marker for channel %s not read; no heartbeat", channelID)
+		} else if len(marks) == 1 {
+			reservation.Leased = marks[0].Leased
+		}
+		return reservation, nil
 	}
 	if res.RowsAffected > 1 {
 		log.Printf("[sync] reservation for channel %s changed %d rows", channelID, res.RowsAffected)
@@ -255,8 +300,29 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 		log.Printf("[sync] channel %s rejected: reservation does not match", channel.ID)
 		return ErrSyncReservationMismatch
 	}
+	// R016: a leased run extends its lease while it works. A failed or
+	// zero-row heartbeat cancels runCtx and stops the run (see stopErr).
+	runCtx, cancelRun := context.WithCancel(ctx)
+	defer cancelRun()
+	var heartbeat *syncLeaseHeartbeat
+	if reservation.Leased {
+		heartbeat = startSyncLeaseHeartbeat(reservation, cancelRun)
+	}
+	defer heartbeat.stop()
+	ctx = runCtx
+	// stopErr is the heartbeat's failure class once it has failed.
+	stopErr := func() error { return heartbeat.failure() }
+	// gate stops the run on a failed heartbeat, then checks ownership.
+	gate := func() error {
+		if err := stopErr(); err != nil {
+			return err
+		}
+		return checkSyncOwnership(reservation)
+	}
+
 	recorded := false
 	defer func() {
+		heartbeat.stop()
 		if recorded || errors.Is(runErr, ErrSyncOwnershipLost) {
 			return
 		}
@@ -270,6 +336,10 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	}()
 	// finish records the final status; only a successful write counts as recorded.
 	finish := func(status, errMsg string) error {
+		heartbeat.stop()
+		if err := stopErr(); err != nil {
+			return err
+		}
 		wrote, err := s.recordSyncStatus(reservation, status, errMsg)
 		if wrote {
 			recorded = true
@@ -305,11 +375,14 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	}
 
 	// Fetch recent conversations
-	if err := checkSyncOwnership(reservation); err != nil {
+	if err := gate(); err != nil {
 		return err
 	}
 	conversations, err := adapter.FetchRecentConversations(ctx, since, 100)
 	if err != nil {
+		if hbErr := stopErr(); hbErr != nil {
+			return hbErr
+		}
 		if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
 			return err
 		}
@@ -333,7 +406,7 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 
 	for _, conv := range conversations {
 		conversationFailed := false
-		if err := checkSyncOwnership(reservation); err != nil {
+		if err := gate(); err != nil {
 			return err
 		}
 
@@ -349,11 +422,14 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 		}
 
 		// Fetch messages for this conversation
-		if err := checkSyncOwnership(reservation); err != nil {
+		if err := gate(); err != nil {
 			return err
 		}
 		messages, err := adapter.FetchMessages(ctx, conv.ExternalID, since)
 		if err != nil {
+			if hbErr := stopErr(); hbErr != nil {
+				return hbErr
+			}
 			if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
 				return err
 			}
@@ -364,7 +440,7 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 
 		// Upsert messages
 		for _, msg := range messages {
-			if err := checkSyncOwnership(reservation); err != nil {
+			if err := gate(); err != nil {
 				return err
 			}
 			var newKeys []string
@@ -374,6 +450,10 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 				if errors.Is(attachmentErr, ErrSyncOwnershipLost) || errors.Is(attachmentErr, ErrSyncWriteFailed) {
 					s.cleanupAttemptKeys(reservation.TenantID, convID, newKeys)
 					return attachmentErr
+				}
+				if hbErr := stopErr(); attachmentErr != nil && hbErr != nil {
+					s.cleanupAttemptKeys(reservation.TenantID, convID, newKeys)
+					return hbErr
 				}
 				if attachmentErr != nil {
 					log.Printf("[sync] attachment coverage incomplete for message %s: %v", msg.ExternalID, attachmentErr)
@@ -776,6 +856,7 @@ func (s *SyncEngine) recordSyncStatus(reservation SyncReservation, status, errMs
 	now := time.Now()
 	updates := buildSyncStatusUpdates(status, errMsg, now)
 	updates["sync_run_id"] = gorm.Expr("NULL")
+	updates["sync_lease_until"] = gorm.Expr("NULL") // R016: every owned terminal write ends the lease
 	res := RunWriteDB().Model(&models.Channel{}).
 		Where("id = ? AND tenant_id = ? AND last_sync_status = ? AND sync_run_id = ?", channelID, tenantID, "syncing", reservation.RunID).
 		Updates(updates)
@@ -943,4 +1024,132 @@ func (s *SyncEngine) cleanupAttemptKeys(tenantID, convID string, keys []string) 
 			log.Printf("[sync] attachment attempt cleanup failed: storage error")
 		}
 	}
+}
+
+// syncLeaseHeartbeat extends one leased run's deadline (CCMAI-RUNTIME-016).
+type syncLeaseHeartbeat struct {
+	stopCh   chan struct{}
+	done     chan struct{}
+	stopOnce sync.Once
+	mu       sync.Mutex
+	err      error
+}
+
+func startSyncLeaseHeartbeat(reservation SyncReservation, cancelRun context.CancelFunc) *syncLeaseHeartbeat {
+	h := &syncLeaseHeartbeat{stopCh: make(chan struct{}), done: make(chan struct{})}
+	go func() {
+		defer close(h.done)
+		ticker := time.NewTicker(syncHeartbeatInterval)
+		defer ticker.Stop()
+		for {
+			select {
+			case <-h.stopCh:
+				return
+			case <-ticker.C:
+				if err := extendSyncLease(reservation); err != nil {
+					h.mu.Lock()
+					h.err = err
+					h.mu.Unlock()
+					log.Printf("[sync] lease heartbeat for channel %s failed: %v", reservation.ChannelID, err)
+					cancelRun()
+					return
+				}
+			}
+		}
+	}()
+	return h
+}
+
+// stop ends the heartbeat and waits for it; safe on nil and when repeated.
+func (h *syncLeaseHeartbeat) stop() {
+	if h == nil {
+		return
+	}
+	h.stopOnce.Do(func() { close(h.stopCh) })
+	<-h.done
+}
+
+// failure is the bounded class of a failed heartbeat, or nil.
+func (h *syncLeaseHeartbeat) failure() error {
+	if h == nil {
+		return nil
+	}
+	h.mu.Lock()
+	defer h.mu.Unlock()
+	return h.err
+}
+
+// extendSyncLease moves the lease deadline forward only for the exact owning
+// run of a leased row; a Zalo or legacy run can never gain a lease this way.
+// UpdateColumn leaves updated_at alone; the silent session keeps the run ID
+// out of GORM's output.
+func extendSyncLease(reservation SyncReservation) error {
+	res := RunWriteDB().Model(&models.Channel{}).
+		Where("id = ? AND tenant_id = ? AND last_sync_status = ? AND sync_run_id = ? AND sync_lease_until IS NOT NULL",
+			reservation.ChannelID, reservation.TenantID, "syncing", reservation.RunID).
+		UpdateColumn("sync_lease_until", leaseDeadlineExpr())
+	if res.Error != nil {
+		return ErrSyncWriteFailed
+	}
+	if res.RowsAffected != 1 {
+		return ErrSyncOwnershipLost
+	}
+	return nil
+}
+
+// RecoverExpiredSyncLeases releases, in one bounded batch, runs whose lease
+// has expired by database time — only for the GET-only allowlist and only for
+// rows carrying an R016 run ID and lease. Expiry revokes local ownership; it
+// does not prove the old worker died, and R015's ownership fence keeps that
+// worker from writing afterwards. Each release is a single conditional
+// update that repeats every eligibility predicate with the observed run ID,
+// so a concurrent heartbeat or terminal write wins or loses atomically. It
+// never touches last_sync_at, credentials, conversations, messages or
+// attachments and launches no worker: the channel re-enters the ordinary
+// reservation path after its normal throttle. The returned error is a bounded
+// class; rows it could not release stay syncing.
+func RecoverExpiredSyncLeases(limit int) (released int, err error) {
+	if limit <= 0 {
+		return 0, nil
+	}
+	var candidates []struct {
+		ID, TenantID string
+		SyncRunID    string
+	}
+	if err := RunWriteDB().Model(&models.Channel{}).Select("id", "tenant_id", "sync_run_id").
+		Where("channel_type IN ? AND last_sync_status = ? AND sync_run_id IS NOT NULL AND sync_lease_until IS NOT NULL AND sync_lease_until < NOW(3)",
+			leaseEligibleChannelTypes, "syncing").
+		Order("sync_lease_until").Limit(limit).Scan(&candidates).Error; err != nil {
+		log.Printf("[sync] lease recovery scan failed: read error")
+		return 0, ErrSyncWriteFailed
+	}
+	var failed bool
+	for _, c := range candidates {
+		if leaseRecoveryBeforeRelease != nil {
+			leaseRecoveryBeforeRelease(c.ID)
+		}
+		res := RunWriteDB().Model(&models.Channel{}).
+			Where("id = ? AND tenant_id = ? AND channel_type IN ? AND last_sync_status = ? AND sync_run_id = ? AND sync_lease_until IS NOT NULL AND sync_lease_until < NOW(3)",
+				c.ID, c.TenantID, leaseEligibleChannelTypes, "syncing", c.SyncRunID).
+			UpdateColumns(map[string]interface{}{
+				"last_sync_status": "error",
+				"last_sync_error":  syncLeaseReleasedMessage,
+				"sync_run_id":      gorm.Expr("NULL"),
+				"sync_lease_until": gorm.Expr("NULL"),
+				"updated_at":       time.Now(), // attempt time for scheduler throttling
+			})
+		if res.Error != nil {
+			failed = true
+			log.Printf("[sync] lease recovery for channel %s failed: write error", c.ID)
+			continue
+		}
+		if res.RowsAffected == 1 {
+			released++
+			log.Printf("[sync] released expired sync lease for channel %s", c.ID)
+		}
+	}
+	if failed {
+		return released, ErrSyncWriteFailed
+	}
+	return released, nil
 }

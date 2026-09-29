@@ -294,7 +294,7 @@ func TestReserveChannelSyncWriteFailureAndZeroRowsAdmitNothing(t *testing.T) {
 	})
 	t.Run("zero rows on an idle channel", func(t *testing.T) {
 		f := setupSFFixture(t)
-		f.addTrigger(t, f.chA, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at; SET NEW.sync_run_id = OLD.sync_run_id;")
+		f.addTrigger(t, f.chA, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at; SET NEW.sync_run_id = OLD.sync_run_id; SET NEW.sync_lease_until = OLD.sync_lease_until;")
 		if _, err := ReserveChannelSync(f.tenantID, f.chA); !errors.Is(err, ErrSyncNotAdmitted) {
 			t.Fatalf("got %v, want ErrSyncNotAdmitted (not busy, not admitted)", err)
 		}

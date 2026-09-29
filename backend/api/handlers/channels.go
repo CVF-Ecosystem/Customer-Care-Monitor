@@ -829,6 +829,7 @@ func updateChannelSyncStatus(reservation engine.SyncReservation, status, message
 			"last_sync_status": status,
 			"last_sync_error":  message,
 			"sync_run_id":      gorm.Expr("NULL"),
+			"sync_lease_until": gorm.Expr("NULL"), // CCMAI-RUNTIME-016
 			"updated_at":       time.Now(),
 		})
 	if res.Error != nil {

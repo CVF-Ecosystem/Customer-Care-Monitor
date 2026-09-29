@@ -71,6 +71,18 @@ func (s *Scheduler) Start() {
 		}
 	}
 
+	// CCMAI-RUNTIME-016: release expired leases of GET-only sync runs at
+	// startup and every minute, independent of channel due time.
+	s.recoverExpiredSyncLeasesTask()
+	_, err = s.scheduler.NewJob(
+		gocron.DurationJob(time.Minute),
+		gocron.NewTask(s.recoverExpiredSyncLeasesTask),
+		gocron.WithName("recover-expired-sync-leases"),
+	)
+	if err != nil {
+		log.Printf("[scheduler] failed to create sync lease recovery job: %v", err)
+	}
+
 	// Load and schedule cron-based analysis jobs
 	s.loadCronJobs()
 
@@ -154,6 +166,17 @@ func (s *Scheduler) syncAllChannelsTask() {
 	}
 	if synced > 0 {
 		log.Printf("[scheduler] synced %d/%d channels", synced, len(chans))
+	}
+}
+
+// recoverExpiredSyncLeasesTask runs one bounded lease-recovery batch. It
+// launches no sync: a released channel waits for its normal throttle.
+func (s *Scheduler) recoverExpiredSyncLeasesTask() {
+	released, err := RecoverExpiredSyncLeases(syncLeaseRecoveryBatch)
+	if err != nil {
+		log.Printf("[scheduler] sync lease recovery incomplete: %v (released %d)", err, released)
+	} else if released > 0 {
+		log.Printf("[scheduler] released %d expired sync leases", released)
 	}
 }
 

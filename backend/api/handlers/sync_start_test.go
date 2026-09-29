@@ -165,7 +165,7 @@ func TestSyncChannelNowWriteFailureStartsNoWorker(t *testing.T) {
 // it must not be treated as a recorded start.
 func TestSyncChannelNowZeroRowUpdateStartsNoWorker(t *testing.T) {
 	f := setupSyncStartFixture(t)
-	f.addChannelTrigger(t, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at; SET NEW.sync_run_id = OLD.sync_run_id;")
+	f.addChannelTrigger(t, "SET NEW.last_sync_status = OLD.last_sync_status; SET NEW.last_sync_error = OLD.last_sync_error; SET NEW.updated_at = OLD.updated_at; SET NEW.sync_run_id = OLD.sync_run_id; SET NEW.sync_lease_until = OLD.sync_lease_until;")
 	f.assertNoStart(t, f.callSync(f.tenantID))
 }
 

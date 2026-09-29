@@ -33,7 +33,7 @@
   ],
   "buildInProgress": [
     "CCMAI-RUNTIME-015 REVIEW PASS / FREEZE OPEN (Claude re-review of BUILD de0616c + repair 904454d): run-owned conversation/message/count and refreshed-Zalo-credential writes are fenced by a locked SELECT FOR UPDATE ownership guard; attachment reuse/attempt-unique keys and reference-checked cleanup hold; a storage Exists error now falls back to a fresh download instead of aborting; a mid-loop takeover stops A with sync_ownership_lost. Focused 107 PASS and full backend 14 packages PASS on disposable MySQL; independent FOR UPDATE and R1 restore mutations failed their tests. Not crash recovery or live-provider proof; reclaim remains R016.",
-    "CCMAI-RUNTIME-016 WORK_ORDER (Codex): conditional DB-time lease recovery is specified only for facebook/pancake GET-only sync runs with an R016 lease marker; Zalo, unknown types, pre-R016 and legacy rows remain blocked. BUILD is not started; no actual reclaim, rollout, provider call or FREEZE. SPEC docs/specs/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_2026-09-29.md and work order docs/work_orders/CCMAI_RUNTIME_016.md await Claude implementation and independent Codex review.",
+    "CCMAI-RUNTIME-016 BUILD complete / REVIEW_PENDING (Claude, local commit, not pushed): facebook/pancake (audited GET-only) sync runs get a DB-time lease in the same admitting write, extend it by an exact run-ID heartbeat that cancels the run on failure, clear it on every owned terminal/panic write, and can be released only by a bounded conditional scheduler recovery of expired allowlisted rows with run ID and lease. Zalo, unknown, NULL-lease and NULL-ID rows stay blocked. Focused 29 PASS and full backend 14 packages PASS on disposable MySQL with synthetic adapters, including heartbeat/final-status/new-generation races and a paused A-to-B handoff; five mutations (allowlist, release run-ID and expiry predicates, R015 fence, heartbeat run-ID) failed and were restored. Evidence docs/reviews/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_BUILD_2026-09-29.md. Expiry is not worker-death proof; Zalo/legacy recovery remains open. Codex independent REVIEW next; no push, provider call or FREEZE.",
     "S1 remains IN_PROGRESS: safe recovery of Zalo/legacy syncing rows and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -169,7 +169,8 @@
     "docs/reviews/CCMAI_RUNTIME_014_R1_INDEPENDENT_REREVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_SYNC_SIDE_EFFECT_OWNERSHIP_S1_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_015_INDEPENDENT_REVIEW_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_015_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_015_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md",
+    "docs/reviews/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

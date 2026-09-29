@@ -21,6 +21,11 @@ type Channel struct {
 	// (CCMAI-RUNTIME-014). Internal only: never serialized, never backfilled;
 	// NULL on idle rows and on legacy rows created before this column existed.
 	SyncRunID *string `gorm:"type:varchar(36)" json:"-"`
+	// SyncLeaseUntil is the database-time lease deadline of a run admitted by
+	// an R016 binary for a GET-only channel type (CCMAI-RUNTIME-016). Internal
+	// only; NULL for every other run and for rows from older binaries, which
+	// therefore can never be released by lease expiry.
+	SyncLeaseUntil *time.Time `gorm:"type:datetime(3)" json:"-"`
 
 	Tenant Tenant `gorm:"foreignKey:TenantID" json:"tenant,omitempty"`
 }
