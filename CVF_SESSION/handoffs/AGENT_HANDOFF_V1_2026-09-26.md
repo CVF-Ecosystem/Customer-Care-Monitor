@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-010 BUILD complete / REVIEW_PENDING; CCMAI-CREDIT-003 independent review recorded separately; prior tranches REVIEW PASS / FREEZE open)
-- Active role: COMMIT_STEWARD (Claude) for the R010 local BUILD commit; independent REVIEWER (Codex) next
-- Next allowed move: Codex independently reviews the CCMAI-RUNTIME-010 BUILD commit, using `docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md`. No push, provider call or FREEZE.
+- Active phase: REVIEW (CCMAI-RUNTIME-010 BUILD complete / REVIEW_PENDING; CCMAI-CREDIT-003 Claude independent REVIEW_PASS, FREEZE open; prior tranches REVIEW PASS / FREEZE open)
+- Active role: REVIEWER (Claude) recorded CCMAI-CREDIT-003 review; CCMAI-RUNTIME-010 independent REVIEWER (Codex) next
+- Next allowed move: Codex independently reviews CCMAI-RUNTIME-010 local BUILD commit `a9dcbed`, using `docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md`. Local `refs/rewrites/*` cleanup (CREDIT-003 O2) is an owner/CLOSER decision. No push, provider call or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
@@ -574,6 +574,7 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Local BUILD candidate: root and three related commit messages were reworded on `rewrite_candidate`. The 119 paired commits have identical trees and author identity/date fields, with unchanged co-author trailer set; final tree `9927b4c3...` matches old main. Root is now `4a92494` with a neutral subject and no upstream/archive prose. Evidence: `docs/reviews/CCMAI_CREDIT_003_MESSAGE_REWRITE_2026-09-29.md`. Role transition acknowledged: IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex). Exact-lease push follows; no source change, self-approval or FREEZE.
 - Remote BUILD result: exact-lease push updated only new origin/main from `bb1f24c` to `73ee01f`; local main tracks it. Temporary rewrite branch and backup ref were removed; no local or remote archive tag remains. Root `4a92494` has neutral source-baseline wording and preserved Claude coauthor. Historic SHA citations are not current-main identifiers. Role transition COMMIT_STEWARD -> SESSION_SYNC_STEWARD (Codex); independent R2 REVIEW next, no FREEZE.
 - Remote follow-up: Docs CI run `36462883704` and Pages passed. New root `4a92494` serves the neutral title, but GitHub still returned HTTP 200 for old unreachable root `3036d5e` by exact SHA. Current main is clean of the import message; server-side erasure is not claimed. Contributor stats were recalculating (HTTP 202). Evidence updated; independent R2 REVIEW remains open.
+- Independent REVIEW (Claude, 2026-09-29, separate from R010): role transition `COMMIT_STEWARD (Claude, R010 a9dcbed) → REVIEWER (Claude)`; Codex implemented. The reviewer re-paired `b336a68` and `4e0099d`: 119/119 identical trees, authors, author dates and co-author lists, with only the four listed messages changed. Current-main message scan is clean, the SePay/CVF-Ecosystem MIT notices are intact, remote has only `main`, and Docs run/Pages are confirmed. Disposition `REVIEW_PASS` with non-blocking observations. O1: GitHub still serves old root `3036d5e` by SHA (already disclosed). O2: undocumented local refs `refs/rewrites/customer-care-pre-credit` and `customer-care-candidate-final` (from 2026-09-26) keep the old root reachable in this clone; deleting them is left to the owner or a CLOSER decision. Review: `docs/reviews/CCMAI_CREDIT_003_INDEPENDENT_REVIEW_2026-09-29.md`. FREEZE remains open.
 
 ## Active Tranche: CCMAI-RUNTIME-010 (2026-09-29)
 

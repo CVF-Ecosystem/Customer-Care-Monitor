@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-010 BUILD complete / REVIEW_PENDING: Codex independently reviews the local BUILD commit and docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md. CCMAI-CREDIT-003 independent review is recorded separately. No push, provider call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-010 BUILD complete / REVIEW_PENDING: Codex independently reviews local BUILD commit a9dcbed and docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md. Separately, Claude recorded CCMAI-CREDIT-003 independent REVIEW_PASS (FREEZE open; local refs/rewrites/* cleanup is an owner/CLOSER decision). No push, provider call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude) for CCMAI-RUNTIME-010; independent REVIEWER (Codex) next",
+  "activeRole": "REVIEWER (Claude) recorded CCMAI-CREDIT-003 review; CCMAI-RUNTIME-010 independent REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
