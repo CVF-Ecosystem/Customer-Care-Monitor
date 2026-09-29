@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-011 R1/R2 REVIEW_PASS / FREEZE open; R010 and CREDIT-003 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: REVIEWER (Codex) completed R011 re-review; ORCHESTRATOR next
-- Next allowed move: Bound the next residual S1 tranche or record an explicit CLOSER decision. No push, provider call or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-012 ready for bounded BUILD; R001–R011 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next after rehydration/acknowledgment
+- Next allowed move: Claude rehydrates and records role acknowledgment, then implements CCMAI-RUNTIME-012 under its SPEC/work order and returns one local REVIEW_PENDING commit. Codex independently reviews. No push, real provider/channel call or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
@@ -599,3 +599,9 @@ CVF controls the application runtime or that a provider-backed test passed.
 - R011-R1/R011-R2 repair result (Claude): added direct tenant-scoped `job_runs` and zero-outbound observers to `agent_run_config_admission_test.go`, made non-vacuous by the accepted-path detector (1 row, 1 recorded request per known agent); corrected the BUILD evidence base commit to `10af2c6`. `agents.go` unchanged. Focused and full backend tests, build and vet pass on disposable MySQL; catalog `-Check` and doctor 25/25 pass. Role route `REPAIR_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD`; disposition `REVIEW_PENDING` for Codex re-review. No push, provider call or FREEZE.
 - Continuity correction before re-review (Codex): Current State header still said repair pending even though state, memory, the handoff repair result and owner message all said REVIEW_PENDING. Codex reported `BLOCKED_CONTINUITY_DRIFT` at INTAKE, aligned the stale header with the documented repair outcome, then rehydrated; no review decision was made by this correction.
 - Independent R011 R1/R2 re-review (Codex): role transition `COMMIT_STEWARD (Claude) → REVIEWER (Codex)` acknowledged. Inspected exact repair diff and observer cleanup; the new tenant-scoped job-run and recording-transport assertions are live on accepted stubs and zero on all rejection cases. BUILD base commit now matches `44eead4^` (`10af2c6`). Codex independently reran focused `TestAgentRun` on disposable MySQL (exit 0, handler package 4.272s; container/network removed), catalog check and doctor 25/25. Disposition `REVIEW_PASS`, FREEZE open; S1 remains IN_PROGRESS. Evidence: `docs/reviews/CCMAI_RUNTIME_011_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md`. Role transition `REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR` for review records; no push, provider call or governance proof.
+
+## Active Tranche: CCMAI-RUNTIME-012 (2026-09-29)
+
+- INTAKE: owner said “next” after R011 REVIEW PASS. S1 residuals include cross-path sync concurrency, crash-state recovery, OAuth callback final DB-write truth and backend-dependent UI/API intersections. Source inspection found Zalo and Facebook OAuth callbacks exchange code, encrypt credentials, then ignore the final `Updates` result and redirect success even on error or zero rows; the write predicate is ID-only although the lookup used ID and tenant.
+- DESIGN/SPEC/WORK_ORDER: [SPEC](../../docs/specs/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_2026-09-29.md) and [work order](../../docs/work_orders/CCMAI_RUNTIME_012.md) bound R2 persistence truth to the two callbacks in `channels.go` and focused handler tests. Error or zero rows must yield generic tenant-scoped failure redirect; exactly one tenant-scoped update retains success. No change to provider requests, OAuth state, credential schema, other handlers or frontend. Synthetic transport and disposable MySQL only. Single-flight and crash recovery remain separate.
+- Role transition acknowledged for planning: `ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR` (Codex). Claude must rehydrate and record `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` before BUILD, then return one local BUILD/evidence commit as REVIEW_PENDING for independent Codex review. No real OAuth/provider call, governance claim, push or FREEZE.

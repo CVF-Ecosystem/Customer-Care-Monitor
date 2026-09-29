@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-011 R1/R2 independent REVIEW_PASS / FREEZE open. S1 remains IN_PROGRESS; next governed move is to bound the next residual S1 tranche (cross-path sync single-flight, crash recovery or callback final DB-write handling) or record an explicit CLOSER decision. No push, provider call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-012 SPEC and work order are ready. Claude rehydrates, records WORK_ORDER_AUTHOR (Codex) to IMPLEMENTATION_WORKER (Claude) acknowledgment in the active handoff, fixes only the bounded OAuth final-update truth, tests with synthetic OAuth/disposable MySQL and returns one local REVIEW_PENDING commit. Codex reviews independently. No push, real provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex) completed CCMAI-RUNTIME-011 R1/R2; ORCHESTRATOR next",
+  "activeRole": "ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next after rehydration/acknowledgment",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

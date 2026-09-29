@@ -29,6 +29,7 @@
     "CCMAI-RUNTIME-011 REVIEW PASS / FREEZE OPEN after R1/R2: AgentRun rejects invalid or nil configuration before sync/analysis dispatch. Focused tests directly observe no tenant job run, channel write or outbound request on rejection and detect all three effects on accepted synthetic stubs. BUILD provenance corrected; Codex independently reran focused tests and doctor 25/25. No real engine, channel, provider or governance proof."
   ],
   "buildInProgress": [
+    "CCMAI-RUNTIME-012 is at WORK_ORDER, not implemented: Zalo/Facebook OAuth callbacks must only redirect success after exactly one tenant-scoped final credential update succeeds. Claude BUILD and independent Codex REVIEW are next; synthetic OAuth and disposable MySQL only.",
     "S1 remains IN_PROGRESS: cross-path sync single-flight, crash recovery, callback final DB-write errors and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -61,7 +62,8 @@
     "CCMAI-REPO-MIGRATE-001",
     "CCMAI-CREDIT-003",
     "CCMAI-RUNTIME-010",
-    "CCMAI-RUNTIME-011"
+    "CCMAI-RUNTIME-011",
+    "CCMAI-RUNTIME-012"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -77,7 +79,7 @@
     "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration.",
     "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical CVF-Ecosystem/Customer-Care-Monitor origin; Go/docs Actions and new GitHub Pages passed, with public home and key guides HTTP 200. Historical PR/run URLs and initial CQA import message remain provenance. Independent R2 REVIEW and FREEZE remain open; old repository deletion is the owner's separate action.",
     "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; old SHA citations in historical reviews are observations, not current-main SHAs. GitHub still served the old root SHA by direct lookup after force push; server-side erasure is not claimed. The two local refs/rewrites refs retaining the old root were removed by CLOSER with exact target verification. MIT LICENSE remains intact; Claude's independent R2 REVIEW is REVIEW_PASS; FREEZE open.",
-    "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: only a synthetic transport was used; real OAuth/Pancake endpoints and accepted Pancake create were not tested. Direct mutation was unavailable. Callback success paths still ignore the final channel-update error (separate scope). Agent config admission, cross-path sync single-flight and crash recovery remain separate S1 residuals."
+    "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: only a synthetic transport was used; real OAuth/Pancake endpoints and accepted Pancake create were not tested. Direct mutation was unavailable. Callback success paths still ignore the final channel-update error (R012 WORK_ORDER). Cross-path sync single-flight and crash recovery remain separate S1 residuals."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
