@@ -29,7 +29,7 @@
     "CCMAI-RUNTIME-011 REVIEW PASS / FREEZE OPEN after R1/R2: AgentRun rejects invalid or nil configuration before sync/analysis dispatch. Focused tests directly observe no tenant job run, channel write or outbound request on rejection and detect all three effects on accepted synthetic stubs. BUILD provenance corrected; Codex independently reran focused tests and doctor 25/25. No real engine, channel, provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-012 is at WORK_ORDER, not implemented: Zalo/Facebook OAuth callbacks must only redirect success after exactly one tenant-scoped final credential update succeeds. Claude BUILD and independent Codex REVIEW are next; synthetic OAuth and disposable MySQL only.",
+    "CCMAI-RUNTIME-012 BUILD complete / REVIEW_PENDING (local commit, not pushed): Zalo and Facebook OAuth callbacks now redirect success only when the final credential update, scoped to id AND verified tenant, returns no error and exactly one row; otherwise the generic tenant-scoped Authorization failed redirect with a bounded log. Focused tests (forced DB error, tenant-reassignment zero-row race, success detector) and all 13 backend packages pass on disposable MySQL with a synthetic transport; build and vet clean; ID-only and unchecked-result mutations failed the new tests and were restored. Evidence docs/reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md. Codex independent REVIEW next; no real OAuth/provider call, governance claim, push or FREEZE.",
     "S1 remains IN_PROGRESS: cross-path sync single-flight, crash recovery, callback final DB-write errors and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -151,7 +151,8 @@
     "docs/reviews/CCMAI_RUNTIME_010_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_AGENT_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_011_INDEPENDENT_REVIEW_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_011_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_011_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md",
+    "docs/reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

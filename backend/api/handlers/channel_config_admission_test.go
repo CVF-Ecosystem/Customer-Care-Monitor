@@ -37,12 +37,18 @@ const (
 type stubOutbound struct {
 	mu       sync.Mutex
 	requests []string
+	// hook, when set, runs for every request after it is recorded and before
+	// the synthetic answer is returned (CCMAI-RUNTIME-012 race fixtures).
+	hook func(method, hostPath string)
 }
 
 func (s *stubOutbound) RoundTrip(r *http.Request) (*http.Response, error) {
 	s.mu.Lock()
 	s.requests = append(s.requests, r.Method+" "+r.URL.Host+r.URL.Path)
 	s.mu.Unlock()
+	if s.hook != nil {
+		s.hook(r.Method, r.URL.Host+r.URL.Path)
+	}
 
 	status, body := http.StatusNotFound, `{}`
 	switch r.URL.Host + r.URL.Path {

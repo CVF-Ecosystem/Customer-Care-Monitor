@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-012 — OAuth credential persistence truth
 
-**Date:** 2026-09-29 · **State:** WORK_ORDER / BUILD authorized after Claude rehydration and role acknowledgment · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_2026-09-29.md), and R011 independent REVIEW PASS.
+**Date:** 2026-09-29 · **State:** BUILD complete, REVIEW_PENDING (Claude, local commit; evidence in docs/reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md) · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_2026-09-29.md), and R011 independent REVIEW PASS.
 
 ## Route and independence
 

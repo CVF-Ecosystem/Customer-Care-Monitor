@@ -452,6 +452,23 @@ func verifyOAuthState(state, secret string) (string, string, error) {
 	return tenantID, channelID, nil
 }
 
+// persistOAuthCredentials writes the exchanged credentials to the channel of
+// the verified tenant and reports true only when exactly one row accepted them
+// (CCMAI-RUNTIME-012). The external code exchange cannot be undone; a failure
+// is logged by class only, never with SQL detail, tokens, code or state.
+func persistOAuthCredentials(route, channelID, tenantID string, updates map[string]interface{}) bool {
+	result := db.DB.Model(&models.Channel{}).Where("id = ? AND tenant_id = ?", channelID, tenantID).Updates(updates)
+	if result.Error != nil {
+		log.Printf("[error] %s OAuth credentials for channel %s not persisted: write failed", route, channelID)
+		return false
+	}
+	if result.RowsAffected != 1 {
+		log.Printf("[error] %s OAuth credentials for channel %s not persisted: %d rows updated", route, channelID, result.RowsAffected)
+		return false
+	}
+	return true
+}
+
 // ZaloOAuthCallback handles the OAuth callback from Zalo after user authorizes.
 func ZaloOAuthCallback(c *gin.Context) {
 	code := c.Query("code")
@@ -534,7 +551,10 @@ func ZaloOAuthCallback(c *gin.Context) {
 	if oaID != "" {
 		updates["external_id"] = oaID
 	}
-	db.DB.Model(&models.Channel{}).Where("id = ?", channelID).Updates(updates)
+	if !persistOAuthCredentials("zalo", channelID, tenantID, updates) {
+		redirectWithError(c, tenantID, "Authorization failed")
+		return
+	}
 
 	// Redirect back to channel detail page with success
 	c.Redirect(http.StatusFound, fmt.Sprintf("/%s/channels/%s?zalo_auth=success", tenantID, channelID))
@@ -882,12 +902,15 @@ func FacebookOAuthCallback(c *gin.Context) {
 		return
 	}
 
-	db.DB.Model(&models.Channel{}).Where("id = ?", channelID).Updates(map[string]interface{}{
+	if !persistOAuthCredentials("facebook", channelID, tenantID, map[string]interface{}{
 		"credentials_encrypted": encrypted,
 		"external_id":           pageID,
 		"name":                  pageName,
 		"updated_at":            time.Now(),
-	})
+	}) {
+		redirectWithError(c, tenantID, "Authorization failed")
+		return
+	}
 
 	// Redirect back to channel detail page with success
 	c.Redirect(http.StatusFound, fmt.Sprintf("/%s/channels/%s?fb_auth=success", tenantID, channelID))
