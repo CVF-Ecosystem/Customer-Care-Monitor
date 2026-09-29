@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-015 — fence sync run persisted side effects
 
-**Date:** 2026-09-29 · **State:** REVIEW_PENDING after Codex BUILD; independent Claude review next · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_SYNC_SIDE_EFFECT_OWNERSHIP_S1_2026-09-29.md), R014-R1 independent REVIEW_PASS.
+**Date:** 2026-09-29 · **State:** R015-R1/R2 repair REVIEW_PENDING for independent Claude re-review · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_SYNC_SIDE_EFFECT_OWNERSHIP_S1_2026-09-29.md), [independent review](../reviews/CCMAI_RUNTIME_015_INDEPENDENT_REVIEW_2026-09-29.md).
 
 ## Route and scope
 
@@ -18,3 +18,11 @@ Implement the SPEC's local persisted-effect fencing. Allowed source: `backend/en
 ## Exit boundary
 
 Synchronize continuity/status and make one **local** BUILD/evidence commit, no push. Return `REVIEW_PENDING` for independent Claude review; Codex must not self-PASS or FREEZE. This work order does not authorize recovery/reclaim, new endpoint, lease, deployment, real provider/channel call or a claim that an in-flight token refresh is reversible. If a safe local-effect fence cannot be built in this scope, return `BUILD_BLOCKED` with the smallest concrete unresolved boundary. R016 remains the separate recovery decision after independent R015 review.
+
+## Repair addendum R015-R1/R2 — 2026-09-29
+
+Claude's independent review of BUILD `de0616c` returned `CHANGES_REQUIRED`. Codex acknowledges `REVIEWER (Claude) → WORK_ORDER_AUTHOR → REPAIR_WORKER (Codex)` before editing source. Existing owner authority and the path/risk limits above cover this same-scope repair.
+
+- **R015-R1:** When `Exists` cannot confirm an old object, attempt a fresh download under a new key through the existing primary-to-local fallback. Do not classify the storage probe as a DB write failure or stop the whole run solely because the probe failed. A synthetic failing-`Exists` store test must prove later messages are persisted and the run succeeds when the local fallback succeeds.
+- **R015-R2:** Add a full `SyncReservedChannel` test with two conversations. After A completes the first, simulate fixture-only release and reserve B; prove A returns `sync_ownership_lost` rather than partial, writes no second conversation/message/count, and leaves B's channel row and data unchanged.
+- Use only the already allowed engine source/tests and continuity/evidence paths. R015 non-blocking observations O1–O3 remain recorded for separate assessment. Rerun focused/full backend and required gates. Make one local repair commit and return `REVIEW_PENDING` for independent Claude re-review, without push or FREEZE.

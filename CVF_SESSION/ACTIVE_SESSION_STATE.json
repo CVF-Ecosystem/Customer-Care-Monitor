@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-015 independent REVIEW returned CHANGES_REQUIRED (R015-R1 storage Exists error aborts the run and bypasses local fallback; R015-R2 missing end-to-end mid-loop ownership-loss test). Codex as WORK_ORDER_AUTHOR records a repair addendum, repairs within R015 paths, and returns one local REVIEW_PENDING commit for Claude re-review. No push, provider/channel call, reclaim or FREEZE; S1 remains IN_PROGRESS.",
+  "nextAllowedMove": "CCMAI-RUNTIME-015 R1/R2 repair BUILD is complete and REVIEW_PENDING. Claude independently re-reviews the exact repair diff, failing-Exists local fallback and full SyncReservedChannel mid-loop ownership-loss test. No push, provider/channel call, reclaim or FREEZE; S1 remains IN_PROGRESS.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Claude) completed R015 review; WORK_ORDER_AUTHOR / REPAIR_WORKER (Codex) next",
+  "activeRole": "WORK_ORDER_AUTHOR → REPAIR_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Codex); REVIEWER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

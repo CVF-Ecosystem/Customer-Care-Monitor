@@ -27,6 +27,9 @@ import (
 // SyncEngine handles pulling messages from external channels into the database.
 type SyncEngine struct {
 	cfg *config.Config
+	// Narrow per-engine seams for deterministic storage and mid-loop tests.
+	storeForTenant    func(string) (storage.Store, error)
+	afterConversation func()
 }
 
 const (
@@ -245,8 +248,8 @@ func (s *SyncEngine) SyncChannel(ctx context.Context, channel models.Channel) er
 // exits without a recorded final status (failed write, zero rows, panic) it
 // attempts an error transition under the same ID without hiding the original
 // failure. A stuck "syncing" after a process crash is not handled here
-// (separate recovery tranche), and conversation/message/token side effects of
-// a stale worker are not fenced.
+// (separate recovery tranche). Run-owned conversation/message/count and
+// refreshed-token writes are fenced by the channel ownership lock below.
 func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Channel, reservation SyncReservation) (runErr error) {
 	if !reservation.valid() || reservation.TenantID != channel.TenantID || reservation.ChannelID != channel.ID {
 		log.Printf("[sync] channel %s rejected: reservation does not match", channel.ID)
@@ -402,6 +405,9 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 
 		if !conversationFailed {
 			progress.conversationsSynced++
+		}
+		if s.afterConversation != nil {
+			s.afterConversation()
 		}
 	}
 
@@ -814,7 +820,11 @@ func (s *SyncEngine) downloadAttachments(ctx context.Context, reservation SyncRe
 	}
 
 	// Mỗi công ty có kho riêng: công ty này để trên S3, công ty kia vẫn trên đĩa.
-	store, err := storage.ForTenant(tenantID)
+	storeForTenant := s.storeForTenant
+	if storeForTenant == nil {
+		storeForTenant = storage.ForTenant
+	}
+	store, err := storeForTenant(tenantID)
 	if err != nil {
 		log.Printf("[sync] không lấy được nơi cất file của công ty %s (%v) — tạm ghi xuống đĩa", tenantID, err)
 		store = duPhong
@@ -852,8 +862,6 @@ func (s *SyncEngine) downloadAttachments(ctx context.Context, reservation SyncRe
 			if exists, err := store.Exists(ctx, oldKey); err == nil && exists {
 				msg.Attachments[i].LocalPath = oldKey
 				continue
-			} else if err != nil {
-				return newKeys, ErrSyncWriteFailed
 			}
 		}
 
