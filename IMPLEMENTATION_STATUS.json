@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -32,6 +32,7 @@
     "CCMAI-RUNTIME-014 REVIEW PASS / FREEZE OPEN after R014-R1: each new sync reservation stores a typed internal run ID and final/deferred/manual panic status writes require it. The repair keeps run ID and SQL values out of GORM's output sink on those three writes and bounds DB errors returned to workers/agents. Codex independently reran focused GORM sink, error and stale-worker tests on disposable MySQL; doctor 25/25. Old-worker side effects and stuck-sync recovery remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
+    "CCMAI-RUNTIME-015 is WORK_ORDER only: source audit identified stale-worker conversation/message/count writes, shared attachment-object keys and Zalo credential persistence outside R014 terminal fencing. The R2 SPEC/work order authorize Claude to fence local persisted effects with row-locked ownership transactions, attempt-unique object keys and propagated refresh-persist failure, then return a local REVIEW_PENDING build. No R015 implementation or recovery/reclaim exists yet.",
     "S1 remains IN_PROGRESS: recovery of a stuck syncing state (evidence of worker death or side-effect fencing) and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -67,7 +68,8 @@
     "CCMAI-RUNTIME-011",
     "CCMAI-RUNTIME-012",
     "CCMAI-RUNTIME-013",
-    "CCMAI-RUNTIME-014"
+    "CCMAI-RUNTIME-014",
+    "CCMAI-RUNTIME-015"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
