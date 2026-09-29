@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-011 BUILD evidence — agent-run configuration admission
 
-**Tranche:** `CCMAI-RUNTIME-011` · **Role:** IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude) · **Date:** 2026-09-29 · **Base commit:** `b0e39b1` · **Risk:** R2 · **Authority:** [SPEC](../specs/RUNTIME_AGENT_CONFIG_ADMISSION_S1_2026-09-29.md), [work order](../work_orders/CCMAI_RUNTIME_011.md) · **Status:** `REVIEW_PENDING` for independent Codex review; no FREEZE.
+**Tranche:** `CCMAI-RUNTIME-011` · **Role:** IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Claude) · **Date:** 2026-09-29 · **Base commit:** `10af2c6` (parent of BUILD commit `44eead4`; corrected in R011-R2) · **Risk:** R2 · **Authority:** [SPEC](../specs/RUNTIME_AGENT_CONFIG_ADMISSION_S1_2026-09-29.md), [work order](../work_orders/CCMAI_RUNTIME_011.md) · **Status:** `REVIEW_PENDING` for independent Codex review; no FREEZE.
 
 ## Rehydration and role transition
 
@@ -45,3 +45,13 @@ Temporarily changing the guard in `agents.go` to `if false && (err != nil || cfg
 - Config validation itself is `config.Load` unchanged; only the admission decision is tested.
 - Scheduler, cross-path sync single-flight, crash recovery, callback final DB-write errors and UI/API intersections remain separate S1 work.
 - This is not live CVF governance proof: no provider API call was made and none was required, because no governance behavior is claimed. No saved key, real channel or customer data was used.
+
+## Repair R011-R1 / R011-R2 (Claude, REPAIR_WORKER, 2026-09-29)
+
+- **R011-R2:** the base commit above is corrected to `10af2c6`, the parent of BUILD commit `44eead4`.
+- **R011-R1:** `agent_run_config_admission_test.go` gains two direct observers; `agents.go` is unchanged by this repair.
+  - Job-run observer: the fixture adds a synthetic tenant job, and the stub dispatchers insert a tenant-scoped `job_runs` row. `assertNoDispatch` now counts the tenant's `job_runs` rows and requires 0 for all six loader-error/nil cases (and the 400/403/404 order cases).
+  - Outbound observer: the fixture replaces `http.DefaultTransport` with a recording transport (synthetic 204, no network; restored in `t.Cleanup`), and the stub dispatchers make one request to `agent-run-observer.invalid`. `assertNoDispatch` requires 0 recorded requests.
+  - Non-vacuity: the accepted-path detector now also requires exactly 1 `job_runs` row and exactly 1 recorded outbound request per known agent.
+- **Gates re-run:** focused `TestAgentRun` → exit 0 (`ok ... 5.079s`); full backend → exit 0, all 13 packages `ok` (`api/handlers` 16.6s); `go build ./...` and `go vet ./...` clean; `gofmt -l` on the test file empty. Mutation repeated (guard disabled, then restored byte-for-byte): all 6 rejection subtests failed; the dispatch-count assertion fires first there, so the new observers are proven non-vacuous by the detector, not by this mutation. Catalog `-Check`, doctor and `git diff --check` are recorded in the handoff after synchronization. Disposable MySQL container and network were removed after each run.
+- No real endpoint, provider or channel was contacted; not live CVF governance proof. Status: `REVIEW_PENDING` for Codex re-review; no push or FREEZE.

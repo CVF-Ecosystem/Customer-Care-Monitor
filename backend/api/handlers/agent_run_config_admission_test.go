@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"strings"
+	"sync/atomic"
 	"testing"
 
 	"github.com/gin-gonic/gin"
@@ -28,8 +29,18 @@ const agentRunSecretParam = "PARAM-SECRET-DO-NOT-LEAK"
 
 var knownAgents = []string{"cqa.sync", "cqa.qc", "cqa.classify"}
 
+// recordingTransport answers every request with a synthetic 204 and counts
+// them; no network is touched.
+type recordingTransport struct{ requests atomic.Int64 }
+
+func (r *recordingTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	r.requests.Add(1)
+	return &http.Response{StatusCode: http.StatusNoContent, Body: http.NoBody, Header: http.Header{}, Request: req}, nil
+}
+
 type agentRunFixture struct {
-	userID, tenantID, otherTenantID, channelID string
+	userID, tenantID, otherTenantID, channelID, jobID string
+	outbound                                          *recordingTransport
 
 	cfg      *config.Config
 	cfgErr   error
@@ -46,7 +57,7 @@ func setupAgentRunFixture(t *testing.T) *agentRunFixture {
 	connectChannelsTestDB(t)
 	s := pkg.NewUUID()[:8]
 	f := &agentRunFixture{
-		userID: pkg.NewUUID(), tenantID: "agrun-" + s, otherTenantID: "agrun-other-" + s, channelID: "ch-agrun-" + s,
+		userID: pkg.NewUUID(), tenantID: "agrun-" + s, otherTenantID: "agrun-other-" + s, channelID: "ch-agrun-" + s, jobID: "job-agrun-" + s,
 	}
 	exec := func(sql string, args ...interface{}) {
 		if err := db.DB.Exec(sql, args...).Error; err != nil {
@@ -61,7 +72,11 @@ func setupAgentRunFixture(t *testing.T) *agentRunFixture {
 	exec(`INSERT INTO user_tenants (user_id, tenant_id, role, permissions) VALUES (?, ?, 'member', '{}')`, f.userID, f.tenantID)
 	exec(`INSERT INTO channels (id, tenant_id, channel_type, name, external_id, credentials_encrypted, is_active, last_sync_status, last_sync_error, metadata, created_at, updated_at) VALUES (?, ?, 'pancake', 'Kenh', 'fake', X'00', true, 'success', '', '{}', NOW(), NOW())`,
 		f.channelID, f.tenantID)
+	exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Agent Run', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`,
+		f.jobID, f.tenantID)
 	t.Cleanup(func() {
+		db.DB.Exec("DELETE FROM job_runs WHERE job_id = ?", f.jobID)
+		db.DB.Exec("DELETE FROM jobs WHERE id = ?", f.jobID)
 		db.DB.Exec("DELETE FROM channels WHERE id = ?", f.channelID)
 		db.DB.Exec("DELETE FROM user_tenants WHERE user_id = ?", f.userID)
 		db.DB.Exec("DELETE FROM users WHERE id = ?", f.userID)
@@ -71,9 +86,21 @@ func setupAgentRunFixture(t *testing.T) *agentRunFixture {
 		}
 	})
 
-	// The stubs reproduce an observable engine side effect (a channel write).
+	// Zero-outbound observer: the default transport is replaced for the test.
+	f.outbound = &recordingTransport{}
+	origTransport := http.DefaultTransport
+	http.DefaultTransport = f.outbound
+	t.Cleanup(func() { http.DefaultTransport = origTransport })
+
+	// The stubs reproduce observable engine side effects: a channel write, a
+	// tenant-scoped job run and one synthetic outbound request (recorded only).
 	touch := func() {
 		exec(`UPDATE channels SET last_sync_status = 'syncing' WHERE id = ?`, f.channelID)
+		exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, status, summary, created_at) VALUES (?, ?, ?, NOW(), 'running', '{}', NOW())`,
+			pkg.NewUUID(), f.jobID, f.tenantID)
+		if resp, err := http.Get("http://agent-run-observer.invalid/probe"); err == nil {
+			resp.Body.Close()
+		}
 	}
 	origSync, origAnalysis := dispatchSyncAgent, dispatchAnalysisAgent
 	dispatchSyncAgent = func(_ context.Context, cfg *config.Config, req AgentRunRequest) AgentRunResponse {
@@ -128,8 +155,23 @@ func (f *agentRunFixture) channelStatus(t *testing.T) string {
 	return ch.LastSyncStatus
 }
 
+func (f *agentRunFixture) jobRunCount(t *testing.T) int64 {
+	t.Helper()
+	var n int64
+	if err := db.DB.Table("job_runs").Where("tenant_id = ?", f.tenantID).Count(&n).Error; err != nil {
+		t.Fatalf("count job_runs: %v", err)
+	}
+	return n
+}
+
 func (f *agentRunFixture) assertNoDispatch(t *testing.T) {
 	t.Helper()
+	if n := f.jobRunCount(t); n != 0 {
+		t.Fatalf("%d tenant job_runs rows written despite rejection", n)
+	}
+	if n := f.outbound.requests.Load(); n != 0 {
+		t.Fatalf("%d outbound requests despite rejection", n)
+	}
 	if f.syncCalls != 0 || f.analysisCalls != 0 {
 		t.Fatalf("engine dispatched (sync %d, analysis %d) without a validated config", f.syncCalls, f.analysisCalls)
 	}
@@ -195,6 +237,12 @@ func TestAgentRunPassesValidatedConfigToEngine(t *testing.T) {
 			}
 			if got := f.channelStatus(t); got != "syncing" {
 				t.Fatalf("detector observer did not see the write (status %q); rejection checks would be vacuous", got)
+			}
+			if n := f.jobRunCount(t); n != 1 {
+				t.Fatalf("detector saw %d job_runs rows, want 1; job-run observer would be vacuous", n)
+			}
+			if n := f.outbound.requests.Load(); n != 1 {
+				t.Fatalf("detector saw %d outbound requests, want 1; outbound observer would be vacuous", n)
 			}
 		})
 	}
