@@ -28,7 +28,7 @@
     "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: the five channel credential/OAuth routes reject failed or nil config before secret use, DB write or outbound exchange. Codex independently inspected source and ran six focused test groups and 26 leaf cases on disposable MySQL; doctor 25/25 passed. No real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-011 is at WORK_ORDER, not implemented: AgentRun config admission is bounded to agents.go and focused tests, with Claude BUILD and independent Codex REVIEW next.",
+    "CCMAI-RUNTIME-011 BUILD complete / REVIEW_PENDING (local commit, not pushed): AgentRun now rejects an unknown agent (404, after tenant authorization) before loading config, and rejects loader error or nil config for cqa.sync/cqa.qc/cqa.classify with generic 500 agent_run_failed before any engine dispatch. Focused tests (22 leaf cases, disposable MySQL, synthetic config, stub dispatchers) and all 13 backend packages pass; build, vet clean; a temporary guard mutation failed all 6 rejection subtests and was restored. Evidence docs/reviews/RUNTIME_AGENT_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md. Independent Codex REVIEW next; no provider/channel call, governance claim, push or FREEZE.",
     "S1 remains IN_PROGRESS: cross-path sync single-flight, crash recovery, callback final DB-write errors and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -146,7 +146,8 @@
     "docs/reviews/CCMAI_CREDIT_003_MESSAGE_REWRITE_2026-09-29.md",
     "docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_CREDIT_003_INDEPENDENT_REVIEW_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_010_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_010_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/RUNTIME_AGENT_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

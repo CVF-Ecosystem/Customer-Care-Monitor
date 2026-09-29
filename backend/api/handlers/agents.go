@@ -84,21 +84,40 @@ func AgentRun(c *gin.Context) {
 		return
 	}
 
-	cfg, _ := config.Load()
+	// An unknown agent name is rejected before configuration is loaded.
+	switch agentName {
+	case "cqa.sync", "cqa.qc", "cqa.classify":
+	default:
+		c.JSON(http.StatusNotFound, gin.H{"error": "agent_not_found"})
+		return
+	}
+
+	// Admit the run only with a validated configuration (CCMAI-RUNTIME-011).
+	// The failure is logged by class only: the loader error and request
+	// params can carry secrets.
+	cfg, err := loadAgentRunConfig()
+	if err != nil || cfg == nil {
+		log.Printf("[agent] run %s not admitted: configuration invalid", agentName)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "agent_run_failed"})
+		return
+	}
+
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
 	defer cancel()
 
-	switch agentName {
-	case "cqa.sync":
-		result := handleSyncAgent(ctx, cfg, req)
-		c.JSON(http.StatusOK, result)
-	case "cqa.qc", "cqa.classify":
-		result := handleAnalysisAgent(ctx, cfg, req, agentName)
-		c.JSON(http.StatusOK, result)
-	default:
-		c.JSON(http.StatusNotFound, gin.H{"error": "agent_not_found"})
+	if agentName == "cqa.sync" {
+		c.JSON(http.StatusOK, dispatchSyncAgent(ctx, cfg, req))
+		return
 	}
+	c.JSON(http.StatusOK, dispatchAnalysisAgent(ctx, cfg, req, agentName))
 }
+
+// Seams for tests: configuration loader and engine dispatchers.
+var (
+	loadAgentRunConfig    = config.Load
+	dispatchSyncAgent     = handleSyncAgent
+	dispatchAnalysisAgent = handleAnalysisAgent
+)
 
 func AgentQuery(c *gin.Context) {
 	agentName := c.Param("agentName")
