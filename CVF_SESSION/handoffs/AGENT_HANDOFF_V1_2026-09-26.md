@@ -6,13 +6,15 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-018 R018-R1 repaired, REVIEW_PENDING for Codex re-review; R001–R017 and UX-016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
-- Next allowed move: Codex independent re-review of the R018-R1 repair. UX-016 F1 remains separate; no push, real provider/channel call, self-PASS or FREEZE.
+- Active phase: REVIEW (CCMAI-RUNTIME-018 R018-R1 REVIEW_PASS / FREEZE open; R001–R017 and UX-016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex) next
+- Next allowed move: Codex selects the next bounded S1 tranche. Zalo/legacy crash recovery and UX-016 F1 remain separate; no push, real provider/channel call or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-RUNTIME-018 — demo fixture sync admission (2026-09-29)
 
+- R018-R1 independent re-review result (Codex): `REVIEW_PASS / FREEZE_OPEN`. Exact `947bb0c..195c265` repair changed only allowed source/test paths. Four `BINARY` text comparisons close R018-R1; five wrong-case matrix rows cover both identities, status and error prefix, while canonical rows and a second migration pass remain valid. Codex independently reran focused DB tests on disposable MySQL (PASS, 1.146 s; resources removed) and checked the binary operator semantics directly; Claude's full backend/build/vet and M12–M15 evidence was inspected. Review `docs/reviews/CCMAI_RUNTIME_018_R1_INDEPENDENT_REREVIEW_2026-09-29.md`. Role transition `REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR` (Codex) for review records and next S1 routing. No source repair, push, real provider/channel call, deployment or FREEZE.
+- R018-R1 independent re-review start (Codex): rehydrated state, handoff, memory, implementation status and index at `195c265`; core `26c686c` matches `origin/main`, doctor 25/25, knowledge ingest completed; no continuity drift. Role transition `COMMIT_STEWARD (Claude) → REVIEWER (Codex)` acknowledged before independent source and test checks. Scope: exact R1 repair `947bb0c..195c265` against R018-R1 work-order addendum and original SPEC; no source repair, provider/channel call, push or FREEZE.
 - R018-R1 repair acknowledgment (Claude, rehydrated from files at `947bb0c`; state, handoff, memory, review and work-order addendum agree; no `BLOCKED_CONTINUITY_DRIFT`; doctor 25/25; CVF core `26c686c`; risk ceiling R2; live evidence YES but no governance claim — disposable MySQL only): role transition `REVIEWER (Codex) → REPAIR_WORKER (Claude)` recorded before the repair edit. First repair round for the independent finding R018-R1 (MySQL case-insensitive collation in the legacy backfill). Allowed paths only `backend/db/mysql.go` and focused `backend/db/` tests plus evidence/continuity; no global collation change, provider/channel call, persistent Compose DB, push or FREEZE.
 - R018-R1 repair result (Claude, REPAIR_WORKER): the legacy backfill's identity and cleanup text comparisons are now `BINARY` (case-sensitive) in `backend/db/mysql.go` only, with no collation change. Five wrong-case rows were added to the backfill matrix (17 cases, two migration passes); mutations M12-M15 (dropping `BINARY` on type, external ID, status, error prefix) each fail a focused test. Full backend 14 packages PASS, build/vet/diff-check clean, MySQL removed. Evidence addendum in `docs/reviews/RUNTIME_DEMO_CHANNEL_SYNC_ADMISSION_S1_BUILD_2026-09-29.md`. Role transition REPAIR_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude); one local commit, `REVIEW_PENDING` for Codex re-review; no self-PASS, FREEZE, push or real provider/channel call.
 

@@ -18,7 +18,7 @@ Tiến hành các phần redesign độc lập trước. Claude chỉ thiết k�
 | Điểm giao | Quyết định ranh giới |
 |---|---|
 | Trang chủ: số vi phạm QC (`UX-02`) | Giữ `issues` theo nghĩa hiện tại. R017 đã qua review cho API đọc `qc_violation_count`; UX-016 frontend dùng trường đó đã `REVIEW_PASS` ([review](../reviews/CCMAI_UX_016_INDEPENDENT_REVIEW_2026-09-29.md)); FREEZE còn mở. Không dùng `issues` làm số vi phạm QC. |
-| Kênh demo và trạng thái đồng bộ (`UX-06`) | R018 đã BUILD nhưng [review độc lập](../reviews/CCMAI_RUNTIME_018_INDEPENDENT_REVIEW_2026-09-29.md) trả `CHANGES_REQUIRED` cho backfill MySQL không so sánh chính xác chữ hoa/thường; [R018-R1](../work_orders/CCMAI_RUNTIME_018.md) chờ Claude sửa và Codex review lại. Hoãn phần UI phụ thuộc fix đó. |
+| Kênh demo và trạng thái đồng bộ (`UX-06`) | R018 runtime admission đã [REVIEW_PASS sau R018-R1](../reviews/CCMAI_RUNTIME_018_R1_INDEPENDENT_REREVIEW_2026-09-29.md), FREEZE còn mở. Phần diễn đạt trạng thái trên UI vẫn cần tranche riêng; chưa kiểm tra trên ứng dụng đang chạy. |
 | Trạng thái nguồn, confidence, kết quả AI | Chỉ trình bày các trường và giới hạn đã có từ R004–R006. Không đổi cách xác minh, phân loại, tính confidence, gọi provider hay hợp đồng kết quả. |
 | Lọc, phân trang, số đếm, export Trang Kết quả | Tuân theo API hiện có; không tạo số toàn cục từ một trang dữ liệu hoặc hứa export theo scope khi endpoint không hỗ trợ. Nhu cầu API mới đưa sang tranche backend riêng. |
 

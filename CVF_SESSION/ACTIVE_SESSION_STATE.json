@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-018 R018-R1 (case-insensitive backfill comparisons) is repaired with BINARY checks and five wrong-case matrix rows; REVIEW_PENDING for Codex independent re-review. S1 IN_PROGRESS; no push, real provider/channel call, self-PASS or FREEZE. UX-016 F1 stays separate.",
+  "nextAllowedMove": "CCMAI-RUNTIME-018 R018-R1 passed Codex independent re-review; REVIEW_PASS / FREEZE_OPEN. Codex ORCHESTRATOR may select the next bounded S1 tranche; Zalo/legacy crash recovery and UX-016 F1 remain separate. No push, real provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude); REVIEWER (Codex) next",
+  "activeRole": "COMMIT_STEWARD (Codex); ORCHESTRATOR (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
