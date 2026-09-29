@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -74,7 +74,8 @@
     "CCMAI-RUNTIME-015",
     "CCMAI-RUNTIME-016",
     "CCMAI-RUNTIME-017",
-    "CCMAI-UX-016"
+    "CCMAI-UX-016",
+    "CCMAI-RUNTIME-018"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -83,7 +84,7 @@
     "CCMAI-RUNTIME-007/008/009/010/011/012 passed independent REVIEW for manual sync, job-dispatch, channel credential/OAuth and agent-run configuration admission, and OAuth final-write truth. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them.",
     "CCMAI-UX-000 changes the global theme and font; existing screens keep their own source-status colors and sync labels until screen tranches (UX-010+). The F1 onboarding bar remains a later-screen item; avatar contrast UX000-R1 passed independent re-review.",
-    "UX-02: R017 REVIEW_PASS added qc_violation_count while preserving issues as the all-results count; UX-016 frontend consumption passed independent Claude R2 REVIEW (REVIEW_PASS / FREEZE_OPEN; non-blocking F1: no committed out-of-order response test) and is not deployed. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
+    "UX-02: R017 REVIEW_PASS added qc_violation_count while preserving issues as the all-results count; UX-016 frontend consumption passed independent Claude R2 REVIEW (REVIEW_PASS / FREEZE_OPEN; non-blocking F1: no committed out-of-order response test) and is not deployed. UX-06 demo fixture sync admission is scoped in R018 SPEC/work order, BUILD pending; existing demo error rows are not yet changed. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
     "UX-011 Results REVIEW PASS / FREEZE OPEN. Its source-status panel is page-scoped because /results computes source status per returned page; a needs-review/source-status filter, global source counts, confidence on Results, quote highlighting and page/run-scoped export remain BLOCKED_API_CONTRACT proposals in docs/specs/RESULTS_SCREEN_UX011_2026-09-28.md §5. Dashboard QC count, demo scheduler/sync and backend/API/store/schema/provider remain outside UX-011.",
     "CCMAI-AUTH-001 REVIEW PASS covers the stale-token /setup frontend repair only. A failed /setup/status request still falls back to \"setup not needed\"; HttpOnly refresh-cookie invalidation across a reinstall is out of scope. Disposable browser captures were not retained, so independent disposition rests on source and executable tests.",
     "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction.",
