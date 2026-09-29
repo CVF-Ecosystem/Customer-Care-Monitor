@@ -264,8 +264,7 @@ const tenantId = computed(() => route.params.tenantId as string)
 
 const stats = ref([
   { label: 'total_conversations', value: 0, icon: 'mdi-message-text', color: 'primary' },
-  // CCMAI-UX-001a (UX-02): the API value counts every result in the period, not only QC issues.
-  { label: 'dash_results_total', hint: 'dash_results_total_hint', value: 0, icon: 'mdi-clipboard-check-outline', color: 'error' },
+  { label: 'dash_qc_violations', hint: 'dash_qc_violations_hint', value: '—', icon: 'mdi-clipboard-check-outline', color: 'error' },
   { label: 'active_jobs', value: 0, icon: 'mdi-briefcase-check', color: 'success' },
   { label: 'active_channels', value: 0, icon: 'mdi-connection', color: 'info' },
 ])
@@ -419,15 +418,20 @@ const chartOptionsNoLegend = {
   scales: { y: { beginAtZero: true } },
 }
 
+let dashboardRequestId = 0
 async function loadDashboard() {
+  const requestId = ++dashboardRequestId
+  stats.value[1].value = '—'
   try {
     const params: Record<string, string> = {}
     if (dateFrom.value) params.from = dateFrom.value
     if (dateTo.value) params.to = dateTo.value
 
     const { data } = await api.get(`/tenants/${tenantId.value}/dashboard`, { params })
+    if (requestId !== dashboardRequestId) return
     stats.value[0].value = data.total_conversations
-    stats.value[1].value = data.issues
+    const qcCount = data.qc_violation_count
+    stats.value[1].value = Number.isSafeInteger(qcCount) && qcCount >= 0 ? qcCount : '—'
     stats.value[2].value = data.active_jobs
     stats.value[3].value = data.active_channels
 
@@ -442,7 +446,7 @@ async function loadDashboard() {
     messagesByDay.value = data.messages_by_day || []
     channelCounts.value = data.conversations_by_channel || []
   } catch {
-    // Dashboard data not available yet
+    if (requestId === dashboardRequestId) stats.value[1].value = '—'
   }
 }
 

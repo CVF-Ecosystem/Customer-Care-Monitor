@@ -423,6 +423,8 @@ export default {
   // CCMAI-UX-001a
   dash_results_total: 'Kết quả đánh giá',
   dash_results_total_hint: 'Mọi kết quả trong khoảng thời gian: đánh giá, vấn đề và nhãn',
+  dash_qc_violations: 'Vi phạm QC',
+  dash_qc_violations_hint: 'Số dòng vi phạm QC trong khoảng thời gian đã chọn; một hội thoại có thể có nhiều vi phạm',
   tags_count_label: 'nhãn',
   // CCMAI-UX-010 Job Detail
   jd_back: 'Tác vụ AI',

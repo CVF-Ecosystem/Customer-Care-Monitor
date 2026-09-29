@@ -423,6 +423,8 @@ export default {
   // CCMAI-UX-001a
   dash_results_total: 'Analysis results',
   dash_results_total_hint: 'All results in the period: evaluations, issues and tags',
+  dash_qc_violations: 'QC violations',
+  dash_qc_violations_hint: 'QC violation rows in the selected period; one conversation may have multiple violations',
   tags_count_label: 'tags',
   // CCMAI-UX-010 Job Detail
   jd_back: 'AI jobs',
