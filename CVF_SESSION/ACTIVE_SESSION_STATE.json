@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-018 BUILD is REVIEW_PENDING (Claude local commit): server-owned demo fixture marker, exact idempotent backfill, and shared sync admission/scheduler/recovery/manual denial. Codex independent R2 REVIEW next. No real provider/channel call, push, self-PASS or FREEZE; S1 remains IN_PROGRESS. UX-016 F1 stays non-blocking.",
+  "nextAllowedMove": "CCMAI-RUNTIME-018 independent R2 REVIEW found blocking R018-R1: MySQL case-insensitive text comparisons make legacy fixture identity and error cleanup broader than SPEC. Claude REPAIR_WORKER next under CCMAI_RUNTIME_018.md R1 addendum; return REVIEW_PENDING for Codex re-review. S1 IN_PROGRESS; no push, provider/channel call or FREEZE. UX-016 F1 stays separate.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude); REVIEWER (Codex) next",
+  "activeRole": "COMMIT_STEWARD (Codex); REPAIR_WORKER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
