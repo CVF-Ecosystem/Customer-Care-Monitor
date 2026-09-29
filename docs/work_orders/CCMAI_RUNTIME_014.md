@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-014 — sync run identity and final-write ownership
 
-**Date:** 2026-09-29 · **State:** CHANGES_REQUIRED / R014-R1 repair authorized after [independent review](../reviews/CCMAI_RUNTIME_014_INDEPENDENT_REVIEW_2026-09-29.md) · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_SYNC_RUN_OWNERSHIP_S1_2026-09-29.md), R013 independent REVIEW PASS.
+**Date:** 2026-09-29 · **State:** REVIEW_PASS / FREEZE_OPEN after [R014-R1 independent re-review](../reviews/CCMAI_RUNTIME_014_R1_INDEPENDENT_REREVIEW_2026-09-29.md) · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_SYNC_RUN_OWNERSHIP_S1_2026-09-29.md), R013 independent REVIEW PASS.
 
 ## Route and independence
 

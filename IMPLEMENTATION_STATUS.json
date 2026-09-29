@@ -28,10 +28,10 @@
     "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: the five channel credential/OAuth routes reject failed or nil config before secret use, DB write or outbound exchange. Codex independently inspected source and ran six focused test groups and 26 leaf cases on disposable MySQL; doctor 25/25 passed. No real channel/provider or governance proof.",
     "CCMAI-RUNTIME-011 REVIEW PASS / FREEZE OPEN after R1/R2: AgentRun rejects invalid or nil configuration before sync/analysis dispatch. Focused tests directly observe no tenant job run, channel write or outbound request on rejection and detect all three effects on accepted synthetic stubs. BUILD provenance corrected; Codex independently reran focused tests and doctor 25/25. No real engine, channel, provider or governance proof.",
     "CCMAI-RUNTIME-012 REVIEW PASS / FREEZE OPEN: Zalo/Facebook OAuth callbacks report success only after exactly one tenant-scoped final credential update succeeds. Forced MySQL error, tenant-reassignment zero-row race and accepted synthetic token persistence passed; Codex independently reran focused tests and doctor 25/25. No real OAuth/provider call or governance proof.",
-    "CCMAI-RUNTIME-013 REVIEW PASS / FREEZE OPEN: manual, scheduler and agent sync paths share a tenant/channel-scoped conditional MySQL reservation; busy manual returns 409 without dispatch, scheduler skips busy, agents report non-success. Final writes require the same row still syncing. Codex independently reran focused engine/handler tests on disposable MySQL and doctor 25/25. Crash recovery and run-generation fencing remain separate; no real channel/provider or governance proof."
+    "CCMAI-RUNTIME-013 REVIEW PASS / FREEZE OPEN: manual, scheduler and agent sync paths share a tenant/channel-scoped conditional MySQL reservation; busy manual returns 409 without dispatch, scheduler skips busy, agents report non-success. Final writes require the same row still syncing. Codex independently reran focused engine/handler tests on disposable MySQL and doctor 25/25. Crash recovery and run-generation fencing remain separate; no real channel/provider or governance proof.",
+    "CCMAI-RUNTIME-014 REVIEW PASS / FREEZE OPEN after R014-R1: each new sync reservation stores a typed internal run ID and final/deferred/manual panic status writes require it. The repair keeps run ID and SQL values out of GORM's output sink on those three writes and bounds DB errors returned to workers/agents. Codex independently reran focused GORM sink, error and stale-worker tests on disposable MySQL; doctor 25/25. Old-worker side effects and stuck-sync recovery remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-014 R014-R1 repair is REVIEW_PENDING (local commit, not pushed): the run ID and SQL values no longer reach GORM's output sink for the reservation, run-ID-fenced final/deferred writes and manual panic write (query-scoped silent session engine.RunWriteDB; db/mysql.go untouched), and DB errors at the engine, agent and worker boundary are bounded write-failed classes. New tests observe a buffer-backed GORM logger at Info, Warn-on-error and Warn-on-slow levels with a positive detector; two mutations failed and were restored; full backend (14 packages), build, vet, catalog and doctor pass. Fencing and R013 shapes are unchanged; still final-write fencing only, no recovery. Codex re-review next; no push, governance claim or FREEZE.",
     "S1 remains IN_PROGRESS: recovery of a stuck syncing state (evidence of worker death or side-effect fencing) and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -161,7 +161,8 @@
     "docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_013_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_SYNC_RUN_OWNERSHIP_S1_BUILD_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_014_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_014_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/CCMAI_RUNTIME_014_R1_INDEPENDENT_REREVIEW_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

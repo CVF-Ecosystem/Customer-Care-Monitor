@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-014 R014-R1 repair is a local REVIEW_PENDING commit (run ID and SQL values kept out of the GORM output sink for reservation, final and panic writes via query-scoped silent session; bounded DB error classes; sink-observing tests with a positive detector; evidence docs/reviews/RUNTIME_SYNC_RUN_OWNERSHIP_S1_BUILD_2026-09-29.md). Codex re-reviews independently: inspect the diff, rerun focused sink tests on disposable MySQL and the doctor, record a disposition. No push, provider call, recovery or FREEZE; S1 remains IN_PROGRESS.",
+  "nextAllowedMove": "CCMAI-RUNTIME-014 R014-R1 independent re-review is REVIEW_PASS / FREEZE_OPEN (docs/reviews/CCMAI_RUNTIME_014_R1_INDEPENDENT_REREVIEW_2026-09-29.md). S1 remains IN_PROGRESS. The next separately scoped runtime decision is safe recovery of a stuck syncing state and containment of old-worker side effects; begin at INTAKE/DESIGN before any BUILD. No push, provider call, recovery or FREEZE is authorized by this review.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REPAIR_WORKER -> COMMIT_STEWARD (Claude); REVIEWER (Codex) next",
+  "activeRole": "REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
