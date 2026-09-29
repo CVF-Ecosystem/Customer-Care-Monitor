@@ -132,7 +132,9 @@ func (s *Scheduler) syncAllChannelsTask() {
 	defer cancel()
 
 	var chans []models.Channel
-	db.DB.Where("is_active = true").Find(&chans)
+	// Demo fixtures are excluded before the due-check: they can never sync, so
+	// they must not be reserved, decrypted or have their status rewritten.
+	db.DB.Where("is_active = true AND is_demo_fixture = FALSE").Find(&chans)
 
 	now := time.Now()
 	synced := 0

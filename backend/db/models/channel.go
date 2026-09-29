@@ -27,6 +27,12 @@ type Channel struct {
 	// therefore can never be released by lease expiry.
 	SyncLeaseUntil *time.Time `gorm:"type:datetime(3)" json:"-"`
 
+	// IsDemoFixture marks the invented channels created by the demo import
+	// (CCMAI-RUNTIME-018). Server-owned: set only by the demo importer and the
+	// exact legacy backfill, never serialized and never taken from request
+	// input or channel metadata. Marked rows can never be admitted to a sync.
+	IsDemoFixture bool `gorm:"not null;default:false" json:"-"`
+
 	Tenant Tenant `gorm:"foreignKey:TenantID" json:"tenant,omitempty"`
 }
 

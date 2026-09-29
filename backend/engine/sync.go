@@ -98,6 +98,9 @@ var (
 	// ErrSyncNotAdmitted: admission could not be recorded (database failure or
 	// an unexpected zero-row write).
 	ErrSyncNotAdmitted = errors.New("sync not admitted")
+	// ErrDemoFixture: the channel is a server-marked demo fixture that has no
+	// upstream and can never be synced (CCMAI-RUNTIME-018).
+	ErrDemoFixture = errors.New("demo_channel_not_syncable")
 	// ErrSyncReservationMismatch: an already-reserved entry was given an empty
 	// reservation or one that does not belong to its channel.
 	ErrSyncReservationMismatch = errors.New("sync reservation does not match channel")
@@ -223,7 +226,7 @@ var (
 func ReserveChannelSync(tenantID, channelID string) (SyncReservation, error) {
 	runID := pkg.NewUUID()
 	res := RunWriteDB().Model(&models.Channel{}).
-		Where("id = ? AND tenant_id = ? AND (last_sync_status IS NULL OR last_sync_status <> ?)", channelID, tenantID, "syncing").
+		Where("id = ? AND tenant_id = ? AND is_demo_fixture = FALSE AND (last_sync_status IS NULL OR last_sync_status <> ?)", channelID, tenantID, "syncing").
 		Updates(map[string]interface{}{
 			"last_sync_status": "syncing",
 			"last_sync_error":  "",
@@ -258,14 +261,20 @@ func ReserveChannelSync(tenantID, channelID string) (SyncReservation, error) {
 		return SyncReservation{}, ErrSyncNotAdmitted
 	}
 
-	var rows []struct{ LastSyncStatus *string }
-	if err := db.DB.Model(&models.Channel{}).Select("last_sync_status").
+	var rows []struct {
+		LastSyncStatus *string
+		IsDemoFixture  bool
+	}
+	if err := db.DB.Model(&models.Channel{}).Select("last_sync_status", "is_demo_fixture").
 		Where("id = ? AND tenant_id = ?", channelID, tenantID).Limit(1).Scan(&rows).Error; err != nil {
 		log.Printf("[sync] reservation for channel %s not classified: read error", channelID)
 		return SyncReservation{}, ErrSyncNotAdmitted
 	}
 	if len(rows) == 0 {
 		return SyncReservation{}, ErrSyncChannelMissing
+	}
+	if rows[0].IsDemoFixture {
+		return SyncReservation{}, ErrDemoFixture
 	}
 	if rows[0].LastSyncStatus != nil && *rows[0].LastSyncStatus == "syncing" {
 		return SyncReservation{}, ErrSyncAlreadyRunning
@@ -557,7 +566,9 @@ func luuFileDinhKem(ctx context.Context, chinh, duPhong storage.Store, key strin
 // SyncAllChannels syncs all active channels for a tenant.
 func (s *SyncEngine) SyncAllChannels(ctx context.Context, tenantID string) error {
 	var chans []models.Channel
-	if err := db.DB.Where("tenant_id = ? AND is_active = true", tenantID).Find(&chans).Error; err != nil {
+	// Demo fixtures have no upstream; they are skipped here so a tenant that
+	// mixes them with real channels still syncs the real ones cleanly.
+	if err := db.DB.Where("tenant_id = ? AND is_active = true AND is_demo_fixture = FALSE", tenantID).Find(&chans).Error; err != nil {
 		return fmt.Errorf("load active channels: %w", err)
 	}
 
@@ -1124,7 +1135,7 @@ func RecoverExpiredSyncLeases(limit int) (released int, err error) {
 		SyncRunID    string
 	}
 	if err := RunWriteDB().Model(&models.Channel{}).Select("id", "tenant_id", "sync_run_id").
-		Where("channel_type IN ? AND last_sync_status = ? AND sync_run_id IS NOT NULL AND sync_lease_until IS NOT NULL AND sync_lease_until < NOW(3)",
+		Where("is_demo_fixture = FALSE AND channel_type IN ? AND last_sync_status = ? AND sync_run_id IS NOT NULL AND sync_lease_until IS NOT NULL AND sync_lease_until < NOW(3)",
 			leaseEligibleChannelTypes, "syncing").
 		Order("sync_lease_until").Limit(limit).Scan(&candidates).Error; err != nil {
 		log.Printf("[sync] lease recovery scan failed: read error")
@@ -1136,7 +1147,7 @@ func RecoverExpiredSyncLeases(limit int) (released int, err error) {
 			leaseRecoveryBeforeRelease(c.ID)
 		}
 		res := RunWriteDB().Model(&models.Channel{}).
-			Where("id = ? AND tenant_id = ? AND channel_type IN ? AND last_sync_status = ? AND sync_run_id = ? AND sync_lease_until IS NOT NULL AND sync_lease_until < NOW(3)",
+			Where("id = ? AND tenant_id = ? AND is_demo_fixture = FALSE AND channel_type IN ? AND last_sync_status = ? AND sync_run_id = ? AND sync_lease_until IS NOT NULL AND sync_lease_until < NOW(3)",
 				c.ID, c.TenantID, leaseEligibleChannelTypes, "syncing", c.SyncRunID).
 			UpdateColumns(map[string]interface{}{
 				"last_sync_status": "error",

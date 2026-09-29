@@ -735,6 +735,13 @@ func SyncChannelNow(c *gin.Context) {
 		return
 	}
 
+	// A server-marked demo fixture has no upstream: refuse before loading
+	// configuration or dispatching anything (CCMAI-RUNTIME-018).
+	if channel.IsDemoFixture {
+		c.JSON(http.StatusConflict, gin.H{"error": "demo_channel_not_syncable"})
+		return
+	}
+
 	// A sync that cannot get a valid configuration must not be acknowledged:
 	// check it before any status write. The error is not logged or returned
 	// because validation messages describe secret configuration.
@@ -753,6 +760,8 @@ func SyncChannelNow(c *gin.Context) {
 		switch {
 		case errors.Is(err, engine.ErrSyncAlreadyRunning):
 			c.JSON(http.StatusConflict, gin.H{"error": "sync_already_running"})
+		case errors.Is(err, engine.ErrDemoFixture):
+			c.JSON(http.StatusConflict, gin.H{"error": "demo_channel_not_syncable"})
 		case errors.Is(err, engine.ErrSyncChannelMissing):
 			c.JSON(http.StatusNotFound, gin.H{"error": "channel_not_found"})
 		default:

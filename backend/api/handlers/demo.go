@@ -64,8 +64,8 @@ func ImportDemoData(c *gin.Context) {
 	fbChannelID := pkg.NewUUID()
 	dummyCreds := []byte(`{"demo":true}`)
 	channels := []models.Channel{
-		{ID: zaloChannelID, TenantID: tenantID, ChannelType: "zalo_oa", Name: "Coffee Zalo OA", ExternalID: "demo-zalo-oa", CredentialsEncrypted: dummyCreds, IsActive: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
-		{ID: fbChannelID, TenantID: tenantID, ChannelType: "facebook", Name: "Coffee Facebook", ExternalID: "demo-fb-page", CredentialsEncrypted: dummyCreds, IsActive: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
+		{ID: zaloChannelID, TenantID: tenantID, ChannelType: "zalo_oa", Name: "Coffee Zalo OA", ExternalID: "demo-zalo-oa", CredentialsEncrypted: dummyCreds, IsActive: true, IsDemoFixture: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
+		{ID: fbChannelID, TenantID: tenantID, ChannelType: "facebook", Name: "Coffee Facebook", ExternalID: "demo-fb-page", CredentialsEncrypted: dummyCreds, IsActive: true, IsDemoFixture: true, Metadata: "{}", CreatedAt: now.Add(-14 * 24 * time.Hour), UpdatedAt: now},
 	}
 
 	// === QC Job ===

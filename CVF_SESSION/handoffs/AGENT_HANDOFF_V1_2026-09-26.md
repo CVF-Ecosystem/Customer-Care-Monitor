@@ -5,11 +5,16 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER (CCMAI-RUNTIME-018 BUILD next; R001–R017 and UX-016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next
-- Next allowed move: Claude rehydrates and acknowledges the R018 handoff before BUILD, then returns one local REVIEW_PENDING commit. UX-016 F1 remains separate; no push, real provider/channel call or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW (CCMAI-RUNTIME-018 BUILD done, REVIEW_PENDING; R001–R017 and UX-016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
+- Next allowed move: Codex independent R2 REVIEW of the R018 BUILD. UX-016 F1 remains separate; no push, real provider/channel call, self-PASS or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-018 — demo fixture sync admission (2026-09-29)
+
+- CVF Agent Declaration and role transition (Claude, rehydrated from files at `7582064`; state, handoff, memory, implementation status and SPEC/work order agree; no `BLOCKED_CONTINUITY_DRIFT`; `BOOTSTRAP_MIGRATION_PENDING` non-blocking): project Customer-Care-Monitor-AI; CVF core `../.Controlled-Vibe-Framework-CVF` @ `26c686cc99b8be965d2760f27fe875b03376c643` (doctor 25/25); phase WORK_ORDER → BUILD; risk ceiling R2; live evidence required YES, but R018 is local runtime admission with a fake adapter and no governance claim (disposable MySQL, synthetic data only); active handoff this file; parked checkpoint none. Role transition: `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` recorded before any source edit. Scope per `docs/work_orders/CCMAI_RUNTIME_018.md`; if exact legacy identity or atomic admission cannot be proven in the allowed paths, `BUILD_BLOCKED`. No real provider/channel call, push or FREEZE.
+- BUILD result (Claude): a server-owned internal `channels.is_demo_fixture` marker (not serialized, not writable through channel input or metadata) is set by the fresh demo import and by an exact, idempotent legacy backfill (known demo external ID with matching type, exact plaintext demo credential bytes, tenant with `is_demo_data=true`); only the old fixture decrypt error is cleared, and only with no checkpoint, run ID or lease. `ReserveChannelSync` (shared by manual, scheduler and agent paths) carries the marker predicate in its conditional UPDATE and returns `ErrDemoFixture` from the zero-row classifier; the scheduler query, lease recovery and agent `sync_all` exclude marked rows; manual sync returns 409 `demo_channel_not_syncable` before config load and dispatch (also when the marker appears between read and reservation). Real channels in the same tenant keep syncing (positive detectors). 11 new tests on disposable MySQL with a fake adapter; mutations M1-M11 each caught; full backend 14 packages PASS, build/vet/diff-check clean, MySQL removed. Evidence `docs/reviews/RUNTIME_DEMO_CHANNEL_SYNC_ADMISSION_S1_BUILD_2026-09-29.md`. Role transition IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude); one local commit, `REVIEW_PENDING` for Codex; no self-PASS, FREEZE, push or real provider/channel call.
 
 ## CCMAI-RUNTIME-017 — Dashboard qc_violation_count (2026-09-29)
 

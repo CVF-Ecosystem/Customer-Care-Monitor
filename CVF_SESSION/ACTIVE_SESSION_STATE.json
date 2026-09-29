@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-018 SPEC/work order authorize Claude BUILD of server-owned demo fixture channel identity, exact legacy backfill and shared sync admission/scheduler denial. Claude first rehydrates and records WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude), then uses disposable MySQL/synthetic adapters, commits locally and returns REVIEW_PENDING to Codex. No real provider/channel call, push, deployment or FREEZE; S1 remains IN_PROGRESS. UX-016 F1 stays non-blocking and separate.",
+  "nextAllowedMove": "CCMAI-RUNTIME-018 BUILD is REVIEW_PENDING (Claude local commit): server-owned demo fixture marker, exact idempotent backfill, and shared sync admission/scheduler/recovery/manual denial. Codex independent R2 REVIEW next. No real provider/channel call, push, self-PASS or FREEZE; S1 remains IN_PROGRESS. UX-016 F1 stays non-blocking.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next",
+  "activeRole": "COMMIT_STEWARD (Claude); REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

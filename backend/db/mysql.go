@@ -67,6 +67,11 @@ func AutoMigrate() error {
 		return err
 	}
 
+	// Mark the historical demo fixture channels (CCMAI-RUNTIME-018).
+	if err := backfillDemoFixtureChannels(); err != nil {
+		return err
+	}
+
 	log.Println("Database migration completed")
 	return nil
 }
@@ -97,6 +102,45 @@ func addUniqueConstraints() error {
 	}
 
 	return nil
+}
+
+// legacyDemoCredentials is the exact plaintext the old demo importer stored in
+// the credential column. No real channel can hold it: real credentials are
+// encrypted.
+const legacyDemoCredentials = `{"demo":true}`
+
+// backfillDemoFixtureChannels marks, once and idempotently, only rows that
+// match the exact historical fixture identity: a known demo external ID with
+// its channel type, the exact plaintext demo credential bytes, and a tenant
+// whose settings carry is_demo_data=true. A real channel in a demo tenant, or a
+// same-named channel with encrypted credentials, is never marked.
+//
+// For marked rows only, the old fixture-only decrypt failure is cleared back to
+// the never-synced state, and only when no run owns the row. Checkpoints
+// (last_sync_at), run IDs, leases and activity logs are never touched.
+func backfillDemoFixtureChannels() error {
+	return DB.Transaction(func(tx *gorm.DB) error {
+		if err := tx.Exec(`UPDATE channels c JOIN tenants t ON t.id = c.tenant_id
+			SET c.is_demo_fixture = TRUE
+			WHERE c.is_demo_fixture = FALSE
+			  AND ((c.channel_type = 'zalo_oa' AND c.external_id = 'demo-zalo-oa')
+			    OR (c.channel_type = 'facebook' AND c.external_id = 'demo-fb-page'))
+			  AND c.credentials_encrypted = ?
+			  AND JSON_EXTRACT(t.settings, '$.is_demo_data') = TRUE`, []byte(legacyDemoCredentials)).Error; err != nil {
+			return fmt.Errorf("mark demo fixture channels: %w", err)
+		}
+		if err := tx.Exec(`UPDATE channels
+			SET last_sync_status = '', last_sync_error = ''
+			WHERE is_demo_fixture = TRUE
+			  AND last_sync_at IS NULL
+			  AND last_sync_status = 'error'
+			  AND last_sync_error LIKE 'decrypt failed:%'
+			  AND sync_run_id IS NULL
+			  AND sync_lease_until IS NULL`).Error; err != nil {
+			return fmt.Errorf("clear demo fixture sync error: %w", err)
+		}
+		return nil
+	})
 }
 
 func Close() {
