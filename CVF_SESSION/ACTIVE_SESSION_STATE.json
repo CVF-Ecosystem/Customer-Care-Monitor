@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-016 BUILD is a local REVIEW_PENDING commit (lease/heartbeat and conditional expired-lease release for facebook/pancake only; evidence docs/reviews/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_BUILD_2026-09-29.md). Codex performs independent R2 REVIEW: inspect the diff and adapter GET-only audit, rerun focused tests on disposable MySQL, catalog and doctor, record a disposition. No push, real provider/channel call, Zalo/legacy recovery or FREEZE; S1 remains IN_PROGRESS.",
+  "nextAllowedMove": "CCMAI-RUNTIME-016 independent REVIEW returned CHANGES_REQUIRED (R016-R1: heartbeat DB failure during a successful attachment transfer still allows message publication). Claude rehydrates, records REVIEWER (Codex) → REPAIR_WORKER (Claude) in the handoff, repairs within the R016 addendum, and returns one local REVIEW_PENDING commit for Codex re-review. No push, real provider/channel call, Zalo/legacy recovery, rollout or FREEZE; S1 remains IN_PROGRESS.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude); REVIEWER (Codex) next",
+  "activeRole": "REVIEWER → WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); REPAIR_WORKER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
