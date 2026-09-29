@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER (CCMAI-RUNTIME-011 ready for bounded BUILD; R010 and CREDIT-003 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next after rehydration/acknowledgment
-- Next allowed move: Claude rehydrates and records role acknowledgment, then implements CCMAI-RUNTIME-011 under its SPEC/work order and returns one local REVIEW_PENDING commit. Codex independently reviews. No push, provider call or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW (CCMAI-RUNTIME-011 CHANGES_REQUIRED / repair pending; R010 and CREDIT-003 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: REVIEWER (Codex) → REPAIR_WORKER (Claude) next under R011-R1 addendum
+- Next allowed move: Claude repairs R011-R1/R011-R2 within the same scope, runs gates and returns one local REVIEW_PENDING commit for Codex re-review. No push, provider call or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
@@ -593,3 +593,5 @@ CVF controls the application runtime or that a provider-backed test passed.
 - Role transition acknowledged for planning: `ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR` (Codex). Claude must rehydrate and record `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` before BUILD, then return one local BUILD/evidence commit as REVIEW_PENDING. Codex independently reviews. No real channel/provider call, governance claim, push or FREEZE.
 - Rehydration and role acknowledgment (Claude, 2026-09-29): re-read manifest, policy, active state, active handoff, memory, SPEC and work order; core `26c686c` matches the manifest. Role transition `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` acknowledged before BUILD. Scope: `backend/api/handlers/agents.go` plus focused handler tests and permitted records only; synthetic config and disposable MySQL; no provider/channel call, push or FREEZE.
 - CCMAI-RUNTIME-011 BUILD result (Claude): `AgentRun` in `agents.go` now decides an unknown name (404) after tenant authorization and before any config load, and rejects loader error or nil config for `cqa.sync`, `cqa.qc` and `cqa.classify` with generic 500 `agent_run_failed` before engine dispatch; the same validated pointer reaches the unchanged 200 sync/analysis route. Focused tests (22 leaf cases), full backend (13 packages), build and vet pass on disposable MySQL with synthetic config; a temporary guard mutation failed 6/6 rejection subtests and was restored. Evidence: `docs/reviews/RUNTIME_AGENT_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md`. Role route: `IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD`. Disposition `REVIEW_PENDING`; next move is independent Codex R2 REVIEW. Untested: real engines, providers and channels. No push, governance claim or FREEZE.
+- Continuity correction before Codex REVIEW: the Current State header above had remained at WORK_ORDER despite this BUILD result, the active state and session memory all recording REVIEW_PENDING. Codex reported `BLOCKED_CONTINUITY_DRIFT` at INTAKE and aligned only that stale header with the already recorded BUILD outcome and the owner's handoff message; no acceptance decision was made by this correction.
+- Independent R2 REVIEW (Codex): role transition `COMMIT_STEWARD (Claude) → REVIEWER (Codex)`. Source guards and ordering match the bounded SPEC. Codex independently reran focused `TestAgentRun` on disposable MySQL (exit 0; package 4.134s); test database/network removed. Review `docs/reviews/CCMAI_RUNTIME_011_INDEPENDENT_REVIEW_2026-09-29.md` returns `CHANGES_REQUIRED`: six rejection cases lack direct `job_runs` and outbound observers required by the work order; BUILD evidence names the wrong base commit (`b0e39b1`, actual parent `10af2c6`). Same-scope repair addendum is in `docs/work_orders/CCMAI_RUNTIME_011.md`. Role transition `REVIEWER (Codex) → REPAIR_WORKER (Claude)` next; no self-approval, provider call, push or FREEZE.

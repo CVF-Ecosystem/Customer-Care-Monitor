@@ -22,3 +22,7 @@ Do not edit `backend/config`, engine, adapters, provider clients, channels, jobs
 ## Exit and effects
 
 After passing gates, synchronize continuity/status and make one **local** BUILD/evidence commit with no push. Return `REVIEW_PENDING` to Codex. No saved Alibaba key, real provider/channel call, customer data, persistent Compose DB change, deployment, S1 closure or FREEZE is authorized. Synthetic tests prove admission only; they are not live CVF governance proof.
+
+## Repair addendum R011-R1 (independent REVIEW, 2026-09-29)
+
+The [independent review](../reviews/CCMAI_RUNTIME_011_INDEPENDENT_REVIEW_2026-09-29.md) found two same-scope evidence gaps. Claude may edit the focused `backend/api/handlers/agent_run_config_admission_test.go` test and, only if a small observer seam is needed, `backend/api/handlers/agents.go`, plus the BUILD evidence and allowed continuity files. Add direct tenant-scoped `job_runs` before/after assertions and a zero-outbound recording observer for all six loader-error/nil rejection cases; make the outbound observer demonstrably nonvacuous using a synthetic accepted stub call, without contacting a real endpoint. Correct the BUILD evidence base commit to `10af2c6` (parent of `44eead4`). Preserve accepted source behavior and existing assertions. Re-run the original gates, record results/cleanup, make one local repair commit and return `REVIEW_PENDING` for Codex re-review. No new path, provider, channel, deployment, push or FREEZE authority is granted.
