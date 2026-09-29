@@ -119,6 +119,13 @@ func TestLegacyDemoFixtureBackfillIsExactGuardedAndIdempotent(t *testing.T) {
 		{name: "same name but encrypted credentials", demoTenant: true, chType: "zalo_oa", external: "demo-zalo-oa", creds: enc, status: "error", errText: decryptErr, wantMarked: false, wantStatus: "error", wantError: decryptErr},
 		{name: "exact identity in a non-demo tenant", demoTenant: false, chType: "zalo_oa", external: "demo-zalo-oa", creds: plain, status: "error", errText: decryptErr, wantMarked: false, wantStatus: "error", wantError: decryptErr},
 		{name: "demo id with the wrong channel type", demoTenant: true, chType: "facebook", external: "demo-zalo-oa", creds: plain, status: "error", errText: decryptErr, wantMarked: false, wantStatus: "error", wantError: decryptErr},
+		// R018-R1: the columns are case-insensitive, so wrong-case near matches
+		// must stay untouched (unmarked, or marked with the error kept).
+		{name: "wrong-case channel type", demoTenant: true, chType: "Zalo_OA", external: "demo-zalo-oa", creds: plain, status: "error", errText: decryptErr, wantMarked: false, wantStatus: "error", wantError: decryptErr},
+		{name: "wrong-case external id", demoTenant: true, chType: "zalo_oa", external: "Demo-Zalo-OA", creds: plain, status: "error", errText: decryptErr, wantMarked: false, wantStatus: "error", wantError: decryptErr},
+		{name: "wrong-case facebook identity", demoTenant: true, chType: "FACEBOOK", external: "DEMO-FB-PAGE", creds: plain, status: "error", errText: decryptErr, wantMarked: false, wantStatus: "error", wantError: decryptErr},
+		{name: "fixture with wrong-case status", demoTenant: true, chType: "zalo_oa", external: "demo-zalo-oa", creds: plain, status: "Error", errText: decryptErr, wantMarked: true, wantStatus: "Error", wantError: decryptErr},
+		{name: "fixture with wrong-case error prefix", demoTenant: true, chType: "zalo_oa", external: "demo-zalo-oa", creds: plain, status: "error", errText: "Decrypt failed: decrypt: cipher: message authentication failed", wantMarked: true, wantStatus: "error", wantError: "Decrypt failed: decrypt: cipher: message authentication failed"},
 		{name: "near-miss credential bytes", demoTenant: true, chType: "zalo_oa", external: "demo-zalo-oa", creds: []byte(`{"demo": true}`), status: "error", errText: decryptErr, wantMarked: false, wantStatus: "error", wantError: decryptErr},
 	}
 	ids := make([]string, len(cases))

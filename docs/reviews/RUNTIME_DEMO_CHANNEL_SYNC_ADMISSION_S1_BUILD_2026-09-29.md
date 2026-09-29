@@ -57,3 +57,24 @@ Agent `sync_channel` needs no edit: `ErrDemoFixture.Error()` is the bounded stri
 `backend/db/models/channel.go`, `backend/db/mysql.go`, `backend/api/handlers/demo.go`, `backend/api/handlers/channels.go`, `backend/engine/sync.go`, `backend/engine/scheduler.go`, three new test files, this file, active state/handoff, memory, `IMPLEMENTATION_STATUS.json` and the S1 and UI roadmaps. Not self-approved; FREEZE open; no push.
 
 **Final gates (after continuity sync):** catalog `-Check` PASS; workspace doctor 25/25 PASS; `git diff --check` clean.
+
+## Addendum: Repair round 1 (R018-R1) — 2026-09-29
+
+**Finding (Codex, [review](CCMAI_RUNTIME_018_INDEPENDENT_REVIEW_2026-09-29.md)):** the backfill compared `channel_type`, `external_id`, `last_sync_status` and `last_sync_error` under the column's case-insensitive collation (`utf8mb4_0900_ai_ci`), so a wrong-case type or external ID could be marked and a wrong-case status or `decrypt failed:` prefix could be cleared. Accepted: it breaks the SPEC's exact identity and narrow cleanup. Role transition `REVIEWER (Codex) → REPAIR_WORKER (Claude)` recorded in the handoff first; first repair round, within the work-order paths.
+
+**Repair (`backend/db/mysql.go` only):** the four text checks now use `BINARY` (`BINARY c.channel_type = …`, `BINARY c.external_id = …`, `BINARY last_sync_status = 'error'`, `BINARY last_sync_error LIKE 'decrypt failed:%'`). No collation, schema or credential-format change; the credential comparison was already byte-exact on `varbinary`, and the reservation predicate and runtime paths are untouched.
+
+**Tests (`backend/db/demo_fixture_migration_test.go`):** five rows added to the backfill matrix, now 17 cases over two `AutoMigrate` passes: wrong-case channel type (`Zalo_OA`), wrong-case external ID (`Demo-Zalo-OA`), wrong-case Facebook identity (`FACEBOOK`/`DEMO-FB-PAGE`), a fixture with status `Error`, and a fixture whose prefix is `Decrypt failed:`. The first three must stay unmarked with status/error preserved; the last two are marked but keep their status and error. Canonical rows still mark/clear and pass 2 is identical.
+
+**Mutation (each on the repaired `mysql.go`, restored and verified by `cmp`):**
+
+| Mutant | Result |
+|---|---|
+| M12 remove `BINARY` from `channel_type` | `wrong-case channel type: marked = true, want false` FAILS |
+| M13 remove it from `external_id` | `wrong-case external id: marked = true` FAILS |
+| M14 remove it from `last_sync_status` | `fixture with wrong-case status` cleared, FAILS |
+| M15 remove it from the error prefix | `fixture with wrong-case error prefix` cleared, FAILS |
+
+**Commands and results:** `scripts/test-backend.ps1 -Packages ./db -Run 'DemoFixture|LegacyDemo' -VerboseTests` → both tests PASS as repaired. `scripts/test-backend.ps1 -Packages ./...` → 14 packages `ok` (handlers 22.9 s, engine 19.4 s, db 1.6 s); the script removed its disposable MySQL and network, and `docker ps -a` shows no `ccma-test*`. `go build ./...`, `go vet ./...`, `git diff --check` clean. No persistent Compose database, real channel or provider was contacted; not live governance proof. Catalog `-Check` and doctor: see the last line. `REVIEW_PENDING` for Codex re-review; no self-PASS, FREEZE or push.
+
+**R1 final gates (after continuity sync):** catalog `-Check` PASS; workspace doctor 25/25 PASS; `git diff --check` clean.

@@ -118,13 +118,17 @@ const legacyDemoCredentials = `{"demo":true}`
 // For marked rows only, the old fixture-only decrypt failure is cleared back to
 // the never-synced state, and only when no run owns the row. Checkpoints
 // (last_sync_at), run IDs, leases and activity logs are never touched.
+//
+// The text columns use a case-insensitive collation, so every identity and
+// cleanup text comparison is BINARY (case-sensitive); the global collation is
+// unchanged.
 func backfillDemoFixtureChannels() error {
 	return DB.Transaction(func(tx *gorm.DB) error {
 		if err := tx.Exec(`UPDATE channels c JOIN tenants t ON t.id = c.tenant_id
 			SET c.is_demo_fixture = TRUE
 			WHERE c.is_demo_fixture = FALSE
-			  AND ((c.channel_type = 'zalo_oa' AND c.external_id = 'demo-zalo-oa')
-			    OR (c.channel_type = 'facebook' AND c.external_id = 'demo-fb-page'))
+			  AND ((BINARY c.channel_type = 'zalo_oa' AND BINARY c.external_id = 'demo-zalo-oa')
+			    OR (BINARY c.channel_type = 'facebook' AND BINARY c.external_id = 'demo-fb-page'))
 			  AND c.credentials_encrypted = ?
 			  AND JSON_EXTRACT(t.settings, '$.is_demo_data') = TRUE`, []byte(legacyDemoCredentials)).Error; err != nil {
 			return fmt.Errorf("mark demo fixture channels: %w", err)
@@ -133,8 +137,8 @@ func backfillDemoFixtureChannels() error {
 			SET last_sync_status = '', last_sync_error = ''
 			WHERE is_demo_fixture = TRUE
 			  AND last_sync_at IS NULL
-			  AND last_sync_status = 'error'
-			  AND last_sync_error LIKE 'decrypt failed:%'
+			  AND BINARY last_sync_status = 'error'
+			  AND BINARY last_sync_error LIKE 'decrypt failed:%'
 			  AND sync_run_id IS NULL
 			  AND sync_lease_until IS NULL`).Error; err != nil {
 			return fmt.Errorf("clear demo fixture sync error: %w", err)
