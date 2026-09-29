@@ -20,6 +20,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storage"
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 	"gorm.io/gorm/logger"
 )
 
@@ -96,6 +97,8 @@ var (
 	// ErrSyncReservationMismatch: an already-reserved entry was given an empty
 	// reservation or one that does not belong to its channel.
 	ErrSyncReservationMismatch = errors.New("sync reservation does not match channel")
+	ErrSyncOwnershipLost       = errors.New("sync_ownership_lost")
+	ErrSyncWriteFailed         = errors.New("sync write failed")
 )
 
 // RunWriteDB returns a session for the writes that carry a run ID: the
@@ -121,6 +124,49 @@ type SyncReservation struct {
 
 func (r SyncReservation) valid() bool {
 	return r.TenantID != "" && r.ChannelID != "" && r.RunID != ""
+}
+
+// withOwnedSyncWrite serializes a run-owned side effect with any channel
+// ownership change. Checking outside this transaction would permit takeover
+// between the check and the write. The silent session also keeps the run ID and
+// any values in these statements out of GORM's interpolated SQL output.
+func withOwnedSyncWrite(reservation SyncReservation, write func(*gorm.DB) error) error {
+	if !reservation.valid() {
+		return ErrSyncOwnershipLost
+	}
+	var innerErr error
+	err := RunWriteDB().Transaction(func(tx *gorm.DB) error {
+		var owner models.Channel
+		lookup := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Select("id", "last_sync_status", "sync_run_id").
+			Where("id = ? AND tenant_id = ?", reservation.ChannelID, reservation.TenantID).
+			Take(&owner)
+		if errors.Is(lookup.Error, gorm.ErrRecordNotFound) {
+			innerErr = ErrSyncOwnershipLost
+			return innerErr
+		}
+		if lookup.Error != nil {
+			innerErr = ErrSyncWriteFailed
+			return innerErr
+		}
+		if owner.LastSyncStatus != "syncing" || owner.SyncRunID == nil || *owner.SyncRunID != reservation.RunID {
+			innerErr = ErrSyncOwnershipLost
+			return innerErr
+		}
+		innerErr = write(tx)
+		return innerErr
+	})
+	if err != nil {
+		if innerErr != nil {
+			return innerErr
+		}
+		return ErrSyncWriteFailed // begin/commit failure; never expose driver text
+	}
+	return nil
+}
+
+func checkSyncOwnership(reservation SyncReservation) error {
+	return withOwnedSyncWrite(reservation, func(*gorm.DB) error { return nil })
 }
 
 // Test seams (CCMAI-RUNTIME-013): the adapter factory and the after-sync
@@ -208,7 +254,7 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	}
 	recorded := false
 	defer func() {
-		if recorded {
+		if recorded || errors.Is(runErr, ErrSyncOwnershipLost) {
 			return
 		}
 		r := recover()
@@ -241,35 +287,10 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 		return finish("error", fmt.Sprintf("adapter init failed: %v", err))
 	}
 
-	// Set token refresh callback for Zalo — persist new tokens to DB after refresh
+	// Persist rotated tokens only while this run still owns the channel.
 	if zaloAdapter, ok := adapter.(*channels.ZaloOAAdapter); ok {
-		chID := channel.ID
-		encKey := s.cfg.EncryptionKey
-		zaloAdapter.SetTokenRefreshCallback(func(newAccess, newRefresh string) {
-			var ch models.Channel
-			if db.DB.First(&ch, "id = ?", chID).Error != nil {
-				return
-			}
-			oldCreds, err := pkg.Decrypt(ch.CredentialsEncrypted, encKey)
-			if err != nil {
-				log.Printf("[sync] decrypt failed for token persist: %v", err)
-				return
-			}
-			var credsMap map[string]interface{}
-			if err := json.Unmarshal(oldCreds, &credsMap); err != nil {
-				log.Printf("[sync] unmarshal creds failed: %v", err)
-				return
-			}
-			credsMap["access_token"] = newAccess
-			credsMap["refresh_token"] = newRefresh
-			newCredJSON, _ := json.Marshal(credsMap)
-			encrypted, err := pkg.Encrypt(newCredJSON, encKey)
-			if err != nil {
-				log.Printf("[sync] encrypt failed for token persist: %v", err)
-				return
-			}
-			db.DB.Model(&ch).Update("credentials_encrypted", encrypted)
-			log.Printf("[sync] persisted refreshed Zalo tokens for channel %s", chID)
+		zaloAdapter.SetTokenRefreshCallback(func(newAccess, newRefresh string) error {
+			return s.persistZaloRefreshedTokens(reservation, newAccess, newRefresh)
 		})
 	}
 
@@ -281,8 +302,14 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	}
 
 	// Fetch recent conversations
+	if err := checkSyncOwnership(reservation); err != nil {
+		return err
+	}
 	conversations, err := adapter.FetchRecentConversations(ctx, since, 100)
 	if err != nil {
+		if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
+			return err
+		}
 		return finish("error", fmt.Sprintf("fetch conversations failed: %v", err))
 	}
 
@@ -303,18 +330,30 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 
 	for _, conv := range conversations {
 		conversationFailed := false
+		if err := checkSyncOwnership(reservation); err != nil {
+			return err
+		}
 
 		// Upsert conversation
-		convID, err := s.upsertConversation(channel.TenantID, channel.ID, conv)
+		convID, err := s.upsertConversation(reservation, conv)
 		if err != nil {
+			if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
+				return err
+			}
 			log.Printf("[sync] error upserting conversation %s: %v", conv.ExternalID, err)
 			progress.fail("conversation", conv.ExternalID, err)
 			continue
 		}
 
 		// Fetch messages for this conversation
+		if err := checkSyncOwnership(reservation); err != nil {
+			return err
+		}
 		messages, err := adapter.FetchMessages(ctx, conv.ExternalID, since)
 		if err != nil {
+			if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
+				return err
+			}
 			log.Printf("[sync] error fetching messages for %s: %v", conv.ExternalID, err)
 			progress.fail("messages", conv.ExternalID, err)
 			continue
@@ -322,14 +361,28 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 
 		// Upsert messages
 		for _, msg := range messages {
+			if err := checkSyncOwnership(reservation); err != nil {
+				return err
+			}
+			var newKeys []string
 			if syncFiles {
-				if err := s.downloadAttachments(channel.TenantID, convID, &msg); err != nil {
-					log.Printf("[sync] attachment coverage incomplete for message %s: %v", msg.ExternalID, err)
-					progress.fail("attachments", msg.ExternalID, err)
+				var attachmentErr error
+				newKeys, attachmentErr = s.downloadAttachments(ctx, reservation, convID, &msg)
+				if errors.Is(attachmentErr, ErrSyncOwnershipLost) || errors.Is(attachmentErr, ErrSyncWriteFailed) {
+					s.cleanupAttemptKeys(reservation.TenantID, convID, newKeys)
+					return attachmentErr
+				}
+				if attachmentErr != nil {
+					log.Printf("[sync] attachment coverage incomplete for message %s: %v", msg.ExternalID, attachmentErr)
+					progress.fail("attachments", msg.ExternalID, attachmentErr)
 					conversationFailed = true
 				}
 			}
-			if err := s.upsertMessage(channel.TenantID, convID, msg); err != nil {
+			if err := s.upsertMessage(reservation, convID, msg); err != nil {
+				s.cleanupAttemptKeys(reservation.TenantID, convID, newKeys)
+				if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
+					return err
+				}
 				log.Printf("[sync] error upserting message %s: %v", msg.ExternalID, err)
 				progress.fail("message", msg.ExternalID, err)
 				conversationFailed = true
@@ -339,11 +392,10 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 		}
 
 		// Update conversation message count
-		var count int64
-		if err := db.DB.Model(&models.Message{}).Where("conversation_id = ?", convID).Count(&count).Error; err != nil {
-			progress.fail("message_count", conv.ExternalID, err)
-			conversationFailed = true
-		} else if err := db.DB.Model(&models.Conversation{}).Where("id = ?", convID).Update("message_count", count).Error; err != nil {
+		if err := s.updateOwnedMessageCount(reservation, convID); err != nil {
+			if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
+				return err
+			}
 			progress.fail("message_count", conv.ExternalID, err)
 			conversationFailed = true
 		}
@@ -395,8 +447,7 @@ func luuFileDinhKem(ctx context.Context, chinh, duPhong storage.Store, key strin
 		return "", err
 	}
 
-	log.Printf("[sync] kho chính (%s) không nhận file %s: %v — ghi tạm xuống đĩa, chạy migrate-files -up để chuyển lên sau",
-		chinh.Kind(), key, err)
+	log.Printf("[sync] kho chính (%s) không nhận file: storage error — ghi tạm xuống đĩa, chạy migrate-files -up để chuyển lên sau", chinh.Kind())
 
 	body2, size2, contentType2, err2 := tai()
 	if err2 != nil {
@@ -427,88 +478,75 @@ func (s *SyncEngine) SyncAllChannels(ctx context.Context, tenantID string) error
 	return errors.Join(syncErrors...)
 }
 
-func (s *SyncEngine) upsertConversation(tenantID, channelID string, conv channels.SyncedConversation) (string, error) {
-	var existing models.Conversation
-	result := db.DB.Where("tenant_id = ? AND channel_id = ? AND external_conversation_id = ?",
-		tenantID, channelID, conv.ExternalID).First(&existing)
-
+func (s *SyncEngine) upsertConversation(reservation SyncReservation, conv channels.SyncedConversation) (string, error) {
 	metadataJSON, err := json.Marshal(conv.Metadata)
 	if err != nil {
 		return "", fmt.Errorf("marshal conversation metadata: %w", err)
 	}
-
-	if result.Error == nil {
-		// Update existing
-		if err := db.DB.Model(&existing).Updates(map[string]interface{}{
-			"customer_name":   conv.CustomerName,
-			"last_message_at": conv.LastMessageAt,
-			"metadata":        string(metadataJSON),
-			"updated_at":      time.Now(),
-		}).Error; err != nil {
-			return "", err
+	var conversationID string
+	err = withOwnedSyncWrite(reservation, func(tx *gorm.DB) error {
+		var existing models.Conversation
+		result := tx.Where("tenant_id = ? AND channel_id = ? AND external_conversation_id = ?",
+			reservation.TenantID, reservation.ChannelID, conv.ExternalID).First(&existing)
+		if result.Error == nil {
+			if err := tx.Model(&existing).Updates(map[string]interface{}{
+				"customer_name": conv.CustomerName, "last_message_at": conv.LastMessageAt,
+				"metadata": string(metadataJSON), "updated_at": time.Now(),
+			}).Error; err != nil {
+				return ErrSyncWriteFailed
+			}
+			conversationID = existing.ID
+			return nil
 		}
-		return existing.ID, nil
-	}
-	if !errors.Is(result.Error, gorm.ErrRecordNotFound) {
-		return "", fmt.Errorf("find existing conversation: %w", result.Error)
-	}
-
-	// Create new
-	newConv := models.Conversation{
-		ID:                     pkg.NewUUID(),
-		TenantID:               tenantID,
-		ChannelID:              channelID,
-		ExternalConversationID: conv.ExternalID,
-		ExternalUserID:         conv.ExternalUserID,
-		CustomerName:           conv.CustomerName,
-		LastMessageAt:          &conv.LastMessageAt,
-		MessageCount:           0,
-		Metadata:               string(metadataJSON),
-		CreatedAt:              time.Now(),
-		UpdatedAt:              time.Now(),
-	}
-	if err := db.DB.Create(&newConv).Error; err != nil {
-		return "", err
-	}
-	return newConv.ID, nil
+		if !errors.Is(result.Error, gorm.ErrRecordNotFound) {
+			return ErrSyncWriteFailed
+		}
+		newConv := models.Conversation{
+			ID: pkg.NewUUID(), TenantID: reservation.TenantID, ChannelID: reservation.ChannelID,
+			ExternalConversationID: conv.ExternalID, ExternalUserID: conv.ExternalUserID,
+			CustomerName: conv.CustomerName, LastMessageAt: &conv.LastMessageAt,
+			Metadata: string(metadataJSON), CreatedAt: time.Now(), UpdatedAt: time.Now(),
+		}
+		if err := tx.Create(&newConv).Error; err != nil {
+			return ErrSyncWriteFailed
+		}
+		conversationID = newConv.ID
+		return nil
+	})
+	return conversationID, err
 }
 
-func (s *SyncEngine) upsertMessage(tenantID, conversationID string, msg channels.SyncedMessage) error {
-	// Check if message already exists (dedup by external_message_id)
-	var existing models.Message
-	result := db.DB.Where("tenant_id = ? AND conversation_id = ? AND external_message_id = ?",
-		tenantID, conversationID, msg.ExternalID).First(&existing)
-	if result.Error == nil {
-		return updateExistingMessage(&existing, msg)
-	}
-	if !errors.Is(result.Error, gorm.ErrRecordNotFound) {
-		return fmt.Errorf("find existing message: %w", result.Error)
-	}
-
-	attachmentsJSON, err := json.Marshal(msg.Attachments)
-	if err != nil {
-		return fmt.Errorf("marshal message attachments: %w", err)
-	}
-	rawDataJSON, err := json.Marshal(msg.RawData)
-	if err != nil {
-		return fmt.Errorf("marshal message raw data: %w", err)
-	}
-
-	message := models.Message{
-		ID:                pkg.NewUUID(),
-		TenantID:          tenantID,
-		ConversationID:    conversationID,
-		ExternalMessageID: msg.ExternalID,
-		SenderType:        msg.SenderType,
-		SenderName:        msg.SenderName,
-		Content:           msg.Content,
-		ContentType:       msg.ContentType,
-		Attachments:       string(attachmentsJSON),
-		SentAt:            msg.SentAt,
-		RawData:           string(rawDataJSON),
-		CreatedAt:         time.Now(),
-	}
-	return db.DB.Create(&message).Error
+func (s *SyncEngine) upsertMessage(reservation SyncReservation, conversationID string, msg channels.SyncedMessage) error {
+	return withOwnedSyncWrite(reservation, func(tx *gorm.DB) error {
+		var existing models.Message
+		result := tx.Where("tenant_id = ? AND conversation_id = ? AND external_message_id = ?",
+			reservation.TenantID, conversationID, msg.ExternalID).First(&existing)
+		if result.Error == nil {
+			return updateExistingMessage(tx, &existing, msg)
+		}
+		if !errors.Is(result.Error, gorm.ErrRecordNotFound) {
+			return ErrSyncWriteFailed
+		}
+		attachmentsJSON, err := json.Marshal(msg.Attachments)
+		if err != nil {
+			return fmt.Errorf("marshal message attachments: %w", err)
+		}
+		rawDataJSON, err := json.Marshal(msg.RawData)
+		if err != nil {
+			return fmt.Errorf("marshal message raw data: %w", err)
+		}
+		message := models.Message{
+			ID: pkg.NewUUID(), TenantID: reservation.TenantID, ConversationID: conversationID,
+			ExternalMessageID: msg.ExternalID, SenderType: msg.SenderType,
+			SenderName: msg.SenderName, Content: msg.Content, ContentType: msg.ContentType,
+			Attachments: string(attachmentsJSON), SentAt: msg.SentAt,
+			RawData: string(rawDataJSON), CreatedAt: time.Now(),
+		}
+		if err := tx.Create(&message).Error; err != nil {
+			return ErrSyncWriteFailed
+		}
+		return nil
+	})
 }
 
 // updateExistingMessage applies a same-external-ID replay onto an already
@@ -518,7 +556,7 @@ func (s *SyncEngine) upsertMessage(tenantID, conversationID string, msg channels
 // deletion from an empty reply. The message's internal ID and row count are
 // never touched. When nothing actually differs, no UPDATE is issued at all,
 // so a replay of an unchanged message causes no meaningful DB mutation.
-func updateExistingMessage(existing *models.Message, msg channels.SyncedMessage) error {
+func updateExistingMessage(tx *gorm.DB, existing *models.Message, msg channels.SyncedMessage) error {
 	updates := map[string]interface{}{}
 
 	if msg.Content != "" && msg.Content != existing.Content {
@@ -560,7 +598,63 @@ func updateExistingMessage(existing *models.Message, msg channels.SyncedMessage)
 	if len(updates) == 0 {
 		return nil
 	}
-	return db.DB.Model(existing).Updates(updates).Error
+	if err := tx.Model(existing).Updates(updates).Error; err != nil {
+		return ErrSyncWriteFailed
+	}
+	return nil
+}
+
+func (s *SyncEngine) updateOwnedMessageCount(reservation SyncReservation, conversationID string) error {
+	return withOwnedSyncWrite(reservation, func(tx *gorm.DB) error {
+		var count int64
+		if err := tx.Model(&models.Message{}).Where("tenant_id = ? AND conversation_id = ?", reservation.TenantID, conversationID).Count(&count).Error; err != nil {
+			return ErrSyncWriteFailed
+		}
+		result := tx.Model(&models.Conversation{}).
+			Where("id = ? AND tenant_id = ? AND channel_id = ?", conversationID, reservation.TenantID, reservation.ChannelID).
+			Update("message_count", count)
+		if result.Error != nil || result.RowsAffected != 1 {
+			return ErrSyncWriteFailed
+		}
+		return nil
+	})
+}
+
+func (s *SyncEngine) persistZaloRefreshedTokens(reservation SyncReservation, access, refresh string) error {
+	return withOwnedSyncWrite(reservation, func(tx *gorm.DB) error {
+		var ch models.Channel
+		if err := tx.Where("id = ? AND tenant_id = ?", reservation.ChannelID, reservation.TenantID).Take(&ch).Error; err != nil {
+			return ErrSyncWriteFailed
+		}
+		oldCreds, err := pkg.Decrypt(ch.CredentialsEncrypted, s.cfg.EncryptionKey)
+		if err != nil {
+			return ErrSyncWriteFailed
+		}
+		var creds map[string]interface{}
+		if err := json.Unmarshal(oldCreds, &creds); err != nil {
+			return ErrSyncWriteFailed
+		}
+		creds["access_token"], creds["refresh_token"] = access, refresh
+		encoded, err := json.Marshal(creds)
+		if err != nil {
+			return ErrSyncWriteFailed
+		}
+		encrypted, err := pkg.Encrypt(encoded, s.cfg.EncryptionKey)
+		if err != nil {
+			return ErrSyncWriteFailed
+		}
+		result := tx.Model(&models.Channel{}).
+			Where("id = ? AND tenant_id = ? AND last_sync_status = ? AND sync_run_id = ?",
+				reservation.ChannelID, reservation.TenantID, "syncing", reservation.RunID).
+			Update("credentials_encrypted", encrypted)
+		if result.Error != nil {
+			return ErrSyncWriteFailed
+		}
+		if result.RowsAffected != 1 {
+			return ErrSyncOwnershipLost
+		}
+		return nil
+	})
 }
 
 // mergeRawData decides whether a replay's raw-data map should overwrite what
@@ -702,16 +796,21 @@ func (s *SyncEngine) recordSyncStatus(reservation SyncReservation, status, errMs
 	return true, nil
 }
 
-// downloadAttachments tải file đính kèm về nơi cất file đang cấu hình — đĩa
-// máy chủ hoặc S3. Khoá của file vẫn là "<tenant>/<cuộc chat>/<tên file>" như
-// trước, nên đổi nơi cất không phải đụng vào dữ liệu đã lưu.
-func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.SyncedMessage) error {
+// downloadAttachments reuses an existing same-identity object when present.
+// A new download receives an attempt-unique key, so an old run cannot replace
+// a newer run's bytes even if it finishes a network request after takeover.
+// Only the owned message upsert may publish the new key in the database.
+func (s *SyncEngine) downloadAttachments(ctx context.Context, reservation SyncReservation, convID string, msg *channels.SyncedMessage) ([]string, error) {
+	if err := checkSyncOwnership(reservation); err != nil {
+		return nil, err
+	}
+	tenantID := reservation.TenantID
 	// Kho trên đĩa luôn dựng sẵn làm lưới an toàn. Mất một tấm ảnh là mất hẳn —
 	// link ảnh bên Zalo và Facebook hết hạn sau ít lâu, không tải lại được nữa —
 	// nên S3 trục trặc thì thà ghi tạm xuống đĩa rồi chuyển lên sau, hơn là bỏ.
 	duPhong, err := storage.NewLocal(s.cfg.StorageLocalDir)
 	if err != nil {
-		return fmt.Errorf("không dựng được kho trên đĩa: %w", err)
+		return nil, fmt.Errorf("không dựng được kho trên đĩa: %w", err)
 	}
 
 	// Mỗi công ty có kho riêng: công ty này để trên S3, công ty kia vẫn trên đĩa.
@@ -720,11 +819,42 @@ func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.
 		log.Printf("[sync] không lấy được nơi cất file của công ty %s (%v) — tạm ghi xuống đĩa", tenantID, err)
 		store = duPhong
 	}
+	// Replaying an unchanged attachment identity should not create a new object
+	// on every sync. A missing old object is downloaded again under a fresh key.
+	prior := map[string]string{}
+	var stored models.Message
+	lookup := RunWriteDB().Where("tenant_id = ? AND conversation_id = ? AND external_message_id = ?",
+		tenantID, convID, msg.ExternalID).Take(&stored)
+	if lookup.Error == nil {
+		var old []channels.Attachment
+		if err := json.Unmarshal([]byte(stored.Attachments), &old); err != nil {
+			return nil, fmt.Errorf("parse stored attachments: %w", err)
+		}
+		for _, att := range old {
+			if att.LocalPath != "" {
+				prior[att.Type+"\x00"+att.URL+"\x00"+att.Name] = att.LocalPath
+			}
+		}
+	} else if !errors.Is(lookup.Error, gorm.ErrRecordNotFound) {
+		return nil, ErrSyncWriteFailed
+	}
 
 	var failures []string
+	var newKeys []string
 	for i, att := range msg.Attachments {
 		if att.URL == "" {
 			continue
+		}
+		if err := checkSyncOwnership(reservation); err != nil {
+			return newKeys, err
+		}
+		if oldKey := prior[att.Type+"\x00"+att.URL+"\x00"+att.Name]; oldKey != "" {
+			if exists, err := store.Exists(ctx, oldKey); err == nil && exists {
+				msg.Attachments[i].LocalPath = oldKey
+				continue
+			} else if err != nil {
+				return newKeys, ErrSyncWriteFailed
+			}
 		}
 
 		// Tên file đến từ API bên ngoài nên không được tin: chỉ lấy phần tên,
@@ -733,11 +863,15 @@ func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.
 		if name == "" || name == "." || name == "/" || strings.Contains(name, "..") {
 			name = fmt.Sprintf("%s-%d", att.Type, time.Now().UnixMilli())
 		}
-		key := path.Join(tenantID, convID, name)
+		key := path.Join(tenantID, convID, pkg.NewUUID(), name)
 
 		tai := func() (io.ReadCloser, int64, string, error) {
 			client := &http.Client{Timeout: 30 * time.Second}
-			resp, err := client.Get(att.URL)
+			req, err := http.NewRequestWithContext(ctx, http.MethodGet, att.URL, nil)
+			if err != nil {
+				return nil, 0, "", err
+			}
+			resp, err := client.Do(req)
 			if err != nil {
 				return nil, 0, "", err
 			}
@@ -750,20 +884,55 @@ func (s *SyncEngine) downloadAttachments(tenantID, convID string, msg *channels.
 			return resp.Body, resp.ContentLength, resp.Header.Get("Content-Type"), nil
 		}
 
-		noiDaLuu, err := luuFileDinhKem(context.Background(), store, duPhong, key, tai)
+		noiDaLuu, err := luuFileDinhKem(ctx, store, duPhong, key, tai)
 		if err != nil {
-			log.Printf("[sync] lưu file %s hỏng: %v", key, err)
-			failures = append(failures, fmt.Sprintf("%s: %v", name, err))
+			log.Printf("[sync] attachment transfer failed for channel %s", reservation.ChannelID)
+			failures = append(failures, "attachment transfer failed")
 			continue
 		}
 
 		// Trường LocalPath giữ nguyên tên cũ để không phải đổi dữ liệu đã lưu,
 		// nay mang nghĩa khoá của file trong nơi cất.
 		msg.Attachments[i].LocalPath = key
-		log.Printf("[sync] downloaded %s → %s (%s)", att.URL, key, noiDaLuu)
+		newKeys = append(newKeys, key)
+		log.Printf("[sync] downloaded attachment for channel %s (%s)", reservation.ChannelID, noiDaLuu)
 	}
 	if len(failures) > 0 {
-		return fmt.Errorf("%d attachment không lưu được: %s", len(failures), strings.Join(failures, "; "))
+		return newKeys, fmt.Errorf("%d attachment không lưu được: %s", len(failures), strings.Join(failures, "; "))
 	}
-	return nil
+	return newKeys, nil
+}
+
+func (s *SyncEngine) cleanupAttemptKeys(tenantID, convID string, keys []string) {
+	if len(keys) == 0 {
+		return
+	}
+	local, err := storage.NewLocal(s.cfg.StorageLocalDir)
+	if err != nil {
+		log.Printf("[sync] cannot initialize attachment cleanup: storage error")
+		return
+	}
+	store, err := storage.ForTenant(tenantID)
+	if err != nil {
+		store = local
+	}
+	for _, key := range keys {
+		// A failed/unknown COMMIT result is not proof the message write rolled
+		// back. Delete only after a successful read proves this key is not
+		// referenced; on read failure, leave an orphan instead of breaking a
+		// potentially committed attachment.
+		var references int64
+		if err := RunWriteDB().Model(&models.Message{}).
+			Where("tenant_id = ? AND conversation_id = ? AND JSON_SEARCH(attachments, 'one', ?) IS NOT NULL", tenantID, convID, key).
+			Count(&references).Error; err != nil {
+			log.Printf("[sync] attachment attempt cleanup deferred: reference check failed")
+			continue
+		}
+		if references != 0 {
+			continue
+		}
+		if err := store.Delete(context.Background(), key); err != nil {
+			log.Printf("[sync] attachment attempt cleanup failed: storage error")
+		}
+	}
 }

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -32,7 +32,7 @@
     "CCMAI-RUNTIME-014 REVIEW PASS / FREEZE OPEN after R014-R1: each new sync reservation stores a typed internal run ID and final/deferred/manual panic status writes require it. The repair keeps run ID and SQL values out of GORM's output sink on those three writes and bounds DB errors returned to workers/agents. Codex independently reran focused GORM sink, error and stale-worker tests on disposable MySQL; doctor 25/25. Old-worker side effects and stuck-sync recovery remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-015 is WORK_ORDER only: source audit identified stale-worker conversation/message/count writes, shared attachment-object keys and Zalo credential persistence outside R014 terminal fencing. The R2 SPEC/work order authorize Claude to fence local persisted effects with row-locked ownership transactions, attempt-unique object keys and propagated refresh-persist failure, then return a local REVIEW_PENDING build. No R015 implementation or recovery/reclaim exists yet.",
+    "CCMAI-RUNTIME-015 BUILD by Codex is REVIEW_PENDING for independent Claude review: local conversation/message/count and refreshed-Zalo-credential writes use a silent, row-locked channel ownership transaction; an unchanged attachment reuses its object while new downloads use unique attempt keys and guarded publication. Focused and full backend synthetic/disposable tests, build and vet passed; two lock/key mutations failed and were restored. This is not recovery/reclaim or live provider proof, and a provider request already in flight remains a separate risk.",
     "S1 remains IN_PROGRESS: recovery of a stuck syncing state (evidence of worker death or side-effect fencing) and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -164,7 +164,8 @@
     "docs/reviews/CCMAI_RUNTIME_013_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_SYNC_RUN_OWNERSHIP_S1_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_014_INDEPENDENT_REVIEW_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_014_R1_INDEPENDENT_REREVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_014_R1_INDEPENDENT_REREVIEW_2026-09-29.md",
+    "docs/reviews/RUNTIME_SYNC_SIDE_EFFECT_OWNERSHIP_S1_BUILD_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }

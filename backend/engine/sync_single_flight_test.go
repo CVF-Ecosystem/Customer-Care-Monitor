@@ -486,8 +486,8 @@ func TestSyncRunFinalWriteFailureIsNotSuccess(t *testing.T) {
 		}
 		err := NewSyncEngine(f.cfg).SyncChannel(context.Background(), f.channel(t, f.chA))
 
-		if err == nil || !strings.Contains(err.Error(), "0 rows affected") {
-			t.Fatalf("got %v, want the zero-row write reported", err)
+		if !errors.Is(err, ErrSyncOwnershipLost) {
+			t.Fatalf("got %v, want ownership loss before any side-effect write", err)
 		}
 		got := f.statusOf(t, f.chA)
 		if got.Tenant != f.otherTenantID || got.Status != "syncing" || got.LastSyncAt != nil || f.triggerCount() != 0 {

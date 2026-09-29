@@ -28,7 +28,7 @@ type ZaloOACredentials struct {
 }
 
 // OnTokenRefresh is called when tokens are refreshed — caller should persist new creds.
-type OnTokenRefresh func(newAccessToken, newRefreshToken string)
+type OnTokenRefresh func(newAccessToken, newRefreshToken string) error
 
 type ZaloOAAdapter struct {
 	creds          ZaloOACredentials
@@ -86,12 +86,13 @@ func (z *ZaloOAAdapter) refreshToken(ctx context.Context) error {
 		return fmt.Errorf("zalo token refresh error %d: %s", result.Error, result.Message)
 	}
 
+	if z.onTokenRefresh != nil {
+		if err := z.onTokenRefresh(result.AccessToken, result.RefreshToken); err != nil {
+			return fmt.Errorf("zalo token refresh persistence failed: %w", err)
+		}
+	}
 	z.creds.AccessToken = result.AccessToken
 	z.creds.RefreshToken = result.RefreshToken
-
-	if z.onTokenRefresh != nil {
-		z.onTokenRefresh(result.AccessToken, result.RefreshToken)
-	}
 
 	return nil
 }

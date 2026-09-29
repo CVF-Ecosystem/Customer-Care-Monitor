@@ -17,6 +17,7 @@ import (
 // connectTestDB helper already shared by snapshot_db_test.go.
 type syncReplayFixture struct {
 	suffix, tenantID, channelID, convID string
+	reservation                         SyncReservation
 }
 
 func setupSyncReplayFixture(t *testing.T) *syncReplayFixture {
@@ -40,6 +41,11 @@ func setupSyncReplayFixture(t *testing.T) *syncReplayFixture {
 		f.channelID, f.tenantID)
 	exec(`INSERT INTO conversations (id, tenant_id, channel_id, external_conversation_id, customer_name, last_message_at, message_count, metadata, created_at, updated_at) VALUES (?, ?, ?, 'ext-replay', 'Khach', NOW(), 0, '{}', NOW(), NOW())`,
 		f.convID, f.tenantID, f.channelID)
+	var err error
+	f.reservation, err = ReserveChannelSync(f.tenantID, f.channelID)
+	if err != nil {
+		t.Fatalf("reserve replay fixture: %v", err)
+	}
 
 	t.Cleanup(func() {
 		db.DB.Exec("DELETE FROM messages WHERE tenant_id = ?", f.tenantID)
@@ -115,7 +121,7 @@ func TestUpsertMessageReplayUpdatesStaleContentAndDigest(t *testing.T) {
 	const extID = "m-stale-1"
 	sentAt1 := time.Now().Add(-10 * time.Minute).UTC().Truncate(time.Second)
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach A",
 		Content: "Đơn hàng của mình đâu rồi ạ", ContentType: "text", SentAt: sentAt1,
 	}); err != nil {
@@ -131,7 +137,7 @@ func TestUpsertMessageReplayUpdatesStaleContentAndDigest(t *testing.T) {
 	// artificial but valid role transition for exercising the assertion.
 	newSenderType := "agent"
 	newContentType := "sticker"
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: newSenderType, SenderName: newSender,
 		Content: newContent, ContentType: newContentType, SentAt: sentAt2,
 	}); err != nil {
@@ -179,7 +185,7 @@ func TestUpsertMessageIdenticalReplayIsNoOpAndPreservesAttachmentLocalPath(t *te
 	sentAt := time.Now().Add(-5 * time.Minute).UTC().Truncate(time.Second)
 	stored := channels.Attachment{Type: "image", URL: "https://cdn.example/a.jpg", Name: "a.jpg", LocalPath: "tenant/conv/a.jpg"}
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach B",
 		Content: "Cho mình hỏi giá ạ", ContentType: "attachment", SentAt: sentAt,
 		Attachments: []channels.Attachment{stored},
@@ -192,7 +198,7 @@ func TestUpsertMessageIdenticalReplayIsNoOpAndPreservesAttachmentLocalPath(t *te
 	// Same content/sender/time/content-type; same attachment identity but
 	// WITHOUT a local path, as a real replay looks when the file isn't
 	// re-downloaded.
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach B",
 		Content: "Cho mình hỏi giá ạ", ContentType: "attachment", SentAt: sentAt,
 		Attachments: []channels.Attachment{{Type: stored.Type, URL: stored.URL, Name: stored.Name}},
@@ -221,7 +227,7 @@ func TestUpsertMessageAttachmentIdentityChangeDoesNotInheritLocalPath(t *testing
 	sentAt := time.Now().Add(-4 * time.Minute).UTC().Truncate(time.Second)
 	oldAtt := channels.Attachment{Type: "image", URL: "https://cdn.example/old.jpg", Name: "old.jpg", LocalPath: "tenant/conv/old.jpg"}
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach C",
 		Content: "Ảnh sản phẩm đây ạ", ContentType: "attachment", SentAt: sentAt,
 		Attachments: []channels.Attachment{oldAtt},
@@ -230,7 +236,7 @@ func TestUpsertMessageAttachmentIdentityChangeDoesNotInheritLocalPath(t *testing
 	}
 
 	newAtt := channels.Attachment{Type: "image", URL: "https://cdn.example/new.jpg", Name: "new.jpg"}
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach C",
 		Content: "Ảnh sản phẩm đây ạ", ContentType: "attachment", SentAt: sentAt,
 		Attachments: []channels.Attachment{newAtt},
@@ -266,7 +272,7 @@ func TestUpsertMessageEmptyAttachmentReplayRetainsStoredList(t *testing.T) {
 	sentAt := time.Now().Add(-2 * time.Minute).UTC().Truncate(time.Second)
 	att := channels.Attachment{Type: "file", URL: "https://cdn.example/f.pdf", Name: "f.pdf", LocalPath: "tenant/conv/f.pdf"}
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "agent", SenderName: "NV",
 		Content: "Đây là hóa đơn của anh/chị", ContentType: "attachment", SentAt: sentAt,
 		Attachments: []channels.Attachment{att},
@@ -275,7 +281,7 @@ func TestUpsertMessageEmptyAttachmentReplayRetainsStoredList(t *testing.T) {
 	}
 
 	newContent := "Đây là hóa đơn đã cập nhật của anh/chị"
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "agent", SenderName: "NV",
 		Content: newContent, ContentType: "attachment", SentAt: sentAt,
 	}); err != nil {
@@ -313,7 +319,7 @@ func TestUpsertMessageWriteFailureIsReturnedAndLeavesRowUnchanged(t *testing.T) 
 	const extID = "m-fail-1"
 	sentAt := time.Now().Add(-1 * time.Minute).UTC().Truncate(time.Second)
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach D",
 		Content: "Noi dung goc", ContentType: "text", SentAt: sentAt,
 	}); err != nil {
@@ -322,7 +328,7 @@ func TestUpsertMessageWriteFailureIsReturnedAndLeavesRowUnchanged(t *testing.T) 
 	before := f.loadMessage(t, extID)
 	f.failOnUpdateTrigger(t, "trg_ccma_test_replay_forcefail_"+f.suffix, before.ID, "forced failure for replay write-error test")
 
-	err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach D",
 		Content: "Noi dung da sua nhung ghi se loi", ContentType: "text", SentAt: sentAt.Add(time.Minute),
 	})
@@ -347,7 +353,7 @@ func TestUpsertMessageReplayUpdatesChangedRawData(t *testing.T) {
 	const extID = "m-rawdata-1"
 	sentAt := time.Now().Add(-6 * time.Minute).UTC().Truncate(time.Second)
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach E",
 		Content: "Tin nhan goc", ContentType: "text", SentAt: sentAt,
 		RawData: map[string]interface{}{"id": "raw-1", "is_removed": false},
@@ -355,7 +361,7 @@ func TestUpsertMessageReplayUpdatesChangedRawData(t *testing.T) {
 		t.Fatalf("initial upsert: %v", err)
 	}
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach E",
 		Content: "Tin nhan goc", ContentType: "text", SentAt: sentAt,
 		RawData: map[string]interface{}{"id": "raw-1", "is_removed": true},
@@ -386,7 +392,7 @@ func TestUpsertMessageIdenticalRawDataReplayIsNoOp(t *testing.T) {
 	sentAt := time.Now().Add(-7 * time.Minute).UTC().Truncate(time.Second)
 	raw := map[string]interface{}{"id": "raw-2", "note": "khong doi"}
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach F",
 		Content: "Tin nhan on dinh", ContentType: "text", SentAt: sentAt,
 		RawData: raw,
@@ -399,7 +405,7 @@ func TestUpsertMessageIdenticalRawDataReplayIsNoOp(t *testing.T) {
 	// Same content/sender/time/content-type and a structurally identical (but
 	// distinct map value) raw-data payload — a real replay would decode a
 	// fresh map from JSON each time, not reuse the same Go value.
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach F",
 		Content: "Tin nhan on dinh", ContentType: "text", SentAt: sentAt,
 		RawData: map[string]interface{}{"id": "raw-2", "note": "khong doi"},
@@ -419,7 +425,7 @@ func TestUpsertMessageUnmarshalableRawDataReturnsErrorAndLeavesRowUnchanged(t *t
 	const extID = "m-rawdata-bad-1"
 	sentAt := time.Now().Add(-8 * time.Minute).UTC().Truncate(time.Second)
 
-	if err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	if err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach G",
 		Content: "Tin nhan hop le", ContentType: "text", SentAt: sentAt,
 		RawData: map[string]interface{}{"id": "raw-3"},
@@ -428,7 +434,7 @@ func TestUpsertMessageUnmarshalableRawDataReturnsErrorAndLeavesRowUnchanged(t *t
 	}
 	before := f.loadMessage(t, extID)
 
-	err := eng.upsertMessage(f.tenantID, f.convID, channels.SyncedMessage{
+	err := eng.upsertMessage(f.reservation, f.convID, channels.SyncedMessage{
 		ExternalID: extID, SenderType: "customer", SenderName: "Khach G",
 		Content: "Tin nhan hop le", ContentType: "text", SentAt: sentAt,
 		RawData: map[string]interface{}{"id": "raw-3", "bad": math.NaN()},
