@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -27,10 +27,10 @@
     "CCMAI-AUTH-001 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md): positive needs_setup=true clears stale browser and in-memory credentials before Setup; App waits for initial router readiness before profile loading. Real-guard 7/7 and full frontend 167/167 tests, forced typecheck, build and doctor 25/25 passed independently. No backend/API or live governance claim.",
     "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: the five channel credential/OAuth routes reject failed or nil config before secret use, DB write or outbound exchange. Codex independently inspected source and ran six focused test groups and 26 leaf cases on disposable MySQL; doctor 25/25 passed. No real channel/provider or governance proof.",
     "CCMAI-RUNTIME-011 REVIEW PASS / FREEZE OPEN after R1/R2: AgentRun rejects invalid or nil configuration before sync/analysis dispatch. Focused tests directly observe no tenant job run, channel write or outbound request on rejection and detect all three effects on accepted synthetic stubs. BUILD provenance corrected; Codex independently reran focused tests and doctor 25/25. No real engine, channel, provider or governance proof.",
-    "CCMAI-RUNTIME-012 REVIEW PASS / FREEZE OPEN: Zalo/Facebook OAuth callbacks report success only after exactly one tenant-scoped final credential update succeeds. Forced MySQL error, tenant-reassignment zero-row race and accepted synthetic token persistence passed; Codex independently reran focused tests and doctor 25/25. No real OAuth/provider call or governance proof."
+    "CCMAI-RUNTIME-012 REVIEW PASS / FREEZE OPEN: Zalo/Facebook OAuth callbacks report success only after exactly one tenant-scoped final credential update succeeds. Forced MySQL error, tenant-reassignment zero-row race and accepted synthetic token persistence passed; Codex independently reran focused tests and doctor 25/25. No real OAuth/provider call or governance proof.",
+    "CCMAI-RUNTIME-013 REVIEW PASS / FREEZE OPEN: manual, scheduler and agent sync paths share a tenant/channel-scoped conditional MySQL reservation; busy manual returns 409 without dispatch, scheduler skips busy, agents report non-success. Final writes require the same row still syncing. Codex independently reran focused engine/handler tests on disposable MySQL and doctor 25/25. Crash recovery and run-generation fencing remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-013 BUILD complete / REVIEW_PENDING (local commit, not pushed): manual, scheduler and both agent sync actions share one conditional MySQL reservation by id AND tenant AND not syncing; a busy manual request returns exact 409 sync_already_running without launching, a busy scheduler channel is skipped, a busy agent action or sync_all member is non-success. Final status writes and panic recovery are tenant-scoped and conditional on syncing with checked row counts; a run that exits without a recorded status attempts a bounded syncing-to-error transition. Focused tests (113 pass) and all 13 backend packages pass on disposable MySQL with synthetic adapters; four mutations failed the new tests and were restored. Evidence docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md. Crash recovery and run-generation fencing remain separate; Codex independent REVIEW next; no real channel/provider call, governance claim, push or FREEZE.",
     "S1 remains IN_PROGRESS: crash recovery of a stuck syncing state (with run ownership/lease) and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -156,7 +156,8 @@
     "docs/reviews/CCMAI_RUNTIME_011_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_012_INDEPENDENT_REVIEW_2026-09-29.md",
-    "docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md"
+    "docs/reviews/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_BUILD_2026-09-29.md",
+    "docs/reviews/CCMAI_RUNTIME_013_INDEPENDENT_REVIEW_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }
