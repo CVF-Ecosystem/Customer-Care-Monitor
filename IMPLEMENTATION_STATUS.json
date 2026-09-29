@@ -32,7 +32,7 @@
     "CCMAI-RUNTIME-014 REVIEW PASS / FREEZE OPEN after R014-R1: each new sync reservation stores a typed internal run ID and final/deferred/manual panic status writes require it. The repair keeps run ID and SQL values out of GORM's output sink on those three writes and bounds DB errors returned to workers/agents. Codex independently reran focused GORM sink, error and stale-worker tests on disposable MySQL; doctor 25/25. Old-worker side effects and stuck-sync recovery remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-015 R1/R2 repair BUILD (Codex) is REVIEW_PENDING for independent Claude re-review. A failed storage Exists probe now triggers a fresh attempt-key download with primary-to-local fallback, not a DB write failure. Synthetic failing-Exists/Put test proves local object and later message persist with successful run. Full SyncReservedChannel two-conversation test proves A stops with sync_ownership_lost after B takes ownership, without touching B or writing A's second conversation. Focused and full backend suites passed on disposable MySQL; build, vet, catalog and doctor 25/25 passed. Evidence: docs/reviews/RUNTIME_SYNC_SIDE_EFFECT_OWNERSHIP_S1_REPAIR_R1_BUILD_2026-09-29.md. No push, reclaim or FREEZE.",
+    "CCMAI-RUNTIME-015 REVIEW PASS / FREEZE OPEN (Claude re-review of BUILD de0616c + repair 904454d): run-owned conversation/message/count and refreshed-Zalo-credential writes are fenced by a locked SELECT FOR UPDATE ownership guard; attachment reuse/attempt-unique keys and reference-checked cleanup hold; a storage Exists error now falls back to a fresh download instead of aborting; a mid-loop takeover stops A with sync_ownership_lost. Focused 107 PASS and full backend 14 packages PASS on disposable MySQL; independent FOR UPDATE and R1 restore mutations failed their tests. Not crash recovery or live-provider proof; reclaim remains R016.",
     "S1 remains IN_PROGRESS: recovery of a stuck syncing state (evidence of worker death or side-effect fencing) and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
@@ -166,7 +166,8 @@
     "docs/reviews/CCMAI_RUNTIME_014_INDEPENDENT_REVIEW_2026-09-29.md",
     "docs/reviews/CCMAI_RUNTIME_014_R1_INDEPENDENT_REREVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_SYNC_SIDE_EFFECT_OWNERSHIP_S1_BUILD_2026-09-29.md",
-    "docs/reviews/CCMAI_RUNTIME_015_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_RUNTIME_015_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/CCMAI_RUNTIME_015_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }
