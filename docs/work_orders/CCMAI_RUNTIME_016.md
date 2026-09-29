@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-016 — conditional recovery of GET-only channel sync runs
 
-**Date:** 2026-09-29 · **State:** CHANGES_REQUIRED; R016-R1 repair authorized · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [R016 SPEC](../specs/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_2026-09-29.md), [R015 independent re-review](../reviews/CCMAI_RUNTIME_015_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md), [R016 independent review](../reviews/CCMAI_RUNTIME_016_INDEPENDENT_REVIEW_2026-09-29.md).
+**Date:** 2026-09-29 · **State:** REVIEW_PASS / FREEZE_OPEN after R016-R1 repair · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [R016 SPEC](../specs/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_2026-09-29.md), [R015 independent re-review](../reviews/CCMAI_RUNTIME_015_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md), [R016 independent review](../reviews/CCMAI_RUNTIME_016_INDEPENDENT_REVIEW_2026-09-29.md), [R016-R1 re-review](../reviews/CCMAI_RUNTIME_016_R1_INDEPENDENT_REREVIEW_2026-09-29.md).
 
 ## Route and bounded objective
 

@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-016 R016-R1 repair is a local REVIEW_PENDING commit (heartbeat failure now checked after every attachment transfer before message publication, plus a pre-count gate; permanent cancellation-boundary regression; evidence docs/reviews/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_BUILD_2026-09-29.md). Codex re-reviews independently: inspect the diff, rerun the new engine tests on disposable MySQL and the doctor, record a disposition. No push, provider call, expanded recovery eligibility, Zalo/legacy recovery or FREEZE; S1 remains IN_PROGRESS.",
+  "nextAllowedMove": "CCMAI-RUNTIME-016 R016-R1 independent re-review is REVIEW_PASS / FREEZE_OPEN at repair commit 7edd8c4; evidence docs/reviews/CCMAI_RUNTIME_016_R1_INDEPENDENT_REREVIEW_2026-09-29.md. Codex ORCHESTRATOR next scopes a separate S1 tranche when requested; Zalo/legacy and mixed-version recovery remain open. No push, provider/channel call, rollout or FREEZE; S1 remains IN_PROGRESS.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REPAIR_WORKER -> COMMIT_STEWARD (Claude); REVIEWER (Codex) next",
+  "activeRole": "REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }
