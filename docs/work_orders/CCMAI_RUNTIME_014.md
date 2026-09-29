@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-014 — sync run identity and final-write ownership
 
-**Date:** 2026-09-29 · **State:** BUILD complete, REVIEW_PENDING (Claude, local commit; evidence in docs/reviews/RUNTIME_SYNC_RUN_OWNERSHIP_S1_BUILD_2026-09-29.md) · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_SYNC_RUN_OWNERSHIP_S1_2026-09-29.md), R013 independent REVIEW PASS.
+**Date:** 2026-09-29 · **State:** CHANGES_REQUIRED / R014-R1 repair authorized after [independent review](../reviews/CCMAI_RUNTIME_014_INDEPENDENT_REVIEW_2026-09-29.md) · **Risk ceiling:** R2 · **Authority:** [S1 roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [SPEC](../specs/RUNTIME_SYNC_RUN_OWNERSHIP_S1_2026-09-29.md), R013 independent REVIEW PASS.
 
 ## Route and independence
 
@@ -20,3 +20,9 @@ Give every **new** channel sync reservation a run ID and require that ID on term
 ## Exit and effect boundary
 
 Synchronize continuity/status and make one **local** BUILD/evidence commit, without push. Return `REVIEW_PENDING` to Codex. No automatic crash recovery, timeout takeover, lease, live channel/provider call, deployment, S1 closure or FREEZE is authorized. R015 or a later SPEC must decide when an orphan can be released and how any old worker's in-flight side effects are contained.
+
+## Repair addendum R014-R1 (independent REVIEW, 2026-09-29)
+
+The [independent review](../reviews/CCMAI_RUNTIME_014_INDEPENDENT_REVIEW_2026-09-29.md) found that the run ID is present in GORM SQL logs: the default logger interpolates query parameters at Info (development) and on errors/slow queries at Warn (production). The existing log test captures only the application's standard log writer. Claude may edit `backend/engine/sync.go`, `backend/api/handlers/channels.go` and focused tests under `backend/engine/` and `backend/api/handlers/`, plus the BUILD evidence and allowed continuity files. If a global parameterized-query logger change in `backend/db/mysql.go` is demonstrably necessary, return a bounded change request before that edit; prefer a query-scoped solution that keeps other DB logging behavior unchanged.
+
+For all reservation and run-ID-fenced terminal/panic writes, prevent the ID and SQL values from reaching GORM's actual output sink at Info, error and slow-query levels. Return/log bounded failure classes rather than a raw DB error at agent/worker boundaries. Add a regression test that observes the real GORM logger output sink, with a positive detector showing that the sink works, and force a write error whose text is absent from API-visible errors and application logs. Keep R014's exact-row fencing, R013 response shapes and synthetic/no-provider boundary. Rerun focused/full backend tests, build, vet, catalog, doctor and diff check; record cleanup and claim limits. Make one local repair commit, no push, and return `REVIEW_PENDING` for Codex re-review. No FREEZE or recovery authority is granted.
