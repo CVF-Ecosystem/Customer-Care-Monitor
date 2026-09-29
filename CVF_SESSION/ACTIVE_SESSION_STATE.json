@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-010 BUILD complete / REVIEW_PENDING: Codex independently reviews local BUILD commit a9dcbed and docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md. Separately, Claude recorded CCMAI-CREDIT-003 independent REVIEW_PASS (FREEZE open; local refs/rewrites/* cleanup is an owner/CLOSER decision). No push, provider call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-010 independent REVIEW_PASS / FREEZE open; next governed S1 move is a bounded agent config-admission tranche or an explicit CLOSER decision. CCMAI-CREDIT-003 independent REVIEW_PASS / FREEZE open; two local refs/rewrites refs were removed by CLOSER, but GitHub may still serve the old SHA. No push, provider call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Claude) recorded CCMAI-CREDIT-003 review; CCMAI-RUNTIME-010 independent REVIEWER (Codex) next",
+  "activeRole": "REVIEWER (Codex) completed CCMAI-RUNTIME-010; CLOSER (Codex) resolved CREDIT-003 local ref observation; ORCHESTRATOR next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-29"
 }

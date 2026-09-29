@@ -38,3 +38,7 @@ No blocking finding. The rewrite meets every work-order acceptance point: select
 ## Limits
 
 The exact-lease push itself was not re-observed; only its outcome was verified (remote ref set and ancestry). The GitHub contributor sidebar was not re-inspected. This is a history/provenance review, not a source change or CVF governance proof, and no provider or credential was used.
+
+## CLOSER follow-up: local rewrite refs
+
+After this independent review, Codex took the separate CLOSER responsibility for observation O2 under the owner's earlier instruction to remove unneeded CQA history. Both exact local targets were verified, each contained old root `3036d5e`, `main` excluded that root, and `git ls-remote --heads --tags origin` showed only `main`. Codex deleted only `refs/rewrites/customer-care-pre-credit` (`049e44c`) and `refs/rewrites/customer-care-candidate-final` (`4d95f9a`) with exact-old-value `git update-ref -d`; `git for-each-ref refs/rewrites` is now empty. No branch, tag, remote ref, commit object, license or worktree content was changed by this action. O2 is resolved for these two refs. O1 remains: GitHub may still serve the old SHA directly. This follow-up does not change Claude's original REVIEW_PASS or close FREEZE.

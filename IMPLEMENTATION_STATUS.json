@@ -24,10 +24,11 @@
     "CCMAI-UX-013 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_UX_013_INDEPENDENT_REVIEW_2026-09-28.md): Jobs list/create/edit presentation; email output test remains a held API contract.",
     "CCMAI-UX-014 REVIEW PASS / FREEZE OPEN after R1 (Codex docs/reviews/CCMAI_UX_014_R1_INDEPENDENT_REREVIEW_2026-09-28.md): Settings/Users/Login/Setup presentation; S3-off dialog now uses the Compose service command; Setup and S3-off states captured with synthetic data. No provider or S3 call.",
     "CCMAI-UX-015 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_UX_015_INDEPENDENT_REVIEW_2026-09-28.md): activity/cost/notification logs and MCP UI; cost footer is page-scoped; one-time secret is cleared on dialog close. Filtered cost total and other API/permission changes remain held.",
-    "CCMAI-AUTH-001 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md): positive needs_setup=true clears stale browser and in-memory credentials before Setup; App waits for initial router readiness before profile loading. Real-guard 7/7 and full frontend 167/167 tests, forced typecheck, build and doctor 25/25 passed independently. No backend/API or live governance claim."
+    "CCMAI-AUTH-001 REVIEW PASS / FREEZE OPEN (Codex docs/reviews/CCMAI_AUTH_001_INDEPENDENT_REVIEW_2026-09-29.md): positive needs_setup=true clears stale browser and in-memory credentials before Setup; App waits for initial router readiness before profile loading. Real-guard 7/7 and full frontend 167/167 tests, forced typecheck, build and doctor 25/25 passed independently. No backend/API or live governance claim.",
+    "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: the five channel credential/OAuth routes reject failed or nil config before secret use, DB write or outbound exchange. Codex independently inspected source and ran six focused test groups and 26 leaf cases on disposable MySQL; doctor 25/25 passed. No real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-010 BUILD complete, REVIEW_PENDING: CreateChannel, TestChannelConnection, ReauthChannel, ZaloOAuthCallback and FacebookOAuthCallback load configuration once via loadChannelSecurityConfig after the existing request/tenant checks and before any encryption, decryption, state signing/verification, outbound exchange or channel write. An invalid or nil config returns the route's existing generic 500 or the Authorization failed redirect, with no config detail in body/log. Focused synthetic/disposable-MySQL tests plus accepted-path detectors pass; the full backend suite, build and vet pass. No real OAuth/provider call or governance claim."
+    "S1 remains IN_PROGRESS: agent config admission, cross-path sync single-flight, crash recovery and backend-dependent UI/API intersections are separate tranches."
   ],
   "activeWorkOrders": [
     "CCMAI-CREDIT-001",
@@ -64,7 +65,7 @@
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
     "Application feature status has not yet been assessed under the CVF module catalog.",
     "Workspace-wide gate has failures in unrelated sibling repositories.",
-    "CCMAI-RUNTIME-007/008/009 passed independent REVIEW for manual sync and job-dispatch configuration admission. OAuth/credential paths in channels.go and agents.go remain separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
+    "CCMAI-RUNTIME-007/008/009/010 passed independent REVIEW for manual sync, job-dispatch and channel credential/OAuth configuration admission. Agent configuration admission remains separately scoped. Remaining S1 residuals include concurrency and single-flight across manual, scheduler and agent sync paths and stale syncing after a crash or restart.",
     "Current demo messages were edited after existing analyses; snapshot-bound source-integrity warnings may appear. No saved analysis result or snapshot was rewritten to suppress them.",
     "CCMAI-UX-000 changes the global theme and font; existing screens keep their own source-status colors and sync labels until screen tranches (UX-010+). The F1 onboarding bar remains a later-screen item; avatar contrast UX000-R1 passed independent re-review.",
     "UX-02 dashboard 'issues' API field still counts every job result; Codex decided to preserve it and add qc_violation_count in a separate R2 API tranche. UX-06 demo scheduler skipping needs a separate R2 runtime tranche with channel-level marker. UX-04 latest-run default is accepted for UX-010 with scope selector/labels. Existing demo rows keep old timestamps until separately authorized reset/re-import.",
@@ -73,8 +74,8 @@
     "docs/guide/s3-storage.md still uses the old cqa-app container command. The UX-014 UI dialog was corrected to docker compose exec app; the guide needs a separate documentation correction.",
     "CCMAI-CREDIT-002 initial trial push placed only main at 9479d9f; old origin and CQA provenance tag remain untouched. GitHub contributor statistics subsequently returned exactly Blackbird081, claude and codex, but rendered sidebar inspection remains open. This is not a product migration.",
     "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical CVF-Ecosystem/Customer-Care-Monitor origin; Go/docs Actions and new GitHub Pages passed, with public home and key guides HTTP 200. Historical PR/run URLs and initial CQA import message remain provenance. Independent R2 REVIEW and FREEZE remain open; old repository deletion is the owner's separate action.",
-    "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; all old commit SHA citations in historical review documents remain observations, not reachable current-main SHAs. The GitHub commit API still returned HTTP 200 for the old unreachable root SHA after force push; server-side erasure is not claimed. Current main tree and MIT LICENSE content were preserved. Claude's independent R2 REVIEW is REVIEW_PASS (docs/reviews/CCMAI_CREDIT_003_INDEPENDENT_REVIEW_2026-09-29.md); undocumented local refs/rewrites/* refs from 2026-09-26 still reach the old root locally. FREEZE remains open.",
-    "CCMAI-RUNTIME-010 BUILD is complete and REVIEW_PENDING (not accepted): the five channel credential/OAuth config.Load paths now fail closed, pending Codex independent REVIEW. Only a synthetic transport was used, not real OAuth/Pancake endpoints; callback success paths still ignore the final channel-update error (separate scope). Agent config admission, cross-path sync single-flight and crash recovery remain separate S1 residuals."
+    "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; old SHA citations in historical reviews are observations, not current-main SHAs. GitHub still served the old root SHA by direct lookup after force push; server-side erasure is not claimed. The two local refs/rewrites refs retaining the old root were removed by CLOSER with exact target verification. MIT LICENSE remains intact; Claude's independent R2 REVIEW is REVIEW_PASS; FREEZE open.",
+    "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: only a synthetic transport was used; real OAuth/Pancake endpoints and accepted Pancake create were not tested. Direct mutation was unavailable. Callback success paths still ignore the final channel-update error (separate scope). Agent config admission, cross-path sync single-flight and crash recovery remain separate S1 residuals."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -142,7 +143,8 @@
     "docs/reviews/CCMAI_REPO_MIGRATE_001_BUILD_2026-09-29.md",
     "docs/reviews/CCMAI_CREDIT_003_MESSAGE_REWRITE_2026-09-29.md",
     "docs/reviews/RUNTIME_CHANNEL_CONFIG_ADMISSION_S1_BUILD_2026-09-29.md",
-    "docs/reviews/CCMAI_CREDIT_003_INDEPENDENT_REVIEW_2026-09-29.md"
+    "docs/reviews/CCMAI_CREDIT_003_INDEPENDENT_REVIEW_2026-09-29.md",
+    "docs/reviews/CCMAI_RUNTIME_010_INDEPENDENT_REVIEW_2026-09-29.md"
   ],
   "updatedAt": "2026-09-29"
 }
