@@ -78,6 +78,8 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 
 **Tranche đã qua review, FREEZE còn mở:** `CCMAI-RUNTIME-012` yêu cầu callback OAuth Zalo/Facebook chỉ báo thành công khi lệnh ghi credential cuối cập nhật đúng một channel thuộc tenant đã xác thực; [SPEC](../specs/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_2026-09-29.md), [work order](../work_orders/CCMAI_RUNTIME_012.md), [BUILD evidence](../reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md), [review độc lập](../reviews/CCMAI_RUNTIME_012_INDEPENDENT_REVIEW_2026-09-29.md). Test lỗi DB và 0 hàng dùng MySQL tạm cùng HTTP transport synthetic đã pass. Đồng bộ chồng lấn và phục hồi sau crash tiếp tục là residual S1 riêng; không có claim provider/channel thật hoặc CVF governance.
 
+**Tranche kế tiếp ở WORK_ORDER:** `CCMAI-RUNTIME-013` xử lý đồng bộ chồng lấn giữa manual, scheduler và agent bằng một bước nhận quyền chạy có điều kiện theo tenant/channel trong MySQL; [SPEC](../specs/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_2026-09-29.md), [work order](../work_orders/CCMAI_RUNTIME_013.md). Chưa BUILD hoặc REVIEW; không có claim runtime mới. Trạng thái `syncing` còn kẹt sau crash và các giao điểm UI/API vẫn là việc riêng.
+
 Giữ ID S0–S7 để truy vết, nhưng **ID không còn là thứ tự tuyến tính**: S0 → S1 → phần tối thiểu của S2 + S3 + S5 tạo một luồng hoàn chỉnh → S4 tối ưu trên phản hồi thực → S6 pilot → S7 hoàn thiện vận hành. S2/S3/S5 đều có scope/acceptance riêng; review UI và audit tối thiểu phải sẵn sàng trong luồng đầu, không đợi tối ưu xong. Kiểm quyền, bảo mật và bảo vệ dữ liệu cần thiết cho pilot phải hoàn tất trước S6; S7 mở rộng kiểm vận hành trước phát hành. Nhân rộng/CVF uplift đứng sau nghiệm thu sản phẩm.
 
 ### S0 — Baseline và tập đánh giá được phép dùng

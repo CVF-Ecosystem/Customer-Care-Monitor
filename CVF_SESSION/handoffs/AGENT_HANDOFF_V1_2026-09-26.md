@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-012 independent REVIEW_PASS / FREEZE open; R001–R011 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: REVIEWER (Codex) completed R012; ORCHESTRATOR next
-- Next allowed move: Bound cross-path sync single-flight or crash-state recovery as the next S1 tranche, or record an explicit CLOSER decision. No push, real provider/channel call or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-013 BUILD authorized; R001–R012 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: WORK_ORDER_AUTHOR (Codex) completed R013; IMPLEMENTATION_WORKER (Claude) next
+- Next allowed move: Claude rehydrates and acknowledges the role transition, then builds R013 under its work order and returns one local commit as REVIEW_PENDING. No push, real provider/channel call or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
@@ -609,3 +609,9 @@ CVF controls the application runtime or that a provider-backed test passed.
 - CCMAI-RUNTIME-012 BUILD result (Claude): `channels.go` now persists Zalo/Facebook OAuth credentials through `persistOAuthCredentials`, which updates by `id AND verified tenant_id` and reports success only for no error and exactly one row; otherwise the callback returns the generic tenant-scoped `Authorization failed` redirect with a bounded log (no SQL detail, token, code or state). Success Locations and update field sets are unchanged. New focused tests cover a forced DB error, a tenant-reassignment zero-row race and a success detector on disposable MySQL with a synthetic transport. Focused and full backend tests (13 packages), build and vet pass; ID-only and unchecked-result mutations failed the new tests and were restored; catalog `-Check` and doctor 25/25 pass. Evidence: `docs/reviews/RUNTIME_OAUTH_CREDENTIAL_PERSISTENCE_S1_BUILD_2026-09-29.md`. Role route `IMPLEMENTATION_WORKER → SESSION_SYNC_STEWARD → COMMIT_STEWARD`; disposition `REVIEW_PENDING` for independent Codex review. Untested: real OAuth endpoints, provider error shapes, concurrent callbacks. No push, governance claim or FREEZE.
 - Continuity correction before Codex REVIEW: the Current State header above had remained at WORK_ORDER despite this BUILD result, the active state, session memory and owner message recording REVIEW_PENDING. Codex reported `BLOCKED_CONTINUITY_DRIFT` at INTAKE and aligned only that stale header with the documented BUILD outcome; no acceptance decision was made by this correction.
 - R012 independent REVIEW (Codex): role transition `COMMIT_STEWARD (Claude) → REVIEWER (Codex)`. Inspected the exact diff, tenant-scoped `Updates`, error/row-count handling, synthetic MySQL error and tenant-reassignment tests, and mutation evidence. Codex independently reran focused OAuth and R010 admission tests on disposable MySQL (exit 0, handler package 4.802s; container/network removed), catalog check and doctor 25/25. Disposition `REVIEW_PASS`, FREEZE open; S1 remains IN_PROGRESS. Evidence: `docs/reviews/CCMAI_RUNTIME_012_INDEPENDENT_REVIEW_2026-09-29.md`. Role transition `REVIEWER → SESSION_SYNC_STEWARD → COMMIT_STEWARD → ORCHESTRATOR` for review records; no push, real OAuth/provider call or governance proof.
+
+## Active Tranche: CCMAI-RUNTIME-013 (2026-09-29)
+
+- INTAKE: owner said “tiếp” after R012 REVIEW PASS. S1 remains IN_PROGRESS. Manual sync writes `syncing` without a prior-status predicate; scheduler and both agent sync actions call `SyncEngine.SyncChannel` without a reservation. Overlapping runs can write the same channel, including repeated manual `202` responses.
+- DESIGN/SPEC/WORK_ORDER: [SPEC](../../docs/specs/RUNTIME_CHANNEL_SYNC_SINGLE_FLIGHT_S1_2026-09-29.md) and [work order](../../docs/work_orders/CCMAI_RUNTIME_013.md) bound R2 shared MySQL conditional admission and tenant-scoped final status truth across manual, scheduler, agent `sync_channel` and `sync_all`. Manual retains persisted-before-dispatch `202`; busy returns `409`. Synthetic/disposable tests only. Crash recovery and backend-dependent UI/API intersections remain separate.
+- Role transition acknowledged for planning: `ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR` (Codex). Claude must rehydrate and record `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` before BUILD, then return one local BUILD/evidence commit as REVIEW_PENDING for independent Codex review. No real channel/provider call, governance claim, push or FREEZE.
