@@ -5,11 +5,16 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER (CCMAI-RUNTIME-017 BUILD next; R001–R016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next
-- Next allowed move: Claude rehydrates and acknowledges the R017 role handoff before backend-only BUILD, then returns one local REVIEW_PENDING commit. No frontend edit, push, live provider/channel call or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW (CCMAI-RUNTIME-017 BUILD done, REVIEW_PENDING; R001–R016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
+- Next allowed move: Codex independent R2 REVIEW of R017 BUILD. No frontend edit, push, live provider/channel call, self-PASS or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-017 — Dashboard qc_violation_count (2026-09-29)
+
+- CVF Agent Declaration and role transition (Claude, rehydrated from files at `b8750fb`; state, handoff, memory, implementation status and SPEC/work order agree; no `BLOCKED_CONTINUITY_DRIFT`; `BOOTSTRAP_MIGRATION_PENDING` non-blocking): project Customer-Care-Monitor-AI; CVF core `../.Controlled-Vibe-Framework-CVF` @ `26c686cc99b8be965d2760f27fe875b03376c643` (matches manifest; doctor 25/25); phase WORK_ORDER → BUILD; risk ceiling R2; live evidence required YES, but R017 is a database API metric with no governance claim (synthetic disposable MySQL only); active handoff this file; next allowed move per `docs/work_orders/CCMAI_RUNTIME_017.md`; parked checkpoint none. Role transition: `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` recorded before any source edit. Scope: `backend/api/handlers/dashboard.go` and focused handler tests only; no frontend, provider/channel call, push or FREEZE.
+- BUILD result (Claude): `GetDashboard` adds `qc_violation_count` (tenant + exact `result_type='qc_violation'` + same effective `created_at BETWEEN` interval, no join, numeric 0 when empty); a failure of that count returns generic 500 `dashboard_unavailable` with no false zero or SQL. `issues` and all other keys unchanged; no frontend change. 4 real-handler tests on disposable MySQL (mixed types, two tenants, two findings on one conversation, both interval edges and 1 s outside, empty period, positive detector, forced count failure with body inspection); mutations M1 (drop type), M2 (drop tenant), M3 (swallow error) each caught. Full backend 14 packages PASS, build/vet/diff-check clean, MySQL removed. Evidence `docs/reviews/RUNTIME_DASHBOARD_QC_VIOLATION_COUNT_S1_BUILD_2026-09-29.md`. Role transition IMPLEMENTATION_WORKER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Claude); one local commit, `REVIEW_PENDING` for Codex; no self-PASS, FREEZE, push or provider call.
 
 ## CCMAI-CREDIT-002 — new repository contributor trial (2026-09-29)
 

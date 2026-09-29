@@ -41,6 +41,17 @@ func GetDashboard(c *gin.Context) {
 	db.DB.Model(&models.Conversation{}).Where("tenant_id = ? AND last_message_at BETWEEN ? AND ?", tenantID, from, to).Count(&totalConversations)
 	db.DB.Model(&models.JobResult{}).Where("tenant_id = ? AND created_at BETWEEN ? AND ?", tenantID, from, to).Count(&issuesInPeriod)
 
+	// Số dòng vi phạm QC (không đếm đánh giá hội thoại hay nhãn phân loại). `issues`
+	// ở trên vẫn đếm mọi kết quả nên giữ nguyên; lỗi truy vấn này trả 500 chung
+	// thay vì một số 0 sai.
+	var qcViolationCount int64
+	if err := db.DB.Model(&models.JobResult{}).
+		Where("tenant_id = ? AND result_type = ? AND created_at BETWEEN ? AND ?", tenantID, "qc_violation", from, to).
+		Count(&qcViolationCount).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "dashboard_unavailable"})
+		return
+	}
+
 	// Conversations by channel type
 	type ChannelCount struct {
 		ChannelType string `json:"channel_type"`
@@ -142,6 +153,7 @@ func GetDashboard(c *gin.Context) {
 		"active_channels":          activeChannels,
 		"active_jobs":              activeJobs,
 		"issues":                   issuesInPeriod,
+		"qc_violation_count":       qcViolationCount,
 		"conversations_by_channel": channelCounts,
 		"qc_alerts":                qcAlerts,
 		"classification_recent":    classRecent,
