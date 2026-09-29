@@ -125,3 +125,29 @@ It never touches `last_sync_at`, credentials, conversations, messages or attachm
 - **The heartbeat runs only inside the sync context.** The manual and scheduler contexts time out after 10 minutes. After a timeout the run ends through its own terminal write.
 - **Still open:** Zalo and legacy crash recovery, worker-death proof, and a multi-process rollout plan. These remain separate decisions.
 - **Evidence limits.** No real channel or provider was contacted. This is synthetic evidence only, not live CVF governance proof.
+
+## Repair R016-R1 — heartbeat failure hidden by a successful attachment transfer (Claude, REPAIR_WORKER, 2026-09-29)
+
+Role transition `REVIEWER (Codex) → REPAIR_WORKER (Claude)` was recorded in the active handoff before any source edit. The [independent review](CCMAI_RUNTIME_016_INDEPENDENT_REVIEW_2026-09-29.md) was right: the post-download heartbeat check only fired when the transfer had also failed (`attachmentErr != nil && hbErr != nil`), so a store operation that finished successfully at the cancellation boundary let the run publish a message after its heartbeat had failed.
+
+**Fix (`backend/engine/sync.go` only).**
+- After every `downloadAttachments` call the run now checks the heartbeat first, whatever the transfer result was. On failure it cleans only the run's new attempt keys and returns the heartbeat's bounded class before `upsertMessage`. The ownership and write-failure checks on the transfer result follow it.
+- Neighbouring gate: a `gate()` (heartbeat failure, then ownership) now also runs before the per-conversation message-count write, so an empty message loop or a heartbeat failure between the last message and the count cannot slip through.
+- Healthy-heartbeat behaviour is unchanged: a failed transfer still yields the per-attachment partial report.
+
+**Tests (new `backend/engine/sync_lease_attachment_test.go`).**
+- `TestHeartbeatFailureDuringSuccessfulAttachmentTransferPublishesNothing`: a synthetic store's `Put` waits for the run context to be cancelled and then stores the object and returns success (the reviewer's cancellation-boundary model). A trigger created from inside `Put` makes the next heartbeat fail. The full `SyncReservedChannel` returns `sync write failed`, and the test asserts:
+  - `Put` ran once, so the boundary was exercised;
+  - no message and no `message_count` was written;
+  - no checkpoint was advanced and no analysis trigger fired;
+  - the row left `syncing` through the owned `error` transition, with run ID and lease cleared;
+  - no trigger text or run ID in the application log;
+  - the run's new attempt object was cleaned up.
+- Detector `TestSuccessfulAttachmentTransferWithHealthyHeartbeatIsPublished`: the same setup with a healthy heartbeat publishes the message, count, checkpoint and one trigger.
+- `TestFailedAttachmentTransferWithHealthyHeartbeatStaysPartial`: a failed transfer with a healthy heartbeat keeps the ordinary partial result.
+
+**Mutation checks (restored, verified byte-equal).**
+- Restoring the old `attachmentErr != nil && hbErr != nil` condition failed the new regression test.
+- Removing the new pre-count `gate()` failed no test. A deterministic test needs a heartbeat failure in the microseconds between the last message write and the count write, which the current seams cannot place. The gate is kept as defence in depth, and it is documented here as **not covered by a deterministic detector**.
+
+**Gates.** The new tests pass (`ok … engine 1.129s`). `powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1` → exit 0, all 14 packages `ok` (`api/handlers` 20.8s, `db` 0.8s, `engine` 18.2s). `go build ./...`, `go vet ./...` and `gofmt -l` (changed files) are clean. Catalog `-Check` and the doctor (25/25) plus `git diff --check` are recorded in the handoff after synchronization. The script removed its disposable MySQL container and network after every run; the `ccma-test` lists are empty and the persistent Compose stack was not touched. No real channel or provider was contacted; the eligible set, the lease predicates and the R015 fence are unchanged, and Zalo and legacy recovery remain open. This is not live governance proof.

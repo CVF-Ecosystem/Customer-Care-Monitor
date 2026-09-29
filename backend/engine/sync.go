@@ -447,13 +447,16 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 			if syncFiles {
 				var attachmentErr error
 				newKeys, attachmentErr = s.downloadAttachments(ctx, reservation, convID, &msg)
+				// A failed heartbeat cancels the run whatever the transfer
+				// result was: a store operation can finish successfully at the
+				// cancellation boundary and must not be published (R016-R1).
+				if hbErr := stopErr(); hbErr != nil {
+					s.cleanupAttemptKeys(reservation.TenantID, convID, newKeys)
+					return hbErr
+				}
 				if errors.Is(attachmentErr, ErrSyncOwnershipLost) || errors.Is(attachmentErr, ErrSyncWriteFailed) {
 					s.cleanupAttemptKeys(reservation.TenantID, convID, newKeys)
 					return attachmentErr
-				}
-				if hbErr := stopErr(); attachmentErr != nil && hbErr != nil {
-					s.cleanupAttemptKeys(reservation.TenantID, convID, newKeys)
-					return hbErr
 				}
 				if attachmentErr != nil {
 					log.Printf("[sync] attachment coverage incomplete for message %s: %v", msg.ExternalID, attachmentErr)
@@ -474,7 +477,11 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 			}
 		}
 
-		// Update conversation message count
+		// Update conversation message count (a failed heartbeat stops the run
+		// before this write too, including when the message loop was empty).
+		if err := gate(); err != nil {
+			return err
+		}
 		if err := s.updateOwnedMessageCount(reservation, convID); err != nil {
 			if errors.Is(err, ErrSyncOwnershipLost) || errors.Is(err, ErrSyncWriteFailed) {
 				return err
