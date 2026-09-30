@@ -6,7 +6,7 @@ Planning HEAD `91b8c96` (base `8cb55f8`). Synthetic dispatchers/transport and di
 
 ## Source audit and plan
 
-`AgentRun`/`AgentQuery` ([agents.go](../../backend/api/handlers/agents.go)) checked only a `user_tenants` row; tenant routes use `middleware.RequirePermission`. MCP (`backend/mcp/handlers.go`) independently checks membership only (`:101`, `:120`; `cqa_trigger_job` at `:82`) — **unchanged and still F01-B**.
+`AgentRun`/`AgentQuery` (`backend/api/handlers/agents.go`) checked only a `user_tenants` row; tenant routes use `middleware.RequirePermission`. MCP (`backend/mcp/handlers.go`) independently checks membership only (`:101`, `:120`; `cqa_trigger_job` at `:82`) — **unchanged and still F01-B**.
 
 Plan: (1) extract the tenant permission decision into `middleware.PermissionDenial(role, permsJSON, resource, action)` and make `RequirePermission` call it (same codes/log); (2) in the agent handler load the membership row for the **requested** tenant once (`tenantMembership`), keep the 400 → 403 `tenant_access_denied` → 404 unknown-agent order, then apply the explicit matrix; (3) update the R011 fixture's member permissions and per-agent actions without weakening its assertions.
 

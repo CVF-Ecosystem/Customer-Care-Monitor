@@ -5,6 +5,12 @@ Memory class: POINTER_RECORD
 This is the project continuity front door. It is CVF-governed project state,
 not provider-specific memory and not a chat transcript.
 
+Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it must match
+`CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
+`IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
+
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-GOV-001", "parked": true} -->
+
 ## Startup Order
 
 1. Read `.cvf/manifest.json` and `.cvf/policy.json`.
@@ -397,3 +403,5 @@ CCMAI-RUNTIME-020 F01-A planning (Codex, 2026-09-30): after R019 review commit `
 CCMAI-RUNTIME-020 F01-A independent REVIEW and park (Codex, 2026-09-30): worker BUILD `73cedc2` sets state/handoff REVIEW_PENDING but leaves this memory pointer and `IMPLEMENTATION_STATUS.currentPhase` at WORK_ORDER; Codex reported BLOCKED_CONTINUITY_DRIFT, aligned those two pointers and rehydrated before source review. Exact HTTP permission matrix and reject-before-side-effect contract pass; focused API tests on disposable MySQL pass independently. BUILD full suite reports 474 pass, five F08 sentinels PASS and gate exit 0. `REVIEW_PASS / FREEZE_OPEN / PARKED`; review `docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md`. F01-B MCP remains open. Next move is downstream machine-gate inheritance, then authorized PR/F08 runner evidence. No provider call, push, deployment or FREEZE.
 
 CCMAI-RUNTIME-020 / F01-A BUILD (Claude, 2026-09-30): HTTP agent run/query permission admission per the SPEC matrix (shared `middleware.PermissionDenial`, fail-closed roles/permissions, generic 403, unsupported action 400 before config/dispatch). 20 new tests, five mutations detected, full backend 474 pass on disposable MySQL with the R019 gate passing. Evidence `docs/reviews/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01A_BUILD_2026-09-30.md`. REVIEW_PENDING for Codex; F01 remains OPEN (MCP = F01-B); no push or FREEZE.
+
+CCMAI-GOV-001 BUILD (Claude, 2026-10-01): downstream machine gates implemented (`scripts/cvf_downstream_gate.py`, front marker, tranche record contract, governance and frontend PR workflows, AGENTS.md section, catalog registrations). Gate fails on the pre-migration tree and passes 7/7 now; 28 new tests and ten detected mutations; frontend, docs build, catalog, doctor 25/25 pass. Evidence `docs/reviews/CVF_DOWNSTREAM_MACHINE_GATES_GOV001_BUILD_2026-10-01.md`. REVIEW_PENDING for Codex; GitHub-hosted runs unverified; R020 parked; no push, merge or FREEZE.

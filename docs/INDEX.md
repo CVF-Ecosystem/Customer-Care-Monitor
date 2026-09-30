@@ -13,6 +13,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
 - Executable catalog manager (--check / --write).: `scripts/manage_cvf_downstream_catalog.ps1`
+- Portable downstream machine gates: provenance, continuity, tranche/role contract, claim boundary, secret hygiene, workflow coverage and catalog (CCMAI-GOV-001).: `scripts/cvf_downstream_gate.py`
+- Positive and negative fixtures for the downstream machine gates.: `scripts/tests/test_cvf_downstream_gate.py`
 - Machine implementation-truth surface.: `IMPLEMENTATION_STATUS.json`
 - Generated documentation index.: `docs/INDEX.md`
 - Generated human module catalog.: `docs/catalog/MODULE_CATALOG.md`
@@ -23,6 +25,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Reviews and evidence.: `docs/reviews/`
 - Roadmaps.: `docs/roadmaps/`
 - Specifications.: `docs/specs/`
+- Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate.: `CVF_SESSION/tranches/`
 - Work orders.: `docs/work_orders/`
 
 Plans describe intended work. `IMPLEMENTATION_STATUS.json`, source, tests, and

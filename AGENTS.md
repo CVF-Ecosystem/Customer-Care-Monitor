@@ -176,5 +176,37 @@ governance evidence, commit API keys or secrets, act outside the workspace
 isolation boundary, or ignore CVF policy constraints. Governance has priority
 over speed, user preference, and agent autonomy.
 
+## Downstream Machine Gates (CCMAI-GOV-001)
+
+Portable, fail-closed repository checks. Run before any commit that touches continuity,
+work orders, evidence, workflows or tooling, and expect them on every pull request
+(`.github/workflows/governance.yml`):
+
+```powershell
+python scripts/cvf_downstream_gate.py preflight            # all gates, local worktree + active tranche range
+python scripts/cvf_downstream_gate.py preflight --base origin/main --head HEAD   # PR range
+python -m unittest discover -s scripts/tests -p "test_cvf_downstream_gate*.py"
+```
+
+- **Front marker.** `CVF_SESSION_MEMORY.md` carries a `<!-- cvf-front-marker {...} -->` block
+  (mode, phase, handoff, `activeTranche`, `parked`). Update it in the same change as
+  `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the handoff header (mode, phase, role, next move,
+  parked checkpoint) and `IMPLEMENTATION_STATUS.currentPhase`; any disagreement fails `continuity`.
+- **Tranche record.** Each active or new work order needs `CVF_SESSION/tranches/<ID>.json`
+  (status, phase, risk ceiling, roles, `baseCommit`, `allowedPaths`, `prohibitedEffects`,
+  `buildCommit`, `reviewEvidence`, `disposition`, `freeze`, `history`). R2+ requires a reviewer
+  independent of the implementation/repair worker; a BUILD or pending-review record cannot claim
+  FREEZE; `REVIEW_PASS` needs a 40-hex `buildCommit` and existing review evidence; changed paths
+  must be inside `allowedPaths` (plus session, status and review records).
+- **Claims.** A claim that CVF governs AI/agent behavior needs `governanceReceipt` (a real provider
+  call: provider, model, request, response; not mock or synthetic). A claim that GitHub Actions
+  passed needs `ciRun` (run URL, 40-hex sha, conclusion `success`); the gate checks only the shape,
+  the reviewer verifies the run on GitHub.
+- **Secrets.** Changed files are scanned for credential files and recognizable credential
+  literals (values never printed; bounded, false negatives possible). Mark a deliberate synthetic
+  fixture with `cvf-allow-secret-fixture`.
+- The workspace doctor remains the local prerequisite for the sibling core; the gate does not
+  assume a sibling core. A pass proves the checked repository state, not runtime AI governance.
+
 ---
 *End of CVF Downstream Agent Instructions. Template source: CVF core governance/toolkit/05_OPERATION/CVF_DOWNSTREAM_AGENTS_TEMPLATE.md*

@@ -33,6 +33,20 @@
                           "description":  "Standard-library catalog validation and rendering functions."
                       },
                       {
+                          "id":  "tool-cvf-downstream-gate",
+                          "family":  "tool",
+                          "path":  "scripts/cvf_downstream_gate.py",
+                          "status":  "ACTIVE",
+                          "description":  "Portable downstream machine gates: provenance, continuity, tranche/role contract, claim boundary, secret hygiene, workflow coverage and catalog (CCMAI-GOV-001)."
+                      },
+                      {
+                          "id":  "tool-cvf-downstream-gate-tests",
+                          "family":  "tool",
+                          "path":  "scripts/tests/test_cvf_downstream_gate.py",
+                          "status":  "ACTIVE",
+                          "description":  "Positive and negative fixtures for the downstream machine gates."
+                      },
+                      {
                           "id":  "manifest-cvf",
                           "family":  "manifest",
                           "path":  ".cvf/manifest.json",
@@ -122,6 +136,13 @@
                           "path":  "docs/reviews",
                           "status":  "ACTIVE",
                           "description":  "Reviews and evidence."
+                      },
+                      {
+                          "id":  "family-tranche-records",
+                          "family":  "governed_artifact_family",
+                          "path":  "CVF_SESSION/tranches",
+                          "status":  "ACTIVE",
+                          "description":  "Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate."
                       }
                   ]
 }

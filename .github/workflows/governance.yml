@@ -1,0 +1,53 @@
+name: CVF Governance
+
+# CCMAI-GOV-001: downstream CVF machine gates. No path filter on purpose: every pull request
+# runs them, so a change cannot bypass governance by touching only "unwatched" paths.
+# Passing proves the checked repository state only; it is not proof that CVF controls runtime AI.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    name: Governance preflight (ubuntu)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PyYAML (workflow-coverage gate)
+        run: python -m pip install --quiet pyyaml==6.0.2
+      - name: Gate self-tests (positive and negative fixtures)
+        run: python -m unittest discover -s scripts/tests -p "test_cvf_downstream_gate*.py" -v
+      - name: Fetch PR base
+        if: github.event_name == 'pull_request'
+        run: git fetch --no-tags origin "${{ github.base_ref }}:refs/remotes/origin/${{ github.base_ref }}"
+      # The catalog gate runs in the windows job below: the downstream catalog tool uses
+      # backslash paths and does not run on Linux.
+      - name: Preflight (pull request range)
+        if: github.event_name == 'pull_request'
+        run: python scripts/cvf_downstream_gate.py preflight --skip-catalog --base "origin/${{ github.base_ref }}" --head HEAD
+      - name: Preflight (push)
+        if: github.event_name != 'pull_request'
+        run: python scripts/cvf_downstream_gate.py preflight --skip-catalog
+
+  catalog:
+    name: Governed artifact catalog -Check (windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Catalog gate
+        run: python scripts/cvf_downstream_gate.py preflight --only catalog
