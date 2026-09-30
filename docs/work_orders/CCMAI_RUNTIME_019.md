@@ -1,0 +1,27 @@
+# CCMAI-RUNTIME-019 — F08 backend CI DB-test gate
+
+Status: WORK_ORDER / READY_FOR_CLAUDE_BUILD. Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Source-audit base: `d194ed08f2a09170bb2af6734e5f34ed2f99065f`; Claude records the actual planning-commit parent and clean changed set before BUILD. Risk ceiling R2. [SPEC](../specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [independent finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md).
+
+## Assignment and phase gate
+
+Claude is IMPLEMENTATION_WORKER and COMMIT_STEWARD for one local BUILD commit. Rehydrate `.cvf/manifest.json`, `.cvf/policy.json`, active state/handoff, session memory, implementation status, docs index, SPEC and this order; run workspace doctor; record `WORK_ORDER_AUTHOR (Codex) → IMPLEMENTATION_WORKER (Claude)` and the tranche acknowledgment in the active handoff **before** editing implementation files. Return `REVIEW_PENDING` with commit SHA, changed-set list and evidence. Codex is the independent REVIEWER. Neither worker nor reviewer self-FREEZEs.
+
+## Scope
+
+- Required implementation: `.github/workflows/backend.yml` must run backend tests against disposable MySQL 8 with `TEST_DB_DSN`, verify DB readiness and prevent a green result when DB-backed tests skip or do not execute. Preserve Go build and the existing PR/push scope, extending path filters to any new gate helper.
+- Allowed helper if needed: a small standard-library parser under `scripts/` for `go test -json` output and focused parser tests under `scripts/tests/`. Prefer a machine-readable Go test log; package-qualified required identities avoid false matches. A workflow-only implementation is acceptable if the negative gate cases remain executable and reviewable.
+- Required sentinel coverage: select and document at least one DB-dependent test in each of `backend/db`, `backend/api/handlers`, `backend/engine`, `backend/cli`, `backend/storagecfg`. Candidate names already present: `TestChannelSyncRunIDColumnOnFreshSchema`, `TestDeleteChannelRemovesResultsAndSnapshotsTogether`, `TestSingleAndBatchShareSnapshotContract`, `TestApplyPrunePlanCleansOrphanSnapshotsKeepsReferenced`, `TestTatS3VanDocDuocThongTinDaLuu`. Inspect the current test code before locking the list.
+- Allowed evidence/continuity: one BUILD record under `docs/reviews/`, this work order if an implementation detail must be clarified, the runtime roadmap pointer, `CVF_SESSION_MEMORY.md`, active handoff/state and `IMPLEMENTATION_STATUS.json`. Update docs index/catalog only if their registered artifact set changes.
+- Read-only references: `scripts/test-backend.ps1`, backend DB tests/helpers, `.cvf/` and CVF core. Product Go/TypeScript source, existing DB test assertions, Compose resources, persistent DB, secrets and other findings F01–F07 are outside this BUILD scope. If they must change, report `BUILD_BLOCKED` with evidence for a separate decision.
+
+## Build and proof sequence
+
+1. Inspect the existing workflow, local disposable-DB script and the five sentinel tests. Record the exact proposed changed set and CI service configuration. Use a CI-only DB credential and schema; no real data or provider call. Do not expose the DSN in logs/artifacts.
+2. Implement the MySQL readiness check and full suite (`-count=1`, `-p 1`) so ordinary `go test` failure fails CI. Add a non-vacuous result check: every required sentinel must report PASS; SKIP/missing result fails. Capture and report all skip events, distinguishing unrelated opt-in tests. Preserve `go build ./...`.
+3. Run the positive local equivalent against a disposable MySQL container/network using `scripts/test-backend.ps1` or an equivalent isolated setup. If the workflow-specific result gate cannot run under that script, run it on the full suite's captured Go JSON output separately. Document test count, required sentinel PASS evidence, skip summary, build result and cleanup. Do not substitute the current persistent Compose database.
+4. Run negative checks for skipped, missing and failed required tests (synthetic JSON logs are permitted for this parser check), plus missing/unreachable DB admission. The gate must exit nonzero in each case. Restore any temporary mutation and show the working tree contains only allowed files.
+5. Run `git diff --check`, catalog `-Check` and workspace doctor. Write BUILD evidence with commands, outputs/exit codes, cleanup, changed paths, limitations and claim boundary. Commit locally once; no push, deployment, real channel/provider call or FREEZE.
+
+## Failure and review rules
+
+Do not classify optional S3/live-fetch skips as F08 failure if required DB tests passed, but do not hide DB connection/DSN skips. A green Go package line alone is insufficient. If disposable MySQL is unavailable or the positive gate cannot be demonstrated, report `BUILD_BLOCKED`; do not claim F08 closed. If DB tests fail for an unrelated existing defect, record the failing test and stop rather than changing its assertion under this order. Actual GitHub Actions success remains unverified until the workflow runs after an authorized push.

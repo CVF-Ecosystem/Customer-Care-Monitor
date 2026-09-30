@@ -33,6 +33,14 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
+Current next tranche: `CCMAI-RUNTIME-019` / F08 is at WORK_ORDER, with
+`docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md` and
+`docs/work_orders/CCMAI_RUNTIME_019.md`. Claude is the next IMPLEMENTATION_WORKER
+after continuity rehydration and handoff acknowledgment; Codex independently
+reviews the local BUILD commit. Disposable MySQL and CI-only synthetic data are
+in scope; no provider call, persistent DB, push, deployment or FREEZE. Other
+F01–F07 findings remain OPEN.
+
 Owner accepted F01–F08 from the independent local source review at
 `docs/reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md` as OPEN
 remediation backlog in `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`.
@@ -51,7 +59,7 @@ external effect changes. No Alibaba call or data mutation occurred in this
 roadmap amendment; live provider evidence remains mandatory for any CVF
 governance-runtime claim.
 
-Current mode: `REVIEW` for `CCMAI-IDENTITY-001`: owner-directed README and Go
+Historical state (2026-09-27): `REVIEW` for `CCMAI-IDENTITY-001`: owner-directed README and Go
 module identity correction merged as PR #6. Evidence:
 `docs/reviews/PRODUCT_IDENTITY_2026-09-27.md`. Authority:
 `docs/work_orders/CCMAI_IDENTITY_001.md`.

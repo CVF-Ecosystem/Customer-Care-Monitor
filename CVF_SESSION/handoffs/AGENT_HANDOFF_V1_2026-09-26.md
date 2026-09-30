@@ -5,11 +5,17 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-UX-017 UX017-R1 REVIEW_PASS / FREEZE open; UX-016-F1 and R018 REVIEW_PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD (Codex); COMMIT_STEWARD for roadmap records
-- Next allowed move: F01–F08 are owner-accepted OPEN roadmap findings; Codex may prepare a bounded F08 CI-DB work order first, then F01–F07 per dependencies. Alibaba key use is authorized when needed for project test evidence on the current owner-attested test data, with work-order bounds. No product BUILD, push, deployment or FREEZE from this amendment.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-019 / F08 CI DB gate; earlier UX017-R1, UX016-F1 and R018 REVIEW_PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); IMPLEMENTATION_WORKER (Claude) next
+- Next allowed move: Claude rehydrates [R019 SPEC](../../docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md) and [work order](../../docs/work_orders/CCMAI_RUNTIME_019.md), acknowledges role before BUILD, uses disposable MySQL and returns one local REVIEW_PENDING commit for independent Codex REVIEW. No provider/channel call, persistent DB, push, deployment or FREEZE. F01–F07 remain OPEN.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-019 — F08 CI DB-test gate (2026-09-30)
+
+- New-tranche continuity rehydration by Codex at `d194ed0`: manifest/policy, current state/handoff, memory, implementation status and docs index read; compact bootstrap absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking). Core `26c686c` matches public `origin/main`; doctor 25/25 PASS; knowledge ingest ran; worktree clean before planning. Prior records agree that F08 is first OPEN finding and Claude is the implementation worker.
+- INTAKE: owner said to proceed with fixes under the roadmap, retaining the established Codex ORCHESTRATOR/REVIEWER and Claude worker split. F08 is the first bounded tranche. Source inspection: `.github/workflows/backend.yml` has no DB/DSN; DB tests skip and package can pass; local disposable-MySQL script exists but is not used by CI. R2 gate change, no product runtime source in scope.
+- DESIGN/SPEC/WORK_ORDER: [SPEC](../../docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md) requires ephemeral MySQL, full uncached backend suite/build and a non-vacuous gate for package-qualified DB sentinel tests plus skip reporting. [Work order](../../docs/work_orders/CCMAI_RUNTIME_019.md) limits Claude to workflow, optional small result-gate helper/tests, evidence and continuity. Role route `ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR (Codex)` for planning; Claude must record `WORK_ORDER_AUTHOR → IMPLEMENTATION_WORKER` here before BUILD. Codex independently reviews. F08 remains OPEN until evidence/review; an actual GitHub Actions outcome requires a later authorized push. Owner's Alibaba-key authorization persists but R019 needs zero provider calls. No persistent DB, push, deployment or FREEZE.
 
 ## CCMAI-ROADMAP-001 amendment — F01–F08 and owner test authorization (2026-09-30)
 
