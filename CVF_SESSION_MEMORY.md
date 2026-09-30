@@ -33,24 +33,26 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
-Current active tranche: `CCMAI-RUNTIME-019` / F08 is at CHANGES_REQUIRED / REVIEW_OPEN, with
+Current active tranche: `CCMAI-RUNTIME-019` / F08 R019-R1 repair is at REVIEW_PASS / FREEZE_OPEN, with
 `docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md` and
 `docs/work_orders/CCMAI_RUNTIME_019.md`. Claude's local BUILD commit is
 `bc7d067`; Codex's independent review at
 `docs/reviews/CCMAI_RUNTIME_019_F08_INDEPENDENT_REVIEW_2026-09-30.md`
 found that malformed Go JSON and one existing English DB-unavailable skip can
-still pass the gate. Claude is the next REPAIR_WORKER under R019-R1; Codex
-re-reviews its local commit. Disposable MySQL and CI-only synthetic data were
-used; no provider call, persistent DB, push, deployment or FREEZE. Other
-F01–F07 findings remain OPEN.
+still pass the BUILD gate. Claude's repair commit `4f3a5c3` passed Codex's
+independent re-review at `docs/reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md`.
+The public GitHub Actions run remains unverified, so F08 is open for that
+evidence. Disposable MySQL and CI-only synthetic data were used; no provider
+call, persistent DB, push, deployment or FREEZE. Other F01–F07 findings remain OPEN.
 
 Owner accepted F01–F08 from the independent local source review at
 `docs/reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md` as OPEN
 remediation backlog in `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`.
 The report commit is `7481196`; the reviewed local HEAD is `698612f`; relevant
 source is unchanged between them. No product repair or FREEZE follows from
-accepting the findings. F08 CI DB coverage is the proposed next bounded work
-order; each finding needs its own acceptance evidence and independent REVIEW.
+accepting the findings. R019 locally repairs F08's CI DB gate; public workflow
+evidence remains pending. Each other finding needs its own bounded work order,
+acceptance evidence and independent REVIEW.
 
 Owner states the current project data is test data and authorizes use of the
 Alibaba API key when needed for project tests/evidence. This permission persists
@@ -364,3 +366,5 @@ CCMAI-UX-017 UX017-R1 independent re-review (Codex, 2026-09-30): rehydrated at `
 CCMAI-RUNTIME-019 / F08 BUILD (Claude, 2026-09-30): backend CI workflow runs the full suite on disposable MySQL 8 and a stdlib `go test -json` gate requiring five package-qualified DB sentinels to PASS with no DB-unavailable skips. Positive local disposable run (454 pass, gate exit 0) and real no-DB false-green reproduction (go test 0, gate 1) recorded in `docs/reviews/RUNTIME_CI_DB_TEST_GATE_F08_BUILD_2026-09-30.md`; catalog, doctor 25/25 pass. Actual GitHub Actions run unverified. REVIEW_PENDING for Codex; no push or FREEZE; F01-F07 open.
 
 CCMAI-RUNTIME-019 R019-R1 repair (Claude, 2026-09-30): the F08 gate now rejects invalid/damaged JSON records and the English "DB not available" skip; two new tests failed on the BUILD parser and pass now (11/11); BUILD positive log re-evaluated identically; catalog and doctor 25/25 pass. REVIEW_PENDING for Codex re-review; Actions run unverified; no push or FREEZE.
+
+CCMAI-RUNTIME-019 R019-R1 independent re-review (Codex, 2026-09-30): rehydrated at `4f3a5c3`; one stale memory pointer was aligned to REVIEW_PENDING before material review. Exact repair diff stays in the parser/tests and records; 11/11 parser tests and direct valid/malformed/truncated/English DB-skip/optional S3 probes all met the contract. `REVIEW_PASS / FREEZE_OPEN`; evidence `docs/reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md`. Claude's positive DB-log replay is inherited, with the raw log unavailable for independent replay. Actual GitHub Actions run is unverified, so F08 public CI evidence remains open. Role route REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR for review records. No provider call, push, deployment or FREEZE; F01-F07 open.

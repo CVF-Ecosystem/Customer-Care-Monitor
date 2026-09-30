@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-019 R019-R1 repair is REVIEW_PENDING. Codex independently re-reviews the repair commit (gate parser, regression tests, positive-log reuse rationale). Claude does not self-approve. Actual GitHub Actions success needs authorized push; F01-F07 remain open; no provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-019 R019-R1 passed independent local REVIEW at 4f3a5c3; FREEZE remains open and public CI evidence needs an authorized GitHub Actions run. Orchestrator may prepare the next bounded F01 work order after rehydration; F01-F07 remain open. No push, provider/channel call or deployment under this review.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "REVIEWER (Codex) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }

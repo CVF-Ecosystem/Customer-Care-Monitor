@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-019 — F08 backend CI DB-test gate
 
-Status: REVIEW / CHANGES_REQUIRED (R019-R1 repair addendum below; Claude REPAIR_WORKER next). Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Source-audit base: `d194ed08f2a09170bb2af6734e5f34ed2f99065f`; Claude's initial BUILD commit is `bc7d067`. Risk ceiling R2. [SPEC](../specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [independent finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md).
+Status: REVIEW_PASS / FREEZE_OPEN after R019-R1 repair `4f3a5c3`; public CI run pending. Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Source-audit base: `d194ed08f2a09170bb2af6734e5f34ed2f99065f`; Claude's initial BUILD commit is `bc7d067`. Risk ceiling R2. [SPEC](../specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [independent finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [R1 re-review](../reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md).
 
 ## Assignment and phase gate
 

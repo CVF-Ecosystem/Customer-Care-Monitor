@@ -96,7 +96,7 @@
     "CCMAI-REPO-MIGRATE-001 BUILD pushed to canonical CVF-Ecosystem/Customer-Care-Monitor origin; Go/docs Actions and new GitHub Pages passed, with public home and key guides HTTP 200. Historical PR/run URLs and initial CQA import message remain provenance. Independent R2 REVIEW and FREEZE remain open; old repository deletion is the owner's separate action.",
     "CCMAI-CREDIT-003 rewrote four main commit messages under an exact lease; old SHA citations in historical reviews are observations, not current-main SHAs. GitHub still served the old root SHA by direct lookup after force push; server-side erasure is not claimed. The two local refs/rewrites refs retaining the old root were removed by CLOSER with exact target verification. MIT LICENSE remains intact; Claude's independent R2 REVIEW is REVIEW_PASS; FREEZE open.",
     "CCMAI-RUNTIME-010 REVIEW PASS / FREEZE OPEN: only a synthetic transport was used; real OAuth/Pancake endpoints and accepted Pancake create were not tested. Direct mutation was unavailable. R012 subsequently fixed callback final-write truth. Cross-path sync single-flight and crash recovery remain separate S1 residuals.",
-    "F01-F08 remain OPEN source-level findings at report commit 7481196 and local reviewed HEAD 698612f: agent permissions; sync pagination/checkpoint coverage; analyzer checkpoint timing; Vietnam business-day boundaries; run mode versus limit; job-run cancellation/concurrency; hardcoded Dashboard service health; CI DB-test skip. Owner accepted roadmap treatment on 2026-09-30. R019 F08 BUILD bc7d067 adds disposable MySQL CI and a DB-test gate, but independent review is CHANGES_REQUIRED: malformed Go JSON and the existing English DB-unavailable skip can still pass. F08 is not closed; actual GitHub Actions outcome and hosted-runner secret/port behavior remain unverified. F01-F07 are untouched; no deployment or FREEZE."
+    "F01-F08 were accepted as OPEN source-level findings at report commit 7481196 and local reviewed HEAD 698612f. R019 F08 BUILD bc7d067 added disposable MySQL CI and a DB-test gate. Repair 4f3a5c3 closes two independent review defects: malformed Go JSON and the existing English DB-unavailable skip now fail the gate. Codex R019-R1 re-review is REVIEW_PASS / FREEZE_OPEN on local code and tests. F08 remains open for an actual GitHub Actions run and hosted-runner secret/port/env verification; F01-F07 are untouched. No deployment or FREEZE."
   ],
   "evidence": [
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
@@ -187,7 +187,8 @@
     "docs/reviews/CCMAI_UX_017_R1_INDEPENDENT_REREVIEW_2026-09-30.md",
     "docs/reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md",
     "docs/reviews/RUNTIME_CI_DB_TEST_GATE_F08_BUILD_2026-09-30.md",
-    "docs/reviews/CCMAI_RUNTIME_019_F08_INDEPENDENT_REVIEW_2026-09-30.md"
+    "docs/reviews/CCMAI_RUNTIME_019_F08_INDEPENDENT_REVIEW_2026-09-30.md",
+    "docs/reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md"
   ],
   "updatedAt": "2026-09-30"
 }
