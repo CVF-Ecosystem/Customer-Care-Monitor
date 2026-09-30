@@ -5,11 +5,15 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-019 R019-R1 REVIEW_PASS / FREEZE_OPEN, public CI pending; UX-017 REVIEW_PASS; S1 IN_PROGRESS)
-- Active role: REVIEWER (Codex) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR
-- Next allowed move: Record the independent R019-R1 review and prepare a bounded F01 work order after rehydration. Public F08 CI evidence needs an authorized Actions run. No push, provider/channel call or FREEZE under this review.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-020 F01-A HTTP agent permissions; R019 REVIEW_PASS / FREEZE_OPEN, public CI pending; S1 IN_PROGRESS)
+- Active role: WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) next
+- Next allowed move: Claude rehydrates, acknowledges the R020 handoff, then builds only the bounded HTTP agent permission scope. Return one local REVIEW_PENDING commit for independent Codex review. F01 MCP authorization and F08 public CI evidence remain open; no push, provider/channel call or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-020 — F01-A HTTP agent permissions (2026-09-30)
+
+- Tranche transition and role acknowledgment (Codex): after R019-R1 independent `REVIEW_PASS / FREEZE_OPEN` was committed at `8cb55f8`, canonical continuity was reread, worktree was clean, and the next allowed move was F01 planning. Role route `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR` acknowledged before writing [SPEC](../../docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md) and [work order](../../docs/work_orders/CCMAI_RUNTIME_020.md). F01 is split: R020 covers HTTP `/agents` run/query; the independently routed MCP tools remain F01-B and F01 stays OPEN. Matrix binds supported sync actions to channels:w + messages:w, analysis actions to jobs:w + messages:r, and query resources to messages:r or jobs:r. Claude next IMPLEMENTATION_WORKER after rehydration and its own handoff acknowledgment; Codex is independent REVIEWER. R2, disposable MySQL and synthetic dispatch only. No API key, provider/channel call, push, deployment or FREEZE.
 
 ## CCMAI-RUNTIME-019 — F08 CI DB-test gate (2026-09-30)
 

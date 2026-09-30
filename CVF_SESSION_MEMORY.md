@@ -33,7 +33,12 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
-Current active tranche: `CCMAI-RUNTIME-019` / F08 R019-R1 repair is at REVIEW_PASS / FREEZE_OPEN, with
+Current active tranche: `CCMAI-RUNTIME-020` / F01-A HTTP agent permission admission
+is at WORK_ORDER for Claude IMPLEMENTATION_WORKER. [SPEC](docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_020.md) bind supported
+run/query pairs to tenant permissions. MCP tools remain a separate F01-B
+authorization surface, so F01 remains OPEN. Previous tranche:
+`CCMAI-RUNTIME-019` / F08 R019-R1 repair is at REVIEW_PASS / FREEZE_OPEN, with
 `docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md` and
 `docs/work_orders/CCMAI_RUNTIME_019.md`. Claude's local BUILD commit is
 `bc7d067`; Codex's independent review at
@@ -368,3 +373,5 @@ CCMAI-RUNTIME-019 / F08 BUILD (Claude, 2026-09-30): backend CI workflow runs the
 CCMAI-RUNTIME-019 R019-R1 repair (Claude, 2026-09-30): the F08 gate now rejects invalid/damaged JSON records and the English "DB not available" skip; two new tests failed on the BUILD parser and pass now (11/11); BUILD positive log re-evaluated identically; catalog and doctor 25/25 pass. REVIEW_PENDING for Codex re-review; Actions run unverified; no push or FREEZE.
 
 CCMAI-RUNTIME-019 R019-R1 independent re-review (Codex, 2026-09-30): rehydrated at `4f3a5c3`; one stale memory pointer was aligned to REVIEW_PENDING before material review. Exact repair diff stays in the parser/tests and records; 11/11 parser tests and direct valid/malformed/truncated/English DB-skip/optional S3 probes all met the contract. `REVIEW_PASS / FREEZE_OPEN`; evidence `docs/reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md`. Claude's positive DB-log replay is inherited, with the raw log unavailable for independent replay. Actual GitHub Actions run is unverified, so F08 public CI evidence remains open. Role route REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR for review records. No provider call, push, deployment or FREEZE; F01-F07 open.
+
+CCMAI-RUNTIME-020 F01-A planning (Codex, 2026-09-30): after R019 review commit `8cb55f8`, continuity was rehydrated and role route ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR acknowledged. SPEC and work order scope HTTP agent run/query authorization by requested tenant and exact action/resource. MCP tenant-only tools remain F01-B; neither R020 nor R019 closes F01/F08 public CI evidence. Claude next IMPLEMENTATION_WORKER after rehydration/handoff acknowledgment, then one local REVIEW_PENDING BUILD for independent Codex review. R2, disposable MySQL/synthetic dispatch only; no provider call, API key, push, deployment or FREEZE.
