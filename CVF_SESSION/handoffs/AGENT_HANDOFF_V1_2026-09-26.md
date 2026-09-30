@@ -5,11 +5,16 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-UX-016-F1 REVIEW_PASS / FREEZE open; prior UX-016 and R018 REVIEW_PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex) next
-- Next allowed move: Codex selects the next bounded S1 tranche. Zalo/legacy/mixed-version crash recovery remains separate; no push, provider/channel call or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-UX-017; UX-016-F1 and R018 REVIEW_PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) next
+- Next allowed move: Claude rehydrates, acknowledges the role transition, builds only the Channels list/detail sync-status presentation under `docs/work_orders/CCMAI_UX_017.md`, records evidence and makes one local REVIEW_PENDING commit for Codex review. Zalo/legacy/mixed-version recovery remains separate; no push, provider/channel call or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-UX-017 — Channels sync-status truth (2026-09-30)
+
+- INTAKE/DESIGN/SPEC/WORK_ORDER: source audit found list empty status rendered `—`, both screens label last-success checkpoint as generic last sync, list generic errors highlight reauth, and detail polling timeout/fetch failure report a confirmed failure. The API supplies status and last-success timestamp but no last-attempt time, safe error reason or demo marker. [SPEC](../../docs/specs/CHANNELS_SYNC_STATUS_TRUTH_UX017_2026-09-30.md) and [work order](../../docs/work_orders/CCMAI_UX_017.md) bound Claude to frontend list/detail and vi/en labels/tests; existing shared SyncStatusChip and store are read-only. Claude returns one local REVIEW_PENDING commit for independent Codex review. No source BUILD, provider/channel call, deployment, push or FREEZE.
+- New tranche acknowledgment before BUILD: Codex rehydrated manifest, policy, active state/handoff, memory, implementation status and index after UX-016-F1 REVIEW_PASS; compact bootstrap model remains absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking), and doctor PASS 25/25. Role route `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex)` for a new bounded UX-06 Channels screen tranche. Claude will be `IMPLEMENTATION_WORKER` after rehydration and its own handoff acknowledgment; Codex remains independent `REVIEWER`. R018 runtime admission is inherited REVIEW_PASS, not deployment proof. No source BUILD, provider/channel call, push or FREEZE is authorized by this planning acknowledgment.
 
 ## CCMAI-UX-016-F1 — Dashboard stale-response test (2026-09-30)
 

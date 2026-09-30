@@ -185,3 +185,5 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.
 
 **UX-016 F1 review (2026-09-30):** [CCMAI-UX-016-F1](../work_orders/CCMAI_UX_016_F1.md) added the committed out-of-order Dashboard response regression; [Codex independent review](../reviews/CCMAI_UX_016_F1_INDEPENDENT_REVIEW_2026-09-30.md) passed after a focused rerun and inspection of the guard-removal mutation evidence. `REVIEW_PASS / FREEZE_OPEN`; Zalo/legacy sync recovery remains separate.
+
+**UX-017 WORK_ORDER (2026-09-30):** [SPEC](../specs/CHANNELS_SYNC_STATUS_TRUTH_UX017_2026-09-30.md) và [work order](../work_orders/CCMAI_UX_017.md) giao Claude sửa cách diễn đạt trạng thái đồng bộ trên danh sách/chi tiết Kênh bằng API hiện có: sáu trạng thái riêng biệt, mốc lần đồng bộ thành công, và cảnh báo chưa xác nhận khi polling hết hạn. Codex review độc lập sau BUILD. Chưa có dữ liệu thời điểm thử gần nhất hoặc lý do lỗi an toàn từ API, nên UI không suy ra hai dữ kiện đó; chưa triển khai/deploy/FREEZE.

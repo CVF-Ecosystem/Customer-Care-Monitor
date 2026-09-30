@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-UX-016-F1 passed Codex independent REVIEW; REVIEW_PASS / FREEZE_OPEN. Codex ORCHESTRATOR may select the next bounded S1 tranche. Zalo/legacy/mixed-version crash recovery remains separate; no push, provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-UX-017 WORK_ORDER is ready. Claude IMPLEMENTATION_WORKER rehydrates and acknowledges the role in the active handoff, builds the bounded Channels list/detail sync-status presentation, records evidence and makes one local REVIEW_PENDING commit for Codex independent review. Zalo/legacy/mixed-version recovery remains separate; no push, provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Codex); ORCHESTRATOR (Codex) next",
+  "activeRole": "WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }
