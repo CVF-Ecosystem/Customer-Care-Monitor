@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-UX-017 UX017-R1 repair is REVIEW_PENDING. Codex independently re-reviews the repair commit and reruns the focused polling tests. Claude does not self-approve. Zalo/legacy/mixed-version recovery remains separate; no push, provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-UX-017 UX017-R1 passed Codex independent re-review; REVIEW_PASS / FREEZE_OPEN. Codex ORCHESTRATOR may select the next bounded S1 tranche. Zalo/legacy/mixed-version recovery remains separate; no push, provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "COMMIT_STEWARD (Codex); ORCHESTRATOR (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }
