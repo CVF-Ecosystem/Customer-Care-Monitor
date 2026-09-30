@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-019 F08 BUILD is REVIEW_PENDING. Codex independently reviews the exact commit (workflow, gate helper, positive and negative evidence, secret boundary) and reruns the gate tests. Claude does not self-approve. Actual GitHub Actions success needs authorized push; F01-F07 remain open; no provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-019 independent REVIEW is CHANGES_REQUIRED / REVIEW_OPEN: the gate accepts a malformed Go JSON line and the existing English DB-unavailable skip. R019-R1 addendum authorizes Claude REPAIR_WORKER to fix only the gate helper/tests and same-scope evidence/continuity, then return a local REVIEW_PENDING commit to Codex. Actual GitHub Actions success remains unverified; F01-F07 open; no push, provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "REVIEWER / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); REPAIR_WORKER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }

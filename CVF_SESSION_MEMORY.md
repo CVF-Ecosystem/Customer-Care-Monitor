@@ -33,12 +33,15 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
-Current next tranche: `CCMAI-RUNTIME-019` / F08 is at WORK_ORDER, with
+Current active tranche: `CCMAI-RUNTIME-019` / F08 is at CHANGES_REQUIRED / REVIEW_OPEN, with
 `docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md` and
-`docs/work_orders/CCMAI_RUNTIME_019.md`. Claude is the next IMPLEMENTATION_WORKER
-after continuity rehydration and handoff acknowledgment; Codex independently
-reviews the local BUILD commit. Disposable MySQL and CI-only synthetic data are
-in scope; no provider call, persistent DB, push, deployment or FREEZE. Other
+`docs/work_orders/CCMAI_RUNTIME_019.md`. Claude's local BUILD commit is
+`bc7d067`; Codex's independent review at
+`docs/reviews/CCMAI_RUNTIME_019_F08_INDEPENDENT_REVIEW_2026-09-30.md`
+found that malformed Go JSON and one existing English DB-unavailable skip can
+still pass the gate. Claude is the next REPAIR_WORKER under R019-R1; Codex
+re-reviews its local commit. Disposable MySQL and CI-only synthetic data were
+used; no provider call, persistent DB, push, deployment or FREEZE. Other
 F01–F07 findings remain OPEN.
 
 Owner accepted F01–F08 from the independent local source review at

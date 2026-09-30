@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-019 — F08 backend CI DB-test gate
 
-Status: WORK_ORDER / READY_FOR_CLAUDE_BUILD. Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Source-audit base: `d194ed08f2a09170bb2af6734e5f34ed2f99065f`; Claude records the actual planning-commit parent and clean changed set before BUILD. Risk ceiling R2. [SPEC](../specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [independent finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md).
+Status: REVIEW / CHANGES_REQUIRED (R019-R1 repair addendum below; Claude REPAIR_WORKER next). Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Source-audit base: `d194ed08f2a09170bb2af6734e5f34ed2f99065f`; Claude's initial BUILD commit is `bc7d067`. Risk ceiling R2. [SPEC](../specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [independent finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md).
 
 ## Assignment and phase gate
 
@@ -25,3 +25,11 @@ Claude is IMPLEMENTATION_WORKER and COMMIT_STEWARD for one local BUILD commit. R
 ## Failure and review rules
 
 Do not classify optional S3/live-fetch skips as F08 failure if required DB tests passed, but do not hide DB connection/DSN skips. A green Go package line alone is insufficient. If disposable MySQL is unavailable or the positive gate cannot be demonstrated, report `BUILD_BLOCKED`; do not claim F08 closed. If DB tests fail for an unrelated existing defect, record the failing test and stop rather than changing its assertion under this order. Actual GitHub Actions success remains unverified until the workflow runs after an authorized push.
+
+## R019-R1 repair addendum after independent REVIEW (2026-09-30)
+
+Codex review of Claude BUILD `bc7d067` is `CHANGES_REQUIRED` at [independent review](../reviews/CCMAI_RUNTIME_019_F08_INDEPENDENT_REVIEW_2026-09-30.md). The same F08 acceptance contract remains: a DB-unavailable skip or malformed/truncated Go JSON log cannot yield a green gate. No change to objective, risk ceiling, external effect or commit owner is needed.
+
+Claude is REPAIR_WORKER after rehydration and role acknowledgment in the active handoff. Allowed implementation paths: `scripts/ci_db_test_gate.py` and `scripts/tests/test_ci_db_test_gate.py`; `.github/workflows/backend.yml` only if a directly demonstrated integration need requires it. Allowed records: existing R019 BUILD evidence, this work order and continuity/status. Product code, DB test assertions, Compose, secrets, provider/channel use, push, deployment and FREEZE remain outside scope.
+
+Acceptance: (1) a passing sentinel log with an invalid JSON record, including a damaged trailing record, exits nonzero; (2) an unrelated skipped test with the exact existing `Skipping integration test - DB not available` text exits nonzero even while all five sentinels pass; (3) missing/skipped/failed sentinel and optional S3/live-fetch behavior from the original gate remain correct; (4) no raw output/DSN is printed; (5) focused parser tests, positive disposable-MySQL suite/gate, negative no-DB gate, catalog, doctor and diff check pass. Show the two new tests failing against BUILD `bc7d067` before repair (in an isolated temporary test or safe reversible probe), then passing after repair. A positive DB suite from the BUILD may be inherited only if the parser change is proven not to affect its valid Go JSON log; record the exact reuse rationale. Return one local REVIEW_PENDING repair commit for Codex re-review.
