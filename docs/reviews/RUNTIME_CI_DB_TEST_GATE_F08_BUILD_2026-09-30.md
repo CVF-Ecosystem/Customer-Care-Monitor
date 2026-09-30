@@ -67,3 +67,17 @@ Workflow shell: all five `run` blocks pass `bash -n`; YAML parses; triggers cove
 ## Disposition
 
 `REVIEW_PENDING` for Codex independent REVIEW. Claude does not self-approve; no push, deployment or FREEZE.
+
+## Repair R019-R1 (Claude, 2026-09-30)
+
+**Finding:** [independent review](CCMAI_RUNTIME_019_F08_INDEPENDENT_REVIEW_2026-09-30.md) — the gate (1) ignored non-JSON/damaged lines and (2) did not recognise the English DB-unavailable skip in `backend/engine/integration_test.go:93` ("Skipping integration test - DB not available"), so it could print `GATE PASSED` for an incomplete or DB-unavailable log.
+
+**Repair (`scripts/ci_db_test_gate.py` only):** any non-blank line that is not a valid JSON go-test record (including a damaged trailing record) is now a gate problem (`invalid JSON record(s) in log: N`); `DB not available` is added to the DB-unavailable skip markers. Optional S3/live-fetch skips remain allowed; output remains names/counts only (a regression test asserts an IP from the skip text is never echoed). The test file also closes its two file handles (review non-blocking note; `python -W error` now clean).
+
+**Tests before/after:** two new regression tests (`test_invalid_json_record_fails_even_when_sentinels_pass` — stray line and damaged trailing record, blank lines still allowed; `test_english_db_not_available_skip_fails_after_sentinels_pass`). Against the BUILD-commit parser `bc7d067`: 11 tests, **2 failed** (exactly these), 9 passed. After the repair: `python -B -W error -m unittest discover -s scripts/tests` **11/11 OK**, no ResourceWarning.
+
+**Positive-log reuse rationale:** the parser change can only add failures for non-JSON lines and for skips containing "DB not available". The BUILD run's saved valid Go JSON log (full suite on disposable MySQL, `go test` and `go build` exit 0) was re-evaluated with the repaired gate: 234,247 events, **0 invalid records**, 454 pass / 0 fail / 2 optional skips, 0 DB-unavailable skips (the log contains no "DB not available" text), all five sentinels PASS, `GATE PASSED` exit 0 — identical to the BUILD result. The DB suite was therefore not rerun; product code, workflow and tests it exercises are unchanged since `bc7d067`.
+
+**Negative no-DB logs (from BUILD, re-evaluated):** unset and unreachable DSN logs still exit 1 (5 DB-unavailable skips, 0 invalid records).
+
+**Other gates:** catalog `-Check` PASS; doctor 25/25; `git diff --check` clean; `__pycache__` removed; repair changed set = `scripts/ci_db_test_gate.py`, `scripts/tests/test_ci_db_test_gate.py`, this evidence, handoff, active state, session memory. No workflow, product, DB, secret, provider, push or FREEZE change. Actual GitHub Actions run remains unverified. `REVIEW_PENDING` for Codex re-review.

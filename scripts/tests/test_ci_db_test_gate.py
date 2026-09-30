@@ -92,12 +92,30 @@ class GateTests(unittest.TestCase):
         _, report = gate.evaluate(log)
         self.assertNotIn("hunter2", "\n".join(report))
 
+    def test_invalid_json_record_fails_even_when_sentinels_pass(self):
+        for extra in (["not-json"], ['{"Action": "pass", "Package": "p", "Te']):  # stray line; damaged trailing record
+            ok, report = gate.evaluate(good_log() + extra)
+            self.assertFalse(ok, report)
+            self.assertTrue(any("invalid JSON record" in r for r in report), report)
+        ok, _ = gate.evaluate(["", "   "] + good_log())  # blank lines are not records
+        self.assertTrue(ok)
+
+    def test_english_db_not_available_skip_fails_after_sentinels_pass(self):
+        text = "Skipping integration test - DB not available: dial tcp 10.0.0.1:3306: connect: connection refused\n"
+        log = good_log() + [ev("run", "p/engine", "TestIntegrationFullJobFlow"), ev("output", "p/engine", "TestIntegrationFullJobFlow", text), ev("skip", "p/engine", "TestIntegrationFullJobFlow")]
+        ok, report = gate.evaluate(log)
+        self.assertFalse(ok, report)
+        self.assertTrue(any("DB-unavailable skip: p/engine.TestIntegrationFullJobFlow" in r for r in report), report)
+        self.assertNotIn("10.0.0.1", "\n".join(report))
+
     def test_cli_exit_codes_and_unreadable_log(self):
         script = os.path.join(os.path.dirname(HERE), "ci_db_test_gate.py")
         with tempfile.TemporaryDirectory() as d:
             good, bad = os.path.join(d, "good.json"), os.path.join(d, "bad.json")
-            open(good, "w").write("\n".join(good_log()))
-            open(bad, "w").write("\n".join(good_log(skip=SENT[1][1])))
+            with open(good, "w") as fh:
+                fh.write("\n".join(good_log()))
+            with open(bad, "w") as fh:
+                fh.write("\n".join(good_log(skip=SENT[1][1])))
             run = lambda p: subprocess.run([sys.executable, script, p], capture_output=True, text=True).returncode
             self.assertEqual(run(good), 0)
             self.assertEqual(run(bad), 1)

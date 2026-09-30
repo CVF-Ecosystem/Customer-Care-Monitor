@@ -2,7 +2,7 @@
 """CCMAI-RUNTIME-019 / F08: fail backend CI when DB-backed tests did not really run.
 
 Reads `go test -json` output and exits nonzero unless:
-  * the log is non-empty and no test/package reported "fail";
+  * the log is non-empty, every line is a valid JSON record, and no test/package reported "fail";
   * every required DB sentinel test (package-qualified) finished with "pass"
     and its package reached a terminal "pass" event (so truncated logs fail);
   * no test anywhere skipped because the test database was missing or unreachable.
@@ -28,7 +28,7 @@ REQUIRED_SENTINELS = [
 ]
 
 # Markers used by the existing test helpers for an absent/unreachable test DB.
-DB_SKIP_MARKERS = ("TEST_DB_DSN", "khong ket noi duoc DB test")
+DB_SKIP_MARKERS = ("TEST_DB_DSN", "khong ket noi duoc DB test", "DB not available")
 
 
 def evaluate(lines, sentinels=REQUIRED_SENTINELS):
@@ -63,6 +63,9 @@ def evaluate(lines, sentinels=REQUIRED_SENTINELS):
     problems = []
     if events == 0:
         problems.append("no go test events found (empty or truncated log)")
+    if bad_lines:
+        # go test -json emits only JSON records; anything else means a damaged or incomplete log.
+        problems.append(f"invalid JSON record(s) in log: {bad_lines}")
 
     failed = sorted(f"{p}.{t}" for (p, t), a in terminal.items() if a == "fail")
     failed_pkgs = sorted(p for p, a in pkg_terminal.items() if a == "fail")
@@ -98,7 +101,7 @@ def evaluate(lines, sentinels=REQUIRED_SENTINELS):
         sentinel_lines.append(f"  {state.upper():7} {p}.{t}")
 
     report = [
-        f"go test events: {events} (non-JSON lines ignored: {bad_lines})",
+        f"go test events: {events} (invalid records: {bad_lines})",
         f"tests: pass={counts['pass']} fail={counts['fail']} skip={counts['skip']}",
         "required sentinels:",
         *sentinel_lines,
