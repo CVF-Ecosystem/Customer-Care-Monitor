@@ -39,6 +39,13 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
+Parent CVF learning intake (Codex, 2026-10-01):
+`docs/reviews/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
+records the real downstream continuity/doctor/portable-checker gap and a
+Finding-To-Governance Learning disposition. Another agent owns any CVF parent
+implementation and tests. This project remains at CCMAI-GOV-001 REVIEW_PENDING
+without a Codex BUILD disposition or PR evidence.
+
 CCMAI-GOV-001 planning (Codex, 2026-09-30): after R020 independent review
 commit `df0c4cc`, canonical continuity was rehydrated and the role route
 ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR was acknowledged in the active
@@ -51,7 +58,8 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-GOV-001` / downstream machine gates is at
-WORK_ORDER / DISPATCH_READY for Claude BUILD and independent Codex REVIEW.
+BUILD committed / REVIEW_PENDING for independent Codex REVIEW of Claude's
+local commit `54663eb`; no review disposition has been issued.
 The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
 [SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
 [work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.

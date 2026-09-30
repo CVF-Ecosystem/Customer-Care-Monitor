@@ -1,6 +1,6 @@
 # CCMAI-GOV-001 — materialize applicable downstream CVF machine gates
 
-Status: DISPATCH_READY. Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base: `df0c4ccf875fb0e96258fe4f85106a102908f2cb`. Risk ceiling R2. Authority: [SPEC](../specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and [applicability decision](../decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md). This work order implements the owner's downstream machine-gate request before the authorized PR/F08 public-run step.
+Status: REVIEW_PENDING after Claude BUILD `54663ebb566017a82ffb3abb02480ae0d3e58175`; no Codex review disposition yet. Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base: `df0c4ccf875fb0e96258fe4f85106a102908f2cb`. Risk ceiling R2. Authority: [SPEC](../specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and [applicability decision](../decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md). This work order implements the owner's downstream machine-gate request before the authorized PR/F08 public-run step.
 
 ## Assignment and return
 
