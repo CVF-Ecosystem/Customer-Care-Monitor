@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-019 F08 SPEC and bounded WORK_ORDER are ready. Claude rehydrates and records WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) in the active handoff before CI-gate BUILD, then locally commits evidence and returns REVIEW_PENDING for independent Codex REVIEW. No provider/channel call, persistent DB, push, deployment or FREEZE. F01-F07 remain OPEN roadmap findings.",
+  "nextAllowedMove": "CCMAI-RUNTIME-019 F08 BUILD is REVIEW_PENDING. Codex independently reviews the exact commit (workflow, gate helper, positive and negative evidence, secret boundary) and reruns the gate tests. Claude does not self-approve. Actual GitHub Actions success needs authorized push; F01-F07 remain open; no provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); IMPLEMENTATION_WORKER (Claude) next",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }
