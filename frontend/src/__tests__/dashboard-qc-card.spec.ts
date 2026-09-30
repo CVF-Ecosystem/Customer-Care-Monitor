@@ -91,4 +91,30 @@ describe('Dashboard QC card (UX-016)', () => {
     await flushPromises()
     expect(qcCard(w).find('.text-h5').text()).toBe('—')
   })
+
+  it('keeps the newer date selection when an older response resolves last', async () => {
+    const w = await mountDashboard()
+    expect(qcCard(w).find('.text-h5').text()).toBe('4')
+    const pending: Array<{ params: Record<string, string>, resolve: (v: { data: Record<string, unknown> }) => void }> = []
+    apiGet.mockImplementation((url: string, config?: { params?: Record<string, string> }) => {
+      if (!url.endsWith('/dashboard')) return Promise.resolve({ data: { has_data: true, is_demo: false } })
+      return new Promise(resolve => { pending.push({ params: config?.params ?? {}, resolve }) })
+    })
+    const dateInput = w.find('input[type="date"]')
+    await dateInput.setValue('2026-03-10')
+    await dateInput.setValue('2026-03-11')
+    expect(pending).toHaveLength(2)
+    expect(pending[0].params.from).toBe('2026-03-10')
+    expect(pending[1].params.from).toBe('2026-03-11')
+    expect(qcCard(w).find('.text-h5').text()).toBe('—')
+
+    pending[1].resolve(response(7, 13))
+    await flushPromises()
+    expect(qcCard(w).find('.text-h5').text()).toBe('7')
+
+    pending[0].resolve(response(99, 55))
+    await flushPromises()
+    expect(qcCard(w).find('.text-h5').text()).toBe('7')
+    expect(qcCard(w).text()).not.toContain('99')
+  })
 })

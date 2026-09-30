@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-UX-016-F1 WORK_ORDER is ready. Claude IMPLEMENTATION_WORKER rehydrates and acknowledges the role in the active handoff, adds only the Dashboard stale-response regression test, records BUILD evidence and makes one local REVIEW_PENDING commit; Codex independently reviews. Zalo/legacy recovery remains separate. No push, provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-UX-016-F1 BUILD is REVIEW_PENDING. Codex independently reviews the exact commit, reruns the focused test and verifies the guard-bypass mutation evidence before a disposition. Claude does not self-approve. Zalo/legacy recovery remains separate; no push, provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }
