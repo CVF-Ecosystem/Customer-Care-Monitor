@@ -74,6 +74,7 @@ ALLOW_MARKER = "cvf-allow-secret-fixture"
 class Result:
     def __init__(self, name):
         self.name, self.problems, self.notes = name, [], []
+        self.skipped = None  # reason string when the control was not executed in this process
 
     def fail(self, msg):
         self.problems.append(msg)
@@ -135,45 +136,91 @@ def norm(s):
     return " ".join(str(s).split())
 
 
+def norm_move(s):
+    """Normalize an instruction: drop markdown code/emphasis marks, unify quotes and spacing."""
+    t = str(s).replace("`", "").replace("**", "").replace("‘", "'").replace("’", "'").replace("“", '"').replace("”", '"')
+    return " ".join(t.split())
+
+
 # ----------------------------------------------------------------------------- git helpers
-def git(root, *args):
+class GateError(Exception):
+    """A required input (Git range, pin, repository) is unusable; callers fail closed."""
+
+
+def _git(root, *args, check=True):
     try:
-        out = subprocess.run(["git", "-C", root, *args], capture_output=True, text=True, timeout=120)
+        out = subprocess.run(["git", "-C", root, *args], capture_output=True, timeout=120)
     except (OSError, subprocess.SubprocessError):
-        return None
-    return out.stdout if out.returncode == 0 else None
+        raise GateError(f"git {args[0]} could not run")
+    if check and out.returncode != 0:
+        raise GateError(f"git {args[0]} failed")
+    return out
+
+
+def git_z(root, *args):
+    """NUL-delimited Git path output (safe for spaces/newlines/quotes in names)."""
+    raw = _git(root, *args).stdout
+    return [p.decode("utf-8", "surrogateescape") for p in raw.split(b"\0") if p]
 
 
 def have_git(root):
-    return git(root, "rev-parse", "--git-dir") is not None
+    try:
+        return _git(root, "rev-parse", "--git-dir", check=False).returncode == 0
+    except GateError:
+        return False
 
 
-def _norm_existing(root, names):
+def verify_commit(root, ref, label):
+    if not ref or ref.startswith("-") or len(ref) > 200:
+        raise GateError(f"{label} is empty or malformed")
+    out = _git(root, "rev-parse", "--verify", "--quiet", ref + "^{commit}", check=False)
+    if out.returncode != 0:
+        raise GateError(f"{label} is unknown or unreachable: {ref[:80]}")
+    return out.stdout.decode().strip()
+
+
+def existing(root, names):
     return sorted(n.replace("\\", "/") for n in names if os.path.isfile(os.path.join(root, n)))
 
 
 def pr_files(root, args):
-    """Files in an explicit set or in the PR range base...head (existing files only); None if unknown."""
+    """All changed paths (including deletions) of an explicit set or the PR range base...head."""
     if args.files is not None:
-        return _norm_existing(root, set(args.files))
+        return sorted(set(n.replace("\\", "/") for n in args.files))
     if args.base:
-        out = git(root, "diff", "--name-only", f"{args.base}...{args.head or 'HEAD'}")
-        return None if out is None else _norm_existing(root, set(out.split()))
+        if not have_git(root):
+            raise GateError("--base needs a git checkout")
+        verify_commit(root, args.base, "PR base")
+        verify_commit(root, args.head or "HEAD", "PR head")
+        return sorted(set(git_z(root, "diff", "--name-only", "-z", f"{args.base}...{args.head or 'HEAD'}")))
     return []
 
 
-def scope_files(root, args, base_commit):
-    """Files the active tranche touched: explicit set, else worktree changes plus base_commit..HEAD."""
-    if args.files is not None:
-        return _norm_existing(root, set(args.files))
+def worktree_files(root):
+    """Uncommitted tracked changes plus untracked (non-ignored) files, including deletions."""
     if not have_git(root):
-        return None
-    names = set()
-    for cmd in (["diff", "--name-only", "HEAD"], ["ls-files", "-o", "--exclude-standard"]):
-        names |= set((git(root, *cmd) or "").split())
-    if base_commit and git(root, "cat-file", "-e", base_commit + "^{commit}") is not None:
-        names |= set((git(root, "diff", "--name-only", f"{base_commit}..HEAD") or "").split())
-    return _norm_existing(root, names)
+        raise GateError("not a git checkout: worktree changes cannot be determined")
+    names = set(git_z(root, "diff", "--name-only", "-z", "HEAD"))
+    names |= set(git_z(root, "ls-files", "-o", "--exclude-standard", "-z"))
+    return sorted(n.replace("\\", "/") for n in names)
+
+
+def scope_files(root, args, base_commit):
+    """Paths the active tranche touched (including deletions): explicit set, else worktree
+    changes plus the validated pin range base_commit..HEAD. Unusable input raises GateError."""
+    if args.files is not None:
+        return sorted(set(n.replace("\\", "/") for n in args.files))
+    if not have_git(root):
+        raise GateError("not a git checkout and no --files: changed-file scope cannot be determined")
+    if not HEX40.match(str(base_commit or "")):
+        raise GateError("tranche baseCommit is missing or not a 40-hex commit")
+    verify_commit(root, base_commit, "tranche baseCommit")
+    if _git(root, "merge-base", "--is-ancestor", base_commit, "HEAD", check=False).returncode != 0:
+        raise GateError("tranche baseCommit is not an ancestor of HEAD")
+    names = set(git_z(root, "diff", "--name-only", "-z", "HEAD"))
+    names |= set(git_z(root, "ls-files", "-o", "--exclude-standard", "-z"))
+    names |= set(git_z(root, "diff", "--name-only", "-z", f"{base_commit}..HEAD"))
+    return sorted(n.replace("\\", "/") for n in names)
 
 
 # ----------------------------------------------------------------------------- gates
@@ -262,6 +309,10 @@ def gate_continuity(root, ctx):
         s_ids, h_ids = set(TRANCHE_ID.findall(state.get("nextAllowedMove", ""))), set(TRANCHE_ID.findall(hf.get("Next allowed move", "")))
         if s_ids != h_ids:
             r.fail(f"next-move tranche IDs differ: state {sorted(s_ids)} vs handoff {sorted(h_ids)}")
+        # The actionable instruction itself is bound too: the handoff header must carry the
+        # canonical state text (whitespace and markdown emphasis are normalized away).
+        if norm_move(hf.get("Next allowed move", "")) != norm_move(state.get("nextAllowedMove", "")):
+            r.fail("handoff Next allowed move differs from state.nextAllowedMove (normalized text)")
         parked = state.get("parkedOperatorCheckpoint")
         h_parked = hf.get("Parked operator checkpoint", "")
         if (parked in (None, "")) != (h_parked.lower() in ("none", "")):
@@ -374,7 +425,7 @@ def validate_record(root, rec, r, active_phase=None):
                     r.fail(f"{tid}: invalid status transition {a} -> {b}")
 
 
-def gate_tranche(root, ctx, files):
+def gate_tranche(root, ctx, files, scope_err=None):
     r = Result("tranche")
     marker = ctx.get("marker")
     state = ctx.get("state") or {}
@@ -408,23 +459,106 @@ def gate_tranche(root, ctx, files):
     for f in (files or []):
         if f.startswith("docs/work_orders/") and f.endswith(".md") and os.path.basename(f) != "README.md" and f not in bound:
             r.fail(f"changed work order has no tranche record binding it: {f}")
-    # path scope of the active tranche
-    if files is None:
-        r.fail("changed-file scope unavailable (not a git checkout and no --files); path scope cannot be checked")
+    # the active order's current Status line must agree with the canonical record
+    check_order_status(root, active, r)
+    for f in (files or []):
+        for rec in records.values():
+            if rec is not active and rec.get("workOrder") == f:
+                check_order_status(root, rec, r)
+    # authority: role/risk/path/effect fields are verified against the dispatcher-owned seed
+    seed = check_authority(root, active, r, ctx)
+    if scope_err:
+        r.fail(f"changed-file scope unavailable: {scope_err}")
         return r
-    allowed = list(active.get("allowedPaths") or []) + ALWAYS_ALLOWED
+    if files is None:
+        r.fail("changed-file scope unavailable")
+        return r
+    if seed is None:
+        return r  # already failed; scope cannot be judged without the authority
+    allowed = list(seed.get("allowedPaths") or []) + ALWAYS_ALLOWED
     out_of_scope = [f for f in files if not path_matches(f, allowed)]
     for f in out_of_scope[:20]:
-        r.fail(f"changed path outside the active tranche's allowedPaths: {f}")
+        r.fail(f"changed path outside the authorized allowedPaths: {f}")
     if len(out_of_scope) > 20:
         r.fail(f"... and {len(out_of_scope) - 20} more paths outside allowedPaths")
     return r
 
 
-def gate_claims(root, ctx, files):
+ORDER_STATUS = re.compile(r"^Status:\s*`?([A-Z][A-Z_]+)", re.M)
+
+
+def check_order_status(root, rec, r):
+    tid, wo = rec.get("trancheId", "?"), rec.get("workOrder")
+    if not wo or not inside(root, wo) or not os.path.isfile(os.path.join(root, wo)):
+        return  # validate_record already reports a missing work order
+    head = "\n".join(read_text(os.path.join(root, wo)).splitlines()[:20])
+    m = ORDER_STATUS.search(head)
+    if not m:
+        r.fail(f"{tid}: work order has no 'Status: <STATE>' line in its first 20 lines")
+    elif m.group(1) not in STATUS_PHASE:
+        r.fail(f"{tid}: work order Status {m.group(1)!r} is not a known state")
+    elif m.group(1) != rec.get("status"):
+        r.fail(f"{tid}: work order Status {m.group(1)} is stale or contradicts the tranche record status {rec.get('status')}")
+
+
+def check_authority(root, rec, r, ctx):
+    """Compare the worker-editable record with the dispatcher-owned authority seed and, in a git
+    checkout, prove the seed is the content it had when first committed. The seed author cannot
+    be proven (one git identity), so a reviewer must still confirm who seeded it."""
+    tid = rec.get("trancheId", "?")
+    rel = f"CVF_SESSION/authority/{tid}.json"
+    path = os.path.join(root, *rel.split("/"))
+    if not os.path.isfile(path):
+        r.fail(f"{tid}: no dispatcher-owned authority seed {rel}")
+        return None
+    seed = load_json(path, r, "authority seed")
+    if not isinstance(seed, dict):
+        return None
+    if seed.get("trancheId") != tid or not str(seed.get("authorityKind", "")).startswith("DISPATCHER_OWNED"):
+        r.fail(f"{tid}: authority seed must declare this trancheId and a DISPATCHER_OWNED authorityKind")
+        return None
+    if rec.get("riskCeiling") != seed.get("riskCeiling"):
+        r.fail(f"{tid}: record riskCeiling differs from the authority seed")
+    for key, val in (seed.get("roles") or {}).items():
+        if (rec.get("roles") or {}).get(key) != val:
+            r.fail(f"{tid}: record roles.{key} differs from the authority seed")
+    widened = sorted(set(rec.get("allowedPaths") or []) - set(seed.get("allowedPaths") or []))
+    if widened:
+        r.fail(f"{tid}: record allowedPaths widen the authority seed: {', '.join(widened)[:200]}")
+    dropped = sorted(set(seed.get("prohibitedEffects") or []) - set(rec.get("prohibitedEffects") or []))
+    if dropped:
+        r.fail(f"{tid}: record drops prohibitedEffects required by the authority seed: {', '.join(dropped)}")
+    if not have_git(root):
+        r.note("authority seed history unverified (no git checkout)")
+        return seed
+    try:
+        added = _git(root, "log", "--diff-filter=A", "--format=%H", "--reverse", "--", rel).stdout.decode().split()
+        if not added:
+            r.fail(f"{tid}: authority seed is not committed; it must be introduced in history before it is relied on")
+            return seed
+        then = _git(root, "show", f"{added[0]}:{rel}").stdout.replace(b"\r\n", b"\n")
+        with open(path, "rb") as fh:
+            now = fh.read().replace(b"\r\n", b"\n")
+        if then != now:
+            r.fail(f"{tid}: authority seed differs from its first committed content (rewritten or deleted and re-added)")
+        if not seed.get("bootstrapException"):
+            base = rec.get("baseCommit")
+            if not HEX40.match(str(base or "")) or _git(root, "cat-file", "-e", f"{base}:{rel}", check=False).returncode != 0:
+                r.fail(f"{tid}: authority seed was not recorded at the tranche baseCommit (before BUILD) and declares no bootstrapException")
+        else:
+            r.note(f"{tid}: authority seed uses a declared bootstrapException")
+    except GateError as exc:
+        r.fail(f"{tid}: authority seed history could not be verified ({exc})")
+    return seed
+
+
+def gate_claims(root, ctx, files, scope_err=None):
     r = Result("claims")
+    if scope_err:
+        r.fail(f"changed-file scope unavailable: {scope_err}")
+        return r
     active = ctx.get("active_record") or {}
-    files = files or []
+    files = existing(root, files or [])
     claim_files, ci_files = [], []
     for f in files:
         if not f.endswith(".md") or not (f.startswith("docs/") or f in ("AGENTS.md", "CVF_SESSION_MEMORY.md")):
@@ -474,8 +608,12 @@ def scan_secrets(rel, text):
     return hits
 
 
-def gate_secrets(root, ctx, files):
+def gate_secrets(root, ctx, files, err=None):
     r = Result("secrets")
+    if err:
+        r.fail(f"changed-file set unavailable: {err}")
+        return r
+    files = existing(root, files or [])
     for f in files or []:
         base = os.path.basename(f)
         if base not in SECRET_FILE_OK and any(fnmatch.fnmatch(base, p) for p in SECRET_FILE_PATTERNS):
@@ -563,7 +701,7 @@ def gate_workflows(root, ctx):
 def gate_catalog(root, ctx, skip):
     r = Result("catalog")
     if skip:
-        r.note("catalog check skipped by --skip-catalog (CI and release preflight must not skip it)")
+        r.skipped = "not executed in this process; the Windows CI job (preflight --only catalog) must run it"
         return r
     script = os.path.join(root, "scripts", "manage_cvf_downstream_catalog.ps1")
     if not os.path.isfile(script):
@@ -604,7 +742,8 @@ def run(root, args):
         res["provenance"] = gate_provenance(root, ctx)
     if "continuity" in need:
         res["continuity"] = gate_continuity(root, ctx)
-    scope = review = None
+    scope = pr = None
+    scope_err = pr_err = None
     if need & {"tranche", "claims", "secrets"}:
         base_commit = None
         tid = (ctx.get("marker") or {}).get("activeTranche")
@@ -614,30 +753,42 @@ def run(root, args):
                     base_commit = json.load(fh).get("baseCommit")
             except (OSError, ValueError):
                 pass
-        scope = scope_files(root, args, base_commit)
-        pr = pr_files(root, args)
-        review = None if (pr is None and scope is None) else sorted(set(pr or []) | set(scope or []))
+        try:
+            scope = scope_files(root, args, base_commit)
+        except GateError as exc:
+            scope_err = str(exc)
+        try:
+            pr = pr_files(root, args)
+        except GateError as exc:
+            pr_err = str(exc)
     if "tranche" in need:
-        res["tranche"] = gate_tranche(root, ctx, scope)
+        res["tranche"] = gate_tranche(root, ctx, scope, scope_err or pr_err)
     if "claims" in need:
         # Claims are prospective: only the active tranche's own changes are checked, so accepted
         # historical records in the PR range are not re-judged against the current tranche record.
-        res["claims"] = gate_claims(root, ctx, scope if scope is not None else review)
+        res["claims"] = gate_claims(root, ctx, scope, scope_err or pr_err)
     if "secrets" in need:
-        if review is None:
-            r = Result("secrets")
-            r.fail("changed-file set unavailable (not a git checkout and no --files/--base)")
-            res["secrets"] = r
+        if args.files is not None:
+            res["secrets"] = gate_secrets(root, ctx, pr, pr_err)
+        elif args.base:
+            # PR range plus any uncommitted work; the tranche pin is not needed to scan a range
+            try:
+                res["secrets"] = gate_secrets(root, ctx, sorted(set(pr or []) | set(worktree_files(root))), pr_err)
+            except GateError as exc:
+                res["secrets"] = gate_secrets(root, ctx, [], str(exc))
         else:
-            res["secrets"] = gate_secrets(root, ctx, review)
+            res["secrets"] = gate_secrets(root, ctx, scope, scope_err)
     if "workflows" in need:
         res["workflows"] = gate_workflows(root, ctx)
     if "catalog" in need:
         res["catalog"] = gate_catalog(root, ctx, args.skip_catalog)
     results = [res[g] for g in ALL_GATES if g in res and g in selected]
-    bad = 0
+    bad = skipped = 0
     for item in results:
-        if item.ok:
+        if item.skipped:
+            skipped += 1
+            print(f"[SKIP] {item.name}: {item.skipped}")
+        elif item.ok:
             print(f"[PASS] {item.name}")
         else:
             bad += 1
@@ -646,7 +797,9 @@ def run(root, args):
                 print(f"       - {p}")
         for n in item.notes:
             print(f"       note: {n}")
-    print(f"CVF downstream preflight: {'PASS' if not bad else 'FAIL'} ({len(results) - bad}/{len(results)} gates)")
+    executed = len(results) - skipped
+    extra = f"; {skipped} skipped" if skipped else ""
+    print(f"CVF downstream preflight: {'PASS' if not bad else 'FAIL'} ({executed - bad}/{executed} executed gates passed{extra})")
     return 0 if not bad else 1
 
 

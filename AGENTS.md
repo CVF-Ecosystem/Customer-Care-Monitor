@@ -192,12 +192,25 @@ python -m unittest discover -s scripts/tests -p "test_cvf_downstream_gate*.py"
   (mode, phase, handoff, `activeTranche`, `parked`). Update it in the same change as
   `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the handoff header (mode, phase, role, next move,
   parked checkpoint) and `IMPLEMENTATION_STATUS.currentPhase`; any disagreement fails `continuity`.
+  The handoff header's next move must carry the same instruction as `state.nextAllowedMove`
+  (whitespace and markdown emphasis are normalized), and the active work order's `Status:` line
+  must equal the tranche record status.
 - **Tranche record.** Each active or new work order needs `CVF_SESSION/tranches/<ID>.json`
   (status, phase, risk ceiling, roles, `baseCommit`, `allowedPaths`, `prohibitedEffects`,
   `buildCommit`, `reviewEvidence`, `disposition`, `freeze`, `history`). R2+ requires a reviewer
   independent of the implementation/repair worker; a BUILD or pending-review record cannot claim
   FREEZE; `REVIEW_PASS` needs a 40-hex `buildCommit` and existing review evidence; changed paths
-  must be inside `allowedPaths` (plus session, status and review records).
+  must be inside the authorized paths (plus session, status and review records).
+- **Dispatcher authority.** The worker-editable record is checked against the dispatcher-owned
+  `CVF_SESSION/authority/<ID>.json` (risk, roles, allowed paths, prohibited effects): the record
+  may narrow but never widen it, scope is judged by the seed, and in a git checkout the seed must
+  equal its first committed content and exist at the record's `baseCommit` (before BUILD) unless it
+  declares a `bootstrapException`. Workers do not edit seeds. The gate cannot prove who wrote a
+  seed (one git identity), so the reviewer confirms the seed's author and timing.
+- **Fail closed.** An unknown PR base/head, an invalid, unknown or non-ancestor `baseCommit`, a
+  failing Git command or an unreadable changed-file set fails the gate; paths are read NUL-delimited
+  so names with spaces cannot slip through. `--skip-catalog` prints `[SKIP] catalog` and is not
+  counted as a pass; the separate Windows CI job must still run the catalog gate.
 - **Claims.** A claim that CVF governs AI/agent behavior needs `governanceReceipt` (a real provider
   call: provider, model, request, response; not mock or synthetic). A claim that GitHub Actions
   passed needs `ciRun` (run URL, 40-hex sha, conclusion `success`); the gate checks only the shape,
