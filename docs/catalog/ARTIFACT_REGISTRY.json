@@ -138,6 +138,13 @@
                           "description":  "Reviews and evidence."
                       },
                       {
+                          "id":  "family-tranche-authority",
+                          "family":  "governed_artifact_family",
+                          "path":  "CVF_SESSION/authority",
+                          "status":  "ACTIVE",
+                          "description":  "Dispatcher-owned tranche authority seeds; GOV-001 is an explicit reviewer-seeded bootstrap exception."
+                      },
+                      {
                           "id":  "family-tranche-records",
                           "family":  "governed_artifact_family",
                           "path":  "CVF_SESSION/tranches",

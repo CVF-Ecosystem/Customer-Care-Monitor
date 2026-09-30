@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-GOV-001",
-  "workOrder": "docs/work_orders/CCMAI_GOV_001.md",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "authorityKind": "DISPATCHER_OWNED_REPAIR_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_GOV_001.md",
+  "sourcePlanningCommit": "8e776b51e9019b1f4471eabecc6e3d54d36f7a26",
   "riskCeiling": "R2",
   "roles": {
     "workOrderAuthor": "Codex",
@@ -11,7 +11,6 @@
     "commitSteward": "Claude",
     "reviewer": "Codex"
   },
-  "baseCommit": "8e776b51e9019b1f4471eabecc6e3d54d36f7a26",
   "allowedPaths": [
     "scripts/cvf_downstream_gate*.py",
     "scripts/tests/test_cvf_downstream_gate*.py",
@@ -34,14 +33,5 @@
     "persistent_db",
     "secret_commit"
   ],
-  "buildCommit": "54663ebb566017a82ffb3abb02480ae0d3e58175",
-  "reviewEvidence": ["docs/reviews/CCMAI_GOV_001_INDEPENDENT_REVIEW_2026-10-01.md"],
-  "disposition": "CHANGES_REQUIRED",
-  "freeze": "OPEN",
-  "history": [
-    "DISPATCH_READY",
-    "BUILD",
-    "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
-  ]
+  "bootstrapException": "Reviewer seeded this authority after the first GOV-001 BUILD to repair a discovered self-attested scope gap. Future tranches must seed authority before BUILD. This seed does not approve the BUILD or rewrite its original work order."
 }

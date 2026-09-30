@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-GOV-001 BUILD is REVIEW_PENDING. Codex independently reviews the exact commit (gate tool, tranche contract, workflows, negative fixtures) and reruns selected checks; only after REVIEW_PASS may Codex open the authorized GitHub PR for F08 Actions evidence. Claude does not self-approve. R020 stays parked; no push, merge, deployment, provider/channel call or FREEZE.",
+  "nextAllowedMove": "CCMAI-GOV-001 CHANGES_REQUIRED / REVIEW_OPEN after independent review of BUILD 54663eb. Claude next REPAIR_WORKER for GOV1-R1 under the addendum and reviewer-owned authority seed; one local commit returns REVIEW_PENDING to Codex. PR for F08 Actions evidence only after independent REVIEW_PASS. R020 stays parked; no push, merge, deployment, provider/channel call or FREEZE in repair.",
   "parkedOperatorCheckpoint": "CCMAI-RUNTIME-020 F01-A REVIEW_PASS / FREEZE_OPEN at Claude BUILD 73cedc2; resume only after downstream gate and PR evidence work.",
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "REVIEWER -> WORK_ORDER_AUTHOR -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex); REPAIR_WORKER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
-  "updatedAt": "2026-09-30"
+  "updatedAt": "2026-10-01"
 }

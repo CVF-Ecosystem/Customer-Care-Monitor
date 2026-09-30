@@ -25,6 +25,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Reviews and evidence.: `docs/reviews/`
 - Roadmaps.: `docs/roadmaps/`
 - Specifications.: `docs/specs/`
+- Dispatcher-owned tranche authority seeds; GOV-001 is an explicit reviewer-seeded bootstrap exception.: `CVF_SESSION/authority/`
 - Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate.: `CVF_SESSION/tranches/`
 - Work orders.: `docs/work_orders/`
 
