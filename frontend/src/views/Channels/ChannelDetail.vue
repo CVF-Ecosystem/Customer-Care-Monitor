@@ -264,7 +264,11 @@ async function doSync() {
     while (pollAttempts < maxPollAttempts) {
       await new Promise(r => setTimeout(r, 3000))
       const ch = await channelStore.fetchChannel(tenantId.value, channelId.value)
-      if (ch.last_sync_status !== 'syncing') { observed = true; break }
+      const st = ch?.last_sync_status
+      // Only success/partial/error are observed terminal outcomes. Any other non-syncing value
+      // (empty, never, unknown) is unconfirmed: stop polling without reporting a failure.
+      if (st === 'success' || st === 'partial' || st === 'error') { observed = true; break }
+      if (st !== 'syncing') break
       pollAttempts++
     }
     if (!observed) {

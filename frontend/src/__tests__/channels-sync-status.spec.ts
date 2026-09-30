@@ -238,6 +238,47 @@ describe('Channel detail sync status (UX-017)', () => {
     }
   })
 
+  it('treats an empty, null, never or unknown poll response as unconfirmed, not a failure', async () => {
+    for (const status of ['', null, 'never', 'surprise']) {
+      vi.useFakeTimers()
+      const w = await mountDetail(channel({ last_sync_status: 'syncing', last_sync_at: OLD_SUCCESS }))
+      apiPost.mockResolvedValue({ data: {} })
+      current = channel({ last_sync_status: status, last_sync_at: OLD_SUCCESS })
+      apiGet.mockClear()
+      await syncBtn(w).trigger('click')
+      await vi.advanceTimersByTimeAsync(3100)
+      await flushPromises()
+      const alert = w.find('.v-alert')
+      expect(alert.text(), `status=${String(status)}`).toContain('Chưa xác nhận được kết quả đồng bộ')
+      expect(alert.text()).not.toContain('Đồng bộ thất bại')
+      expect(alert.text()).not.toContain('Đồng bộ thành công')
+      expect(alert.classes().join(' ')).toMatch(/warning/)
+      // polling stopped after the first non-terminal answer: one channel refresh, no history fetch
+      const urls = apiGet.mock.calls.map(c => String(c[0]))
+      expect(urls.filter(u => u.endsWith('/channels/c1'))).toHaveLength(1)
+      expect(urls.some(u => u.endsWith('/sync-history'))).toBe(false)
+      await vi.advanceTimersByTimeAsync(10000)
+      expect(apiGet.mock.calls.filter(c => String(c[0]).endsWith('/channels/c1'))).toHaveLength(1)
+      w.unmount()
+      mounted.pop()
+      vi.useRealTimers()
+    }
+  })
+
+  it('keeps polling while the status is syncing and then reports the observed terminal outcome', async () => {
+    vi.useFakeTimers()
+    const w = await mountDetail(channel({ last_sync_status: 'syncing', last_sync_at: OLD_SUCCESS }))
+    apiPost.mockResolvedValue({ data: {} })
+    await syncBtn(w).trigger('click')
+    await vi.advanceTimersByTimeAsync(3100)
+    expect(w.find('.v-alert').exists()).toBe(false)
+    current = channel({ last_sync_status: 'error', last_sync_at: OLD_SUCCESS })
+    await vi.advanceTimersByTimeAsync(3100)
+    await flushPromises()
+    expect(w.find('.v-alert').text()).toContain('Đồng bộ thất bại')
+    expect(w.find('.v-alert').text()).not.toContain('Chưa xác nhận')
+  })
+
   it('reports a rejected start request as an error, without polling', async () => {
     const w = await mountDetail(channel({ last_sync_status: 'success', last_sync_at: OLD_SUCCESS }))
     apiPost.mockRejectedValue({ response: { data: { error: 'sync_in_progress' } } })
