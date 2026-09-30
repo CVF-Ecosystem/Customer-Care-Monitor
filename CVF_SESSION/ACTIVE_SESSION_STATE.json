@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-020 F01-A HTTP agent permission admission is WORK_ORDER for Claude BUILD after rehydration and handoff acknowledgment. Codex independently reviews one local REVIEW_PENDING commit. F01 MCP authorization and F08 public CI evidence remain open. No push, provider/channel call, deployment or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-020 F01-A BUILD is REVIEW_PENDING. Codex independently reviews the exact commit (matrix, fail-closed behavior, ordering, tests and mutations, shared middleware extraction). Claude does not self-approve. F01 stays OPEN for MCP (F01-B); F08 public CI run pending; no push, provider/channel call or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) next",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }

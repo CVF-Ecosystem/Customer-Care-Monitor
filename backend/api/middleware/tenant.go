@@ -83,31 +83,37 @@ func RequireRole(roles ...string) gin.HandlerFunc {
 // action: "r" (read), "w" (write), "d" (delete)
 func RequirePermission(resource, action string) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		role := GetTenantRole(c)
-		// Owner and admin always have full access
-		if role == "owner" || role == "admin" {
-			c.Next()
-			return
-		}
-		// Member: check permissions JSON
-		perms := c.GetString("tenant_permissions")
-		if perms == "" {
-			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "no_permissions"})
-			return
-		}
-		var permMap map[string]string
-		if err := json.Unmarshal([]byte(perms), &permMap); err != nil {
-			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "invalid_permissions"})
-			return
-		}
-		resourcePerms, ok := permMap[resource]
-		if !ok || !containsChar(resourcePerms, action) {
-			log.Printf("[security] permission denied: user=%s resource=%s action=%s path=%s", GetUserID(c), resource, action, c.Request.URL.Path)
-			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "permission_denied"})
+		if deny := PermissionDenial(GetTenantRole(c), c.GetString("tenant_permissions"), resource, action); deny != "" {
+			if deny == "permission_denied" {
+				log.Printf("[security] permission denied: user=%s resource=%s action=%s path=%s", GetUserID(c), resource, action, c.Request.URL.Path)
+			}
+			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": deny})
 			return
 		}
 		c.Next()
 	}
+}
+
+// PermissionDenial is the shared tenant permission decision (also used by the HTTP agent
+// API). It returns "" when allowed, otherwise the error code: owner/admin always pass; a
+// member needs the action letter under the resource in the permissions JSON, and missing
+// or malformed permissions are denied.
+func PermissionDenial(role, permissionsJSON, resource, action string) string {
+	if role == "owner" || role == "admin" {
+		return ""
+	}
+	if permissionsJSON == "" {
+		return "no_permissions"
+	}
+	var permMap map[string]string
+	if err := json.Unmarshal([]byte(permissionsJSON), &permMap); err != nil {
+		return "invalid_permissions"
+	}
+	resourcePerms, ok := permMap[resource]
+	if !ok || !containsChar(resourcePerms, action) {
+		return "permission_denied"
+	}
+	return ""
 }
 
 func containsChar(s, char string) bool {

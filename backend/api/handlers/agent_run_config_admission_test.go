@@ -27,6 +27,10 @@ import (
 
 const agentRunSecretParam = "PARAM-SECRET-DO-NOT-LEAK"
 
+// CCMAI-RUNTIME-020: the fixture member holds every right the supported run actions need,
+// so these R011 tests keep exercising the config admission path rather than authorization.
+const agentAllRightsJSON = `{"channels":"rw","messages":"rw","jobs":"rw"}`
+
 var knownAgents = []string{"cqa.sync", "cqa.qc", "cqa.classify"}
 
 // recordingTransport answers every request with a synthetic 204 and counts
@@ -69,7 +73,7 @@ func setupAgentRunFixture(t *testing.T) *agentRunFixture {
 	}
 	exec(`INSERT INTO users (id, email, password_hash, name, is_admin, token_version, language, created_at, updated_at) VALUES (?, ?, 'x', 'Agent Run', false, 0, 'vi', NOW(), NOW())`,
 		f.userID, "agrun-"+s+"@example.invalid")
-	exec(`INSERT INTO user_tenants (user_id, tenant_id, role, permissions) VALUES (?, ?, 'member', '{}')`, f.userID, f.tenantID)
+	exec(`INSERT INTO user_tenants (user_id, tenant_id, role, permissions) VALUES (?, ?, 'member', ?)`, f.userID, f.tenantID, agentAllRightsJSON)
 	exec(`INSERT INTO channels (id, tenant_id, channel_type, name, external_id, credentials_encrypted, is_active, last_sync_status, last_sync_error, metadata, created_at, updated_at) VALUES (?, ?, 'pancake', 'Kenh', 'fake', X'00', true, 'success', '', '{}', NOW(), NOW())`,
 		f.channelID, f.tenantID)
 	exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Agent Run', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`,
@@ -142,6 +146,15 @@ func (f *agentRunFixture) call(agent, body string) *httptest.ResponseRecorder {
 	return rec
 }
 
+// bodyFor builds a run request whose action is valid for the agent.
+func (f *agentRunFixture) bodyFor(agent, tenantID string) string {
+	action := map[string]string{"cqa.qc": "analyze_quality", "cqa.classify": "classify_conversations"}[agent]
+	if action == "" {
+		action = "sync_all"
+	}
+	return `{"tenant_id":"` + tenantID + `","action":"` + action + `","params":{"token":"` + agentRunSecretParam + `"}}`
+}
+
 func (f *agentRunFixture) body(tenantID string) string {
 	return `{"tenant_id":"` + tenantID + `","action":"sync_all","params":{"token":"` + agentRunSecretParam + `"}}`
 }
@@ -192,7 +205,7 @@ func TestAgentRunConfigFailureIsNotAdmitted(t *testing.T) {
 				}
 				logs := captureLog(t)
 
-				rec := f.call(agent, f.body(f.tenantID))
+				rec := f.call(agent, f.bodyFor(agent, f.tenantID))
 
 				if rec.Code != http.StatusInternalServerError || strings.TrimSpace(rec.Body.String()) != `{"error":"agent_run_failed"}` {
 					t.Fatalf("got %d %s, want generic 500 agent_run_failed", rec.Code, rec.Body.String())
@@ -220,7 +233,7 @@ func TestAgentRunPassesValidatedConfigToEngine(t *testing.T) {
 	for _, agent := range knownAgents {
 		t.Run(agent, func(t *testing.T) {
 			f := setupAgentRunFixture(t)
-			rec := f.call(agent, f.body(f.tenantID))
+			rec := f.call(agent, f.bodyFor(agent, f.tenantID))
 
 			want := `{"status":"stub-` + agent + `"}`
 			if rec.Code != http.StatusOK || strings.TrimSpace(rec.Body.String()) != want {
@@ -268,7 +281,7 @@ func TestAgentRunAdmissionOrder(t *testing.T) {
 	for _, agent := range append([]string{"cqa.unknown"}, knownAgents...) {
 		t.Run("unauthorized tenant "+agent, func(t *testing.T) {
 			f := setupAgentRunFixture(t)
-			rec := f.call(agent, f.body(f.otherTenantID))
+			rec := f.call(agent, f.bodyFor(agent, f.otherTenantID))
 			if rec.Code != http.StatusForbidden || strings.TrimSpace(rec.Body.String()) != `{"error":"tenant_access_denied"}` || f.cfgLoads != 0 {
 				t.Fatalf("got %d %s with %d loads, want 403 and 0 loads", rec.Code, rec.Body.String(), f.cfgLoads)
 			}
@@ -301,7 +314,7 @@ func TestAgentRunUsesRealConfigValidation(t *testing.T) {
 			t.Setenv("DB_PASSWORD", "synthetic")
 			logs := captureLog(t)
 
-			rec := f.call(agent, f.body(f.tenantID))
+			rec := f.call(agent, f.bodyFor(agent, f.tenantID))
 			if rec.Code != http.StatusInternalServerError || strings.TrimSpace(rec.Body.String()) != `{"error":"agent_run_failed"}` {
 				t.Fatalf("got %d %s, want generic 500", rec.Code, rec.Body.String())
 			}
@@ -317,7 +330,7 @@ func TestAgentRunUsesRealConfigValidation(t *testing.T) {
 			t.Setenv("ENCRYPTION_KEY", encKey)
 			t.Setenv("DB_PASSWORD", "synthetic")
 
-			rec := f.call(agent, f.body(f.tenantID))
+			rec := f.call(agent, f.bodyFor(agent, f.tenantID))
 			if rec.Code != http.StatusOK || f.syncCalls+f.analysisCalls != 1 {
 				t.Fatalf("got %d with %d dispatches, want 200 and 1", rec.Code, f.syncCalls+f.analysisCalls)
 			}

@@ -17,12 +17,62 @@ import (
 
 // verifyTenantAccess checks user has access to the specified tenant.
 func verifyTenantAccess(c *gin.Context, tenantID string) bool {
+	_, ok := tenantMembership(c, tenantID)
+	return ok
+}
+
+// tenantMembership loads the caller's membership row for the requested tenant only.
+func tenantMembership(c *gin.Context, tenantID string) (models.UserTenant, bool) {
 	userID := middleware.GetUserID(c)
 	var ut models.UserTenant
 	if db.DB.Where("user_id = ? AND tenant_id = ?", userID, tenantID).First(&ut).Error != nil {
 		log.Printf("[security] agent API tenant access denied: user=%s tenant=%s ip=%s", userID, tenantID, c.ClientIP())
 		c.JSON(http.StatusForbidden, gin.H{"error": "tenant_access_denied"})
+		return ut, false
+	}
+	return ut, true
+}
+
+// agentPerm is one tenant permission an agent operation needs; all listed rights are conjunctive.
+type agentPerm struct{ resource, action string }
+
+// CCMAI-RUNTIME-020 (F01-A): exact HTTP agent action/resource matrix. A pair that is not
+// listed is unsupported and is rejected before any configuration load, dispatch or read;
+// it never falls back to a broader permission.
+var agentRunPerms = map[string]map[string][]agentPerm{
+	"cqa.sync": {
+		"sync_all":     {{"channels", "w"}, {"messages", "w"}},
+		"sync_channel": {{"channels", "w"}, {"messages", "w"}},
+	},
+	"cqa.qc":       {"analyze_quality": {{"jobs", "w"}, {"messages", "r"}}},
+	"cqa.classify": {"classify_conversations": {{"jobs", "w"}, {"messages", "r"}}},
+}
+
+var agentQueryPerms = map[string]map[string][]agentPerm{
+	"cqa.sync": {
+		"conversations": {{"messages", "r"}},
+		"messages":      {{"messages", "r"}},
+	},
+	"cqa.qc":       {"violations": {{"jobs", "r"}}},
+	"cqa.classify": {"tags": {{"jobs", "r"}}},
+}
+
+// authorizeAgentOperation applies the requested tenant's stored role and permissions to the
+// operation. Only owner, admin and member roles are recognized; anything else, and any
+// missing or malformed permission JSON, is denied. The 403 body is generic and the log
+// carries classes only (never the permission JSON or request parameters).
+func authorizeAgentOperation(c *gin.Context, ut models.UserTenant, agentName, op string, need []agentPerm) bool {
+	if ut.Role != "owner" && ut.Role != "admin" && ut.Role != "member" {
+		log.Printf("[security] agent API permission denied: user=%s tenant=%s agent=%s op=%s reason=unrecognized_role", middleware.GetUserID(c), ut.TenantID, agentName, op)
+		c.JSON(http.StatusForbidden, gin.H{"error": "permission_denied"})
 		return false
+	}
+	for _, p := range need {
+		if reason := middleware.PermissionDenial(ut.Role, ut.Permissions, p.resource, p.action); reason != "" {
+			log.Printf("[security] agent API permission denied: user=%s tenant=%s agent=%s op=%s reason=%s", middleware.GetUserID(c), ut.TenantID, agentName, op, reason)
+			c.JSON(http.StatusForbidden, gin.H{"error": "permission_denied"})
+			return false
+		}
 	}
 	return true
 }
@@ -81,7 +131,8 @@ func AgentRun(c *gin.Context) {
 	}
 
 	// Verify user has access to the requested tenant
-	if !verifyTenantAccess(c, req.TenantID) {
+	ut, ok := tenantMembership(c, req.TenantID)
+	if !ok {
 		return
 	}
 
@@ -90,6 +141,17 @@ func AgentRun(c *gin.Context) {
 	case "cqa.sync", "cqa.qc", "cqa.classify":
 	default:
 		c.JSON(http.StatusNotFound, gin.H{"error": "agent_not_found"})
+		return
+	}
+
+	// F01-A: the exact agent/action pair must be supported and the caller must hold its
+	// tenant permissions, all before configuration load, dispatch or any read/write.
+	need, supported := agentRunPerms[agentName][req.Action]
+	if !supported {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "unsupported_action"})
+		return
+	}
+	if !authorizeAgentOperation(c, ut, agentName, "run:"+req.Action, need) {
 		return
 	}
 
@@ -131,7 +193,26 @@ func AgentQuery(c *gin.Context) {
 	}
 
 	// Verify user has access to the requested tenant
-	if !verifyTenantAccess(c, tenantID) {
+	ut, ok := tenantMembership(c, tenantID)
+	if !ok {
+		return
+	}
+
+	switch agentName {
+	case "cqa.sync", "cqa.qc", "cqa.classify":
+	default:
+		c.JSON(http.StatusNotFound, gin.H{"error": "agent_not_found"})
+		return
+	}
+
+	// F01-A: an unsupported resource keeps its existing 400; a supported one needs the
+	// tenant permission before any data is read.
+	need, supported := agentQueryPerms[agentName][resource]
+	if !supported {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "unknown resource: " + resource})
+		return
+	}
+	if !authorizeAgentOperation(c, ut, agentName, "query:"+resource, need) {
 		return
 	}
 
