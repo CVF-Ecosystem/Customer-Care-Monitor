@@ -25,3 +25,11 @@ No backend, API response or DB schema change; no demo reset/backfill, sync engin
 ## Independent review
 
 Codex will inspect the exact diff against this SPEC/work order and independently rerun focused UI tests. Passing synthetic UI tests does not establish real-channel completeness, provider behavior or CVF runtime governance. Zalo/legacy/mixed-version recovery and S1 closure remain open.
+
+## Repair addendum UX017-R1 — 2026-09-30
+
+[Codex independent review](../reviews/CCMAI_UX_017_INDEPENDENT_REVIEW_2026-09-30.md) returned `CHANGES_REQUIRED / REVIEW_OPEN`: detail polling treats every non-`syncing` response as terminal and can report an empty/null/unknown status as confirmed failure. Claude may repair within the existing R2 objective and effect boundary after rehydrating and recording `REVIEWER (Codex) -> REPAIR_WORKER (Claude)` in the active handoff.
+
+Allowed implementation is `frontend/src/views/Channels/ChannelDetail.vue` and focused `frontend/src/__tests__/channels-sync-status.spec.ts` only. Correct the terminal-status predicate: `success`, `partial`, `error` are observed terminal outcomes; empty/null/`never`/unknown after an accepted request yield the existing unconfirmed warning and stop polling without a false failure. Add deterministic mounted cases for empty and unknown (and null if the fixture supports it); prove the test fails if the broad `!== 'syncing'` shortcut is restored. Preserve timeout, refresh-failure, rejected-start, observed terminal, shared chip, timestamp and reauth behavior. BUILD evidence may be amended; synchronize state/handoff/memory/status and the UI roadmap as needed. Correct the BUILD evidence's final changed set to match the actual commit (it did not include `IMPLEMENTATION_STATUS.json`).
+
+Rerun focused/full frontend tests, forced typecheck, build, catalog `-Check`, doctor and diff check. Make one local repair/evidence commit and return `REVIEW_PENDING` for Codex independent re-review. No backend/API/store/router/shared-chip/i18n change, provider/channel call, persistent Compose DB, push, deployment, self-PASS or FREEZE. If the fix requires a path beyond this boundary, return `BUILD_BLOCKED` with the reason.
