@@ -183,3 +183,5 @@ Có thể thiết kế màn tiếp theo trong khi màn trước đang triển kh
 2b. [UX-010: Codex re-review `REVIEW_PASS` UX010-R1 ngày 2026-09-28 — [review](../reviews/CCMAI_UX_010_REPAIR_R1_REREVIEW_2026-09-28.md)] Hai finding đã đóng; FREEZE còn mở. Orchestrator có thể điều phối tranche màn hình tiếp theo theo roadmap.
 2c. [UX-011 Results: INTAKE hoàn tất ngày 2026-09-28 — [brief](../specs/RESULTS_SCREEN_UX011_INTAKE_2026-09-28.md)] Claude được tiến hành DESIGN → SPEC → WORK_ORDER → BUILD **chỉ** trong phạm vi giao diện độc lập; mọi giao điểm backend/API/runtime giữ ngoài tranche, trả `REVIEW_PENDING` cho Codex.
 3. `CCMAI-UX-001a/b/c` viết SPEC sau khi Codex xong tranche runtime đang mở trên cùng file (R008), để tránh xung đột.
+
+**UX-016 F1 work order (2026-09-30):** [CCMAI-UX-016-F1](../work_orders/CCMAI_UX_016_F1.md) assigns Claude a committed out-of-order Dashboard response regression and a guard-removal mutation check. Existing UX-016 REVIEW_PASS stands; this test tranche awaits BUILD and independent Codex review. Zalo/legacy sync recovery remains separate.

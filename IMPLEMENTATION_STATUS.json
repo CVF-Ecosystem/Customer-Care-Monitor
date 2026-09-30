@@ -76,7 +76,8 @@
     "CCMAI-RUNTIME-016",
     "CCMAI-RUNTIME-017",
     "CCMAI-UX-016",
-    "CCMAI-RUNTIME-018"
+    "CCMAI-RUNTIME-018",
+    "CCMAI-UX-016-F1"
   ],
   "knownLimitations": [
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -177,5 +178,5 @@
     "docs/reviews/CCMAI_RUNTIME_015_R1_R2_INDEPENDENT_REREVIEW_2026-09-29.md",
     "docs/reviews/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_BUILD_2026-09-29.md"
   ],
-  "updatedAt": "2026-09-29"
+  "updatedAt": "2026-09-30"
 }

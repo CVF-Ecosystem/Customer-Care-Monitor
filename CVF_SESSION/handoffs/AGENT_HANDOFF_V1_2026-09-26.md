@@ -5,11 +5,17 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-018 R018-R1 REVIEW_PASS / FREEZE open; R001–R017 and UX-016 REVIEW PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex) next
-- Next allowed move: Codex selects the next bounded S1 tranche. Zalo/legacy crash recovery and UX-016 F1 remain separate; no push, real provider/channel call or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-UX-016-F1; prior UX-016 and R018 REVIEW_PASS / FREEZE open; S1 IN_PROGRESS)
+- Active role: WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) next
+- Next allowed move: Claude rehydrates, acknowledges the role transition, implements only the F1 Dashboard regression test under `docs/work_orders/CCMAI_UX_016_F1.md`, records evidence and makes one local REVIEW_PENDING commit for Codex review. Zalo/legacy recovery remains separate; no push, provider/channel call or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-UX-016-F1 — Dashboard stale-response test (2026-09-30)
+
+- Tranche transition acknowledgment: Codex rehydrated manifest, policy, active state/handoff, memory, implementation status and index; compact bootstrap model is absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking). Doctor PASS 25/25 and knowledge ingest ran. Existing UX-016 independent `REVIEW_PASS / FREEZE_OPEN` is inherited. Role route `ORCHESTRATOR -> WORK_ORDER_AUTHOR (Codex)` for the F1 work order; `IMPLEMENTATION_WORKER (Claude)` is next and must record its own BUILD acknowledgment here.
+- INTAKE/DESIGN/SPEC: Claude's independent UX-016 review found F1, a missing committed out-of-order response test. The reviewer proved the existing guard with a temporary test (newer 7, older 99) and guard-removal mutation. The accepted UX-016 SPEC and that review define behavior; this tranche enters at WORK_ORDER for test coverage only. Risk ceiling R2, no product behavior change planned.
+- WORK_ORDER: `docs/work_orders/CCMAI_UX_016_F1.md`. Claude may edit only `frontend/src/__tests__/dashboard-qc-card.spec.ts` plus BUILD evidence/continuity, then create one local REVIEW_PENDING commit. `Dashboard.vue` is read-only; a discovered source defect returns BUILD_BLOCKED for a new bounded decision. Codex will independently review. Zalo/legacy/mixed-version crash recovery and S1 completion remain open; no provider/channel call, push, deployment or FREEZE.
 
 ## CCMAI-RUNTIME-018 — demo fixture sync admission (2026-09-29)
 
