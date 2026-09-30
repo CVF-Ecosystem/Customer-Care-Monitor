@@ -6,13 +6,14 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-020 F01-A HTTP agent permission admission REVIEW_PENDING; F08 local gate REVIEW_PASS, CI proof pending; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
-- Next allowed move: Codex independently reviews CCMAI-RUNTIME-020 (exact diff, matrix, fail-closed, ordering, tests/mutations). Claude does not self-approve; F01 stays OPEN for MCP (F01-B); no push, provider/channel call or FREEZE.
-- Parked operator checkpoint: none
+- Active phase: REVIEW (CCMAI-RUNTIME-020 F01-A REVIEW_PASS / FREEZE_OPEN / PARKED; F08 local gate REVIEW_PASS, CI proof pending; S1 IN_PROGRESS)
+- Active role: REVIEWER (Codex) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR
+- Next allowed move: Codex audits and implements applicable downstream CVF machine gates, then opens an authorized PR to exercise F08 GitHub Actions. F01 MCP stays open; no FREEZE or production deployment.
+- Parked operator checkpoint: R020 F01-A REVIEW_PASS / FREEZE_OPEN at BUILD `73cedc2`; resume after downstream gate and PR evidence work.
 
 ## CCMAI-RUNTIME-020 — F01-A HTTP agent permissions (2026-09-30)
 
+- Independent REVIEW and park (Codex): BUILD `73cedc2` stays within authorized paths; exact matrix, membership and fail-closed ordering match SPEC. Codex independently reran focused `./api/...` agent/permission tests on disposable MySQL (exit 0, containers/networks removed), checked worker full-suite evidence (474 pass, five DB sentinels, gate pass), catalog and diff. `REVIEW_PASS / FREEZE_OPEN / PARKED`; F01-B MCP remains OPEN. Review: `docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md`. At INTAKE, stale memory/status phase pointers were aligned from WORK_ORDER to REVIEW after reporting `BLOCKED_CONTINUITY_DRIFT`; doctor 25/25 did not detect the mismatch. Role route `COMMIT_STEWARD (Claude) -> REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)` for review records. No push, provider/channel call, deployment or FREEZE.
 - Tranche transition and role acknowledgment (Codex): after R019-R1 independent `REVIEW_PASS / FREEZE_OPEN` was committed at `8cb55f8`, canonical continuity was reread, worktree was clean, and the next allowed move was F01 planning. Role route `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR` acknowledged before writing [SPEC](../../docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md) and [work order](../../docs/work_orders/CCMAI_RUNTIME_020.md). F01 is split: R020 covers HTTP `/agents` run/query; the independently routed MCP tools remain F01-B and F01 stays OPEN. Matrix binds supported sync actions to channels:w + messages:w, analysis actions to jobs:w + messages:r, and query resources to messages:r or jobs:r. Claude next IMPLEMENTATION_WORKER after rehydration and its own handoff acknowledgment; Codex is independent REVIEWER. R2, disposable MySQL and synthetic dispatch only. No API key, provider/channel call, push, deployment or FREEZE.
 
 ## CCMAI-RUNTIME-019 — F08 CI DB-test gate (2026-09-30)

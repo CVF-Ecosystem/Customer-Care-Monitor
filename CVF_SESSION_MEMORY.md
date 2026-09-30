@@ -34,7 +34,9 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
 Current active tranche: `CCMAI-RUNTIME-020` / F01-A HTTP agent permission admission
-is at WORK_ORDER for Claude IMPLEMENTATION_WORKER. [SPEC](docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md)
+is at REVIEW_PASS / FREEZE_OPEN / PARKED after independent Codex REVIEW of
+Claude BUILD `73cedc2`. [Review](docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md),
+[SPEC](docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_020.md) bind supported
 run/query pairs to tenant permissions. MCP tools remain a separate F01-B
 authorization surface, so F01 remains OPEN. Previous tranche:
@@ -375,5 +377,7 @@ CCMAI-RUNTIME-019 R019-R1 repair (Claude, 2026-09-30): the F08 gate now rejects 
 CCMAI-RUNTIME-019 R019-R1 independent re-review (Codex, 2026-09-30): rehydrated at `4f3a5c3`; one stale memory pointer was aligned to REVIEW_PENDING before material review. Exact repair diff stays in the parser/tests and records; 11/11 parser tests and direct valid/malformed/truncated/English DB-skip/optional S3 probes all met the contract. `REVIEW_PASS / FREEZE_OPEN`; evidence `docs/reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md`. Claude's positive DB-log replay is inherited, with the raw log unavailable for independent replay. Actual GitHub Actions run is unverified, so F08 public CI evidence remains open. Role route REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR for review records. No provider call, push, deployment or FREEZE; F01-F07 open.
 
 CCMAI-RUNTIME-020 F01-A planning (Codex, 2026-09-30): after R019 review commit `8cb55f8`, continuity was rehydrated and role route ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR acknowledged. SPEC and work order scope HTTP agent run/query authorization by requested tenant and exact action/resource. MCP tenant-only tools remain F01-B; neither R020 nor R019 closes F01/F08 public CI evidence. Claude next IMPLEMENTATION_WORKER after rehydration/handoff acknowledgment, then one local REVIEW_PENDING BUILD for independent Codex review. R2, disposable MySQL/synthetic dispatch only; no provider call, API key, push, deployment or FREEZE.
+
+CCMAI-RUNTIME-020 F01-A independent REVIEW and park (Codex, 2026-09-30): worker BUILD `73cedc2` sets state/handoff REVIEW_PENDING but leaves this memory pointer and `IMPLEMENTATION_STATUS.currentPhase` at WORK_ORDER; Codex reported BLOCKED_CONTINUITY_DRIFT, aligned those two pointers and rehydrated before source review. Exact HTTP permission matrix and reject-before-side-effect contract pass; focused API tests on disposable MySQL pass independently. BUILD full suite reports 474 pass, five F08 sentinels PASS and gate exit 0. `REVIEW_PASS / FREEZE_OPEN / PARKED`; review `docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md`. F01-B MCP remains open. Next move is downstream machine-gate inheritance, then authorized PR/F08 runner evidence. No provider call, push, deployment or FREEZE.
 
 CCMAI-RUNTIME-020 / F01-A BUILD (Claude, 2026-09-30): HTTP agent run/query permission admission per the SPEC matrix (shared `middleware.PermissionDenial`, fail-closed roles/permissions, generic 403, unsupported action 400 before config/dispatch). 20 new tests, five mutations detected, full backend 474 pass on disposable MySQL with the R019 gate passing. Evidence `docs/reviews/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01A_BUILD_2026-09-30.md`. REVIEW_PENDING for Codex; F01 remains OPEN (MCP = F01-B); no push or FREEZE.

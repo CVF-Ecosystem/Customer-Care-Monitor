@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-020 — F01-A HTTP agent permission admission
 
-Status: WORK_ORDER / Claude IMPLEMENTATION_WORKER next. Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base: `8cb55f880a220ba028f9574b74960f582048d606`. Risk ceiling R2. Authority: [SPEC](../specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md), [F01 source review](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md).
+Status: REVIEW_PASS / FREEZE_OPEN / PARKED after Claude BUILD `73cedc2` and [independent review](../reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md). Issued 2026-09-30 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base: `8cb55f880a220ba028f9574b74960f582048d606`. Risk ceiling R2. Authority: [SPEC](../specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md), [F01 source review](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md).
 
 ## Assignment and gate
 

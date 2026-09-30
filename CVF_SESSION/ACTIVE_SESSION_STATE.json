@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-020 F01-A BUILD is REVIEW_PENDING. Codex independently reviews the exact commit (matrix, fail-closed behavior, ordering, tests and mutations, shared middleware extraction). Claude does not self-approve. F01 stays OPEN for MCP (F01-B); F08 public CI run pending; no push, provider/channel call or FREEZE.",
-  "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "nextAllowedMove": "CCMAI-RUNTIME-020 F01-A passed independent REVIEW and is parked at FREEZE_OPEN. Codex next audits and implements the applicable downstream CVF machine gates, then opens an authorized PR to exercise F08 GitHub Actions. F01 MCP remains open; no FREEZE or production deployment.",
+  "parkedOperatorCheckpoint": "CCMAI-RUNTIME-020 F01-A REVIEW_PASS / FREEZE_OPEN at Claude BUILD 73cedc2; resume only after downstream gate and PR evidence work.",
+  "activeRole": "REVIEWER (Codex) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }
