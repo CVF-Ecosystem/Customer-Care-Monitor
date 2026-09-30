@@ -94,6 +94,8 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 
 ### Backlog F01–F08 được owner chấp nhận (2026-09-30)
 
+**Cổng machine downstream trước PR:** `CCMAI-GOV-001` đang ở WORK_ORDER / DISPATCH_READY. [Quyết định áp dụng](../decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md), [SPEC](../specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) và [work order](../work_orders/CCMAI_GOV_001.md) yêu cầu kiểm consistency giữa state/handoff/memory/status, quyền và claim của packet, catalog, secret hygiene, workflow PR frontend/docs/backend. Đây là control của repo, chưa phải bằng chứng CVF điều phối AI runtime. Sau BUILD và REVIEW độc lập, PR đã được owner cho phép sẽ chạy Actions thật để kiểm F08.
+
 [Review mã nguồn local](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md) đối chiếu báo cáo tại `7481196` với HEAD `698612f`: cả tám cơ chế còn nguyên ở hai mốc. Đây là backlog **OPEN**, chưa phải lỗi đã sửa hoặc sự cố được xác nhận trên dữ liệu thật. Mỗi hàng cần SPEC/work order riêng hoặc một nhóm nhỏ có cùng ranh giới file, quyền và điều kiện nghiệm thu; không gộp thành một BUILD lớn. Owner cho phép dùng Alibaba API key khi cần lấy evidence và xác nhận dữ liệu hiện tại là dữ liệu thử; xem giới hạn quyền dùng ở phần cổng quản trị dưới đây.
 
 | Ưu tiên | Finding / giai đoạn | Mục tiêu đóng và bằng chứng tối thiểu |

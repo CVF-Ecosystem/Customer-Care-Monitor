@@ -5,11 +5,15 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-020 F01-A REVIEW_PASS / FREEZE_OPEN / PARKED; F08 local gate REVIEW_PASS, CI proof pending; S1 IN_PROGRESS)
-- Active role: REVIEWER (Codex) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR
-- Next allowed move: Codex audits and implements applicable downstream CVF machine gates, then opens an authorized PR to exercise F08 GitHub Actions. F01 MCP stays open; no FREEZE or production deployment.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-GOV-001 DISPATCH_READY; R020 F01-A PARKED; F08 public CI proof pending; S1 IN_PROGRESS)
+- Active role: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex); IMPLEMENTATION_WORKER (Claude) next
+- Next allowed move: Claude may BUILD CCMAI-GOV-001 within its work order and return one local REVIEW_PENDING commit. Codex reviews independently and, if passed, opens the authorized GitHub PR for F08 Actions evidence. No FREEZE or deployment.
 - Parked operator checkpoint: R020 F01-A REVIEW_PASS / FREEZE_OPEN at BUILD `73cedc2`; resume after downstream gate and PR evidence work.
+
+## CCMAI-GOV-001 — downstream machine gates (2026-09-30)
+
+- Tranche transition and role acknowledgment (Codex): after R020 independent review was committed at `df0c4cc`, canonical continuity was reread with a clean worktree. Role route `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex)` for [applicability decision](../../docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md), [SPEC](../../docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md), and [work order](../../docs/work_orders/CCMAI_GOV_001.md). The audit found that doctor 25/25 and catalog `-Check` do not compare session surfaces; the core mode checker has core-only state/marker paths. Claude next IMPLEMENTATION_WORKER after its own rehydration/handoff acknowledgment; Codex is independent REVIEWER. R2, repo-local gates and CI only; no product source, key, provider/channel call, push, deployment or FREEZE under this BUILD order. Owner separately authorized a PR after successful independent review.
 
 ## CCMAI-RUNTIME-020 — F01-A HTTP agent permissions (2026-09-30)
 

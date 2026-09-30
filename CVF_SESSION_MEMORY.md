@@ -33,9 +33,25 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
-Current active tranche: `CCMAI-RUNTIME-020` / F01-A HTTP agent permission admission
-is at REVIEW_PASS / FREEZE_OPEN / PARKED after independent Codex REVIEW of
-Claude BUILD `73cedc2`. [Review](docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md),
+CCMAI-GOV-001 planning (Codex, 2026-09-30): after R020 independent review
+commit `df0c4cc`, canonical continuity was rehydrated and the role route
+ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR was acknowledged in the active
+handoff. Core doctor 25/25 and downstream catalog `-Check` do not compare the
+state/handoff/memory/status pointers; core mode and dispatch checkers depend on
+core-only schemas. The applicability decision, SPEC and bounded work order
+route a portable downstream gate package to Claude for one local
+REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
+PR after review is recorded; no push, provider call, deployment or FREEZE in
+this planning step. R020 stays parked and F08 public Actions proof is pending.
+
+Current active tranche: `CCMAI-GOV-001` / downstream machine gates is at
+WORK_ORDER / DISPATCH_READY for Claude BUILD and independent Codex REVIEW.
+The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
+[SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
+[work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
+R020 F01-A HTTP agent admission is REVIEW_PASS / FREEZE_OPEN / PARKED after
+independent Codex REVIEW of Claude BUILD `73cedc2`.
+[Review](docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md),
 [SPEC](docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_020.md) bind supported
 run/query pairs to tenant permissions. MCP tools remain a separate F01-B

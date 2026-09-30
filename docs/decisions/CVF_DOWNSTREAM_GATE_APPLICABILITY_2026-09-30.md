@@ -1,0 +1,21 @@
+# CVF downstream machine-gate applicability — 2026-09-30
+
+Status: DESIGN accepted for `CCMAI-GOV-001`. Owner: Codex, ORCHESTRATOR / SPEC_AUTHOR. Risk: R2, because these checks govern review and release claims. Core reference: public CVF `26c686cc99b8be965d2760f27fe875b03376c643`; core remains read-only.
+
+## Source audit and decision
+
+The workspace doctor passed 25/25 during R019-R1 and R020, while the memory front pointer and `IMPLEMENTATION_STATUS.currentPhase` disagreed with the active state and handoff at both review intakes. The doctor checks presence and selected fields; the downstream catalog checker validates registry schemas and generated views. Neither compares the four continuity surfaces. Core `check_session_mode_consistency.py` uses a core-only state file and marker grammar absent here. Core `check_active_session_state.py`, `check_next_move_freshness.py`, `check_work_order_dispatch_quality.py`, and the hook catalogs reference core-only files, gate IDs and packet templates. Copying them verbatim would produce false failures or empty passes. Core `check_gate_to_role_closeability.py` supports `--repo-root`, but demands twelve core gate IDs and a graph contract that current downstream orders do not declare. It becomes applicable only with a truthful downstream contract and configured invocation.
+
+| Control family | Existing downstream coverage | Decision for this project |
+|---|---|---|
+| Core provenance, workspace isolation, policy | Workspace doctor, manifest and policy; local clone pin | Keep doctor as local prerequisite. Add a portable CI check of manifest/policy and safe path resolution; a GitHub runner has no sibling core unless provisioned. Do not report the doctor as a continuity gate. |
+| Active continuity and next move | Human protocol only; demonstrated drift twice | Add a hard gate comparing state, handoff, memory front marker, and implementation phase, including active handoff path and parked checkpoint. |
+| Phase, role, work-order dispatch | Human work orders and handoff; no downstream machine gate | Add prospective structured contract for active/new work orders: phase, risk, role route, worker/reviewer/commit owner, allowed paths, prohibited effects and review target. Reject inconsistent transitions and R2 worker self-review. Do not retroactively rewrite old orders. |
+| Worker return, review and closure | Review prose and local test receipts | Add prospective structured BUILD/review record checks and status/claim boundaries, including build SHA and independent R2 reviewer. A `REVIEW_PASS` cannot imply FREEZE or F08 public CI proof. |
+| Governed artifacts and index | Catalog `-Check` | Keep and run as a required local/CI gate on every PR, including generated view freshness. Register new gate tools and their authority docs. |
+| Backend DB execution | R019 parser and workflow, local REVIEW_PASS | Keep five-sentinel real-MySQL gate; verify it on actual PR runner for F08. The new governance workflow must not substitute for it. |
+| Frontend and docs quality | Local tests/build; docs PR build only | Add frontend PR test/build workflow; retain docs PR build. Backend, frontend, docs, and governance workflows together must cover changed paths. |
+| Secrets and public claim safety | Ignore rules and manual review | Add a bounded changed-file credential/forbidden-file gate and tests, plus explicit claim receipt check when an artifact asserts CVF governance. State its detection limits; no real provider call is needed for static gate implementation. |
+| Core-only web, corpus, ADIF, agent workspace and provider packet gates | Their source schemas and products are absent here | Not applicable until a named downstream feature and matching source-of-truth contract exist. Record future adoption with a bounded work order; no blanket inheritance claim. |
+
+`CCMAI-GOV-001` is complete only when the applicable checks have actual local and PR invocation, negative fixtures that fail for the observed drift and other critical gaps, and documentation of their claim limits. Passing a checker proves only the checked repository state. It does not prove CVF controls runtime AI behavior; that claim still requires a real provider call and receipt.
