@@ -7,9 +7,16 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW (CCMAI-UX-017 UX017-R1 REVIEW_PASS / FREEZE open; UX-016-F1 and R018 REVIEW_PASS / FREEZE open; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Codex) -> ORCHESTRATOR (Codex) next
-- Next allowed move: Codex selects the next bounded S1 tranche. Zalo/legacy/mixed-version recovery remains separate; no push, provider/channel call or FREEZE.
+- Active role: ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD (Codex); COMMIT_STEWARD for roadmap records
+- Next allowed move: F01–F08 are owner-accepted OPEN roadmap findings; Codex may prepare a bounded F08 CI-DB work order first, then F01–F07 per dependencies. Alibaba key use is authorized when needed for project test evidence on the current owner-attested test data, with work-order bounds. No product BUILD, push, deployment or FREEZE from this amendment.
 - Parked operator checkpoint: none
+
+## CCMAI-ROADMAP-001 amendment — F01–F08 and owner test authorization (2026-09-30)
+
+- New-tranche rehydration: manifest, policy, active state/handoff, memory, implementation status and docs index read at `698612f`; compact bootstrap absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking). CVF core `26c686c` matches manifest and public `origin/main`; workspace doctor 25/25 PASS; knowledge ingest ran. State and handoff agreed before this amendment.
+- INTAKE/REVIEW: Codex independently read the owner-supplied ZIP as evidence, verified its SHA256 manifest, and checked F01–F08 against both `7481196` and local `698612f`. The relevant product source is identical across those commits and the working tree was clean. All eight findings are correct at the source-mechanism level; conditional incidents were not claimed observed. Evidence: `docs/reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md`. Owner explicitly accepted all eight for remediation planning.
+- Owner authority update: current data is owner-attested test data. Alibaba API key may be used when needed for project test/evidence; same-scope use needs no repeated confirmation. Never put key values in Git or evidence. Each future work order must bound provider/model, data, calls/cost and cleanup; any later real-data import or external-effect change is a new boundary. No provider call, database mutation or product-code edit occurred in this roadmap amendment.
+- Role route for this documentation amendment: `ORCHESTRATOR → SPEC_AUTHOR → SESSION_SYNC_STEWARD → COMMIT_STEWARD (Codex)`. The existing `CCMAI-ROADMAP-001` REVIEW phase is amended with an ordered F01–F08 OPEN backlog, F08 first as CI DB gate. A separate bounded work order precedes each product BUILD; high-risk REVIEW remains independent. UX017-R1 remains `REVIEW_PASS / FREEZE_OPEN`; S1 remains `IN_PROGRESS`. No push, deployment or FREEZE.
 
 ## CCMAI-UX-017 — Channels sync-status truth (2026-09-30)
 

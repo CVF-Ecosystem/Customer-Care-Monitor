@@ -31,6 +31,26 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
+## Owner authorization and F01–F08 backlog (2026-09-30)
+
+Owner accepted F01–F08 from the independent local source review at
+`docs/reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md` as OPEN
+remediation backlog in `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`.
+The report commit is `7481196`; the reviewed local HEAD is `698612f`; relevant
+source is unchanged between them. No product repair or FREEZE follows from
+accepting the findings. F08 CI DB coverage is the proposed next bounded work
+order; each finding needs its own acceptance evidence and independent REVIEW.
+
+Owner states the current project data is test data and authorizes use of the
+Alibaba API key when needed for project tests/evidence. This permission persists
+for the same test scope; do not ask again solely because a future test needs
+that key. Read it from an existing secret source without printing or committing
+its value. A future execution work order must record provider/model, data sent,
+call/cost bounds, sanitized evidence and cleanup. Reassess if the data set or
+external effect changes. No Alibaba call or data mutation occurred in this
+roadmap amendment; live provider evidence remains mandatory for any CVF
+governance-runtime claim.
+
 Current mode: `REVIEW` for `CCMAI-IDENTITY-001`: owner-directed README and Go
 module identity correction merged as PR #6. Evidence:
 `docs/reviews/PRODUCT_IDENTITY_2026-09-27.md`. Authority:

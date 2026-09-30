@@ -92,6 +92,22 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 
 **R018 REVIEW_PASS / FREEZE_OPEN ([SPEC](../specs/RUNTIME_DEMO_CHANNEL_SYNC_ADMISSION_S1_2026-09-29.md), [work order](../work_orders/CCMAI_RUNTIME_018.md)):** marker nội bộ chặn đồng bộ kênh demo. R018-R1 đã sửa backfill MySQL so sánh chính xác chữ hoa/thường; [Codex re-review độc lập](../reviews/CCMAI_RUNTIME_018_R1_INDEPENDENT_REREVIEW_2026-09-29.md) cho PASS sau test DB trên MySQL tạm. Chưa gọi kênh/provider thật, chưa FREEZE; binary cũ không nhận marker. UX-016 F1 là quan sát riêng. S1 còn IN_PROGRESS.
 
+### Backlog F01–F08 được owner chấp nhận (2026-09-30)
+
+[Review mã nguồn local](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md) đối chiếu báo cáo tại `7481196` với HEAD `698612f`: cả tám cơ chế còn nguyên ở hai mốc. Đây là backlog **OPEN**, chưa phải lỗi đã sửa hoặc sự cố được xác nhận trên dữ liệu thật. Mỗi hàng cần SPEC/work order riêng hoặc một nhóm nhỏ có cùng ranh giới file, quyền và điều kiện nghiệm thu; không gộp thành một BUILD lớn. Owner cho phép dùng Alibaba API key khi cần lấy evidence và xác nhận dữ liệu hiện tại là dữ liệu thử; xem giới hạn quyền dùng ở phần cổng quản trị dưới đây.
+
+| Ưu tiên | Finding / giai đoạn | Mục tiêu đóng và bằng chứng tối thiểu |
+|---|---|---|
+| 1 | **F08 — S1, CI DB gate** | Cho workflow backend chạy DB tests trên MySQL tạm với DSN chỉ dùng trong job; test bắt buộc phải **thực thi**, không `SKIP`, và lỗi DB làm CI đỏ. Ghi log tên test/skip count; kiểm nhánh không có secrets. Script local hiện có là đầu vào, chưa phải cổng CI. |
+| 2 | **F01 — S1/S2, quyền agent** | Ánh xạ từng `AgentRun`/`AgentQuery` action/resource sang `channels`, `messages`, `jobs` và quyền r/w tương ứng; chứng minh member thiếu quyền bị 403 trước side effect/đọc dữ liệu, người đủ quyền và tenant hợp lệ vẫn hoạt động. Kiểm tenant isolation và các route agent khác, không suy quyền từ JWT đơn thuần. |
+| 3 | **F02 — S1, độ phủ sync** | Xử lý hết trang Facebook trong cửa sổ `since` hoặc giữ checkpoint chưa tiến khi còn trang; test hơn 100 hội thoại, nhiều trang, overlap và retry với adapter giả/MySQL tạm. Thành công phải chứng minh đã xét hết cửa sổ, không chỉ xử lý hết 100 phần tử đã lấy. |
+| 4 | **F03 — S1, checkpoint analyzer** | Chốt mốc quét an toàn với hội thoại đến trong lúc chạy và timestamp đến muộn; test hai lượt cron/after-sync, insert sau bước chọn, cả trường hợp có/không có message mới sau finish. Không dời mốc vượt qua hàng chưa xét. |
+| 5 | **F05 + F06 — S1/S2, vòng đời job** | Tách `run mode` khỏi `limit`: full rerun có limit vẫn xét hội thoại đã phân tích theo hợp đồng, test-run không dời checkpoint. Định danh/quản lý từng `job_run`, chống chạy chồng hoặc hủy đúng lượt trên API, cron, after-sync; test cạnh tranh và trạng thái DB khớp context đã hủy. Có thể tách F05/F06 thành hai work order để giảm phạm vi. |
+| 6 | **F04 — S1 + giao điểm UX Dashboard** | Chốt múi giờ ngày nghiệp vụ (Asia/Ho_Chi_Minh cho giao diện hiện tại), dùng biên `[from,to)` nhất quán ở UI/API/DB và số liệu hôm nay; test lúc 00:00–07:00 VN, biên tháng/năm, khoảng lọc và export liên quan. Không coi một phép format riêng lẻ là nghiệm thu toàn luồng. |
+| 7 | **F07 — UX Dashboard/S7 observability** | Bỏ ba trạng thái `ok: true` đặt sẵn; nối vào health signal có hợp đồng tin cậy hoặc trình bày `không có dữ liệu` rõ ràng. Test lỗi API, DB, scheduler và trạng thái chưa biết; không hiển thị “bình thường” khi chưa đo. |
+
+**Thứ tự phụ thuộc:** F08 đi trước các repair DB lớn; F01, F02 và F03 là cổng an toàn trước pilot S6. F05/F06 có thể tiếp nối khi F03 xác định checkpoint/job-run semantics. F04 cần backend và frontend cùng chốt hợp đồng ngày; F07 cần hợp đồng health trước khi đổi UI. Các finding vẫn OPEN cho tới khi source, test có khả năng bắt lỗi cũ, review độc lập và claim boundary cùng đạt; `REVIEW_PASS` của R001–R018/UX017 không đóng thay chúng.
+
 Giữ ID S0–S7 để truy vết, nhưng **ID không còn là thứ tự tuyến tính**: S0 → S1 → phần tối thiểu của S2 + S3 + S5 tạo một luồng hoàn chỉnh → S4 tối ưu trên phản hồi thực → S6 pilot → S7 hoàn thiện vận hành. S2/S3/S5 đều có scope/acceptance riêng; review UI và audit tối thiểu phải sẵn sàng trong luồng đầu, không đợi tối ưu xong. Kiểm quyền, bảo mật và bảo vệ dữ liệu cần thiết cho pilot phải hoàn tất trước S6; S7 mở rộng kiểm vận hành trước phát hành. Nhân rộng/CVF uplift đứng sau nghiệm thu sản phẩm.
 
 ### S0 — Baseline và tập đánh giá được phép dùng
@@ -167,6 +183,8 @@ Chỉ mở khi use case CSKH đạt nghiệm thu và yêu cầu vận hành củ
 - [Confidence guidance](https://docs.typesafe.ai/confidence) cần được phân biệt với rule local: không gắn số confidence giả, không suy output có kiểu là output đúng. Kế hoạch hiện dùng phương pháp từ skill; đưa model Jev hoặc một model phân loại thành dependency là thay đổi kiến trúc riêng, không mặc nhiên phát sinh từ việc học skill.
 
 ## Cổng quản trị
+
+**Quyền test do owner cấp ngày 2026-09-30:** owner xác nhận dữ liệu hiện tại của dự án là dữ liệu thử và cho phép dùng Alibaba API key khi cần lấy evidence/test. Ghi nhận này tồn tại qua các phiên làm việc; không hỏi lại chỉ vì một test cùng phạm vi cần key. Giá trị key chỉ đọc từ nguồn secret sẵn có, không ghi vào Git, tài liệu hoặc log. Work order thực thi phải chỉ rõ provider/model, tập dữ liệu gửi, giới hạn call/chi phí, evidence đã làm sạch và cleanup. Nếu sau này nhập dữ liệu không còn là dữ liệu thử, thay đổi mục đích hay tác động bên ngoài, phải đánh giá lại ranh giới. Amendment roadmap này chưa dùng key hoặc tác động DB. Quyền test không thay thế cổng provider thật cho claim CVF governance runtime.
 
 Mỗi S0–S7 mở bằng INTAKE → DESIGN → SPEC → WORK_ORDER → BUILD → REVIEW → FREEZE hoặc kế thừa bằng chứng được ghi rõ ở giai đoạn sớm nhất còn mở. R2 cần reviewer độc lập, scope/path/effect/credential cụ thể và rollback. Bất kỳ claim nào rằng CVF phân loại rủi ro, lọc dữ liệu, chặn call, route provider, validate output hoặc audit AI tại runtime đều cần gọi provider API thật và lưu request/response đã làm sạch theo `AGENTS.md`; mock chỉ dùng cho UI structure. Roadmap hiện tại và static checks không đáp ứng cổng đó.
 

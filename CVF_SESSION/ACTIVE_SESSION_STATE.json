@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-UX-017 UX017-R1 passed Codex independent re-review; REVIEW_PASS / FREEZE_OPEN. Codex ORCHESTRATOR may select the next bounded S1 tranche. Zalo/legacy/mixed-version recovery remains separate; no push, provider/channel call or FREEZE.",
+  "nextAllowedMove": "Owner accepted F01-F08 as OPEN roadmap backlog after Codex source review at 7481196 and local 698612f. Codex ORCHESTRATOR may prepare a bounded F08 CI-DB work order first; F01-F07 follow per roadmap dependencies. Alibaba API key use is owner-authorized when needed for project test evidence and current data is owner-attested test data; each execution work order records its bounds. No product BUILD, push, deployment or FREEZE from this roadmap amendment.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Codex); ORCHESTRATOR (Codex) next",
+  "activeRole": "ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD (Codex); COMMIT_STEWARD for roadmap records",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-09-30"
 }
