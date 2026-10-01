@@ -37,16 +37,19 @@
     "f06_cancellation_registry_change"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_025.md",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "517406f1bfafbfe48b2cef31b558a76b8e67d8c0",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "b53f56448962d3f7c6aa070e0882560160a90c2e",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_025_F03_INDEPENDENT_REVIEW_2026-10-02.md"
+  ],
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ]
 }

@@ -140,6 +140,9 @@ var (
 // attempt fails it makes a best-effort error mark on the run without touching the checkpoint and
 // returns the failure, so the caller neither reports success nor sends notifications.
 func finalizeOrdinaryRun(run *models.JobRun, job models.Job, runStatus, errorMessage, summary string, finishedAt time.Time, checkpoint *time.Time) error {
+	// Match the database's datetime(3) precision for exact read-back verification;
+	// completion time keeps milliseconds, independently of the second checkpoint.
+	persistedFinish := finishedAt.Round(time.Millisecond)
 	var lastErr error
 	for attempt := 0; attempt < ordinaryFinalizeAttempts; attempt++ {
 		if attempt > 0 {
@@ -165,7 +168,7 @@ func finalizeOrdinaryRun(run *models.JobRun, job models.Job, runStatus, errorMes
 				Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
 				Updates(map[string]interface{}{
 					"status":        runStatus,
-					"finished_at":   &finishedAt,
+					"finished_at":   &persistedFinish,
 					"summary":       summary,
 					"error_message": errorMessage,
 				})
@@ -174,13 +177,30 @@ func finalizeOrdinaryRun(run *models.JobRun, job models.Job, runStatus, errorMes
 			}
 			updates := map[string]interface{}{
 				"last_run_status": runStatus,
-				"updated_at":      finishedAt,
+				"updated_at":      persistedFinish,
 			}
 			if checkpoint != nil {
 				updates["last_run_at"] = checkpoint
 			}
 			res = tx.Model(&models.Job{}).Where("id = ? AND tenant_id = ?", job.ID, job.TenantID).Updates(updates)
 			if res.Error != nil || res.RowsAffected > 1 {
+				return errFinalizeWrite
+			}
+			// MySQL may report zero changed rows for an already-identical job update.
+			// Accept that only if both locked records actually contain the intended
+			// terminal values; a trigger can silently suppress even a one-row write.
+			var verified int64
+			if err := tx.Model(&models.JobRun{}).
+				Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
+				Where("status = ? AND finished_at = ? AND error_message = ?", runStatus, persistedFinish, errorMessage).
+				Where("summary = CAST(? AS JSON)", summary).
+				Count(&verified).Error; err != nil || verified != 1 {
+				return errFinalizeWrite
+			}
+			verified = 0
+			if err := tx.Model(&models.Job{}).
+				Where("id = ? AND tenant_id = ?", job.ID, job.TenantID).
+				Where(updates).Count(&verified).Error; err != nil || verified != 1 {
 				return errFinalizeWrite
 			}
 			return nil

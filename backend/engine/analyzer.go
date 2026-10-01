@@ -394,6 +394,12 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 
 complete:
 	// Complete run
+	// Cancellation can arrive in the last provider call or during an empty scan,
+	// when there is no next loop iteration to observe it. Ordinary checkpointing
+	// must still treat the run as interrupted (not an execution-ownership change).
+	if incremental && ctx.Err() != nil {
+		truncated = true
+	}
 	finishedAt := analyzerNow()
 	summaryJSON, _ := json.Marshal(map[string]interface{}{
 		"conversations_found":    found,

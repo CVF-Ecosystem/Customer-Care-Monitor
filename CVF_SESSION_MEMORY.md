@@ -60,15 +60,18 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
-is REVIEW_PENDING after Claude's local BUILD (evidence
+is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `b53f564` and bounded Codex
+reviewer repairs (evidence
 [BUILD record](docs/reviews/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_BUILD_2026-10-01.md);
 [SPEC](docs/specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md),
 [work order](docs/work_orders/CCMAI_RUNTIME_025.md), seed `517406f`). Ordinary
 unlimited runs now select by source version (full local snapshot vs the latest
 job-bound evaluation snapshot, provenance-checked), share one decision between
 single and batch, and record a scan-start checkpoint only with a checked
-transactional terminal write. Codex independent REVIEW is next; other
-modes/F05/F06 remain separate and OPEN.
+transactional terminal write. [Independent review](docs/reviews/CCMAI_RUNTIME_025_F03_INDEPENDENT_REVIEW_2026-10-02.md)
+records terminal cancellation/persistence defects and their repairs, plus 46
+passing focused MySQL tests. Next is bounded F04 planning; other modes/F05/F06
+remain separate and OPEN.
 
 Previous tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
 REVIEW_PASS / FREEZE_OPEN after Claude BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047`

@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-025 F03 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (ordinary-unlimited mode boundary, source-version selection against the latest job-bound evaluation snapshot with provenance, full local snapshots shared by single/batch, scan-start checkpoint with checked transactional terminal writes, scheduler cron/after-sync proof, old-source and mutation evidence, R019 gate). Claude does not self-approve. F05/F06 stay separate and OPEN; F02 stays OPEN for live/message claims; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-025 F03 is REVIEW_PASS / FREEZE_OPEN after independent Codex review of BUILD b53f564 and bounded reviewer repairs for terminal cancellation and verified persistence. Next: rehydrate and prepare bounded F04 DESIGN/SPEC/WORK_ORDER; Claude waits for dispatch. F05/F06 remain separate and OPEN; F02 stays OPEN for live/message claims; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
-  "updatedAt": "2026-10-01"
+  "updatedAt": "2026-10-02"
 }

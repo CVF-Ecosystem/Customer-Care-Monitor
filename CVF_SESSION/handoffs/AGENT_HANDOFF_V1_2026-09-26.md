@@ -6,12 +6,14 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-025 F03 REVIEW_PENDING; R024 REVIEW_PASS / FREEZE_OPEN; F02 OPEN; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
-- Next allowed move: CCMAI-RUNTIME-025 F03 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (ordinary-unlimited mode boundary, source-version selection against the latest job-bound evaluation snapshot with provenance, full local snapshots shared by single/batch, scan-start checkpoint with checked transactional terminal writes, scheduler cron/after-sync proof, old-source and mutation evidence, R019 gate). Claude does not self-approve. F05/F06 stay separate and OPEN; F02 stays OPEN for live/message claims; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
+- Active phase: REVIEW (CCMAI-RUNTIME-025 F03 REVIEW_PASS / FREEZE_OPEN; R024 REVIEW_PASS / FREEZE_OPEN; F02 OPEN; S1 IN_PROGRESS)
+- Active role: ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-025 F03 is REVIEW_PASS / FREEZE_OPEN after independent Codex review of BUILD b53f564 and bounded reviewer repairs for terminal cancellation and verified persistence. Next: rehydrate and prepare bounded F04 DESIGN/SPEC/WORK_ORDER; Claude waits for dispatch. F05/F06 remain separate and OPEN; F02 stays OPEN for live/message claims; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-RUNTIME-025 — F03 analyzer incremental coverage (2026-10-01)
+
+- Independent REVIEW (Codex, 2026-10-02): BUILD `b53f56448962d3f7c6aa070e0882560160a90c2e` receives REVIEW_PASS / FREEZE_OPEN with bounded reviewer repairs. Four cancellation-at-completion probes and a silent checkpoint-write suppression probe failed against BUILD; ordinary terminal context checking and locked read-back verification repair them. Retained regressions also permit same-second no-op writes and verify completion time does not precede start. Final focused disposable-MySQL engine suite: 46 top-level PASS, 38.441 s, exit 0; DB/network removed. Source selection, shared full snapshots, cron/after-sync and nonordinary mode boundaries accepted; increased scan load/count semantics and live/transaction snapshot/rule-change limits recorded. [Review](../../docs/reviews/CCMAI_RUNTIME_025_F03_INDEPENDENT_REVIEW_2026-10-02.md) separates independently run checks from worker full-suite/R019/mutation claims. Rehydration after context compaction confirmed current REVIEW_PENDING pointers before disposition; no compact bootstrap, nonblocking. Role route REVIEWER (bounded same-scope repair) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex). Next F04 planning; no push, deployment, real provider/channel call, parent-CVF work or FREEZE.
 
 - INTAKE correction (Codex, 2026-10-02): exact BUILD `b53f56448962d3f7c6aa070e0882560160a90c2e` and all current pointers say REVIEW_PENDING, including memory prose. The implementation-status limitation still claimed F03-F07 product source untouched, contradicting this BUILD; reported continuity drift and narrowed that stale phrase to F04-F07 before review disposition. No product change or BUILD acceptance by this correction.
 
