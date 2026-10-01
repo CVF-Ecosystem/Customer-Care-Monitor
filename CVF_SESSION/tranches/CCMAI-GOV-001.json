@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-GOV-001",
   "workOrder": "docs/work_orders/CCMAI_GOV_001.md",
-  "status": "CHANGES_REQUIRED",
+  "status": "REVIEW_PENDING",
   "phase": "REVIEW",
   "riskCeiling": "R2",
   "roles": {
@@ -38,9 +38,10 @@
   "reviewEvidence": [
     "docs/reviews/CCMAI_GOV_001_INDEPENDENT_REVIEW_2026-10-01.md",
     "docs/reviews/CCMAI_GOV_001_R1_INDEPENDENT_REREVIEW_2026-10-01.md",
-    "docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md"
+    "docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md",
+    "docs/reviews/CVF_DOWNSTREAM_MACHINE_GATES_GOV001_CI1_BUILD_2026-10-01.md"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": null,
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
@@ -49,6 +50,7 @@
     "CHANGES_REQUIRED",
     "REVIEW_PENDING",
     "REVIEW_PASS",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "REVIEW_PENDING"
   ]
 }

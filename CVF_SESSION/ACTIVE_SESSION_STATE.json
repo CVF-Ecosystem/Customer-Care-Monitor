@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-GOV-001 GOV1-CI1 is CHANGES_REQUIRED / REVIEW_OPEN after draft PR #1 Governance Ubuntu preflight failed on generated pycache. Claude next REPAIR_WORKER under the hosted CI addendum, one local commit returns REVIEW_PENDING to Codex; Codex re-reviews and then pushes the PR branch. R020 stays parked; no worker push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-GOV-001 GOV1-CI1 repair is REVIEW_PENDING. Codex independently re-reviews the exact repair commit (job-level PYTHONDONTWRITEBYTECODE in governance.yml and the clean-checkout sequence proof), then pushes the PR #1 branch and inspects the hosted jobs at the new SHA; only a green governance rerun lets GOV-001 return to REVIEW_PASS. Claude does not self-approve. R020 stays parked; no worker push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": "CCMAI-RUNTIME-020 F01-A REVIEW_PASS / FREEZE_OPEN at Claude BUILD 73cedc2; resume only after downstream gate and PR evidence work.",
-  "activeRole": "ORCHESTRATOR -> WORK_ORDER_AUTHOR -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex); REPAIR_WORKER (Claude) next",
+  "activeRole": "REPAIR_WORKER and COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-01"
 }

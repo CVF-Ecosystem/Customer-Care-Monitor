@@ -15,6 +15,11 @@ jobs:
   preflight:
     name: Governance preflight (ubuntu)
     runs-on: ubuntu-latest
+    # GOV1-CI1: the self-tests run before the preflight in the same checkout. Python writes
+    # __pycache__/*.pyc by default (also in test subprocesses); the gate rightly flags untracked
+    # paths, so bytecode must never be generated for the whole job. Do not hide untracked files.
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -42,6 +47,8 @@ jobs:
   catalog:
     name: Governed artifact catalog -Check (windows)
     runs-on: windows-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v4
         with:
