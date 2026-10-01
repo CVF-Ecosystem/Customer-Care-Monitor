@@ -60,9 +60,11 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-023` / F02-B Pancake conversation-window
-coverage is DISPATCH_READY at [SPEC](docs/specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md)
+coverage is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `1fa8e14` and Codex's
+[independent review and same-scope repair](docs/reviews/CCMAI_RUNTIME_023_F02B_INDEPENDENT_REVIEW_2026-10-01.md)
+at [SPEC](docs/specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_023.md). Dispatcher authority
-was seeded at `5b785d5` before BUILD; Claude is the next worker and Codex the
+was seeded at `5b785d5` before BUILD; Codex is the
 independent reviewer. Zalo remains a separate F02 tranche. Previous tranche
 `CCMAI-RUNTIME-022` / F02-A Facebook sync window coverage is REVIEW_PASS /
 FREEZE_OPEN after Claude BUILD `583c51c` and Codex's

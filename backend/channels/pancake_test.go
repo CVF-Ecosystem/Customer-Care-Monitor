@@ -270,7 +270,7 @@ func TestPancakeAPIErrors(t *testing.T) {
 
 	a := newTestPancakeAdapter(srv.URL)
 	err := a.HealthCheck(context.Background())
-	if err == nil || !strings.Contains(err.Error(), "Invalid access_token") {
+	if err == nil || !strings.Contains(err.Error(), "(#102)") {
 		t.Errorf("expected invalid token error, got %v", err)
 	}
 	if err != nil && strings.Contains(err.Error(), "test-token") {

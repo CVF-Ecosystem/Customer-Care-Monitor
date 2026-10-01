@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-023 — F02-B Pancake sync window coverage
 
-Status: REVIEW_PENDING / FREEZE_OPEN. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base/dispatcher seed: `5b785d593d20c5eb05cd54da1af5f068c8bed0f2`. Risk ceiling R2. Authority: [SPEC](../specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md), [F02 source finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-023.json`. R022 Facebook is REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN for Zalo.
+Status: REVIEW_PASS / FREEZE_OPEN. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base/dispatcher seed: `5b785d593d20c5eb05cd54da1af5f068c8bed0f2`. Risk ceiling R2. Authority: [SPEC](../specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md), [F02 source finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-023.json`. R022 Facebook is REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN for Zalo.
 
 ## Assignment and phase gate
 

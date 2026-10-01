@@ -36,6 +36,8 @@ const (
 
 	// Chặn vòng lặp phân trang nếu API trả dữ liệu bất thường.
 	pancakeMaxPages = 200
+	// Bound response memory before decoding; an oversized response is never terminal proof.
+	pancakeMaxResponseBytes = 8 << 20
 )
 
 // ErrPancakeCoverageIncomplete đánh dấu lần duyệt danh sách hội thoại chưa thấy trang rỗng cuối
@@ -112,17 +114,23 @@ func (p *PancakeAdapter) doRequest(ctx context.Context, endpoint string, params 
 
 		req, err := http.NewRequestWithContext(ctx, http.MethodGet, fullURL, nil)
 		if err != nil {
-			return fmt.Errorf("create pancake api request: %w", scrubURLError(err))
+			return errors.New("create pancake api request failed")
 		}
 		resp, err := p.client.Do(req)
 		if err != nil {
-			// Không đưa URL vào lỗi vì URL chứa token.
-			return fmt.Errorf("pancake api request failed: %w", scrubURLError(err))
+			if ctx.Err() != nil {
+				return fmt.Errorf("pancake api request failed: %w", ctx.Err())
+			}
+			// Transport causes can themselves contain the token-bearing URL.
+			return errors.New("pancake api request failed")
 		}
-		body, err := io.ReadAll(resp.Body)
+		body, err := io.ReadAll(io.LimitReader(resp.Body, pancakeMaxResponseBytes+1))
 		resp.Body.Close()
 		if err != nil {
-			return fmt.Errorf("pancake api read body failed: %w", err)
+			return errors.New("pancake api read body failed")
+		}
+		if len(body) > pancakeMaxResponseBytes {
+			return errors.New("pancake api response exceeded size budget")
 		}
 
 		if resp.StatusCode == http.StatusTooManyRequests && attempt < pancakeMaxRetries {
@@ -138,54 +146,21 @@ func (p *PancakeAdapter) doRequest(ctx context.Context, endpoint string, params 
 		}
 
 		var status struct {
-			Success   *bool  `json:"success"`
-			Message   string `json:"message"`
-			ErrorCode int    `json:"error_code"`
+			Success   *bool `json:"success"`
+			ErrorCode int   `json:"error_code"`
 		}
 		if err := json.Unmarshal(body, &status); err != nil {
 			return fmt.Errorf("pancake api decode failed: %w", err)
 		}
 		if status.Success != nil && !*status.Success {
-			return fmt.Errorf("pancake api error: (#%d) %s", status.ErrorCode, p.safeProviderMessage(status.Message))
+			// Provider text can echo URLs, encoded credentials or response content.
+			return fmt.Errorf("pancake api error: (#%d)", status.ErrorCode)
 		}
 		if err := json.Unmarshal(body, out); err != nil {
 			return fmt.Errorf("pancake api decode failed: %w", err)
 		}
 		return nil
 	}
-}
-
-// scrubURLError bỏ URL (có chứa token) khỏi lỗi của http.Client, kể cả khi lỗi bọc nhiều lớp
-// *url.Error (một transport tự viết cũng có thể trả *url.Error).
-func scrubURLError(err error) error {
-	var uerr *url.Error
-	if !errors.As(err, &uerr) {
-		return err
-	}
-	op := uerr.Op
-	inner := uerr.Err
-	for errors.As(inner, &uerr) {
-		inner = uerr.Err
-	}
-	if inner == nil {
-		return errors.New(op + ": request failed")
-	}
-	return fmt.Errorf("%s: %w", op, inner)
-}
-
-// pancakeMaxProviderMessage giới hạn độ dài thông báo lỗi lấy từ Pancake.
-const pancakeMaxProviderMessage = 200
-
-// safeProviderMessage giữ thông báo lỗi của Pancake để chẩn đoán nhưng bỏ token nếu Pancake có
-// lặp lại nó, và cắt ngắn.
-func (p *PancakeAdapter) safeProviderMessage(msg string) string {
-	if p.creds.PageAccessToken != "" {
-		msg = strings.ReplaceAll(msg, p.creds.PageAccessToken, "[redacted]")
-	}
-	if r := []rune(msg); len(r) > pancakeMaxProviderMessage {
-		msg = string(r[:pancakeMaxProviderMessage]) + "…"
-	}
-	return msg
 }
 
 type pancakeSender struct {
@@ -250,10 +225,10 @@ func (p *PancakeAdapter) FetchRecentConversations(ctx context.Context, since tim
 	seenCursors := make(map[string]bool)
 	lastID := ""
 
-	var sinceParam, untilParam string
+	var sinceParam string
+	untilParam := strconv.FormatInt(time.Now().Unix(), 10)
 	if !since.IsZero() {
 		sinceParam = strconv.FormatInt(since.Unix(), 10)
-		untilParam = strconv.FormatInt(time.Now().Unix(), 10)
 	}
 
 	for page := 0; ; page++ {
@@ -267,9 +242,9 @@ func (p *PancakeAdapter) FetchRecentConversations(ctx context.Context, since tim
 		params := url.Values{}
 		params.Set("type", "INBOX")
 		params.Set("order_by", "updated_at")
+		params.Set("until", untilParam)
 		if sinceParam != "" {
 			params.Set("since", sinceParam)
-			params.Set("until", untilParam)
 		}
 		if lastID != "" {
 			params.Set("last_conversation_id", lastID)
@@ -280,6 +255,9 @@ func (p *PancakeAdapter) FetchRecentConversations(ctx context.Context, since tim
 		}
 		if err := p.doRequest(ctx, endpoint, params, &result); err != nil {
 			return conversations, err
+		}
+		if err := ctx.Err(); err != nil {
+			return conversations, fmt.Errorf("%w: %v", ErrPancakeCoverageIncomplete, err)
 		}
 		raw := bytes.TrimSpace(result.Conversations)
 		if len(raw) == 0 || raw[0] != '[' {

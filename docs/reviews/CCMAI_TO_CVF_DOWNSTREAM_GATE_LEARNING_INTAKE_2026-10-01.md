@@ -13,6 +13,10 @@ Date: 2026-10-01. Status: `LEARNING_INTAKE / UPSTREAM_REMEDIATION_DEFERRED`. Sou
 
 ## Root-cause assessment across the governing chain
 
+### Later downstream observations (R021–R023, 2026-10-01)
+
+The portable GOV-001 gate is now installed and invoked, but its continuity check compares the machine front marker and headers, not all prose that still presents itself as current. R021, R022 and R023 BUILD returns left `DISPATCH_READY` in the "Current active tranche" prose and/or implementation-status limitation while the canonical machine fields correctly said `REVIEW_PENDING`. At R023 exact BUILD `1fa8e14774149e68df10176f52804d80c11bb5bf`, doctor passed 25/25 and preflight passed 7/7 after the reviewer corrected those pointers. This is a narrower coverage gap than the original missing-gate finding: passing machine fields do not establish agreement of every current-authority prose surface. Parent proposal: give current status a single machine authority and generate its display prose, or retire duplicate current-status prose; add a golden worker-return case that proves the chosen contract. Do not promise a generic regex can validate arbitrary historical prose. Source: [R023 independent review](CCMAI_RUNTIME_023_F02B_INDEPENDENT_REVIEW_2026-10-01.md). Parent implementation and tests remain assigned to the other agent.
+
 | Chain join | Observed gap | Earliest control point |
 |---|---|
 | CVF requirement → project template | `AGENTS.md` requires fresh synchronized continuity, while bootstrap supplies prose and separate state files without a portable enforced comparison. | Core bootstrap template and machine-readable downstream contract. |

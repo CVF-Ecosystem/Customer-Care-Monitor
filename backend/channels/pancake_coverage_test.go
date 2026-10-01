@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"io"
 	"net"
 	"net/http"
 	"net/http/httptest"
@@ -275,6 +276,7 @@ func TestPancakeLaterPageFailuresReturnSafeErrors(t *testing.T) {
 		"429 exhausted":   status(http.StatusTooManyRequests),
 		"http 500":        status(http.StatusInternalServerError),
 		"api error":       body(`{"success":false,"error_code":4,"message":"rate ` + pcToken + `"}`),
+		"api echoes URL":  body(`{"success":false,"error_code":4,"message":"https://pages.fm/api? page_access_token=tok%2DR023%2DSECRET ` + pcBodyMarker + `"}`),
 		"undecodable":     body("<html>" + pcBodyMarker + "</html>"),
 		"network failure": hijack,
 		"read failure":    truncated,
@@ -307,8 +309,52 @@ func TestPancakeNestedURLErrorsAreScrubbed(t *testing.T) {
 	})}
 	_, err := a.FetchRecentConversations(context.Background(), time.Date(2026, 9, 1, 0, 0, 0, 0, time.UTC), 0)
 	assertSafeError(t, "nested url error", err)
-	if !strings.Contains(err.Error(), "connection refused") {
-		t.Fatalf("scrubbed error lost its cause: %v", err)
+	// Arbitrary transport causes are omitted because they can echo credentials.
+}
+
+func TestPancakeTransportCauseCannotEchoRequestURL(t *testing.T) {
+	a := newTestPancakeAdapter("https://pancake.invalid")
+	a.creds.PageAccessToken = pcToken
+	a.client = &http.Client{Transport: roundTrip(func(r *http.Request) (*http.Response, error) {
+		return nil, fmt.Errorf("proxy failed for %s", r.URL.String())
+	})}
+	_, err := a.FetchRecentConversations(context.Background(), time.Now().Add(-time.Hour), 0)
+	assertSafeError(t, "transport cause", err)
+}
+
+func TestPancakeUnboundedSinceStillSendsFixedUntil(t *testing.T) {
+	s := newPCServer(t, map[string]func(http.ResponseWriter){
+		"":  body(pcPage([]string{pcRow("x", "INBOX", time.Now().Add(-time.Hour))})),
+		"x": body(pcPage(nil)),
+	})
+	if _, err := s.adapter().FetchRecentConversations(context.Background(), time.Time{}, 0); err != nil {
+		t.Fatal(err)
+	}
+	if s.count() != 2 || s.queries[0].Get("until") == "" || s.queries[0].Get("until") != s.queries[1].Get("until") {
+		t.Fatal("zero since omitted or changed the fixed upper bound")
+	}
+}
+
+func TestPancakeCancellationOnTerminalPageIsNotSuccess(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	a := newTestPancakeAdapter("https://pancake.invalid")
+	a.client = &http.Client{Transport: roundTrip(func(r *http.Request) (*http.Response, error) {
+		cancel()
+		return &http.Response{StatusCode: 200, Header: http.Header{}, Body: io.NopCloser(strings.NewReader(pcPage(nil))), Request: r}, nil
+	})}
+	if _, err := a.FetchRecentConversations(ctx, time.Now().Add(-time.Hour), 0); err == nil {
+		t.Fatal("cancelled terminal response returned success")
+	}
+}
+
+func TestPancakeOversizedResponseIsNotTerminalProof(t *testing.T) {
+	s := newPCServer(t, map[string]func(http.ResponseWriter){
+		"": body(pcPage(nil) + strings.Repeat(" ", pancakeMaxResponseBytes)),
+	})
+	_, err := s.adapter().FetchRecentConversations(context.Background(), time.Now().Add(-time.Hour), 0)
+	if err == nil || !strings.Contains(err.Error(), "size budget") || s.count() != 1 {
+		t.Fatalf("oversized response: err %v, requests %d", err, s.count())
 	}
 }
 
