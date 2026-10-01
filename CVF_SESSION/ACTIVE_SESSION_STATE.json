@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-025 F03 is REVIEW_PASS / FREEZE_OPEN after independent Codex review of BUILD b53f564 and bounded reviewer repairs for terminal cancellation and verified persistence. Next: rehydrate and prepare bounded F04 DESIGN/SPEC/WORK_ORDER; Claude waits for dispatch. F05/F06 remain separate and OPEN; F02 stays OPEN for live/message claims; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-026 F04 is DISPATCH_READY under committed seed 8f366eb. Claude rehydrates continuity and acknowledges IMPLEMENTATION_WORKER before one bounded BUILD for VN business-day UI/API/DB read filters and exports, driver-storage compatibility and deterministic disposable-MySQL/UI evidence; returns one local REVIEW_PENDING commit for independent Codex review. R025 F03 remains REVIEW_PASS / FREEZE_OPEN. F05/F06 and F02 live/message claims remain separate and OPEN; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, persistent DB, timestamp/DSN migration, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD",
+  "activeRole": "WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER and COMMIT_STEWARD (Claude) next; independent REVIEWER (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-02"
 }

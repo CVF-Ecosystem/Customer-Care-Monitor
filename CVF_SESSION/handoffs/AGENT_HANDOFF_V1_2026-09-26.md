@@ -5,11 +5,19 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-025 F03 REVIEW_PASS / FREEZE_OPEN; R024 REVIEW_PASS / FREEZE_OPEN; F02 OPEN; S1 IN_PROGRESS)
-- Active role: ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-025 F03 is REVIEW_PASS / FREEZE_OPEN after independent Codex review of BUILD b53f564 and bounded reviewer repairs for terminal cancellation and verified persistence. Next: rehydrate and prepare bounded F04 DESIGN/SPEC/WORK_ORDER; Claude waits for dispatch. F05/F06 remain separate and OPEN; F02 stays OPEN for live/message claims; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-026 F04 DISPATCH_READY; R025 F03 REVIEW_PASS / FREEZE_OPEN; F02 OPEN; S1 IN_PROGRESS)
+- Active role: WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER and COMMIT_STEWARD (Claude) next; independent REVIEWER (Codex)
+- Next allowed move: CCMAI-RUNTIME-026 F04 is DISPATCH_READY under committed seed 8f366eb. Claude rehydrates continuity and acknowledges IMPLEMENTATION_WORKER before one bounded BUILD for VN business-day UI/API/DB read filters and exports, driver-storage compatibility and deterministic disposable-MySQL/UI evidence; returns one local REVIEW_PENDING commit for independent Codex review. R025 F03 remains REVIEW_PASS / FREEZE_OPEN. F05/F06 and F02 live/message claims remain separate and OPEN; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, persistent DB, timestamp/DSN migration, parent-CVF work or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-026 — F04 VN business-day read/filter contract (2026-10-02)
+
+- INTAKE / role acknowledgment (Codex): rehydrated manifest/policy/state/current memory prose/active handoff/status/index at R025 review `9ecc83982da1e29737a7f5b6613eb5252539dd55`. Current surfaces agree on REVIEW_PASS; compact bootstrap absent (BOOTSTRAP_MIGRATION_PENDING, nonblocking). Core `26c686c` matches public origin/main and doctor 25/25 PASS. Knowledge ingest ran; only pre-existing untracked knowledge index is outside commits. Role transition ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR; Claude must rehydrate and acknowledge IMPLEMENTATION_WORKER before BUILD.
+- DESIGN / SPEC: [contract](../../docs/specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md) fixes business day at Asia/Ho_Chi_Minh for the covered reports, strict public inclusive date strings -> internal exclusive next-midnight intervals, browser-independent exact-seven/exact-28 presets, bounded Dashboard day/month costs and VN series buckets. Source audit finds Local storage DSN with app TZ=VN vs UTC test DSN; driver location must be proven in BUILD and no UTC historical reinterpretation/DSN migration is granted. Existing calendar helper is insufficient proof of UI/API/query consistency. Read scope includes Dashboard, Results/list/export, Cost Logs and conversation-selected message export; F05 analyzer/dispatch dates and F06 remain separate.
+- WORK_ORDER: [R026](../../docs/work_orders/CCMAI_RUNTIME_026.md) DISPATCH_READY. Immutable dispatcher seed `8f366ebd3ed2df3a1302a0635844d9a5f5d0d1a9` committed before BUILD; independent roles and authorized paths recorded in seed/tranche. Claude returns one local REVIEW_PENDING BUILD plus actual handler/disposable-MySQL storage matrix and matched mounted-UI query evidence, old-source failures/mutations, full backend/R019/frontend gates. No product changes or product tests in planning, real provider/channel calls, persistent DB, push, deployment, parent-CVF implementation/tests or FREEZE. F04 source remediation remains OPEN until review; no global writer/timestamp migration claim.
+
+- Planning verification (Codex): eight-file explicit preflight 7/7 PASS including catalog; gate unit tests 46/46 PASS (49.799 s); docs build PASS (25.86 s); workspace doctor 25/25 PASS; diff check PASS. Separate one-file seed preflight passed before seed commit. Existing catalog families cover all new artifacts, so no generated index/module registration change. No product tests or product modifications performed by the planner. Unrelated untracked `knowledge/_index.json` excluded; explicit-scope result is not whole-worktree PASS.
 
 ## CCMAI-RUNTIME-025 — F03 analyzer incremental coverage (2026-10-01)
 

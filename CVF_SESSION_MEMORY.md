@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-025", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-026", "parked": false} -->
 
 ## Startup Order
 
@@ -59,7 +59,17 @@ REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
 PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
-Current active tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
+Current active tranche: `CCMAI-RUNTIME-026` / F04 VN business-day read/filter
+consistency is DISPATCH_READY. [SPEC](docs/specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_026.md) bind committed dispatcher
+seed `8f366eb`: VN date controls, exclusive query bounds, Dashboard aggregates,
+Results/export, Cost Logs and message export; existing driver storage preserved.
+Claude must rehydrate/acknowledge IMPLEMENTATION_WORKER, BUILD within scope and
+return one local REVIEW_PENDING commit; Codex independently reviews. F04 source
+is still OPEN. No product changes/tests, real API calls, persistent DB, push or
+FREEZE occurred in planning. F05/F06 and F02 live/message limits remain separate.
+
+Previous tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
 is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `b53f564` and bounded Codex
 reviewer repairs (evidence
 [BUILD record](docs/reviews/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_BUILD_2026-10-01.md);
@@ -70,7 +80,7 @@ job-bound evaluation snapshot, provenance-checked), share one decision between
 single and batch, and record a scan-start checkpoint only with a checked
 transactional terminal write. [Independent review](docs/reviews/CCMAI_RUNTIME_025_F03_INDEPENDENT_REVIEW_2026-10-02.md)
 records terminal cancellation/persistence defects and their repairs, plus 46
-passing focused MySQL tests. Next is bounded F04 planning; other modes/F05/F06
+passing focused MySQL tests. F04 planning is dispatched as R026; other modes/F05/F06
 remain separate and OPEN.
 
 Previous tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
