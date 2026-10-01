@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-022",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_022.md",
+  "sourcePlanningCommit": "b9a4600fd4a5fc3177eb65dee1abf00a9e855ed5",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/sync.go",
+    "backend/engine/sync*_test.go",
+    "backend/channels/facebook.go",
+    "backend/channels/facebook*_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_022.md",
+    "docs/specs/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_2026-10-01.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "non_facebook_adapter_change",
+    "checkpoint_schema_change"
+  ]
+}
