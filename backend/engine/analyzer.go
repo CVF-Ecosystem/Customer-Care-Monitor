@@ -21,6 +21,9 @@ import (
 // Analyzer executes analysis jobs: loads messages, calls AI, saves results.
 type Analyzer struct {
 	cfg *config.Config
+	// providerOverride is a private test seam (CCMAI-RUNTIME-025) that lets scheduler tests
+	// route a synthetic provider through the real Analyzer. Never set in production.
+	providerOverride ai.AIProvider
 }
 
 func NewAnalyzer(cfg *config.Config) *Analyzer {
@@ -86,7 +89,11 @@ func (a *Analyzer) runJobInternal(ctx context.Context, job models.Job, maxConver
 }
 
 func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxConversations int, injectedProvider ai.AIProvider, fullRerun bool, dateFrom, dateTo string, sinceOverride *time.Time, excludeAnalyzed bool) (*models.JobRun, error) {
-	now := time.Now()
+	// CCMAI-RUNTIME-025: captured before candidate selection; an ordinary incremental run that
+	// completes cleanly records this (second-truncated) as its checkpoint.
+	now := analyzerNow()
+	scanStart := now
+	incremental := isOrdinaryIncremental(fullRerun, maxConversations, dateFrom, dateTo, sinceOverride, excludeAnalyzed)
 	run := models.JobRun{
 		ID:        pkg.NewUUID(),
 		JobID:     job.ID,
@@ -109,6 +116,8 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 	var err error
 	if injectedProvider != nil {
 		provider = injectedProvider
+	} else if a.providerOverride != nil {
+		provider = a.providerOverride
 	} else {
 		provider, err = a.getProvider(job)
 		if err != nil {
@@ -135,7 +144,7 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 			since = t
 		}
 	}
-	if since.IsZero() && sinceOverride == nil {
+	if since.IsZero() && sinceOverride == nil && !incremental {
 		if fullRerun {
 			since = time.Time{} // epoch — get ALL conversations
 		} else if isTestRun {
@@ -148,44 +157,72 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 		}
 	}
 
+	issuesFound := 0
+	passCount := 0
+	analyzedCount := 0
+	errorCount := 0
+	truncated := false
+
 	// Fetch conversations with messages in time range
 	var conversations []models.Conversation
-	q := db.DB.Where("tenant_id = ? AND channel_id IN ?", job.TenantID, channelIDs)
-	if !since.IsZero() {
-		q = q.Where("last_message_at > ?", since)
-	}
-	if dateTo != "" {
-		if t, err := time.Parse("2006-01-02", dateTo); err == nil {
-			q = q.Where("last_message_at < ?", t.Add(24*time.Hour))
+	var prepared []preparedConversation
+	unchangedCount := 0
+	if incremental {
+		// Every tenant/input-channel conversation is a candidate; the source-version check
+		// below, not event timestamps or last_run_at, decides what needs analysis.
+		conversations, err = ordinaryIncrementalCandidates(job, channelIDs)
+		if err != nil {
+			return a.failRun(&run, fmt.Errorf("fetch conversations: %w", err))
 		}
-	}
-	if excludeAnalyzed {
-		// Only include conversations not yet evaluated by this job
-		// job_results has job_run_id, not job_id — must JOIN through job_runs
-		analyzedSubq := db.DB.Model(&models.JobResult{}).
-			Select("job_results.conversation_id").
-			Joins("JOIN job_runs ON job_runs.id = job_results.job_run_id").
-			Where("job_runs.job_id = ?", job.ID)
-		q = q.Where("id NOT IN (?)", analyzedSubq)
-	}
-	if !fullRerun {
-		// Bỏ qua cuộc chat đã có đánh giá mới hơn tin nhắn cuối. Thiếu điều kiện này,
-		// mỗi lần quét lại là một lần đánh giá trùng chồng lên bản cũ.
-		// Cuộc chat có tin nhắn mới sau lần đánh giá gần nhất vẫn được đánh giá lại.
-		q = q.Where(`NOT EXISTS (
+		var prepErrors int
+		prepared, unchangedCount, prepErrors, truncated = prepareOrdinaryIncremental(ctx, job, conversations)
+		errorCount += prepErrors
+	} else {
+		q := db.DB.Where("tenant_id = ? AND channel_id IN ?", job.TenantID, channelIDs)
+		if !since.IsZero() {
+			q = q.Where("last_message_at > ?", since)
+		}
+		if dateTo != "" {
+			if t, err := time.Parse("2006-01-02", dateTo); err == nil {
+				q = q.Where("last_message_at < ?", t.Add(24*time.Hour))
+			}
+		}
+		if excludeAnalyzed {
+			// Only include conversations not yet evaluated by this job
+			// job_results has job_run_id, not job_id — must JOIN through job_runs
+			analyzedSubq := db.DB.Model(&models.JobResult{}).
+				Select("job_results.conversation_id").
+				Joins("JOIN job_runs ON job_runs.id = job_results.job_run_id").
+				Where("job_runs.job_id = ?", job.ID)
+			q = q.Where("id NOT IN (?)", analyzedSubq)
+		}
+		if !fullRerun {
+			// Bỏ qua cuộc chat đã có đánh giá mới hơn tin nhắn cuối. Thiếu điều kiện này,
+			// mỗi lần quét lại là một lần đánh giá trùng chồng lên bản cũ.
+			// Cuộc chat có tin nhắn mới sau lần đánh giá gần nhất vẫn được đánh giá lại.
+			q = q.Where(`NOT EXISTS (
 			SELECT 1 FROM job_results jr
 			INNER JOIN job_runs jrun ON jrun.id = jr.job_run_id
 			WHERE jr.conversation_id = conversations.id
 			  AND jrun.job_id = ?
 			  AND jr.created_at >= conversations.last_message_at)`, job.ID)
+		}
+		// Cũ trước mới: lần chạy bị cắt vì hết giờ thì lần sau tiếp đúng chỗ còn dang dở
+		q = q.Order("last_message_at ASC")
+		if maxConversations > 0 {
+			q = q.Limit(maxConversations)
+		}
+		if err := q.Find(&conversations).Error; err != nil {
+			return a.failRun(&run, fmt.Errorf("fetch conversations: %w", err))
+		}
 	}
-	// Cũ trước mới: lần chạy bị cắt vì hết giờ thì lần sau tiếp đúng chỗ còn dang dở
-	q = q.Order("last_message_at ASC")
-	if maxConversations > 0 {
-		q = q.Limit(maxConversations)
-	}
-	if err := q.Find(&conversations).Error; err != nil {
-		return a.failRun(&run, fmt.Errorf("fetch conversations: %w", err))
+
+	// found is the number of conversations this run has to handle: for an ordinary
+	// incremental run, those whose source changed plus those that could not be prepared or
+	// verified; otherwise the selected conversations, as before.
+	found := len(conversations)
+	if incremental {
+		found = len(prepared) + errorCount
 	}
 
 	// In rõ mốc quét: mốc bị đóng băng là gốc của việc quét lại toàn bộ mỗi ngày,
@@ -194,151 +231,172 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 	if !since.IsZero() {
 		sinceLabel = pkg.ToVN(since).Format("2006-01-02 15:04:05")
 	}
-	log.Printf("[analyzer] job %s: channelIDs=%v, since=%s, excludeAnalyzed=%v, fullRerun=%v, found %d conversations",
-		job.Name, channelIDs, sinceLabel, excludeAnalyzed, fullRerun, len(conversations))
+	if incremental {
+		log.Printf("[analyzer] job %s: ordinary incremental, channelIDs=%v, %d candidates, %d changed, %d unchanged, %d errors",
+			job.Name, channelIDs, len(conversations), len(prepared), unchangedCount, errorCount)
+	} else {
+		log.Printf("[analyzer] job %s: channelIDs=%v, since=%s, excludeAnalyzed=%v, fullRerun=%v, found %d conversations",
+			job.Name, channelIDs, sinceLabel, excludeAnalyzed, fullRerun, len(conversations))
+	}
 
 	// Set initial total so frontend can show progress immediately
 	initialSummary, _ := json.Marshal(map[string]interface{}{
-		"conversations_found": len(conversations),
+		"conversations_found": found,
 	})
 	if err := db.DB.Model(&run).Update("summary", string(initialSummary)).Error; err != nil {
 		log.Printf("[analyzer] DB update error (initial summary): %v", err)
 	}
+	if truncated {
+		goto complete
+	}
 
 	// Check batch mode setting (default: enabled with batch size 5)
-	batchMode := true
-	batchSize := 5
-	var batchSetting models.AppSetting
-	if err := db.DB.Where("tenant_id = ? AND setting_key = ?", job.TenantID, "ai_batch_mode").First(&batchSetting).Error; err == nil {
-		batchMode = batchSetting.ValuePlain != "false"
-	}
-	var batchSizeSetting models.AppSetting
-	if err := db.DB.Where("tenant_id = ? AND setting_key = ?", job.TenantID, "ai_batch_size").First(&batchSizeSetting).Error; err == nil {
-		var n int
-		if _, err := fmt.Sscanf(batchSizeSetting.ValuePlain, "%d", &n); err == nil && n > 0 && n <= 30 {
-			batchSize = n
+	{
+		batchMode := true
+		batchSize := 5
+		var batchSetting models.AppSetting
+		if err := db.DB.Where("tenant_id = ? AND setting_key = ?", job.TenantID, "ai_batch_mode").First(&batchSetting).Error; err == nil {
+			batchMode = batchSetting.ValuePlain != "false"
 		}
-	}
-	// Safety net: prevent infinite loop if batchSize somehow becomes 0
-	if batchSize < 1 {
-		batchSize = 5
-	}
-
-	issuesFound := 0
-	passCount := 0
-	analyzedCount := 0
-	errorCount := 0
-	truncated := false
-
-	if batchMode {
-		issuesFound, passCount, analyzedCount, errorCount, truncated = a.runBatchMode(ctx, provider, job, run, conversations, since, batchSize)
-	} else {
-
-		for _, conv := range conversations {
-			// Check if context cancelled (timeout or manual cancel)
-			select {
-			case <-ctx.Done():
-				log.Printf("[analyzer] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, len(conversations))
-				truncated = true
-				goto complete
-			default:
+		var batchSizeSetting models.AppSetting
+		if err := db.DB.Where("tenant_id = ? AND setting_key = ?", job.TenantID, "ai_batch_size").First(&batchSizeSetting).Error; err == nil {
+			var n int
+			if _, err := fmt.Sscanf(batchSizeSetting.ValuePlain, "%d", &n); err == nil && n > 0 && n <= 30 {
+				batchSize = n
 			}
+		}
+		// Safety net: prevent infinite loop if batchSize somehow becomes 0
+		if batchSize < 1 {
+			batchSize = 5
+		}
 
-			snap, err := loadConversationSnapshot(conv, since)
-			if err != nil {
-				log.Printf("[analyzer] snapshot error for conversation %s: %v", conv.ID, err)
-				errorCount++
-				continue
-			}
-			if snap.Manifest.Coverage == coverageEmpty {
-				continue
-			}
-			transcript := snap.Transcript
+		if batchMode {
+			var bIssues, bPass, bAnalyzed, bErrors int
+			bIssues, bPass, bAnalyzed, bErrors, truncated = a.runBatchMode(ctx, provider, job, run, conversations, since, batchSize, prepared, incremental)
+			issuesFound += bIssues
+			passCount += bPass
+			analyzedCount += bAnalyzed
+			errorCount += bErrors
+		} else {
+			// analyzeSingle sends one prepared snapshot and saves its result.
+			analyzeSingle := func(conv models.Conversation, snap *conversationSnapshot) {
+				transcript := snap.Transcript
 
-			// Build prompt based on job type
-			var systemPrompt string
-			switch job.JobType {
-			case "qc_analysis":
-				systemPrompt = ai.BuildQCPrompt(job.RulesContent, job.SkipConditions)
-			case "classification":
-				systemPrompt = ai.BuildClassificationPrompt(job.RulesConfig)
-			default:
-				continue
-			}
+				// Build prompt based on job type
+				var systemPrompt string
+				switch job.JobType {
+				case "qc_analysis":
+					systemPrompt = ai.BuildQCPrompt(job.RulesContent, job.SkipConditions)
+				case "classification":
+					systemPrompt = ai.BuildClassificationPrompt(job.RulesConfig)
+				default:
+					return
+				}
 
-			// Call AI (with rate limit delay)
-			if analyzedCount > 0 {
-				time.Sleep(500 * time.Millisecond) // Avoid rate limiting
-			}
-			aiResp, err := provider.AnalyzeChat(ctx, systemPrompt, transcript)
-			if err != nil {
-				log.Printf("[analyzer] AI error for conversation %s: %v", conv.ID, err)
-				errorCount++
-				// Update progress even on error
-				errProgressJSON, _ := json.Marshal(map[string]interface{}{
-					"conversations_found":    len(conversations),
+				// Call AI (with rate limit delay)
+				if analyzedCount > 0 {
+					time.Sleep(500 * time.Millisecond) // Avoid rate limiting
+				}
+				aiResp, err := provider.AnalyzeChat(ctx, systemPrompt, transcript)
+				if err != nil {
+					log.Printf("[analyzer] AI error for conversation %s: %v", conv.ID, err)
+					errorCount++
+					// Update progress even on error
+					errProgressJSON, _ := json.Marshal(map[string]interface{}{
+						"conversations_found":    found,
+						"conversations_analyzed": analyzedCount,
+						"conversations_passed":   passCount,
+						"conversations_errors":   errorCount,
+						"issues_found":           issuesFound,
+					})
+					if err := db.DB.Model(&run).Update("summary", string(errProgressJSON)).Error; err != nil {
+						log.Printf("[analyzer] DB update error (error progress): %v", err)
+					}
+					return
+				}
+				// Log AI usage + cost
+				cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
+				if !priceKnown {
+					log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
+				}
+				usageLog := models.AIUsageLog{
+					ID:           pkg.NewUUID(),
+					TenantID:     job.TenantID,
+					JobID:        job.ID,
+					JobRunID:     run.ID,
+					Provider:     aiResp.Provider,
+					Model:        aiResp.Model,
+					InputTokens:  aiResp.InputTokens,
+					OutputTokens: aiResp.OutputTokens,
+					CostUSD:      cost,
+					CreatedAt:    time.Now(),
+				}
+				db.DB.Create(&usageLog)
+
+				// Parse and save results
+				count, passed, err := a.saveResults(run.ID, snap, job.JobType, aiResp.Content)
+				if err != nil {
+					log.Printf("[analyzer] save results error for %s: %v", conv.ID, err)
+					errorCount++
+					return
+				}
+				analyzedCount++
+				issuesFound += count
+				if passed {
+					passCount++
+				}
+
+				// Update progress so frontend can poll real-time status
+				progressJSON, _ := json.Marshal(map[string]interface{}{
+					"conversations_found":    found,
 					"conversations_analyzed": analyzedCount,
 					"conversations_passed":   passCount,
 					"conversations_errors":   errorCount,
 					"issues_found":           issuesFound,
 				})
-				if err := db.DB.Model(&run).Update("summary", string(errProgressJSON)).Error; err != nil {
-					log.Printf("[analyzer] DB update error (error progress): %v", err)
+				if err := db.DB.Model(&run).Update("summary", string(progressJSON)).Error; err != nil {
+					log.Printf("[analyzer] DB update error (progress): %v", err)
 				}
-				continue
-			}
-			// Log AI usage + cost
-			cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
-			if !priceKnown {
-				log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
-			}
-			usageLog := models.AIUsageLog{
-				ID:           pkg.NewUUID(),
-				TenantID:     job.TenantID,
-				JobID:        job.ID,
-				JobRunID:     run.ID,
-				Provider:     aiResp.Provider,
-				Model:        aiResp.Model,
-				InputTokens:  aiResp.InputTokens,
-				OutputTokens: aiResp.OutputTokens,
-				CostUSD:      cost,
-				CreatedAt:    time.Now(),
-			}
-			db.DB.Create(&usageLog)
-
-			// Parse and save results
-			count, passed, err := a.saveResults(run.ID, snap, job.JobType, aiResp.Content)
-			if err != nil {
-				log.Printf("[analyzer] save results error for %s: %v", conv.ID, err)
-				errorCount++
-				continue
-			}
-			analyzedCount++
-			issuesFound += count
-			if passed {
-				passCount++
 			}
 
-			// Update progress so frontend can poll real-time status
-			progressJSON, _ := json.Marshal(map[string]interface{}{
-				"conversations_found":    len(conversations),
-				"conversations_analyzed": analyzedCount,
-				"conversations_passed":   passCount,
-				"conversations_errors":   errorCount,
-				"issues_found":           issuesFound,
-			})
-			if err := db.DB.Model(&run).Update("summary", string(progressJSON)).Error; err != nil {
-				log.Printf("[analyzer] DB update error (progress): %v", err)
-			}
-		}
+			if incremental {
+				for _, p := range prepared {
+					if ctx.Err() != nil {
+						log.Printf("[analyzer] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, found)
+						truncated = true
+						break
+					}
+					analyzeSingle(p.Conv, p.Snap)
+				}
+			} else {
+				for _, conv := range conversations {
+					// Check if context cancelled (timeout or manual cancel)
+					if ctx.Err() != nil {
+						log.Printf("[analyzer] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, len(conversations))
+						truncated = true
+						break
+					}
 
-	} // end else (non-batch mode)
+					snap, err := loadConversationSnapshot(conv, since)
+					if err != nil {
+						log.Printf("[analyzer] snapshot error for conversation %s: %v", conv.ID, err)
+						errorCount++
+						continue
+					}
+					if snap.Manifest.Coverage == coverageEmpty {
+						continue
+					}
+					analyzeSingle(conv, snap)
+				}
+			}
+		} // end else (non-batch mode)
+	}
 
 complete:
 	// Complete run
-	finishedAt := time.Now()
+	finishedAt := analyzerNow()
 	summaryJSON, _ := json.Marshal(map[string]interface{}{
-		"conversations_found":    len(conversations),
+		"conversations_found":    found,
 		"conversations_analyzed": analyzedCount,
 		"conversations_passed":   passCount,
 		"conversations_errors":   errorCount,
@@ -347,11 +405,11 @@ complete:
 	runStatus := "success"
 	if analyzedCount == 0 && errorCount > 0 {
 		runStatus = "error"
-		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, len(conversations))
+		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, found)
 	} else if truncated {
 		runStatus = "partial"
 		run.ErrorMessage = fmt.Sprintf("Hết thời gian chạy, mới xử lý %d/%d cuộc chat. Phần còn lại vào lần chạy sau.",
-			analyzedCount, len(conversations))
+			analyzedCount, found)
 		// Người dùng bấm huỷ cũng đi qua đường ngắt context này. Giữ nguyên nhãn
 		// "cancelled" mà handler đã ghi, đừng báo thành hết giờ.
 		var current models.JobRun
@@ -361,42 +419,61 @@ complete:
 		}
 	} else if errorCount > 0 {
 		runStatus = "partial"
-		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, len(conversations))
-	}
-	// Critical: final status update — retry on failure to prevent stuck "running" state
-	for retry := 0; retry < 3; retry++ {
-		if err := db.DB.Model(&run).Updates(map[string]interface{}{
-			"status":        runStatus,
-			"finished_at":   &finishedAt,
-			"summary":       string(summaryJSON),
-			"error_message": run.ErrorMessage,
-		}).Error; err != nil {
-			log.Printf("[analyzer] DB update error (final status, attempt %d): %v", retry+1, err)
-			time.Sleep(2 * time.Second)
-			continue
-		}
-		break
+		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, found)
 	}
 
-	// Update job last_run (skip for test runs to avoid affecting future normal runs)
-	if !isTestRun {
-		updates := map[string]interface{}{
-			"last_run_status": runStatus,
-			"updated_at":      finishedAt,
-		}
-		// Chỉ dời mốc quét khi chạy trọn vẹn. Lần chạy bị cắt giữa chừng mà vẫn dời mốc
-		// thì phần chưa xử lý bị bỏ qua vĩnh viễn.
+	if incremental {
+		// Checkpoint only after a complete, error-free run, and only together with the
+		// terminal run write (CCMAI-RUNTIME-025).
+		var checkpoint *time.Time
 		if !truncated && errorCount == 0 {
-			updates["last_run_at"] = &finishedAt
+			cp := scanStart.Truncate(time.Second)
+			checkpoint = &cp
 		}
-		db.DB.Model(&job).Updates(updates)
+		if err := finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt, checkpoint); err != nil {
+			log.Printf("[analyzer] job %s: %v", job.Name, err)
+			run.Status = "error"
+			run.FinishedAt = &finishedAt
+			run.Summary = string(summaryJSON)
+			run.ErrorMessage = "Không ghi nhận được kết quả cuối của lượt chạy; mốc quét giữ nguyên."
+			return &run, err
+		}
+	} else {
+		// Critical: final status update — retry on failure to prevent stuck "running" state
+		for retry := 0; retry < 3; retry++ {
+			if err := db.DB.Model(&run).Updates(map[string]interface{}{
+				"status":        runStatus,
+				"finished_at":   &finishedAt,
+				"summary":       string(summaryJSON),
+				"error_message": run.ErrorMessage,
+			}).Error; err != nil {
+				log.Printf("[analyzer] DB update error (final status, attempt %d): %v", retry+1, err)
+				time.Sleep(2 * time.Second)
+				continue
+			}
+			break
+		}
+
+		// Update job last_run (skip for test runs to avoid affecting future normal runs)
+		if !isTestRun {
+			updates := map[string]interface{}{
+				"last_run_status": runStatus,
+				"updated_at":      finishedAt,
+			}
+			// Chỉ dời mốc quét khi chạy trọn vẹn. Lần chạy bị cắt giữa chừng mà vẫn dời mốc
+			// thì phần chưa xử lý bị bỏ qua vĩnh viễn.
+			if !truncated && errorCount == 0 {
+				updates["last_run_at"] = &finishedAt
+			}
+			db.DB.Model(&job).Updates(updates)
+		}
 	}
 
 	run.Status = runStatus
 	run.FinishedAt = &finishedAt
 	run.Summary = string(summaryJSON)
 
-	log.Printf("[analyzer] job %s completed: %d conversations, %d issues", job.Name, len(conversations), issuesFound)
+	log.Printf("[analyzer] job %s completed: %d conversations, %d issues", job.Name, found, issuesFound)
 
 	// Log activity
 	db.LogActivity(job.TenantID, "", "system", "job.run.completed", "job", job.ID,
@@ -405,14 +482,17 @@ complete:
 
 	// Send notifications via configured outputs (telegram, email, etc.)
 	if analyzedCount > 0 && job.OutputSchedule != "none" {
-		dispatcher := notifications.NewDispatcher()
-		if err := dispatcher.SendJobResults(ctx, job, run); err != nil {
+		if err := sendJobNotifications(ctx, job, run); err != nil {
 			log.Printf("[analyzer] notification error for job %s: %v", job.Name, err)
 			db.LogActivity(job.TenantID, "", "system", "notification.error", "job", job.ID, "", err.Error(), "")
 		}
 	}
 
 	return &run, nil
+}
+
+func defaultSendJobNotifications(ctx context.Context, job models.Job, run models.JobRun) error {
+	return notifications.NewDispatcher().SendJobResults(ctx, job, run)
 }
 
 func (a *Analyzer) getProvider(job models.Job) (ai.AIProvider, error) {
@@ -730,7 +810,10 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 }
 
 // runBatchMode processes conversations in batches of batchSize, sending multiple conversations per AI call.
-func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job models.Job, run models.JobRun, conversations []models.Conversation, since time.Time, batchSize int) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
+// For an ordinary incremental run (usePrepared) the snapshots were already prepared and
+// version-checked by prepareOrdinaryIncremental and are sent and saved unchanged; every other mode
+// prepares here exactly as before.
+func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job models.Job, run models.JobRun, conversations []models.Conversation, since time.Time, batchSize int, preparedIn []preparedConversation, usePrepared bool) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
 	// Build system prompt once
 	var systemPrompt string
 	switch job.JobType {
@@ -742,22 +825,21 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 		return
 	}
 
-	type convWithSnapshot struct {
-		Conv models.Conversation
-		Snap *conversationSnapshot
-	}
-	var prepared []convWithSnapshot
-	for _, conv := range conversations {
-		snap, err := loadConversationSnapshot(conv, since)
-		if err != nil {
-			log.Printf("[analyzer-batch] snapshot error for conversation %s: %v", conv.ID, err)
-			errorCount++
-			continue
+	prepared := preparedIn
+	if !usePrepared {
+		prepared = nil
+		for _, conv := range conversations {
+			snap, err := loadConversationSnapshot(conv, since)
+			if err != nil {
+				log.Printf("[analyzer-batch] snapshot error for conversation %s: %v", conv.ID, err)
+				errorCount++
+				continue
+			}
+			if snap.Manifest.Coverage == coverageEmpty {
+				continue
+			}
+			prepared = append(prepared, preparedConversation{Conv: conv, Snap: snap})
 		}
-		if snap.Manifest.Coverage == coverageEmpty {
-			continue
-		}
-		prepared = append(prepared, convWithSnapshot{Conv: conv, Snap: snap})
 	}
 
 	// Process in batches

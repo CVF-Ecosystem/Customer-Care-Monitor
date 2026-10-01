@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-025", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-025", "parked": false} -->
 
 ## Startup Order
 
@@ -60,12 +60,15 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
-is DISPATCH_READY / WORK_ORDER at [SPEC](docs/specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md)
-and [work order](docs/work_orders/CCMAI_RUNTIME_025.md). Dispatcher seed
-`517406f` predates BUILD; Claude implements and Codex independently reviews.
-Ordinary unlimited runs will use full local snapshots and processed-version
-receipts, with a scan-start checkpoint; other modes/F05/F06 remain separate.
-This is planning only: F03 source has not been changed or tested.
+is REVIEW_PENDING after Claude's local BUILD (evidence
+[BUILD record](docs/reviews/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_BUILD_2026-10-01.md);
+[SPEC](docs/specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md),
+[work order](docs/work_orders/CCMAI_RUNTIME_025.md), seed `517406f`). Ordinary
+unlimited runs now select by source version (full local snapshot vs the latest
+job-bound evaluation snapshot, provenance-checked), share one decision between
+single and batch, and record a scan-start checkpoint only with a checked
+transactional terminal write. Codex independent REVIEW is next; other
+modes/F05/F06 remain separate and OPEN.
 
 Previous tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
 REVIEW_PASS / FREEZE_OPEN after Claude BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047`
@@ -471,3 +474,5 @@ CCMAI-RUNTIME-022 / F02-A BUILD (Claude, 2026-10-01): Facebook conversation sync
 CCMAI-RUNTIME-023 / F02-B BUILD (Claude, 2026-10-01): Pancake conversation sync now walks the last_conversation_id chain (cursor = last physical row, including filtered COMMENT rows) with one fixed `until` until an explicit empty `conversations` array; short pages continue, every row is checked (inclusive `since`, no order assumption, dedupe), and missing/null/non-array pages, rows without a valid id/updated_at (even skipped ones), repeated cursors, page/API/429/read/decode/network failures, cancellation, an over-limit window and the 200-page budget all return an error (ErrPancakeCoverageIncomplete or the request error) with token-free text. The engine asks exhaustive mode for pancake (Facebook unchanged, Zalo still 100) and, for pancake only, records the success checkpoint as the second-rounded fetch start while updated_at keeps the completion time; failed/incomplete windows keep the old checkpoint and fire no after-sync. Real adapter + synthetic pages.fm transport + disposable MySQL prove 105 stored conversations/messages, failure/retry/replay and the delayed-run overlap. Evidence `docs/reviews/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; F02 stays OPEN for Zalo; no real channel/provider call or governance claim.
 
 CCMAI-RUNTIME-024 / F02-C BUILD (Claude, 2026-10-01): Zalo listrecentchat is enumerated by absolute row offset (count 10) to an explicit empty array; a short nonempty page continues at offset + physical rows. Every physical row is validated before filtering (JSON object envelope with error 0, explicit direct or nested array, src exactly 0/1, nonempty string customer id, positive integral millisecond time up to year 9999, decoded with UseNumber so large values stay exact); customers are deduped to the newest time (first seen on a tie). Repeated pages (same customer@time rows), the 500-page budget, cancellation before or after a response, any request/page error and a positive limit the window exceeds return ErrZaloCoverageIncomplete. Bodies are bounded to 8 MiB; non-2xx and malformed envelopes fail; errors and logs carry no URL, body, provider message, token or AppSecret, while callback/context causes stay reachable with errors.Is. Refresh still runs at most once with the same protocol, now requires a nonempty token pair before the callback, and keeps persistence-before-replacement. The engine asks exhaustive mode for zalo_oa and bounds its success checkpoint by the fetch start; FetchMessages mapping is unchanged and Zalo stays outside lease recovery. Evidence `docs/reviews/RUNTIME_ZALO_SYNC_COVERAGE_F02C_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; live offset stability and message coverage remain unproved, F02 stays OPEN; no real channel/provider call or governance claim.
+
+CCMAI-RUNTIME-025 / F03 BUILD (Claude, 2026-10-01): `isOrdinaryIncremental` names the covered mode (no full rerun, limit, dates, since-override or unanalyzed filter). In it every tenant/input-channel conversation is a candidate (ordered by last_message_at, id); each candidate's full local snapshot is compared with the snapshot linked to the latest committed conversation_evaluation of the same job and tenant (created_at DESC, id DESC) after VerifySnapshotProvenance: equal digest skips, no evaluation/legacy evaluation/different digest analyzes, a missing/misbound/tampered linked snapshot or query error is an error. The prepared snapshot is the one sent and saved, in single and batch alike. The checkpoint is the second-truncated scan start, written with the terminal run status in one tenant-scoped, row-locked transaction with three attempts; a failed or missing write marks the run error without a checkpoint, returns an error and sends no notification. Other modes keep their previous selection/finalization. Private test seams: analyzer clock, finalize retry delay, notification sender, Analyzer.providerOverride, scheduler analyzer constructor and after-sync completion hook. Evidence `docs/reviews/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; no real provider/channel call or governance claim.

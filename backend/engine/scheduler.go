@@ -24,6 +24,14 @@ type Scheduler struct {
 // defaultScheduler is the global scheduler instance, accessible from handlers.
 var defaultScheduler *Scheduler
 
+// Private test seams (CCMAI-RUNTIME-025): the analyzer the cron and after-sync paths construct,
+// and a hook called when an after-sync job goroutine finishes. Production values build the real
+// Analyzer and do nothing.
+var (
+	newScheduledAnalyzer = NewAnalyzer
+	afterSyncJobFinished = func(jobID string) {}
+)
+
 // SetDefaultScheduler sets the global scheduler (called once from main).
 func SetDefaultScheduler(s *Scheduler) {
 	defaultScheduler = s
@@ -279,7 +287,7 @@ func (s *Scheduler) runScheduledJob(jobID, jobName string) {
 		return
 	}
 	log.Printf("[scheduler] running analysis job %s (%s)", j.Name, j.ID)
-	analyzer := NewAnalyzer(s.cfg)
+	analyzer := newScheduledAnalyzer(s.cfg)
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
 	defer cancel()
 	if _, err := analyzer.RunJob(ctx, j); err != nil {
@@ -333,12 +341,13 @@ func (s *Scheduler) TriggerAfterSyncJobs(tenantID, channelID string) {
 		j := job // capture
 		log.Printf("[scheduler] after-sync trigger: job=%s tenant=%s channel=%s", j.Name, tenantID, channelID)
 		go func() {
+			defer afterSyncJobFinished(j.ID)
 			defer func() {
 				if r := recover(); r != nil {
 					log.Printf("[security] panic in after-sync job %s: %v", j.Name, r)
 				}
 			}()
-			analyzer := NewAnalyzer(s.cfg)
+			analyzer := newScheduledAnalyzer(s.cfg)
 			ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
 			defer cancel()
 			if _, err := analyzer.RunJob(ctx, j); err != nil {

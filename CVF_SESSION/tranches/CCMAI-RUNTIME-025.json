@@ -37,14 +37,16 @@
     "f06_cancellation_registry_change"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_025.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "517406f1bfafbfe48b2cef31b558a76b8e67d8c0",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
   ]
 }

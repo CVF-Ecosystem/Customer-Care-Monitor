@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-025 — F03 analyzer incremental coverage
 
-Status: DISPATCH_READY. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base `517406f1bfafbfe48b2cef31b558a76b8e67d8c0`.
+Status: REVIEW_PENDING. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base `517406f1bfafbfe48b2cef31b558a76b8e67d8c0`.
 Authority: [SPEC](../specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-025.json`. R024 REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN for live/message claims. F03 is not repaired by planning.
 
 ## Assignment and entry gate
