@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-024",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_024.md",
+  "sourcePlanningCommit": "d3b2e4fb09c86850de5fe6e15cd0862856378ca1",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/channels/zalo_oa.go",
+    "backend/channels/zalo*_test.go",
+    "backend/engine/sync.go",
+    "backend/engine/sync*_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_024.md",
+    "docs/specs/RUNTIME_ZALO_SYNC_COVERAGE_F02C_2026-10-01.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push", "merge", "deployment", "provider_call", "channel_call", "freeze",
+    "persistent_db", "secret_commit", "parent_cvf_edit", "non_zalo_adapter_change",
+    "adapter_interface_change", "checkpoint_schema_change", "oauth_protocol_change",
+    "lease_recovery_scope_change"
+  ]
+}
