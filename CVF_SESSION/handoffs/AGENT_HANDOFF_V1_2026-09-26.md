@@ -5,13 +5,16 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER (CCMAI-RUNTIME-021 F01-B DISPATCH_READY; GOV-001 and F08 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
-- Active role: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex)
-- Next allowed move: CCMAI-RUNTIME-021 F01-B is DISPATCH_READY under the dispatcher seed and bounded SPEC/work order. Claude rehydrates continuity, acknowledges IMPLEMENTATION_WORKER in the active handoff, then makes one local BUILD commit and returns REVIEW_PENDING to independent Codex REVIEW. R020 F01-A remains REVIEW_PASS / FREEZE_OPEN; PR #1 stays draft at proven remote head 3e0b37e. No push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW (CCMAI-RUNTIME-021 F01-B REVIEW_PENDING; GOV-001 and F08 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
+- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
+- Next allowed move: CCMAI-RUNTIME-021 F01-B BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (per-tool matrix, denied-before-handler ordering, checked membership lookup, discovery projection, mounted /mcp OAuth path, tests and mutations, R019 gate). Claude does not self-approve. F01 stays OPEN until independent R021 review; PR #1 stays draft at 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-RUNTIME-021 — F01-B MCP tool permissions (2026-10-01)
+
+- BUILD result (Claude, 2026-10-01): one local commit, `REVIEW_PENDING` to independent Codex REVIEW. Per-tool rights table for all twelve MCP tools enforced after a checked membership lookup and before any handler; unknown tool and missing tenant stop with zero DB access; `cqa_list_tenants`/`cqa_get_tenant` project to id/name/slug. Eleven new test functions with a GORM query observer and positive controls, mounted `/mcp` bearer-token cases, five mutations detected; full backend 495 pass / 0 fail / 2 optional skips on disposable MySQL and the R019 gate passed (wrapper's two non-JSON lines stripped before replay, documented). `cqa_trigger_job` still dispatches nothing. Reviewer attention: unrecognized-role memberships are also omitted from `cqa_list_tenants` (documented choice) and no mutation covers the projections. Evidence: `docs/reviews/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_BUILD_2026-10-01.md`. No self-approval, push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
+- Role acknowledgment before BUILD (Claude, 2026-10-01): rehydrated at `4850bb2` (manifest/policy, active state, handoff, session memory, tranche record and dispatcher seed, SPEC, work order, MCP source); compact bootstrap absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking); state, handoff, front marker and tranche record agree on R021 DISPATCH_READY; workspace doctor 25/25. Role transition `WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER and COMMIT_STEWARD (Claude)` for tranche `CCMAI-RUNTIME-021`, R2, one local BUILD commit returned `REVIEW_PENDING`. No self-approval, push, merge, deployment, provider/channel call, parent-CVF work or FREEZE; the authority seed is not edited.
 
 - Tranche transition and role acknowledgment (Codex): the R020 parked dependency condition is satisfied by draft PR #1's reviewed green run at `3e0b37e`; R020 remains REVIEW_PASS / FREEZE_OPEN. After fresh canonical rehydration, doctor 25/25 and targeted MCP source audit, Codex moved `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR` for the [F01-B SPEC](../../docs/specs/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_2026-10-01.md) and [R021 work order](../../docs/work_orders/CCMAI_RUNTIME_021.md). Dispatcher-owned authority seed `8fa6ccb` predates BUILD. Claude next IMPLEMENTATION_WORKER/COMMIT_STEWARD after its own rehydration and acknowledgment here; Codex independently reviews. This is DISPATCH_READY only: no product source edit, test run, provider/channel call, push, deployment or FREEZE by Codex in planning.
 

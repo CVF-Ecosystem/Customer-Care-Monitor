@@ -2,10 +2,12 @@ package mcp
 
 import (
 	"encoding/json"
+	"log"
 	"strconv"
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 )
@@ -42,13 +44,19 @@ func handleToolsCall(c *gin.Context, params json.RawMessage) (interface{}, *RPCE
 		return errResult("authentication required")
 	}
 
-	// Verify tenant access for all tools that need tenant_id
-	if call.Name != "cqa_list_tenants" {
+	// CCMAI-RUNTIME-021: every supported tool is bound to the requested tenant's stored
+	// membership and exact rights before any handler runs. Unknown tools never fall back to
+	// membership-only admission.
+	policy, known := toolPolicies[call.Name]
+	if !known {
+		return nil, &RPCError{Code: -32602, Message: "Unknown tool: " + call.Name}
+	}
+	if policy.tenantScoped {
 		if tenantID == "" {
 			return errResult("tenant_id is required")
 		}
-		if !mcpVerifyTenantAccess(userID, tenantID) {
-			return errResult("access denied: you don't have access to this tenant")
+		if denial := authorizeToolCall(userID, tenantID, call.Name, policy); denial != "" {
+			return errResult(denial)
 		}
 	}
 
@@ -83,8 +91,68 @@ func handleToolsCall(c *gin.Context, params json.RawMessage) (interface{}, *RPCE
 		jobID, _ := args["job_id"].(string)
 		return toolTriggerJob(tenantID, jobID)
 	default:
+		// Unreachable for a tool in toolPolicies; kept so a policy without a handler fails closed.
 		return nil, &RPCError{Code: -32602, Message: "Unknown tool: " + call.Name}
 	}
+}
+
+// toolRight is one tenant permission letter a tool needs (same vocabulary as the HTTP routes).
+type toolRight struct{ resource, action string }
+
+// toolPolicy binds a tool to its tenant-scoping and required rights. Rights are conjunctive:
+// every listed right is needed. Owner/admin bypass only the letters, never membership.
+type toolPolicy struct {
+	tenantScoped bool
+	rights       []toolRight
+}
+
+var toolPolicies = map[string]toolPolicy{
+	// cqa_list_tenants is scoped by the authenticated user's own memberships inside the handler.
+	"cqa_list_tenants":          {tenantScoped: false},
+	"cqa_get_tenant":            {tenantScoped: true},
+	"cqa_list_channels":         {tenantScoped: true, rights: []toolRight{{"channels", "r"}}},
+	"cqa_list_conversations":    {tenantScoped: true, rights: []toolRight{{"messages", "r"}}},
+	"cqa_get_messages":          {tenantScoped: true, rights: []toolRight{{"messages", "r"}}},
+	"cqa_search_messages":       {tenantScoped: true, rights: []toolRight{{"messages", "r"}}},
+	"cqa_list_jobs":             {tenantScoped: true, rights: []toolRight{{"jobs", "r"}}},
+	"cqa_get_job_results":       {tenantScoped: true, rights: []toolRight{{"jobs", "r"}}},
+	"cqa_search_violations":     {tenantScoped: true, rights: []toolRight{{"jobs", "r"}}},
+	"cqa_get_stats":             {tenantScoped: true, rights: []toolRight{{"messages", "r"}, {"jobs", "r"}}},
+	"cqa_get_notification_logs": {tenantScoped: true, rights: []toolRight{{"settings", "r"}}},
+	"cqa_trigger_job":           {tenantScoped: true, rights: []toolRight{{"jobs", "w"}, {"messages", "r"}}},
+}
+
+// recognizedRole is compared in Go (case-sensitive), not in SQL, whose collation would fold
+// "OWNER" into "owner".
+func recognizedRole(role string) bool {
+	return role == "owner" || role == "admin" || role == "member"
+}
+
+// authorizeToolCall returns "" when the authenticated user's stored membership for the
+// requested tenant admits the tool, otherwise a generic denial message. The decision uses only
+// database state; tool arguments never carry rights. A lookup error, an unrecognized role or
+// bad permission data denies. Logs never include permission JSON, tokens or SQL errors.
+func authorizeToolCall(userID, tenantID, tool string, policy toolPolicy) string {
+	var members []models.UserTenant
+	if err := db.DB.Where("user_id = ? AND tenant_id = ?", userID, tenantID).Limit(1).Find(&members).Error; err != nil {
+		log.Printf("[security] MCP authorization unavailable: user=%s tenant=%s tool=%s reason=membership_lookup_failed", userID, tenantID, tool)
+		return "authorization unavailable"
+	}
+	if len(members) == 0 {
+		return "access denied: you don't have access to this tenant"
+	}
+	member := members[0]
+	if !recognizedRole(member.Role) {
+		log.Printf("[security] MCP permission denied: user=%s tenant=%s tool=%s reason=unrecognized_role", userID, tenantID, tool)
+		return "permission denied"
+	}
+	for _, need := range policy.rights {
+		if reason := middleware.PermissionDenial(member.Role, member.Permissions, need.resource, need.action); reason != "" {
+			log.Printf("[security] MCP permission denied: user=%s tenant=%s tool=%s reason=%s", userID, tenantID, tool, reason)
+			return "permission denied"
+		}
+	}
+	return ""
 }
 
 func jsonResult(data interface{}) (interface{}, *RPCError) {
@@ -94,12 +162,6 @@ func jsonResult(data interface{}) (interface{}, *RPCError) {
 
 func errResult(msg string) (interface{}, *RPCError) {
 	return ToolResult{Content: []ToolContent{{Type: "text", Text: msg}}, IsError: true}, nil
-}
-
-func mcpVerifyTenantAccess(userID, tenantID string) bool {
-	var count int64
-	db.DB.Model(&models.UserTenant{}).Where("user_id = ? AND tenant_id = ?", userID, tenantID).Count(&count)
-	return count > 0
 }
 
 func getLimit(args map[string]interface{}, defaultVal int) int {
@@ -114,33 +176,39 @@ func getLimit(args map[string]interface{}, defaultVal int) int {
 	return defaultVal
 }
 
-func toolListTenants(userID string) (interface{}, *RPCError) {
-	// Only return tenants the authenticated user has access to
-	var tenants []models.Tenant
-	db.DB.Where("id IN (SELECT tenant_id FROM user_tenants WHERE user_id = ?)", userID).Find(&tenants)
+// tenantSummary is the only tenant data the discovery tools expose: no settings, counts or
+// associations (CCMAI-RUNTIME-021).
+type tenantSummary struct {
+	ID   string `json:"id"`
+	Name string `json:"name"`
+	Slug string `json:"slug"`
+}
 
-	type result struct {
-		ID             string `json:"id"`
-		Name           string `json:"name"`
-		Slug           string `json:"slug"`
-		ChannelsCount  int64  `json:"channels_count"`
-		JobsCount      int64  `json:"jobs_count"`
-		ConvsCount     int64  `json:"conversations_count"`
+func toolListTenants(userID string) (interface{}, *RPCError) {
+	// Only return tenants the authenticated user has a recognized membership in.
+	var memberships []models.UserTenant
+	if err := db.DB.Where("user_id = ?", userID).Find(&memberships).Error; err != nil {
+		return errResult("Unable to list tenants")
 	}
-	var results []result
-	for _, t := range tenants {
-		var cc, jc, vc int64
-		db.DB.Model(&models.Channel{}).Where("tenant_id = ?", t.ID).Count(&cc)
-		db.DB.Model(&models.Job{}).Where("tenant_id = ?", t.ID).Count(&jc)
-		db.DB.Model(&models.Conversation{}).Where("tenant_id = ?", t.ID).Count(&vc)
-		results = append(results, result{t.ID, t.Name, t.Slug, cc, jc, vc})
+	ids := []string{}
+	for _, m := range memberships {
+		if recognizedRole(m.Role) {
+			ids = append(ids, m.TenantID)
+		}
 	}
-	return jsonResult(results)
+	tenants := []tenantSummary{}
+	if len(ids) > 0 {
+		if err := db.DB.Model(&models.Tenant{}).Select("id", "name", "slug").
+			Where("id IN ?", ids).Find(&tenants).Error; err != nil {
+			return errResult("Unable to list tenants")
+		}
+	}
+	return jsonResult(tenants)
 }
 
 func toolGetTenant(tenantID string) (interface{}, *RPCError) {
-	var tenant models.Tenant
-	if err := db.DB.First(&tenant, "id = ?", tenantID).Error; err != nil {
+	var tenant tenantSummary
+	if err := db.DB.Model(&models.Tenant{}).Select("id", "name", "slug").First(&tenant, "id = ?", tenantID).Error; err != nil {
 		return errResult("Tenant not found")
 	}
 	return jsonResult(tenant)

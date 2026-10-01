@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-021", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-021", "parked": false} -->
 
 ## Startup Order
 
@@ -428,3 +428,5 @@ CCMAI-RUNTIME-020 / F01-A BUILD (Claude, 2026-09-30): HTTP agent run/query permi
 CCMAI-GOV-001 BUILD (Claude, 2026-10-01): downstream machine gates implemented (`scripts/cvf_downstream_gate.py`, front marker, tranche record contract, governance and frontend PR workflows, AGENTS.md section, catalog registrations). Gate fails on the pre-migration tree and passes 7/7 now; 28 new tests and ten detected mutations; frontend, docs build, catalog, doctor 25/25 pass. Evidence `docs/reviews/CVF_DOWNSTREAM_MACHINE_GATES_GOV001_BUILD_2026-10-01.md`. REVIEW_PENDING for Codex; GitHub-hosted runs unverified; R020 parked; no push, merge or FREEZE.
 
 CCMAI-GOV-001 GOV1-R1 repair (Claude, 2026-10-01): downstream gate hardened (NUL-safe fail-closed Git handling, next-move and work-order status binding, authority-seed verification, SKIP reporting); 57 tests, 12 detected mutations, local preflight and PR-range dry run pass. Evidence `docs/reviews/CVF_DOWNSTREAM_MACHINE_GATES_GOV001_R1_BUILD_2026-10-01.md`. REVIEW_PENDING for Codex re-review; PR and F08 Actions evidence wait for REVIEW_PASS; R020 parked; no push, merge or FREEZE.
+
+CCMAI-RUNTIME-021 / F01-B BUILD (Claude, 2026-10-01): every MCP tool is bound to the requested tenant's stored membership and exact rights before any handler runs (explicit 12-tool table, checked membership lookup, unknown tool = RPC error with no DB access, generic denial, no SQL/permission data in logs); cqa_list_tenants and cqa_get_tenant now return only id/name/slug. 11 new test functions with a query observer, five mutations detected, full backend 495 pass on disposable MySQL with the R019 gate passing. cqa_trigger_job still dispatches nothing. Evidence `docs/reviews/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; F01 stays OPEN; no provider/channel call or governance claim.

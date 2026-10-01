@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-021",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_021.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "riskCeiling": "R2",
   "roles": {
     "workOrderAuthor": "Codex",
@@ -36,5 +36,9 @@
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
-  "history": ["DISPATCH_READY"]
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
+  ]
 }
