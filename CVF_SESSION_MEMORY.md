@@ -60,11 +60,12 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-021` / F01-B MCP permission admission is
-REVIEW_PENDING after Claude BUILD `b46d587ac350f2dfef76a6dac7e352604be0a037` at
+REVIEW_PASS / FREEZE_OPEN after independent Codex review of Claude BUILD
+`b46d587ac350f2dfef76a6dac7e352604be0a037` at
 [SPEC](docs/specs/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_2026-10-01.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_021.md). Dispatcher authority
-was seeded in `8fa6ccb` before BUILD; Codex independently reviews the exact
-commit. `CCMAI-GOV-001` / downstream machine gates remains
+was seeded in `8fa6ccb` before BUILD; the [review](docs/reviews/CCMAI_RUNTIME_021_F01B_INDEPENDENT_REVIEW_2026-10-01.md)
+records the exact diff and independent MCP tests. `CCMAI-GOV-001` / downstream machine gates remains
 REVIEW_PASS / FREEZE_OPEN for GOV1-CI1 local repair `ae44c2e` after
 [Codex review](docs/reviews/CCMAI_GOV_001_CI1_INDEPENDENT_REVIEW_2026-10-01.md).
 The first [hosted review](docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md)
@@ -73,17 +74,19 @@ The [reviewed rerun](docs/reviews/CCMAI_PR_001_GREEN_CI_EVIDENCE_2026-10-01.md)
 at remote head `3e0b37e` passed Governance Ubuntu/Windows, Backend F08 with
 five DB sentinels, Frontend and Docs. GOV-001 and F08 are REVIEW_PASS /
 FREEZE_OPEN; PR stays draft, unmerged. The R020 F01-A dependency checkpoint
-was satisfied by the reviewed PR run; F01-B is built but not yet reviewed.
+was satisfied by the reviewed PR run; F01-B now passed REVIEW. F01 source
+remediation across HTTP/MCP is reviewed, while FREEZE/deployment remain open.
 The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
 [SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
 [work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
-R020 F01-A HTTP agent admission is REVIEW_PASS / FREEZE_OPEN / PARKED after
-independent Codex REVIEW of Claude BUILD `73cedc2`.
+R020 F01-A HTTP agent admission is REVIEW_PASS / FREEZE_OPEN after
+independent Codex REVIEW of Claude BUILD `73cedc2`; its former parked
+dependency condition has been satisfied.
 [Review](docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md),
 [SPEC](docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_020.md) bind supported
-run/query pairs to tenant permissions. MCP tools remain a separate F01-B
-authorization surface, so F01 remains OPEN. Previous tranche:
+run/query pairs to tenant permissions. MCP tools were the separate F01-B
+authorization surface and R021 has passed independent REVIEW. Previous tranche:
 `CCMAI-RUNTIME-019` / F08 R019-R1 repair is at REVIEW_PASS / FREEZE_OPEN, with
 `docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md` and
 `docs/work_orders/CCMAI_RUNTIME_019.md`. Claude's local BUILD commit is
