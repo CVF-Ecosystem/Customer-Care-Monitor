@@ -5,11 +5,15 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-021 F01-B REVIEW_PASS / FREEZE_OPEN; GOV-001 and F08 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
-- Active role: REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)
-- Next allowed move: CCMAI-RUNTIME-021 F01-B has REVIEW_PASS / FREEZE_OPEN after independent Codex review of BUILD b46d587. Codex synchronizes review evidence and continues bounded roadmap planning at F02; R020 F01-A also has REVIEW_PASS / FREEZE_OPEN. F01 source remediation is reviewed, but deployment and FREEZE remain open. PR #1 stays draft at remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-022 F02-A DISPATCH_READY; R021 F01-B, GOV-001 and F08 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
+- Active role: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-022 F02-A Facebook coverage is DISPATCH_READY under the dispatcher seed and bounded SPEC/work order. Claude rehydrates continuity, acknowledges IMPLEMENTATION_WORKER in the active handoff, then makes one local BUILD commit and returns REVIEW_PENDING to independent Codex REVIEW. F02 remains OPEN for Pancake/Zalo coverage; R021 F01-B stays REVIEW_PASS / FREEZE_OPEN. PR #1 stays draft at remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-022 — F02-A Facebook sync coverage (2026-10-01)
+
+- Tranche transition and role acknowledgment (Codex): after R021 independent REVIEW_PASS at `b9a4600`, current continuity was rehydrated and doctor passed 25/25. Source audit found the shared engine limit 100 and Facebook early exit with `paging.next`; Pancake/Zalo also use this limit, so F02 is split and remains open beyond R022. Codex transitioned `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR` for the [F02-A SPEC](../../docs/specs/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_2026-10-01.md) and [R022 work order](../../docs/work_orders/CCMAI_RUNTIME_022.md). Dispatcher-owned authority seed `3f101ca` predates BUILD. Claude next IMPLEMENTATION_WORKER/COMMIT_STEWARD after its own rehydration and handoff acknowledgment; Codex independently reviews. This is planning only; no product edit/test, live Facebook call, persistent DB, push, deployment or FREEZE.
 
 ## CCMAI-RUNTIME-021 — F01-B MCP tool permissions (2026-10-01)
 
