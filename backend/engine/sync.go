@@ -204,6 +204,21 @@ func checkSyncOwnership(reservation SyncReservation) error {
 	return withOwnedSyncWrite(reservation, func(*gorm.DB) error { return nil })
 }
 
+// defaultConversationFetchLimit is the per-run conversation cap passed to adapters that have
+// not been moved to exhaustive enumeration.
+const defaultConversationFetchLimit = 100
+
+// conversationFetchLimit returns the limit handed to FetchRecentConversations. Facebook asks
+// for exhaustive coverage of the window (0) and reports incomplete coverage as an error, so a
+// run can never succeed, and advance its checkpoint, over a truncated window (CCMAI-RUNTIME-022).
+// Pancake and Zalo keep the shared cap until their own coverage tranche.
+func conversationFetchLimit(channelType string) int {
+	if channelType == "facebook" {
+		return 0
+	}
+	return defaultConversationFetchLimit
+}
+
 // Test seams (CCMAI-RUNTIME-013): the adapter factory and the after-sync
 // trigger are variables so tests can observe dispatch without a real channel.
 var (
@@ -387,7 +402,7 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	if err := gate(); err != nil {
 		return err
 	}
-	conversations, err := adapter.FetchRecentConversations(ctx, since, 100)
+	conversations, err := adapter.FetchRecentConversations(ctx, since, conversationFetchLimit(channel.ChannelType))
 	if err != nil {
 		if hbErr := stopErr(); hbErr != nil {
 			return hbErr

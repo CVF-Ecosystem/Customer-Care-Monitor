@@ -3,13 +3,27 @@ package channels
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"time"
 )
 
-const fbGraphBase = "https://graph.facebook.com/v21.0"
+const (
+	fbGraphBase = "https://graph.facebook.com/v21.0"
+	fbGraphHost = "graph.facebook.com"
+	fbGraphPath = "/v21.0"
+
+	// fbMaxConversationPages bounds one exhaustive enumeration. Reaching it before a terminal
+	// page is incomplete coverage, never a truncated success (CCMAI-RUNTIME-022).
+	fbMaxConversationPages = 500
+)
+
+// ErrFacebookCoverageIncomplete marks a conversation enumeration that did not observe a
+// terminal page or could not trust a page. Rows returned with it are diagnostic only.
+var ErrFacebookCoverageIncomplete = errors.New("facebook conversation coverage incomplete")
 
 // FacebookCredentials holds credentials for Facebook Graph API.
 type FacebookCredentials struct {
@@ -29,10 +43,10 @@ func NewFacebookAdapter(creds FacebookCredentials) *FacebookAdapter {
 	}
 }
 
-func (f *FacebookAdapter) doRequest(ctx context.Context, url string) (map[string]interface{}, error) {
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+func (f *FacebookAdapter) doRequest(ctx context.Context, rawURL string) (map[string]interface{}, error) {
+	req, err := http.NewRequestWithContext(ctx, "GET", rawURL, nil)
 	if err != nil {
-		return nil, fmt.Errorf("create facebook api request: %w", err)
+		return nil, fmt.Errorf("create facebook api request: %w", withoutRequestURL(err))
 	}
 
 	// Add access_token if not already in URL
@@ -44,7 +58,7 @@ func (f *FacebookAdapter) doRequest(ctx context.Context, url string) (map[string
 
 	resp, err := f.client.Do(req)
 	if err != nil {
-		return nil, fmt.Errorf("facebook api request failed: %w", err)
+		return nil, fmt.Errorf("facebook api request failed: %w", withoutRequestURL(err))
 	}
 	defer resp.Body.Close()
 
@@ -67,14 +81,59 @@ func (f *FacebookAdapter) doRequest(ctx context.Context, url string) (map[string
 	return result, nil
 }
 
+// withoutRequestURL drops the request URL that net/http embeds in its errors: a Graph URL
+// carries the page access token as a query parameter.
+func withoutRequestURL(err error) error {
+	for {
+		var urlErr *url.Error
+		if !errors.As(err, &urlErr) || urlErr.Err == nil {
+			return err
+		}
+		err = urlErr.Err
+	}
+}
+
+// validNextURL accepts a pagination URL only if it stays on the Graph API conversations
+// endpoint of this page over HTTPS. key is the query without the access token, used to detect
+// a repeated cursor without ever keeping the token.
+func (f *FacebookAdapter) validNextURL(raw string) (key string, ok bool) {
+	u, err := url.Parse(raw)
+	if err != nil || u.Scheme != "https" || u.User != nil || u.Fragment != "" {
+		return "", false
+	}
+	if u.Hostname() != fbGraphHost || (u.Port() != "" && u.Port() != "443") {
+		return "", false
+	}
+	if u.Path != fbGraphPath+"/"+f.creds.PageID+"/conversations" {
+		return "", false
+	}
+	q := u.Query()
+	q.Del("access_token")
+	return q.Encode(), true
+}
+
+// FetchRecentConversations enumerates every conversation updated at or after `since` by
+// following all pages to a terminal one. A limit <= 0 means exhaustive; a positive limit
+// that the window would exceed is an error, never a silent truncation. A page that cannot be
+// trusted, a repeated cursor, a cancelled context or the page budget returns
+// ErrFacebookCoverageIncomplete (or the request error) together with the rows seen so far,
+// which are diagnostic only.
 func (f *FacebookAdapter) FetchRecentConversations(ctx context.Context, since time.Time, limit int) ([]SyncedConversation, error) {
 	var conversations []SyncedConversation
+	seenIDs := map[string]bool{}
+	seenPages := map[string]bool{}
 	nextURL := fmt.Sprintf("%s/%s/conversations?fields=id,link,updated_time,participants&limit=100",
 		fbGraphBase, f.creds.PageID)
+	if key, ok := f.validNextURL(nextURL); ok {
+		seenPages[key] = true
+	}
 
-	for nextURL != "" {
-		if limit > 0 && len(conversations) >= limit {
-			break
+	for pages := 0; ; pages++ {
+		if pages >= fbMaxConversationPages {
+			return conversations, fmt.Errorf("%w: page budget of %d reached before the last page", ErrFacebookCoverageIncomplete, fbMaxConversationPages)
+		}
+		if err := ctx.Err(); err != nil {
+			return conversations, fmt.Errorf("%w: %v", ErrFacebookCoverageIncomplete, err)
 		}
 
 		result, err := f.doRequest(ctx, nextURL)
@@ -83,26 +142,30 @@ func (f *FacebookAdapter) FetchRecentConversations(ctx context.Context, since ti
 		}
 
 		data, ok := result["data"].([]interface{})
-		if !ok || len(data) == 0 {
-			break
+		if !ok {
+			return conversations, fmt.Errorf("%w: page %d has no data array", ErrFacebookCoverageIncomplete, pages+1)
 		}
 
 		for _, item := range data {
 			conv, ok := item.(map[string]interface{})
 			if !ok {
+				return conversations, fmt.Errorf("%w: page %d has a malformed conversation", ErrFacebookCoverageIncomplete, pages+1)
+			}
+			convID, _ := conv["id"].(string)
+			updStr, _ := conv["updated_time"].(string)
+			updatedAt, err := time.Parse("2006-01-02T15:04:05-0700", updStr)
+			if convID == "" || err != nil {
+				return conversations, fmt.Errorf("%w: page %d has a conversation without a valid id or updated_time", ErrFacebookCoverageIncomplete, pages+1)
+			}
+
+			// Every row is examined: the ordering of pages is not relied on.
+			if !since.IsZero() && updatedAt.Before(since) {
 				continue
 			}
-
-			convID, _ := conv["id"].(string)
-
-			var updatedAt time.Time
-			if updStr, ok := conv["updated_time"].(string); ok {
-				updatedAt, _ = time.Parse("2006-01-02T15:04:05-0700", updStr)
+			if seenIDs[convID] {
+				continue
 			}
-
-			if !since.IsZero() && updatedAt.Before(since) {
-				return conversations, nil // FB returns sorted by updated_time desc
-			}
+			seenIDs[convID] = true
 
 			// Extract participant name (the non-page user)
 			customerName := ""
@@ -126,18 +189,36 @@ func (f *FacebookAdapter) FetchRecentConversations(ctx context.Context, since ti
 				LastMessageAt:  updatedAt,
 				Metadata:       conv,
 			})
-		}
-
-		// Cursor-based pagination
-		nextURL = ""
-		if paging, ok := result["paging"].(map[string]interface{}); ok {
-			if next, ok := paging["next"].(string); ok {
-				nextURL = next
+			if limit > 0 && len(conversations) > limit {
+				return conversations[:limit], fmt.Errorf("%w: more than %d eligible conversations in the window", ErrFacebookCoverageIncomplete, limit)
 			}
 		}
-	}
 
-	return conversations, nil
+		// Cursor-based pagination: an absent next link is the terminal page (an empty page with
+		// a next link is not); anything else must be a safe, new Graph URL.
+		nextRaw := ""
+		if paging, ok := result["paging"].(map[string]interface{}); ok {
+			if v, present := paging["next"]; present && v != nil {
+				str, isString := v.(string)
+				if !isString {
+					return conversations, fmt.Errorf("%w: page %d has a malformed next link", ErrFacebookCoverageIncomplete, pages+1)
+				}
+				nextRaw = str
+			}
+		}
+		if nextRaw == "" {
+			return conversations, nil
+		}
+		key, ok := f.validNextURL(nextRaw)
+		if !ok {
+			return conversations, fmt.Errorf("%w: page %d has an unsafe next link", ErrFacebookCoverageIncomplete, pages+1)
+		}
+		if seenPages[key] {
+			return conversations, fmt.Errorf("%w: page %d repeats an earlier cursor", ErrFacebookCoverageIncomplete, pages+1)
+		}
+		seenPages[key] = true
+		nextURL = nextRaw
+	}
 }
 
 func (f *FacebookAdapter) FetchMessages(ctx context.Context, conversationID string, since time.Time) ([]SyncedMessage, error) {
@@ -257,7 +338,7 @@ func (f *FacebookAdapter) FetchMessages(ctx context.Context, conversationID stri
 }
 
 func (f *FacebookAdapter) HealthCheck(ctx context.Context) error {
-	url := fmt.Sprintf("%s/%s?fields=id,name", fbGraphBase, f.creds.PageID)
-	_, err := f.doRequest(ctx, url)
+	healthURL := fmt.Sprintf("%s/%s?fields=id,name", fbGraphBase, f.creds.PageID)
+	_, err := f.doRequest(ctx, healthURL)
 	return err
 }
