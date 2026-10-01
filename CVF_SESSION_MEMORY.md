@@ -60,10 +60,11 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-021` / F01-B MCP permission admission is
-DISPATCH_READY at [SPEC](docs/specs/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_2026-10-01.md)
+REVIEW_PENDING after Claude BUILD `b46d587ac350f2dfef76a6dac7e352604be0a037` at
+[SPEC](docs/specs/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_2026-10-01.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_021.md). Dispatcher authority
-was seeded in `8fa6ccb` before BUILD; Claude is the worker and Codex independently
-reviews. `CCMAI-GOV-001` / downstream machine gates remains
+was seeded in `8fa6ccb` before BUILD; Codex independently reviews the exact
+commit. `CCMAI-GOV-001` / downstream machine gates remains
 REVIEW_PASS / FREEZE_OPEN for GOV1-CI1 local repair `ae44c2e` after
 [Codex review](docs/reviews/CCMAI_GOV_001_CI1_INDEPENDENT_REVIEW_2026-10-01.md).
 The first [hosted review](docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md)
@@ -72,7 +73,7 @@ The [reviewed rerun](docs/reviews/CCMAI_PR_001_GREEN_CI_EVIDENCE_2026-10-01.md)
 at remote head `3e0b37e` passed Governance Ubuntu/Windows, Backend F08 with
 five DB sentinels, Frontend and Docs. GOV-001 and F08 are REVIEW_PASS /
 FREEZE_OPEN; PR stays draft, unmerged. The R020 F01-A dependency checkpoint
-was satisfied by the reviewed PR run; F01-B is now dispatched, not built.
+was satisfied by the reviewed PR run; F01-B is built but not yet reviewed.
 The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
 [SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
 [work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
