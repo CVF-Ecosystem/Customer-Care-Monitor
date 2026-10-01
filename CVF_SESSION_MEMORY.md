@@ -60,10 +60,13 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
-REVIEW_PENDING after Claude BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047` at [SPEC](docs/specs/RUNTIME_ZALO_SYNC_COVERAGE_F02C_2026-10-01.md)
+REVIEW_PASS / FREEZE_OPEN after Claude BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047`
+and Codex independent review with a bounded envelope-type repair at [SPEC](docs/specs/RUNTIME_ZALO_SYNC_COVERAGE_F02C_2026-10-01.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_024.md). Dispatcher seed
-`b145d71` predates BUILD; Claude implemented and Codex independently reviews.
-BUILD evidence is [recorded here](docs/reviews/RUNTIME_ZALO_SYNC_COVERAGE_F02C_BUILD_2026-10-01.md). Offset stability on real Zalo
+`b145d71` predates BUILD; Claude implemented and Codex independently reviewed.
+BUILD evidence is [recorded here](docs/reviews/RUNTIME_ZALO_SYNC_COVERAGE_F02C_BUILD_2026-10-01.md);
+[independent review](docs/reviews/CCMAI_RUNTIME_024_F02C_INDEPENDENT_REVIEW_2026-10-01.md)
+records the two failing probes, reviewer repair and passing checks. Next: bounded F03 planning. Offset stability on real Zalo
 and message completeness remain unproved. F02 remains OPEN.
 
 Previous tranche: `CCMAI-RUNTIME-023` / F02-B Pancake conversation-window

@@ -82,8 +82,14 @@ func zaloEnvelopeError(body []byte) (code int64, present bool, err error) {
 	}
 	dec := json.NewDecoder(bytes.NewReader(raw))
 	dec.UseNumber()
-	var n json.Number
-	if err := dec.Decode(&n); err != nil {
+	var value interface{}
+	if err := dec.Decode(&value); err != nil {
+		return 0, true, errors.New("zalo response has a malformed error code")
+	}
+	// Decoding directly into json.Number also accepts a quoted numeric string. The
+	// envelope requires an actual JSON number before it can authorize token refresh.
+	n, ok := value.(json.Number)
+	if !ok {
 		return 0, true, errors.New("zalo response has a malformed error code")
 	}
 	code, convErr := n.Int64()

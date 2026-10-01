@@ -13,7 +13,7 @@ Date: 2026-10-01. Status: `LEARNING_INTAKE / UPSTREAM_REMEDIATION_DEFERRED`. Sou
 
 ## Root-cause assessment across the governing chain
 
-### Later downstream observations (R021–R023, 2026-10-01)
+### Later downstream observations (R021–R024, 2026-10-01)
 
 The portable GOV-001 gate is now installed and invoked, but its continuity check compares the machine front marker and headers, not all prose that still presents itself as current. R021, R022 and R023 BUILD returns left `DISPATCH_READY` in the "Current active tranche" prose and/or implementation-status limitation while the canonical machine fields correctly said `REVIEW_PENDING`. At R023 exact BUILD `1fa8e14774149e68df10176f52804d80c11bb5bf`, doctor passed 25/25 and preflight passed 7/7 after the reviewer corrected those pointers. This is a narrower coverage gap than the original missing-gate finding: passing machine fields do not establish agreement of every current-authority prose surface. Parent proposal: give current status a single machine authority and generate its display prose, or retire duplicate current-status prose; add a golden worker-return case that proves the chosen contract. Do not promise a generic regex can validate arbitrary historical prose. Source: [R023 independent review](CCMAI_RUNTIME_023_F02B_INDEPENDENT_REVIEW_2026-10-01.md). Parent implementation and tests remain assigned to the other agent.
 
@@ -29,6 +29,8 @@ The portable GOV-001 gate is now installed and invoked, but its continuity check
 Root-cause classification: `MACHINE_GATE_GAP` and `PHASE_GATE_PLACEMENT_GAP`, with a `RULE_GAP` in portable bootstrap/claim wording. It is not established that the CVF core mode checker itself is wrong within its own core schema. No runtime AI/provider behavior was exercised by this finding.
 
 ## Proposed parent-level standardization for the other agent
+
+R024 adds the same worker-return use case: at BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047`, marker/state/header/status/order/tranche were REVIEW_PENDING but memory's current prose still said DISPATCH_READY. Doctor again passed 25/25; the reviewer reported drift and aligned the pointer in `024b9f2` before source review. See [R024 independent review](CCMAI_RUNTIME_024_F02C_INDEPENDENT_REVIEW_2026-10-01.md). This extends the existing duplicate-current-prose learning; no new parent implementation or test is authorized or claimed.
 
 1. Resolve this source packet against the existing Golden Downstream Bootstrap learning and ADIF registry. Record whether this extends an existing cluster or merits a new ID; retain links to project review commits and exact source paths. Do not import customer data, credentials or local provider memory.
 2. Define a versioned portable downstream gate profile and explicit applicability map. A newly bootstrapped project should receive a common runner or pinned reusable package, machine-readable continuity/packet fields and a documented invocation contract. Projects may add local gates, but shared controls should have one framework-owned source of truth. Distinguish `NOT_APPLICABLE` with an explicit reason from `PASS`; unknown status/format must fail closed.

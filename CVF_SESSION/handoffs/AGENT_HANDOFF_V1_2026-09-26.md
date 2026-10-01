@@ -6,12 +6,14 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-024 F02-C REVIEW_PENDING; R022/R023 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
-- Active role: COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next
-- Next allowed move: CCMAI-RUNTIME-024 F02-C BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (Zalo offset enumeration to an explicit empty page, strict row validation and newest-row dedupe, repeated-page/budget/limit fail-closed handling, 8 MiB body bound, token/message-free errors, refresh persistence-before-replacement with errors.Is, engine exhaustive limit and fetch-start checkpoint, tests and mutations, R019 gate). Claude does not self-approve. F02 stays OPEN for live offset stability and message coverage; R022/R023 stay REVIEW_PASS / FREEZE_OPEN; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
+- Active phase: REVIEW (CCMAI-RUNTIME-024 F02-C REVIEW_PASS / FREEZE_OPEN; R022/R023 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
+- Active role: REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-024 F02-C has independent REVIEW_PASS / FREEZE_OPEN after a bounded Codex envelope-type repair and retained regressions. Codex synchronizes continuity and continues bounded F03 planning. F02 stays OPEN for live Zalo offset stability, provider limits and message coverage; R022/R023 remain REVIEW_PASS / FREEZE_OPEN. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.
 - Parked operator checkpoint: none
 
 ## CCMAI-RUNTIME-024 — F02-C Zalo conversation coverage (2026-10-01)
+
+- Independent REVIEW (Codex): exact Claude BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047` receives REVIEW_PASS / FREEZE_OPEN after a bounded same-scope reviewer repair. Two new probes showed quoted numeric error codes could cause refresh/persistence; requiring an actual JSON number fixed one local root cause without changing OAuth protocol. Four retained regression functions include public helper negatives and valid numeric/absent refresh positive controls. Both old test expectation changes match SPEC. Independent channels tests/build passed before and after repair; focused disposable-MySQL engine tests (Zalo/Facebook/Pancake/limit/status/refresh/lease) passed in 128.101 s, DB/network removed; docs build/catalog/doctor passed. [Review](../../docs/reviews/CCMAI_RUNTIME_024_F02C_INDEPENDENT_REVIEW_2026-10-01.md) separates worker full-suite/mutation claims from independent runs and records the pre-repair compilation boundary. Role route `REVIEWER (bounded local repair) -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)`. F02 stays OPEN for real offset stability and message coverage; next F03 planning, no real channel/provider call, push, deployment, parent-CVF work or FREEZE.
 
 - INTAKE pointer correction (Codex): at exact BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047`, state/header/marker/status/order/tranche agreed on REVIEW_PENDING while the current session-memory prose still said DISPATCH_READY. Reported `BLOCKED_CONTINUITY_DRIFT` and corrected only that summary pointer before independent source review. This correction is not BUILD acceptance or product repair; the pre-existing untracked knowledge index remains outside commits.
 
