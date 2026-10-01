@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "Claude implements CCMAI-RUNTIME-024 F02-C Zalo conversation coverage under its immutable dispatcher seed and SPEC after continuity rehydration and handoff acknowledgment; return one local BUILD commit as REVIEW_PENDING for independent Codex review. R022 Facebook and R023 Pancake remain REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-024 F02-C BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (Zalo offset enumeration to an explicit empty page, strict row validation and newest-row dedupe, repeated-page/budget/limit fail-closed handling, 8 MiB body bound, token/message-free errors, refresh persistence-before-replacement with errors.Is, engine exhaustive limit and fetch-start checkpoint, tests and mutations, R019 gate). Claude does not self-approve. F02 stays OPEN for live offset stability and message coverage; R022/R023 stay REVIEW_PASS / FREEZE_OPEN; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER and COMMIT_STEWARD (Claude)",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-01"
 }

@@ -209,11 +209,13 @@ func checkSyncOwnership(reservation SyncReservation) error {
 const defaultConversationFetchLimit = 100
 
 // conversationFetchLimit returns the limit handed to FetchRecentConversations. Facebook
-// (CCMAI-RUNTIME-022) and Pancake (CCMAI-RUNTIME-023) ask for exhaustive coverage of the window
-// (0) and report incomplete coverage as an error, so a run can never succeed, and advance its
-// checkpoint, over a truncated window. Zalo keeps the shared cap until its own coverage tranche.
+// (CCMAI-RUNTIME-022), Pancake (CCMAI-RUNTIME-023) and Zalo (CCMAI-RUNTIME-024) ask for
+// exhaustive coverage of the window (0) and report incomplete coverage as an error, so a run can
+// never succeed, and advance its checkpoint, over a truncated window. Unknown types keep the
+// shared cap.
 func conversationFetchLimit(channelType string) int {
-	if channelType == "facebook" || channelType == "pancake" {
+	switch channelType {
+	case "facebook", "pancake", "zalo_oa":
 		return 0
 	}
 	return defaultConversationFetchLimit
@@ -221,10 +223,11 @@ func conversationFetchLimit(channelType string) int {
 
 // boundsCheckpointByFetchStart reports whether a successful run's checkpoint is the moment just
 // before the conversation fetch instead of the completion time. The Pancake adapter fixes its
-// `until` filter when the fetch starts, so anything updated while a long run is processing lies
-// after that bound and must stay inside the next run's window (CCMAI-RUNTIME-023).
+// `until` filter when the fetch starts (CCMAI-RUNTIME-023), and Zalo's offset enumeration cannot
+// see conversations that move while it runs (CCMAI-RUNTIME-024); anything updated while a long
+// run is processing must stay inside the next run's window.
 func boundsCheckpointByFetchStart(channelType string) bool {
-	return channelType == "pancake"
+	return channelType == "pancake" || channelType == "zalo_oa"
 }
 
 // syncNow is the engine clock for terminal status writes and the fetch-start checkpoint; a test

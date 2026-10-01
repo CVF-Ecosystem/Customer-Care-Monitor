@@ -334,13 +334,13 @@ func TestPancakeCheckpointIsBoundedByFetchStart(t *testing.T) {
 	}
 }
 
-// Facebook and Pancake ask for exhaustive coverage, Zalo keeps 100; only Pancake bounds its
-// success checkpoint by the fetch start.
+// Facebook, Pancake and Zalo ask for exhaustive coverage, unknown types keep 100; Pancake and
+// Zalo (R024) bound their success checkpoint by the fetch start.
 func TestPancakeLimitAndCheckpointSelection(t *testing.T) {
 	for channelType, want := range map[string]struct {
 		limit   int
 		bounded bool
-	}{"facebook": {0, false}, "pancake": {0, true}, "zalo_oa": {100, false}, "unknown": {100, false}} {
+	}{"facebook": {0, false}, "pancake": {0, true}, "zalo_oa": {0, true}, "unknown": {100, false}} {
 		if got := conversationFetchLimit(channelType); got != want.limit {
 			t.Errorf("%s limit = %d, want %d", channelType, got, want.limit)
 		}

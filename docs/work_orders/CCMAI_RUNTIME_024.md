@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-024 — F02-C Zalo conversation coverage
 
-Status: DISPATCH_READY. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base: `b145d71091d3117c12d4479415b8e88b67e0b3cb`.
+Status: REVIEW_PENDING. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base: `b145d71091d3117c12d4479415b8e88b67e0b3cb`.
 Authority: [SPEC](../specs/RUNTIME_ZALO_SYNC_COVERAGE_F02C_2026-10-01.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-024.json`. R022/R023 REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN.
 
 ## Assignment and prerequisites

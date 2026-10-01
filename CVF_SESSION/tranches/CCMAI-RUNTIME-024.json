@@ -34,14 +34,16 @@
     "lease_recovery_scope_change"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_024.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "b145d71091d3117c12d4479415b8e88b67e0b3cb",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
   ]
 }
