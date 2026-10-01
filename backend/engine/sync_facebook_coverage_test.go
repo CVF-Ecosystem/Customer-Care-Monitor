@@ -238,8 +238,9 @@ type roundTripFunc func(*http.Request) (*http.Response, error)
 
 func (fn roundTripFunc) RoundTrip(r *http.Request) (*http.Response, error) { return fn(r) }
 
-// Facebook asks for exhaustive coverage; every other adapter keeps the shared limit of 100.
-func TestConversationFetchLimitIsExhaustiveOnlyForFacebook(t *testing.T) {
+// Facebook (R022) and Pancake (R023) ask for exhaustive coverage; Zalo keeps the shared limit
+// of 100.
+func TestConversationFetchLimitIsExhaustiveForFacebookAndPancake(t *testing.T) {
 	f := setupSFFixture(t)
 	limits := map[string]int{}
 	var mu sync.Mutex
@@ -258,7 +259,7 @@ func TestConversationFetchLimitIsExhaustiveOnlyForFacebook(t *testing.T) {
 			t.Fatalf("%s sync: %v", channelType, err)
 		}
 	}
-	want := map[string]int{"facebook": 0, "pancake": 100, "zalo_oa": 100}
+	want := map[string]int{"facebook": 0, "pancake": 0, "zalo_oa": 100}
 	for channelType, w := range want {
 		if got, ok := limits[channelType]; !ok || got != w {
 			t.Fatalf("%s received limit %d (seen %v), want %d", channelType, got, ok, w)

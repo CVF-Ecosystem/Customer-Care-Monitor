@@ -3,6 +3,7 @@ package channels
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
@@ -239,12 +240,14 @@ func TestPancakeFetchRecentConversationsPaginates(t *testing.T) {
 		t.Errorf("metadata leaks phone numbers: %s", meta)
 	}
 
+	// CCMAI-RUNTIME-023: a limit the window exceeds is incomplete coverage, never a truncated
+	// success; the rows are returned for diagnostics only.
 	limited, err := a.FetchRecentConversations(context.Background(), since, 10)
-	if err != nil {
-		t.Fatalf("FetchRecentConversations limit: %v", err)
+	if !errors.Is(err, ErrPancakeCoverageIncomplete) {
+		t.Fatalf("FetchRecentConversations limit 10 over 61 rows: want incomplete coverage, got %v", err)
 	}
 	if len(limited) != 10 {
-		t.Errorf("expected limit 10, got %d", len(limited))
+		t.Errorf("expected 10 diagnostic rows, got %d", len(limited))
 	}
 }
 

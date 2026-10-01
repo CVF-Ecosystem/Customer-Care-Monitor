@@ -208,16 +208,28 @@ func checkSyncOwnership(reservation SyncReservation) error {
 // not been moved to exhaustive enumeration.
 const defaultConversationFetchLimit = 100
 
-// conversationFetchLimit returns the limit handed to FetchRecentConversations. Facebook asks
-// for exhaustive coverage of the window (0) and reports incomplete coverage as an error, so a
-// run can never succeed, and advance its checkpoint, over a truncated window (CCMAI-RUNTIME-022).
-// Pancake and Zalo keep the shared cap until their own coverage tranche.
+// conversationFetchLimit returns the limit handed to FetchRecentConversations. Facebook
+// (CCMAI-RUNTIME-022) and Pancake (CCMAI-RUNTIME-023) ask for exhaustive coverage of the window
+// (0) and report incomplete coverage as an error, so a run can never succeed, and advance its
+// checkpoint, over a truncated window. Zalo keeps the shared cap until its own coverage tranche.
 func conversationFetchLimit(channelType string) int {
-	if channelType == "facebook" {
+	if channelType == "facebook" || channelType == "pancake" {
 		return 0
 	}
 	return defaultConversationFetchLimit
 }
+
+// boundsCheckpointByFetchStart reports whether a successful run's checkpoint is the moment just
+// before the conversation fetch instead of the completion time. The Pancake adapter fixes its
+// `until` filter when the fetch starts, so anything updated while a long run is processing lies
+// after that bound and must stay inside the next run's window (CCMAI-RUNTIME-023).
+func boundsCheckpointByFetchStart(channelType string) bool {
+	return channelType == "pancake"
+}
+
+// syncNow is the engine clock for terminal status writes and the fetch-start checkpoint; a test
+// seam only.
+var syncNow = time.Now
 
 // Test seams (CCMAI-RUNTIME-013): the adapter factory and the after-sync
 // trigger are variables so tests can observe dispatch without a real channel.
@@ -345,6 +357,8 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	}
 
 	recorded := false
+	// successCheckpoint, when set, replaces the completion time as last_sync_at on success.
+	var successCheckpoint *time.Time
 	defer func() {
 		heartbeat.stop()
 		if recorded || errors.Is(runErr, ErrSyncOwnershipLost) {
@@ -364,7 +378,7 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 		if err := stopErr(); err != nil {
 			return err
 		}
-		wrote, err := s.recordSyncStatus(reservation, status, errMsg)
+		wrote, err := s.recordSyncStatusAt(reservation, status, errMsg, successCheckpoint)
 		if wrote {
 			recorded = true
 		}
@@ -401,6 +415,11 @@ func (s *SyncEngine) SyncReservedChannel(ctx context.Context, channel models.Cha
 	// Fetch recent conversations
 	if err := gate(); err != nil {
 		return err
+	}
+	if boundsCheckpointByFetchStart(channel.ChannelType) {
+		// Second precision, rounded down, like the provider's since/until filters.
+		fetchStart := syncNow().Truncate(time.Second)
+		successCheckpoint = &fetchStart
 	}
 	conversations, err := adapter.FetchRecentConversations(ctx, since, conversationFetchLimit(channel.ChannelType))
 	if err != nil {
@@ -882,12 +901,23 @@ func buildSyncStatusUpdates(status, errMsg string, now time.Time) map[string]int
 // When wrote is true, err is nil for success and the reported failure text for
 // partial/error runs.
 func (s *SyncEngine) recordSyncStatus(reservation SyncReservation, status, errMsg string) (wrote bool, err error) {
+	return s.recordSyncStatusAt(reservation, status, errMsg, nil)
+}
+
+// recordSyncStatusAt is recordSyncStatus with an optional success checkpoint: when status is
+// "success" and checkpoint is set, last_sync_at is that value instead of the completion time,
+// while updated_at still records completion. Other statuses never touch last_sync_at.
+func (s *SyncEngine) recordSyncStatusAt(reservation SyncReservation, status, errMsg string, checkpoint *time.Time) (wrote bool, err error) {
 	if !reservation.valid() {
 		return false, fmt.Errorf("update sync status %s: %w", status, ErrSyncReservationMismatch)
 	}
 	tenantID, channelID := reservation.TenantID, reservation.ChannelID
-	now := time.Now()
+	now := syncNow()
 	updates := buildSyncStatusUpdates(status, errMsg, now)
+	if status == "success" && checkpoint != nil {
+		bounded := *checkpoint
+		updates["last_sync_at"] = &bounded
+	}
 	updates["sync_run_id"] = gorm.Expr("NULL")
 	updates["sync_lease_until"] = gorm.Expr("NULL") // R016: every owned terminal write ends the lease
 	res := RunWriteDB().Model(&models.Channel{}).
