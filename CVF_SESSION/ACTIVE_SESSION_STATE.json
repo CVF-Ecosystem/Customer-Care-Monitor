@@ -13,7 +13,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-GOV-001 GOV1-CI1 local repair is REVIEW_PASS / FREEZE_OPEN. Codex pushes the reviewed draft PR #1 branch, inspects all GitHub Actions jobs at the new exact SHA, and records F08 hosted proof and any remaining gate failure. R020 stays parked; no merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-GOV-001 and F08 have REVIEW_PASS / FREEZE_OPEN with all four draft PR #1 workflows successful at remote head 3e0b37e. Codex records the exact-SHA evidence locally and resumes roadmap planning at F01-B MCP authorization; R020 F01-A is eligible to leave its parked dependency checkpoint. PR stays draft; no evidence-record push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": "CCMAI-RUNTIME-020 F01-A REVIEW_PASS / FREEZE_OPEN at Claude BUILD 73cedc2; resume only after downstream gate and PR evidence work.",
   "activeRole": "REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",

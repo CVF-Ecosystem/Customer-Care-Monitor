@@ -45,7 +45,8 @@ records the real downstream continuity/doctor/portable-checker gap and a
 Finding-To-Governance Learning disposition. Another agent owns any CVF parent
 implementation and tests. CCMAI-GOV-001 GOV1-R1 passed local independent
 re-review at `7bb28d4`, but draft PR #1 exposed a new hosted governance-job
-failure; the Claude GOV1-CI1 repair passed independent local review and FREEZE remains open pending the new PR run.
+failure; the Claude GOV1-CI1 repair passed independent local review and the
+new PR head `3e0b37e` passed all four hosted workflows. FREEZE remains open.
 
 CCMAI-GOV-001 planning (Codex, 2026-09-30): after R020 independent review
 commit `df0c4cc`, canonical continuity was rehydrated and the role route
@@ -62,10 +63,12 @@ Current active tranche: `CCMAI-GOV-001` / downstream machine gates is
 REVIEW_PASS / FREEZE_OPEN for GOV1-CI1 local repair `ae44c2e` after
 [Codex review](docs/reviews/CCMAI_GOV_001_CI1_INDEPENDENT_REVIEW_2026-10-01.md).
 The first [hosted review](docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md)
-found a generated-bytecode preflight failure at draft PR #1 SHA `19fdc4e`;
-Codex will push the reviewed repair and inspect the new head. Windows catalog,
-Backend F08, Frontend and Docs passed at the old SHA, but new-head proof is pending.
-R020 stays parked.
+found a generated-bytecode preflight failure at draft PR #1 SHA `19fdc4e`.
+The [reviewed rerun](docs/reviews/CCMAI_PR_001_GREEN_CI_EVIDENCE_2026-10-01.md)
+at remote head `3e0b37e` passed Governance Ubuntu/Windows, Backend F08 with
+five DB sentinels, Frontend and Docs. GOV-001 and F08 are REVIEW_PASS /
+FREEZE_OPEN; PR stays draft, unmerged. R020 F01-A parked checkpoint is eligible
+to resume and F01-B MCP authorization is the next roadmap planning task.
 The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
 [SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
 [work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
