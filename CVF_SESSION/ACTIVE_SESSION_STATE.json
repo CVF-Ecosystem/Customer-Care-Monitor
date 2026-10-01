@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-GOV-001 GOV1-R1 is REVIEW_PASS / FREEZE_OPEN. Codex opens the owner-authorized GitHub PR from a review branch and inspects actual Actions runs for hosted governance jobs and F08 MySQL proof; R020 stays parked. No merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-GOV-001 GOV1-CI1 is CHANGES_REQUIRED / REVIEW_OPEN after draft PR #1 Governance Ubuntu preflight failed on generated pycache. Claude next REPAIR_WORKER under the hosted CI addendum, one local commit returns REVIEW_PENDING to Codex; Codex re-reviews and then pushes the PR branch. R020 stays parked; no worker push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": "CCMAI-RUNTIME-020 F01-A REVIEW_PASS / FREEZE_OPEN at Claude BUILD 73cedc2; resume only after downstream gate and PR evidence work.",
-  "activeRole": "REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)",
+  "activeRole": "ORCHESTRATOR -> WORK_ORDER_AUTHOR -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD (Codex); REPAIR_WORKER (Claude) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-01"
 }

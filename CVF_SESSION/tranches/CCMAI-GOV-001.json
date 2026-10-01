@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-GOV-001",
   "workOrder": "docs/work_orders/CCMAI_GOV_001.md",
-  "status": "REVIEW_PASS",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "riskCeiling": "R2",
   "roles": {
@@ -37,9 +37,10 @@
   "buildCommit": "7bb28d47858ab79630d63d4d5e5ccc94ccaa3326",
   "reviewEvidence": [
     "docs/reviews/CCMAI_GOV_001_INDEPENDENT_REVIEW_2026-10-01.md",
-    "docs/reviews/CCMAI_GOV_001_R1_INDEPENDENT_REREVIEW_2026-10-01.md"
+    "docs/reviews/CCMAI_GOV_001_R1_INDEPENDENT_REREVIEW_2026-10-01.md",
+    "docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md"
   ],
-  "disposition": "REVIEW_PASS",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
@@ -47,6 +48,7 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "CHANGES_REQUIRED"
   ]
 }
