@@ -1,4 +1,4 @@
-﻿# Project Session Memory
+# Project Session Memory
 
 Memory class: POINTER_RECORD
 
@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-023", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-024", "parked": false} -->
 
 ## Startup Order
 
@@ -59,7 +59,14 @@ REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
 PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
-Current active tranche: `CCMAI-RUNTIME-023` / F02-B Pancake conversation-window
+Current active tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
+DISPATCH_READY / WORK_ORDER at [SPEC](docs/specs/RUNTIME_ZALO_SYNC_COVERAGE_F02C_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_024.md). Dispatcher seed
+`b145d71` predates BUILD; Claude implements and Codex independently reviews.
+No product edit or test occurred in planning. Offset stability on real Zalo
+and message completeness remain unproved. F02 remains OPEN.
+
+Previous tranche: `CCMAI-RUNTIME-023` / F02-B Pancake conversation-window
 coverage is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `1fa8e14` and Codex's
 [independent review and same-scope repair](docs/reviews/CCMAI_RUNTIME_023_F02B_INDEPENDENT_REVIEW_2026-10-01.md)
 at [SPEC](docs/specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md)
@@ -72,8 +79,7 @@ FREEZE_OPEN after Claude BUILD `583c51c` and Codex's
 with a small same-scope repair at [SPEC](docs/specs/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_2026-10-01.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_022.md). Dispatcher authority
 was seeded at `3f101ca` before BUILD; Codex reviewed it independently.
-F02 remains OPEN for the separate Pancake/Zalo coverage
-audit. Previous tranche `CCMAI-RUNTIME-021` / F01-B MCP permission admission is
+F02 remains OPEN for Zalo/F02-C and live coverage limits. Previous tranche `CCMAI-RUNTIME-021` / F01-B MCP permission admission is
 REVIEW_PASS / FREEZE_OPEN after independent Codex review of Claude BUILD
 `b46d587ac350f2dfef76a6dac7e352604be0a037` at
 [SPEC](docs/specs/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_2026-10-01.md)
