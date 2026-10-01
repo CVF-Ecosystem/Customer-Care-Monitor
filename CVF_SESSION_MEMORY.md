@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-GOV-001", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-021", "parked": false} -->
 
 ## Startup Order
 
@@ -59,7 +59,11 @@ REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
 PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
-Current active tranche: `CCMAI-GOV-001` / downstream machine gates is
+Current active tranche: `CCMAI-RUNTIME-021` / F01-B MCP permission admission is
+DISPATCH_READY at [SPEC](docs/specs/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_021.md). Dispatcher authority
+was seeded in `8fa6ccb` before BUILD; Claude is the worker and Codex independently
+reviews. `CCMAI-GOV-001` / downstream machine gates remains
 REVIEW_PASS / FREEZE_OPEN for GOV1-CI1 local repair `ae44c2e` after
 [Codex review](docs/reviews/CCMAI_GOV_001_CI1_INDEPENDENT_REVIEW_2026-10-01.md).
 The first [hosted review](docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md)
@@ -67,8 +71,8 @@ found a generated-bytecode preflight failure at draft PR #1 SHA `19fdc4e`.
 The [reviewed rerun](docs/reviews/CCMAI_PR_001_GREEN_CI_EVIDENCE_2026-10-01.md)
 at remote head `3e0b37e` passed Governance Ubuntu/Windows, Backend F08 with
 five DB sentinels, Frontend and Docs. GOV-001 and F08 are REVIEW_PASS /
-FREEZE_OPEN; PR stays draft, unmerged. R020 F01-A parked checkpoint is eligible
-to resume and F01-B MCP authorization is the next roadmap planning task.
+FREEZE_OPEN; PR stays draft, unmerged. The R020 F01-A dependency checkpoint
+was satisfied by the reviewed PR run; F01-B is now dispatched, not built.
 The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
 [SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
 [work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
