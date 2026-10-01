@@ -45,7 +45,7 @@ records the real downstream continuity/doctor/portable-checker gap and a
 Finding-To-Governance Learning disposition. Another agent owns any CVF parent
 implementation and tests. CCMAI-GOV-001 GOV1-R1 passed local independent
 re-review at `7bb28d4`, but draft PR #1 exposed a new hosted governance-job
-failure; the Claude GOV1-CI1 repair is REVIEW_PENDING and FREEZE remains open.
+failure; the Claude GOV1-CI1 repair passed independent local review and FREEZE remains open pending the new PR run.
 
 CCMAI-GOV-001 planning (Codex, 2026-09-30): after R020 independent review
 commit `df0c4cc`, canonical continuity was rehydrated and the role route
@@ -59,12 +59,13 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-GOV-001` / downstream machine gates is
-REVIEW_PENDING for the GOV1-CI1 repair of an independently observed hosted
-preflight failure on draft PR #1 at `19fdc4e`. The [hosted review](docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md)
-and [repair addendum](docs/work_orders/CCMAI_GOV_001.md) route Claude to one
-local CI repair commit (now REVIEW_PENDING, job-level PYTHONDONTWRITEBYTECODE), then Codex re-review and PR branch push. GOV1-R1 local
-review passed at `7bb28d4`; Windows catalog, Backend F08, Frontend and Docs
-passed on that PR SHA, but the overall PR is red. R020 stays parked.
+REVIEW_PASS / FREEZE_OPEN for GOV1-CI1 local repair `ae44c2e` after
+[Codex review](docs/reviews/CCMAI_GOV_001_CI1_INDEPENDENT_REVIEW_2026-10-01.md).
+The first [hosted review](docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md)
+found a generated-bytecode preflight failure at draft PR #1 SHA `19fdc4e`;
+Codex will push the reviewed repair and inspect the new head. Windows catalog,
+Backend F08, Frontend and Docs passed at the old SHA, but new-head proof is pending.
+R020 stays parked.
 The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
 [SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
 [work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
