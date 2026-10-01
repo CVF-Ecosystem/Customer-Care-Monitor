@@ -43,8 +43,8 @@ Parent CVF learning intake (Codex, 2026-10-01):
 `docs/reviews/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 records the real downstream continuity/doctor/portable-checker gap and a
 Finding-To-Governance Learning disposition. Another agent owns any CVF parent
-implementation and tests. CCMAI-GOV-001 GOV1-R1 is REVIEW_PENDING at local
-repair commit `7bb28d4`; there is still no PR evidence or Codex re-review disposition.
+implementation and tests. CCMAI-GOV-001 GOV1-R1 passed independent Codex
+re-review at repair commit `7bb28d4`; FREEZE remains open and PR evidence is pending.
 
 CCMAI-GOV-001 planning (Codex, 2026-09-30): after R020 independent review
 commit `df0c4cc`, canonical continuity was rehydrated and the role route
@@ -57,13 +57,13 @@ REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
 PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
-Current active tranche: `CCMAI-GOV-001` / downstream machine gates has GOV1-R1
-repair commit `7bb28d4` at REVIEW_PENDING for independent Codex re-review.
+Current active tranche: `CCMAI-GOV-001` / downstream machine gates is
+REVIEW_PASS / FREEZE_OPEN after Codex independent re-review of GOV1-R1 `7bb28d4`.
 The prior BUILD `54663eb` received CHANGES_REQUIRED; the
-[review](docs/reviews/CCMAI_GOV_001_INDEPENDENT_REVIEW_2026-10-01.md),
+[R1 review](docs/reviews/CCMAI_GOV_001_R1_INDEPENDENT_REREVIEW_2026-10-01.md),
 [addendum](docs/work_orders/CCMAI_GOV_001.md), and reviewer-owned
-`CVF_SESSION/authority/CCMAI-GOV-001.json` seed define repair acceptance.
-The authorized PR follows independent REVIEW_PASS only.
+`CVF_SESSION/authority/CCMAI-GOV-001.json` seed bind the accepted repair.
+The owner-authorized PR and actual Actions proof are next; R020 stays parked.
 The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
 [SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
 [work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
