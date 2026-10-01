@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-022 — F02-A Facebook sync window coverage
 
-Status: REVIEW_PENDING / FREEZE_OPEN. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base/dispatcher seed: `3f101ca58ecb7f9f3c56c4d46addf5ff74a7a39e`. Risk ceiling R2. Authority: [SPEC](../specs/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_2026-10-01.md), [F02 source finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-022.json`. R021 F01-B is REVIEW_PASS / FREEZE_OPEN; R022 does not FREEZE or deploy F01.
+Status: REVIEW_PASS / FREEZE_OPEN. Issued 2026-10-01 by Codex (ORCHESTRATOR → SPEC_AUTHOR → WORK_ORDER_AUTHOR). Planning base/dispatcher seed: `3f101ca58ecb7f9f3c56c4d46addf5ff74a7a39e`. Risk ceiling R2. Authority: [SPEC](../specs/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_2026-10-01.md), [F02 source finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-022.json`. R021 F01-B is REVIEW_PASS / FREEZE_OPEN; R022 does not FREEZE or deploy F01.
 
 ## Assignment and phase gate
 

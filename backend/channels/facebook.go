@@ -46,7 +46,7 @@ func NewFacebookAdapter(creds FacebookCredentials) *FacebookAdapter {
 func (f *FacebookAdapter) doRequest(ctx context.Context, rawURL string) (map[string]interface{}, error) {
 	req, err := http.NewRequestWithContext(ctx, "GET", rawURL, nil)
 	if err != nil {
-		return nil, fmt.Errorf("create facebook api request: %w", withoutRequestURL(err))
+		return nil, errors.New("create facebook api request failed")
 	}
 
 	// Add access_token if not already in URL
@@ -58,13 +58,17 @@ func (f *FacebookAdapter) doRequest(ctx context.Context, rawURL string) (map[str
 
 	resp, err := f.client.Do(req)
 	if err != nil {
-		return nil, fmt.Errorf("facebook api request failed: %w", withoutRequestURL(err))
+		if ctx.Err() != nil {
+			return nil, fmt.Errorf("facebook api request failed: %w", ctx.Err())
+		}
+		// A transport's inner error can itself echo the token-bearing request URL.
+		return nil, errors.New("facebook api request failed")
 	}
 	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("facebook api read body failed: %w", err)
+		return nil, errors.New("facebook api read body failed")
 	}
 
 	var result map[string]interface{}
@@ -73,24 +77,12 @@ func (f *FacebookAdapter) doRequest(ctx context.Context, rawURL string) (map[str
 	}
 
 	if errObj, ok := result["error"].(map[string]interface{}); ok {
-		msg, _ := errObj["message"].(string)
 		code, _ := errObj["code"].(float64)
-		return nil, fmt.Errorf("facebook api error: (#%.0f) %s", code, msg)
+		// Graph's message is untrusted response content and can echo the token-bearing URL.
+		return nil, fmt.Errorf("facebook api error: (#%.0f)", code)
 	}
 
 	return result, nil
-}
-
-// withoutRequestURL drops the request URL that net/http embeds in its errors: a Graph URL
-// carries the page access token as a query parameter.
-func withoutRequestURL(err error) error {
-	for {
-		var urlErr *url.Error
-		if !errors.As(err, &urlErr) || urlErr.Err == nil {
-			return err
-		}
-		err = urlErr.Err
-	}
 }
 
 // validNextURL accepts a pagination URL only if it stays on the Graph API conversations
@@ -196,18 +188,21 @@ func (f *FacebookAdapter) FetchRecentConversations(ctx context.Context, since ti
 
 		// Cursor-based pagination: an absent next link is the terminal page (an empty page with
 		// a next link is not); anything else must be a safe, new Graph URL.
-		nextRaw := ""
-		if paging, ok := result["paging"].(map[string]interface{}); ok {
-			if v, present := paging["next"]; present && v != nil {
-				str, isString := v.(string)
-				if !isString {
-					return conversations, fmt.Errorf("%w: page %d has a malformed next link", ErrFacebookCoverageIncomplete, pages+1)
-				}
-				nextRaw = str
-			}
-		}
-		if nextRaw == "" {
+		pagingValue, hasPaging := result["paging"]
+		if !hasPaging {
 			return conversations, nil
+		}
+		paging, ok := pagingValue.(map[string]interface{})
+		if !ok {
+			return conversations, fmt.Errorf("%w: page %d has malformed paging", ErrFacebookCoverageIncomplete, pages+1)
+		}
+		nextValue, hasNext := paging["next"]
+		if !hasNext {
+			return conversations, nil
+		}
+		nextRaw, ok := nextValue.(string)
+		if !ok || nextRaw == "" {
+			return conversations, fmt.Errorf("%w: page %d has a malformed next link", ErrFacebookCoverageIncomplete, pages+1)
 		}
 		key, ok := f.validNextURL(nextRaw)
 		if !ok {

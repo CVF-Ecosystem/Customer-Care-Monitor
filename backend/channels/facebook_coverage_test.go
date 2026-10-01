@@ -230,6 +230,10 @@ func TestFacebookMalformedPagesFailClosed(t *testing.T) {
 		"missing time":      `{"data":[{"id":"x"}]}`,
 		"invalid time":      `{"data":[{"id":"x","updated_time":"yesterday"}]}`,
 		"next not a string": `{"data":[],"paging":{"next":5}}`,
+		"next empty":        `{"data":[],"paging":{"next":""}}`,
+		"next null":         `{"data":[],"paging":{"next":null}}`,
+		"paging not object": `{"data":[],"paging":"broken"}`,
+		"paging null":       `{"data":[],"paging":null}`,
 		"malformed old row": `{"data":[{"id":"old","updated_time":"nonsense"}]}`,
 		"null data":         `{"data":null}`,
 	}
@@ -250,10 +254,14 @@ func TestFacebookLaterPageFailuresReturnSafeErrors(t *testing.T) {
 	since := time.Date(2026, 9, 1, 0, 0, 0, 0, time.UTC)
 	first := fbStatic(fbPageBody(fbRows("p", 0, 5, since.Add(time.Hour)), fbNextURL("p2")))
 	failures := map[string]func(int) (string, error){
-		"graph error object": fbStatic(`{"error":{"message":"synthetic page failure","code":4}}`),
-		"non-JSON body":      fbStatic("<html>" + fbTestToken + " gateway page</html>"),
+		"graph error object":       fbStatic(`{"error":{"message":"synthetic page failure","code":4}}`),
+		"graph error echoes token": fbStatic(`{"error":{"message":"TOKEN-R022-SECRET https://graph.facebook.com/v21.0/PAGE-R022/conversations?access_token=TOKEN-R022-SECRET","code":4}}`),
+		"non-JSON body":            fbStatic("<html>" + fbTestToken + " gateway page</html>"),
 		"transport error": func(int) (string, error) {
 			return "", &url.Error{Op: "Get", URL: fbNextURL("p2"), Err: errors.New("connection reset by peer")}
+		},
+		"transport cause echoes URL": func(int) (string, error) {
+			return "", fmt.Errorf("proxy failed for %s", fbNextURL("p2"))
 		},
 	}
 	for name, page2 := range failures {
@@ -271,12 +279,7 @@ func TestFacebookLaterPageFailuresReturnSafeErrors(t *testing.T) {
 			}
 		}
 	}
-	// The sanitization keeps the real cause for diagnosis.
-	g := &graphServer{pages: []func(int) (string, error){first, failures["transport error"]}}
-	_, err := newFBTestAdapter(g).FetchRecentConversations(context.Background(), since, 0)
-	if !strings.Contains(err.Error(), "connection reset by peer") {
-		t.Fatalf("sanitized error lost its cause: %v", err)
-	}
+	// Transport causes are intentionally omitted: a proxy can embed the full token URL there.
 }
 
 // Only a fresh Graph conversations URL over HTTPS is followed: a repeated cursor, a cross-host

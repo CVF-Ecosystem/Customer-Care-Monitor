@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-022 F02-A BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (exhaustive Facebook window enumeration, fail-closed page/pagination/budget handling, token-safe errors, engine limit selection, checkpoint/after-sync behavior, tests and mutations, R019 gate). Claude does not self-approve. F02 stays OPEN for Pancake/Zalo coverage; R021 F01-B stays REVIEW_PASS / FREEZE_OPEN; PR #1 stays draft at 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-022 F02-A Facebook coverage has independent REVIEW_PASS / FREEZE_OPEN after Codex same-scope repair and review evidence. Codex synchronizes continuity and continues bounded F02 Pancake/Zalo planning; F02 as a whole remains OPEN. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-01"
 }
