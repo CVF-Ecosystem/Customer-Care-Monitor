@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-024", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-025", "parked": false} -->
 
 ## Startup Order
 
@@ -59,14 +59,22 @@ REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
 PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
-Current active tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
+Current active tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
+is DISPATCH_READY / WORK_ORDER at [SPEC](docs/specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_025.md). Dispatcher seed
+`517406f` predates BUILD; Claude implements and Codex independently reviews.
+Ordinary unlimited runs will use full local snapshots and processed-version
+receipts, with a scan-start checkpoint; other modes/F05/F06 remain separate.
+This is planning only: F03 source has not been changed or tested.
+
+Previous tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
 REVIEW_PASS / FREEZE_OPEN after Claude BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047`
 and Codex independent review with a bounded envelope-type repair at [SPEC](docs/specs/RUNTIME_ZALO_SYNC_COVERAGE_F02C_2026-10-01.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_024.md). Dispatcher seed
 `b145d71` predates BUILD; Claude implemented and Codex independently reviewed.
 BUILD evidence is [recorded here](docs/reviews/RUNTIME_ZALO_SYNC_COVERAGE_F02C_BUILD_2026-10-01.md);
 [independent review](docs/reviews/CCMAI_RUNTIME_024_F02C_INDEPENDENT_REVIEW_2026-10-01.md)
-records the two failing probes, reviewer repair and passing checks. Next: bounded F03 planning. Offset stability on real Zalo
+records the two failing probes, reviewer repair and passing checks. F03 is now dispatched as R025. Offset stability on real Zalo
 and message completeness remain unproved. F02 remains OPEN.
 
 Previous tranche: `CCMAI-RUNTIME-023` / F02-B Pancake conversation-window

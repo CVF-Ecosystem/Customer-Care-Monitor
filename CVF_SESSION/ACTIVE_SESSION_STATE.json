@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-024 F02-C has independent REVIEW_PASS / FREEZE_OPEN after a bounded Codex envelope-type repair and retained regressions. Codex synchronizes continuity and continues bounded F03 planning. F02 stays OPEN for live Zalo offset stability, provider limits and message coverage; R022/R023 remain REVIEW_PASS / FREEZE_OPEN. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "Claude implements CCMAI-RUNTIME-025 F03 ordinary analyzer incremental coverage under the immutable seed and SPEC after continuity rehydration and handoff acknowledgment; return one local BUILD commit as REVIEW_PENDING for independent Codex review. Preserve explicit analysis modes, snapshot format and F05/F06 boundaries. R024 remains REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN for live/message coverage. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)",
+  "activeRole": "ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER and COMMIT_STEWARD (Claude)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-01"
 }

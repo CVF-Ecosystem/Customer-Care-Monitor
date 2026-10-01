@@ -5,11 +5,18 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-024 F02-C REVIEW_PASS / FREEZE_OPEN; R022/R023 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
-- Active role: REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)
-- Next allowed move: CCMAI-RUNTIME-024 F02-C has independent REVIEW_PASS / FREEZE_OPEN after a bounded Codex envelope-type repair and retained regressions. Codex synchronizes continuity and continues bounded F03 planning. F02 stays OPEN for live Zalo offset stability, provider limits and message coverage; R022/R023 remain REVIEW_PASS / FREEZE_OPEN. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-025 F03 DISPATCH_READY; R024 REVIEW_PASS / FREEZE_OPEN; F02 OPEN; S1 IN_PROGRESS)
+- Active role: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER and COMMIT_STEWARD (Claude)
+- Next allowed move: Claude implements CCMAI-RUNTIME-025 F03 ordinary analyzer incremental coverage under the immutable seed and SPEC after continuity rehydration and handoff acknowledgment; return one local BUILD commit as REVIEW_PENDING for independent Codex review. Preserve explicit analysis modes, snapshot format and F05/F06 boundaries. R024 remains REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN for live/message coverage. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-025 — F03 analyzer incremental coverage (2026-10-01)
+
+- INTAKE/transition acknowledgment (Codex): continuity rehydrated at `1e74d187f6cfe44696beae2bf4d046b2d3841e0c`; manifest/policy/state/memory/handoff/status/index agree on R024 REVIEW_PASS. Compact bootstrap absent (`BOOTSTRAP_MIGRATION_PENDING`, nonblocking). Core `26c686c` matches public origin/main; doctor 25/25 PASS; knowledge ingest ran, only its pre-existing untracked index stays outside commits. Source audit confirms event-time candidate/message filters, result-time suppression and finish-time checkpoint remain in the ordinary analyzer used by cron/after-sync.
+- DESIGN/SPEC/WORK_ORDER and roles: Codex transitions `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR` for [SPEC](../../docs/specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md) and [order](../../docs/work_orders/CCMAI_RUNTIME_025.md). A start checkpoint alone cannot cover backdated ingestion; ordinary unlimited runs will compare their exact full local snapshot against a tenant/job-bound validated evaluation receipt, skip unchanged source and rediscover new/changed source regardless of event time. Full/date/limit/since-last/unanalyzed contracts remain; F05/F06 are separate. Historical never-analyzed conversations become eligible, so initial read/analysis work may grow; no provider call occurs in planning or is authorized for BUILD. Seed `517406f1bfafbfe48b2cef31b558a76b8e67d8c0` was committed before BUILD. Claude must rehydrate and acknowledge IMPLEMENTATION_WORKER before execution, one local REVIEW_PENDING commit; Codex independently reviews. R025 DISPATCH_READY, no product edits/tests, persistent DB, push, merge, deployment, parent-CVF implementation/test or FREEZE. R024 REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN independently.
+
+- Planning verification (Codex): explicit changed-file preflight for all eight planning files 7/7 PASS including catalog; `PYTHONDONTWRITEBYTECODE=1` gate tests 46/46 PASS (15.995 s); docs build PASS; doctor 25/25 PASS; diff check PASS. Catalog/index already register these artifact families, so no family registration change. Default worktree scope remains non-green because the unrelated untracked knowledge index is not in this order; explicit preflight is not a whole-worktree PASS. No product tests or implementation occurred in planning.
 
 ## CCMAI-RUNTIME-024 — F02-C Zalo conversation coverage (2026-10-01)
 
