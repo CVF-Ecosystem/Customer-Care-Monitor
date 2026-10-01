@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-022", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-023", "parked": false} -->
 
 ## Startup Order
 
@@ -59,8 +59,13 @@ REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
 PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
-Current active tranche: `CCMAI-RUNTIME-022` / F02-A Facebook sync window
-coverage is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `583c51c` and Codex's
+Current active tranche: `CCMAI-RUNTIME-023` / F02-B Pancake conversation-window
+coverage is DISPATCH_READY at [SPEC](docs/specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_023.md). Dispatcher authority
+was seeded at `5b785d5` before BUILD; Claude is the next worker and Codex the
+independent reviewer. Zalo remains a separate F02 tranche. Previous tranche
+`CCMAI-RUNTIME-022` / F02-A Facebook sync window coverage is REVIEW_PASS /
+FREEZE_OPEN after Claude BUILD `583c51c` and Codex's
 [independent review](docs/reviews/CCMAI_RUNTIME_022_F02A_INDEPENDENT_REVIEW_2026-10-01.md)
 with a small same-scope repair at [SPEC](docs/specs/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_2026-10-01.md)
 and [work order](docs/work_orders/CCMAI_RUNTIME_022.md). Dispatcher authority

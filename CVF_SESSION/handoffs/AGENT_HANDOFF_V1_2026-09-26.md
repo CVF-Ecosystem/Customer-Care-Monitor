@@ -5,11 +5,15 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-022 F02-A REVIEW_PASS / FREEZE_OPEN; R021 F01-B, GOV-001 and F08 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
-- Active role: REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR (Codex)
-- Next allowed move: CCMAI-RUNTIME-022 F02-A Facebook coverage has independent REVIEW_PASS / FREEZE_OPEN after Codex same-scope repair and review evidence. Codex synchronizes continuity and continues bounded F02 Pancake/Zalo planning; F02 as a whole remains OPEN. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-023 F02-B DISPATCH_READY; R022 Facebook, R021 F01-B, GOV-001 and F08 REVIEW_PASS / FREEZE_OPEN; S1 IN_PROGRESS)
+- Active role: ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-023 F02-B Pancake conversation coverage is DISPATCH_READY under the dispatcher seed and bounded SPEC/work order. Claude rehydrates continuity, acknowledges IMPLEMENTATION_WORKER in the active handoff, then makes one local BUILD commit and returns REVIEW_PENDING to independent Codex REVIEW. R022 Facebook stays REVIEW_PASS / FREEZE_OPEN; F02 remains OPEN for Zalo. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-023 — F02-B Pancake sync coverage (2026-10-01)
+
+- Tranche transition and role acknowledgment (Codex): after R022 independent REVIEW_PASS at `95aab5c`, canonical continuity was rehydrated and doctor passed 25/25. Source audit found Pancake's 100-row success cap, short-page and repeated-cursor success, moving `until`, and finish-time checkpoint; Zalo's offset/no-`since` behavior differs enough for a later tranche. The official Pancake OpenAPI retrieved 2026-10-01 documents the v2 endpoint, `last_conversation_id` and `since`/`until` filters but no short-page terminal guarantee. Codex transitioned `ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR` for the [F02-B SPEC](../../docs/specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md) and [R023 work order](../../docs/work_orders/CCMAI_RUNTIME_023.md). Dispatcher-owned seed `5b785d5` predates BUILD. Claude next IMPLEMENTATION_WORKER/COMMIT_STEWARD after its own rehydration and handoff acknowledgment; Codex independently reviews. This is planning only; no product edit/test, real channel/provider call, persistent DB, push, deployment or FREEZE.
 
 ## CCMAI-RUNTIME-022 — F02-A Facebook sync coverage (2026-10-01)
 
