@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-023",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_023.md",
+  "sourcePlanningCommit": "95aab5c497285048edd81a02cd92037c4a47211b",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/sync.go",
+    "backend/engine/sync*_test.go",
+    "backend/channels/pancake.go",
+    "backend/channels/pancake*_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_023.md",
+    "docs/specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "non_pancake_adapter_change",
+    "adapter_interface_change",
+    "checkpoint_schema_change"
+  ]
+}

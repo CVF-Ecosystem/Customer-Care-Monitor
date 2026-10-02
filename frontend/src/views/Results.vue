@@ -187,6 +187,7 @@
             <div class="d-flex ga-2">
               <v-text-field v-model="tuNgay" type="date" density="compact" variant="outlined" :label="$t('from_date')" hide-details @update:model-value="preset = 'custom'" />
               <v-text-field v-model="denNgay" type="date" density="compact" variant="outlined" :label="$t('to_date')" hide-details @update:model-value="preset = 'custom'" />
+              <span class="text-caption text-medium-emphasis" data-testid="vn-date-note">{{ $t('vn_date_note') }}</span>
             </div>
           </v-card>
         </v-menu>
@@ -408,6 +409,7 @@
           <div class="d-flex ga-2 mb-3">
             <v-text-field v-model="tuNgay" type="date" density="compact" variant="outlined" :label="$t('from_date')" hide-details @update:model-value="preset = 'custom'" />
             <v-text-field v-model="denNgay" type="date" density="compact" variant="outlined" :label="$t('to_date')" hide-details @update:model-value="preset = 'custom'" />
+            <span class="text-caption text-medium-emphasis" data-testid="vn-date-note-mobile">{{ $t('vn_date_note') }}</span>
           </div>
 
           <v-select
@@ -580,6 +582,7 @@ import SourceStatusPanel from '../components/ui/SourceStatusPanel.vue'
 import VerdictChip from '../components/ui/VerdictChip.vue'
 import { normalizeSourceStatus, verdictFromSeverity, type Verdict } from '../utils/review'
 import { formatDateTime, type UiLocale } from '../utils/format'
+import { presetRange, type DatePreset } from '../utils/businessDay'
 
 interface IssueItem {
   rule_name: string
@@ -747,11 +750,7 @@ function doiChon(arr: string[], v: string) {
   else arr.push(v)
 }
 
-function dinhDang(d: Date) {
-  const hai = (n: number) => String(n).padStart(2, '0')
-  return `${d.getFullYear()}-${hai(d.getMonth() + 1)}-${hai(d.getDate())}`
-}
-
+// CCMAI-RUNTIME-026: presets are Vietnam calendar dates (UTC+7), independent of the browser zone.
 function apDungPreset(v: string) {
   preset.value = v
   if (v === 'all') {
@@ -759,14 +758,9 @@ function apDungPreset(v: string) {
     denNgay.value = ''
     return
   }
-  const d = new Date()
-  const y = d.getFullYear()
-  const m = d.getMonth()
-  denNgay.value = dinhDang(d)
-  if (v === 'today') tuNgay.value = dinhDang(d)
-  else if (v === '7days') tuNgay.value = dinhDang(new Date(y, m, d.getDate() - 7))
-  else if (v === '28days') tuNgay.value = dinhDang(new Date(y, m, d.getDate() - 28))
-  else if (v === 'month') tuNgay.value = dinhDang(new Date(y, m, 1))
+  const range = presetRange(v as DatePreset)
+  tuNgay.value = range.from
+  denNgay.value = range.to
 }
 
 function xoaLoc() {

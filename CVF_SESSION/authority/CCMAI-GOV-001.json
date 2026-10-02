@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-GOV-001",
+  "authorityKind": "DISPATCHER_OWNED_REPAIR_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_GOV_001.md",
+  "sourcePlanningCommit": "8e776b51e9019b1f4471eabecc6e3d54d36f7a26",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "scripts/cvf_downstream_gate*.py",
+    "scripts/tests/test_cvf_downstream_gate*.py",
+    "CVF_SESSION/tranches/**",
+    ".github/workflows/**",
+    "AGENTS.md",
+    "docs/work_orders/CCMAI_GOV_001.md",
+    "docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md",
+    "docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md",
+    "docs/roadmaps/**"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "product_source_change",
+    "persistent_db",
+    "secret_commit"
+  ],
+  "bootstrapException": "Reviewer seeded this authority after the first GOV-001 BUILD to repair a discovered self-attested scope gap. Future tranches must seed authority before BUILD. This seed does not approve the BUILD or rewrite its original work order."
+}

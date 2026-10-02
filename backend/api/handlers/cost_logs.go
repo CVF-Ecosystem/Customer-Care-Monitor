@@ -24,19 +24,17 @@ func ListCostLogs(c *gin.Context) {
 		perPage = 100
 	}
 
-	from := c.Query("from")
-	to := c.Query("to")
+	// CCMAI-RUNTIME-026: Vietnam business days, [from, to+1 day); list and total share the interval.
+	rng, ok := requestBusinessRange(c)
+	if !ok {
+		return
+	}
 
 	query := db.DB.Where("tenant_id = ?", tenantID)
 	if provider != "" {
 		query = query.Where("provider = ?", provider)
 	}
-	if from != "" {
-		query = query.Where("created_at >= ?", from+" 00:00:00")
-	}
-	if to != "" {
-		query = query.Where("created_at <= ?", to+" 23:59:59")
-	}
+	query = rng.where(query, "created_at")
 
 	var total int64
 	query.Model(&models.AIUsageLog{}).Count(&total)

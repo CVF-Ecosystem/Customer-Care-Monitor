@@ -37,13 +37,11 @@
           </div>
           <div class="d-flex align-center justify-space-between mb-2">
             <span class="text-caption text-grey">{{ $t('sync_status') }}</span>
-            <v-chip size="x-small" :color="syncColor(ch.last_sync_status)" variant="tonal">
-              {{ syncLabel(ch.last_sync_status) }}
-            </v-chip>
+            <SyncStatusChip :status="ch.last_sync_status" />
           </div>
           <div class="d-flex align-center justify-space-between mb-3">
-            <span class="text-caption text-grey">{{ $t('last_sync') }}</span>
-            <span class="text-body-2">{{ ch.last_sync_at ? new Date(ch.last_sync_at).toLocaleString() : '—' }}</span>
+            <span class="text-caption text-grey">{{ $t('ch_last_success_sync') }}</span>
+            <span class="text-body-2" data-test="last-success">{{ ch.last_sync_at ? new Date(ch.last_sync_at).toLocaleString() : $t('ch_no_success_yet') }}</span>
           </div>
 
           <v-divider class="mb-3" />
@@ -51,8 +49,8 @@
             <v-btn size="small" variant="tonal" color="primary" prepend-icon="mdi-sync" :loading="syncing === ch.id" @click="syncNow(ch.id)">
               {{ $t('sync_now') }}
             </v-btn>
-            <v-btn v-if="ch.last_sync_status === 'error' && ch.channel_type !== 'pancake'" size="small" variant="tonal" color="warning" prepend-icon="mdi-link-variant" :loading="reauthing === ch.id" @click="reauthChannel(ch.id)">
-              Kết nối lại
+            <v-btn v-if="ch.last_sync_status === 'error' && ch.channel_type !== 'pancake'" size="small" variant="text" prepend-icon="mdi-link-variant" :title="$t('ch_reauth_hint')" data-test="reauth" :loading="reauthing === ch.id" @click="reauthChannel(ch.id)">
+              {{ $t('ch_reauth_optional') }}
             </v-btn>
             <v-btn size="small" variant="text" color="primary" @click="testConn(ch.id)">
               {{ $t('test_connection') }}
@@ -214,6 +212,7 @@ import { useChannelStore } from '../stores/channels'
 import { useAuthStore } from '../stores/auth'
 import api from '../api'
 import { channelTypeInfo } from '../composables/channelTypes'
+import SyncStatusChip from '../components/ui/SyncStatusChip.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -352,7 +351,7 @@ async function syncNow(channelId: string) {
   syncing.value = channelId
   try {
     await channelStore.syncChannel(tenantId.value, channelId)
-    showSnack('Đã bắt đầu đồng bộ; kết quả hiển thị ở trạng thái kênh', 'info')
+    showSnack(t('ch_sync_started'), 'info')
     await channelStore.fetchChannels(tenantId.value)
   } catch (e: any) {
     showSnack(e?.response?.data?.error || t('error'), 'error')
@@ -388,22 +387,6 @@ async function remove(channelId: string) {
   if (confirm('Delete this channel?')) {
     await channelStore.deleteChannel(tenantId.value, channelId)
   }
-}
-
-function syncColor(status: string) {
-  if (status === 'success') return 'success'
-  if (status === 'partial') return 'warning'
-  if (status === 'error') return 'error'
-  if (status === 'syncing') return 'info'
-  return 'grey'
-}
-
-function syncLabel(status: string) {
-  if (status === 'success') return 'Thành công'
-  if (status === 'partial') return 'Một phần'
-  if (status === 'error') return 'Lỗi'
-  if (status === 'syncing') return 'Đang đồng bộ'
-  return '—'
 }
 
 function showSnack(text: string, color: string) {

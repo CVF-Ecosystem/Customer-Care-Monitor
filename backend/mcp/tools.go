@@ -28,12 +28,12 @@ func getAllTools() []ToolDefinition {
 	return []ToolDefinition{
 		{
 			Name:        "cqa_list_tenants",
-			Description: "List all companies the user has access to, with summary stats (channels, jobs, conversations).",
+			Description: "List the companies the user has access to (id, name, slug only).",
 			InputSchema: InputSchema{Type: "object"},
 		},
 		{
 			Name:        "cqa_get_tenant",
-			Description: "Get details of a specific company including settings and stats overview.",
+			Description: "Get the id, name and slug of a specific company the user has access to.",
 			InputSchema: InputSchema{
 				Type: "object",
 				Properties: map[string]Property{

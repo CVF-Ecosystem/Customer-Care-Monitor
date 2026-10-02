@@ -1,9 +1,15 @@
-﻿# Project Session Memory
+# Project Session Memory
 
 Memory class: POINTER_RECORD
 
 This is the project continuity front door. It is CVF-governed project state,
 not provider-specific memory and not a chat transcript.
+
+Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it must match
+`CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
+`IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
+
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md", "activeTranche": "CCMAI-RUNTIME-031", "parked": true} -->
 
 ## Startup Order
 
@@ -13,6 +19,19 @@ not provider-specific memory and not a chat transcript.
 4. Read `IMPLEMENTATION_STATUS.json` and `docs/INDEX.md`.
 5. State current mode, active handoff, next allowed move, parked checkpoint,
    and active role before material work.
+6. Read the shared learning pointers below when preparing BUILD/REPAIR, continuity synchronization, mutation evidence or resource cleanup.
+
+## Shared cross-agent learning (2026-10-02)
+
+- [Sync coverage evidence layers](docs/reviews/learnings/feedback_sync_coverage_evidence_layers.md): distinguish conversation/message/local-storage/live-channel/governance proof before completeness or FREEZE claims.
+
+Owner-agreed convention: `docs/reviews/learnings/` stores reusable findings and lessons for immediate project improvement and CVF parent intake. Read [the folder convention](docs/reviews/learnings/README.md) when recording a new finding or preparing upstream transfer. Promote reusable findings from provider-local memory into a shared record during the handling turn; track project application/evidence and upstream disposition separately. Apply relevant lessons before similar work; do not wait for parent adoption.
+
+- [Downstream gate learning intake](docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md): packet for CVF parent assessment of continuity/doctor/portable-gate and reviewer-routing gaps; includes linked source evidence and disposition.
+- [Shell cleanup and MSYS paths](docs/reviews/learnings/feedback_shell_cleanup_and_paths.md): separate teardown/file deletion/verification; verify absolute targets; prefer PowerShell literal paths; scope MSYS_NO_PATHCONV to native invocations when applicable. Shell incident is owner-reported, not reproduced in this intake.
+- [Repair workflow and evidence](docs/reviews/learnings/feedback_cvf_repair_workflow.md): before-edit acknowledgment/BUILD/preflight; prevalidated rerunnable continuity sync; applied mutation plus byte restoration; discriminate survivors; retain unexplained failures and NOT RUN labels.
+
+These committed repository records are the shared learning references; provider-local feedback is supplemental. They are directly indexed through the artifact registry and generated docs index, with source/confidence and proposed parent disposition. Read only the applicable record at the task trigger; no full-history read is needed. Learning documentation does not grant product acceptance; use the current tranche disposition below for F07 status. Parent helper/enforcement proposals remain deferred through `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`.
 
 ## Mandatory Continuity Rehydration
 
@@ -31,7 +50,153 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-Current mode: `REVIEW` for `CCMAI-IDENTITY-001`: owner-directed README and Go
+## Owner authorization and F01–F08 backlog (2026-09-30)
+
+Parent CVF learning intake (Codex, 2026-10-01):
+`docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
+records the real downstream continuity/doctor/portable-checker gap and a
+Finding-To-Governance Learning disposition. Another agent owns any CVF parent
+implementation and tests. CCMAI-GOV-001 GOV1-R1 passed local independent
+re-review at `7bb28d4`, but draft PR #1 exposed a new hosted governance-job
+failure; the Claude GOV1-CI1 repair passed independent local review and the
+new PR head `3e0b37e` passed all four hosted workflows. FREEZE remains open.
+
+CCMAI-GOV-001 planning (Codex, 2026-09-30): after R020 independent review
+commit `df0c4cc`, canonical continuity was rehydrated and the role route
+ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR was acknowledged in the active
+handoff. Core doctor 25/25 and downstream catalog `-Check` do not compare the
+state/handoff/memory/status pointers; core mode and dispatch checkers depend on
+core-only schemas. The applicability decision, SPEC and bounded work order
+route a portable downstream gate package to Claude for one local
+REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
+PR after review is recorded; no push, provider call, deployment or FREEZE in
+this planning step. R020 stays parked and F08 public Actions proof is pending.
+
+Current active tranche: `CCMAI-RUNTIME-031` / F02-E is REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD `8ed6d0b39195ade513906571daaaf537ddeb90a9`, after [independent Codex review](docs/reviews/CCMAI_RUNTIME_031_F02E_INDEPENDENT_REVIEW_2026-10-02.md) (2026-10-03). Local F02E-01..09 accepted: channels77 top-level/88 total, new engine2 top-level/8 total, original-source14 behavioral failures, eight applied mutations killed/restored, build/vet/gate46 PASS. Separate monolithic engine209 top-level/444 total PASS,0 FAIL/SKIP,628.731 s on isolated max_connections1000. First reviewer full backend963 PASS/3 SKIP (one DB1040 skip), worker default10m timeout/M1 INCONCLUSIVE and race NOT RUN remain explicit; timeout/leak cause not established. Seed61eda32442b6049e0ed37a00f6664c7fe880da94/source unchanged; no reviewer product/test repair. Meta endpoint compatibility/global F02/Zalo messages/live/provider-governance and FREEZE remain OPEN. ORCHESTRATOR may plan remaining Zalo messages under separate INTAKE/DESIGN/SPEC/WORK_ORDER; no new BUILD/API/credential/persistent-DB/parent/push/deploy authority. BOOTSTRAP_MIGRATION_PENDING nonblocking.
+
+Previous tranche: `CCMAI-RUNTIME-030` / F02-D is REVIEW_PASS / FREEZE_OPEN after independent Codex review of exact Claude BUILD `31daee1d2f736166c4514ec2487d9b94b94727cd` ([review](docs/reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md)). Local Pancake message traversal contract F02D-01..09 accepted: explicit-empty terminal, strict rows, physical offsets, bounded pages and stable chronological mapping; actual adapter/engine/disposable-MySQL storage/partial/checkpoint/dispatch/retry/replay verified. Independent channels61 top-level/69 total, new engine2 top-level/5 total, selected ownership/attachment/checkpoint regressions7 top-level, build/vet/gate46 PASS. Original-source12 failures and four applied mutations killed, byte-restored baseline PASS. No reviewer product/test fix; worker full-backend/first M4 survivor remain attributed. Seed unchanged. Race NOT RUN; live offset/global F02/credentials/provider/governance proof remains OPEN. Next assess remaining Facebook/Zalo messages and bounded live proof under separate authority; no push/deploy/parent edit or FREEZE. BOOTSTRAP_MIGRATION_PENDING nonblocking.
+
+Previous tranche: `CCMAI-RUNTIME-029` / F07 is REVIEW_PASS / FREEZE_OPEN after independent Codex review of exact Claude BUILD `4c6653021878827cba678adb1ae87e9a196d5e85` ([review](docs/reviews/CCMAI_RUNTIME_029_F07_INDEPENDENT_REVIEW_2026-10-02.md); [worker evidence](docs/reviews/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_BUILD_2026-10-02.md)). All seven requirements and A..F accepted for neutral unavailable service-health presentation only; no measured health. Independent frontend268, forced typecheck/build, gate46; old-source13 FAIL and one applied success-color mutation killed, byte-restored focused13 PASS; four crops visually inspected. Roadmap stale prose corrected and added to shared learning; worker DB-fixture NOT RUN wording clarified against disposable MySQL capture environment. No reviewer product repair; other mutations/capture reports/cleanup remain worker evidence. Seed unchanged, roles independent. R028/R027/R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F02 live/message evidence and FREEZE readiness need separate bounded assessment. No provider/channel/credential action, persistent DB, parent edit, push/deploy or FREEZE. BOOTSTRAP_MIGRATION_PENDING remains nonblocking.
+
+Historical post-review assessment (2026-10-02): [F02/FREEZE assessment](docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md) records accepted conversation enumeration and remaining message/live proof. That recommendation is now implemented and independently reviewed in R030 above; live/API/credential action has not started. Scoped local FREEZE may be assessed against original acceptance, without claiming global F02/pilot/release/governance readiness. Shared coverage learning linked above; source candidates not reproduced failures. R029 and predecessor dispositions remain unchanged.
+
+Previous tranche: `CCMAI-RUNTIME-028` / F06 R028-R2 is REVIEW_PASS / FREEZE_OPEN after independent Codex re-review of Claude repair `8035cb05a2d66778810fb0acb89d208238743cfc` ([re-review](docs/reviews/CCMAI_RUNTIME_028_R2_INDEPENDENT_REREVIEW_2026-10-02.md), [BUILD evidence](docs/reviews/RUNTIME_JOB_RUN_OWNERSHIP_F06_BUILD_2026-10-02.md)). Both R2 findings settled: fixed-class early-failure application log/stored message and route tests waiting for terminal state plus ownership release, with engine/handler barrier coverage. Original/R1 probes retained/pass; independent engine56, handlers27 (zero skips), frontend255, forced typecheck/build and gate46 pass; disposable DB/network resources removed. Worker full914/R019/mutations remain separate evidence. Seed `6958e281d190935578809bb9900dd95d2a29509e` unchanged; reviewer makes no product fix. Race NOT RUN; inherited GORM/SQL sinks uncertified; first truncated handler fail unexplained; R1 late acknowledgment and R2 partial-sync failure/recovery remain historical, with no procedural-compliance claim. Ownership remains local plus DB admission; crash recovery/distributed cancellation/MCP placeholder/dead helper/F02 live-message limits/tenant timezone remain separate. Codex may prepare separate F07 planning before any Claude BUILD. R027/F05 and R025/R026 retain REVIEW_PASS / FREEZE_OPEN. No real provider/channel call, persistent DB, push/deployment, parent-CVF work or FREEZE. Third same-root repair would require REVIEW_COST_ESCALATION_REQUIRED. Compact bootstrap absent: BOOTSTRAP_MIGRATION_PENDING, nonblocking.
+
+Previous tranche: `CCMAI-RUNTIME-027` / F05 R027-R1 is REVIEW_PASS / FREEZE_OPEN after independent Codex re-review of Claude repair `a9bff2275239f77d9af18995cae08e9f8933642f` on BUILD `a1de36b6720cae4341f5937f6d9100b13bb48366`. [Re-review](docs/reviews/CCMAI_RUNTIME_027_R1_INDEPENDENT_REREVIEW_2026-10-02.md), appended [worker evidence](docs/reviews/RUNTIME_ANALYZER_MODES_F05_BUILD_2026-10-02.md) and [work order](docs/work_orders/CCMAI_RUNTIME_027.md) settle F05-R1-01..04: strict limit/full admission, one-sided dates/full-context copy, every explicit mode's checked terminal job status with no checkpoint, route/date/evaluation/terminal acceptance evidence. Original reviewer probes remain intact/pass. Independently engine 62/62, handlers 18/18 (zero MySQL skips), frontend 239/239, forced typecheck/build and gate tests 46/46 PASS; disposable resources removed. Worker full-backend/R019/old-source/mutations remain worker evidence. Unchanged seed `71c7ee761a1147d502d815ff5461e92f1c30bd4c`; no reviewer product repair. Dead helper awaits separate scope, since-last stays event-time, synthetic proof does not establish CVF AI governance. R025/R026 remain REVIEW_PASS / FREEZE_OPEN. At R027 acceptance the next move was separate F06 planning; R028 now dispatches that bounded order; F02 live/message limits, F07/mixed storage/tenant timezone remain separate. No real provider/channel call, persistent DB, push/deployment, parent-CVF work or FREEZE. Compact bootstrap absent: BOOTSTRAP_MIGRATION_PENDING, nonblocking.
+
+Previous tranche: `CCMAI-RUNTIME-026` / F04 VN business-day read/filter
+consistency is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `41b6c50` and
+bounded Codex reviewer repairs (evidence
+[BUILD record](docs/reviews/RUNTIME_BUSINESS_DAY_FILTERS_F04_BUILD_2026-10-02.md);
+[SPEC](docs/specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md),
+[work order](docs/work_orders/CCMAI_RUNTIME_026.md), seed `8f366eb`). Dashboard,
+Results list/export, Cost Logs and message export now parse date-only Vietnam
+dates once, use exclusive next-midnight bounds with typed instants (driver
+location stays authoritative), bucket the Dashboard series by VN day without
+DATE() on stored wall times, and the frontend presets are Vietnam calendar dates
+independent of the browser zone. [Independent review](docs/reviews/CCMAI_RUNTIME_026_F04_INDEPENDENT_REVIEW_2026-10-02.md)
+accepts the read/report contract after actual-bound extrema repairs. Final focused
+MySQL tests 26/26 and frontend 214/214 pass; next is bounded F05 planning.
+Mixed historical storage/tenant timezone activation, F05/F06 and F02 live/message
+limits remain separate; FREEZE stays OPEN.
+
+Previous tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
+is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `b53f564` and bounded Codex
+reviewer repairs (evidence
+[BUILD record](docs/reviews/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_BUILD_2026-10-01.md);
+[SPEC](docs/specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md),
+[work order](docs/work_orders/CCMAI_RUNTIME_025.md), seed `517406f`). Ordinary
+unlimited runs now select by source version (full local snapshot vs the latest
+job-bound evaluation snapshot, provenance-checked), share one decision between
+single and batch, and record a scan-start checkpoint only with a checked
+transactional terminal write. [Independent review](docs/reviews/CCMAI_RUNTIME_025_F03_INDEPENDENT_REVIEW_2026-10-02.md)
+records terminal cancellation/persistence defects and their repairs, plus 46
+passing focused MySQL tests. F04 planning is dispatched as R026; other modes/F05/F06
+remain separate and OPEN.
+
+Previous tranche: `CCMAI-RUNTIME-024` / F02-C Zalo conversation coverage is
+REVIEW_PASS / FREEZE_OPEN after Claude BUILD `561bfaebdf9c14bbf420a8e48101742c16b24047`
+and Codex independent review with a bounded envelope-type repair at [SPEC](docs/specs/RUNTIME_ZALO_SYNC_COVERAGE_F02C_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_024.md). Dispatcher seed
+`b145d71` predates BUILD; Claude implemented and Codex independently reviewed.
+BUILD evidence is [recorded here](docs/reviews/RUNTIME_ZALO_SYNC_COVERAGE_F02C_BUILD_2026-10-01.md);
+[independent review](docs/reviews/CCMAI_RUNTIME_024_F02C_INDEPENDENT_REVIEW_2026-10-01.md)
+records the two failing probes, reviewer repair and passing checks. F03 is now dispatched as R025. Offset stability on real Zalo
+and message completeness remain unproved. F02 remains OPEN.
+
+Previous tranche: `CCMAI-RUNTIME-023` / F02-B Pancake conversation-window
+coverage is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `1fa8e14` and Codex's
+[independent review and same-scope repair](docs/reviews/CCMAI_RUNTIME_023_F02B_INDEPENDENT_REVIEW_2026-10-01.md)
+at [SPEC](docs/specs/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_023.md). Dispatcher authority
+was seeded at `5b785d5` before BUILD; Codex is the
+independent reviewer. Zalo remains a separate F02 tranche. Previous tranche
+`CCMAI-RUNTIME-022` / F02-A Facebook sync window coverage is REVIEW_PASS /
+FREEZE_OPEN after Claude BUILD `583c51c` and Codex's
+[independent review](docs/reviews/CCMAI_RUNTIME_022_F02A_INDEPENDENT_REVIEW_2026-10-01.md)
+with a small same-scope repair at [SPEC](docs/specs/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_022.md). Dispatcher authority
+was seeded at `3f101ca` before BUILD; Codex reviewed it independently.
+F02 remains OPEN for Zalo/F02-C and live coverage limits. Previous tranche `CCMAI-RUNTIME-021` / F01-B MCP permission admission is
+REVIEW_PASS / FREEZE_OPEN after independent Codex review of Claude BUILD
+`b46d587ac350f2dfef76a6dac7e352604be0a037` at
+[SPEC](docs/specs/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_2026-10-01.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_021.md). Dispatcher authority
+was seeded in `8fa6ccb` before BUILD; the [review](docs/reviews/CCMAI_RUNTIME_021_F01B_INDEPENDENT_REVIEW_2026-10-01.md)
+records the exact diff and independent MCP tests. `CCMAI-GOV-001` / downstream machine gates remains
+REVIEW_PASS / FREEZE_OPEN for GOV1-CI1 local repair `ae44c2e` after
+[Codex review](docs/reviews/CCMAI_GOV_001_CI1_INDEPENDENT_REVIEW_2026-10-01.md).
+The first [hosted review](docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md)
+found a generated-bytecode preflight failure at draft PR #1 SHA `19fdc4e`.
+The [reviewed rerun](docs/reviews/CCMAI_PR_001_GREEN_CI_EVIDENCE_2026-10-01.md)
+at remote head `3e0b37e` passed Governance Ubuntu/Windows, Backend F08 with
+five DB sentinels, Frontend and Docs. GOV-001 and F08 are REVIEW_PASS /
+FREEZE_OPEN; PR stays draft, unmerged. The R020 F01-A dependency checkpoint
+was satisfied by the reviewed PR run; F01-B now passed REVIEW. F01 source
+remediation across HTTP/MCP is reviewed, while FREEZE/deployment remain open.
+The [applicability decision](docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md),
+[SPEC](docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md) and
+[work order](docs/work_orders/CCMAI_GOV_001.md) define the gate package.
+R020 F01-A HTTP agent admission is REVIEW_PASS / FREEZE_OPEN after
+independent Codex REVIEW of Claude BUILD `73cedc2`; its former parked
+dependency condition has been satisfied.
+[Review](docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md),
+[SPEC](docs/specs/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01_2026-09-30.md)
+and [work order](docs/work_orders/CCMAI_RUNTIME_020.md) bind supported
+run/query pairs to tenant permissions. MCP tools were the separate F01-B
+authorization surface and R021 has passed independent REVIEW. Previous tranche:
+`CCMAI-RUNTIME-019` / F08 R019-R1 repair is at REVIEW_PASS / FREEZE_OPEN, with
+`docs/specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md` and
+`docs/work_orders/CCMAI_RUNTIME_019.md`. Claude's local BUILD commit is
+`bc7d067`; Codex's independent review at
+`docs/reviews/CCMAI_RUNTIME_019_F08_INDEPENDENT_REVIEW_2026-09-30.md`
+found that malformed Go JSON and one existing English DB-unavailable skip can
+still pass the BUILD gate. Claude's repair commit `4f3a5c3` passed Codex's
+independent re-review at `docs/reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md`.
+The public GitHub Actions run remains unverified, so F08 is open for that
+evidence. Disposable MySQL and CI-only synthetic data were used; no provider
+call, persistent DB, push, deployment or FREEZE. Other F01–F07 findings remain OPEN.
+
+Owner accepted F01–F08 from the independent local source review at
+`docs/reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md` as OPEN
+remediation backlog in `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`.
+The report commit is `7481196`; the reviewed local HEAD is `698612f`; relevant
+source is unchanged between them. No product repair or FREEZE follows from
+accepting the findings. R019 locally repairs F08's CI DB gate; public workflow
+evidence remains pending. Each other finding needs its own bounded work order,
+acceptance evidence and independent REVIEW.
+
+Owner states the current project data is test data and authorizes use of the
+Alibaba API key when needed for project tests/evidence. This permission persists
+for the same test scope; do not ask again solely because a future test needs
+that key. Read it from an existing secret source without printing or committing
+its value. A future execution work order must record provider/model, data sent,
+call/cost bounds, sanitized evidence and cleanup. Reassess if the data set or
+external effect changes. No Alibaba call or data mutation occurred in this
+roadmap amendment; live provider evidence remains mandatory for any CVF
+governance-runtime claim.
+
+Historical state (2026-09-27): `REVIEW` for `CCMAI-IDENTITY-001`: owner-directed README and Go
 module identity correction merged as PR #6. Evidence:
 `docs/reviews/PRODUCT_IDENTITY_2026-09-27.md`. Authority:
 `docs/work_orders/CCMAI_IDENTITY_001.md`.
@@ -313,3 +478,63 @@ CCMAI-RUNTIME-018 independent R2 REVIEW (Codex, 2026-09-29): rehydrated at `f4bc
 CCMAI-RUNTIME-018 R018-R1 repair (Claude, 2026-09-29): rehydrated at `947bb0c`, role REVIEWER (Codex) -> REPAIR_WORKER (Claude) recorded before the edit. The legacy backfill's type, external-ID, status and error-prefix comparisons are now BINARY (case-sensitive) in `backend/db/mysql.go`; five wrong-case matrix rows added; mutations M12-M15 caught; full backend PASS. Evidence addendum in `docs/reviews/RUNTIME_DEMO_CHANNEL_SYNC_ADMISSION_S1_BUILD_2026-09-29.md`. Local commit `REVIEW_PENDING` for Codex re-review; no self-PASS, FREEZE, push or real provider/channel call.
 
 CCMAI-RUNTIME-018 R018-R1 independent re-review (Codex, 2026-09-29): role COMMIT_STEWARD (Claude) -> REVIEWER (Codex), then SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR for records/routing. Exact repair diff stays within allowed DB paths; four BINARY comparisons and five wrong-case cases resolve R018-R1 while canonical/idempotent behavior remains. Codex reran focused DB tests on disposable MySQL (PASS, 1.146 s; resources removed) and verified binary SQL semantics; Claude's full backend/build/vet and M12-M15 evidence inspected. `REVIEW_PASS / FREEZE_OPEN`, evidence `docs/reviews/CCMAI_RUNTIME_018_R1_INDEPENDENT_REREVIEW_2026-09-29.md`. S1 IN_PROGRESS; no push, real provider/channel call or FREEZE. Zalo/legacy crash recovery and UX-016 F1 stay separate.
+
+CCMAI-UX-016-F1 WORK_ORDER (Codex, 2026-09-30): user directed roadmap continuation with Codex as orchestrator/reviewer and Claude as worker. Rehydrated current records, doctor PASS 25/25 and ran knowledge ingest; compact bootstrap model is absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking). Role transition ORCHESTRATOR -> WORK_ORDER_AUTHOR recorded in active handoff. `docs/work_orders/CCMAI_UX_016_F1.md` inherits the accepted UX-016 SPEC and independent reviewer finding F1; it authorizes Claude to commit only a deterministic mounted Dashboard stale-response test (newer QC 7 before older QC 99) with a guard-removal mutation detector, evidence/continuity and one local REVIEW_PENDING commit. Codex will independently review. No production source change is authorized; Zalo/legacy recovery, provider/channel calls, push, deployment and FREEZE remain outside this tranche.
+
+CCMAI-UX-016-F1 BUILD (Claude, 2026-09-30): `dashboard-qc-card.spec.ts` gains a deterministic out-of-order test (newer QC 7 first, older QC 99 after; card stays 7). Guard-bypass mutation failed with 99 and was restored; focused, full frontend (171), vue-tsc, build, catalog, doctor 25/25 and diff check pass. Evidence `docs/reviews/CCMAI_UX_016_F1_BUILD_2026-09-30.md`. Status REVIEW_PENDING for Codex; no source change, push or FREEZE.
+
+CCMAI-UX-016-F1 independent REVIEW (Codex, 2026-09-30): rehydrated at `2dc34566`, role COMMIT_STEWARD (Claude) -> REVIEWER (Codex) recorded before review. Exact changed set stays within test, evidence and continuity; Dashboard.vue is unchanged. Codex independently reran focused Vitest (4/4 PASS) and inspected the BUILD guard-bypass mutation evidence (99 versus expected 7, then restored). `REVIEW_PASS / FREEZE_OPEN`; review `docs/reviews/CCMAI_UX_016_F1_INDEPENDENT_REVIEW_2026-09-30.md`. F1 is resolved; earlier UX-016 PASS stands. Role route REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR for records/routing. Synthetic UI evidence only; no provider/channel call, push, deployment, CVF runtime governance claim or FREEZE. Zalo/legacy/mixed-version crash recovery and S1 remain open.
+
+CCMAI-UX-017 WORK_ORDER (Codex, 2026-09-30): owner said “next” after UX-016-F1 REVIEW_PASS. Rehydrated current CVF state, doctor PASS 25/25 and knowledge ingest ran; compact bootstrap model absent (`BOOTSTRAP_MIGRATION_PENDING`, non-blocking). Role route ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR acknowledged in active handoff. Source audit: Channels list renders empty sync status as —; list/detail label the success-only checkpoint as generic last sync; generic error highlights reauth; detail poll timeout/fetch failure calls completion a failure without terminal evidence. API lacks last-attempt time, safe error reason and demo marker. `docs/specs/CHANNELS_SYNC_STATUS_TRUTH_UX017_2026-09-30.md` and `docs/work_orders/CCMAI_UX_017.md` bound Claude to frontend Channels list/detail, vi/en text and mounted synthetic UI tests, using the existing shared status chip; one local REVIEW_PENDING BUILD returns to independent Codex review. No source BUILD yet, provider/channel call, push, deployment, CVF governance claim or FREEZE. Zalo/legacy/mixed-version crash recovery stays separate.
+
+CCMAI-UX-017 BUILD (Claude, 2026-09-30): Channels list/detail sync-status presentation per SPEC (shared chip, "last successful sync" label, unconfirmed polling warning, optional neutral reauth) with 13 mounted synthetic tests, full frontend 184, vue-tsc, build, catalog, doctor 25/25 passing. Evidence `docs/reviews/CHANNELS_SYNC_STATUS_TRUTH_UX017_BUILD_2026-09-30.md`. REVIEW_PENDING for Codex; no backend change, push or FREEZE.
+
+CCMAI-UX-017 independent R2 REVIEW (Codex, 2026-09-30): rehydrated at `0e371eb`, role COMMIT_STEWARD (Claude) -> REVIEWER (Codex) acknowledged before exact diff/tests. Changed source paths comply; focused mounted UI suite independently passed 13/13. Disposition `CHANGES_REQUIRED / REVIEW_OPEN`: detail polling treats any non-`syncing` value as terminal, so empty/null/unknown after an accepted start becomes a false confirmed failure. Existing tests cover static chips but not this polling branch. Review `docs/reviews/CCMAI_UX_017_INDEPENDENT_REVIEW_2026-09-30.md`; same-scope UX017-R1 repair addendum in `docs/work_orders/CCMAI_UX_017.md` limits Claude to detail view, focused test, evidence and continuity, then one local REVIEW_PENDING commit for Codex re-review. BUILD evidence final changed-set list also erroneously includes IMPLEMENTATION_STATUS.json, which was absent from that commit; Claude is to correct the record. No reviewer source repair, provider/channel call, push, deployment, governance claim or FREEZE.
+
+CCMAI-UX-017 UX017-R1 repair (Claude, 2026-09-30): `ChannelDetail.vue` polling closes only on success/partial/error; empty/null/never/unknown poll answers are unconfirmed. Two new tests, mutation restoring the shortcut failed and was restored; focused 15, full frontend 186, vue-tsc, build, catalog, doctor 25/25 pass. Evidence amended in `docs/reviews/CHANNELS_SYNC_STATUS_TRUTH_UX017_BUILD_2026-09-30.md`. REVIEW_PENDING for Codex re-review; no push or FREEZE.
+
+CCMAI-UX-017 UX017-R1 independent re-review (Codex, 2026-09-30): rehydrated at `848bb73`, role COMMIT_STEWARD (Claude) -> REVIEWER (Codex) acknowledged before exact diff/tests. The repair stays within detail polling predicate, focused mounted tests, evidence and continuity. Only success/partial/error close as observed terminal results; empty/null/never/unknown show unconfirmed, and syncing continues. Codex independently reran focused 15/15 PASS and inspected the mutation evidence; the initial BUILD changed-set record was corrected. `REVIEW_PASS / FREEZE_OPEN`, review `docs/reviews/CCMAI_UX_017_R1_INDEPENDENT_REREVIEW_2026-09-30.md`. Role route REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR for records/routing. Synthetic UI evidence only; no provider/channel call, push, deployment, CVF runtime governance claim or FREEZE. S1 and Zalo/legacy/mixed-version recovery remain open.
+
+CCMAI-RUNTIME-019 / F08 BUILD (Claude, 2026-09-30): backend CI workflow runs the full suite on disposable MySQL 8 and a stdlib `go test -json` gate requiring five package-qualified DB sentinels to PASS with no DB-unavailable skips. Positive local disposable run (454 pass, gate exit 0) and real no-DB false-green reproduction (go test 0, gate 1) recorded in `docs/reviews/RUNTIME_CI_DB_TEST_GATE_F08_BUILD_2026-09-30.md`; catalog, doctor 25/25 pass. Actual GitHub Actions run unverified. REVIEW_PENDING for Codex; no push or FREEZE; F01-F07 open.
+
+CCMAI-RUNTIME-019 R019-R1 repair (Claude, 2026-09-30): the F08 gate now rejects invalid/damaged JSON records and the English "DB not available" skip; two new tests failed on the BUILD parser and pass now (11/11); BUILD positive log re-evaluated identically; catalog and doctor 25/25 pass. REVIEW_PENDING for Codex re-review; Actions run unverified; no push or FREEZE.
+
+CCMAI-RUNTIME-019 R019-R1 independent re-review (Codex, 2026-09-30): rehydrated at `4f3a5c3`; one stale memory pointer was aligned to REVIEW_PENDING before material review. Exact repair diff stays in the parser/tests and records; 11/11 parser tests and direct valid/malformed/truncated/English DB-skip/optional S3 probes all met the contract. `REVIEW_PASS / FREEZE_OPEN`; evidence `docs/reviews/CCMAI_RUNTIME_019_R1_INDEPENDENT_REREVIEW_2026-09-30.md`. Claude's positive DB-log replay is inherited, with the raw log unavailable for independent replay. Actual GitHub Actions run is unverified, so F08 public CI evidence remains open. Role route REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD -> ORCHESTRATOR for review records. No provider call, push, deployment or FREEZE; F01-F07 open.
+
+CCMAI-RUNTIME-020 F01-A planning (Codex, 2026-09-30): after R019 review commit `8cb55f8`, continuity was rehydrated and role route ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR acknowledged. SPEC and work order scope HTTP agent run/query authorization by requested tenant and exact action/resource. MCP tenant-only tools remain F01-B; neither R020 nor R019 closes F01/F08 public CI evidence. Claude next IMPLEMENTATION_WORKER after rehydration/handoff acknowledgment, then one local REVIEW_PENDING BUILD for independent Codex review. R2, disposable MySQL/synthetic dispatch only; no provider call, API key, push, deployment or FREEZE.
+
+CCMAI-RUNTIME-020 F01-A independent REVIEW and park (Codex, 2026-09-30): worker BUILD `73cedc2` sets state/handoff REVIEW_PENDING but leaves this memory pointer and `IMPLEMENTATION_STATUS.currentPhase` at WORK_ORDER; Codex reported BLOCKED_CONTINUITY_DRIFT, aligned those two pointers and rehydrated before source review. Exact HTTP permission matrix and reject-before-side-effect contract pass; focused API tests on disposable MySQL pass independently. BUILD full suite reports 474 pass, five F08 sentinels PASS and gate exit 0. `REVIEW_PASS / FREEZE_OPEN / PARKED`; review `docs/reviews/CCMAI_RUNTIME_020_F01A_INDEPENDENT_REVIEW_2026-09-30.md`. F01-B MCP remains open. Next move is downstream machine-gate inheritance, then authorized PR/F08 runner evidence. No provider call, push, deployment or FREEZE.
+
+CCMAI-RUNTIME-020 / F01-A BUILD (Claude, 2026-09-30): HTTP agent run/query permission admission per the SPEC matrix (shared `middleware.PermissionDenial`, fail-closed roles/permissions, generic 403, unsupported action 400 before config/dispatch). 20 new tests, five mutations detected, full backend 474 pass on disposable MySQL with the R019 gate passing. Evidence `docs/reviews/RUNTIME_AGENT_HTTP_PERMISSION_ADMISSION_F01A_BUILD_2026-09-30.md`. REVIEW_PENDING for Codex; F01 remains OPEN (MCP = F01-B); no push or FREEZE.
+
+CCMAI-GOV-001 BUILD (Claude, 2026-10-01): downstream machine gates implemented (`scripts/cvf_downstream_gate.py`, front marker, tranche record contract, governance and frontend PR workflows, AGENTS.md section, catalog registrations). Gate fails on the pre-migration tree and passes 7/7 now; 28 new tests and ten detected mutations; frontend, docs build, catalog, doctor 25/25 pass. Evidence `docs/reviews/CVF_DOWNSTREAM_MACHINE_GATES_GOV001_BUILD_2026-10-01.md`. REVIEW_PENDING for Codex; GitHub-hosted runs unverified; R020 parked; no push, merge or FREEZE.
+
+CCMAI-GOV-001 GOV1-R1 repair (Claude, 2026-10-01): downstream gate hardened (NUL-safe fail-closed Git handling, next-move and work-order status binding, authority-seed verification, SKIP reporting); 57 tests, 12 detected mutations, local preflight and PR-range dry run pass. Evidence `docs/reviews/CVF_DOWNSTREAM_MACHINE_GATES_GOV001_R1_BUILD_2026-10-01.md`. REVIEW_PENDING for Codex re-review; PR and F08 Actions evidence wait for REVIEW_PASS; R020 parked; no push, merge or FREEZE.
+
+CCMAI-RUNTIME-021 / F01-B BUILD (Claude, 2026-10-01): every MCP tool is bound to the requested tenant's stored membership and exact rights before any handler runs (explicit 12-tool table, checked membership lookup, unknown tool = RPC error with no DB access, generic denial, no SQL/permission data in logs); cqa_list_tenants and cqa_get_tenant now return only id/name/slug. 11 new test functions with a query observer, five mutations detected, full backend 495 pass on disposable MySQL with the R019 gate passing. cqa_trigger_job still dispatches nothing. Evidence `docs/reviews/RUNTIME_MCP_TOOL_PERMISSION_ADMISSION_F01B_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; F01 stays OPEN; no provider/channel call or governance claim.
+
+CCMAI-RUNTIME-022 / F02-A BUILD (Claude, 2026-10-01): Facebook conversation sync now enumerates the whole `since` window across every Graph page (inclusive boundary, no reliance on page order, dedupe by ID) and fails closed with ErrFacebookCoverageIncomplete on a missing/malformed page, row or `next` link, unsafe/cross-host/non-HTTPS/repeated cursor, cancelled context, positive limit that would truncate, or the 500-page budget; request errors no longer carry the access-token URL. The engine passes exhaustive mode (0) only for facebook; Pancake/Zalo keep limit 100 and F02 stays OPEN for them. A failed or incomplete window records error, keeps the previous success checkpoint and fires no after-sync job; retry/replay upserts without duplicates (real adapter + synthetic Graph transport + disposable MySQL). The new tests fail against the pre-BUILD source and eleven mutations of the new code were detected. Evidence `docs/reviews/RUNTIME_FACEBOOK_SYNC_COVERAGE_F02A_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; no real channel/provider call or governance claim.
+
+CCMAI-RUNTIME-023 / F02-B BUILD (Claude, 2026-10-01): Pancake conversation sync now walks the last_conversation_id chain (cursor = last physical row, including filtered COMMENT rows) with one fixed `until` until an explicit empty `conversations` array; short pages continue, every row is checked (inclusive `since`, no order assumption, dedupe), and missing/null/non-array pages, rows without a valid id/updated_at (even skipped ones), repeated cursors, page/API/429/read/decode/network failures, cancellation, an over-limit window and the 200-page budget all return an error (ErrPancakeCoverageIncomplete or the request error) with token-free text. The engine asks exhaustive mode for pancake (Facebook unchanged, Zalo still 100) and, for pancake only, records the success checkpoint as the second-rounded fetch start while updated_at keeps the completion time; failed/incomplete windows keep the old checkpoint and fire no after-sync. Real adapter + synthetic pages.fm transport + disposable MySQL prove 105 stored conversations/messages, failure/retry/replay and the delayed-run overlap. Evidence `docs/reviews/RUNTIME_PANCAKE_SYNC_COVERAGE_F02B_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; F02 stays OPEN for Zalo; no real channel/provider call or governance claim.
+
+CCMAI-RUNTIME-024 / F02-C BUILD (Claude, 2026-10-01): Zalo listrecentchat is enumerated by absolute row offset (count 10) to an explicit empty array; a short nonempty page continues at offset + physical rows. Every physical row is validated before filtering (JSON object envelope with error 0, explicit direct or nested array, src exactly 0/1, nonempty string customer id, positive integral millisecond time up to year 9999, decoded with UseNumber so large values stay exact); customers are deduped to the newest time (first seen on a tie). Repeated pages (same customer@time rows), the 500-page budget, cancellation before or after a response, any request/page error and a positive limit the window exceeds return ErrZaloCoverageIncomplete. Bodies are bounded to 8 MiB; non-2xx and malformed envelopes fail; errors and logs carry no URL, body, provider message, token or AppSecret, while callback/context causes stay reachable with errors.Is. Refresh still runs at most once with the same protocol, now requires a nonempty token pair before the callback, and keeps persistence-before-replacement. The engine asks exhaustive mode for zalo_oa and bounds its success checkpoint by the fetch start; FetchMessages mapping is unchanged and Zalo stays outside lease recovery. Evidence `docs/reviews/RUNTIME_ZALO_SYNC_COVERAGE_F02C_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; live offset stability and message coverage remain unproved, F02 stays OPEN; no real channel/provider call or governance claim.
+
+CCMAI-RUNTIME-025 / F03 BUILD (Claude, 2026-10-01): `isOrdinaryIncremental` names the covered mode (no full rerun, limit, dates, since-override or unanalyzed filter). In it every tenant/input-channel conversation is a candidate (ordered by last_message_at, id); each candidate's full local snapshot is compared with the snapshot linked to the latest committed conversation_evaluation of the same job and tenant (created_at DESC, id DESC) after VerifySnapshotProvenance: equal digest skips, no evaluation/legacy evaluation/different digest analyzes, a missing/misbound/tampered linked snapshot or query error is an error. The prepared snapshot is the one sent and saved, in single and batch alike. The checkpoint is the second-truncated scan start, written with the terminal run status in one tenant-scoped, row-locked transaction with three attempts; a failed or missing write marks the run error without a checkpoint, returns an error and sends no notification. Other modes keep their previous selection/finalization. Private test seams: analyzer clock, finalize retry delay, notification sender, Analyzer.providerOverride, scheduler analyzer constructor and after-sync completion hook. Evidence `docs/reviews/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; no real provider/channel call or governance claim.
+
+CCMAI-RUNTIME-026 / F04 BUILD (Claude, 2026-10-02): a shared parser (`business_dates.go`) accepts strict `YYYY-MM-DD` Vietnam dates, converts the inclusive public `to` to the next VN midnight and rejects malformed, impossible, reversed and non-representable input with 400 `invalid_date_range` before any query or file output. Dashboard (default today; filtered cards, channel counts, recent QC/classification and cost_period share one interval), Results list/CSV/XLSX, Cost Logs and message export (still all messages of selected conversations) use `col >= from AND col < toExclusive`. Dashboard cost_today/cost_this_month are bounded above, and cost_by_day/messages_by_day are bucketed on VN days with a CASE over typed day-boundary instants (31 dates, up to tomorrow's midnight), so they are correct under a loc=UTC or a loc=Asia/Ho_Chi_Minh driver connection without named-zone tables, session time_zone or DSN changes; date-dependent query failures are a generic 500. Export timestamps print on the Vietnam calendar. Frontend `utils/businessDay.ts` computes presets on calendar keys from the VN day (default 28 and 7days are exactly 28 and 7 dates including today; message export defaults to 7 dates) with a Vietnam-time label on the four screens. Evidence `docs/reviews/RUNTIME_BUSINESS_DAY_FILTERS_F04_BUILD_2026-10-02.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; stored timestamps, schema, DSN and F05/F06 untouched; no real provider/channel call or governance claim.
+
+CCMAI-RUNTIME-027 / F05 BUILD (Claude, 2026-10-02): `analyzer_modes.go` introduces a validated run plan (mode, cap, Vietnam dates); entry points keep their signatures. Explicit modes select by their own predicates with the cap after eligibility and analyze full local snapshots; only the ordinary unlimited run advances `last_run_at` (explicit runs use the checked finalizer without a checkpoint, a test run only its run row). Shared `pkg.ParseBusinessRange`; `TriggerJob` returns 400 `invalid_run_parameters`/`invalid_date_range` before config load or worker start; the JobDetail dialog sends mode, cap and date-only strings separately. Backend 706 pass with the R019 gate, frontend 222 pass, eight mutations killed. `analyzer_incremental.go` was outside the allowed paths and is unmodified (`isOrdinaryIncremental` is now an unreferenced helper). Independent REVIEW is pending.
+
+CCMAI-RUNTIME-027 / F05 R027-R1 repair (Claude, 2026-10-02): `parseTriggerParams` implements the SPEC admission (unsigned decimal cap, zero/empty unlimited, validated `full`, conflicts rejected before dispatch); the test run uses `finalizeOrdinaryRun` without a checkpoint so job status/updated_at are recorded; JobDetail accepts a single date endpoint. Backend 824 pass / 0 fail / 2 optional skips with the R019 gate and no DB-unavailable skips, frontend 239 pass, forced vue-tsc/build/docs PASS; four old-source probes fail on pre-F05 `ebfa05b` and the repaired tests fail on `a1de36b` where the review found defects; eight repair mutations killed. `analyzer_incremental.go` and the seed remain untouched. Independent re-review pending.
+
+CCMAI-RUNTIME-028 / F06 BUILD (Claude, 2026-10-02): `job_run_ownership.go` adds the shared coordinator (reserve/release, `CancelJobRun`, `GuardJobMutation`); `Analyzer.execute` reserves then runs `executeReserved` (checked early failures, panic recovery without the value, cancel/publish/terminal fences, no notification after cancel) and `RunReserved` serves the HTTP workers; handlers reserve before 202, cancel by run id and guard destructive calls; cron/after-sync skip a busy job; the agent aggregates bounded codes; JobDetail cancels the captured run id and keeps polling it. Backend 883 pass / 0 fail / 2 optional skips with the R019 gate and no DB-unavailable skips, frontend 246 pass, forced vue-tsc/build/docs PASS; two old-source probes fail on `6958e28`; every required mutation killed (three first survived and were fixed with new tests). A real gap-lock deadlock between different-job admissions was found by the tests and fixed. Independent REVIEW pending.
+
+CCMAI-RUNTIME-028 / F06 R028-R1 repair (Claude, 2026-10-02): `closeOwnedRun` is the single non-completion terminal path (early failure, panic, Abort); `JobRunReservation.matches/bound` bind every run and abort to the admitted tenant/job (`ErrReservationMismatch`); JobDetail's poll follows the pending run until it is observed in a recognized terminal status. Backend 905 pass / 0 fail / 2 optional skips with the R019 gate and no DB-unavailable skips, frontend 255 pass, forced vue-tsc/build/docs PASS; five repair mutations and two UI mutations killed. Independent re-review pending.
+
+CCMAI-RUNTIME-028 / F06 R028-R2 repair (Claude, 2026-10-02): `failOwnedRun` takes a fixed `earlyFailureClass` instead of the raw cause; the route tests settle on terminal state plus ownership release and join workers; `TestTerminalRunHoldsTheSlotUntilTheTailFinishes` (engine) and `TestRouteTerminalRunHoldsOwnershipUntilTheWorkerExits` (handlers, named-lock trigger barrier) assert 409 during the tail and 202 after exit. Backend 914 pass / 0 fail / 2 optional skips with the R019 gate and no DB-unavailable skips, frontend 255 pass, forced vue-tsc/build/docs PASS, five R2 mutations killed. Independent re-review pending.
+
+CCMAI-RUNTIME-029 / F07 BUILD (Claude, 2026-10-02): `Dashboard.vue` keeps the three service names only (no state), renders an explicit neutral unknown chip per row plus one explanation with a neutral icon; `service_health_unknown` and `service_health_note` are added to vi/en. 13 new mounted tests (groups A..F) fail 13/13 on the old Dashboard and pass on the new one; four mutations (one row healthy again, success heading icon restored, explanation removed, rows tied to request outcome) are killed. Frontend 26 files / 268 tests pass, forced vue-tsc/build/docs PASS; real captures of the disposable app in vi and en at desktop and mobile show the card (zero JS errors, no overflow, no external requests). Independent REVIEW pending.
+
+## End-of-session checkpoint (2026-10-03, Asia/Saigon)
+
+Owner authorized generated-file cleanup and normal GitHub push of the current branch, then pause until tomorrow. R031 REVIEW_PASS / FREEZE_OPEN unchanged. Parked checkpoint is in active state/handoff; rehydrate before resuming. Remaining Zalo-message planning needs separate INTAKE/DESIGN/SPEC/WORK_ORDER; no new BUILD, merge/deploy or FREEZE authorization. Earlier excluded-file preflight failures remain historical evidence.

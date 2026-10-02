@@ -27,9 +27,12 @@ const (
 	dashTagType     = "classification_tag"
 )
 
+// CCMAI-RUNTIME-026: the window is the Vietnam day 2026-03-10, i.e. [2026-03-09T17:00:00Z,
+// 2026-03-10T17:00:00Z); From is its first instant and To its last millisecond (the old UTC
+// edges 00:00:00 / 23:59:59 with an inclusive BETWEEN no longer describe the contract).
 var (
-	dashQCFrom = time.Date(2026, 3, 10, 0, 0, 0, 0, time.UTC)
-	dashQCTo   = time.Date(2026, 3, 10, 23, 59, 59, 0, time.UTC)
+	dashQCFrom = time.Date(2026, 3, 9, 17, 0, 0, 0, time.UTC)
+	dashQCTo   = time.Date(2026, 3, 10, 16, 59, 59, 999_000_000, time.UTC)
 )
 
 type dashQCFixture struct {
@@ -88,13 +91,17 @@ func setupDashQCFixture(t *testing.T) *dashQCFixture {
 	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, inside.Add(time.Minute))
 	f.insertResult(t, f.tenantA, f.runA, f.convA, dashEvalType, inside)
 	f.insertResult(t, f.tenantA, f.runA, f.convA, dashTagType, inside)
-	// Exactly on both interval edges (BETWEEN is inclusive): counted.
+	// 01:00 Vietnam time is still 2026-03-09 in UTC: the old UTC-day window missed it, and the
+	// pairing below (one old-window row lost at the start edge, one gained at the end edge)
+	// would otherwise cancel in the count, so this row makes a shifted window visible.
+	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, dashQCFrom.Add(time.Hour))
+	// The first instant and the last millisecond of the Vietnam day: counted.
 	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, dashQCFrom)
 	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, dashQCTo)
-	// One second outside either edge: neither field counts them.
-	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, dashQCFrom.Add(-time.Second))
-	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, dashQCTo.Add(time.Second))
-	f.insertResult(t, f.tenantA, f.runA, f.convA, dashEvalType, dashQCFrom.Add(-time.Second))
+	// One millisecond outside either edge (previous day / next midnight): neither field counts them.
+	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, dashQCFrom.Add(-time.Millisecond))
+	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, dashQCTo.Add(time.Millisecond))
+	f.insertResult(t, f.tenantA, f.runA, f.convA, dashEvalType, dashQCFrom.Add(-time.Millisecond))
 	// Tenant B: three violations inside the same window.
 	for i := 0; i < 3; i++ {
 		f.insertResult(t, f.tenantB, f.runB, f.convB, dashQCType, inside.Add(time.Duration(i)*time.Minute))
@@ -136,14 +143,14 @@ func TestDashboardQCViolationCountIsScopedByTypeTenantAndInterval(t *testing.T) 
 	f := setupDashQCFixture(t)
 
 	issues, qc, body := dashboardFields(t, callDashboard(f.tenantA))
-	// 4 violations in the interval (two on one conversation + both edges).
-	if qc != 4 {
-		t.Fatalf("qc_violation_count = %v, want 4", qc)
+	// 5 violations in the interval (two on one conversation + 01:00 VN + both edges).
+	if qc != 5 {
+		t.Fatalf("qc_violation_count = %v, want 5", qc)
 	}
 	// issues keeps its old meaning: every result type in the interval
-	// (4 violations + 1 evaluation + 1 tag), without the outside-edge rows.
-	if issues != 6 {
-		t.Fatalf("issues = %v, want 6 (all result types in the interval)", issues)
+	// (5 violations + 1 evaluation + 1 tag), without the outside-edge rows.
+	if issues != 7 {
+		t.Fatalf("issues = %v, want 7 (all result types in the interval)", issues)
 	}
 	for _, key := range []string{"total_conversations", "active_channels", "active_jobs", "conversations_by_channel", "qc_alerts", "classification_recent", "cost_period", "cost_today", "cost_this_month", "cost_by_day", "messages_by_day", "exchange_rate"} {
 		if _, ok := body[key]; !ok {
@@ -177,18 +184,18 @@ func TestDashboardQCViolationCountChangesWhenAQualifyingRowIsAdded(t *testing.T)
 	_, before, _ := dashboardFields(t, callDashboard(f.tenantA))
 	f.insertResult(t, f.tenantA, f.runA, f.convA, dashQCType, time.Date(2026, 3, 10, 12, 0, 0, 0, time.UTC))
 	issuesAfter, after, _ := dashboardFields(t, callDashboard(f.tenantA))
-	if after != before+1 || after != 5 {
-		t.Fatalf("qc_violation_count %v -> %v, want +1 (5)", before, after)
+	if after != before+1 || after != 6 {
+		t.Fatalf("qc_violation_count %v -> %v, want +1 (6)", before, after)
 	}
-	if issuesAfter != 7 {
-		t.Fatalf("issues = %v, want 7", issuesAfter)
+	if issuesAfter != 8 {
+		t.Fatalf("issues = %v, want 8", issuesAfter)
 	}
 
 	// Non-qualifying rows (other type, other tenant) leave the field unchanged.
 	f.insertResult(t, f.tenantA, f.runA, f.convA, dashEvalType, time.Date(2026, 3, 10, 12, 0, 0, 0, time.UTC))
 	f.insertResult(t, f.tenantB, f.runB, f.convB, dashQCType, time.Date(2026, 3, 10, 12, 0, 0, 0, time.UTC))
 	_, still, _ := dashboardFields(t, callDashboard(f.tenantA))
-	if still != 5 {
+	if still != 6 {
 		t.Fatalf("non-qualifying rows changed qc_violation_count to %v", still)
 	}
 }
@@ -240,7 +247,7 @@ func TestDashboardQCViolationCountQueryFailureReturnsGeneric500(t *testing.T) {
 
 	// Once the failure is removed the same request succeeds again.
 	db.DB.Callback().Query().Remove(cbName)
-	if _, qc, _ := dashboardFields(t, callDashboard(f.tenantA)); qc != 4 {
-		t.Fatalf("after removing the failure, qc_violation_count = %v, want 4", qc)
+	if _, qc, _ := dashboardFields(t, callDashboard(f.tenantA)); qc != 5 {
+		t.Fatalf("after removing the failure, qc_violation_count = %v, want 5", qc)
 	}
 }

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-025",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/analyzer_incremental.go",
+    "backend/engine/analyzer*_test.go",
+    "backend/engine/reanalyze_test.go",
+    "backend/engine/scheduler.go",
+    "backend/engine/scheduler*_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_025.md",
+    "docs/specs/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_2026-10-01.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "schema_change",
+    "snapshot_format_change",
+    "adapter_change",
+    "api_ui_change",
+    "f05_mode_semantics_change",
+    "f06_cancellation_registry_change"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_025.md",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
+  "baseCommit": "517406f1bfafbfe48b2cef31b558a76b8e67d8c0",
+  "buildCommit": "b53f56448962d3f7c6aa070e0882560160a90c2e",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_025_F03_INDEPENDENT_REVIEW_2026-10-02.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
+  ]
+}

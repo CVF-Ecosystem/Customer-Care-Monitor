@@ -273,6 +273,7 @@
           <v-text-field v-model="exportFrom" :label="$t('msgs_export_from')" type="date" density="comfortable" variant="outlined" hide-details />
           <v-text-field v-model="exportTo" :label="$t('msgs_export_to')" type="date" density="comfortable" variant="outlined" hide-details />
         </div>
+        <span class="text-caption text-medium-emphasis" data-testid="vn-date-note">{{ $t('vn_date_note') }}</span>
         <v-select v-model="exportFormat" :items="exportFormats" :label="$t('msgs_export_format')" density="comfortable" variant="outlined" hide-details />
         <v-select v-model="exportChannelType" :items="exportChannelTypes" :label="$t('msgs_filter_channel_type')" density="comfortable" variant="outlined" hide-details />
       </div>
@@ -309,6 +310,7 @@ import AiGeneratedLabel from '../components/ui/AiGeneratedLabel.vue'
 import VerdictChip from '../components/ui/VerdictChip.vue'
 import { verdictFromSeverity } from '../utils/review'
 import { formatRelative, type UiLocale } from '../utils/format'
+import { lastDays } from '../utils/businessDay'
 
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -506,8 +508,10 @@ const showExportDialog = ref(false)
 const exporting = ref(false)
 const exportFormat = ref('txt')
 const exportChannelType = ref('')
-const exportFrom = ref(new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10))
-const exportTo = ref(new Date().toISOString().slice(0, 10))
+// CCMAI-RUNTIME-026: exactly seven Vietnam calendar dates including today (UTC+7).
+const exportDefaultRange = lastDays(7)
+const exportFrom = ref(exportDefaultRange.from)
+const exportTo = ref(exportDefaultRange.to)
 const exportFormats = computed(() => [
   { title: t('msgs_export_txt'), value: 'txt' },
   { title: t('msgs_export_csv'), value: 'csv' },

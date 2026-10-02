@@ -53,6 +53,7 @@
       <!-- Desktop: inline with chips -->
       <v-text-field v-model="dateFrom" type="date" density="compact" hide-details style="max-width: 160px" class="d-none d-md-block" @change="loadDashboard" />
       <v-text-field v-model="dateTo" type="date" density="compact" hide-details style="max-width: 160px" class="d-none d-md-block" @change="loadDashboard" />
+      <span class="text-caption text-medium-emphasis" data-testid="vn-date-note">{{ $t('vn_date_note') }}</span>
     </div>
     <!-- Mobile: separate row -->
     <v-row dense class="mb-4 d-md-none">
@@ -201,17 +202,20 @@
         </v-card>
 
         <!-- Service Status -->
-        <v-card class="pa-4">
-          <div class="text-subtitle-1 font-weight-bold mb-3">
-            <v-icon start size="small" color="success">mdi-check-circle</v-icon>
+        <!-- CCMAI-RUNTIME-029 (F07): there is no health check behind these rows, so the card states
+             that explicitly. The rows are neutral and independent of the Dashboard request. -->
+        <v-card class="pa-4" data-testid="service-status-card">
+          <div class="text-subtitle-1 font-weight-bold mb-1">
+            <v-icon start size="small" aria-hidden="true">mdi-help-circle-outline</v-icon>
             {{ $t('service_status') }}
           </div>
+          <div class="text-caption text-medium-emphasis mb-2" data-testid="service-status-note">{{ $t('service_health_note') }}</div>
           <v-list density="compact">
-            <v-list-item v-for="svc in services" :key="svc.name" class="px-0">
-              <v-list-item-title class="text-body-2">{{ svc.name }}</v-list-item-title>
+            <v-list-item v-for="name in serviceNames" :key="name" class="px-0">
+              <v-list-item-title class="text-body-2">{{ name }}</v-list-item-title>
               <template #append>
-                <v-chip size="x-small" :color="svc.ok ? 'success' : 'error'" variant="tonal">
-                  {{ svc.ok ? $t('normal') : $t('error') }}
+                <v-chip size="x-small" variant="tonal" prepend-icon="mdi-help-circle-outline" data-testid="service-status-chip">
+                  {{ $t('service_health_unknown') }}
                 </v-chip>
               </template>
             </v-list-item>
@@ -255,6 +259,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import api from '../api'
 import { useI18n } from 'vue-i18n'
 import { formatRelative, type UiLocale } from '../utils/format'
+import { presetRange, type DatePreset } from '../utils/businessDay'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
 
@@ -285,19 +290,18 @@ const costToday = ref(0)
 const costMonth = ref(0)
 const costByDay = ref<any[]>([])
 const exchangeRate = ref(26000)
-const services = ref([
-  { name: 'API Server', ok: true },
-  { name: 'Database', ok: true },
-  { name: 'Scheduler', ok: true },
-])
+// Service names only: no health state exists in the UI (CCMAI-RUNTIME-029). Health is neither
+// inferred from the Dashboard request nor from job/channel counts or payload hints.
+const serviceNames = ['API Server', 'Database', 'Scheduler']
 const messagesByDay = ref<any[]>([])
 const channelCounts = ref<any[]>([])
 const totalMessages = computed(() => messagesByDay.value.reduce((sum, d) => sum + (d.count || 0), 0))
 
 // Date filter + presets
-const now = new Date()
-const dateFrom = ref(formatDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() - 28)))
-const dateTo = ref(formatDate(now))
+// CCMAI-RUNTIME-026: dates are Vietnam calendar dates (UTC+7), independent of the browser zone.
+const initialRange = presetRange('28days')
+const dateFrom = ref(initialRange.from)
+const dateTo = ref(initialRange.to)
 const datePreset = ref('28days')
 
 const datePresets = [
@@ -309,43 +313,10 @@ const datePresets = [
   { label: 'Năm này', value: 'year' },
 ]
 
-function formatDate(d: Date) {
-  return d.toISOString().split('T')[0]
-}
-
 function applyPreset(preset: string) {
-  const d = new Date()
-  const y = d.getFullYear()
-  const m = d.getMonth()
-  dateTo.value = formatDate(d)
-
-  switch (preset) {
-    case 'today':
-      dateFrom.value = formatDate(new Date(y, m, d.getDate()))
-      break
-    case '7days':
-      dateFrom.value = formatDate(new Date(y, m, d.getDate() - 7))
-      break
-    case '28days':
-      dateFrom.value = formatDate(new Date(y, m, d.getDate() - 28))
-      break
-    case 'week': {
-      const day = d.getDay() || 7
-      dateFrom.value = formatDate(new Date(y, m, d.getDate() - day + 1))
-      break
-    }
-    case 'month':
-      dateFrom.value = formatDate(new Date(y, m, 1))
-      break
-    case 'quarter': {
-      const qm = Math.floor(m / 3) * 3
-      dateFrom.value = formatDate(new Date(y, qm, 1))
-      break
-    }
-    case 'year':
-      dateFrom.value = formatDate(new Date(y, 0, 1))
-      break
-  }
+  const range = presetRange(preset as DatePreset)
+  dateFrom.value = range.from
+  dateTo.value = range.to
   loadDashboard()
 }
 

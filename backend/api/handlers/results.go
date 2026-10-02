@@ -39,8 +39,7 @@ type resultFilter struct {
 	verdict    string // all | pass | fail | skip | classified
 	tags       []string
 	dateField  string // conv (ngày hội thoại) | eval (ngày đánh giá)
-	from       *time.Time
-	to         *time.Time
+	dates      businessRange // CCMAI-RUNTIME-026: [from, to+1 day) in Vietnam business days
 	keyword    string
 	scoreMin   *float64
 	scoreMax   *float64
@@ -50,7 +49,9 @@ type resultFilter struct {
 // scoreExpr lấy điểm nằm trong cột JSON detail của bản ghi đánh giá.
 const scoreExpr = `CAST(JSON_UNQUOTE(JSON_EXTRACT(jr.detail, '$.score')) AS DECIMAL(6,2))`
 
-func parseResultFilter(c *gin.Context) resultFilter {
+// parseResultFilter reads the query string. A malformed, impossible or reversed date pair is
+// errInvalidDateRange (the handlers answer 400 before any query or file output).
+func parseResultFilter(c *gin.Context) (resultFilter, error) {
 	f := resultFilter{
 		tenantID:  middleware.GetTenantID(c),
 		jobType:   c.DefaultQuery("job_type", "qc_analysis"),
@@ -70,17 +71,11 @@ func parseResultFilter(c *gin.Context) resultFilter {
 	f.channelIDs = splitCSVParam(c.Query("channel_ids"))
 	f.tags = splitCSVParam(c.Query("tags"))
 
-	if v := c.Query("from"); v != "" {
-		if t, err := time.Parse("2006-01-02", v); err == nil {
-			f.from = &t
-		}
+	dates, err := parseBusinessRange(c.Query("from"), c.Query("to"))
+	if err != nil {
+		return resultFilter{}, err
 	}
-	if v := c.Query("to"); v != "" {
-		if t, err := time.Parse("2006-01-02", v); err == nil {
-			end := t.Add(24*time.Hour - time.Second)
-			f.to = &end
-		}
-	}
+	f.dates = dates
 	if v := c.Query("score_min"); v != "" {
 		if n, err := strconv.ParseFloat(v, 64); err == nil {
 			f.scoreMin = &n
@@ -91,7 +86,7 @@ func parseResultFilter(c *gin.Context) resultFilter {
 			f.scoreMax = &n
 		}
 	}
-	return f
+	return f, nil
 }
 
 func splitCSVParam(s string) []string {
@@ -143,12 +138,7 @@ func (f resultFilter) baseQuery(withVerdict bool) *gorm.DB {
 	if f.dateField == "eval" {
 		dateCol = "jr.created_at"
 	}
-	if f.from != nil {
-		q = q.Where(dateCol+" >= ?", *f.from)
-	}
-	if f.to != nil {
-		q = q.Where(dateCol+" <= ?", *f.to)
-	}
+	q = f.dates.where(q, dateCol)
 
 	if f.scoreMin != nil {
 		q = q.Where(scoreExpr+" >= ?", *f.scoreMin)
@@ -347,7 +337,11 @@ func parseScore(detail string) *float64 {
 
 // ListResults trả một trang kết quả kèm số lượng của từng nhãn theo bộ lọc hiện tại.
 func ListResults(c *gin.Context) {
-	f := parseResultFilter(c)
+	f, err := parseResultFilter(c)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_date_range"})
+		return
+	}
 
 	page, _ := strconv.Atoi(c.DefaultQuery("page", "1"))
 	if page < 1 {
@@ -483,7 +477,11 @@ func ResultsFacets(c *gin.Context) {
 
 // ExportResults xuất đúng bộ lọc đang chọn ra CSV hoặc Excel.
 func ExportResults(c *gin.Context) {
-	f := parseResultFilter(c)
+	f, err := parseResultFilter(c)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_date_range"})
+		return
+	}
 	format := c.DefaultQuery("format", "csv")
 
 	limit := exportRowLimit()
@@ -600,11 +598,13 @@ func formatScore(score *float64) string {
 	return strconv.FormatFloat(*score, 'f', -1, 64)
 }
 
+// formatResultTime prints the instant on the Vietnam calendar, the same calendar the date filters
+// use, whatever location the database driver decoded it in (CCMAI-RUNTIME-026).
 func formatResultTime(t *time.Time) string {
 	if t == nil || t.IsZero() {
 		return ""
 	}
-	return t.Format("2006-01-02 15:04")
+	return t.In(businessLocation()).Format("2006-01-02 15:04")
 }
 
 func joinIssues(issues []issueRow) string {

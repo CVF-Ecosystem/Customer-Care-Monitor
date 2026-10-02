@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-GOV-001",
+  "workOrder": "docs/work_orders/CCMAI_GOV_001.md",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "baseCommit": "8e776b51e9019b1f4471eabecc6e3d54d36f7a26",
+  "allowedPaths": [
+    "scripts/cvf_downstream_gate*.py",
+    "scripts/tests/test_cvf_downstream_gate*.py",
+    "CVF_SESSION/tranches/**",
+    ".github/workflows/**",
+    "AGENTS.md",
+    "docs/work_orders/CCMAI_GOV_001.md",
+    "docs/specs/CVF_DOWNSTREAM_MACHINE_GATES_2026-09-30.md",
+    "docs/decisions/CVF_DOWNSTREAM_GATE_APPLICABILITY_2026-09-30.md",
+    "docs/roadmaps/**"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "product_source_change",
+    "persistent_db",
+    "secret_commit"
+  ],
+  "buildCommit": "ae44c2e3ecb34ddc3736cddb908ff30595fc48aa",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_GOV_001_INDEPENDENT_REVIEW_2026-10-01.md",
+    "docs/reviews/CCMAI_GOV_001_R1_INDEPENDENT_REREVIEW_2026-10-01.md",
+    "docs/reviews/CCMAI_PR_001_HOSTED_CI_REVIEW_2026-10-01.md",
+    "docs/reviews/CVF_DOWNSTREAM_MACHINE_GATES_GOV001_CI1_BUILD_2026-10-01.md",
+    "docs/reviews/CCMAI_GOV_001_CI1_INDEPENDENT_REVIEW_2026-10-01.md",
+    "docs/reviews/CCMAI_PR_001_GREEN_CI_EVIDENCE_2026-10-01.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "ciRun": {
+    "url": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/36798737665",
+    "sha": "3e0b37ea729c75fe1a319dda61ee384b71706e7c",
+    "conclusion": "success"
+  },
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "CHANGES_REQUIRED",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
+  ]
+}

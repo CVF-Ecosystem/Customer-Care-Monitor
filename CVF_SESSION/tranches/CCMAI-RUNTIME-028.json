@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-028",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/job_run_ownership.go",
+    "backend/engine/job_run_ownership_test.go",
+    "backend/engine/analyzer.go",
+    "backend/engine/analyzer_modes.go",
+    "backend/engine/analyzer_incremental.go",
+    "backend/engine/analyzer*_test.go",
+    "backend/engine/reanalyze_test.go",
+    "backend/engine/scheduler.go",
+    "backend/engine/scheduler*_test.go",
+    "backend/api/handlers/jobs.go",
+    "backend/api/handlers/job*_test.go",
+    "backend/api/handlers/agents.go",
+    "backend/api/handlers/agent*_test.go",
+    "frontend/src/views/Jobs/JobDetail.vue",
+    "frontend/src/stores/jobs.ts",
+    "frontend/src/__tests__/job*.spec.ts",
+    "docs/specs/RUNTIME_JOB_RUN_OWNERSHIP_F06_2026-10-02.md",
+    "docs/work_orders/CCMAI_RUNTIME_028.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "schema_change",
+    "snapshot_format_change",
+    "timestamp_migration",
+    "dsn_storage_change",
+    "adapter_change",
+    "distributed_lease_or_recovery",
+    "tenant_timezone_settings_activation",
+    "workflow_change",
+    "permission_change",
+    "unrelated_dead_code_cleanup"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_028.md",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
+  "baseCommit": "6958e281d190935578809bb9900dd95d2a29509e",
+  "buildCommit": "8035cb05a2d66778810fb0acb89d208238743cfc",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_028_F06_INDEPENDENT_REVIEW_2026-10-02.md",
+    "docs/reviews/CCMAI_RUNTIME_028_R1_INDEPENDENT_REREVIEW_2026-10-02.md",
+    "docs/reviews/CCMAI_RUNTIME_028_R2_INDEPENDENT_REREVIEW_2026-10-02.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}

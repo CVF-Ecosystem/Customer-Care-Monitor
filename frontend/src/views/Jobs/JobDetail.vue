@@ -43,6 +43,9 @@
       </div>
     </header>
 
+    <!-- Run/cancel feedback (bounded copy; CCMAI-RUNTIME-028) -->
+    <v-alert v-if="runNotice" :type="runNotice.type" variant="tonal" class="mb-4" density="compact" role="status" data-testid="run-notice">{{ runNotice.text }}</v-alert>
+
     <!-- Running progress, from the counters the analyzer writes into the run summary -->
     <v-alert v-if="progress" type="info" variant="tonal" class="mb-4" density="compact">
       <v-progress-linear :model-value="progressPercent" color="primary" height="8" rounded class="mb-2" />
@@ -273,7 +276,7 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy từ lần gần nhất</div>
-                  <div class="text-caption jd-muted">Lấy cuộc chat gần nhất đã đánh giá làm mốc. Cuộc chat cũ hơn mốc sẽ không được đánh giá dù chưa phân tích.</div>
+                  <div class="text-caption jd-muted">Lấy cuộc chat gần nhất đã đánh giá làm mốc. Cuộc chat cũ hơn hoặc có thời điểm tin nhắn cuối bằng mốc sẽ không được đánh giá dù chưa phân tích.</div>
                 </div>
               </template>
             </v-radio>
@@ -281,24 +284,25 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy theo điều kiện</div>
-                  <div class="text-caption jd-muted">Chọn điều kiện thời gian và/hoặc giới hạn số cuộc chat. Phải có ít nhất một điều kiện.</div>
+                  <div class="text-caption jd-muted">Đánh giá lại cả cuộc chat đã đánh giá. Ngày (giờ Việt Nam) chỉ chọn cuộc chat theo tin nhắn cuối; mỗi cuộc chat được chọn vẫn phân tích đủ ngữ cảnh, gồm cả tin nhắn trước ngày bắt đầu. Có thể chỉ chọn một đầu ngày và/hoặc giới hạn số cuộc chat; phải có ít nhất một điều kiện.</div>
                 </div>
               </template>
             </v-radio>
           </v-radio-group>
           <template v-if="runMode === 'conditional'">
             <div class="d-flex ga-3 mt-2">
-              <v-text-field v-model="runDateFrom" type="date" label="Từ ngày" density="compact" :error-messages="runDateFromError" hide-details="auto" />
-              <v-text-field v-model="runDateTo" type="date" label="Đến ngày" density="compact" :error-messages="runDateToError" hide-details="auto" />
+              <v-text-field v-model="runDateFrom" type="date" label="Từ ngày (giờ Việt Nam)" density="compact" :error-messages="runDateFromError" hide-details="auto" data-testid="run-date-from" />
+              <v-text-field v-model="runDateTo" type="date" label="Đến ngày (giờ Việt Nam)" density="compact" :error-messages="runDateToError" hide-details="auto" data-testid="run-date-to" />
             </div>
-            <v-text-field v-model.number="runLimit" type="number" label="Giới hạn số cuộc chat" density="compact" hide-details="auto" class="mt-3" placeholder="Để trống nếu không muốn áp dụng" :min="1" clearable />
-            <v-alert v-if="runConditionalError" type="error" variant="tonal" density="compact" class="mt-3 text-caption">{{ runConditionalError }}</v-alert>
           </template>
+          <!-- The limit is only a count cap; it never changes the mode chosen above. -->
+          <v-text-field v-model.number="runLimit" type="number" label="Giới hạn số cuộc chat" density="compact" hide-details="auto" class="mt-3" placeholder="Để trống nếu không muốn áp dụng" :min="1" :step="1" :error-messages="runLimitError" clearable data-testid="run-limit" />
+          <v-alert v-if="runConditionalError" type="error" variant="tonal" density="compact" class="mt-3 text-caption">{{ runConditionalError }}</v-alert>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
           <v-btn @click="runDialog = false">{{ $t('cancel') }}</v-btn>
-          <v-btn color="primary" :disabled="!!runConditionalError && runMode === 'conditional'" @click="confirmRun">{{ $t('confirm') }}</v-btn>
+          <v-btn color="primary" :disabled="!!runConditionalError || !!runLimitError" data-testid="run-confirm" @click="confirmRun">{{ $t('confirm') }}</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -500,6 +504,21 @@ const isClassification = computed(() => job.value?.job_type === 'classification'
 const loading = ref(true)
 const loadError = ref(false)
 const cancelling = ref(false)
+// The run whose cancellation was accepted (202 means "requested", not "terminal"); polling follows it.
+const cancelPendingRunId = ref<string | null>(null)
+const TERMINAL_RUN_STATUSES = ['success', 'partial', 'error', 'cancelled']
+function cancelOutcomeNotice(status: string): { type: 'info' | 'warning'; text: string } {
+  if (status === 'cancelled') return { type: 'info', text: 'Lượt chạy đã dừng theo yêu cầu hủy.' }
+  if (status === 'success') return { type: 'info', text: 'Lượt chạy đã hoàn tất thành công trước khi yêu cầu hủy có hiệu lực.' }
+  if (status === 'partial') return { type: 'info', text: 'Lượt chạy đã hoàn tất một phần trước khi yêu cầu hủy có hiệu lực.' }
+  return { type: 'warning', text: 'Lượt chạy đã kết thúc với lỗi trước khi yêu cầu hủy có hiệu lực.' }
+}
+const runNotice = ref<{ type: 'info' | 'warning' | 'error'; text: string } | null>(null)
+function launchErrorNotice(e: unknown): { type: 'warning' | 'error'; text: string } {
+  const code = (e as { response?: { data?: { error?: string } } })?.response?.data?.error
+  if (code === 'job_already_running') return { type: 'warning', text: 'Công việc này đang có một lượt chạy khác; chưa thể bắt đầu lượt mới.' }
+  return { type: 'error', text: 'Không khởi động được lượt chạy. Vui lòng thử lại.' }
+}
 const isJobRunning = computed(() => jobStore.jobRuns?.[0]?.status === 'running')
 let pollTimer: ReturnType<typeof setTimeout> | null = null
 
@@ -855,9 +874,19 @@ function startPolling() {
   async function tick() {
     try {
       await jobStore.fetchJobRuns(tenantId.value, jobId.value)
-      if (!isJobRunning.value) {
+      // With a pending cancellation the poll follows that exact run, not "the newest run", and it
+      // settles only when that run is OBSERVED in a recognized terminal status. A missing run, an
+      // empty/unknown status or a newer run never settles it (CCMAI-RUNTIME-028).
+      const pendingId = cancelPendingRunId.value
+      const observed = pendingId ? jobStore.jobRuns.find((r) => r.id === pendingId) : undefined
+      const settled = pendingId ? !!observed && TERMINAL_RUN_STATUSES.includes(observed.status) : !isJobRunning.value
+      if (settled) {
         await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
         job.value = await jobStore.fetchJob(tenantId.value, jobId.value)
+        if (pendingId && observed) {
+          runNotice.value = cancelOutcomeNotice(observed.status)
+          cancelPendingRunId.value = null
+        }
         stopPolling()
         return
       }
@@ -877,14 +906,15 @@ const runDateTo = ref('')
 const runLimit = ref<number | null>(null)
 const runDateFromError = computed(() => {
   if (runMode.value !== 'conditional') return ''
-  if (runDateFrom.value && !runDateTo.value) return 'Cần chọn đến ngày'
   if (runDateFrom.value && runDateTo.value && runDateFrom.value > runDateTo.value) return 'Từ ngày phải nhỏ hơn đến ngày'
   return ''
 })
-const runDateToError = computed(() => {
-  if (runMode.value !== 'conditional') return ''
-  if (runDateTo.value && !runDateFrom.value) return 'Cần chọn từ ngày'
-  return ''
+// A single endpoint is a valid open range; only a reversed pair is rejected (on the from field).
+const runDateToError = computed(() => '')
+const runLimitError = computed(() => {
+  const v = runLimit.value as unknown
+  if (v === null || v === undefined || v === '') return ''
+  return typeof v === 'number' && Number.isInteger(v) && v > 0 ? '' : 'Giới hạn phải là số nguyên dương'
 })
 const runConditionalError = computed(() => {
   if (runMode.value !== 'conditional') return ''
@@ -909,13 +939,16 @@ async function testRun() {
   if (!(await checkAIConfigured())) return
   try {
     await jobStore.testRunJob(tenantId.value, jobId.value)
+    runNotice.value = null
     startPolling()
-  } catch {
+  } catch (e) {
+    runNotice.value = launchErrorNotice(e)
     await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+    if (isJobRunning.value) startPolling()
   }
 }
 async function confirmRun() {
-  if (runConditionalError.value) return
+  if (runConditionalError.value || runLimitError.value) return
   runDialog.value = false
   try {
     const params: Record<string, string> = {}
@@ -923,21 +956,43 @@ async function confirmRun() {
       if (runDateFrom.value) params.from = runDateFrom.value
       if (runDateTo.value) params.to = runDateTo.value
     }
-    if (runLimit.value && runLimit.value > 0) params.limit = String(runLimit.value)
+    if (runLimit.value) params.limit = String(runLimit.value)
     await jobStore.triggerJob(tenantId.value, jobId.value, runMode.value, params)
+    runNotice.value = null
     startPolling()
-  } catch {
+  } catch (e) {
+    runNotice.value = launchErrorNotice(e)
     await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+    if (isJobRunning.value) startPolling()
   }
 }
 async function cancelJob() {
+  // Capture the run the user is looking at NOW; a later refresh must never retarget the request.
+  const target = jobStore.jobRuns?.[0]
+  if (!target || target.status !== 'running') return
+  const targetId = target.id
   cancelling.value = true
   try {
-    await api.post(`/tenants/${tenantId.value}/jobs/${jobId.value}/cancel`)
-    stopPolling()
-    await jobStore.fetchJobRuns(tenantId.value, jobId.value)
-    await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
-  } catch { /* ignore */ } finally { cancelling.value = false }
+    await jobStore.cancelJobRun(tenantId.value, jobId.value, targetId)
+    // 202 job_cancel_requested: the worker has not necessarily stopped. Keep polling this run.
+    cancelPendingRunId.value = targetId
+    runNotice.value = { type: 'info', text: 'Đã yêu cầu hủy; đang chờ lượt chạy kết thúc.' }
+    startPolling()
+  } catch (e) {
+    const code = (e as { response?: { data?: { error?: string } } })?.response?.data?.error
+    if (code === 'job_not_running') {
+      runNotice.value = { type: 'info', text: 'Lượt chạy này đã kết thúc hoặc không còn là lượt đang chạy.' }
+    } else if (code === 'job_run_not_owned') {
+      runNotice.value = { type: 'warning', text: 'Lượt chạy này không do tiến trình hiện tại quản lý nên không thể hủy từ đây.' }
+    } else {
+      runNotice.value = { type: 'error', text: 'Không gửi được yêu cầu hủy; lượt chạy vẫn có thể đang chạy.' }
+    }
+    // Refresh the truth; keep following a run that is still running.
+    try {
+      await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+      if (isJobRunning.value || jobStore.jobRuns.some((r) => r.id === targetId && r.status === 'running')) startPolling()
+    } catch { /* the next manual refresh shows the state */ }
+  } finally { cancelling.value = false }
 }
 
 const clearResultsDialog = ref(false)

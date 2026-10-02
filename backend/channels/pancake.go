@@ -1,8 +1,10 @@
 package channels
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"html"
 	"io"
@@ -10,6 +12,7 @@ import (
 	"net/url"
 	"path"
 	"regexp"
+	"sort"
 	"strconv"
 	"strings"
 	"sync"
@@ -34,7 +37,19 @@ const (
 
 	// Chặn vòng lặp phân trang nếu API trả dữ liệu bất thường.
 	pancakeMaxPages = 200
+	// Bound response memory before decoding; an oversized response is never terminal proof.
+	pancakeMaxResponseBytes = 8 << 20
 )
+
+// ErrPancakeCoverageIncomplete đánh dấu lần duyệt danh sách hội thoại chưa thấy trang rỗng cuối
+// cùng hoặc gặp trang không tin được. Các hội thoại trả kèm lỗi này chỉ để chẩn đoán, không phải
+// một cửa sổ đã phủ đủ (CCMAI-RUNTIME-023).
+var ErrPancakeCoverageIncomplete = errors.New("pancake conversation coverage incomplete")
+
+// ErrPancakeMessageCoverageIncomplete đánh dấu lần duyệt tin nhắn của một hội thoại chưa thấy
+// trang rỗng cuối cùng hoặc gặp dữ liệu không tin được (CCMAI-RUNTIME-030). Các tin trả kèm lỗi này
+// chỉ để chẩn đoán, không phải một cửa sổ tin nhắn đã phủ đủ. Tách biệt với lỗi hội thoại ở trên.
+var ErrPancakeMessageCoverageIncomplete = errors.New("pancake message coverage incomplete")
 
 // PancakeCredentials là thông tin để đọc một page qua API công khai của Pancake.
 // Page Access Token lấy trong Pancake: Cài đặt page → Công cụ. Token không hết
@@ -105,17 +120,23 @@ func (p *PancakeAdapter) doRequest(ctx context.Context, endpoint string, params 
 
 		req, err := http.NewRequestWithContext(ctx, http.MethodGet, fullURL, nil)
 		if err != nil {
-			return fmt.Errorf("create pancake api request: %w", err)
+			return errors.New("create pancake api request failed")
 		}
 		resp, err := p.client.Do(req)
 		if err != nil {
-			// Không đưa URL vào lỗi vì URL chứa token.
-			return fmt.Errorf("pancake api request failed: %w", scrubURLError(err))
+			if ctx.Err() != nil {
+				return fmt.Errorf("pancake api request failed: %w", ctx.Err())
+			}
+			// Transport causes can themselves contain the token-bearing URL.
+			return errors.New("pancake api request failed")
 		}
-		body, err := io.ReadAll(resp.Body)
+		body, err := io.ReadAll(io.LimitReader(resp.Body, pancakeMaxResponseBytes+1))
 		resp.Body.Close()
 		if err != nil {
-			return fmt.Errorf("pancake api read body failed: %w", err)
+			return errors.New("pancake api read body failed")
+		}
+		if len(body) > pancakeMaxResponseBytes {
+			return errors.New("pancake api response exceeded size budget")
 		}
 
 		if resp.StatusCode == http.StatusTooManyRequests && attempt < pancakeMaxRetries {
@@ -131,29 +152,21 @@ func (p *PancakeAdapter) doRequest(ctx context.Context, endpoint string, params 
 		}
 
 		var status struct {
-			Success   *bool  `json:"success"`
-			Message   string `json:"message"`
-			ErrorCode int    `json:"error_code"`
+			Success   *bool `json:"success"`
+			ErrorCode int   `json:"error_code"`
 		}
 		if err := json.Unmarshal(body, &status); err != nil {
 			return fmt.Errorf("pancake api decode failed: %w", err)
 		}
 		if status.Success != nil && !*status.Success {
-			return fmt.Errorf("pancake api error: (#%d) %s", status.ErrorCode, status.Message)
+			// Provider text can echo URLs, encoded credentials or response content.
+			return fmt.Errorf("pancake api error: (#%d)", status.ErrorCode)
 		}
 		if err := json.Unmarshal(body, out); err != nil {
 			return fmt.Errorf("pancake api decode failed: %w", err)
 		}
 		return nil
 	}
-}
-
-// scrubURLError bỏ URL (có chứa token) khỏi lỗi của http.Client.
-func scrubURLError(err error) error {
-	if uerr, ok := err.(*url.Error); ok {
-		return fmt.Errorf("%s: %w", uerr.Op, uerr.Err)
-	}
-	return err
 }
 
 type pancakeSender struct {
@@ -201,43 +214,90 @@ type pancakeMessage struct {
 	Attachments     []pancakeAttachment `json:"attachments"`
 }
 
+// FetchRecentConversations duyệt hết các hội thoại INBOX có updated_at >= since (CCMAI-RUNTIME-023).
+//
+// until được chốt một lần trước trang đầu và dùng lại cho mọi trang. Trang sau đi theo ID của
+// dòng cuối cùng trong trang trước (kể cả dòng COMMENT bị lọc). Tài liệu Pancake không bảo đảm
+// trang ngắn là trang cuối, nên chỉ một mảng conversations rỗng mới kết thúc thành công. Mọi
+// dòng đều được xét, không dựa vào thứ tự; dòng trùng ID chỉ lấy lần đầu. limit <= 0 là duyệt
+// hết; limit > 0 mà cửa sổ còn nhiều hơn thì trả lỗi chứ không cắt ngắn. Trang thiếu/sai
+// conversations, dòng thiếu ID hoặc updated_at hợp lệ, cursor lặp, lỗi trang, ctx bị huỷ hay hết
+// ngân sách trang đều trả ErrPancakeCoverageIncomplete (hoặc lỗi gọi API) kèm các dòng đã thấy,
+// chỉ để chẩn đoán.
 func (p *PancakeAdapter) FetchRecentConversations(ctx context.Context, since time.Time, limit int) ([]SyncedConversation, error) {
 	var conversations []SyncedConversation
 	endpoint := fmt.Sprintf("%s/pages/%s/conversations", p.v2Base, url.PathEscape(p.creds.PageID))
+	seenIDs := make(map[string]bool)
+	seenCursors := make(map[string]bool)
 	lastID := ""
 
-	for page := 0; page < pancakeMaxPages; page++ {
+	var sinceParam string
+	untilParam := strconv.FormatInt(time.Now().Unix(), 10)
+	if !since.IsZero() {
+		sinceParam = strconv.FormatInt(since.Unix(), 10)
+	}
+
+	for page := 0; ; page++ {
+		if page >= pancakeMaxPages {
+			return conversations, fmt.Errorf("%w: page budget of %d reached before an empty page", ErrPancakeCoverageIncomplete, pancakeMaxPages)
+		}
+		if err := ctx.Err(); err != nil {
+			return conversations, fmt.Errorf("%w: %v", ErrPancakeCoverageIncomplete, err)
+		}
+
 		params := url.Values{}
 		params.Set("type", "INBOX")
 		params.Set("order_by", "updated_at")
-		if !since.IsZero() {
-			params.Set("since", strconv.FormatInt(since.Unix(), 10))
-			params.Set("until", strconv.FormatInt(time.Now().Unix(), 10))
+		params.Set("until", untilParam)
+		if sinceParam != "" {
+			params.Set("since", sinceParam)
 		}
 		if lastID != "" {
 			params.Set("last_conversation_id", lastID)
 		}
 
 		var result struct {
-			Conversations []pancakeConversation `json:"conversations"`
+			Conversations json.RawMessage `json:"conversations"`
 		}
 		if err := p.doRequest(ctx, endpoint, params, &result); err != nil {
 			return conversations, err
 		}
-		if len(result.Conversations) == 0 {
-			break
+		if err := ctx.Err(); err != nil {
+			return conversations, fmt.Errorf("%w: %v", ErrPancakeCoverageIncomplete, err)
+		}
+		raw := bytes.TrimSpace(result.Conversations)
+		if len(raw) == 0 || raw[0] != '[' {
+			return conversations, fmt.Errorf("%w: page %d has no conversations array", ErrPancakeCoverageIncomplete, page+1)
+		}
+		var rows []json.RawMessage
+		if err := json.Unmarshal(raw, &rows); err != nil {
+			return conversations, fmt.Errorf("%w: page %d has a malformed conversations array", ErrPancakeCoverageIncomplete, page+1)
+		}
+		if len(rows) == 0 {
+			return conversations, nil // trang rỗng: hết chuỗi cursor
 		}
 
-		for _, conv := range result.Conversations {
+		for _, row := range rows {
+			var conv pancakeConversation
+			if err := json.Unmarshal(row, &conv); err != nil {
+				return conversations, fmt.Errorf("%w: page %d has a malformed conversation", ErrPancakeCoverageIncomplete, page+1)
+			}
+			updatedAt := parsePancakeTime(conv.UpdatedAt)
+			if conv.ID == "" || updatedAt.IsZero() {
+				return conversations, fmt.Errorf("%w: page %d has a conversation without a valid id or updated_at", ErrPancakeCoverageIncomplete, page+1)
+			}
 			// Chỉ lấy hội thoại tin nhắn; bình luận dưới bài viết không thuộc
 			// phạm vi đánh giá CSKH, kể cả khi API bỏ qua bộ lọc type.
 			if conv.Type != "" && conv.Type != "INBOX" {
 				continue
 			}
-			updatedAt := parsePancakeTime(conv.UpdatedAt)
-			if !since.IsZero() && !updatedAt.IsZero() && updatedAt.Before(since) {
+			if !since.IsZero() && updatedAt.Before(since) {
 				continue
 			}
+			if seenIDs[conv.ID] {
+				continue
+			}
+			seenIDs[conv.ID] = true
 			conversations = append(conversations, SyncedConversation{
 				ExternalID:     conv.ID,
 				ExternalUserID: conv.From.ID,
@@ -253,52 +313,90 @@ func (p *PancakeAdapter) FetchRecentConversations(ctx context.Context, since tim
 					"tags":          conv.Tags,
 				},
 			})
-			if limit > 0 && len(conversations) >= limit {
-				return conversations, nil
+			if limit > 0 && len(conversations) > limit {
+				return conversations[:limit], fmt.Errorf("%w: more than %d eligible conversations in the window", ErrPancakeCoverageIncomplete, limit)
 			}
 		}
 
-		next := result.Conversations[len(result.Conversations)-1].ID
-		if len(result.Conversations) < pancakeConversationPageSize || next == lastID {
-			break
+		// Cursor là ID của dòng vật lý cuối trang, kể cả dòng đã bị lọc.
+		var last pancakeConversation
+		_ = json.Unmarshal(rows[len(rows)-1], &last) // đã kiểm tra hợp lệ ở vòng trên
+		if last.ID == lastID || seenCursors[last.ID] {
+			return conversations, fmt.Errorf("%w: page %d repeats an earlier cursor", ErrPancakeCoverageIncomplete, page+1)
 		}
-		lastID = next
+		seenCursors[last.ID] = true
+		lastID = last.ID
 	}
-
-	return conversations, nil
 }
 
+// FetchMessages đọc toàn bộ tin nhắn của một hội thoại có inserted_at >= since (CCMAI-RUNTIME-030).
+//
+// Điểm đầu không gửi current_count; các trang sau gửi số dòng vật lý đã đọc (kể cả dòng trùng và
+// dòng cũ hơn since). Tài liệu Pancake không bảo đảm trang ngắn là trang cuối, không cho biết thứ
+// tự giữa các trang và không có snapshot, nên: chỉ một mảng messages rỗng hợp lệ mới kết thúc
+// thành công; since chỉ lọc kết quả (gồm cả mốc bằng), không dừng sớm. Mọi dòng được kiểm tra
+// (id chuỗi không rỗng, inserted_at hợp lệ) trước khi lọc/khử trùng. Trang không rỗng mà không có
+// ID mới (lặp lại), trang thiếu/sai mảng messages, dòng hỏng, ctx bị huỷ hay hết ngân sách trang
+// đều trả ErrPancakeMessageCoverageIncomplete (hoặc lỗi gọi API) kèm các tin đã thấy, chỉ để chẩn
+// đoán. Kết quả khử trùng theo ID (giữ bản đầu tiên) và xếp tăng dần theo SentAt, bằng nhau thì
+// giữ thứ tự gặp đầu tiên. Nil-error chỉ nghĩa là duyệt cục bộ này hoàn tất; không chứng minh
+// lịch sử không đổi trong lúc đọc.
 func (p *PancakeAdapter) FetchMessages(ctx context.Context, conversationID string, since time.Time) ([]SyncedMessage, error) {
 	endpoint := fmt.Sprintf("%s/pages/%s/conversations/%s/messages",
 		p.v1Base, url.PathEscape(p.creds.PageID), url.PathEscape(conversationID))
 
-	// Pancake trả tin theo lô 30 tin, lô đầu là 30 tin mới nhất. current_count
-	// là số tin đã lấy, lô sau là các tin cũ hơn nữa. Trong mỗi lô tin xếp từ
-	// cũ đến mới — ngược với tài liệu của Pancake.
-	var batches [][]SyncedMessage
+	var messages []SyncedMessage
 	seen := make(map[string]bool)
-	fetched := 0
+	consumed := 0 // số dòng vật lý đã đọc = current_count của trang kế tiếp
 
-	for page := 0; page < pancakeMaxPages; page++ {
+	for page := 0; ; page++ {
+		if page >= pancakeMaxPages {
+			return sortMessagesBySentAt(messages), fmt.Errorf("%w: page budget of %d reached before an empty page", ErrPancakeMessageCoverageIncomplete, pancakeMaxPages)
+		}
+		if err := ctx.Err(); err != nil {
+			return sortMessagesBySentAt(messages), fmt.Errorf("%w: %w", ErrPancakeMessageCoverageIncomplete, err)
+		}
+
 		params := url.Values{}
-		if fetched > 0 {
-			params.Set("current_count", strconv.Itoa(fetched))
+		if consumed > 0 {
+			params.Set("current_count", strconv.Itoa(consumed))
 		}
 
 		var result struct {
-			Messages []pancakeMessage `json:"messages"`
+			Messages json.RawMessage `json:"messages"`
 		}
 		if err := p.doRequest(ctx, endpoint, params, &result); err != nil {
-			return flattenOldestFirst(batches), err
+			return sortMessagesBySentAt(messages), err
 		}
-		if len(result.Messages) == 0 {
-			break
+		if err := ctx.Err(); err != nil {
+			return sortMessagesBySentAt(messages), fmt.Errorf("%w: %w", ErrPancakeMessageCoverageIncomplete, err)
+		}
+		raw := bytes.TrimSpace(result.Messages)
+		if len(raw) == 0 || raw[0] != '[' {
+			return sortMessagesBySentAt(messages), fmt.Errorf("%w: page %d has no messages array", ErrPancakeMessageCoverageIncomplete, page+1)
+		}
+		var rows []json.RawMessage
+		if err := json.Unmarshal(raw, &rows); err != nil {
+			return sortMessagesBySentAt(messages), fmt.Errorf("%w: page %d has a malformed messages array", ErrPancakeMessageCoverageIncomplete, page+1)
+		}
+		if len(rows) == 0 {
+			return sortMessagesBySentAt(messages), nil // trang rỗng: hết lịch sử theo offset
 		}
 
-		var batch []SyncedMessage
-		reachedSince := false
+		// Kiểm tra từng dòng (kể cả dòng cũ hơn since hoặc trùng ID) trước khi lọc/khử trùng.
+		parsed := make([]pancakeMessage, len(rows))
+		for i, row := range rows {
+			if err := json.Unmarshal(row, &parsed[i]); err != nil {
+				return sortMessagesBySentAt(messages), fmt.Errorf("%w: page %d has a malformed message", ErrPancakeMessageCoverageIncomplete, page+1)
+			}
+			if strings.TrimSpace(parsed[i].ID) == "" || parsePancakeTime(parsed[i].InsertedAt).IsZero() {
+				return sortMessagesBySentAt(messages), fmt.Errorf("%w: page %d has a message without a valid id or inserted_at", ErrPancakeMessageCoverageIncomplete, page+1)
+			}
+		}
+
 		newCount := 0
-		for _, m := range result.Messages {
+		for _, m := range parsed {
+			consumed++
 			if seen[m.ID] {
 				continue
 			}
@@ -307,29 +405,20 @@ func (p *PancakeAdapter) FetchMessages(ctx context.Context, conversationID strin
 
 			msg := p.toSyncedMessage(m)
 			if !since.IsZero() && msg.SentAt.Before(since) {
-				reachedSince = true
 				continue
 			}
-			batch = append(batch, msg)
+			messages = append(messages, msg)
 		}
-		batches = append(batches, batch)
-
-		if reachedSince || newCount == 0 {
-			break
+		if newCount == 0 {
+			return sortMessagesBySentAt(messages), fmt.Errorf("%w: page %d repeats only messages already seen", ErrPancakeMessageCoverageIncomplete, page+1)
 		}
-		fetched += len(result.Messages)
 	}
-
-	return flattenOldestFirst(batches), nil
 }
 
-// flattenOldestFirst ghép các lô (lô sau cũ hơn lô trước) thành một dãy từ cũ đến mới.
-func flattenOldestFirst(batches [][]SyncedMessage) []SyncedMessage {
-	var out []SyncedMessage
-	for i := len(batches) - 1; i >= 0; i-- {
-		out = append(out, batches[i]...)
-	}
-	return out
+// sortMessagesBySentAt xếp tăng dần theo thời gian gửi; bằng nhau thì giữ thứ tự gặp đầu tiên.
+func sortMessagesBySentAt(msgs []SyncedMessage) []SyncedMessage {
+	sort.SliceStable(msgs, func(i, j int) bool { return msgs[i].SentAt.Before(msgs[j].SentAt) })
+	return msgs
 }
 
 func (p *PancakeAdapter) toSyncedMessage(m pancakeMessage) SyncedMessage {

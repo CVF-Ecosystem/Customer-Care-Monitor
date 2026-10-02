@@ -3,7 +3,6 @@ package handlers
 import (
 	"net/http"
 	"strconv"
-	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
@@ -14,22 +13,15 @@ import (
 func GetDashboard(c *gin.Context) {
 	tenantID := middleware.GetTenantID(c)
 
-	// Date filter (optional)
-	now := time.Now()
-	today := now.Truncate(24 * time.Hour)
-	from := today
-	to := now
-
-	if f := c.Query("from"); f != "" {
-		if t, err := time.Parse("2006-01-02", f); err == nil {
-			from = t
-		}
+	// CCMAI-RUNTIME-026: every date boundary is a Vietnam calendar boundary derived from one
+	// clock instant; the filter is [from, to+1 day) and the default is today.
+	w := newDashboardWindow(businessClock())
+	rng, err := dashboardRange(w, c.Query("from"), c.Query("to"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_date_range"})
+		return
 	}
-	if t := c.Query("to"); t != "" {
-		if parsed, err := time.Parse("2006-01-02", t); err == nil {
-			to = parsed.Add(24*time.Hour - time.Second) // end of day
-		}
-	}
+	unavailable := func() { c.JSON(http.StatusInternalServerError, gin.H{"error": "dashboard_unavailable"}) }
 
 	// Static stats (not time-dependent)
 	var activeChannels, activeJobs int64
@@ -38,17 +30,22 @@ func GetDashboard(c *gin.Context) {
 
 	// Time-dependent stats
 	var totalConversations, issuesInPeriod int64
-	db.DB.Model(&models.Conversation{}).Where("tenant_id = ? AND last_message_at BETWEEN ? AND ?", tenantID, from, to).Count(&totalConversations)
-	db.DB.Model(&models.JobResult{}).Where("tenant_id = ? AND created_at BETWEEN ? AND ?", tenantID, from, to).Count(&issuesInPeriod)
+	if err := rng.where(db.DB.Model(&models.Conversation{}).Where("tenant_id = ?", tenantID), "last_message_at").Count(&totalConversations).Error; err != nil {
+		unavailable()
+		return
+	}
+	if err := rng.where(db.DB.Model(&models.JobResult{}).Where("tenant_id = ?", tenantID), "created_at").Count(&issuesInPeriod).Error; err != nil {
+		unavailable()
+		return
+	}
 
 	// Số dòng vi phạm QC (không đếm đánh giá hội thoại hay nhãn phân loại). `issues`
 	// ở trên vẫn đếm mọi kết quả nên giữ nguyên; lỗi truy vấn này trả 500 chung
 	// thay vì một số 0 sai.
 	var qcViolationCount int64
-	if err := db.DB.Model(&models.JobResult{}).
-		Where("tenant_id = ? AND result_type = ? AND created_at BETWEEN ? AND ?", tenantID, "qc_violation", from, to).
+	if err := rng.where(db.DB.Model(&models.JobResult{}).Where("tenant_id = ? AND result_type = ?", tenantID, "qc_violation"), "created_at").
 		Count(&qcViolationCount).Error; err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "dashboard_unavailable"})
+		unavailable()
 		return
 	}
 
@@ -58,12 +55,15 @@ func GetDashboard(c *gin.Context) {
 		Count       int64  `json:"count"`
 	}
 	var channelCounts []ChannelCount
-	db.DB.Model(&models.Conversation{}).
+	if err := rng.where(db.DB.Model(&models.Conversation{}).
 		Joins("JOIN channels ON channels.id = conversations.channel_id").
-		Where("conversations.tenant_id = ? AND conversations.last_message_at BETWEEN ? AND ?", tenantID, from, to).
+		Where("conversations.tenant_id = ?", tenantID), "conversations.last_message_at").
 		Select("channels.channel_type, COUNT(*) as count").
 		Group("channels.channel_type").
-		Scan(&channelCounts)
+		Scan(&channelCounts).Error; err != nil {
+		unavailable()
+		return
+	}
 
 	// Thẻ "Hoạt động gần đây" gộp hai danh sách rồi lấy recentActivityLimit dòng
 	// mới nhất. Mỗi danh sách vì thế phải lấy đủ recentActivityLimit: trước đây
@@ -73,8 +73,11 @@ func GetDashboard(c *gin.Context) {
 
 	// QC Alerts: only qc_violation (real quality issues)
 	var qcAlerts []models.JobResult
-	db.DB.Where("tenant_id = ? AND result_type = 'qc_violation' AND created_at BETWEEN ? AND ?", tenantID, from, to).
-		Order("created_at DESC").Limit(recentActivityLimit).Find(&qcAlerts)
+	if err := rng.where(db.DB.Where("tenant_id = ? AND result_type = 'qc_violation'", tenantID), "created_at").
+		Order("created_at DESC").Limit(recentActivityLimit).Find(&qcAlerts).Error; err != nil {
+		unavailable()
+		return
+	}
 
 	// Classification recent: only classification_tag
 	type ClassificationItem struct {
@@ -82,62 +85,48 @@ func GetDashboard(c *gin.Context) {
 		CustomerName string `json:"customer_name"`
 	}
 	var classRecent []ClassificationItem
-	db.DB.Model(&models.JobResult{}).
+	if err := rng.where(db.DB.Model(&models.JobResult{}).
 		Select("job_results.*, conversations.customer_name").
 		Joins("LEFT JOIN conversations ON conversations.id = job_results.conversation_id").
-		Where("job_results.tenant_id = ? AND job_results.result_type = 'classification_tag' AND job_results.created_at BETWEEN ? AND ?", tenantID, from, to).
-		Order("job_results.created_at DESC").Limit(recentActivityLimit).Find(&classRecent)
+		Where("job_results.tenant_id = ? AND job_results.result_type = 'classification_tag'", tenantID), "job_results.created_at").
+		Order("job_results.created_at DESC").Limit(recentActivityLimit).Find(&classRecent).Error; err != nil {
+		unavailable()
+		return
+	}
 
-	// AI cost
+	// AI cost over the selected interval
 	var costPeriod float64
-	db.DB.Model(&models.AIUsageLog{}).Where("tenant_id = ? AND created_at BETWEEN ? AND ?", tenantID, from, to).
-		Select("COALESCE(SUM(cost_usd), 0)").Scan(&costPeriod)
+	if err := rng.where(db.DB.Model(&models.AIUsageLog{}).Where("tenant_id = ?", tenantID), "created_at").
+		Select("COALESCE(SUM(cost_usd), 0)").Scan(&costPeriod).Error; err != nil {
+		unavailable()
+		return
+	}
 
 	// Chi phí hôm nay tính riêng, không phụ thuộc khoảng thời gian đang lọc — nếu
 	// dùng chung một con số thì lọc 28 ngày sẽ ra "hôm nay" lớn hơn "tháng này".
-	var costToday float64
-	db.DB.Model(&models.AIUsageLog{}).Where("tenant_id = ? AND created_at >= ?", tenantID, today).
-		Select("COALESCE(SUM(cost_usd), 0)").Scan(&costToday)
-
-	monthStart := time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, now.Location())
-	var costMonth float64
-	db.DB.Model(&models.AIUsageLog{}).Where("tenant_id = ? AND created_at >= ?", tenantID, monthStart).
-		Select("COALESCE(SUM(cost_usd), 0)").Scan(&costMonth)
-
-	// Cost by day
-	type DayCost struct {
-		Date         string  `json:"date"`
-		TotalCost    float64 `json:"total_cost"`
-		InputTokens  int64   `json:"input_tokens"`
-		OutputTokens int64   `json:"output_tokens"`
-		CallCount    int64   `json:"call_count"`
+	// Both are bounded above: the current VN day and the current VN month only.
+	costToday, err := dashboardCostSum(tenantID, w.todayStart, w.tomorrowStart)
+	if err != nil {
+		unavailable()
+		return
 	}
-	var costByDay []DayCost
-	thirtyDaysAgo := today.Add(-30 * 24 * time.Hour)
-	db.DB.Model(&models.AIUsageLog{}).
-		Where("tenant_id = ? AND created_at >= ?", tenantID, thirtyDaysAgo).
-		Select("DATE(created_at) as date, SUM(cost_usd) as total_cost, SUM(input_tokens) as input_tokens, SUM(output_tokens) as output_tokens, COUNT(*) as call_count").
-		Group("DATE(created_at)").
-		Order("date DESC").
-		Scan(&costByDay)
-
-	// Messages by day (with chat count + reply count)
-	type DayMessages struct {
-		Date       string `json:"date"`
-		Count      int64  `json:"count"`
-		ChatCount  int64  `json:"chat_count"`  // distinct conversations with customer messages
-		ReplyCount int64  `json:"reply_count"` // agent replies
+	costMonth, err := dashboardCostSum(tenantID, w.monthStart, w.nextMonth)
+	if err != nil {
+		unavailable()
+		return
 	}
-	var messagesByDay []DayMessages
-	db.DB.Model(&models.Message{}).
-		Where("tenant_id = ? AND sent_at >= ?", tenantID, thirtyDaysAgo).
-		Select(`DATE(sent_at) as date,
-			COUNT(*) as count,
-			COUNT(DISTINCT CASE WHEN sender_type = 'customer' THEN conversation_id END) as chat_count,
-			SUM(CASE WHEN sender_type = 'agent' THEN 1 ELSE 0 END) as reply_count`).
-		Group("DATE(sent_at)").
-		Order("date ASC").
-		Scan(&messagesByDay)
+
+	// Cost / messages by Vietnam business day (independent of the selected interval)
+	costByDay, err := dashboardCostByDay(tenantID, w)
+	if err != nil {
+		unavailable()
+		return
+	}
+	messagesByDay, err := dashboardMessagesByDay(tenantID, w)
+	if err != nil {
+		unavailable()
+		return
+	}
 
 	// Exchange rate from tenant settings
 	exchangeRate := 26000.0

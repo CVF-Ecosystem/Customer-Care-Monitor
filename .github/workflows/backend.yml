@@ -2,10 +2,10 @@ name: Backend Go
 
 on:
   pull_request:
-    paths: ['backend/**', '.github/workflows/backend.yml']
+    paths: ['backend/**', '.github/workflows/backend.yml', 'scripts/ci_db_test_gate.py', 'scripts/tests/**']
   push:
     branches: [main]
-    paths: ['backend/**', '.github/workflows/backend.yml']
+    paths: ['backend/**', '.github/workflows/backend.yml', 'scripts/ci_db_test_gate.py', 'scripts/tests/**']
 
 permissions:
   contents: read
@@ -13,14 +13,59 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      CI_DB_CONTAINER: ccma-ci-mysql
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
           go-version-file: backend/go.mod
           cache-dependency-path: backend/go.sum
-      - name: Test and build
+
+      - name: Check the DB test gate itself
+        run: python3 -m unittest discover -s scripts/tests -v
+
+      # Disposable MySQL 8 with a CI-only random credential (masked, never printed or uploaded).
+      # log_bin_trust_function_creators=1 is required by the trigger-based failure tests.
+      - name: Start disposable MySQL and verify readiness
+        run: |
+          set -euo pipefail
+          pw="$(openssl rand -hex 16)"
+          echo "::add-mask::$pw"
+          docker run -d --name "$CI_DB_CONTAINER" \
+            -e MYSQL_ROOT_PASSWORD="$pw" -e MYSQL_DATABASE=CCMA -e MYSQL_USER=ccma -e MYSQL_PASSWORD="$pw" \
+            -p 127.0.0.1:3306:3306 mysql:8.0 --log-bin-trust-function-creators=1 >/dev/null
+          ready=0
+          for _ in $(seq 1 60); do
+            v="$(docker exec -e MYSQL_PWD="$pw" "$CI_DB_CONTAINER" mysql -uccma -N -e 'SELECT @@log_bin_trust_function_creators' CCMA 2>/dev/null || true)"
+            if [ "$v" = "1" ]; then ready=1; break; fi
+            sleep 2
+          done
+          if [ "$ready" != "1" ]; then
+            echo "Disposable MySQL did not become ready for the application user with log_bin_trust_function_creators=1" >&2
+            exit 1
+          fi
+          echo "TEST_DB_DSN=ccma:${pw}@tcp(127.0.0.1:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC" >> "$GITHUB_ENV"
+          echo "Disposable MySQL is ready."
+
+      - name: Test (full suite, real MySQL)
         working-directory: backend
         run: |
-          go test ./...
-          go build ./...
+          set -uo pipefail
+          test -n "${TEST_DB_DSN:-}" || { echo "TEST_DB_DSN is not set" >&2; exit 1; }
+          go test ./... -json -count=1 -p 1 > "$RUNNER_TEMP/gotest.json"
+          test_status=$?
+          python3 "$GITHUB_WORKSPACE/scripts/ci_db_test_gate.py" "$RUNNER_TEMP/gotest.json"
+          gate_status=$?
+          if [ "$test_status" -ne 0 ] || [ "$gate_status" -ne 0 ]; then
+            echo "go test exit=$test_status, DB gate exit=$gate_status" >&2
+            exit 1
+          fi
+
+      - name: Build
+        working-directory: backend
+        run: go build ./...
+
+      - name: Remove disposable MySQL
+        if: always()
+        run: docker rm -f "$CI_DB_CONTAINER" >/dev/null 2>&1 || true

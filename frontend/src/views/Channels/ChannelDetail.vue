@@ -41,13 +41,11 @@
         </v-col>
         <v-col cols="6" sm="3">
           <div class="text-caption text-grey">Trạng thái đồng bộ</div>
-          <v-chip size="small" :color="syncStatusColor(channel.last_sync_status)" variant="tonal">
-            {{ syncStatusLabel(channel.last_sync_status) }}
-          </v-chip>
+          <SyncStatusChip :status="channel.last_sync_status" />
         </v-col>
         <v-col cols="6" sm="3">
-          <div class="text-caption text-grey">Đồng bộ lần cuối</div>
-          <div>{{ channel.last_sync_at ? formatDateTime(channel.last_sync_at) : 'Chưa đồng bộ' }}</div>
+          <div class="text-caption text-grey">{{ $t('ch_last_success_sync') }}</div>
+          <div data-test="last-success">{{ channel.last_sync_at ? formatDateTime(channel.last_sync_at) : $t('ch_no_success_yet') }}</div>
         </v-col>
         <v-col cols="6" sm="3">
           <div class="text-caption text-grey">Tổng cuộc chat</div>
@@ -174,7 +172,10 @@ import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useChannelStore } from '../../stores/channels'
 import { useAuthStore } from '../../stores/auth'
+import SyncStatusChip from '../../components/ui/SyncStatusChip.vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
 const channelStore = useChannelStore()
@@ -228,22 +229,6 @@ function formatSyncInterval(mins: number) {
   return `${mins / 1440} ngày`
 }
 
-function syncStatusColor(status: string) {
-  if (status === 'success') return 'success'
-  if (status === 'partial') return 'warning'
-  if (status === 'error') return 'error'
-  if (status === 'syncing') return 'info'
-  return 'grey'
-}
-
-function syncStatusLabel(status: string) {
-  if (status === 'success') return 'Thành công'
-  if (status === 'partial') return 'Hoàn tất một phần'
-  if (status === 'error') return 'Lỗi'
-  if (status === 'syncing') return 'Đang đồng bộ'
-  return 'Chưa đồng bộ'
-}
-
 function syncLogColor(action: string) {
   if (action === 'sync.completed') return 'success'
   if (action === 'sync.partial') return 'warning'
@@ -265,33 +250,49 @@ async function doSync() {
   syncResult.value = null
   try {
     await channelStore.syncChannel(tenantId.value, channelId.value)
-    // Poll channel status until sync completes (max 3 minutes)
+  } catch (err: any) {
+    syncResult.value = { type: 'error', message: err.response?.data?.error || 'Đồng bộ thất bại' }
+    syncing.value = false
+    return
+  }
+  try {
+    // Poll channel status until a terminal status is observed (max 3 minutes).
+    // A timeout or refresh failure means the outcome is unconfirmed, not that sync failed.
     let pollAttempts = 0
     const maxPollAttempts = 60
+    let observed = false
     while (pollAttempts < maxPollAttempts) {
       await new Promise(r => setTimeout(r, 3000))
       const ch = await channelStore.fetchChannel(tenantId.value, channelId.value)
-      if (ch.last_sync_status !== 'syncing') break
+      const st = ch?.last_sync_status
+      // Only success/partial/error are observed terminal outcomes. Any other non-syncing value
+      // (empty, never, unknown) is unconfirmed: stop polling without reporting a failure.
+      if (st === 'success' || st === 'partial' || st === 'error') { observed = true; break }
+      if (st !== 'syncing') break
       pollAttempts++
     }
-    if (pollAttempts >= maxPollAttempts) {
-      syncResult.value = { type: 'error', message: 'Đồng bộ quá lâu, vui lòng kiểm tra lại sau' }
-      syncing.value = false
+    if (!observed) {
+      syncResult.value = { type: 'warning', message: t('ch_sync_unconfirmed') }
       return
     }
-    await channelStore.fetchSyncHistory(tenantId.value, channelId.value, syncPage.value)
-    const ch = channelStore.currentChannel
-    if (ch?.last_sync_status === 'success') {
-      syncResult.value = { type: 'success', message: 'Đồng bộ thành công' }
-    } else if (ch?.last_sync_status === 'partial') {
-      syncResult.value = { type: 'warning', message: ch.last_sync_error || 'Đồng bộ hoàn tất một phần; checkpoint chưa được cập nhật' }
-    } else {
-      syncResult.value = { type: 'error', message: ch?.last_sync_error || 'Đồng bộ thất bại' }
-    }
-  } catch (err: any) {
-    syncResult.value = { type: 'error', message: err.response?.data?.error || 'Đồng bộ thất bại' }
+  } catch {
+    syncResult.value = { type: 'warning', message: t('ch_sync_unconfirmed') }
+    return
   } finally {
     syncing.value = false
+  }
+  try {
+    await channelStore.fetchSyncHistory(tenantId.value, channelId.value, syncPage.value)
+  } catch {
+    // History is secondary; the observed terminal status below is still valid.
+  }
+  const ch = channelStore.currentChannel
+  if (ch?.last_sync_status === 'success') {
+    syncResult.value = { type: 'success', message: 'Đồng bộ thành công' }
+  } else if (ch?.last_sync_status === 'partial') {
+    syncResult.value = { type: 'warning', message: ch.last_sync_error || 'Đồng bộ hoàn tất một phần; checkpoint chưa được cập nhật' }
+  } else {
+    syncResult.value = { type: 'error', message: ch?.last_sync_error || 'Đồng bộ thất bại' }
   }
 }
 
