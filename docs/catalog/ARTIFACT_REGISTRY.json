@@ -1,7 +1,7 @@
 ﻿{
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
-    "updatedAt":  "2026-09-26",
+    "updatedAt":  "2026-10-02",
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
@@ -150,6 +150,20 @@
                           "path":  "CVF_SESSION/tranches",
                           "status":  "ACTIVE",
                           "description":  "Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate."
+                      },
+                      {
+                          "id":  "continuity-learning-shell-cleanup",
+                          "family":  "continuity",
+                          "path":  "docs/reviews/learnings/feedback_shell_cleanup_and_paths.md",
+                          "status":  "ACTIVE",
+                          "description":  "Shared learning: shell cleanup and MSYS paths; read before disposable-resource cleanup."
+                      },
+                      {
+                          "id":  "continuity-learning-repair-workflow",
+                          "family":  "continuity",
+                          "path":  "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
+                          "status":  "ACTIVE",
+                          "description":  "Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR."
                       }
                   ]
 }

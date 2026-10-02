@@ -32,6 +32,7 @@
     "CCMAI-RUNTIME-014 REVIEW PASS / FREEZE OPEN after R014-R1: each new sync reservation stores a typed internal run ID and final/deferred/manual panic status writes require it. The repair keeps run ID and SQL values out of GORM's output sink on those three writes and bounds DB errors returned to workers/agents. Codex independently reran focused GORM sink, error and stale-worker tests on disposable MySQL; doctor 25/25. Old-worker side effects and stuck-sync recovery remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
+    "Owner-directed shared learning documented in two indexed repository feedback records (2026-10-02): cleanup/path handling and repair/continuity/mutation/evidence lessons. Documentation only; no helper/enforcement implementation or F07 REVIEW acceptance. Exact R029 worker BUILD 4c6653021878827cba678adb1ae87e9a196d5e85 remains REVIEW_PENDING / FREEZE_OPEN.",
     "CCMAI-RUNTIME-029 F07 REVIEW_PENDING / REVIEW: Claude local frontend-only BUILD replaces the hardcoded Dashboard service-health rows with an explicit neutral unknown state (no health-check data) and one explanation, scoped vi/en keys, no inferred health, no health call or polling; evidence docs/reviews/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_BUILD_2026-10-02.md. Codex independent review pending; R028/R027/R025/R026 remain REVIEW_PASS / FREEZE_OPEN, F07 stays OPEN. The card states that no health check exists; actual API/database/scheduler availability is not measured and a telemetry contract remains separate.",
     "CCMAI-RUNTIME-028 F06 R028-R2 REVIEW_PASS / FREEZE_OPEN after independent Codex re-review of exact Claude repair 8035cb05a2d66778810fb0acb89d208238743cfc. Fixed-class early-failure application log and stored message; terminal-state AND ownership-release route waiting/cleanup with engine/handler barriers. All original/R1 probes retained/pass. Independent engine56, handlers27 zero skips, frontend255, forced typecheck/build and gate46 pass; review docs/reviews/CCMAI_RUNTIME_028_R2_INDEPENDENT_REREVIEW_2026-10-02.md. Worker full914/R019/mutations attributed separately. F05/R025/R026 remain REVIEW_PASS / FREEZE_OPEN; separate F07 planning next, no F07 BUILD authority.",
     "CCMAI-RUNTIME-015 REVIEW PASS / FREEZE OPEN (Claude re-review of BUILD de0616c + repair 904454d): run-owned conversation/message/count and refreshed-Zalo-credential writes are fenced by a locked SELECT FOR UPDATE ownership guard; attachment reuse/attempt-unique keys and reference-checked cleanup hold; a storage Exists error now falls back to a fresh download instead of aborting; a mid-loop takeover stops A with sync_ownership_lost. Focused 107 PASS and full backend 14 packages PASS on disposable MySQL; independent FOR UPDATE and R1 restore mutations failed their tests. Not crash recovery or live-provider proof; reclaim remains R016.",
@@ -228,7 +229,9 @@
     "docs/reviews/CCMAI_RUNTIME_028_R1_INDEPENDENT_REREVIEW_2026-10-02.md",
     "docs/reviews/CCMAI_RUNTIME_028_R2_INDEPENDENT_REREVIEW_2026-10-02.md",
     "docs/specs/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_2026-10-02.md",
-    "docs/work_orders/CCMAI_RUNTIME_029.md"
+    "docs/work_orders/CCMAI_RUNTIME_029.md",
+    "docs/reviews/learnings/feedback_shell_cleanup_and_paths.md",
+    "docs/reviews/learnings/feedback_cvf_repair_workflow.md"
   ],
   "updatedAt": "2026-10-02"
 }

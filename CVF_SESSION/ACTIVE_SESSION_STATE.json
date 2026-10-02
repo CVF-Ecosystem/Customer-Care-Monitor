@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-029 F07 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (Dashboard service rows are now an explicit neutral unknown state `Chưa có dữ liệu kiểm tra` / `No health-check data` with one explanation, scoped i18n keys, no inferred health, no health call/polling/timer; mounted acceptance groups A..F, old-source failure 13/13, four mutations, real desktop/mobile captures in both locales and the request inventory in docs/reviews/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_BUILD_2026-10-02.md). R028/F06, R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F07 stays OPEN until review. Backend observability/telemetry contract, F02 live/message limits and governance proof stay separate; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-029 F07 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit 4c6653021878827cba678adb1ae87e9a196d5e85 (Dashboard service rows are now an explicit neutral unknown state `Chưa có dữ liệu kiểm tra` / `No health-check data` with one explanation, scoped i18n keys, no inferred health, no health call/polling/timer; mounted acceptance groups A..F, old-source failure 13/13, four mutations, real desktop/mobile captures in both locales and the request inventory in docs/reviews/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_BUILD_2026-10-02.md). R028/F06, R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F07 stays OPEN until review. Backend observability/telemetry contract, F02 live/message limits and governance proof stay separate; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE. Read the applicable shared cleanup/repair learning linked in CVF_SESSION_MEMORY.md before execution or evidence review; documentation intake grants no F07 REVIEW_PASS.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex, shared learning); independent REVIEWER (Codex) next",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-02"
 }

@@ -6,6 +6,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Initial agent handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+- Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
+- Shared learning: shell cleanup and MSYS paths; read before disposable-resource cleanup.: `docs/reviews/learnings/feedback_shell_cleanup_and_paths.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`

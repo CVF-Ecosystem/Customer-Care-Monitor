@@ -19,6 +19,14 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 4. Read `IMPLEMENTATION_STATUS.json` and `docs/INDEX.md`.
 5. State current mode, active handoff, next allowed move, parked checkpoint,
    and active role before material work.
+6. Read the shared learning pointers below when preparing BUILD/REPAIR, continuity synchronization, mutation evidence or resource cleanup.
+
+## Shared cross-agent learning (2026-10-02)
+
+- [Shell cleanup and MSYS paths](docs/reviews/learnings/feedback_shell_cleanup_and_paths.md): separate teardown/file deletion/verification; verify absolute targets; prefer PowerShell literal paths; scope MSYS_NO_PATHCONV to native invocations when applicable. Shell incident is owner-reported, not reproduced in this intake.
+- [Repair workflow and evidence](docs/reviews/learnings/feedback_cvf_repair_workflow.md): before-edit acknowledgment/BUILD/preflight; prevalidated rerunnable continuity sync; applied mutation plus byte restoration; discriminate survivors; retain unexplained failures and NOT RUN labels.
+
+These committed repository records are the shared learning references; provider-local feedback is supplemental. They are directly indexed through the artifact registry and generated docs index, with source/confidence and proposed parent disposition. Read only the applicable record at the task trigger; no full-history read is needed. This documentation intake changes no F07 disposition: exact worker BUILD `4c6653021878827cba678adb1ae87e9a196d5e85` remains REVIEW_PENDING / FREEZE_OPEN for independent Codex REVIEW. Parent helper/enforcement proposals remain deferred through `docs/reviews/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`.
 
 ## Mandatory Continuity Rehydration
 
