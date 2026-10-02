@@ -3,6 +3,7 @@ package engine
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"strings"
@@ -30,28 +31,50 @@ func NewAnalyzer(cfg *config.Config) *Analyzer {
 	return &Analyzer{cfg: cfg}
 }
 
-// execute runs one planned analysis (CCMAI-RUNTIME-027). The plan fixes the mode, the cap and the
-// date bounds; the ordinary mode keeps the R025 source-version selection, every explicit mode uses
-// its own candidate query (analyzer_modes.go), and all modes analyze the full local snapshot that
-// was prepared before the provider call and is the one saved with the result.
+// execute reserves the tenant/job (CCMAI-RUNTIME-028: one shared admission for every entry path,
+// including the public Analyzer methods) and runs the planned analysis under that ownership.
 func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, injectedProvider ai.AIProvider) (*models.JobRun, error) {
-	// CCMAI-RUNTIME-025: captured before candidate selection; an ordinary incremental run that
-	// completes cleanly records this (second-truncated) as its checkpoint. The same instant is
-	// the test-run window's clock (it must not move while the run works).
-	now := analyzerNow()
+	res, err := ReserveJobRun(ctx, job, 0)
+	if err != nil {
+		return nil, err
+	}
+	return a.executeReserved(res, job, plan, injectedProvider)
+}
+
+// executeReserved runs one planned analysis (CCMAI-RUNTIME-027) for an already reserved, owned and
+// persisted running row. The reservation is consumed exactly once; ownership is released only after
+// the worker's last effect (terminal write, notification, cleanup). The plan fixes the mode, the
+// cap and the date bounds; the ordinary mode keeps the R025 source-version selection, every
+// explicit mode uses its own candidate query (analyzer_modes.go), and all modes analyze the full
+// local snapshot that was prepared before the provider call and is the one saved with the result.
+func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan runPlan, injectedProvider ai.AIProvider) (retRun *models.JobRun, retErr error) {
+	consumed := false
+	res.used.Do(func() { consumed = true })
+	if !consumed {
+		return nil, ErrJobAdmission // a reservation is consumed exactly once
+	}
+	owner := res.owner
+	ctx := owner.ctx
+	run := res.run
+	defer owner.release() // runs last: the slot is held until every effect below has finished
+	defer func() {
+		if r := recover(); r != nil {
+			// The panic value is never logged or returned (it may carry SQL/config/credentials).
+			log.Printf("[security] panic in job run %s of job %s", run.ID, job.ID)
+			finishedAt := analyzerNow()
+			if err := finalizeOrdinaryRun(&run, job, "error", "Lượt chạy dừng đột ngột; xem nhật ký máy chủ.", "{}", finishedAt, nil); err != nil {
+				log.Printf("[analyzer] job %s: panic state not recorded; the running row keeps blocking admission", job.ID)
+			}
+			run.Status = "error"
+			run.FinishedAt = &finishedAt
+			retRun, retErr = &run, ErrJobRunPanic
+		}
+	}()
+	// CCMAI-RUNTIME-025: the start instant is also the scan start; an ordinary incremental run that
+	// completes cleanly records it (second-truncated) as its checkpoint, and it is the test-run
+	// window's clock (it must not move while the run works).
+	now := run.StartedAt
 	scanStart := now
-	run := models.JobRun{
-		ID:        pkg.NewUUID(),
-		JobID:     job.ID,
-		TenantID:  job.TenantID,
-		StartedAt: now,
-		Status:    "running",
-		Summary:   "{}",
-		CreatedAt: now,
-	}
-	if err := db.DB.Create(&run).Error; err != nil {
-		return nil, fmt.Errorf("failed to create job run: %w", err)
-	}
 
 	// Log run started
 	db.LogActivity(job.TenantID, "", "system", "job.run.started", "job", job.ID,
@@ -67,14 +90,14 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 	} else {
 		provider, err = a.getProvider(job)
 		if err != nil {
-			return a.failRun(&run, err)
+			return a.failOwnedRun(&run, job, err.Error(), err)
 		}
 	}
 
 	// Parse input channel IDs
 	var channelIDs []string
 	if err := json.Unmarshal([]byte(job.InputChannelIDs), &channelIDs); err != nil {
-		return a.failRun(&run, fmt.Errorf("invalid input_channel_ids: %w", err))
+		return a.failOwnedRun(&run, job, "Danh sách kênh đầu vào của job không hợp lệ", err)
 	}
 
 	issuesFound := 0
@@ -92,7 +115,7 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 		// below, not event timestamps or last_run_at, decides what needs analysis.
 		conversations, err = ordinaryIncrementalCandidates(job, channelIDs)
 		if err != nil {
-			return a.failRun(&run, fmt.Errorf("fetch conversations: %w", err))
+			return a.failOwnedRun(&run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
 		}
 		var prepErrors int
 		prepared, unchangedCount, prepErrors, truncated = prepareOrdinaryIncremental(ctx, job, conversations)
@@ -100,7 +123,7 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 	} else {
 		conversations, err = explicitCandidates(job, channelIDs, plan, now)
 		if err != nil {
-			return a.failRun(&run, fmt.Errorf("fetch conversations: %w", err))
+			return a.failOwnedRun(&run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
 		}
 		var prepErrors int
 		prepared, prepErrors, truncated = prepareExplicit(ctx, conversations)
@@ -152,7 +175,7 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 
 		if batchMode {
 			var bIssues, bPass, bAnalyzed, bErrors int
-			bIssues, bPass, bAnalyzed, bErrors, truncated = a.runBatchMode(ctx, provider, job, run, prepared, found, batchSize)
+			bIssues, bPass, bAnalyzed, bErrors, truncated = a.runBatchMode(owner, provider, job, run, prepared, found, batchSize)
 			issuesFound += bIssues
 			passCount += bPass
 			analyzedCount += bAnalyzed
@@ -175,7 +198,11 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 
 				// Call AI (with rate limit delay)
 				if analyzedCount > 0 {
-					time.Sleep(500 * time.Millisecond) // Avoid rate limiting
+					sleepCtx(ctx, 500*time.Millisecond) // Avoid rate limiting
+				}
+				// No new provider invocation after an accepted cancellation.
+				if owner.cancelledNow() {
+					return
 				}
 				aiResp, err := provider.AnalyzeChat(ctx, systemPrompt, transcript)
 				if err != nil {
@@ -213,8 +240,17 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 				}
 				db.DB.Create(&usageLog)
 
-				// Parse and save results
-				count, passed, err := a.saveResults(run.ID, snap, job.JobType, aiResp.Content)
+				// Parse and save results, unless a cancellation was accepted while the provider ran.
+				var count int
+				var passed bool
+				published, err := owner.publish(func() error {
+					var saveErr error
+					count, passed, saveErr = a.saveResults(run.ID, snap, job.JobType, aiResp.Content)
+					return saveErr
+				})
+				if !published {
+					return
+				}
 				if err != nil {
 					log.Printf("[analyzer] save results error for %s: %v", conv.ID, err)
 					errorCount++
@@ -251,18 +287,14 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 	}
 
 complete:
-	// Complete run
-	// Cancellation can arrive in the last provider call or during an empty scan, when there is no
-	// next loop iteration to observe it. Every mode must treat the run as interrupted (this is
-	// not an execution-ownership change; F06 stays separate).
+	// Complete run. beginTerminal is the serialization point with a cancel request: an accepted
+	// cancellation closes the run as cancelled (never success, never a checkpoint); otherwise the
+	// terminal commit wins and later cancellation requests are refused.
+	cancelled := owner.beginTerminal()
 	if ctx.Err() != nil {
-		truncated = true
+		truncated = true // timeout or a cancelled parent: non-success
 	}
-	// An already stored "cancelled" status (written by the cancel handler) is honored too.
-	storedCancelled := false
-	var current models.JobRun
-	if err := db.DB.Select("status").First(&current, "id = ?", run.ID).Error; err == nil && current.Status == "cancelled" {
-		storedCancelled = true
+	if cancelled {
 		truncated = true
 	}
 	finishedAt := analyzerNow()
@@ -274,9 +306,7 @@ complete:
 		"issues_found":           issuesFound,
 	})
 	runStatus := "success"
-	if storedCancelled {
-		// Người dùng bấm huỷ cũng đi qua đường ngắt context này. Giữ nguyên nhãn
-		// "cancelled" mà handler đã ghi, đừng báo thành hết giờ.
+	if cancelled {
 		runStatus = "cancelled"
 		run.ErrorMessage = "Cancelled by user"
 	} else if analyzedCount == 0 && errorCount > 0 {
@@ -301,6 +331,7 @@ complete:
 	}
 	finalizeErr := finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt, checkpoint)
 	if err := finalizeErr; err != nil {
+		owner.terminalFailed()
 		log.Printf("[analyzer] job %s: %v", job.Name, err)
 		run.Status = "error"
 		run.FinishedAt = &finishedAt
@@ -320,8 +351,9 @@ complete:
 		fmt.Sprintf("Job '%s': %d analyzed, %d passed, %d issues, %d errors", job.Name, analyzedCount, passCount, issuesFound, errorCount),
 		run.ErrorMessage, "")
 
-	// Send notifications via configured outputs (telegram, email, etc.)
-	if analyzedCount > 0 && job.OutputSchedule != "none" {
+	// Send notifications via configured outputs (telegram, email, etc.). A cancelled run sends
+	// none (CCMAI-RUNTIME-028); the slot stays held until this returns.
+	if analyzedCount > 0 && job.OutputSchedule != "none" && runStatus != "cancelled" {
 		if err := sendJobNotifications(ctx, job, run); err != nil {
 			log.Printf("[analyzer] notification error for job %s: %v", job.Name, err)
 			db.LogActivity(job.TenantID, "", "system", "notification.error", "job", job.ID, "", err.Error(), "")
@@ -652,7 +684,8 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 // runBatchMode processes the prepared conversations in batches of batchSize, sending multiple
 // conversations per AI call. The snapshots were prepared before this call (ordinary and explicit
 // modes alike) and are sent and saved unchanged.
-func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job models.Job, run models.JobRun, prepared []preparedConversation, found, batchSize int) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
+func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job models.Job, run models.JobRun, prepared []preparedConversation, found, batchSize int) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
+	ctx := owner.ctx
 	// Build system prompt once
 	var systemPrompt string
 	switch job.JobType {
@@ -692,6 +725,11 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 			}
 		}
 
+		// No new provider invocation after an accepted cancellation.
+		if owner.cancelledNow() {
+			cancelled = true
+			return
+		}
 		// Call AI batch
 		aiResp, err := provider.AnalyzeChatBatch(ctx, systemPrompt, items)
 		if err != nil {
@@ -745,7 +783,18 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 			// Process each result
 			for j, rawResult := range batchResults {
 				convID := batch[j].Conv.ID
-				count, passed, saveErr := a.saveResults(run.ID, batch[j].Snap, job.JobType, string(rawResult))
+				var count int
+				var passed bool
+				published, saveErr := owner.publish(func() error {
+					var e error
+					count, passed, e = a.saveResults(run.ID, batch[j].Snap, job.JobType, string(rawResult))
+					return e
+				})
+				if !published {
+					// cancellation accepted while the provider ran: nothing further is published
+					cancelled = true
+					return
+				}
 				if saveErr != nil {
 					log.Printf("[analyzer-batch] save error for %s: %v", convID, saveErr)
 					errorCount++
@@ -777,13 +826,13 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 			if batchHadError {
 				consecutiveErrors++
 				if consecutiveErrors >= 3 {
-					time.Sleep(30 * time.Second)
+					sleepCtx(ctx, 30*time.Second)
 				} else {
-					time.Sleep(10 * time.Second)
+					sleepCtx(ctx, 10*time.Second)
 				}
 			} else {
 				consecutiveErrors = 0
-				time.Sleep(2 * time.Second)
+				sleepCtx(ctx, 2*time.Second)
 			}
 		}
 	}
@@ -792,15 +841,29 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 	return
 }
 
-func (a *Analyzer) failRun(run *models.JobRun, err error) (*models.JobRun, error) {
-	finishedAt := time.Now()
-	db.DB.Model(run).Updates(map[string]interface{}{
-		"status":        "error",
-		"finished_at":   &finishedAt,
-		"error_message": err.Error(),
-	})
+// failOwnedRun closes a reserved run that failed before any analysis (provider selection, input
+// parsing, candidate selection) through the checked, tenant/job/run-scoped finalizer. publicMsg is
+// stored and shown; cause is logged only. When the terminal write cannot be recorded the running row
+// stays and keeps blocking admission (fail closed).
+func (a *Analyzer) failOwnedRun(run *models.JobRun, job models.Job, publicMsg string, cause error) (*models.JobRun, error) {
+	log.Printf("[analyzer] job %s: run %s failed before analysis: %v", job.ID, run.ID, cause)
+	finishedAt := analyzerNow()
+	if err := finalizeOrdinaryRun(run, job, "error", publicMsg, "{}", finishedAt, nil); err != nil {
+		log.Printf("[analyzer] job %s: early failure not recorded: %v", job.ID, err)
+		return run, err
+	}
 	run.Status = "error"
 	run.FinishedAt = &finishedAt
-	run.ErrorMessage = err.Error()
-	return run, err
+	run.ErrorMessage = publicMsg
+	return run, errors.New(publicMsg)
+}
+
+// sleepCtx waits for d or until ctx is done.
+func sleepCtx(ctx context.Context, d time.Duration) {
+	t := time.NewTimer(d)
+	defer t.Stop()
+	select {
+	case <-ctx.Done():
+	case <-t.C:
+	}
 }

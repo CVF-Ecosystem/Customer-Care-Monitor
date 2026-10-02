@@ -3,6 +3,7 @@ package handlers
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"net/http"
@@ -10,7 +11,6 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
-	"sync"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -27,8 +27,9 @@ import (
 	"github.com/xuri/excelize/v2"
 )
 
-// jobCancelFuncs stores cancel functions for running jobs, keyed by job ID
-var jobCancelFuncs sync.Map
+// jobRunTimeout bounds one HTTP-started job run. The worker is owned by the engine coordinator
+// (CCMAI-RUNTIME-028) and never uses the short request context. A variable only so tests can shorten it.
+var jobRunTimeout = 30 * time.Minute
 
 type CreateJobRequest struct {
 	Name            string          `json:"name" binding:"required,min=2,max=255"`
@@ -203,6 +204,9 @@ func DeleteJob(c *gin.Context) {
 	// concurrent saveResults() holding that lock is waited out, and once it
 	// releases, the child deletes below see everything it just wrote.
 	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		if err := engine.GuardJobMutation(tx, tenantID, jobID); err != nil {
+			return err
+		}
 		var runs []models.JobRun
 		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
 			Where("job_id = ? AND tenant_id = ?", jobID, tenantID).
@@ -235,6 +239,15 @@ func DeleteJob(c *gin.Context) {
 		}
 		return nil
 	})
+	if errors.Is(err, engine.ErrJobBusy) {
+		// An owned or stored running run exists: nothing was deleted or reset.
+		c.JSON(http.StatusConflict, gin.H{"error": "job_already_running"})
+		return
+	}
+	if errors.Is(err, engine.ErrJobMissing) {
+		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
+		return
+	}
 	if err != nil {
 		log.Printf("[error] delete job %s cascade: %v", jobID, err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "delete_job_failed"})
@@ -293,6 +306,9 @@ func ClearJobRuns(c *gin.Context) {
 	// DeleteJob, so a concurrent saveResults() holding that lock is waited out and
 	// its evidence is caught by the child deletes once it releases.
 	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		if err := engine.GuardJobMutation(tx, tenantID, jobID); err != nil {
+			return err
+		}
 		var runs []models.JobRun
 		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
 			Where("job_id = ? AND tenant_id = ?", jobID, tenantID).
@@ -329,6 +345,14 @@ func ClearJobRuns(c *gin.Context) {
 		}
 		return nil
 	})
+	if errors.Is(err, engine.ErrJobBusy) {
+		c.JSON(http.StatusConflict, gin.H{"error": "job_already_running"})
+		return
+	}
+	if errors.Is(err, engine.ErrJobMissing) {
+		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
+		return
+	}
 	if err != nil {
 		log.Printf("[error] clear job runs %s: %v", jobID, err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "clear_runs_failed"})
@@ -361,9 +385,17 @@ func TestRunJob(c *gin.Context) {
 		return
 	}
 
-	startTestRunJob(job, cfg, testRunConversationLimit)
+	res, ok := reserveJobRunOrRespond(c, job)
+	if !ok {
+		return
+	}
+	if err := startTestRunJob(job, cfg, testRunConversationLimit, res); err != nil {
+		abortReservedStart(job, res)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_start_failed"})
+		return
+	}
 
-	c.JSON(http.StatusAccepted, gin.H{"message": "test_run_started"})
+	c.JSON(http.StatusAccepted, gin.H{"message": "test_run_started", "run_id": res.RunID()})
 }
 
 func TriggerJob(c *gin.Context) {
@@ -398,9 +430,17 @@ func TriggerJob(c *gin.Context) {
 		return
 	}
 
-	startTriggerJob(job, cfg, triggerJobParams{mode: mode, dateFrom: dateFrom, dateTo: dateTo, maxConv: maxConv})
+	res, ok := reserveJobRunOrRespond(c, job)
+	if !ok {
+		return
+	}
+	if err := startTriggerJob(job, cfg, triggerJobParams{mode: mode, dateFrom: dateFrom, dateTo: dateTo, maxConv: maxConv}, res); err != nil {
+		abortReservedStart(job, res)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_start_failed"})
+		return
+	}
 
-	c.JSON(http.StatusAccepted, gin.H{"message": "job_triggered"})
+	c.JSON(http.StatusAccepted, gin.H{"message": "job_triggered", "run_id": res.RunID()})
 }
 
 // loadJobDispatchConfig loads and validates configuration for a job dispatch
@@ -411,26 +451,53 @@ var loadJobDispatchConfig = config.Load
 // testRunConversationLimit caps how many conversations a test run analyzes.
 const testRunConversationLimit = 3
 
-// startTestRunJob launches the background test-run worker with the
-// configuration already validated for this request and the conversation
-// limit chosen by the handler. It is a variable only so handler tests can
-// observe dispatch without running a real analyzer/provider.
-var startTestRunJob = func(job models.Job, cfg *config.Config, limit int) {
+// reserveJobRunOrRespond reserves the job synchronously (CCMAI-RUNTIME-028) before the handler may
+// answer 202: busy => 409 job_already_running, any admission/DB failure => generic 500
+// job_start_failed, a vanished job => 404. The reservation's context is independent of the request.
+func reserveJobRunOrRespond(c *gin.Context, job models.Job) (*engine.JobRunReservation, bool) {
+	res, err := engine.ReserveJobRun(context.Background(), job, jobRunTimeout)
+	switch {
+	case err == nil:
+		return res, true
+	case errors.Is(err, engine.ErrJobBusy):
+		c.JSON(http.StatusConflict, gin.H{"error": "job_already_running"})
+	case errors.Is(err, engine.ErrJobMissing):
+		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
+	default:
+		log.Printf("[error] job %s not admitted", job.ID)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_start_failed"})
+	}
+	return nil, false
+}
+
+// abortReservedStart closes a reservation whose worker could not be started: the stored row is
+// finalized as error (checked) or, if that cannot be recorded, stays running and keeps blocking.
+func abortReservedStart(job models.Job, res *engine.JobRunReservation) {
+	if err := res.Abort(job, "Không khởi động được tiến trình chạy"); err != nil {
+		log.Printf("[error] reserved run %s of job %s could not be closed: it keeps blocking admission", res.RunID(), job.ID)
+	}
+}
+
+// startTestRunJob launches the background test-run worker for a reservation the handler already
+// holds, with the configuration already validated for this request and the conversation limit
+// chosen by the handler. It consumes the reservation exactly once. It is a variable only so handler
+// tests can observe dispatch without running a real analyzer/provider.
+var startTestRunJob = func(job models.Job, cfg *config.Config, limit int, res *engine.JobRunReservation) error {
 	go func() {
 		defer func() {
 			if r := recover(); r != nil {
-				log.Printf("[security] panic in test-run goroutine for job %s: %v", job.Name, r)
+				log.Printf("[security] panic in test-run goroutine for job %s", job.ID) // value not logged
+				if err := res.Abort(job, "Lượt chạy dừng đột ngột; xem nhật ký máy chủ."); err != nil {
+					log.Printf("[error] reserved run %s keeps blocking admission", res.RunID())
+				}
 			}
 		}()
-		analyzer := engine.NewAnalyzer(cfg)
-		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
-		defer cancel()
-		jobCancelFuncs.Store(job.ID, cancel)
-		defer jobCancelFuncs.Delete(job.ID)
-		if _, err := analyzer.RunJobWithLimit(ctx, job, limit); err != nil {
+		analyzer := newTriggerAnalyzer(cfg)
+		if _, err := analyzer.RunReserved(res, job, "test_run", limit, "", ""); err != nil {
 			log.Printf("[test-run] error for job %s: %v", job.Name, err)
 		}
 	}()
+	return nil
 }
 
 // newTriggerAnalyzer builds the analyzer for a trigger. It is a variable only so a test can route
@@ -493,37 +560,35 @@ type triggerJobParams struct {
 	maxConv          int
 }
 
-// startTriggerJob launches the background trigger worker with the
-// configuration already validated for this request. It is a variable only so
-// handler tests can observe dispatch without running a real
+// startTriggerJob launches the background trigger worker for a reservation the handler already
+// holds, with the configuration already validated for this request. It consumes the reservation
+// exactly once. It is a variable only so handler tests can observe dispatch without running a real
 // analyzer/provider.
-var startTriggerJob = func(job models.Job, cfg *config.Config, p triggerJobParams) {
+var startTriggerJob = func(job models.Job, cfg *config.Config, p triggerJobParams, res *engine.JobRunReservation) error {
 	go func() {
 		defer func() {
 			if r := recover(); r != nil {
-				log.Printf("[security] panic in trigger goroutine for job %s: %v", job.Name, r)
+				log.Printf("[security] panic in trigger goroutine for job %s", job.ID) // value not logged
+				if err := res.Abort(job, "Lượt chạy dừng đột ngột; xem nhật ký máy chủ."); err != nil {
+					log.Printf("[error] reserved run %s keeps blocking admission", res.RunID())
+				}
 			}
 		}()
 		analyzer := newTriggerAnalyzer(cfg)
-		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
-		defer cancel()
-		jobCancelFuncs.Store(job.ID, cancel)
-		defer jobCancelFuncs.Delete(job.ID)
-		var err error
-		switch p.mode {
-		case "unanalyzed":
-			_, err = analyzer.RunJobUnanalyzed(ctx, job, p.maxConv)
-		case "conditional":
-			_, err = analyzer.RunJobFullWithParams(ctx, job, p.dateFrom, p.dateTo, p.maxConv)
-		default: // "since_last"
-			_, err = analyzer.RunJobSinceLast(ctx, job, p.maxConv)
-		}
-		if err != nil {
+		if _, err := analyzer.RunReserved(res, job, p.mode, p.maxConv, p.dateFrom, p.dateTo); err != nil {
 			log.Printf("[trigger] error for job %s: %v", job.Name, err)
 		}
 	}()
+	return nil
 }
 
+var runIDRe = regexp.MustCompile(`^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`)
+
+// CancelJob requests cancellation of the job's current run (CCMAI-RUNTIME-028). The optional
+// run_id must be the locally owned current run; omission selects it at the serialization point.
+// The request is process-local: this handler signals the exact owner's context and writes nothing;
+// the worker records the cancelled terminal state, so 202 job_cancel_requested is not terminal
+// cancellation.
 func CancelJob(c *gin.Context) {
 	tenantID := middleware.GetTenantID(c)
 	userID := middleware.GetUserID(c)
@@ -535,25 +600,27 @@ func CancelJob(c *gin.Context) {
 		return
 	}
 
-	// Cancel the running context
-	if cancelFn, ok := jobCancelFuncs.Load(job.ID); ok {
-		cancelFn.(context.CancelFunc)()
-		jobCancelFuncs.Delete(job.ID)
+	runID := ""
+	if vals, present := c.Request.URL.Query()["run_id"]; present {
+		if len(vals) != 1 || !runIDRe.MatchString(vals[0]) {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_run_id"})
+			return
+		}
+		runID = vals[0]
 	}
 
-	// Mark running job_runs as cancelled
-	finishedAt := time.Now()
-	db.DB.Model(&models.JobRun{}).
-		Where("job_id = ? AND status = ?", job.ID, "running").
-		Updates(map[string]interface{}{
-			"status":        "cancelled",
-			"finished_at":   &finishedAt,
-			"error_message": "Cancelled by user",
-		})
-
-	log.Printf("[security] job cancelled: user=%s job=%s tenant=%s ip=%s", userID, jobID, tenantID, c.ClientIP())
-
-	c.JSON(http.StatusOK, gin.H{"message": "job_cancelled"})
+	target, err := engine.CancelJobRun(tenantID, job.ID, runID)
+	switch {
+	case err == nil:
+		log.Printf("[security] job cancel requested: user=%s job=%s run=%s tenant=%s ip=%s", userID, jobID, target, tenantID, c.ClientIP())
+		c.JSON(http.StatusAccepted, gin.H{"message": "job_cancel_requested", "run_id": target})
+	case errors.Is(err, engine.ErrRunNotRunning):
+		c.JSON(http.StatusConflict, gin.H{"error": "job_not_running"})
+	case errors.Is(err, engine.ErrRunNotOwned):
+		c.JSON(http.StatusConflict, gin.H{"error": "job_run_not_owned"})
+	default:
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_cancel_failed"})
+	}
 }
 
 func ListJobRuns(c *gin.Context) {

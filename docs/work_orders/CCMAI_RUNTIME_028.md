@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-028 — F06 job admission and run-owned cancellation
 
-Status: DISPATCH_READY. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_JOB_RUN_OWNERSHIP_F06_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-028.json`, committed before BUILD at `6958e281d190935578809bb9900dd95d2a29509e`. Owner routes Claude implementation and Codex independent review. F05/R025/R026 retain REVIEW_PASS / FREEZE_OPEN; F06 source is unchanged at dispatch.
 

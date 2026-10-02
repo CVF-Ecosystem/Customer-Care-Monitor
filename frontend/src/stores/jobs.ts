@@ -134,11 +134,18 @@ export const useJobStore = defineStore('jobs', () => {
     const qp = new URLSearchParams()
     qp.set('mode', mode)
     Object.entries(params).forEach(([k, v]) => qp.set(k, v))
-    await api.post(`/tenants/${tenantId}/jobs/${jobId}/trigger?${qp.toString()}`)
+    const { data } = await api.post(`/tenants/${tenantId}/jobs/${jobId}/trigger?${qp.toString()}`)
+    return data
   }
 
   async function testRunJob(tenantId: string, jobId: string) {
     const { data } = await api.post(`/tenants/${tenantId}/jobs/${jobId}/test-run`)
+    return data
+  }
+
+  // CCMAI-RUNTIME-028: cancellation targets the exact run the user saw (never "the newest run").
+  async function cancelJobRun(tenantId: string, jobId: string, runId: string) {
+    const { data } = await api.post(`/tenants/${tenantId}/jobs/${jobId}/cancel?run_id=${encodeURIComponent(runId)}`)
     return data
   }
 
@@ -157,5 +164,5 @@ export const useJobStore = defineStore('jobs', () => {
     jobResults.value = data
   }
 
-  return { jobs, currentJob, jobRuns, jobResults, fetchJobs, fetchJob, createJob, updateJob, deleteJob, triggerJob, testRunJob, fetchJobRuns, fetchJobResults, fetchAllJobResults }
+  return { jobs, currentJob, jobRuns, jobResults, fetchJobs, fetchJob, createJob, updateJob, deleteJob, triggerJob, testRunJob, cancelJobRun, fetchJobRuns, fetchJobResults, fetchAllJobResults }
 })

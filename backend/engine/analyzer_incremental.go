@@ -149,16 +149,20 @@ func finalizeOrdinaryRun(run *models.JobRun, job models.Job, runStatus, errorMes
 			time.Sleep(ordinaryFinalizeRetryDelay)
 		}
 		lastErr = db.DB.Transaction(func(tx *gorm.DB) error {
-			var lockedRun []models.JobRun
-			if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Select("id").
-				Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
-				Find(&lockedRun).Error; err != nil {
-				return errFinalizeWrite
-			}
+			// Lock order: Job parent first, then the run (CCMAI-RUNTIME-028; same order as admission
+			// and the destructive guards).
 			var lockedJob []models.Job
 			if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Select("id").
 				Where("id = ? AND tenant_id = ?", job.ID, job.TenantID).
 				Find(&lockedJob).Error; err != nil {
+				return errFinalizeWrite
+			}
+			var lockedRun []models.JobRun
+			// Only a run that is still running can be finalized (CCMAI-RUNTIME-028): a stale
+			// finalizer for an already terminal run never rewrites the job's status/checkpoint.
+			if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Select("id").
+				Where("id = ? AND tenant_id = ? AND job_id = ? AND status = ?", run.ID, job.TenantID, job.ID, "running").
+				Find(&lockedRun).Error; err != nil {
 				return errFinalizeWrite
 			}
 			if len(lockedRun) != 1 || len(lockedJob) != 1 {
@@ -215,7 +219,7 @@ func finalizeOrdinaryRun(run *models.JobRun, job models.Job, runStatus, errorMes
 	}
 	// Best effort, never a checkpoint: do not leave the run "running" if the row still exists.
 	if err := db.DB.Model(&models.JobRun{}).
-		Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
+		Where("id = ? AND tenant_id = ? AND job_id = ? AND status = ?", run.ID, job.TenantID, job.ID, "running").
 		Updates(map[string]interface{}{
 			"status":        "error",
 			"finished_at":   &finishedAt,

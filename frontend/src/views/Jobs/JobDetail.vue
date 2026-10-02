@@ -43,6 +43,9 @@
       </div>
     </header>
 
+    <!-- Run/cancel feedback (bounded copy; CCMAI-RUNTIME-028) -->
+    <v-alert v-if="runNotice" :type="runNotice.type" variant="tonal" class="mb-4" density="compact" role="status" data-testid="run-notice">{{ runNotice.text }}</v-alert>
+
     <!-- Running progress, from the counters the analyzer writes into the run summary -->
     <v-alert v-if="progress" type="info" variant="tonal" class="mb-4" density="compact">
       <v-progress-linear :model-value="progressPercent" color="primary" height="8" rounded class="mb-2" />
@@ -501,6 +504,14 @@ const isClassification = computed(() => job.value?.job_type === 'classification'
 const loading = ref(true)
 const loadError = ref(false)
 const cancelling = ref(false)
+// The run whose cancellation was accepted (202 means "requested", not "terminal"); polling follows it.
+const cancelPendingRunId = ref<string | null>(null)
+const runNotice = ref<{ type: 'info' | 'warning' | 'error'; text: string } | null>(null)
+function launchErrorNotice(e: unknown): { type: 'warning' | 'error'; text: string } {
+  const code = (e as { response?: { data?: { error?: string } } })?.response?.data?.error
+  if (code === 'job_already_running') return { type: 'warning', text: 'Công việc này đang có một lượt chạy khác; chưa thể bắt đầu lượt mới.' }
+  return { type: 'error', text: 'Không khởi động được lượt chạy. Vui lòng thử lại.' }
+}
 const isJobRunning = computed(() => jobStore.jobRuns?.[0]?.status === 'running')
 let pollTimer: ReturnType<typeof setTimeout> | null = null
 
@@ -856,9 +867,21 @@ function startPolling() {
   async function tick() {
     try {
       await jobStore.fetchJobRuns(tenantId.value, jobId.value)
-      if (!isJobRunning.value) {
+      // With a pending cancellation the poll follows that exact run, not "the newest run".
+      const pendingId = cancelPendingRunId.value
+      const stillRunning = pendingId
+        ? jobStore.jobRuns.some((r) => r.id === pendingId && r.status === 'running')
+        : isJobRunning.value
+      if (!stillRunning) {
         await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
         job.value = await jobStore.fetchJob(tenantId.value, jobId.value)
+        if (pendingId) {
+          const finished = jobStore.jobRuns.find((r) => r.id === pendingId)
+          runNotice.value = finished?.status === 'cancelled'
+            ? { type: 'info', text: 'Lượt chạy đã dừng theo yêu cầu hủy.' }
+            : { type: 'info', text: 'Lượt chạy đã kết thúc trước khi hủy kịp có hiệu lực.' }
+          cancelPendingRunId.value = null
+        }
         stopPolling()
         return
       }
@@ -911,9 +934,12 @@ async function testRun() {
   if (!(await checkAIConfigured())) return
   try {
     await jobStore.testRunJob(tenantId.value, jobId.value)
+    runNotice.value = null
     startPolling()
-  } catch {
+  } catch (e) {
+    runNotice.value = launchErrorNotice(e)
     await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+    if (isJobRunning.value) startPolling()
   }
 }
 async function confirmRun() {
@@ -927,19 +953,41 @@ async function confirmRun() {
     }
     if (runLimit.value) params.limit = String(runLimit.value)
     await jobStore.triggerJob(tenantId.value, jobId.value, runMode.value, params)
+    runNotice.value = null
     startPolling()
-  } catch {
+  } catch (e) {
+    runNotice.value = launchErrorNotice(e)
     await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+    if (isJobRunning.value) startPolling()
   }
 }
 async function cancelJob() {
+  // Capture the run the user is looking at NOW; a later refresh must never retarget the request.
+  const target = jobStore.jobRuns?.[0]
+  if (!target || target.status !== 'running') return
+  const targetId = target.id
   cancelling.value = true
   try {
-    await api.post(`/tenants/${tenantId.value}/jobs/${jobId.value}/cancel`)
-    stopPolling()
-    await jobStore.fetchJobRuns(tenantId.value, jobId.value)
-    await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
-  } catch { /* ignore */ } finally { cancelling.value = false }
+    await jobStore.cancelJobRun(tenantId.value, jobId.value, targetId)
+    // 202 job_cancel_requested: the worker has not necessarily stopped. Keep polling this run.
+    cancelPendingRunId.value = targetId
+    runNotice.value = { type: 'info', text: 'Đã yêu cầu hủy; đang chờ lượt chạy kết thúc.' }
+    startPolling()
+  } catch (e) {
+    const code = (e as { response?: { data?: { error?: string } } })?.response?.data?.error
+    if (code === 'job_not_running') {
+      runNotice.value = { type: 'info', text: 'Lượt chạy này đã kết thúc hoặc không còn là lượt đang chạy.' }
+    } else if (code === 'job_run_not_owned') {
+      runNotice.value = { type: 'warning', text: 'Lượt chạy này không do tiến trình hiện tại quản lý nên không thể hủy từ đây.' }
+    } else {
+      runNotice.value = { type: 'error', text: 'Không gửi được yêu cầu hủy; lượt chạy vẫn có thể đang chạy.' }
+    }
+    // Refresh the truth; keep following a run that is still running.
+    try {
+      await jobStore.fetchJobRuns(tenantId.value, jobId.value)
+      if (isJobRunning.value || jobStore.jobRuns.some((r) => r.id === targetId && r.status === 'running')) startPolling()
+    } catch { /* the next manual refresh shows the state */ }
+  } finally { cancelling.value = false }
 }
 
 const clearResultsDialog = ref(false)

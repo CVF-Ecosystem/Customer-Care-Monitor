@@ -278,15 +278,33 @@ func handleAnalysisAgent(ctx context.Context, cfg *config.Config, req AgentRunRe
 		return AgentRunResponse{Status: "error", Errors: []string{"no active jobs found for type: " + jobType}}
 	}
 
+	// CCMAI-RUNTIME-028: every job goes through the shared admission. Errors are bounded codes (no
+	// raw SQL/config text): all jobs failed or busy => error; some completed, some not => partial;
+	// all completed => success.
 	var errs []string
+	completed, failed, partial := 0, 0, 0
 	for _, job := range jobs {
-		if _, err := analyzer.RunJob(ctx, job); err != nil {
-			errs = append(errs, err.Error())
+		run, err := analyzer.RunJob(ctx, job)
+		switch {
+		case errors.Is(err, engine.ErrJobBusy):
+			failed++
+			errs = append(errs, "job_already_running")
+		case err != nil || run == nil || run.Status == "error" || run.Status == "cancelled":
+			failed++
+			errs = append(errs, "job_run_failed")
+		case run.Status == "partial":
+			completed++
+			partial++
+		default:
+			completed++
 		}
 	}
 
 	status := "success"
-	if len(errs) > 0 {
+	switch {
+	case failed > 0 && completed == 0:
+		status = "error"
+	case failed > 0 || partial > 0:
 		status = "partial"
 	}
 	return AgentRunResponse{Status: status, Errors: errs}

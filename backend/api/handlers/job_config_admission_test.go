@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"context"
 	"errors"
 	"net/http"
 	"net/http/httptest"
@@ -13,6 +12,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
@@ -38,6 +38,7 @@ type jobDispatchFixture struct {
 	triggerLaunchedCfg *config.Config
 	triggerLaunchedJob models.Job
 	triggerParams      triggerJobParams
+	reservations       []*engine.JobRunReservation
 }
 
 func setupJobDispatchFixture(t *testing.T) *jobDispatchFixture {
@@ -56,7 +57,10 @@ func setupJobDispatchFixture(t *testing.T) *jobDispatchFixture {
 	exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Dispatch Test', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`,
 		f.jobID, f.tenantID)
 	t.Cleanup(func() {
-		jobCancelFuncs.Delete(f.jobID)
+		// release any reservation a stub launcher received (CCMAI-RUNTIME-028)
+		for _, res := range f.reservations {
+			_ = res.Abort(models.Job{ID: f.jobID, TenantID: f.tenantID}, "test cleanup")
+		}
 		db.DB.Exec("DELETE FROM job_runs WHERE job_id = ?", f.jobID)
 		db.DB.Exec("DELETE FROM jobs WHERE id = ?", f.jobID)
 		for _, tenant := range []string{f.tenantID, f.otherTenantID} {
@@ -67,35 +71,32 @@ func setupJobDispatchFixture(t *testing.T) *jobDispatchFixture {
 	if f.jobRunCount(t) != 0 {
 		t.Fatalf("fixture job starts with job_runs rows")
 	}
-	if _, ok := jobCancelFuncs.Load(f.jobID); ok {
-		t.Fatalf("fixture job starts with a cancel handle")
+	if engine.JobRunActive(f.tenantID, f.jobID) {
+		t.Fatalf("fixture job starts with a local owner")
 	}
 
-	// The stub launchers reproduce the real worker's observable side effects
-	// (cancel handle + job run) so the rejection assertions are not vacuous.
-	simulateWorkerStart := func(job models.Job) {
-		jobCancelFuncs.Store(job.ID, context.CancelFunc(func() {}))
-		exec(`INSERT INTO job_runs (id, job_id, tenant_id, started_at, status, summary, created_at) VALUES (?, ?, ?, NOW(), 'running', '{}', NOW())`,
-			pkg.NewUUID(), job.ID, job.TenantID)
-	}
-
+	// The handler now reserves (owner + running row) before it launches, so the stub launchers only
+	// record the reservation; the rejection assertions stay non-vacuous because an accepted launch
+	// leaves exactly that owner and row (CCMAI-RUNTIME-028).
 	originalTestRun := startTestRunJob
-	startTestRunJob = func(job models.Job, cfg *config.Config, limit int) {
+	startTestRunJob = func(job models.Job, cfg *config.Config, limit int, res *engine.JobRunReservation) error {
 		f.testRunLaunches++
 		f.testRunLaunchedCfg = cfg
 		f.testRunLaunchedJob = job
 		f.testRunLimit = limit
-		simulateWorkerStart(job)
+		f.reservations = append(f.reservations, res)
+		return nil
 	}
 	t.Cleanup(func() { startTestRunJob = originalTestRun })
 
 	originalTrigger := startTriggerJob
-	startTriggerJob = func(job models.Job, cfg *config.Config, p triggerJobParams) {
+	startTriggerJob = func(job models.Job, cfg *config.Config, p triggerJobParams, res *engine.JobRunReservation) error {
 		f.triggerLaunches++
 		f.triggerLaunchedCfg = cfg
 		f.triggerLaunchedJob = job
 		f.triggerParams = p
-		simulateWorkerStart(job)
+		f.reservations = append(f.reservations, res)
+		return nil
 	}
 	t.Cleanup(func() { startTriggerJob = originalTrigger })
 
@@ -154,8 +155,8 @@ func (f *jobDispatchFixture) assertNoRunOrCancel(t *testing.T) {
 	if n := f.jobRunCount(t); n != 0 {
 		t.Fatalf("%d job_runs rows created despite rejection", n)
 	}
-	if _, ok := jobCancelFuncs.Load(f.jobID); ok {
-		t.Fatalf("cancel handle registered despite rejection")
+	if engine.JobRunActive(f.tenantID, f.jobID) {
+		t.Fatalf("local owner registered despite rejection")
 	}
 }
 
@@ -166,8 +167,8 @@ func (f *jobDispatchFixture) assertWorkerStarted(t *testing.T) {
 	if n := f.jobRunCount(t); n != 1 {
 		t.Fatalf("job_runs rows %d after accepted launch, want 1", n)
 	}
-	if _, ok := jobCancelFuncs.Load(f.jobID); !ok {
-		t.Fatalf("no cancel handle after accepted launch")
+	if !engine.JobRunActive(f.tenantID, f.jobID) {
+		t.Fatalf("no local owner after accepted launch")
 	}
 }
 
@@ -230,8 +231,9 @@ func TestTestRunJobPassesValidatedConfigToWorker(t *testing.T) {
 	f := setupJobDispatchFixture(t)
 	rec := f.callTestRun(f.tenantID)
 
-	if rec.Code != http.StatusAccepted || strings.TrimSpace(rec.Body.String()) != `{"message":"test_run_started"}` {
-		t.Fatalf("got %d %s, want unchanged 202 test_run_started", rec.Code, rec.Body.String())
+	if rec.Code != http.StatusAccepted || !strings.Contains(rec.Body.String(), `"message":"test_run_started"`) || len(f.reservations) != 1 ||
+		!strings.Contains(rec.Body.String(), `"run_id":"`+f.reservations[0].RunID()+`"`) {
+		t.Fatalf("got %d %s, want 202 test_run_started with the reserved run_id", rec.Code, rec.Body.String())
 	}
 	if f.cfgLoads != 1 || f.testRunLaunches != 1 {
 		t.Fatalf("config loads %d, launches %d; want 1 and 1", f.cfgLoads, f.testRunLaunches)
@@ -297,8 +299,9 @@ func TestTriggerJobPassesValidatedConfigAndParamsToWorker(t *testing.T) {
 	f := setupJobDispatchFixture(t)
 	rec := f.callTrigger(f.tenantID, "mode=conditional&from=2026-01-01&to=2026-01-31&limit=7")
 
-	if rec.Code != http.StatusAccepted || strings.TrimSpace(rec.Body.String()) != `{"message":"job_triggered"}` {
-		t.Fatalf("got %d %s, want unchanged 202 job_triggered", rec.Code, rec.Body.String())
+	if rec.Code != http.StatusAccepted || !strings.Contains(rec.Body.String(), `"message":"job_triggered"`) || len(f.reservations) != 1 ||
+		!strings.Contains(rec.Body.String(), `"run_id":"`+f.reservations[0].RunID()+`"`) {
+		t.Fatalf("got %d %s, want 202 job_triggered with the reserved run_id", rec.Code, rec.Body.String())
 	}
 	if f.cfgLoads != 1 || f.triggerLaunches != 1 {
 		t.Fatalf("config loads %d, launches %d; want 1 and 1", f.cfgLoads, f.triggerLaunches)

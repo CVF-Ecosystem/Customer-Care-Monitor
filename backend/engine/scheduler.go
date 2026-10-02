@@ -290,7 +290,10 @@ func (s *Scheduler) runScheduledJob(jobID, jobName string) {
 	analyzer := newScheduledAnalyzer(s.cfg)
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
 	defer cancel()
-	if _, err := analyzer.RunJob(ctx, j); err != nil {
+	if _, err := analyzer.RunJob(ctx, j); errors.Is(err, ErrJobBusy) {
+		// CCMAI-RUNTIME-028: the shared admission refused; no run row, no provider call.
+		log.Printf("[scheduler] job %s skipped: already running", j.Name)
+	} else if err != nil {
 		log.Printf("[scheduler] job %s failed: %v", j.Name, err)
 	}
 }
@@ -350,7 +353,9 @@ func (s *Scheduler) TriggerAfterSyncJobs(tenantID, channelID string) {
 			analyzer := newScheduledAnalyzer(s.cfg)
 			ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
 			defer cancel()
-			if _, err := analyzer.RunJob(ctx, j); err != nil {
+			if _, err := analyzer.RunJob(ctx, j); errors.Is(err, ErrJobBusy) {
+				log.Printf("[scheduler] after-sync job %s skipped: already running", j.Name)
+			} else if err != nil {
 				log.Printf("[scheduler] after-sync job %s failed: %v", j.Name, err)
 			}
 		}()

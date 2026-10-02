@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-028 F06 is DISPATCH_READY at WORK_ORDER under immutable seed 6958e281d190935578809bb9900dd95d2a29509e. Claude next rehydrates, acknowledges IMPLEMENTATION_WORKER / COMMIT_STEWARD before BUILD, implements only the bounded shared job admission and run-owned cancellation SPEC, and returns one local REVIEW_PENDING commit to independent reviewer Codex. R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN. F06 has no BUILD evidence yet; crash recovery/distributed cancellation, F02 live/message proof, F07 and tenant timezone activation stay separate. No push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE; PR #1 remains draft at older remote head 3e0b37e.",
+  "nextAllowedMove": "CCMAI-RUNTIME-028 F06 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (shared tenant/job admission and opaque run ownership for HTTP, cron, after-sync, analysis agent and public Analyzer methods; run-id-targeted cancellation held until worker exit with checked read, owner-mutex serialization of cancel vs publication vs terminal commit; checked early-failure/panic/terminal handling; Job->JobRun lock order and finalize-only-running; DeleteJob/ClearJobRuns guards; JobDetail run-id cancel and pending polling; requirements matrix, old-source probes, mutations, race-detector limitation and the R019 gate in docs/reviews/RUNTIME_JOB_RUN_OWNERSHIP_F06_BUILD_2026-10-02.md). R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F06 stays OPEN until review. Crash recovery, distributed cancellation, the MCP trigger placeholder, F02 live/message limits and tenant timezone activation stay separate; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude), independent REVIEWER (Codex)",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-02"
 }

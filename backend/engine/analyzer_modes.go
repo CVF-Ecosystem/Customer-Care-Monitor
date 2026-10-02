@@ -145,6 +145,40 @@ func (a *Analyzer) RunJobWithProvider(ctx context.Context, job models.Job, limit
 	return a.execute(ctx, job, plan, provider)
 }
 
+// RunReserved executes a run the caller already reserved with ReserveJobRun (the HTTP handlers do
+// this before answering 202). It consumes the reservation exactly once and never reserves again.
+// mode is one of "test_run", "unanalyzed", "since_last", "conditional"; an invalid combination
+// closes the reservation through the checked finalizer and returns ErrInvalidRunParameters.
+func (a *Analyzer) RunReserved(res *JobRunReservation, job models.Job, mode string, limit int, dateFrom, dateTo string) (*models.JobRun, error) {
+	dates, err := pkg.ParseBusinessRange(dateFrom, dateTo)
+	var plan runPlan
+	if err == nil {
+		var m analysisMode
+		switch mode {
+		case "test_run":
+			m = modeTestRun
+		case "unanalyzed":
+			m = modeUnanalyzed
+		case "since_last":
+			m = modeSinceLast
+		case "conditional":
+			m = modeFull
+		default:
+			err = ErrInvalidRunParameters
+		}
+		if err == nil {
+			plan, err = newPlan(m, limit, dates)
+		}
+	}
+	if err != nil {
+		if abortErr := res.Abort(job, "Tham số chạy không hợp lệ"); abortErr != nil {
+			return nil, abortErr
+		}
+		return nil, err
+	}
+	return a.executeReserved(res, job, plan, nil)
+}
+
 // NewAnalyzerWithProvider returns an Analyzer that always uses the given provider. It exists so
 // tests can route a synthetic provider through the real Analyzer from another package (the HTTP
 // route test); production code never uses it.

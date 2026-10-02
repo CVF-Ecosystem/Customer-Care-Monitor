@@ -261,8 +261,9 @@ func TestSinceLastAnchorErrorFailsTheRun(t *testing.T) {
 	p := &incProvider{}
 	run, err := NewAnalyzerWithProvider(&config.Config{}, p).RunJobSinceLast(context.Background(), f.job(t), 0)
 	restore()
-	if err == nil || !strings.Contains(err.Error(), "since-last anchor") {
-		t.Fatalf("expected an anchor error, got %v", err)
+	// the failure is checked and bounded: no SQL/table text reaches the error or the stored run
+	if err == nil || strings.Contains(err.Error(), "job_results") || !strings.Contains(err.Error(), "danh sách cuộc chat") {
+		t.Fatalf("expected a bounded candidate-selection error, got %v", err)
 	}
 	if run == nil || run.Status != "error" || p.callCount() != 0 {
 		t.Fatalf("run %+v, provider calls %d", run, p.callCount())
@@ -332,7 +333,7 @@ func TestFullModeVietnamDatesKeepFullSnapshot(t *testing.T) {
 
 func TestExplicitModeCancellationKeepsCheckpoint(t *testing.T) {
 	forModes(t, func(t *testing.T, batch bool) {
-		for _, kind := range []string{"context", "stored-cancel"} {
+		for _, kind := range []string{"context", "accepted-cancel"} {
 			kind := kind
 			t.Run(kind, func(t *testing.T) {
 				f := setupIncFixture(t, batch, "qc_analysis")
@@ -343,10 +344,12 @@ func TestExplicitModeCancellationKeepsCheckpoint(t *testing.T) {
 				switch kind {
 				case "context":
 					cancel()
-				case "stored-cancel":
+				case "accepted-cancel":
 					p.onCall = func(n int) {
 						if n == 1 {
-							f.exec(t, "UPDATE job_runs SET status = 'cancelled' WHERE job_id = ? AND status = 'running'", f.jobID)
+							if _, err := CancelJobRun(f.tenantID, f.jobID, ""); err != nil {
+								t.Errorf("cancel request: %v", err)
+							}
 						}
 					}
 				}
@@ -357,7 +360,7 @@ func TestExplicitModeCancellationKeepsCheckpoint(t *testing.T) {
 				if kind == "context" && (p.callCount() != 0 || run.Status != "partial") {
 					t.Fatalf("cancelled context: %d calls, status %s", p.callCount(), run.Status)
 				}
-				if kind == "stored-cancel" && (p.callCount() == 0 || run.Status != "cancelled") {
+				if kind == "accepted-cancel" && (p.callCount() == 0 || run.Status != "cancelled") {
 					t.Fatalf("stored cancel: %d calls, status %s", p.callCount(), run.Status)
 				}
 				var stored models.JobRun
