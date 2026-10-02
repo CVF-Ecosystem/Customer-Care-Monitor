@@ -195,3 +195,7 @@ Mỗi S0–S7 mở bằng INTAKE → DESIGN → SPEC → WORK_ORDER → BUILD �
 Khi phát triển ứng dụng, work order được cấp quyền, mã/test và evidence là thẩm quyền cho trạng thái triển khai; roadmap chỉ là ý định. Role transition, rủi ro, reviewer độc lập, claim boundary và continuity phải được ghi ở từng tranche. Áp dụng nguyên tắc CVF về tách chuẩn bị dữ liệu khỏi quyền kết luận: core SOT3 là nguồn tham khảo có phạm vi, chưa được tích hợp vào runtime của ứng dụng này.
 
 **UX-017 WORK_ORDER (2026-09-30):** [SPEC](../specs/CHANNELS_SYNC_STATUS_TRUTH_UX017_2026-09-30.md) và [work order](../work_orders/CCMAI_UX_017.md) đưa UX-06 vào màn Kênh theo trạng thái API hiện có. Đây là frontend BUILD được giao Claude, chưa phải runtime sync proof, chưa chữa Zalo/legacy crash recovery và chưa FREEZE.
+
+## F02-F / R032 planning checkpoint (2026-10-03)
+
+[SPEC](../specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md) / [work order](../work_orders/CCMAI_RUNTIME_032.md): DISPATCH_READY / WORK_ORDER / FREEZE_OPEN for Zalo message traversal only. Full-history/no-since-filter preserved; strict rows, physical offsets to explicit empty, stable mapping/dedup/order, finite pages, message-only request safety and adapter/engine/disposable-MySQL evidence are intended contracts, not implemented results. Immutable dispatcher seed predates activation; Claude future BUILD and independent Codex REVIEW. R031/R030/R024 reviews unchanged. Actual Zalo offset/terminal/attachment compatibility, global F02/live/provider-governance and FREEZE remain OPEN. No product BUILD in planning.

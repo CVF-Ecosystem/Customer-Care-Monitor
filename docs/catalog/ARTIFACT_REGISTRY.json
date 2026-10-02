@@ -1,4 +1,4 @@
-﻿{
+{
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
     "updatedAt":  "2026-10-03",
@@ -77,9 +77,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: F02-E planning, dispatch and review route."
+                          "description":  "Current active handoff: F02-F planning and independent review route."
                       },
                       {
                           "id":  "truth-implementation-status",
@@ -219,7 +219,7 @@
                           "family":  "continuity",
                           "path":  "docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md",
                           "status":  "ACTIVE",
-                          "description":  "Active F02-E Facebook message local safety contract and acceptance matrix."
+                          "description":  "Reviewed F02-E Facebook message local safety contract and acceptance matrix."
                       },
                       {
                           "id":  "f02e-message-work-order",
@@ -234,6 +234,27 @@
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
                           "status":  "ACTIVE",
                           "description":  "Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only."
+                      },
+                      {
+                          "id": "continuity-pre-f02f-handoff",
+                          "family": "continuity",
+                          "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
+                          "status": "ACTIVE",
+                          "description": "Historical F02-E review, owner pause/resume and F02-F intake acknowledgment; targeted lookup only."
+                      },
+                      {
+                          "id": "f02f-message-spec",
+                          "family": "continuity",
+                          "path": "docs/specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Active F02-F Zalo local full-history message contract and acceptance matrix."
+                      },
+                      {
+                          "id": "f02f-message-work-order",
+                          "family": "continuity",
+                          "path": "docs/work_orders/CCMAI_RUNTIME_032.md",
+                          "status": "ACTIVE",
+                          "description": "R032 Zalo local message order: DISPATCH_READY / WORK_ORDER; BUILD not started."
                       }
                   ]
 }
