@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-029 — F07 Dashboard service-status truth
 
-Status: DISPATCH_READY. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_2026-10-02.md), [accepted F07 finding](../reviews/CCMAI_F01_F08_LOCAL_SOURCE_REVIEW_2026-09-30.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), dispatcher-owned `CVF_SESSION/authority/CCMAI-RUNTIME-029.json`. Exact seed commit is the tranche record's `baseCommit`; seed must already exist there before BUILD. Owner requested this separate F07 plan; no F07 product change occurs during planning.
 

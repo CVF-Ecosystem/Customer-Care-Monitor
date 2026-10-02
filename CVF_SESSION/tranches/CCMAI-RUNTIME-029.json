@@ -39,15 +39,17 @@
     "unrelated_ui_redesign"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_029.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "0f442f238cbe68a89b47dc43d99f2ffe3fa8b997",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

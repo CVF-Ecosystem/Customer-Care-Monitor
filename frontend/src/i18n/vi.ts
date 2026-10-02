@@ -104,6 +104,8 @@ export default {
   active_channels: 'Kênh hoạt động',
   recent_alerts: 'Cảnh báo gần đây',
   service_status: 'Trạng thái dịch vụ',
+  service_health_unknown: 'Chưa có dữ liệu kiểm tra',
+  service_health_note: 'Chưa có phép kiểm tra sức khỏe cho các dịch vụ này.',
   ai_cost: 'Chi phí AI',
   cost_today: 'Chi phí hôm nay',
   cost_this_month: 'Chi phí tháng này',

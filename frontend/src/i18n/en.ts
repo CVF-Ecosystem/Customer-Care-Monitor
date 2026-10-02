@@ -104,6 +104,8 @@ export default {
   active_channels: 'Active Channels',
   recent_alerts: 'Recent Alerts',
   service_status: 'Service Status',
+  service_health_unknown: 'No health-check data',
+  service_health_note: 'Health checks are not available for these services.',
   ai_cost: 'AI Cost',
   cost_today: 'Cost Today',
   cost_this_month: 'Cost This Month',

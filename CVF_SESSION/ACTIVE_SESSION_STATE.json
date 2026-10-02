@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-029 F07 is DISPATCH_READY / WORK_ORDER under the separately committed immutable R029 seed at 0f442f238cbe68a89b47dc43d99f2ffe3fa8b997. Claude may rehydrate and acknowledge IMPLEMENTATION_WORKER / COMMIT_STEWARD before one bounded frontend-only BUILD replacing fabricated API/Database/Scheduler health with neutral unavailable text, then return one local REVIEW_PENDING commit for independent Codex REVIEW. No health endpoint/probe/polling, backend change, real provider/channel call, persistent DB, push, merge, deployment, parent-CVF work or FREEZE. R028-R2/F06, R027/F05 and R025/R026 retain REVIEW_PASS / FREEZE_OPEN and their historical limitations; F07 remediation remains OPEN. Third same-root repair requires REVIEW_COST_ESCALATION_REQUIRED.",
+  "nextAllowedMove": "CCMAI-RUNTIME-029 F07 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (Dashboard service rows are now an explicit neutral unknown state `Chưa có dữ liệu kiểm tra` / `No health-check data` with one explanation, scoped i18n keys, no inferred health, no health call/polling/timer; mounted acceptance groups A..F, old-source failure 13/13, four mutations, real desktop/mobile captures in both locales and the request inventory in docs/reviews/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_BUILD_2026-10-02.md). R028/F06, R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F07 stays OPEN until review. Backend observability/telemetry contract, F02 live/message limits and governance proof stay separate; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); next IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude), independent REVIEWER (Codex)",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-02"
 }
