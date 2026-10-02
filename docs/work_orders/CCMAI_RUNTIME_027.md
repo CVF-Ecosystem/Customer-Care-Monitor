@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-027 — F05 analyzer modes, limits and Vietnam dates
 
-Status: DISPATCH_READY. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 Authority: [SPEC](../specs/RUNTIME_ANALYZER_MODES_F05_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-027.json`, committed at base `71c7ee761a1147d502d815ff5461e92f1c30bd4c`. Owner assigns Claude implementation and Codex orchestration/independent review. F05 remains OPEN until accepted source/evidence; R025/F03 and R026/F04 retain REVIEW_PASS / FREEZE_OPEN.
 
 ## Entry and role acknowledgment

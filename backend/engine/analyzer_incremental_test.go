@@ -150,7 +150,7 @@ func setupIncFixture(t *testing.T, batch bool, jobType string) *incFixture {
 	// db.Connect never closes its predecessor; these tests create many fixtures, so close the
 	// previous pool first or later tests in the package hit "Too many connections" and skip.
 	db.Close()
-	connectTestDB(t)
+	connectIncDB(t)
 	s := pkg.NewUUID()[:8]
 	f := &incFixture{
 		tenantID: "inc-" + s, otherTenantID: "inc-o-" + s,
@@ -299,24 +299,18 @@ func forModes(t *testing.T, body func(t *testing.T, batch bool)) {
 
 // ---- tests ----
 
-func TestOrdinaryIncrementalModeBoundary(t *testing.T) {
-	since := time.Now()
-	cases := []struct {
-		full    bool
-		max     int
-		from    string
-		to      string
-		since   *time.Time
-		exclude bool
-		want    bool
-	}{
-		{want: true},
-		{full: true}, {max: 3}, {from: "2026-09-01"}, {to: "2026-09-30"}, {since: &since}, {exclude: true},
+// CCMAI-RUNTIME-027: the mode is chosen by the entry point, never inferred from the cap or dates.
+func TestOrdinaryPlanIsOnlyTheUncappedOrdinaryMode(t *testing.T) {
+	if p := ordinaryPlan(); p.explicit() || p.limit != 0 {
+		t.Fatalf("ordinary plan %+v", p)
 	}
-	for i, c := range cases {
-		if got := isOrdinaryIncremental(c.full, c.max, c.from, c.to, c.since, c.exclude); got != c.want {
-			t.Errorf("case %d: got %v, want %v", i, got, c.want)
+	for _, m := range []analysisMode{modeTestRun, modeFull, modeUnanalyzed, modeSinceLast} {
+		if !(runPlan{mode: m}).explicit() {
+			t.Errorf("%s must be explicit", m)
 		}
+	}
+	if _, err := newPlan(modeOrdinary, 3, pkg.BusinessRange{}); err == nil {
+		t.Error("ordinary with a cap must be rejected")
 	}
 }
 

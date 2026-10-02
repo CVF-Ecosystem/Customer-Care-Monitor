@@ -46,15 +46,17 @@
     "workflow_change"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_027.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "71c7ee761a1147d502d815ff5461e92f1c30bd4c",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

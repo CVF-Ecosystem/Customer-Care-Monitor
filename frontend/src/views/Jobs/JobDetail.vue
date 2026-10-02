@@ -281,24 +281,25 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy theo điều kiện</div>
-                  <div class="text-caption jd-muted">Chọn điều kiện thời gian và/hoặc giới hạn số cuộc chat. Phải có ít nhất một điều kiện.</div>
+                  <div class="text-caption jd-muted">Đánh giá lại cả cuộc chat đã đánh giá. Chọn khoảng ngày (giờ Việt Nam, theo tin nhắn cuối) và/hoặc giới hạn số cuộc chat; phải có ít nhất một điều kiện.</div>
                 </div>
               </template>
             </v-radio>
           </v-radio-group>
           <template v-if="runMode === 'conditional'">
             <div class="d-flex ga-3 mt-2">
-              <v-text-field v-model="runDateFrom" type="date" label="Từ ngày" density="compact" :error-messages="runDateFromError" hide-details="auto" />
-              <v-text-field v-model="runDateTo" type="date" label="Đến ngày" density="compact" :error-messages="runDateToError" hide-details="auto" />
+              <v-text-field v-model="runDateFrom" type="date" label="Từ ngày (giờ Việt Nam)" density="compact" :error-messages="runDateFromError" hide-details="auto" data-testid="run-date-from" />
+              <v-text-field v-model="runDateTo" type="date" label="Đến ngày (giờ Việt Nam)" density="compact" :error-messages="runDateToError" hide-details="auto" data-testid="run-date-to" />
             </div>
-            <v-text-field v-model.number="runLimit" type="number" label="Giới hạn số cuộc chat" density="compact" hide-details="auto" class="mt-3" placeholder="Để trống nếu không muốn áp dụng" :min="1" clearable />
-            <v-alert v-if="runConditionalError" type="error" variant="tonal" density="compact" class="mt-3 text-caption">{{ runConditionalError }}</v-alert>
           </template>
+          <!-- The limit is only a count cap; it never changes the mode chosen above. -->
+          <v-text-field v-model.number="runLimit" type="number" label="Giới hạn số cuộc chat" density="compact" hide-details="auto" class="mt-3" placeholder="Để trống nếu không muốn áp dụng" :min="1" :step="1" :error-messages="runLimitError" clearable data-testid="run-limit" />
+          <v-alert v-if="runConditionalError" type="error" variant="tonal" density="compact" class="mt-3 text-caption">{{ runConditionalError }}</v-alert>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
           <v-btn @click="runDialog = false">{{ $t('cancel') }}</v-btn>
-          <v-btn color="primary" :disabled="!!runConditionalError && runMode === 'conditional'" @click="confirmRun">{{ $t('confirm') }}</v-btn>
+          <v-btn color="primary" :disabled="!!runConditionalError || !!runLimitError" data-testid="run-confirm" @click="confirmRun">{{ $t('confirm') }}</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -886,6 +887,11 @@ const runDateToError = computed(() => {
   if (runDateTo.value && !runDateFrom.value) return 'Cần chọn từ ngày'
   return ''
 })
+const runLimitError = computed(() => {
+  const v = runLimit.value as unknown
+  if (v === null || v === undefined || v === '') return ''
+  return typeof v === 'number' && Number.isInteger(v) && v > 0 ? '' : 'Giới hạn phải là số nguyên dương'
+})
 const runConditionalError = computed(() => {
   if (runMode.value !== 'conditional') return ''
   if (!runDateFrom.value && !runDateTo.value && !runLimit.value) return 'Vui lòng chọn ít nhất một điều kiện (thời gian hoặc số lượng)'
@@ -915,7 +921,7 @@ async function testRun() {
   }
 }
 async function confirmRun() {
-  if (runConditionalError.value) return
+  if (runConditionalError.value || runLimitError.value) return
   runDialog.value = false
   try {
     const params: Record<string, string> = {}
@@ -923,7 +929,7 @@ async function confirmRun() {
       if (runDateFrom.value) params.from = runDateFrom.value
       if (runDateTo.value) params.to = runDateTo.value
     }
-    if (runLimit.value && runLimit.value > 0) params.limit = String(runLimit.value)
+    if (runLimit.value) params.limit = String(runLimit.value)
     await jobStore.triggerJob(tenantId.value, jobId.value, runMode.value, params)
     startPolling()
   } catch {

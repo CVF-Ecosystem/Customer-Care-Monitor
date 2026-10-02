@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"errors"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -17,15 +16,16 @@ import (
 // typed instants, so the MySQL driver's own location stays the authority for how stored wall
 // times are read and no hand-formatted UTC strings meet Local-storage timestamps.
 
-const businessDateLayout = "2006-01-02"
+const businessDateLayout = pkg.BusinessDateLayout
 
-// errInvalidDateRange is the only error text a client sees for a bad date control.
-var errInvalidDateRange = errors.New("invalid_date_range")
+// errInvalidDateRange is the only error text a client sees for a bad date control (CCMAI-RUNTIME-027:
+// the parser itself now lives in pkg so the analyzer shares it).
+var errInvalidDateRange = pkg.ErrInvalidDateRange
 
-// DATETIME holds 1000-01-01 .. 9999-12-31; both bounds must be representable.
+// DATETIME limits, shared with the pkg parser (used by the report tests).
 var (
-	businessDateMin = time.Date(1000, 1, 1, 0, 0, 0, 0, time.UTC)
-	businessDateMax = time.Date(9999, 12, 31, 0, 0, 0, 0, time.UTC)
+	businessDateMin = pkg.BusinessDateMin
+	businessDateMax = pkg.BusinessDateMax
 )
 
 // businessClock is the single request clock; tests replace it through a private seam.
@@ -40,59 +40,14 @@ type businessRange struct {
 	ToExclusive *time.Time
 }
 
-// parseBusinessDate parses one strict calendar date. A missing value is not an error (ok=false).
-func parseBusinessDate(s string) (day time.Time, ok bool, err error) {
-	if s == "" {
-		return time.Time{}, false, nil
-	}
-	t, perr := time.ParseInLocation(businessDateLayout, s, businessLocation())
-	if perr != nil || t.Format(businessDateLayout) != s {
-		return time.Time{}, false, errInvalidDateRange
-	}
-	utcDay := time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, time.UTC)
-	if utcDay.Before(businessDateMin) || utcDay.After(businessDateMax) {
-		return time.Time{}, false, errInvalidDateRange
-	}
-	return t, true, nil
-}
-
-// parseBusinessRange converts the public inclusive date pair to [fromStart, toExclusive).
-// Empty strings leave that side open. Malformed, impossible, unrepresentable or reversed input
-// is errInvalidDateRange; nothing falls back silently.
+// parseBusinessRange converts the public inclusive date pair to [fromStart, toExclusive) through
+// the shared pkg parser (same semantics, same errors).
 func parseBusinessRange(fromStr, toStr string) (businessRange, error) {
-	var r businessRange
-	from, hasFrom, err := parseBusinessDate(fromStr)
+	r, err := pkg.ParseBusinessRange(fromStr, toStr)
 	if err != nil {
 		return businessRange{}, err
 	}
-	to, hasTo, err := parseBusinessDate(toStr)
-	if err != nil {
-		return businessRange{}, err
-	}
-	if hasFrom {
-		// Calendar year 1000 is not enough: its VN midnight can serialize
-		// as year 0999 on the supported UTC connection. Validate the actual
-		// instant against the common UTC/VN storage range before any query.
-		if from.UTC().Before(businessDateMin) {
-			return businessRange{}, errInvalidDateRange
-		}
-		r.From = &from
-	}
-	if hasTo {
-		next := to.AddDate(0, 0, 1)
-		// Only a supplied inclusive `to` needs the next midnight; a
-		// from-only final calendar day remains representable and open.
-		if next.Year() > businessDateMax.Year() {
-			return businessRange{}, errInvalidDateRange
-		}
-		r.ToExclusive = &next
-	}
-	// to < from (as calendar dates) means the exclusive bound is not after the start; an equal
-	// date pair is a valid single day (To exclusive = From + 1 day).
-	if hasFrom && hasTo && !r.ToExclusive.After(*r.From) {
-		return businessRange{}, errInvalidDateRange
-	}
-	return r, nil
+	return businessRange{From: r.From, ToExclusive: r.ToExclusive}, nil
 }
 
 // requestBusinessRange reads the `from`/`to` query pair and answers 400 `invalid_date_range`

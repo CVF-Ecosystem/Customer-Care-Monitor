@@ -30,70 +30,16 @@ func NewAnalyzer(cfg *config.Config) *Analyzer {
 	return &Analyzer{cfg: cfg}
 }
 
-// RunJobWithLimit runs analysis on a limited number of conversations (for testing).
-func (a *Analyzer) RunJobWithLimit(ctx context.Context, job models.Job, limit int) (*models.JobRun, error) {
-	return a.runJob(ctx, job, limit, nil)
-}
-
-// RunJob executes a single job: analyzes new conversations since last run.
-func (a *Analyzer) RunJob(ctx context.Context, job models.Job) (*models.JobRun, error) {
-	return a.runJob(ctx, job, 0, nil)
-}
-
-// RunJobFull re-analyzes ALL conversations (ignores last_run_at). Use after rule changes.
-func (a *Analyzer) RunJobFull(ctx context.Context, job models.Job) (*models.JobRun, error) {
-	return a.runJobInternal(ctx, job, 0, nil, true)
-}
-
-// RunJobFullWithParams re-analyzes with optional date range and limit.
-func (a *Analyzer) RunJobFullWithParams(ctx context.Context, job models.Job, dateFrom, dateTo string, maxConv int) (*models.JobRun, error) {
-	return a.runJobInternalExt(ctx, job, maxConv, nil, true, dateFrom, dateTo, nil, false)
-}
-
-// RunJobUnanalyzed analyzes all conversations not yet evaluated by this job, regardless of time.
-func (a *Analyzer) RunJobUnanalyzed(ctx context.Context, job models.Job, maxConv int) (*models.JobRun, error) {
-	return a.runJobInternalExt(ctx, job, maxConv, nil, true, "", "", nil, true)
-}
-
-// RunJobSinceLast analyzes conversations newer than the most recently evaluated conversation.
-func (a *Analyzer) RunJobSinceLast(ctx context.Context, job models.Job, maxConv int) (*models.JobRun, error) {
-	// Find max last_message_at among conversations already evaluated by this job
-	var maxMsgAt time.Time
-	if err := db.DB.Model(&models.JobResult{}).
-		Select("MAX(conversations.last_message_at)").
-		Joins("JOIN job_runs ON job_runs.id = job_results.job_run_id").
-		Joins("JOIN conversations ON conversations.id = job_results.conversation_id").
-		Where("job_runs.job_id = ?", job.ID).
-		Scan(&maxMsgAt).Error; err != nil {
-		log.Printf("[analyzer] error finding max message_at for job %s: %v", job.ID, err)
-	}
-
-	if maxMsgAt.IsZero() {
-		// No previous results — fall back to regular incremental (last run / 24h)
-		return a.runJob(ctx, job, maxConv, nil)
-	}
-	return a.runJobInternalExt(ctx, job, maxConv, nil, false, "", "", &maxMsgAt, false)
-}
-
-// RunJobWithProvider runs with an injected AI provider (for testing without real API keys).
-func (a *Analyzer) RunJobWithProvider(ctx context.Context, job models.Job, limit int, provider ai.AIProvider) (*models.JobRun, error) {
-	return a.runJob(ctx, job, limit, provider)
-}
-
-func (a *Analyzer) runJob(ctx context.Context, job models.Job, maxConversations int, injectedProvider ai.AIProvider) (*models.JobRun, error) {
-	return a.runJobInternal(ctx, job, maxConversations, injectedProvider, false)
-}
-
-func (a *Analyzer) runJobInternal(ctx context.Context, job models.Job, maxConversations int, injectedProvider ai.AIProvider, fullRerun bool) (*models.JobRun, error) {
-	return a.runJobInternalExt(ctx, job, maxConversations, injectedProvider, fullRerun, "", "", nil, false)
-}
-
-func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxConversations int, injectedProvider ai.AIProvider, fullRerun bool, dateFrom, dateTo string, sinceOverride *time.Time, excludeAnalyzed bool) (*models.JobRun, error) {
+// execute runs one planned analysis (CCMAI-RUNTIME-027). The plan fixes the mode, the cap and the
+// date bounds; the ordinary mode keeps the R025 source-version selection, every explicit mode uses
+// its own candidate query (analyzer_modes.go), and all modes analyze the full local snapshot that
+// was prepared before the provider call and is the one saved with the result.
+func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, injectedProvider ai.AIProvider) (*models.JobRun, error) {
 	// CCMAI-RUNTIME-025: captured before candidate selection; an ordinary incremental run that
-	// completes cleanly records this (second-truncated) as its checkpoint.
+	// completes cleanly records this (second-truncated) as its checkpoint. The same instant is
+	// the test-run window's clock (it must not move while the run works).
 	now := analyzerNow()
 	scanStart := now
-	incremental := isOrdinaryIncremental(fullRerun, maxConversations, dateFrom, dateTo, sinceOverride, excludeAnalyzed)
 	run := models.JobRun{
 		ID:        pkg.NewUUID(),
 		JobID:     job.ID,
@@ -109,7 +55,7 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 
 	// Log run started
 	db.LogActivity(job.TenantID, "", "system", "job.run.started", "job", job.ID,
-		fmt.Sprintf("Job '%s': started analysis (max=%d, full=%v)", job.Name, maxConversations, fullRerun), "", "")
+		fmt.Sprintf("Job '%s': started analysis (mode=%s, max=%d)", job.Name, plan.mode, plan.limit), "", "")
 
 	// Get AI provider (use injected if provided, otherwise from settings)
 	var provider ai.AIProvider
@@ -131,43 +77,17 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 		return a.failRun(&run, fmt.Errorf("invalid input_channel_ids: %w", err))
 	}
 
-	// Determine time range
-	isTestRun := maxConversations > 0
-	if isTestRun {
-		excludeAnalyzed = true
-	}
-	var since time.Time
-	if sinceOverride != nil {
-		since = *sinceOverride
-	} else if dateFrom != "" {
-		if t, err := time.Parse("2006-01-02", dateFrom); err == nil {
-			since = t
-		}
-	}
-	if since.IsZero() && sinceOverride == nil && !incremental {
-		if fullRerun {
-			since = time.Time{} // epoch — get ALL conversations
-		} else if isTestRun {
-			since = time.Now().Add(-7 * 24 * time.Hour)
-		} else {
-			since = time.Now().Add(-24 * time.Hour)
-			if job.LastRunAt != nil {
-				since = *job.LastRunAt
-			}
-		}
-	}
-
 	issuesFound := 0
 	passCount := 0
 	analyzedCount := 0
 	errorCount := 0
 	truncated := false
 
-	// Fetch conversations with messages in time range
+	// Select the conversations and prepare their snapshots.
 	var conversations []models.Conversation
 	var prepared []preparedConversation
 	unchangedCount := 0
-	if incremental {
+	if !plan.explicit() {
 		// Every tenant/input-channel conversation is a candidate; the source-version check
 		// below, not event timestamps or last_run_at, decides what needs analysis.
 		conversations, err = ordinaryIncrementalCandidates(job, channelIDs)
@@ -178,65 +98,25 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 		prepared, unchangedCount, prepErrors, truncated = prepareOrdinaryIncremental(ctx, job, conversations)
 		errorCount += prepErrors
 	} else {
-		q := db.DB.Where("tenant_id = ? AND channel_id IN ?", job.TenantID, channelIDs)
-		if !since.IsZero() {
-			q = q.Where("last_message_at > ?", since)
-		}
-		if dateTo != "" {
-			if t, err := time.Parse("2006-01-02", dateTo); err == nil {
-				q = q.Where("last_message_at < ?", t.Add(24*time.Hour))
-			}
-		}
-		if excludeAnalyzed {
-			// Only include conversations not yet evaluated by this job
-			// job_results has job_run_id, not job_id — must JOIN through job_runs
-			analyzedSubq := db.DB.Model(&models.JobResult{}).
-				Select("job_results.conversation_id").
-				Joins("JOIN job_runs ON job_runs.id = job_results.job_run_id").
-				Where("job_runs.job_id = ?", job.ID)
-			q = q.Where("id NOT IN (?)", analyzedSubq)
-		}
-		if !fullRerun {
-			// Bỏ qua cuộc chat đã có đánh giá mới hơn tin nhắn cuối. Thiếu điều kiện này,
-			// mỗi lần quét lại là một lần đánh giá trùng chồng lên bản cũ.
-			// Cuộc chat có tin nhắn mới sau lần đánh giá gần nhất vẫn được đánh giá lại.
-			q = q.Where(`NOT EXISTS (
-			SELECT 1 FROM job_results jr
-			INNER JOIN job_runs jrun ON jrun.id = jr.job_run_id
-			WHERE jr.conversation_id = conversations.id
-			  AND jrun.job_id = ?
-			  AND jr.created_at >= conversations.last_message_at)`, job.ID)
-		}
-		// Cũ trước mới: lần chạy bị cắt vì hết giờ thì lần sau tiếp đúng chỗ còn dang dở
-		q = q.Order("last_message_at ASC")
-		if maxConversations > 0 {
-			q = q.Limit(maxConversations)
-		}
-		if err := q.Find(&conversations).Error; err != nil {
+		conversations, err = explicitCandidates(job, channelIDs, plan, now)
+		if err != nil {
 			return a.failRun(&run, fmt.Errorf("fetch conversations: %w", err))
 		}
+		var prepErrors int
+		prepared, prepErrors, truncated = prepareExplicit(ctx, conversations)
+		errorCount += prepErrors
 	}
 
-	// found is the number of conversations this run has to handle: for an ordinary
-	// incremental run, those whose source changed plus those that could not be prepared or
-	// verified; otherwise the selected conversations, as before.
-	found := len(conversations)
-	if incremental {
-		found = len(prepared) + errorCount
-	}
+	// found is the number of conversations this run has to handle: those with source to send
+	// plus those that could not be prepared (or verified).
+	found := len(prepared) + errorCount
 
-	// In rõ mốc quét: mốc bị đóng băng là gốc của việc quét lại toàn bộ mỗi ngày,
-	// nhìn log cũ không phát hiện ra được vì chỉ có sinceZero.
-	sinceLabel := "epoch"
-	if !since.IsZero() {
-		sinceLabel = pkg.ToVN(since).Format("2006-01-02 15:04:05")
-	}
-	if incremental {
+	if !plan.explicit() {
 		log.Printf("[analyzer] job %s: ordinary incremental, channelIDs=%v, %d candidates, %d changed, %d unchanged, %d errors",
 			job.Name, channelIDs, len(conversations), len(prepared), unchangedCount, errorCount)
 	} else {
-		log.Printf("[analyzer] job %s: channelIDs=%v, since=%s, excludeAnalyzed=%v, fullRerun=%v, found %d conversations",
-			job.Name, channelIDs, sinceLabel, excludeAnalyzed, fullRerun, len(conversations))
+		log.Printf("[analyzer] job %s: mode=%s cap=%d, channelIDs=%v, %d selected, %d with source, %d errors",
+			job.Name, plan.mode, plan.limit, channelIDs, len(conversations), len(prepared), errorCount)
 	}
 
 	// Set initial total so frontend can show progress immediately
@@ -272,7 +152,7 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 
 		if batchMode {
 			var bIssues, bPass, bAnalyzed, bErrors int
-			bIssues, bPass, bAnalyzed, bErrors, truncated = a.runBatchMode(ctx, provider, job, run, conversations, since, batchSize, prepared, incremental)
+			bIssues, bPass, bAnalyzed, bErrors, truncated = a.runBatchMode(ctx, provider, job, run, prepared, found, batchSize)
 			issuesFound += bIssues
 			passCount += bPass
 			analyzedCount += bAnalyzed
@@ -359,45 +239,30 @@ func (a *Analyzer) runJobInternalExt(ctx context.Context, job models.Job, maxCon
 				}
 			}
 
-			if incremental {
-				for _, p := range prepared {
-					if ctx.Err() != nil {
-						log.Printf("[analyzer] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, found)
-						truncated = true
-						break
-					}
-					analyzeSingle(p.Conv, p.Snap)
+			for _, p := range prepared {
+				if ctx.Err() != nil {
+					log.Printf("[analyzer] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, found)
+					truncated = true
+					break
 				}
-			} else {
-				for _, conv := range conversations {
-					// Check if context cancelled (timeout or manual cancel)
-					if ctx.Err() != nil {
-						log.Printf("[analyzer] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, len(conversations))
-						truncated = true
-						break
-					}
-
-					snap, err := loadConversationSnapshot(conv, since)
-					if err != nil {
-						log.Printf("[analyzer] snapshot error for conversation %s: %v", conv.ID, err)
-						errorCount++
-						continue
-					}
-					if snap.Manifest.Coverage == coverageEmpty {
-						continue
-					}
-					analyzeSingle(conv, snap)
-				}
+				analyzeSingle(p.Conv, p.Snap)
 			}
 		} // end else (non-batch mode)
 	}
 
 complete:
 	// Complete run
-	// Cancellation can arrive in the last provider call or during an empty scan,
-	// when there is no next loop iteration to observe it. Ordinary checkpointing
-	// must still treat the run as interrupted (not an execution-ownership change).
-	if incremental && ctx.Err() != nil {
+	// Cancellation can arrive in the last provider call or during an empty scan, when there is no
+	// next loop iteration to observe it. Every mode must treat the run as interrupted (this is
+	// not an execution-ownership change; F06 stays separate).
+	if ctx.Err() != nil {
+		truncated = true
+	}
+	// An already stored "cancelled" status (written by the cancel handler) is honored too.
+	storedCancelled := false
+	var current models.JobRun
+	if err := db.DB.Select("status").First(&current, "id = ?", run.ID).Error; err == nil && current.Status == "cancelled" {
+		storedCancelled = true
 		truncated = true
 	}
 	finishedAt := analyzerNow()
@@ -409,70 +274,44 @@ complete:
 		"issues_found":           issuesFound,
 	})
 	runStatus := "success"
-	if analyzedCount == 0 && errorCount > 0 {
+	if storedCancelled {
+		// Người dùng bấm huỷ cũng đi qua đường ngắt context này. Giữ nguyên nhãn
+		// "cancelled" mà handler đã ghi, đừng báo thành hết giờ.
+		runStatus = "cancelled"
+		run.ErrorMessage = "Cancelled by user"
+	} else if analyzedCount == 0 && errorCount > 0 {
 		runStatus = "error"
 		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, found)
 	} else if truncated {
 		runStatus = "partial"
 		run.ErrorMessage = fmt.Sprintf("Hết thời gian chạy, mới xử lý %d/%d cuộc chat. Phần còn lại vào lần chạy sau.",
 			analyzedCount, found)
-		// Người dùng bấm huỷ cũng đi qua đường ngắt context này. Giữ nguyên nhãn
-		// "cancelled" mà handler đã ghi, đừng báo thành hết giờ.
-		var current models.JobRun
-		if err := db.DB.Select("status").First(&current, "id = ?", run.ID).Error; err == nil && current.Status == "cancelled" {
-			runStatus = "cancelled"
-			run.ErrorMessage = "Cancelled by user"
-		}
 	} else if errorCount > 0 {
 		runStatus = "partial"
 		run.ErrorMessage = fmt.Sprintf("Analysis errors: %d/%d conversations failed", errorCount, found)
 	}
 
-	if incremental {
-		// Checkpoint only after a complete, error-free run, and only together with the
-		// terminal run write (CCMAI-RUNTIME-025).
-		var checkpoint *time.Time
-		if !truncated && errorCount == 0 {
-			cp := scanStart.Truncate(time.Second)
-			checkpoint = &cp
-		}
-		if err := finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt, checkpoint); err != nil {
-			log.Printf("[analyzer] job %s: %v", job.Name, err)
-			run.Status = "error"
-			run.FinishedAt = &finishedAt
-			run.Summary = string(summaryJSON)
-			run.ErrorMessage = "Không ghi nhận được kết quả cuối của lượt chạy; mốc quét giữ nguyên."
-			return &run, err
-		}
+	// Only the ordinary incremental scan owns last_run_at, and only after a complete, error-free
+	// run written together with the terminal run status (CCMAI-RUNTIME-025). Every explicit mode,
+	// capped or not, preserves the checkpoint. A test run does not touch the job row at all.
+	var checkpoint *time.Time
+	if !plan.explicit() && !truncated && errorCount == 0 {
+		cp := scanStart.Truncate(time.Second)
+		checkpoint = &cp
+	}
+	var finalizeErr error
+	if plan.mode == modeTestRun {
+		finalizeErr = finalizeRunOnly(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt)
 	} else {
-		// Critical: final status update — retry on failure to prevent stuck "running" state
-		for retry := 0; retry < 3; retry++ {
-			if err := db.DB.Model(&run).Updates(map[string]interface{}{
-				"status":        runStatus,
-				"finished_at":   &finishedAt,
-				"summary":       string(summaryJSON),
-				"error_message": run.ErrorMessage,
-			}).Error; err != nil {
-				log.Printf("[analyzer] DB update error (final status, attempt %d): %v", retry+1, err)
-				time.Sleep(2 * time.Second)
-				continue
-			}
-			break
-		}
-
-		// Update job last_run (skip for test runs to avoid affecting future normal runs)
-		if !isTestRun {
-			updates := map[string]interface{}{
-				"last_run_status": runStatus,
-				"updated_at":      finishedAt,
-			}
-			// Chỉ dời mốc quét khi chạy trọn vẹn. Lần chạy bị cắt giữa chừng mà vẫn dời mốc
-			// thì phần chưa xử lý bị bỏ qua vĩnh viễn.
-			if !truncated && errorCount == 0 {
-				updates["last_run_at"] = &finishedAt
-			}
-			db.DB.Model(&job).Updates(updates)
-		}
+		finalizeErr = finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt, checkpoint)
+	}
+	if err := finalizeErr; err != nil {
+		log.Printf("[analyzer] job %s: %v", job.Name, err)
+		run.Status = "error"
+		run.FinishedAt = &finishedAt
+		run.Summary = string(summaryJSON)
+		run.ErrorMessage = "Không ghi nhận được kết quả cuối của lượt chạy; mốc quét giữ nguyên."
+		return &run, err
 	}
 
 	run.Status = runStatus
@@ -815,11 +654,10 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 	return count, passed, tx.Commit().Error
 }
 
-// runBatchMode processes conversations in batches of batchSize, sending multiple conversations per AI call.
-// For an ordinary incremental run (usePrepared) the snapshots were already prepared and
-// version-checked by prepareOrdinaryIncremental and are sent and saved unchanged; every other mode
-// prepares here exactly as before.
-func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job models.Job, run models.JobRun, conversations []models.Conversation, since time.Time, batchSize int, preparedIn []preparedConversation, usePrepared bool) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
+// runBatchMode processes the prepared conversations in batches of batchSize, sending multiple
+// conversations per AI call. The snapshots were prepared before this call (ordinary and explicit
+// modes alike) and are sent and saved unchanged.
+func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job models.Job, run models.JobRun, prepared []preparedConversation, found, batchSize int) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
 	// Build system prompt once
 	var systemPrompt string
 	switch job.JobType {
@@ -831,23 +669,6 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 		return
 	}
 
-	prepared := preparedIn
-	if !usePrepared {
-		prepared = nil
-		for _, conv := range conversations {
-			snap, err := loadConversationSnapshot(conv, since)
-			if err != nil {
-				log.Printf("[analyzer-batch] snapshot error for conversation %s: %v", conv.ID, err)
-				errorCount++
-				continue
-			}
-			if snap.Manifest.Coverage == coverageEmpty {
-				continue
-			}
-			prepared = append(prepared, preparedConversation{Conv: conv, Snap: snap})
-		}
-	}
-
 	// Process in batches
 	consecutiveErrors := 0
 	for i := 0; i < len(prepared); i += batchSize {
@@ -855,7 +676,7 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 		// Check if context cancelled
 		select {
 		case <-ctx.Done():
-			log.Printf("[analyzer-batch] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, len(conversations))
+			log.Printf("[analyzer-batch] job %s: context cancelled, stopping after %d/%d conversations", job.Name, analyzedCount, found)
 			cancelled = true
 			return
 		default:
@@ -946,7 +767,7 @@ func (a *Analyzer) runBatchMode(ctx context.Context, provider ai.AIProvider, job
 
 		// Update progress
 		progressJSON, _ := json.Marshal(map[string]interface{}{
-			"conversations_found":    len(conversations),
+			"conversations_found":    found,
 			"conversations_analyzed": analyzedCount,
 			"conversations_passed":   passCount,
 			"conversations_errors":   errorCount,

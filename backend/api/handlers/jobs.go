@@ -374,8 +374,10 @@ func TriggerJob(c *gin.Context) {
 		return
 	}
 
-	// mode: "unanalyzed" | "since_last" | "conditional"
-	// backward compat: if full=true treat as conditional
+	// CCMAI-RUNTIME-027: strict admission. Parameters are validated before any configuration
+	// load or worker start, so a rejected request has no side effect. mode: "unanalyzed" |
+	// "since_last" | "conditional" (legacy full=true means conditional; absent means since_last).
+	// The limit is a positive count cap only; it never selects the mode.
 	mode := c.Query("mode")
 	if mode == "" && c.Query("full") == "true" {
 		mode = "conditional"
@@ -383,14 +385,28 @@ func TriggerJob(c *gin.Context) {
 	if mode == "" {
 		mode = "since_last"
 	}
+	if mode != "unanalyzed" && mode != "since_last" && mode != "conditional" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_run_parameters"})
+		return
+	}
 	dateFrom := c.Query("from")
 	dateTo := c.Query("to")
-	limitStr := c.Query("limit")
+	if (dateFrom != "" || dateTo != "") && mode != "conditional" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_run_parameters"})
+		return
+	}
+	if _, err := parseBusinessRange(dateFrom, dateTo); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_date_range"})
+		return
+	}
 	var maxConv int
-	if limitStr != "" {
-		if n, err := strconv.Atoi(limitStr); err == nil && n > 0 {
-			maxConv = n
+	if c.Request.URL.Query().Has("limit") {
+		n, err := strconv.Atoi(c.Query("limit"))
+		if err != nil || n <= 0 {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_run_parameters"})
+			return
 		}
+		maxConv = n
 	}
 
 	// A job dispatch that cannot get a valid configuration must not be
@@ -439,6 +455,10 @@ var startTestRunJob = func(job models.Job, cfg *config.Config, limit int) {
 	}()
 }
 
+// newTriggerAnalyzer builds the analyzer for a trigger. It is a variable only so a test can route
+// the real trigger worker through a synthetic provider (no real AI call).
+var newTriggerAnalyzer = engine.NewAnalyzer
+
 // triggerJobParams carries TriggerJob's resolved mode/date/limit parameters
 // unchanged into startTriggerJob, so admission never alters trigger semantics.
 type triggerJobParams struct {
@@ -458,7 +478,7 @@ var startTriggerJob = func(job models.Job, cfg *config.Config, p triggerJobParam
 				log.Printf("[security] panic in trigger goroutine for job %s: %v", job.Name, r)
 			}
 		}()
-		analyzer := engine.NewAnalyzer(cfg)
+		analyzer := newTriggerAnalyzer(cfg)
 		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
 		defer cancel()
 		jobCancelFuncs.Store(job.ID, cancel)

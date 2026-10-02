@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -37,10 +37,7 @@
     "CCMAI-RUNTIME-017 REVIEW_PASS / FREEZE_OPEN: GET /dashboard adds tenant/qc_violation/date-scoped qc_violation_count with generic 500 on count failure; issues meaning unchanged; frontend untouched. Four real-handler tests passed independently on disposable MySQL, BUILD mutation checks M1-M3 were caught and the full backend suite passed. Evidence docs/reviews/CCMAI_RUNTIME_017_INDEPENDENT_REVIEW_2026-09-29.md. No real provider/channel or CVF governance proof, push or FREEZE.",
     "CCMAI-RUNTIME-018 REVIEW_PASS / FREEZE_OPEN after R018-R1 and Codex independent re-review. Server-owned marker blocks demo fixture sync admission; exact legacy backfill now uses BINARY for type, external ID, status and decrypt-error prefix. Five wrong-case rows and M12-M15 catch the prior collation defect; Codex independently reran focused DB tests on disposable MySQL, while Claude's full backend/build/vet gates passed. Evidence docs/reviews/CCMAI_RUNTIME_018_R1_INDEPENDENT_REREVIEW_2026-09-29.md. Older binaries ignore the marker; no real provider/channel call, push, deployment or FREEZE.",
     "S1 remains IN_PROGRESS: safe recovery of Zalo/legacy syncing rows and backend-dependent UI/API intersections are separate tranches.",
-    "CCMAI-RUNTIME-027 F05 DISPATCH_READY / WORK_ORDER: Claude assigned bounded analyzer mode/limit/VN-date selection and explicit-run checkpoint preservation; Codex independent reviewer. SPEC/order/immutable seed prepared; no product implementation or product tests in planning. R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F05 source remediation remains OPEN."
-  ],
-  "activeWorkOrders": [
-    "CCMAI-CREDIT-001",
+    "CCMAI-RUNTIME-027 F05 REVIEW_PENDING / REVIEW: Claude local BUILD separates analyzer mode from cap, applies Vietnam date bounds with full local snapshots, scopes since-last/unanalyzed to tenant+job evaluation, makes TriggerJob admission strict and reserves last_run_at for the ordinary incremental run; evidence docs/reviews/RUNTIME_ANALYZER_MODES_F05_BUILD_2026-10-02.md. Codex independent review pending; R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F05 source remediation remains OPEN until review.",
     "CCMAI-CREDIT-002",
     "CCMAI-DOCS-001",
     "CCMAI-IDENTITY-001",
