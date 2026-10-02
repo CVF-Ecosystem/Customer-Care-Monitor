@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-027 — F05 analyzer modes, limits and Vietnam dates
 
-Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: REVIEW_PASS. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 Authority: [SPEC](../specs/RUNTIME_ANALYZER_MODES_F05_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-027.json`, committed at base `71c7ee761a1147d502d815ff5461e92f1c30bd4c`. Owner assigns Claude implementation and Codex orchestration/independent review. F05 remains OPEN until accepted source/evidence; R025/F03 and R026/F04 retain REVIEW_PASS / FREEZE_OPEN.
 
 ## Entry and role acknowledgment
@@ -35,3 +35,7 @@ Exact BUILD `a1de36b6720cae4341f5937f6d9100b13bb48366` is CHANGES_REQUIRED / FRE
 Claude rehydrates and acknowledges REPAIR_WORKER / COMMIT_STEWARD in handoff before repair. Fix F05-R1-01 (zero/empty cap, decimal syntax, full validation/conflicts), F05-R1-02 (one-sided dates and promised copy), F05-R1-03 (test-run terminal job status/updated_at without checkpoint), and F05-R1-04 (original missing evidence groups) in one pass. Retain `job_f05_review_test.go`, `analyzer_f05_review_test.go` and mounted one-sided probes; update worker tests that currently encode contradictory admission/test-run behavior against SPEC, not the failing reviewer assertions. Existing dead helper outside allowlist stays untouched. No acceptance-contract amendment is granted to keep the whole test-run job row untouched.
 
 Append R027-R1 evidence to the existing BUILD record with exact commands, old-source/mutation results, scope, counts/failures/skips, full backend/R019/build/frontend/docs gates and disposable cleanup. Update current prose as well as machine phase/status/order/tranche/roadmap coherently to REVIEW_PENDING, including limitations that caused intake drift. Run all intended-path preflight and commit one local repair, return exact SHA/evidence/residuals to independent Codex re-review. Preserve no-push/no-FREEZE boundary; escalation at repair round three without a new root cause follows existing CVF rule.
+
+## Independent R027-R1 disposition — 2026-10-02
+
+REVIEW_PASS / FREEZE_OPEN for exact repair `a9bff2275239f77d9af18995cae08e9f8933642f` on original BUILD `a1de36b6720cae4341f5937f6d9100b13bb48366`. [Re-review](../reviews/CCMAI_RUNTIME_027_R1_INDEPENDENT_REREVIEW_2026-10-02.md) settles F05-R1-01..04; original reviewer probes retained/pass, independent engine 62/62 and handlers 18/18 with zero skips, frontend 239/239, forced typecheck/build and gate tests 46/46 PASS. No reviewer product edit, broader authority, push or FREEZE. Dead helper, event-time cursor and synthetic proof limits retained. F06 requires a separate owner-dispatched planning/work-order scope; no F06 BUILD granted here.

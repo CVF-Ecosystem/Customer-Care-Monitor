@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-027 F05 R027-R1 repair is REVIEW_PENDING. Codex independently re-reviews the exact local repair commit against the independent review findings F05-R1-01..04 (strict HTTP limit/full admission, one-sided JobDetail dates and copy, test-run terminal job status/updated_at without a checkpoint through the checked finalizer, completed acceptance evidence including the real route conditional date+cap repeat evaluation, reproducible old-source and mutation results, full backend/R019/frontend/docs gates; evidence appended to docs/reviews/RUNTIME_ANALYZER_MODES_F05_BUILD_2026-10-02.md). Retained reviewer probes are unchanged and now pass. R025 F03 and R026 F04 remain REVIEW_PASS / FREEZE_OPEN; F05 acceptance remains OPEN until re-review. F06/F07, F02 live/message limits, mixed historical timestamp storage and tenant timezone Settings activation stay separate. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-027 F05 R027-R1 is REVIEW_PASS / FREEZE_OPEN after independent Codex re-review of repair a9bff22 on BUILD a1de36b. All F05-R1-01..04 findings are settled for the bounded local mode/limit/Vietnam-date/full-snapshot/checkpoint contract. Next: owner may dispatch separate bounded F06 INTAKE/DESIGN/SPEC/WORK_ORDER; no F06 BUILD is granted. R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F02 live/message limits, F07, mixed historical timestamp storage and tenant timezone Settings activation stay separate. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-02"
 }
