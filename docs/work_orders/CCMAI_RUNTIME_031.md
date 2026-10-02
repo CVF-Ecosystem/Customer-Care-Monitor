@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-031 — F02-E Facebook message-window coverage
 
-Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2.
+Status: REVIEW_PASS. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md), [F02 layer assessment](../reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md), immutable dispatcher-owned `CVF_SESSION/authority/CCMAI-RUNTIME-031.json`. Seed exists at baseCommit `61eda32442b6049e0ed37a00f6664c7fe880da94` before BUILD; worker never edits seed. Planning changes no product source. R030/R022 and predecessors REVIEW_PASS / FREEZE_OPEN unchanged; global F02 remains OPEN.
 
@@ -36,3 +36,7 @@ Tests may use disposable isolated MySQL/test tenant, synthetic HTTP/media and lo
 Incomplete traversal returning nil, invalid old/duplicate row filtered away, missing eligible ID, unsafe token/destination request, redirect followed, malformed terminal page accepted, changed mapping/conversation/engine behavior, advanced checkpoint/analysis after partial, weak detector, in-scope failing check or undisclosed skips returns CHANGES_REQUIRED/BUILD_BLOCKED. Continue same-scope repairs under current authority; third same-root round requires REVIEW_COST_ESCALATION_REQUIRED. Boundary changes require new dispatcher authority; immutable seed is never edited.
 
 Codex independent REVIEW checks exact BUILD and integrated source, seed authorship/timing, all nine requirements, preserved regressions, source/test detector sensitivity, fixture isolation and claim limits. Return may accept only local Facebook message contract. No global F02, live retention/permissions/cursor stability, provider/governance readiness or FREEZE disposition is authorized by this order.
+
+## Independent disposition (2026-10-03)
+
+Codex accepts exact Claude BUILD `8ed6d0b39195ade513906571daaaf537ddeb90a9` for the local F02E-01..09 contract: [review](../reviews/CCMAI_RUNTIME_031_F02E_INDEPENDENT_REVIEW_2026-10-02.md). REVIEW_PASS / FREEZE_OPEN. First full-backend DB SKIP, worker default timeout and M1 INCONCLUSIVE are retained separately; independent monolithic engine209 top-level/444 total PASS with zero skips uses an isolated MySQL capacity override only. No reviewer source/test repair or tooling change. Endpoint/live/global-F02/governance remain unproved; next tranche needs separate dispatch.

@@ -19,3 +19,7 @@ Project disposition at initial assessment: F02-D planning recommended; message i
 ## Upstream candidate
 
 Propose an evidence-scope matrix in shared downstream review/closure templates, linking narrow source acceptance to broader open claims and separating synthetic/local/live-provider/governance receipts. Reconcile with existing [downstream gate learning intake](CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md); classify as a template/design candidate, not an already-proven parent machine-gate defect. CVF parent owner decides adoption/deduplication and any work order. No parent change or upstream acceptance is claimed.
+
+## R031 application (2026-10-03)
+
+[Independent F02-E review](../CCMAI_RUNTIME_031_F02E_INDEPENDENT_REVIEW_2026-10-02.md) accepts the local Facebook message contract for exact BUILD8ed6d0b39195ade513906571daaaf537ddeb90a9, REVIEW_PASS / FREEZE_OPEN. Original adapter14 behavioral failures, eight applied mutations killed and actual adapter/engine/disposable-MySQL evidence discriminate this layer. Thus the earlier Facebook-message-open wording describes the R030 assessment checkpoint; Zalo messages, Meta endpoint/live compatibility, global F02 and governance remain OPEN. No live-channel or parent adoption is inferred.

@@ -18,7 +18,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - R030 Pancake local message order: REVIEW_PASS / FREEZE_OPEN.: `docs/work_orders/CCMAI_RUNTIME_030.md`
 - Active F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`
-- Active R031 bounded Facebook message BUILD dispatch; independent review required.: `docs/work_orders/CCMAI_RUNTIME_031.md`
+- R031 Facebook local message order: independently REVIEW_PASS / FREEZE_OPEN.: `docs/work_orders/CCMAI_RUNTIME_031.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`

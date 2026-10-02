@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-031 F02-E is REVIEW_PENDING / REVIEW / FREEZE_OPEN. Independent Codex REVIEWER verifies the exact local BUILD SHA recorded in this handoff, the changed set, F02E-01..09 evidence in the BUILD record, retained tests against the original adapter, mutations M1-M5 and the engine/disposable-MySQL observations; Claude must not self-review or repair during review. Meta endpoint documentation remains unverified; acceptance is the local safety contract only. R030/R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02/live-channel/credential/provider/governance proof remains OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request product edit, Graph version change, push, merge, deployment, parent edit or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-031 F02-E is REVIEW_PASS / REVIEW / FREEZE_OPEN for exact BUILD 8ed6d0b39195ade513906571daaaf537ddeb90a9 and local F02E-01..09 only. ORCHESTRATOR may prepare a separate INTAKE/DESIGN/SPEC/WORK_ORDER for remaining Zalo messages; no new BUILD authority is granted. Meta endpoint compatibility remains unverified; global F02/live-channel/credential/provider/governance proof remains OPEN. R030/R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request product edit, Graph version change, push, merge, deployment, parent edit or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "REVIEWER (Codex) pending independent review of CCMAI-RUNTIME-031; IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude) BUILD complete, returned REVIEW_PENDING",
+  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex), independent REVIEWER completed CCMAI-RUNTIME-031; Claude exact BUILD accepted for local contract only",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
-  "updatedAt": "2026-10-02"
+  "updatedAt": "2026-10-03"
 }

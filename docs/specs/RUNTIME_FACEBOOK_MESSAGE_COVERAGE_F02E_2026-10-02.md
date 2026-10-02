@@ -1,6 +1,6 @@
 # F02-E — Facebook message-window coverage
 
-Status: SPEC_ACCEPTED_FOR_DISPATCH. Date: 2026-10-02. Tranche CCMAI-RUNTIME-031, risk ceiling R2. Author: Codex SPEC_AUTHOR. Implementation: BUILD returned REVIEW_PENDING (2026-10-02; exact local BUILD SHA in the active handoff; [evidence](../reviews/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_BUILD_2026-10-02.md)); the planning-era not-started state is historical; independent acceptance PENDING.
+Status: SPEC_ACCEPTED_FOR_DISPATCH. Date: 2026-10-02. Tranche CCMAI-RUNTIME-031, risk ceiling R2. Author: Codex SPEC_AUTHOR. Implementation: exact BUILD `8ed6d0b39195ade513906571daaaf537ddeb90a9` independently REVIEW_PASS / FREEZE_OPEN (2026-10-03; [review](../reviews/CCMAI_RUNTIME_031_F02E_INDEPENDENT_REVIEW_2026-10-02.md)). Acceptance is the local F02E-01..09 contract; intended requirements below remain unchanged. Meta endpoint/live compatibility and global F02 remain OPEN.
 
 ## INTAKE and inherited acceptance
 

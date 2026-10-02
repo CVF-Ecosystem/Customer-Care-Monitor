@@ -6,10 +6,18 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-031 REVIEW_PENDING / FREEZE_OPEN; global F02 OPEN)
-- Active role: REVIEWER (Codex) pending independent review of CCMAI-RUNTIME-031; IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude) BUILD complete, returned REVIEW_PENDING
-- Next allowed move: CCMAI-RUNTIME-031 F02-E is REVIEW_PENDING / REVIEW / FREEZE_OPEN. Independent Codex REVIEWER verifies the exact local BUILD SHA recorded in this handoff, the changed set, F02E-01..09 evidence in the BUILD record, retained tests against the original adapter, mutations M1-M5 and the engine/disposable-MySQL observations; Claude must not self-review or repair during review. Meta endpoint documentation remains unverified; acceptance is the local safety contract only. R030/R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02/live-channel/credential/provider/governance proof remains OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request product edit, Graph version change, push, merge, deployment, parent edit or FREEZE.
+- Active phase: REVIEW (CCMAI-RUNTIME-031 REVIEW_PASS / FREEZE_OPEN; global F02 OPEN)
+- Active role: ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex), independent REVIEWER completed CCMAI-RUNTIME-031; Claude exact BUILD accepted for local contract only
+- Next allowed move: CCMAI-RUNTIME-031 F02-E is REVIEW_PASS / REVIEW / FREEZE_OPEN for exact BUILD 8ed6d0b39195ade513906571daaaf537ddeb90a9 and local F02E-01..09 only. ORCHESTRATOR may prepare a separate INTAKE/DESIGN/SPEC/WORK_ORDER for remaining Zalo messages; no new BUILD authority is granted. Meta endpoint compatibility remains unverified; global F02/live-channel/credential/provider/governance proof remains OPEN. R030/R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request product edit, Graph version change, push, merge, deployment, parent edit or FREEZE.
 - Parked operator checkpoint: none
+
+## Independent review disposition role acknowledgment (Codex, 2026-10-03)
+
+Independent REVIEWER completed exact BUILD review without product/test repair. Monolithic engine rerun: 209 top-level /444 including subtests PASS, zero FAIL/SKIP, 628.731 s; disposable DB/network teardown exit0. First full-backend DB SKIP and worker timeout/INCONCLUSIVE remain separate historical evidence. REVIEWER -> ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex) acknowledged before synchronized REVIEW_PASS disposition and documentation-only local review commit. Worker BUILD commit stewardship remains Claude; immutable seed and source untouched. Local F02E-01..09 acceptance only; FREEZE/global F02/live/provider-governance remain OPEN.
+
+## Independent REVIEW intake acknowledgment (Codex, 2026-10-02)
+
+Rehydrated manifest/policy/current state/memory/handoff/status/index, seed/tranche/SPEC/order and applicable learning. Core 26c686cc99b8be965d2760f27fe875b03376c643 doctor25/25; knowledge ingest complete; BOOTSTRAP_MIGRATION_PENDING nonblocking. ORCHESTRATOR -> independent REVIEWER (Codex) acknowledged before substantive review for exact Claude BUILD 8ed6d0b39195ade513906571daaaf537ddeb90a9; 81849cc records SHA only. Current facts agree REVIEW_PENDING. User/worker limits explicitly retained: full engine default-timeout not completed, two disjoint halves not monolithic PASS, M1 first harness INCONCLUSIVE, finite repair to formerly hanging budget probe, connection-error regression not independent status detector, race NOT RUN and full-tree/PR excluded-file failures. Messenger/live/global-F02/provider-governance unproved. Reviewer may reproduce local fixtures/detectors and record independent disposition only; no product/test repair, persistent DB, real channel/provider/credential action, parent edit, push/deploy or FREEZE.
 
 ## BUILD role acknowledgment (before first source edit)
 
@@ -45,3 +53,7 @@ Seed scoped preflight7/7; mandatory gate tests46/46 PASS (31.288 s); diff PASS. 
 ## BUILD verification (Claude, worker-reported)
 
 Build-start scoped preflight 7/7 PASS before the first source edit; workspace doctor 25/25 and knowledge ingest before BUILD. At return: catalog regenerate and check PASS, docs build PASS (15.08 s; run through cmd because the PowerShell npm.ps1 shim is blocked by execution policy), mandatory gate unit tests 46/46 PASS (24.4 s), `git diff --check` clean, Docker inventory shows no `ccma-test-*` residue. Explicit changed-set preflight below; default, whole-worktree and `origin/main..HEAD` preflights are expected to fail only on the three excluded pre-existing untracked files and are not claimed as PASS. Race NOT RUN (CGO disabled/no C compiler).
+
+## Independent review return (Codex, 2026-10-03)
+
+REVIEW_PASS / FREEZE_OPEN for exact BUILD `8ed6d0b39195ade513906571daaaf537ddeb90a9`: [independent review](../../docs/reviews/CCMAI_RUNTIME_031_F02E_INDEPENDENT_REVIEW_2026-10-02.md). F02E-01..09 accepted locally; full channels77 top-level/88 total and new engine2 top-level/8 total PASS, original-source14 behavioral failures, applied M1-M8 killed and byte restoration verified. Build/vet/gate46 PASS. First reviewer full backend963 PASS/3 SKIP includes a MySQL1040 DB skip, retained without zero-skip credit. Separate monolithic engine rerun on isolated max_connections1000:209 top-level/444 total PASS,0 FAIL/SKIP,628.731 s; teardown exit0. Worker default10m timeout/M1 INCONCLUSIVE retained; no proven timeout/leak cause. Race NOT RUN; Meta compatibility/global F02/live/provider-governance remain OPEN. Source and seed unchanged. Final scoped gate/catalog/docs verification is recorded in the linked review; default/PR preflight exclusions are never PASS.
