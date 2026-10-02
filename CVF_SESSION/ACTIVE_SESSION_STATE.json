@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-028 F06 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (shared tenant/job admission and opaque run ownership for HTTP, cron, after-sync, analysis agent and public Analyzer methods; run-id-targeted cancellation held until worker exit with checked read, owner-mutex serialization of cancel vs publication vs terminal commit; checked early-failure/panic/terminal handling; Job->JobRun lock order and finalize-only-running; DeleteJob/ClearJobRuns guards; JobDetail run-id cancel and pending polling; requirements matrix, old-source probes, mutations, race-detector limitation and the R019 gate in docs/reviews/RUNTIME_JOB_RUN_OWNERSHIP_F06_BUILD_2026-10-02.md). R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F06 stays OPEN until review. Crash recovery, distributed cancellation, the MCP trigger placeholder, F02 live/message limits and tenant timezone activation stay separate; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-028 F06 BUILD 419a31c is CHANGES_REQUIRED / FREEZE_OPEN after independent Codex REVIEW. Claude next rehydrates and acknowledges REPAIR_WORKER / COMMIT_STEWARD, repairs F06-R1-01 accepted-cancel outcomes on early-failure/panic/Abort paths, F06-R1-02 reservation tenant/job binding, and F06-R1-03 exact-run terminal observation in UI under unchanged seed 6958e28, retains reviewer probes and returns one local REVIEW_PENDING repair commit to Codex. F06 stays OPEN; R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN. Race detector unavailable is not PASS; initial failed handler run and successful isolated replay stay explicit. Crash recovery/distributed cancellation, MCP placeholder, F02 live/message proof and tenant timezone activation remain separate. No push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
+  "activeRole": "ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD; next REPAIR_WORKER / COMMIT_STEWARD (Claude)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-02"
 }

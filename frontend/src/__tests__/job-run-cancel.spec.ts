@@ -81,6 +81,22 @@ describe('Job Detail cancel targets the exact run (F06-10)', () => {
     vi.useRealTimers()
   })
 
+  it.each([[], [run(A, 'unknown')], [run(A, '')]].map((rows) => ({ rows })))('keeps cancel pending until its exact run is observed terminal: $rows', async ({ rows }) => {
+    runsNow = [run(A, 'running')]
+    const { w } = await mountView()
+    apiPost.mockResolvedValue({ data: { message: 'job_cancel_requested', run_id: A } })
+    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] })
+    await stopButton(w)!.trigger('click')
+    for (let i = 0; i < 5; i++) await Promise.resolve()
+    runsNow = rows
+    const baseline = runsFetches
+    await vi.advanceTimersByTimeAsync(2000)
+    await vi.advanceTimersByTimeAsync(3000)
+    expect(notice()).toContain('Đã yêu cầu hủy')
+    expect(notice()).not.toContain('đã kết thúc')
+    expect(runsFetches - baseline).toBeGreaterThanOrEqual(2)
+  })
+
   it('sends the displayed run id and treats 202 as requested, not terminal', async () => {
     runsNow = [run(A, 'running')]
     const { w } = await mountView()

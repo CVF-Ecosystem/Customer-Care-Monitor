@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-028 — F06 job admission and run-owned cancellation
 
-Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: CHANGES_REQUIRED. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_JOB_RUN_OWNERSHIP_F06_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-028.json`, committed before BUILD at `6958e281d190935578809bb9900dd95d2a29509e`. Owner routes Claude implementation and Codex independent review. F05/R025/R026 retain REVIEW_PASS / FREEZE_OPEN; F06 source is unchanged at dispatch.
 
@@ -42,3 +42,13 @@ If a real boundary expansion is necessary, provide a concrete proposed amendment
 ## Handoff to reviewer
 
 Return BUILD SHA, changed paths, requirements-to-tests matrix (no missing rows), provider/DB/network fixture boundaries, exact counts/skips and cleanup, old-source behavioral probes, mutations and restoration, test/gate/docs/typecheck results, panic/DB/cancellation limitations and any dissent. Requested cancellation is not observed terminal cancellation. Crash-stale/unowned rows remain fail-closed and need separate recovery authority.
+
+## R028-R1 — consolidated same-scope repair (Codex, 2026-10-02)
+
+Independent [review](../reviews/CCMAI_RUNTIME_028_F06_INDEPENDENT_REVIEW_2026-10-02.md) of BUILD `419a31ce0e34442a7410ad7ffb81d8586115e856` returns CHANGES_REQUIRED / FREEZE_OPEN. Claude transitions to REPAIR_WORKER / COMMIT_STEWARD after rehydration and acknowledgment; independent REVIEWER remains Codex. Seed, risk, scope, effects and commit ownership are unchanged.
+
+1. F06-R1-01: make early error, panic and Abort/setup terminal paths honor the accepted-cancel outcome and serialize with terminal-first rejection through the same owner decision and checked finalizer. Preserve bounded errors, no checkpoint/notification and DB-failure blocking. Two reviewer probes currently store error instead of cancelled after an accepted cancel.
+2. F06-R1-02: reject tenant/job mismatch against the reservation before consuming it or making any start/provider/source/publication effect; use its bound identity for Abort/finalization. A reservation for A currently executes B (one synthetic provider call, two published results) before the finalizer detects the mismatch. Add different-job, cross-tenant, occupied-B, valid exactly-once and cleanup tests.
+3. F06-R1-03: pending cancellation settles only when its exact run ID is observed in a recognized terminal status. Missing/unknown/empty status remains unconfirmed and polling; observed error/cancelled/success outcomes receive truthful copy. Three new mounted probes currently report ended and stop polling without terminal evidence.
+
+Retain `analyzer_f06_review_test.go` and the three new mounted cases unchanged in intent; do not skip/weaken them. Run all three repair groups plus inherited ownership/F03/F05/config/permission/snapshot tests, full uncached backend with R019 and frontend, forced typecheck/build, gate/catalog/docs/doctor and diff checks. First independent handler run failed with truncated output, isolated replay 26/26 passed; disclose this and investigate any recurrence rather than silently counting retries as unconditional PASS. Extend BUILD evidence with requirements, repaired boundary detectors/mutations, exact counts/skips, source restoration and cleanup. Return one local REVIEW_PENDING repair commit; no self-approval, push, real API, persistent DB, scope widening or FREEZE.
