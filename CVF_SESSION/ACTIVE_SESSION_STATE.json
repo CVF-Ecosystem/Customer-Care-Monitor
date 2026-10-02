@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-026 F04 is REVIEW_PASS / FREEZE_OPEN after independent Codex review of BUILD 41b6c50 plus bounded actual-bound validation repairs. Next: rehydrate and prepare bounded F05 DESIGN/SPEC/WORK_ORDER for analyzer reanalysis/date/mode contracts; Claude waits for dispatch. F06 remains separate and OPEN; F02 live/message limits remain OPEN; historical mixed timestamp storage and tenant timezone Settings activation are unproved/outside R026. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-027 F05 is DISPATCH_READY: Claude must rehydrate and acknowledge IMPLEMENTATION_WORKER before bounded BUILD of the analyzer mode/limit/Vietnam-date contract, then return one local REVIEW_PENDING commit with evidence to independent Codex REVIEW. R025 F03 and R026 F04 remain REVIEW_PASS / FREEZE_OPEN; F05 source remediation remains OPEN until review. F06/F07, F02 live/message limits, mixed historical timestamp storage and tenant timezone Settings activation stay separate. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD",
+  "activeRole": "WORK_ORDER_AUTHOR (Codex); Claude IMPLEMENTATION_WORKER awaits owner transfer; Codex independent REVIEWER after BUILD",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-02"
 }

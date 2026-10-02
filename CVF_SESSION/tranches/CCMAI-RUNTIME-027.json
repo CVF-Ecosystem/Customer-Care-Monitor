@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-027",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/analyzer_modes.go",
+    "backend/engine/analyzer*_test.go",
+    "backend/engine/reanalyze_test.go",
+    "backend/api/handlers/jobs.go",
+    "backend/api/handlers/job*_test.go",
+    "backend/api/handlers/business_dates.go",
+    "backend/api/handlers/business_dates_test.go",
+    "backend/pkg/business_dates.go",
+    "backend/pkg/business_dates_test.go",
+    "frontend/src/views/Jobs/JobDetail.vue",
+    "frontend/src/__tests__/job*.spec.ts",
+    "docs/specs/RUNTIME_ANALYZER_MODES_F05_2026-10-02.md",
+    "docs/work_orders/CCMAI_RUNTIME_027.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "schema_change",
+    "snapshot_format_change",
+    "timestamp_migration",
+    "dsn_storage_change",
+    "scheduler_change",
+    "adapter_change",
+    "f06_cancellation_registry_change",
+    "tenant_timezone_settings_activation",
+    "workflow_change"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_027.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "71c7ee761a1147d502d815ff5461e92f1c30bd4c",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}

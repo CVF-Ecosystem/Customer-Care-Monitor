@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-026", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-027", "parked": false} -->
 
 ## Startup Order
 
@@ -59,7 +59,9 @@ REVIEW_PENDING BUILD, then independent Codex REVIEW. Owner authorization for a
 PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
-Current active tranche: `CCMAI-RUNTIME-026` / F04 VN business-day read/filter
+Current active tranche: `CCMAI-RUNTIME-027` / F05 is DISPATCH_READY at WORK_ORDER. Owner requests Claude implementation with Codex as orchestrator/independent reviewer. [SPEC](docs/specs/RUNTIME_ANALYZER_MODES_F05_2026-10-02.md) and [work order](docs/work_orders/CCMAI_RUNTIME_027.md) separate mode from limit, use Vietnam date bounds to select conversations with full local snapshots, define evaluation-scoped since-last/unanalyzed selection, and reserve last_run_at updates to ordinary incremental execution. Seed `71c7ee761a1147d502d815ff5461e92f1c30bd4c` predates BUILD. Claude must rehydrate/acknowledge before one local REVIEW_PENDING commit; Codex independently reviews. Planning changes no product source and does not remediate F05. R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F06/F07 and F02 live/message limits remain separate. No real provider/channel calls, persistent DB, push, deployment, parent-CVF work or FREEZE. Compact bootstrap absent: BOOTSTRAP_MIGRATION_PENDING, nonblocking.
+
+Previous tranche: `CCMAI-RUNTIME-026` / F04 VN business-day read/filter
 consistency is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `41b6c50` and
 bounded Codex reviewer repairs (evidence
 [BUILD record](docs/reviews/RUNTIME_BUSINESS_DAY_FILTERS_F04_BUILD_2026-10-02.md);
