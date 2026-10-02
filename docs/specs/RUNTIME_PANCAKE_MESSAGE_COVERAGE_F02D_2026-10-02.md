@@ -1,6 +1,6 @@
 # F02-D — Pancake message-window coverage
 
-Status: SPEC_ACCEPTED_FOR_DISPATCH, 2026-10-02. Tranche: CCMAI-RUNTIME-030. Risk ceiling: R2. Author: Codex, SPEC_AUTHOR. Product implementation: NOT STARTED. Independent acceptance: PENDING.
+Status: SPEC_ACCEPTED_FOR_DISPATCH, 2026-10-02. Tranche: CCMAI-RUNTIME-030. Risk ceiling: R2. Author: Codex, SPEC_AUTHOR. Product implementation: BUILD `31daee1d2f736166c4514ec2487d9b94b94727cd`. Independent local acceptance: REVIEW_PASS / FREEZE_OPEN; [review](../reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md). Intended contract below unchanged.
 
 ## INTAKE and inherited evidence
 

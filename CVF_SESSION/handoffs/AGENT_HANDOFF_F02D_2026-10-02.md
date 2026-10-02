@@ -6,10 +6,18 @@ Status: ACTIVE
 
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-030 REVIEW_PENDING / FREEZE_OPEN; global F02 OPEN)
-- Active role: REVIEWER (Codex) pending independent review of CCMAI-RUNTIME-030; IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude) BUILD complete, returned REVIEW_PENDING
-- Next allowed move: CCMAI-RUNTIME-030 F02-D is REVIEW_PENDING / REVIEW / FREEZE_OPEN. Independent Codex REVIEWER verifies the exact local BUILD SHA recorded in this handoff, the changed set, F02D-01..09 evidence in the BUILD record, retained tests against the original adapter, mutations M1-M4 and the engine/disposable-MySQL observations; Claude must not self-review or repair during review. R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN; live offset snapshot stability, global F02, channel credentials and provider/governance proof remain OPEN. No push, merge, deployment, parent edit or FREEZE.
+- Active phase: REVIEW (CCMAI-RUNTIME-030 REVIEW_PASS / FREEZE_OPEN; global F02 OPEN)
+- Active role: ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); independent REVIEWER completed
+- Next allowed move: CCMAI-RUNTIME-030 F02-D is REVIEW_PASS / REVIEW / FREEZE_OPEN for exact BUILD 31daee1d2f736166c4514ec2487d9b94b94727cd. Independent review evidence: docs/reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md. ORCHESTRATOR may assess remaining Facebook/Zalo message contracts and separately bounded live-channel evidence, then prepare a separate INTAKE/DESIGN/SPEC/WORK_ORDER before any new BUILD. R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02, live Pancake offset stability, credentials and provider/governance proof remain OPEN. Scoped FREEZE requires a separate CLOSER decision; no push, merge, deployment, provider/channel/credential action, persistent DB, parent edit or FREEZE authorized.
 - Parked operator checkpoint: none
+
+## Independent disposition and synchronization acknowledgment (Codex, 2026-10-02)
+
+Independent REVIEWER -> ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD acknowledged before disposition synchronization/local review commit. Exact Claude BUILD `31daee1d2f736166c4514ec2487d9b94b94727cd` accepted REVIEW_PASS / FREEZE_OPEN for local Pancake message contract; [review](../../docs/reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md). Independently: full channels61 top-level/69 including subtests PASS, new engine2 top-level/5 including subtests PASS (18.018 s), selected ownership/attachment/checkpoint regressions7 top-level PASS (8.400 s), build/vet and gate46 PASS. Original adapter12 behavioral failures, four one-match mutations killed; baseline restored byte-exact. Worker full-backend/campaign/first M4 survivor remain attributed. Reviewer made no product/test repair. Planning and assessment stale no-BUILD prose corrected transparently. Race NOT RUN, no live/global-F02/credentials/provider/governance/CI readiness or FREEZE claim. Seed/source unchanged; final documentation gates recorded in review artifact.
+
+## Independent REVIEW intake acknowledgment (Codex, 2026-10-02)
+
+Rehydrated manifest/policy/state/memory/handoff/status/index, order/seed/tranche and applicable learning. Core 26c686cc99b8be965d2760f27fe875b03376c643 doctor 25/25, knowledge ingest done; BOOTSTRAP_MIGRATION_PENDING nonblocking. ORCHESTRATOR -> independent REVIEWER (Codex) for exact Claude BUILD 31daee1d2f736166c4514ec2487d9b94b94727cd; 684aaa6 records SHA only. State/header/marker/order/tranche agree REVIEW_PENDING. Narrow planning-prose correction under SESSION_SYNC_STEWARD makes old DISPATCH_READY/no-BUILD statement explicitly historical; no seed/product edit. Return to REVIEWER. Initial attempt to write this acknowledgment used backend cwd and failed before writing; a combined shell nevertheless ran channels successfully (2.385 s). This acknowledgment is recorded now, not backdated; subsequent commands use project-root cwd and go -C backend. Worker before-BUILD acknowledgment is separate and unchanged. User's race NOT RUN/live-offset/global-F02/credential/provider/governance limits preserved. Worker claims remain attributed until independently checked. No persistent DB, real channel/provider, push/deploy, parent edit or FREEZE.
 
 ## BUILD role acknowledgment (before first source edit)
 
@@ -28,7 +36,7 @@ Codex rehydrated manifest/policy/current continuity/implementation/index and app
 - INTAKE: inherit accepted R023 conversation source scope; isolate remaining Pancake messages from Facebook/Zalo/live proof.
 - DESIGN: official public OpenAPI retrieved without credentials; offset/ordering facts distinguished from local terminal-safety choices. Explicit empty page only, no since early stop, strict rows/offset budget, stable chronological output and no live snapshot claim.
 - SPEC: [F02-D contract](../../docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md) records F02D-01..09, source candidates and limits. No candidate incident reproduced or product acceptance test run in planning.
-- WORK_ORDER: [R030 dispatch](../../docs/work_orders/CCMAI_RUNTIME_030.md) bounds adapter source/Pancake tests, actual adapter+engine tests on disposable MySQL; engine source excluded. Claude implementation/local BUILD commit, Codex independent review. Current status DISPATCH_READY; BUILD not started.
+- WORK_ORDER: [R030 dispatch](../../docs/work_orders/CCMAI_RUNTIME_030.md) bounds adapter source/Pancake tests, actual adapter+engine tests on disposable MySQL; engine source excluded. Claude implementation/local BUILD commit, Codex independent review. At planning time: DISPATCH_READY; BUILD had not started. Current BUILD/review status is recorded above.
 
 ## Shared learning applied
 

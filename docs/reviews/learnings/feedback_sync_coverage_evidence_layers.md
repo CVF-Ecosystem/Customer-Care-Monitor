@@ -14,7 +14,7 @@ Track conversation enumeration, message retrieval, stored/checkpoint behavior, l
 
 Bind every acceptance/closure statement to its exact adapter, window, dataset, source revision and evidence type. Keep a narrow tranche's source acceptance intact while its broader finding or pilot remains open. A nil error from an adapter means only what that adapter's validated contract actually guarantees. Add discriminating old-source/negative tests before declaring a new completeness repair settled.
 
-Project disposition: assessment and claim boundaries recorded; next recommended F02-D planning starts with Pancake message completeness. Message implementation, tests and live proof are still open. This record grants no source/credential/API/FREEZE authority.
+Project disposition at initial assessment: F02-D planning recommended; message implementation/tests/live proof then open. Update after [R030 independent review](../CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md): Pancake local message contract now REVIEW_PASS / FREEZE_OPEN for exact BUILD 31daee1d2f736166c4514ec2487d9b94b94727cd with applied original-source/mutation detectors and actual adapter/engine/disposable-MySQL acceptance. Live offset stability, Facebook/Zalo messages, global F02 and provider/governance proof remain open. Initial source-candidate classification is historical, not current lack of local reproduction. This record grants no source/credential/API/FREEZE authority.
 
 ## Upstream candidate
 

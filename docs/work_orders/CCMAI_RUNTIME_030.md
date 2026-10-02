@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-030 — F02-D Pancake message-window coverage
 
-Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: REVIEW_PASS. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md), [F02 assessment](../reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md), dispatcher-owned `CVF_SESSION/authority/CCMAI-RUNTIME-030.json`. Seed committed at `cbc7cba3af7d1b5ce77911fbb7e1fa62ff70c39f`, which is the tranche's baseCommit before BUILD. Worker must never edit seed. This planning order changes no product source; F02 remains OPEN.
 
@@ -37,3 +37,7 @@ Permitted tests: loopback HTTP servers or closed synthetic RoundTripper, disposa
 False nil-success on incomplete/untrusted traversal, filtered invalid row, missed eligible ID, changed mapping/redaction, checkpoint/analysis after partial, missing deterministic detector, in-scope regression, undocumented skips or widened effects require CHANGES_REQUIRED/BUILD_BLOCKED. Same-scope repairs remain authorized; third same-root repair requires REVIEW_COST_ESCALATION_REQUIRED. A real scope/effect boundary requires a new dispatcher decision, never seed edits.
 
 Return BUILD SHA, changed set, acceptance matrix, tests/DB observations, sanitized request inventory, detector output/byte restoration and gate/docs/catalog/doctor/cleanup evidence. Independent Codex REVIEW verifies source, exact integrated revision, seed author/timing, retained tests and evidence limits. Review may accept only local Pancake message contract; live offset snapshot stability, global F02, channel credentials, provider/governance readiness and FREEZE remain OPEN.
+
+## Independent disposition (Codex, 2026-10-02)
+
+Exact BUILD `31daee1d2f736166c4514ec2487d9b94b94727cd` accepted REVIEW_PASS / FREEZE_OPEN; [review](../reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md). F02D-01..09 local source/adapter/engine contract accepted with explicit evidence layers: full channels61 top-level/69 total, new engine2 top-level/5 total, selected regressions7 top-level, build/vet/gate46 PASS; original-source12 failures and four applied mutations killed, restored baseline PASS. Full backend and earlier worker campaigns remain attributed. No reviewer product/test fix; documentation findings synchronized. Race NOT RUN; live offset stability/global F02/credentials/provider/governance and FREEZE remain OPEN. No further R030 repair dispatched.
