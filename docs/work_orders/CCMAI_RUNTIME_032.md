@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-032 — F02-F Zalo local message traversal
 
-Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-03 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2. Claude local BUILD complete 2026-10-03.
+Status: CHANGES_REQUIRED. Dispatched DISPATCH_READY; issued 2026-10-03 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2. Claude local BUILD complete 2026-10-03.
 
 Authority: [SPEC](../specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md), owner resume and new immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-032.json`. Seed must be committed at record baseCommit before BUILD. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02 stays OPEN.
 
@@ -32,3 +32,7 @@ Allowed local effects: blocked synthetic HTTP/loopback media fixtures, disposabl
 Missing eligible full-history ID, unsafe request, short/malformed nil success, invalid duplicate discarded, wrong mapping/offset/order, unbounded traversal, diagnostic message storage, advanced checkpoint/after-sync on partial, weakened probe or in-scope failed check means CHANGES_REQUIRED/BUILD_BLOCKED. Same-scope repairs continue under existing authority; third same-root round requires REVIEW_COST_ESCALATION_REQUIRED. Boundary changes go to dispatcher; seed unchanged.
 
 Review may accept local Zalo contract only. Actual offset snapshot stability, terminal/provider retention/permissions/string-link mapping, global F02, live provider governance and FREEZE remain separate. This planning checkpoint contains no product edit or BUILD/test result.
+
+## Independent review return / bounded R032-R1 repair (2026-10-03)
+
+[Independent review](../reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md) of BUILD `b31b9749664485e686838b47cc37d7433eb0179d`: CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. Claude REPAIR_WORKER / COMMIT_STEWARD may fix R032-R1-01 (committed finite cycle fixture, named M13 semantic detector and honest evidence) and R032-R1-02 (current implementation prose/continuity) within existing immutable seed and allowed paths. Preserve other assertions/product behavior; no additional source rewrite is required by these findings. Rehydrate/acknowledge/synchronize BUILD before repair, run finite applied mutation and restored baseline plus relevant channels/Zalo engine/gates/docs checks, return exact local repair SHA and REVIEW_PENDING for independent Codex re-review. No reviewer product/test repair, seed change or wider effects. Original worker M7/M9 INCONCLUSIVE, reviewer interrupted full run, strict/live/race limits remain.

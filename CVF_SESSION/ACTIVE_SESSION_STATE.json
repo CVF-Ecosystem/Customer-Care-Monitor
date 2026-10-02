@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-032 F02-F is REVIEW_PENDING / FREEZE_OPEN for the exact Claude local BUILD recorded in the active handoff. Independent Codex REVIEWER checks seed author/timing, integrated source, F02F-01..09, mutation sensitivity, regressions and claim limits against docs/reviews/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_BUILD_2026-10-03.md; no self-approval, no reviewer product/test repair. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request/conversation/OAuth protocol change, other-platform/UI/schema/workflow/tooling/dependency change, parent edit, push, merge, deployment or FREEZE. Global F02/live offset/retention/terminal compatibility/provider-governance proof remains OPEN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-032 F02-F is CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for exact Claude BUILD b31b9749664485e686838b47cc37d7433eb0179d. Claude REPAIR_WORKER / COMMIT_STEWARD may repair R032-R1-01 committed finite cycle detector/M13 evidence and R032-R1-02 current implementation prose within the unchanged R032 seed, after rehydration and recorded BUILD acknowledgment, then return exact local repair SHA and REVIEW_PENDING to independent Codex re-review. No reviewer product/test repair. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request/conversation/OAuth protocol change, other-platform/UI/schema/workflow/tooling/dependency change, parent edit, push, merge, deployment or FREEZE. Global F02/live offset/retention/terminal compatibility/provider-governance proof remains OPEN.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "INDEPENDENT REVIEWER (Codex); IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude) completed BUILD; dispatcher/WORK_ORDER_AUTHOR Codex",
+  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); independent REVIEWER completed CHANGES_REQUIRED; next REPAIR_WORKER / repair COMMIT_STEWARD (Claude), then independent Codex re-review",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-03"
 }

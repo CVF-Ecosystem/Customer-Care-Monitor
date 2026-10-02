@@ -254,7 +254,14 @@
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_032.md",
                           "status": "ACTIVE",
-                          "description": "R032 Zalo local message order: REVIEW_PENDING / FREEZE_OPEN; Claude local BUILD complete."
+                          "description": "R032 Zalo local message order: CHANGES_REQUIRED / FREEZE_OPEN; bounded R1 repair next."
+                      },
+                      {
+                          "id": "f02f-independent-review",
+                          "family": "continuity",
+                          "path": "docs/reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Independent R032 exact-BUILD review: CHANGES_REQUIRED for finite cycle detector/evidence and current implementation prose."
                       }
                   ]
 }
