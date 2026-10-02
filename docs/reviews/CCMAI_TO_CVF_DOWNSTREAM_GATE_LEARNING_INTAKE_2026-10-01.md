@@ -13,7 +13,7 @@ Date: 2026-10-01. Status: `LEARNING_INTAKE / UPSTREAM_REMEDIATION_DEFERRED`. Sou
 
 ## Root-cause assessment across the governing chain
 
-### Later downstream observations (R021–R025, 2026-10-01/02)
+### Later downstream observations (R021–R026, 2026-10-01/02)
 
 The portable GOV-001 gate is now installed and invoked, but its continuity check compares the machine front marker and headers, not all prose that still presents itself as current. R021, R022 and R023 BUILD returns left `DISPATCH_READY` in the "Current active tranche" prose and/or implementation-status limitation while the canonical machine fields correctly said `REVIEW_PENDING`. At R023 exact BUILD `1fa8e14774149e68df10176f52804d80c11bb5bf`, doctor passed 25/25 and preflight passed 7/7 after the reviewer corrected those pointers. This is a narrower coverage gap than the original missing-gate finding: passing machine fields do not establish agreement of every current-authority prose surface. Parent proposal: give current status a single machine authority and generate its display prose, or retire duplicate current-status prose; add a golden worker-return case that proves the chosen contract. Do not promise a generic regex can validate arbitrary historical prose. Source: [R023 independent review](CCMAI_RUNTIME_023_F02B_INDEPENDENT_REVIEW_2026-10-01.md). Parent implementation and tests remain assigned to the other agent.
 
@@ -53,3 +53,7 @@ R025 extends the same case on 2026-10-02: BUILD `b53f56448962d3f7c6aa070e0882560
 | Small hosted CI defect was returned to worker without first applying the parent reviewer-local-repair rule | `RULE_GAP`; `PHASE_GATE_PLACEMENT_GAP`; `ORCHESTRATOR_PACKET_GAP` | `GOVERNANCE_CONTROL_PLANE` | `DESIGN_REVIEW_REQUIRED` | Parent agent projects the conditional routing rule into downstream reviewer packets, requires a reasoned reviewer-local/REWORK decision before dispatch, and proves it with this PR #1 case. A machine check can verify the decision envelope, not infer the repair's semantic size. | Local misroute recorded; parent standardization deferred to the assigned CVF agent. |
 
 Runtime/provider/cost learning lane: `N/A_WITH_REASON` — this packet concerns repository governance and bootstrap/reviewer routing; it makes no provider, customer-data, runtime-AI or cost claim. At this intake update, GOV1-CI1 local repair `ae44c2e` is `REVIEW_PENDING` for separate Codex review; draft PR #1 first hosted run exposed the pycache failure and supplied SHA-specific F08 evidence, while the repaired-head rerun remains pending. This learning record does not evaluate the repair. No CVF parent implementation, parent test, deployment or FREEZE was performed.
+
+## R026 continuation of the same current-prose gap (2026-10-02)
+
+At Claude BUILD `41b6c5006e474e282875af712ac5283cce35d6e8`, memory prose and machine pointers correctly say REVIEW_PENDING. IMPLEMENTATION_STATUS still claims F04-F07 product source untouched and Claude BUILD pending despite the F04 code changes. Reviewer found this during source/probe review, reported BLOCKED_CONTINUITY_DRIFT and corrected to F05-F07 / independent REVIEW pending before disposition. This is another real use case for retiring/generating duplicated current claims; neither a new root cause nor proof that the marker gate covers semantic prose. Parent implementation/testing remains deferred to the designated agent.
