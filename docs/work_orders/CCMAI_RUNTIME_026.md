@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-026 — F04 business-day read/filter consistency
 
-Status: DISPATCH_READY. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base `8f366ebd3ed2df3a1302a0635844d9a5f5d0d1a9`.
+Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base `8f366ebd3ed2df3a1302a0635844d9a5f5d0d1a9`.
 Authority: [SPEC](../specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-026.json`. R025/F03 REVIEW_PASS / FREEZE_OPEN at `9ecc839`; F04 implementation remains OPEN.
 
 ## Roles and startup

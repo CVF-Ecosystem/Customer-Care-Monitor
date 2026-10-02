@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-026", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md", "activeTranche": "CCMAI-RUNTIME-026", "parked": false} -->
 
 ## Startup Order
 
@@ -60,14 +60,16 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-026` / F04 VN business-day read/filter
-consistency is DISPATCH_READY. [SPEC](docs/specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md)
-and [work order](docs/work_orders/CCMAI_RUNTIME_026.md) bind committed dispatcher
-seed `8f366eb`: VN date controls, exclusive query bounds, Dashboard aggregates,
-Results/export, Cost Logs and message export; existing driver storage preserved.
-Claude must rehydrate/acknowledge IMPLEMENTATION_WORKER, BUILD within scope and
-return one local REVIEW_PENDING commit; Codex independently reviews. F04 source
-is still OPEN. No product changes/tests, real API calls, persistent DB, push or
-FREEZE occurred in planning. F05/F06 and F02 live/message limits remain separate.
+consistency is REVIEW_PENDING after Claude's local BUILD (evidence
+[BUILD record](docs/reviews/RUNTIME_BUSINESS_DAY_FILTERS_F04_BUILD_2026-10-02.md);
+[SPEC](docs/specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md),
+[work order](docs/work_orders/CCMAI_RUNTIME_026.md), seed `8f366eb`). Dashboard,
+Results list/export, Cost Logs and message export now parse date-only Vietnam
+dates once, use exclusive next-midnight bounds with typed instants (driver
+location stays authoritative), bucket the Dashboard series by VN day without
+DATE() on stored wall times, and the frontend presets are Vietnam calendar dates
+independent of the browser zone. Codex independent REVIEW is next; F04 stays
+OPEN until then, and F05/F06 and F02 live/message limits remain separate.
 
 Previous tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
 is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `b53f564` and bounded Codex
@@ -489,3 +491,5 @@ CCMAI-RUNTIME-023 / F02-B BUILD (Claude, 2026-10-01): Pancake conversation sync 
 CCMAI-RUNTIME-024 / F02-C BUILD (Claude, 2026-10-01): Zalo listrecentchat is enumerated by absolute row offset (count 10) to an explicit empty array; a short nonempty page continues at offset + physical rows. Every physical row is validated before filtering (JSON object envelope with error 0, explicit direct or nested array, src exactly 0/1, nonempty string customer id, positive integral millisecond time up to year 9999, decoded with UseNumber so large values stay exact); customers are deduped to the newest time (first seen on a tie). Repeated pages (same customer@time rows), the 500-page budget, cancellation before or after a response, any request/page error and a positive limit the window exceeds return ErrZaloCoverageIncomplete. Bodies are bounded to 8 MiB; non-2xx and malformed envelopes fail; errors and logs carry no URL, body, provider message, token or AppSecret, while callback/context causes stay reachable with errors.Is. Refresh still runs at most once with the same protocol, now requires a nonempty token pair before the callback, and keeps persistence-before-replacement. The engine asks exhaustive mode for zalo_oa and bounds its success checkpoint by the fetch start; FetchMessages mapping is unchanged and Zalo stays outside lease recovery. Evidence `docs/reviews/RUNTIME_ZALO_SYNC_COVERAGE_F02C_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; live offset stability and message coverage remain unproved, F02 stays OPEN; no real channel/provider call or governance claim.
 
 CCMAI-RUNTIME-025 / F03 BUILD (Claude, 2026-10-01): `isOrdinaryIncremental` names the covered mode (no full rerun, limit, dates, since-override or unanalyzed filter). In it every tenant/input-channel conversation is a candidate (ordered by last_message_at, id); each candidate's full local snapshot is compared with the snapshot linked to the latest committed conversation_evaluation of the same job and tenant (created_at DESC, id DESC) after VerifySnapshotProvenance: equal digest skips, no evaluation/legacy evaluation/different digest analyzes, a missing/misbound/tampered linked snapshot or query error is an error. The prepared snapshot is the one sent and saved, in single and batch alike. The checkpoint is the second-truncated scan start, written with the terminal run status in one tenant-scoped, row-locked transaction with three attempts; a failed or missing write marks the run error without a checkpoint, returns an error and sends no notification. Other modes keep their previous selection/finalization. Private test seams: analyzer clock, finalize retry delay, notification sender, Analyzer.providerOverride, scheduler analyzer constructor and after-sync completion hook. Evidence `docs/reviews/RUNTIME_ANALYZER_INCREMENTAL_COVERAGE_F03_BUILD_2026-10-01.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; no real provider/channel call or governance claim.
+
+CCMAI-RUNTIME-026 / F04 BUILD (Claude, 2026-10-02): a shared parser (`business_dates.go`) accepts strict `YYYY-MM-DD` Vietnam dates, converts the inclusive public `to` to the next VN midnight and rejects malformed, impossible, reversed and non-representable input with 400 `invalid_date_range` before any query or file output. Dashboard (default today; filtered cards, channel counts, recent QC/classification and cost_period share one interval), Results list/CSV/XLSX, Cost Logs and message export (still all messages of selected conversations) use `col >= from AND col < toExclusive`. Dashboard cost_today/cost_this_month are bounded above, and cost_by_day/messages_by_day are bucketed on VN days with a CASE over typed day-boundary instants (31 dates, up to tomorrow's midnight), so they are correct under a loc=UTC or a loc=Asia/Ho_Chi_Minh driver connection without named-zone tables, session time_zone or DSN changes; date-dependent query failures are a generic 500. Export timestamps print on the Vietnam calendar. Frontend `utils/businessDay.ts` computes presets on calendar keys from the VN day (default 28 and 7days are exactly 28 and 7 dates including today; message export defaults to 7 dates) with a Vietnam-time label on the four screens. Evidence `docs/reviews/RUNTIME_BUSINESS_DAY_FILTERS_F04_BUILD_2026-10-02.md`. Status REVIEW_PENDING for Codex; local commit only, not pushed; stored timestamps, schema, DSN and F05/F06 untouched; no real provider/channel call or governance claim.

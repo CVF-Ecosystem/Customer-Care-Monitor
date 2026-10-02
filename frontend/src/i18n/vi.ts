@@ -360,6 +360,7 @@ export default {
   results_export_too_large: 'Quá {limit} dòng nên không xuất được. Thu hẹp bộ lọc rồi thử lại.',
   verdict_skip: 'Bỏ qua',
   today: 'Hôm nay',
+  vn_date_note: 'Ngày theo giờ Việt Nam (UTC+7)',
   from_date: 'Từ ngày',
   to_date: 'Đến ngày',
   reset: 'Đặt lại',

@@ -44,6 +44,7 @@
         class="cl-filter"
         @update:model-value="onFilter"
       />
+      <span class="text-caption text-medium-emphasis" data-testid="vn-date-note">{{ $t('vn_date_note') }}</span>
     </div>
 
     <div v-if="loadError" class="cl-error" role="alert" data-testid="cl-load-error">

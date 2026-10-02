@@ -56,14 +56,16 @@
     "tenant_timezone_settings_activation"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_026.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "8f366ebd3ed2df3a1302a0635844d9a5f5d0d1a9",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
   ]
 }

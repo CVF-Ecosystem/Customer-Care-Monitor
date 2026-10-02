@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-026 F04 is DISPATCH_READY under committed seed 8f366eb. Claude rehydrates continuity and acknowledges IMPLEMENTATION_WORKER before one bounded BUILD for VN business-day UI/API/DB read filters and exports, driver-storage compatibility and deterministic disposable-MySQL/UI evidence; returns one local REVIEW_PENDING commit for independent Codex review. R025 F03 remains REVIEW_PASS / FREEZE_OPEN. F05/F06 and F02 live/message claims remain separate and OPEN; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, persistent DB, timestamp/DSN migration, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-026 F04 BUILD is REVIEW_PENDING. Codex independently reviews the exact local BUILD commit (Vietnam date-only contract with exclusive next-midnight bounds, Dashboard today/month/series aggregates bucketed on VN days without DATE() on stored wall times, Results/list/export, Cost Logs and message export on one parser, frontend browser-zone-independent presets, UTC/VN driver-location matrix, old-source and mutation evidence, R019 gate). Claude does not self-approve. F05/F06 stay separate and OPEN; F02 live/message limits stay OPEN; PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, provider/channel call, parent-CVF work or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER and COMMIT_STEWARD (Claude) next; independent REVIEWER (Codex)",
+  "activeRole": "COMMIT_STEWARD (Claude) -> REVIEWER (Codex) next",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-02"
 }

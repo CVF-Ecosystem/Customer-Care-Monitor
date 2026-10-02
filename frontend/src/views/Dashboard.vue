@@ -53,6 +53,7 @@
       <!-- Desktop: inline with chips -->
       <v-text-field v-model="dateFrom" type="date" density="compact" hide-details style="max-width: 160px" class="d-none d-md-block" @change="loadDashboard" />
       <v-text-field v-model="dateTo" type="date" density="compact" hide-details style="max-width: 160px" class="d-none d-md-block" @change="loadDashboard" />
+      <span class="text-caption text-medium-emphasis" data-testid="vn-date-note">{{ $t('vn_date_note') }}</span>
     </div>
     <!-- Mobile: separate row -->
     <v-row dense class="mb-4 d-md-none">
@@ -255,6 +256,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import api from '../api'
 import { useI18n } from 'vue-i18n'
 import { formatRelative, type UiLocale } from '../utils/format'
+import { presetRange, type DatePreset } from '../utils/businessDay'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
 
@@ -295,9 +297,10 @@ const channelCounts = ref<any[]>([])
 const totalMessages = computed(() => messagesByDay.value.reduce((sum, d) => sum + (d.count || 0), 0))
 
 // Date filter + presets
-const now = new Date()
-const dateFrom = ref(formatDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() - 28)))
-const dateTo = ref(formatDate(now))
+// CCMAI-RUNTIME-026: dates are Vietnam calendar dates (UTC+7), independent of the browser zone.
+const initialRange = presetRange('28days')
+const dateFrom = ref(initialRange.from)
+const dateTo = ref(initialRange.to)
 const datePreset = ref('28days')
 
 const datePresets = [
@@ -309,43 +312,10 @@ const datePresets = [
   { label: 'Năm này', value: 'year' },
 ]
 
-function formatDate(d: Date) {
-  return d.toISOString().split('T')[0]
-}
-
 function applyPreset(preset: string) {
-  const d = new Date()
-  const y = d.getFullYear()
-  const m = d.getMonth()
-  dateTo.value = formatDate(d)
-
-  switch (preset) {
-    case 'today':
-      dateFrom.value = formatDate(new Date(y, m, d.getDate()))
-      break
-    case '7days':
-      dateFrom.value = formatDate(new Date(y, m, d.getDate() - 7))
-      break
-    case '28days':
-      dateFrom.value = formatDate(new Date(y, m, d.getDate() - 28))
-      break
-    case 'week': {
-      const day = d.getDay() || 7
-      dateFrom.value = formatDate(new Date(y, m, d.getDate() - day + 1))
-      break
-    }
-    case 'month':
-      dateFrom.value = formatDate(new Date(y, m, 1))
-      break
-    case 'quarter': {
-      const qm = Math.floor(m / 3) * 3
-      dateFrom.value = formatDate(new Date(y, qm, 1))
-      break
-    }
-    case 'year':
-      dateFrom.value = formatDate(new Date(y, 0, 1))
-      break
-  }
+  const range = presetRange(preset as DatePreset)
+  dateFrom.value = range.from
+  dateTo.value = range.to
   loadDashboard()
 }
 

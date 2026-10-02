@@ -360,6 +360,7 @@ export default {
   results_export_too_large: 'More than {limit} rows, cannot export. Narrow the filters and try again.',
   verdict_skip: 'Skipped',
   today: 'Today',
+  vn_date_note: 'Dates use Vietnam time (UTC+7)',
   from_date: 'From',
   to_date: 'To',
   reset: 'Reset',

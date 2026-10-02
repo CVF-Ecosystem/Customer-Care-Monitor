@@ -329,21 +329,16 @@ func ExportMessages(c *gin.Context) {
 		return
 	}
 
-	fromDate, err := time.Parse("2006-01-02", fromStr)
+	// CCMAI-RUNTIME-026: Vietnam business days; `to` is inclusive publicly and exclusive
+	// (next VN midnight) internally. Invalid input answers 400 before any query or file output.
+	rng, err := parseBusinessRange(fromStr, toStr)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Ngày bắt đầu không hợp lệ"})
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_date_range"})
 		return
 	}
-	toDate, err := time.Parse("2006-01-02", toStr)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Ngày kết thúc không hợp lệ"})
-		return
-	}
-	toDate = toDate.Add(24*time.Hour - time.Second) // include the whole end day
 
 	// Query conversations in date range
-	query := db.DB.Where("conversations.tenant_id = ? AND conversations.last_message_at >= ? AND conversations.last_message_at <= ?",
-		tenantID, fromDate, toDate)
+	query := rng.where(db.DB.Where("conversations.tenant_id = ?", tenantID), "conversations.last_message_at")
 
 	if chID := c.Query("channel_id"); chID != "" {
 		query = query.Where("conversations.channel_id = ?", chID)
