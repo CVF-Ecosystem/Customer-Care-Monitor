@@ -46,6 +46,7 @@
   "phase": "REVIEW",
   "baseCommit": "6983a891b58272eb74e6ae0b793a71a55d1d8f8e",
   "buildCommit": "b31b9749664485e686838b47cc37d7433eb0179d",
+  "repairCommit": "e10330a914017f270038b7fad29d377fbc05fd26",
   "reviewEvidence": [
     "docs/reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md"
   ],
