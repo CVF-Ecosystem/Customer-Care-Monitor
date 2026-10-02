@@ -190,3 +190,71 @@ describe('Job Detail cancel targets the exact run (F06-10)', () => {
     expect(String(apiPost.mock.calls[0][0])).toBe('/tenants/t1/jobs/j1/test-run')
   })
 })
+
+// CCMAI-RUNTIME-028-R1 (F06-R1-03): the pending cancellation settles only on the exact run's
+// observed recognized terminal status, with truthful copy for each outcome.
+describe('Job Detail pending cancel settles only on an observed terminal status (R1)', () => {
+  beforeEach(() => {
+    apiGet.mockReset()
+    apiPost.mockReset()
+    runsFetches = 0
+  })
+  afterEach(() => {
+    mounted.forEach((w) => w.unmount())
+    mounted.length = 0
+    document.body.innerHTML = ''
+    vi.useRealTimers()
+  })
+
+  async function requestCancelThenPoll() {
+    runsNow = [run(A, 'running')]
+    const { w } = await mountView()
+    apiPost.mockResolvedValue({ data: { message: 'job_cancel_requested', run_id: A } })
+    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] })
+    await stopButton(w)!.trigger('click')
+    for (let i = 0; i < 5; i++) await Promise.resolve()
+    return w
+  }
+
+  for (const [status, copy] of [
+    ['cancelled', 'đã dừng theo yêu cầu hủy'],
+    ['success', 'hoàn tất thành công trước khi yêu cầu hủy'],
+    ['partial', 'hoàn tất một phần trước khi yêu cầu hủy'],
+    ['error', 'kết thúc với lỗi trước khi yêu cầu hủy'],
+  ] as const) {
+    it(`an observed ${status} run settles with truthful copy and stops polling`, async () => {
+      await requestCancelThenPoll()
+      runsNow = [run(A, status)]
+      await vi.advanceTimersByTimeAsync(2000)
+      await vi.advanceTimersByTimeAsync(0)
+      expect(notice()).toContain(copy)
+      const after = runsFetches
+      await vi.advanceTimersByTimeAsync(9000)
+      expect(runsFetches).toBe(after)
+    })
+  }
+
+  it('a missing or unknown state stays pending and a later terminal observation settles it', async () => {
+    await requestCancelThenPoll()
+    runsNow = []
+    await vi.advanceTimersByTimeAsync(2000)
+    runsNow = [run(A, 'queued-weird')]
+    await vi.advanceTimersByTimeAsync(3000)
+    expect(notice()).toContain('Đã yêu cầu hủy')
+    const baseline = runsFetches
+    runsNow = [run(A, 'cancelled')]
+    await vi.advanceTimersByTimeAsync(3000)
+    await vi.advanceTimersByTimeAsync(0)
+    expect(runsFetches).toBeGreaterThan(baseline)
+    expect(notice()).toContain('đã dừng theo yêu cầu hủy')
+  })
+
+  it('a newer run reaching a terminal status does not settle the targeted run', async () => {
+    await requestCancelThenPoll()
+    runsNow = [run(B, 'success')] // B exists and is terminal, but A (the target) is not in the list
+    await vi.advanceTimersByTimeAsync(2000)
+    await vi.advanceTimersByTimeAsync(3000)
+    expect(notice()).toContain('Đã yêu cầu hủy')
+    expect(notice()).not.toContain('hoàn tất')
+  })
+})

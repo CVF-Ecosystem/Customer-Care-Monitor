@@ -506,6 +506,13 @@ const loadError = ref(false)
 const cancelling = ref(false)
 // The run whose cancellation was accepted (202 means "requested", not "terminal"); polling follows it.
 const cancelPendingRunId = ref<string | null>(null)
+const TERMINAL_RUN_STATUSES = ['success', 'partial', 'error', 'cancelled']
+function cancelOutcomeNotice(status: string): { type: 'info' | 'warning'; text: string } {
+  if (status === 'cancelled') return { type: 'info', text: 'Lượt chạy đã dừng theo yêu cầu hủy.' }
+  if (status === 'success') return { type: 'info', text: 'Lượt chạy đã hoàn tất thành công trước khi yêu cầu hủy có hiệu lực.' }
+  if (status === 'partial') return { type: 'info', text: 'Lượt chạy đã hoàn tất một phần trước khi yêu cầu hủy có hiệu lực.' }
+  return { type: 'warning', text: 'Lượt chạy đã kết thúc với lỗi trước khi yêu cầu hủy có hiệu lực.' }
+}
 const runNotice = ref<{ type: 'info' | 'warning' | 'error'; text: string } | null>(null)
 function launchErrorNotice(e: unknown): { type: 'warning' | 'error'; text: string } {
   const code = (e as { response?: { data?: { error?: string } } })?.response?.data?.error
@@ -867,19 +874,17 @@ function startPolling() {
   async function tick() {
     try {
       await jobStore.fetchJobRuns(tenantId.value, jobId.value)
-      // With a pending cancellation the poll follows that exact run, not "the newest run".
+      // With a pending cancellation the poll follows that exact run, not "the newest run", and it
+      // settles only when that run is OBSERVED in a recognized terminal status. A missing run, an
+      // empty/unknown status or a newer run never settles it (CCMAI-RUNTIME-028).
       const pendingId = cancelPendingRunId.value
-      const stillRunning = pendingId
-        ? jobStore.jobRuns.some((r) => r.id === pendingId && r.status === 'running')
-        : isJobRunning.value
-      if (!stillRunning) {
+      const observed = pendingId ? jobStore.jobRuns.find((r) => r.id === pendingId) : undefined
+      const settled = pendingId ? !!observed && TERMINAL_RUN_STATUSES.includes(observed.status) : !isJobRunning.value
+      if (settled) {
         await jobStore.fetchAllJobResults(tenantId.value, jobId.value)
         job.value = await jobStore.fetchJob(tenantId.value, jobId.value)
-        if (pendingId) {
-          const finished = jobStore.jobRuns.find((r) => r.id === pendingId)
-          runNotice.value = finished?.status === 'cancelled'
-            ? { type: 'info', text: 'Lượt chạy đã dừng theo yêu cầu hủy.' }
-            : { type: 'info', text: 'Lượt chạy đã kết thúc trước khi hủy kịp có hiệu lực.' }
+        if (pendingId && observed) {
+          runNotice.value = cancelOutcomeNotice(observed.status)
           cancelPendingRunId.value = null
         }
         stopPolling()

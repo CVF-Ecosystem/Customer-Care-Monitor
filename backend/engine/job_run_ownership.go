@@ -49,6 +49,9 @@ var (
 	ErrCancelCheck = errors.New("job_cancel_failed")
 	// ErrJobRunPanic: the worker panicked; details are logged without the panic value.
 	ErrJobRunPanic = errors.New("job_run_panic")
+	// ErrReservationMismatch: the job handed to a reserved run is not the tenant/job the
+	// reservation was admitted for. Nothing runs and the reservation is left untouched.
+	ErrReservationMismatch = errors.New("job_reservation_mismatch")
 )
 
 // jobRunTimeout bounds one owned execution started over HTTP (the worker never uses the short
@@ -339,22 +342,49 @@ func GuardJobMutation(tx *gorm.DB, tenantID, jobID string) error {
 	return nil
 }
 
-// Abort closes a reservation whose worker will never run: the stored row is finalized as error
-// through the checked finalizer (so it does not block admission forever) and the owner released.
-// If the write cannot be recorded the running row stays and keeps blocking admission (fail closed).
-func (r *JobRunReservation) Abort(job models.Job, reason string) error {
+// bound is the identity the reservation was admitted for; every terminal write uses it, never a
+// caller-supplied job.
+func (r *JobRunReservation) bound() models.Job {
+	return models.Job{ID: r.owner.key.jobID, TenantID: r.owner.key.tenantID}
+}
+
+// matches reports whether job is the tenant/job this reservation was admitted for.
+func (r *JobRunReservation) matches(job models.Job) bool {
+	return r != nil && r.owner != nil && job.ID == r.owner.key.jobID && job.TenantID == r.owner.key.tenantID
+}
+
+// closeOwnedRun is the single terminal path for every close that is not the analysis completion
+// (early failure, panic, abort/setup failure). It takes the same owner decision as the normal
+// completion: an accepted cancellation closes the run as cancelled, otherwise the terminal commit
+// wins and later cancellation is refused. The write is the checked, tenant/job/run-scoped finalizer
+// with no checkpoint; if it cannot be recorded cancellation is re-opened and the (still running)
+// row keeps blocking admission. job must be the bound identity.
+func closeOwnedRun(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg string) (string, error) {
+	status, msg := "error", publicMsg
+	if owner.beginTerminal() {
+		status, msg = "cancelled", "Cancelled by user"
+	}
+	finishedAt := analyzerNow()
+	if err := finalizeOrdinaryRun(run, job, status, msg, "{}", finishedAt, nil); err != nil {
+		owner.terminalFailed()
+		return status, fmt.Errorf("close run: %w", err)
+	}
+	run.Status = status
+	run.FinishedAt = &finishedAt
+	run.ErrorMessage = msg
+	return status, nil
+}
+
+// Abort closes a reservation whose worker will never run, on the reservation's own bound identity
+// (the argument is accepted for compatibility and ignored, so an Abort can never mutate another
+// job). The stored row is finalized through the shared terminal path (cancelled when a cancel was
+// accepted, else error) and the owner released. If the write cannot be recorded the running row
+// stays and keeps blocking admission (fail closed).
+func (r *JobRunReservation) Abort(_ models.Job, reason string) error {
 	var err error
 	r.used.Do(func() {
 		defer r.owner.release()
-		err = finalizeAbortedRun(&r.run, job, reason)
+		_, err = closeOwnedRun(r.owner, &r.run, r.bound(), reason)
 	})
 	return err
-}
-
-func finalizeAbortedRun(run *models.JobRun, job models.Job, reason string) error {
-	finishedAt := analyzerNow()
-	if err := finalizeOrdinaryRun(run, job, "error", reason, "{}", finishedAt, nil); err != nil {
-		return fmt.Errorf("abort reservation: %w", err)
-	}
-	return nil
 }

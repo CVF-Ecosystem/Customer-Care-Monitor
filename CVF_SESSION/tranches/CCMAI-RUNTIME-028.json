@@ -51,20 +51,22 @@
     "unrelated_dead_code_cleanup"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_028.md",
-  "status": "CHANGES_REQUIRED",
+  "status": "REVIEW_PENDING",
   "phase": "REVIEW",
   "baseCommit": "6958e281d190935578809bb9900dd95d2a29509e",
   "buildCommit": "419a31ce0e34442a7410ad7ffb81d8586115e856",
   "reviewEvidence": [
     "docs/reviews/CCMAI_RUNTIME_028_F06_INDEPENDENT_REVIEW_2026-10-02.md"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

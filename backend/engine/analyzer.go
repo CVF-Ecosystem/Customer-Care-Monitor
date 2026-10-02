@@ -48,6 +48,11 @@ func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, in
 // explicit mode uses its own candidate query (analyzer_modes.go), and all modes analyze the full
 // local snapshot that was prepared before the provider call and is the one saved with the result.
 func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan runPlan, injectedProvider ai.AIProvider) (retRun *models.JobRun, retErr error) {
+	// The reservation authorizes exactly its own tenant/job: validated before it is consumed and
+	// before any activity, provider resolution, source selection or publication.
+	if !res.matches(job) {
+		return nil, ErrReservationMismatch
+	}
 	consumed := false
 	res.used.Do(func() { consumed = true })
 	if !consumed {
@@ -56,17 +61,21 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	owner := res.owner
 	ctx := owner.ctx
 	run := res.run
+	committed := false    // the terminal state is stored: a later panic must not re-close the run
 	defer owner.release() // runs last: the slot is held until every effect below has finished
 	defer func() {
 		if r := recover(); r != nil {
 			// The panic value is never logged or returned (it may carry SQL/config/credentials).
 			log.Printf("[security] panic in job run %s of job %s", run.ID, job.ID)
-			finishedAt := analyzerNow()
-			if err := finalizeOrdinaryRun(&run, job, "error", "Lượt chạy dừng đột ngột; xem nhật ký máy chủ.", "{}", finishedAt, nil); err != nil {
-				log.Printf("[analyzer] job %s: panic state not recorded; the running row keeps blocking admission", job.ID)
+			if !committed {
+				// the same owner decision and checked finalizer as every other terminal path
+				if _, err := closeOwnedRun(owner, &run, res.bound(), "Lượt chạy dừng đột ngột; xem nhật ký máy chủ."); err != nil {
+					log.Printf("[analyzer] job %s: panic state not recorded; the running row keeps blocking admission", job.ID)
+					finishedAt := analyzerNow()
+					run.Status = "error"
+					run.FinishedAt = &finishedAt
+				}
 			}
-			run.Status = "error"
-			run.FinishedAt = &finishedAt
 			retRun, retErr = &run, ErrJobRunPanic
 		}
 	}()
@@ -90,14 +99,14 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	} else {
 		provider, err = a.getProvider(job)
 		if err != nil {
-			return a.failOwnedRun(&run, job, err.Error(), err)
+			return a.failOwnedRun(owner, &run, job, err.Error(), err)
 		}
 	}
 
 	// Parse input channel IDs
 	var channelIDs []string
 	if err := json.Unmarshal([]byte(job.InputChannelIDs), &channelIDs); err != nil {
-		return a.failOwnedRun(&run, job, "Danh sách kênh đầu vào của job không hợp lệ", err)
+		return a.failOwnedRun(owner, &run, job, "Danh sách kênh đầu vào của job không hợp lệ", err)
 	}
 
 	issuesFound := 0
@@ -115,7 +124,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 		// below, not event timestamps or last_run_at, decides what needs analysis.
 		conversations, err = ordinaryIncrementalCandidates(job, channelIDs)
 		if err != nil {
-			return a.failOwnedRun(&run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
+			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
 		}
 		var prepErrors int
 		prepared, unchangedCount, prepErrors, truncated = prepareOrdinaryIncremental(ctx, job, conversations)
@@ -123,7 +132,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	} else {
 		conversations, err = explicitCandidates(job, channelIDs, plan, now)
 		if err != nil {
-			return a.failOwnedRun(&run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
+			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
 		}
 		var prepErrors int
 		prepared, prepErrors, truncated = prepareExplicit(ctx, conversations)
@@ -340,6 +349,7 @@ complete:
 		return &run, err
 	}
 
+	committed = true
 	run.Status = runStatus
 	run.FinishedAt = &finishedAt
 	run.Summary = string(summaryJSON)
@@ -842,19 +852,20 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 }
 
 // failOwnedRun closes a reserved run that failed before any analysis (provider selection, input
-// parsing, candidate selection) through the checked, tenant/job/run-scoped finalizer. publicMsg is
-// stored and shown; cause is logged only. When the terminal write cannot be recorded the running row
-// stays and keeps blocking admission (fail closed).
-func (a *Analyzer) failOwnedRun(run *models.JobRun, job models.Job, publicMsg string, cause error) (*models.JobRun, error) {
+// parsing, candidate selection) through the shared terminal path (closeOwnedRun): an accepted
+// cancellation wins and the run closes cancelled, otherwise it closes error. publicMsg is stored and
+// shown; cause is logged only. When the terminal write cannot be recorded the running row stays and
+// keeps blocking admission (fail closed).
+func (a *Analyzer) failOwnedRun(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg string, cause error) (*models.JobRun, error) {
 	log.Printf("[analyzer] job %s: run %s failed before analysis: %v", job.ID, run.ID, cause)
-	finishedAt := analyzerNow()
-	if err := finalizeOrdinaryRun(run, job, "error", publicMsg, "{}", finishedAt, nil); err != nil {
+	status, err := closeOwnedRun(owner, run, job, publicMsg)
+	if err != nil {
 		log.Printf("[analyzer] job %s: early failure not recorded: %v", job.ID, err)
 		return run, err
 	}
-	run.Status = "error"
-	run.FinishedAt = &finishedAt
-	run.ErrorMessage = publicMsg
+	if status == "cancelled" {
+		return run, nil // the accepted cancellation, not the failure, is the outcome
+	}
 	return run, errors.New(publicMsg)
 }
 

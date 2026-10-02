@@ -150,6 +150,9 @@ func (a *Analyzer) RunJobWithProvider(ctx context.Context, job models.Job, limit
 // mode is one of "test_run", "unanalyzed", "since_last", "conditional"; an invalid combination
 // closes the reservation through the checked finalizer and returns ErrInvalidRunParameters.
 func (a *Analyzer) RunReserved(res *JobRunReservation, job models.Job, mode string, limit int, dateFrom, dateTo string) (*models.JobRun, error) {
+	if !res.matches(job) {
+		return nil, ErrReservationMismatch // before any effect; the reservation stays usable by its own job
+	}
 	dates, err := pkg.ParseBusinessRange(dateFrom, dateTo)
 	var plan runPlan
 	if err == nil {

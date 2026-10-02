@@ -78,3 +78,37 @@ Command: `powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Pac
 - The MCP `cqa_trigger_job` placeholder is unchanged and not endorsed; channel/demo deletion guards are inherited, not redesigned; F07/F02 live/message proof stays separate.
 - `analyzer_incremental.go` changes are limited to Job→JobRun lock order and "finalize only a running row"; `isOrdinaryIncremental` is still an unreferenced helper (out of scope).
 - Synthetic evidence proves local admission, cancellation, storage and request behavior only, not CVF governing AI.
+
+---
+
+# R028-R1 repair evidence (appended 2026-10-02)
+
+**Role:** REPAIR_WORKER + COMMIT_STEWARD (Claude). **Input:** [independent review](CCMAI_RUNTIME_028_F06_INDEPENDENT_REVIEW_2026-10-02.md) of BUILD `419a31c` (CHANGES_REQUIRED F06-R1-01..03) and the R028-R1 work order. Same authority: seed unchanged, risk R2, no new path class; synthetic barrier providers, disposable MySQL, zero real provider/channel/notification calls, no persistent DB/push/merge/FREEZE. The retained reviewer tests (`analyzer_f06_review_test.go` ×3 and the three mounted cases in `job-run-cancel.spec.ts`) are unchanged and now pass. The role acknowledgment was recorded in the handoff with the repair sync at the end of the repair (not before the first edit); this is disclosed in the handoff.
+
+## Repairs
+
+- **F06-R1-01 (terminal paths):** new `closeOwnedRun` (`job_run_ownership.go`) is the single non-completion terminal path. It takes the same owner decision as normal completion (`beginTerminal`: an accepted cancel closes **cancelled** with no checkpoint, otherwise the terminal commit wins and later cancel is refused), writes through the checked finalizer, and on a failed write re-opens cancellation and leaves the running row blocking admission. `failOwnedRun` (provider selection, input list, candidate selection), the panic recovery and `Abort` (setup failure, invalid run parameters) all use it; bounded messages are kept. A `committed` flag stops a panic *after* the stored terminal state (e.g. inside the notification) from re-closing the run.
+- **F06-R1-02 (binding):** `JobRunReservation.matches` checks the passed job against the reservation's tenant/job before anything else in `RunReserved` and `executeReserved`: a mismatch returns `ErrReservationMismatch` **before consumption, activity, provider resolution, source selection or publication**, and the reservation stays usable by its own job (exactly once). `Abort` and every terminal write use the reservation's bound identity (`bound()`); the job argument of `Abort` is accepted for compatibility and ignored.
+- **F06-R1-03 (UI):** the poll settles a pending cancel only when the exact run id is observed in `success`, `partial`, `error` or `cancelled`; a missing run, empty/unknown status or a newer run leaves it pending and polling; the notice reports the observed outcome (cancelled; completed successfully / partially / with an error before the request took effect).
+
+## New tests
+
+- `analyzer_f06_r1_test.go`: `TestEveryTerminalPathHonorsAnAcceptedCancel` (cancel accepted first, then each of: invalid input list, provider selection failure, invalid run parameters, abort/setup failure, provider panic → run and job `cancelled`, checkpoint sentinel kept, no notification, slot released); `TestEveryTerminalPathWinsOverALateCancel` (terminal decision first → cancel refused with nothing signalled, the same five paths close `error` with bounded messages); `TestPanicAfterCommitKeepsTheStoredTerminalState` (panic in the notification: stored and returned success, checkpoint kept, slot released); `TestFailedTerminalCloseKeepsBlockingAndReopensCancel` (trigger-failed abort: bounded error, row stays running, admission blocked, cancellation re-opened); `TestReservationRunsOnlyItsOwnTenantAndJob` (same-tenant different job, same-tenant occupied job, cross-tenant same id: no provider call/publication/activity/row, the other job's owner and row untouched, the reservation then runs its own job exactly once and a second use is refused); `TestAbortUsesTheBoundIdentity`.
+- `job-run-cancel.spec.ts`: the three reviewer cases (empty list, unknown status, empty status) plus an observed-terminal case per status (copy and polling stops), missing/unknown then later terminal, and a newer terminal run not settling the target (16 tests in the file).
+
+## Pre-repair failures and mutations
+
+- At BUILD `419a31c` the reviewer's probes fail 3/3 (engine) and 3/3 (mounted); with the repair all pass (engine retained probes and the new groups: 20 subtests across the R1 tests, all PASS).
+- Mutations (applied, run, restored byte-for-byte, source rebuilt): early failure/panic/abort ignore an accepted cancel → killed; `Abort` mutates the caller-supplied job → killed; binding checks removed in both `RunReserved` and `executeReserved` → killed; panic path bypasses the shared owner decision → killed; a panic after commit re-closes the run → first attempt did not compile (unused flag), rerun by hand with `_ = committed` → killed (returned state `error` vs stored `success`; the assertion on the returned status was added for this); UI settles on a missing run → killed (2 tests); UI treats any non-running status as terminal → killed (3 tests).
+
+## Gates
+
+- `go build ./...` clean. Whole backend, uncached, disposable MySQL (`go test -json` through the scratch wrapper around `scripts/test-backend.ps1`): **905 pass, 0 fail, 2 optional skips**; `scripts/ci_db_test_gate.py` **PASSED** (five sentinels, **0 DB-unavailable skips**). Containers/networks removed by the script.
+- Frontend: vitest 25 files / **255 tests pass**; `vue-tsc -b --force` clean; production build and docs build OK.
+- **Unexplained earlier failure (disclosed):** the reviewer's first handler-group run failed with truncated output; the isolated replay passed 26/26. I ran the reviewer's exact handler command (`-Run 'Test(Route|AnalysisAgent|JobConfig|TriggerJob|TestRunJob|F06Probe)'`) uncached three times sequentially (82/82 pass each, ~28 s) and once concurrently with a second disposable-DB engine suite (handlers 82/82, engine 66/66): **no recurrence, no cause identified**. These repeats are not counted as proof that the original failure was benign; if it recurs the logs should be kept in full.
+- Race detector: still **not run** (`CGO_ENABLED=0`, no C toolchain, no network); same compensating deterministic-ordering and contention evidence as the BUILD.
+- Docs build PASS (5.61 s), workspace doctor 25/25 PASS, gate unit tests 46/46 PASS, explicit-`--files` preflight over the 14 changed paths **7/7 PASS** including catalog and tranche (not a whole-worktree pass: the untracked `knowledge/_index.json` and Python bytecode directories are excluded and still make the default preflight fail the tranche gate). `docker ps -a` and `docker network ls` show no `ccma-test` resources.
+
+## Residuals
+
+Single-process ownership plus DB admission only; unowned stored running rows block and cannot be cancelled here; cancellation is not durable across a crash; already-issued provider calls can complete; the MCP trigger placeholder and `isOrdinaryIncremental` helper are untouched. Synthetic evidence proves local admission, cancellation, storage and request behavior only, not CVF governing AI.
