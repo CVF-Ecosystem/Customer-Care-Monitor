@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-027 — F05 analyzer modes, limits and Vietnam dates
 
-Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: CHANGES_REQUIRED. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 Authority: [SPEC](../specs/RUNTIME_ANALYZER_MODES_F05_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-027.json`, committed at base `71c7ee761a1147d502d815ff5461e92f1c30bd4c`. Owner assigns Claude implementation and Codex orchestration/independent review. F05 remains OPEN until accepted source/evidence; R025/F03 and R026/F04 retain REVIEW_PASS / FREEZE_OPEN.
 
 ## Entry and role acknowledgment
@@ -27,3 +27,11 @@ Claude is IMPLEMENTATION_WORKER and COMMIT_STEWARD for one local BUILD commit, r
 ## External effects and closure boundary
 
 No real provider/channel calls, notification delivery, secrets, persistent DB, schema/snapshot format, timestamp/DSN changes, tenant timezone activation, scheduler/adapter/workflow change, F06 cancellation registry/ownership, parent-CVF implementation/tests, push/merge/deployment or FREEZE. Alibaba permission persists but this tranche requires and authorizes zero real calls. Synthetic responses prove local deterministic behavior only, not CVF governing AI. F02 live/message limitations, F06/F07 and historical mixed storage remain separate. PR #1 remains draft at older remote head `3e0b37e`; local planning/BUILD checks do not prove newer hosted CI. No tranche closure in this dispatch.
+
+## R027-R1 — consolidated independent-review repair (2026-10-02)
+
+Exact BUILD `a1de36b6720cae4341f5937f6d9100b13bb48366` is CHANGES_REQUIRED / FREEZE_OPEN; [independent findings and acceptance](../reviews/CCMAI_RUNTIME_027_F05_INDEPENDENT_REVIEW_2026-10-02.md) are the repair contract. No source fixes by reviewer. Existing seed, R2, path/artifact classes, prohibited effects and Claude commit ownership remain unchanged; no new seed or broader scope.
+
+Claude rehydrates and acknowledges REPAIR_WORKER / COMMIT_STEWARD in handoff before repair. Fix F05-R1-01 (zero/empty cap, decimal syntax, full validation/conflicts), F05-R1-02 (one-sided dates and promised copy), F05-R1-03 (test-run terminal job status/updated_at without checkpoint), and F05-R1-04 (original missing evidence groups) in one pass. Retain `job_f05_review_test.go`, `analyzer_f05_review_test.go` and mounted one-sided probes; update worker tests that currently encode contradictory admission/test-run behavior against SPEC, not the failing reviewer assertions. Existing dead helper outside allowlist stays untouched. No acceptance-contract amendment is granted to keep the whole test-run job row untouched.
+
+Append R027-R1 evidence to the existing BUILD record with exact commands, old-source/mutation results, scope, counts/failures/skips, full backend/R019/build/frontend/docs gates and disposable cleanup. Update current prose as well as machine phase/status/order/tranche/roadmap coherently to REVIEW_PENDING, including limitations that caused intake drift. Run all intended-path preflight and commit one local repair, return exact SHA/evidence/residuals to independent Codex re-review. Preserve no-push/no-FREEZE boundary; escalation at repair round three without a new root cause follows existing CVF rule.

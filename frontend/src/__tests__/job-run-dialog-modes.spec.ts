@@ -150,6 +150,19 @@ describe('Job run dialog request contract (F05)', () => {
     expect(lastUrl()).toBe('/tenants/t1/jobs/j1/trigger?mode=unanalyzed')
   })
 
+  for (const endpoint of ['from', 'to']) {
+    it(`independent review: permits ${endpoint}-only conditional range`, async () => {
+      const { state } = await mountDialog()
+      state.runMode = 'conditional'
+      await flushPromises()
+      await fill(`run-date-${endpoint}`, '2026-10-02')
+      expect(confirmBtn().disabled, 'SPEC permits an open endpoint').toBe(false)
+      confirmBtn().click()
+      await flushPromises()
+      expect(lastUrl()).toBe(`/tenants/t1/jobs/j1/trigger?mode=conditional&${endpoint}=2026-10-02`)
+    })
+  }
+
   it('blocks invalid input without any request', async () => {
     const { state } = await mountDialog()
     state.runMode = 'since_last'
