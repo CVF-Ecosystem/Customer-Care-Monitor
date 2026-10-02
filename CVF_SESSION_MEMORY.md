@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md", "activeTranche": "CCMAI-RUNTIME-031", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md", "activeTranche": "CCMAI-RUNTIME-031", "parked": true} -->
 
 ## Startup Order
 
@@ -534,3 +534,7 @@ CCMAI-RUNTIME-028 / F06 R028-R1 repair (Claude, 2026-10-02): `closeOwnedRun` is 
 CCMAI-RUNTIME-028 / F06 R028-R2 repair (Claude, 2026-10-02): `failOwnedRun` takes a fixed `earlyFailureClass` instead of the raw cause; the route tests settle on terminal state plus ownership release and join workers; `TestTerminalRunHoldsTheSlotUntilTheTailFinishes` (engine) and `TestRouteTerminalRunHoldsOwnershipUntilTheWorkerExits` (handlers, named-lock trigger barrier) assert 409 during the tail and 202 after exit. Backend 914 pass / 0 fail / 2 optional skips with the R019 gate and no DB-unavailable skips, frontend 255 pass, forced vue-tsc/build/docs PASS, five R2 mutations killed. Independent re-review pending.
 
 CCMAI-RUNTIME-029 / F07 BUILD (Claude, 2026-10-02): `Dashboard.vue` keeps the three service names only (no state), renders an explicit neutral unknown chip per row plus one explanation with a neutral icon; `service_health_unknown` and `service_health_note` are added to vi/en. 13 new mounted tests (groups A..F) fail 13/13 on the old Dashboard and pass on the new one; four mutations (one row healthy again, success heading icon restored, explanation removed, rows tied to request outcome) are killed. Frontend 26 files / 268 tests pass, forced vue-tsc/build/docs PASS; real captures of the disposable app in vi and en at desktop and mobile show the card (zero JS errors, no overflow, no external requests). Independent REVIEW pending.
+
+## End-of-session checkpoint (2026-10-03, Asia/Saigon)
+
+Owner authorized generated-file cleanup and normal GitHub push of the current branch, then pause until tomorrow. R031 REVIEW_PASS / FREEZE_OPEN unchanged. Parked checkpoint is in active state/handoff; rehydrate before resuming. Remaining Zalo-message planning needs separate INTAKE/DESIGN/SPEC/WORK_ORDER; no new BUILD, merge/deploy or FREEZE authorization. Earlier excluded-file preflight failures remain historical evidence.
