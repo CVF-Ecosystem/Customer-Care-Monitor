@@ -1,12 +1,12 @@
 # CCMAI-RUNTIME-032 — F02-F Zalo local message traversal
 
-Status: CHANGES_REQUIRED. Dispatched DISPATCH_READY; issued 2026-10-03 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2. Claude local BUILD complete 2026-10-03.
+Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-03 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2. Current state: Claude BUILD `b31b974` returned, independent review CHANGES_REQUIRED (R032-R1-01..02), Claude R1 repair returned for independent re-review. Planning-era sentences below that describe a prepared order, no agent started or no BUILD/test result are historical.
 
 Authority: [SPEC](../specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md), owner resume and new immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-032.json`. Seed must be committed at record baseCommit before BUILD. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02 stays OPEN.
 
 ## Roles and authorized scope
 
-Claude IMPLEMENTATION_WORKER / COMMIT_STEWARD owns one local BUILD, returns REVIEW_PENDING with exact SHA. Codex owns planning/session/planning commits, then independent REVIEWER; no self-approval or reviewer product/test repair. This prepared order does not start an agent or authorize provider use.
+Claude IMPLEMENTATION_WORKER / COMMIT_STEWARD owns one local BUILD, returns REVIEW_PENDING with exact SHA. Codex owns planning/session/planning commits, then independent REVIEWER; no self-approval or reviewer product/test repair. (Planning-era sentence, historical: at issue this order started no agent.) Provider use is not authorized by this order.
 
 - `backend/channels/zalo_oa.go`: FetchMessages and message-only validators/bounded request/redirect helper. Preserve FetchRecentConversations, shared doRequest/doRequestRaw/refreshToken, HealthCheck, credentials, OAuth and endpoint protocol. Helpers may reuse existing constants/safe error utilities unchanged.
 - `backend/channels/zalo*_test.go`: new message probes and retained regressions; original assertions not weakened.
@@ -31,7 +31,7 @@ Allowed local effects: blocked synthetic HTTP/loopback media fixtures, disposabl
 
 Missing eligible full-history ID, unsafe request, short/malformed nil success, invalid duplicate discarded, wrong mapping/offset/order, unbounded traversal, diagnostic message storage, advanced checkpoint/after-sync on partial, weakened probe or in-scope failed check means CHANGES_REQUIRED/BUILD_BLOCKED. Same-scope repairs continue under existing authority; third same-root round requires REVIEW_COST_ESCALATION_REQUIRED. Boundary changes go to dispatcher; seed unchanged.
 
-Review may accept local Zalo contract only. Actual offset snapshot stability, terminal/provider retention/permissions/string-link mapping, global F02, live provider governance and FREEZE remain separate. This planning checkpoint contains no product edit or BUILD/test result.
+Review may accept local Zalo contract only. Actual offset snapshot stability, terminal/provider retention/permissions/string-link mapping, global F02, live provider governance and FREEZE remain separate. (Planning-era sentence, historical: the issuing checkpoint contained no product edit or BUILD/test result; those now exist in the BUILD record and R1 section.)
 
 ## Independent review return / bounded R032-R1 repair (2026-10-03)
 

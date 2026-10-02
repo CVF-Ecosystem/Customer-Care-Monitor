@@ -448,29 +448,43 @@ func TestZaloMessagesOrderDeduplicateAndConflict(t *testing.T) {
 func TestZaloMessagesRepeatedPageFails(t *testing.T) {
 	pageA := []string{zmMsg("a", 1, 1000, ""), zmMsg("b", 1, 2000, "")}
 	pageB := []string{zmMsg("c", 1, 3000, "")}
-	cases := map[string]func(n int) string{
-		"cycle A-B-A": func(n int) string {
-			return []string{zmPage(false, pageA...), zmPage(false, pageB...), zmPage(false, pageA...)}[n]
-		},
-		"same rows with changed envelope text": func(n int) string {
+	// Each fixture keeps serving valid recurring pages until an outer ceiling (a synthetic
+	// transport failure at request 7, never a slice index), so a missing repeat guard reaches the
+	// ceiling and fails the named assertions below instead of panicking or hanging.
+	const ceiling = 6
+	cases := []struct {
+		name         string
+		body         func(n int) string
+		wantRequests int
+	}{
+		{"cycle A-B-A", func(n int) string {
+			if n%2 == 0 {
+				return zmPage(false, pageA...)
+			}
+			return zmPage(false, pageB...)
+		}, 3},
+		{"same rows with changed envelope text", func(n int) string {
 			if n == 0 {
 				return `{"error":0,"message":"first","data":[` + strings.Join(pageA, ",") + `]}`
 			}
 			return `{"error":0,"message":"second","extra":42,"data":{"total":7,"data":[` + strings.Join(pageA, ",") + `]}}`
-		},
+		}, 2},
 	}
-	for name, body := range cases {
-		body := body
-		t.Run(name, func(t *testing.T) {
+	for _, c := range cases {
+		c := c
+		t.Run(c.name, func(t *testing.T) {
 			s := &zmTransport{handler: func(n int, q zmReq, r *http.Request) (*http.Response, error) {
-				if n > 5 {
-					return nil, errors.New("traversal did not stop")
+				if n >= ceiling {
+					return nil, errors.New("synthetic ceiling: the repeat guard did not stop the traversal")
 				}
-				return zmReply(200, body(n))
+				return zmReply(200, c.body(n))
 			}}
 			_, err := zmFetch(t, s, "u-1")
 			if !errors.Is(err, ErrZaloMessageCoverageIncomplete) || !strings.Contains(err.Error(), "repeats an earlier page") {
-				t.Fatalf("err %v", err)
+				t.Fatalf("want the repeated-page failure, got %v", err)
+			}
+			if n := len(s.requests()); n != c.wantRequests {
+				t.Fatalf("%d requests, want %d: the traversal must stop at the first repeated page", n, c.wantRequests)
 			}
 		})
 	}
