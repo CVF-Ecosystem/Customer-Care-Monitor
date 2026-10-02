@@ -19,7 +19,7 @@ Status: ACTIVE
 
 See [BUILD record](../../docs/reviews/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_BUILD_2026-10-02.md). Changed set: `backend/channels/facebook.go`, `backend/channels/facebook_messages_test.go`, `backend/engine/sync_facebook_messages_test.go`, `backend/engine/sync_facebook_coverage_test.go`, the BUILD record and continuity/status/SPEC/order/roadmap records. Worker-reported: channels 77 PASS lines/0 FAIL; original adapter fails 14 retained channel tests; mutations M1-M8 killed (M1 first run INCONCLUSIVE from a harness Access-denied after I killed a hung test process, rerun killed); disposable-MySQL engine tests F02E-07/08 pass; full backend run: every package ok except engine hit Go default 10 min timeout, engine rerun in two disjoint halves (209 tests) both ok, 0 FAIL/0 SKIP; build/vet PASS; race NOT RUN (CGO disabled/no C compiler); Docker residue none. Not proven: Messenger endpoint compatibility, live behaviour, global F02, provider/governance.
 
-BUILD SHA: PENDING_LOCAL_COMMIT
+BUILD SHA: 8ed6d0b39195ade513906571daaaf537ddeb90a9
 
 ## Planning acknowledgment and phase trace
 

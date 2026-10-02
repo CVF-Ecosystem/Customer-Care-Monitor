@@ -44,7 +44,7 @@
   "status": "REVIEW_PENDING",
   "phase": "REVIEW",
   "baseCommit": "61eda32442b6049e0ed37a00f6664c7fe880da94",
-  "buildCommit": null,
+  "buildCommit": "8ed6d0b39195ade513906571daaaf537ddeb90a9",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
