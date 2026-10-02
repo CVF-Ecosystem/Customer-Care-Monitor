@@ -25,7 +25,7 @@ var errInvalidDateRange = errors.New("invalid_date_range")
 // DATETIME holds 1000-01-01 .. 9999-12-31; both bounds must be representable.
 var (
 	businessDateMin = time.Date(1000, 1, 1, 0, 0, 0, 0, time.UTC)
-	businessDateMax = time.Date(9999, 12, 30, 0, 0, 0, 0, time.UTC) // inclusive `to`; +1 day stays <= 9999-12-31
+	businessDateMax = time.Date(9999, 12, 31, 0, 0, 0, 0, time.UTC)
 )
 
 // businessClock is the single request clock; tests replace it through a private seam.
@@ -70,10 +70,21 @@ func parseBusinessRange(fromStr, toStr string) (businessRange, error) {
 		return businessRange{}, err
 	}
 	if hasFrom {
+		// Calendar year 1000 is not enough: its VN midnight can serialize
+		// as year 0999 on the supported UTC connection. Validate the actual
+		// instant against the common UTC/VN storage range before any query.
+		if from.UTC().Before(businessDateMin) {
+			return businessRange{}, errInvalidDateRange
+		}
 		r.From = &from
 	}
 	if hasTo {
 		next := to.AddDate(0, 0, 1)
+		// Only a supplied inclusive `to` needs the next midnight; a
+		// from-only final calendar day remains representable and open.
+		if next.Year() > businessDateMax.Year() {
+			return businessRange{}, errInvalidDateRange
+		}
 		r.ToExclusive = &next
 	}
 	// to < from (as calendar dates) means the exclusive bound is not after the start; an equal

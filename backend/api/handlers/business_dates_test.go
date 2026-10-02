@@ -32,6 +32,57 @@ var (
 
 const bizDay = "2026-10-02"
 
+// Reviewer regression: a valid calendar label can still yield a typed lower
+// bound outside DATETIME under the supported UTC driver location.
+func TestBusinessReviewRejectsUnrepresentableUTCStart(t *testing.T) {
+	for _, to := range []string{"", "1000-01-01", "1000-01-02"} {
+		r, err := parseBusinessRange("1000-01-01", to)
+		if err != errInvalidDateRange {
+			t.Errorf("from=1000-01-01 to=%q admitted lower bound %v: error=%v", to, r.From, err)
+		}
+	}
+	// Adjacent-day and to-only requests have representable actual bounds.
+	for _, pair := range [][2]string{{"1000-01-02", "1000-01-02"}, {"", "1000-01-01"}} {
+		r, err := parseBusinessRange(pair[0], pair[1])
+		if err != nil {
+			t.Fatalf("representable bounds rejected: %v: %v", pair, err)
+		}
+		for _, bound := range []*time.Time{r.From, r.ToExclusive} {
+			if bound != nil && bound.UTC().Before(businessDateMin) {
+				t.Fatalf("out-of-range UTC bound: %v", bound.UTC())
+			}
+		}
+	}
+}
+
+func TestBusinessReviewInvalidStartReturns400BeforeQueries(t *testing.T) {
+	// This test needs no database; all paths must reject before reading one.
+	for name, handler := range map[string]gin.HandlerFunc{
+		"dashboard": GetDashboard, "results": ListResults,
+		"results_export": ExportResults, "cost_logs": ListCostLogs,
+		"messages_export": ExportMessages,
+	} {
+		t.Run(name, func(t *testing.T) {
+			rec := bizGet(handler, "unused", "/", "from=1000-01-01&to=1000-01-02&format=csv")
+			if rec.Code != http.StatusBadRequest || rec.Body.String() != `{"error":"invalid_date_range"}` {
+				t.Fatalf("status=%d body=%s", rec.Code, rec.Body.String())
+			}
+		})
+	}
+}
+
+func TestBusinessReviewValidatesOnlySuppliedUpperBoundary(t *testing.T) {
+	r, err := parseBusinessRange("9999-12-31", "")
+	if err != nil || r.From == nil || r.ToExclusive != nil {
+		t.Fatalf("representable from-only final day rejected: range=%+v error=%v", r, err)
+	}
+	// An inclusive to on the same final day needs an unrepresentable next
+	// midnight on the VN storage connection and must still be rejected.
+	if _, err := parseBusinessRange("", "9999-12-31"); err != errInvalidDateRange {
+		t.Fatalf("unrepresentable exclusive upper bound accepted: %v", err)
+	}
+}
+
 var bizStorageLocations = []string{"UTC", "Asia/Ho_Chi_Minh"}
 
 var bizLocRe = regexp.MustCompile(`loc=[^&]*`)
@@ -174,7 +225,7 @@ func TestParseBusinessRangeRejectsBadInput(t *testing.T) {
 		{"", "2026-10-32"}, {"", "xx"}, {"2026-10-02T00:00:00Z", ""},
 		{"2026-10-03", "2026-10-02"},           // reversed
 		{"0999-12-31", ""}, {"", "0999-12-31"}, // before the DATETIME range
-		{"", "9999-12-31"}, {"9999-12-31", ""}, // +1 day would leave the DATETIME range
+		{"", "9999-12-31"}, // only a supplied inclusive `to` needs the next midnight
 	}
 	for _, c := range bad {
 		if _, err := parseBusinessRange(c.from, c.to); err != errInvalidDateRange {
@@ -182,7 +233,7 @@ func TestParseBusinessRangeRejectsBadInput(t *testing.T) {
 		}
 	}
 	good := []struct{ from, to string }{
-		{"1000-01-01", ""}, {"", "9999-12-30"}, {bizDay, bizDay}, {"2026-10-02", "2026-10-03"},
+		{"1000-01-02", ""}, {"9999-12-31", ""}, {"", "9999-12-30"}, {bizDay, bizDay}, {"2026-10-02", "2026-10-03"},
 	}
 	for _, c := range good {
 		if _, err := parseBusinessRange(c.from, c.to); err != nil {

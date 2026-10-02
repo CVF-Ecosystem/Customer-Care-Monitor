@@ -1,7 +1,7 @@
 # CCMAI-RUNTIME-026 — F04 business-day read/filter consistency
 
-Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base `8f366ebd3ed2df3a1302a0635844d9a5f5d0d1a9`.
-Authority: [SPEC](../specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-026.json`. R025/F03 REVIEW_PASS / FREEZE_OPEN at `9ecc839`; F04 implementation remains OPEN.
+Status: REVIEW_PASS. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2. Dispatcher seed/base `8f366ebd3ed2df3a1302a0635844d9a5f5d0d1a9`.
+Authority: [SPEC](../specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), `CVF_SESSION/authority/CCMAI-RUNTIME-026.json`. R025/F03 REVIEW_PASS / FREEZE_OPEN at `9ecc839`; R026 read/report implementation is REVIEW_PASS / FREEZE_OPEN; see independent disposition below.
 
 ## Roles and startup
 
@@ -23,3 +23,7 @@ Implement the SPEC's VN date-only contract with exclusive next-midnight bounds a
 ## Effects and claims
 
 No real provider/channel/notification delivery, persistent DB or parent-CVF implementation/tests. Owner Alibaba authorization remains recorded, but R026 grants zero real calls. Fixtures/UI doubles assert calendar/report semantics only. PR #1 remains draft at the older remote head `3e0b37e`; its historical F08/GOV evidence does not prove this local BUILD. F02 live/message coverage, F05 analyzer date/mode semantics and F06 ownership remain separate and OPEN. A successful R026 review covers the stated read/report contract, not migration of arbitrary legacy timestamps or all application writers.
+
+## Independent disposition — 2026-10-02
+
+REVIEW_PASS / FREEZE_OPEN for BUILD `41b6c5006e474e282875af712ac5283cce35d6e8` plus bounded reviewer actual-bound extrema repairs. [Review](../reviews/CCMAI_RUNTIME_026_F04_INDEPENDENT_REVIEW_2026-10-02.md) records failed original probes, final source tests and claim limits. Next: F05 planning; no extra repair tranche, push or FREEZE.

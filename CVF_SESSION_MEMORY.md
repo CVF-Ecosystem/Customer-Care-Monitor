@@ -60,7 +60,8 @@ PR after review is recorded; no push, provider call, deployment or FREEZE in
 this planning step. R020 stays parked and F08 public Actions proof is pending.
 
 Current active tranche: `CCMAI-RUNTIME-026` / F04 VN business-day read/filter
-consistency is REVIEW_PENDING after Claude's local BUILD (evidence
+consistency is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `41b6c50` and
+bounded Codex reviewer repairs (evidence
 [BUILD record](docs/reviews/RUNTIME_BUSINESS_DAY_FILTERS_F04_BUILD_2026-10-02.md);
 [SPEC](docs/specs/RUNTIME_BUSINESS_DAY_FILTERS_F04_2026-10-02.md),
 [work order](docs/work_orders/CCMAI_RUNTIME_026.md), seed `8f366eb`). Dashboard,
@@ -68,8 +69,11 @@ Results list/export, Cost Logs and message export now parse date-only Vietnam
 dates once, use exclusive next-midnight bounds with typed instants (driver
 location stays authoritative), bucket the Dashboard series by VN day without
 DATE() on stored wall times, and the frontend presets are Vietnam calendar dates
-independent of the browser zone. Codex independent REVIEW is next; F04 stays
-OPEN until then, and F05/F06 and F02 live/message limits remain separate.
+independent of the browser zone. [Independent review](docs/reviews/CCMAI_RUNTIME_026_F04_INDEPENDENT_REVIEW_2026-10-02.md)
+accepts the read/report contract after actual-bound extrema repairs. Final focused
+MySQL tests 26/26 and frontend 214/214 pass; next is bounded F05 planning.
+Mixed historical storage/tenant timezone activation, F05/F06 and F02 live/message
+limits remain separate; FREEZE stays OPEN.
 
 Previous tranche: `CCMAI-RUNTIME-025` / F03 analyzer incremental coverage
 is REVIEW_PASS / FREEZE_OPEN after Claude BUILD `b53f564` and bounded Codex
