@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-032 — F02-F Zalo local message traversal
 
-Status: DISPATCH_READY. Issued 2026-10-03 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2. BUILD not started.
+Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-03 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2. Claude local BUILD complete 2026-10-03.
 
 Authority: [SPEC](../specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md), owner resume and new immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-032.json`. Seed must be committed at record baseCommit before BUILD. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02 stays OPEN.
 

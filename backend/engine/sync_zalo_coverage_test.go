@@ -47,6 +47,16 @@ type zlFake struct {
 	refreshReqs int
 	otherHosts  []string
 	onMessage   func()
+
+	// CCMAI-RUNTIME-032 (F02-F) message traversal fixtures. msgRows overrides the default
+	// single-message history of a conversation (rows are served by physical offset, then an
+	// explicit empty page). msgFail answers a message request with a failure instead; msgExpire
+	// ("user@offset") answers -216 once for that request. msgLog records "user@offset".
+	msgRows    map[string][]string
+	msgFail    func(user string, offset int) (code int, body string, err error)
+	msgExpire  string
+	msgExpired bool
+	msgLog     []string
 }
 
 func (g *zlFake) RoundTrip(r *http.Request) (*http.Response, error) {
@@ -108,18 +118,44 @@ func (g *zlFake) RoundTrip(r *http.Request) (*http.Response, error) {
 		return reply(200, `{"error":0,"message":"Success","data":[`+strings.Join(rows, ",")+`]}`)
 	case "/v2.0/oa/conversation":
 		g.msgReqs++
+		g.msgLog = append(g.msgLog, fmt.Sprintf("%s@%d", p.UserID, p.Offset))
 		hook := g.onMessage
+		fail := g.msgFail
 		var ms int64
 		for _, c := range g.convs {
 			if c.id == p.UserID {
 				ms = c.ms
 			}
 		}
+		if g.msgExpire == fmt.Sprintf("%s@%d", p.UserID, p.Offset) && !g.msgExpired {
+			g.msgExpired = true
+			g.validToken = "" // the current token stops working until refreshed
+			g.mu.Unlock()
+			return reply(200, `{"error":-216,"message":"Access token is invalid"}`)
+		}
+		// By default a conversation has one message at offset 0 and nothing after it; a custom
+		// history is served by physical offset with an explicit empty page past its end.
+		rows, custom := g.msgRows[p.UserID]
+		if !custom {
+			rows = []string{fmt.Sprintf(`{"message_id":"m_%s","src":1,"time":%d,"type":"text","message":"hello","from_display_name":"Khach"}`, p.UserID, ms)}
+		}
 		g.mu.Unlock()
 		if hook != nil {
 			hook()
 		}
-		return reply(200, fmt.Sprintf(`{"error":0,"data":[{"message_id":"m_%s","src":1,"time":%d,"type":"text","message":"hello","from_display_name":"Khach"}]}`, p.UserID, ms))
+		if fail != nil {
+			if code, body, err := fail(p.UserID, p.Offset); code != 0 || err != nil {
+				if err != nil {
+					return nil, err
+				}
+				return reply(code, body)
+			}
+		}
+		var page []string
+		for i := p.Offset; i < p.Offset+p.Count && i < len(rows); i++ {
+			page = append(page, rows[i])
+		}
+		return reply(200, `{"error":0,"message":"Success","data":[`+strings.Join(page, ",")+`]}`)
 	}
 	g.mu.Unlock()
 	return reply(404, "unscripted synthetic zalo path")
@@ -199,7 +235,8 @@ func TestZaloSyncStoresEveryConversationBeyondTheOldLimit(t *testing.T) {
 	if st.Status != "success" || st.LastSyncAt == nil || st.LastSyncAt.Before(before) || st.LastSyncAt.After(after) {
 		t.Fatalf("status %q checkpoint %v, want success within the run", st.Status, st.LastSyncAt)
 	}
-	if g.listReqs != 12 || g.msgReqs != 105 || g.refreshReqs != 0 || len(g.otherHosts) != 0 {
+	// Each of the 105 conversations costs its one-row message page plus the explicit empty page.
+	if g.listReqs != 12 || g.msgReqs != 210 || g.refreshReqs != 0 || len(g.otherHosts) != 0 {
 		t.Fatalf("traffic: %d list pages, %d message fetches, %d refreshes, other hosts %v", g.listReqs, g.msgReqs, g.refreshReqs, g.otherHosts)
 	}
 	if f.triggerCount() != 1 {

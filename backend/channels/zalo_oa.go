@@ -3,6 +3,7 @@ package channels
 import (
 	"bytes"
 	"context"
+	"crypto/sha256"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -11,6 +12,7 @@ import (
 	"net/http"
 	"net/url"
 	"path"
+	"sort"
 	"strings"
 	"sync"
 	"time"
@@ -31,6 +33,17 @@ const (
 	// zaloMaxUnixMilli is 9999-12-31T23:59:59.999Z, the last time the calendar accepts.
 	zaloMaxUnixMilli = 253402300799999
 )
+
+// zaloMessagePageSize is the conversation count (Zalo's documented maximum is 10).
+const zaloMessagePageSize = 10
+
+// zaloMaxMessagePages bounds one message traversal, counting the terminal empty page. Reaching it
+// is incomplete coverage, never a truncated success (CCMAI-RUNTIME-032).
+const zaloMaxMessagePages = 500
+
+// ErrZaloMessageCoverageIncomplete marks a message traversal that did not reach an explicit empty
+// page or could not trust a page. Rows returned with it are diagnostic only.
+var ErrZaloMessageCoverageIncomplete = errors.New("zalo message coverage incomplete")
 
 // ErrZaloCoverageIncomplete marks a conversation enumeration that did not reach an explicit
 // empty page or could not trust a page. Rows returned with it are diagnostic only.
@@ -428,120 +441,299 @@ func (z *ZaloOAAdapter) FetchRecentConversations(ctx context.Context, since time
 	}
 }
 
-func (z *ZaloOAAdapter) FetchMessages(ctx context.Context, conversationID string, since time.Time) ([]SyncedMessage, error) {
-	var messages []SyncedMessage
-	offset := 0
-	pageSize := 10
-
-	for {
-		result, err := z.doRequest(ctx, "GET", zaloAPIBaseV2+"/conversation", map[string]interface{}{
-			"user_id": conversationID,
-			"offset":  offset,
-			"count":   pageSize,
-		})
-		if err != nil {
-			return messages, err
-		}
-
-		data := extractZaloDataArray(result)
-		if len(data) == 0 {
-			break
-		}
-
-		for _, item := range data {
-			msg, ok := item.(map[string]interface{})
-			if !ok {
-				continue
-			}
-
-			var sentAt time.Time
-			if ts, ok := msg["time"].(float64); ok {
-				sentAt = time.UnixMilli(int64(ts))
-			}
-
-			// Don't filter by since — let DB dedup handle duplicates
-
-			msgID := fmt.Sprintf("%v", msg["message_id"])
-			content, _ := msg["message"].(string)
-			senderType := "customer"
-			senderName := ""
-
-			if src, ok := msg["src"].(float64); ok && src == 0 {
-				senderType = "agent"
-				senderName = "OA"
-			}
-			if from, ok := msg["from_display_name"].(string); ok && senderType == "customer" {
-				senderName = from
-			}
-
-			syncedMsg := SyncedMessage{
-				ExternalID:  msgID,
-				SenderType:  senderType,
-				SenderName:  senderName,
-				Content:     content,
-				ContentType: "text",
-				SentAt:      sentAt,
-				RawData:     msg,
-			}
-
-			// Check for attachments (image, file, sticker, gif, etc.)
-			if msgType, ok := msg["type"].(string); ok && msgType != "text" {
-				syncedMsg.ContentType = msgType
-
-				// Extract attachment URL from Zalo message
-				aURL := ""
-				aName := ""
-				if u, ok := msg["url"].(string); ok && u != "" {
-					aURL = u
-				} else if u, ok := msg["thumb"].(string); ok && u != "" {
-					aURL = u
-				}
-				// For file type: check links array
-				if links, ok := msg["links"].([]interface{}); ok && len(links) > 0 {
-					if link, ok := links[0].(map[string]interface{}); ok {
-						if u, ok := link["url"].(string); ok {
-							aURL = u
-						}
-						if n, ok := link["name"].(string); ok {
-							aName = n
-						}
-					}
-				}
-				if aURL != "" {
-					if aName == "" {
-						aName = fmt.Sprintf("%s-%s", msgType, msgID)
-					}
-					syncedMsg.Attachments = append(syncedMsg.Attachments, Attachment{
-						Type: msgType,
-						URL:  aURL,
-						Name: aName,
-					})
-				}
-			}
-
-			messages = append(messages, syncedMsg)
-		}
-
-		if len(data) < pageSize {
-			break
-		}
-		offset += pageSize
-	}
-
-	return messages, nil
+// zaloMessageRow is one validated conversation row with its mapped message. key is the canonical
+// encoding of the raw row, used to tell an exact repeat from a conflicting row with the same ID.
+type zaloMessageRow struct {
+	id  string
+	key string
+	msg SyncedMessage
 }
 
-// extractZaloDataArray handles both {"data": [...]} and {"data": {"data": [...]}}
-func extractZaloDataArray(result map[string]interface{}) []interface{} {
-	if arr, ok := result["data"].([]interface{}); ok {
-		return arr
+// zaloOptionalString reads a consumed string field that may be absent. A present value of any
+// other type, including null, makes the row invalid.
+func zaloOptionalString(m map[string]interface{}, key string) (value string, ok bool) {
+	v, present := m[key]
+	if !present {
+		return "", true
 	}
-	if nested, ok := result["data"].(map[string]interface{}); ok {
-		if arr, ok := nested["data"].([]interface{}); ok {
-			return arr
+	s, isString := v.(string)
+	return s, isString
+}
+
+func zaloMessageInvalid(what string) error {
+	return fmt.Errorf("%w: %s", ErrZaloMessageCoverageIncomplete, what)
+}
+
+// parseZaloMessagePage validates one conversation page: a JSON object with a numeric error 0, an
+// explicit array as data or data.data, and every physical row an object with a nonblank string
+// message_id, src 0 or 1 and a positive integral millisecond time. Numbers stay exact (UseNumber).
+// Every row is validated and mapped before any deduplication.
+func parseZaloMessagePage(body []byte) ([]zaloMessageRow, error) {
+	dec := json.NewDecoder(bytes.NewReader(body))
+	dec.UseNumber()
+	var env map[string]interface{}
+	if err := dec.Decode(&env); err != nil || env == nil {
+		return nil, zaloMessageInvalid("page is not a JSON object")
+	}
+	if code, ok := zaloInt64(env["error"]); !ok || code != 0 {
+		return nil, zaloMessageInvalid("page has no successful error code")
+	}
+	var items []interface{}
+	switch data := env["data"].(type) {
+	case []interface{}:
+		items = data
+	case map[string]interface{}:
+		arr, ok := data["data"].([]interface{})
+		if !ok {
+			return nil, zaloMessageInvalid("page has no data array")
 		}
+		items = arr
+	default:
+		return nil, zaloMessageInvalid("page has no data array")
 	}
-	return nil
+
+	rows := make([]zaloMessageRow, 0, len(items))
+	for _, item := range items {
+		raw, ok := item.(map[string]interface{})
+		if !ok {
+			return nil, zaloMessageInvalid("page has a malformed row")
+		}
+		id, ok := raw["message_id"].(string)
+		if !ok || strings.TrimSpace(id) == "" {
+			return nil, zaloMessageInvalid("row has no message id")
+		}
+		src, ok := zaloInt64(raw["src"])
+		if !ok || (src != 0 && src != 1) {
+			return nil, zaloMessageInvalid("row has an invalid src")
+		}
+		millis, ok := zaloInt64(raw["time"])
+		if !ok || millis <= 0 || millis > zaloMaxUnixMilli {
+			return nil, zaloMessageInvalid("row has an invalid time")
+		}
+		content, ok1 := zaloOptionalString(raw, "message")
+		msgType, ok2 := zaloOptionalString(raw, "type")
+		from, ok3 := zaloOptionalString(raw, "from_display_name")
+		topURL, ok4 := zaloOptionalString(raw, "url")
+		thumb, ok5 := zaloOptionalString(raw, "thumb")
+		if !ok1 || !ok2 || !ok3 || !ok4 || !ok5 {
+			return nil, zaloMessageInvalid("row has a mistyped field")
+		}
+		var firstLink map[string]interface{}
+		if v, present := raw["links"]; present {
+			links, ok := v.([]interface{})
+			if !ok {
+				return nil, zaloMessageInvalid("row has a malformed links field")
+			}
+			for i, l := range links {
+				obj, ok := l.(map[string]interface{})
+				if !ok {
+					return nil, zaloMessageInvalid("row has a malformed link")
+				}
+				if i == 0 {
+					firstLink = obj
+				}
+			}
+		}
+		// The first object link overrides the top-level URL and names the attachment, as the
+		// inherited mapping did; a present string value counts even when it is empty.
+		var linkURL, linkName string
+		var linkURLSet, linkNameSet bool
+		if firstLink != nil {
+			okU, okN := true, true
+			if v, present := firstLink["url"]; present {
+				linkURL, okU = v.(string)
+				linkURLSet = okU
+			}
+			if v, present := firstLink["name"]; present {
+				linkName, okN = v.(string)
+				linkNameSet = okN
+			}
+			if !okU || !okN {
+				return nil, zaloMessageInvalid("row has a mistyped link field")
+			}
+		}
+
+		senderType, senderName := "customer", from
+		if src == 0 {
+			senderType, senderName = "agent", "OA"
+		}
+		msg := SyncedMessage{
+			ExternalID:  id,
+			SenderType:  senderType,
+			SenderName:  senderName,
+			Content:     content,
+			ContentType: "text",
+			SentAt:      time.UnixMilli(millis),
+			RawData:     raw,
+		}
+		if msgType != "" && msgType != "text" {
+			msg.ContentType = msgType
+			aURL, aName := "", ""
+			if topURL != "" {
+				aURL = topURL
+			} else if thumb != "" {
+				aURL = thumb
+			}
+			if linkURLSet {
+				aURL = linkURL
+			}
+			if linkNameSet {
+				aName = linkName
+			}
+			if aURL != "" {
+				if aName == "" {
+					aName = fmt.Sprintf("%s-%s", msgType, id)
+				}
+				msg.Attachments = append(msg.Attachments, Attachment{Type: msgType, URL: aURL, Name: aName})
+			}
+		}
+		key, err := json.Marshal(raw)
+		if err != nil {
+			return nil, zaloMessageInvalid("row cannot be encoded")
+		}
+		rows = append(rows, zaloMessageRow{id: id, key: string(key), msg: msg})
+	}
+	if dec.More() {
+		return nil, zaloMessageInvalid("page has trailing data")
+	}
+	return rows, nil
+}
+
+// doMessageRequest is the message-only authenticated GET (CCMAI-RUNTIME-032). It blocks every
+// redirect before a destination is requested, keeps the injected transport and timeout by using a
+// copy of the client, bounds the body, and shows no URL, query, body, provider text or token. As in
+// doRequestRaw, error=-216 refreshes the token at most once and retries the same offset once; the
+// shared refresh path, credentials and OAuth protocol are used unchanged.
+func (z *ZaloOAAdapter) doMessageRequest(ctx context.Context, conversationID string, offset int) ([]byte, error) {
+	for attempt := 0; attempt < 2; attempt++ {
+		req, err := http.NewRequestWithContext(ctx, http.MethodGet, zaloAPIBaseV2+"/conversation", nil)
+		if err != nil {
+			return nil, zaloSafe("create zalo api request failed", err)
+		}
+		params, _ := json.Marshal(map[string]interface{}{
+			"user_id": conversationID,
+			"offset":  offset,
+			"count":   zaloMessagePageSize,
+		})
+		q := req.URL.Query()
+		q.Set("data", string(params))
+		req.URL.RawQuery = q.Encode()
+
+		z.mu.Lock()
+		token := z.creds.AccessToken
+		z.mu.Unlock()
+		req.Header.Set("access_token", token)
+
+		client := *z.client
+		client.CheckRedirect = func(*http.Request, []*http.Request) error { return http.ErrUseLastResponse }
+		resp, err := client.Do(req)
+		if err != nil {
+			return nil, zaloRequestFailure(ctx, "zalo api request", err)
+		}
+		body, err := readZaloBody(resp)
+		if err != nil {
+			return nil, err
+		}
+
+		log.Printf("[zalo] API %s: status=%d len=%d", path.Base(req.URL.Path), resp.StatusCode, len(body))
+
+		if resp.StatusCode < 200 || resp.StatusCode > 299 {
+			return nil, fmt.Errorf("zalo api error: http %d", resp.StatusCode)
+		}
+		code, _, err := zaloEnvelopeError(body)
+		if err != nil {
+			return nil, err
+		}
+		if code == -216 && attempt == 0 {
+			if refreshErr := z.refreshToken(ctx); refreshErr != nil {
+				return nil, fmt.Errorf("token refresh failed: %w", refreshErr)
+			}
+			continue
+		}
+		if code != 0 {
+			return nil, fmt.Errorf("zalo api error %d", code)
+		}
+		return body, nil
+	}
+	return nil, fmt.Errorf("zalo api failed after retry")
+}
+
+// FetchMessages reads a customer's whole message history (CCMAI-RUNTIME-032). Pages of
+// zaloMessagePageSize are requested by absolute row offset; every nonempty page, short or not,
+// advances the offset by its physical row count, and only a successful explicit empty array ends
+// the traversal. Every physical row is validated before deduplication. The result has one message
+// per message_id, sorted ascending by time with ties in first-seen order; an identical repeated
+// row collapses, a conflicting row with the same ID fails. since is deliberately not applied: the
+// analyzer needs full history and the store deduplicates. A repeated page, cancellation, the page
+// budget, a request or page error or a conflicting row returns ErrZaloMessageCoverageIncomplete
+// with the rows seen so far, which are diagnostic only. A nil error means this local contract
+// completed; it does not establish provider ordering, retention, snapshot stability or live
+// compatibility.
+func (z *ZaloOAAdapter) FetchMessages(ctx context.Context, conversationID string, since time.Time) ([]SyncedMessage, error) {
+	var order []string
+	byID := make(map[string]zaloMessageRow)
+	collected := func() []SyncedMessage {
+		out := make([]SyncedMessage, 0, len(order))
+		for _, id := range order {
+			out = append(out, byID[id].msg)
+		}
+		sort.SliceStable(out, func(i, j int) bool { return out[i].SentAt.Before(out[j].SentAt) })
+		return out
+	}
+	if strings.TrimSpace(conversationID) == "" {
+		return nil, zaloMessageInvalid("conversation id is empty")
+	}
+	seenPages := make(map[[sha256.Size]byte]bool)
+	offset := 0
+
+	for page := 0; ; page++ {
+		if page >= zaloMaxMessagePages {
+			return collected(), fmt.Errorf("%w: page budget of %d reached before an empty page", ErrZaloMessageCoverageIncomplete, zaloMaxMessagePages)
+		}
+		if err := ctx.Err(); err != nil {
+			return collected(), fmt.Errorf("%w: %w", ErrZaloMessageCoverageIncomplete, zaloSafe("message traversal cancelled", err))
+		}
+
+		body, err := z.doMessageRequest(ctx, conversationID, offset)
+		if err != nil {
+			return collected(), fmt.Errorf("%w: page %d: %w", ErrZaloMessageCoverageIncomplete, page+1, err)
+		}
+		rows, err := parseZaloMessagePage(body)
+		if err != nil {
+			return collected(), fmt.Errorf("%w (page %d)", err, page+1)
+		}
+		if err := ctx.Err(); err != nil {
+			return collected(), fmt.Errorf("%w: %w", ErrZaloMessageCoverageIncomplete, zaloSafe("message traversal cancelled", err))
+		}
+		if len(rows) == 0 {
+			return collected(), nil
+		}
+
+		// A page whose rows equal an earlier page means the offset is not moving through new
+		// data. Only the canonical rows count: envelope text may change between repeats.
+		h := sha256.New()
+		for _, r := range rows {
+			fmt.Fprintf(h, "%d:%s", len(r.key), r.key)
+		}
+		var fp [sha256.Size]byte
+		copy(fp[:], h.Sum(nil))
+		if seenPages[fp] {
+			return collected(), fmt.Errorf("%w: page %d repeats an earlier page", ErrZaloMessageCoverageIncomplete, page+1)
+		}
+		seenPages[fp] = true
+
+		for _, r := range rows {
+			if existing, ok := byID[r.id]; ok {
+				if existing.key != r.key {
+					return collected(), fmt.Errorf("%w: page %d has conflicting rows for one message id", ErrZaloMessageCoverageIncomplete, page+1)
+				}
+				continue
+			}
+			byID[r.id] = r
+			order = append(order, r.id)
+		}
+		offset += len(rows)
+	}
 }
 
 func (z *ZaloOAAdapter) HealthCheck(ctx context.Context) error {

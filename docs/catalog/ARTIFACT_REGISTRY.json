@@ -254,7 +254,7 @@
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_032.md",
                           "status": "ACTIVE",
-                          "description": "R032 Zalo local message order: DISPATCH_READY / WORK_ORDER; BUILD not started."
+                          "description": "R032 Zalo local message order: REVIEW_PENDING / FREEZE_OPEN; Claude local BUILD complete."
                       }
                   ]
 }
