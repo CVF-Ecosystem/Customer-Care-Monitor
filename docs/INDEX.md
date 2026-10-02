@@ -6,16 +6,19 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - F02 remaining evidence and scoped FREEZE assessment; next bounded planning move.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
-- Current active handoff: F02-D planning, dispatch and review route.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md`
+- Current active handoff: F02-E planning, dispatch and review route.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
 - Shared learning: shell cleanup and MSYS paths; read before disposable-resource cleanup.: `docs/reviews/learnings/feedback_shell_cleanup_and_paths.md`
 - Shared sync coverage learning: conversation, message, storage, live-channel and governance evidence boundaries.: `docs/reviews/learnings/feedback_sync_coverage_evidence_layers.md`
 - Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+- Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
-- Active F02-D Pancake message traversal contract and nine-requirement acceptance matrix.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
-- Active R030 bounded Pancake message BUILD dispatch; independent review required.: `docs/work_orders/CCMAI_RUNTIME_030.md`
+- Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
+- R030 Pancake local message order: REVIEW_PASS / FREEZE_OPEN.: `docs/work_orders/CCMAI_RUNTIME_030.md`
+- Active F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`
+- Active R031 bounded Facebook message BUILD dispatch; independent review required.: `docs/work_orders/CCMAI_RUNTIME_031.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`

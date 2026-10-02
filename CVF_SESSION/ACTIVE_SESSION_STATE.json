@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-030 F02-D is REVIEW_PASS / REVIEW / FREEZE_OPEN for exact BUILD 31daee1d2f736166c4514ec2487d9b94b94727cd. Independent review evidence: docs/reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md. ORCHESTRATOR may assess remaining Facebook/Zalo message contracts and separately bounded live-channel evidence, then prepare a separate INTAKE/DESIGN/SPEC/WORK_ORDER before any new BUILD. R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02, live Pancake offset stability, credentials and provider/governance proof remain OPEN. Scoped FREEZE requires a separate CLOSER decision; no push, merge, deployment, provider/channel/credential action, persistent DB, parent edit or FREEZE authorized.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-031 F02-E is DISPATCH_READY / WORK_ORDER / FREEZE_OPEN. Claude IMPLEMENTATION_WORKER / COMMIT_STEWARD may rehydrate current authority, acknowledge role in active handoff, synchronize BUILD and run scoped preflight before the first source edit; implement only Facebook message traversal/request safety and authorized adapter/engine tests, then return exact local BUILD SHA and F02E-01..09 evidence as REVIEW_PENDING for independent Codex REVIEW. Meta endpoint documentation remains unverified; acceptance is the local safety contract only. R030/R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02/live-channel/credential/provider/governance proof remains OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request product edit, Graph version change, push, merge, deployment, parent edit or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); independent REVIEWER completed",
+  "activeRole": "ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); Claude implementation dispatch ready; Codex independent reviewer pending",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-02"
 }

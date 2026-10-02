@@ -77,9 +77,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: F02-D planning, dispatch and review route."
+                          "description":  "Current active handoff: F02-E planning, dispatch and review route."
                       },
                       {
                           "id":  "truth-implementation-status",
@@ -198,14 +198,14 @@
                           "family":  "continuity",
                           "path":  "docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md",
                           "status":  "ACTIVE",
-                          "description":  "Active F02-D Pancake message traversal contract and nine-requirement acceptance matrix."
+                          "description":  "Reviewed F02-D Pancake local message contract; source and evidence boundaries."
                       },
                       {
                           "id":  "f02d-message-work-order",
                           "family":  "continuity",
                           "path":  "docs/work_orders/CCMAI_RUNTIME_030.md",
                           "status":  "ACTIVE",
-                          "description":  "Active R030 bounded Pancake message BUILD dispatch; independent review required."
+                          "description":  "R030 Pancake local message order: REVIEW_PASS / FREEZE_OPEN."
                       },
                       {
                           "id":  "continuity-pre-f02d-handoff",
@@ -213,6 +213,27 @@
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
                           "status":  "ACTIVE",
                           "description":  "Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only."
+                      },
+                      {
+                          "id":  "f02e-message-spec",
+                          "family":  "continuity",
+                          "path":  "docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md",
+                          "status":  "ACTIVE",
+                          "description":  "Active F02-E Facebook message local safety contract and acceptance matrix."
+                      },
+                      {
+                          "id":  "f02e-message-work-order",
+                          "family":  "continuity",
+                          "path":  "docs/work_orders/CCMAI_RUNTIME_031.md",
+                          "status":  "ACTIVE",
+                          "description":  "Active R031 bounded Facebook message BUILD dispatch; independent review required."
+                      },
+                      {
+                          "id":  "continuity-pre-f02e-handoff",
+                          "family":  "continuity",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
+                          "status":  "ACTIVE",
+                          "description":  "Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only."
                       }
                   ]
 }

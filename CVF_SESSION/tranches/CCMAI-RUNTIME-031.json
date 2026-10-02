@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-031",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/channels/facebook.go",
+    "backend/channels/facebook*_test.go",
+    "backend/engine/sync_facebook*_test.go",
+    "docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md",
+    "docs/work_orders/CCMAI_RUNTIME_031.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "pancake_change",
+    "zalo_change",
+    "engine_source_change",
+    "shared_request_behavior_change",
+    "graph_version_change",
+    "schema_change",
+    "permission_change",
+    "workflow_change",
+    "tooling_change",
+    "dependency_change",
+    "credential_use",
+    "ui_change",
+    "timestamp_migration"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_031.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "61eda32442b6049e0ed37a00f6664c7fe880da94",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}
