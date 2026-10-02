@@ -112,3 +112,44 @@ Command: `powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Pac
 ## Residuals
 
 Single-process ownership plus DB admission only; unowned stored running rows block and cannot be cancelled here; cancellation is not durable across a crash; already-issued provider calls can complete; the MCP trigger placeholder and `isOrdinaryIncremental` helper are untouched. Synthetic evidence proves local admission, cancellation, storage and request behavior only, not CVF governing AI.
+
+---
+
+# R028-R2 repair evidence (appended 2026-10-02)
+
+**Role:** REPAIR_WORKER + COMMIT_STEWARD (Claude). **Input:** [R1 re-review](CCMAI_RUNTIME_028_R1_INDEPENDENT_REREVIEW_2026-10-02.md) of repair `b570351` (F06-R2-01, F06-R2-02) and the R028-R2 work order. This round the repair-role acknowledgment was written into the handoff and the BUILD phase synchronized (preflight 7/7) **before the first R2 source or test edit**; the late R1 acknowledgment stays as disclosed, not backdated. Same authority: seed unchanged, risk R2, no new path class; synthetic providers, disposable MySQL, zero real provider/channel/notification calls, no persistent DB/push/merge/FREEZE. This is repair round two.
+
+## Repairs
+
+- **F06-R2-01 (bounded application log):** `failOwnedRun` no longer receives or prints the underlying cause. It takes a fixed `earlyFailureClass` (`provider_unavailable`, `input_channels_invalid`, `candidate_selection_failed`) and logs only `job <id>: run <id> failed before analysis (class=<class>)`, which keeps job/run correlation. The provider-selection failure now stores a fixed message instead of the raw `getProvider` text (which could carry decrypt/crypto detail). The "not recorded" log prints only the finalizer's fixed sentinel plus the class. Terminal semantics (shared owner decision, checked finalizer, no checkpoint/notification, fail-closed blocking) are unchanged.
+- **F06-R2-02 (route-test synchronization):** the failure was a test defect, not a production one: `waitRun` returned as soon as a stored row was non-running, and the next request was launched while the worker still held ownership through the completion activity/notification/cleanup (F06 intentionally does that). Production admission is unchanged. `waitRun` now requires the run's terminal state **and** `!engine.JobRunActive(...)`; every real-worker route test joins its worker before fixture teardown (`waitIdle` cleanup; the earlier arbitrary 200 ms sleep in `setupOwnership` is replaced by the join).
+
+## New tests
+
+- `analyzer_f06_r2_test.go`: `TestEarlyFailureClassesNeverLogOrStoreTheUnderlyingCause` — five classes (ordinary and explicit candidate selection with an injected synthetic driver detail, invalid input list, provider selection without a key, provider selection with an undecryptable key): the raw cause (injected detail, JSON parser text, the real `pkg.Decrypt` error text, the old settings hint) is absent from the application log, the returned error and the stored message, the correlation line with the fixed class is present, the run is `error` and the slot released. The retained reviewer probe `TestReviewF06EarlyFailureBoundsDriverDetailInAppLogs` passes. `TestTerminalRunHoldsTheSlotUntilTheTailFinishes` — the notification is blocked by a barrier: the run is already stored `success`, a launch is `ErrJobBusy` with no row, ownership is held; after release the worker exits and the next launch is admitted.
+- `job_run_tail_test.go` (handlers): `TestRouteTerminalRunHoldsOwnershipUntilTheWorkerExits` — through the real handlers and worker, a `BEFORE INSERT` trigger on `activity_logs` waits on a named MySQL lock held by the test on a dedicated connection, so the worker blocks in the completion-activity tail after the terminal commit. Observed: the run is `success`, ownership is held, trigger and test-run launches are 409 `job_already_running` with no extra row; after the lock is released the worker exits and the same launch is 202, and the completion activity exists. The only polling is observation of the stored terminal state.
+- The F05 route tests (`job_trigger_modes_route_test.go`, `job_trigger_modes_test.go`) keep every date/cap/repeated-evaluation/checkpoint assertion and now join their worker.
+
+## Mutations (applied, run, restored; source rebuilt and `owner.release()` count verified)
+
+| Mutation | Result |
+|---|---|
+| ordinary candidate-selection failure logs the raw cause | killed |
+| explicit candidate-selection failure logs the raw cause | killed |
+| provider-selection failure stores/logs the raw error text | killed |
+| ownership released right after the terminal commit (engine tail test) | killed |
+| same mutation (handler barrier test) | killed |
+
+## Gates and counts
+
+- `go build ./...` and `go vet ./...` clean. Whole backend, uncached, disposable MySQL (`go test -json` through the scratch wrapper around `scripts/test-backend.ps1`): **914 pass, 0 fail, 2 optional skips**; `scripts/ci_db_test_gate.py` **PASSED** (five sentinels, **0 DB-unavailable skips**).
+- Focused groups (complete logs saved under the session scratchpad: `r2-handlers-1..3.log`, `r2-engine.log`). Reviewer's exact handler command `Test(Route|AnalysisAgent|JobConfig|TriggerJob|TestRunJob|F06Probe)`, three uncached runs: **27 top-level / 56 subtests PASS, 0 FAIL, 0 SKIP each** (~50 s). Engine ownership/R1/R2/F03/F05 group (`Test(Admission|Cancel|Terminal|Publication|StaleOwner|EarlyFailures|ProviderPanic|Timeout|Unresolved|NoLock|Cron|SchedulerOwners|F06|Ordinary|Explicit|EveryTerminal|Reservation|AbortUses|FailedTerminalClose|PanicAfterCommit|ReviewF06|EarlyFailureClasses)`): **56 top-level PASS, 0 FAIL, 0 SKIP**, 170 s.
+- Frontend: vitest 25 files / **255 tests pass**; `vue-tsc -b --force` clean; production build and docs build OK (unchanged this round).
+- `docker ps -a` shows no `ccma-test` resources after the runs. Race detector: still **not run** (`CGO_ENABLED=0`, no C toolchain); same compensating evidence as before.
+- Docs build PASS, workspace doctor 25/25 PASS, gate unit tests 46/46 PASS, explicit-`--files` preflight over the 14 changed paths **7/7 PASS** including catalog and tranche (not a whole-worktree pass: the untracked `knowledge/_index.json` and Python bytecode directories stay excluded and make the default preflight fail the tranche gate). An earlier preflight in this round correctly failed (continuity/tranche) while the continuity sync was half-written (my sync script stopped on a wrong search pattern); it was completed by a second script and re-run to 7/7.
+
+## Limits
+
+- The application-log probes isolate the **application** log sink on the early-failure path; they do not certify inherited GORM/SQL logging sinks, which print their own SQL and errors.
+- The original truncated first handler failure from the first independent review stays historical and unexplained; the later captured failure (F06-R2-02) had a concrete cause and is fixed. Repeat passes here are not offered as proof about the earlier record.
+- Single-process ownership plus DB admission only; unowned stored running rows block and cannot be cancelled here; cancellation is not durable across a crash; already-issued provider calls can complete. Synthetic evidence proves local contracts only, not CVF governing AI.

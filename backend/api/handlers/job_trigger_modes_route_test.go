@@ -102,6 +102,8 @@ func TestTriggerJobRealRouteConditionalDateCapRepeatsEvaluation(t *testing.T) {
 	origAnalyzer := newTriggerAnalyzer
 	newTriggerAnalyzer = func(cfg *config.Config) *engine.Analyzer { return engine.NewAnalyzerWithProvider(cfg, prov) }
 	t.Cleanup(func() { newTriggerAnalyzer = origAnalyzer })
+	// join the worker before any fixture teardown (cleanups run last-in-first-out)
+	t.Cleanup(func() { f.waitIdle(t) })
 
 	exec := func(sql string, args ...interface{}) {
 		if err := db.DB.Exec(sql, args...).Error; err != nil {
@@ -144,7 +146,10 @@ func TestTriggerJobRealRouteConditionalDateCapRepeatsEvaluation(t *testing.T) {
 				q = q.Where("id NOT IN ?", exclude)
 			}
 			err := q.Order("started_at DESC").First(&run).Error
-			if err == nil && run.Status != "running" {
+			// The run is settled only when its terminal state is stored AND the worker has exited
+			// and released ownership (the slot is deliberately held through the completion
+			// activity, notification and cleanup).
+			if err == nil && run.Status != "running" && !engine.JobRunActive(f.tenantID, f.jobID) {
 				return run
 			}
 			if time.Now().After(deadline) {

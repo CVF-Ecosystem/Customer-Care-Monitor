@@ -113,7 +113,9 @@ func setupOwnership(t *testing.T, realLaunchers bool, convs int) *ownFx {
 	exec(`INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, created_at, updated_at) VALUES (?, ?, 'ai_batch_mode', 'false', NOW(), NOW())`, pkg.NewUUID(), base.tenantID)
 	t.Cleanup(func() {
 		fx.prov.release() // never leave a worker parked on the barrier
-		time.Sleep(200 * time.Millisecond)
+		if realLaunchers {
+			fx.waitIdle(t)
+		} // join the real worker (ownership released) before deleting its rows
 		for _, table := range []string{"job_results", "analysis_snapshots", "ai_usage_logs", "messages", "conversations", "app_settings", "channels"} {
 			db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", base.tenantID)
 		}

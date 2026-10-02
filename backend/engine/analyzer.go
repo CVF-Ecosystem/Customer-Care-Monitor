@@ -99,14 +99,14 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	} else {
 		provider, err = a.getProvider(job)
 		if err != nil {
-			return a.failOwnedRun(owner, &run, job, err.Error(), err)
+			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable)
 		}
 	}
 
 	// Parse input channel IDs
 	var channelIDs []string
 	if err := json.Unmarshal([]byte(job.InputChannelIDs), &channelIDs); err != nil {
-		return a.failOwnedRun(owner, &run, job, "Danh sách kênh đầu vào của job không hợp lệ", err)
+		return a.failOwnedRun(owner, &run, job, "Danh sách kênh đầu vào của job không hợp lệ", earlyInputInvalid)
 	}
 
 	issuesFound := 0
@@ -124,7 +124,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 		// below, not event timestamps or last_run_at, decides what needs analysis.
 		conversations, err = ordinaryIncrementalCandidates(job, channelIDs)
 		if err != nil {
-			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
+			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection)
 		}
 		var prepErrors int
 		prepared, unchangedCount, prepErrors, truncated = prepareOrdinaryIncremental(ctx, job, conversations)
@@ -132,7 +132,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	} else {
 		conversations, err = explicitCandidates(job, channelIDs, plan, now)
 		if err != nil {
-			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", err)
+			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection)
 		}
 		var prepErrors int
 		prepared, prepErrors, truncated = prepareExplicit(ctx, conversations)
@@ -851,16 +851,29 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 	return
 }
 
+// earlyFailureClass is the fixed, bounded vocabulary for runs that fail before any analysis. Only
+// the class (never the underlying driver/parser/config/provider error value) reaches the log or the
+// stored message, so arbitrary SQL text, configuration values or credentials cannot leak through
+// this lifecycle path (CCMAI-RUNTIME-028 F06-07).
+type earlyFailureClass string
+
+const (
+	earlyProviderUnavailable earlyFailureClass = "provider_unavailable"
+	earlyInputInvalid        earlyFailureClass = "input_channels_invalid"
+	earlyCandidateSelection  earlyFailureClass = "candidate_selection_failed"
+)
+
 // failOwnedRun closes a reserved run that failed before any analysis (provider selection, input
 // parsing, candidate selection) through the shared terminal path (closeOwnedRun): an accepted
 // cancellation wins and the run closes cancelled, otherwise it closes error. publicMsg is stored and
-// shown; cause is logged only. When the terminal write cannot be recorded the running row stays and
-// keeps blocking admission (fail closed).
-func (a *Analyzer) failOwnedRun(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg string, cause error) (*models.JobRun, error) {
-	log.Printf("[analyzer] job %s: run %s failed before analysis: %v", job.ID, run.ID, cause)
+// shown; the log carries the job id, run id and the fixed class only, which is enough to correlate.
+// When the terminal write cannot be recorded the running row stays and keeps blocking admission
+// (fail closed).
+func (a *Analyzer) failOwnedRun(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg string, class earlyFailureClass) (*models.JobRun, error) {
+	log.Printf("[analyzer] job %s: run %s failed before analysis (class=%s)", job.ID, run.ID, class)
 	status, err := closeOwnedRun(owner, run, job, publicMsg)
 	if err != nil {
-		log.Printf("[analyzer] job %s: early failure not recorded: %v", job.ID, err)
+		log.Printf("[analyzer] job %s: early failure (class=%s) not recorded: %v", job.ID, class, err)
 		return run, err
 	}
 	if status == "cancelled" {

@@ -122,6 +122,7 @@ func TestTriggerJobRealRouteRunsTheRequestedModeWithCap(t *testing.T) {
 	origAnalyzer := newTriggerAnalyzer
 	newTriggerAnalyzer = func(cfg *config.Config) *engine.Analyzer { return engine.NewAnalyzerWithProvider(cfg, passProvider{}) }
 	t.Cleanup(func() { newTriggerAnalyzer = origAnalyzer })
+	t.Cleanup(func() { f.waitIdle(t) }) // join the worker (ownership released) before fixture teardown
 
 	exec := func(sql string, args ...interface{}) {
 		if err := db.DB.Exec(sql, args...).Error; err != nil {
