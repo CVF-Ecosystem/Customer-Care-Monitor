@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-028 F06 R028-R2 is REVIEW_PASS / FREEZE_OPEN after independent Codex re-review of exact repair 8035cb05a2d66778810fb0acb89d208238743cfc. F06-R2-01 bounded early-failure application logging and F06-R2-02 deterministic terminal-tail route synchronization are settled; original/R1 probes retained. Codex ORCHESTRATOR may prepare separate F07 INTAKE/DESIGN/SPEC/WORK_ORDER before any Claude BUILD. R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN. Race detector NOT RUN, inherited GORM/SQL sinks uncertified, original truncated handler failure unexplained, R1 late acknowledgment and R2 partial-sync failure/recovery remain historical; no procedural-compliance claim. Crash recovery, distributed cancellation, MCP trigger placeholder, dead helper cleanup, F02 live/message limits and tenant timezone activation stay separate. A third same-root repair would require REVIEW_COST_ESCALATION_REQUIRED. No push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-029 F07 is DISPATCH_READY / WORK_ORDER under the separately committed immutable R029 seed at 0f442f238cbe68a89b47dc43d99f2ffe3fa8b997. Claude may rehydrate and acknowledge IMPLEMENTATION_WORKER / COMMIT_STEWARD before one bounded frontend-only BUILD replacing fabricated API/Database/Scheduler health with neutral unavailable text, then return one local REVIEW_PENDING commit for independent Codex REVIEW. No health endpoint/probe/polling, backend change, real provider/channel call, persistent DB, push, merge, deployment, parent-CVF work or FREEZE. R028-R2/F06, R027/F05 and R025/R026 retain REVIEW_PASS / FREEZE_OPEN and their historical limitations; F07 remediation remains OPEN. Third same-root repair requires REVIEW_COST_ESCALATION_REQUIRED.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); independent REVIEWER completed",
-  "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
+  "activeRole": "WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); next IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude), independent REVIEWER (Codex)",
+  "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-02"
 }

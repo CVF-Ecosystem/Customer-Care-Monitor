@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-029",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Dashboard.vue",
+    "frontend/src/i18n/vi.ts",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/__tests__/dashboard*.spec.ts",
+    "frontend/src/__tests__/i18n.spec.ts",
+    "docs/specs/RUNTIME_DASHBOARD_SERVICE_STATUS_F07_2026-10-02.md",
+    "docs/work_orders/CCMAI_RUNTIME_029.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "backend_change",
+    "health_endpoint_change",
+    "scheduler_change",
+    "schema_change",
+    "permission_change",
+    "workflow_change",
+    "tooling_change",
+    "health_polling",
+    "unrelated_ui_redesign"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_029.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "0f442f238cbe68a89b47dc43d99f2ffe3fa8b997",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}
