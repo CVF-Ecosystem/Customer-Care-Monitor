@@ -35,6 +35,11 @@ type fbGraph struct {
 	convReqs    int
 	messageReqs int
 	otherHosts  []string
+	// CCMAI-RUNTIME-031: optional per-request message script, the recorded "conversation?after"
+	// request log and the count of message requests whose token was not the configured one.
+	msgFn     func(conv string, r *http.Request) (*http.Response, error)
+	msgLog    []string
+	badTokens int
 }
 
 func (g *fbGraph) RoundTrip(r *http.Request) (*http.Response, error) {
@@ -73,10 +78,22 @@ func (g *fbGraph) RoundTrip(r *http.Request) (*http.Response, error) {
 		}
 		return reply(`{"data":[` + strings.Join(rows, ",") + `]` + next + `}`)
 	case strings.HasSuffix(r.URL.Path, "/messages"):
+		conv := strings.TrimSuffix(strings.TrimPrefix(r.URL.Path, "/v21.0/"), "/messages")
+		after := r.URL.Query().Get("after")
+		if after == "" {
+			after = "-"
+		}
 		g.mu.Lock()
 		g.messageReqs++
+		g.msgLog = append(g.msgLog, conv+"?"+after)
+		if r.URL.Query().Get("access_token") != fbEngToken {
+			g.badTokens++
+		}
+		script := g.msgFn
 		g.mu.Unlock()
-		conv := strings.TrimSuffix(strings.TrimPrefix(r.URL.Path, "/v21.0/"), "/messages")
+		if script != nil {
+			return script(conv, r)
+		}
 		return reply(fmt.Sprintf(`{"data":[{"id":"m_%s","message":"hello %s","from":{"id":"u","name":"Customer"},"created_time":%q}]}`, conv, conv, stamp))
 	}
 	return nil, errors.New("unscripted synthetic graph path " + r.URL.Path)

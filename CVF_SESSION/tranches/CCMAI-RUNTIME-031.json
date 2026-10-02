@@ -41,15 +41,17 @@
     "timestamp_migration"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_031.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "61eda32442b6049e0ed37a00f6664c7fe880da94",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

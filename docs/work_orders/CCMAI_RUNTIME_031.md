@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-031 — F02-E Facebook message-window coverage
 
-Status: DISPATCH_READY. Issued 2026-10-02 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2.
+Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md), [F02 layer assessment](../reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md), immutable dispatcher-owned `CVF_SESSION/authority/CCMAI-RUNTIME-031.json`. Seed exists at baseCommit `61eda32442b6049e0ed37a00f6664c7fe880da94` before BUILD; worker never edits seed. Planning changes no product source. R030/R022 and predecessors REVIEW_PASS / FREEZE_OPEN unchanged; global F02 remains OPEN.
 
