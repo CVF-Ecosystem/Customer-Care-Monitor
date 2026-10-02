@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-029 F07 remains REVIEW_PASS / FREEZE_OPEN. F02/FREEZE assessment recorded at docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md: R022/R023/R024 conversation source contracts remain accepted; message traversal and live-channel completeness remain open. Next ORCHESTRATOR may prepare separate F02-D INTAKE/DESIGN/SPEC/WORK_ORDER for Pancake message-window completeness, with validated endpoint assumptions, synthetic transport/disposable MySQL acceptance and independent reviewer before any BUILD. Facebook/Zalo message contracts and live proof stay separately bounded. Individual local tranches may be assessed by CLOSER against original scope; no blanket FREEZE, pilot/release or runtime CVF governance readiness is established. No provider/channel/credential action, persistent DB, push, merge, deployment, parent edit or FREEZE authorized in this assessment.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-030 F02-D is DISPATCH_READY / WORK_ORDER / FREEZE_OPEN. Claude IMPLEMENTATION_WORKER / COMMIT_STEWARD may rehydrate current authority, record role acknowledgment, synchronize BUILD and run preflight before the first source edit; execute only Pancake message traversal and authorized adapter/engine tests, then return exact local BUILD SHA and F02D-01..09 evidence as REVIEW_PENDING for independent Codex REVIEW. R029 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02/live proof remains OPEN. No real provider/channel/credential action, persistent DB, engine product edit, push, merge, deployment, parent edit or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); independent REVIEWER completed",
+  "activeRole": "ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD (Codex); Claude implementation dispatch ready; Codex independent reviewer pending",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-02"
 }

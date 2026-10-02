@@ -77,9 +77,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
                           "status":  "ACTIVE",
-                          "description":  "Initial agent handoff."
+                          "description":  "Current active handoff: F02-D planning, dispatch and review route."
                       },
                       {
                           "id":  "truth-implementation-status",
@@ -192,6 +192,27 @@
                           "path":  "docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md",
                           "status":  "ACTIVE",
                           "description":  "F02 remaining evidence and scoped FREEZE assessment; next bounded planning move."
+                      },
+                      {
+                          "id":  "f02d-message-spec",
+                          "family":  "continuity",
+                          "path":  "docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md",
+                          "status":  "ACTIVE",
+                          "description":  "Active F02-D Pancake message traversal contract and nine-requirement acceptance matrix."
+                      },
+                      {
+                          "id":  "f02d-message-work-order",
+                          "family":  "continuity",
+                          "path":  "docs/work_orders/CCMAI_RUNTIME_030.md",
+                          "status":  "ACTIVE",
+                          "description":  "Active R030 bounded Pancake message BUILD dispatch; independent review required."
+                      },
+                      {
+                          "id":  "continuity-pre-f02d-handoff",
+                          "family":  "continuity",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
+                          "status":  "ACTIVE",
+                          "description":  "Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only."
                       }
                   ]
 }

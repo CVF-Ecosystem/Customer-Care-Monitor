@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-030",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/channels/pancake.go",
+    "backend/channels/pancake*_test.go",
+    "backend/engine/sync_pancake*_test.go",
+    "docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md",
+    "docs/work_orders/CCMAI_RUNTIME_030.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "push",
+    "merge",
+    "deployment",
+    "provider_call",
+    "channel_call",
+    "freeze",
+    "persistent_db",
+    "secret_commit",
+    "parent_cvf_edit",
+    "facebook_change",
+    "zalo_change",
+    "engine_source_change",
+    "schema_change",
+    "permission_change",
+    "workflow_change",
+    "tooling_change",
+    "dependency_change",
+    "credential_use",
+    "ui_change",
+    "timestamp_migration"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_030.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "cbc7cba3af7d1b5ce77911fbb7e1fa62ff70c39f",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}
