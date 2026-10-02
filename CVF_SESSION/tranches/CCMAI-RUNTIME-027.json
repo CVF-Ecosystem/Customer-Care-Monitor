@@ -46,20 +46,22 @@
     "workflow_change"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_027.md",
-  "status": "CHANGES_REQUIRED",
+  "status": "REVIEW_PENDING",
   "phase": "REVIEW",
   "baseCommit": "71c7ee761a1147d502d815ff5461e92f1c30bd4c",
   "buildCommit": "a1de36b6720cae4341f5937f6d9100b13bb48366",
   "reviewEvidence": [
     "docs/reviews/CCMAI_RUNTIME_027_F05_INDEPENDENT_REVIEW_2026-10-02.md"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

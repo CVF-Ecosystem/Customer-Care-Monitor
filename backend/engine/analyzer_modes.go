@@ -13,8 +13,6 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
-	"gorm.io/gorm"
-	"gorm.io/gorm/clause"
 )
 
 // CCMAI-RUNTIME-027 (F05): the analyzer's mode, candidate bounds, count cap, snapshot scope and
@@ -257,65 +255,4 @@ func prepareExplicit(ctx context.Context, candidates []models.Conversation) (pre
 		prepared = append(prepared, preparedConversation{Conv: conv, Snap: snap})
 	}
 	return prepared, errorCount, false
-}
-
-// finalizeRunOnly is the checked terminal write of a test run: it writes and verifies the run row
-// only (a test run never touches the job row or its checkpoint), with the same retry, scoping and
-// read-back rules as finalizeOrdinaryRun.
-func finalizeRunOnly(run *models.JobRun, job models.Job, runStatus, errorMessage, summary string, finishedAt time.Time) error {
-	persistedFinish := finishedAt.Round(time.Millisecond)
-	var lastErr error
-	for attempt := 0; attempt < ordinaryFinalizeAttempts; attempt++ {
-		if attempt > 0 {
-			time.Sleep(ordinaryFinalizeRetryDelay)
-		}
-		lastErr = db.DB.Transaction(func(tx *gorm.DB) error {
-			var locked []models.JobRun
-			if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Select("id").
-				Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
-				Find(&locked).Error; err != nil {
-				return errFinalizeWrite
-			}
-			if len(locked) != 1 {
-				return errFinalizeMissing
-			}
-			res := tx.Model(&models.JobRun{}).
-				Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
-				Updates(map[string]interface{}{
-					"status":        runStatus,
-					"finished_at":   &persistedFinish,
-					"summary":       summary,
-					"error_message": errorMessage,
-				})
-			if res.Error != nil || res.RowsAffected > 1 {
-				return errFinalizeWrite
-			}
-			var verified int64
-			if err := tx.Model(&models.JobRun{}).
-				Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
-				Where("status = ? AND finished_at = ? AND error_message = ?", runStatus, persistedFinish, errorMessage).
-				Where("summary = CAST(? AS JSON)", summary).
-				Count(&verified).Error; err != nil || verified != 1 {
-				return errFinalizeWrite
-			}
-			return nil
-		})
-		if lastErr == nil {
-			return nil
-		}
-		log.Printf("[analyzer] final test-run write failed for job %s (attempt %d): %v", job.ID, attempt+1, lastErr)
-		if errors.Is(lastErr, errFinalizeMissing) {
-			break
-		}
-	}
-	if err := db.DB.Model(&models.JobRun{}).
-		Where("id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).
-		Updates(map[string]interface{}{
-			"status":        "error",
-			"finished_at":   &finishedAt,
-			"error_message": "Không ghi nhận được kết quả cuối của lượt chạy.",
-		}).Error; err != nil {
-		log.Printf("[analyzer] fallback error mark failed for run %s: %v", run.ID, err)
-	}
-	return fmt.Errorf("finalize test run: %w", lastErr)
 }

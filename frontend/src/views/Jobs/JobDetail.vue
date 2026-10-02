@@ -273,7 +273,7 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy từ lần gần nhất</div>
-                  <div class="text-caption jd-muted">Lấy cuộc chat gần nhất đã đánh giá làm mốc. Cuộc chat cũ hơn mốc sẽ không được đánh giá dù chưa phân tích.</div>
+                  <div class="text-caption jd-muted">Lấy cuộc chat gần nhất đã đánh giá làm mốc. Cuộc chat cũ hơn hoặc có thời điểm tin nhắn cuối bằng mốc sẽ không được đánh giá dù chưa phân tích.</div>
                 </div>
               </template>
             </v-radio>
@@ -281,7 +281,7 @@
               <template #label>
                 <div>
                   <div class="font-weight-medium">Chạy theo điều kiện</div>
-                  <div class="text-caption jd-muted">Đánh giá lại cả cuộc chat đã đánh giá. Chọn khoảng ngày (giờ Việt Nam, theo tin nhắn cuối) và/hoặc giới hạn số cuộc chat; phải có ít nhất một điều kiện.</div>
+                  <div class="text-caption jd-muted">Đánh giá lại cả cuộc chat đã đánh giá. Ngày (giờ Việt Nam) chỉ chọn cuộc chat theo tin nhắn cuối; mỗi cuộc chat được chọn vẫn phân tích đủ ngữ cảnh, gồm cả tin nhắn trước ngày bắt đầu. Có thể chỉ chọn một đầu ngày và/hoặc giới hạn số cuộc chat; phải có ít nhất một điều kiện.</div>
                 </div>
               </template>
             </v-radio>
@@ -878,15 +878,11 @@ const runDateTo = ref('')
 const runLimit = ref<number | null>(null)
 const runDateFromError = computed(() => {
   if (runMode.value !== 'conditional') return ''
-  if (runDateFrom.value && !runDateTo.value) return 'Cần chọn đến ngày'
   if (runDateFrom.value && runDateTo.value && runDateFrom.value > runDateTo.value) return 'Từ ngày phải nhỏ hơn đến ngày'
   return ''
 })
-const runDateToError = computed(() => {
-  if (runMode.value !== 'conditional') return ''
-  if (runDateTo.value && !runDateFrom.value) return 'Cần chọn từ ngày'
-  return ''
-})
+// A single endpoint is a valid open range; only a reversed pair is rejected (on the from field).
+const runDateToError = computed(() => '')
 const runLimitError = computed(() => {
   const v = runLimit.value as unknown
   if (v === null || v === undefined || v === '') return ''

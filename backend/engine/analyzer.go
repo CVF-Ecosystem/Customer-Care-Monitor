@@ -293,18 +293,13 @@ complete:
 
 	// Only the ordinary incremental scan owns last_run_at, and only after a complete, error-free
 	// run written together with the terminal run status (CCMAI-RUNTIME-025). Every explicit mode,
-	// capped or not, preserves the checkpoint. A test run does not touch the job row at all.
+	// capped or not, preserves the checkpoint and still records last_run_status/updated_at.
 	var checkpoint *time.Time
 	if !plan.explicit() && !truncated && errorCount == 0 {
 		cp := scanStart.Truncate(time.Second)
 		checkpoint = &cp
 	}
-	var finalizeErr error
-	if plan.mode == modeTestRun {
-		finalizeErr = finalizeRunOnly(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt)
-	} else {
-		finalizeErr = finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt, checkpoint)
-	}
+	finalizeErr := finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt, checkpoint)
 	if err := finalizeErr; err != nil {
 		log.Printf("[analyzer] job %s: %v", job.Name, err)
 		run.Status = "error"

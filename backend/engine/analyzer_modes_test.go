@@ -221,12 +221,10 @@ func TestExplicitModeMatrix(t *testing.T) {
 				if after.LastRunAt == nil || !after.LastRunAt.Equal(d.sentinel) {
 					t.Fatalf("checkpoint moved: %v, want %v", after.LastRunAt, d.sentinel)
 				}
-				if c.isRun {
-					if after.LastRunStatus != beforeJob.LastRunStatus || !after.UpdatedAt.Equal(beforeJob.UpdatedAt) {
-						t.Fatalf("test run touched the job row: %q/%v -> %q/%v", beforeJob.LastRunStatus, beforeJob.UpdatedAt, after.LastRunStatus, after.UpdatedAt)
-					}
-				} else if after.LastRunStatus != "success" {
-					t.Fatalf("explicit run did not record its status: %q", after.LastRunStatus)
+				// every explicit mode, a test run included, records the terminal job status and
+				// updated_at without a checkpoint
+				if after.LastRunStatus != "success" || !after.UpdatedAt.After(beforeJob.UpdatedAt) {
+					t.Fatalf("explicit run did not record its status: %q, updated_at %v -> %v", after.LastRunStatus, beforeJob.UpdatedAt, after.UpdatedAt)
 				}
 			})
 		}
@@ -374,35 +372,77 @@ func TestExplicitModeCancellationKeepsCheckpoint(t *testing.T) {
 	})
 }
 
+func runExplicit(an *Analyzer, job models.Job, mode string) (*models.JobRun, error) {
+	ctx := context.Background()
+	switch mode {
+	case "unanalyzed":
+		return an.RunJobUnanalyzed(ctx, job, 1)
+	case "full":
+		return an.RunJobFullWithParams(ctx, job, "", "", 1)
+	case "since-last":
+		return an.RunJobSinceLast(ctx, job, 1)
+	default:
+		return an.RunJobWithLimit(ctx, job, 1)
+	}
+}
+
+var explicitModeNames = []string{"unanalyzed", "full", "since-last", "test-run"}
+
 func TestExplicitModeFinalizeFailure(t *testing.T) {
-	for _, mode := range []string{"unanalyzed", "test-run"} {
+	for _, mode := range explicitModeNames {
 		mode := mode
-		t.Run(mode, func(t *testing.T) {
-			f := setupIncFixture(t, false, "qc_analysis")
-			d := newModesData(t, f)
-			trigger := "r027_job_" + f.jobID[len(f.jobID)-6:]
-			f.exec(t, fmt.Sprintf("CREATE TRIGGER %s BEFORE UPDATE ON jobs FOR EACH ROW BEGIN IF NEW.id = '%s' THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'synthetic terminal write failure'; END IF; END", trigger, f.jobID))
-			t.Cleanup(func() { db.DB.Exec("DROP TRIGGER IF EXISTS " + trigger) })
-			an := NewAnalyzerWithProvider(&config.Config{}, &incProvider{})
-			var run *models.JobRun
-			var err error
-			if mode == "unanalyzed" {
-				run, err = an.RunJobUnanalyzed(context.Background(), f.job(t), 1)
-				// the fault was reached: the checked finalizer reports it and the run is not success
-				if err == nil || run.Status != "error" {
-					t.Fatalf("finalize failure not reported: %v %+v", err, run)
+		for _, fault := range []string{"job-write-error", "job-row-missing"} {
+			fault := fault
+			t.Run(mode+"/"+fault, func(t *testing.T) {
+				f := setupIncFixture(t, false, "qc_analysis")
+				d := newModesData(t, f)
+				f.exec(t, "UPDATE jobs SET output_schedule = 'instant' WHERE id = ?", f.jobID)
+				notified := 0
+				sendJobNotifications = func(context.Context, models.Job, models.JobRun) error { notified++; return nil }
+				p := &incProvider{}
+				if fault == "job-write-error" {
+					trigger := "r027_job_" + f.jobID[len(f.jobID)-6:]
+					f.exec(t, fmt.Sprintf("CREATE TRIGGER %s BEFORE UPDATE ON jobs FOR EACH ROW BEGIN IF NEW.id = '%s' THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'synthetic terminal write failure'; END IF; END", trigger, f.jobID))
+					t.Cleanup(func() { db.DB.Exec("DROP TRIGGER IF EXISTS " + trigger) })
+				} else {
+					// the job leaves the tenant while the run works: the scoped terminal write finds no target
+					p.onCall = func(int) { f.exec(t, "UPDATE jobs SET tenant_id = ? WHERE id = ?", f.otherTenantID, f.jobID) }
+				}
+				run, err := runExplicit(NewAnalyzerWithProvider(&config.Config{}, p), f.job(t), mode)
+				// the fault was reached (the provider ran) and the failure is reported, not hidden
+				if p.callCount() == 0 {
+					t.Fatalf("the run never reached the provider, so the fault was not exercised")
+				}
+				if err == nil || run.Status != "error" || notified != 0 {
+					t.Fatalf("finalize failure not reported: err %v status %s notified %d", err, run.Status, notified)
 				}
 				var stored models.JobRun
 				if e := db.DB.First(&stored, "id = ?", run.ID).Error; e != nil || stored.Status == "success" || stored.Status == "running" {
 					t.Fatalf("stored run %q (%v)", stored.Status, e)
 				}
-			} else {
-				// a test run never writes the job row, so the same fault is not reached and the
-				// run still finishes (the positive control for the trigger above)
-				run, err = an.RunJobWithLimit(context.Background(), f.job(t), 1)
-				if err != nil || run.Status != "success" {
-					t.Fatalf("test run: %v %+v", err, run)
+				if fault == "job-write-error" {
+					if cp := f.checkpoint(t); cp == nil || !cp.Equal(d.sentinel) {
+						t.Fatalf("checkpoint moved: %v", cp)
+					}
 				}
+			})
+		}
+	}
+}
+
+// Positive control: without a fault the same explicit runs finish, notify once and keep the checkpoint.
+func TestExplicitModeFinalizeControlNotifiesOnce(t *testing.T) {
+	for _, mode := range explicitModeNames {
+		mode := mode
+		t.Run(mode, func(t *testing.T) {
+			f := setupIncFixture(t, false, "qc_analysis")
+			d := newModesData(t, f)
+			f.exec(t, "UPDATE jobs SET output_schedule = 'instant' WHERE id = ?", f.jobID)
+			notified := 0
+			sendJobNotifications = func(context.Context, models.Job, models.JobRun) error { notified++; return nil }
+			run, err := runExplicit(NewAnalyzerWithProvider(&config.Config{}, &incProvider{}), f.job(t), mode)
+			if err != nil || run.Status != "success" || notified != 1 {
+				t.Fatalf("control: err %v status %s notified %d", err, run.Status, notified)
 			}
 			if cp := f.checkpoint(t); cp == nil || !cp.Equal(d.sentinel) {
 				t.Fatalf("checkpoint moved: %v", cp)

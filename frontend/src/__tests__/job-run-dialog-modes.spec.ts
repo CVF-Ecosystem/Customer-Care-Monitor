@@ -185,3 +185,74 @@ describe('Job run dialog request contract (F05)', () => {
     expect(apiPost).not.toHaveBeenCalled()
   })
 })
+
+// The named cases shared with the TriggerJob admission test (job_trigger_modes_route_test.go) and
+// the engine DB test (analyzer_modes_acceptance_test.go). A date control cannot produce a malformed
+// calendar/time string, minimum or maximum value, so only the cases a browser can submit are mounted;
+// the others are proved at the API and engine layers.
+const namedDateCases: { name: string; from: string; to: string; valid: boolean }[] = [
+  { name: 'same day', from: '2026-10-02', to: '2026-10-02', valid: true },
+  { name: 'month rollover', from: '2026-09-30', to: '2026-10-01', valid: true },
+  { name: 'year rollover', from: '2025-12-31', to: '2026-01-01', valid: true },
+  { name: 'leap day', from: '2028-02-29', to: '2028-02-29', valid: true },
+  { name: 'from only', from: '2026-10-02', to: '', valid: true },
+  { name: 'to only', from: '', to: '2026-10-02', valid: true },
+  { name: 'reversed', from: '2026-10-03', to: '2026-10-02', valid: false },
+]
+
+describe('Job run dialog named Vietnam date cases (F05-R1-04)', () => {
+  beforeEach(() => {
+    apiGet.mockReset()
+    apiPost.mockReset()
+  })
+  afterEach(() => {
+    mounted.forEach((w) => w.unmount())
+    mounted.length = 0
+    document.body.innerHTML = ''
+    if (originalTz === undefined) delete env.TZ
+    else env.TZ = originalTz
+  })
+
+  for (const zone of ['UTC', 'America/New_York']) {
+    for (const c of namedDateCases) {
+      it(`${c.name} (browser zone ${zone})`, async () => {
+        env.TZ = zone
+        const { state } = await mountDialog()
+        state.runMode = 'conditional'
+        await flushPromises()
+        if (c.from) await fill('run-date-from', c.from)
+        if (c.to) await fill('run-date-to', c.to)
+        if (!c.valid) {
+          expect(confirmBtn().disabled).toBe(true)
+          confirmBtn().click()
+          await flushPromises()
+          expect(apiPost).not.toHaveBeenCalled()
+          return
+        }
+        expect(confirmBtn().disabled).toBe(false)
+        confirmBtn().click()
+        await flushPromises()
+        const qs = [c.from && `from=${c.from}`, c.to && `to=${c.to}`].filter(Boolean).join('&')
+        expect(String(apiPost.mock.calls[0][0])).toBe(`/tenants/t1/jobs/j1/trigger?mode=conditional&${qs}`)
+      })
+    }
+  }
+})
+
+describe('Job run dialog copy (F05-R1-02)', () => {
+  afterEach(() => {
+    mounted.forEach((w) => w.unmount())
+    mounted.length = 0
+    document.body.innerHTML = ''
+  })
+  it('explains the since-last omission, the re-evaluation and the full-context date selection', async () => {
+    apiGet.mockReset()
+    apiPost.mockReset()
+    await mountDialog()
+    const text = document.body.textContent ?? ''
+    expect(text).toContain('bằng mốc sẽ không được đánh giá')
+    expect(text).toContain('Đánh giá lại cả cuộc chat đã đánh giá')
+    expect(text).toContain('vẫn phân tích đủ ngữ cảnh')
+    expect(text).toContain('giờ Việt Nam')
+  })
+})

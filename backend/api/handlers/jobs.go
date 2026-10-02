@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
+	"regexp"
 	"strconv"
 	"strings"
 	"sync"
@@ -374,40 +376,16 @@ func TriggerJob(c *gin.Context) {
 		return
 	}
 
-	// CCMAI-RUNTIME-027: strict admission. Parameters are validated before any configuration
-	// load or worker start, so a rejected request has no side effect. mode: "unanalyzed" |
-	// "since_last" | "conditional" (legacy full=true means conditional; absent means since_last).
-	// The limit is a positive count cap only; it never selects the mode.
-	mode := c.Query("mode")
-	if mode == "" && c.Query("full") == "true" {
-		mode = "conditional"
-	}
-	if mode == "" {
-		mode = "since_last"
-	}
-	if mode != "unanalyzed" && mode != "since_last" && mode != "conditional" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_run_parameters"})
+	// CCMAI-RUNTIME-027: strict admission, before any configuration load or worker start, so a
+	// rejected request has no side effect. mode: "unanalyzed" | "since_last" | "conditional";
+	// absent means since_last, or conditional with the legacy full=true alias. full is
+	// absent/empty/true/false only and full=true conflicts with an explicit non-conditional mode.
+	params, code := parseTriggerParams(c.Request.URL.Query())
+	if code != "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": code})
 		return
 	}
-	dateFrom := c.Query("from")
-	dateTo := c.Query("to")
-	if (dateFrom != "" || dateTo != "") && mode != "conditional" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_run_parameters"})
-		return
-	}
-	if _, err := parseBusinessRange(dateFrom, dateTo); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_date_range"})
-		return
-	}
-	var maxConv int
-	if c.Request.URL.Query().Has("limit") {
-		n, err := strconv.Atoi(c.Query("limit"))
-		if err != nil || n <= 0 {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_run_parameters"})
-			return
-		}
-		maxConv = n
-	}
+	mode, dateFrom, dateTo, maxConv := params.mode, params.dateFrom, params.dateTo, params.maxConv
 
 	// A job dispatch that cannot get a valid configuration must not be
 	// acknowledged: validate before launching any worker. The error is not
@@ -458,6 +436,54 @@ var startTestRunJob = func(job models.Job, cfg *config.Config, limit int) {
 // newTriggerAnalyzer builds the analyzer for a trigger. It is a variable only so a test can route
 // the real trigger worker through a synthetic provider (no real AI call).
 var newTriggerAnalyzer = engine.NewAnalyzer
+
+var decimalCapRe = regexp.MustCompile(`^[0-9]+$`)
+
+// parseTriggerParams validates the trigger query. It returns the bounded error code
+// ("invalid_run_parameters" or "invalid_date_range") or an empty code. limit absent, empty or zero
+// means unlimited; otherwise it is an unsigned decimal integer (no sign, space or fraction).
+func parseTriggerParams(q url.Values) (triggerJobParams, string) {
+	mode := q.Get("mode")
+	full := false
+	switch q.Get("full") {
+	case "", "false":
+	case "true":
+		full = true
+	default:
+		return triggerJobParams{}, "invalid_run_parameters"
+	}
+	if mode == "" {
+		if full {
+			mode = "conditional"
+		} else {
+			mode = "since_last"
+		}
+	} else if full && mode != "conditional" {
+		return triggerJobParams{}, "invalid_run_parameters"
+	}
+	if mode != "unanalyzed" && mode != "since_last" && mode != "conditional" {
+		return triggerJobParams{}, "invalid_run_parameters"
+	}
+	dateFrom, dateTo := q.Get("from"), q.Get("to")
+	if (dateFrom != "" || dateTo != "") && mode != "conditional" {
+		return triggerJobParams{}, "invalid_run_parameters"
+	}
+	if _, err := parseBusinessRange(dateFrom, dateTo); err != nil {
+		return triggerJobParams{}, "invalid_date_range"
+	}
+	maxConv := 0
+	if raw := q.Get("limit"); raw != "" {
+		if !decimalCapRe.MatchString(raw) {
+			return triggerJobParams{}, "invalid_run_parameters"
+		}
+		n, err := strconv.Atoi(raw)
+		if err != nil {
+			return triggerJobParams{}, "invalid_run_parameters"
+		}
+		maxConv = n
+	}
+	return triggerJobParams{mode: mode, dateFrom: dateFrom, dateTo: dateTo, maxConv: maxConv}, ""
+}
 
 // triggerJobParams carries TriggerJob's resolved mode/date/limit parameters
 // unchanged into startTriggerJob, so admission never alters trigger semantics.
