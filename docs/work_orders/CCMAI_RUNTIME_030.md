@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-030 — F02-D Pancake message-window coverage
 
-Status: DISPATCH_READY. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md), [F02 assessment](../reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md), dispatcher-owned `CVF_SESSION/authority/CCMAI-RUNTIME-030.json`. Seed committed at `cbc7cba3af7d1b5ce77911fbb7e1fa62ff70c39f`, which is the tranche's baseCommit before BUILD. Worker must never edit seed. This planning order changes no product source; F02 remains OPEN.
 

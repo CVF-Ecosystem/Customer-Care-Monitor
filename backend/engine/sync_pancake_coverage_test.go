@@ -43,6 +43,10 @@ type pcFake struct {
 	untils     []string
 	otherHosts []string
 	onMessage  func(convID string)
+	// CCMAI-RUNTIME-030: optional per-request message script (conversation, current_count) and the
+	// recorded "conversation@current_count" request log.
+	msgFn  func(convID string, currentCount int) (code int, body string)
+	msgLog []string
 }
 
 func (g *pcFake) add(id string, updated time.Time) {
@@ -118,11 +122,22 @@ func (g *pcFake) RoundTrip(r *http.Request) (*http.Response, error) {
 			}
 		}
 		hook := g.onMessage
+		cc, _ := strconv.Atoi(q.Get("current_count"))
+		g.msgLog = append(g.msgLog, fmt.Sprintf("%s@%d", conv, cc))
+		script := g.msgFn
 		g.mu.Unlock()
 		if hook != nil {
 			hook(conv)
 		}
-		// Oldest first within the batch: an old message (before any since) ends paging.
+		if script != nil {
+			code, body := script(conv, cc)
+			return reply(code, body)
+		}
+		// CCMAI-RUNTIME-030: the adapter walks to an explicit empty page, so a position after the
+		// first page returns none (before this tranche a short first page ended the traversal).
+		if cc > 0 {
+			return reply(200, `{"success":true,"messages":[]}`)
+		}
 		return reply(200, fmt.Sprintf(`{"success":true,"messages":[`+
 			`{"id":"m_old_%s","type":"INBOX","original_message":"old","from":{"id":"c","name":"Khach"},"inserted_at":"2020-01-01T00:00:00.000000","attachments":[]},`+
 			`{"id":"m_%s","type":"INBOX","original_message":"hello","from":{"id":"c","name":"Khach"},"inserted_at":%q,"attachments":[]}]}`,
@@ -190,8 +205,8 @@ func TestPancakeSyncStoresEveryConversationBeyondTheOldLimit(t *testing.T) {
 	if st.LastSyncAt.Unix() > until {
 		t.Fatalf("checkpoint %v is later than the fixed until %d", st.LastSyncAt, until)
 	}
-	if g.convReqs != 3 || g.msgReqs != 105 || len(g.otherHosts) != 0 {
-		t.Fatalf("traffic: %d conversation pages, %d message fetches, other hosts %v", g.convReqs, g.msgReqs, g.otherHosts)
+	if g.convReqs != 3 || g.msgReqs != 210 || len(g.otherHosts) != 0 {
+		t.Fatalf("traffic: %d conversation pages, %d message fetches (page + explicit empty page per conversation), other hosts %v", g.convReqs, g.msgReqs, g.otherHosts)
 	}
 	for _, u := range g.untils {
 		if u != g.untils[0] {

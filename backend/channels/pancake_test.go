@@ -189,17 +189,19 @@ func TestPancakeFetchMessagesPaginatesUntilSince(t *testing.T) {
 		}
 	}
 
-	// Chỉ lấy tin từ phút thứ 50: dừng ngay ở lô chạm mốc, không gọi thêm.
+	// CCMAI-RUNTIME-030: since chỉ lọc kết quả (tin từ phút thứ 50), không dừng sớm — trước đây
+	// lô chạm mốc kết thúc duyệt (1 lượt gọi). Nay phải đi đến trang rỗng: 30 + 30 + 10 tin rồi
+	// trang rỗng = 4 lượt gọi, và vẫn trả đúng 20 tin từ m50 đến m69.
 	atomic.StoreInt32(&calls, 0)
 	recent, err := a.FetchMessages(context.Background(), "c1", base.Add(50*time.Minute))
 	if err != nil {
 		t.Fatalf("FetchMessages since: %v", err)
 	}
-	if len(recent) != 20 || recent[0].ExternalID != "m50" {
-		t.Fatalf("expected 20 messages from m50, got %d (first %v)", len(recent), recent)
+	if len(recent) != 20 || recent[0].ExternalID != "m50" || recent[19].ExternalID != "m69" {
+		t.Fatalf("expected 20 messages m50..m69, got %d (first %v)", len(recent), recent)
 	}
-	if c := atomic.LoadInt32(&calls); c != 1 {
-		t.Errorf("expected 1 call when since falls in first batch, got %d", c)
+	if c := atomic.LoadInt32(&calls); c != 4 {
+		t.Errorf("expected 4 calls (three pages and the explicit empty page), got %d", c)
 	}
 }
 
