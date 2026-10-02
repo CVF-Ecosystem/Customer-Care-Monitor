@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-028 — F06 job admission and run-owned cancellation
 
-Status: REVIEW_PENDING. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: REVIEW_PASS. Issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
 
 Authority: [SPEC](../specs/RUNTIME_JOB_RUN_OWNERSHIP_F06_2026-10-02.md), [roadmap](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-028.json`, committed before BUILD at `6958e281d190935578809bb9900dd95d2a29509e`. Owner routes Claude implementation and Codex independent review. F05/R025/R026 retain REVIEW_PASS / FREEZE_OPEN; F06 source is unchanged at dispatch.
 
@@ -63,3 +63,7 @@ Before any R2 edit, rehydrate current authority/continuity and write the repair-
 2. F06-R2-02: fix `job_trigger_modes_route_test.go` waiting/cleanup so the next launch202 is asserted after terminal observation AND actual ownership release, rather than immediately after a terminal DB row appears. The current independent run fails at line178 with409 job_already_running. Production admission correctly protects the worker tail and must not be relaxed. Preserve every F05 date/cap/repeated-evaluation/checkpoint assertion. Add a barrier-controlled terminal-tail test: while completion activity/notification/cleanup is blocked, the run is terminal but the next launch remains409; after exit/release it becomes202. Join workers before DB fixture cleanup; no arbitrary sleep/retry to hide the failure.
 
 Run the new log probe, original six probes and R1 boundary tests, affected handler tests, full uncached backend with R019 sentinels and zero DB-unavailable skips, full frontend, forced typecheck/build, scoped gate/catalog/docs/doctor and diff checks. Save complete logs for failures and distinguish top-level/subtest counts. Append repair evidence, synchronize REVIEW_PENDING in current prose and machine records and return one local commit. Do not remove/skip/weaken failed tests, edit seed/core/tooling, use a real provider/channel, touch persistent DB, push/deploy/self-approve or FREEZE. This is repair round two; before a third same-root repair apply REVIEW_COST_ESCALATION_REQUIRED per AGENTS.
+
+## R028-R2 independent disposition (Codex, 2026-10-02)
+
+Exact repair `8035cb05a2d66778810fb0acb89d208238743cfc` is REVIEW_PASS / FREEZE_OPEN; [re-review](../reviews/CCMAI_RUNTIME_028_R2_INDEPENDENT_REREVIEW_2026-10-02.md). Both R2 findings settled; all original/R1 probes retained. Independent engine56, handlers27 (zero skips), frontend255, forced typecheck/build and gate46 pass. No further same-root repair dispatched. Historical R1 late acknowledgment/R2 failed partial sync and limits remain disclosed; no procedural-compliance or FREEZE claim. Separate F07 planning is next, without authorizing F07 BUILD here. Seed/scope/effects unchanged.
