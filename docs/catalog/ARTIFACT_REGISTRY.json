@@ -178,6 +178,20 @@
                           "path":  "docs/reviews/learnings/README.md",
                           "status":  "ACTIVE",
                           "description":  "Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake."
+                      },
+                      {
+                          "id":  "continuity-learning-sync-coverage-layers",
+                          "family":  "continuity",
+                          "path":  "docs/reviews/learnings/feedback_sync_coverage_evidence_layers.md",
+                          "status":  "ACTIVE",
+                          "description":  "Shared sync coverage learning: conversation, message, storage, live-channel and governance evidence boundaries."
+                      },
+                      {
+                          "id":  "continuity-f02-freeze-assessment",
+                          "family":  "continuity",
+                          "path":  "docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md",
+                          "status":  "ACTIVE",
+                          "description":  "F02 remaining evidence and scoped FREEZE assessment; next bounded planning move."
                       }
                   ]
 }
