@@ -24,4 +24,4 @@ A future authorized cleanup helper should test a project path with spaces, an MS
 
 Store this shared record in Git, index it through `docs/catalog/ARTIFACT_REGISTRY.json` and generated `docs/INDEX.md`, and link it from `CVF_SESSION_MEMORY.md`. Read when preparing shell commands or resource cleanup. New incidents should append exact sanitized command shape, shell/version, exit code, observed effect and disposition here, not only to provider-local memory.
 
-Parent CVF assessment is [deferred through the existing learning intake](../CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md). Proposed earliest control: shared Windows/MSYS execution guidance and cleanup-helper acceptance. No parent edit, automated prevention or runtime AI governance proof is claimed.
+Parent CVF assessment is [deferred through the existing learning intake](CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md). Proposed earliest control: shared Windows/MSYS execution guidance and cleanup-helper acceptance. No parent edit, automated prevention or runtime AI governance proof is claimed.

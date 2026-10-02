@@ -23,10 +23,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Shared cross-agent learning (2026-10-02)
 
+- [Downstream gate learning intake](docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md): packet for CVF parent assessment of continuity/doctor/portable-gate and reviewer-routing gaps; includes linked source evidence and disposition.
 - [Shell cleanup and MSYS paths](docs/reviews/learnings/feedback_shell_cleanup_and_paths.md): separate teardown/file deletion/verification; verify absolute targets; prefer PowerShell literal paths; scope MSYS_NO_PATHCONV to native invocations when applicable. Shell incident is owner-reported, not reproduced in this intake.
 - [Repair workflow and evidence](docs/reviews/learnings/feedback_cvf_repair_workflow.md): before-edit acknowledgment/BUILD/preflight; prevalidated rerunnable continuity sync; applied mutation plus byte restoration; discriminate survivors; retain unexplained failures and NOT RUN labels.
 
-These committed repository records are the shared learning references; provider-local feedback is supplemental. They are directly indexed through the artifact registry and generated docs index, with source/confidence and proposed parent disposition. Read only the applicable record at the task trigger; no full-history read is needed. This documentation intake changes no F07 disposition: exact worker BUILD `4c6653021878827cba678adb1ae87e9a196d5e85` remains REVIEW_PENDING / FREEZE_OPEN for independent Codex REVIEW. Parent helper/enforcement proposals remain deferred through `docs/reviews/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`.
+These committed repository records are the shared learning references; provider-local feedback is supplemental. They are directly indexed through the artifact registry and generated docs index, with source/confidence and proposed parent disposition. Read only the applicable record at the task trigger; no full-history read is needed. This documentation intake changes no F07 disposition: exact worker BUILD `4c6653021878827cba678adb1ae87e9a196d5e85` remains REVIEW_PENDING / FREEZE_OPEN for independent Codex REVIEW. Parent helper/enforcement proposals remain deferred through `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`.
 
 ## Mandatory Continuity Rehydration
 
@@ -48,7 +49,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 ## Owner authorization and F01–F08 backlog (2026-09-30)
 
 Parent CVF learning intake (Codex, 2026-10-01):
-`docs/reviews/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
+`docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 records the real downstream continuity/doctor/portable-checker gap and a
 Finding-To-Governance Learning disposition. Another agent owns any CVF parent
 implementation and tests. CCMAI-GOV-001 GOV1-R1 passed local independent

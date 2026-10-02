@@ -164,6 +164,13 @@
                           "path":  "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
                           "status":  "ACTIVE",
                           "description":  "Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR."
+                      },
+                      {
+                          "id":  "continuity-learning-downstream-gate-intake",
+                          "family":  "continuity",
+                          "path":  "docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md",
+                          "status":  "ACTIVE",
+                          "description":  "Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition."
                       }
                   ]
 }

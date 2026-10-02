@@ -4,7 +4,7 @@ Date: 2026-10-01. Reviewer: Codex, independent of Claude IMPLEMENTATION_WORKER. 
 
 ## Intake and scope
 
-State, handoff header, front marker, tranche record and work-order status correctly said `REVIEW_PENDING`; current memory prose and implementation-status limitations still said `DISPATCH_READY`. Codex reported `BLOCKED_CONTINUITY_DRIFT`, aligned both stale pointers at INTAKE, re-read them and reran preflight before source review. Doctor passed 25/25. The later observation is added to the existing [parent learning intake](CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md); parent implementation/testing remains with its assigned agent.
+State, handoff header, front marker, tranche record and work-order status correctly said `REVIEW_PENDING`; current memory prose and implementation-status limitations still said `DISPATCH_READY`. Codex reported `BLOCKED_CONTINUITY_DRIFT`, aligned both stale pointers at INTAKE, re-read them and reran preflight before source review. Doctor passed 25/25. The later observation is added to the existing [parent learning intake](learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md); parent implementation/testing remains with its assigned agent.
 
 Exact BUILD changed only Pancake source/tests, engine sync source/tests, BUILD evidence and authorized order/roadmap/continuity/status files. `git diff --exit-code 0bfbbc0 1fa8e14 -- CVF_SESSION/authority/CCMAI-RUNTIME-023.json backend/channels/facebook.go backend/channels/zalo_oa.go backend/channels/adapter.go .github docker-compose.yml` returned 0. Dispatcher seed `5b785d5` predates BUILD and is unedited. The pre-existing untracked `knowledge/_index.json` remains outside commits.
 

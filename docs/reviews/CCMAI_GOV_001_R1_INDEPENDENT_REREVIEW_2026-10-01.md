@@ -26,4 +26,4 @@ Hosted PyYAML installation, full-history checkout/fetch, the Windows catalog job
 
 ## Finding-to-governance learning
 
-The five R1 findings from `CCMAI_GOV_001_INDEPENDENT_REVIEW_2026-10-01.md` are locally handled as `MACHINE_GATE_GAP`/`RULE_GAP` in the `GOVERNANCE_CONTROL_PLANE` lane. Parent-level portability and independent authority remain `DESIGN_REVIEW_REQUIRED` under `CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`; promotion is deferred to the assigned parent agent. Runtime/provider/cost lane: `N/A_WITH_REASON` — this tranche tests repository controls and makes no runtime AI decision or provider call.
+The five R1 findings from `CCMAI_GOV_001_INDEPENDENT_REVIEW_2026-10-01.md` are locally handled as `MACHINE_GATE_GAP`/`RULE_GAP` in the `GOVERNANCE_CONTROL_PLANE` lane. Parent-level portability and independent authority remain `DESIGN_REVIEW_REQUIRED` under `learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`; promotion is deferred to the assigned parent agent. Runtime/provider/cost lane: `N/A_WITH_REASON` — this tranche tests repository controls and makes no runtime AI decision or provider call.
