@@ -5,11 +5,21 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW (CCMAI-RUNTIME-027 F05 R1 REVIEW_PASS / FREEZE_OPEN; R025/R026 REVIEW_PASS / FREEZE_OPEN; F02 OPEN; S1 IN_PROGRESS)
-- Active role: ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-027 F05 R027-R1 is REVIEW_PASS / FREEZE_OPEN after independent Codex re-review of repair a9bff22 on BUILD a1de36b. All F05-R1-01..04 findings are settled for the bounded local mode/limit/Vietnam-date/full-snapshot/checkpoint contract. Next: owner may dispatch separate bounded F06 INTAKE/DESIGN/SPEC/WORK_ORDER; no F06 BUILD is granted. R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F02 live/message limits, F07, mixed historical timestamp storage and tenant timezone Settings activation stay separate. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE.
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER (CCMAI-RUNTIME-028 F06 DISPATCH_READY; R027/R025/R026 REVIEW_PASS / FREEZE_OPEN; F02 OPEN; S1 IN_PROGRESS)
+- Active role: ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude), independent REVIEWER (Codex)
+- Next allowed move: CCMAI-RUNTIME-028 F06 is DISPATCH_READY at WORK_ORDER under immutable seed 6958e281d190935578809bb9900dd95d2a29509e. Claude next rehydrates, acknowledges IMPLEMENTATION_WORKER / COMMIT_STEWARD before BUILD, implements only the bounded shared job admission and run-owned cancellation SPEC, and returns one local REVIEW_PENDING commit to independent reviewer Codex. R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN. F06 has no BUILD evidence yet; crash recovery/distributed cancellation, F02 live/message proof, F07 and tenant timezone activation stay separate. No push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE; PR #1 remains draft at older remote head 3e0b37e.
 - Parked operator checkpoint: none
+
+## CCMAI-RUNTIME-028 — F06 job admission and run-owned cancellation (2026-10-02)
+
+- Planning rehydration acknowledgment (Codex): manifest/policy/state/memory/handoff/status/index agree on F05 REVIEW_PASS / FREEZE_OPEN at `dcd15d1`; core `26c686c` matches public origin/main, doctor 25/25; compact bootstrap absent (BOOTSTRAP_MIGRATION_PENDING, nonblocking), knowledge ingest completed. User says “tiếp” under the existing orchestrator/reviewer + Claude worker route. Role ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR before material planning; SESSION_SYNC_STEWARD / COMMIT_STEWARD for dispatch records.
+- INTAKE accepted: F06 ownership/cancellation only; inherit accepted F03/F04/F05. Inspected HTTP, direct engine, cron, after-sync, analysis agent and destructive job paths. Current job-only map and bulk cancel are not shared lifecycle control.
+- DESIGN accepted for bounded local BUILD: shared engine admission, checked Job/JobRun reservation, opaque run token, cancellation request vs observed terminal distinction, ownership retained through worker exit, stale/unowned rows fail closed. No schema/lease/reclaim. Require consistent lifecycle lock order and R002 guard preservation.
+- SPEC accepted for WORK_ORDER: [F06 SPEC](../../docs/specs/RUNTIME_JOB_RUN_OWNERSHIP_F06_2026-10-02.md), F06-01..10 and groups A..F with deterministic cross-entry concurrency, targeted cancellation, late-provider/panic/DB-fault/cleanup/terminal/destructive/UI proof plus retained regressions, old-source behavioral probes and mutations.
+- WORK_ORDER dispatch: [CCMAI-RUNTIME-028](../../docs/work_orders/CCMAI_RUNTIME_028.md), DISPATCH_READY, risk R2. Seed authored/committed by Codex at `6958e281d190935578809bb9900dd95d2a29509e` before BUILD, one-file preflight 7/7 PASS. Claude next IMPLEMENTATION_WORKER / COMMIT_STEWARD; Codex independent REVIEWER. Worker must rehydrate and record its role acknowledgment before BUILD. No source edited, F06 remains OPEN, no BUILD/review acceptance implied.
+- Boundaries: no real provider/channel call, persistent DB, push/merge/deployment/FREEZE, core/workflow/permissions/schema edits. Crash recovery, distributed cancellation, F07, F02 live/message proof and unused analyzer helper cleanup remain separate. MCP cqa_trigger_job is an existing non-executing placeholder that nevertheless says triggered/queued; correction requires a separate MCP order, not F06 activation or admission proof. PR #1 retains older hosted head; no new CI claim.
+- Planning validation: doctor 25/25 PASS; complete nine-path planning/seed explicit downstream preflight 7/7 PASS including catalog; gate unit tests 46/46 PASS (14.502 s); docs build PASS (6.35 s). Default full-worktree preflight FAIL solely for pre-existing knowledge/_index.json and two Python bytecode files outside authority, excluded from commits; no whole-worktree PASS claimed. Product tests are specified for Claude BUILD, not claimed from planning.
 
 ## CCMAI-RUNTIME-027 — F05 analyzer modes/limits/Vietnam dates (2026-10-02)
 

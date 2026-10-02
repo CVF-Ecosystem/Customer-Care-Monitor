@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-027 F05 R027-R1 is REVIEW_PASS / FREEZE_OPEN after independent Codex re-review of repair a9bff22 on BUILD a1de36b. All F05-R1-01..04 findings are settled for the bounded local mode/limit/Vietnam-date/full-snapshot/checkpoint contract. Next: owner may dispatch separate bounded F06 INTAKE/DESIGN/SPEC/WORK_ORDER; no F06 BUILD is granted. R025/R026 remain REVIEW_PASS / FREEZE_OPEN; F02 live/message limits, F07, mixed historical timestamp storage and tenant timezone Settings activation stay separate. PR #1 stays draft at older remote head 3e0b37e; no push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-028 F06 is DISPATCH_READY at WORK_ORDER under immutable seed 6958e281d190935578809bb9900dd95d2a29509e. Claude next rehydrates, acknowledges IMPLEMENTATION_WORKER / COMMIT_STEWARD before BUILD, implements only the bounded shared job admission and run-owned cancellation SPEC, and returns one local REVIEW_PENDING commit to independent reviewer Codex. R027/F05 and R025/R026 remain REVIEW_PASS / FREEZE_OPEN. F06 has no BUILD evidence yet; crash recovery/distributed cancellation, F02 live/message proof, F07 and tenant timezone activation stay separate. No push, merge, deployment, real provider/channel call, persistent DB, parent-CVF work or FREEZE; PR #1 remains draft at older remote head 3e0b37e.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR (Codex), after REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD",
+  "activeRole": "ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex); next IMPLEMENTATION_WORKER / COMMIT_STEWARD (Claude), independent REVIEWER (Codex)",
   "roleRoute": "SINGLE_AGENT_MULTI_ROLE_ALLOWED",
   "updatedAt": "2026-10-02"
 }
