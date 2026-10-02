@@ -55,3 +55,7 @@ Source: `Dashboard.vue` issues `GET /tenants/<id>/dashboard`, `GET /tenants/<id>
 ## Limits
 
 The card states that **no health check exists**; it does not show that any service is healthy or down. A future telemetry contract (probes, auth, timeout, freshness, degraded/down/unknown semantics, scheduler liveness) is a separate work order. Synthetic API responses prove UI rendering only. The English locale capture shows pre-existing Vietnamese demo data in the activity list (unrelated, untouched).
+
+## Reviewer evidence-scope clarification (Codex, 2026-10-02)
+
+The worker Gates phrase “any provider/channel/DB fixture” NOT RUN refers to backend integration-test fixtures, not the capture environment. The Captures section explicitly records disposable MySQL in tmpfs and generated throwaway local secrets; that environment did run for screenshots. No persistent DB or real provider/channel call is claimed. Reviewer did not recreate the capture environment or inspect credentials: the committed crops were visually checked, while full-page reports and cleanup inventory remain worker-reported. Source/test acceptance is evaluated separately in the independent review record.
