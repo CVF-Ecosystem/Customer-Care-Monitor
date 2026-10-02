@@ -19,7 +19,7 @@ Status: ACTIVE
 
 Claude BUILD returned on 2026-10-02. BUILD SHA: see the line `BUILD SHA:` below (recorded after the local commit; the commit cannot contain its own SHA). Evidence: [BUILD record](../../docs/reviews/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_BUILD_2026-10-02.md). Changed set: `backend/channels/pancake.go`, `backend/channels/pancake_test.go`, `backend/channels/pancake_messages_test.go`, `backend/engine/sync_pancake_coverage_test.go`, `backend/engine/sync_pancake_messages_test.go`, the BUILD record and continuity/status/roadmap records. Worker-reported results: channels 61 PASS/0 FAIL; full backend on disposable MySQL all packages ok (937 PASS lines, 0 FAIL, 2 unrelated SKIP, zero DB skips); build/vet PASS; original adapter fails 12 retained channel tests; mutations M1-M4 killed after repairing one first-run survivor (M4); race NOT RUN (CGO disabled, no C compiler); disposable Docker resources verified absent afterwards. Real channel/provider/credential, persistent DB, engine source, push, merge and FREEZE: none. Not proven: live offset snapshot stability, global F02, provider/governance.
 
-BUILD SHA: PENDING_LOCAL_COMMIT
+BUILD SHA: 31daee1d2f736166c4514ec2487d9b94b94727cd
 
 ## Planning acknowledgment and phase trace
 
