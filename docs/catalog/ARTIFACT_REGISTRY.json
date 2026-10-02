@@ -171,6 +171,13 @@
                           "path":  "docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md",
                           "status":  "ACTIVE",
                           "description":  "Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition."
+                      },
+                      {
+                          "id":  "continuity-learning-folder-convention",
+                          "family":  "continuity",
+                          "path":  "docs/reviews/learnings/README.md",
+                          "status":  "ACTIVE",
+                          "description":  "Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake."
                       }
                   ]
 }

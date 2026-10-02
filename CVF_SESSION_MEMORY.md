@@ -23,6 +23,8 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Shared cross-agent learning (2026-10-02)
 
+Owner-agreed convention: `docs/reviews/learnings/` stores reusable findings and lessons for immediate project improvement and CVF parent intake. Read [the folder convention](docs/reviews/learnings/README.md) when recording a new finding or preparing upstream transfer. Promote reusable findings from provider-local memory into a shared record during the handling turn; track project application/evidence and upstream disposition separately. Apply relevant lessons before similar work; do not wait for parent adoption.
+
 - [Downstream gate learning intake](docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md): packet for CVF parent assessment of continuity/doctor/portable-gate and reviewer-routing gaps; includes linked source evidence and disposition.
 - [Shell cleanup and MSYS paths](docs/reviews/learnings/feedback_shell_cleanup_and_paths.md): separate teardown/file deletion/verification; verify absolute targets; prefer PowerShell literal paths; scope MSYS_NO_PATHCONV to native invocations when applicable. Shell incident is owner-reported, not reproduced in this intake.
 - [Repair workflow and evidence](docs/reviews/learnings/feedback_cvf_repair_workflow.md): before-edit acknowledgment/BUILD/preflight; prevalidated rerunnable continuity sync; applied mutation plus byte restoration; discriminate survivors; retain unexplained failures and NOT RUN labels.

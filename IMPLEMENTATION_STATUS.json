@@ -113,6 +113,7 @@
     "R028-R1 late repair acknowledgment remains historical procedural nonconformance, not retrospective compliance. R2 handoff/evidence record a pre-edit acknowledgment, but one final commit does not prove intra-worktree timing. R2 sync initially failed halfway and preflight correctly rejected continuity/tranche; second sync restored agreement and passed. Independent source/contract REVIEW_PASS does not assert complete procedural compliance; no FREEZE."
   ],
   "evidence": [
+    "docs/reviews/learnings/README.md",
     "docs/reviews/CVF_ONBOARDING_CHECK_2026-09-26.md",
     "docs/reviews/CONTRIBUTOR_HISTORY_REWRITE_2026-09-26.md",
     "docs/reviews/USER_DOCS_AUDIT_2026-09-26.md",
