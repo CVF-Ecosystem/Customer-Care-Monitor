@@ -5,6 +5,13 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+  "id": "runtime042-seed",
+  "family": "continuity",
+  "path": "CVF_SESSION/authority/CCMAI-RUNTIME-042.json",
+  "status": "ACTIVE",
+  "description": "Immutable R042 R1 documentation/example-smoke seed; planning only, no activation or worker yet."
+},
+{
   "id": "runtime041-r1-independent-rereview",
   "family": "continuity",
   "path": "docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md",

@@ -86,6 +86,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-R1 re-review: R041-R1-01..03 settled, REVIEW_PASS / FREEZE_OPEN; explicit platform/drive/TOCTOU limits.: `docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`
 - R041 R1 REVIEW_PASS strict synthetic input SPEC; platform, mapped-drive and TOCTOU limits retained.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
+- Immutable R042 R1 documentation/example-smoke seed; planning only, no activation or worker yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
