@@ -5,11 +5,25 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                          "id": "runtime035-r1-independent-rereview",
+                          "family": "continuity",
+                          "path": "docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Independent exact-R1 REVIEW_PASS; forced-error detector/prose settled, local contract and effect/NOT RUN limits retained."
+                      },
+                      {
+                          "id": "runtime035-r1-independent-summary",
+                          "family": "continuity",
+                          "path": "docs/reviews/probes/r035_r1_independent_summary.json",
+                          "status": "ACTIVE",
+                          "description": "Independent exact-R1 MCP suite/error-only mutations, named failures/digests/restoration; synthetic local evidence only."
+                      },
+                      {
                           "id": "runtime035-independent-review",
                           "family": "continuity",
                           "path": "docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md",
                           "status": "ACTIVE",
-                          "description": "Independent exact-BUILD R035 CHANGES_REQUIRED; response source passes, forced-error effect coverage and historical prose need R1."
+                          "description": "Historical initial R035 CHANGES_REQUIRED; R1 settles detector/prose findings without product repair."
                       },
                       {
                           "id": "runtime035-error-effect-probe",
@@ -30,21 +44,21 @@
                               "family": "continuity",
                               "path": "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
                               "status": "ACTIVE",
-                              "description": "R035 MT-01..06 contract; independent CHANGES_REQUIRED for forced-read-error effect coverage and stale prose."
+                              "description": "R035 MT-01..06 local contract: R1 independently REVIEW_PASS / FREEZE_OPEN; no actual job dispatch."
                           },
                           {
                               "id": "runtime035-build",
                               "family": "continuity",
                               "path": "docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md",
                               "status": "ACTIVE",
-                              "description": "Historical exact R035 worker BUILD/evidence and nine-mutant campaign; independent review returned CHANGES_REQUIRED."
+                              "description": "Historical worker BUILD/R1 evidence, preserved initial survivor and worker11 campaign; R1 independently accepted locally."
                           },
                           {
                               "id": "runtime035-order",
                               "family": "continuity",
                               "path": "docs/work_orders/CCMAI_RUNTIME_035.md",
                               "status": "ACTIVE",
-                              "description": "R035 CHANGES_REQUIRED with bounded R1 return to Claude; independent Codex re-review next."
+                              "description": "R035 R1 REVIEW_PASS / FREEZE_OPEN, local contract; no new worker/BUILD dispatch."
                           },
                           {
                               "id": "runtime035-authority",
@@ -205,7 +219,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R035 CHANGES_REQUIRED / REVIEW handoff; bounded R1 to Claude under unchanged seed."
+                          "description":  "Current R035 R1 REVIEW_PASS / REVIEW handoff; ORCHESTRATOR next, no new BUILD/live/FREEZE."
                       },
                       {
                           "id":  "truth-implementation-status",

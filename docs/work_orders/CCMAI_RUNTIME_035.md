@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-035 — Truthful unavailable MCP trigger response
 
-Status: REVIEW_PENDING
+Status: REVIEW_PASS
 
 Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md). Dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-035.json` committed at `4b714a35bc6f49abe508d3ec4f32504e500054ba` before activation/BUILD. Standing local orchestration delegation and owner's reaffirmed ORCHESTRATOR/REVIEWER assignment authorize this bounded order. Owner manually transfers it to Claude; no automatic agent invocation.
 
@@ -29,10 +29,14 @@ Scope mismatch, changed authorization policy, generic accepted-error test weaken
 
 This is ready for owner transfer to Claude, with no additional routine approval request. Worker BUILD has not started. R034 remains offline REVIEW_PASS / FREEZE_OPEN; Pancake live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED. R033/local-message FREEZE stays unchanged. No public/provider governance, hosted readiness or deployment claim.
 
-## Independent review return — bounded R035-R1
+## Historical initial review return — bounded R035-R1
 
 [Independent review](../reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md) of exact Claude BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac`: CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. Baseline MCP17 top-level/27 total,0 FAIL/SKIP and build/vet PASS; four sampled guards killed/restored. Error-only write mutant survives all committed tests but is caught by the independent forced-read-error probe. This is a test/evidence gap; no submitted production write/dispatch defect is established. Stale NOT BUILT/worker-not-started prose also needs explicit historical retirement.
 
 Owner transfers this R1 to Claude REPAIR_WORKER / repair COMMIT_STEWARD under the unchanged R035 seed, roles, paths, risk and effects. Consolidate R035-R1-01..02 before edits: add committed forced jobs-read-error no-effects coverage (generic result, lookup attribution, callbacks/default-client trap/state equality with fixture membership setup outside observation); apply error-only write mutation and require a named semantic kill with byte restoration; mark original planning/dispatch facts historical and align current SPEC/evidence/handoff/order/status/memory/catalog. The independent probe under docs/reviews/probes is replay evidence; incorporate equivalent behavior in the already authorized test file, without reviewer product repair or copying it into production wiring.
 
 Rehydrate/acknowledge/synchronize BUILD and preflight before repair; keep all accepted response/permission/tenant regressions and original failures/survivors/NOT RUN. Rerun complete MCP suite on disposable loopback MySQL with no DB skips, new forced-error controls, required build/vet/docs/catalog/doctor/gates/diff checks. Return one exact local repair SHA and REVIEW_PENDING to independent Codex re-review. Product correction is not requested unless an actual in-scope defect emerges. No universal socket trap/permission change/real provider/credential/network/dispatch/push/FREEZE authority. Third same-root repair requires REVIEW_COST_ESCALATION_REQUIRED.
+
+## Independent R1 acceptance (2026-10-03)
+
+[Exact-R1 independent re-review](../reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md) accepts repair22204abc0a19841cd9c50ce03c0af032896d3b4e for local MT-01..06, REVIEW_PASS / FREEZE_OPEN. R1-01..02 settled: MCP18/28 PASS0 skips, build/vet PASS, GORM/raw error-only mutations killed/restored, original reviewer probe PASS. Original R1 routing above is historical; no new worker repair/BUILD. All NOT RUN and bounded observation limits remain; actual queue/Analyzer is separate. Product/seed unchanged, no reviewer product/test repair, push/deployment/FREEZE.

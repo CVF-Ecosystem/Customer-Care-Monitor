@@ -134,4 +134,6 @@ Limitations are unchanged from section 7: the probes see GORM write callbacks, l
 
 ## 10. R1 repair identity and hand-back
 
-Exact R1 repair commit: `22204abc0a19841cd9c50ce03c0af032896d3b4e` (parent `357d04b`; original BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac`; seed unchanged). The follow-up documentation commit sets the tranche `buildCommit` to this SHA and changes no source. Docs build, catalog, diff check, preflights and gate unit tests are re-run for that commit. Independent Codex re-review is next; no self-approval, push, merge, deployment or FREEZE.
+Exact R1 repair commit: `22204abc0a19841cd9c50ce03c0af032896d3b4e` (Git parent `82a9b7d16e622b4ee3162870f1e30ba9b099324e`; original BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac`; seed unchanged). The follow-up documentation commit sets the tranche `buildCommit` to this SHA and changes no source. Docs build, catalog, diff check, preflights and gate unit tests are re-run for that commit. Independent Codex re-review is next at this historical hand-back; no self-approval, push, merge, deployment or FREEZE.
+
+Reviewer metadata correction (2026-10-03): the original section10 incorrectly called357d04b the repair parent; `git show -s --format=%P 22204ab` confirms82a9b7d. [Independent R1 re-review](CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md) records the current disposition; worker test/mutation evidence and all NOT RUN/observation limits above remain unchanged.
