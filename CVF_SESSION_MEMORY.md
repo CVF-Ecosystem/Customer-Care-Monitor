@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-037", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-038", "parked": false} -->
 
 ## Startup Order
 
@@ -50,7 +50,13 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R037 independent acceptance (2026-10-03)
+## Current R038 dispatch (2026-10-03)
+
+CCMAI-RUNTIME-038 DISPATCH_READY / WORK_ORDER / NOT_BUILT, R1 uncalled isOrdinaryIncremental/comment removal only. [Order](docs/work_orders/CCMAI_RUNTIME_038.md), [SPEC](docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md); immutable seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` before activation/BUILD. Manual Claude transfer, Codex authors/reviews. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`; parked none. CCMAI-RUNTIME-038 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: rehydrate/acknowledge immutable R1 seed, synchronize BUILD and pass preflight before removing only the uncalled isOrdinaryIncremental helper and its attached comment. Verify references, cached Go build/vet and compile-only engine tests; do not execute tests/Analyzer/DB/provider or change run-plan behavior. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.
+
+No product edit, Go build/vet/test compilation or runtime proof in planning. Prior current sections below are historical continuity, all acceptance/NOT RUN/limits retained.
+
+## Historical R037 independent acceptance (2026-10-03)
 
 CCMAI-RUNTIME-037 REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude BUILD cf91801168a9d41fb491bd2614f709b201b2556c. [Independent review](docs/reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md) verifies exact five guide-line replacements and preserved whole remaining content by source/help comparison. Reviewer-owned historical-label/limitation synchronization, no guide/product/seed repair. All worker failures and runtime/migration/S3/live/governance NOT RUN retained. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md`; parked none. CCMAI-RUNTIME-037 is REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD cf91801168a9d41fb491bd2614f709b201b2556c, four S3-guide command prefixes and one prerequisite sentence by static comparison only. ORCHESTRATOR handles bounded local planning/continuity; no new worker BUILD or live execution dispatched. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake inputs/credential/network authority remain separate. No migration/Docker daemon/S3/credentials/network/product/push/merge/deployment/new FREEZE.
 

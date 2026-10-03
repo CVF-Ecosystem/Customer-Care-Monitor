@@ -1,6 +1,8 @@
 # S3 guide Compose-command correction handoff
 
-Status: ACTIVE
+Status: HISTORICAL
+
+Successor: [R038 helper cleanup handoff](AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md). Header below records R037 acceptance at transfer; current routing is in the successor.
 
 ## Current State
 

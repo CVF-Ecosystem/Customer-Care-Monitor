@@ -5,6 +5,34 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                        "id": "runtime038-spec",
+                        "family": "continuity",
+                        "path": "docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R038 UH-01..03 unused-helper cleanup contract, static/compile-only, NOT_BUILT."
+                      },
+                      {
+                        "id": "runtime038-order",
+                        "family": "continuity",
+                        "path": "docs/work_orders/CCMAI_RUNTIME_038.md",
+                        "status": "ACTIVE",
+                        "description": "R038 R1 one-function deletion order DISPATCH_READY, no runtime execution or new behavior."
+                      },
+                      {
+                        "id": "runtime038-seed",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-038.json",
+                        "status": "ACTIVE",
+                        "description": "Immutable Codex R038 seed committed before activation/BUILD."
+                      },
+                      {
+                        "id": "continuity-r037-handoff",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "Historical R037 acceptance and R038 intake/seed acknowledgment; targeted lookup only."
+                      },
+                      {
                         "id": "runtime037-independent-review",
                         "family": "continuity",
                         "path": "docs/reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md",
@@ -308,9 +336,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R037 independent REVIEW_PASS / REVIEW handoff; ORCHESTRATOR next, no new worker/runtime/FREEZE."
+                          "description":  "Current R038 DISPATCH_READY / WORK_ORDER handoff; manual Claude transfer, no worker/runtime/FREEZE."
                       },
                       {
                           "id":  "truth-implementation-status",

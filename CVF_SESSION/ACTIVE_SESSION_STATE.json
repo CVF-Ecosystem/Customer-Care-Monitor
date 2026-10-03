@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-037 is REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD cf91801168a9d41fb491bd2614f709b201b2556c, four S3-guide command prefixes and one prerequisite sentence by static comparison only. ORCHESTRATOR handles bounded local planning/continuity; no new worker BUILD or live execution dispatched. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake inputs/credential/network authority remain separate. No migration/Docker daemon/S3/credentials/network/product/push/merge/deployment/new FREEZE.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-038 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: rehydrate/acknowledge immutable R1 seed, synchronize BUILD and pass preflight before removing only the uncalled isOrdinaryIncremental helper and its attached comment. Verify references, cached Go build/vet and compile-only engine tests; do not execute tests/Analyzer/DB/provider or change run-plan behavior. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER -> SESSION_SYNC_STEWARD / review COMMIT_STEWARD -> ORCHESTRATOR; Claude documentation BUILD accepted, no new worker dispatched",
-  "roleRoute": "R037_REVIEW_PASS_DOCS_ONLY_ORCHESTRATOR_NEXT",
+  "activeRole": "Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD -> independent REVIEWER; Claude IMPLEMENTATION_WORKER only after owner manual transfer and pre-edit acknowledgment",
+  "roleRoute": "R038_UNUSED_HELPER_DISPATCH_READY_MANUAL_TRANSFER",
   "updatedAt": "2026-10-03"
 }

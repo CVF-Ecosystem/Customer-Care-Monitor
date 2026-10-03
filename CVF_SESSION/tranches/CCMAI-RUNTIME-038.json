@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-038",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer_incremental.go",
+    "docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_038.md"
+  ],
+  "prohibitedEffects": [
+    "runtime_behavior_change",
+    "analysis_mode_policy_change",
+    "provider_call",
+    "channel_call",
+    "analyzer_execution",
+    "queue_dispatch",
+    "credential_use",
+    "config_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "docker_daemon_operation",
+    "frontend_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit"
+  ],
+  "claimScope": "Unreferenced private helper deletion and compile/static evidence only. No Analyzer execution or functional DB/provider regression, runtime CVF governance, hosted readiness or FREEZE claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_038.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "1d6c1e1ededc8f38afe149c6ba334ba8edf9f301",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "OPEN",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerTransferRequired": true,
+  "implementationStarted": false
+}
