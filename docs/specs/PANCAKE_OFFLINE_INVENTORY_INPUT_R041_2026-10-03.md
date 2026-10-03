@@ -1,6 +1,6 @@
 # R041 — Explicit synthetic inventory input for offline Pancake CLI
 
-Date: 2026-10-03. Status: SPEC_READY / NOT_BUILT. Risk R2 for untrusted local input parsing/output sanitation; independent reviewer Codex, worker Claude. Source planning `9f95e04` (R040 closure); seed/baseCommit `b19602ea66a47310b503a03ec2954092560231cc`. [Order](../work_orders/CCMAI_RUNTIME_041.md).
+Date: 2026-10-03. Status: SPEC_READY; BUILT, REVIEW_PENDING. Risk R2 for untrusted local input parsing/output sanitation; independent reviewer Codex, worker Claude. Source planning `9f95e04` (R040 closure); seed/baseCommit `b19602ea66a47310b503a03ec2954092560231cc`. [Order](../work_orders/CCMAI_RUNTIME_041.md).
 
 ## Intake and design
 
@@ -31,4 +31,4 @@ No new feature claim from parser tests alone: exercise mounted main, integration
 
 At least four applied finite semantic controls, covering expected-input override bypass, size-cap bypass, nested unknown/duplicate-field acceptance and raw error/path leakage. Each must fail a named relevant assertion; include duplicate and unknown-field control cases even if one mutation affects both. Record applied match counts/digests/diff, baseline/failed assertion/restoration and final baseline. Compile errors, fixture panic, no-op or unrelated timeout INCONCLUSIVE. Original-main overlay/control must fail the new mounted valid-input acceptance assertion, not a compile failure. Preserve old six tests rather than deleting or relaxing them.
 
-Current truth DISPATCH_READY / NOT_BUILT: no loader/flag/Go execution exists yet. Existing R034-R036 acceptance and R040/R033 closures unchanged. New live inputs/authority remain outstanding. REVIEW_PASS only after exact Claude BUILD independent Codex review; no self-approval/FREEZE.
+*Historical (dispatch-time): DISPATCH_READY / NOT_BUILT, no loader/flag/Go execution existed.* **Current:** Claude BUILD added `-inventory`, `inventory.go` and `inventory_test.go` (evidence: [BUILD record](../reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md)): uncached CLI suite 13 tests/49 subtests PASS, channels 116 PASS, cached build/vet, original-main control plus eight mutations all killed and restored; symlink admission unverified on this host (no privilege), race NOT RUN (no C compiler); an empty expectation against the existing transcript yields FAIL, not INCOMPLETE. REVIEW_PENDING, not independently accepted. Existing R034-R036 acceptance and R040/R033 closures unchanged. New live inputs/authority remain outstanding. REVIEW_PASS only after exact Claude BUILD independent Codex review; no self-approval/FREEZE.

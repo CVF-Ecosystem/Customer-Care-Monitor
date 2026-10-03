@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-041 DISPATCH_READY / NOT_BUILT: owner manually transfers docs/work_orders/CCMAI_RUNTIME_041.md to Claude IMPLEMENTATION_WORKER for bounded synthetic inventory JSON input to the offline Pancake CLI. Rehydrate and acknowledge BUILD, synchronize/preflight before edits; satisfy OI-01..06 with strict bounded parser, unchanged synthetic transcript/receipt, mounted CLI tests/semantic controls, cached build/vet and protected-path equality. Return exact BUILD SHA/evidence as REVIEW_PENDING to independent Codex REVIEWER. No real inventory/credentials/config/provider/channel/network/DB/engine execution/push/merge/deployment/FREEZE. R040/R037-R039 and R033 closures, R034-R036 acceptance unchanged.",
+  "nextAllowedMove": "CCMAI-RUNTIME-041: Claude IMPLEMENTATION_WORKER (owner-transferred R2) implements the explicit optional -inventory synthetic JSON input for the offline Pancake CLI (strict bounded parser, OI-01..06) in the four authorized CLI files, keeps the six existing CLI behavior tests intact, runs the uncached CLI and channels suites, cached build/vet, the original-main control and at least four applied semantic mutations, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. Synthetic task-owned fixtures only: no real inventory/capture/credential/config read, provider/channel/network/DB/engine/Analyzer execution. R040/R037-R039/R033 closures and R034-R036 acceptance unchanged. No push/merge/deployment/new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR Codex; Claude IMPLEMENTATION_WORKER after manual owner transfer; independent REVIEWER Codex; planning COMMIT_STEWARD Codex",
-  "roleRoute": "MANUAL_CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
+  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
   "updatedAt": "2026-10-03"
 }

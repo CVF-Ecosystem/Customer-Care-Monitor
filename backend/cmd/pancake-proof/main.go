@@ -7,6 +7,11 @@
 //
 //	pancake-proof -source-sha <40-hex> -key <nonempty> [-scenario pass|missing-conversation|redirect|empty-inventory]
 //	              [-max-attempts N (1..50)] [-max-duration D (e.g. 30s, <=10m)]
+//	              [-inventory PATH]
+//
+// -inventory loads a caller-authored synthetic expected inventory (schema
+// pancake-proof-synthetic-inventory/1) from one explicit local file, only for the pass scenario.
+// It replaces the expectations, never the transcript. Without it behavior is unchanged.
 //
 // Exit codes: 0 offline PASS; 1 FAIL or INCOMPLETE; 2 invalid usage/input or sanitation failure.
 package main
@@ -33,6 +38,18 @@ var fixtureSince = time.Date(2026, 9, 20, 0, 0, 0, 0, time.UTC)
 
 func main() { os.Exit(run(os.Args[1:], os.Stdout, os.Stderr)) }
 
+// pathFlag records the explicit -inventory value and how often the option was given.
+type pathFlag struct {
+	value string
+	count int
+}
+
+func (p *pathFlag) String() string { return "" }
+func (p *pathFlag) Set(v string) error {
+	p.value, p.count = v, p.count+1
+	return nil
+}
+
 func run(args []string, stdout, stderr io.Writer) (code int) {
 	defer func() {
 		if recover() != nil { // panic text may carry arbitrary values: report a fixed message only
@@ -48,8 +65,14 @@ func run(args []string, stdout, stderr io.Writer) (code int) {
 	key := fs.String("key", "", "nonempty pseudonymization key")
 	attempts := fs.Int("max-attempts", 20, "aggregate request cap (1..50)")
 	dur := fs.Duration("max-duration", time.Minute, "aggregate duration cap (<=10m)")
-	if err := fs.Parse(args); err != nil || fs.NArg() != 0 {
-		fmt.Fprintln(stderr, "pancake-proof: invalid usage; offline-only tool with options -scenario -source-sha -key -max-attempts -max-duration")
+	var inventoryPath pathFlag
+	fs.Var(&inventoryPath, "inventory", "explicit local synthetic expected-inventory JSON file (pass scenario only)")
+	if err := fs.Parse(args); err != nil || fs.NArg() != 0 || inventoryPath.count > 1 {
+		fmt.Fprintln(stderr, "pancake-proof: invalid usage; offline-only tool with options -scenario -source-sha -key -max-attempts -max-duration -inventory")
+		return 2
+	}
+	if inventoryPath.count == 1 && *scenario != "pass" { // rejected before the file is touched
+		fmt.Fprintln(stderr, "pancake-proof: -inventory is supported only with the pass scenario")
 		return 2
 	}
 
@@ -57,6 +80,14 @@ func run(args []string, stdout, stderr io.Writer) (code int) {
 	if !ok {
 		fmt.Fprintln(stderr, "pancake-proof: unknown scenario")
 		return 2
+	}
+	if inventoryPath.count == 1 {
+		loaded, err := loadInventoryFile(inventoryPath.value)
+		if err != nil {
+			fmt.Fprintln(stderr, "pancake-proof: inventory rejected")
+			return 2
+		}
+		inv = loaded // expectations only; the transcript is never derived from the file
 	}
 	opts := channels.PancakeProofOptions{
 		SourceSHA: *sha, PageID: fixturePage, Token: fixtureToken, PseudonymKey: []byte(*key), Since: fixtureSince,

@@ -16,14 +16,21 @@
                         "family": "continuity",
                         "path": "docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R041 OI-01..06 strict synthetic input/reconciliation contract; NOT_BUILT."
+                        "description": "R041 OI-01..06 strict synthetic input/reconciliation contract; BUILT, REVIEW_PENDING."
+                      },
+                      {
+                        "id": "runtime041-build",
+                        "family": "continuity",
+                        "path": "docs/reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R041 BUILD evidence: strict synthetic inventory loader, OI matrix, nine killed controls, symlink probe unverified; REVIEW_PENDING."
                       },
                       {
                         "id": "runtime041-order",
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_041.md",
                         "status": "ACTIVE",
-                        "description": "R041 R2 bounded offline CLI input order DISPATCH_READY, manual owner transfer to Claude."
+                        "description": "R041 R2 bounded offline CLI input order in BUILD (Claude worker, owner-transferred)."
                       },
                       {
                         "id": "runtime041-seed",
@@ -450,7 +457,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R041 DISPATCH_READY handoff; bounded synthetic inventory input, independent Codex review after Claude BUILD."
+                          "description":  "Current R041 BUILD handoff; Claude worker acknowledged, bounded synthetic inventory input."
                       },
                       {
                           "id":  "truth-implementation-status",

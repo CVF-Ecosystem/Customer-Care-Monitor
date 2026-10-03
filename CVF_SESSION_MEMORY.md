@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-041", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-041", "parked": false} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R041 offline inventory dispatch (2026-10-03)
 
-CCMAI-RUNTIME-041 DISPATCH_READY / NOT_BUILT, R2 strict explicit synthetic file input to CLI, expectations independent of fixed in-memory transcript. [Order](docs/work_orders/CCMAI_RUNTIME_041.md), [SPEC](docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md); seed `b19602ea66a47310b503a03ec2954092560231cc` before activation/BUILD. Source not implemented; no worker/Go proof. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`; parked none. CCMAI-RUNTIME-041 DISPATCH_READY / NOT_BUILT: owner manually transfers docs/work_orders/CCMAI_RUNTIME_041.md to Claude IMPLEMENTATION_WORKER for bounded synthetic inventory JSON input to the offline Pancake CLI. Rehydrate and acknowledge BUILD, synchronize/preflight before edits; satisfy OI-01..06 with strict bounded parser, unchanged synthetic transcript/receipt, mounted CLI tests/semantic controls, cached build/vet and protected-path equality. Return exact BUILD SHA/evidence as REVIEW_PENDING to independent Codex REVIEWER. No real inventory/credentials/config/provider/channel/network/DB/engine execution/push/merge/deployment/FREEZE. R040/R037-R039 and R033 closures, R034-R036 acceptance unchanged.
+CCMAI-RUNTIME-041 BUILD (Claude IMPLEMENTATION_WORKER, acknowledged before edits; dispatch-time wording: no worker had started), R2 strict explicit synthetic file input to CLI, expectations independent of fixed in-memory transcript. [Order](docs/work_orders/CCMAI_RUNTIME_041.md), [SPEC](docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md); seed `b19602ea66a47310b503a03ec2954092560231cc` before activation/BUILD. Source not implemented; no worker/Go proof. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`; parked none. CCMAI-RUNTIME-041: Claude IMPLEMENTATION_WORKER (owner-transferred R2) implements the explicit optional -inventory synthetic JSON input for the offline Pancake CLI (strict bounded parser, OI-01..06) in the four authorized CLI files, keeps the six existing CLI behavior tests intact, runs the uncached CLI and channels suites, cached build/vet, the original-main control and at least four applied semantic mutations, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. Synthetic task-owned fixtures only: no real inventory/capture/credential/config read, provider/channel/network/DB/engine/Analyzer execution. R040/R037-R039/R033 closures and R034-R036 acceptance unchanged. No push/merge/deployment/new FREEZE.
 
 Prior sections are historical continuity; original acceptance/closures/failures/NOT RUN retained.
 
