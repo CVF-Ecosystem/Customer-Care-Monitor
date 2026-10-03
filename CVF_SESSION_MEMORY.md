@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-036", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-036", "parked": false} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R036 dispatch (2026-10-03)
 
-CCMAI-RUNTIME-036 BUILD (Claude IMPLEMENTATION_WORKER, acknowledged before edits). [Order](docs/work_orders/CCMAI_RUNTIME_036.md), [SPEC](docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md), immutable seed `5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3`. Strict setup-status loading/unavailable/explicit recovery; no accepted source/test result (dispatch-time wording: no worker had started). Codex authors/reviews, owner transferred manually. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md`; parked none. CCMAI-RUNTIME-036: Claude IMPLEMENTATION_WORKER builds the frontend setup-status loading, unavailable and explicit-retry recovery (SS-01..06) within the unchanged seed scope, gathers synthetic mocked-UI evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No backend change, push, merge, deployment or new FREEZE.
+CCMAI-RUNTIME-036 REVIEW_PENDING / REVIEW (exact BUILD a805db2bbb3b30ea1841537351a538c37a1af28b). [Order](docs/work_orders/CCMAI_RUNTIME_036.md), [SPEC](docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md), immutable seed `5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3`. Strict setup-status loading/unavailable/explicit recovery; no accepted source/test result (dispatch-time wording: no worker had started). Codex authors/reviews, owner transferred manually. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md`; parked none. CCMAI-RUNTIME-036: Codex independent REVIEWER reviews exact Claude BUILD a805db2bbb3b30ea1841537351a538c37a1af28b (frontend setup-status recovery, REVIEW_PENDING) for seed identity, SS-01..06, baseline controls, mutation sensitivity, preserved AUTH-001 behavior and honest NOT RUN, then records REVIEW_PASS or CHANGES_REQUIRED. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No self-approval. No backend change, push, merge, deployment or new FREEZE.
 
 Previous current-state sections are source-specific historical continuity, not the new worker instruction. R035/R034 evidence/NOT RUN/observation limits and R033 local-message FREEZE unchanged.
 

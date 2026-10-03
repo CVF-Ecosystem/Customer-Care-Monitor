@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-036 — Frontend setup-status loading and recovery
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Date: 2026-10-03. Risk ceiling R2. [SPEC](../specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md). Immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-036.json` committed 5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3 before activation/BUILD. Standing local orchestration delegation and owner continuation authorize this bounded order; owner manually transfers to Claude, no automatic invocation.
 

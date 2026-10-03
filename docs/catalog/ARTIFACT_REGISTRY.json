@@ -23,7 +23,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_036.md",
                         "status": "ACTIVE",
-                        "description": "R036 DISPATCH_READY bounded frontend order; independent review after manual Claude BUILD."
+                        "description": "R036 work order (REVIEW_PENDING): Claude built the bounded frontend recovery; independent Codex review next."
                       },
                       {
                         "id": "runtime036-seed",

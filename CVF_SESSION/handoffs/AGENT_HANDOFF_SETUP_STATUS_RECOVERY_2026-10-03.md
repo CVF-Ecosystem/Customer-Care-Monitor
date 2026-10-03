@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD
-- Next allowed move: CCMAI-RUNTIME-036: Claude IMPLEMENTATION_WORKER builds the frontend setup-status loading, unavailable and explicit-retry recovery (SS-01..06) within the unchanged seed scope, gathers synthetic mocked-UI evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No backend change, push, merge, deployment or new FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-036: Codex independent REVIEWER reviews exact Claude BUILD a805db2bbb3b30ea1841537351a538c37a1af28b (frontend setup-status recovery, REVIEW_PENDING) for seed identity, SS-01..06, baseline controls, mutation sensitivity, preserved AUTH-001 behavior and honest NOT RUN, then records REVIEW_PASS or CHANGES_REQUIRED. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No self-approval. No backend change, push, merge, deployment or new FREEZE.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -38,3 +38,9 @@ Recorded **before any source edit**. Rehydrated from current files: manifest and
 CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R2; live evidence required YES (no governance or live claim: mocked synthetic UI tests only); role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
 
 Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Codex stays independent reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. Frontend commands use the project root with the cached dependencies only (no downloads).
+
+## REVIEW_PENDING hand-back (Claude, 2026-10-03)
+
+Exact local BUILD commit: `a805db2bbb3b30ea1841537351a538c37a1af28b` (authority seed `5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3` unchanged). Evidence, SS matrix, baseline controls, mutations and limits are in `docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md`. This documentation commit records the SHA in the tranche record and changes no source. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+
+Follow-up commit checks (worker-run, local repository validation only): docs build, catalog -Check, git diff --check, default / PR-range / explicit changed-set preflight and gate unit tests re-run; git diff of frontend since the BUILD commit empty. Product evidence (38 focused / 299 full frontend tests with 0 skips, typecheck and build, old-source control, 10-mutant campaign) is in the BUILD record. NOT RUN: backend, real-browser E2E, live/provider/network/GitHub.

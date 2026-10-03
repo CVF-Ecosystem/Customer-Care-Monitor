@@ -47,16 +47,17 @@
   ],
   "claimScope": "Synthetic local frontend setup-status routing, loading/error rendering and recovery only. No backend auth/security assurance, runtime AI/CVF governance, live availability, hosted readiness or FREEZE claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_036.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3",
-  "buildCommit": null,
+  "buildCommit": "a805db2bbb3b30ea1841537351a538c37a1af28b",
   "reviewEvidence": [],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

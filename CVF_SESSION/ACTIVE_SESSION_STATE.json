@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-036: Claude IMPLEMENTATION_WORKER builds the frontend setup-status loading, unavailable and explicit-retry recovery (SS-01..06) within the unchanged seed scope, gathers synthetic mocked-UI evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No backend change, push, merge, deployment or new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-036: Codex independent REVIEWER reviews exact Claude BUILD a805db2bbb3b30ea1841537351a538c37a1af28b (frontend setup-status recovery, REVIEW_PENDING) for seed identity, SS-01..06, baseline controls, mutation sensitivity, preserved AUTH-001 behavior and honest NOT RUN, then records REVIEW_PASS or CHANGES_REQUIRED. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No self-approval. No backend change, push, merge, deployment or new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
-  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
+  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
   "updatedAt": "2026-10-03"
 }

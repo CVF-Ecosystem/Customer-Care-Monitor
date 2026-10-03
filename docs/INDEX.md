@@ -52,7 +52,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R035 status/phase/scope/roles and exact BUILD-review contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-035.json`
 - R035 MT-01..06 local contract: R1 independently REVIEW_PASS / FREEZE_OPEN; no actual job dispatch.: `docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md`
 - R036 BUILD evidence: setup-status unavailable/retry frontend, SS matrix, old-source control and mutations; REVIEW_PENDING, mocked UI only.: `docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md`
-- R036 DISPATCH_READY bounded frontend order; independent review after manual Claude BUILD.: `docs/work_orders/CCMAI_RUNTIME_036.md`
+- R036 work order (REVIEW_PENDING): Claude built the bounded frontend recovery; independent Codex review next.: `docs/work_orders/CCMAI_RUNTIME_036.md`
 - Immutable Codex dispatcher seed committed before R036 activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-036.json`
 - R036 SS-01..06 frontend loading/unavailable/retry contract, NOT_BUILT.: `docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`

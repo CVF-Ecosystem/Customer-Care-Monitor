@@ -92,4 +92,4 @@ Loading text is shared by the first-navigation wait; if a later tranche adds slo
 
 ## 8. BUILD identity and hand-back
 
-The exact BUILD commit SHA is recorded in the tranche record `buildCommit` by the follow-up documentation commit, which changes no source. Pre-commit validation (docs build, catalog, diff check, preflights, gate unit tests) is recorded in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+Exact BUILD commit: `a805db2bbb3b30ea1841537351a538c37a1af28b` (parent `dea891c`; seed `5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3` unchanged). The follow-up documentation commit records it in the tranche record `buildCommit` and changes no source. Pre-commit validation (docs build, catalog, diff check, preflights, gate unit tests) is recorded in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
