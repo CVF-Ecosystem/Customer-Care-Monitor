@@ -130,3 +130,7 @@ Required six semantic mutations are covered by M1, M2, M3, M4, M5 and M6 (every 
 - Admission also requires `since` to equal the configured instant and cursors to be IDs seen earlier in the same run; real-provider cursor semantics are unverified.
 - Real provider timestamp/protocol compatibility, tenant visibility, retention and quiescence remain unknown. A live run still needs a controlled page/tenant, independent inventory, capture handling and explicit credential/network authority under a new work order. The live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED.
 - A reviewer should verify: seed timing/identity at `d869624`, byte-identity of protected files, the PH matrix, an independent applied mutation sample (suggest M2, M3a, M4, M5a, M6c), and that the CLI has no path to a network or credential.
+
+## 8. BUILD identity and hand-back
+
+Exact BUILD commit: `69cf3a0981f8e1322040bc3b2427a4c47245e9f9` (parent `9ba811b`; seed `d869624cc15f55b39516a36f8937454e617dc3b3` unchanged). The four Go blobs in that commit hash to the SHA-256 values in section 1. This follow-up documentation commit records the SHA in the tranche record and moves the tranche to REVIEW_PENDING; it modifies no source. Gate preflights, catalog check, docs build, `git diff --check` and gate unit tests are re-run for the follow-up commit and recorded in the active handoff. Independent Codex review is next; no self-approval, push, merge, deployment or FREEZE.

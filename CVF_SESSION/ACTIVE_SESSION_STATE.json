@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-034: Claude IMPLEMENTATION_WORKER builds the bounded offline R034 harness (new files only), runs the required local checks, writes the BUILD evidence record and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. Real channel/provider/credential/network use remains unauthorized; live packet inputs remain outstanding. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No push/merge/deployment/FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-034: Codex independent REVIEWER reviews exact Claude BUILD 69cf3a0981f8e1322040bc3b2427a4c47245e9f9 (offline Pancake harness, REVIEW_PENDING) for seed timing and identity, PH-01..08, mutation sensitivity and preserved original sources, then records REVIEW_PASS or CHANGES_REQUIRED. Real channel/provider/credential/network use remains unauthorized; live packet inputs remain outstanding. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No self-approval/push/merge/deployment/FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, via owner transfer); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex); Codex independent REVIEWER after BUILD",
-  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER BUILD complete and handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
+  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
   "updatedAt": "2026-10-03"
 }

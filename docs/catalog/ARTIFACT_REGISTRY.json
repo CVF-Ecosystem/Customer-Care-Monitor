@@ -23,7 +23,7 @@
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
                           "status": "ACTIVE",
-                          "description": "R034 work order (BUILD in progress): Claude IMPLEMENTATION_WORKER builds the offline harness, Codex independently reviews."
+                          "description": "R034 work order (REVIEW_PENDING): Claude built the offline harness; Codex independent review next."
                       },
                       {
                           "id": "historical-runtime033-closure-handoff",
@@ -114,7 +114,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: R034 owner transfer to Claude for offline harness BUILD and independent Codex review."
+                          "description":  "Current active handoff: R034 offline harness REVIEW_PENDING; independent Codex review of the exact Claude BUILD."
                       },
                       {
                           "id":  "truth-implementation-status",
