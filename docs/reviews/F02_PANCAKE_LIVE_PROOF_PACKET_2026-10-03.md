@@ -56,6 +56,35 @@ Future outcomes: PASS only for the exact tested Pancake page/inventory/window/so
 
 Concrete packet prepared; external inputs and authorization are still required. New evidence is source/document inspection and local validation only. Live channel/provider requests, credential reads, backend/frontend/runtime/DB tests and GitHub checks NOT RUN. R033 and all other tranche dispositions unchanged. No CVF Web governance bridge is needed for this documentation-only assessment.
 
+## Post-R1 live integration assessment (Codex, 2026-10-03)
+
+Continuation source snapshot: `49a951f` (R034 acceptance documentation); accepted harness source remains exact repair `9e52d2840281e227a78e533aea0fd2f208ffcf6e`. This is source inspection and local planning under standing ORCHESTRATOR authority, not a new work order or live acceptance. The required external-input table above remains outstanding.
+
+Offline acceptance settles PH-01..08 only. Before drafting a live implementation/execution order, account for these concrete integration gaps:
+
+| Source fact | Required future contract |
+| --- | --- |
+| `backend/cmd/pancake-proof/main.go` accepts synthetic scenarios only, constructs its own fixture inventory/token and has no live mode or inventory loader. | Specify a separately bounded live entry point, independent inventory input and approved credential source. The existing CLI cannot execute the live packet. Implementation ownership remains Claude with independent Codex review and manual owner transfer. |
+| `backend/channels/pancake_proof.go` fixes `ProofEvidenceType` to `SYNTHETIC_OFFLINE`; receipt validation rejects `Live=true` and `Governance=true`. | Design separately reviewed live evidence provenance and serialization. Never change an offline receipt label after execution or treat the current receipt as a live receipt. Authorizing a transport alone does not resolve this evidence contract. |
+| `PancakeProofOptions` requires injected transport; default pacing/backoff can be zero for synthetic fixtures. | Bound the live transport, timeouts, cancellation, explicit pacing/backoff and error handling; validate denial before transmission. Preserve the 50-attempt/10-minute aggregate ceiling for both runs, including retries. Credential loading and external execution require their own explicit authority. |
+| `ProofInventory` includes expected eligible conversations/messages but excludes old, duplicate and non-INBOX rows; its digest identifies supplied data. | Keep an independently sourced inventory/provenance manifest covering eligibility exclusions, visibility, retention and boundary instants. Bind its immutable digest before execution; a harness-generated digest alone cannot prove independence or page completeness. |
+| The harness never persists raw captures; the packet requires approved capture handling and independently reviewable request/response reconciliation. | Specify whether controlled raw retention is necessary, its approved location/deadline/owner and sanitized review artifacts. Verify sanitation on the actual evidence format before real data use; do not add ad hoc raw logging. |
+| R1 restricts page/conversation path segments; actual provider identifiers have not been checked. | Check the supplied approved identifiers locally before any request. An incompatible identifier returns to bounded implementation/review; do not weaken admission in a live run. |
+
+These gaps do not reopen the accepted offline findings. They prevent treating R034 as an already implemented live executor. Once the external inputs arrive, rehydrate continuity, record DESIGN/SPEC and commit a new immutable authority seed before any live integration BUILD. Keep local integration tests and later authorized external execution distinct in scope and evidence, with independent review at the applicable boundary. Until then, the packet stays PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED.
+
+### Owner input record to complete
+
+Provide references and conditions together; leave credential values outside chat and Git:
+
+- Nonproduction tenant/page reference, authorized read scope and owner confirming test-only history.
+- Local reference to an existing least-privilege credential; explicit credential/network authorization for the two approved GET route templates, source, ceiling and execution window. Creation/rotation remains excluded.
+- Independent inventory location, preparer/provenance, page identity, expected eligible and excluded rows, timestamp offsets, attachment metadata, visibility/retention conditions and digest to bind before execution.
+- Quiescence window for both runs and how any intervening write will be disclosed.
+- Capture location, sanitized artifact classes, access/cleanup owner and retention deadline.
+
+Requesting these inputs is required by the active handoff's next allowed move and the Required external inputs section above; routine local planning needs no additional approval. No new worker, credential read, external call, product change or FREEZE is dispatched by this assessment.
+
 ## Offline harness update (R034 BUILD, 2026-10-03)
 
 The offline harness required by the aggregate cap/redirect/allowlist/sanitization requirements above now exists as new files under R034 ([BUILD record](PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md)); the [initial independent review](CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md) returned CHANGES_REQUIRED and the [R1 re-review](CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md) now accepts the offline harness REVIEW_PASS / FREEZE_OPEN. This packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED: no tenant/page, credential authority, inventory, quiescence, capture handling or network authority was supplied, and no live request, credential read or provider call occurred. Correction recorded from the unchanged adapter: conversation listing uses the `/api/public_api/v2/` path and messages use `/api/public_api/v1/`; a future live work order must allow exactly those. Current packet requirements are corrected; historical worker/planning evidence remains attributed separately. Before any future live dispatch, verify the harness ID guard against actual approved page/conversation IDs; any needed guard expansion requires bounded implementation and independent review. No automatic live authority follows from offline acceptance.
