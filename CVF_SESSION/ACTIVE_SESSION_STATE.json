@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-032 F02-F is REVIEW_PASS / REVIEW / FREEZE_OPEN after independent Codex R1 re-review of exact Claude repair e10330a914017f270038b7fad29d377fbc05fd26. R032-R1-01..02 settled for the local Zalo message contract only. ORCHESTRATOR may assess remaining F02 live-message evidence and scoped FREEZE readiness under separate bounded authority; no new BUILD, real provider/channel/credential action, persistent DB, parent edit, push, merge, deployment or FREEZE. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN. Global F02/live offset/retention/terminal compatibility/provider-governance proof remains OPEN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-032 post-review F02 assessment is recorded in docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md. Owner reviews the concrete local FREEZE proposal for R030/R031/R032 only; if explicitly authorized, ORCHESTRATOR prepares separate closure authority before any CLOSER action. R022/R023/R024/R030/R031/R032 remain REVIEW_PASS / REVIEW / FREEZE_OPEN. No new BUILD, real provider/channel/credential action, persistent DB, parent edit, push, merge, deployment or FREEZE is dispatched. Global F02/live offset/cursor/retention/terminal/payload compatibility/provider-governance proof remains OPEN.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD (Codex); independent R1 REVIEWER (Codex) completed; implementation/repair worker Claude",
+  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / assessment COMMIT_STEWARD (Codex); CLOSER not activated; implementation/repair worker Claude",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-03"
 }

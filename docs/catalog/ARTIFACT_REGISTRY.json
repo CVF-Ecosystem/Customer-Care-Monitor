@@ -191,7 +191,7 @@
                           "family":  "continuity",
                           "path":  "docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md",
                           "status":  "ACTIVE",
-                          "description":  "F02 remaining evidence and scoped FREEZE assessment; next bounded planning move."
+                          "description":  "Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment."
                       },
                       {
                           "id":  "f02d-message-spec",
@@ -269,6 +269,13 @@
                           "path": "docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
                           "status": "ACTIVE",
                           "description": "Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN."
+                      },
+                      {
+                          "id": "continuity-f02-post-r032-assessment",
+                          "family": "continuity",
+                          "path": "docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Current F02 post-R032 evidence assessment and concrete local R030-R032 FREEZE proposal; owner closure authority required, no live dispatch."
                       }
                   ]
 }
