@@ -4,6 +4,41 @@
     "updatedAt":  "2026-10-03",
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
+                          {
+                              "id": "runtime035-spec",
+                              "family": "continuity",
+                              "path": "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
+                              "status": "ACTIVE",
+                              "description": "R035 MT-01..06 local MCP response truth contract; implementation pending."
+                          },
+                          {
+                              "id": "runtime035-order",
+                              "family": "continuity",
+                              "path": "docs/work_orders/CCMAI_RUNTIME_035.md",
+                              "status": "ACTIVE",
+                              "description": "R035 DISPATCH_READY: Claude bounded local correction, independent Codex REVIEW; no actual dispatch."
+                          },
+                          {
+                              "id": "runtime035-authority",
+                              "family": "continuity",
+                              "path": "CVF_SESSION/authority/CCMAI-RUNTIME-035.json",
+                              "status": "ACTIVE",
+                              "description": "Immutable Codex dispatcher seed committed before R035 BUILD."
+                          },
+                          {
+                              "id": "runtime035-record",
+                              "family": "continuity",
+                              "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-035.json",
+                              "status": "ACTIVE",
+                              "description": "R035 status/phase/scope/roles and exact BUILD-review contract."
+                          },
+                          {
+                              "id": "historical-runtime034-handoff",
+                              "family": "continuity",
+                              "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
+                              "status": "ACTIVE",
+                              "description": "Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only."
+                          },
                       {
                           "id": "runtime034-r1-independent-rereview",
                           "family": "continuity",
@@ -140,9 +175,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: R034 R1 REVIEW_PASS offline; future live inputs/authority and FREEZE remain open."
+                          "description":  "Current R035 local MCP truth work order; Claude owner transfer, independent Codex REVIEW next; no live authority."
                       },
                       {
                           "id":  "truth-implementation-status",

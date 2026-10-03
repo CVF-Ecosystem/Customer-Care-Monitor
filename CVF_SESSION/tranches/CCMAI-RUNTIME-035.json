@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-035",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/mcp/handlers.go",
+    "backend/mcp/tools.go",
+    "backend/mcp/permission_admission_test.go",
+    "backend/mcp/trigger_contract_test.go",
+    "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_035.md"
+  ],
+  "prohibitedEffects": [
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "analyzer_dispatch",
+    "queue_dispatch",
+    "notification",
+    "token_rotation",
+    "permission_policy_change",
+    "oauth_change",
+    "engine_source_change",
+    "ui_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit"
+  ],
+  "claimScope": "Local MCP response truth and application permission/tenant regressions on synthetic disposable data only. No actual dispatch, runtime AI governance, hosted readiness or FREEZE claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_035.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "4b714a35bc6f49abe508d3ec4f32504e500054ba",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerTransferRequired": true,
+  "implementationStarted": false
+}
