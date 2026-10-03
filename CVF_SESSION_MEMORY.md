@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-043", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-043", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,14 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current owner routing — accounts parked (2026-10-03)
+
+Owner parks Facebook and Zalo OA account setup/credential/connectivity/live tests until resumed. ORCHESTRATOR prepares a separate bounded MCP job-execution SPEC/work order from docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md; Claude implements and Codex independently reviews after separate authority. CCMAI-RUNTIME-043 and prior local closures unchanged. No new worker BUILD/runtime/provider/channel/credential/network/DB/push/merge/deployment/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
+
+Parked checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
+
+Assessment: `docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md`. Current header supersedes historical parked-none/remaining-work routing below; dispositions unchanged.
 
 ## Current R043 local offline-contract FREEZE (2026-10-03)
 

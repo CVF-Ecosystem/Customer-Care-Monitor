@@ -7,9 +7,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: FREEZE
 - Active phase: FREEZE
-- Active role: Codex CLOSER -> ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; inherited Claude implementation and independent Codex reviews preserved
-- Next allowed move: CCMAI-RUNTIME-043 and bounded R034/R041/R042 offline contracts are FROZEN at source add584a38058a6f2863c9a84ce06f0429b9c21d2 under separate closure authority. ORCHESTRATOR handles remaining bounded local planning/continuity; no new worker BUILD or runtime proof. Symlink UNVERIFIED2 SKIP, race NOT RUN, mapped/subst drive locality, TOCTOU exclusion, adapter_omitted/live ID/time/provider compatibility remain OPEN; receipt source-sha supplied metadata only. R035/R036 acceptance and R033/R040/R037-R039 closures unchanged. Actual MCP execution and live Pancake test-page/independent inventory/credential/network/quiescence/capture authority remain separate. No real inputs/config/credentials/provider/channel/network/DB/engine/push/merge/deployment/global F02/CVF AI governance/hosted readiness closure.
-- Parked operator checkpoint: none
+- Active role: Codex ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Claude product implementation and independent Codex review route preserved
+- Next allowed move: Owner parks Facebook and Zalo OA account setup/credential/connectivity/live tests until resumed. ORCHESTRATOR prepares a separate bounded MCP job-execution SPEC/work order from docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md; Claude implements and Codex independently reviews after separate authority. CCMAI-RUNTIME-043 and prior local closures unchanged. No new worker BUILD/runtime/provider/channel/credential/network/DB/push/merge/deployment/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
+- Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Rehydration and phase acknowledgment
 
@@ -32,3 +32,14 @@ CLOSER disposition: inherited independent acceptance and fresh identity/evidence
 Final pre-publication validation (2026-10-03): FREEZE default and origin/main..HEAD preflights each7/7 PASS; mandatory gate suite46/46 OK35.706s; docs build18.22s PASS; fresh workspace doctor25/25 PASS. Static audit PASS: nine accepted component blobs, complete channels/dependencies, original target fields/history prefixes, four immutable seeds, required evidence artifacts and seven unrelated tranche records preserved; exactly16 metadata/doc paths changed. No new Go/CLI/runtime/DB/provider/network execution. This validation paragraph is the final Markdown edit; docs build and exact staged-set gate will run after it and before local commit.
 
 Reviewer command incidents retained: an rg glob supplied as a Windows path failed with error123; a guessed core doctor filename did not exist; the first static audit used backend/internal/channels instead of the actual backend/channels and stopped at git show exit128. These were read-only lookup/audit errors, caused no repository mutation, and are not product gate failures. Corrected file discovery, canonical doctor and full static audit passed as recorded above. No R042 worker failure or platform limitation erased.
+
+
+## Owner routing update — 2026-10-03
+
+Owner parks Facebook account/Zalo OA account work and live tests for later, and directs other work first. Fresh manifest/policy/state/memory/handoff/status/index rehydration: FREEZE/R043 agreed, original parked none. Doctor25/25 PASS; knowledge ingest temporary only; BOOTSTRAP_MIGRATION_PENDING nonblocking. CVF Agent Declaration: Customer-Care-Monitor-AI; read-only core ../.Controlled-Vibe-Framework-CVF at26c686cc99b8be965d2760f27fe875b03376c643; FREEZE for existing R043; R1 local planning under R2 ceiling; live evidence required YES; Codex ORCHESTRATOR -> SPEC_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; active handoff this file; next move and parked scope as current header. No role as product implementation worker.
+
+Read-only MCP/HTTP/ownership source assessment and proposed next contract recorded in docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md. New objective at INTAKE/DESIGN planning only, not a dispatched BUILD or R043 scope extension; separate SPEC/work order/seed required before implementation. Existing acceptance and limits preserved. Facebook/Zalo OA deferred, not closed; Pancake authority unchanged.
+
+Validation incident retained: first default and PR-range preflights failed continuity because nextAllowedMove abbreviated the active tranche as R043. Corrected to the canonical CCMAI-RUNTIME-043 ID in state, handoff and memory; no product change.
+
+Account-deferral planning validation: corrected default and origin/main..HEAD preflights7/7 PASS; mandatory downstream gate tests46/46 OK37.922s; docs build PASS19.98s with inherited env syntax-highlighting warnings. Doctor25/25 PASS. Source assessment only; no product/runtime/provider/channel/credential/network effect or new closure. SESSION_SYNC_STEWARD -> COMMIT_STEWARD for the bounded local routing/assessment commit.
