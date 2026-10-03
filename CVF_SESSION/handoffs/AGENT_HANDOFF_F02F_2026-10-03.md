@@ -1,6 +1,6 @@
 # Agent Handoff — F02-F Zalo local message traversal
 
-Status: ACTIVE
+Status: SUPERSEDED by `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md` (R033 closure authority active; historical R032 review/assessment retained).
 
 ## Current State
 
@@ -91,3 +91,5 @@ Assessment verification: doctor25/25, knowledge ingest in OS temp, catalog regen
 ## R033 local closure authority acknowledgment (Codex, 2026-10-03)
 
 Owner responds to the concrete R030–R032 proposal: Codex acts as orchestrator/reviewer and need not request approval for routine local decisions. This is authorization to issue/execute the described closure-only packet, not an instruction to skip phases or broaden external effects. Rehydrated manifest/policy/state/memory/active handoff/implementation/index and applicable evidence/continuity learning; core doctor25/25, knowledge ingest in OS temp, BOOTSTRAP_MIGRATION_PENDING nonblocking. CVF Agent Declaration: same project/core `26c686cc99b8be965d2760f27fe875b03376c643`, REVIEW, R2, live evidence required YES, ORCHESTRATOR -> WORK_ORDER_AUTHOR / authority COMMIT_STEWARD Codex; handoff this file, parked none. Commit separate R033 closure seed before activating a new record/order or CLOSER. Original R030–R032 seeds remain immutable; original Claude implementation/repair and independent Codex reviews are inherited, not new execution or self-review. No product/test/API/credential/persistent DB/parent/push/deploy/global-F02 closure.
+
+R033 activation: owner delegates routine orchestration/review and bounded local closure decisions; committed seed `9134995f21cfad08511f65cacf565f8dac44c929`; successor `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md` is the current authority/continuity front door. Earlier owner-decision-wait instructions above are historical.

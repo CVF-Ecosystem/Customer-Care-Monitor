@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-032 — F02-F Zalo local message traversal
 
-Status: REVIEW_PASS. Risk ceiling R2. Exact Claude R1 repair `e10330a914017f270038b7fad29d377fbc05fd26` independently accepted 2026-10-03; FREEZE_OPEN. Planning, initial review CHANGES_REQUIRED and R1 return below remain historical. No further BUILD authority is dispatched here.
+Status: FROZEN. Local message contract only; closed 2026-10-03 by Codex CLOSER under [R033 separate closure order](CCMAI_RUNTIME_033.md). Original BUILD authority/seed and historical review/repair statements below remain unchanged; later closure authority resolves local disposition only. Global F02/live/governance remains OPEN.
 
 Authority: [SPEC](../specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md), owner resume and new immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-032.json`. Seed must be committed at record baseCommit before BUILD. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02 stays OPEN.
 
@@ -40,3 +40,7 @@ Review may accept local Zalo contract only. Actual offset snapshot stability, te
 ## Independent R1 acceptance (2026-10-03)
 
 [R1 re-review](../reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md) settles R032-R1-01..02 and accepts F02F-01..09 for the local contract, using unchanged product-source evidence from the initial review and independent repaired-detector/adapter/engine reruns. REVIEW_PASS / FREEZE_OPEN; immutable seed unchanged. Earlier CHANGES_REQUIRED and repair route are historical, not current repair instructions. Global F02/live/provider-governance and FREEZE remain OPEN. Next move: bounded remaining-evidence assessment; no additional BUILD/API/credential/persistent DB/parent/push/deploy/FREEZE authority.
+
+## Local closure under separate R033 authority
+
+[Closure decision](../reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md) freezes the accepted local contract at integrated snapshot `9ad6aee65a3391bf8c2f5473ee869f29e0abfc77`; original BUILD/repair/review hashes remain in the tranche record. Inherited evidence/known limits retained. No new source/test/API/credential/DB/push/deploy effect. Original order prohibited FREEZE during its BUILD scope; R033 is the separately committed closure authority, not a rewrite of this original seed.
