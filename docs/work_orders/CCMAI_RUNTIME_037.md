@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-037 — Correct four S3 guide Compose commands
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Date: 2026-10-03. Risk R1. [SPEC](../specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md). Immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-037.json` committed 964f406a855c4813c64fc0655eeeba484129f507 before activation/BUILD. Standing local orchestration delegation; owner manually transfers to Claude, no automatic invocation.
 

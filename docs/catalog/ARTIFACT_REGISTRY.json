@@ -9,7 +9,7 @@
                         "family": "continuity",
                         "path": "docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R037 SG-01..03 four S3 guide Compose examples/prerequisite contract; BUILD in progress."
+                        "description": "R037 SG-01..03 four S3 guide Compose examples/prerequisite contract; BUILT, REVIEW_PENDING."
                       },
                       {
                         "id": "runtime037-build",
@@ -23,7 +23,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_037.md",
                         "status": "ACTIVE",
-                        "description": "R037 R1 documentation order in BUILD (Claude worker), no migration/live authority."
+                        "description": "R037 R1 documentation order REVIEW_PENDING (Claude built; independent Codex review next), no migration/live authority."
                       },
                       {
                         "id": "runtime037-seed",
@@ -303,7 +303,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R037 docs-only BUILD handoff; Claude worker acknowledged, no runtime/FREEZE."
+                          "description":  "Current R037 docs-only REVIEW_PENDING handoff; independent Codex review next, no runtime/FREEZE."
                       },
                       {
                           "id":  "truth-implementation-status",

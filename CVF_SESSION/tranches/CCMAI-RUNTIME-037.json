@@ -41,16 +41,17 @@
   ],
   "claimScope": "Four guide command examples aligned with current Compose service and image binary by source comparison only. No S3/migration runtime test, full-guide validation, provider/CVF governance, hosted readiness or FREEZE claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_037.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "964f406a855c4813c64fc0655eeeba484129f507",
-  "buildCommit": null,
+  "buildCommit": "cf91801168a9d41fb491bd2614f709b201b2556c",
   "reviewEvidence": [],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

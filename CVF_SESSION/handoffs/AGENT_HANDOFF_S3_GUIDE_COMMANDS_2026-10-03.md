@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude documentation IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD
-- Next allowed move: CCMAI-RUNTIME-037: Claude IMPLEMENTATION_WORKER corrects exactly four S3-guide command prefixes and the working-directory prerequisite sentence (SG-01..03) within the unchanged seed scope, gathers static source-comparison evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. Static docs/source checks only, no migration/Docker daemon/S3/credentials/network/product changes. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake proof remain separate; no push/merge/deployment/new FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER of the exact Claude BUILD; Claude documentation IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-037: Codex independent REVIEWER reviews exact Claude BUILD cf91801168a9d41fb491bd2614f709b201b2556c (four S3-guide Compose command prefixes and prerequisite sentence, REVIEW_PENDING) for seed identity, SG-01..03, exact five-line guide diff, source comparison, preserved migrate-files arguments/XOA confirmation and honest NOT RUN. Static docs/source checks only; no migration/Docker daemon/S3/credentials/network/product changes. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake proof remain separate. No self-approval. No push, merge, deployment or new FREEZE.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -36,3 +36,7 @@ Recorded **before any guide edit**. Rehydrated from current files: manifest and 
 CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R1 (tranche) under project R2; live evidence required YES (no governance or live claim: documentation correction by static source comparison only); role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
 
 Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Codex stays independent reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. No migration, Docker daemon, S3, credential, config/.env or network action; printed guide commands are not executed.
+
+## BUILD hand-back (Claude, 2026-10-03)
+
+Exact BUILD commit `cf91801168a9d41fb491bd2614f709b201b2556c` (parent `3a9d012`; seed `964f406a855c4813c64fc0655eeeba484129f507` unchanged). Guide diff: five lines (four command prefixes plus one prerequisite sentence), `cqa-app` count 0. Evidence: [BUILD record](../../docs/reviews/S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md). Pre-commit validation: doctor 25/25 PASS; default preflight 7/7 PASS before the guide edit and again before commit; PR-range preflight (`--base 3a9d012 --head HEAD`, with the BUILD staged set) 7/7 PASS; gate unit tests 46/46 OK (38.5 s); docs build exit 0 (29.05 s, inherited chunk-size and `env` highlighter warnings); catalog `-Write`/`-Check` PASS; `git diff --check` clean. Printed guide commands, migration, Docker daemon exec, S3, DB, credential/config reads and network NOT RUN. Only a plain `docker compose exec --help` was run. One recursive grep over the repository exceeded the shell timeout and was moved to background without side effects. Role transition BUILD -> REVIEW_PENDING: independent Codex REVIEW next; no self-approval, push, merge, deployment or FREEZE.

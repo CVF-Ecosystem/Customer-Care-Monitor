@@ -65,4 +65,4 @@ Migration (`migrate-files`, dry-run or apply), Docker daemon operations and any 
 
 ## 8. BUILD identity and hand-back
 
-The exact BUILD commit SHA is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no guide text (the commit cannot contain its own SHA). Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+Exact BUILD commit: `cf91801168a9d41fb491bd2614f709b201b2556c` (parent `3a9d012`; seed `964f406a855c4813c64fc0655eeeba484129f507` unchanged). It is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no guide text (a commit cannot contain its own SHA). Pre-commit validation (doctor, preflights, gate tests) is in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
