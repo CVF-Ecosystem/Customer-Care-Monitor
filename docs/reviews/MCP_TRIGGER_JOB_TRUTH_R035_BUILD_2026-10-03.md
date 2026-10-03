@@ -99,3 +99,39 @@ Mutant logs and hashes are held outside the repository and summarized here.
 ## 8. BUILD identity and hand-back
 
 Exact BUILD commit: `10ad83381ce76b86763c1ee06eab02ddf4734cac` (parent `09b6326`; seed `4b714a35bc6f49abe508d3ec4f32504e500054ba` unchanged). Its four source blobs hash to the section 1 values. The follow-up documentation commit records the SHA in the tranche record, moves the tranche to REVIEW_PENDING and changes no source. Pre-BUILD-commit checks: docs build PASS (first and only run, no dead links), catalog `-Write`/`-Check` PASS, `git diff --check` clean, default, `--base origin/main --head HEAD` and explicit changed-set preflight 7/7 PASS, gate unit tests OK; the same set is re-run for the follow-up commit and noted in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+
+## 9. R035-R1 repair evidence (Claude REPAIR_WORKER, 2026-10-03)
+
+Scope: independent review at commit 82a9b7d returned CHANGES_REQUIRED for R035-R1-01 and R035-R1-02 ([review](CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md)). Acknowledgment and BUILD synchronization were recorded in the active handoff and passed preflight 7/7 **before the first R1 edit**. Sections 1-8 above stay as written (the original BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac`, its evidence and its single survivor MX9); where they differ, this section is current.
+
+### R035-R1-01 — forced jobs-read-error no-effects detector
+
+Added `TestTriggerForcedReadErrorHasNoEffects` to `backend/mcp/trigger_contract_test.go` (the only source file changed; product source and `permission_admission_test.go` are byte-identical to `10ad83381ce76b86763c1ee06eab02ddf4734cac`, verified with `git diff`). Fixture membership is prepared before observation, then one call runs with the jobs query forced to fail. It asserts: generic `Job not found` and no protocol error; exactly one attempted `jobs` lookup; 0 GORM Create/Update/Delete callbacks; 0 default-transport requests; `CHECKSUM TABLE` equality for all nine listed tables **including `user_tenants`**; 0 job runs. New test file SHA-256 `d6b3dd7fafb81a0c0192cb9b0eb1f8994fb421a144a8e7df23925c892f5ab27b`.
+
+Mutation proof (runner and rules as in section 6; exact one-match edits; bytes restored; baseline before and after PASS):
+
+| ID | Mutation | Before the new test | With the new test |
+| --- | --- | --- | --- |
+| MY1 | error-only GORM `Update` on the forced-error branch (`err.Error() != "record not found"`) | **SURVIVED** the complete earlier suite (confirmed on the pre-R1 test file, matching the reviewer finding) | KILLED: `FORCED_ERROR_EFFECT: gorm writes=map[jobs:1] outbound=0` |
+| MY2 | error-only raw `Exec` that changes a job name (invisible to the GORM callbacks) | **SURVIVED** the pre-R1 suite | KILLED: `FORCED_ERROR_STATE_CHANGE: table jobs changed (194339397 -> 2534546627)` |
+
+The nine mutations from section 6 were re-run unchanged on the final tests: all KILLED (MX5 is now also caught by the new test). Final campaign: 11 mutants, **11 KILLED, 0 SURVIVED, 0 INCONCLUSIVE, 0 NOT_APPLIED**; restored hashes equal the committed values. The reviewer probe `docs/reviews/probes/r035_error_effect_probe_test.go` was used as replay evidence only; its behavior is incorporated, not copied into production code.
+
+### R035-R1-02 — stale prose retired as historical
+
+The active handoff "Open boundaries" paragraph, the order "Dispatch boundary" section, the SPEC "Intake and design" baseline paragraph and the memory dispatch sentence now carry explicit *historical (dispatch-time)* labels with the current facts beside them; SPEC Implementation truth, status, catalog and continuity describe BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac` as CHANGES_REQUIRED and the R1 repair as REVIEW_PENDING. Original evidence, NOT RUN entries and the MX9 survivor are preserved.
+
+### Commands and results (project root, `GOPROXY=off GOTOOLCHAIN=local`, disposable `mysql:8.0` on loopback, synthetic data, removed afterwards)
+
+| Check | Result |
+| --- | --- |
+| `go test -count=1 -json ./mcp` | exit 0: 18 top-level / 10 subtests PASS, 0 FAIL, **0 SKIP** (the reviewer counted 17/27 before this one added test) |
+| `go build ./...`, `go vet ./...` | exit 0, exit 0 |
+| `go test -race` | **NOT RUN**: `go: -race requires cgo` |
+| Full DB-dependent backend suite; frontend; live/provider/channel/network/GitHub | **NOT RUN** (unchanged) |
+
+Limitations are unchanged from section 7: the probes see GORM write callbacks, listed table checksums and the default transport/client only; checksums are not universal write history. Nothing here is live, governance or hosted-readiness evidence; no FREEZE is claimed.
+
+## 10. R1 repair identity and hand-back
+
+The exact R1 repair commit SHA is recorded in the tranche record `buildCommit` and the active handoff by the follow-up documentation commit; it changes no source. Docs build, catalog, diff check, preflights and gate unit tests are re-run for that commit. Independent Codex re-review is next; no self-approval, push, merge, deployment or FREEZE.

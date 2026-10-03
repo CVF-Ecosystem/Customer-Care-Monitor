@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex independent REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD; Claude R1 REPAIR_WORKER after owner transfer
-- Next allowed move: Owner transfers bounded CCMAI-RUNTIME-035 R1 to Claude: add MT-04 forced jobs-read-error no-effects detector and explicitly retire stale NOT BUILT/dispatch-planning prose, under the unchanged seed; rehydrate, acknowledge and synchronize BUILD before edits, then return exact repair SHA for independent Codex re-review. Exact BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac is CHANGES_REQUIRED / FREEZE_OPEN; production response correction has no reproduced dispatch/write defect. R034 offline acceptance and R033/local-message FREEZE unchanged; live packet PREPARED_NOT_DISPATCHED. No credential/provider/channel/external-network/actual dispatch/push/merge/deployment/FREEZE authority.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R035-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1
+- Next allowed move: CCMAI-RUNTIME-035 R1: Claude REPAIR_WORKER adds the committed forced jobs-read-error no-effects detector (R035-R1-01), retires stale NOT BUILT/dispatch prose as historical (R035-R1-02) under the unchanged seed, gathers evidence and returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review of parent BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.
 - Parked operator checkpoint: none
 
 ## Independent review return and R1 routing (Codex, 2026-10-03)
@@ -33,9 +33,9 @@ CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framew
 
 INTAKE selects the already recorded MCP triggered/queued placeholder finding while live Pancake inputs remain outstanding. DESIGN chooses a fixed unavailable tool error after unchanged authorized tenant lookup; no new queue or Analyzer. SPEC MT-01..06 bounds response truth, R021 regressions, tenant/error/no-effect observations and tools/list. WORK_ORDER authorizes exact four MCP paths plus governed documentation. [SPEC](../../docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md); [order](../../docs/work_orders/CCMAI_RUNTIME_035.md). Immutable seed4b714a35bc6f49abe508d3ec4f32504e500054ba precedes activation/BUILD; seed is read-only for workers.
 
-## Open boundaries and hand-back
+## Open boundaries and hand-back (dispatch-time text; historical where marked)
 
-Current source still returns triggered/queued; R035 NOT BUILT / DISPATCH_READY. Tests required by the order are future worker evidence, not planning results. Preserve R021 prior acceptance as source-specific history. Synthetic disposable loopback DB is allowed; production DB/config/credentials, provider/channel/external network and actual dispatch are excluded. Missing cached prerequisites yields BUILD_BLOCKED. Claude returns one exact local REVIEW_PENDING SHA/evidence; Codex independently reviews MT-01..06 before disposition. All R034/live/F02/governance/hosted/FREEZE limitations stay intact.
+**Historical (dispatch, commit 09b6326; superseded):** source then returned triggered/queued, R035 was NOT BUILT / DISPATCH_READY, and the tests required by the order were future worker evidence. **Current:** Claude BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac` returns the fixed error `job_trigger_unavailable` and was returned CHANGES_REQUIRED; the R1 repair adds the forced-read-error no-effects detector (BUILD record section 9). The original text below is kept for the unchanged boundaries. Preserve R021 prior acceptance as source-specific history. Synthetic disposable loopback DB is allowed; production DB/config/credentials, provider/channel/external network and actual dispatch are excluded. Missing cached prerequisites yields BUILD_BLOCKED. Claude returns one exact local REVIEW_PENDING SHA/evidence; Codex independently reviews MT-01..06 before disposition. All R034/live/F02/governance/hosted/FREEZE limitations stay intact.
 
 ## Planning validation
 
@@ -56,3 +56,11 @@ Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Co
 Exact local BUILD commit: `10ad83381ce76b86763c1ee06eab02ddf4734cac` (authority seed `4b714a35bc6f49abe508d3ec4f32504e500054ba` unchanged). Evidence, MT matrix, old-source detectors, mutations and limits are in the BUILD record `docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md`. This documentation commit records the SHA in the tranche record and changes no source. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
 
 Follow-up commit checks (worker-run, local repository validation only): docs build, catalog -Check, git diff --check, default / PR-range / explicit changed-set preflight (7/7) and gate unit tests re-run below; `git diff` of backend since the BUILD commit empty. Product evidence (disposable-MySQL tests, old-source detectors, nine mutations) is in the BUILD record.
+
+## R035-R1 repair rehydration and acknowledgment (Claude, 2026-10-03)
+
+Recorded **before any R1 edit**. Rehydrated from current files: manifest and policy, `ACTIVE_SESSION_STATE.json`, `CVF_SESSION_MEMORY.md`, this handoff, `IMPLEMENTATION_STATUS.json`, the R035 SPEC, order (including the R1 return), tranche record, unchanged authority seed, the independent review at commit 82a9b7d and its probe. Doctor 25/25 PASS; knowledge ingest ran and its generated index was removed (tree clean). BOOTSTRAP_MIGRATION_PENDING nonblocking.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD (repair round 1); risk ceiling R2; live evidence required YES (no governance or live claim: application contract tests on synthetic data only); role REPAIR_WORKER / repair COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
+
+Role transition REVIEW (CHANGES_REQUIRED) -> BUILD: Claude holds REPAIR_WORKER only for R035-R1-01..02; Codex remains independent reviewer; no self-approval, push, merge, deployment or FREEZE. Seed unchanged; Go commands use GOPROXY=off, GOTOOLCHAIN=local, project-root cwd and go -C backend.

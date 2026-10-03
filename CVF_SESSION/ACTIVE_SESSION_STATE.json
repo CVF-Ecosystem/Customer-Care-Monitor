@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
-  "nextAllowedMove": "Owner transfers bounded CCMAI-RUNTIME-035 R1 to Claude: add MT-04 forced jobs-read-error no-effects detector and explicitly retire stale NOT BUILT/dispatch-planning prose, under the unchanged seed; rehydrate, acknowledge and synchronize BUILD before edits, then return exact repair SHA for independent Codex re-review. Exact BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac is CHANGES_REQUIRED / FREEZE_OPEN; production response correction has no reproduced dispatch/write defect. R034 offline acceptance and R033/local-message FREEZE unchanged; live packet PREPARED_NOT_DISPATCHED. No credential/provider/channel/external-network/actual dispatch/push/merge/deployment/FREEZE authority.",
+  "nextAllowedMove": "CCMAI-RUNTIME-035 R1: Claude REPAIR_WORKER adds the committed forced jobs-read-error no-effects detector (R035-R1-01), retires stale NOT BUILT/dispatch prose as historical (R035-R1-02) under the unchanged seed, gathers evidence and returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review of parent BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD; Claude R1 REPAIR_WORKER after owner transfer",
-  "roleRoute": "R035_CHANGES_REQUIRED_BOUNDED_R1_TO_CLAUDE_THEN_CODEX_REVIEW",
+  "activeRole": "Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R035-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1",
+  "roleRoute": "CLAUDE_R1_REPAIR_THEN_INDEPENDENT_CODEX_REREVIEW",
   "updatedAt": "2026-10-03"
 }

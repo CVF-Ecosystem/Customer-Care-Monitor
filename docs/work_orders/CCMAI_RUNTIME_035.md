@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-035 — Truthful unavailable MCP trigger response
 
-Status: CHANGES_REQUIRED
+Status: BUILD
 
 Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md). Dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-035.json` committed at `4b714a35bc6f49abe508d3ec4f32504e500054ba` before activation/BUILD. Standing local orchestration delegation and owner's reaffirmed ORCHESTRATOR/REVIEWER assignment authorize this bounded order. Owner manually transfers it to Claude; no automatic agent invocation.
 
@@ -23,7 +23,9 @@ Allowed effects: local build/tests/vet/docs/gates, synthetic disposable loopback
 
 Scope mismatch, changed authorization policy, generic accepted-error test weakening, disclosure, actual dispatch, missing required DB evidence or failing checks prevents REVIEW_PASS. Missing local prerequisites returns BUILD_BLOCKED with concrete dependency. Same-scope repair follows reviewer findings under this seed; round three without independent new root cause requires REVIEW_COST_ESCALATION_REQUIRED. New actual execution is separately scoped, never improvised here.
 
-## Dispatch boundary
+## Dispatch boundary (historical, as written at dispatch)
+
+*Historical: this paragraph describes the state at dispatch commit 09b6326. Current state: BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac` was reviewed CHANGES_REQUIRED and the R035-R1 repair is recorded in the sections below and in the BUILD record section 9.*
 
 This is ready for owner transfer to Claude, with no additional routine approval request. Worker BUILD has not started. R034 remains offline REVIEW_PASS / FREEZE_OPEN; Pancake live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED. R033/local-message FREEZE stays unchanged. No public/provider governance, hosted readiness or deployment claim.
 

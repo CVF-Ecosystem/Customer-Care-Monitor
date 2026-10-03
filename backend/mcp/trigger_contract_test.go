@@ -398,6 +398,42 @@ func TestTriggerNoWritesRunsOrOutboundRequests(t *testing.T) {
 	}
 }
 
+// R035-R1-01: the forced jobs-read-error path has no effects either. Membership is prepared
+// before the observation starts, so the checksums (including user_tenants) compare equal only
+// if the tool itself changed nothing; the lookup must still have been attempted exactly once.
+func TestTriggerForcedReadErrorHasNoEffects(t *testing.T) {
+	f := newMCPFixture(t)
+	trigger := toolMatrix[9]
+	f.setMember(t, "member", permsOnly(trigger.needs))
+	probe := &effectProbe{}
+	probe.install(t, db.DB)
+	before := checksums(t)
+	runsBefore := f.jobRuns(t)
+
+	got := f.directFailing(t, f.userID, trigger.name, trigger.args(f, f.tenantA), "jobs")
+	if got.rpcErr != nil || !got.isErr || got.text != "Job not found" {
+		t.Fatalf("forced read error must stay the generic result, got isErr=%v rpcErr=%v %q", got.isErr, got.rpcErr, got.text)
+	}
+	if f.obs.count("jobs") != 1 {
+		t.Fatalf("the failing jobs lookup must have been attempted once, saw %d", f.obs.count("jobs"))
+	}
+	probe.mu.Lock()
+	writes, outbound := probe.writes, probe.http
+	probe.mu.Unlock()
+	if len(writes) != 0 || outbound != 0 {
+		t.Fatalf("FORCED_ERROR_EFFECT: gorm writes=%v outbound=%d", writes, outbound)
+	}
+	after := checksums(t)
+	for table, sum := range before {
+		if after[table] != sum {
+			t.Fatalf("FORCED_ERROR_STATE_CHANGE: table %s changed (%d -> %d)", table, sum, after[table])
+		}
+	}
+	if n := f.jobRuns(t); n != runsBefore || n != 0 {
+		t.Fatalf("job runs changed on the forced-error path: %d -> %d", runsBefore, n)
+	}
+}
+
 // goldenDescriptions are the other eleven published descriptions, copied independently of tools.go.
 var goldenDescriptions = map[string]string{
 	"cqa_list_tenants":          "List the companies the user has access to (id, name, slug only).",
