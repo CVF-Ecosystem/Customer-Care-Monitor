@@ -464,7 +464,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R041 R1 BUILD handoff; Claude REPAIR_WORKER acknowledged under unchanged R2 authority, independent Codex re-review next."
+                          "description":  "Current R041 R1 REVIEW_PENDING handoff; exact repair handed back under unchanged R2 authority, independent Codex re-review next."
                       },
                       {
                           "id":  "truth-implementation-status",

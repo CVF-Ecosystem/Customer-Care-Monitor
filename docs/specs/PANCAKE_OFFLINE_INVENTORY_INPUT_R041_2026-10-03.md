@@ -1,6 +1,6 @@
 # R041 — Explicit synthetic inventory input for offline Pancake CLI
 
-Date: 2026-10-03. Status: BUILT, CHANGES_REQUIRED after independent review; R1 repair BUILD in progress. Risk R2 for untrusted local input parsing/output sanitation; independent reviewer Codex, worker Claude. Source planning `9f95e04` (R040 closure); seed/baseCommit `b19602ea66a47310b503a03ec2954092560231cc`. [Order](../work_orders/CCMAI_RUNTIME_041.md).
+Date: 2026-10-03. Status: BUILT, CHANGES_REQUIRED after independent review; R1 repair built, REVIEW_PENDING. Risk R2 for untrusted local input parsing/output sanitation; independent reviewer Codex, worker Claude. Source planning `9f95e04` (R040 closure); seed/baseCommit `b19602ea66a47310b503a03ec2954092560231cc`. [Order](../work_orders/CCMAI_RUNTIME_041.md).
 
 ## Intake and design
 
