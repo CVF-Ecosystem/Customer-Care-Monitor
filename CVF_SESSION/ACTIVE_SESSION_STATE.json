@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-041: Claude IMPLEMENTATION_WORKER (owner-transferred R2) implements the explicit optional -inventory synthetic JSON input for the offline Pancake CLI (strict bounded parser, OI-01..06) in the four authorized CLI files, keeps the six existing CLI behavior tests intact, runs the uncached CLI and channels suites, cached build/vet, the original-main control and at least four applied semantic mutations, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. Synthetic task-owned fixtures only: no real inventory/capture/credential/config read, provider/channel/network/DB/engine/Analyzer execution. R040/R037-R039/R033 closures and R034-R036 acceptance unchanged. No push/merge/deployment/new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-041: Codex independent REVIEWER reviews exact Claude BUILD e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b (explicit -inventory synthetic JSON input for the offline Pancake CLI, REVIEW_PENDING, R2) for seed identity, OI-01..06, the strict bounded parser and fixed sanitized errors, mounted-CLI tests, the original-main control and eight applied mutations, protected-path equality, and the disclosed limits (symlink admission unverified on this host, race NOT RUN, empty expectation yields FAIL not INCOMPLETE). Synthetic task-owned fixtures only; no real inventory/credential/config/provider/channel/network/DB/engine execution by the worker. R040/R037-R039/R033 closures and R034-R036 acceptance unchanged. No self-approval. No push, merge, deployment or new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
-  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
+  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
   "updatedAt": "2026-10-03"
 }

@@ -79,4 +79,4 @@ Runner outside the repository (`r041_mut.py`, session scratchpad): asserts exact
 
 ## 7. BUILD identity and hand-back
 
-The exact BUILD commit SHA is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+Exact BUILD commit: `e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b` (parent `e620b73`; seed `b19602ea66a47310b503a03ec2954092560231cc` unchanged). It is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Pre-commit validation (docs build, catalog, doctor, diff, preflights, gate tests) is in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.

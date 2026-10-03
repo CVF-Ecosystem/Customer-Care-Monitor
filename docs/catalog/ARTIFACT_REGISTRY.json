@@ -30,7 +30,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_041.md",
                         "status": "ACTIVE",
-                        "description": "R041 R2 bounded offline CLI input order in BUILD (Claude worker, owner-transferred)."
+                        "description": "R041 R2 bounded offline CLI input order REVIEW_PENDING (Claude built; independent Codex review next)."
                       },
                       {
                         "id": "runtime041-seed",
@@ -457,7 +457,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R041 BUILD handoff; Claude worker acknowledged, bounded synthetic inventory input."
+                          "description":  "Current R041 REVIEW_PENDING handoff; independent Codex review next, bounded synthetic inventory input."
                       },
                       {
                           "id":  "truth-implementation-status",
