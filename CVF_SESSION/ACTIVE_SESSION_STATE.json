@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-039: Claude IMPLEMENTATION_WORKER first runs the authorized named-test control (TestProductionAdapterFilesUnchangedInGit, cached Go offline) and preserves its failure, then removes only that test and its PH-07 comment from backend/cmd/pancake-proof/main_test.go (CS-01..03), runs the full offline CLI suite uncached with zero skips plus cached build/vet, compares protected paths, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No engine tests/Analyzer/DB/Docker/provider/channel/credentials/network; no product change. R038/R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. No push/merge/deployment/new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-039: Codex independent REVIEWER reviews exact Claude BUILD 7a458232e5111cfbb4b7675b7df33baeb785f392 (removal of TestProductionAdapterFilesUnchangedInGit and its PH-07 comment from backend/cmd/pancake-proof/main_test.go, REVIEW_PENDING) for seed identity, CS-01..03, the preserved named original-test failure, the exact 19-line deletion with six CLI behavior tests byte-identical, the uncached offline suite (6 PASS, 0 skips), cached build/vet, empty protected-path diff and honest NOT RUN. No engine tests/Analyzer/DB/provider/network by the worker. R038/R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. No self-approval. No push, merge, deployment or new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
-  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
+  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
   "updatedAt": "2026-10-03"
 }

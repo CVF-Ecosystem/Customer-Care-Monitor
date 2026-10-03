@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R039 BUILD handoff; Claude worker acknowledged, offline CLI test-only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md`
+- Current R039 REVIEW_PENDING handoff; independent Codex review next, offline CLI test-only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -71,9 +71,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable Codex R038 seed committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-038.json`
 - R038 UH-01..03 independently REVIEW_PASS / FREEZE_OPEN, static/compile-only; zero engine tests executed.: `docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md`
 - R039 BUILD evidence: preserved original-test failure, 19-line deletion, six CLI tests PASS zero skips, protected-path diff empty; REVIEW_PENDING.: `docs/reviews/PANCAKE_CLI_SCOPE_ASSERTION_R039_BUILD_2026-10-03.md`
-- R039 R1 offline CLI test-only order in BUILD (Claude worker).: `docs/work_orders/CCMAI_RUNTIME_039.md`
+- R039 R1 offline CLI test-only order REVIEW_PENDING (Claude built; independent Codex review next).: `docs/work_orders/CCMAI_RUNTIME_039.md`
 - Immutable Codex R039 seed committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-039.json`
-- R039 CS-01..03 historical scope-test maintenance contract; BUILD in progress.: `docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md`
+- R039 CS-01..03 historical scope-test maintenance contract; BUILT, REVIEW_PENDING.: `docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

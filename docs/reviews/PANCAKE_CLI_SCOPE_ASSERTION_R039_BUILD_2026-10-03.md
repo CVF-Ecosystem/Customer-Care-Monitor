@@ -66,4 +66,4 @@ Workspace doctor 25/25 PASS before BUILD; default preflight 7/7 PASS after BUILD
 
 ## 7. BUILD identity and hand-back
 
-The exact BUILD commit SHA is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+Exact BUILD commit: `7a458232e5111cfbb4b7675b7df33baeb785f392` (parent `6e5db68`; seed `7a390dc08e7958015b107e3a3e3b890369b82cf1` unchanged). It is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Pre-commit validation (docs build, catalog, doctor, diff, preflights, gate tests) is in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.

@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-039 — Offline CLI historical scope-test maintenance
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Date: 2026-10-03. Risk R1, test-only. [SPEC](../specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md). Immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-039.json` committed `7a390dc08e7958015b107e3a3e3b890369b82cf1` before activation/BUILD. Standing local orchestration authority; owner manually transfers to Claude. Codex authors/reviews, no automatic worker invocation.
 
