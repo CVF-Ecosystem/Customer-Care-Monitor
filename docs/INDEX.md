@@ -94,6 +94,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Hand-authored synthetic expected-inventory sample for the offline proof CLI; no real data.: `docs/examples/pancake-proof/synthetic-inventory.json`
 - Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`
 - R042 DU-01..07 REVIEW_PASS; synthetic-only examples and retained platform/source-sha limits.: `docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md`
+- Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-043.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

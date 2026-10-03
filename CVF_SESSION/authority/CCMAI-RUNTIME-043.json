@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-043",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_CLOSURE_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_043.md",
+  "sourcePlanningCommit": "add584a38058a6f2863c9a84ce06f0429b9c21d2",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Codex",
+    "reviewer": "Codex",
+    "closer": "Codex"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_043.md",
+    "docs/work_orders/CCMAI_RUNTIME_034.md",
+    "docs/work_orders/CCMAI_RUNTIME_041.md",
+    "docs/work_orders/CCMAI_RUNTIME_042.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "tooling_change",
+    "dependency_change",
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "persistent_db",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "global_f02_closure",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "engine_test_execution",
+    "runtime_execution",
+    "external_network",
+    "other_tranche_freeze"
+  ],
+  "permittedEffects": [
+    "local_documentation_commit",
+    "scoped_local_freeze_R034_R041_R042"
+  ],
+  "closureTargets": [
+    "CCMAI-RUNTIME-034",
+    "CCMAI-RUNTIME-041",
+    "CCMAI-RUNTIME-042"
+  ],
+  "claimScope": "Bounded accepted offline harness PH-01..08, known-local synthetic inventory input OI-01..06 with platform/drive/TOCTOU limits, and usage documentation/examples DU-01..07 including corrected dispatcher docs dependency. Inherit independent Claude-product/Codex-review evidence; no new runtime proof, symlink/race/locality guarantee, live/global F02/CVF AI governance/hosted readiness or other tranche closure.",
+  "ownerAuthorization": "Standing owner delegation in CVF_SESSION_MEMORY.md permits routine bounded local orchestration/review/closure; owner continues after R042 independent REVIEW_PASS. Separate closure seed only, inherited Claude BUILDs/repairs and independent Codex reviews, no new worker/source/network/credential execution. All unverified platform/live boundaries remain OPEN.",
+  "originalSeedBoundary": "Original immutable BUILD seeds and their freeze prohibition remain unchanged for their BUILD actions. This separate committed seed grants only the listed closure disposition effects; target records link this closure authority."
+}

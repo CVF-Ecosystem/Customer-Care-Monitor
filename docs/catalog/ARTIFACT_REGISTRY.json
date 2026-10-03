@@ -5,6 +5,13 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+  "id": "runtime043-seed",
+  "family": "continuity",
+  "path": "CVF_SESSION/authority/CCMAI-RUNTIME-043.json",
+  "status": "ACTIVE",
+  "description": "Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof."
+},
+{
   "id": "runtime042-independent-review",
   "family": "continuity",
   "path": "docs/reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md",
