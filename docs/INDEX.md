@@ -100,10 +100,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R043 local closure: R034/R041/R042 FROZEN at integrated accepted source, inherited independent proof and explicit limits.: `docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md`
 - R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved.: `docs/work_orders/CCMAI_RUNTIME_043.md`
 - Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-043.json`
-- R044 DISPATCH_READY bounded local Claude implementation order, independent Codex review; no live authority.: `docs/work_orders/CCMAI_RUNTIME_044.md`
-- R044 WORK_ORDER/roles/scope/seed-base record; implementation not started.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
+- R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`
+- R044 REVIEW_PENDING bounded local Claude implementation order, independent Codex review; no live authority.: `docs/work_orders/CCMAI_RUNTIME_044.md`
+- R044 REVIEW_PENDING record: roles, scope, seed base, exact BUILD and evidence pointer.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
 - Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
-- R044 JE-01..10 shared MCP/HTTP dispatch contract; NOT BUILT, synthetic local evidence only.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
+- R044 JE-01..10 shared MCP/HTTP dispatch contract; built locally, review pending, synthetic local evidence only.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-044 — Shared MCP/HTTP job execution
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/MCP_JOB_EXECUTION_R044_2026-10-03.md). Separate immutable seed: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`; activation record identifies its committed SHA. Standing local orchestration delegation covers this bounded local order. Owner manually transfers to Claude; no automatic agent invocation.
 
@@ -25,4 +25,4 @@ Allowed effects: cached local build/vet/tests/docs/gates, disposable synthetic l
 
 Incorrect success, duplicate ownership, unbounded/background leaked worker, request-lifetime coupling, failed-abort admission, authorization/tenant regression, lost HTTP semantics, actual external effect, changed seed/protected path or failing/missing required evidence prevents REVIEW_PASS. Keep dissent and every failed check. Dependent same-scope repairs retain this authority; round three without an independent new root cause records REVIEW_COST_ESCALATION_REQUIRED and stops. Broader paths/effects/objective/commit owner require separate authority.
 
-Current: BUILD, Claude IMPLEMENTATION_WORKER acknowledged 2026-10-03 and implementation in progress; exact BUILD then goes to independent Codex review. Facebook/Zalo OA account work remains parked; live inputs and credential/network execution remain separate. R043 and all previous local dispositions are unchanged.
+Current: REVIEW_PENDING / REVIEW. Claude handed back exact BUILD 48918e2f953dbb32e7f5f159b1eceab7dfe3848f with evidence docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md; independent Codex review is next. Facebook/Zalo OA account work remains parked; live inputs and credential/network execution remain separate. R043 and all previous local dispositions are unchanged.

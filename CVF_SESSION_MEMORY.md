@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,10 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current R044 BUILD hand-back (2026-10-04)
+
+CCMAI-RUNTIME-044 REVIEW_PENDING / REVIEW (Claude, 2026-10-04): shared jobdispatch service wired into HTTP TriggerJob and MCP cqa_trigger_job; exact BUILD 48918e2f953dbb32e7f5f159b1eceab7dfe3848f, evidence `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`. Synthetic disposable MySQL and synthetic provider only: final real-tree run 836 pass events, 0 fail, 3 unrelated engine Zalo skips; 15 mutants and the old-source detector killed with no survivors; race NOT RUN; no live execution. Independent Codex review is next; the worker sets no REVIEW_PASS or FREEZE. Facebook/Zalo OA accounts parked; R043 and prior closures unchanged.
 
 ## Current R044 BUILD acknowledgment (2026-10-03)
 
