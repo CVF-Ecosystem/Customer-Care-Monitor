@@ -1,0 +1,28 @@
+# CCMAI-RUNTIME-044 — Shared MCP/HTTP job execution
+
+Status: DISPATCH_READY
+
+Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/MCP_JOB_EXECUTION_R044_2026-10-03.md). Separate immutable seed: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`; activation record identifies its committed SHA. Standing local orchestration delegation covers this bounded local order. Owner manually transfers to Claude; no automatic agent invocation.
+
+## Roles and execution bounds
+
+Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD, then independent REVIEWER. Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD, and same-scope REPAIR_WORKER when findings are returned. Codex does not implement product source. R2 review must remain independent.
+
+Allowed source: new direct Go files under `backend/jobdispatch/`; MCP handlers.go (trigger wiring/argument validation only), tools.go (trigger description only), permission_admission_test.go and trigger_contract_test.go (trigger-specific supersession while preserving all other assertions), new trigger_execution_test.go; HTTP handlers/jobs.go (shared trigger extraction/adaptation only), existing job_run_ownership_test.go, job_trigger_modes_test.go, job_trigger_modes_route_test.go, new job_dispatch_shared_test.go. SPEC/order plus bounded session/status/review/catalog records are permitted. Exact seed paths govern. No recursive package expansion or engine edits.
+
+Allowed effects: cached local build/vet/tests/docs/gates, disposable synthetic loopback MySQL, real shared-worker/Analyzer execution with test-injected synthetic provider and intercepted notifications, bounded local commits. Do not run the application, read real .env/config/credentials, use persistent/customer DB, call real provider/channel/notification/sync services, download dependencies, use external network, or change rights/OAuth/engine/schema/dependencies/UI/workflows/gates/parent. No push/merge/deployment/FREEZE/live governance claim. Production wiring is implemented, but real deployment/runtime execution has no authority here.
+
+## Worker sequence
+
+1. Rehydrate manifest/policy/bootstrap fallback/state/memory/active handoff/status/index and R044 seed/record/SPEC/order, plus shared repair-workflow learning. Doctor and knowledge ingest first. Verify seed is unchanged and exists at baseCommit. Record fresh declaration and worker/commit-role acknowledgment before edits; synchronize state/front marker/handoff/status/order/tranche to BUILD and pass preflight. Failed preflight stops BUILD.
+2. Consolidate JE-01..10 dependency edges before edits. Implement one transport-independent shared service using existing ReserveJobRun/RunReserved/Abort and coordinator. Preserve HTTP contracts and engine source. Inject synthetic test dependencies without production-global configuration/provider access during tests. Return a scope finding before any protected-path change.
+3. Add mounted MCP authorization/execution/error cases, simultaneous MCP/HTTP admission, persisted reservation/run identity, start/abort failure and request-lifetime tests. Preserve all existing unrelated MCP/HTTP positive/negative coverage. Supersede R035 unavailable/no-effects expectations only for admitted success; denial and error no-effect checks must remain discriminating. Do not rewrite historical R035 evidence/seed.
+4. Execute required uncached suites and old-source/mutation controls in SPEC, recording JSON counts, named semantic failures, skips and source hashes/restoration. Synthetic provider execution must be labeled application proof. Never use it as governance proof. Ensure finite goroutine teardown and restored baselines. Missing prerequisites => BUILD_BLOCKED with concrete dependency.
+5. Create `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`: exact source/seed IDs and changed set; JE matrix; sanitized synthetic request/response; persisted/ownership/effect observations; commands/exits/counts/skips; failed attempts/survivors/NOT RUN; mutated/restored byte hashes; wiring and observation limitations. Update implementation truth solely from evidence. Preserve prior acceptance/closures and parked accounts.
+6. Required checks before every commit: default and origin/main..HEAD preflights, explicit full changed-set preflight, downstream gate unit suite, catalog/doctor/diff and docs build after the final Markdown edit. Review complete seed-to-BUILD diff. Commit source locally, then use a bounded documentation hand-back commit to record exact 40-hex buildCommit if needed. Synchronize REVIEW_PENDING / REVIEW across all continuity/order/tranche surfaces and return exact BUILD/evidence to independent Codex review. Worker cannot set REVIEW_PASS or FREEZE.
+
+## Failure and repair contract
+
+Incorrect success, duplicate ownership, unbounded/background leaked worker, request-lifetime coupling, failed-abort admission, authorization/tenant regression, lost HTTP semantics, actual external effect, changed seed/protected path or failing/missing required evidence prevents REVIEW_PASS. Keep dissent and every failed check. Dependent same-scope repairs retain this authority; round three without an independent new root cause records REVIEW_COST_ESCALATION_REQUIRED and stops. Broader paths/effects/objective/commit owner require separate authority.
+
+Current: DISPATCH_READY / WORK_ORDER, implementation not started. Manual transfer to Claude is the next step. Facebook/Zalo OA account work remains parked; live inputs and credential/network execution remain separate. R043 and all previous local dispositions are unchanged.

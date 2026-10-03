@@ -5,6 +5,34 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+  "id": "runtime044-spec",
+  "family": "continuity",
+  "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "R044 JE-01..10 shared MCP/HTTP dispatch contract; NOT BUILT, synthetic local evidence only."
+},
+{
+  "id": "runtime044-order",
+  "family": "continuity",
+  "path": "docs/work_orders/CCMAI_RUNTIME_044.md",
+  "status": "ACTIVE",
+  "description": "R044 DISPATCH_READY bounded local Claude implementation order, independent Codex review; no live authority."
+},
+{
+  "id": "runtime044-record",
+  "family": "continuity",
+  "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-044.json",
+  "status": "ACTIVE",
+  "description": "R044 WORK_ORDER/roles/scope/seed-base record; implementation not started."
+},
+{
+  "id": "continuity-r043-handoff",
+  "family": "continuity",
+  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged."
+},
+{
   "id": "runtime044-seed",
   "family": "continuity",
   "path": "CVF_SESSION/authority/CCMAI-RUNTIME-044.json",
@@ -567,9 +595,9 @@
                       {
   "id": "continuity-initial-handoff",
   "family": "continuity",
-  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md",
+  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "Current R043 local FREEZE handoff with owner Facebook/Zalo OA account deferral and next MCP scope planning; no new BUILD."
+  "description": "Current R044 WORK_ORDER handoff: separate shared MCP execution contract, manual Claude transfer, independent Codex review; accounts parked."
 },
                       {
                           "id":  "truth-implementation-status",

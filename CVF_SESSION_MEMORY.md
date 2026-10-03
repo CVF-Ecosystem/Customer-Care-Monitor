@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-043", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
 
 ## Startup Order
 
@@ -50,9 +50,13 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
+## Current R044 shared MCP job-execution dispatch (2026-10-03)
+
+CCMAI-RUNTIME-044 DISPATCH_READY / WORK_ORDER under separately committed seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47. SPEC `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`, order `docs/work_orders/CCMAI_RUNTIME_044.md`; active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`. Claude implements after manual transfer; Codex independently reviews. Production wiring NOT BUILT, no worker execution or runtime proof. Synthetic disposable local execution only after worker acknowledgment/BUILD/preflight; all live authority absent. R043 and prior local closures unchanged, Facebook/Zalo OA accounts parked. BOOTSTRAP_MIGRATION_PENDING nonblocking.
+
 ## Current owner routing — accounts parked (2026-10-03)
 
-Owner parks Facebook and Zalo OA account setup/credential/connectivity/live tests until resumed. ORCHESTRATOR prepares a separate bounded MCP job-execution SPEC/work order from docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md; Claude implements and Codex independently reviews after separate authority. CCMAI-RUNTIME-043 and prior local closures unchanged. No new worker BUILD/runtime/provider/channel/credential/network/DB/push/merge/deployment/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
+CCMAI-RUNTIME-044 DISPATCH_READY / WORK_ORDER: owner manually transfers docs/work_orders/CCMAI_RUNTIME_044.md to Claude for bounded shared MCP/HTTP job execution under committed seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47. Claude rehydrates, acknowledges BUILD and passes preflight before edits; synthetic disposable local fixtures only, then exact BUILD to independent Codex REVIEW. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-043 and prior local dispositions unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
 
 Parked checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
