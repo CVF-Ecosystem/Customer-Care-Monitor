@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-032 — F02-F Zalo local message traversal
 
-Status: REVIEW_PENDING. Dispatched DISPATCH_READY; issued 2026-10-03 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2. Current state: Claude BUILD `b31b974` returned, independent review CHANGES_REQUIRED (R032-R1-01..02), Claude R1 repair returned for independent re-review. Planning-era sentences below that describe a prepared order, no agent started or no BUILD/test result are historical.
+Status: REVIEW_PASS. Risk ceiling R2. Exact Claude R1 repair `e10330a914017f270038b7fad29d377fbc05fd26` independently accepted 2026-10-03; FREEZE_OPEN. Planning, initial review CHANGES_REQUIRED and R1 return below remain historical. No further BUILD authority is dispatched here.
 
 Authority: [SPEC](../specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md), owner resume and new immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-032.json`. Seed must be committed at record baseCommit before BUILD. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN; global F02 stays OPEN.
 
@@ -36,3 +36,7 @@ Review may accept local Zalo contract only. Actual offset snapshot stability, te
 ## Independent review return / bounded R032-R1 repair (2026-10-03)
 
 [Independent review](../reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md) of BUILD `b31b9749664485e686838b47cc37d7433eb0179d`: CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. Claude REPAIR_WORKER / COMMIT_STEWARD may fix R032-R1-01 (committed finite cycle fixture, named M13 semantic detector and honest evidence) and R032-R1-02 (current implementation prose/continuity) within existing immutable seed and allowed paths. Preserve other assertions/product behavior; no additional source rewrite is required by these findings. Rehydrate/acknowledge/synchronize BUILD before repair, run finite applied mutation and restored baseline plus relevant channels/Zalo engine/gates/docs checks, return exact local repair SHA and REVIEW_PENDING for independent Codex re-review. No reviewer product/test repair, seed change or wider effects. Original worker M7/M9 INCONCLUSIVE, reviewer interrupted full run, strict/live/race limits remain.
+
+## Independent R1 acceptance (2026-10-03)
+
+[R1 re-review](../reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md) settles R032-R1-01..02 and accepts F02F-01..09 for the local contract, using unchanged product-source evidence from the initial review and independent repaired-detector/adapter/engine reruns. REVIEW_PASS / FREEZE_OPEN; immutable seed unchanged. Earlier CHANGES_REQUIRED and repair route are historical, not current repair instructions. Global F02/live/provider-governance and FREEZE remain OPEN. Next move: bounded remaining-evidence assessment; no additional BUILD/API/credential/persistent DB/parent/push/deploy/FREEZE authority.

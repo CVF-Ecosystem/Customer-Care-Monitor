@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-032 F02-F is REVIEW_PENDING / REVIEW / FREEZE_OPEN after Claude R1 repair of R032-R1-01..02 (exact local repair SHA recorded in the active handoff and tranche record). Independent Codex REVIEWER re-reviews the committed finite cycle detector and M13 evidence and the synchronized current prose against docs/reviews/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_BUILD_2026-10-03.md (R1 section); no self-approval, no reviewer product/test repair. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN. No real provider/channel/credential action, persistent DB, engine/shared-request/conversation/OAuth protocol change, other-platform/UI/schema/workflow/tooling/dependency change, parent edit, push, merge, deployment or FREEZE. Global F02/live offset/retention/terminal compatibility/provider-governance proof remains OPEN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-032 F02-F is REVIEW_PASS / REVIEW / FREEZE_OPEN after independent Codex R1 re-review of exact Claude repair e10330a914017f270038b7fad29d377fbc05fd26. R032-R1-01..02 settled for the local Zalo message contract only. ORCHESTRATOR may assess remaining F02 live-message evidence and scoped FREEZE readiness under separate bounded authority; no new BUILD, real provider/channel/credential action, persistent DB, parent edit, push, merge, deployment or FREEZE. R031/R030/R024 and predecessors remain REVIEW_PASS / FREEZE_OPEN. Global F02/live offset/retention/terminal compatibility/provider-governance proof remains OPEN.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "INDEPENDENT REVIEWER (Codex) re-review next; REPAIR_WORKER / repair COMMIT_STEWARD (Claude) completed R1; dispatcher Codex",
+  "activeRole": "ORCHESTRATOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD (Codex); independent R1 REVIEWER (Codex) completed; implementation/repair worker Claude",
   "roleRoute": "INDEPENDENT_REVIEW_REQUIRED",
   "updatedAt": "2026-10-03"
 }

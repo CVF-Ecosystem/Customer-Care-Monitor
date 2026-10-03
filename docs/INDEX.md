@@ -22,7 +22,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R031 Facebook local message order: independently REVIEW_PASS / FREEZE_OPEN.: `docs/work_orders/CCMAI_RUNTIME_031.md`
 - Independent R032 exact-BUILD review: CHANGES_REQUIRED for finite cycle detector/evidence and current implementation prose.: `docs/reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md`
 - Active F02-F Zalo local full-history message contract and acceptance matrix.: `docs/specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md`
-- R032 Zalo local message order: CHANGES_REQUIRED / FREEZE_OPEN; bounded R1 repair next.: `docs/work_orders/CCMAI_RUNTIME_032.md`
+- R032 Zalo local message order: independently REVIEW_PASS after R1; FREEZE_OPEN.: `docs/work_orders/CCMAI_RUNTIME_032.md`
+- Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
