@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R035 R1 REVIEW_PASS / REVIEW handoff; ORCHESTRATOR next, no new BUILD/live/FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`
+- Current R036 DISPATCH_READY / WORK_ORDER handoff; manual Claude transfer, no worker/live/FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -17,6 +17,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 - Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md`
 - Historical F02-E review, owner pause/resume and F02-F intake acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md`
+- Historical R035 independent acceptance and R036 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
@@ -50,6 +51,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-R1 MCP suite/error-only mutations, named failures/digests/restoration; synthetic local evidence only.: `docs/reviews/probes/r035_r1_independent_summary.json`
 - R035 status/phase/scope/roles and exact BUILD-review contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-035.json`
 - R035 MT-01..06 local contract: R1 independently REVIEW_PASS / FREEZE_OPEN; no actual job dispatch.: `docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md`
+- R036 DISPATCH_READY bounded frontend order; independent review after manual Claude BUILD.: `docs/work_orders/CCMAI_RUNTIME_036.md`
+- Immutable Codex dispatcher seed committed before R036 activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-036.json`
+- R036 SS-01..06 frontend loading/unavailable/retry contract, NOT_BUILT.: `docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

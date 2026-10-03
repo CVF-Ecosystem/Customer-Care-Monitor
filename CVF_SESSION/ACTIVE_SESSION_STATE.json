@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-035 R1 is REVIEW_PASS / FREEZE_OPEN for exact Claude repair 22204abc0a19841cd9c50ce03c0af032896d3b4e, local MCP response/effect-detector contract only. ORCHESTRATOR handles local planning/continuity autonomously; no new worker BUILD or live execution dispatched. Actual MCP queue/Analyzer wiring is a separate objective. R034 offline acceptance and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED; controlled page, independent inventory, quiescence/capture and explicit credential/network authority remain required. Global F02/governance/hosted readiness and new FREEZE stay OPEN. No push/merge/deployment/FREEZE.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-036 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: acknowledge canonical continuity and immutable seed, synchronize BUILD and pass preflight before bounded frontend setup-status loading/unavailable/retry work. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; missing live inputs and credential/network authority remain outstanding. No provider/external network/credentials/backend/push/merge/deployment/new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER -> SESSION_SYNC_STEWARD / review COMMIT_STEWARD -> ORCHESTRATOR; Claude R1 REPAIR_WORKER complete, no new worker dispatched",
-  "roleRoute": "R035_R1_REVIEW_PASS_LOCAL_ONLY_ORCHESTRATOR_NEXT",
+  "activeRole": "Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD -> independent REVIEWER; Claude IMPLEMENTATION_WORKER only after owner manual transfer and pre-edit acknowledgment",
+  "roleRoute": "R036_SETUP_STATUS_RECOVERY_DISPATCH_READY_MANUAL_TRANSFER",
   "updatedAt": "2026-10-03"
 }

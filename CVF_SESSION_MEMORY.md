@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-035", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-036", "parked": false} -->
 
 ## Startup Order
 
@@ -50,7 +50,13 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R035 dispatch (2026-10-03)
+## Current R036 dispatch (2026-10-03)
+
+CCMAI-RUNTIME-036 DISPATCH_READY / WORK_ORDER / NOT_BUILT. [Order](docs/work_orders/CCMAI_RUNTIME_036.md), [SPEC](docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md), immutable seed `5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3`. Strict setup-status loading/unavailable/explicit recovery; no worker/source/test result yet. Codex authors/reviews, owner transfers manually. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md`; parked none. CCMAI-RUNTIME-036 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: acknowledge canonical continuity and immutable seed, synchronize BUILD and pass preflight before bounded frontend setup-status loading/unavailable/retry work. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; missing live inputs and credential/network authority remain outstanding. No provider/external network/credentials/backend/push/merge/deployment/new FREEZE.
+
+Previous current-state sections are source-specific historical continuity, not the new worker instruction. R035/R034 evidence/NOT RUN/observation limits and R033 local-message FREEZE unchanged.
+
+## Historical R035 dispatch and acceptance (2026-10-03)
 
 CCMAI-RUNTIME-035 R1 REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude repair22204abc0a19841cd9c50ce03c0af032896d3b4e after [independent re-review](docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md). R1-01 forced-read-error effect detector and R1-02 historical prose settled; MCP18/28 PASS0 skips, build/vet PASS, GORM/raw mutations killed/restored. Worker11 campaign remains attributed; original survivors/failures and NOT RUN/effect limits preserved. Product/seed unchanged; no actual dispatch. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`; parked none. CCMAI-RUNTIME-035 R1 is REVIEW_PASS / FREEZE_OPEN for exact Claude repair 22204abc0a19841cd9c50ce03c0af032896d3b4e, local MCP response/effect-detector contract only. ORCHESTRATOR handles local planning/continuity autonomously; no new worker BUILD or live execution dispatched. Actual MCP queue/Analyzer wiring is a separate objective. R034 offline acceptance and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED; controlled page, independent inventory, quiescence/capture and explicit credential/network authority remain required. Global F02/governance/hosted readiness and new FREEZE stay OPEN. No push/merge/deployment/FREEZE.
 

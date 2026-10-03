@@ -1,6 +1,8 @@
 # MCP trigger response truth dispatch handoff
 
-Status: ACTIVE
+Status: HISTORICAL
+
+Successor: [R036 setup-status recovery handoff](AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md). The state/header below records R035 acceptance at transfer; current instructions are in the successor.
 
 ## Current State
 
