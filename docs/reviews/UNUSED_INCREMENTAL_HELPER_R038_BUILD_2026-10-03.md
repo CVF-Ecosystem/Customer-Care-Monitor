@@ -4,7 +4,7 @@ Status: BUILT, REVIEW_PENDING (not accepted). Worker: Claude IMPLEMENTATION_WORK
 
 ## 1. Baseline and seed
 
-- baseCommit `9bfecedaeeeff4a586ac2685871ad807976deabf`; HEAD at BUILD start `406db74` (dispatch). Seed `CVF_SESSION/authority/CCMAI-RUNTIME-038.json` (commit `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301`) unchanged and not in the changed set.
+- Source planning baseline `9bfecedaeeeff4a586ac2685871ad807976deabf`; authority/record baseCommit `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301`; HEAD at BUILD start `406db74` (dispatch). Seed `CVF_SESSION/authority/CCMAI-RUNTIME-038.json` (commit `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301`) unchanged and not in the changed set.
 - Role acknowledgment and declaration were recorded in the active handoff and BUILD continuity was synchronized and passed the default preflight (7/7) **before** the source edit.
 
 ## 2. Changed set
@@ -54,3 +54,7 @@ Execution of the engine test binary or any `go test` without `-c`; Analyzer; rac
 ## 8. BUILD identity and hand-back
 
 Exact BUILD commit: `873cbcc1a146de4d4fb86628c7b640616cb18305` (parent `406db74`; seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` unchanged). It is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Pre-commit validation (docs build, catalog, doctor, diff, preflights, gate tests) is in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+
+## Reviewer metadata correction (Codex SESSION_SYNC_STEWARD, 2026-10-03)
+
+The original section 1 mislabeled the source planning baseline 9bfeceda as baseCommit. The committed authority seed and tranche record baseCommit is 1d6c1e1ededc8f38afe149c6ba334ba8edf9f301. Corrected above by the independent reviewer; worker results and historical REVIEW_PENDING hand-back remain attributed and unchanged. No product or authority repair.
