@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current active handoff: R034 offline harness REVIEW_PENDING; independent Codex review of the exact Claude BUILD.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
+- Current active handoff: R034 CHANGES_REQUIRED; owner transfers same-scope R1 repair to Claude.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -32,9 +32,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - CVF governance policy.: `.cvf/policy.json`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`
-- R034 BUILD evidence: offline Pancake harness PH matrix, mutations and limitations; REVIEW_PENDING, synthetic only.: `docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md`
-- R034 work order (REVIEW_PENDING): Claude built the offline harness; Codex independent review next.: `docs/work_orders/CCMAI_RUNTIME_034.md`
+- Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only.: `docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md`
+- Historical R034 worker BUILD evidence; independent review returns CHANGES_REQUIRED; synthetic only.: `docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md`
+- R034 CHANGES_REQUIRED: bounded R1 repairs to Claude via owner transfer, then independent Codex re-review.: `docs/work_orders/CCMAI_RUNTIME_034.md`
 - R034 offline harness PH-01..08 requirements; no live/credential/network authority.: `docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md`
+- Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay.: `docs/reviews/probes/r034_reviewer_probe_test.go`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

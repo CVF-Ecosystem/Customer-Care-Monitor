@@ -5,6 +5,20 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                          "id": "runtime034-independent-review",
+                          "family": "continuity",
+                          "path": "docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only."
+                      },
+                      {
+                          "id": "runtime034-reviewer-probes",
+                          "family": "continuity",
+                          "path": "docs/reviews/probes/r034_reviewer_probe_test.go",
+                          "status": "ACTIVE",
+                          "description": "Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay."
+                      },
+                      {
                           "id": "runtime034-proof-harness-spec",
                           "family": "continuity",
                           "path": "docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md",
@@ -16,14 +30,14 @@
                           "family": "continuity",
                           "path": "docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md",
                           "status": "ACTIVE",
-                          "description": "R034 BUILD evidence: offline Pancake harness PH matrix, mutations and limitations; REVIEW_PENDING, synthetic only."
+                          "description": "Historical R034 worker BUILD evidence; independent review returns CHANGES_REQUIRED; synthetic only."
                       },
                       {
                           "id": "runtime034-proof-harness-order",
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
                           "status": "ACTIVE",
-                          "description": "R034 work order (REVIEW_PENDING): Claude built the offline harness; Codex independent review next."
+                          "description": "R034 CHANGES_REQUIRED: bounded R1 repairs to Claude via owner transfer, then independent Codex re-review."
                       },
                       {
                           "id": "historical-runtime033-closure-handoff",
@@ -114,7 +128,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: R034 offline harness REVIEW_PENDING; independent Codex review of the exact Claude BUILD."
+                          "description":  "Current active handoff: R034 CHANGES_REQUIRED; owner transfers same-scope R1 repair to Claude."
                       },
                       {
                           "id":  "truth-implementation-status",

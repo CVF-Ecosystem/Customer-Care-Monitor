@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-034 — Offline Pancake proof harness
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md), [live packet](../reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md), immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-034.json` committed at `d869624cc15f55b39516a36f8937454e617dc3b3`. Owner authorizes Codex coordination/review and manually transfers this work order to Claude. No live/provider/API/credential authority is granted.
 
@@ -27,3 +27,13 @@ Permitted effects: synthetic in-memory transport fixtures, local harness tests/b
 Return one exact local REVIEW_PENDING BUILD for Codex with all PH-01..08 evidence. Unsafe destination, leaked canary, exceeded aggregate cap, hidden default network, inventory false PASS, unaudited terminal, source-scope drift or an in-scope failed check prevents acceptance. Same-scope repairs follow accepted findings; third same-root repair needs REVIEW_COST_ESCALATION_REQUIRED. Existing adapter defects or missing input/dependency authority return BUILD_BLOCKED and a concrete proposal to dispatcher; seed unchanged.
 
 Local harness work does not depend on a live tenant/token. Once this is independently reviewed, a separate live work order requires controlled tenant/page, independently prepared inventory, quiescence/retention and capture handling plus explicit credential/network authorization. Harness REVIEW_PASS never waives those requirements or proves provider compatibility/global completeness.
+
+## Independent review return — bounded R034-R1 repair
+
+2026-10-03: [Independent exact-BUILD review](../reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md) of `69cf3a0981f8e1322040bc3b2427a4c47245e9f9` returns CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. Existing baseline channels111/250 and CLI7 tests, build/vet PASS; six independent contract probes fail semantically on an isolated exact-BUILD archive. Worker mutations/NOT RUN and reviewer initial probe-setup corrections remain attributed in evidence.
+
+Owner transfers this R1 return to Claude REPAIR_WORKER / repair COMMIT_STEWARD. Same immutable seed/scope/risk/effects; no new credential/network authority or seed rewrite. Resolve R034-R1-01..06: handle body read errors before observation/PASS; semantic sanitation plus supported receipt validation; safe identifiers even when inventory-approved; conversation-specific observer filter/dedupe accounting; evaluate completed until observation before disposition; align R1 contract/implementation/evidence prose. Normative packet v2/v1 planning correction is recorded in the reviewer documentation change; retain its historical explanation and confirm all R1 references agree.
+
+Read all findings and dependency edges before the first repair. Rehydrate/acknowledge/synchronize BUILD across every continuity surface and run preflight before code changes. Incorporate independent regression assertions from `docs/reviews/probes/r034_reviewer_probe_test.go` into the already-authorized test file; keep original tests/assertions. Prove baseline failures on exact original BUILD for each defect (the until control perturbs observer state, not the adapter), and run finite applied mutations of repaired guards with byte restoration and restored baseline. Library/CLI/complete channels tests, build/vet, available race or honest NOT RUN, docs/catalog/doctor/gates and exact changed-set checks remain required. DB-dependent suites still not required; no reviewer product repair.
+
+Return exact local repair SHA and REVIEW_PENDING, evidence appended in the original BUILD record or a linked R1 record, for independent Codex re-review. No self-approval/FREEZE/push/deploy. Same-scope repairs continue; third same-root round requires REVIEW_COST_ESCALATION_REQUIRED. Any existing adapter/dependency/external-effect need stops for separate bounded authority.

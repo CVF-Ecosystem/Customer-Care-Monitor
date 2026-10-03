@@ -46,17 +46,21 @@
     "original_authority_seed_edit"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_034.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "d869624cc15f55b39516a36f8937454e617dc3b3",
   "buildCommit": "69cf3a0981f8e1322040bc3b2427a4c47245e9f9",
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md",
+    "docs/reviews/probes/r034_reviewer_probe_test.go"
+  ],
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -66,5 +70,14 @@
   ],
   "ownerTransferRequired": true,
   "implementationStarted": true,
-  "claimScope": "Offline harness only; synthetic evidence is not live or AI-governance proof."
+  "claimScope": "Offline harness only; synthetic evidence is not live or AI-governance proof.",
+  "repairRound": 1,
+  "repairFindings": [
+    "R034-R1-01",
+    "R034-R1-02",
+    "R034-R1-03",
+    "R034-R1-04",
+    "R034-R1-05",
+    "R034-R1-06"
+  ]
 }
