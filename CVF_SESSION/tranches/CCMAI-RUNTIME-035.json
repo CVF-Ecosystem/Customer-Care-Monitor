@@ -46,10 +46,10 @@
   ],
   "claimScope": "Local MCP response truth and application permission/tenant regressions on synthetic disposable data only. No actual dispatch, runtime AI governance, hosted readiness or FREEZE claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_035.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "4b714a35bc6f49abe508d3ec4f32504e500054ba",
-  "buildCommit": "10ad83381ce76b86763c1ee06eab02ddf4734cac",
+  "buildCommit": "22204abc0a19841cd9c50ce03c0af032896d3b4e",
   "reviewEvidence": [
     "docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md",
     "docs/reviews/probes/r035_error_effect_probe_test.go",
@@ -62,7 +62,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

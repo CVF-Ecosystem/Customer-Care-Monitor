@@ -134,4 +134,4 @@ Limitations are unchanged from section 7: the probes see GORM write callbacks, l
 
 ## 10. R1 repair identity and hand-back
 
-The exact R1 repair commit SHA is recorded in the tranche record `buildCommit` and the active handoff by the follow-up documentation commit; it changes no source. Docs build, catalog, diff check, preflights and gate unit tests are re-run for that commit. Independent Codex re-review is next; no self-approval, push, merge, deployment or FREEZE.
+Exact R1 repair commit: `22204abc0a19841cd9c50ce03c0af032896d3b4e` (parent `357d04b`; original BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac`; seed unchanged). The follow-up documentation commit sets the tranche `buildCommit` to this SHA and changes no source. Docs build, catalog, diff check, preflights and gate unit tests are re-run for that commit. Independent Codex re-review is next; no self-approval, push, merge, deployment or FREEZE.

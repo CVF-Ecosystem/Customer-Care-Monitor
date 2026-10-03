@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-035 R1: Claude REPAIR_WORKER adds the committed forced jobs-read-error no-effects detector (R035-R1-01), retires stale NOT BUILT/dispatch prose as historical (R035-R1-02) under the unchanged seed, gathers evidence and returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review of parent BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-035 R1: Codex independent REVIEWER re-reviews exact Claude R1 repair 22204abc0a19841cd9c50ce03c0af032896d3b4e (parent BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac) for the forced-error no-effects detector and error-only mutation kill, historical retirement of stale prose, preserved seed/source scope and honest NOT RUN, then records REVIEW_PASS or CHANGES_REQUIRED. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No self-approval. No queue/analyzer dispatch, push, merge, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R035-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1",
-  "roleRoute": "CLAUDE_R1_REPAIR_THEN_INDEPENDENT_CODEX_REREVIEW",
+  "activeRole": "Codex independent REVIEWER of the exact Claude R1 repair; Claude REPAIR_WORKER handed back (further repair only on accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
+  "roleRoute": "INDEPENDENT_CODEX_REREVIEW_OF_CLAUDE_R1_REPAIR",
   "updatedAt": "2026-10-03"
 }

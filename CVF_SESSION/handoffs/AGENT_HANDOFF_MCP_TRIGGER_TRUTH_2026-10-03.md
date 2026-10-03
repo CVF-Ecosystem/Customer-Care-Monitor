@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R035-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1
-- Next allowed move: CCMAI-RUNTIME-035 R1: Claude REPAIR_WORKER adds the committed forced jobs-read-error no-effects detector (R035-R1-01), retires stale NOT BUILT/dispatch prose as historical (R035-R1-02) under the unchanged seed, gathers evidence and returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review of parent BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER of the exact Claude R1 repair; Claude REPAIR_WORKER handed back (further repair only on accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-035 R1: Codex independent REVIEWER re-reviews exact Claude R1 repair 22204abc0a19841cd9c50ce03c0af032896d3b4e (parent BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac) for the forced-error no-effects detector and error-only mutation kill, historical retirement of stale prose, preserved seed/source scope and honest NOT RUN, then records REVIEW_PASS or CHANGES_REQUIRED. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No self-approval. No queue/analyzer dispatch, push, merge, deployment or FREEZE.
 - Parked operator checkpoint: none
 
 ## Independent review return and R1 routing (Codex, 2026-10-03)
@@ -64,3 +64,9 @@ Recorded **before any R1 edit**. Rehydrated from current files: manifest and pol
 CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD (repair round 1); risk ceiling R2; live evidence required YES (no governance or live claim: application contract tests on synthetic data only); role REPAIR_WORKER / repair COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
 
 Role transition REVIEW (CHANGES_REQUIRED) -> BUILD: Claude holds REPAIR_WORKER only for R035-R1-01..02; Codex remains independent reviewer; no self-approval, push, merge, deployment or FREEZE. Seed unchanged; Go commands use GOPROXY=off, GOTOOLCHAIN=local, project-root cwd and go -C backend.
+
+## R1 REVIEW_PENDING hand-back (Claude, 2026-10-03)
+
+Exact local R1 repair commit: `22204abc0a19841cd9c50ce03c0af032896d3b4e` (parent BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac`; seed `4b714a35bc6f49abe508d3ec4f32504e500054ba` unchanged). Product source is byte-identical to the parent BUILD; only `backend/mcp/trigger_contract_test.go` and documentation changed. R035-R1-01 and R035-R1-02 are addressed in the BUILD record section 9. This documentation commit records the SHA in the tranche record (`buildCommit` now names the repair under review) and changes no source. Independent Codex re-review is next; no self-approval, push, merge, deployment or FREEZE.
+
+R1 follow-up commit checks (worker-run, local repository validation only): docs build, catalog -Check, git diff --check, default / PR-range / explicit changed-set preflight and gate unit tests re-run; `git diff` of backend since the repair commit empty. Product evidence (18/10 MCP tests with 0 skips, 11-mutant campaign, MY1/MY2 survivor-then-kill proof) is in the BUILD record section 9. NOT RUN: race (CGO unavailable), full DB-dependent backend suite, frontend, live/provider/channel/network/GitHub.
