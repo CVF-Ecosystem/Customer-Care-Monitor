@@ -864,4 +864,11 @@ export default {
   mc_copied: 'Secret copied',
   mc_copy_failed: 'Could not copy. Select and copy it manually.',
   mc_done: 'I saved the secret, close',
+
+  // CCMAI-RUNTIME-036 setup status
+  setup_status_loading: 'Checking system status...',
+  setup_status_unavailable_title: 'System status could not be checked',
+  setup_status_unavailable_desc: 'The app did not get a valid answer from the server, so no screen was opened. Your sign-in details are kept as they are. Please try again.',
+  setup_status_retry: 'Try again',
+  setup_status_retrying: 'Trying again...',
 }

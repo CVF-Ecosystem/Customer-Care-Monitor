@@ -1,6 +1,6 @@
 # R036 — Setup-status loading and recovery
 
-Status: SPEC_READY / NOT_BUILT
+Status: SPEC_READY; BUILT, REVIEW_PENDING.
 
 Date: 2026-10-03. Risk R2. Source baseline b4b119679ad6f37bbac85ed009201a42f9cc8944. Immutable seed 5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3. [Order](../work_orders/CCMAI_RUNTIME_036.md).
 
@@ -31,4 +31,4 @@ Test actual router and App lifecycle plus mounted real unavailable view; helper-
 
 ## Current implementation and boundaries
 
-DISPATCH_READY / NOT_BUILT. Intended frontend contract only, no product fix or independent acceptance yet. Backend status correctness, server installation races, cross-tab state, refresh-cookie reinstall invalidation, global interceptor defects, MCP job execution and live Pancake proof are separate. Previous R035 race/full-backend/frontend/live/provider/GitHub NOT RUN and GORM/checksum/default-client limits remain source-specific history; future R036 UI tests cannot cover them retroactively. No backend security, runtime governance, live availability, hosted readiness or new FREEZE claim.
+*Historical (dispatch-time): DISPATCH_READY / NOT_BUILT, intended contract only.* **Current:** Claude's BUILD (evidence: [BUILD record](../reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md)) adds `router/setupStatus.ts`, the `/setup-unavailable` route and view, App loading/profile sequencing and vi/en keys. A failed or malformed status settles unavailable (credentials and store untouched), Retry is explicit and single-flight with an 8 s deadline, confirmed required keeps AUTH-001 and confirmed configured resumes through `/` and the existing guards. Mocked-UI evidence: 31 new tests, 38 focused, 299 in the full frontend suite with no skips, typecheck and build PASS, old-source control 12 failures and 10 of 10 applied mutations killed. Not independently accepted yet; no backend or real-browser evidence. Backend status correctness, server installation races, cross-tab state, refresh-cookie reinstall invalidation, global interceptor defects, MCP job execution and live Pancake proof are separate. Previous R035 race/full-backend/frontend/live/provider/GitHub NOT RUN and GORM/checksum/default-client limits remain source-specific history; future R036 UI tests cannot cover them retroactively. No backend security, runtime governance, live availability, hosted readiness or new FREEZE claim.

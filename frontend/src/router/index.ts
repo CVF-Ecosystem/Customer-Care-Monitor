@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
 import api from '../api'
+import { markSetupConfigured, requestSetupStatus } from './setupStatus'
 
 // Permission denied message (set by guard, consumed by layout)
 export let permissionDeniedMsg = ''
@@ -39,6 +40,13 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/Login.vue'),
       meta: { layout: 'auth', guest: true },
+    },
+    {
+      // CCMAI-RUNTIME-036: shown when /setup/status could not be confirmed; no guest redirect.
+      path: '/setup-unavailable',
+      name: 'setup-unavailable',
+      component: () => import('../views/SetupStatusUnavailable.vue'),
+      meta: { layout: 'auth' },
     },
     {
       path: '/',
@@ -150,30 +158,29 @@ const router = createRouter({
   ],
 })
 
-// Cache setup status to avoid repeated API calls
-let setupChecked = false
-let needsSetup = false
-
 export function markSetupComplete() {
-  needsSetup = false
+  markSetupConfigured()
 }
 
 router.beforeEach(async (to) => {
-  // Check if initial setup is needed (only once per session)
-  if (!setupChecked) {
-    try {
-      const { data } = await api.get('/setup/status')
-      needsSetup = data.needs_setup
-    } catch {
-      needsSetup = false
-    }
-    setupChecked = true
+  // CCMAI-RUNTIME-036: the status is confirmed once per page lifetime and shared by concurrent
+  // navigations. An unconfirmed status is never treated as "configured": every route goes to the
+  // unavailable page, which keeps tokens and store untouched until the user retries.
+  const setupState = await requestSetupStatus()
+  if (setupState === 'unavailable') {
+    return to.name === 'setup-unavailable' ? true : { name: 'setup-unavailable' }
   }
+  if (to.name === 'setup-unavailable') {
+    // Confirmed in the meantime: leave through the fixed local entry route, no return URL.
+    return { path: '/' }
+  }
+  const needsSetup = setupState === 'required'
 
   // Máy chủ trả needs_setup=true thì Setup được ưu tiên trước mọi thông tin đăng nhập trên
   // trình duyệt. Token còn lại thuộc bản cài trước: xóa nó, và không để luật "khách có token
   // thì về /" bên dưới chạy, vì luật đó đẩy /setup → / → /setup mãi không dừng (CCMAI-AUTH-001).
-  // needsSetup chỉ đúng khi máy chủ trả lời rõ; lỗi mạng không mở Setup và không xóa gì.
+  // needsSetup chỉ đúng khi máy chủ trả lời rõ; lỗi mạng chuyển sang trang không xác định được
+  // trạng thái, không mở Setup và không xóa gì (CCMAI-RUNTIME-036).
   if (needsSetup) {
     const authStore = useAuthStore()
     if (authStore.accessToken || localStorage.getItem('cqa_access_token') || localStorage.getItem('cqa_refresh_token')) {

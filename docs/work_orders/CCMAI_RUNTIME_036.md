@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-036 — Frontend setup-status loading and recovery
 
-Status: DISPATCH_READY
+Status: BUILD
 
 Date: 2026-10-03. Risk ceiling R2. [SPEC](../specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md). Immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-036.json` committed 5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3 before activation/BUILD. Standing local orchestration delegation and owner continuation authorize this bounded order; owner manually transfers to Claude, no automatic invocation.
 
@@ -23,6 +23,8 @@ Allowed: synthetic mocked UI/navigation tests, cached local frontend typecheck/b
 
 UI bypass, premature profile load, failure-based token clearing, request loop, payload coercion, failing required checks or unauthorized edit prevents acceptance. Same-scope repairs retain this seed; round three without independent new root cause requires REVIEW_COST_ESCALATION_REQUIRED. Backend/interceptor/auth/network expansion is a separate objective.
 
-## Dispatch truth
+## Dispatch truth (historical, as written at dispatch)
+
+*Historical: the paragraph below describes the state at dispatch commit dea891c. Current: Claude BUILD is REVIEW_PENDING; see the BUILD record.*
 
 DISPATCH_READY / NOT_BUILT: no Claude worker started in this planning turn. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033 local-message FREEZE remain source-specific history. Actual MCP execution and live Pancake inputs/authority remain separate. No frontend test result, backend security, runtime AI/CVF governance, hosted readiness or new FREEZE claim.

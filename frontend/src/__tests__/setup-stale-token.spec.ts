@@ -120,10 +120,12 @@ describe('Setup with a stale browser token (AUTH-001)', () => {
     localStorage.setItem('cqa_access_token', STALE)
     const { router, pinia } = await freshApp()
     const App = (await import('../App.vue')).default
+    // R036: App now renders a localized loading state, so the real i18n plugin is installed.
+    const i18n = (await import('../i18n')).default
     const w = mount(App, {
       global: {
-        plugins: [pinia, router],
-        stubs: { 'v-app': { template: '<div><slot /></div>' }, AuthLayout: { template: '<div><slot /></div>' }, DefaultLayout: { template: '<div><slot /></div>' }, RouterView: true },
+        plugins: [pinia, router, i18n],
+        stubs: { 'v-app': { template: '<div><slot /></div>' }, 'v-progress-circular': true, AuthLayout: { template: '<div><slot /></div>' }, DefaultLayout: { template: '<div><slot /></div>' }, RouterView: true },
       },
     })
     const outcome = await navigate(router, '/setup')
@@ -167,12 +169,19 @@ describe('Setup with a stale browser token (AUTH-001)', () => {
     expect(app.router.currentRoute.value.name).toBe('login')
   })
 
-  it('a failed setup-status request neither clears the credential nor admits Setup', async () => {
+  // CCMAI-RUNTIME-036 replaces the old failed-status expectation: an unconfirmed status no longer
+  // falls through as "configured"; it settles on the unavailable page, credentials untouched.
+  it('a failed setup-status request neither clears the credential nor admits Setup or the app', async () => {
     status = 'error'
     localStorage.setItem('cqa_access_token', 'valid-synthetic-token')
-    const { router } = await freshApp()
-    await navigate(router, '/setup')
-    expect(router.currentRoute.value.name).not.toBe('setup')
+    const { router, useAuthStore } = await freshApp()
+    for (const entry of ['/setup', '/login', '/']) {
+      await navigate(router, entry)
+      expect(router.currentRoute.value.name).toBe('setup-unavailable')
+    }
     expect(localStorage.getItem('cqa_access_token')).toBe('valid-synthetic-token')
+    expect(useAuthStore().accessToken).toBe('valid-synthetic-token')
+    expect(calls(apiGet, '/setup/status')).toBe(1)
+    expect(calls(apiGet, '/profile')).toBe(0)
   })
 })

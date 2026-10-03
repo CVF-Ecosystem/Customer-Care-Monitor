@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD -> independent REVIEWER; Claude IMPLEMENTATION_WORKER only after owner manual transfer and pre-edit acknowledgment
-- Next allowed move: CCMAI-RUNTIME-036 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: acknowledge canonical continuity and immutable seed, synchronize BUILD and pass preflight before bounded frontend setup-status loading/unavailable/retry work. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; missing live inputs and credential/network authority remain outstanding. No provider/external network/credentials/backend/push/merge/deployment/new FREEZE.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD
+- Next allowed move: CCMAI-RUNTIME-036: Claude IMPLEMENTATION_WORKER builds the frontend setup-status loading, unavailable and explicit-retry recovery (SS-01..06) within the unchanged seed scope, gathers synthetic mocked-UI evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No backend change, push, merge, deployment or new FREEZE.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -30,3 +30,11 @@ Only synthetic UI checks, cached local build/docs/gates and local commits author
 Seed: default/PR/exact-two-file preflight7/7 PASS; gate46/46 PASS49.867s; diff PASS; doctor25/25 PASS. Initial activation preparation rejected an exact-spacing assumption in the mixed-format registry before any writes; worktree remained clean. Corrected to field-aware targeted replacement; no partial continuity mutation or pass claimed for that failed preparation. Activation validation follows before commit. Product/frontend/backend/live/provider/GitHub tests NOT RUN in planning.
 
 Activation validation: default/PR/exact-ten-file preflight7/7 PASS; gate unit tests46/46 PASS52.027s; docs build PASS29.72s with inherited env syntax-highlighter fallback warnings; catalog generation/check and diff PASS. Source and immutable seed unchanged against baseCommit; authority fields exactly match seed committed before activation. Exact ten-file documentation/continuity set only. Product/frontend/backend/race/live/provider/GitHub tests NOT RUN in planning. Final scoped preflight/diff precede local dispatch commit; no worker BUILD, independent product acceptance or new FREEZE.
+
+## Worker rehydration and BUILD acknowledgment (Claude, 2026-10-03)
+
+Recorded **before any source edit**. Rehydrated from current files: manifest and policy (liveGovernanceEvidenceRequired and mockAllowedOnlyForUi true), `ACTIVE_SESSION_STATE.json`, `CVF_SESSION_MEMORY.md`, this handoff, `IMPLEMENTATION_STATUS.json`, the R036 SPEC, work order, tranche record and unchanged authority seed, and the shared repair-workflow learning. Workspace doctor 25/25 PASS; knowledge ingest ran and its generated index was removed (tree clean). BOOTSTRAP_MIGRATION_PENDING nonblocking.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R2; live evidence required YES (no governance or live claim: mocked synthetic UI tests only); role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
+
+Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Codex stays independent reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. Frontend commands use the project root with the cached dependencies only (no downloads).

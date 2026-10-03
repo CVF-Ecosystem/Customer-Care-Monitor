@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-036 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: acknowledge canonical continuity and immutable seed, synchronize BUILD and pass preflight before bounded frontend setup-status loading/unavailable/retry work. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; missing live inputs and credential/network authority remain outstanding. No provider/external network/credentials/backend/push/merge/deployment/new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-036: Claude IMPLEMENTATION_WORKER builds the frontend setup-status loading, unavailable and explicit-retry recovery (SS-01..06) within the unchanged seed scope, gathers synthetic mocked-UI evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Actual MCP queue/Analyzer and Pancake live proof remain separately scoped; no credential/provider/external-network authority. No backend change, push, merge, deployment or new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD -> independent REVIEWER; Claude IMPLEMENTATION_WORKER only after owner manual transfer and pre-edit acknowledgment",
-  "roleRoute": "R036_SETUP_STATUS_RECOVERY_DISPATCH_READY_MANUAL_TRANSFER",
+  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
+  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
   "updatedAt": "2026-10-03"
 }
