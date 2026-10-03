@@ -583,7 +583,7 @@ func TestTriggerExtraArgumentsAreRejectedBeforeDispatch(t *testing.T) {
 func TestTriggerDispatchFailuresAreGenericToolErrors(t *testing.T) {
 	f := newMCPFixture(t)
 	f.admit(t)
-	const secret = "SECRET-CONFIG-AND-DRIVER-DETAIL"
+	const secret = "SECRET-CONFIG-AND-DRIVER-DETAIL" // cvf-allow-secret-fixture: synthetic leak marker
 	check := func(label, want string, wantLoads, wantStarts int, wantRuns int64) {
 		t.Helper()
 		_, resp := f.rpc(t, f.token, f.triggerBody())
@@ -778,7 +778,7 @@ func TestMountedTriggerSecondCallWhileRunningIsBusy(t *testing.T) {
 func TestTriggerForcedErrorsOnMountedRouteHaveNoEffects(t *testing.T) {
 	f := newMCPFixture(t)
 	f.admit(t)
-	const secret = "SECRET-FORCED-ERROR-DETAIL"
+	const secret = "SECRET-FORCED-ERROR-DETAIL" // cvf-allow-secret-fixture: synthetic leak marker
 	const failName = "r044:mcp:effects"
 	probe := &effectProbe{}
 	probe.install(t, db.DB)
