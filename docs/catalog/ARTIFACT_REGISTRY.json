@@ -9,14 +9,21 @@
                               "family": "continuity",
                               "path": "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
                               "status": "ACTIVE",
-                              "description": "R035 MT-01..06 local MCP response truth contract; implementation pending."
+                              "description": "R035 MT-01..06 local MCP response truth contract; BUILT, REVIEW_PENDING."
+                          },
+                          {
+                              "id": "runtime035-build",
+                              "family": "continuity",
+                              "path": "docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md",
+                              "status": "ACTIVE",
+                              "description": "R035 BUILD evidence: MCP trigger unavailable response, MT matrix, old-source detectors and mutations; REVIEW_PENDING, synthetic only."
                           },
                           {
                               "id": "runtime035-order",
                               "family": "continuity",
                               "path": "docs/work_orders/CCMAI_RUNTIME_035.md",
                               "status": "ACTIVE",
-                              "description": "R035 DISPATCH_READY: Claude bounded local correction, independent Codex REVIEW; no actual dispatch."
+                              "description": "R035 work order (BUILD): Claude bounded local correction, independent Codex REVIEW next; no actual dispatch."
                           },
                           {
                               "id": "runtime035-authority",

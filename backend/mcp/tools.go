@@ -157,7 +157,7 @@ func getAllTools() []ToolDefinition {
 		},
 		{
 			Name:        "cqa_trigger_job",
-			Description: "Manually trigger an analysis job to run immediately.",
+			Description: "Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.",
 			InputSchema: InputSchema{
 				Type: "object",
 				Properties: map[string]Property{

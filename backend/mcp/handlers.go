@@ -331,9 +331,10 @@ func toolTriggerJob(tenantID, jobID string) (interface{}, *RPCError) {
 		return errResult("Job not found")
 	}
 
-	// We can't easily run the analyzer here without config, so just return a message
-	return jsonResult(map[string]string{
-		"status":  "triggered",
-		"message": "Job " + job.Name + " has been queued for execution",
-	})
+	// MCP has no queue or analyzer wiring, so nothing is started. Report that explicitly instead
+	// of claiming the job was triggered or queued. The fixed text carries no job data.
+	return errResult(triggerUnavailableText)
 }
+
+// triggerUnavailableText is the exact tool-error text for cqa_trigger_job (CCMAI-RUNTIME-035).
+const triggerUnavailableText = "job_trigger_unavailable"

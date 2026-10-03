@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
-  "nextAllowedMove": "Owner transfers CCMAI-RUNTIME-035 to Claude for bounded local MCP trigger response/description correction and synthetic disposable-MySQL evidence, then independent Codex REVIEW. Worker must rehydrate, acknowledge and synchronize BUILD before source edits. No worker has started. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-035: Claude IMPLEMENTATION_WORKER builds the truthful unavailable MCP trigger response and description correction (MT-01..06) within the unchanged seed scope, gathers synthetic disposable-MySQL evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD; Claude assigned IMPLEMENTATION_WORKER after owner transfer; Codex independent REVIEWER next",
-  "roleRoute": "R035_LOCAL_MCP_TRUTH_DISPATCH_TO_CLAUDE_THEN_CODEX_REVIEW",
+  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
+  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
   "updatedAt": "2026-10-03"
 }

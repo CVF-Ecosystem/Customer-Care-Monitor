@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-035", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-035", "parked": false} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R035 dispatch (2026-10-03)
 
-CCMAI-RUNTIME-035 DISPATCH_READY / WORK_ORDER: Claude fixes the recorded MCP triggered/queued placeholder with a truthful unavailable response, unchanged permissions/tenant lookup and no dispatch; Codex independently reviews. [Work order](docs/work_orders/CCMAI_RUNTIME_035.md). Owner transfers manually; worker acknowledgment and BUILD synchronization required before edits. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`; parked none. R034 offline acceptance and prior local FREEZE inherited; no live authority. Current source remains unmodified.
+CCMAI-RUNTIME-035 BUILD (Claude IMPLEMENTATION_WORKER, acknowledged before edits): Claude fixes the recorded MCP triggered/queued placeholder with a truthful unavailable response, unchanged permissions/tenant lookup and no dispatch; Codex independently reviews. [Work order](docs/work_orders/CCMAI_RUNTIME_035.md). Owner transfers manually; worker acknowledgment and BUILD synchronization required before edits. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`; parked none. R034 offline acceptance and prior local FREEZE inherited; no live authority. BUILD source changed and pending independent review; not accepted.
 
 ## Historical R034 continuation assessment (2026-10-03)
 

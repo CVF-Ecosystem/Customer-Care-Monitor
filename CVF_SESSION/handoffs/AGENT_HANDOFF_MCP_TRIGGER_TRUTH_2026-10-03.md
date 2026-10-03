@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD; Claude assigned IMPLEMENTATION_WORKER after owner transfer; Codex independent REVIEWER next
-- Next allowed move: Owner transfers CCMAI-RUNTIME-035 to Claude for bounded local MCP trigger response/description correction and synthetic disposable-MySQL evidence, then independent Codex REVIEW. Worker must rehydrate, acknowledge and synchronize BUILD before source edits. No worker has started. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD
+- Next allowed move: CCMAI-RUNTIME-035: Claude IMPLEMENTATION_WORKER builds the truthful unavailable MCP trigger response and description correction (MT-01..06) within the unchanged seed scope, gathers synthetic disposable-MySQL evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -28,3 +28,11 @@ Current source still returns triggered/queued; R035 NOT BUILT / DISPATCH_READY. 
 Seed phase: default/PR/scoped preflight7/7 PASS; gate tests46/46 PASS30.717s; diff check PASS. Activation repository validation and exact documentation commit follow before owner transfer. No product tests, provider call, actual DB execution or GitHub check in this planning turn; no runtime governance claim.
 
 Activation validation: default/PR/exact-nine-file preflight7/7 PASS; gate tests46/46 PASS29.859s; docs build PASS16.60s with inherited env-highlighter fallback warnings; generated catalog/index and diff check PASS. Product/immutable-seed diffs against seed commit are empty. IMPLEMENTATION_STATUS stale no-harness-BUILD limitation corrected to R034 offline acceptance with live execution still unimplemented; no capability is newly accepted. Exact nine-file planning set only, no worker source/DB/provider/GitHub checks. Final scoped preflight/diff review before local activation commit; planning COMMIT_STEWARD Codex then ORCHESTRATOR for manual transfer. R035 remains DISPATCH_READY, not BUILD/REVIEW_PASS/FROZEN.
+
+## Worker rehydration and BUILD acknowledgment (Claude, 2026-10-03)
+
+Recorded **before any source edit**. Rehydrated from current files: manifest and policy (liveGovernanceEvidenceRequired and mockAllowedOnlyForUi true), `ACTIVE_SESSION_STATE.json`, `CVF_SESSION_MEMORY.md`, this handoff, `IMPLEMENTATION_STATUS.json`, the R035 SPEC, work order, tranche record and unchanged authority seed, and the shared repair-workflow learning. Workspace doctor 25/25 PASS; knowledge ingest ran and its generated index was removed (tree clean). BOOTSTRAP_MIGRATION_PENDING nonblocking.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R2; live evidence required YES (no governance or live claim: application contract tests on synthetic data only); role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
+
+Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Codex stays independent reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. Go commands use GOPROXY=off, GOTOOLCHAIN=local, project-root cwd and go -C backend.

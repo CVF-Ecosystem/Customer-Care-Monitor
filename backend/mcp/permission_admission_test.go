@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"log"
 	"net/http"
 	"net/http/httptest"
@@ -91,8 +92,16 @@ var toolMatrix = []toolCase{
 		func(f *mcpFixture, tn string) map[string]interface{} {
 			return map[string]interface{}{"tenant_id": tn, "job_id": "job-" + tn}
 		},
-		func(text, tenant string) bool { return strings.Contains(text, `"status": "triggered"`) }},
+		// R035: an admitted trigger reaches the own-tenant lookup and then reports the fixed unavailable error.
+		func(text, tenant string) bool { return text == triggerUnavailableWant }},
 }
+
+// triggerUnavailableWant is written independently of the production constant on purpose.
+const triggerUnavailableWant = "job_trigger_unavailable"
+
+// expectedToolError lists the only admitted tool whose success path is a fixed tool error.
+// assertAllowed accepts an error result solely for these tools and only with the exact text.
+var expectedToolError = map[string]string{"cqa_trigger_job": triggerUnavailableWant}
 
 // ---- observer ----
 
@@ -336,10 +345,25 @@ func (f *mcpFixture) assertDenied(t *testing.T, label string, got toolOutcome, w
 	}
 }
 
+// admittedOutcomeProblem returns "" when got is the admitted outcome of tc: success for every tool
+// except one listed in expectedToolError, which must return exactly its fixed tool error.
+func admittedOutcomeProblem(tc toolCase, got toolOutcome) string {
+	if want, ok := expectedToolError[tc.name]; ok {
+		if got.rpcErr != nil || !got.isErr || got.text != want {
+			return fmt.Sprintf("expected the fixed tool error %q, got isErr=%v rpcErr=%v text=%q", want, got.isErr, got.rpcErr, got.text)
+		}
+		return ""
+	}
+	if got.rpcErr != nil || got.isErr {
+		return fmt.Sprintf("expected success, got isErr=%v rpcErr=%v text=%q", got.isErr, got.rpcErr, got.text)
+	}
+	return ""
+}
+
 func (f *mcpFixture) assertAllowed(t *testing.T, label string, tc toolCase, tenant string, got toolOutcome) {
 	t.Helper()
-	if got.rpcErr != nil || got.isErr {
-		t.Fatalf("%s: expected success, got isErr=%v rpcErr=%v text=%q", label, got.isErr, got.rpcErr, got.text)
+	if problem := admittedOutcomeProblem(tc, got); problem != "" {
+		t.Fatalf("%s: %s", label, problem)
 	}
 	if !tc.own(got.text, tenant) {
 		t.Fatalf("%s: response lacks the tenant's own data: %s", label, got.text)
@@ -764,13 +788,13 @@ func TestMCPMountedRouteEnforcesTokenAndToolPermissions(t *testing.T) {
 		f.setMember(t, step.role, step.perms)
 		_, resp = f.rpc(t, f.token, triggerBody)
 		text, isErr := resultText(t, resp)
-		if isErr || !strings.Contains(text, `"status": "triggered"`) {
-			t.Fatalf("%s trigger: %q isErr=%v", step.role, text, isErr)
+		if !isErr || text != triggerUnavailableWant {
+			t.Fatalf("%s trigger: %q isErr=%v, want the fixed unavailable error", step.role, text, isErr)
 		}
 		if f.obs.count("jobs") != 1 {
 			t.Fatalf("%s: the permitted lookup was not observed (jobs queried %d times)", step.role, f.obs.count("jobs"))
 		}
-		// Existing behavior preserved: the call reports "queued" but dispatches nothing.
+		// R035: the call reports unavailable and dispatches nothing.
 		if n := f.jobRuns(t); n != 0 {
 			t.Fatalf("%s: cqa_trigger_job created %d job runs; it must not dispatch", step.role, n)
 		}

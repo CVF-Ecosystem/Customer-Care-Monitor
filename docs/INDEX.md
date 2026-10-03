@@ -41,9 +41,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent R034 R1 REVIEW_PASS: offline contract accepted, repaired probes/mutations pass; FREEZE/live remain OPEN.: `docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay.: `docs/reviews/probes/r034_reviewer_probe_test.go`
 - Immutable Codex dispatcher seed committed before R035 BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-035.json`
-- R035 DISPATCH_READY: Claude bounded local correction, independent Codex REVIEW; no actual dispatch.: `docs/work_orders/CCMAI_RUNTIME_035.md`
+- R035 BUILD evidence: MCP trigger unavailable response, MT matrix, old-source detectors and mutations; REVIEW_PENDING, synthetic only.: `docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md`
+- R035 work order (BUILD): Claude bounded local correction, independent Codex REVIEW next; no actual dispatch.: `docs/work_orders/CCMAI_RUNTIME_035.md`
 - R035 status/phase/scope/roles and exact BUILD-review contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-035.json`
-- R035 MT-01..06 local MCP response truth contract; implementation pending.: `docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md`
+- R035 MT-01..06 local MCP response truth contract; BUILT, REVIEW_PENDING.: `docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

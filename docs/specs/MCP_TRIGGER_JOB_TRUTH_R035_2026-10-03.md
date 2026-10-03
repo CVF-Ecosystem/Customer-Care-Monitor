@@ -1,6 +1,6 @@
 # MCP trigger-job response truth — R035
 
-Date: 2026-10-03 (Asia/Saigon). Author: Codex SPEC_AUTHOR. Status: ACCEPTED_FOR_BOUNDED_BUILD, implementation pending. Risk ceiling R2. Source baseline `45d14730b2518638276825d9a0b6cfe2518bbfe4`. This contract covers local application behavior only; no CVF runtime governance or real AI/channel invocation claim.
+Date: 2026-10-03 (Asia/Saigon). Author: Codex SPEC_AUTHOR. Status: ACCEPTED_FOR_BOUNDED_BUILD; BUILT, REVIEW_PENDING. Risk ceiling R2. Source baseline `45d14730b2518638276825d9a0b6cfe2518bbfe4`. This contract covers local application behavior only; no CVF runtime governance or real AI/channel invocation claim.
 
 ## Intake and design
 
@@ -31,4 +31,4 @@ Show new response and tools/list detectors fail semantically on the exact pre-R0
 
 ## Implementation truth
 
-NOT BUILT. Existing source still reports triggered/queued. New acceptance begins only after exact Claude BUILD and independent Codex REVIEW. No FREEZE, hosted readiness, deployment or global F02 closure follows from this specification.
+BUILT, not accepted. Claude's BUILD (evidence: [BUILD record](../reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md)) changes only `toolTriggerJob` and the `cqa_trigger_job` description: an admitted call with an existing own-tenant job returns the tool error `job_trigger_unavailable`; miss or query error stays `Job not found`; authorization policy, tenant predicate and the no-dispatch behavior are unchanged. The tests include disposable-MySQL contract tests with zero skips, old-source detector failures and nine applied mutations (all killed after one survivor was fixed). Acceptance begins only after independent Codex REVIEW. Race NOT RUN (CGO unavailable); full DB-dependent backend suite NOT RUN. No FREEZE, hosted readiness, deployment, actual job execution or global F02 closure follows from this specification.
