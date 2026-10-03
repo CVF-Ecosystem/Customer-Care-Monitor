@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-038", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-038", "parked": false} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R038 dispatch (2026-10-03)
 
-CCMAI-RUNTIME-038 BUILD (Claude IMPLEMENTATION_WORKER, acknowledged before edits; dispatch-time wording: no worker had started), R1 uncalled isOrdinaryIncremental/comment removal only. [Order](docs/work_orders/CCMAI_RUNTIME_038.md), [SPEC](docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md); immutable seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` before activation/BUILD. Manual Claude transfer, Codex authors/reviews. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`; parked none. CCMAI-RUNTIME-038: Claude IMPLEMENTATION_WORKER removes only the uncalled isOrdinaryIncremental helper and its attached comment (UH-01..03) within the unchanged seed scope, verifies references, runs cached Go build/vet and compile-only engine test build without executing any test binary, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No Analyzer/test/DB/provider execution, no run-plan behavior change. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.
+CCMAI-RUNTIME-038 REVIEW_PENDING / REVIEW (exact BUILD 873cbcc1a146de4d4fb86628c7b640616cb18305, not accepted; Claude IMPLEMENTATION_WORKER, acknowledged before edits; dispatch-time wording: no worker had started), R1 uncalled isOrdinaryIncremental/comment removal only. [Order](docs/work_orders/CCMAI_RUNTIME_038.md), [SPEC](docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md); immutable seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` before activation/BUILD. Manual Claude transfer, Codex authors/reviews. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`; parked none. CCMAI-RUNTIME-038: Codex independent REVIEWER reviews exact Claude BUILD 873cbcc1a146de4d4fb86628c7b640616cb18305 (removal of the uncalled isOrdinaryIncremental helper and comment, REVIEW_PENDING) for seed identity, UH-01..03, the exact seven-line diff, reference counts, cached Go build/vet/compile-only results and honest zero-tests-executed/NOT RUN. No Analyzer/test/DB/provider execution by the worker; no behavior change claimed. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No self-approval. No push, merge, deployment or new FREEZE.
 
 No product edit, Go build/vet/test compilation or runtime proof in planning. Prior current sections below are historical continuity, all acceptance/NOT RUN/limits retained.
 

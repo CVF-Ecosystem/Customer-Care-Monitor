@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -32,7 +32,7 @@
     "CCMAI-RUNTIME-014 REVIEW PASS / FREEZE OPEN after R014-R1: each new sync reservation stores a typed internal run ID and final/deferred/manual panic status writes require it. The repair keeps run ID and SQL values out of GORM's output sink on those three writes and bounds DB errors returned to workers/agents. Codex independently reran focused GORM sink, error and stale-worker tests on disposable MySQL; doctor 25/25. Old-worker side effects and stuck-sync recovery remain separate; no real channel/provider or governance proof."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-038 BUILD (in progress, not accepted): R1 uncalled isOrdinaryIncremental/comment cleanup only, no runtime mode change. Static/compile-only evidence planned, no tests executed/worker started. Seed 1d6c1e1ededc8f38afe149c6ba334ba8edf9f301; docs/work_orders/CCMAI_RUNTIME_038.md. No DB/provider/network/product behavior/new FREEZE.",
+    "CCMAI-RUNTIME-038 REVIEW_PENDING / REVIEW (exact BUILD 873cbcc1a146de4d4fb86628c7b640616cb18305, not accepted): R1 uncalled isOrdinaryIncremental/comment cleanup only, no runtime mode change. Static/compile-only evidence planned, no tests executed/worker started. Seed 1d6c1e1ededc8f38afe149c6ba334ba8edf9f301; docs/work_orders/CCMAI_RUNTIME_038.md. No DB/provider/network/product behavior/new FREEZE.",
     "CCMAI-RUNTIME-037 REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD cf91801168a9d41fb491bd2614f709b201b2556c. Independent static guide/source/help review verifies five prescribed replacements, all other guide text unchanged. Four S3 guide commands now use Compose service app. Evidence docs/reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md. No migration/container/S3/live/product/governance/FREEZE claim, no new worker dispatched.",
     "CCMAI-RUNTIME-036 REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD a805db2bbb3b30ea1841537351a538c37a1af28b. Independent frontend299/299, forced typecheck/build PASS; isolated baseline/restored38 PASS, four mutations killed and named old-source control caught/restored. Synthetic happy-dom UI/navigation only;8s fake timer, no backend/cookie/multi-tab/network/governance/FREEZE. Reviewer docs labels/hash synchronized, source/seed unchanged. Evidence docs/reviews/CCMAI_RUNTIME_036_INDEPENDENT_REVIEW_2026-10-03.md. No new worker dispatched.",
     "CCMAI-RUNTIME-035 R1 REVIEW_PASS / FREEZE_OPEN for exact Claude repair22204abc0a19841cd9c50ce03c0af032896d3b4e. R1-01..02 settled after independent Codex re-review: MCP18/28 PASS0 skips, build/vet PASS, GORM/raw error-only writes killed by committed detector, byte-restored baseline/probe2 PASS. Product/permission policy/seed unchanged; worker11 mutations attributed; NOT RUN/effect limits retained. Evidence docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md; no actual dispatch/new worker/FREEZE.",

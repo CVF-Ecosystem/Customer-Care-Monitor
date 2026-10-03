@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-038: Claude IMPLEMENTATION_WORKER removes only the uncalled isOrdinaryIncremental helper and its attached comment (UH-01..03) within the unchanged seed scope, verifies references, runs cached Go build/vet and compile-only engine test build without executing any test binary, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No Analyzer/test/DB/provider execution, no run-plan behavior change. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-038: Codex independent REVIEWER reviews exact Claude BUILD 873cbcc1a146de4d4fb86628c7b640616cb18305 (removal of the uncalled isOrdinaryIncremental helper and comment, REVIEW_PENDING) for seed identity, UH-01..03, the exact seven-line diff, reference counts, cached Go build/vet/compile-only results and honest zero-tests-executed/NOT RUN. No Analyzer/test/DB/provider execution by the worker; no behavior change claimed. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No self-approval. No push, merge, deployment or new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
-  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
+  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
   "updatedAt": "2026-10-03"
 }

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD
-- Next allowed move: CCMAI-RUNTIME-038: Claude IMPLEMENTATION_WORKER removes only the uncalled isOrdinaryIncremental helper and its attached comment (UH-01..03) within the unchanged seed scope, verifies references, runs cached Go build/vet and compile-only engine test build without executing any test binary, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No Analyzer/test/DB/provider execution, no run-plan behavior change. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-038: Codex independent REVIEWER reviews exact Claude BUILD 873cbcc1a146de4d4fb86628c7b640616cb18305 (removal of the uncalled isOrdinaryIncremental helper and comment, REVIEW_PENDING) for seed identity, UH-01..03, the exact seven-line diff, reference counts, cached Go build/vet/compile-only results and honest zero-tests-executed/NOT RUN. No Analyzer/test/DB/provider execution by the worker; no behavior change claimed. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No self-approval. No push, merge, deployment or new FREEZE.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -36,3 +36,7 @@ Recorded **before any source edit**. Rehydrated from current files: manifest and
 CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R1 (tranche) under project R2; live evidence required YES (no governance or runtime claim: unreferenced-helper deletion with compile/static evidence only); role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
 
 Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Codex stays independent reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. No Analyzer/test-binary execution, DB, Docker, provider, credential/config or network action; no downloads (Go with GOPROXY=off, GOSUMDB=off, GOTOOLCHAIN=local).
+
+## BUILD hand-back (Claude, 2026-10-03)
+
+Exact BUILD commit `873cbcc1a146de4d4fb86628c7b640616cb18305` (parent `406db74`; seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` unchanged). Source diff: `backend/engine/analyzer_incremental.go`, 7 lines removed (comment, declaration/body, one blank line), 0 added; references 2 -> 0; `time` import still used. Evidence: [BUILD record](../../docs/reviews/UNUSED_INCREMENTAL_HELPER_R038_BUILD_2026-10-03.md). Pre-commit validation: doctor 25/25 PASS; default preflight 7/7 PASS before the edit and before commit; PR-range preflight (`--base 406db74 --head HEAD`, BUILD staged) 7/7 PASS; gate unit tests 46/46 OK (24.1 s); docs build exit 0 (17.1 s, inherited warnings); catalog `-Write`/`-Check` PASS; `git diff --check` clean; cached Go (GOPROXY=off, GOSUMDB=off, GOTOOLCHAIN=local, CGO_ENABLED=0) `build ./...`, `vet ./...` and `test -c ./engine` all exit 0. **Zero tests executed**: the compiled engine test binary stayed outside Git and was never run. Analyzer, race, DB, Docker, provider, credential/config, network and GitHub NOT RUN. No failed attempt occurred. Role transition BUILD -> REVIEW_PENDING: independent Codex REVIEW next; no self-approval, push, merge, deployment or FREEZE.

@@ -53,4 +53,4 @@ Execution of the engine test binary or any `go test` without `-c`; Analyzer; rac
 
 ## 8. BUILD identity and hand-back
 
-The exact BUILD commit SHA is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+Exact BUILD commit: `873cbcc1a146de4d4fb86628c7b640616cb18305` (parent `406db74`; seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` unchanged). It is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Pre-commit validation (docs build, catalog, doctor, diff, preflights, gate tests) is in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.

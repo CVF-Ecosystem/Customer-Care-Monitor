@@ -9,7 +9,7 @@
                         "family": "continuity",
                         "path": "docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R038 UH-01..03 unused-helper cleanup contract, static/compile-only; BUILD in progress."
+                        "description": "R038 UH-01..03 unused-helper cleanup contract, static/compile-only; BUILT, REVIEW_PENDING."
                       },
                       {
                         "id": "runtime038-build",
@@ -23,7 +23,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_038.md",
                         "status": "ACTIVE",
-                        "description": "R038 R1 one-function deletion order in BUILD (Claude worker), no runtime execution or new behavior."
+                        "description": "R038 R1 one-function deletion order REVIEW_PENDING (Claude built; independent Codex review next), no runtime execution or new behavior."
                       },
                       {
                         "id": "runtime038-seed",
@@ -345,7 +345,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R038 BUILD handoff; Claude worker acknowledged, no runtime/FREEZE."
+                          "description":  "Current R038 REVIEW_PENDING handoff; independent Codex review next, no runtime/FREEZE."
                       },
                       {
                           "id":  "truth-implementation-status",
