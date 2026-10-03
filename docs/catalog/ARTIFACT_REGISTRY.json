@@ -5,6 +5,13 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                        "id": "runtime039-independent-review",
+                        "family": "continuity",
+                        "path": "docs/reviews/CCMAI_RUNTIME_039_INDEPENDENT_REVIEW_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "Independent R039 exact-BUILD REVIEW_PASS: deletion/equality, original overlay control, offline CLI6 PASS0 skips and protected paths unchanged."
+                      },
+                      {
                         "id": "continuity-r038-handoff",
                         "family": "continuity",
                         "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
@@ -16,21 +23,21 @@
                         "family": "continuity",
                         "path": "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R039 CS-01..03 historical scope-test maintenance contract; BUILT, REVIEW_PENDING."
+                        "description": "R039 CS-01..03 independently REVIEW_PASS / FREEZE_OPEN, test-only; six CLI behaviors preserved."
                       },
                       {
                         "id": "runtime039-build",
                         "family": "continuity",
                         "path": "docs/reviews/PANCAKE_CLI_SCOPE_ASSERTION_R039_BUILD_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R039 BUILD evidence: preserved original-test failure, 19-line deletion, six CLI tests PASS zero skips, protected-path diff empty; REVIEW_PENDING."
+                        "description": "Historical Claude R039 BUILD evidence and original control failure; exact deletion independently accepted offline."
                       },
                       {
                         "id": "runtime039-order",
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_039.md",
                         "status": "ACTIVE",
-                        "description": "R039 R1 offline CLI test-only order REVIEW_PENDING (Claude built; independent Codex review next)."
+                        "description": "R039 exact Claude BUILD independently REVIEW_PASS / FREEZE_OPEN; no repair/new worker."
                       },
                       {
                         "id": "runtime039-seed",
@@ -387,7 +394,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R039 REVIEW_PENDING handoff; independent Codex review next, offline CLI test-only."
+                          "description":  "Current R039 independent acceptance handoff; six offline CLI tests PASS zero skips, FREEZE_OPEN."
                       },
                       {
                           "id":  "truth-implementation-status",
