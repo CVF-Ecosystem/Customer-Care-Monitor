@@ -5,6 +5,27 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+  "id": "runtime044-independent-review",
+  "family": "continuity",
+  "path": "docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md",
+  "status": "ACTIVE",
+  "description": "Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved."
+},
+{
+  "id": "runtime044-reviewer-notification-probe",
+  "family": "continuity",
+  "path": "docs/reviews/probes/r044_notification_probe_test.go",
+  "status": "ACTIVE",
+  "description": "Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call."
+},
+{
+  "id": "runtime044-independent-summary",
+  "family": "continuity",
+  "path": "docs/reviews/probes/r044_independent_summary.json",
+  "status": "ACTIVE",
+  "description": "Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified."
+},
+{
   "id": "runtime044-build-evidence",
   "family": "continuity",
   "path": "docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md",
@@ -16,21 +37,21 @@
   "family": "continuity",
   "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "R044 JE-01..10 shared MCP/HTTP dispatch contract; built locally, review pending, synthetic local evidence only."
+  "description": "R044 exact BUILD independently CHANGES_REQUIRED: maintained notification regression and reproducible worker receipts; original contract unchanged."
 },
 {
   "id": "runtime044-order",
   "family": "continuity",
   "path": "docs/work_orders/CCMAI_RUNTIME_044.md",
   "status": "ACTIVE",
-  "description": "R044 REVIEW_PENDING bounded local Claude implementation order, independent Codex review; no live authority."
+  "description": "R044 CHANGES_REQUIRED consolidated R1 test/evidence repair order for Claude; unchanged seed, independent Codex re-review."
 },
 {
   "id": "runtime044-record",
   "family": "continuity",
   "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-044.json",
   "status": "ACTIVE",
-  "description": "R044 REVIEW_PENDING record: roles, scope, seed base, exact BUILD and evidence pointer."
+  "description": "R044 CHANGES_REQUIRED exact-BUILD review and bounded R1 roles/scope/seed record; FREEZE_OPEN."
 },
 {
   "id": "continuity-r043-handoff",
@@ -604,7 +625,7 @@
   "family": "continuity",
   "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "Current R044 WORK_ORDER handoff: separate shared MCP execution contract, manual Claude transfer, independent Codex review; accounts parked."
+  "description": "Current R044 CHANGES_REQUIRED/R1 handoff: independent review, bounded Claude repair, original limits preserved; accounts parked."
 },
                       {
                           "id":  "truth-implementation-status",

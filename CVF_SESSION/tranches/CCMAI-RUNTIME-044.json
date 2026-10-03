@@ -53,20 +53,24 @@
   ],
   "claimScope": "Application admission/start/ownership and HTTP regression contracts on synthetic disposable local fixtures only. Synthetic provider execution cannot establish CVF AI governance, model quality, live compatibility or hosted readiness.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_044.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "665f2e5ab780cbe8a1d374ccba676c1e926fbb47",
   "buildCommit": "48918e2f953dbb32e7f5f159b1eceab7dfe3848f",
   "reviewEvidence": [
-    "docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md"
+    "docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md",
+    "docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md",
+    "docs/reviews/probes/r044_notification_probe_test.go",
+    "docs/reviews/probes/r044_independent_summary.json"
   ],
-  "disposition": "PENDING",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -75,5 +79,11 @@
     "WORK_ORDER"
   ],
   "ownerTransferRequired": true,
-  "implementationStarted": true
+  "implementationStarted": true,
+  "repairRound": 1,
+  "repairFindings": [
+    "R044-R1-01",
+    "R044-R1-02"
+  ],
+  "repairDisposition": "R1_REQUESTED"
 }

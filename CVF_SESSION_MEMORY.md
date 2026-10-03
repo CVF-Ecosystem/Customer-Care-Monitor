@@ -50,21 +50,25 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R044 BUILD hand-back (2026-10-04)
+## Current R044 independent REVIEW return (2026-10-04)
+
+CCMAI-RUNTIME-044 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for exact Claude BUILD48918e2f953dbb32e7f5f159b1eceab7dfe3848f. Codex independent review `docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md`: R044-R1-01 maintained synthetic notification-tail coverage, R044-R1-02 reproducible worker evidence receipts. Core dispatch/MCP/HTTP389 events and targeted engine54 PASS0 FAIL/SKIP, reviewer notification1 PASS; build/vet PASS; four sampled semantic mutation kills/restored baselines, old-source2 FAIL/restored2 PASS. No production defect established or reviewer product/test repair. Work order consolidated R1 for manual Claude REPAIR_WORKER transfer under unchanged seed/R2/paths/effects/BUILD ownership; worker rehydrates/acknowledges/opens gated BUILD before edits. R043/prior dispositions unchanged, accounts parked. Original failures/worker15/NOT RUN retained; no live/governance/hosted/FREEZE claim.
+
+## Historical R044 BUILD hand-back (2026-10-04)
 
 CCMAI-RUNTIME-044 REVIEW_PENDING / REVIEW (Claude, 2026-10-04): shared jobdispatch service wired into HTTP TriggerJob and MCP cqa_trigger_job; exact BUILD 48918e2f953dbb32e7f5f159b1eceab7dfe3848f, evidence `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`. Synthetic disposable MySQL and synthetic provider only: final real-tree run 836 pass events, 0 fail, 3 unrelated engine Zalo skips; 15 mutants and the old-source detector killed with no survivors; race NOT RUN; no live execution. Independent Codex review is next; the worker sets no REVIEW_PASS or FREEZE. Facebook/Zalo OA accounts parked; R043 and prior closures unchanged.
 
-## Current R044 BUILD acknowledgment (2026-10-03)
+## Historical R044 BUILD acknowledgment (2026-10-03)
 
 CCMAI-RUNTIME-044 BUILD (Claude, 2026-10-03): role transition WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) acknowledged in the active handoff before any source edit; BUILD COMMIT_STEWARD held by Claude, independent Codex REVIEWER next. Seed 665f2e5ab780cbe8a1d374ccba676c1e926fbb47 verified present at baseCommit and unchanged. Synthetic disposable loopback fixtures only; no live authority. R043 and prior closures unchanged; Facebook/Zalo OA accounts parked.
 
-## Current R044 shared MCP job-execution dispatch (2026-10-03)
+## Historical R044 shared MCP job-execution dispatch (2026-10-03)
 
 CCMAI-RUNTIME-044 DISPATCH_READY / WORK_ORDER under separately committed seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47. SPEC `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`, order `docs/work_orders/CCMAI_RUNTIME_044.md`; active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`. Claude implements after manual transfer; Codex independently reviews. Production wiring NOT BUILT, no worker execution or runtime proof. Synthetic disposable local execution only after worker acknowledgment/BUILD/preflight; all live authority absent. R043 and prior local closures unchanged, Facebook/Zalo OA accounts parked. BOOTSTRAP_MIGRATION_PENDING nonblocking.
 
-## Current owner routing — accounts parked (2026-10-03)
+## Current owner routing — accounts parked (2026-10-04)
 
-CCMAI-RUNTIME-044 DISPATCH_READY / WORK_ORDER: owner manually transfers docs/work_orders/CCMAI_RUNTIME_044.md to Claude for bounded shared MCP/HTTP job execution under committed seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47. Claude rehydrates, acknowledges BUILD and passes preflight before edits; synthetic disposable local fixtures only, then exact BUILD to independent Codex REVIEW. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-043 and prior local dispositions unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
+CCMAI-RUNTIME-044 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for exact Claude BUILD48918e2f953dbb32e7f5f159b1eceab7dfe3848f. Owner transfers the consolidated R044-R1-01..02 addendum in docs/work_orders/CCMAI_RUNTIME_044.md to Claude REPAIR_WORKER under the unchanged seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47: committed synthetic notification-tail regression and reproducible worker evidence receipts; no product source repair requested. Claude rehydrates/acknowledges/synchronizes BUILD and passes preflight before edits, then returns exact repair/evidence REVIEW_PENDING to independent Codex re-review. Facebook/Zalo OA accounts/live tests parked; CCMAI-RUNTIME-043 and all prior dispositions unchanged. No engine/permission/OAuth/schema/dependency/notification source/real config/credential/provider/channel/external network/persistent or customer DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
 
 Parked checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 

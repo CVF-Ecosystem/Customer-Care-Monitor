@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R044 WORK_ORDER handoff: separate shared MCP execution contract, manual Claude transfer, independent Codex review; accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
+- Current R044 CHANGES_REQUIRED/R1 handoff: independent review, bounded Claude repair, original limits preserved; accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -101,10 +101,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved.: `docs/work_orders/CCMAI_RUNTIME_043.md`
 - Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-043.json`
 - R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`
-- R044 REVIEW_PENDING bounded local Claude implementation order, independent Codex review; no live authority.: `docs/work_orders/CCMAI_RUNTIME_044.md`
-- R044 REVIEW_PENDING record: roles, scope, seed base, exact BUILD and evidence pointer.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
+- Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved.: `docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md`
+- Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified.: `docs/reviews/probes/r044_independent_summary.json`
+- R044 CHANGES_REQUIRED consolidated R1 test/evidence repair order for Claude; unchanged seed, independent Codex re-review.: `docs/work_orders/CCMAI_RUNTIME_044.md`
+- R044 CHANGES_REQUIRED exact-BUILD review and bounded R1 roles/scope/seed record; FREEZE_OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
+- Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call.: `docs/reviews/probes/r044_notification_probe_test.go`
 - Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
-- R044 JE-01..10 shared MCP/HTTP dispatch contract; built locally, review pending, synthetic local evidence only.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
+- R044 exact BUILD independently CHANGES_REQUIRED: maintained notification regression and reproducible worker receipts; original contract unchanged.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
