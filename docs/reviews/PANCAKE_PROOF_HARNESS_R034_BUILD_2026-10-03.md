@@ -198,3 +198,7 @@ M6c (validation and scan disabled, raw transport error text in the outcome) fail
 ### Remaining limitations
 
 `adapter_omitted` still cannot be triggered with the unchanged adapter and these fixtures; the new `until_stable=false` coverage is a synthetic observer perturbation, not evidence that the real adapter changes `until`. Race detector NOT RUN. Receipt validation is structural (patterns and enumerations); it does not prove semantic correctness of counts. Identifier safety is deliberately stricter than the provider ID alphabet (rejects `:`, `;`, space and `%`); a later live work order must confirm real IDs fit or widen the rule under review. Nothing here is live, provider, governance or hosted-readiness evidence; no FREEZE is claimed.
+
+## 10. R1 repair identity and hand-back
+
+Exact R1 repair commit: `9e52d2840281e227a78e533aea0fd2f208ffcf6e` (parent `012c463`). Its Go blobs hash to the section 9 values. The follow-up documentation commit sets the tranche `buildCommit` to this SHA (the original BUILD `69cf3a0981f8e1322040bc3b2427a4c47245e9f9` is retained in the handoff and review history), moves the tranche to REVIEW_PENDING and changes no source. Docs build, catalog check, diff check, gate preflights and gate unit tests are re-run for that commit and recorded in the active handoff. Independent Codex re-review is next; no self-approval, push, merge, deployment or FREEZE.

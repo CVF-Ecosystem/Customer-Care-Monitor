@@ -37,7 +37,7 @@
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
                           "status": "ACTIVE",
-                          "description": "R034 CHANGES_REQUIRED: bounded R1 repairs to Claude via owner transfer, then independent Codex re-review."
+                          "description": "R034 work order (R1 REVIEW_PENDING): Claude repaired findings R034-R1-01..06; independent Codex re-review next."
                       },
                       {
                           "id": "historical-runtime033-closure-handoff",
@@ -128,7 +128,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: R034 CHANGES_REQUIRED; owner transfers same-scope R1 repair to Claude."
+                          "description":  "Current active handoff: R034 R1 repair REVIEW_PENDING; independent Codex re-review of the exact Claude repair."
                       },
                       {
                           "id":  "truth-implementation-status",

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R034-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1
-- Next allowed move: CCMAI-RUNTIME-034 R1: Claude REPAIR_WORKER resolves R034-R1-01..06 within the unchanged seed scope (new harness files and documentation only), runs the required local checks, appends R1 evidence and returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review. Real channel/provider/credential/network use remains unauthorized; live packet remains PREPARED_NOT_DISPATCHED. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No self-approval/push/merge/deployment/FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER of the exact Claude R1 repair; Claude REPAIR_WORKER handed back (further REPAIR_WORKER work only on accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-034 R1: Codex independent REVIEWER re-reviews exact Claude R1 repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e (findings R034-R1-01..06, parent BUILD 69cf3a0981f8e1322040bc3b2427a4c47245e9f9) for seed identity, repaired guards, reviewer-probe replay, mutation sensitivity and preserved original sources, then records REVIEW_PASS or CHANGES_REQUIRED. Real channel/provider/credential/network use remains unauthorized; live packet remains PREPARED_NOT_DISPATCHED. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No self-approval/push/merge/deployment/FREEZE.
 - Parked operator checkpoint: none
 
 ## Authority and activation acknowledgment
@@ -66,3 +66,9 @@ Recorded **before any R1 source edit**. Rehydrated from current files: manifest 
 CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD (repair round 1); risk ceiling R2; live evidence required YES (no governance or live claim: synthetic offline only); role REPAIR_WORKER / repair COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
 
 Role transition REVIEW (CHANGES_REQUIRED) -> BUILD: Claude holds REPAIR_WORKER only for findings R034-R1-01..06; Codex remains independent reviewer; no self-approval, push, merge, deployment or FREEZE. Seed unchanged; Go commands use GOPROXY=off, GOTOOLCHAIN=local, project-root cwd and go -C backend.
+
+## R1 REVIEW_PENDING hand-back (Claude, 2026-10-03)
+
+Exact local R1 repair commit: `9e52d2840281e227a78e533aea0fd2f208ffcf6e` (parent `012c463`; original BUILD `69cf3a0981f8e1322040bc3b2427a4c47245e9f9`; seed `d869624cc15f55b39516a36f8937454e617dc3b3` unchanged). Changed source: `backend/channels/pancake_proof.go` and `pancake_proof_test.go` only (CLI, adapter, engine, go.mod untouched); documentation: BUILD record section 9, SPEC current-implementation section, order note, continuity. R034-R1-01..06 repaired with named regression detectors; all five code findings fail on the exact original BUILD and pass now; the reviewer six probes pass on the repaired source; 29 applied mutants all KILLED (0 survived, 0 inconclusive) with byte restoration verified. Local checks: channels + CLI tests 123 top-level / 279 PASS lines, 0 FAIL/SKIP, build, vet, gofmt clean. NOT RUN: race (CGO unavailable), DB suites, live/provider/network/GitHub. This follow-up documentation commit records the SHA in the tranche record (`buildCommit` now names the repair under review) and changes no source. No self-approval, push, merge, deployment or FREEZE.
+
+Follow-up commit checks (worker-run, local repository validation only): docs build PASS; catalog -Write/-Check PASS; git diff --check clean; default, --base origin/main --head HEAD and explicit changed-set preflight 7/7 PASS; gate unit tests OK; git diff of backend since the repair commit empty.
