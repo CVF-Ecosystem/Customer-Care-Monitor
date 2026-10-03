@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD
-- Next allowed move: CCMAI-RUNTIME-035: Claude IMPLEMENTATION_WORKER builds the truthful unavailable MCP trigger response and description correction (MT-01..06) within the unchanged seed scope, gathers synthetic disposable-MySQL evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No queue/analyzer dispatch, push, merge, deployment or FREEZE.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)
+- Next allowed move: CCMAI-RUNTIME-035: Codex independent REVIEWER reviews exact Claude BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac (MCP trigger unavailable response, REVIEW_PENDING) for seed identity, MT-01..06, old-source detectors, mutation sensitivity, DB skip identity and preserved authorization policy, then records REVIEW_PASS or CHANGES_REQUIRED. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No self-approval. No queue/analyzer dispatch, push, merge, deployment or FREEZE.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -36,3 +36,9 @@ Recorded **before any source edit**. Rehydrated from current files: manifest and
 CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R2; live evidence required YES (no governance or live claim: application contract tests on synthetic data only); role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
 
 Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Codex stays independent reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. Go commands use GOPROXY=off, GOTOOLCHAIN=local, project-root cwd and go -C backend.
+
+## REVIEW_PENDING hand-back (Claude, 2026-10-03)
+
+Exact local BUILD commit: `10ad83381ce76b86763c1ee06eab02ddf4734cac` (authority seed `4b714a35bc6f49abe508d3ec4f32504e500054ba` unchanged). Evidence, MT matrix, old-source detectors, mutations and limits are in the BUILD record `docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md`. This documentation commit records the SHA in the tranche record and changes no source. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+
+Follow-up commit checks (worker-run, local repository validation only): docs build, catalog -Check, git diff --check, default / PR-range / explicit changed-set preflight (7/7) and gate unit tests re-run below; `git diff` of backend since the BUILD commit empty. Product evidence (disposable-MySQL tests, old-source detectors, nine mutations) is in the BUILD record.

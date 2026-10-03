@@ -95,3 +95,7 @@ Mutant logs and hashes are held outside the repository and summarized here.
 - Race detector NOT RUN (CGO unavailable). Full DB-dependent backend suite NOT RUN. Host `go test` was used against the disposable MySQL rather than the Docker golang image.
 - The tool now never executes a job; real queue/analyzer wiring remains a separate objective. Nothing here is live, provider, governance or hosted-readiness evidence.
 - Reviewer suggestions: replay MX1, MX3, MX6 and MX9 independently on the exact BUILD SHA, confirm 0 skips on your own disposable DB, and check that the policy table and OAuth/server files are byte-identical to the baseline.
+
+## 8. BUILD identity and hand-back
+
+Exact BUILD commit: `10ad83381ce76b86763c1ee06eab02ddf4734cac` (parent `09b6326`; seed `4b714a35bc6f49abe508d3ec4f32504e500054ba` unchanged). Its four source blobs hash to the section 1 values. The follow-up documentation commit records the SHA in the tranche record, moves the tranche to REVIEW_PENDING and changes no source. Pre-BUILD-commit checks: docs build PASS (first and only run, no dead links), catalog `-Write`/`-Check` PASS, `git diff --check` clean, default, `--base origin/main --head HEAD` and explicit changed-set preflight 7/7 PASS, gate unit tests OK; the same set is re-run for the follow-up commit and noted in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.

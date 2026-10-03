@@ -23,7 +23,7 @@
                               "family": "continuity",
                               "path": "docs/work_orders/CCMAI_RUNTIME_035.md",
                               "status": "ACTIVE",
-                              "description": "R035 work order (BUILD): Claude bounded local correction, independent Codex REVIEW next; no actual dispatch."
+                              "description": "R035 work order (REVIEW_PENDING): Claude built the unavailable-response correction; independent Codex REVIEW next; no actual dispatch."
                           },
                           {
                               "id": "runtime035-authority",
