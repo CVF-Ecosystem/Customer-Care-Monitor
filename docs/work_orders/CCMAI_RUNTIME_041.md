@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-041 — Offline synthetic inventory input
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Date: 2026-10-03. R2 input parsing/sanitization; worker Claude, independent reviewer Codex. [SPEC](../specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md). Immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`, committed `b19602ea66a47310b503a03ec2954092560231cc` before activation/BUILD. Standing local orchestration delegation; owner manually transfers order to Claude. R2 execution requires that owner transfer/review; Codex does not automatically invoke a worker or implement source.
 
@@ -42,3 +42,7 @@ Run the existing authorized uncached CLI/channels suites, cached build -o NUL/ve
 R041-R1-01..03 settled for exact Claude repair `2a44a8685adfdc3582697ce5094d06da3047207b`: **REVIEW_PASS / REVIEW / FREEZE_OPEN**. [Independent re-review](../reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md) verifies scoped source identity/seed, UNC guards, actual local-junction rejection, real platform SKIP attribution, independent semantic controls and existing tests. R1 return table above remains historical repair requirements, not a new worker dispatch. No product or seed change by reviewer.
 
 Two symlink subtests remain SKIP/UNVERIFIED until a capable host runs them. Known local task-owned synthetic inputs only; syntax rejects UNC/namespace spellings but does not prove mapped/subst drive locality, post-check comparisons do not exclude ancestor TOCTOU, and reparse ancestors in profiles are refused. Acceptance does not authorize testing real drives/shares or changing host privileges/compiler. Original incidents/mutation survivor retained. ORCHESTRATOR local planning/continuity next; no new BUILD/engine/DB/real input/credentials/provider/channel/network/push/merge/deploy/FREEZE.
+
+## Separate R043 local closure disposition (2026-10-03)
+
+This bounded local contract is FROZEN at integrated source `add584a38058a6f2863c9a84ce06f0429b9c21d2` under separate R043 closure seed `965a1a03551a94d58ec84b387f558c19fef35fa1`. [Closure evaluation](../reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md). Original accepted BUILD/repair source, independent review, roles/scope/effects and failed history/SKIP/NOT RUN remain unchanged; earlier REVIEW_PASS/FREEZE_OPEN wording is historical BUILD/review authority, not current disposition. Original immutable seed and its freeze prohibition were not edited. No new product/runtime proof or symlink/race/mapped-drive/TOCTOU/live/global F02/CVF AI governance/hosted/other-tranche closure; source-sha supplied metadata boundary unchanged.

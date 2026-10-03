@@ -5,6 +5,27 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+  "id": "runtime043-order",
+  "family": "continuity",
+  "path": "docs/work_orders/CCMAI_RUNTIME_043.md",
+  "status": "ACTIVE",
+  "description": "R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved."
+},
+{
+  "id": "runtime043-closure",
+  "family": "continuity",
+  "path": "docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "R043 local closure: R034/R041/R042 FROZEN at integrated accepted source, inherited independent proof and explicit limits."
+},
+{
+  "id": "continuity-r042-handoff",
+  "family": "continuity",
+  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "Historical R042 independent acceptance/dead-link correction and R043 local closure intake."
+},
+{
   "id": "runtime043-seed",
   "family": "continuity",
   "path": "CVF_SESSION/authority/CCMAI-RUNTIME-043.json",
@@ -23,7 +44,7 @@
   "family": "continuity",
   "path": "docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "R042 DU-01..07 REVIEW_PASS; synthetic-only examples and retained platform/source-sha limits."
+  "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
 },
                       {
                         "id": "runtime042-guide",
@@ -51,7 +72,7 @@
   "family": "continuity",
   "path": "docs/work_orders/CCMAI_RUNTIME_042.md",
   "status": "ACTIVE",
-  "description": "R042 REVIEW_PASS / FREEZE_OPEN; exact Claude documentation BUILD accepted after independent examples and dispatcher link correction."
+  "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
 },
 {
   "id": "continuity-r041-handoff",
@@ -93,7 +114,7 @@
                         "family": "continuity",
                         "path": "docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R041 R1 REVIEW_PASS strict synthetic input SPEC; platform, mapped-drive and TOCTOU limits retained."
+                        "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
                       },
                       {
                         "id": "runtime041-build",
@@ -107,7 +128,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_041.md",
                         "status": "ACTIVE",
-                        "description": "R041 R1 REVIEW_PASS / FREEZE_OPEN for exact repair; no new worker BUILD or live authority."
+                        "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
                       },
                       {
                         "id": "runtime041-seed",
@@ -429,7 +450,7 @@
                           "family": "continuity",
                           "path": "docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md",
                           "status": "ACTIVE",
-                          "description": "R034 offline harness PH-01..08 requirements; no live/credential/network authority."
+                          "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
                       },
                       {
                           "id": "runtime034-proof-harness-build",
@@ -443,7 +464,7 @@
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
                           "status": "ACTIVE",
-                          "description": "R034 work order: independent R1 REVIEW_PASS for offline PH-01..08; no new repair/live dispatch."
+                          "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
                       },
                       {
                           "id": "historical-runtime033-closure-handoff",
@@ -532,9 +553,9 @@
                       {
   "id": "continuity-initial-handoff",
   "family": "continuity",
-  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
+  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "Current R042 independent acceptance handoff; dispatcher dead-link correction, historical worker FAIL retained."
+  "description": "Current R043 bounded local offline-contract FREEZE handoff; platform/live/global readiness remains OPEN."
 },
                       {
                           "id":  "truth-implementation-status",

@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R042 independent acceptance handoff; dispatcher dead-link correction, historical worker FAIL retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
+- Current R043 bounded local offline-contract FREEZE handoff; platform/live/global readiness remains OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -24,6 +24,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R039 acceptance and R040 closure intake/seed acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md`
 - Historical R040 scoped local FREEZE and R041 intake/seed acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md`
 - Historical R041-R1 acceptance handoff and R042 documentation intake; platform/locality/TOCTOU limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`
+- Historical R042 independent acceptance/dead-link correction and R043 local closure intake.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
@@ -42,8 +43,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`
 - Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only.: `docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md`
 - Historical worker BUILD and R1 evidence; independent R1 re-review accepts offline contract with limits; synthetic only.: `docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md`
-- R034 work order: independent R1 REVIEW_PASS for offline PH-01..08; no new repair/live dispatch.: `docs/work_orders/CCMAI_RUNTIME_034.md`
-- R034 offline harness PH-01..08 requirements; no live/credential/network authority.: `docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md`
+- Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved.: `docs/work_orders/CCMAI_RUNTIME_034.md`
+- Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved.: `docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md`
 - Independent exact-R1 synthetic mutation sample, semantic failures, hashes/restoration and initial INCONCLUSIVE attempt.: `docs/reviews/probes/r034_r1_mutation_summary.json`
 - Independent R034 R1 REVIEW_PASS: offline contract accepted, repaired probes/mutations pass; FREEZE/live remain OPEN.: `docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay.: `docs/reviews/probes/r034_reviewer_probe_test.go`
@@ -83,17 +84,19 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable separate R040 authority for local R037-R039 disposition only.: `CVF_SESSION/authority/CCMAI-RUNTIME-040.json`
 - R041 original BUILD and R1 worker section8 evidence; independent acceptance separate, incidents/skips/survivor preserved.: `docs/reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md`
 - Independent exact-BUILD R041 CHANGES_REQUIRED: mixed Windows UNC, ancestor junction admission and platform SKIP evidence; OI-04 intent clarified.: `docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md`
-- R041 R1 REVIEW_PASS / FREEZE_OPEN for exact repair; no new worker BUILD or live authority.: `docs/work_orders/CCMAI_RUNTIME_041.md`
+- Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved.: `docs/work_orders/CCMAI_RUNTIME_041.md`
 - Independent exact-R1 re-review: R041-R1-01..03 settled, REVIEW_PASS / FREEZE_OPEN; explicit platform/drive/TOCTOU limits.: `docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`
-- R041 R1 REVIEW_PASS strict synthetic input SPEC; platform, mapped-drive and TOCTOU limits retained.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
+- Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
 - R042 BUILD evidence: DU matrix, finite synthetic CLI smoke exits/outputs, protected-path equality, retained limits; REVIEW_PENDING.: `docs/reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.md`
 - Vietnamese operator guide for the offline Pancake proof CLI: flags, exits, synthetic inventory schema, limits and unverified items; synthetic only.: `docs/guide/pancake-offline-proof.md`
 - Independent R042 REVIEW_PASS:9 mounted examples/6 guide blocks, source/scope checks, separate Codex dispatch link correction and preserved worker docs FAIL.: `docs/reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md`
-- R042 REVIEW_PASS / FREEZE_OPEN; exact Claude documentation BUILD accepted after independent examples and dispatcher link correction.: `docs/work_orders/CCMAI_RUNTIME_042.md`
+- Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved.: `docs/work_orders/CCMAI_RUNTIME_042.md`
 - Hand-authored synthetic expected-inventory sample for the offline proof CLI; no real data.: `docs/examples/pancake-proof/synthetic-inventory.json`
 - Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`
-- R042 DU-01..07 REVIEW_PASS; synthetic-only examples and retained platform/source-sha limits.: `docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md`
+- Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved.: `docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md`
+- R043 local closure: R034/R041/R042 FROZEN at integrated accepted source, inherited independent proof and explicit limits.: `docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md`
+- R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved.: `docs/work_orders/CCMAI_RUNTIME_043.md`
 - Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-043.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`

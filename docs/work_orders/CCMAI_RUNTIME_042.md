@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-042 — Offline proof CLI usage guide and sample
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Date: 2026-10-03. R1 documentation-only tranche; [SPEC](../specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md), immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`, committed `9b10a8f6f67d314d6c4f5a3846396f28a5487948` before activation/BUILD. Standing local orchestration delegation; owner manually transfers to Claude. Codex authors/reviews, Claude owns implementation and BUILD commit; no automatic worker invocation.
 
@@ -23,3 +23,7 @@ DISPATCH_READY / NOT_BUILT, no worker started, guide/sample absent. This order b
 ## Independent review disposition (Codex, 2026-10-03)
 
 DU-01..07 REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD `6b401195edcc99e9bc9568c45c7ff8962c7d7480`; [review](../reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md). Guide/sample/packet/protected source unchanged by reviewer;9 mounted smoke cases and6 exact guide PowerShell blocks independently validated. Worker docs-build FAIL was caused by Codex a55b477 shared-learning link outside docs root; Codex corrected it to a code span without editing worker files or site configuration. Original failure retained, later corrected-state PASS separate; no instruction for worker to expand paths or suppress dead links. Immutable seed unchanged. Current local planning only, no new worker/BUILD/FREEZE; symlink/race/mapped/subst/TOCTOU/source-sha limitations preserved.
+
+## Separate R043 local closure disposition (2026-10-03)
+
+This bounded local contract is FROZEN at integrated source `add584a38058a6f2863c9a84ce06f0429b9c21d2` under separate R043 closure seed `965a1a03551a94d58ec84b387f558c19fef35fa1`. [Closure evaluation](../reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md). Original accepted BUILD/repair source, independent review, roles/scope/effects and failed history/SKIP/NOT RUN remain unchanged; earlier REVIEW_PASS/FREEZE_OPEN wording is historical BUILD/review authority, not current disposition. Original immutable seed and its freeze prohibition were not edited. No new product/runtime proof or symlink/race/mapped-drive/TOCTOU/live/global F02/CVF AI governance/hosted/other-tranche closure; source-sha supplied metadata boundary unchanged.

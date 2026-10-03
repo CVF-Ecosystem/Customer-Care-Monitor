@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-043",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Codex",
+    "reviewer": "Codex",
+    "closer": "Codex"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_043.md",
+    "docs/work_orders/CCMAI_RUNTIME_034.md",
+    "docs/work_orders/CCMAI_RUNTIME_041.md",
+    "docs/work_orders/CCMAI_RUNTIME_042.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "tooling_change",
+    "dependency_change",
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "persistent_db",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "global_f02_closure",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "engine_test_execution",
+    "runtime_execution",
+    "external_network",
+    "other_tranche_freeze"
+  ],
+  "claimScope": "Bounded accepted offline harness PH-01..08, known-local synthetic inventory input OI-01..06 with platform/drive/TOCTOU limits, and usage documentation/examples DU-01..07 including corrected dispatcher docs dependency. Inherit independent Claude-product/Codex-review evidence; no new runtime proof, symlink/race/locality guarantee, live/global F02/CVF AI governance/hosted readiness or other tranche closure.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_043.md",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "baseCommit": "965a1a03551a94d58ec84b387f558c19fef35fa1",
+  "buildCommit": "add584a38058a6f2863c9a84ce06f0429b9c21d2",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+    "docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+    "docs/reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md",
+    "docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "DISPATCH_READY",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "inheritedProductWorker": "Claude R034/R041/R042 only; no R043 BUILD",
+  "inheritedSourceSnapshot": "add584a38058a6f2863c9a84ce06f0429b9c21d2",
+  "closureTargets": [
+    "CCMAI-RUNTIME-034",
+    "CCMAI-RUNTIME-041",
+    "CCMAI-RUNTIME-042"
+  ],
+  "closer": "Codex",
+  "frozenSourceCommit": "add584a38058a6f2863c9a84ce06f0429b9c21d2",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md",
+  "closedAt": "2026-10-03"
+}
