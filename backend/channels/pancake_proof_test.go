@@ -5,8 +5,10 @@ import (
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/hex"
+	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"net/http"
 	"net/url"
 	"strings"
@@ -828,5 +830,309 @@ func TestProofTranscriptIsFinite(t *testing.T) {
 	tp2 := &ProofTranscript{Routes: map[string][]ProofResponse{}}
 	if _, err := tp2.RoundTrip(pfReq(t, "GET", "https://pages.fm/api/public_api/v2/pages/p/conversations")); err == nil {
 		t.Fatalf("unscripted requests must fail")
+	}
+}
+
+// ---------------------------------------------------------------- R034-R1 regression detectors
+
+// pfBodyErrTransport wraps a transport so selected responses deliver their body and then fail the read.
+type pfBodyErrTransport struct {
+	inner   http.RoundTripper
+	match   func(*http.Request) bool
+	partial bool // deliver only half of the body before the error
+}
+
+type pfErrBody struct {
+	data []byte
+	off  int
+	err  error
+}
+
+func (b *pfErrBody) Read(dst []byte) (int, error) {
+	if b.off >= len(b.data) {
+		return 0, b.err
+	}
+	n := copy(dst, b.data[b.off:])
+	b.off += n
+	if b.off >= len(b.data) {
+		return n, b.err // the error arrives together with the final chunk
+	}
+	return n, nil
+}
+func (b *pfErrBody) Close() error { return nil }
+
+func (p pfBodyErrTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	res, err := p.inner.RoundTrip(req)
+	if err != nil || !p.match(req) {
+		return res, err
+	}
+	data, _ := io.ReadAll(res.Body)
+	res.Body.Close()
+	if p.partial {
+		data = data[:len(data)/2]
+	}
+	res.Body = &pfErrBody{data: data, err: errors.New("read failed CANARY-ERR-5521 " + pfToken)}
+	return res, nil
+}
+
+func TestProofR1BodyReadErrorNeverPasses(t *testing.T) {
+	cases := map[string]pfBodyErrTransport{
+		"complete-json-then-error-every-body": {match: func(*http.Request) bool { return true }},
+		"partial-json-then-error-every-body":  {match: func(*http.Request) bool { return true }, partial: true},
+		"late-terminal-read-fails": {match: func(r *http.Request) bool {
+			return strings.HasSuffix(r.URL.Path, "/messages") && r.URL.Query().Get("current_count") == "1"
+		}},
+		"conversation-terminal-read-fails": {match: func(r *http.Request) bool {
+			return !strings.HasSuffix(r.URL.Path, "/messages") && r.URL.Query().Get("last_conversation_id") == "c-ddd5"
+		}},
+	}
+	for name, c := range cases {
+		t.Run(name, func(t *testing.T) {
+			tp, inv := pfFixture()
+			c.inner = tp
+			o := pfOpts(c)
+			r, err := RunPancakeProof(context.Background(), o, inv)
+			if err != nil {
+				t.Fatal(err)
+			}
+			if r.Disposition != ProofIncomplete || !strings.Contains(pfReasons(r), "run1:response_read_error") {
+				t.Fatalf("read error must be INCOMPLETE response_read_error, got %s %v", r.Disposition, r.Reasons)
+			}
+			if r.Runs[0].Disposition != ProofIncomplete || r.Runs[1].Disposition != proofNotRun {
+				t.Fatalf("run attribution wrong: %s/%s", r.Runs[0].Disposition, r.Runs[1].Disposition)
+			}
+			last := r.Runs[0].Requests[len(r.Runs[0].Requests)-1]
+			if last.Outcome != "body_read_error" || last.EmptyTerminal || last.Rows != 0 {
+				t.Fatalf("failed read must not yield rows or a terminal: %+v", last)
+			}
+			if tp.Calls() != r.Budget.AttemptsUsed {
+				t.Fatalf("calls %d vs receipt %d", tp.Calls(), r.Budget.AttemptsUsed)
+			}
+			b, merr := MarshalProofReceipt(r, ProofSensitiveValues(o, inv))
+			if merr != nil {
+				t.Fatalf("receipt must serialize: %v", merr)
+			}
+			pfAssertClean(t, "read-error receipt", string(b))
+		})
+	}
+}
+
+func TestProofR1ReceiptValidationAndSemanticScan(t *testing.T) {
+	// semantic scan: JSON escaping must not hide a value, in string values or in keys
+	for _, canary := range []string{"CANARY-<RAW>&VALUE", "CANARY-QUOTE-\"-VALUE", "CANARY-SLASH-\\-VALUE", "CANARY-LINE-\n-VALUE", "CANARY-TAB-\t-VALUE"} {
+		asValue, _ := json.Marshal(map[string]interface{}{"k": []string{"x", "pre " + canary + " post"}})
+		asKey, _ := json.Marshal(map[string]string{canary: "v"})
+		for label, doc := range map[string][]byte{"value": asValue, "key": asKey} {
+			if strings.Contains(string(doc), canary) {
+				t.Fatalf("setup: %q must be escaped in the encoded form", canary)
+			}
+			if !proofContainsSensitive(doc, []string{canary}) {
+				t.Errorf("%s: escaped canary %q evaded the scan", label, canary)
+			}
+			if proofContainsSensitive(doc, []string{"CANARY-UNRELATED-9999"}) {
+				t.Errorf("%s: unrelated value produced a false hit", label)
+			}
+		}
+	}
+	if !proofContainsSensitive([]byte("{not json"), []string{"abcdefgh"}) {
+		t.Errorf("undecodable documents must fail closed")
+	}
+
+	// the scan layer on a structurally valid receipt: a sensitive value that is an allowed label
+	tp, inv := pfFixture()
+	good := pfRun(t, tp, inv, nil)
+	if _, err := MarshalProofReceipt(good, []string{good.Inventory.Provenance}); !errors.Is(err, ErrPancakeProofUnsafe) {
+		t.Errorf("scan layer must reject a decoded sensitive value in a structurally valid receipt: %v", err)
+	}
+	if _, err := MarshalProofReceipt(good, nil); err != nil {
+		t.Fatalf("control receipt must serialize: %v", err)
+	}
+
+	// unsupported values are refused even without any sensitive list
+	edits := map[string]func(*ProofReceipt){
+		"unknown-schema":       func(r *ProofReceipt) { r.SchemaVersion = "unknown-schema" },
+		"unknown-disposition":  func(r *ProofReceipt) { r.Disposition = "UNKNOWN" },
+		"not-run-overall":      func(r *ProofReceipt) { r.Disposition = proofNotRun },
+		"invalid-source-sha":   func(r *ProofReceipt) { r.SourceSHA = "not-a-source-sha" },
+		"uppercase-source-sha": func(r *ProofReceipt) { r.SourceSHA = strings.ToUpper(r.SourceSHA) },
+		"bad-start-time":       func(r *ProofReceipt) { r.StartedAt = "yesterday" },
+		"free-text-reason":     func(r *ProofReceipt) { r.Reasons = append(r.Reasons, "free text \"with quotes\"") },
+		"canary-reason":        func(r *ProofReceipt) { r.Reasons = append(r.Reasons, "leaked:"+pfToken) },
+		"free-text-provenance": func(r *ProofReceipt) { r.Inventory.Provenance = "has spaces" },
+		"raw-page-ref":         func(r *ProofReceipt) { r.Inventory.PageRef = pfPage },
+		"bad-digest":           func(r *ProofReceipt) { r.Inventory.Digest = "abc" },
+		"raw-conversation-ref": func(r *ProofReceipt) { r.Runs[0].Requests[3].ConversationRef = "c-aaa1" },
+		"raw-cursor-ref":       func(r *ProofReceipt) { r.Runs[0].Requests[1].CursorRef = "c-old3" },
+		"free-text-outcome":    func(r *ProofReceipt) { r.Runs[0].Requests[0].Outcome = "dial tcp: " + pfToken },
+		"unknown-template":     func(r *ProofReceipt) { r.Runs[0].Requests[0].Template = "/api/public_api/v2/pages/" + pfPage },
+		"unknown-kind":         func(r *ProofReceipt) { r.Runs[0].Requests[0].Kind = "media" },
+		"run-index-mismatch":   func(r *ProofReceipt) { r.Runs[1].Index = 7 },
+		"missing-run":          func(r *ProofReceipt) { r.Runs = r.Runs[:1] },
+		"unknown-run-state":    func(r *ProofReceipt) { r.Runs[0].Disposition = "MAYBE" },
+		"raw-missing-ref":      func(r *ProofReceipt) { r.Runs[0].Conversations.Missing = []string{"c-zzz9"} },
+		"unknown-mismatch-name": func(r *ProofReceipt) {
+			r.Runs[0].Messages.Mismapped = []ProofMismatch{{Ref: pfRef("message", "x"), Fields: []string{"body_text"}}}
+		},
+		"denial-free-text":   func(r *ProofReceipt) { r.Denials = []ProofDenial{{Run: 1, Reason: "path " + pfToken}} },
+		"live-flag":          func(r *ProofReceipt) { r.Live = true },
+		"governance-flag":    func(r *ProofReceipt) { r.Governance = true },
+		"non-synthetic-type": func(r *ProofReceipt) { r.EvidenceType = "LIVE" },
+	}
+	for name, edit := range edits {
+		tp, inv := pfFixture()
+		r := pfRun(t, tp, inv, nil)
+		edit(r)
+		b, err := MarshalProofReceipt(r, nil)
+		if !errors.Is(err, ErrPancakeProofUnsafe) || b != nil {
+			t.Errorf("%s: unsupported receipt accepted (err=%v)", name, err)
+		}
+		if err != nil && strings.Contains(err.Error(), pfToken) {
+			t.Errorf("%s: rejection echoes a value", name)
+		}
+	}
+	if _, err := MarshalProofReceipt(nil, nil); !errors.Is(err, ErrPancakeProofUnsafe) {
+		t.Errorf("nil receipt must be refused")
+	}
+}
+
+type pfCountingTransport struct{ n int }
+
+func (c *pfCountingTransport) RoundTrip(q *http.Request) (*http.Response, error) {
+	c.n++
+	return &http.Response{StatusCode: 200, Status: "200", Header: http.Header{}, Body: io.NopCloser(strings.NewReader(`{"conversations":[],"messages":[]}`)), Request: q}, nil
+}
+
+func TestProofR1ApprovedUnsafeIdentifiersDenied(t *testing.T) {
+	for _, id := range []string{"c-aaa1/../x", "..", ".", "a\\..\\x", "a%2F..%2Fx", "a%252e%252e", "a?b", "a#b", "a b", "a\x00b", "a;b"} {
+		t.Run(fmt.Sprintf("conversation-%q", id), func(t *testing.T) {
+			rt := &pfCountingTransport{}
+			o := pfOpts(rt)
+			tr := &proofTransport{inner: rt, opts: &o, approved: map[string]bool{id: true}, now: o.Now, start: o.Now()}
+			tr.beginRun(1)
+			tr.setConv(id)
+			raw := "https://pages.fm/api/public_api/v1/pages/" + url.PathEscape(o.PageID) + "/conversations/" + url.PathEscape(id) + "/messages?page_access_token=" + url.QueryEscape(o.Token)
+			u, err := url.Parse(raw)
+			if err != nil {
+				t.Skip("not a parseable URL")
+			}
+			if _, err := tr.RoundTrip(&http.Request{Method: "GET", URL: u, Header: http.Header{}}); !errors.Is(err, errProofDenied) || rt.n != 0 {
+				t.Fatalf("approved unsafe id reached the transport: err=%v calls=%d", err, rt.n)
+			}
+		})
+	}
+	for _, page := range []string{"..", "a/b", "a\\b", "a%2e", "a?b"} {
+		rt := &pfCountingTransport{}
+		o := pfOpts(rt)
+		o.PageID = page
+		tr := &proofTransport{inner: rt, opts: &o, approved: map[string]bool{}, now: o.Now, start: o.Now()}
+		tr.beginRun(1)
+		raw := "https://pages.fm/api/public_api/v2/pages/" + url.PathEscape(page) + "/conversations?type=INBOX&order_by=updated_at&since=" + fmt.Sprint(o.Since.Unix()) + "&until=1790000000&page_access_token=" + url.QueryEscape(o.Token)
+		u, _ := url.Parse(raw)
+		if _, err := tr.RoundTrip(&http.Request{Method: "GET", URL: u, Header: http.Header{}}); !errors.Is(err, errProofDenied) || rt.n != 0 {
+			t.Errorf("unsafe page %q reached the transport: err=%v calls=%d", page, err, rt.n)
+		}
+	}
+	// setup validation rejects the same identifiers before any request
+	for name, mut := range map[string]func(*PancakeProofOptions, *ProofInventory){
+		"page-dotdot":  func(o *PancakeProofOptions, i *ProofInventory) { o.PageID, i.PageID = "..", ".." },
+		"conv-slash":   func(_ *PancakeProofOptions, i *ProofInventory) { i.Conversations[0].ID = "c-aaa1/../x" },
+		"conv-dotdot":  func(_ *PancakeProofOptions, i *ProofInventory) { i.Conversations[0].ID = ".." },
+		"conv-percent": func(_ *PancakeProofOptions, i *ProofInventory) { i.Conversations[0].ID = "a%2e%2e" },
+	} {
+		tp, inv := pfFixture()
+		o := pfOpts(tp)
+		mut(&o, inv)
+		if _, err := RunPancakeProof(context.Background(), o, inv); !errors.Is(err, ErrPancakeProofInput) || !strings.Contains(err.Error(), "unsafe_identifier") || tp.Calls() != 0 {
+			t.Errorf("%s: want unsafe_identifier rejection with zero calls, got %v (%d)", name, err, tp.Calls())
+		}
+	}
+	// positive control: ordinary approved identifiers are admitted
+	tp, inv := pfFixture()
+	if r := pfRun(t, tp, inv, nil); r.Disposition != ProofPass {
+		t.Fatalf("ordinary identifiers must still pass: %s", r.Disposition)
+	}
+}
+
+func TestProofR1ObserverFollowsEachContractOrder(t *testing.T) {
+	t.Run("conversation-old-first-then-eligible", func(t *testing.T) {
+		tp, inv := pfFixture()
+		tp.Routes["conv:"] = []ProofResponse{pfOK(pfList("conversations",
+			pfConvRow("c-aaa1", "INBOX", "2026-09-24T10:00:00.000000"),
+			pfConvRow("c-bbb2", "INBOX", "2026-09-01T00:00:00.000000"), // old first occurrence
+			pfConvRow("c-old3", "INBOX", "2026-09-01T00:00:00.000000")))}
+		tp.Routes["conv:c-old3"] = []ProofResponse{pfOK(pfList("conversations",
+			pfConvRow("c-aaa1", "INBOX", "2026-09-24T10:00:00.000000"),
+			pfConvRow("c-cmt4", "COMMENT", "2026-09-24T10:00:00.000000"),
+			pfConvRow("c-bbb2", "INBOX", "2026-09-20T00:00:00.000000"), // later, boundary-equal, eligible
+			pfConvRow("c-ddd5", "INBOX", "2026-09-25T01:00:00+07:00")))}
+		tp.Routes["conv:c-ddd5"] = []ProofResponse{pfOK(pfList("conversations"))}
+		r := pfRun(t, tp, inv, nil)
+		if r.Disposition != ProofPass {
+			t.Fatalf("unchanged adapter and inventory must PASS: %s %v", r.Disposition, r.Reasons)
+		}
+		for _, run := range r.Runs {
+			c := run.ConversationRows
+			if c.PhysicalRows != 7 || c.OldRows != 2 || c.DuplicateRow != 1 || c.NonInboxRows != 1 || c.RawEligible != 3 || c.Mapped != 3 {
+				t.Fatalf("conversation accounting follows the adapter order: %+v", c)
+			}
+		}
+	})
+	t.Run("message-dedupe-before-since", func(t *testing.T) {
+		tp, inv := pfFixture()
+		tp.Routes["msg:c-bbb2:0"] = []ProofResponse{pfOK(pfList("messages",
+			pfMsgRow("m-b1", "u-c-bbb2", "boundary", "2026-09-20T00:00:00.000000", ""),
+			pfMsgRow("m-x", "u-c-bbb2", "old", "2026-09-10T00:00:00.000000", "")))}
+		tp.Routes["msg:c-bbb2:2"] = []ProofResponse{pfOK(pfList("messages",
+			pfMsgRow("m-x", "u-c-bbb2", "later same id", "2026-09-25T00:00:00.000000", ""), // dropped as a duplicate by the adapter
+			pfMsgRow("m-y", "u-c-bbb2", "new", "2026-09-25T00:00:00.000000", "")))}
+		tp.Routes["msg:c-bbb2:4"] = []ProofResponse{pfOK(pfList("messages"))}
+		inv.Conversations[1].Messages = append(inv.Conversations[1].Messages,
+			ProofMessage{ID: "m-y", SentAt: time.Date(2026, 9, 25, 0, 0, 0, 0, time.UTC), SenderType: "customer", ContentType: "text"})
+		r := pfRun(t, tp, inv, func(o *PancakeProofOptions) { o.MaxAttempts = 22 }) // one extra message page per run
+		if r.Disposition != ProofPass {
+			t.Fatalf("message contract must PASS: %s %v", r.Disposition, r.Reasons)
+		}
+		for _, run := range r.Runs {
+			m := run.MessageRows
+			// c-aaa1: 5 physical, dup 1, old 1; c-bbb2: 4 physical, dup 1, old 1; c-ddd5: 1 physical
+			if m.PhysicalRows != 10 || m.DuplicateRow != 2 || m.OldRows != 2 || m.RawEligible != 6 || m.Mapped != 6 {
+				t.Fatalf("message accounting follows the adapter order: %+v", m)
+			}
+		}
+	})
+}
+
+func TestProofR1UntilStabilityEvaluatedBeforeDisposition(t *testing.T) {
+	newRun := func(perturb bool) ProofRunReport {
+		tp, inv := pfFixture()
+		opts := pfOpts(tp)
+		tr := &proofTransport{inner: tp, opts: &opts, approved: map[string]bool{}, now: opts.Now, start: opts.Now()}
+		for _, c := range inv.Conversations {
+			tr.approved[c.ID] = true
+		}
+		if perturb {
+			// Synthetic perturbation of the harness observation state (not an adapter change):
+			// an unlike until value is recorded right after the run begins.
+			first := true
+			opts.Now = func() time.Time {
+				if first {
+					first = false
+					tr.untils = append(tr.untils, "1")
+				}
+				return time.Now()
+			}
+			tr.now, tr.start = time.Now, time.Now()
+		}
+		return runProofOnce(context.Background(), 1, newProofAdapter(&opts, tr), tr, &opts, inv, 5)
+	}
+	if r := newRun(false); !r.UntilStable || r.Disposition != ProofPass {
+		t.Fatalf("real unchanged adapter must pin until: stable=%v disp=%s", r.UntilStable, r.Disposition)
+	}
+	r := newRun(true)
+	if r.UntilStable {
+		t.Fatal("setup: perturbation must make the observation unstable")
+	}
+	if r.Disposition != ProofFail || !strings.Contains(strings.Join(r.Reasons, ","), "until_unstable") {
+		t.Fatalf("until_stable=false must be FAIL until_unstable, got %s %v", r.Disposition, r.Reasons)
 	}
 }

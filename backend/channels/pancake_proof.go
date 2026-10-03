@@ -66,6 +66,7 @@ var (
 	errProofRedirect = errors.New("proof redirect rejected")
 	errProofOversize = errors.New("proof response oversize")
 	errProofInner    = errors.New("proof transport failed")
+	errProofRead     = errors.New("proof response read failed")
 )
 
 var (
@@ -73,6 +74,20 @@ var (
 	proofLabelPattern = regexp.MustCompile(`^[A-Za-z0-9._:-]{1,64}$`)
 	proofDigits       = regexp.MustCompile(`^[0-9]{1,12}$`)
 )
+
+// proofSafeSegment reports whether v is safe to place in one URL path segment even after any
+// decoding: no dot segments, separators, escapes, query/fragment markers or control characters.
+func proofSafeSegment(v string) bool {
+	if v == "" || v == "." || v == ".." {
+		return false
+	}
+	for _, r := range v {
+		if r < 0x20 || r == 0x7f || r == ' ' || strings.ContainsRune(`/\%?#;:`, r) {
+			return false
+		}
+	}
+	return true
+}
 
 func proofInputErr(code string) error { return fmt.Errorf("%w: %s", ErrPancakeProofInput, code) }
 
@@ -130,6 +145,8 @@ func (o *PancakeProofOptions) validate(inv *ProofInventory) error {
 		return proofInputErr("source_sha")
 	case o.PageID == "" || o.Token == "":
 		return proofInputErr("page_or_token_missing")
+	case !proofSafeSegment(o.PageID):
+		return proofInputErr("unsafe_identifier")
 	case len(o.PseudonymKey) == 0:
 		return proofInputErr("pseudonym_key_missing")
 	case o.Since.IsZero():
@@ -147,7 +164,10 @@ func (o *PancakeProofOptions) validate(inv *ProofInventory) error {
 	}
 	seenConv := map[string]bool{}
 	for _, c := range inv.Conversations {
-		if c.ID == "" || c.UpdatedAt.IsZero() || seenConv[c.ID] {
+		if !proofSafeSegment(c.ID) {
+			return proofInputErr("unsafe_identifier")
+		}
+		if c.UpdatedAt.IsZero() || seenConv[c.ID] {
 			return proofInputErr("inventory_conversation")
 		}
 		seenConv[c.ID] = true
@@ -267,23 +287,152 @@ type ProofRunReport struct {
 	Reasons           []string             `json:"reasons"`
 }
 
-// MarshalProofReceipt serializes the receipt deterministically. sensitive holds raw values that
-// must not appear anywhere in the output (values shorter than 6 bytes are protected by
-// construction instead, since they would match arbitrary substrings).
+// MarshalProofReceipt validates and serializes the receipt deterministically. It fails closed
+// (ErrPancakeProofUnsafe, never echoing the rejected value) for unsupported schema, header, field
+// classes or dispositions, and when any decoded string value or key contains a value from
+// sensitive (values shorter than 6 bytes are protected by construction instead, since they would
+// match arbitrary substrings).
 func MarshalProofReceipt(r *ProofReceipt, sensitive []string) ([]byte, error) {
-	if r == nil || r.EvidenceType != ProofEvidenceType || r.Live || r.Governance {
+	if !validProofReceipt(r) {
 		return nil, ErrPancakeProofUnsafe
 	}
 	b, err := json.MarshalIndent(r, "", "  ")
-	if err != nil {
+	if err != nil || proofContainsSensitive(b, sensitive) {
 		return nil, ErrPancakeProofUnsafe
 	}
-	for _, s := range sensitive {
-		if len(s) >= 6 && bytes.Contains(b, []byte(s)) {
-			return nil, ErrPancakeProofUnsafe
+	return append(b, 10), nil
+}
+
+// proofContainsSensitive decodes the JSON document and compares semantic string values and keys,
+// so JSON escaping of quotes, backslashes, newlines or HTML characters cannot hide a value.
+// Undecodable input is treated as sensitive (fail closed).
+func proofContainsSensitive(doc []byte, sensitive []string) bool {
+	var v interface{}
+	if json.Unmarshal(doc, &v) != nil {
+		return true
+	}
+	var walk func(x interface{}) bool
+	hit := func(str string) bool {
+		for _, s := range sensitive {
+			if len(s) >= 6 && strings.Contains(str, s) {
+				return true
+			}
+		}
+		return false
+	}
+	walk = func(x interface{}) bool {
+		switch t := x.(type) {
+		case string:
+			return hit(t)
+		case []interface{}:
+			for _, e := range t {
+				if walk(e) {
+					return true
+				}
+			}
+		case map[string]interface{}:
+			for k, e := range t {
+				if hit(k) || walk(e) {
+					return true
+				}
+			}
+		}
+		return false
+	}
+	return walk(v)
+}
+
+var (
+	proofRefPattern     = regexp.MustCompile(`^(pag|con|mes|cur)_[0-9a-f]{16}$`)
+	proofReasonPattern  = regexp.MustCompile(`^(run[0-9]{1,2}:)?[a-z_]{1,64}$`)
+	proofOutcomePattern = regexp.MustCompile(`^(ok|ok_unparsed|http_[0-9]{3}|redirect_rejected|oversize|transport_error|transport_panic|body_read_error)$`)
+	proofDigestPattern  = regexp.MustCompile(`^[0-9a-f]{64}$`)
+)
+
+func proofValidTime(s string, allowEmpty bool) bool {
+	if s == "" {
+		return allowEmpty
+	}
+	_, err := time.Parse(time.RFC3339Nano, s)
+	return err == nil
+}
+
+func proofValidDisposition(d ProofDisposition, allowNotRun bool) bool {
+	return d == ProofPass || d == ProofFail || d == ProofIncomplete || (allowNotRun && d == proofNotRun)
+}
+
+func proofValidReasons(rs []string) bool {
+	for _, r := range rs {
+		if !proofReasonPattern.MatchString(r) {
+			return false
 		}
 	}
-	return append(b, '\n'), nil
+	return true
+}
+
+func proofValidDiff(d ProofSetDiff) bool {
+	if d.Expected < 0 || d.Observed < 0 {
+		return false
+	}
+	for _, list := range [][]string{d.Missing, d.Extra, d.AdapterOmitted} {
+		for _, ref := range list {
+			if !proofRefPattern.MatchString(ref) {
+				return false
+			}
+		}
+	}
+	for _, m := range d.Mismapped {
+		if !proofRefPattern.MatchString(m.Ref) || len(m.Fields) == 0 {
+			return false
+		}
+		for _, f := range m.Fields {
+			switch f {
+			case "last_message_at", "sent_at", "sender_type", "content_type", "attachments":
+			default:
+				return false
+			}
+		}
+	}
+	return true
+}
+
+func validProofReceipt(r *ProofReceipt) bool {
+	if r == nil || r.SchemaVersion != ProofSchemaVersion || r.EvidenceType != ProofEvidenceType || r.Live || r.Governance ||
+		!proofSHAPattern.MatchString(r.SourceSHA) || !proofValidTime(r.StartedAt, false) || !proofValidTime(r.FinishedAt, false) ||
+		!proofValidDisposition(r.Disposition, false) || !proofValidReasons(r.Reasons) {
+		return false
+	}
+	iv, op := r.Inventory, r.Options
+	if !proofDigestPattern.MatchString(iv.Digest) || !proofLabelPattern.MatchString(iv.Provenance) || !proofRefPattern.MatchString(iv.PageRef) ||
+		!proofValidTime(iv.Since, false) || iv.ConversationCount < 0 || iv.MessageCount < 0 ||
+		op.MaxAttempts < 1 || op.MaxAttempts > ProofMaxAttempts || op.MaxDurationMS < 1 || op.ResponseCeiling != ProofMaxResponseBytes || op.Runs != proofRuns ||
+		r.Budget.AttemptsUsed < 0 || r.Budget.Denied < 0 || len(r.Runs) != proofRuns {
+		return false
+	}
+	for _, d := range r.Denials {
+		if !proofReasonPattern.MatchString(d.Reason) {
+			return false
+		}
+	}
+	for i, run := range r.Runs {
+		if run.Index != i+1 || !proofValidDisposition(run.Disposition, true) || !proofValidReasons(run.Reasons) ||
+			!proofValidTime(run.StartedAt, true) || !proofValidTime(run.FinishedAt, true) ||
+			!proofValidDiff(run.Conversations) || !proofValidDiff(run.Messages) {
+			return false
+		}
+		for _, q := range run.Requests {
+			if (q.Kind != "conversations" && q.Kind != "messages") || (q.Template != proofConvTemplate && q.Template != proofMsgTemplate) ||
+				!proofOutcomePattern.MatchString(q.Outcome) || q.Seq < 1 || q.Rows < 0 || q.ResponseBytes < 0 {
+				return false
+			}
+			for _, ref := range []string{q.ConversationRef, q.CursorRef} {
+				if ref != "" && !proofRefPattern.MatchString(ref) {
+					return false
+				}
+			}
+		}
+	}
+	return true
 }
 
 // ---------------------------------------------------------------------------
@@ -378,14 +527,29 @@ func (o *proofObserver) observe(body []byte, field string, since time.Time, conv
 		if id == "" || at.IsZero() {
 			continue
 		}
-		if o.seen[id] {
-			o.dup++
-			continue
-		}
-		o.seen[id] = true
-		if at.Before(since) {
-			o.old++
-			continue
+		if convPage {
+			// Conversation contract: the since filter runs before dedupe, so an old occurrence
+			// must not hide a later eligible row with the same id.
+			if at.Before(since) {
+				o.old++
+				continue
+			}
+			if o.seen[id] {
+				o.dup++
+				continue
+			}
+			o.seen[id] = true
+		} else {
+			// Message contract: dedupe first, then the since filter.
+			if o.seen[id] {
+				o.dup++
+				continue
+			}
+			o.seen[id] = true
+			if at.Before(since) {
+				o.old++
+				continue
+			}
 		}
 		o.eligible[id] = true
 		o.order = append(o.order, id)
@@ -417,7 +581,7 @@ type proofTransport struct {
 	run      int
 
 	// flags describing what stopped a fetch (read by classifyProofError)
-	budgetHit, deadlineHit, deniedHit, redirectHit, oversizeHit, panicHit, innerHit bool
+	budgetHit, deadlineHit, deniedHit, redirectHit, oversizeHit, panicHit, innerHit, readHit bool
 
 	// per-run observation state
 	convObs  *proofObserver
@@ -438,7 +602,7 @@ func (t *proofTransport) beginRun(run int) {
 	t.convSeen = map[string]bool{}
 	t.untils = nil
 	t.curConv = ""
-	t.budgetHit, t.deadlineHit, t.deniedHit, t.redirectHit, t.oversizeHit, t.panicHit, t.innerHit = false, false, false, false, false, false, false
+	t.budgetHit, t.deadlineHit, t.deniedHit, t.redirectHit, t.oversizeHit, t.panicHit, t.innerHit, t.readHit = false, false, false, false, false, false, false, false
 }
 
 func (t *proofTransport) setConv(id string) {
@@ -473,6 +637,9 @@ func (t *proofTransport) admit(req *http.Request) (kind, convID, reason string) 
 	case u.Fragment != "" || u.RawFragment != "" || u.Opaque != "":
 		return "", "", "fragment_or_opaque"
 	}
+	if !proofSafeSegment(t.opts.PageID) {
+		return "", "", "unsafe_page"
+	}
 	page := url.PathEscape(t.opts.PageID)
 	path := u.EscapedPath()
 	convPath := "/api/public_api/v2/pages/" + page + "/conversations"
@@ -483,7 +650,7 @@ func (t *proofTransport) admit(req *http.Request) (kind, convID, reason string) 
 	case strings.HasPrefix(path, msgPrefix) && strings.HasSuffix(path, "/messages"):
 		esc := strings.TrimSuffix(strings.TrimPrefix(path, msgPrefix), "/messages")
 		id, err := url.PathUnescape(esc)
-		if err != nil || id == "" || url.PathEscape(id) != esc || !t.approved[id] {
+		if err != nil || !proofSafeSegment(id) || url.PathEscape(id) != esc || !t.approved[id] {
 			return "", "", "path"
 		}
 		kind, convID = "messages", id
@@ -627,8 +794,17 @@ func (t *proofTransport) RoundTrip(req *http.Request) (resp *http.Response, err 
 	}
 	var body []byte
 	if res.Body != nil {
-		body, _ = io.ReadAll(io.LimitReader(res.Body, ProofMaxResponseBytes+1))
+		var rerr error
+		body, rerr = io.ReadAll(io.LimitReader(res.Body, ProofMaxResponseBytes+1))
 		res.Body.Close()
+		if rerr != nil { // a failed read can never establish content or an explicit-empty terminal
+			rec.ResponseBytes = len(body)
+			t.mu.Lock()
+			t.readHit = true
+			t.mu.Unlock()
+			finish("body_read_error")
+			return nil, errProofRead
+		}
 	}
 	rec.ResponseBytes = len(body)
 	if len(body) > ProofMaxResponseBytes {
@@ -694,6 +870,8 @@ func classifyProofError(err error, ctx context.Context, t *proofTransport) strin
 	switch {
 	case t.panicHit:
 		return "transport_panic"
+	case t.readHit:
+		return "response_read_error"
 	case t.deniedHit:
 		return "request_denied"
 	case t.redirectHit:
@@ -819,6 +997,22 @@ func runProofOnce(ctx context.Context, idx int, adapter *PancakeAdapter, tr *pro
 	rep = ProofRunReport{Index: idx, StartedAt: proofInstant(opts.Now()), UntilStable: true,
 		Conversations: newDiff(len(inv.Conversations), 0), Messages: newDiff(totalMsgs, 0), Requests: []ProofRequestRecord{}, Reasons: []string{}}
 	incomplete := func(reason string) { rep.Reasons = append(rep.Reasons, reason); rep.Disposition = ProofIncomplete }
+	// captureUntil finalizes the observed conversation `until` values; it is idempotent and is
+	// evaluated before any disposition so UntilStable=false can never coexist with PASS.
+	captureUntil := func() {
+		tr.mu.Lock()
+		defer tr.mu.Unlock()
+		rep.UntilStable = true
+		if len(tr.untils) > 0 {
+			u, _ := strconv.ParseInt(tr.untils[0], 10, 64)
+			rep.ConversationUntil = u
+			for _, s := range tr.untils {
+				if s != tr.untils[0] {
+					rep.UntilStable = false
+				}
+			}
+		}
+	}
 	defer func() {
 		if p := recover(); p != nil { // panic text is never recorded
 			rep.Reasons = append(rep.Reasons, "internal_panic")
@@ -830,16 +1024,8 @@ func runProofOnce(ctx context.Context, idx int, adapter *PancakeAdapter, tr *pro
 				rep.Requests = append(rep.Requests, r)
 			}
 		}
-		if len(tr.untils) > 0 {
-			u, _ := strconv.ParseInt(tr.untils[0], 10, 64)
-			rep.ConversationUntil = u
-			for _, s := range tr.untils {
-				if s != tr.untils[0] {
-					rep.UntilStable = false
-				}
-			}
-		}
 		tr.mu.Unlock()
+		captureUntil()
 		sort.SliceStable(rep.Requests, func(i, j int) bool { return rep.Requests[i].Seq < rep.Requests[j].Seq })
 		rep.FinishedAt = proofInstant(opts.Now())
 		if rep.Disposition == "" {
@@ -981,6 +1167,7 @@ func runProofOnce(ctx context.Context, idx int, adapter *PancakeAdapter, tr *pro
 		rep.Disposition = ProofFail
 		rep.Reasons = append(rep.Reasons, "reconciliation_mismatch")
 	}
+	captureUntil()
 	if !rep.UntilStable {
 		rep.Disposition = ProofFail
 		rep.Reasons = append(rep.Reasons, "until_unstable")

@@ -134,3 +134,67 @@ Required six semantic mutations are covered by M1, M2, M3, M4, M5 and M6 (every 
 ## 8. BUILD identity and hand-back
 
 Exact BUILD commit: `69cf3a0981f8e1322040bc3b2427a4c47245e9f9` (parent `9ba811b`; seed `d869624cc15f55b39516a36f8937454e617dc3b3` unchanged). The four Go blobs in that commit hash to the SHA-256 values in section 1. This follow-up documentation commit records the SHA in the tranche record and moves the tranche to REVIEW_PENDING; it modifies no source. Gate preflights, catalog check, docs build, `git diff --check` and gate unit tests are re-run for the follow-up commit and recorded in the active handoff. Independent Codex review is next; no self-approval, push, merge, deployment or FREEZE.
+
+## 9. R034-R1 repair evidence (Claude REPAIR_WORKER, 2026-10-03)
+
+Scope: same-scope repair of the independent review at commit 012c463 ([review](CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md), findings R034-R1-01..06). Only `backend/channels/pancake_proof.go` and `pancake_proof_test.go` changed among source files; the CLI files, the unchanged adapter, engine, `go.mod`, the authority seed and the reviewer probe artifact were not edited. Acknowledgment and BUILD synchronization were recorded in the active handoff and passed preflight 7/7 **before the first R1 edit**. Section 1–8 text above is preserved as history; where it conflicts with this section (the "not exercisable" statements for `until_stable`, the sanitation description and the observer description), this section is authoritative for the repaired source.
+
+### Repaired source identity
+
+| File | SHA-256 |
+| --- | --- |
+| `backend/channels/pancake_proof.go` | `650be211328f5876928be4116b7055e6523bf311ff6bfd5d886834cedd6a8564` |
+| `backend/channels/pancake_proof_test.go` | `412bcae76b6a43ea036422a7524af7fbc1dd143d131302472bf6b1367ce9cad5` |
+| `backend/cmd/pancake-proof/main.go` (unchanged) | `b657be771d10c5891f2f6915d1a196376d2288ed51cad28c5249d087c974e929` |
+| `backend/cmd/pancake-proof/main_test.go` (unchanged) | `5c5fe14b2cde9763fd71c3bb48a01ce6e7a1ea775ce8caa49206efaec87392e5` |
+
+The exact R1 repair commit SHA is recorded in the tranche record `buildCommit` and in section 10 by the follow-up documentation commit.
+
+### Findings and repairs
+
+| Finding | Repair | Named regression detector |
+| --- | --- | --- |
+| R1-01 | `RoundTrip` returns a fixed sanitized error for any non-nil body-read error before observing rows or handing bytes to the adapter; outcome `body_read_error`, run reason `response_read_error`, run 2 NOT_RUN | `TestProofR1BodyReadErrorNeverPasses` (complete JSON + error on every body, partial JSON + error, late message terminal, conversation terminal; error text contains a canary and token and never appears) |
+| R1-02 | `MarshalProofReceipt` validates schema, evidence type, flags, source SHA, times, dispositions, digest/provenance/pseudonym-ref patterns, outcome/reason/kind/template/mismatch-field classes and run structure (fail closed, nothing echoed); the sensitive scan now decodes the JSON and compares semantic string values and keys (`proofContainsSensitive`), so quote, backslash, newline, tab and HTML characters cannot evade it | `TestProofR1ReceiptValidationAndSemanticScan` (5 escaped canaries as values and keys, undecodable input fails closed, scan layer exercised on a structurally valid receipt, 25 unsupported-receipt edits, nil receipt) |
+| R1-03 | `proofSafeSegment` rejects empty, `.`/`..`, separators, backslash, `%`, `?`, `#`, `;`, `:`, space and control characters; applied to page and conversation identifiers at setup (`unsafe_identifier`, zero calls) and again in `admit` (`unsafe_page`, `path`) so inventory approval cannot override path safety | `TestProofR1ApprovedUnsafeIdentifiersDenied` (11 approved unsafe conversation IDs and 5 unsafe page IDs through the direct transport, 4 setup rejections, ordinary-ID positive control) |
+| R1-04 | Conversation observer now follows the adapter order (non-INBOX, validity, **since filter, then dedupe**); the message observer keeps dedupe-then-since; branch is chosen by page kind | `TestProofR1ObserverFollowsEachContractOrder` (old-first then later boundary-equal conversation: physical 7, old 2, duplicate 1, non-INBOX 1, eligible 3, mapped 3; message fixture where a later same-ID row is a duplicate) |
+| R1-05 | Run-level `until` stability is computed by an idempotent `captureUntil` immediately before the disposition checks (and again in the finalizer), so `until_stable=false` yields FAIL `until_unstable`. The control perturbs harness observer state only, not the adapter | `TestProofR1UntilStabilityEvaluatedBeforeDisposition` (real unchanged adapter: stable and PASS; synthetic perturbation: FAIL) |
+| R1-06 | Current SPEC implementation section, work order and this record updated; packet normative route (v2 conversations, v1 messages) re-checked and consistent; historical planning error and worker claims preserved | document review (no test) |
+
+### Baseline failures on the exact original BUILD
+
+An isolated `git archive` of `69cf3a0` (source SHA-256 verified `5a36147d…`) received only the new R1 test file (with the new-helper scan loop omitted because that helper does not exist there). Result: `TestProofR1BodyReadErrorNeverPasses` 4/4 subtests FAIL (PASS for complete JSON, late terminal and conversation terminal; INCOMPLETE `adapter_error` for partial JSON); `TestProofR1ReceiptValidationAndSemanticScan` FAIL for 22 unsupported receipts accepted; `TestProofR1ApprovedUnsafeIdentifiersDenied` 12 subtests FAIL (`approved unsafe id reached the transport`); `TestProofR1ObserverFollowsEachContractOrder/conversation-old-first-then-eligible` FAIL (`RawEligible:2 Mapped:3`; the message-order subtest passes on the original, as intended); `TestProofR1UntilStabilityEvaluatedBeforeDisposition` FAIL (`got PASS []`). No panic, timeout or build error in these runs. The reviewer's own six probes (`docs/reviews/probes/r034_reviewer_probe_test.go`, copied temporarily into `backend/channels` and removed) all PASS on the repaired source.
+
+### Mutation campaign on the repaired source
+
+Runner and rules as in section 6 (exact match counts, bytes restored in `finally`, hash equality checked, baseline before and after PASS; final restored hash `650be211…` equals the repaired source). All 29 mutants were applied once with the stated counts; **29 KILLED, 0 SURVIVED, 0 INCONCLUSIVE, 0 NOT_APPLIED**. The 19 original-campaign mutants were re-run against the repaired source and tests (M6c was redefined: it now disables structural validation and the scan, because validation rejects the leaked outcome first). Ten new mutants target the repaired guards:
+
+| ID | Mutation | Observed failing assertion |
+| --- | --- | --- |
+| R1a | read-error guard `if false` | `read error must be INCOMPLETE response_read_error, got PASS []` |
+| R1b | scan compares encoded bytes only | `value: escaped canary "CANARY-<RAW>&VALUE" evaded the scan` (and key form) |
+| R1c | receipt validation disabled | `not-run-overall: unsupported receipt accepted`, `a receipt claiming live must be refused` |
+| R1d1 | conversation segment safety removed from `admit` | `approved unsafe id reached the transport: err=<nil> calls=1` (8 subtests) |
+| R1d2 | page segment safety removed from `admit` | `unsafe page ".." reached the transport` |
+| R1d3 | setup identifier validation removed | `conv-slash: want unsafe_identifier rejection with zero calls, got <nil> (14)` |
+| R1e | conversation observer dedupes before since | `{… DuplicateRow:2 … RawEligible:2 Mapped:3}` |
+| R1f | message observer uses conversation order | `message contract must PASS: FAIL [run1:reconciliation_mismatch …]` |
+| R1g | until captured only in the finalizer | `until_stable=false must be FAIL until_unstable, got PASS []` |
+| R1h | `response_read_error` classification removed | `got INCOMPLETE [run1:adapter_error …]` |
+
+M6c (validation and scan disabled, raw transport error text in the outcome) fails `receipt leaks "tok-CANARY-7f3a91c2"` and `receipt leaks "CANARY-ERR-5521"`, so the canary assertion itself is independently shown to detect a leak rather than relying on the scan. Reason-class-only kills carried over from section 6 (M8, M9a) keep their stated caveat. Mutant logs and hashes are held outside the repository.
+
+### Commands and results (project root, `GOPROXY=off GOTOOLCHAIN=local`, `go -C backend`)
+
+| Check | Result |
+| --- | --- |
+| `go test -count=1 -v ./channels/ ./cmd/pancake-proof/` (complete channels package + CLI) | PASS: 123 top-level / 279 total PASS lines, 0 FAIL, 0 SKIP (`channels` 2.7 s, CLI 3.5 s); harness tests alone: 22 top-level |
+| `go build ./...`, `go vet ./...`, `gofmt -l` on the four files | exit 0, exit 0, no output |
+| `go test -race` | **NOT RUN**: `go: -race requires cgo` (unchanged host limitation) |
+| CLI run `go run ./cmd/pancake-proof -source-sha … -key …` | exit 0 (PASS receipt, SYNTHETIC_OFFLINE) |
+| DB-dependent suites; live/provider/network/GitHub checks | **NOT RUN** (no authority; not required) |
+| Docs build, catalog check, diff check, preflights, gate unit tests | recorded in section 10 and the active handoff |
+
+### Remaining limitations
+
+`adapter_omitted` still cannot be triggered with the unchanged adapter and these fixtures; the new `until_stable=false` coverage is a synthetic observer perturbation, not evidence that the real adapter changes `until`. Race detector NOT RUN. Receipt validation is structural (patterns and enumerations); it does not prove semantic correctness of counts. Identifier safety is deliberately stricter than the provider ID alphabet (rejects `:`, `;`, space and `%`); a later live work order must confirm real IDs fit or widen the rule under review. Nothing here is live, provider, governance or hosted-readiness evidence; no FREEZE is claimed.

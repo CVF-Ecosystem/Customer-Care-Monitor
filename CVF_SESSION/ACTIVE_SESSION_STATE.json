@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
-  "nextAllowedMove": "Owner transfers bounded CCMAI-RUNTIME-034 R1 findings R034-R1-01..06 to Claude REPAIR_WORKER. Claude rehydrates, acknowledges and synchronizes BUILD before same-scope harness repairs, then returns exact local REVIEW_PENDING repair SHA and evidence for independent Codex re-review. Immutable seed and original adapters remain unchanged. Real channel/provider/credential/network use remains unauthorized; live packet remains PREPARED_NOT_DISPATCHED. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No push/merge/deployment/FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-034 R1: Claude REPAIR_WORKER resolves R034-R1-01..06 within the unchanged seed scope (new harness files and documentation only), runs the required local checks, appends R1 evidence and returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review. Real channel/provider/credential/network use remains unauthorized; live packet remains PREPARED_NOT_DISPATCHED. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No self-approval/push/merge/deployment/FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD; Claude REPAIR_WORKER next via owner transfer; Codex independent re-review after R1",
-  "roleRoute": "CHANGES_REQUIRED_OWNER_TRANSFER_R034_R1_THEN_INDEPENDENT_REVIEW",
+  "activeRole": "Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R034-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1",
+  "roleRoute": "CLAUDE_R1_REPAIR_THEN_INDEPENDENT_CODEX_REREVIEW",
   "updatedAt": "2026-10-03"
 }

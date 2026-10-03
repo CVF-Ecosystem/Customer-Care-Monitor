@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD; Claude REPAIR_WORKER next via owner transfer; Codex independent re-review after R1
-- Next allowed move: Owner transfers bounded CCMAI-RUNTIME-034 R1 findings R034-R1-01..06 to Claude REPAIR_WORKER. Claude rehydrates, acknowledges and synchronizes BUILD before same-scope harness repairs, then returns exact local REVIEW_PENDING repair SHA and evidence for independent Codex re-review. Immutable seed and original adapters remain unchanged. Real channel/provider/credential/network use remains unauthorized; live packet remains PREPARED_NOT_DISPATCHED. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No push/merge/deployment/FREEZE.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R034-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1
+- Next allowed move: CCMAI-RUNTIME-034 R1: Claude REPAIR_WORKER resolves R034-R1-01..06 within the unchanged seed scope (new harness files and documentation only), runs the required local checks, appends R1 evidence and returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review. Real channel/provider/credential/network use remains unauthorized; live packet remains PREPARED_NOT_DISPATCHED. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No self-approval/push/merge/deployment/FREEZE.
 - Parked operator checkpoint: none
 
 ## Authority and activation acknowledgment
@@ -58,3 +58,11 @@ CHANGES_REQUIRED for exact Claude BUILD69cf3a0981f8e1322040bc3b2427a4c47245e9f9;
 REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD Codex acknowledged before routing/synchronization. CVF Agent Declaration: same project/core26c686cc99b8be965d2760f27fe875b03376c643; REVIEW; R2; live evidence YES; this active handoff; next move owner transfers R1 to Claude under unchanged seed; parked none. Current return does not activate worker BUILD or self-approve product. No second routine owner approval; owner manually transfers order. Final documentation checks/commit still required before returned SHA.
 
 Review-record validation: default/PR-range/explicit-twelve-file preflight7/7 PASS; gate unit tests46/46 PASS14.062s; docs build PASS7.37s (inherited env-highlighter warnings), catalog generation/check and diff checks PASS. Original source/seed diffs remain empty. Positive full channels suite includes existing loopback httptest fixtures; new harness/reviewer defect probes are entirely in-memory, with no external network. Six expected failing review probes remain defects, not erased by repository-gate PASS. Reviewer initial fixture setup errors retained; no formal repair/closure or runtime-governance acceptance. Final COMMIT_STEWARD reviews exact twelve-file documentation/probe-evidence set and reruns final default/PR/scoped gates before local commit; no push. Owner transfers R1 order next.
+
+## R034-R1 repair rehydration and acknowledgment (Claude, 2026-10-03)
+
+Recorded **before any R1 source edit**. Rehydrated from current files: manifest and policy, `ACTIVE_SESSION_STATE.json`, `CVF_SESSION_MEMORY.md`, this handoff, `IMPLEMENTATION_STATUS.json`, the R034 order (including the R1 return), the independent review at commit 012c463, the tranche record and unchanged authority seed. Gate preflight 7/7 before the transition.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD (repair round 1); risk ceiling R2; live evidence required YES (no governance or live claim: synthetic offline only); role REPAIR_WORKER / repair COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
+
+Role transition REVIEW (CHANGES_REQUIRED) -> BUILD: Claude holds REPAIR_WORKER only for findings R034-R1-01..06; Codex remains independent reviewer; no self-approval, push, merge, deployment or FREEZE. Seed unchanged; Go commands use GOPROXY=off, GOTOOLCHAIN=local, project-root cwd and go -C backend.
