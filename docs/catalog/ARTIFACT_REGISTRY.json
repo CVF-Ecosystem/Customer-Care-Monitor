@@ -5,25 +5,32 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                        "id": "runtime037-independent-review",
+                        "family": "continuity",
+                        "path": "docs/reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "Independent R037 exact-BUILD REVIEW_PASS, entire guide comparison and source/help evidence, operational limits retained."
+                      },
+                      {
                         "id": "runtime037-spec",
                         "family": "continuity",
                         "path": "docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R037 SG-01..03 four S3 guide Compose examples/prerequisite contract; BUILT, REVIEW_PENDING."
+                        "description": "R037 SG-01..03 independently REVIEW_PASS / FREEZE_OPEN, static guide/source comparison only."
                       },
                       {
                         "id": "runtime037-build",
                         "family": "continuity",
                         "path": "docs/reviews/S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R037 BUILD evidence: exact guide diff, SG matrix by source comparison, checks and NOT RUN; REVIEW_PENDING, no runtime claim."
+                        "description": "Historical Claude R037 BUILD evidence, five guide replacements and failed history; exact source independently accepted, runtime NOT RUN."
                       },
                       {
                         "id": "runtime037-order",
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_037.md",
                         "status": "ACTIVE",
-                        "description": "R037 R1 documentation order REVIEW_PENDING (Claude built; independent Codex review next), no migration/live authority."
+                        "description": "R037 documentation order independently REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD, no new worker."
                       },
                       {
                         "id": "runtime037-seed",
@@ -303,7 +310,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R037 docs-only REVIEW_PENDING handoff; independent Codex review next, no runtime/FREEZE."
+                          "description":  "Current R037 independent REVIEW_PASS / REVIEW handoff; ORCHESTRATOR next, no new worker/runtime/FREEZE."
                       },
                       {
                           "id":  "truth-implementation-status",

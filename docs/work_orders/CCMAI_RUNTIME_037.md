@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-037 — Correct four S3 guide Compose commands
 
-Status: REVIEW_PENDING
+Status: REVIEW_PASS
 
 Date: 2026-10-03. Risk R1. [SPEC](../specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md). Immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-037.json` committed 964f406a855c4813c64fc0655eeeba484129f507 before activation/BUILD. Standing local orchestration delegation; owner manually transfers to Claude, no automatic invocation.
 
@@ -18,6 +18,10 @@ Allowed: `docs/guide/s3-storage.md` (four command prefixes and one prerequisite 
 
 Changed migration arguments/confirmation, expanded scope, false operational proof or failed required check prevents acceptance. Same-scope repairs retain seed; third repair without independent new root cause requires REVIEW_COST_ESCALATION_REQUIRED.
 
-## Dispatch boundary
+## Historical dispatch boundary
 
 DISPATCH_READY / NOT_BUILT, no worker started. Existing acceptances and R033 FREEZE unchanged. R037 addresses four command examples only, not all inherited S3 claims or live readiness. No provider/network/credential/migration/container authority.
+
+## Independent acceptance (2026-10-03)
+
+[Exact-BUILD review](../reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md) accepts SG-01..03, REVIEW_PASS / FREEZE_OPEN, static guide/source/help scope only. Five line replacements and all remaining content verified; guide/seed/product unchanged by reviewer. Prior dispatch text is historical. No migration/container/S3/runtime/governance/FREEZE claim.

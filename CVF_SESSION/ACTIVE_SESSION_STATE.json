@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-037: Codex independent REVIEWER reviews exact Claude BUILD cf91801168a9d41fb491bd2614f709b201b2556c (four S3-guide Compose command prefixes and prerequisite sentence, REVIEW_PENDING) for seed identity, SG-01..03, exact five-line guide diff, source comparison, preserved migrate-files arguments/XOA confirmation and honest NOT RUN. Static docs/source checks only; no migration/Docker daemon/S3/credentials/network/product changes. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake proof remain separate. No self-approval. No push, merge, deployment or new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-037 is REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD cf91801168a9d41fb491bd2614f709b201b2556c, four S3-guide command prefixes and one prerequisite sentence by static comparison only. ORCHESTRATOR handles bounded local planning/continuity; no new worker BUILD or live execution dispatched. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake inputs/credential/network authority remain separate. No migration/Docker daemon/S3/credentials/network/product/push/merge/deployment/new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude documentation IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
-  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
+  "activeRole": "Codex independent REVIEWER -> SESSION_SYNC_STEWARD / review COMMIT_STEWARD -> ORCHESTRATOR; Claude documentation BUILD accepted, no new worker dispatched",
+  "roleRoute": "R037_REVIEW_PASS_DOCS_ONLY_ORCHESTRATOR_NEXT",
   "updatedAt": "2026-10-03"
 }
