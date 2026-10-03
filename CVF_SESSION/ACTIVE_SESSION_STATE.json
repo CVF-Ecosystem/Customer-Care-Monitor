@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-034 R1: Codex independent REVIEWER re-reviews exact Claude R1 repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e (findings R034-R1-01..06, parent BUILD 69cf3a0981f8e1322040bc3b2427a4c47245e9f9) for seed identity, repaired guards, reviewer-probe replay, mutation sensitivity and preserved original sources, then records REVIEW_PASS or CHANGES_REQUIRED. Real channel/provider/credential/network use remains unauthorized; live packet remains PREPARED_NOT_DISPATCHED. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No self-approval/push/merge/deployment/FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-034 R1 is REVIEW_PASS / FREEZE_OPEN for exact Claude repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e, offline harness only. ORCHESTRATOR handles local planning/continuity autonomously; any future live work order requires controlled tenant/page, independent inventory, quiescence/capture conditions and separate explicit credential/network authority. Live packet remains PREPARED_NOT_DISPATCHED; no new worker BUILD or live execution dispatched. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No push/merge/deployment/FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER of the exact Claude R1 repair; Claude REPAIR_WORKER handed back (further REPAIR_WORKER work only on accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
-  "roleRoute": "INDEPENDENT_CODEX_REREVIEW_OF_CLAUDE_R1_REPAIR",
+  "activeRole": "Codex independent REVIEWER -> SESSION_SYNC_STEWARD / review COMMIT_STEWARD -> ORCHESTRATOR; Claude R1 REPAIR_WORKER complete, no new worker dispatched",
+  "roleRoute": "R034_R1_REVIEW_PASS_OFFLINE_ONLY_ORCHESTRATOR_NEXT",
   "updatedAt": "2026-10-03"
 }

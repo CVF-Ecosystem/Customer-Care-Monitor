@@ -1,0 +1,206 @@
+{
+  "evidenceType": "SYNTHETIC_OFFLINE",
+  "sourceCommit": "9e52d2840281e227a78e533aea0fd2f208ffcf6e",
+  "sourceSHA256": "650be211328f5876928be4116b7055e6523bf311ff6bfd5d886834cedd6a8564",
+  "method": "Independent mutations in exact-repair backend archive; original bytes restored after each attempt; no product edits in checkout.",
+  "scratchDirectory": "r034-r1-independent-review-s6f6psww",
+  "attempts": [
+    {
+      "name": "baseline",
+      "exit": 0,
+      "pass_count": 39,
+      "failed_tests": [],
+      "assertions": [],
+      "source_sha256": "650be211328f5876928be4116b7055e6523bf311ff6bfd5d886834cedd6a8564",
+      "log_sha256": "b59ce6a6b9732fc02f1b4394527e920de7e6dea72e1c9521acdf67211bebc402",
+      "disposition": "PASS"
+    },
+    {
+      "name": "read-error",
+      "exit": 1,
+      "pass_count": 0,
+      "failed_tests": [],
+      "assertions": [],
+      "source_sha256": "8418b33173d57f09c84b5e2a246dec0a39e80f23b9ccfad35e06c0811988dbaa",
+      "log_sha256": "a22381d252b1da1e4658260dc8118967aef6508ce9f5554719913d3bc9be32cf",
+      "disposition": "INCONCLUSIVE_BUILD_ERROR"
+    },
+    {
+      "name": "semantic-scan",
+      "exit": 1,
+      "pass_count": 38,
+      "failed_tests": [
+        "TestProofR1ReceiptValidationAndSemanticScan"
+      ],
+      "assertions": [
+        "pancake_proof_test.go:930: value: escaped canary \"CANARY-<RAW>&VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: key: escaped canary \"CANARY-<RAW>&VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: value: escaped canary \"CANARY-QUOTE-\\\"-VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: key: escaped canary \"CANARY-QUOTE-\\\"-VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: key: escaped canary \"CANARY-SLASH-\\\\-VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: value: escaped canary \"CANARY-SLASH-\\\\-VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: value: escaped canary \"CANARY-LINE-\\n-VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: key: escaped canary \"CANARY-LINE-\\n-VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: value: escaped canary \"CANARY-TAB-\\t-VALUE\" evaded the scan",
+        "pancake_proof_test.go:930: key: escaped canary \"CANARY-TAB-\\t-VALUE\" evaded the scan"
+      ],
+      "source_sha256": "7015ef3d0131acc01e2de92f77d46f4627c51e98b34cc911dc4de5ffa80d634f",
+      "log_sha256": "020b6898e52016b43ce426af9d4e7d74e7aeb2660105a308424e00950c1ca0f5",
+      "disposition": "KILLED_SEMANTIC"
+    },
+    {
+      "name": "receipt-validation",
+      "exit": 1,
+      "pass_count": 34,
+      "failed_tests": [
+        "TestProofR1ReceiptValidationAndSemanticScan",
+        "TestReviewerUnsupportedReceiptValuesRejected/unknown-schema",
+        "TestReviewerUnsupportedReceiptValuesRejected/unknown-disposition",
+        "TestReviewerUnsupportedReceiptValuesRejected/invalid-source-sha",
+        "TestReviewerUnsupportedReceiptValuesRejected"
+      ],
+      "assertions": [
+        "pancake_proof_test.go:987: free-text-outcome: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: unknown-template: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: run-index-mismatch: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: bad-start-time: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: free-text-provenance: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: raw-conversation-ref: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: unknown-kind: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: raw-missing-ref: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: unknown-mismatch-name: unsupported receipt accepted (err=<nil>)",
+        "pancake_proof_test.go:987: denial-free-text: unsupported receipt accepted (err=<nil>)"
+      ],
+      "source_sha256": "71bb269e86079592b26dc6437b8294f3fe59529c7aabace740873eafdec4b81a",
+      "log_sha256": "40dc4e2e3b2fbba7aba9fbacc7e262e75f6d4a4ce87077bebb0d7b1cb013d6ad",
+      "disposition": "KILLED_SEMANTIC"
+    },
+    {
+      "name": "conversation-segment",
+      "exit": 1,
+      "pass_count": 23,
+      "failed_tests": [
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"c-aaa1/../x\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"..\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\".\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a\\\\..\\\\x\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a%2F..%2Fx\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a%252e%252e\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a?b\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a#b\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a_b\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a\\x00b\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied/conversation-\"a;b\"",
+        "TestProofR1ApprovedUnsafeIdentifiersDenied",
+        "TestReviewerApprovedTraversalIDsDenied/c-aaa1/../x",
+        "TestReviewerApprovedTraversalIDsDenied/..",
+        "TestReviewerApprovedTraversalIDsDenied/a\\..\\x",
+        "TestReviewerApprovedTraversalIDsDenied"
+      ],
+      "assertions": [
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1019: approved unsafe id reached the transport: err=<nil> calls=1"
+      ],
+      "source_sha256": "2b2104cdf0a4842e4b28c7980d13b4665e49d0edeb8b2f90129459ca6adcc0e6",
+      "log_sha256": "0ceacf73aa4139edb39c92eed98a588c3c0a9476b6222d89b81d18195a254b37",
+      "disposition": "KILLED_SEMANTIC"
+    },
+    {
+      "name": "page-segment",
+      "exit": 1,
+      "pass_count": 36,
+      "failed_tests": [
+        "TestProofR1ApprovedUnsafeIdentifiersDenied",
+        "TestReviewerApprovedTraversalIDsDenied/page-dot-segment",
+        "TestReviewerApprovedTraversalIDsDenied"
+      ],
+      "assertions": [
+        "pancake_proof_test.go:1032: unsafe page \"..\" reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1032: unsafe page \"a/b\" reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1032: unsafe page \"a\\\\b\" reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1032: unsafe page \"a%2e\" reached the transport: err=<nil> calls=1",
+        "pancake_proof_test.go:1032: unsafe page \"a?b\" reached the transport: err=<nil> calls=1"
+      ],
+      "source_sha256": "8709b63af54d4d556151fda6928cd9347d03a922d55370341164ead38f2b248a",
+      "log_sha256": "048bcfa47f4dccde3f013010c790be7fc00ccd2b39c9fc866cfb51b1f8593d39",
+      "disposition": "KILLED_SEMANTIC"
+    },
+    {
+      "name": "conversation-observer-order",
+      "exit": 1,
+      "pass_count": 36,
+      "failed_tests": [
+        "TestProofR1ObserverFollowsEachContractOrder/conversation-old-first-then-eligible",
+        "TestProofR1ObserverFollowsEachContractOrder",
+        "TestReviewerConversationRawEligibilityMatchesAdapter"
+      ],
+      "assertions": [
+        "pancake_proof_test.go:1076: conversation accounting follows the adapter order: {PhysicalRows:7 DuplicateRow:2 OldRows:2 NonInboxRows:1 RawEligible:2 Mapped:3}",
+        "reviewer_probe_test.go:60: RAW_ELIGIBILITY_INCORRECT: PASS receipt eligible=2 mapped=3; old occurrence incorrectly suppresses later eligible conversation"
+      ],
+      "source_sha256": "1d45a9992d624d6fc09c080ab14d80b2f96ff281da616a938e94bd586812e1df",
+      "log_sha256": "68d682b57fa0808ff9df6818c8b439c487f4e3e8afac7789b1b97a688af60ce2",
+      "disposition": "KILLED_SEMANTIC"
+    },
+    {
+      "name": "until-before-disposition",
+      "exit": 1,
+      "pass_count": 37,
+      "failed_tests": [
+        "TestProofR1UntilStabilityEvaluatedBeforeDisposition",
+        "TestReviewerUntilValidationRunsAfterObservation"
+      ],
+      "assertions": [
+        "pancake_proof_test.go:1136: until_stable=false must be FAIL until_unstable, got PASS []",
+        "reviewer_probe_test.go:70: UNTIL_UNSTABLE_FALSE_PASS: UntilStable=false was populated in defer after the disposition check"
+      ],
+      "source_sha256": "3f206b0ed8fbeb71eb7fdb3e72917c2e10dc0cb3baf2b9d72dc662930a9d090e",
+      "log_sha256": "f9d1cd98552d3d170cb0063e081fab38699788e501432278b10927c8eb4eb228",
+      "disposition": "KILLED_SEMANTIC"
+    },
+    {
+      "name": "restored-baseline",
+      "exit": 0,
+      "pass_count": 39,
+      "failed_tests": [],
+      "assertions": [],
+      "source_sha256": "650be211328f5876928be4116b7055e6523bf311ff6bfd5d886834cedd6a8564",
+      "log_sha256": "8ddaacb41912e53399426710e544fb0eb71e0f3229be995be25f8b51d1665fe9",
+      "disposition": "PASS"
+    },
+    {
+      "name": "read-error-corrected",
+      "disposition": "KILLED_SEMANTIC",
+      "exit": 1,
+      "failed_tests": [
+        "TestProofR1BodyReadErrorNeverPasses/complete-json-then-error-every-body",
+        "TestProofR1BodyReadErrorNeverPasses/partial-json-then-error-every-body",
+        "TestProofR1BodyReadErrorNeverPasses/late-terminal-read-fails",
+        "TestProofR1BodyReadErrorNeverPasses/conversation-terminal-read-fails",
+        "TestProofR1BodyReadErrorNeverPasses",
+        "TestReviewerReadErrorCannotPass"
+      ],
+      "assertions": [
+        "pancake_proof_test.go:899: read error must be INCOMPLETE response_read_error, got PASS []",
+        "pancake_proof_test.go:899: read error must be INCOMPLETE response_read_error, got PASS []",
+        "pancake_proof_test.go:899: read error must be INCOMPLETE response_read_error, got PASS []",
+        "reviewer_probe_test.go:23: READ_ERROR_FALSE_PASS: overall=PASS attempts=20; every body returned io.ErrUnexpectedEOF"
+      ],
+      "source_sha256": "745fe32d66d4fd24e9bf5825f35054723821529620d905eca93a60f3b10bf192",
+      "log_sha256": "a6687076863f538f6ea04207e19f5a8f33a8c861e1e3d5912460136047851a11"
+    }
+  ],
+  "finalRestoration": {
+    "sourceSHA256": "650be211328f5876928be4116b7055e6523bf311ff6bfd5d886834cedd6a8564",
+    "baselineExit": 0,
+    "logSHA256": "3d528735f64da80534db8458273af52e818a3c3d1c4d43e887a9cd4c4a39574a"
+  }
+}

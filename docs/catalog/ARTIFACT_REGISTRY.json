@@ -5,6 +5,20 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                          "id": "runtime034-r1-independent-rereview",
+                          "family": "continuity",
+                          "path": "docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Independent R034 R1 REVIEW_PASS: offline contract accepted, repaired probes/mutations pass; FREEZE/live remain OPEN."
+                      },
+                      {
+                          "id": "runtime034-r1-independent-mutations",
+                          "family": "continuity",
+                          "path": "docs/reviews/probes/r034_r1_mutation_summary.json",
+                          "status": "ACTIVE",
+                          "description": "Independent exact-R1 synthetic mutation sample, semantic failures, hashes/restoration and initial INCONCLUSIVE attempt."
+                      },
+                      {
                           "id": "runtime034-independent-review",
                           "family": "continuity",
                           "path": "docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md",
@@ -30,14 +44,14 @@
                           "family": "continuity",
                           "path": "docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md",
                           "status": "ACTIVE",
-                          "description": "Historical R034 worker BUILD evidence; independent review returns CHANGES_REQUIRED; synthetic only."
+                          "description": "Historical worker BUILD and R1 evidence; independent R1 re-review accepts offline contract with limits; synthetic only."
                       },
                       {
                           "id": "runtime034-proof-harness-order",
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
                           "status": "ACTIVE",
-                          "description": "R034 work order (R1 REVIEW_PENDING): Claude repaired findings R034-R1-01..06; independent Codex re-review next."
+                          "description": "R034 work order: independent R1 REVIEW_PASS for offline PH-01..08; no new repair/live dispatch."
                       },
                       {
                           "id": "historical-runtime033-closure-handoff",
@@ -128,7 +142,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: R034 R1 repair REVIEW_PENDING; independent Codex re-review of the exact Claude repair."
+                          "description":  "Current active handoff: R034 R1 REVIEW_PASS offline; future live inputs/authority and FREEZE remain open."
                       },
                       {
                           "id":  "truth-implementation-status",
