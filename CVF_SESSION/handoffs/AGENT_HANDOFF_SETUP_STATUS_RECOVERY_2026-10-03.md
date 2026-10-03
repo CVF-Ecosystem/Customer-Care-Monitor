@@ -1,6 +1,8 @@
 # Setup-status recovery dispatch handoff
 
-Status: ACTIVE
+Status: HISTORICAL
+
+Successor: [R037 S3 guide commands handoff](AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md). Header below records R036 acceptance at transfer; current routing is in the successor.
 
 ## Current State
 
