@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-042 — Offline proof CLI usage guide and sample
 
-Status: REVIEW_PENDING
+Status: REVIEW_PASS
 
 Date: 2026-10-03. R1 documentation-only tranche; [SPEC](../specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md), immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`, committed `9b10a8f6f67d314d6c4f5a3846396f28a5487948` before activation/BUILD. Standing local orchestration delegation; owner manually transfers to Claude. Codex authors/reviews, Claude owns implementation and BUILD commit; no automatic worker invocation.
 
@@ -16,6 +16,10 @@ Only new docs/guide/pancake-offline-proof.md, new docs/examples/pancake-proof/sy
 
 No real inventory/capture/customer data/config/.env/credential/API/provider/channel/network/downloads/media/DB/Docker/parent/privilege/compiler alteration/GitHub/push/merge/deploy/FREEZE. Synthetic CLI smoke is neither live completeness nor CVF governance proof. An unavailable symlink probe remains UNVERIFIED; do not attempt to resolve it in this order. Same-scope documentation repairs retain seed, third repair without independent new root cause escalates under existing policy.
 
-## Current disposition
+## Historical dispatch-time disposition
 
 DISPATCH_READY / NOT_BUILT, no worker started, guide/sample absent. This order bounds documentation and actual examples using unchanged accepted offline CLI; no new runtime execution by planner, no reopened R041 acceptance or new live/FREEZE authority.
+
+## Independent review disposition (Codex, 2026-10-03)
+
+DU-01..07 REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD `6b401195edcc99e9bc9568c45c7ff8962c7d7480`; [review](../reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md). Guide/sample/packet/protected source unchanged by reviewer;9 mounted smoke cases and6 exact guide PowerShell blocks independently validated. Worker docs-build FAIL was caused by Codex a55b477 shared-learning link outside docs root; Codex corrected it to a code span without editing worker files or site configuration. Original failure retained, later corrected-state PASS separate; no instruction for worker to expand paths or suppress dead links. Immutable seed unchanged. Current local planning only, no new worker/BUILD/FREEZE; symlink/race/mapped/subst/TOCTOU/source-sha limitations preserved.

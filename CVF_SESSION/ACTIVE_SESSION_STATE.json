@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-042: Codex independent REVIEWER reviews exact Claude BUILD 6b401195edcc99e9bc9568c45c7ff8962c7d7480 (Vietnamese offline proof CLI guide, synthetic inventory sample, post-R041 live-packet update; REVIEW_PENDING, R1 documentation-only) for seed identity, DU-01..07, guide/sample accuracy against the accepted CLI source, the finite DU-03 smoke commands/exits/outputs, packet historical-versus-current labeling, protected-path equality and retained limitations (symlink UNVERIFIED, race NOT RUN, mapped/subst drives, TOCTOU). Documentation and synthetic smoke only; no live, governance, hosted or FREEZE claim. R041 and earlier acceptances and closures unchanged. No self-approval. No push, merge, deployment or new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-042 is REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude BUILD 6b401195edcc99e9bc9568c45c7ff8962c7d7480: DU-01..07 guide/sample/packet and independent finite example smoke accepted. Codex corrected its own a55b477 out-of-docs dead link in shared learning; original worker docs-build FAIL retained, guide/sample/packet/accepted CLI source/seed unchanged. ORCHESTRATOR handles bounded local planning/continuity; no new worker BUILD dispatched. Symlink UNVERIFIED2 SKIP, race NOT RUN, mapped/subst and TOCTOU limits retained; receipt source-sha supplied metadata only. Live inputs/credential/network authority separate. No engine/DB/Analyzer/real inventory/config/credentials/provider/channel/network/push/merge/deployment/new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
-  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
+  "activeRole": "Codex independent REVIEWER -> ORCHESTRATOR / SESSION_SYNC_STEWARD / review-documentation COMMIT_STEWARD; dispatcher-owned dead-link correction by Codex, Claude BUILD unchanged",
+  "roleRoute": "INDEPENDENT_REVIEW_PASS_WITH_DISPATCHER_DOCUMENTATION_CORRECTION",
   "updatedAt": "2026-10-03"
 }
