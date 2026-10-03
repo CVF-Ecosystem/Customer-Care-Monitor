@@ -1,6 +1,6 @@
 # R039 — Retire historical Git-baseline assertion from offline CLI tests
 
-Date: 2026-10-03. Status: SPEC_READY / NOT_BUILT. Risk R1: test-only maintenance; runtime/admission/receipt/governance gates unchanged. Source planning anchor ae620ba; dispatcher seed/baseCommit `7a390dc08e7958015b107e3a3e3b890369b82cf1`. [Order](../work_orders/CCMAI_RUNTIME_039.md).
+Date: 2026-10-03. Status: SPEC_READY; BUILT, REVIEW_PENDING. Risk R1: test-only maintenance; runtime/admission/receipt/governance gates unchanged. Source planning anchor ae620ba; dispatcher seed/baseCommit `7a390dc08e7958015b107e3a3e3b890369b82cf1`. [Order](../work_orders/CCMAI_RUNTIME_039.md).
 
 ## Intake and design
 
@@ -20,4 +20,4 @@ No new mirrored unit test or mutation campaign needed for deletion of a procedur
 
 Allowed runtime here is only finite synthetic in-memory CLI tests; receipt remains SYNTHETIC_OFFLINE. No actual channel/provider request or runtime AI-governance claim. No adapter/harness/engine product edit, engine test/Analyzer execution, database/Docker, customer data, configuration/credential reads, external network, downloads, dependency/workflow/gate/parent change, push/merge/deployment or new FREEZE. Existing tests may create/read only their task-owned synthetic poison fixtures. Prior source acceptances and failures remain attributed. Live packet external inputs and real MCP execution remain separate.
 
-Current truth: DISPATCH_READY / NOT_BUILT, original test present; no worker started or Go commands executed in planning. R038 REVIEW_PASS / FREEZE_OPEN and prior local acceptance/R033 FREEZE remain unchanged. Independent Codex review required after Claude BUILD.
+*Historical (dispatch-time): DISPATCH_READY / NOT_BUILT, original test present, no worker started or Go commands executed in planning.* **Current:** Claude BUILD preserved the named original-test failure (exit 1 at the historical protected-path assertion, not a skip), removed only that test and its PH-07 comment (19 lines), and ran the full offline CLI suite uncached (6 tests PASS, 0 skips) plus cached build/vet; protected-path diff from the seed is empty (evidence: [BUILD record](../reviews/PANCAKE_CLI_SCOPE_ASSERTION_R039_BUILD_2026-10-03.md)). REVIEW_PENDING, not independently accepted. R038 REVIEW_PASS / FREEZE_OPEN and prior local acceptance/R033 FREEZE remain unchanged. Independent Codex review required after Claude BUILD.

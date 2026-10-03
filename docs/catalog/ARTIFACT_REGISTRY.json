@@ -16,14 +16,21 @@
                         "family": "continuity",
                         "path": "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R039 CS-01..03 historical scope-test maintenance contract; NOT_BUILT."
+                        "description": "R039 CS-01..03 historical scope-test maintenance contract; BUILD in progress."
+                      },
+                      {
+                        "id": "runtime039-build",
+                        "family": "continuity",
+                        "path": "docs/reviews/PANCAKE_CLI_SCOPE_ASSERTION_R039_BUILD_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R039 BUILD evidence: preserved original-test failure, 19-line deletion, six CLI tests PASS zero skips, protected-path diff empty; REVIEW_PENDING."
                       },
                       {
                         "id": "runtime039-order",
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_039.md",
                         "status": "ACTIVE",
-                        "description": "R039 R1 offline CLI test-only order DISPATCH_READY; manual Claude transfer."
+                        "description": "R039 R1 offline CLI test-only order in BUILD (Claude worker)."
                       },
                       {
                         "id": "runtime039-seed",
@@ -380,7 +387,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R039 DISPATCH_READY handoff; offline CLI test-only, independent Codex review after Claude BUILD."
+                          "description":  "Current R039 BUILD handoff; Claude worker acknowledged, offline CLI test-only."
                       },
                       {
                           "id":  "truth-implementation-status",

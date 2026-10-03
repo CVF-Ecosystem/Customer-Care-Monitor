@@ -45,15 +45,16 @@
   ],
   "claimScope": "CLI test maintenance only: remove a historical Git-baseline assertion invalidated by independently accepted R038. Preserve behavioral tests and verify protected paths in BUILD/review evidence. No live channel, AI governance, functional engine regression or FREEZE claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_039.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "7a390dc08e7958015b107e3a3e3b890369b82cf1",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -62,5 +63,5 @@
     "WORK_ORDER"
   ],
   "ownerTransferRequired": true,
-  "implementationStarted": false
+  "implementationStarted": true
 }

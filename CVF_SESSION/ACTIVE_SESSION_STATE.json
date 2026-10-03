@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-039 DISPATCH_READY / NOT_BUILT: owner manually transfers docs/work_orders/CCMAI_RUNTIME_039.md to Claude IMPLEMENTATION_WORKER. Remove only TestProductionAdapterFilesUnchangedInGit and attached comment from backend/cmd/pancake-proof/main_test.go; preserve all six CLI behavior tests and product source. Rehydrate, record BUILD acknowledgment and pass synchronized preflight before editing; retain named original-test failure, run cached offline CLI tests/build/vet and exact protected-path comparison, then return exact BUILD SHA/evidence as REVIEW_PENDING to independent Codex REVIEWER. No engine/Analyzer/DB/provider/channel/credentials/network/push/merge/deployment/new FREEZE. R038/prior acceptance and R033 local-message FREEZE unchanged.",
+  "nextAllowedMove": "CCMAI-RUNTIME-039: Claude IMPLEMENTATION_WORKER first runs the authorized named-test control (TestProductionAdapterFilesUnchangedInGit, cached Go offline) and preserves its failure, then removes only that test and its PH-07 comment from backend/cmd/pancake-proof/main_test.go (CS-01..03), runs the full offline CLI suite uncached with zero skips plus cached build/vet, compares protected paths, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No engine tests/Analyzer/DB/Docker/provider/channel/credentials/network; no product change. R038/R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. No push/merge/deployment/new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR (Codex); Claude IMPLEMENTATION_WORKER after manual owner transfer; independent REVIEWER Codex; planning COMMIT_STEWARD Codex",
-  "roleRoute": "MANUAL_CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
+  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
   "updatedAt": "2026-10-03"
 }
