@@ -5,6 +5,27 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                          "id": "runtime034-proof-harness-spec",
+                          "family": "continuity",
+                          "path": "docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "R034 offline harness PH-01..08 requirements; no live/credential/network authority."
+                      },
+                      {
+                          "id": "runtime034-proof-harness-order",
+                          "family": "continuity",
+                          "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
+                          "status": "ACTIVE",
+                          "description": "DISPATCH_READY R034: owner transfers to Claude for bounded offline harness BUILD, Codex independently reviews."
+                      },
+                      {
+                          "id": "historical-runtime033-closure-handoff",
+                          "family": "continuity",
+                          "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged."
+                      },
+                      {
                           "id": "continuity-pancake-live-proof-packet",
                           "family": "continuity",
                           "path": "docs/reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md",
@@ -84,9 +105,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current active handoff: R033 bounded local message closure and remaining live boundaries."
+                          "description":  "Current active handoff: R034 owner transfer to Claude for offline harness BUILD and independent Codex review."
                       },
                       {
                           "id":  "truth-implementation-status",
