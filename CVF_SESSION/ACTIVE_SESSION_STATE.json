@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-044 DISPATCH_READY / WORK_ORDER: owner manually transfers docs/work_orders/CCMAI_RUNTIME_044.md to Claude for bounded shared MCP/HTTP job execution under committed seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47. Claude rehydrates, acknowledges BUILD and passes preflight before edits; synthetic disposable local fixtures only, then exact BUILD to independent Codex REVIEW. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-043 and prior local dispositions unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.",
+  "nextAllowedMove": "CCMAI-RUNTIME-044 BUILD (Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD): implement the bounded shared MCP/HTTP job-dispatch contract JE-01..10 under committed seed 665f2e5ab780cbe8a1d374ccba676c1e926fbb47 on synthetic disposable loopback fixtures only, record evidence in docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md, then hand the exact 40-hex BUILD to independent Codex REVIEW as REVIEW_PENDING. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-043 and prior local dispositions unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD; next Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD, independent Codex REVIEWER",
+  "activeRole": "Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (R044 BUILD); independent Codex REVIEWER next, no self-approval",
   "roleRoute": "CLAUDE_IMPLEMENTATION_CODEX_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-03"
 }

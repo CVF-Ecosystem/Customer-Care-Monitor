@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD; next Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD, independent Codex REVIEWER
-- Next allowed move: CCMAI-RUNTIME-044 DISPATCH_READY / WORK_ORDER: owner manually transfers docs/work_orders/CCMAI_RUNTIME_044.md to Claude for bounded shared MCP/HTTP job execution under committed seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47. Claude rehydrates, acknowledges BUILD and passes preflight before edits; synthetic disposable local fixtures only, then exact BUILD to independent Codex REVIEW. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-043 and prior local dispositions unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (R044 BUILD); independent Codex REVIEWER next, no self-approval
+- Next allowed move: CCMAI-RUNTIME-044 BUILD (Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD): implement the bounded shared MCP/HTTP job-dispatch contract JE-01..10 under committed seed 665f2e5ab780cbe8a1d374ccba676c1e926fbb47 on synthetic disposable loopback fixtures only, record evidence in docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md, then hand the exact 40-hex BUILD to independent Codex REVIEW as REVIEW_PENDING. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-043 and prior local dispositions unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Rehydration and phase acknowledgment
@@ -34,3 +34,9 @@ Read-only lookup incidents: bootstrap read-model absent handled by fallback; ove
 ## Worker hand-back requirements
 
 Worker records acknowledgment here before BUILD, preserves failed attempts/skips/NOT RUN, verifies unchanged seed, executes required mounted tests and semantic controls on synthetic disposable fixtures, then records exact40-hex BUILD plus evidence and REVIEW_PENDING/REVIEW. Independent Codex checks source/seed/timing/requirements and required evidence. Missing prerequisites produce BUILD_BLOCKED. Review return cannot silently authorize broader effects or closure.
+
+## Worker BUILD acknowledgment (Claude, 2026-10-03)
+
+Role transition WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude), with BUILD COMMIT_STEWARD held by Claude, acknowledged before any source or test edit. Rehydrated: manifest, policy, canonical state, memory, this handoff, IMPLEMENTATION_STATUS, docs index, R044 order/SPEC/seed/tranche record, and shared repair-workflow learning. Workspace doctor 25/25 PASS; knowledge ingest wrote only the task-temporary knowledge/_index.json (removed before commit). Compact bootstrap read model absent: BOOTSTRAP_MIGRATION_PENDING, nonblocking. Seed 665f2e5ab780cbe8a1d374ccba676c1e926fbb47 present at baseCommit and unchanged since its first commit.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; CVF core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R2; live evidence required YES (no governance claim made; synthetic provider evidence is application proof only); active role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; active handoff this file; next allowed move as header; parked checkpoint OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.

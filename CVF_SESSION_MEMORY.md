@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,10 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current R044 BUILD acknowledgment (2026-10-03)
+
+CCMAI-RUNTIME-044 BUILD (Claude, 2026-10-03): role transition WORK_ORDER_AUTHOR (Codex) -> IMPLEMENTATION_WORKER (Claude) acknowledged in the active handoff before any source edit; BUILD COMMIT_STEWARD held by Claude, independent Codex REVIEWER next. Seed 665f2e5ab780cbe8a1d374ccba676c1e926fbb47 verified present at baseCommit and unchanged. Synthetic disposable loopback fixtures only; no live authority. R043 and prior closures unchanged; Facebook/Zalo OA accounts parked.
 
 ## Current R044 shared MCP job-execution dispatch (2026-10-03)
 
