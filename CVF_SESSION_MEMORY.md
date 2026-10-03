@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-041", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-042", "parked": false} -->
 
 ## Startup Order
 
@@ -50,7 +50,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R041 R1 independent acceptance (2026-10-03)
+## Current R042 documentation dispatch (2026-10-03)
+
+CCMAI-RUNTIME-042 DISPATCH_READY / WORK_ORDER, R1 documentation/example slice. [Order](docs/work_orders/CCMAI_RUNTIME_042.md), [SPEC](docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md); immutable seed9b10a8f6f67d314d6c4f5a3846396f28a5487948 before activation/BUILD. Vietnamese offline guide, explicit synthetic sample and targeted historical/live-packet update only; guide/sample absent, no worker/Go execution yet. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`; parked none. CCMAI-RUNTIME-042: owner manually transfers CCMAI_RUNTIME_042.md to Claude IMPLEMENTATION_WORKER for R1 documentation-only BUILD (Vietnamese offline proof CLI guide, hand-authored synthetic inventory sample, targeted post-R041 live-packet truth update); run only bounded cached task-temp CLI example smoke, docs/catalog/gates, then hand back exact BUILD for independent Codex REVIEW. Seed 9b10a8f6f67d314d6c4f5a3846396f28a5487948 immutable; no worker started or automatic invocation. R041/R034-R036 acceptance and R040/R037-R039/R033 closures unchanged. Symlink UNVERIFIED, race NOT RUN, mapped/subst/TOCTOU limits retained; live inputs/credential/network authority separate. No backend/test/tooling changes, engine/DB/Analyzer/real inventory/config/credentials/provider/channel/network/push/merge/deployment/FREEZE.
+
+## Historical R041 R1 independent acceptance (2026-10-03)
 
 CCMAI-RUNTIME-041 R1 REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude repair `2a44a8685adfdc3582697ce5094d06da3047207b`. [Independent re-review](docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md): R1-01..03 settled; CLI17 top-level/54 subtests PASS with2 real symlink SKIP; channels116/156 PASS0 skips; mounted junction probe PASS and no-walk mutation returns an erroneous PASS receipt; four independent guard mutations killed, original-main named failure, final baseline/source preservation verified, build/vet PASS. Original BUILD review failures, worker R1-M6 initial SURVIVED and backslash incident retained; symlink rejection UNVERIFIED, race NOT RUN, mapped/subst/TOCTOU limitations retained. OI-04 author clarification unchanged; seed `b19602ea66a47310b503a03ec2954092560231cc`, R2, active handoff remains R041, parked none. CCMAI-RUNTIME-041 R1 is REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude repair 2a44a8685adfdc3582697ce5094d06da3047207b: R041-R1-01..03 settled by independent UNC pre-I/O guards, mounted local-junction rejection, real platform SKIP attribution and applied detectors. ORCHESTRATOR handles bounded local planning/continuity; no new worker BUILD dispatched. Actual symlink rejection remains UNVERIFIED on this host, mapped/subst drive locality and TOCTOU exclusion are not guaranteed; use known local task-owned synthetic inputs only. Existing acceptance/closures unchanged. Actual MCP execution and live Pancake input/credential/network authority remain separate. No engine/Analyzer/DB/real inventory/config/credentials/provider/channel/network/push/merge/deployment/new FREEZE.
 

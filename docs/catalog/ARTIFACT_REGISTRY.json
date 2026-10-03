@@ -5,11 +5,32 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+  "id": "runtime042-spec",
+  "family": "continuity",
+  "path": "docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "R042 DU-01..07 offline usage-guide/sample/packet documentation contract; NOT_BUILT."
+},
+{
+  "id": "runtime042-order",
+  "family": "continuity",
+  "path": "docs/work_orders/CCMAI_RUNTIME_042.md",
+  "status": "ACTIVE",
+  "description": "R042 DISPATCH_READY R1; Claude manual transfer, exact bounded offline CLI example smoke and independent Codex review."
+},
+{
+  "id": "continuity-r041-handoff",
+  "family": "continuity",
+  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "Historical R041-R1 acceptance handoff and R042 documentation intake; platform/locality/TOCTOU limits retained."
+},
+{
   "id": "runtime042-seed",
   "family": "continuity",
   "path": "CVF_SESSION/authority/CCMAI-RUNTIME-042.json",
   "status": "ACTIVE",
-  "description": "Immutable R042 R1 documentation/example-smoke seed; planning only, no activation or worker yet."
+  "description": "Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD."
 },
 {
   "id": "runtime041-r1-independent-rereview",
@@ -474,12 +495,12 @@
                           "description":  "Active session/phase/role state."
                       },
                       {
-                          "id":  "continuity-initial-handoff",
-                          "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
-                          "status":  "ACTIVE",
-                          "description":  "Current R041 R1 independent acceptance handoff; bounded local planning, platform/locality/TOCTOU limits retained."
-                      },
+  "id": "continuity-initial-handoff",
+  "family": "continuity",
+  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "Current R042 documentation dispatch handoff; manual Claude transfer and bounded synthetic example smoke."
+},
                       {
                           "id":  "truth-implementation-status",
                           "family":  "implementation_truth",

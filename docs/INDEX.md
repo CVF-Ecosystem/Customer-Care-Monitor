@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R041 R1 independent acceptance handoff; bounded local planning, platform/locality/TOCTOU limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`
+- Current R042 documentation dispatch handoff; manual Claude transfer and bounded synthetic example smoke.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -23,6 +23,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R038 acceptance and R039 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`
 - Historical R039 acceptance and R040 closure intake/seed acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md`
 - Historical R040 scoped local FREEZE and R041 intake/seed acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md`
+- Historical R041-R1 acceptance handoff and R042 documentation intake; platform/locality/TOCTOU limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
@@ -86,7 +87,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-R1 re-review: R041-R1-01..03 settled, REVIEW_PASS / FREEZE_OPEN; explicit platform/drive/TOCTOU limits.: `docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`
 - R041 R1 REVIEW_PASS strict synthetic input SPEC; platform, mapped-drive and TOCTOU limits retained.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
-- Immutable R042 R1 documentation/example-smoke seed; planning only, no activation or worker yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`
+- R042 DISPATCH_READY R1; Claude manual transfer, exact bounded offline CLI example smoke and independent Codex review.: `docs/work_orders/CCMAI_RUNTIME_042.md`
+- Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`
+- R042 DU-01..07 offline usage-guide/sample/packet documentation contract; NOT_BUILT.: `docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
