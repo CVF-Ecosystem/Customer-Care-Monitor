@@ -1,0 +1,294 @@
+{
+  "evidenceType": "SYNTHETIC_LOCAL_APPLICATION_REVIEW",
+  "live": false,
+  "governanceClaim": false,
+  "buildCommit": "10ad83381ce76b86763c1ee06eab02ddf4734cac",
+  "reviewer": "Codex",
+  "archive": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r035-independent-20261003",
+  "baselineTopLevelPass": 17,
+  "baselineTotalPass": 27,
+  "sourceSHA256": {
+    "handlers.go": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+    "tools.go": "8f09c4064042736a636c0e032f94dbf9d5039a81ac2c0313982c17c9a8f9fe6b",
+    "permission_admission_test.go": "3f39bbf54e2964a064e1c340c6e01870efb40d1b52468a19d495376fe9e7f376",
+    "trigger_contract_test.go": "e6e33d9c19df9ded5a91b1db08f737d916f30b6b24406af12c55678c8c76c3dc"
+  },
+  "restoration": {
+    "handlers.go": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+    "tools.go": "8f09c4064042736a636c0e032f94dbf9d5039a81ac2c0313982c17c9a8f9fe6b",
+    "permission_admission_test.go": "3f39bbf54e2964a064e1c340c6e01870efb40d1b52468a19d495376fe9e7f376",
+    "trigger_contract_test.go": "e6e33d9c19df9ded5a91b1db08f737d916f30b6b24406af12c55678c8c76c3dc"
+  },
+  "runs": [
+    {
+      "label": "baseline",
+      "exit": 0,
+      "seconds": 29.359,
+      "counts": {
+        "pass": 27,
+        "fail": 0,
+        "skip": 0
+      },
+      "failedTests": [],
+      "sha256": "ef5c3aca85bfe27ec2832a9d4d9f32e13280844b9c5d2c964a9e6f6c89e74209"
+    },
+    {
+      "label": "build",
+      "exit": 0,
+      "seconds": 14.018,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "failedTests": [],
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "vet",
+      "exit": 0,
+      "seconds": 3.371,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "failedTests": [],
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "M1_iserror",
+      "exit": 1,
+      "seconds": 7.729,
+      "counts": {
+        "pass": 9,
+        "fail": 3,
+        "skip": 0
+      },
+      "failedTests": [
+        "TestMCPEachToolRequiresExactlyItsRights/cqa_trigger_job",
+        "TestMCPEachToolRequiresExactlyItsRights",
+        "TestTriggerUnavailableDirectAndMounted"
+      ],
+      "sha256": "45eb4f5ce5c89c13d694b6d6d6ab5aa155c32dc6d26e32351c52e6b69eccccba"
+    },
+    {
+      "label": "M3_tenant",
+      "exit": 1,
+      "seconds": 5.632,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "failedTests": [
+        "TestTriggerLookupKeepsTenantPredicateAndGenericErrors"
+      ],
+      "sha256": "c52b3ca512417e8cf74ffc087b9e9eabf7ee958fd1e033e36534a3c41813530e"
+    },
+    {
+      "label": "M6_write",
+      "exit": 1,
+      "seconds": 5.666,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "failedTests": [
+        "TestTriggerNoWritesRunsOrOutboundRequests"
+      ],
+      "sha256": "1aa5f438349187b5a0480545b1d15dc559a79d6760371419923b9b40abfee917"
+    },
+    {
+      "label": "M9_helper",
+      "exit": 1,
+      "seconds": 3.623,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "failedTests": [
+        "TestAdmittedOutcomeHelperRejectsArbitraryErrors"
+      ],
+      "sha256": "61e335b41c6bfe4128059753cfa10e0bb67f78a1af090f99115feb3b449d2c6d"
+    },
+    {
+      "label": "error_write_committed_suite",
+      "exit": 0,
+      "seconds": 29.146,
+      "counts": {
+        "pass": 27,
+        "fail": 0,
+        "skip": 0
+      },
+      "failedTests": [],
+      "sha256": "44c58f0e58dbaf99863d9b8a98e8ce7b150b1909193661a8a056843c81d1c42b"
+    },
+    {
+      "label": "restored",
+      "exit": 0,
+      "seconds": 12.332,
+      "counts": {
+        "pass": 6,
+        "fail": 0,
+        "skip": 0
+      },
+      "failedTests": [],
+      "sha256": "a8be8fef079f33a69b5a2c4a225be2c7d7671e414f45e3f6b493fa1f38e7d37f"
+    },
+    {
+      "label": "reviewer_error_probe_baseline",
+      "exit": 0,
+      "seconds": 5.057,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "failedTests": [],
+      "sha256": "b4f4bc36037e3ea5693e8c89c1a805177e14f521b4b3a68313dd6ec36ce92c37"
+    },
+    {
+      "label": "reviewer_error_probe_mutant",
+      "exit": 1,
+      "seconds": 5.099,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "failedTests": [
+        "TestReviewerR035ForcedReadErrorHasNoEffects"
+      ],
+      "sha256": "a8ea019509ee2f5ec799e6438cb5c613c2828a06d83cb36e4a06e0c65bcc3bcd"
+    },
+    {
+      "label": "M1_exact_text_no_iserror",
+      "exit": 1,
+      "seconds": 4.882,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "failedTests": [
+        "TestTriggerUnavailableDirectAndMounted"
+      ],
+      "sha256": "031e217794f63b9f2d2cb23b87043ac9f62c60502fbc81e2f8bd83980a2a8311"
+    },
+    {
+      "label": "old_source_response_and_description",
+      "exit": 1,
+      "seconds": 6.792,
+      "counts": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "failedTests": [
+        "TestTriggerUnavailableDirectAndMounted",
+        "TestTriggerDescriptionAndToolsList"
+      ],
+      "sha256": "863dfbcb8bd8e3a2d29a6f22fd7155989202ab1bbf3a4610f3ec06a8e6d16ec1"
+    },
+    {
+      "label": "final_restored_with_probe",
+      "exit": 0,
+      "seconds": 11.863,
+      "counts": {
+        "pass": 7,
+        "fail": 0,
+        "skip": 0
+      },
+      "failedTests": [],
+      "sha256": "c30e983b5de9b370528a517fe8f020c560de15049f3f884a625752a07e213b92"
+    }
+  ],
+  "mutations": [
+    {
+      "label": "M1_iserror",
+      "target": "backend/mcp/handlers.go",
+      "baselineSHA256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+      "mutantSHA256": "cf925152b51710edcba83d5376c81872d8731766d6f62d6ccc96b9b53a397811",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "restoredByteEquality": true,
+      "disposition": "KILLED_MIXED_GUARD_CONTROL",
+      "old": "return errResult(triggerUnavailableText)",
+      "new": "return jsonResult(triggerUnavailableText)"
+    },
+    {
+      "label": "M1_exact_text_no_iserror",
+      "target": "backend/mcp/handlers.go",
+      "baselineSHA256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+      "mutantSHA256": "9e5295d5570ed308dbff08883350de7a5e6c070a2df4ba8c84f754acd4b91a87",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "restoredByteEquality": true,
+      "disposition": "KILLED",
+      "old": "return errResult(triggerUnavailableText)",
+      "new": "return ToolResult{Content: []ToolContent{{Type: \"text\", Text: triggerUnavailableText}}}, nil"
+    },
+    {
+      "label": "M3_tenant",
+      "target": "backend/mcp/handlers.go",
+      "baselineSHA256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+      "mutantSHA256": "98a94e3db977d958794768045ac939c632616014e415728f00276fb223f7a873",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "restoredByteEquality": true,
+      "disposition": "KILLED",
+      "old": "Where(\"id = ? AND tenant_id = ?\", jobID, tenantID)",
+      "new": "Where(\"id = ?\", jobID)"
+    },
+    {
+      "label": "M6_write",
+      "target": "backend/mcp/handlers.go",
+      "baselineSHA256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+      "mutantSHA256": "9cad0470feae16896c887d408b8142f5ab437a1498b5260a115cfa77c18983ea",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "restoredByteEquality": true,
+      "disposition": "KILLED",
+      "old": "return errResult(triggerUnavailableText)",
+      "new": "db.DB.Model(&models.Job{}).Where(\"id = ?\", jobID).Update(\"name\", \"reviewer-write-mutant\")\n\treturn errResult(triggerUnavailableText)"
+    },
+    {
+      "label": "M9_helper",
+      "target": "backend/mcp/permission_admission_test.go",
+      "baselineSHA256": "3f39bbf54e2964a064e1c340c6e01870efb40d1b52468a19d495376fe9e7f376",
+      "mutantSHA256": "1c1a5cc7f3bd622b1fa86094778f44e9506240f8c1294c93d061cafb3643b708",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "restoredByteEquality": true,
+      "disposition": "KILLED",
+      "old": "if got.rpcErr != nil || !got.isErr || got.text != want {",
+      "new": "if got.rpcErr != nil || !got.isErr {"
+    },
+    {
+      "label": "error_only_write",
+      "target": "backend/mcp/handlers.go",
+      "baselineSHA256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+      "mutantSHA256": "41a8f04333a9bb98f9d3824f1fca357274430c34a2515f1d86e84068d2dc3512",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "restoredByteEquality": true,
+      "disposition": "SURVIVED_COMMITTED_SUITE_KILLED_INDEPENDENT_PROBE",
+      "old": "if err := db.DB.Where(\"id = ? AND tenant_id = ?\", jobID, tenantID).First(&job).Error; err != nil {\n\t\treturn errResult(\"Job not found\")",
+      "new": "if err := db.DB.Where(\"id = ? AND tenant_id = ?\", jobID, tenantID).First(&job).Error; err != nil {\n\t\tif jobID == \"job-\"+tenantID { db.DB.Model(&models.Job{}).Where(\"id = ?\", jobID).Update(\"name\", \"reviewer-error-write-mutant\") }\n\t\treturn errResult(\"Job not found\")",
+      "committedSuiteRun": "error_write_committed_suite",
+      "independentProbeRun": "reviewer_error_probe_mutant"
+    }
+  ],
+  "probe": "docs/reviews/probes/r035_error_effect_probe_test.go",
+  "probeSHA256": "6ddcf6503f41c8982d9713cf31690a8621bfe872ccfb2f214573fbd27f5d00ce",
+  "limits": [
+    "GORM callbacks and listed table checksums only",
+    "DefaultTransport/DefaultClient outbound trap only",
+    "CGO=0 race NOT RUN",
+    "full backend/live/provider/external network/GitHub NOT RUN"
+  ],
+  "cleanup": "Dedicated container and inspected anonymous volume removed; absence verified; application containers untouched."
+}

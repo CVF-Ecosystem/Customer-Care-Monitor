@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R035 local MCP truth work order; Claude owner transfer, independent Codex REVIEW next; no live authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`
+- Current R035 CHANGES_REQUIRED / REVIEW handoff; bounded R1 to Claude under unchanged seed.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -41,10 +41,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent R034 R1 REVIEW_PASS: offline contract accepted, repaired probes/mutations pass; FREEZE/live remain OPEN.: `docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay.: `docs/reviews/probes/r034_reviewer_probe_test.go`
 - Immutable Codex dispatcher seed committed before R035 BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-035.json`
-- R035 BUILD evidence: MCP trigger unavailable response, MT matrix, old-source detectors and mutations; REVIEW_PENDING, synthetic only.: `docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md`
-- R035 work order (REVIEW_PENDING): Claude built the unavailable-response correction; independent Codex REVIEW next; no actual dispatch.: `docs/work_orders/CCMAI_RUNTIME_035.md`
+- Historical exact R035 worker BUILD/evidence and nine-mutant campaign; independent review returned CHANGES_REQUIRED.: `docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md`
+- Independent synthetic forced-read-error effect probe; replay in isolated exact-BUILD archive only.: `docs/reviews/probes/r035_error_effect_probe_test.go`
+- Independent exact-BUILD R035 CHANGES_REQUIRED; response source passes, forced-error effect coverage and historical prose need R1.: `docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md`
+- Independent R035 tests, mutations, error-only survivor/probe kill, digests and restoration; synthetic only.: `docs/reviews/probes/r035_independent_summary.json`
+- R035 CHANGES_REQUIRED with bounded R1 return to Claude; independent Codex re-review next.: `docs/work_orders/CCMAI_RUNTIME_035.md`
 - R035 status/phase/scope/roles and exact BUILD-review contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-035.json`
-- R035 MT-01..06 local MCP response truth contract; BUILT, REVIEW_PENDING.: `docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md`
+- R035 MT-01..06 contract; independent CHANGES_REQUIRED for forced-read-error effect coverage and stale prose.: `docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

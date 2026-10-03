@@ -4,26 +4,47 @@
     "updatedAt":  "2026-10-03",
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
+                      {
+                          "id": "runtime035-independent-review",
+                          "family": "continuity",
+                          "path": "docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "Independent exact-BUILD R035 CHANGES_REQUIRED; response source passes, forced-error effect coverage and historical prose need R1."
+                      },
+                      {
+                          "id": "runtime035-error-effect-probe",
+                          "family": "continuity",
+                          "path": "docs/reviews/probes/r035_error_effect_probe_test.go",
+                          "status": "ACTIVE",
+                          "description": "Independent synthetic forced-read-error effect probe; replay in isolated exact-BUILD archive only."
+                      },
+                      {
+                          "id": "runtime035-independent-summary",
+                          "family": "continuity",
+                          "path": "docs/reviews/probes/r035_independent_summary.json",
+                          "status": "ACTIVE",
+                          "description": "Independent R035 tests, mutations, error-only survivor/probe kill, digests and restoration; synthetic only."
+                      },
                           {
                               "id": "runtime035-spec",
                               "family": "continuity",
                               "path": "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
                               "status": "ACTIVE",
-                              "description": "R035 MT-01..06 local MCP response truth contract; BUILT, REVIEW_PENDING."
+                              "description": "R035 MT-01..06 contract; independent CHANGES_REQUIRED for forced-read-error effect coverage and stale prose."
                           },
                           {
                               "id": "runtime035-build",
                               "family": "continuity",
                               "path": "docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md",
                               "status": "ACTIVE",
-                              "description": "R035 BUILD evidence: MCP trigger unavailable response, MT matrix, old-source detectors and mutations; REVIEW_PENDING, synthetic only."
+                              "description": "Historical exact R035 worker BUILD/evidence and nine-mutant campaign; independent review returned CHANGES_REQUIRED."
                           },
                           {
                               "id": "runtime035-order",
                               "family": "continuity",
                               "path": "docs/work_orders/CCMAI_RUNTIME_035.md",
                               "status": "ACTIVE",
-                              "description": "R035 work order (REVIEW_PENDING): Claude built the unavailable-response correction; independent Codex REVIEW next; no actual dispatch."
+                              "description": "R035 CHANGES_REQUIRED with bounded R1 return to Claude; independent Codex re-review next."
                           },
                           {
                               "id": "runtime035-authority",
@@ -184,7 +205,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R035 local MCP truth work order; Claude owner transfer, independent Codex REVIEW next; no live authority."
+                          "description":  "Current R035 CHANGES_REQUIRED / REVIEW handoff; bounded R1 to Claude under unchanged seed."
                       },
                       {
                           "id":  "truth-implementation-status",

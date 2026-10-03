@@ -1,6 +1,6 @@
 # MCP trigger-job response truth — R035
 
-Date: 2026-10-03 (Asia/Saigon). Author: Codex SPEC_AUTHOR. Status: ACCEPTED_FOR_BOUNDED_BUILD; BUILT, REVIEW_PENDING. Risk ceiling R2. Source baseline `45d14730b2518638276825d9a0b6cfe2518bbfe4`. This contract covers local application behavior only; no CVF runtime governance or real AI/channel invocation claim.
+Date: 2026-10-03 (Asia/Saigon). Author: Codex SPEC_AUTHOR. Status: BUILT, CHANGES_REQUIRED after independent review; bounded R1 pending. Risk ceiling R2. Source baseline `45d14730b2518638276825d9a0b6cfe2518bbfe4`. This contract covers local application behavior only; no CVF runtime governance or real AI/channel invocation claim.
 
 ## Intake and design
 
@@ -32,3 +32,5 @@ Show new response and tools/list detectors fail semantically on the exact pre-R0
 ## Implementation truth
 
 BUILT, not accepted. Claude's BUILD (evidence: [BUILD record](../reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md)) changes only `toolTriggerJob` and the `cqa_trigger_job` description: an admitted call with an existing own-tenant job returns the tool error `job_trigger_unavailable`; miss or query error stays `Job not found`; authorization policy, tenant predicate and the no-dispatch behavior are unchanged. The tests include disposable-MySQL contract tests with zero skips, old-source detector failures and nine applied mutations (all killed after one survivor was fixed). Acceptance begins only after independent Codex REVIEW. Race NOT RUN (CGO unavailable); full DB-dependent backend suite NOT RUN. No FREEZE, hosted readiness, deployment, actual job execution or global F02 closure follows from this specification.
+
+Independent review of exact BUILD10ad83381ce76b86763c1ee06eab02ddf4734cac returns CHANGES_REQUIRED: MT-04 committed no-effects campaign omits forced jobs-read-error observation; independent error-only write mutant survives its suite, while the reviewer probe detects it. Bounded R1 also retires stale current handoff/order planning prose. This does not establish a production write/dispatch defect. [Review](../reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md); original worker evidence above remains source-specific history, not acceptance.

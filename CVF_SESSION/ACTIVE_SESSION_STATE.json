@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-035: Codex independent REVIEWER reviews exact Claude BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac (MCP trigger unavailable response, REVIEW_PENDING) for seed identity, MT-01..06, old-source detectors, mutation sensitivity, DB skip identity and preserved authorization policy, then records REVIEW_PASS or CHANGES_REQUIRED. R034 offline REVIEW_PASS / FREEZE_OPEN and R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED; no credential/provider/channel/external-network authority. No self-approval. No queue/analyzer dispatch, push, merge, deployment or FREEZE.",
+  "nextAllowedMove": "Owner transfers bounded CCMAI-RUNTIME-035 R1 to Claude: add MT-04 forced jobs-read-error no-effects detector and explicitly retire stale NOT BUILT/dispatch-planning prose, under the unchanged seed; rehydrate, acknowledge and synchronize BUILD before edits, then return exact repair SHA for independent Codex re-review. Exact BUILD 10ad83381ce76b86763c1ee06eab02ddf4734cac is CHANGES_REQUIRED / FREEZE_OPEN; production response correction has no reproduced dispatch/write defect. R034 offline acceptance and R033/local-message FREEZE unchanged; live packet PREPARED_NOT_DISPATCHED. No credential/provider/channel/external-network/actual dispatch/push/merge/deployment/FREEZE authority.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
-  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
+  "activeRole": "Codex independent REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review COMMIT_STEWARD; Claude R1 REPAIR_WORKER after owner transfer",
+  "roleRoute": "R035_CHANGES_REQUIRED_BOUNDED_R1_TO_CLAUDE_THEN_CODEX_REVIEW",
   "updatedAt": "2026-10-03"
 }
