@@ -5,6 +5,34 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                        "id": "continuity-r040-handoff",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "Historical R040 scoped local FREEZE and R041 intake/seed acknowledgment."
+                      },
+                      {
+                        "id": "runtime041-spec",
+                        "family": "continuity",
+                        "path": "docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R041 OI-01..06 strict synthetic input/reconciliation contract; NOT_BUILT."
+                      },
+                      {
+                        "id": "runtime041-order",
+                        "family": "continuity",
+                        "path": "docs/work_orders/CCMAI_RUNTIME_041.md",
+                        "status": "ACTIVE",
+                        "description": "R041 R2 bounded offline CLI input order DISPATCH_READY, manual owner transfer to Claude."
+                      },
+                      {
+                        "id": "runtime041-seed",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-041.json",
+                        "status": "ACTIVE",
+                        "description": "Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects."
+                      },
+                      {
                         "id": "continuity-r039-handoff",
                         "family": "continuity",
                         "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
@@ -420,9 +448,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R040 bounded local FREEZE handoff; R037-R039 source/evidence inherited with all limits retained."
+                          "description":  "Current R041 DISPATCH_READY handoff; bounded synthetic inventory input, independent Codex review after Claude BUILD."
                       },
                       {
                           "id":  "truth-implementation-status",

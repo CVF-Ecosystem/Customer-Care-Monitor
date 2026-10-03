@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-041",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/cmd/pancake-proof/main.go",
+    "backend/cmd/pancake-proof/main_test.go",
+    "backend/cmd/pancake-proof/inventory.go",
+    "backend/cmd/pancake-proof/inventory_test.go",
+    "docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_041.md"
+  ],
+  "prohibitedEffects": [
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "media_download",
+    "analyzer_dispatch",
+    "notification",
+    "token_rotation",
+    "existing_adapter_change",
+    "engine_source_change",
+    "ui_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "global_f02_closure",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "proof_library_or_receipt_schema_change",
+    "real_inventory_or_capture_read",
+    "default_or_environment_inventory_discovery",
+    "unbounded_input_read",
+    "engine_test_execution"
+  ],
+  "claimScope": "Strict synthetic inventory input and offline CLI reconciliation only; actual adapter/harness/receipt remain unchanged. Caller-authored fixture is independent from observed results, not independently proven live inventory. No channel/provider/network/CVF AI governance/hosted/full-regression/FREEZE claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_041.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "b19602ea66a47310b503a03ec2954092560231cc",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "OPEN",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerTransferRequired": true,
+  "implementationStarted": false
+}

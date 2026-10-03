@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-040", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-041", "parked": false} -->
 
 ## Startup Order
 
@@ -50,7 +50,13 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R040 local maintenance FREEZE (2026-10-03)
+## Current R041 offline inventory dispatch (2026-10-03)
+
+CCMAI-RUNTIME-041 DISPATCH_READY / NOT_BUILT, R2 strict explicit synthetic file input to CLI, expectations independent of fixed in-memory transcript. [Order](docs/work_orders/CCMAI_RUNTIME_041.md), [SPEC](docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md); seed `b19602ea66a47310b503a03ec2954092560231cc` before activation/BUILD. Source not implemented; no worker/Go proof. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`; parked none. CCMAI-RUNTIME-041 DISPATCH_READY / NOT_BUILT: owner manually transfers docs/work_orders/CCMAI_RUNTIME_041.md to Claude IMPLEMENTATION_WORKER for bounded synthetic inventory JSON input to the offline Pancake CLI. Rehydrate and acknowledge BUILD, synchronize/preflight before edits; satisfy OI-01..06 with strict bounded parser, unchanged synthetic transcript/receipt, mounted CLI tests/semantic controls, cached build/vet and protected-path equality. Return exact BUILD SHA/evidence as REVIEW_PENDING to independent Codex REVIEWER. No real inventory/credentials/config/provider/channel/network/DB/engine execution/push/merge/deployment/FREEZE. R040/R037-R039 and R033 closures, R034-R036 acceptance unchanged.
+
+Prior sections are historical continuity; original acceptance/closures/failures/NOT RUN retained.
+
+## Historical R040 local maintenance FREEZE (2026-10-03)
 
 R040 FROZEN / FREEZE under separate closure seed `5f96d4d3d75690ba60ebfd99b0f94978d5b35168`; inherits independent R037/R038/R039 acceptance at source `4fa8c2abaf3e8c55107520595cf81f603ab4349b`. No new worker BUILD/runtime proof; original seeds unchanged. [Order](docs/work_orders/CCMAI_RUNTIME_040.md), [evaluation](docs/reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md); active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md`; parked none. CCMAI-RUNTIME-040 and bounded R037/R038/R039 local maintenance contracts are FROZEN at source4fa8c2abaf3e8c55107520595cf81f603ab4349b under separate closure authority. ORCHESTRATOR handles remaining bounded local planning/continuity; no new worker BUILD or runtime execution dispatched. R034/R035/R036 acceptance and R033 local-message FREEZE unchanged. Actual MCP execution and live Pancake independent inventory/controlled page/quiescence/capture/credential/network authority remain separate. No product/DB/provider/channel/credentials/network/push/merge/deployment/global F02/governance/hosted closure.
 
