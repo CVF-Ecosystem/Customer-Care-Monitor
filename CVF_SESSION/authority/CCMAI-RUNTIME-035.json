@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-035",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_035.md",
+  "sourcePlanningCommit": "45d14730b2518638276825d9a0b6cfe2518bbfe4",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/mcp/handlers.go",
+    "backend/mcp/tools.go",
+    "backend/mcp/permission_admission_test.go",
+    "backend/mcp/trigger_contract_test.go",
+    "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_035.md"
+  ],
+  "prohibitedEffects": [
+    "provider_call", "channel_call", "credential_use", "external_network",
+    "persistent_db", "customer_data", "analyzer_dispatch", "queue_dispatch",
+    "notification", "token_rotation", "permission_policy_change",
+    "oauth_change", "engine_source_change", "ui_change", "schema_change",
+    "dependency_change", "workflow_change", "gate_tooling_change",
+    "parent_cvf_edit", "secret_commit", "push", "merge", "deployment",
+    "freeze", "live_governance_claim", "original_authority_seed_edit"
+  ],
+  "permittedEffects": [
+    "bounded_mcp_response_and_tool_description_correction",
+    "synthetic_disposable_loopback_mysql_tests",
+    "local_build_vet_docs_gates",
+    "bounded_local_documentation_and_build_commits"
+  ],
+  "ownerAuthorization": "Standing local orchestration delegation recorded in CVF_SESSION_MEMORY.md, reaffirmed 2026-10-03: Codex is ORCHESTRATOR/REVIEWER and authors bounded orders; owner manually transfers to Claude. This seed bounds the previously recorded MCP triggered/queued placeholder finding. No actual credentials, provider/channel/external network, production data or deployment authority.",
+  "claimScope": "Local MCP response truth and application permission/tenant regressions on synthetic disposable data only. No actual dispatch, runtime AI governance, hosted readiness or FREEZE claim."
+}
