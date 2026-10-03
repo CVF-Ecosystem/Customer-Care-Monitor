@@ -17,32 +17,50 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 )
 
-// CCMAI-RUNTIME-035: cqa_trigger_job reports a fixed unavailable tool error after the unchanged
-// authorization and own-tenant lookup, never "triggered"/"queued". Disposable MySQL and synthetic
-// rows only; nothing is dispatched. Observation limits: write callbacks, table checksums and a
-// replaced http.DefaultTransport see GORM writes and default-transport HTTP; they do not observe
-// raw sockets, other transports or goroutines that use other clients.
-
-// triggerHistory lists strings the retired placeholder response could carry.
-var triggerHistory = []string{"triggered", "queued", "accepted", "started", "run_id", "job_run", "has been", "status"}
+// CCMAI-RUNTIME-035 + CCMAI-RUNTIME-044: the unchanged authorization and own-tenant lookup in front
+// of cqa_trigger_job. R035's "unavailable" success contract is superseded by R044 for ADMITTED
+// success only: an admitted call now returns job_triggered with the persisted run_id (hermetic
+// dispatcher here; real shared worker in trigger_execution_test.go). Denial, not-found and forced
+// error paths keep their R035 no-effect checks and additionally prove no configuration load,
+// reservation or worker start. Disposable MySQL and synthetic rows only. Observation limits: write
+// callbacks, table checksums and a replaced http.DefaultTransport see GORM writes and
+// default-transport HTTP; they do not observe raw sockets, other transports or goroutines that use
+// other clients.
 
 func (f *mcpFixture) jobName(tenant string) string { return "JOB-" + forbiddenMarker + "-" + tenant }
 
-func (f *mcpFixture) assertUnavailable(t *testing.T, label string, got toolOutcome) {
+// assertAccepted checks an admitted trigger outcome: a non-error ToolResult whose text is exactly
+// {message: job_triggered, run_id}, never the retired R035 unavailable text and no tenant/job data.
+func (f *mcpFixture) assertAccepted(t *testing.T, label string, got toolOutcome) string {
 	t.Helper()
-	if got.rpcErr != nil || !got.isErr || got.text != triggerUnavailableWant {
-		t.Fatalf("%s: want tool error %q, got isErr=%v rpcErr=%v text=%q", label, triggerUnavailableWant, got.isErr, got.rpcErr, got.text)
+	if got.rpcErr != nil || got.isErr {
+		t.Fatalf("%s: want an accepted trigger, got isErr=%v rpcErr=%v text=%q", label, got.isErr, got.rpcErr, got.text)
 	}
-	lower := strings.ToLower(got.text)
-	for _, bad := range triggerHistory {
-		if strings.Contains(lower, bad) {
-			t.Fatalf("%s: response still mentions %q: %q", label, bad, got.text)
-		}
+	if got.text == triggerUnavailableWant || strings.Contains(got.text, "unavailable") {
+		t.Fatalf("%s: the retired unavailable contract is back: %q", label, got.text)
+	}
+	dec := json.NewDecoder(strings.NewReader(got.text))
+	dec.DisallowUnknownFields()
+	var acc struct {
+		Message string `json:"message"`
+		RunID   string `json:"run_id"`
+	}
+	if err := dec.Decode(&acc); err != nil || acc.Message != "job_triggered" || acc.RunID == "" {
+		t.Fatalf("%s: result %q is not exactly {message: job_triggered, run_id}: %v", label, got.text, err)
 	}
 	for _, leak := range []string{f.jobName(f.tenantA), "job-" + f.tenantA, f.tenantA, f.tenantB, secretSQLMarker, forbiddenMarker} {
 		if strings.Contains(got.text, leak) {
 			t.Fatalf("%s: response disclosed %q", label, leak)
 		}
+	}
+	return acc.RunID
+}
+
+// assertNoDispatch proves the hermetic dispatcher saw no configuration load or start since reset.
+func (f *mcpFixture) assertNoDispatch(t *testing.T, label string) {
+	t.Helper()
+	if loads, starts := f.disp.counts(); loads != 0 || starts != 0 {
+		t.Fatalf("%s: dispatcher saw %d config loads and %d starts; a rejected call must reach neither", label, loads, starts)
 	}
 }
 
@@ -153,15 +171,16 @@ func checksums(t *testing.T) map[string]int64 {
 	return out
 }
 
-// MT-01: every admitted principal gets the same fixed tool error, never a protocol error, and the
-// direct and mounted paths agree.
-func TestTriggerUnavailableDirectAndMounted(t *testing.T) {
+// MT-01: every admitted principal gets the same accepted shape through the direct and the mounted
+// path; each call reserves its own run, so run ids are distinct and persisted.
+func TestTriggerAdmittedDirectAndMounted(t *testing.T) {
 	f := newMCPFixture(t)
 	trigger := toolMatrix[9]
 	if trigger.name != "cqa_trigger_job" {
 		t.Fatalf("matrix order changed")
 	}
 	body := callBody(trigger.name, trigger.args(f, f.tenantA))
+	seen := map[string]bool{}
 	for _, step := range []struct{ label, role, perms string }{
 		{"member with exactly jobs:w+messages:r", "member", permsOnly(trigger.needs)},
 		{"member with all rights", "member", rightsJSON(allRights)},
@@ -170,9 +189,11 @@ func TestTriggerUnavailableDirectAndMounted(t *testing.T) {
 	} {
 		f.setMember(t, step.role, step.perms)
 		direct := f.direct(t, f.userID, trigger.name, trigger.args(f, f.tenantA))
-		f.assertUnavailable(t, step.label+"/direct", direct)
-		if f.obs.count("jobs") != 1 {
-			t.Fatalf("%s: the own-tenant job lookup must be observed once, saw %d", step.label, f.obs.count("jobs"))
+		directRun := f.assertAccepted(t, step.label+"/direct", direct)
+		// R044: the tool's own-tenant lookup plus the reservation's parent lock and terminal write also
+		// read jobs, so an admitted call is observed at least once (rejected calls: exactly zero or one).
+		if f.obs.count("jobs") < 1 {
+			t.Fatalf("%s: the own-tenant job lookup must be observed, saw %d", step.label, f.obs.count("jobs"))
 		}
 
 		rec, resp := f.rpc(t, f.token, body)
@@ -181,20 +202,31 @@ func TestTriggerUnavailableDirectAndMounted(t *testing.T) {
 		}
 		res := resp["result"].(map[string]interface{})
 		content := res["content"].([]interface{})
-		if len(content) != 1 || res["isError"] != true {
-			t.Fatalf("%s: want exactly one content item with isError=true, got %v", step.label, res)
+		if len(content) != 1 || res["isError"] == true {
+			t.Fatalf("%s: want exactly one content item and no isError, got %v", step.label, res)
 		}
 		item := content[0].(map[string]interface{})
-		if item["type"] != "text" || item["text"] != triggerUnavailableWant {
+		if item["type"] != "text" {
 			t.Fatalf("%s: mounted content %v", step.label, item)
 		}
-		f.assertUnavailable(t, step.label+"/mounted", toolOutcome{text: item["text"].(string), isErr: true})
-		if mounted, _ := resultText(t, resp); mounted != direct.text {
-			t.Fatalf("%s: direct %q and mounted %q disagree", step.label, direct.text, mounted)
+		mountedRun := f.assertAccepted(t, step.label+"/mounted", toolOutcome{text: item["text"].(string)})
+		for _, id := range []string{directRun, mountedRun} {
+			if seen[id] {
+				t.Fatalf("%s: run id %s reused", step.label, id)
+			}
+			seen[id] = true
+			var status, tenant string
+			db.DB.Raw("SELECT status, tenant_id FROM job_runs WHERE id = ?", id).Row().Scan(&status, &tenant)
+			if tenant != f.tenantA || status == "" {
+				t.Fatalf("%s: returned run id %s is not a persisted own-tenant run (tenant %q)", step.label, id, tenant)
+			}
 		}
 		if strings.Contains(rec.Body.String(), f.jobName(f.tenantA)) {
 			t.Fatalf("%s: mounted body carries the job name", step.label)
 		}
+	}
+	if loads, starts := f.disp.counts(); loads != 8 || starts != 8 {
+		t.Fatalf("dispatcher saw %d loads and %d starts for 8 admitted calls", loads, starts)
 	}
 }
 
@@ -224,21 +256,29 @@ func TestTriggerAdmissionPrecedesLookup(t *testing.T) {
 	}
 	for _, c := range cases {
 		c.prep()
-		got := f.direct(t, f.userID, trigger.name, c.args)
-		if c.user != f.userID {
-			got = f.direct(t, c.user, trigger.name, c.args)
+		user := c.user
+		if user == "" {
+			user = f.userID
 		}
+		got := f.direct(t, user, trigger.name, c.args) // exactly one call: an admitted pre-call would dispatch (R044)
 		f.assertDenied(t, c.label, got, c.wantTx)
 		if f.obs.count("jobs") != 0 {
 			t.Fatalf("%s: a denied call queried jobs", c.label)
 		}
-		if got.text == triggerUnavailableWant {
-			t.Fatalf("%s: denial must differ from the admitted unavailable error", c.label)
+		if strings.Contains(got.text, "job_triggered") {
+			t.Fatalf("%s: denial must differ from an accepted trigger", c.label)
+		}
+		f.assertNoDispatch(t, c.label) // denied before lookup, configuration, reservation and start
+		if n := f.jobRuns(t); n != 0 {
+			t.Fatalf("%s: a denied call reserved %d runs", c.label, n)
 		}
 	}
-	// Admitted again: now the lookup runs and the response is the distinct unavailable error.
+	// Admitted again: now the lookup and the dispatch run and the response is an accepted trigger.
 	f.setMember(t, "member", permsOnly(trigger.needs))
-	f.assertUnavailable(t, "re-admitted", f.direct(t, f.userID, trigger.name, args))
+	f.assertAccepted(t, "re-admitted", f.direct(t, f.userID, trigger.name, args))
+	if loads, starts := f.disp.counts(); loads != 1 || starts != 1 {
+		t.Fatalf("re-admitted call: %d loads %d starts, want 1 and 1 (the control that proves the counters work)", loads, starts)
+	}
 }
 
 // MT-03: the lookup keeps both predicates; other-tenant, unknown, empty and forced-error cases
@@ -251,11 +291,16 @@ func TestTriggerLookupKeepsTenantPredicateAndGenericErrors(t *testing.T) {
 	sqlObs.register(t, db.DB, "jobs")
 
 	own := f.direct(t, f.userID, trigger.name, trigger.args(f, f.tenantA))
-	f.assertUnavailable(t, "own job", own)
+	f.assertAccepted(t, "own job", own)
 	seen := sqlObs.snapshot()
-	if len(seen) != 1 {
-		t.Fatalf("expected one jobs query, saw %d", len(seen))
+	// R044: the tool's own lookup is the first jobs query; the reservation's parent lock is a second,
+	// locking one (id and tenant predicates as well). The lookup is checked here.
+	if len(seen) < 1 {
+		t.Fatalf("expected the jobs lookup, saw none")
 	}
+	f.disp.mu.Lock()
+	f.disp.loads, f.disp.starts = 0, 0
+	f.disp.mu.Unlock()
 	sql := strings.ToLower(seen[0].sql)
 	if !strings.Contains(sql, "id = ?") || !strings.Contains(sql, "tenant_id = ?") || strings.Count(sql, "?") < 2 {
 		t.Fatalf("lookup must carry both id and tenant predicates: %s", seen[0].sql)
@@ -294,6 +339,7 @@ func TestTriggerLookupKeepsTenantPredicateAndGenericErrors(t *testing.T) {
 		if strings.Contains(got.text, f.tenantB) || strings.Contains(got.text, forbiddenMarker) {
 			t.Fatalf("%s: disclosure %q", c.label, got.text)
 		}
+		f.assertNoDispatch(t, c.label) // not found never reaches configuration, reservation or start
 	}
 
 	// Forced job-query failure: the same generic result, no SQL or driver text, no job data.
@@ -309,6 +355,7 @@ func TestTriggerLookupKeepsTenantPredicateAndGenericErrors(t *testing.T) {
 			t.Fatalf("forced read error disclosed %q", leak)
 		}
 	}
+	f.assertNoDispatch(t, "forced read error")
 	f.obs.reset()
 }
 
@@ -332,56 +379,59 @@ func (f *mcpFixture) directFailing(t *testing.T, userID, tool string, args map[s
 	return out
 }
 
-// MT-04: no write, run, outbound request or state change on any path.
-func TestTriggerNoWritesRunsOrOutboundRequests(t *testing.T) {
+// MT-04: rejected requests (denied rights, absent membership, foreign tenant, unknown job, extra
+// arguments) cause no write, run, dispatch, outbound request or state change. The accepted call is
+// the positive control that the probes can see a reservation.
+func TestTriggerRejectionsHaveNoWritesRunsDispatchOrOutboundRequests(t *testing.T) {
 	f := newMCPFixture(t)
 	trigger := toolMatrix[9]
 	probe := &effectProbe{}
 	probe.install(t, db.DB)
 	before := checksums(t)
 
-	run := func(label string, setup func(), userID string, args map[string]interface{}) {
+	run := func(setup func(), userID string, args map[string]interface{}) {
 		setup()
 		f.direct(t, userID, trigger.name, args)
 	}
 	args := trigger.args(f, f.tenantA)
-	run("unavailable/member", func() { f.setMember(t, "member", permsOnly(trigger.needs)) }, f.userID, args)
-	run("unavailable/owner", func() { f.setMember(t, "owner", "") }, f.userID, args)
-	run("not found", func() { f.setMember(t, "member", permsOnly(trigger.needs)) }, f.userID,
-		map[string]interface{}{"tenant_id": f.tenantA, "job_id": "job-" + f.tenantB})
-	run("denied rights", func() { f.setMember(t, "member", permsExcept("jobs", "w")) }, f.userID, args)
-	run("denied tenant", func() { f.setMember(t, "owner", "") }, f.userID, trigger.args(f, f.tenantB))
-	// the mounted route as well
+	extra := trigger.args(f, f.tenantA)
+	extra["mode"] = "unanalyzed"
+	// membership changes are fixture UPDATEs (raw Exec, outside these callbacks) before each call
+	run(func() { f.setMember(t, "member", permsOnly(trigger.needs)) }, f.userID,
+		map[string]interface{}{"tenant_id": f.tenantA, "job_id": "job-" + f.tenantB}) // unknown to tenant A
+	run(func() {}, f.userID, extra) // admitted, own job, extra argument
+	run(func() { f.setMember(t, "member", permsExcept("jobs", "w")) }, f.userID, args)
+	run(func() { f.setMember(t, "owner", "") }, f.userID, trigger.args(f, f.tenantB))
+	run(func() { f.setMember(t, "owner", "") }, f.outsiderID, args)
 	f.setMember(t, "member", permsOnly(trigger.needs))
-	f.rpc(t, f.token, callBody(trigger.name, args))
+	// forced lookup failure on the mounted route is covered by TestTriggerForcedReadErrorHasNoEffects
 
-	// setMember is a fixture UPDATE; those are the only writes and happen outside the tool call.
 	probe.mu.Lock()
 	writes, outbound := probe.writes, probe.http
 	probe.mu.Unlock()
 	if outbound != 0 {
 		t.Fatalf("%d outbound HTTP attempts on the default transport", outbound)
 	}
-	for table, n := range writes { // fixture setMember uses raw Exec, which these callbacks do not see
+	for table, n := range writes {
 		if table != tokenTable {
-			t.Fatalf("%d GORM write callbacks on %s during trigger calls", n, table)
+			t.Fatalf("%d GORM write callbacks on %s during rejected trigger calls", n, table)
 		}
 	}
-	t.Logf("write callbacks by table (bearer-token bookkeeping only is tolerated): %v", writes)
+	f.assertNoDispatch(t, "rejections")
 	after := checksums(t)
 	for table, sum := range before {
 		if table == "user_tenants" {
 			continue // the test itself changes the membership row between calls
 		}
 		if after[table] != sum {
-			t.Fatalf("table %s changed during trigger calls (%d -> %d)", table, sum, after[table])
+			t.Fatalf("table %s changed during rejected trigger calls (%d -> %d)", table, sum, after[table])
 		}
 	}
 	if n := f.jobRuns(t); n != 0 {
-		t.Fatalf("%d job runs were created", n)
+		t.Fatalf("%d job runs were created by rejected calls", n)
 	}
 
-	// Positive controls: the probes are able to see a GORM write and a default-transport request.
+	// Positive controls: the probes can see a GORM write, a default-transport request and a reservation.
 	probe.mu.Lock()
 	probe.writes, probe.http = nil, 0
 	probe.mu.Unlock()
@@ -392,9 +442,20 @@ func TestTriggerNoWritesRunsOrOutboundRequests(t *testing.T) {
 		t.Fatalf("the outbound trap must fail the control request")
 	}
 	probe.mu.Lock()
-	defer probe.mu.Unlock()
-	if probe.writes["jobs"] != 1 || probe.http != 1 {
-		t.Fatalf("probes did not observe the controls: writes=%v http=%d", probe.writes, probe.http)
+	controlWrites, controlHTTP := probe.writes["jobs"], probe.http
+	probe.mu.Unlock()
+	if controlWrites != 1 || controlHTTP != 1 {
+		t.Fatalf("probes did not observe the controls: writes=%d http=%d", controlWrites, controlHTTP)
+	}
+	f.assertAccepted(t, "dispatch control", f.direct(t, f.userID, trigger.name, args))
+	if f.jobRuns(t) != 1 {
+		t.Fatalf("the reservation control left %d runs", f.jobRuns(t))
+	}
+	probe.mu.Lock()
+	reserved := probe.writes["job_runs"]
+	probe.mu.Unlock()
+	if reserved == 0 {
+		t.Fatalf("the write probe did not see the reservation's job_runs insert")
 	}
 }
 
@@ -432,6 +493,7 @@ func TestTriggerForcedReadErrorHasNoEffects(t *testing.T) {
 	if n := f.jobRuns(t); n != runsBefore || n != 0 {
 		t.Fatalf("job runs changed on the forced-error path: %d -> %d", runsBefore, n)
 	}
+	f.assertNoDispatch(t, "forced read error")
 }
 
 // goldenDescriptions are the other eleven published descriptions, copied independently of tools.go.
@@ -470,12 +532,21 @@ func TestTriggerDescriptionAndToolsList(t *testing.T) {
 		}
 		seen++
 		lower := strings.ToLower(desc)
-		if !strings.Contains(lower, "unavailable") || !strings.Contains(lower, "does not start or queue") || !strings.Contains(desc, triggerUnavailableWant) {
-			t.Errorf("description must state the tool is unavailable and starts nothing: %q", desc)
+		// R044: the description states background acceptance (not completion), the default-only
+		// semantics and the extra-argument rejection; the retired unavailable text is gone.
+		for _, must := range []string{"background", "since_last", "no date range", "no conversation cap", "job_triggered", "run_id", "does not mean the analysis has finished", "invalid_run_parameters", "job_already_running", "job_start_failed"} {
+			if !strings.Contains(lower, strings.ToLower(must)) {
+				t.Errorf("description must mention %q: %q", must, desc)
+			}
 		}
-		for _, promise := range []string{"immediately", "manually trigger", "run now", "will run", "queued for"} {
+		for _, retired := range []string{"unavailable", "does not start", triggerUnavailableWant} {
+			if strings.Contains(lower, retired) {
+				t.Errorf("description still carries the retired %q: %q", retired, desc)
+			}
+		}
+		for _, promise := range []string{"immediately", "manually trigger", "run now", "will run", "queued for", "completed analysis", "durable", "guarantee"} {
 			if strings.Contains(lower, promise) {
-				t.Errorf("description still promises execution (%q): %q", promise, desc)
+				t.Errorf("description over-promises (%q): %q", promise, desc)
 			}
 		}
 		schema := tool["inputSchema"].(map[string]interface{})
@@ -498,36 +569,40 @@ func TestTriggerDescriptionAndToolsList(t *testing.T) {
 	}
 }
 
-// MT-06 guard: the shared positive helper accepts an error only for the listed tool and only with
-// its exact text; arbitrary tool errors never count as an admitted outcome.
+// MT-06 guard: the shared positive helper accepts only a non-error result and the trigger's own
+// predicate accepts only the exact accepted shape; the retired unavailable error, arbitrary errors
+// and malformed or extended bodies never count as an admitted trigger.
 func TestAdmittedOutcomeHelperRejectsArbitraryErrors(t *testing.T) {
 	trigger := toolMatrix[9]
 	other := toolMatrix[0]
 	if trigger.name != "cqa_trigger_job" || other.name != "cqa_list_channels" {
 		t.Fatalf("matrix order changed")
 	}
-	if p := admittedOutcomeProblem(trigger, toolOutcome{isErr: true, text: triggerUnavailableWant}); p != "" {
-		t.Fatalf("the fixed unavailable error must be accepted for the trigger: %s", p)
+	good := `{"message":"job_triggered","run_id":"abc"}`
+	if p := admittedOutcomeProblem(trigger, toolOutcome{text: good}); p != "" || !trigger.own(good, "t") {
+		t.Fatalf("the accepted trigger must be accepted: %q own=%v", p, trigger.own(good, "t"))
 	}
 	for _, bad := range []toolOutcome{
 		{isErr: true, text: "permission denied"}, {isErr: true, text: "Job not found"}, {isErr: true, text: "record not found"},
-		{isErr: true, text: triggerUnavailableWant + " "}, {isErr: true, text: ""}, {isErr: false, text: triggerUnavailableWant},
-		{isErr: true, text: triggerUnavailableWant, rpcErr: &RPCError{Code: -32602}},
+		{isErr: true, text: triggerUnavailableWant}, {isErr: true, text: good}, {isErr: true, text: ""},
+		{text: good, rpcErr: &RPCError{Code: -32602}},
 	} {
 		if admittedOutcomeProblem(trigger, bad) == "" {
 			t.Errorf("trigger outcome %+v must not count as admitted", bad)
 		}
 	}
-	if admittedOutcomeProblem(other, toolOutcome{isErr: true, text: triggerUnavailableWant}) == "" {
-		t.Errorf("a read tool must never be allowed to return the trigger error")
+	for _, text := range []string{
+		triggerUnavailableWant, "", "{}", `{"message":"job_triggered"}`, `{"message":"job_triggered","run_id":""}`,
+		`{"message":"queued","run_id":"abc"}`, `{"message":"job_triggered","run_id":"abc","extra":"x"}`, "job_triggered",
+	} {
+		if trigger.own(text, "t") {
+			t.Errorf("trigger predicate accepted %q", text)
+		}
 	}
 	if admittedOutcomeProblem(other, toolOutcome{isErr: true, text: "permission denied"}) == "" {
 		t.Errorf("a read tool must not accept an error as success")
 	}
 	if p := admittedOutcomeProblem(other, toolOutcome{text: "ok"}); p != "" {
 		t.Errorf("a normal success must be accepted: %s", p)
-	}
-	if len(expectedToolError) != 1 {
-		t.Errorf("exactly one tool may have an expected error, got %v", expectedToolError)
 	}
 }

@@ -2,6 +2,7 @@ package mcp
 
 import (
 	"encoding/json"
+	"errors"
 	"log"
 	"strconv"
 	"time"
@@ -10,6 +11,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch"
 )
 
 type ToolCallParams struct {
@@ -89,7 +91,7 @@ func handleToolsCall(c *gin.Context, params json.RawMessage) (interface{}, *RPCE
 		return toolGetNotificationLogs(tenantID, args)
 	case "cqa_trigger_job":
 		jobID, _ := args["job_id"].(string)
-		return toolTriggerJob(tenantID, jobID)
+		return toolTriggerJob(tenantID, jobID, args)
 	default:
 		// Unreachable for a tool in toolPolicies; kept so a policy without a handler fails closed.
 		return nil, &RPCError{Code: -32602, Message: "Unknown tool: " + call.Name}
@@ -325,16 +327,35 @@ func toolGetNotificationLogs(tenantID string, args map[string]interface{}) (inte
 	return jsonResult(logs)
 }
 
-func toolTriggerJob(tenantID, jobID string) (interface{}, *RPCError) {
+// triggerArgs are the only arguments cqa_trigger_job accepts. Run options (mode, full, from, to,
+// limit) are not supported over MCP, so any other argument is rejected instead of silently starting
+// a run with different semantics (CCMAI-RUNTIME-044).
+var triggerArgs = map[string]bool{"tenant_id": true, "job_id": true}
+
+// toolTriggerJob starts one default (since_last, no date range, no cap) run of an own-tenant job
+// through the shared jobdispatch service used by the HTTP trigger. Success means the run is reserved
+// and its background worker handed off, not that analysis finished. Authorization already happened
+// in handleToolsCall; the lookup keeps both the job and tenant predicates.
+func toolTriggerJob(tenantID, jobID string, args map[string]interface{}) (interface{}, *RPCError) {
 	var job models.Job
 	if err := db.DB.Where("id = ? AND tenant_id = ?", jobID, tenantID).First(&job).Error; err != nil {
 		return errResult("Job not found")
 	}
+	for name := range args {
+		if !triggerArgs[name] {
+			return errResult("invalid_run_parameters")
+		}
+	}
 
-	// MCP has no queue or analyzer wiring, so nothing is started. Report that explicitly instead
-	// of claiming the job was triggered or queued. The fixed text carries no job data.
-	return errResult(triggerUnavailableText)
+	runID, err := jobdispatch.Default.Dispatch(job, jobdispatch.Params{Mode: "since_last"})
+	switch {
+	case err == nil:
+		return jsonResult(map[string]string{"message": "job_triggered", "run_id": runID})
+	case errors.Is(err, jobdispatch.ErrBusy):
+		return errResult("job_already_running")
+	case errors.Is(err, jobdispatch.ErrMissing):
+		return errResult("Job not found")
+	default:
+		return errResult("job_start_failed")
+	}
 }
-
-// triggerUnavailableText is the exact tool-error text for cqa_trigger_job (CCMAI-RUNTIME-035).
-const triggerUnavailableText = "job_trigger_unavailable"

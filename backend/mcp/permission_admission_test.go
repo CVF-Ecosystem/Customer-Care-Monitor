@@ -92,16 +92,17 @@ var toolMatrix = []toolCase{
 		func(f *mcpFixture, tn string) map[string]interface{} {
 			return map[string]interface{}{"tenant_id": tn, "job_id": "job-" + tn}
 		},
-		// R035: an admitted trigger reaches the own-tenant lookup and then reports the fixed unavailable error.
-		func(text, tenant string) bool { return text == triggerUnavailableWant }},
+		// R044 supersedes R035 for admitted success: an admitted trigger reaches the own-tenant lookup and
+		// then the shared dispatch (a hermetic one in this matrix) and returns job_triggered with a run_id.
+		func(text, tenant string) bool {
+			var got map[string]string
+			return json.Unmarshal([]byte(text), &got) == nil && len(got) == 2 && got["message"] == "job_triggered" && got["run_id"] != ""
+		}},
 }
 
-// triggerUnavailableWant is written independently of the production constant on purpose.
+// triggerUnavailableWant is the retired R035 unavailable text, written independently of production
+// code. R044 tests assert an admitted trigger never returns it again.
 const triggerUnavailableWant = "job_trigger_unavailable"
-
-// expectedToolError lists the only admitted tool whose success path is a fixed tool error.
-// assertAllowed accepts an error result solely for these tools and only with the exact text.
-var expectedToolError = map[string]string{"cqa_trigger_job": triggerUnavailableWant}
 
 // ---- observer ----
 
@@ -162,6 +163,7 @@ const secretSQLMarker = "R021-SQL-DIAGNOSTIC"
 
 type mcpFixture struct {
 	obs                 *queryObserver
+	disp                *dispatchProbe // hermetic jobdispatch.Default installed by newMCPFixture (R044)
 	userID, outsiderID  string
 	tenantA, tenantB    string
 	tenantC             string
@@ -254,6 +256,7 @@ func newMCPFixture(t *testing.T) *mcpFixture {
 		db.DB.Exec("DELETE FROM users WHERE id IN (?, ?)", f.userID, f.outsiderID)
 	})
 	f.obs.register(t, db.DB)
+	f.disp = installHermeticDispatcher(t)
 	return f
 }
 
@@ -345,15 +348,9 @@ func (f *mcpFixture) assertDenied(t *testing.T, label string, got toolOutcome, w
 	}
 }
 
-// admittedOutcomeProblem returns "" when got is the admitted outcome of tc: success for every tool
-// except one listed in expectedToolError, which must return exactly its fixed tool error.
+// admittedOutcomeProblem returns "" when got is the admitted outcome of tc: a non-error tool result
+// for every tool (R044: the trigger's success is job_triggered, checked by its own() predicate).
 func admittedOutcomeProblem(tc toolCase, got toolOutcome) string {
-	if want, ok := expectedToolError[tc.name]; ok {
-		if got.rpcErr != nil || !got.isErr || got.text != want {
-			return fmt.Sprintf("expected the fixed tool error %q, got isErr=%v rpcErr=%v text=%q", want, got.isErr, got.rpcErr, got.text)
-		}
-		return ""
-	}
 	if got.rpcErr != nil || got.isErr {
 		return fmt.Sprintf("expected success, got isErr=%v rpcErr=%v text=%q", got.isErr, got.rpcErr, got.text)
 	}
@@ -429,6 +426,14 @@ func TestMCPEachToolRequiresExactlyItsRights(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			f.setMember(t, "member", permsOnly(tc.needs))
 			f.assertAllowed(t, "exact rights", tc, f.tenantA, f.direct(t, f.userID, tc.name, tc.args(f, f.tenantA)))
+			// Only the admitted trigger reserves a run (R044); every other tool dispatches nothing.
+			admittedRuns, wantRuns := f.jobRuns(t), int64(0)
+			if tc.name == "cqa_trigger_job" {
+				wantRuns = 1
+			}
+			if admittedRuns != wantRuns {
+				t.Fatalf("%s: %d job runs after the admitted call, want %d", tc.name, admittedRuns, wantRuns)
+			}
 
 			for _, need := range tc.needs {
 				parts := strings.SplitN(need, ":", 2)
@@ -446,8 +451,8 @@ func TestMCPEachToolRequiresExactlyItsRights(t *testing.T) {
 					f.assertDenied(t, "only "+need, f.direct(t, f.userID, tc.name, tc.args(f, f.tenantA)), "permission denied")
 				}
 			}
-			if n := f.jobRuns(t); n != 0 {
-				t.Fatalf("%d job runs exist; no tool may dispatch a job", n)
+			if n := f.jobRuns(t); n != admittedRuns {
+				t.Fatalf("%s: denied calls changed job runs from %d to %d", tc.name, admittedRuns, n)
 			}
 		})
 	}
@@ -470,8 +475,10 @@ func TestMCPOwnerAndAdminBypassLettersButNotMembership(t *testing.T) {
 		f.assertDenied(t, "owner of A on B/"+tc.name, f.direct(t, f.userID, tc.name, tc.args(f, f.tenantB)),
 			"access denied: you don't have access to this tenant")
 	}
-	if n := f.jobRuns(t); n != 0 {
-		t.Fatalf("%d job runs exist", n)
+	// Six admitted trigger calls (2 roles x 3 permission shapes) reserve one run each (R044); the
+	// cross-tenant denials above reserve none.
+	if n := f.jobRuns(t); n != 6 {
+		t.Fatalf("%d job runs exist, want exactly the 6 admitted trigger reservations", n)
 	}
 }
 
@@ -786,17 +793,18 @@ func TestMCPMountedRouteEnforcesTokenAndToolPermissions(t *testing.T) {
 		{"member", permsOnly(trigger.needs)}, {"owner", ""}, {"admin", "not json"},
 	} {
 		f.setMember(t, step.role, step.perms)
+		before := f.jobRuns(t)
 		_, resp = f.rpc(t, f.token, triggerBody)
 		text, isErr := resultText(t, resp)
-		if !isErr || text != triggerUnavailableWant {
-			t.Fatalf("%s trigger: %q isErr=%v, want the fixed unavailable error", step.role, text, isErr)
+		if isErr || text == triggerUnavailableWant || !strings.Contains(text, `"job_triggered"`) {
+			t.Fatalf("%s trigger: %q isErr=%v, want job_triggered", step.role, text, isErr)
 		}
-		if f.obs.count("jobs") != 1 {
+		if f.obs.count("jobs") < 1 { // R044: the lookup plus the reservation's own jobs reads
 			t.Fatalf("%s: the permitted lookup was not observed (jobs queried %d times)", step.role, f.obs.count("jobs"))
 		}
-		// R035: the call reports unavailable and dispatches nothing.
-		if n := f.jobRuns(t); n != 0 {
-			t.Fatalf("%s: cqa_trigger_job created %d job runs; it must not dispatch", step.role, n)
+		// R044: an admitted call reserves exactly one run (the hermetic dispatcher closes it at once).
+		if n := f.jobRuns(t); n != before+1 {
+			t.Fatalf("%s: cqa_trigger_job left %d job runs, want %d", step.role, n, before+1)
 		}
 	}
 	f.setMember(t, "member", permsOnly(read.needs))

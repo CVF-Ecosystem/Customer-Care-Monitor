@@ -22,6 +22,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/notifications"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 	"github.com/xuri/excelize/v2"
@@ -417,30 +418,37 @@ func TriggerJob(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": code})
 		return
 	}
-	mode, dateFrom, dateTo, maxConv := params.mode, params.dateFrom, params.dateTo, params.maxConv
 
-	// A job dispatch that cannot get a valid configuration must not be
-	// acknowledged: validate before launching any worker. The error is not
-	// logged or returned because validation messages describe secret
-	// configuration.
-	cfg, err := loadJobDispatchConfig()
-	if err != nil || cfg == nil {
-		log.Printf("[error] trigger for job %s not admitted: configuration invalid", job.Name)
+	// CCMAI-RUNTIME-044: configuration validation, reservation, worker start and start-failure abort
+	// are the shared jobdispatch service, also used by the MCP trigger. Nothing is acknowledged
+	// before the run is reserved and its worker handed off.
+	runID, err := triggerDispatcher().Dispatch(job, jobdispatch.Params{
+		Mode: params.mode, DateFrom: params.dateFrom, DateTo: params.dateTo, Limit: params.maxConv,
+	})
+	switch {
+	case err == nil:
+		c.JSON(http.StatusAccepted, gin.H{"message": "job_triggered", "run_id": runID})
+	case errors.Is(err, jobdispatch.ErrBusy):
+		c.JSON(http.StatusConflict, gin.H{"error": "job_already_running"})
+	case errors.Is(err, jobdispatch.ErrMissing):
+		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
+	default:
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_start_failed"})
-		return
 	}
+}
 
-	res, ok := reserveJobRunOrRespond(c, job)
-	if !ok {
-		return
+// triggerDispatcher adapts the HTTP seams (loadJobDispatchConfig, startTriggerJob, jobRunTimeout)
+// to the shared dispatch service. The seams are read at request time so handler tests can still
+// intercept configuration loading and the worker launch.
+func triggerDispatcher() *jobdispatch.Service {
+	return &jobdispatch.Service{
+		Label:      "trigger",
+		Timeout:    jobRunTimeout,
+		LoadConfig: func() (*config.Config, error) { return loadJobDispatchConfig() },
+		Start: func(job models.Job, cfg *config.Config, p jobdispatch.Params, res *engine.JobRunReservation) error {
+			return startTriggerJob(job, cfg, triggerJobParams{mode: p.Mode, dateFrom: p.DateFrom, dateTo: p.DateTo, maxConv: p.Limit}, res)
+		},
 	}
-	if err := startTriggerJob(job, cfg, triggerJobParams{mode: mode, dateFrom: dateFrom, dateTo: dateTo, maxConv: maxConv}, res); err != nil {
-		abortReservedStart(job, res)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "job_start_failed"})
-		return
-	}
-
-	c.JSON(http.StatusAccepted, gin.H{"message": "job_triggered", "run_id": res.RunID()})
 }
 
 // loadJobDispatchConfig loads and validates configuration for a job dispatch
@@ -473,9 +481,7 @@ func reserveJobRunOrRespond(c *gin.Context, job models.Job) (*engine.JobRunReser
 // abortReservedStart closes a reservation whose worker could not be started: the stored row is
 // finalized as error (checked) or, if that cannot be recorded, stays running and keeps blocking.
 func abortReservedStart(job models.Job, res *engine.JobRunReservation) {
-	if err := res.Abort(job, "Không khởi động được tiến trình chạy"); err != nil {
-		log.Printf("[error] reserved run %s of job %s could not be closed: it keeps blocking admission", res.RunID(), job.ID)
-	}
+	jobdispatch.AbortReservation(job, res)
 }
 
 // startTestRunJob launches the background test-run worker for a reservation the handler already
@@ -483,21 +489,7 @@ func abortReservedStart(job models.Job, res *engine.JobRunReservation) {
 // chosen by the handler. It consumes the reservation exactly once. It is a variable only so handler
 // tests can observe dispatch without running a real analyzer/provider.
 var startTestRunJob = func(job models.Job, cfg *config.Config, limit int, res *engine.JobRunReservation) error {
-	go func() {
-		defer func() {
-			if r := recover(); r != nil {
-				log.Printf("[security] panic in test-run goroutine for job %s", job.ID) // value not logged
-				if err := res.Abort(job, "Lượt chạy dừng đột ngột; xem nhật ký máy chủ."); err != nil {
-					log.Printf("[error] reserved run %s keeps blocking admission", res.RunID())
-				}
-			}
-		}()
-		analyzer := newTriggerAnalyzer(cfg)
-		if _, err := analyzer.RunReserved(res, job, "test_run", limit, "", ""); err != nil {
-			log.Printf("[test-run] error for job %s: %v", job.Name, err)
-		}
-	}()
-	return nil
+	return jobdispatch.StartWorker("test-run", newTriggerAnalyzer, job, cfg, jobdispatch.Params{Mode: "test_run", Limit: limit}, res)
 }
 
 // newTriggerAnalyzer builds the analyzer for a trigger. It is a variable only so a test can route
@@ -565,21 +557,8 @@ type triggerJobParams struct {
 // exactly once. It is a variable only so handler tests can observe dispatch without running a real
 // analyzer/provider.
 var startTriggerJob = func(job models.Job, cfg *config.Config, p triggerJobParams, res *engine.JobRunReservation) error {
-	go func() {
-		defer func() {
-			if r := recover(); r != nil {
-				log.Printf("[security] panic in trigger goroutine for job %s", job.ID) // value not logged
-				if err := res.Abort(job, "Lượt chạy dừng đột ngột; xem nhật ký máy chủ."); err != nil {
-					log.Printf("[error] reserved run %s keeps blocking admission", res.RunID())
-				}
-			}
-		}()
-		analyzer := newTriggerAnalyzer(cfg)
-		if _, err := analyzer.RunReserved(res, job, p.mode, p.maxConv, p.dateFrom, p.dateTo); err != nil {
-			log.Printf("[trigger] error for job %s: %v", job.Name, err)
-		}
-	}()
-	return nil
+	return jobdispatch.StartWorker("trigger", newTriggerAnalyzer, job, cfg,
+		jobdispatch.Params{Mode: p.mode, DateFrom: p.dateFrom, DateTo: p.dateTo, Limit: p.maxConv}, res)
 }
 
 var runIDRe = regexp.MustCompile(`^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`)
