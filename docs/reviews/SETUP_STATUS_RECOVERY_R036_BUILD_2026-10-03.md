@@ -14,7 +14,7 @@ Baseline: dispatch commit `dea891c` (seed `5a044ae`). Exact BUILD SHA: recorded 
 | `frontend/src/router/index.ts` | setup-status block and `/setup-unavailable` route only | `66023274e9eb85eec31e2d6d8d1d1b24aaf251d20f43b79c77840b647471d90d` |
 | `frontend/src/App.vue` | loading until first navigation settles; profile load only after confirmed configured, once | `d5357684eed24b76a4b6c6582a6fa42de170f2b59570eaee83ee55bede6f65ee` |
 | `frontend/src/views/SetupStatusUnavailable.vue` (new) | localized message and accessible Retry | `71386477eca15fa8d420c1323b9679c5d3dbbd9bb2e951bffafc8bcad68a4f94` |
-| `frontend/src/i18n/vi.ts`, `en.ts` | five `setup_status_*` keys each | `c4fa500a…4073b09`, `128df13e…260d` (full values in git) |
+| `frontend/src/i18n/vi.ts`, `en.ts` | five `setup_status_*` keys each | `c4fa500a74c516bf707db39f14edad2deabf80731100a61d7c69014bfe073b09`, `128df13e7e6de67f4a7626557612237dda190ac722bbf6149c218b934e24260d` |
 | `frontend/src/__tests__/setup-stale-token.spec.ts` | obsolete failed-status expectation replaced; App mount gets the i18n plugin and a progress stub; AUTH-001 positives untouched | `ac69d4655e0b65d6c9d1b5d6658ec280eb68bac442d3284219e36efd5bf1b8d5` |
 | `frontend/src/__tests__/setup-status-unavailable.spec.ts` (new) | SS-01..05 tests (31) | `973e8d2b9a0a7edcab713ced78fc0421d8e4010927646322fdf16d3e2adacae2` |
 
@@ -93,3 +93,7 @@ Loading text is shared by the first-navigation wait; if a later tranche adds slo
 ## 8. BUILD identity and hand-back
 
 Exact BUILD commit: `a805db2bbb3b30ea1841537351a538c37a1af28b` (parent `dea891c`; seed `5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3` unchanged). The follow-up documentation commit records it in the tranche record `buildCommit` and changes no source. Pre-commit validation (docs build, catalog, diff check, preflights, gate unit tests) is recorded in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+
+## Reviewer correction and source-specific disposition (Codex, 2026-10-03)
+
+Independent exact-BUILD [review](CCMAI_RUNTIME_036_INDEPENDENT_REVIEW_2026-10-03.md) is REVIEW_PASS / FREEZE_OPEN for synthetic UI contract only. Original worker REVIEW_PENDING/next-review wording above is historical hand-back. The vi table abbreviation originally ended `4073b09`, which was a transcription error: correct full committed-blob vi/en hashes now replace abbreviations. Reviewer independently computed all eight blob digests; CRLF-normalized working copies equal blobs. No source/test/seed repair; previous worker failures and all mocked-timing/cookie/multi-tab/live limits retained.

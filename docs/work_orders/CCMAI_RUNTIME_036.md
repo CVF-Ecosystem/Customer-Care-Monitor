@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-036 — Frontend setup-status loading and recovery
 
-Status: REVIEW_PENDING
+Status: REVIEW_PASS
 
 Date: 2026-10-03. Risk ceiling R2. [SPEC](../specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md). Immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-036.json` committed 5a044ae82d11cdf59cdf28d0a8fe9f9410957bb3 before activation/BUILD. Standing local orchestration delegation and owner continuation authorize this bounded order; owner manually transfers to Claude, no automatic invocation.
 
@@ -28,3 +28,7 @@ UI bypass, premature profile load, failure-based token clearing, request loop, p
 *Historical: the paragraph below describes the state at dispatch commit dea891c. Current: Claude BUILD is REVIEW_PENDING; see the BUILD record.*
 
 DISPATCH_READY / NOT_BUILT: no Claude worker started in this planning turn. R035/R034 local REVIEW_PASS / FREEZE_OPEN and R033 local-message FREEZE remain source-specific history. Actual MCP execution and live Pancake inputs/authority remain separate. No frontend test result, backend security, runtime AI/CVF governance, hosted readiness or new FREEZE claim.
+
+## Independent acceptance (2026-10-03)
+
+[Exact-BUILD independent review](../reviews/CCMAI_RUNTIME_036_INDEPENDENT_REVIEW_2026-10-03.md): REVIEW_PASS / FREEZE_OPEN for synthetic SS-01..06 only. Frontend299/299, typecheck/build, restored38 PASS; four mutations killed; original failed-status control fails then restored passes. Documentation-only current labels/abbreviated vi hash settled by reviewer-owned synchronization; no product/test/seed change. All failed history and happy-dom/fake-timer/cookie/multi-tab/live/backend limitations retained. No new worker BUILD or FREEZE.
