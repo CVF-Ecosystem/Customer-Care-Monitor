@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-037",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_037.md",
+  "sourcePlanningCommit": "93102f26117a28cc7146fdfe2b4bc1fea82e10f7",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "docs/guide/s3-storage.md",
+    "docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_037.md"
+  ],
+  "prohibitedEffects": [
+    "product_source_change",
+    "backend_change",
+    "frontend_change",
+    "docker_compose_change",
+    "migration_execution",
+    "docker_daemon_operation",
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "config_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit"
+  ],
+  "permittedEffects": [
+    "bounded_four_s3_guide_command_corrections",
+    "static_repository_source_comparison",
+    "local_docker_compose_exec_help_without_daemon",
+    "local_docs_catalog_gates",
+    "bounded_local_documentation_commits"
+  ],
+  "ownerAuthorization": "Standing local orchestration delegation and owner continuation: Codex ORCHESTRATOR/REVIEWER authors bounded orders; owner manually transfers to Claude. Addresses the already recorded stale cqa-app S3-guide command limitation. Documentation correction only; no migration/container/credential/provider/network authority.",
+  "claimScope": "Four guide command examples aligned with current Compose service and image binary by source comparison only. No S3/migration runtime test, full-guide validation, provider/CVF governance, hosted readiness or FREEZE claim."
+}
