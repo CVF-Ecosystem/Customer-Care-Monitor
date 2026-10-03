@@ -99,6 +99,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R043 local closure: R034/R041/R042 FROZEN at integrated accepted source, inherited independent proof and explicit limits.: `docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md`
 - R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved.: `docs/work_orders/CCMAI_RUNTIME_043.md`
 - Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-043.json`
+- Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

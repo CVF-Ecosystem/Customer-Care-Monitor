@@ -5,6 +5,13 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+  "id": "runtime044-seed",
+  "family": "continuity",
+  "path": "CVF_SESSION/authority/CCMAI-RUNTIME-044.json",
+  "status": "ACTIVE",
+  "description": "Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority."
+},
+{
   "id": "account-park-mcp-next-scope",
   "family": "continuity",
   "path": "docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md",
