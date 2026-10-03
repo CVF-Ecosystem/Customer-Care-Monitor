@@ -13,6 +13,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
 - Shared learning: shell cleanup and MSYS paths; read before disposable-resource cleanup.: `docs/reviews/learnings/feedback_shell_cleanup_and_paths.md`
 - Shared sync coverage learning: conversation, message, storage, live-channel and governance evidence boundaries.: `docs/reviews/learnings/feedback_sync_coverage_evidence_layers.md`
+- Prepared Pancake live-proof packet; required external inputs and network/credential authority outstanding; no dispatch.: `docs/reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md`
 - Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 - Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md`
 - Historical F02-E review, owner pause/resume and F02-F intake acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md`
