@@ -5,6 +5,34 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                        "id": "continuity-r038-handoff",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "Historical R038 acceptance and R039 intake/seed acknowledgment; targeted lookup only."
+                      },
+                      {
+                        "id": "runtime039-spec",
+                        "family": "continuity",
+                        "path": "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R039 CS-01..03 historical scope-test maintenance contract; NOT_BUILT."
+                      },
+                      {
+                        "id": "runtime039-order",
+                        "family": "continuity",
+                        "path": "docs/work_orders/CCMAI_RUNTIME_039.md",
+                        "status": "ACTIVE",
+                        "description": "R039 R1 offline CLI test-only order DISPATCH_READY; manual Claude transfer."
+                      },
+                      {
+                        "id": "runtime039-seed",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-039.json",
+                        "status": "ACTIVE",
+                        "description": "Immutable Codex R039 seed committed before activation/BUILD."
+                      },
+                      {
                         "id": "runtime038-independent-review",
                         "family": "continuity",
                         "path": "docs/reviews/CCMAI_RUNTIME_038_INDEPENDENT_REVIEW_2026-10-03.md",
@@ -350,9 +378,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R038 independent acceptance handoff; static/compile-only, zero engine tests executed, FREEZE_OPEN."
+                          "description":  "Current R039 DISPATCH_READY handoff; offline CLI test-only, independent Codex review after Claude BUILD."
                       },
                       {
                           "id":  "truth-implementation-status",

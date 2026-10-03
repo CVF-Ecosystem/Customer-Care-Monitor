@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-038 is REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD 873cbcc1a146de4d4fb86628c7b640616cb18305: seven-line uncalled-helper deletion verified by static comparison and cached build/vet/engine-test compilation; zero engine tests executed. ORCHESTRATOR handles bounded local planning/continuity; no new worker BUILD or runtime execution dispatched. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake inputs/credential/network authority remain separate. No provider/channel/DB/credentials/network/push/merge/deployment/new FREEZE.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-039 DISPATCH_READY / NOT_BUILT: owner manually transfers docs/work_orders/CCMAI_RUNTIME_039.md to Claude IMPLEMENTATION_WORKER. Remove only TestProductionAdapterFilesUnchangedInGit and attached comment from backend/cmd/pancake-proof/main_test.go; preserve all six CLI behavior tests and product source. Rehydrate, record BUILD acknowledgment and pass synchronized preflight before editing; retain named original-test failure, run cached offline CLI tests/build/vet and exact protected-path comparison, then return exact BUILD SHA/evidence as REVIEW_PENDING to independent Codex REVIEWER. No engine/Analyzer/DB/provider/channel/credentials/network/push/merge/deployment/new FREEZE. R038/prior acceptance and R033 local-message FREEZE unchanged.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex ORCHESTRATOR / SESSION_SYNC_STEWARD; independent REVIEWER completed R038; review COMMIT_STEWARD (Codex); Claude IMPLEMENTATION_WORKER handed back, no new worker dispatched",
-  "roleRoute": "INDEPENDENT_CODEX_REVIEW_COMPLETE_LOCAL_ORCHESTRATION",
+  "activeRole": "ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR (Codex); Claude IMPLEMENTATION_WORKER after manual owner transfer; independent REVIEWER Codex; planning COMMIT_STEWARD Codex",
+  "roleRoute": "MANUAL_CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
   "updatedAt": "2026-10-03"
 }

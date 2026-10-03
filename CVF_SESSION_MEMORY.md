@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-038", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-039", "parked": false} -->
 
 ## Startup Order
 
@@ -50,7 +50,13 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R038 independent acceptance (2026-10-03)
+## Current R039 dispatch (2026-10-03)
+
+CCMAI-RUNTIME-039 DISPATCH_READY / NOT_BUILT, R1 test-only deletion of historical CLI Git assertion. [Order](docs/work_orders/CCMAI_RUNTIME_039.md), [SPEC](docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md); immutable seed `7a390dc08e7958015b107e3a3e3b890369b82cf1` before activation/BUILD. Six behavioral tests and product source preserved. Direct Git comparison reproduces only the accepted R038 engine difference; named Go control NOT RUN in planning. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md`; parked none. CCMAI-RUNTIME-039 DISPATCH_READY / NOT_BUILT: owner manually transfers docs/work_orders/CCMAI_RUNTIME_039.md to Claude IMPLEMENTATION_WORKER. Remove only TestProductionAdapterFilesUnchangedInGit and attached comment from backend/cmd/pancake-proof/main_test.go; preserve all six CLI behavior tests and product source. Rehydrate, record BUILD acknowledgment and pass synchronized preflight before editing; retain named original-test failure, run cached offline CLI tests/build/vet and exact protected-path comparison, then return exact BUILD SHA/evidence as REVIEW_PENDING to independent Codex REVIEWER. No engine/Analyzer/DB/provider/channel/credentials/network/push/merge/deployment/new FREEZE. R038/prior acceptance and R033 local-message FREEZE unchanged.
+
+Prior sections are historical continuity; original acceptance/evidence limits retained.
+
+## Historical R038 independent acceptance (2026-10-03)
 
 CCMAI-RUNTIME-038 REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude BUILD873cbcc1a146de4d4fb86628c7b640616cb18305. [Independent review](docs/reviews/CCMAI_RUNTIME_038_INDEPENDENT_REVIEW_2026-10-03.md): whole-file equality after exactly seven-line helper/comment removal, reference2 ->0 across195 source inputs, immutable seed verified; isolated cached Go build/vet/test compilation PASS, zero engine tests executed. Reviewer-owned historical-label/continuity synchronization only; product/seed unchanged. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`; parked none. CCMAI-RUNTIME-038 is REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD 873cbcc1a146de4d4fb86628c7b640616cb18305: seven-line uncalled-helper deletion verified by static comparison and cached build/vet/engine-test compilation; zero engine tests executed. ORCHESTRATOR handles bounded local planning/continuity; no new worker BUILD or runtime execution dispatched. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake inputs/credential/network authority remain separate. No provider/channel/DB/credentials/network/push/merge/deployment/new FREEZE.
 

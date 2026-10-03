@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-039",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/cmd/pancake-proof/main_test.go",
+    "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_039.md"
+  ],
+  "prohibitedEffects": [
+    "runtime_behavior_change",
+    "provider_call",
+    "channel_call",
+    "analyzer_execution",
+    "queue_dispatch",
+    "credential_use",
+    "config_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "docker_daemon_operation",
+    "frontend_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "product_source_change",
+    "other_test_change",
+    "skip_or_baseline_retarget_to_hide_failure",
+    "engine_test_execution"
+  ],
+  "claimScope": "CLI test maintenance only: remove a historical Git-baseline assertion invalidated by independently accepted R038. Preserve behavioral tests and verify protected paths in BUILD/review evidence. No live channel, AI governance, functional engine regression or FREEZE claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_039.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "7a390dc08e7958015b107e3a3e3b890369b82cf1",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "OPEN",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerTransferRequired": true,
+  "implementationStarted": false
+}
