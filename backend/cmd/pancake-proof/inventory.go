@@ -13,6 +13,7 @@ import (
 	"errors"
 	"io"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strings"
 	"time"
@@ -64,20 +65,76 @@ func safeSegment(v string) bool {
 	return true
 }
 
+// Filesystem seams so tests can prove that syntactically rejected paths never reach the filesystem.
+var (
+	lstatFn = os.Lstat
+	openFn  = os.Open
+	absFn   = filepath.Abs
+)
+
+func isSep(c byte) bool { return c == '/' || c == '\\' }
+
+// syntacticReject refuses, without any filesystem operation, every path form that is not an
+// explicit local file: empty, stdin dash, NUL, URIs, UNC/device/namespace spellings written with
+// either separator in any mix (host independent), and the NT object-namespace prefix.
+func syntacticReject(p string) bool {
+	if p == "" || p == "-" || strings.ContainsRune(p, 0) || strings.Contains(p, "://") {
+		return true
+	}
+	if len(p) >= 2 && isSep(p[0]) && isSep(p[1]) { // UNC, device and extended-length prefixes in any separator mix
+		return true
+	}
+	return strings.HasPrefix(strings.ReplaceAll(p, "/", `\`), `\??\`)
+}
+
+// admitLocalFile applies the syntactic filter, resolves the path lexically to an absolute clean
+// path (re-filtering it, so a UNC working directory cannot smuggle a share in) and requires every
+// ancestor to be a real directory and the final element a regular file. Symlinks and any reparse
+// point (Windows junctions report os.ModeIrregular) are rejected at every level. It returns the
+// cleaned path and the final file's lstat result.
+func admitLocalFile(path string) (string, os.FileInfo, error) {
+	if syntacticReject(path) {
+		return "", nil, reject("path")
+	}
+	abs, err := absFn(path)
+	if err != nil || syntacticReject(abs) {
+		return "", nil, reject("path")
+	}
+	vol := filepath.VolumeName(abs)
+	elems := strings.FieldsFunc(abs[len(vol):], func(r rune) bool { return r == '/' || r == '\\' })
+	if len(elems) == 0 {
+		return "", nil, reject("not_regular_file")
+	}
+	cur := vol + string(filepath.Separator)
+	var fi os.FileInfo
+	for i, e := range elems {
+		cur = filepath.Join(cur, e)
+		if fi, err = lstatFn(cur); err != nil {
+			return "", nil, reject("not_regular_file")
+		}
+		if fi.Mode()&(os.ModeSymlink|os.ModeIrregular) != 0 {
+			return "", nil, reject("link_component")
+		}
+		if i < len(elems)-1 && !fi.IsDir() {
+			return "", nil, reject("not_regular_file")
+		}
+	}
+	if !fi.Mode().IsRegular() {
+		return "", nil, reject("not_regular_file")
+	}
+	return cur, fi, nil
+}
+
 // loadInventoryFile admits one explicit local regular file and parses it with a bounded read.
 func loadInventoryFile(path string) (*channels.ProofInventory, error) {
-	if path == "" || path == "-" || strings.ContainsRune(path, 0) || strings.Contains(path, "://") ||
-		strings.HasPrefix(path, `\\`) || strings.HasPrefix(path, "//") {
-		return nil, reject("path")
-	}
-	before, err := os.Lstat(path) // Lstat: a symlink or reparse point is not a regular file
-	if err != nil || !before.Mode().IsRegular() {
-		return nil, reject("not_regular_file")
+	clean, before, err := admitLocalFile(path)
+	if err != nil {
+		return nil, err
 	}
 	if before.Size() > maxInventoryBytes {
 		return nil, reject("too_large")
 	}
-	f, err := os.Open(path)
+	f, err := openFn(clean)
 	if err != nil {
 		return nil, reject("open")
 	}

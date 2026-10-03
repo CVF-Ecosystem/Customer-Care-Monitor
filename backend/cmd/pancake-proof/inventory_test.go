@@ -5,8 +5,10 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"regexp"
+	"runtime"
 	"strings"
 	"testing"
 )
@@ -34,9 +36,20 @@ const inventoryRejected = "pancake-proof: inventory rejected\n"
 
 var digestRe = regexp.MustCompile(`"digest": "([0-9a-f]{64})"`)
 
+// realDir returns a temp directory without symlink ancestors (some hosts place temp roots
+// behind links, which the loader deliberately rejects).
+func realDir(t *testing.T) string {
+	t.Helper()
+	d, err := filepath.EvalSymlinks(t.TempDir())
+	if err != nil {
+		t.Fatal(err)
+	}
+	return d
+}
+
 func writeInventory(t *testing.T, body []byte) string {
 	t.Helper()
-	p := filepath.Join(t.TempDir(), "synthetic-inventory.json")
+	p := filepath.Join(realDir(t), "synthetic-inventory.json")
 	if err := os.WriteFile(p, body, 0o600); err != nil {
 		t.Fatal(err)
 	}
@@ -304,7 +317,7 @@ func TestInventoryReadAndResourceLimits(t *testing.T) {
 
 // OI-03 file admission and option handling.
 func TestInventoryFileAdmissionAndOptionConflicts(t *testing.T) {
-	dir := t.TempDir()
+	dir := realDir(t)
 	missing := filepath.Join(dir, "missing.json")
 	for name, p := range map[string]string{
 		"missing": missing, "directory": dir, "empty": "", "stdin-dash": "-", "unc": `\\server\share\inv.json`,
@@ -315,12 +328,6 @@ func TestInventoryFileAdmissionAndOptionConflicts(t *testing.T) {
 		}
 	}
 	target := writeInventory(t, []byte(validInventoryJSON))
-	link := filepath.Join(dir, "link.json")
-	if err := os.Symlink(target, link); err != nil {
-		t.Logf("SKIP symlink admission: platform/privilege cannot create symlinks (%v)", err)
-	} else if _, err := loadInventoryFile(link); inventoryCode(err) != "not_regular_file" {
-		t.Errorf("a symlink must be rejected, got %v", err)
-	}
 
 	// Option conflicts are rejected before the file is touched: the path does not exist, yet the
 	// message names the scenario conflict instead of an inventory failure.
@@ -339,6 +346,177 @@ func TestInventoryFileAdmissionAndOptionConflicts(t *testing.T) {
 			t.Errorf("%s: want exit 2 and empty stdout, got %d %q", name, r.code, r.out)
 		}
 	}
+}
+
+// R041-R1-01: every UNC/device/namespace spelling, with either separator in any mix, is rejected
+// by syntax alone. The filesystem seams fail the test if anything touches the filesystem, so no
+// real share or server is ever contacted, even when the guard is broken.
+func TestInventoryUNCSpellingsRejectedBeforeAnyFilesystemOperation(t *testing.T) {
+	origLstat, origOpen := lstatFn, openFn
+	t.Cleanup(func() { lstatFn, openFn = origLstat, origOpen })
+	lstatFn = func(name string) (os.FileInfo, error) {
+		t.Errorf("filesystem touched (lstat) for %q", name)
+		return nil, os.ErrNotExist
+	}
+	openFn = func(name string) (*os.File, error) {
+		t.Errorf("filesystem touched (open) for %q", name)
+		return nil, os.ErrNotExist
+	}
+	rejected := []string{
+		`\\server\share\inv.json`, `//server/share/inv.json`,
+		`\/server/share/inv.json`, `/\server\share\inv.json`, // mixed leading separators
+		`\\?\UNC\server\share\inv.json`, `//?/UNC/server/share/inv.json`, `\/?/UNC/server/share/inv.json`, `/\?\UNC\server\share\inv.json`,
+		`\\.\pipe\inventory`, `\\?\C:\data\inv.json`,
+		`\??\UNC\server\share\inv.json`, `/??/UNC/server/share/inv.json`, `\??/UNC\server/share\inv.json`,
+		"", "-", "a\x00b", "file:///tmp/inv.json", "http://127.0.0.1/inv.json",
+	}
+	for _, p := range rejected {
+		if !syntacticReject(p) {
+			t.Errorf("syntacticReject(%q) = false", p)
+		}
+		if _, err := loadInventoryFile(p); inventoryCode(err) != "path" {
+			t.Errorf("loadInventoryFile(%q): want rejection code path, got %q", p, inventoryCode(err))
+		}
+	}
+	for _, p := range []string{`C:\data\inv.json`, "rel/inv.json", "./inv.json", "/tmp/inv.json", `dir\inv.json`, `..\inv.json`, "a/b/../inv.json"} {
+		if syntacticReject(p) {
+			t.Errorf("ordinary local spelling %q must not be rejected syntactically", p)
+		}
+	}
+}
+
+// A relative path that resolves into a UNC location (for example a working directory on a share)
+// is re-filtered after resolution, still before any filesystem operation.
+func TestInventoryResolvedUNCPathRejectedBeforeAnyFilesystemOperation(t *testing.T) {
+	origLstat, origOpen, origAbs := lstatFn, openFn, absFn
+	t.Cleanup(func() { lstatFn, openFn, absFn = origLstat, origOpen, origAbs })
+	lstatFn = func(name string) (os.FileInfo, error) {
+		t.Errorf("filesystem touched (lstat) for %q", name)
+		return nil, os.ErrNotExist
+	}
+	openFn = func(name string) (*os.File, error) {
+		t.Errorf("filesystem touched (open) for %q", name)
+		return nil, os.ErrNotExist
+	}
+	for _, resolved := range []string{`\\server\share\dir\inv.json`, `\/server/share/dir/inv.json`, `//server/share/inv.json`} {
+		absFn = func(string) (string, error) { return resolved, nil }
+		if _, err := loadInventoryFile("inv.json"); inventoryCode(err) != "path" {
+			t.Errorf("a path resolving to %q must be rejected before I/O, got %q", resolved, inventoryCode(err))
+		}
+	}
+}
+
+// A non-regular final element (here a directory) is rejected during admission, before the file
+// is opened: opening a pipe or device could block or have side effects.
+func TestInventoryNonRegularFileRejectedBeforeOpen(t *testing.T) {
+	origOpen := openFn
+	t.Cleanup(func() { openFn = origOpen })
+	openFn = func(name string) (*os.File, error) {
+		t.Errorf("open called for non-regular %q", name)
+		return nil, os.ErrNotExist
+	}
+	if _, err := loadInventoryFile(realDir(t)); inventoryCode(err) != "not_regular_file" {
+		t.Errorf("a directory must be rejected as not_regular_file, got %q", inventoryCode(err))
+	}
+}
+
+// mkJunction creates a Windows directory junction (no privilege needed); elsewhere, or when the
+// host refuses, the calling subtest is skipped so the machine-readable result shows the omission.
+func mkJunction(t *testing.T, link, target string) {
+	t.Helper()
+	if runtime.GOOS != "windows" {
+		t.Skip("directory junctions exist only on Windows")
+	}
+	if out, err := exec.Command("cmd", "/c", "mklink", "/J", link, target).CombinedOutput(); err != nil {
+		t.Skipf("cannot create a junction on this host: %v %s", err, out)
+	}
+}
+
+func mkSymlink(t *testing.T, target, link string) {
+	t.Helper()
+	if err := os.Symlink(target, link); err != nil {
+		t.Skipf("symlink creation unavailable on this host (platform/privilege): %v", err)
+	}
+}
+
+// R041-R1-02 and R041-R1-03: links are rejected at the final element and at every ancestor,
+// through the loader and through the mounted CLI. Subtests that need a capability the host lacks
+// (symlinks without privilege, junctions off Windows) are real t.Skip subtests, so a skipped
+// symlink probe is visible in the test results and never counted as exercised coverage.
+func TestInventoryLinkAdmission(t *testing.T) {
+	root := realDir(t)
+	realSub := filepath.Join(root, "real")
+	if err := os.Mkdir(realSub, 0o700); err != nil {
+		t.Fatal(err)
+	}
+	file := filepath.Join(realSub, "inventory.json")
+	if err := os.WriteFile(file, []byte(validInventoryJSON), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	wantRejected := func(t *testing.T, path, code string) {
+		t.Helper()
+		if _, err := loadInventoryFile(path); inventoryCode(err) != code {
+			t.Fatalf("loader: want %q, got %v (%q)", code, err, inventoryCode(err))
+		}
+		r := execMain(t, t.TempDir(), nil, base("-inventory", path)...)
+		if r.code != 2 || r.out != "" || r.err != inventoryRejected {
+			t.Fatalf("mounted CLI: want exit 2, empty stdout and the fixed message, got %d %q %q", r.code, r.out, r.err)
+		}
+	}
+
+	t.Run("real-path-control", func(t *testing.T) {
+		if _, err := loadInventoryFile(file); err != nil {
+			t.Fatalf("a plain file in a plain directory must be admitted: %v", err)
+		}
+		if r := execMain(t, t.TempDir(), nil, base("-inventory", file)...); r.code != 0 {
+			t.Fatalf("mounted CLI control: exit %d %q", r.code, r.err)
+		}
+	})
+	t.Run("relative-paths-resolve-lexically", func(t *testing.T) {
+		for _, rel := range []string{"real/inventory.json", filepath.Join("real", "..", "real", "inventory.json")} {
+			if r := execMain(t, root, nil, base("-inventory", rel)...); r.code != 0 {
+				t.Errorf("relative %q: exit %d %q", rel, r.code, r.err)
+			}
+		}
+	})
+	t.Run("symlink-final-file", func(t *testing.T) {
+		link := filepath.Join(root, "link.json")
+		mkSymlink(t, file, link)
+		wantRejected(t, link, "link_component")
+	})
+	t.Run("symlink-ancestor-directory", func(t *testing.T) {
+		link := filepath.Join(root, "dirlink")
+		mkSymlink(t, realSub, link)
+		wantRejected(t, filepath.Join(link, "inventory.json"), "link_component")
+	})
+	t.Run("junction-ancestor-directory", func(t *testing.T) {
+		junction := filepath.Join(root, "junction")
+		mkJunction(t, junction, realSub)
+		through := filepath.Join(junction, "inventory.json")
+		wantRejected(t, through, "link_component")
+		// Relative spelling reaches the same junction from the working directory.
+		r := execMain(t, root, nil, base("-inventory", "junction/inventory.json")...)
+		if r.code != 2 || r.out != "" || r.err != inventoryRejected {
+			t.Fatalf("relative path through a junction: want exit 2, empty stdout and the fixed message, got %d %q %q", r.code, r.out, r.err)
+		}
+		// The very same file by its real path is still accepted: the rejection is the junction.
+		if r := execMain(t, t.TempDir(), nil, base("-inventory", file)...); r.code != 0 {
+			t.Fatalf("real path to the same file: exit %d", r.code)
+		}
+	})
+	t.Run("junction-nested-in-the-middle", func(t *testing.T) {
+		outer := filepath.Join(root, "outer")
+		if err := os.Mkdir(outer, 0o700); err != nil {
+			t.Fatal(err)
+		}
+		mkJunction(t, filepath.Join(outer, "hop"), realSub)
+		wantRejected(t, filepath.Join(outer, "hop", "inventory.json"), "link_component")
+	})
+	t.Run("junction-as-final-element", func(t *testing.T) {
+		junction := filepath.Join(root, "junction-final")
+		mkJunction(t, junction, realSub)
+		wantRejected(t, junction, "link_component")
+	})
 }
 
 // OI-04: the file is the expectation. Any divergence from what the transcript yields is an

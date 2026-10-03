@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-041 R1: owner manually transfers the bounded repair in CCMAI_RUNTIME_041.md to Claude REPAIR_WORKER under the unchanged R2 seed; repair Windows UNC admission before filesystem I/O, reject symlink/reparse ancestors, add honest isolated platform SKIP coverage and discriminating regressions, then hand back an exact repair SHA for independent Codex re-review. Current BUILD e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b is CHANGES_REQUIRED / FREEZE_OPEN. Synthetic task-owned fixtures only; no real input/credential/config/provider/channel/network/DB/engine execution, protected-path or authority-seed change, push, merge, deployment or FREEZE. Existing acceptance and closures unchanged.",
+  "nextAllowedMove": "CCMAI-RUNTIME-041 R1: Claude REPAIR_WORKER repairs R041-R1-01..03 within the unchanged R2 seed scope (the four authorized CLI files and documentation only): host-correct Windows UNC rejection before any filesystem I/O, rejection of symlink/reparse ancestors with a mounted local-junction regression, and an isolated real t.Skip subtest for the symlink probe, with discriminating regressions and applied controls, then returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review. Synthetic task-owned fixtures only; no real input/credential/config/provider/channel/network/DB/engine execution, protected-path or authority-seed change, push, merge, deployment or FREEZE. Existing acceptance and closures unchanged.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD; Claude REPAIR_WORKER after owner manual transfer, independent Codex re-review required",
-  "roleRoute": "INDEPENDENT_REVIEW_RETURN_FOR_BOUNDED_CLAUDE_REPAIR",
+  "activeRole": "Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R041-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1",
+  "roleRoute": "CLAUDE_R1_REPAIR_THEN_INDEPENDENT_CODEX_REREVIEW",
   "updatedAt": "2026-10-03"
 }

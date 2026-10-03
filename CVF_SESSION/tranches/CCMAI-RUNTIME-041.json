@@ -51,20 +51,21 @@
   ],
   "claimScope": "Strict synthetic inventory input and offline CLI reconciliation only; actual adapter/harness/receipt remain unchanged. Caller-authored fixture is independent from observed results, not independently proven live inventory. No channel/provider/network/CVF AI governance/hosted/full-regression/FREEZE claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_041.md",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "b19602ea66a47310b503a03ec2954092560231cc",
   "buildCommit": "e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b",
   "reviewEvidence": [
     "docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",

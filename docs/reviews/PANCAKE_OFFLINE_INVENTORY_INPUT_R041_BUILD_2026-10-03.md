@@ -1,6 +1,6 @@
 # R041 BUILD record — explicit synthetic inventory input for the offline Pancake CLI
 
-Status: BUILT, REVIEW_PENDING (not accepted). Worker: Claude IMPLEMENTATION_WORKER (owner-transferred R2). Reviewer: Codex, independent. [Order](../work_orders/CCMAI_RUNTIME_041.md), [SPEC](../specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md). Claim scope: offline synthetic input parsing and reconciliation only; not live inventory, provider/channel behavior, CVF AI governance, hosted readiness or FREEZE.
+Status: original BUILD returned CHANGES_REQUIRED; R1 repair BUILT, REVIEW_PENDING (not accepted, see section 8). Worker: Claude IMPLEMENTATION_WORKER (owner-transferred R2). Reviewer: Codex, independent. [Order](../work_orders/CCMAI_RUNTIME_041.md), [SPEC](../specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md). Claim scope: offline synthetic input parsing and reconciliation only; not live inventory, provider/channel behavior, CVF AI governance, hosted readiness or FREEZE.
 
 ## 1. Baseline, seed and identities
 
@@ -80,3 +80,60 @@ Runner outside the repository (`r041_mut.py`, session scratchpad): asserts exact
 ## 7. BUILD identity and hand-back
 
 Exact BUILD commit: `e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b` (parent `e620b73`; seed `b19602ea66a47310b503a03ec2954092560231cc` unchanged). It is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no source (a commit cannot contain its own SHA). Pre-commit validation (docs build, catalog, doctor, diff, preflights, gate tests) is in the active handoff. Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+
+
+## 8. R1 repair (Claude REPAIR_WORKER, round 1)
+
+Status: R1 BUILT, REVIEW_PENDING (not accepted). Sections 1-7 above are the original BUILD record `e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b` and stay as historical evidence; where they conflict with this section (the UNC/ancestor admission description, the logged symlink omission, test counts), this section is current. Source of the findings: [independent review](CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md) (CHANGES_REQUIRED, commit `11dbdc2`). Owner manual transfer: the owner message relaying the return and "Chuyển Claude: work order R041-R1". Seed `b19602ea66a47310b503a03ec2954092560231cc` unchanged; authority is R041/R2. The R1 acknowledgment and BUILD synchronization were recorded and passed the default preflight (7/7) before any test or edit; the earlier BUILD acknowledgment's copied "R038 SPEC / R1 seed" labels are the reviewer-noted inaccuracy, retained historically.
+
+### 8.1 Changes (same four authorized CLI files; `main.go` and `main_test.go` untouched in R1)
+
+- `inventory.go` (423 lines, SHA-256 `6a403d31dd6f4e52d3aa14f78b989efb5b3226f4b772b54853fa5fd43ef8b8c6`): new pure `syntacticReject` (empty, `-`, NUL, `://`, any two leading separators in any mix of `/` and `\` — which covers `\\`, `//`, `\/`, `/\`, `\\?\`, `\\.\` — and the NT object-namespace prefix `\??\` in any separator mix; host independent) and `admitLocalFile`, which first applies the filter, resolves lexically with `filepath.Abs`, **re-filters the resolved path** (a working directory on a share cannot smuggle a UNC in), then `Lstat`s every component from the root down: each ancestor must be a real directory, no component may be a symlink or any reparse point (`os.ModeSymlink|os.ModeIrregular`; Go reports Windows junctions as irregular), and the final element must be a regular file. The cleaned absolute path is what is opened (so a `..` is judged the way it is used), followed by the existing post-open `Stat`/`SameFile`. Test seams `lstatFn`, `openFn` and `absFn` (package variables defaulting to the `os`/`filepath` functions) let tests prove no filesystem operation happens for rejected paths. New internal code `link_component`; the user-visible error is still the fixed `inventory rejected`.
+- `inventory_test.go` (655 lines, SHA-256 `81d357f2596333fa15af549af34e6f0027b174b8def6169ab4d8289fc4cc208a`): `realDir` helper (symlink-free temp roots); `TestInventoryUNCSpellingsRejectedBeforeAnyFilesystemOperation` (19 spellings incl. both reviewer forms `\/server/share/inv.json` and `/\server\share\inv.json`, extended-length, device and namespace forms in mixed separators, plus URI/NUL/empty/dash; lstat/open seams fail the test if touched, and seven ordinary local spellings must not be rejected); `TestInventoryResolvedUNCPathRejectedBeforeAnyFilesystemOperation` (stubbed `absFn` returning three UNC forms); `TestInventoryNonRegularFileRejectedBeforeOpen`; and `TestInventoryLinkAdmission` with eight subtests: real-path control, relative-path lexical resolution (`real/inventory.json`, `real/../real/inventory.json` from the working directory), symlink final file, symlink ancestor directory, junction ancestor directory (loader code `link_component`, mounted CLI exit 2, empty stdout, fixed stderr; relative spelling through the junction rejected too; the same file by its real path still exits 0), junction nested in the middle of a longer path, junction as the final element. The symlink subtests and junction subtests are isolated `t.Skip`/`t.Skipf` subtests. The earlier logged-only symlink omission is removed (historical logged omission retained in section 6).
+- The UNC regression never contacts a share or server: syntactic rejection is proven through the filesystem seams, and no mounted-CLI UNC case exists because a broken guard would then probe the network.
+
+### 8.2 Results (project root, `GOPROXY=off GOSUMDB=off GOTOOLCHAIN=local CGO_ENABLED=0`)
+
+| Check | Result |
+| --- | --- |
+| Rehydration/acknowledgment, default preflight before any test or edit | doctor 25/25; preflight 7/7 PASS |
+| `gofmt -l backend/cmd/pancake-proof` | no files listed |
+| `go -C backend test ./cmd/pancake-proof -count=1 -v` | exit 0, `ok 5.374s`: 17 top-level tests PASS (6 pre-existing + 11 new/changed families), 54 subtests PASS, 0 FAIL, **2 real SKIP subtests** |
+| Skipped identities | `TestInventoryLinkAdmission/symlink-final-file` and `TestInventoryLinkAdmission/symlink-ancestor-directory`: "symlink creation unavailable on this host (platform/privilege): ... A required privilege is not held by the client." |
+| `go -C backend test ./channels -count=1 -v` | exit 0, `ok 2.590s`: 116 top-level PASS, 0 FAIL, 0 SKIP |
+| `go -C backend build -o NUL ./...` / `vet ./...` | exit 0 / exit 0 |
+| Race | NOT RUN (no C compiler, as before) |
+| Protected paths vs baseCommit (`backend/channels`, `backend/engine`, go.mod/go.sum, frontend, scripts, workflows, authority seeds) | empty (0 paths); `main.go` and `main_test.go` identical to the BUILD blobs; only `inventory.go` and `inventory_test.go` differ from BUILD |
+| docs build, catalog, diff check, PR-range/changed-set preflights, gate unit tests | recorded in the active handoff |
+
+**Symlink rejection itself remains UNVERIFIED on this host**: the two symlink subtests are SKIP, not PASS. The junction subtests exercise a different mechanism (reparse points via `os.ModeIrregular`) and do not substitute for them. The code path for `os.ModeSymlink` is identical to the junction check (one mask), but a capable host (Windows with the symlink privilege or developer mode, or Linux/macOS) must run the two subtests to confirm `link_component` for a symlink final file and ancestor.
+
+### 8.3 Applied controls (final source state, runner outside the repository, restore and hash equality checked, final baseline PASS)
+
+The original eight worker mutations were replayed on the repaired source and the original-main control again fails the mounted valid-input acceptance. New controls for the R1 guards:
+
+| ID | Applied change (1 match each) | Result | First failing assertion |
+| --- | --- | --- | --- |
+| R1-M1 | UNC rule back to identical leading separators only (`p[0] == p[1]`, the BUILD behavior) | KILLED (2) | `syntacticReject("\\/server/share/inv.json") = false` |
+| R1-M2 | NT namespace prefix rule removed | KILLED (1) | `syntacticReject("\??\UNC\server\share\inv.json") = false` |
+| R1-M3 | ancestor link check restricted to the final element | KILLED (3) | `loader: want "link_component", got ... ("not_regular_file")`. Note: with the walk retained, the irregular ancestor is still refused by the `IsDir` guard (with the wrong code), so the kill is by the exact-code assertion; the BUILD defect was the absence of the walk, fixed here |
+| R1-M4 | reparse points other than symlinks accepted | KILLED (4) | same code assertion for junction ancestor/nested/final |
+| R1-M5 | resolved absolute path not re-filtered | KILLED (1) | `filesystem touched (lstat) for "\\\\server\\share\\dir"` |
+| R1-M6 | final element not required regular in admission | first campaign SURVIVED (a directory was still caught by the post-open `Stat` check, so results were observably identical); added `TestInventoryNonRegularFileRejectedBeforeOpen` (the `openFn` seam must not be called) and reran: KILLED (1), `open called for non-regular` | |
+| M1-M8 | the eight BUILD mutations | all KILLED again (3, 1, 8, 4, 56, 1, 3, 2 failing entries) | as in section 5 |
+| C0 | original `main.go` overlay with the loader and tests | KILLED (61 failing entries), not a build failure | `a valid synthetic inventory must PASS offline, got exit 2 ... invalid usage` |
+
+14 mutations plus C0: 15 KILLED in the final full campaign (R1-M6 killed only after the added test; its earlier SURVIVED is retained above), 0 INCONCLUSIVE, 0 NOT_APPLIED; all files restored byte-equal; baseline before and after exit 0.
+
+### 8.4 Limits and disclosures
+
+- Symlink admission UNVERIFIED here (two real SKIP subtests); race NOT RUN.
+- Not detectable by path syntax: a mapped network drive letter (for example `Z:` mapped to a share) or a subst drive. Detection would need a drive-type syscall beyond this repair's scope; the filter covers UNC/device/namespace spellings only.
+- TOCTOU: ancestors are checked immediately before opening and the opened handle is compared with the checked final element, but an ancestor swapped between the checks and `Open` is not excluded; inputs are caller-provided local synthetic files.
+- Ancestor rejection is deliberately strict: any symlink or reparse ancestor of the inventory path, including ones in a user's own profile path (for example redirected folders), is refused. Hosts whose temp root is behind a link (some macOS setups) need an unlinked location; the tests use `filepath.EvalSymlinks` for that.
+- Development incidents in R1: a shell/script round trip halved backslashes inside Go rune and raw-string literals (build errors `rune literal not terminated`, and a test literal), found by `go vet` immediately and fixed with the editor tool; the first campaign reported R1-M6 SURVIVED (above). No stray build artifact or tracked-file damage; `git status` showed only the intended files.
+- NOT RUN: race detector, engine/full DB suites, Analyzer, real inventory/capture/credential/config read, real share/server access, provider/channel/network, downloads, frontend, GitHub Actions, push, merge, deployment. Task-owned synthetic temp files and local temp directory junctions only. No live, governance, hosted-readiness or FREEZE claim.
+
+### 8.5 R1 repair identity
+
+The exact repair commit SHA is recorded in the tranche record (`buildCommit` and `repairCommit`) and the active handoff by a follow-up documentation commit that changes no source. Independent Codex re-review is next; no self-approval, push, merge, deployment or FREEZE.

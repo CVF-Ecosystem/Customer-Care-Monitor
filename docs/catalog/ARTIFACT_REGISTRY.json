@@ -30,7 +30,7 @@
                         "family": "continuity",
                         "path": "docs/reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R041 BUILD evidence: strict synthetic inventory loader, OI matrix, nine killed controls, symlink probe unverified; REVIEW_PENDING."
+                        "description": "R041 BUILD evidence with R1 repair section: UNC/ancestor-link admission, real SKIP symlink subtests (unverified), 15 killed controls; REVIEW_PENDING."
                       },
                       {
                         "id": "runtime041-order",
@@ -464,7 +464,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R041 CHANGES_REQUIRED handoff; bounded Claude R1 repair under unchanged R2 authority, independent Codex re-review."
+                          "description":  "Current R041 R1 BUILD handoff; Claude REPAIR_WORKER acknowledged under unchanged R2 authority, independent Codex re-review next."
                       },
                       {
                           "id":  "truth-implementation-status",

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD; Claude REPAIR_WORKER after owner manual transfer, independent Codex re-review required
-- Next allowed move: CCMAI-RUNTIME-041 R1: owner manually transfers the bounded repair in CCMAI_RUNTIME_041.md to Claude REPAIR_WORKER under the unchanged R2 seed; repair Windows UNC admission before filesystem I/O, reject symlink/reparse ancestors, add honest isolated platform SKIP coverage and discriminating regressions, then hand back an exact repair SHA for independent Codex re-review. Current BUILD e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b is CHANGES_REQUIRED / FREEZE_OPEN. Synthetic task-owned fixtures only; no real input/credential/config/provider/channel/network/DB/engine execution, protected-path or authority-seed change, push, merge, deployment or FREEZE. Existing acceptance and closures unchanged.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude REPAIR_WORKER / repair COMMIT_STEWARD (owner-transferred R041-R1); Codex ORCHESTRATOR / WORK_ORDER_AUTHOR and independent re-REVIEWER after R1
+- Next allowed move: CCMAI-RUNTIME-041 R1: Claude REPAIR_WORKER repairs R041-R1-01..03 within the unchanged R2 seed scope (the four authorized CLI files and documentation only): host-correct Windows UNC rejection before any filesystem I/O, rejection of symlink/reparse ancestors with a mounted local-junction regression, and an isolated real t.Skip subtest for the symlink probe, with discriminating regressions and applied controls, then returns the exact local REVIEW_PENDING repair SHA for independent Codex re-review. Synthetic task-owned fixtures only; no real input/credential/config/provider/channel/network/DB/engine execution, protected-path or authority-seed change, push, merge, deployment or FREEZE. Existing acceptance and closures unchanged.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -52,3 +52,11 @@ CVF Agent Declaration: Customer-Care-Monitor-AI; read-only core ../.Controlled-V
 Independent CLI13 top-level/49 subtests PASS,0 fail/formal skip with1 logged symlink omission,6.161s; channels116/156 PASS0 skips3.341s; original-main control fails named acceptance; cached build/vet PASS. Pure UNC classification and local junction regression probes fail intended assertions, no network path opened. First reviewer classifier incorrectly tested unnormalized volume prefixes and passed; corrected assertion yields2 failures, original result retained. Worker8 mutations attributed, not independently replayed; no need to expand campaign before repairing reproduced blockers. Race/engine/DB/Analyzer/live/credentials/config/provider/channel/network/GitHub/push/merge/deploy/FREEZE NOT RUN. Shared learning updated in the same turn; upstream DEFERRED.
 
 Review publication: default/PR-range preflight7/7 PASS, gate tests46/46 OK13.406s, docs build13.94s PASS with inherited env warnings, catalog/diff PASS; exact11-file review-documentation commit set, source/seed unchanged. Final staged checks precede local commit. No new worker invocation or FREEZE.
+
+## R1 repair rehydration and acknowledgment (Claude, 2026-10-03)
+
+Recorded **before any test or source edit** in this repair. Owner manual transfer: the owner message relaying the R041 CHANGES_REQUIRED return and "Chuyển Claude: work order R041-R1" in this session. Rehydrated from current files: manifest and policy (liveGovernanceEvidenceRequired and mockAllowedOnlyForUi true), `ACTIVE_SESSION_STATE.json`, `CVF_SESSION_MEMORY.md`, this handoff, `IMPLEMENTATION_STATUS.json`, the R041 SPEC, the work order with the R1 return, the independent review, the tranche record, the unchanged authority seed (`b19602ea66a47310b503a03ec2954092560231cc`, R2, authority is R041/R2) and the shared repair-workflow learning. Workspace doctor 25/25 PASS; knowledge ingest complete and the generated `knowledge/_index.json` removed. Compact bootstrap read model absent: BOOTSTRAP_MIGRATION_PENDING, nonblocking.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD (R1 repair, round 1); risk ceiling R2; live evidence required YES (no governance or live claim: offline synthetic input admission only); role REPAIR_WORKER / repair COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
+
+Role transition REVIEW (CHANGES_REQUIRED) -> BUILD: Claude holds REPAIR_WORKER only; Codex stays independent re-reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. Execution is limited to the CLI/channels suites, cached build/vet and applied controls over task-owned synthetic fixtures and local directory junctions under temp directories; no real share/server, real inventory, config, credential, provider, channel or network access.

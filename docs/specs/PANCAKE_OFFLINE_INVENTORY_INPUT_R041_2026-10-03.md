@@ -1,6 +1,6 @@
 # R041 — Explicit synthetic inventory input for offline Pancake CLI
 
-Date: 2026-10-03. Status: BUILT, CHANGES_REQUIRED after independent review. Risk R2 for untrusted local input parsing/output sanitation; independent reviewer Codex, worker Claude. Source planning `9f95e04` (R040 closure); seed/baseCommit `b19602ea66a47310b503a03ec2954092560231cc`. [Order](../work_orders/CCMAI_RUNTIME_041.md).
+Date: 2026-10-03. Status: BUILT, CHANGES_REQUIRED after independent review; R1 repair BUILD in progress. Risk R2 for untrusted local input parsing/output sanitation; independent reviewer Codex, worker Claude. Source planning `9f95e04` (R040 closure); seed/baseCommit `b19602ea66a47310b503a03ec2954092560231cc`. [Order](../work_orders/CCMAI_RUNTIME_041.md).
 
 ## Intake and design
 
@@ -38,3 +38,5 @@ At least four applied finite semantic controls, covering expected-input override
 Codex SPEC_AUTHOR / independent REVIEWER explicitly corrects the dispatch OI-04 classification wording on 2026-10-03. The intended invariant is never PASS on absent/divergent expectations, preserve unchanged proof-library priority and receipt/exit contract. The library gives mismatch FAIL precedence over empty-inventory INCOMPLETE; `-inventory` retains the pass transcript, so FAIL/exit1 satisfies that intent. Expected-empty reduces attempts from12 to4 because messages are fetched for expected conversations: unchanged transport/traversal semantics, not identical attempt counts for every changed inventory. Equal expectations retain12 attempts and receipt equality. Original worker deviation and test correction remain in BUILD evidence. No observation coupling, new scenario combination or library change is authorized.
 
 Current disposition is CHANGES_REQUIRED, not acceptance: [independent review](../reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md) reproduces two file-admission defects and requests isolated platform SKIP evidence. Earlier REVIEW_PENDING descriptions above record the handback timing; current reviewer truth supersedes them. Same-scope repair under unchanged R2 seed; no new external effects or FREEZE.
+
+**R1 repair (Claude REPAIR_WORKER):** UNC/device/namespace spellings in any separator mix are rejected by syntax before any filesystem operation (seam-proven), every ancestor and the final file are lstat-checked so symlinks and reparse points (Windows junctions) are refused, and the symlink probes are isolated real SKIP subtests (symlink rejection UNVERIFIED on this host; junction coverage is separate). Evidence: [BUILD record section 8](../reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md). REVIEW_PENDING for independent re-review; no self-approval.
