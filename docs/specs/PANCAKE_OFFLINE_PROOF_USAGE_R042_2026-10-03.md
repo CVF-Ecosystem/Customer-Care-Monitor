@@ -1,6 +1,6 @@
 # R042 — Offline proof CLI operator documentation
 
-Date: 2026-10-03. Status: SPEC_READY; BUILD in progress. Risk R1, documentation and existing offline example smoke only; worker Claude, independent reviewer Codex. Source planning `67eeac078fc52be07e9e6f5c27ed8a6cedd26c8c`; unchanged accepted CLI source `2a44a8685adfdc3582697ce5094d06da3047207b`. Seed/base `9b10a8f6f67d314d6c4f5a3846396f28a5487948`. [Order](../work_orders/CCMAI_RUNTIME_042.md).
+Date: 2026-10-03. Status: SPEC_READY; BUILT, REVIEW_PENDING. Risk R1, documentation and existing offline example smoke only; worker Claude, independent reviewer Codex. Source planning `67eeac078fc52be07e9e6f5c27ed8a6cedd26c8c`; unchanged accepted CLI source `2a44a8685adfdc3582697ce5094d06da3047207b`. Seed/base `9b10a8f6f67d314d6c4f5a3846396f28a5487948`. [Order](../work_orders/CCMAI_RUNTIME_042.md).
 
 ## INTAKE / DESIGN
 

@@ -69,4 +69,4 @@ The six PowerShell blocks of the guide (setup/build, sample copy, `$sha`/`$key`,
 
 ## 6. BUILD identity and hand-back
 
-The exact BUILD commit SHA is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no guide, sample or source (a commit cannot contain its own SHA). Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.
+Exact BUILD commit: `6b401195edcc99e9bc9568c45c7ff8962c7d7480` (seed `9b10a8f6f67d314d6c4f5a3846396f28a5487948` unchanged). It is recorded in the tranche record `buildCommit` and the active handoff by a follow-up documentation commit that changes no guide, sample or source (a commit cannot contain its own SHA). Independent Codex REVIEW is next; no self-approval, push, merge, deployment or FREEZE.

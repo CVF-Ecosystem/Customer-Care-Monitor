@@ -9,7 +9,7 @@
   "family": "continuity",
   "path": "docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "R042 DU-01..07 offline usage-guide/sample/packet documentation contract; BUILD in progress."
+  "description": "R042 DU-01..07 offline usage-guide/sample/packet documentation contract; BUILT, REVIEW_PENDING."
 },
                       {
                         "id": "runtime042-guide",
@@ -37,7 +37,7 @@
   "family": "continuity",
   "path": "docs/work_orders/CCMAI_RUNTIME_042.md",
   "status": "ACTIVE",
-  "description": "R042 R1 BUILD (Claude worker, owner-transferred); bounded offline CLI example smoke, independent Codex review next."
+  "description": "R042 R1 REVIEW_PENDING (Claude built; independent Codex review next)."
 },
 {
   "id": "continuity-r041-handoff",
@@ -520,7 +520,7 @@
   "family": "continuity",
   "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "Current R042 BUILD handoff; Claude worker acknowledged, bounded synthetic example smoke."
+  "description": "Current R042 REVIEW_PENDING handoff; independent Codex review next, documentation and synthetic smoke only."
 },
                       {
                           "id":  "truth-implementation-status",

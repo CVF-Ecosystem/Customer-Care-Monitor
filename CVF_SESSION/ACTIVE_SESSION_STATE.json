@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-042: Claude IMPLEMENTATION_WORKER (owner-transferred, R1 documentation-only) writes the Vietnamese offline proof CLI guide, the hand-authored synthetic inventory sample and the targeted post-R041 live-packet update (DU-01..07), runs only the bounded cached task-temp build of the existing CLI and the finite DU-03 smoke over task-owned copies, then returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No product/test/tooling change, Go suite, engine/DB/Analyzer, real inventory/config/credential, share/network, push, merge, deployment or FREEZE. Symlink UNVERIFIED, race NOT RUN and R041 limits retained; R041 and earlier acceptances and closures unchanged.",
+  "nextAllowedMove": "CCMAI-RUNTIME-042: Codex independent REVIEWER reviews exact Claude BUILD 6b401195edcc99e9bc9568c45c7ff8962c7d7480 (Vietnamese offline proof CLI guide, synthetic inventory sample, post-R041 live-packet update; REVIEW_PENDING, R1 documentation-only) for seed identity, DU-01..07, guide/sample accuracy against the accepted CLI source, the finite DU-03 smoke commands/exits/outputs, packet historical-versus-current labeling, protected-path equality and retained limitations (symlink UNVERIFIED, race NOT RUN, mapped/subst drives, TOCTOU). Documentation and synthetic smoke only; no live, governance, hosted or FREEZE claim. R041 and earlier acceptances and closures unchanged. No self-approval. No push, merge, deployment or new FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Claude documentation IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD",
-  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
+  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
   "updatedAt": "2026-10-03"
 }

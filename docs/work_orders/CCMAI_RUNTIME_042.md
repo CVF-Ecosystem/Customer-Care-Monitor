@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-042 — Offline proof CLI usage guide and sample
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Date: 2026-10-03. R1 documentation-only tranche; [SPEC](../specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md), immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`, committed `9b10a8f6f67d314d6c4f5a3846396f28a5487948` before activation/BUILD. Standing local orchestration delegation; owner manually transfers to Claude. Codex authors/reviews, Claude owns implementation and BUILD commit; no automatic worker invocation.
 
