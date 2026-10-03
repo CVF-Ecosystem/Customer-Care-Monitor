@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-038", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-038", "parked": false} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R038 dispatch (2026-10-03)
 
-CCMAI-RUNTIME-038 DISPATCH_READY / WORK_ORDER / NOT_BUILT, R1 uncalled isOrdinaryIncremental/comment removal only. [Order](docs/work_orders/CCMAI_RUNTIME_038.md), [SPEC](docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md); immutable seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` before activation/BUILD. Manual Claude transfer, Codex authors/reviews. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`; parked none. CCMAI-RUNTIME-038 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: rehydrate/acknowledge immutable R1 seed, synchronize BUILD and pass preflight before removing only the uncalled isOrdinaryIncremental helper and its attached comment. Verify references, cached Go build/vet and compile-only engine tests; do not execute tests/Analyzer/DB/provider or change run-plan behavior. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.
+CCMAI-RUNTIME-038 BUILD (Claude IMPLEMENTATION_WORKER, acknowledged before edits; dispatch-time wording: no worker had started), R1 uncalled isOrdinaryIncremental/comment removal only. [Order](docs/work_orders/CCMAI_RUNTIME_038.md), [SPEC](docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md); immutable seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301` before activation/BUILD. Manual Claude transfer, Codex authors/reviews. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`; parked none. CCMAI-RUNTIME-038: Claude IMPLEMENTATION_WORKER removes only the uncalled isOrdinaryIncremental helper and its attached comment (UH-01..03) within the unchanged seed scope, verifies references, runs cached Go build/vet and compile-only engine test build without executing any test binary, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No Analyzer/test/DB/provider execution, no run-plan behavior change. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.
 
 No product edit, Go build/vet/test compilation or runtime proof in planning. Prior current sections below are historical continuity, all acceptance/NOT RUN/limits retained.
 

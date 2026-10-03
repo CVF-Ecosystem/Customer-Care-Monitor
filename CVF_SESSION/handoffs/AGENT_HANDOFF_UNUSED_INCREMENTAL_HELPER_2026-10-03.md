@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / planning COMMIT_STEWARD -> independent REVIEWER; Claude IMPLEMENTATION_WORKER only after owner manual transfer and pre-edit acknowledgment
-- Next allowed move: CCMAI-RUNTIME-038 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: rehydrate/acknowledge immutable R1 seed, synchronize BUILD and pass preflight before removing only the uncalled isOrdinaryIncremental helper and its attached comment. Verify references, cached Go build/vet and compile-only engine tests; do not execute tests/Analyzer/DB/provider or change run-plan behavior. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner-transferred); Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR and independent REVIEWER after BUILD
+- Next allowed move: CCMAI-RUNTIME-038: Claude IMPLEMENTATION_WORKER removes only the uncalled isOrdinaryIncremental helper and its attached comment (UH-01..03) within the unchanged seed scope, verifies references, runs cached Go build/vet and compile-only engine test build without executing any test binary, and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No Analyzer/test/DB/provider execution, no run-plan behavior change. R037/R036/R035/R034 acceptance and R033/local-message FREEZE unchanged. Actual MCP execution/live Pancake authority remain separate. No credentials/network/push/merge/deployment/new FREEZE.
 - Parked operator checkpoint: none
 
 ## Rehydration and phase acknowledgment
@@ -28,3 +28,11 @@ R038 DISPATCH_READY / NOT_BUILT, helper present, no worker started. R037 documen
 Seed: default/PR/exact-two-file preflight7/7 PASS; gate46/46 PASS30.336s; diff PASS; doctor25/25 PASS. Activation docs/catalog/gates follow. Go/product/runtime/provider/DB/live/GitHub checks NOT RUN in planning.
 
 Activation validation: default/PR/exact-ten-file preflight7/7 PASS; gate46/46 PASS34.129s; docs build PASS18.07s with inherited env-highlighter warnings; catalog/diff PASS. Authority fields match immutable seed present at baseCommit, source/seed diff empty. Exact ten-file planning set only; helper still present. No Go build/vet/test compilation or tests/runtime/DB/provider/network/GitHub checks executed. Final scoped preflight/diff precede local dispatch commit; no new worker/FREEZE.
+
+## Worker rehydration and BUILD acknowledgment (Claude, 2026-10-03)
+
+Recorded **before any source edit**. Rehydrated from current files: manifest and policy (liveGovernanceEvidenceRequired and mockAllowedOnlyForUi true), `ACTIVE_SESSION_STATE.json`, `CVF_SESSION_MEMORY.md`, this handoff, `IMPLEMENTATION_STATUS.json`, the R038 SPEC, work order, tranche record and unchanged authority seed (`1d6c1e1ededc8f38afe149c6ba334ba8edf9f301`, R1), and the shared repair-workflow learning. Workspace doctor 25/25 PASS; knowledge ingest complete and generated `knowledge/_index.json` removed. `ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json` absent: BOOTSTRAP_MIGRATION_PENDING, nonblocking.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R1 (tranche) under project R2; live evidence required YES (no governance or runtime claim: unreferenced-helper deletion with compile/static evidence only); role IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, owner-transferred); active handoff this file; next move as in the header; parked none.
+
+Role transition WORK_ORDER -> BUILD: Claude holds IMPLEMENTATION_WORKER only; Codex stays independent reviewer; no self-approval, push, merge, deployment or FREEZE. The authority seed is not edited. No Analyzer/test-binary execution, DB, Docker, provider, credential/config or network action; no downloads (Go with GOPROXY=off, GOSUMDB=off, GOTOOLCHAIN=local).

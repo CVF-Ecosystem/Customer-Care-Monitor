@@ -1,6 +1,6 @@
 # R038 — Remove uncalled incremental-mode helper
 
-Status: SPEC_READY / NOT_BUILT
+Status: SPEC_READY; BUILT, REVIEW_PENDING.
 
 Date: 2026-10-03. Risk ceiling R1, no runtime change. Baseline9bfecedaeeeff4a586ac2685871ad807976deabf; immutable seed `1d6c1e1ededc8f38afe149c6ba334ba8edf9f301`. [Order](../work_orders/CCMAI_RUNTIME_038.md).
 
@@ -20,4 +20,4 @@ Compilation/static evidence only; no functional DB/provider regression claim. No
 
 ## Current truth
 
-DISPATCH_READY / NOT_BUILT: helper still present; no worker started. Source search only in planning; Go build/vet/test compilation NOT RUN here. Existing local acceptances/NOT RUN/effect limits and R033 FREEZE unchanged. Live Pancake and actual MCP execution remain separate. No runtime CVF/governance/hosted/new FREEZE claim.
+*Historical (dispatch-time): DISPATCH_READY / NOT_BUILT, helper present, no worker started.* **Current:** Claude BUILD removed only `isOrdinaryIncremental` and its comment from `backend/engine/analyzer_incremental.go` (evidence: [BUILD record](../reviews/UNUSED_INCREMENTAL_HELPER_R038_BUILD_2026-10-03.md)); cached Go build, vet and compile-only engine test build exit 0, zero tests executed; REVIEW_PENDING, not independently accepted. Source search only in planning; Go build/vet/test compilation NOT RUN here. Existing local acceptances/NOT RUN/effect limits and R033 FREEZE unchanged. Live Pancake and actual MCP execution remain separate. No runtime CVF/governance/hosted/new FREEZE claim.

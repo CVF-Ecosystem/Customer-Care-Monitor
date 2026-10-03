@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R038 DISPATCH_READY / WORK_ORDER handoff; manual Claude transfer, no worker/runtime/FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`
+- Current R038 BUILD handoff; Claude worker acknowledged, no runtime/FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -64,9 +64,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R037 documentation order independently REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD, no new worker.: `docs/work_orders/CCMAI_RUNTIME_037.md`
 - Immutable Codex R037 seed committed before activation/BUILD, documentation only.: `CVF_SESSION/authority/CCMAI-RUNTIME-037.json`
 - R037 SG-01..03 independently REVIEW_PASS / FREEZE_OPEN, static guide/source comparison only.: `docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md`
-- R038 R1 one-function deletion order DISPATCH_READY, no runtime execution or new behavior.: `docs/work_orders/CCMAI_RUNTIME_038.md`
+- R038 BUILD evidence: seven-line helper removal, reference counts, compile-only results, zero tests executed; REVIEW_PENDING.: `docs/reviews/UNUSED_INCREMENTAL_HELPER_R038_BUILD_2026-10-03.md`
+- R038 R1 one-function deletion order in BUILD (Claude worker), no runtime execution or new behavior.: `docs/work_orders/CCMAI_RUNTIME_038.md`
 - Immutable Codex R038 seed committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-038.json`
-- R038 UH-01..03 unused-helper cleanup contract, static/compile-only, NOT_BUILT.: `docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md`
+- R038 UH-01..03 unused-helper cleanup contract, static/compile-only; BUILD in progress.: `docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

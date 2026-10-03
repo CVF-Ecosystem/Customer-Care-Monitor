@@ -32,13 +32,6 @@ var (
 
 const ordinaryFinalizeAttempts = 3
 
-// isOrdinaryIncremental names the only mode this contract covers: an ordinary run without a
-// full rerun, a positive conversation limit, a date range, a since-override or the
-// unanalyzed-only filter. Every other mode keeps its previous selection and checkpoint policy.
-func isOrdinaryIncremental(fullRerun bool, maxConversations int, dateFrom, dateTo string, sinceOverride *time.Time, excludeAnalyzed bool) bool {
-	return !fullRerun && maxConversations <= 0 && dateFrom == "" && dateTo == "" && sinceOverride == nil && !excludeAnalyzed
-}
-
 // preparedConversation is a conversation with the exact snapshot that will be sent to the
 // provider and persisted with its result.
 type preparedConversation struct {
