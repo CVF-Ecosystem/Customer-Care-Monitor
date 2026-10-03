@@ -45,20 +45,21 @@
   ],
   "claimScope": "CLI test maintenance only: remove a historical Git-baseline assertion invalidated by independently accepted R038. Preserve behavioral tests and verify protected paths in BUILD/review evidence. No live channel, AI governance, functional engine regression or FREEZE claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_039.md",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "7a390dc08e7958015b107e3a3e3b890369b82cf1",
   "buildCommit": "7a458232e5111cfbb4b7675b7df33baeb785f392",
   "reviewEvidence": [
     "docs/reviews/CCMAI_RUNTIME_039_INDEPENDENT_REVIEW_2026-10-03.md"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -67,5 +68,16 @@
     "WORK_ORDER"
   ],
   "ownerTransferRequired": true,
-  "implementationStarted": true
+  "implementationStarted": true,
+  "closer": "Codex",
+  "frozenSourceCommit": "4fa8c2abaf3e8c55107520595cf81f603ab4349b",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md",
+  "closedAt": "2026-10-03",
+  "closureAuthority": {
+    "trancheId": "CCMAI-RUNTIME-040",
+    "seed": "CVF_SESSION/authority/CCMAI-RUNTIME-040.json",
+    "seedCommit": "5f96d4d3d75690ba60ebfd99b0f94978d5b35168",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_040.md",
+    "scope": "local disposition only; original BUILD prohibitions preserved"
+  }
 }

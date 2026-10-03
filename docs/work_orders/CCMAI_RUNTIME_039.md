@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-039 — Offline CLI historical scope-test maintenance
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Date: 2026-10-03. Risk R1, test-only. [SPEC](../specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md). Immutable dispatcher seed `CVF_SESSION/authority/CCMAI-RUNTIME-039.json` committed `7a390dc08e7958015b107e3a3e3b890369b82cf1` before activation/BUILD. Standing local orchestration authority; owner manually transfers to Claude. Codex authors/reviews, no automatic worker invocation.
 
@@ -19,3 +19,7 @@ Same-scope repairs use unchanged seed; third repair without independent new root
 ## Current disposition
 
 Historical dispatch-time: DISPATCH_READY / NOT_BUILT; original test present, no worker started. Current: exact Claude BUILD7a458232e5111cfbb4b7675b7df33baeb785f392 independently REVIEW_PASS / FREEZE_OPEN for CS-01..03. [Review](../reviews/CCMAI_RUNTIME_039_INDEPENDENT_REVIEW_2026-10-03.md). No source repair/new worker. R034 offline and R038 static/compile-only acceptance unchanged. The named original failure was executed by Claude and independently reproduced using a Go overlay; six preserved CLI tests PASS zero skips, protected-path diff empty. Global F02/live/MCP execution/governance/hosted/FREEZE remain separate.
+
+## Local closure disposition (R040, 2026-10-03)
+
+FROZEN for this bounded local contract at source `4fa8c2abaf3e8c55107520595cf81f603ab4349b` under separately committed R040 seed `5f96d4d3d75690ba60ebfd99b0f94978d5b35168`. [Closure evidence](../reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md). Original independent acceptance/BUILD evidence and disclosed failed history/NOT RUN preserved; original BUILD seed/prohibitions unchanged. Earlier REVIEW_PASS / FREEZE_OPEN prose is historical. No operational S3/storage/full-engine regression/live/governance/hosted readiness or other tranche closure; no new source/tests/runtime proof.

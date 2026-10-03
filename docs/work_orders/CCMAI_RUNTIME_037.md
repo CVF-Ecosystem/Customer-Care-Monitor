@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-037 — Correct four S3 guide Compose commands
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Date: 2026-10-03. Risk R1. [SPEC](../specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md). Immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-037.json` committed 964f406a855c4813c64fc0655eeeba484129f507 before activation/BUILD. Standing local orchestration delegation; owner manually transfers to Claude, no automatic invocation.
 
@@ -25,3 +25,7 @@ DISPATCH_READY / NOT_BUILT, no worker started. Existing acceptances and R033 FRE
 ## Independent acceptance (2026-10-03)
 
 [Exact-BUILD review](../reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md) accepts SG-01..03, REVIEW_PASS / FREEZE_OPEN, static guide/source/help scope only. Five line replacements and all remaining content verified; guide/seed/product unchanged by reviewer. Prior dispatch text is historical. No migration/container/S3/runtime/governance/FREEZE claim.
+
+## Local closure disposition (R040, 2026-10-03)
+
+FROZEN for this bounded local contract at source `4fa8c2abaf3e8c55107520595cf81f603ab4349b` under separately committed R040 seed `5f96d4d3d75690ba60ebfd99b0f94978d5b35168`. [Closure evidence](../reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md). Original independent acceptance/BUILD evidence and disclosed failed history/NOT RUN preserved; original BUILD seed/prohibitions unchanged. Earlier REVIEW_PASS / FREEZE_OPEN prose is historical. No operational S3/storage/full-engine regression/live/governance/hosted readiness or other tranche closure; no new source/tests/runtime proof.

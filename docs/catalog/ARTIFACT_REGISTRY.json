@@ -5,6 +5,34 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
                       {
+                        "id": "continuity-r039-handoff",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "Historical R039 acceptance and R040 closure intake/seed acknowledgment."
+                      },
+                      {
+                        "id": "runtime040-order",
+                        "family": "continuity",
+                        "path": "docs/work_orders/CCMAI_RUNTIME_040.md",
+                        "status": "ACTIVE",
+                        "description": "R040 FROZEN separate closure authority; original R037-R039 BUILD seeds unchanged."
+                      },
+                      {
+                        "id": "runtime040-closure",
+                        "family": "continuity",
+                        "path": "docs/reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R040 local maintenance closure: R037-R039 FROZEN at exact source with independent review and preserved limits."
+                      },
+                      {
+                        "id": "runtime040-seed",
+                        "family": "continuity",
+                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-040.json",
+                        "status": "ACTIVE",
+                        "description": "Immutable separate R040 authority for local R037-R039 disposition only."
+                      },
+                      {
                         "id": "runtime039-independent-review",
                         "family": "continuity",
                         "path": "docs/reviews/CCMAI_RUNTIME_039_INDEPENDENT_REVIEW_2026-10-03.md",
@@ -23,7 +51,7 @@
                         "family": "continuity",
                         "path": "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R039 CS-01..03 independently REVIEW_PASS / FREEZE_OPEN, test-only; six CLI behaviors preserved."
+                        "description": "Historical independently accepted R039 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
                       },
                       {
                         "id": "runtime039-build",
@@ -37,7 +65,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_039.md",
                         "status": "ACTIVE",
-                        "description": "R039 exact Claude BUILD independently REVIEW_PASS / FREEZE_OPEN; no repair/new worker."
+                        "description": "R039 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
                       },
                       {
                         "id": "runtime039-seed",
@@ -58,7 +86,7 @@
                         "family": "continuity",
                         "path": "docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R038 UH-01..03 independently REVIEW_PASS / FREEZE_OPEN, static/compile-only; zero engine tests executed."
+                        "description": "Historical independently accepted R038 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
                       },
                       {
                         "id": "runtime038-build",
@@ -72,7 +100,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_038.md",
                         "status": "ACTIVE",
-                        "description": "R038 exact Claude BUILD independently REVIEW_PASS / FREEZE_OPEN; no repair/new worker/runtime execution."
+                        "description": "R038 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
                       },
                       {
                         "id": "runtime038-seed",
@@ -100,7 +128,7 @@
                         "family": "continuity",
                         "path": "docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R037 SG-01..03 independently REVIEW_PASS / FREEZE_OPEN, static guide/source comparison only."
+                        "description": "Historical independently accepted R037 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
                       },
                       {
                         "id": "runtime037-build",
@@ -114,7 +142,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_037.md",
                         "status": "ACTIVE",
-                        "description": "R037 documentation order independently REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD, no new worker."
+                        "description": "R037 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
                       },
                       {
                         "id": "runtime037-seed",
@@ -392,9 +420,9 @@
                       {
                           "id":  "continuity-initial-handoff",
                           "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
+                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R039 independent acceptance handoff; six offline CLI tests PASS zero skips, FREEZE_OPEN."
+                          "description":  "Current R040 bounded local FREEZE handoff; R037-R039 source/evidence inherited with all limits retained."
                       },
                       {
                           "id":  "truth-implementation-status",
