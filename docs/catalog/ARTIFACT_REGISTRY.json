@@ -9,14 +9,21 @@
                         "family": "continuity",
                         "path": "docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R037 SG-01..03 four S3 guide Compose examples/prerequisite contract, NOT_BUILT."
+                        "description": "R037 SG-01..03 four S3 guide Compose examples/prerequisite contract; BUILD in progress."
+                      },
+                      {
+                        "id": "runtime037-build",
+                        "family": "continuity",
+                        "path": "docs/reviews/S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R037 BUILD evidence: exact guide diff, SG matrix by source comparison, checks and NOT RUN; REVIEW_PENDING, no runtime claim."
                       },
                       {
                         "id": "runtime037-order",
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_037.md",
                         "status": "ACTIVE",
-                        "description": "R037 R1 documentation order DISPATCH_READY, no migration/live authority."
+                        "description": "R037 R1 documentation order in BUILD (Claude worker), no migration/live authority."
                       },
                       {
                         "id": "runtime037-seed",
@@ -296,7 +303,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R037 docs-only DISPATCH_READY / WORK_ORDER handoff; manual Claude transfer, no worker/runtime/FREEZE."
+                          "description":  "Current R037 docs-only BUILD handoff; Claude worker acknowledged, no runtime/FREEZE."
                       },
                       {
                           "id":  "truth-implementation-status",

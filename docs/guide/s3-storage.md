@@ -87,10 +87,10 @@ xong sự cố thì chạy `migrate-files -up -apply` để dọn phần ghi t�
 
 ## Chuyển file cũ lên S3
 
-Chạy trên máy chủ. Xem trước, không đụng gì:
+Chạy trên máy chủ, trong thư mục chứa `docker-compose.yml`, khi dịch vụ `app` đang chạy. Xem trước, không đụng gì:
 
 ```bash
-docker exec cqa-app /app/cqa-server migrate-files
+docker compose exec app /app/cqa-server migrate-files
 ```
 
 Lệnh chạy cho mọi công ty đã bật S3, in ra số file trên máy chủ, dung lượng và phần còn phải
@@ -99,7 +99,7 @@ chép. Thêm `-tenant <mã công ty>` nếu chỉ muốn làm một công ty.
 Chép thật:
 
 ```bash
-docker exec cqa-app /app/cqa-server migrate-files -apply
+docker compose exec app /app/cqa-server migrate-files -apply
 ```
 
 Lệnh có hai chiều, không ghi gì thì mặc định là chiều lên:
@@ -119,7 +119,7 @@ Bước xoá tách riêng, cố ý không làm chung với bước chép. Chờ 
 ảnh hiện bình thường, rồi mới:
 
 ```bash
-docker exec -it cqa-app /app/cqa-server migrate-files -apply -delete-local
+docker compose exec app /app/cqa-server migrate-files -apply -delete-local
 ```
 
 Lệnh hỏi xác nhận, gõ `XOA` mới chạy. Trước khi xoá **từng file**, nó kiểm lại file đó có thật
@@ -131,7 +131,7 @@ Thứ tự đúng, làm theo là không mất gì:
 
 1. **Chép file về trước:**
    ```bash
-   docker exec cqa-app /app/cqa-server migrate-files -down -apply
+   docker compose exec app /app/cqa-server migrate-files -down -apply
    ```
 2. Kiểm tra vài cuộc chat cũ, ảnh vẫn hiện bình thường
 3. Tắt công tắc trong **Cài đặt > Lưu trữ file**, xác nhận ở hộp thoại

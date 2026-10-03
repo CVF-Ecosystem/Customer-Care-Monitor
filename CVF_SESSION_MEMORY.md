@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-037", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-037", "parked": false} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R037 dispatch (2026-10-03)
 
-CCMAI-RUNTIME-037 DISPATCH_READY / WORK_ORDER / NOT_BUILT, R1 docs-only four S3 guide command-prefix corrections and prerequisite. [Order](docs/work_orders/CCMAI_RUNTIME_037.md), [SPEC](docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md), immutable seed `964f406a855c4813c64fc0655eeeba484129f507` before activation/BUILD. Manual owner transfer to Claude; Codex authors/reviews. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md`; parked none. CCMAI-RUNTIME-037 is DISPATCH_READY / WORK_ORDER for owner manual transfer to Claude: acknowledge canonical continuity and immutable R1 seed, synchronize BUILD and pass preflight before correcting exactly four S3-guide command prefixes and the working-directory sentence. Codex remains ORCHESTRATOR and independent REVIEWER; no worker started here. Static docs/source checks only, no migration/Docker daemon/S3/credentials/network/product changes. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake proof remain separate; no push/merge/deployment/new FREEZE.
+CCMAI-RUNTIME-037 BUILD (Claude documentation IMPLEMENTATION_WORKER, acknowledged before edits; dispatch-time wording: no worker had started), R1 docs-only four S3 guide command-prefix corrections and prerequisite. [Order](docs/work_orders/CCMAI_RUNTIME_037.md), [SPEC](docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md), immutable seed `964f406a855c4813c64fc0655eeeba484129f507` before activation/BUILD. Manual owner transfer to Claude; Codex authors/reviews. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md`; parked none. CCMAI-RUNTIME-037: Claude IMPLEMENTATION_WORKER corrects exactly four S3-guide command prefixes and the working-directory prerequisite sentence (SG-01..03) within the unchanged seed scope, gathers static source-comparison evidence and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. Static docs/source checks only, no migration/Docker daemon/S3/credentials/network/product changes. R036/R035/R034 local acceptance and R033/local-message FREEZE unchanged. Actual MCP execution and live Pancake proof remain separate; no push/merge/deployment/new FREEZE.
 
 No guide edit/runtime proof in planning; prior current sections below are historical continuity. Earlier acceptances/NOT RUN/limits retained.
 

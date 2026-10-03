@@ -1,6 +1,6 @@
 # R037 — S3 guide uses current Compose service
 
-Status: SPEC_READY / NOT_BUILT
+Status: SPEC_READY; BUILT, REVIEW_PENDING.
 
 Date: 2026-10-03. Risk ceiling R1 (documentation only). Baseline93102f26117a28cc7146fdfe2b4bc1fea82e10f7; immutable seed 964f406a855c4813c64fc0655eeeba484129f507. [Order](../work_orders/CCMAI_RUNTIME_037.md).
 
@@ -31,4 +31,4 @@ No new unit/mutation/product tests for this small documentation correction. Mand
 
 ## Current truth
 
-DISPATCH_READY / NOT_BUILT. Guide remains stale, no worker started. Other inherited S3 assertions not evaluated. Prior R036/R035/R034 acceptance, source-specific NOT RUN/observation limits and R033 local-message FREEZE unchanged. Actual MCP execution and live Pancake inputs/authority remain separate. No new FREEZE/provider/governance/hosted claim.
+*Historical (dispatch-time): DISPATCH_READY / NOT_BUILT, guide stale, no worker started.* **Current:** Claude BUILD corrected exactly the four command examples and the prerequisite sentence in `docs/guide/s3-storage.md` (evidence: [BUILD record](../reviews/S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md)), by source comparison only; REVIEW_PENDING, not independently accepted. Other inherited S3 assertions not evaluated. Prior R036/R035/R034 acceptance, source-specific NOT RUN/observation limits and R033 local-message FREEZE unchanged. Actual MCP execution and live Pancake inputs/authority remain separate. No new FREEZE/provider/governance/hosted claim.
