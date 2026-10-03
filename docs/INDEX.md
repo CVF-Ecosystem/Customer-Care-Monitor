@@ -32,7 +32,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - CVF governance policy.: `.cvf/policy.json`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`
-- DISPATCH_READY R034: owner transfers to Claude for bounded offline harness BUILD, Codex independently reviews.: `docs/work_orders/CCMAI_RUNTIME_034.md`
+- R034 BUILD evidence: offline Pancake harness PH matrix, mutations and limitations; REVIEW_PENDING, synthetic only.: `docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md`
+- R034 work order (BUILD in progress): Claude IMPLEMENTATION_WORKER builds the offline harness, Codex independently reviews.: `docs/work_orders/CCMAI_RUNTIME_034.md`
 - R034 offline harness PH-01..08 requirements; no live/credential/network authority.: `docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`

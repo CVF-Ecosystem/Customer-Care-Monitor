@@ -12,11 +12,18 @@
                           "description": "R034 offline harness PH-01..08 requirements; no live/credential/network authority."
                       },
                       {
+                          "id": "runtime034-proof-harness-build",
+                          "family": "continuity",
+                          "path": "docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md",
+                          "status": "ACTIVE",
+                          "description": "R034 BUILD evidence: offline Pancake harness PH matrix, mutations and limitations; REVIEW_PENDING, synthetic only."
+                      },
+                      {
                           "id": "runtime034-proof-harness-order",
                           "family": "continuity",
                           "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
                           "status": "ACTIVE",
-                          "description": "DISPATCH_READY R034: owner transfers to Claude for bounded offline harness BUILD, Codex independently reviews."
+                          "description": "R034 work order (BUILD in progress): Claude IMPLEMENTATION_WORKER builds the offline harness, Codex independently reviews."
                       },
                       {
                           "id": "historical-runtime033-closure-handoff",

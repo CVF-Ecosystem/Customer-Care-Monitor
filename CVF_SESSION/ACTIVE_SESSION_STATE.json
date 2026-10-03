@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
-  "nextAllowedMove": "Owner transfers CCMAI-RUNTIME-034 to Claude. Claude rehydrates and acknowledges IMPLEMENTATION_WORKER before bounded offline harness BUILD, then returns exact local REVIEW_PENDING SHA for independent Codex REVIEW. Real channel/provider/credential/network use remains unauthorized; live packet inputs remain outstanding. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No push/merge/deployment/FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-034: Claude IMPLEMENTATION_WORKER builds the bounded offline R034 harness (new files only), runs the required local checks, writes the BUILD evidence record and returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. Real channel/provider/credential/network use remains unauthorized; live packet inputs remain outstanding. R033/R030/R031/R032 local FREEZE unchanged; R022/R023/R024 FREEZE and global F02/governance/hosted readiness remain OPEN. No push/merge/deployment/FREEZE.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "WORK_ORDER_AUTHOR / planning COMMIT_STEWARD (Codex); Claude IMPLEMENTATION_WORKER next via owner transfer; Codex independent REVIEWER after BUILD",
-  "roleRoute": "OWNER_TRANSFER_TO_CLAUDE_THEN_INDEPENDENT_CODEX_REVIEW",
+  "activeRole": "IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (Claude, via owner transfer); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex); Codex independent REVIEWER after BUILD",
+  "roleRoute": "CLAUDE_BUILD_THEN_INDEPENDENT_CODEX_REVIEW",
   "updatedAt": "2026-10-03"
 }

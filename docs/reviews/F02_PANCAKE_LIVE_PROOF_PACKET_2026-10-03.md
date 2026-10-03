@@ -55,3 +55,7 @@ Future outcomes: PASS only for the exact tested Pancake page/inventory/window/so
 ## Assessment result
 
 Concrete packet prepared; external inputs and authorization are still required. New evidence is source/document inspection and local validation only. Live channel/provider requests, credential reads, backend/frontend/runtime/DB tests and GitHub checks NOT RUN. R033 and all other tranche dispositions unchanged. No CVF Web governance bridge is needed for this documentation-only assessment.
+
+## Offline harness update (R034 BUILD, 2026-10-03)
+
+The offline harness required by the aggregate cap/redirect/allowlist/sanitization requirements above now exists as new files under R034 ([BUILD record](PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md)), pending independent review. This packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED: no tenant/page, credential authority, inventory, quiescence, capture handling or network authority was supplied, and no live request, credential read or provider call occurred. Correction recorded from the unchanged adapter: conversation listing uses the `/api/public_api/v2/` path and messages use `/api/public_api/v1/`; a future live work order must allow exactly those.
