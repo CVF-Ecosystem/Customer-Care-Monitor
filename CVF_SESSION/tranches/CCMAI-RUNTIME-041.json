@@ -51,14 +51,15 @@
   ],
   "claimScope": "Strict synthetic inventory input and offline CLI reconciliation only; actual adapter/harness/receipt remain unchanged. Caller-authored fixture is independent from observed results, not independently proven live inventory. No channel/provider/network/CVF AI governance/hosted/full-regression/FREEZE claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_041.md",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "b19602ea66a47310b503a03ec2954092560231cc",
   "buildCommit": "2a44a8685adfdc3582697ce5094d06da3047207b",
   "reviewEvidence": [
-    "docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md"
+    "docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md",
+    "docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md"
   ],
-  "disposition": "PENDING",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
@@ -66,7 +67,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -79,6 +81,11 @@
   "repairRound": 1,
   "repairCommit": "2a44a8685adfdc3582697ce5094d06da3047207b",
   "repairFindings": [
+    "R041-R1-01",
+    "R041-R1-02",
+    "R041-R1-03"
+  ],
+  "settledRepairFindings": [
     "R041-R1-01",
     "R041-R1-02",
     "R041-R1-03"

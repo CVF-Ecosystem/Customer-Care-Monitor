@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-041 — Offline synthetic inventory input
 
-Status: REVIEW_PENDING
+Status: REVIEW_PASS
 
 Date: 2026-10-03. R2 input parsing/sanitization; worker Claude, independent reviewer Codex. [SPEC](../specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md). Immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`, committed `b19602ea66a47310b503a03ec2954092560231cc` before activation/BUILD. Standing local orchestration delegation; owner manually transfers order to Claude. R2 execution requires that owner transfer/review; Codex does not automatically invoke a worker or implement source.
 
@@ -36,3 +36,9 @@ Exact BUILD `e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b` is CHANGES_REQUIRED / REV
 Reviewer already retires stale current DISPATCH_READY/no-loader/no-Go prose and records copied worker R038/R1 acknowledgment labels as inaccurate; worker must verify fresh current R041/R2 authority and acknowledge REPAIR/BUILD before edits. Do not rewrite historical evidence or claim knowledge of earlier reads/timing. OI-04 SPEC author correction is explicit: expected-empty with observed-nonempty FAIL/exit1 meets fail-closed intent, both-empty legacy scenario INCOMPLETE. Unchanged library and expectation-driven request counts preserved.
 
 Run the existing authorized uncached CLI/channels suites, cached build -o NUL/vet and meaningful finite applied controls for repaired guards; preserve old six tests and original8 worker mutation evidence. Record exact source/digests, named assertions/skips, restoration and repair SHA; full publication gates/docs/catalog/doctor before bounded commit and REVIEW_PENDING handback. Engine/full DB/race without compiler/real inventory/config/credential/provider/channel/network/downloads/CI/push/merge/deployment/FREEZE remain outside execution. Review round3 without independent new root cause retains escalation rule.
+
+## R1 independent disposition (Codex, 2026-10-03)
+
+R041-R1-01..03 settled for exact Claude repair `2a44a8685adfdc3582697ce5094d06da3047207b`: **REVIEW_PASS / REVIEW / FREEZE_OPEN**. [Independent re-review](../reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md) verifies scoped source identity/seed, UNC guards, actual local-junction rejection, real platform SKIP attribution, independent semantic controls and existing tests. R1 return table above remains historical repair requirements, not a new worker dispatch. No product or seed change by reviewer.
+
+Two symlink subtests remain SKIP/UNVERIFIED until a capable host runs them. Known local task-owned synthetic inputs only; syntax rejects UNC/namespace spellings but does not prove mapped/subst drive locality, post-check comparisons do not exclude ancestor TOCTOU, and reparse ancestors in profiles are refused. Acceptance does not authorize testing real drives/shares or changing host privileges/compiler. Original incidents/mutation survivor retained. ORCHESTRATOR local planning/continuity next; no new BUILD/engine/DB/real input/credentials/provider/channel/network/push/merge/deploy/FREEZE.
