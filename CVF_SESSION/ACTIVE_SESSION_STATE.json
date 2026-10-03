@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-041: Codex independent REVIEWER reviews exact Claude BUILD e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b (explicit -inventory synthetic JSON input for the offline Pancake CLI, REVIEW_PENDING, R2) for seed identity, OI-01..06, the strict bounded parser and fixed sanitized errors, mounted-CLI tests, the original-main control and eight applied mutations, protected-path equality, and the disclosed limits (symlink admission unverified on this host, race NOT RUN, empty expectation yields FAIL not INCOMPLETE). Synthetic task-owned fixtures only; no real inventory/credential/config/provider/channel/network/DB/engine execution by the worker. R040/R037-R039/R033 closures and R034-R036 acceptance unchanged. No self-approval. No push, merge, deployment or new FREEZE.",
+  "nextAllowedMove": "CCMAI-RUNTIME-041 R1: owner manually transfers the bounded repair in CCMAI_RUNTIME_041.md to Claude REPAIR_WORKER under the unchanged R2 seed; repair Windows UNC admission before filesystem I/O, reject symlink/reparse ancestors, add honest isolated platform SKIP coverage and discriminating regressions, then hand back an exact repair SHA for independent Codex re-review. Current BUILD e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b is CHANGES_REQUIRED / FREEZE_OPEN. Synthetic task-owned fixtures only; no real input/credential/config/provider/channel/network/DB/engine execution, protected-path or authority-seed change, push, merge, deployment or FREEZE. Existing acceptance and closures unchanged.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "Codex independent REVIEWER of the exact Claude BUILD; Claude IMPLEMENTATION_WORKER handed back (REPAIR_WORKER only for accepted findings); ORCHESTRATOR / WORK_ORDER_AUTHOR (Codex)",
-  "roleRoute": "INDEPENDENT_CODEX_REVIEW_OF_CLAUDE_BUILD",
+  "activeRole": "Codex independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD; Claude REPAIR_WORKER after owner manual transfer, independent Codex re-review required",
+  "roleRoute": "INDEPENDENT_REVIEW_RETURN_FOR_BOUNDED_CLAUDE_REPAIR",
   "updatedAt": "2026-10-03"
 }

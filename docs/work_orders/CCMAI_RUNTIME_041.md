@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-041 — Offline synthetic inventory input
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-03. R2 input parsing/sanitization; worker Claude, independent reviewer Codex. [SPEC](../specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md). Immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`, committed `b19602ea66a47310b503a03ec2954092560231cc` before activation/BUILD. Standing local orchestration delegation; owner manually transfers order to Claude. R2 execution requires that owner transfer/review; Codex does not automatically invoke a worker or implement source.
 
@@ -19,6 +19,20 @@ Only backend/cmd/pancake-proof/main.go, main_test.go, new inventory.go/inventory
 
 Same-scope repairs retain seed; third repair without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. Missing evidence, leaked input/path, widened reads/transcript coupling, unchecked/truncated JSON, protected-file edit or false live/governance claim prevents acceptance.
 
-## Current boundary
+## Historical dispatch-time boundary
 
 DISPATCH_READY / NOT_BUILT, no worker started. New file option/schema is intended behavior only. R034 offline acceptance, R035 unavailable MCP, R036 synthetic UI acceptance unchanged; R040/R037-R039 and R033 closures unchanged. Live inventory/execution/MCP dispatch are separate future scopes. No real provider-governance claim or receipt.
+
+## R041-R1 bounded repair return (Codex, 2026-10-03)
+
+Exact BUILD `e9043813ea5b9ffbbf5ee6218d4a9cdb343f515b` is CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. [Independent review](../reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md). Roles transition: Codex independent REVIEWER -> ORCHESTRATOR/WORK_ORDER_AUTHOR for this return; Claude IMPLEMENTATION_WORKER -> REPAIR_WORKER only after owner manual transfer, owns repair commit; Codex independently re-reviews. R2 seed/path/effect/commit ownership unchanged, first repair round, no automatic worker invocation. Source scope remains the four CLI files already authorized; no new adapter/library/engine/tooling/platform dependency or network authority.
+
+| Finding | Required repair and acceptance |
+| --- | --- |
+| R041-R1-01 (high) | Reject all Windows UNC spellings, including mixed leading separators and normalized equivalent paths, before any filesystem operation. Treat path interpretation according to the host semantics without allowing network probes to classify a path. Add pure syntactic admission regressions proving both mixed forms reject before Lstat/Open; tests must never touch a real share/server. Fixed sanitized CLI error preserved. Applied bypass control must fail the relevant assertion. |
+| R041-R1-02 (high) | Reject symlink/reparse ancestors as well as the final file, including a path reached through a task-owned local directory junction on Windows. Do not rely solely on final Lstat/SameFile. Consolidate direct and ancestor admission, relative/absolute path semantics and detectable link traversal before opening; keep bounded reads and fixed errors. Mounted local-junction regression must exit2/empty stdout/fixed stderr. Capable-host direct/ancestor symlink regression required where available, otherwise explicit remaining coverage limitation. No real data or network read to test this. |
+| R041-R1-03 (medium) | Move unavailable symlink probe into an isolated named subtest using t.Skip/t.Skipf so machine results expose the omission and other admission tests still execute. Report actual skipped identities/counts; do not label unexecuted symlink rejection PASS. Add platform junction coverage available on this Windows host. Retain historical logged omission and race NOT RUN. |
+
+Reviewer already retires stale current DISPATCH_READY/no-loader/no-Go prose and records copied worker R038/R1 acknowledgment labels as inaccurate; worker must verify fresh current R041/R2 authority and acknowledge REPAIR/BUILD before edits. Do not rewrite historical evidence or claim knowledge of earlier reads/timing. OI-04 SPEC author correction is explicit: expected-empty with observed-nonempty FAIL/exit1 meets fail-closed intent, both-empty legacy scenario INCOMPLETE. Unchanged library and expectation-driven request counts preserved.
+
+Run the existing authorized uncached CLI/channels suites, cached build -o NUL/vet and meaningful finite applied controls for repaired guards; preserve old six tests and original8 worker mutation evidence. Record exact source/digests, named assertions/skips, restoration and repair SHA; full publication gates/docs/catalog/doctor before bounded commit and REVIEW_PENDING handback. Engine/full DB/race without compiler/real inventory/config/credential/provider/channel/network/downloads/CI/push/merge/deployment/FREEZE remain outside execution. Review round3 without independent new root cause retains escalation rule.

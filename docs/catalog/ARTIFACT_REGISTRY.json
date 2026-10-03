@@ -4,6 +4,13 @@
     "updatedAt":  "2026-10-03",
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
+{
+  "id": "runtime041-independent-review",
+  "family": "continuity",
+  "path": "docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md",
+  "status": "ACTIVE",
+  "description": "Independent exact-BUILD R041 CHANGES_REQUIRED: mixed Windows UNC, ancestor junction admission and platform SKIP evidence; OI-04 intent clarified."
+},
                       {
                         "id": "continuity-r040-handoff",
                         "family": "continuity",
@@ -16,7 +23,7 @@
                         "family": "continuity",
                         "path": "docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md",
                         "status": "ACTIVE",
-                        "description": "R041 OI-01..06 strict synthetic input/reconciliation contract; BUILT, REVIEW_PENDING."
+                        "description": "R041 strict synthetic input SPEC; author OI-04 clarification, CHANGES_REQUIRED for file admission."
                       },
                       {
                         "id": "runtime041-build",
@@ -30,7 +37,7 @@
                         "family": "continuity",
                         "path": "docs/work_orders/CCMAI_RUNTIME_041.md",
                         "status": "ACTIVE",
-                        "description": "R041 R2 bounded offline CLI input order REVIEW_PENDING (Claude built; independent Codex review next)."
+                        "description": "R041 CHANGES_REQUIRED; bounded Claude R1 repair under unchanged R2 seed, independent Codex re-review."
                       },
                       {
                         "id": "runtime041-seed",
@@ -457,7 +464,7 @@
                           "family":  "continuity",
                           "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
                           "status":  "ACTIVE",
-                          "description":  "Current R041 REVIEW_PENDING handoff; independent Codex review next, bounded synthetic inventory input."
+                          "description":  "Current R041 CHANGES_REQUIRED handoff; bounded Claude R1 repair under unchanged R2 authority, independent Codex re-review."
                       },
                       {
                           "id":  "truth-implementation-status",

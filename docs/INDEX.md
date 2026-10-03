@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R041 REVIEW_PENDING handoff; independent Codex review next, bounded synthetic inventory input.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`
+- Current R041 CHANGES_REQUIRED handoff; bounded Claude R1 repair under unchanged R2 authority, independent Codex re-review.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -81,9 +81,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R040 FROZEN separate closure authority; original R037-R039 BUILD seeds unchanged.: `docs/work_orders/CCMAI_RUNTIME_040.md`
 - Immutable separate R040 authority for local R037-R039 disposition only.: `CVF_SESSION/authority/CCMAI-RUNTIME-040.json`
 - R041 BUILD evidence: strict synthetic inventory loader, OI matrix, nine killed controls, symlink probe unverified; REVIEW_PENDING.: `docs/reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md`
-- R041 R2 bounded offline CLI input order REVIEW_PENDING (Claude built; independent Codex review next).: `docs/work_orders/CCMAI_RUNTIME_041.md`
+- Independent exact-BUILD R041 CHANGES_REQUIRED: mixed Windows UNC, ancestor junction admission and platform SKIP evidence; OI-04 intent clarified.: `docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md`
+- R041 CHANGES_REQUIRED; bounded Claude R1 repair under unchanged R2 seed, independent Codex re-review.: `docs/work_orders/CCMAI_RUNTIME_041.md`
 - Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`
-- R041 OI-01..06 strict synthetic input/reconciliation contract; BUILT, REVIEW_PENDING.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
+- R041 strict synthetic input SPEC; author OI-04 clarification, CHANGES_REQUIRED for file admission.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
