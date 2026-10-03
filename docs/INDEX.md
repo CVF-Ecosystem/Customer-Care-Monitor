@@ -7,7 +7,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R042 documentation dispatch handoff; manual Claude transfer and bounded synthetic example smoke.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
+- Current R042 BUILD handoff; Claude worker acknowledged, bounded synthetic example smoke.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -87,9 +87,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-R1 re-review: R041-R1-01..03 settled, REVIEW_PASS / FREEZE_OPEN; explicit platform/drive/TOCTOU limits.: `docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`
 - R041 R1 REVIEW_PASS strict synthetic input SPEC; platform, mapped-drive and TOCTOU limits retained.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
-- R042 DISPATCH_READY R1; Claude manual transfer, exact bounded offline CLI example smoke and independent Codex review.: `docs/work_orders/CCMAI_RUNTIME_042.md`
+- R042 BUILD evidence: DU matrix, finite synthetic CLI smoke exits/outputs, protected-path equality, retained limits; REVIEW_PENDING.: `docs/reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.md`
+- Vietnamese operator guide for the offline Pancake proof CLI: flags, exits, synthetic inventory schema, limits and unverified items; synthetic only.: `docs/guide/pancake-offline-proof.md`
+- R042 R1 BUILD (Claude worker, owner-transferred); bounded offline CLI example smoke, independent Codex review next.: `docs/work_orders/CCMAI_RUNTIME_042.md`
+- Hand-authored synthetic expected-inventory sample for the offline proof CLI; no real data.: `docs/examples/pancake-proof/synthetic-inventory.json`
 - Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`
-- R042 DU-01..07 offline usage-guide/sample/packet documentation contract; NOT_BUILT.: `docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md`
+- R042 DU-01..07 offline usage-guide/sample/packet documentation contract; BUILD in progress.: `docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

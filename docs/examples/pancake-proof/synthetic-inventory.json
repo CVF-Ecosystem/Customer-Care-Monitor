@@ -1,0 +1,43 @@
+{
+  "schema_version": "pancake-proof-synthetic-inventory/1",
+  "evidence_type": "SYNTHETIC_OFFLINE",
+  "provenance": "synthetic-docs-v1",
+  "page_id": "synthetic-page-001",
+  "conversations": [
+    {
+      "id": "syn-conv-a",
+      "updated_at": "2026-09-24T10:00:00Z",
+      "messages": [
+        {
+          "id": "syn-msg-a1",
+          "sent_at": "2026-09-24T09:00:00Z",
+          "sender_type": "customer",
+          "content_type": "text",
+          "attachments": []
+        },
+        {
+          "id": "syn-msg-a2",
+          "sent_at": "2026-09-24T09:05:00Z",
+          "sender_type": "agent",
+          "content_type": "attachment",
+          "attachments": [
+            { "type": "image", "name": "photo-001.jpg" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "syn-conv-b",
+      "updated_at": "2026-09-20T00:00:00Z",
+      "messages": [
+        {
+          "id": "syn-msg-b1",
+          "sent_at": "2026-09-20T00:00:00Z",
+          "sender_type": "customer",
+          "content_type": "text",
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

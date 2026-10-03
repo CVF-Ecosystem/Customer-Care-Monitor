@@ -9,14 +9,35 @@
   "family": "continuity",
   "path": "docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "R042 DU-01..07 offline usage-guide/sample/packet documentation contract; NOT_BUILT."
+  "description": "R042 DU-01..07 offline usage-guide/sample/packet documentation contract; BUILD in progress."
 },
+                      {
+                        "id": "runtime042-guide",
+                        "family": "continuity",
+                        "path": "docs/guide/pancake-offline-proof.md",
+                        "status": "ACTIVE",
+                        "description": "Vietnamese operator guide for the offline Pancake proof CLI: flags, exits, synthetic inventory schema, limits and unverified items; synthetic only."
+                      },
+                      {
+                        "id": "runtime042-sample",
+                        "family": "continuity",
+                        "path": "docs/examples/pancake-proof/synthetic-inventory.json",
+                        "status": "ACTIVE",
+                        "description": "Hand-authored synthetic expected-inventory sample for the offline proof CLI; no real data."
+                      },
+                      {
+                        "id": "runtime042-build",
+                        "family": "continuity",
+                        "path": "docs/reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.md",
+                        "status": "ACTIVE",
+                        "description": "R042 BUILD evidence: DU matrix, finite synthetic CLI smoke exits/outputs, protected-path equality, retained limits; REVIEW_PENDING."
+                      },
 {
   "id": "runtime042-order",
   "family": "continuity",
   "path": "docs/work_orders/CCMAI_RUNTIME_042.md",
   "status": "ACTIVE",
-  "description": "R042 DISPATCH_READY R1; Claude manual transfer, exact bounded offline CLI example smoke and independent Codex review."
+  "description": "R042 R1 BUILD (Claude worker, owner-transferred); bounded offline CLI example smoke, independent Codex review next."
 },
 {
   "id": "continuity-r041-handoff",
@@ -499,7 +520,7 @@
   "family": "continuity",
   "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "Current R042 documentation dispatch handoff; manual Claude transfer and bounded synthetic example smoke."
+  "description": "Current R042 BUILD handoff; Claude worker acknowledged, bounded synthetic example smoke."
 },
                       {
                           "id":  "truth-implementation-status",

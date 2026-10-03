@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-042", "parked": false} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-042", "parked": false} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R042 documentation dispatch (2026-10-03)
 
-CCMAI-RUNTIME-042 DISPATCH_READY / WORK_ORDER, R1 documentation/example slice. [Order](docs/work_orders/CCMAI_RUNTIME_042.md), [SPEC](docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md); immutable seed9b10a8f6f67d314d6c4f5a3846396f28a5487948 before activation/BUILD. Vietnamese offline guide, explicit synthetic sample and targeted historical/live-packet update only; guide/sample absent, no worker/Go execution yet. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`; parked none. CCMAI-RUNTIME-042: owner manually transfers CCMAI_RUNTIME_042.md to Claude IMPLEMENTATION_WORKER for R1 documentation-only BUILD (Vietnamese offline proof CLI guide, hand-authored synthetic inventory sample, targeted post-R041 live-packet truth update); run only bounded cached task-temp CLI example smoke, docs/catalog/gates, then hand back exact BUILD for independent Codex REVIEW. Seed 9b10a8f6f67d314d6c4f5a3846396f28a5487948 immutable; no worker started or automatic invocation. R041/R034-R036 acceptance and R040/R037-R039/R033 closures unchanged. Symlink UNVERIFIED, race NOT RUN, mapped/subst/TOCTOU limits retained; live inputs/credential/network authority separate. No backend/test/tooling changes, engine/DB/Analyzer/real inventory/config/credentials/provider/channel/network/push/merge/deployment/FREEZE.
+CCMAI-RUNTIME-042 BUILD (Claude IMPLEMENTATION_WORKER, acknowledged before edits; dispatch-time wording: no worker had started), R1 documentation/example slice. [Order](docs/work_orders/CCMAI_RUNTIME_042.md), [SPEC](docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md); immutable seed9b10a8f6f67d314d6c4f5a3846396f28a5487948 before activation/BUILD. Vietnamese offline guide, explicit synthetic sample and targeted historical/live-packet update only; guide/sample absent, no worker/Go execution yet. Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`; parked none. CCMAI-RUNTIME-042: Claude IMPLEMENTATION_WORKER (owner-transferred, R1 documentation-only) writes the Vietnamese offline proof CLI guide, the hand-authored synthetic inventory sample and the targeted post-R041 live-packet update (DU-01..07), runs only the bounded cached task-temp build of the existing CLI and the finite DU-03 smoke over task-owned copies, then returns the exact local REVIEW_PENDING SHA for independent Codex REVIEW. No product/test/tooling change, Go suite, engine/DB/Analyzer, real inventory/config/credential, share/network, push, merge, deployment or FREEZE. Symlink UNVERIFIED, race NOT RUN and R041 limits retained; R041 and earlier acceptances and closures unchanged.
 
 ## Historical R041 R1 independent acceptance (2026-10-03)
 

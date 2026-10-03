@@ -1,6 +1,6 @@
 # R042 — Offline proof CLI operator documentation
 
-Date: 2026-10-03. Status: SPEC_READY / NOT_BUILT. Risk R1, documentation and existing offline example smoke only; worker Claude, independent reviewer Codex. Source planning `67eeac078fc52be07e9e6f5c27ed8a6cedd26c8c`; unchanged accepted CLI source `2a44a8685adfdc3582697ce5094d06da3047207b`. Seed/base `9b10a8f6f67d314d6c4f5a3846396f28a5487948`. [Order](../work_orders/CCMAI_RUNTIME_042.md).
+Date: 2026-10-03. Status: SPEC_READY; BUILD in progress. Risk R1, documentation and existing offline example smoke only; worker Claude, independent reviewer Codex. Source planning `67eeac078fc52be07e9e6f5c27ed8a6cedd26c8c`; unchanged accepted CLI source `2a44a8685adfdc3582697ce5094d06da3047207b`. Seed/base `9b10a8f6f67d314d6c4f5a3846396f28a5487948`. [Order](../work_orders/CCMAI_RUNTIME_042.md).
 
 ## INTAKE / DESIGN
 
@@ -24,4 +24,4 @@ Evidence file: `docs/reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.m
 
 ## Boundary / current truth
 
-DISPATCH_READY / NOT_BUILT. Guide/sample/packet update absent; no worker or Go/example execution performed by planner. R041-R1 REVIEW_PASS/FREEZE_OPEN and prior acceptances/closures unchanged. No new live/provider/CVF AI-governance/CI/hosted/FREEZE claim or bridge. Only source/doc inspection and local planning checks here.
+*Historical (dispatch-time): DISPATCH_READY / NOT_BUILT, guide/sample/packet update absent; no worker or Go/example execution performed by planner. R041-R1 REVIEW_PASS/FREEZE_OPEN and prior acceptances/closures unchanged. No new live/provider/CVF AI-governance/CI/hosted/FREEZE claim or bridge. Only source/doc inspection and local planning checks here.* **Current:** Claude BUILD created the Vietnamese guide and the synthetic sample, appended a labeled post-R041 section to the live packet, and ran the finite DU-03 smoke (PASS/FAIL/INCOMPLETE/rejection exits as specified) over a task-temp build of the unchanged accepted CLI (evidence: [BUILD record](../reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.md)). REVIEW_PENDING, not independently accepted; symlink UNVERIFIED and race NOT RUN retained.
