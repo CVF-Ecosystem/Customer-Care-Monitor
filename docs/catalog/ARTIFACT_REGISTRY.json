@@ -1025,6 +1025,20 @@
       "path": "docs/reviews/probes/r046_r1_pool_isolation_probe_test.go",
       "status": "ACTIVE",
       "description": "Reviewer-only original Statement pool installation/cleanup diagnostic; mount in exact-repair archive only."
+    },
+    {
+      "id": "runtime046-r2-repair-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R2_REPAIR_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046-R2 repair evidence: statement isolation, complete transaction boundary hooks, and mutation campaign receipts."
+    },
+    {
+      "id": "runtime046-r2-worker-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r2_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "R046-R2 machine receipts: statement pool isolation test, transaction boundary commit/rollback hooks, fresh mutation campaign, and regression selection."
     }
   ]
 }

@@ -12,6 +12,7 @@ import (
 	"errors"
 	"log"
 	"strings"
+	"sync/atomic"
 	"testing"
 	"time"
 
@@ -25,16 +26,16 @@ import (
 )
 
 // flBoundaryError is a synthetic error whose Error() method tracks how many times
-// it was formatted or converted to string, verifying raw driver error strings
-// never reach application logs or returned error messages.
+// it was formatted or converted to string via an atomic int64 counter, verifying
+// raw driver error strings never reach application logs or returned error messages.
 type flBoundaryError struct {
-	formatted *int
+	formatted *int64
 	detail    string
 }
 
 func (e flBoundaryError) Error() string {
 	if e.formatted != nil {
-		*e.formatted++
+		atomic.AddInt64(e.formatted, 1)
 	}
 	if e.detail != "" {
 		return e.detail
@@ -42,34 +43,94 @@ func (e flBoundaryError) Error() string {
 	return "fl-synthetic-boundary-driver-error@tcp/query-detail"
 }
 
-// flBoundaryPool wraps a gorm.ConnPool and injects synthetic transaction-boundary
-// errors on BeginTx up to failRemaining times.
-type flBoundaryPool struct {
-	gorm.ConnPool
-	failedBegins  int
-	failRemaining int
-	cause         error
+// flBoundaryTx wraps an active *sql.Tx and hooks Commit and Rollback calls
+// to simulate transaction boundary failures.
+type flBoundaryTx struct {
+	*sql.Tx
+	pool *flBoundaryPool
 }
 
-func (p *flBoundaryPool) BeginTx(ctx context.Context, opts *sql.TxOptions) (*sql.Tx, error) {
-	if p.failRemaining > 0 {
-		p.failRemaining--
-		p.failedBegins++
+func (tx *flBoundaryTx) Commit() error {
+	atomic.AddInt64(&tx.pool.commitAttempts, 1)
+	if atomic.LoadInt64(&tx.pool.failCommitRemaining) > 0 {
+		atomic.AddInt64(&tx.pool.failCommitRemaining, -1)
+		atomic.AddInt64(&tx.pool.failedCommits, 1)
+		if tx.pool.commitCause != nil {
+			return tx.pool.commitCause
+		}
+		return tx.pool.cause
+	}
+	return tx.Tx.Commit()
+}
+
+func (tx *flBoundaryTx) Rollback() error {
+	atomic.AddInt64(&tx.pool.rollbackAttempts, 1)
+	realErr := tx.Tx.Rollback()
+	if errors.Is(realErr, sql.ErrTxDone) {
+		realErr = nil
+	}
+	if atomic.LoadInt64(&tx.pool.failRollbackRemaining) > 0 {
+		atomic.AddInt64(&tx.pool.failRollbackRemaining, -1)
+		atomic.AddInt64(&tx.pool.failedRollbacks, 1)
+		if tx.pool.rollbackCause != nil {
+			return tx.pool.rollbackCause
+		}
+		return tx.pool.cause
+	}
+	return realErr
+}
+
+// flBoundaryPool wraps a gorm.ConnPool and injects synthetic transaction-boundary
+// errors on BeginTx, Commit, or Rollback up to specified remaining counts.
+type flBoundaryPool struct {
+	gorm.ConnPool
+	failedBegins          int64
+	failBeginRemaining    int64
+	failedCommits         int64
+	failCommitRemaining   int64
+	failedRollbacks       int64
+	failRollbackRemaining int64
+	beginAttempts         int64
+	commitAttempts        int64
+	rollbackAttempts      int64
+	cause                 error
+	commitCause           error
+	rollbackCause         error
+}
+
+func (p *flBoundaryPool) BeginTx(ctx context.Context, opts *sql.TxOptions) (gorm.ConnPool, error) {
+	atomic.AddInt64(&p.beginAttempts, 1)
+	if atomic.LoadInt64(&p.failBeginRemaining) > 0 {
+		atomic.AddInt64(&p.failBeginRemaining, -1)
+		atomic.AddInt64(&p.failedBegins, 1)
 		return nil, p.cause
 	}
-	return p.ConnPool.(gorm.TxBeginner).BeginTx(ctx, opts)
+	realTx, err := p.ConnPool.(gorm.TxBeginner).BeginTx(ctx, opts)
+	if err != nil {
+		return nil, err
+	}
+	return &flBoundaryTx{
+		Tx:   realTx,
+		pool: p,
+	}, nil
 }
 
 // installBoundaryPool replaces db.DB with a session configured with pool for the
 // duration of the test, and restores original db.DB on cleanup.
+// It clones the statement via Context to guarantee originalDB.Statement.ConnPool
+// is not mutated by the scoped pool injection.
 func installBoundaryPool(t *testing.T, pool *flBoundaryPool) {
 	t.Helper()
 	originalDB := db.DB
-	scoped := originalDB.Session(&gorm.Session{NewDB: true})
-	pool.ConnPool = scoped.Statement.ConnPool
+	originalPool := originalDB.Statement.ConnPool
+	scoped := originalDB.Session(&gorm.Session{Context: context.Background()})
+	pool.ConnPool = originalPool
 	scoped.Statement.ConnPool = pool
 	db.DB = scoped
-	t.Cleanup(func() { db.DB = originalDB })
+	t.Cleanup(func() {
+		originalDB.Statement.ConnPool = originalPool
+		db.DB = originalDB
+	})
 }
 
 // ---- helpers ----
@@ -257,6 +318,33 @@ func TestFL01BoundedAppFallbackLog(t *testing.T) {
 	}
 }
 
+// TestFLBoundaryPoolRestoresOriginalStatement verifies that installBoundaryPool
+// isolates the statement and does NOT mutate originalStatement.ConnPool, and that
+// cleanup completely restores both the DB pointer and the original pool.
+// Maintained control adapted from reviewer's probe (R046-R2-01).
+func TestFLBoundaryPoolRestoresOriginalStatement(t *testing.T) {
+	setupFLFixture(t)
+	originalDB := db.DB
+	originalStatement := originalDB.Statement
+	originalPool := originalStatement.ConnPool
+	defer func() {
+		originalStatement.ConnPool = originalPool
+		db.DB = originalDB
+	}()
+	t.Run("install_and_cleanup", func(t *testing.T) {
+		installBoundaryPool(t, &flBoundaryPool{})
+		if originalStatement.ConnPool != originalPool {
+			t.Error("worker helper mutated original Statement.ConnPool before cleanup")
+		}
+	})
+	if db.DB != originalDB {
+		t.Error("worker cleanup did not restore DB pointer")
+	}
+	if originalDB.Statement.ConnPool != originalPool {
+		t.Fatal("worker cleanup restored DB pointer but retained injected pool in original Statement")
+	}
+}
+
 // TestFL01TransactionBoundaryUnknownErrorIsContained exercises raw transaction-boundary
 // failure (BEGIN fault) across all retry attempts. Verifies:
 // 1. All ordinaryFinalizeAttempts transaction attempts are executed.
@@ -270,9 +358,9 @@ func TestFL01TransactionBoundaryUnknownErrorIsContained(t *testing.T) {
 	runID := f.insertRunning(t)
 	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
 
-	formats := 0
+	var formats int64
 	pool := &flBoundaryPool{
-		failRemaining: ordinaryFinalizeAttempts,
+		failBeginRemaining: ordinaryFinalizeAttempts,
 		cause: flBoundaryError{
 			formatted: &formats,
 			detail:    "fl-r046-boundary-begin-fault@tcp(127.0.0.1:3306)/app",
@@ -314,6 +402,105 @@ func TestFL01TransactionBoundaryUnknownErrorIsContained(t *testing.T) {
 	}
 	if stored.FinishedAt == nil {
 		t.Fatal("fallback must set finished_at")
+	}
+}
+
+// TestFL01TransactionBoundaryCommitFaultIsContained exercises raw transaction-boundary
+// failure on Commit across all retry attempts. Verifies:
+// 1. All ordinaryFinalizeAttempts commit attempts fail and retry.
+// 2. Raw commit error is never formatted (*formats == 0).
+// 3. Raw detail string never leaks to returned error or app log.
+// 4. Sentinel errFinalizeWrite is preserved and discoverable via errors.Is.
+// 5. Fallback write marks the run status="error" with bounded error message.
+func TestFL01TransactionBoundaryCommitFaultIsContained(t *testing.T) {
+	f := setupFLFixture(t)
+	job := f.job(t)
+	runID := f.insertRunning(t)
+	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
+
+	var formats int64
+	pool := &flBoundaryPool{
+		failCommitRemaining: ordinaryFinalizeAttempts,
+		commitCause: flBoundaryError{
+			formatted: &formats,
+			detail:    "fl-r046-boundary-commit-fault@tcp(127.0.0.1:3306)/app",
+		},
+	}
+	installBoundaryPool(t, pool)
+
+	origDelay := ordinaryFinalizeRetryDelay
+	ordinaryFinalizeRetryDelay = time.Millisecond
+	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
+
+	appLog := withAppLog(t)
+	checkpoint := time.Now().UTC().Truncate(time.Second)
+	err := finalizeOrdinaryRun(run, job, "success", "", "{}", time.Now(), &checkpoint)
+
+	if pool.failedCommits != ordinaryFinalizeAttempts {
+		t.Fatalf("expected %d commit attempts; got %d", ordinaryFinalizeAttempts, pool.failedCommits)
+	}
+	if !errors.Is(err, errFinalizeWrite) {
+		t.Fatalf("commit boundary failure lost bounded sentinel: %v", err)
+	}
+	if formats != 0 {
+		t.Fatalf("BOUNDARY COMMIT DETECTOR FAILED: raw commit error formatted %d times", formats)
+	}
+	if strings.Contains(err.Error(), "fl-r046-boundary-commit-fault") {
+		t.Fatalf("raw commit error leaked into returned error: %v", err)
+	}
+	logOutput := appLog.String()
+	if strings.Contains(logOutput, "fl-r046-boundary-commit-fault") {
+		t.Fatalf("raw commit error leaked into app log: %s", logOutput)
+	}
+	stored := f.runRow(t, run.ID)
+	if stored.Status != "error" {
+		t.Fatalf("fallback must mark run status as 'error'; got %q", stored.Status)
+	}
+	if stored.FinishedAt == nil {
+		t.Fatal("fallback must set finished_at")
+	}
+}
+
+// TestFL01TransactionBoundaryRollbackFaultIsContained exercises boundary behavior when
+// an internal transaction failure triggers Rollback, and the Rollback call returns a raw driver error.
+// Verifies raw rollback error object is not formatted or leaked into returned error or app log.
+func TestFL01TransactionBoundaryRollbackFaultIsContained(t *testing.T) {
+	f := setupFLFixture(t)
+	job := f.job(t)
+
+	var formats int64
+	pool := &flBoundaryPool{
+		failRollbackRemaining: 1,
+		rollbackCause: flBoundaryError{
+			formatted: &formats,
+			detail:    "fl-r046-boundary-rollback-fault@tcp(127.0.0.1:3306)/app",
+		},
+	}
+	installBoundaryPool(t, pool)
+
+	origDelay := ordinaryFinalizeRetryDelay
+	ordinaryFinalizeRetryDelay = time.Millisecond
+	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
+
+	// Trigger a missing row failure so transaction fails and executes rollback
+	missingRun := &models.JobRun{ID: pkg.NewUUID(), TenantID: f.tenantID, JobID: f.jobID}
+	appLog := withAppLog(t)
+	err := finalizeOrdinaryRun(missingRun, job, "error", "", "{}", time.Now(), nil)
+
+	if pool.failedRollbacks < 1 {
+		t.Fatalf("expected at least 1 rollback attempt; got %d", pool.failedRollbacks)
+	}
+	if formats != 0 {
+		t.Fatalf("BOUNDARY ROLLBACK DETECTOR FAILED: raw rollback error formatted %d times", formats)
+	}
+	if !errors.Is(err, errFinalizeMissing) {
+		t.Fatalf("expected errFinalizeMissing sentinel to be preserved; got: %v", err)
+	}
+	if strings.Contains(err.Error(), "fl-r046-boundary-rollback-fault") {
+		t.Fatalf("raw rollback error leaked into returned error: %v", err)
+	}
+	if strings.Contains(appLog.String(), "fl-r046-boundary-rollback-fault") {
+		t.Fatalf("raw rollback error leaked into app log: %s", appLog.String())
 	}
 }
 
@@ -517,9 +704,9 @@ func TestFL03TransactionBoundaryTransientRecovery(t *testing.T) {
 	runID := f.insertRunning(t)
 	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
 
-	formats := 0
+	var formats int64
 	pool := &flBoundaryPool{
-		failRemaining: 1,
+		failBeginRemaining: 1,
 		cause: flBoundaryError{
 			formatted: &formats,
 			detail:    "fl-r046-transient-boundary-fault@tcp(127.0.0.1:3306)/app",
@@ -556,6 +743,53 @@ func TestFL03TransactionBoundaryTransientRecovery(t *testing.T) {
 	}
 }
 
+// TestFL03TransactionBoundaryCommitTransientRecovery verifies that a transient Commit
+// failure retries and succeeds on the subsequent attempt, committing terminal status and advancing checkpoint.
+func TestFL03TransactionBoundaryCommitTransientRecovery(t *testing.T) {
+	f := setupFLFixture(t)
+	job := f.job(t)
+	runID := f.insertRunning(t)
+	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
+
+	var formats int64
+	pool := &flBoundaryPool{
+		failCommitRemaining: 1,
+		commitCause: flBoundaryError{
+			formatted: &formats,
+			detail:    "fl-r046-commit-transient-fault@tcp(127.0.0.1:3306)/app",
+		},
+	}
+	installBoundaryPool(t, pool)
+
+	origDelay := ordinaryFinalizeRetryDelay
+	ordinaryFinalizeRetryDelay = time.Millisecond
+	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
+
+	checkpoint := time.Now().UTC().Truncate(time.Second)
+	err := finalizeOrdinaryRun(run, job, "success", "", "{}", time.Now(), &checkpoint)
+	if err != nil {
+		t.Fatalf("expected commit transient recovery to succeed; got err: %v", err)
+	}
+	if pool.failedCommits != 1 {
+		t.Fatalf("expected exactly 1 failed commit attempt; got %d", pool.failedCommits)
+	}
+	if formats != 0 {
+		t.Fatalf("raw commit boundary error was formatted %d times during transient failure", formats)
+	}
+
+	stored := f.runRow(t, run.ID)
+	reloaded := f.job(t)
+	if stored.Status != "success" {
+		t.Fatalf("run status: want 'success', got %q", stored.Status)
+	}
+	if reloaded.LastRunAt == nil || !reloaded.LastRunAt.Equal(checkpoint) {
+		t.Fatalf("checkpoint must advance to proposed checkpoint %v; got %v", checkpoint, reloaded.LastRunAt)
+	}
+	if reloaded.LastRunStatus != "success" {
+		t.Fatalf("job last_run_status: want 'success', got %q", reloaded.LastRunStatus)
+	}
+}
+
 // TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint verifies that when boundary
 // retries are exhausted, a nonnil proposed checkpoint demonstrably does NOT advance,
 // preserving the existing checkpoint (or nil) and marking the run as error via fallback.
@@ -569,12 +803,13 @@ func TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint(t *testing.T) 
 		t.Fatalf("fixture job initial LastRunAt should be nil; got %v", job.LastRunAt)
 	}
 
-	formats := 0
+	var formats int64
+	const exhaustedMarker = "fl-r046-exhausted-boundary-fault@tcp(127.0.0.1:3306)/app"
 	pool := &flBoundaryPool{
-		failRemaining: ordinaryFinalizeAttempts,
+		failBeginRemaining: ordinaryFinalizeAttempts,
 		cause: flBoundaryError{
 			formatted: &formats,
-			detail:    "fl-r046-exhausted-boundary-fault@tcp(127.0.0.1:3306)/app",
+			detail:    exhaustedMarker,
 		},
 	}
 	installBoundaryPool(t, pool)
@@ -583,10 +818,28 @@ func TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint(t *testing.T) 
 	ordinaryFinalizeRetryDelay = time.Millisecond
 	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
 
+	appLog := withAppLog(t)
 	checkpoint := time.Now().UTC().Truncate(time.Second)
 	err := finalizeOrdinaryRun(run, job, "success", "", "{}", time.Now(), &checkpoint)
 	if err == nil {
 		t.Fatal("expected exhausted retries to return error; got nil")
+	}
+
+	// Semantic & attempt observations (R046-R2-02)
+	if pool.failedBegins != ordinaryFinalizeAttempts {
+		t.Fatalf("expected exactly %d failed begin attempts; got %d", ordinaryFinalizeAttempts, pool.failedBegins)
+	}
+	if formats != 0 {
+		t.Fatalf("BOUNDARY EXHAUSTED DETECTOR FAILED: raw boundary error formatted %d times", formats)
+	}
+	if !errors.Is(err, errFinalizeWrite) {
+		t.Fatalf("expected bounded sentinel errFinalizeWrite; got: %v", err)
+	}
+	if strings.Contains(err.Error(), exhaustedMarker) {
+		t.Fatalf("raw boundary marker %q escaped into returned error: %v", exhaustedMarker, err)
+	}
+	if strings.Contains(appLog.String(), exhaustedMarker) {
+		t.Fatalf("raw boundary marker %q escaped into app log: %s", exhaustedMarker, appLog.String())
 	}
 
 	reloadedJob := f.job(t)
@@ -769,9 +1022,9 @@ func TestFL05TransactionBoundaryNormalizationDetector(t *testing.T) {
 	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
 
 	const detectorMarker = "fl05-detector-boundary-driver-leak-marker"
-	formats := 0
+	var formats int64
 	pool := &flBoundaryPool{
-		failRemaining: ordinaryFinalizeAttempts,
+		failBeginRemaining: ordinaryFinalizeAttempts,
 		cause: flBoundaryError{
 			formatted: &formats,
 			detail:    detectorMarker,

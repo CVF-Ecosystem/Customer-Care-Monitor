@@ -1,4 +1,4 @@
-# Project Documentation Index
+﻿# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -129,6 +129,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Reviewer-only original Statement pool installation/cleanup diagnostic; mount in exact-repair archive only.: `docs/reviews/probes/r046_r1_pool_isolation_probe_test.go`
 - R046-R1 repair evidence: maintained transaction-boundary test suite and mutation campaign receipts.: `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R1_REPAIR_2026-10-04.md`
 - R046-R1 machine receipts: transaction boundary tests, mutation run details, and byte-restoration audit.: `docs/reviews/probes/r046_r1_worker_receipts.json`
+- R046-R2 repair evidence: statement isolation, complete transaction boundary hooks, and mutation campaign receipts.: `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R2_REPAIR_2026-10-04.md`
+- R046-R2 machine receipts: statement pool isolation test, transaction boundary commit/rollback hooks, fresh mutation campaign, and regression selection.: `docs/reviews/probes/r046_r2_worker_receipts.json`
 - R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes.: `docs/reviews/probes/r046_worker_receipts.json`
 - R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
 - Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive.: `docs/reviews/probes/r046_transaction_boundary_probe_test.go`
