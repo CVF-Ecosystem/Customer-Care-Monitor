@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex independent REVIEWER
-- Next allowed move: CCMAI-RUNTIME-046: Codex independent re-review of R046 R2 repair (commit 91da0e88118b76a68031f432da50521fe6a341b7) under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Evaluation of R046-R2-01..03 (statement isolation, complete transaction boundary commit/rollback hooks, and machine receipts). Production source preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
+- Active role: Codex ORCHESTRATOR / SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; Claude repair BUILD ownership preserved; independent Codex REVIEWER on governed return
+- Next allowed move: CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN after independent R2 re-review of exact repair91da0e88118b76a68031f432da50521fe6a341b7. R046-R2-01 statement isolation and R046-R2-02 synthetic COMMIT/rollback containment settled; R046-R2-03 worker receipt attribution/counts/prerequisite evidence remains OPEN. REVIEW_COST_ESCALATION_REQUIRED before repair round3 without an independent new root cause; no round3 BUILD dispatch. Next ORCHESTRATOR assesses and records cost/continuation disposition before further worker evidence work under unchanged seed/R2/paths/effects/Claude repair BUILD ownership. No production defect established or source/test repair requested. R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked. No real config/credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fresh planning acknowledgment (2026-10-04)
@@ -133,3 +133,17 @@ Repair BUILD commit `91da0e88118b76a68031f432da50521fe6a341b7` fulfills all requ
   - Handed back to Codex as independent `REVIEWER` with status `REVIEW_PENDING`; no Claude self-approval or FREEZE.
 
 
+
+## R2 re-review intake reconciliation (2026-10-04)
+
+Codex ORCHESTRATOR / SESSION_SYNC_STEWARD at prerequisite INTAKE detected BLOCKED_CONTINUITY_DRIFT: ownerRouting and current handoff/order/record/SPEC catalog descriptions retained R1 routing despite R2 REVIEW_PENDING handback. Reconciled those stale pointers to agreed state/header/tranche/buildCommit91da0e88118b76a68031f432da50521fe6a341b7; historical evidence retained. Doctor PASS WITH NOTE25 passed/1 warning; actual public core8a4119e11db00e774ed8e7cf7d9a8caa309e81d1, historical manifest pin26c686cc99b8be965d2760f27fe875b03376c643 unchanged; BOOTSTRAP_MIGRATION_PENDING nonblocking. Worker evidence submitted, not independently accepted; no source/test/seed changes. Independent REVIEWER acknowledgment follows synchronized preflight.
+
+## R2 independent REVIEWER acknowledgment (2026-10-04)
+
+Canonical manifest/policy/bootstrap fallback/state/memory/handoff/status/index and targeted R046 order/seed/SPEC/evidence/shared learning rehydrated after reconciliation. Codex ORCHESTRATOR / SESSION_SYNC_STEWARD -> independent REVIEWER at REVIEW/R2; Claude retains repair BUILD ownership. Actual read-only public core8a4119e11db00e774ed8e7cf7d9a8caa309e81d1, historical manifest pin unchanged, live evidence required YES; synchronized preflight7/7 PASS and doctor PASS WITH NOTE. Task-temp knowledge ingestion complete, no POST. Exact repair91da0e88118b76a68031f432da50521fe6a341b7 review next; worker claims/receipts not certified; no product repair/FREEZE.
+
+## R2 independent disposition / cost checkpoint acknowledgment (2026-10-04)
+
+Canonical state/memory/handoff/status/index rehydrated and agreed before disposition. Codex independent REVIEWER -> ORCHESTRATOR / SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; Claude repair BUILD ownership preserved. CHANGES_REQUIRED at exact repair91da0e88118b76a68031f432da50521fe6a341b7, solely R046-R2-03. R2-01 isolation and R2-02 local synthetic COMMIT/rollback containment settled. Baseline22/28, prior pool probe1/2, affected terminal/ownership18/59 and additional boundary/sink/checkpoint1/4 PASS0 SKIP; isolation mutant and three production mutants fail named assertions, byte-restored controls pass. New GORM boundary overlay mutant fails all3 subcases, restored1/4 PASS. Cached full backend build/vet PASS. Both203-file archives restored, overlays removed, no extra files, task DB/network/anonymous volume teardown and named-resource absence verified. Source/maintained tests/seeds/historical packets unchanged. Unit46 PASS14.708s; doctor PASS WITH NOTE. Review docs/reviews/CCMAI_RUNTIME_046_R2_INDEPENDENT_REREVIEW_2026-10-04.md and JSONsummary link publication checks after final Markdown change.
+
+REVIEW_COST_ESCALATION_REQUIRED: evidence-attribution/root finding repeats without an independent new product root cause. No repair round3 BUILD dispatched, no source/test repair requested. ORCHESTRATOR cost/continuation disposition is next before further worker evidence work. Remaining bounded requirements in existing R046 order; no FREEZE/push/live/governance/hosted claim. Facebook/Zalo OA accounts and prior closures preserved.
