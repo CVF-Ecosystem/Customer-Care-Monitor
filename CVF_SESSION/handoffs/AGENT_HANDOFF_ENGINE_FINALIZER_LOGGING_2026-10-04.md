@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD; Codex independent REVIEWER
-- Next allowed move: CCMAI-RUNTIME-046 BUILD repair round 1 under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD implements R046-R1-01 maintained transaction-boundary tests and R046-R1-02 mutation campaign; Codex independent R2 review afterward. R044/R045 local FREEZE and prior dispositions preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER; Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-046 REVIEW repair round 1 under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Codex independent R2 review of Claude R1 repair commit a8fb3b83cfa100f2c81b496ce40655c826a5e874; test and mutation evidence complete. R044/R045 local FREEZE and prior dispositions preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fresh planning acknowledgment (2026-10-04)
@@ -64,4 +64,24 @@ Acknowledged CHANGES_REQUIRED return from Codex independent review:
 - R046-R1-02: execute and record complete worker mutation campaign (M01 normalization bypass, M02 raw fallback log, M03 GORM sink emission) with baseline/mutated/restored SHA256, command outputs, exit codes, and restored-baseline passes.
 - Scope: test and evidence files only; production source `backend/engine/analyzer_incremental.go` is preserved as no production defect was found.
 - Preflight gates verified passing before first test edit; disposable loopback MySQL environment only; no live external network/provider calls; Facebook/Zalo OA accounts remain parked.
+
+## Claude R1 repair hand-back to independent Codex reviewer (2026-10-04)
+
+Repair BUILD commit `a8fb3b83cfa100f2c81b496ce40655c826a5e874` fulfills all requirements of repair order R1:
+- **R046-R1-01 Maintained Tests Added**:
+  - `flBoundaryPool`, `flBoundaryError`, `installBoundaryPool(t, pool)` mock transaction boundary infrastructure in `backend/engine/analyzer_finalizer_logging_test.go`.
+  - `TestFL01TransactionBoundaryUnknownErrorIsContained`: asserts raw driver `BeginTx` error triggers 0 `.Error()` calls, contains driver leak, wraps bounded sentinel `errFinalizeWrite`, and succeeds on fallback mark.
+  - `TestFL03TransactionBoundaryTransientRecovery`: asserts retry loop transparently recovers on attempt 2 after transient `BeginTx` failure and advances proposed checkpoint.
+  - `TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint`: asserts continuous `BeginTx` failure exhausts retries and does NOT advance proposed non-nil checkpoint.
+  - `TestFL05TransactionBoundaryNormalizationDetector`: dedicated detector verifying that bypassing the normalization switch immediately fails.
+- **R046-R1-02 Mutation Campaign & Receipts**:
+  - M01 (Normalization bypass): `lastErr = txErr` -> KILLED by `TestFL01TransactionBoundaryUnknownErrorIsContained` and `TestFL05TransactionBoundaryNormalizationDetector`. Restored baseline passes (23 events, 18 top-level).
+  - M02 (Raw fallback log): `%v, err` -> KILLED by `TestFL05FallbackLogDetector`. Restored baseline passes.
+  - M03 (GORM session bypass): `logger.Info` -> KILLED by `TestFL05GormSinkDetector`. Restored baseline passes.
+  - All mutants byte-restored to SHA `4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b`.
+  - Complete machine receipts saved in `docs/reviews/probes/r046_r1_worker_receipts.json`. Full report in `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R1_REPAIR_2026-10-04.md`.
+- **Preservation & Boundaries**:
+  - Production source `backend/engine/analyzer_incremental.go` is unmodified (0 diff).
+  - All test suites pass: `TestFL` (23 events, 18 top-level), `TestFL|TestOrdinary|TestOwnership` (60 events, 31 top-level).
+  - Handed back to Codex for independent R2 re-review; no Claude self-approval or FREEZE.
 
