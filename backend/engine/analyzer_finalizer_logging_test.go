@@ -8,12 +8,14 @@ package engine
 import (
 	"bytes"
 	"context"
+	"database/sql"
 	"errors"
 	"log"
 	"strings"
 	"testing"
 	"time"
 
+	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
@@ -21,6 +23,54 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
+
+// flBoundaryError is a synthetic error whose Error() method tracks how many times
+// it was formatted or converted to string, verifying raw driver error strings
+// never reach application logs or returned error messages.
+type flBoundaryError struct {
+	formatted *int
+	detail    string
+}
+
+func (e flBoundaryError) Error() string {
+	if e.formatted != nil {
+		*e.formatted++
+	}
+	if e.detail != "" {
+		return e.detail
+	}
+	return "fl-synthetic-boundary-driver-error@tcp/query-detail"
+}
+
+// flBoundaryPool wraps a gorm.ConnPool and injects synthetic transaction-boundary
+// errors on BeginTx up to failRemaining times.
+type flBoundaryPool struct {
+	gorm.ConnPool
+	failedBegins  int
+	failRemaining int
+	cause         error
+}
+
+func (p *flBoundaryPool) BeginTx(ctx context.Context, opts *sql.TxOptions) (*sql.Tx, error) {
+	if p.failRemaining > 0 {
+		p.failRemaining--
+		p.failedBegins++
+		return nil, p.cause
+	}
+	return p.ConnPool.(gorm.TxBeginner).BeginTx(ctx, opts)
+}
+
+// installBoundaryPool replaces db.DB with a session configured with pool for the
+// duration of the test, and restores original db.DB on cleanup.
+func installBoundaryPool(t *testing.T, pool *flBoundaryPool) {
+	t.Helper()
+	originalDB := db.DB
+	scoped := originalDB.Session(&gorm.Session{NewDB: true})
+	pool.ConnPool = scoped.Statement.ConnPool
+	scoped.Statement.ConnPool = pool
+	db.DB = scoped
+	t.Cleanup(func() { db.DB = originalDB })
+}
 
 // ---- helpers ----
 
@@ -204,6 +254,66 @@ func TestFL01BoundedAppFallbackLog(t *testing.T) {
 	}
 	if !strings.Contains(logOutput, run.ID) {
 		t.Fatalf("run ID %q missing from fallback log: %q", run.ID, logOutput)
+	}
+}
+
+// TestFL01TransactionBoundaryUnknownErrorIsContained exercises raw transaction-boundary
+// failure (BEGIN fault) across all retry attempts. Verifies:
+// 1. All ordinaryFinalizeAttempts transaction attempts are executed.
+// 2. The raw boundary error is never formatted (*formats == 0).
+// 3. Raw detail string never leaks to returned error or app log.
+// 4. Sentinel errFinalizeWrite is preserved and discoverable via errors.Is.
+// 5. Fallback write marks the run status="error" with bounded error message.
+func TestFL01TransactionBoundaryUnknownErrorIsContained(t *testing.T) {
+	f := setupFLFixture(t)
+	job := f.job(t)
+	runID := f.insertRunning(t)
+	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
+
+	formats := 0
+	pool := &flBoundaryPool{
+		failRemaining: ordinaryFinalizeAttempts,
+		cause: flBoundaryError{
+			formatted: &formats,
+			detail:    "fl-r046-boundary-begin-fault@tcp(127.0.0.1:3306)/app",
+		},
+	}
+	installBoundaryPool(t, pool)
+
+	origDelay := ordinaryFinalizeRetryDelay
+	ordinaryFinalizeRetryDelay = time.Millisecond
+	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
+
+	appLog := withAppLog(t)
+	checkpoint := time.Now().UTC().Truncate(time.Second)
+	err := finalizeOrdinaryRun(run, job, "success", "", "{}", time.Now(), &checkpoint)
+
+	if pool.failedBegins != ordinaryFinalizeAttempts {
+		t.Fatalf("expected %d boundary attempts; got %d", ordinaryFinalizeAttempts, pool.failedBegins)
+	}
+	if !errors.Is(err, errFinalizeWrite) {
+		t.Fatalf("boundary failure lost bounded sentinel: %v", err)
+	}
+	if formats != 0 {
+		t.Fatalf("BOUNDARY DETECTOR FAILED: raw boundary error formatted %d times", formats)
+	}
+	if strings.Contains(err.Error(), "fl-r046-boundary-begin-fault") {
+		t.Fatalf("raw boundary error leaked into returned error message: %v", err)
+	}
+	logOutput := appLog.String()
+	if strings.Contains(logOutput, "fl-r046-boundary-begin-fault") {
+		t.Fatalf("raw boundary error leaked into app log: %s", logOutput)
+	}
+	// Fallback write check
+	stored := f.runRow(t, run.ID)
+	if stored.Status != "error" {
+		t.Fatalf("fallback must mark run status as 'error'; got %q", stored.Status)
+	}
+	if stored.ErrorMessage != "Không ghi nhận được kết quả cuối của lượt chạy; mốc quét giữ nguyên." {
+		t.Fatalf("unexpected fallback error message: %q", stored.ErrorMessage)
+	}
+	if stored.FinishedAt == nil {
+		t.Fatal("fallback must set finished_at")
 	}
 }
 
@@ -398,6 +508,97 @@ func TestFL03FallbackBoundedOnFailure(t *testing.T) {
 	}
 }
 
+// TestFL03TransactionBoundaryTransientRecovery verifies that a transient raw boundary
+// failure (e.g. 1 failed BeginTx) retries and succeeds on the subsequent attempt,
+// successfully committing the terminal run and advancing the proposed checkpoint.
+func TestFL03TransactionBoundaryTransientRecovery(t *testing.T) {
+	f := setupFLFixture(t)
+	job := f.job(t)
+	runID := f.insertRunning(t)
+	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
+
+	formats := 0
+	pool := &flBoundaryPool{
+		failRemaining: 1,
+		cause: flBoundaryError{
+			formatted: &formats,
+			detail:    "fl-r046-transient-boundary-fault@tcp(127.0.0.1:3306)/app",
+		},
+	}
+	installBoundaryPool(t, pool)
+
+	origDelay := ordinaryFinalizeRetryDelay
+	ordinaryFinalizeRetryDelay = time.Millisecond
+	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
+
+	checkpoint := time.Now().UTC().Truncate(time.Second)
+	err := finalizeOrdinaryRun(run, job, "success", "", "{}", time.Now(), &checkpoint)
+	if err != nil {
+		t.Fatalf("expected transient recovery to succeed; got err: %v", err)
+	}
+	if pool.failedBegins != 1 {
+		t.Fatalf("expected exactly 1 failed begin attempt; got %d", pool.failedBegins)
+	}
+	if formats != 0 {
+		t.Fatalf("raw boundary error was formatted %d times during transient failure", formats)
+	}
+
+	stored := f.runRow(t, run.ID)
+	reloaded := f.job(t)
+	if stored.Status != "success" {
+		t.Fatalf("run status: want 'success', got %q", stored.Status)
+	}
+	if reloaded.LastRunAt == nil || !reloaded.LastRunAt.Equal(checkpoint) {
+		t.Fatalf("checkpoint must advance to proposed checkpoint %v; got %v", checkpoint, reloaded.LastRunAt)
+	}
+	if reloaded.LastRunStatus != "success" {
+		t.Fatalf("job last_run_status: want 'success', got %q", reloaded.LastRunStatus)
+	}
+}
+
+// TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint verifies that when boundary
+// retries are exhausted, a nonnil proposed checkpoint demonstrably does NOT advance,
+// preserving the existing checkpoint (or nil) and marking the run as error via fallback.
+func TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint(t *testing.T) {
+	f := setupFLFixture(t)
+	job := f.job(t)
+	runID := f.insertRunning(t)
+	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
+
+	if job.LastRunAt != nil {
+		t.Fatalf("fixture job initial LastRunAt should be nil; got %v", job.LastRunAt)
+	}
+
+	formats := 0
+	pool := &flBoundaryPool{
+		failRemaining: ordinaryFinalizeAttempts,
+		cause: flBoundaryError{
+			formatted: &formats,
+			detail:    "fl-r046-exhausted-boundary-fault@tcp(127.0.0.1:3306)/app",
+		},
+	}
+	installBoundaryPool(t, pool)
+
+	origDelay := ordinaryFinalizeRetryDelay
+	ordinaryFinalizeRetryDelay = time.Millisecond
+	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
+
+	checkpoint := time.Now().UTC().Truncate(time.Second)
+	err := finalizeOrdinaryRun(run, job, "success", "", "{}", time.Now(), &checkpoint)
+	if err == nil {
+		t.Fatal("expected exhausted retries to return error; got nil")
+	}
+
+	reloadedJob := f.job(t)
+	if reloadedJob.LastRunAt != nil {
+		t.Fatalf("checkpoint MUST NOT advance on exhausted failure; want nil, got %v", reloadedJob.LastRunAt)
+	}
+	storedRun := f.runRow(t, run.ID)
+	if storedRun.Status != "error" {
+		t.Fatalf("fallback must mark run status as 'error'; got %q", storedRun.Status)
+	}
+}
+
 // ---- FL-04: error contract ----
 
 // TestFL04SentinelDiscovery verifies errors.Is discovers both sentinels
@@ -552,6 +753,54 @@ func TestFL05GormSinkDetector(t *testing.T) {
 	// Current implementation (finalizerDB scoped session): marker must NOT appear.
 	if strings.Contains(sink, detectorMarker) {
 		t.Fatalf("FL-05 GORM DETECTOR FAILED: raw driver marker %q appeared in GORM sink (finalizerDB fix missing or reverted): %q", detectorMarker, sink)
+	}
+}
+
+// TestFL05TransactionBoundaryNormalizationDetector is a dedicated behavioral detector
+// for the transaction-boundary normalization switch in finalizeOrdinaryRun.
+// If the normalization switch is bypassed (e.g. lastErr = txErr without mapping to
+// errFinalizeWrite), this test detects and fails:
+// 1. Returned error does not match errors.Is(err, errFinalizeWrite).
+// 2. Raw boundary error leaks or is formatted.
+func TestFL05TransactionBoundaryNormalizationDetector(t *testing.T) {
+	f := setupFLFixture(t)
+	job := f.job(t)
+	runID := f.insertRunning(t)
+	run := &models.JobRun{ID: runID, TenantID: f.tenantID, JobID: f.jobID}
+
+	const detectorMarker = "fl05-detector-boundary-driver-leak-marker"
+	formats := 0
+	pool := &flBoundaryPool{
+		failRemaining: ordinaryFinalizeAttempts,
+		cause: flBoundaryError{
+			formatted: &formats,
+			detail:    detectorMarker,
+		},
+	}
+	installBoundaryPool(t, pool)
+
+	origDelay := ordinaryFinalizeRetryDelay
+	ordinaryFinalizeRetryDelay = time.Millisecond
+	defer func() { ordinaryFinalizeRetryDelay = origDelay }()
+
+	appLog := withAppLog(t)
+	err := finalizeOrdinaryRun(run, job, "success", "", "{}", time.Now(), nil)
+
+	// Invariant 1: must return bounded sentinel errFinalizeWrite
+	if !errors.Is(err, errFinalizeWrite) {
+		t.Fatalf("FL-05 BOUNDARY DETECTOR FAILED: returned error does not match errFinalizeWrite sentinel (normalization switch missing or bypassed): %v", err)
+	}
+	// Invariant 2: raw boundary error must never be formatted
+	if formats != 0 {
+		t.Fatalf("FL-05 BOUNDARY DETECTOR FAILED: raw error formatted %d times", formats)
+	}
+	// Invariant 3: raw detail marker must not appear in returned error
+	if strings.Contains(err.Error(), detectorMarker) {
+		t.Fatalf("FL-05 BOUNDARY DETECTOR FAILED: raw driver marker %q leaked in returned error: %v", detectorMarker, err)
+	}
+	// Invariant 4: raw detail marker must not appear in app log
+	if strings.Contains(appLog.String(), detectorMarker) {
+		t.Fatalf("FL-05 BOUNDARY DETECTOR FAILED: raw driver marker %q leaked in app log: %s", detectorMarker, appLog.String())
 	}
 }
 

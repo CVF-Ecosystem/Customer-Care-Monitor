@@ -1,0 +1,240 @@
+{
+  "role": "Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD",
+  "review": "docs/reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_046.md",
+  "repairOrder": "R046-R1",
+  "sourceBaselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+  "testSha256": "e56f7390fecbbf8b236320c225e5654aa47b3a7d351d7fc1e4bd65631dc6aba4",
+  "runs": [
+    {
+      "name": "baseline-r1",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 0,
+      "seconds": 6.379,
+      "counts": {
+        "pass": 23,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 18,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestFL01TransactionBoundaryUnknownErrorIsContained",
+        "--- PASS: TestFL01TransactionBoundaryUnknownErrorIsContained (0.64s)",
+        "=== RUN   TestFL03TransactionBoundaryTransientRecovery",
+        "--- PASS: TestFL03TransactionBoundaryTransientRecovery (0.68s)",
+        "=== RUN   TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint",
+        "--- PASS: TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint (0.76s)",
+        "=== RUN   TestFL05TransactionBoundaryNormalizationDetector",
+        "--- PASS: TestFL05TransactionBoundaryNormalizationDetector (0.61s)"
+      ]
+    },
+    {
+      "name": "M01-normalization-bypass",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 1,
+      "seconds": 5.920,
+      "counts": {
+        "pass": 21,
+        "fail": 2,
+        "skip": 0
+      },
+      "topLevelPass": 16,
+      "failures": [
+        "TestFL01TransactionBoundaryUnknownErrorIsContained",
+        "TestFL05TransactionBoundaryNormalizationDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:417: raw boundary error leaked into returned error wrapper: finalize job run: raw driver transaction boundary failure: fl-boundary-test-marker",
+        "--- FAIL: TestFL01TransactionBoundaryUnknownErrorIsContained (0.61s)",
+        "analyzer_finalizer_logging_test.go:582: FL-05 BOUNDARY DETECTOR FAILED: raw driver marker \"fl-boundary-detector-marker\" escaped into returned error (normalization switch missing or bypassed): finalize job run: raw driver transaction boundary failure: fl-boundary-detector-marker",
+        "--- FAIL: TestFL05TransactionBoundaryNormalizationDetector (0.60s)"
+      ]
+    },
+    {
+      "name": "M01-normalization-bypass-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 0,
+      "seconds": 6.104,
+      "counts": {
+        "pass": 23,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 18,
+      "failures": [],
+      "assertions": [
+        "--- PASS: TestFL01TransactionBoundaryUnknownErrorIsContained (0.63s)",
+        "--- PASS: TestFL05TransactionBoundaryNormalizationDetector (0.60s)"
+      ]
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05FallbackLogDetector$",
+      "exit": 1,
+      "seconds": 0.760,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05FallbackLogDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:526: FL-05 FALLBACK DETECTOR FAILED: raw driver marker \"fl-r046-detector-fallback-marker-05\" escaped into fallback log (fix missing or reverted): \"2026/10/04 12:44:48 [analyzer] final run write failed for job job-fl-3b174092 (attempt 1): write error\\n2026/10/04 12:44:48 [analyzer] final run write failed for job job-fl-3b174092 (attempt 2): write error\\n2026/10/04 12:44:48 [analyzer] final run write failed for job job-fl-3b174092 (attempt 3): write error\\n2026/10/04 12:44:48 [analyzer] fallback error mark failed for run a6785122-c36b-43ad-8d34-f7fa04c5e63b: write error: Error 1644 (45000): fl-r046-detector-fallback-marker-05\\n\"",
+        "--- FAIL: TestFL05FallbackLogDetector (0.75s)"
+      ]
+    },
+    {
+      "name": "M02-raw-fallback-log-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05FallbackLogDetector$",
+      "exit": 0,
+      "seconds": 0.755,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [
+        "--- PASS: TestFL05FallbackLogDetector (0.74s)"
+      ]
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05GormSinkDetector$",
+      "exit": 1,
+      "seconds": 0.812,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05GormSinkDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:554: FL-05 GORM DETECTOR FAILED: raw driver marker \"fl-r046-detector-gorm-marker-05\" appeared in GORM sink (finalizerDB fix missing or reverted)",
+        "--- FAIL: TestFL05GormSinkDetector (0.80s)"
+      ]
+    },
+    {
+      "name": "M03-gorm-session-bypass-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05GormSinkDetector$",
+      "exit": 0,
+      "seconds": 0.777,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [
+        "--- PASS: TestFL05GormSinkDetector (0.76s)"
+      ]
+    },
+    {
+      "name": "ownership-terminal-regression",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run TestFL|TestOrdinary|TestOwnership",
+      "exit": 0,
+      "seconds": 26.470,
+      "counts": {
+        "pass": 60,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 31,
+      "failures": [],
+      "assertions": []
+    },
+    {
+      "name": "build",
+      "command": "go build ./...",
+      "exit": 0,
+      "seconds": 2.115,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": []
+    },
+    {
+      "name": "vet",
+      "command": "go vet ./engine",
+      "exit": 0,
+      "seconds": 0.850,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": []
+    }
+  ],
+  "mutations": [
+    {
+      "name": "M01-normalization-bypass",
+      "replacement": {
+        "old": "\t\tswitch {\n\t\tcase txErr == nil:\n\t\t\tlastErr = nil\n\t\tcase errors.Is(txErr, errFinalizeMissing):\n\t\t\tlastErr = errFinalizeMissing\n\t\tdefault:\n\t\t\t// Unknown driver or boundary error: contains raw text that must not\n\t\t\t// reach logs or the returned error wrapper.\n\t\t\tlastErr = errFinalizeWrite\n\t\t}",
+        "new": "\t\tlastErr = txErr"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "b212ec5594d86ca7958c499b40cd7269277ccd82e9f8dd152640bdd11274cbcd",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "killingTests": [
+        "TestFL01TransactionBoundaryUnknownErrorIsContained",
+        "TestFL05TransactionBoundaryNormalizationDetector"
+      ],
+      "restoredBaselineExit": 0
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "replacement": {
+        "old": "\t\tlog.Printf(\"[analyzer] fallback error mark failed for run %s: write error\", run.ID)",
+        "new": "\t\tlog.Printf(\"[analyzer] fallback error mark failed for run %s: write error: %v\", run.ID, err)"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "558a3de54ba61312937279a901303f94975c9336e329e201cdb23e5a5c3db8ea",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "killingTests": [
+        "TestFL05FallbackLogDetector"
+      ],
+      "restoredBaselineExit": 0
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "replacement": {
+        "old": "return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Silent)})",
+        "new": "return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Info)})"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "426a427bd5dd7d378fcf489cc8128e098b52194cf34bc242206eb7b2fc7bf9d3",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "killingTests": [
+        "TestFL05GormSinkDetector"
+      ],
+      "restoredBaselineExit": 0
+    }
+  ],
+  "restorationAudit": {
+    "sourceByteRestored": true,
+    "sourceBaselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+    "gitStatusProductionSourceModified": false
+  }
+}

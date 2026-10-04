@@ -123,6 +123,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-BUILD R046 baseline/mutation/restoration/boundary probes and cleanup; synthetic only.: `docs/reviews/probes/r046_independent_summary.json`
 - Independent exact-BUILD R046 CHANGES_REQUIRED: boundary detector and worker receipts; product source unchanged.: `docs/reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md`
 - Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- R046-R1 repair evidence: maintained transaction-boundary test suite and mutation campaign receipts.: `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R1_REPAIR_2026-10-04.md`
+- R046-R1 machine receipts: transaction boundary tests, mutation run details, and byte-restoration audit.: `docs/reviews/probes/r046_r1_worker_receipts.json`
 - R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes.: `docs/reviews/probes/r046_worker_receipts.json`
 - R046 CHANGES_REQUIRED at exact Claude BUILD; bounded test/evidence R1 return, original source/seed/limits retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
 - Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive.: `docs/reviews/probes/r046_transaction_boundary_probe_test.go`

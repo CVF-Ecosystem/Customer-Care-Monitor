@@ -983,6 +983,20 @@
       "path": "docs/reviews/probes/r046_independent_summary.json",
       "status": "ACTIVE",
       "description": "Independent exact-BUILD R046 baseline/mutation/restoration/boundary probes and cleanup; synthetic only."
+    },
+    {
+      "id": "runtime046-r1-repair-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R1_REPAIR_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046-R1 repair evidence: maintained transaction-boundary test suite and mutation campaign receipts."
+    },
+    {
+      "id": "runtime046-r1-worker-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r1_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "R046-R1 machine receipts: transaction boundary tests, mutation run details, and byte-restoration audit."
     }
   ]
 }
