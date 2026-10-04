@@ -1,6 +1,6 @@
 # R045 - Local MCP job-execution contract closure order
 
-Status: DISPATCH_READY
+Status: FROZEN
 
 Date: 2026-10-04 (Asia/Saigon). R1 metadata disposition only, under project ceiling R2. Separate immutable authority: CVF_SESSION/authority/CCMAI-RUNTIME-045.json, first committed at 73e3de2f33031248f1a14fe11dcfb6e85bac1876 before this activation. Standing owner bounded local closure delegation applies; [assessment](../reviews/CCMAI_RUNTIME_044_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-04.md). No new worker or product BUILD.
 
@@ -31,4 +31,8 @@ Seed allowedPaths are authoritative: R045 order, R044 order/SPEC disposition tex
 3. If accepted, synchronize R045 REVIEW_PASS / REVIEW / FREEZE_OPEN and pass gates. Re-read continuity; acknowledge Codex CLOSER before deciding R045 and target R044 local FROZEN. Target record links closureAuthority R045 and evaluation/source; preserve original contract fields/history prefix and add closure metadata. Never alter original BUILD seed freeze prohibition.
 4. Synchronize memory/front marker/state/current handoff/order/records/status/index/catalog. Complete default, origin/main..HEAD and exact staged-set preflights, mandatory downstream gate unit suite, catalog/doctor/diff/source/seed/prior-record preservation and docs build after last Markdown edit. Commit all artifacts before declaring settled local closure. Failing/missing checks stop disposition publication; preserve failures. No Web governance receipt is needed for this local application-contract disposition, which makes no AI-governance behavior claim.
 
-Current hand-back: DISPATCH_READY / WORK_ORDER; seed committed, closure evaluation not yet performed. R044 remains REVIEW_PASS / FREEZE_OPEN. Next inherited closure REVIEW; no new BUILD or FREEZE from planning.
+Historical activation hand-back: DISPATCH_READY / WORK_ORDER; seed committed, closure evaluation not yet performed. R044 remains REVIEW_PASS / FREEZE_OPEN. Next inherited closure REVIEW; no new BUILD or FREEZE from planning.
+
+## Local disposition (2026-10-04)
+
+Bounded local contract FROZEN under separate R045 authority at exact accepted repair b4ec91ea03a9f247e209389c3792c86494eac8b3. [Closure evaluation](../reviews/CCMAI_RUNTIME_045_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md). Original BUILD/review/roles/seeds/limits and historical hand-back remain attributed. No new runtime/live/global/governance readiness evidence.

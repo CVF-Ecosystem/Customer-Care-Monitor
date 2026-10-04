@@ -105,18 +105,19 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved.: `docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md`
 - Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified.: `docs/reviews/probes/r044_independent_summary.json`
 - R044 separate local closure authority assessed eligible; prepare R045 metadata-only seed/order next, FREEZE_OPEN and live limits retained.: `docs/reviews/CCMAI_RUNTIME_044_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-04.md`
-- R044 R1 REVIEW_PASS / FREEZE_OPEN, both findings settled; separate local closure authority next.: `docs/work_orders/CCMAI_RUNTIME_044.md`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/work_orders/CCMAI_RUNTIME_044.md`
 - Independent exact-R1 R044 REVIEW_PASS: maintained notification tests, receipt audit, detector/restored evidence and preserved limits; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md`
 - Independent R044 R1 source/diff/hash audit, synthetic suites, applied detectors/restoration, incidents and task cleanup.: `docs/reviews/probes/r044_r1_independent_summary.json`
 - R044 repair round 1 worker evidence: maintained notification-tail regression, detector controls, recovered and new mutation receipts; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md`
 - R044 repair round 1 machine receipts: exact replacements, full hashes, counts, named failures, restoration results and incidents; no raw logs.: `docs/reviews/probes/r044_r1_worker_receipts.json`
-- R044 R1 REVIEW_PASS record: independent evidence, exact repair commit, seed/roles unchanged; FREEZE_OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
 - Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call.: `docs/reviews/probes/r044_notification_probe_test.go`
 - Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
 - R044 unchanged local contract independently R1 REVIEW_PASS / FREEZE_OPEN; historical limits retained.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
 - Separate R045 R1 metadata-only closure authority for accepted R044; committed before activation, no source/runtime/live effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-045.json`
-- R045 DISPATCH_READY R1 local R044 closure order; LC-01..05 matrix, inherited review entry, no new BUILD/FREEZE.: `docs/work_orders/CCMAI_RUNTIME_045.md`
-- R045 WORK_ORDER/DISPATCH_READY record; committed closure seed, inherited source, closure evaluation pending.: `CVF_SESSION/tranches/CCMAI-RUNTIME-045.json`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/reviews/CCMAI_RUNTIME_045_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/work_orders/CCMAI_RUNTIME_045.md`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-045.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

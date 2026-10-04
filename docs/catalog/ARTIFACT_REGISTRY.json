@@ -1,911 +1,918 @@
 {
-    "schemaVersion":  "1.0",
-    "projectName":  "Customer-Care-Monitor-AI",
-    "updatedAt":  "2026-10-04",
-    "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
-    "artifacts":  [
-{
-    "id": "historical-mcp-job-execution-handoff",
-    "family": "continuity",
-    "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
-    "status": "ACTIVE",
-    "description": "Historical R044 implementation/repair/independent acceptance and R045 seed planning acknowledgment; source/evidence limits preserved."
-},
-{
-    "id": "runtime045-local-closure-order",
-    "family": "continuity",
-    "path": "docs/work_orders/CCMAI_RUNTIME_045.md",
-    "status": "ACTIVE",
-    "description": "R045 DISPATCH_READY R1 local R044 closure order; LC-01..05 matrix, inherited review entry, no new BUILD/FREEZE."
-},
-{
-    "id": "runtime045-local-closure-record",
-    "family": "continuity",
-    "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-045.json",
-    "status": "ACTIVE",
-    "description": "R045 WORK_ORDER/DISPATCH_READY record; committed closure seed, inherited source, closure evaluation pending."
-},
-{
-    "id": "runtime045-local-closure-authority",
-    "family": "continuity",
-    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-045.json",
-    "status": "ACTIVE",
-    "description": "Separate R045 R1 metadata-only closure authority for accepted R044; committed before activation, no source/runtime/live effect."
-},
-{
-    "id": "runtime044-local-closure-authority-assessment",
-    "family": "continuity",
-    "path": "docs/reviews/CCMAI_RUNTIME_044_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-04.md",
-    "status": "ACTIVE",
-    "description": "R044 separate local closure authority assessed eligible; prepare R045 metadata-only seed/order next, FREEZE_OPEN and live limits retained."
-},
-{
-    "id": "runtime044-r1-independent-rereview",
-    "family": "continuity",
-    "path": "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
-    "status": "ACTIVE",
-    "description": "Independent exact-R1 R044 REVIEW_PASS: maintained notification tests, receipt audit, detector/restored evidence and preserved limits; FREEZE_OPEN."
-  },
-  {
-    "id": "runtime044-r1-independent-summary",
-    "family": "continuity",
-    "path": "docs/reviews/probes/r044_r1_independent_summary.json",
-    "status": "ACTIVE",
-    "description": "Independent R044 R1 source/diff/hash audit, synthetic suites, applied detectors/restoration, incidents and task cleanup."
-  },
-{
-  "id": "runtime044-independent-review",
-  "family": "continuity",
-  "path": "docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md",
-  "status": "ACTIVE",
-  "description": "Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved."
-},
-{
-  "id": "runtime044-reviewer-notification-probe",
-  "family": "continuity",
-  "path": "docs/reviews/probes/r044_notification_probe_test.go",
-  "status": "ACTIVE",
-  "description": "Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call."
-},
-{
-  "id": "runtime044-independent-summary",
-  "family": "continuity",
-  "path": "docs/reviews/probes/r044_independent_summary.json",
-  "status": "ACTIVE",
-  "description": "Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified."
-},
-{
-  "id": "runtime044-build-evidence",
-  "family": "continuity",
-  "path": "docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only."
-},
-{
-  "id": "runtime044-r1-repair-evidence",
-  "family": "continuity",
-  "path": "docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md",
-  "status": "ACTIVE",
-  "description": "R044 repair round 1 worker evidence: maintained notification-tail regression, detector controls, recovered and new mutation receipts; synthetic local application evidence only."
-},
-{
-  "id": "runtime044-r1-worker-receipts",
-  "family": "continuity",
-  "path": "docs/reviews/probes/r044_r1_worker_receipts.json",
-  "status": "ACTIVE",
-  "description": "R044 repair round 1 machine receipts: exact replacements, full hashes, counts, named failures, restoration results and incidents; no raw logs."
-},
-{
-  "id": "runtime044-spec",
-  "family": "continuity",
-  "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "R044 unchanged local contract independently R1 REVIEW_PASS / FREEZE_OPEN; historical limits retained."
-},
-{
-  "id": "runtime044-order",
-  "family": "continuity",
-  "path": "docs/work_orders/CCMAI_RUNTIME_044.md",
-  "status": "ACTIVE",
-  "description": "R044 R1 REVIEW_PASS / FREEZE_OPEN, both findings settled; separate local closure authority next."
-},
-{
-  "id": "runtime044-record",
-  "family": "continuity",
-  "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-044.json",
-  "status": "ACTIVE",
-  "description": "R044 R1 REVIEW_PASS record: independent evidence, exact repair commit, seed/roles unchanged; FREEZE_OPEN."
-},
-{
-  "id": "continuity-r043-handoff",
-  "family": "continuity",
-  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged."
-},
-{
-  "id": "runtime044-seed",
-  "family": "continuity",
-  "path": "CVF_SESSION/authority/CCMAI-RUNTIME-044.json",
-  "status": "ACTIVE",
-  "description": "Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority."
-},
-{
-  "id": "account-park-mcp-next-scope",
-  "family": "continuity",
-  "path": "docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Owner parks Facebook/Zalo OA account/live tests; source-based MCP job-execution next-scope planning, no BUILD dispatch."
-},
-{
-  "id": "runtime043-order",
-  "family": "continuity",
-  "path": "docs/work_orders/CCMAI_RUNTIME_043.md",
-  "status": "ACTIVE",
-  "description": "R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved."
-},
-{
-  "id": "runtime043-closure",
-  "family": "continuity",
-  "path": "docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "R043 local closure: R034/R041/R042 FROZEN at integrated accepted source, inherited independent proof and explicit limits."
-},
-{
-  "id": "continuity-r042-handoff",
-  "family": "continuity",
-  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Historical R042 independent acceptance/dead-link correction and R043 local closure intake."
-},
-{
-  "id": "runtime043-seed",
-  "family": "continuity",
-  "path": "CVF_SESSION/authority/CCMAI-RUNTIME-043.json",
-  "status": "ACTIVE",
-  "description": "Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof."
-},
-{
-  "id": "runtime042-independent-review",
-  "family": "continuity",
-  "path": "docs/reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Independent R042 REVIEW_PASS:9 mounted examples/6 guide blocks, source/scope checks, separate Codex dispatch link correction and preserved worker docs FAIL."
-},
-{
-  "id": "runtime042-spec",
-  "family": "continuity",
-  "path": "docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
-},
-                      {
-                        "id": "runtime042-guide",
-                        "family": "continuity",
-                        "path": "docs/guide/pancake-offline-proof.md",
-                        "status": "ACTIVE",
-                        "description": "Vietnamese operator guide for the offline Pancake proof CLI: flags, exits, synthetic inventory schema, limits and unverified items; synthetic only."
-                      },
-                      {
-                        "id": "runtime042-sample",
-                        "family": "continuity",
-                        "path": "docs/examples/pancake-proof/synthetic-inventory.json",
-                        "status": "ACTIVE",
-                        "description": "Hand-authored synthetic expected-inventory sample for the offline proof CLI; no real data."
-                      },
-                      {
-                        "id": "runtime042-build",
-                        "family": "continuity",
-                        "path": "docs/reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "R042 BUILD evidence: DU matrix, finite synthetic CLI smoke exits/outputs, protected-path equality, retained limits; REVIEW_PENDING."
-                      },
-{
-  "id": "runtime042-order",
-  "family": "continuity",
-  "path": "docs/work_orders/CCMAI_RUNTIME_042.md",
-  "status": "ACTIVE",
-  "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
-},
-{
-  "id": "continuity-r041-handoff",
-  "family": "continuity",
-  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Historical R041-R1 acceptance handoff and R042 documentation intake; platform/locality/TOCTOU limits retained."
-},
-{
-  "id": "runtime042-seed",
-  "family": "continuity",
-  "path": "CVF_SESSION/authority/CCMAI-RUNTIME-042.json",
-  "status": "ACTIVE",
-  "description": "Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD."
-},
-{
-  "id": "runtime041-r1-independent-rereview",
-  "family": "continuity",
-  "path": "docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Independent exact-R1 re-review: R041-R1-01..03 settled, REVIEW_PASS / FREEZE_OPEN; explicit platform/drive/TOCTOU limits."
-},
-{
-  "id": "runtime041-independent-review",
-  "family": "continuity",
-  "path": "docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Independent exact-BUILD R041 CHANGES_REQUIRED: mixed Windows UNC, ancestor junction admission and platform SKIP evidence; OI-04 intent clarified."
-},
-                      {
-                        "id": "continuity-r040-handoff",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical R040 scoped local FREEZE and R041 intake/seed acknowledgment."
-                      },
-                      {
-                        "id": "runtime041-spec",
-                        "family": "continuity",
-                        "path": "docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
-                      },
-                      {
-                        "id": "runtime041-build",
-                        "family": "continuity",
-                        "path": "docs/reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "R041 original BUILD and R1 worker section8 evidence; independent acceptance separate, incidents/skips/survivor preserved."
-                      },
-                      {
-                        "id": "runtime041-order",
-                        "family": "continuity",
-                        "path": "docs/work_orders/CCMAI_RUNTIME_041.md",
-                        "status": "ACTIVE",
-                        "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
-                      },
-                      {
-                        "id": "runtime041-seed",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-041.json",
-                        "status": "ACTIVE",
-                        "description": "Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects."
-                      },
-                      {
-                        "id": "continuity-r039-handoff",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical R039 acceptance and R040 closure intake/seed acknowledgment."
-                      },
-                      {
-                        "id": "runtime040-order",
-                        "family": "continuity",
-                        "path": "docs/work_orders/CCMAI_RUNTIME_040.md",
-                        "status": "ACTIVE",
-                        "description": "R040 FROZEN separate closure authority; original R037-R039 BUILD seeds unchanged."
-                      },
-                      {
-                        "id": "runtime040-closure",
-                        "family": "continuity",
-                        "path": "docs/reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "R040 local maintenance closure: R037-R039 FROZEN at exact source with independent review and preserved limits."
-                      },
-                      {
-                        "id": "runtime040-seed",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-040.json",
-                        "status": "ACTIVE",
-                        "description": "Immutable separate R040 authority for local R037-R039 disposition only."
-                      },
-                      {
-                        "id": "runtime039-independent-review",
-                        "family": "continuity",
-                        "path": "docs/reviews/CCMAI_RUNTIME_039_INDEPENDENT_REVIEW_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Independent R039 exact-BUILD REVIEW_PASS: deletion/equality, original overlay control, offline CLI6 PASS0 skips and protected paths unchanged."
-                      },
-                      {
-                        "id": "continuity-r038-handoff",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical R038 acceptance and R039 intake/seed acknowledgment; targeted lookup only."
-                      },
-                      {
-                        "id": "runtime039-spec",
-                        "family": "continuity",
-                        "path": "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical independently accepted R039 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
-                      },
-                      {
-                        "id": "runtime039-build",
-                        "family": "continuity",
-                        "path": "docs/reviews/PANCAKE_CLI_SCOPE_ASSERTION_R039_BUILD_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical Claude R039 BUILD evidence and original control failure; exact deletion independently accepted offline."
-                      },
-                      {
-                        "id": "runtime039-order",
-                        "family": "continuity",
-                        "path": "docs/work_orders/CCMAI_RUNTIME_039.md",
-                        "status": "ACTIVE",
-                        "description": "R039 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
-                      },
-                      {
-                        "id": "runtime039-seed",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-039.json",
-                        "status": "ACTIVE",
-                        "description": "Immutable Codex R039 seed committed before activation/BUILD."
-                      },
-                      {
-                        "id": "runtime038-independent-review",
-                        "family": "continuity",
-                        "path": "docs/reviews/CCMAI_RUNTIME_038_INDEPENDENT_REVIEW_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Independent exact-BUILD R038 REVIEW_PASS: exact deletion, seed/references/digests and cached compilation, zero engine tests executed."
-                      },
-                      {
-                        "id": "runtime038-spec",
-                        "family": "continuity",
-                        "path": "docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical independently accepted R038 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
-                      },
-                      {
-                        "id": "runtime038-build",
-                        "family": "continuity",
-                        "path": "docs/reviews/UNUSED_INCREMENTAL_HELPER_R038_BUILD_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical Claude R038 BUILD evidence; seven-line helper deletion independently accepted with static/compile-only limits."
-                      },
-                      {
-                        "id": "runtime038-order",
-                        "family": "continuity",
-                        "path": "docs/work_orders/CCMAI_RUNTIME_038.md",
-                        "status": "ACTIVE",
-                        "description": "R038 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
-                      },
-                      {
-                        "id": "runtime038-seed",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-038.json",
-                        "status": "ACTIVE",
-                        "description": "Immutable Codex R038 seed committed before activation/BUILD."
-                      },
-                      {
-                        "id": "continuity-r037-handoff",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical R037 acceptance and R038 intake/seed acknowledgment; targeted lookup only."
-                      },
-                      {
-                        "id": "runtime037-independent-review",
-                        "family": "continuity",
-                        "path": "docs/reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Independent R037 exact-BUILD REVIEW_PASS, entire guide comparison and source/help evidence, operational limits retained."
-                      },
-                      {
-                        "id": "runtime037-spec",
-                        "family": "continuity",
-                        "path": "docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical independently accepted R037 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
-                      },
-                      {
-                        "id": "runtime037-build",
-                        "family": "continuity",
-                        "path": "docs/reviews/S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical Claude R037 BUILD evidence, five guide replacements and failed history; exact source independently accepted, runtime NOT RUN."
-                      },
-                      {
-                        "id": "runtime037-order",
-                        "family": "continuity",
-                        "path": "docs/work_orders/CCMAI_RUNTIME_037.md",
-                        "status": "ACTIVE",
-                        "description": "R037 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
-                      },
-                      {
-                        "id": "runtime037-seed",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-037.json",
-                        "status": "ACTIVE",
-                        "description": "Immutable Codex R037 seed committed before activation/BUILD, documentation only."
-                      },
-                      {
-                        "id": "continuity-r036-handoff",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical R036 acceptance and R037 intake/seed acknowledgment, targeted lookup only."
-                      },
-                      {
-                        "id": "runtime036-independent-review",
-                        "family": "continuity",
-                        "path": "docs/reviews/CCMAI_RUNTIME_036_INDEPENDENT_REVIEW_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Independent exact-BUILD REVIEW_PASS for synthetic UI; four mutation kills, restored tests and honest limits."
-                      },
-                      {
-                        "id": "runtime036-independent-summary",
-                        "family": "continuity",
-                        "path": "docs/reviews/probes/r036_independent_summary.json",
-                        "status": "ACTIVE",
-                        "description": "Sanitized exact-BUILD digests, synthetic frontend/control/mutation observations, NOT_APPLIED and nonsemantic failures retained."
-                      },
-                      {
-                          "id": "runtime036-build",
-                          "family": "continuity",
-                          "path": "docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Historical Claude BUILD evidence: SS matrix/controls/ten mutations and failed history; exact source independently REVIEW_PASS for mocked UI only."
-                      },
-                      {
-                        "id": "runtime036-spec",
-                        "family": "continuity",
-                        "path": "docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "R036 SS-01..06 synthetic frontend contract independently REVIEW_PASS / FREEZE_OPEN, live/browser/backend limits retained."
-                      },
-                      {
-                        "id": "runtime036-order",
-                        "family": "continuity",
-                        "path": "docs/work_orders/CCMAI_RUNTIME_036.md",
-                        "status": "ACTIVE",
-                        "description": "R036 work order independently REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD, no new worker dispatched."
-                      },
-                      {
-                        "id": "runtime036-seed",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-036.json",
-                        "status": "ACTIVE",
-                        "description": "Immutable Codex dispatcher seed committed before R036 activation/BUILD."
-                      },
-                      {
-                        "id": "continuity-r035-handoff",
-                        "family": "continuity",
-                        "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
-                        "status": "ACTIVE",
-                        "description": "Historical R035 independent acceptance and R036 intake/seed acknowledgment; targeted lookup only."
-                      },
-                      {
-                          "id": "runtime035-r1-independent-rereview",
-                          "family": "continuity",
-                          "path": "docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Independent exact-R1 REVIEW_PASS; forced-error detector/prose settled, local contract and effect/NOT RUN limits retained."
-                      },
-                      {
-                          "id": "runtime035-r1-independent-summary",
-                          "family": "continuity",
-                          "path": "docs/reviews/probes/r035_r1_independent_summary.json",
-                          "status": "ACTIVE",
-                          "description": "Independent exact-R1 MCP suite/error-only mutations, named failures/digests/restoration; synthetic local evidence only."
-                      },
-                      {
-                          "id": "runtime035-independent-review",
-                          "family": "continuity",
-                          "path": "docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Historical initial R035 CHANGES_REQUIRED; R1 settles detector/prose findings without product repair."
-                      },
-                      {
-                          "id": "runtime035-error-effect-probe",
-                          "family": "continuity",
-                          "path": "docs/reviews/probes/r035_error_effect_probe_test.go",
-                          "status": "ACTIVE",
-                          "description": "Independent synthetic forced-read-error effect probe; replay in isolated exact-BUILD archive only."
-                      },
-                      {
-                          "id": "runtime035-independent-summary",
-                          "family": "continuity",
-                          "path": "docs/reviews/probes/r035_independent_summary.json",
-                          "status": "ACTIVE",
-                          "description": "Independent R035 tests, mutations, error-only survivor/probe kill, digests and restoration; synthetic only."
-                      },
-                          {
-                              "id": "runtime035-spec",
-                              "family": "continuity",
-                              "path": "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
-                              "status": "ACTIVE",
-                              "description": "R035 MT-01..06 local contract: R1 independently REVIEW_PASS / FREEZE_OPEN; no actual job dispatch."
-                          },
-                          {
-                              "id": "runtime035-build",
-                              "family": "continuity",
-                              "path": "docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md",
-                              "status": "ACTIVE",
-                              "description": "Historical worker BUILD/R1 evidence, preserved initial survivor and worker11 campaign; R1 independently accepted locally."
-                          },
-                          {
-                              "id": "runtime035-order",
-                              "family": "continuity",
-                              "path": "docs/work_orders/CCMAI_RUNTIME_035.md",
-                              "status": "ACTIVE",
-                              "description": "R035 R1 REVIEW_PASS / FREEZE_OPEN, local contract; no new worker/BUILD dispatch."
-                          },
-                          {
-                              "id": "runtime035-authority",
-                              "family": "continuity",
-                              "path": "CVF_SESSION/authority/CCMAI-RUNTIME-035.json",
-                              "status": "ACTIVE",
-                              "description": "Immutable Codex dispatcher seed committed before R035 BUILD."
-                          },
-                          {
-                              "id": "runtime035-record",
-                              "family": "continuity",
-                              "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-035.json",
-                              "status": "ACTIVE",
-                              "description": "R035 status/phase/scope/roles and exact BUILD-review contract."
-                          },
-                          {
-                              "id": "historical-runtime034-handoff",
-                              "family": "continuity",
-                              "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
-                              "status": "ACTIVE",
-                              "description": "Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only."
-                          },
-                      {
-                          "id": "runtime034-r1-independent-rereview",
-                          "family": "continuity",
-                          "path": "docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Independent R034 R1 REVIEW_PASS: offline contract accepted, repaired probes/mutations pass; FREEZE/live remain OPEN."
-                      },
-                      {
-                          "id": "runtime034-r1-independent-mutations",
-                          "family": "continuity",
-                          "path": "docs/reviews/probes/r034_r1_mutation_summary.json",
-                          "status": "ACTIVE",
-                          "description": "Independent exact-R1 synthetic mutation sample, semantic failures, hashes/restoration and initial INCONCLUSIVE attempt."
-                      },
-                      {
-                          "id": "runtime034-independent-review",
-                          "family": "continuity",
-                          "path": "docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only."
-                      },
-                      {
-                          "id": "runtime034-reviewer-probes",
-                          "family": "continuity",
-                          "path": "docs/reviews/probes/r034_reviewer_probe_test.go",
-                          "status": "ACTIVE",
-                          "description": "Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay."
-                      },
-                      {
-                          "id": "runtime034-proof-harness-spec",
-                          "family": "continuity",
-                          "path": "docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
-                      },
-                      {
-                          "id": "runtime034-proof-harness-build",
-                          "family": "continuity",
-                          "path": "docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Historical worker BUILD and R1 evidence; independent R1 re-review accepts offline contract with limits; synthetic only."
-                      },
-                      {
-                          "id": "runtime034-proof-harness-order",
-                          "family": "continuity",
-                          "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
-                          "status": "ACTIVE",
-                          "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
-                      },
-                      {
-                          "id": "historical-runtime033-closure-handoff",
-                          "family": "continuity",
-                          "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged."
-                      },
-                      {
-                          "id": "continuity-pancake-live-proof-packet",
-                          "family": "continuity",
-                          "path": "docs/reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Prepared Pancake live-proof packet; required external inputs and network/credential authority outstanding; no dispatch."
-                      },
-                      {
-                          "id":  "schema-artifact-registry",
-                          "family":  "schema",
-                          "path":  "docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json",
-                          "status":  "ACTIVE",
-                          "description":  "Closed schema reference for the Artifact Registry."
-                      },
-                      {
-                          "id":  "schema-module-registry",
-                          "family":  "schema",
-                          "path":  "docs/catalog/schemas/MODULE_REGISTRY.schema.json",
-                          "status":  "ACTIVE",
-                          "description":  "Closed schema reference for the Module Registry."
-                      },
-                      {
-                          "id":  "tool-catalog-manager",
-                          "family":  "tool",
-                          "path":  "scripts/manage_cvf_downstream_catalog.ps1",
-                          "status":  "ACTIVE",
-                          "description":  "Executable catalog manager (--check / --write)."
-                      },
-                      {
-                          "id":  "tool-catalog-library",
-                          "family":  "tool",
-                          "path":  "scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1",
-                          "status":  "ACTIVE",
-                          "description":  "Standard-library catalog validation and rendering functions."
-                      },
-                      {
-                          "id":  "tool-cvf-downstream-gate",
-                          "family":  "tool",
-                          "path":  "scripts/cvf_downstream_gate.py",
-                          "status":  "ACTIVE",
-                          "description":  "Portable downstream machine gates: provenance, continuity, tranche/role contract, claim boundary, secret hygiene, workflow coverage and catalog (CCMAI-GOV-001)."
-                      },
-                      {
-                          "id":  "tool-cvf-downstream-gate-tests",
-                          "family":  "tool",
-                          "path":  "scripts/tests/test_cvf_downstream_gate.py",
-                          "status":  "ACTIVE",
-                          "description":  "Positive and negative fixtures for the downstream machine gates."
-                      },
-                      {
-                          "id":  "manifest-cvf",
-                          "family":  "manifest",
-                          "path":  ".cvf/manifest.json",
-                          "status":  "ACTIVE",
-                          "description":  "CVF enforcement manifest."
-                      },
-                      {
-                          "id":  "policy-cvf",
-                          "family":  "policy",
-                          "path":  ".cvf/policy.json",
-                          "status":  "ACTIVE",
-                          "description":  "CVF governance policy."
-                      },
-                      {
-                          "id":  "continuity-session-memory",
-                          "family":  "continuity",
-                          "path":  "CVF_SESSION_MEMORY.md",
-                          "status":  "ACTIVE",
-                          "description":  "Project continuity front door."
-                      },
-                      {
-                          "id":  "continuity-active-session-state",
-                          "family":  "continuity",
-                          "path":  "CVF_SESSION/ACTIVE_SESSION_STATE.json",
-                          "status":  "ACTIVE",
-                          "description":  "Active session/phase/role state."
-                      },
-                      {
-    "id": "continuity-initial-handoff",
-    "family": "continuity",
-    "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
-    "status": "ACTIVE",
-    "description": "Current R045 WORK_ORDER/DISPATCH_READY handoff: separate seed committed, inherited closure REVIEW next; R044 FREEZE_OPEN, accounts parked."
-},
-                      {
-                          "id":  "truth-implementation-status",
-                          "family":  "implementation_truth",
-                          "path":  "IMPLEMENTATION_STATUS.json",
-                          "status":  "ACTIVE",
-                          "description":  "Machine implementation-truth surface."
-                      },
-                      {
-                          "id":  "view-docs-index",
-                          "family":  "generated_view",
-                          "path":  "docs/INDEX.md",
-                          "status":  "ACTIVE",
-                          "description":  "Generated documentation index."
-                      },
-                      {
-                          "id":  "view-module-catalog",
-                          "family":  "generated_view",
-                          "path":  "docs/catalog/MODULE_CATALOG.md",
-                          "status":  "ACTIVE",
-                          "description":  "Generated human module catalog."
-                      },
-                      {
-                          "id":  "family-decisions",
-                          "family":  "governed_artifact_family",
-                          "path":  "docs/decisions",
-                          "status":  "ACTIVE",
-                          "description":  "Decisions."
-                      },
-                      {
-                          "id":  "family-roadmaps",
-                          "family":  "governed_artifact_family",
-                          "path":  "docs/roadmaps",
-                          "status":  "ACTIVE",
-                          "description":  "Roadmaps."
-                      },
-                      {
-                          "id":  "family-specs",
-                          "family":  "governed_artifact_family",
-                          "path":  "docs/specs",
-                          "status":  "ACTIVE",
-                          "description":  "Specifications."
-                      },
-                      {
-                          "id":  "family-work-orders",
-                          "family":  "governed_artifact_family",
-                          "path":  "docs/work_orders",
-                          "status":  "ACTIVE",
-                          "description":  "Work orders."
-                      },
-                      {
-                          "id":  "family-reviews",
-                          "family":  "governed_artifact_family",
-                          "path":  "docs/reviews",
-                          "status":  "ACTIVE",
-                          "description":  "Reviews and evidence."
-                      },
-                      {
-                          "id":  "family-tranche-authority",
-                          "family":  "governed_artifact_family",
-                          "path":  "CVF_SESSION/authority",
-                          "status":  "ACTIVE",
-                          "description":  "Dispatcher-owned tranche authority seeds; GOV-001 is an explicit reviewer-seeded bootstrap exception."
-                      },
-                      {
-                          "id":  "family-tranche-records",
-                          "family":  "governed_artifact_family",
-                          "path":  "CVF_SESSION/tranches",
-                          "status":  "ACTIVE",
-                          "description":  "Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate."
-                      },
-                      {
-                          "id":  "continuity-learning-shell-cleanup",
-                          "family":  "continuity",
-                          "path":  "docs/reviews/learnings/feedback_shell_cleanup_and_paths.md",
-                          "status":  "ACTIVE",
-                          "description":  "Shared learning: shell cleanup and MSYS paths; read before disposable-resource cleanup."
-                      },
-                      {
-                          "id":  "continuity-learning-repair-workflow",
-                          "family":  "continuity",
-                          "path":  "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
-                          "status":  "ACTIVE",
-                          "description":  "Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR."
-                      },
-                      {
-                          "id":  "continuity-learning-downstream-gate-intake",
-                          "family":  "continuity",
-                          "path":  "docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md",
-                          "status":  "ACTIVE",
-                          "description":  "Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition."
-                      },
-                      {
-                          "id":  "continuity-learning-folder-convention",
-                          "family":  "continuity",
-                          "path":  "docs/reviews/learnings/README.md",
-                          "status":  "ACTIVE",
-                          "description":  "Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake."
-                      },
-                      {
-                          "id":  "continuity-learning-sync-coverage-layers",
-                          "family":  "continuity",
-                          "path":  "docs/reviews/learnings/feedback_sync_coverage_evidence_layers.md",
-                          "status":  "ACTIVE",
-                          "description":  "Shared sync coverage learning: conversation, message, storage, live-channel and governance evidence boundaries."
-                      },
-                      {
-                          "id":  "continuity-f02-freeze-assessment",
-                          "family":  "continuity",
-                          "path":  "docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md",
-                          "status":  "ACTIVE",
-                          "description":  "Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment."
-                      },
-                      {
-                          "id":  "f02d-message-spec",
-                          "family":  "continuity",
-                          "path":  "docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md",
-                          "status":  "ACTIVE",
-                          "description":  "Reviewed F02-D Pancake local message contract; source and evidence boundaries."
-                      },
-                      {
-                          "id":  "f02d-message-work-order",
-                          "family":  "continuity",
-                          "path":  "docs/work_orders/CCMAI_RUNTIME_030.md",
-                          "status":  "ACTIVE",
-                          "description":  "Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained."
-                      },
-                      {
-                          "id":  "continuity-pre-f02d-handoff",
-                          "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
-                          "status":  "ACTIVE",
-                          "description":  "Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only."
-                      },
-                      {
-                          "id":  "f02e-message-spec",
-                          "family":  "continuity",
-                          "path":  "docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md",
-                          "status":  "ACTIVE",
-                          "description":  "Reviewed F02-E Facebook message local safety contract and acceptance matrix."
-                      },
-                      {
-                          "id":  "f02e-message-work-order",
-                          "family":  "continuity",
-                          "path":  "docs/work_orders/CCMAI_RUNTIME_031.md",
-                          "status":  "ACTIVE",
-                          "description":  "Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained."
-                      },
-                      {
-                          "id":  "continuity-pre-f02e-handoff",
-                          "family":  "continuity",
-                          "path":  "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
-                          "status":  "ACTIVE",
-                          "description":  "Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only."
-                      },
-                      {
-                          "id": "continuity-pre-f02f-handoff",
-                          "family": "continuity",
-                          "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
-                          "status": "ACTIVE",
-                          "description": "Historical F02-E review, owner pause/resume and F02-F intake acknowledgment; targeted lookup only."
-                      },
-                      {
-                          "id": "f02f-message-spec",
-                          "family": "continuity",
-                          "path": "docs/specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Active F02-F Zalo local full-history message contract and acceptance matrix."
-                      },
-                      {
-                          "id": "f02f-message-work-order",
-                          "family": "continuity",
-                          "path": "docs/work_orders/CCMAI_RUNTIME_032.md",
-                          "status": "ACTIVE",
-                          "description": "Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained."
-                      },
-                      {
-                          "id": "f02f-independent-review",
-                          "family": "continuity",
-                          "path": "docs/reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Independent R032 exact-BUILD review: CHANGES_REQUIRED for finite cycle detector/evidence and current implementation prose."
-                      },
-                      {
-                          "id": "f02f-r1-independent-rereview",
-                          "family": "continuity",
-                          "path": "docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN."
-                      },
-                      {
-                          "id": "continuity-f02-post-r032-assessment",
-                          "family": "continuity",
-                          "path": "docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN."
-                      },
-                      {
-                          "id": "runtime033-closure-order",
-                          "family": "continuity",
-                          "path": "docs/work_orders/CCMAI_RUNTIME_033.md",
-                          "status": "ACTIVE",
-                          "description": "R033 separate local message closure authority; inherits R030-R032 independent product review."
-                      },
-                      {
-                          "id": "runtime033-closure-evidence",
-                          "family": "continuity",
-                          "path": "docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "R033 closure review and local FREEZE decision; source identity and inherited evidence limits."
-                      },
-                      {
-                          "id": "historical-f02f-handoff",
-                          "family": "continuity",
-                          "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md",
-                          "status": "ACTIVE",
-                          "description": "Historical R032 review/assessment and owner local-closure delegation acknowledgment."
-                      }
-                  ]
+  "schemaVersion": "1.0",
+  "projectName": "Customer-Care-Monitor-AI",
+  "updatedAt": "2026-10-04",
+  "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
+  "artifacts": [
+    {
+      "id": "historical-mcp-job-execution-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R044 implementation/repair/independent acceptance and R045 seed planning acknowledgment; source/evidence limits preserved."
+    },
+    {
+      "id": "runtime045-local-closure-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_045.md",
+      "status": "ACTIVE",
+      "description": "Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained."
+    },
+    {
+      "id": "runtime045-local-closure-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-045.json",
+      "status": "ACTIVE",
+      "description": "Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained."
+    },
+    {
+      "id": "runtime045-local-closure-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-045.json",
+      "status": "ACTIVE",
+      "description": "Separate R045 R1 metadata-only closure authority for accepted R044; committed before activation, no source/runtime/live effect."
+    },
+    {
+      "id": "runtime044-local-closure-authority-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_044_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R044 separate local closure authority assessed eligible; prepare R045 metadata-only seed/order next, FREEZE_OPEN and live limits retained."
+    },
+    {
+      "id": "runtime044-r1-independent-rereview",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-R1 R044 REVIEW_PASS: maintained notification tests, receipt audit, detector/restored evidence and preserved limits; FREEZE_OPEN."
+    },
+    {
+      "id": "runtime044-r1-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r044_r1_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent R044 R1 source/diff/hash audit, synthetic suites, applied detectors/restoration, incidents and task cleanup."
+    },
+    {
+      "id": "runtime044-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved."
+    },
+    {
+      "id": "runtime044-reviewer-notification-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r044_notification_probe_test.go",
+      "status": "ACTIVE",
+      "description": "Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call."
+    },
+    {
+      "id": "runtime044-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r044_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified."
+    },
+    {
+      "id": "runtime044-build-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only."
+    },
+    {
+      "id": "runtime044-r1-repair-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R044 repair round 1 worker evidence: maintained notification-tail regression, detector controls, recovered and new mutation receipts; synthetic local application evidence only."
+    },
+    {
+      "id": "runtime044-r1-worker-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r044_r1_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "R044 repair round 1 machine receipts: exact replacements, full hashes, counts, named failures, restoration results and incidents; no raw logs."
+    },
+    {
+      "id": "runtime044-spec",
+      "family": "continuity",
+      "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R044 unchanged local contract independently R1 REVIEW_PASS / FREEZE_OPEN; historical limits retained."
+    },
+    {
+      "id": "runtime044-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_044.md",
+      "status": "ACTIVE",
+      "description": "Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained."
+    },
+    {
+      "id": "runtime044-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-044.json",
+      "status": "ACTIVE",
+      "description": "Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained."
+    },
+    {
+      "id": "continuity-r043-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged."
+    },
+    {
+      "id": "runtime044-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-044.json",
+      "status": "ACTIVE",
+      "description": "Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority."
+    },
+    {
+      "id": "account-park-mcp-next-scope",
+      "family": "continuity",
+      "path": "docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Owner parks Facebook/Zalo OA account/live tests; source-based MCP job-execution next-scope planning, no BUILD dispatch."
+    },
+    {
+      "id": "runtime043-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_043.md",
+      "status": "ACTIVE",
+      "description": "R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved."
+    },
+    {
+      "id": "runtime043-closure",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R043 local closure: R034/R041/R042 FROZEN at integrated accepted source, inherited independent proof and explicit limits."
+    },
+    {
+      "id": "continuity-r042-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R042 independent acceptance/dead-link correction and R043 local closure intake."
+    },
+    {
+      "id": "runtime043-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-043.json",
+      "status": "ACTIVE",
+      "description": "Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof."
+    },
+    {
+      "id": "runtime042-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent R042 REVIEW_PASS:9 mounted examples/6 guide blocks, source/scope checks, separate Codex dispatch link correction and preserved worker docs FAIL."
+    },
+    {
+      "id": "runtime042-spec",
+      "family": "continuity",
+      "path": "docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
+    },
+    {
+      "id": "runtime042-guide",
+      "family": "continuity",
+      "path": "docs/guide/pancake-offline-proof.md",
+      "status": "ACTIVE",
+      "description": "Vietnamese operator guide for the offline Pancake proof CLI: flags, exits, synthetic inventory schema, limits and unverified items; synthetic only."
+    },
+    {
+      "id": "runtime042-sample",
+      "family": "continuity",
+      "path": "docs/examples/pancake-proof/synthetic-inventory.json",
+      "status": "ACTIVE",
+      "description": "Hand-authored synthetic expected-inventory sample for the offline proof CLI; no real data."
+    },
+    {
+      "id": "runtime042-build",
+      "family": "continuity",
+      "path": "docs/reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R042 BUILD evidence: DU matrix, finite synthetic CLI smoke exits/outputs, protected-path equality, retained limits; REVIEW_PENDING."
+    },
+    {
+      "id": "runtime042-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_042.md",
+      "status": "ACTIVE",
+      "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
+    },
+    {
+      "id": "continuity-r041-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R041-R1 acceptance handoff and R042 documentation intake; platform/locality/TOCTOU limits retained."
+    },
+    {
+      "id": "runtime042-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-042.json",
+      "status": "ACTIVE",
+      "description": "Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD."
+    },
+    {
+      "id": "runtime041-r1-independent-rereview",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-R1 re-review: R041-R1-01..03 settled, REVIEW_PASS / FREEZE_OPEN; explicit platform/drive/TOCTOU limits."
+    },
+    {
+      "id": "runtime041-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-BUILD R041 CHANGES_REQUIRED: mixed Windows UNC, ancestor junction admission and platform SKIP evidence; OI-04 intent clarified."
+    },
+    {
+      "id": "continuity-r040-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R040 scoped local FREEZE and R041 intake/seed acknowledgment."
+    },
+    {
+      "id": "runtime041-spec",
+      "family": "continuity",
+      "path": "docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
+    },
+    {
+      "id": "runtime041-build",
+      "family": "continuity",
+      "path": "docs/reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R041 original BUILD and R1 worker section8 evidence; independent acceptance separate, incidents/skips/survivor preserved."
+    },
+    {
+      "id": "runtime041-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_041.md",
+      "status": "ACTIVE",
+      "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
+    },
+    {
+      "id": "runtime041-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-041.json",
+      "status": "ACTIVE",
+      "description": "Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects."
+    },
+    {
+      "id": "continuity-r039-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R039 acceptance and R040 closure intake/seed acknowledgment."
+    },
+    {
+      "id": "runtime040-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_040.md",
+      "status": "ACTIVE",
+      "description": "R040 FROZEN separate closure authority; original R037-R039 BUILD seeds unchanged."
+    },
+    {
+      "id": "runtime040-closure",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R040 local maintenance closure: R037-R039 FROZEN at exact source with independent review and preserved limits."
+    },
+    {
+      "id": "runtime040-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-040.json",
+      "status": "ACTIVE",
+      "description": "Immutable separate R040 authority for local R037-R039 disposition only."
+    },
+    {
+      "id": "runtime039-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_039_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent R039 exact-BUILD REVIEW_PASS: deletion/equality, original overlay control, offline CLI6 PASS0 skips and protected paths unchanged."
+    },
+    {
+      "id": "continuity-r038-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R038 acceptance and R039 intake/seed acknowledgment; targeted lookup only."
+    },
+    {
+      "id": "runtime039-spec",
+      "family": "continuity",
+      "path": "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical independently accepted R039 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
+    },
+    {
+      "id": "runtime039-build",
+      "family": "continuity",
+      "path": "docs/reviews/PANCAKE_CLI_SCOPE_ASSERTION_R039_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical Claude R039 BUILD evidence and original control failure; exact deletion independently accepted offline."
+    },
+    {
+      "id": "runtime039-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_039.md",
+      "status": "ACTIVE",
+      "description": "R039 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
+    },
+    {
+      "id": "runtime039-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-039.json",
+      "status": "ACTIVE",
+      "description": "Immutable Codex R039 seed committed before activation/BUILD."
+    },
+    {
+      "id": "runtime038-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_038_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-BUILD R038 REVIEW_PASS: exact deletion, seed/references/digests and cached compilation, zero engine tests executed."
+    },
+    {
+      "id": "runtime038-spec",
+      "family": "continuity",
+      "path": "docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical independently accepted R038 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
+    },
+    {
+      "id": "runtime038-build",
+      "family": "continuity",
+      "path": "docs/reviews/UNUSED_INCREMENTAL_HELPER_R038_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical Claude R038 BUILD evidence; seven-line helper deletion independently accepted with static/compile-only limits."
+    },
+    {
+      "id": "runtime038-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_038.md",
+      "status": "ACTIVE",
+      "description": "R038 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
+    },
+    {
+      "id": "runtime038-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-038.json",
+      "status": "ACTIVE",
+      "description": "Immutable Codex R038 seed committed before activation/BUILD."
+    },
+    {
+      "id": "continuity-r037-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R037 acceptance and R038 intake/seed acknowledgment; targeted lookup only."
+    },
+    {
+      "id": "runtime037-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent R037 exact-BUILD REVIEW_PASS, entire guide comparison and source/help evidence, operational limits retained."
+    },
+    {
+      "id": "runtime037-spec",
+      "family": "continuity",
+      "path": "docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical independently accepted R037 SPEC; local disposition FROZEN under R040, original evidence/limits preserved."
+    },
+    {
+      "id": "runtime037-build",
+      "family": "continuity",
+      "path": "docs/reviews/S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical Claude R037 BUILD evidence, five guide replacements and failed history; exact source independently accepted, runtime NOT RUN."
+    },
+    {
+      "id": "runtime037-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_037.md",
+      "status": "ACTIVE",
+      "description": "R037 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained."
+    },
+    {
+      "id": "runtime037-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-037.json",
+      "status": "ACTIVE",
+      "description": "Immutable Codex R037 seed committed before activation/BUILD, documentation only."
+    },
+    {
+      "id": "continuity-r036-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R036 acceptance and R037 intake/seed acknowledgment, targeted lookup only."
+    },
+    {
+      "id": "runtime036-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_036_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-BUILD REVIEW_PASS for synthetic UI; four mutation kills, restored tests and honest limits."
+    },
+    {
+      "id": "runtime036-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r036_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Sanitized exact-BUILD digests, synthetic frontend/control/mutation observations, NOT_APPLIED and nonsemantic failures retained."
+    },
+    {
+      "id": "runtime036-build",
+      "family": "continuity",
+      "path": "docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical Claude BUILD evidence: SS matrix/controls/ten mutations and failed history; exact source independently REVIEW_PASS for mocked UI only."
+    },
+    {
+      "id": "runtime036-spec",
+      "family": "continuity",
+      "path": "docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R036 SS-01..06 synthetic frontend contract independently REVIEW_PASS / FREEZE_OPEN, live/browser/backend limits retained."
+    },
+    {
+      "id": "runtime036-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_036.md",
+      "status": "ACTIVE",
+      "description": "R036 work order independently REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD, no new worker dispatched."
+    },
+    {
+      "id": "runtime036-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-036.json",
+      "status": "ACTIVE",
+      "description": "Immutable Codex dispatcher seed committed before R036 activation/BUILD."
+    },
+    {
+      "id": "continuity-r035-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R035 independent acceptance and R036 intake/seed acknowledgment; targeted lookup only."
+    },
+    {
+      "id": "runtime035-r1-independent-rereview",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-R1 REVIEW_PASS; forced-error detector/prose settled, local contract and effect/NOT RUN limits retained."
+    },
+    {
+      "id": "runtime035-r1-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r035_r1_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-R1 MCP suite/error-only mutations, named failures/digests/restoration; synthetic local evidence only."
+    },
+    {
+      "id": "runtime035-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical initial R035 CHANGES_REQUIRED; R1 settles detector/prose findings without product repair."
+    },
+    {
+      "id": "runtime035-error-effect-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r035_error_effect_probe_test.go",
+      "status": "ACTIVE",
+      "description": "Independent synthetic forced-read-error effect probe; replay in isolated exact-BUILD archive only."
+    },
+    {
+      "id": "runtime035-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r035_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent R035 tests, mutations, error-only survivor/probe kill, digests and restoration; synthetic only."
+    },
+    {
+      "id": "runtime035-spec",
+      "family": "continuity",
+      "path": "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R035 MT-01..06 local contract: R1 independently REVIEW_PASS / FREEZE_OPEN; no actual job dispatch."
+    },
+    {
+      "id": "runtime035-build",
+      "family": "continuity",
+      "path": "docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical worker BUILD/R1 evidence, preserved initial survivor and worker11 campaign; R1 independently accepted locally."
+    },
+    {
+      "id": "runtime035-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_035.md",
+      "status": "ACTIVE",
+      "description": "R035 R1 REVIEW_PASS / FREEZE_OPEN, local contract; no new worker/BUILD dispatch."
+    },
+    {
+      "id": "runtime035-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-035.json",
+      "status": "ACTIVE",
+      "description": "Immutable Codex dispatcher seed committed before R035 BUILD."
+    },
+    {
+      "id": "runtime035-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-035.json",
+      "status": "ACTIVE",
+      "description": "R035 status/phase/scope/roles and exact BUILD-review contract."
+    },
+    {
+      "id": "historical-runtime034-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only."
+    },
+    {
+      "id": "runtime034-r1-independent-rereview",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent R034 R1 REVIEW_PASS: offline contract accepted, repaired probes/mutations pass; FREEZE/live remain OPEN."
+    },
+    {
+      "id": "runtime034-r1-independent-mutations",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r034_r1_mutation_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-R1 synthetic mutation sample, semantic failures, hashes/restoration and initial INCONCLUSIVE attempt."
+    },
+    {
+      "id": "runtime034-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only."
+    },
+    {
+      "id": "runtime034-reviewer-probes",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r034_reviewer_probe_test.go",
+      "status": "ACTIVE",
+      "description": "Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay."
+    },
+    {
+      "id": "runtime034-proof-harness-spec",
+      "family": "continuity",
+      "path": "docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved."
+    },
+    {
+      "id": "runtime034-proof-harness-build",
+      "family": "continuity",
+      "path": "docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical worker BUILD and R1 evidence; independent R1 re-review accepts offline contract with limits; synthetic only."
+    },
+    {
+      "id": "runtime034-proof-harness-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_034.md",
+      "status": "ACTIVE",
+      "description": "Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved."
+    },
+    {
+      "id": "historical-runtime033-closure-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged."
+    },
+    {
+      "id": "continuity-pancake-live-proof-packet",
+      "family": "continuity",
+      "path": "docs/reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Prepared Pancake live-proof packet; required external inputs and network/credential authority outstanding; no dispatch."
+    },
+    {
+      "id": "schema-artifact-registry",
+      "family": "schema",
+      "path": "docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json",
+      "status": "ACTIVE",
+      "description": "Closed schema reference for the Artifact Registry."
+    },
+    {
+      "id": "schema-module-registry",
+      "family": "schema",
+      "path": "docs/catalog/schemas/MODULE_REGISTRY.schema.json",
+      "status": "ACTIVE",
+      "description": "Closed schema reference for the Module Registry."
+    },
+    {
+      "id": "tool-catalog-manager",
+      "family": "tool",
+      "path": "scripts/manage_cvf_downstream_catalog.ps1",
+      "status": "ACTIVE",
+      "description": "Executable catalog manager (--check / --write)."
+    },
+    {
+      "id": "tool-catalog-library",
+      "family": "tool",
+      "path": "scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1",
+      "status": "ACTIVE",
+      "description": "Standard-library catalog validation and rendering functions."
+    },
+    {
+      "id": "tool-cvf-downstream-gate",
+      "family": "tool",
+      "path": "scripts/cvf_downstream_gate.py",
+      "status": "ACTIVE",
+      "description": "Portable downstream machine gates: provenance, continuity, tranche/role contract, claim boundary, secret hygiene, workflow coverage and catalog (CCMAI-GOV-001)."
+    },
+    {
+      "id": "tool-cvf-downstream-gate-tests",
+      "family": "tool",
+      "path": "scripts/tests/test_cvf_downstream_gate.py",
+      "status": "ACTIVE",
+      "description": "Positive and negative fixtures for the downstream machine gates."
+    },
+    {
+      "id": "manifest-cvf",
+      "family": "manifest",
+      "path": ".cvf/manifest.json",
+      "status": "ACTIVE",
+      "description": "CVF enforcement manifest."
+    },
+    {
+      "id": "policy-cvf",
+      "family": "policy",
+      "path": ".cvf/policy.json",
+      "status": "ACTIVE",
+      "description": "CVF governance policy."
+    },
+    {
+      "id": "continuity-session-memory",
+      "family": "continuity",
+      "path": "CVF_SESSION_MEMORY.md",
+      "status": "ACTIVE",
+      "description": "Project continuity front door."
+    },
+    {
+      "id": "continuity-active-session-state",
+      "family": "continuity",
+      "path": "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "status": "ACTIVE",
+      "description": "Active session/phase/role state."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "Current R045 WORK_ORDER/DISPATCH_READY handoff: separate seed committed, inherited closure REVIEW next; R044 FREEZE_OPEN, accounts parked."
+    },
+    {
+      "id": "truth-implementation-status",
+      "family": "implementation_truth",
+      "path": "IMPLEMENTATION_STATUS.json",
+      "status": "ACTIVE",
+      "description": "Machine implementation-truth surface."
+    },
+    {
+      "id": "view-docs-index",
+      "family": "generated_view",
+      "path": "docs/INDEX.md",
+      "status": "ACTIVE",
+      "description": "Generated documentation index."
+    },
+    {
+      "id": "view-module-catalog",
+      "family": "generated_view",
+      "path": "docs/catalog/MODULE_CATALOG.md",
+      "status": "ACTIVE",
+      "description": "Generated human module catalog."
+    },
+    {
+      "id": "family-decisions",
+      "family": "governed_artifact_family",
+      "path": "docs/decisions",
+      "status": "ACTIVE",
+      "description": "Decisions."
+    },
+    {
+      "id": "family-roadmaps",
+      "family": "governed_artifact_family",
+      "path": "docs/roadmaps",
+      "status": "ACTIVE",
+      "description": "Roadmaps."
+    },
+    {
+      "id": "family-specs",
+      "family": "governed_artifact_family",
+      "path": "docs/specs",
+      "status": "ACTIVE",
+      "description": "Specifications."
+    },
+    {
+      "id": "family-work-orders",
+      "family": "governed_artifact_family",
+      "path": "docs/work_orders",
+      "status": "ACTIVE",
+      "description": "Work orders."
+    },
+    {
+      "id": "family-reviews",
+      "family": "governed_artifact_family",
+      "path": "docs/reviews",
+      "status": "ACTIVE",
+      "description": "Reviews and evidence."
+    },
+    {
+      "id": "family-tranche-authority",
+      "family": "governed_artifact_family",
+      "path": "CVF_SESSION/authority",
+      "status": "ACTIVE",
+      "description": "Dispatcher-owned tranche authority seeds; GOV-001 is an explicit reviewer-seeded bootstrap exception."
+    },
+    {
+      "id": "family-tranche-records",
+      "family": "governed_artifact_family",
+      "path": "CVF_SESSION/tranches",
+      "status": "ACTIVE",
+      "description": "Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate."
+    },
+    {
+      "id": "continuity-learning-shell-cleanup",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_shell_cleanup_and_paths.md",
+      "status": "ACTIVE",
+      "description": "Shared learning: shell cleanup and MSYS paths; read before disposable-resource cleanup."
+    },
+    {
+      "id": "continuity-learning-repair-workflow",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
+      "status": "ACTIVE",
+      "description": "Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR."
+    },
+    {
+      "id": "continuity-learning-downstream-gate-intake",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md",
+      "status": "ACTIVE",
+      "description": "Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition."
+    },
+    {
+      "id": "continuity-learning-folder-convention",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/README.md",
+      "status": "ACTIVE",
+      "description": "Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake."
+    },
+    {
+      "id": "continuity-learning-sync-coverage-layers",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_sync_coverage_evidence_layers.md",
+      "status": "ACTIVE",
+      "description": "Shared sync coverage learning: conversation, message, storage, live-channel and governance evidence boundaries."
+    },
+    {
+      "id": "continuity-f02-freeze-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md",
+      "status": "ACTIVE",
+      "description": "Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment."
+    },
+    {
+      "id": "f02d-message-spec",
+      "family": "continuity",
+      "path": "docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md",
+      "status": "ACTIVE",
+      "description": "Reviewed F02-D Pancake local message contract; source and evidence boundaries."
+    },
+    {
+      "id": "f02d-message-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_030.md",
+      "status": "ACTIVE",
+      "description": "Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained."
+    },
+    {
+      "id": "continuity-pre-f02d-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
+      "status": "ACTIVE",
+      "description": "Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only."
+    },
+    {
+      "id": "f02e-message-spec",
+      "family": "continuity",
+      "path": "docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md",
+      "status": "ACTIVE",
+      "description": "Reviewed F02-E Facebook message local safety contract and acceptance matrix."
+    },
+    {
+      "id": "f02e-message-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_031.md",
+      "status": "ACTIVE",
+      "description": "Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained."
+    },
+    {
+      "id": "continuity-pre-f02e-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
+      "status": "ACTIVE",
+      "description": "Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only."
+    },
+    {
+      "id": "continuity-pre-f02f-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
+      "status": "ACTIVE",
+      "description": "Historical F02-E review, owner pause/resume and F02-F intake acknowledgment; targeted lookup only."
+    },
+    {
+      "id": "f02f-message-spec",
+      "family": "continuity",
+      "path": "docs/specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Active F02-F Zalo local full-history message contract and acceptance matrix."
+    },
+    {
+      "id": "f02f-message-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_032.md",
+      "status": "ACTIVE",
+      "description": "Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained."
+    },
+    {
+      "id": "f02f-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent R032 exact-BUILD review: CHANGES_REQUIRED for finite cycle detector/evidence and current implementation prose."
+    },
+    {
+      "id": "f02f-r1-independent-rereview",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN."
+    },
+    {
+      "id": "continuity-f02-post-r032-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN."
+    },
+    {
+      "id": "runtime033-closure-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_033.md",
+      "status": "ACTIVE",
+      "description": "R033 separate local message closure authority; inherits R030-R032 independent product review."
+    },
+    {
+      "id": "runtime033-closure-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "R033 closure review and local FREEZE decision; source identity and inherited evidence limits."
+    },
+    {
+      "id": "historical-f02f-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md",
+      "status": "ACTIVE",
+      "description": "Historical R032 review/assessment and owner local-closure delegation acknowledgment."
+    },
+    {
+      "id": "runtime045-local-closure-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_045_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained."
+    }
+  ]
 }
