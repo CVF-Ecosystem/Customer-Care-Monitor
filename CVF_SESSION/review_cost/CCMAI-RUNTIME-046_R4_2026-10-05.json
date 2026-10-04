@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-046",
+  "date": "2026-10-05",
+  "priorCheckpoint": "REVIEW_COST_ESCALATION_REQUIRED",
+  "trigger": "R3 independent review confirmed runtime evidence but retained snapshot/publication/attribution defects; no new product root cause.",
+  "ownerContinuation": "Owner said tiep after committed R3 independent CHANGES_REQUIRED disposition.",
+  "decision": "CONTINUE_ONE_METADATA_ONLY_R4",
+  "decisionRole": "Codex ORCHESTRATOR",
+  "authoritySeed": "c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267",
+  "riskCeiling": "R2",
+  "referenceRepair": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "evidenceHandback": "c09c8f62585945d3624e5a0f3ddc305bb35c4552",
+  "independentReviewCommit": "fefa846f82c99b1cdf67913f206b8712eaca42f5",
+  "openFindings": [
+    "R046-R3-01",
+    "R046-R3-02",
+    "R046-R3-03"
+  ],
+  "settledFindings": [
+    "R046-R2-01",
+    "R046-R2-02"
+  ],
+  "machineCountSubcondition": "SETTLED_BY_RECOVERED_R3_RAW_LOGS",
+  "worker": "Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD",
+  "reviewer": "Codex independent REVIEWER",
+  "repairRound4Dispatched": true,
+  "workerBuildStarted": false,
+  "executionBounds": {
+    "additionalRuntimeCampaigns": 0,
+    "additionalDetectorMutations": 0,
+    "metadataCorrectionPasses": 1,
+    "targetActiveWorkMinutes": 20,
+    "targetExcludesPublicationGates": true,
+    "failurePolicy": "Stop/return partial on source drift, prerequisite failure, new failure or required replay. No automatic fifth round."
+  },
+  "acceptanceContractChanged": false,
+  "exactArchiveConditionWaived": false,
+  "historicalProofMayRemainNotVerified": true,
+  "newSourceOrTestRepair": false,
+  "scope": "Successor R4 correction report/receipt and bounded secret-free snapshot manifests plus continuity/status/order/catalog; historical packets immutable.",
+  "prohibitedEffectsUnchanged": true,
+  "freeze": "OPEN",
+  "publicOrLiveClaim": false,
+  "planningValidation": {
+    "status": "PASS_PLANNING_ONLY_NO_WORKER_BUILD",
+    "doctor": {
+      "exit": 0,
+      "result": "PASS WITH NOTE25 passed/1warning; manifest mismatch warn-only; migration not installed"
+    },
+    "knowledgeIngest": "PASS local TEMP index; no POST",
+    "docsBuild": {
+      "command": "npm --prefix docs run docs:build",
+      "exit": 0,
+      "seconds": 18.03,
+      "notes": "After final Markdown edit; inherited env highlighting warnings"
+    },
+    "defaultPreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "prRangePreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "catalogPS51": {
+      "exit": 0
+    },
+    "catalogPS7": {
+      "exit": 0
+    },
+    "diffCheck": {
+      "exit": 0
+    },
+    "protectedPaths": {
+      "backendTreeOid": "640f3c309746131b2aaace4c2e324f70ea39ab75",
+      "equalToReferenceRepair": true,
+      "sourceSeedPriorPacketsDiff": "EMPTY"
+    },
+    "gateUnitSuite": {
+      "command": "python -B -m unittest discover -s scripts/tests -p test_cvf_downstream_gate*.py",
+      "exit": 0,
+      "tests": 46,
+      "seconds": 32.087
+    },
+    "exactStagedPreflight": {
+      "command": "python -B scripts/cvf_downstream_gate.py preflight --base HEAD",
+      "exit": 0,
+      "passed": 7,
+      "parentCommit": "fefa846f82c99b1cdf67913f206b8712eaca42f5",
+      "stagedFiles": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
+        "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R4_2026-10-05.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md",
+        "docs/work_orders/CCMAI_RUNTIME_046.md"
+      ],
+      "note": "Final receipt update restaged and same gate rerun before commit."
+    }
+  }
+}

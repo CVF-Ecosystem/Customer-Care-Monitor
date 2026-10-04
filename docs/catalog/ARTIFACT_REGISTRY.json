@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "truth-implementation-status",
@@ -926,21 +926,21 @@
       "family": "continuity",
       "path": "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "runtime046-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_046.md",
       "status": "ACTIVE",
-      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "runtime046-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
       "status": "ACTIVE",
-      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "runtime046-predecessor-handoff",
@@ -1116,6 +1116,20 @@
       "path": "docs/reviews/probes/r046_r3_review_publication.json",
       "status": "ACTIVE",
       "description": "Independent reviewer publication receipts; original worker docs failure retained."
+    },
+    {
+      "id": "runtime046-r4-cost-decision",
+      "family": "continuity",
+      "path": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R4_2026-10-05.json",
+      "status": "ACTIVE",
+      "description": "Recorded one-pass metadata-only R4 cost decision; zero runtime replay, no source or acceptance expansion."
+    },
+    {
+      "id": "runtime046-r4-cost-disposition",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Consolidated R3-01..03 disclosure/publication correction contract for Claude; independent review retained."
     }
   ]
 }

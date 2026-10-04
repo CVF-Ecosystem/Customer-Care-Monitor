@@ -73,7 +73,8 @@
     "docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md",
     "docs/reviews/probes/r046_r3_independent_audit.json",
     "docs/reviews/probes/r046_r3_independent_audit.py",
-    "docs/reviews/probes/r046_r3_review_publication.json"
+    "docs/reviews/probes/r046_r3_review_publication.json",
+    "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -108,10 +109,10 @@
     "R046-R2-01",
     "R046-R2-02"
   ],
-  "reviewCostEscalation": "REVIEW_COST_ESCALATION_REQUIRED",
+  "reviewCostEscalation": "RESOLVED_FOR_ONE_METADATA_ONLY_R4",
   "repairRound3Dispatched": true,
-  "reviewCostDisposition": "CONTINUE_ONE_EVIDENCE_ONLY_R3",
-  "reviewCostDecision": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R3_2026-10-04.json",
+  "reviewCostDisposition": "CONTINUE_ONE_METADATA_ONLY_R4",
+  "reviewCostDecision": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R4_2026-10-05.json",
   "repairRound3Started": true,
   "productReferenceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
   "priorReviewCostEscalation": "REVIEW_COST_ESCALATION_REQUIRED",
@@ -122,5 +123,8 @@
     "R046-R3-03"
   ],
   "machineCountSubcondition": "SETTLED_BY_RECOVERED_R3_RAW_LOGS",
-  "fourthRepairAuthorized": false
+  "fourthRepairAuthorized": true,
+  "repairRound4Dispatched": true,
+  "repairRound4Started": false,
+  "repairRound4ExecutionClass": "METADATA_ONLY_NO_RUNTIME_REPLAY"
 }
