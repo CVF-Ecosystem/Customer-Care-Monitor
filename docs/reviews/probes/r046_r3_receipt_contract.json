@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "status": "CONTRACT_ONLY_NOT_RUN",
+  "trancheId": "CCMAI-RUNTIME-046",
+  "repairOrder": "R046-R3",
+  "referenceSourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "requiredIdentityFields": [
+    "workerRole",
+    "sourceCommit",
+    "evidenceCommitAtHandback",
+    "productionSha256",
+    "testSha256",
+    "taskArchiveSha256",
+    "runnerOrOverlaySha256",
+    "cachedImageIds",
+    "moduleCacheReadOnly",
+    "goproxyOff",
+    "internalNetworkVerified",
+    "hostPortsAbsent"
+  ],
+  "requiredPerRunFields": [
+    "name",
+    "commandArgs",
+    "sourceSha256",
+    "testSha256",
+    "overlaySha256OrNone",
+    "exit",
+    "rawLogSha256",
+    "secretFreeLogOrExtractPath",
+    "parseableEvents",
+    "topLevelPass",
+    "subtestPass",
+    "topLevelFail",
+    "subtestFail",
+    "skipCount",
+    "passNames",
+    "failNames",
+    "skipNamesAndReasons",
+    "namedFailureOutput"
+  ],
+  "countingRules": [
+    "Count completed go test -json events carrying Test; omit package-only pass/fail events.",
+    "Top-level Test names have no slash; subtests have slash. Parent failures propagated from child failure are separate events, not independent assertions.",
+    "Numbers equal their derived name lists; running names and package exit alone do not prove completed coverage.",
+    "A parse failure, timeout, compile failure, missing selected case or unexpected SKIP is incomplete, not a behavioral kill or zero-test pass.",
+    "Commands selecting both M01 BEGIN/normalization tests must account for both names. Baseline current FL membership22 top-level/28 events is an expected cross-check, not data to paste.",
+    "Combined FL/affected regression membership40 top-level/87 events is an expected cross-check from disjoint independent R2 selection; derive actual R3 results and disclose any deviation."
+  ],
+  "requiredMutationFields": [
+    "exactReplacementOrDiff",
+    "matches",
+    "baselineSha256",
+    "mutatedSha256",
+    "restoredSha256",
+    "namedBehavioralKillOrRetainedOutcome",
+    "restorationByteEquality",
+    "restoredBaselineExit"
+  ],
+  "requiredPrerequisiteFields": [
+    "doctorExitAndNotes",
+    "preflightDefault",
+    "preflightPrRange",
+    "preflightExactStagedSet",
+    "mandatoryGateUnitSuite",
+    "catalogPS51",
+    "catalogPS7",
+    "docsBuildAfterFinalMarkdown",
+    "diffCheck"
+  ],
+  "requiredTeardownFields": [
+    "databaseRemovalExit",
+    "anonymousVolumesRemovalRequested",
+    "networkRemovalExit",
+    "namedDatabaseAbsent",
+    "namedNetworkAbsent",
+    "archiveEquality",
+    "overlayRemoved",
+    "unchangedProtectedWorktreePaths"
+  ],
+  "proseRule": "Generate totals/assertion names from actual receipt. Preserve R1/R2 attribution limits; no manually populated fake run values. This contract contains no execution receipt."
+}

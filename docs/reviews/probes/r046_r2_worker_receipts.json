@@ -1,0 +1,251 @@
+{
+  "role": "Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD",
+  "review": "docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_046.md",
+  "repairOrder": "R046-R2",
+  "sourceBaselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+  "testSha256": "06ec2c8d15d6199a679f9daaf0835db1baa7a8a63a35b79df5e9465d90f7c449",
+  "runs": [
+    {
+      "name": "baseline-r2",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL' -VerboseTests",
+      "exit": 0,
+      "seconds": 17.033,
+      "counts": {
+        "pass": 26,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 20,
+      "failures": [],
+      "assertions": [
+        "--- PASS: TestFL01BoundedAppRetryLog (2.09s)",
+        "--- PASS: TestFL01BoundedAppFallbackLog (0.81s)",
+        "--- PASS: TestFLBoundaryPoolRestoresOriginalStatement (0.66s)",
+        "    --- PASS: TestFLBoundaryPoolRestoresOriginalStatement/install_and_cleanup (0.00s)",
+        "--- PASS: TestFL01TransactionBoundaryUnknownErrorIsContained (0.67s)",
+        "--- PASS: TestFL01TransactionBoundaryCommitFaultIsContained (0.70s)",
+        "--- PASS: TestFL01TransactionBoundaryRollbackFaultIsContained (0.63s)",
+        "--- PASS: TestFL02GormSinkContained (0.51s)",
+        "    --- PASS: TestFL02GormSinkContained/info (0.03s)",
+        "    --- PASS: TestFL02GormSinkContained/warn_on_error (0.03s)",
+        "    --- PASS: TestFL02GormSinkContained/warn_on_slow (0.03s)",
+        "--- PASS: TestFL03SuccessfulTerminalWrite (0.34s)",
+        "--- PASS: TestFL03ExhaustedRetriesReturnsBoundedFailure (0.71s)",
+        "--- PASS: TestFL03MissingRowBreaksRetries (0.65s)",
+        "--- PASS: TestFL03FallbackBoundedOnFailure (0.84s)",
+        "--- PASS: TestFL03TransactionBoundaryTransientRecovery (0.71s)",
+        "--- PASS: TestFL03TransactionBoundaryCommitTransientRecovery (0.70s)",
+        "--- PASS: TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint (0.73s)",
+        "--- PASS: TestFL04SentinelDiscovery (0.73s)",
+        "    --- PASS: TestFL04SentinelDiscovery/write_failure_sentinel (0.07s)",
+        "    --- PASS: TestFL04SentinelDiscovery/missing_row_sentinel (0.01s)",
+        "--- PASS: TestFL04AdversarialErrorNotFormatted (0.78s)",
+        "--- PASS: TestFL05RetryLogDetector (0.75s)",
+        "--- PASS: TestFL05FallbackLogDetector (0.74s)",
+        "--- PASS: TestFL05GormSinkDetector (0.77s)",
+        "--- PASS: TestFL05TransactionBoundaryNormalizationDetector (0.68s)",
+        "--- PASS: TestFL06SuccessLifecyclePreservation (0.94s)",
+        "--- PASS: TestFL06CancellationLeavesNoBoundaryLeak (0.88s)"
+      ]
+    },
+    {
+      "name": "M01-normalization-bypass",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL01TransactionBoundaryUnknownErrorIsContained|TestFL05TransactionBoundaryNormalizationDetector' -VerboseTests",
+      "exit": 1,
+      "seconds": 2.536,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05TransactionBoundaryNormalizationDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:1044: FL-05 BOUNDARY DETECTOR FAILED: returned error does not match errFinalizeWrite sentinel (normalization switch missing or bypassed): finalize job run: fl05-detector-boundary-driver-leak-marker",
+        "--- FAIL: TestFL05TransactionBoundaryNormalizationDetector (0.72s)"
+      ]
+    },
+    {
+      "name": "M01-normalization-bypass-restored",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL01TransactionBoundaryUnknownErrorIsContained|TestFL05TransactionBoundaryNormalizationDetector' -VerboseTests",
+      "exit": 0,
+      "seconds": 2.5,
+      "counts": {
+        "pass": 2,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 2,
+      "failures": [],
+      "assertions": [
+        "--- PASS: TestFL01TransactionBoundaryUnknownErrorIsContained",
+        "--- PASS: TestFL05TransactionBoundaryNormalizationDetector"
+      ]
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL05FallbackLogDetector' -VerboseTests",
+      "exit": 1,
+      "seconds": 1.936,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05FallbackLogDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:980: FL-05 FALLBACK DETECTOR FAILED: raw driver marker \"fl-r046-detector-fallback-marker-05\" escaped into fallback log (fix missing or reverted): \"2026/10/04 15:20:27 [analyzer] final run write failed for job job-fl-da809ca9 (attempt 1): write error\\n2026/10/04 15:20:27 [analyzer] final run write failed for job job-fl-da809ca9 (attempt 2): write error\\n2026/10/04 15:20:27 [analyzer] final run write failed for job job-fl-da809ca9 (attempt 3): write error\\n2026/10/04 15:20:27 [analyzer] fallback error mark failed for run 2121b2d1-0aa3-43ab-8e62-be35be2524cc: write error: Error 1644 (45000): fl-r046-detector-fallback-marker-05\\n\"",
+        "--- FAIL: TestFL05FallbackLogDetector (1.91s)"
+      ]
+    },
+    {
+      "name": "M02-raw-fallback-log-restored",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL05FallbackLogDetector' -VerboseTests",
+      "exit": 0,
+      "seconds": 1.9,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [
+        "--- PASS: TestFL05FallbackLogDetector"
+      ]
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL05GormSinkDetector' -VerboseTests",
+      "exit": 1,
+      "seconds": 1.847,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05GormSinkDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:1008: FL-05 GORM DETECTOR FAILED: raw driver marker \"fl-r046-detector-gorm-marker-05\" appeared in GORM sink (finalizerDB fix missing or reverted): \"... Error 1644 (45000): fl-r046-detector-gorm-marker-05 ...\"",
+        "--- FAIL: TestFL05GormSinkDetector (1.81s)"
+      ]
+    },
+    {
+      "name": "M03-gorm-session-bypass-restored",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL05GormSinkDetector' -VerboseTests",
+      "exit": 0,
+      "seconds": 1.8,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [
+        "--- PASS: TestFL05GormSinkDetector"
+      ]
+    },
+    {
+      "name": "regression-selection",
+      "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL|TestOrdinary|TestEveryTerminal|TestTerminalRunHolds|TestAcceptedCancel|TestCancelled|TestReservation|TestOwnership' -VerboseTests",
+      "exit": 0,
+      "seconds": 68.733,
+      "counts": {
+        "pass": 64,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 34,
+      "failures": [],
+      "assertions": []
+    },
+    {
+      "name": "build",
+      "command": "go build ./...",
+      "exit": 0,
+      "seconds": 5.4,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": []
+    },
+    {
+      "name": "vet",
+      "command": "go vet ./engine",
+      "exit": 0,
+      "seconds": 2.2,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": []
+    }
+  ],
+  "mutations": [
+    {
+      "name": "M01-normalization-bypass",
+      "replacement": {
+        "old": "\t\tswitch {\n\t\tcase txErr == nil:\n\t\t\tlastErr = nil\n\t\tcase errors.Is(txErr, errFinalizeMissing):\n\t\t\tlastErr = errFinalizeMissing\n\t\tdefault:\n\t\t\t// Unknown driver or boundary error: contains raw text that must not\n\t\t\t// reach logs or the returned error wrapper.\n\t\t\tlastErr = errFinalizeWrite\n\t\t}",
+        "new": "\t\tlastErr = txErr"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "b212ec5594d86ca7958c499b40cd7269277ccd82e9f8dd152640bdd11274cbcd",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "killingTests": [
+        "TestFL05TransactionBoundaryNormalizationDetector"
+      ],
+      "restoredBaselineExit": 0
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "replacement": {
+        "old": "\t\tlog.Printf(\"[analyzer] fallback error mark failed for run %s: write error\", run.ID)",
+        "new": "\t\tlog.Printf(\"[analyzer] fallback error mark failed for run %s: write error: %v\", run.ID, err)"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "a7306bb0ec6a0b551fa0407ccde94a10b30f59f99bc9df185a4b6a93a87375a6",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "killingTests": [
+        "TestFL05FallbackLogDetector"
+      ],
+      "restoredBaselineExit": 0
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "replacement": {
+        "old": "\treturn db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Silent)})",
+        "new": "\treturn db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Info)})"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "426a427bd5dd7d378fcf489cc8128e098b52194cf34bc242206eb7b2fc7bf9d3",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "killingTests": [
+        "TestFL05GormSinkDetector"
+      ],
+      "restoredBaselineExit": 0
+    }
+  ]
+}

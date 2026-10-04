@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md", "activeTranche": "CCMAI-RUNTIME-046", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md", "activeTranche": "CCMAI-RUNTIME-046", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R046 finalizer logging work order (2026-10-04)
 
-CCMAI-RUNTIME-046 DISPATCH_READY / WORK_ORDER under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Owner manually transfers bounded finalizer driver-error logging order to Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD. Worker rehydrates, acknowledges BUILD, synchronizes continuity and passes preflight before source edits. FL-01..06 contract; Codex independent R2 review afterward. No BUILD started; R044/R045 local FREEZE and prior dispositions preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
+CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. Recorded cost disposition CONTINUE_ONE_METADATA_ONLY_R4 follows owner continuation after R3 review. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD next: rehydrate R4 decision/order, acknowledge and synchronize BUILD, pass preflight, then produce one successor correction packet for R046-R3-01..03 using verified R3 logs. No worker BUILD started yet. Zero new runtime campaigns/mutations; product/tests91da0e88118b76a68031f432da50521fe6a341b7, historical packets and seed unchanged. Preserve exact-archive condition as NOT MET/NOT VERIFIED where applicable; no implicit waiver or historical recertification. Return exact artifact SHA REVIEW_PENDING to independent Codex reviewer. No automatic fifth repair, credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority. Facebook/Zalo OA accounts parked.
 
 ## Historical R045 local MCP closure (2026-10-04)
 

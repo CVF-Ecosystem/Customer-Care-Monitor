@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "authorityKind": "OWNER_AUTHORIZED_BRANCH_PUBLICATION",
+  "date": "2026-10-05",
+  "ownerInstruction": "update github",
+  "scope": "Publish current committed history and bounded publication acknowledgment to the existing GitHub branch; no merge, deployment, release, FREEZE or runtime governance claim.",
+  "repository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "branch": "codex/gov001-f08-actions-evidence",
+  "observedRemoteBefore": "e8acfa1739842bd8455cf900d02a480bee84da11",
+  "localContentHead": "5ec32374a879dab4dbccf2d4be33b41994fd5580",
+  "role": "Codex publication COMMIT_STEWARD",
+  "riskCeiling": "R2",
+  "permittedEffects": [
+    "GitHub_git_network",
+    "fast_forward_push_existing_branch"
+  ],
+  "prohibitedEffects": [
+    "force_push",
+    "merge",
+    "deployment",
+    "freeze",
+    "real_provider_call",
+    "channel_call",
+    "real_config_or_env_read",
+    "customer_data",
+    "authority_seed_edit"
+  ],
+  "r046BuildSeedUnchanged": true,
+  "status": "AUTHORIZED_PENDING_PUSH",
+  "ciConclusion": "NOT_OBSERVED",
+  "note": "Separate explicit owner publication authority. R046 repair bounds and CHANGES_REQUIRED disposition remain unchanged. Actual push and remote SHA verified externally after this acknowledgment commit; this record is not a success receipt.",
+  "prepublicationValidation": {
+    "doctor": "PASS WITH NOTE25 passed/1warning",
+    "unitSuite": {
+      "tests": 46,
+      "seconds": 36.374,
+      "exit": 0
+    },
+    "docsBuildAfterFinalMarkdown": {
+      "seconds": 23.76,
+      "exit": 0
+    },
+    "defaultPreflight": {
+      "passed": 7,
+      "exit": 0
+    },
+    "prRangePreflight": {
+      "passed": 7,
+      "exit": 0
+    },
+    "catalogPS51": {
+      "exit": 0
+    },
+    "catalogPS7": "PASS via default/PR preflight catalog; explicit check before commit",
+    "diffCheck": {
+      "exit": 0
+    },
+    "remoteIsAncestorOfLocalHead": true,
+    "commitsAheadBeforeAcknowledgment": 15,
+    "protectedSourceSeedDiff": "EMPTY",
+    "exactStagedPreflight": "Required immediately before acknowledgment commit; authorization intent, not a retrospective execution receipt"
+  }
+}

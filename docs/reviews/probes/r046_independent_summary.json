@@ -1,0 +1,328 @@
+{
+  "sourceCommit": "985fa60b3766444a7b71a5303da6c6bc14e63bf0",
+  "runs": [
+    {
+      "name": "baseline",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 0,
+      "seconds": 266.561,
+      "counts": {
+        "pass": 19,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 14,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestFL04SentinelDiscovery/missing_row_sentinel",
+        "2026/10/04 11:42:05 [analyzer] final run write failed for job job-fl-e96216b6 (attempt 1): row missing",
+        "--- PASS: TestFL04SentinelDiscovery/missing_row_sentinel (0.01s)"
+      ],
+      "logSha256": "20499fc610664d7e4cf683adbef6ab194cf8074a0870f165af53428fe5fa8b9f"
+    },
+    {
+      "name": "M01-normalization-bypass",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 0,
+      "seconds": 82.042,
+      "counts": {
+        "pass": 19,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 14,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestFL04SentinelDiscovery/missing_row_sentinel",
+        "2026/10/04 11:43:39 [analyzer] final run write failed for job job-fl-5a8cffdc (attempt 1): row missing",
+        "--- PASS: TestFL04SentinelDiscovery/missing_row_sentinel (0.01s)"
+      ],
+      "logSha256": "8346b2f817665c989a72edcca9a6427c37cb6ed35a80158ecf13a8aa335356ee"
+    },
+    {
+      "name": "M01-normalization-bypass-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 0,
+      "seconds": 71.627,
+      "counts": {
+        "pass": 19,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 14,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestFL04SentinelDiscovery/missing_row_sentinel",
+        "2026/10/04 11:44:51 [analyzer] final run write failed for job job-fl-418a3081 (attempt 1): row missing",
+        "--- PASS: TestFL04SentinelDiscovery/missing_row_sentinel (0.01s)"
+      ],
+      "logSha256": "cf9bd3d9174722cc25422c6e89e69caea82a1b8d60d51cbcfce6a709d354e4a0"
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05FallbackLogDetector$",
+      "exit": 1,
+      "seconds": 68.913,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05FallbackLogDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:526: FL-05 FALLBACK DETECTOR FAILED: raw driver marker \"fl-r046-detector-fallback-marker-05\" escaped into fallback log (fix missing or reverted): \"2026/10/04 11:46:04 [analyzer] final run write failed for job job-fl-506a23e3 (attempt 1): write error\\n2026/10/04 11:46:04 [analyzer] final run write failed for job job-fl-506a23e3 (attempt 2): write error\\n2026/10/04 11:46:04 [analyzer] final run write failed for job job-fl-506a23e3 (attempt 3): write error\\n2026/10/04 11:46:04 [analyzer] fallback error mark failed for run 33494d7f-e207-4409-8c2b-b379dc00ba70: Error 1644 (45000): fl-r046-detector-fallback-marker-05\\n\"",
+        "--- FAIL: TestFL05FallbackLogDetector (0.57s)"
+      ],
+      "logSha256": "589b810f86095f98444fc97582b357dffb5150bbd673fc7521d315d640b71f2c"
+    },
+    {
+      "name": "M02-raw-fallback-log-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05FallbackLogDetector$",
+      "exit": 0,
+      "seconds": 67.029,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "8db211c360687ce3de130913a3489e1e173c441b80714fc085d922369466472e"
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05GormSinkDetector$",
+      "exit": 1,
+      "seconds": 62.568,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05GormSinkDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:554: FL-05 GORM DETECTOR FAILED: raw driver marker \"fl-r046-detector-gorm-marker-05\" appeared in GORM sink (finalizerDB fix missing or reverted): \"/src/engine/analyzer_incremental.go:167\\n[1.712ms] [rows:1] SELECT `id` FROM `jobs` WHERE id = 'job-fl-3141b238' AND tenant_id = 'fl-3141b238' FOR UPDATE\\n/src/engine/analyzer_incremental.go:175\\n[2.333ms] [rows:1] SELECT `id` FROM `job_runs` WHERE id = '5985f7d0-7d99-470d-807d-59921cdd1d29' AND tenant_id = 'fl-3141b238' AND job_id = 'job-fl-3141b238' AND status = 'running' FOR UPDATE\\n/src/engine/analyzer_incremental.go:183 Error 1644 (45000): fl-r046-detector-gorm-marker-05\\n[1.032ms] [rows:0] UPDATE `job_runs` SET `error_message`='',`finished_at`='2026-10-04 11:48:13.887',`status`='error',`summary`='{}' WHERE id = '5985f7d0-7d99-470d-807d-59921cdd1d29' AND tenant_id = 'fl-3141b238' AND job_id = 'job-fl-3141b238'\\n/src/engine/analyzer_incremental.go:167\\n[1.407ms] [rows:1] SELECT `id` FROM `jobs` WHERE id = 'job-fl-3141b238'",
+        "--- FAIL: TestFL05GormSinkDetector (0.74s)"
+      ],
+      "logSha256": "e0f84c2ec9ea0d7c4d8db3ebbe07ad2f7d8e80883a3eb4df474e81dfa7c52821"
+    },
+    {
+      "name": "M03-gorm-session-bypass-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05GormSinkDetector$",
+      "exit": 0,
+      "seconds": 69.721,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "726a3cc16c63a3118e16de730ea1c3fb8af7f58f499d44b592a7760befabc3dc"
+    },
+    {
+      "name": "ownership-terminal-regression",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run TestOrdinary|TestEveryTerminal|TestTerminalRunHolds|TestAcceptedCancel|TestCancelled|TestReservation|TestOwnership",
+      "exit": 0,
+      "seconds": 95.371,
+      "counts": {
+        "pass": 59,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 18,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestOrdinaryRunUnverifiableReceiptFailsClosed/missing",
+        "--- PASS: TestOrdinaryRunUnverifiableReceiptFailsClosed/missing (1.42s)",
+        "=== RUN   TestOrdinaryRunTerminalWriteFailure/job-row-missing",
+        "2026/10/04 11:50:51 [analyzer] final run write failed for job job-inc-1efffb3e (attempt 1): row missing",
+        "2026/10/04 11:50:51 [analyzer] job Inc: finalize job run: terminal write target is missing",
+        "--- PASS: TestOrdinaryRunTerminalWriteFailure/job-row-missing (0.69s)"
+      ],
+      "logSha256": "24fe26b9b72d5e1d58aa3327205cbf93b373c7f134976ea119c6ac5737f6d7aa"
+    },
+    {
+      "name": "build",
+      "command": "go build ./...",
+      "exit": 0,
+      "seconds": 106.375,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "vet",
+      "command": "go vet ./...",
+      "exit": 0,
+      "seconds": 57.049,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "boundary-probe-baseline",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestR046Reviewer",
+      "exit": 0,
+      "seconds": 79.551,
+      "counts": {
+        "pass": 2,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 2,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "64abcd72ec0162591140201a311d53e083bedeb667c4fb60085f0d52023ee249"
+    },
+    {
+      "name": "M01-with-boundary-probe",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestR046Reviewer",
+      "exit": 1,
+      "seconds": 62.676,
+      "counts": {
+        "pass": 1,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [
+        "TestR046ReviewerUnknownBeginErrorIsContained"
+      ],
+      "assertions": [
+        "--- FAIL: TestR046ReviewerUnknownBeginErrorIsContained (0.54s)",
+        "r046_transaction_boundary_probe_test.go:62: boundary failure lost bounded sentinel: finalize job run: r046-review-synthetic-boundary@tcp/query-detail"
+      ],
+      "logSha256": "2e2267a66219f386c3a4829dc3326102b9d383b189bc71b6155c72ed0b2128d3"
+    },
+    {
+      "name": "M01-with-boundary-probe-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestR046Reviewer",
+      "exit": 0,
+      "seconds": 67.739,
+      "counts": {
+        "pass": 2,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 2,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "79fa454024fd33201f0a319d2be2ce300015851da17eda11fba58c1f9c258e34"
+    }
+  ],
+  "mutations": [
+    {
+      "name": "M01-normalization-bypass",
+      "replacement": {
+        "old": "\t\tswitch {\n\t\tcase txErr == nil:\n\t\t\tlastErr = nil\n\t\tcase errors.Is(txErr, errFinalizeMissing):\n\t\t\tlastErr = errFinalizeMissing\n\t\tdefault:\n\t\t\t// Unknown driver or boundary error: contains raw text that must not\n\t\t\t// reach logs or the returned error wrapper.\n\t\t\tlastErr = errFinalizeWrite\n\t\t}",
+        "new": "\t\tlastErr = txErr"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "b212ec5594d86ca7958c499b40cd7269277ccd82e9f8dd152640bdd11274cbcd",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "SURVIVED",
+      "restoredBaselineExit": 0
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "replacement": {
+        "old": "log.Printf(\"[analyzer] fallback error mark failed for run %s: write error\", run.ID)",
+        "new": "log.Printf(\"[analyzer] fallback error mark failed for run %s: %v\", run.ID, err)"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "9f03111492aeeebddbe571895fdc80eee8a1da07063bd6ef1195ab7ad0d3fa6b",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "restoredBaselineExit": 0
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "replacement": {
+        "old": "return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Silent)})",
+        "new": "return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Info)})"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "426a427bd5dd7d378fcf489cc8128e098b52194cf34bc242206eb7b2fc7bf9d3",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "restoredBaselineExit": 0
+    },
+    {
+      "name": "M01-with-boundary-probe",
+      "replacement": {
+        "old": "\t\tswitch {\n\t\tcase txErr == nil:\n\t\t\tlastErr = nil\n\t\tcase errors.Is(txErr, errFinalizeMissing):\n\t\t\tlastErr = errFinalizeMissing\n\t\tdefault:\n\t\t\t// Unknown driver or boundary error: contains raw text that must not\n\t\t\t// reach logs or the returned error wrapper.\n\t\t\tlastErr = errFinalizeWrite\n\t\t}",
+        "new": "\t\tlastErr = txErr"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "b212ec5594d86ca7958c499b40cd7269277ccd82e9f8dd152640bdd11274cbcd",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "restoredBaselineExit": 0
+    }
+  ],
+  "isolation": "cached images/modules, internal task network, disposable synthetic MySQL, no host ports",
+  "incidents": [],
+  "cleanup": {
+    "databaseRemovalExit": 0,
+    "networkRemovalExit": 0,
+    "archiveSourceRestored": true,
+    "containerAbsent": true,
+    "networkAbsent": true
+  },
+  "reviewerProbeSha256": "35f04f814c543546b482fc90ef3b28d964bd05aa13d3025b2a77dbc8223fcf81",
+  "archiveAudit": {
+    "allExportedFilesByteEqual": true,
+    "files": 203,
+    "reviewerOverlayRemoved": true
+  },
+  "workerHashesMatchExactCommittedBlobs": true,
+  "mandatoryGateUnit": {
+    "tests": 46,
+    "exit": 0,
+    "seconds": 53.037
+  },
+  "prerequisiteNotes": {
+    "actualCore": "8a4119e11db00e774ed8e7cf7d9a8caa309e81d1",
+    "trackedManifestPin": "26c686cc99b8be965d2760f27fe875b03376c643",
+    "doctor": "PASS_WITH_NOTE",
+    "gateProfile": "NOT_INSTALLED_MIGRATION_REQUIRED",
+    "catalogBothShells": "PASS",
+    "bootstrap": "BOOTSTRAP_MIGRATION_PENDING"
+  },
+  "finalValidation": {
+    "defaultPreflight": "PASS_7_OF_7",
+    "prRangePreflight": "PASS_7_OF_7",
+    "bothShellCatalog": "PASS",
+    "doctor": "PASS_WITH_NOTE_PIN_AND_PROFILE_MIGRATION",
+    "docsBuild": "PASS_20.00s_AFTER_GO_LINK_CORRECTION",
+    "initialDocsBuild": "FAIL_GO_PROBE_LINK_RETAINED",
+    "preservationAudit": "PASS_SOURCE_SEED_WORKER_RECEIPTS_PRIOR_RECORDS_MANIFEST_POLICY",
+    "unitSuite": "PASS_46_TESTS_53.037s",
+    "githubActions": "NOT_CLAIMED"
+  }
+}

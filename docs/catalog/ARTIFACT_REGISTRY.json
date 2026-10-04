@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "Current R046 finalizer driver-error logging WORK_ORDER/DISPATCH_READY handoff; no BUILD yet."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "truth-implementation-status",
@@ -926,21 +926,21 @@
       "family": "continuity",
       "path": "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R046 finalizer-only FL-01..06 requirements; implementation not started."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "runtime046-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_046.md",
       "status": "ACTIVE",
-      "description": "R046 bounded R2 Claude BUILD / Codex independent review order; DISPATCH_READY."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "runtime046-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
       "status": "ACTIVE",
-      "description": "R046 WORK_ORDER/DISPATCH_READY record; immutable committed seed, no BUILD."
+      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
     },
     {
       "id": "runtime046-predecessor-handoff",
@@ -948,6 +948,195 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
       "status": "ACTIVE",
       "description": "Historical R045/R044 scoped local closure and R046 intake; limits retained."
+    },
+    {
+      "id": "runtime046-build-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_BUILD_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046 BUILD evidence: FL-01..06 acceptance matrix, test results and containment limits."
+    },
+    {
+      "id": "runtime046-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes."
+    },
+    {
+      "id": "runtime046-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-BUILD R046 CHANGES_REQUIRED: boundary detector and worker receipts; product source unchanged."
+    },
+    {
+      "id": "runtime046-reviewer-boundary-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_transaction_boundary_probe_test.go",
+      "status": "ACTIVE",
+      "description": "Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive."
+    },
+    {
+      "id": "runtime046-independent-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-BUILD R046 baseline/mutation/restoration/boundary probes and cleanup; synthetic only."
+    },
+    {
+      "id": "runtime046-r1-repair-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R1_REPAIR_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046-R1 repair evidence: maintained transaction-boundary test suite and mutation campaign receipts."
+    },
+    {
+      "id": "runtime046-r1-worker-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r1_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "R046-R1 machine receipts: transaction boundary tests, mutation run details, and byte-restoration audit."
+    },
+    {
+      "id": "runtime046-r1-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r1_receipt_audit.json",
+      "status": "ACTIVE",
+      "description": "R046 R1 receipt/snapshot audit: M02 calculated hash mismatch and assertion attribution limits."
+    },
+    {
+      "id": "runtime046-r1-evaluation",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged."
+    },
+    {
+      "id": "runtime046-r1-observations",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r1_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-R1 baseline/mutation/restoration and fixture-isolation observations; synthetic application only."
+    },
+    {
+      "id": "runtime046-r1-pool-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r1_pool_isolation_probe_test.go",
+      "status": "ACTIVE",
+      "description": "Reviewer-only original Statement pool installation/cleanup diagnostic; mount in exact-repair archive only."
+    },
+    {
+      "id": "runtime046-r2-repair-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R2_REPAIR_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046-R2 repair evidence: statement isolation, complete transaction boundary hooks, and mutation campaign receipts."
+    },
+    {
+      "id": "runtime046-r2-worker-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r2_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "R046-R2 machine receipts: statement pool isolation test, transaction boundary commit/rollback hooks, fresh mutation campaign, and regression selection."
+    },
+    {
+      "id": "runtime046-r2-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r2_receipt_audit.json",
+      "status": "ACTIVE",
+      "description": "R2 receipt hash/count/selection audit; historical execution attribution limits."
+    },
+    {
+      "id": "runtime046-r2-evaluation",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_R2_INDEPENDENT_REREVIEW_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046 R2 CHANGES_REQUIRED solely R2-03 at repair91da0e88; isolation/boundary settled, cost checkpoint before round3, no BUILD/FREEZE."
+    },
+    {
+      "id": "runtime046-r2-observations",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r2_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent R2 baseline/restored controls, archive/resource audit and publication checks; synthetic only."
+    },
+    {
+      "id": "runtime046-r2-sink-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r2_boundary_sink_probe_test.go",
+      "status": "ACTIVE",
+      "description": "Reviewer-only finite COMMIT/rollback GORM sink/checkpoint probe; exact archive overlay only."
+    },
+    {
+      "id": "runtime046-r3-cost-decision",
+      "family": "continuity",
+      "path": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R3_2026-10-04.json",
+      "status": "ACTIVE",
+      "description": "R046 recorded cost checkpoint disposition: one bounded evidence-only R3, source/roles/effects unchanged."
+    },
+    {
+      "id": "runtime046-r3-cost-evaluation",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_R3_COST_DISPOSITION_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046 cost assessment and execution/inheritance/failure boundaries before third repair."
+    },
+    {
+      "id": "runtime046-r3-receipt-contract",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r3_receipt_contract.json",
+      "status": "ACTIVE",
+      "description": "R3 machine receipt requirements only; NOT RUN, no execution results."
+    },
+    {
+      "id": "runtime046-r3-independent-evaluation",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "R3 independent CHANGES_REQUIRED with verified raw counts and retained evidence/attribution limits."
+    },
+    {
+      "id": "runtime046-r3-independent-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r3_independent_audit.json",
+      "status": "ACTIVE",
+      "description": "Read-only recovered R3 raw-log hashes, event counts and exact export/livecopy audit."
+    },
+    {
+      "id": "runtime046-r3-independent-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r3_independent_audit.py",
+      "status": "ACTIVE",
+      "description": "Read-only receipt recovery probe; no campaign or product changes."
+    },
+    {
+      "id": "runtime046-r3-review-publication",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r3_review_publication.json",
+      "status": "ACTIVE",
+      "description": "Independent reviewer publication receipts; original worker docs failure retained."
+    },
+    {
+      "id": "runtime046-r4-cost-decision",
+      "family": "continuity",
+      "path": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R4_2026-10-05.json",
+      "status": "ACTIVE",
+      "description": "Recorded one-pass metadata-only R4 cost decision; zero runtime replay, no source or acceptance expansion."
+    },
+    {
+      "id": "runtime046-r4-cost-disposition",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Consolidated R3-01..03 disclosure/publication correction contract for Claude; independent review retained."
+    },
+    {
+      "id": "publication-github-20261005",
+      "family": "continuity",
+      "path": "CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json",
+      "status": "ACTIVE",
+      "description": "Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim."
     }
   ]
 }
