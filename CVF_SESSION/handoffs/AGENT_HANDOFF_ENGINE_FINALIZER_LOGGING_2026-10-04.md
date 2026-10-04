@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD; Claude evidence-only REPAIR_WORKER / repair BUILD COMMIT_STEWARD next; Codex independent REVIEWER on return
-- Next allowed move: CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. Cost disposition CONTINUE_ONE_EVIDENCE_ONLY_R3 recorded after owner continuation; only R046-R2-03 remains OPEN, R2-01..02 inherited as settled at repair91da0e88118b76a68031f432da50521fe6a341b7. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD next: rehydrate canonical continuity and R3 cost/receipt contract, acknowledge and synchronize BUILD, pass preflight before evidence edits, execute at most one bounded actual worker evidence campaign, then return exact artifact SHA REVIEW_PENDING to Codex independent reviewer. No worker BUILD started yet. Preserve production/maintained tests/historical packets/seed/R2/effects/commit ownership. No automatic fourth round, real config/credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority. R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked.
+- Active role: Claude evidence-only REPAIR_WORKER / repair BUILD COMMIT_STEWARD handback; Codex independent REVIEWER next
+- Next allowed move: CCMAI-RUNTIME-046 REVIEW_PENDING / REVIEW / FREEZE_OPEN. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD completed the R3 evidence campaign on disposable exact-R2 archive with network-isolated Docker containers (--pull=never, --internal network, anonymous volume removal -v). All counts (22/28 baseline, 40/87 combined regression) and 3 mutation kills (M01, M02, M03) derived directly from machine execution; machine receipts and secret-free log extracts registered in docs/reviews/probes/r046_r3_worker_receipts.json and docs/reviews/probes/r046_r3_log_extracts.json. Codex independent REVIEWER next: re-review R046-R3 evidence packet docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R3_EVIDENCE_2026-10-04.md, receipts, publication gates, and attribution disclosures; decide review disposition. Product reference 91da0e88118b76a68031f432da50521fe6a341b7 preserved (0 backend diff). No Claude self-approval or FREEZE. No real credentials, provider calls, live channels, external network, or persistent DB. Facebook/Zalo OA accounts remain parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fresh planning acknowledgment (2026-10-04)
@@ -151,3 +151,28 @@ REVIEW_COST_ESCALATION_REQUIRED: evidence-attribution/root finding repeats witho
 ## R3 cost disposition / planning-role acknowledgment (2026-10-04)
 
 Owner continued after R2 cost checkpoint. Canonical continuity rehydrated and agreed; doctor PASS WITH NOTE, bootstrap migration pending nonblocking, task-temp knowledge ingested without POST. Codex ORCHESTRATOR assesses repeated evidence attribution finding, then WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD records CONTINUE_ONE_EVIDENCE_ONLY_R3 BEFORE worker edits. Cost decision CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R3_2026-10-04.json; review cost disposition and receipt contract registered. One bounded worker evidence campaign only, whole backend/maintained tests/historical packets/immutable seed preserved; original Claude repair BUILD ownership and independent Codex reviewer unchanged. R3 work-order section inherits settled R2-01..02 and exact-source build/vet explicitly; remaining receipt/publication/teardown evidence new. No worker BUILD started or automatic agent invocation; Claude rehydrates, acknowledges/synchronizes gated BUILD before evidence edits. CHANGES_REQUIRED/REVIEW/FREEZE_OPEN retained. Accounts/prior dispositions preserved; no fourth automatic round or external/live/governance claim. Local planning checks recorded in machine cost decision before commit.
+
+## Claude REPAIR_WORKER / repair BUILD acknowledgment (2026-10-04, R3)
+
+Role transition: Codex WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD → Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD (R3, evidence-only).
+
+Canonical continuity fully rehydrated from `.cvf/manifest.json`, `.cvf/policy.json`, `CVF_SESSION/ACTIVE_SESSION_STATE.json`, `CVF_SESSION_MEMORY.md`, `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`, `IMPLEMENTATION_STATUS.json`, `docs/INDEX.md`, cost disposition and R3 receipt contract.
+
+Verified: immutable seed `c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267` unchanged; production source `backend/engine/analyzer_incremental.go` SHA256 `4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b`; maintained test `backend/engine/analyzer_finalizer_logging_test.go` SHA256 `06ec2c8d15d6199a679f9daaf0835db1baa7a8a63a35b79df5e9465d90f7c449`; product reference commit `91da0e88118b76a68031f432da50521fe6a341b7`. Preflight 7/7 PASS. Cached Docker images `golang:1.26-alpine` sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c and `mysql:8.0` sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b available.
+
+Acknowledged sole remaining finding R046-R2-03: execute one bounded new worker evidence campaign on a disposable exact-R2 archive; derive all counts/names from actual machine receipt; record raw-log digests and secret-free extracts; include full publication/teardown proof. No source/test/seed/production/parent/tooling/push/merge/deployment/FREEZE changes. Disposable loopback Docker fixtures only; no live credential/provider/network/persistent DB. Facebook/Zalo OA accounts remain parked. Phase synchronizes to BUILD for evidence commit; product reference `91da0e88` preserved. Codex remains independent REVIEWER; no self-approval or FREEZE.
+
+## Claude R3 evidence campaign hand-back (2026-10-04)
+
+Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD completed the bounded R3 evidence campaign:
+1. Rehydrated canonical continuity and verified product identity at `91da0e88118b76a68031f432da50521fe6a341b7` with 0 backend diff.
+2. Executed one bounded Docker campaign against a disposable exact-R2 archive using cached images (`golang:1.26-alpine`, `mysql:8.0`), `--pull=never`, `--internal` loopback network `r046r3net`, readonly module cache, no host ports, and `-v` anonymous volume removal.
+3. Machine-derived results:
+   - Baseline: 22 top-level PASS, 6 subtest PASS = 28 total events (0 fail, 0 skip, exit 0).
+   - M01 (normalization switch bypass): exact match, mutated SHA `b212ec55...`, KILLED `TestFL05TransactionBoundaryNormalizationDetector` and failed uncontained error test (exit 1), byte-restored to `4b7477aa...` (exit 0).
+   - M02 (fallback format bypass): exact match, mutated SHA `a7306bb0...`, KILLED `TestFL05FallbackLogDetector` (exit 1), byte-restored (exit 0).
+   - M03 (GORM Info bypass): exact match, mutated SHA `426a427b...`, KILLED `TestFL05GormSinkDetector` (exit 1), byte-restored (exit 0).
+   - Combined regression: 40 top-level PASS, 47 subtest PASS = 87 total events (0 fail, 0 skip, exit 0).
+4. Deterministic teardown completed: container and network removed, absence verified.
+5. Publication checks passed: doctor PASS WITH NOTE, gate unit suite 46/46 PASS, catalog PS5.1/PS7 PASS, preflights 7/7 PASS, diff clean.
+6. Handed back to Codex for independent review at REVIEW_PENDING; no self-approval or FREEZE.
