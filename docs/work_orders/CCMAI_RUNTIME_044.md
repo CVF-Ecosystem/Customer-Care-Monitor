@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-044 — Shared MCP/HTTP job execution
 
-Status: CHANGES_REQUIRED
+Status: BUILD
 
 Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/MCP_JOB_EXECUTION_R044_2026-10-03.md). Separate immutable seed: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`; activation record identifies its committed SHA. Standing local orchestration delegation covers this bounded local order. Owner manually transfers to Claude; no automatic agent invocation.
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-044 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for exact Claude BUILD48918e2f953dbb32e7f5f159b1eceab7dfe3848f. Owner transfers the consolidated R044-R1-01..02 addendum in docs/work_orders/CCMAI_RUNTIME_044.md to Claude REPAIR_WORKER under the unchanged seed665f2e5ab780cbe8a1d374ccba676c1e926fbb47: committed synthetic notification-tail regression and reproducible worker evidence receipts; no product source repair requested. Claude rehydrates/acknowledges/synchronizes BUILD and passes preflight before edits, then returns exact repair/evidence REVIEW_PENDING to independent Codex re-review. Facebook/Zalo OA accounts/live tests parked; CCMAI-RUNTIME-043 and all prior dispositions unchanged. No engine/permission/OAuth/schema/dependency/notification source/real config/credential/provider/channel/external network/persistent or customer DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.",
+  "nextAllowedMove": "CCMAI-RUNTIME-044 repair BUILD round 1 (Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD): resolve R044-R1-01 (committed mounted notification-enabled synthetic regression in authorized backend/mcp/trigger_execution_test.go and backend/api/handlers/job_dispatch_shared_test.go) and R044-R1-02 (reproducible worker mutation/old-source/grouped-run receipts in bounded docs/reviews artifacts) under unchanged seed 665f2e5ab780cbe8a1d374ccba676c1e926fbb47, synthetic disposable loopback fixtures only, no product source repair; then hand the exact 40-hex repair commit to independent Codex re-review as REVIEW_PENDING. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-043 and prior local dispositions unchanged. No engine/permission/OAuth/schema/dependency/notification source/real config/credential/provider/channel/external network/persistent or customer DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim; Pancake live prerequisites unchanged.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; next Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD, independent Codex re-review",
+  "activeRole": "Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD (R044 repair round 1); independent Codex REVIEWER next, no self-approval",
   "roleRoute": "CLAUDE_IMPLEMENTATION_CODEX_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-04"
 }

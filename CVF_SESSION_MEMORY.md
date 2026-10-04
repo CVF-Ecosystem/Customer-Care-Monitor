@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,10 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current R044 repair BUILD acknowledgment (2026-10-04)
+
+CCMAI-RUNTIME-044 repair BUILD round 1 (Claude, 2026-10-04): role transition Codex ORCHESTRATOR/REVIEWER -> REPAIR_WORKER (Claude) acknowledged in the active handoff before any test or evidence edit; repair BUILD COMMIT_STEWARD held by Claude, independent Codex re-review next. Findings R044-R1-01..02 only, unchanged seed 665f2e5ab780cbe8a1d374ccba676c1e926fbb47, no product source repair. Synthetic disposable fixtures only; no live authority. R043 and prior closures unchanged; Facebook/Zalo OA accounts parked.
 
 ## Current R044 independent REVIEW return (2026-10-04)
 

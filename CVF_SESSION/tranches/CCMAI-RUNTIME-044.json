@@ -53,8 +53,8 @@
   ],
   "claimScope": "Application admission/start/ownership and HTTP regression contracts on synthetic disposable local fixtures only. Synthetic provider execution cannot establish CVF AI governance, model quality, live compatibility or hosted readiness.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_044.md",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "665f2e5ab780cbe8a1d374ccba676c1e926fbb47",
   "buildCommit": "48918e2f953dbb32e7f5f159b1eceab7dfe3848f",
   "reviewEvidence": [
@@ -70,7 +70,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -85,5 +86,5 @@
     "R044-R1-01",
     "R044-R1-02"
   ],
-  "repairDisposition": "R1_REQUESTED"
+  "repairDisposition": "R1_IN_PROGRESS"
 }
