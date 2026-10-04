@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md", "activeTranche": "CCMAI-RUNTIME-046", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md", "activeTranche": "CCMAI-RUNTIME-046", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R046 finalizer logging work order (2026-10-04)
 
-CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for exact BUILD 985fa60b3766444a7b71a5303da6c6bc14e63bf0. R046-R1-01..02: maintained raw transaction-boundary detector and complete applied worker mutation/restoration/regression receipts. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD under unchanged R2 seed; test/evidence-only repair, no production defect established or source change requested. Worker rehydrates and acknowledges BUILD with passing synchronized preflight before edits, then returns exact repair SHA REVIEW_PENDING for independent Codex review. R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked; no live/provider/credential/network/persistent data/push/merge/deployment/FREEZE or broader readiness claim.
+CCMAI-RUNTIME-046 BUILD repair round 1 under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD implements R046-R1-01 maintained transaction-boundary tests and R046-R1-02 mutation campaign; Codex independent R2 review afterward. R044/R045 local FREEZE and prior dispositions preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
 
 ## Historical R045 local MCP closure (2026-10-04)
 

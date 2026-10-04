@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for exact BUILD 985fa60b3766444a7b71a5303da6c6bc14e63bf0. R046-R1-01..02: maintained raw transaction-boundary detector and complete applied worker mutation/restoration/regression receipts. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD under unchanged R2 seed; test/evidence-only repair, no production defect established or source change requested. Worker rehydrates and acknowledges BUILD with passing synchronized preflight before edits, then returns exact repair SHA REVIEW_PENDING for independent Codex review. R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked; no live/provider/credential/network/persistent data/push/merge/deployment/FREEZE or broader readiness claim.",
+  "nextAllowedMove": "CCMAI-RUNTIME-046 BUILD repair round 1 under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD implements R046-R1-01 maintained transaction-boundary tests and R046-R1-02 mutation campaign; Codex independent R2 review afterward. R044/R045 local FREEZE and prior dispositions preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex independent REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; Claude remains repair/product BUILD owner",
+  "activeRole": "Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD; Codex independent REVIEWER",
   "roleRoute": "CLAUDE_IMPLEMENTATION_CODEX_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-04"
 }
