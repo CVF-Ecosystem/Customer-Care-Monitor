@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "Current R046 finalizer driver-error logging WORK_ORDER/DISPATCH_READY handoff; no BUILD yet."
+      "description": "Current R046 finalizer driver-error logging REVIEW_PENDING handoff; buildCommit 985fa60b, independent review pending."
     },
     {
       "id": "truth-implementation-status",
@@ -933,14 +933,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_046.md",
       "status": "ACTIVE",
-      "description": "R046 bounded R2 Claude BUILD / Codex independent review order; DISPATCH_READY."
+      "description": "R046 bounded R2 Claude BUILD / Codex independent review order; REVIEW_PENDING."
     },
     {
       "id": "runtime046-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
       "status": "ACTIVE",
-      "description": "R046 WORK_ORDER/DISPATCH_READY record; immutable committed seed, no BUILD."
+      "description": "R046 REVIEW_PENDING record: buildCommit 985fa60b, independent review pending."
     },
     {
       "id": "runtime046-predecessor-handoff",
