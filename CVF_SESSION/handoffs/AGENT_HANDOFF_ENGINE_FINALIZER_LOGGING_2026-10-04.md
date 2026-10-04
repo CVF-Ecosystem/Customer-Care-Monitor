@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD; Codex independent REVIEWER
-- Next allowed move: CCMAI-RUNTIME-046 BUILD repair round 2 under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD implements R046-R2-01..03 (pool isolation, remaining boundary coverage, reproducible receipts) in authorized test/evidence paths; Codex independent R2 re-review afterward. Production source preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER
+- Next allowed move: CCMAI-RUNTIME-046: Codex independent re-review of R046 R2 repair (commit 91da0e88118b76a68031f432da50521fe6a341b7) under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Evaluation of R046-R2-01..03 (statement isolation, complete transaction boundary commit/rollback hooks, and machine receipts). Production source preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fresh planning acknowledgment (2026-10-04)
@@ -108,4 +108,28 @@ Acknowledged consolidated CHANGES_REQUIRED findings from Codex independent R1 re
 - R046-R2-02: Complete transaction-boundary hooks (COMMIT and Rollback observation), atomic counters, observed attempts, bounded-sentinel assertion, and invariant checks. Correct prose on Commit/Rollback capture and checkpoint values.
 - R046-R2-03: Execute a reproducible worker mutation campaign with exact production AND test hashes, exact one-match replacement string, calculated mutated/restored hashes, named behavioral failure assertions, and full affected regression selection (`TestOrdinary|TestEveryTerminal|TestTerminalRunHolds|TestAcceptedCancel|TestCancelled|TestReservation|TestOwnership`).
 - Scope & Boundaries: Production source `backend/engine/analyzer_incremental.go` is unmodified (0 defect established); seed `c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267` unchanged; disposable loopback MySQL fixtures only; Facebook/Zalo OA accounts remain parked. No live provider/credential/network/persistent DB authority.
+
+## Claude R2 repair hand-back to independent Codex reviewer (2026-10-04)
+
+Repair BUILD commit `91da0e88118b76a68031f432da50521fe6a341b7` fulfills all requirements of repair order R2:
+- **R046-R2-01 Statement Isolation & Cleanup Restoration**:
+  - `installBoundaryPool` clones statement via Context in `originalDB.Session(&gorm.Session{Context: context.Background()})`, preventing mutation of `originalDB.Statement.ConnPool`.
+  - Full restoration of both `db.DB` and `originalDB.Statement.ConnPool` in `t.Cleanup`.
+  - Maintained control `TestFLBoundaryPoolRestoresOriginalStatement` PASS (0.66s, subtest 0.00s).
+- **R046-R2-02 Complete Transaction Boundary Hooks (Commit & Rollback)**:
+  - Updated `flBoundaryError` with atomic counter `*int64` and `atomic.AddInt64`.
+  - Implemented `flBoundaryTx` intercepting `Commit` and `Rollback` calls with database/sql `sql.ErrTxDone` handling.
+  - Added maintained tests: `TestFL01TransactionBoundaryCommitFaultIsContained` (0.70s), `TestFL01TransactionBoundaryRollbackFaultIsContained` (0.63s), `TestFL03TransactionBoundaryCommitTransientRecovery` (0.70s).
+  - Maintained tests assert attempt counts, 0 `.Error()` calls, bounded sentinels, no leak in returned errors or app logs, and non-advancement of proposed checkpoints on exhausted retries.
+- **R046-R2-03 Separately Labeled Worker Mutation Campaign R2**:
+  - M01 (Normalization bypass): `lastErr = txErr` -> KILLED by `TestFL05TransactionBoundaryNormalizationDetector` (`FL-05 BOUNDARY DETECTOR FAILED: returned error does not match errFinalizeWrite sentinel`). Byte-restored to baseline.
+  - M02 (Raw fallback log): replacement `log.Printf("... write error: %v", run.ID, err)` produces exact disk SHA `a7306bb0ec6a0b551fa0407ccde94a10b30f59f99bc9df185a4b6a93a87375a6` -> KILLED by `TestFL05FallbackLogDetector`. Byte-restored to baseline.
+  - M03 (GORM session bypass): replacement produces exact disk SHA `426a427bd5dd7d378fcf489cc8128e098b52194cf34bc242206eb7b2fc7bf9d3` -> KILLED by `TestFL05GormSinkDetector`. Byte-restored to baseline.
+  - Full machine receipts saved in `docs/reviews/probes/r046_r2_worker_receipts.json`. Complete report in `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R2_REPAIR_2026-10-04.md`.
+- **Preservation & Boundaries**:
+  - Production source `backend/engine/analyzer_incremental.go` is unmodified (SHA `4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b`).
+  - Full finalizer test suite: 20 top-level, 26 total test/subtest runs: ALL PASS (17.033s).
+  - Regression selection (`TestFL|TestOrdinary|TestEveryTerminal|TestTerminalRunHolds|TestAcceptedCancel|TestCancelled|TestReservation|TestOwnership`): 34 top-level, 64 total test/subtest runs: ALL PASS (68.733s).
+  - Handed back to Codex as independent `REVIEWER` with status `REVIEW_PENDING`; no Claude self-approval or FREEZE.
+
 

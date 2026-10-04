@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md", "activeTranche": "CCMAI-RUNTIME-046", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md", "activeTranche": "CCMAI-RUNTIME-046", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R046 finalizer logging work order (2026-10-04)
 
-CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN after independent R1 re-review of exact repair a8fb3b83cfa100f2c81b496ce40655c826a5e874. R046-R2-01..03: maintained pool isolation/restoration, remaining transaction-boundary coverage and reproducible worker receipts/regression prerequisites. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD continues test/evidence-only repair round 2 under unchanged R2 seed; rehydrate, acknowledge and synchronize gated BUILD before edits, then return exact repair SHA REVIEW_PENDING for independent Codex review. No production defect established or source edit requested. R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked. No real config/credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
+CCMAI-RUNTIME-046 REVIEW_PENDING / REVIEW / FREEZE_OPEN after Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD completed repair round 2 at buildCommit `91da0e88118b76a68031f432da50521fe6a341b7`. Settles R046-R2-01..03: maintained pool isolation/restoration (`TestFLBoundaryPoolRestoresOriginalStatement`), complete transaction-boundary hooks for Commit and Rollback with atomic counter, transient recovery and exhausted retry invariants, and separately labeled worker mutation campaign R2 (`docs/reviews/probes/r046_r2_worker_receipts.json`, `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R2_REPAIR_2026-10-04.md`). Handed back for independent Codex R2 re-review. Production source `backend/engine/analyzer_incremental.go` preserved byte-for-byte; R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked. No real config/credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
 
 ## Historical R045 local MCP closure (2026-10-04)
 
