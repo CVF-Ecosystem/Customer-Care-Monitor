@@ -44,7 +44,7 @@
   ],
   "claimScope": "Only finalizer transaction/retry/fallback application and GORM sink error containment on synthetic disposable local fixtures, with preserved terminal/ownership semantics. No universal engine logging, real-provider/CVF AI governance, live compatibility or hosted readiness claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_046.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267",
   "buildCommit": "a8fb3b83cfa100f2c81b496ce40655c826a5e874",
@@ -53,7 +53,11 @@
     "docs/reviews/probes/r046_independent_summary.json",
     "docs/reviews/probes/r046_transaction_boundary_probe_test.go",
     "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R1_REPAIR_2026-10-04.md",
-    "docs/reviews/probes/r046_r1_worker_receipts.json"
+    "docs/reviews/probes/r046_r1_worker_receipts.json",
+    "docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+    "docs/reviews/probes/r046_r1_receipt_audit.json",
+    "docs/reviews/probes/r046_r1_pool_isolation_probe_test.go",
+    "docs/reviews/probes/r046_r1_independent_summary.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -63,7 +67,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -73,9 +78,10 @@
   ],
   "ownerTransferRequired": true,
   "implementationStarted": true,
-  "repairRound": 1,
+  "repairRound": 2,
   "repairFindings": [
-    "R046-R1-01",
-    "R046-R1-02"
+    "R046-R2-01",
+    "R046-R2-02",
+    "R046-R2-03"
   ]
 }

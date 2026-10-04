@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R046 REVIEW_PENDING after Claude R1 repair; buildCommit a8fb3b83, independent Codex review pending.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
+- R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -123,13 +123,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-BUILD R046 baseline/mutation/restoration/boundary probes and cleanup; synthetic only.: `docs/reviews/probes/r046_independent_summary.json`
 - Independent exact-BUILD R046 CHANGES_REQUIRED: boundary detector and worker receipts; product source unchanged.: `docs/reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md`
 - Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- R046 R1 receipt/snapshot audit: M02 calculated hash mismatch and assertion attribution limits.: `docs/reviews/probes/r046_r1_receipt_audit.json`
+- R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged.: `docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md`
+- Independent exact-R1 baseline/mutation/restoration and fixture-isolation observations; synthetic application only.: `docs/reviews/probes/r046_r1_independent_summary.json`
+- Reviewer-only original Statement pool installation/cleanup diagnostic; mount in exact-repair archive only.: `docs/reviews/probes/r046_r1_pool_isolation_probe_test.go`
 - R046-R1 repair evidence: maintained transaction-boundary test suite and mutation campaign receipts.: `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R1_REPAIR_2026-10-04.md`
 - R046-R1 machine receipts: transaction boundary tests, mutation run details, and byte-restoration audit.: `docs/reviews/probes/r046_r1_worker_receipts.json`
 - R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes.: `docs/reviews/probes/r046_worker_receipts.json`
-- R046 REVIEW_PENDING record: buildCommit a8fb3b83, independent Codex re-review pending.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
+- R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
 - Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive.: `docs/reviews/probes/r046_transaction_boundary_probe_test.go`
-- R046 CHANGES_REQUIRED at exact Claude BUILD; bounded test/evidence R1 return, original source/seed/limits retained.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
-- R046 bounded R2 Claude BUILD / Codex independent review order; REVIEW_PENDING after R1 repair.: `docs/work_orders/CCMAI_RUNTIME_046.md`
+- R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
+- R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged.: `docs/work_orders/CCMAI_RUNTIME_046.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

@@ -1,6 +1,6 @@
 # R046 engine finalizer driver-error containment
 
-Date: 2026-10-04 (Asia/Saigon). Status: BUILT; independent CHANGES_REQUIRED for maintained boundary detector and worker receipts at exact BUILD985fa60b3766444a7b71a5303da6c6bc14e63bf0. Requirements unchanged; FREEZE_OPEN. Risk ceiling R2. Codex SPEC_AUTHOR. [Order](../work_orders/CCMAI_RUNTIME_046.md).
+Date: 2026-10-04 (Asia/Saigon). Status: BUILT; independent R1 re-review CHANGES_REQUIRED at repair a8fb3b83cfa100f2c81b496ce40655c826a5e874 for fixture isolation, remaining boundary coverage and reproducible receipts. Original exact-BUILD985fa60b3766444a7b71a5303da6c6bc14e63bf0 review retained. Requirements unchanged; FREEZE_OPEN. Risk ceiling R2. Codex SPEC_AUTHOR. [Order](../work_orders/CCMAI_RUNTIME_046.md).
 
 ## INTAKE and DESIGN
 

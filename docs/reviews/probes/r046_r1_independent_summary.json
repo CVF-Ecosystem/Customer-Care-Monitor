@@ -1,0 +1,399 @@
+{
+  "reviewRound": "R1",
+  "sourceCommit": "a8fb3b83cfa100f2c81b496ce40655c826a5e874",
+  "taskPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r046-independent-84ea4ecf",
+  "runs": [
+    {
+      "name": "baseline",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 0,
+      "seconds": 202.896,
+      "counts": {
+        "pass": 23,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 18,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestFL04SentinelDiscovery/missing_row_sentinel",
+        "2026/10/04 13:51:00 [analyzer] final run write failed for job job-fl-6e42df18 (attempt 1): row missing",
+        "--- PASS: TestFL04SentinelDiscovery/missing_row_sentinel (0.01s)"
+      ],
+      "logSha256": "6d8bb9b38be4851de0bb49798f08b45602dc10b1d9b70e288f579bba9585e163"
+    },
+    {
+      "name": "worker-pool-isolation-probe",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestR046R1BoundaryPoolRestoresOriginalStatement$",
+      "exit": 1,
+      "seconds": 64.915,
+      "counts": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestR046R1BoundaryPoolRestoresOriginalStatement/install_and_cleanup",
+        "TestR046R1BoundaryPoolRestoresOriginalStatement"
+      ],
+      "assertions": [
+        "--- FAIL: TestR046R1BoundaryPoolRestoresOriginalStatement/install_and_cleanup (0.00s)",
+        "--- FAIL: TestR046R1BoundaryPoolRestoresOriginalStatement (0.53s)"
+      ],
+      "logSha256": "c8ba2dab7302e72842f2df4433c570c11a16dfe74f4ddffcef072d6c95c8ea27",
+      "namedFailureOutput": "=== RUN   TestR046R1BoundaryPoolRestoresOriginalStatement\n2026/10/04 13:52:09 Database connected successfully\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.757ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[3.204ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.968ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'users' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[0.441ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.153ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.957ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `users` LIMIT 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.748ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'users' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[1.736ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[2.466ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[2.833ms] \u001b[34;1m[rows:2]\u001b[0m \nSELECT\n\tTABLE_NAME,\n\tCOLUMN_NAME,\n\tINDEX_NAME,\n\tNON_UNIQUE \nFROM\n\tinformation_schema.STATISTICS \nWHERE\n\tTABLE_SCHEMA = 'CCMA' \n\tAND TABLE_NAME = 'users' \nORDER BY\n\tINDEX_NAME,\n\tSEQ_IN_INDEX\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[0.566ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[1.820ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[2.134ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'CCMA' AND table_name = 'users' AND constraint_name = 'uni_users_email'\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[0.544ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[1.790ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[1.894ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.454ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.526ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[3.030ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.631ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.418ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.037ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[0.405ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.413ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.760ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `user_tenants` LIMIT 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.263ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.637ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.561ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.075ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[0.550ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.616ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.294ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `tenants` LIMIT 1\n\r\n2026/10/04 13:52:09 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[3.378ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[0.464ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:52:09 \u001b[32m\n\u001b[0m\u001b[33m[2.620ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information"
+    },
+    {
+      "name": "M01-normalization-bypass",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 1,
+      "seconds": 79.108,
+      "counts": {
+        "pass": 21,
+        "fail": 2,
+        "skip": 0
+      },
+      "topLevelPass": 16,
+      "failures": [
+        "TestFL01TransactionBoundaryUnknownErrorIsContained",
+        "TestFL05TransactionBoundaryNormalizationDetector"
+      ],
+      "assertions": [
+        "--- FAIL: TestFL01TransactionBoundaryUnknownErrorIsContained (0.53s)",
+        "=== RUN   TestFL04SentinelDiscovery/missing_row_sentinel",
+        "2026/10/04 13:53:24 [analyzer] final run write failed for job job-fl-1e904ee4 (attempt 1): row missing",
+        "--- PASS: TestFL04SentinelDiscovery/missing_row_sentinel (0.01s)",
+        "analyzer_finalizer_logging_test.go:791: FL-05 BOUNDARY DETECTOR FAILED: returned error does not match errFinalizeWrite sentinel (normalization switch missing or bypassed): finalize job run: fl05-detector-boundary-driver-leak-marker",
+        "--- FAIL: TestFL05TransactionBoundaryNormalizationDetector (0.48s)"
+      ],
+      "logSha256": "9db87e920c1b46bbfbb21ec3f8386ff3d5649ab0a8b5955600965aa96720dd84",
+      "namedFailureOutput": "=== RUN   TestFL01TransactionBoundaryUnknownErrorIsContained\n2026/10/04 13:53:20 Database connected successfully\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.694ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.282ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.895ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'users' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[0.392ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.493ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.752ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `users` LIMIT 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.341ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'users' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[0.693ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[1.616ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[2.606ms] \u001b[34;1m[rows:2]\u001b[0m \nSELECT\n\tTABLE_NAME,\n\tCOLUMN_NAME,\n\tINDEX_NAME,\n\tNON_UNIQUE \nFROM\n\tinformation_schema.STATISTICS \nWHERE\n\tTABLE_SCHEMA = 'CCMA' \n\tAND TABLE_NAME = 'users' \nORDER BY\n\tINDEX_NAME,\n\tSEQ_IN_INDEX\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[0.376ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[2.068ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[2.247ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'CCMA' AND table_name = 'users' AND constraint_name = 'uni_users_email'\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[0.557ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[1.710ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[1.740ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.390ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.943ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.711ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.253ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.214ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.623ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[0.713ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.389ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.162ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `user_tenants` LIMIT 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[4.142ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.690ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.406ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.605ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[0.488ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.081ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.207ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `tenants` LIMIT 1\n\r\n2026/10/04 13:53:20 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.025ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[0.782ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:53:20 \u001b[32m\n\u001b[0m\u001b[33m[1.545ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Informat"
+    },
+    {
+      "name": "M01-normalization-bypass-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL",
+      "exit": 0,
+      "seconds": 68.121,
+      "counts": {
+        "pass": 23,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 18,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestFL04SentinelDiscovery/missing_row_sentinel",
+        "2026/10/04 13:54:32 [analyzer] final run write failed for job job-fl-29b115f8 (attempt 1): row missing",
+        "--- PASS: TestFL04SentinelDiscovery/missing_row_sentinel (0.01s)"
+      ],
+      "logSha256": "6419c7c88b602c8310975861529cfc220b78c2958ee944c8bf550750d31ea1e4"
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05FallbackLogDetector$",
+      "exit": 1,
+      "seconds": 70.146,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05FallbackLogDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:727: FL-05 FALLBACK DETECTOR FAILED: raw driver marker \"fl-r046-detector-fallback-marker-05\" escaped into fallback log (fix missing or reverted): \"2026/10/04 13:55:47 [analyzer] final run write failed for job job-fl-8045e439 (attempt 1): write error\\n2026/10/04 13:55:47 [analyzer] final run write failed for job job-fl-8045e439 (attempt 2): write error\\n2026/10/04 13:55:47 [analyzer] final run write failed for job job-fl-8045e439 (attempt 3): write error\\n2026/10/04 13:55:47 [analyzer] fallback error mark failed for run 5a32d280-bcec-452f-a0b6-81c0be9c6ddd: write error: Error 1644 (45000): fl-r046-detector-fallback-marker-05\\n\"",
+        "--- FAIL: TestFL05FallbackLogDetector (0.58s)"
+      ],
+      "logSha256": "0423b6e7ce1d0db1e26a2e713673eed6f28a52e50ec8c81cfca9029681c5ba60",
+      "namedFailureOutput": "=== RUN   TestFL05FallbackLogDetector\n2026/10/04 13:55:46 Database connected successfully\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.641ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.372ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.667ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'users' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[0.642ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.693ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.082ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `users` LIMIT 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[3.560ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'users' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[1.316ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[1.752ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[3.645ms] \u001b[34;1m[rows:2]\u001b[0m \nSELECT\n\tTABLE_NAME,\n\tCOLUMN_NAME,\n\tINDEX_NAME,\n\tNON_UNIQUE \nFROM\n\tinformation_schema.STATISTICS \nWHERE\n\tTABLE_SCHEMA = 'CCMA' \n\tAND TABLE_NAME = 'users' \nORDER BY\n\tINDEX_NAME,\n\tSEQ_IN_INDEX\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[0.528ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[2.521ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[2.107ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'CCMA' AND table_name = 'users' AND constraint_name = 'uni_users_email'\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[1.054ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[3.821ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[2.060ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.484ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.159ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.182ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.197ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.559ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.988ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[0.499ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.755ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.391ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `user_tenants` LIMIT 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.714ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.369ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.002ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.600ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[0.321ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.009ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.470ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `tenants` LIMIT 1\n\r\n2026/10/04 13:55:46 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.859ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[0.432ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:55:46 \u001b[32m\n\u001b[0m\u001b[33m[1.727ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA whe"
+    },
+    {
+      "name": "M02-raw-fallback-log-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05FallbackLogDetector$",
+      "exit": 0,
+      "seconds": 60.996,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "b33a35447f64ffbb01450b9c3f87e60603cf911046d7610c3598a8089c4d5d39"
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05GormSinkDetector$",
+      "exit": 1,
+      "seconds": 67.333,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [
+        "TestFL05GormSinkDetector"
+      ],
+      "assertions": [
+        "analyzer_finalizer_logging_test.go:755: FL-05 GORM DETECTOR FAILED: raw driver marker \"fl-r046-detector-gorm-marker-05\" appeared in GORM sink (finalizerDB fix missing or reverted): \"/src/engine/analyzer_incremental.go:167\\n[1.313ms] [rows:1] SELECT `id` FROM `jobs` WHERE id = 'job-fl-00afefbd' AND tenant_id = 'fl-00afefbd' FOR UPDATE\\n/src/engine/analyzer_incremental.go:175\\n[2.257ms] [rows:1] SELECT `id` FROM `job_runs` WHERE id = '71e70c36-d281-431a-91e4-2ed6e4a77443' AND tenant_id = 'fl-00afefbd' AND job_id = 'job-fl-00afefbd' AND status = 'running' FOR UPDATE\\n/src/engine/analyzer_incremental.go:183 Error 1644 (45000): fl-r046-detector-gorm-marker-05\\n[1.394ms] [rows:0] UPDATE `job_runs` SET `error_message`='',`finished_at`='2026-10-04 13:57:55.666',`status`='error',`summary`='{}' WHERE id = '71e70c36-d281-431a-91e4-2ed6e4a77443' AND tenant_id = 'fl-00afefbd' AND job_id = 'job-fl-00afefbd'\\n/src/engine/analyzer_incremental.go:167\\n[2.211ms] [rows:1] SELECT `id` FROM `jobs` WHERE id = 'job-fl-00afefbd'",
+        "--- FAIL: TestFL05GormSinkDetector (0.57s)"
+      ],
+      "logSha256": "6ffb1de050bf27cd60c82f883fe8559b89eb4eb196ad7cd8d55735450419fa28",
+      "namedFailureOutput": "=== RUN   TestFL05GormSinkDetector\n2026/10/04 13:57:55 Database connected successfully\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.221ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.376ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.548ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'users' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[0.746ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.500ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.107ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `users` LIMIT 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[3.346ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'users' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[0.959ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[2.834ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[2.656ms] \u001b[34;1m[rows:2]\u001b[0m \nSELECT\n\tTABLE_NAME,\n\tCOLUMN_NAME,\n\tINDEX_NAME,\n\tNON_UNIQUE \nFROM\n\tinformation_schema.STATISTICS \nWHERE\n\tTABLE_SCHEMA = 'CCMA' \n\tAND TABLE_NAME = 'users' \nORDER BY\n\tINDEX_NAME,\n\tSEQ_IN_INDEX\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[0.342ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[1.783ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[2.407ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'CCMA' AND table_name = 'users' AND constraint_name = 'uni_users_email'\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[1.317ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[3.190ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[3.284ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.425ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.095ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.779ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'CCMA' AND table_name = 'users' AND index_name = 'idx_users_email'\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.451ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.301ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.909ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[0.455ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.557ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.914ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `user_tenants` LIMIT 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.264ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'user_tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[0.611ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.467ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.863ms] \u001b[34;1m[rows:-]\u001b[0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'CCMA' AND table_name = 'tenants' AND table_type = 'BASE TABLE'\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[0.813ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.912ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'CCMA%' ORDER BY SCHEMA_NAME='CCMA' DESC,SCHEMA_NAME limit 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[1.173ms] \u001b[34;1m[rows:-]\u001b[0m SELECT * FROM `tenants` LIMIT 1\n\r\n2026/10/04 13:57:55 \u001b[32m/src/db/mysql.go:42\n\u001b[0m\u001b[33m[2.640ms] \u001b[34;1m[rows:-]\u001b[0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'CCMA' AND table_name = 'tenants' ORDER BY ORDINAL_POSITION\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[0.760ms] \u001b[34;1m[rows:-]\u001b[0m SELECT DATABASE()\n\r\n2026/10/04 13:57:55 \u001b[32m\n\u001b[0m\u001b[33m[3.106ms] \u001b[34;1m[rows:1]\u001b[0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where "
+    },
+    {
+      "name": "M03-gorm-session-bypass-restored",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run ^TestFL05GormSinkDetector$",
+      "exit": 0,
+      "seconds": 68.227,
+      "counts": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 1,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "22639aa9994149933607668e51e3b0c22cc4cab4433ab497ccca11a0e58769bd"
+    },
+    {
+      "name": "ownership-terminal-regression",
+      "command": "go test ./engine -count=1 -p 1 -json -timeout=180s -run TestOrdinary|TestEveryTerminal|TestTerminalRunHolds|TestAcceptedCancel|TestCancelled|TestReservation|TestOwnership",
+      "exit": 0,
+      "seconds": 100.517,
+      "counts": {
+        "pass": 59,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 18,
+      "failures": [],
+      "assertions": [
+        "=== RUN   TestOrdinaryRunUnverifiableReceiptFailsClosed/missing",
+        "--- PASS: TestOrdinaryRunUnverifiableReceiptFailsClosed/missing (1.37s)",
+        "=== RUN   TestOrdinaryRunTerminalWriteFailure/job-row-missing",
+        "2026/10/04 14:00:36 [analyzer] final run write failed for job job-inc-bdd7a96d (attempt 1): row missing",
+        "2026/10/04 14:00:36 [analyzer] job Inc: finalize job run: terminal write target is missing",
+        "--- PASS: TestOrdinaryRunTerminalWriteFailure/job-row-missing (0.74s)"
+      ],
+      "logSha256": "9eee9979459483188e0af5708d2366ad73f999d6ef29617ba9ef7fdffe77ed06"
+    },
+    {
+      "name": "build",
+      "command": "go build ./...",
+      "exit": 0,
+      "seconds": 49.287,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "vet",
+      "command": "go vet ./...",
+      "exit": 0,
+      "seconds": 33.591,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failures": [],
+      "assertions": [],
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "mutations": [
+    {
+      "name": "M01-normalization-bypass",
+      "replacement": {
+        "old": "\t\tswitch {\n\t\tcase txErr == nil:\n\t\t\tlastErr = nil\n\t\tcase errors.Is(txErr, errFinalizeMissing):\n\t\t\tlastErr = errFinalizeMissing\n\t\tdefault:\n\t\t\t// Unknown driver or boundary error: contains raw text that must not\n\t\t\t// reach logs or the returned error wrapper.\n\t\t\tlastErr = errFinalizeWrite\n\t\t}",
+        "new": "\t\tlastErr = txErr"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "b212ec5594d86ca7958c499b40cd7269277ccd82e9f8dd152640bdd11274cbcd",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "restoredBaselineExit": 0,
+      "killingTests": [
+        "TestFL01TransactionBoundaryUnknownErrorIsContained",
+        "TestFL05TransactionBoundaryNormalizationDetector"
+      ]
+    },
+    {
+      "name": "M02-raw-fallback-log",
+      "replacement": {
+        "old": "log.Printf(\"[analyzer] fallback error mark failed for run %s: write error\", run.ID)",
+        "new": "log.Printf(\"[analyzer] fallback error mark failed for run %s: write error: %v\", run.ID, err)"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "a7306bb0ec6a0b551fa0407ccde94a10b30f59f99bc9df185a4b6a93a87375a6",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "restoredBaselineExit": 0,
+      "killingTests": [
+        "TestFL05FallbackLogDetector"
+      ]
+    },
+    {
+      "name": "M03-gorm-session-bypass",
+      "replacement": {
+        "old": "return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Silent)})",
+        "new": "return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Info)})"
+      },
+      "matches": 1,
+      "baselineSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "mutatedSha256": "426a427bd5dd7d378fcf489cc8128e098b52194cf34bc242206eb7b2fc7bf9d3",
+      "restoredSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "outcome": "KILLED_NAMED_BEHAVIORAL_ASSERTION",
+      "restoredBaselineExit": 0,
+      "killingTests": [
+        "TestFL05GormSinkDetector"
+      ]
+    }
+  ],
+  "isolation": "cached images/modules, internal task network, disposable synthetic MySQL, no host ports",
+  "incidents": [
+    "Initial runner syntax error before execution/resource creation; corrected before rerun; no test result from failed launch."
+  ],
+  "archiveEquality": {
+    "files": 203,
+    "unequal": [],
+    "extraFiles": []
+  },
+  "cleanup": {
+    "databaseRemovalExit": 0,
+    "networkRemovalExit": 0,
+    "archiveSourceRestored": true,
+    "containerAbsent": true,
+    "networkAbsent": true
+  },
+  "campaignStatus": "COMPLETE",
+  "testSha256": "e56f7390fecbbf8b236320c225e5654aa47b3a7d351d7fc1e4bd65631dc6aba4",
+  "productionSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+  "probeSha256": "b65358afa27628e73fb5bcf624374b461f5711ae08efba047be8207aacd3248f",
+  "disposition": "CHANGES_REQUIRED",
+  "findings": [
+    "R046-R2-01",
+    "R046-R2-02",
+    "R046-R2-03"
+  ],
+  "claimLimits": "Independent synthetic application review only; no certification of historical worker runs, real provider/CVF AI governance, hosted CI/readiness or FREEZE.",
+  "publication": {
+    "unitSuite": {
+      "command": "python -B -m unittest discover -s scripts/tests -p test_cvf_downstream_gate*.py",
+      "tests": 46,
+      "exit": 0,
+      "seconds": 50.707
+    },
+    "doctor": {
+      "exit": 0,
+      "result": "PASS WITH NOTE",
+      "passed": 25,
+      "warnings": 1,
+      "limits": [
+        "Historical manifest pin differs from actual public core",
+        "GATE_PROFILE_NOT_INSTALLED / MIGRATION_REQUIRED"
+      ]
+    },
+    "catalogPS51": {
+      "exit": 0
+    },
+    "catalogPS7": {
+      "exit": 0
+    },
+    "finalDocsBuild": {
+      "command": "npm --prefix docs run docs:build",
+      "exit": 0,
+      "seconds": 18.2,
+      "warnings": "Inherited env highlighting fallback; prior first build PASS32.96s."
+    },
+    "finalStagedPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--files",
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
+        "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
+        "docs/work_orders/CCMAI_RUNTIME_046.md",
+        "docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+        "docs/reviews/probes/r046_r1_independent_summary.json",
+        "docs/reviews/probes/r046_r1_pool_isolation_probe_test.go",
+        "docs/reviews/probes/r046_r1_receipt_audit.json"
+      ],
+      "exit": 0,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    "roleAcknowledgment": "Codex review-metadata COMMIT_STEWARD acknowledged after canonical rehydration, before stage/commit; Claude retains repair BUILD ownership.",
+    "defaultPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "exit": 0,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    "prRangePreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "exit": 0,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    "diffCheck": {
+      "exit": 0
+    },
+    "stagedFiles": [
+      "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
+      "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
+      "CVF_SESSION_MEMORY.md",
+      "IMPLEMENTATION_STATUS.json",
+      "docs/INDEX.md",
+      "docs/catalog/ARTIFACT_REGISTRY.json",
+      "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
+      "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
+      "docs/work_orders/CCMAI_RUNTIME_046.md",
+      "docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+      "docs/reviews/probes/r046_r1_independent_summary.json",
+      "docs/reviews/probes/r046_r1_pool_isolation_probe_test.go",
+      "docs/reviews/probes/r046_r1_receipt_audit.json"
+    ]
+  },
+  "probeHashRepresentation": {
+    "mountedByteSha256": "b65358afa27628e73fb5bcf624374b461f5711ae08efba047be8207aacd3248f",
+    "gitBlobSha256": "52161044441a98e53e607eab38bdbf6e380a24bf5b38ef1172e10be8a940863a",
+    "relationship": "Git normalizes the reviewer-only probe CRLF to LF; probeSha256 records exact mounted run bytes. Hashes differ only by this verified newline normalization; source/test baseline blob hashes unchanged."
+  }
+}
