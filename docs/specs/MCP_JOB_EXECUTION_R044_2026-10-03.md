@@ -1,7 +1,7 @@
 # MCP job execution — R044
 
 Date: 2026-10-03 (Asia/Saigon). Codex SPEC_AUTHOR. Risk ceiling R2.
-Status: BUILT locally at exact BUILD 48918e2f953dbb32e7f5f159b1eceab7dfe3848f; independent review CHANGES_REQUIRED / FREEZE_OPEN (notification regression and worker receipt gaps). Work order: [R044](../work_orders/CCMAI_RUNTIME_044.md).
+Status: BUILT locally at exact BUILD 48918e2f953dbb32e7f5f159b1eceab7dfe3848f; independent review CHANGES_REQUIRED / FREEZE_OPEN (notification regression and worker receipt gaps); repair round 1 submitted at b4ec91ea03a9f247e209389c3792c86494eac8b3 (REVIEW_PENDING, independent re-review not done). Work order: [R044](../work_orders/CCMAI_RUNTIME_044.md).
 
 ## Intake and design
 

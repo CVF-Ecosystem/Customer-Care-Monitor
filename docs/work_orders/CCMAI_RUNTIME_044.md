@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-044 — Shared MCP/HTTP job execution
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/MCP_JOB_EXECUTION_R044_2026-10-03.md). Separate immutable seed: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`; activation record identifies its committed SHA. Standing local orchestration delegation covers this bounded local order. Owner manually transfers to Claude; no automatic agent invocation.
 
@@ -38,3 +38,5 @@ R1-02 completes sanitized worker mutation/old-source/grouped-run receipts in bou
 Before repair: canonical rehydration/doctor/task-temp knowledge ingest, role declaration and acknowledgment in the active handoff; synchronize all current continuity/order/tranche/status surfaces to BUILD and pass preflight. Missing fixture/tooling => BUILD_BLOCKED, no downloads or required DB skips. Rerun uncached full MCP/handler/shared-dispatch suites and affected engine ownership selection on isolated disposable synthetic fixtures, cached build/vet, meaningful new detector/restored controls and required doctor/catalog/docs/gates/unit/diff checks. No product source edit is requested; an actual new source defect is returned as a finding before edits. No engine/notification/permission/OAuth/schema/dependency/tooling/UI/parent change, real config/token/provider/channel/external network/persistent DB/live invocation, push/merge/deployment/FREEZE.
 
 Return exact local repair SHA/evidence with REVIEW_PENDING / REVIEW for independent Codex re-review; no self-approval. Record repairRound1 and R044-R1-01..02, preserve unchanged original seed and prior dispositions/accounts parking. Same-scope authority continues; round three without independent new root cause records REVIEW_COST_ESCALATION_REQUIRED and stops.
+
+Repair round 1 hand-back (Claude REPAIR_WORKER, 2026-10-04): REVIEW_PENDING / REVIEW. Exact repair source b4ec91ea03a9f247e209389c3792c86494eac8b3 with evidence docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md and receipts docs/reviews/probes/r044_r1_worker_receipts.json; R044-R1-01..02 addressed under the unchanged seed, no product source change. Independent Codex re-review is next; the worker sets no REVIEW_PASS or FREEZE. Facebook/Zalo OA account work remains parked; live inputs and credential/network execution remain separate. R043 and all previous local dispositions are unchanged.

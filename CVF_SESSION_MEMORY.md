@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md", "activeTranche": "CCMAI-RUNTIME-044", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,10 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current R044 repair hand-back (2026-10-04)
+
+CCMAI-RUNTIME-044 REVIEW_PENDING / REVIEW (repair round 1, Claude REPAIR_WORKER, 2026-10-04): exact repair source b4ec91ea03a9f247e209389c3792c86494eac8b3 adds the maintained notification-enabled mounted MCP and HTTP-busy regression (TestMountedTriggerOwnershipHeldThroughNotificationTail, TestHTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail, no-output detector control TestNotificationDetectorReportsNoSendWithoutConfiguredOutputs, cancellation/rejection zero-notification controls) in the two already-authorized test files; no product source change. Evidence docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md and docs/reviews/probes/r044_r1_worker_receipts.json: grouped jobdispatch+mcp+handlers 393 pass/0 fail/0 skip (190 top-level, 203 subtests), targeted engine ownership 54 pass, build/vet PASS; detector mutants N01/N02/N03/N04b/N06/N07 killed with byte-restored baselines, N04 BUILD_ERROR retained, N05 survived and is killed by the engine ownership selection (N05e); the original 15-mutant campaign, old-source control and final run were recovered read-only from the worker scratch logs and tied to exact replacements and full hashes (restoration model limits stated). Race, full engine/backend, any live effect NOT RUN. Independent Codex re-review is next; the worker sets no REVIEW_PASS or FREEZE. R043/prior dispositions unchanged, Facebook/Zalo OA accounts parked, no live/governance/hosted claim.
 
 ## Current R044 repair BUILD acknowledgment (2026-10-04)
 

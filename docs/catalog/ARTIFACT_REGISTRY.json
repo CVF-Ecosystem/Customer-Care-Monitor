@@ -1,7 +1,7 @@
 {
     "schemaVersion":  "1.0",
     "projectName":  "Customer-Care-Monitor-AI",
-    "updatedAt":  "2026-10-03",
+    "updatedAt":  "2026-10-04",
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
@@ -33,25 +33,39 @@
   "description": "R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only."
 },
 {
+  "id": "runtime044-r1-repair-evidence",
+  "family": "continuity",
+  "path": "docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md",
+  "status": "ACTIVE",
+  "description": "R044 repair round 1 worker evidence: maintained notification-tail regression, detector controls, recovered and new mutation receipts; synthetic local application evidence only."
+},
+{
+  "id": "runtime044-r1-worker-receipts",
+  "family": "continuity",
+  "path": "docs/reviews/probes/r044_r1_worker_receipts.json",
+  "status": "ACTIVE",
+  "description": "R044 repair round 1 machine receipts: exact replacements, full hashes, counts, named failures, restoration results and incidents; no raw logs."
+},
+{
   "id": "runtime044-spec",
   "family": "continuity",
   "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
   "status": "ACTIVE",
-  "description": "R044 exact BUILD independently CHANGES_REQUIRED: maintained notification regression and reproducible worker receipts; original contract unchanged."
+  "description": "R044 contract unchanged; repair round 1 REVIEW_PENDING (maintained notification regression and reproducible worker receipts), independent re-review next."
 },
 {
   "id": "runtime044-order",
   "family": "continuity",
   "path": "docs/work_orders/CCMAI_RUNTIME_044.md",
   "status": "ACTIVE",
-  "description": "R044 CHANGES_REQUIRED consolidated R1 test/evidence repair order for Claude; unchanged seed, independent Codex re-review."
+  "description": "R044 repair round 1 REVIEW_PENDING: consolidated R1 test/evidence repair order and worker hand-back; unchanged seed, independent Codex re-review."
 },
 {
   "id": "runtime044-record",
   "family": "continuity",
   "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-044.json",
   "status": "ACTIVE",
-  "description": "R044 CHANGES_REQUIRED exact-BUILD review and bounded R1 roles/scope/seed record; FREEZE_OPEN."
+  "description": "R044 REVIEW_PENDING repair-round-1 record: roles, scope, seed base, exact repair commit and evidence pointers; FREEZE_OPEN."
 },
 {
   "id": "continuity-r043-handoff",

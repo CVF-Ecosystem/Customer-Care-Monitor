@@ -103,11 +103,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`
 - Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved.: `docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md`
 - Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified.: `docs/reviews/probes/r044_independent_summary.json`
-- R044 CHANGES_REQUIRED consolidated R1 test/evidence repair order for Claude; unchanged seed, independent Codex re-review.: `docs/work_orders/CCMAI_RUNTIME_044.md`
-- R044 CHANGES_REQUIRED exact-BUILD review and bounded R1 roles/scope/seed record; FREEZE_OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
+- R044 repair round 1 REVIEW_PENDING: consolidated R1 test/evidence repair order and worker hand-back; unchanged seed, independent Codex re-review.: `docs/work_orders/CCMAI_RUNTIME_044.md`
+- R044 repair round 1 worker evidence: maintained notification-tail regression, detector controls, recovered and new mutation receipts; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md`
+- R044 repair round 1 machine receipts: exact replacements, full hashes, counts, named failures, restoration results and incidents; no raw logs.: `docs/reviews/probes/r044_r1_worker_receipts.json`
+- R044 REVIEW_PENDING repair-round-1 record: roles, scope, seed base, exact repair commit and evidence pointers; FREEZE_OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
 - Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call.: `docs/reviews/probes/r044_notification_probe_test.go`
 - Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
-- R044 exact BUILD independently CHANGES_REQUIRED: maintained notification regression and reproducible worker receipts; original contract unchanged.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
+- R044 contract unchanged; repair round 1 REVIEW_PENDING (maintained notification regression and reproducible worker receipts), independent re-review next.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
