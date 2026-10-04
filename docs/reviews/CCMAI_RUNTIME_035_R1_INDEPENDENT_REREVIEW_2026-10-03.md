@@ -1,0 +1,29 @@
+# R035 R1 independent re-review — REVIEW_PASS
+
+Date: 2026-10-03 (Asia/Saigon). Reviewer: Codex, independent of Claude REPAIR_WORKER. Exact repair `22204abc0a19841cd9c50ce03c0af032896d3b4e`; actual Git parent `82a9b7d16e622b4ee3162870f1e30ba9b099324e`; original product BUILD `10ad83381ce76b86763c1ee06eab02ddf4734cac`; hand-back `a5e7b8d`. Risk ceiling R2. Disposition REVIEW_PASS / REVIEW / FREEZE_OPEN for the local MCP contract only. [Initial review](CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md), [worker R1 evidence, section9](MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md), [SPEC](../specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md). No reviewer product/test repair.
+
+## Findings and identity
+
+R035-R1-01..02 are settled. Complete independently rerun MCP suite and new forced-error detector satisfy the bounded MT-01..06 acceptance. The tool returns a truthful unavailable error; no actual queue/Analyzer execution is implemented or accepted.
+
+R1-01: the committed test prepares membership before observation, forces the jobs read failure, checks generic Job not found/no protocol error and exactly one attempted lookup, then zero write/outbound counts, equality of all nine listed table checksums including user_tenants, and zero job runs. Independently applied GORM error-path write fails `FORCED_ERROR_EFFECT: gorm writes=map[jobs:1] outbound=0`; raw Exec write evades callbacks but fails `FORCED_ERROR_STATE_CHANGE: table jobs changed`. Both compile and fail the intended assertions; bytes restored and original reviewer probe/repaired detector PASS. Earlier committed-suite survivor remains preserved as historical pre-R1 coverage evidence.
+
+R1-02: original dispatch paragraph in order, pre-R035 SPEC baseline and handoff NOT BUILT text now have explicit historical labels with current implementation facts. Original review return and failed/surviving campaigns remain historical evidence. Reviewer publication retires remaining copied CHANGES_REQUIRED/repair-next descriptions from current memory/status/SPEC/catalog/index; their original review references remain discoverable. The worker BUILD record section10 incorrectly named357d04b as repair parent; Git shows82a9b7d. Corrected that metadata with an explicit note in the same documentation-only acceptance change. No source/acceptance boundary changed.
+
+Canonical continuity rehydrated before re-review; doctor25/25 PASS, local knowledge ingest, compact bootstrap absent/nonblocking. Current machine/header fields agreed REVIEW_PENDING / REVIEW / R035 before publication. Immutable seed4b714a35bc6f49abe508d3ec4f32504e500054ba first committed by Codex before Claude BUILD and remains unchanged. R1 changes only trigger_contract_test.go among backend files; handlers/tools/permission tests remain identical to original BUILD, with unchanged authorization policy/tenant predicates/OAuth/server/engine/dependencies. New test SHA256 `d6b3dd7fafb81a0c0192cb9b0eb1f8994fb421a144a8e7df23925c892f5ab27b` matches worker evidence and exact repair blob. No checkout backend changes since repair.
+
+## Independent evidence
+
+Exact repair git-archived into `%TEMP%/ccmai-r035-r1-independent-20261003/backend`; tests/mutations executed only there. Host Go1.27.0 with GOPROXY=off/GOTOOLCHAIN=local; cached mysql:8.0 --pull never in dedicated `ccmai-r035-r1-review-mysql`, synthetic database ccmai_r035_r1_review, loopback-only port60025. Required DB evidence has zero unavailable-DB skips. Dedicated container and inspected anonymous volume removed, absence verified; existing application containers untouched.
+
+- Complete `go -C <archive>/backend test -count=1 -timeout 120s -json ./mcp`: PASS18 top-level/28 total,0 FAIL/SKIP,29.479s. Backend build/vet: PASS12.661s/3.099s.
+- Two error-only mutations each applied once and killed by the new committed test: GORM update5.576s, raw Exec5.536s. Guaranteed byte restoration verified after each. Final restored detector plus unchanged original reviewer probe2 PASS,0 FAIL/SKIP,7.739s; all four file hashes equal exact repair.
+- [Sanitized R1 summary](probes/r035_r1_independent_summary.json) records commands/exits/counts, applied old/new text, source/mutant/log digests and byte restoration. Raw synthetic logs/archive remain outside Git. Worker eleven-mutant campaign and MY1/MY2 pre-R1 survivors are attributed separately, not relabeled independently rerun. Earlier reviewer mixed isError/text attempt remains in original evidence.
+
+Gate/docs/catalog/diff/commit checks recorded in active handoff. Repository validation does not establish runtime AI governance or universal procedural enforcement; a final worker commit cannot alone prove intra-worktree acknowledgment timing.
+
+## Limits and disposition
+
+Race NOT RUN (CGO=0), full backend DB suite NOT RUN, frontend and all live/channel/provider/external-network/GitHub checks NOT RUN. Disposable MySQL/loopback tests were run. GORM callbacks and listed checksums/default transport-client trap remain bounded observations; raw sockets/other clients are unobserved, and checksum equality is not complete write-history evidence. The original mixed-call campaign excludes membership checksum because its fixture changes membership; the repaired single forced-error test includes it after fixture setup. No universal no-write/no-network proof is claimed.
+
+R035 local REVIEW_PASS / FREEZE_OPEN; no open R1 finding for this contract. ORCHESTRATOR handles local planning/continuity autonomously; no new BUILD or worker dispatched. R034 offline acceptance, R033/local-message FREEZE unchanged. Pancake live packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED; independent inventory/controlled page/quiescence/capture and explicit credential/network authority still required. Global F02/governance/hosted/FREEZE stay open; no push/merge/deployment/new FREEZE or live claim.

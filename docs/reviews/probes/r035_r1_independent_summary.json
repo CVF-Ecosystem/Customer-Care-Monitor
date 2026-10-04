@@ -1,0 +1,189 @@
+{
+  "buildCommit": "22204abc0a19841cd9c50ce03c0af032896d3b4e",
+  "runs": [
+    {
+      "label": "baseline_full",
+      "args": [
+        "test",
+        "-count=1",
+        "-timeout",
+        "120s",
+        "-json",
+        "./mcp"
+      ],
+      "exit": 0,
+      "seconds": 29.479,
+      "counts": {
+        "pass": 28,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 18,
+      "failedTests": [],
+      "logSHA256": "a266c957f56a59b540833decf58534bc5880ae4109b1065fa41a0e19179e6e73",
+      "assertions": []
+    },
+    {
+      "label": "build",
+      "args": [
+        "build",
+        "./..."
+      ],
+      "exit": 0,
+      "seconds": 12.661,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failedTests": [],
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assertions": []
+    },
+    {
+      "label": "vet",
+      "args": [
+        "vet",
+        "./..."
+      ],
+      "exit": 0,
+      "seconds": 3.099,
+      "counts": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failedTests": [],
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "assertions": []
+    },
+    {
+      "label": "error_gorm_write",
+      "args": [
+        "test",
+        "-count=1",
+        "-timeout",
+        "45s",
+        "-json",
+        "./mcp",
+        "-run",
+        "^TestTriggerForcedReadErrorHasNoEffects$"
+      ],
+      "exit": 1,
+      "seconds": 5.576,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failedTests": [
+        "TestTriggerForcedReadErrorHasNoEffects"
+      ],
+      "logSHA256": "46bc4eaa058ac34860b575455ebf9352ce9308de9db0a551131a0669727ab49f",
+      "assertions": [
+        "trigger_contract_test.go:424: FORCED_ERROR_EFFECT: gorm writes=map[jobs:1] outbound=0"
+      ]
+    },
+    {
+      "label": "error_raw_write",
+      "args": [
+        "test",
+        "-count=1",
+        "-timeout",
+        "45s",
+        "-json",
+        "./mcp",
+        "-run",
+        "^TestTriggerForcedReadErrorHasNoEffects$"
+      ],
+      "exit": 1,
+      "seconds": 5.536,
+      "counts": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevelPass": 0,
+      "failedTests": [
+        "TestTriggerForcedReadErrorHasNoEffects"
+      ],
+      "logSHA256": "7264fb5c9a6f54cb1b004b7113ecfe26d1ae8917eea68b3cbf8a9613cc3ec749",
+      "assertions": [
+        "trigger_contract_test.go:429: FORCED_ERROR_STATE_CHANGE: table jobs changed (781228629 -> 3692683936)"
+      ]
+    },
+    {
+      "label": "restored_with_original_probe",
+      "args": [
+        "test",
+        "-count=1",
+        "-timeout",
+        "60s",
+        "-json",
+        "./mcp",
+        "-run",
+        "^(TestTriggerForcedReadErrorHasNoEffects|TestReviewerR035)"
+      ],
+      "exit": 0,
+      "seconds": 7.739,
+      "counts": {
+        "pass": 2,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevelPass": 2,
+      "failedTests": [],
+      "logSHA256": "3e0e16aba912fe732cbb0e147e688f5139dca2913703e1f0d1704a492207342e",
+      "assertions": []
+    }
+  ],
+  "mutations": [
+    {
+      "label": "error_gorm_write",
+      "target": "backend/mcp/handlers.go",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "old": "if err := db.DB.Where(\"id = ? AND tenant_id = ?\", jobID, tenantID).First(&job).Error; err != nil {\n\t\treturn errResult(\"Job not found\")",
+      "new": "if err := db.DB.Where(\"id = ? AND tenant_id = ?\", jobID, tenantID).First(&job).Error; err != nil {\n\t\tif jobID == \"job-\"+tenantID { db.DB.Model(&models.Job{}).Where(\"id = ?\", jobID).Update(\"name\", \"reviewer-r1-error-write\") }\n\t\treturn errResult(\"Job not found\")",
+      "baselineSHA256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+      "mutantSHA256": "b6f8b2e32bd16d119c0c6b3a87e73a851bcc2311938d043debadc052d6ddf09d",
+      "restoredByteEquality": true,
+      "disposition": "KILLED",
+      "detector": "TestTriggerForcedReadErrorHasNoEffects",
+      "semanticAssertion": "trigger_contract_test.go:424: FORCED_ERROR_EFFECT: gorm writes=map[jobs:1] outbound=0"
+    },
+    {
+      "label": "error_raw_write",
+      "target": "backend/mcp/handlers.go",
+      "expectedMatches": 1,
+      "actualMatches": 1,
+      "old": "if err := db.DB.Where(\"id = ? AND tenant_id = ?\", jobID, tenantID).First(&job).Error; err != nil {\n\t\treturn errResult(\"Job not found\")",
+      "new": "if err := db.DB.Where(\"id = ? AND tenant_id = ?\", jobID, tenantID).First(&job).Error; err != nil {\n\t\tif jobID == \"job-\"+tenantID { db.DB.Exec(\"UPDATE jobs SET name = ? WHERE id = ?\", \"reviewer-r1-error-raw\", jobID) }\n\t\treturn errResult(\"Job not found\")",
+      "baselineSHA256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+      "mutantSHA256": "599672e245210afb02ed0e42bb041fba645f4761acef14188de31fb7c0ca31d6",
+      "restoredByteEquality": true,
+      "disposition": "KILLED",
+      "detector": "TestTriggerForcedReadErrorHasNoEffects",
+      "semanticAssertion": "trigger_contract_test.go:429: FORCED_ERROR_STATE_CHANGE: table jobs changed (781228629 -> 3692683936)"
+    }
+  ],
+  "evidenceType": "SYNTHETIC_LOCAL_APPLICATION_REREVIEW",
+  "live": false,
+  "governanceClaim": false,
+  "reviewer": "Codex",
+  "archive": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r035-r1-independent-20261003",
+  "restoration": {
+    "handlers.go": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+    "tools.go": "8f09c4064042736a636c0e032f94dbf9d5039a81ac2c0313982c17c9a8f9fe6b",
+    "permission_admission_test.go": "3f39bbf54e2964a064e1c340c6e01870efb40d1b52468a19d495376fe9e7f376",
+    "trigger_contract_test.go": "d6b3dd7fafb81a0c0192cb9b0eb1f8994fb421a144a8e7df23925c892f5ab27b"
+  },
+  "limits": [
+    "GORM callback/selected table checksum/default transport observation only",
+    "Checksums do not establish complete write history",
+    "CGO=0 race NOT RUN; full backend DB/frontend/live/provider/external network/GitHub NOT RUN"
+  ]
+}

@@ -2,6 +2,8 @@
 
 Date: 2026-10-02. Author: Codex, ORCHESTRATOR. Status: ASSESSMENT_RECORDED / EXECUTION_NOT_DISPATCHED. Source baseline: `9fbc8b209b302291aa00cd820b7b732c12c06ee1`. Risk ceiling: R2. Authority: current R029 next allowed move and owner “next”; review/continuity documentation only. No release gate, new BUILD or FREEZE is executed here.
 
+Current recommendation: superseded by the [post-R032 assessment and concrete local closure proposal](F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md). The missing-message candidates and next implementation steps below are historical; R030–R032 local message contracts have since REVIEW_PASS. Preserve this original baseline/evidence. Global F02/live/governance and FREEZE remain OPEN.
+
 ## Finding inventory and accepted evidence
 
 | Finding | Current accepted scope | Remaining boundary |

@@ -4,23 +4,125 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
 ## Start Here
 
+- Owner parks Facebook/Zalo OA account/live tests; source-based MCP job-execution next-scope planning, no BUILD dispatch.: `docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
-- F02 remaining evidence and scoped FREEZE assessment; next bounded planning move.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
-- Current active handoff: F02-E planning, dispatch and review route.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md`
+- Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
+- Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
+- Current R046 finalizer driver-error logging WORK_ORDER/DISPATCH_READY handoff; no BUILD yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
 - Shared learning: shell cleanup and MSYS paths; read before disposable-resource cleanup.: `docs/reviews/learnings/feedback_shell_cleanup_and_paths.md`
 - Shared sync coverage learning: conversation, message, storage, live-channel and governance evidence boundaries.: `docs/reviews/learnings/feedback_sync_coverage_evidence_layers.md`
+- Prepared Pancake live-proof packet; required external inputs and network/credential authority outstanding; no dispatch.: `docs/reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md`
 - Historical handoff through F07 review and F02-D intake acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 - Historical F02-D BUILD/review and F02-E planning intake; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md`
+- Historical F02-E review, owner pause/resume and F02-F intake acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md`
+- Historical R035 independent acceptance and R036 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_TRIGGER_TRUTH_2026-10-03.md`
+- Historical R036 acceptance and R037 intake/seed acknowledgment, targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SETUP_STATUS_RECOVERY_2026-10-03.md`
+- Historical R037 acceptance and R038 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_S3_GUIDE_COMMANDS_2026-10-03.md`
+- Historical R038 acceptance and R039 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md`
+- Historical R039 acceptance and R040 closure intake/seed acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md`
+- Historical R040 scoped local FREEZE and R041 intake/seed acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md`
+- Historical R041-R1 acceptance handoff and R042 documentation intake; platform/locality/TOCTOU limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md`
+- Historical R042 independent acceptance/dead-link correction and R043 local closure intake.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
+- Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
-- R030 Pancake local message order: REVIEW_PASS / FREEZE_OPEN.: `docs/work_orders/CCMAI_RUNTIME_030.md`
-- Active F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`
-- R031 Facebook local message order: independently REVIEW_PASS / FREEZE_OPEN.: `docs/work_orders/CCMAI_RUNTIME_031.md`
+- Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
+- Reviewed F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`
+- Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_031.md`
+- Independent R032 exact-BUILD review: CHANGES_REQUIRED for finite cycle detector/evidence and current implementation prose.: `docs/reviews/CCMAI_RUNTIME_032_F02F_INDEPENDENT_REVIEW_2026-10-03.md`
+- Active F02-F Zalo local full-history message contract and acceptance matrix.: `docs/specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md`
+- Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_032.md`
+- Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
+- Historical R032 review/assessment and owner local-closure delegation acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md`
+- Historical R044 implementation/repair/independent acceptance and R045 seed planning acknowledgment; source/evidence limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
+- Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md`
+- Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
+- R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
+- R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`
+- Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only.: `docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md`
+- Historical worker BUILD and R1 evidence; independent R1 re-review accepts offline contract with limits; synthetic only.: `docs/reviews/PANCAKE_PROOF_HARNESS_R034_BUILD_2026-10-03.md`
+- Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved.: `docs/work_orders/CCMAI_RUNTIME_034.md`
+- Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved.: `docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md`
+- Independent exact-R1 synthetic mutation sample, semantic failures, hashes/restoration and initial INCONCLUSIVE attempt.: `docs/reviews/probes/r034_r1_mutation_summary.json`
+- Independent R034 R1 REVIEW_PASS: offline contract accepted, repaired probes/mutations pass; FREEZE/live remain OPEN.: `docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
+- Synthetic independent R034 defect probes; copy only into an isolated exact-BUILD archive for replay.: `docs/reviews/probes/r034_reviewer_probe_test.go`
+- Immutable Codex dispatcher seed committed before R035 BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-035.json`
+- Historical worker BUILD/R1 evidence, preserved initial survivor and worker11 campaign; R1 independently accepted locally.: `docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md`
+- Independent synthetic forced-read-error effect probe; replay in isolated exact-BUILD archive only.: `docs/reviews/probes/r035_error_effect_probe_test.go`
+- Historical initial R035 CHANGES_REQUIRED; R1 settles detector/prose findings without product repair.: `docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md`
+- Independent R035 tests, mutations, error-only survivor/probe kill, digests and restoration; synthetic only.: `docs/reviews/probes/r035_independent_summary.json`
+- R035 R1 REVIEW_PASS / FREEZE_OPEN, local contract; no new worker/BUILD dispatch.: `docs/work_orders/CCMAI_RUNTIME_035.md`
+- Independent exact-R1 REVIEW_PASS; forced-error detector/prose settled, local contract and effect/NOT RUN limits retained.: `docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
+- Independent exact-R1 MCP suite/error-only mutations, named failures/digests/restoration; synthetic local evidence only.: `docs/reviews/probes/r035_r1_independent_summary.json`
+- R035 status/phase/scope/roles and exact BUILD-review contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-035.json`
+- R035 MT-01..06 local contract: R1 independently REVIEW_PASS / FREEZE_OPEN; no actual job dispatch.: `docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md`
+- Historical Claude BUILD evidence: SS matrix/controls/ten mutations and failed history; exact source independently REVIEW_PASS for mocked UI only.: `docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md`
+- Independent exact-BUILD REVIEW_PASS for synthetic UI; four mutation kills, restored tests and honest limits.: `docs/reviews/CCMAI_RUNTIME_036_INDEPENDENT_REVIEW_2026-10-03.md`
+- Sanitized exact-BUILD digests, synthetic frontend/control/mutation observations, NOT_APPLIED and nonsemantic failures retained.: `docs/reviews/probes/r036_independent_summary.json`
+- R036 work order independently REVIEW_PASS / FREEZE_OPEN for exact Claude BUILD, no new worker dispatched.: `docs/work_orders/CCMAI_RUNTIME_036.md`
+- Immutable Codex dispatcher seed committed before R036 activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-036.json`
+- R036 SS-01..06 synthetic frontend contract independently REVIEW_PASS / FREEZE_OPEN, live/browser/backend limits retained.: `docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md`
+- Historical Claude R037 BUILD evidence, five guide replacements and failed history; exact source independently accepted, runtime NOT RUN.: `docs/reviews/S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md`
+- Independent R037 exact-BUILD REVIEW_PASS, entire guide comparison and source/help evidence, operational limits retained.: `docs/reviews/CCMAI_RUNTIME_037_INDEPENDENT_REVIEW_2026-10-03.md`
+- R037 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained.: `docs/work_orders/CCMAI_RUNTIME_037.md`
+- Immutable Codex R037 seed committed before activation/BUILD, documentation only.: `CVF_SESSION/authority/CCMAI-RUNTIME-037.json`
+- Historical independently accepted R037 SPEC; local disposition FROZEN under R040, original evidence/limits preserved.: `docs/specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md`
+- Historical Claude R038 BUILD evidence; seven-line helper deletion independently accepted with static/compile-only limits.: `docs/reviews/UNUSED_INCREMENTAL_HELPER_R038_BUILD_2026-10-03.md`
+- Independent exact-BUILD R038 REVIEW_PASS: exact deletion, seed/references/digests and cached compilation, zero engine tests executed.: `docs/reviews/CCMAI_RUNTIME_038_INDEPENDENT_REVIEW_2026-10-03.md`
+- R038 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained.: `docs/work_orders/CCMAI_RUNTIME_038.md`
+- Immutable Codex R038 seed committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-038.json`
+- Historical independently accepted R038 SPEC; local disposition FROZEN under R040, original evidence/limits preserved.: `docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md`
+- Historical Claude R039 BUILD evidence and original control failure; exact deletion independently accepted offline.: `docs/reviews/PANCAKE_CLI_SCOPE_ASSERTION_R039_BUILD_2026-10-03.md`
+- Independent R039 exact-BUILD REVIEW_PASS: deletion/equality, original overlay control, offline CLI6 PASS0 skips and protected paths unchanged.: `docs/reviews/CCMAI_RUNTIME_039_INDEPENDENT_REVIEW_2026-10-03.md`
+- R039 bounded local contract FROZEN under separate R040 authority; original independent review/limits retained.: `docs/work_orders/CCMAI_RUNTIME_039.md`
+- Immutable Codex R039 seed committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-039.json`
+- Historical independently accepted R039 SPEC; local disposition FROZEN under R040, original evidence/limits preserved.: `docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md`
+- R040 local maintenance closure: R037-R039 FROZEN at exact source with independent review and preserved limits.: `docs/reviews/CCMAI_RUNTIME_040_LOCAL_MAINTENANCE_CLOSURE_2026-10-03.md`
+- R040 FROZEN separate closure authority; original R037-R039 BUILD seeds unchanged.: `docs/work_orders/CCMAI_RUNTIME_040.md`
+- Immutable separate R040 authority for local R037-R039 disposition only.: `CVF_SESSION/authority/CCMAI-RUNTIME-040.json`
+- R041 original BUILD and R1 worker section8 evidence; independent acceptance separate, incidents/skips/survivor preserved.: `docs/reviews/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_BUILD_2026-10-03.md`
+- Independent exact-BUILD R041 CHANGES_REQUIRED: mixed Windows UNC, ancestor junction admission and platform SKIP evidence; OI-04 intent clarified.: `docs/reviews/CCMAI_RUNTIME_041_INDEPENDENT_REVIEW_2026-10-03.md`
+- Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved.: `docs/work_orders/CCMAI_RUNTIME_041.md`
+- Independent exact-R1 re-review: R041-R1-01..03 settled, REVIEW_PASS / FREEZE_OPEN; explicit platform/drive/TOCTOU limits.: `docs/reviews/CCMAI_RUNTIME_041_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
+- Immutable Codex R041 seed before activation/BUILD; no live/credential/network effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-041.json`
+- Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved.: `docs/specs/PANCAKE_OFFLINE_INVENTORY_INPUT_R041_2026-10-03.md`
+- R042 BUILD evidence: DU matrix, finite synthetic CLI smoke exits/outputs, protected-path equality, retained limits; REVIEW_PENDING.: `docs/reviews/PANCAKE_OFFLINE_PROOF_USAGE_R042_BUILD_2026-10-03.md`
+- Vietnamese operator guide for the offline Pancake proof CLI: flags, exits, synthetic inventory schema, limits and unverified items; synthetic only.: `docs/guide/pancake-offline-proof.md`
+- Independent R042 REVIEW_PASS:9 mounted examples/6 guide blocks, source/scope checks, separate Codex dispatch link correction and preserved worker docs FAIL.: `docs/reviews/CCMAI_RUNTIME_042_INDEPENDENT_REVIEW_2026-10-03.md`
+- Bounded local offline contract FROZEN under separate R043; original BUILD review/failed history/limits preserved.: `docs/work_orders/CCMAI_RUNTIME_042.md`
+- Hand-authored synthetic expected-inventory sample for the offline proof CLI; no real data.: `docs/examples/pancake-proof/synthetic-inventory.json`
+- Immutable R042 R1 documentation/example-smoke authority committed before activation/BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-042.json`
+- Historical accepted offline SPEC; bounded local disposition now FROZEN under separate R043, original claim/platform/live limits preserved.: `docs/specs/PANCAKE_OFFLINE_PROOF_USAGE_R042_2026-10-03.md`
+- R043 local closure: R034/R041/R042 FROZEN at integrated accepted source, inherited independent proof and explicit limits.: `docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md`
+- R043 FROZEN separate local offline-contract closure authority; original BUILD seeds and unverified domains preserved.: `docs/work_orders/CCMAI_RUNTIME_043.md`
+- Separate R043 R1 local offline-contract closure authority, committed before activation; no runtime/worker/live proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-043.json`
+- R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`
+- Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved.: `docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md`
+- Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified.: `docs/reviews/probes/r044_independent_summary.json`
+- R044 separate local closure authority assessed eligible; prepare R045 metadata-only seed/order next, FREEZE_OPEN and live limits retained.: `docs/reviews/CCMAI_RUNTIME_044_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-04.md`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/work_orders/CCMAI_RUNTIME_044.md`
+- Independent exact-R1 R044 REVIEW_PASS: maintained notification tests, receipt audit, detector/restored evidence and preserved limits; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md`
+- Independent R044 R1 source/diff/hash audit, synthetic suites, applied detectors/restoration, incidents and task cleanup.: `docs/reviews/probes/r044_r1_independent_summary.json`
+- R044 repair round 1 worker evidence: maintained notification-tail regression, detector controls, recovered and new mutation receipts; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md`
+- R044 repair round 1 machine receipts: exact replacements, full hashes, counts, named failures, restoration results and incidents; no raw logs.: `docs/reviews/probes/r044_r1_worker_receipts.json`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
+- Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call.: `docs/reviews/probes/r044_notification_probe_test.go`
+- Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
+- R044 unchanged local contract independently R1 REVIEW_PASS / FREEZE_OPEN; historical limits retained.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
+- Separate R045 R1 metadata-only closure authority for accepted R044; committed before activation, no source/runtime/live effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-045.json`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/reviews/CCMAI_RUNTIME_045_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/work_orders/CCMAI_RUNTIME_045.md`
+- Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-045.json`
+- Immutable R046 R2 authority for bounded finalizer driver-error containment; seed precedes activation.: `CVF_SESSION/authority/CCMAI-RUNTIME-046.json`
+- Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- R046 WORK_ORDER/DISPATCH_READY record; immutable committed seed, no BUILD.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
+- R046 finalizer-only FL-01..06 requirements; implementation not started.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
+- R046 bounded R2 Claude BUILD / Codex independent review order; DISPATCH_READY.: `docs/work_orders/CCMAI_RUNTIME_046.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

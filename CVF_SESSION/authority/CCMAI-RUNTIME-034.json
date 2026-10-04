@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-034",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_034.md",
+  "sourcePlanningCommit": "5cb718d110495e04568368811f37030ddb20d93e",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/channels/pancake_proof.go",
+    "backend/channels/pancake_proof_test.go",
+    "backend/cmd/pancake-proof/main.go",
+    "backend/cmd/pancake-proof/main_test.go",
+    "docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_034.md",
+    "docs/reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md"
+  ],
+  "prohibitedEffects": [
+    "provider_call", "channel_call", "credential_use", "external_network",
+    "persistent_db", "customer_data", "media_download", "analyzer_dispatch",
+    "notification", "token_rotation", "existing_adapter_change",
+    "engine_source_change", "ui_change", "schema_change", "dependency_change",
+    "workflow_change", "gate_tooling_change", "parent_cvf_edit", "secret_commit",
+    "push", "merge", "deployment", "freeze", "global_f02_closure",
+    "live_governance_claim", "original_authority_seed_edit"
+  ],
+  "permittedEffects": [
+    "new_standalone_offline_proof_harness",
+    "synthetic_in_memory_transport_tests",
+    "local_build_vet_docs_gates",
+    "bounded_local_documentation_and_build_commits"
+  ],
+  "ownerAuthorization": "2026-10-03 owner assigns Codex ORCHESTRATOR/REVIEWER, authorizes coordination and will manually transfer work orders to Claude for implementation. Existing standing local planning/commit authority applies; real credential/channel/network use is not granted.",
+  "claimScope": "Offline harness behavior against synthetic fixtures only. No live-channel inventory, provider compatibility, CVF AI governance, hosted readiness or new FREEZE claim."
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-039",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_039.md",
+  "sourcePlanningCommit": "c58b4778a5ef8ef638ca0f538f289108c44ca3e7",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/cmd/pancake-proof/main_test.go",
+    "docs/specs/PANCAKE_CLI_SCOPE_ASSERTION_R039_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_039.md"
+  ],
+  "prohibitedEffects": [
+    "runtime_behavior_change",
+    "provider_call",
+    "channel_call",
+    "analyzer_execution",
+    "queue_dispatch",
+    "credential_use",
+    "config_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "docker_daemon_operation",
+    "frontend_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "product_source_change",
+    "other_test_change",
+    "skip_or_baseline_retarget_to_hide_failure",
+    "engine_test_execution"
+  ],
+  "permittedEffects": [
+    "remove_only_history_dependent_TestProductionAdapterFilesUnchangedInGit_and_attached_comment",
+    "cached_offline_pancake_cli_test_execution_with_finite_in_memory_fixtures",
+    "cached_local_go_build_vet_without_engine_test_execution",
+    "static_protected_path_git_comparison",
+    "local_docs_catalog_gates",
+    "bounded_local_test_documentation_commits"
+  ],
+  "ownerAuthorization": "Standing local orchestration delegation; owner continuation in orchestrator/reviewer role. Codex authors bounded test-maintenance order and reviews; owner manually transfers to Claude. No automatic agent invocation, external network, credentials, DB or product runtime authority.",
+  "claimScope": "CLI test maintenance only: remove a historical Git-baseline assertion invalidated by independently accepted R038. Preserve behavioral tests and verify protected paths in BUILD/review evidence. No live channel, AI governance, functional engine regression or FREEZE claim."
+}

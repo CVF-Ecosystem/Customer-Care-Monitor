@@ -1,6 +1,6 @@
 # F02-E — Facebook message-window coverage
 
-Status: SPEC_ACCEPTED_FOR_DISPATCH. Date: 2026-10-02. Tranche CCMAI-RUNTIME-031, risk ceiling R2. Author: Codex SPEC_AUTHOR. Implementation: exact BUILD `8ed6d0b39195ade513906571daaaf537ddeb90a9` independently REVIEW_PASS / FREEZE_OPEN (2026-10-03; [review](../reviews/CCMAI_RUNTIME_031_F02E_INDEPENDENT_REVIEW_2026-10-02.md)). Acceptance is the local F02E-01..09 contract; intended requirements below remain unchanged. Meta endpoint/live compatibility and global F02 remain OPEN.
+Status: FROZEN for the reviewed local message contract under [R033 closure](../reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md), 2026-10-03. Original SPEC/BUILD/review authority and historical open-FREEZE statements below describe earlier checkpoints; separate closure authority grants only local disposition effects. Global F02/live/governance remain OPEN.
 
 ## INTAKE and inherited acceptance
 
@@ -50,3 +50,5 @@ Run full channels, focused engine/ownership/checkpoint tests and full backend/bu
 [Work order](../work_orders/CCMAI_RUNTIME_031.md) and immutable seed bound source to facebook.go, Facebook adapter tests and sync_facebook engine tests. Claude IMPLEMENTATION_WORKER / local BUILD COMMIT_STEWARD, Codex independent REVIEWER. New message-only helpers fit this source scope; changing engine product/shared request behavior requires BUILD_BLOCKED and new dispatcher authority. No real provider/channel/credential action, production data, persistent DB, dependency/tooling/workflow/UI/schema/parent change, push/merge/deploy or FREEZE.
 
 Apply [shared evidence-layer learning](../reviews/learnings/feedback_sync_coverage_evidence_layers.md), [repair/mutation learning](../reviews/learnings/feedback_cvf_repair_workflow.md) and [cleanup learning](../reviews/learnings/feedback_shell_cleanup_and_paths.md). Synthetic transport and disposable DB validate application semantics only. Runtime CVF AI-governance claims require a real provider receipt under separate authority. R030/R022 accepted source scope remains intact; global F02, live access/offset/cursor guarantees and provider/governance readiness remain OPEN.
+
+Current local disposition: FROZEN under R033; source snapshot `9ad6aee65a3391bf8c2f5473ee869f29e0abfc77`. Contract/negative assertions and known live/race/evidence limits unchanged; no product/test repair or live governance evidence added.

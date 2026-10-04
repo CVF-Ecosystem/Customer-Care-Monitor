@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-030 — F02-D Pancake message-window coverage
 
-Status: REVIEW_PASS. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex (ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR). Risk ceiling R2.
+Status: FROZEN. Local message contract only; closed 2026-10-03 by Codex CLOSER under [R033 separate closure order](CCMAI_RUNTIME_033.md). Original BUILD authority/seed and historical review/repair statements below remain unchanged; later closure authority resolves local disposition only. Global F02/live/governance remains OPEN.
 
 Authority: [SPEC](../specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md), [F02 assessment](../reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md), dispatcher-owned `CVF_SESSION/authority/CCMAI-RUNTIME-030.json`. Seed committed at `cbc7cba3af7d1b5ce77911fbb7e1fa62ff70c39f`, which is the tranche's baseCommit before BUILD. Worker must never edit seed. This planning order changes no product source; F02 remains OPEN.
 
@@ -41,3 +41,7 @@ Return BUILD SHA, changed set, acceptance matrix, tests/DB observations, sanitiz
 ## Independent disposition (Codex, 2026-10-02)
 
 Exact BUILD `31daee1d2f736166c4514ec2487d9b94b94727cd` accepted REVIEW_PASS / FREEZE_OPEN; [review](../reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md). F02D-01..09 local source/adapter/engine contract accepted with explicit evidence layers: full channels61 top-level/69 total, new engine2 top-level/5 total, selected regressions7 top-level, build/vet/gate46 PASS; original-source12 failures and four applied mutations killed, restored baseline PASS. Full backend and earlier worker campaigns remain attributed. No reviewer product/test fix; documentation findings synchronized. Race NOT RUN; live offset stability/global F02/credentials/provider/governance and FREEZE remain OPEN. No further R030 repair dispatched.
+
+## Local closure under separate R033 authority
+
+[Closure decision](../reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md) freezes the accepted local contract at integrated snapshot `9ad6aee65a3391bf8c2f5473ee869f29e0abfc77`; original BUILD/repair/review hashes remain in the tranche record. Inherited evidence/known limits retained. No new source/test/API/credential/DB/push/deploy effect. Original order prohibited FREEZE during its BUILD scope; R033 is the separately committed closure authority, not a rewrite of this original seed.

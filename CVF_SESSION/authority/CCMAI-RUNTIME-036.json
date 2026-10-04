@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-036",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_036.md",
+  "sourcePlanningCommit": "b4b119679ad6f37bbac85ed009201a42f9cc8944",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "frontend/src/router/index.ts",
+    "frontend/src/router/setupStatus.ts",
+    "frontend/src/App.vue",
+    "frontend/src/views/SetupStatusUnavailable.vue",
+    "frontend/src/i18n/vi.ts",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/__tests__/setup-stale-token.spec.ts",
+    "frontend/src/__tests__/setup-status-unavailable.spec.ts",
+    "docs/specs/SETUP_STATUS_RECOVERY_R036_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_036.md"
+  ],
+  "prohibitedEffects": [
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "backend_change",
+    "auth_policy_change",
+    "oauth_change",
+    "refresh_cookie_change",
+    "global_api_interceptor_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit"
+  ],
+  "permittedEffects": [
+    "bounded_setup_status_frontend_navigation_and_recovery",
+    "synthetic_mocked_ui_structure_and_routing_tests",
+    "local_frontend_typecheck_build_docs_gates",
+    "bounded_local_documentation_and_build_commits"
+  ],
+  "ownerAuthorization": "Standing local orchestration delegation in CVF_SESSION_MEMORY.md and owner reaffirmation: Codex ORCHESTRATOR/REVIEWER authors bounded orders; owner manually transfers to Claude. Addresses the already recorded AUTH-001 failed setup-status fallback limitation. No provider/channel/external network, actual credentials or deployment authority.",
+  "claimScope": "Synthetic local frontend setup-status routing, loading/error rendering and recovery only. No backend auth/security assurance, runtime AI/CVF governance, live availability, hosted readiness or FREEZE claim."
+}

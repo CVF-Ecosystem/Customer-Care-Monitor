@@ -1,6 +1,6 @@
 # F02-D — Pancake message-window coverage
 
-Status: SPEC_ACCEPTED_FOR_DISPATCH, 2026-10-02. Tranche: CCMAI-RUNTIME-030. Risk ceiling: R2. Author: Codex, SPEC_AUTHOR. Product implementation: BUILD `31daee1d2f736166c4514ec2487d9b94b94727cd`. Independent local acceptance: REVIEW_PASS / FREEZE_OPEN; [review](../reviews/CCMAI_RUNTIME_030_F02D_INDEPENDENT_REVIEW_2026-10-02.md). Intended contract below unchanged.
+Status: FROZEN for the reviewed local message contract under [R033 closure](../reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md), 2026-10-03. Original SPEC/BUILD/review authority and historical open-FREEZE statements below describe earlier checkpoints; separate closure authority grants only local disposition effects. Global F02/live/governance remain OPEN.
 
 ## INTAKE and inherited evidence
 
@@ -48,3 +48,5 @@ Only `backend/channels/pancake.go`, Pancake adapter tests and `backend/engine/sy
 Use [the work order](../work_orders/CCMAI_RUNTIME_030.md) and committed dispatcher seed for exact authority. Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; Codex independent REVIEWER. Evidence must map F02D-01..09 to exact tests, request traces, stored IDs and bounded failures, with exact BUILD SHA and original-source/mutation output. [Shared learning](../reviews/learnings/README.md), [coverage layers](../reviews/learnings/feedback_sync_coverage_evidence_layers.md), [repair workflow](../reviews/learnings/feedback_cvf_repair_workflow.md) and [cleanup paths](../reviews/learnings/feedback_shell_cleanup_and_paths.md) apply before BUILD and teardown.
 
 No real channel/provider API, production data, existing credentials or persistent DB is authorized. Synthetic adapter/DB acceptance asserts application semantics only, never runtime CVF AI governance. A runtime governance claim requires a real provider receipt under separate authorization. Hosted CI, pilot/release readiness and FREEZE are not acceptance outcomes of this order.
+
+Current local disposition: FROZEN under R033; source snapshot `9ad6aee65a3391bf8c2f5473ee869f29e0abfc77`. Contract/negative assertions and known live/race/evidence limits unchanged; no product/test repair or live governance evidence added.

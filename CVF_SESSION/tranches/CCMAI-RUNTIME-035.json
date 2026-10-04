@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-035",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/mcp/handlers.go",
+    "backend/mcp/tools.go",
+    "backend/mcp/permission_admission_test.go",
+    "backend/mcp/trigger_contract_test.go",
+    "docs/specs/MCP_TRIGGER_JOB_TRUTH_R035_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_035.md"
+  ],
+  "prohibitedEffects": [
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "analyzer_dispatch",
+    "queue_dispatch",
+    "notification",
+    "token_rotation",
+    "permission_policy_change",
+    "oauth_change",
+    "engine_source_change",
+    "ui_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit"
+  ],
+  "claimScope": "Local MCP response truth and application permission/tenant regressions on synthetic disposable data only. No actual dispatch, runtime AI governance, hosted readiness or FREEZE claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_035.md",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
+  "baseCommit": "4b714a35bc6f49abe508d3ec4f32504e500054ba",
+  "buildCommit": "22204abc0a19841cd9c50ce03c0af032896d3b4e",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_035_INDEPENDENT_REVIEW_2026-10-03.md",
+    "docs/reviews/probes/r035_error_effect_probe_test.go",
+    "docs/reviews/probes/r035_independent_summary.json",
+    "docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+    "docs/reviews/probes/r035_r1_independent_summary.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerTransferRequired": true,
+  "implementationStarted": true,
+  "repairRound": 1,
+  "repairFindings": [
+    "R035-R1-01",
+    "R035-R1-02"
+  ],
+  "repairDisposition": "R1_ACCEPTED"
+}

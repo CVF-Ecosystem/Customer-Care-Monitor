@@ -1,0 +1,177 @@
+{
+  "build": "a805db2bbb3b30ea1841537351a538c37a1af28b",
+  "scope": "Synthetic happy-dom UI/navigation only; cvf-allow-secret-fixture: synthetic tokens in test messages. No runtime governance.",
+  "sourceBlobSha256": {
+    "frontend/src/router/index.ts": "66023274e9eb85eec31e2d6d8d1d1b24aaf251d20f43b79c77840b647471d90d",
+    "frontend/src/router/setupStatus.ts": "7da9aadd1c424773133de7665087ea21ced45b18b114bd4f64ded892f0723e19",
+    "frontend/src/App.vue": "d5357684eed24b76a4b6c6582a6fa42de170f2b59570eaee83ee55bede6f65ee",
+    "frontend/src/views/SetupStatusUnavailable.vue": "71386477eca15fa8d420c1323b9679c5d3dbbd9bb2e951bffafc8bcad68a4f94",
+    "frontend/src/i18n/vi.ts": "c4fa500a74c516bf707db39f14edad2deabf80731100a61d7c69014bfe073b09",
+    "frontend/src/i18n/en.ts": "128df13e7e6de67f4a7626557612237dda190ac722bbf6149c218b934e24260d",
+    "frontend/src/__tests__/setup-stale-token.spec.ts": "ac69d4655e0b65d6c9d1b5d6658ec280eb68bac442d3284219e36efd5bf1b8d5",
+    "frontend/src/__tests__/setup-status-unavailable.spec.ts": "973e8d2b9a0a7edcab713ced78fc0421d8e4010927646322fdf16d3e2adacae2"
+  },
+  "workingCopyNormalizedEqual": true,
+  "frontend": {
+    "success": true,
+    "numTotalTests": 299,
+    "numPassedTests": 299,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0
+  },
+  "frontendFiles": 27,
+  "frontendDurationMs": 13403.2333984375,
+  "forcedTypecheckExit": 0,
+  "frontendBuildExit": 0,
+  "isolatedArchive": true,
+  "cases": [
+    {
+      "name": "baseline",
+      "exit": 0,
+      "seconds": 5.858,
+      "passed": 38,
+      "failed": 0,
+      "pending": 0,
+      "failures": []
+    },
+    {
+      "name": "MS1_false_configured",
+      "exit": 1,
+      "seconds": 5.877,
+      "passed": 12,
+      "failed": 26,
+      "pending": 0,
+      "failures": [
+        {
+          "test": "Setup with a stale browser token (AUTH-001) a failed setup-status request neither clears the credential nor admits Setup or the app",
+          "message": "AssertionError: expected 'tenants' to be 'setup-unavailable' // Object.is equality"
+        },
+        {
+          "test": "SS-02 an unconfirmed status settles unavailable without side effects network rejection: every entry lands on the unavailable page and credentials stay",
+          "message": "AssertionError: expected 'tenants' to be 'setup-unavailable' // Object.is equality"
+        }
+      ],
+      "disposition": "KILLED",
+      "restored_sha256": "3268ed232606c5ed2d60387565aea1c0377fa644a1e38265640c8802746c34e0"
+    },
+    {
+      "name": "MS3_premature_profile",
+      "exit": 1,
+      "seconds": 5.9,
+      "passed": 37,
+      "failed": 1,
+      "pending": 0,
+      "failures": [
+        {
+          "test": "SS-05 confirmed configured states an App already mounted on the unavailable page resumes the profile load once, despite concurrent notifications",
+          "message": "AssertionError: expected 1 to be +0 // Object.is equality"
+        }
+      ],
+      "disposition": "KILLED",
+      "restored_sha256": "aac4d71dc484c59a685038f2249d2ddb8ce10c4b29269116b39db356f4b0369d"
+    },
+    {
+      "name": "MS4_initial_preparation",
+      "disposition": "NOT_APPLIED",
+      "reason": "Exact LF-only needle did not match CRLF archive bytes; assertion stopped before mutation/test. Finally restored all original bytes.",
+      "failures": []
+    },
+    {
+      "name": "MS4_duplicate_retry",
+      "exit": 1,
+      "seconds": 5.79,
+      "passed": 37,
+      "failed": 1,
+      "pending": 0,
+      "failures": [
+        {
+          "test": "SS-03 the unavailable view and explicit single-flight Retry Retry is visibly disabled while deferred; a double activation makes exactly one new request",
+          "message": "AssertionError: expected 3 to be 2 // Object.is equality"
+        }
+      ],
+      "disposition": "KILLED",
+      "restored_sha256": "3268ed232606c5ed2d60387565aea1c0377fa644a1e38265640c8802746c34e0"
+    },
+    {
+      "name": "MS9_no_deadline",
+      "exit": 1,
+      "seconds": 5.841,
+      "passed": 37,
+      "failed": 1,
+      "pending": 0,
+      "failures": [
+        {
+          "test": "SS-02 an unconfirmed status settles unavailable without side effects a request that never settles ends unavailable within the status timeout and is aborted",
+          "message": "AssertionError: expected 'unresolved' to be 'unavailable' // Object.is equality"
+        }
+      ],
+      "disposition": "KILLED",
+      "restored_sha256": "3268ed232606c5ed2d60387565aea1c0377fa644a1e38265640c8802746c34e0"
+    },
+    {
+      "name": "old_source_control",
+      "exit": 1,
+      "seconds": 10.819,
+      "passed": 7,
+      "failed": 31,
+      "pending": 0,
+      "failures": [
+        {
+          "test": "Setup with a stale browser token (AUTH-001) a failed setup-status request neither clears the credential nor admits Setup or the app",
+          "message": "AssertionError: expected 'tenants' to be 'setup-unavailable' // Object.is equality"
+        },
+        {
+          "test": "SS-01 pending status shows loading and opens nothing renders the localized loading state under the auth layout, no default layout, no profile or tenant calls",
+          "message": "AssertionError: expected false to be true // Object.is equality"
+        }
+      ],
+      "qualification": "31 failures: includes instrumentation TypeError (missing old request config) and STACK_TRACE_ERROR; those two are INCONCLUSIVE, not semantic detector proof. Separate named control establishes the failed-status regression."
+    },
+    {
+      "name": "restored",
+      "exit": 0,
+      "seconds": 5.852,
+      "passed": 38,
+      "failed": 0,
+      "pending": 0,
+      "failures": []
+    }
+  ],
+  "restored": true,
+  "oldNamedControl": [
+    {
+      "name": "old_source_named_control",
+      "exit": 1,
+      "passed": 0,
+      "failed": 1,
+      "pending": 6,
+      "failure": [
+        {
+          "test": "Setup with a stale browser token (AUTH-001) a failed setup-status request neither clears the credential nor admits Setup or the app",
+          "message": "AssertionError: expected 'tenants' to be 'setup-unavailable' // Object.is equality"
+        }
+      ]
+    },
+    {
+      "name": "restored_named_control",
+      "exit": 0,
+      "passed": 1,
+      "failed": 0,
+      "pending": 6,
+      "failure": []
+    }
+  ],
+  "notRun": [
+    "backend_DB",
+    "race",
+    "real_browser_E2E",
+    "multi_tab",
+    "real_cookie_refresh",
+    "real_network_timing",
+    "live_channel",
+    "provider",
+    "external_network",
+    "GitHub"
+  ]
+}

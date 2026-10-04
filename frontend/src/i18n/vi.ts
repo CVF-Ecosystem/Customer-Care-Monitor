@@ -864,4 +864,11 @@ export default {
   mc_copied: 'Đã sao chép secret',
   mc_copy_failed: 'Không sao chép được. Hãy chọn và sao chép thủ công.',
   mc_done: 'Tôi đã lưu secret, đóng',
+
+  // CCMAI-RUNTIME-036 setup status
+  setup_status_loading: 'Đang kiểm tra trạng thái hệ thống...',
+  setup_status_unavailable_title: 'Chưa kiểm tra được trạng thái hệ thống',
+  setup_status_unavailable_desc: 'Ứng dụng chưa nhận được câu trả lời hợp lệ từ máy chủ nên chưa mở màn hình nào. Thông tin đăng nhập của bạn vẫn được giữ nguyên. Hãy thử lại.',
+  setup_status_retry: 'Thử lại',
+  setup_status_retrying: 'Đang thử lại...',
 }

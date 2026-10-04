@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-038",
+  "authorityKind": "DISPATCHER_OWNED_BUILD_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_038.md",
+  "sourcePlanningCommit": "9bfecedaeeeff4a586ac2685871ad807976deabf",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer_incremental.go",
+    "docs/specs/UNUSED_INCREMENTAL_HELPER_R038_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_038.md"
+  ],
+  "prohibitedEffects": [
+    "runtime_behavior_change",
+    "analysis_mode_policy_change",
+    "provider_call",
+    "channel_call",
+    "analyzer_execution",
+    "queue_dispatch",
+    "credential_use",
+    "config_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "docker_daemon_operation",
+    "frontend_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit"
+  ],
+  "permittedEffects": [
+    "remove_only_uncalled_isOrdinaryIncremental_and_its_comment",
+    "static_go_reference_search",
+    "cached_local_go_build_vet_engine_test_compilation_without_execution",
+    "local_docs_catalog_gates",
+    "bounded_local_source_documentation_commits"
+  ],
+  "ownerAuthorization": "Standing local orchestration delegation and owner continuation: Codex ORCHESTRATOR/REVIEWER authors bounded orders, owner manually transfers to Claude. Addresses R027 independent review nonblocking dead-helper finding; no runtime, credentials, DB/provider/network or deployment authority.",
+  "claimScope": "Unreferenced private helper deletion and compile/static evidence only. No Analyzer execution or functional DB/provider regression, runtime CVF governance, hosted readiness or FREEZE claim."
+}

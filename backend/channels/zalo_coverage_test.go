@@ -564,7 +564,9 @@ func TestZaloSecondExpiryAfterRefreshIsAnError(t *testing.T) {
 	assertZaloSafe(t, "second expiry", err)
 }
 
-// FetchMessages keeps its mapping (float decoding, src, attachments) through the hardened helper.
+// FetchMessages keeps its mapping (src, attachments) through the message traversal. The original
+// R024 assertion that a short page ends paging is superseded by CCMAI-RUNTIME-032: only an explicit
+// empty page ends it, so this fixture now serves the two rows and then the empty page.
 func TestZaloFetchMessagesMappingUnchanged(t *testing.T) {
 	body := `{"error":0,"data":[` +
 		`{"message_id":"mid-1","src":1,"time":1790000000000,"type":"text","message":"xin chao","from_display_name":"Khach"},` +
@@ -582,8 +584,8 @@ func TestZaloFetchMessagesMappingUnchanged(t *testing.T) {
 	if msgs[1].SenderType != "agent" || msgs[1].ContentType != "photo" || len(msgs[1].Attachments) != 1 {
 		t.Fatalf("agent attachment message mapped wrong: %+v", msgs[1])
 	}
-	if srv.calls != 1 {
-		t.Fatalf("a short message page should end paging, got %d calls", srv.calls)
+	if srv.calls != 2 {
+		t.Fatalf("a short page must not end paging: want the page then the explicit empty page, got %d calls", srv.calls)
 	}
 }
 
@@ -597,5 +599,9 @@ func (c *convTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 	if r.URL.Path != "/v2.0/oa/conversation" {
 		return nil, errors.New("unexpected path")
 	}
-	return &http.Response{StatusCode: 200, Header: http.Header{}, Body: io.NopCloser(strings.NewReader(c.body)), Request: r}, nil
+	body := c.body
+	if c.calls > 1 { // every later offset is past the end of the history
+		body = `{"error":0,"data":[]}`
+	}
+	return &http.Response{StatusCode: 200, Header: http.Header{}, Body: io.NopCloser(strings.NewReader(body)), Request: r}, nil
 }

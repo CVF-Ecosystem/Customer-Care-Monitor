@@ -157,7 +157,7 @@ func getAllTools() []ToolDefinition {
 		},
 		{
 			Name:        "cqa_trigger_job",
-			Description: "Manually trigger an analysis job to run immediately.",
+			Description: "Start a background run of an existing job in an authorized tenant, using only the default since_last mode with no date range and no conversation cap. Returns job_triggered with the run_id once the run is reserved and its worker started; this accepts background execution and does not mean the analysis has finished. Extra arguments such as mode, full, from, to or limit are rejected with invalid_run_parameters. Errors: job_already_running, job_start_failed, Job not found.",
 			InputSchema: InputSchema{
 				Type: "object",
 				Properties: map[string]Property{

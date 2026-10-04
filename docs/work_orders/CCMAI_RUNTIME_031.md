@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-031 — F02-E Facebook message-window coverage
 
-Status: REVIEW_PASS. Dispatched DISPATCH_READY; issued 2026-10-02 by Codex ORCHESTRATOR -> SPEC_AUTHOR -> WORK_ORDER_AUTHOR. Risk ceiling R2.
+Status: FROZEN. Local message contract only; closed 2026-10-03 by Codex CLOSER under [R033 separate closure order](CCMAI_RUNTIME_033.md). Original BUILD authority/seed and historical review/repair statements below remain unchanged; later closure authority resolves local disposition only. Global F02/live/governance remains OPEN.
 
 Authority: [SPEC](../specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md), [F02 layer assessment](../reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md), immutable dispatcher-owned `CVF_SESSION/authority/CCMAI-RUNTIME-031.json`. Seed exists at baseCommit `61eda32442b6049e0ed37a00f6664c7fe880da94` before BUILD; worker never edits seed. Planning changes no product source. R030/R022 and predecessors REVIEW_PASS / FREEZE_OPEN unchanged; global F02 remains OPEN.
 
@@ -40,3 +40,7 @@ Codex independent REVIEW checks exact BUILD and integrated source, seed authorsh
 ## Independent disposition (2026-10-03)
 
 Codex accepts exact Claude BUILD `8ed6d0b39195ade513906571daaaf537ddeb90a9` for the local F02E-01..09 contract: [review](../reviews/CCMAI_RUNTIME_031_F02E_INDEPENDENT_REVIEW_2026-10-02.md). REVIEW_PASS / FREEZE_OPEN. First full-backend DB SKIP, worker default timeout and M1 INCONCLUSIVE are retained separately; independent monolithic engine209 top-level/444 total PASS with zero skips uses an isolated MySQL capacity override only. No reviewer source/test repair or tooling change. Endpoint/live/global-F02/governance remain unproved; next tranche needs separate dispatch.
+
+## Local closure under separate R033 authority
+
+[Closure decision](../reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md) freezes the accepted local contract at integrated snapshot `9ad6aee65a3391bf8c2f5473ee869f29e0abfc77`; original BUILD/repair/review hashes remain in the tranche record. Inherited evidence/known limits retained. No new source/test/API/credential/DB/push/deploy effect. Original order prohibited FREEZE during its BUILD scope; R033 is the separately committed closure authority, not a rewrite of this original seed.

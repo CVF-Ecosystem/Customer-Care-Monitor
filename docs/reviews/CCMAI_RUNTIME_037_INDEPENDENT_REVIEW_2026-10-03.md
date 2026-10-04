@@ -1,0 +1,19 @@
+# R037 independent exact-BUILD review
+
+Date: 2026-10-03. Reviewer Codex, independent of Claude documentation IMPLEMENTATION_WORKER. Exact BUILD `cf91801168a9d41fb491bd2614f709b201b2556c`, dispatcher seed/baseCommit `964f406a855c4813c64fc0655eeeba484129f507`, committed by Codex before activation/BUILD. **REVIEW_PASS / REVIEW / FREEZE_OPEN**, SG-01..03 documentation scope only. [Order](../work_orders/CCMAI_RUNTIME_037.md), [SPEC](../specs/S3_GUIDE_COMPOSE_COMMANDS_R037_2026-10-03.md), [worker evidence](S3_GUIDE_COMPOSE_COMMANDS_R037_BUILD_2026-10-03.md).
+
+Canonical continuity agrees, doctor25/25 PASS; knowledge ingest completed/index removed, compact bootstrap absent/nonblocking. Source/roles/risk/paths/effects match immutable seed present at baseCommit. Current guide equals exact BUILD; product, Compose, Dockerfile, workflows/tooling and seed unchanged across the worker BUILD. Worker acknowledgment says before-edit; one final commit cannot establish intra-worktree timing independently.
+
+| Contract | Independent result |
+| --- | --- |
+| SG-01 | PASS: applying exactly four prefix replacements plus the one prerequisite sentence to dispatch guide produces the entire BUILD blob identically. No other guide-text change and no cqa-app reference remains. |
+| SG-02 | PASS by source/help comparison: Compose has service app/no container_name; Dockerfile installs /app/cqa-server; Settings S3_DOWN_COMMAND matches the new download example. Installed local docker compose exec --help confirms SERVICE syntax and default TTY, preserving interactive intent when the old -it prefix is removed. No printed guide command executed. |
+| SG-03 | PASS: whole-document equality after five prescribed replacements preserves banner, links, arguments/order, tenant explanation, direction table, XOA confirmation and deletion workflow. Docs/catalog/gate validation recorded in active handoff before review commit. |
+
+Committed guide SHA256: `10aa04f5a320d82227999eacbf36bad86771d4d5f95dde7246f7e5c3d18c67c7`. Seed compared as parsed JSON to avoid treating CRLF/LF checkout differences as authority changes. The guide diff is5 insertions/5 deletions. No new product/unit/mutation tests are appropriate for this correction; mandatory gate tests remain required.
+
+No blocking guide defect. Reviewer-owned SESSION_SYNC_STEWARD publication retires stale NOT_BUILT/no-worker dispatch paragraphs in handoff/order and source-tense SPEC/catalog labels, and replaces the stale known-limitations entry with source-specific acceptance. Guide/seed/product unchanged by reviewer. Original worker hand-back remains historical evidence; no worker self-approval or silent product repair.
+
+Worker-reported recursive grep timeout/background search is retained, not independently replayed; its operational/credential non-use statement is attributed, not proven by source diff. Reviewer ran only source comparison, local CLI help and repository/documentation checks. Migration (including dry-run), Docker daemon/container exec, S3/bucket/DB, credentials/.env/config, live/provider/channel/network/GitHub, backend/frontend builds/tests NOT RUN. No full-guide validation, migration/storage safety, universal provider compatibility, runtime CVF governance, hosted readiness or new FREEZE. R036/R035/R034 acceptance and R033 local-message FREEZE unchanged; actual MCP job execution and live Pancake proof remain separate.
+
+Final independent publication validation: default/PR/exact-ten-file preflight7/7 PASS; gate unit tests46/46 PASS34.749s; docs build PASS18.24s with inherited env-highlighter warnings; catalog/diff checks PASS. Exact ten-file reviewer documentation set, no guide/product/seed changes; no failed independent reviewer command in this campaign. Worker grep timeout and earlier source-specific failures/NOT RUN retained. Final scoped preflight and staged diff check before local acceptance commit; no new worker/runtime/external/FREEZE action.

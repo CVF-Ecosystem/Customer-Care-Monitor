@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-040",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_CLOSURE_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_040.md",
+  "sourcePlanningCommit": "4fa8c2abaf3e8c55107520595cf81f603ab4349b",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Codex",
+    "reviewer": "Codex",
+    "closer": "Codex"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_040.md",
+    "docs/work_orders/CCMAI_RUNTIME_037.md",
+    "docs/work_orders/CCMAI_RUNTIME_038.md",
+    "docs/work_orders/CCMAI_RUNTIME_039.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "tooling_change",
+    "dependency_change",
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "persistent_db",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "global_f02_closure",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "engine_test_execution",
+    "runtime_execution",
+    "external_network",
+    "other_tranche_freeze"
+  ],
+  "permittedEffects": [
+    "local_documentation_commit",
+    "scoped_local_freeze_R037_R038_R039"
+  ],
+  "closureTargets": [
+    "CCMAI-RUNTIME-037",
+    "CCMAI-RUNTIME-038",
+    "CCMAI-RUNTIME-039"
+  ],
+  "claimScope": "R037 static S3-guide command alignment, R038 uncalled-helper deletion with compile-only evidence, R039 historical CLI Git-test removal with six offline behavioral tests. No runtime/storage/full-engine regression/live/governance/hosted readiness or other tranche closure.",
+  "ownerAuthorization": "Standing owner delegation recorded in CVF_SESSION_MEMORY.md permits routine bounded local orchestration/review/closure autonomously; current owner says next after R039 independent REVIEW_PASS. Separate closure seed only, inherited Claude builds and independent Codex reviews, no new worker.",
+  "originalSeedBoundary": "Original immutable BUILD seeds and their freeze prohibition remain unchanged for their BUILD actions. This separate committed seed grants only the listed closure disposition effects; target records link this closure authority."
+}

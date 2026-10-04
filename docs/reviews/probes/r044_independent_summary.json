@@ -1,0 +1,613 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-04 Asia/Saigon",
+  "trancheId": "CCMAI-RUNTIME-044",
+  "reviewer": "Codex",
+  "implementationWorker": "Claude",
+  "sourceBuild": "48918e2f953dbb32e7f5f159b1eceab7dfe3848f",
+  "seedCommit": "665f2e5ab780cbe8a1d374ccba676c1e926fbb47",
+  "disposition": "CHANGES_REQUIRED",
+  "claimScope": "Synthetic disposable local application evidence only; no real-provider governance/live readiness claim.",
+  "environment": {
+    "goImage": "golang:1.26-alpine (cached)",
+    "mysqlImage": "mysql:8.0 (cached)",
+    "networkInternal": true,
+    "hostDatabasePorts": false,
+    "moduleCache": "read-only cached host GOMODCACHE",
+    "GOFLAGS": "-mod=readonly",
+    "GOPROXY": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0",
+    "TEST_DB_DSN": "injected disposable synthetic CCMA database; persistent database not used"
+  },
+  "sourceHashes": {
+    "backend/api/handlers/job_dispatch_shared_test.go": "0830e001c6d542ff42f879fd4b70364b671314ee219bc3a89aa7505c3d8138fb",
+    "backend/api/handlers/jobs.go": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+    "backend/jobdispatch/dispatch.go": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+    "backend/jobdispatch/dispatch_test.go": "4be1326d5070fb6b2c0f54dbe28259188216f0a6c1afea1d29b6122d8522f446",
+    "backend/mcp/handlers.go": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+    "backend/mcp/permission_admission_test.go": "69e8b879f071148bb5ceafd7e1c76f75e7510f761285afa13a808adddf306992",
+    "backend/mcp/tools.go": "a84c43502741769d61bb746872a97b4e532b534e7436dc2086d084b78e28f4e4",
+    "backend/mcp/trigger_contract_test.go": "a3086675ab591c557a88346f1b939c4d2d0d75ba7e59f589f530004ded22df25",
+    "backend/mcp/trigger_execution_test.go": "9d097bb0e4ba067e4c9d0bf5a5d88dbcb38af08986f48117a987904d662a2b07"
+  },
+  "runs": {
+    "mounted": {
+      "command": "go test ./jobdispatch ./mcp ./api/handlers -count=1 -p 1 -timeout 20m -json",
+      "exitCode": 0,
+      "events": {
+        "pass": 389
+      },
+      "topLevelEvents": {
+        "pass": 186
+      },
+      "subtestEvents": {
+        "pass": 203
+      },
+      "failedTests": [],
+      "skippedTests": [],
+      "assertions": [
+        {
+          "test": "TestMountedTriggerWorkerFailureModes/error",
+          "assertion": "trigger_execution_test.go:433: error: terminal status \"error\" message \"Analysis errors: 1/1 conversations failed\""
+        },
+        {
+          "test": "TestMountedTriggerWorkerFailureModes/panic",
+          "assertion": "trigger_execution_test.go:433: panic: terminal status \"error\" message \"L\u01b0\u1ee3t ch\u1ea1y d\u1eebng \u0111\u1ed9t ng\u1ed9t; xem nh\u1eadt k\u00fd m\u00e1y ch\u1ee7.\""
+        },
+        {
+          "test": "TestMountedTriggerWorkerFailureModes/cancel",
+          "assertion": "trigger_execution_test.go:433: cancel: terminal status \"cancelled\" message \"Cancelled by user\""
+        },
+        {
+          "test": "TestMixedTransportsConcurrentAdmissionHasOneWinner",
+          "assertion": "job_dispatch_shared_test.go:301: winners over 12 rounds: map[http:12] (starts: mcp 0 http 12)"
+        },
+        {
+          "test": "TestMixedTransportsSimultaneousDispatchHasOneWinner",
+          "assertion": "job_dispatch_shared_test.go:488: simultaneous-dispatch winners over 30 rounds: map[mcp:30]"
+        }
+      ],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch",
+          "result": "pass",
+          "seconds": 9.041
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "pass",
+          "seconds": 25.532
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+          "result": "pass",
+          "seconds": 173.127
+        }
+      ],
+      "stdoutSha256": "088d80befebcaed5d39b40c38d85b0619a908de1f68c2612e2cee2e385e5ea83",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "notification": {
+      "command": "go test ./mcp -run ^TestR044ReviewerNotificationTail$ -count=1 -p 1 -timeout 2m -json",
+      "exitCode": 0,
+      "events": {
+        "pass": 1
+      },
+      "topLevelEvents": {
+        "pass": 1
+      },
+      "subtestEvents": {},
+      "failedTests": [],
+      "skippedTests": [],
+      "assertions": [
+        {
+          "test": "TestR044ReviewerNotificationTail",
+          "assertion": "r044_notification_probe_test.go:90: synthetic notification intercepted once; terminal owner held until send/log/result-mark tail completed; no external transport used"
+        }
+      ],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "pass",
+          "seconds": 0.825
+        }
+      ],
+      "stdoutSha256": "6a9b4062db5367556827c00517429c47f33d8bc115fbc35f30a33d3b501b70c1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ownership": {
+      "command": "go test ./engine -run ^Test(Admission|Cancel|Terminal|Publication|StaleOwner|EarlyFailures|ProviderPanic|Timeout|UnresolvedRunning|NoLockInversion|Cron|Scheduler|Reserved|Reservation) -count=1 -p 1 -timeout 10m -json",
+      "exitCode": 0,
+      "events": {
+        "pass": 54
+      },
+      "topLevelEvents": {
+        "pass": 28
+      },
+      "subtestEvents": {
+        "pass": 26
+      },
+      "failedTests": [],
+      "skippedTests": [],
+      "assertions": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+          "result": "pass",
+          "seconds": 31.207
+        }
+      ],
+      "stdoutSha256": "8d75d9fdfede2ea1a5284d865adb5aec44d80db0a557580a7d7f33a75c44b8f5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build": {
+      "command": "go build ./...",
+      "exitCode": 0,
+      "events": {},
+      "topLevelEvents": {},
+      "subtestEvents": {},
+      "failedTests": [],
+      "skippedTests": [],
+      "assertions": [],
+      "packages": [],
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vet": {
+      "command": "go vet ./...",
+      "exitCode": 0,
+      "events": {},
+      "topLevelEvents": {},
+      "subtestEvents": {},
+      "failedTests": [],
+      "skippedTests": [],
+      "assertions": [],
+      "packages": [],
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "mutations": [
+    {
+      "id": "M01",
+      "path": "mcp/handlers.go",
+      "package": "./mcp",
+      "run": "^TestTriggerLookupKeepsTenantPredicateAndGenericErrors$",
+      "matched": 1,
+      "baselineSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "mutatedSha256": "4c7111974f9377f9e0f0abcfc3faaf31b20dcc8f80ea4e917506c7160feb88a1",
+      "before": "Where(\"id = ? AND tenant_id = ?\", jobID, tenantID).First(&job)",
+      "after": "Where(\"id = ?\", jobID).First(&job)",
+      "result": {
+        "command": "go test ./mcp -run ^TestTriggerLookupKeepsTenantPredicateAndGenericErrors$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 1,
+        "events": {
+          "fail": 1
+        },
+        "topLevelEvents": {
+          "fail": 1
+        },
+        "subtestEvents": {},
+        "failedTests": [
+          "TestTriggerLookupKeepsTenantPredicateAndGenericErrors"
+        ],
+        "skippedTests": [],
+        "assertions": [
+          {
+            "test": "TestTriggerLookupKeepsTenantPredicateAndGenericErrors",
+            "assertion": "trigger_contract_test.go:306: lookup must carry both id and tenant predicates: SELECT * FROM `jobs` WHERE id = ? ORDER BY `jobs`.`id` LIMIT ?"
+          }
+        ],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+            "result": "fail",
+            "seconds": 0.735
+          }
+        ],
+        "stdoutSha256": "212fee5a3814a002393c4df743f6f4a885e187317a8bd89f29aa5f203d26126f",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "byteRestorationVerified": true,
+      "restoredBaseline": {
+        "command": "go test ./mcp -run ^TestTriggerLookupKeepsTenantPredicateAndGenericErrors$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 0,
+        "events": {
+          "pass": 1
+        },
+        "topLevelEvents": {
+          "pass": 1
+        },
+        "subtestEvents": {},
+        "failedTests": [],
+        "skippedTests": [],
+        "assertions": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+            "result": "pass",
+            "seconds": 0.761
+          }
+        ],
+        "stdoutSha256": "10993de77fbfaa825a54981793c7c843167d11aeadaeca34c2aff6aac68ed1dd",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "M02",
+      "path": "jobdispatch/dispatch.go",
+      "package": "./jobdispatch",
+      "run": "^Test(StartFailureAbortsReservationAndReleasesOwnership|FailedAbortKeepsStoredRowBlocking)$",
+      "matched": 1,
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "7841cbe8191d3fa707ff8582161c3abde02230a92201dc9b8a47b531294cca36",
+      "before": "\t\tAbortReservation(job, res)\n\t\treturn \"\", ErrStartFailed",
+      "after": "\t\tAbortReservation(job, res)\n\t\treturn res.RunID(), nil",
+      "result": {
+        "command": "go test ./jobdispatch -run ^Test(StartFailureAbortsReservationAndReleasesOwnership|FailedAbortKeepsStoredRowBlocking)$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 1,
+        "events": {
+          "fail": 2
+        },
+        "topLevelEvents": {
+          "fail": 2
+        },
+        "subtestEvents": {},
+        "failedTests": [
+          "TestStartFailureAbortsReservationAndReleasesOwnership",
+          "TestFailedAbortKeepsStoredRowBlocking"
+        ],
+        "skippedTests": [],
+        "assertions": [
+          {
+            "test": "TestStartFailureAbortsReservationAndReleasesOwnership",
+            "assertion": "dispatch_test.go:339: got \"bdb42c26-6812-4dc1-9fd8-f9700e95ad17\" <nil> (reservation &{0x2ecef1428300 {bdb42c26-6812-4dc1-9fd8-f9700e95ad17 job-jd-a3455e4e jd-a3455e4e {14026599456585775004 159615411 0x182b320} 0x2ecef1280168 error {} Kh\u00f4ng kh\u1edfi \u0111\u1ed9ng \u0111\u01b0\u1ee3c ti\u1ebfn tr\u00ecnh ch\u1ea1y {14026599456585775004 159615411 0x182b320} {              <nil>   false <nil>  {0 0 <nil>} {0 0 <nil>} {    {0 0 <nil>} {0 0 <nil>} [] []}}} {{} {{} 1} {{} {0 0}}}})"
+          },
+          {
+            "test": "TestFailedAbortKeepsStoredRowBlocking",
+            "assertion": "dispatch_test.go:377: got <nil>"
+          }
+        ],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch",
+            "result": "fail",
+            "seconds": 4.603
+          }
+        ],
+        "stdoutSha256": "0f5dbe62037d295781e0a78fd002621fe4c0893a2791e4998eb02c4bb431b60e",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "byteRestorationVerified": true,
+      "restoredBaseline": {
+        "command": "go test ./jobdispatch -run ^Test(StartFailureAbortsReservationAndReleasesOwnership|FailedAbortKeepsStoredRowBlocking)$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 0,
+        "events": {
+          "pass": 2
+        },
+        "topLevelEvents": {
+          "pass": 2
+        },
+        "subtestEvents": {},
+        "failedTests": [],
+        "skippedTests": [],
+        "assertions": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch",
+            "result": "pass",
+            "seconds": 4.615
+          }
+        ],
+        "stdoutSha256": "83b039ec20e65c17563375912fe9b6ae584cf414d7ec96e0899d92d9f5eed1f3",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "M05",
+      "path": "jobdispatch/dispatch.go",
+      "package": "./jobdispatch",
+      "run": "^TestStartFailureAbortsReservationAndReleasesOwnership$",
+      "matched": 1,
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "8f40fa69c91f34966b4b1948a7d33476b3e98e5abc9a1fe041cb5d362a0e159e",
+      "before": "\t\tAbortReservation(job, res)\n\t\treturn \"\", ErrStartFailed",
+      "after": "\t\t// reviewer mutation: omitted abort\n\t\treturn \"\", ErrStartFailed",
+      "result": {
+        "command": "go test ./jobdispatch -run ^TestStartFailureAbortsReservationAndReleasesOwnership$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 1,
+        "events": {
+          "fail": 1
+        },
+        "topLevelEvents": {
+          "fail": 1
+        },
+        "subtestEvents": {},
+        "failedTests": [
+          "TestStartFailureAbortsReservationAndReleasesOwnership"
+        ],
+        "skippedTests": [],
+        "assertions": [
+          {
+            "test": "TestStartFailureAbortsReservationAndReleasesOwnership",
+            "assertion": "dispatch_test.go:343: aborted row {ID:dba40634-1125-41bc-b66b-a2270bd8c21b JobID:job-jd-d3e9325a TenantID:jd-d3e9325a StartedAt:2026-10-03 22:23:11.27 +0000 UTC FinishedAt:<nil> Status:running Summary:{} ErrorMessage: CreatedAt:2026-10-03 22:23:11.27 +0000 UTC Job:{ID: TenantID: Name: Description: JobType: InputChannelIDs: RulesContent: RulesConfig: SkipConditions: AIProvider: AIModel: Outputs: OutputSchedule: OutputCron: OutputAt:<nil> ScheduleType: ScheduleCron: IsActive:false LastRunAt:<nil> LastRunStatus: CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC Tenant:{ID: Name: Slug: Settings: CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC Users:[] Channels:[]}}}, want a closed error run"
+          }
+        ],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch",
+            "result": "fail",
+            "seconds": 0.639
+          }
+        ],
+        "stdoutSha256": "f0fc7b5a210bab60c41dfcc624e9aed40a58a16d746b964584fce1591e53c0f4",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "byteRestorationVerified": true,
+      "restoredBaseline": {
+        "command": "go test ./jobdispatch -run ^TestStartFailureAbortsReservationAndReleasesOwnership$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 0,
+        "events": {
+          "pass": 1
+        },
+        "topLevelEvents": {
+          "pass": 1
+        },
+        "subtestEvents": {},
+        "failedTests": [],
+        "skippedTests": [],
+        "assertions": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch",
+            "result": "pass",
+            "seconds": 0.698
+          }
+        ],
+        "stdoutSha256": "ec6ef750b3620c21588b6409a13b06167d550635260a34abbcc1b4bda36f8ca2",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "M06",
+      "path": "api/handlers/jobs.go",
+      "package": "./api/handlers",
+      "run": "^TestTriggerJobAdmitsModeAndCapIndependently$",
+      "matched": 1,
+      "baselineSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "mutatedSha256": "e5f02b6c6d793139c645b93ed0aebca92c5bc7f11821d77b039be9ca2728d455",
+      "before": "maxConv: p.Limit",
+      "after": "maxConv: 0",
+      "result": {
+        "command": "go test ./api/handlers -run ^TestTriggerJobAdmitsModeAndCapIndependently$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 1,
+        "events": {
+          "fail": 7,
+          "pass": 10
+        },
+        "topLevelEvents": {
+          "fail": 1
+        },
+        "subtestEvents": {
+          "fail": 6,
+          "pass": 10
+        },
+        "failedTests": [
+          "TestTriggerJobAdmitsModeAndCapIndependently/mode=since_last&limit=3",
+          "TestTriggerJobAdmitsModeAndCapIndependently/mode=unanalyzed&limit=5",
+          "TestTriggerJobAdmitsModeAndCapIndependently/mode=conditional&limit=2",
+          "TestTriggerJobAdmitsModeAndCapIndependently/limit=4",
+          "TestTriggerJobAdmitsModeAndCapIndependently/mode=since_last&limit=007",
+          "TestTriggerJobAdmitsModeAndCapIndependently/mode=conditional&full=true&limit=2",
+          "TestTriggerJobAdmitsModeAndCapIndependently"
+        ],
+        "skippedTests": [],
+        "assertions": [
+          {
+            "test": "TestTriggerJobAdmitsModeAndCapIndependently/mode=since_last&limit=3",
+            "assertion": "job_trigger_modes_test.go:96: worker got {mode:since_last dateFrom: dateTo: maxConv:0}, want {mode:since_last dateFrom: dateTo: maxConv:3}"
+          },
+          {
+            "test": "TestTriggerJobAdmitsModeAndCapIndependently/mode=unanalyzed&limit=5",
+            "assertion": "job_trigger_modes_test.go:96: worker got {mode:unanalyzed dateFrom: dateTo: maxConv:0}, want {mode:unanalyzed dateFrom: dateTo: maxConv:5}"
+          },
+          {
+            "test": "TestTriggerJobAdmitsModeAndCapIndependently/mode=conditional&limit=2",
+            "assertion": "job_trigger_modes_test.go:96: worker got {mode:conditional dateFrom: dateTo: maxConv:0}, want {mode:conditional dateFrom: dateTo: maxConv:2}"
+          },
+          {
+            "test": "TestTriggerJobAdmitsModeAndCapIndependently/limit=4",
+            "assertion": "job_trigger_modes_test.go:96: worker got {mode:since_last dateFrom: dateTo: maxConv:0}, want {mode:since_last dateFrom: dateTo: maxConv:4}"
+          },
+          {
+            "test": "TestTriggerJobAdmitsModeAndCapIndependently/mode=since_last&limit=007",
+            "assertion": "job_trigger_modes_test.go:96: worker got {mode:since_last dateFrom: dateTo: maxConv:0}, want {mode:since_last dateFrom: dateTo: maxConv:7}"
+          },
+          {
+            "test": "TestTriggerJobAdmitsModeAndCapIndependently/mode=conditional&full=true&limit=2",
+            "assertion": "job_trigger_modes_test.go:96: worker got {mode:conditional dateFrom: dateTo: maxConv:0}, want {mode:conditional dateFrom: dateTo: maxConv:2}"
+          }
+        ],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+            "result": "fail",
+            "seconds": 9.9
+          }
+        ],
+        "stdoutSha256": "fa184fc686b2183ba17d4421f8fdba87aa19fc4018d41de93e6e9515e96a5fa4",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "byteRestorationVerified": true,
+      "restoredBaseline": {
+        "command": "go test ./api/handlers -run ^TestTriggerJobAdmitsModeAndCapIndependently$ -count=1 -p 1 -timeout 5m -json",
+        "exitCode": 0,
+        "events": {
+          "pass": 17
+        },
+        "topLevelEvents": {
+          "pass": 1
+        },
+        "subtestEvents": {
+          "pass": 16
+        },
+        "failedTests": [],
+        "skippedTests": [],
+        "assertions": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+            "result": "pass",
+            "seconds": 9.866
+          }
+        ],
+        "stdoutSha256": "f7d94bea3ac49a8dc57755d01895ea2fc0dc4db3bbe73e53561528f7f1ef5f9c",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "oldSourceControl": {
+    "result": {
+      "command": "go test ./mcp -run ^Test(MountedTriggerRunsSharedWorkerWithPersistedIdentity|TriggerDescriptionAndToolsList)$ -count=1 -p 1 -timeout 5m -json",
+      "exitCode": 1,
+      "events": {
+        "fail": 2
+      },
+      "topLevelEvents": {
+        "fail": 2
+      },
+      "subtestEvents": {},
+      "failedTests": [
+        "TestTriggerDescriptionAndToolsList",
+        "TestMountedTriggerRunsSharedWorkerWithPersistedIdentity"
+      ],
+      "skippedTests": [],
+      "assertions": [
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"background\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"since_last\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"no date range\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"no conversation cap\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"job_triggered\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"run_id\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"does not mean the analysis has finished\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"invalid_run_parameters\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"job_already_running\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:539: description must mention \"job_start_failed\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:544: description still carries the retired \"unavailable\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:544: description still carries the retired \"does not start\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestTriggerDescriptionAndToolsList",
+          "assertion": "trigger_contract_test.go:544: description still carries the retired \"job_trigger_unavailable\": \"Currently unavailable over MCP: this tool does not start or queue a job. For an existing job in an authorized tenant it returns the error job_trigger_unavailable.\""
+        },
+        {
+          "test": "TestMountedTriggerRunsSharedWorkerWithPersistedIdentity",
+          "assertion": "trigger_execution_test.go:344: mounted: tool error \"job_trigger_unavailable\""
+        }
+      ],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "fail",
+          "seconds": 1.471
+        }
+      ],
+      "stdoutSha256": "a59a48a822e12e508f99d8a6125d8ac6709282a311324f9452bdff7a603aec6f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source": "byte-exact mcp production blobs at seed665f2e5 with new BUILD tests; no HTTP old-source compilation claim",
+    "restoredBaseline": {
+      "command": "go test ./mcp -run ^Test(MountedTriggerRunsSharedWorkerWithPersistedIdentity|TriggerDescriptionAndToolsList)$ -count=1 -p 1 -timeout 5m -json",
+      "exitCode": 0,
+      "events": {
+        "pass": 2
+      },
+      "topLevelEvents": {
+        "pass": 2
+      },
+      "subtestEvents": {},
+      "failedTests": [],
+      "skippedTests": [],
+      "assertions": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "pass",
+          "seconds": 1.561
+        }
+      ],
+      "stdoutSha256": "5005cb8cbc062e75c652581b19918f243d48bcbd808507159d31f18b67046edf",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "hashes": {
+      "mcp/handlers.go": {
+        "oldSourceSha256": "95eeb36fac225846af0613d882a0626f8e413b9f60faad5e063a32ce9486e9fb",
+        "restoredSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+        "byteRestorationVerified": true
+      },
+      "mcp/tools.go": {
+        "oldSourceSha256": "8f09c4064042736a636c0e032f94dbf9d5039a81ac2c0313982c17c9a8f9fe6b",
+        "restoredSha256": "a84c43502741769d61bb746872a97b4e532b534e7436dc2086d084b78e28f4e4",
+        "byteRestorationVerified": true
+      }
+    }
+  },
+  "workerCampaign": "15 historical worker mutants attributed only; these independent four controls do not certify the complete worker campaign.",
+  "probeSha256": "5b68e349eb3e2249903c08a3da795e025a0f2dd7cabee6065ece83f3dd4ee864",
+  "notRun": [
+    "race detector: CGO disabled, no cached C compiler",
+    "full engine/full backend suite",
+    "real provider/channel/config/credentials/external network/persistent or customer DB/live notification/live sync/application start"
+  ],
+  "incidents": [
+    "Inherited untracked bytecode caused initial preflight FAIL; verified literal-path move to task-temp preserved files, corrected PASS.",
+    "Expected MySQL startup stderr terminated first Stop-mode readiness shell; native-exit readiness continuation succeeded.",
+    "Windows rg wildcard path error123; corrected -g discovery.",
+    "Initial supplemental shell CRLF path errors: INCONCLUSIVE, known task processes stopped, LF verified and sequential replay; original attempt not used as proof."
+  ],
+  "cleanup": "VERIFIED: exact task Go/DB containers, internal network and anonymous DB volume removed. Raw logs/archive and inherited-bytecode archive preserved in task-temp; persistent app/database containers not touched."
+}

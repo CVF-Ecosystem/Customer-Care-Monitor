@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-046",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer_incremental.go",
+    "backend/engine/analyzer_finalizer_logging_test.go",
+    "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
+    "docs/work_orders/CCMAI_RUNTIME_046.md"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "host_privilege_or_compiler_change"
+  ],
+  "claimScope": "Only finalizer transaction/retry/fallback application and GORM sink error containment on synthetic disposable local fixtures, with preserved terminal/ownership semantics. No universal engine logging, real-provider/CVF AI governance, live compatibility or hosted readiness claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_046.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerTransferRequired": true,
+  "implementationStarted": false
+}

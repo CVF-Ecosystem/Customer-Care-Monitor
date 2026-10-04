@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-034",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/channels/pancake_proof.go",
+    "backend/channels/pancake_proof_test.go",
+    "backend/cmd/pancake-proof/main.go",
+    "backend/cmd/pancake-proof/main_test.go",
+    "docs/specs/PANCAKE_PROOF_HARNESS_R034_2026-10-03.md",
+    "docs/work_orders/CCMAI_RUNTIME_034.md",
+    "docs/reviews/F02_PANCAKE_LIVE_PROOF_PACKET_2026-10-03.md"
+  ],
+  "prohibitedEffects": [
+    "provider_call",
+    "channel_call",
+    "credential_use",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "media_download",
+    "analyzer_dispatch",
+    "notification",
+    "token_rotation",
+    "existing_adapter_change",
+    "engine_source_change",
+    "ui_change",
+    "schema_change",
+    "dependency_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "global_f02_closure",
+    "live_governance_claim",
+    "original_authority_seed_edit"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_034.md",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "baseCommit": "d869624cc15f55b39516a36f8937454e617dc3b3",
+  "buildCommit": "9e52d2840281e227a78e533aea0fd2f208ffcf6e",
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md",
+    "docs/reviews/probes/r034_reviewer_probe_test.go",
+    "docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+    "docs/reviews/probes/r034_r1_mutation_summary.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerTransferRequired": true,
+  "implementationStarted": true,
+  "claimScope": "Offline harness only; synthetic evidence is not live or AI-governance proof.",
+  "repairRound": 1,
+  "repairFindings": [
+    "R034-R1-01",
+    "R034-R1-02",
+    "R034-R1-03",
+    "R034-R1-04",
+    "R034-R1-05",
+    "R034-R1-06"
+  ],
+  "repairDisposition": "R1_ACCEPTED",
+  "originalBuildCommit": "69cf3a0981f8e1322040bc3b2427a4c47245e9f9",
+  "repairCommit": "9e52d2840281e227a78e533aea0fd2f208ffcf6e",
+  "closer": "Codex",
+  "frozenSourceCommit": "add584a38058a6f2863c9a84ce06f0429b9c21d2",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md",
+  "closedAt": "2026-10-03",
+  "closureAuthority": {
+    "trancheId": "CCMAI-RUNTIME-043",
+    "seed": "CVF_SESSION/authority/CCMAI-RUNTIME-043.json",
+    "seedCommit": "965a1a03551a94d58ec84b387f558c19fef35fa1",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_043.md",
+    "scope": "bounded offline local disposition only; original BUILD prohibitions and platform/live limits preserved"
+  }
+}
