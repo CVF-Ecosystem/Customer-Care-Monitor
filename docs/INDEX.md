@@ -113,6 +113,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call.: `docs/reviews/probes/r044_notification_probe_test.go`
 - Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
 - R044 unchanged local contract independently R1 REVIEW_PASS / FREEZE_OPEN; historical limits retained.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
+- Separate R045 R1 metadata-only closure authority for accepted R044; committed before activation, no source/runtime/live effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-045.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

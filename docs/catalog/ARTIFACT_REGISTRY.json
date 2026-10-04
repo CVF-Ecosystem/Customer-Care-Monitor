@@ -5,6 +5,13 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+    "id": "runtime045-local-closure-authority",
+    "family": "continuity",
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-045.json",
+    "status": "ACTIVE",
+    "description": "Separate R045 R1 metadata-only closure authority for accepted R044; committed before activation, no source/runtime/live effect."
+},
+{
     "id": "runtime044-local-closure-authority-assessment",
     "family": "continuity",
     "path": "docs/reviews/CCMAI_RUNTIME_044_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-04.md",
