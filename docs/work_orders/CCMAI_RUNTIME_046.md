@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-046 - Engine finalizer driver-error logging
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-04 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md). Immutable dispatcher seed CVF_SESSION/authority/CCMAI-RUNTIME-046.json first committed at c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267 before activation. Owner selected this scope; standing bounded local delegation applies.
 
@@ -69,3 +69,8 @@ R3 may create `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R3_EVIDENCE_2026-10-04
 ## Claude R3 evidence campaign completion and hand-back (2026-10-04)
 
 Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD completed the cost-approved R3 evidence-only campaign. Bounded execution against disposable exact-R2 archive in network-isolated Docker containers (--pull=never, --internal network, no host ports, anonymous volume removal -v). All machine counts and event names derived directly from actual JSON logs: baseline 22 top-level / 6 subtests (28 total), 3 mutations (M01, M02, M03) producing exact byte matches and killing designated detectors, combined selection 40 top-level / 47 subtests (87 total). Teardown verified clean (0 containers/networks left). Publication checks passed (doctor PASS WITH NOTE, gate unit suite 46/46 PASS, catalog PS5.1/PS7 PASS, preflights 7/7 PASS, diff clean). Reference product commit 91da0e88118b76a68031f432da50521fe6a341b7 preserved (0 backend diff). Evidence report `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R3_EVIDENCE_2026-10-04.md`, machine receipt `docs/reviews/probes/r046_r3_worker_receipts.json`, log extracts `docs/reviews/probes/r046_r3_log_extracts.json`, and campaign runner `docs/reviews/probes/r046_r3_campaign_runner.ps1` registered. Handed back to Codex for independent review at REVIEW_PENDING; no self-approval or FREEZE.
+
+
+## Independent R3 review return (2026-10-05)
+
+CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for handback c09c8f62585945d3624e5a0f3ddc305bb35c4552. [Independent evaluation](../reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md) confirms recovered R3 machine counts/names and three named kills; remaining R046-R3-01..03 concern execution-copy identity, unsupported publication receipt and historical attribution. Product and maintained tests91da0e88 unchanged, R2-01..02 settled, R2-03 machine-count condition settled but remaining evidence conditions open. REVIEW_COST_ESCALATION_REQUIRED: the single approved R3 campaign is consumed. No automatic fourth worker BUILD, source/test repair or contract widening. Next ORCHESTRATOR separately assesses cost/authority disposition from existing evidence. All original seed/effect/role boundaries and accounts parked preserved. Earlier R3 completion/publication descriptions are worker claims, superseded where contradicted by this independent evaluation.

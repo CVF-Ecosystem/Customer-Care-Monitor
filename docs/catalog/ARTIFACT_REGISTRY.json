@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE."
+      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
     },
     {
       "id": "truth-implementation-status",
@@ -926,21 +926,21 @@
       "family": "continuity",
       "path": "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE."
+      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
     },
     {
       "id": "runtime046-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_046.md",
       "status": "ACTIVE",
-      "description": "R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE."
+      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
     },
     {
       "id": "runtime046-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
       "status": "ACTIVE",
-      "description": "R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE."
+      "description": "R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked."
     },
     {
       "id": "runtime046-predecessor-handoff",
@@ -1088,6 +1088,34 @@
       "path": "docs/reviews/probes/r046_r3_receipt_contract.json",
       "status": "ACTIVE",
       "description": "R3 machine receipt requirements only; NOT RUN, no execution results."
+    },
+    {
+      "id": "runtime046-r3-independent-evaluation",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "R3 independent CHANGES_REQUIRED with verified raw counts and retained evidence/attribution limits."
+    },
+    {
+      "id": "runtime046-r3-independent-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r3_independent_audit.json",
+      "status": "ACTIVE",
+      "description": "Read-only recovered R3 raw-log hashes, event counts and exact export/livecopy audit."
+    },
+    {
+      "id": "runtime046-r3-independent-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r3_independent_audit.py",
+      "status": "ACTIVE",
+      "description": "Read-only receipt recovery probe; no campaign or product changes."
+    },
+    {
+      "id": "runtime046-r3-review-publication",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r3_review_publication.json",
+      "status": "ACTIVE",
+      "description": "Independent reviewer publication receipts; original worker docs failure retained."
     }
   ]
 }

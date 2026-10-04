@@ -7,7 +7,7 @@ Cost Disposition: [CONTINUE_ONE_EVIDENCE_ONLY_R3](CCMAI_RUNTIME_046_R3_COST_DISP
 Independent R2 Evaluation: [CCMAI_RUNTIME_046_R2_INDEPENDENT_REREVIEW_2026-10-04.md](CCMAI_RUNTIME_046_R2_INDEPENDENT_REREVIEW_2026-10-04.md).
 Machine Receipt: [r046_r3_worker_receipts.json](probes/r046_r3_worker_receipts.json).
 Log Extracts: [r046_r3_log_extracts.json](probes/r046_r3_log_extracts.json).
-Campaign Runner: [r046_r3_campaign_runner.ps1](probes/r046_r3_campaign_runner.ps1).
+Campaign Runner: `docs/reviews/probes/r046_r3_campaign_runner.ps1` (repository file; publication pointer corrected by independent reviewer on 2026-10-05 after reproducing the original dead-link build failure).
 
 ---
 

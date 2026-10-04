@@ -44,7 +44,7 @@
   ],
   "claimScope": "Only finalizer transaction/retry/fallback application and GORM sink error containment on synthetic disposable local fixtures, with preserved terminal/ownership semantics. No universal engine logging, real-provider/CVF AI governance, live compatibility or hosted readiness claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_046.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267",
   "buildCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
@@ -69,9 +69,13 @@
     "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R3_EVIDENCE_2026-10-04.md",
     "docs/reviews/probes/r046_r3_worker_receipts.json",
     "docs/reviews/probes/r046_r3_log_extracts.json",
-    "docs/reviews/probes/r046_r3_campaign_runner.ps1"
+    "docs/reviews/probes/r046_r3_campaign_runner.ps1",
+    "docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/probes/r046_r3_independent_audit.json",
+    "docs/reviews/probes/r046_r3_independent_audit.py",
+    "docs/reviews/probes/r046_r3_review_publication.json"
   ],
-  "disposition": "REVIEW_PENDING",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
@@ -85,7 +89,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -103,11 +108,19 @@
     "R046-R2-01",
     "R046-R2-02"
   ],
-  "reviewCostEscalation": "RESOLVED_FOR_ONE_EVIDENCE_ONLY_R3",
+  "reviewCostEscalation": "REVIEW_COST_ESCALATION_REQUIRED",
   "repairRound3Dispatched": true,
   "reviewCostDisposition": "CONTINUE_ONE_EVIDENCE_ONLY_R3",
   "reviewCostDecision": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R3_2026-10-04.json",
   "repairRound3Started": true,
   "productReferenceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
-  "priorReviewCostEscalation": "REVIEW_COST_ESCALATION_REQUIRED"
+  "priorReviewCostEscalation": "REVIEW_COST_ESCALATION_REQUIRED",
+  "evidenceCommitAtHandback": "c09c8f62585945d3624e5a0f3ddc305bb35c4552",
+  "openReviewFindings": [
+    "R046-R3-01",
+    "R046-R3-02",
+    "R046-R3-03"
+  ],
+  "machineCountSubcondition": "SETTLED_BY_RECOVERED_R3_RAW_LOGS",
+  "fourthRepairAuthorized": false
 }

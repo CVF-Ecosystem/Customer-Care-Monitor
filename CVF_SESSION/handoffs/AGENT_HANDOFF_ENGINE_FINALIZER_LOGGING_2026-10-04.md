@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Claude evidence-only REPAIR_WORKER / repair BUILD COMMIT_STEWARD handback; Codex independent REVIEWER next
-- Next allowed move: CCMAI-RUNTIME-046 REVIEW_PENDING / REVIEW / FREEZE_OPEN. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD completed the R3 evidence campaign on disposable exact-R2 archive with network-isolated Docker containers (--pull=never, --internal network, anonymous volume removal -v). All counts (22/28 baseline, 40/87 combined regression) and 3 mutation kills (M01, M02, M03) derived directly from machine execution; machine receipts and secret-free log extracts registered in docs/reviews/probes/r046_r3_worker_receipts.json and docs/reviews/probes/r046_r3_log_extracts.json. Codex independent REVIEWER next: re-review R046-R3 evidence packet docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R3_EVIDENCE_2026-10-04.md, receipts, publication gates, and attribution disclosures; decide review disposition. Product reference 91da0e88118b76a68031f432da50521fe6a341b7 preserved (0 backend diff). No Claude self-approval or FREEZE. No real credentials, provider calls, live channels, external network, or persistent DB. Facebook/Zalo OA accounts remain parked.
+- Active role: Codex independent REVIEWER completed; SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; ORCHESTRATOR cost assessment next
+- Next allowed move: CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN after independent R3 evidence review of c09c8f62585945d3624e5a0f3ddc305bb35c4552. R3 raw-log counts/names and M01..03 behavioral kills confirmed; R046-R3-01..03 remain OPEN for execution snapshot identity, publication receipt and historical attribution. R046-R2-01..02 remain settled; R046-R2-03 machine-count subcondition settled, remaining evidence conditions OPEN. REVIEW_COST_ESCALATION_REQUIRED: ORCHESTRATOR assesses a separately recorded cost/authority disposition using recovered R3 logs; no automatic fourth repair or BUILD. Product/tests91da0e88118b76a68031f432da50521fe6a341b7 and immutable seed preserved. No credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority. Facebook/Zalo OA accounts remain parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fresh planning acknowledgment (2026-10-04)
@@ -176,3 +176,13 @@ Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD completed the bounded R3 evid
 4. Deterministic teardown completed: container and network removed, absence verified.
 5. Publication checks passed: doctor PASS WITH NOTE, gate unit suite 46/46 PASS, catalog PS5.1/PS7 PASS, preflights 7/7 PASS, diff clean.
 6. Handed back to Codex for independent review at REVIEW_PENDING; no self-approval or FREEZE.
+
+
+## Codex R3 prerequisite continuity acknowledgment (2026-10-05)
+
+BLOCKED_CONTINUITY_DRIFT observed: current memory narrative, nested ownerRouting and catalog still routed the pre-BUILD R3 plan despite committed REVIEW_PENDING handback c09c8f62585945d3624e5a0f3ddc305bb35c4552. Codex ORCHESTRATOR / SESSION_SYNC_STEWARD at prerequisite INTAKE synchronizes these current descriptions to the agreed state/header/tranche handback; historical packets and worker claims remain unchanged and unaccepted. Actual read-only core8a4119e11db00e774ed8e7cf7d9a8caa309e81d1; doctor PASS WITH NOTE25 passed/1 warning; knowledge ingested locally without POST. BOOTSTRAP_MIGRATION_PENDING nonblocking. No product/test/seed edits, no new campaign or fourth repair, no FREEZE. Catalog and preflight validate before independent REVIEWER transition.
+
+
+## Independent R3 review disposition and metadata-role acknowledgment (2026-10-05)
+
+Canonical current continuity rehydrated after prerequisite correction. Codex independent REVIEWER returns CHANGES_REQUIRED for exact evidence handback c09c8f62585945d3624e5a0f3ddc305bb35c4552; runtime logs/counts/detectors independently recovered, remaining snapshot/publication/historical-attribution findings R046-R3-01..03 open. Product source/tests and seed untouched. REVIEW_COST_ESCALATION_REQUIRED before any fourth round; no new worker authorization. Reviewer report docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md, read-only audit and publication receipt registered. Transition to SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD for bounded publication and continuity only. Worker report runner-page link corrected after retained docs failure; worker JSON/runner/extracts unchanged. Final publication checks and local review commit follow; no CLOSER/FREEZE/push or product repair. Accounts parked.

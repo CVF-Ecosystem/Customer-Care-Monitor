@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
+- R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -137,12 +137,16 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R046-R2 machine receipts: statement pool isolation test, transaction boundary commit/rollback hooks, fresh mutation campaign, and regression selection.: `docs/reviews/probes/r046_r2_worker_receipts.json`
 - R046 recorded cost checkpoint disposition: one bounded evidence-only R3, source/roles/effects unchanged.: `CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R3_2026-10-04.json`
 - R046 cost assessment and execution/inheritance/failure boundaries before third repair.: `docs/reviews/CCMAI_RUNTIME_046_R3_COST_DISPOSITION_2026-10-04.md`
+- Read-only recovered R3 raw-log hashes, event counts and exact export/livecopy audit.: `docs/reviews/probes/r046_r3_independent_audit.json`
+- R3 independent CHANGES_REQUIRED with verified raw counts and retained evidence/attribution limits.: `docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md`
+- Read-only receipt recovery probe; no campaign or product changes.: `docs/reviews/probes/r046_r3_independent_audit.py`
 - R3 machine receipt requirements only; NOT RUN, no execution results.: `docs/reviews/probes/r046_r3_receipt_contract.json`
+- Independent reviewer publication receipts; original worker docs failure retained.: `docs/reviews/probes/r046_r3_review_publication.json`
 - R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes.: `docs/reviews/probes/r046_worker_receipts.json`
-- R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
+- R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
 - Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive.: `docs/reviews/probes/r046_transaction_boundary_probe_test.go`
-- R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
-- R046 CHANGES_REQUIRED solely R2-03; cost-approved evidence-only R3 ready for Claude, no worker BUILD/FREEZE.: `docs/work_orders/CCMAI_RUNTIME_046.md`
+- R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
+- R046 R3 independent review CHANGES_REQUIRED; raw counts/detectors confirmed, snapshot/publication/attribution evidence open; cost assessment before any fourth repair; FREEZE_OPEN, source unchanged and accounts parked.: `docs/work_orders/CCMAI_RUNTIME_046.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
