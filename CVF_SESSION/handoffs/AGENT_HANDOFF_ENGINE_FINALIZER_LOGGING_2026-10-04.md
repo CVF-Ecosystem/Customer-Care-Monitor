@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD; Codex independent REVIEWER on return
-- Next allowed move: CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN after independent R1 re-review of exact repair a8fb3b83cfa100f2c81b496ce40655c826a5e874. R046-R2-01..03: maintained pool isolation/restoration, remaining transaction-boundary coverage and reproducible worker receipts/regression prerequisites. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD continues test/evidence-only repair round 2 under unchanged R2 seed; rehydrate, acknowledge and synchronize gated BUILD before edits, then return exact repair SHA REVIEW_PENDING for independent Codex review. No production defect established or source edit requested. R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked. No real config/credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD; Codex independent REVIEWER
+- Next allowed move: CCMAI-RUNTIME-046 BUILD repair round 2 under committed seed c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD implements R046-R2-01..03 (pool isolation, remaining boundary coverage, reproducible receipts) in authorized test/evidence paths; Codex independent R2 re-review afterward. Production source preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fresh planning acknowledgment (2026-10-04)
@@ -99,3 +99,13 @@ Codex independent reviewer confirmed maintained BEGIN detector improvement and a
 CHANGES_REQUIRED R046-R2-01..03 at exact repair a8fb3b83cfa100f2c81b496ce40655c826a5e874. Independent finalizer18/23 PASS and full affected terminal/ownership18/59 PASS0 SKIP; three applied mutants fail named assertions and each restored control passes. Reviewer original-Statement pool probe confirms fixture defect before and after cleanup. Cached full backend build/vet PASS;203-file exact archive equality and overlay removal, task DB/network/volume teardown and named-resource absence verified. Source/tests/seeds and historical worker evidence preserved. Review docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md; summary docs/reviews/probes/r046_r1_independent_summary.json. Unit46 PASS50.707s, both-shell catalog/default/PR preflights PASS, doctor PASS WITH NOTE. Final docs/staged checks recorded in JSON after the final Markdown change; local metadata commit withheld until passing. Claude test/evidence-only R2 repair next under unchanged order; no product repair, self-approval, FREEZE, push or live/governance/hosted claim. Accounts parked.
 
 Review-metadata COMMIT_STEWARD acknowledgment: canonical memory/state/handoff/status/index rehydrated and agreed before staging/commit; role transition Codex WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD -> SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD. First docs build PASS32.96s; this final role-header acknowledgment requires a final docs rebuild before commit. Product source/repair BUILD commit ownership remains Claude. Final check results are in the JSON publication receipt; no hosted CI or external publication claim.
+
+## Claude REPAIR_WORKER / repair BUILD acknowledgment (2026-10-04, R2)
+
+Role transition: Codex SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD → Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD.
+Acknowledged consolidated CHANGES_REQUIRED findings from Codex independent R1 re-review:
+- R046-R2-01: Fix `installBoundaryPool` to isolate the session and avoid mutating `originalDB.Statement.ConnPool`; verify full cleanup restoration and add maintained isolation control.
+- R046-R2-02: Complete transaction-boundary hooks (COMMIT and Rollback observation), atomic counters, observed attempts, bounded-sentinel assertion, and invariant checks. Correct prose on Commit/Rollback capture and checkpoint values.
+- R046-R2-03: Execute a reproducible worker mutation campaign with exact production AND test hashes, exact one-match replacement string, calculated mutated/restored hashes, named behavioral failure assertions, and full affected regression selection (`TestOrdinary|TestEveryTerminal|TestTerminalRunHolds|TestAcceptedCancel|TestCancelled|TestReservation|TestOwnership`).
+- Scope & Boundaries: Production source `backend/engine/analyzer_incremental.go` is unmodified (0 defect established); seed `c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267` unchanged; disposable loopback MySQL fixtures only; Facebook/Zalo OA accounts remain parked. No live provider/credential/network/persistent DB authority.
+
