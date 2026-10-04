@@ -42,6 +42,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
+- Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`
 - Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only.: `docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md`

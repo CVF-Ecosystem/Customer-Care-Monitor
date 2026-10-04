@@ -1130,6 +1130,13 @@
       "path": "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md",
       "status": "ACTIVE",
       "description": "Consolidated R3-01..03 disclosure/publication correction contract for Claude; independent review retained."
+    },
+    {
+      "id": "publication-github-20261005",
+      "family": "continuity",
+      "path": "CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json",
+      "status": "ACTIVE",
+      "description": "Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim."
     }
   ]
 }
