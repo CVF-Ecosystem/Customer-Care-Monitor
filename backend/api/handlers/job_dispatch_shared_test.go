@@ -4,6 +4,8 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
+	"io"
 	"net/http"
 	"net/http/httptest"
 	"reflect"
@@ -486,4 +488,152 @@ func TestMixedTransportsSimultaneousDispatchHasOneWinner(t *testing.T) {
 		}
 	}
 	t.Logf("simultaneous-dispatch winners over %d rounds: %v", rounds, winners)
+}
+
+// ---- notification-tail exclusion across transports (R044-R1-01) ----
+
+const (
+	hNotifyToken = "R044_SYNTHETIC" // synthetic Telegram bot token: never a credential
+	hNotifyChat  = "R044_LOCAL"
+)
+
+// hNotifyTransport replaces http.DefaultTransport with an in-process responder for exactly one
+// synthetic Telegram destination. The matching send parks until open() or its request context ends;
+// every other request is counted as foreign and fails. Nothing is delegated to a real transport.
+type hNotifyTransport struct {
+	entered chan struct{}
+	release chan struct{}
+	once    sync.Once
+	relOnce sync.Once
+	mu      sync.Mutex
+	sends   int
+	foreign int
+}
+
+func newHNotifyTransport() *hNotifyTransport {
+	return &hNotifyTransport{entered: make(chan struct{}), release: make(chan struct{})}
+}
+
+func (n *hNotifyTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	var payload map[string]interface{}
+	matches := req.Method == http.MethodPost && req.URL.Host == "api.telegram.org" &&
+		req.URL.Path == "/bot"+hNotifyToken+"/sendMessage" && req.Body != nil &&
+		json.NewDecoder(req.Body).Decode(&payload) == nil && payload["chat_id"] == hNotifyChat
+	n.mu.Lock()
+	if matches {
+		n.sends++
+	} else {
+		n.foreign++
+	}
+	n.mu.Unlock()
+	if !matches {
+		return nil, errors.New("r044 notification trap: unexpected outbound request")
+	}
+	n.once.Do(func() { close(n.entered) })
+	select {
+	case <-n.release:
+	case <-req.Context().Done():
+		return nil, req.Context().Err()
+	}
+	return &http.Response{StatusCode: http.StatusOK, Header: make(http.Header), Body: io.NopCloser(strings.NewReader(`{"ok":true}`)), Request: req}, nil
+}
+
+func (n *hNotifyTransport) open() { n.relOnce.Do(func() { close(n.release) }) }
+
+func (n *hNotifyTransport) counts() (sends, foreign int) {
+	n.mu.Lock()
+	defer n.mu.Unlock()
+	return n.sends, n.foreign
+}
+
+// waitSend is the positive-send detector: true once a configured notification reached the transport.
+func (n *hNotifyTransport) waitSend(d time.Duration) bool {
+	select {
+	case <-n.entered:
+		return true
+	case <-time.After(d):
+		return false
+	}
+}
+
+// JE-05/JE-07/JE-10: a run accepted through MCP with a configured (synthetic) notification is already
+// terminal while its send is in flight but still owns the slot. The HTTP trigger and a second MCP call
+// are both busy and reserve, start and call the provider nothing. After the send returns the log and
+// notified marks are bound to the accepted run, the slot is released and HTTP is admitted.
+func TestHTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail(t *testing.T) {
+	fx := setupOwnership(t, true, 1)
+	tr := newHNotifyTransport()
+	original := http.DefaultTransport
+	http.DefaultTransport = tr
+	t.Cleanup(func() { http.DefaultTransport = original }) // runs after the worker join below
+	t.Cleanup(func() {
+		db.DB.Exec("DELETE FROM notification_logs WHERE tenant_id = ?", fx.tenantID) // after the join, before the fixture rows
+	})
+	useSharedWorkerFor(t, fx)
+	t.Cleanup(tr.open) // never leave a send parked when the join runs
+	for _, q := range []struct {
+		sql  string
+		args []interface{}
+	}{
+		{`UPDATE jobs SET output_schedule = 'immediate', outputs = ? WHERE id = ?`, []interface{}{`[{"type":"telegram","bot_token":"` + hNotifyToken + `","chat_id":"` + hNotifyChat + `"}]`, fx.jobID}},
+		{`INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, created_at, updated_at) VALUES (?, ?, 'app_url', 'http://r044.invalid', NOW(), NOW())`, []interface{}{pkg.NewUUID(), fx.tenantID}},
+	} {
+		if err := db.DB.Exec(q.sql, q.args...).Error; err != nil {
+			t.Fatalf("fixture: %v", err)
+		}
+	}
+	m := newMCPSide(t, fx.tenantID)
+
+	text, isErr := m.call(t, fx.tenantID, fx.jobID)
+	if isErr {
+		t.Fatalf("MCP call: %q", text)
+	}
+	runID := mcpRunID(t, text)
+	fx.prov.waitEntered(t)
+	fx.prov.release()
+	if !tr.waitSend(30 * time.Second) {
+		t.Fatal("the configured notification never reached the in-process transport")
+	}
+	if status := fx.runStatus(t, runID); status != "success" || !engine.JobRunActive(fx.tenantID, fx.jobID) {
+		t.Fatalf("while the send is parked the accepted run must be terminal (%q) and the owner held (active=%v)", status, engine.JobRunActive(fx.tenantID, fx.jobID))
+	}
+	rows, calls := fx.jobRunCount(t), fx.prov.callCount()
+	if rec := httpTrigger(fx.tenantID, fx.jobID, ""); rec.Code != http.StatusConflict || bodyField(t, rec, "error") != "job_already_running" {
+		t.Fatalf("HTTP during the notification send: %d %s", rec.Code, rec.Body.String())
+	}
+	if text, isErr := m.call(t, fx.tenantID, fx.jobID); !isErr || text != "job_already_running" {
+		t.Fatalf("MCP during the notification send: %q isErr=%v", text, isErr)
+	}
+	if fx.jobRunCount(t) != rows || rows != 1 || fx.prov.callCount() != calls || calls != 1 {
+		t.Fatalf("a busy request changed state: runs %d->%d provider calls %d->%d (want 1/1)", rows, fx.jobRunCount(t), calls, fx.prov.callCount())
+	}
+	var logged, marked int64
+	db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ?`, runID).Scan(&logged)
+	db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, runID).Scan(&marked)
+	if logged != 0 || marked != 0 {
+		t.Fatalf("a log (%d) or notified mark (%d) exists before the send returned", logged, marked)
+	}
+
+	tr.open()
+	fx.waitIdle(t)
+	var total int64
+	db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ? AND tenant_id = ? AND job_id = ? AND channel_type = 'telegram' AND recipient = ? AND status = 'sent'`, runID, fx.tenantID, fx.jobID, hNotifyChat).Scan(&logged)
+	db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ?`, runID).Scan(&total)
+	db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, runID).Scan(&marked)
+	if logged != 1 || total < 1 || marked != total {
+		t.Fatalf("sent logs bound to the accepted run %d (want 1), notified results %d of %d", logged, marked, total)
+	}
+	if sends, foreign := tr.counts(); sends != 1 || foreign != 0 {
+		t.Fatalf("transport saw %d matching sends and %d foreign requests, want 1 and 0", sends, foreign)
+	}
+	rec := httpTrigger(fx.tenantID, fx.jobID, "mode=unanalyzed")
+	if rec.Code != http.StatusAccepted {
+		t.Fatalf("HTTP after the last effect: %d %s", rec.Code, rec.Body.String())
+	}
+	second := bodyField(t, rec, "run_id")
+	fx.waitRunDone(t, second)
+	fx.waitIdle(t)
+	if _, foreign := tr.counts(); foreign != 0 || second == runID || fx.jobRunCount(t) != 2 {
+		t.Fatalf("follow-up run %s (first %s): foreign requests %d, rows %d", second, runID, foreign, fx.jobRunCount(t))
+	}
 }

@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"io"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -27,9 +28,11 @@ import (
 // CCMAI-RUNTIME-044: cqa_trigger_job executes through the shared jobdispatch service. Disposable
 // MySQL and synthetic rows only. Configuration loading and Analyzer creation are injected before any
 // real environment or provider access; the only provider is the synthetic test double below, so a
-// completed run here is APPLICATION evidence, never CVF governance proof. Notifications: the engine's
-// notification seam is unexported, so these jobs configure no outputs (output_schedule none) and the
-// tests assert notification_logs stays empty and the default HTTP transport is never used.
+// completed run here is APPLICATION evidence, never CVF governance proof. Notifications: most jobs here
+// configure no outputs (output_schedule none) and assert notification_logs stays empty and the default
+// HTTP transport is never used. The notification-enabled tests (R044-R1-01) instead replace
+// http.DefaultTransport, which the Telegram notifier's nil-Transport client uses, with an in-process
+// responder for one synthetic destination; it never delegates to a real transport.
 
 // ---- hermetic dispatcher (every fixture) ----
 
@@ -518,6 +521,225 @@ func TestMountedTriggerOwnershipHeldThroughCompletionTail(t *testing.T) {
 	f.waitIdle(t, f.tenantA, f.jobID())
 	if got := f.mountedCallStatus(t, f.triggerBody()); got != "job_triggered" {
 		t.Fatalf("after the last effect the slot must be free, got %q", got)
+	}
+}
+
+// ---- synthetic notification transport (R044-R1-01) ----
+
+const (
+	notifyToken = "R044_SYNTHETIC" // synthetic Telegram bot token: never a credential
+	notifyChat  = "R044_LOCAL"
+)
+
+// notifyTransport stands in for http.DefaultTransport. It accepts exactly one request shape (the
+// Telegram sendMessage call for the synthetic destination), parks it until open() or the request
+// context ends, and answers {"ok":true} in-process. Every other request is counted as foreign and
+// fails; nothing is ever delegated to a real transport.
+type notifyTransport struct {
+	entered chan struct{} // closed on the first matching send
+	release chan struct{} // closed by open()
+	once    sync.Once
+	relOnce sync.Once
+	mu      sync.Mutex
+	sends   int
+	foreign int
+}
+
+func newNotifyTransport() *notifyTransport {
+	return &notifyTransport{entered: make(chan struct{}), release: make(chan struct{})}
+}
+
+func (n *notifyTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	var payload map[string]interface{}
+	matches := req.Method == http.MethodPost && req.URL.Host == "api.telegram.org" &&
+		req.URL.Path == "/bot"+notifyToken+"/sendMessage" && req.Body != nil &&
+		json.NewDecoder(req.Body).Decode(&payload) == nil && payload["chat_id"] == notifyChat
+	n.mu.Lock()
+	if matches {
+		n.sends++
+	} else {
+		n.foreign++
+	}
+	n.mu.Unlock()
+	if !matches {
+		return nil, errors.New("r044 notification trap: unexpected outbound request")
+	}
+	n.once.Do(func() { close(n.entered) })
+	select {
+	case <-n.release:
+	case <-req.Context().Done():
+		return nil, req.Context().Err()
+	}
+	return &http.Response{StatusCode: http.StatusOK, Header: make(http.Header), Body: io.NopCloser(strings.NewReader(`{"ok":true}`)), Request: req}, nil
+}
+
+// open lets parked and future sends complete.
+func (n *notifyTransport) open() { n.relOnce.Do(func() { close(n.release) }) }
+
+func (n *notifyTransport) counts() (sends, foreign int) {
+	n.mu.Lock()
+	defer n.mu.Unlock()
+	return n.sends, n.foreign
+}
+
+// waitSend is the positive-send detector: true once a configured notification reached the transport
+// within d, false otherwise (d == 0 asks "has one already arrived?").
+func (n *notifyTransport) waitSend(d time.Duration) bool {
+	select {
+	case <-n.entered:
+		return true
+	default:
+	}
+	if d <= 0 {
+		return false
+	}
+	select {
+	case <-n.entered:
+		return true
+	case <-time.After(d):
+		return false
+	}
+}
+
+// useNotifyingWorker is useRealWorker plus the in-process transport. With outputs it also configures
+// one synthetic Telegram output for the job and the tenant app_url the notification link needs.
+// Cleanup order (LIFO): open the transport, join the worker, restore the transport.
+func (f *mcpFixture) useNotifyingWorker(t *testing.T, prov *synthProvider, outputs bool) (*realEnv, *notifyTransport) {
+	t.Helper()
+	tr := newNotifyTransport()
+	original := http.DefaultTransport
+	http.DefaultTransport = tr
+	t.Cleanup(func() { http.DefaultTransport = original }) // after the worker join registered below
+	env := f.useRealWorker(t, prov)
+	t.Cleanup(tr.open) // never leave a send parked when the join runs
+	if outputs {
+		f.exec(t, `UPDATE jobs SET output_schedule = 'immediate', outputs = ? WHERE id = ?`, `[{"type":"telegram","bot_token":"`+notifyToken+`","chat_id":"`+notifyChat+`"}]`, f.jobID())
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, created_at, updated_at) VALUES (?, ?, 'app_url', 'http://r044.invalid', NOW(), NOW())`, "url-"+f.tenantA, f.tenantA)
+	}
+	return env, tr
+}
+
+// notificationRows counts the notification logs written for one run; sent restricts to status 'sent'.
+func (f *mcpFixture) notificationRows(t *testing.T, runID string, sentOnly bool) int64 {
+	t.Helper()
+	q := `SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ?`
+	if sentOnly {
+		q += ` AND tenant_id = '` + f.tenantA + `' AND job_id = '` + f.jobID() + `' AND channel_type = 'telegram' AND recipient = '` + notifyChat + `' AND status = 'sent'`
+	}
+	return f.countRows(t, q, runID)
+}
+
+// JE-07/JE-10: with a configured (synthetic) notification the accepted run is already terminal while
+// its send is in flight, yet the single ownership slot stays held. A second mounted request is busy
+// without a new reservation, worker start or provider call. The log and the notified marks appear
+// only after the send returns, bound to the accepted run; then the slot is reusable.
+func TestMountedTriggerOwnershipHeldThroughNotificationTail(t *testing.T) {
+	f := newMCPFixture(t)
+	f.admit(t)
+	prov := newSynthProvider(false)
+	env, tr := f.useNotifyingWorker(t, prov, true)
+
+	rec, resp := f.mountedCall(t, context.Background(), f.triggerBody())
+	if rec.Code != http.StatusOK {
+		t.Fatalf("status %d", rec.Code)
+	}
+	acc := decodeAccepted(t, "notification-enabled", resp)
+	if !tr.waitSend(30 * time.Second) {
+		t.Fatal("the configured notification never reached the in-process transport")
+	}
+	row := f.runRow(t, acc.RunID)
+	if row.JobID != f.jobID() || row.TenantID != f.tenantA || row.Status != "success" || row.FinishedAt == nil || !engine.JobRunActive(f.tenantA, f.jobID()) {
+		t.Fatalf("while the send is parked the accepted run must be terminal (%+v) and the owner held (active=%v)", row, engine.JobRunActive(f.tenantA, f.jobID()))
+	}
+	runsBefore, startsBefore, callsBefore := f.countRows(t, `SELECT COUNT(*) FROM job_runs WHERE job_id = ?`, f.jobID()), env.startCount(), prov.callCount()
+	if got := f.mountedCallStatus(t, f.triggerBody()); got != "job_already_running" {
+		t.Fatalf("during the notification send got %q, want job_already_running", got)
+	}
+	if f.countRows(t, `SELECT COUNT(*) FROM job_runs WHERE job_id = ?`, f.jobID()) != runsBefore || runsBefore != 1 || env.startCount() != startsBefore || startsBefore != 1 || prov.callCount() != callsBefore || callsBefore != 1 {
+		t.Fatalf("the busy call changed state: runs %d starts %d provider calls %d (before 1/1/1)", f.countRows(t, `SELECT COUNT(*) FROM job_runs WHERE job_id = ?`, f.jobID()), env.startCount(), prov.callCount())
+	}
+	var marked int64
+	if err := db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, acc.RunID).Scan(&marked).Error; err != nil || marked != 0 || f.notificationRows(t, acc.RunID, false) != 0 {
+		t.Fatalf("a log or notified mark exists before the send returned: marked %d err %v", marked, err)
+	}
+
+	tr.open()
+	f.waitIdle(t, f.tenantA, f.jobID())
+	if got := f.notificationRows(t, acc.RunID, true); got != 1 || f.notificationRows(t, acc.RunID, false) != 1 {
+		t.Fatalf("sent notification logs bound to the accepted run: %d, want exactly 1", got)
+	}
+	var total int64
+	if err := db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ?`, acc.RunID).Scan(&total).Error; err != nil || total < 1 {
+		t.Fatalf("results for the accepted run: %d err %v", total, err)
+	}
+	if err := db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, acc.RunID).Scan(&marked).Error; err != nil || marked != total {
+		t.Fatalf("notified results %d of %d (err %v)", marked, total, err)
+	}
+	if sends, foreign := tr.counts(); sends != 1 || foreign != 0 {
+		t.Fatalf("transport saw %d matching sends and %d foreign requests, want 1 and 0", sends, foreign)
+	}
+	if got := f.mountedCallStatus(t, f.triggerBody()); got != "job_triggered" {
+		t.Fatalf("after the last effect the slot must be reusable, got %q", got)
+	}
+	f.waitIdle(t, f.tenantA, f.jobID())
+	if _, foreign := tr.counts(); foreign != 0 || f.countRows(t, `SELECT COUNT(*) FROM job_runs WHERE job_id = ?`, f.jobID()) != 2 {
+		t.Fatalf("follow-up run: foreign requests %d, runs %d", foreign, f.countRows(t, `SELECT COUNT(*) FROM job_runs WHERE job_id = ?`, f.jobID()))
+	}
+}
+
+// Detector control (R044-R1-01): the same notification-enabled harness with NO output configured
+// completes a real run, and the positive-send detector reports no send, no foreign request and no
+// log. TestMountedTriggerOwnershipHeldThroughNotificationTail needs the opposite answer.
+func TestNotificationDetectorReportsNoSendWithoutConfiguredOutputs(t *testing.T) {
+	f := newMCPFixture(t)
+	f.admit(t)
+	prov := newSynthProvider(false)
+	_, tr := f.useNotifyingWorker(t, prov, false)
+
+	_, resp := f.mountedCall(t, context.Background(), f.triggerBody())
+	acc := decodeAccepted(t, "no-output", resp)
+	done := f.waitTerminal(t, acc.RunID)
+	f.waitIdle(t, f.tenantA, f.jobID())
+	if done.Status != "success" || prov.callCount() != 1 {
+		t.Fatalf("control run %+v provider calls %d: the analysis must really complete", done, prov.callCount())
+	}
+	if tr.waitSend(0) {
+		t.Fatal("the detector reported a send although no output is configured")
+	}
+	if sends, foreign := tr.counts(); sends != 0 || foreign != 0 || f.notificationRows(t, acc.RunID, false) != 0 {
+		t.Fatalf("sends %d foreign %d logs %d, want none", sends, foreign, f.notificationRows(t, acc.RunID, false))
+	}
+}
+
+// Zero-notification controls with a notification-enabled job: an owner cancellation ends the run
+// without any send or log, and a rejected request (extra argument) reserves, starts and sends nothing.
+func TestNotificationEnabledCancellationAndRejectionSendNothing(t *testing.T) {
+	f := newMCPFixture(t)
+	f.admit(t)
+	prov := newSynthProvider(true)
+	env, tr := f.useNotifyingWorker(t, prov, true)
+
+	rejected := callBody("cqa_trigger_job", map[string]interface{}{"tenant_id": f.tenantA, "job_id": f.jobID(), "mode": "unanalyzed"})
+	if got := f.mountedCallStatus(t, rejected); got != "invalid_run_parameters" {
+		t.Fatalf("extra argument got %q", got)
+	}
+	if env.startCount() != 0 || f.jobRuns(t) != 0 || tr.waitSend(0) {
+		t.Fatalf("a rejected request started %d workers, reserved %d runs, sent=%v", env.startCount(), f.jobRuns(t), tr.waitSend(0))
+	}
+
+	_, resp := f.mountedCall(t, context.Background(), f.triggerBody())
+	acc := decodeAccepted(t, "cancelled", resp)
+	prov.waitEntered(t)
+	if got, err := engine.CancelJobRun(f.tenantA, f.jobID(), acc.RunID); err != nil || got != acc.RunID {
+		t.Fatalf("cancel: %q %v", got, err)
+	}
+	done := f.waitTerminal(t, acc.RunID)
+	f.waitIdle(t, f.tenantA, f.jobID())
+	if done.Status != "cancelled" {
+		t.Fatalf("cancelled run closed as %q", done.Status)
+	}
+	if sends, foreign := tr.counts(); sends != 0 || foreign != 0 || tr.waitSend(0) || f.notificationRows(t, acc.RunID, false) != 0 {
+		t.Fatalf("cancelled run: sends %d foreign %d logs %d, want none", sends, foreign, f.notificationRows(t, acc.RunID, false))
 	}
 }
 
