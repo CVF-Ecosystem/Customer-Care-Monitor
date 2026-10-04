@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R044 CHANGES_REQUIRED/R1 handoff: independent review, bounded Claude repair, original limits preserved; accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
+- Current R044 R1 REVIEW_PASS / FREEZE_OPEN handoff: independent evidence, separate local closure assessment next; accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -103,13 +103,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R044 worker BUILD evidence: JE matrix, controls, incidents, limits; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_BUILD_2026-10-03.md`
 - Independent exact-BUILD R044 CHANGES_REQUIRED: notification detector and worker receipts, core synthetic evidence/limits preserved.: `docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md`
 - Independent R044 commands/counts/hashes/mutations/restoration/old-source and synthetic notification receipt; cleanup verified.: `docs/reviews/probes/r044_independent_summary.json`
-- R044 repair round 1 REVIEW_PENDING: consolidated R1 test/evidence repair order and worker hand-back; unchanged seed, independent Codex re-review.: `docs/work_orders/CCMAI_RUNTIME_044.md`
+- R044 R1 REVIEW_PASS / FREEZE_OPEN, both findings settled; separate local closure authority next.: `docs/work_orders/CCMAI_RUNTIME_044.md`
+- Independent exact-R1 R044 REVIEW_PASS: maintained notification tests, receipt audit, detector/restored evidence and preserved limits; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md`
+- Independent R044 R1 source/diff/hash audit, synthetic suites, applied detectors/restoration, incidents and task cleanup.: `docs/reviews/probes/r044_r1_independent_summary.json`
 - R044 repair round 1 worker evidence: maintained notification-tail regression, detector controls, recovered and new mutation receipts; synthetic local application evidence only.: `docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md`
 - R044 repair round 1 machine receipts: exact replacements, full hashes, counts, named failures, restoration results and incidents; no raw logs.: `docs/reviews/probes/r044_r1_worker_receipts.json`
-- R044 REVIEW_PENDING repair-round-1 record: roles, scope, seed base, exact repair commit and evidence pointers; FREEZE_OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
+- R044 R1 REVIEW_PASS record: independent evidence, exact repair commit, seed/roles unchanged; FREEZE_OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-044.json`
 - Reviewer-only synthetic mounted notification-tail probe, replay in isolated exact-BUILD archive; no external call.: `docs/reviews/probes/r044_notification_probe_test.go`
 - Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
-- R044 contract unchanged; repair round 1 REVIEW_PENDING (maintained notification regression and reproducible worker receipts), independent re-review next.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
+- R044 unchanged local contract independently R1 REVIEW_PASS / FREEZE_OPEN; historical limits retained.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

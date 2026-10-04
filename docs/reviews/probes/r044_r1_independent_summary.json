@@ -1,0 +1,998 @@
+{
+  "trancheId": "CCMAI-RUNTIME-044",
+  "repairCommit": "b4ec91ea03a9f247e209389c3792c86494eac8b3",
+  "reviewer": "Codex",
+  "claimScope": "Synthetic local application tests only; not CVF AI governance proof.",
+  "originalReceiptReplacementAudit": [
+    {
+      "id": "M01",
+      "baselineSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "mutatedSha256": "4c7111974f9377f9e0f0abcfc3faaf31b20dcc8f80ea4e917506c7160feb88a1",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M02",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "7841cbe8191d3fa707ff8582161c3abde02230a92201dc9b8a47b531294cca36",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M03",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "9310f4c0f2daa7b39710eaf70af4d86fdc65593e7bbaaa9fdc6d08ec17c45795",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M03b",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "c21963053c584edb29d4da6d13ce2cc4eb69acdc51824dff442086b521208340",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M04",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "5eea063699a3811dcd0a8bca230ea81345fdb0c9f72cbf53d9aba52f3326fea9",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M05",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "4d2887d42daf1a36cd245b7c24bcf23832cb1b267c891ababfcd974d18ed6c00",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M06",
+      "baselineSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "mutatedSha256": "e5f02b6c6d793139c645b93ed0aebca92c5bc7f11821d77b039be9ca2728d455",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M06b",
+      "baselineSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "mutatedSha256": "14fc8ddf2da4771698dc26c8b72620ad29d0050f12fd77fc42c2b23ed7a8bf53",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M07",
+      "baselineSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "mutatedSha256": "0064d170b873204dc904789a4563893f426bd00d1034817510124a0697f16fb5",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M08",
+      "baselineSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "mutatedSha256": "6bd8db381328ca7ab46783e9f940cb512dccf241a8ed3f5efa3eee054fc21f21",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M09",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "8402d6ff75ffcc7b64140615e92d4049d04ca961dbe4016c9c26bae486a94b22",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M10",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "53d0b21eb02c3540fa6acaffe698a970f52a86703605dee20554fc9f4e6ce42a",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M11",
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "761341c6508b56c53c13bc1056e6a7e924c41c6732c8e3d78d887c2203273038",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M12",
+      "baselineSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "mutatedSha256": "24aa9b30c63b61e0a6740986510edfef3ffdae838e5976b579f78768c19ab94e",
+      "exactReplacementVerified": true
+    },
+    {
+      "id": "M13",
+      "baselineSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "mutatedSha256": "41b5fd37a31d526e6544436f696e5110fdb241c99fd485c62f09899b55020702",
+      "exactReplacementVerified": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "grouped",
+      "command": "go test ./jobdispatch ./mcp ./api/handlers -count=1 -p 1 -timeout 20m -json",
+      "exit": 0,
+      "events": {
+        "pass": 393,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 190,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch",
+          "result": "pass",
+          "seconds": 14.561
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "pass",
+          "seconds": 52.508
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+          "result": "pass",
+          "seconds": 342.923
+        }
+      ],
+      "assertions": [
+        {
+          "test": "mcp:TestMountedTriggerWorkerFailureModes/error",
+          "text": "trigger_execution_test.go:436: error: terminal status \"error\" message \"Analysis errors: 1/1 conversations failed\""
+        },
+        {
+          "test": "mcp:TestMountedTriggerWorkerFailureModes/panic",
+          "text": "trigger_execution_test.go:436: panic: terminal status \"error\" message \"L\u01b0\u1ee3t ch\u1ea1y d\u1eebng \u0111\u1ed9t ng\u1ed9t; xem nh\u1eadt k\u00fd m\u00e1y ch\u1ee7.\""
+        },
+        {
+          "test": "mcp:TestMountedTriggerWorkerFailureModes/cancel",
+          "text": "trigger_execution_test.go:436: cancel: terminal status \"cancelled\" message \"Cancelled by user\""
+        },
+        {
+          "test": "handlers:TestMixedTransportsConcurrentAdmissionHasOneWinner",
+          "text": "job_dispatch_shared_test.go:303: winners over 12 rounds: map[http:12] (starts: mcp 0 http 12)"
+        },
+        {
+          "test": "handlers:TestMixedTransportsSimultaneousDispatchHasOneWinner",
+          "text": "job_dispatch_shared_test.go:490: simultaneous-dispatch winners over 30 rounds: map[mcp:30]"
+        }
+      ],
+      "logSha256": "f38e4555e515a04115a51c11b95d483343c737f593697c86d8536c8553270957",
+      "logBytes": 87130050,
+      "nonJsonLineCount": 0
+    },
+    {
+      "name": "engine",
+      "command": "go test ./engine -run '^Test(Admission|Cancel|Terminal|Publication|StaleOwner|EarlyFailures|ProviderPanic|Timeout|UnresolvedRunning|NoLockInversion|Cron|Scheduler|Reserved|Reservation)' -count=1 -p 1 -timeout 10m -json",
+      "exit": 0,
+      "events": {
+        "pass": 54,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 28,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+          "result": "pass",
+          "seconds": 59.776
+        }
+      ],
+      "assertions": [],
+      "logSha256": "9f12701ad24adddb10599eae50c14e27c8977fe1bbdf2e1f6d2fc143ad57321a",
+      "logBytes": 11822989,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 123.402
+    },
+    {
+      "name": "focus-baseline",
+      "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+      "exit": 0,
+      "events": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "pass",
+          "seconds": 5.332
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+          "result": "pass",
+          "seconds": 1.657
+        }
+      ],
+      "assertions": [],
+      "logSha256": "bbb7f0b5b5b1586b769a66939267ad161dd5aa3e992857a27d60b02b154b69fa",
+      "logBytes": 1367224,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 103.817
+    },
+    {
+      "name": "C01",
+      "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+      "exit": 1,
+      "events": {
+        "pass": 3,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 3,
+        "fail": 1,
+        "skip": 0
+      },
+      "failed": [
+        "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail"
+      ],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "fail",
+          "seconds": 34.671
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+          "result": "pass",
+          "seconds": 1.6179999999999999
+        }
+      ],
+      "assertions": [
+        {
+          "test": "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail",
+          "text": "trigger_execution_test.go:648: the configured notification never reached the in-process transport"
+        }
+      ],
+      "logSha256": "25e148a503a39f34d55415ac53e1f105023d2477bfd65a783fee0f8fbf80d2af",
+      "logBytes": 1330209,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 136.147
+    },
+    {
+      "name": "C01-restored",
+      "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+      "exit": 0,
+      "events": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "pass",
+          "seconds": 5.053
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+          "result": "pass",
+          "seconds": 1.6139999999999999
+        }
+      ],
+      "assertions": [],
+      "logSha256": "c5819709af19cb302b8953dcab823b292d8229bb28ce16ab245a679f822acd13",
+      "logBytes": 1366310,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 105.689
+    },
+    {
+      "name": "C02",
+      "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+      "exit": 1,
+      "events": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "failed": [
+        "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail",
+        "handlers:TestHTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail"
+      ],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "fail",
+          "seconds": 5.338
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+          "result": "fail",
+          "seconds": 1.5350000000000001
+        }
+      ],
+      "assertions": [
+        {
+          "test": "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail",
+          "text": "trigger_execution_test.go:656: during the notification send got \"job_triggered\", want job_already_running"
+        },
+        {
+          "test": "handlers:TestHTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail",
+          "text": "job_dispatch_shared_test.go:602: HTTP during the notification send: 202 {\"message\":\"job_triggered\",\"run_id\":\"\"}"
+        }
+      ],
+      "logSha256": "aff0c24db980035c8f2b9689bd19157e439c596e100a008de7f02a11c369157a",
+      "logBytes": 1310839,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 111.223
+    },
+    {
+      "name": "C02-restored",
+      "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+      "exit": 0,
+      "events": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+          "result": "pass",
+          "seconds": 5.127
+        },
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+          "result": "pass",
+          "seconds": 1.5939999999999999
+        }
+      ],
+      "assertions": [],
+      "logSha256": "37d6772b16aea33f935e6aef94516b453da5a172cd69982eebdd172342791360",
+      "logBytes": 1366310,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 105.007
+    },
+    {
+      "name": "N05e-independent-overlay",
+      "command": "go test -overlay=/task/N05e-overlay.json ./engine -run '^TestCancelAfterPartialProgressDoesNotNotify$' -count=1 -p 1 -timeout 5m -json",
+      "exit": 1,
+      "events": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "failed": [
+        "engine:TestCancelAfterPartialProgressDoesNotNotify"
+      ],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+          "result": "fail",
+          "seconds": 1.5110000000000001
+        }
+      ],
+      "assertions": [
+        {
+          "test": "engine:TestCancelAfterPartialProgressDoesNotNotify",
+          "text": "job_run_ownership_test.go:915: status cancelled, 1 published, 1 notifications"
+        }
+      ],
+      "logSha256": "3c7b89f488f605153b3d9a3b73d6877d1001c71521e2358ada29669e719d4556",
+      "logBytes": 290390,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 69.68
+    },
+    {
+      "name": "N05e-independent-restored",
+      "command": "go test ./engine -run '^TestCancelAfterPartialProgressDoesNotNotify$' -count=1 -p 1 -timeout 5m -json",
+      "exit": 0,
+      "events": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [
+        {
+          "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+          "result": "pass",
+          "seconds": 1.56
+        }
+      ],
+      "assertions": [],
+      "logSha256": "27ffb682852337894897deef4638265df54d34ecbf8ddc93693a294b1ebc766f",
+      "logBytes": 290926,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 68.838
+    },
+    {
+      "name": "build",
+      "command": "go build ./...",
+      "exit": 0,
+      "events": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [],
+      "assertions": [],
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logBytes": 0,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 44.374
+    },
+    {
+      "name": "vet",
+      "command": "go vet ./...",
+      "exit": 0,
+      "events": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "topLevel": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "failed": [],
+      "skipped": [],
+      "packages": [],
+      "assertions": [],
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logBytes": 0,
+      "nonJsonLineCount": 0,
+      "wallSeconds": 35.606
+    }
+  ],
+  "mutations": [
+    {
+      "id": "C01",
+      "file": "backend/mcp/trigger_execution_test.go",
+      "replacement": {
+        "old": "UPDATE jobs SET output_schedule = 'immediate', outputs = ? WHERE id = ?",
+        "new": "UPDATE jobs SET output_schedule = 'none', outputs = ? WHERE id = ?"
+      },
+      "baselineSha256": "6773e3c22fe4eb0c4646b949f76e8d32cacbafe593881bcdc5f1ec701b1dddb6",
+      "mutatedSha256": "233fac7390ae442ecb3c229db45f22dc81846fa1b868673cc37bccc78cd849a4",
+      "mutatedRun": {
+        "name": "C01",
+        "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+        "exit": 1,
+        "events": {
+          "pass": 3,
+          "fail": 1,
+          "skip": 0
+        },
+        "topLevel": {
+          "pass": 3,
+          "fail": 1,
+          "skip": 0
+        },
+        "failed": [
+          "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail"
+        ],
+        "skipped": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+            "result": "fail",
+            "seconds": 34.671
+          },
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+            "result": "pass",
+            "seconds": 1.6179999999999999
+          }
+        ],
+        "assertions": [
+          {
+            "test": "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail",
+            "text": "trigger_execution_test.go:648: the configured notification never reached the in-process transport"
+          }
+        ],
+        "logSha256": "25e148a503a39f34d55415ac53e1f105023d2477bfd65a783fee0f8fbf80d2af",
+        "logBytes": 1330209,
+        "nonJsonLineCount": 0,
+        "wallSeconds": 136.147
+      },
+      "restoredSha256": "6773e3c22fe4eb0c4646b949f76e8d32cacbafe593881bcdc5f1ec701b1dddb6",
+      "restoredEqualsBaseline": true,
+      "restoredRun": {
+        "name": "C01-restored",
+        "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+        "exit": 0,
+        "events": {
+          "pass": 4,
+          "fail": 0,
+          "skip": 0
+        },
+        "topLevel": {
+          "pass": 4,
+          "fail": 0,
+          "skip": 0
+        },
+        "failed": [],
+        "skipped": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+            "result": "pass",
+            "seconds": 5.053
+          },
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+            "result": "pass",
+            "seconds": 1.6139999999999999
+          }
+        ],
+        "assertions": [],
+        "logSha256": "c5819709af19cb302b8953dcab823b292d8229bb28ce16ab245a679f822acd13",
+        "logBytes": 1366310,
+        "nonJsonLineCount": 0,
+        "wallSeconds": 105.689
+      },
+      "outcome": "KILLED"
+    },
+    {
+      "id": "C02",
+      "file": "backend/jobdispatch/dispatch.go",
+      "replacement": {
+        "old": "return \"\", ErrBusy",
+        "new": "return \"\", nil"
+      },
+      "baselineSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "mutatedSha256": "5d406a011967937a112b94f4627854938eea5d3d6adb32465a3979bf3e4db629",
+      "mutatedRun": {
+        "name": "C02",
+        "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+        "exit": 1,
+        "events": {
+          "pass": 2,
+          "fail": 2,
+          "skip": 0
+        },
+        "topLevel": {
+          "pass": 2,
+          "fail": 2,
+          "skip": 0
+        },
+        "failed": [
+          "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail",
+          "handlers:TestHTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail"
+        ],
+        "skipped": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+            "result": "fail",
+            "seconds": 5.338
+          },
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+            "result": "fail",
+            "seconds": 1.5350000000000001
+          }
+        ],
+        "assertions": [
+          {
+            "test": "mcp:TestMountedTriggerOwnershipHeldThroughNotificationTail",
+            "text": "trigger_execution_test.go:656: during the notification send got \"job_triggered\", want job_already_running"
+          },
+          {
+            "test": "handlers:TestHTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail",
+            "text": "job_dispatch_shared_test.go:602: HTTP during the notification send: 202 {\"message\":\"job_triggered\",\"run_id\":\"\"}"
+          }
+        ],
+        "logSha256": "aff0c24db980035c8f2b9689bd19157e439c596e100a008de7f02a11c369157a",
+        "logBytes": 1310839,
+        "nonJsonLineCount": 0,
+        "wallSeconds": 111.223
+      },
+      "restoredSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "restoredEqualsBaseline": true,
+      "restoredRun": {
+        "name": "C02-restored",
+        "command": "go test ./mcp ./api/handlers -run '^Test(MountedTriggerOwnershipHeldThroughNotificationTail|HTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail|NotificationDetectorReportsNoSendWithoutConfiguredOutputs|NotificationEnabledCancellationAndRejectionSendNothing)$' -count=1 -p 1 -timeout 5m -json",
+        "exit": 0,
+        "events": {
+          "pass": 4,
+          "fail": 0,
+          "skip": 0
+        },
+        "topLevel": {
+          "pass": 4,
+          "fail": 0,
+          "skip": 0
+        },
+        "failed": [],
+        "skipped": [],
+        "packages": [
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp",
+            "result": "pass",
+            "seconds": 5.127
+          },
+          {
+            "package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers",
+            "result": "pass",
+            "seconds": 1.5939999999999999
+          }
+        ],
+        "assertions": [],
+        "logSha256": "37d6772b16aea33f935e6aef94516b453da5a172cd69982eebdd172342791360",
+        "logBytes": 1366310,
+        "nonJsonLineCount": 0,
+        "wallSeconds": 105.007
+      },
+      "outcome": "KILLED"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "search-glob",
+      "result": "TOOL_ERROR",
+      "detail": "rg literal Windows wildcard arguments returned error123; rerun used directory paths and -g. No test result inferred."
+    },
+    {
+      "id": "read-package-path",
+      "result": "READ_ERROR",
+      "detail": "Get-Content root package.json failed; rg --files identified docs/package.json. No material action used the missing path."
+    },
+    {
+      "id": "overlay-preparation",
+      "result": "HARNESS_ERROR",
+      "detail": "Initial Python preparation had IndentationError before execution; corrected script compiled before use. No test result inferred."
+    },
+    {
+      "id": "stale-continuity",
+      "result": "CORRECTED",
+      "detail": "Stale memory current routing/catalog and nested implementation ownerRouting detected; role-recorded metadata reconciliation before review acceptance, historical values preserved in Git and evidence."
+    },
+    {
+      "id": "archive-byte-audit",
+      "result": "HARNESS_CHECK_ERROR_CORRECTED",
+      "detail": "Finalizer compared all archive files to Git blobs and halted on pre-existing CRLF archive export of engine testdata JSON. The untouched file equals original source.zip bytes; audit corrected to compare exact archive export bytes. Source/test outcomes unchanged; first failed audit retained."
+    }
+  ],
+  "notRun": [
+    "race detector",
+    "full engine suite",
+    "full backend suite",
+    "real provider/channel/config/credential/external network/persistent or customer DB",
+    "live governance proof"
+  ],
+  "repairReceiptAudit": [
+    {
+      "id": "N01",
+      "file": "backend/engine/analyzer.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "KILLED",
+      "workerMutatedEvents": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N02",
+      "file": "backend/engine/analyzer.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "KILLED",
+      "workerMutatedEvents": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N03",
+      "file": "backend/notifications/dispatcher.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "KILLED",
+      "workerMutatedEvents": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N04",
+      "file": "backend/notifications/dispatcher.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "BUILD_ERROR",
+      "workerMutatedEvents": {
+        "pass": 0,
+        "fail": 0,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N05",
+      "file": "backend/engine/analyzer.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "SURVIVED",
+      "workerMutatedEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N06",
+      "file": "backend/mcp/handlers.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "KILLED",
+      "workerMutatedEvents": {
+        "pass": 3,
+        "fail": 1,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N07",
+      "file": "backend/jobdispatch/dispatch.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "KILLED",
+      "workerMutatedEvents": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N04b",
+      "file": "backend/notifications/dispatcher.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "KILLED",
+      "workerMutatedEvents": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N05e-attempt1",
+      "file": "backend/engine/analyzer.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "SURVIVED",
+      "workerMutatedEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 4,
+        "fail": 0,
+        "skip": 0
+      }
+    },
+    {
+      "id": "N05e",
+      "file": "backend/engine/analyzer.go",
+      "exactDiffAndHashesVerified": true,
+      "workerOutcome": "KILLED",
+      "workerMutatedEvents": {
+        "pass": 53,
+        "fail": 1,
+        "skip": 0
+      },
+      "workerRestoredEvents": {
+        "pass": 54,
+        "fail": 0,
+        "skip": 0
+      }
+    }
+  ],
+  "identity": {
+    "seedCommit": "665f2e5ab780cbe8a1d374ccba676c1e926fbb47",
+    "acknowledgmentCommit": "ac10f305f3f29046ce8b681ed0f6abdbf0865a49",
+    "originalBuild": "48918e2f953dbb32e7f5f159b1eceab7dfe3848f",
+    "repairCommit": "b4ec91ea03a9f247e209389c3792c86494eac8b3",
+    "sourceChanges": [
+      "backend/api/handlers/job_dispatch_shared_test.go",
+      "backend/mcp/trigger_execution_test.go"
+    ],
+    "productionSourcesUnchanged": true,
+    "seedUnchanged": true,
+    "protectedBlobEqualityVerified": true
+  },
+  "engineOverlay": {
+    "file": "backend/engine/analyzer.go",
+    "baselineSha256": "7b6f715822b8986e9641cfd07bc0a1198bb0ebcf86e1d92bb8f70a58f0a0c3be",
+    "mutatedSha256": "c34c21be66cd2d948e3d10fc0a403f9476fb73ecc737a158cec96a1c61a076b6",
+    "replacement": {
+      "old": "if analyzedCount > 0 && job.OutputSchedule != \"none\" && runStatus != \"cancelled\" {",
+      "new": "if analyzedCount > 0 && job.OutputSchedule != \"none\" && true {"
+    },
+    "archiveSourceUnchanged": true
+  },
+  "cleanup": {
+    "result": "PASS",
+    "containersRemoved": [
+      "ccmai-r044-r1-review-go",
+      "ccmai-r044-r1-review-db"
+    ],
+    "networkRemoved": "ccmai-r044-r1-review-net",
+    "dbVolumeRemoved": "57332cae503a7a191c0c3f96f71f5dc0599449147c13f4f54c1eb10be7f5a7f0",
+    "residualTaskResources": 0,
+    "applicationInventory": [
+      "0770fa03aee1 ccma-nginx-1",
+      "07822f249ff0 ccma-app-1",
+      "ee1fc7f68263 ccma-db-1"
+    ],
+    "applicationContainersUntouched": true,
+    "rawArchiveLogsAndCache": "Retained in task temp; previous reviewer Go cache reused."
+  },
+  "environment": {
+    "goVersion": "go1.26.8 linux/amd64",
+    "goImage": "golang:1.26-alpine",
+    "goImageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+    "dbImage": "mysql:8.0",
+    "dbImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "networkInternal": true,
+    "hostPorts": false,
+    "GOPROXY": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0",
+    "GOFLAGS": "-mod=readonly",
+    "fixture": "Disposable synthetic ccma database; read-only cached modules; previous Codex task Go cache reused."
+  },
+  "archiveRestoredToExactRepair": true,
+  "continuityCorrections": [
+    "Stale memory current headings/owner routing and active-handoff catalog description synchronized to REVIEW_PENDING before review.",
+    "Targeted IMPLEMENTATION_STATUS.ownerRouting lookup revealed pre-BUILD unavailable/planning-only claims; role-recorded metadata correction before review completion."
+  ],
+  "repositoryChecks": {
+    "gateUnitSuite": {
+      "tests": 46,
+      "result": "PASS",
+      "seconds": 31.6
+    },
+    "doctor": {
+      "checks": 25,
+      "result": "PASS"
+    },
+    "defaultPreflight": {
+      "gates": 7,
+      "result": "PASS"
+    },
+    "prRangePreflight": {
+      "base": "origin/main",
+      "headBeforeReviewCommit": "39e9cf5cc010265d68247dc674cd00d17b949034",
+      "gates": 7,
+      "result": "PASS"
+    },
+    "exactChangedSetPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--files",
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-044.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+        "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
+        "docs/reviews/probes/r044_r1_independent_summary.json",
+        "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
+        "docs/work_orders/CCMAI_RUNTIME_044.md"
+      ],
+      "files": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-044.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+        "docs/reviews/learnings/feedback_cvf_repair_workflow.md",
+        "docs/reviews/probes/r044_r1_independent_summary.json",
+        "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
+        "docs/work_orders/CCMAI_RUNTIME_044.md"
+      ],
+      "gates": 7,
+      "result": "PASS",
+      "outputSha256": "ce113d2dc467b12c69a90509abbad0274dd517c69a91dd3e4dc87cd67e0e5d23"
+    },
+    "catalog": "PASS",
+    "docsBuild": {
+      "command": "npm --prefix docs run docs:build",
+      "result": "PASS",
+      "seconds": 32.77,
+      "afterFinalMarkdownEdit": true,
+      "warnings": "Inherited env syntax highlighting falls back to txt."
+    },
+    "diffAndSourcePreservation": "PASS",
+    "commitStewardFinalRevalidation": "Default, PR and exact staged set rerun after this receipt write; all must pass before commit."
+  },
+  "workerHistoricalEvidenceLimit": "Original raw worker logs were not independently re-read in this re-review. Their counts/digests remain attributed; all 15 exact source replacements and full hashes were independently recomputed. New 10 replay diffs/hashes were verified; independent current suites and selected mutants are separate evidence.",
+  "disposition": "REVIEW_PASS",
+  "freeze": "OPEN"
+}

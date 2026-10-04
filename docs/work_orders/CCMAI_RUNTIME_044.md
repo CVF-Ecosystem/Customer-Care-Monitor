@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-044 — Shared MCP/HTTP job execution
 
-Status: REVIEW_PENDING
+Status: REVIEW_PASS
 
 Date: 2026-10-03 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/MCP_JOB_EXECUTION_R044_2026-10-03.md). Separate immutable seed: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`; activation record identifies its committed SHA. Standing local orchestration delegation covers this bounded local order. Owner manually transfers to Claude; no automatic agent invocation.
 
@@ -40,3 +40,7 @@ Before repair: canonical rehydration/doctor/task-temp knowledge ingest, role dec
 Return exact local repair SHA/evidence with REVIEW_PENDING / REVIEW for independent Codex re-review; no self-approval. Record repairRound1 and R044-R1-01..02, preserve unchanged original seed and prior dispositions/accounts parking. Same-scope authority continues; round three without independent new root cause records REVIEW_COST_ESCALATION_REQUIRED and stops.
 
 Repair round 1 hand-back (Claude REPAIR_WORKER, 2026-10-04): REVIEW_PENDING / REVIEW. Exact repair source b4ec91ea03a9f247e209389c3792c86494eac8b3 with evidence docs/reviews/MCP_JOB_EXECUTION_R044_R1_REPAIR_2026-10-04.md and receipts docs/reviews/probes/r044_r1_worker_receipts.json; R044-R1-01..02 addressed under the unchanged seed, no product source change. Independent Codex re-review is next; the worker sets no REVIEW_PASS or FREEZE. Facebook/Zalo OA account work remains parked; live inputs and credential/network execution remain separate. R043 and all previous local dispositions are unchanged.
+
+## Independent repair round 1 disposition (2026-10-04)
+
+REVIEW_PASS / REVIEW / FREEZE_OPEN for exact repair b4ec91ea03a9f247e209389c3792c86494eac8b3. [Independent re-review](../reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md) settles R044-R1-01..02; source/seed/worker BUILD ownership unchanged. Original failed review and all incidents/limitations remain historical. ORCHESTRATOR may assess separate bounded local closure authority; no new worker BUILD/live effect/FREEZE dispatched. Accounts parked; prior dispositions unchanged.
