@@ -63,7 +63,9 @@
     "docs/reviews/CCMAI_RUNTIME_046_R2_INDEPENDENT_REREVIEW_2026-10-04.md",
     "docs/reviews/probes/r046_r2_receipt_audit.json",
     "docs/reviews/probes/r046_r2_independent_summary.json",
-    "docs/reviews/probes/r046_r2_boundary_sink_probe_test.go"
+    "docs/reviews/probes/r046_r2_boundary_sink_probe_test.go",
+    "docs/reviews/CCMAI_RUNTIME_046_R3_COST_DISPOSITION_2026-10-04.md",
+    "docs/reviews/probes/r046_r3_receipt_contract.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -87,7 +89,7 @@
   ],
   "ownerTransferRequired": true,
   "implementationStarted": true,
-  "repairRound": 2,
+  "repairRound": 3,
   "repairFindings": [
     "R046-R2-03"
   ],
@@ -95,6 +97,11 @@
     "R046-R2-01",
     "R046-R2-02"
   ],
-  "reviewCostEscalation": "REVIEW_COST_ESCALATION_REQUIRED",
-  "repairRound3Dispatched": false
+  "reviewCostEscalation": "RESOLVED_FOR_ONE_EVIDENCE_ONLY_R3",
+  "repairRound3Dispatched": true,
+  "reviewCostDisposition": "CONTINUE_ONE_EVIDENCE_ONLY_R3",
+  "reviewCostDecision": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R3_2026-10-04.json",
+  "repairRound3Started": false,
+  "productReferenceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "priorReviewCostEscalation": "REVIEW_COST_ESCALATION_REQUIRED"
 }
