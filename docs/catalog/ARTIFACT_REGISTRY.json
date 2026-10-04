@@ -686,9 +686,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R045/R044 local MCP execution contract FROZEN; accepted exact source and inherited evidence/limits retained."
+      "description": "Current R046 finalizer driver-error logging WORK_ORDER/DISPATCH_READY handoff; no BUILD yet."
     },
     {
       "id": "truth-implementation-status",
@@ -920,6 +920,34 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-046.json",
       "status": "ACTIVE",
       "description": "Immutable R046 R2 authority for bounded finalizer driver-error containment; seed precedes activation."
+    },
+    {
+      "id": "runtime046-spec",
+      "family": "continuity",
+      "path": "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046 finalizer-only FL-01..06 requirements; implementation not started."
+    },
+    {
+      "id": "runtime046-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_046.md",
+      "status": "ACTIVE",
+      "description": "R046 bounded R2 Claude BUILD / Codex independent review order; DISPATCH_READY."
+    },
+    {
+      "id": "runtime046-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
+      "status": "ACTIVE",
+      "description": "R046 WORK_ORDER/DISPATCH_READY record; immutable committed seed, no BUILD."
+    },
+    {
+      "id": "runtime046-predecessor-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "Historical R045/R044 scoped local closure and R046 intake; limits retained."
     }
   ]
 }

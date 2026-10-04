@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R045/R044 local MCP execution contract FROZEN; accepted exact source and inherited evidence/limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- Current R046 finalizer driver-error logging WORK_ORDER/DISPATCH_READY handoff; no BUILD yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -119,6 +119,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/work_orders/CCMAI_RUNTIME_045.md`
 - Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-045.json`
 - Immutable R046 R2 authority for bounded finalizer driver-error containment; seed precedes activation.: `CVF_SESSION/authority/CCMAI-RUNTIME-046.json`
+- Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- R046 WORK_ORDER/DISPATCH_READY record; immutable committed seed, no BUILD.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
+- R046 finalizer-only FL-01..06 requirements; implementation not started.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
+- R046 bounded R2 Claude BUILD / Codex independent review order; DISPATCH_READY.: `docs/work_orders/CCMAI_RUNTIME_046.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
