@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R046 finalizer logging work order (2026-10-04)
 
-CCMAI-RUNTIME-046 REVIEW_PENDING under committed buildCommit 985fa60b3766444a7b71a5303da6c6bc14e63bf0. Codex independent REVIEWER performs R2 review of finalizer driver-error containment implementation under FL-01..06 contract. No Claude self-approval or FREEZE. R044/R045 local FREEZE and prior dispositions preserved, Facebook/Zalo OA accounts parked. No real config/credential/provider/channel/external network/persistent data/push/merge/deployment/FREEZE/live governance or hosted readiness authority.
+CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN for exact BUILD 985fa60b3766444a7b71a5303da6c6bc14e63bf0. R046-R1-01..02: maintained raw transaction-boundary detector and complete applied worker mutation/restoration/regression receipts. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD under unchanged R2 seed; test/evidence-only repair, no production defect established or source change requested. Worker rehydrates and acknowledges BUILD with passing synchronized preflight before edits, then returns exact repair SHA REVIEW_PENDING for independent Codex review. R044/R045/prior dispositions preserved; Facebook/Zalo OA accounts parked; no live/provider/credential/network/persistent data/push/merge/deployment/FREEZE or broader readiness claim.
 
 ## Historical R045 local MCP closure (2026-10-04)
 

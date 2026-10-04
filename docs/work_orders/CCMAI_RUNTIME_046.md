@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-046 - Engine finalizer driver-error logging
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-04 (Asia/Saigon). Risk ceiling R2. [SPEC](../specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md). Immutable dispatcher seed CVF_SESSION/authority/CCMAI-RUNTIME-046.json first committed at c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267 before activation. Owner selected this scope; standing bounded local delegation applies.
 
@@ -21,6 +21,16 @@ Permitted execution: cached local build/vet/docs/gates, uncached synthetic focus
 5. Run uncached targeted finalizer tests plus affected incremental finalization and F06 ownership/terminal-path regression selection; report actual commands/top-level/subtest/SKIP counts. Cached build/vet and formatting; default and origin/main..HEAD preflights, exact staged files, gate unit suite, catalog/doctor/diff/docs build after final Markdown edit. No full-suite/race claim without actual execution; record unavailable race toolchain, no compiler installation.
 6. Return exact source commit and sanitized evidence docs/reviews/ENGINE_FINALIZER_LOGGING_R046_BUILD_2026-10-04.md plus reproducible receipts under docs/reviews/probes/. Synchronize REVIEW_PENDING / REVIEW for independent Codex review, buildCommit exact 40-hex SHA, no self-approval/FREEZE. One bounded local BUILD commit; no push. Same-scope repairs continue under original authority; round three without independent new root cause stops as REVIEW_COST_ESCALATION_REQUIRED.
 
-## Hand-back
+## Historical dispatch hand-back
 
 DISPATCH_READY / WORK_ORDER; implementationStarted=false, no source change or runtime evidence. Next owner manually transfers this order to Claude; worker rehydration/BUILD acknowledgment/preflight precede edits. R044/R045 local FREEZE and all prior dispositions preserved; Facebook/Zalo OA accounts parked; Pancake live inputs and all real provider/credential/network proof remain separate.
+
+## Independent review / bounded repair R1 (2026-10-04)
+
+[Independent review](../reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md) returns CHANGES_REQUIRED for R046-R1-01..02, no production defect established. Original seed/roles/R2/effects unchanged. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD; Codex independent reviewer. Repair scope narrows to existing authorized analyzer_finalizer_logging_test.go and new separate repair evidence/receipts plus bounded continuity/catalog metadata. Preserve submitted product source, historical worker BUILD/receipts and independent findings. Do not edit immutable seed or weaken FL-01..06.
+
+R1-01: add maintained finite raw transaction-boundary injection through the real finalizeOrdinaryRun (BEGIN plus relevant COMMIT/rollback error handling), observed attempts and formatting counter, bounded returned/app/GORM output and sentinel identity. A statement trigger alone does not exercise the normalization branch. Include transient boundary failure/retry recovery, exhausted failure with a nonnil proposed checkpoint that demonstrably does not advance, fallback success/failure and useful correlation. Existing reviewer probe in docs/reviews/probes/r046_transaction_boundary_probe_test.go supplies an independently discriminating BEGIN pattern, to be adapted into the authorized maintained suite; it is not a replacement for worker regression coverage. Preserve full terminal/cancellation/ownership/tail regression selection and all prior detector controls. No production edit requested; a new source defect must be returned before edits.
+
+R1-02: record a separately labeled new worker mutation campaign for normalization/retry-returned error, raw fallback log and GORM sink emission. For every applied one-match replacement or diff: exact baseline/mutated/restored SHA256, complete commands/exits/top-level/subtest/SKIP counts, named intended assertion, behavioral KILLED/SURVIVED/INCONCLUSIVE outcome, byte restoration and restored-baseline PASS. Preserve original D01..03 ACTIVE_PASS as incomplete historical receipts, not fabricated mutation kills. Recover existing actual logs if available; missing historical evidence requires new replay. Include precise affected regression selection/counts, cached build/vet, both PowerShell5.1/7 catalog checks, doctor notes, required portable gates/unit suite and docs build after final Markdown edit; disclose every failed/omitted prerequisite and cleanup result.
+
+Before repair, rehydrate and acknowledge Claude REPAIR_WORKER / BUILD role, synchronize BUILD across all continuity/order/record/status surfaces and pass preflight before the first test edit. Required cache/fixture missing => BUILD_BLOCKED, no download/required-test SKIP. Same disposable internal synthetic environment and unchanged prohibited effects; no real config/provider/channel/credentials/persistent DB/network/application stack. Return exact local repair SHA and separate repair receipts at REVIEW_PENDING; no self-approval/FREEZE. RepairRound1; round three without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. Historical procedural/timing limitations remain recorded despite current prerequisite fixes.
