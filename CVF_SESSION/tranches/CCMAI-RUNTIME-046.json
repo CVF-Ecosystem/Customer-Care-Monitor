@@ -44,15 +44,16 @@
   ],
   "claimScope": "Only finalizer transaction/retry/fallback application and GORM sink error containment on synthetic disposable local fixtures, with preserved terminal/ownership semantics. No universal engine logging, real-provider/CVF AI governance, live compatibility or hosted readiness claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_046.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -61,5 +62,5 @@
     "WORK_ORDER"
   ],
   "ownerTransferRequired": true,
-  "implementationStarted": false
+  "implementationStarted": true
 }

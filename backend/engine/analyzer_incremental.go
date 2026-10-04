@@ -10,6 +10,7 @@ import (
 
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
+	"gorm.io/gorm/logger"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
@@ -127,6 +128,17 @@ var (
 	errFinalizeMissing = errors.New("terminal write target is missing")
 )
 
+// finalizerDB returns a scoped GORM session whose logger is silent for the
+// finalizeOrdinaryRun transaction and fallback write. The scoped session
+// prevents GORM from emitting raw SQL values, bound payloads or driver-error
+// text (BEGIN/COMMIT/ROLLBACK) to the process output for these statements.
+// All other DB operations keep the application's normal logger. The caller
+// reports failures as bounded sentinel classes (errFinalizeWrite /
+// errFinalizeMissing) instead of forwarding raw driver strings.
+func finalizerDB() *gorm.DB {
+	return db.DB.Session(&gorm.Session{Logger: db.DB.Logger.LogMode(logger.Silent)})
+}
+
 // finalizeOrdinaryRun writes the terminal run status and the job's status/checkpoint together in
 // one transaction, scoped to the run's tenant and job, after locking both rows. It retries a
 // failed write up to ordinaryFinalizeAttempts times; a missing row is not retried. When every
@@ -141,7 +153,12 @@ func finalizeOrdinaryRun(run *models.JobRun, job models.Job, runStatus, errorMes
 		if attempt > 0 {
 			time.Sleep(ordinaryFinalizeRetryDelay)
 		}
-		lastErr = db.DB.Transaction(func(tx *gorm.DB) error {
+		// Use a scoped silent-logger session so that GORM cannot emit raw SQL
+		// values, bound payloads or driver-error text (BEGIN/COMMIT/ROLLBACK) for
+		// these statements. Statement errors inside the closure are already mapped
+		// to sentinels; the session boundary also contains any driver error that
+		// gorm.DB.Transaction returns from Begin/Commit/Rollback itself.
+		txErr := finalizerDB().Transaction(func(tx *gorm.DB) error {
 			// Lock order: Job parent first, then the run (CCMAI-RUNTIME-028; same order as admission
 			// and the destructive guards).
 			var lockedJob []models.Job
@@ -202,23 +219,41 @@ func finalizeOrdinaryRun(run *models.JobRun, job models.Job, runStatus, errorMes
 			}
 			return nil
 		})
+		// Normalize any unknown transaction-boundary error (e.g. raw BEGIN/COMMIT/
+		// ROLLBACK driver text from gorm.DB.Transaction) to the terminal-write
+		// sentinel. Statement errors inside the closure already return sentinels.
+		switch {
+		case txErr == nil:
+			lastErr = nil
+		case errors.Is(txErr, errFinalizeMissing):
+			lastErr = errFinalizeMissing
+		default:
+			// Unknown driver or boundary error: contains raw text that must not
+			// reach logs or the returned error wrapper.
+			lastErr = errFinalizeWrite
+		}
 		if lastErr == nil {
 			return nil
 		}
-		log.Printf("[analyzer] final run write failed for job %s (attempt %d): %v", job.ID, attempt+1, lastErr)
+		// Log only bounded trusted correlation; never format lastErr or any raw
+		// driver error object into the message.
 		if errors.Is(lastErr, errFinalizeMissing) {
+			log.Printf("[analyzer] final run write failed for job %s (attempt %d): row missing", job.ID, attempt+1)
 			break
 		}
+		log.Printf("[analyzer] final run write failed for job %s (attempt %d): write error", job.ID, attempt+1)
 	}
 	// Best effort, never a checkpoint: do not leave the run "running" if the row still exists.
-	if err := db.DB.Model(&models.JobRun{}).
+	// Use the scoped silent-logger session to contain any driver error from this write.
+	if err := finalizerDB().Model(&models.JobRun{}).
 		Where("id = ? AND tenant_id = ? AND job_id = ? AND status = ?", run.ID, job.TenantID, job.ID, "running").
 		Updates(map[string]interface{}{
 			"status":        "error",
 			"finished_at":   &finishedAt,
 			"error_message": "Không ghi nhận được kết quả cuối của lượt chạy; mốc quét giữ nguyên.",
 		}).Error; err != nil {
-		log.Printf("[analyzer] fallback error mark failed for run %s: %v", run.ID, err)
+		// Log only the run ID; do not format the raw driver error.
+		log.Printf("[analyzer] fallback error mark failed for run %s: write error", run.ID)
 	}
 	return fmt.Errorf("finalize job run: %w", lastErr)
 }

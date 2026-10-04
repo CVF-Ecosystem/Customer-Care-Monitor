@@ -948,6 +948,20 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
       "status": "ACTIVE",
       "description": "Historical R045/R044 scoped local closure and R046 intake; limits retained."
+    },
+    {
+      "id": "runtime046-build-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_BUILD_2026-10-04.md",
+      "status": "ACTIVE",
+      "description": "R046 BUILD evidence: FL-01..06 acceptance matrix, test results and containment limits."
+    },
+    {
+      "id": "runtime046-worker-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes."
     }
   ]
 }

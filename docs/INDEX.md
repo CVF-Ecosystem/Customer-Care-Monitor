@@ -1,4 +1,4 @@
-﻿# Project Documentation Index
+# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -118,11 +118,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/reviews/CCMAI_RUNTIME_045_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
 - Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `docs/work_orders/CCMAI_RUNTIME_045.md`
 - Bounded local R044/R045 contract FROZEN under separate R045; original independent review, incidents and limits retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-045.json`
+- R046 BUILD evidence: FL-01..06 acceptance matrix, test results and containment limits.: `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_BUILD_2026-10-04.md`
 - Immutable R046 R2 authority for bounded finalizer driver-error containment; seed precedes activation.: `CVF_SESSION/authority/CCMAI-RUNTIME-046.json`
 - Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
 - R046 WORK_ORDER/DISPATCH_READY record; immutable committed seed, no BUILD.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
 - R046 finalizer-only FL-01..06 requirements; implementation not started.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
 - R046 bounded R2 Claude BUILD / Codex independent review order; DISPATCH_READY.: `docs/work_orders/CCMAI_RUNTIME_046.md`
+- R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes.: `docs/reviews/probes/r046_worker_receipts.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

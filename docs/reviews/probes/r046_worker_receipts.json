@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-046",
+  "buildRound": 1,
+  "requirements": [
+    "FL-01",
+    "FL-02",
+    "FL-03",
+    "FL-04",
+    "FL-05",
+    "FL-06"
+  ],
+  "claimScope": "Synthetic disposable local application error containment only. Not CVF AI governance proof; no real provider, channel, notification, config, network or persistent DB.",
+  "sourceFiles": {
+    "backend/engine/analyzer_incremental.go": {
+      "sha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+      "modifiedFunctions": [
+        "finalizerDB",
+        "finalizeOrdinaryRun"
+      ]
+    },
+    "backend/engine/analyzer_finalizer_logging_test.go": {
+      "sha256": "d2489ae0ef2463e2bc641f1d468206660d0dc8937ab1caf1db1f68a04a2a1b39",
+      "testCount": 14
+    }
+  },
+  "testExecution": {
+    "environment": "docker golang:1.26-alpine on disposable mysql:8.0, CGO_ENABLED=0, GOPROXY=off, GOTOOLCHAIN=local",
+    "commands": [
+      {
+        "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run '^TestFL' -VerboseTests",
+        "result": "PASS",
+        "totalTopLevel": 14,
+        "totalSubtests": 5,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "command": "powershell -ExecutionPolicy Bypass -File scripts/test-backend.ps1 -Packages ./engine -Run 'TestFL|TestOrdinary|TestOwnership'",
+        "result": "PASS",
+        "duration": "34.599s",
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "command": "go vet ./engine",
+        "result": "PASS",
+        "failed": 0
+      },
+      {
+        "command": "go build ./...",
+        "result": "PASS",
+        "failed": 0
+      },
+      {
+        "command": "python -m unittest discover -s scripts/tests -p 'test_cvf_downstream_gate*.py'",
+        "result": "PASS",
+        "tests": 46,
+        "failed": 0
+      },
+      {
+        "command": "python -B scripts/cvf_downstream_gate.py preflight",
+        "result": "PASS (7/7 gates)",
+        "failed": 0
+      },
+      {
+        "command": "python -B scripts/cvf_downstream_gate.py preflight --base origin/main --head HEAD",
+        "result": "PASS (7/7 gates)",
+        "failed": 0
+      }
+    ]
+  },
+  "detectors": [
+    {
+      "id": "D01_RETRY_LOG",
+      "target": "backend/engine/analyzer_incremental.go:finalizeOrdinaryRun retry log and sentinel mapping",
+      "test": "TestFL05RetryLogDetector",
+      "status": "ACTIVE_PASS"
+    },
+    {
+      "id": "D02_FALLBACK_LOG",
+      "target": "backend/engine/analyzer_incremental.go:finalizeOrdinaryRun fallback write log error formatting",
+      "test": "TestFL05FallbackLogDetector",
+      "status": "ACTIVE_PASS"
+    },
+    {
+      "id": "D03_GORM_SINK",
+      "target": "backend/engine/analyzer_incremental.go:finalizerDB scoped session suppressing GORM output",
+      "test": "TestFL05GormSinkDetector",
+      "status": "ACTIVE_PASS"
+    }
+  ]
+}
