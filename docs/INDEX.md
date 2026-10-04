@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R044 REVIEW_PASS / FREEZE_OPEN handoff: separate closure authority assessed eligible; R045 preparation next, accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
+- Current R045 WORK_ORDER/DISPATCH_READY handoff: separate seed committed, inherited closure REVIEW next; R044 FREEZE_OPEN, accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -37,6 +37,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_032.md`
 - Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Historical R032 review/assessment and owner local-closure delegation acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md`
+- Historical R044 implementation/repair/independent acceptance and R045 seed planning acknowledgment; source/evidence limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
 - Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
@@ -114,6 +115,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R044 dispatcher seed for bounded local MCP job execution; activation and manual Claude transfer required, no live authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-044.json`
 - R044 unchanged local contract independently R1 REVIEW_PASS / FREEZE_OPEN; historical limits retained.: `docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md`
 - Separate R045 R1 metadata-only closure authority for accepted R044; committed before activation, no source/runtime/live effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-045.json`
+- R045 DISPATCH_READY R1 local R044 closure order; LC-01..05 matrix, inherited review entry, no new BUILD/FREEZE.: `docs/work_orders/CCMAI_RUNTIME_045.md`
+- R045 WORK_ORDER/DISPATCH_READY record; committed closure seed, inherited source, closure evaluation pending.: `CVF_SESSION/tranches/CCMAI-RUNTIME-045.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

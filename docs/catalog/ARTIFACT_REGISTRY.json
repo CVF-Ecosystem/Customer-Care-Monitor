@@ -5,6 +5,27 @@
     "claimBoundary":  "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
     "artifacts":  [
 {
+    "id": "historical-mcp-job-execution-handoff",
+    "family": "continuity",
+    "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
+    "status": "ACTIVE",
+    "description": "Historical R044 implementation/repair/independent acceptance and R045 seed planning acknowledgment; source/evidence limits preserved."
+},
+{
+    "id": "runtime045-local-closure-order",
+    "family": "continuity",
+    "path": "docs/work_orders/CCMAI_RUNTIME_045.md",
+    "status": "ACTIVE",
+    "description": "R045 DISPATCH_READY R1 local R044 closure order; LC-01..05 matrix, inherited review entry, no new BUILD/FREEZE."
+},
+{
+    "id": "runtime045-local-closure-record",
+    "family": "continuity",
+    "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-045.json",
+    "status": "ACTIVE",
+    "description": "R045 WORK_ORDER/DISPATCH_READY record; committed closure seed, inherited source, closure evaluation pending."
+},
+{
     "id": "runtime045-local-closure-authority",
     "family": "continuity",
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-045.json",
@@ -663,11 +684,11 @@
                           "description":  "Active session/phase/role state."
                       },
                       {
-  "id": "continuity-initial-handoff",
-  "family": "continuity",
-  "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md",
-  "status": "ACTIVE",
-  "description": "Current R044 REVIEW_PASS / FREEZE_OPEN handoff: separate closure authority assessed eligible; R045 preparation next, accounts parked."
+    "id": "continuity-initial-handoff",
+    "family": "continuity",
+    "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+    "status": "ACTIVE",
+    "description": "Current R045 WORK_ORDER/DISPATCH_READY handoff: separate seed committed, inherited closure REVIEW next; R044 FREEZE_OPEN, accounts parked."
 },
                       {
                           "id":  "truth-implementation-status",
