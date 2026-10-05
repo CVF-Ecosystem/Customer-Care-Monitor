@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-047", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-047", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R046 finalizer logging work order (2026-10-04)
 
-CCMAI-RUNTIME-047 BUILD / FREEZE_OPEN: Codex subagent r046_r4_worker acknowledged separate metadata REPAIR_WORKER / BUILD COMMIT_STEWARD before evidence edits under seed a2cf5ded858c6ec5a6b0873e32bf984f65bc6968. Pass publication prerequisites, create one successor R046 R4 correction report/receipt/provenance manifest for R046-R3-01..03, then commit REVIEW_PENDING for Codex parent /root independent review. Zero runtime replay/mutations; original product/tests91da0e88, seeds and historical packets unchanged. Exact-archive condition NOT MET/NOT VERIFIED remains, no waiver. Original R046 CHANGES_REQUIRED / FREEZE_OPEN and Facebook/Zalo OA accounts parked. No push/merge/deployment/FREEZE/live effects or automatic fifth repair.
+CCMAI-RUNTIME-047 REVIEW_PENDING / REVIEW / FREEZE_OPEN: Codex subagent r046_r4_worker produced one successor R046 R4 correction report/receipt and machine provenance manifest under committed seed a2cf5ded858c6ec5a6b0873e32bf984f65bc6968, with separate before-edit acknowledgment b968383d6befa6d50527cffa5fb3b6368cacf78b. Codex parent /root independent REVIEWER next: evaluate corrections R046-R3-01..03 and publication against exact artifact handback. No new runtime campaigns/mutations; original product/tests91da0e88, seeds and historical packets preserved. Exact-archive execution remains NOT MET/NOT VERIFIED with no waiver; original R046 CHANGES_REQUIRED / FREEZE_OPEN. No automatic fifth repair, push/merge/deployment/FREEZE/live effects; Facebook/Zalo OA accounts parked.
 
 ## Historical R045 local MCP closure (2026-10-04)
 

@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R047 delegated child metadata BUILD; parent independent review next; R046 exact-archive NOT MET/NOT VERIFIED preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md`
+- Active R047 REVIEW_PENDING delegated metadata correction handback; parent independent review, exact-archive remains NOT MET/NOT VERIFIED.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -152,8 +152,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/work_orders/CCMAI_RUNTIME_046.md`
 - Separate user-authorized subagent execution seed for R046 R4 metadata corrections; original R046 seed and exact-archive limits preserved. Seed stage only; no BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-047.json`
-- R047 metadata-only BUILD acknowledgment before successor R4 evidence edits; zero runtime, no waiver or FREEZE.: `docs/work_orders/CCMAI_RUNTIME_047.md`
-- R047 metadata-only BUILD acknowledgment before successor R4 evidence edits; zero runtime, no waiver or FREEZE.: `CVF_SESSION/tranches/CCMAI-RUNTIME-047.json`
+- R047 successor R4 correction REVIEW_PENDING; zero runtime replay, no waiver or FREEZE; parent independent review next.: `docs/work_orders/CCMAI_RUNTIME_047.md`
+- Delegated R4 factual correction packet, REVIEW_PENDING; all historic limits and exact-archive residual preserved.: `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md`
+- Read-only reproducible provenance generator; no campaigns/mutations or filesystem-copy repairs.: `docs/reviews/probes/r046_r4_provenance.py`
+- Machine-generated203-file export/archive/livecopy hash provenance; byte equality false, CRLF observation separate.: `docs/reviews/probes/r046_r4_snapshot_manifest.json`
+- Actual child R4 publication checks and snapshot bounds; no historical recertification.: `docs/reviews/probes/r046_r4_worker_receipts.json`
+- R047 successor R4 correction REVIEW_PENDING; zero runtime replay, no waiver or FREEZE; parent independent review next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-047.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

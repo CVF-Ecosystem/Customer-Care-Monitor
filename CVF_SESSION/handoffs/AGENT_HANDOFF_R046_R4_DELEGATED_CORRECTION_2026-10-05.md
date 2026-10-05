@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex subagent r046_r4_worker REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex parent /root independent REVIEWER next
-- Next allowed move: CCMAI-RUNTIME-047 BUILD / FREEZE_OPEN: Codex subagent r046_r4_worker acknowledged separate metadata REPAIR_WORKER / BUILD COMMIT_STEWARD before evidence edits under seed a2cf5ded858c6ec5a6b0873e32bf984f65bc6968. Pass publication prerequisites, create one successor R046 R4 correction report/receipt/provenance manifest for R046-R3-01..03, then commit REVIEW_PENDING for Codex parent /root independent review. Zero runtime replay/mutations; original product/tests91da0e88, seeds and historical packets unchanged. Exact-archive condition NOT MET/NOT VERIFIED remains, no waiver. Original R046 CHANGES_REQUIRED / FREEZE_OPEN and Facebook/Zalo OA accounts parked. No push/merge/deployment/FREEZE/live effects or automatic fifth repair.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex subagent r046_r4_worker handback BUILD COMMIT_STEWARD / SESSION_SYNC_STEWARD; Codex parent /root independent REVIEWER next
+- Next allowed move: CCMAI-RUNTIME-047 REVIEW_PENDING / REVIEW / FREEZE_OPEN: Codex subagent r046_r4_worker produced one successor R046 R4 correction report/receipt and machine provenance manifest under committed seed a2cf5ded858c6ec5a6b0873e32bf984f65bc6968, with separate before-edit acknowledgment b968383d6befa6d50527cffa5fb3b6368cacf78b. Codex parent /root independent REVIEWER next: evaluate corrections R046-R3-01..03 and publication against exact artifact handback. No new runtime campaigns/mutations; original product/tests91da0e88, seeds and historical packets preserved. Exact-archive execution remains NOT MET/NOT VERIFIED with no waiver; original R046 CHANGES_REQUIRED / FREEZE_OPEN. No automatic fifth repair, push/merge/deployment/FREEZE/live effects; Facebook/Zalo OA accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Owner-authorized delegation and planning acknowledgment
@@ -18,3 +18,7 @@ Status: ACTIVE
 ## Subagent before-edit BUILD acknowledgment (2026-10-05)
 
 Codex subagent r046_r4_worker rehydrated manifest/policy, bootstrap fallback/state/memory/handoff/status/index, committed R047 seed/order, R4 contract and R3 independent findings. BOOTSTRAP_MIGRATION_PENDING nonblocking. Role transition parent planning steward -> child REPAIR_WORKER / BUILD COMMIT_STEWARD; parent remains independent REVIEWER. Seed a2cf5ded858c6ec5a6b0873e32bf984f65bc6968 precedes activation0cd20752719694779898fced91b9ac2bc03bd985 and this acknowledgment. No evidence edit or runtime invocation occurred before acknowledgment. Doctor PASS WITH NOTE25/1 and local TEMP knowledge ingestion completed. Read-only guessed audit_probe filename was absent; correct declared independent_audit.py read subsequently. Preserve incident without effect. Commit acknowledgment after required gates, then begin evidence correction. Exact-archive NOT MET/NOT VERIFIED, no acceptance waiver; R046 remains CHANGES_REQUIRED. All prior dispositions and accounts parked retained.
+
+## Subagent artifact handback (2026-10-05)
+
+R047 REVIEW_PENDING / REVIEW / FREEZE_OPEN. R4 successor report, machine-generated203-file provenance manifest, read-only generator and publication receipt address factual correction requirements, without claiming acceptance. Separate acknowledgment commit b968383d6befa6d50527cffa5fb3b6368cacf78b precedes evidence edits. Parent resolves exact artifact SHA after local commit. Executed livecopy byte equality false, three CRLF-only differences; exact-archive condition NOT MET/NOT VERIFIED, no waiver. Counts and all8 log digests recovered read-only for R3 only; no campaigns or mutations. All original product/tests/seeds/old packets unchanged; source correctness and cleanup inherited with historical limits. Actual final publication checks in docs/reviews/probes/r046_r4_worker_receipts.json. Parent independent reviewer decides correction completeness and residual contract disposition. Accounts parked; no self-approval/FREEZE/push or automatic fifth repair.

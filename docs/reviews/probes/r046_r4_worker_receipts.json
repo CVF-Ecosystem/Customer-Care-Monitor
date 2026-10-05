@@ -1,0 +1,310 @@
+{
+  "date": "2026-10-05",
+  "executionTranche": "CCMAI-RUNTIME-047",
+  "role": "Codex subagent r046_r4_worker REPAIR_WORKER / BUILD COMMIT_STEWARD",
+  "independentReviewer": "Codex parent /root",
+  "seedCommit": "a2cf5ded858c6ec5a6b0873e32bf984f65bc6968",
+  "activationCommit": "0cd20752719694779898fced91b9ac2bc03bd985",
+  "acknowledgmentCommit": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+  "parentCommit": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+  "artifactCommit": "RESOLVE_AFTER_COMMIT_IN_PARENT_HANDOFF",
+  "workerDisposition": "REVIEW_PENDING",
+  "freeze": "OPEN",
+  "originalR046Disposition": "CHANGES_REQUIRED",
+  "referenceSourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "resolvedR3Handback": "c09c8f62585945d3624e5a0f3ddc305bb35c4552",
+  "codexCorrectedR3Publication": "fefa846f82c99b1cdf67913f206b8712eaca42f5",
+  "exactArchiveCondition": "NOT MET / NOT VERIFIED; no waiver",
+  "newRuntimeCampaigns": 0,
+  "newMutations": 0,
+  "cleanup": "INHERITED R3 worker and Codex current-at-review observations; no R4 containers or absence check",
+  "historicalNotVerified": [
+    "R3 exact-staged output bound to original worker snapshot",
+    "Historical internal-network inspection and removal exit codes",
+    "R2 count discrepancy cause",
+    "R2 two-test M01 result",
+    "R2 environment"
+  ],
+  "retainedIncidents": [
+    {
+      "command": "Get-Content docs/reviews/probes/r046_r3_audit_probe.py",
+      "result": "Read-only guessed nonexistent filename; actual independent_audit.py then read",
+      "exit": "PowerShell error (subsequent reads meant overall shell exit0; not an actual probe run)"
+    },
+    {
+      "command": "powershell -NoProfile -File scripts/manage_cvf_downstream_catalog.ps1 -Check",
+      "result": "PS5.1 policy-blocked because Bypass omitted; no dependent evidence edit until correctly scoped rerun passed",
+      "exit": "Failure output retained; combined command overall exit0 belonged to later pwsh pass"
+    }
+  ],
+  "acknowledgmentValidation": {
+    "gateUnitTests": 46,
+    "gateUnitSeconds": 17.276,
+    "docsBuildSeconds": 15.51,
+    "defaultPrStaged": "7/7 PASS each",
+    "catalogBothShells": "PASS after PS5.1 correct Bypass rerun",
+    "doctor": "PASS WITH NOTE25/1; known pin mismatch warn-only/migration uninstalled",
+    "knowledgeIngest": "TEMP only, no POST"
+  },
+  "finalPublication": {
+    "doctor": {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1",
+        "-ProjectPath",
+        "."
+      ],
+      "exit": 0,
+      "seconds": 3.371,
+      "output": "\nCVF Workspace Agent Enforcement Doctor\n=======================================\nProject: D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\n\n\n  Check                                              Status\n  -------------------------------------------------- ------\n  Project folder exists                              [PASS]\n  Project isolated from CVF core                     [PASS]\n  .cvf/manifest.json exists                          [PASS]\n  .cvf/manifest.json is valid                        [PASS]\n  .cvf/policy.json exists                            [PASS]\n  Live governance evidence mandatory                 [PASS]\n  AGENTS.md exists                                   [PASS]\n  Bootstrap log exists                               [PASS]\n  CVF core path reachable                            [PASS]\n  Workspace rules file exists                        [PASS]\n  CVF core origin is public remote                   [PASS]\n  Public workspace kit is complete                   [PASS]\n  CVF public core matches origin/main                [PASS]\n  CVF public core worktree clean                     [PASS]\n  CVF core commit matches manifest                   [FAIL]\n         -> Manifest: 26c686cc99b8be965d2760f27fe875b03376c643 / Actual: 8a4119e11db00e774ed8e7cf7d9a8caa309e81d1 (warn only - core may have updated)\n  Required docs referenced by manifest exist         [PASS]\n  knowledge/ folder present (optional)               [PASS]\n  Seven-step phase model is canonical                [PASS]\n  Project continuity and catalog front doors exist   [PASS]\n  Active session state resolves its handoff          [PASS]\n  Implementation status and module registry are valid JSON [PASS]\n  AGENTS contract defines roles and seven steps      [PASS]\n  Pinned CVF core commit is public-remote reachable  [PASS]\n  Session and tranche continuity rehydration required [PASS]\n  Governed downstream catalog validates (--check)    [PASS]\n  Downstream gate profile not installed              [WARN]\n         -> GATE_PROFILE_NOT_INSTALLED: pre-existing project; MIGRATION_REQUIRED. No inherited gate coverage is claimed (see the workspace migration contract).\n\n  GATE_COVERAGE: NOT_INSTALLED (migration required); hostedCiObserved=false\n  RESULT: PASS WITH NOTE (25 passed, 1 warning(s))\n  Scope: the listed doctor checks only, with the bounded note above. Not a claim of hosted CI, real adoption or runtime AI enforcement.\n",
+      "outputSha256": "598100acfe8f107240da3e69dd0e93589c0fbc20c8b36eeed62bd3d1d47c51ba",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "gateUnitSuite": {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_cvf_downstream_gate*.py"
+      ],
+      "exit": 0,
+      "seconds": 15.351,
+      "output": "..............................................\n----------------------------------------------------------------------\nRan 46 tests in 15.147s\n\nOK\n",
+      "outputSha256": "5a77a8ba6ccedb890033362f8ee1825ffe98968c8d17e2c0c2f336783f954f82",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "catalogPS51": {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0,
+      "seconds": 0.88,
+      "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n",
+      "outputSha256": "83dea3b1d79f1e335b785423b10ddda961895d4c079bfc8d88ee184b25bb7e7c",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "catalogPS7": {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0,
+      "seconds": 0.996,
+      "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n",
+      "outputSha256": "83dea3b1d79f1e335b785423b10ddda961895d4c079bfc8d88ee184b25bb7e7c",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "defaultPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "exit": 0,
+      "seconds": 1.849,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n",
+      "outputSha256": "13f80f224bd7fb77460cf6e058826da980e0aaa5e73456d9e2f5527f0d046992",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "prRangePreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "exit": 0,
+      "seconds": 1.916,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n",
+      "outputSha256": "13f80f224bd7fb77460cf6e058826da980e0aaa5e73456d9e2f5527f0d046992",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "docsBuildAfterFinalMarkdown": {
+      "command": [
+        "cmd",
+        "/c",
+        "npm",
+        "--prefix",
+        "docs",
+        "run",
+        "docs:build"
+      ],
+      "exit": 0,
+      "seconds": 11.315,
+      "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m\u2713\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m\u2713\u001b[0m rendering pages...\nbuild complete in 10.17s.\n",
+      "outputSha256": "f4a677251a8e9fb6309462ed16576157c50df54eed661ef7001187ae2030982b",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "diffCheck": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "seconds": 0.05,
+      "output": "",
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "backendProtected": {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "91da0e88118b76a68031f432da50521fe6a341b7",
+        "--",
+        "backend"
+      ],
+      "exit": 0,
+      "seconds": 0.039,
+      "output": "",
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "historicalPacketsSeedsProtected": {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "0cd20752719694779898fced91b9ac2bc03bd985",
+        "--",
+        "CVF_SESSION/authority",
+        "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R3_EVIDENCE_2026-10-04.md",
+        "docs/reviews/probes/r046_r3_*",
+        "docs/work_orders/CCMAI_RUNTIME_046.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json"
+      ],
+      "exit": 0,
+      "seconds": 0.038,
+      "output": "",
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshotParent": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+      "claimScope": "Current R4 metadata snapshot only; not historical worker or runtime proof"
+    },
+    "exactStagedPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--files",
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md",
+        "docs/reviews/probes/r046_r4_provenance.py",
+        "docs/reviews/probes/r046_r4_snapshot_manifest.json",
+        "docs/reviews/probes/r046_r4_worker_receipts.json",
+        "docs/work_orders/CCMAI_RUNTIME_047.md"
+      ],
+      "exit": 0,
+      "seconds": 0.921,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n",
+      "outputSha256": "13f80f224bd7fb77460cf6e058826da980e0aaa5e73456d9e2f5527f0d046992",
+      "stagedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md",
+        "docs/reviews/probes/r046_r4_provenance.py",
+        "docs/reviews/probes/r046_r4_snapshot_manifest.json",
+        "docs/reviews/probes/r046_r4_worker_receipts.json",
+        "docs/work_orders/CCMAI_RUNTIME_047.md"
+      ],
+      "stagedContentHashesExcludingReceipt": {
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json": "dbc846c3fc6593c777aebbe747499db3ad1ab8b3a4aa4c64cf1d64970ee16046",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md": "869c724c5719c767f3990fc3be7c0e954f81a633e84ec55ba5ae072f4032b940",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json": "ec8616eb14c09925781e8ae3f9e5b99fc13469138b4b6dc8b646882d3a54572b",
+        "CVF_SESSION_MEMORY.md": "f1e5ce4fc8b0705077a3ce43a617d9306570d3ba306ea83bc2cf90b94d2ad8f7",
+        "IMPLEMENTATION_STATUS.json": "422a01d16a34acd037b7b7b69d82d1b7e9c2960e1cb6a3cba0ffbfe8f1633568",
+        "docs/INDEX.md": "35bf4ece93c6a09f813ba0742067e7cad9da1ab6097ecf7d0dc509e91bb434e9",
+        "docs/catalog/ARTIFACT_REGISTRY.json": "4b27d4de8afa8ea979e9aaaec5de990d3925962b6d741cd92d0ed2a2423dde2a",
+        "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md": "d97d3e1559864ba5d6860dfd10fb1870169a48abb66a2d47af10f94832a9bf8a",
+        "docs/reviews/probes/r046_r4_provenance.py": "2c39721e9ccbf3cd70aafcf6d77e882326c63912175dad61f26f7b2aaee18ffe",
+        "docs/reviews/probes/r046_r4_snapshot_manifest.json": "4c8a7650f48775fc3574cf0acbc2132ebbef7190edf23750ceb8d1c6129d7db2",
+        "docs/work_orders/CCMAI_RUNTIME_047.md": "90a94df65f08daea29522cf8e266a016d4231203ff49d95b1a781236be4b8c5a"
+      },
+      "receiptSelfBinding": "Result added after this run; final staging/check rerun occurs before commit, parent receives exact SHA. No claim of self-referential receipt hash."
+    }
+  },
+  "snapshotBinding": {
+    "excludedFromContentHash": "This receipt itself, to avoid circular self-hashing; its path is included in exact-staged set",
+    "finalCommitBinding": "Exact handback commit binds complete final receipt; parent independently verifies",
+    "checkedArtifactHashes": {
+      "CVF_SESSION/ACTIVE_SESSION_STATE.json": "dbc846c3fc6593c777aebbe747499db3ad1ab8b3a4aa4c64cf1d64970ee16046",
+      "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md": "869c724c5719c767f3990fc3be7c0e954f81a633e84ec55ba5ae072f4032b940",
+      "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json": "ec8616eb14c09925781e8ae3f9e5b99fc13469138b4b6dc8b646882d3a54572b",
+      "CVF_SESSION_MEMORY.md": "f1e5ce4fc8b0705077a3ce43a617d9306570d3ba306ea83bc2cf90b94d2ad8f7",
+      "IMPLEMENTATION_STATUS.json": "422a01d16a34acd037b7b7b69d82d1b7e9c2960e1cb6a3cba0ffbfe8f1633568",
+      "docs/INDEX.md": "35bf4ece93c6a09f813ba0742067e7cad9da1ab6097ecf7d0dc509e91bb434e9",
+      "docs/catalog/ARTIFACT_REGISTRY.json": "4b27d4de8afa8ea979e9aaaec5de990d3925962b6d741cd92d0ed2a2423dde2a",
+      "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md": "d97d3e1559864ba5d6860dfd10fb1870169a48abb66a2d47af10f94832a9bf8a",
+      "docs/reviews/probes/r046_r4_provenance.py": "2c39721e9ccbf3cd70aafcf6d77e882326c63912175dad61f26f7b2aaee18ffe",
+      "docs/reviews/probes/r046_r4_snapshot_manifest.json": "4c8a7650f48775fc3574cf0acbc2132ebbef7190edf23750ceb8d1c6129d7db2",
+      "docs/work_orders/CCMAI_RUNTIME_047.md": "90a94df65f08daea29522cf8e266a016d4231203ff49d95b1a781236be4b8c5a"
+    },
+    "hashBasis": "checkedArtifactHashes are local working-file bytes at validation; stagedGitBlobHashes below identify canonical Git staged bytes separately. No historical execution identity is inferred.",
+    "stagedGitBlobHashesExcludingReceipt": {
+      "CVF_SESSION/ACTIVE_SESSION_STATE.json": "4ea4b891008f183884edd19b37c6cb8cc2531f88cc762200318a5473158ba327",
+      "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md": "cbc368dc5e5d465ca6c1732118a9722d04f6ef49a1579a10db040ef2153dbed7",
+      "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json": "0060cd10fc92d3c5f38b32989f9008e16812bd659bb32d6509d57e9f653d271e",
+      "CVF_SESSION_MEMORY.md": "05577e8e7617fd3ad0ec634c62eb3c6df6fc4803d8fe2ef62f45b745fb8c45ce",
+      "IMPLEMENTATION_STATUS.json": "60fa6fe129263243eaf0d487f3092857e5f328dc865ff19bacc3e9673e5f4611",
+      "docs/INDEX.md": "16a43e0c59e9d3be00af46734fd0faea9dc365c87e0f4ca6aac611079fb6cc0b",
+      "docs/catalog/ARTIFACT_REGISTRY.json": "6b6f34245335fdc10a0de617ee86fd925b8d721e630e9e68ab6f344327fde474",
+      "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md": "d97d3e1559864ba5d6860dfd10fb1870169a48abb66a2d47af10f94832a9bf8a",
+      "docs/reviews/probes/r046_r4_provenance.py": "2c39721e9ccbf3cd70aafcf6d77e882326c63912175dad61f26f7b2aaee18ffe",
+      "docs/reviews/probes/r046_r4_snapshot_manifest.json": "34d1591e7cea0c9cd24ca1ea2808dcef42a8d7a8abbf2b37812eac5f81c34cf7",
+      "docs/work_orders/CCMAI_RUNTIME_047.md": "de5d900fff2c4c0f00b71d219ff8a890d754f0dc6ace563d76639b818b4cc549"
+    }
+  },
+  "protectedHashValues": {
+    "backend/engine/analyzer_incremental.go": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+    "backend/engine/analyzer_finalizer_logging_test.go": "06ec2c8d15d6199a679f9daaf0835db1baa7a8a63a35b79df5e9465d90f7c449",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-046.json": "9eb7ac79896f3d6dbec44f4a22b7fd655aee214dc7fe2ef2d0d923149e1cc9b2",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-047.json": "729fec54a897fbdeca06cc219b3ebacd1dc6c08c266a8e3e87b01c8aa952b32c"
+  }
+}

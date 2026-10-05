@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "Active R047 delegated child metadata BUILD; parent independent review next; R046 exact-archive NOT MET/NOT VERIFIED preserved."
+      "description": "Active R047 REVIEW_PENDING delegated metadata correction handback; parent independent review, exact-archive remains NOT MET/NOT VERIFIED."
     },
     {
       "id": "truth-implementation-status",
@@ -1157,14 +1157,42 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
       "status": "ACTIVE",
-      "description": "R047 metadata-only BUILD acknowledgment before successor R4 evidence edits; zero runtime, no waiver or FREEZE."
+      "description": "R047 successor R4 correction REVIEW_PENDING; zero runtime replay, no waiver or FREEZE; parent independent review next."
     },
     {
       "id": "runtime047-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_047.md",
       "status": "ACTIVE",
-      "description": "R047 metadata-only BUILD acknowledgment before successor R4 evidence edits; zero runtime, no waiver or FREEZE."
+      "description": "R047 successor R4 correction REVIEW_PENDING; zero runtime replay, no waiver or FREEZE; parent independent review next."
+    },
+    {
+      "id": "runtime047-r4-corrections",
+      "family": "continuity",
+      "path": "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Delegated R4 factual correction packet, REVIEW_PENDING; all historic limits and exact-archive residual preserved."
+    },
+    {
+      "id": "runtime047-r4-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r4_worker_receipts.json",
+      "status": "ACTIVE",
+      "description": "Actual child R4 publication checks and snapshot bounds; no historical recertification."
+    },
+    {
+      "id": "runtime047-r4-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r4_snapshot_manifest.json",
+      "status": "ACTIVE",
+      "description": "Machine-generated203-file export/archive/livecopy hash provenance; byte equality false, CRLF observation separate."
+    },
+    {
+      "id": "runtime047-r4-generator",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_r4_provenance.py",
+      "status": "ACTIVE",
+      "description": "Read-only reproducible provenance generator; no campaigns/mutations or filesystem-copy repairs."
     }
   ]
 }
