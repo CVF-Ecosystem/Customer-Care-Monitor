@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "Active R047 REVIEW_PENDING delegated metadata correction handback; parent independent review, exact-archive remains NOT MET/NOT VERIFIED."
+      "description": "R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked."
     },
     {
       "id": "truth-implementation-status",
@@ -1157,14 +1157,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
       "status": "ACTIVE",
-      "description": "R047 successor R4 correction REVIEW_PENDING; zero runtime replay, no waiver or FREEZE; parent independent review next."
+      "description": "R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked."
     },
     {
       "id": "runtime047-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_047.md",
       "status": "ACTIVE",
-      "description": "R047 successor R4 correction REVIEW_PENDING; zero runtime replay, no waiver or FREEZE; parent independent review next."
+      "description": "R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked."
     },
     {
       "id": "runtime047-r4-corrections",
@@ -1193,6 +1193,20 @@
       "path": "docs/reviews/probes/r046_r4_provenance.py",
       "status": "ACTIVE",
       "description": "Read-only reproducible provenance generator; no campaigns/mutations or filesystem-copy repairs."
+    },
+    {
+      "id": "runtime047-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Parent independent metadata correction review PASS; original R046 exact-archive/historical-proof acceptance unresolved."
+    },
+    {
+      "id": "runtime047-independent-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r047_independent_review_receipt.json",
+      "status": "ACTIVE",
+      "description": "Independent manifest/blob/path verification and reviewer publication evidence; no runtime or live governance claim."
     }
   ]
 }

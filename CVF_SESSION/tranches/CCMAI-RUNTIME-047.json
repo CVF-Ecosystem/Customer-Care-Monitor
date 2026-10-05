@@ -42,24 +42,27 @@
   ],
   "claimScope": "Implement successor factual correction/disclosure/publication packet for R046-R3-01..03 only. Exact-archive condition NOT MET/NOT VERIFIED remains explicit; no waiver or original R046 acceptance/FREEZE granted.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_047.md",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "a2cf5ded858c6ec5a6b0873e32bf984f65bc6968",
-  "buildCommit": null,
+  "buildCommit": "916d482b8508ad9393914337f42c5a2e9e699993",
   "reviewEvidence": [
     "docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md",
     "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md",
     "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md",
     "docs/reviews/probes/r046_r4_worker_receipts.json",
     "docs/reviews/probes/r046_r4_snapshot_manifest.json",
-    "docs/reviews/probes/r046_r4_provenance.py"
+    "docs/reviews/probes/r046_r4_provenance.py",
+    "docs/reviews/CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md",
+    "docs/reviews/probes/r047_independent_review_receipt.json"
   ],
-  "disposition": "REVIEW_PENDING",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -71,5 +74,6 @@
   "inheritedProductCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
   "ownerTransferRequired": false,
   "implementationStarted": true,
-  "artifactCommitResolution": "Exact artifact handback SHA to be resolved by parent review; no fabricated self-reference"
+  "artifactCommitResolution": "Exact artifact handback SHA to be resolved by parent review; no fabricated self-reference",
+  "acceptanceScope": "R4 truthful disclosure/publication corrections only; original R046 acceptance conditions and FREEZE remain open"
 }

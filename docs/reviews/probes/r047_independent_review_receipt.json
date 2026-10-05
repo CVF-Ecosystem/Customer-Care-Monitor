@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-05",
+  "reviewer": "Codex parent /root",
+  "worker": "Codex subagent r046_r4_worker",
+  "artifactCommit": "916d482b8508ad9393914337f42c5a2e9e699993",
+  "acknowledgmentCommit": "b968383d6befa6d50527cffa5fb3b6368cacf78b",
+  "seedCommit": "a2cf5ded858c6ec5a6b0873e32bf984f65bc6968",
+  "disposition": "REVIEW_PASS",
+  "scope": "R047 factual correction only; original R046 CHANGES_REQUIRED and FREEZE_OPEN",
+  "manifestReproduces": true,
+  "manifestTimeDependentFieldExcluded": "recoveryParentCommit",
+  "backendFiles": 203,
+  "livecopyByteDifferences": 3,
+  "normalizedEquivalence": true,
+  "exactArchiveHistoricalExecution": "NOT MET / NOT VERIFIED",
+  "stagedGitBlobHashesVerified": 11,
+  "stagedPathsMatchArtifactCommit": true,
+  "publicationOutputDigestsVerified": 11,
+  "protectedSourceSeedOldPackets": "UNCHANGED",
+  "newRuntimeCampaigns": 0,
+  "newMutations": 0,
+  "doctor": "PASS WITH NOTE25/1; uninstalled profile and historical manifest pin warn-only",
+  "reviewPublication": "PASS_CORRECTED_REVIEWER_SNAPSHOT",
+  "gateUnitSuite": {
+    "exit": 0,
+    "tests": 46,
+    "seconds": 12.892
+  },
+  "docsBuildAfterFinalMarkdown": {
+    "exit": 0,
+    "seconds": 7.13
+  },
+  "defaultPreflight": {
+    "exit": 0,
+    "passed": 7
+  },
+  "prRangePreflight": {
+    "exit": 0,
+    "passed": 7
+  },
+  "catalogPS51": {
+    "exit": 0
+  },
+  "catalogPS7": {
+    "exit": 0,
+    "method": "Executed by default/PR preflight catalog gate"
+  },
+  "diffCheck": {
+    "exit": 0
+  },
+  "exactStagedPreflight": {
+    "command": "python -B scripts/cvf_downstream_gate.py preflight --base HEAD",
+    "exit": 0,
+    "passed": 7,
+    "parentCommit": "916d482b8508ad9393914337f42c5a2e9e699993",
+    "stagedPaths": [
+      "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+      "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
+      "CVF_SESSION_MEMORY.md",
+      "IMPLEMENTATION_STATUS.json",
+      "docs/INDEX.md",
+      "docs/catalog/ARTIFACT_REGISTRY.json",
+      "docs/reviews/CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md",
+      "docs/reviews/probes/r047_independent_review_receipt.json",
+      "docs/work_orders/CCMAI_RUNTIME_047.md"
+    ],
+    "note": "Receipt update restaged and final gate rerun before commit."
+  }
+}
