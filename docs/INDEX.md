@@ -188,6 +188,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-050.json`
 - R050 LP-01..08 intended contract; submitted BUILD independently CHANGES_REQUIRED, not full S2 governance.: `docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md`
 - R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `docs/work_orders/CCMAI_RUNTIME_050.md`
+- Separate immutable R051 test/evidence repair scope for R050-R1-01..03; ownership fixture path granted, original R050 seed preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-051.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

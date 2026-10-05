@@ -1403,6 +1403,13 @@
       "path": "docs/reviews/probes/r050_independent_campaign.ps1",
       "status": "ACTIVE",
       "description": "Readonly exact-source cached offline/internal disposable independent campaign runner, no governance/provider proof."
+    },
+    {
+      "id": "runtime051-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-051.json",
+      "status": "ACTIVE",
+      "description": "Separate immutable R051 test/evidence repair scope for R050-R1-01..03; ownership fixture path granted, original R050 seed preserved."
     }
   ]
 }
