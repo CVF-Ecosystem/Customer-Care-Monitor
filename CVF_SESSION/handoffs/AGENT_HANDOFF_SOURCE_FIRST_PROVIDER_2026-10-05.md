@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex independent REVIEWER (R050 REVIEW); Claude BUILD complete (727d3229338e9b29c749612677a08b7fd1c65428), no self-approval
-- Next allowed move: CCMAI-RUNTIME-050 independent Codex REVIEW: review the exact Claude BUILD commit 727d3229338e9b29c749612677a08b7fd1c65428 against seed 1008ab41f0693e2814cd06dfdb0fed98273a1167, LP-01..08, and evidence in docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md. Facebook/Zalo OA account setup/credentials/connectivity/live tests remain parked. CCMAI-RUNTIME-049 and prior local dispositions unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority or claim.
+- Active role: Codex independent REVIEWER completed; SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; ORCHESTRATOR scope-amendment preparation next; Claude source/repair worker
+- Next allowed move: CCMAI-RUNTIME-050 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN after independent Codex review of Claude BUILD727d3229338e9b29c749612677a08b7fd1c65428: R050-R1-01 failing ownership fixture outside original scope, R1-02 production-path/call-count evidence, R1-03 worker machine receipt/isolation/publication corrections. ORCHESTRATOR next prepares separate committed bounded scope authority for job_run_ownership_test.go before Claude R1 fixture/test/evidence repair and exact-repair independent Codex re-review; no original seed widening or reviewer product fix. Source/test BUILD preserved; R049/prior closures/history unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority; Facebook/Zalo OA accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## R050 activation acknowledgment
@@ -41,3 +41,7 @@ Exact BUILD commit `727d3229338e9b29c749612677a08b7fd1c65428` (`feat(engine): so
 4. **Hand-back**:
    - Review evidence: `docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md`.
    - Tranche status: `REVIEW_PENDING`. Next: independent Codex review. No worker self-approval or FREEZE.
+
+## Independent review acknowledgment and return
+
+Fresh manifest/policy/current state/memory/handoff/implementation/index/core/workspace/order/SPEC rehydrated. Codex independent REVIEWER declaration at actual core8a4119e1, manifest26c686cc, REVIEW/R2/live evidence YES before material review; accounts parked. Exact submitted source/seed/acknowledgment chronology verified, independent204-file internal/offline disposable campaign42 top/94 events93 PASS1 FAIL0 SKIP; build/vet PASS, resource/volume cleanup verified. Three findings R050-R1-01..03 returned in one consolidated review; original source/tests/worker packets/seed unchanged. REVIEWER -> SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD declared before disposition synchronization; no worker/source repair role. Secondary ownerRouting/index stale planning facts corrected explicitly. Next separate fixture-scope authority, then Claude repair/re-review; no automatic BUILD/acceptance/FREEZE.

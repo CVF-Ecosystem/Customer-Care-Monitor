@@ -1,8 +1,8 @@
 # R050 source-first application provider initialization
 
-Date: 2026-10-05. SPEC_READY / DISPATCH_READY, risk R2. Intended behavior only; not implemented or accepted. Work order R050, independent worker Claude/reviewer Codex.
+Date: 2026-10-05. SPEC contract LP-01..08, risk R2. BUILD727d322 submitted; independent review CHANGES_REQUIRED, not accepted. Original dispatch intent and requirements remain unchanged. Work order R050, independent worker Claude/reviewer Codex.
 
-Existing executeReserved initializes provider before parsing input/candidate/snapshot preparation. R025/R027 already determine which snapshots need analysis; R028/R046 terminal/ownership/finalizer behavior must remain intact. Delay dependency resolution until existing prepared source actually needs inference. This is an application execution-order change, a preparatory S2 seam; no new CVF runtime policy/routing/approval/DLP gate or semantic auto-skip is introduced. Full S2/S3 real-provider governance evidence remains separate.
+Baseline before R050: executeReserved initializes provider before parsing input/candidate/snapshot preparation. R025/R027 already determine which snapshots need analysis; R028/R046 terminal/ownership/finalizer behavior must remain intact. Delay dependency resolution until existing prepared source actually needs inference. This is an application execution-order change, a preparatory S2 seam; no new CVF runtime policy/routing/approval/DLP gate or semantic auto-skip is introduced. Full S2/S3 real-provider governance evidence remains separate.
 
 | ID | Acceptance and required observation |
 | --- | --- |

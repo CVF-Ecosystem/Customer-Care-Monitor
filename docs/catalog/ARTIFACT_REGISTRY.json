@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R050 DISPATCH_READY for Claude application source-first provider initialization; independent Codex review after worker handback."
+      "description": "R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged."
     },
     {
       "id": "truth-implementation-status",
@@ -1367,21 +1367,42 @@
       "family": "continuity",
       "path": "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R050 LP-01..08 application initialization-order contract, SPEC_READY; not full S2 governance."
+      "description": "R050 LP-01..08 intended contract; submitted BUILD independently CHANGES_REQUIRED, not full S2 governance."
     },
     {
       "id": "runtime050-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_050.md",
       "status": "ACTIVE",
-      "description": "R050 DISPATCH_READY, Claude bounded local BUILD then independent Codex review."
+      "description": "R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged."
     },
     {
       "id": "runtime050-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
       "status": "ACTIVE",
-      "description": "R050 DISPATCH_READY/WORK_ORDER, immutable seed before worker BUILD."
+      "description": "R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged."
+    },
+    {
+      "id": "runtime050-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "R050 independent REVIEW CHANGES_REQUIRED, three findings; synthetic application proof only."
+    },
+    {
+      "id": "runtime050-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r050_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Exact-source independent test/command/hash/isolation/cleanup and publication receipt; one ownership test failure retained."
+    },
+    {
+      "id": "runtime050-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r050_independent_campaign.ps1",
+      "status": "ACTIVE",
+      "description": "Readonly exact-source cached offline/internal disposable independent campaign runner, no governance/provider proof."
     }
   ]
 }

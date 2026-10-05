@@ -49,19 +49,23 @@
   ],
   "claimScope": "Only application provider initialization ordering after existing source preparation on synthetic disposable local fixtures. No CVF runtime governance/provider parity/full S2 or live/hosted readiness claim. Preserve finalizer/ownership/checkpoint contracts.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_050.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "1008ab41f0693e2814cd06dfdb0fed98273a1167",
   "buildCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
   "reviewEvidence": [
-    "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md"
+    "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md",
+    "docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md",
+    "docs/reviews/probes/r050_independent_summary.json",
+    "docs/reviews/probes/r050_independent_campaign.ps1"
   ],
-  "disposition": "NOT_REVIEWED",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -114,5 +118,17 @@
       "note": "Publication record restaged; same gate repeated before commit."
     },
     "stagedDiffCheck": "PASS"
-  }
+  },
+  "repairFindings": [
+    "R050-R1-01",
+    "R050-R1-02",
+    "R050-R1-03"
+  ],
+  "openReviewFindings": [
+    "R050-R1-01",
+    "R050-R1-02",
+    "R050-R1-03"
+  ],
+  "scopeAmendmentRequired": "Separate committed authority needed for ownership fixture; original seed/record allowedPaths unchanged",
+  "repairRound": 0
 }

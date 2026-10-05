@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-050 — Source-first provider initialization
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-05. R2. Immutable seed committed1008ab41f0693e2814cd06dfdb0fed98273a1167 before activation. [SPEC](../specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md), [roadmap audit](../reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md). Worker/BUILD commit steward Claude; independent reviewer Codex. No automatic REVIEW_PASS/FREEZE.
 
@@ -17,3 +17,7 @@ Use an isolated exact-source export and cached offline Go/Docker/images, readonl
 Required campaign: original eager-source detector failure; dedicated LP negative/positive tests, ordinary/explicit batch/single coverage; affected incremental/mode/ownership/shared-dispatch/finalizer suites; named ordering mutation failure with byte-restored passing control; build/vet; gate46; documentation build after final Markdown; default/PR/exact-changed-set preflights; PS5.1/7 catalog; diff/secret/source-set review. Avoid redundant campaign repetition after controls pass. Record exact source/test hashes, stage set/commit identity, snapshot/isolation/cleanup/exit receipts with honest limits. Exact submitted commit and existing evidence files required in REVIEW_PENDING handback. Do not delete unexplained failures or use fixture injection alone as production-order evidence.
 
 Stop/return concrete finding on out-of-scope path/effect, source drift, failed gate, undeclared network/secret/DB use, incompatible old assertion or inability to prove LP contract. Bound repairs by same objective/path/risk/effect/owner; at third repair without independent new root cause record cost escalation. Publish local worker commit only; no push/merge/deploy/FREEZE. Next independent Codex review of exact Claude build; further runtime governance is separate.
+
+## Independent R1 return (2026-10-05)
+
+[Codex review](../reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md) returns R050-R1-01..03 together. Required ownership test fails independently; add eligible synthetic source only after separate committed authority for its presently unauthorized path. R1-02 needs precise batch-call/item counters and real settings-path no-work/error controls; R1-03 needs successor machine receipts/errata and controlled internal/offline cleanup/publication proof. Keep original worker packets and failed runs unchanged. Original R050 seed/allowedPaths immutable; no reviewer source edit. Next ORCHESTRATOR scope amendment before Claude consolidated repair, then independent exact-commit re-review; no acceptance/FREEZE.

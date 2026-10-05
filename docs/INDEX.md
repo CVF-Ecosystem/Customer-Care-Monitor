@@ -1,4 +1,4 @@
-﻿# Project Documentation Index
+# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R050 DISPATCH_READY for Claude application source-first provider initialization; independent Codex review after worker handback.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
+- R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -182,9 +182,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-049.json`
 - Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim.: `docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md`
 - Immutable dispatcher seed for Claude R050 application ordering work; commit before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-050.json`
-- R050 DISPATCH_READY/WORK_ORDER, immutable seed before worker BUILD.: `CVF_SESSION/tranches/CCMAI-RUNTIME-050.json`
-- R050 LP-01..08 application initialization-order contract, SPEC_READY; not full S2 governance.: `docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md`
-- R050 DISPATCH_READY, Claude bounded local BUILD then independent Codex review.: `docs/work_orders/CCMAI_RUNTIME_050.md`
+- Readonly exact-source cached offline/internal disposable independent campaign runner, no governance/provider proof.: `docs/reviews/probes/r050_independent_campaign.ps1`
+- R050 independent REVIEW CHANGES_REQUIRED, three findings; synthetic application proof only.: `docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md`
+- Exact-source independent test/command/hash/isolation/cleanup and publication receipt; one ownership test failure retained.: `docs/reviews/probes/r050_independent_summary.json`
+- R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-050.json`
+- R050 LP-01..08 intended contract; submitted BUILD independently CHANGES_REQUIRED, not full S2 governance.: `docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md`
+- R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `docs/work_orders/CCMAI_RUNTIME_050.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
