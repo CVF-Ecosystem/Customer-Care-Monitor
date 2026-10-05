@@ -25,6 +25,9 @@ type Analyzer struct {
 	// providerOverride is a private test seam (CCMAI-RUNTIME-025) that lets scheduler tests
 	// route a synthetic provider through the real Analyzer. Never set in production.
 	providerOverride ai.AIProvider
+	// providerResolver is an optional test seam (CCMAI-RUNTIME-050 LP-06) that allows test
+	// suites to observe and count provider construction calls distinctly from AnalyzeChat calls.
+	providerResolver func(job models.Job) (ai.AIProvider, error)
 }
 
 func NewAnalyzer(cfg *config.Config) *Analyzer {
@@ -89,20 +92,6 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	db.LogActivity(job.TenantID, "", "system", "job.run.started", "job", job.ID,
 		fmt.Sprintf("Job '%s': started analysis (mode=%s, max=%d)", job.Name, plan.mode, plan.limit), "", "")
 
-	// Get AI provider (use injected if provided, otherwise from settings)
-	var provider ai.AIProvider
-	var err error
-	if injectedProvider != nil {
-		provider = injectedProvider
-	} else if a.providerOverride != nil {
-		provider = a.providerOverride
-	} else {
-		provider, err = a.getProvider(job)
-		if err != nil {
-			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable)
-		}
-	}
-
 	// Parse input channel IDs
 	var channelIDs []string
 	if err := json.Unmarshal([]byte(job.InputChannelIDs), &channelIDs); err != nil {
@@ -114,24 +103,26 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	analyzedCount := 0
 	errorCount := 0
 	truncated := false
+	var provider ai.AIProvider
 
 	// Select the conversations and prepare their snapshots.
 	var conversations []models.Conversation
 	var prepared []preparedConversation
 	unchangedCount := 0
+	var candErr error
 	if !plan.explicit() {
 		// Every tenant/input-channel conversation is a candidate; the source-version check
 		// below, not event timestamps or last_run_at, decides what needs analysis.
-		conversations, err = ordinaryIncrementalCandidates(job, channelIDs)
-		if err != nil {
+		conversations, candErr = ordinaryIncrementalCandidates(job, channelIDs)
+		if candErr != nil {
 			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection)
 		}
 		var prepErrors int
 		prepared, unchangedCount, prepErrors, truncated = prepareOrdinaryIncremental(ctx, job, conversations)
 		errorCount += prepErrors
 	} else {
-		conversations, err = explicitCandidates(job, channelIDs, plan, now)
-		if err != nil {
+		conversations, candErr = explicitCandidates(job, channelIDs, plan, now)
+		if candErr != nil {
 			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection)
 		}
 		var prepErrors int
@@ -160,6 +151,41 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	}
 	if truncated {
 		goto complete
+	}
+
+	// CCMAI-RUNTIME-050: source-first lazy provider initialization (LP-01..05).
+	// If no prepared conversations require inference, finish through the no-work path
+	// without resolving provider settings, decrypting credentials or constructing a provider.
+	if len(prepared) == 0 {
+		goto complete
+	}
+
+	// Cancellation or time exhaustion before inference prevents provider resolution.
+	if ctx.Err() != nil {
+		truncated = true
+		goto complete
+	}
+	if owner.cancelledNow() {
+		goto complete
+	}
+
+	// Initialize AI provider once per run for eligible work (injected > override > resolver > settings)
+	if injectedProvider != nil {
+		provider = injectedProvider
+	} else if a.providerOverride != nil {
+		provider = a.providerOverride
+	} else if a.providerResolver != nil {
+		var provErr error
+		provider, provErr = a.providerResolver(job)
+		if provErr != nil {
+			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable)
+		}
+	} else {
+		var provErr error
+		provider, provErr = a.getProvider(job)
+		if provErr != nil {
+			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable)
+		}
 	}
 
 	// Check batch mode setting (default: enabled with batch size 5)
