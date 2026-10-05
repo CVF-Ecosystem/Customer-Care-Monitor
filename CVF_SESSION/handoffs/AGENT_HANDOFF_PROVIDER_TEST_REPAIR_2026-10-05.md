@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex independent REVIEWER / SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD; Claude same-scope REPAIR_WORKER next
-- Next allowed move: CCMAI-RUNTIME-051 CHANGES_REQUIRED after Codex independent re-review of exact repair a4b378ae036ad767728fb2e0655559e9cf750b47: Claude REPAIR_WORKER next consolidates R051-R1-01..03 in same-scope repair round2 under seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937, after committed rehydration/BUILD acknowledgment and preflight. RP-01/02 settled; RP-03 persistence/query-error observations and RP-04 runnable ordering mutation/exact receipt remain open. R050 remains CHANGES_REQUIRED; production727d3229338e9b29c749612677a08b7fd1c65428 and original seeds unchanged. Return exact committed REVIEW_PENDING for independent Codex review; no production edit/provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Claude REPAIR_WORKER / BUILD COMMIT_STEWARD (R051 repair round 2); independent Codex REVIEWER next, no self-approval
+- Next allowed move: CCMAI-RUNTIME-051 BUILD (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): implement round 2 repairs for R051-R1-01..03 (RP-03 persistence/notifier observations in analyzer_provider_initialization_test.go, RP-04 runnable ordering mutation and exact receipt in successor runner) under seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 remain byte-identical; R050 remains CHANGES_REQUIRED pending review. Return exact committed REVIEW_PENDING for independent Codex review; no self-approval/FREEZE. Accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Separate authority and activation acknowledgment
@@ -33,3 +33,12 @@ Exact test repair commit `a4b378ae036ad767728fb2e0655559e9cf750b47` (`test(engin
 ## Codex independent REVIEW return (2026-10-05)
 
 Fresh canonical rehydration/declaration in REVIEW/R2, readonly actual core8a4119e11db00e774ed8e7cf7d9a8caa309e81d1, doctor PASS WITH NOTE25/1, manifest warn-only mismatch; BOOTSTRAP_MIGRATION_PENDING nonblocking. Independent exact repair campaign42 top-level/98 events98 PASS0 FAIL/SKIP, named internal network/database/anonymous volume verified absent. RP-01/02 settled; three consolidated R051-R1-01..03 remain (mutation BUILD_ERROR, incomplete receipt/incorrect identities, persistence/query-error observations). Worker claims in previous section are historical submissions, not accepted resolutions. Correct acknowledgment9f010bfefb24e1ade8fca12a9ca2dcaf968995a3; old wrong SHA/claims preserved. R051/R050 CHANGES_REQUIRED, freezeOPEN; source/tests/seeds/worker packets untouched. REVIEWER -> SESSION_SYNC_STEWARD / review-metadata COMMIT_STEWARD, Claude repair round2 next under existing seed, no BUILD by reviewer. Report: docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md. Receipt: docs/reviews/probes/r051_independent_summary.json. Publication gates recorded in receipt; local metadata commit only. No live/governance/hosted/fullS2 proof or push/FREEZE; accounts parked.
+
+## Worker round 2 rehydration and BUILD acknowledgment (Claude, 2026-10-05)
+
+Role transition REVIEWER (Codex) -> REPAIR_WORKER (Claude), with BUILD COMMIT_STEWARD held by Claude, acknowledged before any test or evidence edit. Rehydrated: canonical manifest, policy, active state, memory, this handoff, IMPLEMENTATION_STATUS, docs index, R051 work order/SPEC/seed/tranche record, and independent review return findings R051-R1-01..03.
+
+CVF Agent Declaration: Customer-Care-Monitor-AI; CVF core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R2; live evidence required YES (no governance claim made; synthetic provider evidence is application proof only); active role REPAIR_WORKER / BUILD COMMIT_STEWARD; active handoff this file; next allowed move as header; parked checkpoint OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
+
+Workspace doctor 25/1 PASS WITH NOTE; gate tests 46/46 PASS; downstream gate preflight 7/7 PASS. Compact bootstrap read model absent: BOOTSTRAP_MIGRATION_PENDING (nonblocking). Separate seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 verified present and unchanged; original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 and canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 remain byte-identical; R050 remains CHANGES_REQUIRED pending review. Round 2 repairs consolidate RP-03 (checking every query error, reloading stored run/job/summary, and observing notifier in positive controls) and RP-04 (runnable ordering mutation in isolated export and verified volume/archive receipt).
+

@@ -53,8 +53,8 @@
   ],
   "claimScope": "Only test/fixture/receipt repair R050-R1-01..03 under unchanged LP-01..08 and exact production BUILD727d322. No production behavior change, historical recertification, real-provider/CVF runtime governance/full S2 or hosted readiness claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_051.md",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "a54cb73007f081fe4bbaa4baa11d28fed4a7d937",
   "buildCommit": "a4b378ae036ad767728fb2e0655559e9cf750b47",
   "reviewEvidence": [
@@ -69,7 +69,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",

@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
 
 ## Startup Order
 
@@ -50,7 +50,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R051 independent review return (2026-10-05)
+## Current R051 repair round 2 BUILD acknowledgment (Claude, 2026-10-05)
+
+CCMAI-RUNTIME-051 BUILD (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): rehydrated canonical state, active handoff, implementation status, and docs index after Codex independent re-review disposition CHANGES_REQUIRED. Entering repair round 2 to consolidate all three findings (R051-R1-01 ordering mutation in runner, R051-R1-02 truthful identities and volume inventory in receipt, R051-R1-03 query-error/persistence/notifier observations in analyzer_provider_initialization_test.go). Seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 verified present at baseCommit and unchanged. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 remain byte-identical; R050 remains CHANGES_REQUIRED pending review. Synthetic disposable local tests only; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS, no live/governance/hosted/FREEZE claim.
+
+## Historical R051 independent review return (2026-10-05)
 
 CCMAI-RUNTIME-051 CHANGES_REQUIRED after Codex independent re-review of exact repair a4b378ae036ad767728fb2e0655559e9cf750b47: Claude REPAIR_WORKER next consolidates R051-R1-01..03 in same-scope repair round2 under seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937, after committed rehydration/BUILD acknowledgment and preflight. RP-01/02 settled; RP-03 persistence/query-error observations and RP-04 runnable ordering mutation/exact receipt remain open. R050 remains CHANGES_REQUIRED; production727d3229338e9b29c749612677a08b7fd1c65428 and original seeds unchanged. Return exact committed REVIEW_PENDING for independent Codex review; no production edit/provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS. Independent42/98 allPASS; docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md and docs/reviews/probes/r051_independent_summary.json. Original worker claims retained below as attributed historical submissions.
 
