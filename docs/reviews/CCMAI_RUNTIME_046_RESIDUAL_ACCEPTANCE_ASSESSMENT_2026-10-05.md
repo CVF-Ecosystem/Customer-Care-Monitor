@@ -1,0 +1,35 @@
+# R046 residual acceptance decision packet
+
+Date: 2026-10-05. Codex ORCHESTRATOR / SPEC_AUTHOR. **OWNER_CONTRACT_DECISION_REQUIRED; no decision or acceptance granted by this packet.** R047 remains REVIEW_PASS / FREEZE_OPEN for factual correction. R046 remains CHANGES_REQUIRED / FREEZE_OPEN. This assessment completes the next governed move recorded at review commit `5529b2a4f0fc2e7c2221a87998db5fdf7939dd1a`.
+
+## Evidence sufficient for a bounded local behavior assessment
+
+Exact product/maintained tests are still `91da0e88118b76a68031f432da50521fe6a341b7`. [R2 independent review](CCMAI_RUNTIME_046_R2_INDEPENDENT_REREVIEW_2026-10-04.md) separately executed the exact-repair archive on cached internal disposable MySQL. It observed22 top-level/28 finalizer events and18/59 affected terminal/ownership events, disjoint union40/87; build/vet; named normalization/fallback/GORM and Statement-isolation sensitivity failures followed by restored controls; and additional COMMIT/rollback sink/checkpoint controls. Both203-file archives restored byte-equal, overlays removed, named DB/internal network/anonymous-volume teardown verified. These are independent reviewer observations, not corrected historical worker results. No product defect remains established by that review.
+
+[R3 raw-log review](CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md) recovered eight matching log digests, actual22/28 and40/87 counts, three named mutation kills and restored controls. [R047 independent review](CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md) accepted the R4 factual corrections at `916d482b8508ad9393914337f42c5a2e9e699993`: all203 saved-archive export files match; the surviving mounted filesystem copy has three CRLF-only differences, no content difference after normalization and unchanged finalizer source/test hashes. Original worker/reviewer packets and failed claims remain preserved.
+
+## Unmet conditions and decision boundary
+
+| Condition | Current disposition | What would settle it |
+| --- | --- | --- |
+| Original R3 worker executes an exact byte-equal Git archive | NOT MET / NOT VERIFIED. The committed runner mounted a live filesystem copy, not the saved archive. Corrected prose cannot establish historical execution bytes. | Explicit owner-authorized acceptance of a limited evidence basis, or a separately authorized new exact-archive campaign. |
+| Historical R1/R2/R3 worker commands, full staged gates, isolation inspections and cleanup exits where no matching proof exists | NOT VERIFIED. Some original counts/claims conflict; corrected R4 publication is new evidence only. | Recover matching original records if actually available, or retain these limits permanently and authorize prospective proof. A new run cannot certify the past. |
+| R4 correction packet and current metadata publication | VERIFIED / R047 REVIEW_PASS. It faithfully separates known observations, inherited proof and missing history. | Already settled; repeating metadata correction would not fill missing runtime history. |
+
+The original acceptance criteria and immutable seeds remain unchanged. Earlier SPEC/order headers about a not-yet-started R3 describe their planning snapshot; current disposition comes from the active R047 continuity and this assessment. No historical receipt is silently recertified. No fifth repair, runtime replay, acceptance waiver or FREEZE is authorized here.
+
+## Concrete options for owner review
+
+**A — Accept the bounded local evidence basis with explicit limitations (recommended).** Authorize a separate acceptance disposition using exact-R2 independent source/runtime proof, recovered R3 results and accepted R4 errata. Explicitly stop requiring historical exact-archive worker execution and unrecoverable historical worker publication/resource proof as prerequisites for this local acceptance only. Retain each item as NOT MET/NOT VERIFIED in permanent history; do not relabel the copy byte-equal or historical gates PASS. Preserve FL-01..06 behavior requirements and all source/test/effect restrictions. No additional runtime is necessary. Preparation is metadata-only; estimate10–20 minutes plus publication checks, not a deadline or grant of extra authority. The resulting review must state the narrowed evidence basis. This decision grants no FREEZE, push, deployment, live readiness, real-driver parity or AI governance claim; local closure would still need its own governed authority.
+
+Reason for recommendation: exact-R2 independent execution already establishes the bounded synthetic source observations, and recovered R3 results corroborate them. No source content change or new product defect is established. A further campaign would duplicate current behavior checks to satisfy evidence provenance, while historical missing proof would remain missing either way.
+
+**B — Require new exact-archive worker proof.** Authorize one separate prospective evidence tranche under a newly committed dispatcher seed, with subagent worker/commit steward separate from parent reviewer. Use an unmodified exact-R2 Git export verified across all203 files, cached-only Go/module inputs and cached internal disposable MySQL without host ports. Run finalizer plus affected selection, three existing detector mutations and byte-restored controls; derive receipt/log digests/counts from machine events; record source/test identity, actual isolation/resource proof and publication gates. Inherit build/vet only with whole-backend identity proof. Preserve all past defects and NOT VERIFIED history. No source/test/dependency/config/provider/channel/external-network changes. Target one15-minute execution window plus publication/review,180-second per-Go-test timeout; stop on prerequisite/baseline/source drift/harness/unknown outcome, no automatic extra round. This is a new campaign, not recovery of the old one, and grants no automatic REVIEW_PASS/FREEZE.
+
+Existing immutable R046/R047 seeds and accepted reviews are preserved under either option. The owner must select the acceptance/evidence route before a new order or execution is activated. Generic continuation so far authorizes this assessment, not silent replacement of its acceptance contract.
+
+## Why a separate owner decision is required
+
+`AGENTS.md:126` identifies objective/acceptance-contract changes as an escalation boundary. R4 order and R047 seed expressly prohibit an implicit exact-archive waiver or additional runtime campaign. A would change the acceptance evidence contract; B would authorize new execution. Neither can be inferred from successful disclosure repair. The current packet makes the alternatives concrete and reviewable before requesting that decision.
+
+Machine decision pointer: `CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json`. Assessment publication checks are recorded there; they establish repository state only. Core readonly8a4119e11db00e774ed8e7cf7d9a8caa309e81d1, doctor PASS WITH NOTE25/1, missing compact bootstrap nonblocking. No live/CVF AI governance receipt or hosted CI success is claimed. Facebook/Zalo OA accounts and all prior parked/live boundaries remain preserved.

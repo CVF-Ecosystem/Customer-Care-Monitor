@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md`
+- R047 metadata REVIEW_PASS; R046 acceptance pending owner A/B contract decision. No new BUILD/runtime/waiver/FREEZE; accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -148,6 +148,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Consolidated R3-01..03 disclosure/publication correction contract for Claude; independent review retained.: `docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md`
 - R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes.: `docs/reviews/probes/r046_worker_receipts.json`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
+- Reviewable owner options: bounded local evidence acceptance with retained limits, or new prospective exact-archive proof; no decision granted.: `docs/reviews/CCMAI_RUNTIME_046_RESIDUAL_ACCEPTANCE_ASSESSMENT_2026-10-05.md`
+- Owner contract decision REQUIRED, no option selected; R046 CHANGES_REQUIRED and R047 REVIEW_PASS preserved.: `CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json`
 - Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive.: `docs/reviews/probes/r046_transaction_boundary_probe_test.go`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/work_orders/CCMAI_RUNTIME_046.md`

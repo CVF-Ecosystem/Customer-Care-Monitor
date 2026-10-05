@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked."
+      "description": "R047 metadata REVIEW_PASS; R046 acceptance pending owner A/B contract decision. No new BUILD/runtime/waiver/FREEZE; accounts parked."
     },
     {
       "id": "truth-implementation-status",
@@ -1207,6 +1207,20 @@
       "path": "docs/reviews/probes/r047_independent_review_receipt.json",
       "status": "ACTIVE",
       "description": "Independent manifest/blob/path verification and reviewer publication evidence; no runtime or live governance claim."
+    },
+    {
+      "id": "runtime046-residual-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_RESIDUAL_ACCEPTANCE_ASSESSMENT_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Reviewable owner options: bounded local evidence acceptance with retained limits, or new prospective exact-archive proof; no decision granted."
+    },
+    {
+      "id": "runtime046-residual-decision",
+      "family": "continuity",
+      "path": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json",
+      "status": "ACTIVE",
+      "description": "Owner contract decision REQUIRED, no option selected; R046 CHANGES_REQUIRED and R047 REVIEW_PASS preserved."
     }
   ]
 }

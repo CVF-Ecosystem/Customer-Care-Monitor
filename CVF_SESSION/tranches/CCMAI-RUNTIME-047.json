@@ -54,7 +54,8 @@
     "docs/reviews/probes/r046_r4_snapshot_manifest.json",
     "docs/reviews/probes/r046_r4_provenance.py",
     "docs/reviews/CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md",
-    "docs/reviews/probes/r047_independent_review_receipt.json"
+    "docs/reviews/probes/r047_independent_review_receipt.json",
+    "docs/reviews/CCMAI_RUNTIME_046_RESIDUAL_ACCEPTANCE_ASSESSMENT_2026-10-05.md"
   ],
   "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
@@ -75,5 +76,6 @@
   "ownerTransferRequired": false,
   "implementationStarted": true,
   "artifactCommitResolution": "Exact artifact handback SHA to be resolved by parent review; no fabricated self-reference",
-  "acceptanceScope": "R4 truthful disclosure/publication corrections only; original R046 acceptance conditions and FREEZE remain open"
+  "acceptanceScope": "R4 truthful disclosure/publication corrections only; original R046 acceptance conditions and FREEZE remain open",
+  "residualDecisionAssessment": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json"
 }
