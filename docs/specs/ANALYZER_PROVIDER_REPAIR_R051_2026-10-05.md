@@ -1,6 +1,6 @@
 # R051 R050 test and evidence repair contract
 
-Date: 2026-10-05. SPEC_READY / DISPATCH_READY, R2. Not implemented/reviewed. Inherits unchanged R050 LP-01..08, production727d3229338e9b29c749612677a08b7fd1c65428 and [independent findings](../reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md). Separate immutable R051 grants the previously missing ownership fixture path; original R050 authority/record paths stay immutable. No production behavior or acceptance expansion.
+Date: 2026-10-05. CHANGES_REQUIRED / REVIEW, R2. Exact repair a4b378ae036ad767728fb2e0655559e9cf750b47 independently reviewed; RP-01/02 settled, RP-03/04 remain open. Inherits unchanged R050 LP-01..08, production727d3229338e9b29c749612677a08b7fd1c65428 and [independent findings](../reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md). Separate immutable R051 grants the previously missing ownership fixture path; original R050 authority/record paths stay immutable. No production behavior or acceptance expansion.
 
 | ID / finding | Repair and discriminating acceptance |
 | --- | --- |
@@ -12,3 +12,5 @@ Date: 2026-10-05. SPEC_READY / DISPATCH_READY, R2. Not implemented/reviewed. Inh
 Required result: repaired dedicated LP plus affected incremental/mode/ownership/shared-dispatch/finalizer suites and original ownership failure control pass with zero unexplained failure/skip; ordering mutant must be actually applied, runnable and fail a named relevant assertion, then baseline bytes restored/pass. Existing42-top/94-event/1-fail reviewer receipt is historical, not replaced. Record any harness/timeout/partial failure and retries; full-backend/race NOT RUN unless executed within authorized bounds. No real-provider/CVF governance/full S2/global F02/hosted readiness claim.
 
 Canonical analyzer.go, finalizer/source-version/provider implementation, F06-R1/R2 and all other tests/source protected. Applied sensitivity mutation may alter only isolated exact-source TEMP copy and must restore byte-for-byte; do not mutate live canonical source. Any further canonical path/effect/contract change returns a concrete boundary finding before edit. This test/evidence BUILD returns REVIEW_PENDING; independent reviewer evaluates R051 and residual R050 separately. No self-approval/FREEZE.
+
+Current result: [independent R051 review](../reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md); acceptance contract above unchanged. Three consolidated findings for same-scope round2.

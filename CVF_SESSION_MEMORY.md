@@ -50,15 +50,19 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R051 repair handback (2026-10-05)
+## Current R051 independent review return (2026-10-05)
+
+CCMAI-RUNTIME-051 CHANGES_REQUIRED after Codex independent re-review of exact repair a4b378ae036ad767728fb2e0655559e9cf750b47: Claude REPAIR_WORKER next consolidates R051-R1-01..03 in same-scope repair round2 under seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937, after committed rehydration/BUILD acknowledgment and preflight. RP-01/02 settled; RP-03 persistence/query-error observations and RP-04 runnable ordering mutation/exact receipt remain open. R050 remains CHANGES_REQUIRED; production727d3229338e9b29c749612677a08b7fd1c65428 and original seeds unchanged. Return exact committed REVIEW_PENDING for independent Codex review; no production edit/provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS. Independent42/98 allPASS; docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md and docs/reviews/probes/r051_independent_summary.json. Original worker claims retained below as attributed historical submissions.
+
+## Historical R051 worker repair handback (2026-10-05)
 
 CCMAI-RUNTIME-051 REVIEW_PENDING (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): test repair commit `a4b378ae036ad767728fb2e0655559e9cf750b47` resolves findings R050-R1-01..03 (RP-01..04). Provider-selection fixture repaired in `backend/engine/job_run_ownership_test.go`; `countingProvider` refactored with distinct call and item counters; production `getProvider` branch tested with corrupt key `X'DEADBEEF'` and setting query traps; candidate query error fixture added; isolated campaign executed (42 suites, 98 events, 98 PASS, 0 FAIL/SKIP; mutation `M_EAGER_INIT` killed and restored byte-for-byte; full cleanup verified). Handed to independent Codex REVIEWER; no self-approval or FREEZE. Canonical production source and original R050 authority seed remain untouched; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
 
-## Current R051 BUILD acknowledgment (2026-10-05)
+## Historical R051 BUILD acknowledgment (2026-10-05)
 
 CCMAI-RUNTIME-051 BUILD (Claude, 2026-10-05): role transition WORK_ORDER_AUTHOR (Codex) -> REPAIR_WORKER / BUILD COMMIT_STEWARD (Claude) acknowledged in the active handoff before any test/evidence edit; independent Codex REVIEWER next. Seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 verified present at baseCommit and unchanged. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 untouched; R050 remains CHANGES_REQUIRED pending review. Synthetic disposable loopback fixtures only; no live authority. R049 and prior closures unchanged; Facebook/Zalo OA accounts parked.
 
-## Current R051 test/evidence repair work order (2026-10-05)
+## Historical R051 test/evidence repair work order (2026-10-05)
 
 CCMAI-RUNTIME-051 DISPATCH_READY / WORK_ORDER under separate committed seeda54cb73007f081fe4bbaa4baa11d28fed4a7d937: Claude REPAIR_WORKER/BUILD commit steward next rehydrates and commits BUILD acknowledgment/preflight before repairing R050-R1-01..03 via ownership fixture, accurate call/item production-path tests and successor machine receipts. Original R050 seed/allowedPaths and canonical production727d3229338e9b29c749612677a08b7fd1c65428 unchanged; R050 remains CHANGES_REQUIRED, no acceptance expansion. RP-01..04 inherit LP-01..08; exact repair REVIEW_PENDING for independent Codex review. No BUILD yet; cached internal/offline disposable synthetic evidence only, no real config/credentials/provider/channel/external network/customer/persistent DB/live runtime/parent/tooling/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness. R049/prior dispositions unchanged, Facebook/Zalo OA accounts parked.
 

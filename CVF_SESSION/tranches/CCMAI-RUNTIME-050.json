@@ -57,7 +57,9 @@
     "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md",
     "docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md",
     "docs/reviews/probes/r050_independent_summary.json",
-    "docs/reviews/probes/r050_independent_campaign.ps1"
+    "docs/reviews/probes/r050_independent_campaign.ps1",
+    "docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/probes/r051_independent_summary.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -125,11 +127,14 @@
     "R050-R1-03"
   ],
   "openReviewFindings": [
-    "R050-R1-01",
     "R050-R1-02",
     "R050-R1-03"
   ],
-  "scopeAmendmentRequired": "Separate R051 seed committed a54cb73007f081fe4bbaa4baa11d28fed4a7d937; R050 original allowedPaths unchanged, fixture/test/evidence repair DISPATCH_READY, no repair BUILD or acceptance yet",
+  "scopeAmendmentRequired": "Separate R051 authority granted and exact repair independently CHANGES_REQUIRED; RP-01/02 settled, residual RP-03/04 require same-scope repair round2; original R050 paths unchanged",
   "repairRound": 0,
-  "delegatedRepairTranche": "CCMAI-RUNTIME-051"
+  "delegatedRepairTranche": "CCMAI-RUNTIME-051",
+  "settledReviewFindings": [
+    "R050-R1-01"
+  ],
+  "delegatedRepairCommit": "a4b378ae036ad767728fb2e0655559e9cf750b47"
 }

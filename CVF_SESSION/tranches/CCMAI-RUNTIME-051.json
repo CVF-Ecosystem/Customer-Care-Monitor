@@ -53,19 +53,23 @@
   ],
   "claimScope": "Only test/fixture/receipt repair R050-R1-01..03 under unchanged LP-01..08 and exact production BUILD727d322. No production behavior change, historical recertification, real-provider/CVF runtime governance/full S2 or hosted readiness claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_051.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "a54cb73007f081fe4bbaa4baa11d28fed4a7d937",
   "buildCommit": "a4b378ae036ad767728fb2e0655559e9cf750b47",
   "reviewEvidence": [
-    "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md"
+    "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md",
+    "docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/probes/r051_independent_summary.json",
+    "docs/reviews/probes/r051_independent_campaign.ps1"
   ],
-  "disposition": "NOT_REVIEWED",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -128,5 +132,18 @@
       "note": "Publication receipt restaged; final gate repeated before commit."
     },
     "stagedDiffCheck": "PASS"
-  }
+  },
+  "openReviewFindings": [
+    "R051-R1-01",
+    "R051-R1-02",
+    "R051-R1-03"
+  ],
+  "settledRepairRequirements": [
+    "RP-01",
+    "RP-02"
+  ],
+  "partiallySettledRepairRequirements": [
+    "RP-03"
+  ],
+  "nextRepairRound": 2
 }

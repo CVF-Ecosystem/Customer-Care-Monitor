@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R051 DISPATCH_READY consolidated test/evidence repair; separate ownership fixture scope, canonical production/old seed protected."
+      "description": "R051 independent CHANGES_REQUIRED handoff; same-scope repair round2, production and historical packets protected."
     },
     {
       "id": "truth-implementation-status",
@@ -1374,14 +1374,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_050.md",
       "status": "ACTIVE",
-      "description": "R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged."
+      "description": "R050 CHANGES_REQUIRED; delegated R051 fixture/counter portions settled, persistence and mutation/receipt findings remain open."
     },
     {
       "id": "runtime050-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
       "status": "ACTIVE",
-      "description": "R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged."
+      "description": "R050 CHANGES_REQUIRED; delegated R051 fixture/counter portions settled, persistence and mutation/receipt findings remain open."
     },
     {
       "id": "runtime050-independent-review",
@@ -1430,21 +1430,21 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_051.md",
       "status": "ACTIVE",
-      "description": "R051 DISPATCH_READY for Claude test/evidence repair and independent Codex review."
+      "description": "R051 CHANGES_REQUIRED: RP-01/02 settled, three consolidated residual findings; same-scope repair round2 next."
     },
     {
       "id": "runtime051-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
       "status": "ACTIVE",
-      "description": "R051 DISPATCH_READY under separate committed scope seed; R050 stays CHANGES_REQUIRED."
+      "description": "R051 CHANGES_REQUIRED: RP-01/02 settled, three consolidated residual findings; same-scope repair round2 next."
     },
     {
       "id": "runtime051-repair-evidence",
       "family": "continuity",
       "path": "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R051 repair evidence resolving R050-R1-01..03, exact source 42 suites 98 tests pass, mutation killed."
+      "description": "Historical worker R051 submission; tests pass, mutation BUILD_ERROR and incomplete receipt independently rejected."
     },
     {
       "id": "runtime051-repair-campaign-runner",
@@ -1458,7 +1458,28 @@
       "family": "continuity",
       "path": "docs/reviews/probes/r050_r1_worker_receipt.json",
       "status": "ACTIVE",
-      "description": "Machine-readable receipt for R051 test repair run, mutation kill, and resource verification."
+      "description": "Historical worker receipt; command hashes verified, mutation build failure and volume observation gap retained."
+    },
+    {
+      "id": "runtime051-independent-rereview",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Independent exact R051 re-review CHANGES_REQUIRED; RP-01/02 settled, three consolidated residual findings."
+    },
+    {
+      "id": "runtime051-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Exact repair independent42/98 allPASS; source manifest, worker audit, named resource cleanup and publication checks."
+    },
+    {
+      "id": "runtime051-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_independent_campaign.ps1",
+      "status": "ACTIVE",
+      "description": "Independent exact committed archive campaign; internal offline MySQL, readonly cache and named anonymous-volume verification."
     }
   ]
 }

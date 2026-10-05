@@ -25,3 +25,5 @@ Stop/return concrete finding on out-of-scope path/effect, source drift, failed g
 ## Separate repair dispatch R051 (2026-10-05)
 
 [R051 work order](CCMAI_RUNTIME_051.md) / [repair SPEC](../specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md) grants the ownership fixture path via a separate committed seed; original R050 seed and path ceiling unchanged. Consolidated R050-R1-01..03 test/evidence repair only, canonical production727d322 preserved. R050 remains CHANGES_REQUIRED pending exact-repair independent review; no worker BUILD yet.
+
+Delegated R051 exact repair independently [CHANGES_REQUIRED](../reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md): original ownership fixture finding settled, counters corrected; persistence observations and ordering mutation/receipt remain open. Original production/seed/LP acceptance contract unchanged; no FREEZE.
