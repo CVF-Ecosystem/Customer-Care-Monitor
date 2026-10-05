@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "Active R047 user-authorized subagent R4 metadata correction; WORK_ORDER, child BUILD next, parent independent review, original R046 limits preserved."
+      "description": "Active R047 delegated child metadata BUILD; parent independent review next; R046 exact-archive NOT MET/NOT VERIFIED preserved."
     },
     {
       "id": "truth-implementation-status",
@@ -1157,14 +1157,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
       "status": "ACTIVE",
-      "description": "R047 metadata correction tranche, independent child worker and parent reviewer."
+      "description": "R047 metadata-only BUILD acknowledgment before successor R4 evidence edits; zero runtime, no waiver or FREEZE."
     },
     {
       "id": "runtime047-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_047.md",
       "status": "ACTIVE",
-      "description": "Owner-authorized separate metadata-only R4 execution order; no runtime replay or acceptance waiver."
+      "description": "R047 metadata-only BUILD acknowledgment before successor R4 evidence edits; zero runtime, no waiver or FREEZE."
     }
   ]
 }

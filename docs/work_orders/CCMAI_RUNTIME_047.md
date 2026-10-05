@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-047 — Delegated R046 R4 metadata correction
 
-Status: DISPATCH_READY
+Status: BUILD
 
 Date: 2026-10-05. Risk ceiling R2. User explicitly requests subagent execution. Independent roles: child `Codex subagent r046_r4_worker` implements and commits; parent `Codex parent /root` authors authority and reviews. Seed `CVF_SESSION/authority/CCMAI-RUNTIME-047.json` committed at a2cf5ded858c6ec5a6b0873e32bf984f65bc6968 before activation. Original R046 seed stays immutable; its Claude product ownership is not silently reassigned. This separate tranche executes the successor metadata-only correction packet.
 

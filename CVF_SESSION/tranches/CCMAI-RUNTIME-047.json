@@ -42,8 +42,8 @@
   ],
   "claimScope": "Implement successor factual correction/disclosure/publication packet for R046-R3-01..03 only. Exact-archive condition NOT MET/NOT VERIFIED remains explicit; no waiver or original R046 acceptance/FREEZE granted.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_047.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "a2cf5ded858c6ec5a6b0873e32bf984f65bc6968",
   "buildCommit": null,
   "reviewEvidence": [
@@ -53,7 +53,8 @@
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -64,5 +65,5 @@
   "inheritedContract": "R046 R4 metadata-only correction",
   "inheritedProductCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
   "ownerTransferRequired": false,
-  "implementationStarted": false
+  "implementationStarted": true
 }
