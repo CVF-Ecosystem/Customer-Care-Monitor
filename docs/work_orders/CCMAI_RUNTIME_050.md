@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-050 — Source-first provider initialization
 
-Status: DISPATCH_READY
+Status: BUILD
 
 Date: 2026-10-05. R2. Immutable seed committed1008ab41f0693e2814cd06dfdb0fed98273a1167 before activation. [SPEC](../specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md), [roadmap audit](../reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md). Worker/BUILD commit steward Claude; independent reviewer Codex. No automatic REVIEW_PASS/FREEZE.
 
