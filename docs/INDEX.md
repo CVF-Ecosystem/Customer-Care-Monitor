@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
+- Active R047 user-authorized subagent R4 metadata correction; WORK_ORDER, child BUILD next, parent independent review, original R046 limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -124,6 +124,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-BUILD R046 baseline/mutation/restoration/boundary probes and cleanup; synthetic only.: `docs/reviews/probes/r046_independent_summary.json`
 - Independent exact-BUILD R046 CHANGES_REQUIRED: boundary detector and worker receipts; product source unchanged.: `docs/reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md`
 - Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
+- Historical R046 handoff before separately authorized subagent execution R047; R046 acceptance remains open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
 - R046 R1 receipt/snapshot audit: M02 calculated hash mismatch and assertion attribution limits.: `docs/reviews/probes/r046_r1_receipt_audit.json`
 - R046 R1 independent CHANGES_REQUIRED at repair a8fb3b83; test/evidence-only R2 return, source/seed unchanged.: `docs/reviews/CCMAI_RUNTIME_046_R1_INDEPENDENT_REREVIEW_2026-10-04.md`
 - Independent exact-R1 baseline/mutation/restoration and fixture-isolation observations; synthetic application only.: `docs/reviews/probes/r046_r1_independent_summary.json`
@@ -151,6 +152,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/work_orders/CCMAI_RUNTIME_046.md`
 - Separate user-authorized subagent execution seed for R046 R4 metadata corrections; original R046 seed and exact-archive limits preserved. Seed stage only; no BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-047.json`
+- Owner-authorized separate metadata-only R4 execution order; no runtime replay or acceptance waiver.: `docs/work_orders/CCMAI_RUNTIME_047.md`
+- R047 metadata correction tranche, independent child worker and parent reviewer.: `CVF_SESSION/tranches/CCMAI-RUNTIME-047.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

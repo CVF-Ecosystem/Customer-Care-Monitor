@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-047",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex parent /root",
+    "implementationWorker": "Codex subagent r046_r4_worker",
+    "repairWorker": "Codex subagent r046_r4_worker",
+    "commitSteward": "Codex subagent r046_r4_worker",
+    "reviewer": "Codex parent /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_047.md",
+    "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md",
+    "docs/reviews/probes/r046_r4_*"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "old_packet_edit",
+    "authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "acceptance_contract_waiver",
+    "runtime_campaign",
+    "detector_mutation",
+    "provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim"
+  ],
+  "claimScope": "Implement successor factual correction/disclosure/publication packet for R046-R3-01..03 only. Exact-archive condition NOT MET/NOT VERIFIED remains explicit; no waiver or original R046 acceptance/FREEZE granted.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_047.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "a2cf5ded858c6ec5a6b0873e32bf984f65bc6968",
+  "buildCommit": null,
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md"
+  ],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "inheritedContract": "R046 R4 metadata-only correction",
+  "inheritedProductCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "ownerTransferRequired": false,
+  "implementationStarted": false
+}

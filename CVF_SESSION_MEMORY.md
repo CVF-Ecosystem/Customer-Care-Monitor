@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md", "activeTranche": "CCMAI-RUNTIME-046", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-047", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R046 finalizer logging work order (2026-10-04)
 
-CCMAI-RUNTIME-046 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN. Recorded cost disposition CONTINUE_ONE_METADATA_ONLY_R4 follows owner continuation after R3 review. Claude REPAIR_WORKER / repair BUILD COMMIT_STEWARD next: rehydrate R4 decision/order, acknowledge and synchronize BUILD, pass preflight, then produce one successor correction packet for R046-R3-01..03 using verified R3 logs. No worker BUILD started yet. Zero new runtime campaigns/mutations; product/tests91da0e88118b76a68031f432da50521fe6a341b7, historical packets and seed unchanged. Preserve exact-archive condition as NOT MET/NOT VERIFIED where applicable; no implicit waiver or historical recertification. Return exact artifact SHA REVIEW_PENDING to independent Codex reviewer. No automatic fifth repair, credentials/provider/channel/external network/persistent data/parent/tooling/push/merge/deployment/FREEZE/live governance or hosted readiness authority. Facebook/Zalo OA accounts parked.
+CCMAI-RUNTIME-047 DISPATCH_READY / WORK_ORDER / FREEZE_OPEN: owner-authorized subagent r046_r4_worker executes one R046 R4 metadata correction pass under committed seed a2cf5ded858c6ec5a6b0873e32bf984f65bc6968. Rehydrate, declare/record separate worker BUILD acknowledgment, synchronize continuity, pass preflight before evidence edits; create successor R4 report/receipt/provenance manifest, run publication gates, commit exact handback REVIEW_PENDING for Codex parent independent review. Zero runtime replay/mutations; preserve original R046 seed, product/tests91da0e88, historical packets and exact-archive NOT MET/NOT VERIFIED condition. R046 remains CHANGES_REQUIRED / FREEZE_OPEN. No push/merge/deployment/FREEZE/live effects or automatic fifth repair. Facebook/Zalo OA accounts parked.
 
 ## Historical R045 local MCP closure (2026-10-04)
 
