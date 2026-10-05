@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-050", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-050", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,10 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current R050 worker BUILD hand-back (Claude, 2026-10-05)
+
+CCMAI-RUNTIME-050 REVIEW_PENDING / REVIEW (Claude IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD, 2026-10-05): exact BUILD commit 727d3229338e9b29c749612677a08b7fd1c65428 implements source-first application provider initialization LP-01..08 under committed seed 1008ab41f0693e2814cd06dfdb0fed98273a1167. Provider initialization deferred until candidate snapshots prepared and eligible work remains. Disposable MySQL targeted tests PASS (25.402s), mutation M_EAGER_INIT killed/byte-restored (PASS 2.479s), Go build/vet PASS, git diff whitespace clean, downstream preflight 7/7 PASS, gate unit suite 46/46 PASS. Historical job_run_ownership_test.go eager-assertion boundary recorded for reviewer. Evidence docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md. Independent Codex REVIEW is next; worker claims no REVIEW_PASS or FREEZE. Facebook/Zalo OA accounts parked, no live/governance/hosted claim.
 
 ## Current R050 BUILD acknowledgment (2026-10-05)
 

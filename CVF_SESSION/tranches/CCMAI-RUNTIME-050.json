@@ -49,16 +49,19 @@
   ],
   "claimScope": "Only application provider initialization ordering after existing source preparation on synthetic disposable local fixtures. No CVF runtime governance/provider parity/full S2 or live/hosted readiness claim. Preserve finalizer/ownership/checkpoint contracts.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_050.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "1008ab41f0693e2814cd06dfdb0fed98273a1167",
-  "buildCommit": null,
-  "reviewEvidence": [],
+  "buildCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
+  "reviewEvidence": [
+    "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md"
+  ],
   "disposition": "NOT_REVIEWED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
