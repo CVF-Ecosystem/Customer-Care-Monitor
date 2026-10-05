@@ -1,4 +1,4 @@
-# Project Documentation Index
+﻿# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -191,6 +191,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `docs/work_orders/CCMAI_RUNTIME_050.md`
 - Separate immutable R051 test/evidence repair scope for R050-R1-01..03; ownership fixture path granted, original R050 seed preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-051.json`
 - R051 DISPATCH_READY under separate committed scope seed; R050 stays CHANGES_REQUIRED.: `CVF_SESSION/tranches/CCMAI-RUNTIME-051.json`
+- Isolated disposable runner for R051 test repair campaign and mutation testing.: `docs/reviews/probes/r050_r1_campaign_runner.ps1`
+- R051 repair evidence resolving R050-R1-01..03, exact source 42 suites 98 tests pass, mutation killed.: `docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md`
+- Machine-readable receipt for R051 test repair run, mutation kill, and resource verification.: `docs/reviews/probes/r050_r1_worker_receipt.json`
 - R051 RP-01..04 test/evidence repair acceptance inherits unchanged LP-01..08, production preserved.: `docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md`
 - R051 DISPATCH_READY for Claude test/evidence repair and independent Codex review.: `docs/work_orders/CCMAI_RUNTIME_051.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`

@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,10 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current R051 repair handback (2026-10-05)
+
+CCMAI-RUNTIME-051 REVIEW_PENDING (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): test repair commit `a4b378ae036ad767728fb2e0655559e9cf750b47` resolves findings R050-R1-01..03 (RP-01..04). Provider-selection fixture repaired in `backend/engine/job_run_ownership_test.go`; `countingProvider` refactored with distinct call and item counters; production `getProvider` branch tested with corrupt key `X'DEADBEEF'` and setting query traps; candidate query error fixture added; isolated campaign executed (42 suites, 98 events, 98 PASS, 0 FAIL/SKIP; mutation `M_EAGER_INIT` killed and restored byte-for-byte; full cleanup verified). Handed to independent Codex REVIEWER; no self-approval or FREEZE. Canonical production source and original R050 authority seed remain untouched; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
 
 ## Current R051 BUILD acknowledgment (2026-10-05)
 

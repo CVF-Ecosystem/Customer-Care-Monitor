@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-04",
+  "updatedAt": "2026-10-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -1438,6 +1438,27 @@
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
       "status": "ACTIVE",
       "description": "R051 DISPATCH_READY under separate committed scope seed; R050 stays CHANGES_REQUIRED."
+    },
+    {
+      "id": "runtime051-repair-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "R051 repair evidence resolving R050-R1-01..03, exact source 42 suites 98 tests pass, mutation killed."
+    },
+    {
+      "id": "runtime051-repair-campaign-runner",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r050_r1_campaign_runner.ps1",
+      "status": "ACTIVE",
+      "description": "Isolated disposable runner for R051 test repair campaign and mutation testing."
+    },
+    {
+      "id": "runtime051-repair-worker-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r050_r1_worker_receipt.json",
+      "status": "ACTIVE",
+      "description": "Machine-readable receipt for R051 test repair run, mutation kill, and resource verification."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-051 BUILD (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): implement bounded test/evidence repairs for R050-R1-01..03 (RP-01..04) under separate committed seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 across job_run_ownership_test.go, analyzer_provider_initialization_test.go, and successor receipt/evidence. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 remain byte-identical; R050 remains CHANGES_REQUIRED pending review. Handback exact local repair commit REVIEW_PENDING for independent Codex review; no self-approval/FREEZE. Synthetic disposable loopback fixtures only; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.",
+  "nextAllowedMove": "CCMAI-RUNTIME-051 REVIEW_PENDING under separate committed seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 and exact test repair commit a4b378ae036ad767728fb2e0655559e9cf750b47: Codex independent REVIEWER next verifies findings resolution R050-R1-01..03 (RP-01..04), canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 byte-identity, and repair evidence in docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md. Original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 untouched; R050 remains CHANGES_REQUIRED pending review. No self-approval/FREEZE; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Claude REPAIR_WORKER / BUILD COMMIT_STEWARD (R051 test/evidence repair); independent Codex REVIEWER next, no self-approval",
+  "activeRole": "Codex independent REVIEWER after Claude REPAIR_WORKER handback; no self-approval",
   "roleRoute": "CLAUDE_REPAIR_CODEX_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-05"
 }
