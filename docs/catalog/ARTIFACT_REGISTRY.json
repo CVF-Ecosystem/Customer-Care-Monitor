@@ -686,9 +686,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged."
+      "description": "R051 DISPATCH_READY consolidated test/evidence repair; separate ownership fixture scope, canonical production/old seed protected."
     },
     {
       "id": "truth-implementation-status",
@@ -1410,6 +1410,34 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-051.json",
       "status": "ACTIVE",
       "description": "Separate immutable R051 test/evidence repair scope for R050-R1-01..03; ownership fixture path granted, original R050 seed preserved."
+    },
+    {
+      "id": "historical-source-first-provider-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved."
+    },
+    {
+      "id": "runtime051-spec",
+      "family": "continuity",
+      "path": "docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "R051 RP-01..04 test/evidence repair acceptance inherits unchanged LP-01..08, production preserved."
+    },
+    {
+      "id": "runtime051-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_051.md",
+      "status": "ACTIVE",
+      "description": "R051 DISPATCH_READY for Claude test/evidence repair and independent Codex review."
+    },
+    {
+      "id": "runtime051-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+      "status": "ACTIVE",
+      "description": "R051 DISPATCH_READY under separate committed scope seed; R050 stays CHANGES_REQUIRED."
     }
   ]
 }

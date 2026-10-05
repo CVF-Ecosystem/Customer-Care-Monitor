@@ -129,6 +129,7 @@
     "R050-R1-02",
     "R050-R1-03"
   ],
-  "scopeAmendmentRequired": "Separate committed authority needed for ownership fixture; original seed/record allowedPaths unchanged",
-  "repairRound": 0
+  "scopeAmendmentRequired": "Separate R051 seed committed a54cb73007f081fe4bbaa4baa11d28fed4a7d937; R050 original allowedPaths unchanged, fixture/test/evidence repair DISPATCH_READY, no repair BUILD or acceptance yet",
+  "repairRound": 0,
+  "delegatedRepairTranche": "CCMAI-RUNTIME-051"
 }

@@ -21,3 +21,7 @@ Stop/return concrete finding on out-of-scope path/effect, source drift, failed g
 ## Independent R1 return (2026-10-05)
 
 [Codex review](../reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md) returns R050-R1-01..03 together. Required ownership test fails independently; add eligible synthetic source only after separate committed authority for its presently unauthorized path. R1-02 needs precise batch-call/item counters and real settings-path no-work/error controls; R1-03 needs successor machine receipts/errata and controlled internal/offline cleanup/publication proof. Keep original worker packets and failed runs unchanged. Original R050 seed/allowedPaths immutable; no reviewer source edit. Next ORCHESTRATOR scope amendment before Claude consolidated repair, then independent exact-commit re-review; no acceptance/FREEZE.
+
+## Separate repair dispatch R051 (2026-10-05)
+
+[R051 work order](CCMAI_RUNTIME_051.md) / [repair SPEC](../specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md) grants the ownership fixture path via a separate committed seed; original R050 seed and path ceiling unchanged. Consolidated R050-R1-01..03 test/evidence repair only, canonical production727d322 preserved. R050 remains CHANGES_REQUIRED pending exact-repair independent review; no worker BUILD yet.

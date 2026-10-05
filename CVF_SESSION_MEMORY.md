@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-050", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
 
 ## Startup Order
 
@@ -50,9 +50,9 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R050 worker BUILD hand-back (Claude, 2026-10-05)
+## Current R051 test/evidence repair work order (2026-10-05)
 
-CCMAI-RUNTIME-050 CHANGES_REQUIRED / REVIEW / FREEZE_OPEN after independent Codex review of Claude BUILD727d3229338e9b29c749612677a08b7fd1c65428: R050-R1-01 failing ownership fixture outside original scope, R1-02 production-path/call-count evidence, R1-03 worker machine receipt/isolation/publication corrections. ORCHESTRATOR next prepares separate committed bounded scope authority for job_run_ownership_test.go before Claude R1 fixture/test/evidence repair and exact-repair independent Codex re-review; no original seed widening or reviewer product fix. Source/test BUILD preserved; R049/prior closures/history unchanged. No real config/credentials/provider/channel/external network/customer or persistent DB/live runtime/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness authority; Facebook/Zalo OA accounts parked.
+CCMAI-RUNTIME-051 DISPATCH_READY / WORK_ORDER under separate committed seeda54cb73007f081fe4bbaa4baa11d28fed4a7d937: Claude REPAIR_WORKER/BUILD commit steward next rehydrates and commits BUILD acknowledgment/preflight before repairing R050-R1-01..03 via ownership fixture, accurate call/item production-path tests and successor machine receipts. Original R050 seed/allowedPaths and canonical production727d3229338e9b29c749612677a08b7fd1c65428 unchanged; R050 remains CHANGES_REQUIRED, no acceptance expansion. RP-01..04 inherit LP-01..08; exact repair REVIEW_PENDING for independent Codex review. No BUILD yet; cached internal/offline disposable synthetic evidence only, no real config/credentials/provider/channel/external network/customer/persistent DB/live runtime/parent/tooling/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness. R049/prior dispositions unchanged, Facebook/Zalo OA accounts parked.
 
 ## Current R050 BUILD acknowledgment (2026-10-05)
 

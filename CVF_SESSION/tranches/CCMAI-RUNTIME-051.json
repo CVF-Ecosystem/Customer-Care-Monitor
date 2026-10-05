@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-051",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "repairWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/job_run_ownership_test.go",
+    "backend/engine/analyzer_provider_initialization_test.go",
+    "docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md",
+    "docs/work_orders/CCMAI_RUNTIME_051.md",
+    "docs/work_orders/CCMAI_RUNTIME_050.md",
+    "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "canonical_production_source_edit",
+    "unrelated_test_edit",
+    "test_assertion_weakening",
+    "old_worker_or_review_packet_edit",
+    "original_authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "schema_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "acceptance_contract_expansion"
+  ],
+  "claimScope": "Only test/fixture/receipt repair R050-R1-01..03 under unchanged LP-01..08 and exact production BUILD727d322. No production behavior change, historical recertification, real-provider/CVF runtime governance/full S2 or hosted readiness claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_051.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "a54cb73007f081fe4bbaa4baa11d28fed4a7d937",
+  "buildCommit": null,
+  "reviewEvidence": [
+    "docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md"
+  ],
+  "disposition": "NOT_REVIEWED",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "implementationStarted": false,
+  "repairFindings": [
+    "R050-R1-01",
+    "R050-R1-02",
+    "R050-R1-03"
+  ],
+  "inheritedProductCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
+  "originalTranche": "CCMAI-RUNTIME-050",
+  "repairRound": 1,
+  "planningPublication": {
+    "doctor": "PASS WITH NOTE25/1",
+    "gateUnits": {
+      "exit": 0,
+      "tests": 46,
+      "seconds": 11.967
+    },
+    "seedDocs": {
+      "exit": 0,
+      "seconds": 7.28
+    },
+    "activationDocs": {
+      "exit": 0,
+      "seconds": 7.43
+    },
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": "PASS7/7",
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "protectedProductionTestsAndOriginalSeeds": "UNCHANGED",
+    "newRuntimeCampaigns": 0,
+    "status": "FINAL_PLANNING_GATES_PASS",
+    "stagedPreflight": {
+      "base": "HEAD",
+      "exit": 0,
+      "passed": 7,
+      "executed": 7,
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+        "docs/roadmaps/README.md",
+        "docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md",
+        "docs/work_orders/CCMAI_RUNTIME_050.md",
+        "docs/work_orders/CCMAI_RUNTIME_051.md"
+      ],
+      "note": "Publication receipt restaged; final gate repeated before commit."
+    },
+    "stagedDiffCheck": "PASS"
+  }
+}

@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
+- R051 DISPATCH_READY consolidated test/evidence repair; separate ownership fixture scope, canonical production/old seed protected.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -42,6 +42,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R044 implementation/repair/independent acceptance and R045 seed planning acknowledgment; source/evidence limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
 - Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
+- Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json`
@@ -189,6 +190,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R050 LP-01..08 intended contract; submitted BUILD independently CHANGES_REQUIRED, not full S2 governance.: `docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md`
 - R050 CHANGES_REQUIRED after independent exact BUILD review; three consolidated findings, separate ownership-fixture scope authority next; source/seed unchanged.: `docs/work_orders/CCMAI_RUNTIME_050.md`
 - Separate immutable R051 test/evidence repair scope for R050-R1-01..03; ownership fixture path granted, original R050 seed preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-051.json`
+- R051 DISPATCH_READY under separate committed scope seed; R050 stays CHANGES_REQUIRED.: `CVF_SESSION/tranches/CCMAI-RUNTIME-051.json`
+- R051 RP-01..04 test/evidence repair acceptance inherits unchanged LP-01..08, production preserved.: `docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md`
+- R051 DISPATCH_READY for Claude test/evidence repair and independent Codex review.: `docs/work_orders/CCMAI_RUNTIME_051.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
