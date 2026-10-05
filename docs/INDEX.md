@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R047 REVIEW_PASS; owner-delegated audit selected R046 option A. Formal bounded local acceptance disposition next; missing-history limits preserved, no runtime or FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md`
+- R048 option A bounded local acceptance REVIEW_PENDING; inherited independent R2 proof, historical limits preserved; no new BUILD/runtime/FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -161,12 +161,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent manifest/blob/path verification and reviewer publication evidence; no runtime or live governance claim.: `docs/reviews/probes/r047_independent_review_receipt.json`
 - Parent independent metadata correction review PASS; original R046 exact-archive/historical-proof acceptance unresolved.: `docs/reviews/CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md`
 - R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked.: `docs/work_orders/CCMAI_RUNTIME_047.md`
+- Historical R047 delegated correction/audit handoff before R048 option A acceptance; prior evidence preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md`
 - Delegated R4 factual correction packet, REVIEW_PENDING; all historic limits and exact-archive residual preserved.: `docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md`
 - Read-only reproducible provenance generator; no campaigns/mutations or filesystem-copy repairs.: `docs/reviews/probes/r046_r4_provenance.py`
 - Machine-generated203-file export/archive/livecopy hash provenance; byte equality false, CRLF observation separate.: `docs/reviews/probes/r046_r4_snapshot_manifest.json`
 - Actual child R4 publication checks and snapshot bounds; no historical recertification.: `docs/reviews/probes/r046_r4_worker_receipts.json`
 - R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-047.json`
 - Separate option A local acceptance-disposition seed; R2 inherited independent proof, no source/runtime/FREEZE or historical recertification.: `CVF_SESSION/authority/CCMAI-RUNTIME-048.json`
+- Bounded A acceptance contract at inherited REVIEW; no new runtime or FREEZE authority.: `docs/work_orders/CCMAI_RUNTIME_048.md`
+- R048 independent local acceptance review record, original Claude source and preserved historical limits.: `CVF_SESSION/tranches/CCMAI-RUNTIME-048.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

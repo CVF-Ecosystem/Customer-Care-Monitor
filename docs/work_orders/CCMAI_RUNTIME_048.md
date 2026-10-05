@@ -1,0 +1,17 @@
+# CCMAI-RUNTIME-048 — Option A bounded local finalizer acceptance
+
+Status: REVIEW_PENDING
+
+Date: 2026-10-05. Risk ceiling R2. Seed `CVF_SESSION/authority/CCMAI-RUNTIME-048.json` committed at 2e3977833cb48a8fd3005c36e55c94838fff5c06 before activation. [Owner-delegated A decision](../reviews/CCMAI_RUNTIME_046_AUDIT_AND_OPTION_A_DECISION_2026-10-05.md) authorizes separate evidence-contract disposition, with no source or runtime change.
+
+## Inherited phase and independent roles
+
+INTAKE -> DESIGN -> SPEC -> WORK_ORDER trace in seed/handoff. Enter earliest inherited REVIEW: original Claude BUILD91da0e88118b76a68031f432da50521fe6a341b7 and independent R2 source observations plus R047 corrections are complete. No new implementation BUILD. Claude remains inherited product worker; Codex authors the acceptance authority and independently reviews that source, separately from product implementation. Codex owns acceptance metadata commit only, no worker/source repair.
+
+## Acceptance contract
+
+Preserve original FL-01..06 behavior. Formal bounded local acceptance may use exact-R2 independent runtime/mutation/restoration and isolation/cleanup observations, corroborating recovered R3 logs and independently accepted R4 factual corrections. For this local acceptance only, historical exact-archive worker execution and missing historical worker publication/isolation/cleanup cease to be acceptance prerequisites. Permanently retain NOT MET/NOT VERIFIED history; do not retroactively certify any failed receipt, raw-driver parity, global engine safety, race/full suites, hosted/live readiness or AI governance.
+
+Independent reviewer verifies unchanged exact product/test tree, inherited references/audit coherence, explicit A delegation/seed chronology, allowed paths and truthful limits. May record qualified REVIEW_PASS for R048 and original R046 under this separate contract and synchronize original SPEC/order/session/status/catalog. Source/tests/dependencies/tooling/workflows/old evidence/seeds protected. New review report/receipt under docs/reviews permitted as normal review records. Commit all artifacts and required gates before acceptance announcement.
+
+Publication: doctor, gate46, default/PR/exact-staged gates, PS5.1/7 catalog, docs build after final Markdown and diff check. No new runtime/mutants/provider/channel/config/credential/external network/persistent DB/customer data/parent/push/merge/deployment/FREEZE. Review PASS is distinct from closure; next separately assess closure authority. Accounts parked and prior dispositions preserved.

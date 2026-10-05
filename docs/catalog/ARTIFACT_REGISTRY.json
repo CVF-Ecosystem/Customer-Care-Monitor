@@ -686,9 +686,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R047 REVIEW_PASS; owner-delegated audit selected R046 option A. Formal bounded local acceptance disposition next; missing-history limits preserved, no runtime or FREEZE."
+      "description": "R048 option A bounded local acceptance REVIEW_PENDING; inherited independent R2 proof, historical limits preserved; no new BUILD/runtime/FREEZE."
     },
     {
       "id": "truth-implementation-status",
@@ -1256,6 +1256,27 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-048.json",
       "status": "ACTIVE",
       "description": "Separate option A local acceptance-disposition seed; R2 inherited independent proof, no source/runtime/FREEZE or historical recertification."
+    },
+    {
+      "id": "runtime047-prior-acceptance-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Historical R047 delegated correction/audit handoff before R048 option A acceptance; prior evidence preserved."
+    },
+    {
+      "id": "runtime048-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-048.json",
+      "status": "ACTIVE",
+      "description": "R048 independent local acceptance review record, original Claude source and preserved historical limits."
+    },
+    {
+      "id": "runtime048-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_048.md",
+      "status": "ACTIVE",
+      "description": "Bounded A acceptance contract at inherited REVIEW; no new runtime or FREEZE authority."
     }
   ]
 }
