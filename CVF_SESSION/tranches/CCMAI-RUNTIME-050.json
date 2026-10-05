@@ -59,7 +59,9 @@
     "docs/reviews/probes/r050_independent_summary.json",
     "docs/reviews/probes/r050_independent_campaign.ps1",
     "docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md",
-    "docs/reviews/probes/r051_independent_summary.json"
+    "docs/reviews/probes/r051_independent_summary.json",
+    "docs/reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/probes/r051_r2_independent_summary.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -127,14 +129,15 @@
     "R050-R1-03"
   ],
   "openReviewFindings": [
-    "R050-R1-02",
     "R050-R1-03"
   ],
-  "scopeAmendmentRequired": "Separate R051 authority granted and exact repair independently CHANGES_REQUIRED; RP-01/02 settled, residual RP-03/04 require same-scope repair round2; original R050 paths unchanged",
+  "scopeAmendmentRequired": "Separate R051 scope remains unchanged; tests and behavioral detector settled, RP-04 residual evidence/harness open; REVIEW_COST_ESCALATION_REQUIRED before third repair",
   "repairRound": 0,
   "delegatedRepairTranche": "CCMAI-RUNTIME-051",
   "settledReviewFindings": [
-    "R050-R1-01"
+    "R050-R1-01",
+    "R050-R1-02"
   ],
-  "delegatedRepairCommit": "a4b378ae036ad767728fb2e0655559e9cf750b47"
+  "delegatedRepairCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "delegatedRepairRound": 2
 }

@@ -1,4 +1,4 @@
-﻿# Project Documentation Index
+# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R051 independent CHANGES_REQUIRED handoff; same-scope repair round2, production and historical packets protected.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md`
+- R051 round2 independent CHANGES_REQUIRED; residual RP-04 and cost escalation before third repair, no BUILD dispatched.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -186,22 +186,25 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Readonly exact-source cached offline/internal disposable independent campaign runner, no governance/provider proof.: `docs/reviews/probes/r050_independent_campaign.ps1`
 - R050 independent REVIEW CHANGES_REQUIRED, three findings; synthetic application proof only.: `docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md`
 - Exact-source independent test/command/hash/isolation/cleanup and publication receipt; one ownership test failure retained.: `docs/reviews/probes/r050_independent_summary.json`
-- R050 CHANGES_REQUIRED; delegated R051 fixture/counter portions settled, persistence and mutation/receipt findings remain open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-050.json`
+- R050 CHANGES_REQUIRED for residual R050-R1-03 receipt/harness; other findings settled through R051; cost escalation before third repair.: `CVF_SESSION/tranches/CCMAI-RUNTIME-050.json`
 - R050 LP-01..08 intended contract; submitted BUILD independently CHANGES_REQUIRED, not full S2 governance.: `docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md`
-- R050 CHANGES_REQUIRED; delegated R051 fixture/counter portions settled, persistence and mutation/receipt findings remain open.: `docs/work_orders/CCMAI_RUNTIME_050.md`
+- R050 CHANGES_REQUIRED for residual R050-R1-03 receipt/harness; other findings settled through R051; cost escalation before third repair.: `docs/work_orders/CCMAI_RUNTIME_050.md`
 - Separate immutable R051 test/evidence repair scope for R050-R1-01..03; ownership fixture path granted, original R050 seed preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-051.json`
 - Independent exact committed archive campaign; internal offline MySQL, readonly cache and named anonymous-volume verification.: `docs/reviews/probes/r051_independent_campaign.ps1`
 - Independent exact R051 re-review CHANGES_REQUIRED; RP-01/02 settled, three consolidated residual findings.: `docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md`
 - Exact repair independent42/98 allPASS; source manifest, worker audit, named resource cleanup and publication checks.: `docs/reviews/probes/r051_independent_summary.json`
 - Isolated disposable runner for R051 round 2 test campaign, anonymous-volume check, and ordering mutation testing.: `docs/reviews/probes/r051_r2_campaign_runner.ps1`
+- Exact round2 committed archive independent regression on cached internal/offline disposable MySQL with named volume cleanup.: `docs/reviews/probes/r051_r2_independent_campaign.ps1`
+- Independent round2 exact repair review CHANGES_REQUIRED; behavioral detector/persistence accepted, residual receipt/harness and cost escalation.: `docs/reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md`
+- Independent42/98 allPASS, exact204-file manifest, retained worker mutation audit and named cleanup/publication observations.: `docs/reviews/probes/r051_r2_independent_summary.json`
 - Worker R051 round 2 repair report resolving findings R051-R1-01..03 with persistent-state assertions, notification traps, and ordering mutation.: `docs/reviews/ANALYZER_LAZY_PROVIDER_R051_R2_REPAIR_2026-10-05.md`
 - Machine-verifiable receipt for R051 round 2 test execution, ordering mutation kill, and anonymous volume teardown.: `docs/reviews/probes/r051_r2_worker_receipt.json`
-- R051 CHANGES_REQUIRED: RP-01/02 settled, three consolidated residual findings; same-scope repair round2 next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-051.json`
+- R051 CHANGES_REQUIRED after round2; RP-01/02/03 settled, RP-04 residual; REVIEW_COST_ESCALATION_REQUIRED before third repair.: `CVF_SESSION/tranches/CCMAI-RUNTIME-051.json`
 - Isolated disposable runner for R051 test repair campaign and mutation testing.: `docs/reviews/probes/r050_r1_campaign_runner.ps1`
 - Historical worker R051 submission; tests pass, mutation BUILD_ERROR and incomplete receipt independently rejected.: `docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md`
 - Historical worker receipt; command hashes verified, mutation build failure and volume observation gap retained.: `docs/reviews/probes/r050_r1_worker_receipt.json`
 - R051 RP-01..04 test/evidence repair acceptance inherits unchanged LP-01..08, production preserved.: `docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md`
-- R051 CHANGES_REQUIRED: RP-01/02 settled, three consolidated residual findings; same-scope repair round2 next.: `docs/work_orders/CCMAI_RUNTIME_051.md`
+- R051 CHANGES_REQUIRED after round2; RP-01/02/03 settled, RP-04 residual; REVIEW_COST_ESCALATION_REQUIRED before third repair.: `docs/work_orders/CCMAI_RUNTIME_051.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

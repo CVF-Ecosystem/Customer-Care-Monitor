@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-051 — Consolidated R050 R1 test/evidence repair
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-05. R2; independent Claude REPAIR_WORKER/BUILD commit steward -> Codex REVIEWER. Immutable separate seed committed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 before activation. [Repair SPEC](../specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md), [R050 review](../reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md). Owner next and standing bounded work-order authority grant the explicitly named additional test path; original R050 seed/record paths unchanged. R050 stays CHANGES_REQUIRED pending review.
 
@@ -25,3 +25,7 @@ Stop/return on outside path/effect, production drift, assertion weakening, faile
 ## Independent review return
 
 Exact repair a4b378ae036ad767728fb2e0655559e9cf750b47 independently CHANGES_REQUIRED; [review](../reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md). RP-01/02 settled; R051-R1-01..03 consolidates residual RP-03/04. Original planning paragraphs are before-edit requirements, not current BUILD status. Same-scope Claude repair round2 under unchanged seed, committed BUILD acknowledgment/preflight before edits, then exact REVIEW_PENDING; no reviewer source/test edit or FREEZE.
+
+## Round2 independent return and cost escalation
+
+[Round2 re-review](../reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md): exact repair145bd411 independently42/98 allPASS; RP-01/02/03 and behavioral detector settled, residual RP-04 R051-R2-01 open. REVIEW_COST_ESCALATION_REQUIRED before third repair; no automatic third BUILD. ORCHESTRATOR cost disposition next under AGENTS rule. Earlier round2 dispatch prose is historical; original seed/acceptance contract/source/tests unchanged.

@@ -50,7 +50,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R051 round 2 repair handback (2026-10-05)
+## Current R051 round2 independent review return (2026-10-05)
+
+CCMAI-RUNTIME-051 CHANGES_REQUIRED after Codex independent round2 re-review of exact repair145bd41109c1e3ac3fb1a85f261c61f668b2fe4d: RP-01/02/03 and behavioral ordering detector settled, residual R051-R2-01 / RP-04 receipt/harness requirements remain open. REVIEW_COST_ESCALATION_REQUIRED before third repair; ORCHESTRATOR next records governed cost disposition, no automatic third BUILD. R050 remains CHANGES_REQUIRED for R050-R1-03. Production727d3229338e9b29c749612677a08b7fd1c65428 and original seeds unchanged; no product/test repair/provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS. Independent42/98 allPASS. Report docs/reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md; receipt docs/reviews/probes/r051_r2_independent_summary.json. No third BUILD; historical worker claims retained below.
+
+## Historical R051 round 2 repair handback (2026-10-05)
 
 CCMAI-RUNTIME-051 REVIEW_PENDING (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): test repair commit `145bd41109c1e3ac3fb1a85f261c61f668b2fe4d` consolidates findings R051-R1-01..03 (RP-03/RP-04). Ordering mutation killed behaviorally via scoped insertion in isolated copy without build-fail; truthful git archive receipt with captured/verified anonymous volume absence; error-checked count queries, notifier traps, and stored run/job reloads added to initialization tests. Campaign 42 suites, 98 completed events, 98 PASS, 0 FAIL/SKIP. Handed to independent Codex REVIEWER; no self-approval or FREEZE. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 remain untouched; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
 

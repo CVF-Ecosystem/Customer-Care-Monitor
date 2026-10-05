@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R051 independent CHANGES_REQUIRED handoff; same-scope repair round2, production and historical packets protected."
+      "description": "R051 round2 independent CHANGES_REQUIRED; residual RP-04 and cost escalation before third repair, no BUILD dispatched."
     },
     {
       "id": "truth-implementation-status",
@@ -1374,14 +1374,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_050.md",
       "status": "ACTIVE",
-      "description": "R050 CHANGES_REQUIRED; delegated R051 fixture/counter portions settled, persistence and mutation/receipt findings remain open."
+      "description": "R050 CHANGES_REQUIRED for residual R050-R1-03 receipt/harness; other findings settled through R051; cost escalation before third repair."
     },
     {
       "id": "runtime050-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
       "status": "ACTIVE",
-      "description": "R050 CHANGES_REQUIRED; delegated R051 fixture/counter portions settled, persistence and mutation/receipt findings remain open."
+      "description": "R050 CHANGES_REQUIRED for residual R050-R1-03 receipt/harness; other findings settled through R051; cost escalation before third repair."
     },
     {
       "id": "runtime050-independent-review",
@@ -1430,14 +1430,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_051.md",
       "status": "ACTIVE",
-      "description": "R051 CHANGES_REQUIRED: RP-01/02 settled, three consolidated residual findings; same-scope repair round2 next."
+      "description": "R051 CHANGES_REQUIRED after round2; RP-01/02/03 settled, RP-04 residual; REVIEW_COST_ESCALATION_REQUIRED before third repair."
     },
     {
       "id": "runtime051-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
       "status": "ACTIVE",
-      "description": "R051 CHANGES_REQUIRED: RP-01/02 settled, three consolidated residual findings; same-scope repair round2 next."
+      "description": "R051 CHANGES_REQUIRED after round2; RP-01/02/03 settled, RP-04 residual; REVIEW_COST_ESCALATION_REQUIRED before third repair."
     },
     {
       "id": "runtime051-repair-evidence",
@@ -1501,6 +1501,27 @@
       "path": "docs/reviews/probes/r051_r2_worker_receipt.json",
       "status": "ACTIVE",
       "description": "Machine-verifiable receipt for R051 round 2 test execution, ordering mutation kill, and anonymous volume teardown."
+    },
+    {
+      "id": "runtime051-r2-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Independent round2 exact repair review CHANGES_REQUIRED; behavioral detector/persistence accepted, residual receipt/harness and cost escalation."
+    },
+    {
+      "id": "runtime051-r2-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r2_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent42/98 allPASS, exact204-file manifest, retained worker mutation audit and named cleanup/publication observations."
+    },
+    {
+      "id": "runtime051-r2-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r2_independent_campaign.ps1",
+      "status": "ACTIVE",
+      "description": "Exact round2 committed archive independent regression on cached internal/offline disposable MySQL with named volume cleanup."
     }
   ]
 }
