@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R047 metadata REVIEW_PASS; R046 acceptance pending owner A/B contract decision. No new BUILD/runtime/waiver/FREEZE; accounts parked."
+      "description": "R047 REVIEW_PASS; owner-delegated audit selected R046 option A. Formal bounded local acceptance disposition next; missing-history limits preserved, no runtime or FREEZE."
     },
     {
       "id": "truth-implementation-status",
@@ -1220,7 +1220,35 @@
       "family": "continuity",
       "path": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json",
       "status": "ACTIVE",
-      "description": "Owner contract decision REQUIRED, no option selected; R046 CHANGES_REQUIRED and R047 REVIEW_PASS preserved."
+      "description": "R046 option A selected after explicit owner audit-and-select delegation; formal acceptance pending, original proof limits preserved."
+    },
+    {
+      "id": "runtime046-option-a-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json",
+      "status": "ACTIVE",
+      "description": "Explicit owner-delegated A selection; historical limits retained, no automatic acceptance/FREEZE."
+    },
+    {
+      "id": "runtime046-choice-audit-report",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_AUDIT_AND_OPTION_A_DECISION_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Audit and option A choice based on recovered exact-R2 reviewer proof; formal acceptance disposition next."
+    },
+    {
+      "id": "runtime046-choice-audit-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_residual_choice_audit.py",
+      "status": "ACTIVE",
+      "description": "Read-only audit of declared reviewer logs and restored exports; no runtime replay."
+    },
+    {
+      "id": "runtime046-choice-audit-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r046_residual_choice_audit.json",
+      "status": "ACTIVE",
+      "description": "Verified16 reviewer raw-log digests/counts/names, two203-file restored exports and backend tree."
     }
   ]
 }

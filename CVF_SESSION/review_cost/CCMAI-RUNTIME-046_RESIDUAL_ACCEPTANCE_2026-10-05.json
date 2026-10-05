@@ -3,8 +3,8 @@
   "trancheId": "CCMAI-RUNTIME-046",
   "date": "2026-10-05",
   "decisionRole": "Codex ORCHESTRATOR",
-  "status": "OWNER_CONTRACT_DECISION_REQUIRED",
-  "decision": null,
+  "status": "OPTION_A_SELECTED_BY_OWNER_DELEGATED_AUDIT",
+  "decision": "A",
   "recommendedOption": "A",
   "authorizingContinuation": "Owner said tiếp after R047 independent review; assessment only, no implicit acceptance waiver.",
   "productReferenceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
@@ -96,5 +96,14 @@
       ],
       "note": "Receipt finalized/restaged; gate rerun before commit."
     }
-  }
+  },
+  "delegatedOwnerInstruction": "audit và chọn",
+  "decisionAuthority": "CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json",
+  "selectionHistory": [
+    {
+      "priorStatus": "OWNER_CONTRACT_DECISION_REQUIRED",
+      "selection": "A",
+      "reason": "Explicit owner audit-and-select delegation; read-only exact R2 proof audit passes."
+    }
+  ]
 }
