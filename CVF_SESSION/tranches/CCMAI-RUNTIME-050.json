@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-050",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/analyzer_provider_initialization_test.go",
+    "backend/engine/analyzer_f06_r1_test.go",
+    "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
+    "docs/work_orders/CCMAI_RUNTIME_050.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "semantic_auto_skip",
+    "budget_or_policy_gate",
+    "provider_selection_or_fallback_change"
+  ],
+  "claimScope": "Only application provider initialization ordering after existing source preparation on synthetic disposable local fixtures. No CVF runtime governance/provider parity/full S2 or live/hosted readiness claim. Preserve finalizer/ownership/checkpoint contracts.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_050.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "1008ab41f0693e2814cd06dfdb0fed98273a1167",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "NOT_REVIEWED",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "implementationStarted": false,
+  "planningPublication": {
+    "doctor": "PASS WITH NOTE25/1",
+    "gateUnits": {
+      "tests": 46,
+      "exit": 0,
+      "seconds": 42.467
+    },
+    "seedFinalDocs": {
+      "exit": 0,
+      "seconds": 32.27
+    },
+    "activationDocs": {
+      "exit": 0,
+      "seconds": 18.81
+    },
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": "PASS7/7",
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "sourceTestsAndImmutableSeeds": "UNCHANGED",
+    "runtimeCampaigns": 0,
+    "status": "FINAL_PLANNING_GATES_PASS",
+    "stagedPreflight": {
+      "base": "HEAD",
+      "exit": 0,
+      "passed": 7,
+      "executed": 7,
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+        "docs/roadmaps/README.md",
+        "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
+        "docs/work_orders/CCMAI_RUNTIME_050.md"
+      ],
+      "note": "Publication record restaged; same gate repeated before commit."
+    },
+    "stagedDiffCheck": "PASS"
+  }
+}

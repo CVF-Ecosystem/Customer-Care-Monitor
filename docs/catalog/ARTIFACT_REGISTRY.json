@@ -686,9 +686,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
+      "description": "R050 DISPATCH_READY for Claude application source-first provider initialization; independent Codex review after worker handback."
     },
     {
       "id": "truth-implementation-status",
@@ -1354,6 +1354,34 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-050.json",
       "status": "ACTIVE",
       "description": "Immutable dispatcher seed for Claude R050 application ordering work; commit before BUILD."
+    },
+    {
+      "id": "historical-finalizer-closure-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Historical R049 bounded local closure and R050 seed planning acknowledgment; original limits retained."
+    },
+    {
+      "id": "runtime050-spec",
+      "family": "continuity",
+      "path": "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "R050 LP-01..08 application initialization-order contract, SPEC_READY; not full S2 governance."
+    },
+    {
+      "id": "runtime050-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_050.md",
+      "status": "ACTIVE",
+      "description": "R050 DISPATCH_READY, Claude bounded local BUILD then independent Codex review."
+    },
+    {
+      "id": "runtime050-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
+      "status": "ACTIVE",
+      "description": "R050 DISPATCH_READY/WORK_ORDER, immutable seed before worker BUILD."
     }
   ]
 }

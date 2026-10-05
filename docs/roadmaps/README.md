@@ -1,5 +1,6 @@
-﻿# Roadmaps
+# Roadmaps
 
-Store project-governed roadmap artifacts here. The governed catalog index points to this family; active roadmap proposals are listed below.
+Project roadmap intentions are distinct from committed implementation/review evidence.
 
-- [Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm](AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md) — S1 còn IN_PROGRESS; F01–F08 là backlog OPEN được owner chấp nhận sau review mã nguồn ngày 2026-09-30. F08 đã có [SPEC](../specs/RUNTIME_CI_DB_TEST_GATE_F08_2026-09-30.md) và [work order R019](../work_orders/CCMAI_RUNTIME_019.md) cho Claude BUILD; các finding còn lại cần work order/review riêng. S2–S7 chưa bắt đầu.
+- [CSKH runtime roadmap](AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md): S1 remains IN_PROGRESS; F01–F08 have separately reviewed local remediation scopes, global F02/live remains OPEN. [Current R050 audit](../reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md) selects [source-first provider initialization work order](../work_orders/CCMAI_RUNTIME_050.md), DISPATCH_READY; no BUILD yet. This preparatory S2 application seam does not implement full S2 governance or start S3–S7. Prior bounded closures and evidence limits remain intact; Facebook/Zalo OA accounts parked.
+- [UI/UX roadmap](UI_UX_REDESIGN_ROADMAP_2026-09-27.md): screen acceptance applies only to recorded local scopes; full workflow/human review/live/production readiness remains separate.

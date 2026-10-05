@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-049 and bounded local R046/R047/R048 FROZEN / FREEZE under separate seed0bcad5c1b1072d2ae70b13f99097e5f85d97cee8 at accepted product91da0e88118b76a68031f432da50521fe6a341b7; option A FL-01..06, factual corrections and qualified acceptance only. Original failed reviews/seeds/packets and historical exact-archive worker execution NOT MET/NOT VERIFIED plus missing publication/isolation/cleanup proof permanently retained. ORCHESTRATOR next audits remaining local roadmap and selects a bounded next work order; no new BUILD/runtime/live/provider/channel/config/credential/network/persistent-data/parent/tooling/push/merge/deployment/global-closure/governance/hosted-readiness authority. Facebook/Zalo OA accounts parked; prior dispositions unchanged.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-050 DISPATCH_READY / WORK_ORDER under committed seed1008ab41f0693e2814cd06dfdb0fed98273a1167: Claude IMPLEMENTATION_WORKER/BUILD commit steward next rehydrates, declares and acknowledges BUILD/preflight before changing only lazy provider initialization and authorized tests under LP-01..08. Codex independent reviewer after exact worker handback. No BUILD yet; source-only R050 is preparatory S2 application ordering, no new CVF policy/governance gate or actual provider proof. Cached offline synthetic disposable fixtures only; no real config/credential/provider/channel/network/persistent-data/parent/tooling/push/merge/deployment/FREEZE/live-governance/hosted-readiness authority. R049/prior closures and permanent historical proof gaps preserved; Facebook/Zalo OA accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex CLOSER / SESSION_SYNC_STEWARD / closure-metadata COMMIT_STEWARD; ORCHESTRATOR remaining local roadmap audit next",
-  "roleRoute": "INHERITED_INDEPENDENT_REVIEW_LOCAL_CLOSURE",
+  "activeRole": "Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Claude IMPLEMENTATION_WORKER and BUILD commit steward next; Codex independent REVIEWER after handback",
+  "roleRoute": "CLAUDE_BUILD_CODEX_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-05"
 }

@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-049", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-050", "parked": true} -->
 
 ## Startup Order
 
@@ -50,9 +50,9 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R046 finalizer logging work order (2026-10-04)
+## Current R050 source-first provider work order (2026-10-05)
 
-CCMAI-RUNTIME-049 and bounded local R046/R047/R048 FROZEN / FREEZE under separate seed0bcad5c1b1072d2ae70b13f99097e5f85d97cee8 at accepted product91da0e88118b76a68031f432da50521fe6a341b7; option A FL-01..06, factual corrections and qualified acceptance only. Original failed reviews/seeds/packets and historical exact-archive worker execution NOT MET/NOT VERIFIED plus missing publication/isolation/cleanup proof permanently retained. ORCHESTRATOR next audits remaining local roadmap and selects a bounded next work order; no new BUILD/runtime/live/provider/channel/config/credential/network/persistent-data/parent/tooling/push/merge/deployment/global-closure/governance/hosted-readiness authority. Facebook/Zalo OA accounts parked; prior dispositions unchanged.
+CCMAI-RUNTIME-050 DISPATCH_READY / WORK_ORDER under committed seed1008ab41f0693e2814cd06dfdb0fed98273a1167: Claude IMPLEMENTATION_WORKER/BUILD commit steward next rehydrates, declares and acknowledges BUILD/preflight before changing only lazy provider initialization and authorized tests under LP-01..08. Codex independent reviewer after exact worker handback. No BUILD yet; source-only R050 is preparatory S2 application ordering, no new CVF policy/governance gate or actual provider proof. Cached offline synthetic disposable fixtures only; no real config/credential/provider/channel/network/persistent-data/parent/tooling/push/merge/deployment/FREEZE/live-governance/hosted-readiness authority. R049/prior closures and permanent historical proof gaps preserved; Facebook/Zalo OA accounts parked.
 
 ## Historical R045 local MCP closure (2026-10-04)
 
