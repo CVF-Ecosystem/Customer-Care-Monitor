@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-05",
+  "trancheId": "CCMAI-RUNTIME-048",
+  "reviewer": "Codex",
+  "inheritedProductWorker": "Claude",
+  "sourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "ownerDecisionCommit": "4774cd14080f0cbb76422f32e0d66320a569644a",
+  "authoritySeedCommit": "2e3977833cb48a8fd3005c36e55c94838fff5c06",
+  "activationCommit": "44c035daf3f4899cbc8f5b1613cf3ed374a871be",
+  "disposition": "REVIEW_PASS",
+  "originalR046Disposition": "REVIEW_PASS",
+  "acceptanceScope": "Option A synthetic local FL-01..06; permanent historical worker proof gaps retained",
+  "freeze": "OPEN",
+  "productionSha256": "4b7477aa12fd6c232e85818960f6ec0f2947548cd6ac24e714568ebff5a90f0b",
+  "testSha256": "06ec2c8d15d6199a679f9daaf0835db1baa7a8a63a35b79df5e9465d90f7c449",
+  "backendTreeOid": "640f3c309746131b2aaace4c2e324f70ea39ab75",
+  "sourceAndTestBytesMatchReference": true,
+  "newBuild": false,
+  "newRuntimeCampaigns": 0,
+  "newMutations": 0,
+  "historicalLimits": [
+    "Original worker exact-archive execution NOT MET/NOT VERIFIED",
+    "Missing original worker publication/isolation/cleanup proof NOT VERIFIED",
+    "R2 build/vet exits and resource operations inherited; empty logs alone do not prove exits"
+  ],
+  "governanceProof": false,
+  "publication": {
+    "status": "FINAL_PUBLICATION_GATES_PASS",
+    "doctor": "PASS WITH NOTE25/1",
+    "seedStageGateUnitSuite": {
+      "exit": 0,
+      "tests": 46,
+      "seconds": 12.598
+    },
+    "seedStageDocs": {
+      "exit": 0,
+      "seconds": 7.24
+    },
+    "activationDocs": {
+      "exit": 0,
+      "seconds": 7.21
+    },
+    "retainedFailures": [
+      {
+        "commands": [
+          "default preflight",
+          "origin/main..HEAD preflight"
+        ],
+        "result": "6/7 FAIL",
+        "error": "CCMAI-RUNTIME-046: invalid status transition CHANGES_REQUIRED -> REVIEW_PASS",
+        "correction": "Record inherited REVIEW_PENDING re-entry under committed R048 activation before qualified REVIEW_PASS; no gate/tooling change."
+      }
+    ],
+    "finalGateUnitSuite": {
+      "exit": 0,
+      "tests": 46,
+      "seconds": 34.42
+    },
+    "finalDocsBeforeHistoryCorrection": {
+      "exit": 0,
+      "seconds": 21.7
+    },
+    "finalDocs": {
+      "exit": 0,
+      "seconds": 19.11
+    },
+    "defaultPreflight": {
+      "exit": 0,
+      "passed": 7,
+      "executed": 7
+    },
+    "prRangePreflight": {
+      "base": "origin/main",
+      "head": "HEAD",
+      "exit": 0,
+      "passed": 7,
+      "executed": 7
+    },
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "protectedSourceTestBackendTreeAndAuthoritySeeds": "PASS",
+    "stagedPreflight": {
+      "base": "HEAD",
+      "exit": 0,
+      "passed": 7,
+      "executed": 7,
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md",
+        "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-048.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_048_OPTION_A_ACCEPTANCE_REVIEW_2026-10-05.md",
+        "docs/reviews/probes/r048_acceptance_receipt.json",
+        "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
+        "docs/work_orders/CCMAI_RUNTIME_046.md",
+        "docs/work_orders/CCMAI_RUNTIME_048.md"
+      ],
+      "note": "Receipt restaged and same final gate repeated before commit."
+    },
+    "stagedDiffCheck": "PASS"
+  }
+}

@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R048 option A bounded local acceptance REVIEW_PENDING; inherited independent R2 proof, historical limits preserved; no new BUILD/runtime/FREEZE."
+      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
     },
     {
       "id": "truth-implementation-status",
@@ -926,21 +926,21 @@
       "family": "continuity",
       "path": "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
+      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
     },
     {
       "id": "runtime046-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_046.md",
       "status": "ACTIVE",
-      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
+      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
     },
     {
       "id": "runtime046-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
       "status": "ACTIVE",
-      "description": "R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked."
+      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
     },
     {
       "id": "runtime046-predecessor-handoff",
@@ -1220,14 +1220,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json",
       "status": "ACTIVE",
-      "description": "R046 option A selected after explicit owner audit-and-select delegation; formal acceptance pending, original proof limits preserved."
+      "description": "R046 option A implemented via R048 qualified local REVIEW_PASS, historical proof limits retained."
     },
     {
       "id": "runtime046-option-a-authority",
       "family": "continuity",
       "path": "CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json",
       "status": "ACTIVE",
-      "description": "Explicit owner-delegated A selection; historical limits retained, no automatic acceptance/FREEZE."
+      "description": "Owner-delegated A evidence contract applied by separate R048 qualified local acceptance; original historical limits preserved; no FREEZE authority."
     },
     {
       "id": "runtime046-choice-audit-report",
@@ -1269,14 +1269,28 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-048.json",
       "status": "ACTIVE",
-      "description": "R048 independent local acceptance review record, original Claude source and preserved historical limits."
+      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
     },
     {
       "id": "runtime048-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_048.md",
       "status": "ACTIVE",
-      "description": "Bounded A acceptance contract at inherited REVIEW; no new runtime or FREEZE authority."
+      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
+    },
+    {
+      "id": "runtime048-acceptance-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_048_OPTION_A_ACCEPTANCE_REVIEW_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Independent bounded local FL-01..06 acceptance under explicit A evidence basis; historical worker proof not certified."
+    },
+    {
+      "id": "runtime048-acceptance-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r048_acceptance_receipt.json",
+      "status": "ACTIVE",
+      "description": "Source identity, inherited evidence and final acceptance-publication receipts; no new runtime or FREEZE."
     }
   ]
 }

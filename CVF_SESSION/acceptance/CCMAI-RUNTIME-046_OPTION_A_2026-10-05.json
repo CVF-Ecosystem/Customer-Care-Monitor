@@ -7,7 +7,7 @@
   "ownerInstruction": "audit và chọn",
   "decisionRole": "Codex ORCHESTRATOR",
   "decision": "A",
-  "status": "SELECTED_PENDING_FORMAL_ACCEPTANCE_DISPOSITION",
+  "status": "APPLIED_BY_R048_QUALIFIED_LOCAL_ACCEPTANCE",
   "riskCeiling": "R2",
   "sourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
   "evidenceBasis": [
@@ -89,5 +89,7 @@
       ],
       "note": "Decision receipt restaged and final gate repeated before commit."
     }
-  }
+  },
+  "formalAcceptanceTranche": "CCMAI-RUNTIME-048",
+  "formalAcceptanceReview": "docs/reviews/CCMAI_RUNTIME_048_OPTION_A_ACCEPTANCE_REVIEW_2026-10-05.md"
 }

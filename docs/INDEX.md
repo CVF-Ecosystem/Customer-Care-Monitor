@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R048 option A bounded local acceptance REVIEW_PENDING; inherited independent R2 proof, historical limits preserved; no new BUILD/runtime/FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md`
+- R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -126,7 +126,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R046 R2 authority for bounded finalizer driver-error containment; seed precedes activation.: `CVF_SESSION/authority/CCMAI-RUNTIME-046.json`
 - Independent exact-BUILD R046 baseline/mutation/restoration/boundary probes and cleanup; synthetic only.: `docs/reviews/probes/r046_independent_summary.json`
 - Independent exact-BUILD R046 CHANGES_REQUIRED: boundary detector and worker receipts; product source unchanged.: `docs/reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md`
-- Explicit owner-delegated A selection; historical limits retained, no automatic acceptance/FREEZE.: `CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json`
+- Owner-delegated A evidence contract applied by separate R048 qualified local acceptance; original historical limits preserved; no FREEZE authority.: `CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json`
 - Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
 - Historical R046 handoff before separately authorized subagent execution R047; R046 acceptance remains open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
 - R046 R1 receipt/snapshot audit: M02 calculated hash mismatch and assertion attribution limits.: `docs/reviews/probes/r046_r1_receipt_audit.json`
@@ -151,12 +151,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Recorded one-pass metadata-only R4 cost decision; zero runtime replay, no source or acceptance expansion.: `CVF_SESSION/review_cost/CCMAI-RUNTIME-046_R4_2026-10-05.json`
 - Consolidated R3-01..03 disclosure/publication correction contract for Claude; independent review retained.: `docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md`
 - R046 machine receipts: source SHA256 hashes, test counts, command results and detector probes.: `docs/reviews/probes/r046_worker_receipts.json`
-- R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
+- R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-046.json`
 - Reviewable owner options: bounded local evidence acceptance with retained limits, or new prospective exact-archive proof; no decision granted.: `docs/reviews/CCMAI_RUNTIME_046_RESIDUAL_ACCEPTANCE_ASSESSMENT_2026-10-05.md`
-- R046 option A selected after explicit owner audit-and-select delegation; formal acceptance pending, original proof limits preserved.: `CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json`
+- R046 option A implemented via R048 qualified local REVIEW_PASS, historical proof limits retained.: `CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json`
 - Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive.: `docs/reviews/probes/r046_transaction_boundary_probe_test.go`
-- R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
-- R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/work_orders/CCMAI_RUNTIME_046.md`
+- R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
+- R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `docs/work_orders/CCMAI_RUNTIME_046.md`
 - Separate user-authorized subagent execution seed for R046 R4 metadata corrections; original R046 seed and exact-archive limits preserved. Seed stage only; no BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-047.json`
 - Independent manifest/blob/path verification and reviewer publication evidence; no runtime or live governance claim.: `docs/reviews/probes/r047_independent_review_receipt.json`
 - Parent independent metadata correction review PASS; original R046 exact-archive/historical-proof acceptance unresolved.: `docs/reviews/CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md`
@@ -167,9 +167,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Machine-generated203-file export/archive/livecopy hash provenance; byte equality false, CRLF observation separate.: `docs/reviews/probes/r046_r4_snapshot_manifest.json`
 - Actual child R4 publication checks and snapshot bounds; no historical recertification.: `docs/reviews/probes/r046_r4_worker_receipts.json`
 - R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-047.json`
+- Source identity, inherited evidence and final acceptance-publication receipts; no new runtime or FREEZE.: `docs/reviews/probes/r048_acceptance_receipt.json`
+- Independent bounded local FL-01..06 acceptance under explicit A evidence basis; historical worker proof not certified.: `docs/reviews/CCMAI_RUNTIME_048_OPTION_A_ACCEPTANCE_REVIEW_2026-10-05.md`
 - Separate option A local acceptance-disposition seed; R2 inherited independent proof, no source/runtime/FREEZE or historical recertification.: `CVF_SESSION/authority/CCMAI-RUNTIME-048.json`
-- Bounded A acceptance contract at inherited REVIEW; no new runtime or FREEZE authority.: `docs/work_orders/CCMAI_RUNTIME_048.md`
-- R048 independent local acceptance review record, original Claude source and preserved historical limits.: `CVF_SESSION/tranches/CCMAI-RUNTIME-048.json`
+- R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `docs/work_orders/CCMAI_RUNTIME_048.md`
+- R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-048.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
