@@ -686,9 +686,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
+      "description": "R049 inherited REVIEW_PENDING for separate bounded local finalizer closure; permanent option A evidence limits retained."
     },
     {
       "id": "truth-implementation-status",
@@ -1305,6 +1305,27 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-049.json",
       "status": "ACTIVE",
       "description": "Separate R049 metadata-only local closure authority; commit before activation; original seeds unchanged."
+    },
+    {
+      "id": "historical-finalizer-acceptance-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Historical R048 option A acceptance and R049 seed planning; prior evidence limits retained."
+    },
+    {
+      "id": "runtime049-local-closure-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_049.md",
+      "status": "ACTIVE",
+      "description": "Separate local closure order REVIEW_PENDING; original source/seed/evidence unchanged."
+    },
+    {
+      "id": "runtime049-local-closure-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-049.json",
+      "status": "ACTIVE",
+      "description": "R049 inherited REVIEW_PENDING, metadata-only local closure scope."
     }
   ]
 }
