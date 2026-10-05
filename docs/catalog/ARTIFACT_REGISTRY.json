@@ -1291,6 +1291,20 @@
       "path": "docs/reviews/probes/r048_acceptance_receipt.json",
       "status": "ACTIVE",
       "description": "Source identity, inherited evidence and final acceptance-publication receipts; no new runtime or FREEZE."
+    },
+    {
+      "id": "runtime046-local-closure-authority-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_046_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "R046/R047/R048 eligible for separate bounded local closure; assessment only, permanent option A proof limits retained."
+    },
+    {
+      "id": "runtime049-local-closure-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-049.json",
+      "status": "ACTIVE",
+      "description": "Separate R049 metadata-only local closure authority; commit before activation; original seeds unchanged."
     }
   ]
 }

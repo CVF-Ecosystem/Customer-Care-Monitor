@@ -126,6 +126,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R046 R2 authority for bounded finalizer driver-error containment; seed precedes activation.: `CVF_SESSION/authority/CCMAI-RUNTIME-046.json`
 - Independent exact-BUILD R046 baseline/mutation/restoration/boundary probes and cleanup; synthetic only.: `docs/reviews/probes/r046_independent_summary.json`
 - Independent exact-BUILD R046 CHANGES_REQUIRED: boundary detector and worker receipts; product source unchanged.: `docs/reviews/CCMAI_RUNTIME_046_INDEPENDENT_REVIEW_2026-10-04.md`
+- R046/R047/R048 eligible for separate bounded local closure; assessment only, permanent option A proof limits retained.: `docs/reviews/CCMAI_RUNTIME_046_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-05.md`
 - Owner-delegated A evidence contract applied by separate R048 qualified local acceptance; original historical limits preserved; no FREEZE authority.: `CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json`
 - Historical R045/R044 scoped local closure and R046 intake; limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md`
 - Historical R046 handoff before separately authorized subagent execution R047; R046 acceptance remains open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md`
@@ -172,6 +173,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate option A local acceptance-disposition seed; R2 inherited independent proof, no source/runtime/FREEZE or historical recertification.: `CVF_SESSION/authority/CCMAI-RUNTIME-048.json`
 - R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `docs/work_orders/CCMAI_RUNTIME_048.md`
 - R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-048.json`
+- Separate R049 metadata-only local closure authority; commit before activation; original seeds unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-049.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
