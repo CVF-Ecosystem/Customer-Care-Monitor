@@ -29,3 +29,7 @@ Exact repair a4b378ae036ad767728fb2e0655559e9cf750b47 independently CHANGES_REQU
 ## Round2 independent return and cost escalation
 
 [Round2 re-review](../reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md): exact repair145bd411 independently42/98 allPASS; RP-01/02/03 and behavioral detector settled, residual RP-04 R051-R2-01 open. REVIEW_COST_ESCALATION_REQUIRED before third repair; no automatic third BUILD. ORCHESTRATOR cost disposition next under AGENTS rule. Earlier round2 dispatch prose is historical; original seed/acceptance contract/source/tests unchanged.
+
+## Final bounded R3 evidence-only dispatch (2026-10-06)
+
+[Recorded cost disposition/execution checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md), after committed escalation/owner next: ONE_BOUNDED_EVIDENCE_REPAIR_AUTHORIZED / NOT_STARTED. Status CHANGES_REQUIRED, acceptance remains open. Claude worker/BUILD stewardship, independent Codex review and immutable seed unchanged. Only new r051_r3 probes/report/current continuity; canonical production/tests at145bd411, old packets and seeds protected. One campaign/four Go invocations maximum, no automatic retry/fourth repair. Accepted98-event review inherited. Worker commits BUILD acknowledgment/preflight first, then repairs R051-R2-01 identities/manifest/publication/isolated commands/guaranteed restoration, commits exact evidence set and returns REVIEW_PENDING with separate round3EvidenceCommit. No acceptance waiver or new product/test BUILD.

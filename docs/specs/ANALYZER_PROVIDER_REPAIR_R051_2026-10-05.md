@@ -16,3 +16,5 @@ Canonical analyzer.go, finalizer/source-version/provider implementation, F06-R1/
 Current result: [independent R051 review](../reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md); acceptance contract above unchanged. Three consolidated findings for same-scope round2.
 
 Latest result: [round2 independent review](../reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md); no third BUILD dispatched, unchanged RP acceptance contract. Prior round1 result is historical.
+
+Current dispatch: [cost disposition](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md) authorizes one evidence-only R3, not started. Original RP contract unchanged; accepted RP-01/02/03/detector inherited, source/tests protected. No automatic fourth repair; Codex independent review still required.

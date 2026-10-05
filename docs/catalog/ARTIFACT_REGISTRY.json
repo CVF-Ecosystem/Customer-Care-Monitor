@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R051 round2 independent CHANGES_REQUIRED; residual RP-04 and cost escalation before third repair, no BUILD dispatched."
+      "description": "R051 CHANGES_REQUIRED; recorded cost disposition authorizes one evidence-only R3, worker BUILD acknowledgment next."
     },
     {
       "id": "truth-implementation-status",
@@ -1374,14 +1374,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_050.md",
       "status": "ACTIVE",
-      "description": "R050 CHANGES_REQUIRED for residual R050-R1-03 receipt/harness; other findings settled through R051; cost escalation before third repair."
+      "description": "R050 CHANGES_REQUIRED for RP-04 evidence only; R051 final bounded evidence repair authorized, no acceptance yet."
     },
     {
       "id": "runtime050-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
       "status": "ACTIVE",
-      "description": "R050 CHANGES_REQUIRED for residual R050-R1-03 receipt/harness; other findings settled through R051; cost escalation before third repair."
+      "description": "R050 CHANGES_REQUIRED for RP-04 evidence only; R051 final bounded evidence repair authorized, no acceptance yet."
     },
     {
       "id": "runtime050-independent-review",
@@ -1430,14 +1430,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_051.md",
       "status": "ACTIVE",
-      "description": "R051 CHANGES_REQUIRED after round2; RP-01/02/03 settled, RP-04 residual; REVIEW_COST_ESCALATION_REQUIRED before third repair."
+      "description": "R051 CHANGES_REQUIRED; final narrowed RP-04 evidence repair authorized/not started, accepted source/tests/old packets protected."
     },
     {
       "id": "runtime051-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
       "status": "ACTIVE",
-      "description": "R051 CHANGES_REQUIRED after round2; RP-01/02/03 settled, RP-04 residual; REVIEW_COST_ESCALATION_REQUIRED before third repair."
+      "description": "R051 CHANGES_REQUIRED; final narrowed RP-04 evidence repair authorized/not started, accepted source/tests/old packets protected."
     },
     {
       "id": "runtime051-repair-evidence",
@@ -1522,6 +1522,13 @@
       "path": "docs/reviews/probes/r051_r2_independent_campaign.ps1",
       "status": "ACTIVE",
       "description": "Exact round2 committed archive independent regression on cached internal/offline disposable MySQL with named volume cleanup."
+    },
+    {
+      "id": "runtime051-review-cost-disposition",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Cost disposition: one bounded evidence-only R3, four Go commands, no automatic retry/fourth repair; unchanged seed and independent reviewer."
     }
   ]
 }

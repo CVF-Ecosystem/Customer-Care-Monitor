@@ -155,11 +155,91 @@
   "nextRepairRound": 3,
   "thirdRepairDispatched": false,
   "reviewCostEscalation": {
-    "status": "REVIEW_COST_ESCALATION_REQUIRED",
+    "status": "DISPOSITION_RECORDED",
     "completedRepairRounds": 2,
     "thirdRepairDispatched": false,
     "rootCause": "Repeated RP-04 receipt/harness requirements; no independent new root cause",
     "ruleSource": "AGENTS.md Governance Latency and Approval Continuity",
-    "next": "ORCHESTRATOR cost disposition before any third BUILD"
+    "next": "Claude evidence-only R3 committed BUILD acknowledgment/preflight under recorded bounded cost disposition; independent Codex review after exact evidence handback",
+    "disposition": "ONE_BOUNDED_EVIDENCE_REPAIR_AUTHORIZED",
+    "decisionEvidence": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
+    "ownerContinuation": "Owner next after ec90a2b plus standing same-scope local orchestration delegation"
+  },
+  "costEscalationHistory": [
+    {
+      "status": "REVIEW_COST_ESCALATION_REQUIRED",
+      "completedRepairRounds": 2,
+      "thirdRepairDispatched": false,
+      "rootCause": "Repeated RP-04 receipt/harness requirements; no independent new root cause",
+      "ruleSource": "AGENTS.md Governance Latency and Approval Continuity",
+      "next": "ORCHESTRATOR cost disposition before any third BUILD"
+    }
+  ],
+  "round3Dispatch": {
+    "status": "AUTHORIZED_NOT_STARTED",
+    "costDisposition": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
+    "worker": "Claude",
+    "buildCommitSteward": "Claude",
+    "independentReviewer": "Codex",
+    "sourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+    "sourceAcknowledgmentCommit": "c228931c35339f56cac0a934394e586082a3f7c1",
+    "canonicalProductionAndTests": "BYTE_PROTECTED",
+    "successorReport": "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+    "successorProbePrefix": "docs/reviews/probes/r051_r3_",
+    "maxNewGoInvocations": 4,
+    "maxCampaigns": 1,
+    "automaticRetries": 0,
+    "automaticFourthRepair": false,
+    "existing98EventReview": "INHERITED_NOT_RERUN",
+    "acceptanceContract": "UNCHANGED_RP_01_04",
+    "beforeEdit": "Committed BUILD acknowledgment/preflight required",
+    "handback": "REVIEW_PENDING with separate round3EvidenceCommit; preserve source buildCommit145bd411"
+  },
+  "round3PlanningPublication": {
+    "status": "FINAL_COST_DISPOSITION_PLANNING_GATES_PASS",
+    "doctor": "PASS WITH NOTE25/1",
+    "newRuntimeCampaigns": 0,
+    "protectedCanonicalSourceTestsSeedsAndPackets": "UNCHANGED",
+    "retainedPlanningAttempt": "Serialization prevalidation caught identical buildInProgress/nextObjective text before any continuity writes; keyed replacement corrected; no partial sync.",
+    "gateUnits": {
+      "tests": 46,
+      "exit": 0,
+      "seconds": 35.96
+    },
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": {
+      "base": "origin/main",
+      "head": "ec90a2b3017a998762fa9134de1198d7460c01a8",
+      "result": "PASS7/7"
+    },
+    "docsBuild": {
+      "exit": 0,
+      "seconds": 21.15
+    },
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "hostedCiObserved": false,
+    "stagedPreflight": {
+      "base": "ec90a2b3017a998762fa9134de1198d7460c01a8",
+      "result": "PASS7/7",
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
+        "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+        "docs/roadmaps/README.md",
+        "docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md",
+        "docs/work_orders/CCMAI_RUNTIME_051.md"
+      ],
+      "note": "Planning receipt restaged; exact staged gate repeated before local commit."
+    },
+    "stagedDiffCheck": "PASS"
   }
 }

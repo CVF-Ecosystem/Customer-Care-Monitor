@@ -139,5 +139,6 @@
     "R050-R1-02"
   ],
   "delegatedRepairCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
-  "delegatedRepairRound": 2
+  "delegatedRepairRound": 2,
+  "delegatedRepairCostDisposition": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md"
 }
