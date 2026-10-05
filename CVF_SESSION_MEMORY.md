@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
 
 ## Startup Order
 
@@ -49,6 +49,10 @@ before BUILD. If continuity surfaces disagree, stop and report
 Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
+
+## Current R051 BUILD acknowledgment (2026-10-05)
+
+CCMAI-RUNTIME-051 BUILD (Claude, 2026-10-05): role transition WORK_ORDER_AUTHOR (Codex) -> REPAIR_WORKER / BUILD COMMIT_STEWARD (Claude) acknowledged in the active handoff before any test/evidence edit; independent Codex REVIEWER next. Seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 verified present at baseCommit and unchanged. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 untouched; R050 remains CHANGES_REQUIRED pending review. Synthetic disposable loopback fixtures only; no live authority. R049 and prior closures unchanged; Facebook/Zalo OA accounts parked.
 
 ## Current R051 test/evidence repair work order (2026-10-05)
 

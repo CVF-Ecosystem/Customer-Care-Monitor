@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-051 DISPATCH_READY / WORK_ORDER under separate committed seeda54cb73007f081fe4bbaa4baa11d28fed4a7d937: Claude REPAIR_WORKER/BUILD commit steward next rehydrates and commits BUILD acknowledgment/preflight before repairing R050-R1-01..03 via ownership fixture, accurate call/item production-path tests and successor machine receipts. Original R050 seed/allowedPaths and canonical production727d3229338e9b29c749612677a08b7fd1c65428 unchanged; R050 remains CHANGES_REQUIRED, no acceptance expansion. RP-01..04 inherit LP-01..08; exact repair REVIEW_PENDING for independent Codex review. No BUILD yet; cached internal/offline disposable synthetic evidence only, no real config/credentials/provider/channel/external network/customer/persistent DB/live runtime/parent/tooling/push/merge/deployment/FREEZE/global F02/CVF governance/hosted readiness. R049/prior dispositions unchanged, Facebook/Zalo OA accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-051 BUILD (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): implement bounded test/evidence repairs for R050-R1-01..03 (RP-01..04) under separate committed seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 across job_run_ownership_test.go, analyzer_provider_initialization_test.go, and successor receipt/evidence. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 remain byte-identical; R050 remains CHANGES_REQUIRED pending review. Handback exact local repair commit REVIEW_PENDING for independent Codex review; no self-approval/FREEZE. Synthetic disposable loopback fixtures only; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Claude REPAIR_WORKER and BUILD commit steward next; Codex independent REVIEWER after handback",
+  "activeRole": "Claude REPAIR_WORKER / BUILD COMMIT_STEWARD (R051 test/evidence repair); independent Codex REVIEWER next, no self-approval",
   "roleRoute": "CLAUDE_REPAIR_CODEX_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-05"
 }
