@@ -4,10 +4,13 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"strings"
 	"sync/atomic"
 	"testing"
 	"time"
+
+	"gorm.io/gorm"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
@@ -16,14 +19,19 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
-// CCMAI-RUNTIME-050 (LP-01..08): source-first application provider initialization.
+// CCMAI-RUNTIME-050 (LP-01..08) & CCMAI-RUNTIME-051 (RP-01..04):
+// source-first application provider initialization and test repair.
 // The Analyzer delays provider settings/key resolution and provider construction until
 // candidate snapshots have been prepared and eligible work requiring inference remains.
 
-// countingProvider wraps an incProvider and counts AnalyzeChat invocations.
+// countingProvider wraps an incProvider and tracks single inference calls, batch inference calls,
+// and processed items distinctly (RP-02 / R050-R1-02).
 type countingProvider struct {
 	*incProvider
-	chatCalls int64
+	singleCalls int64
+	batchCalls  int64
+	itemsCount  int64
+	chatCalls   int64
 }
 
 func newCountingProvider(jobType string) *countingProvider {
@@ -33,13 +41,46 @@ func newCountingProvider(jobType string) *countingProvider {
 }
 
 func (cp *countingProvider) AnalyzeChat(ctx context.Context, systemPrompt, transcript string) (ai.AIResponse, error) {
+	atomic.AddInt64(&cp.singleCalls, 1)
+	atomic.AddInt64(&cp.itemsCount, 1)
 	atomic.AddInt64(&cp.chatCalls, 1)
 	return cp.incProvider.AnalyzeChat(ctx, systemPrompt, transcript)
 }
 
 func (cp *countingProvider) AnalyzeChatBatch(ctx context.Context, systemPrompt string, items []ai.BatchItem) (ai.AIResponse, error) {
-	atomic.AddInt64(&cp.chatCalls, int64(len(items)))
+	atomic.AddInt64(&cp.batchCalls, 1)
+	atomic.AddInt64(&cp.itemsCount, int64(len(items)))
+	atomic.AddInt64(&cp.chatCalls, 1)
 	return cp.incProvider.AnalyzeChatBatch(ctx, systemPrompt, items)
+}
+
+func (cp *countingProvider) totalInferenceCalls() int64 {
+	return atomic.LoadInt64(&cp.singleCalls) + atomic.LoadInt64(&cp.batchCalls)
+}
+
+// trapAISettingsQueries registers a GORM query callback that counts queries targeting app_settings
+// for AI settings (ai_provider, ai_api_key, ai_model, etc.) during getProvider resolution.
+// It returns a pointer to an atomic int64 query counter and unregisters on test cleanup.
+func trapAISettingsQueries(t *testing.T) *int64 {
+	t.Helper()
+	var queriesCount int64
+	callbackName := "trap_ai_settings_" + strings.ReplaceAll(pkg.NewUUID(), "-", "")
+	err := db.DB.Callback().Query().After("gorm:query").Register(callbackName, func(tx *gorm.DB) {
+		sql := tx.Statement.SQL.String()
+		vars := fmt.Sprintf("%v", tx.Statement.Vars)
+		if tx.Statement.Table == "app_settings" || strings.Contains(sql, "app_settings") {
+			if strings.Contains(sql, "ai_") || strings.Contains(vars, "ai_") {
+				atomic.AddInt64(&queriesCount, 1)
+			}
+		}
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Cleanup(func() {
+		db.DB.Callback().Query().Remove(callbackName)
+	})
+	return &queriesCount
 }
 
 // LP-01: Empty channel list, no conversations, no messages and all-unchanged ordinary
@@ -115,12 +156,11 @@ func TestLP01NoWorkSkipsProviderInitialization(t *testing.T) {
 			f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'DEADBEEF', NOW(), NOW())`,
 				pkg.NewUUID(), f.tenantID)
 
-			var resolverCalls int64
+			queries := trapAISettingsQueries(t)
+			// Exercise the actual production getProvider path without resolver or override:
+			// under eager init, getProvider would query ai_api_key, attempt pkg.Decrypt(X'DEADBEEF'),
+			// fail with decryption error and fail the run. Under lazy init, getProvider is bypassed.
 			analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
-			analyzer.providerResolver = func(job models.Job) (ai.AIProvider, error) {
-				atomic.AddInt64(&resolverCalls, 1)
-				return nil, errors.New("resolver should not be called when no work is prepared")
-			}
 
 			initialCP := f.checkpoint(t)
 
@@ -139,9 +179,9 @@ func TestLP01NoWorkSkipsProviderInitialization(t *testing.T) {
 				t.Fatalf("expected success status, got %v (%+v)", run, err)
 			}
 
-			// Verify provider resolver was never invoked
-			if calls := atomic.LoadInt64(&resolverCalls); calls != 0 {
-				t.Fatalf("expected 0 provider resolver calls, got %d", calls)
+			// Verify AI settings queries were never issued and provider resolution was never attempted
+			if calls := atomic.LoadInt64(queries); calls != 0 {
+				t.Fatalf("expected 0 AI settings queries on no-work run, got %d", calls)
 			}
 
 			// Verify summary reflects 0 work
@@ -199,13 +239,12 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 	t.Run("invalid channel JSON fails before candidate selection and provider", func(t *testing.T) {
 		f := setupIncFixture(t, false, "qc_analysis")
 		f.exec(t, `UPDATE jobs SET input_channel_ids = '{"not":"an_array"}' WHERE id = ?`, f.jobID)
+		// Insert corrupt encrypted key: must not be touched
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'DEADBEEF', NOW(), NOW())`,
+			pkg.NewUUID(), f.tenantID)
 
-		var resolverCalls int64
-		analyzer := NewAnalyzer(&config.Config{})
-		analyzer.providerResolver = func(job models.Job) (ai.AIProvider, error) {
-			atomic.AddInt64(&resolverCalls, 1)
-			return nil, errors.New("resolver should not be called")
-		}
+		queries := trapAISettingsQueries(t)
+		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err == nil || run == nil {
@@ -214,27 +253,50 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		if run.Status != "error" {
 			t.Fatalf("expected error status, got %q", run.Status)
 		}
-		if atomic.LoadInt64(&resolverCalls) != 0 {
-			t.Fatalf("expected 0 resolver calls, got %d", atomic.LoadInt64(&resolverCalls))
+		if calls := atomic.LoadInt64(queries); calls != 0 {
+			t.Fatalf("expected 0 AI settings queries on invalid input, got %d", calls)
 		}
 		if f.checkpoint(t) != nil {
 			t.Fatal("failed run must not set checkpoint")
 		}
 	})
 
+	t.Run("candidate selection query failure fails before provider and skips settings/key lookup", func(t *testing.T) {
+		f := setupIncFixture(t, false, "qc_analysis")
+		f.addConv(t, f.tenantID, f.channelID, "cand-err", []time.Time{f.clock.Add(-time.Hour)})
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'DEADBEEF', NOW(), NOW())`,
+			pkg.NewUUID(), f.tenantID)
+
+		queries := trapAISettingsQueries(t)
+		failTable(t, "conversations", "SYNTHETIC_CANDIDATE_QUERY_FAIL")
+
+		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
+		run, err := analyzer.RunJob(context.Background(), f.job(t))
+		if err == nil || run == nil {
+			t.Fatalf("expected error on candidate query failure, got run=%v, err=%v", run, err)
+		}
+		if run.Status != "error" {
+			t.Fatalf("expected error status, got %q", run.Status)
+		}
+		if calls := atomic.LoadInt64(queries); calls != 0 {
+			t.Fatalf("expected 0 AI settings queries on candidate query failure, got %d", calls)
+		}
+		if f.checkpoint(t) != nil {
+			t.Fatal("candidate failure must not set checkpoint")
+		}
+	})
+
 	t.Run("all-failed preparation closes as error with zero provider initialization", func(t *testing.T) {
 		f := setupIncFixture(t, false, "qc_analysis")
 		f.addConv(t, f.tenantID, f.channelID, "bad", []time.Time{f.clock.Add(-time.Hour)})
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'DEADBEEF', NOW(), NOW())`,
+			pkg.NewUUID(), f.tenantID)
 
 		// Make snapshot loading fail by inducing a query error on the messages table
 		failTable(t, "messages", "SYNTHETIC_MSG_QUERY_FAIL")
 
-		var resolverCalls int64
-		analyzer := NewAnalyzer(&config.Config{})
-		analyzer.providerResolver = func(job models.Job) (ai.AIProvider, error) {
-			atomic.AddInt64(&resolverCalls, 1)
-			return nil, errors.New("resolver should not be called on all-failed preparation")
-		}
+		queries := trapAISettingsQueries(t)
+		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err != nil {
@@ -243,8 +305,8 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		if run == nil || run.Status != "error" {
 			t.Fatalf("all-failed preparation must close as error, got status=%v", run)
 		}
-		if atomic.LoadInt64(&resolverCalls) != 0 {
-			t.Fatalf("expected 0 provider resolver calls on all-failed prep, got %d", atomic.LoadInt64(&resolverCalls))
+		if calls := atomic.LoadInt64(queries); calls != 0 {
+			t.Fatalf("expected 0 AI settings queries on all-failed prep, got %d", calls)
 		}
 		if f.checkpoint(t) != nil {
 			t.Fatal("all-failed preparation must not advance checkpoint")
@@ -281,12 +343,44 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		if calls := atomic.LoadInt64(&resolverCalls); calls != 1 {
 			t.Fatalf("expected exactly 1 provider resolver call, got %d", calls)
 		}
-		if chatCalls := atomic.LoadInt64(&cp.chatCalls); chatCalls != 1 {
-			t.Fatalf("expected exactly 1 AnalyzeChat call for valid conversation, got %d", chatCalls)
+		if singleCalls := atomic.LoadInt64(&cp.singleCalls); singleCalls != 1 {
+			t.Fatalf("expected exactly 1 AnalyzeChat call for valid conversation, got %d", singleCalls)
+		}
+		if items := atomic.LoadInt64(&cp.itemsCount); items != 1 {
+			t.Fatalf("expected exactly 1 item processed, got %d", items)
 		}
 		// Checkpoint must NOT advance on partial run
 		if f.checkpoint(t) != nil {
 			t.Fatal("partial run must not set checkpoint")
+		}
+	})
+
+	t.Run("mixed valid and failed preparation with corrupt key on production path fails at provider initialization", func(t *testing.T) {
+		f := setupIncFixture(t, false, "qc_analysis")
+		f.addConv(t, f.tenantID, f.channelID, "valid", []time.Time{f.clock.Add(-time.Hour)})
+		corruptID := f.addConv(t, f.tenantID, f.channelID, "corrupt", []time.Time{f.clock.Add(-30 * time.Minute)})
+
+		dummyRunID := pkg.NewUUID()
+		f.exec(t, `INSERT INTO job_runs (id, tenant_id, job_id, status, summary, started_at, created_at) VALUES (?, ?, ?, 'success', '{}', NOW(), NOW())`, dummyRunID, f.tenantID, f.jobID)
+		f.exec(t, `INSERT INTO job_results (id, job_run_id, tenant_id, conversation_id, analysis_snapshot_id, result_type, severity, rule_name, evidence, detail, ai_raw_response, created_at) VALUES (?, ?, ?, ?, ?, 'conversation_evaluation', 'PASS', '', '', '{}', '{}', NOW())`,
+			pkg.NewUUID(), dummyRunID, f.tenantID, corruptID, pkg.NewUUID())
+
+		// Insert corrupt encrypted key: because valid preparation remains, provider initialization IS reached and must fail
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'DEADBEEF', NOW(), NOW())`,
+			pkg.NewUUID(), f.tenantID)
+
+		queries := trapAISettingsQueries(t)
+		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
+
+		run, err := analyzer.RunJob(context.Background(), f.job(t))
+		if err == nil || run == nil || run.Status != "error" {
+			t.Fatalf("expected error on corrupt key with valid preparation, got run=%v, err=%v", run, err)
+		}
+		if calls := atomic.LoadInt64(queries); calls == 0 {
+			t.Fatalf("expected AI settings query attempted on valid work, got %d", calls)
+		}
+		if f.checkpoint(t) != nil {
+			t.Fatal("failed provider initialization must not set checkpoint")
 		}
 	})
 }
@@ -607,25 +701,29 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 
 		// Delete all app_settings for AI
 		f.exec(t, `DELETE FROM app_settings WHERE tenant_id = ? AND setting_key LIKE 'ai_%'`, f.tenantID)
+		// Insert corrupt encrypted key: under eager init, getProvider would fail decrypting this
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'DEADBEEF', NOW(), NOW())`,
+			pkg.NewUUID(), f.tenantID)
 
-		// Under original eager initialization, NewAnalyzer without settings would fail here:
-		// getProvider -> "API key not configured" -> failOwnedRun(..., earlyProviderUnavailable).
-		// Under lazy initialization, this must succeed cleanly.
-		analyzer := NewAnalyzer(&config.Config{})
+		queries := trapAISettingsQueries(t)
+		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err != nil || run.Status != "success" {
 			t.Fatalf("negative control failed: expected success without AI settings, got run=%v, err=%v", run, err)
 		}
+		if calls := atomic.LoadInt64(queries); calls != 0 {
+			t.Fatalf("negative control: expected 0 settings queries on no-work run, got %d", calls)
+		}
 	})
 
-	t.Run("positive control: eligible work strictly requires provider initialization", func(t *testing.T) {
+	t.Run("positive control: eligible work strictly requires provider initialization (missing key)", func(t *testing.T) {
 		f := setupIncFixture(t, false, "qc_analysis")
 		f.addConv(t, f.tenantID, f.channelID, "pos-work", []time.Time{f.clock.Add(-time.Hour)})
 
 		// Delete all app_settings for AI
 		f.exec(t, `DELETE FROM app_settings WHERE tenant_id = ? AND setting_key LIKE 'ai_%'`, f.tenantID)
 
-		// With eligible work and missing settings, lazy initialization MUST detect and fail
+		queries := trapAISettingsQueries(t)
 		analyzer := NewAnalyzer(&config.Config{})
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err == nil || run == nil || run.Status != "error" {
@@ -633,6 +731,31 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 		}
 		if !strings.Contains(err.Error(), "Không khởi tạo được AI provider") {
 			t.Fatalf("expected provider unavailable error message, got %v", err)
+		}
+		if calls := atomic.LoadInt64(queries); calls == 0 {
+			t.Fatalf("positive control: expected settings queries > 0, got %d", calls)
+		}
+	})
+
+	t.Run("positive control: eligible work strictly requires provider initialization (corrupt key)", func(t *testing.T) {
+		f := setupIncFixture(t, false, "qc_analysis")
+		f.addConv(t, f.tenantID, f.channelID, "pos-work-corrupt", []time.Time{f.clock.Add(-time.Hour)})
+
+		f.exec(t, `DELETE FROM app_settings WHERE tenant_id = ? AND setting_key LIKE 'ai_%'`, f.tenantID)
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'DEADBEEF', NOW(), NOW())`,
+			pkg.NewUUID(), f.tenantID)
+
+		queries := trapAISettingsQueries(t)
+		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
+		run, err := analyzer.RunJob(context.Background(), f.job(t))
+		if err == nil || run == nil || run.Status != "error" {
+			t.Fatalf("positive control corrupt key failed: expected error, got run=%v, err=%v", run, err)
+		}
+		if !strings.Contains(err.Error(), "Không khởi tạo được AI provider") {
+			t.Fatalf("expected provider unavailable error message, got %v", err)
+		}
+		if calls := atomic.LoadInt64(queries); calls == 0 {
+			t.Fatalf("positive control: expected settings queries > 0, got %d", calls)
 		}
 	})
 
@@ -655,20 +778,68 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 		}
 
 		constructed := atomic.LoadInt64(&constructorAccess)
-		analyzed := atomic.LoadInt64(&cp.chatCalls)
+		singleCalls := atomic.LoadInt64(&cp.singleCalls)
+		batchCalls := atomic.LoadInt64(&cp.batchCalls)
+		itemsCount := atomic.LoadInt64(&cp.itemsCount)
+		totalCalls := cp.totalInferenceCalls()
 
-		// Exactly 1 constructor access
+		// Exactly 1 constructor access (provider resolved once)
 		if constructed != 1 {
 			t.Fatalf("expected constructorAccess == 1, got %d", constructed)
 		}
-		// 2 conversations analyzed
-		if analyzed != 2 {
-			t.Fatalf("expected chatCalls == 2, got %d", analyzed)
+		// In batch mode with 2 conversations: exactly 0 single calls, 1 batch call, 2 items
+		if singleCalls != 0 {
+			t.Fatalf("expected singleCalls == 0 in batch mode, got %d", singleCalls)
+		}
+		if batchCalls != 1 {
+			t.Fatalf("expected batchCalls == 1 for two-item batch, got %d", batchCalls)
+		}
+		if totalCalls != 1 {
+			t.Fatalf("expected totalInferenceCalls == 1, got %d", totalCalls)
+		}
+		if itemsCount != 2 {
+			t.Fatalf("expected itemsCount == 2 across batches, got %d", itemsCount)
+		}
+	})
+
+	t.Run("distinct counting in non-batch mode: constructor once, single calls match conversation count", func(t *testing.T) {
+		f := setupIncFixture(t, false, "qc_analysis") // non-batch mode
+		f.addConv(t, f.tenantID, f.channelID, "nb1", []time.Time{f.clock.Add(-time.Hour)})
+		f.addConv(t, f.tenantID, f.channelID, "nb2", []time.Time{f.clock.Add(-50 * time.Minute)})
+
+		var constructorAccess int64
+		cp := newCountingProvider("qc_analysis")
+		analyzer := NewAnalyzer(&config.Config{})
+		analyzer.providerResolver = func(job models.Job) (ai.AIProvider, error) {
+			atomic.AddInt64(&constructorAccess, 1)
+			return cp, nil
 		}
 
-		// Constructor access was distinct and happened once, while chat calls matched conversation count
-		if constructed == analyzed {
-			t.Fatalf("constructor access (%d) should be distinct from inference call count (%d)", constructed, analyzed)
+		run, err := analyzer.RunJob(context.Background(), f.job(t))
+		if err != nil || run.Status != "success" {
+			t.Fatalf("run failed: %v", err)
+		}
+
+		constructed := atomic.LoadInt64(&constructorAccess)
+		singleCalls := atomic.LoadInt64(&cp.singleCalls)
+		batchCalls := atomic.LoadInt64(&cp.batchCalls)
+		itemsCount := atomic.LoadInt64(&cp.itemsCount)
+		totalCalls := cp.totalInferenceCalls()
+
+		if constructed != 1 {
+			t.Fatalf("expected constructorAccess == 1, got %d", constructed)
+		}
+		if singleCalls != 2 {
+			t.Fatalf("expected singleCalls == 2 for two conversations, got %d", singleCalls)
+		}
+		if batchCalls != 0 {
+			t.Fatalf("expected batchCalls == 0 in non-batch mode, got %d", batchCalls)
+		}
+		if totalCalls != 2 {
+			t.Fatalf("expected totalInferenceCalls == 2, got %d", totalCalls)
+		}
+		if itemsCount != 2 {
+			t.Fatalf("expected itemsCount == 2, got %d", itemsCount)
 		}
 	})
 }

@@ -690,6 +690,7 @@ func TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership(t *testing.T) {
 			}},
 		{"provider selection failure", func() {
 			f.exec(t, "UPDATE jobs SET input_channel_ids = ? WHERE id = ?", `["`+f.channelID+`"]`, f.jobID)
+			f.addConv(t, f.tenantID, f.channelID, "prov-fail", []time.Time{f.clock.Add(-time.Hour)})
 		},
 			func() (*models.JobRun, error) {
 				// no injected provider and no stored API key: provider resolution fails after admission
