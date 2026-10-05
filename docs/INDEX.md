@@ -150,6 +150,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Reviewer-only finite synthetic raw-BEGIN/formatting/retry probe; mount only in exact-BUILD archive.: `docs/reviews/probes/r046_transaction_boundary_probe_test.go`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md`
 - R046 CHANGES_REQUIRED; cost-approved metadata-only R4 ready for Claude, no BUILD yet; zero runtime replay, no contract waiver; independent Codex review next, FREEZE_OPEN and accounts parked.: `docs/work_orders/CCMAI_RUNTIME_046.md`
+- Separate user-authorized subagent execution seed for R046 R4 metadata corrections; original R046 seed and exact-archive limits preserved. Seed stage only; no BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-047.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

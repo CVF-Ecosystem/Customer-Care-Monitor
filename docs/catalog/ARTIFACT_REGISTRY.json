@@ -1137,6 +1137,13 @@
       "path": "CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json",
       "status": "ACTIVE",
       "description": "Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim."
+    },
+    {
+      "id": "runtime047-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-047.json",
+      "status": "ACTIVE",
+      "description": "Separate user-authorized subagent execution seed for R046 R4 metadata corrections; original R046 seed and exact-archive limits preserved. Seed stage only; no BUILD."
     }
   ]
 }
