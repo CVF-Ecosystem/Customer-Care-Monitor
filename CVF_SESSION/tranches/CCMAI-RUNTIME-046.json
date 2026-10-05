@@ -44,8 +44,8 @@
   ],
   "claimScope": "Only finalizer transaction/retry/fallback application and GORM sink error containment on synthetic disposable local fixtures, with preserved terminal/ownership semantics. No universal engine logging, real-provider/CVF AI governance, live compatibility or hosted readiness claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_046.md",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "c3ff83c7b8d2f9b23ef4113ae3bf7f8b9b32c267",
   "buildCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
   "reviewEvidence": [
@@ -80,7 +80,7 @@
     "docs/reviews/probes/r048_acceptance_receipt.json"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
@@ -96,7 +96,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -145,5 +146,16 @@
     "authorityTranche": "CCMAI-RUNTIME-048",
     "activationCommit": "44c035daf3f4899cbc8f5b1613cf3ed374a871be",
     "basis": "Inherited independent review re-entry under committed option A activation, followed by qualified REVIEW_PASS; no new BUILD or historical execution recertification."
+  },
+  "closer": "Codex",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+  "closedAt": "2026-10-05",
+  "frozenSourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "closureAuthority": {
+    "trancheId": "CCMAI-RUNTIME-049",
+    "seed": "CVF_SESSION/authority/CCMAI-RUNTIME-049.json",
+    "seedCommit": "0bcad5c1b1072d2ae70b13f99097e5f85d97cee8",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
+    "scope": "Only previously accepted bounded local option A / factual correction / acceptance disposition; original prohibitions and historical gaps preserved"
   }
 }

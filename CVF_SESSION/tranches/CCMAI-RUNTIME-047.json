@@ -42,8 +42,8 @@
   ],
   "claimScope": "Implement successor factual correction/disclosure/publication packet for R046-R3-01..03 only. Exact-archive condition NOT MET/NOT VERIFIED remains explicit; no waiver or original R046 acceptance/FREEZE granted.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_047.md",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "a2cf5ded858c6ec5a6b0873e32bf984f65bc6968",
   "buildCommit": "916d482b8508ad9393914337f42c5a2e9e699993",
   "reviewEvidence": [
@@ -58,12 +58,13 @@
     "docs/reviews/CCMAI_RUNTIME_046_RESIDUAL_ACCEPTANCE_ASSESSMENT_2026-10-05.md"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -77,5 +78,16 @@
   "implementationStarted": true,
   "artifactCommitResolution": "Exact artifact handback SHA to be resolved by parent review; no fabricated self-reference",
   "acceptanceScope": "R4 truthful disclosure/publication corrections only; original R046 acceptance conditions and FREEZE remain open",
-  "residualDecisionAssessment": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json"
+  "residualDecisionAssessment": "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json",
+  "closer": "Codex",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+  "closedAt": "2026-10-05",
+  "frozenSourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "closureAuthority": {
+    "trancheId": "CCMAI-RUNTIME-049",
+    "seed": "CVF_SESSION/authority/CCMAI-RUNTIME-049.json",
+    "seedCommit": "0bcad5c1b1072d2ae70b13f99097e5f85d97cee8",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
+    "scope": "Only previously accepted bounded local option A / factual correction / acceptance disposition; original prohibitions and historical gaps preserved"
+  }
 }

@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
       "status": "ACTIVE",
-      "description": "R049 inherited REVIEW_PENDING for separate bounded local finalizer closure; permanent option A evidence limits retained."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "truth-implementation-status",
@@ -926,21 +926,21 @@
       "family": "continuity",
       "path": "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md",
       "status": "ACTIVE",
-      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime046-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_046.md",
       "status": "ACTIVE",
-      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime046-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-046.json",
       "status": "ACTIVE",
-      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime046-predecessor-handoff",
@@ -1157,14 +1157,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
       "status": "ACTIVE",
-      "description": "R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime047-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_047.md",
       "status": "ACTIVE",
-      "description": "R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime047-r4-corrections",
@@ -1269,14 +1269,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-048.json",
       "status": "ACTIVE",
-      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime048-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_048.md",
       "status": "ACTIVE",
-      "description": "R048/R046 qualified local REVIEW_PASS under explicit option A at91da0e88; missing historical proof permanently retained, behavior/source unchanged, FREEZE_OPEN; separate closure assessment next."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime048-acceptance-review",
@@ -1318,14 +1318,28 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_049.md",
       "status": "ACTIVE",
-      "description": "Separate local closure order REVIEW_PENDING; original source/seed/evidence unchanged."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
     },
     {
       "id": "runtime049-local-closure-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-049.json",
       "status": "ACTIVE",
-      "description": "R049 inherited REVIEW_PENDING, metadata-only local closure scope."
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
+    },
+    {
+      "id": "runtime049-local-closure-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim."
+    },
+    {
+      "id": "runtime049-local-closure-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r049_local_closure_receipt.json",
+      "status": "ACTIVE",
+      "description": "R049 static identity/evidence audit and publication gates; no new runtime proof."
     }
   ]
 }

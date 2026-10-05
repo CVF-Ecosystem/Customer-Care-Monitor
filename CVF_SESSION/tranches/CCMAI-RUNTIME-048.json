@@ -41,8 +41,8 @@
   ],
   "claimScope": "Metadata-only formal review disposition under explicit A contract. May qualify R046 REVIEW_PASS and update current SPEC/order/record with separate acceptance provenance. Cannot rewrite historical evidence or declare FREEZE.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_048.md",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "2e3977833cb48a8fd3005c36e55c94838fff5c06",
   "buildCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
   "reviewEvidence": [
@@ -54,10 +54,11 @@
     "docs/reviews/probes/r048_acceptance_receipt.json"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -72,5 +73,16 @@
   "acceptanceDecision": "CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json",
   "implementationStarted": false,
   "inheritanceReason": "Completed original product BUILD and exact-R2 independent source observations plus accepted R4 corrections; explicit A evidence contract decision. No new product implementation or runtime required.",
-  "acceptanceScope": "Option A bounded synthetic local FL-01..06 at91da0e88; historical worker proof not certified"
+  "acceptanceScope": "Option A bounded synthetic local FL-01..06 at91da0e88; historical worker proof not certified",
+  "closer": "Codex",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+  "closedAt": "2026-10-05",
+  "frozenSourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "closureAuthority": {
+    "trancheId": "CCMAI-RUNTIME-049",
+    "seed": "CVF_SESSION/authority/CCMAI-RUNTIME-049.json",
+    "seedCommit": "0bcad5c1b1072d2ae70b13f99097e5f85d97cee8",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
+    "scope": "Only previously accepted bounded local option A / factual correction / acceptance disposition; original prohibitions and historical gaps preserved"
+  }
 }
