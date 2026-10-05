@@ -1249,6 +1249,13 @@
       "path": "docs/reviews/probes/r046_residual_choice_audit.json",
       "status": "ACTIVE",
       "description": "Verified16 reviewer raw-log digests/counts/names, two203-file restored exports and backend tree."
+    },
+    {
+      "id": "runtime048-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-048.json",
+      "status": "ACTIVE",
+      "description": "Separate option A local acceptance-disposition seed; R2 inherited independent proof, no source/runtime/FREEZE or historical recertification."
     }
   ]
 }

@@ -166,6 +166,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Machine-generated203-file export/archive/livecopy hash provenance; byte equality false, CRLF observation separate.: `docs/reviews/probes/r046_r4_snapshot_manifest.json`
 - Actual child R4 publication checks and snapshot bounds; no historical recertification.: `docs/reviews/probes/r046_r4_worker_receipts.json`
 - R047 independent REVIEW_PASS for delegated R4 factual correction packet916d482 only; R046 acceptance conditions still open, no runtime/waiver/FREEZE authority; accounts parked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-047.json`
+- Separate option A local acceptance-disposition seed; R2 inherited independent proof, no source/runtime/FREEZE or historical recertification.: `CVF_SESSION/authority/CCMAI-RUNTIME-048.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
