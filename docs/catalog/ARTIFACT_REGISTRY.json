@@ -1480,6 +1480,27 @@
       "path": "docs/reviews/probes/r051_independent_campaign.ps1",
       "status": "ACTIVE",
       "description": "Independent exact committed archive campaign; internal offline MySQL, readonly cache and named anonymous-volume verification."
+    },
+    {
+      "id": "runtime051-r2-repair-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/ANALYZER_LAZY_PROVIDER_R051_R2_REPAIR_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Worker R051 round 2 repair report resolving findings R051-R1-01..03 with persistent-state assertions, notification traps, and ordering mutation."
+    },
+    {
+      "id": "runtime051-r2-campaign-runner",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r2_campaign_runner.ps1",
+      "status": "ACTIVE",
+      "description": "Isolated disposable runner for R051 round 2 test campaign, anonymous-volume check, and ordering mutation testing."
+    },
+    {
+      "id": "runtime051-r2-worker-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r2_worker_receipt.json",
+      "status": "ACTIVE",
+      "description": "Machine-verifiable receipt for R051 round 2 test execution, ordering mutation kill, and anonymous volume teardown."
     }
   ]
 }

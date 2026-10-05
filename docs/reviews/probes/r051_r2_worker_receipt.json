@@ -1,0 +1,85 @@
+﻿{
+    "schemaVersion":  "1.0",
+    "trancheId":  "CCMAI-RUNTIME-051",
+    "round":  2,
+    "buildCommit":  "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+    "acknowledgmentCommit":  "c228931df25026211cf4e33d4586db7020bc8b5c",
+    "taskRoot":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r2-worker-c55f4a27",
+    "archiveSha256":  "B4D4DAFF222388D1F721294B0D2AB47899BB70943966BFF1742B7C045054BE38",
+    "internalNetwork":  "ccmai-r051-r2-net-f2bb3e62",
+    "disposableDatabase":  "ccmai-r051-r2-db-f2bb3e62",
+    "externalNetwork":  false,
+    "hostPorts":  false,
+    "newPulls":  false,
+    "commands":  [
+                     {
+                         "name":  "engine-test-compile",
+                         "exit":  0,
+                         "seconds":  72.8282792,
+                         "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r2-worker-c55f4a27\\build_check.log",
+                         "logSha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                     },
+                     {
+                         "name":  "engine-vet",
+                         "exit":  0,
+                         "seconds":  70.648763399999993,
+                         "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r2-worker-c55f4a27\\vet_check.log",
+                         "logSha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                     },
+                     {
+                         "name":  "exact-repair-tests",
+                         "pattern":  "TestLP|TestEveryTerminalPath|TestEarlyFailureClasses|TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership|TestFL|TestF05|TestF06|TestTerminalRunHoldsTheSlot",
+                         "exit":  0,
+                         "seconds":  197.9430586,
+                         "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r2-worker-c55f4a27\\exact_repair_tests.jsonl",
+                         "logSha256":  "F048894D1D5EEF7D3687EDC8886A075A6C226A6A5D1B51382C979F9B74E7E761"
+                     }
+                 ],
+    "mutationTest":  {
+                         "mutationName":  "M_EAGER_INIT_ORDERING",
+                         "description":  "Eager provider resolution inserted before conversation selection in executeReserved",
+                         "targetPath":  "backend/engine/analyzer.go",
+                         "baselineSha256":  "17C47F6739A20E336F28C351D834A996C00D4EA2B1F4A18C613505A5AAC7434E",
+                         "mutatedSha256":  "91E33D4AEE4A76CA18D403C3104838ED295D4F412417E1902DC6F64137CF1588",
+                         "mutantExecution":  {
+                                                 "exitCode":  1,
+                                                 "seconds":  72.475149399999992,
+                                                 "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r2-worker-c55f4a27\\mutation_negative_control.jsonl",
+                                                 "logSha256":  "0A3C6BE30B46F162C40B8F6FEC140A37EAC85A09F9D9EB19F7BDA3C7E4F76B71",
+                                                 "hasBuildFail":  false,
+                                                 "failEventCount":  1,
+                                                 "killed":  true
+                                             },
+                         "restoredExecution":  {
+                                                   "exitCode":  0,
+                                                   "seconds":  74.716540299999991,
+                                                   "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r2-worker-c55f4a27\\restored_negative_control.jsonl",
+                                                   "logSha256":  "E7FBA3EF15C1FF9AA2131ACD3576AC4BA7043E844E0F6E91D821456DE5779A9B",
+                                                   "restoredPassed":  true
+                                               }
+                     },
+    "cleanup":  {
+                    "databaseRemoveExit":  0,
+                    "networkRemoveExit":  0,
+                    "databaseAbsent":  true,
+                    "networkAbsent":  true,
+                    "remainingNamedVolumes":  [
+
+                                              ],
+                    "anonymousVolumesAbsent":  true
+                },
+    "networkInternal":  true,
+    "portBindings":  {
+
+                     },
+    "databaseVolumes":  [
+                            "d2598abb0df0d942d83d17d3a58a42535d2c39917894054b6e85ceef36b3dd0f"
+                        ],
+    "testSummary":  {
+                        "totalCompletedEvents":  98,
+                        "passedEvents":  98,
+                        "failedEvents":  0,
+                        "skippedEvents":  0,
+                        "topLevelSuitesPassed":  42
+                    }
+}

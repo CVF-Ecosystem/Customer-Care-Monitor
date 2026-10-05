@@ -1,4 +1,4 @@
-# Project Documentation Index
+﻿# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -193,6 +193,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact committed archive campaign; internal offline MySQL, readonly cache and named anonymous-volume verification.: `docs/reviews/probes/r051_independent_campaign.ps1`
 - Independent exact R051 re-review CHANGES_REQUIRED; RP-01/02 settled, three consolidated residual findings.: `docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md`
 - Exact repair independent42/98 allPASS; source manifest, worker audit, named resource cleanup and publication checks.: `docs/reviews/probes/r051_independent_summary.json`
+- Isolated disposable runner for R051 round 2 test campaign, anonymous-volume check, and ordering mutation testing.: `docs/reviews/probes/r051_r2_campaign_runner.ps1`
+- Worker R051 round 2 repair report resolving findings R051-R1-01..03 with persistent-state assertions, notification traps, and ordering mutation.: `docs/reviews/ANALYZER_LAZY_PROVIDER_R051_R2_REPAIR_2026-10-05.md`
+- Machine-verifiable receipt for R051 round 2 test execution, ordering mutation kill, and anonymous volume teardown.: `docs/reviews/probes/r051_r2_worker_receipt.json`
 - R051 CHANGES_REQUIRED: RP-01/02 settled, three consolidated residual findings; same-scope repair round2 next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-051.json`
 - Isolated disposable runner for R051 test repair campaign and mutation testing.: `docs/reviews/probes/r050_r1_campaign_runner.ps1`
 - Historical worker R051 submission; tests pass, mutation BUILD_ERROR and incomplete receipt independently rejected.: `docs/reviews/ANALYZER_LAZY_PROVIDER_R050_R1_REPAIR_2026-10-05.md`

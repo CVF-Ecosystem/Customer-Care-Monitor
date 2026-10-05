@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Claude REPAIR_WORKER / BUILD COMMIT_STEWARD (R051 repair round 2); independent Codex REVIEWER next, no self-approval
-- Next allowed move: CCMAI-RUNTIME-051 BUILD (Claude REPAIR_WORKER / BUILD COMMIT_STEWARD): implement round 2 repairs for R051-R1-01..03 (RP-03 persistence/notifier observations in analyzer_provider_initialization_test.go, RP-04 runnable ordering mutation and exact receipt in successor runner) under seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 remain byte-identical; R050 remains CHANGES_REQUIRED pending review. Return exact committed REVIEW_PENDING for independent Codex review; no self-approval/FREEZE. Accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex independent REVIEWER after Claude REPAIR_WORKER round 2 handback; no self-approval
+- Next allowed move: CCMAI-RUNTIME-051 REVIEW_PENDING under separate committed seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 and exact test repair commit 145bd41109c1e3ac3fb1a85f261c61f668b2fe4d: Codex independent REVIEWER next verifies findings resolution R051-R1-01..03 (RP-03/RP-04), canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 byte-identity, and round 2 repair evidence in docs/reviews/ANALYZER_LAZY_PROVIDER_R051_R2_REPAIR_2026-10-05.md. Original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 untouched; R050 remains CHANGES_REQUIRED pending review. No self-approval/FREEZE; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Separate authority and activation acknowledgment
@@ -41,4 +41,13 @@ Role transition REVIEWER (Codex) -> REPAIR_WORKER (Claude), with BUILD COMMIT_ST
 CVF Agent Declaration: Customer-Care-Monitor-AI; CVF core ../.Controlled-Vibe-Framework-CVF at 26c686cc99b8be965d2760f27fe875b03376c643; phase BUILD; risk ceiling R2; live evidence required YES (no governance claim made; synthetic provider evidence is application proof only); active role REPAIR_WORKER / BUILD COMMIT_STEWARD; active handoff this file; next allowed move as header; parked checkpoint OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
 
 Workspace doctor 25/1 PASS WITH NOTE; gate tests 46/46 PASS; downstream gate preflight 7/7 PASS. Compact bootstrap read model absent: BOOTSTRAP_MIGRATION_PENDING (nonblocking). Separate seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937 verified present and unchanged; original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 and canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 remain byte-identical; R050 remains CHANGES_REQUIRED pending review. Round 2 repairs consolidate RP-03 (checking every query error, reloading stored run/job/summary, and observing notifier in positive controls) and RP-04 (runnable ordering mutation in isolated export and verified volume/archive receipt).
+
+## Worker round 2 repair execution and handback (Claude, 2026-10-05)
+
+Exact test repair commit `145bd41109c1e3ac3fb1a85f261c61f668b2fe4d` (`test(engine): add persistence, notifier, and error-checked counts to initialization tests (R051 round 2)`).
+- **R051-R1-01 / RP-04**: Scoped ordering mutation in isolated copy inserted eager provider resolution in `executeReserved` before conversation selection. Compiles cleanly without build errors (`hasBuildFail: false`). Failed behavioral assertion in `TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control` with exit 1 and 1 named failure event. Restored baseline verified byte-for-byte (`17C47F67...`) and passed cleanly with exit 0.
+- **R051-R1-02 / RP-04**: Git archive export SHA `B4D4DAFF...` (zero CRLF drift). Exact before-edit acknowledgment commit `c228931df25026211cf4e33d4586db7020bc8b5c` and repair commit `145bd41109c1e3ac3fb1a85f261c61f668b2fe4d`. Dynamic test event parsing: 42 top-level suites, 98 completed events, 98 PASS, 0 FAIL, 0 SKIP. Disposable database anonymous volume captured before teardown (`d2598abb...`) and verified completely absent after cleanup. Machine receipt committed at `docs/reviews/probes/r051_r2_worker_receipt.json`.
+- **R051-R1-03 / RP-03**: Replaced all `.Count(` calls in `backend/engine/analyzer_provider_initialization_test.go` with `.Error` checks. Added `trapJobNotifications` helper. Verified zero notifications on no-work and error paths; verified notification dispatch on partial run with analyzed work (`output_schedule = 'instant'`). Reloaded stored run and job from DB to observe persisted state directly in LP-01, LP-02, LP-03, LP-06.
+- Handed back to Codex as independent REVIEWER under `REVIEW_PENDING`. No self-approval or FREEZE. Canonical production source 727d3229338e9b29c749612677a08b7fd1c65428 and original R050 authority seed 1008ab41f0693e2814cd06dfdb0fed98273a1167 remain untouched; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
+
 
