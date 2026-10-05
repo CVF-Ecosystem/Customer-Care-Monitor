@@ -44,6 +44,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json`
+- Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`
 - Independent exact-BUILD R034 review: CHANGES_REQUIRED, six findings and bounded R1 return; offline only.: `docs/reviews/CCMAI_RUNTIME_034_INDEPENDENT_REVIEW_2026-10-03.md`
@@ -179,6 +180,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R049 static identity/evidence audit and publication gates; no new runtime proof.: `docs/reviews/probes/r049_local_closure_receipt.json`
 - Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-049.json`
 - Bounded local R046 option A / R047 correction / R048 acceptance FROZEN under separate R049; source/history/permanent missing worker proof retained, no live/global claim.: `docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md`
+- Immutable dispatcher seed for Claude R050 application ordering work; commit before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-050.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

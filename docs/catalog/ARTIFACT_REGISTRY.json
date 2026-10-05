@@ -1340,6 +1340,20 @@
       "path": "docs/reviews/probes/r049_local_closure_receipt.json",
       "status": "ACTIVE",
       "description": "R049 static identity/evidence audit and publication gates; no new runtime proof."
+    },
+    {
+      "id": "roadmap-next-scope-r050",
+      "family": "continuity",
+      "path": "docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance."
+    },
+    {
+      "id": "runtime050-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-050.json",
+      "status": "ACTIVE",
+      "description": "Immutable dispatcher seed for Claude R050 application ordering work; commit before BUILD."
     }
   ]
 }
