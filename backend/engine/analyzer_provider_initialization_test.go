@@ -83,6 +83,28 @@ func trapAISettingsQueries(t *testing.T) *int64 {
 	return &queriesCount
 }
 
+// trapJobNotifications registers a test-local dispatcher for sendJobNotifications that records
+// notification dispatch count and arguments, restoring the original function on test cleanup.
+func trapJobNotifications(t *testing.T) *notifier {
+	t.Helper()
+	orig := sendJobNotifications
+	nt := &notifier{}
+	sendJobNotifications = func(_ context.Context, job models.Job, run models.JobRun) error {
+		nt.mu.Lock()
+		nt.n++
+		hook := nt.onSend
+		nt.mu.Unlock()
+		if hook != nil {
+			hook(job, run)
+		}
+		return nil
+	}
+	t.Cleanup(func() {
+		sendJobNotifications = orig
+	})
+	return nt
+}
+
 // LP-01: Empty channel list, no conversations, no messages and all-unchanged ordinary
 // snapshots finish through the existing truthful no-work path without provider-setting/key
 // lookup or decryption. Missing/invalid AI config must not mask an empty-source outcome.
@@ -157,6 +179,7 @@ func TestLP01NoWorkSkipsProviderInitialization(t *testing.T) {
 				pkg.NewUUID(), f.tenantID)
 
 			queries := trapAISettingsQueries(t)
+			nt := trapJobNotifications(t)
 			// Exercise the actual production getProvider path without resolver or override:
 			// under eager init, getProvider would query ai_api_key, attempt pkg.Decrypt(X'DEADBEEF'),
 			// fail with decryption error and fail the run. Under lazy init, getProvider is bypassed.
@@ -179,15 +202,44 @@ func TestLP01NoWorkSkipsProviderInitialization(t *testing.T) {
 				t.Fatalf("expected success status, got %v (%+v)", run, err)
 			}
 
+			// Verify notifications were never sent on no-work run
+			if calls := nt.count(); calls != 0 {
+				t.Fatalf("expected 0 job notifications on no-work run, got %d", calls)
+			}
+
 			// Verify AI settings queries were never issued and provider resolution was never attempted
 			if calls := atomic.LoadInt64(queries); calls != 0 {
 				t.Fatalf("expected 0 AI settings queries on no-work run, got %d", calls)
 			}
 
-			// Verify summary reflects 0 work
+			// Reload stored run from DB to observe persisted state directly
+			var storedRun models.JobRun
+			if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+				t.Fatalf("reload stored run %s: %v", run.ID, err)
+			}
+			if storedRun.Status != "success" {
+				t.Fatalf("expected stored run status success, got %q", storedRun.Status)
+			}
+			if storedRun.FinishedAt == nil {
+				t.Fatal("expected stored run finished_at to be set on clean completion")
+			}
+			if JobRunActive(f.tenantID, f.jobID) {
+				t.Fatal("expected job run slot ownership to be released on no-work completion")
+			}
+
+			// Reload stored job to observe persisted run tracking
+			var storedJob models.Job
+			if err := db.DB.Where("id = ?", f.jobID).First(&storedJob).Error; err != nil {
+				t.Fatalf("reload stored job %s: %v", f.jobID, err)
+			}
+			if c.expectCPMove && storedJob.LastRunAt == nil {
+				t.Fatal("expected stored job last_run_at to be updated on ordinary clean completion")
+			}
+
+			// Verify stored summary reflects 0 work
 			var summary map[string]interface{}
-			if err := json.Unmarshal([]byte(run.Summary), &summary); err != nil {
-				t.Fatalf("parse summary: %v", err)
+			if err := json.Unmarshal([]byte(storedRun.Summary), &summary); err != nil {
+				t.Fatalf("parse stored summary: %v", err)
 			}
 			if found, _ := summary["conversations_found"].(float64); found != 0 {
 				t.Fatalf("expected conversations_found=0, got %v", found)
@@ -196,16 +248,20 @@ func TestLP01NoWorkSkipsProviderInitialization(t *testing.T) {
 				t.Fatalf("expected conversations_analyzed=0, got %v", analyzed)
 			}
 
-			// Verify zero AI usage logs
+			// Verify zero AI usage logs, failing immediately on observational query error
 			var usageCount int64
-			db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount)
+			if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+				t.Fatalf("count AI usage logs: %v", err)
+			}
 			if usageCount != 0 {
 				t.Fatalf("expected 0 AI usage logs, got %d", usageCount)
 			}
 
-			// Verify zero job results
+			// Verify zero job results, failing immediately on observational query error
 			var resultCount int64
-			db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount)
+			if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+				t.Fatalf("count job results: %v", err)
+			}
 			if resultCount != 0 {
 				t.Fatalf("expected 0 job results, got %d", resultCount)
 			}
@@ -244,6 +300,7 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 			pkg.NewUUID(), f.tenantID)
 
 		queries := trapAISettingsQueries(t)
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
@@ -253,8 +310,35 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		if run.Status != "error" {
 			t.Fatalf("expected error status, got %q", run.Status)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("expected 0 notifications on invalid input, got %d", calls)
+		}
 		if calls := atomic.LoadInt64(queries); calls != 0 {
 			t.Fatalf("expected 0 AI settings queries on invalid input, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on invalid input")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage logs: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results, got %d", resultCount)
 		}
 		if f.checkpoint(t) != nil {
 			t.Fatal("failed run must not set checkpoint")
@@ -268,6 +352,7 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 			pkg.NewUUID(), f.tenantID)
 
 		queries := trapAISettingsQueries(t)
+		nt := trapJobNotifications(t)
 		failTable(t, "conversations", "SYNTHETIC_CANDIDATE_QUERY_FAIL")
 
 		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
@@ -278,8 +363,35 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		if run.Status != "error" {
 			t.Fatalf("expected error status, got %q", run.Status)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("expected 0 notifications on candidate query failure, got %d", calls)
+		}
 		if calls := atomic.LoadInt64(queries); calls != 0 {
 			t.Fatalf("expected 0 AI settings queries on candidate query failure, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on candidate query failure")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage logs: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results, got %d", resultCount)
 		}
 		if f.checkpoint(t) != nil {
 			t.Fatal("candidate failure must not set checkpoint")
@@ -296,6 +408,7 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		failTable(t, "messages", "SYNTHETIC_MSG_QUERY_FAIL")
 
 		queries := trapAISettingsQueries(t)
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
@@ -305,8 +418,35 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		if run == nil || run.Status != "error" {
 			t.Fatalf("all-failed preparation must close as error, got status=%v", run)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("expected 0 notifications on all-failed prep, got %d", calls)
+		}
 		if calls := atomic.LoadInt64(queries); calls != 0 {
 			t.Fatalf("expected 0 AI settings queries on all-failed prep, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on all-failed prep")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage logs: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results, got %d", resultCount)
 		}
 		if f.checkpoint(t) != nil {
 			t.Fatal("all-failed preparation must not advance checkpoint")
@@ -326,11 +466,14 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 
 		var resolverCalls int64
 		cp := newCountingProvider("qc_analysis")
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{})
 		analyzer.providerResolver = func(job models.Job) (ai.AIProvider, error) {
 			atomic.AddInt64(&resolverCalls, 1)
 			return cp, nil
 		}
+
+		f.exec(t, "UPDATE jobs SET output_schedule = 'instant' WHERE id = ?", f.jobID)
 
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err != nil {
@@ -348,6 +491,26 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 		}
 		if items := atomic.LoadInt64(&cp.itemsCount); items != 1 {
 			t.Fatalf("expected exactly 1 item processed, got %d", items)
+		}
+		if calls := nt.count(); calls != 1 {
+			t.Fatalf("expected exactly 1 notification on partial run with analyzed work, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on partial run")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "partial" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run partial/finished, got %+v", storedRun)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 1 {
+			t.Fatalf("expected 1 job result for valid conversation, got %d", resultCount)
 		}
 		// Checkpoint must NOT advance on partial run
 		if f.checkpoint(t) != nil {
@@ -370,14 +533,38 @@ func TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider(t *testing.T
 			pkg.NewUUID(), f.tenantID)
 
 		queries := trapAISettingsQueries(t)
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err == nil || run == nil || run.Status != "error" {
 			t.Fatalf("expected error on corrupt key with valid preparation, got run=%v, err=%v", run, err)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("expected 0 notifications on provider failure, got %d", calls)
+		}
 		if calls := atomic.LoadInt64(queries); calls == 0 {
 			t.Fatalf("expected AI settings query attempted on valid work, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on provider failure")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		if !strings.Contains(storedRun.ErrorMessage, "Không khởi tạo được AI provider") {
+			t.Fatalf("expected stored error message, got %q", storedRun.ErrorMessage)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results on provider failure, got %d", resultCount)
 		}
 		if f.checkpoint(t) != nil {
 			t.Fatal("failed provider initialization must not set checkpoint")
@@ -394,6 +581,7 @@ func TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence(t *testing
 		f.addConv(t, f.tenantID, f.channelID, "work", []time.Time{f.clock.Add(-time.Hour)})
 		// No API key in app_settings
 
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{})
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err == nil || run == nil {
@@ -405,8 +593,38 @@ func TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence(t *testing
 		if !strings.Contains(err.Error(), "Không khởi tạo được AI provider") {
 			t.Fatalf("expected provider unavailable error message, got %v", err)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("expected 0 notifications on provider failure, got %d", calls)
+		}
 		if JobRunActive(f.tenantID, f.jobID) {
 			t.Fatal("ownership must be released on provider failure")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		if !strings.Contains(storedRun.ErrorMessage, "Không khởi tạo được AI provider") {
+			t.Fatalf("expected stored error message, got %q", storedRun.ErrorMessage)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs on provider failure, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results on provider failure, got %d", resultCount)
+		}
+		if f.checkpoint(t) != nil {
+			t.Fatal("failed run must not set checkpoint")
 		}
 	})
 
@@ -416,6 +634,7 @@ func TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence(t *testing
 		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, value_encrypted, created_at, updated_at) VALUES (?, ?, 'ai_api_key', '', X'01020304', NOW(), NOW())`,
 			pkg.NewUUID(), f.tenantID)
 
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err == nil || run == nil {
@@ -424,8 +643,41 @@ func TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence(t *testing
 		if run.Status != "error" {
 			t.Fatalf("expected error status, got %q", run.Status)
 		}
+		if !strings.Contains(err.Error(), "Không khởi tạo được AI provider") {
+			t.Fatalf("expected provider unavailable error message, got %v", err)
+		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("expected 0 notifications on provider failure, got %d", calls)
+		}
 		if JobRunActive(f.tenantID, f.jobID) {
 			t.Fatal("ownership must be released on provider failure")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		if !strings.Contains(storedRun.ErrorMessage, "Không khởi tạo được AI provider") {
+			t.Fatalf("expected stored error message, got %q", storedRun.ErrorMessage)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs on provider failure, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results on provider failure, got %d", resultCount)
+		}
+		if f.checkpoint(t) != nil {
+			t.Fatal("failed run must not set checkpoint")
 		}
 	})
 
@@ -706,13 +958,41 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 			pkg.NewUUID(), f.tenantID)
 
 		queries := trapAISettingsQueries(t)
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err != nil || run.Status != "success" {
 			t.Fatalf("negative control failed: expected success without AI settings, got run=%v, err=%v", run, err)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("negative control: expected 0 notifications on no-work run, got %d", calls)
+		}
 		if calls := atomic.LoadInt64(queries); calls != 0 {
 			t.Fatalf("negative control: expected 0 settings queries on no-work run, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on no-work run")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "success" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run success/finished, got %+v", storedRun)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage logs: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results, got %d", resultCount)
 		}
 	})
 
@@ -724,6 +1004,7 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 		f.exec(t, `DELETE FROM app_settings WHERE tenant_id = ? AND setting_key LIKE 'ai_%'`, f.tenantID)
 
 		queries := trapAISettingsQueries(t)
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{})
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err == nil || run == nil || run.Status != "error" {
@@ -732,8 +1013,41 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 		if !strings.Contains(err.Error(), "Không khởi tạo được AI provider") {
 			t.Fatalf("expected provider unavailable error message, got %v", err)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("positive control: expected 0 notifications on provider failure, got %d", calls)
+		}
 		if calls := atomic.LoadInt64(queries); calls == 0 {
 			t.Fatalf("positive control: expected settings queries > 0, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on provider failure")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		if !strings.Contains(storedRun.ErrorMessage, "Không khởi tạo được AI provider") {
+			t.Fatalf("expected stored error message, got %q", storedRun.ErrorMessage)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage logs: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results, got %d", resultCount)
+		}
+		if f.checkpoint(t) != nil {
+			t.Fatal("failed run must not set checkpoint")
 		}
 	})
 
@@ -746,6 +1060,7 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 			pkg.NewUUID(), f.tenantID)
 
 		queries := trapAISettingsQueries(t)
+		nt := trapJobNotifications(t)
 		analyzer := NewAnalyzer(&config.Config{EncryptionKey: "01234567890123456789012345678901"})
 		run, err := analyzer.RunJob(context.Background(), f.job(t))
 		if err == nil || run == nil || run.Status != "error" {
@@ -754,8 +1069,41 @@ func TestLP06EagerInitializationDetectorNegativeAndPositive(t *testing.T) {
 		if !strings.Contains(err.Error(), "Không khởi tạo được AI provider") {
 			t.Fatalf("expected provider unavailable error message, got %v", err)
 		}
+		if calls := nt.count(); calls != 0 {
+			t.Fatalf("positive control: expected 0 notifications on provider failure, got %d", calls)
+		}
 		if calls := atomic.LoadInt64(queries); calls == 0 {
 			t.Fatalf("positive control: expected settings queries > 0, got %d", calls)
+		}
+		if JobRunActive(f.tenantID, f.jobID) {
+			t.Fatal("ownership must be released on provider failure")
+		}
+		var storedRun models.JobRun
+		if err := db.DB.Where("id = ?", run.ID).First(&storedRun).Error; err != nil {
+			t.Fatalf("reload stored run %s: %v", run.ID, err)
+		}
+		if storedRun.Status != "error" || storedRun.FinishedAt == nil {
+			t.Fatalf("expected stored run error/finished, got %+v", storedRun)
+		}
+		if !strings.Contains(storedRun.ErrorMessage, "Không khởi tạo được AI provider") {
+			t.Fatalf("expected stored error message, got %q", storedRun.ErrorMessage)
+		}
+		var usageCount int64
+		if err := db.DB.Model(&models.AIUsageLog{}).Where("job_run_id = ?", run.ID).Count(&usageCount).Error; err != nil {
+			t.Fatalf("count usage logs: %v", err)
+		}
+		if usageCount != 0 {
+			t.Fatalf("expected 0 usage logs, got %d", usageCount)
+		}
+		var resultCount int64
+		if err := db.DB.Model(&models.JobResult{}).Where("job_run_id = ?", run.ID).Count(&resultCount).Error; err != nil {
+			t.Fatalf("count results: %v", err)
+		}
+		if resultCount != 0 {
+			t.Fatalf("expected 0 results, got %d", resultCount)
+		}
+		if f.checkpoint(t) != nil {
+			t.Fatal("failed run must not set checkpoint")
 		}
 	})
 
