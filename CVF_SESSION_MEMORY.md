@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-052", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-052", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R052 delegated R051/R3 evidence route (2026-10-06)
 
-CCMAI-RUNTIME-052 delegated R051/R3 evidence-only BUILD: Codex /root/r051_preparation executes successor r051_r3 runner/receipt after committed acknowledgment/preflight; fixed source145bd41109c1e3ac3fb1a85f261c61f668b2fe4d, one campaign/max four Go invocations/no retry or automatic fourth repair under unchanged R051 cost disposition. R050/R051 CHANGES_REQUIRED; canonical source/tests/seeds/old packets protected. Commit exact evidence then separate REVIEW_PENDING handback with round3EvidenceCommit for independent Codex /root RP-04 review; no provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA accounts parked.
+CCMAI-RUNTIME-052 delegated R051/R3 evidence REVIEW_PENDING at exact evidence17d60560cc28a3c7dce9351355cc46db8696d393: independent Codex /root reviews residual RP-04 and failed archive-versus-Git-blob comparator precheck; FAILED_NOT_RUN, zero campaigns/Go/resource starts, no worker correction/retry. R050/R051 CHANGES_REQUIRED; source145bd411 and production727d322 preserved, all canonical source/tests/seeds/old packets protected. Any prospective correction requires separately recorded cost/root-cause disposition before BUILD; no acceptance reset/provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA accounts parked.
 
 ## Historical R051 cost disposition / evidence-only R3 authorization (2026-10-06)
 

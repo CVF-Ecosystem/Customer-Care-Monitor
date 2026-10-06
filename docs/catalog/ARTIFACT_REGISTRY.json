@@ -1606,6 +1606,13 @@
       "path": "docs/reviews/probes/r051_r3_manifest_mismatch.json",
       "status": "ACTIVE",
       "description": "Read-only comparator diagnosis: exact membership, three LF/CRLF representation differences, other201 byte-equal."
+    },
+    {
+      "id": "r051-r3-worker-handback",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r3_handback.json",
+      "status": "ACTIVE",
+      "description": "Committed failed-evidence pointer and publication repetition observation; root independent review next, zero runtime."
     }
   ]
 }

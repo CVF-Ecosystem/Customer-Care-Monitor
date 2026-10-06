@@ -50,6 +50,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Full204-file actual fixed-archive extracted path/hash/size manifest.: `docs/reviews/probes/r051_r3_extracted_manifest.json`
 - Full204-file raw Git blob path/hash/size manifest; representation differs from archive on three files.: `docs/reviews/probes/r051_r3_source_manifest.json`
 - Read-only comparator diagnosis: exact membership, three LF/CRLF representation differences, other201 byte-equal.: `docs/reviews/probes/r051_r3_manifest_mismatch.json`
+- Committed failed-evidence pointer and publication repetition observation; root independent review next, zero runtime.: `docs/reviews/probes/r051_r3_handback.json`
 - Exact failure/publication receipt; FAILED_NOT_RUN and zero runtime/resources, no retry.: `docs/reviews/probes/r051_r3_worker_receipt.json`
 - Failed R052 delegated R051/R3 preparation; zero campaign/Go, exact archive comparator mismatch retained.: `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md`
 - Uncorrected first failed evidence runner; raw-blob versus archive manifest mismatch, no rerun.: `docs/reviews/probes/r051_r3_campaign.py`

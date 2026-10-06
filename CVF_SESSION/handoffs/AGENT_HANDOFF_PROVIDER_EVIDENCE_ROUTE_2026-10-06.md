@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root/r051_preparation REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER afterward
-- Next allowed move: CCMAI-RUNTIME-052 delegated R051/R3 evidence-only BUILD: Codex /root/r051_preparation executes successor r051_r3 runner/receipt after committed acknowledgment/preflight; fixed source145bd41109c1e3ac3fb1a85f261c61f668b2fe4d, one campaign/max four Go invocations/no retry or automatic fourth repair under unchanged R051 cost disposition. R050/R051 CHANGES_REQUIRED; canonical source/tests/seeds/old packets protected. Commit exact evidence then separate REVIEW_PENDING handback with round3EvidenceCommit for independent Codex /root RP-04 review; no provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER next; Codex /root/r051_preparation SESSION_SYNC_STEWARD / handback COMMIT_STEWARD only
+- Next allowed move: CCMAI-RUNTIME-052 delegated R051/R3 evidence REVIEW_PENDING at exact evidence17d60560cc28a3c7dce9351355cc46db8696d393: independent Codex /root reviews residual RP-04 and failed archive-versus-Git-blob comparator precheck; FAILED_NOT_RUN, zero campaigns/Go/resource starts, no worker correction/retry. R050/R051 CHANGES_REQUIRED; source145bd411 and production727d322 preserved, all canonical source/tests/seeds/old packets protected. Any prospective correction requires separately recorded cost/root-cause disposition before BUILD; no acceptance reset/provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Routing authority and activation acknowledgment
@@ -20,3 +20,7 @@ Root ORCHESTRATOR -> SPEC_AUTHOR / WORK_ORDER_AUTHOR -> SESSION_SYNC_STEWARD / p
 ## Worker BUILD acknowledgment (2026-10-06)
 
 CVF Agent Declaration: Customer-Care-Monitor-AI; readonly core ../.Controlled-Vibe-Framework-CVF actual8a4119e11db00e774ed8e7cf7d9a8caa309e81d1 / manifest26c686cc99b8be965d2760f27fe875b03376c643; BUILD/R2; live evidence required YES, no governance claim. Actual Codex /root/r051_preparation REPAIR_WORKER / BUILD COMMIT_STEWARD; independent Codex /root reviewer afterward. Fresh canonical continuity, R052 seed/order/SPEC, inherited R051 checklist and shared repair guidance read. Doctor PASS WITH NOTE25/1; BOOTSTRAP_MIGRATION_PENDING nonblocking. Seed7c3a61bf and activation267987e committed before this acknowledgment. No successor evidence edits or campaign yet. Third repair and max1 campaign/max4 Go/no retry inherited without reset; parked OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS.
+
+## Worker failed-evidence REVIEW_PENDING handback
+
+Fresh continuity rehydration from current BUILD state/memory/handoff/status/index preceded REPAIR_WORKER -> SESSION_SYNC_STEWARD / handback COMMIT_STEWARD transition. Exact evidence commit `17d60560cc28a3c7dce9351355cc46db8696d393` exists before this handback; acknowledgment423b3e2 predates evidence edits. R052 buildCommit is typed EVIDENCE_ONLY, not product BUILD. First invocation stopped13.237s at comparator precheck; campaigns0/Go0/resources0, controlled throw/mutation/restored tests NOT RUN. Raw Git blobs differed from exact archive on three LF/CRLF files; both204-file manifests/failure/audit and uncorrected runner retained. No source drift/correction/rerun. Root independently observed649 protected physical files unchanged. Required publication gates PASS, final staged7/7 repeated after receipt restaging; npm.ps1 launch/VitePress-link publication failures retained and corrected only for publication. R050/R051 remain CHANGES_REQUIRED/freezeOPEN, source145bd411 and production727d322 unchanged. Independent Codex /root formal residual review next; future repair requires new recorded cost disposition. No worker acceptance/FREEZE.

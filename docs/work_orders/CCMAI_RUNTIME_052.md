@@ -1,8 +1,8 @@
 # CCMAI-RUNTIME-052 — Delegated R051/R3 evidence execution
 
-Status: BUILD
+Status: REVIEW_PENDING
 
-Date: 2026-10-06. R2, WORK_ORDER. Actual worker/repair/BUILD commit steward: Codex subagent `/root/r051_preparation`; independent reviewer and dispatcher: Codex `/root`. Owner explicitly approved this worker and commit ownership transfer in the current session. Immutable R050/R051 seeds and historical roles remain unchanged.
+Date: 2026-10-06. R2, REVIEW / REVIEW_PENDING. Actual worker/repair/BUILD commit steward: Codex subagent `/root/r051_preparation`; independent reviewer and dispatcher: Codex `/root`. Owner explicitly approved this worker and commit ownership transfer in the current session. Immutable R050/R051 seeds and historical roles remain unchanged.
 
 INTAKE: only R051-R2-01 / residual RP-04 remains; source/tests already accepted at145bd411. DESIGN: a separate immutable routing seed resolves machine-bound role identity without rewriting the R051 seed. SPEC: inherit RP-01..04 / LP-01..08 and the final bounded R3 checklist unchanged. WORK_ORDER: enter at earliest open execution stage after authority commitment. This is the third repair of the same root cause, with two completed predecessor rounds; new routing ID does not reset budget, history or acceptance.
 
@@ -14,4 +14,6 @@ Only new r051_r3 probes/report, this order/SPEC and authorized current-pointer/s
 
 Exit: persist exact evidence set even on failure; commit artifact set, then separate REVIEW_PENDING handback with exact round3EvidenceCommit. Preserve R051.buildCommit145bd411 and R050 production727d322. Worker does not grant acceptance or closure. Independent root residual RP-04 review follows. Any failure or unavailable cached resource stops campaign without retries; return CHANGES_REQUIRED for a new cost decision.
 
-Current execution: delegated evidence-only BUILD acknowledged before successor edits; original DISPATCH_READY text above describes dispatch requirements. Third repair/cost budget unchanged.
+Historical execution: delegated evidence-only BUILD acknowledged before successor edits; original DISPATCH_READY text above describes dispatch requirements. Third repair/cost budget unchanged.
+
+Current handback: exact source-independent failed evidence17d60560cc28a3c7dce9351355cc46db8696d393 committed before REVIEW_PENDING; campaigns0/Go0/resources0. R050/R051 CHANGES_REQUIRED; independent root formal review and any new cost decision next. No worker correction/retry/acceptance.

@@ -65,16 +65,22 @@
   "maxNewGoInvocations": 4,
   "automaticRetries": 0,
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_052.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "7c3a61bfbd132512ff545dcb76a22448e71cb9f0",
-  "buildCommit": null,
-  "reviewEvidence": [],
+  "buildCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+  "reviewEvidence": [
+    "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+    "docs/reviews/probes/r051_r3_worker_receipt.json",
+    "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+    "docs/reviews/probes/r051_r3_handback.json"
+  ],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -131,6 +137,12 @@
     "doctor": "PASS WITH NOTE25/1",
     "sourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
     "newGoInvocations": 0,
-    "note": "Commit identity derived afterward from Git; pre-edit acknowledgment."
-  }
+    "note": "Commit identity derived afterward from Git; pre-edit acknowledgment.",
+    "acknowledgmentCommit": "423b3e2bd8bdc14648a8206522b0109b7f224fe3"
+  },
+  "buildArtifactKind": "EVIDENCE_ONLY_NOT_PRODUCT_BUILD",
+  "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+  "runtimeDisposition": "FAILED_NOT_RUN",
+  "campaignsStarted": 0,
+  "newGoInvocations": 0
 }

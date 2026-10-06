@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-052",
+  "status": "REVIEW_PENDING",
+  "worker": "Codex /root/r051_preparation",
+  "independentReviewer": "Codex /root",
+  "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+  "evidenceCommitType": "EVIDENCE_ONLY_NOT_PRODUCT_BUILD",
+  "sourceBuildCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "acknowledgmentCommit": "423b3e2bd8bdc14648a8206522b0109b7f224fe3",
+  "evidenceChangedPaths": [
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+    "docs/reviews/probes/r051_r3_campaign.py",
+    "docs/reviews/probes/r051_r3_extracted_manifest.json",
+    "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+    "docs/reviews/probes/r051_r3_source_manifest.json",
+    "docs/reviews/probes/r051_r3_worker_receipt.json"
+  ],
+  "runtimeDisposition": "FAILED_NOT_RUN",
+  "campaigns": 0,
+  "newGoInvocations": 0,
+  "automaticRetries": 0,
+  "finalEvidencePublicationObservation": {
+    "receiptRestaged": true,
+    "repeatedStagedPreflightCommand": [
+      "python",
+      "-B",
+      "scripts/cvf_downstream_gate.py",
+      "preflight",
+      "--base",
+      "HEAD",
+      "--files",
+      "docs/INDEX.md",
+      "docs/catalog/ARTIFACT_REGISTRY.json",
+      "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+      "docs/reviews/probes/r051_r3_campaign.py",
+      "docs/reviews/probes/r051_r3_extracted_manifest.json",
+      "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+      "docs/reviews/probes/r051_r3_source_manifest.json",
+      "docs/reviews/probes/r051_r3_worker_receipt.json"
+    ],
+    "exit": 0,
+    "gatesPassed": 7,
+    "stagedDiffCheck": 0,
+    "observedBeforeEvidenceCommit": true
+  },
+  "evidenceArtifactHashes": {
+    "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md": "8b4bf3b88822becb85ce2e0d3edb65543246c8c11315268fe15a80019daf4dac",
+    "docs/reviews/probes/r051_r3_campaign.py": "cb893633835f3fc742e54838fe32ed15effd583de45c1cb6ab61fa3eeacddbd8",
+    "docs/reviews/probes/r051_r3_extracted_manifest.json": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af",
+    "docs/reviews/probes/r051_r3_manifest_mismatch.json": "c2d774b2df063cb405d746ed5472da67b26ceaa9f5afdeb1eddb5fe34940d8a3",
+    "docs/reviews/probes/r051_r3_source_manifest.json": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+    "docs/reviews/probes/r051_r3_worker_receipt.json": "25d9e5c5852b6147ba30d1529a2a4ea44a0ff1c01d144b521122a4f177c11a9b"
+  },
+  "handbackCommit": "DEFERRED_TO_GIT_AFTER_THIS_HANDOFF_COMMIT",
+  "noWorkerAcceptance": true,
+  "handbackPublication": {
+    "gateUnits": {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_cvf_downstream_gate*.py"
+      ],
+      "exit": 0,
+      "tests": 46,
+      "seconds": 13.374
+    },
+    "defaultPreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "originMainHeadPreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "catalogPowerShell51": {
+      "exit": 0
+    },
+    "catalogPowerShell7": {
+      "exit": 0
+    },
+    "docsBuild": {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "docs",
+        "run",
+        "docs:build"
+      ],
+      "exit": 0,
+      "reportedSeconds": 7.38,
+      "afterFinalMarkdown": true
+    },
+    "diffCheck": {
+      "exit": 0
+    },
+    "runtimeCampaigns": 0,
+    "newGoInvocations": 0,
+    "stagedPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "HEAD",
+        "--files",
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-052.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r3_handback.json",
+        "docs/specs/ANALYZER_PROVIDER_EVIDENCE_ROUTE_R052_2026-10-06.md",
+        "docs/work_orders/CCMAI_RUNTIME_052.md"
+      ],
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-052.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r3_handback.json",
+        "docs/specs/ANALYZER_PROVIDER_EVIDENCE_ROUTE_R052_2026-10-06.md",
+        "docs/work_orders/CCMAI_RUNTIME_052.md"
+      ],
+      "exit": 0,
+      "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+      "note": "Receipt metadata now restaged; repeat exact staged gate before commit."
+    }
+  }
+}

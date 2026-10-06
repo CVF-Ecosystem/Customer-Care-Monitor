@@ -245,5 +245,6 @@
     "stagedDiffCheck": "PASS"
   },
   "delegatedRound3ExecutionTranche": "CCMAI-RUNTIME-052",
-  "delegatedRound3ExecutionStatus": "BUILD"
+  "delegatedRound3ExecutionStatus": "REVIEW_PENDING",
+  "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393"
 }
