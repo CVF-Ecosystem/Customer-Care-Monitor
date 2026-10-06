@@ -1,6 +1,6 @@
 # R053 exact archive manifest and inherited evidence contract
 
-Date: 2026-10-06. R2, WORK_ORDER / DISPATCH_READY. Fourth repair of R051 evidence; not a history/cost reset. [Recorded new cost decision](../reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md) addresses demonstrated [R052 comparator defect](../reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md). All [original R3 checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md) runtime/publication acceptance remains unchanged.
+Date: 2026-10-06. R2, REVIEW / REVIEW_PENDING. Fourth repair of R051 evidence; not a history/cost reset. [Recorded new cost decision](../reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md) addresses demonstrated [R052 comparator defect](../reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md). All [original R3 checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md) runtime/publication acceptance remains unchanged.
 
 Manifest acceptance: resolve source145bd411, production727d322, source acknowledgmentc228931c, original seedsa54cb730/7c3a61bf, new seed and actual worker acknowledgment with Git/ancestry. Record exact archive SHA (accepted local source b4d4daff), all204 archive member path/hash/size rows sorted by path, and verify extracted membership/bytes strictly before mutation and after restoration. Preserve raw blob hashes/newline differences as diagnostics; never normalize source or alter Git configuration to manufacture equality. New runner must retain independent authority/commit mapping and inherited source/tests proof.
 
@@ -10,4 +10,6 @@ Runtime acceptance is unchanged: max1 actual campaign/max4 Go aggregate R052/R05
 
 Final gate46/default/PR/staged, PS5.1/7 catalog, docs after final Markdown, exact staged paths/restage repetition, diff/secret/protected-byte and evidence-commit/handback mapping required. Same-commit receipt SHA explicitly deferred to later handback. R050/R051/R052 remain CHANGES_REQUIRED until root formal residual disposition. Source/tests/seeds/all old packets byte-protected. Accepted RP-01/02/03 and98-event R2 evidence inherited, full engine/backend/frontend/race/live/provider/channel/CVF runtime governance/hosted readiness NOT RUN. No worker acceptance/FREEZE.
 
-Current execution: BUILD acknowledged before runner edit/preparation. No runtime result or acceptance asserted.
+Historical execution: BUILD acknowledged before runner edit/preparation. No runtime result or acceptance asserted.
+
+Current handback: exact failed evidence0a1410636decf1558ea0053fcc2cb371d5493c55 REVIEW_PENDING; archive204 strict byte manifest PASS, name-preparation FAIL, aggregate runtime/Go/resources0. All five maintained LP06 leaves preserved; independent count/cost disposition required before any correction. No worker acceptance/retry.

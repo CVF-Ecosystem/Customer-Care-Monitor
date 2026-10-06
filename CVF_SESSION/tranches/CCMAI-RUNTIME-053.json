@@ -79,16 +79,22 @@
   },
   "independentRootCause": "R052-R3-01 raw Git blob vs exact archive byte representation manifest mismatch",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_053.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "072812c7ec8e07025eaf90ae668744744f69f3bf",
-  "buildCommit": null,
-  "reviewEvidence": [],
+  "buildCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
+  "reviewEvidence": [
+    "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md",
+    "docs/reviews/probes/r051_r4_preparation_receipt.json",
+    "docs/reviews/probes/r051_r4_detector_name_audit.json",
+    "docs/reviews/probes/r051_r4_handback.json"
+  ],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -147,6 +153,12 @@
     "doctor": "PASS WITH NOTE25/1",
     "newGoInvocations": 0,
     "newCampaigns": 0,
-    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT"
-  }
+    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT",
+    "acknowledgmentCommit": "3bf38964a38584485a15a888af7b1906bbffa6a3"
+  },
+  "buildArtifactKind": "EVIDENCE_ONLY_NOT_PRODUCT_BUILD",
+  "round4EvidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
+  "runtimeDisposition": "FAILED_NOT_RUN",
+  "campaignsStarted": 0,
+  "newGoInvocations": 0
 }

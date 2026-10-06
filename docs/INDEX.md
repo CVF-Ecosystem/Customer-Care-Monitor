@@ -60,6 +60,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Read-only maintained five-leaf/six-event LP06 source-name audit; next cost/contract disposition proposed.: `docs/reviews/probes/r051_r4_detector_name_audit.json`
 - Exact preparation failure/publication; runtime0/Go0/resources0, no correction/retry.: `docs/reviews/probes/r051_r4_preparation_receipt.json`
 - Separate204-file raw blob diagnostic, not used as archive equality acceptance.: `docs/reviews/probes/r051_r4_raw_blob_manifest.json`
+- Exact fourth failed-evidence pointer, aggregate zero runtime; independent root count/cost review next.: `docs/reviews/probes/r051_r4_handback.json`
 - Fourth-repair failed offline preparation; strict archive passed, maintained five-leaf LP06 disagrees with three-leaf assumption.: `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md`
 - Uncorrected fourth-repair successor; archive member manifest accepted, finite name-check preparation failed.: `docs/reviews/probes/r051_r4_campaign.py`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`

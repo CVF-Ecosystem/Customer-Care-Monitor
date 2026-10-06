@@ -1718,6 +1718,13 @@
       "path": "docs/reviews/probes/r051_r4_detector_name_audit.json",
       "status": "ACTIVE",
       "description": "Read-only maintained five-leaf/six-event LP06 source-name audit; next cost/contract disposition proposed."
+    },
+    {
+      "id": "r051-r4-worker-handback",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_handback.json",
+      "status": "ACTIVE",
+      "description": "Exact fourth failed-evidence pointer, aggregate zero runtime; independent root count/cost review next."
     }
   ]
 }

@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-053",
+  "repairRound": 4,
+  "status": "REVIEW_PENDING",
+  "worker": "Codex /root/r051_preparation",
+  "independentReviewer": "Codex /root",
+  "round4EvidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
+  "evidenceCommitType": "EVIDENCE_ONLY_NOT_PRODUCT_BUILD",
+  "sourceBuildCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "failedRound3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+  "acknowledgmentCommit": "3bf38964a38584485a15a888af7b1906bbffa6a3",
+  "evidenceChangedPaths": [
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md",
+    "docs/reviews/probes/r051_r4_campaign.py",
+    "docs/reviews/probes/r051_r4_detector_name_audit.json",
+    "docs/reviews/probes/r051_r4_preparation_receipt.json",
+    "docs/reviews/probes/r051_r4_raw_blob_manifest.json",
+    "docs/reviews/probes/r051_r4_source_manifest.json"
+  ],
+  "runtimeDisposition": "FAILED_NOT_RUN",
+  "aggregateCampaigns": 0,
+  "aggregateNewGoInvocations": 0,
+  "automaticRetries": 0,
+  "finalEvidencePublicationObservation": {
+    "receiptRestaged": true,
+    "repeatedStagedPreflightCommand": [
+      "python",
+      "-B",
+      "scripts/cvf_downstream_gate.py",
+      "preflight",
+      "--base",
+      "HEAD",
+      "--files",
+      "docs/INDEX.md",
+      "docs/catalog/ARTIFACT_REGISTRY.json",
+      "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md",
+      "docs/reviews/probes/r051_r4_campaign.py",
+      "docs/reviews/probes/r051_r4_detector_name_audit.json",
+      "docs/reviews/probes/r051_r4_preparation_receipt.json",
+      "docs/reviews/probes/r051_r4_raw_blob_manifest.json",
+      "docs/reviews/probes/r051_r4_source_manifest.json"
+    ],
+    "exit": 0,
+    "gatesPassed": 7,
+    "stagedDiffCheck": 0,
+    "observedBeforeEvidenceCommit": true
+  },
+  "evidenceArtifactHashes": {
+    "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md": "1a6089a29abe6c9e929ffb67c781edf5a09e5853812a00f11be6386db45db142",
+    "docs/reviews/probes/r051_r4_campaign.py": "061f84aca306db844812e1cb42bf0e0020bef5df1cf84984d28a583e236f9b97",
+    "docs/reviews/probes/r051_r4_detector_name_audit.json": "8a179b08cccd61cfd8688a431a946f5064ae48b44a0e82a5e9519e601be6ad95",
+    "docs/reviews/probes/r051_r4_preparation_receipt.json": "a33fc20954da1fca88d6fee98168b900e257dbe32b388dc41e887da6154f81a1",
+    "docs/reviews/probes/r051_r4_raw_blob_manifest.json": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+    "docs/reviews/probes/r051_r4_source_manifest.json": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af"
+  },
+  "handbackCommit": "DEFERRED_TO_GIT_AFTER_THIS_HANDOFF_COMMIT",
+  "noWorkerAcceptance": true,
+  "handbackPublication": {
+    "status": "REQUIRED_HANDOFF_PUBLICATION_PASS_PENDING_STAGED",
+    "commands": [
+      {
+        "command": [
+          "python",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_cvf_downstream_gate*.py"
+        ],
+        "exit": 0,
+        "seconds": 12.842,
+        "stdout": "",
+        "stderr": "..............................................\r\n----------------------------------------------------------------------\r\nRan 46 tests in 12.723s\r\n\r\nOK\r\n"
+      },
+      {
+        "command": [
+          "powershell",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.585,
+        "stdout": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "pwsh",
+          "-NoProfile",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.686,
+        "stdout": "[PASS] Governed downstream catalog is valid and generated views match source truth.\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "npm.cmd --prefix docs run docs:build"
+        ],
+        "exit": 0,
+        "seconds": 9.33,
+        "stdout": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 8.37s.\n",
+        "stderr": "- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m✓\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m✓\u001b[0m rendering pages...\n"
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit": 0,
+        "seconds": 0.046,
+        "stdout": "",
+        "stderr": "warning: in the working copy of 'CVF_SESSION/ACTIVE_SESSION_STATE.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION/tranches/CCMAI-RUNTIME-051.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION/tranches/CCMAI-RUNTIME-053.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION_MEMORY.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'IMPLEMENTATION_STATUS.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/catalog/ARTIFACT_REGISTRY.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/work_orders/CCMAI_RUNTIME_053.md', LF will be replaced by CRLF the next time Git touches it\n"
+      }
+    ],
+    "defaultPreflight": {
+      "exit": 0,
+      "gates": 7
+    },
+    "originMainHeadPreflight": {
+      "exit": 0,
+      "gates": 7
+    },
+    "stagedPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "HEAD",
+        "--files",
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r4_handback.json",
+        "docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md",
+        "docs/work_orders/CCMAI_RUNTIME_053.md"
+      ],
+      "exit": 0,
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r4_handback.json",
+        "docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md",
+        "docs/work_orders/CCMAI_RUNTIME_053.md"
+      ],
+      "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+      "note": "Actual staged paths; restage metadata and repeat same gate before handback commit."
+    }
+  }
+}

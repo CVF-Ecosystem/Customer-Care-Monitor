@@ -267,5 +267,6 @@
     "aggregateGoBudgetRemaining": 4,
     "historicalRoundsRetained": 3
   },
-  "delegatedRound4ExecutionStatus": "BUILD"
+  "delegatedRound4ExecutionStatus": "REVIEW_PENDING",
+  "round4EvidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55"
 }

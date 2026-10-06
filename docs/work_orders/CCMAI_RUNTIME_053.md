@@ -1,8 +1,8 @@
 # CCMAI-RUNTIME-053 — Archive manifest evidence repair
 
-Status: BUILD
+Status: REVIEW_PENDING
 
-Date: 2026-10-06. R2, WORK_ORDER. Worker/repair/BUILD commit steward Codex `/root/r051_preparation`; independent reviewer and dispatcher Codex `/root`. Immutable seed committed before activation. [Cost disposition](../reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md), [SPEC](../specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md), [original checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md).
+Date: 2026-10-06. R2, REVIEW / REVIEW_PENDING. Worker/repair/BUILD commit steward Codex `/root/r051_preparation`; independent reviewer and dispatcher Codex `/root`. Immutable seed committed before activation. [Cost disposition](../reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md), [SPEC](../specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md), [original checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md).
 
 INTAKE identifies independently verified R052-R3-01 raw-blob/archive representation comparator. DESIGN binds strict membership/hash/size to exact archive members while preserving raw-blob diagnosis. SPEC inherits all RP-01..04/LP-01..08 and original isolation/mutation/restoration/publication contract. WORK_ORDER allows only new R051/R4 successor artifacts and authorized current metadata. This is fourth repair, with all3 predecessor attempts/cost history retained. No acceptance reset, broad suite or source/test/config/tooling change.
 
@@ -14,4 +14,6 @@ New report docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md and pro
 
 Commit artifact set then separate REVIEW_PENDING handback with exact round4EvidenceCommit; R051.buildCommit145bd411/production727d322/round3EvidenceCommit17d60560 retained. Worker cannot approve/FREEZE. Independent root evaluates residual RP-04; all earlier limits/accounts parked remain.
 
-Current execution: fourth-repair BUILD acknowledged before runner edits. Prior dispatch requirements above remain historical; original source/tests/old failed packets immutable, aggregate budget unchanged.
+Historical execution: fourth-repair BUILD acknowledged before runner edits. Prior dispatch requirements above remain historical; original source/tests/old failed packets immutable, aggregate budget unchanged.
+
+Current handback: exact failed evidence0a1410636decf1558ea0053fcc2cb371d5493c55 REVIEW_PENDING; archive204 strict byte manifest PASS, name-preparation FAIL, aggregate runtime/Go/resources0. All five maintained LP06 leaves preserved; independent count/cost disposition required before any correction. No worker acceptance/retry.

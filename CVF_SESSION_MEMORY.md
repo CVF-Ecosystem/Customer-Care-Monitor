@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-053", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-053", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R053 archive manifest successor repair (2026-10-06)
 
-CCMAI-RUNTIME-053 fourth evidence repair BUILD: Codex /root/r051_preparation executes only new r051_r4 archive-member manifest runner/evidence after committed acknowledgment/preflight; fixed source145bd411/production727d322, finite offline preparation before one actual campaign, aggregate max4 Go across R052/R053 (used0), no retry. R050/R051/R052 CHANGES_REQUIRED; all canonical source/tests/seeds/old packets protected. Commit exact round4EvidenceCommit then separate REVIEW_PENDING for independent Codex /root; failed third round/cost history retained. No provider/channel/external network/persistent data/push/merge/deployment/FREEZE; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-053 fourth evidence repair REVIEW_PENDING at exact evidence0a1410636decf1558ea0053fcc2cb371d5493c55: independent Codex /root reviews failed offline LP06 name preparation and full-maintained five-leaf/six-event contract discrepancy. Strict archive204 byte manifest PASS; FAILED_NOT_RUN, aggregate campaigns0/Go0/resources0, no worker correction/retry. R050/R051/R052 CHANGES_REQUIRED; source145bd411/production727d322/failed third evidence17d60560 and all source/tests/seeds/old packets preserved. Future correction requires separate recorded root-cause/count/cost disposition before new BUILD; no provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA parked.
 
 ## Historical R052 delegated R051/R3 evidence route (2026-10-06)
 
