@@ -1858,6 +1858,27 @@
       "path": "docs/reviews/CCMAI_RUNTIME_053_DIFF_ARTIFACT_PUBLICATION_DISPOSITION_2026-10-06.md",
       "status": "ACTIVE",
       "description": "Committed publication-only repair6 disposition; preserve raw fifth packet/diff and exhausted1/4 runtime budget."
+    },
+    {
+      "id": "r053-publication-applied_mutation-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_applied_mutation.json",
+      "status": "ACTIVE",
+      "description": "Post-runtime lossless967-byte applied diff envelope; raw committed artifact preserved."
+    },
+    {
+      "id": "r053-publication-publication_receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_publication_receipt.json",
+      "status": "ACTIVE",
+      "description": "Repair6 publication checks and raw-to-envelope provenance; exhausted runtime budget."
+    },
+    {
+      "id": "r053-publication-publication_report-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_publication_report.md",
+      "status": "ACTIVE",
+      "description": "Publication-only lossless encoding repair6; independent acceptance pending."
     }
   ]
 }

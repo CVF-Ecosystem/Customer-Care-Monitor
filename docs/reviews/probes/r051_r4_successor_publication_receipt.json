@@ -1,0 +1,402 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-053",
+  "repairRound": 6,
+  "worker": "Codex /root/r051_preparation",
+  "independentReviewer": "Codex /root",
+  "scope": "PUBLICATION_ONLY_NO_NEW_RUNTIME",
+  "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "publicationAcknowledgmentCommit": "2ace7ec1188be02373692e0e65a2fb244683ea27",
+  "costDispositionCommit": "1a8bb5e42a11b8259be985a4155f527389a280fa",
+  "publicationEvidenceCommit": "DEFERRED_TO_LATER_HANDBACK",
+  "aggregateBudget": {
+    "campaignsUsed": 1,
+    "goInvocationsUsed": 4,
+    "campaignsRemaining": 0,
+    "goInvocationsRemaining": 0
+  },
+  "newCampaigns": 0,
+  "newGoInvocations": 0,
+  "historicalFailedStagedDiffCheck": {
+    "exit": 2,
+    "rawArtifactRetained": true,
+    "notWaivedOrRecertified": true,
+    "receipt": "docs/reviews/probes/r051_r4_successor_worker_receipt.json"
+  },
+  "runtimeArtifactToEnvelope": {
+    "originalRuntimePath": "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+    "originalSha256": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+    "envelopePath": "docs/reviews/probes/r051_r4_successor_applied_mutation.json",
+    "envelopeSha256": "2d0f0e2fdde6104bf6fad00f7d2d0d621501720776dfec1fcdcb84f83b7d2c84",
+    "decodedBytes": 967,
+    "decodedSha256": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+    "postRuntimeEncoding": true
+  },
+  "encoding": {
+    "command": "python -B stdin: verify967 raw bytes and git show baeb raw blob; JSON base64 encode",
+    "exit": 0
+  },
+  "independentDecoding": {
+    "command": "Separate python -B stdin: base64.b64decode(validate=True), raw/committed blob equality, SHA256/count",
+    "exit": 0,
+    "byteEquality": true
+  },
+  "retainedComparatorFailure": {
+    "command": "First independent decode + extra immutable-packet physical-to-blob byte assertion",
+    "exit": 1,
+    "error": "AssertionError at immutable packet comparison after successful decode",
+    "rootCause": "Three text metadata files checked out CRLF; draft hashes refer to committed LF Git blobs",
+    "correctionAuthority": "Root same-scope dependent repair under cost1a8bb5e; no new cost/runtime",
+    "encodingFailure": false,
+    "mismatchCount": 3
+  },
+  "immutableRuntimePacket": {
+    "command": "Separate python -B stdin: committed15 hashes against draft Git hash ledger; exact physical bytes or explicit LF/CRLF relation only",
+    "exit": 0,
+    "files": [
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+        "committedGitSha256": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+        "physicalSha256": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+        "physicalBytes": 967,
+        "gitBytes": 967,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_campaign.py",
+        "committedGitSha256": "504e45dfe2421c5eb161ceaab1d9119de6cbd696c085270c33ec8fd1ebac333a",
+        "physicalSha256": "504e45dfe2421c5eb161ceaab1d9119de6cbd696c085270c33ec8fd1ebac333a",
+        "physicalBytes": 28701,
+        "gitBytes": 28701,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_compile.log",
+        "committedGitSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalBytes": 0,
+        "gitBytes": 0,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+        "committedGitSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalBytes": 0,
+        "gitBytes": 0,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+        "committedGitSha256": "843ffe9a60c2e92499fc63fca8c8384a64c3e575549b8949f3c95b938399c0c2",
+        "physicalSha256": "843ffe9a60c2e92499fc63fca8c8384a64c3e575549b8949f3c95b938399c0c2",
+        "physicalBytes": 144107,
+        "gitBytes": 144107,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+        "committedGitSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalBytes": 0,
+        "gitBytes": 0,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+        "committedGitSha256": "e444528665db56e011ef4f03ecd00fd2ca02faf869edf51279db75f9c12969ae",
+        "physicalSha256": "dd7e08b7aa9fc0de77720867acc47e616ff0f27353688cac487a6a661c34ae05",
+        "physicalBytes": 8826,
+        "gitBytes": 8582,
+        "relation": "CRLF_CHECKOUT_OF_LF_BLOB"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+        "committedGitSha256": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+        "physicalSha256": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+        "physicalBytes": 32822,
+        "gitBytes": 32822,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_report.md",
+        "committedGitSha256": "994b67b9091eacb5b0557e523b3688ecd38f30ca6fff3d998aa02e9e9030b5ec",
+        "physicalSha256": "a850995942e6dcd88943fc513cb8e053ac7ebfc007640c7ca488ef88c8643143",
+        "physicalBytes": 7707,
+        "gitBytes": 7667,
+        "relation": "CRLF_CHECKOUT_OF_LF_BLOB"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+        "committedGitSha256": "4984f57710fdc51475100611d7199b222e8c59e8b241aacbcf6c8d8855223d33",
+        "physicalSha256": "4984f57710fdc51475100611d7199b222e8c59e8b241aacbcf6c8d8855223d33",
+        "physicalBytes": 1821184,
+        "gitBytes": 1821184,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+        "committedGitSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalBytes": 0,
+        "gitBytes": 0,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+        "committedGitSha256": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af",
+        "physicalSha256": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af",
+        "physicalBytes": 32822,
+        "gitBytes": 32822,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_vet.log",
+        "committedGitSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalBytes": 0,
+        "gitBytes": 0,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+        "committedGitSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "physicalBytes": 0,
+        "gitBytes": 0,
+        "relation": "EXACT_BYTES"
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_worker_receipt.json",
+        "committedGitSha256": "0c5b95788e6558ce323e5b79160eba2b17778bc50133069b1032f286bb4fbc66",
+        "physicalSha256": "76f83b37780e982881e070e692d465e6d4f6989fd06d04f97ede38afa87e8610",
+        "physicalBytes": 37873,
+        "gitBytes": 36797,
+        "relation": "CRLF_CHECKOUT_OF_LF_BLOB"
+      }
+    ],
+    "actualOriginalHashDrift": 0,
+    "physicalByteEqualityWithGitNotClaimedForText": true,
+    "rootIndependentPhysicalObservation": {
+      "observer": "Codex /root",
+      "protectedFiles": 671,
+      "changed": 0,
+      "missing": 0
+    },
+    "committedRangeCheck": {
+      "command": [
+        "git",
+        "diff",
+        "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+        "HEAD",
+        "--",
+        "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+        "docs/reviews/probes/r051_r4_successor_campaign.py",
+        "docs/reviews/probes/r051_r4_successor_compile.log",
+        "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+        "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+        "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+        "docs/reviews/probes/r051_r4_successor_report.md",
+        "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+        "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+        "docs/reviews/probes/r051_r4_successor_vet.log",
+        "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_worker_receipt.json"
+      ],
+      "exit": 0,
+      "emptyDiff": true
+    },
+    "campaignReceiptPhysicalBindings": [
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_compile.log",
+        "capturedPhysicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+        "capturedPhysicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_vet.log",
+        "capturedPhysicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+        "capturedPhysicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+        "capturedPhysicalSha256": "843ffe9a60c2e92499fc63fca8c8384a64c3e575549b8949f3c95b938399c0c2",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+        "capturedPhysicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+        "capturedPhysicalSha256": "4984f57710fdc51475100611d7199b222e8c59e8b241aacbcf6c8d8855223d33",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+        "capturedPhysicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+        "capturedPhysicalSha256": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+        "capturedPhysicalSha256": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+        "capturedPhysicalSha256": "dd7e08b7aa9fc0de77720867acc47e616ff0f27353688cac487a6a661c34ae05",
+        "currentPhysicalEquality": true
+      },
+      {
+        "path": "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+        "capturedPhysicalSha256": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+        "currentPhysicalEquality": true
+      }
+    ]
+  },
+  "inheritedGateUnitTests": {
+    "observer": "Codex /root",
+    "tests": 46,
+    "exit": 0,
+    "seconds": 12.785,
+    "unchangedTooling": true
+  },
+  "publicationChecks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "exit": 0,
+      "seconds": 1.412,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "exit": 0,
+      "seconds": 1.68,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "command": [
+        "powershell",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0,
+      "seconds": 0.606,
+      "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0,
+      "seconds": 0.729,
+      "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "docs",
+        "run",
+        "docs:build"
+      ],
+      "exit": 0,
+      "seconds": 7.796,
+      "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m\u2713\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m\u2713\u001b[0m rendering pages...\nbuild complete in 7.08s.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "seconds": 0.045,
+      "output": "warning: in the working copy of 'docs/catalog/ARTIFACT_REGISTRY.json', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "HEAD",
+        "--files",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r4_successor_applied_mutation.json",
+        "docs/reviews/probes/r051_r4_successor_publication_receipt.json",
+        "docs/reviews/probes/r051_r4_successor_publication_report.md"
+      ],
+      "exit": 0,
+      "seconds": 1.021,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit": 0,
+      "seconds": 0.037,
+      "output": ""
+    }
+  ],
+  "noWorkerAcceptance": true,
+  "retainedPhysicalBindingHelperFailure": {
+    "command": "Recursive path/sha256 assertion across entire original receipt",
+    "exit": 1,
+    "cause": "Traversed three historical rawblob/archive diagnostic entries for canonical non-Go files, which are different byte domains",
+    "correctedScope": "Captured docs/reviews/probes runtime artifact paths only",
+    "actualDrift": false
+  },
+  "stagedPaths": [
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/probes/r051_r4_successor_applied_mutation.json",
+    "docs/reviews/probes/r051_r4_successor_publication_receipt.json",
+    "docs/reviews/probes/r051_r4_successor_publication_report.md"
+  ]
+}

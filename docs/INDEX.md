@@ -78,7 +78,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact fourth failed-evidence pointer, aggregate zero runtime; independent root count/cost review next.: `docs/reviews/probes/r051_r4_handback.json`
 - Fourth-repair failed offline preparation; strict archive passed, maintained five-leaf LP06 disagrees with three-leaf assumption.: `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md`
 - Uncorrected fourth-repair successor; archive member manifest accepted, finite name-check preparation failed.: `docs/reviews/probes/r051_r4_campaign.py`
+- Post-runtime lossless967-byte applied diff envelope; raw committed artifact preserved.: `docs/reviews/probes/r051_r4_successor_applied_mutation.json`
 - Committed publication-only repair6 disposition; preserve raw fifth packet/diff and exhausted1/4 runtime budget.: `docs/reviews/CCMAI_RUNTIME_053_DIFF_ARTIFACT_PUBLICATION_DISPOSITION_2026-10-06.md`
+- Repair6 publication checks and raw-to-envelope provenance; exhausted runtime budget.: `docs/reviews/probes/r051_r4_successor_publication_receipt.json`
+- Publication-only lossless encoding repair6; independent acceptance pending.: `docs/reviews/probes/r051_r4_successor_publication_report.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`
