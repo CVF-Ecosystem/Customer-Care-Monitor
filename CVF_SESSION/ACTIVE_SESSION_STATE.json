@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-052 independent CHANGES_REQUIRED for failed evidence17d60560: archive comparator R052-R3-01 confirmed, campaign0/Go0/resources0, R050/R051 residual RP-04 remains open. ORCHESTRATOR records R053 successor cost/authority then activates bounded archive-member manifest repair; no automatic retry, prior3 rounds retained, aggregate max1 actual campaign/max4 Go across R052/R053. All source/tests/seeds/old packets protected, independent child worker/root reviewer unchanged; no external/provider/channel/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA parked.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-053 fourth evidence repair DISPATCH_READY after recorded R052-R3-01 manifest cost decision: Codex /root/r051_preparation rehydrates and commits BUILD acknowledgment/preflight, then creates r051_r4 archive-member manifest runner/evidence only. Fixed source145bd411/production727d322; pure offline preparation before one actual campaign, aggregate max4 Go across R052/R053 (used0), no retry. RP-04 acceptance/history unchanged, R050/R051/R052 CHANGES_REQUIRED; all canonical source/tests/seeds/old packets protected. Return exact round4EvidenceCommit then separate REVIEW_PENDING for independent Codex /root. No provider/channel/external network/persistent data/push/merge/deployment/FREEZE; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root REVIEWER -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD; child worker stopped pending R053 activation",
+  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD; Codex /root/r051_preparation REPAIR_WORKER / BUILD COMMIT_STEWARD next",
   "roleRoute": "CODEX_SUBAGENT_REPAIR_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-06"
 }

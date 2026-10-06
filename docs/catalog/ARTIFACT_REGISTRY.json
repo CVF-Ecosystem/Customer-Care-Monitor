@@ -686,9 +686,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R052 independent CHANGES_REQUIRED; new comparator root cause/cost assessment precedes prospective R053 activation."
+      "description": "Active R053 archive-manifest evidence repair; fourth repair explicitly counted, unchanged aggregate runtime budget, child worker/root reviewer."
     },
     {
       "id": "truth-implementation-status",
@@ -1648,6 +1648,34 @@
       "path": "docs/reviews/learnings/feedback_archive_byte_manifest.md",
       "status": "ACTIVE",
       "description": "Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred."
+    },
+    {
+      "id": "historical-provider-evidence-route-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Historical R052 failed R3 evidence and independent manifest/cost review; no acceptance."
+    },
+    {
+      "id": "runtime053-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_053.md",
+      "status": "ACTIVE",
+      "description": "Bounded archive-member manifest repair, fourth round/cost history explicit and aggregate max4 Go unchanged."
+    },
+    {
+      "id": "runtime053-spec",
+      "family": "continuity",
+      "path": "docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Exact archive manifest requirement with unchanged inherited RP-04 runtime/evidence controls."
+    },
+    {
+      "id": "runtime053-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
+      "status": "ACTIVE",
+      "description": "R053 machine state; existing worker/root reviewer roles, seed before BUILD and aggregate budget retained."
     }
   ]
 }

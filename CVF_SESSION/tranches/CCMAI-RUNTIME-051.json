@@ -257,5 +257,14 @@
   },
   "delegatedRound3ExecutionTranche": "CCMAI-RUNTIME-052",
   "delegatedRound3ExecutionStatus": "REVIEW_PENDING",
-  "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393"
+  "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+  "delegatedRound4ExecutionTranche": "CCMAI-RUNTIME-053",
+  "round4Dispatch": {
+    "status": "AUTHORIZED_NOT_STARTED",
+    "repairRound": 4,
+    "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md",
+    "newRootCause": "R052-R3-01",
+    "aggregateGoBudgetRemaining": 4,
+    "historicalRoundsRetained": 3
+  }
 }

@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-052", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-053", "parked": true} -->
 
 ## Startup Order
 
@@ -50,7 +50,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R052 delegated R051/R3 evidence route (2026-10-06)
+## Current R053 archive manifest successor repair (2026-10-06)
+
+CCMAI-RUNTIME-053 fourth evidence repair DISPATCH_READY after recorded R052-R3-01 manifest cost decision: Codex /root/r051_preparation rehydrates and commits BUILD acknowledgment/preflight, then creates r051_r4 archive-member manifest runner/evidence only. Fixed source145bd411/production727d322; pure offline preparation before one actual campaign, aggregate max4 Go across R052/R053 (used0), no retry. RP-04 acceptance/history unchanged, R050/R051/R052 CHANGES_REQUIRED; all canonical source/tests/seeds/old packets protected. Return exact round4EvidenceCommit then separate REVIEW_PENDING for independent Codex /root. No provider/channel/external network/persistent data/push/merge/deployment/FREEZE; Facebook/Zalo OA parked.
+
+## Historical R052 delegated R051/R3 evidence route (2026-10-06)
 
 CCMAI-RUNTIME-052 independent CHANGES_REQUIRED for failed evidence17d60560: archive comparator R052-R3-01 confirmed, campaign0/Go0/resources0, R050/R051 residual RP-04 remains open. ORCHESTRATOR records R053 successor cost/authority then activates bounded archive-member manifest repair; no automatic retry, prior3 rounds retained, aggregate max1 actual campaign/max4 Go across R052/R053. All source/tests/seeds/old packets protected, independent child worker/root reviewer unchanged; no external/provider/channel/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA parked.
 
