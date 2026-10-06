@@ -94,6 +94,22 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Retained worker mount/root timeout failures; no source defect verdict; separate grouped R056 review cost contract.: `docs/reviews/R055_REVIEW_INTERRUPTION_DISPOSITION_2026-10-06.md`
 - Root observed worker compile/vet exits and pure mount setup failure; named cleanup, no retry/acceptance.: `docs/reviews/probes/r055_worker_interruption_recovery.json`
 - R056 activation gate rejection and preserved proposals; new R057 seed before activation, same source/budget.: `docs/reviews/R056_FAILED_ACTIVATION_AND_R057_SUCCESSOR_2026-10-06.md`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/ANALYZER_PREPARATION_RECEIPT_R057_EVIDENCE_2026-10-06.md`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_lp.jsonl`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_lp_stderr.log`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_manifest.json`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_mutant.jsonl`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_mutant_stderr.log`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_new.jsonl`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_new_stderr.log`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_ownership.jsonl`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_ownership_stderr.log`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_restored.jsonl`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_restored_stderr.log`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_selection.jsonl`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_selection_stderr.log`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_summary.json`
+- R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_source_authority_audit.json`
 - R057 six-call independent source-review harness; complete timeout log capture, task cache cleanup.: `docs/reviews/probes/r057_independent_campaign.py`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`

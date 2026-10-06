@@ -2089,6 +2089,118 @@
       "path": "docs/reviews/probes/r057_independent_campaign.py",
       "status": "ACTIVE",
       "description": "R057 six-call independent source-review harness; complete timeout log capture, task cache cleanup."
+    },
+    {
+      "id": "r057-evidence-r057-independent-lp-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_lp.jsonl",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-lp-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_lp_stderr.log",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-mutant-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_mutant.jsonl",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-mutant-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_mutant_stderr.log",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-new-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_new.jsonl",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-new-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_new_stderr.log",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-ownership-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_ownership.jsonl",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-ownership-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_ownership_stderr.log",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-restored-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-restored-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-selection-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_selection.jsonl",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-selection-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_selection_stderr.log",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-independent-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-r057-source-authority-audit-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_source_authority_audit.json",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-evidence-ANALYZER-PREPARATION-RECEIPT-R057-EVIDENCE-2026-10-06-md",
+      "family": "continuity",
+      "path": "docs/reviews/ANALYZER_PREPARATION_RECEIPT_R057_EVIDENCE_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
     }
   ]
 }

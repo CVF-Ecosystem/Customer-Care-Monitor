@@ -13,7 +13,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-057 REVIEW_PENDING / REVIEW at unchanged independent child source05c59e9978e5cf108b0d9118f64c7454805ec64e under seed5d81c3c9114f894b1a50dca73078891bf0270220: Codex /root executes sole grouped review max6Go,180s test/360s attach, fresh disposable build cache, applied terminal storage erasure/restoration and complete timeout logs. Prior R055 worker1/3Go/root1/2Go and R056 failed activation0Go preserved. No source/test edits/subagent call or automatic same-campaign retry; FREEZE/live/fullS2/governance/provider/push/merge/deploy outside scope, Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-057 REVIEW_PENDING / REVIEW after completed independent six-Go application campaign at unchanged child source05c59e9978e5cf108b0d9118f64c7454805ec64e: Codex /root publishes exact runtime evidence then evaluates SP01..12/source/claims for formal disposition. Positive114top/272PASS0FAIL/SKIP, stored-terminal mutant1 intendedFAIL, restored10PASS,207-file restoration and named cleanup PASS; prior failures/budgets retained. No further runtime/source/test edits/subagent call/FREEZE/live/fullS2/governance/push/merge/deploy, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / review-artifact COMMIT_STEWARD; historical child R055 source author unchanged, no worker dispatched",
   "roleRoute": "ROOT_ONLY_INDEPENDENT_REVIEW_OF_HISTORICAL_CHILD_SOURCE",
@@ -21,13 +21,14 @@
   "currentExecutionBudget": {
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 6,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedGoInvocations": 0,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 6,
     "historicalWorkerCampaigns": 1,
     "historicalWorkerGoInvocations": 3,
     "historicalReviewerCampaigns": 1,
     "historicalReviewerGoInvocations": 2,
     "failedR056ActivationGoInvocations": 0,
-    "aggregateMaxGoInvocations": 11
+    "aggregateMaxGoInvocations": 11,
+    "aggregateUsedGoInvocations": 11
   }
 }

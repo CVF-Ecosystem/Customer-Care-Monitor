@@ -105,5 +105,32 @@
     "doctor": "PASS WITH NOTE25/1",
     "docs": "PASS19.12s",
     "gateUnitBasis": "46PASS33.015s inherited unchanged gate/tests"
+  },
+  "runtimeEvidence": {
+    "status": "TESTS_COMPLETE_FORMAL_REVIEW_PENDING",
+    "receipt": "docs/reviews/probes/r057_independent_summary.json",
+    "sourceAudit": "docs/reviews/probes/r057_source_authority_audit.json",
+    "campaigns": 1,
+    "GoInvocations": 6,
+    "positiveTopExecutions": 114,
+    "positiveCompletedEvents": 272,
+    "fail": 0,
+    "skip": 0,
+    "expectedMutationFail": 1,
+    "restoredTopPASS": 10,
+    "commitIdentity": "DEFERRED_TO_FORMAL_REVIEW_AFTER_COMMIT"
+  },
+  "runtimePublicationSetup": {
+    "initialDocsBuild": "FAIL dead link to py asset in new runtime report",
+    "correction": "Reviewer directly changed unsupported asset link to exact code path; raw packet/source unchanged"
+  },
+  "runtimePublicationChecks": {
+    "defaultPreflight": "PASS7/7",
+    "PRPreflight": "PASS7/7",
+    "catalogPS5.1": "PASS",
+    "catalogPS7": "PASS",
+    "docs": "PASS after direct py-asset-link correction",
+    "gateUnitBasis": "46PASS33.015s unchanged tooling inherited",
+    "sourceProtected": "PASS700/120 oldtests,3seeds immutable"
   }
 }
