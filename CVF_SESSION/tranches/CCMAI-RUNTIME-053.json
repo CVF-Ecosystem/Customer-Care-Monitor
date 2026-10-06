@@ -227,10 +227,13 @@
     "newGoInvocations": 0,
     "encodingBeforeAcknowledgment": "NOT_STARTED",
     "acknowledgmentCommit": "2ace7ec1188be02373692e0e65a2fb244683ea27",
-    "phaseInheritance": "Continue last committed BUILD at earliest open publication correction stage; new before-edit acknowledgment required",
     "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
     "postRuntimeEncoding": true,
-    "rawRuntimeArtifactRetained": true
+    "rawRuntimeArtifactRetained": true,
+    "historicalBeforeEditPhaseInheritance": "Continue last committed BUILD at earliest open publication correction stage; new before-edit acknowledgment required",
+    "currentEncodingStatus": "COMMITTED_LOSSLESS_ENVELOPE_PENDING_INDEPENDENT_REVIEW",
+    "currentNextMove": "Independent Codex /root review; no runtime budget or automatic repair",
+    "encodingBeforeAcknowledgmentMeaning": "Historical before-edit observation only; encoding subsequently completed after acknowledgment2ace7ec"
   },
   "supersededDraftContinuity": {
     "uncommittedStatusEntries": [
@@ -241,5 +244,92 @@
     "observedPreflightFailure": "tranche invalid status transition REVIEW_PENDING -> BUILD; other6 gates pass; corrected before encoding",
     "workerNoAcceptance": true
   },
-  "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e"
+  "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
+  "currentMemoryContinuityCorrection": {
+    "reviewerFinding": "BLOCKED_CONTINUITY_DRIFT: memory current body stale BUILD instruction",
+    "workerCorrection": "Exact canonical state.nextAllowedMove; original instruction retained as historical",
+    "statusUnchanged": "REVIEW_PENDING",
+    "newRuntime": 0,
+    "checks": [
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight"
+        ],
+        "exit": 0,
+        "seconds": 1.394
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight",
+          "--base",
+          "origin/main",
+          "--head",
+          "HEAD"
+        ],
+        "exit": 0,
+        "seconds": 1.611
+      },
+      {
+        "command": [
+          "powershell",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.621
+      },
+      {
+        "command": [
+          "pwsh",
+          "-NoProfile",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.608
+      },
+      {
+        "command": [
+          "npm.cmd",
+          "--prefix",
+          "docs",
+          "run",
+          "docs:build"
+        ],
+        "exit": 0,
+        "seconds": 7.425
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit": 0,
+        "seconds": 0.035
+      }
+    ],
+    "stagedChecks": {
+      "paths": [
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
+        "CVF_SESSION_MEMORY.md",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json"
+      ],
+      "preflight": "PASS7/7",
+      "diffCheckExit": 0,
+      "recordRestagedAndChecksRepeatedBeforeCommit": true
+    }
+  }
 }

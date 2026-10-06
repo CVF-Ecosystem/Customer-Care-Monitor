@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R053 fourth failure reviewed; root-authored count corrected, separately assessed fifth successor within unchanged authority/budget.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md`
+- Current R053 REVIEW handoff: runtimebaeb/publicationb5bf committed, independent root review pending; exhausted1campaign/4Go, remaining0/0.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -252,10 +252,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable successor authority before activation; fourth repair counted, original history/packet/source/tests protected.: `CVF_SESSION/authority/CCMAI-RUNTIME-053.json`
 - Separately recorded cost decision for demonstrated archive manifest comparator root cause before fourth repair; aggregate runtime budget unchanged.: `docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md`
 - Recorded source-faithful count correction and cumulative fifth successor cost decision under unchanged seed/roles/artifact prefix/budget.: `docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md`
-- Bounded archive-member manifest repair, fourth round/cost history explicit and aggregate max4 Go unchanged.: `docs/work_orders/CCMAI_RUNTIME_053.md`
+- R053 REVIEW_PENDING work order; completed fifth runtime and sixth publication correction, no remaining runtime budget.: `docs/work_orders/CCMAI_RUNTIME_053.md`
 - Independent fourth failed-preparation review; archive manifest settled, root count error5 leaves/6 events, runtime0.: `docs/reviews/CCMAI_RUNTIME_053_R4_INDEPENDENT_REVIEW_2026-10-06.md`
 - Independent committed hash/source names/archive/661 protected-byte checks; no runtime.: `docs/reviews/probes/r053_r4_independent_summary.json`
-- R053 machine state; existing worker/root reviewer roles, seed before BUILD and aggregate budget retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-053.json`
+- R053 REVIEW_PENDING machine state: immutable runtimebaeb, separate publicationb5bf; root review pending, current budget0/0.: `CVF_SESSION/tranches/CCMAI-RUNTIME-053.json`
 - Exact archive manifest requirement with unchanged inherited RP-04 runtime/evidence controls.: `docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`

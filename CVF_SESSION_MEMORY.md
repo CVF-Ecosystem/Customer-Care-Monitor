@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R053 archive manifest successor repair (2026-10-06)
 
-CCMAI-RUNTIME-053 cumulative publication repair6 BUILD under committed disposition1a8bb5e42a11b8259be985a4155f527389a280fa: Codex /root/r051_preparation adds only lossless JSON/base64 envelope and new publication receipt/report/current metadata after committed acknowledgment. Raw baeb4c9 runtime packet/diff/runner/preparation/logs remain unchanged; no whitespace suppression or historical recertification. Runtime budget exhausted used1campaign/4Go, remaining0/0; no Go/container/provider/network/source/test/seed/tooling/workflow changes. Commit separate publicationEvidenceCommit then REVIEW_PENDING handback for independent Codex /root; R050/R051/R052 open, no acceptance/FREEZE/push/merge/deploy, accounts parked.
+CCMAI-RUNTIME-053 repair6 REVIEW_PENDING: independent Codex /root reviews runtime evidence baeb4c920a68cadb121344aaed8408a3f23aa0df and publication correction b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e, lossless967-byte raw-to-envelope mapping, retained failed checks, six full LP06 passes and named cleanup. Runtime budget exhausted used1campaign/4Go, remaining0/0; no further runtime or automatic repair. R050/R051/R052 remain open until independent disposition; no worker acceptance/FREEZE/push/merge/deploy, accounts parked.
 
 ## Historical R052 delegated R051/R3 evidence route (2026-10-06)
 
@@ -698,3 +698,9 @@ Owner authorized generated-file cleanup and normal GitHub push of the current br
 ## Publication-only repair6 handback
 
 Runtime baeb4c9 and lossless publication b5bf0f0 committed separately after acknowledgment2ace7ec. Current REVIEW_PENDING, root independent review only; used1campaign/4Go, remaining0/0. Raw diff and all old packets unchanged; historical failed staged check and helper assertions retained. No worker acceptance.
+
+## Historical publication repair6 before-edit routing
+
+The following was the BUILD acknowledgment instruction, superseded by the current REVIEW next move above:
+
+CCMAI-RUNTIME-053 cumulative publication repair6 BUILD under committed disposition1a8bb5e42a11b8259be985a4155f527389a280fa: Codex /root/r051_preparation adds only lossless JSON/base64 envelope and new publication receipt/report/current metadata after committed acknowledgment. Raw baeb4c9 runtime packet/diff/runner/preparation/logs remain unchanged; no whitespace suppression or historical recertification. Runtime budget exhausted used1campaign/4Go, remaining0/0; no Go/container/provider/network/source/test/seed/tooling/workflow changes. Commit separate publicationEvidenceCommit then REVIEW_PENDING handback for independent Codex /root; R050/R051/R052 open, no acceptance/FREEZE/push/merge/deploy, accounts parked.
