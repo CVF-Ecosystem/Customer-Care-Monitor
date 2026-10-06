@@ -1,0 +1,32 @@
+# R050 source-first application provider initialization
+
+Date: 2026-10-05. SPEC contract LP-01..08, risk R2. BUILD727d322 submitted; independent review CHANGES_REQUIRED, not accepted. Original dispatch intent and requirements remain unchanged. Work order R050, independent worker Claude/reviewer Codex.
+
+Baseline before R050: executeReserved initializes provider before parsing input/candidate/snapshot preparation. R025/R027 already determine which snapshots need analysis; R028/R046 terminal/ownership/finalizer behavior must remain intact. Delay dependency resolution until existing prepared source actually needs inference. This is an application execution-order change, a preparatory S2 seam; no new CVF runtime policy/routing/approval/DLP gate or semantic auto-skip is introduced. Full S2/S3 real-provider governance evidence remains separate.
+
+| ID | Acceptance and required observation |
+| --- | --- |
+| LP-01 | Empty channel list, no conversations, no messages and all-unchanged ordinary snapshots finish through the existing truthful no-work path without provider-setting/key lookup or decryption. Missing/invalid synthetic AI configuration must not mask an empty-source outcome. No AI usage/results/notifications; ordinary clean scan checkpoint follows existing rule, explicit modes preserve checkpoint. |
+| LP-02 | Invalid channel JSON and candidate/preparation/provenance failures remain errors or partial as currently defined; all-failed preparation must never become success. No provider initialization when no prepared snapshot remains. Mixed valid/failed preparation processes valid source and retains error counters/terminal/checkpoint rules. |
+| LP-03 | Eligible work initializes the selected provider once per run after preparation; injected/test override precedence remains unchanged. Missing/undecryptable synthetic key still yields the existing bounded provider-unavailable error, stored failure and ownership release, never a false accepted result. No provider/model/fallback/decryption contract change. |
+| LP-04 | Existing ordinary/explicit, full/unanalyzed/since_last, finite cap/date/test-run and batch/single execution semantics unchanged. Observe representative real Analyzer entry methods plus shared RunReserved used by HTTP/MCP/scheduler/agent forwarding; source-map unchanged forwarding routes, do not claim mounted transport proof from direct Analyzer tests. |
+| LP-05 | Cancellation/time exhaustion before inference prevents provider initialization/new calls and retains cancelled/partial/ownership/checkpoint behavior. Race after initial guard remains bounded by existing per-call cancellation checks; no stronger zero-race guarantee. No cancellation/terminal/finalizer or notification contract weakening. |
+| LP-06 | Dedicated application regressions reject original eager initialization. Include actual source-selection no-work negative and eligible-source positive controls; count provider settings/decryption/constructor access distinctly from AnalyzeChat calls. Injection bypass alone cannot prove production initialization order. Tests observe persisted run/job/checkpoint/summary/usage/results and notifier effects. |
+| LP-07 | Original F06-R1 provider-selection terminal fixture may add eligible synthetic source only; every original cancellation/finalizer assertion and other case retained. F06-R2 already has twoConvs; immutable in this tranche. All affected R025/R027/R028/R044/R046 tests retain meaningful coverage and pass without unexplained failures/skips. |
+| LP-08 | Exact worker commit binds source/test hashes, offline fixture/isolation commands/exit codes, named baseline/mutation failures and byte-restored controls, final source-set/diff check, cleanup and publication gates. Receipt is machine-readable and does not certify missing historical R046 proof. |
+
+Allowed product edits only analyzer.go, dedicated analyzer_provider_initialization_test.go and narrowly scoped F06-R1 fixture. Read source/helpers/tests before design; do not edit finalizer/source-version selection/model/schema/transport/provider implementation to make tests pass. If a further path/effect/acceptance change is needed, return the concrete boundary finding before edit. No production data, actual provider/channel calls, real config/secrets/network/persistent DB/parent edits or deployment. Synthetic fixtures support application behavior only; any future CVF governance claim needs separately authorized real provider request/response evidence.
+
+No immutable audit trace, WAIT_DATA ownership/deadline, rule preview/PII/budget/human disposition/full S2 exit criterion is delivered by R050. Do not label no work as a new policy approval or full eligibility decision. No cost-saving measurement or calibration claim. Local-contract review and FREEZE require separate dispositions; prior local closure and parked accounts unchanged.
+
+Delegated R051 exact repair independently [CHANGES_REQUIRED](../reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md): original ownership fixture finding settled, counters corrected; persistence observations and ordering mutation/receipt remain open. Original production/seed/LP acceptance contract unchanged; no FREEZE.
+
+Latest delegated R051 [round2 re-review](../reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md): tests/persistence/notifier and behavioral detector settled; R050-R1-03 receipt/harness evidence remains open. REVIEW_COST_ESCALATION_REQUIRED before third repair, no further BUILD or FREEZE dispatched.
+
+## Current independent contract disposition (2026-10-06)
+
+Bounded local intended contract REVIEW_PASS / FREEZE_OPEN per docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md. RP04 receipt/harness settled via immutable source145bd411 and runtimebaeb4c9/publicationb5bf0f0; inherited RP01/02/03 NOT_RERUN. Earlier failed review/execution/cost history remains. No full S2/CVF runtime governance/live/hosted claim, new runtime or FREEZE.
+
+## Separate scoped local FREEZE (2026-10-06)
+
+Accepted local intended contract FROZEN under R054 seedb59b4507fad69d999cba2faa40ac57416c949d92; docs/reviews/CCMAI_RUNTIME_054_LOCAL_PROVIDER_CLOSURE_2026-10-06.md. Earlier review/open status is historical, original authority remains immutable. Evidence inherited from exact source145bd411/production727d322; all failures/full S2/live limits retained, no runtime replay.

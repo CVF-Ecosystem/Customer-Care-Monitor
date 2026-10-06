@@ -1,0 +1,268 @@
+{
+  "sourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "auditDate": "2026-10-05",
+  "runtimeExecuted": false,
+  "governanceProof": false,
+  "campaigns": [
+    {
+      "reviewRound": "R2",
+      "runs": [
+        {
+          "name": "baseline",
+          "digestMatches": true,
+          "rawLogSha256": "23a01372b1f88ec0001653112ae78ed9c3b321143564062aee8c95db17f209dc",
+          "counts": {
+            "pass": 28,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 22,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "worker-pool-isolation-probe",
+          "digestMatches": true,
+          "rawLogSha256": "77f3c93bee526ebd39b0285e710a9b6032e08e41d420ba9f86923bdfe0d51c63",
+          "counts": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 1,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "T01-statement-isolation-bypass",
+          "digestMatches": true,
+          "rawLogSha256": "4586c5d218307293cd97f6c721b011ee7c7b9bb8f57e754a263d1f4e96514ff5",
+          "counts": {
+            "pass": 0,
+            "fail": 2,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 0,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "T01-statement-isolation-bypass-restored",
+          "digestMatches": true,
+          "rawLogSha256": "43366e693fae538ae8961986a0414774495e69911c47d2c701d0551441a03877",
+          "counts": {
+            "pass": 2,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 1,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "M01-normalization-bypass",
+          "digestMatches": true,
+          "rawLogSha256": "508c1e72654bcfb37262c1b8c5e6ed2bcbbc45bfd0699f5c38ad544d15fe2996",
+          "counts": {
+            "pass": 1,
+            "fail": 3,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 1,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "M01-normalization-bypass-restored",
+          "digestMatches": true,
+          "rawLogSha256": "ce310b7f829d7d74fe00e5434aa35fbadadcc1aecbc4c12f1489d4656728935f",
+          "counts": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 4,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "M02-raw-fallback-log",
+          "digestMatches": true,
+          "rawLogSha256": "5dc9907600eb589adacbf46e0f2a4e886325167c3a990bb582b66ea497e211f8",
+          "counts": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 0,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "M02-raw-fallback-log-restored",
+          "digestMatches": true,
+          "rawLogSha256": "61b026ba03d30f22d7b35e469548bfbb490d5e45a1831aefb08b7efb17d707bb",
+          "counts": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 1,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "M03-gorm-session-bypass",
+          "digestMatches": true,
+          "rawLogSha256": "fbb5b1871f6a40ff4b31ead21a0dcb530c467b04c4da88b9d65b067c51e7bf8e",
+          "counts": {
+            "pass": 0,
+            "fail": 1,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 0,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "M03-gorm-session-bypass-restored",
+          "digestMatches": true,
+          "rawLogSha256": "d989e3be63bdd90b67820b6dc8dcafe70423b6592696bc007735c4f26dab5f0c",
+          "counts": {
+            "pass": 1,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 1,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "ownership-terminal-regression",
+          "digestMatches": true,
+          "rawLogSha256": "09911b20b83665110cccf69525037c239fd8361d540c79e793dc8d7eba1a23ae",
+          "counts": {
+            "pass": 59,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 18,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "build",
+          "digestMatches": true,
+          "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 0,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": true
+        },
+        {
+          "name": "vet",
+          "digestMatches": true,
+          "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "counts": {
+            "pass": 0,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 0,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": true
+        }
+      ],
+      "restoredArchiveFiles": 203,
+      "byteDifferences": [],
+      "extraFiles": []
+    },
+    {
+      "reviewRound": "R2-boundary-supplement",
+      "runs": [
+        {
+          "name": "boundary-sink-checkpoint-baseline",
+          "digestMatches": true,
+          "rawLogSha256": "6ab3f2fae87fda48c241d10e18e622485e3524c8497c3cb35bf94a82d62c168a",
+          "counts": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 1,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "M03-boundary-sink-checkpoint",
+          "digestMatches": true,
+          "rawLogSha256": "4682312c6774bb7f4efdd123d2848b6a2474773076eba28ffdd308f73bfbe9a0",
+          "counts": {
+            "pass": 0,
+            "fail": 4,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 0,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        },
+        {
+          "name": "boundary-sink-checkpoint-restored",
+          "digestMatches": true,
+          "rawLogSha256": "4e8ee957f67ca9b52bee52ac84027e36a67e3cfde804de4a9f38cb1a8c5bda5b",
+          "counts": {
+            "pass": 4,
+            "fail": 0,
+            "skip": 0
+          },
+          "countsMatch": true,
+          "topLevelPass": 1,
+          "passNamesMatch": true,
+          "failNamesMatch": true,
+          "emptyBuildVetLog": false
+        }
+      ],
+      "restoredArchiveFiles": 203,
+      "byteDifferences": [],
+      "extraFiles": []
+    }
+  ],
+  "limits": "Recovered independent reviewer R2 evidence only; does not certify Claude historical execution, resource exits or empty build/vet process exits independently.",
+  "backendTreeOid": "640f3c309746131b2aaace4c2e324f70ea39ab75",
+  "backendTreeUnchanged": true,
+  "result": "PASS_RECOVERED_REVIEWER_EVIDENCE_AUDIT"
+}

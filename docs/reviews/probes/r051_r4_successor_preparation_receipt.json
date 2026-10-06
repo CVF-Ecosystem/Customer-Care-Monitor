@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-053",
+  "inheritedTranche": "CCMAI-RUNTIME-051",
+  "repairRound": 5,
+  "campaigns": 0,
+  "goInvocations": 0,
+  "automaticRetries": 0,
+  "startedUtc": "2026-10-06T10:30:35.677457+00:00",
+  "artifactCommit": "DEFERRED_TO_LATER_COMMITTED_HANDBACK",
+  "sourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "inheritedProductionCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
+  "sourceAcknowledgmentCommit": "c228931c35339f56cac0a934394e586082a3f7c1",
+  "originalAuthorityCommit": "a54cb73007f081fe4bbaa4baa11d28fed4a7d937",
+  "routeAuthorityCommit": "072812c7ec8e07025eaf90ae668744744f69f3bf",
+  "acknowledgmentCommit": "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+  "taskRoot": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-u8oqmp85",
+  "commands": [],
+  "errors": [],
+  "mode": "prepare",
+  "runnerSha256": "504e45dfe2421c5eb161ceaab1d9119de6cbd696c085270c33ec8fd1ebac333a",
+  "invocation": {
+    "command": [
+      "python",
+      "-B",
+      "docs/reviews/probes/r051_r4_successor_campaign.py",
+      "--acknowledgment",
+      "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+      "--mode",
+      "prepare"
+    ],
+    "exit": 0
+  },
+  "aggregateBudget": {
+    "priorCampaigns": 0,
+    "priorGoInvocations": 0,
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4
+  },
+  "inherited": {
+    "acceptedR2Review": "42 top-level / 98 PASS; INHERITED_NOT_RERUN",
+    "RP01_RP02_RP03": "ACCEPTED_INHERITED",
+    "productionBuildVet": "INHERITED_BYTE_IDENTICAL_PRODUCTION"
+  },
+  "notRun": [
+    "full engine",
+    "full backend",
+    "frontend",
+    "race",
+    "real provider",
+    "channel",
+    "CVF runtime governance",
+    "hosted readiness"
+  ],
+  "cleanup": {
+    "containers": [],
+    "network": {},
+    "volumes": [],
+    "capturedVolumeNamesBeforeTeardown": [],
+    "successfulInventoryCommands": [
+      {
+        "command": [
+          "docker",
+          "ps",
+          "-a",
+          "--format",
+          "{{.Names}}"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "docker",
+          "network",
+          "ls",
+          "--format",
+          "{{.Name}}"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "docker",
+          "volume",
+          "ls",
+          "--format",
+          "{{.Name}}"
+        ],
+        "exit": 0
+      }
+    ]
+  },
+  "identitiesVerified": true,
+  "campaignParentHead": "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+  "rawBlobManifestDiagnostic": {
+    "path": "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+    "sha256": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+    "bytes": 32822
+  },
+  "archiveSha256": "b4d4daff222388d1f721294b0d2ab47899bb70943966bff1742b7c045054be38",
+  "sourceManifest": {
+    "path": "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+    "sha256": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af",
+    "bytes": 32822
+  },
+  "sourceFileCount": 204,
+  "manifestBasis": "EXACT_GIT_ARCHIVE_MEMBER_BYTES_NOT_RAW_BLOBS",
+  "rawBlobDiagnostic": {
+    "notUsedForAcceptance": true,
+    "differentFiles": [
+      {
+        "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+        "rawBlob": {
+          "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+          "sha256": "8df9c522fbbcf7cebd384539f5f4a7d266e7521674f5ca19f90acacfddc04c14",
+          "bytes": 2616
+        },
+        "archiveMember": {
+          "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+          "sha256": "3af39ca7052cccff481f7530a8c36556361e978e09b25e677e12cf41126f2b32",
+          "bytes": 2637
+        }
+      },
+      {
+        "path": "backend/go.mod",
+        "rawBlob": {
+          "path": "backend/go.mod",
+          "sha256": "a9612773d6d58bd50b404624975ef48f7c213e0498fc4b073a16afc1151f54a4",
+          "bytes": 3823
+        },
+        "archiveMember": {
+          "path": "backend/go.mod",
+          "sha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+          "bytes": 3911
+        }
+      },
+      {
+        "path": "backend/go.sum",
+        "rawBlob": {
+          "path": "backend/go.sum",
+          "sha256": "79bb19b2950d5a893465ae6d639a9e2d5e4a8cab96e906e2b7e138dec35fbae1",
+          "bytes": 26195
+        },
+        "archiveMember": {
+          "path": "backend/go.sum",
+          "sha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+          "bytes": 26483
+        }
+      }
+    ]
+  },
+  "manifestChecks": [
+    {
+      "name": "before mutation",
+      "files": 204,
+      "exactMembershipAndBytes": true
+    },
+    {
+      "name": "after preparation restoration",
+      "files": 204,
+      "exactMembershipAndBytes": true
+    }
+  ],
+  "moduleCache": {
+    "path": "C:\\Users\\tiennm\\go\\pkg\\mod",
+    "exists": true,
+    "readOnlyMount": true,
+    "staticReachability": "Not assumed; budgeted isolated compile fails closed"
+  },
+  "cachedImages": [
+    {
+      "tag": "mysql:8.0",
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    },
+    {
+      "tag": "golang:1.26-alpine",
+      "id": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+    }
+  ],
+  "syntaxPreparation": "Python AST PASS; no bytecode or runtime proof",
+  "detectorPreparation": {
+    "expectedLeafLiterals": [
+      "negative control: no work succeeds without AI settings/decryption",
+      "positive control: eligible work strictly requires provider initialization (missing key)",
+      "positive control: eligible work strictly requires provider initialization (corrupt key)",
+      "distinct counting of provider constructor access vs AnalyzeChat calls",
+      "distinct counting in non-batch mode: constructor once, single calls match conversation count"
+    ],
+    "actualLeafLiterals": [
+      "negative control: no work succeeds without AI settings/decryption",
+      "positive control: eligible work strictly requires provider initialization (missing key)",
+      "positive control: eligible work strictly requires provider initialization (corrupt key)",
+      "distinct counting of provider constructor access vs AnalyzeChat calls",
+      "distinct counting in non-batch mode: constructor once, single calls match conversation count"
+    ],
+    "exactMatch": true,
+    "sourceSha256": "cceef8a7cda5a5ee01a3b5535a19eb9f4717792a0ac4ed40c87c7e2ee08fd38f",
+    "fullNormalizedGoNames": [
+      "TestLP06EagerInitializationDetectorNegativeAndPositive",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(missing_key)",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(corrupt_key)",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_in_non-batch_mode:_constructor_once,_single_calls_match_conversation_count"
+    ],
+    "fullCompletedEvents": 6
+  },
+  "mutation": {
+    "expectedMatchCount": 1,
+    "actualMatchCount": 1,
+    "name": "M_EAGER_INIT_ORDERING",
+    "target": "backend/engine/analyzer.go",
+    "baselineSha256": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+    "mutantSha256": "4db152a361266dafc896ca7e966fe611bd267cb9dcc5839e6234f87ad00d66a3",
+    "appliedDiff": {
+      "path": "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+      "sha256": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+      "bytes": 967
+    }
+  },
+  "mutationConstructionPreparation": {
+    "changedBytes": true,
+    "exactOneMatch": true,
+    "runtimeProof": "NOT_RUN"
+  },
+  "restoration": [
+    {
+      "name": "pure offline construction preparation finally",
+      "sha256": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+      "byteEquality": true
+    },
+    {
+      "name": "outer finally safety",
+      "sha256": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+      "byteEquality": true
+    }
+  ],
+  "preparationResult": "PASS_NOT_RUNTIME_PROOF",
+  "campaignResult": "NOT_RUN_PREPARATION_ONLY",
+  "totalSeconds": 10.936,
+  "publication": {
+    "status": "PENDING_FINAL_MARKDOWN_AND_GATES"
+  }
+}

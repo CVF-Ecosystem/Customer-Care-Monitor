@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-048",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_ACCEPTANCE_DISPOSITION_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_048.md",
+  "sourcePlanningCommit": "4774cd14080f0cbb76422f32e0d66320a569644a",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Codex",
+    "reviewer": "Codex"
+  },
+  "roleInheritance": "Claude is inherited original R046 product worker at91da0e88; no new implementation BUILD. Codex reviews independently of that worker and publishes acceptance metadata only. R047 child correction review already independently completed.",
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_048.md",
+    "docs/work_orders/CCMAI_RUNTIME_046.md",
+    "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "old_worker_or_review_packet_edit",
+    "original_authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "runtime_campaign",
+    "detector_mutation",
+    "provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "further_acceptance_contract_expansion"
+  ],
+  "ownerAuthorization": "Owner delegated audit and selection via audit và chọn; A chosen and committed4774cd1, owner next instruction nẽt continues formal acceptance. Separate decision CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json applies; no repeated A/B approval needed.",
+  "inheritedProductCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "acceptanceContract": "Local FL-01..06 acceptance uses exact-R2 independent proof plus recovered R3 and accepted R4 factual corrections. Historical exact-archive worker execution and missing original worker publication/isolation/cleanup remain permanently NOT MET/NOT VERIFIED, no longer local acceptance prerequisites. Behavior requirements unchanged.",
+  "scope": "Metadata-only formal review disposition under explicit A contract. May qualify R046 REVIEW_PASS and update current SPEC/order/record with separate acceptance provenance. Cannot rewrite historical evidence or declare FREEZE.",
+  "earliestOpenPhase": "REVIEW",
+  "inheritanceReason": "Product BUILD91da0e88 and independent R2 observations plus R047 correction are complete; new evidence-basis decision is explicit. Enter REVIEW with no new BUILD/runtime.",
+  "dispatchBoundary": "Commit this separate seed before activation; rehydrate and declare reviewer roles before formal evaluation. Commit all continuity/status/catalog/order evidence before declaring acceptance."
+}

@@ -1,0 +1,26 @@
+--- baseline/backend/engine/analyzer.go
++++ mutant/backend/engine/analyzer.go
+@@ -104,6 +104,23 @@
+ 	errorCount := 0
+ 	truncated := false
+ 	var provider ai.AIProvider
++	if injectedProvider != nil {
++		provider = injectedProvider
++	} else if a.providerOverride != nil {
++		provider = a.providerOverride
++	} else if a.providerResolver != nil {
++		var provErr error
++		provider, provErr = a.providerResolver(job)
++		if provErr != nil {
++			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable)
++		}
++	} else {
++		var provErr error
++		provider, provErr = a.getProvider(job)
++		if provErr != nil {
++			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable)
++		}
++	}
+ 
+ 	// Select the conversations and prepare their snapshots.
+ 	var conversations []models.Conversation

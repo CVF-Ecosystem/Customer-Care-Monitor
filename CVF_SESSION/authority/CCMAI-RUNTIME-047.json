@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-047",
+  "authorityKind": "DISPATCHER_OWNED_DELEGATED_EVIDENCE_CORRECTION_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_047.md",
+  "sourcePlanningCommit": "5f2bdd266164f9f08054fd3f4c886b5fa4adda74",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex parent /root",
+    "implementationWorker": "Codex subagent r046_r4_worker",
+    "repairWorker": "Codex subagent r046_r4_worker",
+    "commitSteward": "Codex subagent r046_r4_worker",
+    "reviewer": "Codex parent /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_047.md",
+    "docs/reviews/ENGINE_FINALIZER_LOGGING_R046_R4_CORRECTIONS_2026-10-05.md",
+    "docs/reviews/probes/r046_r4_*"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "old_packet_edit",
+    "authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "acceptance_contract_waiver",
+    "runtime_campaign",
+    "detector_mutation",
+    "provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim"
+  ],
+  "ownerAuthorization": "Owner explicitly asked Bạn tạo subagent thi công work order này on 2026-10-05. Separately record worker/BUILD commit ownership transition for metadata-only R4; original R046 seed stays immutable.",
+  "inheritedOrder": "docs/reviews/CCMAI_RUNTIME_046_R4_COST_DISPOSITION_2026-10-05.md",
+  "inheritedProductCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "scope": "Implement successor factual correction/disclosure/publication packet for R046-R3-01..03 only. Exact-archive condition NOT MET/NOT VERIFIED remains explicit; no waiver or original R046 acceptance/FREEZE granted.",
+  "dispatchBoundary": "Commit this seed before activation and worker BUILD. Child rehydrates, declares and records BUILD acknowledgment/preflight before evidence edits; parent independently reviews; no automatic fifth round."
+}

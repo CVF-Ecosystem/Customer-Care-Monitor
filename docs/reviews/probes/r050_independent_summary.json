@@ -1,0 +1,558 @@
+{
+  "buildCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
+  "taskRoot": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-independent-71cdd91f",
+  "archiveSha256": "C86E845B6A875F4A2802E521665529669E89D20B53469160FDC4E709D77265FA",
+  "internalNetwork": "ccmai-r050-review-net-3bb238b1",
+  "disposableDatabase": "ccmai-r050-review-db-3bb238b1",
+  "commands": [
+    {
+      "logSha256": "6829C4AFB91D29543835479E0D3D4482A705EE3E90E1622B62A2AD2B508180A6",
+      "logPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-independent-71cdd91f\\exact-build.jsonl",
+      "seconds": 86.8128498,
+      "name": "exact-build",
+      "exit": 1,
+      "goArgs": [
+        "test",
+        "./engine",
+        "-json",
+        "-count=1",
+        "-p",
+        "1",
+        "-timeout",
+        "180s",
+        "-run",
+        "TestLP|TestEveryTerminalPath|TestEarlyFailureClasses|TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership|TestFL|TestF05|TestF06|TestTerminalRunHoldsTheSlot"
+      ]
+    },
+    {
+      "logSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "logPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-independent-71cdd91f\\build.jsonl",
+      "seconds": 65.8917677,
+      "name": "build",
+      "exit": 0,
+      "goArgs": [
+        "build",
+        "./..."
+      ]
+    },
+    {
+      "logSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "logPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-independent-71cdd91f\\vet.jsonl",
+      "seconds": 68.019917,
+      "name": "vet",
+      "exit": 0,
+      "goArgs": [
+        "vet",
+        "./..."
+      ]
+    }
+  ],
+  "externalNetwork": false,
+  "hostPorts": false,
+  "newPulls": false,
+  "cleanup": {
+    "networkRemoveExit": 0,
+    "databaseAbsent": true,
+    "networkAbsent": true,
+    "databaseRemoveExit": 0,
+    "anonymousVolumesAbsent": true
+  },
+  "networkInternal": true,
+  "portBindings": {},
+  "resourceSnapshot": {
+    "database": "ccmai-r050-review-db-3bb238b1",
+    "anonymousVolumes": [
+      "dcab24b98e8d3f7926a0ae8a99e014f487d1ef3c3d503b0905c11f95cca536a3"
+    ],
+    "portBindings": {},
+    "capturedBeforeCleanup": true
+  },
+  "sourceArchiveMatchesCommit": true,
+  "sourceExportFileCount": 204,
+  "sourceRestoredUnmodifiedAfterCampaign": true,
+  "sourceHashes": {
+    "backend/engine/analyzer.go": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+    "backend/engine/analyzer_f06_r1_test.go": "5e56af857f72331465d440e0b480fb67c8f1d9eba73e281c1be3905ebcc83787",
+    "backend/engine/analyzer_provider_initialization_test.go": "2171db2cb3ba185d49ecc579f74a4066403db51d1751bc24a9db5a7f2937a2a2"
+  },
+  "testSummary": {
+    "topLevel": 42,
+    "completedEvents": 94,
+    "pass": 93,
+    "fail": 1,
+    "skip": 0,
+    "failedTests": [
+      "TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership"
+    ],
+    "LPSubtests": {
+      "TestLP01": 5,
+      "TestLP02": 3,
+      "TestLP03": 4,
+      "TestLP04": 12,
+      "TestLP05": 2,
+      "TestLP06": 3
+    },
+    "terminalEvents": [
+      {
+        "test": "TestF05ProbeFullWithCapReEvaluatesEvaluatedConversation",
+        "action": "pass"
+      },
+      {
+        "test": "TestF05ProbeVietnamDayLowerBoundIsInclusive",
+        "action": "pass"
+      },
+      {
+        "test": "TestF05ProbeInvalidDatesAreRejectedWithoutARun",
+        "action": "pass"
+      },
+      {
+        "test": "TestF05ProbeUnlimitedExplicitRunKeepsTheCheckpoint",
+        "action": "pass"
+      },
+      {
+        "test": "TestF05ReviewTestRunRecordsTerminalJobStatus/batch=false",
+        "action": "pass"
+      },
+      {
+        "test": "TestF05ReviewTestRunRecordsTerminalJobStatus/batch=true",
+        "action": "pass"
+      },
+      {
+        "test": "TestF05ReviewTestRunRecordsTerminalJobStatus",
+        "action": "pass"
+      },
+      {
+        "test": "TestF06ProbeSecondRunOfAnOccupiedJobIsRefused",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathHonorsAnAcceptedCancel/early_failure:_invalid_input_list",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathHonorsAnAcceptedCancel/early_failure:_provider_selection",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathHonorsAnAcceptedCancel/early_failure:_invalid_run_parameters",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathHonorsAnAcceptedCancel/abort_/_setup_failure",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathHonorsAnAcceptedCancel/provider_panic",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathHonorsAnAcceptedCancel",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathWinsOverALateCancel/early_failure:_invalid_input_list",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathWinsOverALateCancel/early_failure:_provider_selection",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathWinsOverALateCancel/early_failure:_invalid_run_parameters",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathWinsOverALateCancel/abort_/_setup_failure",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathWinsOverALateCancel/provider_panic",
+        "action": "pass"
+      },
+      {
+        "test": "TestEveryTerminalPathWinsOverALateCancel",
+        "action": "pass"
+      },
+      {
+        "test": "TestEarlyFailureClassesNeverLogOrStoreTheUnderlyingCause/candidate_selection_(ordinary)",
+        "action": "pass"
+      },
+      {
+        "test": "TestEarlyFailureClassesNeverLogOrStoreTheUnderlyingCause/candidate_selection_(explicit_mode)",
+        "action": "pass"
+      },
+      {
+        "test": "TestEarlyFailureClassesNeverLogOrStoreTheUnderlyingCause/invalid_input_list",
+        "action": "pass"
+      },
+      {
+        "test": "TestEarlyFailureClassesNeverLogOrStoreTheUnderlyingCause/provider_selection_(no_key)",
+        "action": "pass"
+      },
+      {
+        "test": "TestEarlyFailureClassesNeverLogOrStoreTheUnderlyingCause/provider_selection_(undecryptable_key)",
+        "action": "pass"
+      },
+      {
+        "test": "TestEarlyFailureClassesNeverLogOrStoreTheUnderlyingCause",
+        "action": "pass"
+      },
+      {
+        "test": "TestTerminalRunHoldsTheSlotUntilTheTailFinishes",
+        "action": "pass"
+      },
+      {
+        "test": "TestF06ReviewAcceptedCancelBeforeEarlyFailure",
+        "action": "pass"
+      },
+      {
+        "test": "TestF06ReviewAcceptedCancelBeforeProviderPanic",
+        "action": "pass"
+      },
+      {
+        "test": "TestF06ReviewReservationCannotExecuteAnotherJob",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL01BoundedAppRetryLog",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL01BoundedAppFallbackLog",
+        "action": "pass"
+      },
+      {
+        "test": "TestFLBoundaryPoolRestoresOriginalStatement/install_and_cleanup",
+        "action": "pass"
+      },
+      {
+        "test": "TestFLBoundaryPoolRestoresOriginalStatement",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL01TransactionBoundaryUnknownErrorIsContained",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL01TransactionBoundaryCommitFaultIsContained",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL01TransactionBoundaryRollbackFaultIsContained",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL02GormSinkContained/info",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL02GormSinkContained/warn_on_error",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL02GormSinkContained/warn_on_slow",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL02GormSinkContained",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL03SuccessfulTerminalWrite",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL03MissingRowBreaksRetries",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL03FallbackBoundedOnFailure",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL03TransactionBoundaryTransientRecovery",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL03TransactionBoundaryCommitTransientRecovery",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL04SentinelDiscovery/write_failure_sentinel",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL04SentinelDiscovery/missing_row_sentinel",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL04SentinelDiscovery",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL04AdversarialErrorNotFormatted",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL05RetryLogDetector",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL05FallbackLogDetector",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL05GormSinkDetector",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL05TransactionBoundaryNormalizationDetector",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL06SuccessLifecyclePreservation",
+        "action": "pass"
+      },
+      {
+        "test": "TestFL06CancellationLeavesNoBoundaryLeak",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP01NoWorkSkipsProviderInitialization/empty_input_channel_list",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP01NoWorkSkipsProviderInitialization/channel_with_zero_conversations",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP01NoWorkSkipsProviderInitialization/conversation_with_zero_messages_(coverageEmpty)",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP01NoWorkSkipsProviderInitialization/all_conversations_unchanged_in_ordinary_mode",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP01NoWorkSkipsProviderInitialization/explicit_unanalyzed_mode_with_zero_conversations",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP01NoWorkSkipsProviderInitialization",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/invalid_channel_JSON_fails_before_candidate_selection_and_provider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/all-failed_preparation_closes_as_error_with_zero_provider_initialization",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/mixed_valid_and_failed_preparation_initializes_provider_once_and_reports_partial",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/missing_API_key_fails_with_earlyProviderUnavailable_on_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/undecryptable_API_key_fails_with_earlyProviderUnavailable_on_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/precedence:_injectedProvider_>_providerOverride_>_providerResolver_>_settings",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/provider_is_initialized_exactly_once_per_run_across_multiple_conversations",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJob_(ordinary)_with_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJob_(ordinary)_without_eligible_work_skips_provider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobWithLimit_(ordinary_capped)_with_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobWithLimit_(ordinary_capped)_without_eligible_work_skips_provider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobFull_with_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobFull_without_eligible_work_skips_provider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobUnanalyzed_with_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobUnanalyzed_without_eligible_work_skips_provider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobSinceLast_with_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobSinceLast_without_eligible_work_skips_provider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunReserved_(shared_HTTP/MCP/scheduler_forwarding)_with_eligible_work",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints/RunReserved_(shared_HTTP/MCP/scheduler_forwarding)_without_eligible_work_skips_provider",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP04SemanticsAcrossModesAndEntryPoints",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP05CancellationPreventsProviderInitialization/accepted_cancellation_before_inference_avoids_provider_initialization",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP05CancellationPreventsProviderInitialization/expired_context_before_inference_avoids_provider_initialization",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP05CancellationPreventsProviderInitialization",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+        "action": "pass"
+      },
+      {
+        "test": "TestLP06EagerInitializationDetectorNegativeAndPositive",
+        "action": "pass"
+      },
+      {
+        "test": "TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership",
+        "action": "fail"
+      }
+    ]
+  },
+  "failureExtracts": [
+    {
+      "test": "TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership",
+      "output": "    job_run_ownership_test.go:704: provider selection failure: <nil> &{ID:80718e71-e226-47f7-a796-25f7ea6a4e4a JobID:job-inc-f95e3e65 TenantID:inc-f95e3e65 StartedAt:2026-10-05 13:37:11.437 +0000 UTC FinishedAt"
+    },
+    {
+      "test": "TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership",
+      "output": "--- FAIL: TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership (0.33s)\n"
+    }
+  ],
+  "reviewer": "Codex",
+  "worker": "Claude",
+  "date": "2026-10-05",
+  "disposition": "CHANGES_REQUIRED",
+  "freeze": "OPEN",
+  "actualBuildAcknowledgmentCommit": "7606c85ef1a4d4cbcc6ccfbb924423e6a5b388d1",
+  "reportedBuildAcknowledgmentCommit": "7606c857738f6b8b7d9036c0d01ee34316d3e3a1",
+  "newApplicationRuntimeClaim": "Synthetic local application observations only",
+  "governanceProof": false,
+  "originalAuthoritySeedUnchanged": true,
+  "publication": {
+    "status": "FINAL_REVIEW_PUBLICATION_GATES_PASS",
+    "doctor": "PASS WITH NOTE25/1",
+    "retainedFailures": [
+      {
+        "command": "initial preflight",
+        "result": "FAIL6/7",
+        "cause": "Two untracked Python cache files outside seed allowedPaths, present at handback",
+        "correction": "Removed only named untracked .pyc files after path verification; Python -B used subsequently"
+      },
+      {
+        "command": "first reviewer docs build",
+        "exit": 1,
+        "cause": "Review report linked PowerShell runner as a documentation page",
+        "correction": "Changed only the runner link to a source-path code pointer; no docs gate bypass"
+      },
+      {
+        "command": "reviewer final preflight after cosmetic restoration",
+        "result": "FAIL6/7",
+        "cause": "Restoring inherited MODULE_CATALOG BOM conflicted with current generated-view renderer",
+        "correction": "Regenerated catalog; include only generated BOM normalization, no module registry/status change"
+      }
+    ],
+    "gateUnits": {
+      "tests": 46,
+      "exit": 0,
+      "seconds": 10.785
+    },
+    "docsBuild": {
+      "exit": 0,
+      "seconds": 7.36
+    },
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": "PASS7/7",
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "protectedSourceTestsSeedsAndWorkerPacket": "UNCHANGED",
+    "stagedPreflight": {
+      "base": "HEAD",
+      "exit": 0,
+      "passed": 7,
+      "executed": 7,
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/catalog/MODULE_CATALOG.md",
+        "docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md",
+        "docs/reviews/probes/r050_independent_campaign.ps1",
+        "docs/reviews/probes/r050_independent_summary.json",
+        "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+        "docs/roadmaps/README.md",
+        "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
+        "docs/work_orders/CCMAI_RUNTIME_050.md"
+      ],
+      "note": "Receipt restaged and final gate repeated before commit."
+    },
+    "stagedDiffCheck": "PASS"
+  }
+}

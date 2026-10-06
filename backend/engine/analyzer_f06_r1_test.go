@@ -32,7 +32,8 @@ func terminalPaths() []terminalPath {
 			return f.analyzerWith(&incProvider{}).RunReserved(res, job, "unanalyzed", 0, "", "")
 		}},
 		{"early failure: provider selection", func(t *testing.T, f *incFixture, res *JobRunReservation, job models.Job) (*models.JobRun, error) {
-			// no injected provider and no stored API key
+			// no injected provider and no stored API key; add eligible source so provider boundary is reached (LP-07)
+			f.addConv(t, f.tenantID, f.channelID, "prov-fail", []time.Time{f.clock.Add(-time.Hour)})
 			return NewAnalyzer(&config.Config{}).RunReserved(res, job, "unanalyzed", 0, "", "")
 		}},
 		{"early failure: invalid run parameters", func(t *testing.T, f *incFixture, res *JobRunReservation, job models.Job) (*models.JobRun, error) {

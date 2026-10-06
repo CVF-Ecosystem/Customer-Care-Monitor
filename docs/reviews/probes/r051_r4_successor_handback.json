@@ -1,0 +1,263 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-053",
+  "repairRound": 6,
+  "status": "REVIEW_PENDING",
+  "worker": "Codex /root/r051_preparation",
+  "independentReviewer": "Codex /root",
+  "successorEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "round5EvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "evidenceCommitType": "EVIDENCE_ONLY_NOT_PRODUCT_BUILD",
+  "sourceBuildCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+  "round4EvidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
+  "acknowledgmentCommit": "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+  "evidenceChangedPaths": [
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+    "docs/reviews/probes/r051_r4_successor_campaign.py",
+    "docs/reviews/probes/r051_r4_successor_compile.log",
+    "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+    "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+    "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+    "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+    "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+    "docs/reviews/probes/r051_r4_successor_report.md",
+    "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+    "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+    "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+    "docs/reviews/probes/r051_r4_successor_vet.log",
+    "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+    "docs/reviews/probes/r051_r4_successor_worker_receipt.json"
+  ],
+  "runtimeDisposition": "PASS_PENDING_INDEPENDENT_REVIEW",
+  "publicationDisposition": "PENDING_INDEPENDENT_REVIEW_LOSSLESS_ENVELOPE",
+  "aggregateCampaigns": 1,
+  "aggregateNewGoInvocations": 4,
+  "automaticRetries": 0,
+  "totalRuntimeSeconds": 230.607,
+  "finalEvidencePublicationObservation": {
+    "receiptRestaged": true,
+    "repeatedStagedPreflightCommand": [
+      "python",
+      "-B",
+      "scripts/cvf_downstream_gate.py",
+      "preflight",
+      "--base",
+      "HEAD",
+      "--files",
+      "docs/INDEX.md",
+      "docs/catalog/ARTIFACT_REGISTRY.json",
+      "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+      "docs/reviews/probes/r051_r4_successor_campaign.py",
+      "docs/reviews/probes/r051_r4_successor_compile.log",
+      "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+      "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+      "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+      "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+      "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+      "docs/reviews/probes/r051_r4_successor_report.md",
+      "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+      "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+      "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+      "docs/reviews/probes/r051_r4_successor_vet.log",
+      "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+      "docs/reviews/probes/r051_r4_successor_worker_receipt.json"
+    ],
+    "exit": 0,
+    "gatesPassed": 7,
+    "stagedDiffCheckExit": 2,
+    "stagedDiffFailureRetained": true,
+    "observedBeforeEvidenceCommit": true
+  },
+  "evidenceArtifactHashes": {
+    "docs/reviews/probes/r051_r4_successor_applied_mutation.diff": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+    "docs/reviews/probes/r051_r4_successor_campaign.py": "504e45dfe2421c5eb161ceaab1d9119de6cbd696c085270c33ec8fd1ebac333a",
+    "docs/reviews/probes/r051_r4_successor_compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r051_r4_successor_compile_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl": "843ffe9a60c2e92499fc63fca8c8384a64c3e575549b8949f3c95b938399c0c2",
+    "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r051_r4_successor_preparation_receipt.json": "e444528665db56e011ef4f03ecd00fd2ca02faf869edf51279db75f9c12969ae",
+    "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+    "docs/reviews/probes/r051_r4_successor_report.md": "994b67b9091eacb5b0557e523b3688ecd38f30ca6fff3d998aa02e9e9030b5ec",
+    "docs/reviews/probes/r051_r4_successor_restored-control.jsonl": "4984f57710fdc51475100611d7199b222e8c59e8b241aacbcf6c8d8855223d33",
+    "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r051_r4_successor_source_manifest.json": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af",
+    "docs/reviews/probes/r051_r4_successor_vet.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r051_r4_successor_vet_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r051_r4_successor_worker_receipt.json": "0c5b95788e6558ce323e5b79160eba2b17778bc50133069b1032f286bb4fbc66"
+  },
+  "handbackCommit": "DEFERRED_TO_GIT_AFTER_THIS_HANDOFF_COMMIT",
+  "noWorkerAcceptance": true,
+  "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
+  "publicationAcknowledgmentCommit": "2ace7ec1188be02373692e0e65a2fb244683ea27",
+  "aggregateBudgetRemaining": {
+    "campaigns": 0,
+    "Go": 0
+  },
+  "uncommittedFifthDraftSuperseded": true,
+  "publicationChangedPaths": [
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/probes/r051_r4_successor_applied_mutation.json",
+    "docs/reviews/probes/r051_r4_successor_publication_receipt.json",
+    "docs/reviews/probes/r051_r4_successor_publication_report.md"
+  ],
+  "publicationArtifactHashes": {
+    "docs/reviews/probes/r051_r4_successor_applied_mutation.json": "2d0f0e2fdde6104bf6fad00f7d2d0d621501720776dfec1fcdcb84f83b7d2c84",
+    "docs/reviews/probes/r051_r4_successor_publication_receipt.json": "85d597e3d279b629b35ac1f5692ee065c780ad1482cd46061da9abbed61b0fac",
+    "docs/reviews/probes/r051_r4_successor_publication_report.md": "ba1ca5169117e5a71140adc20ffde952a47b0e56a030d3262861ede38263ca83"
+  },
+  "publicationCheckReceipt": "docs/reviews/probes/r051_r4_successor_publication_receipt.json",
+  "repeatedPublicationStagedCheck": {
+    "exit": 0,
+    "gatesPassed": 7,
+    "stagedDiffCheckExit": 0,
+    "receiptRestagedAndRepeatedBeforeCommit": true,
+    "historicalRawDiffFailureNotRecertified": true
+  },
+  "handbackChecks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "exit": 1,
+      "seconds": 1.514,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[FAIL] continuity\n       - state.currentMode 'REVIEW_PENDING' is not in the manifest phase model\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: FAIL (6/7 executed gates passed)\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "exit": 0,
+      "seconds": 1.447,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "exit": 0,
+      "seconds": 1.693,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "command": [
+        "powershell",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0,
+      "seconds": 0.613,
+      "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0,
+      "seconds": 0.729,
+      "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "docs",
+        "run",
+        "docs:build"
+      ],
+      "exit": 0,
+      "seconds": 7.405,
+      "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m\u2713\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m\u2713\u001b[0m rendering pages...\nbuild complete in 6.71s.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "seconds": 0.043,
+      "output": "warning: in the working copy of 'CVF_SESSION/ACTIVE_SESSION_STATE.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION/tranches/CCMAI-RUNTIME-051.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION/tranches/CCMAI-RUNTIME-053.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION_MEMORY.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'IMPLEMENTATION_STATUS.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/catalog/ARTIFACT_REGISTRY.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/work_orders/CCMAI_RUNTIME_053.md', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "HEAD",
+        "--files",
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r4_successor_handback.json",
+        "docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md",
+        "docs/work_orders/CCMAI_RUNTIME_053.md"
+      ],
+      "exit": 0,
+      "seconds": 0.947,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit": 0,
+      "seconds": 0.034,
+      "output": ""
+    }
+  ],
+  "retainedHandbackContinuityFailure": {
+    "exit": 1,
+    "gatesPassed": 6,
+    "cause": "currentMode accidentally set to tranche status REVIEW_PENDING; manifest requires REVIEW phase-mode",
+    "sameScopeCorrection": "Mode REVIEW synchronized with marker/header; tranche status remains REVIEW_PENDING"
+  },
+  "handbackStagedPaths": [
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/probes/r051_r4_successor_handback.json",
+    "docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md",
+    "docs/work_orders/CCMAI_RUNTIME_053.md"
+  ],
+  "finalRestagedCheck": "Receipt restaged and staged gate/diff check repeated before commit; actual final observation reported to parent with handback Git SHA"
+}

@@ -1,0 +1,105 @@
+{
+  "trancheId": "CCMAI-RUNTIME-052",
+  "reviewer": "Codex /root",
+  "worker": "Codex /root/r051_preparation",
+  "evidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+  "handbackCommit": "d9e8e8f3c7cddd3690715e27ad05663eb4e7f479",
+  "disposition": "CHANGES_REQUIRED",
+  "finding": "R052-R3-01",
+  "inheritedFinding": "R051-R2-01",
+  "runtimeDisposition": "FAILED_NOT_RUN",
+  "campaigns": 0,
+  "goInvocations": 0,
+  "seconds": 13.237,
+  "evidencePaths": [
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+    "docs/reviews/probes/r051_r3_campaign.py",
+    "docs/reviews/probes/r051_r3_extracted_manifest.json",
+    "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+    "docs/reviews/probes/r051_r3_source_manifest.json",
+    "docs/reviews/probes/r051_r3_worker_receipt.json"
+  ],
+  "handbackPathsMatch": true,
+  "artifactChecks": [
+    {
+      "path": "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r3_campaign.py",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r3_extracted_manifest.json",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r3_source_manifest.json",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r3_worker_receipt.json",
+      "committedHashMatches": true
+    }
+  ],
+  "sourceArchiveSha256": "b4d4daff222388d1f721294b0d2ab47899bb70943966bff1742b7c045054be38",
+  "archiveHashMatches": true,
+  "archiveFileCount": 204,
+  "extractedManifestEqualsIndependentArchive": true,
+  "rawBlobManifestEqualsArchive": false,
+  "differentPaths": [
+    "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+    "backend/go.mod",
+    "backend/go.sum"
+  ],
+  "protectedFilesChecked": 649,
+  "protectedDrift": [],
+  "rootCause": "Runner comparator binds raw Git blobs instead of exact configured git archive bytes; CRLF representation difference on three non-Go files causes pre-campaign failure. No source drift.",
+  "newRuntimeByReviewer": 0,
+  "publication": {
+    "doctor": "PASS WITH NOTE25/1",
+    "gates": "FINAL_REVIEW_PUBLICATION_PASS",
+    "gateUnits": {
+      "tests": 46,
+      "exit": 0,
+      "seconds": 15.829
+    },
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": "PASS7/7",
+    "docsBuild": {
+      "exit": 0,
+      "seconds": 8.95
+    },
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "stagedPreflight": {
+      "base": "d9e8e8f3c7cddd3690715e27ad05663eb4e7f479",
+      "result": "PASS7/7",
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/authority/CCMAI-RUNTIME-053.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-052.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md",
+        "docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md",
+        "docs/reviews/learnings/feedback_archive_byte_manifest.md",
+        "docs/reviews/probes/r052_independent_summary.json",
+        "docs/specs/ANALYZER_PROVIDER_EVIDENCE_ROUTE_R052_2026-10-06.md",
+        "docs/work_orders/CCMAI_RUNTIME_052.md"
+      ],
+      "note": "Summary restaged and exact staged gate repeated before review/cost/seed commit."
+    }
+  }
+}

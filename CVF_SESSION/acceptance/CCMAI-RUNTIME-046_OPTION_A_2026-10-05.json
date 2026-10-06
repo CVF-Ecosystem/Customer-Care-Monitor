@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0",
+  "authorityKind": "OWNER_DELEGATED_ACCEPTANCE_CONTRACT_DECISION",
+  "date": "2026-10-05",
+  "project": "Customer-Care-Monitor-AI",
+  "trancheId": "CCMAI-RUNTIME-046",
+  "ownerInstruction": "audit và chọn",
+  "decisionRole": "Codex ORCHESTRATOR",
+  "decision": "A",
+  "status": "APPLIED_BY_R048_QUALIFIED_LOCAL_ACCEPTANCE",
+  "riskCeiling": "R2",
+  "sourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "evidenceBasis": [
+    "docs/reviews/CCMAI_RUNTIME_046_R2_INDEPENDENT_REREVIEW_2026-10-04.md",
+    "docs/reviews/probes/r046_residual_choice_audit.json",
+    "docs/reviews/CCMAI_RUNTIME_046_R3_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/CCMAI_RUNTIME_047_INDEPENDENT_REVIEW_2026-10-05.md"
+  ],
+  "retainedLimits": [
+    "Historical exact-archive worker execution NOT MET/NOT VERIFIED",
+    "Unrecoverable historical worker publication/isolation/cleanup proof NOT VERIFIED",
+    "Empty build/vet logs do not independently establish process exits; original reviewer receipts inherited"
+  ],
+  "acceptanceEvidenceContractChange": "For bounded local acceptance only, use exact-R2 independent proof plus corrected R3/R4 evidence; historical worker proof limits are retained instead of being acceptance prerequisites. FL-01..06 behavior unchanged.",
+  "originalAuthoritySeedsUnchanged": true,
+  "newRuntimeCampaignsAuthorized": 0,
+  "sourceOrMaintainedTestChangesAuthorized": false,
+  "grantsReviewPass": false,
+  "grantsFreeze": false,
+  "grantsPushMergeDeployment": false,
+  "historicalProviderGovernanceProof": false,
+  "nextMove": "Prepare separate committed metadata-only acceptance-disposition authority/order before applying formal acceptance. No further A/B selection needed.",
+  "auditResult": "PASS16 reviewer logs, two203-file restored exports, unchanged backend tree",
+  "retainedAuditIncidents": [
+    "Initial read-only campaign inspector used mapping iteration for list schema; corrected.",
+    "Initial read-only archive audit used source instead of source/backend root; assertion failed, corrected. No recovered artifacts changed."
+  ],
+  "decisionPublication": {
+    "status": "PASS_DECISION_PUBLICATION_ONLY",
+    "doctor": {
+      "exit": 0,
+      "result": "PASS WITH NOTE25/1"
+    },
+    "knowledge": "Local TEMP ingest; no POST",
+    "gateUnitSuite": {
+      "exit": 0,
+      "tests": 46,
+      "seconds": 12.55
+    },
+    "docsBuildAfterFinalMarkdown": {
+      "exit": 0,
+      "seconds": 7.14
+    },
+    "defaultPreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "prRangePreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "catalogPS51": {
+      "exit": 0
+    },
+    "catalogPS7": {
+      "exit": 0
+    },
+    "diffCheck": {
+      "exit": 0
+    },
+    "protectedSourceSeedDiff": "EMPTY",
+    "exactStagedPreflight": {
+      "command": "python -B scripts/cvf_downstream_gate.py preflight --base HEAD",
+      "exit": 0,
+      "passed": 7,
+      "parentCommit": "eb3a6984251f93e6a3ea47134146f5d7ed8b41cf",
+      "stagedFiles": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+        "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_046_AUDIT_AND_OPTION_A_DECISION_2026-10-05.md",
+        "docs/reviews/probes/r046_residual_choice_audit.json",
+        "docs/reviews/probes/r046_residual_choice_audit.py"
+      ],
+      "note": "Decision receipt restaged and final gate repeated before commit."
+    }
+  },
+  "formalAcceptanceTranche": "CCMAI-RUNTIME-048",
+  "formalAcceptanceReview": "docs/reviews/CCMAI_RUNTIME_048_OPTION_A_ACCEPTANCE_REVIEW_2026-10-05.md"
+}

@@ -1,0 +1,25 @@
+# Remaining roadmap audit and selected R050 scope
+
+Date: 2026-10-05. Codex ORCHESTRATOR / SPEC_AUTHOR. Source-only audit at e83c6e28fe4036003542fd7a7f3aa302953069f5; no runtime replay or provider call. Standing owner delegation permits bounded planning/work orders; owner next continues the canonical roadmap audit.
+
+## Evidence and selection
+
+Runtime roadmap S1 remains IN_PROGRESS. Local remediation F01..F08 has separately accepted scopes; their old OPEN/planning paragraphs are historical, not permission to repeat repairs. Records R021..R029 remain REVIEW_PASS/FREEZE_OPEN; local message R030..R033, offline R034/R041/R042 under R043, MCP execution R044/R045 and finalizer R046..R049 are FROZEN in their recorded local scope. R035/R036 REVIEW_PASS remain open. R019 hosted evidence is historical at its own SHA, not current CI success. Global F02/live upstream coverage is OPEN; Facebook/Zalo OA prerequisites remain owner parked and Pancake external inputs remain separate. S2/S3/S5 complete governance/human review flow is not implemented; S4 optimization, S6 pilot and S7 production readiness are not established.
+
+Selected R050: delay Analyzer provider initialization until there is prepared source requiring inference. backend/engine/analyzer.go executeReserved lines92..104 resolves provider before channel parsing/candidate/snapshot preparation lines106..144. All ordinary/explicit and batch/single analysis paths share this worker. getProvider reads tenant AI settings/key and decrypts before any source decision. Existing final completion logic already treats no work and preparation errors separately, but current early initialization can mask those source outcomes. This is a static mechanism finding and expected behavior, not reproduced incident or runtime acceptance.
+
+R050 is a bounded application dependency-order prerequisite to S2, not a new CVF runtime policy gate. Preserve existing source-version selection, mode/cap/date, ownership/finalizer, summary/checkpoint and notification rules. No new semantic auto-skip, PII/DLP, allowlist, budget, human decision, source-coverage completeness or real-driver/governance claim. Provider selection/key formats and fallback policy unchanged. Real provider evidence is required in a separately authorized S2/S3 work order for any CVF runtime governance claim; synthetic application fixtures cannot supply that proof.
+
+## Alternatives
+
+Full S2/S3 gate/provider admission needs explicit policy, privacy/budget/audit contracts and real-provider evidence. S5 human review needs versioned proposal/review/action schemas and permission/audit contracts. Both are larger dependencies and remain separate. A wholesale FREEZE of old tranches would change many historical dispositions without delivering the next application seam. R050 directly advances the planned SQL/source-before-provider ordering with a small source/test boundary and independent review.
+
+Worker Claude, reviewer Codex, R2. Commit immutable seed before activation; only analyzer.go, dedicated provider-initialization test, R050 SPEC/order and current roadmap pointers are authorized, plus standard continuity/review/catalog records. Worker uses cached local toolchain/images and disposable synthetic DB only, no real credentials/config/provider/channel/network/customer data. No source changes in planning. Source errors/cancellation must not become success; lack of eligible source should not require provider credentials. Final source/hash-bounded negative/positive tests must detect original eager initialization and retain exact failure/restoration proof.
+
+## Rehydration
+
+Canonical manifest/policy/state/memory/handoff/implementation/index read; doctor PASS WITH NOTE25/1, readonly public core8a4119e1 matches origin/main; manifest pin26c686cc warn-only mismatch unchanged. Missing compact bootstrap nonblocking. Knowledge ingested into TEMP without POST. Oversized reads narrowed. Guessed backend/models and analyzer_batch.go absent; rg shell globs failed on Windows and were replaced with directory plus -g filters. Read-only lookup errors caused no changes. Original failures/seeds/packets and parked checkpoint retained. Required gates/docs/catalog/46 gate units before planning commits. No BUILD yet.
+
+## Consolidated fixture compatibility finding
+
+Before seed commit, read existing F06 terminal/provider safety tests. analyzer_f06_r1_test.go terminalPaths provider-selection case has no eligible source. Under lazy initialization that case no longer reaches provider failure; authorize narrowly adding eligible synthetic source to that case while retaining all original cancellation/finalizer assertions and other cases. F06-R2 missing/undecryptable-key cases already call twoConvs in the shared setup and need no edit; they remain protected. Initial short read omitted that shared setup; the complete targeted read corrected the assumption before seed commit. Reviewer must inspect the R1 fixture-only diff and reject assertion weakening; old source/worker/reviewer packets unchanged.

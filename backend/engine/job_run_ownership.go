@@ -360,12 +360,20 @@ func (r *JobRunReservation) matches(job models.Job) bool {
 // with no checkpoint; if it cannot be recorded cancellation is re-opened and the (still running)
 // row keeps blocking admission. job must be the bound identity.
 func closeOwnedRun(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg string) (string, error) {
+	return closeOwnedRunSummary(owner, run, job, publicMsg, "{}", false)
+}
+
+// Summary-aware observation path; the original wrapper retains returned-object semantics.
+func closeOwnedRunSummary(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg, summary string, receiptAware bool) (string, error) {
+	if receiptAware {
+		run.Summary = summary
+	} // available observation; not a durability claim
 	status, msg := "error", publicMsg
 	if owner.beginTerminal() {
 		status, msg = "cancelled", "Cancelled by user"
 	}
 	finishedAt := analyzerNow()
-	if err := finalizeOrdinaryRun(run, job, status, msg, "{}", finishedAt, nil); err != nil {
+	if err := finalizeOrdinaryRun(run, job, status, msg, summary, finishedAt, nil); err != nil {
 		owner.terminalFailed()
 		return status, fmt.Errorf("close run: %w", err)
 	}

@@ -1,0 +1,38 @@
+# R051 repair cost disposition and final bounded dispatch
+
+Date: 2026-10-06. Codex ORCHESTRATOR / WORK_ORDER_AUTHOR; R2, REVIEW. **ONE_BOUNDED_EVIDENCE_REPAIR_AUTHORIZED / NOT_STARTED**. This disposition answers the owner’s next after committed independent review `ec90a2b3017a998762fa9134de1198d7460c01a8`. R050/R051 stay CHANGES_REQUIRED and freezeOPEN until independent review; no acceptance waiver or new production/test work.
+
+## Authority and cost decision
+
+The project AGENTS rule requires stopping and recording REVIEW_COST_ESCALATION_REQUIRED before a third repair of the same root cause. That stop was committed at ec90a2b. The owner now requests next, and standing local orchestration authority in CVF_SESSION_MEMORY.md delegates same-scope planning/repair decisions to the ORCHESTRATOR. This records the required cost disposition before continuing. No objective, acceptance contract, risk/effect class, allowed artifact class or Claude BUILD ownership changes; immutable R051 seed `a54cb73007f081fe4bbaa4baa11d28fed4a7d937` remains the authority ceiling. A new tranche or seed would not erase these two repair rounds and is unnecessary for this narrower dispatch.
+
+Options evaluated: repeat the entire 98-event campaign; waive RP-04 or certify old missing observations; leave the tranche unresolved indefinitely; one targeted successor evidence campaign. Choose the last option. The full suite already passed independently twice, while the remaining [R051-R2-01](CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md) is a runner/receipt issue. Additional production or test edits and a broad rerun would not address that cause. Old false SHA, default bridge and missing publication evidence remain historical; only a new campaign can establish its own observations.
+
+## Narrowed execution contract
+
+Claude remains REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex is independent REVIEWER afterward. Before any edit, rehydrate canonical continuity and unchanged seed/order/SPEC, declare roles, commit synchronized BUILD acknowledgment and pass preflight. This planning disposition itself starts no BUILD.
+
+Changes limited to successor artifacts `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md`, `docs/reviews/probes/r051_r3_*`, and existing authorized session/order/spec/catalog/current-pointer metadata. Canonical backend files, all tests, authority seeds, helper tooling/workflows/dependencies and all old worker/reviewer packets are byte-protected. Do not edit the old R2 runner or receipt. RP-01..04 / LP-01..08 acceptance is unchanged. Existing seed grants the artifact class; this disposition narrows its use.
+
+Fixed source export: `145bd41109c1e3ac3fb1a85f261c61f668b2fe4d`. Production `727d3229338e9b29c749612677a08b7fd1c65428`; actual source-round2 acknowledgment `c228931c35339f56cac0a934394e586082a3f7c1`. Resolve these with Git, verify ancestry, and derive the new round3 acknowledgment SHA from Git after committing it. Never type an assumed full SHA. Bind git archive SHA and a sorted full path/SHA256 manifest; verify no extra/missing/drifted files, archive/source identity before mutation and exact restoration afterward. No test overlay is needed because accepted test bytes are immutable.
+
+## Single campaign and evidence checklist
+
+| Residual requirement | Required observable proof |
+| --- | --- |
+| Identities / snapshot | Actual source, authority, source acknowledgment, R3 acknowledgment and exact evidence-commit/handback mapping; full manifest/changed paths/hash/count. For a self-contained receipt, explicitly defer its own commit SHA to a later committed handback. Record existing accepted R2 tests as inherited, never as newly run. |
+| Every command isolated | Cached images only, --pull=never, GOPROXY=off, readonly source/module cache. Compile/vet use --network none; runtime detector uses a named --internal network and disposable synthetic MySQL without host ports. Record commands and observed network/port settings rather than one blanket boolean. |
+| Applied mutation | Exactly one scoped eager initialization insertion in executeReserved after declaration and before source selection; record expected/actual match count, applied diff artifact and baseline/mutant hashes. Runnable LP06 negative control must fail the named no-work-success assertion, with no build-fail. |
+| Guaranteed restoration | Nested try/finally restores original byte array even when mutation execution/assertion throws. Exercise one controlled synthetic throw immediately after mutation in the isolated TEMP copy; catch only that expected error, prove bytes restored, then perform the actual mutation campaign. Retain restoration/log evidence for both failure and successful paths. |
+| Baseline and cleanup | Restored LP06 suite passes0 FAIL/SKIP. Record names/counts from JSON; fail on skipped/missing detectors or command/parse errors. Capture container/network/anonymous volume names before teardown, removal exits and verified absence after. Inspect errors fail closed. |
+| Final publication | Gate46, default preflight, origin/main..HEAD preflight, exact staged preflight against the current acknowledgment/parent HEAD; PS5.1/7 catalog checks; docs build after final Markdown; diff/secret/protected-byte checks. Record real commands/exits/staged paths, then restage and repeat staged gate if receipt metadata changes. A later handback points to the already committed evidence artifact set. |
+
+Resource budget: **one campaign, at most four new Go container invocations**: engine test compilation (`go test -c -o /dev/null ./engine`, network none), engine vet (`go vet ./engine`, network none), applied mutant LP06 negative control, restored full LP06 suite. The controlled restoration throw is a local harness probe without an additional Go run. Cached internal disposable DB only; check cached images/cache before starting. Dedicated Go test timeout at most120s; finite readiness loop at most90s; communication continues while tools run. Record total duration. No automatic retry or fourth repair round; any failure/missing resource/scope drift returns exact evidence with CHANGES_REQUIRED for a new cost decision.
+
+Inherit accepted RP-01/02/03 and 42-top-level/98-event review from exact145bd411. Inherit prior whole-production build/vet evidence under byte-identical production727d322; new engine compile/vet covers this successor campaign's isolated commands. Do not repeat full backend, the 98-event selection, frontend, race or unrelated mutations. Full engine/backend/live/provider/CVF runtime governance/hosted readiness are NOT RUN here. Four commands are a cost ceiling, not a claim of execution or permission to treat a failed check as accepted.
+
+## Exit and ownership
+
+Commit successor source-independent runner/evidence/receipt and exact changed set under Claude ownership, then commit REVIEW_PENDING handback referencing that artifact commit. Preserve `buildCommit=145bd411...` as the accepted test snapshot; add a separate `round3EvidenceCommit` pointer, not a false new product build. Worker never sets REVIEW_PASS/FREEZE. Codex re-review checks only the residual RP-04 and inherited source identity, then returns a formal disposition. Further repair requires another recorded cost assessment; this is not permission for an open-ended loop.
+
+Historical REVIEW_COST_ESCALATION_REQUIRED remains recorded; its current disposition is RECORDED_ONE_BOUNDED_EVIDENCE_REPAIR. No waiver of procedural failure, changed acceptance, secrets/config/provider/channel/external connectivity/customer/persistent DB, parent edit, push/merge/deploy/FREEZE or new subagent route. Facebook/Zalo OA stay OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS; earlier local closures remain unchanged.

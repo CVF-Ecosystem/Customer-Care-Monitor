@@ -1,0 +1,76 @@
+{
+  "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "runtimeEvidenceCommit": "c4f78f26c50ae481ea4a3c7db19f9187004b8d9f",
+  "reviewer": "Codex /root",
+  "historicalImplementationAuthor": "Codex /root/r051_preparation",
+  "disposition": "REVIEW_PASS",
+  "freeze": "OPEN",
+  "canonicalSourceTestEditsByReviewer": 0,
+  "positiveTopExecutions": 114,
+  "distinctInitialTop": 104,
+  "positiveCompletedPASS": 272,
+  "positiveFAIL": 0,
+  "SKIP": 0,
+  "expectedMutationFAIL": 1,
+  "rawGitBlobChecks": [
+    {
+      "path": "docs/reviews/probes/r057_independent_new.jsonl",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_new_stderr.log",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_lp.jsonl",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_lp_stderr.log",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_selection.jsonl",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_selection_stderr.log",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_ownership.jsonl",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_ownership_stderr.log",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_mutant.jsonl",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_mutant_stderr.log",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_restored.jsonl",
+      "gitBlobEqualsCapturedBytes": true
+    },
+    {
+      "path": "docs/reviews/probes/r057_independent_restored_stderr.log",
+      "gitBlobEqualsCapturedBytes": true
+    }
+  ],
+  "claims": "bounded local application observation only",
+  "formalCommitIdentity": "DERIVE_AFTER_COMMIT",
+  "priorFailurePacketsUnchanged": true,
+  "publicationChecks": {
+    "default": "PASS7/7",
+    "PR": "PASS7/7",
+    "catalogPS5.1": "PASS",
+    "catalogPS7": "PASS",
+    "docs": "PASS npm --prefix docs from project root",
+    "gateUnitBasis": "46PASS33.015s inherited unchanged tools"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-046",
+  "date": "2026-10-05",
+  "decisionRole": "Codex ORCHESTRATOR",
+  "status": "OPTION_A_IMPLEMENTED_BY_R048_REVIEW_PASS",
+  "decision": "A",
+  "recommendedOption": "A",
+  "authorizingContinuation": "Owner said tiếp after R047 independent review; assessment only, no implicit acceptance waiver.",
+  "productReferenceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "acceptedCorrectionCommit": "916d482b8508ad9393914337f42c5a2e9e699993",
+  "independentCorrectionReviewCommit": "5529b2a4f0fc2e7c2221a87998db5fdf7939dd1a",
+  "originalR046Disposition": "CHANGES_REQUIRED",
+  "r047Disposition": "REVIEW_PASS",
+  "freeze": "OPEN",
+  "options": {
+    "A": {
+      "name": "Accept bounded local evidence with explicit historical limits",
+      "requiresExplicitAcceptanceContractDisposition": true,
+      "newRuntimeCampaigns": 0,
+      "historicalConditionsRetained": [
+        "exact_archive_worker_execution_NOT_MET_NOT_VERIFIED",
+        "missing_historical_gates_isolation_teardown_NOT_VERIFIED"
+      ],
+      "grantFreeze": false,
+      "grantPushOrDeployment": false
+    },
+    "B": {
+      "name": "One new exact-archive prospective worker campaign",
+      "requiresSeparateCommittedAuthority": true,
+      "additionalCampaigns": 1,
+      "targetExecutionMinutes": 15,
+      "perTestTimeoutSeconds": 180,
+      "sourceAndMaintainedTestEdits": false,
+      "historicalConditionsRemainUnverified": true,
+      "grantFreeze": false
+    }
+  },
+  "reasonSeparateDecisionRequired": "AGENTS.md:126 acceptance-contract escalation; R4 order/R047 seed prohibit implicit waiver or further runtime execution.",
+  "protectedBackendTree": "640f3c309746131b2aaace4c2e324f70ea39ab75",
+  "assessmentValidation": {
+    "status": "PASS_ASSESSMENT_PUBLICATION_ONLY",
+    "doctor": {
+      "exit": 0,
+      "result": "PASS WITH NOTE25 passed/1warning"
+    },
+    "knowledge": "Local TEMP ingest, no POST",
+    "retainedFailures": [
+      {
+        "command": "default and origin/main..HEAD preflights",
+        "result": "FAIL6/7: state.nextAllowedMove used short R047 rather than full active tranche CCMAI-RUNTIME-047",
+        "correction": "Full active ID prefixed in state/header/memory/owner routing; subsequent checks certify corrected snapshot only."
+      }
+    ],
+    "gateUnitSuite": {
+      "exit": 0,
+      "tests": 46,
+      "seconds": 13.015
+    },
+    "docsBuildAfterFinalMarkdown": {
+      "exit": 0,
+      "seconds": 6.84
+    },
+    "defaultPreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "prRangePreflight": {
+      "exit": 0,
+      "passed": 7
+    },
+    "catalogPS51": {
+      "exit": 0
+    },
+    "catalogPS7": {
+      "exit": 0
+    },
+    "diffCheck": {
+      "exit": 0
+    },
+    "protectedSourceSeedDiff": "EMPTY",
+    "exactStagedPreflight": {
+      "command": "python -B scripts/cvf_downstream_gate.py preflight --base HEAD",
+      "exit": 0,
+      "passed": 7,
+      "stagedFiles": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+        "CVF_SESSION/review_cost/CCMAI-RUNTIME-046_RESIDUAL_ACCEPTANCE_2026-10-05.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-047.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_046_RESIDUAL_ACCEPTANCE_ASSESSMENT_2026-10-05.md"
+      ],
+      "note": "Receipt finalized/restaged; gate rerun before commit."
+    }
+  },
+  "delegatedOwnerInstruction": "audit và chọn",
+  "decisionAuthority": "CVF_SESSION/acceptance/CCMAI-RUNTIME-046_OPTION_A_2026-10-05.json",
+  "selectionHistory": [
+    {
+      "priorStatus": "OWNER_CONTRACT_DECISION_REQUIRED",
+      "selection": "A",
+      "reason": "Explicit owner audit-and-select delegation; read-only exact R2 proof audit passes."
+    }
+  ],
+  "acceptanceDispositionTranche": "CCMAI-RUNTIME-048"
+}

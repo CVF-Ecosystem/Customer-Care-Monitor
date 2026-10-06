@@ -1,0 +1,88 @@
+﻿{
+    "productionBaseline":  "727d3229338e9b29c749612677a08b7fd1c65428",
+    "taskRoot":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-r1-worker-08aeec54",
+    "sourceFiles":  {
+                        "analyzerGo":  {
+                                           "path":  "backend/engine/analyzer.go",
+                                           "sha256":  "17C47F6739A20E336F28C351D834A996C00D4EA2B1F4A18C613505A5AAC7434E"
+                                       },
+                        "ownershipTest":  {
+                                              "path":  "backend/engine/job_run_ownership_test.go",
+                                              "sha256":  "F8456B02D831B285626BE1C8469075B2BBDCBF1D97AB9BB3395047278E168B8E"
+                                          },
+                        "initTest":  {
+                                         "path":  "backend/engine/analyzer_provider_initialization_test.go",
+                                         "sha256":  "495B505D035D9BC57CD6DBF1C54BCC95F1507558C94D3ABA89A4E414860E4C0C"
+                                     }
+                    },
+    "internalNetwork":  "ccmai-r050-r1-net-bcf12703",
+    "disposableDatabase":  "ccmai-r050-r1-db-bcf12703",
+    "commands":  [
+                     {
+                         "name":  "exact-repair",
+                         "goArgs":  [
+                                        "test",
+                                        "./engine",
+                                        "-json",
+                                        "-count=1",
+                                        "-p",
+                                        "1",
+                                        "-timeout",
+                                        "300s",
+                                        "-run",
+                                        "TestLP|TestEveryTerminalPath|TestEarlyFailureClasses|TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership|TestFL|TestF05|TestF06|TestTerminalRunHoldsTheSlot"
+                                    ],
+                         "exit":  0,
+                         "seconds":  194.9392148,
+                         "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-r1-worker-08aeec54\\exact-repair.jsonl",
+                         "logSha256":  "312AEF07846D3DC7E5205E70138B8DC261DA5ACAA1C0CD7233EF8145161E2AC4"
+                     },
+                     {
+                         "name":  "build",
+                         "goArgs":  [
+                                        "build",
+                                        "./..."
+                                    ],
+                         "exit":  0,
+                         "seconds":  117.95043899999999,
+                         "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-r1-worker-08aeec54\\build.jsonl",
+                         "logSha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                     },
+                     {
+                         "name":  "vet",
+                         "goArgs":  [
+                                        "vet",
+                                        "./..."
+                                    ],
+                         "exit":  0,
+                         "seconds":  127.09684589999999,
+                         "logPath":  "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r050-r1-worker-08aeec54\\vet.jsonl",
+                         "logSha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                     }
+                 ],
+    "externalNetwork":  false,
+    "hostPorts":  false,
+    "newPulls":  false,
+    "mutations":  [
+                      {
+                          "mutationName":  "M_EAGER_INIT",
+                          "mutatedSha256":  "C545E182779D75BA1DEC75A291DF8141EEA9ECBA65D8F17B04F22B62C140BBB9",
+                          "mutantExit":  1,
+                          "mutantLogSha256":  "D528F15F2129C2292404062C7F285B62DCE5610B1E3D292BDEE844A23469D09E",
+                          "restoredSha256":  "17C47F6739A20E336F28C351D834A996C00D4EA2B1F4A18C613505A5AAC7434E",
+                          "restoredExit":  0,
+                          "restoredLogSha256":  "991D04DFF481724CD560201B4F22ABA43C0A0F838C456E75123F55027CF31E0B"
+                      }
+                  ],
+    "cleanup":  {
+                    "networkRemoveExit":  0,
+                    "anonymousVolumesAbsent":  true,
+                    "databaseRemoveExit":  0,
+                    "databaseAbsent":  true,
+                    "networkAbsent":  true
+                },
+    "networkInternal":  true,
+    "portBindings":  {
+
+                     }
+}

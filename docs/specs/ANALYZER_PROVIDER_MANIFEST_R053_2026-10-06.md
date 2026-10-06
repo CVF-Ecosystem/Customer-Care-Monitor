@@ -1,0 +1,35 @@
+# R053 exact archive manifest and inherited evidence contract
+
+Date: 2026-10-06. R2, REVIEW / REVIEW_PENDING. Fourth repair of R051 evidence; not a history/cost reset. [Recorded new cost decision](../reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md) addresses demonstrated [R052 comparator defect](../reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md). All [original R3 checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md) runtime/publication acceptance remains unchanged.
+
+Manifest acceptance: resolve source145bd411, production727d322, source acknowledgmentc228931c, original seedsa54cb730/7c3a61bf, new seed and actual worker acknowledgment with Git/ancestry. Record exact archive SHA (accepted local source b4d4daff), all204 archive member path/hash/size rows sorted by path, and verify extracted membership/bytes strictly before mutation and after restoration. Preserve raw blob hashes/newline differences as diagnostics; never normalize source or alter Git configuration to manufacture equality. New runner must retain independent authority/commit mapping and inherited source/tests proof.
+
+Preparation acceptance: finite pure offline archive/manifest verification, scoped eager insertion one-match construction and exact byte restoration, correct LP06 detector names and Python syntax. Record preparation command/exit and label runtime NOT RUN at this step. It cannot replace actual controlled-throw/restoration or mutant/restored Go observations.
+
+Runtime acceptance is unchanged: max1 actual campaign/max4 Go aggregate R052/R053 with0 prior used, cached readonly offline dependencies, compile/vet network none, runtime named internal/no ports disposable synthetic MySQL, controlled expected throw and nested finally both paths, scoped eager insertion after provider declaration/before source selection, actual named no-work-success failure without build error, restored full LP06 all6 completed PASS0 FAIL/SKIP, captured resource/anonymous volume teardown/absence and per-command isolation observations. Strict parser errors, missing/skipped detector, timeout or cleanup error fail closed. Dedicated Go timeout<=120s/readiness<=90s; no retries.
+
+Final gate46/default/PR/staged, PS5.1/7 catalog, docs after final Markdown, exact staged paths/restage repetition, diff/secret/protected-byte and evidence-commit/handback mapping required. Same-commit receipt SHA explicitly deferred to later handback. R050/R051/R052 remain CHANGES_REQUIRED until root formal residual disposition. Source/tests/seeds/all old packets byte-protected. Accepted RP-01/02/03 and98-event R2 evidence inherited, full engine/backend/frontend/race/live/provider/channel/CVF runtime governance/hosted readiness NOT RUN. No worker acceptance/FREEZE.
+
+Historical execution: BUILD acknowledged before runner edit/preparation. No runtime result or acceptance asserted.
+
+Historical fourth handback: exact failed evidence0a1410636decf1558ea0053fcc2cb371d5493c55 REVIEW_PENDING; archive204 strict byte manifest PASS, name-preparation FAIL, aggregate runtime/Go/resources0. All five maintained LP06 leaves preserved; independent count/cost disposition required before any correction. No worker acceptance/retry.
+
+Root author correction (2026-10-06): earlier4-event statement was false; immutable sourceLP06 has5 maintained subtests plus top-level=6 events, including batch/constructor and non-batch counters. All original full-suite acceptance unchanged. Preserve failed count-checker packet0a141063; new recorded successor cost addendum requires all5 source names/6 events in new r051_r4_successor_* under unchanged seed. Cumulative round5 explicitly counted; prior4 attempts and budget retained. No test changes or subset masking.
+
+Historical execution: cumulative fifth successor BUILD acknowledged before new r051_r4_successor_* edits; all5 maintained leaves/6 full events required, four prior packets preserved, no runtime result yet.
+
+Superseded draft fifth handback: exact evidencebaeb4c920a68cadb121344aaed8408a3f23aa0df REVIEW_PENDING; sole runtime4Go/fullLP066PASS/mutant2namedFAIL/restoration/cleanup pass. Cached staged diff-check exit2 on raw unified-diff context markers retained as PUBLICATION_CHANGES_REQUIRED; no worker waiver/correction/retry/acceptance. Aggregate runtime budget1campaign/4Go exhausted. Root independent disposition next; old pointers/source/test contracts unchanged.
+
+Current execution: cumulative publication-only repair6 BUILD under committed diff-artifact disposition1a8bb5e. Add lossless envelope/new publication receipt/report; all committed raw fifth packets stay immutable. Runtime used1/4, remaining0/0. No encoding before committed acknowledgment, no new runtime/acceptance.
+
+## Publication-only repair6 committed handback
+
+Runtime packet `baeb4c920a68cadb121344aaed8408a3f23aa0df` remains unchanged; publication envelope/receipt/report committed separately at `b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e` after acknowledgment `2ace7ec1188be02373692e0e65a2fb244683ea27`. REVIEW_PENDING for independent Codex `/root`; original historical failures retained. New publication checks pass, raw artifact preserved. Used1campaign/4Go, remaining0/0; no worker acceptance or further runtime.
+
+## Current independent contract disposition (2026-10-06)
+
+Bounded local intended contract REVIEW_PASS / FREEZE_OPEN per docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md. RP04 receipt/harness settled via immutable source145bd411 and runtimebaeb4c9/publicationb5bf0f0; inherited RP01/02/03 NOT_RERUN. Earlier failed review/execution/cost history remains. No full S2/CVF runtime governance/live/hosted claim, new runtime or FREEZE.
+
+## Separate scoped local FREEZE (2026-10-06)
+
+Accepted local intended contract FROZEN under R054 seedb59b4507fad69d999cba2faa40ac57416c949d92; docs/reviews/CCMAI_RUNTIME_054_LOCAL_PROVIDER_CLOSURE_2026-10-06.md. Earlier review/open status is historical, original authority remains immutable. Evidence inherited from exact source145bd411/production727d322; all failures/full S2/live limits retained, no runtime replay.

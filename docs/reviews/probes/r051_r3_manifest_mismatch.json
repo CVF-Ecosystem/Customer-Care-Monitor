@@ -1,0 +1,75 @@
+{
+  "status": "READ_ONLY_DIAGNOSIS_NO_CORRECTION_NO_RERUN",
+  "fileMembershipEqual": true,
+  "gitBlobCount": 204,
+  "archiveExtractedCount": 204,
+  "differentFiles": [
+    {
+      "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+      "gitBlob": {
+        "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+        "sha256": "8df9c522fbbcf7cebd384539f5f4a7d266e7521674f5ca19f90acacfddc04c14",
+        "bytes": 2616
+      },
+      "gitArchiveExtracted": {
+        "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+        "sha256": "3af39ca7052cccff481f7530a8c36556361e978e09b25e677e12cf41126f2b32",
+        "bytes": 2637
+      },
+      "archiveMemberEqualsExtracted": true,
+      "equalAfterCRLFToLF": true,
+      "gitCRLFCount": 0,
+      "archiveCRLFCount": 21,
+      "gitLFCount": 21,
+      "archiveLFCount": 21
+    },
+    {
+      "path": "backend/go.mod",
+      "gitBlob": {
+        "path": "backend/go.mod",
+        "sha256": "a9612773d6d58bd50b404624975ef48f7c213e0498fc4b073a16afc1151f54a4",
+        "bytes": 3823
+      },
+      "gitArchiveExtracted": {
+        "path": "backend/go.mod",
+        "sha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+        "bytes": 3911
+      },
+      "archiveMemberEqualsExtracted": true,
+      "equalAfterCRLFToLF": true,
+      "gitCRLFCount": 0,
+      "archiveCRLFCount": 88,
+      "gitLFCount": 88,
+      "archiveLFCount": 88
+    },
+    {
+      "path": "backend/go.sum",
+      "gitBlob": {
+        "path": "backend/go.sum",
+        "sha256": "79bb19b2950d5a893465ae6d639a9e2d5e4a8cab96e906e2b7e138dec35fbae1",
+        "bytes": 26195
+      },
+      "gitArchiveExtracted": {
+        "path": "backend/go.sum",
+        "sha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+        "bytes": 26483
+      },
+      "archiveMemberEqualsExtracted": true,
+      "equalAfterCRLFToLF": true,
+      "gitCRLFCount": 0,
+      "archiveCRLFCount": 288,
+      "gitLFCount": 288,
+      "archiveLFCount": 288
+    }
+  ],
+  "archiveSha256": "b4d4daff222388d1f721294b0d2ab47899bb70943966bff1742b7c045054be38",
+  "retainedExport": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r3-yor6l8g7\\source.tar",
+  "allOther201FilesByteEqual": true,
+  "rootCause": "Runner incorrectly compares git archive extracted bytes to raw git blob bytes. Three non-Go files have CRLF archive representations vs LF raw blobs; observed normalized equality does not establish byte equality. Exact archive SHA matches prior accepted archive. Stop occurred before cached checks, controlled throw, resource creation or any Go invocation.",
+  "proposedNextScope": "Separate recorded cost decision before any correction/retry: bind a full archive-member manifest derived from the fixed git archive bytes, compare extracted membership/content strictly, retain raw blob differences explicitly. Validate exact expected204/archive hash and AST before prospective one bounded campaign. No current correction or execution authority.",
+  "archiveVsExtraction": {
+    "fileMembershipEqual": true,
+    "all204BytesEqual": true,
+    "archiveFileCount": 204
+  }
+}

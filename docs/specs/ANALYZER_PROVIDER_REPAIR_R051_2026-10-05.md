@@ -1,0 +1,28 @@
+# R051 R050 test and evidence repair contract
+
+Date: 2026-10-05. CHANGES_REQUIRED / REVIEW, R2. Round2 repair145bd41109c1e3ac3fb1a85f261c61f668b2fe4d independently reviewed; RP-01/02/03 and behavioral detector settled, RP-04 residual R051-R2-01 remains open; REVIEW_COST_ESCALATION_REQUIRED before third repair. Inherits unchanged R050 LP-01..08, production727d3229338e9b29c749612677a08b7fd1c65428 and [independent findings](../reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md). Separate immutable R051 grants the previously missing ownership fixture path; original R050 authority/record paths stay immutable. No production behavior or acceptance expansion.
+
+| ID / finding | Repair and discriminating acceptance |
+| --- | --- |
+| RP-01 / R050-R1-01 | Only provider-selection setup in TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership gains eligible synthetic source. Retain every bounded returned/stored error, finished state, job status, ownership release and readmission assertion plus invalid-input/other cases. Entire relevant ownership/terminal selection passes0 FAIL/SKIP. Never change expected no-work success to force eager initialization. |
+| RP-02 / R050-R1-02 | Maintain separate single-call, batch-call and processed-item counters; one two-item batch is1 invocation/2 items, resolver/factory1. Counter types can differ while values equal; remove only invalid value-inequality expectation, replace with direct semantically correct assertions. Preserve single/batch coverage and all existing LP scenarios. |
+| RP-03 / R050-R1-02 | Observe/trap actual ai_provider/ai_api_key setting queries through the production getProvider branch on no-work/source-error cases, with no resolver/override bypass. Corrupt synthetic encrypted key must not be touched for empty channel, zero conversations, no messages, unchanged source or candidate/preparation failures. Include candidate-query failure and existing all-failed/mixed preparation. Positive eligible missing/corrupt-key controls retain bounded provider error, terminal/ownership behavior. Distinguish source/settings/key/decrypt boundary observations from constructor and AnalyzeChat/Batch calls; say precisely what was actually measured. Check query errors in counting/persistence assertions and persisted summaries/checkpoints/results/usage/no-notifier effects. No real provider/config/credential/network use. |
+| RP-04 / R050-R1-03 | Truthful successor machine receipt binds exact source export/manifest, file/hash/count/command/exit/raw-log identities, actual worker acknowledgment SHA, named applied ordering mutant failure and byte restoration/restored pass, changed/staged set and handback commit, internal/no-port/cached-offline fixture/resource/anonymous-volume cleanup and final publication checks. Retain original wrong SHA/counts, scope failure, default-network/volume proof gaps and original packet unchanged. New campaign proves only its own snapshot. |
+
+Required result: repaired dedicated LP plus affected incremental/mode/ownership/shared-dispatch/finalizer suites and original ownership failure control pass with zero unexplained failure/skip; ordering mutant must be actually applied, runnable and fail a named relevant assertion, then baseline bytes restored/pass. Existing42-top/94-event/1-fail reviewer receipt is historical, not replaced. Record any harness/timeout/partial failure and retries; full-backend/race NOT RUN unless executed within authorized bounds. No real-provider/CVF governance/full S2/global F02/hosted readiness claim.
+
+Canonical analyzer.go, finalizer/source-version/provider implementation, F06-R1/R2 and all other tests/source protected. Applied sensitivity mutation may alter only isolated exact-source TEMP copy and must restore byte-for-byte; do not mutate live canonical source. Any further canonical path/effect/contract change returns a concrete boundary finding before edit. This test/evidence BUILD returns REVIEW_PENDING; independent reviewer evaluates R051 and residual R050 separately. No self-approval/FREEZE.
+
+Current result: [independent R051 review](../reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md); acceptance contract above unchanged. Three consolidated findings for same-scope round2.
+
+Latest result: [round2 independent review](../reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md); no third BUILD dispatched, unchanged RP acceptance contract. Prior round1 result is historical.
+
+Current dispatch: [cost disposition](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md) authorizes one evidence-only R3, not started. Original RP contract unchanged; accepted RP-01/02/03/detector inherited, source/tests protected. No automatic fourth repair; Codex independent review still required.
+
+## Current independent contract disposition (2026-10-06)
+
+Bounded local intended contract REVIEW_PASS / FREEZE_OPEN per docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md. RP04 receipt/harness settled via immutable source145bd411 and runtimebaeb4c9/publicationb5bf0f0; inherited RP01/02/03 NOT_RERUN. Earlier failed review/execution/cost history remains. No full S2/CVF runtime governance/live/hosted claim, new runtime or FREEZE.
+
+## Separate scoped local FREEZE (2026-10-06)
+
+Accepted local intended contract FROZEN under R054 seedb59b4507fad69d999cba2faa40ac57416c949d92; docs/reviews/CCMAI_RUNTIME_054_LOCAL_PROVIDER_CLOSURE_2026-10-06.md. Earlier review/open status is historical, original authority remains immutable. Evidence inherited from exact source145bd411/production727d322; all failures/full S2/live limits retained, no runtime replay.

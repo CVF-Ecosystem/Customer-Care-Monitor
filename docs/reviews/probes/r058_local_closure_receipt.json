@@ -1,0 +1,74 @@
+{
+  "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "acceptedReviewCommit": "5ff087587f04170579b39a645ce4bf7eb1933fe1",
+  "runtimeEvidenceCommit": "c4f78f26c50ae481ea4a3c7db19f9187004b8d9f",
+  "closureAuthorityCommit": "5ff087587f04170579b39a645ce4bf7eb1933fe1",
+  "targets": [
+    "CCMAI-RUNTIME-055",
+    "CCMAI-RUNTIME-057"
+  ],
+  "closedMetadataTranche": "CCMAI-RUNTIME-058",
+  "scope": "local preparation observation only",
+  "phase": "FREEZE",
+  "disposition": "REVIEW_PASS",
+  "risk": "R1 metadata/inherited R2 source",
+  "newAppGoInvocations": 0,
+  "newRuntimeCampaigns": 0,
+  "subagentCalls": 0,
+  "rootCanonicalSourceTestEdits": 0,
+  "oldFailedEvidenceUnchanged": true,
+  "claimFullS2": false,
+  "claimLiveGov": false,
+  "claimHosted": false,
+  "publicationChecks": {
+    "defaultPreflight": "PASS 7/7",
+    "prPreflight": "PASS 7/7 --base origin/main --head 5ff087587f04170579b39a645ce4bf7eb1933fe1",
+    "unitGate": "PASS 46 tests /52.797s fresh closure run",
+    "catalogWindowsPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "docsBuild": "PASS 35.48s npm.cmd --prefix docs run docs:build from project root, after final Markdown",
+    "diffCheck": "PASS",
+    "exactStagedPreflight": "PASS 7/7 --base HEAD --files exact 18 closure metadata paths; rerun after recording result",
+    "doctor": "PASS WITH NOTE 25/1; core8a4119e manifest26c686cc mismatch warn-only, gate profile not installed; no hosted/runtime claim",
+    "compactBootstrap": "BOOTSTRAP_MIGRATION_PENDING nonblocking",
+    "cachedDiffCheck": "PASS"
+  },
+  "commitIdentity": "DERIVE_AFTER_COMMIT",
+  "protectedAudit": {
+    "protectedFiles": 700,
+    "protectedOldTests": 120,
+    "protectedOldBackendTests": 114,
+    "authorizedHistoricalSourceChanges": [
+      "backend/engine/analyzer.go",
+      "backend/engine/analyzer_incremental.go",
+      "backend/engine/analyzer_modes.go",
+      "backend/engine/job_run_ownership.go"
+    ],
+    "sourceUnchangedSinceChildCheckpoint": true,
+    "seeds": [
+      {
+        "tranche": "055",
+        "firstCommit": "8d9137d8fd4c23d08744abc30b0b9975c68da626",
+        "equalsFirstBlob": true
+      },
+      {
+        "tranche": "056",
+        "firstCommit": "1352ce146a6e7c8ead6a6b7fee20679b0df2a9fe",
+        "equalsFirstBlob": true
+      },
+      {
+        "tranche": "057",
+        "firstCommit": "5d81c3c9114f894b1a50dca73078891bf0270220",
+        "equalsFirstBlob": true
+      },
+      {
+        "tranche": "058",
+        "firstCommit": "5ff087587f04170579b39a645ce4bf7eb1933fe1",
+        "equalsFirstBlob": true
+      }
+    ],
+    "previousCommittedProofFilesUnchanged": 124,
+    "unexpectedChanges": [],
+    "initialAuditSetup": "Initial assertion incorrectly counted only backend tests as all 120 old Go tests; 114 backend +6 other tracked Go tests. Corrected predicate to all tracked old Go tests; no file edits or source finding."
+  }
+}

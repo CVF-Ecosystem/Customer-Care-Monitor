@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-050",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Claude",
+    "reviewer": "Codex"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/analyzer_provider_initialization_test.go",
+    "backend/engine/analyzer_f06_r1_test.go",
+    "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
+    "docs/work_orders/CCMAI_RUNTIME_050.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "semantic_auto_skip",
+    "budget_or_policy_gate",
+    "provider_selection_or_fallback_change"
+  ],
+  "claimScope": "Only application provider initialization ordering after existing source preparation on synthetic disposable local fixtures. No CVF runtime governance/provider parity/full S2 or live/hosted readiness claim. Preserve finalizer/ownership/checkpoint contracts.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_050.md",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "baseCommit": "1008ab41f0693e2814cd06dfdb0fed98273a1167",
+  "buildCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
+  "reviewEvidence": [
+    "docs/reviews/ANALYZER_LAZY_PROVIDER_R050_BUILD_2026-10-05.md",
+    "docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md",
+    "docs/reviews/probes/r050_independent_summary.json",
+    "docs/reviews/probes/r050_independent_campaign.ps1",
+    "docs/reviews/CCMAI_RUNTIME_051_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/probes/r051_independent_summary.json",
+    "docs/reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md",
+    "docs/reviews/probes/r051_r2_independent_summary.json",
+    "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md",
+    "docs/reviews/probes/r053_successor_independent_summary.json",
+    "docs/reviews/CCMAI_RUNTIME_054_LOCAL_PROVIDER_CLOSURE_2026-10-06.md",
+    "docs/reviews/probes/r054_local_closure_receipt.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "implementationStarted": true,
+  "planningPublication": {
+    "doctor": "PASS WITH NOTE25/1",
+    "gateUnits": {
+      "tests": 46,
+      "exit": 0,
+      "seconds": 42.467
+    },
+    "seedFinalDocs": {
+      "exit": 0,
+      "seconds": 32.27
+    },
+    "activationDocs": {
+      "exit": 0,
+      "seconds": 18.81
+    },
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": "PASS7/7",
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "sourceTestsAndImmutableSeeds": "UNCHANGED",
+    "runtimeCampaigns": 0,
+    "status": "FINAL_PLANNING_GATES_PASS",
+    "stagedPreflight": {
+      "base": "HEAD",
+      "exit": 0,
+      "passed": 7,
+      "executed": 7,
+      "changedPaths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-050.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+        "docs/roadmaps/README.md",
+        "docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md",
+        "docs/work_orders/CCMAI_RUNTIME_050.md"
+      ],
+      "note": "Publication record restaged; same gate repeated before commit."
+    },
+    "stagedDiffCheck": "PASS"
+  },
+  "repairFindings": [
+    "R050-R1-01",
+    "R050-R1-02",
+    "R050-R1-03"
+  ],
+  "openReviewFindings": [],
+  "scopeAmendmentRequired": "NONE_FOR_SETTLED_RP04; separate closure authority required before FREEZE",
+  "repairRound": 0,
+  "delegatedRepairTranche": "CCMAI-RUNTIME-051",
+  "settledReviewFindings": [
+    "R050-R1-01",
+    "R050-R1-02"
+  ],
+  "delegatedRepairCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "delegatedRepairRound": 2,
+  "delegatedRepairCostDisposition": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
+  "independentReviewer": "Codex /root",
+  "independentAcceptance": "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md",
+  "independentAcceptanceReceipt": "docs/reviews/probes/r053_successor_independent_summary.json",
+  "resolvedBySuccessor": {
+    "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+    "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
+    "workerHandbackCommit": "4b8a588552da48c1096af9ac39453565f5f299af",
+    "continuityRepairCommit": "6a8919f983c46381f08e124352419e5bccb3a48a",
+    "RP04": "SETTLED",
+    "historicalFailuresRecertified": false
+  },
+  "historicalScopeAmendmentRequired": "Separate R051 scope remains unchanged; tests and behavioral detector settled, RP-04 residual evidence/harness open; REVIEW_COST_ESCALATION_REQUIRED before third repair",
+  "closer": "Codex /root",
+  "closedAt": "2026-10-06",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_054_LOCAL_PROVIDER_CLOSURE_2026-10-06.md",
+  "closureAuthority": "CCMAI-RUNTIME-054",
+  "closureAuthorityCommit": "b59b4507fad69d999cba2faa40ac57416c949d92",
+  "frozenSourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d"
+}

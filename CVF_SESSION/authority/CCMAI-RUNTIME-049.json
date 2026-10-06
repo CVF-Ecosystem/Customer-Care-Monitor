@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-049",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_CLOSURE_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
+  "sourcePlanningCommit": "68ff5226699fa840957e17c18a7728c70c62537e",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex",
+    "implementationWorker": "Claude",
+    "commitSteward": "Codex",
+    "reviewer": "Codex",
+    "closer": "Codex"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_049.md",
+    "docs/work_orders/CCMAI_RUNTIME_046.md",
+    "docs/work_orders/CCMAI_RUNTIME_047.md",
+    "docs/work_orders/CCMAI_RUNTIME_048.md",
+    "docs/specs/ENGINE_FINALIZER_ERROR_LOGGING_R046_2026-10-04.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "old_packet_edit",
+    "original_authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "runtime_campaign",
+    "detector_mutation",
+    "provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "other_tranche_freeze",
+    "live_governance_claim",
+    "hosted_readiness_claim",
+    "acceptance_contract_expansion"
+  ],
+  "permittedEffects": [
+    "local_documentation_commit",
+    "scoped_local_freeze_R046_R047_R048"
+  ],
+  "closureTargets": [
+    "CCMAI-RUNTIME-046",
+    "CCMAI-RUNTIME-047",
+    "CCMAI-RUNTIME-048"
+  ],
+  "acceptedSourceCommit": "91da0e88118b76a68031f432da50521fe6a341b7",
+  "acceptedCorrectionCommit": "916d482b8508ad9393914337f42c5a2e9e699993",
+  "claimScope": "Only option A bounded local R046 FL-01..06, R047 factual correction and R048 qualified acceptance disposition; all historical proof gaps and original failures remain permanent. No new runtime, universal logging safety or live readiness.",
+  "ownerAuthorization": "Standing bounded local orchestration/closure delegation in CVF_SESSION_MEMORY.md and owner next. Explicit option A decision4774cd1 and committed qualified acceptance68ff522 inherited; no acceptance expansion.",
+  "roleInheritance": "Claude inherited original product worker; Codex child r046_r4_worker inherited R047 correction worker; parent Codex independent reviewer and metadata closer. R1 applies only to closure disposition, not inherited R2 product. No new BUILD.",
+  "earliestOpenPhase": "REVIEW",
+  "dispatchBoundary": "Commit seed first, activate matching order/record/session as inherited REVIEW_PENDING, rehydrate and evaluate independently accepted inputs, gate REVIEW_PASS before declaring CLOSER/FREEZE, synchronize and commit closure. Original seeds untouched."
+}

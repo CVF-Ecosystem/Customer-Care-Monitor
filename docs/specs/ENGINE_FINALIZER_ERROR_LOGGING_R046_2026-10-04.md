@@ -1,6 +1,10 @@
+Current local disposition: FROZEN under separate R049 closure authority at91da0e88118b76a68031f432da50521fe6a341b7. Option A FL-01..06 behavior and permanent historical NOT MET/NOT VERIFIED limits unchanged. [Closure review](../reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md). Earlier acceptance/planning statements below remain historical.
+
 # R046 engine finalizer driver-error containment
 
-Date: 2026-10-04 (Asia/Saigon). Status: BUILT; independent R2 re-review CHANGES_REQUIRED at repair91da0e88118b76a68031f432da50521fe6a341b7 solely for worker receipt attribution. R2-01..02 local synthetic isolation/boundary observations settled; Cost checkpoint resolved as CONTINUE_ONE_EVIDENCE_ONLY_R3; worker evidence BUILD not started. Original BUILD/R1 failed reviews preserved. Requirements unchanged; FREEZE_OPEN. Risk ceiling R2. Codex SPEC_AUTHOR. [Order](../work_orders/CCMAI_RUNTIME_046.md).
+Date: 2026-10-05 (Asia/Saigon). Current status: qualified local REVIEW_PASS / REVIEW / FREEZE_OPEN under separate R048 option A disposition at exact91da0e88118b76a68031f432da50521fe6a341b7. FL-01..06 behavior requirements unchanged. Historical worker exact-archive execution and missing publication/isolation/cleanup proof permanently NOT MET/NOT VERIFIED, not local acceptance prerequisites under explicitly authorized A evidence basis. [Acceptance review](../reviews/CCMAI_RUNTIME_048_OPTION_A_ACCEPTANCE_REVIEW_2026-10-05.md). Risk ceiling R2; no FREEZE/live authority.
+
+Historical pre-R3 planning status (retained): Date: 2026-10-04 (Asia/Saigon). Status: BUILT; independent R2 re-review CHANGES_REQUIRED at repair91da0e88118b76a68031f432da50521fe6a341b7 solely for worker receipt attribution. R2-01..02 local synthetic isolation/boundary observations settled; Cost checkpoint resolved as CONTINUE_ONE_EVIDENCE_ONLY_R3; worker evidence BUILD not started. Original BUILD/R1 failed reviews preserved. Requirements unchanged; FREEZE_OPEN. Risk ceiling R2. Codex SPEC_AUTHOR. [Order](../work_orders/CCMAI_RUNTIME_046.md).
 
 ## INTAKE and DESIGN
 

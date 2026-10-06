@@ -276,20 +276,34 @@ func explicitCandidates(job models.Job, channelIDs []string, plan runPlan, runSt
 // ordinary mode; no time cutoff, so a date bound never cuts the conversation's context). Empty
 // source is skipped; snapshot errors are counted, never skipped silently. Cancellation stops it.
 func prepareExplicit(ctx context.Context, candidates []models.Conversation) (prepared []preparedConversation, errorCount int, cancelled bool) {
+	return prepareExplicitObserved(ctx, candidates, nil)
+}
+
+func prepareExplicitObserved(ctx context.Context, candidates []models.Conversation, observer *preparationCollector) (prepared []preparedConversation, errorCount int, cancelled bool) {
 	for _, conv := range candidates {
 		if ctx.Err() != nil {
+			observer.stop("CONTEXT_CANCELLED")
 			return prepared, errorCount, true
 		}
+		observer.start(conv)
 		snap, err := loadConversationSnapshot(conv, time.Time{})
 		if err != nil {
 			log.Printf("[analyzer] snapshot error for conversation %s: %v", conv.ID, err)
 			errorCount++
+			observer.finish("SNAPSHOT_ERROR")
 			continue
 		}
+		observer.snapshot(conv, snap)
 		if snap.Manifest.Coverage == coverageEmpty {
+			observer.finish("EMPTY_SOURCE")
 			continue
 		}
 		prepared = append(prepared, preparedConversation{Conv: conv, Snap: snap})
+		observer.finish("PREPARED_FOR_INFERENCE")
 	}
+	if ctx.Err() != nil {
+		observer.stop("CONTEXT_CANCELLED")
+	}
+	observer.complete()
 	return prepared, errorCount, false
 }
