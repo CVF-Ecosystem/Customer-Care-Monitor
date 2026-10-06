@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-053", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-053", "parked": true} -->
 
 ## Startup Order
 
@@ -694,3 +694,7 @@ CCMAI-RUNTIME-029 / F07 BUILD (Claude, 2026-10-02): `Dashboard.vue` keeps the th
 ## End-of-session checkpoint (2026-10-03, Asia/Saigon)
 
 Owner authorized generated-file cleanup and normal GitHub push of the current branch, then pause until tomorrow. R031 REVIEW_PASS / FREEZE_OPEN unchanged. Parked checkpoint is in active state/handoff; rehydrate before resuming. Remaining Zalo-message planning needs separate INTAKE/DESIGN/SPEC/WORK_ORDER; no new BUILD, merge/deploy or FREEZE authorization. Earlier excluded-file preflight failures remain historical evidence.
+
+## Publication-only repair6 handback
+
+Runtime baeb4c9 and lossless publication b5bf0f0 committed separately after acknowledgment2ace7ec. Current REVIEW_PENDING, root independent review only; used1campaign/4Go, remaining0/0. Raw diff and all old packets unchanged; historical failed staged check and helper assertions retained. No worker acceptance.

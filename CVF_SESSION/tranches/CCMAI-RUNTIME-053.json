@@ -83,8 +83,8 @@
   },
   "independentRootCause": "R052-R3-01 raw Git blob vs exact archive byte representation manifest mismatch",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_053.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "072812c7ec8e07025eaf90ae668744744f69f3bf",
   "buildCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
   "reviewEvidence": [
@@ -96,7 +96,11 @@
     "docs/reviews/probes/r053_r4_independent_summary.json",
     "docs/reviews/probes/r051_r4_successor_report.md",
     "docs/reviews/probes/r051_r4_successor_worker_receipt.json",
-    "docs/reviews/probes/r051_r4_successor_preparation_receipt.json"
+    "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+    "docs/reviews/probes/r051_r4_successor_applied_mutation.json",
+    "docs/reviews/probes/r051_r4_successor_publication_receipt.json",
+    "docs/reviews/probes/r051_r4_successor_publication_report.md",
+    "docs/reviews/probes/r051_r4_successor_handback.json"
   ],
   "disposition": "PENDING",
   "freeze": "OPEN",
@@ -105,7 +109,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -178,7 +183,7 @@
   ],
   "nextCumulativeRepairRound": 5,
   "successorDispatch": {
-    "status": "RUNTIME_COMPLETE_PUBLICATION_REPAIR_BUILD",
+    "status": "REVIEW_PENDING_WITH_PUBLICATION_CORRECTION",
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md",
     "cumulativeRepairRound": 5,
     "allowedArtifactPrefix": "docs/reviews/probes/r051_r4_successor_",
@@ -204,7 +209,7 @@
   },
   "successorEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
   "round5EvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
-  "publicationDisposition": "CHANGES_REQUIRED_STAGED_DIFF_ARTIFACT_CHECK",
+  "publicationDisposition": "PENDING_INDEPENDENT_REVIEW_LOSSLESS_ENVELOPE",
   "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
   "historicallySettledFindings": [
     {
@@ -214,15 +219,18 @@
     }
   ],
   "publicationRepair": {
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "cumulativeRepairRound": 6,
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_DIFF_ARTIFACT_PUBLICATION_DISPOSITION_2026-10-06.md",
     "costDispositionCommit": "1a8bb5e42a11b8259be985a4155f527389a280fa",
     "newRuntimeCampaigns": 0,
     "newGoInvocations": 0,
     "encodingBeforeAcknowledgment": "NOT_STARTED",
-    "acknowledgmentCommit": "DERIVE_FROM_GIT_AFTER_COMMIT",
-    "phaseInheritance": "Continue last committed BUILD at earliest open publication correction stage; new before-edit acknowledgment required"
+    "acknowledgmentCommit": "2ace7ec1188be02373692e0e65a2fb244683ea27",
+    "phaseInheritance": "Continue last committed BUILD at earliest open publication correction stage; new before-edit acknowledgment required",
+    "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
+    "postRuntimeEncoding": true,
+    "rawRuntimeArtifactRetained": true
   },
   "supersededDraftContinuity": {
     "uncommittedStatusEntries": [
@@ -232,5 +240,6 @@
     "reason": "Fifth REVIEW_PENDING handback draft was interrupted before commitment by newly committed publication-only cost disposition. Restore committed history; no formal reviewer transition invented. Current repair6 inherits earliest open BUILD under unchanged source/acceptance.",
     "observedPreflightFailure": "tranche invalid status transition REVIEW_PENDING -> BUILD; other6 gates pass; corrected before encoding",
     "workerNoAcceptance": true
-  }
+  },
+  "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e"
 }

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root/r051_preparation publication-only REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER afterward
-- Next allowed move: CCMAI-RUNTIME-053 cumulative publication repair6 BUILD under committed disposition1a8bb5e42a11b8259be985a4155f527389a280fa: Codex /root/r051_preparation adds only lossless JSON/base64 envelope and new publication receipt/report/current metadata after committed acknowledgment. Raw baeb4c9 runtime packet/diff/runner/preparation/logs remain unchanged; no whitespace suppression or historical recertification. Runtime budget exhausted used1campaign/4Go, remaining0/0; no Go/container/provider/network/source/test/seed/tooling/workflow changes. Commit separate publicationEvidenceCommit then REVIEW_PENDING handback for independent Codex /root; R050/R051/R052 open, no acceptance/FREEZE/push/merge/deploy, accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER; Codex /root/r051_preparation SESSION_SYNC_STEWARD / handback COMMIT_STEWARD only
+- Next allowed move: CCMAI-RUNTIME-053 repair6 REVIEW_PENDING: independent Codex /root reviews runtime evidence baeb4c920a68cadb121344aaed8408a3f23aa0df and publication correction b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e, lossless967-byte raw-to-envelope mapping, retained failed checks, six full LP06 passes and named cleanup. Runtime budget exhausted used1campaign/4Go, remaining0/0; no further runtime or automatic repair. R050/R051/R052 remain open until independent disposition; no worker acceptance/FREEZE/push/merge/deploy, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fourth-repair authority activation acknowledgment
@@ -40,3 +40,7 @@ Current BUILD continuity/memory/state/handoff/status/index rehydrated before REP
 ## Publication-only repair6 before-edit BUILD acknowledgment
 
 Fresh CVF Agent Declaration (2026-10-06): actual Codex /root/r051_preparation publication-only REPAIR_WORKER / BUILD COMMIT_STEWARD; root independent reviewer. BUILD/R2, live evidence required YES without governance claim, readonly core8a4119/manifest26c686cc, doctor25/1 PASS WITH NOTE, bootstrap migration note nonblocking. Current continuity/status/index/seed/disposition1a8bb5e rehydrated; preceding uncommitted fifth handback remains a superseded draft, not claimed as historical committed handback. Immutable seed072812c7/roles unchanged. Exact runtimeEvidenceCommit/successorEvidenceCommit/round5EvidenceCommit baeb4c9 retained; all committed packets/raw diff/runner/prep/logs unchanged. Encoding NOT STARTED before this acknowledgment. Repair6 is publication metadata only; current budget used1campaign/4Go, remaining0/0, no runtime/source/tooling/network effect. Gate unit46 PASS12.785s inherited from root unchanged source as disposition permits. Accounts parked.
+
+## Committed publication-only repair6 REVIEW_PENDING handback
+
+Worker transitioned BUILD -> SESSION_SYNC_STEWARD / handback COMMIT_STEWARD only. Before-edit acknowledgment2ace7ec1188be02373692e0e65a2fb244683ea27; exact executed runtime/successor/round5 packet baeb4c920a68cadb121344aaed8408a3f23aa0df preserved. New publication correction b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e adds lossless967-byte JSON/base64 envelope and publication receipt/report. Raw diff SHA bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f remains unchanged in Git; decoded raw/Git equality proved. Three physical metadata CRLF/Git LF relations explicitly recorded; two helper assertions retained, corrected in same scope. Historical failed staged diff exit2 remains, never waived/recertified. New correction default/PR/staged7/7 incl restaged repeat, catalogs5.1+7 and docs7.796s/new staged diff0 PASS; inherited root46unit12.785s. No new Go/container/provider calls. Used1campaign/4Go, remaining0/0. Source145bd411, old round3/4 failures, all seeds/roles/old packets preserved. Uncommitted fifth handback draft superseded by this final committed-map handback; root independent RP04/publication disposition next, R050/R051/R052 remain open.

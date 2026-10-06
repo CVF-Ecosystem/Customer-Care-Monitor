@@ -280,7 +280,7 @@
   "delegatedRound5ExecutionStatus": "REVIEW_PENDING",
   "round5EvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
   "successorEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
-  "delegatedPublicationRepairStatus": "BUILD",
+  "delegatedPublicationRepairStatus": "REVIEW_PENDING",
   "currentExecutionBudget": {
     "maxCampaigns": 1,
     "maxGoInvocations": 4,
@@ -288,5 +288,6 @@
     "usedGoInvocations": 4,
     "remainingCampaigns": 0,
     "remainingGoInvocations": 0
-  }
+  },
+  "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e"
 }

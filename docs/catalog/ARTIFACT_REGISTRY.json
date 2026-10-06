@@ -1879,6 +1879,13 @@
       "path": "docs/reviews/probes/r051_r4_successor_publication_report.md",
       "status": "ACTIVE",
       "description": "Publication-only lossless encoding repair6; independent acceptance pending."
+    },
+    {
+      "id": "r053-successor-final-handback",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_handback.json",
+      "status": "ACTIVE",
+      "description": "Repair6 final REVIEW_PENDING map: immutable runtimebaeb and separate lossless publicationb5bf; no worker acceptance."
     }
   ]
 }

@@ -21,3 +21,7 @@ Historical execution: cumulative fifth successor BUILD acknowledged before new r
 Superseded draft fifth handback: exact evidencebaeb4c920a68cadb121344aaed8408a3f23aa0df REVIEW_PENDING; sole runtime4Go/fullLP066PASS/mutant2namedFAIL/restoration/cleanup pass. Cached staged diff-check exit2 on raw unified-diff context markers retained as PUBLICATION_CHANGES_REQUIRED; no worker waiver/correction/retry/acceptance. Aggregate runtime budget1campaign/4Go exhausted. Root independent disposition next; old pointers/source/test contracts unchanged.
 
 Current execution: cumulative publication-only repair6 BUILD under committed diff-artifact disposition1a8bb5e. Add lossless envelope/new publication receipt/report; all committed raw fifth packets stay immutable. Runtime used1/4, remaining0/0. No encoding before committed acknowledgment, no new runtime/acceptance.
+
+## Publication-only repair6 committed handback
+
+Runtime packet `baeb4c920a68cadb121344aaed8408a3f23aa0df` remains unchanged; publication envelope/receipt/report committed separately at `b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e` after acknowledgment `2ace7ec1188be02373692e0e65a2fb244683ea27`. REVIEW_PENDING for independent Codex `/root`; original historical failures retained. New publication checks pass, raw artifact preserved. Used1campaign/4Go, remaining0/0; no worker acceptance or further runtime.

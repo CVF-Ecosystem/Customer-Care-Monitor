@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -303,9 +303,9 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-053 cumulative publication repair6 BUILD under committed disposition1a8bb5e42a11b8259be985a4155f527389a280fa: Codex /root/r051_preparation adds only lossless JSON/base64 envelope and new publication receipt/report/current metadata after committed acknowledgment. Raw baeb4c9 runtime packet/diff/runner/preparation/logs remain unchanged; no whitespace suppression or historical recertification. Runtime budget exhausted used1campaign/4Go, remaining0/0; no Go/container/provider/network/source/test/seed/tooling/workflow changes. Commit separate publicationEvidenceCommit then REVIEW_PENDING handback for independent Codex /root; R050/R051/R052 open, no acceptance/FREEZE/push/merge/deploy, accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-053 repair6 REVIEW_PENDING: independent Codex /root reviews runtime evidence baeb4c920a68cadb121344aaed8408a3f23aa0df and publication correction b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e, lossless967-byte raw-to-envelope mapping, retained failed checks, six full LP06 passes and named cleanup. Runtime budget exhausted used1campaign/4Go, remaining0/0; no further runtime or automatic repair. R050/R051/R052 remain open until independent disposition; no worker acceptance/FREEZE/push/merge/deploy, accounts parked.",
     "assessment": "docs/reviews/CCMAI_RUNTIME_053_DIFF_ARTIFACT_PUBLICATION_DISPOSITION_2026-10-06.md",
-    "buildDispatched": true,
+    "buildDispatched": false,
     "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_046_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-05.md",
     "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
     "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
@@ -317,6 +317,8 @@
       "usedGoInvocations": 4,
       "remainingCampaigns": 0,
       "remainingGoInvocations": 0
-    }
+    },
+    "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
+    "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df"
   }
 }
