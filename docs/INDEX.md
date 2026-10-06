@@ -47,6 +47,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json`
+- Full204-file actual fixed-archive extracted path/hash/size manifest.: `docs/reviews/probes/r051_r3_extracted_manifest.json`
+- Full204-file raw Git blob path/hash/size manifest; representation differs from archive on three files.: `docs/reviews/probes/r051_r3_source_manifest.json`
+- Read-only comparator diagnosis: exact membership, three LF/CRLF representation differences, other201 byte-equal.: `docs/reviews/probes/r051_r3_manifest_mismatch.json`
+- Exact failure/publication receipt; FAILED_NOT_RUN and zero runtime/resources, no retry.: `docs/reviews/probes/r051_r3_worker_receipt.json`
+- Failed R052 delegated R051/R3 preparation; zero campaign/Go, exact archive comparator mismatch retained.: `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md`
+- Uncorrected first failed evidence runner; raw-blob versus archive manifest mismatch, no rerun.: `docs/reviews/probes/r051_r3_campaign.py`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`

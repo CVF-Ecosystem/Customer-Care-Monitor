@@ -1564,6 +1564,48 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
       "status": "ACTIVE",
       "description": "Historical R051 repair/cost record; current R3 delegation in R052."
+    },
+    {
+      "id": "r051-r3-worker-report",
+      "family": "continuity",
+      "path": "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Failed R052 delegated R051/R3 preparation; zero campaign/Go, exact archive comparator mismatch retained."
+    },
+    {
+      "id": "r051-r3-worker-runner",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r3_campaign.py",
+      "status": "ACTIVE",
+      "description": "Uncorrected first failed evidence runner; raw-blob versus archive manifest mismatch, no rerun."
+    },
+    {
+      "id": "r051-r3-worker-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r3_worker_receipt.json",
+      "status": "ACTIVE",
+      "description": "Exact failure/publication receipt; FAILED_NOT_RUN and zero runtime/resources, no retry."
+    },
+    {
+      "id": "r051-r3-git-blob-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r3_source_manifest.json",
+      "status": "ACTIVE",
+      "description": "Full204-file raw Git blob path/hash/size manifest; representation differs from archive on three files."
+    },
+    {
+      "id": "r051-r3-extracted-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r3_extracted_manifest.json",
+      "status": "ACTIVE",
+      "description": "Full204-file actual fixed-archive extracted path/hash/size manifest."
+    },
+    {
+      "id": "r051-r3-mismatch-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+      "status": "ACTIVE",
+      "description": "Read-only comparator diagnosis: exact membership, three LF/CRLF representation differences, other201 byte-equal."
     }
   ]
 }

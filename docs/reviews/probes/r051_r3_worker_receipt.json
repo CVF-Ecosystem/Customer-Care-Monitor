@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-052",
+  "inheritedTranche": "CCMAI-RUNTIME-051",
+  "repairRound": 3,
+  "campaigns": 0,
+  "goInvocations": 0,
+  "automaticRetries": 0,
+  "startedUtc": "2026-10-06T10:01:23.502503+00:00",
+  "artifactCommit": "DEFERRED_TO_LATER_COMMITTED_HANDBACK",
+  "sourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "inheritedProductionCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
+  "sourceAcknowledgmentCommit": "c228931c35339f56cac0a934394e586082a3f7c1",
+  "originalAuthorityCommit": "a54cb73007f081fe4bbaa4baa11d28fed4a7d937",
+  "routeAuthorityCommit": "7c3a61bfbd132512ff545dcb76a22448e71cb9f0",
+  "acknowledgmentCommit": "423b3e2bd8bdc14648a8206522b0109b7f224fe3",
+  "taskRoot": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r3-yor6l8g7",
+  "commands": [],
+  "errors": [
+    {
+      "type": "RuntimeError",
+      "message": "Archive source manifest mismatch: before mutation"
+    }
+  ],
+  "inherited": {
+    "acceptedR2Review": "42 top-level / 98 PASS; INHERITED_NOT_RERUN",
+    "RP01_RP02_RP03": "ACCEPTED_INHERITED",
+    "productionBuildVet": "INHERITED_BYTE_IDENTICAL_PRODUCTION"
+  },
+  "notRun": [
+    "full engine",
+    "full backend",
+    "frontend",
+    "race",
+    "real provider",
+    "channel",
+    "CVF runtime governance",
+    "hosted readiness",
+    "engine compile",
+    "engine vet",
+    "controlled restoration throw",
+    "applied mutation detector",
+    "restored full LP06"
+  ],
+  "cleanup": {
+    "containers": [],
+    "network": {},
+    "volumes": [],
+    "capturedVolumeNamesBeforeTeardown": [],
+    "successfulInventoryCommands": [
+      {
+        "command": [
+          "docker",
+          "ps",
+          "-a",
+          "--format",
+          "{{.Names}}"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "docker",
+          "network",
+          "ls",
+          "--format",
+          "{{.Name}}"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "docker",
+          "volume",
+          "ls",
+          "--format",
+          "{{.Name}}"
+        ],
+        "exit": 0
+      }
+    ],
+    "resourceCreation": "NOT_STARTED; no named resources or anonymous volume created"
+  },
+  "identitiesVerified": true,
+  "campaignParentHead": "423b3e2bd8bdc14648a8206522b0109b7f224fe3",
+  "sourceManifest": {
+    "path": "docs/reviews/probes/r051_r3_source_manifest.json",
+    "sha256": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+    "bytes": 32822
+  },
+  "sourceFileCount": 204,
+  "archiveSha256": "b4d4daff222388d1f721294b0d2ab47899bb70943966bff1742b7c045054be38",
+  "manifestChecks": [
+    {
+      "name": "before mutation",
+      "files": 204,
+      "exactMembershipAndBytes": false
+    }
+  ],
+  "campaignResult": "CHANGES_REQUIRED_NO_RETRY",
+  "totalSeconds": 13.237,
+  "publication": {
+    "status": "FINAL_REQUIRED_PUBLICATION_CHECKS_PASS_WITH_RETAINED_FAILED_ATTEMPTS",
+    "commands": [
+      {
+        "command": [
+          "python",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_cvf_downstream_gate*.py"
+        ],
+        "exit": 0,
+        "seconds": 13.517,
+        "stdout": "",
+        "stderr": "..............................................\r\n----------------------------------------------------------------------\r\nRan 46 tests in 13.398s\r\n\r\nOK\r\n"
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight"
+        ],
+        "exit": 0,
+        "seconds": 1.2,
+        "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight",
+          "--base",
+          "origin/main",
+          "--head",
+          "HEAD"
+        ],
+        "exit": 0,
+        "seconds": 1.936,
+        "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "powershell",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.627,
+        "stdout": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "pwsh",
+          "-NoProfile",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.66,
+        "stdout": "[PASS] Governed downstream catalog is valid and generated views match source truth.\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "npm --prefix docs run docs:build"
+        ],
+        "exit": 1,
+        "seconds": 0.331,
+        "stdout": "",
+        "stderr": "npm : File C:\\Program Files\\nodejs\\npm.ps1 cannot be loaded because running scripts is disabled on this system. For \r\nmore information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.\r\nAt line:1 char:1\r\n+ npm --prefix docs run docs:build\r\n+ ~~~\r\n    + CategoryInfo          : SecurityError: (:) [], PSSecurityException\r\n    + FullyQualifiedErrorId : UnauthorizedAccess\r\n"
+      },
+      {
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "npm.cmd --prefix docs run docs:build"
+        ],
+        "exit": 1,
+        "seconds": 4.592,
+        "stdout": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\n\nIf this is expected, you can disable this check via config. Refer: https://vitepress.dev/reference/site-config#ignoredeadlinks\n\n",
+        "stderr": "- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\n\n(!) Found dead link ./probes/r051_r3_campaign.py in file reviews\\ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md\nx Build failed in 3.23s\n\u001b[31m✖\u001b[0m building client + server bundles...\nbuild error:\n[vitepress] 1 dead link(s) found.\n[vitepress] 1 dead link(s) found.\n    at Object.renderStart (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/node_modules/vitepress/dist/node/chunk-D3CUZ4fa.js:45027:15)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/node_modules/rollup/dist/es/shared/node-entry.js:22626:40\n    at async Promise.all (index 0)\n    at async PluginDriver.hookParallel (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/node_modules/rollup/dist/es/shared/node-entry.js:22536:9)\n    at async Bundle.generate (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/node_modules/rollup/dist/es/shared/node-entry.js:20650:13)\n    at async file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/node_modules/rollup/dist/es/shared/node-entry.js:23613:27\n    at async catchUnfinishedHookActions (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/node_modules/rollup/dist/es/shared/node-entry.js:22980:16)\n"
+      },
+      {
+        "command": [
+          "npm.cmd",
+          "--prefix",
+          "docs",
+          "run",
+          "docs:build"
+        ],
+        "exit": 0,
+        "reportedVitePressSeconds": 7.62,
+        "observedToolWallSeconds": 8.605,
+        "note": "Executed after final Markdown changed Python-runner link into code; tool output retained in session."
+      }
+    ],
+    "protectedGitContent": {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "HEAD",
+        "--",
+        "backend",
+        "scripts",
+        ".github",
+        "CVF_SESSION/authority"
+      ],
+      "exit": 0,
+      "changedPaths": []
+    },
+    "rootIndependentProtectedByteObservation": {
+      "observer": "Codex /root",
+      "initialHead": "267987e88905fa1d554a7a05fe70c7f99de966bb",
+      "files": 649,
+      "changed": 0,
+      "missing": 0,
+      "byteEquality": true,
+      "basis": "Root communicated current independent comparison of initial physical hash inventory; separate from worker Git checks"
+    },
+    "publicationIncidents": [
+      "npm.ps1 blocked by execution policy before build; explicit npm.cmd launch used without policy change",
+      "VitePress rejected Python-runner relative link; report path formatted as code; subsequent build passed"
+    ],
+    "stagedPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "423b3e2bd8bdc14648a8206522b0109b7f224fe3",
+        "--files",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+        "docs/reviews/probes/r051_r3_campaign.py",
+        "docs/reviews/probes/r051_r3_extracted_manifest.json",
+        "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+        "docs/reviews/probes/r051_r3_source_manifest.json",
+        "docs/reviews/probes/r051_r3_worker_receipt.json"
+      ],
+      "base": "423b3e2bd8bdc14648a8206522b0109b7f224fe3",
+      "changedPaths": [
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
+        "docs/reviews/probes/r051_r3_campaign.py",
+        "docs/reviews/probes/r051_r3_extracted_manifest.json",
+        "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+        "docs/reviews/probes/r051_r3_source_manifest.json",
+        "docs/reviews/probes/r051_r3_worker_receipt.json"
+      ],
+      "exit": 0,
+      "seconds": 0.939,
+      "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+      "stderr": "",
+      "note": "Actual staged paths; receipt metadata now updated. Restage and repeat same gate before commit; repeat observation bound by later handback."
+    }
+  },
+  "diagnosis": {
+    "path": "docs/reviews/probes/r051_r3_manifest_mismatch.json",
+    "sha256": "49e1992cdb3c31a8b2d37b07b377fadc163f7f9a341e8cb281c63f78f8e4e0a8"
+  },
+  "extractedManifest": {
+    "path": "docs/reviews/probes/r051_r3_extracted_manifest.json",
+    "sha256": "6e555160df1cd6a662570fd54cd8603fe44ff989770bd7da5c0ae36aa91f0ebd",
+    "files": 204
+  },
+  "runtimeDisposition": "FAILED_NOT_RUN",
+  "noRetryDisposition": "Current authority exhausted by first runner failure; root directed no correction/rerun. Prospective repair requires new cost decision.",
+  "invocation": {
+    "command": [
+      "python",
+      "-B",
+      "docs/reviews/probes/r051_r3_campaign.py",
+      "--acknowledgment",
+      "423b3e2bd8bdc14648a8206522b0109b7f224fe3"
+    ],
+    "exit": 1,
+    "runnerSyntax": "Python AST PASS before invocation; no container execution"
+  }
+}
