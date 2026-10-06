@@ -5,12 +5,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 ## Start Here
 
 - Owner parks Facebook/Zalo OA account/live tests; source-based MCP job-execution next-scope planning, no BUILD dispatch.: `docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md`
-- Immutable separate R056 evidence-only independent review authority; no source edits/subagents, six Go max.: `CVF_SESSION/authority/CCMAI-RUNTIME-056.json`
+- Historical rejected R056 seed missing authorityKind, immutable; activation/runtime0, superseded by R057.: `CVF_SESSION/authority/CCMAI-RUNTIME-056.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R055 independent root REVIEW_PENDING; worker infrastructure failure retained, separate reviewer4Go, no further subagents.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md`
+- Active R057 independent root grouped REVIEW_PENDING; source immutable, six Go max, no subagents.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -40,6 +40,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Historical R053 accepted successor handoff before separate R054 closure; acceptance and history retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md`
 - Historical bounded local R054 closure handoff before separately seeded R055 application receipt work.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md`
+- Historical interrupted R055 source review before R057; source and failures retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md`
 - Historical R032 review/assessment and owner local-closure delegation acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md`
 - Historical R048 option A acceptance and R049 seed planning; prior evidence limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md`
 - Historical R049 bounded local closure and R050 seed planning acknowledgment; original limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md`
@@ -93,6 +94,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Retained worker mount/root timeout failures; no source defect verdict; separate grouped R056 review cost contract.: `docs/reviews/R055_REVIEW_INTERRUPTION_DISPOSITION_2026-10-06.md`
 - Root observed worker compile/vet exits and pure mount setup failure; named cleanup, no retry/acceptance.: `docs/reviews/probes/r055_worker_interruption_recovery.json`
 - R056 activation gate rejection and preserved proposals; new R057 seed before activation, same source/budget.: `docs/reviews/R056_FAILED_ACTIVATION_AND_R057_SUCCESSOR_2026-10-06.md`
+- R057 six-call independent source-review harness; complete timeout log capture, task cache cleanup.: `docs/reviews/probes/r057_independent_campaign.py`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
@@ -288,9 +290,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Executable catalog manager (--check / --write).: `scripts/manage_cvf_downstream_catalog.ps1`
 - Portable downstream machine gates: provenance, continuity, tranche/role contract, claim boundary, secret hygiene, workflow coverage and catalog (CCMAI-GOV-001).: `scripts/cvf_downstream_gate.py`
 - Positive and negative fixtures for the downstream machine gates.: `scripts/tests/test_cvf_downstream_gate.py`
+- R057 REVIEW_PENDING record, no implementation dispatch.: `CVF_SESSION/tranches/CCMAI-RUNTIME-057.json`
 - Machine implementation-truth surface.: `IMPLEMENTATION_STATUS.json`
 - Generated documentation index.: `docs/INDEX.md`
 - Generated human module catalog.: `docs/catalog/MODULE_CATALOG.md`
+- R057 inherited source review/evidence order; same SP01..12, fresh grouped cache/logging proof.: `docs/work_orders/CCMAI_RUNTIME_057.md`
 
 ## Governed Artifact Families
 

@@ -1986,11 +1986,11 @@
       "description": "Consolidated source-based design choice before R055 SPEC/work order/activation; no BUILD or runtime proof."
     },
     {
-      "id": "continuity-initial-handoff",
+      "id": "handoff-r055-source-preparation-receipt-20261006",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R055 independent root REVIEW_PENDING; worker infrastructure failure retained, separate reviewer4Go, no further subagents."
+      "description": "Historical interrupted R055 source review before R057; source and failures retained."
     },
     {
       "id": "runtime055-preparation-receipt-decision",
@@ -2046,7 +2046,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-056.json",
       "status": "ACTIVE",
-      "description": "Immutable separate R056 evidence-only independent review authority; no source edits/subagents, six Go max."
+      "description": "Historical rejected R056 seed missing authorityKind, immutable; activation/runtime0, superseded by R057."
     },
     {
       "id": "authority-r057",
@@ -2061,6 +2061,34 @@
       "path": "docs/reviews/R056_FAILED_ACTIVATION_AND_R057_SUCCESSOR_2026-10-06.md",
       "status": "ACTIVE",
       "description": "R056 activation gate rejection and preserved proposals; new R057 seed before activation, same source/budget."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Active R057 independent root grouped REVIEW_PENDING; source immutable, six Go max, no subagents."
+    },
+    {
+      "id": "work-order-r057",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_057.md",
+      "status": "ACTIVE",
+      "description": "R057 inherited source review/evidence order; same SP01..12, fresh grouped cache/logging proof."
+    },
+    {
+      "id": "tranche-r057",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-057.json",
+      "status": "ACTIVE",
+      "description": "R057 REVIEW_PENDING record, no implementation dispatch."
+    },
+    {
+      "id": "r057-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "R057 six-call independent source-review harness; complete timeout log capture, task cache cleanup."
     }
   ]
 }
