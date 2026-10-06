@@ -61,15 +61,16 @@
   ],
   "claimScope": "Only observational application preparation metadata, additive existing JobRun.Summary, bounded redacted per-candidate outcomes. No CVF governance/policy control/full S2/provider parity/live/hosted claim; existing behavior/terminal/checkpoint preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_055.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "8d9137d8fd4c23d08744abc30b0b9975c68da626",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -77,7 +78,7 @@
     "SPEC",
     "WORK_ORDER"
   ],
-  "implementationStarted": false,
+  "implementationStarted": true,
   "workerBudget": {
     "maxCampaigns": 1,
     "maxGoInvocations": 8,
@@ -189,5 +190,11 @@
         "output": "warning: in the working copy of 'CVF_SESSION/ACTIVE_SESSION_STATE.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION_MEMORY.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'IMPLEMENTATION_STATUS.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/catalog/ARTIFACT_REGISTRY.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/roadmaps/README.md', LF will be replaced by CRLF the next time Git touches it\n"
       }
     ]
+  },
+  "buildAcknowledgment": {
+    "doctor": "PASS WITH NOTE25/1",
+    "sourceEditsBeforeAcknowledgment": 0,
+    "GoInvocationsBeforeAcknowledgment": 0,
+    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT"
   }
 }

@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-055", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-055", "parked": true} -->
 
 ## Startup Order
 
@@ -53,7 +53,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R055 observational preparation receipts (2026-10-06)
 
-CCMAI-RUNTIME-055 DISPATCH_READY / WORK_ORDER under separate seed8d9137d8fd4c23d08744abc30b0b9975c68da626: Codex /root/r051_preparation IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD rehydrates, declares and commits BUILD acknowledgment/preflight before bounded additive Summary preparation receipts SP01..12. Exact source checkpoint then single cached synthetic campaign max8Go; independent Codex /root reviews source/evidence afterward (separate max4Go). No schema/query/policy/provider/network/live/old-test/old-packet changes, no automatic retry/selfapproval/FREEZE/push/merge/deploy. Prior R054 scoped closure and all historical failures retained; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-055 BUILD under seed8d9137d8fd4c23d08744abc30b0b9975c68da626: Codex /root/r051_preparation implements observational additive preparation receipts SP01..12 after committed acknowledgment, then exact source checkpoint and sole cached synthetic campaign max8Go. Independent Codex /root reviews exact source/evidence afterward; no schema/query/policy/provider/network/old-test/old-packet changes, automatic retry/selfapproval/FREEZE/push/merge/deploy. Prior closures/history retained; Facebook/Zalo OA parked.
 
 ## Historical R054 bounded local closure (2026-10-06)
 

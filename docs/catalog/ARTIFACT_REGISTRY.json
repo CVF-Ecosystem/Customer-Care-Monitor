@@ -1990,7 +1990,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R055 receipt DISPATCH_READY/WORK_ORDER; child before-edit BUILD acknowledgment next, no runtime yet."
+      "description": "Active R055 BUILD before-edit acknowledgment; observational Summary receipts only, sole bounded campaign after source checkpoint."
     },
     {
       "id": "runtime055-preparation-receipt-decision",
