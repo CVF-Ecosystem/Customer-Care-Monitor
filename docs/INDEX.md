@@ -60,6 +60,21 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Read-only maintained five-leaf/six-event LP06 source-name audit; next cost/contract disposition proposed.: `docs/reviews/probes/r051_r4_detector_name_audit.json`
 - Exact preparation failure/publication; runtime0/Go0/resources0, no correction/retry.: `docs/reviews/probes/r051_r4_preparation_receipt.json`
 - Separate204-file raw blob diagnostic, not used as archive equality acceptance.: `docs/reviews/probes/r051_r4_raw_blob_manifest.json`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_applied_mutation.diff; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_applied_mutation.diff`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_campaign.py; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_campaign.py`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_compile.log; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_compile.log`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_compile_stderr.log; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_compile_stderr.log`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_mutant-control.jsonl; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_mutant-control.jsonl`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_mutant-control_stderr.log; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_preparation_receipt.json; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_preparation_receipt.json`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_raw_blob_manifest.json; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_report.md; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_report.md`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_restored-control.jsonl; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_restored-control.jsonl`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_restored-control_stderr.log; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_restored-control_stderr.log`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_source_manifest.json; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_source_manifest.json`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_vet.log; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_vet.log`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_vet_stderr.log; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_vet_stderr.log`
+- Cumulative fifth successor synthetic evidence: r051_r4_successor_worker_receipt.json; exact source/accepted inherited limits, independent review required.: `docs/reviews/probes/r051_r4_successor_worker_receipt.json`
 - Exact fourth failed-evidence pointer, aggregate zero runtime; independent root count/cost review next.: `docs/reviews/probes/r051_r4_handback.json`
 - Fourth-repair failed offline preparation; strict archive passed, maintained five-leaf LP06 disagrees with three-leaf assumption.: `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md`
 - Uncorrected fourth-repair successor; archive member manifest accepted, finite name-check preparation failed.: `docs/reviews/probes/r051_r4_campaign.py`

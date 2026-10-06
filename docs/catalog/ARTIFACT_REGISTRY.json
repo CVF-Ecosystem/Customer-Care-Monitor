@@ -1746,6 +1746,111 @@
       "path": "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md",
       "status": "ACTIVE",
       "description": "Recorded source-faithful count correction and cumulative fifth successor cost decision under unchanged seed/roles/artifact prefix/budget."
+    },
+    {
+      "id": "r051-r4-successor-applied-mutation-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_applied_mutation.diff; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-campaign-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_campaign.py",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_campaign.py; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-compile-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_compile.log",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_compile.log; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-compile-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_compile_stderr.log; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-mutant-control-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_mutant-control.jsonl; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-mutant-control-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_mutant-control_stderr.log; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-preparation-receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_preparation_receipt.json; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-raw-blob-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_raw_blob_manifest.json; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-report-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_report.md",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_report.md; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-restored-control-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_restored-control.jsonl; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-restored-control-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_restored-control_stderr.log; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-source-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_source_manifest.json; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-vet-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_vet.log",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_vet.log; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-vet-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_vet_stderr.log; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r051-r4-successor-worker-receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_successor_worker_receipt.json",
+      "status": "ACTIVE",
+      "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_worker_receipt.json; exact source/accepted inherited limits, independent review required."
     }
   ]
 }

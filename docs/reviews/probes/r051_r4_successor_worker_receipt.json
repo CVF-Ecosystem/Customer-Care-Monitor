@@ -1,0 +1,1076 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-053",
+  "inheritedTranche": "CCMAI-RUNTIME-051",
+  "repairRound": 5,
+  "campaigns": 1,
+  "goInvocations": 4,
+  "automaticRetries": 0,
+  "startedUtc": "2026-10-06T10:31:10.090103+00:00",
+  "artifactCommit": "DEFERRED_TO_LATER_COMMITTED_HANDBACK",
+  "sourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "inheritedProductionCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
+  "sourceAcknowledgmentCommit": "c228931c35339f56cac0a934394e586082a3f7c1",
+  "originalAuthorityCommit": "a54cb73007f081fe4bbaa4baa11d28fed4a7d937",
+  "routeAuthorityCommit": "072812c7ec8e07025eaf90ae668744744f69f3bf",
+  "acknowledgmentCommit": "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+  "taskRoot": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s",
+  "commands": [
+    {
+      "name": "compile",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r051-r4-successor-compile-f6e52692a3",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-c",
+        "-o",
+        "/dev/null",
+        "./engine"
+      ],
+      "executionCommand": [
+        "docker",
+        "start",
+        "--attach",
+        "ccmai-r051-r4-successor-compile-f6e52692a3"
+      ],
+      "observed": {
+        "name": "ccmai-r051-r4-successor-compile-f6e52692a3",
+        "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "networkMode": "none",
+        "portBindings": {},
+        "networkSettings": {
+          "none": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": null,
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "",
+            "EndpointID": "",
+            "Gateway": "",
+            "IPAddress": "",
+            "MacAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": null
+          }
+        },
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend",
+            "Destination": "/src",
+            "RW": false,
+            "Name": null
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "RW": false,
+            "Name": null
+          }
+        ]
+      },
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r051_r4_successor_compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-06T10:31:29.158561019Z",
+        "FinishedAt": "2026-10-06T10:32:03.040997111Z"
+      },
+      "exit": 0,
+      "seconds": 34.333
+    },
+    {
+      "name": "vet",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r051-r4-successor-vet-f6e52692a3",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "golang:1.26-alpine",
+        "go",
+        "vet",
+        "./engine"
+      ],
+      "executionCommand": [
+        "docker",
+        "start",
+        "--attach",
+        "ccmai-r051-r4-successor-vet-f6e52692a3"
+      ],
+      "observed": {
+        "name": "ccmai-r051-r4-successor-vet-f6e52692a3",
+        "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "networkMode": "none",
+        "portBindings": {},
+        "networkSettings": {
+          "none": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": null,
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "",
+            "EndpointID": "",
+            "Gateway": "",
+            "IPAddress": "",
+            "MacAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": null
+          }
+        },
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend",
+            "Destination": "/src",
+            "RW": false,
+            "Name": null
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "RW": false,
+            "Name": null
+          }
+        ]
+      },
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r051_r4_successor_vet.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-06T10:32:03.692376057Z",
+        "FinishedAt": "2026-10-06T10:32:39.945284959Z"
+      },
+      "exit": 0,
+      "seconds": 36.681
+    },
+    {
+      "name": "mutant-control",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r051-r4-successor-mutant-control-f6e52692a3",
+        "--network",
+        "ccmai-r051-r4-successor-net-f6e52692a3",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE_PASSWORD>@tcp(ccmai-r051-r4-successor-db-f6e52692a3:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "./engine",
+        "-json",
+        "-count=1",
+        "-p",
+        "1",
+        "-timeout",
+        "120s",
+        "-run",
+        "^TestLP06EagerInitializationDetectorNegativeAndPositive$/^negative_control:"
+      ],
+      "executionCommand": [
+        "docker",
+        "start",
+        "--attach",
+        "ccmai-r051-r4-successor-mutant-control-f6e52692a3"
+      ],
+      "observed": {
+        "name": "ccmai-r051-r4-successor-mutant-control-f6e52692a3",
+        "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "networkMode": "ccmai-r051-r4-successor-net-f6e52692a3",
+        "portBindings": {},
+        "networkSettings": {
+          "ccmai-r051-r4-successor-net-f6e52692a3": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": null,
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "",
+            "EndpointID": "",
+            "Gateway": "",
+            "IPAddress": "",
+            "MacAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": null
+          }
+        },
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend",
+            "Destination": "/src",
+            "RW": false,
+            "Name": null
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "RW": false,
+            "Name": null
+          }
+        ]
+      },
+      "attachExit": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+        "sha256": "843ffe9a60c2e92499fc63fca8c8384a64c3e575549b8949f3c95b938399c0c2",
+        "bytes": 144107
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-06T10:32:40.570438737Z",
+        "FinishedAt": "2026-10-06T10:33:48.982066567Z"
+      },
+      "exit": 1,
+      "seconds": 68.883,
+      "testSummary": {
+        "completed": [
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+            "action": "fail"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive",
+            "action": "fail"
+          }
+        ],
+        "count": 2,
+        "pass": 0,
+        "fail": 2,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertionPresent": true
+      }
+    },
+    {
+      "name": "restored-control",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r051-r4-successor-restored-control-f6e52692a3",
+        "--network",
+        "ccmai-r051-r4-successor-net-f6e52692a3",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE_PASSWORD>@tcp(ccmai-r051-r4-successor-db-f6e52692a3:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "./engine",
+        "-json",
+        "-count=1",
+        "-p",
+        "1",
+        "-timeout",
+        "120s",
+        "-run",
+        "^TestLP06EagerInitializationDetectorNegativeAndPositive$"
+      ],
+      "executionCommand": [
+        "docker",
+        "start",
+        "--attach",
+        "ccmai-r051-r4-successor-restored-control-f6e52692a3"
+      ],
+      "observed": {
+        "name": "ccmai-r051-r4-successor-restored-control-f6e52692a3",
+        "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "networkMode": "ccmai-r051-r4-successor-net-f6e52692a3",
+        "portBindings": {},
+        "networkSettings": {
+          "ccmai-r051-r4-successor-net-f6e52692a3": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": null,
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "",
+            "EndpointID": "",
+            "Gateway": "",
+            "IPAddress": "",
+            "MacAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": null
+          }
+        },
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r051-r4-successor-snuzdj5s\\source\\backend",
+            "Destination": "/src",
+            "RW": false,
+            "Name": null
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "RW": false,
+            "Name": null
+          }
+        ]
+      },
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+        "sha256": "4984f57710fdc51475100611d7199b222e8c59e8b241aacbcf6c8d8855223d33",
+        "bytes": 1821184
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-06T10:33:49.720573475Z",
+        "FinishedAt": "2026-10-06T10:34:58.927478103Z"
+      },
+      "exit": 0,
+      "seconds": 69.686,
+      "testSummary": {
+        "completed": [
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(missing_key)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(corrupt_key)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_in_non-batch_mode:_constructor_once,_single_calls_match_conversation_count",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive",
+            "action": "pass"
+          }
+        ],
+        "count": 6,
+        "pass": 6,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertionPresent": false
+      }
+    }
+  ],
+  "errors": [],
+  "mode": "runtime",
+  "runnerSha256": "504e45dfe2421c5eb161ceaab1d9119de6cbd696c085270c33ec8fd1ebac333a",
+  "invocation": {
+    "command": [
+      "python",
+      "-B",
+      "docs/reviews/probes/r051_r4_successor_campaign.py",
+      "--acknowledgment",
+      "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+      "--mode",
+      "runtime"
+    ],
+    "exit": 0
+  },
+  "aggregateBudget": {
+    "priorCampaigns": 0,
+    "priorGoInvocations": 0,
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4
+  },
+  "inherited": {
+    "acceptedR2Review": "42 top-level / 98 PASS; INHERITED_NOT_RERUN",
+    "RP01_RP02_RP03": "ACCEPTED_INHERITED",
+    "productionBuildVet": "INHERITED_BYTE_IDENTICAL_PRODUCTION"
+  },
+  "notRun": [
+    "full engine",
+    "full backend",
+    "frontend",
+    "race",
+    "real provider",
+    "channel",
+    "CVF runtime governance",
+    "hosted readiness"
+  ],
+  "cleanup": {
+    "containers": [
+      {
+        "name": "ccmai-r051-r4-successor-restored-control-f6e52692a3",
+        "removeExit": 0,
+        "verifiedAbsent": true
+      },
+      {
+        "name": "ccmai-r051-r4-successor-mutant-control-f6e52692a3",
+        "removeExit": 0,
+        "verifiedAbsent": true
+      },
+      {
+        "name": "ccmai-r051-r4-successor-vet-f6e52692a3",
+        "removeExit": 0,
+        "verifiedAbsent": true
+      },
+      {
+        "name": "ccmai-r051-r4-successor-compile-f6e52692a3",
+        "removeExit": 0,
+        "verifiedAbsent": true
+      },
+      {
+        "name": "ccmai-r051-r4-successor-db-f6e52692a3",
+        "removeExit": 0,
+        "verifiedAbsent": true
+      }
+    ],
+    "network": {
+      "name": "ccmai-r051-r4-successor-net-f6e52692a3",
+      "removeExit": 0,
+      "verifiedAbsent": true
+    },
+    "volumes": [
+      {
+        "name": "4095999aa191853e440b16dbec4ce9da145a1dc8894af85403ffa136d3e0d13a",
+        "verifiedAbsent": true
+      }
+    ],
+    "capturedVolumeNamesBeforeTeardown": [
+      "4095999aa191853e440b16dbec4ce9da145a1dc8894af85403ffa136d3e0d13a"
+    ],
+    "successfulInventoryCommands": [
+      {
+        "command": [
+          "docker",
+          "ps",
+          "-a",
+          "--format",
+          "{{.Names}}"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "docker",
+          "network",
+          "ls",
+          "--format",
+          "{{.Name}}"
+        ],
+        "exit": 0
+      },
+      {
+        "command": [
+          "docker",
+          "volume",
+          "ls",
+          "--format",
+          "{{.Name}}"
+        ],
+        "exit": 0
+      }
+    ]
+  },
+  "identitiesVerified": true,
+  "campaignParentHead": "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+  "rawBlobManifestDiagnostic": {
+    "path": "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+    "sha256": "760b319efa07cfddcce8a05d81adf890ec727f579c1e5b87572547a1b8fba827",
+    "bytes": 32822
+  },
+  "archiveSha256": "b4d4daff222388d1f721294b0d2ab47899bb70943966bff1742b7c045054be38",
+  "sourceManifest": {
+    "path": "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+    "sha256": "e309937b82c97497aa484ae9639a516868477e52ca06ecf87fb0a5f6fac6b4af",
+    "bytes": 32822
+  },
+  "sourceFileCount": 204,
+  "manifestBasis": "EXACT_GIT_ARCHIVE_MEMBER_BYTES_NOT_RAW_BLOBS",
+  "rawBlobDiagnostic": {
+    "notUsedForAcceptance": true,
+    "differentFiles": [
+      {
+        "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+        "rawBlob": {
+          "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+          "sha256": "8df9c522fbbcf7cebd384539f5f4a7d266e7521674f5ca19f90acacfddc04c14",
+          "bytes": 2616
+        },
+        "archiveMember": {
+          "path": "backend/engine/testdata/s0_vietnamese_intervention_corpus.json",
+          "sha256": "3af39ca7052cccff481f7530a8c36556361e978e09b25e677e12cf41126f2b32",
+          "bytes": 2637
+        }
+      },
+      {
+        "path": "backend/go.mod",
+        "rawBlob": {
+          "path": "backend/go.mod",
+          "sha256": "a9612773d6d58bd50b404624975ef48f7c213e0498fc4b073a16afc1151f54a4",
+          "bytes": 3823
+        },
+        "archiveMember": {
+          "path": "backend/go.mod",
+          "sha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+          "bytes": 3911
+        }
+      },
+      {
+        "path": "backend/go.sum",
+        "rawBlob": {
+          "path": "backend/go.sum",
+          "sha256": "79bb19b2950d5a893465ae6d639a9e2d5e4a8cab96e906e2b7e138dec35fbae1",
+          "bytes": 26195
+        },
+        "archiveMember": {
+          "path": "backend/go.sum",
+          "sha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+          "bytes": 26483
+        }
+      }
+    ]
+  },
+  "manifestChecks": [
+    {
+      "name": "before mutation",
+      "files": 204,
+      "exactMembershipAndBytes": true
+    },
+    {
+      "name": "after controlled throw",
+      "files": 204,
+      "exactMembershipAndBytes": true
+    },
+    {
+      "name": "after actual mutation restoration",
+      "files": 204,
+      "exactMembershipAndBytes": true
+    }
+  ],
+  "moduleCache": {
+    "path": "C:\\Users\\tiennm\\go\\pkg\\mod",
+    "exists": true,
+    "readOnlyMount": true,
+    "staticReachability": "Not assumed; budgeted isolated compile fails closed"
+  },
+  "cachedImages": [
+    {
+      "tag": "mysql:8.0",
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    },
+    {
+      "tag": "golang:1.26-alpine",
+      "id": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+    }
+  ],
+  "syntaxPreparation": "Python AST PASS; no bytecode or runtime proof",
+  "detectorPreparation": {
+    "expectedLeafLiterals": [
+      "negative control: no work succeeds without AI settings/decryption",
+      "positive control: eligible work strictly requires provider initialization (missing key)",
+      "positive control: eligible work strictly requires provider initialization (corrupt key)",
+      "distinct counting of provider constructor access vs AnalyzeChat calls",
+      "distinct counting in non-batch mode: constructor once, single calls match conversation count"
+    ],
+    "actualLeafLiterals": [
+      "negative control: no work succeeds without AI settings/decryption",
+      "positive control: eligible work strictly requires provider initialization (missing key)",
+      "positive control: eligible work strictly requires provider initialization (corrupt key)",
+      "distinct counting of provider constructor access vs AnalyzeChat calls",
+      "distinct counting in non-batch mode: constructor once, single calls match conversation count"
+    ],
+    "exactMatch": true,
+    "sourceSha256": "cceef8a7cda5a5ee01a3b5535a19eb9f4717792a0ac4ed40c87c7e2ee08fd38f",
+    "fullNormalizedGoNames": [
+      "TestLP06EagerInitializationDetectorNegativeAndPositive",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(missing_key)",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(corrupt_key)",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+      "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_in_non-batch_mode:_constructor_once,_single_calls_match_conversation_count"
+    ],
+    "fullCompletedEvents": 6
+  },
+  "preparationReceipt": {
+    "path": "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+    "sha256": "dd7e08b7aa9fc0de77720867acc47e616ff0f27353688cac487a6a661c34ae05",
+    "result": "PASS_NOT_RUNTIME_PROOF"
+  },
+  "mutation": {
+    "expectedMatchCount": 1,
+    "actualMatchCount": 1,
+    "name": "M_EAGER_INIT_ORDERING",
+    "target": "backend/engine/analyzer.go",
+    "baselineSha256": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+    "mutantSha256": "4db152a361266dafc896ca7e966fe611bd267cb9dcc5839e6234f87ad00d66a3",
+    "appliedDiff": {
+      "path": "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+      "sha256": "bfbc257cc50c714b41ecaad2d990b3e948cc199a54a264965f2da9598acd279f",
+      "bytes": 967
+    },
+    "killedBehaviorally": true
+  },
+  "restoration": [
+    {
+      "name": "controlled throw finally",
+      "sha256": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+      "byteEquality": true
+    },
+    {
+      "name": "actual mutation finally",
+      "sha256": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+      "byteEquality": true
+    },
+    {
+      "name": "outer finally safety",
+      "sha256": "17c47f6739a20e336f28c351d834a996c00d4ea2b1f4a18c613505a5aac7434e",
+      "byteEquality": true
+    }
+  ],
+  "controlledThrow": {
+    "expectedError": "R051_R4_EXPECTED_CONTROLLED_RESTORATION_THROW",
+    "caughtOnlyExpected": true,
+    "restoredBeforeCampaign": true
+  },
+  "network": {
+    "name": "ccmai-r051-r4-successor-net-f6e52692a3",
+    "id": "7d37dd381b3b15efee42cc9e10f5f0e4948f2addb50ab3f9df4dfd9f3073f7ce",
+    "internal": true
+  },
+  "database": {
+    "name": "ccmai-r051-r4-successor-db-f6e52692a3",
+    "command": [
+      "docker",
+      "run",
+      "--pull=never",
+      "-d",
+      "--name",
+      "ccmai-r051-r4-successor-db-f6e52692a3",
+      "--network",
+      "ccmai-r051-r4-successor-net-f6e52692a3",
+      "-e",
+      "MYSQL_ROOT_PASSWORD=<SYNTHETIC_FIXTURE_PASSWORD>",
+      "-e",
+      "MYSQL_DATABASE=CCMA",
+      "-e",
+      "MYSQL_USER=ccma",
+      "-e",
+      "MYSQL_PASSWORD=<SYNTHETIC_FIXTURE_PASSWORD>",
+      "mysql:8.0",
+      "--log-bin-trust-function-creators=1",
+      "--max-connections=1000"
+    ],
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "networkMode": "ccmai-r051-r4-successor-net-f6e52692a3",
+    "portBindings": {},
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "4095999aa191853e440b16dbec4ce9da145a1dc8894af85403ffa136d3e0d13a",
+        "Source": "/var/lib/docker/volumes/4095999aa191853e440b16dbec4ce9da145a1dc8894af85403ffa136d3e0d13a/_data",
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+      }
+    ]
+  },
+  "readiness": {
+    "seconds": 7.857,
+    "polls": [
+      {
+        "exit": 1,
+        "readyValue": ""
+      },
+      {
+        "exit": 1,
+        "readyValue": ""
+      },
+      {
+        "exit": 1,
+        "readyValue": ""
+      },
+      {
+        "exit": 1,
+        "readyValue": ""
+      },
+      {
+        "exit": 1,
+        "readyValue": ""
+      },
+      {
+        "exit": 1,
+        "readyValue": ""
+      },
+      {
+        "exit": 1,
+        "readyValue": ""
+      },
+      {
+        "exit": 0,
+        "readyValue": "1"
+      }
+    ],
+    "maxSeconds": 90,
+    "ready": true
+  },
+  "campaignResult": "PASS_PENDING_INDEPENDENT_REVIEW",
+  "totalSeconds": 230.607,
+  "publication": {
+    "status": "CHANGES_REQUIRED_STAGED_DIFF_ARTIFACT_CHECK_FAILURE",
+    "commands": [
+      {
+        "command": [
+          "python",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_cvf_downstream_gate*.py"
+        ],
+        "exit": 0,
+        "seconds": 12.953,
+        "stdout": "",
+        "stderr": "..............................................\r\n----------------------------------------------------------------------\r\nRan 46 tests in 12.828s\r\n\r\nOK\r\n"
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight"
+        ],
+        "exit": 0,
+        "seconds": 1.461,
+        "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight",
+          "--base",
+          "origin/main",
+          "--head",
+          "HEAD"
+        ],
+        "exit": 0,
+        "seconds": 1.675,
+        "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "powershell",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.624,
+        "stdout": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "pwsh",
+          "-NoProfile",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 0.692,
+        "stdout": "[PASS] Governed downstream catalog is valid and generated views match source truth.\r\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "npm.cmd --prefix docs run docs:build"
+        ],
+        "exit": 0,
+        "seconds": 8.161,
+        "stdout": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 7.22s.\n",
+        "stderr": "- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m✓\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m✓\u001b[0m rendering pages...\n"
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit": 0,
+        "seconds": 0.031,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--name-only",
+          "HEAD",
+          "--",
+          "backend",
+          "scripts",
+          ".github",
+          "CVF_SESSION/authority"
+        ],
+        "exit": 0,
+        "seconds": 0.038,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "npm.cmd --prefix docs run docs:build"
+        ],
+        "exit": 0,
+        "seconds": 9.084,
+        "stdout": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 8.02s.\n",
+        "stderr": "- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m✓\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m✓\u001b[0m rendering pages...\n",
+        "note": "After final Markdown disclosure of staged raw-diff artifact whitespace failure; no raw diff/runtime correction."
+      }
+    ],
+    "rootIndependentProtectedByteObservation": {
+      "observer": "Codex /root",
+      "initialHead": "21d57c8d7815434405f225d18d9cf5f72caa4c38",
+      "files": 671,
+      "changed": 0,
+      "missing": 0,
+      "byteEquality": true,
+      "basis": "Root current independent comparison after sole actual campaign; separate from worker Git checks"
+    },
+    "stagedPreflight": {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc",
+        "--files",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+        "docs/reviews/probes/r051_r4_successor_campaign.py",
+        "docs/reviews/probes/r051_r4_successor_compile.log",
+        "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+        "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+        "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+        "docs/reviews/probes/r051_r4_successor_report.md",
+        "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+        "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+        "docs/reviews/probes/r051_r4_successor_vet.log",
+        "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_worker_receipt.json"
+      ],
+      "exit": 0,
+      "seconds": 1.044,
+      "changedPaths": [
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/probes/r051_r4_successor_applied_mutation.diff",
+        "docs/reviews/probes/r051_r4_successor_campaign.py",
+        "docs/reviews/probes/r051_r4_successor_compile.log",
+        "docs/reviews/probes/r051_r4_successor_compile_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_mutant-control.jsonl",
+        "docs/reviews/probes/r051_r4_successor_mutant-control_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_preparation_receipt.json",
+        "docs/reviews/probes/r051_r4_successor_raw_blob_manifest.json",
+        "docs/reviews/probes/r051_r4_successor_report.md",
+        "docs/reviews/probes/r051_r4_successor_restored-control.jsonl",
+        "docs/reviews/probes/r051_r4_successor_restored-control_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_source_manifest.json",
+        "docs/reviews/probes/r051_r4_successor_vet.log",
+        "docs/reviews/probes/r051_r4_successor_vet_stderr.log",
+        "docs/reviews/probes/r051_r4_successor_worker_receipt.json"
+      ],
+      "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+      "note": "Actual staged set; metadata now updated. Restage and repeat exact staged gate before evidence commit; later committed handback binds repetition."
+    },
+    "stagedDiffCheck": {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit": 2,
+      "errors": [
+        "applied_mutation.diff lines4,5,6,25,26: context prefix space before tab",
+        "applied_mutation.diff line24: context blank-line trailing space"
+      ],
+      "interpretation": "Git checks the newly-added raw unified diff as ordinary text. Context marker is part of retained diff artifact; no source whitespace repair or gate waiver performed. Failure retained, worker stopped before commit."
+    }
+  }
+}
