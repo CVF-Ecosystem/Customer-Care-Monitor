@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-053 — Archive manifest evidence repair
 
-Status: DISPATCH_READY
+Status: BUILD
 
 Date: 2026-10-06. R2, WORK_ORDER. Worker/repair/BUILD commit steward Codex `/root/r051_preparation`; independent reviewer and dispatcher Codex `/root`. Immutable seed committed before activation. [Cost disposition](../reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md), [SPEC](../specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md), [original checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md).
 
@@ -13,3 +13,5 @@ Aggregate R052/R053 budget: one actual campaign/four new Go invocations maximum,
 New report docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md and probes r051_r4_*. Canonical source/tests, all seeds and every old packet—including failed R3—remain unchanged. No real config/env/credentials/provider/channel/external network/customer/persistent data/parent/push/merge/deployment/FREEZE. Failed readiness/harness/gate/campaign returns retained exact evidence CHANGES_REQUIRED for another cost decision; no fifth repair granted.
 
 Commit artifact set then separate REVIEW_PENDING handback with exact round4EvidenceCommit; R051.buildCommit145bd411/production727d322/round3EvidenceCommit17d60560 retained. Worker cannot approve/FREEZE. Independent root evaluates residual RP-04; all earlier limits/accounts parked remain.
+
+Current execution: fourth-repair BUILD acknowledged before runner edits. Prior dispatch requirements above remain historical; original source/tests/old failed packets immutable, aggregate budget unchanged.

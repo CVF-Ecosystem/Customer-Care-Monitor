@@ -266,5 +266,6 @@
     "newRootCause": "R052-R3-01",
     "aggregateGoBudgetRemaining": 4,
     "historicalRoundsRetained": 3
-  }
+  },
+  "delegatedRound4ExecutionStatus": "BUILD"
 }
