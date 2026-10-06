@@ -65,15 +65,16 @@
   "maxNewGoInvocations": 4,
   "automaticRetries": 0,
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_052.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "7c3a61bfbd132512ff545dcb76a22448e71cb9f0",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -81,7 +82,7 @@
     "SPEC",
     "WORK_ORDER"
   ],
-  "implementationStarted": false,
+  "implementationStarted": true,
   "inheritedSourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
   "inheritedProductCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
   "openReviewFindings": [
@@ -125,5 +126,11 @@
       ],
       "note": "Receipt restaged and staged gate repeated before local activation commit."
     }
+  },
+  "buildAcknowledgment": {
+    "doctor": "PASS WITH NOTE25/1",
+    "sourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+    "newGoInvocations": 0,
+    "note": "Commit identity derived afterward from Git; pre-edit acknowledgment."
   }
 }

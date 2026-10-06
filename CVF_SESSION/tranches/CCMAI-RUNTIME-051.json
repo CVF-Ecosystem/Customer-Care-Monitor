@@ -244,5 +244,6 @@
     },
     "stagedDiffCheck": "PASS"
   },
-  "delegatedRound3ExecutionTranche": "CCMAI-RUNTIME-052"
+  "delegatedRound3ExecutionTranche": "CCMAI-RUNTIME-052",
+  "delegatedRound3ExecutionStatus": "BUILD"
 }
