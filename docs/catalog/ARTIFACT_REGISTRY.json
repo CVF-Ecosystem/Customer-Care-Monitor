@@ -1676,6 +1676,48 @@
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
       "status": "ACTIVE",
       "description": "R053 machine state; existing worker/root reviewer roles, seed before BUILD and aggregate budget retained."
+    },
+    {
+      "id": "r051-r4-worker-report",
+      "family": "continuity",
+      "path": "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Fourth-repair failed offline preparation; strict archive passed, maintained five-leaf LP06 disagrees with three-leaf assumption."
+    },
+    {
+      "id": "r051-r4-worker-runner",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_campaign.py",
+      "status": "ACTIVE",
+      "description": "Uncorrected fourth-repair successor; archive member manifest accepted, finite name-check preparation failed."
+    },
+    {
+      "id": "r051-r4-preparation-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_preparation_receipt.json",
+      "status": "ACTIVE",
+      "description": "Exact preparation failure/publication; runtime0/Go0/resources0, no correction/retry."
+    },
+    {
+      "id": "r051-r4-archive-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_source_manifest.json",
+      "status": "ACTIVE",
+      "description": "Strict204-file sorted exact archive-member path/hash/size manifest."
+    },
+    {
+      "id": "r051-r4-raw-blob-diagnostic",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_raw_blob_manifest.json",
+      "status": "ACTIVE",
+      "description": "Separate204-file raw blob diagnostic, not used as archive equality acceptance."
+    },
+    {
+      "id": "r051-r4-detector-name-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r051_r4_detector_name_audit.json",
+      "status": "ACTIVE",
+      "description": "Read-only maintained five-leaf/six-event LP06 source-name audit; next cost/contract disposition proposed."
     }
   ]
 }

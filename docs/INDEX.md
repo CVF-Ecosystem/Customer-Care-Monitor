@@ -56,6 +56,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact failure/publication receipt; FAILED_NOT_RUN and zero runtime/resources, no retry.: `docs/reviews/probes/r051_r3_worker_receipt.json`
 - Failed R052 delegated R051/R3 preparation; zero campaign/Go, exact archive comparator mismatch retained.: `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md`
 - Uncorrected first failed evidence runner; raw-blob versus archive manifest mismatch, no rerun.: `docs/reviews/probes/r051_r3_campaign.py`
+- Strict204-file sorted exact archive-member path/hash/size manifest.: `docs/reviews/probes/r051_r4_source_manifest.json`
+- Read-only maintained five-leaf/six-event LP06 source-name audit; next cost/contract disposition proposed.: `docs/reviews/probes/r051_r4_detector_name_audit.json`
+- Exact preparation failure/publication; runtime0/Go0/resources0, no correction/retry.: `docs/reviews/probes/r051_r4_preparation_receipt.json`
+- Separate204-file raw blob diagnostic, not used as archive equality acceptance.: `docs/reviews/probes/r051_r4_raw_blob_manifest.json`
+- Fourth-repair failed offline preparation; strict archive passed, maintained five-leaf LP06 disagrees with three-leaf assumption.: `docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md`
+- Uncorrected fourth-repair successor; archive member manifest accepted, finite name-check preparation failed.: `docs/reviews/probes/r051_r4_campaign.py`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
 - R033 separate local message closure authority; inherits R030-R032 independent product review.: `docs/work_orders/CCMAI_RUNTIME_033.md`

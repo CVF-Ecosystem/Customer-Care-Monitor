@@ -1,0 +1,32 @@
+{
+  "status": "READ_ONLY_DIAGNOSIS_NO_CORRECTION_NO_RERUN",
+  "sourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "sourcePath": "backend/engine/analyzer_provider_initialization_test.go",
+  "sourceSha256": "cceef8a7cda5a5ee01a3b5535a19eb9f4717792a0ac4ed40c87c7e2ee08fd38f",
+  "function": "TestLP06EagerInitializationDetectorNegativeAndPositive",
+  "actualLeafLiterals": [
+    "negative control: no work succeeds without AI settings/decryption",
+    "positive control: eligible work strictly requires provider initialization (missing key)",
+    "positive control: eligible work strictly requires provider initialization (corrupt key)",
+    "distinct counting of provider constructor access vs AnalyzeChat calls",
+    "distinct counting in non-batch mode: constructor once, single calls match conversation count"
+  ],
+  "runnerExpectedLeafLiterals": [
+    "negative control: no work succeeds without AI settings/decryption",
+    "positive control: eligible work strictly requires provider initialization (missing key)",
+    "positive control: eligible work strictly requires provider initialization (corrupt key)"
+  ],
+  "actualNormalizedLeafNames": [
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(missing_key)",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(corrupt_key)",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_in_non-batch_mode:_constructor_once,_single_calls_match_conversation_count"
+  ],
+  "actualLeafCount": 5,
+  "fullCompletedEventCountIncludingTopLevel": 6,
+  "rootCause": "Runner asserted only three required-control literals, but maintained LP06 also contains two constructor/call counting controls. Finite preparation rejected complete source shape. Binding full-LP06 four-event statement disagrees with actual maintained five leaves/six events.",
+  "archiveManifestCheck": "PASS204 strict archive-member extraction byte equality",
+  "mutationConstruction": "NOT_RUN; detector check precedes insertion",
+  "proposedNextScope": "Record new governed contract/cost disposition to preserve all five maintained leaves and expect six events for full LP06; use actual source-derived names. Existing tests/production untouched. No correction or retry here."
+}
