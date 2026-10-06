@@ -686,9 +686,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "R051 CHANGES_REQUIRED; recorded cost disposition authorizes one evidence-only R3, worker BUILD acknowledgment next."
+      "description": "Active R052 delegated R051/R3 evidence-only route; owner-approved child worker/root independent reviewer, bounded cost inherited."
     },
     {
       "id": "truth-implementation-status",
@@ -1536,6 +1536,34 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-052.json",
       "status": "ACTIVE",
       "description": "Owner-approved independent Codex subagent route for unchanged R051/R3 evidence-only budget; immutable predecessors and cost history retained."
+    },
+    {
+      "id": "runtime052-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_052.md",
+      "status": "ACTIVE",
+      "description": "Bounded delegated execution of R051/R3 evidence-only checklist; third repair/cost history unchanged."
+    },
+    {
+      "id": "runtime052-spec",
+      "family": "continuity",
+      "path": "docs/specs/ANALYZER_PROVIDER_EVIDENCE_ROUTE_R052_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Owner-approved worker route only; unchanged RP-04 checklist and protected source/tests."
+    },
+    {
+      "id": "runtime052-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-052.json",
+      "status": "ACTIVE",
+      "description": "Machine record for independent child worker/root reviewer route; inherited third repair budget."
+    },
+    {
+      "id": "historical-provider-test-repair-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
+      "status": "ACTIVE",
+      "description": "Historical R051 repair/cost record; current R3 delegation in R052."
     }
   ]
 }

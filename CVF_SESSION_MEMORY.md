@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md", "activeTranche": "CCMAI-RUNTIME-051", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-052", "parked": true} -->
 
 ## Startup Order
 
@@ -50,7 +50,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R051 cost disposition / evidence-only R3 authorization (2026-10-06)
+## Current R052 delegated R051/R3 evidence route (2026-10-06)
+
+CCMAI-RUNTIME-052 delegated R051/R3 evidence-only execution DISPATCH_READY: Codex subagent /root/r051_preparation rehydrates and commits synchronized BUILD acknowledgment/preflight before successor r051_r3 runner/receipt edits. Follow docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md unchanged: fixed source145bd41109c1e3ac3fb1a85f261c61f668b2fe4d, one campaign/max four Go invocations/no retry or automatic fourth repair. R051 repairRound3 and prior cost history inherited, no reset. R050/R051 CHANGES_REQUIRED, canonical source/tests/seeds/old packets protected. Return committed evidence then separate REVIEW_PENDING handback with round3EvidenceCommit for independent Codex /root RP-04 review; no provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA accounts parked.
+
+## Historical R051 cost disposition / evidence-only R3 authorization (2026-10-06)
 
 CCMAI-RUNTIME-051 R3 evidence-only repair AUTHORIZED_NOT_STARTED after recorded cost disposition under unchanged seed a54cb73007f081fe4bbaa4baa11d28fed4a7d937: Claude REPAIR_WORKER/BUILD commit steward next rehydrates, commits BUILD acknowledgment/preflight, then implements successor r051_r3 runner/receipt only per docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md. Fixed source145bd41109c1e3ac3fb1a85f261c61f668b2fe4d; production727d3229338e9b29c749612677a08b7fd1c65428 and all canonical tests/seeds/old packets protected. One campaign, at most four Go commands, no automatic retry/fourth repair. R050/R051 remain CHANGES_REQUIRED until independent Codex residual RP-04 review; return exact evidence commit REVIEW_PENDING with separate round3EvidenceCommit. No provider/channel/external network/persistent data/push/merge/deployment/FREEZE; accounts parked under OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS. See docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md. Cost stop/disposition recorded before continuation; no BUILD by planner.
 

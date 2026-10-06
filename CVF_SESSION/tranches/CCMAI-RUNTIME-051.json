@@ -176,7 +176,7 @@
     }
   ],
   "round3Dispatch": {
-    "status": "AUTHORIZED_NOT_STARTED",
+    "status": "DELEGATED_TO_R052_NOT_STARTED",
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
     "worker": "Claude",
     "buildCommitSteward": "Claude",
@@ -193,7 +193,9 @@
     "existing98EventReview": "INHERITED_NOT_RERUN",
     "acceptanceContract": "UNCHANGED_RP_01_04",
     "beforeEdit": "Committed BUILD acknowledgment/preflight required",
-    "handback": "REVIEW_PENDING with separate round3EvidenceCommit; preserve source buildCommit145bd411"
+    "handback": "REVIEW_PENDING with separate round3EvidenceCommit; preserve source buildCommit145bd411",
+    "ownerApprovedWorkerTransfer": "Codex /root/r051_preparation with independent Codex /root reviewer; original roles/seed retained",
+    "delegatedExecutionTranche": "CCMAI-RUNTIME-052"
   },
   "round3PlanningPublication": {
     "status": "FINAL_COST_DISPOSITION_PLANNING_GATES_PASS",
@@ -241,5 +243,6 @@
       "note": "Planning receipt restaged; exact staged gate repeated before local commit."
     },
     "stagedDiffCheck": "PASS"
-  }
+  },
+  "delegatedRound3ExecutionTranche": "CCMAI-RUNTIME-052"
 }
