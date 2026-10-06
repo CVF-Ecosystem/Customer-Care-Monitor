@@ -688,7 +688,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R052 delegated R051/R3 evidence-only route; owner-approved child worker/root independent reviewer, bounded cost inherited."
+      "description": "Active R052 independent CHANGES_REQUIRED; new comparator root cause/cost assessment precedes prospective R053 activation."
     },
     {
       "id": "truth-implementation-status",
@@ -1613,6 +1613,41 @@
       "path": "docs/reviews/probes/r051_r3_handback.json",
       "status": "ACTIVE",
       "description": "Committed failed-evidence pointer and publication repetition observation; root independent review next, zero runtime."
+    },
+    {
+      "id": "runtime052-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Independent failed R3 review: archive intact, comparator defect, zero runtime, protected bytes unchanged."
+    },
+    {
+      "id": "runtime052-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r052_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent committed mapping/archive/physical hash audit; no new runtime."
+    },
+    {
+      "id": "runtime053-cost-disposition",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Separately recorded cost decision for demonstrated archive manifest comparator root cause before fourth repair; aggregate runtime budget unchanged."
+    },
+    {
+      "id": "runtime053-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-053.json",
+      "status": "ACTIVE",
+      "description": "Immutable successor authority before activation; fourth repair counted, original history/packet/source/tests protected."
+    },
+    {
+      "id": "learning-archive-byte-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_archive_byte_manifest.md",
+      "status": "ACTIVE",
+      "description": "Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred."
     }
   ]
 }

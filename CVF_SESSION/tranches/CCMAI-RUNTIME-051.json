@@ -66,7 +66,9 @@
     "docs/reviews/probes/r051_r2_worker_receipt.json",
     "docs/reviews/CCMAI_RUNTIME_051_R2_INDEPENDENT_REREVIEW_2026-10-05.md",
     "docs/reviews/probes/r051_r2_independent_summary.json",
-    "docs/reviews/probes/r051_r2_independent_campaign.ps1"
+    "docs/reviews/probes/r051_r2_independent_campaign.ps1",
+    "docs/reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md",
+    "docs/reviews/probes/r052_independent_summary.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -173,10 +175,19 @@
       "rootCause": "Repeated RP-04 receipt/harness requirements; no independent new root cause",
       "ruleSource": "AGENTS.md Governance Latency and Approval Continuity",
       "next": "ORCHESTRATOR cost disposition before any third BUILD"
+    },
+    {
+      "status": "THIRD_REPAIR_FAILED_PRECAMPAIGN",
+      "evidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
+      "completedRepairRounds": 3,
+      "campaignsUsed": 0,
+      "goUsed": 0,
+      "newRootCause": "R052-R3-01 archive comparator",
+      "successorCostDisposition": "docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md"
     }
   ],
   "round3Dispatch": {
-    "status": "DELEGATED_TO_R052_NOT_STARTED",
+    "status": "FAILED_NOT_RUN_INDEPENDENT_CHANGES_REQUIRED",
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
     "worker": "Claude",
     "buildCommitSteward": "Claude",

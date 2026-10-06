@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-052 — Delegated R051/R3 evidence execution
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-06. R2, REVIEW / REVIEW_PENDING. Actual worker/repair/BUILD commit steward: Codex subagent `/root/r051_preparation`; independent reviewer and dispatcher: Codex `/root`. Owner explicitly approved this worker and commit ownership transfer in the current session. Immutable R050/R051 seeds and historical roles remain unchanged.
 
@@ -17,3 +17,7 @@ Exit: persist exact evidence set even on failure; commit artifact set, then sepa
 Historical execution: delegated evidence-only BUILD acknowledged before successor edits; original DISPATCH_READY text above describes dispatch requirements. Third repair/cost budget unchanged.
 
 Current handback: exact source-independent failed evidence17d60560cc28a3c7dce9351355cc46db8696d393 committed before REVIEW_PENDING; campaigns0/Go0/resources0. R050/R051 CHANGES_REQUIRED; independent root formal review and any new cost decision next. No worker correction/retry/acceptance.
+
+## Independent review disposition
+
+Exact failed evidence17d60560/handbackd9e8e8f CHANGES_REQUIRED, R052-R3-01 archive comparator defect; runtime0/NOT RUN and original source/history preserved. Separate R053 cost disposition/authority prepared before any fourth repair. No R052 worker retry authorized.

@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R052 delegated R051/R3 evidence route (2026-10-06)
 
-CCMAI-RUNTIME-052 delegated R051/R3 evidence REVIEW_PENDING at exact evidence17d60560cc28a3c7dce9351355cc46db8696d393: independent Codex /root reviews residual RP-04 and failed archive-versus-Git-blob comparator precheck; FAILED_NOT_RUN, zero campaigns/Go/resource starts, no worker correction/retry. R050/R051 CHANGES_REQUIRED; source145bd411 and production727d322 preserved, all canonical source/tests/seeds/old packets protected. Any prospective correction requires separately recorded cost/root-cause disposition before BUILD; no acceptance reset/provider/channel/external network/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA accounts parked.
+CCMAI-RUNTIME-052 independent CHANGES_REQUIRED for failed evidence17d60560: archive comparator R052-R3-01 confirmed, campaign0/Go0/resources0, R050/R051 residual RP-04 remains open. ORCHESTRATOR records R053 successor cost/authority then activates bounded archive-member manifest repair; no automatic retry, prior3 rounds retained, aggregate max1 actual campaign/max4 Go across R052/R053. All source/tests/seeds/old packets protected, independent child worker/root reviewer unchanged; no external/provider/channel/persistent data/push/merge/deployment/FREEZE. Facebook/Zalo OA parked.
 
 ## Historical R051 cost disposition / evidence-only R3 authorization (2026-10-06)
 

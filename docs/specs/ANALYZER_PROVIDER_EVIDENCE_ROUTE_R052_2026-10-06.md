@@ -13,3 +13,5 @@ Evidence report and probes use existing successor names r051_r3. Bind command/ex
 Historical execution: BUILD acknowledged before successor edits; no campaign result or acceptance asserted.
 
 Current result: REVIEW_PENDING submission of failed evidence17d60560cc28a3c7dce9351355cc46db8696d393, source145bd411 unchanged. Manifest comparator failed before campaign; all runtime proof NOT RUN. Independent review next, no acceptance.
+
+Current independent result: R052 CHANGES_REQUIRED for comparator precheck, exact archive intact/runtime0; successor R053 cost disposition recorded separately before new activation. No acceptance or automatic retry.

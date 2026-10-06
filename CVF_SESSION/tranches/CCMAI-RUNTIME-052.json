@@ -65,7 +65,7 @@
   "maxNewGoInvocations": 4,
   "automaticRetries": 0,
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_052.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "7c3a61bfbd132512ff545dcb76a22448e71cb9f0",
   "buildCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
@@ -73,14 +73,17 @@
     "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R3_2026-10-06.md",
     "docs/reviews/probes/r051_r3_worker_receipt.json",
     "docs/reviews/probes/r051_r3_manifest_mismatch.json",
-    "docs/reviews/probes/r051_r3_handback.json"
+    "docs/reviews/probes/r051_r3_handback.json",
+    "docs/reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md",
+    "docs/reviews/probes/r052_independent_summary.json"
   ],
-  "disposition": "PENDING",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -92,6 +95,7 @@
   "inheritedSourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
   "inheritedProductCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
   "openReviewFindings": [
+    "R052-R3-01",
     "R051-R2-01"
   ],
   "planningPublication": {
@@ -144,5 +148,7 @@
   "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
   "runtimeDisposition": "FAILED_NOT_RUN",
   "campaignsStarted": 0,
-  "newGoInvocations": 0
+  "newGoInvocations": 0,
+  "successorCostDisposition": "docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md",
+  "prospectiveSuccessorTranche": "CCMAI-RUNTIME-053"
 }

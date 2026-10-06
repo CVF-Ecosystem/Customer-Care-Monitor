@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R052 delegated R051/R3 evidence-only route; owner-approved child worker/root independent reviewer, bounded cost inherited.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md`
+- Active R052 independent CHANGES_REQUIRED; new comparator root cause/cost assessment precedes prospective R053 activation.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -44,6 +44,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
+- Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred.: `docs/reviews/learnings/feedback_archive_byte_manifest.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json`
@@ -214,10 +215,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Cost disposition: one bounded evidence-only R3, four Go commands, no automatic retry/fourth repair; unchanged seed and independent reviewer.: `docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md`
 - R051 RP-01..04 test/evidence repair acceptance inherits unchanged LP-01..08, production preserved.: `docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md`
 - R051 CHANGES_REQUIRED; final narrowed RP-04 evidence repair authorized/not started, accepted source/tests/old packets protected.: `docs/work_orders/CCMAI_RUNTIME_051.md`
+- Independent failed R3 review: archive intact, comparator defect, zero runtime, protected bytes unchanged.: `docs/reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md`
+- Independent committed mapping/archive/physical hash audit; no new runtime.: `docs/reviews/probes/r052_independent_summary.json`
 - Bounded delegated execution of R051/R3 evidence-only checklist; third repair/cost history unchanged.: `docs/work_orders/CCMAI_RUNTIME_052.md`
 - Owner-approved independent Codex subagent route for unchanged R051/R3 evidence-only budget; immutable predecessors and cost history retained.: `CVF_SESSION/authority/CCMAI-RUNTIME-052.json`
 - Machine record for independent child worker/root reviewer route; inherited third repair budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-052.json`
 - Owner-approved worker route only; unchanged RP-04 checklist and protected source/tests.: `docs/specs/ANALYZER_PROVIDER_EVIDENCE_ROUTE_R052_2026-10-06.md`
+- Immutable successor authority before activation; fourth repair counted, original history/packet/source/tests protected.: `CVF_SESSION/authority/CCMAI-RUNTIME-053.json`
+- Separately recorded cost decision for demonstrated archive manifest comparator root cause before fourth repair; aggregate runtime budget unchanged.: `docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
