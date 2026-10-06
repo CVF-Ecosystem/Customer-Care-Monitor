@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-053", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-053", "parked": true} -->
 
 ## Startup Order
 
@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R053 archive manifest successor repair (2026-10-06)
 
-CCMAI-RUNTIME-053 CHANGES_REQUIRED for fourth evidence0a141063; independent R053-R4-01 confirms root-authored wrong LP06 count. Recorded count/cost disposition authorizes cumulative fifth successor under unchanged seed072812c7: Codex /root/r051_preparation rehydrates/commits BUILD acknowledgment/preflight then creates only r051_r4_successor_* runner/report/receipts preserving all5 maintained leaves/6 full events. Aggregate max1 actual campaign/max4 Go used0, no retry/sixth repair; full RP-04 acceptance/source/tests/seeds/old packets unchanged. Return successorEvidenceCommit/round5EvidenceCommit then separate REVIEW_PENDING for independent Codex /root; R050/R051/R052 open, no provider/channel/external network/persistent data/push/merge/deploy/FREEZE, accounts parked.
+CCMAI-RUNTIME-053 cumulative fifth successor BUILD: Codex /root/r051_preparation creates only new r051_r4_successor_* runner/report/receipts after committed acknowledgment/preflight under recorded count/cost disposition21d57c8d. Preserve all5 maintained LP06 leaves/6 full events; fixed source145bd411/production727d322, strict archive204 bytes, aggregate max1 actual campaign/max4 Go used0, no retry/sixth repair. R050/R051/R052 open; all source/tests/seeds/old packets and round3/round4 evidence unchanged. Commit exact successorEvidenceCommit/round5EvidenceCommit then separate REVIEW_PENDING for independent Codex /root; no provider/channel/external network/persistent data/push/merge/deploy/FREEZE, accounts parked.
 
 ## Historical R052 delegated R051/R3 evidence route (2026-10-06)
 

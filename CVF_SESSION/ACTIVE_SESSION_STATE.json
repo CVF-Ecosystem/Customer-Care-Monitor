@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-053 CHANGES_REQUIRED for fourth evidence0a141063; independent R053-R4-01 confirms root-authored wrong LP06 count. Recorded count/cost disposition authorizes cumulative fifth successor under unchanged seed072812c7: Codex /root/r051_preparation rehydrates/commits BUILD acknowledgment/preflight then creates only r051_r4_successor_* runner/report/receipts preserving all5 maintained leaves/6 full events. Aggregate max1 actual campaign/max4 Go used0, no retry/sixth repair; full RP-04 acceptance/source/tests/seeds/old packets unchanged. Return successorEvidenceCommit/round5EvidenceCommit then separate REVIEW_PENDING for independent Codex /root; R050/R051/R052 open, no provider/channel/external network/persistent data/push/merge/deploy/FREEZE, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-053 cumulative fifth successor BUILD: Codex /root/r051_preparation creates only new r051_r4_successor_* runner/report/receipts after committed acknowledgment/preflight under recorded count/cost disposition21d57c8d. Preserve all5 maintained LP06 leaves/6 full events; fixed source145bd411/production727d322, strict archive204 bytes, aggregate max1 actual campaign/max4 Go used0, no retry/sixth repair. R050/R051/R052 open; all source/tests/seeds/old packets and round3/round4 evidence unchanged. Commit exact successorEvidenceCommit/round5EvidenceCommit then separate REVIEW_PENDING for independent Codex /root; no provider/channel/external network/persistent data/push/merge/deploy/FREEZE, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root REVIEWER -> ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / review-planning COMMIT_STEWARD; child successor BUILD acknowledgment next",
+  "activeRole": "Codex /root/r051_preparation REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER afterward",
   "roleRoute": "CODEX_SUBAGENT_REPAIR_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-06"
 }

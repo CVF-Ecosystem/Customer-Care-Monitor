@@ -59,7 +59,7 @@
     "further_repair_without_new_cost_disposition"
   ],
   "claimScope": "Only test/fixture/receipt repair R050-R1-01..03 under unchanged LP-01..08 and exact production BUILD727d322. No production behavior change, historical recertification, real-provider/CVF runtime governance/full S2 or hosted readiness claim.",
-  "repairRound": 4,
+  "repairRound": 5,
   "predecessorTranche": "CCMAI-RUNTIME-052",
   "originalRepairTranche": "CCMAI-RUNTIME-051",
   "completedPredecessorRepairRounds": 3,
@@ -79,8 +79,8 @@
   },
   "independentRootCause": "R052-R3-01 raw Git blob vs exact archive byte representation manifest mismatch",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_053.md",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "072812c7ec8e07025eaf90ae668744744f69f3bf",
   "buildCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
   "reviewEvidence": [
@@ -97,7 +97,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -170,7 +171,7 @@
   ],
   "nextCumulativeRepairRound": 5,
   "successorDispatch": {
-    "status": "AUTHORIZED_NOT_STARTED",
+    "status": "BUILD",
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md",
     "cumulativeRepairRound": 5,
     "allowedArtifactPrefix": "docs/reviews/probes/r051_r4_successor_",
@@ -182,5 +183,11 @@
     "correctFullLP06Events": 6,
     "sourceSubtests": 5,
     "rootAuthorCorrection": true
+  },
+  "successorBuildAcknowledgment": {
+    "doctor": "PASS WITH NOTE25/1",
+    "newGoInvocations": 0,
+    "newCampaigns": 0,
+    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT"
   }
 }

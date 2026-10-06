@@ -12,6 +12,8 @@ Final gate46/default/PR/staged, PS5.1/7 catalog, docs after final Markdown, exac
 
 Historical execution: BUILD acknowledged before runner edit/preparation. No runtime result or acceptance asserted.
 
-Current handback: exact failed evidence0a1410636decf1558ea0053fcc2cb371d5493c55 REVIEW_PENDING; archive204 strict byte manifest PASS, name-preparation FAIL, aggregate runtime/Go/resources0. All five maintained LP06 leaves preserved; independent count/cost disposition required before any correction. No worker acceptance/retry.
+Historical fourth handback: exact failed evidence0a1410636decf1558ea0053fcc2cb371d5493c55 REVIEW_PENDING; archive204 strict byte manifest PASS, name-preparation FAIL, aggregate runtime/Go/resources0. All five maintained LP06 leaves preserved; independent count/cost disposition required before any correction. No worker acceptance/retry.
 
 Root author correction (2026-10-06): earlier4-event statement was false; immutable sourceLP06 has5 maintained subtests plus top-level=6 events, including batch/constructor and non-batch counters. All original full-suite acceptance unchanged. Preserve failed count-checker packet0a141063; new recorded successor cost addendum requires all5 source names/6 events in new r051_r4_successor_* under unchanged seed. Cumulative round5 explicitly counted; prior4 attempts and budget retained. No test changes or subset masking.
+
+Current execution: cumulative fifth successor BUILD acknowledged before new r051_r4_successor_* edits; all5 maintained leaves/6 full events required, four prior packets preserved, no runtime result yet.
