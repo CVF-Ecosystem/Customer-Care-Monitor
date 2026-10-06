@@ -2257,6 +2257,13 @@
       "path": "docs/reviews/probes/r058_local_closure_receipt.json",
       "status": "ACTIVE",
       "description": "R058 scoped closure identities/history/claim limits and final static publication checks."
+    },
+    {
+      "id": "github-branch-publication-20261006",
+      "family": "continuity",
+      "path": "CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-06.json",
+      "status": "ACTIVE",
+      "description": "Separate owner-authorized existing-branch fast-forward publication after R058 closure; no merge/deploy or CI success claim."
     }
   ]
 }
