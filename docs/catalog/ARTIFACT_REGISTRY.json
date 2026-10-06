@@ -2067,7 +2067,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R057 independent root grouped REVIEW_PENDING; source immutable, six Go max, no subagents."
+      "description": "Active R055/R057 independent REVIEW_PASS/FREEZE_OPEN; separately seeded local R058 closure next, no runtime/source dispatch."
     },
     {
       "id": "work-order-r057",
@@ -2201,6 +2201,27 @@
       "path": "docs/reviews/ANALYZER_PREPARATION_RECEIPT_R057_EVIDENCE_2026-10-06.md",
       "status": "ACTIVE",
       "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+    },
+    {
+      "id": "r057-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_057_INDEPENDENT_REVIEW_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "R055/R057 bounded application source REVIEW_PASS; independent source author and full evidence, FREEZE_OPEN."
+    },
+    {
+      "id": "r057-formal-review-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r057_formal_review_receipt.json",
+      "status": "ACTIVE",
+      "description": "Formal R057 independent review and raw Gitblob captured-byte verification."
+    },
+    {
+      "id": "authority-r058",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-058.json",
+      "status": "ACTIVE",
+      "description": "Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged."
     }
   ]
 }

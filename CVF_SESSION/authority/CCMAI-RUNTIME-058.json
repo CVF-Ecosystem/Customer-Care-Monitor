@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-058",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_CLOSURE_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_058.md",
+  "sourcePlanningCommit": "c4f78f26c50ae481ea4a3c7db19f9187004b8d9f",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r051_preparation",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_058.md",
+    "docs/work_orders/CCMAI_RUNTIME_055.md",
+    "docs/work_orders/CCMAI_RUNTIME_057.md",
+    "docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md",
+    "docs/decisions/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "old_packet_edit",
+    "original_authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "runtime_campaign",
+    "detector_mutation",
+    "provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "other_tranche_freeze",
+    "live_governance_claim",
+    "hosted_readiness_claim",
+    "acceptance_contract_expansion"
+  ],
+  "permittedEffects": [
+    "local_documentation_commit",
+    "scoped_local_freeze_R055_R057"
+  ],
+  "closureTargets": [
+    "CCMAI-RUNTIME-055",
+    "CCMAI-RUNTIME-057"
+  ],
+  "acceptedSourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "claimScope": "Accepted bounded local observational preparation receipt SP01..12 at childsource05c59e9, independent runtimec4f78f2; no source/evidence recertification or global S2/live/governance/hosted claim.",
+  "ownerAuthorization": "Standing bounded local closure delegation already exercised R054; owner next and explicit no agents/root complete instruction. Separate immutable R1 metadata closure seed before activation, no new runtime/source/risk/external/commit ownership boundary.",
+  "roleInheritance": "Historical child source implementation/newtests; root independent source review, metadata CLOSER/SESSION_SYNC/COMMIT_STEWARD. R1 closure metadata only, inherited R2 independent source review preserved.",
+  "earliestOpenPhase": "REVIEW",
+  "dispatchBoundary": "Commit seed with formal review, then inherit REVIEW/REVIEW_PASS and declare CLOSER/FREEZE under separate R058 only, gate/sync/commit. No new BUILD or runtime.",
+  "acceptedReviewCommit": "RESOLVE_FROM_COMMITTED_FORMAL_REVIEW_AT_ACTIVATION",
+  "runtimeEvidenceCommit": "c4f78f26c50ae481ea4a3c7db19f9187004b8d9f"
+}

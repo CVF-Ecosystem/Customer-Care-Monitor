@@ -7,10 +7,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Owner parks Facebook/Zalo OA account/live tests; source-based MCP job-execution next-scope planning, no BUILD dispatch.: `docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md`
 - Historical rejected R056 seed missing authorityKind, immutable; activation/runtime0, superseded by R057.: `CVF_SESSION/authority/CCMAI-RUNTIME-056.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
+- Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R057 independent root grouped REVIEW_PENDING; source immutable, six Go max, no subagents.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md`
+- Active R055/R057 independent REVIEW_PASS/FREEZE_OPEN; separately seeded local R058 closure next, no runtime/source dispatch.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -110,7 +111,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_selection_stderr.log`
 - R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_independent_summary.json`
 - R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof.: `docs/reviews/probes/r057_source_authority_audit.json`
+- Formal R057 independent review and raw Gitblob captured-byte verification.: `docs/reviews/probes/r057_formal_review_receipt.json`
 - R057 six-call independent source-review harness; complete timeout log capture, task cache cleanup.: `docs/reviews/probes/r057_independent_campaign.py`
+- R055/R057 bounded application source REVIEW_PASS; independent source author and full evidence, FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_057_INDEPENDENT_REVIEW_2026-10-06.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
