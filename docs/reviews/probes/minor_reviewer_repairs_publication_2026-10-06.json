@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-06",
+  "risk": "R1_DOCUMENTATION_ONLY",
+  "actor": "Codex /root",
+  "roles": [
+    "ORCHESTRATOR",
+    "SESSION_SYNC_STEWARD",
+    "documentation COMMIT_STEWARD"
+  ],
+  "authority": "Owner current clarification and existing AGENTS same-scope repair/role rules; no policy/seed amendment",
+  "sourceAcceptanceCommit": "23d847a66ff2bc1ffa10a7270e555ad329916dc6",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "exit": 0,
+      "result": "PASS7/7"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight",
+        "--base",
+        "origin/main",
+        "--head",
+        "HEAD"
+      ],
+      "exit": 0,
+      "result": "PASS7/7"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_cvf_downstream_gate*.py"
+      ],
+      "exit": 0,
+      "tests": 46,
+      "seconds": 34.687
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "docs",
+        "run",
+        "docs:build"
+      ],
+      "exit": 0,
+      "reportedBuildSeconds": 21.28
+    },
+    {
+      "command": [
+        "powershell",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0
+    }
+  ],
+  "newRuntimeCalls": 0,
+  "claimScope": "Shared instructions and repository publication only; no automated universal agent compliance proof",
+  "doctor": "PASS WITH NOTE25/1; core8a4119/manifest26c686cc warning, gate profile not installed, compact bootstrap migration pending",
+  "stagedPaths": [
+    "CVF_SESSION_MEMORY.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/learnings/feedback_minor_reviewer_repairs.md",
+    "docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json"
+  ],
+  "stagedBaseCommit": "23d847a66ff2bc1ffa10a7270e555ad329916dc6",
+  "finalStagedObservation": {
+    "exactStagedPreflight": "PASS7/7",
+    "cachedDiffCheckExit": 0,
+    "receiptRestaged": true,
+    "repeatBeforeCommit": true
+  }
+}

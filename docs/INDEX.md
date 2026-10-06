@@ -46,7 +46,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
 - Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred.: `docs/reviews/learnings/feedback_archive_byte_manifest.md`
+- Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence.: `docs/reviews/learnings/feedback_minor_reviewer_repairs.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
+- Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof.: `docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json`
 - CVF governance policy.: `.cvf/policy.json`
 - Separate explicit owner authority for existing-branch GitHub publication; R046 worker seed and review disposition unchanged; no CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-05.json`
 - Full204-file actual fixed-archive extracted path/hash/size manifest.: `docs/reviews/probes/r051_r3_extracted_manifest.json`

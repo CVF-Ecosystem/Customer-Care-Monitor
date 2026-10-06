@@ -20,6 +20,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 5. State current mode, active handoff, next allowed move, parked checkpoint,
    and active role before material work.
 6. Read the shared learning pointers below when preparing BUILD/REPAIR, continuity synchronization, mutation evidence or resource cleanup.
+7. Before REVIEW or returning a repair finding, read [minor reviewer repairs](docs/reviews/learnings/feedback_minor_reviewer_repairs.md). Classify first; directly fix small authorized metadata issues, record role transition/checks and commit. Delegate or ask only at an actual authority/evidence/risk boundary; do not wait for the owner to remind you.
 
 ## Shared cross-agent learning (2026-10-02)
 

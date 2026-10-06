@@ -1900,6 +1900,20 @@
       "path": "docs/reviews/probes/r053_successor_independent_summary.json",
       "status": "ACTIVE",
       "description": "Independent archive/mutation/raw-log/byte-domain/resource/authority/commit mapping and reviewer publication receipts, no new runtime."
+    },
+    {
+      "id": "learning-minor-reviewer-repairs",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_minor_reviewer_repairs.md",
+      "status": "ACTIVE",
+      "description": "Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence."
+    },
+    {
+      "id": "minor-reviewer-repairs-publication-20261006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json",
+      "status": "ACTIVE",
+      "description": "Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof."
     }
   ]
 }
