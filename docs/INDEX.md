@@ -269,6 +269,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded local R050/R051/R053 FROZEN under separate R054; inherited independent acceptance/failures/live limits, source-preparation receipt DESIGN/SPEC next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-054.json`
 - R054 bounded local closure evaluation; inherited independent R2 acceptance/history, no new runtime or full S2/live proof.: `docs/reviews/CCMAI_RUNTIME_054_LOCAL_PROVIDER_CLOSURE_2026-10-06.md`
 - Separate immutable R1 metadata closure authority for accepted local R050/R051/R053; commit before activation, inherited R2 proof and history unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-054.json`
+- Consolidated source-based design choice before R055 SPEC/work order/activation; no BUILD or runtime proof.: `docs/reviews/R055_DESIGN_INTAKE_2026-10-06.md`
+- Separate R2 additive application preparation receipt authority; child BUILD/root independent reviewer, no schema/policy/provider effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-055.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

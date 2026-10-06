@@ -1970,6 +1970,20 @@
       "path": "docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md",
       "status": "ACTIVE",
       "description": "Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority."
+    },
+    {
+      "id": "runtime055-preparation-receipt-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-055.json",
+      "status": "ACTIVE",
+      "description": "Separate R2 additive application preparation receipt authority; child BUILD/root independent reviewer, no schema/policy/provider effect."
+    },
+    {
+      "id": "runtime055-design-intake",
+      "family": "continuity",
+      "path": "docs/reviews/R055_DESIGN_INTAKE_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Consolidated source-based design choice before R055 SPEC/work order/activation; no BUILD or runtime proof."
     }
   ]
 }
