@@ -1,6 +1,6 @@
 # R055 decision: additive source-preparation receipt
 
-Date: 2026-10-06. Codex `/root` SPEC_AUTHOR / WORK_ORDER_AUTHOR with read-only architecture support from Codex child. DESIGN_ACCEPTED_FOR_BOUNDED_SPEC; design-time implementation NOT_STARTED; current child source05c59e9 REVIEW_PASS/FREEZE_OPEN under R057 independent evidencec4f78f2. R2 application observation, no CVF runtime policy/gate or full S2 exit.
+Date: 2026-10-06. Codex `/root` SPEC_AUTHOR / WORK_ORDER_AUTHOR with read-only architecture support from Codex child. DESIGN_ACCEPTED_FOR_BOUNDED_SPEC; design-time implementation NOT_STARTED; current child source05c59e9 locally FROZEN under separate R058 after R057 review5ff0875/runtimec4f78f2. R2 application observation, no CVF runtime policy/gate or full S2 exit.
 
 Use a versioned source_preparation object in existing JobRun.Summary, preserving every existing scalar summary key/value and schema. No new column/table/migration/query or UI/API permission change. Capture results from the existing ordinary/explicit preparation and version-check queries; legacy helper signatures remain wrappers around shared implementations. Record prepared source as intention, never actual provider call or permission. Partial coverage/empty/unchanged reasons retain existing application behavior.
 

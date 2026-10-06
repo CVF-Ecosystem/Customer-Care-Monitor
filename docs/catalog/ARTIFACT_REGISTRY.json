@@ -2063,11 +2063,11 @@
       "description": "R056 activation gate rejection and preserved proposals; new R057 seed before activation, same source/budget."
     },
     {
-      "id": "continuity-initial-handoff",
+      "id": "handoff-r057-grouped-independent-review-20261006",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R055/R057 independent REVIEW_PASS/FREEZE_OPEN; separately seeded local R058 closure next, no runtime/source dispatch."
+      "description": "Historical R057 independent REVIEW_PASS at source05c59e9 before separate R058 local closure."
     },
     {
       "id": "work-order-r057",
@@ -2095,112 +2095,112 @@
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_lp.jsonl",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-lp-stderr-log",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_lp_stderr.log",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-manifest-json",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_manifest.json",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-mutant-jsonl",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_mutant.jsonl",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-mutant-stderr-log",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_mutant_stderr.log",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-new-jsonl",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_new.jsonl",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-new-stderr-log",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_new_stderr.log",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-ownership-jsonl",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_ownership.jsonl",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-ownership-stderr-log",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_ownership_stderr.log",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-restored-jsonl",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_restored.jsonl",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-restored-stderr-log",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_restored_stderr.log",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-selection-jsonl",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_selection.jsonl",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-selection-stderr-log",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_selection_stderr.log",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-independent-summary-json",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_independent_summary.json",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-r057-source-authority-audit-json",
       "family": "continuity",
       "path": "docs/reviews/probes/r057_source_authority_audit.json",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-evidence-ANALYZER-PREPARATION-RECEIPT-R057-EVIDENCE-2026-10-06-md",
       "family": "continuity",
       "path": "docs/reviews/ANALYZER_PREPARATION_RECEIPT_R057_EVIDENCE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "R057 independent application evidence, raw names/hash/manifest/cleanup; formal source review pending, not CVF governance/live proof."
+      "description": "Committed R057 application proof atc4f78f2; independently accepted5ff0875 and locally frozen R058, historical capture unchanged; no governance/live claim."
     },
     {
       "id": "r057-independent-review",
@@ -2222,6 +2222,41 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-058.json",
       "status": "ACTIVE",
       "description": "Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Active R058 local preparation receipt closure FROZEN; next bounded S2 DESIGN/SPEC, no BUILD/live/subagent."
+    },
+    {
+      "id": "work-order-r058",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_058.md",
+      "status": "ACTIVE",
+      "description": "R058 FROZEN R1 scoped local closure order for accepted R055/R057 only, no new runtime."
+    },
+    {
+      "id": "tranche-r058",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-058.json",
+      "status": "ACTIVE",
+      "description": "R058 local FROZEN record, inherited independent source proof/zero new Go."
+    },
+    {
+      "id": "r058-local-closure",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "R055/R057 bounded local observation closed at source05c59e9/review5ff0875; full S2/live/governance OPEN."
+    },
+    {
+      "id": "r058-closure-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r058_local_closure_receipt.json",
+      "status": "ACTIVE",
+      "description": "R058 scoped closure identities/history/claim limits and final static publication checks."
     }
   ]
 }

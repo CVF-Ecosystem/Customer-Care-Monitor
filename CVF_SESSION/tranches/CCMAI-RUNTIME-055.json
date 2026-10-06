@@ -61,8 +61,8 @@
   ],
   "claimScope": "Only observational application preparation metadata, additive existing JobRun.Summary, bounded redacted per-candidate outcomes. No CVF governance/policy control/full S2/provider parity/live/hosted claim; existing behavior/terminal/checkpoint preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_055.md",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "8d9137d8fd4c23d08744abc30b0b9975c68da626",
   "buildCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
   "reviewEvidence": [
@@ -70,14 +70,15 @@
     "docs/reviews/probes/r057_formal_review_receipt.json"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -206,11 +207,12 @@
     "acknowledgmentCommit": "47cb2d17ff3713d5836181b8f262b94570eda9d8"
   },
   "sourceCheckpoint": {
-    "status": "BUILD_SOURCE_CHECKPOINT_TESTS_NOT_RUN",
+    "status": "HISTORICAL_BUILD_CHECKPOINT_NOW_ACCEPTED_UNDER_R057_R058",
     "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT",
     "newGoInvocations": 0,
     "noAcceptance": true,
-    "actualCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e"
+    "actualCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+    "historicalStatusAtCreation": "BUILD_SOURCE_CHECKPOINT_TESTS_NOT_RUN"
   },
   "workerCampaignDisposition": {
     "status": "INTERRUPTED_INFRASTRUCTURE_FAILURE_NO_RETRY",
@@ -239,5 +241,12 @@
   ],
   "acceptedRuntimeEvidenceCommit": "c4f78f26c50ae481ea4a3c7db19f9187004b8d9f",
   "acceptedSourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
-  "independentAcceptance": "Root R057 successor proves unchanged child source; prior failed packets remain unaccepted/historical"
+  "independentAcceptance": "Root R057 successor proves unchanged child source; prior failed packets remain unaccepted/historical",
+  "closer": "Codex /root",
+  "closedAt": "2026-10-06",
+  "closureAuthority": "CCMAI-RUNTIME-058",
+  "closureAuthorityCommit": "5ff087587f04170579b39a645ce4bf7eb1933fe1",
+  "frozenSourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "acceptedReviewCommit": "5ff087587f04170579b39a645ce4bf7eb1933fe1",
+  "closureEvidence": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md"
 }

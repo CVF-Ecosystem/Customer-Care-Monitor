@@ -1,6 +1,6 @@
 # R055 SPEC: observational source-preparation receipts
 
-Date: 2026-10-06. Intended behavior; design-time implementation NOT_STARTED; current child source05c59e9 REVIEW_PASS/FREEZE_OPEN under R057 independent evidencec4f78f2. R2, independent Codex `/root` review after child implementation. [Decision](../decisions/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md), [work order](../work_orders/CCMAI_RUNTIME_055.md), seed8d9137d8fd4c23d08744abc30b0b9975c68da626. This is local application observation, not CVF governance/full S2/provider proof.
+Date: 2026-10-06. Intended behavior; design-time implementation NOT_STARTED; current child source05c59e9 locally FROZEN under separate R058 after R057 review5ff0875/runtimec4f78f2. R2, independent Codex `/root` review after child implementation. [Decision](../decisions/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md), [work order](../work_orders/CCMAI_RUNTIME_055.md), seed8d9137d8fd4c23d08744abc30b0b9975c68da626. This is local application observation, not CVF governance/full S2/provider proof.
 
 ## Closed v1 observation contract
 
