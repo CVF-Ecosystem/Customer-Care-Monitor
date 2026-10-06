@@ -59,7 +59,7 @@
     "further_repair_without_new_cost_disposition"
   ],
   "claimScope": "Only test/fixture/receipt repair R050-R1-01..03 under unchanged LP-01..08 and exact production BUILD727d322. No production behavior change, historical recertification, real-provider/CVF runtime governance/full S2 or hosted readiness claim.",
-  "repairRound": 5,
+  "repairRound": 6,
   "predecessorTranche": "CCMAI-RUNTIME-052",
   "originalRepairTranche": "CCMAI-RUNTIME-051",
   "completedPredecessorRepairRounds": 3,
@@ -75,23 +75,30 @@
     "maxCampaigns": 1,
     "maxNewGoInvocations": 4,
     "priorUsedCampaigns": 0,
-    "priorUsedGoInvocations": 0
+    "priorUsedGoInvocations": 0,
+    "usedCampaigns": 1,
+    "usedGoInvocations": 4,
+    "remainingCampaigns": 0,
+    "remainingGoInvocations": 0
   },
   "independentRootCause": "R052-R3-01 raw Git blob vs exact archive byte representation manifest mismatch",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_053.md",
   "status": "BUILD",
   "phase": "BUILD",
   "baseCommit": "072812c7ec8e07025eaf90ae668744744f69f3bf",
-  "buildCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
+  "buildCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
   "reviewEvidence": [
     "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md",
     "docs/reviews/probes/r051_r4_preparation_receipt.json",
     "docs/reviews/probes/r051_r4_detector_name_audit.json",
     "docs/reviews/probes/r051_r4_handback.json",
     "docs/reviews/CCMAI_RUNTIME_053_R4_INDEPENDENT_REVIEW_2026-10-06.md",
-    "docs/reviews/probes/r053_r4_independent_summary.json"
+    "docs/reviews/probes/r053_r4_independent_summary.json",
+    "docs/reviews/probes/r051_r4_successor_report.md",
+    "docs/reviews/probes/r051_r4_successor_worker_receipt.json",
+    "docs/reviews/probes/r051_r4_successor_preparation_receipt.json"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
@@ -110,8 +117,8 @@
   "inheritedSourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
   "inheritedProductCommit": "727d3229338e9b29c749612677a08b7fd1c65428",
   "openReviewFindings": [
-    "R053-R4-01",
-    "R051-R2-01"
+    "R051-R2-01",
+    "R053-R5-PUBLICATION-DIFF"
   ],
   "planningPublication": {
     "seedCommit": "072812c7ec8e07025eaf90ae668744744f69f3bf",
@@ -162,32 +169,68 @@
   },
   "buildArtifactKind": "EVIDENCE_ONLY_NOT_PRODUCT_BUILD",
   "round4EvidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
-  "runtimeDisposition": "FAILED_NOT_RUN",
-  "campaignsStarted": 0,
-  "newGoInvocations": 0,
+  "runtimeDisposition": "PASS_PENDING_INDEPENDENT_REVIEW",
+  "campaignsStarted": 1,
+  "newGoInvocations": 4,
   "costDispositions": [
     "docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md",
     "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md"
   ],
   "nextCumulativeRepairRound": 5,
   "successorDispatch": {
-    "status": "BUILD",
+    "status": "RUNTIME_COMPLETE_PUBLICATION_REPAIR_BUILD",
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md",
     "cumulativeRepairRound": 5,
     "allowedArtifactPrefix": "docs/reviews/probes/r051_r4_successor_",
     "workerRolesUnchanged": true,
     "aggregateBudgetRemaining": {
-      "campaigns": 1,
-      "Go": 4
+      "campaigns": 0,
+      "Go": 0
     },
     "correctFullLP06Events": 6,
     "sourceSubtests": 5,
-    "rootAuthorCorrection": true
+    "rootAuthorCorrection": true,
+    "aggregateBudgetUsed": {
+      "campaigns": 1,
+      "Go": 4
+    }
   },
   "successorBuildAcknowledgment": {
     "doctor": "PASS WITH NOTE25/1",
     "newGoInvocations": 0,
     "newCampaigns": 0,
-    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT"
+    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT",
+    "acknowledgmentCommit": "ec8b94a9f7274faa32156c189e75f4baa6d8ffbc"
+  },
+  "successorEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "round5EvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "publicationDisposition": "CHANGES_REQUIRED_STAGED_DIFF_ARTIFACT_CHECK",
+  "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "historicallySettledFindings": [
+    {
+      "finding": "R053-R4-01",
+      "resolution": "All5 source-derived leaves/6 full events in exact baeb4c9; root count correction21d57c8. Original formal RP04 still pending.",
+      "evidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df"
+    }
+  ],
+  "publicationRepair": {
+    "status": "BUILD",
+    "cumulativeRepairRound": 6,
+    "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_DIFF_ARTIFACT_PUBLICATION_DISPOSITION_2026-10-06.md",
+    "costDispositionCommit": "1a8bb5e42a11b8259be985a4155f527389a280fa",
+    "newRuntimeCampaigns": 0,
+    "newGoInvocations": 0,
+    "encodingBeforeAcknowledgment": "NOT_STARTED",
+    "acknowledgmentCommit": "DERIVE_FROM_GIT_AFTER_COMMIT",
+    "phaseInheritance": "Continue last committed BUILD at earliest open publication correction stage; new before-edit acknowledgment required"
+  },
+  "supersededDraftContinuity": {
+    "uncommittedStatusEntries": [
+      "REVIEW_PENDING",
+      "BUILD"
+    ],
+    "reason": "Fifth REVIEW_PENDING handback draft was interrupted before commitment by newly committed publication-only cost disposition. Restore committed history; no formal reviewer transition invented. Current repair6 inherits earliest open BUILD under unchanged source/acceptance.",
+    "observedPreflightFailure": "tranche invalid status transition REVIEW_PENDING -> BUILD; other6 gates pass; corrected before encoding",
+    "workerNoAcceptance": true
   }
 }

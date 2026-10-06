@@ -16,4 +16,8 @@ Historical fourth handback: exact failed evidence0a1410636decf1558ea0053fcc2cb37
 
 Root author correction (2026-10-06): earlier4-event statement was false; immutable sourceLP06 has5 maintained subtests plus top-level=6 events, including batch/constructor and non-batch counters. All original full-suite acceptance unchanged. Preserve failed count-checker packet0a141063; new recorded successor cost addendum requires all5 source names/6 events in new r051_r4_successor_* under unchanged seed. Cumulative round5 explicitly counted; prior4 attempts and budget retained. No test changes or subset masking.
 
-Current execution: cumulative fifth successor BUILD acknowledged before new r051_r4_successor_* edits; all5 maintained leaves/6 full events required, four prior packets preserved, no runtime result yet.
+Historical execution: cumulative fifth successor BUILD acknowledged before new r051_r4_successor_* edits; all5 maintained leaves/6 full events required, four prior packets preserved, no runtime result yet.
+
+Superseded draft fifth handback: exact evidencebaeb4c920a68cadb121344aaed8408a3f23aa0df REVIEW_PENDING; sole runtime4Go/fullLP066PASS/mutant2namedFAIL/restoration/cleanup pass. Cached staged diff-check exit2 on raw unified-diff context markers retained as PUBLICATION_CHANGES_REQUIRED; no worker waiver/correction/retry/acceptance. Aggregate runtime budget1campaign/4Go exhausted. Root independent disposition next; old pointers/source/test contracts unchanged.
+
+Current execution: cumulative publication-only repair6 BUILD under committed diff-artifact disposition1a8bb5e. Add lossless envelope/new publication receipt/report; all committed raw fifth packets stay immutable. Runtime used1/4, remaining0/0. No encoding before committed acknowledgment, no new runtime/acceptance.

@@ -277,5 +277,16 @@
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md",
     "fullLP06CountCorrection": "5 leaves/6 events; no source/test change"
   },
-  "delegatedRound5ExecutionStatus": "BUILD"
+  "delegatedRound5ExecutionStatus": "REVIEW_PENDING",
+  "round5EvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "successorEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+  "delegatedPublicationRepairStatus": "BUILD",
+  "currentExecutionBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4,
+    "usedCampaigns": 1,
+    "usedGoInvocations": 4,
+    "remainingCampaigns": 0,
+    "remainingGoInvocations": 0
+  }
 }

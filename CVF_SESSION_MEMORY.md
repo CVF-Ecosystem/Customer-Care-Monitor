@@ -52,7 +52,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R053 archive manifest successor repair (2026-10-06)
 
-CCMAI-RUNTIME-053 cumulative fifth successor BUILD: Codex /root/r051_preparation creates only new r051_r4_successor_* runner/report/receipts after committed acknowledgment/preflight under recorded count/cost disposition21d57c8d. Preserve all5 maintained LP06 leaves/6 full events; fixed source145bd411/production727d322, strict archive204 bytes, aggregate max1 actual campaign/max4 Go used0, no retry/sixth repair. R050/R051/R052 open; all source/tests/seeds/old packets and round3/round4 evidence unchanged. Commit exact successorEvidenceCommit/round5EvidenceCommit then separate REVIEW_PENDING for independent Codex /root; no provider/channel/external network/persistent data/push/merge/deploy/FREEZE, accounts parked.
+CCMAI-RUNTIME-053 cumulative publication repair6 BUILD under committed disposition1a8bb5e42a11b8259be985a4155f527389a280fa: Codex /root/r051_preparation adds only lossless JSON/base64 envelope and new publication receipt/report/current metadata after committed acknowledgment. Raw baeb4c9 runtime packet/diff/runner/preparation/logs remain unchanged; no whitespace suppression or historical recertification. Runtime budget exhausted used1campaign/4Go, remaining0/0; no Go/container/provider/network/source/test/seed/tooling/workflow changes. Commit separate publicationEvidenceCommit then REVIEW_PENDING handback for independent Codex /root; R050/R051/R052 open, no acceptance/FREEZE/push/merge/deploy, accounts parked.
 
 ## Historical R052 delegated R051/R3 evidence route (2026-10-06)
 

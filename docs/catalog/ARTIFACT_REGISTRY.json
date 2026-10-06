@@ -1851,6 +1851,13 @@
       "path": "docs/reviews/probes/r051_r4_successor_worker_receipt.json",
       "status": "ACTIVE",
       "description": "Cumulative fifth successor synthetic evidence: r051_r4_successor_worker_receipt.json; exact source/accepted inherited limits, independent review required."
+    },
+    {
+      "id": "r053-publication-lossless-cost",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_053_DIFF_ARTIFACT_PUBLICATION_DISPOSITION_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Committed publication-only repair6 disposition; preserve raw fifth packet/diff and exhausted1/4 runtime budget."
     }
   ]
 }
