@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current bounded local R050/R051/R053 REVIEW_PASS / FREEZE_OPEN; RP04 successor accepted, original failures/live limits retained, separate closure assessment next.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md`
+- Active bounded R054 closure REVIEW_PENDING; next independent metadata evaluation, accounts parked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -36,6 +36,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active F02-F Zalo local full-history message contract and acceptance matrix.: `docs/specs/RUNTIME_ZALO_MESSAGE_COVERAGE_F02F_2026-10-03.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_032.md`
 - Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
+- Historical R053 accepted successor handoff before separate R054 closure; acceptance and history retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md`
 - Historical R032 review/assessment and owner local-closure delegation acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md`
 - Historical R048 option A acceptance and R049 seed planning; prior evidence limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md`
 - Historical R049 bounded local closure and R050 seed planning acknowledgment; original limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md`
@@ -262,6 +263,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact archive manifest requirement with unchanged inherited RP-04 runtime/evidence controls.: `docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md`
 - Independent successor RP04 REVIEW_PASS; exact unchanged source, inherited tests, historical failures/live/FREEZE limits retained.: `docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md`
 - Independent archive/mutation/raw-log/byte-domain/resource/authority/commit mapping and reviewer publication receipts, no new runtime.: `docs/reviews/probes/r053_successor_independent_summary.json`
+- R054 inherited REVIEW_PENDING local three-target closure; no BUILD/runtime, root metadata disposition.: `docs/work_orders/CCMAI_RUNTIME_054.md`
+- R1 inherited REVIEW closure state under separately committed seed, original R2 acceptance and failed history retained.: `CVF_SESSION/tranches/CCMAI-RUNTIME-054.json`
 - Separate immutable R1 metadata closure authority for accepted local R050/R051/R053; commit before activation, inherited R2 proof and history unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-054.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`

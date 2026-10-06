@@ -684,11 +684,11 @@
       "description": "Active session/phase/role state."
     },
     {
-      "id": "continuity-initial-handoff",
+      "id": "handoff-r053-accepted-before-r054-20261006",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Current bounded local R050/R051/R053 REVIEW_PASS / FREEZE_OPEN; RP04 successor accepted, original failures/live limits retained, separate closure assessment next."
+      "description": "Historical R053 accepted successor handoff before separate R054 closure; acceptance and history retained."
     },
     {
       "id": "truth-implementation-status",
@@ -1928,6 +1928,27 @@
       "path": "docs/reviews/CCMAI_RUNTIME_050_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-06.md",
       "status": "ACTIVE",
       "description": "Eligible bounded local closure assessment under standing owner delegation; no source/runtime or full S2/live claim."
+    },
+    {
+      "id": "runtime054-local-provider-closure-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_054.md",
+      "status": "ACTIVE",
+      "description": "R054 inherited REVIEW_PENDING local three-target closure; no BUILD/runtime, root metadata disposition."
+    },
+    {
+      "id": "runtime054-local-provider-closure-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-054.json",
+      "status": "ACTIVE",
+      "description": "R1 inherited REVIEW closure state under separately committed seed, original R2 acceptance and failed history retained."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Active bounded R054 closure REVIEW_PENDING; next independent metadata evaluation, accounts parked."
     }
   ]
 }
