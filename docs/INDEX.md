@@ -225,6 +225,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Readonly exact-source cached offline/internal disposable independent campaign runner, no governance/provider proof.: `docs/reviews/probes/r050_independent_campaign.ps1`
 - R050 independent REVIEW CHANGES_REQUIRED, three findings; synthetic application proof only.: `docs/reviews/CCMAI_RUNTIME_050_INDEPENDENT_REVIEW_2026-10-05.md`
 - Exact-source independent test/command/hash/isolation/cleanup and publication receipt; one ownership test failure retained.: `docs/reviews/probes/r050_independent_summary.json`
+- Eligible bounded local closure assessment under standing owner delegation; no source/runtime or full S2/live claim.: `docs/reviews/CCMAI_RUNTIME_050_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-06.md`
 - Current bounded local R050/R051/R053 REVIEW_PASS / FREEZE_OPEN; RP04 successor accepted, original failures/live limits retained, separate closure assessment next.: `CVF_SESSION/tranches/CCMAI-RUNTIME-050.json`
 - R050 LP-01..08 intended contract; submitted BUILD independently CHANGES_REQUIRED, not full S2 governance.: `docs/specs/ANALYZER_LAZY_PROVIDER_R050_2026-10-05.md`
 - Current bounded local R050/R051/R053 REVIEW_PASS / FREEZE_OPEN; RP04 successor accepted, original failures/live limits retained, separate closure assessment next.: `docs/work_orders/CCMAI_RUNTIME_050.md`
@@ -261,6 +262,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact archive manifest requirement with unchanged inherited RP-04 runtime/evidence controls.: `docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md`
 - Independent successor RP04 REVIEW_PASS; exact unchanged source, inherited tests, historical failures/live/FREEZE limits retained.: `docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md`
 - Independent archive/mutation/raw-log/byte-domain/resource/authority/commit mapping and reviewer publication receipts, no new runtime.: `docs/reviews/probes/r053_successor_independent_summary.json`
+- Separate immutable R1 metadata closure authority for accepted local R050/R051/R053; commit before activation, inherited R2 proof and history unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-054.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

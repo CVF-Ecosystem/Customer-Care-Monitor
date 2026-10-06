@@ -1914,6 +1914,20 @@
       "path": "docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json",
       "status": "ACTIVE",
       "description": "Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof."
+    },
+    {
+      "id": "runtime054-local-provider-closure-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-054.json",
+      "status": "ACTIVE",
+      "description": "Separate immutable R1 metadata closure authority for accepted local R050/R051/R053; commit before activation, inherited R2 proof and history unchanged."
+    },
+    {
+      "id": "runtime050-local-provider-closure-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/CCMAI_RUNTIME_050_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Eligible bounded local closure assessment under standing owner delegation; no source/runtime or full S2/live claim."
     }
   ]
 }
