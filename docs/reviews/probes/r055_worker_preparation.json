@@ -1,0 +1,14 @@
+{
+  "scope": "PURE_STATIC_PREPARATION_NOT_RUNTIME_PROOF",
+  "command": "python -B stdin: AST parse new worker; git archive05c59e9 backend; tar member mutation/test literal checks; filesystem cache existence",
+  "exit": 0,
+  "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "archiveFiles": 207,
+  "archiveSha256": "1523b0a5c1853929bbbfbac30b06741db4be99b2a59c251b3825982a551df4d3",
+  "maintainedNewTopNames": 13,
+  "mutationMatchCount": 1,
+  "cachedModulePathExists": true,
+  "GoUsed": 0,
+  "runnerSha256": "7cea1ea5f7c268a01dad56480f989ec9785b5b7bf468ac6203cf1b8ca8f8c618",
+  "reusableMechanicsProvenance": "Adapted from root-prepared unexecuted independent harness; worker exact8 sequence/isolation receipts explicit"
+}

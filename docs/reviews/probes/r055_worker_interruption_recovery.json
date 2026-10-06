@@ -1,0 +1,157 @@
+{
+  "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "originalWorker": "Codex /root/r051_preparation",
+  "recoveryReviewer": "Codex /root",
+  "workerCampaigns": 1,
+  "workerGoInvocations": 3,
+  "result": "INTERRUPTED_INFRASTRUCTURE_FAILURE_NO_RETRY",
+  "compile": "PASS",
+  "vet": "PASS",
+  "pure": "SETUP_FAILED_DOCKER_BIND_IO_NO_COMPLETED_TEST",
+  "independence": "No root source or test edit; independent source author preserved. User directs no further agents. Existing separate reviewer four-Go budget next; not worker retry.",
+  "records": [
+    {
+      "label": "compile",
+      "name": "ccmai-r055-worker-compile-a473f9dba8",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-06T12:03:19.77477583Z",
+        "FinishedAt": "2026-10-06T12:04:34.505150823Z"
+      },
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-worker-hmmtg87f\\backend",
+          "Destination": "/src",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+          "Destination": "/go/pkg/mod",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "network": "none",
+      "ports": {},
+      "stdout": "docs\\reviews\\probes\\r055_worker_compile_recovered_stdout.log",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "docs\\reviews\\probes\\r055_worker_compile_recovered_stderr.log",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "removeExit": 0,
+      "verifiedAbsent": true
+    },
+    {
+      "label": "vet",
+      "name": "ccmai-r055-worker-vet-a473f9dba8",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-06T12:04:35.880359408Z",
+        "FinishedAt": "2026-10-06T12:05:46.513854283Z"
+      },
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-worker-hmmtg87f\\backend",
+          "Destination": "/src",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+          "Destination": "/go/pkg/mod",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "network": "none",
+      "ports": {},
+      "stdout": "docs\\reviews\\probes\\r055_worker_vet_recovered_stdout.log",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "docs\\reviews\\probes\\r055_worker_vet_recovered_stderr.log",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "removeExit": 0,
+      "verifiedAbsent": true
+    },
+    {
+      "label": "pure",
+      "name": "ccmai-r055-worker-pure-a473f9dba8",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-06T12:05:47.825389459Z",
+        "FinishedAt": "2026-10-06T12:06:03.011602891Z"
+      },
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-worker-hmmtg87f\\backend",
+          "Destination": "/src",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+          "Destination": "/go/pkg/mod",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "network": "none",
+      "ports": {},
+      "stdout": "docs\\reviews\\probes\\r055_worker_pure_recovered_stdout.log",
+      "stdoutSha256": "615b482690fd6cb8f12e278f0f4592826b3c4a5898f6a9095cfd05c5bfe0f39d",
+      "stderr": "docs\\reviews\\probes\\r055_worker_pure_recovered_stderr.log",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "removeExit": 0,
+      "verifiedAbsent": true
+    }
+  ],
+  "cleanupInventoryExit": 0,
+  "databaseOrNetworkCreated": false,
+  "workerAccepted": false,
+  "recoveredWorkerSourceManifestEqual": true,
+  "archiveFiles": 207,
+  "reviewAcknowledgmentChecks": {
+    "defaultPreflight": "PASS7/7",
+    "PRPreflight": "PASS7/7",
+    "catalogPS7": "PASS",
+    "gateUnits": "PASS46 in33.015s",
+    "failedSetupChecksRetainedInActiveHandoff": true,
+    "docsBuild": "PASS actual21.44s",
+    "catalogInitial": "FAIL invalid family review; corrected continuity and regenerated PASS"
+  }
+}

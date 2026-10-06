@@ -8,7 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R055 BUILD before-edit acknowledgment; observational Summary receipts only, sole bounded campaign after source checkpoint.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md`
+- Active R055 independent root REVIEW_PENDING; worker infrastructure failure retained, separate reviewer4Go, no further subagents.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -87,6 +87,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Repair6 publication checks and raw-to-envelope provenance; exhausted runtime budget.: `docs/reviews/probes/r051_r4_successor_publication_receipt.json`
 - Publication-only lossless encoding repair6; independent acceptance pending.: `docs/reviews/probes/r051_r4_successor_publication_report.md`
 - Repair6 final REVIEW_PENDING map: immutable runtimebaeb and separate lossless publicationb5bf; no worker acceptance.: `docs/reviews/probes/r051_r4_successor_handback.json`
+- Independent root four-Go application review harness; terminal storage erasure and byte restoration; runtime pending.: `docs/reviews/probes/r055_independent_campaign.py`
+- Root observed worker compile/vet exits and pure mount setup failure; named cleanup, no retry/acceptance.: `docs/reviews/probes/r055_worker_interruption_recovery.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

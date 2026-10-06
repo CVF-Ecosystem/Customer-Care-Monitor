@@ -1990,7 +1990,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R055 BUILD before-edit acknowledgment; observational Summary receipts only, sole bounded campaign after source checkpoint."
+      "description": "Active R055 independent root REVIEW_PENDING; worker infrastructure failure retained, separate reviewer4Go, no further subagents."
     },
     {
       "id": "runtime055-preparation-receipt-decision",
@@ -2019,6 +2019,20 @@
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-055.json",
       "status": "ACTIVE",
       "description": "Machine R055 bounded application work state and worker/reviewer roles; source/test/evidence not started."
+    },
+    {
+      "id": "r055-worker-interruption-recovery",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r055_worker_interruption_recovery.json",
+      "status": "ACTIVE",
+      "description": "Root observed worker compile/vet exits and pure mount setup failure; named cleanup, no retry/acceptance."
+    },
+    {
+      "id": "r055-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r055_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent root four-Go application review harness; terminal storage erasure and byte restoration; runtime pending."
     }
   ]
 }

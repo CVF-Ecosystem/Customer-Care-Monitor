@@ -1,0 +1,6 @@
+{"ImportPath":"./engine","Action":"build-output","Output":"# ./engine\n"}
+{"ImportPath":"./engine","Action":"build-output","Output":"stat /src/engine: input/output error\n"}
+{"ImportPath":"./engine","Action":"build-fail"}
+{"Time":"2026-10-06T12:06:02.947086787Z","Action":"start","Package":"./engine"}
+{"Time":"2026-10-06T12:06:02.947205248Z","Action":"output","Package":"./engine","Output":"FAIL\t./engine [setup failed]\n"}
+{"Time":"2026-10-06T12:06:02.947216364Z","Action":"fail","Package":"./engine","Elapsed":0,"FailedBuild":"./engine"}

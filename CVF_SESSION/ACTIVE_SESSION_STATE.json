@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,16 +13,16 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-055 BUILD under seed8d9137d8fd4c23d08744abc30b0b9975c68da626: Codex /root/r051_preparation implements observational additive preparation receipts SP01..12 after committed acknowledgment, then exact source checkpoint and sole cached synthetic campaign max8Go. Independent Codex /root reviews exact source/evidence afterward; no schema/query/policy/provider/network/old-test/old-packet changes, automatic retry/selfapproval/FREEZE/push/merge/deploy. Prior closures/history retained; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-055 REVIEW_PENDING / REVIEW at independent child source05c59e9978e5cf108b0d9118f64c7454805ec64e: Codex /root reviews source and executes the existing separate max1campaign/4Go budget without calling subagents, per owner instruction. Worker campaign1/3Go interrupted: compile/vet PASS, pure setup Docker bind input/output error, no completed tests or retry; recovery and named cleanup recorded. Root has not edited implementation/tests. Original source author/seed remain independent/immutable. No source repair/selfapproval/FREEZE/live/provider/channel/push/merge/deploy; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root/r051_preparation IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER afterward",
-  "roleRoute": "CODEX_SUBAGENT_REPAIR_ROOT_INDEPENDENT_REVIEW",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / review-artifact COMMIT_STEWARD; implementation author Codex /root/r051_preparation unchanged",
+  "roleRoute": "ROOT_INDEPENDENT_REVIEW_NO_FURTHER_SUBAGENTS",
   "updatedAt": "2026-10-06",
   "currentExecutionBudget": {
     "workerMaxCampaigns": 1,
     "workerMaxGoInvocations": 8,
-    "workerUsedCampaigns": 0,
-    "workerUsedGoInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 3,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
     "reviewerUsedCampaigns": 0,

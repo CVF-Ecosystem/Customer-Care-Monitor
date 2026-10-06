@@ -61,16 +61,17 @@
   ],
   "claimScope": "Only observational application preparation metadata, additive existing JobRun.Summary, bounded redacted per-candidate outcomes. No CVF governance/policy control/full S2/provider parity/live/hosted claim; existing behavior/terminal/checkpoint preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_055.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "8d9137d8fd4c23d08744abc30b0b9975c68da626",
-  "buildCommit": null,
+  "buildCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -177,7 +178,7 @@
         ],
         "exit": 0,
         "seconds": 20.675,
-        "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 18.62s.\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m\u2713\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m\u2713\u001b[0m rendering pages...\n"
+        "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 18.62s.\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m✓\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m✓\u001b[0m rendering pages...\n"
       },
       {
         "command": [
@@ -202,6 +203,20 @@
     "status": "BUILD_SOURCE_CHECKPOINT_TESTS_NOT_RUN",
     "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT",
     "newGoInvocations": 0,
-    "noAcceptance": true
+    "noAcceptance": true,
+    "actualCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e"
+  },
+  "workerCampaignDisposition": {
+    "status": "INTERRUPTED_INFRASTRUCTURE_FAILURE_NO_RETRY",
+    "campaigns": 1,
+    "GoInvocations": 3,
+    "recovery": "docs/reviews/probes/r055_worker_interruption_recovery.json"
+  },
+  "reviewRecoveryAuthority": {
+    "ownerInstruction": "không gọi subagent, bạn làm tiếp cho xong",
+    "sourceAuthorUnchanged": true,
+    "rootSourceTestEdits": 0,
+    "existingReviewerBudget": "max1campaign/4Go",
+    "workerRetry": false
   }
 }
