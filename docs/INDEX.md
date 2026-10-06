@@ -6,6 +6,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
 - Owner parks Facebook/Zalo OA account/live tests; source-based MCP job-execution next-scope planning, no BUILD dispatch.: `docs/reviews/ACCOUNT_PARK_AND_MCP_NEXT_SCOPE_2026-10-03.md`
 - Immutable separate R056 evidence-only independent review authority; no source edits/subagents, six Go max.: `CVF_SESSION/authority/CCMAI-RUNTIME-056.json`
+- Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
@@ -91,6 +92,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent root four-Go application review harness; terminal storage erasure and byte restoration; runtime pending.: `docs/reviews/probes/r055_independent_campaign.py`
 - Retained worker mount/root timeout failures; no source defect verdict; separate grouped R056 review cost contract.: `docs/reviews/R055_REVIEW_INTERRUPTION_DISPOSITION_2026-10-06.md`
 - Root observed worker compile/vet exits and pure mount setup failure; named cleanup, no retry/acceptance.: `docs/reviews/probes/r055_worker_interruption_recovery.json`
+- R056 activation gate rejection and preserved proposals; new R057 seed before activation, same source/budget.: `docs/reviews/R056_FAILED_ACTIVATION_AND_R057_SUCCESSOR_2026-10-06.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

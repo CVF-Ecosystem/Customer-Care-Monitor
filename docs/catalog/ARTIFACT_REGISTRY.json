@@ -2047,6 +2047,20 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-056.json",
       "status": "ACTIVE",
       "description": "Immutable separate R056 evidence-only independent review authority; no source edits/subagents, six Go max."
+    },
+    {
+      "id": "authority-r057",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-057.json",
+      "status": "ACTIVE",
+      "description": "Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime."
+    },
+    {
+      "id": "r056-activation-disposition",
+      "family": "continuity",
+      "path": "docs/reviews/R056_FAILED_ACTIVATION_AND_R057_SUCCESSOR_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "R056 activation gate rejection and preserved proposals; new R057 seed before activation, same source/budget."
     }
   ]
 }
