@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,18 +12,20 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-054 and bounded local R050/R051/R053 FROZEN under separate seedb59b4507fad69d999cba2faa40ac57416c949d92 at source145bd411/production727d322, independent acceptance23d847a/runtimebaeb4c9/publicationb5bf0f0 inherited. ORCHESTRATOR next prepares R055 DESIGN/SPEC for observational source-preparation receipts before provider initialization, then a separately bounded work order/seed before BUILD. No policy enforcement/semantic auto-skip/full S2 exit/live/CVF governance/hosted claim or new provider/network authority. R052 failed packet remains historical CHANGES_REQUIRED superseded; prior failures/budgets unchanged, no new runtime/push/merge/deploy, Facebook/Zalo OA parked.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-055 DISPATCH_READY / WORK_ORDER under separate seed8d9137d8fd4c23d08744abc30b0b9975c68da626: Codex /root/r051_preparation IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD rehydrates, declares and commits BUILD acknowledgment/preflight before bounded additive Summary preparation receipts SP01..12. Exact source checkpoint then single cached synthetic campaign max8Go; independent Codex /root reviews source/evidence afterward (separate max4Go). No schema/query/policy/provider/network/live/old-test/old-packet changes, no automatic retry/selfapproval/FREEZE/push/merge/deploy. Prior R054 scoped closure and all historical failures retained; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR next; CLOSER disposition recorded; SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD",
+  "activeRole": "Codex /root/r051_preparation IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD next; Codex /root ORCHESTRATOR / independent REVIEWER",
   "roleRoute": "CODEX_SUBAGENT_REPAIR_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-06",
   "currentExecutionBudget": {
-    "maxCampaigns": 1,
-    "maxGoInvocations": 4,
-    "usedCampaigns": 1,
-    "usedGoInvocations": 4,
-    "remainingCampaigns": 0,
-    "remainingGoInvocations": 0
+    "workerMaxCampaigns": 1,
+    "workerMaxGoInvocations": 8,
+    "workerUsedCampaigns": 0,
+    "workerUsedGoInvocations": 0,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoInvocations": 4,
+    "reviewerUsedCampaigns": 0,
+    "reviewerUsedGoInvocations": 0
   }
 }

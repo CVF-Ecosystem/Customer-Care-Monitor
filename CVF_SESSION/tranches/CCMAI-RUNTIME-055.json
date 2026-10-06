@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-055",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r051_preparation",
+    "repairWorker": "Codex /root/r051_preparation",
+    "commitSteward": "Codex /root/r051_preparation",
+    "reviewer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/analyzer_incremental.go",
+    "backend/engine/analyzer_modes.go",
+    "backend/engine/job_run_ownership.go",
+    "backend/engine/source_preparation_receipt.go",
+    "backend/engine/source_preparation_receipt_test.go",
+    "backend/engine/source_preparation_receipt_db_test.go",
+    "docs/decisions/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md",
+    "docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md",
+    "docs/work_orders/CCMAI_RUNTIME_055.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "semantic_auto_skip",
+    "budget_or_policy_gate",
+    "provider_selection_or_fallback_change",
+    "old_worker_or_review_packet_edit",
+    "existing_test_edit",
+    "receipt_driven_admission_or_skip",
+    "extra_database_query_for_receipt",
+    "model_or_migration_change",
+    "automatic_runtime_retry"
+  ],
+  "claimScope": "Only observational application preparation metadata, additive existing JobRun.Summary, bounded redacted per-candidate outcomes. No CVF governance/policy control/full S2/provider parity/live/hosted claim; existing behavior/terminal/checkpoint preserved.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_055.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "8d9137d8fd4c23d08744abc30b0b9975c68da626",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "implementationStarted": false,
+  "workerBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 8,
+    "automaticRetries": 0,
+    "goCommands": [
+      "engine compile network none",
+      "engine vet network none",
+      "pure receipt tests network none",
+      "new receipt integration tests internal fixture",
+      "LP/ordinary/explicit snapshot regressions internal fixture",
+      "F06/ownership/terminal regressions internal fixture",
+      "one applied terminal receipt-erasure mutant internal fixture",
+      "restored targeted receipt tests internal fixture"
+    ],
+    "testTimeoutSeconds": 180,
+    "readinessSeconds": 90
+  },
+  "reviewerBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4,
+    "automaticRetries": 0,
+    "basis": "Independent new+regression tests, one applied mutation and restored baseline; inherited compiler/vet and worker raw evidence statically audited."
+  },
+  "baselineSourceCommit": "145bd41109c1e3ac3fb1a85f261c61f668b2fe4d",
+  "planningPublication": {
+    "doctor": "PASS WITH NOTE25/1",
+    "gateUnits": {
+      "tests": 46,
+      "exit": 0,
+      "seconds": 34.996,
+      "basis": "Root observed unchanged tooling, inherited across documentation/worker steps unless tooling/failure changes"
+    },
+    "seedDefaultPRStaged": "PASS7/7",
+    "seedCatalog51and7": "PASS",
+    "seedDocsReportedSeconds": 21.65,
+    "seedDiffCheck": "PASS",
+    "activationChecks": [
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight"
+        ],
+        "exit": 0,
+        "seconds": 3.457,
+        "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+      },
+      {
+        "command": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight",
+          "--base",
+          "origin/main",
+          "--head",
+          "HEAD"
+        ],
+        "exit": 0,
+        "seconds": 4.798,
+        "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n       note: BOOTSTRAP_MIGRATION_PENDING (compact bootstrap read model absent; nonblocking)\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+      },
+      {
+        "command": [
+          "powershell",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 2.215,
+        "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+      },
+      {
+        "command": [
+          "pwsh",
+          "-NoProfile",
+          "-File",
+          "scripts/manage_cvf_downstream_catalog.ps1",
+          "-Check"
+        ],
+        "exit": 0,
+        "seconds": 2.524,
+        "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+      },
+      {
+        "command": [
+          "npm.cmd",
+          "--prefix",
+          "docs",
+          "run",
+          "docs:build"
+        ],
+        "exit": 0,
+        "seconds": 20.675,
+        "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 18.62s.\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m✓\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m✓\u001b[0m rendering pages...\n"
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit": 0,
+        "seconds": 0.112,
+        "output": "warning: in the working copy of 'CVF_SESSION/ACTIVE_SESSION_STATE.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CVF_SESSION_MEMORY.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'IMPLEMENTATION_STATUS.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/catalog/ARTIFACT_REGISTRY.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/roadmaps/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+      }
+    ]
+  }
+}

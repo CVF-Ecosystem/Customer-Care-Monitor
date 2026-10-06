@@ -1944,11 +1944,11 @@
       "description": "Bounded local R050/R051/R053 FROZEN under separate R054; inherited independent acceptance/failures/live limits, source-preparation receipt DESIGN/SPEC next."
     },
     {
-      "id": "continuity-initial-handoff",
+      "id": "handoff-r054-local-provider-closure-20261006",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Bounded local R050/R051/R053 FROZEN under separate R054; inherited independent acceptance/failures/live limits, source-preparation receipt DESIGN/SPEC next."
+      "description": "Historical bounded local R054 closure handoff before separately seeded R055 application receipt work."
     },
     {
       "id": "runtime054-local-provider-closure-report",
@@ -1984,6 +1984,41 @@
       "path": "docs/reviews/R055_DESIGN_INTAKE_2026-10-06.md",
       "status": "ACTIVE",
       "description": "Consolidated source-based design choice before R055 SPEC/work order/activation; no BUILD or runtime proof."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Active R055 receipt DISPATCH_READY/WORK_ORDER; child before-edit BUILD acknowledgment next, no runtime yet."
+    },
+    {
+      "id": "runtime055-preparation-receipt-decision",
+      "family": "continuity",
+      "path": "docs/decisions/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Accepted bounded DESIGN: additive Summary preparation observation, no schema/query/policy change."
+    },
+    {
+      "id": "runtime055-preparation-receipt-spec",
+      "family": "continuity",
+      "path": "docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "SP01..12 intended application receipt contract, cap/privacy/persistence/earlyterminal compatibility and evidence requirements."
+    },
+    {
+      "id": "runtime055-preparation-receipt-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_055.md",
+      "status": "ACTIVE",
+      "description": "R055 DISPATCH_READY separate seed/scope/budget for independent child BUILD and root review."
+    },
+    {
+      "id": "runtime055-preparation-receipt-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-055.json",
+      "status": "ACTIVE",
+      "description": "Machine R055 bounded application work state and worker/reviewer roles; source/test/evidence not started."
     }
   ]
 }
