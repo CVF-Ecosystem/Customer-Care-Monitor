@@ -177,7 +177,7 @@
         ],
         "exit": 0,
         "seconds": 20.675,
-        "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 18.62s.\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m✓\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m✓\u001b[0m rendering pages...\n"
+        "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\nbuild complete in 18.62s.\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u001b[32m\u2713\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m\u2713\u001b[0m rendering pages...\n"
       },
       {
         "command": [
@@ -195,6 +195,13 @@
     "doctor": "PASS WITH NOTE25/1",
     "sourceEditsBeforeAcknowledgment": 0,
     "GoInvocationsBeforeAcknowledgment": 0,
-    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT"
+    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT",
+    "acknowledgmentCommit": "47cb2d17ff3713d5836181b8f262b94570eda9d8"
+  },
+  "sourceCheckpoint": {
+    "status": "BUILD_SOURCE_CHECKPOINT_TESTS_NOT_RUN",
+    "commitIdentity": "DERIVE_FROM_GIT_AFTER_COMMIT",
+    "newGoInvocations": 0,
+    "noAcceptance": true
   }
 }

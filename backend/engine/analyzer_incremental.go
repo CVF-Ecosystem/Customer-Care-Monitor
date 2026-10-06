@@ -64,6 +64,11 @@ func ordinaryIncrementalCandidates(job models.Job, channelIDs []string) ([]model
 // evaluation without a snapshot, counts as changed. A linked snapshot that is missing or fails
 // VerifySnapshotProvenance returns ErrSourceVersionUnverifiable; query errors are returned.
 func sourceVersionChanged(job models.Job, conv models.Conversation, snap *conversationSnapshot) (bool, error) {
+	changed, _, err := sourceVersionChangedObserved(job, conv, snap)
+	return changed, err
+}
+
+func sourceVersionChangedObserved(job models.Job, conv models.Conversation, snap *conversationSnapshot) (bool, preparationReference, error) {
 	var latest []models.JobResult
 	if err := db.DB.Model(&models.JobResult{}).
 		Select("job_results.id, job_results.job_run_id, job_results.analysis_snapshot_id").
@@ -74,20 +79,23 @@ func sourceVersionChanged(job models.Job, conv models.Conversation, snap *conver
 		Order("job_results.created_at DESC, job_results.id DESC").
 		Limit(1).
 		Find(&latest).Error; err != nil {
-		return false, fmt.Errorf("find latest evaluation: %w", err)
+		return false, preparationReference{State: "LOOKUP_FAILED"}, fmt.Errorf("find latest evaluation: %w", err)
 	}
-	if len(latest) == 0 || latest[0].AnalysisSnapshotID == nil {
-		return true, nil
+	if len(latest) == 0 {
+		return true, preparationReference{State: "NONE"}, nil
+	}
+	if latest[0].AnalysisSnapshotID == nil {
+		return true, preparationReference{State: "LEGACY_NO_SNAPSHOT"}, nil
 	}
 	var linked []models.AnalysisSnapshot
 	if err := db.DB.Where("id = ? AND tenant_id = ?", *latest[0].AnalysisSnapshotID, job.TenantID).
 		Limit(1).Find(&linked).Error; err != nil {
-		return false, fmt.Errorf("load linked snapshot: %w", err)
+		return false, preparationReference{State: "LOOKUP_FAILED"}, fmt.Errorf("load linked snapshot: %w", err)
 	}
 	if len(linked) == 0 || !VerifySnapshotProvenance(linked[0], job.TenantID, conv.ID, latest[0].JobRunID) {
-		return false, ErrSourceVersionUnverifiable
+		return false, preparationReference{State: "PROVENANCE_UNVERIFIABLE"}, ErrSourceVersionUnverifiable
 	}
-	return strings.ToLower(strings.TrimSpace(linked[0].Digest)) != snap.Digest, nil
+	return strings.ToLower(strings.TrimSpace(linked[0].Digest)) != snap.Digest, preparationReference{State: "VERIFIED", EvaluationID: latest[0].ID, RunID: latest[0].JobRunID, SnapshotID: linked[0].ID}, nil
 }
 
 // prepareOrdinaryIncremental loads each candidate's full current snapshot once and keeps only
@@ -95,31 +103,48 @@ func sourceVersionChanged(job models.Job, conv models.Conversation, snap *conver
 // Empty source is skipped (it becomes eligible again when messages arrive). Snapshot and
 // verification errors are counted as errors, never as skips. Cancellation stops preparation.
 func prepareOrdinaryIncremental(ctx context.Context, job models.Job, candidates []models.Conversation) (prepared []preparedConversation, unchanged, errorCount int, cancelled bool) {
+	return prepareOrdinaryIncrementalObserved(ctx, job, candidates, nil)
+}
+
+func prepareOrdinaryIncrementalObserved(ctx context.Context, job models.Job, candidates []models.Conversation, observer *preparationCollector) (prepared []preparedConversation, unchanged, errorCount int, cancelled bool) {
 	for _, conv := range candidates {
 		if ctx.Err() != nil {
+			observer.stop("CONTEXT_CANCELLED")
 			return prepared, unchanged, errorCount, true
 		}
+		observer.start(conv)
 		snap, err := loadConversationSnapshot(conv, time.Time{})
 		if err != nil {
 			log.Printf("[analyzer] snapshot error for conversation %s: %v", conv.ID, err)
 			errorCount++
+			observer.finish("SNAPSHOT_ERROR")
 			continue
 		}
+		observer.snapshot(conv, snap)
 		if snap.Manifest.Coverage == coverageEmpty {
+			observer.finish("EMPTY_SOURCE")
 			continue
 		}
-		changed, err := sourceVersionChanged(job, conv, snap)
+		changed, reference, err := sourceVersionChangedObserved(job, conv, snap)
+		observer.reference(reference)
 		if err != nil {
 			log.Printf("[analyzer] source version check failed for conversation %s: %v", conv.ID, err)
 			errorCount++
+			observer.finish("SOURCE_VERSION_ERROR")
 			continue
 		}
 		if !changed {
 			unchanged++
+			observer.finish("UNCHANGED_VERIFIED")
 			continue
 		}
 		prepared = append(prepared, preparedConversation{Conv: conv, Snap: snap})
+		observer.finish("PREPARED_FOR_INFERENCE")
 	}
+	if ctx.Err() != nil {
+		observer.stop("CONTEXT_CANCELLED")
+	}
+	observer.complete()
 	return prepared, unchanged, errorCount, false
 }
 
