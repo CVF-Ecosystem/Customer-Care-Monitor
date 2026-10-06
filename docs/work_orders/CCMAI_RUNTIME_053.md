@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-053 — Archive manifest evidence repair
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-06. R2, REVIEW / REVIEW_PENDING. Worker/repair/BUILD commit steward Codex `/root/r051_preparation`; independent reviewer and dispatcher Codex `/root`. Immutable seed committed before activation. [Cost disposition](../reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md), [SPEC](../specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md), [original checklist](../reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md).
 
@@ -17,3 +17,7 @@ Commit artifact set then separate REVIEW_PENDING handback with exact round4Evide
 Historical execution: fourth-repair BUILD acknowledged before runner edits. Prior dispatch requirements above remain historical; original source/tests/old failed packets immutable, aggregate budget unchanged.
 
 Current handback: exact failed evidence0a1410636decf1558ea0053fcc2cb371d5493c55 REVIEW_PENDING; archive204 strict byte manifest PASS, name-preparation FAIL, aggregate runtime/Go/resources0. All five maintained LP06 leaves preserved; independent count/cost disposition required before any correction. No worker acceptance/retry.
+
+## Source-faithful count correction / successor addendum
+
+Fourth failed evidence0a141063/handback96257360 independently CHANGES_REQUIRED: root SPEC wrongly supplied4 events, actual maintained5 leaves/6 events. Original fullLP06 acceptance/source/tests unchanged. New recorded count/cost disposition authorizes one cumulative fifth successor under unchanged seed/roles/prefix/risk/effects, only new r051_r4_successor_* including report. All old packets/4 rounds retained; aggregate max1 actual campaign/max4Go used0. Worker commits fresh BUILD acknowledgment/preflight before edits, returns exact successorEvidenceCommit/round5EvidenceCommit then separate REVIEW_PENDING. No retry/sixth repair/FREEZE. See docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md.

@@ -68,7 +68,9 @@
     "docs/reviews/probes/r051_r2_independent_summary.json",
     "docs/reviews/probes/r051_r2_independent_campaign.ps1",
     "docs/reviews/CCMAI_RUNTIME_052_INDEPENDENT_REVIEW_2026-10-06.md",
-    "docs/reviews/probes/r052_independent_summary.json"
+    "docs/reviews/probes/r052_independent_summary.json",
+    "docs/reviews/CCMAI_RUNTIME_053_R4_INDEPENDENT_REVIEW_2026-10-06.md",
+    "docs/reviews/probes/r053_r4_independent_summary.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -260,7 +262,7 @@
   "round3EvidenceCommit": "17d60560cc28a3c7dce9351355cc46db8696d393",
   "delegatedRound4ExecutionTranche": "CCMAI-RUNTIME-053",
   "round4Dispatch": {
-    "status": "AUTHORIZED_NOT_STARTED",
+    "status": "FAILED_PREPARATION_INDEPENDENT_CHANGES_REQUIRED",
     "repairRound": 4,
     "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_MANIFEST_COST_DISPOSITION_2026-10-06.md",
     "newRootCause": "R052-R3-01",
@@ -268,5 +270,11 @@
     "historicalRoundsRetained": 3
   },
   "delegatedRound4ExecutionStatus": "REVIEW_PENDING",
-  "round4EvidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55"
+  "round4EvidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
+  "round5Dispatch": {
+    "status": "AUTHORIZED_NOT_STARTED",
+    "executionTranche": "CCMAI-RUNTIME-053",
+    "costDisposition": "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md",
+    "fullLP06CountCorrection": "5 leaves/6 events; no source/test change"
+  }
 }

@@ -1,0 +1,101 @@
+{
+  "trancheId": "CCMAI-RUNTIME-053",
+  "reviewer": "Codex /root",
+  "worker": "Codex /root/r051_preparation",
+  "evidenceCommit": "0a1410636decf1558ea0053fcc2cb371d5493c55",
+  "handbackCommit": "962573608ac164d0ac2a4fb8d307590c1e51784e",
+  "disposition": "CHANGES_REQUIRED",
+  "finding": "R053-R4-01",
+  "authorFault": "Root SPEC falsely specified4 fullLP06 events; source has5 leaves/6 events. Original fullLP06 acceptance unchanged.",
+  "archiveSHA256": "b4d4daff222388d1f721294b0d2ab47899bb70943966bff1742b7c045054be38",
+  "archiveFiles": 204,
+  "archiveManifestMatches": true,
+  "evidencePathsMatch": true,
+  "artifactChecks": [
+    {
+      "path": "docs/reviews/ANALYZER_PROVIDER_EVIDENCE_R051_R4_2026-10-06.md",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r4_campaign.py",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r4_detector_name_audit.json",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r4_preparation_receipt.json",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r4_raw_blob_manifest.json",
+      "committedHashMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r051_r4_source_manifest.json",
+      "committedHashMatches": true
+    }
+  ],
+  "maintainedLeafLiterals": [
+    "negative control: no work succeeds without AI settings/decryption",
+    "positive control: eligible work strictly requires provider initialization (missing key)",
+    "positive control: eligible work strictly requires provider initialization (corrupt key)",
+    "distinct counting of provider constructor access vs AnalyzeChat calls",
+    "distinct counting in non-batch mode: constructor once, single calls match conversation count"
+  ],
+  "normalizedCompletedNames": [
+    "TestLP06EagerInitializationDetectorNegativeAndPositive",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(missing_key)",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(corrupt_key)",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+    "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_in_non-batch_mode:_constructor_once,_single_calls_match_conversation_count"
+  ],
+  "fullCompletedCount": 6,
+  "protectedFilesChecked": 661,
+  "protectedDrift": [],
+  "preparationSeconds": 12.228,
+  "campaigns": 0,
+  "goInvocations": 0,
+  "runtimeDisposition": "FAILED_NOT_RUN",
+  "reviewerNewRuntime": 0,
+  "publication": {
+    "doctor": "PASS WITH NOTE25/1",
+    "status": "FINAL_REVIEW_COUNT_COST_PUBLICATION_PASS",
+    "gateUnits": {
+      "tests": 46,
+      "exit": 0,
+      "seconds": 15.315
+    },
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": "PASS7/7",
+    "docsBuild": {
+      "exit": 0,
+      "seconds": 8.65
+    },
+    "catalogPowerShell51": "PASS",
+    "catalogPowerShell7": "PASS",
+    "diffCheck": "PASS",
+    "stagedPreflight": {
+      "base": "962573608ac164d0ac2a4fb8d307590c1e51784e",
+      "paths": [
+        "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+        "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-051.json",
+        "CVF_SESSION/tranches/CCMAI-RUNTIME-053.json",
+        "CVF_SESSION_MEMORY.md",
+        "IMPLEMENTATION_STATUS.json",
+        "docs/INDEX.md",
+        "docs/catalog/ARTIFACT_REGISTRY.json",
+        "docs/reviews/CCMAI_RUNTIME_053_COUNT_CORRECTION_COST_DISPOSITION_2026-10-06.md",
+        "docs/reviews/CCMAI_RUNTIME_053_R4_INDEPENDENT_REVIEW_2026-10-06.md",
+        "docs/reviews/probes/r053_r4_independent_summary.json",
+        "docs/specs/ANALYZER_PROVIDER_MANIFEST_R053_2026-10-06.md",
+        "docs/work_orders/CCMAI_RUNTIME_053.md"
+      ],
+      "result": "PASS7/7",
+      "note": "Summary restaged and staged gate repeated before commit."
+    }
+  }
+}
