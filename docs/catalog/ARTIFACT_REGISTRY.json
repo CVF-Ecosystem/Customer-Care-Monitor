@@ -2033,6 +2033,20 @@
       "path": "docs/reviews/probes/r055_independent_campaign.py",
       "status": "ACTIVE",
       "description": "Independent root four-Go application review harness; terminal storage erasure and byte restoration; runtime pending."
+    },
+    {
+      "id": "r055-interrupted-review-disposition",
+      "family": "continuity",
+      "path": "docs/reviews/R055_REVIEW_INTERRUPTION_DISPOSITION_2026-10-06.md",
+      "status": "ACTIVE",
+      "description": "Retained worker mount/root timeout failures; no source defect verdict; separate grouped R056 review cost contract."
+    },
+    {
+      "id": "authority-r056",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-056.json",
+      "status": "ACTIVE",
+      "description": "Immutable separate R056 evidence-only independent review authority; no source edits/subagents, six Go max."
     }
   ]
 }

@@ -1,0 +1,405 @@
+{
+  "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "reviewer": "Codex /root",
+  "campaigns": 1,
+  "goInvocations": 2,
+  "automaticRetries": 0,
+  "commands": [
+    {
+      "label": "pure",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r055-review-pure-b8d70084d5",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-independent-rqge277n\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestPreparationReceipt",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+        "TestPreparationReceiptMetadataAndSummaryCompatibility",
+        "TestPreparationReceiptUnknownZeroAndPrivacy"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "none",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-independent-rqge277n\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          }
+        ]
+      },
+      "seconds": 75.639,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r055_independent_pure.jsonl",
+        "bytes": 3468,
+        "sha256": "73e0465a349d6850eb6d4046a34ade7871466a68edd5cab92ac09532de09753b"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r055_independent_pure_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-06T15:38:48.831649429Z",
+        "FinishedAt": "2026-10-06T15:40:03.963550595Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestPreparationReceiptUnknownZeroAndPrivacy",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptMetadataAndSummaryCompatibility",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 3,
+        "pass": 3,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": false
+      }
+    },
+    {
+      "label": "positive",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r055-review-positive-b8d70084d5",
+        "--network",
+        "ccmai-r055-review-net-b8d70084d5",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-independent-rqge277n\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r055-review-db-b8d70084d5:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^Test(SP|LP|Ordinary|Explicit|SinceLast|FullMode|OnlyOrdinary|Admission|Cancel|Terminal|Publication|StaleOwner|EarlyFailures|ProviderPanic|Timeout|UnresolvedRunning|NoLockInversion|NonOrdinary|PlanValidation|EntryPoints)",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestAdmissionDifferentJobsAndTenantsRunConcurrently",
+        "TestAdmissionFaultsAreCheckedAndLeakNothing",
+        "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode",
+        "TestAdmissionStoredRunningRowsFailClosed",
+        "TestAdmissionTwoCoordinatorsSerializeOnTheDatabase",
+        "TestCancelAfterPartialProgressDoesNotNotify",
+        "TestCancelCheckFailureSignalsNothing",
+        "TestCancelStaleRunNeverCancelsTheNewRun",
+        "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit",
+        "TestCancelWithoutAnOwnerIsClassified",
+        "TestEarlyFailuresAreCheckedBoundedAndReleaseOwnership",
+        "TestEntryPointsRejectInvalidParametersWithoutRunOrProvider",
+        "TestExplicitCapOrdersEqualTimesByID",
+        "TestExplicitCheckpointPreservedAcrossModesCapsAndOutcomes",
+        "TestExplicitModeCancellationKeepsCheckpoint",
+        "TestExplicitModeFinalizeControlNotifiesOnce",
+        "TestExplicitModeFinalizeFailure",
+        "TestExplicitModeMatrix",
+        "TestExplicitSelectionIsolationControls",
+        "TestFullModeVietnamDatesKeepFullSnapshot",
+        "TestLP01NoWorkSkipsProviderInitialization",
+        "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+        "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+        "TestLP04SemanticsAcrossModesAndEntryPoints",
+        "TestLP05CancellationPreventsProviderInitialization",
+        "TestLP06EagerInitializationDetectorNegativeAndPositive",
+        "TestNoLockInversionUnderContention",
+        "TestNonOrdinaryModesKeepTheirContracts",
+        "TestOnlyOrdinaryRunWritesCheckpoint",
+        "TestOrdinaryPlanIsOnlyTheUncappedOrdinaryMode",
+        "TestOrdinaryReviewCancellationAtCompletion",
+        "TestOrdinaryReviewSameSecondReplaySucceeds",
+        "TestOrdinaryReviewSuppressedCheckpointWrite",
+        "TestOrdinaryRunAnalyzesConversationInsertedDuringPreviousRun",
+        "TestOrdinaryRunAnalyzesLateIngestedOldConversation",
+        "TestOrdinaryRunAnalyzesLateMessageAndEditWithoutNewerTimestamp",
+        "TestOrdinaryRunClassificationSharesSelection",
+        "TestOrdinaryRunDetectsChangeAfterPreparation",
+        "TestOrdinaryRunFailuresKeepCheckpoint",
+        "TestOrdinaryRunReceiptsAreJobBound",
+        "TestOrdinaryRunTerminalWriteFailure",
+        "TestOrdinaryRunUnverifiableReceiptFailsClosed",
+        "TestPlanValidationRejectsBeforeAnySideEffect",
+        "TestProviderPanicIsCleanedUpWithoutLeakingTheValue",
+        "TestPublicationIsSerializedWithCancel",
+        "TestSPAllExplicitModesCapAndContext",
+        "TestSPCancellationAndProviderPanic",
+        "TestSPInitialAndProgressRecordingGap",
+        "TestSPInputSelectionAndPreparationPanic",
+        "TestSPObservedQueriesAndReferenceErrors",
+        "TestSPOrdinaryExplicitAndProgressPersistence",
+        "TestSPSingleProviderErrorReceipt",
+        "TestSPSnapshotLookupMissingAndMisboundObservations",
+        "TestSPStoredEarlyTerminalReceipt",
+        "TestSPTerminalFailureAndLegacyClose",
+        "TestSinceLastAnchorErrorFailsTheRun",
+        "TestSinceLastNullOnlyAnchorFallsBackToUnanalyzed",
+        "TestSinceLastWithoutAnchorIsUnanalyzed",
+        "TestStaleOwnerCleanupNeverTouchesTheNewRun",
+        "TestTerminalCommitWinsOrCancelWinsDeterministically",
+        "TestTerminalRunHoldsTheSlotUntilTheTailFinishes",
+        "TestTerminalWritesClearTheLease",
+        "TestTimeoutIsNonSuccessAndReleasesOwnership",
+        "TestUnresolvedRunningRowKeepsBlockingAfterTerminalFailure"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r055-review-net-b8d70084d5",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-independent-rqge277n\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "type": "TimeoutExpired",
+      "message": "Command '['docker', 'start', '--attach', 'ccmai-r055-review-positive-b8d70084d5']' timed out after 240 seconds"
+    }
+  ],
+  "sourceDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r055-independent-rqge277n",
+  "scope": "application_observation_only",
+  "cleanup": {
+    "containers": [
+      {
+        "name": "ccmai-r055-review-positive-b8d70084d5",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r055-review-db-b8d70084d5",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r055-review-pure-b8d70084d5",
+        "removeExit": 0,
+        "absent": true
+      }
+    ],
+    "volumes": [
+      {
+        "name": "33abc0c639738bd8187047049f51b392cec1ef749ee98f2932628554f1bada49",
+        "absent": true
+      }
+    ],
+    "network": {
+      "name": "ccmai-r055-review-net-b8d70084d5",
+      "removeExit": 0,
+      "absent": true
+    },
+    "successfulInventoryExits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "images": [
+    {
+      "tag": "golang:1.26-alpine",
+      "id": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+    },
+    {
+      "tag": "mysql:8.0",
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    }
+  ],
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+      "backend"
+    ],
+    "bytes": 2355200,
+    "sha256": "1523b0a5c1853929bbbfbac30b06741db4be99b2a59c251b3825982a551df4d3"
+  },
+  "manifest": {
+    "path": "docs/reviews/probes/r055_independent_manifest.json",
+    "bytes": 33343,
+    "sha256": "3cb8949f9213e494c2f1e0d405b1eb7b4713da23333fd870d62240606f2495f6"
+  },
+  "sourceChecks": [
+    {
+      "stage": "before mutation",
+      "equal": true
+    },
+    {
+      "stage": "after controlled throw",
+      "equal": true
+    },
+    {
+      "stage": "final",
+      "equal": true
+    }
+  ],
+  "mutation": {
+    "targetPath": "backend/engine/job_run_ownership.go",
+    "appliedInIsolatedCopyOnly": true,
+    "matchCount": 1,
+    "originalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+    "mutantSha256": "4c344567f51a017bdf1ed955fdacf672b357d2b81d4e78b0bdb92162a91dda45",
+    "diffSha256": "56f76ffca255233c43626ba68bb0d6ce6a32380827074e22da9c86d54ca408da",
+    "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvam9iX3J1bl9vd25lcnNoaXAuZ28KKysrIGIvYmFja2VuZC9lbmdpbmUvam9iX3J1bl9vd25lcnNoaXAuZ28KQEAgLTM3Myw3ICszNzMsNyBAQAogCQlzdGF0dXMsIG1zZyA9ICJjYW5jZWxsZWQiLCAiQ2FuY2VsbGVkIGJ5IHVzZXIiCiAJfQogCWZpbmlzaGVkQXQgOj0gYW5hbHl6ZXJOb3coKQotCWlmIGVyciA6PSBmaW5hbGl6ZU9yZGluYXJ5UnVuKHJ1biwgam9iLCBzdGF0dXMsIG1zZywgc3VtbWFyeSwgZmluaXNoZWRBdCwgbmlsKTsgZXJyICE9IG5pbCB7CisJaWYgZXJyIDo9IGZpbmFsaXplT3JkaW5hcnlSdW4ocnVuLCBqb2IsIHN0YXR1cywgbXNnLCAie30iLCBmaW5pc2hlZEF0LCBuaWwpOyBlcnIgIT0gbmlsIHsKIAkJb3duZXIudGVybWluYWxGYWlsZWQoKQogCQlyZXR1cm4gc3RhdHVzLCBmbXQuRXJyb3JmKCJjbG9zZSBydW46ICV3IiwgZXJyKQogCX0K"
+  },
+  "controlledThrow": {
+    "caughtOnlyExpected": true,
+    "restored": true
+  },
+  "network": {
+    "Name": "ccmai-r055-review-net-b8d70084d5",
+    "Id": "bb443b3995076babea98cb56501c5f1145316bfb95bcc9b9dc7bfee8f91b8995",
+    "Created": "2026-10-06T15:40:04.630444425Z",
+    "Scope": "local",
+    "Driver": "bridge",
+    "EnableIPv4": true,
+    "EnableIPv6": false,
+    "IPAM": {
+      "Driver": "default",
+      "Options": {},
+      "Config": [
+        {
+          "Subnet": "172.19.0.0/16",
+          "Gateway": "172.19.0.1"
+        }
+      ]
+    },
+    "Internal": true,
+    "Attachable": false,
+    "Ingress": false,
+    "ConfigFrom": {
+      "Network": ""
+    },
+    "ConfigOnly": false,
+    "Options": {
+      "com.docker.network.enable_ipv4": "true",
+      "com.docker.network.enable_ipv6": "false"
+    },
+    "Labels": {},
+    "Containers": {},
+    "Status": {
+      "IPAM": {
+        "Subnets": {
+          "172.19.0.0/16": {
+            "IPsInUse": 3,
+            "DynamicIPsAvailable": 65533
+          }
+        }
+      }
+    }
+  },
+  "database": {
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "33abc0c639738bd8187047049f51b392cec1ef749ee98f2932628554f1bada49",
+        "Source": "/var/lib/docker/volumes/33abc0c639738bd8187047049f51b392cec1ef749ee98f2932628554f1bada49/_data",
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "ports": {}
+  },
+  "result": "CHANGES_REQUIRED_NO_RETRY",
+  "seconds": 340.933
+}
