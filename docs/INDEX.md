@@ -1,4 +1,4 @@
-# Project Documentation Index
+﻿# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -206,6 +206,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Cost disposition: one bounded evidence-only R3, four Go commands, no automatic retry/fourth repair; unchanged seed and independent reviewer.: `docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md`
 - R051 RP-01..04 test/evidence repair acceptance inherits unchanged LP-01..08, production preserved.: `docs/specs/ANALYZER_PROVIDER_REPAIR_R051_2026-10-05.md`
 - R051 CHANGES_REQUIRED; final narrowed RP-04 evidence repair authorized/not started, accepted source/tests/old packets protected.: `docs/work_orders/CCMAI_RUNTIME_051.md`
+- Owner-approved independent Codex subagent route for unchanged R051/R3 evidence-only budget; immutable predecessors and cost history retained.: `CVF_SESSION/authority/CCMAI-RUNTIME-052.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

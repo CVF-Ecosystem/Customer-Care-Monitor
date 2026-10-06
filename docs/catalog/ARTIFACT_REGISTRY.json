@@ -1529,6 +1529,13 @@
       "path": "docs/reviews/CCMAI_RUNTIME_051_REVIEW_COST_DISPOSITION_2026-10-06.md",
       "status": "ACTIVE",
       "description": "Cost disposition: one bounded evidence-only R3, four Go commands, no automatic retry/fourth repair; unchanged seed and independent reviewer."
+    },
+    {
+      "id": "runtime052-r3-route-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-052.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved independent Codex subagent route for unchanged R051/R3 evidence-only budget; immutable predecessors and cost history retained."
     }
   ]
 }
