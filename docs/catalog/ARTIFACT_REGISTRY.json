@@ -2677,6 +2677,13 @@
       "path": "docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md",
       "status": "ACTIVE",
       "description": "Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD."
+    },
+    {
+      "id": "evidence-r063-authority-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-063.json",
+      "status": "ACTIVE",
+      "description": "Dispatcher-owned R2 rule-observation seed; medium child BUILD/root independent review, activation follows first commit."
     }
   ]
 }

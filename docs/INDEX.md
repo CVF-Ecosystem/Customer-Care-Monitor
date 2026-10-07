@@ -74,6 +74,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Local execution observation closure, inherited independent proof, old failures retained.: `docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md`
 - Metadata-only scoped local closure record; zero runtime/source edits.: `CVF_SESSION/tranches/CCMAI-RUNTIME-062.json`
 - Scoped local R061 closure only, not complete S2/live/governance.: `docs/work_orders/CCMAI_RUNTIME_062.md`
+- Dispatcher-owned R2 rule-observation seed; medium child BUILD/root independent review, activation follows first commit.: `CVF_SESSION/authority/CCMAI-RUNTIME-063.json`
 - Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD.: `docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md`
 - Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD.: `docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
