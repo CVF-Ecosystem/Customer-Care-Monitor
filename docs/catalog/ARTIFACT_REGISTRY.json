@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R063 REVIEW_PENDING handback; child source/runtime submitted, independent root campaign/review next, worker4Go used."
+      "description": "Active R063 independent REVIEW_PASS / FREEZE_OPEN; bounded local closure assessment next,8Go exhausted."
     },
     {
       "id": "r060-work-order",
@@ -2830,21 +2830,154 @@
       "family": "continuity",
       "path": "docs/reviews/probes/r063_independent_campaign.py",
       "status": "ACTIVE",
-      "description": "Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet."
+      "description": "Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary."
     },
     {
       "id": "evidence-r063-review-proof-plan",
       "family": "continuity",
       "path": "docs/reviews/probes/r063_independent_plan.json",
       "status": "ACTIVE",
-      "description": "Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet."
+      "description": "Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary."
     },
     {
       "id": "evidence-r063-review-proof-protected",
       "family": "continuity",
       "path": "docs/reviews/probes/r063_independent_protected.json",
       "status": "ACTIVE",
-      "description": "Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet."
+      "description": "Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary."
+    },
+    {
+      "id": "evidence-r063-actual-review-m01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m01.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m01-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m01_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m01-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m01_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m02.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m02-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m02_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m02-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m02_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-mutation1-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_mutation1_diff.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-mutation2-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_mutation2_diff.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-positive",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-positive-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-restored",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-restored-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Derived reconciliation receipt from actual retained raw logs/manifests/daemon events; original summary/inspect snapshots lost, zero new Go."
+    },
+    {
+      "id": "evidence-r063-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R063_INDEPENDENT_RULE_OBSERVATION_REVIEW_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Independent REVIEW_PASS for RO01..12, exact source/controls/limits and preserved failure history."
+    },
+    {
+      "id": "evidence-r063-reconciliation-events",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_daemon_events_recovery.json",
+      "status": "ACTIVE",
+      "description": "Actual retained Docker daemon events used in transparent review receipt reconciliation."
+    },
+    {
+      "id": "evidence-r063-reconciliation-script",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_reconcile_review_evidence.py",
+      "status": "ACTIVE",
+      "description": "Static reconciliation of actual retained evidence; zero new Go or infrastructure creation."
+    },
+    {
+      "id": "evidence-r063-reconciliation-incident",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_review_publication_incident.json",
+      "status": "ACTIVE",
+      "description": "Retained publication path-alias failure and explicit original summary loss."
+    },
+    {
+      "id": "evidence-r063-reconciliation-learning",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_review_publication_receipt_integrity.md",
+      "status": "ACTIVE",
+      "description": "Shared publication receipt integrity finding and actual-evidence recovery boundaries."
     }
   ]
 }

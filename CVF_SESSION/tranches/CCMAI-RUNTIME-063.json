@@ -63,17 +63,20 @@
   ],
   "claimScope": "Bounded local rule-input observation RO01..12 only. Fingerprint is content identity, not permission/approval/policy revision or enforced WAIT_DATA; existing behavior/preparation/execution/scalars preserved. No full S2/live/governance/hosted claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_063.md",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015",
   "buildCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
-  "reviewEvidence": [],
-  "disposition": "PENDING_INDEPENDENT_REVIEW",
+  "reviewEvidence": [
+    "docs/reviews/R063_INDEPENDENT_RULE_OBSERVATION_REVIEW_2026-10-08.md"
+  ],
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -94,8 +97,8 @@
     "workerUsedGoInvocations": 4,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedGoInvocations": 0,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 4,
     "aggregateMaxCampaigns": 2,
     "aggregateMaxGoInvocations": 8
   },
@@ -119,7 +122,7 @@
     "noUnrelatedFormatting": true
   },
   "workerAcknowledgment": "2026-10-08 fresh continuity/declaration/doctor PASS WITH NOTE25/1; before-edit BUILD acknowledged, source/Go0",
-  "sourceImplementation": "IMPLEMENTED_WORKER_EVIDENCE_PENDING_INDEPENDENT_REVIEW",
+  "sourceImplementation": "COMMITTED_REVIEW_PASS",
   "liveEvidence": "NOT_RUN; synthetic application observations planned, no governance claim",
   "activationPublicationChecks": {
     "default": "PASS7/7",
@@ -178,5 +181,51 @@
       "staged": "PASS7/7 exact8paths",
       "gateUnits": "Fresh46PASS69.220s"
     }
+  },
+  "acceptedIndependentRuntime": {
+    "sourceCommit": "55e836a1b980b3e5d4075ceb33466786c860f963",
+    "archiveSourceCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
+    "receipt": "docs/reviews/probes/r063_independent_summary.json",
+    "result": "PASS",
+    "campaigns": 1,
+    "Go": 4,
+    "seconds": 248.818,
+    "positiveTop": 53,
+    "positivePass": 152,
+    "restoredTop": 9,
+    "restoredPass": 43,
+    "mutations": "M01/M02 KILLED_BY_NAMED_SEMANTIC_ASSERTION; three classification controls PASS",
+    "restoration": "PASS213members",
+    "cleanup": "PASS",
+    "sourceEdits": 0,
+    "gateUnits": "Fresh46PASS69.220s at review acknowledgment; tooling unchanged",
+    "receiptKind": "DERIVED_RECONCILIATION_FROM_ACTUAL_RETAINED_EVIDENCE",
+    "lostInspectionLimit": "Original per-container inspect snapshots unavailable; actual retained daemon events, executed committed runner and witnessed pre-loss audit attributed explicitly."
+  },
+  "reviewPublicationIncident": {
+    "incident": "docs/reviews/probes/r063_review_publication_incident.json",
+    "reconciliation": "docs/reviews/probes/r063_reconcile_review_evidence.py",
+    "daemonEvents": "docs/reviews/probes/r063_independent_daemon_events_recovery.json",
+    "status": "RECONCILED_FROM_ACTUAL_RETAINED_EVIDENCE",
+    "originalSummary": "UNRECOVERABLE_AS_ORIGINAL_BYTES",
+    "originalInspectSnapshots": "LOST; NOT INVENTED",
+    "finding": "Path variable alias overwrote new summary before commit; final manifest lookup failed. Post-recovery doctor failed stale generated index; regenerated before final acceptance checks.",
+    "newGo": 0,
+    "sourceEdits": 0
+  },
+  "independentPublicationChecks": {
+    "default": "PASS7/7 repaired publication",
+    "prRange": "PASS7/7 origin/main..HEAD",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "docs": "PASS38.53s final report/learning/generated index",
+    "doctor": "PASS WITH NOTE25/1 after index regeneration; preceding stale-index failure24/26 retained",
+    "gateUnits": "Fresh46PASS69.220s at acknowledgment inherited; scripts/tests unchanged",
+    "protected": "PASS old packet/seed physical hashes; zero backend/tooling/seed changes",
+    "receipt": "PASS actual raw reference hashes and static full213member reconciliation; original summary/inspect loss explicit",
+    "extraGo": 0,
+    "exactChangedSet": "PASS7/7 exact27 staged metadata/review paths; final staged gate rerun after recording observed result",
+    "diff": "PASS",
+    "stagedHashFinding": "Two precommit hash audits stopped on physical CRLF versus normalized Git LF: first old plan, then new daemon-event JSON. Reference hashes explicitly WORKTREE_PHYSICAL; separate LF-normalized text hashes make the Git representation independently verifiable. Actual evidence content/protected packet unchanged; no commit or Go during failed audits."
   }
 }

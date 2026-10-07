@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-08",
+  "kind": "REVIEW_PUBLICATION_PATH_ALIAS",
+  "cause": "Loop variable p replaced the intended registry Path with the last independent proof file (summary), then wrote registry JSON to that path.",
+  "overwrittenSummarySha256": "c8033e5e37a5c9b12d6adb75bdc1100aee460d56735327f0764b19a46171d313",
+  "overwrittenSummaryBytes": 137840,
+  "originalSummary": "UNRECOVERABLE_AS_ORIGINAL_BYTES; do not claim original restored",
+  "rawEvidence": "JSONL/stderr/full and mutant manifests/plan/diffs remain intact; pre-loss root audit already checked original summary rawhashes/restoration/cleanup and actual runner stdout PASS4Go248.818s.",
+  "recovery": "Read retained actual Docker daemon events plus intact files and rerun only static reconciliation/absence checks, zero new Go/containers; derive a clearly labeled replacement summary, preserve incident.",
+  "oldWorkerPacketsAffected": false,
+  "canonicalSourceAffected": false,
+  "additionalGoInvocations": 0
+}

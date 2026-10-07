@@ -53,9 +53,13 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R063 work-order activation (2026-10-08)
+- [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-CCMAI-RUNTIME-063 REVIEW_PENDING / REVIEW at source55e836a1b980b3e5d4075ceb33466786c860f963 and exact campaign661113d888c5886331c9b4eb99783a215cf8c58f. Worker1campaign/4Go complete: positive65top196PASS, M01/M02 named semantic kills with healthy classification contrast, restored9top43PASS,213member byte restoration/secondarchive/named cleanup verified. Root independent REVIEWER next audits source/evidence and runs one bounded campaign/max4Go, aggregate max8Go; worker no moreGo/no retry. Original setup failures/packets retained, FREEZE OPEN; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+## Current R063 independent review (2026-10-08)
+
+CCMAI-RUNTIME-063 REVIEW_PASS / REVIEW / FREEZE_OPEN after independent root review of medium child source55e836a1b980b3e5d4075ceb33466786c860f963 / exact archive661113d888c5886331c9b4eb99783a215cf8c58f: root53top152PASS, M01/M02 named kills with healthy classification contrast, restored9top43PASS,213member restoration/secondarchive/cleanup/protected packets verified. ORCHESTRATOR/CLOSER next assesses separately seeded metadata-only local closure for accepted RO01..12, no FREEZE under R063 BUILD seed. Worker1campaign4Go/root1campaign4Go total8Go exhausted; original failures/budgets/packets retained. No further source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy or full S2/live/governance/hosted claim; Facebook/Zalo OA parked.
+
+R063 publication incident retained: summary/inspect snapshots lost before commit; receipt derived from intact raw logs/manifests and actual daemon events. Static reconciliation PASS, zero new Go; provenance limitation explicit in formal review.
 
 ## Historical R062 local execution observation closure (2026-10-08)
 

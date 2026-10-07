@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R063 REVIEW_PENDING handback; child source/runtime submitted, independent root campaign/review next, worker4Go used.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md`
+- Active R063 independent REVIEW_PASS / FREEZE_OPEN; bounded local closure assessment next,8Go exhausted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -74,6 +74,20 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Local execution observation closure, inherited independent proof, old failures retained.: `docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md`
 - Metadata-only scoped local closure record; zero runtime/source edits.: `CVF_SESSION/tranches/CCMAI-RUNTIME-062.json`
 - Scoped local R061 closure only, not complete S2/live/governance.: `docs/work_orders/CCMAI_RUNTIME_062.md`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m01.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m01_manifest.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m01_stderr.log`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m02.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m02_manifest.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m02_stderr.log`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_manifest.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_mutation1_diff.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_mutation2_diff.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_positive.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_positive_stderr.log`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_restored.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_restored_stderr.log`
+- Derived reconciliation receipt from actual retained raw logs/manifests/daemon events; original summary/inspect snapshots lost, zero new Go.: `docs/reviews/probes/r063_independent_summary.json`
 - Dispatcher-owned R2 rule-observation seed; medium child BUILD/root independent review, activation follows first commit.: `CVF_SESSION/authority/CCMAI-RUNTIME-063.json`
 - R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_campaign.py`
 - R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_M01.jsonl`
@@ -93,10 +107,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/R063_WORKER_RULE_OBSERVATION_BUILD_2026-10-08.md`
 - R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_summary.json`
 - Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD.: `docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md`
+- Independent REVIEW_PASS for RO01..12, exact source/controls/limits and preserved failure history.: `docs/reviews/R063_INDEPENDENT_RULE_OBSERVATION_REVIEW_2026-10-08.md`
 - Historical R062 local FREEZE and R063 planning before separate activation.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md`
-- Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet.: `docs/reviews/probes/r063_independent_campaign.py`
-- Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet.: `docs/reviews/probes/r063_independent_plan.json`
-- Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet.: `docs/reviews/probes/r063_independent_protected.json`
+- Actual retained Docker daemon events used in transparent review receipt reconciliation.: `docs/reviews/probes/r063_independent_daemon_events_recovery.json`
+- Retained publication path-alias failure and explicit original summary loss.: `docs/reviews/probes/r063_review_publication_incident.json`
+- Shared publication receipt integrity finding and actual-evidence recovery boundaries.: `docs/reviews/learnings/feedback_review_publication_receipt_integrity.md`
+- Static reconciliation of actual retained evidence; zero new Go or infrastructure creation.: `docs/reviews/probes/r063_reconcile_review_evidence.py`
+- Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_campaign.py`
+- Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_plan.json`
+- Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_protected.json`
 - R063 bounded R2 work-order record, immutable seed before BUILD.: `CVF_SESSION/tranches/CCMAI-RUNTIME-063.json`
 - Authorized additive rule-input observation only; exact SP/EX compatibility, independent roles/max8Go.: `docs/work_orders/CCMAI_RUNTIME_063.md`
 - Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD.: `docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md`
