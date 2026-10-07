@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"sort"
 	"strings"
 	"testing"
 	"time"
@@ -79,12 +80,64 @@ func exReload(t *testing.T, run *models.JobRun) *executionReceipt {
 	}
 	return r
 }
+
+// UUID-positive fixture is local to EX tests. Construct parents before children;
+// no old fixture identity is rewritten and no ON UPDATE CASCADE is assumed.
+func setupEXFixture(t *testing.T, batch bool, jobType string) *incFixture {
+	t.Helper()
+	db.Close()
+	connectIncDB(t)
+	f := &incFixture{tenantID: pkg.NewUUID(), otherTenantID: pkg.NewUUID(), channelID: pkg.NewUUID(), otherChannelID: pkg.NewUUID(), otherTenantChannelID: pkg.NewUUID(), jobID: pkg.NewUUID(), batch: batch}
+	for _, tenant := range []string{f.tenantID, f.otherTenantID} {
+		f.exec(t, `INSERT INTO tenants (id, name, slug, settings, created_at, updated_at) VALUES (?, 'EX', ?, '{}', NOW(), NOW())`, tenant, tenant)
+	}
+	for channel, tenant := range map[string]string{f.channelID: f.tenantID, f.otherChannelID: f.tenantID, f.otherTenantChannelID: f.otherTenantID} {
+		f.exec(t, `INSERT INTO channels (id, tenant_id, channel_type, name, external_id, credentials_encrypted, is_active, metadata, created_at, updated_at) VALUES (?, ?, 'pancake', 'EX', ?, X'00', true, '{}', NOW(), NOW())`, channel, tenant, "ext-"+channel)
+	}
+	channels, _ := json.Marshal([]string{f.channelID})
+	f.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'EX', ?, ?, 'Phan hoi dung han.', '[{"name":"Hoi don"}]', 'manual', '', true, '[]', 'none', NOW(), NOW())`, f.jobID, f.tenantID, jobType, string(channels))
+	mode := "false"
+	if batch {
+		mode = "true"
+	}
+	for key, value := range map[string]string{"ai_batch_mode": mode, "ai_batch_size": "30"} {
+		f.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, created_at, updated_at) VALUES (?, ?, ?, ?, NOW(), NOW())`, pkg.NewUUID(), f.tenantID, key, value)
+	}
+	f.clock = time.Now().UTC().Truncate(time.Second).Add(-10 * time.Minute).Add(437 * time.Millisecond)
+	origNow, origDelay, origNotify := analyzerNow, ordinaryFinalizeRetryDelay, sendJobNotifications
+	analyzerNow = func() time.Time { return f.clock }
+	ordinaryFinalizeRetryDelay = 10 * time.Millisecond
+	sendJobNotifications = func(context.Context, models.Job, models.JobRun) error {
+		t.Fatal("EX fixture unexpectedly notified")
+		return nil
+	}
+	t.Cleanup(func() {
+		analyzerNow, ordinaryFinalizeRetryDelay, sendJobNotifications = origNow, origDelay, origNotify
+		for _, tenant := range []string{f.tenantID, f.otherTenantID} {
+			for _, table := range []string{"job_results", "analysis_snapshots", "job_runs", "ai_usage_logs", "messages", "conversations", "app_settings", "activity_logs", "jobs", "channels"} {
+				if err := db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", tenant).Error; err != nil {
+					t.Errorf("EX cleanup %s: %v", table, err)
+				}
+			}
+			if err := db.DB.Exec("DELETE FROM tenants WHERE id = ?", tenant).Error; err != nil {
+				t.Errorf("EX tenant cleanup: %v", err)
+			}
+		}
+	})
+	return f
+}
 func exAdd(t *testing.T, f *incFixture, n int) []string {
 	t.Helper()
 	ids := []string{}
 	for i := 0; i < n; i++ {
-		ids = append(ids, f.addConv(t, f.tenantID, f.channelID, fmt.Sprintf("ex-%d", i), []time.Time{f.clock.Add(-time.Hour)}))
+		id := pkg.NewUUID()
+		at := f.clock.Add(-time.Hour)
+		f.exec(t, `INSERT INTO conversations (id, tenant_id, channel_id, external_conversation_id, customer_name, last_message_at, message_count, metadata, created_at, updated_at) VALUES (?, ?, ?, ?, 'EX', ?, 1, '{}', NOW(), NOW())`, id, f.tenantID, f.channelID, "ext-"+id, at.UTC())
+		f.addMsg(t, f.tenantID, id, fmt.Sprintf("ex-%d-m0", i), at)
+		ids = append(ids, id)
 	}
+	// The ordinary candidate query orders equal timestamps by ID.
+	sort.Strings(ids)
 	return ids
 }
 func exCreateHook(t *testing.T, table string, fn func(*gorm.DB)) {
@@ -102,7 +155,7 @@ func exCreateHook(t *testing.T, table string, fn func(*gorm.DB)) {
 func TestEXNoCallConstructionAndPreparation(t *testing.T) {
 	for _, scenario := range []string{"empty", "unchanged", "setup_error", "preparation_error", "cancel_before_call"} {
 		t.Run(scenario, func(t *testing.T) {
-			f := setupIncFixture(t, false, "qc_analysis")
+			f := setupEXFixture(t, false, "qc_analysis")
 			p := &incProvider{verdict: "PASS"}
 			a := NewAnalyzer(&config.Config{})
 			constructed := 0
@@ -168,10 +221,16 @@ func TestEXNoCallConstructionAndPreparation(t *testing.T) {
 	}
 }
 func TestEXStoredTerminalSingleSuccess(t *testing.T) {
-	f := setupIncFixture(t, false, "qc_analysis")
+	f := setupEXFixture(t, false, "qc_analysis")
 	ids := exAdd(t, f, 1)
 	run := f.mustRun(t, &incProvider{verdict: "PASS"})
 	r := exReload(t, run)
+	if len(r.Calls) != 1 || len(r.Calls[0].MemberIDs) != 1 {
+		t.Fatalf("single binding missing: %+v", r)
+	}
+	if r.TenantID != f.tenantID || r.JobID != f.jobID || r.RunID != run.ID || r.MetadataIncomplete || r.Calls[0].MetadataIncomplete {
+		t.Fatal("valid UUID fixture envelope binding incomplete")
+	}
 	if r.CallsBegun != 1 || r.ResponseReturned != 1 || r.ItemsSaved != 1 || r.ItemsPending != 0 || r.UsageWrites["WRITE_SUCCEEDED"] != 1 || !r.ExecutionComplete || r.Calls[0].MemberIDs[0] != ids[0] || r.Calls[0].Parsing != "NOT_SEPARATELY_OBSERVABLE" {
 		t.Fatalf("single %+v", r)
 	}
@@ -184,8 +243,8 @@ func TestEXStoredTerminalSingleSuccess(t *testing.T) {
 func TestEXBatchBindingAndParserRejection(t *testing.T) {
 	for _, bad := range []bool{false, true} {
 		t.Run(fmt.Sprint(bad), func(t *testing.T) {
-			f := setupIncFixture(t, true, "qc_analysis")
-			exAdd(t, f, 3)
+			f := setupEXFixture(t, true, "qc_analysis")
+			ids := exAdd(t, f, 3)
 			p := &exProvider{base: incProvider{verdict: "PASS"}}
 			if bad {
 				p.batch = func(context.Context, string, []ai.BatchItem) (ai.AIResponse, error) {
@@ -197,6 +256,12 @@ func TestEXBatchBindingAndParserRejection(t *testing.T) {
 				t.Fatal(err)
 			}
 			r := exReload(t, run)
+			if len(r.Calls) != 1 || len(r.Calls[0].MemberIDs) != len(ids) {
+				t.Fatal("batch bindings missing")
+			}
+			if strings.Join(r.Calls[0].MemberIDs, ",") != strings.Join(ids, ",") || r.TenantID != f.tenantID || r.JobID != f.jobID || r.RunID != run.ID || r.MetadataIncomplete || r.Calls[0].MetadataIncomplete {
+				t.Fatal("ordered batch UUID binding changed")
+			}
 			if r.CallsBegun != 1 || r.ResponseReturned != 1 || r.ItemCount != 3 || len(r.Calls[0].MemberIDs) != 3 || r.Calls[0].Method != "BATCH" || r.UsageWrites["WRITE_SUCCEEDED"] != 1 {
 				t.Fatalf("batch %+v", r)
 			}
@@ -219,7 +284,7 @@ func TestEXResponseAndErrorWinsInBothModes(t *testing.T) {
 	for _, scenario := range []struct{ batch, explicit bool }{{false, false}, {true, false}, {false, true}, {true, true}} {
 		t.Run(fmt.Sprintf("batch%t_explicit%t", scenario.batch, scenario.explicit), func(t *testing.T) {
 			batch := scenario.batch
-			f := setupIncFixture(t, batch, "qc_analysis")
+			f := setupEXFixture(t, batch, "qc_analysis")
 			exAdd(t, f, 2)
 			p := &exProvider{}
 			answer := ai.AIResponse{Content: "secret response with error"}
@@ -256,11 +321,14 @@ func TestEXResponseAndErrorWinsInBothModes(t *testing.T) {
 	}
 }
 func TestEXSaveDatabaseFailureIsPublicationFailure(t *testing.T) {
-	f := setupIncFixture(t, false, "qc_analysis")
+	f := setupEXFixture(t, false, "qc_analysis")
 	exAdd(t, f, 1)
 	exCreateHook(t, "job_results", func(tx *gorm.DB) { tx.AddError(errors.New("synthetic save database failure")) })
 	run := f.mustRun(t, &incProvider{verdict: "PASS"})
 	r := exReload(t, run)
+	if len(r.Calls) != 1 {
+		t.Fatal("save-failure call binding missing")
+	}
 	if r.ResponseReturned != 1 || r.ErrorReturned != 0 || r.ItemsSaveFailed != 1 || r.ItemsSaved != 0 || r.UsageWrites["WRITE_SUCCEEDED"] != 1 || r.Calls[0].Parsing != "NOT_SEPARATELY_OBSERVABLE" || run.Status != "error" || f.checkpoint(t) != nil {
 		t.Fatalf("database save failure conflated %+v", r)
 	}
@@ -275,7 +343,7 @@ func TestEXSaveDatabaseFailureIsPublicationFailure(t *testing.T) {
 	}
 }
 func TestEXMixedSaveAndProviderFailures(t *testing.T) {
-	f := setupIncFixture(t, false, "qc_analysis")
+	f := setupEXFixture(t, false, "qc_analysis")
 	exAdd(t, f, 3)
 	n := 0
 	base := &incProvider{verdict: "PASS"}
@@ -301,7 +369,7 @@ func TestEXMixedSaveAndProviderFailures(t *testing.T) {
 func TestEXUsageWriteFailurePreservesSavedResult(t *testing.T) {
 	for _, batch := range []bool{false, true} {
 		t.Run(fmt.Sprint(batch), func(t *testing.T) {
-			f := setupIncFixture(t, batch, "qc_analysis")
+			f := setupEXFixture(t, batch, "qc_analysis")
 			exAdd(t, f, 2)
 			exCreateHook(t, "ai_usage_logs", func(tx *gorm.DB) { tx.AddError(errors.New("synthetic usage failure")) })
 			run := f.mustRun(t, &incProvider{verdict: "PASS"})
@@ -325,7 +393,7 @@ func TestEXCancellationDuringProviderAndBatchPrefix(t *testing.T) {
 	for _, scenario := range []string{"single_running", "batch_running", "batch_prefix"} {
 		t.Run(scenario, func(t *testing.T) {
 			batch := scenario != "single_running"
-			f := setupIncFixture(t, batch, "qc_analysis")
+			f := setupEXFixture(t, batch, "qc_analysis")
 			exAdd(t, f, 3)
 			ctx, cancel := context.WithCancel(context.Background())
 			defer cancel()
@@ -381,7 +449,7 @@ func TestEXCancellationDuringProviderAndBatchPrefix(t *testing.T) {
 func TestEXActualPanicBoundaries(t *testing.T) {
 	for _, stage := range []string{"provider", "usage", "publication"} {
 		t.Run(stage, func(t *testing.T) {
-			f := setupIncFixture(t, false, "qc_analysis")
+			f := setupEXFixture(t, false, "qc_analysis")
 			exAdd(t, f, 1)
 			p := &incProvider{verdict: "PASS"}
 			if stage == "provider" {
@@ -417,7 +485,7 @@ func TestEXActualPanicBoundaries(t *testing.T) {
 func TestEXInitialProgressAndTerminalWriteFaults(t *testing.T) {
 	for _, stage := range []string{"initial", "progress", "terminal", "early_terminal"} {
 		t.Run(stage, func(t *testing.T) {
-			f := setupIncFixture(t, false, "qc_analysis")
+			f := setupEXFixture(t, false, "qc_analysis")
 			exAdd(t, f, 1)
 			job := f.job(t)
 			writes := 0
@@ -476,7 +544,7 @@ func TestEXInitialProgressAndTerminalWriteFaults(t *testing.T) {
 	}
 }
 func TestEXProgressPrefixAndPreparationUnchanged(t *testing.T) {
-	f := setupIncFixture(t, false, "qc_analysis")
+	f := setupEXFixture(t, false, "qc_analysis")
 	exAdd(t, f, 2)
 	var summaries []string
 	name := "ex_progress_" + strings.ReplaceAll(pkg.NewUUID(), "-", "")
@@ -517,7 +585,7 @@ func TestEXProgressPrefixAndPreparationUnchanged(t *testing.T) {
 func TestEXAllExplicitModesRetainScalars(t *testing.T) {
 	for _, mode := range []analysisMode{modeTestRun, modeFull, modeUnanalyzed, modeSinceLast} {
 		t.Run(string(mode), func(t *testing.T) {
-			f := setupIncFixture(t, false, "qc_analysis")
+			f := setupEXFixture(t, false, "qc_analysis")
 			exAdd(t, f, 1)
 			plan, err := newPlan(mode, 1, pkg.BusinessRange{})
 			if err != nil {

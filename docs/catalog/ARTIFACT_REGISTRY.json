@@ -2383,6 +2383,13 @@
       "path": "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md",
       "status": "ACTIVE",
       "description": "Independent raw failure audit and unchanged-scope NEW EX fixture repair; no worker retry or budget expansion."
+    },
+    {
+      "id": "evidence-r060-r1-fixture-repair",
+      "family": "continuity",
+      "path": "docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "R1 new EX UUID fixture and safe exact binding repair, product/oldtests/failure packet unchanged; no worker runtime replay, root independent review pending."
     }
   ]
 }

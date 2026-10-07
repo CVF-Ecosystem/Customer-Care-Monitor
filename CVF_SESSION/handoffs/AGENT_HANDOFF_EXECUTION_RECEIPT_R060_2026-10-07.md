@@ -34,3 +34,7 @@ Sourceed2f53043919dec5260dca0fc5ff41b75c134f70, worker1campaign/1Go failed posit
 ## R1 worker before-edit repair BUILD acknowledgment
 
 Fresh canonical rehydration/declaration completed under disposition9cfcf96; doctor PASS WITH NOTE25/1/core8a4119e origin/main match, manifest26c686cc warning/profile missing and bootstrap migration note retained. REVIEW to BUILD / REPAIR_WORKER / BUILD COMMIT_STEWARD before any repair. Exact accepted finding R060-R1-01: only new EX UUID fixture and safe exact bindings, all product/old tests/seeds/failed evidence immutable. No second worker campaign or new Go; worker1/1 failure retained, independent root1/4 pending within original2/8. Current implementation-planning nextMove/status still carried previous cost-request prose after root disposition; retired during this matching acknowledgment using committed current order/disposition facts, not a new authority choice. Accounts parked, no acceptance/FREEZE.
+
+## R1 repaired source checkpoint
+
+Only new EX dbtest changed after before-edit acknowledgmentc2d531ed377b2832e0c8373f596ceb3d8819f81f. Direct UUID fixture parents/children, all12DB sites, safe exact single/batch/envelope binding and cleanup audit completed; root consolidated static inspection no blocker. Report docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md. Runtime NOT_RERUN, worker1failedcampaign/1Go unchanged, failed packet/product/oldtests/seeds protected. Independent root originally budgeted campaign next after committed source/REVIEW_PENDING handback.
