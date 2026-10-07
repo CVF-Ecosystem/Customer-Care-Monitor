@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md",
       "status": "ACTIVE",
-      "description": "Active R061 narrow fallback-test successor; childmedium repair/noGo and independent root bounded proof."
+      "description": "Active R061 REVIEW_PENDING: repaired source d10e164, worker0Go, independent root successor campaign next."
     },
     {
       "id": "r060-work-order",
@@ -2488,6 +2488,13 @@
       "path": "docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md",
       "status": "ACTIVE",
       "description": "NEW EX terminal-fallback faulttest repair: storedprefix/returned limits, sixcases and callback checks; product/old packets unchanged, no worker runtime."
+    },
+    {
+      "id": "evidence-r061-fault-repair-handback",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_worker_handback.json",
+      "status": "ACTIVE",
+      "description": "REVIEW_PENDING committed-source fullarchive and separate physical/Gitblob protection proof; worker0Go, independent runtime pending."
     }
   ]
 }

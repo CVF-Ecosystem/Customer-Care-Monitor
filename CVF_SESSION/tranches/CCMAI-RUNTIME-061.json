@@ -61,16 +61,17 @@
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_061.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "de0c6a53e762c949475fe93209bbf802a0af62dc",
-  "buildCommit": null,
+  "buildCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "dispatcher": "Codex /root",
   "executionBudget": {
@@ -119,7 +120,7 @@
   },
   "workerAcknowledgment": "Fresh canonical declaration/doctor25/1 before edit; NEW EX faulttest only, no workerGo, immutableseed/oldfailures",
   "workerRepair": {
-    "status": "STATIC_READY_RUNTIME_NOT_RUN",
+    "status": "REVIEW_PENDING_RUNTIME_NOT_RUN",
     "acknowledgmentCommit": "65e39c944da06027f082ff90fe9b4b944275aadf",
     "report": "docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md",
     "rootStaticInspection": "Full faulttest diff reviewed, no blocking finding",
@@ -134,7 +135,19 @@
       "docs": "PASS19.56s after final Markdown/index correction",
       "diff": "PASS",
       "gateUnits": "46PASS20.397s fresh inherited unchanged tooling",
-      "exactStaged": "Required before commit"
+      "exactStaged": "PASS7/7"
+    },
+    "sourceCheckpoint": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+    "handbackReceipt": "docs/reviews/probes/r061_worker_handback.json",
+    "handbackPublicationChecks": {
+      "default": "PASS7/7",
+      "pr": "PASS7/7",
+      "catalogPS51": "PASS",
+      "catalogPS7": "PASS",
+      "diff": "PASS",
+      "docs": "PASS20.11s after final Markdown/index",
+      "gateUnits": "46PASS20.397s fresh inherited unchanged tooling",
+      "exactStaged": "PASS7/7 exact9paths"
     }
   }
 }

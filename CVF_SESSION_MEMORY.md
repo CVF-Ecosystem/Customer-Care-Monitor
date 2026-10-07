@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-061", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-061", "parked": true} -->
 
 ## Startup Order
 
@@ -53,7 +53,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R061 terminal fallback test successor (2026-10-07)
 
-CCMAI-RUNTIME-061 BUILD under immutable seedde0c6a53e762c949475fe93209bbf802a0af62dc: child gpt-6.1-sol medium repairs only NEW EX terminal-fallback fault test and callback/read/prefix assertions, then gated source checkpoint/REVIEW_PENDING. Worker newGo/campaign0; original2failedcampaign2Go preserved, root successor1campaign4Go next, lineage planned6/max8Go/max3campaigns no reset. Product/all other tests/old seeds/packets immutable; no root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-061 REVIEW_PENDING at sourcecheckpointd10e164249b5e7a87206d1d3bc5aec43a1a8ac2f: root independently reviews only NEW EX terminal-fallback faulttest repair and runs authorized successor one4Go exact-archive campaign. Worker newGo/campaign0; two originalfailedcampaign2Go retained, lineage planned6/max8Go/max3campaigns no reset/automatic retry. Product/all other tests/old seeds/packets immutable; no root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 

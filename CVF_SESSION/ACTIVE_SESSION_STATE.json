@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-061 BUILD under immutable seedde0c6a53e762c949475fe93209bbf802a0af62dc: child gpt-6.1-sol medium repairs only NEW EX terminal-fallback fault test and callback/read/prefix assertions, then gated source checkpoint/REVIEW_PENDING. Worker newGo/campaign0; original2failedcampaign2Go preserved, root successor1campaign4Go next, lineage planned6/max8Go/max3campaigns no reset. Product/all other tests/old seeds/packets immutable; no root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-061 REVIEW_PENDING at sourcecheckpointd10e164249b5e7a87206d1d3bc5aec43a1a8ac2f: root independently reviews only NEW EX terminal-fallback faulttest repair and runs authorized successor one4Go exact-archive campaign. Worker newGo/campaign0; two originalfailedcampaign2Go retained, lineage planned6/max8Go/max3campaigns no reset/automatic retry. Product/all other tests/old seeds/packets immutable; no root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root/r059_worker R061 REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER after handback",
+  "activeRole": "Codex /root independent REVIEWER; Codex /root/r059_worker repair handback complete / COMMIT_STEWARD",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
