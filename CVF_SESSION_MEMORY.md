@@ -51,11 +51,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R058 closure / next R059 DESIGN-SPEC (2026-10-07)
+## Current R058 closure / R059 work-order draft (2026-10-07)
 
-CCMAI-RUNTIME-058 and bounded R055/R057 remain locally FROZEN at source05c59e9/review5ff0875/runtimec4f78f2. R059 execution observation DESIGN/SPEC draft ready in docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md; ORCHESTRATOR next prepares separate bounded WORK_ORDER and immutable authority with named independent R2 reviewer before source BUILD. No R059 activation/source/tests/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy; full S2/global F02/live/governance/hosted remain OPEN, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-058 and bounded R055/R057 remain locally FROZEN at source05c59e9/review5ff0875/runtimec4f78f2. R059 DESIGN/SPEC9f01473 and bounded work-order draft docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md ready; independent R2 reviewer identity pending before immutable seed, activation and root source BUILD. Root implementation/commit route proposed, no source/tests/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy; full S2/global F02/live/governance/hosted remain OPEN, Facebook/Zalo OA parked.
 
-R059 draft is planning-only: source implementation NOT_STARTED, independent R2 acceptance NOT_ESTABLISHED. Existing active tranche remains R058/FREEZE; candidate draft does not authorize BUILD. Root handles minor metadata directly; no subagents.
+R059 DESIGN/SPEC and bounded work-order draft are planning-only: reviewer identity UNASSIGNED, source implementation NOT_STARTED, independent R2 acceptance NOT_ESTABLISHED. Existing active tranche remains R058/FREEZE; candidate draft does not authorize BUILD. Root handles minor metadata directly; no subagents.
 
 ## Historical R057 accepted source review before separate closure (2026-10-06)
 

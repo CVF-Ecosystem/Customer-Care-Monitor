@@ -2228,7 +2228,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R058 local FREEZE handoff; R059 execution receipt DESIGN/SPEC draft prepared, no source BUILD or subagents."
+      "description": "Active R058 FREEZE handoff; R059 work-order draft ready, independent reviewer identity pending before source BUILD."
     },
     {
       "id": "work-order-r058",
@@ -2278,6 +2278,13 @@
       "path": "docs/reviews/probes/r059_planning_publication_checks.json",
       "status": "ACTIVE",
       "description": "R059 planning publication checks and retained setup failures; no implementation/runtime or governance evidence."
+    },
+    {
+      "id": "r059-bounded-work-order-draft",
+      "family": "continuity",
+      "path": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Reviewable R059 source work-order draft; exact paths, EX01..12, bounded campaigns; independent reviewer identity pending, no activation or BUILD."
     }
   ]
 }
