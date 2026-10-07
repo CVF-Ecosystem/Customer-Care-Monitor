@@ -150,6 +150,11 @@ def main():
                 raise RuntimeError("mutation not killed by intended behavioral stored-receipt assertion")
             if not any(e["name"] == detector and e["action"] == "fail" for e in top):
                 raise RuntimeError("stored-receipt detector did not fail")
+            if label == "M01":
+                controls = ["TestROFramingUnicodeEmptyAndClassificationVectors/" + vector for vector in ("9d96001a", "9c1834f3", "c0cfd532")]
+                record["contrastingClassificationControls"] = [{"name":control, "passed":any(e["name"] == control and e["action"] == "pass" for e in completed)} for control in controls]
+                if not all(item["passed"] for item in record["contrastingClassificationControls"]):
+                    raise RuntimeError("M01 contrasting classification controls not healthy")
         elif result.returncode or stats["fail"] or stats["skip"] or stats["buildOrTimeout"]:
             raise RuntimeError("positive control failed")
         print(json.dumps({"command": label, "exit": result.returncode, "topLevel": len(top),
@@ -197,7 +202,7 @@ def main():
                 "originalSha256": sha(original), "mutantSha256": sha(mutant), "diffSha256": sha(diff),
                 "diffBase64": base64.b64encode(diff).decode()})
         pattern = "^Test(RO|EX|PreparationReceipt|SP|LP|Snapshot|EvidenceRefs|SingleAndBatchShareSnapshotContract$|ExplicitModeMatrix$|FullModeVietnamDatesKeepFullSnapshot$|OnlyOrdinaryRunWritesCheckpoint$|OrdinaryRunFailuresKeepCheckpoint$|AdmissionRefusesASecondOwnerForEveryEntryPointAndMode$|CancelTargetsTheExactRunAndHoldsOwnershipUntilExit$|EveryTerminalPathHonorsAnAcceptedCancel$|ProviderPanicIsCleanedUpWithoutLeakingTheValue$|ReservationRunsOnlyItsOwnTenantAndJob$|FL03SuccessfulTerminalWrite$|FL03ExhaustedRetriesReturnsBoundedFailure$|FL06SuccessLifecyclePreservation$)"
-        plans = [("positive", pattern), ("M01", "^TestROQCIndependentKnownVector$"),
+        plans = [("positive", pattern), ("M01", "^TestRO(QCIndependentKnownVector|FramingUnicodeEmptyAndClassificationVectors)$"),
                  ("M02", "^TestROStoredTerminalSingleSuccess$"), ("restored", "^TestRO")]
         receipt["plannedInventory"] = [{"label": label, "pattern": selector, "topLevel": expected_names(selector)} for label, selector in plans]
         receipt["preRuntimePlan"] = save("plan.json", (json.dumps({"sourceCommit":args.source,"archive":receipt["archive"],"inventory":receipt["plannedInventory"],"mutations":receipt["mutations"]},indent=2)+"\n").encode())
@@ -237,7 +242,8 @@ def main():
                 expected_manifest = [dict(entry, bytes=len(mutant), sha256=sha(mutant)) if entry["path"] == mutation_path else entry for entry in baseline_manifest]
                 receipt["mutations"][index]["appliedManifest"] = save(label + "_manifest.json", (json.dumps(expected_manifest, indent=2) + "\n").encode())
                 verify_source("applied " + label)
-                go(label, "^" + detector + "$", net, mutant=True, detector=detector, assertion=assertion)
+                selector = "^TestRO(QCIndependentKnownVector|FramingUnicodeEmptyAndClassificationVectors)$" if label == "M01" else "^" + detector + "$"
+                go(label, selector, net, mutant=True, detector=detector, assertion=assertion)
                 receipt["mutations"][index]["disposition"] = "KILLED_BY_NAMED_SEMANTIC_ASSERTION"
             finally:
                 target.write_bytes(original)
