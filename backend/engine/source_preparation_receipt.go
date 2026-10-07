@@ -255,12 +255,16 @@ func preparationSummary(values map[string]interface{}, receipt *preparationRecei
 	return observedSummary(values, receipt, nil)
 }
 
-func observedSummary(values map[string]interface{}, receipt *preparationReceipt, execution *executionReceipt) string {
+func observedSummary(values map[string]interface{}, receipt *preparationReceipt, execution *executionReceipt, rules ...*ruleObservationReceipt) string {
 	if receipt != nil {
 		values["source_preparation"] = receipt
 	}
 	if execution != nil {
 		values["source_execution"] = execution
+	}
+	if len(rules) > 0 && rules[0] != nil {
+		copy := *rules[0]
+		values["rule_observation"] = &copy
 	}
 	b, _ := json.Marshal(values) // all values are typed primitives and frozen receipt fields
 	return string(b)

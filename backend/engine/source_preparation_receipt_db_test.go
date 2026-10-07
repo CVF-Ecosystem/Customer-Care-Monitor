@@ -110,6 +110,10 @@ func TestSPOrdinaryExplicitAndProgressPersistence(t *testing.T) {
 				t.Fatal("missing source_execution in Analyzer summary")
 			}
 			delete(scalars, "source_execution")
+			if _, ok := scalars["rule_observation"]; !ok {
+				t.Fatal("missing rule_observation in Analyzer summary")
+			}
+			delete(scalars, "rule_observation")
 			if scalars["conversations_found"] != float64(1) {
 				t.Fatalf("found scalar changed %+v", scalars)
 			}

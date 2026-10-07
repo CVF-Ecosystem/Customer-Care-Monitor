@@ -674,6 +674,10 @@ func TestEXAllExplicitModesRetainScalars(t *testing.T) {
 			json.Unmarshal([]byte(run.Summary), &scalars)
 			delete(scalars, "source_preparation")
 			delete(scalars, "source_execution")
+			if _, ok := scalars["rule_observation"]; !ok {
+				t.Fatal("missing rule_observation in Analyzer summary")
+			}
+			delete(scalars, "rule_observation")
 			if len(scalars) != 5 || scalars["conversations_analyzed"] != float64(1) || scalars["conversations_errors"] != float64(0) {
 				t.Fatal("legacy mode scalars")
 			}
