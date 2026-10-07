@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-062 and accepted R061 bounded local source_execution observation are FROZEN at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f / independentreview99052ab. R063 candidate DESIGN/SPEC records effective rule-input fingerprint and actual permission/version/WAIT_DATA authority gaps. ORCHESTRATOR next audits a bounded work-order draft, settling digest exposure, existing-test compatibility, independent roles and finite cost before any immutable seed or source BUILD. R060 failed packets remain historical CHANGES_REQUIRED/superseded with findings settled by R061; lineage3campaign6Go of8 and original failures unchanged, closure0Go. Full S2/global F02/live/provider/billing/governance/hosted remain OPEN; Facebook/Zalo OA parked. No implicit source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+  "nextAllowedMove": "CCMAI-RUNTIME-062 and accepted R061 bounded local source_execution observation are FROZEN at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f / independentreview99052ab. R063 candidate DESIGN/SPEC records effective rule-input fingerprint and actual permission/version/WAIT_DATA authority gaps. R063 bounded work-order draft settles digest exposure, exact SP/EX four-line amendments, medium child/root independent roles and proposed total8Go. ORCHESTRATOR next audits seed/schema/prebuild and records formal WORK_ORDER activation before source BUILD. R060 failed packets remain historical CHANGES_REQUIRED/superseded with findings settled by R061; lineage3campaign6Go of8 and original failures unchanged, closure0Go. Full S2/global F02/live/provider/billing/governance/hosted remain OPEN; Facebook/Zalo OA parked. No implicit source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; candidate planning only, prior independent source review retained",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; candidate planning only, prior independent source review retained",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-08",
   "currentExecutionBudget": {
@@ -69,7 +69,7 @@
   "candidatePlanning": {
     "id": "R063",
     "artifact": "docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md",
-    "status": "SPEC_DRAFT_READY_FOR_BOUNDED_WORK_ORDER",
+    "status": "WORK_ORDER_DRAFT_READY_FOR_SEED",
     "date": "2026-10-08",
     "sourceBaseline": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
     "sourceOrRuntimeDispatched": false,
@@ -77,12 +77,21 @@
     "publicationChecks": {
       "preflight": "PASS7/7",
       "prRange": "PASS7/7",
-      "gateUnits": "46PASS41.828s",
+      "gateUnits": "46PASS42.347s",
       "catalogPS51": "PASS",
       "catalogPS7": "PASS",
-      "protected": "source/tests/tooling/authority/tranches/runtime evidence unchanged",
-      "docs": "PASS20.70s after final Markdown",
-      "exactStaged": "PASS7/7 exact9planning metadata paths"
+      "protected": "source/tests/seeds/tranches/runtime evidence/formal orders unchanged; exact insertion sites verified",
+      "docs": "PASS19.71s after final Markdown",
+      "exactStaged": "PASS7/7 exact10 planning paths"
+    },
+    "workOrderDraft": "docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md",
+    "proposedExecutionBudget": {
+      "workerCampaigns": 1,
+      "workerGo": 4,
+      "reviewerCampaigns": 1,
+      "reviewerGo": 4,
+      "totalGo": 8,
+      "authorized": false
     }
   }
 }

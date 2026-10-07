@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R062 local execution observation FREEZE; accepted R061 source and independent evidence preserved, next DESIGN/SPEC only."
+      "description": "Active R062 FREEZE preserved; audited R063 work-order candidate ready for seed/prebuild audit, no BUILD."
     },
     {
       "id": "r060-work-order",
@@ -2670,6 +2670,13 @@
       "path": "docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md",
       "status": "ACTIVE",
       "description": "Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD."
+    },
+    {
+      "id": "evidence-r063-work-order-draft",
+      "family": "continuity",
+      "path": "docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD."
     }
   ]
 }
