@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -115,7 +115,7 @@
     "CCMAI-RUNTIME-028"
   ],
   "knownLimitations": [
-    "CCMAI-RUNTIME-060 CHANGES_REQUIRED after independent120top/305PASS3FAIL0SKIP at sourcea7edba2: root activates separately seeded R061 NEW EX terminal-fallback test repair only; original worker1campaign1Go and reviewer1campaign1Go immutable, M01/M02/restored NOT_RUN. R061 child medium repair/no workerGo, root one4Go successor campaign; total lineage max8Go used2/planned6, max3campaigns including original failed2, no reset. Product/oldtests/seeds unchanged, root source edits0; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+    "CCMAI-RUNTIME-061 DISPATCH_READY / WORK_ORDER under immutable seedde0c6a53e762c949475fe93209bbf802a0af62dc: same child gpt-6.1-sol medium rehydrates/declares and commits BUILD acknowledgment before only NEW EX terminal-fallback fault-test repair. Product and all other tests/old seeds/failed packets unchanged; worker newGo0. Repaired source handback then root independent one4Go successor campaign (EX/SP/finalizer positives, M01, M02, restored EX). Lineage used2Go/planned6/max8, prior2failedcampaigns + one successor/max3; no reset or automatic retry. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
     "Pancake live-proof packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED: tenant/page, independent inventory, quiescence, capture handling and credential/network authority outstanding. R034 offline harness REVIEW_PASS for exact repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e; synthetic CLI/receipt are not a live executor. No live execution dispatched.",
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
     "Application feature status has not yet been assessed under the CVF module catalog.",

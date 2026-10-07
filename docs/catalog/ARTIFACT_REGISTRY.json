@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md",
       "status": "ACTIVE",
-      "description": "Active R060 R1 repaired source REVIEW_PENDING, no worker runtime replay; original failed packet retained, root independent campaign next."
+      "description": "Active R061 narrow fallback-test successor; childmedium repair/noGo and independent root bounded proof."
     },
     {
       "id": "r060-work-order",
@@ -2460,6 +2460,27 @@
       "path": "docs/reviews/probes/r060_independent_positive_stderr.log",
       "status": "ACTIVE",
       "description": "Actual failed independent exact-source raw evidence; no suite or mutation acceptance."
+    },
+    {
+      "id": "evidence-r061-handoff-old",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Historical R060 CHANGES_REQUIRED, both failed campaigns retained."
+    },
+    {
+      "id": "evidence-r061-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-061.json",
+      "status": "ACTIVE",
+      "description": "Active R061 narrow test repair and lineage8Go budget."
+    },
+    {
+      "id": "evidence-r061-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_061.md",
+      "status": "ACTIVE",
+      "description": "Narrow fault test contract repair, no worker runtime, independent successor campaign."
     }
   ]
 }

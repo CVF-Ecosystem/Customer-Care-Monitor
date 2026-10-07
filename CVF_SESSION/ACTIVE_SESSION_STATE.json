@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,25 +12,26 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-060 CHANGES_REQUIRED after independent120top/305PASS3FAIL0SKIP at sourcea7edba2: root activates separately seeded R061 NEW EX terminal-fallback test repair only; original worker1campaign1Go and reviewer1campaign1Go immutable, M01/M02/restored NOT_RUN. R061 child medium repair/no workerGo, root one4Go successor campaign; total lineage max8Go used2/planned6, max3campaigns including original failed2, no reset. Product/oldtests/seeds unchanged, root source edits0; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-061 DISPATCH_READY / WORK_ORDER under immutable seedde0c6a53e762c949475fe93209bbf802a0af62dc: same child gpt-6.1-sol medium rehydrates/declares and commits BUILD acknowledgment before only NEW EX terminal-fallback fault-test repair. Product and all other tests/old seeds/failed packets unchanged; worker newGo0. Repaired source handback then root independent one4Go successor campaign (EX/SP/finalizer positives, M01, M02, restored EX). Lineage used2Go/planned6/max8, prior2failedcampaigns + one successor/max3; no reset or automatic retry. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD for R061 successor; child repair stopped before new authority activation",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR; Codex /root/r059_worker gpt-6.1-sol medium REPAIR_WORKER / BUILD COMMIT_STEWARD after acknowledgment; Codex /root independent REVIEWER after handback",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
-    "workerMaxCampaigns": 1,
-    "workerMaxGoInvocations": 4,
-    "workerUsedCampaigns": 1,
-    "workerUsedGoInvocations": 1,
+    "workerMaxCampaigns": 0,
+    "workerMaxGoInvocations": 0,
+    "workerUsedCampaigns": 0,
+    "workerUsedGoInvocations": 0,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
-    "reviewerUsedCampaigns": 1,
-    "reviewerUsedGoInvocations": 1,
-    "aggregateMaxCampaigns": 2,
-    "aggregateMaxGoInvocations": 8,
-    "priorR059UsedCampaigns": 0,
-    "priorR059UsedGoInvocations": 0
+    "reviewerUsedCampaigns": 0,
+    "reviewerUsedGoInvocations": 0,
+    "lineagePriorUsedCampaigns": 2,
+    "lineagePriorUsedGoInvocations": 2,
+    "lineageMaxCampaigns": 3,
+    "lineageMaxGoInvocations": 8,
+    "lineagePlannedTotalGoInvocations": 6
   },
   "previousExecutionBudget": {
     "reviewerMaxCampaigns": 1,
@@ -46,5 +47,19 @@
     "aggregateUsedGoInvocations": 11,
     "closureNewGoInvocations": 0,
     "closureNewCampaigns": 0
+  },
+  "r060RetainedExecutionBudget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxGoInvocations": 4,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 1,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoInvocations": 4,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 1,
+    "aggregateMaxCampaigns": 2,
+    "aggregateMaxGoInvocations": 8,
+    "priorR059UsedCampaigns": 0,
+    "priorR059UsedGoInvocations": 0
   }
 }

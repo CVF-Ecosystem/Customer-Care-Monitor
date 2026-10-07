@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-060", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-061", "parked": true} -->
 
 ## Startup Order
 
@@ -51,9 +51,9 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R060 execution receipt successor (2026-10-07)
+## Current R061 terminal fallback test successor (2026-10-07)
 
-CCMAI-RUNTIME-060 CHANGES_REQUIRED after independent120top/305PASS3FAIL0SKIP at sourcea7edba2: root activates separately seeded R061 NEW EX terminal-fallback test repair only; original worker1campaign1Go and reviewer1campaign1Go immutable, M01/M02/restored NOT_RUN. R061 child medium repair/no workerGo, root one4Go successor campaign; total lineage max8Go used2/planned6, max3campaigns including original failed2, no reset. Product/oldtests/seeds unchanged, root source edits0; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-061 DISPATCH_READY / WORK_ORDER under immutable seedde0c6a53e762c949475fe93209bbf802a0af62dc: same child gpt-6.1-sol medium rehydrates/declares and commits BUILD acknowledgment before only NEW EX terminal-fallback fault-test repair. Product and all other tests/old seeds/failed packets unchanged; worker newGo0. Repaired source handback then root independent one4Go successor campaign (EX/SP/finalizer positives, M01, M02, restored EX). Lineage used2Go/planned6/max8, prior2failedcampaigns + one successor/max3; no reset or automatic retry. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 
