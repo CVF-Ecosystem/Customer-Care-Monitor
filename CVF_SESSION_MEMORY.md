@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-060", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-060", "parked": true} -->
 
 ## Startup Order
 
@@ -53,7 +53,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R060 execution receipt successor (2026-10-07)
 
-CCMAI-RUNTIME-060 DISPATCH_READY / WORK_ORDER under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: existing Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source/exact4-line SP compatibility amendment, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. R059 parked before source/Go0, aggregate max8Go without reset; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-060 BUILD under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: Codex /root/r059_worker gpt-6.1-sol medium implements only allowed source and exact4-line SP compatibility amendment, submits static checkpoint to root before any Go, then committed-source one4Go worker campaign and REVIEW_PENDING handback; root independent reviewer one4Go. R059 source/ack/Go0 parked, aggregate8Go unchanged; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 

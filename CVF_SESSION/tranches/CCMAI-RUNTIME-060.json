@@ -62,15 +62,16 @@
   ],
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -122,5 +123,11 @@
     "catalog": "PASS through default/PR",
     "gateUnits": "46PASS52.797s inherited unchanged tools",
     "staged": "Required before activation commit"
+  },
+  "workerAcknowledgment": "Fresh rehydration/declaration doctor25/1; source and Go0 before acknowledgment commit; immutable seed and exact SP amendment; root independent reviewer.",
+  "buildAcknowledgmentChecks": {
+    "initialPreflight": "FAIL6/7 history ended with descriptive note; corrected to BUILD before source",
+    "doctor": "PASS WITH NOTE25/1",
+    "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling"
   }
 }
