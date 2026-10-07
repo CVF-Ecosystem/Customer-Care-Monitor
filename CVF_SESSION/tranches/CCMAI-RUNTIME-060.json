@@ -62,16 +62,17 @@
   ],
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
-  "buildCommit": null,
+  "buildCommit": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -88,8 +89,8 @@
   "executionBudget": {
     "workerMaxCampaigns": 1,
     "workerMaxGoInvocations": 4,
-    "workerUsedCampaigns": 0,
-    "workerUsedGoInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 1,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
     "reviewerUsedCampaigns": 0,
@@ -158,11 +159,24 @@
       "pr": "PASS7/7",
       "catalogPS51": "PASS",
       "catalogPS7": "PASS",
-      "docs": "PASS after final Markdown7.25s",
+      "docs": "PASS after final Markdown7.45s (7.25 transcription corrected; original source checkpoint retained)",
       "diff": "PASS",
       "oldTests": "115unchanged Git text domain, exact designated4line amendment only",
       "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling",
       "exactStaged": "PASS7/7 before commit; repeated after recording"
     }
+  },
+  "workerEvidence": "docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md",
+  "workerResult": "COST_DISPOSITION_REQUIRED",
+  "failedEvidencePublicationSetup": "Initial currentMode REVIEW_PENDING invalid phase-model enum, corrected currentMode REVIEW/status REVIEW_PENDING. PS5.1/7 culture sort disagreed on new r060-worker IDs vs r060-work-order; changed only new artifact IDs to evidence prefix. Initial5/7 and catalog drift retained, tooling unchanged.",
+  "failedEvidencePublicationChecks": {
+    "default": "PASS7/7",
+    "pr": "PASS7/7",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "docs": "PASS7.12s after final Markdown",
+    "diff": "PASS",
+    "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling",
+    "exactStaged": "Required and run before this commit"
   }
 }

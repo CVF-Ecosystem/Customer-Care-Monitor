@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,16 +13,16 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-060 BUILD under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: Codex /root/r059_worker gpt-6.1-sol medium implements only allowed source and exact4-line SP compatibility amendment, submits static checkpoint to root before any Go, then committed-source one4Go worker campaign and REVIEW_PENDING handback; root independent reviewer one4Go. R059 source/ack/Go0 parked, aggregate8Go unchanged; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-060 REVIEW_PENDING / COST_DISPOSITION_REQUIRED at sourceed2f53043919dec5260dca0fc5ff41b75c134f70: root independently audits failed worker1campaign/1Go packet and records bounded NEW EX UUID-fixture repair disposition before any repair/runtime. Worker no retry; M01/M02/restored NOT_RUN, root independent1campaign/4Go unstarted, aggregate8Go unchanged. Original failed evidence preserved; R059 parked0Go and R058 local FREEZE preserved. No extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root/r059_worker R060 IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER after handback",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER for cost disposition; Codex /root/r059_worker IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD stopped pending disposition",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
     "workerMaxCampaigns": 1,
     "workerMaxGoInvocations": 4,
-    "workerUsedCampaigns": 0,
-    "workerUsedGoInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 1,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
     "reviewerUsedCampaigns": 0,

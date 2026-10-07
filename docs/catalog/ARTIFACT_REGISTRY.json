@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
       "status": "ACTIVE",
-      "description": "Active R060 execution observation BUILD, medium worker/root independent reviewer; runtime pending, exact SP compatibility amendment."
+      "description": "Active R060 REVIEW_PENDING cost disposition after worker1Go failure, NEW EX fixture repair proposal; raw failure/cleanup retained, independent review unstarted."
     },
     {
       "id": "r060-work-order",
@@ -2355,6 +2355,27 @@
       "path": "docs/reviews/probes/r060_worker_campaign.py",
       "status": "ACTIVE",
       "description": "Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only."
+    },
+    {
+      "id": "evidence-r060-worker-r060-worker-interrupted-evidence-2026-10-07",
+      "family": "continuity",
+      "path": "docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Interrupted worker campaign at exact source, fixture-root-cause audit, bounded repair proposal and retained proof/limits."
+    },
+    {
+      "id": "evidence-r060-worker-r060-worker-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "Original failed worker1campaign1Go packet, rawlogs/fullmanifest/commands/state/restoration/cleanup; no retry."
+    },
+    {
+      "id": "evidence-r060-worker-r060-worker-failure-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_failure_audit.json",
+      "status": "ACTIVE",
+      "description": "Raw-event-derived partial counts/missing tests, protected physical audit/fresharchive and NEW EX fixture repair proposal; cost disposition required."
     }
   ]
 }
