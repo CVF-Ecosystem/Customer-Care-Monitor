@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R063 WORK_ORDER dispatch ready; medium child before-edit BUILD acknowledgment next, independent root review/max8Go."
+      "description": "Active R063 REVIEW_PENDING handback; child source/runtime submitted, independent root campaign/review next, worker4Go used."
     },
     {
       "id": "r060-work-order",
@@ -2705,6 +2705,125 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_063.md",
       "status": "ACTIVE",
       "description": "Authorized additive rule-input observation only; exact SP/EX compatibility, independent roles/max8Go."
+    },
+    {
+      "id": "evidence-r063-build-proof-rule-observation-build-2026-10-08",
+      "family": "continuity",
+      "path": "docs/reviews/R063_WORKER_RULE_OBSERVATION_BUILD_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m01-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m01-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M02.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m02-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M02_manifest.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m02-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_manifest.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_plan.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-positive",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-positive-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-pre-runtime",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_pre_runtime.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_protected.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-restored",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-restored-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
     }
   ]
 }

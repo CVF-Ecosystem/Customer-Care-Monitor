@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,16 +13,16 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-063 BUILD acknowledged before canonical source edits by Codex /root/r063_worker; implement only authorized RO01..12 and exact SP/EX four-line amendments, commit source checkpoint, send inventory/mutation plan for root consolidated static audit, then one worker campaign/max4Go and REVIEW_PENDING handback. Root independent REVIEWER one campaign/max4Go, aggregate max8Go. No retry, seed/old packet edit or FREEZE; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+  "nextAllowedMove": "CCMAI-RUNTIME-063 REVIEW_PENDING / REVIEW at source55e836a1b980b3e5d4075ceb33466786c860f963 and exact campaign661113d888c5886331c9b4eb99783a215cf8c58f. Worker1campaign/4Go complete: positive65top196PASS, M01/M02 named semantic kills with healthy classification contrast, restored9top43PASS,213member byte restoration/secondarchive/named cleanup verified. Root independent REVIEWER next audits source/evidence and runs one bounded campaign/max4Go, aggregate max8Go; worker no moreGo/no retry. Original setup failures/packets retained, FREEZE OPEN; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root/r063_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; root independent REVIEWER",
+  "activeRole": "Codex /root independent REVIEWER; Codex /root/r063_worker SESSION_SYNC_STEWARD / BUILD COMMIT_STEWARD handback",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-08",
   "currentExecutionBudget": {
     "workerMaxCampaigns": 1,
     "workerMaxGoInvocations": 4,
-    "workerUsedCampaigns": 0,
-    "workerUsedGoInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 4,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
     "reviewerUsedCampaigns": 0,
@@ -62,11 +62,11 @@
   "candidatePlanning": {
     "id": "R063",
     "artifact": "docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md",
-    "status": "DISPATCH_READY",
+    "status": "REVIEW_PENDING",
     "date": "2026-10-08",
     "sourceBaseline": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
     "sourceOrRuntimeDispatched": true,
-    "newGoInvocations": 0,
+    "newGoInvocations": 4,
     "publicationChecks": {
       "preflight": "PASS7/7",
       "prRange": "PASS7/7",
@@ -76,7 +76,7 @@
       "protected": "source/tests/seeds/tranches/runtime evidence/formal orders unchanged; exact insertion sites verified",
       "docs": "PASS19.71s after final Markdown",
       "exactStaged": "PASS7/7 exact10 planning paths",
-      "activation": "Pending activation checks"
+      "activation": "Historical activation d76bd83 PASS; worker publication separate"
     },
     "workOrderDraft": "docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md",
     "proposedExecutionBudget": {
@@ -87,7 +87,7 @@
       "totalGo": 8,
       "authorized": true
     },
-    "sourceImplementation": "NOT_STARTED"
+    "sourceImplementation": "IMPLEMENTED_WORKER_EVIDENCE_PENDING_INDEPENDENT_REVIEW"
   },
   "r061RetainedExecutionBudget": {
     "workerMaxCampaigns": 0,

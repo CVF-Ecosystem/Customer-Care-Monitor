@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root/r063_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; root independent REVIEWER
-- Next allowed move: CCMAI-RUNTIME-063 BUILD acknowledged before canonical source edits by Codex /root/r063_worker; implement only authorized RO01..12 and exact SP/EX four-line amendments, commit source checkpoint, send inventory/mutation plan for root consolidated static audit, then one worker campaign/max4Go and REVIEW_PENDING handback. Root independent REVIEWER one campaign/max4Go, aggregate max8Go. No retry, seed/old packet edit or FREEZE; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER; Codex /root/r063_worker SESSION_SYNC_STEWARD / BUILD COMMIT_STEWARD handback
+- Next allowed move: CCMAI-RUNTIME-063 REVIEW_PENDING / REVIEW at source55e836a1b980b3e5d4075ceb33466786c860f963 and exact campaign661113d888c5886331c9b4eb99783a215cf8c58f. Worker1campaign/4Go complete: positive65top196PASS, M01/M02 named semantic kills with healthy classification contrast, restored9top43PASS,213member byte restoration/secondarchive/named cleanup verified. Root independent REVIEWER next audits source/evidence and runs one bounded campaign/max4Go, aggregate max8Go; worker no moreGo/no retry. Original setup failures/packets retained, FREEZE OPEN; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-action dispatcher acknowledgment
@@ -24,3 +24,9 @@ Only additive observed rule inputs; digest not approved policy/version, unavaila
 ## Before-edit worker BUILD acknowledgment
 
 2026-10-08 Codex /root/r063_worker freshly read manifest/policy/state/memory/handoff/implementation/index, incorporated SPEC/draft/order/seed and applicable repair/UUID/persistence/cleanup learnings. Doctor PASS WITH NOTE25/1; core8a4119e public clean matches origin/main, manifest-pin warning and BOOTSTRAP_MIGRATION_PENDING nonblocking. Declaration emitted as IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD at R2. Immutable seed7deb4f0 and independent root reviewer accepted; exact seven backend paths and two four-line compatibility amendments only. BUILD acknowledgment committed before first source edit; source/Go0. Gate-unit46PASS41.701s inherited from root seed checks, tooling/tests unchanged. No acceptance/FREEZE/governance claim.
+
+## Worker REVIEW_PENDING handback
+
+2026-10-08 fresh current-continuity rehydration/declaration before SESSION_SYNC_STEWARD / BUILD COMMIT_STEWARD handback. Before-edit41fb182, source55e836a, runner/campaign661113d; one4Go complete, positive65top196PASS, M01/M02 semantic kills (classification3PASS retained), restored9top43PASS;213member byte restoration, identical second archive and named cleanup PASS. Root independent review remains pending, FREEZE OPEN. Setup history-format gate failure/classifier exception plus continued source commit and static control refinement retained in worker report. No further workerGo. [Worker report](../../docs/reviews/R063_WORKER_RULE_OBSERVATION_BUILD_2026-10-08.md), [actual receipt](../../docs/reviews/probes/r063_worker_summary.json).
+
+2026-10-08 root minor publication role transition: REVIEWER -> SESSION_SYNC_STEWARD for existing R1 metadata only, preserving independent source review. New registry ID collation and runner link repaired directly, failed catalog/docs checks retained; no source/test/evidence mutation or runtime. Worker remains handback COMMIT_STEWARD after checks.

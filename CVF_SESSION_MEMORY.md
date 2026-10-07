@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-063", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-063", "parked": true} -->
 
 ## Startup Order
 
@@ -55,7 +55,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R063 work-order activation (2026-10-08)
 
-CCMAI-RUNTIME-063 BUILD acknowledged before canonical source edits by Codex /root/r063_worker; implement only authorized RO01..12 and exact SP/EX four-line amendments, commit source checkpoint, send inventory/mutation plan for root consolidated static audit, then one worker campaign/max4Go and REVIEW_PENDING handback. Root independent REVIEWER one campaign/max4Go, aggregate max8Go. No retry, seed/old packet edit or FREEZE; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+CCMAI-RUNTIME-063 REVIEW_PENDING / REVIEW at source55e836a1b980b3e5d4075ceb33466786c860f963 and exact campaign661113d888c5886331c9b4eb99783a215cf8c58f. Worker1campaign/4Go complete: positive65top196PASS, M01/M02 named semantic kills with healthy classification contrast, restored9top43PASS,213member byte restoration/secondarchive/named cleanup verified. Root independent REVIEWER next audits source/evidence and runs one bounded campaign/max4Go, aggregate max8Go; worker no moreGo/no retry. Original setup failures/packets retained, FREEZE OPEN; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 
 ## Historical R062 local execution observation closure (2026-10-08)
 

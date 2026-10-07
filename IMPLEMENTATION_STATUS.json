@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
@@ -37,7 +37,7 @@
     "R055 preparation-only Summary receipt locally FROZEN under R058 at childsource05c59e9/independentreview5ff0875/runtimec4f78f2: SP01..12,114positiveTop/272PASS, storage mutation killed/restored, source/oldtests unchanged. No actual-call/policy/full S2/live/governance/hosted claim."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-063 BUILD acknowledged before canonical source edits by Codex /root/r063_worker; implement only authorized RO01..12 and exact SP/EX four-line amendments, commit source checkpoint, send inventory/mutation plan for root consolidated static audit, then one worker campaign/max4Go and REVIEW_PENDING handback. Root independent REVIEWER one campaign/max4Go, aggregate max8Go. No retry, seed/old packet edit or FREEZE; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+    "CCMAI-RUNTIME-063 REVIEW_PENDING / REVIEW at source55e836a1b980b3e5d4075ceb33466786c860f963 and exact campaign661113d888c5886331c9b4eb99783a215cf8c58f. Worker1campaign/4Go complete: positive65top196PASS, M01/M02 named semantic kills with healthy classification contrast, restored9top43PASS,213member byte restoration/secondarchive/named cleanup verified. Root independent REVIEWER next audits source/evidence and runs one bounded campaign/max4Go, aggregate max8Go; worker no moreGo/no retry. Original setup failures/packets retained, FREEZE OPEN; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
     "CCMAI-RUNTIME-060 DISPATCH_READY / WORK_ORDER under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: existing Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source/exact4-line SP compatibility amendment, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. R059 parked before source/Go0, aggregate max8Go without reset; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
     "Historical R045 closure hand-back; current R046 review tracked above. CCMAI-RUNTIME-045 and R044 JE-01..10 local contract FROZEN at exact repair b4ec91ea03a9f247e209389c3792c86494eac8b3 under separate R045 authority. Next ORCHESTRATOR prepares R046 bounded engine finalizer driver-error logging work order selected by owner; no BUILD yet. Accounts parked; inherited failures/limits and all prior dispositions retained. No live/CVF AI governance/hosted readiness claim, push/merge/deployment or external effect.",
     "Current: R044 JE-01..10 local contract FROZEN under R045. Historical acceptance and evidence retained: CCMAI-RUNTIME-044 R1 REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude repair b4ec91ea03a9f247e209389c3792c86494eac8b3, test-only on original BUILD48918e2f953dbb32e7f5f159b1eceab7dfe3848f. Independent Codex re-review settles R044-R1-01..02: maintained synthetic notification-tail MCP/HTTP tests and finite no-output/cancellation/rejection controls; all15 original replacement hashes and10 new replay diffs verified with historical restoration limits preserved. Independent grouped393 (190 top-level/203 subtests) and targeted engine54 PASS0 FAIL/SKIP; four-test baseline/restored controls PASS; C01/C02 named mutation failures/restoration, N05e overlay named cancellation-after-publication failure then unmodified PASS; build/vet and gate46 PASS. Evidence docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md and docs/reviews/probes/r044_r1_independent_summary.json. Source/seed unchanged; old failed review, worker N04 BUILD_ERROR/N05 SURVIVED/N05e harness defect and all incidents remain. Race/full engine/full backend/all live NOT RUN. Separate R045 seed/order now DISPATCH_READY; closure evaluation is next, R044 FREEZE_OPEN; accounts parked, R043/prior dispositions unchanged, no FREEZE/live/governance/hosted claim.",
@@ -117,7 +117,7 @@
     "CCMAI-RUNTIME-028"
   ],
   "knownLimitations": [
-    "CCMAI-RUNTIME-063 BUILD acknowledged before canonical source edits by Codex /root/r063_worker; implement only authorized RO01..12 and exact SP/EX four-line amendments, commit source checkpoint, send inventory/mutation plan for root consolidated static audit, then one worker campaign/max4Go and REVIEW_PENDING handback. Root independent REVIEWER one campaign/max4Go, aggregate max8Go. No retry, seed/old packet edit or FREEZE; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+    "CCMAI-RUNTIME-063 REVIEW_PENDING / REVIEW at source55e836a1b980b3e5d4075ceb33466786c860f963 and exact campaign661113d888c5886331c9b4eb99783a215cf8c58f. Worker1campaign/4Go complete: positive65top196PASS, M01/M02 named semantic kills with healthy classification contrast, restored9top43PASS,213member byte restoration/secondarchive/named cleanup verified. Root independent REVIEWER next audits source/evidence and runs one bounded campaign/max4Go, aggregate max8Go; worker no moreGo/no retry. Original setup failures/packets retained, FREEZE OPEN; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
     "CCMAI-RUNTIME-062 and accepted R061 bounded local source_execution observation are FROZEN at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f / independentreview99052ab. R063 candidate DESIGN/SPEC records effective rule-input fingerprint and actual permission/version/WAIT_DATA authority gaps. R063 bounded work-order draft settles digest exposure, exact SP/EX four-line amendments, medium child/root independent roles and proposed total8Go. ORCHESTRATOR next audits seed/schema/prebuild and records formal WORK_ORDER activation before source BUILD. R060 failed packets remain historical CHANGES_REQUIRED/superseded with findings settled by R061; lineage3campaign6Go of8 and original failures unchanged, closure0Go. Full S2/global F02/live/provider/billing/governance/hosted remain OPEN; Facebook/Zalo OA parked. No implicit source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
     "Pancake live-proof packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED: tenant/page, independent inventory, quiescence, capture handling and credential/network authority outstanding. R034 offline harness REVIEW_PASS for exact repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e; synthetic CLI/receipt are not a live executor. No live execution dispatched.",
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
@@ -412,5 +412,27 @@
     "buildCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
     "workerEvidence": "docs/reviews/probes/r061_worker_handback.json",
     "repairReport": "docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md"
+  },
+  "ruleObservation": {
+    "tranche": "CCMAI-RUNTIME-063",
+    "status": "REVIEW_PENDING",
+    "sourceCheckpoint": "55e836a1b980b3e5d4075ceb33466786c860f963",
+    "exactCampaignCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
+    "workerEvidence": "docs/reviews/R063_WORKER_RULE_OBSERVATION_BUILD_2026-10-08.md",
+    "runtimeReceipt": "docs/reviews/probes/r063_worker_summary.json",
+    "workerCampaigns": 1,
+    "workerGoInvocations": 4,
+    "positiveTopLevel": 65,
+    "positivePassEvents": 196,
+    "mutations": "M01/M02_KILLED_BY_NAMED_SEMANTIC_ASSERTIONS",
+    "restoredTopLevel": 9,
+    "restoredPassEvents": 43,
+    "r2IndependentAcceptance": "NOT_ESTABLISHED",
+    "newQueries": false,
+    "schemaChange": false,
+    "policyEnforcement": false,
+    "governanceClaim": false,
+    "fullS2Claim": false,
+    "nextMove": "CCMAI-RUNTIME-063 REVIEW_PENDING / REVIEW at source55e836a1b980b3e5d4075ceb33466786c860f963 and exact campaign661113d888c5886331c9b4eb99783a215cf8c58f. Worker1campaign/4Go complete: positive65top196PASS, M01/M02 named semantic kills with healthy classification contrast, restored9top43PASS,213member byte restoration/secondarchive/named cleanup verified. Root independent REVIEWER next audits source/evidence and runs one bounded campaign/max4Go, aggregate max8Go; worker no moreGo/no retry. Original setup failures/packets retained, FREEZE OPEN; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority."
   }
 }

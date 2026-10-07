@@ -1,4 +1,4 @@
-{
+﻿{
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-063",
   "riskCeiling": "R2",
@@ -63,16 +63,17 @@
   ],
   "claimScope": "Bounded local rule-input observation RO01..12 only. Fingerprint is content identity, not permission/approval/policy revision or enforced WAIT_DATA; existing behavior/preparation/execution/scalars preserved. No full S2/live/governance/hosted claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_063.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015",
-  "buildCommit": null,
+  "buildCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
   "reviewEvidence": [],
-  "disposition": "PENDING_IMPLEMENTATION_AND_INDEPENDENT_REVIEW",
+  "disposition": "PENDING_INDEPENDENT_REVIEW",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -89,8 +90,8 @@
   "executionBudget": {
     "workerMaxCampaigns": 1,
     "workerMaxGoInvocations": 4,
-    "workerUsedCampaigns": 0,
-    "workerUsedGoInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 4,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
     "reviewerUsedCampaigns": 0,
@@ -118,7 +119,7 @@
     "noUnrelatedFormatting": true
   },
   "workerAcknowledgment": "2026-10-08 fresh continuity/declaration/doctor PASS WITH NOTE25/1; before-edit BUILD acknowledged, source/Go0",
-  "sourceImplementation": "ACKNOWLEDGED_NOT_STARTED",
+  "sourceImplementation": "IMPLEMENTED_WORKER_EVIDENCE_PENDING_INDEPENDENT_REVIEW",
   "liveEvidence": "NOT_RUN; synthetic application observations planned, no governance claim",
   "activationPublicationChecks": {
     "default": "PASS7/7",
@@ -130,5 +131,24 @@
     "sourceGo": 0,
     "exactStaged": "Required before activation commit"
   },
-  "setupFinding": "Initial acknowledgment default/PR/staged6/7: descriptive history tail failed current-status format; corrected tail to BUILD, rerun default/PR/staged7/7. No source/Go."
+  "setupFinding": "Initial acknowledgment default/PR/staged6/7: descriptive history tail failed current-status format; corrected tail to BUILD, rerun default/PR/staged7/7. No source/Go.",
+  "workerEvidence": "docs/reviews/R063_WORKER_RULE_OBSERVATION_BUILD_2026-10-08.md",
+  "workerRuntimeEvidence": "docs/reviews/probes/r063_worker_summary.json",
+  "sourceCheckpoint": "55e836a1b980b3e5d4075ceb33466786c860f963",
+  "workerRoleTransition": "2026-10-08 IMPLEMENTATION_WORKER to SESSION_SYNC_STEWARD / BUILD COMMIT_STEWARD handback; root independent REVIEWER pending",
+  "publicationMetadataFinding": "Worker publication initially failed catalog PS5.1/7 drift because work-order/worker identifier punctuation sorts differently across runtimes, and docs deadlink to .py runner. Root SESSION_SYNC_STEWARD directly renamed only new registry IDs to build-proof prefix, refreshed active description/index; report codepointer corrected, original failed checks retained. Source/raw runtime evidence unchanged, no new Go.",
+  "workerPublicationChecks": {
+    "attribution": "Root direct minor publication repair/checks; child final exact staged stewardship",
+    "default": "PASS7/7 after root metadata repair",
+    "prRange": "PASS7/7 origin/main..HEAD after root metadata repair",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "diff": "PASS",
+    "docs": "PASS21.03s root final Markdown/index build",
+    "gateUnits": "Inherited root seed46PASS41.701s; scripts/tests unchanged",
+    "protected": "426fully protected +2exact four-line reverse-amendment files PASS; root428independent physical verification",
+    "setupFindingsRetained": true,
+    "extraGoInvocations": 0,
+    "exactStaged": "PASS7/7 exact24 authorized handback/evidence paths, final staged gate rerun before commit"
+  }
 }

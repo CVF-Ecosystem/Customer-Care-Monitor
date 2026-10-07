@@ -1,0 +1,143 @@
+{
+  "sourceCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "661113d888c5886331c9b4eb99783a215cf8c58f",
+      "backend"
+    ],
+    "bytes": 2426880,
+    "sha256": "5e2978b413ce09afa9168c5bc988df8dd00c996e76390119e5caa89a8c8be24b"
+  },
+  "inventory": [
+    {
+      "label": "positive",
+      "pattern": "^Test(RO|EX|PreparationReceipt|SP|LP|Snapshot|EvidenceRefs|SingleAndBatchShareSnapshotContract$|ExplicitModeMatrix$|FullModeVietnamDatesKeepFullSnapshot$|OnlyOrdinaryRunWritesCheckpoint$|OrdinaryRunFailuresKeepCheckpoint$|AdmissionRefusesASecondOwnerForEveryEntryPointAndMode$|CancelTargetsTheExactRunAndHoldsOwnershipUntilExit$|EveryTerminalPathHonorsAnAcceptedCancel$|ProviderPanicIsCleanedUpWithoutLeakingTheValue$|ReservationRunsOnlyItsOwnTenantAndJob$|FL03SuccessfulTerminalWrite$|FL03ExhaustedRetriesReturnsBoundedFailure$|FL06SuccessLifecyclePreservation$)",
+      "topLevel": [
+        "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode",
+        "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit",
+        "TestEXActualPanicBoundaries",
+        "TestEXAllExplicitModesRetainScalars",
+        "TestEXBatchBindingAndParserRejection",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXCancellationDuringProviderAndBatchPrefix",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXInitialProgressAndTerminalWriteFaults",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestEXMixedSaveAndProviderFailures",
+        "TestEXNoCallConstructionAndPreparation",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXProgressPrefixAndPreparationUnchanged",
+        "TestEXResponseAndErrorWinsInBothModes",
+        "TestEXSaveDatabaseFailureIsPublicationFailure",
+        "TestEXStoredTerminalSingleSuccess",
+        "TestEXUsageWriteFailurePreservesSavedResult",
+        "TestEveryTerminalPathHonorsAnAcceptedCancel",
+        "TestEvidenceRefsRejectInvalid",
+        "TestEvidenceRefsUnicodeCodePointOffsets",
+        "TestExplicitModeMatrix",
+        "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+        "TestFL03SuccessfulTerminalWrite",
+        "TestFL06SuccessLifecyclePreservation",
+        "TestFullModeVietnamDatesKeepFullSnapshot",
+        "TestLP01NoWorkSkipsProviderInitialization",
+        "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+        "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+        "TestLP04SemanticsAcrossModesAndEntryPoints",
+        "TestLP05CancellationPreventsProviderInitialization",
+        "TestLP06EagerInitializationDetectorNegativeAndPositive",
+        "TestOnlyOrdinaryRunWritesCheckpoint",
+        "TestOrdinaryRunFailuresKeepCheckpoint",
+        "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+        "TestPreparationReceiptMetadataAndSummaryCompatibility",
+        "TestPreparationReceiptUnknownZeroAndPrivacy",
+        "TestProviderPanicIsCleanedUpWithoutLeakingTheValue",
+        "TestROCapturedJobPromptsSingleAndBatch",
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROInitialProgressAndTerminalWriteFaults",
+        "TestROInvalidBindingPriorityAndUnsupportedType",
+        "TestRONoWorkAndFailureObservations",
+        "TestROPrivacyBoundAndIndependentFreezeComposition",
+        "TestROQCIndependentKnownVector",
+        "TestRORejectedReservationHasNoReceiptEffects",
+        "TestROStoredTerminalSingleSuccess",
+        "TestReservationRunsOnlyItsOwnTenantAndJob",
+        "TestSPAllExplicitModesCapAndContext",
+        "TestSPCancellationAndProviderPanic",
+        "TestSPInitialAndProgressRecordingGap",
+        "TestSPInputSelectionAndPreparationPanic",
+        "TestSPObservedQueriesAndReferenceErrors",
+        "TestSPOrdinaryExplicitAndProgressPersistence",
+        "TestSPSingleProviderErrorReceipt",
+        "TestSPSnapshotLookupMissingAndMisboundObservations",
+        "TestSPStoredEarlyTerminalReceipt",
+        "TestSPTerminalFailureAndLegacyClose",
+        "TestSingleAndBatchShareSnapshotContract",
+        "TestSnapshotCoverage",
+        "TestSnapshotDigestChangesWithAttachmentIdentity",
+        "TestSnapshotDigestChangesWithSource",
+        "TestSnapshotDigestIsDeterministic",
+        "TestSnapshotRejectsForeignMessage",
+        "TestSnapshotTranscriptCarriesIdentity"
+      ]
+    },
+    {
+      "label": "M01",
+      "pattern": "^TestRO(QCIndependentKnownVector|FramingUnicodeEmptyAndClassificationVectors)$",
+      "topLevel": [
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROQCIndependentKnownVector"
+      ]
+    },
+    {
+      "label": "M02",
+      "pattern": "^TestROStoredTerminalSingleSuccess$",
+      "topLevel": [
+        "TestROStoredTerminalSingleSuccess"
+      ]
+    },
+    {
+      "label": "restored",
+      "pattern": "^TestRO",
+      "topLevel": [
+        "TestROCapturedJobPromptsSingleAndBatch",
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROInitialProgressAndTerminalWriteFaults",
+        "TestROInvalidBindingPriorityAndUnsupportedType",
+        "TestRONoWorkAndFailureObservations",
+        "TestROPrivacyBoundAndIndependentFreezeComposition",
+        "TestROQCIndependentKnownVector",
+        "TestRORejectedReservationHasNoReceiptEffects",
+        "TestROStoredTerminalSingleSuccess"
+      ]
+    }
+  ],
+  "mutations": [
+    {
+      "label": "M01",
+      "targetPath": "backend/engine/rule_observation_receipt.go",
+      "appliedInIsolatedCopyOnly": true,
+      "matchCount": 1,
+      "detector": "TestROQCIndependentKnownVector",
+      "assertion": "QC effective RulesContent/SkipConditions known vector mismatch",
+      "originalSha256": "1ffdf5876774bfd3baeff789f45e13ed367712f84728aa5578d56818b5f0ab49",
+      "mutantSha256": "6b6b45e9d36bff23855684506d0fa46ac262e9045a6e49df1e4dc5ee1312cc15",
+      "diffSha256": "2e15a0094d1a3d5d2739dfd3bdcf28c59bc4f4932c4053eb8251d243639e8e29",
+      "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvcnVsZV9vYnNlcnZhdGlvbl9yZWNlaXB0LmdvCisrKyBiL2JhY2tlbmQvZW5naW5lL3J1bGVfb2JzZXJ2YXRpb25fcmVjZWlwdC5nbwpAQCAtNDMsNyArNDMsNyBAQAogCWZpZWxkcyA6PSBbXXN0cmluZ3siY2NtYWkucnVsZS1pbnB1dC52MSIsIGpvYi5Kb2JUeXBlfQogCXN3aXRjaCBqb2IuSm9iVHlwZSB7CiAJY2FzZSAicWNfYW5hbHlzaXMiOgotCQlmaWVsZHMgPSBhcHBlbmQoZmllbGRzLCBqb2IuUnVsZXNDb250ZW50LCBqb2IuU2tpcENvbmRpdGlvbnMpCisJCWZpZWxkcyA9IGFwcGVuZChmaWVsZHMsIGpvYi5SdWxlc0NvbnRlbnQpCiAJY2FzZSAiY2xhc3NpZmljYXRpb24iOgogCQlmaWVsZHMgPSBhcHBlbmQoZmllbGRzLCBqb2IuUnVsZXNDb25maWcpCiAJZGVmYXVsdDoK"
+    },
+    {
+      "label": "M02",
+      "targetPath": "backend/engine/analyzer.go",
+      "appliedInIsolatedCopyOnly": true,
+      "matchCount": 1,
+      "detector": "TestROStoredTerminalSingleSuccess",
+      "assertion": "stored terminal rule observation missing",
+      "originalSha256": "fc9377aac736ffe07d2150046048214728a257de28262fc5354745ddca937c37",
+      "mutantSha256": "806bee47d984f2402eecea01c553195ac6c6e23a126762b6e46b103e6ff3d4e0",
+      "diffSha256": "524eb6b124a443499a1208bb88b86e0fda41aed11ab75036755a8a9ba4994490",
+      "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KKysrIGIvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KQEAgLTM4Miw3ICszODIsNyBAQAogCQljcCA6PSBzY2FuU3RhcnQuVHJ1bmNhdGUodGltZS5TZWNvbmQpCiAJCWNoZWNrcG9pbnQgPSAmY3AKIAl9Ci0JZmluYWxpemVFcnIgOj0gZmluYWxpemVPcmRpbmFyeVJ1bigmcnVuLCBqb2IsIHJ1blN0YXR1cywgcnVuLkVycm9yTWVzc2FnZSwgc3RyaW5nKHN1bW1hcnlKU09OKSwgZmluaXNoZWRBdCwgY2hlY2twb2ludCkKKwlmaW5hbGl6ZUVyciA6PSBmaW5hbGl6ZU9yZGluYXJ5UnVuKCZydW4sIGpvYiwgcnVuU3RhdHVzLCBydW4uRXJyb3JNZXNzYWdlLCBmdW5jKCkgc3RyaW5nIHsgdmFyIGVudmVsb3BlIG1hcFtzdHJpbmddanNvbi5SYXdNZXNzYWdlOyBfID0ganNvbi5Vbm1hcnNoYWwoW11ieXRlKHN1bW1hcnlKU09OKSwgJmVudmVsb3BlKTsgZGVsZXRlKGVudmVsb3BlLCAicnVsZV9vYnNlcnZhdGlvbiIpOyBlbmNvZGVkLCBfIDo9IGpzb24uTWFyc2hhbChlbnZlbG9wZSk7IHJldHVybiBzdHJpbmcoZW5jb2RlZCkgfSgpLCBmaW5pc2hlZEF0LCBjaGVja3BvaW50KQogCWlmIGVyciA6PSBmaW5hbGl6ZUVycjsgZXJyICE9IG5pbCB7CiAJCW93bmVyLnRlcm1pbmFsRmFpbGVkKCkKIAkJcHJlcGFyYXRpb25HYXAoImZpbmFsX3Rlcm1pbmFsIikK"
+    }
+  ]
+}
