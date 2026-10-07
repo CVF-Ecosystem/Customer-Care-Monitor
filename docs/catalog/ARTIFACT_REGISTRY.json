@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-07",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -2228,7 +2228,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R058 local preparation receipt closure FROZEN; next bounded S2 DESIGN/SPEC, no BUILD/live/subagent."
+      "description": "Active R058 local FREEZE handoff; R059 execution receipt DESIGN/SPEC draft prepared, no source BUILD or subagents."
     },
     {
       "id": "work-order-r058",
@@ -2264,6 +2264,20 @@
       "path": "CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-06.json",
       "status": "ACTIVE",
       "description": "Separate owner-authorized existing-branch fast-forward publication after R058 closure; no merge/deploy or CI success claim."
+    },
+    {
+      "id": "r059-execution-observation-design-spec-20261007",
+      "family": "continuity",
+      "path": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Planning-only candidate R059 execution observation contract EX01..12; no activation/implementation/runtime evidence or full S2 claim."
+    },
+    {
+      "id": "r059-planning-publication-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r059_planning_publication_checks.json",
+      "status": "ACTIVE",
+      "description": "R059 planning publication checks and retained setup failures; no implementation/runtime or governance evidence."
     }
   ]
 }

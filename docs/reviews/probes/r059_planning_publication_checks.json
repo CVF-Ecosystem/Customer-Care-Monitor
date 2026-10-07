@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-07",
+  "baseline": "083e0bae9d440ff94a3ce77c5298f1a5808e9aa7",
+  "document": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
+  "scope": "R1 planning documentation only; no R059 activation or R2 implementation acceptance",
+  "initialFailures": [
+    "continuity rejected abbreviated active tranche R058; exact CCMAI-RUNTIME-058 synchronized across current pointers",
+    "docs deadlink to site-excluded roadmaps folder; canonical code path used, no configuration waiver"
+  ],
+  "correctedBy": "Codex /root SESSION_SYNC_STEWARD / SPEC_AUTHOR directly",
+  "newSourceEdits": 0,
+  "newAppGoInvocations": 0,
+  "subagentCalls": 0,
+  "oldEvidenceSeedsUnchanged": true,
+  "checks": {
+    "doctor": "PASS WITH NOTE25/1 core8a4119e, manifest warning/profile not installed",
+    "defaultPreflight": "PASS 7/7",
+    "prRangePreflight": "PASS 7/7 origin/main..083e0ba",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "docsBuildAfterFinalMarkdown": "PASS14.91s from root npm.cmd --prefix docs run docs:build",
+    "diffCheck": "PASS",
+    "protectedCheck": "PASS source/tests/scripts/workflows/seeds/tranches/old R057-R058 proof unchanged; current pointers reconcile; R059 not active",
+    "exactStagedPreflight": "Required before commit, all10 metadata files"
+  },
+  "gateUnitsBasis": "46 PASS52.797s at R058 closure9042f91; scripts/workflows/tests unchanged; no rerun for documentation-only change",
+  "claimFullS2": false,
+  "claimGovernanceRuntime": false,
+  "claimHostedCi": false
+}
