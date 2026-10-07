@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,13 +12,25 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-058 and bounded R055/R057 remain locally FROZEN at source05c59e9/review5ff0875/runtimec4f78f2. R059 DESIGN/SPEC9f01473 and bounded work-order draft docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md ready; independent R2 reviewer identity pending before immutable seed, activation and root source BUILD. Root implementation/commit route proposed, no source/tests/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy; full S2/global F02/live/governance/hosted remain OPEN, Facebook/Zalo OA parked.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-059 DISPATCH_READY / WORK_ORDER under seedf162e635d757b2e436d88e0b8fda9ab5840e478f: Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source edits, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. Existing R058 local FREEZE preserved; no source by root, extra workers, provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim. Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / planning COMMIT_STEWARD; proposed R059 implementation role not active",
-  "roleRoute": "ROOT_ONLY_WORK_ORDER_DRAFT_PENDING_INDEPENDENT_REVIEWER",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER; Codex /root/r059_worker IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD next",
+  "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxGoInvocations": 4,
+    "workerUsedCampaigns": 0,
+    "workerUsedGoInvocations": 0,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoInvocations": 4,
+    "reviewerUsedCampaigns": 0,
+    "reviewerUsedGoInvocations": 0,
+    "aggregateMaxCampaigns": 2,
+    "aggregateMaxGoInvocations": 8
+  },
+  "previousExecutionBudget": {
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 6,
     "reviewerUsedCampaigns": 1,

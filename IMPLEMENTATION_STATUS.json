@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -36,7 +36,7 @@
     "R055 preparation-only Summary receipt locally FROZEN under R058 at childsource05c59e9/independentreview5ff0875/runtimec4f78f2: SP01..12,114positiveTop/272PASS, storage mutation killed/restored, source/oldtests unchanged. No actual-call/policy/full S2/live/governance/hosted claim."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-058 and bounded R055/R057 remain locally FROZEN at source05c59e9/review5ff0875/runtimec4f78f2. R059 DESIGN/SPEC9f01473 and bounded work-order draft docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md ready; independent R2 reviewer identity pending before immutable seed, activation and root source BUILD. Root implementation/commit route proposed, no source/tests/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy; full S2/global F02/live/governance/hosted remain OPEN, Facebook/Zalo OA parked.",
+    "CCMAI-RUNTIME-059 DISPATCH_READY / WORK_ORDER under seedf162e635d757b2e436d88e0b8fda9ab5840e478f: Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source edits, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. Existing R058 local FREEZE preserved; no source by root, extra workers, provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim. Facebook/Zalo OA parked.",
     "Historical R045 closure hand-back; current R046 review tracked above. CCMAI-RUNTIME-045 and R044 JE-01..10 local contract FROZEN at exact repair b4ec91ea03a9f247e209389c3792c86494eac8b3 under separate R045 authority. Next ORCHESTRATOR prepares R046 bounded engine finalizer driver-error logging work order selected by owner; no BUILD yet. Accounts parked; inherited failures/limits and all prior dispositions retained. No live/CVF AI governance/hosted readiness claim, push/merge/deployment or external effect.",
     "Current: R044 JE-01..10 local contract FROZEN under R045. Historical acceptance and evidence retained: CCMAI-RUNTIME-044 R1 REVIEW_PASS / REVIEW / FREEZE_OPEN for exact Claude repair b4ec91ea03a9f247e209389c3792c86494eac8b3, test-only on original BUILD48918e2f953dbb32e7f5f159b1eceab7dfe3848f. Independent Codex re-review settles R044-R1-01..02: maintained synthetic notification-tail MCP/HTTP tests and finite no-output/cancellation/rejection controls; all15 original replacement hashes and10 new replay diffs verified with historical restoration limits preserved. Independent grouped393 (190 top-level/203 subtests) and targeted engine54 PASS0 FAIL/SKIP; four-test baseline/restored controls PASS; C01/C02 named mutation failures/restoration, N05e overlay named cancellation-after-publication failure then unmodified PASS; build/vet and gate46 PASS. Evidence docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md and docs/reviews/probes/r044_r1_independent_summary.json. Source/seed unchanged; old failed review, worker N04 BUILD_ERROR/N05 SURVIVED/N05e harness defect and all incidents remain. Race/full engine/full backend/all live NOT RUN. Separate R045 seed/order now DISPATCH_READY; closure evaluation is next, R044 FREEZE_OPEN; accounts parked, R043/prior dispositions unchanged, no FREEZE/live/governance/hosted claim.",
     "CCMAI-RUNTIME-043 and bounded R034/R041/R042 offline contracts are FROZEN at source add584a38058a6f2863c9a84ce06f0429b9c21d2 under separate closure authority. ORCHESTRATOR handles remaining bounded local planning/continuity; no new worker BUILD or runtime proof. Symlink UNVERIFIED2 SKIP, race NOT RUN, mapped/subst drive locality, TOCTOU exclusion, adapter_omitted/live ID/time/provider compatibility remain OPEN; receipt source-sha supplied metadata only. R035/R036 acceptance and R033/R040/R037-R039 closures unchanged. Actual MCP execution and live Pancake test-page/independent inventory/credential/network/quiescence/capture authority remain separate. No real inputs/config/credentials/provider/channel/network/DB/engine/push/merge/deployment/global F02/CVF AI governance/hosted readiness closure. Evidence docs/reviews/CCMAI_RUNTIME_043_LOCAL_OFFLINE_PROOF_CLOSURE_2026-10-03.md.",
@@ -314,27 +314,24 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-058 and bounded R055/R057 remain locally FROZEN at source05c59e9/review5ff0875/runtimec4f78f2. R059 DESIGN/SPEC9f01473 and bounded work-order draft docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md ready; independent R2 reviewer identity pending before immutable seed, activation and root source BUILD. Root implementation/commit route proposed, no source/tests/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy; full S2/global F02/live/governance/hosted remain OPEN, Facebook/Zalo OA parked.",
-    "assessment": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
+    "nextObjective": "CCMAI-RUNTIME-059 DISPATCH_READY / WORK_ORDER under seedf162e635d757b2e436d88e0b8fda9ab5840e478f: Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source edits, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. Existing R058 local FREEZE preserved; no source by root, extra workers, provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim. Facebook/Zalo OA parked.",
+    "assessment": "docs/work_orders/CCMAI_RUNTIME_059.md",
     "buildDispatched": false,
     "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_050_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-06.md",
     "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_058.md",
     "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_058.md",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_059.md",
     "currentExecutionBudget": {
+      "workerMaxCampaigns": 1,
+      "workerMaxGoInvocations": 4,
+      "workerUsedCampaigns": 0,
+      "workerUsedGoInvocations": 0,
       "reviewerMaxCampaigns": 1,
-      "reviewerMaxGoInvocations": 6,
-      "reviewerUsedCampaigns": 1,
-      "reviewerUsedGoInvocations": 6,
-      "historicalWorkerCampaigns": 1,
-      "historicalWorkerGoInvocations": 3,
-      "historicalReviewerCampaigns": 1,
-      "historicalReviewerGoInvocations": 2,
-      "failedR056ActivationGoInvocations": 0,
-      "aggregateMaxGoInvocations": 11,
-      "aggregateUsedGoInvocations": 11,
-      "closureNewGoInvocations": 0,
-      "closureNewCampaigns": 0
+      "reviewerMaxGoInvocations": 4,
+      "reviewerUsedCampaigns": 0,
+      "reviewerUsedGoInvocations": 0,
+      "aggregateMaxCampaigns": 2,
+      "aggregateMaxGoInvocations": 8
     },
     "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
     "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
@@ -362,19 +359,19 @@
   },
   "executionObservationPlanning": {
     "candidateTranche": "CCMAI-RUNTIME-059",
-    "status": "WORK_ORDER_DRAFT_READY_REVIEWER_UNASSIGNED",
+    "status": "DISPATCH_READY",
     "document": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
     "sourceImplementation": "NOT_STARTED",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
-    "activeTrancheUnchanged": "CCMAI-RUNTIME-058",
+    "activeTrancheUnchanged": null,
     "newSourceEdits": 0,
     "newGoInvocations": 0,
     "subagentCalls": 0,
     "fullS2Claim": false,
-    "nextMove": "Name independent R2 reviewer before seed/activation/source BUILD",
+    "nextMove": "CCMAI-RUNTIME-059 DISPATCH_READY / WORK_ORDER under seedf162e635d757b2e436d88e0b8fda9ab5840e478f: Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source edits, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. Existing R058 local FREEZE preserved; no source by root, extra workers, provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim. Facebook/Zalo OA parked.",
     "workOrderDraft": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
-    "independentReviewer": "UNASSIGNED",
-    "proposedImplementationWorker": "Codex /root",
+    "independentReviewer": "Codex /root",
+    "proposedImplementationWorker": "Codex /root/r059_worker",
     "workOrderPublicationChecks": {
       "defaultPreflight": "PASS7/7",
       "prRangePreflight": "PASS7/7 origin/main..9f01473",
@@ -384,6 +381,13 @@
       "protectedSourceToolsSeedsEvidence": "UNCHANGED",
       "gateUnitBasis": "46PASS52.797s inherited9042f91 unchanged tools/tests",
       "exactStagedPreflight": "Required before commit, exact7 metadata paths"
-    }
+    },
+    "activeTranche": "CCMAI-RUNTIME-059",
+    "workerModel": {
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium"
+    },
+    "authoritySeedCommit": "f162e635d757b2e436d88e0b8fda9ab5840e478f",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_059.md"
   }
 }

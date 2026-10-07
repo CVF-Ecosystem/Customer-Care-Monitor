@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-058", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-059", "parked": true} -->
 
 ## Startup Order
 
@@ -51,7 +51,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R058 closure / R059 work-order draft (2026-10-07)
+## Current R059 delegated execution receipt (2026-10-07)
+
+CCMAI-RUNTIME-059 DISPATCH_READY / WORK_ORDER under seedf162e635d757b2e436d88e0b8fda9ab5840e478f: Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source edits, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. Existing R058 local FREEZE preserved; no source by root, extra workers, provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim. Facebook/Zalo OA parked.
+
+## Historical R058 closure / R059 work-order draft (2026-10-07)
 
 CCMAI-RUNTIME-058 and bounded R055/R057 remain locally FROZEN at source05c59e9/review5ff0875/runtimec4f78f2. R059 DESIGN/SPEC9f01473 and bounded work-order draft docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md ready; independent R2 reviewer identity pending before immutable seed, activation and root source BUILD. Root implementation/commit route proposed, no source/tests/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy; full S2/global F02/live/governance/hosted remain OPEN, Facebook/Zalo OA parked.
 

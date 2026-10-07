@@ -2224,11 +2224,11 @@
       "description": "Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged."
     },
     {
-      "id": "continuity-initial-handoff",
+      "id": "handoff-r058-local-closure-before-r059",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R058 FREEZE handoff; R059 work-order draft ready, independent reviewer identity pending before source BUILD."
+      "description": "Historical R058 local FREEZE and R059 planning before delegated activation."
     },
     {
       "id": "work-order-r058",
@@ -2285,6 +2285,34 @@
       "path": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
       "status": "ACTIVE",
       "description": "Reviewable R059 source work-order draft; exact paths, EX01..12, bounded campaigns; independent reviewer identity pending, no activation or BUILD."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Active R059 delegated medium worker/root independent reviewer; WORK_ORDER before BUILD."
+    },
+    {
+      "id": "r059-active-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_059.md",
+      "status": "ACTIVE",
+      "description": "R059 DISPATCH_READY bounded execution observation EX01..12, child BUILD/root independent review."
+    },
+    {
+      "id": "r059-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-059.json",
+      "status": "ACTIVE",
+      "description": "Immutable R059 R2 worker-medium authority committed before activation."
+    },
+    {
+      "id": "r059-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-059.json",
+      "status": "ACTIVE",
+      "description": "R059 current bounded status/budget/phase/roles; no FREEZE or live claim."
     }
   ]
 }
