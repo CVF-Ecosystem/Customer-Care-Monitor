@@ -68,9 +68,10 @@
   "buildCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
   "reviewEvidence": [
     "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md",
-    "docs/reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md"
+    "docs/reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md",
+    "docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md"
   ],
-  "disposition": "INDEPENDENT_FAULT_TEST_CONTRACT_FAILURE_SUCCESSOR_R061",
+  "disposition": "SUPERSEDED_FINDINGS_SETTLED_BY_R061_NO_RETROACTIVE_PACKET_CERTIFICATION",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
@@ -283,5 +284,6 @@
       "diff": "PASS",
       "gateUnits": "Fresh46PASS20.397s"
     }
-  }
+  },
+  "acceptedSuccessorSourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f"
 }

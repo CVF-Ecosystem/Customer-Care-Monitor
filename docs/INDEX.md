@@ -8,6 +8,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical rejected R056 seed missing authorityKind, immutable; activation/runtime0, superseded by R057.: `CVF_SESSION/authority/CCMAI-RUNTIME-056.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
+- Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
@@ -48,11 +49,26 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Original failed worker1campaign1Go packet, rawlogs/fullmanifest/commands/state/restoration/cleanup; no retry.: `docs/reviews/probes/r060_worker_summary.json`
 - REVIEW_PENDING committed-source fullarchive and separate physical/Gitblob protection proof; worker0Go, independent runtime pending.: `docs/reviews/probes/r061_worker_handback.json`
 - NEW EX terminal-fallback faulttest repair: storedprefix/returned limits, sixcases and callback checks; product/old packets unchanged, no worker runtime.: `docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md`
+- Independent REVIEW_PASS on exact repaired source; both failures preserved, local scope only.: `docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md`
 - Historical R060 CHANGES_REQUIRED, both failed campaigns retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md`
 - Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_campaign.py`
 - Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_plan.json`
 - Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_protected.json`
 - Active R061 narrow test repair and lineage8Go budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-061.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m01.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m01_manifest.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m01_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m02.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m02_manifest.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m02_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_manifest.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_mutation1_diff.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_mutation2_diff.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_positive.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_positive_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_restored.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_restored_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_summary.json`
 - Narrow fault test contract repair, no worker runtime, independent successor campaign.: `docs/work_orders/CCMAI_RUNTIME_061.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
@@ -79,6 +95,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
 - Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred.: `docs/reviews/learnings/feedback_archive_byte_manifest.md`
+- Shared independently verified fixture-domain and stored-prefix learning; upstream deferred.: `docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md`
 - Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence.: `docs/reviews/learnings/feedback_minor_reviewer_repairs.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof.: `docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json`

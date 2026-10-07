@@ -31,3 +31,7 @@ Root independently verified failed evidence56f5f85; R060-R1-01 permits only NEW 
 ## Independent campaign result
 
 CHANGES_REQUIRED R060-R2-01 at a7edba2. Original worker/reviewer campaigns both consumed1Go each, no runtime under R060. Separately seeded R061 needed for only NEW EX fallback fault contract and one root successor campaign; [formal review/cost](../reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md). Product/oldtests/packets unchanged; no acceptance or closure.
+
+## Successor disposition
+
+R060 historical CHANGES_REQUIRED/superseded; original failed campaigns remain failed and original build/test snapshots are not recertified. R061 independently accepts bounded observation at d10e164 and settles R1/R2 findings; [review](../reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md). R061 scoped local closure separate.

@@ -1,0 +1,1236 @@
+{
+  "sourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+  "reviewer": "Codex /root",
+  "seedCommit": "de0c6a53e762c949475fe93209bbf802a0af62dc",
+  "campaigns": 1,
+  "goInvocations": 4,
+  "lineagePriorUsedGoInvocations": 2,
+  "lineageMaxGoInvocations": 8,
+  "planSha256": "462a8b35e40e1a792d9ed630fb4855378f4490aa132bab855a4b4cf53b17a297",
+  "automaticRetries": 0,
+  "commands": [
+    {
+      "label": "positive",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r061-review-positive-2c3e997ab7",
+        "--network",
+        "ccmai-r061-review-net-2c3e997ab7",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r061-build-cache-2c3e997ab7,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r061-review-db-2c3e997ab7:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=480s",
+        "-run",
+        "^Test(EX|SP|PreparationReceipt|FL03|FL06)",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestEXActualPanicBoundaries",
+        "TestEXAllExplicitModesRetainScalars",
+        "TestEXBatchBindingAndParserRejection",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXCancellationDuringProviderAndBatchPrefix",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXInitialProgressAndTerminalWriteFaults",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestEXMixedSaveAndProviderFailures",
+        "TestEXNoCallConstructionAndPreparation",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXProgressPrefixAndPreparationUnchanged",
+        "TestEXResponseAndErrorWinsInBothModes",
+        "TestEXSaveDatabaseFailureIsPublicationFailure",
+        "TestEXStoredTerminalSingleSuccess",
+        "TestEXUsageWriteFailurePreservesSavedResult",
+        "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+        "TestFL03FallbackBoundedOnFailure",
+        "TestFL03MissingRowBreaksRetries",
+        "TestFL03SuccessfulTerminalWrite",
+        "TestFL03TransactionBoundaryCommitTransientRecovery",
+        "TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint",
+        "TestFL03TransactionBoundaryTransientRecovery",
+        "TestFL06CancellationLeavesNoBoundaryLeak",
+        "TestFL06SuccessLifecyclePreservation",
+        "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+        "TestPreparationReceiptMetadataAndSummaryCompatibility",
+        "TestPreparationReceiptUnknownZeroAndPrivacy",
+        "TestSPAllExplicitModesCapAndContext",
+        "TestSPCancellationAndProviderPanic",
+        "TestSPInitialAndProgressRecordingGap",
+        "TestSPInputSelectionAndPreparationPanic",
+        "TestSPObservedQueriesAndReferenceErrors",
+        "TestSPOrdinaryExplicitAndProgressPersistence",
+        "TestSPSingleProviderErrorReceipt",
+        "TestSPSnapshotLookupMissingAndMisboundObservations",
+        "TestSPStoredEarlyTerminalReceipt",
+        "TestSPTerminalFailureAndLegacyClose"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r061-review-net-2c3e997ab7",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r061-build-cache-2c3e997ab7",
+            "Source": "/var/lib/docker/volumes/ccmai-r061-build-cache-2c3e997ab7/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 129.93,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r061_independent_positive.jsonl",
+        "bytes": 15676557,
+        "sha256": "fcbf187a004369479ef12b1a0c8a06fc5fef56b6b50a4a1f07b9cbedfaed39b1"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r061_independent_positive_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-07T14:10:42.017825341Z",
+        "FinishedAt": "2026-10-07T14:12:51.478825153Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestFL03SuccessfulTerminalWrite",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03MissingRowBreaksRetries",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03FallbackBoundedOnFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03TransactionBoundaryTransientRecovery",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03TransactionBoundaryCommitTransientRecovery",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL06SuccessLifecyclePreservation",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL06CancellationLeavesNoBoundaryLeak",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/unchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/setup_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/preparation_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/cancel_before_call",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXSaveDatabaseFailureIsPublicationFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXMixedSaveAndProviderFailures",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/single_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_prefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXProgressPrefixAndPreparationUnchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCollectorDimensionsAndFreeze",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInvalidMetadataNeverSerializesRawValues",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPStoredEarlyTerminalReceipt",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPOrdinaryExplicitAndProgressPersistence",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPObservedQueriesAndReferenceErrors",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPInputSelectionAndPreparationPanic",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPCancellationAndProviderPanic",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPTerminalFailureAndLegacyClose",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPSingleProviderErrorReceipt",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPAllExplicitModesCapAndContext",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPSnapshotLookupMissingAndMisboundObservations",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPInitialAndProgressRecordingGap",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptUnknownZeroAndPrivacy",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptMetadataAndSummaryCompatibility",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 38,
+        "pass": 70,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": false
+      }
+    },
+    {
+      "label": "m01",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r061-review-m01-2c3e997ab7",
+        "--network",
+        "ccmai-r061-review-net-2c3e997ab7",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r061-build-cache-2c3e997ab7,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r061-review-db-2c3e997ab7:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestEXNoCallConstructionAndPreparation$",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestEXNoCallConstructionAndPreparation"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r061-review-net-2c3e997ab7",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r061-build-cache-2c3e997ab7",
+            "Source": "/var/lib/docker/volumes/ccmai-r061-build-cache-2c3e997ab7/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 21.648,
+      "attachExit": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r061_independent_m01.jsonl",
+        "bytes": 1397924,
+        "sha256": "475a84a0ecde9691cc98323a4c922763efba4aeba8cf2386f18081b293b2e481"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r061_independent_m01_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-07T14:12:53.19552399Z",
+        "FinishedAt": "2026-10-07T14:13:14.317406735Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/unchanged",
+            "action": "fail"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/setup_error",
+            "action": "fail"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/preparation_error",
+            "action": "fail"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/cancel_before_call",
+            "action": "fail"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation",
+            "action": "fail"
+          }
+        ],
+        "topLevel": 1,
+        "pass": 1,
+        "fail": 5,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": true
+      }
+    },
+    {
+      "label": "m02",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r061-review-m02-2c3e997ab7",
+        "--network",
+        "ccmai-r061-review-net-2c3e997ab7",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r061-build-cache-2c3e997ab7,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r061-review-db-2c3e997ab7:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestEXStoredTerminalSingleSuccess$",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestEXStoredTerminalSingleSuccess"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r061-review-net-2c3e997ab7",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r061-build-cache-2c3e997ab7",
+            "Source": "/var/lib/docker/volumes/ccmai-r061-build-cache-2c3e997ab7/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 19.274,
+      "attachExit": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r061_independent_m02.jsonl",
+        "bytes": 268681,
+        "sha256": "9e7bed73958cefd903746bf87c995929caa668455d3c8f066ef4a0b0b492f1d3"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r061_independent_m02_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-07T14:13:15.952747839Z",
+        "FinishedAt": "2026-10-07T14:13:34.754501516Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestEXStoredTerminalSingleSuccess",
+            "action": "fail"
+          }
+        ],
+        "topLevel": 1,
+        "pass": 0,
+        "fail": 1,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": true
+      }
+    },
+    {
+      "label": "restored",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r061-review-restored-2c3e997ab7",
+        "--network",
+        "ccmai-r061-review-net-2c3e997ab7",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r061-build-cache-2c3e997ab7,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r061-review-db-2c3e997ab7:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestEX",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestEXActualPanicBoundaries",
+        "TestEXAllExplicitModesRetainScalars",
+        "TestEXBatchBindingAndParserRejection",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXCancellationDuringProviderAndBatchPrefix",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXInitialProgressAndTerminalWriteFaults",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestEXMixedSaveAndProviderFailures",
+        "TestEXNoCallConstructionAndPreparation",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXProgressPrefixAndPreparationUnchanged",
+        "TestEXResponseAndErrorWinsInBothModes",
+        "TestEXSaveDatabaseFailureIsPublicationFailure",
+        "TestEXStoredTerminalSingleSuccess",
+        "TestEXUsageWriteFailurePreservesSavedResult"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r061-review-net-2c3e997ab7",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r061-build-cache-2c3e997ab7",
+            "Source": "/var/lib/docker/volumes/ccmai-r061-build-cache-2c3e997ab7/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 39.515,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r061_independent_restored.jsonl",
+        "bytes": 9459183,
+        "sha256": "8e59fef59ea8b97b3809bd0e64efdb521aa1c9d7f06427c02a5c9b0a88538c45"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r061_independent_restored_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-07T14:13:36.119430977Z",
+        "FinishedAt": "2026-10-07T14:14:15.18325272Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/unchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/setup_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/preparation_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/cancel_before_call",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXSaveDatabaseFailureIsPublicationFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXMixedSaveAndProviderFailures",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/single_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_prefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXProgressPrefixAndPreparationUnchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCollectorDimensionsAndFreeze",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInvalidMetadataNeverSerializesRawValues",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 16,
+        "pass": 48,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": false
+      }
+    }
+  ],
+  "errors": [],
+  "sourceDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r061-independent-zr64hu9s",
+  "scope": "application_observation_only",
+  "cleanup": {
+    "containers": [
+      {
+        "name": "ccmai-r061-review-restored-2c3e997ab7",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r061-review-m02-2c3e997ab7",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r061-review-m01-2c3e997ab7",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r061-review-positive-2c3e997ab7",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r061-review-db-2c3e997ab7",
+        "removeExit": 0,
+        "absent": true
+      }
+    ],
+    "volumes": [
+      {
+        "name": "cb311b679744fb7a988548550967a7d52ae931134a6867e51a9d109adb0a0ca9",
+        "absent": true
+      },
+      {
+        "name": "ccmai-r061-build-cache-2c3e997ab7",
+        "absent": true
+      }
+    ],
+    "network": {
+      "name": "ccmai-r061-review-net-2c3e997ab7",
+      "removeExit": 0,
+      "absent": true
+    },
+    "buildCacheRemoveExit": 0,
+    "successfulInventoryExits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "images": [
+    {
+      "tag": "golang:1.26-alpine",
+      "id": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+    },
+    {
+      "tag": "mysql:8.0",
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    }
+  ],
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+      "backend"
+    ],
+    "bytes": 2396160,
+    "sha256": "631da856de5fa08442fd9c437e1051697167026b7eb068b4bd31f396bceafa8b"
+  },
+  "manifest": {
+    "path": "docs/reviews/probes/r061_independent_manifest.json",
+    "bytes": 33858,
+    "sha256": "93aa8c345e407443feea365c3cea65c183d7531abc778cf3513482dfc11716d5"
+  },
+  "sourceChecks": [
+    {
+      "stage": "before mutation",
+      "equal": true
+    },
+    {
+      "stage": "before positive",
+      "equal": true
+    },
+    {
+      "stage": "before m01",
+      "equal": true
+    },
+    {
+      "stage": "after actual m01",
+      "equal": true
+    },
+    {
+      "stage": "before m02",
+      "equal": true
+    },
+    {
+      "stage": "after actual m02",
+      "equal": true
+    },
+    {
+      "stage": "before restored",
+      "equal": true
+    },
+    {
+      "stage": "final",
+      "equal": true
+    }
+  ],
+  "mutations": [
+    {
+      "label": "m01",
+      "path": "backend/engine/analyzer.go",
+      "matchCount": 1,
+      "originalSha256": "a2ca94cdcf26c51fb9a6bd8c82599a898477d25e5c2f8cd92d736161aa5c4575",
+      "mutantSha256": "d7fda9b45d9af12a3d8bb772b3f4562b381bf1096bd5581e182fb85ac0f56c40",
+      "detector": "TestEXNoCallConstructionAndPreparation",
+      "assertion": "logical invocation began without provider method",
+      "diff": {
+        "path": "docs/reviews/probes/r061_independent_mutation1_diff.json",
+        "bytes": 599,
+        "sha256": "4c783a025ba9828f77de84fdebd6d77c406ba72a82193921d148765cd432dcfe"
+      },
+      "appliedManifest": {
+        "path": "docs/reviews/probes/r061_independent_m01_manifest.json",
+        "bytes": 33858,
+        "sha256": "558946843d60544c1eda6efdfc27c78d75dfa89dc61bbe9b3e1b7e890a682d23"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredByteEqual": true
+    },
+    {
+      "label": "m02",
+      "path": "backend/engine/analyzer.go",
+      "matchCount": 1,
+      "originalSha256": "a2ca94cdcf26c51fb9a6bd8c82599a898477d25e5c2f8cd92d736161aa5c4575",
+      "mutantSha256": "0ec1c83b544e026b5a6cca606be8c34aa3bb15038d82eb8a1c7555cc57008a46",
+      "detector": "TestEXStoredTerminalSingleSuccess",
+      "assertion": "stored terminal execution receipt missing",
+      "diff": {
+        "path": "docs/reviews/probes/r061_independent_mutation2_diff.json",
+        "bytes": 1003,
+        "sha256": "e3b6ad7b62eae22426184e129cfe7946d0303c5b130cd306d2482ec3b9800fa3"
+      },
+      "appliedManifest": {
+        "path": "docs/reviews/probes/r061_independent_m02_manifest.json",
+        "bytes": 33858,
+        "sha256": "bb148f493aa384065c611fc743d93f854c81beb181399febc000c9c5206bad05"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredByteEqual": true
+    }
+  ],
+  "buildCache": {
+    "name": "ccmai-r061-build-cache-2c3e997ab7",
+    "freshDisposable": true,
+    "rwGoOnly": true
+  },
+  "network": {
+    "Name": "ccmai-r061-review-net-2c3e997ab7",
+    "Id": "2309a38a99b9482e583d9e1c415fab8fed59a000d92f05a304b93d7854f98242",
+    "Created": "2026-10-07T14:10:30.759367813Z",
+    "Scope": "local",
+    "Driver": "bridge",
+    "EnableIPv4": true,
+    "EnableIPv6": false,
+    "IPAM": {
+      "Driver": "default",
+      "Options": {},
+      "Config": [
+        {
+          "Subnet": "172.19.0.0/16",
+          "Gateway": "172.19.0.1"
+        }
+      ]
+    },
+    "Internal": true,
+    "Attachable": false,
+    "Ingress": false,
+    "ConfigFrom": {
+      "Network": ""
+    },
+    "ConfigOnly": false,
+    "Options": {
+      "com.docker.network.enable_ipv4": "true",
+      "com.docker.network.enable_ipv6": "false"
+    },
+    "Labels": {},
+    "Containers": {},
+    "Status": {
+      "IPAM": {
+        "Subnets": {
+          "172.19.0.0/16": {
+            "IPsInUse": 3,
+            "DynamicIPsAvailable": 65533
+          }
+        }
+      }
+    }
+  },
+  "database": {
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "cb311b679744fb7a988548550967a7d52ae931134a6867e51a9d109adb0a0ca9",
+        "Source": "/var/lib/docker/volumes/cb311b679744fb7a988548550967a7d52ae931134a6867e51a9d109adb0a0ca9/_data",
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "ports": {}
+  },
+  "result": "PASS",
+  "seconds": 236.268,
+  "secondArchiveSameSha256": true
+}

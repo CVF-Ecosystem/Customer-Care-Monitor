@@ -34,6 +34,8 @@ Owner-agreed convention: `docs/reviews/learnings/` stores reusable findings and 
 
 These committed repository records are the shared learning references; provider-local feedback is supplemental. They are directly indexed through the artifact registry and generated docs index, with source/confidence and proposed parent disposition. Read only the applicable record at the task trigger; no full-history read is needed. Learning documentation does not grant product acceptance; use the current tranche disposition below for F07 status. Parent helper/enforcement proposals remain deferred through `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`.
 
+- [UUID-positive fixtures and terminal receipt prefixes](docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md): read before receipt-binding tests or database-fault review; distinguish stored prefixes from returned completion.
+
 ## Mandatory Continuity Rehydration
 
 Repeat the startup order before material work at every new or resumed
@@ -53,7 +55,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R061 terminal fallback test successor (2026-10-07)
 
-CCMAI-RUNTIME-061 REVIEW_PENDING / INDEPENDENT_CAMPAIGN_READY at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f handbackf246b85: root independently executes exactly one4Go campaign (38 EX/SP/finalizer positives, M01, M02, restored16 EX) on exact210-file Git archive with manifests/mutation/restoration/cleanup proof. No automatic retry, worker newGo0; lineage historical2Go+planned4=max6of8, max3campaigns includes priorfailed2. Source/tests untouched by root; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-061 REVIEW_PASS / REVIEW / FREEZE_OPEN at accepted sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f: root CLOSER assesses separately seeded R062 metadata-only local closure. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS and full210file restoration/cleanup verified; lineage3campaigns6Go of8, no more runtime. R060 failed packets historical/superseded, findings settled without retroactive certification; product/oldtests/seeds immutable. No source edits/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy or global S2/live/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 

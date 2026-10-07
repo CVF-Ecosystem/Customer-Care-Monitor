@@ -61,17 +61,20 @@
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_061.md",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "de0c6a53e762c949475fe93209bbf802a0af62dc",
   "buildCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "reviewEvidence": [
+    "docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md"
+  ],
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "dispatcher": "Codex /root",
   "executionBudget": {
@@ -81,13 +84,15 @@
     "workerUsedGoInvocations": 0,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedGoInvocations": 0,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 4,
     "lineagePriorUsedCampaigns": 2,
     "lineagePriorUsedGoInvocations": 2,
     "lineageMaxCampaigns": 3,
     "lineageMaxGoInvocations": 8,
-    "lineagePlannedTotalGoInvocations": 6
+    "lineagePlannedTotalGoInvocations": 6,
+    "lineageUsedCampaigns": 3,
+    "lineageUsedGoInvocations": 6
   },
   "workerModel": {
     "model": "gpt-6.1-sol",
@@ -170,5 +175,40 @@
       "diff": "PASS",
       "gateUnits": "Fresh46PASS20.397s inherited unchanged tooling"
     }
-  }
+  },
+  "acceptedIndependentRuntime": {
+    "receipt": "docs/reviews/probes/r061_independent_summary.json",
+    "sourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+    "result": "PASS",
+    "campaigns": 1,
+    "Go": 4,
+    "positiveTop": 38,
+    "positivePass": 70,
+    "restoredTop": 16,
+    "restoredPass": 48,
+    "positiveFail": 0,
+    "positiveSkip": 0,
+    "M01": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+    "M02": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+    "restoration": "PASS210files",
+    "cleanup": "PASS",
+    "gateUnits": "Fresh46PASS58.811s",
+    "reviewerSourceEdits": 0,
+    "settledFindings": [
+      "R060-R1-01",
+      "R060-R2-01"
+    ],
+    "publicationChecks": {
+      "default": "PASS7/7 after retained initial6/7 metadata findings",
+      "pr": "PASS7/7",
+      "catalogPS51": "PASS through gates",
+      "catalogPS7": "PASS",
+      "docs": "PASS20.27s after final Markdown",
+      "diff": "PASS",
+      "gateUnits": "Fresh46PASS58.811s",
+      "staged": "Required and executed before formal review commit"
+    }
+  },
+  "acceptedScope": "Bounded local execution observation EX01..12 at d10e164, R060 findings settled through successor",
+  "reviewPublicationSetupFinding": "Initial6/7 gate: root used descriptive disposition instead of required REVIEW_PASS and invalid historical CHANGES_REQUIRED-to-PARKED transition. Corrected current disposition and retained R060 CHANGES_REQUIRED with explicit superseded disposition; no source/tests/tooling or runtime change."
 }
