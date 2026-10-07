@@ -1,4 +1,4 @@
-﻿{
+{
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-063",
   "riskCeiling": "R2",
@@ -150,5 +150,33 @@
     "setupFindingsRetained": true,
     "extraGoInvocations": 0,
     "exactStaged": "PASS7/7 exact24 authorized handback/evidence paths, final staged gate rerun before commit"
+  },
+  "independentReviewAcknowledgment": {
+    "reviewer": "Codex /root",
+    "date": "2026-10-08",
+    "sourceCommit": "55e836a1b980b3e5d4075ceb33466786c860f963",
+    "archiveSourceCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
+    "handbackCommit": "46ec348258150ca334aa8672b433d650cfd1a267",
+    "runner": "docs/reviews/probes/r063_independent_campaign.py",
+    "plan": "docs/reviews/probes/r063_independent_plan.json",
+    "protected": "docs/reviews/probes/r063_independent_protected.json",
+    "plannedPositiveTop": 53,
+    "plannedRestoredTop": 9,
+    "GoUsed": 0,
+    "runtime": "NOT_RUN",
+    "sourceEdits": 0,
+    "maxCampaigns": 1,
+    "maxGo": 4,
+    "setupFinding": "Initial metadata preparation stopped parsing PS-written UTF8BOM tranche JSON after creating new proof files; shell continued catalog/preflight. Root reread utf8-sig before dependent writes; source/runtime/old packets untouched, no Go.",
+    "publicationChecks": {
+      "default": "PASS7/7",
+      "prRange": "PASS7/7",
+      "catalogPS51": "PASS through gates",
+      "catalogPS7": "PASS",
+      "docs": "PASS38.44s final acknowledgment Markdown",
+      "diff": "PASS",
+      "staged": "PASS7/7 exact8paths",
+      "gateUnits": "Fresh46PASS69.220s"
+    }
   }
 }

@@ -2824,6 +2824,27 @@
       "path": "docs/reviews/probes/r063_worker_summary.json",
       "status": "ACTIVE",
       "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-review-proof-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet."
+    },
+    {
+      "id": "evidence-r063-review-proof-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet."
+    },
+    {
+      "id": "evidence-r063-review-proof-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_protected.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet."
     }
   ]
 }

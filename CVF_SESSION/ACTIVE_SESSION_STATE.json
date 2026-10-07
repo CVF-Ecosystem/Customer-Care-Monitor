@@ -87,7 +87,7 @@
       "totalGo": 8,
       "authorized": true
     },
-    "sourceImplementation": "IMPLEMENTED_WORKER_EVIDENCE_PENDING_INDEPENDENT_REVIEW"
+    "sourceImplementation": "COMMITTED_SUBMITTED_FOR_INDEPENDENT_REVIEW"
   },
   "r061RetainedExecutionBudget": {
     "workerMaxCampaigns": 0,

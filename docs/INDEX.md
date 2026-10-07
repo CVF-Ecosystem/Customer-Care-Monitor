@@ -94,6 +94,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_summary.json`
 - Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD.: `docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md`
 - Historical R062 local FREEZE and R063 planning before separate activation.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md`
+- Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet.: `docs/reviews/probes/r063_independent_campaign.py`
+- Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet.: `docs/reviews/probes/r063_independent_plan.json`
+- Independent exact-source bounded rule-observation proof preparation; root0Go, no runtime acceptance yet.: `docs/reviews/probes/r063_independent_protected.json`
 - R063 bounded R2 work-order record, immutable seed before BUILD.: `CVF_SESSION/tranches/CCMAI-RUNTIME-063.json`
 - Authorized additive rule-input observation only; exact SP/EX compatibility, independent roles/max8Go.: `docs/work_orders/CCMAI_RUNTIME_063.md`
 - Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD.: `docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md`
