@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-060 REVIEW_PENDING / INDEPENDENT_CAMPAIGN_READY at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93 handbackd15739a: root independent REVIEWER runs originally budgeted one4Go campaign on exact210-file Git archive:120 grouped positives, M01 false invocation, M02 stored-only receipt erasure, restored16 EX; no automatic retry. Worker failed1campaign1Go remains preserved/no rerun; aggregate2campaign8Go unchanged/planned5Go. Root source/test edits0; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-060 CHANGES_REQUIRED after independent120top/305PASS3FAIL0SKIP at sourcea7edba2: root activates separately seeded R061 NEW EX terminal-fallback test repair only; original worker1campaign1Go and reviewer1campaign1Go immutable, M01/M02/restored NOT_RUN. R061 child medium repair/no workerGo, root one4Go successor campaign; total lineage max8Go used2/planned6, max3campaigns including original failed2, no reset. Product/oldtests/seeds unchanged, root source edits0; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / REVIEW COMMIT_STEWARD / SESSION_SYNC_STEWARD; child implementation and repaired source handed back",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD for R061 successor; child repair stopped before new authority activation",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
@@ -25,8 +25,8 @@
     "workerUsedGoInvocations": 1,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedGoInvocations": 0,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 1,
     "aggregateMaxCampaigns": 2,
     "aggregateMaxGoInvocations": 8,
     "priorR059UsedCampaigns": 0,

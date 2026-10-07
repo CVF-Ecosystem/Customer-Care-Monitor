@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-060 — Bounded Analyzer execution observation
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-07 (Asia/Saigon). R2. Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER; Codex `/root/r059_worker` IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD, model `gpt-6.1-sol`, reasoning `medium`, explicitly owner-selected. Owner `ok, do it` authorizes this delegated route, superseding prior no-subagent/root-only proposal for R059. Separate immutable seed committed at 2f39532ef196e69fd919e93aaf34f82aee5dde20. No product BUILD before worker rehydration/declaration and committed BUILD acknowledgment.
 
@@ -27,3 +27,7 @@ R059 parked source/ack/campaign/Go0; original seed immutable, not recertified. R
 ## Accepted R1 repair disposition before edits
 
 Root independently verified failed evidence56f5f85; R060-R1-01 permits only NEW EX UUID-positive fixture/safe binding detector repair under unchanged seed. Worker fresh BUILD acknowledgment before edits; no second worker campaign. Repaired source handback without new Go; root originally unstarted1/4Go independently validates positives/M01/M02/restored. Original failed1Go retained, planned total5/8 with original max2campaigns. See [formal disposition](../reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md). Original four-call worker campaign instruction is historical incomplete evidence, not authority for retry.
+
+## Independent campaign result
+
+CHANGES_REQUIRED R060-R2-01 at a7edba2. Original worker/reviewer campaigns both consumed1Go each, no runtime under R060. Separately seeded R061 needed for only NEW EX fallback fault contract and one root successor campaign; [formal review/cost](../reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md). Product/oldtests/packets unchanged; no acceptance or closure.

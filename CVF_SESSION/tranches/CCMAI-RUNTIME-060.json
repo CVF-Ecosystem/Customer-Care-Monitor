@@ -62,14 +62,15 @@
   ],
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
   "buildCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
   "reviewEvidence": [
-    "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md"
+    "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md",
+    "docs/reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md"
   ],
-  "disposition": "SAME_SCOPE_NEW_EX_FIXTURE_REPAIR_REQUIRED",
+  "disposition": "INDEPENDENT_FAULT_TEST_CONTRACT_FAILURE_SUCCESSOR_R061",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
@@ -77,7 +78,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -98,8 +100,8 @@
     "workerUsedGoInvocations": 1,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedGoInvocations": 0,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 1,
     "aggregateMaxCampaigns": 2,
     "aggregateMaxGoInvocations": 8,
     "priorR059UsedCampaigns": 0,
@@ -253,6 +255,33 @@
       "docs": "PASS7.83s after final Markdown",
       "diff": "PASS",
       "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling"
+    }
+  },
+  "independentRuntime": {
+    "receipt": "docs/reviews/probes/r060_independent_summary.json",
+    "result": "CHANGES_REQUIRED",
+    "sourceCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
+    "topLevel": 120,
+    "topPass": 119,
+    "topFail": 1,
+    "totalPass": 305,
+    "totalFail": 3,
+    "skip": 0,
+    "mutations": "NOT_RUN",
+    "restoredControl": "NOT_RUN",
+    "cleanup": "PASS",
+    "archiveRestoration": "PASS210files",
+    "gateUnits": "PASS46/20.397s",
+    "finding": "R060-R2-01",
+    "round": 2,
+    "publicationChecks": {
+      "default": "PASS7/7",
+      "pr": "PASS7/7",
+      "catalogPS51": "PASS through gates",
+      "catalogPS7": "PASS",
+      "docs": "PASS20.27s after final Markdown",
+      "diff": "PASS",
+      "gateUnits": "Fresh46PASS20.397s"
     }
   }
 }
