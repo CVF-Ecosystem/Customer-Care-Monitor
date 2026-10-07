@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD for accepted repair disposition; Codex /root/r059_worker REPAIR_WORKER / BUILD COMMIT_STEWARD after committed BUILD acknowledgment
-- Next allowed move: CCMAI-RUNTIME-060 CHANGES_REQUIRED / SAME_SCOPE_REPAIR_DISPOSITION: worker rehydrates and commits BUILD acknowledgment before NEW EX UUID-fixture and safe-binding test repair only, then source checkpoint and REVIEW_PENDING without a second worker campaign. Root independently reviews repaired source using originally unstarted one4Go campaign (120 positives, M01, M02, restored EX). Failed worker56f5f85/sourceed2f530 and worker1campaign/1Go preserved; aggregate max2campaigns/8Go unchanged, planned total5Go, no budget reset. No product/old-test/seed edit by repair, no root source edit or extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root/r059_worker R1 REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER after repaired handback
+- Next allowed move: CCMAI-RUNTIME-060 BUILD / R1_NEW_EX_FIXTURE_REPAIR under committed9cfcf96 disposition: worker repairs only NEW source_execution_receipt_db_test.go UUID-positive fixture and safe exact binding assertions, then gated source checkpoint and REVIEW_PENDING. No new worker campaign/Go; failed worker1campaign1Go and original packet preserved. Root originally unstarted one4Go independent campaign next, aggregate2campaign8Go unchanged/planned5Go. Product/old-tests/seeds unchanged; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche acknowledgment before BUILD
@@ -30,3 +30,7 @@ Sourceed2f53043919dec5260dca0fc5ff41b75c134f70, worker1campaign/1Go failed posit
 ## Root independent failure audit and same-scope repair disposition
 
 2026-10-07 root fresh canonical rehydration/declaration in REVIEW; own raw-hash/event/cleanup verification confirms failed worker56f5f85308804f80215cadf012f3b2db2a77dae4 at sourceed2f530. Finding R060-R1-01 is NEW EX UUID-positive fixture mismatch and unsafe index, not a demonstrated product privacy defect. Root accepts one consolidated test-only repair within immutable seed paths/roles/risk/effects; no worker runtime retry or campaign/budget expansion. Before edits worker must rehydrate/declare/commit BUILD acknowledgment, inspect FK and cleanup consistency, preserve exact assertions and all old source/tests; commit repaired source and hand back REVIEW_PENDING without Go. Root originally unstarted1campaign/4Go independently settles exact repaired source, both semantic mutations and restored controls. Planned combined campaigns2/Go5 within original2/8; failed packet immutable, unused worker commands not transferable permission. Root never changes canonical source/tests. [Disposition](../../docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md).
+
+## R1 worker before-edit repair BUILD acknowledgment
+
+Fresh canonical rehydration/declaration completed under disposition9cfcf96; doctor PASS WITH NOTE25/1/core8a4119e origin/main match, manifest26c686cc warning/profile missing and bootstrap migration note retained. REVIEW to BUILD / REPAIR_WORKER / BUILD COMMIT_STEWARD before any repair. Exact accepted finding R060-R1-01: only new EX UUID fixture and safe exact bindings, all product/old tests/seeds/failed evidence immutable. No second worker campaign or new Go; worker1/1 failure retained, independent root1/4 pending within original2/8. Current implementation-planning nextMove/status still carried previous cost-request prose after root disposition; retired during this matching acknowledgment using committed current order/disposition facts, not a new authority choice. Accounts parked, no acceptance/FREEZE.

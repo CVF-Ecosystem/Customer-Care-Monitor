@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-060", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md", "activeTranche": "CCMAI-RUNTIME-060", "parked": true} -->
 
 ## Startup Order
 
@@ -53,7 +53,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R060 execution receipt successor (2026-10-07)
 
-CCMAI-RUNTIME-060 CHANGES_REQUIRED / SAME_SCOPE_REPAIR_DISPOSITION: worker rehydrates and commits BUILD acknowledgment before NEW EX UUID-fixture and safe-binding test repair only, then source checkpoint and REVIEW_PENDING without a second worker campaign. Root independently reviews repaired source using originally unstarted one4Go campaign (120 positives, M01, M02, restored EX). Failed worker56f5f85/sourceed2f530 and worker1campaign/1Go preserved; aggregate max2campaigns/8Go unchanged, planned total5Go, no budget reset. No product/old-test/seed edit by repair, no root source edit or extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-060 BUILD / R1_NEW_EX_FIXTURE_REPAIR under committed9cfcf96 disposition: worker repairs only NEW source_execution_receipt_db_test.go UUID-positive fixture and safe exact binding assertions, then gated source checkpoint and REVIEW_PENDING. No new worker campaign/Go; failed worker1campaign1Go and original packet preserved. Root originally unstarted one4Go independent campaign next, aggregate2campaign8Go unchanged/planned5Go. Product/old-tests/seeds unchanged; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 

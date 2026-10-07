@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-060 CHANGES_REQUIRED / SAME_SCOPE_REPAIR_DISPOSITION: worker rehydrates and commits BUILD acknowledgment before NEW EX UUID-fixture and safe-binding test repair only, then source checkpoint and REVIEW_PENDING without a second worker campaign. Root independently reviews repaired source using originally unstarted one4Go campaign (120 positives, M01, M02, restored EX). Failed worker56f5f85/sourceed2f530 and worker1campaign/1Go preserved; aggregate max2campaigns/8Go unchanged, planned total5Go, no budget reset. No product/old-test/seed edit by repair, no root source edit or extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-060 BUILD / R1_NEW_EX_FIXTURE_REPAIR under committed9cfcf96 disposition: worker repairs only NEW source_execution_receipt_db_test.go UUID-positive fixture and safe exact binding assertions, then gated source checkpoint and REVIEW_PENDING. No new worker campaign/Go; failed worker1campaign1Go and original packet preserved. Root originally unstarted one4Go independent campaign next, aggregate2campaign8Go unchanged/planned5Go. Product/old-tests/seeds unchanged; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD for accepted repair disposition; Codex /root/r059_worker REPAIR_WORKER / BUILD COMMIT_STEWARD after committed BUILD acknowledgment",
+  "activeRole": "Codex /root/r059_worker R1 REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER after repaired handback",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
