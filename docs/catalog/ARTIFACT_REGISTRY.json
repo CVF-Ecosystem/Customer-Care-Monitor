@@ -2313,6 +2313,13 @@
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-059.json",
       "status": "ACTIVE",
       "description": "R059 current bounded status/budget/phase/roles; no FREEZE or live claim."
+    },
+    {
+      "id": "r059-prebuild-contract-boundary",
+      "family": "continuity",
+      "path": "docs/reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Pre-BUILD scalar test/additive receipt contract contradiction; exact4-line patch proposed, source/runtime0, owner boundary disposition pending."
     }
   ]
 }

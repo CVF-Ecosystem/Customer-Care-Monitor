@@ -124,6 +124,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Reviewable R059 source work-order draft; exact paths, EX01..12, bounded campaigns; independent reviewer identity pending, no activation or BUILD.: `docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md`
 - Planning-only candidate R059 execution observation contract EX01..12; no activation/implementation/runtime evidence or full S2 claim.: `docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md`
 - R059 planning publication checks and retained setup failures; no implementation/runtime or governance evidence.: `docs/reviews/probes/r059_planning_publication_checks.json`
+- Pre-BUILD scalar test/additive receipt contract contradiction; exact4-line patch proposed, source/runtime0, owner boundary disposition pending.: `docs/reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md`
 - R059 current bounded status/budget/phase/roles; no FREEZE or live claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-059.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`

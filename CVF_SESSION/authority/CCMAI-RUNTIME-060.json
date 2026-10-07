@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-060",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_APPLICATION_WORK_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
+  "sourcePlanningCommit": "2c5fcc9fda6f935353db62fdd8c3f7d1cc9173e4",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r059_worker",
+    "repairWorker": "Codex /root/r059_worker",
+    "commitSteward": "Codex /root/r059_worker",
+    "reviewer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/source_preparation_receipt.go",
+    "backend/engine/source_execution_receipt.go",
+    "backend/engine/source_execution_receipt_test.go",
+    "backend/engine/source_execution_receipt_db_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_060.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md",
+    "backend/engine/source_preparation_receipt_db_test.go"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "semantic_auto_skip",
+    "budget_or_policy_gate",
+    "provider_selection_or_fallback_change",
+    "old_worker_or_review_packet_edit",
+    "receipt_driven_admission_or_skip",
+    "extra_database_query_for_receipt",
+    "model_or_migration_change",
+    "automatic_runtime_retry",
+    "provider_interface_edit",
+    "http_attempt_or_billing_claim",
+    "execution_receipt_driven_behavior_change",
+    "root_source_test_edit",
+    "existing_test_edit_outside_exact_SP_scalar_receipt_amendment"
+  ],
+  "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
+  "objective": "Retain truthful bounded logical single/batch invocation/return/usage-write/parser/publication outcomes with observed prefix on panic/cancel, without source selection/query/schema/provider or lifecycle change. EX01..12.",
+  "ownerAuthorization": "Owner asks subagent roles, selects gpt-6.1-sol reasoning medium and explicitly says ok do it. Supersedes earlier no-subagent/root-only proposal for R059. Child implementation/repair/BUILD commits; root orchestration and independent source review. No other authority expansion. Owner further instructs root to self-audit and choose on existing-test/path boundary; root chooses exact4-line receipt-vs-scalar maintenance, preserves all old assertions and seeds. No repeated permission request.",
+  "workerModel": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "medium"
+  },
+  "baselineSourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+  "acceptedPriorClosureCommit": "9042f9174fc65d9b785d9645f91c881bbbac79ac",
+  "spec": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
+  "draftWorkOrder": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
+  "runtimeEvidenceBoundary": "Only application-behavior tests with cached offline Go/Docker and disposable synthetic MySQL, internal network/no host ports/no new pulls. Test doubles are application fault fixtures, never governance proof. Any actual provider/governance/credential/network evidence requires separate authority.",
+  "dispatchBoundary": "Seed first commit before activation/baseCommit; named worker rehydrates, declares and commits BUILD acknowledgment before source edits. Source checkpoint commit before exact git archive campaign. Exact committed source/evidence handback REVIEW_PENDING, independent root review, no worker acceptance/FREEZE.",
+  "semanticsRefinements": [
+    "Invocation interruption only if method did not return; later publication panic retains RESPONSE_RETURNED and pending item outcomes, stop PANIC.",
+    "Usage write begun but return unobserved must be WRITE_OUTCOME_UNKNOWN; NOT_ATTEMPTED only before write begins. This fixed enum observes uncertainty, no control-flow change.",
+    "Parsing NOT_SEPARATELY_OBSERVABLE is explicit for single save path.",
+    "No new lookup or read for source/cost/provider. Preserve all old tests and old packet bytes."
+  ],
+  "workerBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4,
+    "automaticRetries": 0,
+    "goCommands": [
+      "grouped positive new pure/DB and existing selected regressions",
+      "M01 false invocations before actual call named detector",
+      "M02 stored terminal execution-receipt erasure named reload detector",
+      "restored healthy new tests plus mutant targets"
+    ],
+    "positiveTestTimeoutSeconds": 480,
+    "positiveAttachTimeoutSeconds": 600,
+    "focusedTestTimeoutSeconds": 180,
+    "focusedAttachTimeoutSeconds": 300,
+    "readinessSeconds": 90
+  },
+  "reviewerBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4,
+    "automaticRetries": 0,
+    "basis": "Own exact-source positives/two applied semantic controls/restored controls; source audit and raw worker proof checked"
+  },
+  "aggregateBudget": {
+    "maxCampaigns": 2,
+    "maxGoInvocations": 8,
+    "priorR055R057Budget": "Historical unchanged, not reused",
+    "priorR059UsedCampaigns": 0,
+    "priorR059UsedGoInvocations": 0,
+    "scope": "Combined R059/R060 worker1/4Go + reviewer1/4Go; no reset or automatic retry."
+  },
+  "oldTestsBoundary": "Only exact4-line additive-receipt scalar-loop maintenance in designated existing SP test; all old assertions retained, every other old test byte-identical.",
+  "sourceBoundary": "Existing analyzer wiring and shared Summary composer only; ownership helper/provider adapters/models untouched. Root never changes worker source/tests. Small authorized metadata repairs direct reviewer.",
+  "supersedes": "CCMAI-RUNTIME-059",
+  "testMaintenanceBoundary": {
+    "path": "backend/engine/source_preparation_receipt_db_test.go",
+    "test": "TestSPOrdinaryExplicitAndProgressPersistence",
+    "exactAddedLines": [
+      "if _, ok := scalars[\"source_execution\"]; !ok {",
+      "    t.Fatal(\"missing source_execution in Analyzer summary\")",
+      "}",
+      "delete(scalars, \"source_execution\")"
+    ],
+    "insertAfter": "delete(scalars, \"source_preparation\")",
+    "allOldAssertionsPreserved": true,
+    "otherOldTestsByteIdentical": true,
+    "noUnrelatedFormatting": true
+  },
+  "decisionReport": "docs/reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md"
+}

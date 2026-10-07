@@ -61,15 +61,16 @@
   ],
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_059.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "PARKED",
+  "phase": "REVIEW",
   "baseCommit": "f162e635d757b2e436d88e0b8fda9ab5840e478f",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "PENDING",
+  "disposition": "SUPERSEDED_BEFORE_BUILD_CONTRACT_BOUNDARY",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "PARKED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -105,5 +106,19 @@
     "catalog": "PASS preflight",
     "gateUnits": "46PASS52.797s inherited unchanged gate/tests",
     "exactStaged": "Required before activation commit"
-  }
+  },
+  "preBuildContractFinding": {
+    "id": "R059-PB-01",
+    "status": "ROOT_AUDITED_EXACT_PATCH_SUCCESSOR_SELECTED",
+    "report": "docs/reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md",
+    "rootCause": "Existing exact scalar key count conflicts with new top-level receipt and existing_test_edit prohibition",
+    "sourceEdits": 0,
+    "buildAckCommits": 0,
+    "campaigns": 0,
+    "goInvocations": 0,
+    "workerCorroborated": true,
+    "proposedSuccessor": "CCMAI-RUNTIME-060",
+    "oldSeedUnchanged": true
+  },
+  "supersededBy": "CCMAI-RUNTIME-060"
 }
