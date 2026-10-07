@@ -61,15 +61,16 @@
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_061.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "de0c6a53e762c949475fe93209bbf802a0af62dc",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "dispatcher": "Codex /root",
   "executionBudget": {
@@ -115,5 +116,6 @@
     "docs": "PASS20.39s after final Markdown",
     "diff": "PASS",
     "gateUnits": "Fresh46PASS20.397s"
-  }
+  },
+  "workerAcknowledgment": "Fresh canonical declaration/doctor25/1 before edit; NEW EX faulttest only, no workerGo, immutableseed/oldfailures"
 }

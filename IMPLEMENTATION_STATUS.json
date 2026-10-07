@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -362,16 +362,16 @@
   },
   "executionObservationPlanning": {
     "candidateTranche": "CCMAI-RUNTIME-059",
-    "status": "R060_R1_REVIEW_PENDING",
+    "status": "R061_BUILD_ACKNOWLEDGED",
     "document": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
-    "sourceImplementation": "IMPLEMENTED_UUID_FIXTURE_REPAIRED_RUNTIME_NOT_RERUN",
+    "sourceImplementation": "TERMINAL_FALLBACK_TEST_REPAIR_ACKNOWLEDGED_NOT_EDITED",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "activeTrancheUnchanged": null,
     "newSourceEdits": 6,
     "newGoInvocations": 1,
     "subagentCalls": 1,
     "fullS2Claim": false,
-    "nextMove": "CCMAI-RUNTIME-060 REVIEW_PENDING at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93: root independently reviews NEW EX UUID-fixture repair and exact source via originally unstarted one4Go campaign; worker runtime NOT_RERUN, failed1campaign1Go/sourceed2f530/evidence56f5f85 preserved. Aggregate2campaign8Go unchanged/planned5Go, no reset. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-061 BUILD under immutable seedde0c6a53e762c949475fe93209bbf802a0af62dc: child gpt-6.1-sol medium repairs only NEW EX terminal-fallback fault test and callback/read/prefix assertions, then gated source checkpoint/REVIEW_PENDING. Worker newGo/campaign0; original2failedcampaign2Go preserved, root successor1campaign4Go next, lineage planned6/max8Go/max3campaigns no reset. Product/all other tests/old seeds/packets immutable; no root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
     "workOrderDraft": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
     "independentReviewer": "Codex /root",
     "proposedImplementationWorker": "Codex /root/r059_worker",
@@ -385,13 +385,13 @@
       "gateUnitBasis": "46PASS52.797s inherited9042f91 unchanged tools/tests",
       "exactStagedPreflight": "Required before commit, exact7 metadata paths"
     },
-    "activeTranche": "CCMAI-RUNTIME-060",
+    "activeTranche": "CCMAI-RUNTIME-061",
     "workerModel": {
       "model": "gpt-6.1-sol",
       "reasoningEffort": "medium"
     },
-    "authoritySeedCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
-    "workOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
+    "authoritySeedCommit": "de0c6a53e762c949475fe93209bbf802a0af62dc",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_061.md",
     "preBuildFinding": {
       "id": "R059-PB-01",
       "status": "ROOT_AUDITED_EXACT_PATCH_SUCCESSOR_SELECTED",
