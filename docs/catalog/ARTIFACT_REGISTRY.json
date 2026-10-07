@@ -2481,6 +2481,13 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_061.md",
       "status": "ACTIVE",
       "description": "Narrow fault test contract repair, no worker runtime, independent successor campaign."
+    },
+    {
+      "id": "evidence-r061-fault-repair-source",
+      "family": "continuity",
+      "path": "docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "NEW EX terminal-fallback faulttest repair: storedprefix/returned limits, sixcases and callback checks; product/old packets unchanged, no worker runtime."
     }
   ]
 }

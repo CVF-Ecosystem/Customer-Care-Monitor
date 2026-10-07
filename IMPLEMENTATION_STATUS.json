@@ -362,9 +362,9 @@
   },
   "executionObservationPlanning": {
     "candidateTranche": "CCMAI-RUNTIME-059",
-    "status": "R061_BUILD_ACKNOWLEDGED",
+    "status": "R061_STATIC_REPAIR_READY",
     "document": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
-    "sourceImplementation": "TERMINAL_FALLBACK_TEST_REPAIR_ACKNOWLEDGED_NOT_EDITED",
+    "sourceImplementation": "TERMINAL_FALLBACK_TEST_REPAIRED_RUNTIME_NOT_RUN",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "activeTrancheUnchanged": null,
     "newSourceEdits": 6,
@@ -408,6 +408,6 @@
     "compatibilitySuccessor": "CCMAI-RUNTIME-060",
     "buildCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
     "workerEvidence": "docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md",
-    "repairReport": "docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md"
+    "repairReport": "docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md"
   }
 }

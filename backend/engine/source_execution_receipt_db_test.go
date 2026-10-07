@@ -483,14 +483,32 @@ func TestEXActualPanicBoundaries(t *testing.T) {
 	}
 }
 func TestEXInitialProgressAndTerminalWriteFaults(t *testing.T) {
-	for _, stage := range []string{"initial", "progress", "terminal", "early_terminal"} {
+	for _, stage := range []string{"initial", "progress", "terminal", "early_terminal", "terminal_fallback_failed", "early_terminal_fallback_failed"} {
 		t.Run(stage, func(t *testing.T) {
 			f := setupEXFixture(t, false, "qc_analysis")
 			exAdd(t, f, 1)
 			job := f.job(t)
+			early := strings.HasPrefix(stage, "early_terminal")
+			blockFallback := strings.HasSuffix(stage, "_fallback_failed")
 			writes := 0
+			lastSuccessfulSummary := ""
 			name := "ex_update_" + strings.ReplaceAll(pkg.NewUUID(), "-", "")
-			db.DB.Callback().Update().Before("gorm:update").Register(name, func(tx *gorm.DB) {
+			captureName := name + "_capture"
+			registered := []string{}
+			removed := false
+			removeCallbacks := func() {
+				if removed {
+					return
+				}
+				for _, callback := range registered {
+					if err := db.DB.Callback().Update().Remove(callback); err != nil {
+						t.Errorf("remove fault callback: %v", err)
+					}
+				}
+				removed = true
+			}
+			t.Cleanup(removeCallbacks)
+			if err := db.DB.Callback().Update().Before("gorm:update").Register(name, func(tx *gorm.DB) {
 				if tx.Statement.Table != "job_runs" {
 					return
 				}
@@ -498,18 +516,39 @@ func TestEXInitialProgressAndTerminalWriteFaults(t *testing.T) {
 				if !ok {
 					return
 				}
+				terminal := m["status"] != nil
+				// The explicit fallback-failed fixtures fault status writes even when
+				// the best-effort fallback intentionally omits Summary.
+				if blockFallback && terminal {
+					tx.AddError(errors.New("synthetic fallback failure"))
+					return
+				}
 				if _, ok := m["summary"]; !ok {
 					return
 				}
 				writes++
-				terminal := m["status"] != nil
-				if (stage == "initial" && writes == 1) || (stage == "progress" && writes == 2) || ((stage == "terminal" || stage == "early_terminal") && terminal) {
+				if (stage == "initial" && writes == 1) || (stage == "progress" && writes == 2) || ((stage == "terminal" || early) && terminal) {
 					tx.AddError(errors.New("synthetic summary failure"))
 				}
-			})
-			t.Cleanup(func() { db.DB.Callback().Update().Remove(name) })
+			}); err != nil {
+				t.Fatal(err)
+			}
+			registered = append(registered, name)
+			if err := db.DB.Callback().Update().After("gorm:update").Register(captureName, func(tx *gorm.DB) {
+				if tx.Statement.Table != "job_runs" || tx.Error != nil || tx.RowsAffected <= 0 {
+					return
+				}
+				if m, ok := tx.Statement.Dest.(map[string]interface{}); ok {
+					if summary, ok := m["summary"].(string); ok {
+						lastSuccessfulSummary = summary
+					}
+				}
+			}); err != nil {
+				t.Fatal(err)
+			}
+			registered = append(registered, captureName)
 			a := NewAnalyzerWithProvider(&config.Config{}, &incProvider{verdict: "PASS"})
-			if stage == "early_terminal" {
+			if early {
 				a = NewAnalyzer(&config.Config{})
 			}
 			run, err := a.RunJob(context.Background(), job)
@@ -527,17 +566,49 @@ func TestEXInitialProgressAndTerminalWriteFaults(t *testing.T) {
 					t.Fatal("terminal fault hidden")
 				}
 				var stored models.JobRun
-				db.DB.First(&stored, "id = ?", run.ID)
-				if stored.Status != "running" {
-					t.Fatal("failed terminal claimed durable status")
+				if readErr := db.DB.First(&stored, "id = ? AND tenant_id = ? AND job_id = ?", run.ID, job.TenantID, job.ID).Error; readErr != nil {
+					t.Fatal(readErr)
 				}
-				if stage == "terminal" && returned.ItemsSaved != 1 {
-					t.Fatal("failed terminal lost returned observation")
+				if blockFallback {
+					if stored.Status != "running" || stored.FinishedAt != nil {
+						t.Fatal("blocked fallback claimed durable status")
+					}
+				} else if stored.Status != "error" || stored.FinishedAt == nil || stored.ErrorMessage != "Không ghi nhận được kết quả cuối của lượt chạy; mốc quét giữ nguyên." {
+					t.Fatal("existing fallback error/finished marker lost")
 				}
-				if stage == "early_terminal" && returned.CallsBegun != 0 {
-					t.Fatal("early terminal invocation fabricated")
+				// MySQL JSON re-encodes whitespace/key order; compare decoded payloads,
+				// separately from the earlier successful-update observation.
+				canonical := func(summary string) string {
+					var value interface{}
+					if parseErr := json.Unmarshal([]byte(summary), &value); parseErr != nil {
+						t.Fatal(parseErr)
+					}
+					encoded, encodeErr := json.Marshal(value)
+					if encodeErr != nil {
+						t.Fatal(encodeErr)
+					}
+					return string(encoded)
 				}
-				db.DB.Callback().Update().Remove(name)
+				if lastSuccessfulSummary == "" || canonical(stored.Summary) != canonical(lastSuccessfulSummary) {
+					t.Fatal("failed terminal did not retain last successful Summary prefix")
+				}
+				if canonical(stored.Summary) == canonical(run.Summary) {
+					t.Fatal("failed terminal falsely persisted returned terminal observation")
+				}
+				prefix := exRead(t, stored.Summary)
+				if prefix.ExecutionComplete || f.checkpoint(t) != nil {
+					t.Fatal("failed terminal certified receipt completion or checkpoint")
+				}
+				if !early {
+					if returned.ItemsSaved != 1 || !returned.ExecutionComplete || prefix.CallsBegun != 1 || prefix.ItemsSaved != 1 {
+						t.Fatal("failed terminal lost returned observation or durable progress prefix")
+					}
+				} else if returned.CallsBegun != 0 || returned.StopReason != "PROVIDER_SETUP_FAILED" || prefix.CallsBegun != 0 || prefix.StopReason != "NONE" {
+					t.Fatal("early terminal invocation fabricated or initial prefix changed")
+				}
+			}
+			removeCallbacks() // both observers are removed before any fixture cleanup write
+			if blockFallback {
 				f.exec(t, "UPDATE job_runs SET status='error' WHERE id = ?", run.ID)
 			}
 		})

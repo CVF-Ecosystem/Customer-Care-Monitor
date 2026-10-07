@@ -46,6 +46,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Raw-event-derived partial counts/missing tests, protected physical audit/fresharchive and NEW EX fixture repair proposal; cost disposition required.: `docs/reviews/probes/r060_worker_failure_audit.json`
 - Interrupted worker campaign at exact source, fixture-root-cause audit, bounded repair proposal and retained proof/limits.: `docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md`
 - Original failed worker1campaign1Go packet, rawlogs/fullmanifest/commands/state/restoration/cleanup; no retry.: `docs/reviews/probes/r060_worker_summary.json`
+- NEW EX terminal-fallback faulttest repair: storedprefix/returned limits, sixcases and callback checks; product/old packets unchanged, no worker runtime.: `docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md`
 - Historical R060 CHANGES_REQUIRED, both failed campaigns retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md`
 - Active R061 narrow test repair and lineage8Go budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-061.json`
 - Narrow fault test contract repair, no worker runtime, independent successor campaign.: `docs/work_orders/CCMAI_RUNTIME_061.md`
