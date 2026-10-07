@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,10 +12,10 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-059 PARKED / REVIEW before BUILD with source/ack/campaign/Go0. Root independent consolidated audit chooses exact4-line SP receipt/scalar test amendment under owner autonomous-disposition instruction; immutable separately seeded CCMAI-RUNTIME-060 next activation, same child gpt-6.1-sol medium/root independent reviewer, combined max8Go without reset. Original R059 seed/failure/disposition preserved; no source by root/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-060 DISPATCH_READY / WORK_ORDER under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: existing Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source/exact4-line SP compatibility amendment, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. R059 parked before source/Go0, aggregate max8Go without reset; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER; Codex /root/r059_worker IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD next",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER; Codex /root/r059_worker R060 IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD next",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
@@ -28,7 +28,9 @@
     "reviewerUsedCampaigns": 0,
     "reviewerUsedGoInvocations": 0,
     "aggregateMaxCampaigns": 2,
-    "aggregateMaxGoInvocations": 8
+    "aggregateMaxGoInvocations": 8,
+    "priorR059UsedCampaigns": 0,
+    "priorR059UsedGoInvocations": 0
   },
   "previousExecutionBudget": {
     "reviewerMaxCampaigns": 1,

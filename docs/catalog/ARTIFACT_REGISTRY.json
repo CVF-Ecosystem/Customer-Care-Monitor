@@ -2287,11 +2287,11 @@
       "description": "Reviewable R059 source work-order draft; exact paths, EX01..12, bounded campaigns; independent reviewer identity pending, no activation or BUILD."
     },
     {
-      "id": "continuity-initial-handoff",
+      "id": "handoff-r059-parked-contract-boundary",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md",
       "status": "ACTIVE",
-      "description": "Active R059 delegated medium worker/root independent reviewer; WORK_ORDER before BUILD."
+      "description": "Historical R059 parked before source/Go; contract audit resolved through separately seeded R060."
     },
     {
       "id": "r059-active-work-order",
@@ -2320,6 +2320,34 @@
       "path": "docs/reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md",
       "status": "ACTIVE",
       "description": "Pre-BUILD scalar test/additive receipt contract contradiction; exact4-line patch proposed, source/runtime0, owner boundary disposition pending."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Active R060 exact SP test compatibility successor, medium worker/root reviewer, WORK_ORDER before BUILD."
+    },
+    {
+      "id": "r060-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_060.md",
+      "status": "ACTIVE",
+      "description": "R060 bounded execution observation plus exact4-line old-test maintenance, all assertions preserved."
+    },
+    {
+      "id": "r060-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-060.json",
+      "status": "ACTIVE",
+      "description": "Immutable narrow R060 successor seed, roles/model/budget retained, old R059 seed unchanged."
+    },
+    {
+      "id": "r060-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-060.json",
+      "status": "ACTIVE",
+      "description": "R060 bounded current phase/status/roles/budget; no FREEZE/full S2 claim."
     }
   ]
 }
