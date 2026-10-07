@@ -53,7 +53,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R060 execution receipt successor (2026-10-07)
 
-CCMAI-RUNTIME-060 REVIEW_PENDING / COST_DISPOSITION_REQUIRED at sourceed2f53043919dec5260dca0fc5ff41b75c134f70: root independently audits failed worker1campaign/1Go packet and records bounded NEW EX UUID-fixture repair disposition before any repair/runtime. Worker no retry; M01/M02/restored NOT_RUN, root independent1campaign/4Go unstarted, aggregate8Go unchanged. Original failed evidence preserved; R059 parked0Go and R058 local FREEZE preserved. No extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-060 CHANGES_REQUIRED / SAME_SCOPE_REPAIR_DISPOSITION: worker rehydrates and commits BUILD acknowledgment before NEW EX UUID-fixture and safe-binding test repair only, then source checkpoint and REVIEW_PENDING without a second worker campaign. Root independently reviews repaired source using originally unstarted one4Go campaign (120 positives, M01, M02, restored EX). Failed worker56f5f85/sourceed2f530 and worker1campaign/1Go preserved; aggregate max2campaigns/8Go unchanged, planned total5Go, no budget reset. No product/old-test/seed edit by repair, no root source edit or extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 

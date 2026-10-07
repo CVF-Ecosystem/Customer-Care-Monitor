@@ -31,6 +31,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R042 independent acceptance/dead-link correction and R043 local closure intake.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
+- Independent raw failure audit and unchanged-scope NEW EX fixture repair; no worker retry or budget expansion.: `docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md`
 - Raw-event-derived partial counts/missing tests, protected physical audit/fresharchive and NEW EX fixture repair proposal; cost disposition required.: `docs/reviews/probes/r060_worker_failure_audit.json`
 - Interrupted worker campaign at exact source, fixture-root-cause audit, bounded repair proposal and retained proof/limits.: `docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md`
 - Original failed worker1campaign1Go packet, rawlogs/fullmanifest/commands/state/restoration/cleanup; no retry.: `docs/reviews/probes/r060_worker_summary.json`

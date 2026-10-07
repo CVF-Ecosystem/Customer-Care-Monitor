@@ -115,6 +115,7 @@
     "CCMAI-RUNTIME-028"
   ],
   "knownLimitations": [
+    "CCMAI-RUNTIME-060 CHANGES_REQUIRED / SAME_SCOPE_REPAIR_DISPOSITION: worker rehydrates and commits BUILD acknowledgment before NEW EX UUID-fixture and safe-binding test repair only, then source checkpoint and REVIEW_PENDING without a second worker campaign. Root independently reviews repaired source using originally unstarted one4Go campaign (120 positives, M01, M02, restored EX). Failed worker56f5f85/sourceed2f530 and worker1campaign/1Go preserved; aggregate max2campaigns/8Go unchanged, planned total5Go, no budget reset. No product/old-test/seed edit by repair, no root source edit or extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
     "Pancake live-proof packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED: tenant/page, independent inventory, quiescence, capture handling and credential/network authority outstanding. R034 offline harness REVIEW_PASS for exact repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e; synthetic CLI/receipt are not a live executor. No live execution dispatched.",
     "Application runtime CVF controls have not been integrated or tested with a real provider; the revised CSKH roadmap and SoT-first filtering decision remain proposals, including early human review, Vietnamese quality gates and Jev-inspired filtering with downstream LLM. Cross-project reuse and CVF uplift follow CSKH completion. CCMAI-RUNTIME-004/006 source_integrity_status is a local, informational signal on aggregate and job-specific result surfaces; conversation-specific APIs, notifications, automatic re-analysis and upstream edit/delete discovery outside fetch windows remain separately scoped and unimplemented.",
     "Application feature status has not yet been assessed under the CVF module catalog.",
@@ -306,7 +307,7 @@
     "docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md",
     "docs/work_orders/CCMAI_RUNTIME_055.md"
   ],
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-07",
   "ownerRouting": {
     "date": "2026-10-07",
     "parkedAccounts": [

@@ -2376,6 +2376,13 @@
       "path": "docs/reviews/probes/r060_worker_failure_audit.json",
       "status": "ACTIVE",
       "description": "Raw-event-derived partial counts/missing tests, protected physical audit/fresharchive and NEW EX fixture repair proposal; cost disposition required."
+    },
+    {
+      "id": "evidence-r060-root-repair-disposition-2026-10-07",
+      "family": "continuity",
+      "path": "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Independent raw failure audit and unchanged-scope NEW EX fixture repair; no worker retry or budget expansion."
     }
   ]
 }

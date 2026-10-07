@@ -62,17 +62,20 @@
   ],
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
   "buildCommit": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "reviewEvidence": [
+    "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md"
+  ],
+  "disposition": "SAME_SCOPE_NEW_EX_FIXTURE_REPAIR_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -178,5 +181,29 @@
     "diff": "PASS",
     "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling",
     "exactStaged": "Required and run before this commit"
+  },
+  "repairDisposition": {
+    "finding": "R060-R1-01",
+    "allowedRepairPath": "backend/engine/source_execution_receipt_db_test.go",
+    "productSourceUnchanged": true,
+    "workerNewCampaigns": 0,
+    "workerNewGo": 0,
+    "reviewerOriginallyBudgetedCampaigns": 1,
+    "reviewerOriginallyBudgetedGo": 4,
+    "failedWorkerEvidenceCommit": "56f5f85308804f80215cadf012f3b2db2a77dae4",
+    "plannedAggregateGo": 5,
+    "ceilingUnchanged": 8,
+    "newBudgetOrSeed": false,
+    "requiredBeforeEdit": "Fresh rehydration/declaration and committed BUILD acknowledgment",
+    "ownerWait": false,
+    "publicationChecks": {
+      "default": "PASS7/7",
+      "pr": "PASS7/7",
+      "catalogPS51": "PASS through gates",
+      "catalogPS7": "PASS",
+      "docs": "PASS8.94s after final Markdown",
+      "diff": "PASS",
+      "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling"
+    }
   }
 }

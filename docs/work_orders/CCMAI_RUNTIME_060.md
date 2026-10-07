@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-060 — Bounded Analyzer execution observation
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Date: 2026-10-07 (Asia/Saigon). R2. Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER; Codex `/root/r059_worker` IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD, model `gpt-6.1-sol`, reasoning `medium`, explicitly owner-selected. Owner `ok, do it` authorizes this delegated route, superseding prior no-subagent/root-only proposal for R059. Separate immutable seed committed at 2f39532ef196e69fd919e93aaf34f82aee5dde20. No product BUILD before worker rehydration/declaration and committed BUILD acknowledgment.
 
@@ -23,3 +23,7 @@ Before each commit: default/PR/exact staged preflight, catalogsPS5.1+7, diff/sec
 ## Exact compatibility successor boundary
 
 R059 parked source/ack/campaign/Go0; original seed immutable, not recertified. Root consolidated audit and owner autonomous-disposition instruction choose [exact4-line amendment](../reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md) only in backend/engine/source_preparation_receipt_db_test.go / TestSPOrdinaryExplicitAndProgressPersistence after deleting source_preparation: assert source_execution exists, then delete it before unchanged scalar-count/value assertions. All other old tests and formatting unchanged. This separately seeded R060 adds that one path; aggregate budget remains worker1/4Go + reviewer1/4Go across R059/R060, no reset. Same worker gpt-6.1-sol medium/root independent reviewer. Worker source checkpoint before campaign, no new agent or routine confirmation.
+
+## Accepted R1 repair disposition before edits
+
+Root independently verified failed evidence56f5f85; R060-R1-01 permits only NEW EX UUID-positive fixture/safe binding detector repair under unchanged seed. Worker fresh BUILD acknowledgment before edits; no second worker campaign. Repaired source handback without new Go; root originally unstarted1/4Go independently validates positives/M01/M02/restored. Original failed1Go retained, planned total5/8 with original max2campaigns. See [formal disposition](../reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md). Original four-call worker campaign instruction is historical incomplete evidence, not authority for retry.

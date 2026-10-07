@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-060 REVIEW_PENDING / COST_DISPOSITION_REQUIRED at sourceed2f53043919dec5260dca0fc5ff41b75c134f70: root independently audits failed worker1campaign/1Go packet and records bounded NEW EX UUID-fixture repair disposition before any repair/runtime. Worker no retry; M01/M02/restored NOT_RUN, root independent1campaign/4Go unstarted, aggregate8Go unchanged. Original failed evidence preserved; R059 parked0Go and R058 local FREEZE preserved. No extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-060 CHANGES_REQUIRED / SAME_SCOPE_REPAIR_DISPOSITION: worker rehydrates and commits BUILD acknowledgment before NEW EX UUID-fixture and safe-binding test repair only, then source checkpoint and REVIEW_PENDING without a second worker campaign. Root independently reviews repaired source using originally unstarted one4Go campaign (120 positives, M01, M02, restored EX). Failed worker56f5f85/sourceed2f530 and worker1campaign/1Go preserved; aggregate max2campaigns/8Go unchanged, planned total5Go, no budget reset. No product/old-test/seed edit by repair, no root source edit or extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER for cost disposition; Codex /root/r059_worker IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD stopped pending disposition",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD for accepted repair disposition; Codex /root/r059_worker REPAIR_WORKER / BUILD COMMIT_STEWARD after committed BUILD acknowledgment",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {
