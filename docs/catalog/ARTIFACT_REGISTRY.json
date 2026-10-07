@@ -2397,6 +2397,27 @@
       "path": "docs/reviews/probes/r060_worker_r1_handback.json",
       "status": "ACTIVE",
       "description": "Exact repaired source/full archive/protected physical and failedpacket identities, publication checks; no new worker runtime, independent review pending."
+    },
+    {
+      "id": "evidence-r060-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent bounded exact-source four-Go runner; synthetic application observation only."
+    },
+    {
+      "id": "evidence-r060-independent-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "Reviewer-selected120 positives and two source-only mutation controls; no runtime result."
+    },
+    {
+      "id": "evidence-r060-independent-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_protected.json",
+      "status": "ACTIVE",
+      "description": "Independent old-test/seed/source/failed-packet protection audit before campaign."
     }
   ]
 }

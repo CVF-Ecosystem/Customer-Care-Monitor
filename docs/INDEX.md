@@ -31,6 +31,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R042 independent acceptance/dead-link correction and R043 local closure intake.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
+- Independent bounded exact-source four-Go runner; synthetic application observation only.: `docs/reviews/probes/r060_independent_campaign.py`
+- Reviewer-selected120 positives and two source-only mutation controls; no runtime result.: `docs/reviews/probes/r060_independent_plan.json`
+- Independent old-test/seed/source/failed-packet protection audit before campaign.: `docs/reviews/probes/r060_independent_protected.json`
 - R1 new EX UUID fixture and safe exact binding repair, product/oldtests/failure packet unchanged; no worker runtime replay, root independent review pending.: `docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md`
 - Exact repaired source/full archive/protected physical and failedpacket identities, publication checks; no new worker runtime, independent review pending.: `docs/reviews/probes/r060_worker_r1_handback.json`
 - Independent raw failure audit and unchanged-scope NEW EX fixture repair; no worker retry or budget expansion.: `docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md`

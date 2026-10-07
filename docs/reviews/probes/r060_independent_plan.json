@@ -1,0 +1,22 @@
+{
+  "positivePattern": "^Test(EX|PreparationReceipt|SP|Snapshot|EvidenceRefs|LP|Ordinary|Explicit|SinceLast|FullMode|OnlyOrdinary|NonOrdinary|PlanValidation|EntryPoints|Admission|Cancel|Terminal|Publication|StaleOwner|EarlyFailures|ProviderPanic|Timeout|UnresolvedRunning|NoLockInversion|FL|SingleAndBatchShareSnapshot|InvalidEvidence|BatchRejectsCrossConversation|SaveResults|WriterHoldsParentLock|LegacyResults)",
+  "restoredPattern": "^TestEX",
+  "mutations": [
+    {
+      "label": "m01",
+      "path": "backend/engine/analyzer.go",
+      "needle": "\tinitialSummary := observedSummary(",
+      "replacement": "\tif len(conversations) > 0 { execution.begin(\"SINGLE\", conversations[:1]) }\n\tinitialSummary := observedSummary(",
+      "detector": "TestEXNoCallConstructionAndPreparation",
+      "assertion": "logical invocation began without provider method"
+    },
+    {
+      "label": "m02",
+      "path": "backend/engine/analyzer.go",
+      "needle": "finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, string(summaryJSON), finishedAt, checkpoint)",
+      "replacement": "finalizeOrdinaryRun(&run, job, runStatus, run.ErrorMessage, func() string { var values map[string]json.RawMessage; _ = json.Unmarshal([]byte(summaryJSON), &values); delete(values, \"source_execution\"); encoded, _ := json.Marshal(values); return string(encoded) }(), finishedAt, checkpoint)",
+      "detector": "TestEXStoredTerminalSingleSuccess",
+      "assertion": "stored terminal execution receipt missing"
+    }
+  ]
+}

@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-060 REVIEW_PENDING at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93: root independently reviews NEW EX UUID-fixture repair and exact source via originally unstarted one4Go campaign; worker runtime NOT_RERUN, failed1campaign1Go/sourceed2f530/evidence56f5f85 preserved. Aggregate2campaign8Go unchanged/planned5Go, no reset. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-060 REVIEW_PENDING / INDEPENDENT_CAMPAIGN_READY at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93 handbackd15739a: root independent REVIEWER runs originally budgeted one4Go campaign on exact210-file Git archive:120 grouped positives, M01 false invocation, M02 stored-only receipt erasure, restored16 EX; no automatic retry. Worker failed1campaign1Go remains preserved/no rerun; aggregate2campaign8Go unchanged/planned5Go. Root source/test edits0; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR; Codex /root/r059_worker REPAIR_WORKER / BUILD COMMIT_STEWARD handback complete",
+  "activeRole": "Codex /root independent REVIEWER / REVIEW COMMIT_STEWARD / SESSION_SYNC_STEWARD; child implementation and repaired source handed back",
   "roleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
   "updatedAt": "2026-10-07",
   "currentExecutionBudget": {

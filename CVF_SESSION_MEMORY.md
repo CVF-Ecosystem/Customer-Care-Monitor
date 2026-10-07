@@ -53,7 +53,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R060 execution receipt successor (2026-10-07)
 
-CCMAI-RUNTIME-060 REVIEW_PENDING at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93: root independently reviews NEW EX UUID-fixture repair and exact source via originally unstarted one4Go campaign; worker runtime NOT_RERUN, failed1campaign1Go/sourceed2f530/evidence56f5f85 preserved. Aggregate2campaign8Go unchanged/planned5Go, no reset. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-060 REVIEW_PENDING / INDEPENDENT_CAMPAIGN_READY at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93 handbackd15739a: root independent REVIEWER runs originally budgeted one4Go campaign on exact210-file Git archive:120 grouped positives, M01 false invocation, M02 stored-only receipt erasure, restored16 EX; no automatic retry. Worker failed1campaign1Go remains preserved/no rerun; aggregate2campaign8Go unchanged/planned5Go. Root source/test edits0; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 
