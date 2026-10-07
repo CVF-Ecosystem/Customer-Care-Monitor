@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-063 — Bounded rule input observation
 
-Status: DISPATCH_READY
+Status: BUILD
 
 Date: 2026-10-08. Risk R2. Immutable dispatcher seed first committed at `7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015`; source baseline `d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f`. [SPEC RO01..12](../reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md) and [audited bounded draft](../reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md) are incorporated requirements for exact framing/binding/enums/privacy/2KiB/composition, two exact four-line compatibility amendments, allowed paths, positive/mutation/restored proof and cleanup/failure/handback. Original draft's proposed/unassigned activation wording is historical; this order and immutable seed grant the bounded BUILD route after acknowledgment.
 

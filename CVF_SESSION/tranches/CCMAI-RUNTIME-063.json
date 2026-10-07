@@ -63,15 +63,16 @@
   ],
   "claimScope": "Bounded local rule-input observation RO01..12 only. Fingerprint is content identity, not permission/approval/policy revision or enforced WAIT_DATA; existing behavior/preparation/execution/scalars preserved. No full S2/live/governance/hosted claim.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_063.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING_IMPLEMENTATION_AND_INDEPENDENT_REVIEW",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -116,8 +117,8 @@
     "otherOldTestBytesUnchanged": true,
     "noUnrelatedFormatting": true
   },
-  "workerAcknowledgment": null,
-  "sourceImplementation": "NOT_STARTED",
+  "workerAcknowledgment": "2026-10-08 fresh continuity/declaration/doctor PASS WITH NOTE25/1; before-edit BUILD acknowledged, source/Go0",
+  "sourceImplementation": "ACKNOWLEDGED_NOT_STARTED",
   "liveEvidence": "NOT_RUN; synthetic application observations planned, no governance claim",
   "activationPublicationChecks": {
     "default": "PASS7/7",
@@ -128,5 +129,6 @@
     "gateUnits": "Fresh seed46PASS41.701s inherited unchanged scripts/tests",
     "sourceGo": 0,
     "exactStaged": "Required before activation commit"
-  }
+  },
+  "setupFinding": "Initial acknowledgment default/PR/staged6/7: descriptive history tail failed current-status format; corrected tail to BUILD, rerun default/PR/staged7/7. No source/Go."
 }

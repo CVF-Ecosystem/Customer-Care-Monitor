@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-063", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-063", "parked": true} -->
 
 ## Startup Order
 
@@ -55,7 +55,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R063 work-order activation (2026-10-08)
 
-CCMAI-RUNTIME-063 DISPATCH_READY / WORK_ORDER at immutable seed7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015. Named child /root/r063_worker GPT-6.1 Sol medium next rehydrates/declarations/commits before-edit BUILD acknowledgment then implements only RO01..12 observation and exact SP/EX four-line amendments, one worker campaign/max4Go; root independent REVIEWER one campaign/max4Go, aggregate max8Go. No source/runtime before acknowledgment, no automatic retry or seed/old packet edit. R062/R061 bounded local FREEZE preserved; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted remain OPEN, Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE authority.
+CCMAI-RUNTIME-063 BUILD acknowledged before canonical source edits by Codex /root/r063_worker; implement only authorized RO01..12 and exact SP/EX four-line amendments, commit source checkpoint, send inventory/mutation plan for root consolidated static audit, then one worker campaign/max4Go and REVIEW_PENDING handback. Root independent REVIEWER one campaign/max4Go, aggregate max8Go. No retry, seed/old packet edit or FREEZE; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted OPEN; Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 
 ## Historical R062 local execution observation closure (2026-10-08)
 
