@@ -74,6 +74,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Local execution observation closure, inherited independent proof, old failures retained.: `docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md`
 - Metadata-only scoped local closure record; zero runtime/source edits.: `CVF_SESSION/tranches/CCMAI-RUNTIME-062.json`
 - Scoped local R061 closure only, not complete S2/live/governance.: `docs/work_orders/CCMAI_RUNTIME_062.md`
+- Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD.: `docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
 - Reviewed F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`

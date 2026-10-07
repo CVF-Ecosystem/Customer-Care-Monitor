@@ -2663,6 +2663,13 @@
       "path": "docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md",
       "status": "ACTIVE",
       "description": "Local execution observation closure, inherited independent proof, old failures retained."
+    },
+    {
+      "id": "evidence-r063-design-spec",
+      "family": "continuity",
+      "path": "docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD."
     }
   ]
 }
