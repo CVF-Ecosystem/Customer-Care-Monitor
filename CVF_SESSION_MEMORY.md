@@ -53,7 +53,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R061 terminal fallback test successor (2026-10-07)
 
-CCMAI-RUNTIME-061 REVIEW_PENDING at sourcecheckpointd10e164249b5e7a87206d1d3bc5aec43a1a8ac2f: root independently reviews only NEW EX terminal-fallback faulttest repair and runs authorized successor one4Go exact-archive campaign. Worker newGo/campaign0; two originalfailedcampaign2Go retained, lineage planned6/max8Go/max3campaigns no reset/automatic retry. Product/all other tests/old seeds/packets immutable; no root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-061 REVIEW_PENDING / INDEPENDENT_CAMPAIGN_READY at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f handbackf246b85: root independently executes exactly one4Go campaign (38 EX/SP/finalizer positives, M01, M02, restored16 EX) on exact210-file Git archive with manifests/mutation/restoration/cleanup proof. No automatic retry, worker newGo0; lineage historical2Go+planned4=max6of8, max3campaigns includes priorfailed2. Source/tests untouched by root; no extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 
 Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
 

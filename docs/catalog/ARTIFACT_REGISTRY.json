@@ -2495,6 +2495,27 @@
       "path": "docs/reviews/probes/r061_worker_handback.json",
       "status": "ACTIVE",
       "description": "REVIEW_PENDING committed-source fullarchive and separate physical/Gitblob protection proof; worker0Go, independent runtime pending."
+    },
+    {
+      "id": "evidence-r061-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent successor exact-source bounded proof preparation; no executed acceptance yet."
+    },
+    {
+      "id": "evidence-r061-independent-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "Independent successor exact-source bounded proof preparation; no executed acceptance yet."
+    },
+    {
+      "id": "evidence-r061-independent-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_protected.json",
+      "status": "ACTIVE",
+      "description": "Independent successor exact-source bounded proof preparation; no executed acceptance yet."
     }
   ]
 }

@@ -49,6 +49,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - REVIEW_PENDING committed-source fullarchive and separate physical/Gitblob protection proof; worker0Go, independent runtime pending.: `docs/reviews/probes/r061_worker_handback.json`
 - NEW EX terminal-fallback faulttest repair: storedprefix/returned limits, sixcases and callback checks; product/old packets unchanged, no worker runtime.: `docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md`
 - Historical R060 CHANGES_REQUIRED, both failed campaigns retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md`
+- Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_campaign.py`
+- Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_plan.json`
+- Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_protected.json`
 - Active R061 narrow test repair and lineage8Go budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-061.json`
 - Narrow fault test contract repair, no worker runtime, independent successor campaign.: `docs/work_orders/CCMAI_RUNTIME_061.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
