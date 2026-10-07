@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
       "status": "ACTIVE",
-      "description": "Active R060 exact SP test compatibility successor, medium worker/root reviewer, WORK_ORDER before BUILD."
+      "description": "Active R060 execution observation BUILD, medium worker/root independent reviewer; runtime pending, exact SP compatibility amendment."
     },
     {
       "id": "r060-work-order",
@@ -2348,6 +2348,13 @@
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-060.json",
       "status": "ACTIVE",
       "description": "R060 bounded current phase/status/roles/budget; no FREEZE/full S2 claim."
+    },
+    {
+      "id": "runtime060-worker-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only."
     }
   ]
 }

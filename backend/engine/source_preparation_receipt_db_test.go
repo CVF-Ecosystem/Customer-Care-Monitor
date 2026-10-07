@@ -106,6 +106,10 @@ func TestSPOrdinaryExplicitAndProgressPersistence(t *testing.T) {
 			var scalars map[string]interface{}
 			json.Unmarshal([]byte(s), &scalars)
 			delete(scalars, "source_preparation")
+			if _, ok := scalars["source_execution"]; !ok {
+				t.Fatal("missing source_execution in Analyzer summary")
+			}
+			delete(scalars, "source_execution")
 			if scalars["conversations_found"] != float64(1) {
 				t.Fatalf("found scalar changed %+v", scalars)
 			}

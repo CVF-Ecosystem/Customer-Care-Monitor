@@ -129,5 +129,40 @@
     "initialPreflight": "FAIL6/7 history ended with descriptive note; corrected to BUILD before source",
     "doctor": "PASS WITH NOTE25/1",
     "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling"
+  },
+  "staticCheckpoint": {
+    "newTopLevelTests": [
+      "TestEXNoCallConstructionAndPreparation",
+      "TestEXStoredTerminalSingleSuccess",
+      "TestEXBatchBindingAndParserRejection",
+      "TestEXResponseAndErrorWinsInBothModes",
+      "TestEXSaveDatabaseFailureIsPublicationFailure",
+      "TestEXMixedSaveAndProviderFailures",
+      "TestEXUsageWriteFailurePreservesSavedResult",
+      "TestEXCancellationDuringProviderAndBatchPrefix",
+      "TestEXActualPanicBoundaries",
+      "TestEXInitialProgressAndTerminalWriteFaults",
+      "TestEXProgressPrefixAndPreparationUnchanged",
+      "TestEXAllExplicitModesRetainScalars",
+      "TestEXCollectorDimensionsAndFreeze",
+      "TestEXPanicUncertaintyAndReturnedBoundary",
+      "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+      "TestEXInvalidMetadataNeverSerializesRawValues"
+    ],
+    "rootPreCampaignInspection": "Consolidated static review no blocking finding; source/test/runner inspected before any Go",
+    "runtime": "NOT_RUN",
+    "buildAcknowledgmentCommit": "bbc7bc1d17a430cb9b0b91cfc3a36afd82964362",
+    "publicationSetupFinding": "Catalog rejected invented review family; changed new runner family to existing continuity class before checkpoint. No tooling/config change; original6/7 retained.",
+    "publicationChecks": {
+      "default": "PASS7/7",
+      "pr": "PASS7/7",
+      "catalogPS51": "PASS",
+      "catalogPS7": "PASS",
+      "docs": "PASS after final Markdown7.25s",
+      "diff": "PASS",
+      "oldTests": "115unchanged Git text domain, exact designated4line amendment only",
+      "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling",
+      "exactStaged": "PASS7/7 before commit; repeated after recording"
+    }
   }
 }

@@ -252,8 +252,15 @@ func (c *preparationCollector) freeze() *preparationReceipt {
 }
 
 func preparationSummary(values map[string]interface{}, receipt *preparationReceipt) string {
+	return observedSummary(values, receipt, nil)
+}
+
+func observedSummary(values map[string]interface{}, receipt *preparationReceipt, execution *executionReceipt) string {
 	if receipt != nil {
 		values["source_preparation"] = receipt
+	}
+	if execution != nil {
+		values["source_execution"] = execution
 	}
 	b, _ := json.Marshal(values) // all values are typed primitives and frozen receipt fields
 	return string(b)
