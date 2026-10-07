@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root/r059_worker R1 REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER after repaired handback
-- Next allowed move: CCMAI-RUNTIME-060 BUILD / R1_NEW_EX_FIXTURE_REPAIR under committed9cfcf96 disposition: worker repairs only NEW source_execution_receipt_db_test.go UUID-positive fixture and safe exact binding assertions, then gated source checkpoint and REVIEW_PENDING. No new worker campaign/Go; failed worker1campaign1Go and original packet preserved. Root originally unstarted one4Go independent campaign next, aggregate2campaign8Go unchanged/planned5Go. Product/old-tests/seeds unchanged; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / ORCHESTRATOR; Codex /root/r059_worker REPAIR_WORKER / BUILD COMMIT_STEWARD handback complete
+- Next allowed move: CCMAI-RUNTIME-060 REVIEW_PENDING at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93: root independently reviews NEW EX UUID-fixture repair and exact source via originally unstarted one4Go campaign; worker runtime NOT_RERUN, failed1campaign1Go/sourceed2f530/evidence56f5f85 preserved. Aggregate2campaign8Go unchanged/planned5Go, no reset. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche acknowledgment before BUILD
@@ -38,3 +38,7 @@ Fresh canonical rehydration/declaration completed under disposition9cfcf96; doct
 ## R1 repaired source checkpoint
 
 Only new EX dbtest changed after before-edit acknowledgmentc2d531ed377b2832e0c8373f596ceb3d8819f81f. Direct UUID fixture parents/children, all12DB sites, safe exact single/batch/envelope binding and cleanup audit completed; root consolidated static inspection no blocker. Report docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md. Runtime NOT_RERUN, worker1failedcampaign/1Go unchanged, failed packet/product/oldtests/seeds protected. Independent root originally budgeted campaign next after committed source/REVIEW_PENDING handback.
+
+## Committed R1 REVIEW_PENDING handback
+
+Repaired sourcea7edba22589627aee2dd97ffe1921c340c6fbc93 after acknowledgmentc2d531e and committed root disposition9cfcf96. Only NEW EX dbtest differs from original sourceed2f530, seven failedpacket/runner files byte-identical and388original protected physical files unchanged; full repaired backend archive manifest in docs/reviews/probes/r060_worker_r1_handback.json. Runtime NOT_RERUN, worker1failedcampaign/1Go unchanged; root original independent campaign next, no self-approval/FREEZE. Source checkpoint default/PR/staged7/7,catalogsPS5.1/7,diff/docs7.19s PASS; gateunits inherited unchanged. Repair report docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md committed with repaired source; historical failure and accounts parked retained.

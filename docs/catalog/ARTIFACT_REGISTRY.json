@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
       "status": "ACTIVE",
-      "description": "Active R060 REVIEW_PENDING cost disposition after worker1Go failure, NEW EX fixture repair proposal; raw failure/cleanup retained, independent review unstarted."
+      "description": "Active R060 R1 repaired source REVIEW_PENDING, no worker runtime replay; original failed packet retained, root independent campaign next."
     },
     {
       "id": "r060-work-order",
@@ -2390,6 +2390,13 @@
       "path": "docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md",
       "status": "ACTIVE",
       "description": "R1 new EX UUID fixture and safe exact binding repair, product/oldtests/failure packet unchanged; no worker runtime replay, root independent review pending."
+    },
+    {
+      "id": "evidence-r060-r1-handback",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_r1_handback.json",
+      "status": "ACTIVE",
+      "description": "Exact repaired source/full archive/protected physical and failedpacket identities, publication checks; no new worker runtime, independent review pending."
     }
   ]
 }

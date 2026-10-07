@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Fresh installations consistently default to MySQL schema CCMA and application user ccma; Compose uses an authenticated database healthcheck, manual unique-index migration is restart-idempotent, and external pricing synchronization is opt-in.",
     "S0 has a versioned synthetic Vietnamese intervention corpus and an empty-development-database baseline; the first S1 slice reports item-level sync failures as partial without advancing the success checkpoint or triggering after-sync analysis.",
@@ -362,16 +362,16 @@
   },
   "executionObservationPlanning": {
     "candidateTranche": "CCMAI-RUNTIME-059",
-    "status": "R060_R1_STATIC_REPAIR_READY",
+    "status": "R060_R1_REVIEW_PENDING",
     "document": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
-    "sourceImplementation": "IMPLEMENTED_NEW_EX_FIXTURE_REPAIRED_RUNTIME_NOT_RERUN",
+    "sourceImplementation": "IMPLEMENTED_UUID_FIXTURE_REPAIRED_RUNTIME_NOT_RERUN",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "activeTrancheUnchanged": null,
     "newSourceEdits": 6,
     "newGoInvocations": 1,
     "subagentCalls": 1,
     "fullS2Claim": false,
-    "nextMove": "CCMAI-RUNTIME-060 BUILD / R1_NEW_EX_FIXTURE_REPAIR under committed9cfcf96 disposition: worker repairs only NEW source_execution_receipt_db_test.go UUID-positive fixture and safe exact binding assertions, then gated source checkpoint and REVIEW_PENDING. No new worker campaign/Go; failed worker1campaign1Go and original packet preserved. Root originally unstarted one4Go independent campaign next, aggregate2campaign8Go unchanged/planned5Go. Product/old-tests/seeds unchanged; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-060 REVIEW_PENDING at repairedsourcea7edba22589627aee2dd97ffe1921c340c6fbc93: root independently reviews NEW EX UUID-fixture repair and exact source via originally unstarted one4Go campaign; worker runtime NOT_RERUN, failed1campaign1Go/sourceed2f530/evidence56f5f85 preserved. Aggregate2campaign8Go unchanged/planned5Go, no reset. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
     "workOrderDraft": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
     "independentReviewer": "Codex /root",
     "proposedImplementationWorker": "Codex /root/r059_worker",
@@ -406,7 +406,7 @@
       "oldSeedUnchanged": true
     },
     "compatibilitySuccessor": "CCMAI-RUNTIME-060",
-    "buildCommit": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
+    "buildCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
     "workerEvidence": "docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md",
     "repairReport": "docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md"
   }

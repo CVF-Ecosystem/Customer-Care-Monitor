@@ -62,10 +62,10 @@
   ],
   "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
-  "buildCommit": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
+  "buildCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
   "reviewEvidence": [
     "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md"
   ],
@@ -76,7 +76,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -207,7 +208,7 @@
       "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling"
     },
     "workerAcknowledgment": "Fresh canonical rehydration/declaration/doctor25/1; before-edit R1 BUILD ack, only new EX file, new workerGo0.",
-    "workerRepairStatus": "STATIC_READY_RUNTIME_NOT_RERUN",
+    "workerRepairStatus": "REVIEW_PENDING_RUNTIME_NOT_RERUN",
     "repairReport": "docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md",
     "repairAcknowledgmentCommit": "c2d531ed377b2832e0c8373f596ceb3d8819f81f",
     "rootStaticInspection": "Consolidated R1 source/fixture/binding/callback audit no blocking finding",
@@ -220,6 +221,18 @@
       "diff": "PASS",
       "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling",
       "exactStaged": "Required before source checkpoint"
+    },
+    "repairedSourceCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
+    "repairHandback": "docs/reviews/probes/r060_worker_r1_handback.json",
+    "handbackPublicationChecks": {
+      "default": "PASS7/7",
+      "pr": "PASS7/7",
+      "catalogPS51": "PASS",
+      "catalogPS7": "PASS",
+      "docs": "PASS after final Markdown",
+      "diff": "PASS",
+      "gateUnits": "46PASS52.797s inherited9042f91 unchanged tooling",
+      "exactStaged": "Required and run before handback commit"
     }
   }
 }
