@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R062 FREEZE preserved; audited R063 work-order candidate ready for seed/prebuild audit, no BUILD."
+      "description": "Active R063 WORK_ORDER dispatch ready; medium child before-edit BUILD acknowledgment next, independent root review/max8Go."
     },
     {
       "id": "r060-work-order",
@@ -2684,6 +2684,27 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-063.json",
       "status": "ACTIVE",
       "description": "Dispatcher-owned R2 rule-observation seed; medium child BUILD/root independent review, activation follows first commit."
+    },
+    {
+      "id": "evidence-r063-predecessor-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical R062 local FREEZE and R063 planning before separate activation."
+    },
+    {
+      "id": "evidence-r063-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-063.json",
+      "status": "ACTIVE",
+      "description": "R063 bounded R2 work-order record, immutable seed before BUILD."
+    },
+    {
+      "id": "evidence-r063-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_063.md",
+      "status": "ACTIVE",
+      "description": "Authorized additive rule-input observation only; exact SP/EX compatibility, independent roles/max8Go."
     }
   ]
 }

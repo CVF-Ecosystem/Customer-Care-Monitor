@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-062", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-063", "parked": true} -->
 
 ## Startup Order
 
@@ -53,7 +53,11 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R062 local execution observation closure (2026-10-08)
+## Current R063 work-order activation (2026-10-08)
+
+CCMAI-RUNTIME-063 DISPATCH_READY / WORK_ORDER at immutable seed7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015. Named child /root/r063_worker GPT-6.1 Sol medium next rehydrates/declarations/commits before-edit BUILD acknowledgment then implements only RO01..12 observation and exact SP/EX four-line amendments, one worker campaign/max4Go; root independent REVIEWER one campaign/max4Go, aggregate max8Go. No source/runtime before acknowledgment, no automatic retry or seed/old packet edit. R062/R061 bounded local FREEZE preserved; full S2/global F02/provider/billing/permission-policy/WAIT_DATA/live/CVF governance/hosted remain OPEN, Facebook/Zalo OA parked; no provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE authority.
+
+## Historical R062 local execution observation closure (2026-10-08)
 
 CCMAI-RUNTIME-062 and accepted R061 bounded local source_execution observation are FROZEN at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f / independentreview99052ab. R063 candidate DESIGN/SPEC records effective rule-input fingerprint and actual permission/version/WAIT_DATA authority gaps. R063 bounded work-order draft settles digest exposure, exact SP/EX four-line amendments, medium child/root independent roles and proposed total8Go. ORCHESTRATOR next audits seed/schema/prebuild and records formal WORK_ORDER activation before source BUILD. R060 failed packets remain historical CHANGES_REQUIRED/superseded with findings settled by R061; lineage3campaign6Go of8 and original failures unchanged, closure0Go. Full S2/global F02/live/provider/billing/governance/hosted remain OPEN; Facebook/Zalo OA parked. No implicit source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 

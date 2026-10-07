@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-063",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r063_worker",
+    "repairWorker": "Codex /root/r063_worker",
+    "commitSteward": "Codex /root/r063_worker",
+    "reviewer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/source_preparation_receipt.go",
+    "backend/engine/rule_observation_receipt.go",
+    "backend/engine/rule_observation_receipt_test.go",
+    "backend/engine/rule_observation_receipt_db_test.go",
+    "backend/engine/source_preparation_receipt_db_test.go",
+    "backend/engine/source_execution_receipt_db_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_063.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "hosted_readiness_claim",
+    "original_authority_seed_edit",
+    "semantic_auto_skip",
+    "budget_or_policy_gate",
+    "provider_selection_or_fallback_change",
+    "old_worker_or_review_packet_edit",
+    "receipt_driven_admission_or_skip",
+    "extra_database_query_for_receipt",
+    "model_or_migration_change",
+    "automatic_runtime_retry",
+    "provider_interface_edit",
+    "root_source_test_edit",
+    "existing_test_edit_outside_exact_SP_EX_scalar_receipt_amendment",
+    "rule_driven_selection_or_cache_invalidation"
+  ],
+  "claimScope": "Bounded local rule-input observation RO01..12 only. Fingerprint is content identity, not permission/approval/policy revision or enforced WAIT_DATA; existing behavior/preparation/execution/scalars preserved. No full S2/live/governance/hosted claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_063.md",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING_IMPLEMENTATION_AND_INDEPENDENT_REVIEW",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "dispatcherAcknowledgment": "Source/authority/test compatibility/digest exposure consolidated audit a52a13d; seed7deb4f0 committed before activation, owner medium child/root independent route retained.",
+  "workerModel": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "medium"
+  },
+  "executionBudget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxGoInvocations": 4,
+    "workerUsedCampaigns": 0,
+    "workerUsedGoInvocations": 0,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoInvocations": 4,
+    "reviewerUsedCampaigns": 0,
+    "reviewerUsedGoInvocations": 0,
+    "aggregateMaxCampaigns": 2,
+    "aggregateMaxGoInvocations": 8
+  },
+  "sourceBaselineCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+  "acceptedPriorClosureCommit": "ce2a00fa1884a82f7317e808ae9995d90d2ad299",
+  "existingTestCompatibility": {
+    "paths": [
+      "backend/engine/source_preparation_receipt_db_test.go",
+      "backend/engine/source_execution_receipt_db_test.go"
+    ],
+    "insertAfter": "delete(scalars, \"source_execution\")",
+    "exactAddedLines": [
+      "if _, ok := scalars[\"rule_observation\"]; !ok {",
+      "    t.Fatal(\"missing rule_observation in Analyzer summary\")",
+      "}",
+      "delete(scalars, \"rule_observation\")"
+    ],
+    "insertionsPerFile": 1,
+    "allOldAssertionsPreserved": true,
+    "otherOldTestBytesUnchanged": true,
+    "noUnrelatedFormatting": true
+  },
+  "workerAcknowledgment": null,
+  "sourceImplementation": "NOT_STARTED",
+  "liveEvidence": "NOT_RUN; synthetic application observations planned, no governance claim",
+  "activationPublicationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "catalogPS51": "PASS through gate",
+    "catalogPS7": "PASS",
+    "docs": "PASS final activation Markdown/index build",
+    "gateUnits": "Fresh seed46PASS41.701s inherited unchanged scripts/tests",
+    "sourceGo": 0,
+    "exactStaged": "Required before activation commit"
+  }
+}
