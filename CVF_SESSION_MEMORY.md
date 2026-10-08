@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-065", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
 
 ## Startup Order
 
@@ -55,7 +55,13 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 - [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-## Current R065 complete bounded usage/cost delivery (2026-10-08)
+## Current R067 saved-run observation UI (2026-10-08)
+
+CCMAI-RUNTIME-067 DISPATCH_READY / WORK_ORDER under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker rehydrates canonical continuity and commits before-edit BUILD acknowledgment, implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.
+
+GitHub completed43commitpush to a384fa2 verified; publicationreceipt recorded, currentbatch completes through source/independentreview/conditionalclosure/push.
+
+## Historical R065 complete bounded usage/cost delivery (2026-10-08)
 
 CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 

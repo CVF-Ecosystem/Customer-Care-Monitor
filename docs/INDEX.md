@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R065 local usage/cost FREEZE after independent root review; broader S2/S3/live/governance/hosted OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md`
+- Active R067 saved-run observation UI WORK_ORDER; medium child/root independent review and conditional closure/push, backend/governance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -129,6 +129,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R065 end-to-end bounded source/proof/review/closure record, fresh max8Go.: `CVF_SESSION/tranches/CCMAI-RUNTIME-065.json`
 - Original R065 end-to-end seed: medium child source/root independent review and conditional local closure, fresh bounded8Go.: `CVF_SESSION/authority/CCMAI-RUNTIME-065.json`
 - One complete bounded R065 usage/cost delivery contract UO01..12; intended behavior, not implemented yet.: `docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md`
+- Historical R065 FROZEN handoff/evidence/budget; current R067 saved-run UI active.: `CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md`
 - Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md`
 - Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review.: `docs/reviews/probes/r065_independent_campaign.py`
 - Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review.: `docs/reviews/probes/r065_independent_plan.json`
@@ -160,6 +161,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Owner branch publication intake and next source audit; actual remote receipt follows execution, no CI claim.: `docs/reviews/R066_GITHUB_PUBLICATION_AND_NEXT_SCOPE_2026-10-08.md`
 - Actual owner-authorized branch push43commits/remote exacta384fa2; large-log warnings retained, no merge/deploy/CI claim.: `docs/reviews/probes/r066_github_push_receipt.json`
 - End-to-end bounded saved-run UI reader seed; medium child/root independent, fresh8Vitest0Go, conditional local closure/push.: `CVF_SESSION/authority/CCMAI-RUNTIME-067.json`
+- Bounded end-to-end UIR01..12 order; exact8frontendpaths, fresh8Vitest0Go, independent roles/localclosure/push.: `docs/work_orders/CCMAI_RUNTIME_067.md`
+- Dispatcher-bounded R067 active record; before-edit acknowledgment/source/plan/staticreview then bounded UI campaign.: `CVF_SESSION/tranches/CCMAI-RUNTIME-067.json`
 - Source-audited UIR01..12 UI observation contract; no backend/new governance behavior, activation precedes BUILD.: `docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`

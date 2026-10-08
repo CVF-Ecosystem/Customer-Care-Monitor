@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R065 local usage/cost FREEZE after independent root review; broader S2/S3/live/governance/hosted OPEN."
+      "description": "Active R067 saved-run observation UI WORK_ORDER; medium child/root independent review and conditional closure/push, backend/governance unchanged."
     },
     {
       "id": "r060-work-order",
@@ -3447,6 +3447,27 @@
       "path": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
       "status": "ACTIVE",
       "description": "Source-audited UIR01..12 UI observation contract; no backend/new governance behavior, activation precedes BUILD."
+    },
+    {
+      "id": "evidence-r067-formal-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_067.md",
+      "status": "ACTIVE",
+      "description": "Bounded end-to-end UIR01..12 order; exact8frontendpaths, fresh8Vitest0Go, independent roles/localclosure/push."
+    },
+    {
+      "id": "evidence-r067-tranche-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-067.json",
+      "status": "ACTIVE",
+      "description": "Dispatcher-bounded R067 active record; before-edit acknowledgment/source/plan/staticreview then bounded UI campaign."
+    },
+    {
+      "id": "evidence-r065-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical R065 FROZEN handoff/evidence/budget; current R067 saved-run UI active."
     }
   ]
 }

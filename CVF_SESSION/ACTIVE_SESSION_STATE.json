@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,23 +12,28 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 DISPATCH_READY / WORK_ORDER under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker rehydrates canonical continuity and commits before-edit BUILD acknowledgment, implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD after independent REVIEW_PASS; child /root/r065_worker immutable source author",
-  "roleRoute": "OWNER_AUTHORIZED_COMPLETE_R065_MEDIUM_CHILD_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR; medium child /root/r065_worker next IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; root independent REVIEWER / CLOSER",
+  "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-08",
   "currentExecutionBudget": {
     "workerMaxCampaigns": 1,
-    "workerMaxGoInvocations": 4,
+    "workerMaxVitestInvocations": 4,
     "reviewerMaxCampaigns": 1,
-    "reviewerMaxGoInvocations": 4,
-    "aggregateMaxCampaigns": 2,
-    "aggregateMaxGoInvocations": 8,
-    "workerUsedCampaigns": 1,
-    "workerUsedGoInvocations": 4,
-    "reviewerUsedCampaigns": 1,
-    "reviewerUsedGoInvocations": 4
+    "reviewerMaxVitestInvocations": 4,
+    "aggregateMaxVitestInvocations": 8,
+    "workerMaxForcedTypecheckBuilds": 1,
+    "reviewerMaxForcedTypecheckBuilds": 1,
+    "maxGoInvocations": 0,
+    "workerUsedCampaigns": 0,
+    "workerUsedVitestInvocations": 0,
+    "reviewerUsedCampaigns": 0,
+    "reviewerUsedVitestInvocations": 0,
+    "workerUsedForcedTypecheckBuilds": 0,
+    "reviewerUsedForcedTypecheckBuilds": 0,
+    "usedGoInvocations": 0
   },
   "previousExecutionBudget": {
     "reviewerMaxCampaigns": 1,
@@ -60,13 +65,13 @@
     "priorR059UsedGoInvocations": 0
   },
   "candidatePlanning": {
-    "id": "R065",
-    "status": "FROZEN",
-    "artifact": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
-    "sourceOrRuntimeDispatched": true,
-    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
-    "newGoInvocations": 8,
-    "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4"
+    "id": "R067",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
+    "sourceOrRuntimeDispatched": false,
+    "sourceImplementation": "NOT_STARTED",
+    "newGoInvocations": 0,
+    "newVitestInvocations": 0
   },
   "r061RetainedExecutionBudget": {
     "workerMaxCampaigns": 0,
@@ -132,5 +137,27 @@
     },
     "sourceImplementation": "COMMITTED_FROZEN"
   },
-  "historicalClosureAuthority": "CCMAI-RUNTIME-064"
+  "historicalClosureAuthority": "CCMAI-RUNTIME-064",
+  "r065RetainedExecutionBudget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxGoInvocations": 4,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoInvocations": 4,
+    "aggregateMaxCampaigns": 2,
+    "aggregateMaxGoInvocations": 8,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 4,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 4
+  },
+  "historicalR065CandidatePlanning": {
+    "id": "R065",
+    "status": "FROZEN",
+    "artifact": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
+    "sourceOrRuntimeDispatched": true,
+    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
+    "newGoInvocations": 8,
+    "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4"
+  },
+  "publicationReceipt": "docs/reviews/probes/r066_github_push_receipt.json"
 }
