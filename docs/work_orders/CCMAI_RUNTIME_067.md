@@ -21,3 +21,5 @@ Owner duyet authorizes exactly one additional root forced typecheck/build on rep
 ## Visual budget escalation (2026-10-09)
 
 Both original visual invocations consumed and failed; no PNG/report accepted. Formal CHANGES_REQUIRED; source/test acceptance partial, scoped FREEZE/push paused. NEW supplemental one-root-visual proposal is not authority; owner approval required before execution. Vitest8/8/build3/3/Go0 unchanged; second failure cause/mount unknown, original packets retained. [Concrete review and budget decision](../reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md).
+
+Owner separately approved exactlyone supplemental rootvisual and required CVF core reconciliation (2026-10-09); [visual grant](../reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json) committed before execution. Historical proposal remains unchanged; totalvisualceiling3, no extra build/Vitest/Go.

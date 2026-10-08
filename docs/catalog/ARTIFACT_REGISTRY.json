@@ -4238,6 +4238,13 @@
       "path": "docs/reviews/probes/r067_worker_visual_failure_receipt_2026-10-09.json",
       "status": "ACTIVE",
       "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-c001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved exactlyone supplemental rootvisual; separate authorized core reconciliation/backup/doctor recorded, no runtime yet."
     }
   ]
 }

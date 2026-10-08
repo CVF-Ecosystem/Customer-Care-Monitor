@@ -105,7 +105,10 @@
     "workerMaxVisualInvocations": 1,
     "reviewerMaxVisualInvocations": 1,
     "workerUsedVisualInvocations": 1,
-    "reviewerUsedVisualInvocations": 1
+    "reviewerUsedVisualInvocations": 1,
+    "supplementalReviewerMaxVisualInvocations": 1,
+    "supplementalReviewerUsedVisualInvocations": 0,
+    "aggregateVisualCeilingIncludingHistory": 3
   },
   "liveEvidence": "NOT_RUN; synthetic UI structure/payload presentation only, no governance claim",
   "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
@@ -248,5 +251,6 @@
     "gateUnits": "Inherited worker fresh46PASS50.797s; unchanged scripts/tests",
     "currentDiff": "PASS; historical241dc7d rawVite trailing-whitespace exception retained",
     "runtimeAddedDuringRequestPreparation": 0
-  }
+  },
+  "additionalVisualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json"
 }
