@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-09",
+  "tranche": "CCMAI-RUNTIME-067",
+  "workerModel": "gpt-6-luna",
+  "reasoningEffort": "xhigh",
+  "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "failureAttribution": "Worker-reported isolated build wrapper AttributeError, independently inspected by root; no product compilation/test failure.",
+  "rootCause": "Archive validation called islnk on pathlib.WindowsPath rather than tarfile.TarInfo. Also sym-link check must inspect TarInfo metadata, not an existing checkout path.",
+  "location": "OS-temp build_exact_archive.py; original failed wrapper and raw trace retained by worker",
+  "observedControlFlow": "Archive hash checked; error inside pre-extraction TarInfo loop; no dependency junction or approved build/test/browser command had been reached.",
+  "budgetDisposition": {
+    "buildUsedBeforeCorrectedAttempt": 0,
+    "workerVitestUsed": 0,
+    "GoUsed": 0,
+    "reset": false
+  },
+  "rootAuthorization": "Correct TarInfo member.issym()/member.islnk(); preserve original/error; AST check first. Explicit same-scope corrected attempt permitted; actual forced build once, then prior approved bounded campaign/visual if allpass. Unexpected actual check failure stops. No source/authority/scope/risk/acceptance expansion.",
+  "assessment": "Count this as Luna operational/tooling error, distinct from three root source/test findings and root-authored runner failures."
+}

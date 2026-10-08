@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 BUILD: independent root static audit PASS on Luna xhigh source 8a63ad58f7c024d32088ae6079f9908356174308 and committed 17-test/two-mutation plan; worker may run exactly one4Vitest campaign, one forced typecheck-build and one isolated synthetic visual QA, then hand back REVIEW_PENDING. Root own one4Vitest/onebuild/onevisual independent REVIEW before scoped local FREEZE/ordinary authorized branch push. Aggregate max8Vitest/0Go, no automatic retry or budget reset. Original immutable Sol-model seed retained with latest owner Luna override, scope/roles/risk unchanged; inherited draft and root findings attributed for after-tranche comparison. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 BUILD / accepted bounded repair: Luna xhigh REPAIR_WORKER fixes the one missing options-object brace in NEW integration test109 at source8a63ad58f7c024d32088ae6079f9908356174308, performs syntax-only static audit and commits exact repair/NEWplan, then stops for renewed root audit. Worker forcedtypecheck-build1 exhausted with TS1005 failure, Vite NOT RUN; Vitest0/8 and Go0. Root uses its existing one forcedtypecheck-build on repaired exact source BEFORE authorizing worker4Vitest and independent root4Vitest/visuals; no added invocation or budget reset. Preserve all failedsource/rawlogs/setup errors, no automaticretry. Existing scope/risk/roles/seed unchanged. Formal independent REVIEW then conditional local UI FREEZE/ordinary authorized branch push only after finalsource/checks settle. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex Luna xhigh /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner model override; Sol medium draft inherited); Codex /root independent REVIEWER / CLOSER",
+  "activeRole": "Codex Luna xhigh /root/r065_worker REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / CLOSER",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-09",
   "currentExecutionBudget": {
@@ -31,7 +31,7 @@
     "workerUsedVitestInvocations": 0,
     "reviewerUsedCampaigns": 0,
     "reviewerUsedVitestInvocations": 0,
-    "workerUsedForcedTypecheckBuilds": 0,
+    "workerUsedForcedTypecheckBuilds": 1,
     "reviewerUsedForcedTypecheckBuilds": 0,
     "usedGoInvocations": 0
   },
@@ -169,5 +169,14 @@
     "reasoningEffort": "xhigh",
     "source": "Owner instruction 2026-10-08; continues until changed by owner"
   },
-  "r067RootStaticApproval": "docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json"
+  "r067RootStaticApproval": "docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json",
+  "currentRepair": {
+    "finding": "TS1005 missing options-object closing brace in NEW integration fixture109",
+    "failedSource": "8a63ad58f7c024d32088ae6079f9908356174308",
+    "rootStaticOversightAcknowledged": true,
+    "scopeUnchanged": true,
+    "rootFinalBuildBeforeWorkerCampaign": true,
+    "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+    "rootFinalBuildPlan": "docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json"
+  }
 }

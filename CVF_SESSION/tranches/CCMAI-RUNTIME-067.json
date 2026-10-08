@@ -68,7 +68,7 @@
   ],
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "2026-10-08 root fresh manifest/policy/state/memory/activeR065handoff/implementation/index rehydration; core8a4119e public-clean/matchesorigin, doctorPASSWITHNOTE25/1, manifest26c686cc warning and BOOTSTRAP_MIGRATION_PENDING retained. Ownerpushthencontinue; actual43commit GitHubpublicationa384fa2 independently read back. Root+medium readonly source audits select coherent S5 saved-run UI reader over unavailable S2/S3 governance authority; UIR01..12 settled in SPEC, firstseedfc809eb predates BUILD. Root ORCHESTRATOR/SPEC_AUTHOR/WORK_ORDER_AUTHOR transition before activation. Source/Vitest/Go0; child before-edit BUILD acknowledgment required; exact source-plan/staticapproval before Vitest, root own review and conditional same-seedclosure/push. No reuse/reset of R065 exhausted Go.",
-  "sourceImplementation": "AUTHORIZED_BEFORE_EDIT",
+  "sourceImplementation": "COMMITTED_TEST_SYNTAX_REPAIR_REQUIRED",
   "sourceBaselineCommit": "a384fa2ecad6746d35e7897dd8b9e4473221e691",
   "workerModel": {
     "model": "gpt-6.1-sol",
@@ -87,7 +87,7 @@
     "workerUsedVitestInvocations": 0,
     "reviewerUsedCampaigns": 0,
     "reviewerUsedVitestInvocations": 0,
-    "workerUsedForcedTypecheckBuilds": 0,
+    "workerUsedForcedTypecheckBuilds": 1,
     "reviewerUsedForcedTypecheckBuilds": 0,
     "usedGoInvocations": 0
   },
@@ -160,5 +160,21 @@
     ],
     "modelEvaluationBoundary": "Not equal-start A/B. Luna owns strict helper corrections/17newtests/fixture; panel/locales/JobDetail inherited primarily Sol. Root owns campaign/capture probes; quality evaluation after independent checks; no measured tokens/billing data."
   },
-  "updatedAt": "2026-10-09"
+  "updatedAt": "2026-10-09",
+  "acceptedRepairFinding": {
+    "finding": "TS1005 missing options-object closing brace in NEW integration fixture109",
+    "failedSource": "8a63ad58f7c024d32088ae6079f9908356174308",
+    "rootStaticOversightAcknowledged": true,
+    "scopeUnchanged": true,
+    "rootFinalBuildBeforeWorkerCampaign": true
+  },
+  "repairPublicationNote": "Root repair-sync preflights failed6/7 twice: first descriptive event did not end in current BUILD; adding BUILD then exposed unsupported status transitions. Restored canonical DISPATCH_READY->BUILD history and retained descriptive repair finding/rejected proposal outside machine status history. Both failures are root metadata, not Luna/source/runtime. No gate bypass.",
+  "repairPublicationRejectedHistory": [
+    "DISPATCH_READY",
+    "BUILD",
+    "BUILD_SYNTAX_REPAIR_REQUIRED",
+    "BUILD"
+  ],
+  "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+  "renewedRootStaticAudit": "docs\\reviews\\probes\\r067_root_repair_build_plan_2026-10-09.json"
 }

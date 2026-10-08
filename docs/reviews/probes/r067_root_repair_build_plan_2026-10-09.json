@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-09",
+  "tranche": "CCMAI-RUNTIME-067",
+  "role": "root independent REVIEWER / SESSION_SYNC_STEWARD",
+  "sourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+  "archiveSha256": "8689777a03291fde0330dcb0fb106091afaa3dbde395960257a50d622cf8257f",
+  "archiveMembers": 121,
+  "suites": 30,
+  "sourceRepairAudit": "Exact single missing brace versus failed8a63 source; no product/helper/tests inventory or mutation-target changes. Syntax-only8files0errors.",
+  "runner": "docs/reviews/probes/r067_reviewer_build_exact_2026-10-09.py",
+  "command": "python -B docs/reviews/probes/r067_reviewer_build_exact_2026-10-09.py 4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314 8689777a03291fde0330dcb0fb106091afaa3dbde395960257a50d622cf8257f",
+  "budget": "Existing reviewer one forced typecheck-build; worker build1 exhausted FAILED_TYPECHECK; Vitest0/8,Go0. No retry/reset.",
+  "next": "If final build PASS, worker4Vitest then root4Vitest and one visual per role; any unexpected failure stops for disposition.",
+  "historicalFailure": "Original worker syntax failure/raw logs retained; intermediate invalid JSON bytes lost/disclosed; root initial static oversight and two metadata-history gate failures retained.",
+  "publication": {
+    "default": "PASS7/7",
+    "PR": "PASS7/7",
+    "gateUnits": "inherited worker46PASS50.797s unchanged tooling",
+    "docs": "shared PASS20.87s",
+    "catalog": "PS5.1+PS7PASS",
+    "cache": "exact local exclude2 retained generated pyc paths; no deletion/publicignore/gatechange"
+  }
+}
