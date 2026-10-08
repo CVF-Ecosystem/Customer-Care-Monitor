@@ -158,6 +158,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_summary.json`
 - Separate owner-authorized ordinary GitHub branch push; original R065 seed immutable, no merge/main/deployment authority.: `CVF_SESSION/authority/CCMAI-PUBLISH-066.json`
 - Owner branch publication intake and next source audit; actual remote receipt follows execution, no CI claim.: `docs/reviews/R066_GITHUB_PUBLICATION_AND_NEXT_SCOPE_2026-10-08.md`
+- Actual owner-authorized branch push43commits/remote exacta384fa2; large-log warnings retained, no merge/deploy/CI claim.: `docs/reviews/probes/r066_github_push_receipt.json`
+- End-to-end bounded saved-run UI reader seed; medium child/root independent, fresh8Vitest0Go, conditional local closure/push.: `CVF_SESSION/authority/CCMAI-RUNTIME-067.json`
+- Source-audited UIR01..12 UI observation contract; no backend/new governance behavior, activation precedes BUILD.: `docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
 - Reviewed F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`
