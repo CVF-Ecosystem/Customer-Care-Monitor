@@ -163,5 +163,20 @@
     "rawPhysicalReferences": "PASS20, original raw summary/file bytes unchanged",
     "sourceTestsAfterRuntime": "UNCHANGED source72e4c36",
     "workerRuntimeBudget": "1campaign4Go exactly; root0Go"
+  },
+  "reviewerAcknowledgment": "2026-10-08 root fresh canonical continuity REVIEW rehydration; independent REVIEWER/metadata COMMIT_STEWARD, core8a4119e doctorPASSWITHNOTE25/1, BOOTSTRAP_MIGRATION_PENDING. Exact childsource72e4c36/committedplan012f083 static audit and actual worker4Go packet independently audited:81top269PASS, both named kills/healthy controls, restored16top73PASS,216manifest and20physicalrefs/actualinspect/exits/cleanup. Old590/source/seed/workerpacket immutable. Root independently authored69positive/16restored inventory plus exact actual two mutation plans and exclusive raw/backups/typed refs before own1campaign4Go. No acceptance before own runtime; no retry, bounded local application only.",
+  "independentPlan": "docs/reviews/probes/r065_independent_plan.json",
+  "independentRunner": "docs/reviews/probes/r065_independent_campaign.py",
+  "reviewerDirectMetadataRepair": "Root consolidated current nested routing audit found ownerRouting still dispatching historical R060 with0/8 budget. R1 direct SESSION_SYNC_STEWARD repair before own campaign: preserve full historicalPreR065RoutingSnapshot, route current ownerObjective/workorder/budget/source to canonical R065 REVIEW. No source/oldpacket/acceptance change; current prose/nested nextMove checked. Portable continuity gate alone did not detect stale ownerRouting. Entire inherited buildInProgress list also mixed stale R063/R060/current historical planning; preserved byte-semantic values under historicalPreR065BuildInProgressSnapshot and replaced current list with R065 REVIEW plus explicit broader open requirements.",
+  "independentPreparationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "exactStaged": "PASS7/7 exact8 reviewer preparation paths",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS37.63s",
+    "gateUnits": "Fresh46PASS36.636s inherited unchanged scripts/tests",
+    "protected": "621physicalfiles unchanged:old590+source+workerpacket+seed",
+    "runtimeRootGo": 0
   }
 }

@@ -32,3 +32,11 @@ Only local UO01..12. Root independent actual campaign/source REVIEW required bef
 ## Root static approval and worker actual handback
 
 Independent root static PASS exact source72e4c36/plan012f083 before first worker Go; old590physical/seedfirstblob/archive216/inventory81-2-2-16/source/UO/callback/mutation/runner checks. Root explicitly authorized ONE worker FOUR Go, no retry. Worker actual campaignPASS4Go:81top269pass positive, M01/M02 named assertionfail1 and healthycontrolpass1 each, restored16top73pass.216member restoration/secondarchive,20physicalreference hashes, containerbefore/afterinspect/exits and fullcleanup verified. Original raw packet backed up separately in taskTEMP and not rewritten; physical/Git LF domains explicit. Root own campaign0Go, independent acceptance not established; local closure conditional. Worker hands writer ownership to root after publication commit.
+
+## Independent reviewer before-campaign acknowledgment
+
+2026-10-08 root fresh canonical continuity REVIEW rehydration; independent REVIEWER/metadata COMMIT_STEWARD, core8a4119e doctorPASSWITHNOTE25/1, BOOTSTRAP_MIGRATION_PENDING. Exact childsource72e4c36/committedplan012f083 static audit and actual worker4Go packet independently audited:81top269PASS, both named kills/healthy controls, restored16top73PASS,216manifest and20physicalrefs/actualinspect/exits/cleanup. Old590/source/seed/workerpacket immutable. Root independently authored69positive/16restored inventory plus exact actual two mutation plans and exclusive raw/backups/typed refs before own1campaign4Go. No acceptance before own runtime; no retry, bounded local application only.
+
+## Root direct current-routing repair
+
+Root consolidated current nested routing audit found ownerRouting still dispatching historical R060 with0/8 budget. R1 direct SESSION_SYNC_STEWARD repair before own campaign: preserve full historicalPreR065RoutingSnapshot, route current ownerObjective/workorder/budget/source to canonical R065 REVIEW. No source/oldpacket/acceptance change; current prose/nested nextMove checked. Portable continuity gate alone did not detect stale ownerRouting.
