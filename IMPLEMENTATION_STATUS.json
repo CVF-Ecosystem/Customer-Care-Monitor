@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: exact bd62c7e root316PASS, semanticM01/M02 healthy controls/restored17PASS, worker manualremaining3 controls/restored17PASS; historical positive/build failures retained. Vitest8/8, forcedbuild3/3, visual2/2 exhausted, Go0. Both visual attempts failed; second rootcause/mount UNKNOWN, no PNG/report. REVIEW_COST_ESCALATION_REQUIRED: NEW readiness/diagnostic fixture and explicit-grant runner prepared/staticPASS, exactly1 extra rootvisual PROPOSED_NOT_AUTHORIZED. Await owner decision before any browser/server/runtime; no FREEZE/push. If authorized, onecapture then independent4image/report REVIEW; failureSTOP/no retry. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked; final after-tranche Luna/Sol assessment pending closure.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -239,7 +239,9 @@
     "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md",
     "docs/reviews/probes/r065_independent_summary.json",
     "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
-    "docs/reviews/probes/r066_github_push_receipt.json"
+    "docs/reviews/probes/r066_github_push_receipt.json",
+    "docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md",
+    "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md"
   ],
   "updatedAt": "2026-10-09",
   "ownerRouting": {
@@ -249,7 +251,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "nextObjective": "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: exact bd62c7e root316PASS, semanticM01/M02 healthy controls/restored17PASS, worker manualremaining3 controls/restored17PASS; historical positive/build failures retained. Vitest8/8, forcedbuild3/3, visual2/2 exhausted, Go0. Both visual attempts failed; second rootcause/mount UNKNOWN, no PNG/report. REVIEW_COST_ESCALATION_REQUIRED: NEW readiness/diagnostic fixture and explicit-grant runner prepared/staticPASS, exactly1 extra rootvisual PROPOSED_NOT_AUTHORIZED. Await owner decision before any browser/server/runtime; no FREEZE/push. If authorized, onecapture then independent4image/report REVIEW; failureSTOP/no retry. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked; final after-tranche Luna/Sol assessment pending closure.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -274,7 +276,7 @@
       "aggregateForcedBuildCeilingIncludingHistory": 3,
       "workerMaxVisualInvocations": 1,
       "reviewerMaxVisualInvocations": 1,
-      "workerUsedVisualInvocations": 0,
+      "workerUsedVisualInvocations": 1,
       "reviewerUsedVisualInvocations": 1
     },
     "historicalR065RoutingSnapshot": {
@@ -578,13 +580,13 @@
   ],
   "savedRunObservationUI": {
     "tranche": "CCMAI-RUNTIME-067",
-    "status": "REVIEW_PENDING",
-    "sourceImplementation": "COMMITTED_TEST_ONLY_REPAIR_REVIEW_PENDING",
-    "r2IndependentAcceptance": "NOT_ESTABLISHED",
+    "status": "CHANGES_REQUIRED",
+    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_VISUAL_INCOMPLETE",
+    "r2IndependentAcceptance": "NOT_ESTABLISHED_UIR08_UIR12_VISUAL",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 8,
-    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "nextMove": "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: exact bd62c7e root316PASS, semanticM01/M02 healthy controls/restored17PASS, worker manualremaining3 controls/restored17PASS; historical positive/build failures retained. Vitest8/8, forcedbuild3/3, visual2/2 exhausted, Go0. Both visual attempts failed; second rootcause/mount UNKNOWN, no PNG/report. REVIEW_COST_ESCALATION_REQUIRED: NEW readiness/diagnostic fixture and explicit-grant runner prepared/staticPASS, exactly1 extra rootvisual PROPOSED_NOT_AUTHORIZED. Await owner decision before any browser/server/runtime; no FREEZE/push. If authorized, onecapture then independent4image/report REVIEW; failureSTOP/no retry. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked; final after-tranche Luna/Sol assessment pending closure.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -614,8 +616,11 @@
     "reviewerMutations": "M01/M02 semantic detectors failed; healthy controls passed; restored17PASS",
     "workerRemainingEvidence": "M01/M02 semantic detectors failed; healthy controls passed; restored17PASS",
     "rootVisual": "FAILED_HARNESS_BEFORE_COMPONENT_RENDER",
-    "workerVisual": "NOT_RUN_REMAINING_ONE",
-    "historicalIndependentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS"
+    "workerVisual": "FAILED_KEYBOARD_ASSERTION_CAUSE_UNDETERMINED",
+    "historicalIndependentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS",
+    "visualRequest": "docs/reviews/probes/r067_additional_visual_request_2026-10-09.json",
+    "visualInvocationsUsed": 2,
+    "modelAssessment": "INTERIM_ONLY_FINAL_PENDING_TRANCHE_CLOSURE"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",

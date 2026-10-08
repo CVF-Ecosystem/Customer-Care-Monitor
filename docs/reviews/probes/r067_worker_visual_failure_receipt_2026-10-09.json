@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-09",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "producer": "Luna xhigh /root/r065_worker",
+  "role": "IMPLEMENTATION_WORKER / UI VISUAL EVIDENCE",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "sourceArchiveSha256": "60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6",
+  "fixture": "docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs",
+  "capture": "docs/reviews/probes/r067_capture_keyboard.mjs",
+  "invocation": {
+    "command": "node docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs",
+    "runner": "functions.exec -> exec_command",
+    "workdir": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+    "nodeProcessExitCode": 1,
+    "captureSubprocessExitCode": 2,
+    "toolReportedElapsedSeconds": 7.5,
+    "attempts": 1,
+    "automaticRetry": 0,
+    "toolOutputArtifact": "Not separately captured as raw stdout/stderr; the tool response text remains in the conversation. No missing stream bytes were reconstructed."
+  },
+  "rawTemp": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-visual-6gwkVi",
+    "retained": true,
+    "viteLogAndCaptureLogMergedStreams": true,
+    "fullDirectoryBytesNotCopied": true,
+    "reportExists": false,
+    "pngs": [],
+    "screenshotsDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-visual-6gwkVi\\screenshots",
+    "dependencyJunctionPresent": false
+  },
+  "subprocesses": {
+    "vite": {
+      "logPath": "docs/reviews/probes/r067_worker_visual_failed_vite_2026-10-09.log",
+      "actualLogBytes": 74,
+      "actualLogSha256": "d8dcd8d86aa25a987ad8e2cefd2665ff085022fc268b0d4579cce8080833d8a8",
+      "observed": "Vite 8.0.1 ready in 1433 ms at loopback 127.0.0.1:62335; no errors recorded in this log."
+    },
+    "capture": {
+      "logPath": "docs/reviews/probes/r067_worker_visual_failed_capture_2026-10-09.log",
+      "actualLogBytes": 194,
+      "actualLogSha256": "bca1eb74d077979e96112bf90f7b1e9687f92ff48d82b1ab317e0af58198ed03",
+      "observed": "Native details keyboard check failed at r067_capture_keyboard.mjs:229; capture stdout/stderr were merged by fixture into this one file."
+    }
+  },
+  "rawCopies": [
+    {
+      "sourceTempPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-visual-6gwkVi\\vite.log",
+      "sourceBytes": 74,
+      "sourceSha256": "d8dcd8d86aa25a987ad8e2cefd2665ff085022fc268b0d4579cce8080833d8a8",
+      "sourceLastWriteTimeUtc": "2026-10-08T18:24:41.1028351Z",
+      "repositoryPath": "docs/reviews/probes/r067_worker_visual_failed_vite_2026-10-09.log",
+      "copiedBytes": 74,
+      "copiedSha256": "d8dcd8d86aa25a987ad8e2cefd2665ff085022fc268b0d4579cce8080833d8a8",
+      "byteIdentical": true
+    },
+    {
+      "sourceTempPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-visual-6gwkVi\\capture.log",
+      "sourceBytes": 194,
+      "sourceSha256": "bca1eb74d077979e96112bf90f7b1e9687f92ff48d82b1ab317e0af58198ed03",
+      "sourceLastWriteTimeUtc": "2026-10-08T18:24:41.1062484Z",
+      "repositoryPath": "docs/reviews/probes/r067_worker_visual_failed_capture_2026-10-09.log",
+      "copiedBytes": 194,
+      "copiedSha256": "bca1eb74d077979e96112bf90f7b1e9687f92ff48d82b1ab317e0af58198ed03",
+      "byteIdentical": true
+    }
+  ],
+  "failure": {
+    "status": "FAILED_HARNESS",
+    "rootCause": "UNDETERMINED",
+    "screenCaptureMade": false,
+    "reportWritten": false,
+    "componentMount": "UNKNOWN",
+    "domOrBrowserErrorDetailsCaptured": false,
+    "keyboardBooleanValuesSaved": false,
+    "captureFailure": "The combined assertion at line229 throws when any of tabSummary, enterOpened, or spaceClosed is false; individual values are not recorded."
+  },
+  "staticAudit": {
+    "viteLogShowsServerReady": true,
+    "pageLoadAndConfigured250msWaitMustHaveCompletedToReachLine229": true,
+    "fixtureCsp": "script-src self/unsafe-eval; connect-src self and loopback websocket; no external sources permitted by default-src none",
+    "possibleCauses": [
+      "Component import or runtime mounting failed despite Vite server readiness; browser error state was not written because the throw preceded report serialization.",
+      "Component mounted but Tab did not focus summary, Enter did not open details, or Space did not close details; the combined assertion does not distinguish these.",
+      "A timing/focus/keyboard-dispatch issue in the capture helper remains possible; no source or UI defect is established."
+    ],
+    "conclusion": "Do not claim component-render absence or a product keyboard defect. Root requested static hypotheses only; no second browser attempt."
+  },
+  "budgets": {
+    "workerVisualUsed": 1,
+    "workerVisualMax": 1,
+    "reviewerVisualUsed": 1,
+    "reviewerVisualMax": 1,
+    "vitestUsed": 8,
+    "vitestMax": 8,
+    "forcedBuildsUsed": 3,
+    "forcedBuildsMax": 3,
+    "Go": 0
+  },
+  "scopeLimits": [
+    "Synthetic isolated UI fixture only.",
+    "No application API/provider/network test or governance evidence.",
+    "Original failed root visual and this worker failure remain separate immutable records.",
+    "No retry, no build, no Vitest, no Go, no source/test/seed/old-packet edit."
+  ]
+}

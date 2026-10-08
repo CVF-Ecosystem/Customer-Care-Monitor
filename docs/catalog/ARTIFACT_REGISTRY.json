@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R067 BUILD Luna xhigh successor; exact source/static approval, independent root campaign/review and conditional closure/push."
+      "description": "Active R067 REVIEW / CHANGES_REQUIRED: actual visual proof incomplete, exhausted budgets, owner supplemental visual decision pending; source/failed evidence retained."
     },
     {
       "id": "r060-work-order",
@@ -4154,6 +4154,90 @@
       "path": "docs/reviews/probes/r067_worker_resumed_summary.json",
       "status": "ACTIVE",
       "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-b001",
+      "family": "continuity",
+      "path": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b002",
+      "family": "continuity",
+      "path": "docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_additional_visual_request_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_capture_ready_diagnostics_PROPOSED_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_final_independent_source_evidence_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_local_knowledge_index_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_visual_PROPOSED_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture_ready_diagnostics_PROPOSED_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_ack_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_failed_capture_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_failed_vite_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_failure_receipt_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
     }
   ]
 }

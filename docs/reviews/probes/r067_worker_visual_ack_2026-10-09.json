@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "recordedAt": "2026-10-09",
+  "phase": "REVIEW",
+  "riskCeiling": "R2",
+  "liveEvidenceRequired": true,
+  "worker": {
+    "model": "gpt-6-luna",
+    "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS",
+    "reasoningEffort": "xhigh",
+    "verifiedCoreCommit": "8a4119e11db00e774ed8e7cf7d9a8caa309e81d1",
+    "manifestExpectedCoreCommit": "26c686cc99b8be965d2760f27fe875b03376c643",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+    "role": "IMPLEMENTATION_WORKER / UI VISUAL EVIDENCE",
+    "doctor": "PASS WITH NOTE,25 pass/1 warning; public origin/main matches; manifest-pin warning retained"
+  },
+  "go": {
+    "Go": "0 invocations",
+    "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+    "sourceFiles": 121,
+    "forcedBuild": "3/3 consumed",
+    "productionSourcesUnchangedFromBuiltCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+    "commit": "241dc7d838aa557ca14bb06683fae1c0addc0992",
+    "vitest": "8/8 consumed",
+    "sourceArchiveSha256": "60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6"
+  },
+  "priorRootVisual": {
+    "receipt": "docs/reviews/probes/r067_reviewer_visual_receipt_2026-10-09.json",
+    "failureDisposition": "docs/reviews/probes/r067_visual_fixture_failure_disposition_2026-10-09.json",
+    "rootVisualInvocationsUsed": 1,
+    "noRetry": true,
+    "status": "FAILED_HARNESS before component rendering",
+    "rawFailurePreserved": true
+  },
+  "authorizedWorkerVisual": {
+    "fixture": "docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs",
+    "matrix": "English and Vietnamese at desktop and mobile; native Tab/Enter/Space checks; block external requests",
+    "expectedPathRepair": "Exactly three module import specifiers use literal normalized filesystem paths rather than encodeURI; original failed fixture remains unchanged.",
+    "failurePolicy": "Any failure stops; retain exact raw packet and do not rerun.",
+    "workerVisualInvocationsUsedBefore": 0,
+    "postcondition": "On PASS, preserve actual temporary Vite/capture logs, report.json, and all four PNGs at new r067_worker_visual_* repository evidence paths with physical hashes; no retry.",
+    "workerVisualInvocationsAuthorized": 1,
+    "command": "node docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs"
+  },
+  "limits": {
+    "syntheticUIOnly": true,
+    "noProviderOrLiveGovernanceClaim": true,
+    "noSourceTestCompilerBuildVitestGo": true
+  },
+  "localBootstrapOutput": {
+    "rootDisposition": "Retain bytes; exclude only exact path via local .git/info/exclude; do not commit.",
+    "generatedByRequiredLocalIngest": true,
+    "contents": "One README-derived chunk only",
+    "path": "knowledge/_index.json"
+  }
+}

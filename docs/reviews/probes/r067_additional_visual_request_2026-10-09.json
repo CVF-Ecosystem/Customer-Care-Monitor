@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-09",
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "tranche": "CCMAI-RUNTIME-067",
+  "request": "Exactly one additional root isolated EN/VI desktop/mobile visual capture with readiness and retained failure diagnostics.",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "sourceArchiveSha256": "60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6",
+  "originalVisualBudget": {
+    "workerMax": 1,
+    "workerUsed": 1,
+    "reviewerMax": 1,
+    "reviewerUsed": 1,
+    "failuresRetained": 2
+  },
+  "proposedAdditionalVisuals": {
+    "worker": 0,
+    "reviewer": 1,
+    "newAggregateCeilingIncludingHistory": 3
+  },
+  "unchangedBudget": {
+    "VitestUsed": 8,
+    "VitestMax": 8,
+    "forcedBuildsUsed": 3,
+    "forcedBuildsMax": 3,
+    "Go": 0
+  },
+  "costDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
+  "secondFailureRootCause": "UNDETERMINED",
+  "componentMount": "UNKNOWN",
+  "runner": "docs/reviews/probes/r067_supplemental_visual_PROPOSED_2026-10-09.py",
+  "proposedCommand": "python -B docs/reviews/probes/r067_supplemental_visual_PROPOSED_2026-10-09.py --grant <NEW_COMMITTED_OWNER_VISUAL_GRANT>",
+  "staticChecks": "node --check both NEW mjs PASS; Python ast.parse PASS; no browser/server/compiler/Vitest execution",
+  "failureRule": "One launch; failure retains raw diagnostics then stops, no retry/reset.",
+  "limits": "Synthetic UI only; no source/test/dependency/seed/backend/core/provider/real-config/customer/DB change; no live governance claim.",
+  "review": "docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md",
+  "preparedFiles": [
+    {
+      "path": "docs\\reviews\\probes\\r067_capture_ready_diagnostics_PROPOSED_2026-10-09.mjs",
+      "sha256Physical": "e5dc6ac0332d6f3bf26944a68bf4f2a4ac5b5cba5238f507b516b4cc6ba0c6af"
+    },
+    {
+      "path": "docs\\reviews\\probes\\r067_visual_fixture_ready_diagnostics_PROPOSED_2026-10-09.mjs",
+      "sha256Physical": "7aa9d3dc9476c779cabfcb6e36c19cfbe9b42efa7a49da41dd1eccc9d86a3eb2"
+    },
+    {
+      "path": "docs\\reviews\\probes\\r067_supplemental_visual_PROPOSED_2026-10-09.py",
+      "sha256Physical": "d2f1d8ab257311d277f0943f033678f8d20b9da56b66b2fcddbeca67f36160f7"
+    }
+  ],
+  "visualDispositionPublicationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS21.91s final Markdown",
+    "gateUnits": "Inherited worker fresh46PASS50.797s; unchanged scripts/tests",
+    "currentDiff": "PASS; historical241dc7d rawVite trailing-whitespace exception retained",
+    "runtimeAddedDuringRequestPreparation": 0
+  }
+}

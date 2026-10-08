@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-067 — Saved-run observation UI complete delivery
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 Risk R2. Original dispatcher seedfc809eb committed before activation. [SPEC UIR01..12](../reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md) incorporated exactly: eight frontend paths, no backend/old tests/old packets/seeds changes. Medium child /root/r065_worker implementation/repair/BUILD commits, root independent REVIEWER then CLOSER/SESSION_SYNC_STEWARD/metadata COMMIT_STEWARD. Owner asks push then continue; complete coherent batch through review/localclosure/push, no checkpoint permission waits. Root directly fixes minor metadata.
 
@@ -17,3 +17,7 @@ Actual successor at /root/r065_worker: gpt-6-luna, xhigh (extra high), explicitl
 ## Owner-approved supplemental check (2026-10-09)
 
 Owner duyet authorizes exactly one additional root forced typecheck/build on repaired4d921 source, Vite only after typecheckPASS. Original one-per-role failures retained; aggregate forcedbuild ceiling3, supplemental0/1 before execution. Original8Vitest/0Go and one visual per role unchanged, no reset or immutable seed edit. [Grant](../reviews/probes/r067_owner_additional_build_grant_2026-10-09.json). Proposal at7cb2f19 remains historical, not current authority.
+
+## Visual budget escalation (2026-10-09)
+
+Both original visual invocations consumed and failed; no PNG/report accepted. Formal CHANGES_REQUIRED; source/test acceptance partial, scoped FREEZE/push paused. NEW supplemental one-root-visual proposal is not authority; owner approval required before execution. Vitest8/8/build3/3/Go0 unchanged; second failure cause/mount unknown, original packets retained. [Concrete review and budget decision](../reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md).

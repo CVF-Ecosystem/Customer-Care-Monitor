@@ -1,0 +1,23 @@
+# Đánh giá tạm thời Luna xhigh trong R067
+
+Người đánh giá: Codex `/root`, orchestrator/reviewer độc lập với worker `/root/r065_worker`. Tranche CHANGES_REQUIRED vì actual visual chưa đủ bằng chứng, chưa FREEZE; bản đánh giá sau tranche vẫn chờ closure. Mẫu quan sát là R067 frontend saved-run UI, kế thừa bản nháp Sol medium; đây không phải A/B cùng đầu vào, thời gian hay độ khó. Tài liệu này ghi nhận đóng góp và hiệu quả hiện có.
+
+Luna tạo phần kiểm tra schema/coherence chi tiết và ba suite mới với 17 test; code cuối có bằng chứng root 316/316 PASS, hai mutation bị detector phát hiện với healthy control vẫn PASS, restored 17/17 PASS. Chất lượng đầu ra sau sửa tốt ở việc giữ tenant/job/run binding, unknown khác zero, legacy EX không có UO và giới hạn claim local estimate. Hiệu quả vòng đầu chưa đạt: cần sửa cú pháp, typing, assertion và fixture visual trước khi đủ bằng chứng nghiệm thu.
+
+| Mặt đánh giá | Luna xhigh trong R067 | Sol medium có bằng chứng | Nhận định có giới hạn |
+|---|---|---|---|
+| Đóng góp | Mở rộng helper, kiểm tra schema/sum/retained entries; tạo 17 test và fixture visual; góp ý full-tree inventory cho probe reviewer | Bản nháp 5 file gồm JobDetail/panel/locales/helper, chưa có test receipt tại thời điểm chuyển model | Luna hoàn thiện phần còn thiếu; panel/locales/integration có phần kế thừa Sol |
+| Tự phát hiện sai hợp đồng | Sửa mode `full` thành `conditional`, loại enum array coercion và kiểm tra tổng SP so với visited | Ba lỗi có trong nháp Sol được lưu trước takeover | Schema audit là điểm mạnh quan sát được của Luna |
+| Review trước runtime | Root phát hiện EX bắt buộc UO làm ẩn legacy receipt, focus fixture bị detached và dùng DOMWrapper.closest không tồn tại; Luna sửa | EX của nháp Sol không bắt buộc UO | Không quy mọi finding của sản phẩm kế thừa cho Sol |
+| Compile lần đầu | Worker thiếu một brace ở test integration; root typecheck sau đó có 7 diagnostic thuộc 4 nhóm typing | Một diagnostic panel key type kế thừa Sol; 6 diagnostic ở helper/test Luna | Code mới không đạt compile lần đầu; root syntax/static review cũng bỏ sót |
+| Test lần đầu | Positive 315 PASS/1 FAIL: assertion nhầm absent sparse outcome thành unknown thay vì known zero; sửa test, thêm assertion cho unknown thật | R065 Sol medium trước đó: worker 269 PASS, root 225 PASS, hai mutations/healthy controls/restored PASS; không có source/test repair sau review | R065 là backend Go, khác scope nên không dùng số test để xếp hạng model |
+| Visual harness | Fixture Luna dùng encodeURI trong module specifier làm literal `%20`/Vite ENOENT ở workspace có dấu cách; root sửa riêng 3 dòng fixture | Không có visual cùng điều kiện từ Sol để so | Root chạy capture thất bại và cũng bỏ sót lỗi fixture trong static review |
+| Vận hành/bằng chứng | Có lỗi Path/TarInfo, quoting, JSON escaping, PowerShell `true` làm plan null; failure/null bytes hoặc mô tả giới hạn được giữ | Sol các tranche trước cũng có sửa metadata/history/catalog | Tách lỗi worker với lỗi công cụ/metadata do root gây ra; không gộp thành điểm code |
+
+Luna đã đóng góp tốt cho kiểm tra cấu trúc và coverage, nhưng mẫu này **chưa cho thấy hiệu quả cao hơn Sol medium**: số vòng sửa và hỗ trợ từ root đáng kể. Không có dữ liệu token, chi phí hay thời gian Sol tương ứng; không kết luận Luna rẻ hơn, nhanh hơn hoặc model nào luôn tốt hơn. Khoảng từ ghi nhận source-preparation tới checkpoint source đầu tiên khoảng 16 phút 50 giây gồm phối hợp/chờ và không phải thời gian inference thuần.
+
+Root chịu trách nhiệm riêng cho static review bỏ sót các lỗi trên, các lỗi capture shebang/source inventory, metadata/history/mode, catalog PS5/PS7 sorting và docs link. Raw Vite log có trailing whitespace được bảo toàn; root không được báo toàn bộ diff check PASS. Đánh giá worker không miễn trách nhiệm reviewer.
+
+Giữ lựa chọn Luna xhigh của owner. Với tranche tương đương tiếp theo, so compile/test lần đầu, finding độc lập, số vòng sửa, thời gian có phân biệt chờ và lượng hỗ trợ root; chỉ so chi phí khi có usage thật. Tiêu chuẩn nghiệm thu không giảm theo model.
+
+Bằng chứng: [takeover và snapshot Sol](probes/r067_luna_takeover_2026-10-08.json), [typecheck findings](R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md), [positive failure/test repair](R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md), [root raw campaign](probes/r067_reviewer_summary.json), [worker continuation](probes/r067_worker_resumed_summary.json), [visual harness disposition](probes/r067_visual_fixture_failure_disposition_2026-10-09.json), [source/raw audit](probes/r067_final_independent_source_evidence_audit_2026-10-09.json), [R065 Sol medium review](R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md).
