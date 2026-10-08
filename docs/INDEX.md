@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R067 saved-run observation UI WORK_ORDER; medium child/root independent review and conditional closure/push, backend/governance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
+- Active R067 BUILD Luna xhigh successor; exact source/static approval, independent root campaign/review and conditional closure/push.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -289,6 +289,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/probes/r065_worker_campaign.py`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/probes/r065_worker_plan.json`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md`
+- Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking.: `docs/reviews/probes/r067_capture_keyboard.mjs`
+- Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries.: `docs/reviews/probes/r067_luna_takeover_2026-10-08.json`
+- Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending.: `docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json`
+- Independent exact-source static approval and bounded worker/root campaign; historical root static failures retained.: `docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json`
+- Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof.: `docs/reviews/probes/r067_ui_campaign.py`
+- Luna isolated synthetic saved-run panel fixture, loopback only, no application/API.: `docs/reviews/probes/r067_visual_fixture.mjs`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

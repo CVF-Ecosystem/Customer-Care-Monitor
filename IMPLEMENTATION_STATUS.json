@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 DISPATCH_READY / WORK_ORDER under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker rehydrates canonical continuity and commits before-edit BUILD acknowledgment, implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.",
+    "CCMAI-RUNTIME-067 BUILD: independent root static audit PASS on Luna xhigh source 8a63ad58f7c024d32088ae6079f9908356174308 and committed 17-test/two-mutation plan; worker may run exactly one4Vitest campaign, one forced typecheck-build and one isolated synthetic visual QA, then hand back REVIEW_PENDING. Root own one4Vitest/onebuild/onevisual independent REVIEW before scoped local FREEZE/ordinary authorized branch push. Aggregate max8Vitest/0Go, no automatic retry or budget reset. Original immutable Sol-model seed retained with latest owner Luna override, scope/roles/risk unchanged; inherited draft and root findings attributed for after-tranche comparison. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -241,7 +241,7 @@
     "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "docs/reviews/probes/r066_github_push_receipt.json"
   ],
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "ownerRouting": {
     "date": "2026-10-08",
     "parkedAccounts": [
@@ -249,10 +249,10 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 DISPATCH_READY / WORK_ORDER under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker rehydrates canonical continuity and commits before-edit BUILD acknowledgment, implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-067 BUILD: independent root static audit PASS on Luna xhigh source 8a63ad58f7c024d32088ae6079f9908356174308 and committed 17-test/two-mutation plan; worker may run exactly one4Vitest campaign, one forced typecheck-build and one isolated synthetic visual QA, then hand back REVIEW_PENDING. Root own one4Vitest/onebuild/onevisual independent REVIEW before scoped local FREEZE/ordinary authorized branch push. Aggregate max8Vitest/0Go, no automatic retry or budget reset. Original immutable Sol-model seed retained with latest owner Luna override, scope/roles/risk unchanged; inherited draft and root findings attributed for after-tranche comparison. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
-    "buildDispatched": false,
+    "buildDispatched": true,
     "currentExecutionBudget": {
       "workerMaxCampaigns": 1,
       "workerMaxVitestInvocations": 4,
@@ -333,6 +333,10 @@
       },
       "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
       "localClosureEvidence": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md"
+    },
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh"
     }
   },
   "sourcePreparationReceipt": {
@@ -568,18 +572,116 @@
   "savedRunObservationUI": {
     "tranche": "CCMAI-RUNTIME-067",
     "status": "BUILD",
-    "sourceImplementation": "AUTHORIZED_BEFORE_EDIT",
+    "sourceImplementation": "COMMITTED_ROOT_STATIC_AUDIT_PASS_RUNTIME_PENDING",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 0,
-    "nextMove": "CCMAI-RUNTIME-067 BUILD / BUILD under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: Luna xhigh successor /root/r065_worker resumes preserved Sol medium draft under latest owner model override; implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-067 BUILD: independent root static audit PASS on Luna xhigh source 8a63ad58f7c024d32088ae6079f9908356174308 and committed 17-test/two-mutation plan; worker may run exactly one4Vitest campaign, one forced typecheck-build and one isolated synthetic visual QA, then hand back REVIEW_PENDING. Root own one4Vitest/onebuild/onevisual independent REVIEW before scoped local FREEZE/ordinary authorized branch push. Aggregate max8Vitest/0Go, no automatic retry or budget reset. Original immutable Sol-model seed retained with latest owner Luna override, scope/roles/risk unchanged; inherited draft and root findings attributed for after-tranche comparison. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
     "governanceClaim": false,
-    "fullS5Claim": false
+    "fullS5Claim": false,
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh"
+    },
+    "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh",
     "canonicalRole": "/root/r065_worker"
+  },
+  "historicalR067OwnerRoutingBeforeLunaSync": {
+    "date": "2026-10-08",
+    "parkedAccounts": [
+      "facebook",
+      "zalo_oa"
+    ],
+    "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+    "nextObjective": "CCMAI-RUNTIME-067 DISPATCH_READY / WORK_ORDER under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker rehydrates canonical continuity and commits before-edit BUILD acknowledgment, implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.",
+    "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
+    "buildDispatched": false,
+    "currentExecutionBudget": {
+      "workerMaxCampaigns": 1,
+      "workerMaxVitestInvocations": 4,
+      "reviewerMaxCampaigns": 1,
+      "reviewerMaxVitestInvocations": 4,
+      "aggregateMaxVitestInvocations": 8,
+      "workerMaxForcedTypecheckBuilds": 1,
+      "reviewerMaxForcedTypecheckBuilds": 1,
+      "maxGoInvocations": 0,
+      "workerUsedCampaigns": 0,
+      "workerUsedVitestInvocations": 0,
+      "reviewerUsedCampaigns": 0,
+      "reviewerUsedVitestInvocations": 0,
+      "workerUsedForcedTypecheckBuilds": 0,
+      "reviewerUsedForcedTypecheckBuilds": 0,
+      "usedGoInvocations": 0
+    },
+    "historicalR065RoutingSnapshot": {
+      "date": "2026-10-08",
+      "parkedAccounts": [
+        "facebook",
+        "zalo_oa"
+      ],
+      "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+      "nextObjective": "CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+      "assessment": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
+      "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
+      "buildDispatched": true,
+      "sourceCheckpoint": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+      "currentExecutionBudget": {
+        "workerMaxCampaigns": 1,
+        "workerMaxGoInvocations": 4,
+        "reviewerMaxCampaigns": 1,
+        "reviewerMaxGoInvocations": 4,
+        "aggregateMaxCampaigns": 2,
+        "aggregateMaxGoInvocations": 8,
+        "workerUsedCampaigns": 1,
+        "workerUsedGoInvocations": 4,
+        "reviewerUsedCampaigns": 1,
+        "reviewerUsedGoInvocations": 4
+      },
+      "historicalPreR065RoutingSnapshot": {
+        "date": "2026-10-07",
+        "parkedAccounts": [
+          "facebook",
+          "zalo_oa"
+        ],
+        "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+        "nextObjective": "CCMAI-RUNTIME-060 DISPATCH_READY / WORK_ORDER under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: existing Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source/exact4-line SP compatibility amendment, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. R059 parked before source/Go0, aggregate max8Go without reset; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+        "assessment": "docs/work_orders/CCMAI_RUNTIME_060.md",
+        "buildDispatched": false,
+        "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_050_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-06.md",
+        "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_058.md",
+        "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
+        "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
+        "currentExecutionBudget": {
+          "workerMaxCampaigns": 1,
+          "workerMaxGoInvocations": 4,
+          "workerUsedCampaigns": 0,
+          "workerUsedGoInvocations": 0,
+          "reviewerMaxCampaigns": 1,
+          "reviewerMaxGoInvocations": 4,
+          "reviewerUsedCampaigns": 0,
+          "reviewerUsedGoInvocations": 0,
+          "aggregateMaxCampaigns": 2,
+          "aggregateMaxGoInvocations": 8,
+          "priorR059UsedCampaigns": 0,
+          "priorR059UsedGoInvocations": 0
+        },
+        "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
+        "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+        "previousLocalClosureContext": {
+          "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_046_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-05.md",
+          "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
+          "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md"
+        },
+        "priorAssessmentBeforeR059": "docs/reviews/R055_DESIGN_INTAKE_2026-10-06.md"
+      },
+      "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
+      "localClosureEvidence": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md"
+    }
   }
 }

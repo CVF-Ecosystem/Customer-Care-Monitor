@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R067 saved-run observation UI WORK_ORDER; medium child/root independent review and conditional closure/push, backend/governance unchanged."
+      "description": "Active R067 BUILD Luna xhigh successor; exact source/static approval, independent root campaign/review and conditional closure/push."
     },
     {
       "id": "r060-work-order",
@@ -3468,6 +3468,48 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
       "status": "ACTIVE",
       "description": "Historical R065 FROZEN handoff/evidence/budget; current R067 saved-run UI active."
+    },
+    {
+      "id": "r067-luna-takeover",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_luna_takeover_2026-10-08.json",
+      "status": "ACTIVE",
+      "description": "Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries."
+    },
+    {
+      "id": "r067-luna-worker-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json",
+      "status": "ACTIVE",
+      "description": "Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending."
+    },
+    {
+      "id": "r067-root-campaign-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-source static approval and bounded worker/root campaign; historical root static failures retained."
+    },
+    {
+      "id": "r067-ui-campaign-runner",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_ui_campaign.py",
+      "status": "ACTIVE",
+      "description": "Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof."
+    },
+    {
+      "id": "r067-visual-fixture",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture.mjs",
+      "status": "ACTIVE",
+      "description": "Luna isolated synthetic saved-run panel fixture, loopback only, no application/API."
+    },
+    {
+      "id": "r067-keyboard-capture",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_capture_keyboard.mjs",
+      "status": "ACTIVE",
+      "description": "Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking."
     }
   ]
 }

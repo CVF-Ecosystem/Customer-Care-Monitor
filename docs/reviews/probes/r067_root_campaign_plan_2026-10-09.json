@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-09",
+  "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "sourceAuthor": "Luna xhigh /root/r065_worker, with preserved Sol medium partial draft attribution",
+  "independentReviewer": "Codex /root",
+  "staticDisposition": "PASS before worker first Vitest; no formal runtime acceptance yet",
+  "frontendArchiveSha256": "0301c76f595f754d136e685e4ad04dc91ef27512a38ed34458a22a45e9fbe7b9",
+  "archiveMembers": 121,
+  "fullFrontendSuites": 30,
+  "newTests": 17,
+  "runner": "docs/reviews/probes/r067_ui_campaign.py",
+  "runnerAuthor": "Codex /root; full-inventory review improvement by Luna",
+  "commandTemplate": "python -B docs/reviews/probes/r067_ui_campaign.py --source 8a63ad58f7c024d32088ae6079f9908356174308 --role worker|reviewer --execute",
+  "boundedChecks": {
+    "workerCampaigns": 1,
+    "workerVitest": 4,
+    "reviewerCampaigns": 1,
+    "reviewerVitest": 4,
+    "aggregateVitest": 8,
+    "forcedTypecheckBuildPerRole": 1,
+    "isolatedVisualPerRole": 1,
+    "Go": 0
+  },
+  "mutations": {
+    "M01": "Unknown null local estimate rendered zero; named detector fails and known-zero healthy control passes.",
+    "M02": "Receipt run ID comparison removed; named wrong-run detector fails and matched-context control passes."
+  },
+  "rawReceiptRules": "Exclusive raw stdout/stderr/Vitest JSON, typed hashes, recursive full path+hash manifests excluding only dependency junction, actual mutation diff, exact whole-tree restoration and second archive; summary and backup readback. No automatic retry; unexpected failure stops campaign.",
+  "rootStaticFailuresRetained": [
+    "Read-only guessed test/Go file paths and glob-path lookups failed, corrected using rg globs/source discovery; zero runtime.",
+    "Capture syntax check failed because original shebang became line2 after new comment; removed shebang; final node --check PASS.",
+    "First static campaign archive check failed because Windows backslash keys did not match slash-delimited suite paths; corrected as_posix(); final static check PASS,121members/30suites."
+  ],
+  "modelEvaluationBoundary": "Not equal-start A/B. Luna owns strict helper corrections/17newtests/fixture; panel/locales/JobDetail inherited primarily Sol. Root owns campaign/capture probes; quality evaluation after independent checks; no measured tokens/billing data."
+}
