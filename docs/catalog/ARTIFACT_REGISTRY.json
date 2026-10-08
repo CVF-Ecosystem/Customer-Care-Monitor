@@ -3685,6 +3685,41 @@
       "path": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
       "status": "ACTIVE",
       "description": "Owner approved exactly1 supplemental root forcedbuild on4d921; original2failures and8Vitest/0Go limits retained, no seed mutation."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-typecheck-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-typecheck-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-vite-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_vite_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-vite-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_vite_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
     }
   ]
 }

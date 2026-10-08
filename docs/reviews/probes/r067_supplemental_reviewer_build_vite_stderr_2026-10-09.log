@@ -1,0 +1,7 @@
+[33m[33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in plugins. Here is a breakdown:
+  - vite:css-post (36%)
+  - vuetify:import (32%)
+  - vite:vue (19%)
+  - vite:css (8%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+[39m

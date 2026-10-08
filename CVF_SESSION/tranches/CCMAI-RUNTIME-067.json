@@ -95,7 +95,7 @@
     "reviewerUsedForcedTypecheckBuilds": 1,
     "usedGoInvocations": 0,
     "supplementalReviewerMaxForcedTypecheckBuilds": 1,
-    "supplementalReviewerUsedForcedTypecheckBuilds": 0,
+    "supplementalReviewerUsedForcedTypecheckBuilds": 1,
     "aggregateForcedBuildCeilingIncludingHistory": 3
   },
   "liveEvidence": "NOT_RUN; synthetic UI structure/payload presentation only, no governance claim",
@@ -190,5 +190,10 @@
     "finding": "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
     "runtimeRetryAuthorized": false
   },
-  "additionalCheckAuthority": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json"
+  "additionalCheckAuthority": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
+  "finalSourceBuild": {
+    "status": "PASS",
+    "receipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+    "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r067-supplemental-build-raw-backup-2lb5ryh9"
+  }
 }

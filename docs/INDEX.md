@@ -290,6 +290,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/probes/r065_worker_plan.json`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md`
 - R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stderr_2026-10-09.log`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stdout_2026-10-09.log`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_vite_stderr_2026-10-09.log`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_vite_stdout_2026-10-09.log`
 - Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking.: `docs/reviews/probes/r067_capture_keyboard.mjs`
 - Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries.: `docs/reviews/probes/r067_luna_takeover_2026-10-08.json`
 - Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending.: `docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json`

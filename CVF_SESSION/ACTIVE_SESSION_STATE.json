@@ -13,7 +13,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 REVIEW_PENDING: owner approved exactly1 supplemental independent reviewer forcedtypecheck-build at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a, grant docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json. Original failed worker1/reviewer1 preserved; aggregate forcedbuild ceiling3, supplemental used0/1. Execute committed source-bound probe once; Vite only after typecheckPASS. Then original unused worker4/root4Vitest campaigns and one isolated synthetic visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. No automaticretry/reset,8Vitest/0Go ceiling unchanged, originalseed unchanged. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 REVIEW_PENDING at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: owner-approved supplemental root forcedtypecheck24.889s and Vite11.053s PASS, supplemental1/1 used; original2failed builds retained (aggregate3/3). Luna xhigh executes original worker1campaign4Vitest (fullpositive, actualM01/M02 with named healthy contrasts, restored3NEWsuites) and one isolated synthetic visual; then root independent1campaign4Vitest/onevisual and formal REVIEW. Vitest0/8 before execution,Go0. Unexpected failure stops/no automaticretry or budgetreset. Exact121member source/27oldtests/backend/seeds protected; raw exclusive reports, fulltree restoration and backups required. Conditional scoped localFREEZE/authorized ordinary branchpush only after settled review. Final Luna xhigh versus Sol medium assessment after tranche; full S2/S3/S5/live/governance/hosted OPEN, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh /root/r065_worker source repair complete, runtime waiting authority",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
@@ -35,7 +35,7 @@
     "reviewerUsedForcedTypecheckBuilds": 1,
     "usedGoInvocations": 0,
     "supplementalReviewerMaxForcedTypecheckBuilds": 1,
-    "supplementalReviewerUsedForcedTypecheckBuilds": 0,
+    "supplementalReviewerUsedForcedTypecheckBuilds": 1,
     "aggregateForcedBuildCeilingIncludingHistory": 3
   },
   "previousExecutionBudget": {
@@ -184,9 +184,11 @@
     "round": 2,
     "latestFailedSource": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
     "additionalBuildAuthority": "OWNER_APPROVED_EXACTLY_ONE",
-    "staticReview": "PASS_ONLY_NO_RUNTIME_ACCEPTANCE"
+    "staticReview": "PASS_ONLY_NO_RUNTIME_ACCEPTANCE",
+    "finalSourceBuild": "PASS"
   },
   "additionalCheckBudgetRequest": "docs/reviews/probes/r067_additional_build_request_2026-10-09.json",
   "currentPublicationRootError": "Initial request publication failed5/7: root used status REVIEW_PENDING as canonical currentMode; corrected REVIEW. Catalog drift reproduced as PS5.1/PS7 cultural sorting differences in two new near-prefix IDs (repair-plan/repaired-source, type-repair/typecheck). Gave only new uncommitted entries distinct stable IDs; no tooling/gate or historical ID change. Root-attributed, zero runtime.",
-  "additionalCheckBudgetGrant": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json"
+  "additionalCheckBudgetGrant": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
+  "supplementalBuildReceipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json"
 }
