@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R067 saved-run observation UI (2026-10-08)
 
-CCMAI-RUNTIME-067 DISPATCH_READY / WORK_ORDER under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker rehydrates canonical continuity and commits before-edit BUILD acknowledgment, implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-067 BUILD / BUILD under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker acknowledged canonical continuity and exact scope before editing; implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.
 
 GitHub completed43commitpush to a384fa2 verified; publicationreceipt recorded, currentbatch completes through source/independentreview/conditionalclosure/push.
 

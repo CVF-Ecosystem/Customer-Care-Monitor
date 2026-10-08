@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-067 — Saved-run observation UI complete delivery
 
-Status: DISPATCH_READY
+Status: BUILD
 
 Risk R2. Original dispatcher seedfc809eb committed before activation. [SPEC UIR01..12](../reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md) incorporated exactly: eight frontend paths, no backend/old tests/old packets/seeds changes. Medium child /root/r065_worker implementation/repair/BUILD commits, root independent REVIEWER then CLOSER/SESSION_SYNC_STEWARD/metadata COMMIT_STEWARD. Owner asks push then continue; complete coherent batch through review/localclosure/push, no checkpoint permission waits. Root directly fixes minor metadata.
 
