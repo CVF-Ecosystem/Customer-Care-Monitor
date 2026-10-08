@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 BUILD / BUILD under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: medium child /root/r065_worker acknowledged canonical continuity and exact scope before editing; implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 BUILD / BUILD under committed seedfc809eb33d2635088db1a005a3a94ae7434910a4: Luna xhigh successor /root/r065_worker resumes the preserved Sol medium partial draft under owner model override, with fresh before-edit acknowledgment; implements exact eight frontend saved-run observation UI paths and commits source/inventory/mutations; root static audit before any Vitest. Worker1campaign4Vitest + independent root1campaign4Vitest, aggregate max8Vitest/0Go and one forced typecheck-build/isolated visual QA per role. Root formal independent REVIEW then scoped local FREEZE and owner-authorized ordinary current-branch push after all UIR01..12/checks settle; no checkpoint wait. R065FROZEN8/8Go and all old source/tests/packets/seeds immutable except three allowed frontend files. No backend/provider/channel/real-config/credential/customer/persistentDB/core/merge/main/deploy or full S2/S3/S5/live/governance/hosted claim; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / CLOSER",
+  "activeRole": "Codex Luna xhigh /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD (owner model override; Sol medium draft inherited); Codex /root independent REVIEWER / CLOSER",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-08",
   "currentExecutionBudget": {
@@ -159,5 +159,9 @@
     "newGoInvocations": 8,
     "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4"
   },
-  "publicationReceipt": "docs/reviews/probes/r066_github_push_receipt.json"
+  "publicationReceipt": "docs/reviews/probes/r066_github_push_receipt.json",
+  "actualWorkerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  }
 }

@@ -113,5 +113,15 @@
     "gateUnits": "Fresh46PASS15.488s inherited unchanged tooling",
     "sourceVitestGo": 0
   },
-  "workerAcknowledgment": "2026-10-08 medium child /root/r065_worker rehydrated manifest/policy/state/memory/R067handoff/status/index and exact SPEC/order/immutable seed. Core8a4119e public clean/matchesorigin doctor25/1 note inherited dispatcher; manifest26c686cc and BOOTSTRAP_MIGRATION_PENDING retained. Before-edit IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD R2 acknowledgment: exact8frontendpaths, all oldtests/backend/packets/seed read-only, protected641 baseline, source/Vitest/Go0. Root consolidated committed-source/plan audit before Vitest; fresh worker1/4Vitest+oneforcedbuild root1/4+oneforcedbuild,0Go, isolated synthetic UI proof only. Prior repair/UUID/prefix/publication/cleanup/minor-metadata learnings apply; root independent review and conditional closure/push, no worker push/freeze."
+  "workerAcknowledgment": "2026-10-08 medium child /root/r065_worker rehydrated manifest/policy/state/memory/R067handoff/status/index and exact SPEC/order/immutable seed. Core8a4119e public clean/matchesorigin doctor25/1 note inherited dispatcher; manifest26c686cc and BOOTSTRAP_MIGRATION_PENDING retained. Before-edit IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD R2 acknowledgment: exact8frontendpaths, all oldtests/backend/packets/seed read-only, protected641 baseline, source/Vitest/Go0. Root consolidated committed-source/plan audit before Vitest; fresh worker1/4Vitest+oneforcedbuild root1/4+oneforcedbuild,0Go, isolated synthetic UI proof only. Prior repair/UUID/prefix/publication/cleanup/minor-metadata learnings apply; root independent review and conditional closure/push, no worker push/freeze.",
+  "actualWorkerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "ownerModelOverride": {
+    "date": "2026-10-08",
+    "seedWorkerModelPreserved": true,
+    "riskScopeRolesBudgetUnchanged": true,
+    "receipt": "docs/reviews/probes/r067_luna_takeover_2026-10-08.json"
+  }
 }
