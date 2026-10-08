@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-064",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_CLOSURE_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_064.md",
+  "sourcePlanningCommit": "3f0764b4d716d5eaed9c12b94f2d25114932173c",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r063_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_064.md",
+    "docs/work_orders/CCMAI_RUNTIME_063.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "old_packet_edit",
+    "original_authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "runtime_campaign",
+    "detector_mutation",
+    "provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "other_tranche_freeze",
+    "live_governance_claim",
+    "hosted_readiness_claim",
+    "acceptance_contract_expansion"
+  ],
+  "permittedEffects": [
+    "local_documentation_commit",
+    "scoped_local_freeze_R063"
+  ],
+  "closureTargets": [
+    "CCMAI-RUNTIME-063"
+  ],
+  "acceptedSourceCommit": "55e836a1b980b3e5d4075ceb33466786c860f963",
+  "claimScope": "Only accepted bounded local rule-input observation RO01..12 from R063. Content fingerprint is not permission/policy revision/WAIT_DATA or rule enforcement. Original summary and inspect snapshots lost; accepted derived reconciliation limitations retained. No full S2/global F02/live/provider/billing/governance/hosted proof.",
+  "ownerAuthorization": "Standing owner local-closure/autonomous audit-and-choose delegation; current next continues accepted R063 review to separate bounded metadata closure. R1 metadata only, inherited R2 independent child/root source review preserved, no new runtime/publication effect.",
+  "roleInheritance": "Historical child source implementation/newtests; root independent source review, metadata CLOSER/SESSION_SYNC/COMMIT_STEWARD. R1 closure metadata only, inherited R2 independent source review preserved.",
+  "earliestOpenPhase": "REVIEW",
+  "dispatchBoundary": "Seed first committed before R064 activation; base at seed commit. Inherit committed independent R063 REVIEW_PASS and earliest open REVIEW, acknowledge CLOSER/SESSION_SYNC/metadata COMMIT_STEWARD before metadata-only FREEZE. No BUILD/source/tests/runtime.",
+  "acceptedReviewCommit": "3f0764b4d716d5eaed9c12b94f2d25114932173c",
+  "runtimeEvidenceCommit": "3f0764b4d716d5eaed9c12b94f2d25114932173c",
+  "acceptedArchiveCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
+  "retainedExecutionBudget": {
+    "workerCampaigns": 1,
+    "workerGo": 4,
+    "reviewerCampaigns": 1,
+    "reviewerGo": 4,
+    "aggregateUsedGo": 8,
+    "aggregateMaxGo": 8,
+    "closureNewCampaigns": 0,
+    "closureNewGo": 0
+  },
+  "receiptProvenanceLimit": "DERIVED_RECONCILIATION_FROM_ACTUAL_RETAINED_EVIDENCE; original independent summary/inspect snapshots unrecoverable, no simulated restoration. Actual raw logs/manifests/daemon evidence and final physical/Git LF domains verified in committed review."
+}

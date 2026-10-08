@@ -227,5 +227,18 @@
     "exactChangedSet": "PASS7/7 exact27 staged metadata/review paths; final staged gate rerun after recording observed result",
     "diff": "PASS",
     "stagedHashFinding": "Two precommit hash audits stopped on physical CRLF versus normalized Git LF: first old plan, then new daemon-event JSON. Reference hashes explicitly WORKTREE_PHYSICAL; separate LF-normalized text hashes make the Git representation independently verifiable. Actual evidence content/protected packet unchanged; no commit or Go during failed audits."
+  },
+  "postReviewContinuityFinding": "2026-10-08 resumed closure audit found nested IMPLEMENTATION_STATUS.ruleObservation still REVIEW_PENDING/NOT_ESTABLISHED despite accepted3f0764b and current front tuple REVIEW_PASS. BLOCKED_CONTINUITY_DRIFT held closure; root direct R1 metadata repair from committed review, no source/runtime/old packet/seed edits.",
+  "postReviewRepairSetupFinding": "Mandatory local knowledge ingestion initially generated untracked knowledge/_index.json outside R063 allowed paths, default/PR preflight6/7. Root moved only that newly generated index to task TEMP; no original knowledge file changed. Rerun required; no source or Go.",
+  "postReviewContinuityRepairChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "gateUnits": "46PASS34.289s",
+    "catalogPS51": "PASS through gate",
+    "catalogPS7": "PASS",
+    "docs": "PASS23.37s after final repair handoff",
+    "runtimeGo": 0,
+    "protectedBaseline": "590 existing files hashed in task TEMP; canonical source/tooling/seeds/raw packets unchanged",
+    "next": "Separate immutable R064 closure seed committed before activation"
   }
 }
