@@ -40,7 +40,7 @@
     "R067 local saved-run observation UI UIR01..12 independently accepted/frozen at bd62c7e: strict bound receipt projection, native details and EN/VI reader, existing APIs/actions preserved; fullS5workflow/live/governance not established."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
+    "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
     "Full S1/S2/S3/S5 human workflow/global F02/live/hosted OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -69,6 +69,7 @@
     "R028-R1 late repair acknowledgment remains historical procedural nonconformance, not retrospective compliance. R2 handoff/evidence record a pre-edit acknowledgment, but one final commit does not prove intra-worktree timing. R2 sync initially failed halfway and preflight correctly rejected continuity/tranche; second sync restored agreement and passed. Independent source/contract REVIEW_PASS does not assert complete procedural compliance; no FREEZE."
   ],
   "evidence": [
+    "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
     "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
     "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md",
     "docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md",
@@ -255,7 +256,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
+    "nextObjective": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -358,7 +359,9 @@
     },
     "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "localClosureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
-    "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md"
+    "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+    "publicationReceipt": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
+    "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -598,7 +601,7 @@
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 8,
-    "nextMove": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
+    "nextMove": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -643,7 +646,9 @@
     "correctedKeyboardVisualReceipt": "docs/reviews/probes/r067_native_keyboard_capture_receipt.json",
     "closureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
     "independentReviewCommit": "f82dcf77729397dca932c84088ce497b859b9fd4",
-    "modelAssessmentEvidence": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md"
+    "modelAssessmentEvidence": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+    "publicationReceipt": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
+    "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",

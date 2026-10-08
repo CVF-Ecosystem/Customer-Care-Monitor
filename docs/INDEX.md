@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R067 FROZEN local saved-run UI UIR01..12; independent review and final Luna/Sol assessment recorded, publication next; full S2/S3/S5/live OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
+- Active R067 FROZEN localUI, closure/finalassessment published with exactremoteSHA readback; next bounded requirements audit, fullS2/S3/S5/live OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -381,6 +381,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md`
 - R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_independent_visual_acceptance_audit_2026-10-09.json`
 - R067 scoped localUI closure after independent exactsource REVIEW_PASS; final model assessment, retained failures/budgets and ordinary currentbranchpublication boundary.: `docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md`
+- Actual R067 ordinary branchpush exit0 and exact remoteSHA closure20d6a666 readback; derived receipt separately published, hostedActions NOTRUN.: `docs/reviews/probes/r067_github_push_receipt_2026-10-09.json`
 - Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json`
 - Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stderr_2026-10-09.log`
 - Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stdout_2026-10-09.log`

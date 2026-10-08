@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-09",
   "currentExecutionBudget": {
@@ -171,7 +171,7 @@
     "newGoInvocations": 8,
     "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4"
   },
-  "publicationReceipt": "docs/reviews/probes/r066_github_push_receipt.json",
+  "publicationReceipt": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
   "actualWorkerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
@@ -223,5 +223,6 @@
   "correctedKeyboardVisualReceipt": "docs/reviews/probes/r067_native_keyboard_capture_receipt.json",
   "closureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
   "independentReviewCommit": "f82dcf77729397dca932c84088ce497b859b9fd4",
-  "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md"
+  "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+  "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
 }

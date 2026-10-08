@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: FREEZE
 - Active phase: FREEZE
-- Active role: Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle
-- Next allowed move: CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle
+- Next allowed move: CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-action dispatcher acknowledgment
@@ -102,3 +102,7 @@ Root fresh rehydration/doctor25/1 and REVIEWER acknowledgment before independent
 ## Before-action CLOSER acknowledgment / scoped local disposition (2026-10-09)
 
 Root rehydrated canonical manifest/policy/state/memory/handoff/status/index before role transition REVIEWER->CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD. Independent REVIEW_PASS committedf82dcf7; originalseed conditional localclosure/push authority applies, no open UIR01..12 findings. FROZEN only saved-run UI reader at bd62c7e; no other tranche closure or new execution. Current budgets8Vitest/3build/4visual/0Go fully used; compiler inherited4d921, original failures and workersecond unknown cause retained. [Closure](../../docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md), [final Luna/Sol assessment](../../docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md). Ordinary currentbranchpublication with remoteSHA next; fullS2/S3/S5workflow/live/governance/hosted remain OPEN, accountsparked.
+
+## Publication readback / ORCHESTRATOR acknowledgment (2026-10-09)
+
+Root rehydrated manifest/policy/state/memory/handoff/status/index before CLOSER->ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD. Scopedclosure20d6a666 ordinary-pushed to codex/gov001-f08-actions-evidence; gitls-remote exact40hexSHA matched, exit0. [Derived publication receipt](../../docs/reviews/probes/r067_github_push_receipt_2026-10-09.json) describes this observed closurehead; receiptcommit gets separate ordinary push/readback, no self-referential hash assertion. Runtime0, hostedActionsNOTRUN, no merge/main/deploy/live/governance claim. Canonical next move is separate S2/S3/S5 requirements/authority audit before new workorder; currenttranche no newcampaign, accountsparked.

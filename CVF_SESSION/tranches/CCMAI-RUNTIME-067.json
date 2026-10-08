@@ -301,5 +301,18 @@
     "currentDiff": "PASS current staged metadata; historical rawVite trailing whitespace exception retained",
     "protected": "Current frontend/backend/scripts/workflows/authority seeds unchanged; current tuple+nested projections agree; all10 finalraw physical and committed Git identities unchanged",
     "runtimeAdded": 0
+  },
+  "publicationReceipt": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
+  "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3",
+  "publication": "ORDINARY_BRANCH_PUSH_REMOTE_SHA_VERIFIED",
+  "publicationReceiptChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS34.49s final receipt/handoff/index",
+    "gateUnits": "Inherited worker fresh46PASS50.797s; unchanged scripts/tests",
+    "protected": "source/test/backend/tooling/seeds unchanged, nested publication/current pointers agree",
+    "runtimeAdded": 0
   }
 }

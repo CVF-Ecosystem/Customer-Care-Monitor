@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R067 FROZEN local saved-run UI UIR01..12; independent review and final Luna/Sol assessment recorded, publication next; full S2/S3/S5/live OPEN."
+      "description": "Active R067 FROZEN localUI, closure/finalassessment published with exactremoteSHA readback; next bounded requirements audit, fullS2/S3/S5/live OPEN."
     },
     {
       "id": "r060-work-order",
@@ -4434,6 +4434,13 @@
       "path": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
       "status": "ACTIVE",
       "description": "R067 scoped localUI closure after independent exactsource REVIEW_PASS; final model assessment, retained failures/budgets and ordinary currentbranchpublication boundary."
+    },
+    {
+      "id": "r067-evidence-publication-h001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Actual R067 ordinary branchpush exit0 and exact remoteSHA closure20d6a666 readback; derived receipt separately published, hostedActions NOTRUN."
     }
   ]
 }
