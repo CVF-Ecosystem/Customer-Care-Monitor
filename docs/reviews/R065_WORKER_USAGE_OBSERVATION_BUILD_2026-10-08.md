@@ -40,3 +40,7 @@ Before-edit acknowledgment first default preflight failed6/7 because history end
 - `TestUOSuccessfulSummaryPrefixes`
 - `TestUOUnknownPriceNeverFree`
 - `TestUOUsageFailureAndPanicBoundaries`
+
+## Committed source and exact campaign checkpoint
+
+Source `72e4c367707d262e45ed9f36164d3e471a4d04b4`; immutable source/test/runner checkpoint. Committed plan contains exact archive identity, 81 selected positive top-level tests, two named mutation detectors with contrasting controls and16 restored UO tests. Source publication default/PR/exact9staged gatesPASS7/7, catalogPS5 through gates/PS7PASS, docsPASS37.64s, old590physicalfiles unchanged; inherited fresh root46unitsPASS36.636s unchanged scripts/tests. Root static review pending, runtime0.

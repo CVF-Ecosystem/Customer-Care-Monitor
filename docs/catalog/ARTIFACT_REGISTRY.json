@@ -3062,6 +3062,13 @@
       "path": "docs/reviews/probes/r065_worker_campaign.py",
       "status": "ACTIVE",
       "description": "R065 worker offline exact-source four-Go runner with exclusive raw backups and semantic contrasts; root audit required before runtime."
+    },
+    {
+      "id": "r065-worker-committed-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_plan.json",
+      "status": "ACTIVE",
+      "description": "Committed pre-runtime R065 source72e4c36 archive/inventory and two exact isolated mutation plans; no runtime acceptance."
     }
   ]
 }

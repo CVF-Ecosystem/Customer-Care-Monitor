@@ -79,7 +79,7 @@
     "model": "gpt-6.1-sol",
     "reasoningEffort": "medium"
   },
-  "sourceImplementation": "AUTHORIZED_BEFORE_EDIT",
+  "sourceImplementation": "COMMITTED_PRE_RUNTIME_STATIC_REVIEW_PENDING",
   "liveEvidence": "NOT_RUN; synthetic local application observation only, no CVF governance claim",
   "executionBudget": {
     "workerMaxCampaigns": 1,
@@ -112,5 +112,23 @@
     "docs": "PASS20.26s final activation",
     "sourceGo": 0
   },
-  "workerAcknowledgment": "2026-10-08 medium child /root/r065_worker freshly rehydrated canonical manifest/policy/state/memory/handoff/implementation/index and R065 SPEC/order/immutable seed; doctor PASS WITH NOTE25/1 at core8a4119e; BOOTSTRAP_MIGRATION_PENDING. Role IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD R2. Exact five backend paths, no old test/seed edits, fresh worker1/4 root1/4 budget, source/Go0 before this acknowledgment. Root static source/test/runner review mandatory before Go; root independent REVIEW and conditional local FREEZE. Applicable repair/UUID/prefix/publication/cleanup learnings read."
+  "workerAcknowledgment": "2026-10-08 medium child /root/r065_worker freshly rehydrated canonical manifest/policy/state/memory/handoff/implementation/index and R065 SPEC/order/immutable seed; doctor PASS WITH NOTE25/1 at core8a4119e; BOOTSTRAP_MIGRATION_PENDING. Role IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD R2. Exact five backend paths, no old test/seed edits, fresh worker1/4 root1/4 budget, source/Go0 before this acknowledgment. Root static source/test/runner review mandatory before Go; root independent REVIEW and conditional local FREEZE. Applicable repair/UUID/prefix/publication/cleanup learnings read.",
+  "sourceCheckpoint": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+  "workerPlan": "docs/reviews/probes/r065_worker_plan.json",
+  "workerReport": "docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md",
+  "sourcePublicationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "exactStaged": "PASS7/7 exact9source/checkpointpaths",
+    "gateUnits": "Fresh root46PASS36.636s inherited unchanged tooling",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS37.64s",
+    "protected": "590oldphysicalfiles unchanged",
+    "runtimeGo": 0,
+    "retainedFailures": [
+      "Before-edit history explanatory label6/7 corrected before source",
+      "NEW catalog review family invalid and directory family unsuitable corrected before commit"
+    ]
+  }
 }
