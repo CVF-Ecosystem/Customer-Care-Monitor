@@ -3013,6 +3013,20 @@
       "path": "docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md",
       "status": "ACTIVE",
       "description": "Bounded local rule-input observation closure; inherited actual-evidence limitations and full S2/live open."
+    },
+    {
+      "id": "evidence-r065-contract-spec",
+      "family": "continuity",
+      "path": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "One complete bounded R065 usage/cost delivery contract UO01..12; intended behavior, not implemented yet."
+    },
+    {
+      "id": "evidence-r065-contract-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-065.json",
+      "status": "ACTIVE",
+      "description": "Original R065 end-to-end seed: medium child source/root independent review and conditional local closure, fresh bounded8Go."
     }
   ]
 }

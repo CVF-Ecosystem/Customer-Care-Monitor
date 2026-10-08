@@ -124,6 +124,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical accepted R063 source review and retained publication/continuity findings; superseded by R064 closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md`
 - Scoped R064 metadata closure work order, R063 source/packet immutable.: `docs/work_orders/CCMAI_RUNTIME_064.md`
 - R064 local closure status, authority, evidence and zero new runtime.: `CVF_SESSION/tranches/CCMAI-RUNTIME-064.json`
+- Original R065 end-to-end seed: medium child source/root independent review and conditional local closure, fresh bounded8Go.: `CVF_SESSION/authority/CCMAI-RUNTIME-065.json`
+- One complete bounded R065 usage/cost delivery contract UO01..12; intended behavior, not implemented yet.: `docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
 - Reviewed F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`
