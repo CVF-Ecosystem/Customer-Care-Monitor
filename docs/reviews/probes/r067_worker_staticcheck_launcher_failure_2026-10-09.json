@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "date": "2026-10-09",
+  "workerModel": "gpt-6-luna",
+  "reasoningEffort": "xhigh",
+  "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "failureClass": "WORKER_STATIC_CHECK_COMMAND_SHELL_PARSE_FAILURE",
+  "attribution": "Luna xhigh command-construction error; nested quote escaping caused PowerShell to reject the `python -B -c` static-check command before Python launched.",
+  "rawTrace": "ParserError:\nLine |\n  13 |  assert \"member.issym()\" in code and \"member.islnk()\" in code\n     |                        ~\n     | An expression was expected after '('.",
+  "evidenceSerializationFailure": {
+    "class": "LUNA_FAILURE_RECEIPT_JSON_ENCODING_ERROR",
+    "error": "JSONDecodeError: Expecting ',' delimiter: line 10 column 56 (char 508)",
+    "staticValidationProcessLaunched": true,
+    "sourceRunnerExecuted": false,
+    "buildOrVitestCommandLaunched": false,
+    "budgetSpent": false,
+    "repair": "Corrected the trace string escaping in this record; retained both raw error details."
+  },
+  "pythonStarted": false,
+  "correctedBuildRunnerExecuted": false,
+  "buildOrVitestCommandLaunched": false,
+  "sourceChanged": false,
+  "budget": {
+    "workerForcedTypecheckBuildsUsed": 0,
+    "workerCampaignsUsed": 0,
+    "workerVitestInvocationsUsed": 0,
+    "workerVisualRunsUsed": 0,
+    "goInvocationsUsed": 0
+  },
+  "nextMove": "Use a temp Python script for the AST check, then proceed only if static validation passes under the root-approved wrapper correction."
+}

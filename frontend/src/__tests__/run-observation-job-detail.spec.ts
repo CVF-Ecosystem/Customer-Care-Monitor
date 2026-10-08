@@ -106,7 +106,7 @@ async function mountView() {
   await router.isReady()
   const wrapper = mount(JobDetail, {
     global: { plugins: [
-      createVuetify({ components, directives, theme: { themes: { light: { colors: lightColors } } }),
+      createVuetify({ components, directives, theme: { themes: { light: { colors: lightColors } } } }),
       createI18n({ legacy: false, locale: 'vi', fallbackLocale: 'en', messages: { vi: viMessages, en: enMessages } }),
       pinia, router,
     ] },

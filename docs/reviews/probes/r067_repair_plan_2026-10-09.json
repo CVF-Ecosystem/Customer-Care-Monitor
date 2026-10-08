@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "date": "2026-10-09",
+  "phase": "BUILD",
+  "roleTransition": {
+    "from": "IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD",
+    "to": "REPAIR_WORKER",
+    "authorizedBy": "Root independent reviewer; same R067 source paths and risk/scope",
+    "authority": "REPAIR_GO after root identified one TypeScript syntax diagnostic in the new integration test"
+  },
+  "baseSourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "finding": {
+    "path": "frontend/src/__tests__/run-observation-job-detail.spec.ts",
+    "line": 109,
+    "cause": "createVuetify outer options object was missing its closing brace",
+    "detection": "Worker forced typecheck-build on exact archived source failed during typecheck with exit code 2; Vite was not invoked.",
+    "attribution": "Worker-authored syntax defect missed by the initial root static audit; root reviewer identified the diagnostic after the failed typecheck."
+  },
+  "repair": {
+    "change": "Add the missing closing brace to the createVuetify call and remove the surplus CRLF blank line at EOF introduced during the repair edit; the source diff is limited to the brace and EOF formatting.",
+    "sourceScope": [
+      "frontend/src/__tests__/run-observation-job-detail.spec.ts"
+    ],
+    "noProductSourceChange": true
+  },
+  "validationPlan": {
+    "allowedNow": "Cached TypeScript parser AST syntax parse of all eight R067 frontend source/test paths, extracting and parsing script blocks from Vue SFCs.",
+    "notRunByWorker": [
+      "Vitest",
+      "forced typecheck/build",
+      "browser visual QA",
+      "Go"
+    ],
+    "workerBuildBudget": "One forced build was consumed and failed; no worker retry.",
+    "reviewerNext": "Root owns its already-authorized forced typecheck-build on repaired committed source before worker Vitest campaign."
+  },
+  "preservedFailureEvidence": [
+    "docs/reviews/probes/r067_worker_build_2026-10-09.json",
+    "docs/reviews/probes/r067_worker_build_typecheck_stdout_2026-10-09.log",
+    "docs/reviews/probes/r067_worker_build_typecheck_stderr_2026-10-09.log",
+    "docs/reviews/probes/r067_worker_build_preflight_failure_2026-10-09.json",
+    "docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed",
+    "docs/reviews/probes/r067_worker_build_exact_2026-10-09.py",
+    "docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json"
+  ],
+  "publicationChecks": {
+    "docsBuild": {
+      "result": "PASS",
+      "owner": "root",
+      "command": "npm --prefix docs run docs:build",
+      "elapsedSeconds": 20.87,
+      "note": "Language-highlight fallback only."
+    },
+    "catalogCheckPS51": {
+      "result": "PASS",
+      "owner": "root"
+    },
+    "catalogCheckPS7": {
+      "result": "PASS",
+      "owner": "root"
+    }
+  },
+  "evidenceLimitations": [
+    "The original invalid JSON bytes from the first static-check launcher failure were overwritten while correcting the failure record; they were not byte-backed up. The current launcher failure record preserves the JSONDecodeError details, but it is not an exact copy of that invalid intermediate artifact."
+  ]
+}

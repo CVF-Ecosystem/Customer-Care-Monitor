@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "executionDate": "2026-10-09",
+  "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "rootCauseDisposition": "Root approved one corrected wrapper attempt in the existing scope; this is not a Vitest/build retry or budget reset.",
+  "failureClass": "WORKER_WRAPPER_FAILURE_BEFORE_SOURCE_EXTRACTION_OR_BUILD_COMMANDS",
+  "attribution": "Luna xhigh temporary wrapper confused pathlib.Path and tarfile.TarInfo; it called Path.islnk(), which does not exist.",
+  "originalWrapperTempPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-build-f22962887f5645b19d6d85395dab4dbe\\build_exact_archive.py",
+  "originalWrapperBackup": {
+    "path": "docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed",
+    "bytes": 6732,
+    "sha256": "2e06c03102fd5e9395e8d94f18a75099aaffc1a3c298a67808b9123493a22158"
+  },
+  "rawFailureTrace": "Traceback (most recent call last):\n  File \"C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-build-f22962887f5645b19d6d85395dab4dbe\\build_exact_archive.py\", line 98, in <module>\n    if __name__ == \"__main__\": main()\n                               ~~~~^^\n  File \"C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-build-f22962887f5645b19d6d85395dab4dbe\\build_exact_archive.py\", line 32, in main\n    if name.is_absolute() or \"..\" in name.parts or name.is_symlink() or name.islnk() or name.name.startswith(\".env\"):\n                                                                        ^^^^^^^^^^\nAttributeError: 'WindowsPath' object has no attribute 'islnk'\n",
+  "sourceArchive": {
+    "expectedAndObservedSha256": "0301c76f595f754d136e685e4ad04dc91ef27512a38ed34458a22a45e9fbe7b9",
+    "constructedInMemory": true,
+    "pathValidationStarted": true,
+    "pathValidationCompleted": false,
+    "tarExtractionStarted": false,
+    "scratchPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-worker-build-ml_urkpe",
+    "scratchChildren": []
+  },
+  "commandsLaunched": [],
+  "dependencyJunctionCreated": false,
+  "budget": {
+    "workerForcedTypecheckBuildsUsed": 0,
+    "workerCampaignsUsed": 0,
+    "workerVitestInvocationsUsed": 0,
+    "workerVisualRunsUsed": 0,
+    "goInvocationsUsed": 0
+  },
+  "repoSourceChanged": false
+}
