@@ -13,3 +13,7 @@ After settled localclosure, ordinary origin current-branch push explicitly autho
 ## Latest owner model override (2026-10-08)
 
 Actual successor at /root/r065_worker: gpt-6-luna, xhigh (extra high), explicitly requested by owner. Sol medium draft preserved/attributed in takeover receipt. Original immutable seed/model fields remain historical; role, risk, allowed paths, effects, acceptance and execution budget unchanged. Root independent review and after-tranche evidence-based model comparison required.
+
+## Owner-approved supplemental check (2026-10-09)
+
+Owner duyet authorizes exactly one additional root forced typecheck/build on repaired4d921 source, Vite only after typecheckPASS. Original one-per-role failures retained; aggregate forcedbuild ceiling3, supplemental0/1 before execution. Original8Vitest/0Go and one visual per role unchanged, no reset or immutable seed edit. [Grant](../reviews/probes/r067_owner_additional_build_grant_2026-10-09.json). Proposal at7cb2f19 remains historical, not current authority.

@@ -293,6 +293,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking.: `docs/reviews/probes/r067_capture_keyboard.mjs`
 - Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries.: `docs/reviews/probes/r067_luna_takeover_2026-10-08.json`
 - Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending.: `docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json`
+- Owner approved exactly1 supplemental root forcedbuild on4d921; original2failures and8Vitest/0Go limits retained, no seed mutation.: `docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json`
 - R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_additional_build_request_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_cache_retention_disposition_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_preexec_wrapper_disposition_2026-10-09.json`

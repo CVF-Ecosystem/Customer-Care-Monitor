@@ -3678,6 +3678,13 @@
       "path": "docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md",
       "status": "ACTIVE",
       "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-owner-additional-build-grant",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Owner approved exactly1 supplemental root forcedbuild on4d921; original2failures and8Vitest/0Go limits retained, no seed mutation."
     }
   ]
 }

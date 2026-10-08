@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 REVIEW_PENDING at repaired source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: root static review and exact121member/27oldtest protection PASS; no final semantic/runtime acceptance. Both original forcedbuilds exhausted1worker+1reviewer with retained failures; Vite/Vitest/browser/Go NOT RUN, Vitest0/8,Go0. Await owner decision on concrete additional exactly1 reviewer forcedtypecheck-build proposal docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md before any further build/runtime. Original seed/scope/R2/8Vitest ceiling unchanged; no automaticretry/reset. After explicit additional-budget grant and finalbuildPASS, continue original unused worker4/root4Vitest and one visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
+    "CCMAI-RUNTIME-067 REVIEW_PENDING: owner approved exactly1 supplemental independent reviewer forcedtypecheck-build at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a, grant docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json. Original failed worker1/reviewer1 preserved; aggregate forcedbuild ceiling3, supplemental used0/1. Execute committed source-bound probe once; Vite only after typecheckPASS. Then original unused worker4/root4Vitest campaigns and one isolated synthetic visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. No automaticretry/reset,8Vitest/0Go ceiling unchanged, originalseed unchanged. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -249,7 +249,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PENDING at repaired source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: root static review and exact121member/27oldtest protection PASS; no final semantic/runtime acceptance. Both original forcedbuilds exhausted1worker+1reviewer with retained failures; Vite/Vitest/browser/Go NOT RUN, Vitest0/8,Go0. Await owner decision on concrete additional exactly1 reviewer forcedtypecheck-build proposal docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md before any further build/runtime. Original seed/scope/R2/8Vitest ceiling unchanged; no automaticretry/reset. After explicit additional-budget grant and finalbuildPASS, continue original unused worker4/root4Vitest and one visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PENDING: owner approved exactly1 supplemental independent reviewer forcedtypecheck-build at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a, grant docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json. Original failed worker1/reviewer1 preserved; aggregate forcedbuild ceiling3, supplemental used0/1. Execute committed source-bound probe once; Vite only after typecheckPASS. Then original unused worker4/root4Vitest campaigns and one isolated synthetic visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. No automaticretry/reset,8Vitest/0Go ceiling unchanged, originalseed unchanged. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -268,7 +268,9 @@
       "reviewerUsedVitestInvocations": 0,
       "workerUsedForcedTypecheckBuilds": 1,
       "reviewerUsedForcedTypecheckBuilds": 1,
-      "usedGoInvocations": 0
+      "usedGoInvocations": 0,
+      "supplementalReviewerMaxForcedTypecheckBuilds": 1,
+      "supplementalReviewerUsedForcedTypecheckBuilds": 0
     },
     "historicalR065RoutingSnapshot": {
       "date": "2026-10-08",
@@ -577,7 +579,7 @@
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 0,
-    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PENDING at repaired source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: root static review and exact121member/27oldtest protection PASS; no final semantic/runtime acceptance. Both original forcedbuilds exhausted1worker+1reviewer with retained failures; Vite/Vitest/browser/Go NOT RUN, Vitest0/8,Go0. Await owner decision on concrete additional exactly1 reviewer forcedtypecheck-build proposal docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md before any further build/runtime. Original seed/scope/R2/8Vitest ceiling unchanged; no automaticretry/reset. After explicit additional-budget grant and finalbuildPASS, continue original unused worker4/root4Vitest and one visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PENDING: owner approved exactly1 supplemental independent reviewer forcedtypecheck-build at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a, grant docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json. Original failed worker1/reviewer1 preserved; aggregate forcedbuild ceiling3, supplemental used0/1. Execute committed source-bound probe once; Vite only after typecheckPASS. Then original unused worker4/root4Vitest campaigns and one isolated synthetic visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. No automaticretry/reset,8Vitest/0Go ceiling unchanged, originalseed unchanged. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -593,7 +595,8 @@
     "typecheckFailureReceipts": [
       "docs/reviews/probes/r067_worker_build_2026-10-09.json",
       "docs/reviews/probes/r067_reviewer_build_2026-10-09.json"
-    ]
+    ],
+    "additionalBuildAuthority": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",
