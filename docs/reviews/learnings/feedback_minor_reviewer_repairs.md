@@ -31,3 +31,9 @@ Agent đọc record này ở INTAKE, trước REVIEW và trước sửa continui
 Project: owner clarification được đưa vào shared learning, startup memory và active handoff để dùng ngay; reviewer trực tiếp cập nhật tài liệu trong lần này. Publication checks được ghi ở `docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json`. R050/R051/R053 REVIEW_PASS / FREEZE_OPEN, runtime budget1/4 đã hết, live accounts parked; không có runtime mới.
 
 Upstream: DEFERRED; có thể chuyển use case về phân loại sửa nhỏ và tránh operator wait cho CVF cha trong một intake được phép. Lần này không sửa CVF core hoặc gate/tooling. Các checks xác minh repository/tài liệu; không chứng minh mọi agent tự tuân thủ hoặc CVF điều khiển AI bằng runtime.
+
+## Nested implementation projections (2026-10-08)
+
+R064 resumed audit found current front tuple accepted while nested ruleObservation still REVIEW_PENDING/NOT_ESTABLISHED; direct repair at `0b97c05330eb0f3a5662591766c8165c3f1e1c2f`. A full nested status/acceptance/next-move audit then found the same stale projection in older executionObservationPlanning, despite canonical R061/R062 already FROZEN at99052ab. [R064 closure audit](../R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md) records direct synchronization and retained historical snapshot. Source/old reviews/runtime untouched; no new acceptance decision or other-tranche closure.
+
+Apply before continuity publication: enumerate every current nested status, sourceImplementation, independent acceptance, routing and next-move field; compare with canonical tranche/review, not just the front marker. Label historical snapshots explicitly and preserve counters/failures. Portable gate PASS does not establish completeness of these projections. Project applied locally by root; upstream DEFERRED, no machine gate or CVF core change.

@@ -1,0 +1,29 @@
+# R064 bounded local rule-input observation closure
+
+Date: 2026-10-08. CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD Codex `/root`. Disposition: FROZEN for accepted R063 RO01..12 only, after final synchronized checks and commit. R1 metadata closure inherits independent R2 source acceptance; no new BUILD or runtime.
+
+Immutable dispatcher seed first committed at `0b97c05330eb0f3a5662591766c8165c3f1e1c2f`, before R064 activation. Source `55e836a1b980b3e5d4075ceb33466786c860f963`, backend-identical exact campaign archive `661113d888c5886331c9b4eb99783a215cf8c58f`, independent formal review and evidence publication `3f0764b4d716d5eaed9c12b94f2d25114932173c`. Historical source/newtest author and BUILD COMMIT_STEWARD `/root/r063_worker`, GPT-6.1 Sol medium; independent reviewer root, canonical source/test edits zero. Root changes roles explicitly for metadata closure, source independence retained.
+
+## Settled scope and inherited proof
+
+[Independent review](R063_INDEPENDENT_RULE_OBSERVATION_REVIEW_2026-10-08.md) evaluates RO01..12: exact captured effective rule bytes, length-framed SHA256 vectors, UUID binding priority/privacy/size/freeze, stored initial/progress/terminal/early/fallback prefixes and existing scalar/preparation/execution compatibility. Independent positives53top152PASS0FAIL/SKIP; actual M01QC known-vector and M02stored-only DB-reload omission killed by named semantic assertions, three healthy classification controls PASS; restored9top43PASS. Full213member baseline/mutant manifests, restored sandbox, second archive, raw hashes, protected old packets and actual task cleanup checked. Worker65top196positivePASS separately attributed; no full-backend/race/HTTP/MCP/scheduler campaign claimed.
+
+The accepted [receipt](probes/r063_independent_summary.json) is DERIVED_RECONCILIATION_FROM_ACTUAL_RETAINED_EVIDENCE. Original independent summary and per-container inspect snapshots were overwritten during precommit publication and remain unrecoverable. Actual raw logs/manifests/committed plan/retained Docker daemon events, restored sandbox, second archive and fresh absence inventories supported static reconciliation. The executed committed runner and pre-loss audit are attributed as witnessed observations; no lost snapshot is invented. Physical file hashes and normalized Git LF text hashes are distinct and explicitly recorded. Closure preserves these limitations and every prior failure; it does not retroactively certify invalid publication candidates.
+
+Original worker1campaign4Go plus root1campaign4Go total2campaign8/8Go remain exhausted. R064 newcampaign/Go0, no budget reset, test retry, receipt rewrite or new source effect. Source, tests, tooling, workflows, old authority seeds and prior packets stay read-only. Closure protection compares590 existing physical files and separately verifies the new R064 seed against its first committed content. No open source finding remains within this bounded observation contract.
+
+## Continuity and publication handling
+
+Resumed audit found nested `IMPLEMENTATION_STATUS.ruleObservation` still REVIEW_PENDING/NOT_ESTABLISHED while committed acceptance and current front tuple were REVIEW_PASS. Root recorded BLOCKED_CONTINUITY_DRIFT, held closure, directly repaired the R1 metadata against committed review, and checked before seed activation. The knowledge-bootstrap index initially appeared outside allowed paths and caused6/7 default/PR gates; only the newly generated index was moved to task TEMP, failed checks retained, rerun7/7. Repair and original R064 seed committed at0b97c05; no original packet/source changes.
+
+A final audit of every nested implementation status/acceptance/next-move projection also found the older R061 executionObservationPlanning still pending despite canonical R061/R062 FROZEN acceptance at99052ab. Root synchronized this current projection directly and retained its complete prior status/counter/next-move snapshot as history. Existing R061/R062 records/source/reviews remain unchanged; this is not another closure decision.
+
+R064 inherits earliest open REVIEW and grants scoped local FREEZE only for R063. Record source/review/evidence/seed identities, closer, role acknowledgment and zero new runtime; synchronize front marker/current prose/state/new handoff, nested implementation truth, both orders, catalog and roadmap. Old R063 BUILD seed stays unchanged and grants no FREEZE itself. Root performs minor metadata repairs directly. Fresh gate unit46PASS34.289s inherited while scripts/tests unchanged; final publication gates/catalog/docs/protection results recorded in R064 record before commit. No GitHub Actions success claim.
+
+## Limits and next governed move
+
+This receipt observes effective rule input content, not released policy/version, permission/approval, WAIT_DATA ownership/deadline/retry, rule-based eligibility or gate enforcement. Existing tenant-scoped jobs:r Summary retains content-equality/dictionary inference risk recorded at R2; no anonymization/public export claim. No cache invalidation, semantic auto-skip, provider routing, admission, prompt/query/schema/security or lifecycle change beyond accepted observation.
+
+Full S2/global F02/provider/billing/live/CVF AI governance/hosted readiness remain OPEN. Real provider/channel APIs, race/full-backend/deployment NOT_RUN; Facebook/Zalo OA parked. No real config/credentials/customer/persistent DB/core/push/merge/deploy effects. Local synthetic application proof does not prove CVF governs AI behavior.
+
+Next ORCHESTRATOR prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. R064 grants no further implementation/runtime/subagent/external authority. Shared [minor reviewer repairs](learnings/feedback_minor_reviewer_repairs.md) and [receipt integrity](learnings/feedback_review_publication_receipt_integrity.md) applied; upstream DEFERRED.

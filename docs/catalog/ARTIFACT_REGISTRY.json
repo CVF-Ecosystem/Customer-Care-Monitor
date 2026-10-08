@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R063 independent REVIEW_PASS / FREEZE_OPEN; bounded local closure assessment next,8Go exhausted."
+      "description": "Active R064 scoped local rule observation closure; accepted R063 FROZEN,8Go exhausted, original receipt loss limitation retained."
     },
     {
       "id": "r060-work-order",
@@ -2697,14 +2697,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-063.json",
       "status": "ACTIVE",
-      "description": "R063 bounded R2 work-order record, immutable seed before BUILD."
+      "description": "R063 accepted bounded observation FROZEN under separate R064 authority; source risks/8Go/old failures preserved."
     },
     {
       "id": "evidence-r063-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_063.md",
       "status": "ACTIVE",
-      "description": "Authorized additive rule-input observation only; exact SP/EX compatibility, independent roles/max8Go."
+      "description": "Historical R063 bounded source work order; accepted observation closed only under separate R064 metadata seed."
     },
     {
       "id": "evidence-r063-build-proof-rule-observation-build-2026-10-08",
@@ -2978,6 +2978,41 @@
       "path": "docs/reviews/learnings/feedback_review_publication_receipt_integrity.md",
       "status": "ACTIVE",
       "description": "Shared publication receipt integrity finding and actual-evidence recovery boundaries."
+    },
+    {
+      "id": "evidence-r064-closure-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical accepted R063 source review and retained publication/continuity findings; superseded by R064 closure."
+    },
+    {
+      "id": "evidence-r064-closure-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-064.json",
+      "status": "ACTIVE",
+      "description": "Separate immutable R1 seed for accepted R063 local metadata closure only."
+    },
+    {
+      "id": "evidence-r064-closure-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-064.json",
+      "status": "ACTIVE",
+      "description": "R064 local closure status, authority, evidence and zero new runtime."
+    },
+    {
+      "id": "evidence-r064-closure-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_064.md",
+      "status": "ACTIVE",
+      "description": "Scoped R064 metadata closure work order, R063 source/packet immutable."
+    },
+    {
+      "id": "evidence-r064-closure-decision",
+      "family": "continuity",
+      "path": "docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Bounded local rule-input observation closure; inherited actual-evidence limitations and full S2/live open."
     }
   ]
 }

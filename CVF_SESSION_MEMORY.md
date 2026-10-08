@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-063", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-064", "parked": true} -->
 
 ## Startup Order
 
@@ -55,7 +55,13 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 - [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-## Current R063 independent review (2026-10-08)
+## Current R064 bounded local rule-input observation closure (2026-10-08)
+
+CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+
+[Closure decision](docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md), authority0b97c05 and independent source review3f0764b. Nested implementation continuity drift corrected directly before activation; no runtime or source change.
+
+## Historical R063 independent review (2026-10-08)
 
 CCMAI-RUNTIME-063 REVIEW_PASS / REVIEW / FREEZE_OPEN after independent root review of medium child source55e836a1b980b3e5d4075ceb33466786c860f963 / exact archive661113d888c5886331c9b4eb99783a215cf8c58f: root53top152PASS, M01/M02 named kills with healthy classification contrast, restored9top43PASS,213member restoration/secondarchive/cleanup/protected packets verified. ORCHESTRATOR/CLOSER next assesses separately seeded metadata-only local closure for accepted RO01..12, no FREEZE under R063 BUILD seed. Worker1campaign4Go/root1campaign4Go total8Go exhausted; original failures/budgets/packets retained. No further source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy or full S2/live/governance/hosted claim; Facebook/Zalo OA parked.
 

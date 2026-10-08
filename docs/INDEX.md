@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R063 independent REVIEW_PASS / FREEZE_OPEN; bounded local closure assessment next,8Go exhausted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md`
+- Active R064 scoped local rule observation closure; accepted R063 FROZEN,8Go exhausted, original receipt loss limitation retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -116,9 +116,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_campaign.py`
 - Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_plan.json`
 - Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_protected.json`
-- R063 bounded R2 work-order record, immutable seed before BUILD.: `CVF_SESSION/tranches/CCMAI-RUNTIME-063.json`
-- Authorized additive rule-input observation only; exact SP/EX compatibility, independent roles/max8Go.: `docs/work_orders/CCMAI_RUNTIME_063.md`
+- R063 accepted bounded observation FROZEN under separate R064 authority; source risks/8Go/old failures preserved.: `CVF_SESSION/tranches/CCMAI-RUNTIME-063.json`
+- Historical R063 bounded source work order; accepted observation closed only under separate R064 metadata seed.: `docs/work_orders/CCMAI_RUNTIME_063.md`
 - Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD.: `docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md`
+- Separate immutable R1 seed for accepted R063 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-064.json`
+- Bounded local rule-input observation closure; inherited actual-evidence limitations and full S2/live open.: `docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md`
+- Historical accepted R063 source review and retained publication/continuity findings; superseded by R064 closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md`
+- Scoped R064 metadata closure work order, R063 source/packet immutable.: `docs/work_orders/CCMAI_RUNTIME_064.md`
+- R064 local closure status, authority, evidence and zero new runtime.: `CVF_SESSION/tranches/CCMAI-RUNTIME-064.json`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
 - Reviewed F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`

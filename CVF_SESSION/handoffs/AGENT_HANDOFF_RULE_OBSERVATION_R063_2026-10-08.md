@@ -1,6 +1,6 @@
 # R063 rule input observation handoff
 
-Status: ACTIVE
+Status: HISTORICAL
 
 ## Current State
 
@@ -38,3 +38,5 @@ Only additive observed rule inputs; digest not approved policy/version, unavaila
 2026-10-08 root retained publication PATH_ALIAS failure before commit: original independent summary/inspect snapshots lost, raw logs/manifests/plan and prior packets intact. Static reconciliation against actual retained daemon events, restored213member sandbox/secondarchive and fresh absence checks PASS; derived receipt explicitly labeled, zero new Go. Root accepts bounded evidence with lost-inspection provenance limitation, regenerates stale index and checks repaired publication. Shared learning: [receipt integrity](../../docs/reviews/learnings/feedback_review_publication_receipt_integrity.md).
 
 2026-10-08 resumed closure audit: BLOCKED_CONTINUITY_DRIFT in nested ruleObservation status/independent acceptance/nextMove. Root REVIEWER -> SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD repaired directly against accepted review3f0764b; closure held until checks/commit. Current marker/state/header remain REVIEW/REVIEW_PASS, no source/runtime/seed/old packet edits.
+
+2026-10-08 superseded by R064 bounded local closure handoff after separate seed0b97c05. Historical review/failed findings retained; current authority is R064, no freeze under original R063 BUILD seed.
