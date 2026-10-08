@@ -1,0 +1,36 @@
+# R067 independent saved-run observation UI review
+
+Disposition: **REVIEW_PASS / FREEZE_OPEN** for UIR01..12, local saved-run UI reader only. Reviewer: Codex `/root`; implementation/repair author: `/root/r065_worker`, Luna xhigh following preserved Sol medium draft. Exact accepted source: `bd62c7e4e4868cc05528aa2b8a1ae05561a78df1`. Root changed review probes and metadata, not product source or tests.
+
+The panel reads existing persisted Summary in each loaded JobDetail row, including failed/no-results/running rows. It presents bounded preparation, execution, rule-content identity and token/local-estimate observations without adding requests or actions. Unknown values remain unavailable; valid zero remains a local estimate. No approval, complete coverage, current source, provider-field presence or billing is inferred.
+
+## Acceptance and evidence
+
+| Contract | Independent finding and evidence |
+|---|---|
+| UIR01 | JobDetail diff adds only panel/import; native details available independently of error/status/results/cancel controls. Mounted integration checks every loaded row and existing request/action invariants. |
+| UIR02 | Projection validates UUID route tenant/job/run plus run.job_id, fixed schema/scope, metadata, exact keys, size limit and nested values. Malformed/primitive/future/misbound data is unavailable. Helper tests and M02 verify wrong-run rejection with matched healthy control. |
+| UIR03 | Preparation totals reconcile visited/selected/unvisited, sparse known outcomes, retained entries and omissions. Unknown selected/unvisited stays null; preparation note disclaims currentness. |
+| UIR04 | EX aggregate/retained calls, safe counters, fixed enums, publication and usage-write sums reconcile; missing UO does not hide valid legacy EX. Stored prefix and terminal status are distinct. |
+| UIR05 | Only valid 64-hex observed content fingerprint is exposed. Permission/policy-version/WAIT_DATA absence is explicit; no approval badge or authority decision. |
+| UIR06 | Nested UO version/scope/token basis/billing/revision and completeness/overflow reconcile against EX. Null/nonfinite/unsafe/invalid values fail presentation closed. M01 rejects unknown rendered as zero while known-zero healthy control passes. |
+| UIR07 | Aggregate-only text interpolation, fixed translations and validated hash; no raw Summary, prompt, rules, provider output or arbitrary enum/HTML dump. Independent receipt sections remain available when another is absent. |
+| UIR08 | Reviewer viewed all four actual EN/VI desktop/mobile PNGs: readable labels/notes, focus outline, wrapping fingerprint, no visible horizontal clipping and local-estimate zero. Actual native Tab/Enter-open/Space-close PASS in all four report rows. Light theme isolated component only; full live application/multiple tabs/network latency not evaluated. |
+| UIR09 | Actual mounted JobDetail test checks selected row/route context, all row states and unchanged request/action/result/cancel behavior with mocked store/API. Browser screenshots isolate component, not the full JobDetail page. |
+| UIR10 | Root exact-source full frontend run: 316 PASS (299 inherited +17 new), 30 suites. All 27 old suites and backend/scripts/workflows unchanged. Forced vue-tsc/Vite PASS was executed on `4d9214b04b3ccb822d535f3eccf5783fe0939e0a`; inherited explicitly: only one NEW helper-test body differs at final source, all other120 frontend members identical. **No compiler run on final bd62 archive**. |
+| UIR11 | Actual root M01/M02 diffs each change exactly one product member; named detector fails, healthy contrast passes; whole121-member before/after restoration and second archive verified. Restored three NEW suites17 PASS. Worker remaining-three evidence separately attributed; original failed worker positive retained. |
+| UIR12 | Exact frontend archive SHA256 `60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6`,121 members. Root raw JSON/exits/manifests/mutations and visual native streams/report/PNG hashes plus backup verified. Vitest8/8, forcedbuild3/3, visual4/4, Go0; no retry/reset/new product execution during formal review. |
+
+[Root campaign](probes/r067_reviewer_summary.json), [worker continuation](probes/r067_worker_resumed_summary.json), [inherited build](probes/r067_supplemental_reviewer_build_2026-10-09.json), [source/historical raw audit](probes/r067_final_independent_source_evidence_audit_2026-10-09.json), [actual fourth capture receipt](probes/r067_native_keyboard_capture_receipt.json), [actual keyboard/render report](probes/r067_native_keyboard_capture_screenshots_report.json), [independent visual/publication audit](probes/r067_independent_visual_acceptance_audit_2026-10-09.json).
+
+Actual reviewed images: [EN desktop](probes/r067_native_keyboard_capture_en--desktop--light.png), [EN mobile](probes/r067_native_keyboard_capture_en--mobile--light.png), [VI desktop](probes/r067_native_keyboard_capture_vi--desktop--light.png), [VI mobile](probes/r067_native_keyboard_capture_vi--mobile--light.png). Native logs remain separate artifacts; links do not substitute for inspection.
+
+## Historical findings settled without erasure
+
+Missing test brace, seven typing diagnostics and sparse-count test expectation were repaired by source author; root static review had also missed them. First visual failed on Luna fixture encoded filesystem import paths; second worker keyboard failure remains mount UNKNOWN / cause UNDETERMINED. Third root capture proved mount/Tab but lacked proper CDP Enter text. Fourth owner-approved corrected probe passed; the latter probe defects/diagnostics/cleanup limitations are root responsibility. Earlier raw receipts, proposals, grants and failures remain immutable; later PASS does not explain the second failure. Fourth raw receipt retains capture-pending-review status; this separate artifact supplies independent acceptance.
+
+Browser parent exited, own profile absent, dependency junction absent are bounded observed cleanup facts; retained fixture and backup remain for audit. Timeout guardian was not exercised. Empty intercepted external requests is not a universal socket/network guarantee. Physical hashes distinguish working CRLF from Git blob bytes; historical raw Vite trailing whitespace was retained, not converted into an all-history diff PASS claim.
+
+No open blocking finding remains within UIR01..12. Root may transition to CLOSER for scoped local FREEZE under original R067 authority, synchronize final model assessment and publish ordinary current branch. Full S2/S3/S5 human correction/disposition, global F02, provider usage presence, billing/pricing history, real app/provider/channel/governance proof, race/full backend DB and hosted GitHub Actions remain OPEN/NOT RUN. Owner-approved public-core maintenance did use network and is separately recorded; forthcoming ordinary Git publication is not hosted CI evidence. Facebook/Zalo OA parked.
+
+Publication finding: initial default/PR gates6/7 rejected root metadata transition CHANGES_REQUIRED directly to REVIEW_PASS. Root added the actual capture-handback REVIEW_PENDING step before acceptance and retained rejected sequence in tranche record. No source/test/runtime repair or gate bypass.

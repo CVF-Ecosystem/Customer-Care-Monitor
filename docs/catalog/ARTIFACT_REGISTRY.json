@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R067 REVIEW / CHANGES_REQUIRED: actual visual proof incomplete, exhausted budgets, owner supplemental visual decision pending; source/failed evidence retained."
+      "description": "Active R067 REVIEW_PASS / FREEZE_OPEN; UIR01..12 localUI accepted independently, bounded failures/inheritedbuild retained; scoped closure/publication next."
     },
     {
       "id": "r060-work-order",
@@ -4343,6 +4343,90 @@
       "path": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json",
       "status": "ACTIVE",
       "description": "Owner-approved exactlyone correctednativekeyboard rootvisual, exactpreparedhashes and beforeexecution counters, historical3failures retained."
+    },
+    {
+      "id": "r067-evidence-publication-f001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_capture.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_en--desktop--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_en--mobile--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_receipt.json",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_screenshots_report.json",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vi--desktop--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vi--mobile--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vite.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f011",
+      "family": "continuity",
+      "path": "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_independent_visual_acceptance_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
     }
   ]
 }

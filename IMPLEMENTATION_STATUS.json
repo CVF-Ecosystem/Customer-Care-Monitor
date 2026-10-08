@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactlyone corrected-native-keyboard rootvisual; committed NEWgrant beforeexecution on bd62c7e. Run prepared explicitgrant runner ONCE; inspect actual4EN/VI desktop/mobile images and keyboard/report before formalREVIEW. Prior3visual failures retained; currenttotalvisualmax4, correctedkeyboardused0/1; Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry. After settledPASS conditional scopedlocalFREEZE/ordinary authorizedbranchpush and final Luna xhigh vsSolmedium assessment. Coreab714ed7/doctor25/1, manifest/bootstrap/bindingnotes retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "CCMAI-RUNTIME-067 REVIEW_PASS / FREEZE_OPEN at bd62c7e: independent UIR01..12 source,316tests, M01/M02 healthy contrasts/restored17 and actual4 EN/VI desktop/mobile/nativekeyboard accepted. Preserve historical failures and explicit inherited4d921 compiler proof; Vitest8/8/build3/3/visual4/4/Go0 exhausted. CLOSER next scopedlocalFREEZE, final Luna xhigh vsSolmedium assessment and ordinary authorized currentbranchpush with remoteSHA verification. FullS2/S3/S5workflow/live/governance/hosted remain OPEN; Facebook/ZaloOAparked.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -68,6 +68,7 @@
     "R028-R1 late repair acknowledgment remains historical procedural nonconformance, not retrospective compliance. R2 handoff/evidence record a pre-edit acknowledgment, but one final commit does not prove intra-worktree timing. R2 sync initially failed halfway and preflight correctly rejected continuity/tranche; second sync restored agreement and passed. Independent source/contract REVIEW_PASS does not assert complete procedural compliance; no FREEZE."
   ],
   "evidence": [
+    "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md",
     "docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md",
     "docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md",
     "docs/reviews/CCMAI_RUNTIME_034_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
@@ -252,7 +253,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactlyone corrected-native-keyboard rootvisual; committed NEWgrant beforeexecution on bd62c7e. Run prepared explicitgrant runner ONCE; inspect actual4EN/VI desktop/mobile images and keyboard/report before formalREVIEW. Prior3visual failures retained; currenttotalvisualmax4, correctedkeyboardused0/1; Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry. After settledPASS conditional scopedlocalFREEZE/ordinary authorizedbranchpush and final Luna xhigh vsSolmedium assessment. Coreab714ed7/doctor25/1, manifest/bootstrap/bindingnotes retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PASS / FREEZE_OPEN at bd62c7e: independent UIR01..12 source,316tests, M01/M02 healthy contrasts/restored17 and actual4 EN/VI desktop/mobile/nativekeyboard accepted. Preserve historical failures and explicit inherited4d921 compiler proof; Vitest8/8/build3/3/visual4/4/Go0 exhausted. CLOSER next scopedlocalFREEZE, final Luna xhigh vsSolmedium assessment and ordinary authorized currentbranchpush with remoteSHA verification. FullS2/S3/S5workflow/live/governance/hosted remain OPEN; Facebook/ZaloOAparked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -283,7 +284,7 @@
       "supplementalReviewerUsedVisualInvocations": 1,
       "aggregateVisualCeilingIncludingHistory": 4,
       "correctedKeyboardReviewerMaxVisualInvocations": 1,
-      "correctedKeyboardReviewerUsedVisualInvocations": 0
+      "correctedKeyboardReviewerUsedVisualInvocations": 1
     },
     "historicalR065RoutingSnapshot": {
       "date": "2026-10-08",
@@ -586,13 +587,13 @@
   ],
   "savedRunObservationUI": {
     "tranche": "CCMAI-RUNTIME-067",
-    "status": "CHANGES_REQUIRED",
-    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_VISUAL_INCOMPLETE",
-    "r2IndependentAcceptance": "NOT_ESTABLISHED_UIR08_UIR12_VISUAL",
+    "status": "REVIEW_PASS",
+    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS",
+    "r2IndependentAcceptance": "UIR01..12_REVIEW_PASS_LOCAL_UI_ONLY",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 8,
-    "nextMove": "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactlyone corrected-native-keyboard rootvisual; committed NEWgrant beforeexecution on bd62c7e. Run prepared explicitgrant runner ONCE; inspect actual4EN/VI desktop/mobile images and keyboard/report before formalREVIEW. Prior3visual failures retained; currenttotalvisualmax4, correctedkeyboardused0/1; Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry. After settledPASS conditional scopedlocalFREEZE/ordinary authorizedbranchpush and final Luna xhigh vsSolmedium assessment. Coreab714ed7/doctor25/1, manifest/bootstrap/bindingnotes retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PASS / FREEZE_OPEN at bd62c7e: independent UIR01..12 source,316tests, M01/M02 healthy contrasts/restored17 and actual4 EN/VI desktop/mobile/nativekeyboard accepted. Preserve historical failures and explicit inherited4d921 compiler proof; Vitest8/8/build3/3/visual4/4/Go0 exhausted. CLOSER next scopedlocalFREEZE, final Luna xhigh vsSolmedium assessment and ordinary authorized currentbranchpush with remoteSHA verification. FullS2/S3/S5workflow/live/governance/hosted remain OPEN; Facebook/ZaloOAparked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -625,13 +626,16 @@
     "workerVisual": "FAILED_KEYBOARD_ASSERTION_CAUSE_UNDETERMINED",
     "historicalIndependentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS",
     "visualRequest": "docs/reviews/probes/r067_additional_visual_request_2026-10-09.json",
-    "visualInvocationsUsed": 3,
+    "visualInvocationsUsed": 4,
     "modelAssessment": "INTERIM_ONLY_FINAL_PENDING_TRANCHE_CLOSURE",
     "visualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
     "supplementalRootVisual": "FAILED_KEYBOARD_ASSERTION_ACTUAL_MOUNT_TAB_PASS",
     "supplementalVisualReceipt": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json",
     "correctedKeyboardVisualRequest": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json",
-    "correctedKeyboardVisualGrant": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json"
+    "correctedKeyboardVisualGrant": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json",
+    "correctedKeyboardRootVisual": "PASS4_IMAGES_AND_NATIVE_KEYBOARD_INDEPENDENTLY_REVIEWED",
+    "reviewEvidence": "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md",
+    "correctedKeyboardVisualReceipt": "docs/reviews/probes/r067_native_keyboard_capture_receipt.json"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",
