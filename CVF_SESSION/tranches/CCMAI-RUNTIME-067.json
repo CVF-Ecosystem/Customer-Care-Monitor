@@ -49,8 +49,8 @@
   "claimScope": "Only UI reading/presentation of existing saved SP/EX/RO/UO receipts. Synthetic UI fixtures prove rendering/normalization only; no AI governance/provider/permission enforcement or billing proof.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "fc809eb33d2635088db1a005a3a94ae7434910a4",
   "buildCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
   "reviewEvidence": [
@@ -62,7 +62,9 @@
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -87,8 +89,8 @@
     "workerMaxForcedTypecheckBuilds": 1,
     "reviewerMaxForcedTypecheckBuilds": 1,
     "maxGoInvocations": 0,
-    "workerUsedCampaigns": 0,
-    "workerUsedVitestInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedVitestInvocations": 1,
     "reviewerUsedCampaigns": 0,
     "reviewerUsedVitestInvocations": 0,
     "workerUsedForcedTypecheckBuilds": 1,
@@ -195,5 +197,15 @@
     "status": "PASS",
     "receipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
     "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r067-supplemental-build-raw-backup-2lb5ryh9"
+  },
+  "workerInitialCampaign": "FAILED_POSITIVE315_OF316",
+  "acceptedRepairRound3": {
+    "independentNewRootCause": true,
+    "testOnly": true,
+    "productChangeAllowed": false,
+    "remainingWorkerVitest": 3,
+    "remainingReviewerVitest": 4,
+    "extraInvocationsAuthorized": 0,
+    "disposition": "docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md"
   }
 }

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "acknowledgedAt": "2026-10-09",
+  "sourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+  "sourceArchiveSha256": "1a571270ce0ecf9bae49d952a1954f7d6e3b88980d58adc0e3149b5f90e54936",
+  "phase": "REVIEW",
+  "riskCeiling": "R2",
+  "liveEvidenceRequired": true,
+  "activeRole": "IMPLEMENTATION_WORKER",
+  "workerModel": "gpt-6-luna",
+  "reasoningEffort": "xhigh",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+  "nextAllowedMove": "Run exactly one worker Vitest campaign with four invocations; then one synthetic visual only if all campaign invocations pass.",
+  "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS",
+  "authority": {
+    "goInvocationsAuthorized": 0,
+    "aggregateVitestCeiling": 8,
+    "workerVitestInvocationsUsedBefore": 0,
+    "workerVitestInvocationsAuthorized": 4,
+    "workerCampaignsUsedBefore": 0,
+    "workerCampaignsAuthorized": 1,
+    "supplementalReviewerBuildReceipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+    "rootBuildCommit": "582970dec1543c75ef4f7f022c21d8fd39f011be",
+    "rootSupplementalTypecheck": "PASS,24.889s",
+    "rootSupplementalVite": "PASS,11.053s",
+    "ownerGrant": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json"
+  },
+  "campaign": {
+    "expectedSequence": [
+      "positive",
+      "M01",
+      "M02",
+      "restored"
+    ],
+    "outputPattern": "docs/reviews/probes/r067_worker_<label>_{vitest.json,stdout.log,stderr.log,manifest_before.json,manifest_after.json}",
+    "summaryPath": "docs/reviews/probes/r067_worker_summary.json",
+    "command": "python -B docs/reviews/probes/r067_ui_campaign.py --source 4d9214b04b3ccb822d535f3eccf5783fe0939e0a --role worker --execute",
+    "failurePolicy": "Any unexpected invocation failure stops the campaign; no automatic retry and no visual run after failure.",
+    "rawBackupPolicy": "Preserve the unique OS-temporary full-tree backup path emitted by the committed runner and record its actual path; do not delete or retry."
+  },
+  "visual": {
+    "command": "node docs/reviews/probes/r067_visual_fixture.mjs",
+    "invocations": "Exactly one, only if all four worker Vitest invocations pass",
+    "outputs": "Record actual temp screenshot/report/log paths; if all checks pass, copy four PNGs and raw report/logs into new worker proof paths and record hashes; no rerun.",
+    "matrix": "English/Vietnamese x desktop/mobile, isolated synthetic fixture with blocked external requests and native keyboard checks"
+  },
+  "priorMetadataFailure": {
+    "runtimeInvocationsConsumed": 0,
+    "originalArtifactBytes": 6,
+    "originalArtifactSha256": "abdfbffecbe18ed94df9829819e596ee285b52a94aa108514452a9121721c789",
+    "bytePreservedCopyPath": "docs/reviews/probes/r067_worker_runtime_evidence_plan_attempt_failed_2026-10-09.json",
+    "originalArtifactPath": "docs/reviews/probes/r067_worker_runtime_evidence_plan_2026-10-09.json",
+    "status": "PRESERVED_PRE_EXECUTION_AUTHORING_FAILURE",
+    "error": "PowerShell hashtable used bare true instead of $true; command failed before campaign or any runtime invocation; initial plan file contained JSON null.",
+    "disclosure": "No runtime was run during the failed plan-authoring attempt.",
+    "bytePreservedCopySha256": "abdfbffecbe18ed94df9829819e596ee285b52a94aa108514452a9121721c789"
+  }
+}

@@ -3720,6 +3720,62 @@
       "path": "docs/reviews/probes/r067_supplemental_reviewer_build_vite_stdout_2026-10-09.log",
       "status": "ACTIVE",
       "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-manifest-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-stdout-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-vitest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-runtime-evidence-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_runtime_evidence_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-runtime-evidence-plan-attempt-failed-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_runtime_evidence_plan_attempt_failed_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-positive-test-failure-and-remaining-budget-disposition-2026-10-09-md",
+      "family": "continuity",
+      "path": "docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
     }
   ]
 }

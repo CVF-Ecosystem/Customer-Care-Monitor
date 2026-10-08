@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 REVIEW_PENDING at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: owner-approved supplemental root forcedtypecheck24.889s and Vite11.053s PASS, supplemental1/1 used; original2failed builds retained (aggregate3/3). Luna xhigh executes original worker1campaign4Vitest (fullpositive, actualM01/M02 with named healthy contrasts, restored3NEWsuites) and one isolated synthetic visual; then root independent1campaign4Vitest/onevisual and formal REVIEW. Vitest0/8 before execution,Go0. Unexpected failure stops/no automaticretry or budgetreset. Exact121member source/27oldtests/backend/seeds protected; raw exclusive reports, fulltree restoration and backups required. Conditional scoped localFREEZE/authorized ordinary branchpush only after settled review. Final Luna xhigh versus Sol medium assessment after tranche; full S2/S3/S5/live/governance/hosted OPEN, Facebook/Zalo OA parked.",
+    "CCMAI-RUNTIME-067 BUILD / accepted test-only repair round3 from new independent rootcause: worker fullpositive316tests315PASS1FAIL at4d921, sparse preparation outcome expectedundefined but backendknownzero;1/8Vitestused. Preserve failedpacket and whole121member restoredsource/junctionremoved. Luna fixes only NEW helpercase expectedknown0 and adds trueunknown nullable selection checks; no product change/compiler call. Root statically audits committed repair, records build inheritance from production-identical4d921, then original root4Vitest campaign; if PASS resume remaining worker3 calls manually via NEWsource-bound rootprobe (no fullpositive retry/newcampaign/reset), then onevisual perrole. TotalVitest8 unchanged, original3builds exhausted,Go0. UnexpectedfailureSTOP. Formal independent REVIEW before conditional scopedFREEZE/authorized ordinary branchpush; finalLuna/Solassessment aftersettled tranche. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -249,7 +249,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PENDING at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: owner-approved supplemental root forcedtypecheck24.889s and Vite11.053s PASS, supplemental1/1 used; original2failed builds retained (aggregate3/3). Luna xhigh executes original worker1campaign4Vitest (fullpositive, actualM01/M02 with named healthy contrasts, restored3NEWsuites) and one isolated synthetic visual; then root independent1campaign4Vitest/onevisual and formal REVIEW. Vitest0/8 before execution,Go0. Unexpected failure stops/no automaticretry or budgetreset. Exact121member source/27oldtests/backend/seeds protected; raw exclusive reports, fulltree restoration and backups required. Conditional scoped localFREEZE/authorized ordinary branchpush only after settled review. Final Luna xhigh versus Sol medium assessment after tranche; full S2/S3/S5/live/governance/hosted OPEN, Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-067 BUILD / accepted test-only repair round3 from new independent rootcause: worker fullpositive316tests315PASS1FAIL at4d921, sparse preparation outcome expectedundefined but backendknownzero;1/8Vitestused. Preserve failedpacket and whole121member restoredsource/junctionremoved. Luna fixes only NEW helpercase expectedknown0 and adds trueunknown nullable selection checks; no product change/compiler call. Root statically audits committed repair, records build inheritance from production-identical4d921, then original root4Vitest campaign; if PASS resume remaining worker3 calls manually via NEWsource-bound rootprobe (no fullpositive retry/newcampaign/reset), then onevisual perrole. TotalVitest8 unchanged, original3builds exhausted,Go0. UnexpectedfailureSTOP. Formal independent REVIEW before conditional scopedFREEZE/authorized ordinary branchpush; finalLuna/Solassessment aftersettled tranche. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -262,8 +262,8 @@
       "workerMaxForcedTypecheckBuilds": 1,
       "reviewerMaxForcedTypecheckBuilds": 1,
       "maxGoInvocations": 0,
-      "workerUsedCampaigns": 0,
-      "workerUsedVitestInvocations": 0,
+      "workerUsedCampaigns": 1,
+      "workerUsedVitestInvocations": 1,
       "reviewerUsedCampaigns": 0,
       "reviewerUsedVitestInvocations": 0,
       "workerUsedForcedTypecheckBuilds": 1,
@@ -573,13 +573,13 @@
   ],
   "savedRunObservationUI": {
     "tranche": "CCMAI-RUNTIME-067",
-    "status": "REVIEW_PENDING",
+    "status": "BUILD",
     "sourceImplementation": "COMMITTED_REPAIRED_STATIC_REVIEW_ONLY",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
-    "newVitestInvocations": 0,
-    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PENDING at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: owner-approved supplemental root forcedtypecheck24.889s and Vite11.053s PASS, supplemental1/1 used; original2failed builds retained (aggregate3/3). Luna xhigh executes original worker1campaign4Vitest (fullpositive, actualM01/M02 with named healthy contrasts, restored3NEWsuites) and one isolated synthetic visual; then root independent1campaign4Vitest/onevisual and formal REVIEW. Vitest0/8 before execution,Go0. Unexpected failure stops/no automaticretry or budgetreset. Exact121member source/27oldtests/backend/seeds protected; raw exclusive reports, fulltree restoration and backups required. Conditional scoped localFREEZE/authorized ordinary branchpush only after settled review. Final Luna xhigh versus Sol medium assessment after tranche; full S2/S3/S5/live/governance/hosted OPEN, Facebook/Zalo OA parked.",
+    "newVitestInvocations": 1,
+    "nextMove": "CCMAI-RUNTIME-067 BUILD / accepted test-only repair round3 from new independent rootcause: worker fullpositive316tests315PASS1FAIL at4d921, sparse preparation outcome expectedundefined but backendknownzero;1/8Vitestused. Preserve failedpacket and whole121member restoredsource/junctionremoved. Luna fixes only NEW helpercase expectedknown0 and adds trueunknown nullable selection checks; no product change/compiler call. Root statically audits committed repair, records build inheritance from production-identical4d921, then original root4Vitest campaign; if PASS resume remaining worker3 calls manually via NEWsource-bound rootprobe (no fullpositive retry/newcampaign/reset), then onevisual perrole. TotalVitest8 unchanged, original3builds exhausted,Go0. UnexpectedfailureSTOP. Formal independent REVIEW before conditional scopedFREEZE/authorized ordinary branchpush; finalLuna/Solassessment aftersettled tranche. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -598,7 +598,8 @@
     ],
     "additionalBuildAuthority": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
     "finalSourceForcedBuild": "PASS",
-    "supplementalBuildReceipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json"
+    "supplementalBuildReceipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+    "workerPositive": "315PASS1FAIL"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",

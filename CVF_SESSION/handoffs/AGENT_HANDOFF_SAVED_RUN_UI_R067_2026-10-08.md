@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh /root/r065_worker source repair complete, runtime waiting authority
-- Next allowed move: CCMAI-RUNTIME-067 REVIEW_PENDING at source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: owner-approved supplemental root forcedtypecheck24.889s and Vite11.053s PASS, supplemental1/1 used; original2failed builds retained (aggregate3/3). Luna xhigh executes original worker1campaign4Vitest (fullpositive, actualM01/M02 with named healthy contrasts, restored3NEWsuites) and one isolated synthetic visual; then root independent1campaign4Vitest/onevisual and formal REVIEW. Vitest0/8 before execution,Go0. Unexpected failure stops/no automaticretry or budgetreset. Exact121member source/27oldtests/backend/seeds protected; raw exclusive reports, fulltree restoration and backups required. Conditional scoped localFREEZE/authorized ordinary branchpush only after settled review. Final Luna xhigh versus Sol medium assessment after tranche; full S2/S3/S5/live/governance/hosted OPEN, Facebook/Zalo OA parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Luna xhigh /root/r065_worker REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / SESSION_SYNC_STEWARD
+- Next allowed move: CCMAI-RUNTIME-067 BUILD / accepted test-only repair round3 from new independent rootcause: worker fullpositive316tests315PASS1FAIL at4d921, sparse preparation outcome expectedundefined but backendknownzero;1/8Vitestused. Preserve failedpacket and whole121member restoredsource/junctionremoved. Luna fixes only NEW helpercase expectedknown0 and adds trueunknown nullable selection checks; no product change/compiler call. Root statically audits committed repair, records build inheritance from production-identical4d921, then original root4Vitest campaign; if PASS resume remaining worker3 calls manually via NEWsource-bound rootprobe (no fullpositive retry/newcampaign/reset), then onevisual perrole. TotalVitest8 unchanged, original3builds exhausted,Go0. UnexpectedfailureSTOP. Formal independent REVIEW before conditional scopedFREEZE/authorized ordinary branchpush; finalLuna/Solassessment aftersettled tranche. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-action dispatcher acknowledgment
@@ -64,3 +64,9 @@ Same-scope one-brace test repair/NEWplan allowed; syntax-only parser then bounde
 ## Final repaired-source build PASS / bounded worker campaign go
 
 2026-10-09 root independent REVIEWER verified supplemental typecheck24.889s and Vite11.053s exit0 at exact4d921/archive1a571270; source121members unchanged, junction removed, all raw hashes verified/backed up. Original worker42.092s/root24.321s failures retained; totalforcedbuild3/3 exhausted, no retry. Before worker4Vitest+1visual: root SESSION_SYNC_STEWARD publication then worker evidence acknowledgment under existing unchanged seed; root independent campaign follows handback. Raw-backed receipt below; Vitest/browser/Go0 before workergo.
+
+## Worker positive failure / consolidated test-only repair and cost disposition
+
+2026-10-09 root independent REVIEWER reviewed actual316tests315PASS1FAIL,30suitefiles, oneNEWpartialSP assertion expectedundefined instead of sparse-known0. Backendreceipt map initialization/increment is source authority, not mockgovernanceproof. New independent rootcause at round3 explicitly established; no same-rootcause loop. Root SESSION_SYNC_STEWARD before authority publication; Luna REPAIR_WORKER waits committed disposition before testedit. Original fulltree restore/junctioncleanup/rawbackup verified. No product changes, no automaticretry; manual remaining3worker calls plus original4root fit total8 including originalfailed1. Final production-identical compiler/Vite evidence may be inherited with explicit hash proof, never called newcompile. Formal acceptance remains pending.
+
+Formal failedpositive evaluation CHANGES_REQUIRED precedes test-only BUILD repair; machine history REVIEW_PENDING -> CHANGES_REQUIRED -> BUILD recorded before worker edit. Existing acceptance/scope/roles/risk remain unchanged, source repair is newtest-only.
