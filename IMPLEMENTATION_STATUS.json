@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "FREEZE",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -36,11 +36,12 @@
     "Bounded source-first provider initialization R050 LP01..08 / R051 RP01..04 independently REVIEW_PASS via R053 successor exact source145bd411, production727d322 unchanged. RP04 settled,42/98 inherited, mutant2 intendedFAIL/restored6PASS, no new runtime/governance or FREEZE.",
     "R050 LP01..08 / R051 RP01..04 / R053 successor bounded local application contract FROZEN under separate R054; source145bd411/production727d322, independent accepted evidence inherited, all failed packets and live/full S2 limitations preserved.",
     "R055 preparation-only Summary receipt locally FROZEN under R058 at childsource05c59e9/independentreview5ff0875/runtimec4f78f2: SP01..12,114positiveTop/272PASS, storage mutation killed/restored, source/oldtests unchanged. No actual-call/policy/full S2/live/governance/hosted claim.",
-    "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
+    "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved.",
+    "R067 local saved-run observation UI UIR01..12 independently accepted/frozen at bd62c7e: strict bound receipt projection, native details and EN/VI reader, existing APIs/actions preserved; fullS5workflow/live/governance not established."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 REVIEW_PASS / FREEZE_OPEN at bd62c7e: independent UIR01..12 source,316tests, M01/M02 healthy contrasts/restored17 and actual4 EN/VI desktop/mobile/nativekeyboard accepted. Preserve historical failures and explicit inherited4d921 compiler proof; Vitest8/8/build3/3/visual4/4/Go0 exhausted. CLOSER next scopedlocalFREEZE, final Luna xhigh vsSolmedium assessment and ordinary authorized currentbranchpush with remoteSHA verification. FullS2/S3/S5workflow/live/governance/hosted remain OPEN; Facebook/ZaloOAparked.",
-    "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
+    "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
+    "Full S1/S2/S3/S5 human workflow/global F02/live/hosted OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
@@ -68,6 +69,7 @@
     "R028-R1 late repair acknowledgment remains historical procedural nonconformance, not retrospective compliance. R2 handoff/evidence record a pre-edit acknowledgment, but one final commit does not prove intra-worktree timing. R2 sync initially failed halfway and preflight correctly rejected continuity/tranche; second sync restored agreement and passed. Independent source/contract REVIEW_PASS does not assert complete procedural compliance; no FREEZE."
   ],
   "evidence": [
+    "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
     "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md",
     "docs/reviews/SETUP_STATUS_RECOVERY_R036_BUILD_2026-10-03.md",
     "docs/reviews/MCP_TRIGGER_JOB_TRUTH_R035_BUILD_2026-10-03.md",
@@ -247,13 +249,13 @@
   ],
   "updatedAt": "2026-10-09",
   "ownerRouting": {
-    "date": "2026-10-08",
+    "date": "2026-10-09",
     "parkedAccounts": [
       "facebook",
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PASS / FREEZE_OPEN at bd62c7e: independent UIR01..12 source,316tests, M01/M02 healthy contrasts/restored17 and actual4 EN/VI desktop/mobile/nativekeyboard accepted. Preserve historical failures and explicit inherited4d921 compiler proof; Vitest8/8/build3/3/visual4/4/Go0 exhausted. CLOSER next scopedlocalFREEZE, final Luna xhigh vsSolmedium assessment and ordinary authorized currentbranchpush with remoteSHA verification. FullS2/S3/S5workflow/live/governance/hosted remain OPEN; Facebook/ZaloOAparked.",
+    "nextObjective": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -353,7 +355,10 @@
     "actualWorkerModel": {
       "model": "gpt-6-luna",
       "reasoningEffort": "xhigh"
-    }
+    },
+    "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
+    "localClosureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
+    "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -587,13 +592,13 @@
   ],
   "savedRunObservationUI": {
     "tranche": "CCMAI-RUNTIME-067",
-    "status": "REVIEW_PASS",
-    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS",
+    "status": "FROZEN",
+    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
     "r2IndependentAcceptance": "UIR01..12_REVIEW_PASS_LOCAL_UI_ONLY",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 8,
-    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PASS / FREEZE_OPEN at bd62c7e: independent UIR01..12 source,316tests, M01/M02 healthy contrasts/restored17 and actual4 EN/VI desktop/mobile/nativekeyboard accepted. Preserve historical failures and explicit inherited4d921 compiler proof; Vitest8/8/build3/3/visual4/4/Go0 exhausted. CLOSER next scopedlocalFREEZE, final Luna xhigh vsSolmedium assessment and ordinary authorized currentbranchpush with remoteSHA verification. FullS2/S3/S5workflow/live/governance/hosted remain OPEN; Facebook/ZaloOAparked.",
+    "nextMove": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12 at sourcebd62c7e / independentreviewf82dcf7:316tests, M01/M02 healthy contrasts/restored17, actual4 EN/VI desktop/mobile/nativekeyboard accepted; inherited4d921 compiler proof explicit, failures retained, Vitest8/8/build3/3/visual4/4/Go0 exhausted. Finish authorized ordinary currentbranchpublication with remoteSHA verification; then ORCHESTRATOR audits remaining S2/S3/S5 requirements and separate workorder before new source/runtime. Final Luna xhigh vsSolmedium assessment records accepted codequality but no demonstrated efficiency advantage. FullS2/S3/S5workflow/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -627,7 +632,7 @@
     "historicalIndependentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS",
     "visualRequest": "docs/reviews/probes/r067_additional_visual_request_2026-10-09.json",
     "visualInvocationsUsed": 4,
-    "modelAssessment": "INTERIM_ONLY_FINAL_PENDING_TRANCHE_CLOSURE",
+    "modelAssessment": "FINAL_AFTER_SCOPED_LOCAL_CLOSURE_NO_MATCHED_AB",
     "visualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
     "supplementalRootVisual": "FAILED_KEYBOARD_ASSERTION_ACTUAL_MOUNT_TAB_PASS",
     "supplementalVisualReceipt": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json",
@@ -635,7 +640,10 @@
     "correctedKeyboardVisualGrant": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json",
     "correctedKeyboardRootVisual": "PASS4_IMAGES_AND_NATIVE_KEYBOARD_INDEPENDENTLY_REVIEWED",
     "reviewEvidence": "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md",
-    "correctedKeyboardVisualReceipt": "docs/reviews/probes/r067_native_keyboard_capture_receipt.json"
+    "correctedKeyboardVisualReceipt": "docs/reviews/probes/r067_native_keyboard_capture_receipt.json",
+    "closureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
+    "independentReviewCommit": "f82dcf77729397dca932c84088ce497b859b9fd4",
+    "modelAssessmentEvidence": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",

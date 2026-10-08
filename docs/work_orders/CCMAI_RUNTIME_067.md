@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-067 — Saved-run observation UI complete delivery
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Risk R2. Original dispatcher seedfc809eb committed before activation. [SPEC UIR01..12](../reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md) incorporated exactly: eight frontend paths, no backend/old tests/old packets/seeds changes. Medium child /root/r065_worker implementation/repair/BUILD commits, root independent REVIEWER then CLOSER/SESSION_SYNC_STEWARD/metadata COMMIT_STEWARD. Owner asks push then continue; complete coherent batch through review/localclosure/push, no checkpoint permission waits. Root directly fixes minor metadata.
 
@@ -33,3 +33,7 @@ Owner duyệt exactlyone corrected-native-keyboard rootvisual (2026-10-09), [NEW
 ## Independent REVIEW result (2026-10-09)
 
 UIR01..12 REVIEW_PASS / FREEZE_OPEN. Fourth capture/native keyboard actualPASS independently inspected;8Vitest/3build/4visual/0Go consumed. Prior failures retained, compiler inheritance explicit. [Formal review](../reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md). CLOSER scopedlocalFREEZE and original authorized branchpush next; no new runtime authority.
+
+## Scoped local closure (2026-10-09)
+
+UIR01..12 local saved-run reader FROZEN after independent reviewf82dcf7, same original seed;8Vitest/3build/4visual/0Go consumed, original failures/inheritedcompile limits retained. [Closure](../reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md) and final Luna/Sol assessment synchronized. Ordinary currentbranchpush only, no new runtime or fullS2/S3/S5/live/governance/hosted claim.

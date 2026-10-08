@@ -49,8 +49,8 @@
   "claimScope": "Only UI reading/presentation of existing saved SP/EX/RO/UO receipts. Synthetic UI fixtures prove rendering/normalization only; no AI governance/provider/permission enforcement or billing proof.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "fc809eb33d2635088db1a005a3a94ae7434910a4",
   "buildCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
   "reviewEvidence": [
@@ -61,7 +61,7 @@
     "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
@@ -71,7 +71,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -81,7 +82,7 @@
   ],
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "2026-10-08 root fresh manifest/policy/state/memory/activeR065handoff/implementation/index rehydration; core8a4119e public-clean/matchesorigin, doctorPASSWITHNOTE25/1, manifest26c686cc warning and BOOTSTRAP_MIGRATION_PENDING retained. Ownerpushthencontinue; actual43commit GitHubpublicationa384fa2 independently read back. Root+medium readonly source audits select coherent S5 saved-run UI reader over unavailable S2/S3 governance authority; UIR01..12 settled in SPEC, firstseedfc809eb predates BUILD. Root ORCHESTRATOR/SPEC_AUTHOR/WORK_ORDER_AUTHOR transition before activation. Source/Vitest/Go0; child before-edit BUILD acknowledgment required; exact source-plan/staticapproval before Vitest, root own review and conditional same-seedclosure/push. No reuse/reset of R065 exhausted Go.",
-  "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS",
+  "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
   "sourceBaselineCommit": "a384fa2ecad6746d35e7897dd8b9e4473221e691",
   "workerModel": {
     "model": "gpt-6.1-sol",
@@ -284,5 +285,21 @@
     "gateUnits": "Inherited fresh worker46PASS50.797s; unchanged scripts/tests",
     "currentDiff": "PASS; earlier rawVite whitespace exception retained",
     "newProductRuntime": 0
+  },
+  "closer": "Codex /root",
+  "closureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
+  "independentReviewCommit": "f82dcf77729397dca932c84088ce497b859b9fd4",
+  "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+  "closureAcknowledgment": "2026-10-09 before edits root re-read manifest/policy/state/memory/handoff/status/index, all agreed REVIEW_PASS. Root REVIEWER->CLOSER/SESSION_SYNC_STEWARD/metadata COMMIT_STEWARD; original same-scope seed authority, no product/test/runtime changes.",
+  "closurePublicationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "catalogPS51": "PASS through default/PR gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS37.10s after final closure/assessment/roadmap Markdown",
+    "gateUnits": "Inherited worker fresh46PASS50.797s; unchanged scripts/tests",
+    "currentDiff": "PASS current staged metadata; historical rawVite trailing whitespace exception retained",
+    "protected": "Current frontend/backend/scripts/workflows/authority seeds unchanged; current tuple+nested projections agree; all10 finalraw physical and committed Git identities unchanged",
+    "runtimeAdded": 0
   }
 }

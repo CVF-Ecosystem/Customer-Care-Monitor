@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R067 REVIEW_PASS / FREEZE_OPEN; UIR01..12 localUI accepted independently, bounded failures/inheritedbuild retained; scoped closure/publication next."
+      "description": "Active R067 FROZEN local saved-run UI UIR01..12; independent review and final Luna/Sol assessment recorded, publication next; full S2/S3/S5/live OPEN."
     },
     {
       "id": "r060-work-order",
@@ -4160,7 +4160,7 @@
       "family": "continuity",
       "path": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+      "description": "Final R067 Luna xhigh vsSolmedium assessment: accepted codequality and useful secondaryreview, first-pass repair costs; no matched A/B or demonstrated efficiency advantage."
     },
     {
       "id": "r067-evidence-publication-b002",
@@ -4427,6 +4427,13 @@
       "path": "docs/reviews/probes/r067_independent_visual_acceptance_audit_2026-10-09.json",
       "status": "ACTIVE",
       "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-g001",
+      "family": "continuity",
+      "path": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 scoped localUI closure after independent exactsource REVIEW_PASS; final model assessment, retained failures/budgets and ordinary currentbranchpublication boundary."
     }
   ]
 }
