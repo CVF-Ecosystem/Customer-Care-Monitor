@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -3510,6 +3510,132 @@
       "path": "docs/reviews/probes/r067_capture_keyboard.mjs",
       "status": "ACTIVE",
       "description": "Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking."
+    },
+    {
+      "id": "r067-r067-cache-retention-disposition-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_cache_retention_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-preexec-wrapper-disposition-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_preexec_wrapper_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-repair-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_repair_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-exact-2026-10-09-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_exact_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-typecheck-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_typecheck_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-typecheck-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_typecheck_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-root-repair-build-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-static-syntax-mjs",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_static_syntax.mjs",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-typecheck-repair-disposition-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_typecheck_repair_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-exact-2026-10-09-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_exact_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-preflight-failure-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_preflight_failure_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-typecheck-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_typecheck_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-typecheck-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_typecheck_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-wrapper-failed-2026-10-09-py-failed",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-staticcheck-launcher-failure-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-typecheck-changes-required-2026-10-09-md",
+      "family": "continuity",
+      "path": "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
     }
   ]
 }

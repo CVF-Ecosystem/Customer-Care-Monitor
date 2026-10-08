@@ -13,7 +13,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 BUILD / accepted bounded repair: Luna xhigh REPAIR_WORKER fixes the one missing options-object brace in NEW integration test109 at source8a63ad58f7c024d32088ae6079f9908356174308, performs syntax-only static audit and commits exact repair/NEWplan, then stops for renewed root audit. Worker forcedtypecheck-build1 exhausted with TS1005 failure, Vite NOT RUN; Vitest0/8 and Go0. Root uses its existing one forcedtypecheck-build on repaired exact source BEFORE authorizing worker4Vitest and independent root4Vitest/visuals; no added invocation or budget reset. Preserve all failedsource/rawlogs/setup errors, no automaticretry. Existing scope/risk/roles/seed unchanged. Formal independent REVIEW then conditional local UI FREEZE/ordinary authorized branch push only after finalsource/checks settle. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 BUILD / accepted consolidated type repair round2: Luna xhigh REPAIR_WORKER fixes all seven TypeScript diagnostics from source4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314 within the existing eight frontend paths, commits exact repair/plan after syntax-only audit, then stops for root review. Both worker and reviewer forcedtypecheck-build1 exhausted with failures; Vite/Vitest/browser/Go NOT RUN (Vitest0/8,Go0). No further typecheck/build or runtime campaign without explicit additional check-budget authority. Preserve both failed source packets and original evidence-loss limits; scope/risk/seed unchanged. Root prepares a concrete bounded additional-check request after repaired-source static review; no FREEZE/push while tests failing or unverified. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Codex Luna xhigh /root/r065_worker REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / CLOSER",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
@@ -32,7 +32,7 @@
     "reviewerUsedCampaigns": 0,
     "reviewerUsedVitestInvocations": 0,
     "workerUsedForcedTypecheckBuilds": 1,
-    "reviewerUsedForcedTypecheckBuilds": 0,
+    "reviewerUsedForcedTypecheckBuilds": 1,
     "usedGoInvocations": 0
   },
   "previousExecutionBudget": {
@@ -171,12 +171,15 @@
   },
   "r067RootStaticApproval": "docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json",
   "currentRepair": {
-    "finding": "TS1005 missing options-object closing brace in NEW integration fixture109",
+    "finding": "Seven TypeScript semantic diagnostics; independent build failed24.321s",
     "failedSource": "8a63ad58f7c024d32088ae6079f9908356174308",
     "rootStaticOversightAcknowledged": true,
     "scopeUnchanged": true,
     "rootFinalBuildBeforeWorkerCampaign": true,
     "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
-    "rootFinalBuildPlan": "docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json"
+    "rootFinalBuildPlan": "docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json",
+    "round": 2,
+    "latestFailedSource": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+    "additionalBuildAuthority": "NOT_GRANTED"
   }
 }

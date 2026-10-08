@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "executionDate": "2026-10-09",
+  "sourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+  "sourceArchiveSha256": "8689777a03291fde0330dcb0fb106091afaa3dbde395960257a50d622cf8257f",
+  "sourceArchiveBytes": 1218560,
+  "mode": "isolated git archive; no application .env; minimal process environment; cached node_modules junction only",
+  "initialSourceFiles": 121,
+  "commands": [
+    {
+      "step": "typecheck",
+      "argv": [
+        "node.EXE",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-reviewer-build-k9e28o_4\\frontend\\node_modules\\vue-tsc\\bin\\vue-tsc.js",
+        "-b",
+        "--force"
+      ],
+      "exitCode": 2,
+      "elapsedSeconds": 24.321051500039175,
+      "stdout": {
+        "path": "docs/reviews/probes/r067_reviewer_build_typecheck_stdout_2026-10-09.log",
+        "bytes": 1598,
+        "sha256": "24e25b125d6517e55b1ad7d8e4be117cd8471c0c4ec0c86a23ff97ca497de8d0"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r067_reviewer_build_typecheck_stderr_2026-10-09.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "forcedBuildBudgetUsed": 1,
+  "campaignBudgetUsed": 0,
+  "vitestInvocations": 0,
+  "goInvocations": 0,
+  "scratchRetained": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-reviewer-build-k9e28o_4",
+  "runner": {
+    "path": "docs/reviews/probes/r067_reviewer_build_exact_2026-10-09.py",
+    "bytes": 7710,
+    "sha256": "24cafe9b7c778a1d88b366e5cdd0d90abd0d833d9f415ae48e4e3f676576cb2e",
+    "astChecked": true
+  },
+  "sourceFilesUnchanged": true,
+  "dependencyJunctionRemoved": true,
+  "status": "FAILED_TYPECHECK",
+  "generatedFiles": []
+}

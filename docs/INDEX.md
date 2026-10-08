@@ -292,6 +292,24 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking.: `docs/reviews/probes/r067_capture_keyboard.mjs`
 - Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries.: `docs/reviews/probes/r067_luna_takeover_2026-10-08.json`
 - Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending.: `docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_cache_retention_disposition_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_preexec_wrapper_disposition_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_repair_plan_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_exact_2026-10-09.py`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_typecheck_stderr_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_typecheck_stdout_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_static_syntax.mjs`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_typecheck_repair_disposition_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_exact_2026-10-09.py`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_preflight_failure_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_typecheck_stderr_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_typecheck_stdout_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json`
 - Independent exact-source static approval and bounded worker/root campaign; historical root static failures retained.: `docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json`
 - Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof.: `docs/reviews/probes/r067_ui_campaign.py`
 - Luna isolated synthetic saved-run panel fixture, loopback only, no application/API.: `docs/reviews/probes/r067_visual_fixture.mjs`

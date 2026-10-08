@@ -88,7 +88,7 @@
     "reviewerUsedCampaigns": 0,
     "reviewerUsedVitestInvocations": 0,
     "workerUsedForcedTypecheckBuilds": 1,
-    "reviewerUsedForcedTypecheckBuilds": 0,
+    "reviewerUsedForcedTypecheckBuilds": 1,
     "usedGoInvocations": 0
   },
   "liveEvidence": "NOT_RUN; synthetic UI structure/payload presentation only, no governance claim",
@@ -176,5 +176,11 @@
     "BUILD"
   ],
   "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
-  "renewedRootStaticAudit": "docs\\reviews\\probes\\r067_root_repair_build_plan_2026-10-09.json"
+  "renewedRootStaticAudit": "docs\\reviews\\probes\\r067_root_repair_build_plan_2026-10-09.json",
+  "acceptedRepairRound2": {
+    "source": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+    "diagnostics": 7,
+    "finding": "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
+    "runtimeRetryAuthorized": false
+  }
 }

@@ -249,7 +249,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 BUILD / accepted bounded repair: Luna xhigh REPAIR_WORKER fixes the one missing options-object brace in NEW integration test109 at source8a63ad58f7c024d32088ae6079f9908356174308, performs syntax-only static audit and commits exact repair/NEWplan, then stops for renewed root audit. Worker forcedtypecheck-build1 exhausted with TS1005 failure, Vite NOT RUN; Vitest0/8 and Go0. Root uses its existing one forcedtypecheck-build on repaired exact source BEFORE authorizing worker4Vitest and independent root4Vitest/visuals; no added invocation or budget reset. Preserve all failedsource/rawlogs/setup errors, no automaticretry. Existing scope/risk/roles/seed unchanged. Formal independent REVIEW then conditional local UI FREEZE/ordinary authorized branch push only after finalsource/checks settle. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
+    "nextObjective": "CCMAI-RUNTIME-067 BUILD / accepted consolidated type repair round2: Luna xhigh REPAIR_WORKER fixes all seven TypeScript diagnostics from source4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314 within the existing eight frontend paths, commits exact repair/plan after syntax-only audit, then stops for root review. Both worker and reviewer forcedtypecheck-build1 exhausted with failures; Vite/Vitest/browser/Go NOT RUN (Vitest0/8,Go0). No further typecheck/build or runtime campaign without explicit additional check-budget authority. Preserve both failed source packets and original evidence-loss limits; scope/risk/seed unchanged. Root prepares a concrete bounded additional-check request after repaired-source static review; no FREEZE/push while tests failing or unverified. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -267,7 +267,7 @@
       "reviewerUsedCampaigns": 0,
       "reviewerUsedVitestInvocations": 0,
       "workerUsedForcedTypecheckBuilds": 1,
-      "reviewerUsedForcedTypecheckBuilds": 0,
+      "reviewerUsedForcedTypecheckBuilds": 1,
       "usedGoInvocations": 0
     },
     "historicalR065RoutingSnapshot": {
@@ -572,12 +572,12 @@
   "savedRunObservationUI": {
     "tranche": "CCMAI-RUNTIME-067",
     "status": "BUILD",
-    "sourceImplementation": "COMMITTED_SYNTAX_REPAIR_FINAL_BUILD_PENDING",
+    "sourceImplementation": "COMMITTED_SEMANTIC_TYPE_REPAIR_REQUIRED",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 0,
-    "nextMove": "CCMAI-RUNTIME-067 BUILD / accepted bounded repair: Luna xhigh REPAIR_WORKER fixes the one missing options-object brace in NEW integration test109 at source8a63ad58f7c024d32088ae6079f9908356174308, performs syntax-only static audit and commits exact repair/NEWplan, then stops for renewed root audit. Worker forcedtypecheck-build1 exhausted with TS1005 failure, Vite NOT RUN; Vitest0/8 and Go0. Root uses its existing one forcedtypecheck-build on repaired exact source BEFORE authorizing worker4Vitest and independent root4Vitest/visuals; no added invocation or budget reset. Preserve all failedsource/rawlogs/setup errors, no automaticretry. Existing scope/risk/roles/seed unchanged. Formal independent REVIEW then conditional local UI FREEZE/ordinary authorized branch push only after finalsource/checks settle. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
+    "nextMove": "CCMAI-RUNTIME-067 BUILD / accepted consolidated type repair round2: Luna xhigh REPAIR_WORKER fixes all seven TypeScript diagnostics from source4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314 within the existing eight frontend paths, commits exact repair/plan after syntax-only audit, then stops for root review. Both worker and reviewer forcedtypecheck-build1 exhausted with failures; Vite/Vitest/browser/Go NOT RUN (Vitest0/8,Go0). No further typecheck/build or runtime campaign without explicit additional check-budget authority. Preserve both failed source packets and original evidence-loss limits; scope/risk/seed unchanged. Root prepares a concrete bounded additional-check request after repaired-source static review; no FREEZE/push while tests failing or unverified. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -587,7 +587,13 @@
     "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
     "workerForcedTypecheckBuildUsed": 1,
     "typecheckFailureReceipt": "docs/reviews/probes/r067_worker_build_2026-10-09.json",
-    "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314"
+    "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+    "reviewerForcedTypecheckBuildUsed": 1,
+    "independentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS",
+    "typecheckFailureReceipts": [
+      "docs/reviews/probes/r067_worker_build_2026-10-09.json",
+      "docs/reviews/probes/r067_reviewer_build_2026-10-09.json"
+    ]
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",

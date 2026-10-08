@@ -1,0 +1,10 @@
+src/__tests__/run-observation.spec.ts(72,10): error TS6133: 'clone' is declared but its value is never read.
+src/components/ui/RunObservationPanel.vue(13,115): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+src/views/Jobs/job-detail/run-observation.ts(231,50): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ response_returned: number; error_returned: number; interrupted: number; in_flight: number; }'.
+  No index signature with a parameter of type 'string' was found on type '{ response_returned: number; error_returned: number; interrupted: number; in_flight: number; }'.
+src/views/Jobs/job-detail/run-observation.ts(232,44): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ items_saved: number; items_save_failed: number; items_not_published: number; items_pending: number; }'.
+  No index signature with a parameter of type 'string' was found on type '{ items_saved: number; items_save_failed: number; items_not_published: number; items_pending: number; }'.
+src/views/Jobs/job-detail/run-observation.ts(288,5): error TS2322: Type 'unknown' is not assignable to type 'ObservationValue'.
+src/views/Jobs/job-detail/run-observation.ts(289,5): error TS2322: Type 'unknown' is not assignable to type 'ObservationValue'.
+src/views/Jobs/job-detail/run-observation.ts(290,5): error TS2322: Type 'unknown' is not assignable to type 'ObservationValue'.
