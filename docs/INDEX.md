@@ -295,9 +295,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stdout_2026-10-09.log`
 - Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_vite_stderr_2026-10-09.log`
 - Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_vite_stdout_2026-10-09.log`
+- R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet.: `docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json`
 - Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking.: `docs/reviews/probes/r067_capture_keyboard.mjs`
 - Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries.: `docs/reviews/probes/r067_luna_takeover_2026-10-08.json`
 - Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending.: `docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json`
+- R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet.: `docs/reviews/probes/r067_worker_resume_remaining_three.py`
 - Owner approved exactly1 supplemental root forcedbuild on4d921; original2failures and8Vitest/0Go limits retained, no seed mutation.: `docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json`
 - R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md`
 - R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_positive_manifest_before.json`
@@ -330,6 +332,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json`
 - Independent exact-source static approval and bounded worker/root campaign; historical root static failures retained.: `docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json`
+- R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet.: `docs/reviews/probes/r067_round3_worker_test_repair_plan_2026-10-09.json`
 - R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_type_repair_round2_plan_2026-10-09.json`
 - Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof.: `docs/reviews/probes/r067_ui_campaign.py`
 - Luna isolated synthetic saved-run panel fixture, loopback only, no application/API.: `docs/reviews/probes/r067_visual_fixture.mjs`

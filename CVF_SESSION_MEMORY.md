@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R067 saved-run observation UI (2026-10-08)
 
-CCMAI-RUNTIME-067 BUILD / accepted test-only repair round3 from new independent rootcause: worker fullpositive316tests315PASS1FAIL at4d921, sparse preparation outcome expectedundefined but backendknownzero;1/8Vitestused. Preserve failedpacket and whole121member restoredsource/junctionremoved. Luna fixes only NEW helpercase expectedknown0 and adds trueunknown nullable selection checks; no product change/compiler call. Root statically audits committed repair, records build inheritance from production-identical4d921, then original root4Vitest campaign; if PASS resume remaining worker3 calls manually via NEWsource-bound rootprobe (no fullpositive retry/newcampaign/reset), then onevisual perrole. TotalVitest8 unchanged, original3builds exhausted,Go0. UnexpectedfailureSTOP. Formal independent REVIEW before conditional scopedFREEZE/authorized ordinary branchpush; finalLuna/Solassessment aftersettled tranche. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.
+CCMAI-RUNTIME-067 REVIEW_PENDING at final test-repaired sourcebd62c7e4e4868cc05528aa2b8a1ae05561a78df1/archive60d07e34: root static source/121member/30suite audit PASS, product and all120otherfrontendfiles identical to built4d921; compiler/Vite inherited with explicit no-newcompile limitation. Execute original independent root4Vitest campaign, then ifPASS manualremaining3worker continuation under committed rootprobe, then oneisolatedvisualperrole. Historicalfailedworker1Vitest preserved; total8 ceiling unchanged,3/3builds exhausted,Go0. No automaticretry/reset. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush, final Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN, Facebook/ZaloOAparked.
 
 GitHub completed43commitpush to a384fa2 verified; publicationreceipt recorded, currentbatch completes through source/independentreview/conditionalclosure/push.
 

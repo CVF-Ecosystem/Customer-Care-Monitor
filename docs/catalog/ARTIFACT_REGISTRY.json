@@ -3776,6 +3776,27 @@
       "path": "docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md",
       "status": "ACTIVE",
       "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-final-source-review-campaign-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet."
+    },
+    {
+      "id": "r067-manual-remaining-three-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resume_remaining_three.py",
+      "status": "ACTIVE",
+      "description": "R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet."
+    },
+    {
+      "id": "r067-roundthree-worker-test-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_round3_worker_test_repair_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 BUILD / accepted test-only repair round3 from new independent rootcause: worker fullpositive316tests315PASS1FAIL at4d921, sparse preparation outcome expectedundefined but backendknownzero;1/8Vitestused. Preserve failedpacket and whole121member restoredsource/junctionremoved. Luna fixes only NEW helpercase expectedknown0 and adds trueunknown nullable selection checks; no product change/compiler call. Root statically audits committed repair, records build inheritance from production-identical4d921, then original root4Vitest campaign; if PASS resume remaining worker3 calls manually via NEWsource-bound rootprobe (no fullpositive retry/newcampaign/reset), then onevisual perrole. TotalVitest8 unchanged, original3builds exhausted,Go0. UnexpectedfailureSTOP. Formal independent REVIEW before conditional scopedFREEZE/authorized ordinary branchpush; finalLuna/Solassessment aftersettled tranche. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 REVIEW_PENDING at final test-repaired sourcebd62c7e4e4868cc05528aa2b8a1ae05561a78df1/archive60d07e34: root static source/121member/30suite audit PASS, product and all120otherfrontendfiles identical to built4d921; compiler/Vite inherited with explicit no-newcompile limitation. Execute original independent root4Vitest campaign, then ifPASS manualremaining3worker continuation under committed rootprobe, then oneisolatedvisualperrole. Historicalfailedworker1Vitest preserved; total8 ceiling unchanged,3/3builds exhausted,Go0. No automaticretry/reset. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush, final Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN, Facebook/ZaloOAparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Luna xhigh /root/r065_worker REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / SESSION_SYNC_STEWARD",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh /root/r065_worker waiting remaining-three evidence authorization",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-09",
   "currentExecutionBudget": {
@@ -72,7 +72,7 @@
     "status": "REVIEW_PENDING",
     "artifact": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "sourceOrRuntimeDispatched": true,
-    "sourceImplementation": "COMMITTED_REPAIRED_STATIC_REVIEW_ONLY",
+    "sourceImplementation": "COMMITTED_TEST_ONLY_REPAIR_REVIEW_PENDING",
     "newGoInvocations": 0,
     "newVitestInvocations": 0
   },
@@ -179,7 +179,7 @@
     "rootStaticOversightAcknowledged": true,
     "scopeUnchanged": true,
     "rootFinalBuildBeforeWorkerCampaign": true,
-    "repairedSourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+    "repairedSourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
     "rootFinalBuildPlan": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
     "round": 3,
     "latestFailedSource": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
@@ -191,5 +191,6 @@
   "additionalCheckBudgetRequest": "docs/reviews/probes/r067_additional_build_request_2026-10-09.json",
   "currentPublicationRootError": "Initial request publication failed5/7: root used status REVIEW_PENDING as canonical currentMode; corrected REVIEW. Catalog drift reproduced as PS5.1/PS7 cultural sorting differences in two new near-prefix IDs (repair-plan/repaired-source, type-repair/typecheck). Gave only new uncommitted entries distinct stable IDs; no tooling/gate or historical ID change. Root-attributed, zero runtime.",
   "additionalCheckBudgetGrant": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
-  "supplementalBuildReceipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json"
+  "supplementalBuildReceipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+  "finalSourceCampaignPlan": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json"
 }

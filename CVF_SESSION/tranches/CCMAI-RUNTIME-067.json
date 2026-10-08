@@ -49,10 +49,10 @@
   "claimScope": "Only UI reading/presentation of existing saved SP/EX/RO/UO receipts. Synthetic UI fixtures prove rendering/normalization only; no AI governance/provider/permission enforcement or billing proof.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "fc809eb33d2635088db1a005a3a94ae7434910a4",
-  "buildCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+  "buildCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
   "reviewEvidence": [
     "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
     "docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md"
@@ -64,7 +64,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -133,7 +134,7 @@
     "riskScopeRolesBudgetUnchanged": true,
     "receipt": "docs/reviews/probes/r067_luna_takeover_2026-10-08.json"
   },
-  "sourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
   "rootStaticApproval": {
     "date": "2026-10-09",
     "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
@@ -184,7 +185,7 @@
     "BUILD_SYNTAX_REPAIR_REQUIRED",
     "BUILD"
   ],
-  "repairedSourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+  "repairedSourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
   "renewedRootStaticAudit": "docs\\reviews\\probes\\r067_root_repair_build_plan_2026-10-09.json",
   "acceptedRepairRound2": {
     "source": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
@@ -207,5 +208,12 @@
     "remainingReviewerVitest": 4,
     "extraInvocationsAuthorized": 0,
     "disposition": "docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md"
-  }
+  },
+  "inheritedFinalBuild": {
+    "actualBuiltSource": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+    "receipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+    "newSourceCompilerExecuted": false,
+    "basis": "Only NEW test body changes using compiled APIs/types; all120otherfrontendfiles, including product/config/dependencies, byte-identical. Explicit phase inheritance, not fresh compiler claim."
+  },
+  "finalSourceCampaignPlan": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json"
 }
