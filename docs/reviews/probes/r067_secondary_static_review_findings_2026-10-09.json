@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-09",
+  "recordAuthor": "Codex /root SESSION_SYNC_STEWARD",
+  "provenance": "Derived from actual Luna xhigh secondary readonly messages; not a worker-authored raw runtime packet",
+  "secondaryReviewer": "Luna xhigh /root/r065_worker",
+  "runtimeCommands": 0,
+  "editsBySecondaryReviewer": 0,
+  "firstFindings": [
+    "Prefix guard selfmatch (also root self-found); fixed beforeexecution",
+    "Temp-root discovery missing postcapture-check/startup failures",
+    "TimeoutExpired loses raw/cleanup evidence",
+    "exists misses danglingjunction",
+    "Browser-parent/profile cleanup not verified"
+  ],
+  "firstRootRepairs": [
+    "Stable early fixture temp-marker and streaminglogs",
+    "Popen timeout partialbytes/ownPIDtree-only taskkill/creationidentity readbacks; unknown explicit",
+    "Junctionlstat/lexists and failclosed capturestatus",
+    "Bounded browser-parentexit and own absolute profilepath before recursivecleanup"
+  ],
+  "secondReview": "Luna confirms firstthree evidence gaps materially addressed, nativekeyboard assertions unchanged and source scope unchanged; no runtime acceptance",
+  "secondFindings": [
+    "launchChrome acquisition can throw before owning finally",
+    "Request prepared hashes stale after modifications",
+    "Suggestion to failclosed if junctionreadback false/unknown"
+  ],
+  "lastRootRepairs": [
+    "Shared cleanupChrome used both acquisitioncatch and normalfinally, spawn-error/earlyexit bounded handling",
+    "Refreshed exactfinalprepared hashes before publication",
+    "Runner successfulcapture is failure when junctionabsence not True"
+  ],
+  "finalRootStaticChecks": "node --check two finalmjs PASS; Python AST PASS; prefixglob empty; source unchanged",
+  "runtimeAcceptance": "NOT_ESTABLISHED; extra visual PROPOSED_NOT_AUTHORIZED",
+  "responsibility": "Root owns proposed harness and its static repair errors; no Luna source defect established by supplemental failure"
+}

@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactly1 supplemental rootvisual, grant committed before execution; separate authorized core reconciliation completed to ab714ed7 matching origin/main, doctorPASSWITHNOTE25/1 and original corebackup retained. Run explicit-grant prepared readiness/diagnostic runner ONCE on bd62c7e, then inspect actual4images/keyboard/report before formal REVIEW. Original2visual failures and positive/build failures retained; max3visual includinghistory, Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry; conditional localFREEZE/authorized ordinarybranchpush only after settledreview, final Luna/Sol assessment then. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: approved supplementalrootvisual FAILEDexit1/5.070s; report now proves mount4sections and TabSUMMARYtrue, EnterOpenedfalse/SpaceClosedfalse/finalopentrue, favicon404; no PNG/fullmatrix. Root-owned CDP Enter omitted text/unmodifiedText versus cachedPuppeteer; NEW propertext/rawKeyDown+datafavicon repair prepared/staticPASS, predicted behavior unverified. Visual3/3, Vitest8/8/build3/3, Go0 exhausted, allfailurepackets retained. REVIEW_COST_ESCALATION_REQUIRED: exactly1 further rootvisual PROPOSED_NOT_AUTHORIZED; await owner decision, no runtime/FREEZE/push. On authorizedcapturePASS inspect4actualimages/report then formalreview/conditional scopedclosure/ordinarybranchpush and final Luna/Sol assessment. Coreab714ed7 reconciled/doctor25/1, oldbackup retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh source author idle",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh readonly secondary NEWprobe reviewer, no runtime authority",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-09",
   "currentExecutionBudget": {
@@ -42,7 +42,7 @@
     "workerUsedVisualInvocations": 1,
     "reviewerUsedVisualInvocations": 1,
     "supplementalReviewerMaxVisualInvocations": 1,
-    "supplementalReviewerUsedVisualInvocations": 0,
+    "supplementalReviewerUsedVisualInvocations": 1,
     "aggregateVisualCeilingIncludingHistory": 3
   },
   "previousExecutionBudget": {
@@ -181,13 +181,13 @@
   },
   "r067RootStaticApproval": "docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json",
   "currentRepair": {
-    "finding": "Second visual keyboard assertion failure; cause/mount undetermined; capture did not retain individual browser diagnostics",
+    "finding": "Root-owned native CDP Entertext missing; actualmount and Tab verified, corrected NEWprobe predicted but not runtime verified",
     "scopeUnchanged": true,
     "productAndTestsUnchanged": true,
-    "visualUsed": 2,
-    "visualMax": 2,
-    "preparedProbe": "docs/reviews/probes/r067_capture_ready_diagnostics_PROPOSED_2026-10-09.mjs",
-    "additionalVisualAuthority": "OWNER_APPROVED_EXACTLY_ONE_VISUAL",
+    "visualUsed": 3,
+    "visualMax": 3,
+    "preparedProbe": "docs/reviews/probes/r067_capture_native_keyboard_PROPOSED_2026-10-09.mjs",
+    "additionalVisualAuthority": "PROPOSED_NOT_AUTHORIZED_FOR_CORRECTED_KEYBOARD",
     "costDisposition": "REVIEW_COST_ESCALATION_REQUIRED"
   },
   "additionalCheckBudgetRequest": "docs/reviews/probes/r067_additional_build_request_2026-10-09.json",
@@ -214,5 +214,6 @@
     "roundThreeIndependentRootCause": true
   },
   "additionalVisualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
-  "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e"
+  "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
+  "correctedKeyboardVisualRequest": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json"
 }

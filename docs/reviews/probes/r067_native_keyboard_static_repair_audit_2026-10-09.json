@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-09",
+  "reviewer": "Codex /root",
+  "status": "STATIC_PROBE_REPAIR_NOT_EXECUTED",
+  "actualFailedReceipt": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json",
+  "actualMount": true,
+  "actualTabSummary": true,
+  "actualEnterOpened": false,
+  "actualSpaceClosed": false,
+  "actualFinalOpen": true,
+  "actualJsErrors": [],
+  "actualConsoleErrors": [],
+  "actualLogErrors": [
+    "network: Failed to load resource: the server responded with a status of 404 (Not Found) http://127.0.0.1:51174/favicon.ico"
+  ],
+  "sourceUnchanged": true,
+  "rawHashesVerified": true,
+  "primaryCachedSource": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\npm-cache\\_npx\\15c61037b1978c83\\node_modules\\chrome-devtools-mcp\\build\\src\\third_party\\index.js",
+    "sha256": "c988e0684584b75e87ae04b768c4f8ae7064401afe5187ec0d4878b2c6833f12",
+    "enterMappingLine": 79876,
+    "dispatchLine": 80255,
+    "enterText": "carriage return",
+    "dispatchType": "text ? keyDown : rawKeyDown",
+    "unmodifiedText": "text"
+  },
+  "finding": "Root-owned probe sent Enter keyDown without text/unmodifiedText, unlike cached Puppeteer mapping/dispatch. Recorded Enter did not toggle while following Space opened. Strong harness diagnosis; predicted repair requires actual authorized visual verification.",
+  "additionalFixtureFinding": "Default /favicon.ico404 observed; NEW fixture explicit data favicon removes the source, no log filtering/acceptance weakening.",
+  "newProbe": "docs/reviews/probes/r067_capture_native_keyboard_PROPOSED_2026-10-09.mjs",
+  "additionalRuntime": 0,
+  "rootResponsibility": true,
+  "LunaSourceDefectEstablished": false
+}

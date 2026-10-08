@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactly1 supplemental rootvisual, grant committed before execution; separate authorized core reconciliation completed to ab714ed7 matching origin/main, doctorPASSWITHNOTE25/1 and original corebackup retained. Run explicit-grant prepared readiness/diagnostic runner ONCE on bd62c7e, then inspect actual4images/keyboard/report before formal REVIEW. Original2visual failures and positive/build failures retained; max3visual includinghistory, Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry; conditional localFREEZE/authorized ordinarybranchpush only after settledreview, final Luna/Sol assessment then. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: approved supplementalrootvisual FAILEDexit1/5.070s; report now proves mount4sections and TabSUMMARYtrue, EnterOpenedfalse/SpaceClosedfalse/finalopentrue, favicon404; no PNG/fullmatrix. Root-owned CDP Enter omitted text/unmodifiedText versus cachedPuppeteer; NEW propertext/rawKeyDown+datafavicon repair prepared/staticPASS, predicted behavior unverified. Visual3/3, Vitest8/8/build3/3, Go0 exhausted, allfailurepackets retained. REVIEW_COST_ESCALATION_REQUIRED: exactly1 further rootvisual PROPOSED_NOT_AUTHORIZED; await owner decision, no runtime/FREEZE/push. On authorizedcapturePASS inspect4actualimages/report then formalreview/conditional scopedclosure/ordinarybranchpush and final Luna/Sol assessment. Coreab714ed7 reconciled/doctor25/1, oldbackup retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -241,7 +241,8 @@
     "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "docs/reviews/probes/r066_github_push_receipt.json",
     "docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md",
-    "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md"
+    "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+    "docs/reviews/R067_NATIVE_KEYBOARD_PROBE_REPAIR_AND_COST_DISPOSITION_2026-10-09.md"
   ],
   "updatedAt": "2026-10-09",
   "ownerRouting": {
@@ -251,7 +252,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactly1 supplemental rootvisual, grant committed before execution; separate authorized core reconciliation completed to ab714ed7 matching origin/main, doctorPASSWITHNOTE25/1 and original corebackup retained. Run explicit-grant prepared readiness/diagnostic runner ONCE on bd62c7e, then inspect actual4images/keyboard/report before formal REVIEW. Original2visual failures and positive/build failures retained; max3visual includinghistory, Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry; conditional localFREEZE/authorized ordinarybranchpush only after settledreview, final Luna/Sol assessment then. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "nextObjective": "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: approved supplementalrootvisual FAILEDexit1/5.070s; report now proves mount4sections and TabSUMMARYtrue, EnterOpenedfalse/SpaceClosedfalse/finalopentrue, favicon404; no PNG/fullmatrix. Root-owned CDP Enter omitted text/unmodifiedText versus cachedPuppeteer; NEW propertext/rawKeyDown+datafavicon repair prepared/staticPASS, predicted behavior unverified. Visual3/3, Vitest8/8/build3/3, Go0 exhausted, allfailurepackets retained. REVIEW_COST_ESCALATION_REQUIRED: exactly1 further rootvisual PROPOSED_NOT_AUTHORIZED; await owner decision, no runtime/FREEZE/push. On authorizedcapturePASS inspect4actualimages/report then formalreview/conditional scopedclosure/ordinarybranchpush and final Luna/Sol assessment. Coreab714ed7 reconciled/doctor25/1, oldbackup retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -279,7 +280,7 @@
       "workerUsedVisualInvocations": 1,
       "reviewerUsedVisualInvocations": 1,
       "supplementalReviewerMaxVisualInvocations": 1,
-      "supplementalReviewerUsedVisualInvocations": 0,
+      "supplementalReviewerUsedVisualInvocations": 1,
       "aggregateVisualCeilingIncludingHistory": 3
     },
     "historicalR065RoutingSnapshot": {
@@ -589,7 +590,7 @@
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 8,
-    "nextMove": "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactly1 supplemental rootvisual, grant committed before execution; separate authorized core reconciliation completed to ab714ed7 matching origin/main, doctorPASSWITHNOTE25/1 and original corebackup retained. Run explicit-grant prepared readiness/diagnostic runner ONCE on bd62c7e, then inspect actual4images/keyboard/report before formal REVIEW. Original2visual failures and positive/build failures retained; max3visual includinghistory, Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry; conditional localFREEZE/authorized ordinarybranchpush only after settledreview, final Luna/Sol assessment then. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+    "nextMove": "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: approved supplementalrootvisual FAILEDexit1/5.070s; report now proves mount4sections and TabSUMMARYtrue, EnterOpenedfalse/SpaceClosedfalse/finalopentrue, favicon404; no PNG/fullmatrix. Root-owned CDP Enter omitted text/unmodifiedText versus cachedPuppeteer; NEW propertext/rawKeyDown+datafavicon repair prepared/staticPASS, predicted behavior unverified. Visual3/3, Vitest8/8/build3/3, Go0 exhausted, allfailurepackets retained. REVIEW_COST_ESCALATION_REQUIRED: exactly1 further rootvisual PROPOSED_NOT_AUTHORIZED; await owner decision, no runtime/FREEZE/push. On authorizedcapturePASS inspect4actualimages/report then formalreview/conditional scopedclosure/ordinarybranchpush and final Luna/Sol assessment. Coreab714ed7 reconciled/doctor25/1, oldbackup retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -622,9 +623,12 @@
     "workerVisual": "FAILED_KEYBOARD_ASSERTION_CAUSE_UNDETERMINED",
     "historicalIndependentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS",
     "visualRequest": "docs/reviews/probes/r067_additional_visual_request_2026-10-09.json",
-    "visualInvocationsUsed": 2,
+    "visualInvocationsUsed": 3,
     "modelAssessment": "INTERIM_ONLY_FINAL_PENDING_TRANCHE_CLOSURE",
-    "visualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json"
+    "visualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
+    "supplementalRootVisual": "FAILED_KEYBOARD_ASSERTION_ACTUAL_MOUNT_TAB_PASS",
+    "supplementalVisualReceipt": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json",
+    "correctedKeyboardVisualRequest": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",

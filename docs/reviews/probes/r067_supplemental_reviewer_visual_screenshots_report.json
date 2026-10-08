@@ -1,0 +1,41 @@
+{
+  "base": "http://127.0.0.1:51174",
+  "generatedAt": "2026-10-08T23:02:19.719Z",
+  "pages": [
+    {
+      "route": "/en",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [
+        "network: Failed to load resource: the server responded with a status of 404 (Not Found) http://127.0.0.1:51174/favicon.ico"
+      ],
+      "externalRequests": [],
+      "readiness": {
+        "ready": true,
+        "deadlineMs": 8000,
+        "diagnostic": {
+          "ready": true,
+          "readyState": "complete",
+          "activeTag": "BODY",
+          "activeText": "Saved-run observationsSynthetic saved receipt, with no API request.Saved observationsSaved receipt prefix only. Run status is separate; these counts do not esta",
+          "details": 1,
+          "bodyText": "Saved-run observations\n\nSynthetic saved receipt, with no API request.\n\nSaved observations\n\nSaved receipt prefix only. Run status is separate; these counts do not establish complete job coverage or governance approval.\n\nSource preparation\nSelected sources\n2\nSources visited\n2\nSources not visited\n0\nScan complete\nYes\nSource details omitted\n0\nAll details retained\nYes\nEmpty source\n0\nUnchanged at preparation\n1\nPrepared for analysis\n1\nSnapshot errors\n0\nSource version errors\n0\nPreparation interrupted\n0\n\nPreparation counts do not verify that the source is still current.\n\nProvider calls and publication\nCalls begun\n1\nResponses returned\n1\nErrors returned\n0\nCalls interrupted\n0\nCalls in flight\n0\nItems in begun calls\n1\nItems saved\n1\nItem saves failed\n0\nItems not published\n0\nItems pending\n0\nCall details omitted\n0\nItem identities omitted\n0\nUsage writes not attempted\n0\nUsage writes succeeded\n1\nUsage writes failed\n0\nUsage write outcomes unknown\n0\nExecution marked complete\nYes\nAll details retained\nYes\nAll item identities retained\nYes\nStop reason\nNo stop recorded\nRule content identity\nContent fingerprint\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\n\nContent fingerprint only. Permissi"
+        }
+      },
+      "keyboard": {
+        "tabSummary": true,
+        "enterOpened": false,
+        "spaceClosed": false
+      },
+      "keyboardDiagnostic": {
+        "activeTag": "SUMMARY",
+        "activeText": "Saved observations",
+        "open": true,
+        "bodyText": "Saved-run observations\n\nSynthetic saved receipt, with no API request.\n\nSaved observations\n\nSaved receipt prefix only. Run status is separate; these counts do not establish complete job coverage or governance approval.\n\nSource preparation\nSelected sources\n2\nSources visited\n2\nSources not visited\n0\nScan complete\nYes\nSource details omitted\n0\nAll details retained\nYes\nEmpty source\n0\nUnchanged at preparation\n1\nPrepared for analysis\n1\nSnapshot errors\n0\nSource version errors\n0\nPreparation interrupted\n0\n\nPreparation counts do not verify that the source is still current.\n\nProvider calls and publication\nCalls begun\n1\nResponses returned\n1\nErrors returned\n0\nCalls interrupted\n0\nCalls in flight\n0\nItems in begun calls\n1\nItems saved\n1\nItem saves failed\n0\nItems not published\n0\nItems pending\n0\nCall details omitted\n0\nItem identities omitted\n0\nUsage writes not attempted\n0\nUsage writes succeeded\n1\nUsage writes failed\n0\nUsage write outcomes unknown\n0\nExecution marked complete\nYes\nAll details retained\nYes\nAll item identities retained\nYes\nStop reason\nNo stop recorded\nRule content identity\nContent fingerprint\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\n\nContent fingerprint only. Permissi"
+      }
+    }
+  ],
+  "failure": "Error: Native details keyboard check failed\n    at main (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r067_capture_ready_diagnostics_PROPOSED_2026-10-09.mjs:254:19)"
+}

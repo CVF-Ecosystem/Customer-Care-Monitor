@@ -56,7 +56,8 @@
   "reviewEvidence": [
     "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
     "docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md",
-    "docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md"
+    "docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md",
+    "docs/reviews/R067_NATIVE_KEYBOARD_PROBE_REPAIR_AND_COST_DISPOSITION_2026-10-09.md"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -107,7 +108,7 @@
     "workerUsedVisualInvocations": 1,
     "reviewerUsedVisualInvocations": 1,
     "supplementalReviewerMaxVisualInvocations": 1,
-    "supplementalReviewerUsedVisualInvocations": 0,
+    "supplementalReviewerUsedVisualInvocations": 1,
     "aggregateVisualCeilingIncludingHistory": 3
   },
   "liveEvidence": "NOT_RUN; synthetic UI structure/payload presentation only, no governance claim",
@@ -252,5 +253,7 @@
     "currentDiff": "PASS; historical241dc7d rawVite trailing-whitespace exception retained",
     "runtimeAddedDuringRequestPreparation": 0
   },
-  "additionalVisualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json"
+  "additionalVisualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
+  "correctedKeyboardVisualRequest": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json",
+  "supplementalVisualReceipt": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json"
 }

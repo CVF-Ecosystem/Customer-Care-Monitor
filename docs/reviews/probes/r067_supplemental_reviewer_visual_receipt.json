@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-09",
+  "status": "FAILED",
+  "grant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "command": [
+    "node",
+    "docs\\reviews\\probes\\r067_visual_fixture_ready_diagnostics_PROPOSED_2026-10-09.mjs"
+  ],
+  "exitCode": 1,
+  "elapsedSeconds": 5.0697867998387665,
+  "visualInvocations": 1,
+  "automaticRetries": 0,
+  "newVitestInvocations": 0,
+  "newBuildInvocations": 0,
+  "newGoInvocations": 0,
+  "tempRoot": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-visual-NrAOEg",
+  "fixtureDependencyJunctionAbsent": true,
+  "sourceUnchanged": true,
+  "artifacts": [
+    {
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_stdout.log",
+      "bytes": 0,
+      "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_stderr.log",
+      "bytes": 390,
+      "sha256Physical": "56ce5ac39a7d421b917dd85bce434522eb7ef6bf4b7c4d940e845419bd4bba63"
+    },
+    {
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_vite.log",
+      "bytes": 74,
+      "sha256Physical": "f08fbc03dd0e4980d1f3304e3ed8063b1b310a8f802eb5b9f5a94a697b7a4a88"
+    },
+    {
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_capture.log",
+      "bytes": 223,
+      "sha256Physical": "9b0a98391f287a565e936c1d9e85a5b0b24926a387aba1ba19aa42981e2d5b58"
+    },
+    {
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_screenshots_report.json",
+      "bytes": 3951,
+      "sha256Physical": "d8a63e478a5c363275ff97099137dbec2de97a80b847a7e0ceaf9b0418cb29f3"
+    }
+  ],
+  "scope": "Synthetic local component UI only; no provider/AI governance claim"
+}
