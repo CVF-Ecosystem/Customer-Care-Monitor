@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -118,6 +118,7 @@
     "CCMAI-RUNTIME-028"
   ],
   "knownLimitations": [
+    "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
     "Historical R062 closure/planning checkpoint: CCMAI-RUNTIME-062 and accepted R061 bounded local source_execution observation are FROZEN at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f / independentreview99052ab. R063 candidate DESIGN/SPEC records effective rule-input fingerprint and actual permission/version/WAIT_DATA authority gaps. R063 bounded work-order draft settles digest exposure, exact SP/EX four-line amendments, medium child/root independent roles and proposed total8Go. ORCHESTRATOR next audits seed/schema/prebuild and records formal WORK_ORDER activation before source BUILD. R060 failed packets remain historical CHANGES_REQUIRED/superseded with findings settled by R061; lineage3campaign6Go of8 and original failures unchanged, closure0Go. Full S2/global F02/live/provider/billing/governance/hosted remain OPEN; Facebook/Zalo OA parked. No implicit source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
     "Pancake live-proof packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED: tenant/page, independent inventory, quiescence, capture handling and credential/network authority outstanding. R034 offline harness REVIEW_PASS for exact repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e; synthetic CLI/receipt are not a live executor. No live execution dispatched.",
@@ -375,7 +376,7 @@
     "newGoInvocations": 0,
     "subagentCalls": 0,
     "fullS2Claim": false,
-    "nextMove": "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+    "nextMove": "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "workOrderDraft": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
     "independentReviewer": "Codex /root",
     "proposedImplementationWorker": "Codex /root/r059_worker",
@@ -389,7 +390,7 @@
       "gateUnitBasis": "46PASS52.797s inherited9042f91 unchanged tools/tests",
       "exactStagedPreflight": "Required before commit, exact7 metadata paths"
     },
-    "activeTranche": "CCMAI-RUNTIME-064",
+    "activeTranche": "CCMAI-RUNTIME-065",
     "workerModel": {
       "model": "gpt-6.1-sol",
       "reasoningEffort": "medium"
@@ -450,7 +451,7 @@
     "policyEnforcement": false,
     "governanceClaim": false,
     "fullS2Claim": false,
-    "nextMove": "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+    "nextMove": "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "independentReview": "docs/reviews/R063_INDEPENDENT_RULE_OBSERVATION_REVIEW_2026-10-08.md",
     "independentReviewCommit": "3f0764b4d716d5eaed9c12b94f2d25114932173c",
     "independentReceipt": "docs/reviews/probes/r063_independent_summary.json",
@@ -464,5 +465,18 @@
     "closureAuthorityCommit": "0b97c05330eb0f3a5662591766c8165c3f1e1c2f",
     "closureNewGoInvocations": 0,
     "closureReport": "docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md"
+  },
+  "usageCostObservation": {
+    "tranche": "CCMAI-RUNTIME-065",
+    "status": "DISPATCH_READY",
+    "sourceImplementation": "NOT_STARTED",
+    "r2IndependentAcceptance": "NOT_ESTABLISHED",
+    "spec": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
+    "newSourceEdits": 0,
+    "newGoInvocations": 0,
+    "nextMove": "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
+    "fullS2Claim": false,
+    "fullS3Claim": false,
+    "governanceClaim": false
   }
 }

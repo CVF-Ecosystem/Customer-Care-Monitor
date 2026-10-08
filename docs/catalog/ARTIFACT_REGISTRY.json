@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R064 scoped local rule observation closure; accepted R063 FROZEN,8Go exhausted, original receipt loss limitation retained."
+      "description": "Active R065 complete bounded usage/cost delivery WORK_ORDER; medium child implementation/root independent review and local closure."
     },
     {
       "id": "r060-work-order",
@@ -3027,6 +3027,27 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-065.json",
       "status": "ACTIVE",
       "description": "Original R065 end-to-end seed: medium child source/root independent review and conditional local closure, fresh bounded8Go."
+    },
+    {
+      "id": "evidence-r065-activation-prior-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical R064 local rule observation closure, old8Go and receipt limits retained."
+    },
+    {
+      "id": "evidence-r065-activation-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-065.json",
+      "status": "ACTIVE",
+      "description": "R065 end-to-end bounded source/proof/review/closure record, fresh max8Go."
+    },
+    {
+      "id": "evidence-r065-activation-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_065.md",
+      "status": "ACTIVE",
+      "description": "R065 complete delivery UO01..12, no old test edits; independent root review before conditional local closure."
     }
   ]
 }

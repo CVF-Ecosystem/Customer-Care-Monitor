@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,25 +12,23 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; independent source review retained, child historical source author",
-  "roleRoute": "OWNER_AUTHORIZED_ROOT_METADATA_CLOSURE_INHERITING_INDEPENDENT_CHILD_SOURCE_REVIEW",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / metadata COMMIT_STEWARD; Codex /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD awaiting acknowledgment; root independent REVIEWER / CLOSER",
+  "roleRoute": "OWNER_AUTHORIZED_COMPLETE_R065_MEDIUM_CHILD_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE",
   "updatedAt": "2026-10-08",
   "currentExecutionBudget": {
     "workerMaxCampaigns": 1,
     "workerMaxGoInvocations": 4,
-    "workerUsedCampaigns": 1,
-    "workerUsedGoInvocations": 4,
     "reviewerMaxCampaigns": 1,
     "reviewerMaxGoInvocations": 4,
-    "reviewerUsedCampaigns": 1,
-    "reviewerUsedGoInvocations": 4,
     "aggregateMaxCampaigns": 2,
     "aggregateMaxGoInvocations": 8,
-    "closureNewCampaigns": 0,
-    "closureNewGoInvocations": 0
+    "workerUsedCampaigns": 0,
+    "workerUsedGoInvocations": 0,
+    "reviewerUsedCampaigns": 0,
+    "reviewerUsedGoInvocations": 0
   },
   "previousExecutionBudget": {
     "reviewerMaxCampaigns": 1,
@@ -62,6 +60,48 @@
     "priorR059UsedGoInvocations": 0
   },
   "candidatePlanning": {
+    "id": "R065",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
+    "sourceOrRuntimeDispatched": false,
+    "sourceImplementation": "NOT_STARTED",
+    "newGoInvocations": 0
+  },
+  "r061RetainedExecutionBudget": {
+    "workerMaxCampaigns": 0,
+    "workerMaxGoInvocations": 0,
+    "workerUsedCampaigns": 0,
+    "workerUsedGoInvocations": 0,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoInvocations": 4,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 4,
+    "lineagePriorUsedCampaigns": 2,
+    "lineagePriorUsedGoInvocations": 2,
+    "lineageMaxCampaigns": 3,
+    "lineageMaxGoInvocations": 8,
+    "lineagePlannedTotalGoInvocations": 6,
+    "lineageUsedCampaigns": 3,
+    "lineageUsedGoInvocations": 6,
+    "closureNewCampaigns": 0,
+    "closureNewGoInvocations": 0
+  },
+  "historicalSourceRoleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW",
+  "r063RetainedExecutionBudget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxGoInvocations": 4,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 4,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoInvocations": 4,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 4,
+    "aggregateMaxCampaigns": 2,
+    "aggregateMaxGoInvocations": 8,
+    "closureNewCampaigns": 0,
+    "closureNewGoInvocations": 0
+  },
+  "historicalR063CandidatePlanning": {
     "id": "R063",
     "artifact": "docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md",
     "status": "FROZEN",
@@ -91,25 +131,5 @@
     },
     "sourceImplementation": "COMMITTED_FROZEN"
   },
-  "r061RetainedExecutionBudget": {
-    "workerMaxCampaigns": 0,
-    "workerMaxGoInvocations": 0,
-    "workerUsedCampaigns": 0,
-    "workerUsedGoInvocations": 0,
-    "reviewerMaxCampaigns": 1,
-    "reviewerMaxGoInvocations": 4,
-    "reviewerUsedCampaigns": 1,
-    "reviewerUsedGoInvocations": 4,
-    "lineagePriorUsedCampaigns": 2,
-    "lineagePriorUsedGoInvocations": 2,
-    "lineageMaxCampaigns": 3,
-    "lineageMaxGoInvocations": 8,
-    "lineagePlannedTotalGoInvocations": 6,
-    "lineageUsedCampaigns": 3,
-    "lineageUsedGoInvocations": 6,
-    "closureNewCampaigns": 0,
-    "closureNewGoInvocations": 0
-  },
-  "closureAuthority": "CCMAI-RUNTIME-064",
-  "historicalSourceRoleRoute": "OWNER_AUTHORIZED_CHILD_MEDIUM_BUILD_ROOT_INDEPENDENT_REVIEW"
+  "historicalClosureAuthority": "CCMAI-RUNTIME-064"
 }
