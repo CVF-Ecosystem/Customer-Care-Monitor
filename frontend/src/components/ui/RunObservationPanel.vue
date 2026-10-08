@@ -29,12 +29,13 @@ import { projectRunObservation, type RunObservationContext } from '../../views/J
 const props = defineProps<{ summary: string; context: RunObservationContext }>()
 const { t } = useI18n()
 const sections = computed(() => Object.entries(projectRunObservation(props.summary, props.context)).map(([key, observation]) => ({ key, observation })))
-function display(value: number | string | boolean | null, key: string): string {
+function display(value: number | string | boolean | null, key: string | number): string {
+  const field = String(key)
   // UNKNOWN_RENDER_GUARD: preserve unavailable totals, including unknown prices.
   if (value === null) return t('run_obs_unknown')
   if (typeof value === 'boolean') return t(value ? 'run_obs_yes' : 'run_obs_no')
-  if (key === 'stop_reason') return t(`run_obs_stop_${value}`)
-  if (key === 'local_estimate_usd') return `${value} USD`
+  if (field === 'stop_reason') return t(`run_obs_stop_${value}`)
+  if (field === 'local_estimate_usd') return `${value} USD`
   return String(value)
 }
 </script>

@@ -213,13 +213,13 @@ function execution(value: unknown, context: RunObservationContext): ObservationS
       retained.omittedMembers > totals.omitted_members ||
       !atMost(retained.usageWrites, writes) || !atMost(retained.parsing, parses)) return unavailable()
 
-  const retainedInvocations = {
+  const retainedInvocations: Record<string, number> = {
     response_returned: retained.responses,
     error_returned: retained.errors,
     interrupted: retained.interrupted,
     in_flight: retained.inFlight,
   }
-  const retainedItems = {
+  const retainedItems: Record<string, number> = {
     items_saved: retained.saved,
     items_save_failed: retained.saveFailed,
     items_not_published: retained.notPublished,
@@ -263,17 +263,23 @@ function usage(value: unknown, observedExecution: ObservationSection): Observati
       value.token_basis !== 'INTERFACE_VALUES_PRESENCE_UNAVAILABLE' || value.billing !== 'NOT_OBSERVED' || value.price_revision !== 'NOT_CAPTURED') return unavailable()
 
   const numericFields = ['responses', 'invalid_tokens', 'priced', 'unpriced', 'invalid_costs']
+  const tokenOverflow = value.token_overflow
+  const costOverflow = value.cost_overflow
+  const counterOverflow = value.counter_overflow
+  const tokensCompleteFlag = value.tokens_complete
+  const costCompleteFlag = value.cost_complete
   if (numericFields.some(key => !count(value[key])) ||
-      ['token_overflow', 'cost_overflow', 'counter_overflow', 'tokens_complete', 'cost_complete'].some(key => typeof value[key] !== 'boolean')) return unavailable()
+      typeof tokenOverflow !== 'boolean' || typeof costOverflow !== 'boolean' || typeof counterOverflow !== 'boolean' ||
+      typeof tokensCompleteFlag !== 'boolean' || typeof costCompleteFlag !== 'boolean') return unavailable()
   const numbers = Object.fromEntries(numericFields.map(key => [key, value[key] as number])) as Record<string, number>
   const callsBegun = observedExecution.values.calls_begun as number
   const responsesReturned = observedExecution.values.response_returned as number
   if (numbers.responses > responsesReturned || sum([numbers.priced, numbers.unpriced]) !== numbers.responses ||
       numbers.invalid_tokens > numbers.responses || numbers.invalid_costs > numbers.priced) return unavailable()
 
-  const tokensComplete = callsBegun > 0 && numbers.responses === callsBegun && numbers.invalid_tokens === 0 && !value.token_overflow && !value.counter_overflow
-  const costComplete = tokensComplete && numbers.unpriced === 0 && numbers.priced === numbers.responses && numbers.invalid_costs === 0 && !value.cost_overflow
-  if (value.tokens_complete !== tokensComplete || value.cost_complete !== costComplete ||
+  const tokensComplete = callsBegun > 0 && numbers.responses === callsBegun && numbers.invalid_tokens === 0 && !tokenOverflow && !counterOverflow
+  const costComplete = tokensComplete && numbers.unpriced === 0 && numbers.priced === numbers.responses && numbers.invalid_costs === 0 && !costOverflow
+  if (tokensCompleteFlag !== tokensComplete || costCompleteFlag !== costComplete ||
       (tokensComplete ? !count(value.input_tokens) || !count(value.output_tokens) : value.input_tokens !== null || value.output_tokens !== null) ||
       (costComplete ? typeof value.local_estimate_usd !== 'number' || !Number.isFinite(value.local_estimate_usd) || value.local_estimate_usd < 0 : value.local_estimate_usd !== null)) return unavailable()
 
@@ -285,9 +291,9 @@ function usage(value: unknown, observedExecution: ObservationSection): Observati
     local_estimate_usd: value.local_estimate_usd as number | null,
     tokens_complete: tokensComplete,
     cost_complete: costComplete,
-    token_overflow: value.token_overflow,
-    cost_overflow: value.cost_overflow,
-    counter_overflow: value.counter_overflow,
+    token_overflow: tokenOverflow,
+    cost_overflow: costOverflow,
+    counter_overflow: counterOverflow,
   } }
 }
 

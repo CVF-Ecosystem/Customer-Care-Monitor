@@ -69,7 +69,6 @@ function summary(overrides: Record<string, unknown> = {}): string {
   return JSON.stringify({ source_preparation: preparation(), source_execution: execution(), rule_observation: rules(), ...overrides })
 }
 
-function clone<T>(value: T): T { return JSON.parse(JSON.stringify(value)) as T }
 function project(value: string, runContext = context) { return projectRunObservation(value, runContext) }
 
 describe('saved-run observation projection', () => {

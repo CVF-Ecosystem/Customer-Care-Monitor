@@ -1,6 +1,6 @@
 // Isolated saved-run UI screenshot fixture. It does not start the CCMA app or call an API.
 import { spawn } from 'node:child_process'
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
+import { existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmdirSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -20,7 +20,9 @@ const tempRoot = mkdtempSync(join(tmpdir(), 'ccmai-r067-visual-'))
 const fixtureRoot = join(tempRoot, 'fixture')
 const screenshotRoot = join(tempRoot, 'screenshots')
 const configPath = join(fixtureRoot, 'vite.config.mjs')
+const fixtureNodeModules = join(fixtureRoot, 'node_modules')
 const csp = "default-src 'none'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' ws://127.0.0.1:*; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'"
+let fixtureJunctionCreated = false
 
 function assertLocalPrerequisites() {
   for (const path of [modules, component, helperDir, localeDir, screenshots]) {
@@ -33,7 +35,8 @@ function safeJson(value) { return JSON.stringify(value) }
 function writeFixture() {
   mkdirSync(fixtureRoot, { recursive: true })
   mkdirSync(screenshotRoot, { recursive: true })
-  symlinkSync(modules, join(fixtureRoot, 'node_modules'), 'junction')
+  symlinkSync(modules, fixtureNodeModules, 'junction')
+  fixtureJunctionCreated = true
 
   const componentPath = `/@fs/${encodeURI(component.replaceAll('\\', '/'))}`
   const enPath = `/@fs/${encodeURI(join(localeDir, 'en.ts').replaceAll('\\', '/'))}`
@@ -146,19 +149,53 @@ async function waitForFixture(url, process) {
   throw new Error('Loopback fixture did not become ready')
 }
 
+function waitForExit(child, label, timeoutMs = 5000) {
+  if (!child || child.exitCode !== null || child.signalCode !== null) return Promise.resolve()
+  return new Promise((resolveExit, reject) => {
+    const onExit = () => {
+      clearTimeout(timeout)
+      resolveExit()
+    }
+    const timeout = setTimeout(() => {
+      child.removeListener('exit', onExit)
+      reject(new Error(`${label} process did not exit within ${timeoutMs}ms`))
+    }, timeoutMs)
+    child.once('exit', onExit)
+  })
+}
+
+async function stopAndVerifyExit(child, label) {
+  if (!child || child.exitCode !== null || child.signalCode !== null) return
+  const exited = waitForExit(child, label)
+  child.kill()
+  await exited
+}
+
+function removeVerifiedFixtureJunction() {
+  if (!fixtureJunctionCreated) return
+  const stats = lstatSync(fixtureNodeModules)
+  if (!stats.isSymbolicLink()) throw new Error('Fixture node_modules path is no longer a symbolic link; leaving it untouched')
+  const expectedTarget = realpathSync(modules).toLowerCase()
+  const actualTarget = realpathSync(fixtureNodeModules).toLowerCase()
+  if (actualTarget !== expectedTarget) throw new Error('Fixture node_modules junction target changed; leaving it untouched')
+  rmdirSync(fixtureNodeModules)
+  fixtureJunctionCreated = false
+}
+
 async function main() {
   assertLocalPrerequisites()
-  writeFixture()
-  const port = await allocatePort()
-  const vite = join(modules, 'vite/bin/vite.js')
-  const node = process.execPath
-  const server = spawn(node, [vite, '--config', configPath, '--host', '127.0.0.1', '--port', String(port), '--strictPort'], {
-    cwd: fixtureRoot, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true,
-  })
-  let serverOutput = ''
-  server.stdout.on('data', chunk => { serverOutput += chunk.toString() })
-  server.stderr.on('data', chunk => { serverOutput += chunk.toString() })
+  let server
   try {
+    writeFixture()
+    const port = await allocatePort()
+    const vite = join(modules, 'vite/bin/vite.js')
+    const node = process.execPath
+    server = spawn(node, [vite, '--config', configPath, '--host', '127.0.0.1', '--port', String(port), '--strictPort'], {
+      cwd: fixtureRoot, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true,
+    })
+    let serverOutput = ''
+    server.stdout.on('data', chunk => { serverOutput += chunk.toString() })
+    server.stderr.on('data', chunk => { serverOutput += chunk.toString() })
     const base = `http://127.0.0.1:${port}`
     await waitForFixture(`${base}/en`, server)
     const localAppData = process.env.LOCALAPPDATA ?? ''
@@ -184,8 +221,8 @@ async function main() {
     }
     console.log(JSON.stringify({ status: 'PASS', pages: report.pages.length, locales: ['en', 'vi'], viewports: ['desktop', 'mobile'], externalRequests: report.summary.externalRequests, artifacts: screenshotRoot, logs: tempRoot }))
   } finally {
-    server.kill()
-    await delay(300)
+    await stopAndVerifyExit(server, 'Vite')
+    removeVerifiedFixtureJunction()
   }
 }
 
