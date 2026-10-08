@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / metadata COMMIT_STEWARD; Codex /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD awaiting acknowledgment; root independent REVIEWER / CLOSER
-- Next allowed move: CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / CLOSER
+- Next allowed move: CCMAI-RUNTIME-065 BUILD / BUILD: medium child /root/r065_worker acknowledged exact five backend paths before editing; next commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-action dispatcher acknowledgment
@@ -24,3 +24,7 @@ Fresh worker1/4 + root1/4 max2campaign8Go, no hidden build/vet/exploratory calls
 ## Completion boundary
 
 Only local UO01..12. Root independent actual campaign/source REVIEW required before CLOSER FREEZE; all artifacts/checks synchronized and committed first. Full S2/S3/global F02/permission-policy/WAIT_DATA/real provider/billing/live/hosted remain open; Facebook/Zalo OA parked. No source/runtime authority after scoped completion without new work order.
+
+## Worker before-edit BUILD acknowledgment
+
+2026-10-08 medium child /root/r065_worker freshly rehydrated canonical manifest/policy/state/memory/handoff/implementation/index and R065 SPEC/order/immutable seed; doctor PASS WITH NOTE25/1 at core8a4119e; BOOTSTRAP_MIGRATION_PENDING. Role IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD R2. Exact five backend paths, no old test/seed edits, fresh worker1/4 root1/4 budget, source/Go0 before this acknowledgment. Root static source/test/runner review mandatory before Go; root independent REVIEW and conditional local FREEZE. Applicable repair/UUID/prefix/publication/cleanup learnings read.

@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-065", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-065", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R065 complete bounded usage/cost delivery (2026-10-08)
 
-CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-065 BUILD / BUILD: medium child /root/r065_worker acknowledged exact five backend paths before editing; next commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.
 
 Root continues the authorized batch to independent review and conditional local closure; no checkpoint permission waits. Source worker medium, root review independent.
 

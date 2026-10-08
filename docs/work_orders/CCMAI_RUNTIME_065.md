@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-065 — Complete bounded usage/cost observation delivery
 
-Status: DISPATCH_READY
+Status: BUILD
 
 Date 2026-10-08. Risk R2. Original dispatcher seed `fc63683b0c435cf157785a20ef7a420d44706825` precedes activation. [SPEC UO01..12](../reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md) incorporated exactly. Scope nested source_execution.usage_observation aggregate only; two existing CalculateCost observation hooks, existing calls/logs/query/schema/behavior unchanged. Only analyzer.go, source_execution_receipt.go and three NEW usage_observation receipt/test files; every old test and old packet/seed byte unchanged.
 

@@ -55,15 +55,16 @@
   "claimScope": "Only bounded local successful-interface usage/cost observation UO01..12; no token-presence/billing/pricing-version/provider/governance enforcement proof. Existing effects preserved.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "fc63683b0c435cf157785a20ef7a420d44706825",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -78,7 +79,7 @@
     "model": "gpt-6.1-sol",
     "reasoningEffort": "medium"
   },
-  "sourceImplementation": "NOT_STARTED",
+  "sourceImplementation": "AUTHORIZED_BEFORE_EDIT",
   "liveEvidence": "NOT_RUN; synthetic local application observation only, no CVF governance claim",
   "executionBudget": {
     "workerMaxCampaigns": 1,
@@ -110,5 +111,6 @@
     "catalogPS7": "PASS",
     "docs": "PASS20.26s final activation",
     "sourceGo": 0
-  }
+  },
+  "workerAcknowledgment": "2026-10-08 medium child /root/r065_worker freshly rehydrated canonical manifest/policy/state/memory/handoff/implementation/index and R065 SPEC/order/immutable seed; doctor PASS WITH NOTE25/1 at core8a4119e; BOOTSTRAP_MIGRATION_PENDING. Role IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD R2. Exact five backend paths, no old test/seed edits, fresh worker1/4 root1/4 budget, source/Go0 before this acknowledgment. Root static source/test/runner review mandatory before Go; root independent REVIEW and conditional local FREEZE. Applicable repair/UUID/prefix/publication/cleanup learnings read."
 }
