@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER then CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; child /root/r065_worker source author and completed BUILD COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-065 REVIEW_PENDING / REVIEW at child source72e4c367707d262e45ed9f36164d3e471a4d04b4 and committed worker exact-source PASS:81top269PASS, M01/M02 named kills with healthy contrasts, restored16top73PASS;216member restoration/secondarchive and cleanup verified. Root independent REVIEWER next runs separately authorized one4Go campaign and evaluates exact source/UO01..12 for formal REVIEW, then CLOSER scoped local FREEZE only when all checks/artifacts settle under this end-to-end seed. Worker1campaign4Go exhausted; root0/4, aggregate4/max8 fresh R065. R063/R064 exhausted8Go and original receipt loss limits preserved. Full S2/S3/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No extra source/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active role: Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD after independent REVIEW_PASS; child /root/r065_worker immutable source author
+- Next allowed move: CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-action dispatcher acknowledgment
@@ -40,3 +40,11 @@ Independent root static PASS exact source72e4c36/plan012f083 before first worker
 ## Root direct current-routing repair
 
 Root consolidated current nested routing audit found ownerRouting still dispatching historical R060 with0/8 budget. R1 direct SESSION_SYNC_STEWARD repair before own campaign: preserve full historicalPreR065RoutingSnapshot, route current ownerObjective/workorder/budget/source to canonical R065 REVIEW. No source/oldpacket/acceptance change; current prose/nested nextMove checked. Portable continuity gate alone did not detect stale ownerRouting.
+
+## Independent formal REVIEW and scoped local FREEZE
+
+2026-10-08 fresh canonical rehydration after actual root campaign/full independent audit; formal REVIEW_PASS UO01..12 then CLOSER/SESSION_SYNC_STEWARD/metadata COMMIT_STEWARD for only R065 local FREEZE under original seed. No source/test edit/open scoped finding/missing runtime artifact; publication checks must pass before closure commit.
+
+CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+
+[Formal review and closure](../../docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md). Original R065 raw packet intact; no R063 evidence rewrite.

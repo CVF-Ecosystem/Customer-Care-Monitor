@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "Active R065 REVIEW; committed medium child application proof, root independent campaign and conditional local closure pending."
+      "description": "Active R065 local usage/cost FREEZE after independent root review; broader S2/S3/live/governance/hosted OPEN."
     },
     {
       "id": "r060-work-order",
@@ -3229,21 +3229,189 @@
       "family": "continuity",
       "path": "docs/reviews/probes/r065_independent_campaign.py",
       "status": "ACTIVE",
-      "description": "Independent exact-source usage/cost review preparation; committed inventory/mutations/protected physical files before own campaign, no runtime outcome yet."
+      "description": "Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review."
     },
     {
       "id": "evidence-r065-review-proof-plan-json",
       "family": "continuity",
       "path": "docs/reviews/probes/r065_independent_plan.json",
       "status": "ACTIVE",
-      "description": "Independent exact-source usage/cost review preparation; committed inventory/mutations/protected physical files before own campaign, no runtime outcome yet."
+      "description": "Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review."
     },
     {
       "id": "evidence-r065-review-proof-protected-json",
       "family": "continuity",
       "path": "docs/reviews/probes/r065_independent_protected.json",
       "status": "ACTIVE",
-      "description": "Independent exact-source usage/cost review preparation; committed inventory/mutations/protected physical files before own campaign, no runtime outcome yet."
+      "description": "Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review."
+    },
+    {
+      "id": "evidence-r065-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_manifest.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_manifest.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-mutation1-diff-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_mutation1_diff.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-mutation2-diff-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_mutation2_diff.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-publication-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_publication.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
     }
   ]
 }

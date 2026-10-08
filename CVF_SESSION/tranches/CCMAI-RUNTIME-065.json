@@ -55,17 +55,23 @@
   "claimScope": "Only bounded local successful-interface usage/cost observation UO01..12; no token-presence/billing/pricing-version/provider/governance enforcement proof. Existing effects preserved.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "fc63683b0c435cf157785a20ef7a420d44706825",
   "buildCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
-  "reviewEvidence": [],
-  "disposition": "PENDING",
-  "freeze": "OPEN",
+  "reviewEvidence": [
+    "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md",
+    "docs/reviews/probes/r065_independent_summary.json",
+    "docs/reviews/probes/r065_independent_publication.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -80,7 +86,7 @@
     "model": "gpt-6.1-sol",
     "reasoningEffort": "medium"
   },
-  "sourceImplementation": "COMMITTED_WORKER_CAMPAIGN_PASS_INDEPENDENT_REVIEW_PENDING",
+  "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
   "liveEvidence": "NOT_RUN; synthetic local application observation only, no CVF governance claim",
   "executionBudget": {
     "workerMaxCampaigns": 1,
@@ -91,8 +97,8 @@
     "aggregateMaxGoInvocations": 8,
     "workerUsedCampaigns": 1,
     "workerUsedGoInvocations": 4,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedGoInvocations": 0
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoInvocations": 4
   },
   "contractPublicationChecks": {
     "default": "PASS7/7",
@@ -178,5 +184,38 @@
     "gateUnits": "Fresh46PASS36.636s inherited unchanged scripts/tests",
     "protected": "621physicalfiles unchanged:old590+source+workerpacket+seed",
     "runtimeRootGo": 0
+  },
+  "closer": "Codex /root",
+  "independentReceipt": "docs/reviews/probes/r065_independent_summary.json",
+  "closureReport": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md",
+  "openScopedFindings": [],
+  "closureNewGoInvocations": 0,
+  "closureNewCampaigns": 0,
+  "independentRuntime": {
+    "campaigns": 1,
+    "goInvocations": 4,
+    "positiveTopLevel": 69,
+    "positivePassEvents": 225,
+    "restoredTopLevel": 16,
+    "restoredPassEvents": 73,
+    "mutations": "M01_M02_NAMED_SEMANTIC_KILLS_WITH_HEALTHY_CONTROLS",
+    "rawProvenance": "ORIGINAL_ACTUAL_RUNNER_OUTPUT"
+  },
+  "closureRoleTransition": "2026-10-08 fresh canonical rehydration after actual root campaign/full independent audit; formal REVIEW_PASS UO01..12 then CLOSER/SESSION_SYNC_STEWARD/metadata COMMIT_STEWARD for only R065 local FREEZE under original seed. No source/test edit/open scoped finding/missing runtime artifact; publication checks must pass before closure commit.",
+  "retainedClosurePublicationFailures": [
+    "Final docs build failed16.56s: root newly appended learning link used ../reviews/ from reviews/learnings, producing a dead link. R1 reviewer direct repair to ../R065... before closure; no source/runtime/raw evidence change, no disabling dead-link check."
+  ],
+  "closurePublicationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "exactStaged": "PASS7/7 exact35review-and-closurepaths",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS36.96s after final corrected Markdown; original16.56s dead-link failure retained",
+    "gateUnits": "Fresh root46PASS36.636s inherited, scripts/tests remain physically unchanged",
+    "protected": "621physicalfiles unchanged, old590+source+workerpacket+seed",
+    "gitLFRefs": "22stagedGitblob hashes PASS,2actual mutation diffs verified",
+    "runtime": "worker1/4+root1/4=2campaign8/8Go; no retries/extraGo",
+    "nestedContinuity": "marker/state/currentprose/handoff/record/order/implementation nested statuses/routing/budgets/nextmove PASS"
   }
 }

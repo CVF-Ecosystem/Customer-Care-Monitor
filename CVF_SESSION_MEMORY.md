@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-065", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-065", "parked": true} -->
 
 ## Startup Order
 
@@ -57,9 +57,9 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R065 complete bounded usage/cost delivery (2026-10-08)
 
-CCMAI-RUNTIME-065 REVIEW_PENDING / REVIEW at child source72e4c367707d262e45ed9f36164d3e471a4d04b4 and committed worker exact-source PASS:81top269PASS, M01/M02 named kills with healthy contrasts, restored16top73PASS;216member restoration/secondarchive and cleanup verified. Root independent REVIEWER next runs separately authorized one4Go campaign and evaluates exact source/UO01..12 for formal REVIEW, then CLOSER scoped local FREEZE only when all checks/artifacts settle under this end-to-end seed. Worker1campaign4Go exhausted; root0/4, aggregate4/max8 fresh R065. R063/R064 exhausted8Go and original receipt loss limits preserved. Full S2/S3/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No extra source/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 
-Root continues the authorized batch to independent review and conditional local closure; no checkpoint permission waits. Source worker medium, root review independent.
+[Independent review and local closure](docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md). Root completes authorized batch; metadata repairs direct; source author/reviewer independent.
 
 ## Historical R064 bounded local rule-input observation closure (2026-10-08)
 

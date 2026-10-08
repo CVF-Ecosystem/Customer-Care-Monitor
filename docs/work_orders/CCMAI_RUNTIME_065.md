@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-065 — Complete bounded usage/cost observation delivery
 
-Status: REVIEW_PENDING
+Status: FROZEN
 
 Date 2026-10-08. Risk R2. Original dispatcher seed `fc63683b0c435cf157785a20ef7a420d44706825` precedes activation. [SPEC UO01..12](../reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md) incorporated exactly. Scope nested source_execution.usage_observation aggregate only; two existing CalculateCost observation hooks, existing calls/logs/query/schema/behavior unchanged. Only analyzer.go, source_execution_receipt.go and three NEW usage_observation receipt/test files; every old test and old packet/seed byte unchanged.
 
@@ -11,3 +11,7 @@ Fresh max2campaign8Go, worker1/4 and independent root1/4: grouped positives, nam
 Root executes own bounded independent campaign after worker handback and audits exact-source/full manifests/old-byte protection/raw inspect-exits/cleanup. Formal REVIEW precedes conditional local FREEZE for R065 only under the same seed. No open scoped findings, failing checks or missing artifacts at closure. Required default/PR/exact staged gates, unit gate tests (fresh46PASS36.636s inheritable unchanged tooling), catalogPS5.1/7, diff/protection and docs after final Markdown. Minor metadata root repairs; no worker seed edits. Raw receipt publication uses distinct explicit write paths/backups/typed validation and separate physical/Git LF domains.
 
 No full S2/S3/global F02, actual usage presence/billing/pricing-version/CVF governance/hosted claim, provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy or other-tranche freeze. Facebook/Zalo OA parked. No extra source/runtime authority after completion.
+
+## Completed bounded delivery
+
+[Independent review and local closure](../reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md) settles UO01..12 after child source72e4c36 and own root campaign. Worker4/root4, total8/8Go; closure0Go. Only local R065 observation FROZEN; broader/live/billing/governance/hosted requirements and parked accounts retained. Final publication checks required before closure commit.

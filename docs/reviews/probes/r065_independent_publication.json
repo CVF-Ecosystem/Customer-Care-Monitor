@@ -1,0 +1,169 @@
+{
+  "scope": "bounded_local_application_usage_observation_only",
+  "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+  "planCommit": "55272c867501ef94b555cc2a64aa7b857f88843e",
+  "workerHandbackCommit": "38cb04ec63877ceec9cb923639f126ae5c5a146f",
+  "rawProvenance": "ORIGINAL_ACTUAL_RUNNER_OUTPUT_NOT_RECONSTRUCTED",
+  "rawBackupDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-independent-packet-backup-2k1xhja4",
+  "originalSummaryBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-independent-original-86e8bc60b8.json",
+  "protectedPhysicalFiles": 621,
+  "oldProtectedCount": 590,
+  "sourceBackendUnchanged": true,
+  "seedImmutable": true,
+  "rawReferences": [
+    {
+      "path": "docs/reviews/probes/r065_independent_m01.jsonl",
+      "bytes": 2548,
+      "physicalSha256": "9d5c6e8856d404e5bacf4b43a8c611449526954919bc422b96d3261b9d2a770f",
+      "gitLFSha256": "9d5c6e8856d404e5bacf4b43a8c611449526954919bc422b96d3261b9d2a770f"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m01_container_after.json",
+      "bytes": 7571,
+      "physicalSha256": "9bc49de4f61e2d8d56141b782fd115edc3c0b1ba7481155018c8ce065307a882",
+      "gitLFSha256": "9bc49de4f61e2d8d56141b782fd115edc3c0b1ba7481155018c8ce065307a882"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m01_container_before.json",
+      "bytes": 6946,
+      "physicalSha256": "0e4b2016e277f9f4599adf542223e571abf7f8115170e2ba5889872b9bc52964",
+      "gitLFSha256": "0e4b2016e277f9f4599adf542223e571abf7f8115170e2ba5889872b9bc52964"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m01_manifest.json",
+      "bytes": 34891,
+      "physicalSha256": "39f328864424271ba647982cd52efe62564320f48817fe5c509d88d68a25eed1",
+      "gitLFSha256": "39f328864424271ba647982cd52efe62564320f48817fe5c509d88d68a25eed1"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m01_stderr.log",
+      "bytes": 0,
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitLFSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m02.jsonl",
+      "bytes": 563504,
+      "physicalSha256": "932da323c2b77ce8fa7731c7cfc77ba52522589eb3672bd076900c9b9833d285",
+      "gitLFSha256": "932da323c2b77ce8fa7731c7cfc77ba52522589eb3672bd076900c9b9833d285"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m02_container_after.json",
+      "bytes": 7545,
+      "physicalSha256": "ca5fb23bd06d0d9f98e3dc35d49cef66bb588820dbe80fa392268ff65c3ba882",
+      "gitLFSha256": "ca5fb23bd06d0d9f98e3dc35d49cef66bb588820dbe80fa392268ff65c3ba882"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m02_container_before.json",
+      "bytes": 6920,
+      "physicalSha256": "d2ffbc9176a1719f6b266adcffdb63c98687981364e18b9523ffb22b00a53168",
+      "gitLFSha256": "d2ffbc9176a1719f6b266adcffdb63c98687981364e18b9523ffb22b00a53168"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m02_manifest.json",
+      "bytes": 34891,
+      "physicalSha256": "0196657e53ed6d65041c3439cd5082f8b954f03813479549cff2a3bc8fd78ef1",
+      "gitLFSha256": "0196657e53ed6d65041c3439cd5082f8b954f03813479549cff2a3bc8fd78ef1"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_m02_stderr.log",
+      "bytes": 0,
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitLFSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_manifest.json",
+      "bytes": 34891,
+      "physicalSha256": "06928042b34fa4e7e2b3daf7d1be653f58eb5b491f02a9c115df7d923a7563ef",
+      "gitLFSha256": "06928042b34fa4e7e2b3daf7d1be653f58eb5b491f02a9c115df7d923a7563ef"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_mutation1_diff.json",
+      "bytes": 499,
+      "physicalSha256": "6c4a7e39efc4c6d05b6cca5ca1385865355620ff485fd9e403ce59d691d9b870",
+      "gitLFSha256": "6c4a7e39efc4c6d05b6cca5ca1385865355620ff485fd9e403ce59d691d9b870"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_mutation2_diff.json",
+      "bytes": 1311,
+      "physicalSha256": "cb7e1891b41372794e5c19d3515c4c4557f236ba8de22d9e66169351f729a1c4",
+      "gitLFSha256": "cb7e1891b41372794e5c19d3515c4c4557f236ba8de22d9e66169351f729a1c4"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_positive.jsonl",
+      "bytes": 46088500,
+      "physicalSha256": "4d25d411e2808ffe30b60d0bd992abce402136ff8f4e6d00910f9057584cf209",
+      "gitLFSha256": "4d25d411e2808ffe30b60d0bd992abce402136ff8f4e6d00910f9057584cf209"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_positive_container_after.json",
+      "bytes": 7568,
+      "physicalSha256": "bb18afeb0fd00b5abc5a532af50a439314c733ae652e106fbce144cc347ff7ce",
+      "gitLFSha256": "bb18afeb0fd00b5abc5a532af50a439314c733ae652e106fbce144cc347ff7ce"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_positive_container_before.json",
+      "bytes": 6939,
+      "physicalSha256": "1bdd83134e363f1e82c0b400b7f49139b405d7d701e2876f9d2cd6caf24147f5",
+      "gitLFSha256": "1bdd83134e363f1e82c0b400b7f49139b405d7d701e2876f9d2cd6caf24147f5"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_positive_stderr.log",
+      "bytes": 0,
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitLFSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_restored.jsonl",
+      "bytes": 12926018,
+      "physicalSha256": "330230d28586632ee4bf6e3157a3051e7c00e09852d3303b9174585990f56b27",
+      "gitLFSha256": "330230d28586632ee4bf6e3157a3051e7c00e09852d3303b9174585990f56b27"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_restored_container_after.json",
+      "bytes": 7483,
+      "physicalSha256": "c8c91370d8e4bcfd8faea4b93dc24d3433ff9f27204852b5bf425828f8d20a90",
+      "gitLFSha256": "c8c91370d8e4bcfd8faea4b93dc24d3433ff9f27204852b5bf425828f8d20a90"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_restored_container_before.json",
+      "bytes": 6853,
+      "physicalSha256": "1b0b69e97f34e520bded8a881d45bc35d6d47a93be79d94cb32bfc80dabc6f8d",
+      "gitLFSha256": "1b0b69e97f34e520bded8a881d45bc35d6d47a93be79d94cb32bfc80dabc6f8d"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_restored_stderr.log",
+      "bytes": 0,
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitLFSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r065_independent_summary.json",
+      "bytes": 70694,
+      "physicalSha256": "f25e2722eeaf54b853c4aa57896c1eb9a96ad7e70a95882a9d6f19a706e12e75",
+      "gitLFSha256": "f25e2722eeaf54b853c4aa57896c1eb9a96ad7e70a95882a9d6f19a706e12e75"
+    }
+  ],
+  "workerGo": 4,
+  "rootGo": 4,
+  "aggregateGo": 8,
+  "aggregateCampaigns": 2,
+  "governanceClaim": false,
+  "checks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "exactStaged": "PASS7/7 exact35review-and-closurepaths",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS36.96s after final corrected Markdown; original16.56s dead-link failure retained",
+    "gateUnits": "Fresh root46PASS36.636s inherited, scripts/tests remain physically unchanged",
+    "protected": "621physicalfiles unchanged, old590+source+workerpacket+seed",
+    "gitLFRefs": "22stagedGitblob hashes PASS,2actual mutation diffs verified",
+    "runtime": "worker1/4+root1/4=2campaign8/8Go; no retries/extraGo",
+    "nestedContinuity": "marker/state/currentprose/handoff/record/order/implementation nested statuses/routing/budgets/nextmove PASS"
+  },
+  "retainedPreparationFailure": "Temporary closure-script draft nested quoting SyntaxError; no canonical writes/source edits/extra Go; corrected and syntax parsed before use.",
+  "retainedClosurePublicationFailures": [
+    "Final docs build failed16.56s: root newly appended learning link used ../reviews/ from reviews/learnings, producing a dead link. R1 reviewer direct repair to ../R065... before closure; no source/runtime/raw evidence change, no disabling dead-link check."
+  ]
+}
