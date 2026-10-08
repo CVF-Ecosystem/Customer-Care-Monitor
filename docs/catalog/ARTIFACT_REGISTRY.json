@@ -3412,6 +3412,20 @@
       "path": "docs/reviews/probes/r065_independent_summary.json",
       "status": "ACTIVE",
       "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r066-publication-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-PUBLISH-066.json",
+      "status": "ACTIVE",
+      "description": "Separate owner-authorized ordinary GitHub branch push; original R065 seed immutable, no merge/main/deployment authority."
+    },
+    {
+      "id": "evidence-r066-publication-intake",
+      "family": "continuity",
+      "path": "docs/reviews/R066_GITHUB_PUBLICATION_AND_NEXT_SCOPE_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Owner branch publication intake and next source audit; actual remote receipt follows execution, no CI claim."
     }
   ]
 }

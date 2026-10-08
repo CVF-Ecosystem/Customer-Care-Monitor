@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "authorityId": "CCMAI-PUBLISH-066",
+  "authorityKind": "OWNER_AUTHORIZED_BRANCH_PUBLICATION_ONLY",
+  "ownerInstruction": "đẩy lên github, rồi tiếp tục",
+  "date": "2026-10-08",
+  "riskCeiling": "R2",
+  "dispatcher": "Codex /root",
+  "commitSteward": "Codex /root",
+  "destinationRepository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "destinationRef": "refs/heads/codex/gov001-f08-actions-evidence",
+  "remoteBaseCommit": "083e0bae9d440ff94a3ce77c5298f1a5808e9aa7",
+  "acceptedLocalHead": "923fbc5088a5ca9fd7b8fbff37eacf6885298f32",
+  "permittedEffects": [
+    "ordinary_fast_forward_git_push_of_current_branch",
+    "github_readback_of_exact_remote_sha",
+    "local_publication_metadata_commit"
+  ],
+  "prohibitedEffects": [
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment",
+    "provider_or_channel_call",
+    "secret_or_credential_file_read",
+    "source_or_test_edit_under_this_authority",
+    "old_authority_seed_edit",
+    "old_evidence_edit",
+    "new_runtime_budget"
+  ],
+  "publishedPackage": "Existing42 local commits through923fbc5 plus this additive publication authority/record/catalog only; final target exact HEAD is verified before/after push. Future governed implementation needs its own seed. No hosted CI success or governance claim.",
+  "authorizationBoundary": "Separate authority for new explicit owner GitHub publication request; R065 original push prohibition remains immutable, publication occurs under this authority.",
+  "publicationReadinessChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7 against freshly fetched origin/main",
+    "exactStaged": "PASS7/7 four additive publication paths",
+    "gateUnits": "46PASS15.488s fresh",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS9.86s final Markdown",
+    "newGo": 0
+  }
+}
