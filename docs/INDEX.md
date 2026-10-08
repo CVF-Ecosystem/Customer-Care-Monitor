@@ -229,6 +229,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable narrow R060 successor seed, roles/model/budget retained, old R059 seed unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-060.json`
 - R060 bounded current phase/status/roles/budget; no FREEZE/full S2 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-060.json`
 - R060 bounded execution observation plus exact4-line old-test maintenance, all assertions preserved.: `docs/work_orders/CCMAI_RUNTIME_060.md`
+- R065 worker offline exact-source four-Go runner with exclusive raw backups and semantic contrasts; root audit required before runtime.: `docs/reviews/probes/r065_worker_campaign.py`
+- R065 worker exact additive source checkpoint, UO inventory and bounded planned campaign; no runtime acceptance yet.: `docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

@@ -272,6 +272,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 				}
 				// Log AI usage + cost
 				cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
+				execution.observeUsage(aiResp.InputTokens, aiResp.OutputTokens, cost, priceKnown)
 				if !priceKnown {
 					log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
 				}
@@ -802,6 +803,7 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 
 		// Log AI usage
 		cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
+		execution.observeUsage(aiResp.InputTokens, aiResp.OutputTokens, cost, priceKnown)
 		if !priceKnown {
 			log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
 		}

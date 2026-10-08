@@ -12,6 +12,7 @@ const executionMemberLimit = 200
 const executionByteLimit = 128 * 1024
 
 type executionCall struct {
+	usageObserved      bool
 	Sequence           int      `json:"sequence"`
 	Method             string   `json:"method"`
 	ItemCount          int      `json:"item_count"`
@@ -29,36 +30,38 @@ type executionCall struct {
 }
 
 type executionReceipt struct {
-	Version            string          `json:"version"`
-	Scope              string          `json:"scope"`
-	TenantID           string          `json:"tenant_id,omitempty"`
-	JobID              string          `json:"job_id,omitempty"`
-	RunID              string          `json:"run_id,omitempty"`
-	Mode               string          `json:"mode,omitempty"`
-	MetadataIncomplete bool            `json:"metadata_incomplete"`
-	CallsBegun         int             `json:"calls_begun"`
-	ResponseReturned   int             `json:"response_returned"`
-	ErrorReturned      int             `json:"error_returned"`
-	Interrupted        int             `json:"interrupted"`
-	InFlight           int             `json:"in_flight"`
-	ItemCount          int             `json:"item_count"`
-	ItemsSaved         int             `json:"items_saved"`
-	ItemsSaveFailed    int             `json:"items_save_failed"`
-	ItemsNotPublished  int             `json:"items_not_published"`
-	ItemsPending       int             `json:"items_pending"`
-	UsageWrites        map[string]int  `json:"usage_writes"`
-	Parsing            map[string]int  `json:"parsing"`
-	Calls              []executionCall `json:"calls"`
-	OmittedCalls       int             `json:"omitted_calls"`
-	OmittedMembers     int             `json:"omitted_members"`
-	EntriesComplete    bool            `json:"entries_complete"`
-	MembersComplete    bool            `json:"members_complete"`
-	ExecutionComplete  bool            `json:"execution_complete"`
-	StopReason         string          `json:"stop_reason"`
+	UsageObservation   usageObservationReceipt `json:"usage_observation"`
+	Version            string                  `json:"version"`
+	Scope              string                  `json:"scope"`
+	TenantID           string                  `json:"tenant_id,omitempty"`
+	JobID              string                  `json:"job_id,omitempty"`
+	RunID              string                  `json:"run_id,omitempty"`
+	Mode               string                  `json:"mode,omitempty"`
+	MetadataIncomplete bool                    `json:"metadata_incomplete"`
+	CallsBegun         int                     `json:"calls_begun"`
+	ResponseReturned   int                     `json:"response_returned"`
+	ErrorReturned      int                     `json:"error_returned"`
+	Interrupted        int                     `json:"interrupted"`
+	InFlight           int                     `json:"in_flight"`
+	ItemCount          int                     `json:"item_count"`
+	ItemsSaved         int                     `json:"items_saved"`
+	ItemsSaveFailed    int                     `json:"items_save_failed"`
+	ItemsNotPublished  int                     `json:"items_not_published"`
+	ItemsPending       int                     `json:"items_pending"`
+	UsageWrites        map[string]int          `json:"usage_writes"`
+	Parsing            map[string]int          `json:"parsing"`
+	Calls              []executionCall         `json:"calls"`
+	OmittedCalls       int                     `json:"omitted_calls"`
+	OmittedMembers     int                     `json:"omitted_members"`
+	EntriesComplete    bool                    `json:"entries_complete"`
+	MembersComplete    bool                    `json:"members_complete"`
+	ExecutionComplete  bool                    `json:"execution_complete"`
+	StopReason         string                  `json:"stop_reason"`
 }
 
 // Run-owned observation only; nothing reads this collector to choose an effect.
 type executionCollector struct {
+	usage     usageObservationCollector
 	receipt   executionReceipt
 	retained  []*executionCall
 	active    *executionCall
@@ -254,6 +257,7 @@ func (c *executionCollector) freeze() *executionReceipt {
 		return nil
 	}
 	r := c.receipt
+	r.UsageObservation = c.usage.freeze(r.CallsBegun)
 	r.Calls = []executionCall{}
 	r.UsageWrites = map[string]int{}
 	for k, v := range c.receipt.UsageWrites {

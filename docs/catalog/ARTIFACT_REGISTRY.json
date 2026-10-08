@@ -3048,6 +3048,20 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_065.md",
       "status": "ACTIVE",
       "description": "R065 complete delivery UO01..12, no old test edits; independent root review before conditional local closure."
+    },
+    {
+      "id": "r065-worker-source-checkpoint",
+      "family": "continuity",
+      "path": "docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "R065 worker exact additive source checkpoint, UO inventory and bounded planned campaign; no runtime acceptance yet."
+    },
+    {
+      "id": "r065-worker-campaign",
+      "family": "tool",
+      "path": "docs/reviews/probes/r065_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "R065 worker offline exact-source four-Go runner with exclusive raw backups and semantic contrasts; root audit required before runtime."
     }
   ]
 }
