@@ -3054,21 +3054,175 @@
       "family": "continuity",
       "path": "docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md",
       "status": "ACTIVE",
-      "description": "R065 worker exact additive source checkpoint, UO inventory and bounded planned campaign; no runtime acceptance yet."
+      "description": "R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending."
     },
     {
       "id": "r065-worker-campaign",
       "family": "tool",
       "path": "docs/reviews/probes/r065_worker_campaign.py",
       "status": "ACTIVE",
-      "description": "R065 worker offline exact-source four-Go runner with exclusive raw backups and semantic contrasts; root audit required before runtime."
+      "description": "R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending."
     },
     {
       "id": "r065-worker-committed-plan",
       "family": "continuity",
       "path": "docs/reviews/probes/r065_worker_plan.json",
       "status": "ACTIVE",
-      "description": "Committed pre-runtime R065 source72e4c36 archive/inventory and two exact isolated mutation plans; no runtime acceptance."
+      "description": "R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending."
+    },
+    {
+      "id": "r065-r065-worker-handback-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_handback.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-runtime-plan-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_runtime_plan.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
     }
   ]
 }

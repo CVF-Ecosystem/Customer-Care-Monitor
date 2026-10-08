@@ -1,0 +1,13 @@
+{"Time":"2026-10-08T11:45:58.902071864Z","Action":"start","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine"}
+{"Time":"2026-10-08T11:45:58.93073713Z","Action":"run","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOKnownPriceLiteralControl"}
+{"Time":"2026-10-08T11:45:58.930859424Z","Action":"output","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOKnownPriceLiteralControl","Output":"=== RUN   TestUOKnownPriceLiteralControl\n"}
+{"Time":"2026-10-08T11:45:58.930964014Z","Action":"output","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOKnownPriceLiteralControl","Output":"--- PASS: TestUOKnownPriceLiteralControl (0.00s)\n"}
+{"Time":"2026-10-08T11:45:58.930974612Z","Action":"pass","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOKnownPriceLiteralControl","Elapsed":0}
+{"Time":"2026-10-08T11:45:58.930985524Z","Action":"run","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOUnknownPriceNeverFree"}
+{"Time":"2026-10-08T11:45:58.93099061Z","Action":"output","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOUnknownPriceNeverFree","Output":"=== RUN   TestUOUnknownPriceNeverFree\n"}
+{"Time":"2026-10-08T11:45:58.931004558Z","Action":"output","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOUnknownPriceNeverFree","Output":"    usage_observation_receipt_test.go:65: unknown price fabricated complete/free estimate\n"}
+{"Time":"2026-10-08T11:45:58.931047237Z","Action":"output","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOUnknownPriceNeverFree","Output":"--- FAIL: TestUOUnknownPriceNeverFree (0.00s)\n"}
+{"Time":"2026-10-08T11:45:58.931056365Z","Action":"fail","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Test":"TestUOUnknownPriceNeverFree","Elapsed":0}
+{"Time":"2026-10-08T11:45:58.931062616Z","Action":"output","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Output":"FAIL\n"}
+{"Time":"2026-10-08T11:45:58.933524627Z","Action":"output","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Output":"FAIL\tgithub.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\t0.029s\n"}
+{"Time":"2026-10-08T11:45:58.933635004Z","Action":"fail","Package":"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine","Elapsed":0.032}

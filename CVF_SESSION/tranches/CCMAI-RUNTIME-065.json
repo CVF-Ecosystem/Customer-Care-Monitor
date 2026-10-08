@@ -55,16 +55,17 @@
   "claimScope": "Only bounded local successful-interface usage/cost observation UO01..12; no token-presence/billing/pricing-version/provider/governance enforcement proof. Existing effects preserved.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "fc63683b0c435cf157785a20ef7a420d44706825",
-  "buildCommit": null,
+  "buildCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -79,7 +80,7 @@
     "model": "gpt-6.1-sol",
     "reasoningEffort": "medium"
   },
-  "sourceImplementation": "COMMITTED_PRE_RUNTIME_STATIC_REVIEW_PENDING",
+  "sourceImplementation": "COMMITTED_WORKER_CAMPAIGN_PASS_INDEPENDENT_REVIEW_PENDING",
   "liveEvidence": "NOT_RUN; synthetic local application observation only, no CVF governance claim",
   "executionBudget": {
     "workerMaxCampaigns": 1,
@@ -88,8 +89,8 @@
     "reviewerMaxGoInvocations": 4,
     "aggregateMaxCampaigns": 2,
     "aggregateMaxGoInvocations": 8,
-    "workerUsedCampaigns": 0,
-    "workerUsedGoInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedGoInvocations": 4,
     "reviewerUsedCampaigns": 0,
     "reviewerUsedGoInvocations": 0
   },
@@ -130,5 +131,37 @@
       "Before-edit history explanatory label6/7 corrected before source",
       "NEW catalog review family invalid and directory family unsuitable corrected before commit"
     ]
+  },
+  "workerRuntimeReceipt": "docs/reviews/probes/r065_worker_summary.json",
+  "workerHandback": "docs/reviews/probes/r065_worker_handback.json",
+  "rootPreRuntimeAudit": "Independent root static PASS exact source72e4c36/plan012f083 before first worker Go; old590physical/seedfirstblob/archive216/inventory81-2-2-16/source/UO/callback/mutation/runner checks. Root explicitly authorized ONE worker FOUR Go, no retry.",
+  "workerActualEvidence": {
+    "campaigns": 1,
+    "goInvocations": 4,
+    "positiveTopLevel": 81,
+    "positivePassEvents": 269,
+    "mutations": "M01/M02_NAMED_SEMANTIC_KILLS_HEALTHY_CONTRASTS",
+    "restoredTopLevel": 16,
+    "restoredPassEvents": 73,
+    "manifestMembers": 216,
+    "physicalReferencesVerified": 20,
+    "sourceRestored": true,
+    "secondArchiveEqual": true,
+    "cleanupVerified": true
+  },
+  "retainedHandbackPublicationFailure": "First handback continuity6/7 rejected state.currentMode REVIEW_PENDING outside canonical phase model; corrected mode/header/front marker to REVIEW, tranche/status remains REVIEW_PENDING; no source/runtime/evidence changed.",
+  "handbackPublicationChecks": {
+    "default": "PASS7/7 after canonical REVIEW correction",
+    "prRange": "PASS7/7 origin/main..HEAD",
+    "exactStaged": "PASS7/7 exact31handbackpaths; final typed JSON checks restaged/rechecked before commit",
+    "catalogPS51": "PASS through three gates",
+    "catalogPS7": "PASS",
+    "gateUnits": "Fresh root46PASS36.636s inherited unchanged scripts/tests; no repeat",
+    "docs": "PASS35.45s after final Markdown",
+    "diff": "PASS",
+    "protectedOld590Physical": "PASS unchanged",
+    "rawPhysicalReferences": "PASS20, original raw summary/file bytes unchanged",
+    "sourceTestsAfterRuntime": "UNCHANGED source72e4c36",
+    "workerRuntimeBudget": "1campaign4Go exactly; root0Go"
   }
 }

@@ -1,0 +1,2356 @@
+{
+  "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+  "worker": "Codex /root/r065_worker",
+  "campaigns": 1,
+  "goInvocations": 4,
+  "automaticRetries": 0,
+  "commands": [
+    {
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r065_worker_positive_container_before.json",
+        "bytes": 7964,
+        "sha256": "b9de0e9e27bf6b8e4a5bd903b2c19c25f0b3fb5654c1bc72218e0f4cb77127c9"
+      },
+      "label": "positive",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r065-worker-positive-afed9068d8",
+        "--network",
+        "ccmai-r065-worker-net-afed9068d8",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r065-worker-cache-afed9068d8,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r065-worker-db-afed9068d8:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=480s",
+        "-run",
+        "^Test(UO|RO|EX|PreparationReceipt|SP|LP|Snapshot|EvidenceRefs|SingleAndBatchShareSnapshotContract$|ExplicitModeMatrix$|FullModeVietnamDatesKeepFullSnapshot$|OnlyOrdinaryRunWritesCheckpoint$|OrdinaryRunFailuresKeepCheckpoint$|AdmissionRefusesASecondOwnerForEveryEntryPointAndMode$|CancelTargetsTheExactRunAndHoldsOwnershipUntilExit$|EveryTerminalPathHonorsAnAcceptedCancel$|ProviderPanicIsCleanedUpWithoutLeakingTheValue$|ReservationRunsOnlyItsOwnTenantAndJob$|FL03SuccessfulTerminalWrite$|FL03ExhaustedRetriesReturnsBoundedFailure$|FL06SuccessLifecyclePreservation$)",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode",
+        "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit",
+        "TestEXActualPanicBoundaries",
+        "TestEXAllExplicitModesRetainScalars",
+        "TestEXBatchBindingAndParserRejection",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXCancellationDuringProviderAndBatchPrefix",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXInitialProgressAndTerminalWriteFaults",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestEXMixedSaveAndProviderFailures",
+        "TestEXNoCallConstructionAndPreparation",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXProgressPrefixAndPreparationUnchanged",
+        "TestEXResponseAndErrorWinsInBothModes",
+        "TestEXSaveDatabaseFailureIsPublicationFailure",
+        "TestEXStoredTerminalSingleSuccess",
+        "TestEXUsageWriteFailurePreservesSavedResult",
+        "TestEveryTerminalPathHonorsAnAcceptedCancel",
+        "TestEvidenceRefsRejectInvalid",
+        "TestEvidenceRefsUnicodeCodePointOffsets",
+        "TestExplicitModeMatrix",
+        "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+        "TestFL03SuccessfulTerminalWrite",
+        "TestFL06SuccessLifecyclePreservation",
+        "TestFullModeVietnamDatesKeepFullSnapshot",
+        "TestLP01NoWorkSkipsProviderInitialization",
+        "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+        "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+        "TestLP04SemanticsAcrossModesAndEntryPoints",
+        "TestLP05CancellationPreventsProviderInitialization",
+        "TestLP06EagerInitializationDetectorNegativeAndPositive",
+        "TestOnlyOrdinaryRunWritesCheckpoint",
+        "TestOrdinaryRunFailuresKeepCheckpoint",
+        "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+        "TestPreparationReceiptMetadataAndSummaryCompatibility",
+        "TestPreparationReceiptUnknownZeroAndPrivacy",
+        "TestProviderPanicIsCleanedUpWithoutLeakingTheValue",
+        "TestROCapturedJobPromptsSingleAndBatch",
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROInitialProgressAndTerminalWriteFaults",
+        "TestROInvalidBindingPriorityAndUnsupportedType",
+        "TestRONoWorkAndFailureObservations",
+        "TestROPrivacyBoundAndIndependentFreezeComposition",
+        "TestROQCIndependentKnownVector",
+        "TestRORejectedReservationHasNoReceiptEffects",
+        "TestROStoredTerminalSingleSuccess",
+        "TestReservationRunsOnlyItsOwnTenantAndJob",
+        "TestSPAllExplicitModesCapAndContext",
+        "TestSPCancellationAndProviderPanic",
+        "TestSPInitialAndProgressRecordingGap",
+        "TestSPInputSelectionAndPreparationPanic",
+        "TestSPObservedQueriesAndReferenceErrors",
+        "TestSPOrdinaryExplicitAndProgressPersistence",
+        "TestSPSingleProviderErrorReceipt",
+        "TestSPSnapshotLookupMissingAndMisboundObservations",
+        "TestSPStoredEarlyTerminalReceipt",
+        "TestSPTerminalFailureAndLegacyClose",
+        "TestSingleAndBatchShareSnapshotContract",
+        "TestSnapshotCoverage",
+        "TestSnapshotDigestChangesWithAttachmentIdentity",
+        "TestSnapshotDigestChangesWithSource",
+        "TestSnapshotDigestIsDeterministic",
+        "TestSnapshotRejectsForeignMessage",
+        "TestSnapshotTranscriptCarriesIdentity",
+        "TestUOActiveReturnGuardAndIncompletePrefix",
+        "TestUOCancellationKeepsBegunUsagePrefix",
+        "TestUOExplicitModesKeepScalarsAndUsage",
+        "TestUOFreezePrivacyBoundsAndComposition",
+        "TestUOInitialProgressAndTerminalWriteFaults",
+        "TestUOInitialUnknownAndZeroPresence",
+        "TestUOInvalidValuesAndOverflow",
+        "TestUOKnownPriceLiteralControl",
+        "TestUOMultipleResponsesBothJobTypes",
+        "TestUONoCallAndErrorResponses",
+        "TestUOStoredTerminalBatchSuccess",
+        "TestUOStoredTerminalSingleSuccess",
+        "TestUOStoredUnknownPriceBothModes",
+        "TestUOSuccessfulSummaryPrefixes",
+        "TestUOUnknownPriceNeverFree",
+        "TestUOUsageFailureAndPanicBoundaries"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r065-worker-net-afed9068d8",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r065-worker-cache-afed9068d8",
+            "Source": "/var/lib/docker/volumes/ccmai-r065-worker-cache-afed9068d8/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 249.407,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r065_worker_positive.jsonl",
+        "bytes": 57565421,
+        "sha256": "b6a00dc6447c0d3255bf8ab25d782e2892656968b8fe093708e835b92891c5b9"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r065_worker_positive_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r065_worker_positive_container_after.json",
+        "bytes": 8594,
+        "sha256": "4614df7af7ad3e13ca31f5adc2a90df525598ee2eda9b7c42b52d7a03c1d8669"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-08T11:41:29.298808438Z",
+        "FinishedAt": "2026-10-08T11:45:38.175259017Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestEveryTerminalPathHonorsAnAcceptedCancel/early_failure:_invalid_input_list",
+            "action": "pass"
+          },
+          {
+            "name": "TestEveryTerminalPathHonorsAnAcceptedCancel/early_failure:_provider_selection",
+            "action": "pass"
+          },
+          {
+            "name": "TestEveryTerminalPathHonorsAnAcceptedCancel/early_failure:_invalid_run_parameters",
+            "action": "pass"
+          },
+          {
+            "name": "TestEveryTerminalPathHonorsAnAcceptedCancel/abort_/_setup_failure",
+            "action": "pass"
+          },
+          {
+            "name": "TestEveryTerminalPathHonorsAnAcceptedCancel/provider_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestEveryTerminalPathHonorsAnAcceptedCancel",
+            "action": "pass"
+          },
+          {
+            "name": "TestReservationRunsOnlyItsOwnTenantAndJob/same_tenant,_different_job",
+            "action": "pass"
+          },
+          {
+            "name": "TestReservationRunsOnlyItsOwnTenantAndJob/same_tenant,_different_job_that_is_occupied",
+            "action": "pass"
+          },
+          {
+            "name": "TestReservationRunsOnlyItsOwnTenantAndJob/different_tenant,_same_job_id",
+            "action": "pass"
+          },
+          {
+            "name": "TestReservationRunsOnlyItsOwnTenantAndJob",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03SuccessfulTerminalWrite",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL06SuccessLifecyclePreservation",
+            "action": "pass"
+          },
+          {
+            "name": "TestOrdinaryRunFailuresKeepCheckpoint/batch=false",
+            "action": "pass"
+          },
+          {
+            "name": "TestOrdinaryRunFailuresKeepCheckpoint/batch=true",
+            "action": "pass"
+          },
+          {
+            "name": "TestOrdinaryRunFailuresKeepCheckpoint",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false/unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false/unanalyzed_cap_2_keeps_the_unanalyzed_mode_and_the_oldest-first_order",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false/full",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false/full_cap_2_still_re-analyzes_(cap_is_not_unanalyzed)",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false/since_last_uses_the_newest_evaluated_last_message_as_anchor",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false/test_run_window_excludes_old,_null_and_evaluated",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false/test_run_cap_1_takes_the_oldest_candidate",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=false",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true/unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true/unanalyzed_cap_2_keeps_the_unanalyzed_mode_and_the_oldest-first_order",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true/full",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true/full_cap_2_still_re-analyzes_(cap_is_not_unanalyzed)",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true/since_last_uses_the_newest_evaluated_last_message_as_anchor",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true/test_run_window_excludes_old,_null_and_evaluated",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true/test_run_cap_1_takes_the_oldest_candidate",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix/batch=true",
+            "action": "pass"
+          },
+          {
+            "name": "TestExplicitModeMatrix",
+            "action": "pass"
+          },
+          {
+            "name": "TestFullModeVietnamDatesKeepFullSnapshot/loc=UTC",
+            "action": "pass"
+          },
+          {
+            "name": "TestFullModeVietnamDatesKeepFullSnapshot/loc=Asia_Ho_Chi_Minh",
+            "action": "pass"
+          },
+          {
+            "name": "TestFullModeVietnamDatesKeepFullSnapshot",
+            "action": "pass"
+          },
+          {
+            "name": "TestOnlyOrdinaryRunWritesCheckpoint",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/empty_input_channel_list",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/channel_with_zero_conversations",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/conversation_with_zero_messages_(coverageEmpty)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/all_conversations_unchanged_in_ordinary_mode",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/explicit_unanalyzed_mode_with_zero_conversations",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/invalid_channel_JSON_fails_before_candidate_selection_and_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/candidate_selection_query_failure_fails_before_provider_and_skips_settings/key_lookup",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/all-failed_preparation_closes_as_error_with_zero_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/mixed_valid_and_failed_preparation_initializes_provider_once_and_reports_partial",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/mixed_valid_and_failed_preparation_with_corrupt_key_on_production_path_fails_at_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/missing_API_key_fails_with_earlyProviderUnavailable_on_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/undecryptable_API_key_fails_with_earlyProviderUnavailable_on_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/precedence:_injectedProvider_>_providerOverride_>_providerResolver_>_settings",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/provider_is_initialized_exactly_once_per_run_across_multiple_conversations",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJob_(ordinary)_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJob_(ordinary)_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobWithLimit_(ordinary_capped)_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobWithLimit_(ordinary_capped)_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobFull_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobFull_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobUnanalyzed_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobUnanalyzed_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobSinceLast_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobSinceLast_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunReserved_(shared_HTTP/MCP/scheduler_forwarding)_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunReserved_(shared_HTTP/MCP/scheduler_forwarding)_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP05CancellationPreventsProviderInitialization/accepted_cancellation_before_inference_avoids_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP05CancellationPreventsProviderInitialization/expired_context_before_inference_avoids_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP05CancellationPreventsProviderInitialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(missing_key)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(corrupt_key)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_in_non-batch_mode:_constructor_once,_single_calls_match_conversation_count",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive",
+            "action": "pass"
+          },
+          {
+            "name": "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode/batch=false",
+            "action": "pass"
+          },
+          {
+            "name": "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode/batch=true",
+            "action": "pass"
+          },
+          {
+            "name": "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode",
+            "action": "pass"
+          },
+          {
+            "name": "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit/batch=false",
+            "action": "pass"
+          },
+          {
+            "name": "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit/batch=true",
+            "action": "pass"
+          },
+          {
+            "name": "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit",
+            "action": "pass"
+          },
+          {
+            "name": "TestProviderPanicIsCleanedUpWithoutLeakingTheValue",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/qc_analysis_single",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/qc_analysis_batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/classification_single",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/classification_batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/unchanged_rule_edit",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/setup_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/provider_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/provider_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/input_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/selection_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/preparation_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/unsupported",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations",
+            "action": "pass"
+          },
+          {
+            "name": "TestRORejectedReservationHasNoReceiptEffects",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestROQCIndependentKnownVector",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/cd305745",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9d96001a",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9c1834f3",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/c0cfd532",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/41b3bb53",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/f66ca412",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/313f92e7",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/5bbd5f0d",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/foreign_tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/foreign_job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run_tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run_job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType",
+            "action": "pass"
+          },
+          {
+            "name": "TestROPrivacyBoundAndIndependentFreezeComposition",
+            "action": "pass"
+          },
+          {
+            "name": "TestSingleAndBatchShareSnapshotContract",
+            "action": "pass"
+          },
+          {
+            "name": "TestSnapshotDigestIsDeterministic",
+            "action": "pass"
+          },
+          {
+            "name": "TestSnapshotDigestChangesWithSource",
+            "action": "pass"
+          },
+          {
+            "name": "TestSnapshotDigestChangesWithAttachmentIdentity",
+            "action": "pass"
+          },
+          {
+            "name": "TestSnapshotCoverage",
+            "action": "pass"
+          },
+          {
+            "name": "TestSnapshotTranscriptCarriesIdentity",
+            "action": "pass"
+          },
+          {
+            "name": "TestSnapshotRejectsForeignMessage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEvidenceRefsUnicodeCodePointOffsets",
+            "action": "pass"
+          },
+          {
+            "name": "TestEvidenceRefsRejectInvalid",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/unchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/setup_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/preparation_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/cancel_before_call",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXSaveDatabaseFailureIsPublicationFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXMixedSaveAndProviderFailures",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/single_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_prefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXProgressPrefixAndPreparationUnchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCollectorDimensionsAndFreeze",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInvalidMetadataNeverSerializesRawValues",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPStoredEarlyTerminalReceipt",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPOrdinaryExplicitAndProgressPersistence",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPObservedQueriesAndReferenceErrors",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPInputSelectionAndPreparationPanic",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPCancellationAndProviderPanic",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPTerminalFailureAndLegacyClose",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPSingleProviderErrorReceipt",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPAllExplicitModesCapAndContext",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPSnapshotLookupMissingAndMisboundObservations",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPInitialAndProgressRecordingGap",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptUnknownZeroAndPrivacy",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptMetadataAndSummaryCompatibility",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredTerminalBatchSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchfalse_qc_analysis",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchfalse_classification",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchtrue_qc_analysis",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchtrue_classification",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredUnknownPriceBothModes/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredUnknownPriceBothModes/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredUnknownPriceBothModes",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_setup",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_response_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_setup",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_response_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_usage_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_usage_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_publication_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_parser_rejected",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_usage_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_usage_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_publication_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_parser_rejected",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix/single",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix/batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix/batch_prefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOSuccessfulSummaryPrefixes/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOSuccessfulSummaryPrefixes/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOSuccessfulSummaryPrefixes",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialUnknownAndZeroPresence",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOKnownPriceLiteralControl",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUnknownPriceNeverFree",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/input",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/output",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/negative_cost",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/nan",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/positive_inf",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/negative_inf",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/token_overflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/output_overflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/cost_overflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_responses",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_invalid_tokens",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_priced",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_unpriced",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_invalid_costs",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOActiveReturnGuardAndIncompletePrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOFreezePrivacyBoundsAndComposition",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 81,
+        "pass": 269,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": false
+      }
+    },
+    {
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r065_worker_M01_container_before.json",
+        "bytes": 6939,
+        "sha256": "b822a6a919370001d376eebb40ff91e9859fefe05207183233a9e48f11ca75a1"
+      },
+      "label": "M01",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r065-worker-M01-afed9068d8",
+        "--network",
+        "ccmai-r065-worker-net-afed9068d8",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r065-worker-cache-afed9068d8,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r065-worker-db-afed9068d8:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestUO(UnknownPriceNeverFree|KnownPriceLiteralControl)$",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestUOKnownPriceLiteralControl",
+        "TestUOUnknownPriceNeverFree"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r065-worker-net-afed9068d8",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r065-worker-cache-afed9068d8",
+            "Source": "/var/lib/docker/volumes/ccmai-r065-worker-cache-afed9068d8/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 17.491,
+      "attachExit": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r065_worker_M01.jsonl",
+        "bytes": 2548,
+        "sha256": "0ef3b5d7c5b318319a77a77c4ec188d010f41eb19ec9048b7f612da9a1342740"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r065_worker_M01_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r065_worker_M01_container_after.json",
+        "bytes": 7564,
+        "sha256": "9f4bc0c6fdada428bd8a1967eac3d0f9088f345c970e3a5cde9a7f1ce386c578"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-08T11:45:41.945179036Z",
+        "FinishedAt": "2026-10-08T11:45:58.970593461Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestUOKnownPriceLiteralControl",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUnknownPriceNeverFree",
+            "action": "fail"
+          }
+        ],
+        "topLevel": 2,
+        "pass": 1,
+        "fail": 1,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": true
+      },
+      "contrastingControl": {
+        "name": "TestUOKnownPriceLiteralControl",
+        "passed": true
+      }
+    },
+    {
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r065_worker_M02_container_before.json",
+        "bytes": 6913,
+        "sha256": "a72a1c502db33c6dafa6f16d940eb4666f430d41ab07f2c2cc7b382d5f4320ec"
+      },
+      "label": "M02",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r065-worker-M02-afed9068d8",
+        "--network",
+        "ccmai-r065-worker-net-afed9068d8",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r065-worker-cache-afed9068d8,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r065-worker-db-afed9068d8:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestUOStoredTerminal(Single|Batch)Success$",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestUOStoredTerminalBatchSuccess",
+        "TestUOStoredTerminalSingleSuccess"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r065-worker-net-afed9068d8",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r065-worker-cache-afed9068d8",
+            "Source": "/var/lib/docker/volumes/ccmai-r065-worker-cache-afed9068d8/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 18.673,
+      "attachExit": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r065_worker_M02.jsonl",
+        "bytes": 563475,
+        "sha256": "8c44411f808c63dd37c90a5a518e926cb54f4e2eae2f3e3b06222ffbdfd74dd5"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r065_worker_M02_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r065_worker_M02_container_after.json",
+        "bytes": 7538,
+        "sha256": "64e002f2e2057e213d5b0944ccd8af2a42ae794a3ffcce5cd7d9311740fd2853"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-08T11:46:00.862026742Z",
+        "FinishedAt": "2026-10-08T11:46:19.091135217Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestUOStoredTerminalSingleSuccess",
+            "action": "fail"
+          },
+          {
+            "name": "TestUOStoredTerminalBatchSuccess",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 2,
+        "pass": 1,
+        "fail": 1,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": true
+      },
+      "contrastingControl": {
+        "name": "TestUOStoredTerminalBatchSuccess",
+        "passed": true
+      }
+    },
+    {
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r065_worker_restored_container_before.json",
+        "bytes": 6846,
+        "sha256": "13604d3bdb33e559c529e5caffb770001e366f4c8798405f28ef83de352bf0bb"
+      },
+      "label": "restored",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r065-worker-restored-afed9068d8",
+        "--network",
+        "ccmai-r065-worker-net-afed9068d8",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r065-worker-cache-afed9068d8,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r065-worker-db-afed9068d8:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestUO",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestUOActiveReturnGuardAndIncompletePrefix",
+        "TestUOCancellationKeepsBegunUsagePrefix",
+        "TestUOExplicitModesKeepScalarsAndUsage",
+        "TestUOFreezePrivacyBoundsAndComposition",
+        "TestUOInitialProgressAndTerminalWriteFaults",
+        "TestUOInitialUnknownAndZeroPresence",
+        "TestUOInvalidValuesAndOverflow",
+        "TestUOKnownPriceLiteralControl",
+        "TestUOMultipleResponsesBothJobTypes",
+        "TestUONoCallAndErrorResponses",
+        "TestUOStoredTerminalBatchSuccess",
+        "TestUOStoredTerminalSingleSuccess",
+        "TestUOStoredUnknownPriceBothModes",
+        "TestUOSuccessfulSummaryPrefixes",
+        "TestUOUnknownPriceNeverFree",
+        "TestUOUsageFailureAndPanicBoundaries"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r065-worker-net-afed9068d8",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r065-worker-cache-afed9068d8",
+            "Source": "/var/lib/docker/volumes/ccmai-r065-worker-cache-afed9068d8/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 57.172,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r065_worker_restored.jsonl",
+        "bytes": 12926033,
+        "sha256": "43ee578dcfdb4151388f7682d30712166884db47b7a06471c58f158c54904fe4"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r065_worker_restored_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r065_worker_restored_container_after.json",
+        "bytes": 7476,
+        "sha256": "b205b7c5f74f9556a651a258200a34a9b1b0a3040bf790b973ef1ae99913736a"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-08T11:46:20.529971383Z",
+        "FinishedAt": "2026-10-08T11:47:17.271504003Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestUOStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredTerminalBatchSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchfalse_qc_analysis",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchfalse_classification",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchtrue_qc_analysis",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes/batchtrue_classification",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOMultipleResponsesBothJobTypes",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredUnknownPriceBothModes/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredUnknownPriceBothModes/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOStoredUnknownPriceBothModes",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchfalse_since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage/batchtrue_since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOExplicitModesKeepScalarsAndUsage",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_setup",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_response_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchfalse_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_setup",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_response_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses/batchtrue_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUONoCallAndErrorResponses",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_usage_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_usage_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_publication_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchfalse_parser_rejected",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_usage_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_usage_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_publication_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries/batchtrue_parser_rejected",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUsageFailureAndPanicBoundaries",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix/single",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix/batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix/batch_prefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOCancellationKeepsBegunUsagePrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOSuccessfulSummaryPrefixes/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOSuccessfulSummaryPrefixes/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOSuccessfulSummaryPrefixes",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInitialUnknownAndZeroPresence",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOKnownPriceLiteralControl",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOUnknownPriceNeverFree",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/input",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/output",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/negative_cost",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/nan",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/positive_inf",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/negative_inf",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/token_overflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/output_overflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/cost_overflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_responses",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_invalid_tokens",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_priced",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_unpriced",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow/counter_invalid_costs",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOInvalidValuesAndOverflow",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOActiveReturnGuardAndIncompletePrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestUOFreezePrivacyBoundsAndComposition",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 16,
+        "pass": 73,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": false
+      }
+    }
+  ],
+  "errors": [],
+  "sourceDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-sshryp2n",
+  "scope": "application_observation_only",
+  "cleanup": {
+    "containers": [
+      {
+        "name": "ccmai-r065-worker-restored-afed9068d8",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r065-worker-M02-afed9068d8",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r065-worker-M01-afed9068d8",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r065-worker-positive-afed9068d8",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r065-worker-db-afed9068d8",
+        "removeExit": 0,
+        "absent": true
+      }
+    ],
+    "volumes": [
+      {
+        "name": "8492719eb84168a91ea172ba910cb95f72bb95e8558f1dba085dcacaf20c07a3",
+        "absent": true
+      },
+      {
+        "name": "ccmai-r065-worker-cache-afed9068d8",
+        "absent": true
+      }
+    ],
+    "network": {
+      "name": "ccmai-r065-worker-net-afed9068d8",
+      "removeExit": 0,
+      "absent": true
+    },
+    "buildCacheRemoveExit": 0,
+    "successfulInventoryExits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "images": [
+    {
+      "tag": "golang:1.26-alpine",
+      "id": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+    },
+    {
+      "tag": "mysql:8.0",
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    }
+  ],
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+      "backend"
+    ],
+    "bytes": 2457600,
+    "sha256": "1612ac9bba5dbbcad4e3c30c6be35af2001336272e13a27b9394b1d4ba5fff5d"
+  },
+  "manifest": {
+    "path": "docs/reviews/probes/r065_worker_manifest.json",
+    "bytes": 34891,
+    "sha256": "06928042b34fa4e7e2b3daf7d1be653f58eb5b491f02a9c115df7d923a7563ef"
+  },
+  "sourceChecks": [
+    {
+      "stage": "before mutation",
+      "equal": true
+    },
+    {
+      "stage": "before positive",
+      "equal": true
+    },
+    {
+      "stage": "applied M01",
+      "equal": true
+    },
+    {
+      "stage": "before M01",
+      "equal": true
+    },
+    {
+      "stage": "restored M01",
+      "equal": true
+    },
+    {
+      "stage": "applied M02",
+      "equal": true
+    },
+    {
+      "stage": "before M02",
+      "equal": true
+    },
+    {
+      "stage": "restored M02",
+      "equal": true
+    },
+    {
+      "stage": "before restored",
+      "equal": true
+    },
+    {
+      "stage": "final",
+      "equal": true
+    }
+  ],
+  "mutations": [
+    {
+      "label": "M01",
+      "targetPath": "backend/engine/usage_observation_receipt.go",
+      "appliedInIsolatedCopyOnly": true,
+      "matchCount": 1,
+      "detector": "TestUOUnknownPriceNeverFree",
+      "assertion": "unknown price fabricated complete/free estimate",
+      "originalSha256": "898c11f8a81ef32274e4d7245f83d32c542e9e08292e137407f27617f39805e8",
+      "mutantSha256": "33b096fee7f633fb7d2c16aaa5a6a115c61b66be49874168c842e126ba57a7f9",
+      "diffSha256": "03cd419a2de763a4b7df2570ce2bcfd4d5c610bf886619bec211798f99dd2287",
+      "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvdXNhZ2Vfb2JzZXJ2YXRpb25fcmVjZWlwdC5nbworKysgYi9iYWNrZW5kL2VuZ2luZS91c2FnZV9vYnNlcnZhdGlvbl9yZWNlaXB0LmdvCkBAIC01Myw3ICs1Myw3IEBACiAJCXUuaW5wdXQgKz0gaW50NjQoaW5wdXQpCiAJCXUub3V0cHV0ICs9IGludDY0KG91dHB1dCkKIAl9Ci0JaWYgIXByaWNlS25vd24geworCWlmIGZhbHNlIHsgLy8gZGVsaWJlcmF0ZSB1bmtub3duLXByaWNlLWFzLWtub3duIG11dGF0aW9uCiAJCXUuaW5jcmVtZW50KCZ1LnIuVW5wcmljZWQpCiAJCXJldHVybgogCX0K",
+      "appliedManifest": {
+        "path": "docs/reviews/probes/r065_worker_M01_manifest.json",
+        "bytes": 34891,
+        "sha256": "39f328864424271ba647982cd52efe62564320f48817fe5c509d88d68a25eed1"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredByteEqual": true
+    },
+    {
+      "label": "M02",
+      "targetPath": "backend/engine/analyzer.go",
+      "appliedInIsolatedCopyOnly": true,
+      "matchCount": 1,
+      "detector": "TestUOStoredTerminalSingleSuccess",
+      "assertion": "stored terminal usage observation missing",
+      "originalSha256": "6c1d1dec5e39d137ce0183d0e1d0bb172a1196b76853e61103a3af6dcb0e370d",
+      "mutantSha256": "75ef0cf3298e9490acc9e479ece9dbeba06f977882d800b6ba98aa5a0c0ae889",
+      "diffSha256": "8419d1168a4a649290db371d464b2601ca1c105e82b250755d8abeb3ed30d6dd",
+      "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KKysrIGIvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KQEAgLTM4Myw3ICszODMsNyBAQAogCQljcCA6PSBzY2FuU3RhcnQuVHJ1bmNhdGUodGltZS5TZWNvbmQpCiAJCWNoZWNrcG9pbnQgPSAmY3AKIAl9Ci0JZmluYWxpemVFcnIgOj0gZmluYWxpemVPcmRpbmFyeVJ1bigmcnVuLCBqb2IsIHJ1blN0YXR1cywgcnVuLkVycm9yTWVzc2FnZSwgc3RyaW5nKHN1bW1hcnlKU09OKSwgZmluaXNoZWRBdCwgY2hlY2twb2ludCkKKwlmaW5hbGl6ZUVyciA6PSBmaW5hbGl6ZU9yZGluYXJ5UnVuKCZydW4sIGpvYiwgcnVuU3RhdHVzLCBydW4uRXJyb3JNZXNzYWdlLCBmdW5jKCkgc3RyaW5nIHsgdmFyIGVudmVsb3BlIG1hcFtzdHJpbmddanNvbi5SYXdNZXNzYWdlOyBfID0ganNvbi5Vbm1hcnNoYWwoW11ieXRlKHN1bW1hcnlKU09OKSwgJmVudmVsb3BlKTsgdmFyIG5lc3RlZCBtYXBbc3RyaW5nXWpzb24uUmF3TWVzc2FnZTsgXyA9IGpzb24uVW5tYXJzaGFsKGVudmVsb3BlWyJzb3VyY2VfZXhlY3V0aW9uIl0sICZuZXN0ZWQpOyBpZiBleGVjdXRpb24uYWN0aXZlICE9IG5pbCAmJiBleGVjdXRpb24uYWN0aXZlLk1ldGhvZCA9PSAiU0lOR0xFIiB7IGRlbGV0ZShuZXN0ZWQsICJ1c2FnZV9vYnNlcnZhdGlvbiIpIH07IGVudmVsb3BlWyJzb3VyY2VfZXhlY3V0aW9uIl0sIF8gPSBqc29uLk1hcnNoYWwobmVzdGVkKTsgZW5jb2RlZCwgXyA6PSBqc29uLk1hcnNoYWwoZW52ZWxvcGUpOyByZXR1cm4gc3RyaW5nKGVuY29kZWQpIH0oKSwgZmluaXNoZWRBdCwgY2hlY2twb2ludCkKIAlpZiBlcnIgOj0gZmluYWxpemVFcnI7IGVyciAhPSBuaWwgewogCQlvd25lci50ZXJtaW5hbEZhaWxlZCgpCiAJCXByZXBhcmF0aW9uR2FwKCJmaW5hbF90ZXJtaW5hbCIpCg==",
+      "appliedManifest": {
+        "path": "docs/reviews/probes/r065_worker_M02_manifest.json",
+        "bytes": 34891,
+        "sha256": "0196657e53ed6d65041c3439cd5082f8b954f03813479549cff2a3bc8fd78ef1"
+      },
+      "disposition": "KILLED_BY_NAMED_SEMANTIC_ASSERTION",
+      "restoredByteEqual": true
+    }
+  ],
+  "plannedInventory": [
+    {
+      "label": "positive",
+      "pattern": "^Test(UO|RO|EX|PreparationReceipt|SP|LP|Snapshot|EvidenceRefs|SingleAndBatchShareSnapshotContract$|ExplicitModeMatrix$|FullModeVietnamDatesKeepFullSnapshot$|OnlyOrdinaryRunWritesCheckpoint$|OrdinaryRunFailuresKeepCheckpoint$|AdmissionRefusesASecondOwnerForEveryEntryPointAndMode$|CancelTargetsTheExactRunAndHoldsOwnershipUntilExit$|EveryTerminalPathHonorsAnAcceptedCancel$|ProviderPanicIsCleanedUpWithoutLeakingTheValue$|ReservationRunsOnlyItsOwnTenantAndJob$|FL03SuccessfulTerminalWrite$|FL03ExhaustedRetriesReturnsBoundedFailure$|FL06SuccessLifecyclePreservation$)",
+      "topLevel": [
+        "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode",
+        "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit",
+        "TestEXActualPanicBoundaries",
+        "TestEXAllExplicitModesRetainScalars",
+        "TestEXBatchBindingAndParserRejection",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXCancellationDuringProviderAndBatchPrefix",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXInitialProgressAndTerminalWriteFaults",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestEXMixedSaveAndProviderFailures",
+        "TestEXNoCallConstructionAndPreparation",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXProgressPrefixAndPreparationUnchanged",
+        "TestEXResponseAndErrorWinsInBothModes",
+        "TestEXSaveDatabaseFailureIsPublicationFailure",
+        "TestEXStoredTerminalSingleSuccess",
+        "TestEXUsageWriteFailurePreservesSavedResult",
+        "TestEveryTerminalPathHonorsAnAcceptedCancel",
+        "TestEvidenceRefsRejectInvalid",
+        "TestEvidenceRefsUnicodeCodePointOffsets",
+        "TestExplicitModeMatrix",
+        "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+        "TestFL03SuccessfulTerminalWrite",
+        "TestFL06SuccessLifecyclePreservation",
+        "TestFullModeVietnamDatesKeepFullSnapshot",
+        "TestLP01NoWorkSkipsProviderInitialization",
+        "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+        "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+        "TestLP04SemanticsAcrossModesAndEntryPoints",
+        "TestLP05CancellationPreventsProviderInitialization",
+        "TestLP06EagerInitializationDetectorNegativeAndPositive",
+        "TestOnlyOrdinaryRunWritesCheckpoint",
+        "TestOrdinaryRunFailuresKeepCheckpoint",
+        "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+        "TestPreparationReceiptMetadataAndSummaryCompatibility",
+        "TestPreparationReceiptUnknownZeroAndPrivacy",
+        "TestProviderPanicIsCleanedUpWithoutLeakingTheValue",
+        "TestROCapturedJobPromptsSingleAndBatch",
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROInitialProgressAndTerminalWriteFaults",
+        "TestROInvalidBindingPriorityAndUnsupportedType",
+        "TestRONoWorkAndFailureObservations",
+        "TestROPrivacyBoundAndIndependentFreezeComposition",
+        "TestROQCIndependentKnownVector",
+        "TestRORejectedReservationHasNoReceiptEffects",
+        "TestROStoredTerminalSingleSuccess",
+        "TestReservationRunsOnlyItsOwnTenantAndJob",
+        "TestSPAllExplicitModesCapAndContext",
+        "TestSPCancellationAndProviderPanic",
+        "TestSPInitialAndProgressRecordingGap",
+        "TestSPInputSelectionAndPreparationPanic",
+        "TestSPObservedQueriesAndReferenceErrors",
+        "TestSPOrdinaryExplicitAndProgressPersistence",
+        "TestSPSingleProviderErrorReceipt",
+        "TestSPSnapshotLookupMissingAndMisboundObservations",
+        "TestSPStoredEarlyTerminalReceipt",
+        "TestSPTerminalFailureAndLegacyClose",
+        "TestSingleAndBatchShareSnapshotContract",
+        "TestSnapshotCoverage",
+        "TestSnapshotDigestChangesWithAttachmentIdentity",
+        "TestSnapshotDigestChangesWithSource",
+        "TestSnapshotDigestIsDeterministic",
+        "TestSnapshotRejectsForeignMessage",
+        "TestSnapshotTranscriptCarriesIdentity",
+        "TestUOActiveReturnGuardAndIncompletePrefix",
+        "TestUOCancellationKeepsBegunUsagePrefix",
+        "TestUOExplicitModesKeepScalarsAndUsage",
+        "TestUOFreezePrivacyBoundsAndComposition",
+        "TestUOInitialProgressAndTerminalWriteFaults",
+        "TestUOInitialUnknownAndZeroPresence",
+        "TestUOInvalidValuesAndOverflow",
+        "TestUOKnownPriceLiteralControl",
+        "TestUOMultipleResponsesBothJobTypes",
+        "TestUONoCallAndErrorResponses",
+        "TestUOStoredTerminalBatchSuccess",
+        "TestUOStoredTerminalSingleSuccess",
+        "TestUOStoredUnknownPriceBothModes",
+        "TestUOSuccessfulSummaryPrefixes",
+        "TestUOUnknownPriceNeverFree",
+        "TestUOUsageFailureAndPanicBoundaries"
+      ]
+    },
+    {
+      "label": "M01",
+      "pattern": "^TestUO(UnknownPriceNeverFree|KnownPriceLiteralControl)$",
+      "topLevel": [
+        "TestUOKnownPriceLiteralControl",
+        "TestUOUnknownPriceNeverFree"
+      ]
+    },
+    {
+      "label": "M02",
+      "pattern": "^TestUOStoredTerminal(Single|Batch)Success$",
+      "topLevel": [
+        "TestUOStoredTerminalBatchSuccess",
+        "TestUOStoredTerminalSingleSuccess"
+      ]
+    },
+    {
+      "label": "restored",
+      "pattern": "^TestUO",
+      "topLevel": [
+        "TestUOActiveReturnGuardAndIncompletePrefix",
+        "TestUOCancellationKeepsBegunUsagePrefix",
+        "TestUOExplicitModesKeepScalarsAndUsage",
+        "TestUOFreezePrivacyBoundsAndComposition",
+        "TestUOInitialProgressAndTerminalWriteFaults",
+        "TestUOInitialUnknownAndZeroPresence",
+        "TestUOInvalidValuesAndOverflow",
+        "TestUOKnownPriceLiteralControl",
+        "TestUOMultipleResponsesBothJobTypes",
+        "TestUONoCallAndErrorResponses",
+        "TestUOStoredTerminalBatchSuccess",
+        "TestUOStoredTerminalSingleSuccess",
+        "TestUOStoredUnknownPriceBothModes",
+        "TestUOSuccessfulSummaryPrefixes",
+        "TestUOUnknownPriceNeverFree",
+        "TestUOUsageFailureAndPanicBoundaries"
+      ]
+    }
+  ],
+  "preRuntimePlan": {
+    "path": "docs/reviews/probes/r065_worker_plan.json",
+    "sha256": "d95760d05c3b33ade4199a04fc973b669dc9aecd51bcc92fa7d84420d2230375",
+    "committedBeforeRuntime": true
+  },
+  "runtimePlan": {
+    "path": "docs/reviews/probes/r065_worker_runtime_plan.json",
+    "bytes": 9215,
+    "sha256": "4fd905482c94ddad0b18f8d705c033d984040975d377975d88ad5d6e660f1717"
+  },
+  "buildCache": {
+    "name": "ccmai-r065-worker-cache-afed9068d8",
+    "freshDisposable": true,
+    "rwGoOnly": true
+  },
+  "network": {
+    "Name": "ccmai-r065-worker-net-afed9068d8",
+    "Id": "6e8623a940ef66a99d94b1734304728d71f96b2f4c01930d92ec9a7632192625",
+    "Created": "2026-10-08T11:41:17.893283649Z",
+    "Scope": "local",
+    "Driver": "bridge",
+    "EnableIPv4": true,
+    "EnableIPv6": false,
+    "IPAM": {
+      "Driver": "default",
+      "Options": {},
+      "Config": [
+        {
+          "Subnet": "172.19.0.0/16",
+          "Gateway": "172.19.0.1"
+        }
+      ]
+    },
+    "Internal": true,
+    "Attachable": false,
+    "Ingress": false,
+    "ConfigFrom": {
+      "Network": ""
+    },
+    "ConfigOnly": false,
+    "Options": {
+      "com.docker.network.enable_ipv4": "true",
+      "com.docker.network.enable_ipv6": "false"
+    },
+    "Labels": {},
+    "Containers": {},
+    "Status": {
+      "IPAM": {
+        "Subnets": {
+          "172.19.0.0/16": {
+            "IPsInUse": 3,
+            "DynamicIPsAvailable": 65533
+          }
+        }
+      }
+    }
+  },
+  "database": {
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "8492719eb84168a91ea172ba910cb95f72bb95e8558f1dba085dcacaf20c07a3",
+        "Source": "/var/lib/docker/volumes/8492719eb84168a91ea172ba910cb95f72bb95e8558f1dba085dcacaf20c07a3/_data",
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "ports": {}
+  },
+  "result": "PASS",
+  "secondArchive": {
+    "bytes": 2457600,
+    "sha256": "1612ac9bba5dbbcad4e3c30c6be35af2001336272e13a27b9394b1d4ba5fff5d",
+    "sameBytes": true
+  },
+  "notRun": [],
+  "seconds": 376.355,
+  "rawBackupDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-raw-backup-8irdxt5t"
+}

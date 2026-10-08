@@ -1,0 +1,135 @@
+{
+  "status": "REVIEW_PENDING",
+  "scope": "synthetic_local_application_usage_observation_only",
+  "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+  "planPublicationCommit": "012f083b8a312a94c0b54c4c7e7cfc7335dd85b2",
+  "worker": "Codex /root/r065_worker",
+  "independentReviewer": "Codex /root",
+  "rootStaticApproval": "PASS exact source/plan before first worker Go; source/guard/unknown/overflow/freeze/UO/fault/runner/archive590/seed audit",
+  "runtimeReceipt": {
+    "path": "docs/reviews/probes/r065_worker_summary.json",
+    "bytes": 81835,
+    "physicalSha256": "3595a4792631bba197b13b6933dcb102fb5f0baa7224dc9ae53b202f0e0b6395",
+    "gitLFSha256": "3595a4792631bba197b13b6933dcb102fb5f0baa7224dc9ae53b202f0e0b6395"
+  },
+  "physicalReferencesVerified": 20,
+  "manifestMembers": 216,
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+      "backend"
+    ],
+    "bytes": 2457600,
+    "sha256": "1612ac9bba5dbbcad4e3c30c6be35af2001336272e13a27b9394b1d4ba5fff5d"
+  },
+  "secondArchive": {
+    "bytes": 2457600,
+    "sha256": "1612ac9bba5dbbcad4e3c30c6be35af2001336272e13a27b9394b1d4ba5fff5d",
+    "sameBytes": true
+  },
+  "sourcePhysicalAndGitLF": [
+    {
+      "path": "backend/engine/analyzer.go",
+      "physicalSha256": "6c1d1dec5e39d137ce0183d0e1d0bb172a1196b76853e61103a3af6dcb0e370d",
+      "gitBlobLFSha256": "6c1d1dec5e39d137ce0183d0e1d0bb172a1196b76853e61103a3af6dcb0e370d",
+      "normalizedEqual": true
+    },
+    {
+      "path": "backend/engine/source_execution_receipt.go",
+      "physicalSha256": "0bfa6d9efabb99c08e87dd28e7d81ede3f8d1199b4c4db3bd3b456998520bba8",
+      "gitBlobLFSha256": "0bfa6d9efabb99c08e87dd28e7d81ede3f8d1199b4c4db3bd3b456998520bba8",
+      "normalizedEqual": true
+    },
+    {
+      "path": "backend/engine/usage_observation_receipt.go",
+      "physicalSha256": "898c11f8a81ef32274e4d7245f83d32c542e9e08292e137407f27617f39805e8",
+      "gitBlobLFSha256": "898c11f8a81ef32274e4d7245f83d32c542e9e08292e137407f27617f39805e8",
+      "normalizedEqual": true
+    },
+    {
+      "path": "backend/engine/usage_observation_receipt_test.go",
+      "physicalSha256": "0dc1a86c4b50f43e144bdd494a7a800c47e7a71e3d44a8d5464d29febf97afb8",
+      "gitBlobLFSha256": "0dc1a86c4b50f43e144bdd494a7a800c47e7a71e3d44a8d5464d29febf97afb8",
+      "normalizedEqual": true
+    },
+    {
+      "path": "backend/engine/usage_observation_receipt_db_test.go",
+      "physicalSha256": "e78a547c6a7cd453bb316c2725a67b802c151125438b5d5f0ccff122093ca718",
+      "gitBlobLFSha256": "e78a547c6a7cd453bb316c2725a67b802c151125438b5d5f0ccff122093ca718",
+      "normalizedEqual": true
+    }
+  ],
+  "protectedOldPhysicalFiles": 590,
+  "protectedOldUnchanged": true,
+  "seed065FirstBlobCommit": "fc63683b0c435cf157785a20ef7a420d44706825",
+  "seedFirstBlobUnchanged": true,
+  "workerCampaigns": 1,
+  "workerGoInvocations": 4,
+  "rootCampaigns": 0,
+  "rootGoInvocations": 0,
+  "automaticRetries": 0,
+  "positive": {
+    "topLevel": 81,
+    "passEvents": 269,
+    "fail": 0,
+    "skip": 0
+  },
+  "mutations": [
+    {
+      "label": "M01",
+      "topLevel": 2,
+      "passEvents": 1,
+      "failEvents": 1,
+      "namedAssertion": true,
+      "healthyControl": {
+        "name": "TestUOKnownPriceLiteralControl",
+        "passed": true
+      }
+    },
+    {
+      "label": "M02",
+      "topLevel": 2,
+      "passEvents": 1,
+      "failEvents": 1,
+      "namedAssertion": true,
+      "healthyControl": {
+        "name": "TestUOStoredTerminalBatchSuccess",
+        "passed": true
+      }
+    }
+  ],
+  "restored": {
+    "topLevel": 16,
+    "passEvents": 73,
+    "fail": 0,
+    "skip": 0
+  },
+  "cleanupVerified": true,
+  "rawPacketBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r065-worker-raw-backup-8irdxt5t",
+  "evidenceDomains": "Raw referenced SHA256 is WORKTREE_PHYSICAL; source archive members are committed Git LF. Publication metadata is separate; original raw files untouched.",
+  "independentAcceptance": "NOT_ESTABLISHED",
+  "freeze": "OPEN",
+  "realProviderOrGovernanceProof": false,
+  "unitGateBasis": "Root fresh46PASS36.636s inherited unchanged scripts/tests",
+  "retainedPublicationFailures": [
+    "Acknowledgment history-label6/7 corrected before source",
+    "NEW catalog family review invalid then directory family unsuitable; corrected before source commit"
+  ],
+  "handbackPublicationChecks": {
+    "default": "PASS7/7 after canonical REVIEW correction",
+    "prRange": "PASS7/7 origin/main..HEAD",
+    "exactStaged": "PASS7/7 exact31handbackpaths; final typed JSON checks restaged/rechecked before commit",
+    "catalogPS51": "PASS through three gates",
+    "catalogPS7": "PASS",
+    "gateUnits": "Fresh root46PASS36.636s inherited unchanged scripts/tests; no repeat",
+    "docs": "PASS35.45s after final Markdown",
+    "diff": "PASS",
+    "protectedOld590Physical": "PASS unchanged",
+    "rawPhysicalReferences": "PASS20, original raw summary/file bytes unchanged",
+    "sourceTestsAfterRuntime": "UNCHANGED source72e4c36",
+    "workerRuntimeBudget": "1campaign4Go exactly; root0Go"
+  }
+}

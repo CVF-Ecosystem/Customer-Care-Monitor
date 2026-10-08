@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / CLOSER
-- Next allowed move: CCMAI-RUNTIME-065 BUILD / PRE_RUNTIME_STATIC_REVIEW_PENDING at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root independently audits exact five backend paths, sixteen NEW UO tests, committed worker runner/plan and unchanged old590physical files before authorizing worker1campaign4Go. Runtime0; fresh root1campaign4Go separately, aggregate max8Go. Root formal independent REVIEW then scoped local FREEZE under end-to-end seed only after UO01..12/checks settle. R063/R064 exhausted8Go and original receipt loss limits retained; full S2/S3/provider/billing/live/CVF governance/hosted remain OPEN, Facebook/Zalo OA parked. No extra provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER then CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; child /root/r065_worker source author and completed BUILD COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-065 REVIEW_PENDING / REVIEW at child source72e4c367707d262e45ed9f36164d3e471a4d04b4 and committed worker exact-source PASS:81top269PASS, M01/M02 named kills with healthy contrasts, restored16top73PASS;216member restoration/secondarchive and cleanup verified. Root independent REVIEWER next runs separately authorized one4Go campaign and evaluates exact source/UO01..12 for formal REVIEW, then CLOSER scoped local FREEZE only when all checks/artifacts settle under this end-to-end seed. Worker1campaign4Go exhausted; root0/4, aggregate4/max8 fresh R065. R063/R064 exhausted8Go and original receipt loss limits preserved. Full S2/S3/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No extra source/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-action dispatcher acknowledgment
@@ -28,3 +28,7 @@ Only local UO01..12. Root independent actual campaign/source REVIEW required bef
 ## Worker before-edit BUILD acknowledgment
 
 2026-10-08 medium child /root/r065_worker freshly rehydrated canonical manifest/policy/state/memory/handoff/implementation/index and R065 SPEC/order/immutable seed; doctor PASS WITH NOTE25/1 at core8a4119e; BOOTSTRAP_MIGRATION_PENDING. Role IMPLEMENTATION_WORKER/BUILD COMMIT_STEWARD R2. Exact five backend paths, no old test/seed edits, fresh worker1/4 root1/4 budget, source/Go0 before this acknowledgment. Root static source/test/runner review mandatory before Go; root independent REVIEW and conditional local FREEZE. Applicable repair/UUID/prefix/publication/cleanup learnings read.
+
+## Root static approval and worker actual handback
+
+Independent root static PASS exact source72e4c36/plan012f083 before first worker Go; old590physical/seedfirstblob/archive216/inventory81-2-2-16/source/UO/callback/mutation/runner checks. Root explicitly authorized ONE worker FOUR Go, no retry. Worker actual campaignPASS4Go:81top269pass positive, M01/M02 named assertionfail1 and healthycontrolpass1 each, restored16top73pass.216member restoration/secondarchive,20physicalreference hashes, containerbefore/afterinspect/exits and fullcleanup verified. Original raw packet backed up separately in taskTEMP and not rewritten; physical/Git LF domains explicit. Root own campaign0Go, independent acceptance not established; local closure conditional. Worker hands writer ownership to root after publication commit.

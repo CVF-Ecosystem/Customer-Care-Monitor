@@ -1,6 +1,6 @@
 # R065 worker source checkpoint and bounded campaign
 
-Status: BUILD / PRE_RUNTIME_STATIC_REVIEW_PENDING
+Status: REVIEW_PENDING / WORKER_CAMPAIGN_PASS
 
 Medium Codex /root/r065_worker IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD. Root independent REVIEWER. Authority seedfc63683 and activation0756485; before-edit acknowledgment1e3f83c. Fresh worker max1campaign4Go / root max1campaign4Go. Runtime0; no test outcome or acceptance claimed here.
 
@@ -44,3 +44,13 @@ Before-edit acknowledgment first default preflight failed6/7 because history end
 ## Committed source and exact campaign checkpoint
 
 Source `72e4c367707d262e45ed9f36164d3e471a4d04b4`; immutable source/test/runner checkpoint. Committed plan contains exact archive identity, 81 selected positive top-level tests, two named mutation detectors with contrasting controls and16 restored UO tests. Source publication default/PR/exact9staged gatesPASS7/7, catalogPS5 through gates/PS7PASS, docsPASS37.64s, old590physicalfiles unchanged; inherited fresh root46unitsPASS36.636s unchanged scripts/tests. Root static review pending, runtime0.
+
+## Actual authorized worker campaign
+
+Root independent static source/plan audit explicitly passed before first Go. One campaign/four Go only: positive81top269PASS249.407s, M01unknown-price detectorfail1/knowncontrolpass1 at17.491s, M02actualstoredSINGLEnested-receipt assertionfail1/healthyBATCHpass1 at18.673s, restored16top73PASS57.172s.0skips, no unexplained test/build/timeout failure or automatic retry. Total376.355s including setup/restoration/cleanup.
+
+Actual [raw typed receipt](probes/r065_worker_summary.json), [publication handback](probes/r065_worker_handback.json), [committed plan](probes/r065_worker_plan.json). Raw20physicalreferences verified against the receipt;216archive members restored after both isolated mutations and final, second committed archive byte-identical. Actual image/internalnetwork/read-onlybind/noport/containerbefore-afterinspect/attach-state exit checks and all named container/network/volume absence verified. Raw files are separate from publication metadata and preserved with taskTEMP physical backups.
+
+All590oldphysicalfiles and immutable065seedfirstblob remain unchanged. Source72e4c36 and plan012f083 retained; no source/test edits after runtime. Worker budget1/4 exhausted; independent root campaign0/4 and acceptance pending. This is bounded synthetic application observation, no real provider, billing, token-presence, pricing revision or CVF governance evidence. Root independently reviews and may perform scoped local closure only after its own evidence and checks settle.
+
+Handback publication first continuity check rejected mode REVIEW_PENDING6/7; corrected canonical mode/header/front marker to REVIEW while tranche remains REVIEW_PENDING. Source/tests/raw evidence unchanged and no runtime rerun.
