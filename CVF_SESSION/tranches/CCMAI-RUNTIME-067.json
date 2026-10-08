@@ -109,7 +109,9 @@
     "reviewerUsedVisualInvocations": 1,
     "supplementalReviewerMaxVisualInvocations": 1,
     "supplementalReviewerUsedVisualInvocations": 1,
-    "aggregateVisualCeilingIncludingHistory": 3
+    "aggregateVisualCeilingIncludingHistory": 4,
+    "correctedKeyboardReviewerMaxVisualInvocations": 1,
+    "correctedKeyboardReviewerUsedVisualInvocations": 0
   },
   "liveEvidence": "NOT_RUN; synthetic UI structure/payload presentation only, no governance claim",
   "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
@@ -255,5 +257,6 @@
   },
   "additionalVisualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
   "correctedKeyboardVisualRequest": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json",
-  "supplementalVisualReceipt": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json"
+  "supplementalVisualReceipt": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json",
+  "correctedKeyboardVisualGrant": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json"
 }

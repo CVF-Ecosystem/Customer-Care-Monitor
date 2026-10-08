@@ -4336,6 +4336,13 @@
       "path": "docs/reviews/probes/r067_secondary_static_review_findings_2026-10-09.json",
       "status": "ACTIVE",
       "description": "Root-derived actual Luna secondary readonly findings and NEW probe repairs; no runtime or acceptance claim."
+    },
+    {
+      "id": "r067-evidence-publication-e001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved exactlyone correctednativekeyboard rootvisual, exactpreparedhashes and beforeexecution counters, historical3failures retained."
     }
   ]
 }

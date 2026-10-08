@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 CHANGES_REQUIRED / REVIEW: approved supplementalrootvisual FAILEDexit1/5.070s; report now proves mount4sections and TabSUMMARYtrue, EnterOpenedfalse/SpaceClosedfalse/finalopentrue, favicon404; no PNG/fullmatrix. Root-owned CDP Enter omitted text/unmodifiedText versus cachedPuppeteer; NEW propertext/rawKeyDown+datafavicon repair prepared/staticPASS, predicted behavior unverified. Visual3/3, Vitest8/8/build3/3, Go0 exhausted, allfailurepackets retained. REVIEW_COST_ESCALATION_REQUIRED: exactly1 further rootvisual PROPOSED_NOT_AUTHORIZED; await owner decision, no runtime/FREEZE/push. On authorizedcapturePASS inspect4actualimages/report then formalreview/conditional scopedclosure/ordinarybranchpush and final Luna/Sol assessment. Coreab714ed7 reconciled/doctor25/1, oldbackup retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 REVIEW / CHANGES_REQUIRED: owner approved exactlyone corrected-native-keyboard rootvisual; committed NEWgrant beforeexecution on bd62c7e. Run prepared explicitgrant runner ONCE; inspect actual4EN/VI desktop/mobile images and keyboard/report before formalREVIEW. Prior3visual failures retained; currenttotalvisualmax4, correctedkeyboardused0/1; Vitest8/8/build3/3/Go0 unchanged. UnexpectedfailureSTOP/no retry. After settledPASS conditional scopedlocalFREEZE/ordinary authorizedbranchpush and final Luna xhigh vsSolmedium assessment. Coreab714ed7/doctor25/1, manifest/bootstrap/bindingnotes retained. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh readonly secondary NEWprobe reviewer, no runtime authority",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh source author idle",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-09",
   "currentExecutionBudget": {
@@ -43,7 +43,9 @@
     "reviewerUsedVisualInvocations": 1,
     "supplementalReviewerMaxVisualInvocations": 1,
     "supplementalReviewerUsedVisualInvocations": 1,
-    "aggregateVisualCeilingIncludingHistory": 3
+    "aggregateVisualCeilingIncludingHistory": 4,
+    "correctedKeyboardReviewerMaxVisualInvocations": 1,
+    "correctedKeyboardReviewerUsedVisualInvocations": 0
   },
   "previousExecutionBudget": {
     "reviewerMaxCampaigns": 1,
@@ -187,7 +189,7 @@
     "visualUsed": 3,
     "visualMax": 3,
     "preparedProbe": "docs/reviews/probes/r067_capture_native_keyboard_PROPOSED_2026-10-09.mjs",
-    "additionalVisualAuthority": "PROPOSED_NOT_AUTHORIZED_FOR_CORRECTED_KEYBOARD",
+    "additionalVisualAuthority": "OWNER_APPROVED_EXACTLY_ONE_VISUAL_CORRECTED_KEYBOARD",
     "costDisposition": "REVIEW_COST_ESCALATION_REQUIRED"
   },
   "additionalCheckBudgetRequest": "docs/reviews/probes/r067_additional_build_request_2026-10-09.json",
@@ -215,5 +217,6 @@
   },
   "additionalVisualGrant": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
-  "correctedKeyboardVisualRequest": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json"
+  "correctedKeyboardVisualRequest": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json",
+  "correctedKeyboardVisualGrant": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json"
 }

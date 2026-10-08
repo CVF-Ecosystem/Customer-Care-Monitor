@@ -27,3 +27,5 @@ Owner separately approved exactlyone supplemental rootvisual and required CVF co
 ## Supplemental actual result / corrected keyboard proposal (2026-10-09)
 
 Approvedone supplementalvisual FAILED, sourceunchanged; totalvisual3/3 exhausted. Actualmount/Tab proven, Enter/Space sequence failed; NEW CDPtext/favicon repair is prepared/unexecuted. Exactlyone further rootvisual is PROPOSED only, no retry authority. [Cost disposition](../reviews/R067_NATIVE_KEYBOARD_PROBE_REPAIR_AND_COST_DISPOSITION_2026-10-09.md). ExistingVitest8/build3/Go0 unchanged.
+
+Owner duyệt exactlyone corrected-native-keyboard rootvisual (2026-10-09), [NEWgrant](../reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json) committed beforeexecution; totalvisualmax4 includinghistorical3failures, no extra frontendbuild/Vitest/Go.

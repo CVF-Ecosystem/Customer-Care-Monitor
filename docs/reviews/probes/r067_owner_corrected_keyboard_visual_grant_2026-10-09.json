@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-09",
+  "status": "OWNER_APPROVED_EXACTLY_ONE_VISUAL",
+  "request": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json",
+  "ownerReply": "duyệt to exactlyone further rootvisual on corrected nativekeyboard probe",
+  "preparedFiles": [
+    {
+      "path": "docs/reviews/probes/r067_capture_native_keyboard_PROPOSED_2026-10-09.mjs",
+      "sha256Physical": "50696320f68ee014ee9a7e5d41226bfc838552f7f27cbcb051d781ab81d198ac"
+    },
+    {
+      "path": "docs/reviews/probes/r067_visual_fixture_native_keyboard_PROPOSED_2026-10-09.mjs",
+      "sha256Physical": "7c26ea326151f942cdc7402d3aeba89373dda2f6db228aa67ef900e63f9ca099"
+    },
+    {
+      "path": "docs/reviews/probes/r067_corrected_keyboard_visual_PROPOSED_2026-10-09.py",
+      "sha256Physical": "3de6ef1cb9658ed100804b6cfe44d58de80758e7999540ad4aa0632828e2149b"
+    }
+  ],
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "sourceArchiveSha256": "60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6",
+  "additionalRootVisualMax": 1,
+  "additionalRootVisualUsedBefore": 0,
+  "priorVisualUsed": 3,
+  "aggregateVisualCeilingIncludingHistory": 4,
+  "VitestUsed": 8,
+  "VitestMax": 8,
+  "forcedBuildsUsed": 3,
+  "forcedBuildsMax": 3,
+  "Go": 0,
+  "doctor": "PASS WITH NOTE25/1; coreab714ed7 publicclean/matchesorigin, manifestpin/bootstrap/profile notes retained",
+  "failureRule": "Exactlyone launch; unexpectedfailure stops with raw packet; no automaticretry/reset. Existing source/tests/seed/oldpackets unchanged.",
+  "afterPass": "Root independently inspectactual4images/report then formalREVIEW and conditional scopedFREEZE/ordinary authorized branchpush; final Luna/Sol assessment."
+}
