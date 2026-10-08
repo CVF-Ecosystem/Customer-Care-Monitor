@@ -49,16 +49,20 @@
   "claimScope": "Only UI reading/presentation of existing saved SP/EX/RO/UO receipts. Synthetic UI fixtures prove rendering/normalization only; no AI governance/provider/permission enforcement or billing proof.",
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "fc809eb33d2635088db1a005a3a94ae7434910a4",
-  "buildCommit": null,
-  "reviewEvidence": [],
+  "buildCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+  "reviewEvidence": [
+    "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
+    "docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md"
+  ],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -68,7 +72,7 @@
   ],
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "2026-10-08 root fresh manifest/policy/state/memory/activeR065handoff/implementation/index rehydration; core8a4119e public-clean/matchesorigin, doctorPASSWITHNOTE25/1, manifest26c686cc warning and BOOTSTRAP_MIGRATION_PENDING retained. Ownerpushthencontinue; actual43commit GitHubpublicationa384fa2 independently read back. Root+medium readonly source audits select coherent S5 saved-run UI reader over unavailable S2/S3 governance authority; UIR01..12 settled in SPEC, firstseedfc809eb predates BUILD. Root ORCHESTRATOR/SPEC_AUTHOR/WORK_ORDER_AUTHOR transition before activation. Source/Vitest/Go0; child before-edit BUILD acknowledgment required; exact source-plan/staticapproval before Vitest, root own review and conditional same-seedclosure/push. No reuse/reset of R065 exhausted Go.",
-  "sourceImplementation": "COMMITTED_TEST_SYNTAX_REPAIR_REQUIRED",
+  "sourceImplementation": "COMMITTED_REPAIRED_STATIC_REVIEW_ONLY",
   "sourceBaselineCommit": "a384fa2ecad6746d35e7897dd8b9e4473221e691",
   "workerModel": {
     "model": "gpt-6.1-sol",
@@ -124,7 +128,7 @@
     "riskScopeRolesBudgetUnchanged": true,
     "receipt": "docs/reviews/probes/r067_luna_takeover_2026-10-08.json"
   },
-  "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "sourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
   "rootStaticApproval": {
     "date": "2026-10-09",
     "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
@@ -175,12 +179,13 @@
     "BUILD_SYNTAX_REPAIR_REQUIRED",
     "BUILD"
   ],
-  "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+  "repairedSourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
   "renewedRootStaticAudit": "docs\\reviews\\probes\\r067_root_repair_build_plan_2026-10-09.json",
   "acceptedRepairRound2": {
     "source": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
     "diagnostics": 7,
     "finding": "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
     "runtimeRetryAuthorized": false
-  }
+  },
+  "additionalCheckAuthority": "NOT_GRANTED"
 }

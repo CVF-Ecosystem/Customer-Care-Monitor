@@ -289,9 +289,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/probes/r065_worker_campaign.py`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/probes/r065_worker_plan.json`
 - R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md`
 - Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking.: `docs/reviews/probes/r067_capture_keyboard.mjs`
 - Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries.: `docs/reviews/probes/r067_luna_takeover_2026-10-08.json`
 - Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending.: `docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_additional_build_request_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_cache_retention_disposition_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_preexec_wrapper_disposition_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_repair_plan_2026-10-09.json`
@@ -300,9 +302,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_typecheck_stderr_2026-10-09.log`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_typecheck_stdout_2026-10-09.log`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_round2_independent_static_review_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_static_syntax.mjs`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_supplemental_build_PROPOSED_2026-10-09.py`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_typecheck_repair_disposition_2026-10-09.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_visual_cleanup_plan_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_2026-10-09.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_exact_2026-10-09.py`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_preflight_failure_2026-10-09.json`
@@ -311,6 +316,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed`
 - R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json`
 - Independent exact-source static approval and bounded worker/root campaign; historical root static failures retained.: `docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_type_repair_round2_plan_2026-10-09.json`
 - Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof.: `docs/reviews/probes/r067_ui_campaign.py`
 - Luna isolated synthetic saved-run panel fixture, loopback only, no application/API.: `docs/reviews/probes/r067_visual_fixture.mjs`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`

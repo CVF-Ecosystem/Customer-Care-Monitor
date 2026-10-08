@@ -3636,6 +3636,48 @@
       "path": "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
       "status": "ACTIVE",
       "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-additional-build-request-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_additional_build_request_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-r067-round2-independent-static-review-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_round2_independent_static_review_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-r067-supplemental-build-proposed-2026-10-09-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_build_PROPOSED_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-roundtwo-type-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_type_repair_round2_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-r067-visual-cleanup-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_cleanup_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-budget-request-reviewed-source",
+      "family": "continuity",
+      "path": "docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
     }
   ]
 }

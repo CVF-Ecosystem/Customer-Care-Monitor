@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 BUILD / accepted bounded repair: Luna xhigh REPAIR_WORKER fixes the one missing options-object brace in NEW integration test109 at source8a63ad58f7c024d32088ae6079f9908356174308, performs syntax-only static audit and commits exact repair/NEWplan, then stops for renewed root audit. Worker forcedtypecheck-build1 exhausted with TS1005 failure, Vite NOT RUN; Vitest0/8 and Go0. Root uses its existing one forcedtypecheck-build on repaired exact source BEFORE authorizing worker4Vitest and independent root4Vitest/visuals; no added invocation or budget reset. Preserve all failedsource/rawlogs/setup errors, no automaticretry. Existing scope/risk/roles/seed unchanged. Formal independent REVIEW then conditional local UI FREEZE/ordinary authorized branch push only after finalsource/checks settle. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked; no backend/oldtests/oldpackets/seeds/provider/credentials/customer/persistentDB/core/main/merge/deploy.",
+    "CCMAI-RUNTIME-067 REVIEW_PENDING at repaired source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: root static review and exact121member/27oldtest protection PASS; no final semantic/runtime acceptance. Both original forcedbuilds exhausted1worker+1reviewer with retained failures; Vite/Vitest/browser/Go NOT RUN, Vitest0/8,Go0. Await owner decision on concrete additional exactly1 reviewer forcedtypecheck-build proposal docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md before any further build/runtime. Original seed/scope/R2/8Vitest ceiling unchanged; no automaticretry/reset. After explicit additional-budget grant and finalbuildPASS, continue original unused worker4/root4Vitest and one visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -249,7 +249,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 BUILD / accepted consolidated type repair round2: Luna xhigh REPAIR_WORKER fixes all seven TypeScript diagnostics from source4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314 within the existing eight frontend paths, commits exact repair/plan after syntax-only audit, then stops for root review. Both worker and reviewer forcedtypecheck-build1 exhausted with failures; Vite/Vitest/browser/Go NOT RUN (Vitest0/8,Go0). No further typecheck/build or runtime campaign without explicit additional check-budget authority. Preserve both failed source packets and original evidence-loss limits; scope/risk/seed unchanged. Root prepares a concrete bounded additional-check request after repaired-source static review; no FREEZE/push while tests failing or unverified. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PENDING at repaired source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: root static review and exact121member/27oldtest protection PASS; no final semantic/runtime acceptance. Both original forcedbuilds exhausted1worker+1reviewer with retained failures; Vite/Vitest/browser/Go NOT RUN, Vitest0/8,Go0. Await owner decision on concrete additional exactly1 reviewer forcedtypecheck-build proposal docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md before any further build/runtime. Original seed/scope/R2/8Vitest ceiling unchanged; no automaticretry/reset. After explicit additional-budget grant and finalbuildPASS, continue original unused worker4/root4Vitest and one visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -571,23 +571,23 @@
   ],
   "savedRunObservationUI": {
     "tranche": "CCMAI-RUNTIME-067",
-    "status": "BUILD",
-    "sourceImplementation": "COMMITTED_SEMANTIC_TYPE_REPAIR_REQUIRED",
+    "status": "REVIEW_PENDING",
+    "sourceImplementation": "COMMITTED_REPAIRED_STATIC_REVIEW_ONLY",
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
     "newVitestInvocations": 0,
-    "nextMove": "CCMAI-RUNTIME-067 BUILD / accepted consolidated type repair round2: Luna xhigh REPAIR_WORKER fixes all seven TypeScript diagnostics from source4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314 within the existing eight frontend paths, commits exact repair/plan after syntax-only audit, then stops for root review. Both worker and reviewer forcedtypecheck-build1 exhausted with failures; Vite/Vitest/browser/Go NOT RUN (Vitest0/8,Go0). No further typecheck/build or runtime campaign without explicit additional check-budget authority. Preserve both failed source packets and original evidence-loss limits; scope/risk/seed unchanged. Root prepares a concrete bounded additional-check request after repaired-source static review; no FREEZE/push while tests failing or unverified. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PENDING at repaired source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: root static review and exact121member/27oldtest protection PASS; no final semantic/runtime acceptance. Both original forcedbuilds exhausted1worker+1reviewer with retained failures; Vite/Vitest/browser/Go NOT RUN, Vitest0/8,Go0. Await owner decision on concrete additional exactly1 reviewer forcedtypecheck-build proposal docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md before any further build/runtime. Original seed/scope/R2/8Vitest ceiling unchanged; no automaticretry/reset. After explicit additional-budget grant and finalbuildPASS, continue original unused worker4/root4Vitest and one visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
       "model": "gpt-6-luna",
       "reasoningEffort": "xhigh"
     },
-    "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+    "sourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
     "workerForcedTypecheckBuildUsed": 1,
     "typecheckFailureReceipt": "docs/reviews/probes/r067_worker_build_2026-10-09.json",
-    "repairedSourceCommit": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+    "repairedSourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
     "reviewerForcedTypecheckBuildUsed": 1,
     "independentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS",
     "typecheckFailureReceipts": [

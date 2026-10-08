@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R067 saved-run observation UI (2026-10-08)
 
-CCMAI-RUNTIME-067 BUILD / accepted consolidated type repair round2: Luna xhigh REPAIR_WORKER fixes all seven TypeScript diagnostics from source4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314 within the existing eight frontend paths, commits exact repair/plan after syntax-only audit, then stops for root review. Both worker and reviewer forcedtypecheck-build1 exhausted with failures; Vite/Vitest/browser/Go NOT RUN (Vitest0/8,Go0). No further typecheck/build or runtime campaign without explicit additional check-budget authority. Preserve both failed source packets and original evidence-loss limits; scope/risk/seed unchanged. Root prepares a concrete bounded additional-check request after repaired-source static review; no FREEZE/push while tests failing or unverified. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-067 REVIEW_PENDING at repaired source4d9214b04b3ccb822d535f3eccf5783fe0939e0a: root static review and exact121member/27oldtest protection PASS; no final semantic/runtime acceptance. Both original forcedbuilds exhausted1worker+1reviewer with retained failures; Vite/Vitest/browser/Go NOT RUN, Vitest0/8,Go0. Await owner decision on concrete additional exactly1 reviewer forcedtypecheck-build proposal docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md before any further build/runtime. Original seed/scope/R2/8Vitest ceiling unchanged; no automaticretry/reset. After explicit additional-budget grant and finalbuildPASS, continue original unused worker4/root4Vitest and one visual per role, independent REVIEW and conditional scoped localFREEZE/authorized ordinary branchpush. Final Luna xhigh versus Sol medium assessment after settled tranche. Full S2/S3/S5/live/governance/hosted OPEN; Facebook/Zalo OA parked.
 
 GitHub completed43commitpush to a384fa2 verified; publicationreceipt recorded, currentbatch completes through source/independentreview/conditionalclosure/push.
 
