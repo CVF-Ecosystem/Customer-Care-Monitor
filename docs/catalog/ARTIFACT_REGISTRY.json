@@ -3797,6 +3797,363 @@
       "path": "docs/reviews/probes/r067_round3_worker_test_repair_plan_2026-10-09.json",
       "status": "ACTIVE",
       "description": "R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet."
+    },
+    {
+      "id": "r067-evidence-publication-a001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_remaining_visual_publication_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_summary.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_failed_capture.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_failed_vite.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_receipt_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_runtime_evidence_reconciliation_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture_failure_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resume_ack_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a034",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a035",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a036",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a038",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a039",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a043",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a044",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a045",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a047",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a050",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_summary.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
     }
   ]
 }

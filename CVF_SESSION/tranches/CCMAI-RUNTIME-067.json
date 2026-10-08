@@ -91,15 +91,19 @@
     "reviewerMaxForcedTypecheckBuilds": 1,
     "maxGoInvocations": 0,
     "workerUsedCampaigns": 1,
-    "workerUsedVitestInvocations": 1,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedVitestInvocations": 0,
+    "workerUsedVitestInvocations": 4,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedVitestInvocations": 4,
     "workerUsedForcedTypecheckBuilds": 1,
     "reviewerUsedForcedTypecheckBuilds": 1,
     "usedGoInvocations": 0,
     "supplementalReviewerMaxForcedTypecheckBuilds": 1,
     "supplementalReviewerUsedForcedTypecheckBuilds": 1,
-    "aggregateForcedBuildCeilingIncludingHistory": 3
+    "aggregateForcedBuildCeilingIncludingHistory": 3,
+    "workerMaxVisualInvocations": 1,
+    "reviewerMaxVisualInvocations": 1,
+    "workerUsedVisualInvocations": 0,
+    "reviewerUsedVisualInvocations": 1
   },
   "liveEvidence": "NOT_RUN; synthetic UI structure/payload presentation only, no governance claim",
   "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
@@ -215,5 +219,20 @@
     "newSourceCompilerExecuted": false,
     "basis": "Only NEW test body changes using compiled APIs/types; all120otherfrontendfiles, including product/config/dependencies, byte-identical. Explicit phase inheritance, not fresh compiler claim."
   },
-  "finalSourceCampaignPlan": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json"
+  "finalSourceCampaignPlan": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json",
+  "runtimeEvidenceAudit": [
+    {
+      "path": "docs\\reviews\\probes\\r067_reviewer_summary.json",
+      "sha256Physical": "a77deeb49e598b6b776f0ee71706c529ce70608d2a62db90fb4cb0a1d12b78c1",
+      "commands": 4,
+      "rawHashesVerified": true
+    },
+    {
+      "path": "docs\\reviews\\probes\\r067_worker_resumed_summary.json",
+      "sha256Physical": "4e23607086e0e2805ca04b9ccb3ba5c8ec9f4900abf6757541700d16a8c4a9f6",
+      "commands": 3,
+      "rawHashesVerified": true
+    }
+  ],
+  "visualFailureDisposition": "docs/reviews/probes/r067_visual_fixture_failure_disposition_2026-10-09.json"
 }

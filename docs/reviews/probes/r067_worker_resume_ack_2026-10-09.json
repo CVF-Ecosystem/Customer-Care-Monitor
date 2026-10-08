@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "recordedAt": "2026-10-09",
+  "phase": "REVIEW",
+  "risk": "R2",
+  "liveEvidenceRequired": true,
+  "worker": {
+    "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS",
+    "role": "IMPLEMENTATION_WORKER / RUNTIME EVIDENCE",
+    "model": "gpt-6-luna",
+    "verifiedCoreCommit": "8a4119e11db00e774ed8e7cf7d9a8caa309e81d1",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+    "manifestExpectedCoreCommit": "26c686cc99b8be965d2760f27fe875b03376c643",
+    "reasoningEffort": "xhigh"
+  },
+  "source": {
+    "members": 121,
+    "productionIdenticalToBuiltCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+    "suiteCount": 30,
+    "archiveBytes": 1218560,
+    "commit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+    "archiveSha256": "60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6",
+    "compilerEvidence": "Inherited from production-identical4d921; no fresh compiler claim for the test-only repair."
+  },
+  "reviewerCampaign": {
+    "positiveTests": "316/316 PASS",
+    "M02": "semantic detector failed and named healthy control passed",
+    "summary": "docs/reviews/probes/r067_reviewer_summary.json",
+    "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r067_reviewer-raw-backup-88xgng9u",
+    "fullManifestRestored": true,
+    "dependencyJunctionRemoved": true,
+    "overall": "PASS",
+    "restored": "17/17 PASS",
+    "secondArchiveIdentical": true,
+    "M01": "semantic detector failed and named healthy control passed",
+    "invocations": 4
+  },
+  "workerCampaign": {
+    "exactCommand": "python -B docs/reviews/probes/r067_worker_resume_remaining_three.py --source bd62c7e4e4868cc05528aa2b8a1ae05561a78df1 --role worker --execute",
+    "noPositiveRetry": true,
+    "sequence": [
+      "M01",
+      "M02",
+      "restored"
+    ],
+    "priorSummary": "docs/reviews/probes/r067_worker_summary.json",
+    "continuationProbe": "docs/reviews/probes/r067_worker_resume_remaining_three.py",
+    "remainingInvocations": 3,
+    "priorPositive": "315/316 PASS; one assertion failure retained unchanged",
+    "priorInvocations": 1,
+    "priorRawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r067_worker-raw-backup-0hd_1a35",
+    "noNewCampaign": true,
+    "visual": "One worker visual may run only after all three continuation calls pass.",
+    "aggregateCeiling": 8
+  },
+  "budget": {
+    "goInvocationsUsed": 0,
+    "reviewerUsed": 4,
+    "workerUsedBefore": 1,
+    "aggregateUsedBefore": 5,
+    "forcedBuildsUsed": 3,
+    "workerRemainingBefore": 3,
+    "aggregateCeiling": 8
+  },
+  "stateNote": "State execution counters still show reviewer 0 as of readback; the committed handoff gates continuation on root campaign PASS, actual summary and root explicit PASS message verify this condition; root owns state synchronization.",
+  "readOnlyLookupMiss": {
+    "result": "Absent; no files changed and no runtime invoked.",
+    "path": "docs/reviews/probes/r067_final_campaign_plan_2026-10-09.json",
+    "correctedBy": "git show of root commit 7b8044c identified docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json."
+  },
+  "expectedAfter": "Preserve all outputs/backup, stop on any unexpected result, then run exactly one visual only if M01/M02/restored all meet committed probe acceptance."
+}

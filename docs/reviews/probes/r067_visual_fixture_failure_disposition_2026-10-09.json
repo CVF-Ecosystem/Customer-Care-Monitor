@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-09",
+  "scope": "NEW validation fixture only, product unchanged",
+  "rootVisualUsed": 1,
+  "workerVisualUsed": 0,
+  "extraBrowserInvocationsAuthorized": 0,
+  "rootCause": "encodeURI inside TS module import specifiers produced literal %20 filesystem IDs; Vite ENOENT before component mounted. Keyboard assertion is harness symptom, not product failure.",
+  "newFixture": "docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs",
+  "literalPathReplacements": 3,
+  "originalFixtureUnchanged": true,
+  "failedLogs": [
+    {
+      "path": "docs/reviews/probes/r067_reviewer_visual_failed_vite.log",
+      "bytes": 6355,
+      "sha256Physical": "b4c9a77b80e0f63909fba75bf6623f1f3ae3297e8220596f4f296f496f118482"
+    },
+    {
+      "path": "docs/reviews/probes/r067_reviewer_visual_failed_capture.log",
+      "bytes": 194,
+      "sha256Physical": "bca1eb74d077979e96112bf90f7b1e9687f92ff48d82b1ab317e0af58198ed03"
+    }
+  ],
+  "failedTempFixtureJunctionAbsent": true,
+  "remainingEvidencePlan": "Worker uses its original unusedonevisual with repaired NEWfixture; root independent visual review of actual fourimages/rawkeyboard/report, no reviewerbrowser retry/no claim of own successfulcapture.",
+  "acceptanceBoundary": "Same UI contract; independent reviewer inspects actual UI screenshots and source plus keyboard/error/overflow/externalrequest report. Originalfailedattemptretained. No extra checks/budget/production/compiler/provider effects."
+}

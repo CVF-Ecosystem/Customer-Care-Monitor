@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-09",
+  "reviewer": "Codex /root",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "rawAudits": [
+    {
+      "path": "docs\\reviews\\probes\\r067_reviewer_summary.json",
+      "sha256Physical": "a77deeb49e598b6b776f0ee71706c529ce70608d2a62db90fb4cb0a1d12b78c1",
+      "commands": 4,
+      "rawHashesVerified": true
+    },
+    {
+      "path": "docs\\reviews\\probes\\r067_worker_resumed_summary.json",
+      "sha256Physical": "4e23607086e0e2805ca04b9ccb3ba5c8ec9f4900abf6757541700d16a8c4a9f6",
+      "commands": 3,
+      "rawHashesVerified": true
+    }
+  ],
+  "visualFixtureDiffLines": [
+    [
+      "  const componentPath = `/@fs/${encodeURI(component.replaceAll('\\\\', '/'))}`",
+      "  const componentPath = `/@fs/${component.replaceAll('\\\\', '/')}`"
+    ],
+    [
+      "  const enPath = `/@fs/${encodeURI(join(localeDir, 'en.ts').replaceAll('\\\\', '/'))}`",
+      "  const enPath = `/@fs/${join(localeDir, 'en.ts').replaceAll('\\\\', '/')}`"
+    ],
+    [
+      "  const viPath = `/@fs/${encodeURI(join(localeDir, 'vi.ts').replaceAll('\\\\', '/'))}`",
+      "  const viPath = `/@fs/${join(localeDir, 'vi.ts').replaceAll('\\\\', '/')}`"
+    ]
+  ],
+  "budget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxVitestInvocations": 4,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxVitestInvocations": 4,
+    "aggregateMaxVitestInvocations": 8,
+    "workerMaxForcedTypecheckBuilds": 1,
+    "reviewerMaxForcedTypecheckBuilds": 1,
+    "maxGoInvocations": 0,
+    "workerUsedCampaigns": 1,
+    "workerUsedVitestInvocations": 4,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedVitestInvocations": 4,
+    "workerUsedForcedTypecheckBuilds": 1,
+    "reviewerUsedForcedTypecheckBuilds": 1,
+    "usedGoInvocations": 0,
+    "supplementalReviewerMaxForcedTypecheckBuilds": 1,
+    "supplementalReviewerUsedForcedTypecheckBuilds": 1,
+    "aggregateForcedBuildCeilingIncludingHistory": 3,
+    "workerMaxVisualInvocations": 1,
+    "reviewerMaxVisualInvocations": 1,
+    "workerUsedVisualInvocations": 0,
+    "reviewerUsedVisualInvocations": 1
+  },
+  "failureRetained": true,
+  "formalReview": "PENDING_VISUAL"
+}

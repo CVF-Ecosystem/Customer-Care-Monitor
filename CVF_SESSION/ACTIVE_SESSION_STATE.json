@@ -13,9 +13,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-067 REVIEW_PENDING at final test-repaired sourcebd62c7e4e4868cc05528aa2b8a1ae05561a78df1/archive60d07e34: root static source/121member/30suite audit PASS, product and all120otherfrontendfiles identical to built4d921; compiler/Vite inherited with explicit no-newcompile limitation. Execute original independent root4Vitest campaign, then ifPASS manualremaining3worker continuation under committed rootprobe, then oneisolatedvisualperrole. Historicalfailedworker1Vitest preserved; total8 ceiling unchanged,3/3builds exhausted,Go0. No automaticretry/reset. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush, final Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN, Facebook/ZaloOAparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh /root/r065_worker waiting remaining-three evidence authorization",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna xhigh /root/r065_worker remaining one visual evidence worker",
   "roleRoute": "OWNER_AUTHORIZED_MEDIUM_CHILD_UI_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
   "updatedAt": "2026-10-09",
   "currentExecutionBudget": {
@@ -28,15 +28,19 @@
     "reviewerMaxForcedTypecheckBuilds": 1,
     "maxGoInvocations": 0,
     "workerUsedCampaigns": 1,
-    "workerUsedVitestInvocations": 1,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedVitestInvocations": 0,
+    "workerUsedVitestInvocations": 4,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedVitestInvocations": 4,
     "workerUsedForcedTypecheckBuilds": 1,
     "reviewerUsedForcedTypecheckBuilds": 1,
     "usedGoInvocations": 0,
     "supplementalReviewerMaxForcedTypecheckBuilds": 1,
     "supplementalReviewerUsedForcedTypecheckBuilds": 1,
-    "aggregateForcedBuildCeilingIncludingHistory": 3
+    "aggregateForcedBuildCeilingIncludingHistory": 3,
+    "workerMaxVisualInvocations": 1,
+    "reviewerMaxVisualInvocations": 1,
+    "workerUsedVisualInvocations": 0,
+    "reviewerUsedVisualInvocations": 1
   },
   "previousExecutionBudget": {
     "reviewerMaxCampaigns": 1,
@@ -74,7 +78,7 @@
     "sourceOrRuntimeDispatched": true,
     "sourceImplementation": "COMMITTED_TEST_ONLY_REPAIR_REVIEW_PENDING",
     "newGoInvocations": 0,
-    "newVitestInvocations": 0
+    "newVitestInvocations": 8
   },
   "r061RetainedExecutionBudget": {
     "workerMaxCampaigns": 0,
@@ -192,5 +196,6 @@
   "currentPublicationRootError": "Initial request publication failed5/7: root used status REVIEW_PENDING as canonical currentMode; corrected REVIEW. Catalog drift reproduced as PS5.1/PS7 cultural sorting differences in two new near-prefix IDs (repair-plan/repaired-source, type-repair/typecheck). Gave only new uncommitted entries distinct stable IDs; no tooling/gate or historical ID change. Root-attributed, zero runtime.",
   "additionalCheckBudgetGrant": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
   "supplementalBuildReceipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
-  "finalSourceCampaignPlan": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json"
+  "finalSourceCampaignPlan": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json",
+  "visualFailureDisposition": "docs/reviews/probes/r067_visual_fixture_failure_disposition_2026-10-09.json"
 }

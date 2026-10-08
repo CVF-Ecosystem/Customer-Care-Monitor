@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R067 saved-run observation UI (2026-10-08)
 
-CCMAI-RUNTIME-067 REVIEW_PENDING at final test-repaired sourcebd62c7e4e4868cc05528aa2b8a1ae05561a78df1/archive60d07e34: root static source/121member/30suite audit PASS, product and all120otherfrontendfiles identical to built4d921; compiler/Vite inherited with explicit no-newcompile limitation. Execute original independent root4Vitest campaign, then ifPASS manualremaining3worker continuation under committed rootprobe, then oneisolatedvisualperrole. Historicalfailedworker1Vitest preserved; total8 ceiling unchanged,3/3builds exhausted,Go0. No automaticretry/reset. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush, final Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN, Facebook/ZaloOAparked.
+CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.
 
 GitHub completed43commitpush to a384fa2 verified; publicationreceipt recorded, currentbatch completes through source/independentreview/conditionalclosure/push.
 

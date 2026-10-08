@@ -39,7 +39,7 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved."
   ],
   "buildInProgress": [
-    "CCMAI-RUNTIME-067 REVIEW_PENDING at final test-repaired sourcebd62c7e4e4868cc05528aa2b8a1ae05561a78df1/archive60d07e34: root static source/121member/30suite audit PASS, product and all120otherfrontendfiles identical to built4d921; compiler/Vite inherited with explicit no-newcompile limitation. Execute original independent root4Vitest campaign, then ifPASS manualremaining3worker continuation under committed rootprobe, then oneisolatedvisualperrole. Historicalfailedworker1Vitest preserved; total8 ceiling unchanged,3/3builds exhausted,Go0. No automaticretry/reset. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush, final Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN, Facebook/ZaloOAparked.",
+    "CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "Full S1/S2/S3/S5review-workflow/global F02/live/hosted remains OPEN; Facebook/Zalo OA parked."
   ],
   "knownLimitations": [
@@ -249,7 +249,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PENDING at final test-repaired sourcebd62c7e4e4868cc05528aa2b8a1ae05561a78df1/archive60d07e34: root static source/121member/30suite audit PASS, product and all120otherfrontendfiles identical to built4d921; compiler/Vite inherited with explicit no-newcompile limitation. Execute original independent root4Vitest campaign, then ifPASS manualremaining3worker continuation under committed rootprobe, then oneisolatedvisualperrole. Historicalfailedworker1Vitest preserved; total8 ceiling unchanged,3/3builds exhausted,Go0. No automaticretry/reset. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush, final Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN, Facebook/ZaloOAparked.",
+    "nextObjective": "CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
     "buildDispatched": true,
@@ -263,14 +263,19 @@
       "reviewerMaxForcedTypecheckBuilds": 1,
       "maxGoInvocations": 0,
       "workerUsedCampaigns": 1,
-      "workerUsedVitestInvocations": 1,
-      "reviewerUsedCampaigns": 0,
-      "reviewerUsedVitestInvocations": 0,
+      "workerUsedVitestInvocations": 4,
+      "reviewerUsedCampaigns": 1,
+      "reviewerUsedVitestInvocations": 4,
       "workerUsedForcedTypecheckBuilds": 1,
       "reviewerUsedForcedTypecheckBuilds": 1,
       "usedGoInvocations": 0,
       "supplementalReviewerMaxForcedTypecheckBuilds": 1,
-      "supplementalReviewerUsedForcedTypecheckBuilds": 1
+      "supplementalReviewerUsedForcedTypecheckBuilds": 1,
+      "aggregateForcedBuildCeilingIncludingHistory": 3,
+      "workerMaxVisualInvocations": 1,
+      "reviewerMaxVisualInvocations": 1,
+      "workerUsedVisualInvocations": 0,
+      "reviewerUsedVisualInvocations": 1
     },
     "historicalR065RoutingSnapshot": {
       "date": "2026-10-08",
@@ -578,8 +583,8 @@
     "r2IndependentAcceptance": "NOT_ESTABLISHED",
     "spec": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
     "newGoInvocations": 0,
-    "newVitestInvocations": 1,
-    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PENDING at final test-repaired sourcebd62c7e4e4868cc05528aa2b8a1ae05561a78df1/archive60d07e34: root static source/121member/30suite audit PASS, product and all120otherfrontendfiles identical to built4d921; compiler/Vite inherited with explicit no-newcompile limitation. Execute original independent root4Vitest campaign, then ifPASS manualremaining3worker continuation under committed rootprobe, then oneisolatedvisualperrole. Historicalfailedworker1Vitest preserved; total8 ceiling unchanged,3/3builds exhausted,Go0. No automaticretry/reset. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush, final Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN, Facebook/ZaloOAparked.",
+    "newVitestInvocations": 8,
+    "nextMove": "CCMAI-RUNTIME-067 REVIEW_PENDING: final bd62c7e root316/316PASS, M01/M02 semantic kills with healthy controls, restored17PASS; worker remaining3 completed with same controls/restored17PASS, original failedpositive retained. Vitest8/8 and forcedbuild3/3 exhausted, Go0. Root visual1 FAILED_HARNESS before rendering, original raw failure preserved; worker original unused visual1 may run NEW literal-path fixture once, then root independently inspects all4 actual images/keyboard/report without browser retry. Formal REVIEW then conditional scoped localFREEZE/authorized ordinary branchpush and Luna xhigh vsSolmedium assessment. FullS2/S3/S5/live/governance/hostedOPEN; Facebook/ZaloOAparked.",
     "governanceClaim": false,
     "fullS5Claim": false,
     "actualWorkerModel": {
@@ -591,7 +596,6 @@
     "typecheckFailureReceipt": "docs/reviews/probes/r067_worker_build_2026-10-09.json",
     "repairedSourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
     "reviewerForcedTypecheckBuildUsed": 1,
-    "independentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS",
     "typecheckFailureReceipts": [
       "docs/reviews/probes/r067_worker_build_2026-10-09.json",
       "docs/reviews/probes/r067_reviewer_build_2026-10-09.json"
@@ -605,7 +609,13 @@
       "receipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
       "newSourceCompilerExecuted": false,
       "basis": "Only NEW test body changes using compiled APIs/types; all120otherfrontendfiles, including product/config/dependencies, byte-identical. Explicit phase inheritance, not fresh compiler claim."
-    }
+    },
+    "independentPositive": "316PASS0FAIL",
+    "reviewerMutations": "M01/M02 semantic detectors failed; healthy controls passed; restored17PASS",
+    "workerRemainingEvidence": "M01/M02 semantic detectors failed; healthy controls passed; restored17PASS",
+    "rootVisual": "FAILED_HARNESS_BEFORE_COMPONENT_RENDER",
+    "workerVisual": "NOT_RUN_REMAINING_ONE",
+    "historicalIndependentTypecheck": "FAILED_TYPECHECK7DIAGNOSTICS"
   },
   "r067WorkerModelOverride": {
     "model": "gpt-6-luna",
