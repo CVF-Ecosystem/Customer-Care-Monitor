@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "recordedDate": "2026-10-09",
+  "phase": "BUILD",
+  "riskCeiling": "R2",
+  "liveEvidenceRequired": true,
+  "worker": {
+    "model": "gpt-6-luna",
+    "verifiedCoreCommit": "8a4119e11db00e774ed8e7cf7d9a8caa309e81d1",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+    "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS",
+    "verifiedCoreStatus": "matches origin; root doctor 25/1 with note",
+    "role": "REPAIR_WORKER / COMMIT_STEWARD",
+    "reasoningEffort": "xhigh",
+    "manifestExpectedCoreCommit": "26c686cc99b8be965d2760f27fe875b03376c643"
+  },
+  "authority": {
+    "sourceArchiveSha256": "1a571270ce0ecf9bae49d952a1954f7d6e3b88980d58adc0e3149b5f90e54936",
+    "aggregateCeiling": 8,
+    "acceptedDisposition": "docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md",
+    "forcedBuildsExhausted": 3,
+    "workerVitestAlreadyUsed": 1,
+    "workerVitestRemaining": 3,
+    "dispositionCommit": "916980594ce35f4d5f81e03cfd0cf2e706be7f80",
+    "goRemaining": 0,
+    "reviewerVitestRemaining": 4,
+    "sourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a"
+  },
+  "repair": {
+    "productChangesAllowed": false,
+    "testCount": "Keep the existing 17 new tests and mutation detector names unchanged; strengthen the existing partial preparation case rather than adding a test.",
+    "allowedPath": "frontend/src/__tests__/run-observation.spec.ts",
+    "vitestBrowserOrGo": false,
+    "oldTestsOrPacketsEditable": false,
+    "sourceTypecheckOrBuild": false,
+    "change": "Change only the new partial-preparation assertion for SNAPSHOT_ERROR from undefined to 0, because omitted supported outcome counts in a valid sparse map are known zero; add valid NOT_ATTEMPTED receipt assertions that selected/unvisited remain null."
+  },
+  "validation": {
+    "afterCommit": "Stop for independent root static audit; root owns subsequent root campaign and the manual continuation decision.",
+    "allowed": "TypeScript AST parse, diff check, exact staged/default/PR downstream publication gates, catalog checks as required",
+    "forbidden": "No compiler/typecheck, Vitest, browser, Go, provider/network, or build commands"
+  },
+  "priorFailure": {
+    "failurePreserved": true,
+    "campaign": "Original worker campaign, first positive only",
+    "automaticRetries": 0,
+    "tests": "316 total; 315 passed; 1 failed in new helper partial-preparation assertion",
+    "visualRuns": 0,
+    "rawSummary": "docs/reviews/probes/r067_worker_summary.json"
+  },
+  "createdFiles": [
+    "docs/reviews/probes/r067_round3_worker_test_repair_plan_2026-10-09.json"
+  ]
+}

@@ -198,7 +198,26 @@ describe('saved-run observation projection', () => {
     if (projected.preparation.available) {
       expect(projected.preparation.values.omitted_entries).toBe(1)
       expect(projected.preparation.values.entries_complete).toBe(false)
-      expect(projected.preparation.values.SNAPSHOT_ERROR).toBeUndefined()
+      expect(projected.preparation.values.SNAPSHOT_ERROR).toBe(0)
+    }
+
+    const notAttempted = JSON.parse(summary()) as { source_preparation: Record<string, unknown> }
+    Object.assign(notAttempted.source_preparation, {
+      selection_status: 'NOT_ATTEMPTED',
+      selected: null,
+      visited: 0,
+      unvisited: null,
+      counts: {},
+      entries: [],
+      omitted_entries: 0,
+      entries_complete: true,
+      scan_complete: false,
+    })
+    const unknownSelection = project(JSON.stringify(notAttempted))
+    expect(unknownSelection.preparation.available).toBe(true)
+    if (unknownSelection.preparation.available) {
+      expect(unknownSelection.preparation.values.selected).toBeNull()
+      expect(unknownSelection.preparation.values.unvisited).toBeNull()
     }
   })
 
