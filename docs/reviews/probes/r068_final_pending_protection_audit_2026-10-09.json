@@ -1,0 +1,21 @@
+{
+  "status": "PASS_FINAL_REVIEW_PENDING_PROTECTION",
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "seedFirstCommit": "59f8a4c62e5170dad539b22ff6a1351e1c9dd4a6",
+  "seedUnchanged": true,
+  "firstWorkerLaunchFailureOriginalBytesVerified": true,
+  "firstFullRepoArchivesRetainedAndVerified": true,
+  "protectedBaselineFiles": 780,
+  "protectedUnchanged": 776,
+  "changedAuthorizedExistingFiles": [
+    "backend/ai/claude.go",
+    "backend/ai/gemini.go",
+    "backend/ai/openai_compatible.go",
+    "backend/ai/provider.go"
+  ],
+  "attemptsUsed": 10,
+  "actualGoProcesses": 9,
+  "wholeBackendCompilerPass": "NOT_ESTABLISHED",
+  "freeze": "OPEN",
+  "newRuntimeCommands": 0
+}

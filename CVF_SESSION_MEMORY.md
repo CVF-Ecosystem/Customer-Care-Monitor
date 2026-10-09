@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md", "activeTranche": "CCMAI-RUNTIME-068", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md", "activeTranche": "CCMAI-RUNTIME-068", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R068 fresh provider usage-presence adapter (2026-10-09)
 
-CCMAI-RUNTIME-068 BUILD evidence: repaired source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 has root static acceptance and independent ai positives/M01/M02/restored PASS. Luna xhigh IMPLEMENTATION_WORKER / COMMIT_STEWARD is approved for exactly the four remaining worker Go tests through the committed exact-source runner/plan; existing ai loopback fixtures only. Worker build attempt1/1 launched no Go; root full-backend build1/1 failed, root tests4/4 PASS, root5/5 exhausted. No extra build, retry or campaign; whole-backend post-repair compiler PASS remains unestablished. After worker handback root verifies raw/restoration/budgets and records REVIEW_PENDING with a concrete supplemental compile proposal before any closure. No provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance claim.
+CCMAI-RUNTIME-068 REVIEW_PENDING: source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 and both exact-source ai positive/M01/M02/restored campaigns are independently verified; no open local product behavior finding. UP09 whole-backend post-repair compilation remains unestablished. Original worker5/5 and root5/5 attempt budgets are exhausted and immutable; no further Go/build/test/retry, FREEZE or branch publication now. Await owner authorization of exactly one additional cached offline whole-backend build through docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; then commit separate bounded validation authority/work order before execution, retain original failures and reevaluate conditional R068 closure. No source/test/provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance/hosted claim.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

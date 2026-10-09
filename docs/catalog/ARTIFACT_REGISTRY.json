@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "Active R068 repaired-source root tests PASS, worker four-test approval; whole-backend compiler gate OPEN, no closure."
+      "description": "Active R068 REVIEW_PENDING: both exact-source local ai campaigns verified; original budget exhausted, proposed single offline compiler validation awaits owner."
     },
     {
       "id": "r060-work-order",
@@ -4595,6 +4595,48 @@
       "path": "docs/reviews/R068_REPAIRED_SOURCE_TEST_APPROVAL_2026-10-09.md",
       "status": "ACTIVE",
       "description": "R068 root repaired-source independent test evidence and exactly four worker-test approval; no extra build or closure."
+    },
+    {
+      "id": "r068-pending-e001",
+      "family": "continuity",
+      "path": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 independent REVIEW_PENDING: both local ai campaigns verified, UP09 whole-backend postrepair compiler gate open."
+    },
+    {
+      "id": "r068-pending-e002",
+      "family": "continuity",
+      "path": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 concrete proposed one supplemental offline whole-backend build; NOT_AUTHORIZED, original budgets exhausted."
+    },
+    {
+      "id": "r068-pending-e003",
+      "family": "continuity",
+      "path": "docs/reviews/R068_LUNA_XHIGH_FRESH_START_ASSESSMENT_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 provisional fresh Luna xhigh versus prior Sol medium assessment; no inherited draft, closure still pending."
+    },
+    {
+      "id": "r068-pending-e004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_worker_evidence_independent_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 root independent worker42raw/all4archive/218restoration/native-event verification."
+    },
+    {
+      "id": "r068-pending-e005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_tests_actual_2026-10-09_luna1/campaign-result.json",
+      "status": "ACTIVE",
+      "description": "R068 original worker four-test PASS packet with native streams and verified retained raw/archive backup."
+    },
+    {
+      "id": "r068-pending-e006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_final_pending_protection_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 final REVIEW_PENDING protection/immutable seed/original failed launch/TEMP archive verification; no compiler PASS or extra Go."
     }
   ]
 }

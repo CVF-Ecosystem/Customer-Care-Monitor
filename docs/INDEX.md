@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R068 repaired-source root tests PASS, worker four-test approval; whole-backend compiler gate OPEN, no closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
+- Active R068 REVIEW_PENDING: both exact-source local ai campaigns verified; original budget exhausted, proposed single offline compiler validation awaits owner.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -431,6 +431,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
 - R068 bounded adapter work order; repair BUILD after first-source compile finding; one same-scope repair authorized; historical R067 preserved.: `docs/work_orders/CCMAI_RUNTIME_068.md`
 - R068 bounded adapter tranche; repair BUILD after CHANGES_REQUIRED, first source retained, both build attempts consumed, tests gated on root static reapproval.: `CVF_SESSION/tranches/CCMAI-RUNTIME-068.json`
+- R068 independent REVIEW_PENDING: both local ai campaigns verified, UP09 whole-backend postrepair compiler gate open.: `docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md`
+- R068 concrete proposed one supplemental offline whole-backend build; NOT_AUTHORIZED, original budgets exhausted.: `docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md`
+- R068 provisional fresh Luna xhigh versus prior Sol medium assessment; no inherited draft, closure still pending.: `docs/reviews/R068_LUNA_XHIGH_FRESH_START_ASSESSMENT_2026-10-09.md`
+- R068 root independent worker42raw/all4archive/218restoration/native-event verification.: `docs/reviews/probes/r068_worker_evidence_independent_audit_2026-10-09.json`
+- R068 original worker four-test PASS packet with native streams and verified retained raw/archive backup.: `docs/reviews/probes/r068_luna_worker_tests_actual_2026-10-09_luna1/campaign-result.json`
+- R068 final REVIEW_PENDING protection/immutable seed/original failed launch/TEMP archive verification; no compiler PASS or extra Go.: `docs/reviews/probes/r068_final_pending_protection_audit_2026-10-09.json`
 - R068 fresh Luna xhigh adapter presence contract; BUILD acknowledged; source/runtime/live provider proof not yet run.: `docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md`
 - R068 fresh Luna xhigh untouched source baseline; BUILD acknowledged; source/runtime/live provider proof not yet run.: `docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json`
 - New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-068.json`

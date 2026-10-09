@@ -51,22 +51,24 @@
   },
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "59f8a4c62e5170dad539b22ff6a1351e1c9dd4a6",
   "buildCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
   "reviewEvidence": [
-    "docs/reviews/R068_FIRST_COMPILE_CHANGES_REQUIRED_2026-10-09.md",
-    "docs/reviews/probes/r068_root_independent_test_evidence_audit_2026-10-09.json"
+    "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
+    "docs/reviews/probes/r068_root_independent_test_evidence_audit_2026-10-09.json",
+    "docs/reviews/probes/r068_worker_evidence_independent_audit_2026-10-09.json"
   ],
-  "disposition": "CHANGES_REQUIRED: Root exact-source compile failed at the Anthropic pointer/value converter call; accepted one same-scope pointer/nil repair and NEW nil fixture. Worker launch failure and root compiler failure are retained; both build allowances consumed; tests remain gated on independent static reapproval.",
+  "disposition": "PENDING_UP09_POST_REPAIR_WHOLE_BACKEND_COMPILE",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -90,14 +92,14 @@
     "maxVisualInvocations": 0,
     "workerUsedCampaigns": 1,
     "workerUsedGoBuildInvocations": 1,
-    "workerUsedGoTestInvocations": 0,
-    "workerUsedGoInvocations": 1,
+    "workerUsedGoTestInvocations": 4,
+    "workerUsedGoInvocations": 5,
     "reviewerUsedCampaigns": 1,
     "reviewerUsedGoBuildInvocations": 1,
     "reviewerUsedGoTestInvocations": 4,
     "reviewerUsedGoInvocations": 5
   },
-  "sourceImplementation": "SOURCE_REPAIRED_ROOT_TESTS_PASS_WORKER_TESTS_APPROVED",
+  "sourceImplementation": "SOURCE_REPAIRED_ALL_AI_TESTS_PASS_WHOLE_BACKEND_COMPILE_PENDING",
   "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
   "freshStartEvidence": "docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json",
   "liveEvidence": "NOT_RUN; pure serialized-response/adapter metadata only, no governance claim",
@@ -150,8 +152,26 @@
       "Root first static pass missed the pinned Anthropic pointer integration; attribution retained as reviewer omission, not a worker/source runtime pass.",
       "Repair round 1 authorized: change converter to *anthropic.Message, return unavailable for nil, add NEW pure nil fixture; worker evidence runner/plan defects remain same-scope.",
       "Both build allowances consumed; worker/root Go tests 0/4 and gated on independent root static approval; no provider/external network/DB/governance claim.",
-      "ROOT_TESTS4PASS18top35positive/M01/M02healthy/restored8top21; approved worker4tests after source/probe review; no build allowance remains"
+      "ROOT_TESTS4PASS18top35positive/M01/M02healthy/restored8top21; approved worker4tests after source/probe review; no build allowance remains",
+      "WORKER4TESTSPASS native original packet b345c7a; root independently verified42raw/all4archives/218restored; all10attempts exhausted, 9actualGo processes. UP09 compiler gate OPEN; supplemental proposal NOT_AUTHORIZED."
     ],
     "rootMinorSyncScriptFailure": "Initial helper assumed executionHistory list; actual dict{events}; stopped after two probe metadata writes and before any canonical write; corrected, no product/Go effect."
+  },
+  "pendingValidationProposal": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md",
+  "provisionalModelAssessment": "docs/reviews/R068_LUNA_XHIGH_FRESH_START_ASSESSMENT_2026-10-09.md",
+  "workerEvidenceCommit": "b345c7a34c74019ff6b7d595c1c17a0c105dbb21",
+  "actualGoProcesses": 9,
+  "budgetCountsIncludeFailedLaunch": true,
+  "pendingPublicationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "exactStaged": "PASS7/7 exact13",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS38.42s",
+    "doctor": "PASS_WITH_NOTE25/1; manifest pin mismatch and gate-profile migration retained",
+    "gateUnits": "Fresh46PASS55.581s inherited unchanged tooling; no rerun at pending publication",
+    "protected": "776/780 originals unchanged; only4 authorized originals changed,2NEW product paths",
+    "rawWhitespace": "4worker generated rawdiff/patch findings retained; other38worker files PASS; current13metadata diffcheck PASS after staging"
   }
 }

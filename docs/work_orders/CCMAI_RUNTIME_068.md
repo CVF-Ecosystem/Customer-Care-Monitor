@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-068 — Fresh provider usage-presence adapter
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Risk R2. Immutable root dispatcher seed first committed at `59f8a4c`; baseline `9b951d50908c504dd7de44be516f88e86287f5de`. [SPEC UP01..12](../reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md) is the acceptance contract. Fresh Luna xhigh `/root/r068_worker` owns implementation/repair/source commits; root independent REVIEWER, then conditional CLOSER / metadata COMMIT_STEWARD / SESSION_SYNC_STEWARD. No Sol implementation draft handed off; requirements and existing application/SDK APIs are inputs.
 
@@ -33,3 +33,7 @@ Role transition recorded before repair: IMPLEMENTATION_WORKER / COMMIT_STEWARD t
 ## Root exact repaired-source test approval
 
 Source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 statically accepted; root own four tests PASS, original first compile failure retained. Worker receives exactly4 remaining Go test invocations through committed repaired-source plan/runner, no additional build/retry/campaign. Root fixed small evidence metadata pointers/labels only. Whole-backend postrepair compiler pass remains unestablished; supplemental budget proposal follows completed worker evidence, before any closure.
+
+## Independent handback and remaining gate
+
+Both exact-source local ai campaigns PASS and independently audited; original budget10/10 attempts exhausted (9Go processes plus1failed launch). Formal REVIEW_PENDING because UP09 repaired whole-backend compilation is not established. No new source/runtime/closure/publication authority. One-command supplemental proposal awaits owner authorization; original seed/counts/failures immutable. Worker whitespace findings in4byte-exact generated diff/patch artifacts retained, other38captures clean.

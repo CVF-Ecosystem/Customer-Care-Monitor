@@ -1,0 +1,64 @@
+{
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "status": "PASS_WORKER_ORIGINAL_EVIDENCE_INDEPENDENT_AUDIT",
+  "rootReviewer": "Codex /root",
+  "rawFilesVerified": 42,
+  "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-evidence-a21dcaeac39e4dfb900427c7cb9bbe49",
+  "actualCommittedArchiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "members": 218,
+  "allFourArchiveBackupsVerified": true,
+  "wholePhysicalRestorationVerified": true,
+  "results": [
+    {
+      "name": "positive-ai-package",
+      "exitCode": 0,
+      "topLevelPasses": 18,
+      "allPasses": 35,
+      "failed": [],
+      "durationMilliseconds": 13101
+    },
+    {
+      "name": "M01-test",
+      "exitCode": 1,
+      "topLevelPasses": 1,
+      "allPasses": 1,
+      "failed": [
+        "TestUsagePresenceM01AbsentNullDetector/missing_container",
+        "TestUsagePresenceM01AbsentNullDetector/missing_token",
+        "TestUsagePresenceM01AbsentNullDetector/null_container",
+        "TestUsagePresenceM01AbsentNullDetector/null_token",
+        "TestUsagePresenceM01AbsentNullDetector"
+      ],
+      "durationMilliseconds": 13231
+    },
+    {
+      "name": "M02-test",
+      "exitCode": 1,
+      "topLevelPasses": 1,
+      "allPasses": 1,
+      "failed": [
+        "TestUsagePresenceM02InvalidDetector/-1",
+        "TestUsagePresenceM02InvalidDetector/-0",
+        "TestUsagePresenceM02InvalidDetector/1.5",
+        "TestUsagePresenceM02InvalidDetector/1e2",
+        "TestUsagePresenceM02InvalidDetector/\"1\"",
+        "TestUsagePresenceM02InvalidDetector/true",
+        "TestUsagePresenceM02InvalidDetector/{}",
+        "TestUsagePresenceM02InvalidDetector/[]",
+        "TestUsagePresenceM02InvalidDetector/9223372036854775808",
+        "TestUsagePresenceM02InvalidDetector"
+      ],
+      "durationMilliseconds": 13681
+    },
+    {
+      "name": "restored-new-tests",
+      "exitCode": 0,
+      "topLevelPasses": 8,
+      "allPasses": 21,
+      "failed": [],
+      "durationMilliseconds": 12252
+    }
+  ],
+  "postRepairWholeBackendCompiler": "NOT_ESTABLISHED",
+  "noNewGoInvocations": true
+}

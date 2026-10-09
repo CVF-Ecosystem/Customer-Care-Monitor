@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-068",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-068 BUILD evidence: repaired source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 has root static acceptance and independent ai positives/M01/M02/restored PASS. Luna xhigh IMPLEMENTATION_WORKER / COMMIT_STEWARD is approved for exactly the four remaining worker Go tests through the committed exact-source runner/plan; existing ai loopback fixtures only. Worker build attempt1/1 launched no Go; root full-backend build1/1 failed, root tests4/4 PASS, root5/5 exhausted. No extra build, retry or campaign; whole-backend post-repair compiler PASS remains unestablished. After worker handback root verifies raw/restoration/budgets and records REVIEW_PENDING with a concrete supplemental compile proposal before any closure. No provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance claim.",
+  "nextAllowedMove": "CCMAI-RUNTIME-068 REVIEW_PENDING: source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 and both exact-source ai positive/M01/M02/restored campaigns are independently verified; no open local product behavior finding. UP09 whole-backend post-repair compilation remains unestablished. Original worker5/5 and root5/5 attempt budgets are exhausted and immutable; no further Go/build/test/retry, FREEZE or branch publication now. Await owner authorization of exactly one additional cached offline whole-backend build through docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; then commit separate bounded validation authority/work order before execution, retain original failures and reevaluate conditional R068 closure. No source/test/provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance/hosted claim.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root/r068_worker IMPLEMENTATION_WORKER / COMMIT_STEWARD; Codex /root independent REVIEWER / SESSION_SYNC_STEWARD",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD",
   "updatedAt": "2026-10-09",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -51,11 +51,12 @@
   },
   "candidatePlanning": {
     "id": "R068",
-    "status": "BUILD",
-    "artifact": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
+    "status": "REVIEW_PENDING",
+    "artifact": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
     "sourceOrRuntimeDispatched": true,
-    "sourceImplementation": "SOURCE_REPAIRED_ROOT_TESTS_PASS_WORKER_TESTS_APPROVED",
-    "newGoInvocations": 6
+    "sourceImplementation": "SOURCE_REPAIRED_ALL_AI_TESTS_PASS_WHOLE_BACKEND_COMPILE_PENDING",
+    "newGoInvocations": 10,
+    "actualGoProcesses": 9
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -285,5 +286,6 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "OWNER_AUTHORIZED_FRESH_LUNA_XHIGH_ADAPTER_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH"
+  "roleRoute": "OWNER_AUTHORIZED_FRESH_LUNA_XHIGH_ADAPTER_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
+  "pendingValidationProposal": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md"
 }
