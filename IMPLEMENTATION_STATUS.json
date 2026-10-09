@@ -257,7 +257,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-068 BUILD: Luna xhigh IMPLEMENTATION_WORKER / COMMIT_STEWARD has committed the before-edit acknowledgment. Start from planning baseline 9b951d50908c504dd7de44be516f88e86287f5de and change only the six authorized backend/ai paths; commit fresh source, tests, exact-source inventory, mutation plan and evidence contract before the single cached offline whole-backend build. Preserve first source commit and first build result. Stop after the build and send the exact commit and plan to root for independent static approval; do not run Go tests until approved. Worker budget is one build plus four Go tests, 0/5 invocations used; no provider/network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes. Root owns independent review and later closure/publication. Facebook/Zalo OA remain parked; no live provider, billing or governance claim.",
+    "nextObjective": "CCMAI-RUNTIME-068 BUILD repair after root CHANGES_REQUIRED: Luna xhigh REPAIR_WORKER / COMMIT_STEWARD has committed the repair acknowledgment. Preserve first source c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e; repair only the Anthropic pointer/nil converter and NEW nil fixture, plus approved worker evidence-runner defects, within the authorized scope. Worker build attempt 1/1 did not start Go; root exact-source build 1/1 failed at claude.go:76:42. Both build budgets are exhausted; do not invoke another build. Worker and root tests are 0/4 each and require root static reapproval of repaired source and plan. No provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core effect. Root remains independent reviewer and owns closure/publication. Facebook/Zalo OA remain parked; no live provider, billing or governance claim.",
     "assessment": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
     "buildDispatched": true,
@@ -274,13 +274,13 @@
       "maxVitestInvocations": 0,
       "maxVisualInvocations": 0,
       "workerUsedCampaigns": 1,
-      "workerUsedGoBuildInvocations": 0,
+      "workerUsedGoBuildInvocations": 1,
       "workerUsedGoTestInvocations": 0,
-      "workerUsedGoInvocations": 0,
-      "reviewerUsedCampaigns": 0,
-      "reviewerUsedGoBuildInvocations": 0,
+      "workerUsedGoInvocations": 1,
+      "reviewerUsedCampaigns": 1,
+      "reviewerUsedGoBuildInvocations": 1,
       "reviewerUsedGoTestInvocations": 0,
-      "reviewerUsedGoInvocations": 0
+      "reviewerUsedGoInvocations": 1
     },
     "actualWorkerModel": {
       "model": "gpt-6-luna",
@@ -789,18 +789,18 @@
   "providerUsagePresence": {
     "tranche": "CCMAI-RUNTIME-068",
     "status": "BUILD",
-    "sourceImplementation": "BUILD_ACKNOWLEDGED_SOURCE_NOT_STARTED",
-    "r2IndependentAcceptance": "NOT_ESTABLISHED",
+    "sourceImplementation": "FIRST_SOURCE_COMMITTED_COMPILE_FAILED_REPAIR_ACKNOWLEDGED",
+    "r2IndependentAcceptance": "CHANGES_REQUIRED; no Go test or runtime acceptance",
     "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
-    "nextMove": "CCMAI-RUNTIME-068 BUILD: Luna xhigh IMPLEMENTATION_WORKER / COMMIT_STEWARD has committed the before-edit acknowledgment. Start from planning baseline 9b951d50908c504dd7de44be516f88e86287f5de and change only the six authorized backend/ai paths; commit fresh source, tests, exact-source inventory, mutation plan and evidence contract before the single cached offline whole-backend build. Preserve first source commit and first build result. Stop after the build and send the exact commit and plan to root for independent static approval; do not run Go tests until approved. Worker budget is one build plus four Go tests, 0/5 invocations used; no provider/network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes. Root owns independent review and later closure/publication. Facebook/Zalo OA remain parked; no live provider, billing or governance claim.",
+    "nextMove": "CCMAI-RUNTIME-068 BUILD repair after root CHANGES_REQUIRED: Luna xhigh REPAIR_WORKER / COMMIT_STEWARD has committed the repair acknowledgment. Preserve first source c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e; repair only the Anthropic pointer/nil converter and NEW nil fixture, plus approved worker evidence-runner defects, within the authorized scope. Worker build attempt 1/1 did not start Go; root exact-source build 1/1 failed at claude.go:76:42. Both build budgets are exhausted; do not invoke another build. Worker and root tests are 0/4 each and require root static reapproval of repaired source and plan. No provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core effect. Root remains independent reviewer and owns closure/publication. Facebook/Zalo OA remain parked; no live provider, billing or governance claim.",
     "governanceClaim": false,
     "liveProviderClaim": false,
     "currentConsumerBehaviorUnchanged": true,
-    "newGoInvocations": 0,
+    "newGoInvocations": 2,
     "workerModel": {
       "model": "gpt-6-luna",
       "reasoningEffort": "xhigh"
     },
-    "workerAcknowledgment": "2026-10-09 Luna xhigh declaration/role transition and before-edit BUILD acknowledgment committed; source edits and Go invocations remain zero; root roleRoute repair separately attributed."
+    "workerAcknowledgment": "Repair BUILD acknowledgment 2026-10-09: role transitioned IMPLEMENTATION_WORKER / COMMIT_STEWARD to REPAIR_WORKER / COMMIT_STEWARD and SESSION_SYNC_STEWARD for this continuity sync; root remains independent REVIEWER. First source c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e retained. Worker launch attempt 1/1 counted but no Go process started; root exact-source build attempt 1/1 failed at Anthropic pointer/value call after 24.5483135s. Both build allowances consumed; tests 0/4 per role and gated on root static reapproval. One pointer/nil converter repair and NEW nil fixture authorized; runner/evidence defects same scope. No live provider/network/DB/governance claim."
   }
 }

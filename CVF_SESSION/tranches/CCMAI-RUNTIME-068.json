@@ -8,7 +8,8 @@
     "commitSteward": "Codex /root/r068_worker",
     "reviewer": "Codex /root",
     "closer": "Codex /root",
-    "metadataCommitSteward": "Codex /root"
+    "metadataCommitSteward": "Codex /root",
+    "sessionSyncSteward": "Codex /root/r068_worker"
   },
   "allowedPaths": [
     "backend/ai/provider.go",
@@ -53,14 +54,11 @@
   "status": "BUILD",
   "phase": "BUILD",
   "baseCommit": "59f8a4c62e5170dad539b22ff6a1351e1c9dd4a6",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+  "reviewEvidence": ["docs/reviews/R068_FIRST_SOURCE_STATIC_REVIEW_AND_CAPTURE_DISPOSITION_2026-10-09.md"],
+  "disposition": "CHANGES_REQUIRED: Root exact-source compile failed at the Anthropic pointer/value converter call; accepted one same-scope pointer/nil repair and NEW nil fixture. Worker launch failure and root compiler failure are retained; both build allowances consumed; tests remain gated on independent static reapproval.",
   "freeze": "OPEN",
-  "history": [
-    "DISPATCH_READY",
-    "BUILD"
-  ],
+  "history": ["DISPATCH_READY","BUILD","REVIEW_PENDING","CHANGES_REQUIRED","BUILD"],
   "planningPhaseTrace": [
     "INTAKE",
     "DESIGN",
@@ -82,15 +80,15 @@
     "maxVitestInvocations": 0,
     "maxVisualInvocations": 0,
     "workerUsedCampaigns": 1,
-    "workerUsedGoBuildInvocations": 0,
+    "workerUsedGoBuildInvocations": 1,
     "workerUsedGoTestInvocations": 0,
-    "workerUsedGoInvocations": 0,
-    "reviewerUsedCampaigns": 0,
-    "reviewerUsedGoBuildInvocations": 0,
+    "workerUsedGoInvocations": 1,
+    "reviewerUsedCampaigns": 1,
+    "reviewerUsedGoBuildInvocations": 1,
     "reviewerUsedGoTestInvocations": 0,
-    "reviewerUsedGoInvocations": 0
+    "reviewerUsedGoInvocations": 1
   },
-  "sourceImplementation": "BUILD_ACKNOWLEDGED_SOURCE_NOT_STARTED",
+  "sourceImplementation": "FIRST_SOURCE_COMMITTED_COMPILE_FAILED_REPAIR_ACKNOWLEDGED",
   "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
   "freshStartEvidence": "docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json",
   "liveEvidence": "NOT_RUN; pure serialized-response/adapter metadata only, no governance claim",
@@ -136,4 +134,4 @@
     "bootstrapMigration": "BOOTSTRAP_MIGRATION_PENDING; compact read model absent.",
     "knowledgeIngest": "TEMP-only output."
   }
-}
+,"executionHistory":{"events":["WORKER_BUILD_ATTEMPT_1_FAILED_BEFORE_GOPROCESS; counted 1/1; duplicate go.exe resolution produced invalid launch source; stdout/stderr empty.","ROOT_EXACT_SOURCE_BUILD_1_FAILED exit1 after 24.5483135s on exact source c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e; backend/ai/claude.go:76:42 pointer/value mismatch.","Root first static pass missed the pinned Anthropic pointer integration; attribution retained as reviewer omission, not a worker/source runtime pass.","Repair round 1 authorized: change converter to *anthropic.Message, return unavailable for nil, add NEW pure nil fixture; worker evidence runner/plan defects remain same-scope.","Both build allowances consumed; worker/root Go tests 0/4 and gated on independent root static approval; no provider/external network/DB/governance claim."]}}

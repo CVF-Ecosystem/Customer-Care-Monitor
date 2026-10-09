@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "originalBuildReceipt": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json",
+  "originalBuildReceiptSha256": "bfda703164cc3c7ea733bb9908ad5241cd3ccfc81e59d6e09f5c403b7efd9b33",
+  "sourceCommit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+  "workspaceArchiveCopiesRemovedAfterVerifiedTEMPBackup": true,
+  "ownedTempDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r068_luna_first_build_c8e5ff6_20261009",
+  "ownerMarker": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r068_luna_first_build_c8e5ff6_20261009\\owner-marker.json",
+    "sha256": "2636428e01e743f0ebb1e2afe4c13429905bc691739a6d4c03c4f709ac92547c"
+  },
+  "archives": {
+    "before": {
+      "originalPath": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-before.tar",
+      "ownedTempPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r068_luna_first_build_c8e5ff6_20261009\\source-before.tar",
+      "bytes": 500899840,
+      "sha256": "ad6774c73b8ebf8cd5c59bfe6a46063fd30088acd28db4fd0780f79af897014c"
+    },
+    "after": {
+      "originalPath": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-after.tar",
+      "ownedTempPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r068_luna_first_build_c8e5ff6_20261009\\source-after.tar",
+      "bytes": 500899840,
+      "sha256": "ad6774c73b8ebf8cd5c59bfe6a46063fd30088acd28db4fd0780f79af897014c"
+    }
+  },
+  "verifiedAt": "2026-10-09T16:07:54.3314578+00:00"
+}

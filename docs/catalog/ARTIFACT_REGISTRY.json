@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "Active R068 fresh Luna xhigh adapter presence BUILD; before-edit acknowledgment committed; source and first offline build pending; root independent review."
+      "description": "Active R068 adapter presence repair BUILD after root CHANGES_REQUIRED compile finding; first source and both build attempts retained; tests await root static reapproval."
     },
     {
       "id": "r060-work-order",
@@ -4475,14 +4475,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_068.md",
       "status": "ACTIVE",
-      "description": "R068 fresh Luna xhigh bounded workorder/tranche; BUILD acknowledged; source/runtime not yet begun; historical R067 preserved."
+      "description": "R068 bounded adapter work order; repair BUILD after first-source compile finding; one same-scope repair authorized; historical R067 preserved."
     },
     {
       "id": "r068-activation-b003",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-068.json",
       "status": "ACTIVE",
-      "description": "R068 fresh Luna xhigh bounded workorder/tranche; BUILD acknowledgment recorded; source/runtime not yet begun; historical R067 preserved."
+      "description": "R068 bounded adapter tranche; repair BUILD after CHANGES_REQUIRED, first source retained, both build attempts consumed, tests gated on root static reapproval."
     },
     {
       "id": "r068-review-preparation-c001",
@@ -4504,6 +4504,11 @@
       "path": "docs/reviews/R068_FIRST_SOURCE_STATIC_REVIEW_AND_CAPTURE_DISPOSITION_2026-10-09.md",
       "status": "ACTIVE",
       "description": "R068 first product static review and immutable worker capture failure disposition; actual compiler/tests pending."
-    }
+    },
+    {"id":"r068-worker-build-d001","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json","status":"ACTIVE","description":"R068 worker build launch attempt 1/1; no Go process started, no compiler result; immutable first-source receipt."},
+    {"id":"r068-worker-build-d002","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stdout.bin","status":"ACTIVE","description":"R068 worker first-build native stdout bytes; empty because the process did not start; preserved raw stream."},
+    {"id":"r068-worker-build-d003","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin","status":"ACTIVE","description":"R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream."},
+    {"id":"r068-worker-build-d004","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-tree-manifest.txt","status":"ACTIVE","description":"R068 full 1,565-entry source-tree manifest for the worker launch attempt; source archive retained in verified owned TEMP."},
+    {"id":"r068-worker-build-d005","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/first_build_archive_relocation.json","status":"ACTIVE","description":"R068 derived relocation receipt; original worker build receipt stays unchanged, verified 500,899,840-byte archives remain in owned TEMP."}
   ]
 }
