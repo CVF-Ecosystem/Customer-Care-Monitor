@@ -142,8 +142,12 @@ def main():
         skipped = [x['Test'] for x in events if x.get('Action') == 'skip' and x.get('Test')]
         row.update(passed=passed, failed=failed, skipped=skipped)
         assert not skipped, 'Required ai test skipped'
+        outputs = ''.join(x.get('Output', '') for x in events)
+        assert not re.search(r'(^|\n)(panic:|fatal error:)', outputs), 'Panic is not a semantic assertion kill'
         if mutation:
-            assert exit_code != 0 and failed == [mutation['detector']], 'Unrelated/build failure is not a semantic kill'
+            detector = mutation['detector']
+            assert exit_code != 0 and detector in failed and all(n == detector or n.startswith(detector + '/') for n in failed), 'Unrelated/build failure is not a semantic kill'
+            assert any(x.get('Test', '').startswith(detector + '/') and 'status =' in x.get('Output', '') for x in events), 'Named assertion diagnostic missing'
             assert mutation['healthy'] in passed, 'Healthy control failed/missing'
             row['semanticDetector'] = 'FAIL_EXPECTED'
             row['healthyControl'] = 'PASS'
@@ -151,6 +155,7 @@ def main():
             assert exit_code == 0 and passed and not failed
             assert set(newtests) <= set(passed), 'NEW inventory missing'
             if label == 'positive':
+                assert set(plan['allTopLevelTestNames']) <= set(passed), 'Existing/NEW full-ai inventory missing'
                 assert any(x.get('Action') == 'pass' and not x.get('Test') and x.get('Package', '').endswith('/ai') for x in events)
 
     failure = None

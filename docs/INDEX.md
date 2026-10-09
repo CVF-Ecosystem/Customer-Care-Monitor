@@ -435,6 +435,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 fresh Luna xhigh untouched source baseline; BUILD acknowledged; source/runtime/live provider proof not yet run.: `docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json`
 - New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-068.json`
 - Root independent exactsource offline Go compile/four-test runner, prepared syntax-only/unexecuted; no worker implementation source help or runtime claim.: `docs/reviews/probes/r068_independent_go_campaign_2026-10-09.py`
+- R068 root independent exact first-source backend archive/test/mutation plan; no Go yet.: `docs/reviews/probes/r068_root_exact_source_plan_2026-10-09.json`
+- R068 first product static review and immutable worker capture failure disposition; actual compiler/tests pending.: `docs/reviews/R068_FIRST_SOURCE_STATIC_REVIEW_AND_CAPTURE_DISPOSITION_2026-10-09.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
