@@ -1,0 +1,81 @@
+{
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "archiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "backendMembers": 218,
+  "status": "PASS_ROOT_LOCAL_PARSER_ADAPTER_TEST_EVIDENCE",
+  "results": [
+    {
+      "label": "positive",
+      "exitCode": 0,
+      "topLevelPasses": 18,
+      "allPasses": 35,
+      "failedTests": [],
+      "elapsedSeconds": 17.97063500015065,
+      "onlyExpectedSourceDifference": []
+    },
+    {
+      "label": "M01",
+      "exitCode": 1,
+      "topLevelPasses": 1,
+      "allPasses": 1,
+      "failedTests": [
+        "TestUsagePresenceM01AbsentNullDetector/missing_container",
+        "TestUsagePresenceM01AbsentNullDetector/missing_token",
+        "TestUsagePresenceM01AbsentNullDetector/null_container",
+        "TestUsagePresenceM01AbsentNullDetector/null_token",
+        "TestUsagePresenceM01AbsentNullDetector"
+      ],
+      "elapsedSeconds": 13.225627699866891,
+      "onlyExpectedSourceDifference": [
+        "backend/ai/usage_presence.go"
+      ]
+    },
+    {
+      "label": "M02",
+      "exitCode": 1,
+      "topLevelPasses": 1,
+      "allPasses": 1,
+      "failedTests": [
+        "TestUsagePresenceM02InvalidDetector/-1",
+        "TestUsagePresenceM02InvalidDetector/-0",
+        "TestUsagePresenceM02InvalidDetector/1.5",
+        "TestUsagePresenceM02InvalidDetector/1e2",
+        "TestUsagePresenceM02InvalidDetector/\"1\"",
+        "TestUsagePresenceM02InvalidDetector/true",
+        "TestUsagePresenceM02InvalidDetector/{}",
+        "TestUsagePresenceM02InvalidDetector/[]",
+        "TestUsagePresenceM02InvalidDetector/9223372036854775808",
+        "TestUsagePresenceM02InvalidDetector"
+      ],
+      "elapsedSeconds": 13.657499900087714,
+      "onlyExpectedSourceDifference": [
+        "backend/ai/usage_presence.go"
+      ]
+    },
+    {
+      "label": "restored",
+      "exitCode": 0,
+      "topLevelPasses": 8,
+      "allPasses": 21,
+      "failedTests": [],
+      "elapsedSeconds": 12.43653230019845,
+      "onlyExpectedSourceDifference": []
+    }
+  ],
+  "verifiedRawPhysicalBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r068-root-tests-raw-backup-l_masrqn",
+  "restoredAllBackendPhysicalBytes": true,
+  "secondArchiveIdentical": true,
+  "protectedBaselineFiles": 780,
+  "protectedUnchanged": 776,
+  "onlyAuthorizedExistingChanges": [
+    "backend/ai/claude.go",
+    "backend/ai/gemini.go",
+    "backend/ai/openai_compatible.go",
+    "backend/ai/provider.go"
+  ],
+  "sourceRepairs": 1,
+  "firstSource": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+  "wholeBackendPostRepairCompile": "NOT_ESTABLISHED; initial root compiler failure retained, build allowances consumed",
+  "workerTests": "NOT_RUN_PENDING_COMMITTED_RUNNER_APPROVAL",
+  "governanceClaim": false
+}

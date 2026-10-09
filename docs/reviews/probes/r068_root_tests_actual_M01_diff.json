@@ -1,0 +1,7 @@
+{
+  "path": "backend/ai/usage_presence.go",
+  "before": "3151424fddafe73e876c9fa4e00743420ef504230b7075cde1acad69793f41ca",
+  "after": "bc90200832f883e899b5837d7320092482313378896ec56778e24af798fa6d7e",
+  "replacementMatches": 1,
+  "diff": "--- \n+++ \n@@ -215,7 +215,7 @@\n }\n \n func usageCountState(status AIUsagePresenceStatus) AIUsageCount {\n-\treturn AIUsageCount{Status: status}\n+\tif status == AIUsagePresenceAbsent || status == AIUsagePresenceNull { return knownAIUsageCount(0) }; return AIUsageCount{Status: status}\n }\n \n func invalidAIUsageCount() AIUsageCount {\n"
+}

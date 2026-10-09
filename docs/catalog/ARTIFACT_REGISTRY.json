@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "Active R068 adapter presence repair BUILD after root CHANGES_REQUIRED compile finding; first source and both build attempts retained; tests await root static reapproval."
+      "description": "Active R068 repaired-source root tests PASS, worker four-test approval; whole-backend compiler gate OPEN, no closure."
     },
     {
       "id": "r060-work-order",
@@ -4560,6 +4560,41 @@
       "path": "docs/reviews/probes/r068_root_compile_actual_summary.json",
       "status": "ACTIVE",
       "description": "R068 original root full-backend compiler failure exit1; exact-source manifests/native streams/verified backup."
+    },
+    {
+      "id": "r068-test-approval-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_tests_actual_summary.json",
+      "status": "ACTIVE",
+      "description": "R068 root independent repaired-source ai positives/M01/M02/restored native evidence PASS; whole-backend compiler gate remains open."
+    },
+    {
+      "id": "r068-test-approval-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_independent_test_evidence_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 independent original raw/backup/218-member restoration and protected780 source audit."
+    },
+    {
+      "id": "r068-test-approval-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_repaired_source_test_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 Luna exact repaired-source four-test plan; first compiler failures and budget consumed retained."
+    },
+    {
+      "id": "r068-test-approval-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_test_campaign_capture.ps1",
+      "status": "ACTIVE",
+      "description": "R068 bounded worker native JSON/whole physical source/mutations/second archive/raw backup runner; root minor evidence pointer fixes attributed."
+    },
+    {
+      "id": "r068-test-approval-d005",
+      "family": "continuity",
+      "path": "docs/reviews/R068_REPAIRED_SOURCE_TEST_APPROVAL_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 root repaired-source independent test evidence and exactly four worker-test approval; no extra build or closure."
     }
   ]
 }

@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R068 adapter presence repair BUILD after root CHANGES_REQUIRED compile finding; first source and both build attempts retained; tests await root static reapproval.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
+- Active R068 repaired-source root tests PASS, worker four-test approval; whole-backend compiler gate OPEN, no closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -440,6 +440,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 immutable first actual compiler failure; pointer/value finding and remaining test-only authority.: `docs/reviews/R068_FIRST_COMPILE_CHANGES_REQUIRED_2026-10-09.md`
 - R068 root independent static-approved repaired-source exact archive and four-test plan.: `docs/reviews/probes/r068_root_repaired_source_plan_2026-10-09.json`
 - R068 original root full-backend compiler failure exit1; exact-source manifests/native streams/verified backup.: `docs/reviews/probes/r068_root_compile_actual_summary.json`
+- R068 root independent repaired-source ai positives/M01/M02/restored native evidence PASS; whole-backend compiler gate remains open.: `docs/reviews/probes/r068_root_tests_actual_summary.json`
+- R068 independent original raw/backup/218-member restoration and protected780 source audit.: `docs/reviews/probes/r068_root_independent_test_evidence_audit_2026-10-09.json`
+- R068 Luna exact repaired-source four-test plan; first compiler failures and budget consumed retained.: `docs/reviews/probes/r068_luna_repaired_source_test_plan_2026-10-09.json`
+- R068 bounded worker native JSON/whole physical source/mutations/second archive/raw backup runner; root minor evidence pointer fixes attributed.: `docs/reviews/probes/r068_luna_test_campaign_capture.ps1`
+- R068 root repaired-source independent test evidence and exactly four worker-test approval; no extra build or closure.: `docs/reviews/R068_REPAIRED_SOURCE_TEST_APPROVAL_2026-10-09.md`
 - R068 worker build launch attempt 1/1; no Go process started, no compiler result; immutable first-source receipt.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json`
 - R068 worker first-build native stdout bytes; empty because the process did not start; preserved raw stream.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stdout.bin`
 - R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin`

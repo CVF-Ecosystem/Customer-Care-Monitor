@@ -54,11 +54,20 @@
   "status": "BUILD",
   "phase": "BUILD",
   "baseCommit": "59f8a4c62e5170dad539b22ff6a1351e1c9dd4a6",
-  "buildCommit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
-  "reviewEvidence": ["docs/reviews/R068_FIRST_SOURCE_STATIC_REVIEW_AND_CAPTURE_DISPOSITION_2026-10-09.md"],
+  "buildCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "reviewEvidence": [
+    "docs/reviews/R068_FIRST_COMPILE_CHANGES_REQUIRED_2026-10-09.md",
+    "docs/reviews/probes/r068_root_independent_test_evidence_audit_2026-10-09.json"
+  ],
   "disposition": "CHANGES_REQUIRED: Root exact-source compile failed at the Anthropic pointer/value converter call; accepted one same-scope pointer/nil repair and NEW nil fixture. Worker launch failure and root compiler failure are retained; both build allowances consumed; tests remain gated on independent static reapproval.",
   "freeze": "OPEN",
-  "history": ["DISPATCH_READY","BUILD","REVIEW_PENDING","CHANGES_REQUIRED","BUILD"],
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD"
+  ],
   "planningPhaseTrace": [
     "INTAKE",
     "DESIGN",
@@ -85,10 +94,10 @@
     "workerUsedGoInvocations": 1,
     "reviewerUsedCampaigns": 1,
     "reviewerUsedGoBuildInvocations": 1,
-    "reviewerUsedGoTestInvocations": 0,
-    "reviewerUsedGoInvocations": 1
+    "reviewerUsedGoTestInvocations": 4,
+    "reviewerUsedGoInvocations": 5
   },
-  "sourceImplementation": "FIRST_SOURCE_COMMITTED_COMPILE_FAILED_REPAIR_ACKNOWLEDGED",
+  "sourceImplementation": "SOURCE_REPAIRED_ROOT_TESTS_PASS_WORKER_TESTS_APPROVED",
   "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
   "freshStartEvidence": "docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json",
   "liveEvidence": "NOT_RUN; pure serialized-response/adapter metadata only, no governance claim",
@@ -133,5 +142,16 @@
     "rootAssistance": "Root repaired missing state.roleRoute only in ee1e568cc40cf74c0d03e00e15f7785748296b4f after initial doctor 24/26; subsequent doctor PASS WITH NOTE 25/26. Attribution is root metadata assistance, not worker/source failure.",
     "bootstrapMigration": "BOOTSTRAP_MIGRATION_PENDING; compact read model absent.",
     "knowledgeIngest": "TEMP-only output."
+  },
+  "executionHistory": {
+    "events": [
+      "WORKER_BUILD_ATTEMPT_1_FAILED_BEFORE_GOPROCESS; counted 1/1; duplicate go.exe resolution produced invalid launch source; stdout/stderr empty.",
+      "ROOT_EXACT_SOURCE_BUILD_1_FAILED exit1 after 24.5483135s on exact source c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e; backend/ai/claude.go:76:42 pointer/value mismatch.",
+      "Root first static pass missed the pinned Anthropic pointer integration; attribution retained as reviewer omission, not a worker/source runtime pass.",
+      "Repair round 1 authorized: change converter to *anthropic.Message, return unavailable for nil, add NEW pure nil fixture; worker evidence runner/plan defects remain same-scope.",
+      "Both build allowances consumed; worker/root Go tests 0/4 and gated on independent root static approval; no provider/external network/DB/governance claim.",
+      "ROOT_TESTS4PASS18top35positive/M01/M02healthy/restored8top21; approved worker4tests after source/probe review; no build allowance remains"
+    ],
+    "rootMinorSyncScriptFailure": "Initial helper assumed executionHistory list; actual dict{events}; stopped after two probe metadata writes and before any canonical write; corrected, no product/Go effect."
   }
-,"executionHistory":{"events":["WORKER_BUILD_ATTEMPT_1_FAILED_BEFORE_GOPROCESS; counted 1/1; duplicate go.exe resolution produced invalid launch source; stdout/stderr empty.","ROOT_EXACT_SOURCE_BUILD_1_FAILED exit1 after 24.5483135s on exact source c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e; backend/ai/claude.go:76:42 pointer/value mismatch.","Root first static pass missed the pinned Anthropic pointer integration; attribution retained as reviewer omission, not a worker/source runtime pass.","Repair round 1 authorized: change converter to *anthropic.Message, return unavailable for nil, add NEW pure nil fixture; worker evidence runner/plan defects remain same-scope.","Both build allowances consumed; worker/root Go tests 0/4 and gated on independent root static approval; no provider/external network/DB/governance claim."]}}
+}

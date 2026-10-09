@@ -299,7 +299,7 @@ function Invoke-GoTest([string]$Name, [string[]]$Arguments, [object]$ExpectedMan
     $script:runReceipts.Add([pscustomobject]@{ name = $Name; receiptPath = [IO.Path]::GetFileName($receiptPath); ordinal = $script:invocationCount; exitCode = $capture.exitCode; timedOut = $capture.timedOut; jsonEventCount = $events.Count; jsonParseFailure = $parseFailure })
     if ($null -ne $manifestCaptureFailure) { throw "$Name post-test backend manifest failed: $manifestCaptureFailure" }
     if (-not $manifestMatchesExpected) { throw "$Name changed backend physical bytes during Go test." }
-    [pscustomobject]@{ name = $Name; receipt = $receipt; events = $events; stderr = [IO.File]::ReadAllText($stderrPath, [Text.Encoding]::UTF8); stdoutPath = $stdoutPath; stderrPath = $stderrPath }
+    [pscustomobject]@{ name = $Name; receiptPath = [IO.Path]::GetFileName($receiptPath); receipt = $receipt; events = $events; stderr = [IO.File]::ReadAllText($stderrPath, [Text.Encoding]::UTF8); stdoutPath = $stdoutPath; stderrPath = $stderrPath }
 }
 
 function Assert-NoUnexpectedEvents([object[]]$Events, [string]$StderrText) {
@@ -809,7 +809,7 @@ finally {
         $backupInfo = [ordered]@{
             path=$backup.path
             evidenceMembersCopied=$backup.evidenceMembers
-            evidenceManifestSha256=$backup.evidenceManifestSha256
+            evidenceManifestSha256BeforeFinalSummary=$backup.evidenceManifestSha256
             archiveCopies=$backup.archiveCopies
             missingArchives=$backup.missingArchives
             allFourArchivesPresent=$backup.allFourArchivesPresent

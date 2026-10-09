@@ -53,7 +53,8 @@
       "TestUsagePresenceSDKAdapters"
     ],
     "noSkipExpected": true,
-    "subtestsAreNotCountedAsTopLevelTests": true
+    "subtestsAreNotCountedAsTopLevelTests": true,
+    "backendArchiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35"
   },
   "workerCampaignRunner": {
     "path": "docs/reviews/probes/r068_luna_test_campaign_capture.ps1",
@@ -95,8 +96,8 @@
       "used": 0,
       "status": "NOT_RUN_WAITING_ROOT_STATIC_APPROVAL_OF_REPAIRED_RUNNER_AND_PLAN"
     },
-    "noWorkerBuildOrTestInvocationsBeforeStaticApproval": true,
-    "automaticRetry": false
+    "automaticRetry": false,
+    "noAdditionalWorkerBuildOrWorkerTestsBeforeStaticApproval": true
   },
   "reviewerCampaign": {
     "owner": "Codex /root",
@@ -151,12 +152,13 @@
       "kind": "restored-new-tests",
       "command": "go -C backend test -json ./ai -run ^TestUsagePresence -count=1",
       "preconditions": [
-        "Both mutation source files restored byte-for-byte to committed bb0bdeb.",
-        "Full backend physical manifest and deterministic physical ZIP equal the before-test baseline.",
-        "Second actual committed backend tar has equal byte count and SHA256 to the first tar."
+        "The one mutated product member is byte-restored after each mutation, with complete backend manifest equality verified before restored tests."
       ],
       "expected": "PASS all 8 NEW top-level tests and child tests with no skips",
-      "result": "NOT_RUN"
+      "result": "NOT_RUN",
+      "finalizationChecks": [
+        "Second committed tar equality and deterministic physical ZIP equality are checked after restored tests; verified raw backup includes all actual archives and final summary."
+      ]
     }
   ],
   "evidenceContract": {
@@ -177,5 +179,6 @@
     "runnerAndPlanStaticApprovalRequiredBeforeWorkerGoTest": true,
     "workerOwnsSourceTestsMutationsAndWorkerCaptureEvidence": true,
     "rootOwnsIndependentCampaignClosureAndPublication": true
-  }
+  },
+  "rootMinorEvidenceRepairs": "Root SESSION_SYNC_STEWARD supplied missing receiptPath metadata, labeled the pre-final-summary backup manifest hash, and corrected plan timing/attempt wording. No product/test/source behavior edit."
 }
