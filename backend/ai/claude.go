@@ -70,11 +70,12 @@ func (c *ClaudeProvider) AnalyzeChat(ctx context.Context, systemPrompt string, c
 		}
 
 		return AIResponse{
-			Content:      text,
-			InputTokens:  int(message.Usage.InputTokens),
-			OutputTokens: int(message.Usage.OutputTokens),
-			Model:        string(message.Model),
-			Provider:     "claude",
+			Content:       text,
+			InputTokens:   int(message.Usage.InputTokens),
+			OutputTokens:  int(message.Usage.OutputTokens),
+			UsagePresence: anthropicUsagePresence(message),
+			Model:         string(message.Model),
+			Provider:      "claude",
 		}, nil
 	})
 }

@@ -168,11 +168,12 @@ func (p *OpenAICompatibleProvider) AnalyzeChat(ctx context.Context, systemPrompt
 		}
 
 		return AIResponse{
-			Content:      choice.Message.Content,
-			Model:        p.model,
-			Provider:     p.providerName,
-			InputTokens:  parsed.Usage.PromptTokens,
-			OutputTokens: parsed.Usage.CompletionTokens,
+			Content:       choice.Message.Content,
+			Model:         p.model,
+			Provider:      p.providerName,
+			InputTokens:   parsed.Usage.PromptTokens,
+			OutputTokens:  parsed.Usage.CompletionTokens,
+			UsagePresence: openAICompatibleUsagePresence(raw),
 		}, nil
 	})
 }
