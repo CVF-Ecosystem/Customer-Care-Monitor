@@ -284,5 +284,6 @@
     "independentReviewCommit": "f82dcf77729397dca932c84088ce497b859b9fd4",
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
-  }
+  },
+  "roleRoute": "OWNER_AUTHORIZED_FRESH_LUNA_XHIGH_ADAPTER_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH"
 }
