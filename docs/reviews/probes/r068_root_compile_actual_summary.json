@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-09",
+  "sourceCommit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+  "independentReviewer": "Codex /root",
+  "mode": "compile",
+  "archiveSha256": "5e09e6e9ca73b339cd5f2501a63b225e253be1141560d280ee4ac95b57e3c325",
+  "members": 218,
+  "plan": "docs/reviews/probes/r068_root_exact_source_plan_2026-10-09.json",
+  "planSha256Physical": "0dda30f157e8d83c6a85707fadb19dc48588da6f47260a275bd0db2262f5d1f3",
+  "scratch": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-root-compile-bh3h0dcw",
+  "commands": [
+    {
+      "label": "compile",
+      "command": [
+        "go",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-root-compile-bh3h0dcw\\backend",
+        "build",
+        "./..."
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 24.548313499893993,
+      "raw": [
+        {
+          "path": "docs/reviews/probes/r068_root_compile_actual_compile_stdout.jsonl",
+          "bytes": 0,
+          "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "docs/reviews/probes/r068_root_compile_actual_compile_stderr.log",
+          "bytes": 202,
+          "sha256Physical": "487894fdb9567027dfd8c90566c5ffa43c4ac52c161303250be1df8bb3f73ba9"
+        }
+      ],
+      "timedOut": false,
+      "launchError": null
+    }
+  ],
+  "raw": [
+    {
+      "path": "docs/reviews/probes/r068_root_compile_actual_compile_manifest_before.json",
+      "bytes": 34330,
+      "sha256Physical": "1b572ec598c1855697d5e17c088bc63f291d1c497f52216b2d7ed08f1b7acfaf"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_compile_actual_compile_stdout.jsonl",
+      "bytes": 0,
+      "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_compile_actual_compile_stderr.log",
+      "bytes": 202,
+      "sha256Physical": "487894fdb9567027dfd8c90566c5ffa43c4ac52c161303250be1df8bb3f73ba9"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_compile_actual_compile_manifest_after.json",
+      "bytes": 34330,
+      "sha256Physical": "1b572ec598c1855697d5e17c088bc63f291d1c497f52216b2d7ed08f1b7acfaf"
+    }
+  ],
+  "GoInvocations": 1,
+  "automaticRetries": 0,
+  "governanceClaim": false,
+  "status": "FAIL_STOPPED_NO_RETRY",
+  "failure": "Wholebackend compile failed",
+  "restorationErrors": [],
+  "finalFullSourceRestored": true,
+  "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r068-root-compile-raw-backup-brt7qsto"
+}

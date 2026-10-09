@@ -4505,10 +4505,61 @@
       "status": "ACTIVE",
       "description": "R068 first product static review and immutable worker capture failure disposition; actual compiler/tests pending."
     },
-    {"id":"r068-worker-build-d001","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json","status":"ACTIVE","description":"R068 worker build launch attempt 1/1; no Go process started, no compiler result; immutable first-source receipt."},
-    {"id":"r068-worker-build-d002","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stdout.bin","status":"ACTIVE","description":"R068 worker first-build native stdout bytes; empty because the process did not start; preserved raw stream."},
-    {"id":"r068-worker-build-d003","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin","status":"ACTIVE","description":"R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream."},
-    {"id":"r068-worker-build-d004","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-tree-manifest.txt","status":"ACTIVE","description":"R068 full 1,565-entry source-tree manifest for the worker launch attempt; source archive retained in verified owned TEMP."},
-    {"id":"r068-worker-build-d005","family":"continuity","path":"docs/reviews/probes/r068_luna_worker_build_2026-10-09/first_build_archive_relocation.json","status":"ACTIVE","description":"R068 derived relocation receipt; original worker build receipt stays unchanged, verified 500,899,840-byte archives remain in owned TEMP."}
+    {
+      "id": "r068-worker-build-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json",
+      "status": "ACTIVE",
+      "description": "R068 worker build launch attempt 1/1; no Go process started, no compiler result; immutable first-source receipt."
+    },
+    {
+      "id": "r068-worker-build-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R068 worker first-build native stdout bytes; empty because the process did not start; preserved raw stream."
+    },
+    {
+      "id": "r068-worker-build-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream."
+    },
+    {
+      "id": "r068-worker-build-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-tree-manifest.txt",
+      "status": "ACTIVE",
+      "description": "R068 full 1,565-entry source-tree manifest for the worker launch attempt; source archive retained in verified owned TEMP."
+    },
+    {
+      "id": "r068-worker-build-d005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/first_build_archive_relocation.json",
+      "status": "ACTIVE",
+      "description": "R068 derived relocation receipt; original worker build receipt stays unchanged, verified 500,899,840-byte archives remain in owned TEMP."
+    },
+    {
+      "id": "r068-review-preparation-c004",
+      "family": "continuity",
+      "path": "docs/reviews/R068_FIRST_COMPILE_CHANGES_REQUIRED_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 immutable first actual compiler failure; pointer/value finding and remaining test-only authority."
+    },
+    {
+      "id": "r068-review-preparation-c005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_repaired_source_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 root independent static-approved repaired-source exact archive and four-test plan."
+    },
+    {
+      "id": "r068-review-preparation-c006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_compile_actual_summary.json",
+      "status": "ACTIVE",
+      "description": "R068 original root full-backend compiler failure exit1; exact-source manifests/native streams/verified backup."
+    }
   ]
 }

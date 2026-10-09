@@ -1,0 +1,2 @@
+# github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai
+ai\claude.go:76:42: cannot use message (variable of type *anthropic.Message) as anthropic.Message value in argument to anthropicUsagePresence

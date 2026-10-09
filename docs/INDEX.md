@@ -437,6 +437,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root independent exactsource offline Go compile/four-test runner, prepared syntax-only/unexecuted; no worker implementation source help or runtime claim.: `docs/reviews/probes/r068_independent_go_campaign_2026-10-09.py`
 - R068 root independent exact first-source backend archive/test/mutation plan; no Go yet.: `docs/reviews/probes/r068_root_exact_source_plan_2026-10-09.json`
 - R068 first product static review and immutable worker capture failure disposition; actual compiler/tests pending.: `docs/reviews/R068_FIRST_SOURCE_STATIC_REVIEW_AND_CAPTURE_DISPOSITION_2026-10-09.md`
+- R068 immutable first actual compiler failure; pointer/value finding and remaining test-only authority.: `docs/reviews/R068_FIRST_COMPILE_CHANGES_REQUIRED_2026-10-09.md`
+- R068 root independent static-approved repaired-source exact archive and four-test plan.: `docs/reviews/probes/r068_root_repaired_source_plan_2026-10-09.json`
+- R068 original root full-backend compiler failure exit1; exact-source manifests/native streams/verified backup.: `docs/reviews/probes/r068_root_compile_actual_summary.json`
 - R068 worker build launch attempt 1/1; no Go process started, no compiler result; immutable first-source receipt.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json`
 - R068 worker first-build native stdout bytes; empty because the process did not start; preserved raw stream.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stdout.bin`
 - R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin`
