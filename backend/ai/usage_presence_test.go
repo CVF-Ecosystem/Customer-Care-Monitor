@@ -107,16 +107,20 @@ func TestUsagePresenceRawBoundsAndMalformedJSON(t *testing.T) {
 }
 
 func TestUsagePresenceSDKAdapters(t *testing.T) {
-	anthropicUnavailable := anthropicUsagePresence(anthropic.Message{})
+	anthropicUnavailable := anthropicUsagePresence(nil)
 	assertAIUsageCount(t, "input", anthropicUnavailable.InputTokens, AIUsagePresenceUnavailable, nil)
 	assertAIUsageCount(t, "output", anthropicUnavailable.OutputTokens, AIUsagePresenceUnavailable, nil)
+
+	anthropicEmpty := anthropicUsagePresence(&anthropic.Message{})
+	assertAIUsageCount(t, "input", anthropicEmpty.InputTokens, AIUsagePresenceUnavailable, nil)
+	assertAIUsageCount(t, "output", anthropicEmpty.OutputTokens, AIUsagePresenceUnavailable, nil)
 
 	var anthropicMessage anthropic.Message
 	err := json.Unmarshal([]byte("{\"id\":\"msg_1\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-test\",\"content\":[{\"type\":\"text\",\"text\":\"ok\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":11,\"output_tokens\":12}}"), &anthropicMessage)
 	if err != nil {
 		t.Fatalf("decode local Anthropic SDK fixture: %v", err)
 	}
-	anthropicPresence := anthropicUsagePresence(anthropicMessage)
+	anthropicPresence := anthropicUsagePresence(&anthropicMessage)
 	assertAIUsageCount(t, "input", anthropicPresence.InputTokens, AIUsagePresenceKnown, int64Pointer(11))
 	assertAIUsageCount(t, "output", anthropicPresence.OutputTokens, AIUsagePresenceKnown, int64Pointer(12))
 	if anthropicPresence.Source != AIUsagePresenceSourceAnthropicRawJSON || !anthropicPresence.Complete {

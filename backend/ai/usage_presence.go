@@ -56,7 +56,10 @@ func openAICompatibleUsagePresence(raw []byte) *AIUsagePresence {
 	return aiUsagePresenceFromJSON(raw, AIUsagePresenceSourceOpenAIWire, "usage", "prompt_tokens", "completion_tokens")
 }
 
-func anthropicUsagePresence(message anthropic.Message) *AIUsagePresence {
+func anthropicUsagePresence(message *anthropic.Message) *AIUsagePresence {
+	if message == nil {
+		return unavailableAIUsagePresence(AIUsagePresenceSourceAnthropicRawJSON)
+	}
 	raw := message.RawJSON()
 	if raw == "" {
 		return unavailableAIUsagePresence(AIUsagePresenceSourceAnthropicRawJSON)
