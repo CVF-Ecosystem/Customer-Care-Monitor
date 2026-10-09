@@ -4483,6 +4483,13 @@
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-068.json",
       "status": "ACTIVE",
       "description": "R068 fresh Luna xhigh bounded workorder/tranche; BUILD acknowledgment recorded; source/runtime not yet begun; historical R067 preserved."
+    },
+    {
+      "id": "r068-review-preparation-c001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_independent_go_campaign_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "Root independent exactsource offline Go compile/four-test runner, prepared syntax-only/unexecuted; no worker implementation source help or runtime claim."
     }
   ]
 }
