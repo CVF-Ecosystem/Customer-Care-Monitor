@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "Active R067 FROZEN localUI, closure/finalassessment published with exactremoteSHA readback; next bounded requirements audit, fullS2/S3/S5/live OPEN."
+      "description": "Active R068 fresh Luna xhigh adapter presence WORK_ORDER, before source/Go dispatch; root independent review."
     },
     {
       "id": "r060-work-order",
@@ -4462,6 +4462,27 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-068.json",
       "status": "ACTIVE",
       "description": "New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet."
+    },
+    {
+      "id": "r068-activation-b001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun."
+    },
+    {
+      "id": "r068-activation-b002",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_068.md",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun."
+    },
+    {
+      "id": "r068-activation-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-068.json",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun."
     }
   ]
 }

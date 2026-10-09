@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md", "activeTranche": "CCMAI-RUNTIME-067", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md", "activeTranche": "CCMAI-RUNTIME-068", "parked": true} -->
 
 ## Startup Order
 
@@ -55,7 +55,11 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 - [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-## Current R067 saved-run observation UI (2026-10-08)
+## Current R068 fresh provider usage-presence adapter (2026-10-09)
+
+CCMAI-RUNTIME-068 DISPATCH_READY / WORK_ORDER: fresh Luna xhigh r068_worker rehydrates and commits before-edit BUILD acknowledgment, then writes6allowed adapter/helper/test paths from scratch. First implementation commit and first offline wholebackend build retained before repair; root source/plan staticapproval before worker4Go tests, own independent1build+4tests follows. Fresh max10Go/0Vitest/visual, priorR0678Vitest3build4visual exhausted unchanged. Conditional scopedlocalREVIEW/FREEZE and authorized ordinary branchpublication; no new provider/externalnetwork/config/credential/DB/engine/pricing/receipt/frontend/core effects or fullS2/S3/S5/live/governance/hosted claim. Facebook/ZaloOAparked.
+
+## Historical R067 saved-run observation UI (2026-10-08)
 
 CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.
 

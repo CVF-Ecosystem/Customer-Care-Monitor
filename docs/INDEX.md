@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R067 FROZEN localUI, closure/finalassessment published with exactremoteSHA readback; next bounded requirements audit, fullS2/S3/S5/live OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
+- Active R068 fresh Luna xhigh adapter presence WORK_ORDER, before source/Go dispatch; root independent review.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -428,6 +428,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_type_repair_round2_plan_2026-10-09.json`
 - Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof.: `docs/reviews/probes/r067_ui_campaign.py`
 - Luna isolated synthetic saved-run panel fixture, loopback only, no application/API.: `docs/reviews/probes/r067_visual_fixture.mjs`
+- R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
+- R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun.: `docs/work_orders/CCMAI_RUNTIME_068.md`
+- R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun.: `CVF_SESSION/tranches/CCMAI-RUNTIME-068.json`
 - R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet.: `docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md`
 - R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet.: `docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json`
 - New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-068.json`
