@@ -50,15 +50,16 @@
   },
   "schemaVersion": "1.0",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "59f8a4c62e5170dad539b22ff6a1351e1c9dd4a6",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -80,7 +81,7 @@
     "aggregateMaxGoInvocations": 10,
     "maxVitestInvocations": 0,
     "maxVisualInvocations": 0,
-    "workerUsedCampaigns": 0,
+    "workerUsedCampaigns": 1,
     "workerUsedGoBuildInvocations": 0,
     "workerUsedGoTestInvocations": 0,
     "workerUsedGoInvocations": 0,
@@ -89,7 +90,7 @@
     "reviewerUsedGoTestInvocations": 0,
     "reviewerUsedGoInvocations": 0
   },
-  "sourceImplementation": "NOT_STARTED",
+  "sourceImplementation": "BUILD_ACKNOWLEDGED_SOURCE_NOT_STARTED",
   "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
   "freshStartEvidence": "docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json",
   "liveEvidence": "NOT_RUN; pure serialized-response/adapter metadata only, no governance claim",
@@ -111,5 +112,28 @@
     "gateUnits": "Fresh46PASS55.581s inherited unchanged tooling",
     "protected": "all780physical baseline unchanged;2newproductpaths absent",
     "sourceGo": 0
+  },
+  "workerAcknowledgment": {
+    "date": "2026-10-09",
+    "agent": "Codex /root/r068_worker",
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh",
+    "roleTransition": "WORK_ORDER handoff to IMPLEMENTATION_WORKER / COMMIT_STEWARD; root remains independent REVIEWER",
+    "declaration": "Project Customer-Care-Monitor-AI; core ab714ed7f20a224c6022cf133b26750347a2fc9e; BUILD; R2; live evidence required YES; active R068 handoff; Facebook/Zalo OA parked.",
+    "sourceEditsStarted": false,
+    "goInvocations": 0,
+    "workerCampaignsUsed": 1,
+    "freshStartBaseline": "9b951d50908c504dd7de44be516f88e86287f5de; 780 protected physical hashes and both new product paths absent.",
+    "allowedProductPaths": [
+      "backend/ai/provider.go",
+      "backend/ai/openai_compatible.go",
+      "backend/ai/claude.go",
+      "backend/ai/gemini.go",
+      "backend/ai/usage_presence.go",
+      "backend/ai/usage_presence_test.go"
+    ],
+    "rootAssistance": "Root repaired missing state.roleRoute only in ee1e568cc40cf74c0d03e00e15f7785748296b4f after initial doctor 24/26; subsequent doctor PASS WITH NOTE 25/26. Attribution is root metadata assistance, not worker/source failure.",
+    "bootstrapMigration": "BOOTSTRAP_MIGRATION_PENDING; compact read model absent.",
+    "knowledgeIngest": "TEMP-only output."
   }
 }

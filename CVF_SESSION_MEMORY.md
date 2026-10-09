@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md", "activeTranche": "CCMAI-RUNTIME-068", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md", "activeTranche": "CCMAI-RUNTIME-068", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R068 fresh provider usage-presence adapter (2026-10-09)
 
-CCMAI-RUNTIME-068 DISPATCH_READY / WORK_ORDER: fresh Luna xhigh r068_worker rehydrates and commits before-edit BUILD acknowledgment, then writes6allowed adapter/helper/test paths from scratch. First implementation commit and first offline wholebackend build retained before repair; root source/plan staticapproval before worker4Go tests, own independent1build+4tests follows. Fresh max10Go/0Vitest/visual, priorR0678Vitest3build4visual exhausted unchanged. Conditional scopedlocalREVIEW/FREEZE and authorized ordinary branchpublication; no new provider/externalnetwork/config/credential/DB/engine/pricing/receipt/frontend/core effects or fullS2/S3/S5/live/governance/hosted claim. Facebook/ZaloOAparked.
+CCMAI-RUNTIME-068 BUILD: Luna xhigh IMPLEMENTATION_WORKER / COMMIT_STEWARD has committed the before-edit acknowledgment. Start from planning baseline 9b951d50908c504dd7de44be516f88e86287f5de and change only the six authorized backend/ai paths; commit fresh source, tests, exact-source inventory, mutation plan and evidence contract before the single cached offline whole-backend build. Preserve first source commit and first build result. Stop after the build and send the exact commit and plan to root for independent static approval; do not run Go tests until approved. Worker budget is one build plus four Go tests, 0/5 invocations used; no provider/network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes. Root owns independent review and later closure/publication. Facebook/Zalo OA remain parked; no live provider, billing or governance claim.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

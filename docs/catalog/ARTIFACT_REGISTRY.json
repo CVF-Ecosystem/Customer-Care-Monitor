@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "Active R068 fresh Luna xhigh adapter presence WORK_ORDER, before source/Go dispatch; root independent review."
+      "description": "Active R068 fresh Luna xhigh adapter presence BUILD; before-edit acknowledgment committed; source and first offline build pending; root independent review."
     },
     {
       "id": "r060-work-order",
@@ -4447,14 +4447,14 @@
       "family": "continuity",
       "path": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet."
+      "description": "R068 fresh Luna xhigh adapter presence contract; BUILD acknowledged; source/runtime/live provider proof not yet run."
     },
     {
       "id": "r068-planning-a002",
       "family": "continuity",
       "path": "docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json",
       "status": "ACTIVE",
-      "description": "R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet."
+      "description": "R068 fresh Luna xhigh untouched source baseline; BUILD acknowledged; source/runtime/live provider proof not yet run."
     },
     {
       "id": "r068-planning-a003",
@@ -4475,14 +4475,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_068.md",
       "status": "ACTIVE",
-      "description": "R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun."
+      "description": "R068 fresh Luna xhigh bounded workorder/tranche; BUILD acknowledged; source/runtime not yet begun; historical R067 preserved."
     },
     {
       "id": "r068-activation-b003",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-068.json",
       "status": "ACTIVE",
-      "description": "R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun."
+      "description": "R068 fresh Luna xhigh bounded workorder/tranche; BUILD acknowledgment recorded; source/runtime not yet begun; historical R067 preserved."
     }
   ]
 }
