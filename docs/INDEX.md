@@ -428,6 +428,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_type_repair_round2_plan_2026-10-09.json`
 - Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof.: `docs/reviews/probes/r067_ui_campaign.py`
 - Luna isolated synthetic saved-run panel fixture, loopback only, no application/API.: `docs/reviews/probes/r067_visual_fixture.mjs`
+- R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet.: `docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md`
+- R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet.: `docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json`
+- New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-068.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

@@ -4441,6 +4441,27 @@
       "path": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
       "status": "ACTIVE",
       "description": "Actual R067 ordinary branchpush exit0 and exact remoteSHA closure20d6a666 readback; derived receipt separately published, hostedActions NOTRUN."
+    },
+    {
+      "id": "r068-planning-a001",
+      "family": "continuity",
+      "path": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet."
+    },
+    {
+      "id": "r068-planning-a002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh adapter presence contract/baseline; no Sol implementation draft, no source/runtime/live dispatch yet."
+    },
+    {
+      "id": "r068-planning-a003",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-068.json",
+      "status": "ACTIVE",
+      "description": "New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet."
     }
   ]
 }

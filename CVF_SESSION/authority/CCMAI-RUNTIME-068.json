@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-068",
+  "authorityKind": "DISPATCHER_OWNED_FRESH_PROVIDER_USAGE_PRESENCE_ADAPTER",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
+  "sourcePlanningCommit": "9b951d50908c504dd7de44be516f88e86287f5de",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r068_worker",
+    "repairWorker": "Codex /root/r068_worker",
+    "commitSteward": "Codex /root/r068_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/ai/provider.go",
+    "backend/ai/openai_compatible.go",
+    "backend/ai/claude.go",
+    "backend/ai/gemini.go",
+    "backend/ai/usage_presence.go",
+    "backend/ai/usage_presence_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_068.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "existing_test_edit",
+    "old_packet_edit",
+    "old_authority_seed_edit",
+    "engine_receipt_pricing_storage_edit",
+    "schema_endpoint_permission_change",
+    "provider_or_external_network_call",
+    "real_config_credential_read",
+    "dependency_workflow_gate_edit",
+    "customer_or_db_use",
+    "core_edit",
+    "secret_commit",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment",
+    "root_source_test_edit",
+    "automatic_retry",
+    "extra_go_invocation",
+    "other_tranche_freeze",
+    "full_S2_S3_S5_live_governance_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "ownerAuthorization": "Owner next, start from the beginning for comparison; standing root orchestrator/independent reviewer routes fresh Luna xhigh implementation under new bounded order. Complete coherent source/review/scoped local closure/ordinary authorized currentbranch publication; no checkpoint reapproval within unchanged scope.",
+  "permittedEffects": [
+    "bounded_additive_adapter_response_metadata",
+    "pure_serialized_response_parsing_tests",
+    "inherited_ai_loopback_httptest_only",
+    "cached_offline_go_build_and_ai_tests",
+    "local_documentation_commit",
+    "scoped_local_freeze_R068_after_independent_review",
+    "ordinary_currentbranch_publication_after_scoped_closure"
+  ],
+  "claimScope": "Serialized JSON parsing and adapter response metadata mapping only; no live provider usage, billing, pricing completeness or CVF AI governance proof.",
+  "executionBudget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxGoBuildInvocations": 1,
+    "workerMaxGoTestInvocations": 4,
+    "workerMaxGoInvocations": 5,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxGoBuildInvocations": 1,
+    "reviewerMaxGoTestInvocations": 4,
+    "reviewerMaxGoInvocations": 5,
+    "aggregateMaxGoInvocations": 10,
+    "maxVitestInvocations": 0,
+    "maxVisualInvocations": 0
+  },
+  "runtimeBoundary": "Fresh worker one build plus four Go tests; root independent same. Offline cached fullbackend compile, full ai positive/M01/M02/restored NEW tests on exact git archive. Raw streams/JSON/manifests/diff/semantic detector+healthy control/whole source restoration/second archive/physical backup. Failure stops, no retry/reset; root static source+plan before first worker tests. Wholebackend compile is not runtime acceptance.",
+  "freezeCondition": "Independent root exactsource UP01..12 REVIEW_PASS, no scoped failure/missing evidence/open defects, synchronized metadata/catalog/docs and committed artifacts. Original failures retained; only adapter metadata closed.",
+  "publicationBoundary": "Ordinary origin refs/heads/codex/gov001-f08-actions-evidence after scoped closure with remoteSHA readback; no main/force/merge/deploy/GitHub Actions claim."
+}
