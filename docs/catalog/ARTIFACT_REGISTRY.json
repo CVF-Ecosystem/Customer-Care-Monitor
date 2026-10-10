@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R071 FROZEN aggregate-only; root audits remaining dependencies for a separately bounded next work order."
+      "description": "Active R072 bounded legacy UI compatibility; fresh Luna xhigh worker/root independent reviewer."
     },
     {
       "id": "r060-work-order",
@@ -5337,6 +5337,27 @@
       "path": "docs/reviews/probes/r072_protected_baseline_2026-10-10.json",
       "status": "ACTIVE",
       "description": "Before-source physical baseline for protected frontend/backend/authority files."
+    },
+    {
+      "id": "r072-planning-b001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Historical R071 FROZEN aggregate-only handoff; source/runtime evidence unchanged."
+    },
+    {
+      "id": "r072-planning-b002",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_072.md",
+      "status": "ACTIVE",
+      "description": "R072 bounded legacy compatibility work order."
+    },
+    {
+      "id": "r072-planning-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-072.json",
+      "status": "ACTIVE",
+      "description": "R072 dispatcher scope and status record."
     }
   ]
 }

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -903,5 +903,12 @@
     },
     "closureEvidence": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
     "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2"
+  },
+  "legacyUiExtensionCompatibility": {
+    "tranche": "CCMAI-RUNTIME-072",
+    "status": "DISPATCH_READY",
+    "source": "NOT_STARTED",
+    "scope": "Ignore optional presence extension; legacy projection only",
+    "nextAllowedMove": "CCMAI-RUNTIME-072 DISPATCH_READY: fresh Luna xhigh rehydrates and records BUILD acknowledgment before parser/NEW test edits; commit first source and return for root static approval before bounded offline Vitest/typecheck. Legacy-only UI compatibility, no presence exposure, Go/network/provider/DB/push0; fullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN, Facebook/Zalo OA parked, priorR068 publicationunverified/notretried."
   }
 }

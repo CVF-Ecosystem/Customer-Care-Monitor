@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-072",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r072_worker",
+    "repairWorker": "Codex /root/r072_worker",
+    "commitSteward": "Codex /root/r072_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Jobs/job-detail/run-observation.ts",
+    "frontend/src/__tests__/run-observation-adapter-compat.spec.ts",
+    "docs/work_orders/CCMAI_RUNTIME_072.md"
+  ],
+  "prohibitedEffects": [
+    "existing_test_edit",
+    "backend_edit",
+    "ui_presence_exposure",
+    "legacy_validation_relaxation",
+    "other_unknown_key_acceptance",
+    "provider_network_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "root_source_test_edit",
+    "automatic_retry",
+    "push_merge_deploy",
+    "full_roadmap_live_governance_claim"
+  ],
+  "executionBudget": {
+    "workerMaxVitest": 2,
+    "reviewerMaxVitest": 2,
+    "aggregateMaxVitest": 4,
+    "workerMaxTypecheck": 1,
+    "reviewerMaxTypecheck": 1,
+    "maxGo": 0,
+    "automaticRetries": 0
+  },
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
+  "baseCommit": "1fb7f6cd11a14d5c8ddd05942ac8bac75d904663",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "dispatcherAcknowledgment": "2026-10-10 canonical continuity rehydrated; doctor25/1/coreab714ed read-only. Owner next and standing orchestrator delegation accepted bounded R1 pure UI compatibility. Seed/spec/baseline1fb7f6c committed before BUILD. Fresh Luna read-only feasibility agrees; no implementation draft. Root independent reviewer; no repeated human checkpoint.",
+  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json"
+}

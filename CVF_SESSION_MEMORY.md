@@ -9,7 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-071", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
+
+## Current R072
+
+CCMAI-RUNTIME-072 DISPATCH_READY: fresh Luna xhigh rehydrates and records BUILD acknowledgment before parser/NEW test edits; commit first source and return for root static approval before bounded offline Vitest/typecheck. Legacy-only UI compatibility, no presence exposure, Go/network/provider/DB/push0; fullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN, Facebook/Zalo OA parked, priorR068 publicationunverified/notretried.
 
 ## Startup Order
 
