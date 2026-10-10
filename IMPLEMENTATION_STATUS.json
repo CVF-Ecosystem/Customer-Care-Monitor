@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -42,7 +42,7 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "buildInProgress": [
-    "R073 bounded saved presence UI; source NOT_STARTED, native0; first-source static review required."
+    "R073 firstsource53abf11 static findings F1/F2 NEW test, F3 locale precision; repair awaiting ACK, native0."
   ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
@@ -262,7 +262,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-073 BUILD after committed before-edit acknowledgment; Luna implements exactly five PU01..09 paths with source/test/native counts0 at acknowledgment, commits first source before native, then root independently reviews source and test oracle before expected focused five-spec Vitest and forced vue-tsc. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.",
+    "nextObjective": "CCMAI-RUNTIME-073 CHANGES_REQUIRED at firstsource53abf11 before native: Luna acknowledges REPAIR_WORKER then repairs NEW test boundary/control/total/prefix cases and new en/vi precision labels only (F1..F3), preserving module/panel53abf11 and all old protected paths. Commit repaired source for independent root static approval before any Vitest/typecheck. Original source NOT_RUN, budgets unchanged/native0; no provider/network/DB/publication; broader roadmap/billing/live OPEN and accounts parked.",
     "assessment": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
     "buildDispatched": true,
@@ -1012,17 +1012,17 @@
     "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
   },
   "savedAdapterPresenceUi": {
-    "status": "BUILD",
-    "phase": "BUILD",
+    "status": "CHANGES_REQUIRED",
+    "phase": "REVIEW",
     "riskCeiling": "R1",
     "spec": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
-    "sourceImplementation": "NOT_STARTED",
+    "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_CHANGES_REQUIRED",
     "buildAcknowledgment": "Committed before source/test edits: Luna xhigh IMPLEMENTATION_WORKER/source COMMIT_STEWARD; source0, NEW tests0, worker native0; root gate units46/46 in38.250s inherited unchanged tooling; first source commit and root static approval required before native.",
-    "independentAcceptance": "PENDING",
+    "independentAcceptance": "CHANGES_REQUIRED",
     "freeze": "OPEN",
-    "firstSourceCommit": null,
-    "reviewEvidence": null,
+    "firstSourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
+    "reviewEvidence": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
     "modelAssessment": null,
     "closureEvidence": null,
     "publication": "NOT_AUTHORIZED_IN_R073",

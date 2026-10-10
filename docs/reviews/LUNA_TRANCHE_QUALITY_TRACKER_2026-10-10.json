@@ -232,7 +232,7 @@
       "id": "CCMAI-RUNTIME-073",
       "workload": "Saved adapter presence separate projector/panel/en-vi; five source paths",
       "start": "FRESH_LUNA_NO_SOL_DRAFT",
-      "status": "DISPATCH_READY",
+      "status": "CHANGES_REQUIRED_STATIC_BEFORE_NATIVE",
       "taskClassification": {
         "primary": "saved_receipt_ui_feature",
         "secondary": [
@@ -242,9 +242,9 @@
         ],
         "start": "FRESH_LUNA_NO_SOL_DRAFT"
       },
-      "firstSourceCommit": null,
-      "firstCompile": "NOT_RUN",
-      "firstPositive": "NOT_RUN",
+      "firstSourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
+      "firstCompile": "NOT_RUN_ORIGINAL_SOURCE",
+      "firstPositive": "NOT_RUN_ORIGINAL_SOURCE",
       "sourceTestRepairRounds": 0,
       "productSemanticRepairRounds": 0,
       "parentSourceTestEdits": 0,
@@ -254,12 +254,24 @@
         "Pre-BUILD activation local/PRpreflight6/7 FAIL: currentMode DISPATCH_READY invalid phase; root corrected mode WORK_ORDER, tranche status unchanged."
       ],
       "parentAssistance": [
-        "Root contract/spec/inventory, consolidated independent static review, own capture and metadata; no implementation draft."
+        "Root contract/spec/inventory, consolidated independent static review, own capture and metadata; no implementation draft.",
+        "Root consolidated first-source F1/F2 oracle/fixture controls and F3 locale precision findings; no product/test edit."
       ],
       "measuredModelComputeTime": null,
       "modelTokenCost": null,
       "finalDisposition": "PENDING",
-      "assessment": null
+      "assessment": null,
+      "staticReview": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "acceptedRepairRounds": 1,
+      "repairCompleted": false,
+      "acceptedTestFindings": [
+        "F1 P2 unsafe boundary negatives start with invalid prefix; sum2 not unsafe",
+        "F2 P2 missing typedtotal and fabricatedprefix/missinghook contrasts"
+      ],
+      "acceptedProductPresentationFindings": [
+        "F3 P2 never-rounded claim and ambiguous response-counter labels"
+      ],
+      "productSemanticDefectsEstablished": 0
     }
   ],
   "taskFitClassification": {

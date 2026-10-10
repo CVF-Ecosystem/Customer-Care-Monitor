@@ -70,18 +70,23 @@
     "currentPermittedTypecheckInvocations": 0,
     "currentPermittedGoInvocations": 0
   },
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
   "baseCommit": "bf8e151bfbf7e511136794cb078be6836489cf3b",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
+  "reviewEvidence": [
+    "docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md",
+    "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md"
+  ],
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -91,5 +96,16 @@
   ],
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "Fresh continuity rehydrated; doctor25/1 and gateunits46/46 in38.250s inherited unchanged tooling. Root delegated scope acceptance; seed/spec/baseline committedbf8e151bfbf7e511136794cb078be6836489cf3b before BUILD. Luna feasibility read-only, no product draft. Independent review/source first/native budgets bounded; all auxiliary current projections synchronized before BUILD.",
-  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json"
+  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+  "firstSourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
+  "acceptedRepairRounds": 1,
+  "repairCompleted": false,
+  "sourceTestRepairRounds": 0,
+  "productSemanticRepairRounds": 0,
+  "productPresentationRepairRounds": 0,
+  "repairScope": [
+    "frontend/src/__tests__/adapter-usage-presence.spec.ts",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/i18n/vi.ts"
+  ]
 }

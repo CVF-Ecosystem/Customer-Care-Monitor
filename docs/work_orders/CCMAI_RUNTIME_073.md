@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-073 saved adapter-presence UI
 
-Status: BUILD
+Status: CHANGES_REQUIRED
 
 Risk ceiling: R1. Root work-order author / independent REVIEWER / CLOSER / metadata COMMIT_STEWARD; fresh Luna xhigh implementation/repair/source COMMIT_STEWARD. Owner next and standing delegation authorize bounded local work and independent closure, no repeated owner checkpoint.
 
@@ -21,3 +21,5 @@ Failure conditions: scope drift, legacy projection change, unsafe/null-to-zero e
 ## Worker before-edit BUILD acknowledgment (2026-10-10)
 
 Fresh Luna xhigh rehydrated current R073 authority and transitions WORK_ORDER -> BUILD as the delegated IMPLEMENTATION_WORKER / source COMMIT_STEWARD. Source edits0, NEW-test edits0, and worker Vitest/vue-tsc/Go invocations0 at this acknowledgment; root's unchanged-tooling gate units46/46 in38.250s are inherited and will not be duplicated. Commit the first source/test changes before any native command. Root's independent consolidated source and test-oracle review is required before the expected focused Vitest campaign and forced vue-tsc. Original worker/reviewer/aggregate budgets remain unchanged; reserves require an accepted same-scope repair, with no automatic retries.
+
+Firstsource53abf11 static CHANGES_REQUIRED F1/F2 NEW-test oracle/control, F3 new locale precision; first source/native NOT_RUN, one consolidated repair on NEW test/en/vi only. Module/panel protected, no budget reset. [Findings](../reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md).

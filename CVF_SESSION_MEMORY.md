@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
 
 ## Current R073
 
-CCMAI-RUNTIME-073 BUILD after committed before-edit acknowledgment; Luna implements exactly five PU01..09 paths with source/test/native counts0 at acknowledgment, commits first source before native, then root independently reviews source and test oracle before expected focused five-spec Vitest and forced vue-tsc. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.
+CCMAI-RUNTIME-073 CHANGES_REQUIRED at firstsource53abf11 before native: Luna acknowledges REPAIR_WORKER then repairs NEW test boundary/control/total/prefix cases and new en/vi precision labels only (F1..F3), preserving module/panel53abf11 and all old protected paths. Commit repaired source for independent root static approval before any Vitest/typecheck. Original source NOT_RUN, budgets unchanged/native0; no provider/network/DB/publication; broader roadmap/billing/live OPEN and accounts parked.
 
 Task-fit ledger records primary/secondary classes before BUILD; four prior accepted samples retained. R073 fresh sample pending review, not yet accepted. Root independent reviewer; no product/test edits.
 

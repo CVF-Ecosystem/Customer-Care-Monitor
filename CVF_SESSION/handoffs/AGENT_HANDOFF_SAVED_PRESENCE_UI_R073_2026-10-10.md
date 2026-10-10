@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / metadata COMMIT_STEWARD; Codex /root/r073_worker IMPLEMENTATION_WORKER / source COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-073 BUILD after committed before-edit acknowledgment; Luna implements exactly five PU01..09 paths with source/test/native counts0 at acknowledgment, commits first source before native, then root independently reviews source and test oracle before expected focused five-spec Vitest and forced vue-tsc. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER awaiting before-edit acknowledgment
+- Next allowed move: CCMAI-RUNTIME-073 CHANGES_REQUIRED at firstsource53abf11 before native: Luna acknowledges REPAIR_WORKER then repairs NEW test boundary/control/total/prefix cases and new en/vi precision labels only (F1..F3), preserving module/panel53abf11 and all old protected paths. Commit repaired source for independent root static approval before any Vitest/typecheck. Original source NOT_RUN, budgets unchanged/native0; no provider/network/DB/publication; broader roadmap/billing/live OPEN and accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche transition acknowledgment
@@ -20,3 +20,7 @@ Root activation metadata finding: first local/PR preflight6/7 failed because roo
 ## Luna xhigh worker before-edit BUILD acknowledgment (2026-10-10)
 
 Fresh R073 rehydration confirms manifest/policy/current state, memory, this handoff, implementation status, docs index, PU01..09, immutable seed/basebf8e151 and DISPATCH_READY tranche. Current commit52aa173 is the authorized activation head. Role transition: Luna xhigh read-only feasibility auditor -> IMPLEMENTATION_WORKER / source COMMIT_STEWARD; root remains independent REVIEWER / metadata COMMIT_STEWARD. Phase WORK_ORDER -> BUILD under the dispatched R073 authority. At acknowledgment, product/source edits0, NEW-test edits0, and worker Vitest/vue-tsc/Go invocations0. Inherited root gate units46/46 in38.250s; worker does not duplicate. Scope remains exactly the five R073 source paths, with the old projector/tests/backend/seed/packets protected. First source commit precedes any native invocation; root consolidated static review of source and test oracle must release native validation. Expected worker campaign is the four existing observation specs plus NEW adapter-presence spec and one forced vue-tsc; reserves remain conditional on an accepted same-scope repair, no automatic retry. Root-owned untracked independent review plan is preserved and excluded from worker commits. Full S2/S3/S5/global F02/real Analyzer/billing/live/governance/hosted remain open; Facebook/Zalo OA parked and prior R068 publication unverified/not retried.
+
+## First-source independent REVIEW / consolidated repair route
+
+Root rehydrates current continuity/authority at worker firstsource53abf11; role independent REVIEWER -> SESSION_SYNC_STEWARD metadata finding route, worker REPAIR awaiting ACK. docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md returns F1/F2 NEW-test fixture/coverage and F3 locale precision, product algorithm/panel accepted statically unchanged. Native0; original source NOT_RUN. One consolidated same-scope repair, no operator checkpoint/budget reset; new test/en/vi only. Parent source/test edits0.

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-073",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-073 BUILD after committed before-edit acknowledgment; Luna implements exactly five PU01..09 paths with source/test/native counts0 at acknowledgment, commits first source before native, then root independently reviews source and test oracle before expected focused five-spec Vitest and forced vue-tsc. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.",
+  "nextAllowedMove": "CCMAI-RUNTIME-073 CHANGES_REQUIRED at firstsource53abf11 before native: Luna acknowledges REPAIR_WORKER then repairs NEW test boundary/control/total/prefix cases and new en/vi precision labels only (F1..F3), preserving module/panel53abf11 and all old protected paths. Commit repaired source for independent root static approval before any Vitest/typecheck. Original source NOT_RUN, budgets unchanged/native0; no provider/network/DB/publication; broader roadmap/billing/live OPEN and accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / metadata COMMIT_STEWARD; Codex /root/r073_worker IMPLEMENTATION_WORKER / source COMMIT_STEWARD",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER awaiting before-edit acknowledgment",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -50,12 +50,12 @@
   },
   "candidatePlanning": {
     "id": "R073",
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_073.md",
-    "sourceImplementation": "NOT_STARTED",
+    "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_CHANGES_REQUIRED",
     "sourceOrRuntimeDispatched": true,
     "newGoInvocations": 0,
-    "sourceCommit": null
+    "sourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10"
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -287,11 +287,8 @@
   },
   "roleRoute": "OWNER_DELEGATED_ROOT_BOUNDED_R1_BUILD_WITH_INDEPENDENT_REVIEW",
   "pendingValidationProposal": {
-    "status": "AWAIT_FIRST_SOURCE_STATIC_REVIEW",
-    "expectedWorkerVitest": 1,
-    "expectedWorkerTypecheck": 1,
-    "expectedRootVitest": 1,
-    "expectedRootTypecheck": 1
+    "status": "BLOCKED_F1_F2_F3_STATIC_REPAIR",
+    "nativeUsed": 0
   },
   "acceptedR068": {
     "status": "FROZEN",
@@ -390,7 +387,7 @@
   },
   "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
   "currentPermittedGoInvocations": 0,
-  "reviewEvidence": null,
+  "reviewEvidence": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
   "modelAssessment": null,
   "historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",

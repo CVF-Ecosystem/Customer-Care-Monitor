@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R073 BUILD bounded saved adapter presence UI; first-source static review before native, independent root/Luna roles."
+      "description": "Active R073 REVIEW/CHANGES_REQUIRED before native; one consolidated NEW-test/en-vi repair, source/module/panel protected."
     },
     {
       "id": "r060-work-order",
@@ -5546,14 +5546,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_073.md",
       "status": "ACTIVE",
-      "description": "R073 bounded saved adapter presence UI work order BUILD after before-edit acknowledgment; native not released."
+      "description": "R073 work order CHANGES_REQUIRED F1..F3 before native; unchanged risk/seed/budget, directed repair only."
     },
     {
       "id": "r073-planning-b003",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-073.json",
       "status": "ACTIVE",
-      "description": "R073 BUILD R1 record; immutable seed base before edits, first-source static review gates native budget."
+      "description": "R073 CHANGES_REQUIRED firstsource53abf11; one consolidated static repair, original native NOT_RUN."
     },
     {
       "id": "r073-review-c001",
@@ -5561,6 +5561,13 @@
       "path": "docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md",
       "status": "ACTIVE",
       "description": "Root independent PU01..09 static/runtime review plan before first Luna source; no product/test draft."
+    },
+    {
+      "id": "r073-review-c002",
+      "family": "continuity",
+      "path": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 firstsource53abf11 CHANGES_REQUIRED F1/F2 NEW-test boundary/coverage, F3 locale precision; original native NOT_RUN."
     }
   ]
 }
