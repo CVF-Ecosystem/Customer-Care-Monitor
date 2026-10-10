@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,33 +12,18 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-068",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-068 REVIEW_PENDING: source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 and both exact-source ai positive/M01/M02/restored campaigns are independently verified; no open local product behavior finding. UP09 whole-backend post-repair compilation remains unestablished. Original worker5/5 and root5/5 attempt budgets are exhausted and immutable; no further Go/build/test/retry, FREEZE or branch publication now. Await owner authorization of exactly one additional cached offline whole-backend build through docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; then commit separate bounded validation authority/work order before execution, retain original failures and reevaluate conditional R068 closure. No source/test/provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance/hosted claim.",
+  "activeTranche": "CCMAI-RUNTIME-069",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-069 BUILD: owner approved exactly one supplemental cached offline whole-backend compile on bb0bdeb5403070eb0aa2224b96ad8fd48febd843 using committed single-use runner/plan. Execute once; retain native streams/manifests/second archive/verified backup; no tests, retries or source writes. Original R068 budgets and failures immutable. PASS returns to independent R068 review and conditional scoped closure/publication under existing authority; failure stops. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD",
-  "updatedAt": "2026-10-09",
+  "activeRole": "Codex /root ORCHESTRATOR / R1 validation IMPLEMENTATION_WORKER / COMMIT_STEWARD / SESSION_SYNC_STEWARD",
+  "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
-    "workerMaxCampaigns": 1,
-    "workerMaxGoBuildInvocations": 1,
-    "workerMaxGoTestInvocations": 4,
-    "workerMaxGoInvocations": 5,
-    "reviewerMaxCampaigns": 1,
-    "reviewerMaxGoBuildInvocations": 1,
-    "reviewerMaxGoTestInvocations": 4,
-    "reviewerMaxGoInvocations": 5,
-    "aggregateMaxGoInvocations": 10,
-    "maxVitestInvocations": 0,
-    "maxVisualInvocations": 0,
-    "workerUsedCampaigns": 1,
-    "workerUsedGoBuildInvocations": 1,
-    "workerUsedGoTestInvocations": 0,
-    "workerUsedGoInvocations": 1,
-    "reviewerUsedCampaigns": 1,
-    "reviewerUsedGoBuildInvocations": 1,
-    "reviewerUsedGoTestInvocations": 0,
-    "reviewerUsedGoInvocations": 1
+    "maxGoBuildInvocations": 1,
+    "maxGoTestInvocations": 0,
+    "maxGoInvocations": 1,
+    "usedGoInvocations": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -50,13 +35,11 @@
     "source": "Owner instruction 2026-10-08; continues until changed by owner"
   },
   "candidatePlanning": {
-    "id": "R068",
-    "status": "REVIEW_PENDING",
-    "artifact": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
-    "sourceOrRuntimeDispatched": true,
-    "sourceImplementation": "SOURCE_REPAIRED_ALL_AI_TESTS_PASS_WHOLE_BACKEND_COMPILE_PENDING",
-    "newGoInvocations": 10,
-    "actualGoProcesses": 9
+    "id": "R069",
+    "status": "BUILD",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_069.md",
+    "sourceImplementation": "UNCHANGED_R068_SOURCE",
+    "newGoInvocations": 0
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -286,6 +269,73 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "OWNER_AUTHORIZED_FRESH_LUNA_XHIGH_ADAPTER_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
-  "pendingValidationProposal": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md"
+  "roleRoute": "OWNER_APPROVED_SINGLE_R1_COMPILER_VALIDATION_ROOT_EXECUTOR_THEN_REVIEW_RETURN_R068",
+  "pendingValidationProposal": {
+    "status": "AUTHORIZED_SEPARATE_R069",
+    "ownerApprovalDate": "2026-10-10",
+    "artifact": "docs/reviews/R069_SINGLE_COMPILE_SPEC_AND_AUTHORIZATION_2026-10-10.md"
+  },
+  "r068BeforeSupplementalValidation": {
+    "schemaVersion": "1.0",
+    "projectName": "Customer-Care-Monitor-AI",
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "phaseModel": [
+      "INTAKE",
+      "DESIGN",
+      "SPEC",
+      "WORK_ORDER",
+      "BUILD",
+      "REVIEW",
+      "FREEZE"
+    ],
+    "activeTranche": "CCMAI-RUNTIME-068",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-068 REVIEW_PENDING: source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 and both exact-source ai positive/M01/M02/restored campaigns are independently verified; no open local product behavior finding. UP09 whole-backend post-repair compilation remains unestablished. Original worker5/5 and root5/5 attempt budgets are exhausted and immutable; no further Go/build/test/retry, FREEZE or branch publication now. Await owner authorization of exactly one additional cached offline whole-backend build through docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; then commit separate bounded validation authority/work order before execution, retain original failures and reevaluate conditional R068 closure. No source/test/provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance/hosted claim.",
+    "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
+    "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD",
+    "updatedAt": "2026-10-09",
+    "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
+    "currentExecutionBudget": {
+      "workerMaxCampaigns": 1,
+      "workerMaxGoBuildInvocations": 1,
+      "workerMaxGoTestInvocations": 4,
+      "workerMaxGoInvocations": 5,
+      "reviewerMaxCampaigns": 1,
+      "reviewerMaxGoBuildInvocations": 1,
+      "reviewerMaxGoTestInvocations": 4,
+      "reviewerMaxGoInvocations": 5,
+      "aggregateMaxGoInvocations": 10,
+      "maxVitestInvocations": 0,
+      "maxVisualInvocations": 0,
+      "workerUsedCampaigns": 1,
+      "workerUsedGoBuildInvocations": 1,
+      "workerUsedGoTestInvocations": 0,
+      "workerUsedGoInvocations": 1,
+      "reviewerUsedCampaigns": 1,
+      "reviewerUsedGoBuildInvocations": 1,
+      "reviewerUsedGoTestInvocations": 0,
+      "reviewerUsedGoInvocations": 1
+    },
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh"
+    },
+    "ownerSubagentPreference": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh",
+      "source": "Owner instruction 2026-10-08; continues until changed by owner"
+    },
+    "candidatePlanning": {
+      "id": "R068",
+      "status": "REVIEW_PENDING",
+      "artifact": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
+      "sourceOrRuntimeDispatched": true,
+      "sourceImplementation": "SOURCE_REPAIRED_ALL_AI_TESTS_PASS_WHOLE_BACKEND_COMPILE_PENDING",
+      "newGoInvocations": 10,
+      "actualGoProcesses": 9
+    },
+    "roleRoute": "OWNER_AUTHORIZED_FRESH_LUNA_XHIGH_ADAPTER_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
+    "pendingValidationProposal": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md"
+  }
 }

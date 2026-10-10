@@ -1,0 +1,60 @@
+{
+  "trancheId": "CCMAI-RUNTIME-069",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root",
+    "repairWorker": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_069.md"
+  ],
+  "prohibitedEffects": [
+    "source_test_edit",
+    "old_authority_seed_edit",
+    "old_packet_edit",
+    "extra_go_invocation",
+    "automatic_retry",
+    "go_test",
+    "provider_or_external_network_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment"
+  ],
+  "schemaVersion": "1.0",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_069.md",
+  "baseCommit": "d959986967473d246f8c5c43efa70e6eb71ae49e",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING_SINGLE_COMPILE",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "executionBudget": {
+    "maxGoBuildInvocations": 1,
+    "maxGoTestInvocations": 0,
+    "maxGoInvocations": 1,
+    "usedGoInvocations": 0
+  },
+  "dispatcher": "Codex /root",
+  "dispatcherAcknowledgment": "Owner approved exact proposal 2026-10-10; committed separate seed/spec/plan/runner before BUILD; root records R1 executor role transition, remains independent of Luna source; no retries/tests/source writes."
+}

@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R068 REVIEW_PENDING: both exact-source local ai campaigns verified; original budget exhausted, proposed single offline compiler validation awaits owner.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
+- Active R069 single supplemental offline compiler validation; R068 remains pending.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -460,6 +460,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R069 accepted compiler specification and exact owner authorization.: `docs/reviews/R069_SINGLE_COMPILE_SPEC_AND_AUTHORIZATION_2026-10-10.md`
 - R069 exact-source single offline compile plan.: `docs/reviews/probes/r069_exact_source_plan_2026-10-10.json`
 - R069 single-use native compiler capture runner, no tests/retry.: `docs/reviews/probes/r069_single_compile_capture_2026-10-10.py`
+- R069 bounded one-compile work order; no source writes/tests/retry.: `docs/work_orders/CCMAI_RUNTIME_069.md`
+- R069 supplemental validation record, separate immutable budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-069.json`
+- R068 pending handoff retained while R069 single compiler validation is active.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

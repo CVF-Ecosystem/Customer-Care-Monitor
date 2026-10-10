@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R068 REVIEW_PENDING: both exact-source local ai campaigns verified; original budget exhausted, proposed single offline compiler validation awaits owner."
+      "description": "Active R069 single supplemental offline compiler validation; R068 remains pending."
     },
     {
       "id": "r060-work-order",
@@ -4665,6 +4665,27 @@
       "path": "docs/reviews/probes/r069_single_compile_capture_2026-10-10.py",
       "status": "ACTIVE",
       "description": "R069 single-use native compiler capture runner, no tests/retry."
+    },
+    {
+      "id": "r069-validation-b001",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_069.md",
+      "status": "ACTIVE",
+      "description": "R069 bounded one-compile work order; no source writes/tests/retry."
+    },
+    {
+      "id": "r069-validation-b002",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-069.json",
+      "status": "ACTIVE",
+      "description": "R069 supplemental validation record, separate immutable budget."
+    },
+    {
+      "id": "r069-validation-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 pending handoff retained while R069 single compiler validation is active."
     }
   ]
 }
