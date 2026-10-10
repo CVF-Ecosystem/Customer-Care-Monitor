@@ -9,13 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-074", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
 
-## Current R074
+## Current R075
 
-CCMAI-RUNTIME-074 FROZEN local DA01..10 source-audit dossier only; root ORCHESTRATOR next prepares separate bounded DESIGN/SPEC for dispatch durability/recovery with UNKNOWN topology/idempotency/stranded-row prerequisites. No new implementation/native/provider/network/DB authority; implementation samples5 plus fresh audit1, broader/live OPEN and accounts parked.
+CCMAI-RUNTIME-075 BUILD ordinary GitHub publication under new owner authority: root validates clean branch, fresh origin refs/ancestry/gates and independent Luna prepublication review, then exact-SHA fast-forward push/readback. No main/force/merge/deploy/app-native/provider/DB/secret reads; accounts parked. Next separate source-only DESIGN/SPEC after publication.
 
-Five accepted implementation samples preserved. R074 is a separate readonly audit sample, independently accepted and locally FROZEN documentary dossier; no sixth implementation sample. Root independent reviewer/source-test edits0.
+R074 local dossier FROZEN and five implementation plus one fresh audit preserved. New owner GitHub instruction authorizes R075 ordinary branch publication; no retroactive change to R068 unverified attempt or old prohibited effects.
 
 ## Startup Order
 

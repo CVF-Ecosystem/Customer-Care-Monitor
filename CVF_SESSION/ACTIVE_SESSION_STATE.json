@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,21 +12,16 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-074",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-074 FROZEN local DA01..10 source-audit dossier only; root ORCHESTRATOR next prepares separate bounded DESIGN/SPEC for dispatch durability/recovery with UNKNOWN topology/idempotency/stranded-row prerequisites. No new implementation/native/provider/network/DB authority; implementation samples5 plus fresh audit1, broader/live OPEN and accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-075",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-075 BUILD ordinary GitHub publication under new owner authority: root validates clean branch, fresh origin refs/ancestry/gates and independent Luna prepublication review, then exact-SHA fast-forward push/readback. No main/force/merge/deploy/app-native/provider/DB/secret reads; accounts parked. Next separate source-only DESIGN/SPEC after publication.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD",
+  "activeRole": "Codex /root publication COMMIT_STEWARD / metadata IMPLEMENTATION_WORKER; Luna xhigh independent publication REVIEWER",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
-    "workerMaxNative": 0,
-    "reviewerMaxNative": 0,
-    "aggregateMaxNative": 0,
-    "workerUsedNative": 0,
-    "reviewerUsedNative": 0,
-    "automaticRetries": 0,
-    "currentPermittedNativeInvocations": 0
+    "applicationNativeInvocations": 0,
+    "perCommandNetworkTimeoutSeconds": 60
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -38,10 +33,10 @@
     "source": "Owner instruction 2026-10-08; continues until changed by owner"
   },
   "candidatePlanning": {
-    "id": "R074",
-    "status": "FROZEN_LOCAL_SOURCE_AUDIT_ONLY",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_074.md",
-    "sourceImplementation": "NOT_APPLICABLE_READONLY_AUDIT",
+    "id": "R075",
+    "status": "BUILD",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_075.md",
+    "sourceImplementation": "NOT_APPLICABLE_PUBLICATION",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -375,8 +370,8 @@
   },
   "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
   "currentPermittedGoInvocations": 0,
-  "reviewEvidence": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
-  "modelAssessment": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
+  "reviewEvidence": null,
+  "modelAssessment": null,
   "historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
@@ -502,22 +497,11 @@
       "priorR068Retried": false
     }
   },
-  "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
-  "independentReviewCommit": "1d95a18e22d79c59ad47eb552688ffbfc2e96012",
-  "closureStatus": "FROZEN_LOCAL_SOURCE_AUDIT_ONLY",
-  "closureChecks": {
-    "preflight": "PASS7/7",
-    "prRange": "PASS7/7 cached origin/main..HEAD; no network",
-    "catalogPS5": "PASS",
-    "catalogPS7": "PASS",
-    "docsSiteBuild": "PASS41.68s documentary only; existing env syntax fallback note",
-    "gateUnits": "Inherited R074 preparation46PASS32.346s; scripts/tests unchanged",
-    "sourceAudit": "18relied-on blobs/physical stable;439protected snapshots stable;5implementation entries unchanged;seed first committed blob unchanged",
-    "applicationNativeInvocations": 0,
-    "publication": "NOT_AUTHORIZED_IN_R074",
-    "exactStaged": "PASS7/7 exact10-file closure staged set and diff-check before3994aef"
-  },
-  "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d",
+  "closureEvidence": null,
+  "independentReviewCommit": null,
+  "closureStatus": null,
+  "closureChecks": null,
+  "localClosureCommit": null,
   "historicalR073ClosureProjection": {
     "activeTranche": "CCMAI-RUNTIME-073",
     "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
@@ -558,6 +542,28 @@
       "sourceAudit": "113 frontend physical snapshots stable;381protected baseline stable; prior four ledger entries identical",
       "exactStaged": "Commit prerequisite, captured tool output",
       "publication": "NOT_AUTHORIZED_IN_R073"
+    }
+  },
+  "historicalR074ClosureProjection": {
+    "activeTranche": "CCMAI-RUNTIME-074",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-074 FROZEN local DA01..10 source-audit dossier only; root ORCHESTRATOR next prepares separate bounded DESIGN/SPEC for dispatch durability/recovery with UNKNOWN topology/idempotency/stranded-row prerequisites. No new implementation/native/provider/network/DB authority; implementation samples5 plus fresh audit1, broader/live OPEN and accounts parked.",
+    "reviewEvidence": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
+    "modelAssessment": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
+    "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+    "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d",
+    "closureStatus": "FROZEN_LOCAL_SOURCE_AUDIT_ONLY",
+    "closureChecks": {
+      "preflight": "PASS7/7",
+      "prRange": "PASS7/7 cached origin/main..HEAD; no network",
+      "catalogPS5": "PASS",
+      "catalogPS7": "PASS",
+      "docsSiteBuild": "PASS41.68s documentary only; existing env syntax fallback note",
+      "gateUnits": "Inherited R074 preparation46PASS32.346s; scripts/tests unchanged",
+      "sourceAudit": "18relied-on blobs/physical stable;439protected snapshots stable;5implementation entries unchanged;seed first committed blob unchanged",
+      "applicationNativeInvocations": 0,
+      "publication": "NOT_AUTHORIZED_IN_R074",
+      "exactStaged": "PASS7/7 exact10-file closure staged set and diff-check before3994aef"
     }
   }
 }
