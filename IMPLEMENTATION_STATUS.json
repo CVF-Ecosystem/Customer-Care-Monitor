@@ -255,7 +255,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-070 FROZEN metadata-only integration: R068 UP01..12 adapter usage-presence primitive FROZEN at bb0bdeb; R069 single offline compiler validation FROZEN, final fresh Luna assessment committed with closure. Ordinary authorized current-branch publication/readback is next; then source-based remaining consumer/acceptance INTAKE/DESIGN/SPEC and separate bounded work order before new implementation/runtime. Original R06810/10 attempts and R0691/1 unchanged/exhausted; R0700Go, no automatic new campaign. Full S2/S3/S5/consumer migration/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-070 FROZEN local metadata integration and R068 adapter-only/R069 compiler-only closure committed4fb63a0. One ordinary authorized branch push waited in Git Credential Manager and its verified owned shell/tree was terminated without completion/readback; publication UNVERIFIED, remote effect UNKNOWN, no retry. Resolve Git authentication readiness, then resume existing ordinary branch-publication authority with exact remoteSHA readback. Original budgets/failures/source unchanged; no new Go/test/source authority. Remaining consumer/acceptance INTAKE/DESIGN/SPEC requires separate bounded work order before implementation/runtime. Full S2/S3/S5/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
     "assessment": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_070.md",
     "buildDispatched": false,
@@ -383,7 +383,11 @@
     },
     "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
     "localClosureEvidence": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
-    "modelAssessment": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md"
+    "modelAssessment": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md",
+    "publicationReceipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
+    "publishedClosureCommit": null,
+    "publicationStatus": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
+    "localClosureCommit": "4fb63a0040282ac145dd2f693626d66e1082dca8"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -776,7 +780,7 @@
     "sourceImplementation": "SOURCE_REPAIRED_AI_CAMPAIGNS_AND_SUPPLEMENTAL_WHOLE_BACKEND_COMPILE_PASS",
     "r2IndependentAcceptance": "REVIEW_PASS_UP01_THROUGH_UP12_LOCAL_ADAPTER_ONLY",
     "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
-    "nextMove": "CCMAI-RUNTIME-070 FROZEN metadata-only integration: R068 UP01..12 adapter usage-presence primitive FROZEN at bb0bdeb; R069 single offline compiler validation FROZEN, final fresh Luna assessment committed with closure. Ordinary authorized current-branch publication/readback is next; then source-based remaining consumer/acceptance INTAKE/DESIGN/SPEC and separate bounded work order before new implementation/runtime. Original R06810/10 attempts and R0691/1 unchanged/exhausted; R0700Go, no automatic new campaign. Full S2/S3/S5/consumer migration/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-070 FROZEN local metadata integration and R068 adapter-only/R069 compiler-only closure committed4fb63a0. One ordinary authorized branch push waited in Git Credential Manager and its verified owned shell/tree was terminated without completion/readback; publication UNVERIFIED, remote effect UNKNOWN, no retry. Resolve Git authentication readiness, then resume existing ordinary branch-publication authority with exact remoteSHA readback. Original budgets/failures/source unchanged; no new Go/test/source authority. Remaining consumer/acceptance INTAKE/DESIGN/SPEC requires separate bounded work order before implementation/runtime. Full S2/S3/S5/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
     "governanceClaim": false,
     "liveProviderClaim": false,
     "currentConsumerBehaviorUnchanged": true,
@@ -826,7 +830,9 @@
       "reviewerUsedGoBuildInvocations": 1,
       "reviewerUsedGoTestInvocations": 4,
       "reviewerUsedGoInvocations": 5
-    }
+    },
+    "publicationStatus": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
+    "publicationReceipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json"
   },
   "r068BeforeRootTestApprovalBuildSnapshot": [
     "CCMAI-RUNTIME-068 DISPATCH_READY / WORK_ORDER: fresh Luna xhigh r068_worker rehydrates and commits before-edit BUILD acknowledgment, then writes6allowed adapter/helper/test paths from scratch. First implementation commit and first offline wholebackend build retained before repair; root source/plan staticapproval before worker4Go tests, own independent1build+4tests follows. Fresh max10Go/0Vitest/visual, priorR0678Vitest3build4visual exhausted unchanged. Conditional scopedlocalREVIEW/FREEZE and authorized ordinary branchpublication; no new provider/externalnetwork/config/credential/DB/engine/pricing/receipt/frontend/core effects or fullS2/S3/S5/live/governance/hosted claim. Facebook/ZaloOAparked.",

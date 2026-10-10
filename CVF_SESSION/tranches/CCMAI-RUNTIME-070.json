@@ -84,5 +84,13 @@
     "exactChangedMetadataDiffCheck": "PASS16files, original four raw mutation whitespace findings retained",
     "sourceTestsEditedByRoot": false,
     "newGoInvocationsInR070": 0
+  },
+  "publication": {
+    "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
+    "receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
+    "closureCommit": "4fb63a0040282ac145dd2f693626d66e1082dca8",
+    "attempts": 1,
+    "retries": 0,
+    "remoteShaVerified": false
   }
 }

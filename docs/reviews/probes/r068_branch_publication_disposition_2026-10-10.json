@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-10",
+  "status": "UNVERIFIED_PUBLICATION_CREDENTIAL_MANAGER_WAIT_TERMINATED",
+  "provenance": "Derived from actual publication exec/session and process inspection/owned-tree termination tool outputs; no invented remote receipt",
+  "closureCommit": "4fb63a0040282ac145dd2f693626d66e1082dca8",
+  "branch": "codex/gov001-f08-actions-evidence",
+  "command": [
+    "git",
+    "push",
+    "origin",
+    "HEAD:refs/heads/codex/gov001-f08-actions-evidence"
+  ],
+  "attempts": 1,
+  "ordinaryPush": true,
+  "forcePush": false,
+  "mainTouched": false,
+  "remoteShaVerified": false,
+  "remoteSha": null,
+  "pushExitSuccessObserved": false,
+  "nativePushOutput": "No completion output observed before owned publication shell/tree termination",
+  "credentialManagerObserved": {
+    "pid": 16028,
+    "parentPid": 28352,
+    "name": "git-credential-manager.exe"
+  },
+  "ownedPublicationShell": {
+    "pid": 17720,
+    "identityVerified": "pwsh.exe/powershell.exe plus exact authorized push command in command line; values/credentials not printed"
+  },
+  "termination": "taskkill /PID 17720 /T /F succeeded for identified publication process tree; exec session exit1",
+  "firstTerminationGuard": "First check allowed powershell.exe only and refused termination without verified identity; second accepted pwsh.exe/powershell.exe and exact command before terminating. Root attribution.",
+  "retryCount": 0,
+  "lsRemote": "NOT_RUN; chained readback not reached before shell termination",
+  "remoteEffect": "UNKNOWN; no claim that remote branch changed or did not change",
+  "localClosureUnchanged": true,
+  "goInvocations": 0,
+  "githubActionsObserved": false,
+  "nextMove": "Resolve Git Credential Manager/authentication readiness, then resume already-authorized ordinary publication and exact remoteSHA readback; no automatic retry in this session."
+}
