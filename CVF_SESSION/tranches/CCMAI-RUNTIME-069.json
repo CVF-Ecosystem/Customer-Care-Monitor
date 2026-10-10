@@ -1,0 +1,70 @@
+{
+  "trancheId": "CCMAI-RUNTIME-069",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root",
+    "repairWorker": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_069.md"
+  ],
+  "prohibitedEffects": [
+    "source_test_edit",
+    "old_authority_seed_edit",
+    "old_packet_edit",
+    "extra_go_invocation",
+    "automatic_retry",
+    "go_test",
+    "provider_or_external_network_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment"
+  ],
+  "schemaVersion": "1.0",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_069.md",
+  "baseCommit": "d959986967473d246f8c5c43efa70e6eb71ae49e",
+  "buildCommit": "f3e737a16586bc37b62f380e119d1a7f3867e699",
+  "reviewEvidence": [
+    "docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md",
+    "docs/reviews/probes/r069_independent_compile_audit_2026-10-10.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "executionBudget": {
+    "maxGoBuildInvocations": 1,
+    "maxGoTestInvocations": 0,
+    "maxGoInvocations": 1,
+    "usedGoInvocations": 1
+  },
+  "dispatcher": "Codex /root",
+  "dispatcherAcknowledgment": "Owner approved exact proposal 2026-10-10; committed separate seed/spec/plan/runner before BUILD; root records R1 executor role transition, remains independent of Luna source; no retries/tests/source writes.",
+  "actualGoProcesses": 1,
+  "executionEvidence": "docs/reviews/probes/r069_compile_actual/summary.json",
+  "closer": "Codex /root",
+  "scopeClosure": "Single offline compiler validation only"
+}

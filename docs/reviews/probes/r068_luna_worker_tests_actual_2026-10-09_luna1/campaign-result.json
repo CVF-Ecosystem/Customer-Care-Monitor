@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "1.0",
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "currentHead": "56d2a181e2ebf0ee383adbee385791deae00f990",
+  "rootStaticApproval": "APPROVED bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "sourceArchive": {
+    "kind": "committed backend-only tar",
+    "sha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+    "bytes": 2478080,
+    "memberCount": 218,
+    "ownedTempLocation": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\backend-source-before.tar"
+  },
+  "sourceArchiveAfter": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\backend-source-after.tar",
+    "bytes": 2478080,
+    "sha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+    "processStarted": true,
+    "timedOut": false,
+    "exitCode": 0
+  },
+  "sourceArchiveAfterRun": {
+    "processStarted": true,
+    "timedOut": false,
+    "exitCode": 0,
+    "failure": null,
+    "stdoutPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\git-archive-after.stdout.bin",
+    "stderrPath": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\git-archive-after.stderr.bin",
+    "stdoutBytes": 0,
+    "stderrBytes": 0,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "committedBackendTarsEqualByBytesAndSha256": true,
+  "goExecutable": "C:\\Program Files\\Go\\bin\\go.exe",
+  "goResolutionCandidates": [
+    "C:\\Program Files\\Go\\bin\\go.exe",
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Go-1.26.7\\go\\bin\\go.exe"
+  ],
+  "environment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "processTimeoutSeconds": 600,
+  "goInvocationCount": 4,
+  "expectedGoInvocationCount": 4,
+  "automaticRetry": false,
+  "runReceipts": [
+    {
+      "name": "positive-ai-package",
+      "receiptPath": "positive-ai-package.result.json",
+      "ordinal": 1,
+      "exitCode": 0,
+      "timedOut": false,
+      "jsonEventCount": 144,
+      "jsonParseFailure": null
+    },
+    {
+      "name": "M01-test",
+      "receiptPath": "M01-test.result.json",
+      "ordinal": 2,
+      "exitCode": 1,
+      "timedOut": false,
+      "jsonEventCount": 32,
+      "jsonParseFailure": null
+    },
+    {
+      "name": "M02-test",
+      "receiptPath": "M02-test.result.json",
+      "ordinal": 3,
+      "exitCode": 1,
+      "timedOut": false,
+      "jsonEventCount": 57,
+      "jsonParseFailure": null
+    },
+    {
+      "name": "restored-new-tests",
+      "receiptPath": "restored-new-tests.result.json",
+      "ordinal": 4,
+      "exitCode": 0,
+      "timedOut": false,
+      "jsonEventCount": 88,
+      "jsonParseFailure": null
+    }
+  ],
+  "testInventory": {
+    "path": "ai-top-level-test-inventory.json",
+    "sha256": "67d1ea82eca318747cf777c80dde824994be8dd32670fabaa8b6109e590e8905",
+    "total": 18,
+    "new": 8,
+    "existing": 10
+  },
+  "sourceRawBackup": {
+    "path": "usage_presence.go.original.bin",
+    "bytes": 7656,
+    "sha256": "3151424fddafe73e876c9fa4e00743420ef504230b7075cde1acad69793f41ca",
+    "restoredPhysicalSha256": "3151424fddafe73e876c9fa4e00743420ef504230b7075cde1acad69793f41ca",
+    "byteForByteRestored": true
+  },
+  "backendManifestBefore": {
+    "path": "backend-physical-manifest-before.json",
+    "members": 218,
+    "sha256": "de367d1c04353fa231a8ba3a27f019eb252650d363a5faf456eb6e6028e5f74b"
+  },
+  "backendManifestAfterRestoration": {
+    "path": "backend-physical-manifest-after-restoration.json",
+    "members": 218,
+    "sha256": "de367d1c04353fa231a8ba3a27f019eb252650d363a5faf456eb6e6028e5f74b"
+  },
+  "fullBackendPhysicalManifestsEqual": true,
+  "physicalArchiveBefore": {
+    "sha256": "c4d1588104c691349dfe09ff0b9eba1894ee6450f136d83603a4db485b9c4112",
+    "bytes": 2322530,
+    "ownedTempLocation": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\backend-physical-before.zip"
+  },
+  "physicalArchiveAfterRestoration": {
+    "sha256": "c4d1588104c691349dfe09ff0b9eba1894ee6450f136d83603a4db485b9c4112",
+    "bytes": 2322530,
+    "ownedTempLocation": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\backend-physical-after-restoration.zip"
+  },
+  "fullBackendPhysicalArchivesEqual": true,
+  "ownedTempDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a",
+  "ownershipMarkerSha256": "fbd82a3486da91e1bd91ed08ac9edeb2cdc033d16dbc551b8e3fbbf6b1b1a8f0",
+  "cleanupStatus": "RETAINED_OWNED_TEMP_FOR_RAW_EVIDENCE",
+  "rawBackupStatus": "VERIFIED",
+  "rawBackup": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-evidence-a21dcaeac39e4dfb900427c7cb9bbe49",
+    "evidenceMembersCopied": 42,
+    "evidenceManifestSha256BeforeFinalSummary": "5f77354d1d51ab884f585d44cb8c0e75528a195dd06d334301d590d17b1a90ad",
+    "archiveCopies": [
+      {
+        "path": "backend-source-before.tar",
+        "bytes": 2478080,
+        "sha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35"
+      },
+      {
+        "path": "backend-source-after.tar",
+        "bytes": 2478080,
+        "sha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35"
+      },
+      {
+        "path": "backend-physical-before.zip",
+        "bytes": 2322530,
+        "sha256": "c4d1588104c691349dfe09ff0b9eba1894ee6450f136d83603a4db485b9c4112"
+      },
+      {
+        "path": "backend-physical-after-restoration.zip",
+        "bytes": 2322530,
+        "sha256": "c4d1588104c691349dfe09ff0b9eba1894ee6450f136d83603a4db485b9c4112"
+      }
+    ],
+    "missingArchives": [],
+    "allFourArchivesPresent": true,
+    "ownershipMarkerSha256": "78495c9c303a7a9e5eefb2d5a1d202b0153ef631c9279a9ec68c9325abe297a8",
+    "verified": true,
+    "receiptRelativePath": "raw-backup-verification.json"
+  },
+  "firstSummaryWriteWasExclusive": true,
+  "completed": true,
+  "failure": null,
+  "finalizationErrors": []
+}

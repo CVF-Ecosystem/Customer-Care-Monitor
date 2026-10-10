@@ -62,6 +62,7 @@ func (g *GeminiProvider) AnalyzeChat(ctx context.Context, systemPrompt string, c
 			aiResp.InputTokens = int(result.UsageMetadata.PromptTokenCount)
 			aiResp.OutputTokens = int(result.UsageMetadata.CandidatesTokenCount)
 		}
+		aiResp.UsagePresence = geminiUsagePresence(result)
 
 		return aiResp, nil
 	})

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-09",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "role": "root independent REVIEWER",
+  "visualInvocations": 1,
+  "extraVitest": 0,
+  "extraBuild": 0,
+  "go": 0,
+  "exitCode": 1,
+  "elapsedSeconds": 7.594499300001189,
+  "fixtureSha256Physical": "32632b7a68bdf96e715dd14283ec9e6a94c808b6bf9931d972bd1bf0859bae18",
+  "stdoutSha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256Physical": "12b52053dcb24d44af316391c64fc76d7a1912873849483abf23319da16452e0",
+  "artifacts": [],
+  "status": "FAILED",
+  "failure": "AssertionError('Error: Screenshot capture failed (2); raw output retained in C:\\\\Users\\\\tiennm\\\\AppData\\\\Local\\\\Temp\\\\ccmai-r067-visual-4H9I89\\n    at main (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r067_visual_fixture.mjs:217:31)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n')"
+}

@@ -1,0 +1,48 @@
+# CCMAI-RUNTIME-071 — bounded adapter usage-presence consumer
+
+Status: FROZEN
+
+Owner scope review: OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED. Risk R2. Owner has reviewed the concrete handover and clarified “bạn là orchestrator/reviewer, ko cần hỏi tôi như vậy” after standing next/continue instruction. Root accepts unchanged [APO01..12 SPEC](../reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md), paths/roles/budget and performs scope routing without another checkpoint. Conditional seed da8d34a remains immutable; current instruction satisfies the owner-direction condition, not a reset or widened contract. Earlier owner-confirmation block was a root interpretation now superseded. BUILD before worker source, root independent REVIEW remains mandatory.
+
+Fresh Luna xhigh `/root/r071_worker` implementation/repair/source COMMIT_STEWARD; root independent REVIEWER, conditional CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD. No Sol draft or parent product code handed off. Luna performed read-only feasibility only. Parent tracks first source/compile/positive and accepted findings per tranche; [quality ledger](../reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json) separates inherited, worker and parent defects.
+
+## Scope and behavior
+
+Product writes exactly backend/engine/analyzer.go (two additive successful SINGLE/BATCH presence hooks), source_execution_receipt.go (unexported once-per-response guard), usage_observation_receipt.go (optional aggregate/collector/freeze), NEW adapter_usage_presence_observation.go and adapter_usage_presence_observation_test.go. No existing tests, adapter/parser, dependencies/config, pricing/scalars, store/schema/API/frontend/workflows/gates/core change.
+
+Add only optional usage_observation.adapter_usage_presence, omitted when new hook never called. Successful hook with nil metadata records unobserved, never legacy scalar fallback. Schema/source/status/value whitelists; independent statuses/known int64 including0, nullable totals only when all begun calls returned observed/known and no overflow, pair completeness derived not trusted. Fixed bounded aggregate <=1200bytes, owned input/freeze pointers, no raw source/diagnostic/provider/model/content. New aggregate survives >200 retained-call trimming at3000byte test cap; unchanged legacy600/1500 envelope tests remain. Existing UO1 values, CalculateCost, usage log/DB effects and result behavior unchanged. No effect chooses work/charges from new metadata.
+
+## Authorized bounded execution
+
+1. Rehydrate all canonical continuity; record owner review/approval and root role routing in active handoff/record; transition WORK_ORDER -> DISPATCH_READY -> BUILD, committed before-edit acknowledgment before source. Gate all applicable phase moves; no universal runtime enforcement claim.
+2. Luna implements/tests fresh within five paths, commits first source before first compile. Root static independent source and committed exact-source archive/semantic plan review before test campaign. One absolute Go executable, owned TEMP archive, offline env GOPROXY=off/GOSUMDB=off/GOTOOLCHAIN=local/CGO_ENABLED=0.
+3. Expected per role1wholebackend compile+4tests: exact six legacy UO/four EX and NEW pure positive inventory; M01 unobserved incorrectly knownzero with healthy knownzero; M02 malformed numeric shape incorrectly known with healthy validinteger; restored NEW tests. Exact anchored names only, never TestUO broad prefix/whole engine/DB tests. No skip, panic/build/timeout/unrelated failure credited as mutation kill.
+4. Maximum per role2build+6tests=8attempts, aggregate16. Expected5each, reserve3 only for accepted same-scope repair after failure/static review; no automatic retry or reset. Count failed launches and actual processes separately; stop on failure, preserve first source/raw/counts. Third repair without independent new root cause requires REVIEW_COST_ESCALATION_REQUIRED.
+5. Retain native streams/JSON/exits/time/environment, complete source inventory/manifests, committed initial/second archive physical bytes, actual source-only mutation diffs, full restoration and independently verified physical raw backup before publication. Do not rewrite original raw/old packets or suppress generated whitespace findings. Parent never changes product/tests; all assistance attributed.
+6. Independent root APO01..12 REVIEW_PASS before conditional aggregate-only local closure, synchronized continuity/status/catalog/roadmaps/model ledger and committed artifacts. Same-scope minor metadata repaired by parent directly, no repetitive owner checkpoints. No push in this order; earlier R068 ordinary publication remains separately unverified/pending authentication, no retry here.
+
+Historical preparation NOT RUN: all R071 Go/source/DB/frontend/live/provider/network/hosted execution at work-order preparation. Planning checks prove checked repository/docs only. Proposed local compile/pure tests establish collector behavior and source wiring, not real Analyzer persistence/provider/wire/governance proof. UI/storage consumer exposure, billing/pricing revision, fullS2/S3/S5/globalF02/permissions/policy-version/WAIT_DATA/reservation/settlement/queue-real-Analyzer/live remain OPEN. Facebook/Zalo OA parked. Cumulative quality report uses actual evidence only; R071 code quality UNASSESSED before implementation.
+
+## Worker before-edit acknowledgment (2026-10-10)
+
+Fresh Luna xhigh accepts the recorded R071 BUILD route as IMPLEMENTATION_WORKER / source COMMIT_STEWARD under root independent review. The five product paths and APO01..12 contract are unchanged; the dispatcher seed remains immutable. This acknowledgment is committed before the first product edit. At acknowledgment, source/test edits and Go invocations are 0. First source/test commit precedes compilation, and root static approval of the committed exact source plus source plan precedes every Go invocation. Root supplies capture infrastructure and review; it does not edit product/tests. This records delegated owner scope routing and does not claim an independent human technical test review.
+
+Pre-edit checks captured for this acknowledgment: default and PR preflight each PASS7/7; catalog check PASS; gate-unit rerun PASS46/46 in50.891s (session63880). The first parallel PR/gate-unit invocation output lost its session IDs and remains INDETERMINATE; the later results do not rewrite that first attempt.
+## Resumed BUILD acknowledgment (2026-10-10)
+
+Fresh Luna xhigh rehydrated the canonical manifest, policy, active state, memory, active handoff, implementation status, docs index, R071 SPEC, immutable seed and tranche. The compact bootstrap read model is absent; BOOTSTRAP_MIGRATION_PENDING is non-blocking. The active authority still matches this work order and the initial before-edit acknowledgment: exact five product paths, unchanged APO01..12, first source commit before compilation, and root static approval of the committed source plus source plan before any Go. At resume HEAD 595087446ecda88b7f31c2fc01c66f137b67aa1f, product/test edits and worker Go invocations remain 0. The initial acknowledgment and its captured PASS/INDETERMINATE results are preserved. Parent-owned capture runner remains untracked and untouched. This is a continuity acknowledgment, not a new human technical-review claim.
+## Accepted consolidated static repair round1
+
+First source86e6ff9/plan0402ade preserved. Root [static review](../reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md) accepts one unchanged-scope NEW-test repair: S1 overflow fixture, S2 known-prefix sensitivity, S3 full maximum aggregate bound/counter evidence; permitted gofmt in the five paths. Luna acknowledges repair role before edit and commits repaired source/plan for root approval. Current Go0 each; no runtime acceptance or owner checkpoint, budget unchanged.
+
+## Static approval and bounded execution route
+
+Repaired sourceee6b1c0, repairedworkerplan84defd4 and root ownplan accepted by independent [static review](../reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md). S1/S2/S3 settled in one test repair, product semantics unchanged. Each role expected1compile+4puretests using committed plans/sharedcapture; stop on failure and preserve first results. Current Go0 each, caps8each unchanged; no runtime or final review acceptance yet.
+
+## Independent review result
+
+REVIEW_PASS at sourceee6b1c0, [formal review](../reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md). Both roles5attempts/5processes, compilePASS/positive20top65/M01M02 healthy/restored10top38; no unexpected failures or retries. One pre-Go NEW-test repair and originals retained. FreezeOPEN pending only synchronized local aggregate closure; no further Go/source/push. [Luna assessment](../reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md). NOTRUN boundaries unchanged: race/fullruntimeDB/appfrontend/live/provider/network/GitHubActions; no governance or whole-roadmap proof.
+
+## Scoped local closure
+
+Root CLOSER records FROZEN_LOCAL_AGGREGATE_ONLY after committed independent review14686ba; [closure](../reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md). Source/test/seed/oldraw unchanged, no newGo or publication. Both roles used5each, unused reserve not replayed. Fullroadmap/live/governance/persistence/UI/billing remainOPEN and accountsparked; R068 unverified publication not retried. This closes only APO01..12, not other tranches or project exits.

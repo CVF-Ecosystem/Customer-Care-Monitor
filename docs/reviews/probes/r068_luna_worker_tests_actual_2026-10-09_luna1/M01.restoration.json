@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "sourcePath": "backend/ai/usage_presence.go",
+  "baselineSha256": "3151424fddafe73e876c9fa4e00743420ef504230b7075cde1acad69793f41ca",
+  "restoredSha256": "3151424fddafe73e876c9fa4e00743420ef504230b7075cde1acad69793f41ca",
+  "byteForByteRestored": true,
+  "backendManifestAfterRestoration": {
+    "path": "M01.backend-manifest-after-restoration.json",
+    "sha256": "de367d1c04353fa231a8ba3a27f019eb252650d363a5faf456eb6e6028e5f74b",
+    "members": 218
+  },
+  "fullBackendBaselineRestored": true
+}

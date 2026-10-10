@@ -1,0 +1,3 @@
+Error: Screenshot capture failed (2); raw output retained in C:\Users\tiennm\AppData\Local\Temp\ccmai-r067-visual-4H9I89
+    at main (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r067_visual_fixture.mjs:217:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "authorityKind": "DISPATCHER_OWNED_END_TO_END_SAVED_RUN_UI_OBSERVATION",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
+  "sourcePlanningCommit": "a384fa2ecad6746d35e7897dd8b9e4473221e691",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r065_worker",
+    "repairWorker": "Codex /root/r065_worker",
+    "commitSteward": "Codex /root/r065_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Jobs/JobDetail.vue",
+    "frontend/src/views/Jobs/job-detail/run-observation.ts",
+    "frontend/src/components/ui/RunObservationPanel.vue",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/i18n/vi.ts",
+    "frontend/src/__tests__/run-observation.spec.ts",
+    "frontend/src/__tests__/run-observation-panel.spec.ts",
+    "frontend/src/__tests__/run-observation-job-detail.spec.ts",
+    "docs/work_orders/CCMAI_RUNTIME_067.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "backend_edit",
+    "existing_test_edit",
+    "old_packet_edit",
+    "old_authority_seed_edit",
+    "schema_or_endpoint_change",
+    "permission_or_admission_change",
+    "provider_or_channel_call",
+    "real_config_or_credential_file_read",
+    "dependency_or_workflow_or_gate_edit",
+    "customer_or_persistent_db_use",
+    "parent_core_edit",
+    "secret_commit",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment",
+    "extra_vitest_invocation",
+    "automatic_runtime_retry",
+    "root_source_test_edit",
+    "other_tranche_freeze",
+    "full_S2_S3_S5_or_live_governance_claim"
+  ],
+  "permittedEffects": [
+    "bounded_frontend_saved_run_observation_reader",
+    "synthetic_UI_structure_and_payload_presentation_proof_only",
+    "cached_local_frontend_test_typecheck_build",
+    "loopback_only_isolated_synthetic_visual_fixture",
+    "local_documentation_commit",
+    "scoped_local_freeze_R067_after_independent_review",
+    "ordinary_current_branch_GitHub_push_after_scoped_closure"
+  ],
+  "ownerAuthorization": "Owner explicitly says push to GitHub then continue; standing medium Codex implementation/BUILD commits, root independent review, autonomous audit/choice/local closure and coherent completion without checkpoint waits. Root+medium readonly audit selects existing persisted observation UI readpath; no new governance behavior.",
+  "workerModel": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "medium"
+  },
+  "claimScope": "Only UI reading/presentation of existing saved SP/EX/RO/UO receipts. Synthetic UI fixtures prove rendering/normalization only; no AI governance/provider/permission enforcement or billing proof.",
+  "executionBudget": {
+    "workerMaxCampaigns": 1,
+    "workerMaxVitestInvocations": 4,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxVitestInvocations": 4,
+    "aggregateMaxVitestInvocations": 8,
+    "workerMaxForcedTypecheckBuilds": 1,
+    "reviewerMaxForcedTypecheckBuilds": 1,
+    "maxGoInvocations": 0
+  },
+  "runtimeBoundary": "Root source/fixture/runner review before worker first Vitest. Commit exact frontend source/inventory/mutations before each campaign. Four calls each: full positives,M01unknown-to-zero,M02wrong-run-binding,restored three NEW suites. Actual semantic detector+healthy control, exact full source restoration and raw logs/exit/counts. Retain failures and stop, no automatic retry. Existing cached deps, no installs/downloads, fixture loopback only; no actual app/API/database/browser session. Forced typecheck/build and accessible mobile/desktop visual QA separately attributed.",
+  "freezeCondition": "Independent root source and own actual UI campaign REVIEW_PASS UIR01..12, no scoped defects/failing checks/missing artifacts, synced current metadata/catalog/docs, commit; only local UI reader closure under same seed.",
+  "publicationBoundary": "New owner-authorized R067 package may be ordinary-pushed to origin refs/heads/codex/gov001-f08-actions-evidence only after scoped closure; verify remote SHA. No main/merge/deploy/GitHub Actions claim without proof."
+}

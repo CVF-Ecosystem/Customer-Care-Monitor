@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-062",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_CLOSURE_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_062.md",
+  "sourcePlanningCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r059_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_062.md",
+    "docs/work_orders/CCMAI_RUNTIME_061.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "old_packet_edit",
+    "original_authority_seed_edit",
+    "tooling_change",
+    "workflow_change",
+    "dependency_change",
+    "runtime_campaign",
+    "detector_mutation",
+    "provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "other_tranche_freeze",
+    "live_governance_claim",
+    "hosted_readiness_claim",
+    "acceptance_contract_expansion"
+  ],
+  "permittedEffects": [
+    "local_documentation_commit",
+    "scoped_local_freeze_R061"
+  ],
+  "closureTargets": [
+    "CCMAI-RUNTIME-061"
+  ],
+  "acceptedSourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+  "claimScope": "Only accepted bounded local logical execution observation EX01..12 via R061 successor; both R060 failed packets historical/superseded, no global S2/live/provider/billing/governance/hosted proof.",
+  "ownerAuthorization": "Standing owner local closure delegation already exercised R054/R058 and current autonomous audit/choose directive; metadata-only closure after independent medium child source review, no new risk/effect/runtime/publication boundary.",
+  "roleInheritance": "Historical child source implementation/newtests; root independent source review, metadata CLOSER/SESSION_SYNC/COMMIT_STEWARD. R1 closure metadata only, inherited R2 independent source review preserved.",
+  "earliestOpenPhase": "REVIEW",
+  "dispatchBoundary": "Seed first-committed with formal R061 independent review; activate at seed commit, inherit REVIEW_PASS evidence, acknowledge CLOSER/SESSION_SYNC/COMMIT_STEWARD then metadata-only FREEZE. No source/tests/runtime.",
+  "acceptedReviewCommit": "RESOLVE_FROM_COMMITTED_FORMAL_REVIEW_AT_ACTIVATION",
+  "runtimeEvidenceCommit": "RESOLVE_FROM_COMMITTED_R061_FORMAL_REVIEW_PACKET_AT_ACTIVATION"
+}

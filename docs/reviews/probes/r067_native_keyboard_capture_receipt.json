@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-09",
+  "status": "PASS_CAPTURE_PENDING_INDEPENDENT_IMAGE_REVIEW",
+  "grant": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "command": [
+    "node",
+    "docs\\reviews\\probes\\r067_visual_fixture_native_keyboard_PROPOSED_2026-10-09.mjs"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 22.624735800083727,
+  "visualInvocations": 1,
+  "automaticRetries": 0,
+  "newVitestInvocations": 0,
+  "newBuildInvocations": 0,
+  "newGoInvocations": 0,
+  "tempRoot": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-visual-SzAEZz",
+  "fixtureDependencyJunctionAbsent": true,
+  "sourceUnchanged": true,
+  "artifacts": [
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_stdout.log",
+      "bytes": 350,
+      "sha256Physical": "7f77fdeccd8b4c76b1ceb4fc8fd0136779390ab80f3c02a335de97bcf1139ef5"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_stderr.log",
+      "bytes": 0,
+      "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vite.log",
+      "bytes": 74,
+      "sha256Physical": "925d46a927fd1ae16e5b34f600e3b9fb2cff4474cdf869206ff6bd1d389650ec"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_capture.log",
+      "bytes": 214,
+      "sha256Physical": "45e363dc7124cabab161649c17fe1268e04e77ea73a0ed0bb8739810ac2b513d"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_screenshots_report.json",
+      "bytes": 9966,
+      "sha256Physical": "7027d646479668c70aa00725cc37a35d930ede7a464096517190fc8276bb74b6"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_en--desktop--light.png",
+      "bytes": 102460,
+      "sha256Physical": "9730ec3c42ecb2fe980d1ec111d94b3e29313c0c107a0bdc1275f287e941b4c1"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_en--mobile--light.png",
+      "bytes": 300711,
+      "sha256Physical": "257e4d5537696b5534021e2cd43c838d3494b073e6f981722201dfb4d83981a6"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vi--desktop--light.png",
+      "bytes": 110319,
+      "sha256Physical": "ec307480d7b3fd47c0abb1d29664d9ce8e6a3aabe6ccae780058d5abd594bc2d"
+    },
+    {
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vi--mobile--light.png",
+      "bytes": 315864,
+      "sha256Physical": "6eb8bf2aedab41a55166143ce1e0b66decac5ef3e50690f92516b30070a1a9b3"
+    }
+  ],
+  "timeoutCleanup": null,
+  "scope": "Synthetic local component UI only; no provider/AI governance claim"
+}

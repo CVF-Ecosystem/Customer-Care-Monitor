@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-09",
+  "status": "OWNER_APPROVED",
+  "ownerMessage": "duyet",
+  "approvedRequestCommit": "7cb2f199045b7ef96cd2d4a25afce0a10f8d4ea9",
+  "request": "docs/reviews/probes/r067_additional_build_request_2026-10-09.json",
+  "tranche": "CCMAI-RUNTIME-067",
+  "sourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+  "sourceArchiveSha256": "1a571270ce0ecf9bae49d952a1954f7d6e3b88980d58adc0e3149b5f90e54936",
+  "additionalReviewerForcedBuildMax": 1,
+  "additionalWorkerForcedBuildMax": 0,
+  "additionalBuildUsed": 0,
+  "aggregateForcedBuildCeilingIncludingTwoRetainedFailures": 3,
+  "vitestMaxUnchanged": 8,
+  "vitestUsed": 0,
+  "visualMaxPerRole": 1,
+  "goMax": 0,
+  "originalSeedUnchanged": true,
+  "failureRule": "No automatic retry/reset; unexpected failure stops. Vite only after typecheckPASS.",
+  "runner": "docs/reviews/probes/r067_supplemental_build_PROPOSED_2026-10-09.py",
+  "originalProposalRemainsHistorical": true,
+  "doctor": "Fresh25PASS1note; manifestpin warning, gateprofile migration required; bootstrap readmodel absent nonblocking."
+}

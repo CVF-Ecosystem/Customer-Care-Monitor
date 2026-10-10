@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+  "backendArchiveSha256": "a9c134179ffc8a96f98107474e155d7d28430c73a8320f2561d4e1e76e5dfd26",
+  "backendArchiveMembers": 220,
+  "legacyPureTestNames": [
+    "TestUOInitialUnknownAndZeroPresence",
+    "TestUOKnownPriceLiteralControl",
+    "TestUOUnknownPriceNeverFree",
+    "TestUOInvalidValuesAndOverflow",
+    "TestUOActiveReturnGuardAndIncompletePrefix",
+    "TestUOFreezePrivacyBoundsAndComposition",
+    "TestEXCollectorDimensionsAndFreeze",
+    "TestEXPanicUncertaintyAndReturnedBoundary",
+    "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+    "TestEXInvalidMetadataNeverSerializesRawValues"
+  ],
+  "newTestNames": [
+    "TestAdapterUsagePresenceOmittedBeforeNewHook",
+    "TestAdapterUsagePresencePositiveAggregation",
+    "TestAdapterUsagePresenceM01NilUnobservedDetector",
+    "TestAdapterUsagePresenceM01KnownZeroHealthyControl",
+    "TestAdapterUsagePresenceM02MalformedKnownDetector",
+    "TestAdapterUsagePresenceM02ValidIntegerHealthyControl",
+    "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides",
+    "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage",
+    "TestAdapterUsagePresenceOverflowAndOwnedSnapshots",
+    "TestAdapterUsagePresenceTrimSurvivesCalls"
+  ],
+  "mutations": [
+    {
+      "label": "m01",
+      "path": "backend/engine/adapter_usage_presence_observation.go",
+      "old": "\t\treturn normalizedAdapterUsagePresence{\n\t\t\tinput:  normalizedAdapterUsageCount{status: adapterUsageUnobserved},\n\t\t\toutput: normalizedAdapterUsageCount{status: adapterUsageUnobserved},\n\t\t}",
+      "new": "\t\tzero := int64(0)\n\t\treturn normalizedAdapterUsagePresence{\n\t\t\tinput:  normalizedAdapterUsageCount{status: adapterUsageKnown, value: zero},\n\t\t\toutput: normalizedAdapterUsageCount{status: adapterUsageKnown, value: zero},\n\t\t}",
+      "detector": "TestAdapterUsagePresenceM01NilUnobservedDetector",
+      "healthy": "TestAdapterUsagePresenceM01KnownZeroHealthyControl",
+      "diagnosticContains": "APO:M01"
+    },
+    {
+      "label": "m02",
+      "path": "backend/engine/adapter_usage_presence_observation.go",
+      "old": "if count.Value == nil || value < 0 {",
+      "new": "if count.Value != nil && value < 0 {",
+      "detector": "TestAdapterUsagePresenceM02MalformedKnownDetector",
+      "healthy": "TestAdapterUsagePresenceM02ValidIntegerHealthyControl",
+      "diagnosticContains": "APO:M02"
+    }
+  ]
+}

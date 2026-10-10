@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-069",
+  "authorityKind": "DISPATCHER_OWNED_SUPPLEMENTAL_SINGLE_OFFLINE_COMPILE",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root",
+    "repairWorker": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_069.md"
+  ],
+  "prohibitedEffects": [
+    "source_test_edit",
+    "old_authority_seed_edit",
+    "old_packet_edit",
+    "extra_go_invocation",
+    "automatic_retry",
+    "go_test",
+    "provider_or_external_network_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment"
+  ],
+  "ownerAuthorization": "Owner duy\u1ec7t on 2026-10-10 approves exactly R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; original R068 budgets/seed/failures unchanged. One additional offline compile only. Conditional R068 closure/publication uses existing R068 authority after passing independent review.",
+  "executionBudget": {
+    "maxGoBuildInvocations": 1,
+    "maxGoTestInvocations": 0,
+    "maxGoInvocations": 1
+  },
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "claimScope": "Compilation only, no runtime/live/provider/governance assertion",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_069.md"
+}

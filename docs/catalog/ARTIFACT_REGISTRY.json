@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-10",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -2224,11 +2224,11 @@
       "description": "Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged."
     },
     {
-      "id": "continuity-initial-handoff",
+      "id": "handoff-r058-local-closure-before-r059",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
       "status": "ACTIVE",
-      "description": "Active R058 local preparation receipt closure FROZEN; next bounded S2 DESIGN/SPEC, no BUILD/live/subagent."
+      "description": "Historical R058 local FREEZE and R059 planning before delegated activation."
     },
     {
       "id": "work-order-r058",
@@ -2264,6 +2264,3639 @@
       "path": "CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-06.json",
       "status": "ACTIVE",
       "description": "Separate owner-authorized existing-branch fast-forward publication after R058 closure; no merge/deploy or CI success claim."
+    },
+    {
+      "id": "r059-execution-observation-design-spec-20261007",
+      "family": "continuity",
+      "path": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Planning-only candidate R059 execution observation contract EX01..12; no activation/implementation/runtime evidence or full S2 claim."
+    },
+    {
+      "id": "r059-planning-publication-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r059_planning_publication_checks.json",
+      "status": "ACTIVE",
+      "description": "R059 planning publication checks and retained setup failures; no implementation/runtime or governance evidence."
+    },
+    {
+      "id": "r059-bounded-work-order-draft",
+      "family": "continuity",
+      "path": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Reviewable R059 source work-order draft; exact paths, EX01..12, bounded campaigns; independent reviewer identity pending, no activation or BUILD."
+    },
+    {
+      "id": "handoff-r059-parked-contract-boundary",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Historical R059 parked before source/Go; contract audit resolved through separately seeded R060."
+    },
+    {
+      "id": "r059-active-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_059.md",
+      "status": "ACTIVE",
+      "description": "R059 DISPATCH_READY bounded execution observation EX01..12, child BUILD/root independent review."
+    },
+    {
+      "id": "r059-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-059.json",
+      "status": "ACTIVE",
+      "description": "Immutable R059 R2 worker-medium authority committed before activation."
+    },
+    {
+      "id": "r059-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-059.json",
+      "status": "ACTIVE",
+      "description": "R059 current bounded status/budget/phase/roles; no FREEZE or live claim."
+    },
+    {
+      "id": "r059-prebuild-contract-boundary",
+      "family": "continuity",
+      "path": "docs/reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Pre-BUILD scalar test/additive receipt contract contradiction; exact4-line patch proposed, source/runtime0, owner boundary disposition pending."
+    },
+    {
+      "id": "continuity-initial-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Active R075 BUILD ordinary branch publication; no app/runtime effects."
+    },
+    {
+      "id": "r060-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_060.md",
+      "status": "ACTIVE",
+      "description": "R060 bounded execution observation plus exact4-line old-test maintenance, all assertions preserved."
+    },
+    {
+      "id": "r060-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-060.json",
+      "status": "ACTIVE",
+      "description": "Immutable narrow R060 successor seed, roles/model/budget retained, old R059 seed unchanged."
+    },
+    {
+      "id": "r060-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-060.json",
+      "status": "ACTIVE",
+      "description": "R060 bounded current phase/status/roles/budget; no FREEZE/full S2 claim."
+    },
+    {
+      "id": "runtime060-worker-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only."
+    },
+    {
+      "id": "evidence-r060-worker-r060-worker-interrupted-evidence-2026-10-07",
+      "family": "continuity",
+      "path": "docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Interrupted worker campaign at exact source, fixture-root-cause audit, bounded repair proposal and retained proof/limits."
+    },
+    {
+      "id": "evidence-r060-worker-r060-worker-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "Original failed worker1campaign1Go packet, rawlogs/fullmanifest/commands/state/restoration/cleanup; no retry."
+    },
+    {
+      "id": "evidence-r060-worker-r060-worker-failure-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_failure_audit.json",
+      "status": "ACTIVE",
+      "description": "Raw-event-derived partial counts/missing tests, protected physical audit/fresharchive and NEW EX fixture repair proposal; cost disposition required."
+    },
+    {
+      "id": "evidence-r060-root-repair-disposition-2026-10-07",
+      "family": "continuity",
+      "path": "docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Independent raw failure audit and unchanged-scope NEW EX fixture repair; no worker retry or budget expansion."
+    },
+    {
+      "id": "evidence-r060-r1-fixture-repair",
+      "family": "continuity",
+      "path": "docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "R1 new EX UUID fixture and safe exact binding repair, product/oldtests/failure packet unchanged; no worker runtime replay, root independent review pending."
+    },
+    {
+      "id": "evidence-r060-r1-handback",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_worker_r1_handback.json",
+      "status": "ACTIVE",
+      "description": "Exact repaired source/full archive/protected physical and failedpacket identities, publication checks; no new worker runtime, independent review pending."
+    },
+    {
+      "id": "evidence-r060-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent bounded exact-source four-Go runner; synthetic application observation only."
+    },
+    {
+      "id": "evidence-r060-independent-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "Reviewer-selected120 positives and two source-only mutation controls; no runtime result."
+    },
+    {
+      "id": "evidence-r060-independent-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_protected.json",
+      "status": "ACTIVE",
+      "description": "Independent old-test/seed/source/failed-packet protection audit before campaign."
+    },
+    {
+      "id": "evidence-r060-independent-root-review-cost",
+      "family": "continuity",
+      "path": "docs/reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Independent CHANGES_REQUIRED and explicitly bounded R061 successor; original two failed campaigns preserved."
+    },
+    {
+      "id": "evidence-r060-independent-successor-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-061.json",
+      "status": "ACTIVE",
+      "description": "Immutable NEW EX fault-test-only successor seed; same roles, total8Go ceiling unchanged."
+    },
+    {
+      "id": "evidence-r060-independent-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Actual failed independent exact-source raw evidence; no suite or mutation acceptance."
+    },
+    {
+      "id": "evidence-r060-independent-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual failed independent exact-source raw evidence; no suite or mutation acceptance."
+    },
+    {
+      "id": "evidence-r060-independent-positive",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual failed independent exact-source raw evidence; no suite or mutation acceptance."
+    },
+    {
+      "id": "evidence-r060-independent-positive-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r060_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual failed independent exact-source raw evidence; no suite or mutation acceptance."
+    },
+    {
+      "id": "evidence-r061-handoff-old",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Historical R060 CHANGES_REQUIRED, both failed campaigns retained."
+    },
+    {
+      "id": "evidence-r061-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-061.json",
+      "status": "ACTIVE",
+      "description": "Active R061 narrow test repair and lineage8Go budget."
+    },
+    {
+      "id": "evidence-r061-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_061.md",
+      "status": "ACTIVE",
+      "description": "Narrow fault test contract repair, no worker runtime, independent successor campaign."
+    },
+    {
+      "id": "evidence-r061-fault-repair-source",
+      "family": "continuity",
+      "path": "docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "NEW EX terminal-fallback faulttest repair: storedprefix/returned limits, sixcases and callback checks; product/old packets unchanged, no worker runtime."
+    },
+    {
+      "id": "evidence-r061-fault-repair-handback",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_worker_handback.json",
+      "status": "ACTIVE",
+      "description": "REVIEW_PENDING committed-source fullarchive and separate physical/Gitblob protection proof; worker0Go, independent runtime pending."
+    },
+    {
+      "id": "evidence-r061-independent-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent successor exact-source bounded proof preparation; no executed acceptance yet."
+    },
+    {
+      "id": "evidence-r061-independent-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "Independent successor exact-source bounded proof preparation; no executed acceptance yet."
+    },
+    {
+      "id": "evidence-r061-independent-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_protected.json",
+      "status": "ACTIVE",
+      "description": "Independent successor exact-source bounded proof preparation; no executed acceptance yet."
+    },
+    {
+      "id": "evidence-r061-final-review",
+      "family": "continuity",
+      "path": "docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Independent REVIEW_PASS on exact repaired source; both failures preserved, local scope only."
+    },
+    {
+      "id": "learning-fixture-uuid-terminal-prefix",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md",
+      "status": "ACTIVE",
+      "description": "Shared independently verified fixture-domain and stored-prefix learning; upstream deferred."
+    },
+    {
+      "id": "authority-r062-local-execution-closure",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-062.json",
+      "status": "ACTIVE",
+      "description": "Separate R1 seed for accepted R061 local metadata closure only."
+    },
+    {
+      "id": "evidence-r061-runtime-m01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_m01.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-m01-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_m01_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-m01-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_m01_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-m02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_m02.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-m02-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_m02_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-m02-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_m02_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-mutation1-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_mutation1_diff.json",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-mutation2-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_mutation2_diff.json",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-positive",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-positive-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-restored",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-restored-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r061-runtime-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r061_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Actual independent successor raw evidence or restoration/mutation manifest; application proof only."
+    },
+    {
+      "id": "evidence-r062-handoff-predecessor",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md",
+      "status": "ACTIVE",
+      "description": "Historical R061 independent REVIEW_PASS handoff before separate R062 local closure."
+    },
+    {
+      "id": "evidence-r062-tranche-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-062.json",
+      "status": "ACTIVE",
+      "description": "Metadata-only scoped local closure record; zero runtime/source edits."
+    },
+    {
+      "id": "evidence-r062-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_062.md",
+      "status": "ACTIVE",
+      "description": "Scoped local R061 closure only, not complete S2/live/governance."
+    },
+    {
+      "id": "evidence-r062-local-disposition",
+      "family": "continuity",
+      "path": "docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Local execution observation closure, inherited independent proof, old failures retained."
+    },
+    {
+      "id": "evidence-r063-design-spec",
+      "family": "continuity",
+      "path": "docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD."
+    },
+    {
+      "id": "evidence-r063-work-order-draft",
+      "family": "continuity",
+      "path": "docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD."
+    },
+    {
+      "id": "evidence-r063-authority-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-063.json",
+      "status": "ACTIVE",
+      "description": "Dispatcher-owned R2 rule-observation seed; medium child BUILD/root independent review, activation follows first commit."
+    },
+    {
+      "id": "evidence-r063-predecessor-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical R062 local FREEZE and R063 planning before separate activation."
+    },
+    {
+      "id": "evidence-r063-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-063.json",
+      "status": "ACTIVE",
+      "description": "R063 accepted bounded observation FROZEN under separate R064 authority; source risks/8Go/old failures preserved."
+    },
+    {
+      "id": "evidence-r063-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_063.md",
+      "status": "ACTIVE",
+      "description": "Historical R063 bounded source work order; accepted observation closed only under separate R064 metadata seed."
+    },
+    {
+      "id": "evidence-r063-build-proof-rule-observation-build-2026-10-08",
+      "family": "continuity",
+      "path": "docs/reviews/R063_WORKER_RULE_OBSERVATION_BUILD_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m01-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m01-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M02.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m02-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M02_manifest.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-m02-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_manifest.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_plan.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-positive",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-positive-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-pre-runtime",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_pre_runtime.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_protected.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-restored",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-restored-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-build-proof-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only."
+    },
+    {
+      "id": "evidence-r063-review-proof-campaign",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary."
+    },
+    {
+      "id": "evidence-r063-review-proof-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary."
+    },
+    {
+      "id": "evidence-r063-review-proof-protected",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_protected.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary."
+    },
+    {
+      "id": "evidence-r063-actual-review-m01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m01.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m01-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m01_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m01-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m01_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m02.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m02-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m02_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-m02-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_m02_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-mutation1-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_mutation1_diff.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-mutation2-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_mutation2_diff.json",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-positive",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-positive-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-restored",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-restored-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual independent R063 raw events/mutant/full restoration manifest; application observation only."
+    },
+    {
+      "id": "evidence-r063-actual-review-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Derived reconciliation receipt from actual retained raw logs/manifests/daemon events; original summary/inspect snapshots lost, zero new Go."
+    },
+    {
+      "id": "evidence-r063-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R063_INDEPENDENT_RULE_OBSERVATION_REVIEW_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Independent REVIEW_PASS for RO01..12, exact source/controls/limits and preserved failure history."
+    },
+    {
+      "id": "evidence-r063-reconciliation-events",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_independent_daemon_events_recovery.json",
+      "status": "ACTIVE",
+      "description": "Actual retained Docker daemon events used in transparent review receipt reconciliation."
+    },
+    {
+      "id": "evidence-r063-reconciliation-script",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_reconcile_review_evidence.py",
+      "status": "ACTIVE",
+      "description": "Static reconciliation of actual retained evidence; zero new Go or infrastructure creation."
+    },
+    {
+      "id": "evidence-r063-reconciliation-incident",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r063_review_publication_incident.json",
+      "status": "ACTIVE",
+      "description": "Retained publication path-alias failure and explicit original summary loss."
+    },
+    {
+      "id": "evidence-r063-reconciliation-learning",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_review_publication_receipt_integrity.md",
+      "status": "ACTIVE",
+      "description": "Shared publication receipt integrity finding and actual-evidence recovery boundaries."
+    },
+    {
+      "id": "evidence-r064-closure-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical accepted R063 source review and retained publication/continuity findings; superseded by R064 closure."
+    },
+    {
+      "id": "evidence-r064-closure-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-064.json",
+      "status": "ACTIVE",
+      "description": "Separate immutable R1 seed for accepted R063 local metadata closure only."
+    },
+    {
+      "id": "evidence-r064-closure-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-064.json",
+      "status": "ACTIVE",
+      "description": "R064 local closure status, authority, evidence and zero new runtime."
+    },
+    {
+      "id": "evidence-r064-closure-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_064.md",
+      "status": "ACTIVE",
+      "description": "Scoped R064 metadata closure work order, R063 source/packet immutable."
+    },
+    {
+      "id": "evidence-r064-closure-decision",
+      "family": "continuity",
+      "path": "docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Bounded local rule-input observation closure; inherited actual-evidence limitations and full S2/live open."
+    },
+    {
+      "id": "evidence-r065-contract-spec",
+      "family": "continuity",
+      "path": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "One complete bounded R065 usage/cost delivery contract UO01..12; intended behavior, not implemented yet."
+    },
+    {
+      "id": "evidence-r065-contract-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-065.json",
+      "status": "ACTIVE",
+      "description": "Original R065 end-to-end seed: medium child source/root independent review and conditional local closure, fresh bounded8Go."
+    },
+    {
+      "id": "evidence-r065-activation-prior-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical R064 local rule observation closure, old8Go and receipt limits retained."
+    },
+    {
+      "id": "evidence-r065-activation-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-065.json",
+      "status": "ACTIVE",
+      "description": "R065 end-to-end bounded source/proof/review/closure record, fresh max8Go."
+    },
+    {
+      "id": "evidence-r065-activation-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_065.md",
+      "status": "ACTIVE",
+      "description": "R065 complete delivery UO01..12, no old test edits; independent root review before conditional local closure."
+    },
+    {
+      "id": "r065-worker-source-checkpoint",
+      "family": "continuity",
+      "path": "docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending."
+    },
+    {
+      "id": "r065-worker-campaign",
+      "family": "tool",
+      "path": "docs/reviews/probes/r065_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending."
+    },
+    {
+      "id": "r065-worker-committed-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_plan.json",
+      "status": "ACTIVE",
+      "description": "R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending."
+    },
+    {
+      "id": "r065-r065-worker-handback-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_handback.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M01-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-M02-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_manifest.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-positive-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-restored-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-runtime-plan-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_runtime_plan.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "r065-r065-worker-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained."
+    },
+    {
+      "id": "evidence-r065-review-proof-campaign-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review."
+    },
+    {
+      "id": "evidence-r065-review-proof-plan-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review."
+    },
+    {
+      "id": "evidence-r065-review-proof-protected-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_protected.json",
+      "status": "ACTIVE",
+      "description": "Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review."
+    },
+    {
+      "id": "evidence-r065-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_manifest.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m01-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m01_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_manifest.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-m02-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_m02_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-mutation1-diff-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_mutation1_diff.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-mutation2-diff-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_mutation2_diff.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-positive-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-publication-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_publication.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-jsonl",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-container-after-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-container-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-restored-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r065-review-raw-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r065_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim."
+    },
+    {
+      "id": "evidence-r066-publication-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-PUBLISH-066.json",
+      "status": "ACTIVE",
+      "description": "Separate owner-authorized ordinary GitHub branch push; original R065 seed immutable, no merge/main/deployment authority."
+    },
+    {
+      "id": "evidence-r066-publication-intake",
+      "family": "continuity",
+      "path": "docs/reviews/R066_GITHUB_PUBLICATION_AND_NEXT_SCOPE_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Owner branch publication intake and next source audit; actual remote receipt follows execution, no CI claim."
+    },
+    {
+      "id": "evidence-r066-publication-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r066_github_push_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual owner-authorized branch push43commits/remote exacta384fa2; large-log warnings retained, no merge/deploy/CI claim."
+    },
+    {
+      "id": "evidence-r067-dispatcher-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-067.json",
+      "status": "ACTIVE",
+      "description": "End-to-end bounded saved-run UI reader seed; medium child/root independent, fresh8Vitest0Go, conditional local closure/push."
+    },
+    {
+      "id": "evidence-r067-ui-contract",
+      "family": "continuity",
+      "path": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Source-audited UIR01..12 UI observation contract; no backend/new governance behavior, activation precedes BUILD."
+    },
+    {
+      "id": "evidence-r067-formal-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_067.md",
+      "status": "ACTIVE",
+      "description": "Bounded end-to-end UIR01..12 order; exact8frontendpaths, fresh8Vitest0Go, independent roles/localclosure/push."
+    },
+    {
+      "id": "evidence-r067-tranche-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-067.json",
+      "status": "ACTIVE",
+      "description": "Dispatcher-bounded R067 active record; before-edit acknowledgment/source/plan/staticreview then bounded UI campaign."
+    },
+    {
+      "id": "evidence-r065-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "Historical R065 FROZEN handoff/evidence/budget; current R067 saved-run UI active."
+    },
+    {
+      "id": "r067-luna-takeover",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_luna_takeover_2026-10-08.json",
+      "status": "ACTIVE",
+      "description": "Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries."
+    },
+    {
+      "id": "r067-luna-worker-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json",
+      "status": "ACTIVE",
+      "description": "Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending."
+    },
+    {
+      "id": "r067-root-campaign-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Independent exact-source static approval and bounded worker/root campaign; historical root static failures retained."
+    },
+    {
+      "id": "r067-ui-campaign-runner",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_ui_campaign.py",
+      "status": "ACTIVE",
+      "description": "Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof."
+    },
+    {
+      "id": "r067-visual-fixture",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture.mjs",
+      "status": "ACTIVE",
+      "description": "Luna isolated synthetic saved-run panel fixture, loopback only, no application/API."
+    },
+    {
+      "id": "r067-keyboard-capture",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_capture_keyboard.mjs",
+      "status": "ACTIVE",
+      "description": "Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking."
+    },
+    {
+      "id": "r067-r067-cache-retention-disposition-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_cache_retention_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-preexec-wrapper-disposition-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_preexec_wrapper_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-repair-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_repair_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-exact-2026-10-09-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_exact_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-typecheck-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_typecheck_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-reviewer-build-typecheck-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_build_typecheck_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-root-repair-build-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-static-syntax-mjs",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_static_syntax.mjs",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-typecheck-repair-disposition-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_typecheck_repair_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-exact-2026-10-09-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_exact_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-preflight-failure-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_preflight_failure_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-typecheck-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_typecheck_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-typecheck-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_typecheck_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-build-wrapper-failed-2026-10-09-py-failed",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-worker-staticcheck-launcher-failure-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-typecheck-changes-required-2026-10-09-md",
+      "family": "continuity",
+      "path": "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim."
+    },
+    {
+      "id": "r067-r067-additional-build-request-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_additional_build_request_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-r067-round2-independent-static-review-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_round2_independent_static_review_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-r067-supplemental-build-proposed-2026-10-09-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_build_PROPOSED_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-roundtwo-type-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_type_repair_round2_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-r067-visual-cleanup-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_cleanup_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-budget-request-reviewed-source",
+      "family": "continuity",
+      "path": "docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE."
+    },
+    {
+      "id": "r067-owner-additional-build-grant",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Owner approved exactly1 supplemental root forcedbuild on4d921; original2failures and8Vitest/0Go limits retained, no seed mutation."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-typecheck-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-typecheck-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-vite-stderr-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_vite_stderr_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-final-build-proof-r067-supplemental-reviewer-build-vite-stdout-2026-10-09-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_build_vite_stdout_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-manifest-before-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-stdout-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-positive-vitest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_positive_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-runtime-evidence-plan-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_runtime_evidence_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-runtime-evidence-plan-attempt-failed-2026-10-09-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_runtime_evidence_plan_attempt_failed_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-worker-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-positive-failure-proof-r067-positive-test-failure-and-remaining-budget-disposition-2026-10-09-md",
+      "family": "continuity",
+      "path": "docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance."
+    },
+    {
+      "id": "r067-final-source-review-campaign-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet."
+    },
+    {
+      "id": "r067-manual-remaining-three-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resume_remaining_three.py",
+      "status": "ACTIVE",
+      "description": "R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet."
+    },
+    {
+      "id": "r067-roundthree-worker-test-plan",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_round3_worker_test_repair_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet."
+    },
+    {
+      "id": "r067-evidence-publication-a001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_remaining_visual_publication_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M01_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_M02_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_positive_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_restored_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_summary.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_failed_capture.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_failed_vite.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_receipt_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_reviewer_visual_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_runtime_evidence_reconciliation_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture_failure_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resume_ack_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a034",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a035",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a036",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a038",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a039",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M01_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_mutation.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a043",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a044",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a045",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_M02_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_manifest_after.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a047",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_manifest_before.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a050",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_restored_vitest.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-a051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_resumed_summary.json",
+      "status": "ACTIVE",
+      "description": "R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending."
+    },
+    {
+      "id": "r067-evidence-publication-b001",
+      "family": "continuity",
+      "path": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "Final R067 Luna xhigh vsSolmedium assessment: accepted codequality and useful secondaryreview, first-pass repair costs; no matched A/B or demonstrated efficiency advantage."
+    },
+    {
+      "id": "r067-evidence-publication-b002",
+      "family": "continuity",
+      "path": "docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_additional_visual_request_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_capture_ready_diagnostics_PROPOSED_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_final_independent_source_evidence_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_local_knowledge_index_disposition_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_visual_PROPOSED_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture_ready_diagnostics_PROPOSED_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_ack_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_failed_capture_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_failed_vite_2026-10-09.log",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-b012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_worker_visual_failure_receipt_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim."
+    },
+    {
+      "id": "r067-evidence-publication-c001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved exactlyone supplemental rootvisual; separate authorized core reconciliation/backup/doctor recorded, no runtime yet."
+    },
+    {
+      "id": "r067-evidence-publication-d001",
+      "family": "continuity",
+      "path": "docs/reviews/R067_NATIVE_KEYBOARD_PROBE_REPAIR_AND_COST_DISPOSITION_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_capture_native_keyboard_PROPOSED_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_corrected_keyboard_visual_PROPOSED_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_static_repair_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_capture.log",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_screenshots_report.json",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_stdout.log",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_supplemental_reviewer_visual_vite.log",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_visual_fixture_native_keyboard_PROPOSED_2026-10-09.mjs",
+      "status": "ACTIVE",
+      "description": "Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof."
+    },
+    {
+      "id": "r067-evidence-publication-d999",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_secondary_static_review_findings_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Root-derived actual Luna secondary readonly findings and NEW probe repairs; no runtime or acceptance claim."
+    },
+    {
+      "id": "r067-evidence-publication-e001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved exactlyone correctednativekeyboard rootvisual, exactpreparedhashes and beforeexecution counters, historical3failures retained."
+    },
+    {
+      "id": "r067-evidence-publication-f001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_capture.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_en--desktop--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_en--mobile--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_receipt.json",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_screenshots_report.json",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_stderr.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_stdout.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vi--desktop--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vi--mobile--light.png",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_native_keyboard_capture_vite.log",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f011",
+      "family": "continuity",
+      "path": "docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-f012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_independent_visual_acceptance_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim."
+    },
+    {
+      "id": "r067-evidence-publication-g001",
+      "family": "continuity",
+      "path": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R067 scoped localUI closure after independent exactsource REVIEW_PASS; final model assessment, retained failures/budgets and ordinary currentbranchpublication boundary."
+    },
+    {
+      "id": "r067-evidence-publication-h001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "Actual R067 ordinary branchpush exit0 and exact remoteSHA closure20d6a666 readback; derived receipt separately published, hostedActions NOTRUN."
+    },
+    {
+      "id": "r068-planning-a001",
+      "family": "continuity",
+      "path": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh adapter presence contract; BUILD acknowledged; source/runtime/live provider proof not yet run."
+    },
+    {
+      "id": "r068-planning-a002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh untouched source baseline; BUILD acknowledged; source/runtime/live provider proof not yet run."
+    },
+    {
+      "id": "r068-planning-a003",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-068.json",
+      "status": "ACTIVE",
+      "description": "New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet."
+    },
+    {
+      "id": "r068-activation-b001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+      "status": "ACTIVE",
+      "description": "R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun."
+    },
+    {
+      "id": "r068-activation-b002",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_068.md",
+      "status": "ACTIVE",
+      "description": "R068 bounded adapter work order; repair BUILD after first-source compile finding; one same-scope repair authorized; historical R067 preserved."
+    },
+    {
+      "id": "r068-activation-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-068.json",
+      "status": "ACTIVE",
+      "description": "R068 bounded adapter tranche; repair BUILD after CHANGES_REQUIRED, first source retained, both build attempts consumed, tests gated on root static reapproval."
+    },
+    {
+      "id": "r068-review-preparation-c001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_independent_go_campaign_2026-10-09.py",
+      "status": "ACTIVE",
+      "description": "Root independent exactsource offline Go compile/four-test runner, prepared syntax-only/unexecuted; no worker implementation source help or runtime claim."
+    },
+    {
+      "id": "r068-review-preparation-c002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_exact_source_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 root independent exact first-source backend archive/test/mutation plan; no Go yet."
+    },
+    {
+      "id": "r068-review-preparation-c003",
+      "family": "continuity",
+      "path": "docs/reviews/R068_FIRST_SOURCE_STATIC_REVIEW_AND_CAPTURE_DISPOSITION_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 first product static review and immutable worker capture failure disposition; actual compiler/tests pending."
+    },
+    {
+      "id": "r068-worker-build-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json",
+      "status": "ACTIVE",
+      "description": "R068 worker build launch attempt 1/1; no Go process started, no compiler result; immutable first-source receipt."
+    },
+    {
+      "id": "r068-worker-build-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R068 worker first-build native stdout bytes; empty because the process did not start; preserved raw stream."
+    },
+    {
+      "id": "r068-worker-build-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream."
+    },
+    {
+      "id": "r068-worker-build-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-tree-manifest.txt",
+      "status": "ACTIVE",
+      "description": "R068 full 1,565-entry source-tree manifest for the worker launch attempt; source archive retained in verified owned TEMP."
+    },
+    {
+      "id": "r068-worker-build-d005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_build_2026-10-09/first_build_archive_relocation.json",
+      "status": "ACTIVE",
+      "description": "R068 derived relocation receipt; original worker build receipt stays unchanged, verified 500,899,840-byte archives remain in owned TEMP."
+    },
+    {
+      "id": "r068-review-preparation-c004",
+      "family": "continuity",
+      "path": "docs/reviews/R068_FIRST_COMPILE_CHANGES_REQUIRED_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 immutable first actual compiler failure; pointer/value finding and remaining test-only authority."
+    },
+    {
+      "id": "r068-review-preparation-c005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_repaired_source_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 root independent static-approved repaired-source exact archive and four-test plan."
+    },
+    {
+      "id": "r068-review-preparation-c006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_compile_actual_summary.json",
+      "status": "ACTIVE",
+      "description": "R068 original root full-backend compiler failure exit1; exact-source manifests/native streams/verified backup."
+    },
+    {
+      "id": "r068-test-approval-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_tests_actual_summary.json",
+      "status": "ACTIVE",
+      "description": "R068 root independent repaired-source ai positives/M01/M02/restored native evidence PASS; whole-backend compiler gate remains open."
+    },
+    {
+      "id": "r068-test-approval-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_root_independent_test_evidence_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 independent original raw/backup/218-member restoration and protected780 source audit."
+    },
+    {
+      "id": "r068-test-approval-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_repaired_source_test_plan_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 Luna exact repaired-source four-test plan; first compiler failures and budget consumed retained."
+    },
+    {
+      "id": "r068-test-approval-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_test_campaign_capture.ps1",
+      "status": "ACTIVE",
+      "description": "R068 bounded worker native JSON/whole physical source/mutations/second archive/raw backup runner; root minor evidence pointer fixes attributed."
+    },
+    {
+      "id": "r068-test-approval-d005",
+      "family": "continuity",
+      "path": "docs/reviews/R068_REPAIRED_SOURCE_TEST_APPROVAL_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 root repaired-source independent test evidence and exactly four worker-test approval; no extra build or closure."
+    },
+    {
+      "id": "r068-pending-e001",
+      "family": "continuity",
+      "path": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 independent REVIEW_PENDING: both local ai campaigns verified, UP09 whole-backend postrepair compiler gate open."
+    },
+    {
+      "id": "r068-pending-e002",
+      "family": "continuity",
+      "path": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 concrete proposed one supplemental offline whole-backend build; NOT_AUTHORIZED, original budgets exhausted."
+    },
+    {
+      "id": "r068-pending-e003",
+      "family": "continuity",
+      "path": "docs/reviews/R068_LUNA_XHIGH_FRESH_START_ASSESSMENT_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "R068 provisional fresh Luna xhigh versus prior Sol medium assessment; no inherited draft, closure still pending."
+    },
+    {
+      "id": "r068-pending-e004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_worker_evidence_independent_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 root independent worker42raw/all4archive/218restoration/native-event verification."
+    },
+    {
+      "id": "r068-pending-e005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_luna_worker_tests_actual_2026-10-09_luna1/campaign-result.json",
+      "status": "ACTIVE",
+      "description": "R068 original worker four-test PASS packet with native streams and verified retained raw/archive backup."
+    },
+    {
+      "id": "r068-pending-e006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_final_pending_protection_audit_2026-10-09.json",
+      "status": "ACTIVE",
+      "description": "R068 final REVIEW_PENDING protection/immutable seed/original failed launch/TEMP archive verification; no compiler PASS or extra Go."
+    },
+    {
+      "id": "r069-validation-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-069.json",
+      "status": "ACTIVE",
+      "description": "Separate single-compile dispatcher seed; owner approved 2026-10-10, original R068 budget immutable."
+    },
+    {
+      "id": "r069-validation-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R069_SINGLE_COMPILE_SPEC_AND_AUTHORIZATION_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R069 accepted compiler specification and exact owner authorization."
+    },
+    {
+      "id": "r069-validation-a003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_exact_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "R069 exact-source single offline compile plan."
+    },
+    {
+      "id": "r069-validation-a004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_single_compile_capture_2026-10-10.py",
+      "status": "ACTIVE",
+      "description": "R069 single-use native compiler capture runner, no tests/retry."
+    },
+    {
+      "id": "r069-validation-b001",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_069.md",
+      "status": "ACTIVE",
+      "description": "R069 bounded one-compile work order; no source writes/tests/retry."
+    },
+    {
+      "id": "r069-validation-b002",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-069.json",
+      "status": "ACTIVE",
+      "description": "R069 supplemental validation record, separate immutable budget."
+    },
+    {
+      "id": "r069-validation-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
+      "status": "ACTIVE",
+      "description": "Historical R068 adapter-only FROZEN handoff; source-independent UP01..12 acceptance."
+    },
+    {
+      "id": "r069-validation-c001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_compile_actual/summary.json",
+      "status": "ACTIVE",
+      "description": "Original single offline compiler PASS evidence; attempts1/tests0/retries0."
+    },
+    {
+      "id": "r069-validation-c002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_independent_compile_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Root independent compiler/raw/source/backup and protected R068 evidence audit."
+    },
+    {
+      "id": "r070-integration-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-070.json",
+      "status": "ACTIVE",
+      "description": "Separate R1 review/closure integration authority, zero source/Go effect."
+    },
+    {
+      "id": "r070-integration-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R070 bounded closure spec and preserved root routing failure."
+    },
+    {
+      "id": "r070-integration-a003",
+      "family": "continuity",
+      "path": "docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R069 compiler-only review decision, closure committed by R070 integration."
+    },
+    {
+      "id": "r070-integration-a004",
+      "family": "continuity",
+      "path": "docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent final R068 UP01..12 review, closure integrated by R070."
+    },
+    {
+      "id": "r070-integration-b001",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_070.md",
+      "status": "ACTIVE",
+      "description": "R070 bounded metadata-only work order and committed acknowledgment."
+    },
+    {
+      "id": "r070-integration-b002",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-070.json",
+      "status": "ACTIVE",
+      "description": "R070 integration record; no source/Go authority."
+    },
+    {
+      "id": "r070-integration-b004",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R069 historical compiler-only FROZEN handoff."
+    },
+    {
+      "id": "r070-integration-c001",
+      "family": "continuity",
+      "path": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Final fresh Luna xhigh assessment: accepted code after repair, no demonstrated efficiency advantage vs Sol medium."
+    },
+    {
+      "id": "r070-integration-c002",
+      "family": "continuity",
+      "path": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R068 scoped adapter-only local closure, original failures/budgets retained."
+    },
+    {
+      "id": "r070-integration-c003",
+      "family": "continuity",
+      "path": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R070 metadata integration acceptance/closure and explicit R1 role transitions."
+    },
+    {
+      "id": "r070-integration-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Actual ordinary push waited in credential manager, owned tree terminated; publication unverified, local closure preserved."
+    },
+    {
+      "id": "r071-planning-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-071.json",
+      "status": "ACTIVE",
+      "description": "Immutable R071 dispatcher seed; owner-delegated scope accepted, original condition/history preserved."
+    },
+    {
+      "id": "r071-planning-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Concrete APO01..12 additive consumer contract, no runtime yet."
+    },
+    {
+      "id": "r071-planning-a003",
+      "family": "continuity",
+      "path": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Owner-requested cumulative per-tranche Luna quality methodology and attribution."
+    },
+    {
+      "id": "r071-planning-a004",
+      "family": "continuity",
+      "path": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Cumulative Luna R067/R068/R071 measured evidence/repair/assistance ledger."
+    },
+    {
+      "id": "r071-planning-a005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_fresh_source_baseline_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Fresh R071410protected physical baseline, no product draft/source."
+    },
+    {
+      "id": "r071-planning-a006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Fresh Luna read-only consumer feasibility, zero source/test/runtime."
+    },
+    {
+      "id": "r071-planning-b001",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_071.md",
+      "status": "ACTIVE",
+      "description": "R071 bounded aggregate FROZEN work order, full/runtime/live boundaries retained."
+    },
+    {
+      "id": "r071-planning-b002",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-071.json",
+      "status": "ACTIVE",
+      "description": "Canonical R071 FROZEN record, aggregate10Go attempts/processes, no retries."
+    },
+    {
+      "id": "r071-planning-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Historical R070 local FROZEN handoff; prior publication remains unverified."
+    },
+    {
+      "id": "r071-review-c001",
+      "family": "continuity",
+      "path": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent first-source static S1/S2/S3 findings before any Go; unchanged-scope repair."
+    },
+    {
+      "id": "r071-review-c002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_shared_go_capture_2026-10-10.py",
+      "status": "ACTIVE",
+      "description": "Parent supplied capture infrastructure; exact committed plans/approval required, no automatic retry."
+    },
+    {
+      "id": "r071-review-c003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_worker_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Preserved firstsource worker plan, static findings not approved for runtime."
+    },
+    {
+      "id": "r071-review-c004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_worker_repaired_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Committed repaired worker exactsource plan, root static accepted before Go."
+    },
+    {
+      "id": "r071-review-c005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_root_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Reviewer independently selected exact20pure tests and distinct two semantic replacements."
+    },
+    {
+      "id": "r071-review-c006",
+      "family": "continuity",
+      "path": "docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent repairedsource static approval, runtime acceptance pending."
+    },
+    {
+      "id": "r071-review-c007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Independent actualraw/mutation/220memberarchive/restoration/backup audit, bounded local proof."
+    },
+    {
+      "id": "r071-review-c008",
+      "family": "continuity",
+      "path": "docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent APO01..12 REVIEW_PASS, runtime and claim boundaries."
+    },
+    {
+      "id": "r071-review-c009",
+      "family": "continuity",
+      "path": "docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Empirical fresh Luna R071 assessment; one test repair, no matched Sol efficiency ranking."
+    },
+    {
+      "id": "r071-evidence-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/reservation-compile.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-m01.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-m02.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-positive.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-restored.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d034",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/reservation-compile.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d035",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d036",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d038",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d039",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d043",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d044",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d045",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d047",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d050",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m01.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m02.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d052",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-positive.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d053",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-restored.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d054",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d055",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d056",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d057",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d058",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-review-c010",
+      "family": "continuity",
+      "path": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R071 aggregate-only local FROZEN after independent review; no newGo/publication/governance claim."
+    },
+    {
+      "id": "r072-planning-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-072.json",
+      "status": "ACTIVE",
+      "description": "Immutable R1 legacy UI extension compatibility seed; fresh Luna xhigh worker, root independent reviewer."
+    },
+    {
+      "id": "r072-planning-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R072 bounded optional ignored-field contract; preserves all legacy validation and numeric semantics."
+    },
+    {
+      "id": "r072-planning-a003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_protected_baseline_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Before-source physical baseline for protected frontend/backend/authority files."
+    },
+    {
+      "id": "r072-planning-b001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Historical R071 FROZEN aggregate-only handoff; source/runtime evidence unchanged."
+    },
+    {
+      "id": "r072-planning-b002",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_072.md",
+      "status": "ACTIVE",
+      "description": "R072 bounded legacy compatibility work order."
+    },
+    {
+      "id": "r072-planning-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-072.json",
+      "status": "ACTIVE",
+      "description": "R072 dispatcher scope and status record."
+    },
+    {
+      "id": "r072-review-c001",
+      "family": "continuity",
+      "path": "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "First-source static T1/T2 NEW test findings before runtime; product line accepted, same-scope repair1."
+    },
+    {
+      "id": "r072-review-c002",
+      "family": "continuity",
+      "path": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "T1/T2 settled on repaired test; exact product preserved, bounded independent captures next."
+    },
+    {
+      "id": "r072-evidence-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.capture.json",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.report.json",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.capture.json",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-review-c003",
+      "family": "continuity",
+      "path": "docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent UC01..07 REVIEW_PASS; each role21/21 and forcedtypecheck, bounded local compatibility."
+    },
+    {
+      "id": "r072-review-c004",
+      "family": "continuity",
+      "path": "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Per-tranche Luna assessment: product stable, one pre-runtime NEW-test repair; unmatched Sol comparison."
+    },
+    {
+      "id": "r072-review-c005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Independent raw/source/seed snapshot audit; worker native blob bytes and metadata newline basis explicit."
+    },
+    {
+      "id": "r072-evidence-e001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/capture.json",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.report.json",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-review-c006",
+      "family": "continuity",
+      "path": "docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Root-owned auxiliary continuity projection drift and bounded known-value repair; source review unchanged."
+    },
+    {
+      "id": "r072-review-c007",
+      "family": "continuity",
+      "path": "docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Scoped local legacy UI compatibility FREEZE only; no presence display/provider/governance/roadmap closure."
+    },
+    {
+      "id": "r072-review-c008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_committed_packet_seal_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Postcommit13file packet seal: native raw bytes identical, metadata wrapper newline differences explicit."
+    },
+    {
+      "id": "luna-task-fit-classification-a001",
+      "family": "continuity",
+      "path": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Provisional empirical Luna task-fit matrix for four reviewed tranches; normalized product/test/root attribution, no model-config change or unmatched Sol ranking."
+    },
+    {
+      "id": "r073-planning-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-073.json",
+      "status": "ACTIVE",
+      "description": "Immutable R1 saved presence UI dispatcher seed before BUILD; fresh Luna scope/task classes bounded."
+    },
+    {
+      "id": "r073-planning-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 PU01..09 bounded saved presence UI contract, independent validation, safe parsed integers and claim limits."
+    },
+    {
+      "id": "r073-planning-a003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_protected_baseline_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Physical protected source/old authority baseline before R073; snapshot boundary, no full write-history claim."
+    },
+    {
+      "id": "r073-planning-b001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Historical R072 FROZEN legacy compatibility handoff; accepted evidence and retrospective classification retained."
+    },
+    {
+      "id": "r073-planning-b002",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_073.md",
+      "status": "ACTIVE",
+      "description": "R073 FROZEN / FREEZE, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
+    },
+    {
+      "id": "r073-planning-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-073.json",
+      "status": "ACTIVE",
+      "description": "R073 FROZEN / FREEZE, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
+    },
+    {
+      "id": "r073-review-c001",
+      "family": "continuity",
+      "path": "docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Root independent PU01..09 static/runtime review plan before first Luna source; no product/test draft."
+    },
+    {
+      "id": "r073-review-c002",
+      "family": "continuity",
+      "path": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 firstsource53abf11 CHANGES_REQUIRED F1/F2 NEW-test boundary/coverage, F3 locale precision; original native NOT_RUN."
+    },
+    {
+      "id": "r073-review-c003",
+      "family": "continuity",
+      "path": "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 repairedsource3a05b50 F1..F3 closed static; worker own49expected/forcedtypecheck pending, no original native run."
+    },
+    {
+      "id": "r073-evidence-d-001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/capture-files.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/capture-manifest.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/capture_worker_native.ps1",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/git-status-after.txt",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/git-status-before.txt",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/source-after-vitest.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/source-after-vue-tsc.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/source-before-native.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/validation-summary.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.process.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.process.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-formal-e-001",
+      "family": "continuity",
+      "path": "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-002",
+      "family": "continuity",
+      "path": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_independent_capture.py",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/capture.json",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.report.json",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-closure-f-001",
+      "family": "continuity",
+      "path": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 committed raw packet seal and scoped local presence-display UI closure; source3a05b50, broader roadmap/live OPEN."
+    },
+    {
+      "id": "r073-closure-f-002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_committed_packet_seal_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "R073 committed raw packet seal and scoped local presence-display UI closure; source3a05b50, broader roadmap/live OPEN."
+    },
+    {
+      "id": "r074-plan-a-001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-074.json",
+      "status": "ACTIVE",
+      "description": "R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority."
+    },
+    {
+      "id": "r074-plan-a-002",
+      "family": "continuity",
+      "path": "docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority."
+    },
+    {
+      "id": "r074-plan-a-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r074_protected_baseline_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority."
+    },
+    {
+      "id": "r074-plan-b-003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-074.json",
+      "status": "ACTIVE",
+      "description": "R074 FROZEN source-only contract audit; independent review, no runtime/governance proof."
+    },
+    {
+      "id": "r074-plan-b-004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_074.md",
+      "status": "ACTIVE",
+      "description": "R074 FROZEN source-only contract audit; independent review, no runtime/governance proof."
+    },
+    {
+      "id": "r074-audit-c-001",
+      "family": "continuity",
+      "path": "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Luna xhigh R074 source-only audit accepted after documentary repair; historical first-packet labels retained, no app runtime."
+    },
+    {
+      "id": "r074-audit-c-002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Luna xhigh R074 source-only audit accepted after documentary repair; historical first-packet labels retained, no app runtime."
+    },
+    {
+      "id": "r074-audit-c-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Luna xhigh R074 source-only audit accepted after documentary repair; historical first-packet labels retained, no app runtime."
+    },
+    {
+      "id": "r074-root-d-001",
+      "family": "continuity",
+      "path": "docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Root first-document consolidated independent findings; source/native0, no worker-artifact edits."
+    },
+    {
+      "id": "r074-root-e-001",
+      "family": "continuity",
+      "path": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R074 independent DA01..10 review, source/scope proof and separate fresh Luna audit assessment; no app runtime."
+    },
+    {
+      "id": "r074-root-e-002",
+      "family": "continuity",
+      "path": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R074 independent DA01..10 review, source/scope proof and separate fresh Luna audit assessment; no app runtime."
+    },
+    {
+      "id": "r074-root-e-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r074_root_source_scope_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "R074 independent DA01..10 review, source/scope proof and separate fresh Luna audit assessment; no app runtime."
+    },
+    {
+      "id": "r074-root-f-001",
+      "family": "continuity",
+      "path": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R074 scoped source-only dossier closure; independent review inherited, app native0, broader/live OPEN."
+    },
+    {
+      "id": "r075-a-001",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-075.json",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 explicit owner-authorized ordinary currentbranch publication seed/contract; R2, no app/runtime authority."
+    },
+    {
+      "id": "r075-a-002",
+      "path": "docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 explicit owner-authorized ordinary currentbranch publication seed/contract; R2, no app/runtime authority."
+    },
+    {
+      "id": "r075-b-001",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-075.json",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 bounded ordinary publication record/order; R074 historical FROZEN preserved."
+    },
+    {
+      "id": "r075-b-002",
+      "path": "docs/work_orders/CCMAI_RUNTIME_075.md",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 bounded ordinary publication record/order; R074 historical FROZEN preserved."
+    },
+    {
+      "id": "r075-c-001",
+      "path": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim."
     }
   ]
 }

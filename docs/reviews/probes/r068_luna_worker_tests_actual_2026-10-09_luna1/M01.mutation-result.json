@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "mutation": "M01",
+  "detector": "TestUsagePresenceM01AbsentNullDetector",
+  "healthyControl": "TestUsagePresenceM01ExplicitZeroHealthyControl",
+  "sourcePath": "backend/ai/usage_presence.go",
+  "baselineSourceSha256": "3151424fddafe73e876c9fa4e00743420ef504230b7075cde1acad69793f41ca",
+  "mutatedSourceSha256": "bc90200832f883e899b5837d7320092482313378896ec56778e24af798fa6d7e",
+  "changedBackendMembers": [
+    "ai/usage_presence.go"
+  ],
+  "testFilesUnchanged": true,
+  "diff": {
+    "path": "M01.source-diff.patch",
+    "bytes": 997,
+    "sha256": "ddaef4e72ffdaaa94cb9b143c4dae92df3298bfe6f53e67b352365961ce10326",
+    "onlySourcePath": "backend/ai/usage_presence.go"
+  },
+  "detectorExpectedKillAndControlPass": true,
+  "detectorProcessExitCode": 1,
+  "detectorRun": "M01-test.result.json"
+}

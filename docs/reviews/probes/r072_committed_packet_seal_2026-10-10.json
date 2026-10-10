@@ -1,0 +1,101 @@
+{
+  "verdict": "PASS",
+  "sealedAtCommit": "6400b060847d8dadeacef333915ac48b698afddd",
+  "sourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
+  "files": [
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.capture.json",
+      "physicalSha256": "2f99b02edfbda3bd0136c42cf5bab7dc8d4a22539bb47d1731e0e8803a240ebd",
+      "committedBlobSha256": "dcf5b46655a8515a6406220375c434e2881737eb1d3cb0db02c6b5addfd1bc72",
+      "byteIdentical": false,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.report.json",
+      "physicalSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "committedBlobSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stderr.log",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stdout.log",
+      "physicalSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "committedBlobSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.capture.json",
+      "physicalSha256": "2090c4fef519dc8bc45442f68d6fd4e1b2f7a852c6d0d0bce4efedf27cff71e4",
+      "committedBlobSha256": "4bcdc6531b7fb3173ba72b175c91ed5bff1bfdd12bb1f998e0db3492bc6e4905",
+      "byteIdentical": false,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stderr.log",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/capture.json",
+      "physicalSha256": "9d4fecb9497c3e134919d39e4a21f49db97351ae485cc4908f8454a10433c61f",
+      "committedBlobSha256": "0e09b9f1d275e194ae3ac57691a77b2e788f0ba80ce31f6339b2d4452ebb3741",
+      "byteIdentical": false,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stderr.bin",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stdout.bin",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.report.json",
+      "physicalSha256": "f3b5dd4f5eeeff0db3309567f73f868df003b61134ba24499a358cc48dff9801",
+      "committedBlobSha256": "f3b5dd4f5eeeff0db3309567f73f868df003b61134ba24499a358cc48dff9801",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stderr.bin",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stdout.bin",
+      "physicalSha256": "cd037116dcf7c202aa4fa501fe28a951112877a50b41e3106cc9b9936ef5e049",
+      "committedBlobSha256": "cd037116dcf7c202aa4fa501fe28a951112877a50b41e3106cc9b9936ef5e049",
+      "byteIdentical": true,
+      "equalAfterNewlineNormalization": true
+    }
+  ],
+  "nativeRawFilesByteIdentical": true,
+  "metadataWrappersNewlineOnlyDifference": 2,
+  "scope": "Committed blob/native snapshot identities, not entire write history; future checkout CRLF can change physical hashes."
+}

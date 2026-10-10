@@ -1,0 +1,26 @@
+{
+  "name": "vitest",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+  "argv": [
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile.json=../docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json",
+    "src/__tests__/run-observation.spec.ts",
+    "src/__tests__/run-observation-panel.spec.ts",
+    "src/__tests__/run-observation-job-detail.spec.ts",
+    "src/__tests__/run-observation-adapter-compat.spec.ts",
+    "src/__tests__/adapter-usage-presence.spec.ts"
+  ],
+  "commandLine": "\"C:\\Program Files\\nodejs\\node.exe\" node_modules/vitest/vitest.mjs run --reporter=default --reporter=json --outputFile.json=../docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json src/__tests__/run-observation.spec.ts src/__tests__/run-observation-panel.spec.ts src/__tests__/run-observation-job-detail.spec.ts src/__tests__/run-observation-adapter-compat.spec.ts src/__tests__/adapter-usage-presence.spec.ts",
+  "pid": 24136,
+  "startedAtUtc": "2026-10-10T07:50:11.8605280+00:00",
+  "endedAtUtc": "2026-10-10T07:50:26.4166274+00:00",
+  "elapsedMilliseconds": 14554.254,
+  "exitCode": 0,
+  "launchError": null,
+  "stdout": "vitest.stdout.log",
+  "stderr": "vitest.stderr.log"
+}

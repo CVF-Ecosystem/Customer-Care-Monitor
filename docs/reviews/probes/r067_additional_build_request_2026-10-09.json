@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-09",
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "tranche": "CCMAI-RUNTIME-067",
+  "request": "Exactly one additional independent root forced vue-tsc -b --force followed by Vite build only if typecheck passes on repaired exactsource.",
+  "sourceCommit": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+  "sourceArchiveSha256": "1a571270ce0ecf9bae49d952a1954f7d6e3b88980d58adc0e3149b5f90e54936",
+  "originalBuildBudget": {
+    "workerMax": 1,
+    "workerUsed": 1,
+    "reviewerMax": 1,
+    "reviewerUsed": 1,
+    "failuresRetained": 2
+  },
+  "proposedAdditionalBuilds": {
+    "worker": 0,
+    "reviewer": 1,
+    "newAggregateCeilingIncludingHistory": 3
+  },
+  "unchangedBudget": {
+    "workerVitestMax": 4,
+    "reviewerVitestMax": 4,
+    "aggregateVitestMax": 8,
+    "usedVitest": 0,
+    "visualMaxPerRole": 1,
+    "usedVisual": 0,
+    "GoMax": 0
+  },
+  "runner": "docs/reviews/probes/r067_supplemental_build_PROPOSED_2026-10-09.py",
+  "command": "python -B docs/reviews/probes/r067_supplemental_build_PROPOSED_2026-10-09.py 4d9214b04b3ccb822d535f3eccf5783fe0939e0a 1a571270ce0ecf9bae49d952a1954f7d6e3b88980d58adc0e3149b5f90e54936",
+  "effectBoundary": "Same R2 exact frontend scope, isolated git archive/cached deps/minimal environment. No seed mutation, dependencies/network/provider/customer/DB/backend/workflow/gate change.",
+  "failureRule": "Unexpected failure stops; no automatic retry, no budget reset. Keep both historical failed source packets.",
+  "afterPass": "Only then authorize original unused worker4 + reviewer4 Vitest campaigns and one synthetic isolated visual per role, formal independent review, conditional scoped local closure and previously-authorized ordinary branch push.",
+  "modelAssessment": "Final Luna xhigh vs historical Sol medium assessment after settled tranche. Current artifacts are not equal-start A/B; cost/tokens unmeasured.",
+  "staticEvidence": "docs/reviews/probes/r067_round2_independent_static_review_2026-10-09.json",
+  "publicationChecks": {
+    "default": "PASS7/7",
+    "PR": "PASS7/7",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "docsFinalMarkdown": "PASS21.10s",
+    "diff": "PASS",
+    "gateUnits": "Inherited fresh46PASS50.797s unchanged scripts/tests",
+    "runtimeInvocationsAddedDuringRequestPreparation": 0
+  },
+  "rootPublicationFailuresRetained": "Root invalid mode REVIEW_PENDING corrected to canonical REVIEW; PS5.1/PS7 sorting drift resolved by two distinct new uncommitted registry IDs, no gate/tooling/historical-ID edit."
+}

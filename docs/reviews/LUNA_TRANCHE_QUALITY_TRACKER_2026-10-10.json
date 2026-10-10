@@ -1,0 +1,465 @@
+{
+  "schemaVersion": "1",
+  "updatedAt": "2026-10-10",
+  "ownerInstruction": "Track Luna quality separately for every tranche; cumulative empirical report, reviewer/root defects separate, no unmatched cost/speed ranking.",
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "method": "Record original first source/launch/compile/positive, accepted product findings/repair rounds, test semantic sensitivity/final result, evidence-tool findings and parent assistance. Values unavailable remain null with reason. Compare fresh vs inherited and workload classes separately; runtime walltime is not inference/development time. Never reclassify historical failures after later PASS.",
+  "comparisonLimit": "R067 inherited, R068/R071 fresh but differing parser/consumer scopes and harness assistance; Sol R065 engine/DB differs. No matched A/B or token/cost/model-time telemetry.",
+  "tranches": [
+    {
+      "id": "CCMAI-RUNTIME-067",
+      "workload": "frontend saved-run receipt reader",
+      "start": "INHERITED_SOL_DRAFT",
+      "assessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+      "finalDisposition": "FROZEN_LOCAL_UI",
+      "firstCompile": "FAIL; missing brace then root7diagnostics,6new/1inherited",
+      "firstPositive": "315PASS_1FAIL; fixture/assertion subsequently repaired",
+      "productRepairRounds": null,
+      "productRepairRoundsReason": "Historical repairs were not recorded with a standardized per-round metric; do not reconstruct a fictitious number.",
+      "workerFindings": [
+        "missing brace",
+        "helper/test typing",
+        "legacy EX incorrectly required UO",
+        "wrong sparse outcome assertion",
+        "visual fixture encodeURI module path"
+      ],
+      "rootFindings": [
+        "static/syntax review missed defects",
+        "keyboard/capture/evidence/metadata/catalog/doc repairs"
+      ],
+      "inheritedFindings": [
+        "mode full vs conditional",
+        "enum coercion",
+        "SP visited coherence",
+        "one panel key diagnostic"
+      ],
+      "finalLocalEvidence": "root316PASS; M01/M02 healthy controls/restored17PASS; actual4visual captures accepted",
+      "modelTokenCost": null,
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "inherited_ui_completion",
+        "productSemanticRepairRounds": null,
+        "newTestRepairRounds": null,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true
+      }
+    },
+    {
+      "id": "CCMAI-RUNTIME-068",
+      "workload": "Go adapter original-JSON usage-presence parser",
+      "start": "FRESH_NO_SOL_DRAFT",
+      "assessment": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md",
+      "firstSourceCommit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+      "finalSourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+      "finalDisposition": "FROZEN_ADAPTER_ONLY",
+      "firstWorkerLaunch": "FAIL_BEFORE_GO; joined two executable paths, counted attempt",
+      "firstActualCompile": "FAIL_ROOT_CAPTURE; Claude SDK pointer/value signature",
+      "firstPositive": "PASS_AFTER_ONE_PRODUCT_REPAIR; no earlier positive command",
+      "acceptedProductFindings": [
+        "Claude pinned SDK pointer/value integration"
+      ],
+      "productRepairRounds": 1,
+      "workerEvidenceFindings": [
+        "launch executable resolution",
+        "two consolidated capture runner reviews"
+      ],
+      "rootFindings": [
+        "initial static compiler miss",
+        "roleRoute/helper/nested continuity mistakes",
+        "small evidence-label/pointer repairs",
+        "duplicate active-handoff catalog entries",
+        "new work-order scope return omission"
+      ],
+      "finalLocalEvidence": "each root/worker18top35outcomesPASS/M01/M02/restored8top21PASS; separate R069 compilerPASS18.093s",
+      "originalAttempts": 10,
+      "originalActualGoProcesses": 9,
+      "supplementalAttempts": 1,
+      "workerNativeTestSeconds": 52.265,
+      "rootNativeTestSeconds": 57.29,
+      "modelTokenCost": null,
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "pinned_sdk_integration",
+        "productSemanticRepairRounds": 1,
+        "newTestRepairRounds": null,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true
+      }
+    },
+    {
+      "id": "CCMAI-RUNTIME-071",
+      "workload": "Go consumer-side bounded adapter usage-presence aggregate",
+      "start": "FRESH_LUNA_IMPLEMENTATION_OF_SPEC_ON_EXISTING_ACCEPTED_CODE",
+      "status": "FROZEN_LOCAL_AGGREGATE_ONLY",
+      "firstSourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a",
+      "firstLaunch": "PASS_BOTH_ROLES_ON_APPROVED_REPAIRED_SOURCE",
+      "firstCompile": "PASS_BOTH_ROLES_SOURCE_ee6b1c0_AFTER_ONE_PRE_GO_TEST_REPAIR",
+      "firstPositive": "PASS_BOTH_ROLES_20TOP_65OUTCOMES_AFTER_STATIC_TEST_REPAIR",
+      "acceptedProductFindings": [
+        "S1 P1 NEW overflow test expects overflow for MaxInt64+0; no runtime failure yet.",
+        "S2 P2 known-prefix guard sensitivity missing because initial nil metadata masks totals.",
+        "S3 P2 full maximum fixed aggregate bound and saturation evidence missing."
+      ],
+      "workerEvidenceFindings": [
+        "Initial parallel PR-preflight/gate-unit sessions not retained: INDETERMINATE; captured repeats PASS7/7 and46/46 in50.891s, separate from code quality.",
+        "Initially held capture for another role-ack commit despite transition already committed1116141; root clarified and capture continued without wasted Go."
+      ],
+      "rootFindings": [
+        "read-only PowerShell brace/glob path mistakes; corrected, zero runtime effect",
+        "Unnecessary owner checkpoint after concrete order; owner corrected role routing, root continued unchanged scope.",
+        "Exact staging assertion initially included regenerated but unchanged MODULE_CATALOG.md; stopped before commit, corrected expected changed set. No product/runtime effect."
+      ],
+      "productRepairRounds": 1,
+      "parentSourceTestEdits": 0,
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null,
+      "feasibility": "docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json",
+      "workerAuditFindings": [
+        "Suggested root-relative go test ./backend/engine command corrected to governed go -C owned/backend test ./engine; not executed."
+      ],
+      "productQuality": "INDEPENDENT_REVIEW_PASS_BOUNDED_AGGREGATE",
+      "parentAssistance": [
+        "Root supplies shared capture infrastructure; worker source/test implementation remains independent.",
+        "Root pre-source static capture validation adds exact inventory and mutation labels, restoration-error retention.",
+        "Independent consolidated static findings before Go; abstract draft contract-sensitivity hint, no product/test edit."
+      ],
+      "resumeEvents": [
+        "Prior before-edit acknowledgment commit595087446ecda88b7f31c2fc01c66f137b67aa1f; worker resumed after turn interruption with source0/Go0, not a source repair."
+      ],
+      "acceptedRepairRounds": 1,
+      "repairCompleted": true,
+      "productSemanticDefectsEstablished": 0,
+      "staticReview": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "finalSourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+      "sourceTestRepairRounds": 1,
+      "productSemanticRepairRounds": 0,
+      "assessment": "docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "finalLocalEvidence": "each role compilePASS/positive20top65PASS/M01M02 semantic kills healthyPASS/restored10top38PASS",
+      "originalAttempts": 10,
+      "originalActualGoProcesses": 10,
+      "workerAttempts": 5,
+      "reviewerAttempts": 5,
+      "automaticRetries": 0,
+      "unexpectedNativeFailures": 0,
+      "finalDisposition": "FROZEN_LOCAL_AGGREGATE_ONLY",
+      "independentRawAudit": "docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json",
+      "workerNativeCompileSeconds": 7.110281199915335,
+      "workerNativeTestSeconds": 36.80315179983154,
+      "rootNativeCompileSeconds": 12.016206699889153,
+      "rootNativeTestSeconds": 39.64087379979901,
+      "closureEvidence": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
+      "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2",
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "bounded_product",
+        "productSemanticRepairRounds": 0,
+        "newTestRepairRounds": 1,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true,
+        "legacyAcceptedProductFindingsClass": "NEW_TEST_ORACLE_SENSITIVITY"
+      }
+    },
+    {
+      "id": "CCMAI-RUNTIME-072",
+      "workload": "One-line optional opaque-field legacy UI compatibility and NEW projection tests",
+      "start": "FRESH_LUNA_NO_SOL_DRAFT",
+      "status": "FROZEN_LOCAL_LEGACY_COMPATIBILITY_ONLY",
+      "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
+      "firstCompile": "BOTH_ROLES_FORCED_TYPECHECK_PASS_ON_REPAIRED_TEST_SOURCE",
+      "firstPositive": "BOTH_ROLES21/21PASS_ON_REPAIRED_TEST_SOURCE",
+      "acceptedProductFindings": [
+        "T1 P1 exact legacy expected projection adds three non-returned parsing keys",
+        "T2 P2 negative legacy validation lacks extension-present cases"
+      ],
+      "sourceTestRepairRounds": 1,
+      "productSemanticRepairRounds": 0,
+      "parentSourceTestEdits": 0,
+      "productQuality": "INDEPENDENT_REVIEW_PASS; first product unchanged after test-only repair",
+      "workerEvidenceFindings": [
+        "Minor handback labels workspace metadata HEAD5550485 as sourcecommit; root clarifies source08bab78 using correct blobs/hashes, no rerun or code repair."
+      ],
+      "rootFindings": [
+        "Guessed read-only paths corrected",
+        "Stale R071 index BUILD description corrected",
+        "Gate-unit inheritance clarification after worker launch; duplicate validation retained",
+        "R072-META-R01: missed subsidiary current state/status R071 projection sync discovered before closure; BLOCKED_CONTINUITY_DRIFT hold, root-only known-value reconciliation, no source/runtime replay."
+      ],
+      "parentAssistance": [
+        "Root supplies acceptance contract and consolidated static findings; no source/test draft or edits",
+        "Independent root-only capture infrastructure"
+      ],
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null,
+      "staticReview": "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "finalSourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
+      "staticApproval": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "acceptedRepairRounds": 1,
+      "repairCompleted": true,
+      "workerVitestInvocations": 1,
+      "workerTypecheckInvocations": 1,
+      "finalDisposition": "FROZEN_LOCAL_LEGACY_COMPATIBILITY_ONLY",
+      "reviewerVitestInvocations": 1,
+      "reviewerTypecheckInvocations": 1,
+      "automaticRetries": 0,
+      "unexpectedNativeFailures": 0,
+      "assessment": "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "finalLocalEvidence": "Each role21/21 and forcedtypecheck PASS; protected381/382, root source111stable; Go0",
+      "workerNativeVitestSeconds": 93.6809694,
+      "workerNativeTypecheckSeconds": 62.3097679,
+      "rootNativeVitestSeconds": 23.626717099919915,
+      "rootNativeTypecheckSeconds": 50.67406480014324,
+      "independentReviewCommit": "e80573944b40da0210c2631fb34754c30edb1beb",
+      "closureEvidence": "docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md",
+      "closureNativeInvocations": 0,
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "bounded_product",
+        "productSemanticRepairRounds": 0,
+        "newTestRepairRounds": 1,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true,
+        "legacyAcceptedProductFindingsClass": "NEW_TEST_ORACLE_SENSITIVITY"
+      }
+    },
+    {
+      "id": "CCMAI-RUNTIME-073",
+      "workload": "Saved adapter presence separate projector/panel/en-vi; five source paths",
+      "start": "FRESH_LUNA_NO_SOL_DRAFT",
+      "status": "FROZEN_LOCAL_PRESENCE_DISPLAY_UI_ONLY",
+      "taskClassification": {
+        "primary": "saved_receipt_ui_feature",
+        "secondary": [
+          "strict_schema_projection",
+          "test_oracle_sensitivity",
+          "component_i18n"
+        ],
+        "start": "FRESH_LUNA_NO_SOL_DRAFT"
+      },
+      "firstSourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
+      "firstCompile": "NOT_RUN_ORIGINAL_SOURCE",
+      "firstPositive": "NOT_RUN_ORIGINAL_SOURCE",
+      "sourceTestRepairRounds": 1,
+      "productSemanticRepairRounds": 0,
+      "parentSourceTestEdits": 0,
+      "workerFindings": [],
+      "rootFindings": [
+        "Read-only guessed panel/backend/config paths corrected before scope; zero source/runtime effect.",
+        "Pre-BUILD activation local/PRpreflight6/7 FAIL: currentMode DISPATCH_READY invalid phase; root corrected mode WORK_ORDER, tranche status unchanged.",
+        "Ambiguous repair ACK commit ownership dispatch; root resolved/committed worker ACK under metadata stewardship before edits, no additional source repair/native/operator wait.",
+        "Post-worker REVIEW transition progress-only buildInProgress still worker pending; root reconciles known actual result before formal acceptance, zero native/source replay.",
+        "Initial closure local/PR preflight6/7: missing top-level closer although roles.closer existed; root fixes recorded closer.",
+        "Initial docs-site build FAIL16.31s: relative .py runner hyperlink dead link; root changes it to repository code path reference, no tooling change."
+      ],
+      "parentAssistance": [
+        "Root contract/spec/inventory, consolidated independent static review, own capture and metadata; no implementation draft.",
+        "Root consolidated first-source F1/F2 oracle/fixture controls and F3 locale precision findings; no product/test edit.",
+        "Abstract F2 clarification: align stored complete with fabricated numeric pair so coverage guard rather than flag contradiction rejects it."
+      ],
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null,
+      "finalDisposition": "FROZEN_LOCAL_PRESENCE_DISPLAY_UI_ONLY",
+      "assessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "staticReview": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "acceptedRepairRounds": 1,
+      "repairCompleted": true,
+      "acceptedTestFindings": [
+        "F1 P2 unsafe boundary negatives start with invalid prefix; sum2 not unsafe",
+        "F2 P2 missing typedtotal and fabricatedprefix/missinghook contrasts"
+      ],
+      "acceptedProductPresentationFindings": [
+        "F3 P2 never-rounded claim and ambiguous response-counter labels"
+      ],
+      "productSemanticDefectsEstablished": 0,
+      "finalSourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
+      "staticApproval": "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "productPresentationRepairRounds": 1,
+      "prospectiveNewTests": 28,
+      "prospectiveSelectedTests": 49,
+      "workerVitestInvocations": 1,
+      "workerTypecheckInvocations": 1,
+      "workerNativeVitestSeconds": 14.554254,
+      "workerNativeTypecheckSeconds": 24.824122,
+      "workerEvidenceFindings": [
+        "Actual packet/source labels/counts/raw hashes coherent. Wrapper lacks timeout/report-success pretypecheck guard; completed commands passed, robustness not claimed."
+      ],
+      "review": "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md",
+      "reviewerVitestInvocations": 1,
+      "reviewerTypecheckInvocations": 1,
+      "rootNativeVitestSeconds": 24.327288299798965,
+      "rootNativeTypecheckSeconds": 44.55681239999831,
+      "automaticRetries": 0,
+      "unexpectedNativeFailures": 0,
+      "firstActualNative": "BOTH_ROLES_PASS_ON_REPAIRED_SOURCE_ORIGINAL_NOT_RUN",
+      "actualNewTests": 28,
+      "actualSelectedTests": 49,
+      "productQuality": "INDEPENDENT_REVIEW_PASS_AFTER_TEST_AND_PRESENTATION_REPAIR_ALGORITHM_UNCHANGED",
+      "normalizedQuality": {
+        "primaryTaskClass": "saved_receipt_ui_feature",
+        "productSemanticRepairRounds": 0,
+        "newTestRepairRounds": 1,
+        "productPresentationRepairRounds": 1,
+        "sharedDirectedRepairRounds": 1,
+        "rootFindingsExcludedFromWorkerProductQuality": true,
+        "provenance": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md"
+      },
+      "independentReviewCommit": "e519b14f70144e9ae028eab17974c607edd40ce7",
+      "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
+      "closureNativeInvocations": 0,
+      "localClosureCommit": "d32c1c7cb1193fea0b0c7e3f9f3c2473c7074b10"
+    }
+  ],
+  "taskFitClassification": {
+    "schemaVersion": "1",
+    "report": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+    "basis": "ROOT_REVIEW_OF_EXISTING_ACCEPTED_EVIDENCE_WITH_LUNA_READONLY_AUDIT",
+    "actualRoutingChanged": false,
+    "provisional": true,
+    "uniqueImplementationSamples": 5,
+    "sampleOverlap": "Five accepted implementation tranches unchanged; one separate fresh R074 documentary audit. readonly_contract_audit combines mixed R067 contribution and fresh R074, not two independent comparable trials. Task classes overlap; do not sum counts.",
+    "classes": [
+      {
+        "id": "bounded_product",
+        "tranches": [
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072",
+          "CCMAI-RUNTIME-073"
+        ],
+        "sampleCount": 3,
+        "assignment": "PREFER_FOR_BOUNDED_SPEC_WITH_INDEPENDENT_REVIEW",
+        "confidence": "REPEATED_NARROW_SIGNAL_LOW_GENERAL_CONFIDENCE"
+      },
+      {
+        "id": "readonly_contract_audit",
+        "tranches": [
+          "CCMAI-RUNTIME-067",
+          "CCMAI-RUNTIME-074"
+        ],
+        "sampleCount": 2,
+        "assignment": "BOUNDED_SOURCE_CALLGRAPH_DRAFT_WITH_MATERIAL_FACT_LINEAGE_AND_RISK_REVIEW",
+        "confidence": "LOW_TWO_HETEROGENEOUS_SAMPLES",
+        "implementationContributionSamples": 1,
+        "separateFreshAuditSamples": 1
+      },
+      {
+        "id": "directed_repair",
+        "tranches": [
+          "CCMAI-RUNTIME-068",
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072",
+          "CCMAI-RUNTIME-073"
+        ],
+        "sampleCount": 4,
+        "assignment": "SUITABLE_FOR_REVIEWER_SCOPED_REPAIR",
+        "confidence": "LOW_UNMATCHED_DIRECTED_SAMPLES"
+      },
+      {
+        "id": "test_oracle_sensitivity",
+        "tranches": [
+          "CCMAI-RUNTIME-067",
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072",
+          "CCMAI-RUNTIME-073"
+        ],
+        "sampleCount": 4,
+        "assignment": "AUTHOR_WITH_SEPARATE_CONTRACT_ORACLE_REVIEW",
+        "confidence": "REPEATED_FINDINGS_NO_MODEL_RANKING"
+      },
+      {
+        "id": "pinned_sdk_integration",
+        "tranches": [
+          "CCMAI-RUNTIME-068"
+        ],
+        "sampleCount": 1,
+        "assignment": "REQUIRE_EXACT_API_REVIEW_AND_CAPTURED_COMPILE",
+        "confidence": "LOW_ONE_SAMPLE"
+      },
+      {
+        "id": "evidence_capture",
+        "tranches": [
+          "CCMAI-RUNTIME-067",
+          "CCMAI-RUNTIME-068",
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072",
+          "CCMAI-RUNTIME-073"
+        ],
+        "sampleCount": 5,
+        "assignment": "REQUIRE_CAPTURE_CONTRACT_AND_INDEPENDENT_RAW_AUDIT",
+        "confidence": "LOW_MIXED_ASSISTANCE"
+      },
+      {
+        "id": "independent_closure_live_system",
+        "tranches": [],
+        "sampleCount": 0,
+        "assignment": "INSUFFICIENT_EVIDENCE_FOR_MODEL_SELECTION",
+        "confidence": "NOT_ESTABLISHED"
+      },
+      {
+        "id": "saved_receipt_ui_feature",
+        "tranches": [
+          "CCMAI-RUNTIME-073"
+        ],
+        "sampleCount": 1,
+        "assignment": "TRY_BOUNDED_PROJECTION_AND_COMPONENT_WITH_ORACLE_COPY_REVIEW",
+        "confidence": "LOW_ONE_FRESH_SAMPLE"
+      }
+    ],
+    "futureCollection": [
+      "primary/secondary task class before dispatch",
+      "fresh/inherited and integration complexity",
+      "first committed source and first actual compile/positive",
+      "product vs test vs evidence vs root findings",
+      "separate semantic/test repair counts and parent assistance",
+      "final disposition after independent review"
+    ],
+    "telemetry": "Token/cost/model-time not measured; native walltime cannot rank efficiency.",
+    "legacyFieldWarning": "R071/R072 acceptedProductFindings are NEW-test findings. R071 historical productRepairRounds1 means source/test repair, not product semantics. Retained verbatim; use normalizedQuality.",
+    "uniqueReadonlyAuditTranches": 1
+  },
+  "readonlyAuditSamples": [
+    {
+      "id": "CCMAI-RUNTIME-074",
+      "sampleType": "FRESH_SOURCE_ONLY_DOCUMENTARY_AUDIT",
+      "taskClassification": {
+        "primary": "readonly_contract_audit",
+        "secondary": [
+          "source_callgraph",
+          "evidence_lineage",
+          "integration_risk_inventory"
+        ],
+        "sampleType": "READONLY_AUDIT_NOT_IMPLEMENTATION"
+      },
+      "firstAuditCommit": "076d3319f2e84c681a1835e4ce4cde8541334d7b",
+      "finalAuditCommit": "565b1175bf83f3d4e89dabaf94615ee94625c6e4",
+      "firstDisposition": "CHANGES_REQUIRED_DOCUMENTARY",
+      "documentaryRepairRounds": 2,
+      "substantiveDocumentRepairRounds": 1,
+      "mechanicalCitationRepairRounds": 1,
+      "findings": [
+        "F1_HISTORICAL_EFFECT_QUALIFICATION",
+        "F2_FAILED_LINEAGE_LIMITS",
+        "F3_FUTURE_RISK_BOUNDARY",
+        "F4_DEFAULT_MODE_SEMANTICS",
+        "F5_MECHANICAL_CITATION_REFERENCES"
+      ],
+      "productOrCodeDefects": "NOT_APPLICABLE_NO_PRODUCT_CHANGES",
+      "applicationNativeInvocations": 0,
+      "parentArtifactEdits": 0,
+      "parentAssistance": "Spec/baseline/current-MCP clue/bootstrap fallback/citation/pacing/consolidated findings/F2 addendum; no draft",
+      "review": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
+      "assessment": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
+      "finalDisposition": "FROZEN_LOCAL_DOCUMENTARY_DOSSIER",
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null,
+      "independentReviewCommit": "1d95a18e22d79c59ad47eb552688ffbfc2e96012",
+      "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+      "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-072",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_LEGACY_UI_EXTENSION_COMPATIBILITY",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r072_worker",
+    "repairWorker": "Codex /root/r072_worker",
+    "commitSteward": "Codex /root/r072_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Jobs/job-detail/run-observation.ts",
+    "frontend/src/__tests__/run-observation-adapter-compat.spec.ts",
+    "docs/work_orders/CCMAI_RUNTIME_072.md"
+  ],
+  "prohibitedEffects": [
+    "existing_test_edit",
+    "backend_edit",
+    "ui_presence_exposure",
+    "legacy_validation_relaxation",
+    "other_unknown_key_acceptance",
+    "provider_network_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "root_source_test_edit",
+    "automatic_retry",
+    "push_merge_deploy",
+    "full_roadmap_live_governance_claim"
+  ],
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
+  "spec": "docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md",
+  "ownerAuthorization": "Standing next/continue and explicit orchestrator/reviewer delegation authorize bounded local compatibility repair and independent review/closure. No new external effects or governance behavior. Root selects this R1 scope; no repeated human checkpoint.",
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "executionBudget": {
+    "workerMaxVitest": 2,
+    "reviewerMaxVitest": 2,
+    "aggregateMaxVitest": 4,
+    "workerMaxTypecheck": 1,
+    "reviewerMaxTypecheck": 1,
+    "maxGo": 0,
+    "automaticRetries": 0
+  },
+  "claimScope": "Pure UI saved-observation compatibility; no governance decision, new numeric exposure or live proof."
+}

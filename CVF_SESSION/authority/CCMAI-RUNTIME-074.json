@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-074",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_READONLY_SOURCE_AUDIT",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r074_auditor",
+    "repairWorker": "Codex /root/r074_auditor",
+    "commitSteward": "Codex /root/r074_auditor",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md",
+    "docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json",
+    "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json",
+    "docs/work_orders/CCMAI_RUNTIME_074.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "tooling_dependency_workflow_change",
+    "existing_evidence_or_seed_edit",
+    "provider_network_call",
+    "db_use",
+    "config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "runtime_execution",
+    "push_merge_deploy",
+    "live_governance_or_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "executionBudget": {
+    "workerMaxNative": 0,
+    "reviewerMaxNative": 0,
+    "aggregateMaxNative": 0,
+    "workerUsedNative": 0,
+    "reviewerUsedNative": 0,
+    "automaticRetries": 0,
+    "currentPermittedNativeInvocations": 0
+  },
+  "ownerAuthorization": "Standing next/delegated root orchestrator routing; bounded read-only source/doc audit, independent review and local dossier closure; no application/security/runtime behavior change.",
+  "claimScope": "Static source contracts and prior evidence attribution only; no new runtime or AI governance proof."
+}

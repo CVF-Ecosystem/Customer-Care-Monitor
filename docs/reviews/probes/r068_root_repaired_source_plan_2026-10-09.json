@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1",
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "backendArchiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "backendArchiveMembers": 218,
+  "newTestNames": [
+    "TestUsagePresencePositive",
+    "TestUsagePresenceM01AbsentNullDetector",
+    "TestUsagePresenceM01ExplicitZeroHealthyControl",
+    "TestUsagePresenceM02InvalidDetector",
+    "TestUsagePresenceM02ValidIntegerHealthyControl",
+    "TestUsagePresenceDuplicateRules",
+    "TestUsagePresenceRawBoundsAndMalformedJSON",
+    "TestUsagePresenceSDKAdapters"
+  ],
+  "allTopLevelTestNames": [
+    "TestOpenAICompatibleGoiVaDocPhanHoi",
+    "TestXAIDungTenThamSoCu",
+    "TestOpenAICompatibleBaoLoiRoRang",
+    "TestBuildQCPrompt",
+    "TestBuildQCPromptWithSkipConditions",
+    "TestBuildClassificationPrompt",
+    "TestFormatChatTranscript",
+    "TestFormatChatTranscriptFallbackSenderType",
+    "TestFormatChatTranscriptCarriesSourceIdentity",
+    "TestPromptsRequireEvidenceRefs",
+    "TestUsagePresencePositive",
+    "TestUsagePresenceM01AbsentNullDetector",
+    "TestUsagePresenceM01ExplicitZeroHealthyControl",
+    "TestUsagePresenceM02InvalidDetector",
+    "TestUsagePresenceM02ValidIntegerHealthyControl",
+    "TestUsagePresenceDuplicateRules",
+    "TestUsagePresenceRawBoundsAndMalformedJSON",
+    "TestUsagePresenceSDKAdapters"
+  ],
+  "mutations": [
+    {
+      "label": "M01",
+      "path": "backend/ai/usage_presence.go",
+      "old": "return AIUsageCount{Status: status}",
+      "new": "if status == AIUsagePresenceAbsent || status == AIUsagePresenceNull { return knownAIUsageCount(0) }; return AIUsageCount{Status: status}",
+      "detector": "TestUsagePresenceM01AbsentNullDetector",
+      "healthy": "TestUsagePresenceM01ExplicitZeroHealthyControl"
+    },
+    {
+      "label": "M02",
+      "path": "backend/ai/usage_presence.go",
+      "old": "return usageCountState(AIUsagePresenceInvalid)",
+      "new": "return knownAIUsageCount(0)",
+      "detector": "TestUsagePresenceM02InvalidDetector",
+      "healthy": "TestUsagePresenceM02ValidIntegerHealthyControl"
+    }
+  ],
+  "workerFirstSource": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+  "workerFirstBuildAttempt": "Launch failure retained; counted 1/1, no Go process; reviewer owns first actual compiler invocation; no worker retry",
+  "claimScope": "Local parsing/adapter mapping, no provider or runtime governance proof",
+  "repair": "One minimal source repair from first compiler pointer/value finding; nil conversion test added; whole-backend pass NOT ESTABLISHED",
+  "approval": "Root independent static source and own exact-source test plan accepted; four Go tests only, no build retry"
+}

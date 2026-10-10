@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "ordinal": 3,
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "sourceArchiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "goExecutable": "C:\\Program Files\\Go\\bin\\go.exe",
+  "goResolutionCandidates": [
+    "C:\\Program Files\\Go\\bin\\go.exe",
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Go-1.26.7\\go\\bin\\go.exe"
+  ],
+  "command": "go -C backend test -json ./ai -run ^TestUsagePresenceM02(InvalidDetector|ValidIntegerHealthyControl)$ -count=1",
+  "environment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "startUtc": "2026-10-09T16:43:56.9331111+00:00",
+  "durationMilliseconds": 13681,
+  "processTimeoutSeconds": 600,
+  "processStarted": true,
+  "processTimedOut": false,
+  "processFailure": null,
+  "exitCode": 1,
+  "physicalManifestBefore": {
+    "path": "M02-test.backend-manifest-before.json",
+    "sha256": "87fcfccc52f458396a7ded195e89c9202ca07b400635d7ecdb31f5dbf5c25638",
+    "members": 218
+  },
+  "physicalManifestAfter": {
+    "path": "M02-test.backend-manifest-after.json",
+    "sha256": "87fcfccc52f458396a7ded195e89c9202ca07b400635d7ecdb31f5dbf5c25638",
+    "members": 218
+  },
+  "physicalManifestMatchesExpected": true,
+  "physicalManifestCaptureFailure": null,
+  "jsonEventCount": 57,
+  "jsonParseFailure": null,
+  "stdout": {
+    "path": "M02-test.stdout.jsonl.bin",
+    "bytes": 13444,
+    "sha256": "a9f07cc1fc6b942ab64ffb118de59538c212c67acc975873a406d5bfc93b3d77"
+  },
+  "stderr": {
+    "path": "M02-test.stderr.bin",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

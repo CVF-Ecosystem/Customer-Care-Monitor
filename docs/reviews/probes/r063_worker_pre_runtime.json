@@ -1,0 +1,9 @@
+{
+  "checkpointSource": "55e836a1b980b3e5d4075ceb33466786c860f963",
+  "campaignSource": "661113d888c5886331c9b4eb99783a215cf8c58f",
+  "backendMemberBytesEqual": true,
+  "backendFileCount": 213,
+  "campaignArchiveSha256": "5e2978b413ce09afa9168c5bc988df8dd00c996e76390119e5caa89a8c8be24b",
+  "runnerSha256": "01fd812e208de6e6fcf6291d00b46b4e78144f590e7574b6d622c02ac1593b2e",
+  "goInvocations": 0
+}

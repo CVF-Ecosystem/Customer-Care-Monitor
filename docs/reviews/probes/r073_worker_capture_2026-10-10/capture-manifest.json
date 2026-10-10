@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "tranche": "CCMAI-RUNTIME-073",
+  "role": "IMPLEMENTATION_WORKER_VALIDATION_ONLY",
+  "approval": "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+  "sourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
+  "workspaceHead": "96246a060b46318a9d8e0de319c26bfef870fcb3",
+  "firstSourceNativeDisposition": "NOT_RUN",
+  "currentSourceLocked": true,
+  "liveGovernanceEvidenceRequired": true,
+  "nodeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+  "nodeVersionObservedBeforeCampaign": "v24.19.0",
+  "packageVersions": {
+    "vitest": "4.1.0",
+    "vue-tsc": "3.2.6",
+    "vue": "3.5.30",
+    "vue-i18n": "9.14.5",
+    "happy-dom": "20.8.4",
+    "typescript": "5.9.3"
+  },
+  "expectedReporterInventory": {
+    "files": 5,
+    "tests": 49,
+    "newFile": 28,
+    "inherited": 21,
+    "actual": "reporter determines"
+  },
+  "permittedInvocations": {
+    "vitest": 1,
+    "forcedVueTsc": 1,
+    "go": 0,
+    "browser": 0,
+    "fullFrontendBuild": 0
+  },
+  "productPaths": [
+    "frontend/src/views/Jobs/job-detail/adapter-usage-presence.ts",
+    "frontend/src/__tests__/adapter-usage-presence.spec.ts",
+    "frontend/src/components/ui/RunObservationPanel.vue",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/i18n/vi.ts"
+  ],
+  "vitestArgv": [
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile.json=../docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json",
+    "src/__tests__/run-observation.spec.ts",
+    "src/__tests__/run-observation-panel.spec.ts",
+    "src/__tests__/run-observation-job-detail.spec.ts",
+    "src/__tests__/run-observation-adapter-compat.spec.ts",
+    "src/__tests__/adapter-usage-presence.spec.ts"
+  ],
+  "vueTscArgv": [
+    "node_modules/vue-tsc/bin/vue-tsc.js",
+    "-b",
+    "--force"
+  ]
+}

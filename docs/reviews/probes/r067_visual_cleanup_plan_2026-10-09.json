@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "date": "2026-10-09",
+  "phase": "BUILD",
+  "workerRole": "REPAIR_WORKER / BUILD COMMIT_STEWARD",
+  "baseCommit": "504df9b5da0800fe7efe76b24c9e959f5f5595b9",
+  "finding": {
+    "source": "Root static audit of the existing synthetic visual fixture.",
+    "path": "docs/reviews/probes/r067_visual_fixture.mjs",
+    "issue": "The fixture retained its node_modules junction and only delayed 300 ms after server.kill(), without verifying process exit."
+  },
+  "repair": {
+    "processExit": "On cleanup, send one kill only when Vite is still active, await its exit event for at most 5000 ms, and fail visibly on timeout.",
+    "junction": "Remove only the fixture node_modules junction after lstat confirms a symbolic link and realpath confirms its target equals the cached frontend/node_modules path; use nonrecursive rmdirSync.",
+    "retainedArtifacts": "Keep OS-temp screenshots, logs, and fixture files; do not recursively remove scratch.",
+    "sourceScope": [
+      "docs/reviews/probes/r067_visual_fixture.mjs"
+    ]
+  },
+  "validation": {
+    "staticOnly": [
+      "node --check",
+      "git diff --check",
+      "scoped/default/PR downstream preflight"
+    ],
+    "notRun": [
+      "browser visual fixture",
+      "Vitest",
+      "frontend build",
+      "Go"
+    ],
+    "executionStatus": "NOT RUN; await independent root audit and root build disposition before any visual invocation.",
+    "staticResults": {
+      "sourceAst": "PASS: 8 TypeScript/SFC source files, zero syntax errors.",
+      "nodeCheck": "PASS.",
+      "gitDiffCheck": "PASS.",
+      "downstreamPreflights": {
+        "scoped": "PASS7/7",
+        "default": "PASS7/7",
+        "prRange": "PASS7/7"
+      }
+    }
+  },
+  "limitation": "Cleanup logic is statically inspected only; if Vite fails to exit within 5 seconds, the script fails visibly and leaves the verified junction untouched to avoid disrupting a live process. No process exit or Windows junction removal has been executed in this repair."
+}

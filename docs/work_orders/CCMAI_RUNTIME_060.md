@@ -1,0 +1,37 @@
+# CCMAI-RUNTIME-060 — Bounded Analyzer execution observation
+
+Status: CHANGES_REQUIRED
+
+Date: 2026-10-07 (Asia/Saigon). R2. Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER; Codex `/root/r059_worker` IMPLEMENTATION_WORKER / REPAIR_WORKER / BUILD COMMIT_STEWARD, model `gpt-6.1-sol`, reasoning `medium`, explicitly owner-selected. Owner `ok, do it` authorizes this delegated route, superseding prior no-subagent/root-only proposal for R059. Separate immutable seed committed at 2f39532ef196e69fd919e93aaf34f82aee5dde20. No product BUILD before worker rehydration/declaration and committed BUILD acknowledgment.
+
+## Bound contract
+
+[DESIGN/SPEC EX01..12](../reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md) and [bounded planning packet](../reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md) provide the observation contract, paths, test/detector matrix and campaign requirements. Their old proposed root-worker/unassigned-reviewer/no-subagent text is historical, superseded only by this explicit owner route and seed. Accepted source baseline05c59e9978e5cf108b0d9118f64c7454805ec64e; planning8a865db86ba3067824a25379efb3281d6241d5d6. Root never changes worker canonical source/tests or self-implements this R2 work. Existing R058/FREEZE and failures protected.
+
+Allowed existing source paths: backend/engine/analyzer.go and backend/engine/source_preparation_receipt.go (Summary composer only). New source/tests: backend/engine/source_execution_receipt.go, source_execution_receipt_test.go, source_execution_receipt_db_test.go. Existing ownership helper/provider adapters/models untouched; exactly one existing test amendment below, all other tests byte-identical; standard session/status/catalog/new evidence paths per gate. No schema/query/selection/provider/retry/prompt/pricing/permission/lifecycle/checkpoint/notification policy change. Existing source_preparation/scalars remain unchanged. Keep source_execution logical-method observation distinct from HTTP/billable calls, pricing/rule/human/Gov proof; fixed privacy enums/UUIDs only,200calls/200members/128KiB, separate existing preparation256KiB envelope.
+
+Pre-BUILD consolidated semantics: interruption applies only when provider method has not returned. Publication panic after return keeps RESPONSE_RETURNED plus pending publication and stop PANIC; no double invocation terminal count. Usage write begins before existing Create; if result remains unobserved on panic use WRITE_OUTCOME_UNKNOWN, not NOT_ATTEMPTED or WRITE_SUCCEEDED. Single parse state NOT_SEPARATELY_OBSERVABLE. These refinements preserve observation accuracy/control flow and are recorded before source edits.
+
+## Execution / evidence / handback
+
+Earliest open WORK_ORDER after inherited INTAKE/DESIGN/SPEC; seed before activation. Worker rehydrates compact/current truth, doctor/read learning, commits BUILD tuple/acknowledgment before edits, then implements only seed paths. Commit source checkpoint before exact Git archive runtime. All original assertions/seeds/packets retained; only exact designated old-test amendment allowed. Worker max1campaign/4Go, independent root max1campaign/4Go, aggregate2/8. Go1 grouped positives new pure/DB plus selected old regressions; Go2 applied M01 false interface invocations before call; Go3 restored baseline then M02 stored-terminal-only execution receipt erasure; Go4 restored healthy new/target controls. No exploratory Go build/vet, no automatic retry. Positive runtime480s/attach600s, focused180/300, readiness90; retain partial raw output/container state before cleanup. Preserve actual test identities/counts/exits/sha, semantic named mutation kills, lossless diff/restoration207+files and scoped resource absence. Existing Go default vet through tests is not a separate explicit vet proof.
+
+Only cached offline Docker/Go, readonly archive/module cache, internal disposable synthetic MySQL/no host ports/private task cache. No new pull/dependencies/external provider/channel/config/credential/customer/persistent DB/live sync/notifications; task-prefixed resources only, existing ccma resources untouched. Test doubles prove application behavior only, no CVF governance/live/full S2/hosted claim.
+
+Before each commit: default/PR/exact staged preflight, catalogsPS5.1+7, diff/secret/protected, final docs build from root with npm.cmd --prefix docs. Gate46PASS52.797s inherited unchanged tooling at9042f91; rerun only if new tooling concern. Restage receipt then repeat staged gate. Source/evidence SHAs actual already committed; never fabricate receipt own SHA. Return REVIEW_PENDING with source/evidence and budget/failure/restoration/cleanup, then root independent source/EX01..12/test/mutation review. Same-scope source repair stays worker; reviewer fixes small authorized metadata directly. At third repair without independent root cause stop for cost disposition. No self-approval/FREEZE/push/merge/deploy under this order. Full S2/global F02/live/governance/hosted OPEN; Facebook/Zalo OA parked.
+
+## Exact compatibility successor boundary
+
+R059 parked source/ack/campaign/Go0; original seed immutable, not recertified. Root consolidated audit and owner autonomous-disposition instruction choose [exact4-line amendment](../reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md) only in backend/engine/source_preparation_receipt_db_test.go / TestSPOrdinaryExplicitAndProgressPersistence after deleting source_preparation: assert source_execution exists, then delete it before unchanged scalar-count/value assertions. All other old tests and formatting unchanged. This separately seeded R060 adds that one path; aggregate budget remains worker1/4Go + reviewer1/4Go across R059/R060, no reset. Same worker gpt-6.1-sol medium/root independent reviewer. Worker source checkpoint before campaign, no new agent or routine confirmation.
+
+## Accepted R1 repair disposition before edits
+
+Root independently verified failed evidence56f5f85; R060-R1-01 permits only NEW EX UUID-positive fixture/safe binding detector repair under unchanged seed. Worker fresh BUILD acknowledgment before edits; no second worker campaign. Repaired source handback without new Go; root originally unstarted1/4Go independently validates positives/M01/M02/restored. Original failed1Go retained, planned total5/8 with original max2campaigns. See [formal disposition](../reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md). Original four-call worker campaign instruction is historical incomplete evidence, not authority for retry.
+
+## Independent campaign result
+
+CHANGES_REQUIRED R060-R2-01 at a7edba2. Original worker/reviewer campaigns both consumed1Go each, no runtime under R060. Separately seeded R061 needed for only NEW EX fallback fault contract and one root successor campaign; [formal review/cost](../reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md). Product/oldtests/packets unchanged; no acceptance or closure.
+
+## Successor disposition
+
+R060 historical CHANGES_REQUIRED/superseded; original failed campaigns remain failed and original build/test snapshots are not recertified. R061 independently accepts bounded observation at d10e164 and settles R1/R2 findings; [review](../reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md). R061 scoped local closure separate.

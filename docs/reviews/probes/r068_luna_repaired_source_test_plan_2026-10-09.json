@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "1.0",
+  "tranche": "CCMAI-RUNTIME-068",
+  "worker": "Codex /root/r068_worker",
+  "model": "gpt-6-luna",
+  "reasoningEffort": "xhigh",
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "firstSourceCommit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+  "planningBaseline": "9b951d50908c504dd7de44be516f88e86287f5de",
+  "freshImplementation": true,
+  "solImplementationDraftHandedOff": false,
+  "sourceRepair": {
+    "repairCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+    "acceptedRootFinding": "Anthropic Messages.New returns *anthropic.Message; converter now accepts that pointer, returns unavailable on nil, and NEW pure SDK test covers nil.",
+    "sourceStaticReview": "ROOT_ACCEPTED_NO_REMAINING_SOURCE_OR_TEST_BEHAVIOR_FINDING",
+    "firstCompileFailurePreserved": true,
+    "postRepairWholeBackendCompile": "NOT_ESTABLISHED_NO_BUILD_BUDGET_REMAINS"
+  },
+  "sourcePaths": [
+    "backend/ai/provider.go",
+    "backend/ai/openai_compatible.go",
+    "backend/ai/claude.go",
+    "backend/ai/gemini.go",
+    "backend/ai/usage_presence.go",
+    "backend/ai/usage_presence_test.go"
+  ],
+  "exactSourcePackage": {
+    "archive": "git archive --format=tar <sourceCommit> backend",
+    "expectedPhysicalBackendMembers": 218,
+    "testPackage": "backend/ai",
+    "topLevelTestCount": 18,
+    "topLevelNewTestCount": 8,
+    "topLevelExistingTestNames": [
+      "TestBuildQCPrompt",
+      "TestBuildQCPromptWithSkipConditions",
+      "TestBuildClassificationPrompt",
+      "TestFormatChatTranscript",
+      "TestFormatChatTranscriptFallbackSenderType",
+      "TestFormatChatTranscriptCarriesSourceIdentity",
+      "TestPromptsRequireEvidenceRefs",
+      "TestOpenAICompatibleGoiVaDocPhanHoi",
+      "TestXAIDungTenThamSoCu",
+      "TestOpenAICompatibleBaoLoiRoRang"
+    ],
+    "topLevelNewTestNames": [
+      "TestUsagePresencePositive",
+      "TestUsagePresenceM01AbsentNullDetector",
+      "TestUsagePresenceM01ExplicitZeroHealthyControl",
+      "TestUsagePresenceM02InvalidDetector",
+      "TestUsagePresenceM02ValidIntegerHealthyControl",
+      "TestUsagePresenceDuplicateRules",
+      "TestUsagePresenceRawBoundsAndMalformedJSON",
+      "TestUsagePresenceSDKAdapters"
+    ],
+    "noSkipExpected": true,
+    "subtestsAreNotCountedAsTopLevelTests": true,
+    "backendArchiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35"
+  },
+  "workerCampaignRunner": {
+    "path": "docs/reviews/probes/r068_luna_test_campaign_capture.ps1",
+    "approval": "ROOT STATIC APPROVAL REQUIRED BEFORE ANY WORKER GO TEST",
+    "approvalTokenFormat": "APPROVED bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+    "runnerReviewStatus": "PENDING_ROOT_STATIC_REVIEW",
+    "runnerRequirements": [
+      "Uses the exact committed backend archive extracted to an owned TEMP directory, not the live shared worktree.",
+      "Captures a whole-backend physical member manifest before and after every Go test invocation.",
+      "Before each mutation test invocation, checks that exactly ai/usage_presence.go differs from the complete committed baseline and that test files are unchanged.",
+      "After each mutation, restores the source and verifies complete backend physical equality to baseline before proceeding.",
+      "Captures each Go test as -json output with separate native stdout and stderr files, typed exit, timeout, and owned-process cleanup.",
+      "Only named detector top-level and child-subtest assertion failures with passing healthy controls count as mutation detections; panic, build failure, launch failure, timeout, unexpected test result, and skips do not count.",
+      "Creates and verifies a second actual committed backend tar separately from the deterministic before/after physical ZIP equality.",
+      "Retains scratch and writes a separately owned TEMP raw backup of evidence, final summary, committed tars, and physical ZIPs with byte/hash verification.",
+      "Archive, extraction, inventory, summary, backup, restoration, and finalization failures produce typed failure evidence and cannot report completed=true.",
+      "Makes exactly four worker Go test invocations if approved; no automatic retry."
+    ],
+    "environment": {
+      "GOPROXY": "off",
+      "GOSUMDB": "off",
+      "GOTOOLCHAIN": "local",
+      "CGO_ENABLED": "0"
+    },
+    "networkBoundary": "Existing ai-package loopback httptest fixtures only; NEW serialized fixtures and SDK conversion tests open no sockets. No provider/external network, database, config, credential, customer, engine, pricing, receipt, storage, frontend, dependency, workflow, or core effects."
+  },
+  "workerGoBudget": {
+    "maximumInvocations": 5,
+    "usedInvocations": 1,
+    "buildAttempts": {
+      "maximum": 1,
+      "used": 1,
+      "result": "FAILED_TO_START_GO_MULTIPLE_CANDIDATES_INVALID_LAUNCH_SOURCE",
+      "processStarted": false,
+      "compilerResult": "NONE"
+    },
+    "testInvocations": {
+      "maximum": 4,
+      "used": 0,
+      "status": "NOT_RUN_WAITING_ROOT_STATIC_APPROVAL_OF_REPAIRED_RUNNER_AND_PLAN"
+    },
+    "automaticRetry": false,
+    "noAdditionalWorkerBuildOrWorkerTestsBeforeStaticApproval": true
+  },
+  "reviewerCampaign": {
+    "owner": "Codex /root",
+    "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+    "goBudgetStatus": "EXHAUSTED_5_OF_5",
+    "independentTestResults": "PASS_4_OF_4",
+    "evidenceSummary": "docs/reviews/probes/r068_root_tests_actual_summary.json",
+    "separateFromWorkerBudget": true
+  },
+  "workerTestInvocations": [
+    {
+      "ordinal": 1,
+      "kind": "positive-ai-package",
+      "command": "go -C backend test -json ./ai -count=1",
+      "expected": "PASS all 18 source-inventoried top-level tests, no skip, no panic/timeout/build failure",
+      "result": "NOT_RUN"
+    },
+    {
+      "ordinal": 2,
+      "kind": "M01-missing-is-not-known-zero",
+      "command": "go -C backend test -json ./ai -run ^TestUsagePresenceM01(AbsentNullDetector|ExplicitZeroHealthyControl)$ -count=1",
+      "mutation": {
+        "source": "backend/ai/usage_presence.go",
+        "before": "return AIUsageCount{Status: status}",
+        "after": "if status == AIUsagePresenceAbsent || status == AIUsagePresenceNull { return knownAIUsageCount(0) }; return AIUsageCount{Status: status}",
+        "onlyChangedBackendMember": "ai/usage_presence.go",
+        "testFilesUnchanged": true
+      },
+      "detector": "TestUsagePresenceM01AbsentNullDetector",
+      "healthyControl": "TestUsagePresenceM01ExplicitZeroHealthyControl",
+      "expected": "Named detector and child assertion fail; healthy control passes; completed test assertion exit 1; no panic/build/timeout/skip/unexpected test result",
+      "result": "NOT_RUN"
+    },
+    {
+      "ordinal": 3,
+      "kind": "M02-invalid-count-is-not-known-zero",
+      "command": "go -C backend test -json ./ai -run ^TestUsagePresenceM02(InvalidDetector|ValidIntegerHealthyControl)$ -count=1",
+      "mutation": {
+        "source": "backend/ai/usage_presence.go",
+        "before": "return usageCountState(AIUsagePresenceInvalid)",
+        "after": "return knownAIUsageCount(0)",
+        "onlyChangedBackendMember": "ai/usage_presence.go",
+        "testFilesUnchanged": true
+      },
+      "detector": "TestUsagePresenceM02InvalidDetector",
+      "healthyControl": "TestUsagePresenceM02ValidIntegerHealthyControl",
+      "expected": "Named detector and child assertion fail; healthy control passes; completed test assertion exit 1; no panic/build/timeout/skip/unexpected test result",
+      "result": "NOT_RUN"
+    },
+    {
+      "ordinal": 4,
+      "kind": "restored-new-tests",
+      "command": "go -C backend test -json ./ai -run ^TestUsagePresence -count=1",
+      "preconditions": [
+        "The one mutated product member is byte-restored after each mutation, with complete backend manifest equality verified before restored tests."
+      ],
+      "expected": "PASS all 8 NEW top-level tests and child tests with no skips",
+      "result": "NOT_RUN",
+      "finalizationChecks": [
+        "Second committed tar equality and deterministic physical ZIP equality are checked after restored tests; verified raw backup includes all actual archives and final summary."
+      ]
+    }
+  ],
+  "evidenceContract": {
+    "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+    "initialWorkerBuildLaunchFailureAndFirstSourceCompileFailureRemainImmutable": true,
+    "physicalManifestBeforeAndAfterEachGoTest": true,
+    "oneRealProductSourceMutationPerDetectorInvocation": true,
+    "completeBackendRestorationAfterEachMutation": true,
+    "secondCommittedTarByteAndShaEqualitySeparateFromPhysicalZipEquality": true,
+    "separateNativeStdoutStderrAndTypedExitPerTest": true,
+    "rawEvidenceAndArchiveTEMPBackupIsByteAndHashVerified": true,
+    "rawResponseBytesNeverStoredInUsagePresenceMetadata": true,
+    "docsBuildAtInitialAcknowledgment": "NOT_RUN; later root docs builds do not retroactively establish it"
+  },
+  "reviewRouting": {
+    "rootIndependentReviewer": "Codex /root",
+    "sourceStaticReview": "ACCEPTED",
+    "runnerAndPlanStaticApprovalRequiredBeforeWorkerGoTest": true,
+    "workerOwnsSourceTestsMutationsAndWorkerCaptureEvidence": true,
+    "rootOwnsIndependentCampaignClosureAndPublication": true
+  },
+  "rootMinorEvidenceRepairs": "Root SESSION_SYNC_STEWARD supplied missing receiptPath metadata, labeled the pre-final-summary backup manifest hash, and corrected plan timing/attempt wording. No product/test/source behavior edit."
+}

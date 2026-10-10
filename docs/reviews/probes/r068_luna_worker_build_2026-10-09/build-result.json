@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "commit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+  "command": "go -C backend build ./...",
+  "environment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "startUtc": "2026-10-09T16:03:32.2505939+00:00",
+  "durationMilliseconds": 187,
+  "processStarted": false,
+  "processStartFailure": "Exception calling \"Start\" with \"0\" argument(s): \"An error occurred trying to start process 'C:\\Program Files\\Go\\bin\\go.exe C:\\Users\\tiennm\\AppData\\Local\\Programs\\Go-1.26.7\\go\\bin\\go.exe' with working directory 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI'. The system cannot find the file specified.\"",
+  "exitCode": null,
+  "invocationCount": 1,
+  "stdout": {
+    "path": "build.stdout.bin",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "stderr": {
+    "path": "build.stderr.bin",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "sourceManifest": {
+    "path": "source-tree-manifest.txt",
+    "sha256": "b6f39e1138b35be4a4b31f2e991fdea7696b0877324d64b8968158fc9bccebe7",
+    "entries": 1565
+  },
+  "archiveBefore": {
+    "path": "source-before.tar",
+    "sha256": "ad6774c73b8ebf8cd5c59bfe6a46063fd30088acd28db4fd0780f79af897014c",
+    "bytes": 500899840
+  },
+  "archiveAfter": {
+    "path": "source-after.tar",
+    "sha256": "ad6774c73b8ebf8cd5c59bfe6a46063fd30088acd28db4fd0780f79af897014c",
+    "bytes": 500899840
+  },
+  "archiveRestoredEqual": true
+}

@@ -1,0 +1,134 @@
+{
+  "capturedAtUtc": "2026-10-10T07:51:17.8240136+00:00",
+  "sourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
+  "workspaceHead": "96246a060b46318a9d8e0de319c26bfef870fcb3",
+  "sourceChecks": [
+    {
+      "path": "frontend/src/views/Jobs/job-detail/adapter-usage-presence.ts",
+      "beforePhysical": "1630137680fb1b09d6cddd5ba87a80b2f35437ee9934fc158388c06c2afda313",
+      "afterVitestPhysical": "1630137680fb1b09d6cddd5ba87a80b2f35437ee9934fc158388c06c2afda313",
+      "afterTscPhysical": "1630137680fb1b09d6cddd5ba87a80b2f35437ee9934fc158388c06c2afda313",
+      "beforeBlob": "03ede8aeddc96f93dec73a2aea445b8a43e01c61",
+      "afterVitestBlob": "03ede8aeddc96f93dec73a2aea445b8a43e01c61",
+      "afterTscBlob": "03ede8aeddc96f93dec73a2aea445b8a43e01c61",
+      "unchanged": true
+    },
+    {
+      "path": "frontend/src/__tests__/adapter-usage-presence.spec.ts",
+      "beforePhysical": "ce7d1054e349bcd3325b1fb3948ed0ecb0a4299b4d76b107830bdabe3458a836",
+      "afterVitestPhysical": "ce7d1054e349bcd3325b1fb3948ed0ecb0a4299b4d76b107830bdabe3458a836",
+      "afterTscPhysical": "ce7d1054e349bcd3325b1fb3948ed0ecb0a4299b4d76b107830bdabe3458a836",
+      "beforeBlob": "9e7409505fb9da6b399f45cb7e08d3b6b6c34efd",
+      "afterVitestBlob": "9e7409505fb9da6b399f45cb7e08d3b6b6c34efd",
+      "afterTscBlob": "9e7409505fb9da6b399f45cb7e08d3b6b6c34efd",
+      "unchanged": true
+    },
+    {
+      "path": "frontend/src/components/ui/RunObservationPanel.vue",
+      "beforePhysical": "323325099a64bbbd72740e73965570ba6c8ee3de836e514c0963307a24144ab2",
+      "afterVitestPhysical": "323325099a64bbbd72740e73965570ba6c8ee3de836e514c0963307a24144ab2",
+      "afterTscPhysical": "323325099a64bbbd72740e73965570ba6c8ee3de836e514c0963307a24144ab2",
+      "beforeBlob": "3c36a98f3d03418c978653e152539d844c62f121",
+      "afterVitestBlob": "3c36a98f3d03418c978653e152539d844c62f121",
+      "afterTscBlob": "3c36a98f3d03418c978653e152539d844c62f121",
+      "unchanged": true
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "beforePhysical": "d8d859ad51fba1f309cb8b7e3dd7415f21f6698bc0b26e8c9ebacaeecb71ae95",
+      "afterVitestPhysical": "d8d859ad51fba1f309cb8b7e3dd7415f21f6698bc0b26e8c9ebacaeecb71ae95",
+      "afterTscPhysical": "d8d859ad51fba1f309cb8b7e3dd7415f21f6698bc0b26e8c9ebacaeecb71ae95",
+      "beforeBlob": "65c867e59170be94f4d26b11b453789cec1f6910",
+      "afterVitestBlob": "65c867e59170be94f4d26b11b453789cec1f6910",
+      "afterTscBlob": "65c867e59170be94f4d26b11b453789cec1f6910",
+      "unchanged": true
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "beforePhysical": "91b2868e6077a62fd70e104e15056fb3275a6c4a0d5b35c32add747652964578",
+      "afterVitestPhysical": "91b2868e6077a62fd70e104e15056fb3275a6c4a0d5b35c32add747652964578",
+      "afterTscPhysical": "91b2868e6077a62fd70e104e15056fb3275a6c4a0d5b35c32add747652964578",
+      "beforeBlob": "9f13453f87cf18b8d89729c7bfc8b13b6887517c",
+      "afterVitestBlob": "9f13453f87cf18b8d89729c7bfc8b13b6887517c",
+      "afterTscBlob": "9f13453f87cf18b8d89729c7bfc8b13b6887517c",
+      "unchanged": true
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "capture_worker_native.ps1",
+      "bytes": 10109,
+      "sha256": "ce2cb426b343ed66efaa50bf8680e2c992230963425d0eef4162b98b85b418fe"
+    },
+    {
+      "path": "capture-manifest.json",
+      "bytes": 1899,
+      "sha256": "da5a0176c260196333fb5db689b30b0e9f64cf4171d7a16dbff427babf95a2d5"
+    },
+    {
+      "path": "git-status-after.txt",
+      "bytes": 54,
+      "sha256": "4897af7e4e19e3e87c18573690eb2ddc0cca17f7b71a7bc1b058de68c33a89b7"
+    },
+    {
+      "path": "git-status-before.txt",
+      "bytes": 54,
+      "sha256": "4897af7e4e19e3e87c18573690eb2ddc0cca17f7b71a7bc1b058de68c33a89b7"
+    },
+    {
+      "path": "source-after-vitest.json",
+      "bytes": 1911,
+      "sha256": "ceacc1dd5f0b1d30391ca1d0059b49c3535e8174a2fd9d06d02379063323d95a"
+    },
+    {
+      "path": "source-after-vue-tsc.json",
+      "bytes": 1912,
+      "sha256": "158de0f00778d2af58fb99eb9af192a67b7aef1ae3f0364113a1ed9d8e44224d"
+    },
+    {
+      "path": "source-before-native.json",
+      "bytes": 1912,
+      "sha256": "bdea8312bcd09ff6b8aefa8881be50082a77c6829f859a107b6d471202138857"
+    },
+    {
+      "path": "validation-summary.json",
+      "bytes": 940,
+      "sha256": "1ea3f0761107e72e2bc52b17f449e8cf1dd7ab99629b116182af3aafba5f5e71"
+    },
+    {
+      "path": "vitest-report.json",
+      "bytes": 19815,
+      "sha256": "ea22f6e70c2dff6faa5ac9274dc99aec74c6644aa2e9307b2561ffedfea3e350"
+    },
+    {
+      "path": "vitest.process.json",
+      "bytes": 1400,
+      "sha256": "1101c5339ce25c31045f66187a9fe71e5b8890b52b067398918eab248bc08e00"
+    },
+    {
+      "path": "vitest.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vitest.stdout.log",
+      "bytes": 879,
+      "sha256": "722368ab36d5848d72e6f3e10c98ff7f30392c673f3fbb3b547305f178c05ca2"
+    },
+    {
+      "path": "vue-tsc.process.json",
+      "bytes": 660,
+      "sha256": "0197241b529e04bfec304b7030ecbffe7a35d81f6b4b864d2783405cf136120a"
+    },
+    {
+      "path": "vue-tsc.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vue-tsc.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "physicalDomain": "physical worktree bytes (not Git archive LF)",
+  "baselineFiles": 430,
+  "fullyProtectedFiles": 426,
+  "authorizedProductionExcluded": [
+    "backend/engine/analyzer.go",
+    "backend/engine/source_preparation_receipt.go"
+  ],
+  "exactFourLineOldTestRestoration": [
+    "backend/engine/source_execution_receipt_db_test.go",
+    "backend/engine/source_preparation_receipt_db_test.go"
+  ],
+  "mismatches": [],
+  "result": "PASS",
+  "preparationFinding": "Initial classifier counted two authorized production files as protected and correctly found their expected source changes; fixed classification. Source checkpoint command proceeded after that classifier exception; no protected mismatch found on corrected audit."
+}

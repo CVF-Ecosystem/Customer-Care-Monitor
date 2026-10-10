@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "mutation": "M02",
+  "detector": "TestUsagePresenceM02InvalidDetector",
+  "healthyControl": "TestUsagePresenceM02ValidIntegerHealthyControl",
+  "sourcePath": "backend/ai/usage_presence.go",
+  "baselineSourceSha256": "3151424fddafe73e876c9fa4e00743420ef504230b7075cde1acad69793f41ca",
+  "mutatedSourceSha256": "8946b0cdd4780df975ba9afe39613548a5c40e08ce2d5e2487d9b897931e286e",
+  "changedBackendMembers": [
+    "ai/usage_presence.go"
+  ],
+  "testFilesUnchanged": true,
+  "diff": {
+    "path": "M02.source-diff.patch",
+    "bytes": 869,
+    "sha256": "1a7f71b296a4f99a0c464888bd9aba54883b02ee305634b54bcb852322f5e14e",
+    "onlySourcePath": "backend/ai/usage_presence.go"
+  },
+  "detectorExpectedKillAndControlPass": true,
+  "detectorProcessExitCode": 1,
+  "detectorRun": "M02-test.result.json"
+}

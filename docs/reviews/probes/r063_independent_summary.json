@@ -1,0 +1,1143 @@
+{
+  "receiptKind": "DERIVED_RECONCILIATION_FROM_ACTUAL_RETAINED_EVIDENCE",
+  "originalSummary": "Lost to publication path-alias; original bytes/inspect snapshots NOT restored or invented",
+  "sourceCommit": "661113d888c5886331c9b4eb99783a215cf8c58f",
+  "backendSourceCommit": "55e836a1b980b3e5d4075ceb33466786c860f963",
+  "reviewer": "Codex /root",
+  "seedCommit": "7deb4f09b7dfaed9ca8d0f4739a6d3190dd2a015",
+  "campaigns": 1,
+  "goInvocations": 4,
+  "workerPriorUsedGoInvocations": 4,
+  "aggregateMaxGoInvocations": 8,
+  "newGoDuringReconciliation": 0,
+  "result": "PASS",
+  "commands": [
+    {
+      "label": "positive",
+      "runtimeProvenance": "Actual Go JSONL plus actual retained daemon die/destroy events",
+      "container": "ccmai-r063-review-positive-4fe2d271af",
+      "daemonContainerID": "6a356810fa8752f9543a8705da46d9ba039feac695b10be8a62c6fd877721d20",
+      "daemonExitCode": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r063_independent_positive.jsonl",
+        "bytes": 33057717,
+        "sha256": "98e59a018533b351884087214486f95f0b0044e36afed34b5458b1c50724f9d9",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 33057717,
+          "sha256": "98e59a018533b351884087214486f95f0b0044e36afed34b5458b1c50724f9d9"
+        }
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r063_independent_positive_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "expectedTopLevel": [
+        "TestEXActualPanicBoundaries",
+        "TestEXAllExplicitModesRetainScalars",
+        "TestEXBatchBindingAndParserRejection",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXCancellationDuringProviderAndBatchPrefix",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXInitialProgressAndTerminalWriteFaults",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestEXMixedSaveAndProviderFailures",
+        "TestEXNoCallConstructionAndPreparation",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXProgressPrefixAndPreparationUnchanged",
+        "TestEXResponseAndErrorWinsInBothModes",
+        "TestEXSaveDatabaseFailureIsPublicationFailure",
+        "TestEXStoredTerminalSingleSuccess",
+        "TestEXUsageWriteFailurePreservesSavedResult",
+        "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+        "TestFL03FallbackBoundedOnFailure",
+        "TestFL03MissingRowBreaksRetries",
+        "TestFL03SuccessfulTerminalWrite",
+        "TestFL03TransactionBoundaryCommitTransientRecovery",
+        "TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint",
+        "TestFL03TransactionBoundaryTransientRecovery",
+        "TestFL06CancellationLeavesNoBoundaryLeak",
+        "TestFL06SuccessLifecyclePreservation",
+        "TestLP01NoWorkSkipsProviderInitialization",
+        "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+        "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+        "TestLP04SemanticsAcrossModesAndEntryPoints",
+        "TestLP05CancellationPreventsProviderInitialization",
+        "TestLP06EagerInitializationDetectorNegativeAndPositive",
+        "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+        "TestPreparationReceiptMetadataAndSummaryCompatibility",
+        "TestPreparationReceiptUnknownZeroAndPrivacy",
+        "TestROCapturedJobPromptsSingleAndBatch",
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROInitialProgressAndTerminalWriteFaults",
+        "TestROInvalidBindingPriorityAndUnsupportedType",
+        "TestRONoWorkAndFailureObservations",
+        "TestROPrivacyBoundAndIndependentFreezeComposition",
+        "TestROQCIndependentKnownVector",
+        "TestRORejectedReservationHasNoReceiptEffects",
+        "TestROStoredTerminalSingleSuccess",
+        "TestSPAllExplicitModesCapAndContext",
+        "TestSPCancellationAndProviderPanic",
+        "TestSPInitialAndProgressRecordingGap",
+        "TestSPInputSelectionAndPreparationPanic",
+        "TestSPObservedQueriesAndReferenceErrors",
+        "TestSPOrdinaryExplicitAndProgressPersistence",
+        "TestSPSingleProviderErrorReceipt",
+        "TestSPSnapshotLookupMissingAndMisboundObservations",
+        "TestSPStoredEarlyTerminalReceipt",
+        "TestSPTerminalFailureAndLegacyClose"
+      ],
+      "events": {
+        "completed": [
+          {
+            "name": "TestFL03SuccessfulTerminalWrite",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03MissingRowBreaksRetries",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03FallbackBoundedOnFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03TransactionBoundaryTransientRecovery",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03TransactionBoundaryCommitTransientRecovery",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL03TransactionBoundaryExhaustedDoesNotAdvanceCheckpoint",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL06SuccessLifecyclePreservation",
+            "action": "pass"
+          },
+          {
+            "name": "TestFL06CancellationLeavesNoBoundaryLeak",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/empty_input_channel_list",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/channel_with_zero_conversations",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/conversation_with_zero_messages_(coverageEmpty)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/all_conversations_unchanged_in_ordinary_mode",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization/explicit_unanalyzed_mode_with_zero_conversations",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP01NoWorkSkipsProviderInitialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/invalid_channel_JSON_fails_before_candidate_selection_and_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/candidate_selection_query_failure_fails_before_provider_and_skips_settings/key_lookup",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/all-failed_preparation_closes_as_error_with_zero_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/mixed_valid_and_failed_preparation_initializes_provider_once_and_reports_partial",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider/mixed_valid_and_failed_preparation_with_corrupt_key_on_production_path_fails_at_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/missing_API_key_fails_with_earlyProviderUnavailable_on_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/undecryptable_API_key_fails_with_earlyProviderUnavailable_on_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/precedence:_injectedProvider_>_providerOverride_>_providerResolver_>_settings",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence/provider_is_initialized_exactly_once_per_run_across_multiple_conversations",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJob_(ordinary)_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJob_(ordinary)_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobWithLimit_(ordinary_capped)_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobWithLimit_(ordinary_capped)_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobFull_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobFull_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobUnanalyzed_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobUnanalyzed_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobSinceLast_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunJobSinceLast_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunReserved_(shared_HTTP/MCP/scheduler_forwarding)_with_eligible_work",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints/RunReserved_(shared_HTTP/MCP/scheduler_forwarding)_without_eligible_work_skips_provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP04SemanticsAcrossModesAndEntryPoints",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP05CancellationPreventsProviderInitialization/accepted_cancellation_before_inference_avoids_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP05CancellationPreventsProviderInitialization/expired_context_before_inference_avoids_provider_initialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP05CancellationPreventsProviderInitialization",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/negative_control:_no_work_succeeds_without_AI_settings/decryption",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(missing_key)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/positive_control:_eligible_work_strictly_requires_provider_initialization_(corrupt_key)",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_of_provider_constructor_access_vs_AnalyzeChat_calls",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive/distinct_counting_in_non-batch_mode:_constructor_once,_single_calls_match_conversation_count",
+            "action": "pass"
+          },
+          {
+            "name": "TestLP06EagerInitializationDetectorNegativeAndPositive",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/qc_analysis_single",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/qc_analysis_batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/classification_single",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/classification_batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/unchanged_rule_edit",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/setup_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/provider_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/provider_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/input_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/selection_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/preparation_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/unsupported",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations",
+            "action": "pass"
+          },
+          {
+            "name": "TestRORejectedReservationHasNoReceiptEffects",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestROQCIndependentKnownVector",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/cd305745",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9d96001a",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9c1834f3",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/c0cfd532",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/41b3bb53",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/f66ca412",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/313f92e7",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/5bbd5f0d",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/foreign_tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/foreign_job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run_tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run_job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType",
+            "action": "pass"
+          },
+          {
+            "name": "TestROPrivacyBoundAndIndependentFreezeComposition",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/unchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/setup_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/preparation_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation/cancel_before_call",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXNoCallConstructionAndPreparation",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBatchBindingAndParserRejection",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicitfalse",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchfalse_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes/batchtrue_explicittrue",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXResponseAndErrorWinsInBothModes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXSaveDatabaseFailureIsPublicationFailure",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXMixedSaveAndProviderFailures",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/false",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult/true",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXUsageWriteFailurePreservesSavedResult",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/single_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_running",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix/batch_prefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCancellationDuringProviderAndBatchPrefix",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXActualPanicBoundaries",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXProgressPrefixAndPreparationUnchanged",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/test_run",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/conditional",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/unanalyzed",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars/since_last",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXAllExplicitModesRetainScalars",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXCollectorDimensionsAndFreeze",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/provider",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/usage",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary/publication",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXPanicUncertaintyAndReturnedBoundary",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+            "action": "pass"
+          },
+          {
+            "name": "TestEXInvalidMetadataNeverSerializesRawValues",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPStoredEarlyTerminalReceipt",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPOrdinaryExplicitAndProgressPersistence",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPObservedQueriesAndReferenceErrors",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPInputSelectionAndPreparationPanic",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPCancellationAndProviderPanic",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPTerminalFailureAndLegacyClose",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPSingleProviderErrorReceipt",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPAllExplicitModesCapAndContext",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPSnapshotLookupMissingAndMisboundObservations",
+            "action": "pass"
+          },
+          {
+            "name": "TestSPInitialAndProgressRecordingGap",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptUnknownZeroAndPrivacy",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+            "action": "pass"
+          },
+          {
+            "name": "TestPreparationReceiptMetadataAndSummaryCompatibility",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 53,
+        "pass": 152,
+        "fail": 0,
+        "skip": 0,
+        "namedAssertion": false
+      },
+      "verifiedHealthyControls": [],
+      "observedRunnerStdoutSeconds": 158.258
+    },
+    {
+      "label": "m01",
+      "runtimeProvenance": "Actual Go JSONL plus actual retained daemon die/destroy events",
+      "container": "ccmai-r063-review-m01-4fe2d271af",
+      "daemonContainerID": "dfb694c488c4802a82cd21cbe968589ff54f7a5b99967897626a8523fc7d198c",
+      "daemonExitCode": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r063_independent_m01.jsonl",
+        "bytes": 12401,
+        "sha256": "61555bea110dc09bb9f0157c8b84d2317085ca10fd640d0227e6bb2d65c3ac6f",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 12401,
+          "sha256": "61555bea110dc09bb9f0157c8b84d2317085ca10fd640d0227e6bb2d65c3ac6f"
+        }
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r063_independent_m01_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "expectedTopLevel": [
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROQCIndependentKnownVector"
+      ],
+      "events": {
+        "completed": [
+          {
+            "name": "TestROQCIndependentKnownVector",
+            "action": "fail"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/cd305745",
+            "action": "fail"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9d96001a",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9c1834f3",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/c0cfd532",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/41b3bb53",
+            "action": "fail"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/f66ca412",
+            "action": "fail"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/313f92e7",
+            "action": "fail"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/5bbd5f0d",
+            "action": "fail"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors",
+            "action": "fail"
+          }
+        ],
+        "topLevel": 2,
+        "pass": 3,
+        "fail": 7,
+        "skip": 0,
+        "namedAssertion": true
+      },
+      "verifiedHealthyControls": [
+        "TestROFramingUnicodeEmptyAndClassificationVectors/9d96001a",
+        "TestROFramingUnicodeEmptyAndClassificationVectors/9c1834f3",
+        "TestROFramingUnicodeEmptyAndClassificationVectors/c0cfd532"
+      ],
+      "observedRunnerStdoutSeconds": 16.32
+    },
+    {
+      "label": "m02",
+      "runtimeProvenance": "Actual Go JSONL plus actual retained daemon die/destroy events",
+      "container": "ccmai-r063-review-m02-4fe2d271af",
+      "daemonContainerID": "7bcf84ca2efe6b689bc7cf3a5e7b6c479dc0aaf322ee4eca9a716dae6b9378e8",
+      "daemonExitCode": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r063_independent_m02.jsonl",
+        "bytes": 270182,
+        "sha256": "e62d4c595e027078b97760ad7ecd9e4ac5ba3892fbd4afa4fd5f8bc1cab748f2",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 270182,
+          "sha256": "e62d4c595e027078b97760ad7ecd9e4ac5ba3892fbd4afa4fd5f8bc1cab748f2"
+        }
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r063_independent_m02_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "expectedTopLevel": [
+        "TestROStoredTerminalSingleSuccess"
+      ],
+      "events": {
+        "completed": [
+          {
+            "name": "TestROStoredTerminalSingleSuccess",
+            "action": "fail"
+          }
+        ],
+        "topLevel": 1,
+        "pass": 0,
+        "fail": 1,
+        "skip": 0,
+        "namedAssertion": true
+      },
+      "verifiedHealthyControls": [],
+      "observedRunnerStdoutSeconds": 17.055
+    },
+    {
+      "label": "restored",
+      "runtimeProvenance": "Actual Go JSONL plus actual retained daemon die/destroy events",
+      "container": "ccmai-r063-review-restored-4fe2d271af",
+      "daemonContainerID": "8582ac149efcc30dc9152e3086aaa56f8e30c65c2f174cad6396dfb86b45257f",
+      "daemonExitCode": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r063_independent_restored.jsonl",
+        "bytes": 5976446,
+        "sha256": "c26eaa17bcf75fcde9cb1a204d5d202c25f5ae6d4176f433f9ae464fb3bf5b09",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 5976446,
+          "sha256": "c26eaa17bcf75fcde9cb1a204d5d202c25f5ae6d4176f433f9ae464fb3bf5b09"
+        }
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r063_independent_restored_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "byteDomain": "WORKTREE_PHYSICAL",
+        "lfNormalizedText": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "expectedTopLevel": [
+        "TestROCapturedJobPromptsSingleAndBatch",
+        "TestROFramingUnicodeEmptyAndClassificationVectors",
+        "TestROInitialProgressAndTerminalWriteFaults",
+        "TestROInvalidBindingPriorityAndUnsupportedType",
+        "TestRONoWorkAndFailureObservations",
+        "TestROPrivacyBoundAndIndependentFreezeComposition",
+        "TestROQCIndependentKnownVector",
+        "TestRORejectedReservationHasNoReceiptEffects",
+        "TestROStoredTerminalSingleSuccess"
+      ],
+      "events": {
+        "completed": [
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/qc_analysis_single",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/qc_analysis_batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/classification_single",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch/classification_batch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROCapturedJobPromptsSingleAndBatch",
+            "action": "pass"
+          },
+          {
+            "name": "TestROStoredTerminalSingleSuccess",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/empty",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/unchanged_rule_edit",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/setup_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/provider_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/provider_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/input_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/selection_error",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/preparation_panic",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations/unsupported",
+            "action": "pass"
+          },
+          {
+            "name": "TestRONoWorkAndFailureObservations",
+            "action": "pass"
+          },
+          {
+            "name": "TestRORejectedReservationHasNoReceiptEffects",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/initial",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/progress",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/early_terminal",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults/early_terminal_fallback_failed",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInitialProgressAndTerminalWriteFaults",
+            "action": "pass"
+          },
+          {
+            "name": "TestROQCIndependentKnownVector",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/cd305745",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9d96001a",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/9c1834f3",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/c0cfd532",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/41b3bb53",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/f66ca412",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/313f92e7",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors/5bbd5f0d",
+            "action": "pass"
+          },
+          {
+            "name": "TestROFramingUnicodeEmptyAndClassificationVectors",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/foreign_tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/foreign_job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run_tenant",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType/run_job",
+            "action": "pass"
+          },
+          {
+            "name": "TestROInvalidBindingPriorityAndUnsupportedType",
+            "action": "pass"
+          },
+          {
+            "name": "TestROPrivacyBoundAndIndependentFreezeComposition",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 9,
+        "pass": 43,
+        "fail": 0,
+        "skip": 0,
+        "namedAssertion": false
+      },
+      "verifiedHealthyControls": [],
+      "observedRunnerStdoutSeconds": 28.668
+    }
+  ],
+  "archive": {
+    "bytes": 2426880,
+    "sha256": "5e2978b413ce09afa9168c5bc988df8dd00c996e76390119e5caa89a8c8be24b"
+  },
+  "manifest": {
+    "path": "docs/reviews/probes/r063_independent_manifest.json",
+    "bytes": 34373,
+    "sha256": "98481a7221e4187b0a25cd99a3a30c415d7be4bc437c7137d48dfdae9619ae91",
+    "byteDomain": "WORKTREE_PHYSICAL",
+    "lfNormalizedText": {
+      "bytes": 34373,
+      "sha256": "98481a7221e4187b0a25cd99a3a30c415d7be4bc437c7137d48dfdae9619ae91"
+    }
+  },
+  "plan": {
+    "path": "docs/reviews/probes/r063_independent_plan.json",
+    "bytes": 4917,
+    "sha256": "e66bc0d3c78c7160401cf10c6b1066ccda973f16f1502a1006a69f84353b418e",
+    "byteDomain": "WORKTREE_PHYSICAL",
+    "lfNormalizedText": {
+      "bytes": 4820,
+      "sha256": "26a3172ec32c6085cec8b578faf0e353b50b5ca78a991a798376f33d4101c22c"
+    }
+  },
+  "daemonEvents": {
+    "path": "docs/reviews/probes/r063_independent_daemon_events_recovery.json",
+    "bytes": 40492,
+    "sha256": "d56cb1d58a020e00ec842534213f2efd9a407802b30c3d8a4b72a1df834488f8",
+    "byteDomain": "WORKTREE_PHYSICAL",
+    "lfNormalizedText": {
+      "bytes": 39376,
+      "sha256": "dfdf19d44fecf2491b53d268c27f1cc1e0a7d33895129255cfd4887b11e0607b"
+    }
+  },
+  "incident": {
+    "path": "docs/reviews/probes/r063_review_publication_incident.json",
+    "bytes": 993,
+    "sha256": "97b589022d62b59ae3e5d1b1c144d1022a07e23fe30d3d43e19d313961590131",
+    "byteDomain": "WORKTREE_PHYSICAL",
+    "lfNormalizedText": {
+      "bytes": 980,
+      "sha256": "1131d885152709211ea77135a8530b3396b82ca13e69daaf2c9651bcd2d228ab"
+    }
+  },
+  "restoration": {
+    "fullMembers": 213,
+    "currentActualSandboxMatches": true,
+    "secondGitArchiveMatches": true
+  },
+  "cleanup": {
+    "knownContainers": [
+      "ccmai-r063-review-positive-4fe2d271af",
+      "ccmai-r063-review-m01-4fe2d271af",
+      "ccmai-r063-review-m02-4fe2d271af",
+      "ccmai-r063-review-restored-4fe2d271af",
+      "ccmai-r063-review-db-4fe2d271af"
+    ],
+    "network": "ccmai-r063-review-net-4fe2d271af",
+    "volumes": [
+      "90249ff125504edd6e0fd2afb063a2abc7d941a40ebfc66e31e125e4746ae005",
+      "ccmai-r063-build-cache-4fe2d271af"
+    ],
+    "actualDaemonDestroyEventsVerified": true,
+    "freshReadOnlyInventoryAllAbsent": true
+  },
+  "scope": "synthetic local application observation, not CVF AI governance",
+  "priorVerifiedRunnerOutput": {
+    "result": "PASS",
+    "goInvocations": 4,
+    "seconds": 248.818,
+    "errors": []
+  },
+  "lostInspectionBoundary": "Original per-container inspect snapshots unavailable. Executed committed runner enforced readonly binds/internal network/no host ports and originally returned PASS; these checks were reviewed before loss. Actual daemon events retain mounts/exit/destroy and reconciliation rechecks tracked-resource absence. Reconciled fields have explicit provenance; no claim byte-for-byte recovery.",
+  "errors": []
+}

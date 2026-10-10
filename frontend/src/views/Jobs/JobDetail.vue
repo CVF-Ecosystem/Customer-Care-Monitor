@@ -244,6 +244,7 @@
                   <td>
                     <span v-if="r.error_message" class="jd-run-error">{{ r.error_message }}</span>
                     <span v-else>{{ runSummary(r) }}</span>
+                    <RunObservationPanel :summary="r.summary" :context="{ tenantId, jobId, runId: r.id, runJobId: r.job_id }" />
                   </td>
                   <td class="text-right">
                     <v-btn v-if="runHasResults(r.id)" variant="text" color="primary" size="small" @click="viewRun(r.id)">{{ $t('jd_run_view') }}</v-btn>
@@ -475,6 +476,7 @@ import AppDialog from '../../components/ui/AppDialog.vue'
 import ConfirmDialog from '../../components/ui/ConfirmDialog.vue'
 import MetricCard from '../../components/ui/MetricCard.vue'
 import SourceStatusPanel from '../../components/ui/SourceStatusPanel.vue'
+import RunObservationPanel from '../../components/ui/RunObservationPanel.vue'
 import SourceStatusChip from '../../components/ui/SourceStatusChip.vue'
 import VerdictChip from '../../components/ui/VerdictChip.vue'
 import ResultCard from '../../components/ui/ResultCard.vue'

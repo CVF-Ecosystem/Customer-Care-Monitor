@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "date": "2026-10-09",
+  "round": 2,
+  "phase": "BUILD",
+  "worker": {
+    "canonicalName": "/root/r065_worker",
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh",
+    "role": "REPAIR_WORKER / BUILD COMMIT_STEWARD"
+  },
+  "reviewer": "/root independent REVIEWER / SESSION_SYNC_STEWARD / CLOSER",
+  "baseCommit": "0ba7e80fc3edb784b1b52abd2ff0b9982db7739a",
+  "failedSource": "4c59b83f8fc2b99d2bac9dacb1fb3e63114ab314",
+  "findingArtifact": "docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md",
+  "rawDiagnosticLog": "docs/reviews/probes/r067_reviewer_build_typecheck_stdout_2026-10-09.log",
+  "diagnostics": [
+    {
+      "id": "TS6133",
+      "path": "frontend/src/__tests__/run-observation.spec.ts",
+      "location": "line 72",
+      "change": "Remove the unused clone helper only; leave all test assertions and fixtures unchanged.",
+      "attribution": "Luna-authored new test helper."
+    },
+    {
+      "id": "TS2345",
+      "path": "frontend/src/components/ui/RunObservationPanel.vue",
+      "location": "template line 13 / display helper",
+      "change": "Accept the Vue iteration key as string | number and normalize it once to a string before stop-reason/local-estimate comparisons; keep rendered values and field labels unchanged.",
+      "attribution": "Inherited Sol draft panel key typing; missed by Luna and root static review."
+    },
+    {
+      "id": "TS7053-A",
+      "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "location": "lines 216-221",
+      "change": "Annotate retainedInvocations as Record<string, number>; retain the same four keys and values.",
+      "attribution": "Luna-authored helper typing."
+    },
+    {
+      "id": "TS7053-B",
+      "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "location": "lines 222-227",
+      "change": "Annotate retainedItems as Record<string, number>; retain the same four keys and values.",
+      "attribution": "Luna-authored helper typing."
+    },
+    {
+      "id": "TS2322-A",
+      "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "location": "usage validation and returned token_overflow",
+      "change": "Keep explicit runtime boolean checks, bind the validated value to a boolean-narrowed local, and return that same value.",
+      "attribution": "Luna-authored helper typing."
+    },
+    {
+      "id": "TS2322-B",
+      "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "location": "usage validation and returned cost_overflow",
+      "change": "Keep explicit runtime boolean checks, bind the validated value to a boolean-narrowed local, and return that same value.",
+      "attribution": "Luna-authored helper typing."
+    },
+    {
+      "id": "TS2322-C",
+      "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "location": "usage validation and returned counter_overflow",
+      "change": "Keep explicit runtime boolean checks, bind the validated value to a boolean-narrowed local, and return that same value.",
+      "attribution": "Luna-authored helper typing."
+    }
+  ],
+  "invariant": "Changes are typing-only: preserve receipt validation, unknown/null handling, counters, bindings, rendering values, and all existing test assertions.",
+  "visualProbeRepair": {
+    "path": "docs/reviews/probes/r067_visual_fixture.mjs",
+    "finding": "Prior cleanup retained the fixture node_modules junction and used a 300ms delay without verifying Vite exit.",
+    "change": "Wait for Vite exit event up to 5000ms after one kill; remove only a lstat-confirmed symbolic junction whose realpath equals cached frontend/node_modules, using nonrecursive rmdirSync; retain temp screenshots/logs.",
+    "staticOnly": true
+  },
+  "validation": {
+    "allowed": [
+      "TypeScript AST syntax parsing of all changed TS and Vue script blocks",
+      "node --check for visual fixture",
+      "git diff --check",
+      "default, scoped, and PR downstream preflights"
+    ],
+    "notRun": [
+      "semantic typecheck/build",
+      "Vitest",
+      "browser visual fixture",
+      "Go",
+      "provider/network/API"
+    ],
+    "staticResults": {
+      "sourceAst": "PASS: 8 TypeScript/SFC source files, zero syntax errors; no emit or semantic analysis.",
+      "visualNodeCheck": "PASS: node --check.",
+      "gitDiffCheck": "PASS.",
+      "downstreamPreflights": {
+        "scoped": "PASS7/7",
+        "default": "PASS7/7",
+        "prRange": "PASS7/7"
+      }
+    }
+  },
+  "budget": {
+    "workerForcedBuildUsed": 1,
+    "reviewerForcedBuildUsed": 1,
+    "additionalBuildAuthority": "NOT_GRANTED",
+    "workerVitestInvocations": 0,
+    "reviewerVitestInvocations": 0,
+    "goInvocations": 0
+  },
+  "stop": "Commit repaired source and plan, then stop for independent root review and explicit owner budget decision. No build retry or runtime."
+}

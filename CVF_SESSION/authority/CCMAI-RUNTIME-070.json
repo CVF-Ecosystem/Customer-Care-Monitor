@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-070",
+  "authorityKind": "DISPATCHER_OWNED_SCOPED_REVIEW_CLOSURE_INTEGRATION",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root",
+    "repairWorker": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_068.md",
+    "docs/work_orders/CCMAI_RUNTIME_069.md",
+    "docs/work_orders/CCMAI_RUNTIME_070.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "source_test_edit",
+    "old_authority_seed_edit",
+    "old_packet_edit",
+    "go_invocation",
+    "provider_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment",
+    "other_tranche_freeze"
+  ],
+  "ownerAuthorization": "Existing R068 scoped closure/currentbranch publication authority plus owner 2026-10-10 exact supplemental validation approval; metadata integration only, no extra action approval or runtime budget.",
+  "executionBudget": {
+    "maxGoInvocations": 0
+  },
+  "acceptedProductSource": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "validationEvidenceCommit": "f3e737a16586bc37b62f380e119d1a7f3867e699",
+  "claimScope": "Only R068 adapter metadata and R069 compiler validation closure, no full roadmap/live/governance/hosted claim"
+}

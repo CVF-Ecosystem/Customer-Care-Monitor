@@ -9,7 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md", "activeTranche": "CCMAI-RUNTIME-058", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
+
+## Current R075
+
+CCMAI-RUNTIME-075 BUILD owner-authorized interactive Git authentication repair, one bounded ordinary exact-SHA feature push after independent prepublication review; verify remote SHA, preserve all failures. No force/main/merge/deploy/app/provider/DB/secret reads. Accounts parked.
+
+R074 local dossier FROZEN and five implementation plus one fresh audit preserved. New owner GitHub instruction authorizes R075 ordinary branch publication; no retroactive change to R068 unverified attempt or old prohibited effects.
 
 ## Startup Order
 
@@ -34,6 +40,8 @@ Owner-agreed convention: `docs/reviews/learnings/` stores reusable findings and 
 
 These committed repository records are the shared learning references; provider-local feedback is supplemental. They are directly indexed through the artifact registry and generated docs index, with source/confidence and proposed parent disposition. Read only the applicable record at the task trigger; no full-history read is needed. Learning documentation does not grant product acceptance; use the current tranche disposition below for F07 status. Parent helper/enforcement proposals remain deferred through `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`.
 
+- [UUID-positive fixtures and terminal receipt prefixes](docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md): read before receipt-binding tests or database-fault review; distinguish stored prefixes from returned completion.
+
 ## Mandatory Continuity Rehydration
 
 Repeat the startup order before material work at every new or resumed
@@ -51,9 +59,53 @@ Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 
 Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
-## Current R058 local preparation-receipt closure (2026-10-06)
+- [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-CCMAI-RUNTIME-058 and bounded local R055/R057 FROZEN under separate closure seed5ff087587f04170579b39a645ce4bf7eb1933fe1 at unchanged child source05c59e9978e5cf108b0d9118f64c7454805ec64e, independent review5ff0875/runtimec4f78f2. ORCHESTRATOR next bounds remaining S2 actual-call/rules/cost trace DESIGN/SPEC before any separately authorized BUILD; receipt is preparation observation only, full S2/live/governance/hosted/global roadmap remain OPEN. Prior failures/invalid R056 seed immutable; no new source/runtime/subagents/provider/channel/config/credential/push/merge/deploy; Facebook/Zalo OA parked.
+## Historical R071 bounded consumer work order (2026-10-10)
+
+CCMAI-RUNTIME-071 FROZEN aggregate-only at sourceee6b1c0/review14686ba; worker/root5Go each, compilePASS/positive20top65/M01M02 healthy/restored10top38, one pre-Go test repair retained, no further Go/source/push. Root ORCHESTRATOR next audits remaining acceptance/dependencies and prepares separate bounded work order before new source/runtime/provider scope. FullS2/S3/S5/globalF02/live/governance/queue-realAnalyzer/UIbillingpermission OPEN; Facebook/Zalo OA parked, priorR068 publicationunverified/notretried.
+
+Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 FROZEN aggregate-only sourceee6b1c0/review14686ba after one NEW-test repair. Both roles5Go/compilePASS/positive20top65/M01M02/restored10top38, raw backups and restoration audited; original source/plan and parent/worker findings preserved. No further source/Go/push; whole roadmap/live/governance OPEN.
+
+## Historical R067 saved-run observation UI (2026-10-08)
+
+CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.
+
+GitHub completed43commitpush to a384fa2 verified; publicationreceipt recorded, currentbatch completes through source/independentreview/conditionalclosure/push.
+
+## Historical R065 complete bounded usage/cost delivery (2026-10-08)
+
+CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+
+[Independent review and local closure](docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md). Root completes authorized batch; metadata repairs direct; source author/reviewer independent.
+
+## Historical R064 bounded local rule-input observation closure (2026-10-08)
+
+CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+
+[Closure decision](docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md), authority0b97c05 and independent source review3f0764b. Nested implementation continuity drift corrected directly before activation; no runtime or source change.
+
+## Historical R063 independent review (2026-10-08)
+
+CCMAI-RUNTIME-063 REVIEW_PASS / REVIEW / FREEZE_OPEN after independent root review of medium child source55e836a1b980b3e5d4075ceb33466786c860f963 / exact archive661113d888c5886331c9b4eb99783a215cf8c58f: root53top152PASS, M01/M02 named kills with healthy classification contrast, restored9top43PASS,213member restoration/secondarchive/cleanup/protected packets verified. ORCHESTRATOR/CLOSER next assesses separately seeded metadata-only local closure for accepted RO01..12, no FREEZE under R063 BUILD seed. Worker1campaign4Go/root1campaign4Go total8Go exhausted; original failures/budgets/packets retained. No further source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy or full S2/live/governance/hosted claim; Facebook/Zalo OA parked.
+
+R063 publication incident retained: summary/inspect snapshots lost before commit; receipt derived from intact raw logs/manifests and actual daemon events. Static reconciliation PASS, zero new Go; provenance limitation explicit in formal review.
+
+## Historical R062 local execution observation closure (2026-10-08)
+
+CCMAI-RUNTIME-062 and accepted R061 bounded local source_execution observation are FROZEN at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f / independentreview99052ab. R063 candidate DESIGN/SPEC records effective rule-input fingerprint and actual permission/version/WAIT_DATA authority gaps. R063 bounded work-order draft settles digest exposure, exact SP/EX four-line amendments, medium child/root independent roles and proposed total8Go. ORCHESTRATOR next audits seed/schema/prebuild and records formal WORK_ORDER activation before source BUILD. R060 failed packets remain historical CHANGES_REQUIRED/superseded with findings settled by R061; lineage3campaign6Go of8 and original failures unchanged, closure0Go. Full S2/global F02/live/provider/billing/governance/hosted remain OPEN; Facebook/Zalo OA parked. No implicit source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.
+
+Root autonomously resolves audited compatibility maintenance within exact successor scope; small metadata fixes direct reviewer. Source R2 still independent child/root review.
+
+## Historical R059 pre-BUILD contract disposition (2026-10-07)
+
+CCMAI-RUNTIME-059 PARKED / REVIEW before BUILD with source/ack/campaign/Go0. Root independent consolidated audit chooses exact4-line SP receipt/scalar test amendment under owner autonomous-disposition instruction; immutable separately seeded CCMAI-RUNTIME-060 next activation, same child gpt-6.1-sol medium/root independent reviewer, combined max8Go without reset. Original R059 seed/failure/disposition preserved; no source by root/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.
+
+## Historical R058 closure / R059 work-order draft (2026-10-07)
+
+CCMAI-RUNTIME-058 and bounded R055/R057 remain locally FROZEN at source05c59e9/review5ff0875/runtimec4f78f2. R059 DESIGN/SPEC9f01473 and bounded work-order draft docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md ready; independent R2 reviewer identity pending before immutable seed, activation and root source BUILD. Root implementation/commit route proposed, no source/tests/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy; full S2/global F02/live/governance/hosted remain OPEN, Facebook/Zalo OA parked.
+
+R059 DESIGN/SPEC and bounded work-order draft are planning-only: reviewer identity UNASSIGNED, source implementation NOT_STARTED, independent R2 acceptance NOT_ESTABLISHED. Existing active tranche remains R058/FREEZE; candidate draft does not authorize BUILD. Root handles minor metadata directly; no subagents.
 
 ## Historical R057 accepted source review before separate closure (2026-10-06)
 

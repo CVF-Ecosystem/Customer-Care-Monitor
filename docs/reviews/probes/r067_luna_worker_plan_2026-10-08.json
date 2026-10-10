@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "phase": "BUILD",
+  "worker": {
+    "role": "IMPLEMENTATION_WORKER / BUILD COMMIT_STEWARD",
+    "canonicalName": "/root/r065_worker",
+    "actualModel": "gpt-6-luna",
+    "reasoningEffort": "xhigh",
+    "workerStartedAtUtc": "2026-10-08T16:46:29Z",
+    "inheritedDraft": {
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "snapshot": "docs/reviews/probes/r067_luna_takeover_2026-10-08.json",
+      "state": "uncommitted partial draft; no tests or runtime receipt"
+    }
+  },
+  "scope": {
+    "claim": "Saved-run UI reading and presentation only; no governance, provider, permission, or billing proof.",
+    "sourcePaths": [
+      "frontend/src/views/Jobs/JobDetail.vue",
+      "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "frontend/src/components/ui/RunObservationPanel.vue",
+      "frontend/src/i18n/en.ts",
+      "frontend/src/i18n/vi.ts",
+      "frontend/src/__tests__/run-observation.spec.ts",
+      "frontend/src/__tests__/run-observation-panel.spec.ts",
+      "frontend/src/__tests__/run-observation-job-detail.spec.ts"
+    ],
+    "newWorkerArtifacts": [
+      "docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json",
+      "docs/reviews/probes/r067_visual_fixture.mjs"
+    ]
+  },
+  "testInventory": [
+    {
+      "path": "frontend/src/__tests__/run-observation.spec.ts",
+      "testCount": 12,
+      "coverage": [
+        "supported source-shaped conditional receipt and known zero",
+        "independent sections and legacy execution without nested usage observation",
+        "malformed, primitive, oversized, future-version, and incomplete receipt",
+        "run, tenant, job, and run.job_id binding with matched healthy control",
+        "strict enums without array coercion",
+        "unknown or unsupported fingerprint",
+        "partial preparation/call records and omitted child IDs",
+        "aggregate reconciliation and retained child schema",
+        "unsafe/negative/nonfinite numbers, overflow, and completeness contradictions"
+      ]
+    },
+    {
+      "path": "frontend/src/__tests__/run-observation-panel.spec.ts",
+      "testCount": 4,
+      "coverage": [
+        "unknown local estimate remains unavailable rather than zero",
+        "recorded local zero remains visible as zero",
+        "English/Vietnamese labels and native keyboard details interaction",
+        "raw receipt/provider content and unsupported enum strings stay unrendered"
+      ]
+    },
+    {
+      "path": "frontend/src/__tests__/run-observation-job-detail.spec.ts",
+      "testCount": 1,
+      "coverage": [
+        "success/running/error/cancelled/no-results rows",
+        "exact initial GET set and no expansion requests/actions",
+        "matched and wrong-run receipt projection while preserving existing results/status controls"
+      ]
+    }
+  ],
+  "mutations": [
+    {
+      "id": "M01",
+      "path": "frontend/src/components/ui/RunObservationPanel.vue",
+      "target": "UNKNOWN_RENDER_GUARD local-estimate null branch",
+      "detectorSuite": "frontend/src/__tests__/run-observation-panel.spec.ts",
+      "detectorTest": "renders an unknown local estimate without showing zero",
+      "healthyControlTest": "shows a recorded local zero as zero",
+      "mutantBehavior": "Render null local_estimate_usd as 0 USD; leave other nulls unavailable.",
+      "expected": "Detector fails; healthy known-zero control passes."
+    },
+    {
+      "id": "M02",
+      "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "target": "bound() saved run ID comparison",
+      "detectorSuite": "frontend/src/__tests__/run-observation.spec.ts",
+      "detectorTest": "rejects a saved receipt bound to another run",
+      "healthyControlTest": "accepts the exact tenant, job, run, and run.job_id context",
+      "mutantBehavior": "Remove only the receipt run_id equality check.",
+      "expected": "Detector fails; matched healthy binding control passes."
+    }
+  ],
+  "campaign": {
+    "runner": "docs/reviews/probes/r067_ui_campaign.py",
+    "runnerOwner": "Codex /root independent REVIEWER",
+    "workerInvocations": 4,
+    "order": ["positive full frontend suite", "M01 semantic detector and healthy control", "M02 semantic detector and healthy control", "restored three new suites"],
+    "automaticRetries": 0,
+    "workerVitestInvocationsBeforeRootAudit": 0,
+    "workerBuildsBeforeRootAudit": 0,
+    "rootApprovalRequiredBeforeExecution": true
+  },
+  "visualFixture": {
+    "artifact": "docs/reviews/probes/r067_visual_fixture.mjs",
+    "uses": "Synthetic component-only Vite fixture; cached modules and cached Chromium; loopback 127.0.0.1 only; root-owned derived CDP capture blocks external requests and tests native keyboard interaction.",
+    "matrix": ["English desktop", "English mobile", "Vietnamese desktop", "Vietnamese mobile"],
+    "checks": ["no JavaScript/console/Chromium log errors", "no horizontal overflow", "no external browser requests", "Tab focuses summary; Enter opens; Space closes"],
+    "executed": false
+  },
+  "staticAttribution": {
+    "inheritedSolDraftFindingsDetectedByLuna": [
+      "Analyzer source mode is conditional; inherited helper used unsupported full.",
+      "Preparation outcome totals must equal visited; inherited helper tolerated a gap.",
+      "String coercion allowed array values to satisfy enum checks."
+    ],
+    "rootStaticFindingsRepairedByLunaBeforeRuntime": [
+      "Nested usage_observation is optional for legacy execution receipts; its absence/malformed value must not hide valid execution.",
+      "happy-dom focus test must attach the summary and invoke real focus(), not dispatch a focus event on a detached node.",
+      "Vue Test Utils DOMWrapper has no closest() method; the mounted integration test must use the underlying element to find its row."
+    ],
+    "attributionBoundary": "The Sol draft had no executed tests. Findings above are static comparisons, not a runtime A/B result."
+  },
+  "notRunAtCheckpoint": [
+    "Vitest worker campaign",
+    "frontend forced typecheck/build",
+    "browser visual fixture"
+  ]
+}

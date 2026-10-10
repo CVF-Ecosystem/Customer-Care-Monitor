@@ -1,0 +1,115 @@
+{
+  "verdict": "PASS",
+  "sourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
+  "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
+  "parserUnchangedDuringTestRepair": true,
+  "authorizedProductChangedPaths": [
+    "frontend/src/__tests__/run-observation-adapter-compat.spec.ts",
+    "frontend/src/views/Jobs/job-detail/run-observation.ts"
+  ],
+  "protectedBaselineFiles": 382,
+  "unchangedOutsideParser": 381,
+  "rootSourceFilesStable": 111,
+  "seedFirstCommittedContentUnchanged": true,
+  "sourceBlobIds": {
+    "frontend/src/__tests__/run-observation-adapter-compat.spec.ts": "fd494d9af50fe1d80ebb186a9582295faf94bba7",
+    "frontend/src/views/Jobs/job-detail/run-observation.ts": "60c5f91701b97cf3731dad42c5fb540f06bc9abd"
+  },
+  "rawFiles": [
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.capture.json",
+      "physicalSha256": "2f99b02edfbda3bd0136c42cf5bab7dc8d4a22539bb47d1731e0e8803a240ebd",
+      "bytes": 2574,
+      "committedBlobSha256": "dcf5b46655a8515a6406220375c434e2881737eb1d3cb0db02c6b5addfd1bc72",
+      "byteIdenticalToBlob": false,
+      "normalizedLineEndingsEqual": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.report.json",
+      "physicalSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "bytes": 9031,
+      "committedBlobSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "byteIdenticalToBlob": true,
+      "normalizedLineEndingsEqual": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stderr.log",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdenticalToBlob": true,
+      "normalizedLineEndingsEqual": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stdout.log",
+      "physicalSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "bytes": 9031,
+      "committedBlobSha256": "ba22979ee1af14401a7309b4c209a4a7db75f1308fbd460dbcb03095eadf666e",
+      "byteIdenticalToBlob": true,
+      "normalizedLineEndingsEqual": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.capture.json",
+      "physicalSha256": "2090c4fef519dc8bc45442f68d6fd4e1b2f7a852c6d0d0bce4efedf27cff71e4",
+      "bytes": 1869,
+      "committedBlobSha256": "4bcdc6531b7fb3173ba72b175c91ed5bff1bfdd12bb1f998e0db3492bc6e4905",
+      "byteIdenticalToBlob": false,
+      "normalizedLineEndingsEqual": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stderr.log",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdenticalToBlob": true,
+      "normalizedLineEndingsEqual": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "committedBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteIdenticalToBlob": true,
+      "normalizedLineEndingsEqual": true
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/capture.json",
+      "physicalSha256": "9d4fecb9497c3e134919d39e4a21f49db97351ae485cc4908f8454a10433c61f",
+      "bytes": 29264
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stderr.bin",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stdout.bin",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.report.json",
+      "physicalSha256": "f3b5dd4f5eeeff0db3309567f73f868df003b61134ba24499a358cc48dff9801",
+      "bytes": 9020
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stderr.bin",
+      "physicalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stdout.bin",
+      "physicalSha256": "cd037116dcf7c202aa4fa501fe28a951112877a50b41e3106cc9b9936ef5e049",
+      "bytes": 158
+    }
+  ],
+  "workerResult": "21/21 tests and forced typecheck PASS",
+  "rootResult": "21/21 tests and forced typecheck PASS",
+  "limits": [
+    "snapshot hashes do not prove entire write history",
+    "full inherited process environment not serialized",
+    "mocked happy-dom and Node fixtures; no actual browser/live/backend DB",
+    "no runtime AI governance proof",
+    "no mutations required or run for one-line compatibility contract"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-09",
+  "producer": "Luna xhigh /root/r065_worker mandatory rehydration knowledge ingest",
+  "path": "knowledge/_index.json",
+  "bytes": 2665,
+  "sha256Physical": "acf25429c81a5cdef02ea26863b339d4308b0c57773947dd386239bcec1c4e31",
+  "disposition": "Retained generated local index; exact local .git/info/exclude entry, no deletion or publicignorechange; not public source or visual evidence"
+}

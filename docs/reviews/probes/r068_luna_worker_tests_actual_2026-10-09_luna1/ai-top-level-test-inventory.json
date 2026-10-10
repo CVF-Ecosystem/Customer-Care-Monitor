@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0",
+  "package": "backend/ai",
+  "topLevelTestCount": 18,
+  "newTestNames": [
+    "TestUsagePresencePositive",
+    "TestUsagePresenceM01AbsentNullDetector",
+    "TestUsagePresenceM01ExplicitZeroHealthyControl",
+    "TestUsagePresenceM02InvalidDetector",
+    "TestUsagePresenceM02ValidIntegerHealthyControl",
+    "TestUsagePresenceDuplicateRules",
+    "TestUsagePresenceRawBoundsAndMalformedJSON",
+    "TestUsagePresenceSDKAdapters"
+  ],
+  "existingTestNames": [
+    "TestOpenAICompatibleGoiVaDocPhanHoi",
+    "TestXAIDungTenThamSoCu",
+    "TestOpenAICompatibleBaoLoiRoRang",
+    "TestBuildQCPrompt",
+    "TestBuildQCPromptWithSkipConditions",
+    "TestBuildClassificationPrompt",
+    "TestFormatChatTranscript",
+    "TestFormatChatTranscriptFallbackSenderType",
+    "TestFormatChatTranscriptCarriesSourceIdentity",
+    "TestPromptsRequireEvidenceRefs"
+  ],
+  "noSkipExpected": true,
+  "tests": [
+    {
+      "name": "TestOpenAICompatibleGoiVaDocPhanHoi",
+      "file": "backend/ai/openai_compatible_test.go",
+      "fileSha256": "33284bf56ff5a41d880e8f7f96dcb8f52db78160433d6ccc20a4bd2c4ffa984a"
+    },
+    {
+      "name": "TestXAIDungTenThamSoCu",
+      "file": "backend/ai/openai_compatible_test.go",
+      "fileSha256": "33284bf56ff5a41d880e8f7f96dcb8f52db78160433d6ccc20a4bd2c4ffa984a"
+    },
+    {
+      "name": "TestOpenAICompatibleBaoLoiRoRang",
+      "file": "backend/ai/openai_compatible_test.go",
+      "fileSha256": "33284bf56ff5a41d880e8f7f96dcb8f52db78160433d6ccc20a4bd2c4ffa984a"
+    },
+    {
+      "name": "TestBuildQCPrompt",
+      "file": "backend/ai/prompts_test.go",
+      "fileSha256": "a9132ccf6d8419eeb6b3a1908c0dc79ad772c505b8ad1b6a3e6df5a594c0f5b0"
+    },
+    {
+      "name": "TestBuildQCPromptWithSkipConditions",
+      "file": "backend/ai/prompts_test.go",
+      "fileSha256": "a9132ccf6d8419eeb6b3a1908c0dc79ad772c505b8ad1b6a3e6df5a594c0f5b0"
+    },
+    {
+      "name": "TestBuildClassificationPrompt",
+      "file": "backend/ai/prompts_test.go",
+      "fileSha256": "a9132ccf6d8419eeb6b3a1908c0dc79ad772c505b8ad1b6a3e6df5a594c0f5b0"
+    },
+    {
+      "name": "TestFormatChatTranscript",
+      "file": "backend/ai/prompts_test.go",
+      "fileSha256": "a9132ccf6d8419eeb6b3a1908c0dc79ad772c505b8ad1b6a3e6df5a594c0f5b0"
+    },
+    {
+      "name": "TestFormatChatTranscriptFallbackSenderType",
+      "file": "backend/ai/prompts_test.go",
+      "fileSha256": "a9132ccf6d8419eeb6b3a1908c0dc79ad772c505b8ad1b6a3e6df5a594c0f5b0"
+    },
+    {
+      "name": "TestFormatChatTranscriptCarriesSourceIdentity",
+      "file": "backend/ai/prompts_test.go",
+      "fileSha256": "a9132ccf6d8419eeb6b3a1908c0dc79ad772c505b8ad1b6a3e6df5a594c0f5b0"
+    },
+    {
+      "name": "TestPromptsRequireEvidenceRefs",
+      "file": "backend/ai/prompts_test.go",
+      "fileSha256": "a9132ccf6d8419eeb6b3a1908c0dc79ad772c505b8ad1b6a3e6df5a594c0f5b0"
+    },
+    {
+      "name": "TestUsagePresencePositive",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    },
+    {
+      "name": "TestUsagePresenceM01AbsentNullDetector",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    },
+    {
+      "name": "TestUsagePresenceM01ExplicitZeroHealthyControl",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    },
+    {
+      "name": "TestUsagePresenceM02InvalidDetector",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    },
+    {
+      "name": "TestUsagePresenceM02ValidIntegerHealthyControl",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    },
+    {
+      "name": "TestUsagePresenceDuplicateRules",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    },
+    {
+      "name": "TestUsagePresenceRawBoundsAndMalformedJSON",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    },
+    {
+      "name": "TestUsagePresenceSDKAdapters",
+      "file": "backend/ai/usage_presence_test.go",
+      "fileSha256": "611ee16eb5a69e722ba227cfb8ef91156b41c3e70462e0cfc3548899f98ac100"
+    }
+  ]
+}

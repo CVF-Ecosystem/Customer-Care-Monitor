@@ -1,0 +1,48 @@
+{
+  "sourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+  "oldTestCount": 116,
+  "otherOldTestsByteIdentical": 115,
+  "amendmentExactlyFourLines": true,
+  "seeds": {
+    "059": {
+      "firstCommit": "f162e635d757b2e436d88e0b8fda9ab5840e478f",
+      "unchanged": true,
+      "sha256": "c3725f7ead9a852cad4e908a237228007af08bf86e3908446e876a66bf14257f"
+    },
+    "060": {
+      "firstCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
+      "unchanged": true,
+      "sha256": "5ed0bf8ccf8931636294bde3924bde03ea21002b322cfbe49986adabc62b443f"
+    }
+  },
+  "sourceAuthors": "Child /root/r059_worker implementation and commit; root static read only",
+  "reviewerSourceEdits": 0,
+  "runtime": "NOT_RUN",
+  "initialSourceCommit": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
+  "repairOnlyChangedPath": [
+    "backend/engine/source_execution_receipt_db_test.go"
+  ],
+  "productSourceByteIdenticalToInitialCheckpoint": true,
+  "failedPacketPreserved": true,
+  "predecessorSourceCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
+  "onlyRepair": "TestEXInitialProgressAndTerminalWriteFaults",
+  "oldR060PhysicalEvidenceHashes": {
+    "docs/reviews/probes/r060_independent_campaign.py": "96a77c8fb188070bfcae8229bc08f01c6055f78771bac73a6f52b1c2b0f9d6ed",
+    "docs/reviews/probes/r060_independent_manifest.json": "f882717385ad3757d3fea6a64a27d83430d8fa34ac5166b9ac0b7ad68fc47ad7",
+    "docs/reviews/probes/r060_independent_plan.json": "65c3d6696df7eb64cb0b012543228825bc3ae5edfe8111011c98de9f54c96f70",
+    "docs/reviews/probes/r060_independent_positive.jsonl": "490ac658e558b3b667c878fc990e93687400e7dcf0ba010302ecb25ce36ee7fb",
+    "docs/reviews/probes/r060_independent_positive_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r060_independent_protected.json": "6ccb082dcb869a5f164771e2414219c193ab7aba72b3fc34f09c8b0e8311ec43",
+    "docs/reviews/probes/r060_independent_summary.json": "5071cde52eae5adf669002acb1778d7e7ec0aca09a9a19bbb10a634f501c3c7a",
+    "docs/reviews/probes/r060_worker_campaign.py": "8bf41cecb170c0a730c7ea073da042befc8789f2c94289b7fc1b1bf5ff920370",
+    "docs/reviews/probes/r060_worker_failure_audit.json": "1ea980b2aafa8d1afe7d398509ef2244e28d8853dbfb598c353441e79caed95c",
+    "docs/reviews/probes/r060_worker_manifest.json": "c6926eefb01cb53c7b69e7cb9433e90047415873226cb909ee5f8a2e0b93e506",
+    "docs/reviews/probes/r060_worker_positive.jsonl": "19a17ed2b533138be6f29957f0ad208af49f32e24141d58b9b1eb9574df8e31a",
+    "docs/reviews/probes/r060_worker_positive_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r060_worker_r1_handback.json": "bc4d735f6ccb8946020b25a2696e8dd19ec3a5a9d7a6f128e69ed868306a8927",
+    "docs/reviews/probes/r060_worker_summary.json": "c5f863751642c90b2fe0c4f856e22274545d1a3eeb1e49a488247f5a7793721a"
+  },
+  "all14PhysicalFilesUnchanged": true,
+  "product209ArchiveMembersUnchanged": true,
+  "outsideFaultFunctionUnchanged": true
+}

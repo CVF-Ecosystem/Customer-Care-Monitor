@@ -1,0 +1,43 @@
+
+  VITE v8.0.1  ready in 1502 ms
+
+  ➜  Local:   http://127.0.0.1:50674/
+(!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  C:/Users/tiennm/AppData/Local/Temp/ccmai-r067-visual-4H9I89/fixture/index.html
+
+  Build failed with 3 errors:
+
+[31m[UNLOADABLE_DEPENDENCY] Error:[0m Could not load D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/en.ts
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m main.ts:5:16 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m5 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249me[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m'/@fs/D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/en.ts'
+ [38;5;240m  │[0m                ────────────────────────────────────────────────────┬────────────────────────────────────────────────────  
+ [38;5;240m  │[0m                                                                    ╰────────────────────────────────────────────────────── The system cannot find the path specified. (os error 3)
+[38;5;246m───╯[0m
+
+[31m[UNLOADABLE_DEPENDENCY] Error:[0m Could not load D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/vi.ts
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m main.ts:6:16 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m6 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mv[0m[38;5;249mi[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m'/@fs/D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/vi.ts'
+ [38;5;240m  │[0m                ────────────────────────────────────────────────────┬────────────────────────────────────────────────────  
+ [38;5;240m  │[0m                                                                    ╰────────────────────────────────────────────────────── The system cannot find the path specified. (os error 3)
+[38;5;246m───╯[0m
+
+[plugin vite:dep-scan:load:html]
+Error: ENOENT: no such file or directory, open 'D:\UNG%20DUNG%20AI\TOOL%20AI%202026\CVF-Workspace\Customer-Care-Monitor-AI\frontend\src\components\ui\RunObservationPanel.vue'
+    at async open (node:internal/fs/promises:697:25)
+    at async Object.readFile (node:internal/fs/promises:1348:14)
+    at async htmlTypeOnLoadCallback (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/vite/dist/node/chunks/node.js:30647:13)
+    at async LoadPluginContextImpl.handler (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/vite/dist/node/chunks/node.js:30779:13)
+    at async plugin (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/rolldown/dist/shared/bindingify-input-options-DoaqRULI.mjs:1145:16)
+    at async plugin.<computed> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/rolldown/dist/shared/bindingify-input-options-DoaqRULI.mjs:1575:12)
+    at aggregateBindingErrorsIntoJsError (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/rolldown/dist/shared/error-BO4SlZV_.mjs:48:18)
+    at unwrapBindingResult (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/rolldown/dist/shared/error-BO4SlZV_.mjs:18:128)
+    at scan (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/rolldown/dist/experimental-index.mjs:176:3)
+    at async Object.build (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/vite/dist/node/chunks/node.js:30573:3)
+    at async scan (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/vite/dist/node/chunks/node.js:30518:4)
+    at async file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/node_modules/vite/dist/node/chunks/node.js:23088:15
+1:12:48 AM [vite] (client) Pre-transform error: Failed to load url D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/components/ui/RunObservationPanel.vue (resolved id: D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/components/ui/RunObservationPanel.vue) in C:/Users/tiennm/AppData/Local/Temp/ccmai-r067-visual-4H9I89/fixture/main.ts. Does the file exist?
+1:12:48 AM [vite] (client) Pre-transform error: Failed to load url D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/vi.ts (resolved id: D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/vi.ts) in C:/Users/tiennm/AppData/Local/Temp/ccmai-r067-visual-4H9I89/fixture/main.ts. Does the file exist?
+1:12:48 AM [vite] (client) Pre-transform error: Failed to load url D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/en.ts (resolved id: D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/frontend/src/i18n/en.ts) in C:/Users/tiennm/AppData/Local/Temp/ccmai-r067-visual-4H9I89/fixture/main.ts. Does the file exist?
+1:12:48 AM [vite] (client) ✨ new dependencies optimized: vue-i18n, vue

@@ -1,0 +1,50 @@
+{
+  "kind": "vue-tsc",
+  "command": "node .\\node_modules\\vue-tsc\\bin\\vue-tsc.js -b --force --pretty false",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "arguments": [
+    ".\\node_modules\\vue-tsc\\bin\\vue-tsc.js",
+    "-b",
+    "--force",
+    "--pretty",
+    "false"
+  ],
+  "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+  "startedUtc": "2026-10-10T06:41:10.5694034Z",
+  "endedUtc": "2026-10-10T06:42:12.8791713Z",
+  "exitCode": 0,
+  "rawStdout": "vue-tsc.stdout.log",
+  "rawStderr": "vue-tsc.stderr.log",
+  "sourceBefore": {
+    "label": "before",
+    "workspaceCommit": "5550485af3601a149a71bf8d92734ec03f6af1c2",
+    "files": [
+      {
+        "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+        "gitBlob": "60c5f91701b97cf3731dad42c5fb540f06bc9abd",
+        "sha256": "14CB703E5502676374B6BA2ACE80C65A4D13CD68B46F3992C62DEB322D5F5026"
+      },
+      {
+        "path": "frontend/src/__tests__/run-observation-adapter-compat.spec.ts",
+        "gitBlob": "fd494d9af50fe1d80ebb186a9582295faf94bba7",
+        "sha256": "4B2EB5A3C39CA00528CAD07192297B06E395984DC3BB6323E2BF99FED4222567"
+      }
+    ]
+  },
+  "sourceAfter": {
+    "label": "after",
+    "workspaceCommit": "5550485af3601a149a71bf8d92734ec03f6af1c2",
+    "files": [
+      {
+        "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+        "gitBlob": "60c5f91701b97cf3731dad42c5fb540f06bc9abd",
+        "sha256": "14CB703E5502676374B6BA2ACE80C65A4D13CD68B46F3992C62DEB322D5F5026"
+      },
+      {
+        "path": "frontend/src/__tests__/run-observation-adapter-compat.spec.ts",
+        "gitBlob": "fd494d9af50fe1d80ebb186a9582295faf94bba7",
+        "sha256": "4B2EB5A3C39CA00528CAD07192297B06E395984DC3BB6323E2BF99FED4222567"
+      }
+    ]
+  }
+}

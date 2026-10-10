@@ -1,0 +1,156 @@
+{
+  "status": "INDEPENDENT_PACKET_AUDIT_PASS",
+  "sourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
+  "workerWorkspaceHead": "96246a060b46318a9d8e0de319c26bfef870fcb3",
+  "workerPacketFiles": 16,
+  "sealedFilesValidated": 15,
+  "selfSealFileExcluded": true,
+  "actualTests": {
+    "numTotalTests": 49,
+    "numPassedTests": 49,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "success": true
+  },
+  "actualFiles": {
+    "adapter-usage-presence.spec.ts": 28,
+    "run-observation-adapter-compat.spec.ts": 4,
+    "run-observation-job-detail.spec.ts": 1,
+    "run-observation-panel.spec.ts": 4,
+    "run-observation.spec.ts": 12
+  },
+  "protectedPhysicalFiles": 381,
+  "sourceSnapshotsStable": true,
+  "processes": {
+    "vitest": {
+      "name": "vitest",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+      "argv": [
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--reporter=default",
+        "--reporter=json",
+        "--outputFile.json=../docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json",
+        "src/__tests__/run-observation.spec.ts",
+        "src/__tests__/run-observation-panel.spec.ts",
+        "src/__tests__/run-observation-job-detail.spec.ts",
+        "src/__tests__/run-observation-adapter-compat.spec.ts",
+        "src/__tests__/adapter-usage-presence.spec.ts"
+      ],
+      "commandLine": "\"C:\\Program Files\\nodejs\\node.exe\" node_modules/vitest/vitest.mjs run --reporter=default --reporter=json --outputFile.json=../docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json src/__tests__/run-observation.spec.ts src/__tests__/run-observation-panel.spec.ts src/__tests__/run-observation-job-detail.spec.ts src/__tests__/run-observation-adapter-compat.spec.ts src/__tests__/adapter-usage-presence.spec.ts",
+      "pid": 24136,
+      "startedAtUtc": "2026-10-10T07:50:11.8605280+00:00",
+      "endedAtUtc": "2026-10-10T07:50:26.4166274+00:00",
+      "elapsedMilliseconds": 14554.254,
+      "exitCode": 0,
+      "launchError": null,
+      "stdout": "vitest.stdout.log",
+      "stderr": "vitest.stderr.log"
+    },
+    "vue-tsc": {
+      "name": "vue-tsc",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+      "argv": [
+        "node_modules/vue-tsc/bin/vue-tsc.js",
+        "-b",
+        "--force"
+      ],
+      "commandLine": "\"C:\\Program Files\\nodejs\\node.exe\" node_modules/vue-tsc/bin/vue-tsc.js -b --force",
+      "pid": 4148,
+      "startedAtUtc": "2026-10-10T07:50:27.1975313+00:00",
+      "endedAtUtc": "2026-10-10T07:50:52.0209570+00:00",
+      "elapsedMilliseconds": 24824.122,
+      "exitCode": 0,
+      "launchError": null,
+      "stdout": "vue-tsc.stdout.log",
+      "stderr": "vue-tsc.stderr.log"
+    }
+  },
+  "rawEvidenceHashes": [
+    {
+      "path": "capture_worker_native.ps1",
+      "bytes": 10109,
+      "sha256": "ce2cb426b343ed66efaa50bf8680e2c992230963425d0eef4162b98b85b418fe"
+    },
+    {
+      "path": "capture-manifest.json",
+      "bytes": 1899,
+      "sha256": "da5a0176c260196333fb5db689b30b0e9f64cf4171d7a16dbff427babf95a2d5"
+    },
+    {
+      "path": "git-status-after.txt",
+      "bytes": 54,
+      "sha256": "4897af7e4e19e3e87c18573690eb2ddc0cca17f7b71a7bc1b058de68c33a89b7"
+    },
+    {
+      "path": "git-status-before.txt",
+      "bytes": 54,
+      "sha256": "4897af7e4e19e3e87c18573690eb2ddc0cca17f7b71a7bc1b058de68c33a89b7"
+    },
+    {
+      "path": "source-after-vitest.json",
+      "bytes": 1911,
+      "sha256": "ceacc1dd5f0b1d30391ca1d0059b49c3535e8174a2fd9d06d02379063323d95a"
+    },
+    {
+      "path": "source-after-vue-tsc.json",
+      "bytes": 1912,
+      "sha256": "158de0f00778d2af58fb99eb9af192a67b7aef1ae3f0364113a1ed9d8e44224d"
+    },
+    {
+      "path": "source-before-native.json",
+      "bytes": 1912,
+      "sha256": "bdea8312bcd09ff6b8aefa8881be50082a77c6829f859a107b6d471202138857"
+    },
+    {
+      "path": "validation-summary.json",
+      "bytes": 940,
+      "sha256": "1ea3f0761107e72e2bc52b17f449e8cf1dd7ab99629b116182af3aafba5f5e71"
+    },
+    {
+      "path": "vitest-report.json",
+      "bytes": 19815,
+      "sha256": "ea22f6e70c2dff6faa5ac9274dc99aec74c6644aa2e9307b2561ffedfea3e350"
+    },
+    {
+      "path": "vitest.process.json",
+      "bytes": 1400,
+      "sha256": "1101c5339ce25c31045f66187a9fe71e5b8890b52b067398918eab248bc08e00"
+    },
+    {
+      "path": "vitest.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vitest.stdout.log",
+      "bytes": 879,
+      "sha256": "722368ab36d5848d72e6f3e10c98ff7f30392c673f3fbb3b547305f178c05ca2"
+    },
+    {
+      "path": "vue-tsc.process.json",
+      "bytes": 660,
+      "sha256": "0197241b529e04bfec304b7030ecbffe7a35d81f6b4b864d2783405cf136120a"
+    },
+    {
+      "path": "vue-tsc.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vue-tsc.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Snapshot checks do not prove full write history",
+    "Worker capture has no timeout guard; completed commands observed, no timeout/kill behavior claimed",
+    "Worker wrapper trusts zero Vitest exit plus parseable report before typecheck; root independently checks reporter assertions/counts",
+    "Only five allowed source files are sampled by worker; root capture additionally samples all tracked frontend source",
+    "Mock happy-dom/parsed numbers, no live/billing/real browser/governance proof"
+  ]
+}

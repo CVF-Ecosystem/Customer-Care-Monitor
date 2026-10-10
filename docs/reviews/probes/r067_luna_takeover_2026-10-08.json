@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-08",
+  "tranche": "CCMAI-RUNTIME-067",
+  "priorWorker": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "medium",
+    "state": "uncommitted partial draft; no test receipt"
+  },
+  "successorWorker": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh",
+    "canonicalRole": "/root/r065_worker"
+  },
+  "ownerOverride": "Latest owner explicitly requests Luna extra high for subagents and an after-tranche quality/effectiveness comparison versus Sol medium. Overrides model preference only; seed immutable; risk/paths/effects/budget/roles unchanged.",
+  "comparisonBoundary": "Inherited Sol draft, not equal-start A/B. Attribute Luna corrections/new tests separately; observed times/defects only, no inferred tokens or cost.",
+  "snapshotTemp": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-sol-draft-fvyaoren",
+  "draftFiles": {
+    "frontend/src/views/Jobs/JobDetail.vue": {
+      "sha256Physical": "21a62c9b601fe54983fe955ebdd691b35bdd421c86b4e9a33d3a1e9752f68f50",
+      "bytes": 59599
+    },
+    "frontend/src/views/Jobs/job-detail/run-observation.ts": {
+      "sha256Physical": "59541b52c57a58ae29ba28217c29612f2e6d194b5f5d583b530344fa5c1f85eb",
+      "bytes": 8925
+    },
+    "frontend/src/components/ui/RunObservationPanel.vue": {
+      "sha256Physical": "936e32d391af680b5df22a7b878a885aff5054a79735c3bc231c2e41be4dbac7",
+      "bytes": 3321
+    },
+    "frontend/src/i18n/en.ts": {
+      "sha256Physical": "ab9c490afbb14a2b0fbf295053cb37deaab37f10d0dd57c45fb3b14d77f87d09",
+      "bytes": 39942
+    },
+    "frontend/src/i18n/vi.ts": {
+      "sha256Physical": "60693e7918fc5d610293dbd85e94b4519b33cda7062578348d4f1bdea7d77c09",
+      "bytes": 46366
+    }
+  }
+}

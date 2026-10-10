@@ -1,0 +1,25 @@
+# CCMAI-RUNTIME-072 bounded work order
+
+Status: FROZEN
+
+Risk ceiling: R1. Implementation/repair/source commit steward: Codex /root/r072_worker (fresh gpt-6-luna xhigh). Independent reviewer/closer and metadata commit steward: Codex /root. Owner next/continue and explicit orchestrator/reviewer delegation authorize this local compatibility repair; root reviewed the concrete contract under existing direction. Immutable seed committed at 1fb7f6cd11a14d5c8ddd05942ac8bac75d904663.
+
+SPEC: [UC01..07](../reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md). Allow only the optional adapter_usage_presence usage key; ignore all contents and expose none. Preserve every legacy check and section output. Source paths: frontend/src/views/Jobs/job-detail/run-observation.ts and NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts. Existing tests and all backend files immutable; source baseline recorded before BUILD.
+
+Worker first rehydrates state/memory/handoff/status/index and acknowledges BUILD in handoff/record before source edits. Commit product/new test before first runtime and return exact commit/test plan to root static review. Root never writes source/tests. Then each role independently gets at most2 Vitest calls (one expected positive focused three existing observation specs + NEW spec; reserve only accepted repair) and one forced vue-tsc check. Max aggregate4 Vitest/2 typecheck, Go0; no automatic retries. Capture raw stdout/stderr/command/exit/test counts and source hash. Failure stops pending consolidated root review. Review code/fixtures and run own tests before scoped local closure. No provider/network/DB/credentials/backend/UI display/dependency/gate/core/push changes; no governance claim.
+
+Track first source quality, test reasoning and accepted repairs separately from root planning/metadata/harness overhead; Sol comparison remains unmatched and no model time/cost is available. Full roadmap, live, realAnalyzer and presence display/billing remain OPEN. Facebook/Zalo OA parked; prior R068 publication remains UNVERIFIED/not retried.
+
+## Worker BUILD acknowledgment (2026-10-10)
+
+Fresh Luna xhigh rehydrated manifest/policy/current R072 state, memory, active handoff, implementation status, docs index, UC01..07, immutable seed/tranche and protected baseline. BOOTSTRAP_MIGRATION_PENDING remains nonblocking. Role transition: delegated R072 read-only feasibility auditor -> R072 IMPLEMENTATION_WORKER / source COMMIT_STEWARD; root remains independent REVIEWER / CLOSER and metadata COMMIT_STEWARD. Scope is exactly `frontend/src/views/Jobs/job-detail/run-observation.ts` and NEW `frontend/src/__tests__/run-observation-adapter-compat.spec.ts`; only `adapter_usage_presence` is optional and its contents stay opaque. Existing tests, backend, seed, old packets, dependencies, UI display and external effects stay protected. At acknowledgment, source/test edits are 0 and Vitest/vue-tsc/Go invocations are 0. The first two-file source commit precedes runtime; root static approval is required before the worker's expected focused Vitest and forced vue-tsc. Worker ceiling: 2 Vitest calls (one expected, one only for an accepted same-scope repair), 1 forced vue-tsc, Go 0; no automatic retry. This metadata acknowledgment commit is separate from the first source commit and makes no human review or runtime claim.
+
+Consolidated root static review: T1/T2 NEW test repair only; firstsource5285d9f untested. Original budget unchanged; no product repair/new owner checkpoint.
+
+## Luna xhigh REPAIR_WORKER acknowledgment (2026-10-10)
+
+Fresh Luna xhigh rehydrated manifest/policy/current R072 state, memory, this handoff, implementation status, docs index, UC01..07, immutable seed/tranche, first source5285d9f and root findings7f8024c. BOOTSTRAP_MIGRATION_PENDING remains nonblocking. Role transition: R072 IMPLEMENTATION_WORKER -> R072 REPAIR_WORKER / source COMMIT_STEWARD; root remains independent REVIEWER and metadata COMMIT_STEWARD. Root's T1 exact-output oracle and T2 extension-present rejection coverage are accepted within the same bounded test-only repair. Scope is only NEW `frontend/src/__tests__/run-observation-adapter-compat.spec.ts`; remove parsing-count keys from the expected execution output and attach the optional extension to legacy rejection cases while preserving absent-extension controls. Parser5285d9f, existing tests, backend, seed, old packets and dependencies remain immutable. At acknowledgment repair edits are 0; Vitest/vue-tsc/Go invocations remain 0 and original budgets remain unchanged. Commit the new test repair and return it for root static approval before runtime. No new product defect, runtime result or human-review claim is recorded.
+
+Worker capture complete; root metadata steward commits raw handback and REVIEW_PENDING, then independent validation. Source08bab78, captured workspace5550485; no publication.
+
+Scoped local compatibility closure: independentreviewe805739/source08bab78; no more runtime/source/publication authority. Final verification and closure artifact recorded in active handoff/tranche.

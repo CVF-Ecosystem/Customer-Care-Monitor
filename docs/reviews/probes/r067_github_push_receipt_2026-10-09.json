@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-09",
+  "observedAtUtc": "2026-10-08T23:39:28.858925+00:00",
+  "observer": "Codex /root publication steward",
+  "status": "SUCCESS_REMOTE_SHA_VERIFIED",
+  "repository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor",
+  "branch": "codex/gov001-f08-actions-evidence",
+  "pushCommand": [
+    "git",
+    "push",
+    "origin",
+    "HEAD:refs/heads/codex/gov001-f08-actions-evidence"
+  ],
+  "pushExitCode": 0,
+  "previousRemoteHead": "a384fa2ecad6746d35e7897dd8b9e4473221e691",
+  "publishedClosureHead": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3",
+  "remoteShaReadback": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3",
+  "readbackCommand": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "refs/heads/codex/gov001-f08-actions-evidence"
+  ],
+  "readbackExitCode": 0,
+  "exactShaMatch": true,
+  "reviewCommit": "f82dcf77729397dca932c84088ce497b859b9fd4",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "closureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
+  "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+  "scope": "Ordinary currentbranch publication of R067 scoped localUI closure and final assessment; no main/force/merge/deployment",
+  "followup": "This receipt is derived after publication; its own commit is a separate ordinary publication verified by tool readback, not a self-referential hash claim.",
+  "hostedActions": "NOT_RUN_NOT_CLAIMED",
+  "providerChannelLive": "NOT_RUN",
+  "governanceClaim": false,
+  "newProductExecutions": 0
+}

@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-09",
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "tranche": "CCMAI-RUNTIME-067",
+  "request": "Exactly one further rootvisual using corrected native CDP keyboard/text and fixture favicon; no extra test/build/Go.",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "sourceArchiveSha256": "60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6",
+  "originalVisualUsed": 2,
+  "approvedSupplementalVisualUsed": 1,
+  "currentAggregateVisualUsed": 3,
+  "currentAggregateVisualCeiling": 3,
+  "proposedAdditionalRootVisual": 1,
+  "proposedAggregateVisualCeiling": 4,
+  "VitestUsed": 8,
+  "VitestMax": 8,
+  "forcedBuildsUsed": 3,
+  "forcedBuildsMax": 3,
+  "Go": 0,
+  "costDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
+  "actualMount": true,
+  "actualTabSummary": true,
+  "actualEnterOpened": false,
+  "actualSpaceClosed": false,
+  "actualFinalOpen": true,
+  "probeFinding": "Root authored Enter keyDown omitted text/unmodifiedText unlike cached Puppeteer primarysource mapping/dispatch; predicted repair still requires actual verification.",
+  "runner": "docs/reviews/probes/r067_corrected_keyboard_visual_PROPOSED_2026-10-09.py",
+  "expectedRawPrefix": "r067_native_keyboard_capture",
+  "staticChecks": "node --check both NEW mjs PASS; Python AST/globguard checks PASS; no runtime after failure",
+  "rootSetupFinding": "Root and Luna readonly review found original newprefix matched own script/request; repaired before any execution; no budgetspent.",
+  "command": "python -B docs/reviews/probes/r067_corrected_keyboard_visual_PROPOSED_2026-10-09.py --grant <NEW_COMMITTED_OWNER_GRANT>",
+  "failureRule": "One launch; failure retains native/DOM/browser report then stops; no retry/reset.",
+  "review": "docs/reviews/R067_NATIVE_KEYBOARD_PROBE_REPAIR_AND_COST_DISPOSITION_2026-10-09.md",
+  "scope": "Same R2 synthetic UI component only; product/source/tests/seed unchanged, no dependency/provider/config/customer/DB/network effect. Previously authorized separate publiccore clone completed, not another update request.",
+  "preparedFiles": [
+    {
+      "path": "docs/reviews/probes/r067_capture_native_keyboard_PROPOSED_2026-10-09.mjs",
+      "sha256Physical": "50696320f68ee014ee9a7e5d41226bfc838552f7f27cbcb051d781ab81d198ac"
+    },
+    {
+      "path": "docs/reviews/probes/r067_visual_fixture_native_keyboard_PROPOSED_2026-10-09.mjs",
+      "sha256Physical": "7c26ea326151f942cdc7402d3aeba89373dda2f6db228aa67ef900e63f9ca099"
+    },
+    {
+      "path": "docs/reviews/probes/r067_corrected_keyboard_visual_PROPOSED_2026-10-09.py",
+      "sha256Physical": "3de6ef1cb9658ed100804b6cfe44d58de80758e7999540ad4aa0632828e2149b"
+    }
+  ],
+  "secondaryStaticFindings": "Two Luna readonly reviews; evidence/cleanup/prefix/acquisition findings addressed in NEW files. Finalsmallrepair self-staticchecked by root, not represented as independent runtimePASS.",
+  "repairedEvidenceControls": {
+    "stableTempMarker": true,
+    "streamingViteCaptureLogs": true,
+    "markerPlusBothFailurePhrases": true,
+    "partialTimeoutStreamsRetained": true,
+    "ownedPidTreeCleanupWithCreationIdentityReadback": true,
+    "cleanupUnknownNotAbsent": true,
+    "junctionLstatLexists": true,
+    "browserParentExitBounded": true,
+    "absoluteOwnProfilePathVerified": true
+  },
+  "localBindingNote": "Ignored .cvf/local-binding.json retains old cached resolvedCoreCommit8a4119e but same core path; actual gitHEAD/origin and doctor verifiedab714ed7. No projectmanifest/binding update in approved reconciliation; use current verified actualcommit and disclose cached stale field.",
+  "secondaryStaticReview": "docs/reviews/probes/r067_secondary_static_review_findings_2026-10-09.json",
+  "publicationChecks": {
+    "default": "PASS7/7",
+    "prRange": "PASS7/7",
+    "catalogPS51": "PASS through gates",
+    "catalogPS7": "PASS",
+    "docs": "PASS48.65s finalMarkdown",
+    "sourceAndBackup": "121frontend/source/seed/rawbackup identities PASS",
+    "syntax": "Finalnodecheck2/PythonAST/prefixguard PASS",
+    "gateUnits": "Inherited46PASS50.797s unchanged scripts/tests",
+    "runtimeAddedAfterFailure": 0
+  }
+}

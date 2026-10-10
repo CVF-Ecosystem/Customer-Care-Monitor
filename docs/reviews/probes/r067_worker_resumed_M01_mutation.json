@@ -1,0 +1,8 @@
+{
+  "label": "M01",
+  "sourcePath": "src/components/ui/RunObservationPanel.vue",
+  "old": "if (value === null) return t('run_obs_unknown')",
+  "new": "if (value === null) return key === 'local_estimate_usd' ? '0 USD' : t('run_obs_unknown')",
+  "before": "b664f97b408734e91bfd396440a1195475ee1257c2a918d659b52438e840338e",
+  "after": "7ae9d359ab7d783751599e073203c9ed2b199c8c229888d2d6df3c72016a0c14"
+}

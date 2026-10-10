@@ -1,0 +1,135 @@
+{
+  "base": "http://127.0.0.1:64036",
+  "generatedAt": "2026-10-08T23:29:03.658Z",
+  "pages": [
+    {
+      "route": "/en",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "readiness": {
+        "ready": true,
+        "deadlineMs": 8000,
+        "diagnostic": {
+          "ready": true,
+          "readyState": "complete",
+          "activeTag": "BODY",
+          "activeText": "Saved-run observationsSynthetic saved receipt, with no API request.Saved observationsSaved receipt prefix only. Run status is separate; these counts do not esta",
+          "details": 1,
+          "bodyText": "Saved-run observations\n\nSynthetic saved receipt, with no API request.\n\nSaved observations\n\nSaved receipt prefix only. Run status is separate; these counts do not establish complete job coverage or governance approval.\n\nSource preparation\nSelected sources\n2\nSources visited\n2\nSources not visited\n0\nScan complete\nYes\nSource details omitted\n0\nAll details retained\nYes\nEmpty source\n0\nUnchanged at preparation\n1\nPrepared for analysis\n1\nSnapshot errors\n0\nSource version errors\n0\nPreparation interrupted\n0\n\nPreparation counts do not verify that the source is still current.\n\nProvider calls and publication\nCalls begun\n1\nResponses returned\n1\nErrors returned\n0\nCalls interrupted\n0\nCalls in flight\n0\nItems in begun calls\n1\nItems saved\n1\nItem saves failed\n0\nItems not published\n0\nItems pending\n0\nCall details omitted\n0\nItem identities omitted\n0\nUsage writes not attempted\n0\nUsage writes succeeded\n1\nUsage writes failed\n0\nUsage write outcomes unknown\n0\nExecution marked complete\nYes\nAll details retained\nYes\nAll item identities retained\nYes\nStop reason\nNo stop recorded\nRule content identity\nContent fingerprint\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\n\nContent fingerprint only. Permissi"
+        }
+      },
+      "keyboard": {
+        "tabSummary": true,
+        "enterOpened": true,
+        "spaceClosed": true
+      },
+      "file": "en--desktop--light.png",
+      "finalUrl": "http://127.0.0.1:64036/en",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/vi",
+      "viewport": "desktop",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "readiness": {
+        "ready": true,
+        "deadlineMs": 8000,
+        "diagnostic": {
+          "ready": true,
+          "readyState": "complete",
+          "activeTag": "BODY",
+          "activeText": "Quan sát lần chạy đã lưuDữ liệu giả lập, không gửi yêu cầu đến API.Quan sát đã lưuChỉ là phần quan sát đã lưu. Trạng thái lần chạy là thông tin riêng; các số đế",
+          "details": 1,
+          "bodyText": "Quan sát lần chạy đã lưu\n\nDữ liệu giả lập, không gửi yêu cầu đến API.\n\nQuan sát đã lưu\n\nChỉ là phần quan sát đã lưu. Trạng thái lần chạy là thông tin riêng; các số đếm không chứng minh toàn bộ công việc đã được xử lý hay phê duyệt quản trị.\n\nChuẩn bị nguồn\nNguồn được chọn\n2\nNguồn đã xem\n2\nNguồn chưa xem\n0\nQuét hoàn tất\nCó\nChi tiết nguồn bị lược\n0\nGiữ đủ chi tiết\nCó\nNguồn trống\n0\nKhông đổi lúc chuẩn bị\n1\nĐã chuẩn bị phân tích\n1\nLỗi bản chụp\n0\nLỗi phiên bản nguồn\n0\nChuẩn bị bị gián đoạn\n0\n\nSố đếm chuẩn bị không xác minh nguồn hiện vẫn còn cập nhật.\n\nLời gọi và lưu kết quả\nLời gọi đã bắt đầu\n1\nPhản hồi đã trả về\n1\nLỗi đã trả về\n0\nLời gọi gián đoạn\n0\nLời gọi đang chờ\n0\nMục trong các lời gọi đã bắt đầu\n1\nMục đã lưu\n1\nMục lưu thất bại\n0\nMục chưa được công bố\n0\nMục đang chờ\n0\nChi tiết lời gọi bị lược\n0\nĐịnh danh mục bị lược\n0\nChưa thử ghi sử dụng\n0\nGhi sử dụng thành công\n1\nGhi sử dụng thất bại\n0\nChưa biết kết quả ghi sử dụng\n0\nThực thi được ghi nhận hoàn tất\nCó\nGiữ đủ chi tiết\nCó\nGiữ đủ định danh mục\nCó\nLý do dừng\nKhông ghi nhận dừng\nĐịnh danh nội dung quy tắc\nDấu vân tay nội dung\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\n\nChỉ là dấu vân tay nội dung. Quyền và phiên"
+        }
+      },
+      "keyboard": {
+        "tabSummary": true,
+        "enterOpened": true,
+        "spaceClosed": true
+      },
+      "file": "vi--desktop--light.png",
+      "finalUrl": "http://127.0.0.1:64036/vi",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/en",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "readiness": {
+        "ready": true,
+        "deadlineMs": 8000,
+        "diagnostic": {
+          "ready": true,
+          "readyState": "complete",
+          "activeTag": "BODY",
+          "activeText": "Saved-run observationsSynthetic saved receipt, with no API request.Saved observationsSaved receipt prefix only. Run status is separate; these counts do not esta",
+          "details": 1,
+          "bodyText": "Saved-run observations\n\nSynthetic saved receipt, with no API request.\n\nSaved observations\n\nSaved receipt prefix only. Run status is separate; these counts do not establish complete job coverage or governance approval.\n\nSource preparation\nSelected sources\n2\nSources visited\n2\nSources not visited\n0\nScan complete\nYes\nSource details omitted\n0\nAll details retained\nYes\nEmpty source\n0\nUnchanged at preparation\n1\nPrepared for analysis\n1\nSnapshot errors\n0\nSource version errors\n0\nPreparation interrupted\n0\n\nPreparation counts do not verify that the source is still current.\n\nProvider calls and publication\nCalls begun\n1\nResponses returned\n1\nErrors returned\n0\nCalls interrupted\n0\nCalls in flight\n0\nItems in begun calls\n1\nItems saved\n1\nItem saves failed\n0\nItems not published\n0\nItems pending\n0\nCall details omitted\n0\nItem identities omitted\n0\nUsage writes not attempted\n0\nUsage writes succeeded\n1\nUsage writes failed\n0\nUsage write outcomes unknown\n0\nExecution marked complete\nYes\nAll details retained\nYes\nAll item identities retained\nYes\nStop reason\nNo stop recorded\nRule content identity\nContent fingerprint\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\n\nContent fingerprint only. Permissi"
+        }
+      },
+      "keyboard": {
+        "tabSummary": true,
+        "enterOpened": true,
+        "spaceClosed": true
+      },
+      "file": "en--mobile--light.png",
+      "finalUrl": "http://127.0.0.1:64036/en",
+      "horizontalOverflow": false
+    },
+    {
+      "route": "/vi",
+      "viewport": "mobile",
+      "theme": "light",
+      "jsErrors": [],
+      "consoleErrors": [],
+      "logErrors": [],
+      "externalRequests": [],
+      "readiness": {
+        "ready": true,
+        "deadlineMs": 8000,
+        "diagnostic": {
+          "ready": true,
+          "readyState": "complete",
+          "activeTag": "BODY",
+          "activeText": "Quan sát lần chạy đã lưuDữ liệu giả lập, không gửi yêu cầu đến API.Quan sát đã lưuChỉ là phần quan sát đã lưu. Trạng thái lần chạy là thông tin riêng; các số đế",
+          "details": 1,
+          "bodyText": "Quan sát lần chạy đã lưu\n\nDữ liệu giả lập, không gửi yêu cầu đến API.\n\nQuan sát đã lưu\n\nChỉ là phần quan sát đã lưu. Trạng thái lần chạy là thông tin riêng; các số đếm không chứng minh toàn bộ công việc đã được xử lý hay phê duyệt quản trị.\n\nChuẩn bị nguồn\nNguồn được chọn\n2\nNguồn đã xem\n2\nNguồn chưa xem\n0\nQuét hoàn tất\nCó\nChi tiết nguồn bị lược\n0\nGiữ đủ chi tiết\nCó\nNguồn trống\n0\nKhông đổi lúc chuẩn bị\n1\nĐã chuẩn bị phân tích\n1\nLỗi bản chụp\n0\nLỗi phiên bản nguồn\n0\nChuẩn bị bị gián đoạn\n0\n\nSố đếm chuẩn bị không xác minh nguồn hiện vẫn còn cập nhật.\n\nLời gọi và lưu kết quả\nLời gọi đã bắt đầu\n1\nPhản hồi đã trả về\n1\nLỗi đã trả về\n0\nLời gọi gián đoạn\n0\nLời gọi đang chờ\n0\nMục trong các lời gọi đã bắt đầu\n1\nMục đã lưu\n1\nMục lưu thất bại\n0\nMục chưa được công bố\n0\nMục đang chờ\n0\nChi tiết lời gọi bị lược\n0\nĐịnh danh mục bị lược\n0\nChưa thử ghi sử dụng\n0\nGhi sử dụng thành công\n1\nGhi sử dụng thất bại\n0\nChưa biết kết quả ghi sử dụng\n0\nThực thi được ghi nhận hoàn tất\nCó\nGiữ đủ chi tiết\nCó\nGiữ đủ định danh mục\nCó\nLý do dừng\nKhông ghi nhận dừng\nĐịnh danh nội dung quy tắc\nDấu vân tay nội dung\ncccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\n\nChỉ là dấu vân tay nội dung. Quyền và phiên"
+        }
+      },
+      "keyboard": {
+        "tabSummary": true,
+        "enterOpened": true,
+        "spaceClosed": true
+      },
+      "file": "vi--mobile--light.png",
+      "finalUrl": "http://127.0.0.1:64036/vi",
+      "horizontalOverflow": false
+    }
+  ],
+  "cleanup": {
+    "browserCreated": true,
+    "browserParentExited": true,
+    "pathVerified": true,
+    "profileAbsent": true,
+    "scope": "Spawned browser parent and its own temporary profile only; no universal process claim"
+  },
+  "summary": {
+    "pages": 4,
+    "pagesWithJsErrors": 0,
+    "pagesWithHorizontalOverflow": 0,
+    "externalRequests": []
+  }
+}

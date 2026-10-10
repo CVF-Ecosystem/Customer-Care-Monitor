@@ -65,6 +65,8 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	ctx := owner.ctx
 	run := res.run
 	observation := newPreparationCollector(job, run, plan)
+	execution := newExecutionCollector(job, run, plan)
+	rules := newRuleObservation(job, run)
 	committed := false    // the terminal state is stored: a later panic must not re-close the run
 	defer owner.release() // runs last: the slot is held until every effect below has finished
 	defer func() {
@@ -74,7 +76,8 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 			if !committed {
 				// the same owner decision and checked finalizer as every other terminal path
 				observation.interrupted()
-				if _, err := closeOwnedRunSummary(owner, &run, res.bound(), "Lượt chạy dừng đột ngột; xem nhật ký máy chủ.", preparationSummary(map[string]interface{}{}, observation.freeze()), true); err != nil {
+				execution.panicStop()
+				if _, err := closeOwnedRunSummary(owner, &run, res.bound(), "Lượt chạy dừng đột ngột; xem nhật ký máy chủ.", observedSummary(map[string]interface{}{}, observation.freeze(), execution.freeze(), rules.freeze()), true); err != nil {
 					preparationGap("panic_terminal")
 					log.Printf("[analyzer] job %s: panic state not recorded; the running row keeps blocking admission", job.ID)
 					finishedAt := analyzerNow()
@@ -98,7 +101,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	// Parse input channel IDs
 	var channelIDs []string
 	if err := json.Unmarshal([]byte(job.InputChannelIDs), &channelIDs); err != nil {
-		return a.failOwnedRun(owner, &run, job, "Danh sách kênh đầu vào của job không hợp lệ", earlyInputInvalid, observation.freeze())
+		return a.failOwnedRun(owner, &run, job, "Danh sách kênh đầu vào của job không hợp lệ", earlyInputInvalid, observation.freeze(), rules.freeze(), execution)
 	}
 
 	issuesFound := 0
@@ -119,7 +122,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 		conversations, candErr = ordinaryIncrementalCandidates(job, channelIDs)
 		if candErr != nil {
 			observation.selectionFailed()
-			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection, observation.freeze())
+			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection, observation.freeze(), rules.freeze(), execution)
 		}
 		var prepErrors int
 		observation.selection(len(conversations))
@@ -129,7 +132,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 		conversations, candErr = explicitCandidates(job, channelIDs, plan, now)
 		if candErr != nil {
 			observation.selectionFailed()
-			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection, observation.freeze())
+			return a.failOwnedRun(owner, &run, job, "Không đọc được danh sách cuộc chat; xem nhật ký máy chủ", earlyCandidateSelection, observation.freeze(), rules.freeze(), execution)
 		}
 		var prepErrors int
 		observation.selection(len(conversations))
@@ -150,9 +153,9 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 	}
 
 	// Set initial total so frontend can show progress immediately
-	initialSummary := preparationSummary(map[string]interface{}{
+	initialSummary := observedSummary(map[string]interface{}{
 		"conversations_found": found,
-	}, observation.freeze())
+	}, observation.freeze(), execution.freeze(), rules.freeze())
 	if err := db.DB.Model(&run).Update("summary", string(initialSummary)).Error; err != nil {
 		preparationGap("initial")
 		log.Printf("[analyzer] DB update error (initial summary): %v", err)
@@ -186,13 +189,13 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 		var provErr error
 		provider, provErr = a.providerResolver(job)
 		if provErr != nil {
-			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable, observation.freeze())
+			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable, observation.freeze(), rules.freeze(), execution)
 		}
 	} else {
 		var provErr error
 		provider, provErr = a.getProvider(job)
 		if provErr != nil {
-			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable, observation.freeze())
+			return a.failOwnedRun(owner, &run, job, "Không khởi tạo được AI provider; kiểm tra cấu hình AI trong Cài đặt.", earlyProviderUnavailable, observation.freeze(), rules.freeze(), execution)
 		}
 	}
 
@@ -218,7 +221,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 
 		if batchMode {
 			var bIssues, bPass, bAnalyzed, bErrors int
-			bIssues, bPass, bAnalyzed, bErrors, truncated = a.runBatchMode(owner, provider, job, run, prepared, found, batchSize, observation.freeze())
+			bIssues, bPass, bAnalyzed, bErrors, truncated = a.runBatchMode(owner, provider, job, run, prepared, found, batchSize, observation.freeze(), rules.freeze(), execution)
 			issuesFound += bIssues
 			passCount += bPass
 			analyzedCount += bAnalyzed
@@ -247,18 +250,20 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 				if owner.cancelledNow() {
 					return
 				}
+				execution.begin("SINGLE", []models.Conversation{conv})
 				aiResp, err := provider.AnalyzeChat(ctx, systemPrompt, transcript)
+				execution.returned(err)
 				if err != nil {
 					log.Printf("[analyzer] AI error for conversation %s: %v", conv.ID, err)
 					errorCount++
 					// Update progress even on error
-					errProgressJSON := preparationSummary(map[string]interface{}{
+					errProgressJSON := observedSummary(map[string]interface{}{
 						"conversations_found":    found,
 						"conversations_analyzed": analyzedCount,
 						"conversations_passed":   passCount,
 						"conversations_errors":   errorCount,
 						"issues_found":           issuesFound,
-					}, observation.freeze())
+					}, observation.freeze(), execution.freeze(), rules.freeze())
 					if err := db.DB.Model(&run).Update("summary", string(errProgressJSON)).Error; err != nil {
 						preparationGap("single_error")
 						log.Printf("[analyzer] DB update error (error progress): %v", err)
@@ -267,6 +272,8 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 				}
 				// Log AI usage + cost
 				cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
+				execution.observeUsage(aiResp.InputTokens, aiResp.OutputTokens, cost, priceKnown)
+				execution.observeUsagePresence(aiResp.UsagePresence)
 				if !priceKnown {
 					log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
 				}
@@ -282,7 +289,8 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 					CostUSD:      cost,
 					CreatedAt:    time.Now(),
 				}
-				db.DB.Create(&usageLog)
+				execution.usageBegin()
+				execution.usageReturned(db.DB.Create(&usageLog).Error)
 
 				// Parse and save results, unless a cancellation was accepted while the provider ran.
 				var count int
@@ -292,6 +300,7 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 					count, passed, saveErr = a.saveResults(run.ID, snap, job.JobType, aiResp.Content)
 					return saveErr
 				})
+				execution.publication(published, err)
 				if !published {
 					return
 				}
@@ -307,13 +316,13 @@ func (a *Analyzer) executeReserved(res *JobRunReservation, job models.Job, plan 
 				}
 
 				// Update progress so frontend can poll real-time status
-				progressJSON := preparationSummary(map[string]interface{}{
+				progressJSON := observedSummary(map[string]interface{}{
 					"conversations_found":    found,
 					"conversations_analyzed": analyzedCount,
 					"conversations_passed":   passCount,
 					"conversations_errors":   errorCount,
 					"issues_found":           issuesFound,
-				}, observation.freeze())
+				}, observation.freeze(), execution.freeze(), rules.freeze())
 				if err := db.DB.Model(&run).Update("summary", string(progressJSON)).Error; err != nil {
 					preparationGap("single_progress")
 					log.Printf("[analyzer] DB update error (progress): %v", err)
@@ -343,13 +352,14 @@ complete:
 		truncated = true
 	}
 	finishedAt := analyzerNow()
-	summaryJSON := preparationSummary(map[string]interface{}{
+	execution.complete(truncated, cancelled || ctx.Err() != nil, errorCount)
+	summaryJSON := observedSummary(map[string]interface{}{
 		"conversations_found":    found,
 		"conversations_analyzed": analyzedCount,
 		"conversations_passed":   passCount,
 		"conversations_errors":   errorCount,
 		"issues_found":           issuesFound,
-	}, observation.freeze())
+	}, observation.freeze(), execution.freeze(), rules.freeze())
 	runStatus := "success"
 	if cancelled {
 		runStatus = "cancelled"
@@ -731,7 +741,7 @@ func (a *Analyzer) saveResults(runID string, snap *conversationSnapshot, jobType
 // runBatchMode processes the prepared conversations in batches of batchSize, sending multiple
 // conversations per AI call. The snapshots were prepared before this call (ordinary and explicit
 // modes alike) and are sent and saved unchanged.
-func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job models.Job, run models.JobRun, prepared []preparedConversation, found, batchSize int, receipt *preparationReceipt) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
+func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job models.Job, run models.JobRun, prepared []preparedConversation, found, batchSize int, receipt *preparationReceipt, rules *ruleObservationReceipt, execution *executionCollector) (issuesFound, passCount, analyzedCount, errorCount int, cancelled bool) {
 	ctx := owner.ctx
 	// Build system prompt once
 	var systemPrompt string
@@ -778,7 +788,13 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 			return
 		}
 		// Call AI batch
+		members := make([]models.Conversation, len(batch))
+		for j, b := range batch {
+			members[j] = b.Conv
+		}
+		execution.begin("BATCH", members)
 		aiResp, err := provider.AnalyzeChatBatch(ctx, systemPrompt, items)
+		execution.returned(err)
 		if err != nil {
 			log.Printf("[analyzer-batch] AI error for batch starting at %d: %v", i, err)
 			errorCount += len(batch)
@@ -788,6 +804,8 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 
 		// Log AI usage
 		cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
+		execution.observeUsage(aiResp.InputTokens, aiResp.OutputTokens, cost, priceKnown)
+		execution.observeUsagePresence(aiResp.UsagePresence)
 		if !priceKnown {
 			log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
 		}
@@ -803,7 +821,8 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 			CostUSD:      cost,
 			CreatedAt:    time.Now(),
 		}
-		db.DB.Create(&usageLog)
+		execution.usageBegin()
+		execution.usageReturned(db.DB.Create(&usageLog).Error)
 
 		// Parse batch response — expect JSON array
 		content := strings.TrimSpace(aiResp.Content)
@@ -822,6 +841,7 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 			expectedIDs[j] = b.Conv.ID
 		}
 		batchResults, parseErr := parseBatchResults(expectedIDs, []byte(content))
+		execution.parsed(parseErr)
 		if parseErr != nil {
 			log.Printf("[analyzer-batch] rejected batch starting at %d: %v", i, parseErr)
 			errorCount += len(batch)
@@ -837,6 +857,7 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 					count, passed, e = a.saveResults(run.ID, batch[j].Snap, job.JobType, string(rawResult))
 					return e
 				})
+				execution.publication(published, saveErr)
 				if !published {
 					// cancellation accepted while the provider ran: nothing further is published
 					cancelled = true
@@ -857,13 +878,13 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 		}
 
 		// Update progress
-		progressJSON := preparationSummary(map[string]interface{}{
+		progressJSON := observedSummary(map[string]interface{}{
 			"conversations_found":    found,
 			"conversations_analyzed": analyzedCount,
 			"conversations_passed":   passCount,
 			"conversations_errors":   errorCount,
 			"issues_found":           issuesFound,
-		}, receipt)
+		}, receipt, execution.freeze(), rules)
 		if err := db.DB.Model(&run).Update("summary", string(progressJSON)).Error; err != nil {
 			preparationGap("batch_progress")
 			log.Printf("[analyzer-batch] DB update error (progress): %v", err)
@@ -907,9 +928,18 @@ const (
 // shown; the log carries the job id, run id and the fixed class only, which is enough to correlate.
 // When the terminal write cannot be recorded the running row stays and keeps blocking admission
 // (fail closed).
-func (a *Analyzer) failOwnedRun(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg string, class earlyFailureClass, receipt *preparationReceipt) (*models.JobRun, error) {
+func (a *Analyzer) failOwnedRun(owner *JobRunOwner, run *models.JobRun, job models.Job, publicMsg string, class earlyFailureClass, receipt *preparationReceipt, rules *ruleObservationReceipt, collectors ...*executionCollector) (*models.JobRun, error) {
 	log.Printf("[analyzer] job %s: run %s failed before analysis (class=%s)", job.ID, run.ID, class)
-	status, err := closeOwnedRunSummary(owner, run, job, publicMsg, preparationSummary(map[string]interface{}{}, receipt), true)
+	var execution *executionCollector
+	if len(collectors) > 0 {
+		execution = collectors[0]
+	}
+	if class == earlyProviderUnavailable {
+		execution.stop("PROVIDER_SETUP_FAILED")
+	} else {
+		execution.stop("PREPARATION_STOPPED")
+	}
+	status, err := closeOwnedRunSummary(owner, run, job, publicMsg, observedSummary(map[string]interface{}{}, receipt, execution.freeze(), rules), true)
 	if err != nil {
 		preparationGap("early_terminal")
 		log.Printf("[analyzer] job %s: early failure (class=%s) not recorded: %v", job.ID, class, err)

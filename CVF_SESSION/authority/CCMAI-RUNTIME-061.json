@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-061",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_APPLICATION_WORK_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_061.md",
+  "sourcePlanningCommit": "50fe70a7586fc78c8f854deada78a3e1a01e1ae1",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r059_worker",
+    "repairWorker": "Codex /root/r059_worker",
+    "commitSteward": "Codex /root/r059_worker",
+    "reviewer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/source_execution_receipt_db_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_061.md",
+    "docs/work_orders/CCMAI_RUNTIME_060.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "original_authority_seed_edit",
+    "semantic_auto_skip",
+    "budget_or_policy_gate",
+    "provider_selection_or_fallback_change",
+    "old_worker_or_review_packet_edit",
+    "receipt_driven_admission_or_skip",
+    "extra_database_query_for_receipt",
+    "model_or_migration_change",
+    "automatic_runtime_retry",
+    "provider_interface_edit",
+    "http_attempt_or_billing_claim",
+    "execution_receipt_driven_behavior_change",
+    "root_source_test_edit",
+    "old_baseline_test_edit",
+    "product_source_edit",
+    "worker_runtime_campaign",
+    "all_other_test_edit"
+  ],
+  "claimScope": "Only logical Analyzer provider-interface execution observations, not HTTP/billed calls, rule admission, pricing truth, full S2/live/CVF AI governance/hosted proof. Existing behavior/preparation receipt/scalars preserved.",
+  "objective": "Settle independent R060-R2-01 NEW EX terminal fallback/persisted-prefix test contract, revalidate EX01..12 and actual two semantic mutations on byte-identical product source.",
+  "ownerAuthorization": "Existing owner medium delegated route plus explicit autonomous audit/choose instruction; root chooses bounded same-objective fault-test repair and successor campaign within total8Go. Original campaign cap2 exhausted, successor explicitly records thirdcampaign before action, no silent reset or public/provider authority.",
+  "workerModel": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "medium"
+  },
+  "baselineSourceCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
+  "acceptedPriorClosureCommit": "9042f9174fc65d9b785d9645f91c881bbbac79ac",
+  "spec": "docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md",
+  "draftWorkOrder": "docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md",
+  "runtimeEvidenceBoundary": "Only application-behavior tests with cached offline Go/Docker and disposable synthetic MySQL, internal network/no host ports/no new pulls. Test doubles are application fault fixtures, never governance proof. Any actual provider/governance/credential/network evidence requires separate authority.",
+  "dispatchBoundary": "Commit immutable seed then activate baseCommit to seed commit; fresh worker rehydrate/declare/BUILD ack before test repair. No worker Go; root independent successor1/4Go after repaired source handback; no automatic retry.",
+  "semanticsRefinements": [
+    "Invocation interruption only if method did not return; later publication panic retains RESPONSE_RETURNED and pending item outcomes, stop PANIC.",
+    "Usage write begun but return unobserved must be WRITE_OUTCOME_UNKNOWN; NOT_ATTEMPTED only before write begins. This fixed enum observes uncertainty, no control-flow change.",
+    "Parsing NOT_SEPARATELY_OBSERVABLE is explicit for single save path.",
+    "No new lookup or read for source/cost/provider. Preserve all old tests and old packet bytes."
+  ],
+  "workerBudget": {
+    "maxCampaigns": 0,
+    "maxGoInvocations": 0
+  },
+  "reviewerBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4
+  },
+  "aggregateBudget": {
+    "lineage": "R059/R060/R061",
+    "maxGoInvocations": 8,
+    "priorUsedGoInvocations": 2,
+    "plannedTotalGoInvocations": 6,
+    "maxCampaignsIncludingHistorical": 3,
+    "priorUsedCampaigns": 2,
+    "newMaxCampaigns": 1
+  },
+  "oldTestsBoundary": "All original baseline tests including accepted exact4-line SP amendment unchanged; only named NEW EX fault test and local helpers may change. Prior NEW EX UUID/binding assertions retained.",
+  "sourceBoundary": "Only existing NEW EX DB fault-test semantics; all product source/old tests/UUID binding/membership assertions/old evidence/seeds immutable. Root canonical source/test edits prohibited.",
+  "supersedes": "CCMAI-RUNTIME-060",
+  "decisionReport": "docs/reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md",
+  "testRepairContract": "R060-R2-01: terminal fallback status error without Summary is not durable terminal receipt; check reads, earlier prefix, returned observation, nil checkpoint. Also block fallback explicitly for running-row scenario; preserve tests instead of weakening arbitrary status.",
+  "lineageSources": {
+    "productCheckpoint": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
+    "UUIDFixtureCheckpoint": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
+    "failedWorkerEvidence": "56f5f85308804f80215cadf012f3b2db2a77dae4",
+    "priorRootRunner": "50fe70a",
+    "originalR059Go": 0
+  }
+}

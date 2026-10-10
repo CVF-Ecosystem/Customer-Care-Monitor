@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "backendArchiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "backendArchiveBytes": 2478080,
+  "backendArchiveMembers": 218,
+  "command": "go -C <owned exact-source archive>/backend build ./...",
+  "maxAttempts": 1,
+  "tests": 0,
+  "retries": 0,
+  "timeoutSeconds": 240
+}

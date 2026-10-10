@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "status": "OWNER_APPROVED_EXACTLY_ONE_VISUAL",
+  "request": "docs/reviews/probes/r067_additional_visual_request_2026-10-09.json",
+  "ownerReply": "duyệt to exactlyone supplemental rootvisual; later separate duyệt to CVF workspace reconciliation",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "additionalRootVisualMax": 1,
+  "additionalRootVisualUsed": 0,
+  "originalVisualUsed": 2,
+  "aggregateVisualCeilingIncludingHistory": 3,
+  "VitestUsed": 8,
+  "VitestMax": 8,
+  "forcedBuildsUsed": 3,
+  "forcedBuildsMax": 3,
+  "Go": 0,
+  "coreReconciliation": {
+    "ownerSeparatelyAuthorized": true,
+    "oldCore": "8a4119e11db00e774ed8e7cf7d9a8caa309e81d1",
+    "newCore": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
+    "backup": "D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/_cvf-core-backups/.Controlled-Vibe-Framework-CVF-20261009-060023",
+    "exitCode": 0,
+    "doctor": "PASS WITH NOTE25/1",
+    "projectManifestsUpdated": false,
+    "workspaceRulesAndWrappersRefreshed": true
+  },
+  "limits": "Only exact prepared onevisual; no test/build/Go/source/seed edit; preserve both failures. Failure stops without retry.",
+  "rootReadSetupFailure": "Python manifest read initially omitted utf-8-sig and failed on pre-existing BOM; re-read correctly, no file edit/runtime."
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "auditId": "CCMAI-RUNTIME-074",
+  "reviewer": "Codex /root",
+  "firstAuditCommit": "076d3319f2e84c681a1835e4ce4cde8541334d7b",
+  "acceptedAuditCommit": "565b1175bf83f3d4e89dabaf94615ee94625c6e4",
+  "sourceBaseline": "9fc86fe012d1cc8c1aeb7d9e7a55e79c1c032c2d",
+  "reliedOnSourceFiles": 18,
+  "allReliedOnPhysicalAndGitBlobsStable": true,
+  "protectedFiles": 439,
+  "protectedPhysicalSnapshotsStable": true,
+  "hashLimitation": "Snapshot equality is not complete write-history proof",
+  "applicationNativeInvocations": 0,
+  "workerArtifactEditsByRoot": 0,
+  "productTestEditsByRoot": 0,
+  "immutableSeedFirstCommit": "f1e875d8c97ab1337000ac6452444325235e21d5",
+  "priorFiveImplementationEntriesUnchanged": true,
+  "packetGitBlobs": {
+    "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md": "f090dabd66d6f4de663e94d622ab09777c47c7cb",
+    "docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json": "e95d75ef667823439210437a7fce798a3b053ad1",
+    "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json": "85aca68114b4f567be5d4b8f48fc130aae733001"
+  },
+  "packetPhysicalSHA256": {
+    "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md": "773f330c8e8de860b7b4bbd7bad3f8beb9a10b235795f0235ccb318ba50f1efe",
+    "docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json": "1778517977eb3f3cd43dc0ba5ba5c6c5af6bcc8d924ad89c27deb838d7237f86",
+    "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json": "5b391d41b42bf930e645a293374684653f070bf8bddd6821163a15af83764b95"
+  },
+  "historicalEvidenceVerification": "Original review/closure records and local named commit existence; no historical runtime rerun",
+  "publication": "NOT_AUTHORIZED"
+}

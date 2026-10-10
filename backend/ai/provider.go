@@ -8,11 +8,12 @@ import (
 
 // AIResponse contains the AI response text and usage metrics.
 type AIResponse struct {
-	Content      string
-	InputTokens  int
-	OutputTokens int
-	Model        string
-	Provider     string // "claude" or "gemini"
+	Content       string
+	InputTokens   int
+	OutputTokens  int
+	UsagePresence *AIUsagePresence `json:"usage_presence,omitempty"`
+	Model         string
+	Provider      string // "claude" or "gemini"
 }
 
 // BatchItem represents one conversation in a batch request.

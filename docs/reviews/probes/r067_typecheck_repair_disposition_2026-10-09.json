@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "failedSource": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "rawReceipt": "docs/reviews/probes/r067_worker_build_2026-10-09.json",
+  "rawStdout": "docs/reviews/probes/r067_worker_build_typecheck_stdout_2026-10-09.log",
+  "actualDiagnostic": "src/__tests__/run-observation-job-detail.spec.ts(109,100): error TS1005: comma expected; missing options-object brace confirmed by source inspection.",
+  "rootStaticOversightAcknowledged": true,
+  "sourceRepair": "Only missing brace in NEW fixture; worker commit, no root source/test edit.",
+  "budgets": {
+    "workerMaxCampaigns": 1,
+    "workerMaxVitestInvocations": 4,
+    "reviewerMaxCampaigns": 1,
+    "reviewerMaxVitestInvocations": 4,
+    "aggregateMaxVitestInvocations": 8,
+    "workerMaxForcedTypecheckBuilds": 1,
+    "reviewerMaxForcedTypecheckBuilds": 1,
+    "maxGoInvocations": 0,
+    "workerUsedCampaigns": 0,
+    "workerUsedVitestInvocations": 0,
+    "reviewerUsedCampaigns": 0,
+    "reviewerUsedVitestInvocations": 0,
+    "workerUsedForcedTypecheckBuilds": 1,
+    "reviewerUsedForcedTypecheckBuilds": 0,
+    "usedGoInvocations": 0
+  },
+  "finalValidation": "Use existing root one forcedtypecheck-build on finalrepair before worker4Vitest+root4Vitest, no reset/addition. Historical oldsource failure remains; finalsource needs allchecks green.",
+  "roles": "Codex Luna xhigh /root/r065_worker REPAIR_WORKER / BUILD COMMIT_STEWARD; Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / CLOSER"
+}

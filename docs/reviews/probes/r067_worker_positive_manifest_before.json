@@ -1,0 +1,486 @@
+{
+  ".gitignore": {
+    "bytes": 277,
+    "sha256Physical": "d50ab07e11fa4bf3b1c7c3312e1d7baeab56cca756832ccf40476823ad2a38b7"
+  },
+  "README.md": {
+    "bytes": 447,
+    "sha256Physical": "e9cb3c554246c31688049b11843963e80698c83c851444da0ba9943383af572a"
+  },
+  "index.html": {
+    "bytes": 383,
+    "sha256Physical": "59ac28ef4235d5a7389aca06c42bd3487153c1ad0ab9444b7f82baff831a4173"
+  },
+  "package-lock.json": {
+    "bytes": 135511,
+    "sha256Physical": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00"
+  },
+  "package.json": {
+    "bytes": 913,
+    "sha256Physical": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d"
+  },
+  "public/favicon.png": {
+    "bytes": 4627,
+    "sha256Physical": "bdd8b863fac5ab9772e079df6eff9654e792c32675aff389d98a3a6b12b4b67c"
+  },
+  "public/icons.svg": {
+    "bytes": 5055,
+    "sha256Physical": "7ca2d67c9c3aebf50cdc8709ee8aacf8cdb8cc7ea6325ea94939caef5da1c53d"
+  },
+  "src/App.vue": {
+    "bytes": 2511,
+    "sha256Physical": "aac4d71dc484c59a685038f2249d2ddb8ce10c4b29269116b39db356f4b0369d"
+  },
+  "src/__tests__/business-day.spec.ts": {
+    "bytes": 7075,
+    "sha256Physical": "56debf47c77288ff77fb9802c2d0de21af851722122e3a04f0628704d39abdda"
+  },
+  "src/__tests__/channels-sync-status.spec.ts": {
+    "bytes": 15546,
+    "sha256Physical": "944a53338f1e6f17f4e8c75090bf68484324f37409348de39d494b1ef6f74d87"
+  },
+  "src/__tests__/cost-logs-business-day.spec.ts": {
+    "bytes": 4475,
+    "sha256Physical": "0002850f0076faabab3c433089eef12866b00620fff54e4ff8fa4950f525a833"
+  },
+  "src/__tests__/dashboard-business-day.spec.ts": {
+    "bytes": 5967,
+    "sha256Physical": "5e5e65dd4faf6c39c8dcf84b6e5f5bfff6a621b8675a6c07ecb48ade0f6540b4"
+  },
+  "src/__tests__/dashboard-qc-card.spec.ts": {
+    "bytes": 5395,
+    "sha256Physical": "8a710fdcc0f127c10440abdc4e8ff12a0b538a3b3c2dbfc658cfe9a2388c024f"
+  },
+  "src/__tests__/dashboard-service-status.spec.ts": {
+    "bytes": 10810,
+    "sha256Physical": "e9078d155c638cbf0f028120e7eb885beec1f179a7557168d49de25db8aa1ec5"
+  },
+  "src/__tests__/format.spec.ts": {
+    "bytes": 2381,
+    "sha256Physical": "12f80a3d1f0ce55d696727587ded259dd048b895cbe5cdf4000c6772ea0bfbbd"
+  },
+  "src/__tests__/i18n.spec.ts": {
+    "bytes": 2693,
+    "sha256Physical": "d44bb0da73c5b848ef377841c8a88c68816a30f048e028b32eb0393fb9ae6d2c"
+  },
+  "src/__tests__/job-detail-logic.spec.ts": {
+    "bytes": 7603,
+    "sha256Physical": "c29d63885bed3da795d6cd41b18abd032b38fee3490319d8be249a2cf5f0d07a"
+  },
+  "src/__tests__/job-detail-view.spec.ts": {
+    "bytes": 9592,
+    "sha256Physical": "fbf52eddad75f65bd7ba501cf95c3e673175f91e27abaa4c9f01e9261156b07b"
+  },
+  "src/__tests__/job-run-cancel.spec.ts": {
+    "bytes": 12403,
+    "sha256Physical": "b42e3f22921adab8afd897315b0e3091c37c6e999f3e8f4b9643ad55bad70afd"
+  },
+  "src/__tests__/job-run-dialog-modes.spec.ts": {
+    "bytes": 11140,
+    "sha256Physical": "9f053559f20d19daae0239f9814a44feed3ff2da7c13d59e63c146d62f4dbc9c"
+  },
+  "src/__tests__/jobs-screens.spec.ts": {
+    "bytes": 11641,
+    "sha256Physical": "445266deeb24bc1e9b8058ca57895d1ee4f473fa4a65bffa56009c088a9ce7a9"
+  },
+  "src/__tests__/layout-avatars.spec.ts": {
+    "bytes": 1304,
+    "sha256Physical": "1c928f4a42798e0d15f8f7cdf485f1dd72f425227109bf6435b062d69d4f223d"
+  },
+  "src/__tests__/logs-mcp.spec.ts": {
+    "bytes": 10994,
+    "sha256Physical": "299b3c51b8c083f569ac902723a3647400f1e39f73416cfe9e5e2578f576d44a"
+  },
+  "src/__tests__/messages-business-day.spec.ts": {
+    "bytes": 5766,
+    "sha256Physical": "0ce766f7105c33362706aa88ead3c0ef7c0e69e36307eba5ab2ca3be30f3143e"
+  },
+  "src/__tests__/messages-screen.spec.ts": {
+    "bytes": 11839,
+    "sha256Physical": "e425e2dc06123a0e0205f9c6653175f833764ffa23cdc64f2d7841cef30f4496"
+  },
+  "src/__tests__/results-business-day.spec.ts": {
+    "bytes": 7207,
+    "sha256Physical": "b217dd479f97d8a088de934394e099a847e73ce7d42545ac702122a9f3cb57e1"
+  },
+  "src/__tests__/results-screen.spec.ts": {
+    "bytes": 14198,
+    "sha256Physical": "09a6396e18f609717ad317e0166558ce80920e190556a8a06863b44007d656c7"
+  },
+  "src/__tests__/results-source-note.spec.ts": {
+    "bytes": 4484,
+    "sha256Physical": "44db04b76b0336dcb5d59ae817d1b545678135346b9aca022d85da9f866633b0"
+  },
+  "src/__tests__/review.spec.ts": {
+    "bytes": 3459,
+    "sha256Physical": "c3f566838487d7d0b83f89cfe3af2ab6e895cb4a6ffa4faf7b1734a629f53296"
+  },
+  "src/__tests__/run-observation-job-detail.spec.ts": {
+    "bytes": 10224,
+    "sha256Physical": "d0a30dd5fb3eca6e0d1ecf35998401f460ec885ef696c51feb9d50fa36a2979a"
+  },
+  "src/__tests__/run-observation-panel.spec.ts": {
+    "bytes": 5862,
+    "sha256Physical": "8a3c709614cf60ee207ab045b66a4f043f12ae59cd97062f39ec1bcdd57f5a0f"
+  },
+  "src/__tests__/run-observation.spec.ts": {
+    "bytes": 16921,
+    "sha256Physical": "b866d12b28de94791fb3a1dcbb6f331bc913efcc6758a79692a58d09884346ae"
+  },
+  "src/__tests__/settings-users-auth.spec.ts": {
+    "bytes": 9596,
+    "sha256Physical": "3651de306a9fefb56a0c4aef1d2cf5cf070f3cd3bf79d99bfb223532ccae2817"
+  },
+  "src/__tests__/setup-stale-token.spec.ts": {
+    "bytes": 8482,
+    "sha256Physical": "68b52043a4aaa14e036c7563d46f3c3914009682b23b07aa215b5a6305d2e740"
+  },
+  "src/__tests__/setup-status-unavailable.spec.ts": {
+    "bytes": 22510,
+    "sha256Physical": "3f398f749e968fb5d60ed746a3dbd42e6f8b62a960e3d100b6af46f492537d2d"
+  },
+  "src/__tests__/theme.spec.ts": {
+    "bytes": 1342,
+    "sha256Physical": "49d03ec156ce5d03bff0e9b17a66f2726efeb70d44bcbfc57e98455118d83214"
+  },
+  "src/__tests__/trend.spec.ts": {
+    "bytes": 3422,
+    "sha256Physical": "245cfc8ac2a9b6213328cc86bffcf00baf616fe72f87bb507347571d7d9d521d"
+  },
+  "src/__tests__/ui-components.spec.ts": {
+    "bytes": 9190,
+    "sha256Physical": "55b85ccdee554acdf99bbbe53f9357bd8c5fbb3e838d607fddf4f9b8d0aef92d"
+  },
+  "src/api/index.ts": {
+    "bytes": 2304,
+    "sha256Physical": "29b9654db21e0737f7f88a5fa69b024ac601071f96fc2b958eb5270c07cbf39d"
+  },
+  "src/assets/hero.png": {
+    "bytes": 44919,
+    "sha256Physical": "72a860570eddf1dd9988f26c7106c67be286bc9f2fd3303c465ce87edb1ae6cd"
+  },
+  "src/assets/vite.svg": {
+    "bytes": 8710,
+    "sha256Physical": "2f1f6c6f90a0ef7422cbb4cfafcd8ad329c507a18afdc34cc21fa72179b9c54a"
+  },
+  "src/assets/vue.svg": {
+    "bytes": 496,
+    "sha256Physical": "5532db34f1c52841881bab8aeca6c3e8d092bd21a689a65f4d8f8cf8041eef9d"
+  },
+  "src/components/CronPicker.vue": {
+    "bytes": 4764,
+    "sha256Physical": "e7572136002f5c6ab6e17f897b1e2b0959f91e177cb18fff7781aaa22f566419"
+  },
+  "src/components/JobWizard/StepAnalysisSchedule.vue": {
+    "bytes": 1165,
+    "sha256Physical": "27270673dbc4181ea645ab51dc35f017ad9c4b4baed0d93e1e7d3df27802c665"
+  },
+  "src/components/JobWizard/StepConfirm.vue": {
+    "bytes": 3821,
+    "sha256Physical": "adb9a221ef18e2582cc0ecd9c59c23024fd2559fbf56a526f6048f1826cb5a2b"
+  },
+  "src/components/JobWizard/StepInput.vue": {
+    "bytes": 3115,
+    "sha256Physical": "47cff25738cf3346d8c089724ab28d0771cd26fedc3a3d8f7ffa60ce4153f180"
+  },
+  "src/components/JobWizard/StepOutput.vue": {
+    "bytes": 11782,
+    "sha256Physical": "f1507d2ae5161c78d8bbb7fce4abfd7f2707b3ebff62a11139f6c81fc0b46ac0"
+  },
+  "src/components/JobWizard/StepOutputSchedule.vue": {
+    "bytes": 2308,
+    "sha256Physical": "64547b316a78edee7e552a3862561c4bb8077d37b655ee3db022e04e99abafd7"
+  },
+  "src/components/JobWizard/StepRules.vue": {
+    "bytes": 5478,
+    "sha256Physical": "6b98cb7758a8d1e92eb63c787622263ef5ddd365ace369c7fa2ead47f715062e"
+  },
+  "src/components/JobWizard/StepType.vue": {
+    "bytes": 2712,
+    "sha256Physical": "10b470485d0e53a4bc801a81a04409f63768ad8c37413efcf75d86ece06d2c66"
+  },
+  "src/components/LanguageSwitcher.vue": {
+    "bytes": 1119,
+    "sha256Physical": "176da69493c857ccebc0b4ac9c3db577f1db966ecceb1e5326270444d13e0f34"
+  },
+  "src/components/OnboardingWizard.vue": {
+    "bytes": 2929,
+    "sha256Physical": "4a89c447fbfce9383f4f64c838eefb0d3e389aa56bef139b9bc011023b830a5e"
+  },
+  "src/components/StatusBadge.vue": {
+    "bytes": 1440,
+    "sha256Physical": "3c0243665af91e3cbfbe8ebffa47f776eb228ed2d79aabd7c0ace862ba324e46"
+  },
+  "src/components/ui/ActionMenu.vue": {
+    "bytes": 1727,
+    "sha256Physical": "dba35f77c62a93ea73e053873a78c221a142249c064946b515149785462ec86b"
+  },
+  "src/components/ui/AiGeneratedLabel.vue": {
+    "bytes": 569,
+    "sha256Physical": "fee5828cfc0c59bd3c3ba56828d0abf49195a598970caf23fc56aee68a7fb2ba"
+  },
+  "src/components/ui/AppDialog.vue": {
+    "bytes": 2722,
+    "sha256Physical": "bb35705869d8965c9fe26eb52cb0991ebcca9f6e99ef0c4d8f38f63c1a684249"
+  },
+  "src/components/ui/ConfidenceText.vue": {
+    "bytes": 1325,
+    "sha256Physical": "3b752aab1d90df7884593364a91c1e3bfbd25ba8f8548322bbf1dc7359670dd7"
+  },
+  "src/components/ui/ConfirmDialog.vue": {
+    "bytes": 2219,
+    "sha256Physical": "821831cf859e3c88eb1fcf61666d778c86311ba3372d41dd154999797d3e0c83"
+  },
+  "src/components/ui/FilterBar.vue": {
+    "bytes": 558,
+    "sha256Physical": "37fa6aeaae6b5e7249b1d3bd758d62dbb9f2add5a9278d2b3f722a32a1c445b0"
+  },
+  "src/components/ui/MetricCard.vue": {
+    "bytes": 2873,
+    "sha256Physical": "0602e27b7504e0d3f6eb93ffaeb63839d1a37e24d8b4f64e0a22ede6aa8284b9"
+  },
+  "src/components/ui/ResultCard.vue": {
+    "bytes": 2927,
+    "sha256Physical": "04105353aab3410e09f0e50054a58de12cae509a0985dace962e2743e36c7d0c"
+  },
+  "src/components/ui/RunObservationPanel.vue": {
+    "bytes": 3419,
+    "sha256Physical": "b664f97b408734e91bfd396440a1195475ee1257c2a918d659b52438e840338e"
+  },
+  "src/components/ui/SourceStatusChip.vue": {
+    "bytes": 2107,
+    "sha256Physical": "3a6d071941884aa7869aaee3a6fa34a531532e4ef859df42f8098217eaa769ca"
+  },
+  "src/components/ui/SourceStatusPanel.vue": {
+    "bytes": 3062,
+    "sha256Physical": "8b1147d1ffa271cd5f7df01dd591f3b25a209e58c3939bfd41eb3643998a1b80"
+  },
+  "src/components/ui/SyncStatusChip.vue": {
+    "bytes": 1871,
+    "sha256Physical": "539c5f855c438bbdf75b49312be73502a2e9498c8ae7de97d4eb723eb35321f7"
+  },
+  "src/components/ui/VerdictChip.vue": {
+    "bytes": 1976,
+    "sha256Physical": "d324fb5f3b4da57c0715e66d084cdfdb5771e5c3d3d9dfb02203a5e79a0ee0d7"
+  },
+  "src/components/ui/types.ts": {
+    "bytes": 249,
+    "sha256Physical": "114e8cae9cf629e5459259484c8bd9758b5fbcadd5ca6e0b9dbed6581b5d30ff"
+  },
+  "src/composables/channelTypes.ts": {
+    "bytes": 839,
+    "sha256Physical": "8669393b9b0628e345a7e72d9b52d5ccea5e48d88e4083998a5f57d944f6cab7"
+  },
+  "src/composables/useChatTranscript.ts": {
+    "bytes": 3643,
+    "sha256Physical": "2c67e3d260f5e904642521f8fb32e234b340ce76ee1b34cbc546be5c42e3ac31"
+  },
+  "src/i18n/en.ts": {
+    "bytes": 40883,
+    "sha256Physical": "f03b34a96693efd4c4148749eb70a150a159d3ba9d36891d6aa8471d4f8dfd9f"
+  },
+  "src/i18n/index.ts": {
+    "bytes": 278,
+    "sha256Physical": "4a816a95e6d1e88312a8770a576aa5d7e328a3b92d75bd3b12f168ffc086a2f1"
+  },
+  "src/i18n/vi.ts": {
+    "bytes": 47307,
+    "sha256Physical": "574b7a81decbbc205598fe291f9fbd8e953fe8dab1b8ecfe0175f0ffde7a9bb1"
+  },
+  "src/layouts/AuthLayout.vue": {
+    "bytes": 690,
+    "sha256Physical": "05be3c1a4db61ada92f2f50d45090a46c9b4ea77c8a40b2a512a4037020f3966"
+  },
+  "src/layouts/DefaultLayout.vue": {
+    "bytes": 11982,
+    "sha256Physical": "46b436ab4d29e8e27aa54d3b9e4a944e0fffd7f39ca0712c8a24b28a81450a11"
+  },
+  "src/main.ts": {
+    "bytes": 355,
+    "sha256Physical": "36a90decb8bf81e8a2d2afa67c37ea9043dbdaf24616e1b193e62447d46ab75d"
+  },
+  "src/plugins/vuetify.ts": {
+    "bytes": 1361,
+    "sha256Physical": "03be5a70019b6b94c0a921babb42d0b58f12b51926a396bf2dae20a96db932d9"
+  },
+  "src/router/index.ts": {
+    "bytes": 8197,
+    "sha256Physical": "621b360c0041a54a21fe6c95b5e4217bad2934fd356965f02dad62a53379ac86"
+  },
+  "src/router/setupStatus.ts": {
+    "bytes": 2966,
+    "sha256Physical": "3268ed232606c5ed2d60387565aea1c0377fa644a1e38265640c8802746c34e0"
+  },
+  "src/shims-vuetify.d.ts": {
+    "bytes": 143,
+    "sha256Physical": "a0d49dfc4444412e38a57558a0b92832e4b710c6e7ae74918ca7bc6f3a0950ea"
+  },
+  "src/stores/auth.ts": {
+    "bytes": 3823,
+    "sha256Physical": "df790958dcfd6945fcd8abd7124ccecfb23baed089946d064cf6459bc226fdce"
+  },
+  "src/stores/channels.ts": {
+    "bytes": 2863,
+    "sha256Physical": "e4335f01d02545c6cc8b710939c05b2be1db033bdd01e44c10145be95acc1df4"
+  },
+  "src/stores/conversations.ts": {
+    "bytes": 1435,
+    "sha256Physical": "4fa0a18d83dc76b34f013ddddf48739651c3be35eaf63c683f2ee759650f5339"
+  },
+  "src/stores/jobs.ts": {
+    "bytes": 6044,
+    "sha256Physical": "75cd6cab078600313b8f7ead8b356eaff0a13809960e981d45b12178ce6b96cd"
+  },
+  "src/stores/tenants.ts": {
+    "bytes": 641,
+    "sha256Physical": "f0d8347308c15dcf48fe3b2cea89053cabe15f73e1a7c923e941f217309b356b"
+  },
+  "src/stores/users.ts": {
+    "bytes": 1231,
+    "sha256Physical": "881b039104e6785cfab951b693bbe232299b6d7b950589a223ac483a9536b63f"
+  },
+  "src/styles/foundation.css": {
+    "bytes": 701,
+    "sha256Physical": "c0886a6bef03f50355b09de54e003b9a8935ba8f7ffc07952925b9fa3141df43"
+  },
+  "src/styles/tokens.ts": {
+    "bytes": 4463,
+    "sha256Physical": "d4a82389936a96f56a81ca33477e4da3ac1aa1dc0bf242cd91d76175bffab9c7"
+  },
+  "src/utils/businessDay.ts": {
+    "bytes": 3421,
+    "sha256Physical": "067f73af1e3a05a37b2a1355ad7dcb769920f951e6abab3a28f4336e5f0664da"
+  },
+  "src/utils/format.ts": {
+    "bytes": 3457,
+    "sha256Physical": "33eba12b9b686224cbf80a05194074a85bfbf6713c999c9bfe11ee6405a743ae"
+  },
+  "src/utils/review.ts": {
+    "bytes": 3415,
+    "sha256Physical": "7425e4d39d38875d1d3e245bdb8f272a37fc305efcae920ac8fadb7091a3070c"
+  },
+  "src/utils/trend.ts": {
+    "bytes": 1853,
+    "sha256Physical": "acb619dc21c6d5f744d7f61bd2c53ca0a00484aad4f44e15a26a5a371e622eb1"
+  },
+  "src/views/ActivityLogs.vue": {
+    "bytes": 8958,
+    "sha256Physical": "05d2feb13013dbb47d319a57628562894a1ef9271debb3b2a35d2706337af2dd"
+  },
+  "src/views/Channels.vue": {
+    "bytes": 19024,
+    "sha256Physical": "6bafb81e9864a94c247a8318e527ec03f20d218003fa58711607c855ebd903e6"
+  },
+  "src/views/Channels/ChannelDetail.vue": {
+    "bytes": 15341,
+    "sha256Physical": "e50b38c2c46522f9cab85cc44126745439c866c56746c8ab46aea71d8c699432"
+  },
+  "src/views/CostLogs.vue": {
+    "bytes": 11132,
+    "sha256Physical": "dda8fc73e9ce309e4f1615522f2740dcfec7a1a4b1ce971afb4e38f86644b3fe"
+  },
+  "src/views/Dashboard.vue": {
+    "bytes": 20357,
+    "sha256Physical": "15840e5724333cd296bd400b13685043a087cd72a943c059f0d508b077ab51a3"
+  },
+  "src/views/Jobs/JobCreate.vue": {
+    "bytes": 9079,
+    "sha256Physical": "5a6b60b076482d6e925534135a4eafd0c122223d42602ff94f778a2375fcd189"
+  },
+  "src/views/Jobs/JobDetail.vue": {
+    "bytes": 59599,
+    "sha256Physical": "21a62c9b601fe54983fe955ebdd691b35bdd421c86b4e9a33d3a1e9752f68f50"
+  },
+  "src/views/Jobs/JobEdit.vue": {
+    "bytes": 8014,
+    "sha256Physical": "765a7dffd1ba87e167a85bd67937a0d07e42fb7ab3c3c522ba9b3071deba409a"
+  },
+  "src/views/Jobs/JobList.vue": {
+    "bytes": 12600,
+    "sha256Physical": "3da34ba9a1f8f93a11d5970f306f1c575d5c31c85398cce58a871ebb423a51b5"
+  },
+  "src/views/Jobs/job-detail/logic.ts": {
+    "bytes": 8613,
+    "sha256Physical": "87f23b70492cf0e3cdda388c5a4ddb6f00d29a08c2d95806f1cf32e40190dfda"
+  },
+  "src/views/Jobs/job-detail/run-observation.ts": {
+    "bytes": 21214,
+    "sha256Physical": "d76d6eee904af84b5e8280882162693995aba98fcddde5fc7a852a6800a9d4eb"
+  },
+  "src/views/Jobs/job-list/schedule.ts": {
+    "bytes": 2143,
+    "sha256Physical": "2c8bb879055297c2ccf955c5e5feab38d198693fc40270231f1ca6c55c660e93"
+  },
+  "src/views/Login.vue": {
+    "bytes": 2957,
+    "sha256Physical": "a2f12a271203d0e5ab6af78d3d3ab2a88f8c1e77839d36b4284bdd522cfe4fc5"
+  },
+  "src/views/MCPConnections.vue": {
+    "bytes": 14307,
+    "sha256Physical": "0851eea989473a3530326f992d2dd859a31d8e6382ccc885e20cd229a01a55a0"
+  },
+  "src/views/Messages.vue": {
+    "bytes": 44070,
+    "sha256Physical": "556eb71f2f36b8a606ba2c49d29e28fbdae0267699ce8fdc9e2193fc29ab006b"
+  },
+  "src/views/NotFound.vue": {
+    "bytes": 570,
+    "sha256Physical": "c7ad07ab25bc05bdb3d4e15ce7ee5653c68f17feee81434c33f74b8a64074410"
+  },
+  "src/views/NotificationLogs.vue": {
+    "bytes": 10346,
+    "sha256Physical": "4a14bb5c931012661adfa99ad5aa200b26548ecbd9ad08141dc2b87ff7882689"
+  },
+  "src/views/Results.vue": {
+    "bytes": 50520,
+    "sha256Physical": "68640c9c0e57299213bf6910a034a8c588a15588c3c02670e1153a603b3ab45d"
+  },
+  "src/views/Settings.vue": {
+    "bytes": 30837,
+    "sha256Physical": "0e14e8604e4a96a64387471915a865a869a033c4ae058a63f8f06fbea1697019"
+  },
+  "src/views/Setup.vue": {
+    "bytes": 4124,
+    "sha256Physical": "40cedbbb8dabeb2c9a892da995af17861bffb3c038bc1ac0ac0098baa3b0095d"
+  },
+  "src/views/SetupStatusUnavailable.vue": {
+    "bytes": 1263,
+    "sha256Physical": "4f7b3a14e662228a1922db58dce8999587f6786e97d102001ec218765d4b1c17"
+  },
+  "src/views/Tenants.vue": {
+    "bytes": 1199,
+    "sha256Physical": "f59b745ca4a63c02922c4f45c68abb2fab3f75392a65335458bc5b5febfa2ba4"
+  },
+  "src/views/Users.vue": {
+    "bytes": 17480,
+    "sha256Physical": "087efe7e0e38baa8ca2bafeeb6d195b8a2219ed83bf500ab8cfb9bbe92e2bd09"
+  },
+  "src/wireframes/DesignSystem.vue": {
+    "bytes": 15377,
+    "sha256Physical": "a65c0d2f53ad70a382c49eb946004c0bac6ef53b6a611c644b85e6ae53381103"
+  },
+  "src/wireframes/Results.vue": {
+    "bytes": 27162,
+    "sha256Physical": "e8cc81950441cc267240f97ffa0004a61986b0e927244d20b861dbfa5f005241"
+  },
+  "src/wireframes/StorageSettings.vue": {
+    "bytes": 10987,
+    "sha256Physical": "c7977c7af484d293107ae34abe00270948f0d993dbe7ff9fb4d2ac6565229309"
+  },
+  "tsconfig.app.json": {
+    "bytes": 517,
+    "sha256Physical": "46f4d87d1a9a21986f3a42bb0e5ccad3308fa74f69ae73ce60d572ea1b178a93"
+  },
+  "tsconfig.json": {
+    "bytes": 126,
+    "sha256Physical": "ad28d132ee48d6e23917cf5827cace785d0fc01a44ca68b0dda51cc8c3fd3f52"
+  },
+  "tsconfig.node.json": {
+    "bytes": 679,
+    "sha256Physical": "a6d49d645590cac21c235a0548605d867321b2e1750e99176d2153d702dfa842"
+  },
+  "vite.config.ts": {
+    "bytes": 939,
+    "sha256Physical": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+  }
+}

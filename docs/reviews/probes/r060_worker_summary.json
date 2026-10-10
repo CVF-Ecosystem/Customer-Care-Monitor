@@ -1,0 +1,340 @@
+{
+  "sourceCommit": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
+  "worker": "Codex /root/r059_worker",
+  "campaigns": 1,
+  "goInvocations": 1,
+  "automaticRetries": 0,
+  "commands": [
+    {
+      "label": "positive",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r060-worker-positive-775c5b45c2",
+        "--network",
+        "ccmai-r060-worker-net-775c5b45c2",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r060-worker-vu0yga88\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r060-worker-cache-775c5b45c2,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r060-worker-db-775c5b45c2:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=480s",
+        "-run",
+        "^Test(EX|PreparationReceipt|SP|LP|Snapshot|EvidenceRefs|SingleAndBatchShareSnapshot$|ExplicitModeMatrix$|FullModeVietnamDatesKeepFullSnapshot$|OnlyOrdinaryRunWritesCheckpoint$|OrdinaryRunFailuresKeepCheckpoint$|AdmissionRefusesASecondOwnerForEveryEntryPointAndMode$|CancelTargetsTheExactRunAndHoldsOwnershipUntilExit$|EveryTerminalPathHonorsAnAcceptedCancel$|ProviderPanicIsCleanedUpWithoutLeakingTheValue$|FL03SuccessfulTerminalWrite$|FL03ExhaustedRetriesReturnsBoundedFailure$|FL06SuccessLifecyclePreservation$)",
+        "./engine"
+      ],
+      "expectedTopLevel": [
+        "TestAdmissionRefusesASecondOwnerForEveryEntryPointAndMode",
+        "TestCancelTargetsTheExactRunAndHoldsOwnershipUntilExit",
+        "TestEXActualPanicBoundaries",
+        "TestEXAllExplicitModesRetainScalars",
+        "TestEXBatchBindingAndParserRejection",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXCancellationDuringProviderAndBatchPrefix",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXInitialProgressAndTerminalWriteFaults",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestEXMixedSaveAndProviderFailures",
+        "TestEXNoCallConstructionAndPreparation",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXProgressPrefixAndPreparationUnchanged",
+        "TestEXResponseAndErrorWinsInBothModes",
+        "TestEXSaveDatabaseFailureIsPublicationFailure",
+        "TestEXStoredTerminalSingleSuccess",
+        "TestEXUsageWriteFailurePreservesSavedResult",
+        "TestEveryTerminalPathHonorsAnAcceptedCancel",
+        "TestEvidenceRefsRejectInvalid",
+        "TestEvidenceRefsUnicodeCodePointOffsets",
+        "TestExplicitModeMatrix",
+        "TestFL03ExhaustedRetriesReturnsBoundedFailure",
+        "TestFL03SuccessfulTerminalWrite",
+        "TestFL06SuccessLifecyclePreservation",
+        "TestFullModeVietnamDatesKeepFullSnapshot",
+        "TestLP01NoWorkSkipsProviderInitialization",
+        "TestLP02CandidateAndPreparationFailuresDoNotInitializeProvider",
+        "TestLP03EligibleWorkInitializesProviderOnceAndRespectsPrecedence",
+        "TestLP04SemanticsAcrossModesAndEntryPoints",
+        "TestLP05CancellationPreventsProviderInitialization",
+        "TestLP06EagerInitializationDetectorNegativeAndPositive",
+        "TestOnlyOrdinaryRunWritesCheckpoint",
+        "TestOrdinaryRunFailuresKeepCheckpoint",
+        "TestPreparationReceiptCountsCapsFreezeAndInterruption",
+        "TestPreparationReceiptMetadataAndSummaryCompatibility",
+        "TestPreparationReceiptUnknownZeroAndPrivacy",
+        "TestProviderPanicIsCleanedUpWithoutLeakingTheValue",
+        "TestSPAllExplicitModesCapAndContext",
+        "TestSPCancellationAndProviderPanic",
+        "TestSPInitialAndProgressRecordingGap",
+        "TestSPInputSelectionAndPreparationPanic",
+        "TestSPObservedQueriesAndReferenceErrors",
+        "TestSPOrdinaryExplicitAndProgressPersistence",
+        "TestSPSingleProviderErrorReceipt",
+        "TestSPSnapshotLookupMissingAndMisboundObservations",
+        "TestSPStoredEarlyTerminalReceipt",
+        "TestSPTerminalFailureAndLegacyClose",
+        "TestSnapshotCoverage",
+        "TestSnapshotDigestChangesWithAttachmentIdentity",
+        "TestSnapshotDigestChangesWithSource",
+        "TestSnapshotDigestIsDeterministic",
+        "TestSnapshotRejectsForeignMessage",
+        "TestSnapshotTranscriptCarriesIdentity"
+      ],
+      "observed": {
+        "image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+        "network": "ccmai-r060-worker-net-775c5b45c2",
+        "ports": {},
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r060-worker-vu0yga88\\backend",
+            "Destination": "/src",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+            "Destination": "/go/pkg/mod",
+            "Mode": "",
+            "RW": false,
+            "Propagation": "rprivate"
+          },
+          {
+            "Type": "volume",
+            "Name": "ccmai-r060-worker-cache-775c5b45c2",
+            "Source": "/var/lib/docker/volumes/ccmai-r060-worker-cache-775c5b45c2/_data",
+            "Destination": "/root/.cache/go-build",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "seconds": 77.648,
+      "attachExit": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r060_worker_positive.jsonl",
+        "bytes": 25591235,
+        "sha256": "19a17ed2b533138be6f29957f0ad208af49f32e24141d58b9b1eb9574df8e31a"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r060_worker_positive_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-07T13:26:33.132288373Z",
+        "FinishedAt": "2026-10-07T13:27:50.486971195Z"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "type": "RuntimeError",
+      "message": "missing/duplicate/unexpected completed top-level detector"
+    }
+  ],
+  "sourceDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r060-worker-vu0yga88",
+  "scope": "application_observation_only",
+  "cleanup": {
+    "containers": [
+      {
+        "name": "ccmai-r060-worker-positive-775c5b45c2",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r060-worker-db-775c5b45c2",
+        "removeExit": 0,
+        "absent": true
+      }
+    ],
+    "volumes": [
+      {
+        "name": "ccmai-r060-worker-cache-775c5b45c2",
+        "absent": true
+      },
+      {
+        "name": "ec0c4f0b3647ddb3ce787e8693f624bb23f123d48f08242783e8dda78dc65f5f",
+        "absent": true
+      }
+    ],
+    "network": {
+      "name": "ccmai-r060-worker-net-775c5b45c2",
+      "removeExit": 0,
+      "absent": true
+    },
+    "buildCacheRemoveExit": 0,
+    "successfulInventoryExits": [
+      0,
+      0,
+      0
+    ]
+  },
+  "images": [
+    {
+      "tag": "golang:1.26-alpine",
+      "id": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+    },
+    {
+      "tag": "mysql:8.0",
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    }
+  ],
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "ed2f53043919dec5260dca0fc5ff41b75c134f70",
+      "backend"
+    ],
+    "bytes": 2385920,
+    "sha256": "39d1a6ec05caf1663633f73a52ab876069a90c1fdac169b9fddf22c0025fa82a"
+  },
+  "manifest": {
+    "path": "docs/reviews/probes/r060_worker_manifest.json",
+    "bytes": 33858,
+    "sha256": "c6926eefb01cb53c7b69e7cb9433e90047415873226cb909ee5f8a2e0b93e506"
+  },
+  "sourceChecks": [
+    {
+      "stage": "before mutation",
+      "equal": true
+    },
+    {
+      "stage": "before positive",
+      "equal": true
+    },
+    {
+      "stage": "final",
+      "equal": true
+    }
+  ],
+  "mutations": [
+    {
+      "label": "M01",
+      "targetPath": "backend/engine/analyzer.go",
+      "appliedInIsolatedCopyOnly": true,
+      "matchCount": 1,
+      "detector": "TestEXNoCallConstructionAndPreparation",
+      "assertion": "logical invocation began without provider method",
+      "originalSha256": "a2ca94cdcf26c51fb9a6bd8c82599a898477d25e5c2f8cd92d736161aa5c4575",
+      "mutantSha256": "14e85f03e235d07aa1061366ca8f779931ef89c51e967b85b04982283ac90ed2",
+      "diffSha256": "9891249a707f540b7ea89ee0c914bfee293d951b55050c653e3dc8dd051cf760",
+      "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KKysrIGIvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KQEAgLTE1Miw2ICsxNTIsNyBAQAogCX0KIAogCS8vIFNldCBpbml0aWFsIHRvdGFsIHNvIGZyb250ZW5kIGNhbiBzaG93IHByb2dyZXNzIGltbWVkaWF0ZWx5CisJZm9yIF8sIGNhbmRpZGF0ZSA6PSByYW5nZSBwcmVwYXJlZCB7IGV4ZWN1dGlvbi5iZWdpbigiU0lOR0xFIiwgW11tb2RlbHMuQ29udmVyc2F0aW9ue2NhbmRpZGF0ZS5Db252fSkgfQogCWluaXRpYWxTdW1tYXJ5IDo9IG9ic2VydmVkU3VtbWFyeShtYXBbc3RyaW5nXWludGVyZmFjZXt9ewogCQkiY29udmVyc2F0aW9uc19mb3VuZCI6IGZvdW5kLAogCX0sIG9ic2VydmF0aW9uLmZyZWV6ZSgpLCBleGVjdXRpb24uZnJlZXplKCkpCg==",
+      "disposition": "NOT_RUN_OR_INCONCLUSIVE"
+    },
+    {
+      "label": "M02",
+      "targetPath": "backend/engine/analyzer.go",
+      "appliedInIsolatedCopyOnly": true,
+      "matchCount": 1,
+      "detector": "TestEXStoredTerminalSingleSuccess",
+      "assertion": "stored terminal execution receipt missing",
+      "originalSha256": "a2ca94cdcf26c51fb9a6bd8c82599a898477d25e5c2f8cd92d736161aa5c4575",
+      "mutantSha256": "4be6281d47aa27cfcffbda013cb46493676a377de2b9da54def64ff4a98a1818",
+      "diffSha256": "a8ec4a230186ddbd1c2e820e2fe4d3f94c73579c257566a85267a5d4f6bcfbd8",
+      "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KKysrIGIvYmFja2VuZC9lbmdpbmUvYW5hbHl6ZXIuZ28KQEAgLTM4MSw3ICszODEsNyBAQAogCQljcCA6PSBzY2FuU3RhcnQuVHJ1bmNhdGUodGltZS5TZWNvbmQpCiAJCWNoZWNrcG9pbnQgPSAmY3AKIAl9Ci0JZmluYWxpemVFcnIgOj0gZmluYWxpemVPcmRpbmFyeVJ1bigmcnVuLCBqb2IsIHJ1blN0YXR1cywgcnVuLkVycm9yTWVzc2FnZSwgc3RyaW5nKHN1bW1hcnlKU09OKSwgZmluaXNoZWRBdCwgY2hlY2twb2ludCkKKwlmaW5hbGl6ZUVyciA6PSBmaW5hbGl6ZU9yZGluYXJ5UnVuKCZydW4sIGpvYiwgcnVuU3RhdHVzLCBydW4uRXJyb3JNZXNzYWdlLCBmdW5jKCkgc3RyaW5nIHsgdmFyIGVudmVsb3BlIG1hcFtzdHJpbmddanNvbi5SYXdNZXNzYWdlOyBfID0ganNvbi5Vbm1hcnNoYWwoW11ieXRlKHN1bW1hcnlKU09OKSwgJmVudmVsb3BlKTsgZGVsZXRlKGVudmVsb3BlLCAic291cmNlX2V4ZWN1dGlvbiIpOyBlbmNvZGVkLCBfIDo9IGpzb24uTWFyc2hhbChlbnZlbG9wZSk7IHJldHVybiBzdHJpbmcoZW5jb2RlZCkgfSgpLCBmaW5pc2hlZEF0LCBjaGVja3BvaW50KQogCWlmIGVyciA6PSBmaW5hbGl6ZUVycjsgZXJyICE9IG5pbCB7CiAJCW93bmVyLnRlcm1pbmFsRmFpbGVkKCkKIAkJcHJlcGFyYXRpb25HYXAoImZpbmFsX3Rlcm1pbmFsIikK",
+      "disposition": "NOT_RUN_OR_INCONCLUSIVE"
+    }
+  ],
+  "buildCache": {
+    "name": "ccmai-r060-worker-cache-775c5b45c2",
+    "freshDisposable": true,
+    "rwGoOnly": true
+  },
+  "network": {
+    "Name": "ccmai-r060-worker-net-775c5b45c2",
+    "Id": "74d90214d9e783769183156c8c54be982c3acd28dcfb82c8a0210e9de60cf543",
+    "Created": "2026-10-07T13:26:25.84513341Z",
+    "Scope": "local",
+    "Driver": "bridge",
+    "EnableIPv4": true,
+    "EnableIPv6": false,
+    "IPAM": {
+      "Driver": "default",
+      "Options": {},
+      "Config": [
+        {
+          "Subnet": "172.19.0.0/16",
+          "Gateway": "172.19.0.1"
+        }
+      ]
+    },
+    "Internal": true,
+    "Attachable": false,
+    "Ingress": false,
+    "ConfigFrom": {
+      "Network": ""
+    },
+    "ConfigOnly": false,
+    "Options": {
+      "com.docker.network.enable_ipv4": "true",
+      "com.docker.network.enable_ipv6": "false"
+    },
+    "Labels": {},
+    "Containers": {},
+    "Status": {
+      "IPAM": {
+        "Subnets": {
+          "172.19.0.0/16": {
+            "IPsInUse": 3,
+            "DynamicIPsAvailable": 65533
+          }
+        }
+      }
+    }
+  },
+  "database": {
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "ec0c4f0b3647ddb3ce787e8693f624bb23f123d48f08242783e8dda78dc65f5f",
+        "Source": "/var/lib/docker/volumes/ec0c4f0b3647ddb3ce787e8693f624bb23f123d48f08242783e8dda78dc65f5f/_data",
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "ports": {}
+  },
+  "result": "CHANGES_REQUIRED_NO_RETRY",
+  "seconds": 91.468
+}

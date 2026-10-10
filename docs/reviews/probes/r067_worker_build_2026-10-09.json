@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-067",
+  "executionDate": "2026-10-09",
+  "sourceCommit": "8a63ad58f7c024d32088ae6079f9908356174308",
+  "sourceArchiveSha256": "0301c76f595f754d136e685e4ad04dc91ef27512a38ed34458a22a45e9fbe7b9",
+  "sourceArchiveBytes": 1218560,
+  "mode": "isolated git archive; no application .env; minimal process environment; cached node_modules junction only",
+  "initialSourceFiles": 121,
+  "commands": [
+    {
+      "step": "typecheck",
+      "argv": [
+        "node.EXE",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-worker-build-ksr2bqcf\\frontend\\node_modules\\vue-tsc\\bin\\vue-tsc.js",
+        "-b",
+        "--force"
+      ],
+      "exitCode": 2,
+      "elapsedSeconds": 42.09232819988392,
+      "stdout": {
+        "path": "docs/reviews/probes/r067_worker_build_typecheck_stdout_2026-10-09.log",
+        "bytes": 88,
+        "sha256": "868cf07a5456291ac2c008f4e9d4eea2a41aaff436414253c580da846757972a"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r067_worker_build_typecheck_stderr_2026-10-09.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "forcedBuildBudgetUsed": 1,
+  "campaignBudgetUsed": 0,
+  "vitestInvocations": 0,
+  "goInvocations": 0,
+  "scratchRetained": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r067-worker-build-ksr2bqcf",
+  "runner": {
+    "path": "docs/reviews/probes/r067_worker_build_exact_2026-10-09.py",
+    "bytes": 8716,
+    "sha256": "d66e1da0e7b413745689320f5e4b5fb1b37cb7ec6062d31f922e2488b1fbb770",
+    "astChecked": true
+  },
+  "priorWrapperFailure": {
+    "backup": "docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed",
+    "receipt": "docs/reviews/probes/r067_worker_build_preflight_failure_2026-10-09.json"
+  },
+  "priorStaticCheckLauncherFailure": {
+    "receipt": "docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json",
+    "sha256": "038fa15250dda3175639480fbde6ea66665deeb56379abfe6655f4e31b4724f8"
+  },
+  "sourceFilesUnchanged": true,
+  "dependencyJunctionRemoved": true,
+  "status": "FAILED_TYPECHECK",
+  "generatedFiles": []
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-071",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_ADAPTER_PRESENCE_CONSUMER_PENDING_OWNER_SCOPE_REVIEW",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r071_worker",
+    "repairWorker": "Codex /root/r071_worker",
+    "commitSteward": "Codex /root/r071_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/source_execution_receipt.go",
+    "backend/engine/usage_observation_receipt.go",
+    "backend/engine/adapter_usage_presence_observation.go",
+    "backend/engine/adapter_usage_presence_observation_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_071.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "build_before_owner_scope_review",
+    "existing_test_edit",
+    "old_authority_seed_edit",
+    "old_packet_edit",
+    "adapter_parser_edit",
+    "pricing_scalar_policy_change",
+    "schema_endpoint_permission_change",
+    "provider_or_external_network_call",
+    "credential_config_read",
+    "db_customer_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "root_source_test_edit",
+    "automatic_retry",
+    "budget_reset",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment",
+    "other_tranche_freeze",
+    "full_roadmap_live_governance_claim"
+  ],
+  "sourcePlanningCommit": "606868326f6d94858f14f315f28b3855f644bba6",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
+  "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
+  "ownerAuthorization": "Owner next/continue2026-10-10 authorizes concrete planning and per-tranche Luna tracking. New engine/receipt R2 scope goes to owner review through bounded order before BUILD/Go; this seed defines the conditional maximum, not current execution permission. After recorded owner scope approval, execute within these exact paths/contract/budget, independent root review and conditional local closure; no checkpoint approval for unchanged same-scope repairs.",
+  "buildCondition": "Explicit owner scope review/approval of CCMAI_RUNTIME_071 order recorded in active handoff/tranche before committed BUILD acknowledgment; plan/source static root review before tests.",
+  "executionBudget": {
+    "workerMaxGoBuildInvocations": 2,
+    "workerMaxGoTestInvocations": 6,
+    "workerMaxGoInvocations": 8,
+    "reviewerMaxGoBuildInvocations": 2,
+    "reviewerMaxGoTestInvocations": 6,
+    "reviewerMaxGoInvocations": 8,
+    "aggregateMaxGoInvocations": 16,
+    "currentPermittedGoInvocationsBeforeOwnerReview": 0
+  },
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "claimScope": "Bounded local adapter-metadata aggregate only; no provider/wire/billing/CVF runtime governance proof",
+  "publicationBoundary": "No publication in R071 planned execution; prior authorized publication remains separately pending Git authentication/readback, not a gate for local planning."
+}

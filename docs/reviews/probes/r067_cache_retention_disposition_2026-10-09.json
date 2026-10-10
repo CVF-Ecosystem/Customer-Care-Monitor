@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "tranche": "CCMAI-RUNTIME-067",
+  "actor": "root SESSION_SYNC_STEWARD",
+  "workerReportedRejection": "Two exact-file Remove-Item exec_command calls rejected at process creation: blocked by policy. Root did not retry removal.",
+  "retainedCaches": [
+    "scripts/__pycache__/cvf_downstream_gate.cpython-313.pyc",
+    "scripts/tests/__pycache__/test_cvf_downstream_gate.cpython-313.pyc"
+  ],
+  "disposition": "Keep both generated files in place. Only their exact literal paths added to local .git/info/exclude; no directory glob, public ignore, gate code or skip flag changed.",
+  "verification": "Both files exist and untracked; git check-ignore names both; default preflight PASS7/7 after exact local exclusions.",
+  "frontendRuntimeInvocationsAdded": 0,
+  "futurePython": "Use python -B and PYTHONDONTWRITEBYTECODE to avoid new caches."
+}

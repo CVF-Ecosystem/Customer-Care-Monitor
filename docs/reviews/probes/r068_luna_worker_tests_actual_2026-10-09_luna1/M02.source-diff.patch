@@ -1,0 +1,13 @@
+diff --git "a/C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\usage_presence.go.original.bin" "b/C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\extracted\\backend\\ai\\usage_presence.go"
+index 34f1db0..a3fb591 100644
+--- "a/C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\usage_presence.go.original.bin"
++++ "b/C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-luna-tests-adc2143c433f4bb78882751cb922551a\\extracted\\backend\\ai\\usage_presence.go"
+@@ -219,7 +219,7 @@ func usageCountState(status AIUsagePresenceStatus) AIUsageCount {
+ }
+ 
+ func invalidAIUsageCount() AIUsageCount {
+-	return usageCountState(AIUsagePresenceInvalid)
++	return knownAIUsageCount(0)
+ }
+ 
+ func knownAIUsageCount(value int64) AIUsageCount {

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-09",
+  "sourceCommit": "bd62c7e4e4868cc05528aa2b8a1ae05561a78df1",
+  "frontendArchiveSha256": "60d07e3481a03d0d9ce7b6d32cc961a60eedd623e99039eddeeb3875f20a94c6",
+  "members": 121,
+  "suiteFiles": 30,
+  "newTests": 17,
+  "rootStaticReview": "PASS: exact same existing it, knownzero assertion and realnullable selection fixtures; all other frontend paths identical to built4d921. No imports/config/product edits.",
+  "inheritedCompilerVite": {
+    "actualBuiltSource": "4d9214b04b3ccb822d535f3eccf5783fe0939e0a",
+    "receipt": "docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json",
+    "newSourceCompilerExecuted": false,
+    "basis": "Only NEW test body changes using compiled APIs/types; all120otherfrontendfiles, including product/config/dependencies, byte-identical. Explicit phase inheritance, not fresh compiler claim."
+  },
+  "rootCampaign": "python -B docs/reviews/probes/r067_ui_campaign.py --source bd62c7e4e4868cc05528aa2b8a1ae05561a78df1 --role reviewer --execute",
+  "workerRemainingThree": "python -B docs/reviews/probes/r067_worker_resume_remaining_three.py --source bd62c7e4e4868cc05528aa2b8a1ae05561a78df1 --role worker --execute",
+  "budget": {
+    "historicalWorkerFailedVitest": 1,
+    "remainingWorkerCalls": 3,
+    "rootCalls": 4,
+    "aggregateCeiling": 8,
+    "usedBefore": 1,
+    "forcedBuildsUsed": 3,
+    "forcedBuildCeiling": 3,
+    "Go": 0
+  },
+  "ordering": "Root4callPASS required before manualremaining3worker continuation; then onevisualperrole. AnyunexpectedfailureSTOP, no autoretry.",
+  "unchangedMutationControls": true,
+  "acceptedDisposition": "docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md"
+}

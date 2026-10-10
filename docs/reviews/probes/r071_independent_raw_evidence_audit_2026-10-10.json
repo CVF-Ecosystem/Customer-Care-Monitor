@@ -1,0 +1,229 @@
+{
+  "date": "2026-10-10",
+  "reviewer": "Codex /root",
+  "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+  "archiveSha256": "a9c134179ffc8a96f98107474e155d7d28430c73a8320f2561d4e1e76e5dfd26",
+  "archiveMembers": 220,
+  "packets": [
+    {
+      "role": "worker",
+      "mode": "compile",
+      "summary": "docs/reviews/probes/r071_runtime_worker_compile_first/summary.json",
+      "backup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-worker-raw-backup-t_tcki3k",
+      "backupFilesVerified": 8,
+      "rawPhysicalHashes": {
+        "compile-manifest-after.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "compile-manifest-before.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "compile-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "compile-stdout.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reservation-compile.json": "664d4a6eabf94ab4b85067b157247e7874506cd90c005caab9762a5d8dc2008f",
+        "summary.json": "7e544ee9fab3f12a01afe44099773cf2ea8b755b0c0574b2e3638d00b631ddaf"
+      },
+      "sourceMembersRestored": 220,
+      "commands": [
+        {
+          "label": "compile",
+          "ownedPid": 26940,
+          "exitCode": 0,
+          "nativeElapsedSeconds": 7.110281199915335
+        }
+      ]
+    },
+    {
+      "role": "worker",
+      "mode": "tests",
+      "summary": "docs/reviews/probes/r071_runtime_worker_tests_first/summary.json",
+      "backup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-worker-raw-backup-hz1e128i",
+      "backupFilesVerified": 25,
+      "rawPhysicalHashes": {
+        "m01-manifest-after.json": "712fe6c5a264025bf9b07900fa55f9f72f3b752a44b25a46d433f5f4062bdc4d",
+        "m01-manifest-before.json": "712fe6c5a264025bf9b07900fa55f9f72f3b752a44b25a46d433f5f4062bdc4d",
+        "m01-source-diff.json": "83084bcbb3dc33282a67e563df9bfcdbc1ede63c86adc96a5fa439ac1da83e49",
+        "m01-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "m01-stdout.bin": "e36b77b022c3de1dcb06e5a5f99f98acf3ae5ebef07efbd1056132406d3eca55",
+        "m02-manifest-after.json": "e75892e573861f744ddb045876d8ede232dfd65c2ecd1d9b349217859140f617",
+        "m02-manifest-before.json": "e75892e573861f744ddb045876d8ede232dfd65c2ecd1d9b349217859140f617",
+        "m02-source-diff.json": "e527b566b6f6a9642e6040ac84678e45de175c1d9f8019f5ead26d76150ec0df",
+        "m02-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "m02-stdout.bin": "497e5c7bfd8f0b4f1379a5440e649242b9b66e08d6b10d542aceeb80f9852a43",
+        "positive-manifest-after.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "positive-manifest-before.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "positive-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive-stdout.bin": "80f6bc6201fdf2471063c9b5689fb490ccc51dfc1fb663bd055b547210c6fde9",
+        "reservation-m01.json": "0fbdc5b859c1c9345b95876a38d390f0de3009609fe131498c83bbf01c7c3344",
+        "reservation-m02.json": "7959f90a90da0cb80b4b4669f601a7815ef0a74a39a5cef9ccc673c6cb892d65",
+        "reservation-positive.json": "2e1da106eef4c4b62c896e2cee9e1921b6c457d7fc64151194feb085bcb991d2",
+        "reservation-restored.json": "da38ac9a825ca30627e6ebd7e236ab1507e2c9ea2577932fc806fc72353b93d2",
+        "restored-manifest-after.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "restored-manifest-before.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "restored-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "restored-stdout.bin": "f83dcf26169f54185656875e6cd3e8fe037f3010ff0c0d31b28b82f1d454e8d4",
+        "summary.json": "44c5b5cc403436e0c7e696225320bc0ff5952ee006bbc6caa79ebd5931fb8a80"
+      },
+      "sourceMembersRestored": 220,
+      "commands": [
+        {
+          "label": "positive",
+          "ownedPid": 13284,
+          "exitCode": 0,
+          "nativeElapsedSeconds": 9.760243299882859,
+          "topLevelPass": 20,
+          "passOutcomesIncludingSubtests": 65,
+          "failed": [],
+          "skips": 0
+        },
+        {
+          "label": "m01",
+          "ownedPid": 21924,
+          "exitCode": 1,
+          "nativeElapsedSeconds": 9.28318200004287,
+          "topLevelPass": 1,
+          "passOutcomesIncludingSubtests": 1,
+          "failed": [
+            "TestAdapterUsagePresenceM01NilUnobservedDetector"
+          ],
+          "skips": 0,
+          "semanticKill": true
+        },
+        {
+          "label": "m02",
+          "ownedPid": 28764,
+          "exitCode": 1,
+          "nativeElapsedSeconds": 9.537212699884549,
+          "topLevelPass": 1,
+          "passOutcomesIncludingSubtests": 1,
+          "failed": [
+            "TestAdapterUsagePresenceM02MalformedKnownDetector"
+          ],
+          "skips": 0,
+          "semanticKill": true
+        },
+        {
+          "label": "restored",
+          "ownedPid": 17320,
+          "exitCode": 0,
+          "nativeElapsedSeconds": 8.222513800021261,
+          "topLevelPass": 10,
+          "passOutcomesIncludingSubtests": 38,
+          "failed": [],
+          "skips": 0
+        }
+      ]
+    },
+    {
+      "role": "root",
+      "mode": "compile",
+      "summary": "docs/reviews/probes/r071_runtime_root_compile_first/summary.json",
+      "backup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-raw-backup-8d7unp34",
+      "backupFilesVerified": 8,
+      "rawPhysicalHashes": {
+        "compile-manifest-after.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "compile-manifest-before.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "compile-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "compile-stdout.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reservation-compile.json": "649bacfb94570e82ec47996d3007756905e6b47323f50a8fa2bedfc0eeee47f4",
+        "summary.json": "9881baa4aa7093e66676fcd6841de903a5fa28b73487a97b6fbf9ead43f76195"
+      },
+      "sourceMembersRestored": 220,
+      "commands": [
+        {
+          "label": "compile",
+          "ownedPid": 16504,
+          "exitCode": 0,
+          "nativeElapsedSeconds": 12.016206699889153
+        }
+      ]
+    },
+    {
+      "role": "root",
+      "mode": "tests",
+      "summary": "docs/reviews/probes/r071_runtime_root_tests_first/summary.json",
+      "backup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-raw-backup-3271ixve",
+      "backupFilesVerified": 25,
+      "rawPhysicalHashes": {
+        "m01-manifest-after.json": "9943b441d47cee5db2d314f26c48490fadfea76c88f160bb851a3e14550d5967",
+        "m01-manifest-before.json": "9943b441d47cee5db2d314f26c48490fadfea76c88f160bb851a3e14550d5967",
+        "m01-source-diff.json": "a94e238c8fa704ef70b5d246069a6c2406b482da09bab56aca5c3e39fd498b04",
+        "m01-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "m01-stdout.bin": "62973cd29143f00e4c929db20803b56c03fed46327ca9c039caa6ff33c30949f",
+        "m02-manifest-after.json": "83c380514a0a597937dbe639800b3c0ccac2fe5b43e5f53dcfc6dab23c093107",
+        "m02-manifest-before.json": "83c380514a0a597937dbe639800b3c0ccac2fe5b43e5f53dcfc6dab23c093107",
+        "m02-source-diff.json": "7648c9d2c212fafe8af7752c61b2dca5d78a8a63c4c17c0f1b8d7e13ba4bb8d1",
+        "m02-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "m02-stdout.bin": "8d1dc4a1665a1628019d1af26ca59cce8ac89203d2ce3990ccb1d7b0d8b9892d",
+        "positive-manifest-after.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "positive-manifest-before.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "positive-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive-stdout.bin": "019b0df25d6bac668356938e1463690acc4f6de248ebce5b4ed7ac59e47ac24f",
+        "reservation-m01.json": "7554c6a2e73bef0d3eb5915157cdbe11f81ded505118609052032f8a53f79311",
+        "reservation-m02.json": "9470203967dd0c6f1b43f556645e11a3b289c72cc28bb2efb64ad301e2ddfa6b",
+        "reservation-positive.json": "65f72410968dca794a6a1b7c807d2e783c6fe1a93885d3f1f200b3e8ea7ea59d",
+        "reservation-restored.json": "c1437aa7b857fefc01e2340793b498eeda772b8f7d1629bac2ab29b8cc94e078",
+        "restored-manifest-after.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "restored-manifest-before.json": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe",
+        "restored-stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "restored-stdout.bin": "698411c906442775f17d2dad6a297c07e769ca822c8052069a923afd65c6fe7a",
+        "summary.json": "e5993dae0c69a9c5f0a3de8bc86e46f1ec0a04c3656f08d5dcabee2e892a552d"
+      },
+      "sourceMembersRestored": 220,
+      "commands": [
+        {
+          "label": "positive",
+          "ownedPid": 436,
+          "exitCode": 0,
+          "nativeElapsedSeconds": 12.981114499969408,
+          "topLevelPass": 20,
+          "passOutcomesIncludingSubtests": 65,
+          "failed": [],
+          "skips": 0
+        },
+        {
+          "label": "m01",
+          "ownedPid": 1264,
+          "exitCode": 1,
+          "nativeElapsedSeconds": 8.979011900024489,
+          "topLevelPass": 1,
+          "passOutcomesIncludingSubtests": 1,
+          "failed": [
+            "TestAdapterUsagePresenceM01NilUnobservedDetector"
+          ],
+          "skips": 0,
+          "semanticKill": true
+        },
+        {
+          "label": "m02",
+          "ownedPid": 9324,
+          "exitCode": 1,
+          "nativeElapsedSeconds": 9.305459799943492,
+          "topLevelPass": 1,
+          "passOutcomesIncludingSubtests": 1,
+          "failed": [
+            "TestAdapterUsagePresenceM02MalformedKnownDetector"
+          ],
+          "skips": 0,
+          "semanticKill": true
+        },
+        {
+          "label": "restored",
+          "ownedPid": 7868,
+          "exitCode": 0,
+          "nativeElapsedSeconds": 8.375287599861622,
+          "topLevelPass": 10,
+          "passOutcomesIncludingSubtests": 38,
+          "failed": [],
+          "skips": 0
+        }
+      ]
+    }
+  ],
+  "governanceClaim": false,
+  "scope": "Independent read-only audit of actual captured files, source inventories, mutations and physical backups; no universal IO/network/history proof",
+  "protectedPhysicalFilesUnchanged": 407,
+  "immutableSeedVerified": true,
+  "attempts": 10,
+  "actualGoProcesses": 10,
+  "automaticRetries": 0,
+  "ownedGoParentPidsAbsentAtReview": true,
+  "processCheckScope": "Read-only Win32_Process snapshot for the ten recorded owned Go parent PIDs; no universal process-history claim",
+  "approvalCommitVerified": "1116141"
+}

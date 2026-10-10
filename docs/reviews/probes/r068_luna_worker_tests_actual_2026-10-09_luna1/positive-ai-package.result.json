@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "ordinal": 1,
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "sourceArchiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "goExecutable": "C:\\Program Files\\Go\\bin\\go.exe",
+  "goResolutionCandidates": [
+    "C:\\Program Files\\Go\\bin\\go.exe",
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Go-1.26.7\\go\\bin\\go.exe"
+  ],
+  "command": "go -C backend test -json ./ai -count=1",
+  "environment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "startUtc": "2026-10-09T16:43:24.6753828+00:00",
+  "durationMilliseconds": 13101,
+  "processTimeoutSeconds": 600,
+  "processStarted": true,
+  "processTimedOut": false,
+  "processFailure": null,
+  "exitCode": 0,
+  "physicalManifestBefore": {
+    "path": "positive-ai-package.backend-manifest-before.json",
+    "sha256": "de367d1c04353fa231a8ba3a27f019eb252650d363a5faf456eb6e6028e5f74b",
+    "members": 218
+  },
+  "physicalManifestAfter": {
+    "path": "positive-ai-package.backend-manifest-after.json",
+    "sha256": "de367d1c04353fa231a8ba3a27f019eb252650d363a5faf456eb6e6028e5f74b",
+    "members": 218
+  },
+  "physicalManifestMatchesExpected": true,
+  "physicalManifestCaptureFailure": null,
+  "jsonEventCount": 144,
+  "jsonParseFailure": null,
+  "stdout": {
+    "path": "positive-ai-package.stdout.jsonl.bin",
+    "bytes": 32506,
+    "sha256": "7e7eda29b0de5727ac121b5a75bbf75587b4acf1656dd10844454bf7dcee827e"
+  },
+  "stderr": {
+    "path": "positive-ai-package.stderr.bin",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

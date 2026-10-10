@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-074",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r074_auditor",
+    "repairWorker": "Codex /root/r074_auditor",
+    "commitSteward": "Codex /root/r074_auditor",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md",
+    "docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json",
+    "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json",
+    "docs/work_orders/CCMAI_RUNTIME_074.md"
+  ],
+  "prohibitedEffects": [
+    "product_change",
+    "test_change",
+    "tooling_dependency_workflow_change",
+    "existing_evidence_or_seed_edit",
+    "provider_network_call",
+    "db_use",
+    "config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "runtime_execution",
+    "push_merge_deploy",
+    "live_governance_or_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "taskClassification": {
+    "primary": "readonly_contract_audit",
+    "secondary": [
+      "source_callgraph",
+      "evidence_lineage",
+      "integration_risk_inventory"
+    ],
+    "sampleType": "READONLY_AUDIT_NOT_IMPLEMENTATION"
+  },
+  "executionBudget": {
+    "workerMaxNative": 0,
+    "reviewerMaxNative": 0,
+    "aggregateMaxNative": 0,
+    "workerUsedNative": 0,
+    "reviewerUsedNative": 0,
+    "automaticRetries": 0,
+    "currentPermittedNativeInvocations": 0
+  },
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_074.md",
+  "baseCommit": "f1e875d8c97ab1337000ac6452444325235e21d5",
+  "buildCommit": "565b1175bf83f3d4e89dabaf94615ee94625c6e4",
+  "reviewEvidence": [
+    "docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md",
+    "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workerAcknowledgment": "2026-10-10 fresh Luna xhigh canonical rehydration/doctor25/1 before-edit declaration received by root; source/artifact edits0 and application native0. Knowledge README ingest inherited root canonical-core TEMP/noPOST fallback; missing downstream wrapper known, no missing continuity authority. Root metadata steward records worker ACK before documentary BUILD; worker READONLY_ANALYST -> documentary IMPLEMENTATION_WORKER/audit COMMIT_STEWARD, root independent REVIEWER. DA01..10 exact three NEW paths; sourceBaseline9fc86fe distinct documentary HEAD; no source/test/runtime/config/network effects. Gateunits46/46 in32.346s inherited no duplicate. Root formatting reminder source code paths rather than dead VitePress links; no report draft.",
+  "firstAuditCommit": "076d3319f2e84c681a1835e4ce4cde8541334d7b",
+  "documentaryFindings": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+  ],
+  "repairAcknowledgment": "2026-10-10 Luna xhigh fresh canonical rehydration/declaration REPAIR_WORKER ACK received before edits: F1..F4 same-scope documentary repair only, native0, source/test/effects0; root records ACK and BUILD release under existing seed. Root metadata stewardship, worker exact artifact ownership retained; one consolidated document-repair round, not code repair.",
+  "documentaryRepairRounds": 2,
+  "repairCompleted": true,
+  "firstRepairCommit": "b0e977146a346a32aa7bee1661c448abd26c129b",
+  "substantiveDocumentRepairRounds": 1,
+  "mechanicalCitationRepairRounds": 1,
+  "citationRepairAcknowledgment": "2026-10-10 Luna fresh canonical BUILD rehydration/declaration citation-only REPAIR_WORKER ACK received before edits. Round2 mechanical correction: R058 exact path/line13 and R053 line21; unchanged two content paths, identity unchanged, app native0. Root records same-authority release; substantive repair1 plus mechanical citation1; no third round or extra scope.",
+  "finalAuditCommit": "565b1175bf83f3d4e89dabaf94615ee94625c6e4",
+  "modelAssessment": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
+  "sourceScopeAudit": "docs/reviews/probes/r074_root_source_scope_audit_2026-10-10.json",
+  "closer": "Codex /root",
+  "independentReviewCommit": "1d95a18e22d79c59ad47eb552688ffbfc2e96012",
+  "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+  "closureRoleAcknowledgment": "Fresh canonical REVIEW_PASS rehydration from committed independent review1d95a18e22d79c59ad47eb552688ffbfc2e96012 before root REVIEWER -> CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD. Local R074 documentary dossier-only FREEZE under existing end-to-end read-only seed/owner delegation; source/test/app-native0. No broader implementation/live/governance closure.",
+  "closureChecks": {
+    "preflight": "PASS7/7",
+    "prRange": "PASS7/7 cached origin/main..HEAD; no network",
+    "catalogPS5": "PASS",
+    "catalogPS7": "PASS",
+    "docsSiteBuild": "PASS41.68s documentary only; existing env syntax fallback note",
+    "gateUnits": "Inherited R074 preparation46PASS32.346s; scripts/tests unchanged",
+    "sourceAudit": "18relied-on blobs/physical stable;439protected snapshots stable;5implementation entries unchanged;seed first committed blob unchanged",
+    "applicationNativeInvocations": 0,
+    "publication": "NOT_AUTHORIZED_IN_R074",
+    "exactStaged": "PASS7/7 exact10-file closure staged set and diff-check before3994aef"
+  },
+  "freezeCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d"
+}

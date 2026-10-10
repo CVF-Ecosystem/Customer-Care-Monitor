@@ -1,0 +1,19 @@
+{
+  "name": "vue-tsc",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+  "argv": [
+    "node_modules/vue-tsc/bin/vue-tsc.js",
+    "-b",
+    "--force"
+  ],
+  "commandLine": "\"C:\\Program Files\\nodejs\\node.exe\" node_modules/vue-tsc/bin/vue-tsc.js -b --force",
+  "pid": 4148,
+  "startedAtUtc": "2026-10-10T07:50:27.1975313+00:00",
+  "endedAtUtc": "2026-10-10T07:50:52.0209570+00:00",
+  "elapsedMilliseconds": 24824.122,
+  "exitCode": 0,
+  "launchError": null,
+  "stdout": "vue-tsc.stdout.log",
+  "stderr": "vue-tsc.stderr.log"
+}

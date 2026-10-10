@@ -8,10 +8,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical rejected R056 seed missing authorityKind, immutable; activation/runtime0, superseded by R057.: `CVF_SESSION/authority/CCMAI-RUNTIME-056.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
+- Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R058 local preparation receipt closure FROZEN; next bounded S2 DESIGN/SPEC, no BUILD/live/subagent.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md`
+- Active R075 BUILD ordinary branch publication; no app/runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -31,6 +32,138 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R042 independent acceptance/dead-link correction and R043 local closure intake.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
+- Independent bounded exact-source four-Go runner; synthetic application observation only.: `docs/reviews/probes/r060_independent_campaign.py`
+- Actual failed independent exact-source raw evidence; no suite or mutation acceptance.: `docs/reviews/probes/r060_independent_manifest.json`
+- Reviewer-selected120 positives and two source-only mutation controls; no runtime result.: `docs/reviews/probes/r060_independent_plan.json`
+- Actual failed independent exact-source raw evidence; no suite or mutation acceptance.: `docs/reviews/probes/r060_independent_positive.jsonl`
+- Actual failed independent exact-source raw evidence; no suite or mutation acceptance.: `docs/reviews/probes/r060_independent_positive_stderr.log`
+- Independent old-test/seed/source/failed-packet protection audit before campaign.: `docs/reviews/probes/r060_independent_protected.json`
+- Independent CHANGES_REQUIRED and explicitly bounded R061 successor; original two failed campaigns preserved.: `docs/reviews/R060_INDEPENDENT_REVIEW_AND_R061_COST_DISPOSITION_2026-10-07.md`
+- Immutable NEW EX fault-test-only successor seed; same roles, total8Go ceiling unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-061.json`
+- Actual failed independent exact-source raw evidence; no suite or mutation acceptance.: `docs/reviews/probes/r060_independent_summary.json`
+- R1 new EX UUID fixture and safe exact binding repair, product/oldtests/failure packet unchanged; no worker runtime replay, root independent review pending.: `docs/reviews/R060_R1_FIXTURE_REPAIR_2026-10-07.md`
+- Exact repaired source/full archive/protected physical and failedpacket identities, publication checks; no new worker runtime, independent review pending.: `docs/reviews/probes/r060_worker_r1_handback.json`
+- Independent raw failure audit and unchanged-scope NEW EX fixture repair; no worker retry or budget expansion.: `docs/reviews/R060_INDEPENDENT_FAILURE_AND_REPAIR_DISPOSITION_2026-10-07.md`
+- Raw-event-derived partial counts/missing tests, protected physical audit/fresharchive and NEW EX fixture repair proposal; cost disposition required.: `docs/reviews/probes/r060_worker_failure_audit.json`
+- Interrupted worker campaign at exact source, fixture-root-cause audit, bounded repair proposal and retained proof/limits.: `docs/reviews/R060_WORKER_INTERRUPTED_EVIDENCE_2026-10-07.md`
+- Original failed worker1campaign1Go packet, rawlogs/fullmanifest/commands/state/restoration/cleanup; no retry.: `docs/reviews/probes/r060_worker_summary.json`
+- REVIEW_PENDING committed-source fullarchive and separate physical/Gitblob protection proof; worker0Go, independent runtime pending.: `docs/reviews/probes/r061_worker_handback.json`
+- NEW EX terminal-fallback faulttest repair: storedprefix/returned limits, sixcases and callback checks; product/old packets unchanged, no worker runtime.: `docs/reviews/R061_WORKER_FAULT_TEST_REPAIR_2026-10-07.md`
+- Independent REVIEW_PASS on exact repaired source; both failures preserved, local scope only.: `docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md`
+- Historical R060 CHANGES_REQUIRED, both failed campaigns retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md`
+- Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_campaign.py`
+- Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_plan.json`
+- Independent successor exact-source bounded proof preparation; no executed acceptance yet.: `docs/reviews/probes/r061_independent_protected.json`
+- Active R061 narrow test repair and lineage8Go budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-061.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m01.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m01_manifest.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m01_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m02.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m02_manifest.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_m02_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_manifest.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_mutation1_diff.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_mutation2_diff.json`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_positive.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_positive_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_restored.jsonl`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_restored_stderr.log`
+- Actual independent successor raw evidence or restoration/mutation manifest; application proof only.: `docs/reviews/probes/r061_independent_summary.json`
+- Narrow fault test contract repair, no worker runtime, independent successor campaign.: `docs/work_orders/CCMAI_RUNTIME_061.md`
+- Historical R061 independent REVIEW_PASS handoff before separate R062 local closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md`
+- Local execution observation closure, inherited independent proof, old failures retained.: `docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md`
+- Metadata-only scoped local closure record; zero runtime/source edits.: `CVF_SESSION/tranches/CCMAI-RUNTIME-062.json`
+- Scoped local R061 closure only, not complete S2/live/governance.: `docs/work_orders/CCMAI_RUNTIME_062.md`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m01.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m01_manifest.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m01_stderr.log`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m02.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m02_manifest.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_m02_stderr.log`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_manifest.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_mutation1_diff.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_mutation2_diff.json`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_positive.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_positive_stderr.log`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_restored.jsonl`
+- Actual independent R063 raw events/mutant/full restoration manifest; application observation only.: `docs/reviews/probes/r063_independent_restored_stderr.log`
+- Derived reconciliation receipt from actual retained raw logs/manifests/daemon events; original summary/inspect snapshots lost, zero new Go.: `docs/reviews/probes/r063_independent_summary.json`
+- Dispatcher-owned R2 rule-observation seed; medium child BUILD/root independent review, activation follows first commit.: `CVF_SESSION/authority/CCMAI-RUNTIME-063.json`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_campaign.py`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_M01.jsonl`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_M01_manifest.json`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_M01_stderr.log`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_M02.jsonl`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_M02_manifest.json`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_M02_stderr.log`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_manifest.json`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_plan.json`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_positive.jsonl`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_positive_stderr.log`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_pre_runtime.json`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_protected.json`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_restored.jsonl`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_restored_stderr.log`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/R063_WORKER_RULE_OBSERVATION_BUILD_2026-10-08.md`
+- R063 worker REVIEW_PENDING actual source/campaign/raw evidence, semantic mutations/restoration or protection/publication; synthetic local application only.: `docs/reviews/probes/r063_worker_summary.json`
+- Candidate rule-input fingerprint and honest authority/WAIT_DATA gaps; planning only, no BUILD.: `docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md`
+- Independent REVIEW_PASS for RO01..12, exact source/controls/limits and preserved failure history.: `docs/reviews/R063_INDEPENDENT_RULE_OBSERVATION_REVIEW_2026-10-08.md`
+- Historical R062 local FREEZE and R063 planning before separate activation.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md`
+- Actual retained Docker daemon events used in transparent review receipt reconciliation.: `docs/reviews/probes/r063_independent_daemon_events_recovery.json`
+- Retained publication path-alias failure and explicit original summary loss.: `docs/reviews/probes/r063_review_publication_incident.json`
+- Shared publication receipt integrity finding and actual-evidence recovery boundaries.: `docs/reviews/learnings/feedback_review_publication_receipt_integrity.md`
+- Static reconciliation of actual retained evidence; zero new Go or infrastructure creation.: `docs/reviews/probes/r063_reconcile_review_evidence.py`
+- Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_campaign.py`
+- Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_plan.json`
+- Independent exact-source rule-observation review proof preparation retained; actual campaign result in summary.: `docs/reviews/probes/r063_independent_protected.json`
+- R063 accepted bounded observation FROZEN under separate R064 authority; source risks/8Go/old failures preserved.: `CVF_SESSION/tranches/CCMAI-RUNTIME-063.json`
+- Historical R063 bounded source work order; accepted observation closed only under separate R064 metadata seed.: `docs/work_orders/CCMAI_RUNTIME_063.md`
+- Audited candidate scope, exact two four-line old-test amendments, medium child/root independent route and proposed8Go budget; no BUILD.: `docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md`
+- Separate immutable R1 seed for accepted R063 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-064.json`
+- Bounded local rule-input observation closure; inherited actual-evidence limitations and full S2/live open.: `docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md`
+- Historical accepted R063 source review and retained publication/continuity findings; superseded by R064 closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RULE_OBSERVATION_R063_2026-10-08.md`
+- Scoped R064 metadata closure work order, R063 source/packet immutable.: `docs/work_orders/CCMAI_RUNTIME_064.md`
+- R064 local closure status, authority, evidence and zero new runtime.: `CVF_SESSION/tranches/CCMAI-RUNTIME-064.json`
+- R065 complete delivery UO01..12, no old test edits; independent root review before conditional local closure.: `docs/work_orders/CCMAI_RUNTIME_065.md`
+- Historical R064 local rule observation closure, old8Go and receipt limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md`
+- R065 end-to-end bounded source/proof/review/closure record, fresh max8Go.: `CVF_SESSION/tranches/CCMAI-RUNTIME-065.json`
+- Original R065 end-to-end seed: medium child source/root independent review and conditional local closure, fresh bounded8Go.: `CVF_SESSION/authority/CCMAI-RUNTIME-065.json`
+- One complete bounded R065 usage/cost delivery contract UO01..12; intended behavior, not implemented yet.: `docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md`
+- Historical R065 FROZEN handoff/evidence/budget; current R067 saved-run UI active.: `CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md`
+- Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review.: `docs/reviews/probes/r065_independent_campaign.py`
+- Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review.: `docs/reviews/probes/r065_independent_plan.json`
+- Independent committed usage/cost proof preparation retained; actual campaign/review/closure in original summary/review.: `docs/reviews/probes/r065_independent_protected.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m01_container_after.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m01_container_before.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m01.jsonl`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m01_manifest.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m01_stderr.log`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m02_container_after.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m02_container_before.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m02.jsonl`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m02_manifest.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_m02_stderr.log`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_manifest.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_mutation1_diff.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_mutation2_diff.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_positive_container_after.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_positive_container_before.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_positive.jsonl`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_positive_stderr.log`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_publication.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_restored_container_after.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_restored_container_before.json`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_restored.jsonl`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_restored_stderr.log`
+- Independent original actual R065 application proof/review/local closure; exact source, named semantic mutations, restoration/inspect/cleanup or typed identities; no governance/provider/billing claim.: `docs/reviews/probes/r065_independent_summary.json`
+- Separate owner-authorized ordinary GitHub branch push; original R065 seed immutable, no merge/main/deployment authority.: `CVF_SESSION/authority/CCMAI-PUBLISH-066.json`
+- Owner branch publication intake and next source audit; actual remote receipt follows execution, no CI claim.: `docs/reviews/R066_GITHUB_PUBLICATION_AND_NEXT_SCOPE_2026-10-08.md`
+- Actual owner-authorized branch push43commits/remote exacta384fa2; large-log warnings retained, no merge/deploy/CI claim.: `docs/reviews/probes/r066_github_push_receipt.json`
+- End-to-end bounded saved-run UI reader seed; medium child/root independent, fresh8Vitest0Go, conditional local closure/push.: `CVF_SESSION/authority/CCMAI-RUNTIME-067.json`
+- Bounded end-to-end UIR01..12 order; exact8frontendpaths, fresh8Vitest0Go, independent roles/localclosure/push.: `docs/work_orders/CCMAI_RUNTIME_067.md`
+- Dispatcher-bounded R067 active record; before-edit acknowledgment/source/plan/staticreview then bounded UI campaign.: `CVF_SESSION/tranches/CCMAI-RUNTIME-067.json`
+- Source-audited UIR01..12 UI observation contract; no backend/new governance behavior, activation precedes BUILD.: `docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md`
 - Reviewed F02-D Pancake local message contract; source and evidence boundaries.: `docs/specs/RUNTIME_PANCAKE_MESSAGE_COVERAGE_F02D_2026-10-02.md`
 - Local message order FROZEN under separate R033 closure authority; original independent review and live/global F02 limits retained.: `docs/work_orders/CCMAI_RUNTIME_030.md`
 - Reviewed F02-E Facebook message local safety contract and acceptance matrix.: `docs/specs/RUNTIME_FACEBOOK_MESSAGE_COVERAGE_F02E_2026-10-02.md`
@@ -44,6 +177,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical bounded local R054 closure handoff before separately seeded R055 application receipt work.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md`
 - Historical interrupted R055 source review before R057; source and failures retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md`
 - Historical R057 independent REVIEW_PASS at source05c59e9 before separate R058 local closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md`
+- Historical R058 local FREEZE and R059 planning before delegated activation.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md`
+- Historical R059 parked before source/Go; contract audit resolved through separately seeded R060.: `CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md`
 - Historical R032 review/assessment and owner local-closure delegation acknowledgment.: `CVF_SESSION/handoffs/AGENT_HANDOFF_F02F_2026-10-03.md`
 - Historical R048 option A acceptance and R049 seed planning; prior evidence limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md`
 - Historical R049 bounded local closure and R050 seed planning acknowledgment; original limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md`
@@ -54,7 +189,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
 - Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred.: `docs/reviews/learnings/feedback_archive_byte_manifest.md`
+- Shared independently verified fixture-domain and stored-prefix learning; upstream deferred.: `docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md`
 - Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence.: `docs/reviews/learnings/feedback_minor_reviewer_repairs.md`
+- Provisional empirical Luna task-fit matrix for four reviewed tranches; normalized product/test/root attribution, no model-config change or unmatched Sol ranking.: `docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof.: `docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json`
 - CVF governance policy.: `.cvf/policy.json`
@@ -118,6 +255,387 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R055/R057 bounded application source REVIEW_PASS; independent source author and full evidence, FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_057_INDEPENDENT_REVIEW_2026-10-06.md`
 - R058 scoped closure identities/history/claim limits and final static publication checks.: `docs/reviews/probes/r058_local_closure_receipt.json`
 - R055/R057 bounded local observation closed at source05c59e9/review5ff0875; full S2/live/governance OPEN.: `docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md`
+- R059 DISPATCH_READY bounded execution observation EX01..12, child BUILD/root independent review.: `docs/work_orders/CCMAI_RUNTIME_059.md`
+- Immutable R059 R2 worker-medium authority committed before activation.: `CVF_SESSION/authority/CCMAI-RUNTIME-059.json`
+- Reviewable R059 source work-order draft; exact paths, EX01..12, bounded campaigns; independent reviewer identity pending, no activation or BUILD.: `docs/reviews/R059_BOUNDED_WORK_ORDER_DRAFT_2026-10-07.md`
+- Planning-only candidate R059 execution observation contract EX01..12; no activation/implementation/runtime evidence or full S2 claim.: `docs/reviews/R059_EXECUTION_RECEIPT_DESIGN_SPEC_2026-10-07.md`
+- R059 planning publication checks and retained setup failures; no implementation/runtime or governance evidence.: `docs/reviews/probes/r059_planning_publication_checks.json`
+- Pre-BUILD scalar test/additive receipt contract contradiction; exact4-line patch proposed, source/runtime0, owner boundary disposition pending.: `docs/reviews/R059_PREBUILD_TEST_CONTRACT_BOUNDARY_2026-10-07.md`
+- R059 current bounded status/budget/phase/roles; no FREEZE or live claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-059.json`
+- Immutable narrow R060 successor seed, roles/model/budget retained, old R059 seed unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-060.json`
+- R060 bounded current phase/status/roles/budget; no FREEZE/full S2 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-060.json`
+- R060 bounded execution observation plus exact4-line old-test maintenance, all assertions preserved.: `docs/work_orders/CCMAI_RUNTIME_060.md`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_handback.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01_container_after.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01_container_before.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01.jsonl`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01_manifest.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01_stderr.log`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02_container_after.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02_container_before.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02.jsonl`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02_manifest.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02_stderr.log`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_manifest.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_positive_container_after.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_positive_container_before.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_positive.jsonl`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_positive_stderr.log`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_restored_container_after.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_restored_container_before.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_restored.jsonl`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_restored_stderr.log`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_runtime_plan.json`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_summary.json`
+- R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/probes/r065_worker_campaign.py`
+- R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/probes/r065_worker_plan.json`
+- R065 worker exact source72e4c36/committedplan012f083 and completed bounded four-Go synthetic observation proof; independent root review pending.: `docs/reviews/R065_WORKER_USAGE_OBSERVATION_BUILD_2026-10-08.md`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/R067_REPAIRED_SOURCE_AND_CHECK_BUDGET_REQUEST_2026-10-09.md`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_remaining_visual_publication_2026-10-09.py`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M01_manifest_after.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M01_manifest_before.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M01_mutation.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M01_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M01_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M01_vitest.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M02_manifest_after.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M02_manifest_before.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M02_mutation.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M02_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M02_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_M02_vitest.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_positive_manifest_after.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_positive_manifest_before.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_positive_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_positive_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_positive_vitest.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_restored_manifest_after.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_restored_manifest_before.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_restored_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_restored_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_restored_vitest.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_summary.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_visual_failed_capture.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_visual_failed_vite.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_visual_receipt_2026-10-09.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_visual_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_reviewer_visual_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_runtime_evidence_reconciliation_2026-10-09.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_visual_fixture_failure_disposition_2026-10-09.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_visual_fixture_literal_paths_2026-10-09.mjs`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resume_ack_2026-10-09.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M01_manifest_after.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M01_manifest_before.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M01_mutation.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M01_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M01_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M01_vitest.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M02_manifest_after.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M02_manifest_before.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M02_mutation.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M02_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M02_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_M02_vitest.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_restored_manifest_after.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_restored_manifest_before.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_restored_stderr.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_restored_stdout.log`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_restored_vitest.json`
+- R067 actual bounded root/worker raw evidence, retained visual harness failure and NEW remaining-visual fixture; synthetic UI only, formal review pending.: `docs/reviews/probes/r067_worker_resumed_summary.json`
+- Final R067 Luna xhigh vsSolmedium assessment: accepted codequality and useful secondaryreview, first-pass repair costs; no matched A/B or demonstrated efficiency advantage.: `docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/R067_VISUAL_FAILURE_REVIEW_AND_BUDGET_REQUEST_2026-10-09.md`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_additional_visual_request_2026-10-09.json`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_capture_ready_diagnostics_PROPOSED_2026-10-09.mjs`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_final_independent_source_evidence_audit_2026-10-09.json`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_local_knowledge_index_disposition_2026-10-09.json`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_supplemental_visual_PROPOSED_2026-10-09.py`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_visual_fixture_ready_diagnostics_PROPOSED_2026-10-09.mjs`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_worker_visual_ack_2026-10-09.json`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_worker_visual_failed_capture_2026-10-09.log`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_worker_visual_failed_vite_2026-10-09.log`
+- R067 visual CHANGES_REQUIRED: preserved actual failed packet, partial independent source review, interim model assessment and unexecuted supplemental budget proposal; no closure/live claim.: `docs/reviews/probes/r067_worker_visual_failure_receipt_2026-10-09.json`
+- Owner-approved exactlyone supplemental rootvisual; separate authorized core reconciliation/backup/doctor recorded, no runtime yet.: `docs/reviews/probes/r067_owner_additional_visual_grant_2026-10-09.json`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/R067_NATIVE_KEYBOARD_PROBE_REPAIR_AND_COST_DISPOSITION_2026-10-09.md`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_capture_native_keyboard_PROPOSED_2026-10-09.mjs`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_corrected_keyboard_visual_PROPOSED_2026-10-09.py`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_corrected_keyboard_visual_request_2026-10-09.json`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_native_keyboard_static_repair_audit_2026-10-09.json`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_supplemental_reviewer_visual_capture.log`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_supplemental_reviewer_visual_receipt.json`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_supplemental_reviewer_visual_screenshots_report.json`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_supplemental_reviewer_visual_stderr.log`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_supplemental_reviewer_visual_stdout.log`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_supplemental_reviewer_visual_vite.log`
+- Actual failed supplemental visual with mount/keyboard diagnostics; NEW root-native-keyboard repair and one-further-visual proposal unexecuted; source unchanged, no closure/live proof.: `docs/reviews/probes/r067_visual_fixture_native_keyboard_PROPOSED_2026-10-09.mjs`
+- Root-derived actual Luna secondary readonly findings and NEW probe repairs; no runtime or acceptance claim.: `docs/reviews/probes/r067_secondary_static_review_findings_2026-10-09.json`
+- Owner-approved exactlyone correctednativekeyboard rootvisual, exactpreparedhashes and beforeexecution counters, historical3failures retained.: `docs/reviews/probes/r067_owner_corrected_keyboard_visual_grant_2026-10-09.json`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_capture.log`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_en--desktop--light.png`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_en--mobile--light.png`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_receipt.json`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_screenshots_report.json`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_stderr.log`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_stdout.log`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_vi--desktop--light.png`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_vi--mobile--light.png`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_native_keyboard_capture_vite.log`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/R067_INDEPENDENT_SAVED_RUN_UI_REVIEW_2026-10-09.md`
+- R067 exactsource localUI independent REVIEW_PASS: actual4images/nativekeyboard/raw evidence, historical failures and compiler inheritance retained; no live/governance claim.: `docs/reviews/probes/r067_independent_visual_acceptance_audit_2026-10-09.json`
+- R067 scoped localUI closure after independent exactsource REVIEW_PASS; final model assessment, retained failures/budgets and ordinary currentbranchpublication boundary.: `docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md`
+- Actual R067 ordinary branchpush exit0 and exact remoteSHA closure20d6a666 readback; derived receipt separately published, hostedActions NOTRUN.: `docs/reviews/probes/r067_github_push_receipt_2026-10-09.json`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_2026-10-09.json`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stderr_2026-10-09.log`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_typecheck_stdout_2026-10-09.log`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_vite_stderr_2026-10-09.log`
+- Actual owner-approved supplemental exact4d921 typecheck and Vite PASS; raw logs/hashes, source unchanged, no test/runtime governance acceptance.: `docs/reviews/probes/r067_supplemental_reviewer_build_vite_stdout_2026-10-09.log`
+- R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet.: `docs/reviews/probes/r067_final_source_review_campaign_plan_2026-10-09.json`
+- Root CDP Tab/Enter/Space and desktop/mobile capture probe with external request blocking.: `docs/reviews/probes/r067_capture_keyboard.mjs`
+- Owner Luna xhigh override; immutable Sol draft physical snapshot and fair comparison boundaries.: `docs/reviews/probes/r067_luna_takeover_2026-10-08.json`
+- Luna17-test source-derived plan, static findings and two semantic mutations; runtime pending.: `docs/reviews/probes/r067_luna_worker_plan_2026-10-08.json`
+- R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet.: `docs/reviews/probes/r067_worker_resume_remaining_three.py`
+- Owner approved exactly1 supplemental root forcedbuild on4d921; original2failures and8Vitest/0Go limits retained, no seed mutation.: `docs/reviews/probes/r067_owner_additional_build_grant_2026-10-09.json`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/R067_POSITIVE_TEST_FAILURE_AND_REMAINING_BUDGET_DISPOSITION_2026-10-09.md`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_positive_manifest_before.json`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_positive_stderr.log`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_positive_stdout.log`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_positive_vitest.json`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_runtime_evidence_plan_2026-10-09.json`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_runtime_evidence_plan_attempt_failed_2026-10-09.json`
+- R067 retained initial worker315/316 failure/static acknowledgment and exactremainingbudget disposition; no complete campaign/mutation/visual acceptance.: `docs/reviews/probes/r067_worker_summary.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_additional_build_request_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_cache_retention_disposition_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_preexec_wrapper_disposition_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_repair_plan_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_exact_2026-10-09.py`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_typecheck_stderr_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_reviewer_build_typecheck_stdout_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_root_repair_build_plan_2026-10-09.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_round2_independent_static_review_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_static_syntax.mjs`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_supplemental_build_PROPOSED_2026-10-09.py`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/R067_TYPECHECK_CHANGES_REQUIRED_2026-10-09.md`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_typecheck_repair_disposition_2026-10-09.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_visual_cleanup_plan_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_exact_2026-10-09.py`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_preflight_failure_2026-10-09.json`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_typecheck_stderr_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_typecheck_stdout_2026-10-09.log`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_build_wrapper_failed_2026-10-09.py.failed`
+- R067 exact-source UI evidence, bounded local checks or retained failure/static proposal; no runtime AI governance or accepted UI closure claim.: `docs/reviews/probes/r067_worker_staticcheck_launcher_failure_2026-10-09.json`
+- Independent exact-source static approval and bounded worker/root campaign; historical root static failures retained.: `docs/reviews/probes/r067_root_campaign_plan_2026-10-09.json`
+- R067 finaltest-only source audit and manual remaining-budget continuation; compiler inheritance explicit, no freshcompile or runtime acceptance yet.: `docs/reviews/probes/r067_round3_worker_test_repair_plan_2026-10-09.json`
+- R067 repaired-source static review, retained evidence or explicit NOT_AUTHORIZED additional-check proposal; no final runtime acceptance/FREEZE.: `docs/reviews/probes/r067_type_repair_round2_plan_2026-10-09.json`
+- Root-authored exclusive evidence runner,4Vitest perrole, full restoration; not runtime governance proof.: `docs/reviews/probes/r067_ui_campaign.py`
+- Luna isolated synthetic saved-run panel fixture, loopback only, no application/API.: `docs/reviews/probes/r067_visual_fixture.mjs`
+- R068 fresh Luna xhigh bounded workorder/tranche; historicalR067 preserved, source/runtime not yet begun.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md`
+- R068 bounded adapter work order; repair BUILD after first-source compile finding; one same-scope repair authorized; historical R067 preserved.: `docs/work_orders/CCMAI_RUNTIME_068.md`
+- R068 bounded adapter tranche; repair BUILD after CHANGES_REQUIRED, first source retained, both build attempts consumed, tests gated on root static reapproval.: `CVF_SESSION/tranches/CCMAI-RUNTIME-068.json`
+- R068 independent REVIEW_PENDING: both local ai campaigns verified, UP09 whole-backend postrepair compiler gate open.: `docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md`
+- R068 concrete proposed one supplemental offline whole-backend build; NOT_AUTHORIZED, original budgets exhausted.: `docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md`
+- R068 provisional fresh Luna xhigh versus prior Sol medium assessment; no inherited draft, closure still pending.: `docs/reviews/R068_LUNA_XHIGH_FRESH_START_ASSESSMENT_2026-10-09.md`
+- R068 root independent worker42raw/all4archive/218restoration/native-event verification.: `docs/reviews/probes/r068_worker_evidence_independent_audit_2026-10-09.json`
+- R068 original worker four-test PASS packet with native streams and verified retained raw/archive backup.: `docs/reviews/probes/r068_luna_worker_tests_actual_2026-10-09_luna1/campaign-result.json`
+- R068 final REVIEW_PENDING protection/immutable seed/original failed launch/TEMP archive verification; no compiler PASS or extra Go.: `docs/reviews/probes/r068_final_pending_protection_audit_2026-10-09.json`
+- R068 fresh Luna xhigh adapter presence contract; BUILD acknowledged; source/runtime/live provider proof not yet run.: `docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md`
+- R068 fresh Luna xhigh untouched source baseline; BUILD acknowledged; source/runtime/live provider proof not yet run.: `docs/reviews/probes/r068_fresh_start_baseline_2026-10-09.json`
+- New immutable dispatcher seed for fresh Luna xhigh adapter metadata; committed before activation/BUILD, no source/runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-068.json`
+- Root independent exactsource offline Go compile/four-test runner, prepared syntax-only/unexecuted; no worker implementation source help or runtime claim.: `docs/reviews/probes/r068_independent_go_campaign_2026-10-09.py`
+- R068 root independent exact first-source backend archive/test/mutation plan; no Go yet.: `docs/reviews/probes/r068_root_exact_source_plan_2026-10-09.json`
+- R068 first product static review and immutable worker capture failure disposition; actual compiler/tests pending.: `docs/reviews/R068_FIRST_SOURCE_STATIC_REVIEW_AND_CAPTURE_DISPOSITION_2026-10-09.md`
+- R068 immutable first actual compiler failure; pointer/value finding and remaining test-only authority.: `docs/reviews/R068_FIRST_COMPILE_CHANGES_REQUIRED_2026-10-09.md`
+- R068 root independent static-approved repaired-source exact archive and four-test plan.: `docs/reviews/probes/r068_root_repaired_source_plan_2026-10-09.json`
+- R068 original root full-backend compiler failure exit1; exact-source manifests/native streams/verified backup.: `docs/reviews/probes/r068_root_compile_actual_summary.json`
+- R068 root independent repaired-source ai positives/M01/M02/restored native evidence PASS; whole-backend compiler gate remains open.: `docs/reviews/probes/r068_root_tests_actual_summary.json`
+- R068 independent original raw/backup/218-member restoration and protected780 source audit.: `docs/reviews/probes/r068_root_independent_test_evidence_audit_2026-10-09.json`
+- R068 Luna exact repaired-source four-test plan; first compiler failures and budget consumed retained.: `docs/reviews/probes/r068_luna_repaired_source_test_plan_2026-10-09.json`
+- R068 bounded worker native JSON/whole physical source/mutations/second archive/raw backup runner; root minor evidence pointer fixes attributed.: `docs/reviews/probes/r068_luna_test_campaign_capture.ps1`
+- R068 root repaired-source independent test evidence and exactly four worker-test approval; no extra build or closure.: `docs/reviews/R068_REPAIRED_SOURCE_TEST_APPROVAL_2026-10-09.md`
+- R068 worker build launch attempt 1/1; no Go process started, no compiler result; immutable first-source receipt.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build-result.json`
+- R068 worker first-build native stdout bytes; empty because the process did not start; preserved raw stream.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stdout.bin`
+- R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin`
+- R068 full 1,565-entry source-tree manifest for the worker launch attempt; source archive retained in verified owned TEMP.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-tree-manifest.txt`
+- R068 derived relocation receipt; original worker build receipt stays unchanged, verified 500,899,840-byte archives remain in owned TEMP.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/first_build_archive_relocation.json`
+- Separate single-compile dispatcher seed; owner approved 2026-10-10, original R068 budget immutable.: `CVF_SESSION/authority/CCMAI-RUNTIME-069.json`
+- R069 accepted compiler specification and exact owner authorization.: `docs/reviews/R069_SINGLE_COMPILE_SPEC_AND_AUTHORIZATION_2026-10-10.md`
+- R069 exact-source single offline compile plan.: `docs/reviews/probes/r069_exact_source_plan_2026-10-10.json`
+- R069 single-use native compiler capture runner, no tests/retry.: `docs/reviews/probes/r069_single_compile_capture_2026-10-10.py`
+- R069 bounded one-compile work order; no source writes/tests/retry.: `docs/work_orders/CCMAI_RUNTIME_069.md`
+- R069 supplemental validation record, separate immutable budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-069.json`
+- Historical R068 adapter-only FROZEN handoff; source-independent UP01..12 acceptance.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
+- Original single offline compiler PASS evidence; attempts1/tests0/retries0.: `docs/reviews/probes/r069_compile_actual/summary.json`
+- Root independent compiler/raw/source/backup and protected R068 evidence audit.: `docs/reviews/probes/r069_independent_compile_audit_2026-10-10.json`
+- Separate R1 review/closure integration authority, zero source/Go effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-070.json`
+- R070 bounded closure spec and preserved root routing failure.: `docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_SPEC_2026-10-10.md`
+- R069 compiler-only review decision, closure committed by R070 integration.: `docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md`
+- Independent final R068 UP01..12 review, closure integrated by R070.: `docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md`
+- R070 bounded metadata-only work order and committed acknowledgment.: `docs/work_orders/CCMAI_RUNTIME_070.md`
+- R070 integration record; no source/Go authority.: `CVF_SESSION/tranches/CCMAI-RUNTIME-070.json`
+- R069 historical compiler-only FROZEN handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md`
+- Final fresh Luna xhigh assessment: accepted code after repair, no demonstrated efficiency advantage vs Sol medium.: `docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md`
+- R068 scoped adapter-only local closure, original failures/budgets retained.: `docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md`
+- R070 metadata integration acceptance/closure and explicit R1 role transitions.: `docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md`
+- Actual ordinary push waited in credential manager, owned tree terminated; publication unverified, local closure preserved.: `docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/reservation-compile.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/summary.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-m01.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-m02.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-positive.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-restored.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/summary.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/reservation-compile.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/summary.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m01.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m02.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-positive.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-restored.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/summary.json`
+- Immutable R071 dispatcher seed; owner-delegated scope accepted, original condition/history preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-071.json`
+- Concrete APO01..12 additive consumer contract, no runtime yet.: `docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md`
+- Owner-requested cumulative per-tranche Luna quality methodology and attribution.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md`
+- Cumulative Luna R067/R068/R071 measured evidence/repair/assistance ledger.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`
+- Fresh R071410protected physical baseline, no product draft/source.: `docs/reviews/probes/r071_fresh_source_baseline_2026-10-10.json`
+- Fresh Luna read-only consumer feasibility, zero source/test/runtime.: `docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json`
+- R071 bounded aggregate FROZEN work order, full/runtime/live boundaries retained.: `docs/work_orders/CCMAI_RUNTIME_071.md`
+- Canonical R071 FROZEN record, aggregate10Go attempts/processes, no retries.: `CVF_SESSION/tranches/CCMAI-RUNTIME-071.json`
+- Historical R070 local FROZEN handoff; prior publication remains unverified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md`
+- Independent first-source static S1/S2/S3 findings before any Go; unchanged-scope repair.: `docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
+- Parent supplied capture infrastructure; exact committed plans/approval required, no automatic retry.: `docs/reviews/probes/r071_shared_go_capture_2026-10-10.py`
+- Preserved firstsource worker plan, static findings not approved for runtime.: `docs/reviews/probes/r071_worker_source_plan_2026-10-10.json`
+- Committed repaired worker exactsource plan, root static accepted before Go.: `docs/reviews/probes/r071_worker_repaired_source_plan_2026-10-10.json`
+- Reviewer independently selected exact20pure tests and distinct two semantic replacements.: `docs/reviews/probes/r071_root_source_plan_2026-10-10.json`
+- Independent repairedsource static approval, runtime acceptance pending.: `docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
+- Independent actualraw/mutation/220memberarchive/restoration/backup audit, bounded local proof.: `docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json`
+- Independent APO01..12 REVIEW_PASS, runtime and claim boundaries.: `docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md`
+- Empirical fresh Luna R071 assessment; one test repair, no matched Sol efficiency ranking.: `docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
+- R071 aggregate-only local FROZEN after independent review; no newGo/publication/governance claim.: `docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.capture.json`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.report.json`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stderr.log`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stdout.log`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.capture.json`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stderr.log`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/capture.json`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stderr.bin`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stdout.bin`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.report.json`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stderr.bin`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stdout.bin`
+- Immutable R1 legacy UI extension compatibility seed; fresh Luna xhigh worker, root independent reviewer.: `CVF_SESSION/authority/CCMAI-RUNTIME-072.json`
+- R072 bounded optional ignored-field contract; preserves all legacy validation and numeric semantics.: `docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md`
+- Before-source physical baseline for protected frontend/backend/authority files.: `docs/reviews/probes/r072_protected_baseline_2026-10-10.json`
+- Historical R071 FROZEN aggregate-only handoff; source/runtime evidence unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`
+- R072 bounded legacy compatibility work order.: `docs/work_orders/CCMAI_RUNTIME_072.md`
+- R072 dispatcher scope and status record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-072.json`
+- First-source static T1/T2 NEW test findings before runtime; product line accepted, same-scope repair1.: `docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
+- T1/T2 settled on repaired test; exact product preserved, bounded independent captures next.: `docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
+- Independent UC01..07 REVIEW_PASS; each role21/21 and forcedtypecheck, bounded local compatibility.: `docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md`
+- Per-tranche Luna assessment: product stable, one pre-runtime NEW-test repair; unmatched Sol comparison.: `docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
+- Independent raw/source/seed snapshot audit; worker native blob bytes and metadata newline basis explicit.: `docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json`
+- Root-owned auxiliary continuity projection drift and bounded known-value repair; source review unchanged.: `docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md`
+- Scoped local legacy UI compatibility FREEZE only; no presence display/provider/governance/roadmap closure.: `docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md`
+- Postcommit13file packet seal: native raw bytes identical, metadata wrapper newline differences explicit.: `docs/reviews/probes/r072_committed_packet_seal_2026-10-10.json`
+- R073 committed raw packet seal and scoped local presence-display UI closure; source3a05b50, broader roadmap/live OPEN.: `docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md`
+- R073 committed raw packet seal and scoped local presence-display UI closure; source3a05b50, broader roadmap/live OPEN.: `docs/reviews/probes/r073_committed_packet_seal_2026-10-10.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/capture-files.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/capture-manifest.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/capture_worker_native.ps1`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/git-status-after.txt`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/git-status-before.txt`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/source-after-vitest.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/source-after-vue-tsc.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/source-before-native.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/validation-summary.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.process.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.stderr.log`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.stdout.log`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.process.json`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stderr.log`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stdout.log`
+- Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_independent_capture.py`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/capture.json`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stderr.bin`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stdout.bin`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.report.json`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stderr.bin`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stdout.bin`
+- Immutable R1 saved presence UI dispatcher seed before BUILD; fresh Luna scope/task classes bounded.: `CVF_SESSION/authority/CCMAI-RUNTIME-073.json`
+- R073 PU01..09 bounded saved presence UI contract, independent validation, safe parsed integers and claim limits.: `docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md`
+- Physical protected source/old authority baseline before R073; snapshot boundary, no full write-history claim.: `docs/reviews/probes/r073_protected_baseline_2026-10-10.json`
+- Historical R072 FROZEN legacy compatibility handoff; accepted evidence and retrospective classification retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md`
+- R073 FROZEN / FREEZE, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `docs/work_orders/CCMAI_RUNTIME_073.md`
+- R073 FROZEN / FREEZE, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-073.json`
+- Root independent PU01..09 static/runtime review plan before first Luna source; no product/test draft.: `docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md`
+- R073 firstsource53abf11 CHANGES_REQUIRED F1/F2 NEW-test boundary/coverage, F3 locale precision; original native NOT_RUN.: `docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
+- R073 repairedsource3a05b50 F1..F3 closed static; worker own49expected/forcedtypecheck pending, no original native run.: `docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
+- Luna xhigh R074 source-only audit accepted after documentary repair; historical first-packet labels retained, no app runtime.: `docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md`
+- Luna xhigh R074 source-only audit accepted after documentary repair; historical first-packet labels retained, no app runtime.: `docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json`
+- Luna xhigh R074 source-only audit accepted after documentary repair; historical first-packet labels retained, no app runtime.: `docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json`
+- R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-074.json`
+- R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md`
+- R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/probes/r074_protected_baseline_2026-10-10.json`
+- R074 FROZEN source-only contract audit; independent review, no runtime/governance proof.: `CVF_SESSION/tranches/CCMAI-RUNTIME-074.json`
+- R074 FROZEN source-only contract audit; independent review, no runtime/governance proof.: `docs/work_orders/CCMAI_RUNTIME_074.md`
+- Root first-document consolidated independent findings; source/native0, no worker-artifact edits.: `docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md`
+- R074 independent DA01..10 review, source/scope proof and separate fresh Luna audit assessment; no app runtime.: `docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md`
+- R074 independent DA01..10 review, source/scope proof and separate fresh Luna audit assessment; no app runtime.: `docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md`
+- R074 independent DA01..10 review, source/scope proof and separate fresh Luna audit assessment; no app runtime.: `docs/reviews/probes/r074_root_source_scope_audit_2026-10-10.json`
+- R074 scoped source-only dossier closure; independent review inherited, app native0, broader/live OPEN.: `docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md`
+- R075 explicit owner-authorized ordinary currentbranch publication seed/contract; R2, no app/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-075.json`
+- R075 explicit owner-authorized ordinary currentbranch publication seed/contract; R2, no app/runtime authority.: `docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md`
+- R075 bounded ordinary publication record/order; R074 historical FROZEN preserved.: `CVF_SESSION/tranches/CCMAI-RUNTIME-075.json`
+- R075 bounded ordinary publication record/order; R074 historical FROZEN preserved.: `docs/work_orders/CCMAI_RUNTIME_075.md`
+- Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim.: `docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
@@ -307,6 +825,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Machine R055 bounded application work state and worker/reviewer roles; source/test/evidence not started.: `CVF_SESSION/tranches/CCMAI-RUNTIME-055.json`
 - Separate R2 additive application preparation receipt authority; child BUILD/root independent reviewer, no schema/policy/provider effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-055.json`
 - SP01..12 intended application receipt contract, cap/privacy/persistence/earlyterminal compatibility and evidence requirements.: `docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md`
+- Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only.: `docs/reviews/probes/r060_worker_campaign.py`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

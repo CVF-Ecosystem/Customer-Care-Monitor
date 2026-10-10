@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-063",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_APPLICATION_WORK_SEED",
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_063.md",
+  "sourcePlanningCommit": "a52a13d0ac3d6cbc8554a2c2f9679b8385189181",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r063_worker",
+    "repairWorker": "Codex /root/r063_worker",
+    "commitSteward": "Codex /root/r063_worker",
+    "reviewer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/source_preparation_receipt.go",
+    "backend/engine/rule_observation_receipt.go",
+    "backend/engine/rule_observation_receipt_test.go",
+    "backend/engine/rule_observation_receipt_db_test.go",
+    "backend/engine/source_preparation_receipt_db_test.go",
+    "backend/engine/source_execution_receipt_db_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_063.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "real_provider_call",
+    "channel_call",
+    "real_credential_use",
+    "real_config_or_env_read",
+    "external_network",
+    "persistent_db",
+    "customer_data",
+    "live_analyzer_dispatch",
+    "live_notification",
+    "live_sync",
+    "schema_change",
+    "dependency_change",
+    "permission_policy_change",
+    "oauth_change",
+    "ui_change",
+    "workflow_change",
+    "gate_tooling_change",
+    "parent_cvf_edit",
+    "secret_commit",
+    "push",
+    "merge",
+    "deployment",
+    "freeze",
+    "live_governance_claim",
+    "hosted_readiness_claim",
+    "original_authority_seed_edit",
+    "semantic_auto_skip",
+    "budget_or_policy_gate",
+    "provider_selection_or_fallback_change",
+    "old_worker_or_review_packet_edit",
+    "receipt_driven_admission_or_skip",
+    "extra_database_query_for_receipt",
+    "model_or_migration_change",
+    "automatic_runtime_retry",
+    "provider_interface_edit",
+    "root_source_test_edit",
+    "existing_test_edit_outside_exact_SP_EX_scalar_receipt_amendment",
+    "rule_driven_selection_or_cache_invalidation"
+  ],
+  "claimScope": "Bounded local rule-input observation RO01..12 only. Fingerprint is content identity, not permission/approval/policy revision or enforced WAIT_DATA; existing behavior/preparation/execution/scalars preserved. No full S2/live/governance/hosted claim.",
+  "baselineSourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+  "acceptedPriorClosureCommit": "ce2a00fa1884a82f7317e808ae9995d90d2ad299",
+  "spec": "docs/reviews/R063_RULE_AUTHORITY_OBSERVATION_DESIGN_SPEC_2026-10-08.md",
+  "draftWorkOrder": "docs/reviews/R063_BOUNDED_WORK_ORDER_DRAFT_2026-10-08.md",
+  "workerModel": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "medium"
+  },
+  "ownerAuthorization": "Standing owner autonomous audit/choose, medium Codex child implementation/repair/BUILD commits and root independent review; current next authorizes seed/WORK_ORDER step without repetitive permission. Prior worker no longer live; same responsibility route now named /root/r063_worker before original seed commit.",
+  "existingTestCompatibility": {
+    "paths": [
+      "backend/engine/source_preparation_receipt_db_test.go",
+      "backend/engine/source_execution_receipt_db_test.go"
+    ],
+    "insertAfter": "delete(scalars, \"source_execution\")",
+    "exactAddedLines": [
+      "if _, ok := scalars[\"rule_observation\"]; !ok {",
+      "    t.Fatal(\"missing rule_observation in Analyzer summary\")",
+      "}",
+      "delete(scalars, \"rule_observation\")"
+    ],
+    "insertionsPerFile": 1,
+    "allOldAssertionsPreserved": true,
+    "otherOldTestBytesUnchanged": true,
+    "noUnrelatedFormatting": true
+  },
+  "semanticsRefinements": [
+    "Metadata-invalid binding suppresses IDs and digest before job-type classification; valid unsupported type omits raw type/digest.",
+    "SHA256 length-framed effective fields, no latest DB reload; ordinary unchanged-selection/cache behavior unchanged.",
+    "Digest visible through existing jobs:r Summary; historical equality/dictionary exposure accepted R2, not anonymization.",
+    "Optional variadic composer preserves old direct callers; all Analyzer Summary writers supply captured observation."
+  ],
+  "workerBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4,
+    "automaticRetries": 0,
+    "positiveTestTimeoutSeconds": 480,
+    "positiveAttachTimeoutSeconds": 600,
+    "focusedTestTimeoutSeconds": 180,
+    "focusedAttachTimeoutSeconds": 300,
+    "readinessSeconds": 90
+  },
+  "reviewerBudget": {
+    "maxCampaigns": 1,
+    "maxGoInvocations": 4,
+    "automaticRetries": 0
+  },
+  "aggregateBudget": {
+    "maxCampaigns": 2,
+    "maxGoInvocations": 8,
+    "priorLineageBudgetNotReused": true
+  },
+  "runtimeEvidenceBoundary": "Cached offline Docker/Go, synthetic private internal-network MySQL without host ports, readonly source/archive/module cache, no pulls or module downloads. Application observation only, not real AI-governance proof.",
+  "dispatchBoundary": "First commit seed before activation; baseCommit contains immutable seed. Named worker rehydrates/declares/commits before-edit BUILD acknowledgment, source checkpoint before one bounded campaign; REVIEW_PENDING handback then independent root review. No FREEZE.",
+  "evidenceCommands": [
+    "grouped new TestRO plus all SP/EX and source-derived preparation/lazy/ownership/finalizer positives",
+    "M01 omit SkipConditions in QC fingerprint with named vector/effective-field assertion",
+    "M02 erase only stored terminal rule_observation with named DB reload assertion",
+    "full-byte restoration and new RO plus mutant-target positives"
+  ]
+}

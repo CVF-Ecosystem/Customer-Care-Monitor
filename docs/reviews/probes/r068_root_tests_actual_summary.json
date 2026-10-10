@@ -1,0 +1,330 @@
+{
+  "date": "2026-10-09",
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "independentReviewer": "Codex /root",
+  "mode": "tests",
+  "archiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "members": 218,
+  "plan": "docs/reviews/probes/r068_root_repaired_source_plan_2026-10-09.json",
+  "planSha256Physical": "5dcbfdf925bda8c39e4284617766074d13498941c9dfe564e686b2ad8b92f06f",
+  "scratch": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-root-tests-b19r68_e",
+  "commands": [
+    {
+      "label": "positive",
+      "command": [
+        "go",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-root-tests-b19r68_e\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./ai"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 17.97063500015065,
+      "raw": [
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_positive_stdout.jsonl",
+          "bytes": 32490,
+          "sha256Physical": "c4459a3512ff0e7f09e527e9cdb23b9dba73327490d660b63afc52573ed3097c"
+        },
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_positive_stderr.log",
+          "bytes": 0,
+          "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "timedOut": false,
+      "launchError": null,
+      "passed": [
+        "TestOpenAICompatibleGoiVaDocPhanHoi",
+        "TestXAIDungTenThamSoCu",
+        "TestOpenAICompatibleBaoLoiRoRang/key_sai",
+        "TestOpenAICompatibleBaoLoiRoRang/khong_co_choices",
+        "TestOpenAICompatibleBaoLoiRoRang/noi_dung_rong",
+        "TestOpenAICompatibleBaoLoiRoRang/bi_tu_choi",
+        "TestOpenAICompatibleBaoLoiRoRang",
+        "TestBuildQCPrompt",
+        "TestBuildQCPromptWithSkipConditions",
+        "TestBuildClassificationPrompt",
+        "TestFormatChatTranscript",
+        "TestFormatChatTranscriptFallbackSenderType",
+        "TestFormatChatTranscriptCarriesSourceIdentity",
+        "TestPromptsRequireEvidenceRefs",
+        "TestUsagePresencePositive",
+        "TestUsagePresenceM01AbsentNullDetector/missing_container",
+        "TestUsagePresenceM01AbsentNullDetector/missing_token",
+        "TestUsagePresenceM01AbsentNullDetector/null_container",
+        "TestUsagePresenceM01AbsentNullDetector/null_token",
+        "TestUsagePresenceM01AbsentNullDetector",
+        "TestUsagePresenceM01ExplicitZeroHealthyControl",
+        "TestUsagePresenceM02InvalidDetector/-1",
+        "TestUsagePresenceM02InvalidDetector/-0",
+        "TestUsagePresenceM02InvalidDetector/1.5",
+        "TestUsagePresenceM02InvalidDetector/1e2",
+        "TestUsagePresenceM02InvalidDetector/\"1\"",
+        "TestUsagePresenceM02InvalidDetector/true",
+        "TestUsagePresenceM02InvalidDetector/{}",
+        "TestUsagePresenceM02InvalidDetector/[]",
+        "TestUsagePresenceM02InvalidDetector/9223372036854775808",
+        "TestUsagePresenceM02InvalidDetector",
+        "TestUsagePresenceM02ValidIntegerHealthyControl",
+        "TestUsagePresenceDuplicateRules",
+        "TestUsagePresenceRawBoundsAndMalformedJSON",
+        "TestUsagePresenceSDKAdapters"
+      ],
+      "failed": [],
+      "skipped": []
+    },
+    {
+      "label": "M01",
+      "command": [
+        "go",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-root-tests-b19r68_e\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./ai",
+        "-run",
+        "^(TestUsagePresenceM01AbsentNullDetector|TestUsagePresenceM01ExplicitZeroHealthyControl)$"
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 13.225627699866891,
+      "raw": [
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_M01_stdout.jsonl",
+          "bytes": 7722,
+          "sha256Physical": "0a9e68c164f335005ec8cab479d9321e1dc62ed7095054b10560548764f2a400"
+        },
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_M01_stderr.log",
+          "bytes": 0,
+          "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "timedOut": false,
+      "launchError": null,
+      "passed": [
+        "TestUsagePresenceM01ExplicitZeroHealthyControl"
+      ],
+      "failed": [
+        "TestUsagePresenceM01AbsentNullDetector/missing_container",
+        "TestUsagePresenceM01AbsentNullDetector/missing_token",
+        "TestUsagePresenceM01AbsentNullDetector/null_container",
+        "TestUsagePresenceM01AbsentNullDetector/null_token",
+        "TestUsagePresenceM01AbsentNullDetector"
+      ],
+      "skipped": [],
+      "semanticDetector": "FAIL_EXPECTED",
+      "healthyControl": "PASS"
+    },
+    {
+      "label": "M02",
+      "command": [
+        "go",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-root-tests-b19r68_e\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./ai",
+        "-run",
+        "^(TestUsagePresenceM02InvalidDetector|TestUsagePresenceM02ValidIntegerHealthyControl)$"
+      ],
+      "exitCode": 1,
+      "elapsedSeconds": 13.657499900087714,
+      "raw": [
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_M02_stdout.jsonl",
+          "bytes": 13400,
+          "sha256Physical": "30cec1a6ebb62162e75aef42f8035f97e0ec77a0ecbd92293b749571f94cb9e1"
+        },
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_M02_stderr.log",
+          "bytes": 0,
+          "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "timedOut": false,
+      "launchError": null,
+      "passed": [
+        "TestUsagePresenceM02ValidIntegerHealthyControl"
+      ],
+      "failed": [
+        "TestUsagePresenceM02InvalidDetector/-1",
+        "TestUsagePresenceM02InvalidDetector/-0",
+        "TestUsagePresenceM02InvalidDetector/1.5",
+        "TestUsagePresenceM02InvalidDetector/1e2",
+        "TestUsagePresenceM02InvalidDetector/\"1\"",
+        "TestUsagePresenceM02InvalidDetector/true",
+        "TestUsagePresenceM02InvalidDetector/{}",
+        "TestUsagePresenceM02InvalidDetector/[]",
+        "TestUsagePresenceM02InvalidDetector/9223372036854775808",
+        "TestUsagePresenceM02InvalidDetector"
+      ],
+      "skipped": [],
+      "semanticDetector": "FAIL_EXPECTED",
+      "healthyControl": "PASS"
+    },
+    {
+      "label": "restored",
+      "command": [
+        "go",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r068-root-tests-b19r68_e\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./ai",
+        "-run",
+        "^(TestUsagePresencePositive|TestUsagePresenceM01AbsentNullDetector|TestUsagePresenceM01ExplicitZeroHealthyControl|TestUsagePresenceM02InvalidDetector|TestUsagePresenceM02ValidIntegerHealthyControl|TestUsagePresenceDuplicateRules|TestUsagePresenceRawBoundsAndMalformedJSON|TestUsagePresenceSDKAdapters)$"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 12.43653230019845,
+      "raw": [
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_restored_stdout.jsonl",
+          "bytes": 20059,
+          "sha256Physical": "c475e6088fe66e6aad8031564e7ca4752d61fc9a1984379e2e9b733ba36c267c"
+        },
+        {
+          "path": "docs/reviews/probes/r068_root_tests_actual_restored_stderr.log",
+          "bytes": 0,
+          "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "timedOut": false,
+      "launchError": null,
+      "passed": [
+        "TestUsagePresencePositive",
+        "TestUsagePresenceM01AbsentNullDetector/missing_container",
+        "TestUsagePresenceM01AbsentNullDetector/missing_token",
+        "TestUsagePresenceM01AbsentNullDetector/null_container",
+        "TestUsagePresenceM01AbsentNullDetector/null_token",
+        "TestUsagePresenceM01AbsentNullDetector",
+        "TestUsagePresenceM01ExplicitZeroHealthyControl",
+        "TestUsagePresenceM02InvalidDetector/-1",
+        "TestUsagePresenceM02InvalidDetector/-0",
+        "TestUsagePresenceM02InvalidDetector/1.5",
+        "TestUsagePresenceM02InvalidDetector/1e2",
+        "TestUsagePresenceM02InvalidDetector/\"1\"",
+        "TestUsagePresenceM02InvalidDetector/true",
+        "TestUsagePresenceM02InvalidDetector/{}",
+        "TestUsagePresenceM02InvalidDetector/[]",
+        "TestUsagePresenceM02InvalidDetector/9223372036854775808",
+        "TestUsagePresenceM02InvalidDetector",
+        "TestUsagePresenceM02ValidIntegerHealthyControl",
+        "TestUsagePresenceDuplicateRules",
+        "TestUsagePresenceRawBoundsAndMalformedJSON",
+        "TestUsagePresenceSDKAdapters"
+      ],
+      "failed": [],
+      "skipped": []
+    }
+  ],
+  "raw": [
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_positive_manifest_before.json",
+      "bytes": 34330,
+      "sha256Physical": "9c417a7cad7a77a09085eb7653357cc6eedb5ac6b579982cbc67001d284a6cdc"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_positive_stdout.jsonl",
+      "bytes": 32490,
+      "sha256Physical": "c4459a3512ff0e7f09e527e9cdb23b9dba73327490d660b63afc52573ed3097c"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_positive_stderr.log",
+      "bytes": 0,
+      "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_positive_manifest_after.json",
+      "bytes": 34330,
+      "sha256Physical": "9c417a7cad7a77a09085eb7653357cc6eedb5ac6b579982cbc67001d284a6cdc"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M01_diff.json",
+      "bytes": 585,
+      "sha256Physical": "5381de31ece8b2af1feaabaac4f6ae9907e52ae07ea9c53a3f9d1b4800db1162"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M01_manifest_before.json",
+      "bytes": 34330,
+      "sha256Physical": "a32dedda26865e459e1c15c5d361e3a9aef2f1be678d283c2284354d5b1f3dc6"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M01_stdout.jsonl",
+      "bytes": 7722,
+      "sha256Physical": "0a9e68c164f335005ec8cab479d9321e1dc62ed7095054b10560548764f2a400"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M01_stderr.log",
+      "bytes": 0,
+      "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M01_manifest_after.json",
+      "bytes": 34330,
+      "sha256Physical": "a32dedda26865e459e1c15c5d361e3a9aef2f1be678d283c2284354d5b1f3dc6"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M02_diff.json",
+      "bytes": 472,
+      "sha256Physical": "620399bb6213efdfa866af6d9708d606ee56d3a7f0f9467bbf63b8b85308ec16"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M02_manifest_before.json",
+      "bytes": 34330,
+      "sha256Physical": "e409464b4cc7733b0f56e47f85ff2442d553128c4e94a2b072101fabeb18ccdd"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M02_stdout.jsonl",
+      "bytes": 13400,
+      "sha256Physical": "30cec1a6ebb62162e75aef42f8035f97e0ec77a0ecbd92293b749571f94cb9e1"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M02_stderr.log",
+      "bytes": 0,
+      "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_M02_manifest_after.json",
+      "bytes": 34330,
+      "sha256Physical": "e409464b4cc7733b0f56e47f85ff2442d553128c4e94a2b072101fabeb18ccdd"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_restored_manifest_before.json",
+      "bytes": 34330,
+      "sha256Physical": "9c417a7cad7a77a09085eb7653357cc6eedb5ac6b579982cbc67001d284a6cdc"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_restored_stdout.jsonl",
+      "bytes": 20059,
+      "sha256Physical": "c475e6088fe66e6aad8031564e7ca4752d61fc9a1984379e2e9b733ba36c267c"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_restored_stderr.log",
+      "bytes": 0,
+      "sha256Physical": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r068_root_tests_actual_restored_manifest_after.json",
+      "bytes": 34330,
+      "sha256Physical": "9c417a7cad7a77a09085eb7653357cc6eedb5ac6b579982cbc67001d284a6cdc"
+    }
+  ],
+  "GoInvocations": 4,
+  "automaticRetries": 0,
+  "governanceClaim": false,
+  "secondArchiveIdentical": true,
+  "status": "PASS",
+  "restorationErrors": [],
+  "finalFullSourceRestored": true,
+  "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\r068-root-tests-raw-backup-l_masrqn"
+}

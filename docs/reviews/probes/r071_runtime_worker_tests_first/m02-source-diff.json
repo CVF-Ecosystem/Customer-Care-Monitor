@@ -1,0 +1,7 @@
+{
+  "path": "backend/engine/adapter_usage_presence_observation.go",
+  "before": "0ff5d3be2390220893cee26711408fb2732e185a752bad23c017f36707b747ae",
+  "after": "557773588343d5752cff9e75dfff372dbe36ce63e0c89c01da8b9d282117a97f",
+  "replacementMatches": 1,
+  "diff": "--- \n+++ \n@@ -165,7 +165,7 @@\n \t\tif count.Value != nil {\n \t\t\tvalue = *count.Value\n \t\t}\n-\t\tif count.Value == nil || value < 0 {\n+\t\tif count.Value != nil && value < 0 {\n \t\t\treturn normalizedAdapterUsageCount{status: adapterUsageInvalid}\n \t\t}\n \t\treturn normalizedAdapterUsageCount{status: adapterUsageKnown, value: value}\n"
+}

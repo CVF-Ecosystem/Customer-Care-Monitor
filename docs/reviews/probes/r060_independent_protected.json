@@ -1,0 +1,27 @@
+{
+  "sourceCommit": "a7edba22589627aee2dd97ffe1921c340c6fbc93",
+  "oldTestCount": 116,
+  "otherOldTestsByteIdentical": 115,
+  "amendmentExactlyFourLines": true,
+  "seeds": {
+    "059": {
+      "firstCommit": "f162e635d757b2e436d88e0b8fda9ab5840e478f",
+      "unchanged": true,
+      "sha256": "c3725f7ead9a852cad4e908a237228007af08bf86e3908446e876a66bf14257f"
+    },
+    "060": {
+      "firstCommit": "2f39532ef196e69fd919e93aaf34f82aee5dde20",
+      "unchanged": true,
+      "sha256": "5ed0bf8ccf8931636294bde3924bde03ea21002b322cfbe49986adabc62b443f"
+    }
+  },
+  "sourceAuthors": "Child /root/r059_worker implementation and commit; root static read only",
+  "reviewerSourceEdits": 0,
+  "runtime": "NOT_RUN",
+  "initialSourceCommit": "ed2f53043919dec5260dca0fc5ff41b75c134f70",
+  "repairOnlyChangedPath": [
+    "backend/engine/source_execution_receipt_db_test.go"
+  ],
+  "productSourceByteIdenticalToInitialCheckpoint": true,
+  "failedPacketPreserved": true
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1.0",
+  "tranche": "CCMAI-RUNTIME-068",
+  "worker": "Codex /root/r068_worker",
+  "model": "gpt-6-luna",
+  "reasoningEffort": "xhigh",
+  "planningBaseline": "9b951d50908c504dd7de44be516f88e86287f5de",
+  "sourceStartCommit": "3a69388c73758cbcfdc4af54aac2292bd8faa84d",
+  "beforeEditAcknowledgment": "c78ab0cb",
+  "freshImplementation": true,
+  "solImplementationDraftHandedOff": false,
+  "sourcePaths": [
+    "backend/ai/provider.go",
+    "backend/ai/openai_compatible.go",
+    "backend/ai/claude.go",
+    "backend/ai/gemini.go",
+    "backend/ai/usage_presence.go",
+    "backend/ai/usage_presence_test.go"
+  ],
+  "evidencePaths": [
+    "docs/reviews/probes/r068_luna_source_test_plan_2026-10-09.json",
+    "docs/reviews/probes/r068_luna_first_build_capture.ps1",
+    "docs/reviews/probes/r068_luna_test_campaign_capture.ps1"
+  ],
+  "testCampaignRunner": {
+    "path": "docs/reviews/probes/r068_luna_test_campaign_capture.ps1",
+    "requiresExplicitApprovalToken": "APPROVED <exact 40-hex source commit>",
+    "captures": "Separate native stdout/stderr byte streams, typed exit and duration for each Go test; exact mutation patch; detector and healthy-control result; byte-for-byte source backup/restoration hash; committed full-tree manifests and archives before tests and after restoration.",
+    "mutationBoundaries": "Temporarily changes only backend/ai/usage_presence.go; never edits tests; restores exact saved bytes in finally; stops on unexpected result and does not retry.",
+    "networkBoundary": "GOPROXY=off, GOSUMDB=off, GOTOOLCHAIN=local, CGO_ENABLED=0. Existing ai-package loopback httptest fixtures may run; no external provider or other network call."
+  },
+  "behaviorBoundary": "Additive adapter usage-presence metadata from original response JSON or SDK-retained raw response only. Legacy scalar usage, content, model, transport, retry, error behavior and downstream consumers remain unchanged. No live provider, billing, pricing completeness or CVF AI governance claim.",
+  "providerEvidenceSources": {
+    "openaiCompatible": "Original bounded HTTP response bytes already read by the adapter.",
+    "anthropic": "Message.RawJSON() retained by pinned anthropic-sdk-go v1.27.1; no typed scalar reconstruction.",
+    "gemini": "SDKHTTPResponse.Body only when nonempty on the existing result. Pinned genai v1.51.0 current GenerateContent path retains headers but not the raw body, so typed UsageMetadata is explicitly unavailable."
+  },
+  "topLevelNewTests": [
+    "TestUsagePresencePositive",
+    "TestUsagePresenceM01AbsentNullDetector",
+    "TestUsagePresenceM01ExplicitZeroHealthyControl",
+    "TestUsagePresenceM02InvalidDetector",
+    "TestUsagePresenceM02ValidIntegerHealthyControl",
+    "TestUsagePresenceDuplicateRules",
+    "TestUsagePresenceRawBoundsAndMalformedJSON",
+    "TestUsagePresenceSDKAdapters"
+  ],
+  "goInvocationBudget": {
+    "workerMaximum": 5,
+    "testEnvironment": {
+      "GOPROXY": "off",
+      "GOSUMDB": "off",
+      "GOTOOLCHAIN": "local",
+      "CGO_ENABLED": "0"
+    },
+    "workerPlan": [
+      {
+        "ordinal": 1,
+        "kind": "build",
+        "command": "go -C backend build ./...",
+        "environment": {
+          "GOPROXY": "off",
+          "GOSUMDB": "off",
+          "GOTOOLCHAIN": "local",
+          "CGO_ENABLED": "0"
+        },
+        "runner": "docs/reviews/probes/r068_luna_first_build_capture.ps1",
+        "count": 1,
+        "result": "NOT_RUN"
+      },
+      {
+        "ordinal": 2,
+        "kind": "positive",
+        "command": "go -C backend test -v ./ai -count=1",
+        "expected": "PASS",
+        "requiresRootStaticApproval": true,
+        "count": 1,
+        "result": "NOT_RUN"
+      },
+      {
+        "ordinal": 3,
+        "kind": "M01",
+        "command": "go -C backend test -v ./ai -run '^TestUsagePresenceM01(AbsentNullDetector|ExplicitZeroHealthyControl)$' -count=1",
+        "detector": "TestUsagePresenceM01AbsentNullDetector",
+        "healthyControl": "TestUsagePresenceM01ExplicitZeroHealthyControl",
+        "mutation": {
+          "file": "backend/ai/usage_presence.go",
+          "function": "usageCountState",
+          "before": "return AIUsageCount{Status: status}",
+          "after": "if status == AIUsagePresenceAbsent || status == AIUsagePresenceNull { return knownAIUsageCount(0) }; return AIUsageCount{Status: status}",
+          "expectedDiffCount": 1
+        },
+        "expected": "Detector fails on the applied mutation; explicit-zero healthy control passes; one actual source-diff mutation only.",
+        "requiresRootStaticApproval": true,
+        "count": 1,
+        "result": "NOT_RUN"
+      },
+      {
+        "ordinal": 4,
+        "kind": "M02",
+        "command": "go -C backend test -v ./ai -run '^TestUsagePresenceM02(InvalidDetector|ValidIntegerHealthyControl)$' -count=1",
+        "detector": "TestUsagePresenceM02InvalidDetector",
+        "healthyControl": "TestUsagePresenceM02ValidIntegerHealthyControl",
+        "mutation": {
+          "file": "backend/ai/usage_presence.go",
+          "function": "invalidAIUsageCount",
+          "before": "return usageCountState(AIUsagePresenceInvalid)",
+          "after": "return knownAIUsageCount(0)",
+          "expectedDiffCount": 1
+        },
+        "expected": "Detector fails on the applied mutation; valid-integer healthy control passes; one actual source-diff mutation only.",
+        "requiresRootStaticApproval": true,
+        "count": 1,
+        "result": "NOT_RUN"
+      },
+      {
+        "ordinal": 5,
+        "kind": "restored-new-tests",
+        "command": "go -C backend test -v ./ai -run '^TestUsagePresence' -count=1",
+        "precondition": "Both mutated source files restored byte-for-byte to the committed source; restored source hash verified.",
+        "expected": "PASS",
+        "requiresRootStaticApproval": true,
+        "count": 1,
+        "result": "NOT_RUN"
+      }
+    ],
+    "automaticRetry": false,
+    "testsBeforeRootStaticApproval": false,
+    "providerOrExternalNetworkCalls": 0,
+    "databaseCalls": 0
+  },
+  "evidenceContract": {
+    "firstSourceCommitBeforeFirstCompiler": true,
+    "initialImplementationAndFirstBuildRetainedBeforeAnyRepair": true,
+    "firstBuildRunnerCapturesTypedExitAndSeparateNativeStdoutStderr": true,
+    "sourceArchiveAndCompleteGitTreeManifestBeforeAndAfterBuild": true,
+    "sha256ForSourceArchiveManifestAndRawStreams": true,
+    "testCampaignRunnerAndExplicitRootApprovalTokenCommittedBeforeTests": true,
+    "mutationReceiptsIncludeExactSourceDiffDetectorHealthyControlExitAndRestoration": true,
+    "archiveAndCompleteTreeManifestAfterRestoration": true,
+    "rawResponseBytesAreNeverStoredInUsagePresenceMetadata": true,
+    "docsBuildAtAcknowledgmentCommit": "NOT_RUN. Root's later 21.79s docs build is recorded as later evidence and does not retroactively establish a pre-ack build."
+  },
+  "reviewRouting": {
+    "rootIndependentReviewer": "Codex /root",
+    "sourceAndPlanStaticApprovalRequiredBeforeAnyGoTest": true,
+    "workerOwnsSourceTestsMutationsAndFirstBuild": true,
+    "rootOwnsIndependentCampaignClosureAndPublication": true
+  }
+}
