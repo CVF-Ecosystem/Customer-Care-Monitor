@@ -476,15 +476,18 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 scoped adapter-only local closure, original failures/budgets retained.: `docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md`
 - R070 metadata integration acceptance/closure and explicit R1 role transitions.: `docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md`
 - Actual ordinary push waited in credential manager, owned tree terminated; publication unverified, local closure preserved.: `docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json`
-- Conditional R071 R2 consumer aggregate seed; owner scope review required before BUILD, currentGo0.: `CVF_SESSION/authority/CCMAI-RUNTIME-071.json`
+- Immutable R071 dispatcher seed; owner-delegated scope accepted, original condition/history preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-071.json`
 - Concrete APO01..12 additive consumer contract, no runtime yet.: `docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md`
 - Owner-requested cumulative per-tranche Luna quality methodology and attribution.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md`
-- Luna R067 inherited/R068 fresh evidence ledger and unscored R071 planning.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`
+- Per-tranche Luna evidence ledger; R071 firstsource static test repair pending.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`
 - Fresh R071410protected physical baseline, no product draft/source.: `docs/reviews/probes/r071_fresh_source_baseline_2026-10-10.json`
 - Fresh Luna read-only consumer feasibility, zero source/test/runtime.: `docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json`
-- Concrete R071 bounded new R2 engine/receipt scope for owner review before BUILD.: `docs/work_orders/CCMAI_RUNTIME_071.md`
-- R071 WORK_ORDER record; source NOT_STARTED, current permittedGo0.: `CVF_SESSION/tranches/CCMAI-RUNTIME-071.json`
+- R071 bounded BUILD with consolidated pre-Go static test repair round1.: `docs/work_orders/CCMAI_RUNTIME_071.md`
+- R071 BUILD record; firstsource preserved, root static test repair pending, Go0.: `CVF_SESSION/tranches/CCMAI-RUNTIME-071.json`
 - Historical R070 local FROZEN handoff; prior publication remains unverified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md`
+- Independent first-source static S1/S2/S3 findings before any Go; unchanged-scope repair.: `docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
+- Parent supplied capture infrastructure; exact committed plans/approval required, no automatic retry.: `docs/reviews/probes/r071_shared_go_capture_2026-10-10.py`
+- Preserved firstsource worker plan, static findings not approved for runtime.: `docs/reviews/probes/r071_worker_source_plan_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

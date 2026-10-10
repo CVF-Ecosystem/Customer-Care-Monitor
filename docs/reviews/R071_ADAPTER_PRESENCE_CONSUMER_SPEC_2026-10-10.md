@@ -1,6 +1,10 @@
 # R071 adapter usage-presence consumer contract
 
-Status: SPEC_READY_FOR_OWNER_SCOPE_REVIEW. Root ORCHESTRATOR / SPEC_AUTHOR. Owner next asks continued Luna work and cumulative per-tranche quality tracking; fresh Luna xhigh read-only feasibility completed, no implementation draft. R068 adapter-only source bb0bdeb and R069/R070 closure remain accepted; Git publication still UNVERIFIED, not retried. INTAKE bounds additive Analyzer receipt observation; DESIGN preserves legacy semantics with a separate optional aggregate/hook; SPEC below is the proposed new R2 engine/receipt contract, beyond the old adapter-only allowed paths. BUILD/Go wait for owner review of the concrete bounded order.
+Status: ACCEPTED_FOR_BOUNDED_BUILD_BY_DELEGATED_ORCHESTRATOR_REVIEW.
+
+Current authority: owner next/continue and explicit root orchestrator/reviewer clarification are recorded in work order and dispatch d312f6e; before-edit acknowledgment5950874 committed. APO01..12 unchanged. Root independently reviews source/plan before Go; no new owner checkpoint required for unchanged scope. The following preparation narrative is historical, not the active dispatch instruction.
+
+Historical preparation: SPEC_READY_FOR_OWNER_SCOPE_REVIEW. Root ORCHESTRATOR / SPEC_AUTHOR. Owner next asks continued Luna work and cumulative per-tranche quality tracking; fresh Luna xhigh read-only feasibility completed, no implementation draft. R068 adapter-only source bb0bdeb and R069/R070 closure remain accepted; Git publication still UNVERIFIED, not retried. INTAKE bounds additive Analyzer receipt observation; DESIGN preserves legacy semantics with a separate optional aggregate/hook; SPEC below is the proposed new R2 engine/receipt contract, beyond the old adapter-only allowed paths. BUILD/Go wait for owner review of the concrete bounded order.
 
 Source facts: Analyzer has two successful return hooks, SINGLE and BATCH, already observes legacy interface counts/cost before usage logging. Existing UO1 fields/basis/version and scalar costs intentionally do not assert presence. Six UO and four EX pure collector tests lock old invariants; UO empty envelope <=600bytes and old trimming1500bytes are preserved when new hook unused. No TestMain opens DB. Root verified the anchored pure inventory; selecting all TestUO would include DB tests and is prohibited here.
 

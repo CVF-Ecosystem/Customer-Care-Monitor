@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -4783,7 +4783,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-071.json",
       "status": "ACTIVE",
-      "description": "Conditional R071 R2 consumer aggregate seed; owner scope review required before BUILD, currentGo0."
+      "description": "Immutable R071 dispatcher seed; owner-delegated scope accepted, original condition/history preserved."
     },
     {
       "id": "r071-planning-a002",
@@ -4804,7 +4804,7 @@
       "family": "continuity",
       "path": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
       "status": "ACTIVE",
-      "description": "Luna R067 inherited/R068 fresh evidence ledger and unscored R071 planning."
+      "description": "Per-tranche Luna evidence ledger; R071 firstsource static test repair pending."
     },
     {
       "id": "r071-planning-a005",
@@ -4825,14 +4825,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_071.md",
       "status": "ACTIVE",
-      "description": "Concrete R071 bounded new R2 engine/receipt scope for owner review before BUILD."
+      "description": "R071 bounded BUILD with consolidated pre-Go static test repair round1."
     },
     {
       "id": "r071-planning-b002",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-071.json",
       "status": "ACTIVE",
-      "description": "R071 WORK_ORDER record; source NOT_STARTED, current permittedGo0."
+      "description": "R071 BUILD record; firstsource preserved, root static test repair pending, Go0."
     },
     {
       "id": "r071-planning-b003",
@@ -4840,6 +4840,27 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
       "status": "ACTIVE",
       "description": "Historical R070 local FROZEN handoff; prior publication remains unverified."
+    },
+    {
+      "id": "r071-review-c001",
+      "family": "continuity",
+      "path": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent first-source static S1/S2/S3 findings before any Go; unchanged-scope repair."
+    },
+    {
+      "id": "r071-review-c002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_shared_go_capture_2026-10-10.py",
+      "status": "ACTIVE",
+      "description": "Parent supplied capture infrastructure; exact committed plans/approval required, no automatic retry."
+    },
+    {
+      "id": "r071-review-c003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_worker_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Preserved firstsource worker plan, static findings not approved for runtime."
     }
   ]
 }

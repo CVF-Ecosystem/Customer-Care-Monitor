@@ -57,9 +57,9 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R071 bounded consumer work order (2026-10-10)
 
-CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-071 BUILD static repair round1: Luna fixes consolidated S1 overflow fixture, S2 known-prefix sensitivity and S3 full maximum-bound/counter evidence within NEW tests plus allowed gofmt. Preserve first source86e6ff9 and plan0402ade; commit repair acknowledgment then repaired source/plan, root independent static approval before any Go. Worker/root used0; max8each(2build+6tests), no automatic retry/reset. Root metadata only; no provider/network/DB/frontend/push/core. Full roadmap/live/governance OPEN; Facebook/Zalo OA parked.
 
-Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 code quality UNASSESSED; bounded Luna BUILD dispatched, before-edit acknowledgment and root source/plan review precede execution.
+Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 first source committed, static source semantics appear sound; one consolidated NEW-test repair S1/S2/S3 required before Go. Initial source/plan preserved, worker/reviewer Go0; final code quality and runtime acceptance pending.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

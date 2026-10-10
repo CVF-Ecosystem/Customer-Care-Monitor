@@ -14,7 +14,7 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-071",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-071 BUILD static repair round1: Luna fixes consolidated S1 overflow fixture, S2 known-prefix sensitivity and S3 full maximum-bound/counter evidence within NEW tests plus allowed gofmt. Preserve first source86e6ff9 and plan0402ade; commit repair acknowledgment then repaired source/plan, root independent static approval before any Go. Worker/root used0; max8each(2build+6tests), no automatic retry/reset. Root metadata only; no provider/network/DB/frontend/push/core. Full roadmap/live/governance OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-10",
@@ -44,9 +44,10 @@
     "id": "R071",
     "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_071.md",
-    "sourceImplementation": "DISPATCHED_NOT_IMPLEMENTED",
+    "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_TEST_REPAIR_REQUIRED",
     "sourceOrRuntimeDispatched": true,
-    "newGoInvocations": 0
+    "newGoInvocations": 0,
+    "sourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a"
   },
   "historicalR067State": {
     "schemaVersion": "1.0",

@@ -51,7 +51,7 @@
   "baseCommit": "da8d34a8d852c49f2c1a9c94020875d830db9b8b",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "PENDING_OWNER_R2_ENGINE_RECEIPT_SCOPE_REVIEW",
+  "disposition": "STATIC_TEST_REPAIR_REQUIRED_NO_GO",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -80,7 +80,7 @@
     "reviewerUsedGoInvocations": 0
   },
   "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
-  "sourceImplementation": "DISPATCHED_NOT_IMPLEMENTED",
+  "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_TEST_REPAIR_REQUIRED",
   "workerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
@@ -100,12 +100,13 @@
     "goInvocations": 0,
     "lunaCodeQuality": "UNASSESSED_NO_IMPLEMENTATION"
   },
-  "ownerDirection": "2026-10-10 after concrete R071 order presented: b\u1ea1n l\u00e0 orchestrator/reviewer, ko c\u1ea7n h\u1ecfi t\u00f4i nh\u01b0 v\u1eady",
+  "ownerDirection": "2026-10-10 after concrete R071 order presented: bạn là orchestrator/reviewer, ko cần hỏi tôi như vậy",
   "ownerDirectionDisposition": "Owner continues next/continue authority and expressly assigns scope review/routing to root. Root accepts unchanged concrete APO01..12 order; prior extra confirmation was root interpretation, not R3 requirement. No seed/cap/path/effect/risk widening.",
   "currentPermittedGoInvocations": 16,
   "roleTransitions": [
     "Root ORCHESTRATOR/SPEC_AUTHOR -> WORK_ORDER_AUTHOR/SESSION_SYNC_STEWARD for scope acceptance and BUILD dispatch",
-    "Fresh Luna IMPLEMENTATION_WORKER/COMMIT_STEWARD after committed before-edit acknowledgment; root independent REVIEWER"
+    "Fresh Luna IMPLEMENTATION_WORKER/COMMIT_STEWARD after committed before-edit acknowledgment; root independent REVIEWER",
+    "Root independent REVIEWER -> SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD records consolidated first-source findings before Luna REPAIR_WORKER; BUILD remains open"
   ],
   "workerBeforeEditAcknowledgment": {
     "date": "2026-10-10",
@@ -144,8 +145,7 @@
       "reason": "Worker did not retain allocated session IDs/final outputs for PR preflight and gate-unit commands; no PASS inferred."
     },
     "workerEvidenceToolFinding": "Session IDs/final output were not captured on the first parallel preflight/unit invocation; the original outcomes remain indeterminate and are separate from product findings."
-  }
-,
+  },
   "workerResumeAcknowledgment": {
     "date": "2026-10-10",
     "worker": "Codex /root/r071_worker",
@@ -176,5 +176,9 @@
     "firstSourceCommitBeforeCompile": true,
     "rootStaticSourceAndPlanApprovalBeforeGo": true,
     "humanTechnicalTestReviewClaim": false
-  }
+  },
+  "firstSourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a",
+  "firstPlanCommit": "0402adebed9493f159fe6dac4b09e4220322116e",
+  "staticReviewFindings": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+  "acceptedStaticRepairRounds": 1
 }
