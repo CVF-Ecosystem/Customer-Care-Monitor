@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -41,9 +41,7 @@
     "R068 adapter-only usage-presence primitive FROZEN after independent UP01..12 review and separately owner-authorized R069 single offline whole-backend compile PASS; source bb0bdeb, original failures/budgets unchanged, consumers/full exits/live remain OPEN.",
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
-  "buildInProgress": [
-    "R075 BUILD: ordinary currentbranch GitHub publication only; no source/native."
-  ],
+  "buildInProgress": [],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
@@ -266,10 +264,10 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-075 BUILD resumed after owner confirms GitHub login: failed attempt128 and remote9b951d5 preserved; root records ACK before ordinary exact-newHEAD push after fresh gates and independent Luna review, then readback/receipt. App-native0/provider/DB/main/force/merge/deploy0; accounts parked; separate DESIGN/SPEC follows.",
+    "nextObjective": "CCMAI-RUNTIME-075 REVIEW_PENDING publication NOT_COMPLETED after two Git credential failures128; remoteSHA9b951d5 freshly verified. Independent Luna receipt review; owner must complete Git Credential Manager login (website login insufficient). No third retry without review-cost disposition. Root proceeds separate source-only DESIGN/SPEC R076; app/provider/DB/main/force/merge/deploy0, accounts parked.",
     "assessment": "docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
-    "buildDispatched": true,
+    "buildDispatched": false,
     "currentExecutionBudget": {
       "applicationNativeInvocations": 0,
       "perCommandNetworkTimeoutSeconds": 60
@@ -397,7 +395,7 @@
     "modelAssessment": null,
     "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
     "publishedClosureCommit": null,
-    "publicationStatus": "AUTHORIZED_OWNER_AUTH_RESUME_PENDING_VERIFICATION",
+    "publicationStatus": "NOT_COMPLETED_GIT_AUTHENTICATION_REQUIRED",
     "localClosureCommit": null,
     "historicalR068ClosureProjection": {
       "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
@@ -1387,14 +1385,16 @@
     "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
   },
   "githubPublication": {
-    "status": "BUILD",
-    "phase": "BUILD",
+    "status": "REVIEW_PENDING",
+    "phase": "REVIEW",
     "riskCeiling": "R2",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
     "receipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
     "independentReview": null,
     "applicationNativeInvocations": 0,
     "freeze": "OPEN",
-    "publicationStatus": "AUTHORIZED_OWNER_AUTH_RESUME_PENDING_VERIFICATION"
+    "publicationStatus": "NOT_COMPLETED_GIT_AUTHENTICATION_REQUIRED",
+    "pushAttempts": 2,
+    "remoteSha": "9b951d50908c504dd7de44be516f88e86287f5de"
   }
 }

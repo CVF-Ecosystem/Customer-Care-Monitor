@@ -2,17 +2,17 @@
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-075",
   "date": "2026-10-10",
-  "status": "NOT_COMPLETED_AUTHENTICATION_REQUIRED",
+  "status": "NOT_COMPLETED_GIT_AUTHENTICATION_REQUIRED",
   "observer": "Codex /root publication steward",
   "independentReviewer": "Codex /root/r074_auditor",
   "repository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
   "branch": "codex/gov001-f08-actions-evidence",
-  "attemptedHead": "ba88c6e786cb0dc55ef61da3cfe7651fc2254036",
+  "attemptedHead": "2e04e2c51edccb8362df0d7771048b615b8a6c63",
   "previousRemoteHead": "9b951d50908c504dd7de44be516f88e86287f5de",
   "postFailureRemoteHead": "9b951d50908c504dd7de44be516f88e86287f5de",
   "exactPublishedShaMatch": false,
   "pushExitCode": 128,
-  "attempts": 1,
+  "attempts": 2,
   "automaticRetries": 0,
   "events": [
     {
@@ -79,10 +79,41 @@
       "stderr": "",
       "elapsedSeconds": 1.28,
       "observedAtUtc": "2026-10-10T09:05:20.230583+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "credential.interactive=never",
+        "push",
+        "origin",
+        "2e04e2c51edccb8362df0d7771048b615b8a6c63:refs/heads/codex/gov001-f08-actions-evidence"
+      ],
+      "exitCode": 128,
+      "stdout": "",
+      "stderr": "fatal: Cannot prompt because user interactivity has been disabled.\nfatal: unable to get password from user\n",
+      "elapsedSeconds": 2.305,
+      "observedAtUtc": "2026-10-10T11:38:25.037815+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "credential.interactive=never",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/codex/gov001-f08-actions-evidence"
+      ],
+      "exitCode": 0,
+      "stdout": "9b951d50908c504dd7de44be516f88e86287f5de\trefs/heads/codex/gov001-f08-actions-evidence\n",
+      "stderr": "",
+      "elapsedSeconds": 1.178,
+      "observedAtUtc": "2026-10-10T11:39:50.547317+00:00"
     }
   ],
   "prepublicationReview": "Independent Luna PREPUBLICATION_PASS for exactba88c6e only; root fresh preflight7/7, PRrange7/7,46units53.672s, ancestryPASS, clean status.",
-  "independentFinalEventReview": "NOT_COMPLETED, GP04/GP06 unmet; raw4events independently checked; receipt review pending",
+  "independentFinalEventReview": "Second failed attempt pending independent review; first4events accurate per Luna, secondprepubPASS exact2e04.",
   "mainIntegration": "Current main not ancestor of feature;4main-only commits/common base083e0bae. No merge-readiness claim or main change.",
   "hostedActionsObserved": false,
   "liveGovernanceClaim": false,
@@ -90,5 +121,11 @@
   "credentialValuesRead": false,
   "ghCli": "NOT_INSTALLED; read-only command discovery",
   "historicalR068": "Original UNVERIFIED/remoteEffectUNKNOWN receipt unchanged; no retrospective publication success.",
-  "nextMove": "Existing Git authentication must be completed by owner, then separately review newest exactHEAD/gates before resuming ordinary push. Continue independent source-only R076 DESIGN/SPEC meanwhile."
+  "nextMove": "Git credential authentication needed; future third same-root-cause retry requires review-cost disposition before action. Separate R076 source-only DESIGN/SPEC may continue.",
+  "ownerTriggeredResumes": 1,
+  "attemptedHeads": [
+    "ba88c6e786cb0dc55ef61da3cfe7651fc2254036",
+    "2e04e2c51edccb8362df0d7771048b615b8a6c63"
+  ],
+  "authenticationFollowup": "Local GCM help confirms git credential-manager github login --browser; owner asked to complete GCM flow, no token/password requested or read. No browser/helper login invoked by root."
 }
