@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root publication COMMIT_STEWARD / metadata IMPLEMENTATION_WORKER; Luna xhigh independent publication REVIEWER
-- Next allowed move: CCMAI-RUNTIME-075 BUILD ordinary GitHub publication under new owner authority: root validates clean branch, fresh origin refs/ancestry/gates and independent Luna prepublication review, then exact-SHA fast-forward push/readback. No main/force/merge/deploy/app-native/provider/DB/secret reads; accounts parked. Next separate source-only DESIGN/SPEC after publication.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root publication COMMIT_STEWARD / SESSION_SYNC_STEWARD; Luna xhigh independent REVIEWER
+- Next allowed move: CCMAI-RUNTIME-075 REVIEW_PENDING publication NOT_COMPLETED: exactSHAba88c6e push exit128 missing authentication; fresh remoteSHA9b951d5 unchanged at09:05UTC. Luna independent receipt review; owner login required before resumed push. Root continues separate source-only DESIGN/SPEC R076, no app-native/provider/DB/main/force/merge/deploy; accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-effect acknowledgment
