@@ -553,6 +553,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent APO01..12 REVIEW_PASS, runtime and claim boundaries.: `docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md`
 - Empirical fresh Luna R071 assessment; one test repair, no matched Sol efficiency ranking.: `docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
 - R071 aggregate-only local FROZEN after independent review; no newGo/publication/governance claim.: `docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.capture.json`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.report.json`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stderr.log`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stdout.log`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.capture.json`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stderr.log`
+- Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log`
 - Immutable R1 legacy UI extension compatibility seed; fresh Luna xhigh worker, root independent reviewer.: `CVF_SESSION/authority/CCMAI-RUNTIME-072.json`
 - R072 bounded optional ignored-field contract; preserves all legacy validation and numeric semantics.: `docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md`
 - Before-source physical baseline for protected frontend/backend/authority files.: `docs/reviews/probes/r072_protected_baseline_2026-10-10.json`

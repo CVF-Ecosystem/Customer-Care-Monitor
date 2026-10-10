@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-072 bounded work order
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Risk ceiling: R1. Implementation/repair/source commit steward: Codex /root/r072_worker (fresh gpt-6-luna xhigh). Independent reviewer/closer and metadata commit steward: Codex /root. Owner next/continue and explicit orchestrator/reviewer delegation authorize this local compatibility repair; root reviewed the concrete contract under existing direction. Immutable seed committed at 1fb7f6cd11a14d5c8ddd05942ac8bac75d904663.
 
@@ -19,3 +19,5 @@ Consolidated root static review: T1/T2 NEW test repair only; firstsource5285d9f 
 ## Luna xhigh REPAIR_WORKER acknowledgment (2026-10-10)
 
 Fresh Luna xhigh rehydrated manifest/policy/current R072 state, memory, this handoff, implementation status, docs index, UC01..07, immutable seed/tranche, first source5285d9f and root findings7f8024c. BOOTSTRAP_MIGRATION_PENDING remains nonblocking. Role transition: R072 IMPLEMENTATION_WORKER -> R072 REPAIR_WORKER / source COMMIT_STEWARD; root remains independent REVIEWER and metadata COMMIT_STEWARD. Root's T1 exact-output oracle and T2 extension-present rejection coverage are accepted within the same bounded test-only repair. Scope is only NEW `frontend/src/__tests__/run-observation-adapter-compat.spec.ts`; remove parsing-count keys from the expected execution output and attach the optional extension to legacy rejection cases while preserving absent-extension controls. Parser5285d9f, existing tests, backend, seed, old packets and dependencies remain immutable. At acknowledgment repair edits are 0; Vitest/vue-tsc/Go invocations remain 0 and original budgets remain unchanged. Commit the new test repair and return it for root static approval before runtime. No new product defect, runtime result or human-review claim is recorded.
+
+Worker capture complete; root metadata steward commits raw handback and REVIEW_PENDING, then independent validation. Source08bab78, captured workspace5550485; no publication.

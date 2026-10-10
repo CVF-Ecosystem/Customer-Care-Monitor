@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-072",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-072 STATIC_APPROVED source08bab78: worker captures one focused21-test Vitest and one forced vue-tsc with raw commands/source/exits, then commits REVIEW_PENDING handback; root independently captures same pinned source before scoped closure. First5285d9f/T1T2 retained, product unchanged/testrepair1. No source edits unless accepted same-scope finding; unchanged budget2Vitest/1typecheck per role, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
+  "nextAllowedMove": "CCMAI-RUNTIME-072 REVIEW_PENDING source08bab78: worker21/21 Vitest and forced vue-tsc PASS, raw packet unaltered and scoped blobs/physical hashes stable; root independently captures same source before formal evaluation/compatibility-only closure. First5285d9f/T1T2 retained, one pre-runtime NEW-test repair, source commits differ from metadata HEAD5550485. Remaining root budget2Vitest/1typecheck, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh IMPLEMENTATION_WORKER bounded validation",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -26,7 +26,12 @@
     "workerMaxTypecheck": 1,
     "reviewerMaxTypecheck": 1,
     "maxGo": 0,
-    "automaticRetries": 0
+    "automaticRetries": 0,
+    "workerUsedVitest": 1,
+    "workerUsedTypecheck": 1,
+    "reviewerUsedVitest": 0,
+    "reviewerUsedTypecheck": 0,
+    "usedGo": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -39,9 +44,9 @@
   },
   "candidatePlanning": {
     "id": "R072",
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_072.md",
-    "sourceImplementation": "REPAIRED_SOURCE_STATIC_APPROVED",
+    "sourceImplementation": "WORKER_VALIDATION_PASS_INDEPENDENT_REVIEW_PENDING",
     "sourceOrRuntimeDispatched": true,
     "newGoInvocations": 0,
     "sourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188"

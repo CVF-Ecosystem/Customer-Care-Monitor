@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh IMPLEMENTATION_WORKER bounded validation
-- Next allowed move: CCMAI-RUNTIME-072 STATIC_APPROVED source08bab78: worker captures one focused21-test Vitest and one forced vue-tsc with raw commands/source/exits, then commits REVIEW_PENDING handback; root independently captures same pinned source before scoped closure. First5285d9f/T1T2 retained, product unchanged/testrepair1. No source edits unless accepted same-scope finding; unchanged budget2Vitest/1typecheck per role, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle
+- Next allowed move: CCMAI-RUNTIME-072 REVIEW_PENDING source08bab78: worker21/21 Vitest and forced vue-tsc PASS, raw packet unaltered and scoped blobs/physical hashes stable; root independently captures same source before formal evaluation/compatibility-only closure. First5285d9f/T1T2 retained, one pre-runtime NEW-test repair, source commits differ from metadata HEAD5550485. Remaining root budget2Vitest/1typecheck, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche transition acknowledgment (2026-10-10)
@@ -30,3 +30,7 @@ Fresh Luna xhigh rehydrated manifest/policy/current R072 state, memory, this han
 ## Repaired-source static approval / validation role transition
 
 docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md closes T1/T2 at source08bab78 before runtime; parent independent REVIEWER, Luna IMPLEMENTATION_WORKER validation within BUILD. Source locked during sequential captures; original budget unchanged, no owner checkpoint. Expected21 tests, not expanded loop-count claim.
+
+## Worker validation handback / root REVIEW transition
+
+Worker native Vitest21/21 and forced vue-tsc exit0; scoped source before/after stable, raw reporter stdout byte-identical report, four files/21 actual passed tests. Source08bab78/workspace metadataHEAD5550485 distinguished. Root independently verified packet shape/blobs/hashes before own capture; no re-run by worker. Root handles metadata/packet commit under seed metadataCommitSteward, clarifying earlier next-move worker-commit wording; source commit ownership unchanged. Local environment identified Nodev24.19.0/Vitest4.1.0/happy-dom20.8.4/vue-tsc3.2.6; full inherited environment not dumped/copied. Runtime package version is installed observed value, not just package.json range.

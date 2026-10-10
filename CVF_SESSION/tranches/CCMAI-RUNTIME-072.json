@@ -40,14 +40,19 @@
     "workerMaxTypecheck": 1,
     "reviewerMaxTypecheck": 1,
     "maxGo": 0,
-    "automaticRetries": 0
+    "automaticRetries": 0,
+    "workerUsedVitest": 1,
+    "workerUsedTypecheck": 1,
+    "reviewerUsedVitest": 0,
+    "reviewerUsedTypecheck": 0,
+    "usedGo": 0
   },
   "workerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
   },
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
   "baseCommit": "1fb7f6cd11a14d5c8ddd05942ac8bac75d904663",
   "buildCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
@@ -55,7 +60,7 @@
     "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
     "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -63,7 +68,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -79,5 +85,7 @@
   "sourceTestRepairRounds": 1,
   "productSemanticRepairRounds": 0,
   "finalSourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
-  "staticApproval": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md"
+  "staticApproval": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+  "workerEvidence": "docs/reviews/probes/r072_worker_capture_2026-10-10",
+  "workerCaptureWorkspaceHead": "5550485af3601a149a71bf8d92734ec03f6af1c2"
 }

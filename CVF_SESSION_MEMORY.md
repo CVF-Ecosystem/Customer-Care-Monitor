@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
 
 ## Current R072
 
-CCMAI-RUNTIME-072 STATIC_APPROVED source08bab78: worker captures one focused21-test Vitest and one forced vue-tsc with raw commands/source/exits, then commits REVIEW_PENDING handback; root independently captures same pinned source before scoped closure. First5285d9f/T1T2 retained, product unchanged/testrepair1. No source edits unless accepted same-scope finding; unchanged budget2Vitest/1typecheck per role, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
+CCMAI-RUNTIME-072 REVIEW_PENDING source08bab78: worker21/21 Vitest and forced vue-tsc PASS, raw packet unaltered and scoped blobs/physical hashes stable; root independently captures same source before formal evaluation/compatibility-only closure. First5285d9f/T1T2 retained, one pre-runtime NEW-test repair, source commits differ from metadata HEAD5550485. Remaining root budget2Vitest/1typecheck, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 
 ## Startup Order
 

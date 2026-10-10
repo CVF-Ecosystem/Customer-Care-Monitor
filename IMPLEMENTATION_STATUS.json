@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -906,12 +906,14 @@
   },
   "legacyUiExtensionCompatibility": {
     "tranche": "CCMAI-RUNTIME-072",
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "source": "08bab78ad374638149b7689776cddcd84d6f5188",
     "scope": "Ignore optional presence extension; legacy projection only",
-    "nextAllowedMove": "CCMAI-RUNTIME-072 STATIC_APPROVED source08bab78: worker captures one focused21-test Vitest and one forced vue-tsc with raw commands/source/exits, then commits REVIEW_PENDING handback; root independently captures same pinned source before scoped closure. First5285d9f/T1T2 retained, product unchanged/testrepair1. No source edits unless accepted same-scope finding; unchanged budget2Vitest/1typecheck per role, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
+    "nextAllowedMove": "CCMAI-RUNTIME-072 REVIEW_PENDING source08bab78: worker21/21 Vitest and forced vue-tsc PASS, raw packet unaltered and scoped blobs/physical hashes stable; root independently captures same source before formal evaluation/compatibility-only closure. First5285d9f/T1T2 retained, one pre-runtime NEW-test repair, source commits differ from metadata HEAD5550485. Remaining root budget2Vitest/1typecheck, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
     "worker": "Codex /root/r072_worker",
     "buildAcknowledgment": "Fresh R072 continuity rehydration and before-edit BUILD acknowledgment recorded in active handoff; source edits 0; runtime calls 0.",
-    "repairAcknowledgment": "Root static findings T1/T2 accepted for one NEW-test-only repair; repair edits 0; runtime calls 0; parser5285d9f preserved."
+    "repairAcknowledgment": "Root static findings T1/T2 accepted for one NEW-test-only repair; repair edits 0; runtime calls 0; parser5285d9f preserved.",
+    "workerVitest": "PASS21/21",
+    "workerTypecheck": "PASS"
   }
 }

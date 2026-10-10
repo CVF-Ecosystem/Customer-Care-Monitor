@@ -5372,6 +5372,55 @@
       "path": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
       "status": "ACTIVE",
       "description": "T1/T2 settled on repaired test; exact product preserved, bounded independent captures next."
+    },
+    {
+      "id": "r072-evidence-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.capture.json",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.report.json",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vitest.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.capture.json",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-evidence-d007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
     }
   ]
 }

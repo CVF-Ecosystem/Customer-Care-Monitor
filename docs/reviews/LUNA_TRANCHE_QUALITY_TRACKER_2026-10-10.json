@@ -141,10 +141,10 @@
       "id": "CCMAI-RUNTIME-072",
       "workload": "One-line optional opaque-field legacy UI compatibility and NEW projection tests",
       "start": "FRESH_LUNA_NO_SOL_DRAFT",
-      "status": "STATIC_APPROVED_REPAIRED_SOURCE_BEFORE_RUNTIME",
+      "status": "REVIEW_PENDING",
       "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
-      "firstCompile": "NOT_RUN",
-      "firstPositive": "NOT_RUN",
+      "firstCompile": "WORKER_FORCED_TYPECHECK_PASS_ON_REPAIRED_TEST_SOURCE",
+      "firstPositive": "WORKER21/21PASS_ON_REPAIRED_TEST_SOURCE",
       "acceptedProductFindings": [
         "T1 P1 exact legacy expected projection adds three non-returned parsing keys",
         "T2 P2 negative legacy validation lacks extension-present cases"
@@ -153,7 +153,9 @@
       "productSemanticRepairRounds": 0,
       "parentSourceTestEdits": 0,
       "productQuality": "PRODUCT_LINE_STATICALLY_CONFORMANT; TESTS_NEED_REPAIR",
-      "workerEvidenceFindings": [],
+      "workerEvidenceFindings": [
+        "Minor handback labels workspace metadata HEAD5550485 as sourcecommit; root clarifies source08bab78 using correct blobs/hashes, no rerun or code repair."
+      ],
       "rootFindings": [
         "Guessed read-only paths corrected",
         "Stale R071 index BUILD description corrected",
@@ -169,7 +171,9 @@
       "finalSourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
       "staticApproval": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
       "acceptedRepairRounds": 1,
-      "repairCompleted": true
+      "repairCompleted": true,
+      "workerVitestInvocations": 1,
+      "workerTypecheckInvocations": 1
     }
   ]
 }
