@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-073",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-073 CHANGES_REQUIRED at firstsource53abf11 before native: Luna acknowledges REPAIR_WORKER then repairs NEW test boundary/control/total/prefix cases and new en/vi precision labels only (F1..F3), preserving module/panel53abf11 and all old protected paths. Commit repaired source for independent root static approval before any Vitest/typecheck. Original source NOT_RUN, budgets unchanged/native0; no provider/network/DB/publication; broader roadmap/billing/live OPEN and accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-073 BUILD repair1 after Luna REPAIR acknowledgment recorded by root metadata steward; repair exactly NEW presence test and new en/vi strings F1..F3, module/panel53abf11 and all old paths protected. Luna commits repaired source then stops for independent root static approval; original native NOT_RUN, current Vitest/typecheck/Go0 and budgets unchanged. No extra ACK/operator confirmation; no provider/network/DB/publication, broader live/billing/roadmap OPEN and accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER awaiting before-edit acknowledgment",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER / source COMMIT_STEWARD",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -50,9 +50,9 @@
   },
   "candidatePlanning": {
     "id": "R073",
-    "status": "CHANGES_REQUIRED",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_073.md",
-    "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_CHANGES_REQUIRED",
+    "sourceImplementation": "FIRST_SOURCE_COMMITTED_REPAIR_IN_PROGRESS",
     "sourceOrRuntimeDispatched": true,
     "newGoInvocations": 0,
     "sourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10"

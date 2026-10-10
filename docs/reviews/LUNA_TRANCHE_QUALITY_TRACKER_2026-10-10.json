@@ -232,7 +232,7 @@
       "id": "CCMAI-RUNTIME-073",
       "workload": "Saved adapter presence separate projector/panel/en-vi; five source paths",
       "start": "FRESH_LUNA_NO_SOL_DRAFT",
-      "status": "CHANGES_REQUIRED_STATIC_BEFORE_NATIVE",
+      "status": "BUILD_REPAIR_1",
       "taskClassification": {
         "primary": "saved_receipt_ui_feature",
         "secondary": [
@@ -251,11 +251,13 @@
       "workerFindings": [],
       "rootFindings": [
         "Read-only guessed panel/backend/config paths corrected before scope; zero source/runtime effect.",
-        "Pre-BUILD activation local/PRpreflight6/7 FAIL: currentMode DISPATCH_READY invalid phase; root corrected mode WORK_ORDER, tranche status unchanged."
+        "Pre-BUILD activation local/PRpreflight6/7 FAIL: currentMode DISPATCH_READY invalid phase; root corrected mode WORK_ORDER, tranche status unchanged.",
+        "Ambiguous repair ACK commit ownership dispatch; root resolved/committed worker ACK under metadata stewardship before edits, no additional source repair/native/operator wait."
       ],
       "parentAssistance": [
         "Root contract/spec/inventory, consolidated independent static review, own capture and metadata; no implementation draft.",
-        "Root consolidated first-source F1/F2 oracle/fixture controls and F3 locale precision findings; no product/test edit."
+        "Root consolidated first-source F1/F2 oracle/fixture controls and F3 locale precision findings; no product/test edit.",
+        "Abstract F2 clarification: align stored complete with fabricated numeric pair so coverage guard rather than flag contradiction rejects it."
       ],
       "measuredModelComputeTime": null,
       "modelTokenCost": null,

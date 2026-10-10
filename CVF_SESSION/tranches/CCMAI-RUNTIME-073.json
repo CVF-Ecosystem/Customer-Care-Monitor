@@ -70,8 +70,8 @@
     "currentPermittedTypecheckInvocations": 0,
     "currentPermittedGoInvocations": 0
   },
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
   "baseCommit": "bf8e151bfbf7e511136794cb078be6836489cf3b",
   "buildCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
@@ -86,7 +86,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -107,5 +108,6 @@
     "frontend/src/__tests__/adapter-usage-presence.spec.ts",
     "frontend/src/i18n/en.ts",
     "frontend/src/i18n/vi.ts"
-  ]
+  ],
+  "repairAcknowledgment": "Worker rehydration/declaration accepts F1..F3 exact three-path repair; root records ACK under metadata stewardship before edits/native, no additional worker ACK commit."
 }

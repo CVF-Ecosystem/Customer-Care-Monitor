@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
 
 ## Current R073
 
-CCMAI-RUNTIME-073 CHANGES_REQUIRED at firstsource53abf11 before native: Luna acknowledges REPAIR_WORKER then repairs NEW test boundary/control/total/prefix cases and new en/vi precision labels only (F1..F3), preserving module/panel53abf11 and all old protected paths. Commit repaired source for independent root static approval before any Vitest/typecheck. Original source NOT_RUN, budgets unchanged/native0; no provider/network/DB/publication; broader roadmap/billing/live OPEN and accounts parked.
+CCMAI-RUNTIME-073 BUILD repair1 after Luna REPAIR acknowledgment recorded by root metadata steward; repair exactly NEW presence test and new en/vi strings F1..F3, module/panel53abf11 and all old paths protected. Luna commits repaired source then stops for independent root static approval; original native NOT_RUN, current Vitest/typecheck/Go0 and budgets unchanged. No extra ACK/operator confirmation; no provider/network/DB/publication, broader live/billing/roadmap OPEN and accounts parked.
 
 Task-fit ledger records primary/secondary classes before BUILD; four prior accepted samples retained. R073 fresh sample pending review, not yet accepted. Root independent reviewer; no product/test edits.
 

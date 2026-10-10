@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R073 REVIEW/CHANGES_REQUIRED before native; one consolidated NEW-test/en-vi repair, source/module/panel protected."
+      "description": "Active R073 BUILD repair1 F1/F2 NEW-test and F3 en/vi precision; original native NOT_RUN, same scope/budget."
     },
     {
       "id": "r060-work-order",
@@ -5546,14 +5546,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_073.md",
       "status": "ACTIVE",
-      "description": "R073 work order CHANGES_REQUIRED F1..F3 before native; unchanged risk/seed/budget, directed repair only."
+      "description": "R073 work order BUILD repair1 after recorded REPAIR acknowledgment; root static approval before native."
     },
     {
       "id": "r073-planning-b003",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-073.json",
       "status": "ACTIVE",
-      "description": "R073 CHANGES_REQUIRED firstsource53abf11; one consolidated static repair, original native NOT_RUN."
+      "description": "R073 BUILD repair1 firstsource53abf11; module/panel protected, first native NOT_RUN, original budget."
     },
     {
       "id": "r073-review-c001",
