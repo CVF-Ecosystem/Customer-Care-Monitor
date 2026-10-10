@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-073 saved adapter-presence UI
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Risk ceiling: R1. Root work-order author / independent REVIEWER / CLOSER / metadata COMMIT_STEWARD; fresh Luna xhigh implementation/repair/source COMMIT_STEWARD. Owner next and standing delegation authorize bounded local work and independent closure, no repeated owner checkpoint.
 
@@ -31,3 +31,5 @@ Repair1 BUILD acknowledgment: worker explicitly rehydrated/declared REPAIR_WORKE
 Fresh canonical rehydration/doctor25/1 completed, BOOTSTRAP_MIGRATION_PENDING and pin note retained. BUILD -> REVIEW; worker actual oneVitest49/49 five files and oneforcedtypecheck exit0, packet16 independently audited. Original source NOT_RUN; repair one shared test/presentation round, semantic0. Root source/test edits0; exactly one root invocation each released, source locked. Capture limitations retained, no additional worker repair or native.
 
 Fresh current continuity/authority and source packet audit completed. Independent root once49/49 and forcedtypecheck PASS,113 source files stable,381protected stable. PU01..09 REVIEW_PASS, FREEZE OPEN, no remaining source findings. Root buildInProgress stale worker-pending prose reconciled from actual capture before formal acceptance; root overhead only. Original first source NOT_RUN, one test/presentation repair and semantic0. Next CLOSER from committed review; no native authority remains.
+
+Fresh canonical rehydration plus doctor25/1; independent reviewe519b14 committed, source3a05b50 locked, no open source findings. Root REVIEWER -> CLOSER/SESSION_SYNC_STEWARD before closure edits.23 committed packet blobs independently sealed, source/authority unchanged. Scope presence-display-only local FREEZE, no native/provider/publication; final checks/commit prerequisite. Broader roadmap and accounts limits retained.

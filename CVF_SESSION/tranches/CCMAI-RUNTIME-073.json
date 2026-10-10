@@ -70,8 +70,8 @@
     "currentPermittedTypecheckInvocations": 0,
     "currentPermittedGoInvocations": 0
   },
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
   "baseCommit": "bf8e151bfbf7e511136794cb078be6836489cf3b",
   "buildCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
@@ -80,10 +80,12 @@
     "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
     "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
     "docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json",
-    "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md"
+    "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md",
+    "docs/reviews/probes/r073_committed_packet_seal_2026-10-10.json",
+    "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
@@ -92,7 +94,8 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -119,5 +122,24 @@
   "staticApproval": "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
   "workerEvidence": "docs/reviews/probes/r073_worker_capture_2026-10-10",
   "rootEvidence": "docs/reviews/probes/r073_root_runtime_2026-10-10",
-  "modelAssessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md"
+  "modelAssessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+  "independentReviewCommit": "e519b14f70144e9ae028eab17974c607edd40ce7",
+  "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
+  "committedPacketSeal": "docs/reviews/probes/r073_committed_packet_seal_2026-10-10.json",
+  "closer": "Codex /root",
+  "rootClosureCheckFindings": [
+    "Initial closure local/PR preflight6/7: missing top-level closer although roles.closer existed; root fixes recorded closer.",
+    "Initial docs-site build FAIL16.31s: relative .py runner hyperlink dead link; root changes it to repository code path reference, no tooling change."
+  ],
+  "closureChecks": {
+    "preflight": "PASS7/7 after root closer-field repair; initial6/7 retained",
+    "prRange": "PASS7/7 after root closer-field repair; initial6/7 retained",
+    "catalogPS5": "PASS",
+    "catalogPS7": "PASS",
+    "docsSiteBuild": "PASS37.29s after root .py link repair; initialFAIL16.31s retained",
+    "gateUnits": "Inherited root46/46 in38.250s; tooling unchanged",
+    "sourceAudit": "113 frontend physical snapshots stable;381protected baseline stable; prior four ledger entries identical",
+    "exactStaged": "Commit prerequisite, captured tool output",
+    "publication": "NOT_AUTHORIZED_IN_R073"
+  }
 }

@@ -232,7 +232,7 @@
       "id": "CCMAI-RUNTIME-073",
       "workload": "Saved adapter presence separate projector/panel/en-vi; five source paths",
       "start": "FRESH_LUNA_NO_SOL_DRAFT",
-      "status": "INDEPENDENT_REVIEW_PASS",
+      "status": "FROZEN_LOCAL_PRESENCE_DISPLAY_UI_ONLY",
       "taskClassification": {
         "primary": "saved_receipt_ui_feature",
         "secondary": [
@@ -253,7 +253,9 @@
         "Read-only guessed panel/backend/config paths corrected before scope; zero source/runtime effect.",
         "Pre-BUILD activation local/PRpreflight6/7 FAIL: currentMode DISPATCH_READY invalid phase; root corrected mode WORK_ORDER, tranche status unchanged.",
         "Ambiguous repair ACK commit ownership dispatch; root resolved/committed worker ACK under metadata stewardship before edits, no additional source repair/native/operator wait.",
-        "Post-worker REVIEW transition progress-only buildInProgress still worker pending; root reconciles known actual result before formal acceptance, zero native/source replay."
+        "Post-worker REVIEW transition progress-only buildInProgress still worker pending; root reconciles known actual result before formal acceptance, zero native/source replay.",
+        "Initial closure local/PR preflight6/7: missing top-level closer although roles.closer existed; root fixes recorded closer.",
+        "Initial docs-site build FAIL16.31s: relative .py runner hyperlink dead link; root changes it to repository code path reference, no tooling change."
       ],
       "parentAssistance": [
         "Root contract/spec/inventory, consolidated independent static review, own capture and metadata; no implementation draft.",
@@ -262,7 +264,7 @@
       ],
       "measuredModelComputeTime": null,
       "modelTokenCost": null,
-      "finalDisposition": "REVIEW_PASS_FREEZE_OPEN",
+      "finalDisposition": "FROZEN_LOCAL_PRESENCE_DISPLAY_UI_ONLY",
       "assessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
       "staticReview": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
       "acceptedRepairRounds": 1,
@@ -306,7 +308,10 @@
         "sharedDirectedRepairRounds": 1,
         "rootFindingsExcludedFromWorkerProductQuality": true,
         "provenance": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md"
-      }
+      },
+      "independentReviewCommit": "e519b14f70144e9ae028eab17974c607edd40ce7",
+      "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
+      "closureNativeInvocations": 0
     }
   ],
   "taskFitClassification": {

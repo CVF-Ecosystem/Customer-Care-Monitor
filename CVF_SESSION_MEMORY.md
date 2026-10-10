@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
 
 ## Current R073
 
-CCMAI-RUNTIME-073 REVIEW_PASS at source3a05b50: worker and root each49/49 plus forcedtypecheck PASS, PU01..09 accepted; CLOSER rehydrates committed review and final metadata/raw-blob seal/catalog/docs checks before local presence-display-only FREEZE. Native permissions0; no source/provider/network/DB/browser/fullsuite/publication. Five accepted Luna samples provisionally classified; broader roadmap/billing/live OPEN, accounts parked.
+CCMAI-RUNTIME-073 FROZEN local presence-display UI only at source3a05b50, reviewe519b14; worker/root each49/49 and forcedtypecheck PASS, one NEW-test/presentation repair, semantic0. Five accepted Luna samples/task-fit evidence updated, routing unchanged. ORCHESTRATOR next audits remaining scoped tasks and records a separate bounded work order before source/native activity; current native permissions0. No provider/network/DB/browser/fullsuite/publication; full S2/S3/S5/global F02/real Analyzer/billing/live OPEN, accounts parked.
 
 Task-fit ledger records primary/secondary classes before BUILD; five accepted implementation samples retained, including fresh R073 after independent review. Root independent reviewer; no product/test edits.
 
