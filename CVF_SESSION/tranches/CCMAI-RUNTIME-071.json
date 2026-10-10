@@ -145,4 +145,36 @@
     },
     "workerEvidenceToolFinding": "Session IDs/final output were not captured on the first parallel preflight/unit invocation; the original outcomes remain indeterminate and are separate from product findings."
   }
+,
+  "workerResumeAcknowledgment": {
+    "date": "2026-10-10",
+    "worker": "Codex /root/r071_worker",
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh",
+    "phase": "BUILD",
+    "resumedFromCommit": "595087446ecda88b7f31c2fc01c66f137b67aa1f",
+    "rehydrated": [
+      ".cvf/manifest.json",
+      ".cvf/policy.json",
+      "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "CVF_SESSION_MEMORY.md",
+      "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
+      "IMPLEMENTATION_STATUS.json",
+      "docs/INDEX.md",
+      "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
+      "docs/work_orders/CCMAI_RUNTIME_071.md",
+      "CVF_SESSION/authority/CCMAI-RUNTIME-071.json",
+      "CVF_SESSION/tranches/CCMAI-RUNTIME-071.json"
+    ],
+    "bootstrapMigrationPending": true,
+    "ownerScopeReview": "OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED",
+    "productEditsAtResume": 0,
+    "testEditsAtResume": 0,
+    "goInvocationsAtResume": 0,
+    "initialAcknowledgmentPreserved": true,
+    "parentRunnerUntouchedAndUnstaged": true,
+    "firstSourceCommitBeforeCompile": true,
+    "rootStaticSourceAndPlanApprovalBeforeGo": true,
+    "humanTechnicalTestReviewClaim": false
+  }
 }
