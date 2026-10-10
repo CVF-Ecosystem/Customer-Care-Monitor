@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
+      "description": "R073 REVIEW_PASS / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
     },
     {
       "id": "r060-work-order",
@@ -5546,14 +5546,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_073.md",
       "status": "ACTIVE",
-      "description": "R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
+      "description": "R073 REVIEW_PASS / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
     },
     {
       "id": "r073-planning-b003",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-073.json",
       "status": "ACTIVE",
-      "description": "R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
+      "description": "R073 REVIEW_PASS / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
     },
     {
       "id": "r073-review-c001",
@@ -5694,6 +5694,69 @@
       "path": "docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json",
       "status": "ACTIVE",
       "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-formal-e-001",
+      "family": "continuity",
+      "path": "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-002",
+      "family": "continuity",
+      "path": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_independent_capture.py",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/capture.json",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.report.json",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
+    },
+    {
+      "id": "r073-formal-e-009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only."
     }
   ]
 }

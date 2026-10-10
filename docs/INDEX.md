@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md`
+- R073 REVIEW_PASS / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -598,12 +598,21 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stderr.log`
 - Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stdout.log`
 - Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only.: `docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_independent_capture.py`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/capture.json`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stderr.bin`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/typecheck.stdout.bin`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.report.json`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stderr.bin`
+- R073 independent root raw capture/review and Luna task-fit assessment; exact source3a05b50,49/49+forcedtypecheck, bounded local UI only.: `docs/reviews/probes/r073_root_runtime_2026-10-10/vitest.stdout.bin`
 - Immutable R1 saved presence UI dispatcher seed before BUILD; fresh Luna scope/task classes bounded.: `CVF_SESSION/authority/CCMAI-RUNTIME-073.json`
 - R073 PU01..09 bounded saved presence UI contract, independent validation, safe parsed integers and claim limits.: `docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md`
 - Physical protected source/old authority baseline before R073; snapshot boundary, no full write-history claim.: `docs/reviews/probes/r073_protected_baseline_2026-10-10.json`
 - Historical R072 FROZEN legacy compatibility handoff; accepted evidence and retrospective classification retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md`
-- R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `docs/work_orders/CCMAI_RUNTIME_073.md`
-- R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-073.json`
+- R073 REVIEW_PASS / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `docs/work_orders/CCMAI_RUNTIME_073.md`
+- R073 REVIEW_PASS / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-073.json`
 - Root independent PU01..09 static/runtime review plan before first Luna source; no product/test draft.: `docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md`
 - R073 firstsource53abf11 CHANGES_REQUIRED F1/F2 NEW-test boundary/coverage, F3 locale precision; original native NOT_RUN.: `docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
 - R073 repairedsource3a05b50 F1..F3 closed static; worker own49expected/forcedtypecheck pending, no original native run.: `docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`

@@ -13,9 +13,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R073
 
-CCMAI-RUNTIME-073 REVIEW_PENDING: worker packet independently audited49/49 plus forcedtypecheck PASS at source3a05b50; root independent REVIEWER runs exactly1focused Vitest five specs and1forcedvue-tsc using own capture, source locked, failures stop/noauto. Formal review then scoped local UI closure and Luna task-fit update; reserves conditional. No provider/network/DB/browser/fullsuite/publication; broader roadmap/billing/live OPEN, accounts parked.
+CCMAI-RUNTIME-073 REVIEW_PASS at source3a05b50: worker and root each49/49 plus forcedtypecheck PASS, PU01..09 accepted; CLOSER rehydrates committed review and final metadata/raw-blob seal/catalog/docs checks before local presence-display-only FREEZE. Native permissions0; no source/provider/network/DB/browser/fullsuite/publication. Five accepted Luna samples provisionally classified; broader roadmap/billing/live OPEN, accounts parked.
 
-Task-fit ledger records primary/secondary classes before BUILD; four prior accepted samples retained. R073 fresh sample pending review, not yet accepted. Root independent reviewer; no product/test edits.
+Task-fit ledger records primary/secondary classes before BUILD; five accepted implementation samples retained, including fresh R073 after independent review. Root independent reviewer; no product/test edits.
 
 ## Startup Order
 

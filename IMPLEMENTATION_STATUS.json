@@ -42,7 +42,7 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "buildInProgress": [
-    "R073 repairedsource3a05b50 static approved; worker own focused49expected/forcedtypecheck pending, source locked."
+    "R073 independent REVIEW_PASS; source3a05b50, eachrole49/49+forcedtypecheck. Local UI-slice closure pending; no source/native dispatch."
   ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
@@ -262,7 +262,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-073 REVIEW_PENDING: worker packet independently audited49/49 plus forcedtypecheck PASS at source3a05b50; root independent REVIEWER runs exactly1focused Vitest five specs and1forcedvue-tsc using own capture, source locked, failures stop/noauto. Formal review then scoped local UI closure and Luna task-fit update; reserves conditional. No provider/network/DB/browser/fullsuite/publication; broader roadmap/billing/live OPEN, accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-073 REVIEW_PASS at source3a05b50: worker and root each49/49 plus forcedtypecheck PASS, PU01..09 accepted; CLOSER rehydrates committed review and final metadata/raw-blob seal/catalog/docs checks before local presence-display-only FREEZE. Native permissions0; no source/provider/network/DB/browser/fullsuite/publication. Five accepted Luna samples provisionally classified; broader roadmap/billing/live OPEN, accounts parked.",
     "assessment": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
     "buildDispatched": true,
@@ -277,13 +277,13 @@
       "automaticRetries": 0,
       "workerUsedVitest": 1,
       "workerUsedTypecheck": 1,
-      "reviewerUsedVitest": 0,
-      "reviewerUsedTypecheck": 0,
-      "aggregateUsedVitest": 1,
-      "aggregateUsedTypecheck": 1,
+      "reviewerUsedVitest": 1,
+      "reviewerUsedTypecheck": 1,
+      "aggregateUsedVitest": 2,
+      "aggregateUsedTypecheck": 2,
       "usedGo": 0,
-      "currentPermittedVitestInvocations": 1,
-      "currentPermittedTypecheckInvocations": 1,
+      "currentPermittedVitestInvocations": 0,
+      "currentPermittedTypecheckInvocations": 0,
       "currentPermittedGoInvocations": 0
     },
     "actualWorkerModel": {
@@ -406,7 +406,7 @@
     },
     "activeLocalClosureOrder": null,
     "localClosureEvidence": null,
-    "modelAssessment": null,
+    "modelAssessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
     "publicationReceipt": null,
     "publishedClosureCommit": null,
     "publicationStatus": "NOT_AUTHORIZED_IN_R073",
@@ -1012,18 +1012,18 @@
     "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
   },
   "savedAdapterPresenceUi": {
-    "status": "REVIEW_PENDING",
+    "status": "REVIEW_PASS",
     "phase": "REVIEW",
     "riskCeiling": "R1",
     "spec": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
-    "sourceImplementation": "WORKER_VALIDATED_ROOT_REVIEW_PENDING",
+    "sourceImplementation": "INDEPENDENT_REVIEW_PASS",
     "buildAcknowledgment": "Committed before source/test edits: Luna xhigh IMPLEMENTATION_WORKER/source COMMIT_STEWARD; source0, NEW tests0, worker native0; root gate units46/46 in38.250s inherited unchanged tooling; first source commit and root static approval required before native.",
-    "independentAcceptance": "WORKER_VALIDATED_ROOT_REVIEW_PENDING",
+    "independentAcceptance": "INDEPENDENT_REVIEW_PASS",
     "freeze": "OPEN",
     "firstSourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
-    "reviewEvidence": "docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json",
-    "modelAssessment": null,
+    "reviewEvidence": "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md",
+    "modelAssessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
     "closureEvidence": null,
     "publication": "NOT_AUTHORIZED_IN_R073",
     "taskClassification": {
