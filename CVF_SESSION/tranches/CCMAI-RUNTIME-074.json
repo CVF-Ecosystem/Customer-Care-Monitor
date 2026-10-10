@@ -55,8 +55,8 @@
     "automaticRetries": 0,
     "currentPermittedNativeInvocations": 0
   },
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_074.md",
   "baseCommit": "f1e875d8c97ab1337000ac6452444325235e21d5",
   "buildCommit": null,
@@ -65,7 +65,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -73,5 +74,6 @@
     "SPEC",
     "WORK_ORDER"
   ],
-  "dispatcher": "Codex /root"
+  "dispatcher": "Codex /root",
+  "workerAcknowledgment": "2026-10-10 fresh Luna xhigh canonical rehydration/doctor25/1 before-edit declaration received by root; source/artifact edits0 and application native0. Knowledge README ingest inherited root canonical-core TEMP/noPOST fallback; missing downstream wrapper known, no missing continuity authority. Root metadata steward records worker ACK before documentary BUILD; worker READONLY_ANALYST -> documentary IMPLEMENTATION_WORKER/audit COMMIT_STEWARD, root independent REVIEWER. DA01..10 exact three NEW paths; sourceBaseline9fc86fe distinct documentary HEAD; no source/test/runtime/config/network effects. Gateunits46/46 in32.346s inherited no duplicate. Root formatting reminder source code paths rather than dead VitePress links; no report draft."
 }
