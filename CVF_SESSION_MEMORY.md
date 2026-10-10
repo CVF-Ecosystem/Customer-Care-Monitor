@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
 
 ## Current R072
 
-CCMAI-RUNTIME-072 REVIEW_PASS source08bab78; closure held at INTAKE audit for root-only R072-META-R01/BLOCKED_CONTINUITY_DRIFT: subsidiary R071 review/model/publication/ownerRouting pointers reconciled to committed R072 seed/order/review, canonical tranche tuple unchanged. Root verifies metadata/default+PR/catalog before CLOSER; no source/native rerun or new authority. Worker/root each21/21 and forcedtypecheck PASS; Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer/UIpresencebillingpermission OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
+CCMAI-RUNTIME-072 FROZEN legacy UI compatibility-only at source08bab78/reviewe805739: worker/root each21/21 Vitest and forcedvue-tsc PASS, product unchanged after one pre-runtime NEW-test repair; root projection drift reconciled6400b06, raw/source/seed seals retained, no further native/source/push. Root ORCHESTRATOR next audits remaining acceptance/dependencies and prepares separate bounded work order before new source/runtime/provider scope. FullS2/S3/S5/globalF02/live/queue-realAnalyzer/UIpresencebillingpermission OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 
 ## Startup Order
 

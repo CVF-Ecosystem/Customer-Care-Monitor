@@ -47,14 +47,17 @@
     "reviewerUsedTypecheck": 1,
     "usedGo": 0,
     "aggregateUsedVitest": 2,
-    "aggregateUsedTypecheck": 2
+    "aggregateUsedTypecheck": 2,
+    "currentPermittedVitestInvocations": 0,
+    "currentPermittedTypecheckInvocations": 0,
+    "currentPermittedGoInvocations": 0
   },
   "workerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
   },
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
   "baseCommit": "1fb7f6cd11a14d5c8ddd05942ac8bac75d904663",
   "buildCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
@@ -64,10 +67,12 @@
     "docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json",
     "docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md",
     "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
-    "docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md"
+    "docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md",
+    "docs/reviews/probes/r072_committed_packet_seal_2026-10-10.json",
+    "docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
@@ -76,7 +81,8 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -104,6 +110,27 @@
     "repair": "docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md",
     "sourceAuthorityChanged": false,
     "sourceReviewCommit": "e80573944b40da0210c2631fb34754c30edb1beb",
-    "newSourceOrNativeInvocations": 0
+    "newSourceOrNativeInvocations": 0,
+    "status": "RESOLVED_BEFORE_FREEZE",
+    "repairCommit": "6400b060847d8dadeacef333915ac48b698afddd",
+    "localPrExactPreflight": "PASS7/7"
+  },
+  "closer": "Codex /root",
+  "independentReviewCommit": "e80573944b40da0210c2631fb34754c30edb1beb",
+  "closureEvidence": "docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md",
+  "finalVerification": {
+    "defaultPreflight": "PASS7/7",
+    "prRangePreflight": "PASS7/7 local origin/main toHEAD",
+    "catalogWindowsPowerShell5": "PASS via preflight",
+    "catalogPowerShell7": "PASS",
+    "docsSiteBuild": "PASS22.77s; application Vite build NOT RUN",
+    "gateUnits": "Inherited same-tranche unchanged-tooling root46/46 14.606s and duplicate worker46/46 31.875s",
+    "doctor": "PASS_WITH_NOTE25/1; pin/core migration warning retained; no hosted/live claim",
+    "packetSeal": "PASS13 files;11 byteidentical,2metadata newline-only",
+    "rootSourceSnapshot": "PASS111/111 physical before-after",
+    "protectedBaseline": "PASS381/382 outside authorized parser; NEWspec only addedsource",
+    "closureNewVitest": 0,
+    "closureNewTypecheck": 0,
+    "closureNewGo": 0
   }
 }
