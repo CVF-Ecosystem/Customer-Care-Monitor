@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R073
 
-CCMAI-RUNTIME-073 BUILD repair1 after Luna REPAIR acknowledgment recorded by root metadata steward; repair exactly NEW presence test and new en/vi strings F1..F3, module/panel53abf11 and all old paths protected. Luna commits repaired source then stops for independent root static approval; original native NOT_RUN, current Vitest/typecheck/Go0 and budgets unchanged. No extra ACK/operator confirmation; no provider/network/DB/publication, broader live/billing/roadmap OPEN and accounts parked.
+CCMAI-RUNTIME-073 BUILD validation at repairedsource3a05b50 STATIC_APPROVED F1..F3 closed; Luna IMPLEMENTATION_WORKER runs exactly1focused Vitest five specs and1forcedvue-tsc with own raw capture, source locked, source/workspaceHEAD labels distinct, failures stop/noauto. Root audits packet then independently captures once before formal REVIEW. Native budgets unchanged reservesconditional; no provider/network/DB/browser/fullsuite/publication, broader billing/live/roadmap OPEN and accounts parked.
 
 Task-fit ledger records primary/secondary classes before BUILD; four prior accepted samples retained. R073 fresh sample pending review, not yet accepted. Root independent reviewer; no product/test edits.
 

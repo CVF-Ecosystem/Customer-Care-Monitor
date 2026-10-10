@@ -42,7 +42,7 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "buildInProgress": [
-    "R073 repair1 F1/F2 NEW-test control and F3 new locale precision, root committed worker ACK, native0 until static approval."
+    "R073 repairedsource3a05b50 static approved; worker own focused49expected/forcedtypecheck pending, source locked."
   ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
@@ -262,7 +262,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-073 BUILD repair1 after Luna REPAIR acknowledgment recorded by root metadata steward; repair exactly NEW presence test and new en/vi strings F1..F3, module/panel53abf11 and all old paths protected. Luna commits repaired source then stops for independent root static approval; original native NOT_RUN, current Vitest/typecheck/Go0 and budgets unchanged. No extra ACK/operator confirmation; no provider/network/DB/publication, broader live/billing/roadmap OPEN and accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-073 BUILD validation at repairedsource3a05b50 STATIC_APPROVED F1..F3 closed; Luna IMPLEMENTATION_WORKER runs exactly1focused Vitest five specs and1forcedvue-tsc with own raw capture, source locked, source/workspaceHEAD labels distinct, failures stop/noauto. Root audits packet then independently captures once before formal REVIEW. Native budgets unchanged reservesconditional; no provider/network/DB/browser/fullsuite/publication, broader billing/live/roadmap OPEN and accounts parked.",
     "assessment": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
     "buildDispatched": true,
@@ -282,8 +282,8 @@
       "aggregateUsedVitest": 0,
       "aggregateUsedTypecheck": 0,
       "usedGo": 0,
-      "currentPermittedVitestInvocations": 0,
-      "currentPermittedTypecheckInvocations": 0,
+      "currentPermittedVitestInvocations": 1,
+      "currentPermittedTypecheckInvocations": 1,
       "currentPermittedGoInvocations": 0
     },
     "actualWorkerModel": {
@@ -1017,12 +1017,12 @@
     "riskCeiling": "R1",
     "spec": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
-    "sourceImplementation": "FIRST_SOURCE_COMMITTED_REPAIR_IN_PROGRESS",
+    "sourceImplementation": "STATIC_APPROVED_PENDING_RUNTIME",
     "buildAcknowledgment": "Committed before source/test edits: Luna xhigh IMPLEMENTATION_WORKER/source COMMIT_STEWARD; source0, NEW tests0, worker native0; root gate units46/46 in38.250s inherited unchanged tooling; first source commit and root static approval required before native.",
-    "independentAcceptance": "CHANGES_REQUIRED",
+    "independentAcceptance": "FORMAL_REVIEW_PENDING_RUNTIME",
     "freeze": "OPEN",
     "firstSourceCommit": "53abf1198e0c2aaab05bcdbd97d00e4b4102cb10",
-    "reviewEvidence": "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+    "reviewEvidence": "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
     "modelAssessment": null,
     "closureEvidence": null,
     "publication": "NOT_AUTHORIZED_IN_R073",
@@ -1034,6 +1034,8 @@
         "component_i18n"
       ],
       "start": "FRESH_LUNA_NO_SOL_DRAFT"
-    }
+    },
+    "sourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
+    "repairCompleted": true
   }
 }

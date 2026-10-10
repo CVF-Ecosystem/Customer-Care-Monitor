@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER / source COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-073 BUILD repair1 after Luna REPAIR acknowledgment recorded by root metadata steward; repair exactly NEW presence test and new en/vi strings F1..F3, module/panel53abf11 and all old paths protected. Luna commits repaired source then stops for independent root static approval; original native NOT_RUN, current Vitest/typecheck/Go0 and budgets unchanged. No extra ACK/operator confirmation; no provider/network/DB/publication, broader live/billing/roadmap OPEN and accounts parked.
+- Active role: Codex /root independent REVIEWER / metadata COMMIT_STEWARD; Luna xhigh IMPLEMENTATION_WORKER validation only, source locked
+- Next allowed move: CCMAI-RUNTIME-073 BUILD validation at repairedsource3a05b50 STATIC_APPROVED F1..F3 closed; Luna IMPLEMENTATION_WORKER runs exactly1focused Vitest five specs and1forcedvue-tsc with own raw capture, source locked, source/workspaceHEAD labels distinct, failures stop/noauto. Root audits packet then independently captures once before formal REVIEW. Native budgets unchanged reservesconditional; no provider/network/DB/browser/fullsuite/publication, broader billing/live/roadmap OPEN and accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche transition acknowledgment
@@ -28,3 +28,7 @@ Root rehydrates current continuity/authority at worker firstsource53abf11; role 
 ## Luna REPAIR acknowledgment recorded by root metadata steward
 
 Worker rehydrates manifest/policy/currentREVIEW state/memory/handoff/status/index and F1..F3; declaration accepts R1 exactly NEWtest/en/vi, module/panel53abf11 protected. Root rehydrates current authority and transitions SESSION_SYNC_STEWARD metadata role, records worker ACK before repair; root remains independent REVIEWER, source/test edits0. Phase REVIEW -> BUILD repair1, native0/original NOT_RUN/budgets unchanged. Root dispatch ACK-commit ownership wording ambiguous; root resolves by committing metadata ACK itself, no additional worker ACK or operator wait. This coordination overhead belongs to parent, not Luna code. F2 clarification: fabricated numeric prefix pair uses consistent complete flag to avoid masking the coverage guard. One consolidated round/same scope, no new acceptance or algorithm repair.
+
+## Repaired-source independent static approval / validation role transition
+
+Fresh current authority rehydrated after source3a05b50; docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md closes F1..F3. Root independent REVIEWER, worker REPAIR_WORKER -> IMPLEMENTATION_WORKER validation only, source locked. Root source/test edits0. One shared repair round: NEW-test1, presentation1, algorithm0; original source NOT_RUN. Immediately permit worker1focused Vitest five files/expected49 and1forcedTC; root own native waits packet. Ceilings/reserves/noauto unchanged, no extra ACK/operator confirmation. Native0 at this transition; source3a05 vs forthcoming metadataHEAD distinguished. Worker capture independently authored, packetregistration/commit root.

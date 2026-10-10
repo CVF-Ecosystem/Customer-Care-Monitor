@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R073 BUILD repair1 F1/F2 NEW-test and F3 en/vi precision; original native NOT_RUN, same scope/budget.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md`
+- Active R073 BUILD validation repairedsource3a05b50 static approved; worker first then independent root, source locked/native pending.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -585,10 +585,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R073 PU01..09 bounded saved presence UI contract, independent validation, safe parsed integers and claim limits.: `docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md`
 - Physical protected source/old authority baseline before R073; snapshot boundary, no full write-history claim.: `docs/reviews/probes/r073_protected_baseline_2026-10-10.json`
 - Historical R072 FROZEN legacy compatibility handoff; accepted evidence and retrospective classification retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md`
-- R073 work order BUILD repair1 after recorded REPAIR acknowledgment; root static approval before native.: `docs/work_orders/CCMAI_RUNTIME_073.md`
-- R073 BUILD repair1 firstsource53abf11; module/panel protected, first native NOT_RUN, original budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-073.json`
+- R073 BUILD work order F1..F3 closed statically at3a05b50; focused validation permitted, formal REVIEW pending.: `docs/work_orders/CCMAI_RUNTIME_073.md`
+- R073 BUILD record repairedsource3a05b50 static approved; one test/presentation repair, algorithm unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-073.json`
 - Root independent PU01..09 static/runtime review plan before first Luna source; no product/test draft.: `docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md`
 - R073 firstsource53abf11 CHANGES_REQUIRED F1/F2 NEW-test boundary/coverage, F3 locale precision; original native NOT_RUN.: `docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
+- R073 repairedsource3a05b50 F1..F3 closed static; worker own49expected/forcedtypecheck pending, no original native run.: `docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

@@ -25,3 +25,5 @@ Fresh Luna xhigh rehydrated current R073 authority and transitions WORK_ORDER ->
 Firstsource53abf11 static CHANGES_REQUIRED F1/F2 NEW-test oracle/control, F3 new locale precision; first source/native NOT_RUN, one consolidated repair on NEW test/en/vi only. Module/panel protected, no budget reset. [Findings](../reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md).
 
 Repair1 BUILD acknowledgment: worker explicitly rehydrated/declared REPAIR_WORKER and accepted F1..F3 scope; root metadata steward records ACK before any repair/native edits. No further worker ACK commit or operator checkpoint required.
+
+[Repaired static approval](../reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md) at3a05b50 closes F1..F3; worker validation role/source locked and exactly1Vitest/1forcedTC permitted before independent root capture. Formal review pending, no native result yet.
