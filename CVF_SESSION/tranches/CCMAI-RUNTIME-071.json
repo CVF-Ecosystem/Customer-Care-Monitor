@@ -106,5 +106,43 @@
   "roleTransitions": [
     "Root ORCHESTRATOR/SPEC_AUTHOR -> WORK_ORDER_AUTHOR/SESSION_SYNC_STEWARD for scope acceptance and BUILD dispatch",
     "Fresh Luna IMPLEMENTATION_WORKER/COMMIT_STEWARD after committed before-edit acknowledgment; root independent REVIEWER"
-  ]
+  ],
+  "workerBeforeEditAcknowledgment": {
+    "date": "2026-10-10",
+    "worker": "Codex /root/r071_worker",
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh",
+    "phase": "BUILD",
+    "roleTransition": "delegated read-only feasibility auditor -> IMPLEMENTATION_WORKER / source COMMIT_STEWARD; root independent REVIEWER",
+    "ownerScopeReview": "OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED",
+    "productPaths": [
+      "backend/engine/analyzer.go",
+      "backend/engine/source_execution_receipt.go",
+      "backend/engine/usage_observation_receipt.go",
+      "backend/engine/adapter_usage_presence_observation.go",
+      "backend/engine/adapter_usage_presence_observation_test.go"
+    ],
+    "sourceEditsAtAcknowledgment": 0,
+    "testEditsAtAcknowledgment": 0,
+    "goInvocationsAtAcknowledgment": 0,
+    "firstSourceCommitBeforeCompile": true,
+    "rootStaticSourceAndPlanApprovalBeforeGo": true,
+    "rootProductTestEdits": 0,
+    "humanTechnicalTestReviewClaim": false
+  },
+  "workerBeforeEditChecks": {
+    "defaultPreflight": "PASS7/7",
+    "prPreflight": "PASS7/7",
+    "catalogCheck": "PASS",
+    "gateUnitRerun": {
+      "status": "PASS46/46",
+      "elapsedSeconds": 50.891,
+      "sessionId": 63880
+    },
+    "firstParallelAttempt": {
+      "status": "INDETERMINATE",
+      "reason": "Worker did not retain allocated session IDs/final outputs for PR preflight and gate-unit commands; no PASS inferred."
+    },
+    "workerEvidenceToolFinding": "Session IDs/final output were not captured on the first parallel preflight/unit invocation; the original outcomes remain indeterminate and are separate from product findings."
+  }
 }
