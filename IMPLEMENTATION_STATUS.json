@@ -266,7 +266,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-075 BUILD one bounded third attempt after owner confirms exact Git Credential Manager browser login; review-cost disposition and ACK recorded before action, two128 failures preserved. Independent exactSHA review/gates then ordinary feature-branch push/readback; no automatic retry/app/provider/DB/main/force/merge/deploy, accounts parked. Separate source-only DESIGN/SPEC follows.",
+    "nextObjective": "CCMAI-RUNTIME-075 BUILD owner-authorized interactive Git authentication repair, one bounded ordinary exact-SHA feature push after independent prepublication review; verify remote SHA, preserve all failures. No force/main/merge/deploy/app/provider/DB/secret reads. Accounts parked.",
     "assessment": "docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
     "buildDispatched": true,
@@ -397,7 +397,7 @@
     "modelAssessment": null,
     "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
     "publishedClosureCommit": null,
-    "publicationStatus": "AUTHORIZED_SPECIFIC_GCM_RESUME_PENDING_VERIFICATION",
+    "publicationStatus": "AUTHORIZED_PENDING_VERIFICATION_R075",
     "localClosureCommit": null,
     "historicalR068ClosureProjection": {
       "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
@@ -1394,8 +1394,6 @@
     "receipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
     "independentReview": null,
     "applicationNativeInvocations": 0,
-    "freeze": "OPEN",
-    "publicationStatus": "AUTHORIZED_SPECIFIC_GCM_RESUME_PENDING_VERIFICATION",
-    "pushAttempts": 2
+    "freeze": "OPEN"
   }
 }

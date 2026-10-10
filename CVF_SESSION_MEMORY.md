@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R075
 
-CCMAI-RUNTIME-075 BUILD one bounded third attempt after owner confirms exact Git Credential Manager browser login; review-cost disposition and ACK recorded before action, two128 failures preserved. Independent exactSHA review/gates then ordinary feature-branch push/readback; no automatic retry/app/provider/DB/main/force/merge/deploy, accounts parked. Separate source-only DESIGN/SPEC follows.
+CCMAI-RUNTIME-075 BUILD owner-authorized interactive Git authentication repair, one bounded ordinary exact-SHA feature push after independent prepublication review; verify remote SHA, preserve all failures. No force/main/merge/deploy/app/provider/DB/secret reads. Accounts parked.
 
 R074 local dossier FROZEN and five implementation plus one fresh audit preserved. New owner GitHub instruction authorizes R075 ordinary branch publication; no retroactive change to R068 unverified attempt or old prohibited effects.
 
