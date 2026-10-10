@@ -4,32 +4,32 @@ import "math"
 
 // Interface values and local calculations only; never provider usage-presence or billing proof.
 type usageObservationReceipt struct {
-	Version         string   `json:"version"`
-	Scope           string   `json:"scope"`
-	TokenBasis      string   `json:"token_basis"`
-	Billing         string   `json:"billing"`
-	PriceRevision   string   `json:"price_revision"`
-	Responses       int64    `json:"responses"`
-	InvalidTokens   int64    `json:"invalid_tokens"`
-	Priced          int64    `json:"priced"`
-	Unpriced        int64    `json:"unpriced"`
-	InvalidCosts    int64    `json:"invalid_costs"`
-	TokenOverflow   bool     `json:"token_overflow"`
-	CostOverflow    bool     `json:"cost_overflow"`
-	CounterOverflow bool     `json:"counter_overflow"`
-	InputTokens     *int64   `json:"input_tokens"`
-	OutputTokens    *int64   `json:"output_tokens"`
-	LocalEstimate   *float64 `json:"local_estimate_usd"`
-	TokensComplete  bool     `json:"tokens_complete"`
-	CostComplete    bool     `json:"cost_complete"`
+	Version              string                       `json:"version"`
+	Scope                string                       `json:"scope"`
+	TokenBasis           string                       `json:"token_basis"`
+	Billing              string                       `json:"billing"`
+	PriceRevision        string                       `json:"price_revision"`
+	Responses            int64                        `json:"responses"`
+	InvalidTokens        int64                        `json:"invalid_tokens"`
+	Priced               int64                        `json:"priced"`
+	Unpriced             int64                        `json:"unpriced"`
+	InvalidCosts         int64                        `json:"invalid_costs"`
+	TokenOverflow        bool                         `json:"token_overflow"`
+	CostOverflow         bool                         `json:"cost_overflow"`
+	CounterOverflow      bool                         `json:"counter_overflow"`
+	InputTokens          *int64                       `json:"input_tokens"`
+	OutputTokens         *int64                       `json:"output_tokens"`
+	LocalEstimate        *float64                     `json:"local_estimate_usd"`
+	TokensComplete       bool                         `json:"tokens_complete"`
+	CostComplete         bool                         `json:"cost_complete"`
 	AdapterUsagePresence *adapterUsagePresenceReceipt `json:"adapter_usage_presence,omitempty"`
 }
 
 type usageObservationCollector struct {
 	r               usageObservationReceipt
-	input, output    int64
-	cost             float64
-	adapterPresence  *adapterUsagePresenceCollector
+	input, output   int64
+	cost            float64
+	adapterPresence *adapterUsagePresenceCollector
 }
 
 func (u *usageObservationCollector) increment(n *int64) {

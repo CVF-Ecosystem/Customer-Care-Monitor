@@ -14,20 +14,20 @@ const executionByteLimit = 128 * 1024
 type executionCall struct {
 	usageObserved         bool
 	usagePresenceObserved bool
-	Sequence           int      `json:"sequence"`
-	Method             string   `json:"method"`
-	ItemCount          int      `json:"item_count"`
-	MemberIDs          []string `json:"member_ids"`
-	OmittedMembers     int      `json:"omitted_members"`
-	MembersComplete    bool     `json:"members_complete"`
-	MetadataIncomplete bool     `json:"metadata_incomplete"`
-	Invocation         string   `json:"invocation_outcome"`
-	UsageWrite         string   `json:"usage_write_outcome"`
-	Parsing            string   `json:"parsing_outcome"`
-	ItemsSaved         int      `json:"items_saved"`
-	ItemsSaveFailed    int      `json:"items_save_failed"`
-	ItemsNotPublished  int      `json:"items_not_published"`
-	ItemsPending       int      `json:"items_pending"`
+	Sequence              int      `json:"sequence"`
+	Method                string   `json:"method"`
+	ItemCount             int      `json:"item_count"`
+	MemberIDs             []string `json:"member_ids"`
+	OmittedMembers        int      `json:"omitted_members"`
+	MembersComplete       bool     `json:"members_complete"`
+	MetadataIncomplete    bool     `json:"metadata_incomplete"`
+	Invocation            string   `json:"invocation_outcome"`
+	UsageWrite            string   `json:"usage_write_outcome"`
+	Parsing               string   `json:"parsing_outcome"`
+	ItemsSaved            int      `json:"items_saved"`
+	ItemsSaveFailed       int      `json:"items_save_failed"`
+	ItemsNotPublished     int      `json:"items_not_published"`
+	ItemsPending          int      `json:"items_pending"`
 }
 
 type executionReceipt struct {

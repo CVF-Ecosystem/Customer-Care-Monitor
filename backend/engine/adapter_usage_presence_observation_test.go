@@ -25,6 +25,11 @@ func adapterObserveReturned(c *executionCollector, presence *ai.AIUsagePresence)
 	c.observeUsagePresence(presence)
 }
 
+func adapterObserveKnown(c *executionCollector, input, output int64) {
+	adapterObserveReturned(c, adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire,
+		adapterPresenceCount(ai.AIUsagePresenceKnown, &input), adapterPresenceCount(ai.AIUsagePresenceKnown, &output), true))
+}
+
 func TestAdapterUsagePresenceOmittedBeforeNewHook(t *testing.T) {
 	c, _ := exCollector()
 	c.begin("SINGLE", nil)
@@ -141,7 +146,9 @@ func TestAdapterUsagePresenceStrictNormalizationAndIndependentSides(t *testing.T
 		{name: "raw_source_invalidates_pair", presence: badSource, inputInvalid: 1, outputInvalid: 1},
 		{name: "explicit_absent", presence: adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire, adapterPresenceCount(ai.AIUsagePresenceAbsent, nil), adapterPresenceCount(ai.AIUsagePresenceKnown, &large), true), inputAbsent: 1, outputKnown: 1},
 		{name: "absent_with_value_invalid", presence: adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire, adapterPresenceCount(ai.AIUsagePresenceAbsent, &large), adapterPresenceCount(ai.AIUsagePresenceKnown, &large), false), inputInvalid: 1, outputKnown: 1},
+		{name: "valid_null_status", presence: adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire, adapterPresenceCount(ai.AIUsagePresenceNull, nil), adapterPresenceCount(ai.AIUsagePresenceKnown, &large), false), inputNull: 1, outputKnown: 1},
 		{name: "null_with_value_invalid_but_sibling_survives", presence: adapterPresence("1", ai.AIUsagePresenceSourceAnthropicRawJSON, adapterPresenceCount(ai.AIUsagePresenceNull, &large), adapterPresenceCount(ai.AIUsagePresenceKnown, &large), false), inputInvalid: 1, outputKnown: 1},
+		{name: "malformed_output_preserves_input_sibling", presence: adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire, adapterPresenceCount(ai.AIUsagePresenceKnown, &large), adapterPresenceCount(ai.AIUsagePresenceNull, &large), false), inputKnown: 1, outputInvalid: 1},
 		{name: "negative_known_invalid", presence: adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire, adapterPresenceCount(ai.AIUsagePresenceKnown, &negative), adapterPresenceCount(ai.AIUsagePresenceKnown, &large), true), inputInvalid: 1, outputKnown: 1},
 		{name: "invalid_status_with_value_invalid", presence: adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire, adapterPresenceCount(ai.AIUsagePresenceInvalid, &large), adapterPresenceCount(ai.AIUsagePresenceAbsent, nil), false), inputInvalid: 1},
 		{name: "unavailable_with_value_invalid", presence: adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire, adapterPresenceCount(ai.AIUsagePresenceUnavailable, &large), adapterPresenceCount(ai.AIUsagePresenceAbsent, nil), false), inputInvalid: 1},
@@ -180,47 +187,127 @@ func TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage(t *testing.T) {
 	if first == nil || first.Responses != 1 || first.Input.Known != 0 || first.Input.Unobserved != 1 {
 		t.Fatalf("in-flight or duplicate hook changed the observation: %+v", first)
 	}
-	c.begin("BATCH", nil)
-	c.returned(nil)
-	// A successful response without the new hook leaves the aggregate prefix incomplete.
-	incomplete := c.freeze().UsageObservation.AdapterUsagePresence
-	if incomplete == nil || incomplete.Responses != 1 || incomplete.Input.Total != nil || incomplete.Output.Total != nil || incomplete.Complete {
-		t.Fatalf("unobserved successful call fabricated totals: %+v", incomplete)
-	}
 	c.begin("SINGLE", nil)
 	c.returned(errors.New("private-error-must-not-be-serialized"))
 	c.observeUsagePresence(presence)
 	if c.freeze().UsageObservation.AdapterUsagePresence.Responses != 1 {
 		t.Fatal("error-returned call presence was counted")
 	}
+	var nilExecution *executionCollector
+	nilExecution.observeUsagePresence(presence)
+	var nilUsage *usageObservationCollector
+	nilUsage.observeAdapterUsagePresence(presence)
+
+	for _, mode := range []string{"in_flight", "error_returned", "successful_without_hook"} {
+		t.Run(mode, func(t *testing.T) {
+			c, _ := exCollector()
+			adapterObserveKnown(c, 4, 6)
+			prefix := c.freeze().UsageObservation.AdapterUsagePresence
+			if prefix == nil || !prefix.Complete || prefix.Input.Total == nil || *prefix.Input.Total != 4 || prefix.Output.Total == nil || *prefix.Output.Total != 6 {
+				t.Fatalf("known prefix was not complete before unresolved call: %+v", prefix)
+			}
+			c.begin("BATCH", nil)
+			switch mode {
+			case "in_flight":
+			case "error_returned":
+				c.returned(errors.New("private-error"))
+				c.observeUsagePresence(presence)
+			case "successful_without_hook":
+				c.returned(nil)
+			}
+			after := c.freeze()
+			aggregate := after.UsageObservation.AdapterUsagePresence
+			if after.CallsBegun != 2 || aggregate == nil || aggregate.Responses != 1 || aggregate.Input.Total != nil || aggregate.Output.Total != nil || aggregate.Complete {
+				t.Fatalf("all-begun-call coverage guard failed for %s: %+v", mode, aggregate)
+			}
+		})
+	}
 }
 
 func TestAdapterUsagePresenceOverflowAndOwnedSnapshots(t *testing.T) {
-	t.Run("sum_overflow_is_side_independent", func(t *testing.T) {
+	t.Run("input_sum_overflow_with_output_total", func(t *testing.T) {
 		c, _ := exCollector()
-		c.usage.adapterPresence = &adapterUsagePresenceCollector{inputSum: math.MaxInt64}
-		zero := int64(0)
-		adapterObserveReturned(c, adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire,
-			adapterPresenceCount(ai.AIUsagePresenceKnown, &zero), adapterPresenceCount(ai.AIUsagePresenceKnown, &zero), true))
+		adapterObserveKnown(c, math.MaxInt64, 0)
+		adapterObserveKnown(c, 1, 0)
 		aggregate := c.freeze().UsageObservation.AdapterUsagePresence
 		if aggregate == nil || !aggregate.Input.SumOverflow || aggregate.Input.Total != nil || aggregate.Output.SumOverflow || aggregate.Output.Total == nil || *aggregate.Output.Total != 0 || aggregate.Complete {
-			t.Fatalf("side sum overflow handling mismatch: %+v", aggregate)
+			t.Fatalf("input sum overflow did not preserve the safe output total: %+v", aggregate)
 		}
 	})
-	t.Run("counter_saturates", func(t *testing.T) {
+	t.Run("output_sum_overflow_with_input_total", func(t *testing.T) {
 		c, _ := exCollector()
-		c.usage.adapterPresence = &adapterUsagePresenceCollector{}
-		c.usage.adapterPresence.r.Input.Known = math.MaxInt64
-		one := int64(1)
-		adapterObserveReturned(c, adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire,
-			adapterPresenceCount(ai.AIUsagePresenceKnown, &one), adapterPresenceCount(ai.AIUsagePresenceAbsent, nil), true))
+		adapterObserveKnown(c, 0, math.MaxInt64)
+		adapterObserveKnown(c, 0, 1)
 		aggregate := c.freeze().UsageObservation.AdapterUsagePresence
-		if aggregate == nil || !aggregate.CounterOverflow || aggregate.Input.Known != math.MaxInt64 || aggregate.Input.Total != nil || aggregate.Output.Total != nil {
-			t.Fatalf("counter wrapped or overflow totals escaped: %+v", aggregate)
+		if aggregate == nil || !aggregate.Output.SumOverflow || aggregate.Output.Total != nil || aggregate.Input.SumOverflow || aggregate.Input.Total == nil || *aggregate.Input.Total != 0 || aggregate.Complete {
+			t.Fatalf("output sum overflow did not preserve the safe input total: %+v", aggregate)
 		}
-		encoded, err := json.Marshal(aggregate)
+	})
+	t.Run("boundary_plus_zero_is_valid", func(t *testing.T) {
+		c, _ := exCollector()
+		adapterObserveKnown(c, math.MaxInt64, math.MaxInt64)
+		adapterObserveKnown(c, 0, 0)
+		aggregate := c.freeze().UsageObservation.AdapterUsagePresence
+		if aggregate == nil || aggregate.Input.SumOverflow || aggregate.Output.SumOverflow || !aggregate.Complete || aggregate.Input.Total == nil || *aggregate.Input.Total != math.MaxInt64 || aggregate.Output.Total == nil || *aggregate.Output.Total != math.MaxInt64 {
+			t.Fatalf("boundary plus zero was rejected: %+v", aggregate)
+		}
+	})
+	t.Run("all_fixed_fields_maximum_width_bound", func(t *testing.T) {
+		maxInput, maxOutput := int64(math.MaxInt64), int64(math.MaxInt64)
+		side := func(total *int64) adapterUsagePresenceSideReceipt {
+			return adapterUsagePresenceSideReceipt{Known: math.MaxInt64, Absent: math.MaxInt64, Null: math.MaxInt64, Invalid: math.MaxInt64, Unavailable: math.MaxInt64, Unobserved: math.MaxInt64, SumOverflow: true, Total: total}
+		}
+		maxReceipt := adapterUsagePresenceReceipt{Version: adapterUsagePresenceVersion, Basis: adapterUsagePresenceBasis, Responses: math.MaxInt64, Input: side(&maxInput), Output: side(&maxOutput), CounterOverflow: true, Complete: true}
+		encoded, err := json.Marshal(maxReceipt)
 		if err != nil || len(encoded) > 1200 {
-			t.Fatalf("maximum counter receipt exceeded fixed bound: len=%d err=%v", len(encoded), err)
+			t.Fatalf("maximum-width fixed receipt exceeded bound: len=%d err=%v", len(encoded), err)
+		}
+	})
+	t.Run("response_and_status_counters_saturate", func(t *testing.T) {
+		for _, item := range []struct {
+			name   string
+			status ai.AIUsagePresenceStatus
+			set    func(*adapterUsagePresenceSideReceipt)
+			check  func(adapterUsagePresenceSideReceipt) int64
+		}{
+			{name: "responses", status: ai.AIUsagePresenceKnown, set: func(*adapterUsagePresenceSideReceipt) {}, check: func(adapterUsagePresenceSideReceipt) int64 { return 0 }},
+			{name: "known", status: ai.AIUsagePresenceKnown, set: func(s *adapterUsagePresenceSideReceipt) { s.Known = math.MaxInt64 }, check: func(s adapterUsagePresenceSideReceipt) int64 { return s.Known }},
+			{name: "absent", status: ai.AIUsagePresenceAbsent, set: func(s *adapterUsagePresenceSideReceipt) { s.Absent = math.MaxInt64 }, check: func(s adapterUsagePresenceSideReceipt) int64 { return s.Absent }},
+			{name: "null", status: ai.AIUsagePresenceNull, set: func(s *adapterUsagePresenceSideReceipt) { s.Null = math.MaxInt64 }, check: func(s adapterUsagePresenceSideReceipt) int64 { return s.Null }},
+			{name: "invalid", status: ai.AIUsagePresenceInvalid, set: func(s *adapterUsagePresenceSideReceipt) { s.Invalid = math.MaxInt64 }, check: func(s adapterUsagePresenceSideReceipt) int64 { return s.Invalid }},
+			{name: "unavailable", status: ai.AIUsagePresenceUnavailable, set: func(s *adapterUsagePresenceSideReceipt) { s.Unavailable = math.MaxInt64 }, check: func(s adapterUsagePresenceSideReceipt) int64 { return s.Unavailable }},
+			{name: "unobserved", status: "unobserved", set: func(s *adapterUsagePresenceSideReceipt) { s.Unobserved = math.MaxInt64 }, check: func(s adapterUsagePresenceSideReceipt) int64 { return s.Unobserved }},
+		} {
+			t.Run(item.name, func(t *testing.T) {
+				collector := &adapterUsagePresenceCollector{}
+				if item.name == "responses" {
+					collector.r.Responses = math.MaxInt64
+				} else {
+					item.set(&collector.r.Input)
+				}
+				var presence *ai.AIUsagePresence
+				if item.name != "unobserved" {
+					var value *int64
+					if item.status == ai.AIUsagePresenceKnown {
+						zero := int64(0)
+						value = &zero
+					}
+					presence = adapterPresence("1", ai.AIUsagePresenceSourceOpenAIWire,
+						adapterPresenceCount(item.status, value), adapterPresenceCount(ai.AIUsagePresenceAbsent, nil), true)
+				}
+				collector.observe(presence)
+				receipt := collector.freeze(1)
+				if !receipt.CounterOverflow || receipt.Input.Total != nil || receipt.Output.Total != nil {
+					t.Fatalf("counter overflow did not suppress totals: %+v", receipt)
+				}
+				if item.name == "responses" {
+					if receipt.Responses != math.MaxInt64 {
+						t.Fatalf("response counter wrapped: %+v", receipt)
+					}
+				} else if item.check(receipt.Input) != math.MaxInt64 {
+					t.Fatalf("status counter wrapped: %+v", receipt.Input)
+				}
+			})
 		}
 	})
 }

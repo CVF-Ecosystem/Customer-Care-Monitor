@@ -21,13 +21,13 @@ const (
 
 // Fixed aggregate only. It contains no provider-specific strings or per-call records.
 type adapterUsagePresenceReceipt struct {
-	Version         string                           `json:"version"`
-	Basis           string                           `json:"basis"`
-	Responses       int64                            `json:"responses"`
-	Input           adapterUsagePresenceSideReceipt  `json:"input"`
+	Version         string                          `json:"version"`
+	Basis           string                          `json:"basis"`
+	Responses       int64                           `json:"responses"`
+	Input           adapterUsagePresenceSideReceipt `json:"input"`
 	Output          adapterUsagePresenceSideReceipt `json:"output"`
-	CounterOverflow bool                             `json:"counter_overflow"`
-	Complete        bool                             `json:"complete"`
+	CounterOverflow bool                            `json:"counter_overflow"`
+	Complete        bool                            `json:"complete"`
 }
 
 type adapterUsagePresenceSideReceipt struct {
