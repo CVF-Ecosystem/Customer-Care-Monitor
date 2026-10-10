@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
 
 ## Current R073
 
-CCMAI-RUNTIME-073 DISPATCH_READY bounded saved adapter-presence UI PU01..09; Luna xhigh rehydrates and commits before-edit BUILD acknowledgment, then implements exactly five allowed source paths and commits first source before native. Root independently reviews source/test oracle before focused Vitest/forcedtypecheck. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.
+CCMAI-RUNTIME-073 BUILD after committed before-edit acknowledgment; Luna implements exactly five PU01..09 paths with source/test/native counts0 at acknowledgment, commits first source before native, then root independently reviews source and test oracle before expected focused five-spec Vitest and forced vue-tsc. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.
 
 Task-fit ledger records primary/secondary classes before BUILD; four prior accepted samples retained. R073 fresh sample pending review, not yet accepted. Root independent reviewer; no product/test edits.
 

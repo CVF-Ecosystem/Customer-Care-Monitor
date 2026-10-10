@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -262,7 +262,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-073 DISPATCH_READY bounded saved adapter-presence UI PU01..09; Luna xhigh rehydrates and commits before-edit BUILD acknowledgment, then implements exactly five allowed source paths and commits first source before native. Root independently reviews source/test oracle before focused Vitest/forcedtypecheck. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.",
+    "nextObjective": "CCMAI-RUNTIME-073 BUILD after committed before-edit acknowledgment; Luna implements exactly five PU01..09 paths with source/test/native counts0 at acknowledgment, commits first source before native, then root independently reviews source and test oracle before expected focused five-spec Vitest and forced vue-tsc. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.",
     "assessment": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
     "buildDispatched": true,
@@ -1012,12 +1012,13 @@
     "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
   },
   "savedAdapterPresenceUi": {
-    "status": "DISPATCH_READY",
-    "phase": "WORK_ORDER",
+    "status": "BUILD",
+    "phase": "BUILD",
     "riskCeiling": "R1",
     "spec": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
     "sourceImplementation": "NOT_STARTED",
+    "buildAcknowledgment": "Committed before source/test edits: Luna xhigh IMPLEMENTATION_WORKER/source COMMIT_STEWARD; source0, NEW tests0, worker native0; root gate units46/46 in38.250s inherited unchanged tooling; first source commit and root static approval required before native.",
     "independentAcceptance": "PENDING",
     "freeze": "OPEN",
     "firstSourceCommit": null,

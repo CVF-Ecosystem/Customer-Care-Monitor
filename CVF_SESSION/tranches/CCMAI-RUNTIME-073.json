@@ -70,8 +70,8 @@
     "currentPermittedTypecheckInvocations": 0,
     "currentPermittedGoInvocations": 0
   },
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
   "baseCommit": "bf8e151bfbf7e511136794cb078be6836489cf3b",
   "buildCommit": null,
@@ -80,7 +80,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
