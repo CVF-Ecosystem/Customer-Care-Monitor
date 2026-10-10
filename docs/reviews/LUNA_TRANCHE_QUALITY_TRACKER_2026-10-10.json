@@ -311,7 +311,8 @@
       },
       "independentReviewCommit": "e519b14f70144e9ae028eab17974c607edd40ce7",
       "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
-      "closureNativeInvocations": 0
+      "closureNativeInvocations": 0,
+      "localClosureCommit": "d32c1c7cb1193fea0b0c7e3f9f3c2473c7074b10"
     }
   ],
   "taskFitClassification": {
