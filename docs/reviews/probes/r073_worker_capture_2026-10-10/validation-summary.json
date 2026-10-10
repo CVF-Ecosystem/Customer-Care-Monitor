@@ -1,0 +1,34 @@
+{
+  "status": "BOTH_COMMANDS_EXITED_ZERO",
+  "sourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
+  "workspaceHead": "96246a060b46318a9d8e0de319c26bfef870fcb3",
+  "vitestExitCode": 0,
+  "vueTscExitCode": 0,
+  "vitestReport": {
+    "file": "vitest-report.json",
+    "numTotalTestSuites": 10,
+    "numPassedTestSuites": 10,
+    "numFailedTestSuites": 0,
+    "numPendingTestSuites": 0,
+    "numTotalTests": 49,
+    "numPassedTests": 49,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "success": true
+  },
+  "sourceUnchangedBeforeToAfterVitest": true,
+  "sourceUnchangedBeforeToAfterTypecheck": true,
+  "nativeInvocations": 2,
+  "sourceSnapshots": [
+    "source-before-native.json",
+    "source-after-vitest.json",
+    "source-after-vue-tsc.json"
+  ],
+  "rawLogs": [
+    "vitest.stdout.log",
+    "vitest.stderr.log",
+    "vue-tsc.stdout.log",
+    "vue-tsc.stderr.log"
+  ]
+}

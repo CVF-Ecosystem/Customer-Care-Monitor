@@ -59,26 +59,27 @@
     "aggregateMaxTypecheck": 4,
     "maxGo": 0,
     "automaticRetries": 0,
-    "workerUsedVitest": 0,
-    "workerUsedTypecheck": 0,
+    "workerUsedVitest": 1,
+    "workerUsedTypecheck": 1,
     "reviewerUsedVitest": 0,
     "reviewerUsedTypecheck": 0,
-    "aggregateUsedVitest": 0,
-    "aggregateUsedTypecheck": 0,
+    "aggregateUsedVitest": 1,
+    "aggregateUsedTypecheck": 1,
     "usedGo": 0,
     "currentPermittedVitestInvocations": 1,
     "currentPermittedTypecheckInvocations": 1,
     "currentPermittedGoInvocations": 0
   },
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
   "baseCommit": "bf8e151bfbf7e511136794cb078be6836489cf3b",
   "buildCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
   "reviewEvidence": [
     "docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md",
     "docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
-    "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md"
+    "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+    "docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json"
   ],
   "disposition": "PENDING",
   "freeze": "OPEN",
@@ -88,7 +89,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",

@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
 
 ## Current R073
 
-CCMAI-RUNTIME-073 BUILD validation at repairedsource3a05b50 STATIC_APPROVED F1..F3 closed; Luna IMPLEMENTATION_WORKER runs exactly1focused Vitest five specs and1forcedvue-tsc with own raw capture, source locked, source/workspaceHEAD labels distinct, failures stop/noauto. Root audits packet then independently captures once before formal REVIEW. Native budgets unchanged reservesconditional; no provider/network/DB/browser/fullsuite/publication, broader billing/live/roadmap OPEN and accounts parked.
+CCMAI-RUNTIME-073 REVIEW_PENDING: worker packet independently audited49/49 plus forcedtypecheck PASS at source3a05b50; root independent REVIEWER runs exactly1focused Vitest five specs and1forcedvue-tsc using own capture, source locked, failures stop/noauto. Formal review then scoped local UI closure and Luna task-fit update; reserves conditional. No provider/network/DB/browser/fullsuite/publication; broader roadmap/billing/live OPEN, accounts parked.
 
 Task-fit ledger records primary/secondary classes before BUILD; four prior accepted samples retained. R073 fresh sample pending review, not yet accepted. Root independent reviewer; no product/test edits.
 

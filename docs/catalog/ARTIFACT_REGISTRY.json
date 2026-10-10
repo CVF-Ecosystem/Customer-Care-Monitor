@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R073 BUILD validation repairedsource3a05b50 static approved; worker first then independent root, source locked/native pending."
+      "description": "R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
     },
     {
       "id": "r060-work-order",
@@ -5546,14 +5546,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_073.md",
       "status": "ACTIVE",
-      "description": "R073 BUILD work order F1..F3 closed statically at3a05b50; focused validation permitted, formal REVIEW pending."
+      "description": "R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
     },
     {
       "id": "r073-planning-b003",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-073.json",
       "status": "ACTIVE",
-      "description": "R073 BUILD record repairedsource3a05b50 static approved; one test/presentation repair, algorithm unchanged."
+      "description": "R073 REVIEW_PENDING / REVIEW, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
     },
     {
       "id": "r073-review-c001",
@@ -5575,6 +5575,125 @@
       "path": "docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
       "status": "ACTIVE",
       "description": "R073 repairedsource3a05b50 F1..F3 closed static; worker own49expected/forcedtypecheck pending, no original native run."
+    },
+    {
+      "id": "r073-evidence-d-001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/capture-files.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/capture-manifest.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/capture_worker_native.ps1",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/git-status-after.txt",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/git-status-before.txt",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/source-after-vitest.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/source-after-vue-tsc.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/source-before-native.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/validation-summary.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest-report.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.process.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vitest.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.process.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stderr.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_capture_2026-10-10/vue-tsc.stdout.log",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
+    },
+    {
+      "id": "r073-evidence-d-017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r073_worker_independent_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Worker authored native capture and independent root audit; source3a05b50, focused49/49 and forced typecheck, bounded UI proof only."
     }
   ]
 }

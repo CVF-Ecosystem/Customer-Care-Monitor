@@ -1,0 +1,43 @@
+{
+  "label": "before-native",
+  "capturedAtUtc": "2026-10-10T07:50:11.8314555+00:00",
+  "sourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928",
+  "workspaceHead": "96246a060b46318a9d8e0de319c26bfef870fcb3",
+  "files": [
+    {
+      "path": "frontend/src/views/Jobs/job-detail/adapter-usage-presence.ts",
+      "bytes": 5546,
+      "physicalSha256": "1630137680fb1b09d6cddd5ba87a80b2f35437ee9934fc158388c06c2afda313",
+      "gitBlobAtSourceCommit": "03ede8aeddc96f93dec73a2aea445b8a43e01c61",
+      "gitBlobCurrent": "03ede8aeddc96f93dec73a2aea445b8a43e01c61"
+    },
+    {
+      "path": "frontend/src/__tests__/adapter-usage-presence.spec.ts",
+      "bytes": 28228,
+      "physicalSha256": "ce7d1054e349bcd3325b1fb3948ed0ecb0a4299b4d76b107830bdabe3458a836",
+      "gitBlobAtSourceCommit": "9e7409505fb9da6b399f45cb7e08d3b6b6c34efd",
+      "gitBlobCurrent": "9e7409505fb9da6b399f45cb7e08d3b6b6c34efd"
+    },
+    {
+      "path": "frontend/src/components/ui/RunObservationPanel.vue",
+      "bytes": 3789,
+      "physicalSha256": "323325099a64bbbd72740e73965570ba6c8ee3de836e514c0963307a24144ab2",
+      "gitBlobAtSourceCommit": "3c36a98f3d03418c978653e152539d844c62f121",
+      "gitBlobCurrent": "3c36a98f3d03418c978653e152539d844c62f121"
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "bytes": 41677,
+      "physicalSha256": "d8d859ad51fba1f309cb8b7e3dd7415f21f6698bc0b26e8c9ebacaeecb71ae95",
+      "gitBlobAtSourceCommit": "65c867e59170be94f4d26b11b453789cec1f6910",
+      "gitBlobCurrent": "65c867e59170be94f4d26b11b453789cec1f6910"
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "bytes": 48433,
+      "physicalSha256": "91b2868e6077a62fd70e104e15056fb3275a6c4a0d5b35c32add747652964578",
+      "gitBlobAtSourceCommit": "9f13453f87cf18b8d89729c7bfc8b13b6887517c",
+      "gitBlobCurrent": "9f13453f87cf18b8d89729c7bfc8b13b6887517c"
+    }
+  ]
+}

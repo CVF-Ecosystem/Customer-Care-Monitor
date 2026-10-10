@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-073 saved adapter-presence UI
 
-Status: BUILD
+Status: REVIEW_PENDING
 
 Risk ceiling: R1. Root work-order author / independent REVIEWER / CLOSER / metadata COMMIT_STEWARD; fresh Luna xhigh implementation/repair/source COMMIT_STEWARD. Owner next and standing delegation authorize bounded local work and independent closure, no repeated owner checkpoint.
 
@@ -27,3 +27,5 @@ Firstsource53abf11 static CHANGES_REQUIRED F1/F2 NEW-test oracle/control, F3 new
 Repair1 BUILD acknowledgment: worker explicitly rehydrated/declared REPAIR_WORKER and accepted F1..F3 scope; root metadata steward records ACK before any repair/native edits. No further worker ACK commit or operator checkpoint required.
 
 [Repaired static approval](../reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md) at3a05b50 closes F1..F3; worker validation role/source locked and exactly1Vitest/1forcedTC permitted before independent root capture. Formal review pending, no native result yet.
+
+Fresh canonical rehydration/doctor25/1 completed, BOOTSTRAP_MIGRATION_PENDING and pin note retained. BUILD -> REVIEW; worker actual oneVitest49/49 five files and oneforcedtypecheck exit0, packet16 independently audited. Original source NOT_RUN; repair one shared test/presentation round, semantic0. Root source/test edits0; exactly one root invocation each released, source locked. Capture limitations retained, no additional worker repair or native.
