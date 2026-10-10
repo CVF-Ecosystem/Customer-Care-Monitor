@@ -415,7 +415,8 @@
       "publicationStatus": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
       "publishedClosureCommit": null,
       "localClosureCommit": "4fb63a0040282ac145dd2f693626d66e1082dca8"
-    }
+    },
+    "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",

@@ -15,6 +15,8 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 CCMAI-RUNTIME-072 FROZEN legacy UI compatibility-only at source08bab78/reviewe805739: worker/root each21/21 Vitest and forcedvue-tsc PASS, product unchanged after one pre-runtime NEW-test repair; root projection drift reconciled6400b06, raw/source/seed seals retained, no further native/source/push. Root ORCHESTRATOR next audits remaining acceptance/dependencies and prepares separate bounded work order before new source/runtime/provider scope. FullS2/S3/S5/globalF02/live/queue-realAnalyzer/UIpresencebillingpermission OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 
+Task-fit follow-up: `docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md`; four historical implementation samples, normalized product/test/evidence/root attribution. Root ORCHESTRATOR/REVIEWER owns assessment; Luna analyst read-only. No new runtime/tranche/model configuration/publication; R072 closure and budgets unchanged.
+
 ## Startup Order
 
 1. Read `.cvf/manifest.json` and `.cvf/policy.json`.

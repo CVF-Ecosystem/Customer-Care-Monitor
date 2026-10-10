@@ -37,7 +37,16 @@
         "one panel key diagnostic"
       ],
       "finalLocalEvidence": "root316PASS; M01/M02 healthy controls/restored17PASS; actual4visual captures accepted",
-      "modelTokenCost": null
+      "modelTokenCost": null,
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "inherited_ui_completion",
+        "productSemanticRepairRounds": null,
+        "newTestRepairRounds": null,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true
+      }
     },
     {
       "id": "CCMAI-RUNTIME-068",
@@ -71,7 +80,16 @@
       "supplementalAttempts": 1,
       "workerNativeTestSeconds": 52.265,
       "rootNativeTestSeconds": 57.29,
-      "modelTokenCost": null
+      "modelTokenCost": null,
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "pinned_sdk_integration",
+        "productSemanticRepairRounds": 1,
+        "newTestRepairRounds": null,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true
+      }
     },
     {
       "id": "CCMAI-RUNTIME-071",
@@ -135,7 +153,17 @@
       "rootNativeCompileSeconds": 12.016206699889153,
       "rootNativeTestSeconds": 39.64087379979901,
       "closureEvidence": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
-      "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2"
+      "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2",
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "bounded_product",
+        "productSemanticRepairRounds": 0,
+        "newTestRepairRounds": 1,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true,
+        "legacyAcceptedProductFindingsClass": "NEW_TEST_ORACLE_SENSITIVITY"
+      }
     },
     {
       "id": "CCMAI-RUNTIME-072",
@@ -188,7 +216,107 @@
       "rootNativeTypecheckSeconds": 50.67406480014324,
       "independentReviewCommit": "e80573944b40da0210c2631fb34754c30edb1beb",
       "closureEvidence": "docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md",
-      "closureNativeInvocations": 0
+      "closureNativeInvocations": 0,
+      "normalizedQuality": {
+        "provenance": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+        "primaryTaskClass": "bounded_product",
+        "productSemanticRepairRounds": 0,
+        "newTestRepairRounds": 1,
+        "unknownCountsReason": "Null means not standardized in historical evidence; not zero.",
+        "historicalFieldsRetained": true,
+        "rootFindingsExcludedFromWorkerProductQuality": true,
+        "legacyAcceptedProductFindingsClass": "NEW_TEST_ORACLE_SENSITIVITY"
+      }
     }
-  ]
+  ],
+  "taskFitClassification": {
+    "schemaVersion": "1",
+    "report": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+    "basis": "ROOT_REVIEW_OF_EXISTING_ACCEPTED_EVIDENCE_WITH_LUNA_READONLY_AUDIT",
+    "actualRoutingChanged": false,
+    "provisional": true,
+    "uniqueImplementationSamples": 4,
+    "sampleOverlap": "Task classes overlap; do not sum their sample counts. Read-only retrospective audit is not a fifth implementation sample.",
+    "classes": [
+      {
+        "id": "bounded_product",
+        "tranches": [
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072"
+        ],
+        "sampleCount": 2,
+        "assignment": "PREFER_FOR_BOUNDED_SPEC_WITH_INDEPENDENT_REVIEW",
+        "confidence": "REPEATED_NARROW_SIGNAL_LOW_GENERAL_CONFIDENCE"
+      },
+      {
+        "id": "readonly_contract_audit",
+        "tranches": [
+          "CCMAI-RUNTIME-067"
+        ],
+        "sampleCount": 1,
+        "assignment": "TRY_BOUNDED_READONLY_AUDIT_FINDINGS_VERIFIED_BY_ROOT",
+        "confidence": "LOW_ONE_INHERITED_SAMPLE"
+      },
+      {
+        "id": "directed_repair",
+        "tranches": [
+          "CCMAI-RUNTIME-068",
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072"
+        ],
+        "sampleCount": 3,
+        "assignment": "SUITABLE_FOR_REVIEWER_SCOPED_REPAIR",
+        "confidence": "LOW_UNMATCHED_DIRECTED_SAMPLES"
+      },
+      {
+        "id": "test_oracle_sensitivity",
+        "tranches": [
+          "CCMAI-RUNTIME-067",
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072"
+        ],
+        "sampleCount": 3,
+        "assignment": "AUTHOR_WITH_SEPARATE_CONTRACT_ORACLE_REVIEW",
+        "confidence": "REPEATED_FINDINGS_NO_MODEL_RANKING"
+      },
+      {
+        "id": "pinned_sdk_integration",
+        "tranches": [
+          "CCMAI-RUNTIME-068"
+        ],
+        "sampleCount": 1,
+        "assignment": "REQUIRE_EXACT_API_REVIEW_AND_CAPTURED_COMPILE",
+        "confidence": "LOW_ONE_SAMPLE"
+      },
+      {
+        "id": "evidence_capture",
+        "tranches": [
+          "CCMAI-RUNTIME-067",
+          "CCMAI-RUNTIME-068",
+          "CCMAI-RUNTIME-071",
+          "CCMAI-RUNTIME-072"
+        ],
+        "sampleCount": 4,
+        "assignment": "REQUIRE_CAPTURE_CONTRACT_AND_INDEPENDENT_RAW_AUDIT",
+        "confidence": "LOW_MIXED_ASSISTANCE"
+      },
+      {
+        "id": "independent_closure_live_system",
+        "tranches": [],
+        "sampleCount": 0,
+        "assignment": "INSUFFICIENT_EVIDENCE_FOR_MODEL_SELECTION",
+        "confidence": "NOT_ESTABLISHED"
+      }
+    ],
+    "futureCollection": [
+      "primary/secondary task class before dispatch",
+      "fresh/inherited and integration complexity",
+      "first committed source and first actual compile/positive",
+      "product vs test vs evidence vs root findings",
+      "separate semantic/test repair counts and parent assistance",
+      "final disposition after independent review"
+    ],
+    "telemetry": "Token/cost/model-time not measured; native walltime cannot rank efficiency.",
+    "legacyFieldWarning": "R071/R072 acceptedProductFindings are NEW-test findings. R071 historical productRepairRounds1 means source/test repair, not product semantics. Retained verbatim; use normalizedQuality."
+  }
 }

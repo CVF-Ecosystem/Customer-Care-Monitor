@@ -5505,6 +5505,13 @@
       "path": "docs/reviews/probes/r072_committed_packet_seal_2026-10-10.json",
       "status": "ACTIVE",
       "description": "Postcommit13file packet seal: native raw bytes identical, metadata wrapper newline differences explicit."
+    },
+    {
+      "id": "luna-task-fit-classification-a001",
+      "family": "continuity",
+      "path": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Provisional empirical Luna task-fit matrix for four reviewed tranches; normalized product/test/root attribution, no model-config change or unmatched Sol ranking."
     }
   ]
 }

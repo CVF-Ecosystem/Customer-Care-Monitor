@@ -191,6 +191,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred.: `docs/reviews/learnings/feedback_archive_byte_manifest.md`
 - Shared independently verified fixture-domain and stored-prefix learning; upstream deferred.: `docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md`
 - Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence.: `docs/reviews/learnings/feedback_minor_reviewer_repairs.md`
+- Provisional empirical Luna task-fit matrix for four reviewed tranches; normalized product/test/root attribution, no model-config change or unmatched Sol ranking.: `docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof.: `docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json`
 - CVF governance policy.: `.cvf/policy.json`
