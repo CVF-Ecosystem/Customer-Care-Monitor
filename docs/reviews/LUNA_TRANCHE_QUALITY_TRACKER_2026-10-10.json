@@ -141,10 +141,10 @@
       "id": "CCMAI-RUNTIME-072",
       "workload": "One-line optional opaque-field legacy UI compatibility and NEW projection tests",
       "start": "FRESH_LUNA_NO_SOL_DRAFT",
-      "status": "REVIEW_PENDING",
+      "status": "REVIEW_PASS",
       "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
-      "firstCompile": "WORKER_FORCED_TYPECHECK_PASS_ON_REPAIRED_TEST_SOURCE",
-      "firstPositive": "WORKER21/21PASS_ON_REPAIRED_TEST_SOURCE",
+      "firstCompile": "BOTH_ROLES_FORCED_TYPECHECK_PASS_ON_REPAIRED_TEST_SOURCE",
+      "firstPositive": "BOTH_ROLES21/21PASS_ON_REPAIRED_TEST_SOURCE",
       "acceptedProductFindings": [
         "T1 P1 exact legacy expected projection adds three non-returned parsing keys",
         "T2 P2 negative legacy validation lacks extension-present cases"
@@ -152,7 +152,7 @@
       "sourceTestRepairRounds": 1,
       "productSemanticRepairRounds": 0,
       "parentSourceTestEdits": 0,
-      "productQuality": "PRODUCT_LINE_STATICALLY_CONFORMANT; TESTS_NEED_REPAIR",
+      "productQuality": "INDEPENDENT_REVIEW_PASS; first product unchanged after test-only repair",
       "workerEvidenceFindings": [
         "Minor handback labels workspace metadata HEAD5550485 as sourcecommit; root clarifies source08bab78 using correct blobs/hashes, no rerun or code repair."
       ],
@@ -173,7 +173,18 @@
       "acceptedRepairRounds": 1,
       "repairCompleted": true,
       "workerVitestInvocations": 1,
-      "workerTypecheckInvocations": 1
+      "workerTypecheckInvocations": 1,
+      "finalDisposition": "REVIEW_PASS_LOCAL_LEGACY_COMPATIBILITY",
+      "reviewerVitestInvocations": 1,
+      "reviewerTypecheckInvocations": 1,
+      "automaticRetries": 0,
+      "unexpectedNativeFailures": 0,
+      "assessment": "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "finalLocalEvidence": "Each role21/21 and forcedtypecheck PASS; protected381/382, root source111stable; Go0",
+      "workerNativeVitestSeconds": 93.6809694,
+      "workerNativeTypecheckSeconds": 62.3097679,
+      "rootNativeVitestSeconds": 23.626717099919915,
+      "rootNativeTypecheckSeconds": 50.67406480014324
     }
   ]
 }

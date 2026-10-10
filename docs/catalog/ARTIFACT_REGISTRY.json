@@ -5421,6 +5421,69 @@
       "path": "docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log",
       "status": "ACTIVE",
       "description": "Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries."
+    },
+    {
+      "id": "r072-review-c003",
+      "family": "continuity",
+      "path": "docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent UC01..07 REVIEW_PASS; each role21/21 and forcedtypecheck, bounded local compatibility."
+    },
+    {
+      "id": "r072-review-c004",
+      "family": "continuity",
+      "path": "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Per-tranche Luna assessment: product stable, one pre-runtime NEW-test repair; unmatched Sol comparison."
+    },
+    {
+      "id": "r072-review-c005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Independent raw/source/seed snapshot audit; worker native blob bytes and metadata newline basis explicit."
+    },
+    {
+      "id": "r072-evidence-e001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/capture.json",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.report.json",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-evidence-e006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
     }
   ]
 }

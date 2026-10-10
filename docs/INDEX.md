@@ -560,6 +560,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.capture.json`
 - Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stderr.log`
 - Worker raw first21-test/forced-typecheck packet; source08bab78, workspace metadataHEAD5550485, no retries.: `docs/reviews/probes/r072_worker_capture_2026-10-10/vue-tsc.stdout.log`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/capture.json`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stderr.bin`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/typecheck.stdout.bin`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.report.json`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stderr.bin`
+- Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable.: `docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stdout.bin`
 - Immutable R1 legacy UI extension compatibility seed; fresh Luna xhigh worker, root independent reviewer.: `CVF_SESSION/authority/CCMAI-RUNTIME-072.json`
 - R072 bounded optional ignored-field contract; preserves all legacy validation and numeric semantics.: `docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md`
 - Before-source physical baseline for protected frontend/backend/authority files.: `docs/reviews/probes/r072_protected_baseline_2026-10-10.json`
@@ -568,6 +574,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R072 dispatcher scope and status record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-072.json`
 - First-source static T1/T2 NEW test findings before runtime; product line accepted, same-scope repair1.: `docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
 - T1/T2 settled on repaired test; exact product preserved, bounded independent captures next.: `docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
+- Independent UC01..07 REVIEW_PASS; each role21/21 and forcedtypecheck, bounded local compatibility.: `docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md`
+- Per-tranche Luna assessment: product stable, one pre-runtime NEW-test repair; unmatched Sol comparison.: `docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
+- Independent raw/source/seed snapshot audit; worker native blob bytes and metadata newline basis explicit.: `docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
