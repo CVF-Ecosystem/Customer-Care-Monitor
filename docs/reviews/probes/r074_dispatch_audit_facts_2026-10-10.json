@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0",
+  "auditId": "CCMAI-RUNTIME-074",
+  "auditDate": "2026-10-10",
+  "status": "READY_FOR_ROOT_REGISTRATION_INDEPENDENT_REVIEW_PENDING",
+  "classification": "R1_DOCUMENTARY_SOURCE_AUDIT",
+  "sourceSnapshot": {
+    "implementationBaseline": "9fc86fe012d1cc8c1aeb7d9e7a55e79c1c032c2d",
+    "documentaryHeadAtAudit": "67d8aa2eb32e80337881b342abb447f38c620a9d",
+    "backendDiffFromBaselineAtDocumentaryHead": "EMPTY",
+    "sourceIdentityRecord": "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json",
+    "identityScope": "18 Go files directly relied on by this audit; not a full re-hash of the protected inventory"
+  },
+  "method": {
+    "readOnlySourceReview": true,
+    "applicationTestsRunByWorker": 0,
+    "providerCalls": 0,
+    "databaseOrChannelOperations": 0,
+    "notificationOperations": 0,
+    "runtimeOrDeploymentProof": false,
+    "sourceOnlyScope": "MCP tools/call through dispatch, reservation, worker, Analyzer, terminal and notification seams; compare HTTP, scheduler and agent entrypoints"
+  },
+  "findings": [
+    {
+      "id": "DA01",
+      "category": "CONFIRMED_SOURCE_IDENTITY",
+      "topic": "Locked implementation baseline and documentary snapshot",
+      "facts": [
+        "The implementation baseline is 9fc86fe012d1cc8c1aeb7d9e7a55e79c1c032c2d; the separately recorded documentary HEAD is 67d8aa2eb32e80337881b342abb447f38c620a9d.",
+        "The inspected backend diff between those commits is empty, and all 18 directly relied-on source files have matching Git blobs and physical SHA256 values in the identity artifact.",
+        "The identity artifact does not claim to re-hash the full protected inventory."
+      ],
+      "identityRecord": "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json"
+    },
+    {
+      "id": "DA02",
+      "category": "CONFIRMED_SOURCE_FACT",
+      "topic": "MCP authentication, authorization, tenant lookup, arguments and dispatch",
+      "facts": [
+        "MCP routes are mounted; bearer-token auth places the user identity in request context; tools/call dispatches to the tool handler.",
+        "The tool handler checks policy and authorization, and the trigger handler performs an own-tenant job lookup before dispatch.",
+        "The MCP trigger accepts tenant_id and job_id, rejects extra arguments, and passes mode since_last to jobdispatch.Default.Dispatch."
+      ],
+      "citations": [
+        { "path": "backend/api/router.go", "lines": "246-250", "symbol": "SetupMCPRoutes registration" },
+        { "path": "backend/mcp/server.go", "lines": "53-80", "symbol": "bearer authentication" },
+        { "path": "backend/mcp/server.go", "lines": "96-128", "symbol": "handleMCPRequest" },
+        { "path": "backend/mcp/handlers.go", "lines": "32-99", "symbol": "handleToolsCall" },
+        { "path": "backend/mcp/handlers.go", "lines": "111-158", "symbol": "tool policies and authorizeToolCall" },
+        { "path": "backend/mcp/handlers.go", "lines": "330-360", "symbol": "triggerArgs and toolTriggerJob" },
+        { "path": "backend/mcp/tools.go", "lines": "159-168", "symbol": "cqa_trigger_job schema and description" }
+      ]
+    },
+    {
+      "id": "DA03",
+      "category": "CONFIRMED_SOURCE_FACT",
+      "topic": "Reservation and handoff acknowledgment",
+      "facts": [
+        "Dispatch validates configuration, reserves a JobRun with a 30-minute timeout, then invokes the configured Start function or StartWorker.",
+        "A successful MCP result includes the persisted reservation run_id once the start function returns without error.",
+        "The worker is launched in a process-local goroutine; acknowledgment does not await Analyzer completion, result publication, notification delivery, or restart recovery.",
+        "Busy and missing reservations are distinct; other reservation and start errors map to a generic start error. A start error triggers an abort attempt."
+      ],
+      "citations": [
+        { "path": "backend/jobdispatch/dispatch.go", "lines": "23-45", "symbol": "timeouts, errors, Params, StartFunc" },
+        { "path": "backend/jobdispatch/dispatch.go", "lines": "66-123", "symbol": "Service.Dispatch and AbortReservation" },
+        { "path": "backend/jobdispatch/dispatch.go", "lines": "125-148", "symbol": "StartWorker" },
+        { "path": "backend/mcp/handlers.go", "lines": "335-360", "symbol": "toolTriggerJob response mapping" }
+      ]
+    },
+    {
+      "id": "DA04",
+      "category": "CONFIRMED_SOURCE_FACT",
+      "topic": "Ownership, context, terminal state and release",
+      "facts": [
+        "Reservation first uses a process-local coordinator keyed by tenant/job and then a database transaction that checks running rows and inserts a running JobRun.",
+        "MCP dispatch starts reservation with context.Background and the service timeout; it does not pass the incoming MCP request context to the reservation.",
+        "RunReserved validates and consumes the reservation before execution. Analyzer ownership controls publication/cancellation and terminal transitions, then releases local ownership after execution.",
+        "Worker panic recovery attempts abort. A persisted running row is not, by itself, evidence of queue or crash recovery."
+      ],
+      "citations": [
+        { "path": "backend/jobdispatch/dispatch.go", "lines": "66-115", "symbol": "Service.Dispatch context and reservation ordering" },
+        { "path": "backend/jobdispatch/dispatch.go", "lines": "125-148", "symbol": "StartWorker panic recovery" },
+        { "path": "backend/engine/job_run_ownership.go", "lines": "107-190", "symbol": "reserve and admitJobRun" },
+        { "path": "backend/engine/job_run_ownership.go", "lines": "193-315", "symbol": "release, publish, terminal and cancellation methods" },
+        { "path": "backend/engine/analyzer_modes.go", "lines": "148-183", "symbol": "RunReserved" },
+        { "path": "backend/engine/analyzer.go", "lines": "39-90", "symbol": "execute and executeReserved" }
+      ],
+      "inferences": [
+        "The inspected handoff is in-process asynchronous execution, not a durable queue.",
+        "The inspected process-local ownership plus persisted row does not prove multi-process coordination, exactly-once execution, or restart recovery."
+      ]
+    },
+    {
+      "id": "DA05",
+      "category": "CONFIRMED_SOURCE_FACT",
+      "topic": "Entrypoint comparison",
+      "facts": [
+        "HTTP manual trigger adapts to the shared dispatch service and exposes modes/date/cap options that MCP does not expose.",
+        "HTTP test-run reserves and starts a worker directly, bypassing jobdispatch.Service.",
+        "Cron/after-sync and agent analysis call Analyzer.RunJob directly and share the engine ownership seam without using jobdispatch.Service.",
+        "Agent channel sync uses SyncEngine and a separate SyncReservation lifecycle."
+      ],
+      "citations": [
+        { "path": "backend/api/handlers/jobs.go", "lines": "402-452", "symbol": "TriggerJob and triggerDispatcher" },
+        { "path": "backend/api/handlers/jobs.go", "lines": "504-544", "symbol": "parseTriggerParams" },
+        { "path": "backend/api/handlers/jobs.go", "lines": "368-400,462-497,555-562", "symbol": "test-run, reservation and worker start" },
+        { "path": "backend/engine/scheduler.go", "lines": "279-363", "symbol": "runScheduledJob and TriggerAfterSyncJobs" },
+        { "path": "backend/api/handlers/agents.go", "lines": "124-176,235-310", "symbol": "AgentRun and analysis/sync handlers" },
+        { "path": "backend/engine/analyzer.go", "lines": "39-53", "symbol": "ordinary Analyzer reservation" },
+        { "path": "backend/engine/sync.go", "lines": "248-324,337-366", "symbol": "SyncReservation and SyncChannel" }
+      ]
+    },
+    {
+      "id": "DA06",
+      "category": "CONFIRMED_SOURCE_FACT",
+      "topic": "Analyzer, provider interface, local receipts, terminal finalization and notification",
+      "facts": [
+        "Source preparation precedes lazy provider construction; provider methods called by source are AnalyzeChat and AnalyzeChatBatch.",
+        "Preparation, execution, usage and rule receipts are bounded local observations stored with JobRun.Summary; usage receipt states billing is not observed and price revision is not captured.",
+        "Ordinary terminal persistence happens before a conditional notification attempt. Notification dispatch source ignores some database errors at its call sites."
+      ],
+      "citations": [
+        { "path": "backend/engine/analyzer.go", "lines": "101-200,230-330,427-476,744-891", "symbol": "preparation, provider calls, lazy provider setup and batch path" },
+        { "path": "backend/engine/analyzer.go", "lines": "343-425", "symbol": "terminal flow, notification condition and default notifier" },
+        { "path": "backend/engine/analyzer_incremental.go", "lines": "167-283", "symbol": "finalizeOrdinaryRun" },
+        { "path": "backend/notifications/dispatcher.go", "lines": "39-125", "symbol": "SendJobResults" },
+        { "path": "backend/engine/source_preparation_receipt.go", "lines": "12-90,180-275", "symbol": "preparation receipt, bounds and summary storage" },
+        { "path": "backend/engine/source_execution_receipt.go", "lines": "9-75,137-256", "symbol": "execution receipt scope and capture" },
+        { "path": "backend/engine/usage_observation_receipt.go", "lines": "5-6,72-91", "symbol": "usage observation limitations" },
+        { "path": "backend/engine/rule_observation_receipt.go", "lines": "13-63", "symbol": "rule observation authority limits" }
+      ],
+      "limitations": [
+        "No provider, channel, notifier, database, or runtime operation was performed by R074.",
+        "No evidence of provider billing, invoices, successful external delivery, or CVF governance behavior is produced."
+      ],
+      "inferences": [
+        "Ignored notification database errors are a source-level reliability question only; no incident was reproduced."
+      ]
+    },
+    {
+      "id": "DA07",
+      "category": "INHERITED_TESTED_EVIDENCE",
+      "topic": "Historical record boundary",
+      "facts": [
+        "R035 R1 accepted its historical local MCP contract after exact repair 22204abc0a19841cd9c50ce03c0af032896d3b4e; its source predates the current dispatcher path.",
+        "R044 initial review was CHANGES_REQUIRED; its separate R1 re-review accepted test-only repair source b4ec91ea03a9f247e209389c3792c86494eac8b3.",
+        "R045 is a separate metadata/local closure inheriting the R044 accepted local scope, with no new product/runtime change.",
+        "R053, R057/R058, R061/R062, R064, R065 and R068 contain accepted local exact-source test/review evidence for bounded Analyzer/provider-interface or receipt scopes, not live provider proof."
+      ],
+      "evidenceRecords": [
+        {
+          "record": "docs/reviews/CCMAI_RUNTIME_035_R1_INDEPENDENT_REREVIEW_2026-10-03.md",
+          "disposition": "REVIEW_PASS; historical local MCP contract",
+          "repairCommit": "22204abc0a19841cd9c50ce03c0af032896d3b4e",
+          "originalProductBuildCommit": "10ad83381ce76b86763c1ee06eab02ddf4734cac",
+          "reportedEvidence": "18 top-level / 28 total test outcomes passed; two forced-write mutations killed",
+          "limitations": "Archived source; full backend, race, provider and channel operations not run"
+        },
+        {
+          "record": "docs/reviews/CCMAI_RUNTIME_044_INDEPENDENT_REVIEW_2026-10-04.md",
+          "disposition": "CHANGES_REQUIRED",
+          "originalBuildCommitPrefix": "48918e2f",
+          "reportedEvidence": "Initial review identified missing notification test and insufficient mutation receipts",
+          "limitations": "Not retroactively certified by R1"
+        },
+        {
+          "record": "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
+          "disposition": "REVIEW_PASS / FREEZE_OPEN",
+          "sourceCommit": "b4ec91ea03a9f247e209389c3792c86494eac8b3",
+          "reportedEvidence": "Grouped 393 outcomes passed (190 top-level / 203 subtests); targeted engine 54 passed",
+          "limitations": "Test-only repair; local environment and no provider/channel/network operations"
+        },
+        {
+          "record": "docs/reviews/CCMAI_RUNTIME_045_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+          "disposition": "Separate local metadata closure",
+          "sourceCommit": "b4ec91ea03a9f247e209389c3792c86494eac8b3",
+          "reportedEvidence": "Inherited R044 accepted local evidence",
+          "limitations": "No new product/runtime implementation"
+        },
+        {
+          "record": "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md",
+          "disposition": "REVIEW_PASS for bounded lazy-provider observation",
+          "productionSourceCommitPrefix": "727d322",
+          "testSnapshotCommitPrefix": "145bd411",
+          "reportedEvidence": "Inherited 42 top-level / 98 passing outcomes",
+          "limitations": "No full backend, real provider/channel, runtime governance or hosted CI"
+        },
+        {
+          "record": "docs/reviews/CCMAI_RUNTIME_057_INDEPENDENT_REVIEW_2026-10-06.md",
+          "disposition": "REVIEW_PASS / FREEZE_OPEN",
+          "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+          "reportedEvidence": "114 completed top-level / 272 passing outcomes; one semantic mutation killed",
+          "limitations": "Local receipt contract; no real provider/channel"
+        },
+        {
+          "record": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
+          "disposition": "FROZEN for accepted R055/R057 local observation",
+          "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
+          "reportedEvidence": "Inherited R057 review",
+          "limitations": "No broader runtime governance proof"
+        },
+        {
+          "record": "docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md",
+          "disposition": "REVIEW_PASS / FREEZE_OPEN",
+          "sourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+          "reportedEvidence": "38 top-level / 70 passing; M01/M02 semantic mutations killed; restored 16 top-level / 48 passing",
+          "limitations": "Logical Analyzer interface observations, not HTTP, billing, or actual provider proof"
+        },
+        {
+          "record": "docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md",
+          "disposition": "FROZEN for accepted R061 local observation",
+          "sourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
+          "reportedEvidence": "Inherited R061 review",
+          "limitations": "Full backend, race, provider API and channel API not run"
+        },
+        {
+          "record": "docs/reviews/R064_LOCAL_RULE_OBSERVATION_CLOSURE_2026-10-08.md",
+          "disposition": "Local rule-observation closure",
+          "sourceCommit": "55e836a1b980b3e5d4075ceb33466786c860f963",
+          "reportedEvidence": "53 top-level / 152 passing; semantic mutations and restored controls",
+          "limitations": "Original summary/container snapshots lost; reconstruction limits retained"
+        },
+        {
+          "record": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md",
+          "disposition": "Local usage-observation acceptance",
+          "sourceCommit": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+          "reportedEvidence": "Local campaigns; usage values are estimates/observation",
+          "limitations": "No real provider, billing, invoice, full backend or provider usage proof"
+        },
+        {
+          "record": "docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md",
+          "disposition": "REVIEW_PASS / FREEZE_OPEN for adapter usage-presence parsing",
+          "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+          "reportedEvidence": "Local AI tests and semantic mutation checks; separate R069 compile review",
+          "limitations": "No provider API, billing, full-backend/race or live-runtime evidence"
+        }
+      ],
+      "auditExecution": "R074 did not rerun any historical tests or claim their results for the current source baseline."
+    },
+    {
+      "id": "DA08",
+      "category": "INFERENCE_AND_UNKNOWN_BOUNDARY",
+      "topic": "Claims, inferences and unverified runtime risks",
+      "inferences": [
+        "The inspected worker handoff is asynchronous and in-process; no durable queue or recovery path is established by the reviewed call path.",
+        "Database admission plus process-local ownership does not establish distributed or exactly-once guarantees.",
+        "Ignored notification DB errors suggest a reliability question but do not prove a production failure."
+      ],
+      "unknowns": [
+        "Crash/restart handling for persisted running rows.",
+        "Behavior with multiple service instances and cross-process coordination.",
+        "Whether client disconnect affects an already-started MCP worker in deployed runtime.",
+        "Database durability under failures and actual external notification outcomes.",
+        "Actual provider API success, persistence, billing, invoice or governance behavior."
+      ],
+      "claimBoundary": "No current source observation is presented as a runtime result, reproduced defect, provider proof, billing proof, CVF governance proof, or universal absence claim."
+    },
+    {
+      "id": "DA09",
+      "category": "PROPOSED_FUTURE_SCOPE_NOT_IMPLEMENTED",
+      "topic": "Prioritized bounded options",
+      "options": [
+        {
+          "priority": 1,
+          "name": "Dispatch durability and recovery semantics",
+          "prerequisites": "Specify deployment topology, restart behavior, idempotency/duplicate policy, ownership of stranded running rows, and exact acceptance evidence.",
+          "effectBoundary": "Separate work order and risk review required before source/runtime/data effects; R074 grants no such authority.",
+          "acceptanceBoundary": "Locally controlled failure/restart and concurrency evidence can test defined behavior; deployed or external effects require distinct authority."
+        },
+        {
+          "priority": 2,
+          "name": "MCP and HTTP trigger-option parity",
+          "prerequisites": "Product decision on modes, date ranges, caps, default semantics and compatibility.",
+          "effectBoundary": "Separate testable spec and work order before source behavior changes.",
+          "acceptanceBoundary": "Exact request validation and response mapping tested locally; no claim about deployed compatibility."
+        },
+        {
+          "priority": 3,
+          "name": "Notification reliability and failure handling",
+          "prerequisites": "Define retry, duplicate suppression and visible failure semantics after terminal persistence.",
+          "effectBoundary": "Local notifier fixtures only within separate local authority; real destinations require separately authorized external-effect evidence.",
+          "acceptanceBoundary": "Prove only the bounded local contract; Facebook/Zalo OA account and live work remain parked."
+        }
+      ],
+      "implemented": false
+    },
+    {
+      "id": "DA10",
+      "category": "ARTIFACT_SCOPE",
+      "topic": "Exact three worker artifacts and ownership",
+      "artifacts": [
+        "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md",
+        "docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json",
+        "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json"
+      ],
+      "rootOwns": [
+        "Metadata and acknowledgment records",
+        "Catalog/index registration",
+        "Independent review and closure"
+      ],
+      "workerOwns": "These three new audit artifacts and, after root registration, their exact-three-file commit."
+    }
+  ],
+  "limitations": [
+    "Source presence does not prove the deployed runtime or all repository components.",
+    "The protected inventory is not re-hashed in full by this worker.",
+    "No application tests, Go/Vitest/typecheck/build/browser/database/provider/network/credential operations were run by this worker."
+  ]
+}

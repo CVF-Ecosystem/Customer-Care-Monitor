@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "1.0",
+  "auditId": "CCMAI-RUNTIME-074",
+  "auditDate": "2026-10-10",
+  "implementationBaseline": {
+    "commit": "9fc86fe012d1cc8c1aeb7d9e7a55e79c1c032c2d",
+    "meaning": "Locked source implementation baseline named by R074 authority."
+  },
+  "documentarySnapshot": {
+    "commit": "67d8aa2eb32e80337881b342abb447f38c620a9d",
+    "meaning": "Repository HEAD after root-recorded acknowledgment and BUILD release, before worker audit artifact changes."
+  },
+  "comparison": {
+    "commandScope": "git diff 9fc86fe012d1cc8c1aeb7d9e7a55e79c1c032c2d..67d8aa2eb32e80337881b342abb447f38c620a9d -- backend",
+    "result": "EMPTY",
+    "reliedUponSourceFileCount": 18,
+    "allReliedUponSourceFilesMatchBaselineGitBlob": true,
+    "physicalHashAlgorithm": "SHA-256",
+    "physicalHashObservation": "Local read-only hashes at documentary HEAD; each listed file also has the same Git blob at the implementation baseline."
+  },
+  "scopeLimit": "This identity record covers the 18 Go source files directly relied upon by the R074 audit. It does not claim to re-hash every entry in the 439-file protected baseline inventory or prove deployed/runtime identity.",
+  "files": [
+    {
+      "path": "backend/api/router.go",
+      "symbolsOrLines": "129-143,174-185,236-250",
+      "baselineGitBlob": "a4bc375fb3db3430ad2897dd85d9badd44cf780e",
+      "documentaryHeadGitBlob": "a4bc375fb3db3430ad2897dd85d9badd44cf780e",
+      "physicalSha256": "5adc7db5fb34b0d1eee159ce6ab1858b082ba6932987e9fbe5acdf28291d5acb",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/mcp/server.go",
+      "symbolsOrLines": "53-80,89-128",
+      "baselineGitBlob": "442ceb915a8d3682938b4934c0dcfee5f7bf3e17",
+      "documentaryHeadGitBlob": "442ceb915a8d3682938b4934c0dcfee5f7bf3e17",
+      "physicalSha256": "3387efb10941617171b887ca58a21837fb450b8da698615f5988a2ff385af11b",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/mcp/handlers.go",
+      "symbolsOrLines": "32-99,111-158,330-360",
+      "baselineGitBlob": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
+      "documentaryHeadGitBlob": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
+      "physicalSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/mcp/tools.go",
+      "symbolsOrLines": "159-168",
+      "baselineGitBlob": "4600207fd7fd40e54b4cbc79361332db816447a2",
+      "documentaryHeadGitBlob": "4600207fd7fd40e54b4cbc79361332db816447a2",
+      "physicalSha256": "a84c43502741769d61bb746872a97b4e532b534e7436dc2086d084b78e28f4e4",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/jobdispatch/dispatch.go",
+      "symbolsOrLines": "23-45,66-148",
+      "baselineGitBlob": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
+      "documentaryHeadGitBlob": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
+      "physicalSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/api/handlers/jobs.go",
+      "symbolsOrLines": "368-400,402-452,462-497,504-544,555-562",
+      "baselineGitBlob": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "documentaryHeadGitBlob": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "physicalSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/api/handlers/agents.go",
+      "symbolsOrLines": "124-176,235-310",
+      "baselineGitBlob": "47ef487bcfe3161cbfc51d01c917cf9487224168",
+      "documentaryHeadGitBlob": "47ef487bcfe3161cbfc51d01c917cf9487224168",
+      "physicalSha256": "ec464cdf82d9362274f67c060eea87b6b4b725867541ad01374cc87253c945fe",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/scheduler.go",
+      "symbolsOrLines": "279-363",
+      "baselineGitBlob": "796e79fb14456668b8536856d616e55a133c00d5",
+      "documentaryHeadGitBlob": "796e79fb14456668b8536856d616e55a133c00d5",
+      "physicalSha256": "68f4dfbdb167acc190ae3de8532d1533f6fa2f54567f66d6e7ee4db5ea63393e",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/analyzer_modes.go",
+      "symbolsOrLines": "76-183",
+      "baselineGitBlob": "7b0babac06f43353317d143d53bfce42c6597bb0",
+      "documentaryHeadGitBlob": "7b0babac06f43353317d143d53bfce42c6597bb0",
+      "physicalSha256": "4e7a37acb06df23e324d0e472d6becbef2de8b783ca91ace53287b7acb5f5c72",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/analyzer.go",
+      "symbolsOrLines": "39-90,101-200,230-330,343-425,427-476,744-891",
+      "baselineGitBlob": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "documentaryHeadGitBlob": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "physicalSha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "symbolsOrLines": "107-190,193-315",
+      "baselineGitBlob": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "documentaryHeadGitBlob": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "physicalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/analyzer_incremental.go",
+      "symbolsOrLines": "167-283",
+      "baselineGitBlob": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "documentaryHeadGitBlob": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "physicalSha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/source_preparation_receipt.go",
+      "symbolsOrLines": "12-90,180-275",
+      "baselineGitBlob": "cea72b34f64b2dd344e4b8b688a7fb1598638ce2",
+      "documentaryHeadGitBlob": "cea72b34f64b2dd344e4b8b688a7fb1598638ce2",
+      "physicalSha256": "1179d2992872748ff3b9058781d06b246a3a6969a3827110b4b58a5126ec568c",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/source_execution_receipt.go",
+      "symbolsOrLines": "9-75,137-256",
+      "baselineGitBlob": "d831dca922485c66edbf65e6ca36981c6431e135",
+      "documentaryHeadGitBlob": "d831dca922485c66edbf65e6ca36981c6431e135",
+      "physicalSha256": "d6e8287023fa504612bb15b25271116b87d7c720fd94e3b7079b4e9e711500bf",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/usage_observation_receipt.go",
+      "symbolsOrLines": "5-6,72-91",
+      "baselineGitBlob": "7f0d0a705e637f5471cfa39a16edbd6bd5409865",
+      "documentaryHeadGitBlob": "7f0d0a705e637f5471cfa39a16edbd6bd5409865",
+      "physicalSha256": "635751259a8df0d826ce2019a96f9824cb414875913565d92fccdb57a9a011dc",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/rule_observation_receipt.go",
+      "symbolsOrLines": "13-63",
+      "baselineGitBlob": "c65351df0471d4298ad2ff58fb789ef6152bb1fc",
+      "documentaryHeadGitBlob": "c65351df0471d4298ad2ff58fb789ef6152bb1fc",
+      "physicalSha256": "1ffdf5876774bfd3baeff789f45e13ed367712f84728aa5578d56818b5f0ab49",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/notifications/dispatcher.go",
+      "symbolsOrLines": "39-125",
+      "baselineGitBlob": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "documentaryHeadGitBlob": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "physicalSha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008",
+      "matchesBaseline": true
+    },
+    {
+      "path": "backend/engine/sync.go",
+      "symbolsOrLines": "248-324,337-366",
+      "baselineGitBlob": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "documentaryHeadGitBlob": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "physicalSha256": "c841ea0865f1f4b83853409a0e8939c87f99d5009c42b6729cd01beefaaaced0",
+      "matchesBaseline": true
+    }
+  ]
+}
