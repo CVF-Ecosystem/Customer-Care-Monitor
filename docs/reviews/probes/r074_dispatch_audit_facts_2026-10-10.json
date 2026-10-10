@@ -200,7 +200,7 @@
           "limitations": "R052 and R053 failed preparation packets, the count-author error and earlier publication byte-domain failures remain historical; no retrospective pass. No full backend, real provider/channel, runtime governance or hosted CI.",
           "retainedFailedLineage": "R052 and R053 failed preparations, count-author error and earlier publication byte-domain failures are retained; successor evidence does not retrospectively pass them.",
           "lineCitations": [
-            { "path": "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md", "lines": "7,14", "supports": "failed preparations, inherited RP-01/02/03 and 42/98 distinction from successor mutant/restoration evidence" },
+            { "path": "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md", "lines": "7,14,21", "supports": "failed preparations, inherited RP-01/02/03 and 42/98 distinction from successor mutant/restoration evidence" },
             { "path": "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md", "lines": "17,23", "supports": "publication byte-domain failures, count-author error, cumulative failed lineage and no retrospective pass" }
           ]
         },
@@ -218,7 +218,7 @@
           "reportedEvidence": "Inherited R057 review",
           "limitations": "No broader runtime governance proof. The closure retains the worker mount failure (3 Go), first root aggregate timeout (2 Go; positive coverage UNKNOWN), R056 invalid zero-Go activation and rejected immutable seed; prior plus successful lineage totaled 11 Go, of which 6 were accepted, with no automatic retry/reset.",
           "lineCitations": [
-            { "path": "docs/reviews/R058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md", "lines": "13", "supports": "failed worker/root/R056 activation lineage, UNKNOWN coverage, totals, immutable seed rejection and no retry/reset" }
+            { "path": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md", "lines": "13", "supports": "failed worker/root/R056 activation lineage, UNKNOWN coverage, totals, immutable seed rejection and no retry/reset" }
           ]
         },
         {
