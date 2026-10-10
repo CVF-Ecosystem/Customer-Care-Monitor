@@ -581,6 +581,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root-owned auxiliary continuity projection drift and bounded known-value repair; source review unchanged.: `docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md`
 - Scoped local legacy UI compatibility FREEZE only; no presence display/provider/governance/roadmap closure.: `docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md`
 - Postcommit13file packet seal: native raw bytes identical, metadata wrapper newline differences explicit.: `docs/reviews/probes/r072_committed_packet_seal_2026-10-10.json`
+- Immutable R1 saved presence UI dispatcher seed before BUILD; fresh Luna scope/task classes bounded.: `CVF_SESSION/authority/CCMAI-RUNTIME-073.json`
+- R073 PU01..09 bounded saved presence UI contract, independent validation, safe parsed integers and claim limits.: `docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md`
+- Physical protected source/old authority baseline before R073; snapshot boundary, no full write-history claim.: `docs/reviews/probes/r073_protected_baseline_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

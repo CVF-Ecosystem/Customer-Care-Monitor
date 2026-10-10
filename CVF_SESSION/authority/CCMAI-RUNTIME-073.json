@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-073",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_SAVED_PRESENCE_UI",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r073_worker",
+    "repairWorker": "Codex /root/r073_worker",
+    "commitSteward": "Codex /root/r073_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Jobs/job-detail/adapter-usage-presence.ts",
+    "frontend/src/__tests__/adapter-usage-presence.spec.ts",
+    "frontend/src/components/ui/RunObservationPanel.vue",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/i18n/vi.ts",
+    "docs/work_orders/CCMAI_RUNTIME_073.md"
+  ],
+  "prohibitedEffects": [
+    "existing_test_edit",
+    "legacy_projector_edit",
+    "backend_edit",
+    "governance_permission_decision",
+    "unsafe_numeric_display",
+    "legacy_validation_relaxation",
+    "provider_network_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "root_source_test_edit",
+    "automatic_retry",
+    "push_merge_deploy",
+    "full_roadmap_live_governance_claim"
+  ],
+  "sourceWorkOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
+  "spec": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
+  "ownerAuthorization": "Standing next/continue and root orchestrator/reviewer delegation authorize bounded R1 local saved observation UI, independent review and scoped local closure. No external/security/governance behavior changes.",
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "executionBudget": {
+    "workerMaxVitest": 3,
+    "reviewerMaxVitest": 3,
+    "aggregateMaxVitest": 6,
+    "workerMaxTypecheck": 2,
+    "reviewerMaxTypecheck": 2,
+    "aggregateMaxTypecheck": 4,
+    "maxGo": 0,
+    "automaticRetries": 0
+  },
+  "taskClassification": {
+    "primary": "saved_receipt_ui_feature",
+    "secondary": [
+      "strict_schema_projection",
+      "test_oracle_sensitivity",
+      "component_i18n"
+    ],
+    "start": "FRESH_LUNA_NO_SOL_DRAFT"
+  },
+  "claimScope": "Pure saved observation UI structure; no billing/provider-wire/AI governance proof."
+}
