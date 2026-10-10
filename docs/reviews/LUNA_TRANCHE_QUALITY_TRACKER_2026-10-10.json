@@ -77,11 +77,11 @@
       "id": "CCMAI-RUNTIME-071",
       "workload": "Go consumer-side bounded adapter usage-presence aggregate",
       "start": "FRESH_LUNA_IMPLEMENTATION_OF_SPEC_ON_EXISTING_ACCEPTED_CODE",
-      "status": "FIRST_SOURCE_STATIC_FINDINGS_BEFORE_GO",
+      "status": "REPAIRED_SOURCE_STATIC_APPROVED_RUNTIME_PENDING",
       "firstSourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a",
       "firstLaunch": null,
-      "firstCompile": "NOT_RUN_PENDING_STATIC_REPAIR",
-      "firstPositive": "NOT_RUN_PENDING_STATIC_REPAIR",
+      "firstCompile": "NOT_RUN_STATIC_APPROVED",
+      "firstPositive": "NOT_RUN_STATIC_APPROVED",
       "acceptedProductFindings": [
         "S1 P1 NEW overflow test expects overflow for MaxInt64+0; no runtime failure yet.",
         "S2 P2 known-prefix guard sensitivity missing because initial nil metadata masks totals.",
@@ -95,7 +95,7 @@
         "Unnecessary owner checkpoint after concrete order; owner corrected role routing, root continued unchanged scope.",
         "Exact staging assertion initially included regenerated but unchanged MODULE_CATALOG.md; stopped before commit, corrected expected changed set. No product/runtime effect."
       ],
-      "productRepairRounds": 0,
+      "productRepairRounds": 1,
       "parentSourceTestEdits": 0,
       "measuredModelComputeTime": null,
       "modelTokenCost": null,
@@ -103,7 +103,7 @@
       "workerAuditFindings": [
         "Suggested root-relative go test ./backend/engine command corrected to governed go -C owned/backend test ./engine; not executed."
       ],
-      "productQuality": "SOURCE_SEMANTICS_STATICALLY_SOUND_TEST_REPAIR_REQUIRED",
+      "productQuality": "STATIC_ACCEPTED_AFTER_ONE_TEST_REPAIR_RUNTIME_PENDING",
       "parentAssistance": [
         "Root supplies shared capture infrastructure; worker source/test implementation remains independent.",
         "Root pre-source static capture validation adds exact inventory and mutation labels, restoration-error retention.",
@@ -113,9 +113,12 @@
         "Prior before-edit acknowledgment commit595087446ecda88b7f31c2fc01c66f137b67aa1f; worker resumed after turn interruption with source0/Go0, not a source repair."
       ],
       "acceptedRepairRounds": 1,
-      "repairCompleted": false,
+      "repairCompleted": true,
       "productSemanticDefectsEstablished": 0,
-      "staticReview": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md"
+      "staticReview": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "finalSourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+      "sourceTestRepairRounds": 1,
+      "productSemanticRepairRounds": 0
     }
   ]
 }

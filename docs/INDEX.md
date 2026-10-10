@@ -488,6 +488,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent first-source static S1/S2/S3 findings before any Go; unchanged-scope repair.: `docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
 - Parent supplied capture infrastructure; exact committed plans/approval required, no automatic retry.: `docs/reviews/probes/r071_shared_go_capture_2026-10-10.py`
 - Preserved firstsource worker plan, static findings not approved for runtime.: `docs/reviews/probes/r071_worker_source_plan_2026-10-10.json`
+- Committed repaired worker exactsource plan, root static accepted before Go.: `docs/reviews/probes/r071_worker_repaired_source_plan_2026-10-10.json`
+- Reviewer independently selected exact20pure tests and distinct two semantic replacements.: `docs/reviews/probes/r071_root_source_plan_2026-10-10.json`
+- Independent repairedsource static approval, runtime acceptance pending.: `docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

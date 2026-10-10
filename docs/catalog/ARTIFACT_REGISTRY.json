@@ -4861,6 +4861,27 @@
       "path": "docs/reviews/probes/r071_worker_source_plan_2026-10-10.json",
       "status": "ACTIVE",
       "description": "Preserved firstsource worker plan, static findings not approved for runtime."
+    },
+    {
+      "id": "r071-review-c004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_worker_repaired_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Committed repaired worker exactsource plan, root static accepted before Go."
+    },
+    {
+      "id": "r071-review-c005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_root_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Reviewer independently selected exact20pure tests and distinct two semantic replacements."
+    },
+    {
+      "id": "r071-review-c006",
+      "family": "continuity",
+      "path": "docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent repairedsource static approval, runtime acceptance pending."
     }
   ]
 }

@@ -57,9 +57,9 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R071 bounded consumer work order (2026-10-10)
 
-CCMAI-RUNTIME-071 BUILD static repair round1: Luna fixes consolidated S1 overflow fixture, S2 known-prefix sensitivity and S3 full maximum-bound/counter evidence within NEW tests plus allowed gofmt. Preserve first source86e6ff9 and plan0402ade; commit repair acknowledgment then repaired source/plan, root independent static approval before any Go. Worker/root used0; max8each(2build+6tests), no automatic retry/reset. Root metadata only; no provider/network/DB/frontend/push/core. Full roadmap/live/governance OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-071 BUILD repaired sourceee6b1c0 statically approved: worker and root each run exactly1 offline wholebackend compile then4puretests positive20/M01/M02/restoredNEW10 with committed ownplans/sharedcapture and separate archives/backups. Stop on failure, no automatic retry; max8attempts each(2build+6tests), current0. Initialsource/plan/S1-S3 preserved, one test repair complete. Root independent review/metadata only, no product edit. No DB/provider/network/frontend/Git/core; full roadmap/live/governance OPEN; Facebook/Zalo OA parked.
 
-Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 first source committed, static source semantics appear sound; one consolidated NEW-test repair S1/S2/S3 required before Go. Initial source/plan preserved, worker/reviewer Go0; final code quality and runtime acceptance pending.
+Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 repaired sourceee6b1c0 statically approved after one consolidated NEW-test repair S1/S2/S3. Original source/plan preserved; worker/reviewer Go0 before bounded capture. Final runtime acceptance pending.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

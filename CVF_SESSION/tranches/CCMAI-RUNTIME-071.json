@@ -49,9 +49,9 @@
   "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
   "baseCommit": "da8d34a8d852c49f2c1a9c94020875d830db9b8b",
-  "buildCommit": null,
+  "buildCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
   "reviewEvidence": [],
-  "disposition": "STATIC_TEST_REPAIR_REQUIRED_NO_GO",
+  "disposition": "STATIC_APPROVED_RUNTIME_PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -80,7 +80,7 @@
     "reviewerUsedGoInvocations": 0
   },
   "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
-  "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_TEST_REPAIR_REQUIRED",
+  "sourceImplementation": "COMMITTED_STATIC_APPROVED_RUNTIME_PENDING",
   "workerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
@@ -106,7 +106,8 @@
   "roleTransitions": [
     "Root ORCHESTRATOR/SPEC_AUTHOR -> WORK_ORDER_AUTHOR/SESSION_SYNC_STEWARD for scope acceptance and BUILD dispatch",
     "Fresh Luna IMPLEMENTATION_WORKER/COMMIT_STEWARD after committed before-edit acknowledgment; root independent REVIEWER",
-    "Root independent REVIEWER -> SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD records consolidated first-source findings before Luna REPAIR_WORKER; BUILD remains open"
+    "Root independent REVIEWER -> SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD records consolidated first-source findings before Luna REPAIR_WORKER; BUILD remains open",
+    "Luna REPAIR_WORKER -> IMPLEMENTATION_WORKER / bounded evidence capture after root static approval; root independent REVIEWER / metadata COMMIT_STEWARD"
   ],
   "workerBeforeEditAcknowledgment": {
     "date": "2026-10-10",
@@ -180,8 +181,7 @@
   "firstSourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a",
   "firstPlanCommit": "0402adebed9493f159fe6dac4b09e4220322116e",
   "staticReviewFindings": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
-  "acceptedStaticRepairRounds": 1
-,
+  "acceptedStaticRepairRounds": 1,
   "workerRepairAcknowledgment": {
     "date": "2026-10-10",
     "worker": "Codex /root/r071_worker",
@@ -211,5 +211,14 @@
     "rootProductTestEdits": 0,
     "rootStaticApprovalRequiredBeforeGo": true,
     "humanTechnicalTestReviewClaim": false
-  }
+  },
+  "rootStaticApprovedSources": [
+    "ee6b1c0b465c025c5d536c5cd4261336e26a5071"
+  ],
+  "rootStaticApprovedPlans": [
+    "docs/reviews/probes/r071_worker_repaired_source_plan_2026-10-10.json",
+    "docs/reviews/probes/r071_root_source_plan_2026-10-10.json"
+  ],
+  "rootStaticApproval": "docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+  "staticRepairCompleted": true
 }

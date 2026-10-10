@@ -21,7 +21,7 @@ Add only optional usage_observation.adapter_usage_presence, omitted when new hoo
 5. Retain native streams/JSON/exits/time/environment, complete source inventory/manifests, committed initial/second archive physical bytes, actual source-only mutation diffs, full restoration and independently verified physical raw backup before publication. Do not rewrite original raw/old packets or suppress generated whitespace findings. Parent never changes product/tests; all assistance attributed.
 6. Independent root APO01..12 REVIEW_PASS before conditional aggregate-only local closure, synchronized continuity/status/catalog/roadmaps/model ledger and committed artifacts. Same-scope minor metadata repaired by parent directly, no repetitive owner checkpoints. No push in this order; earlier R068 ordinary publication remains separately unverified/pending authentication, no retry here.
 
-NOT RUN: all R071 Go/source/DB/frontend/live/provider/network/hosted execution. Planning checks prove checked repository/docs only. Proposed local compile/pure tests establish collector behavior and source wiring, not real Analyzer persistence/provider/wire/governance proof. UI/storage consumer exposure, billing/pricing revision, fullS2/S3/S5/globalF02/permissions/policy-version/WAIT_DATA/reservation/settlement/queue-real-Analyzer/live remain OPEN. Facebook/Zalo OA parked. Cumulative quality report uses actual evidence only; R071 code quality UNASSESSED before implementation.
+Historical preparation NOT RUN: all R071 Go/source/DB/frontend/live/provider/network/hosted execution at work-order preparation. Planning checks prove checked repository/docs only. Proposed local compile/pure tests establish collector behavior and source wiring, not real Analyzer persistence/provider/wire/governance proof. UI/storage consumer exposure, billing/pricing revision, fullS2/S3/S5/globalF02/permissions/policy-version/WAIT_DATA/reservation/settlement/queue-real-Analyzer/live remain OPEN. Facebook/Zalo OA parked. Cumulative quality report uses actual evidence only; R071 code quality UNASSESSED before implementation.
 
 ## Worker before-edit acknowledgment (2026-10-10)
 
@@ -34,3 +34,7 @@ Fresh Luna xhigh rehydrated the canonical manifest, policy, active state, memory
 ## Accepted consolidated static repair round1
 
 First source86e6ff9/plan0402ade preserved. Root [static review](../reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md) accepts one unchanged-scope NEW-test repair: S1 overflow fixture, S2 known-prefix sensitivity, S3 full maximum aggregate bound/counter evidence; permitted gofmt in the five paths. Luna acknowledges repair role before edit and commits repaired source/plan for root approval. Current Go0 each; no runtime acceptance or owner checkpoint, budget unchanged.
+
+## Static approval and bounded execution route
+
+Repaired sourceee6b1c0, repairedworkerplan84defd4 and root ownplan accepted by independent [static review](../reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md). S1/S2/S3 settled in one test repair, product semantics unchanged. Each role expected1compile+4puretests using committed plans/sharedcapture; stop on failure and preserve first results. Current Go0 each, caps8each unchanged; no runtime or final review acceptance yet.

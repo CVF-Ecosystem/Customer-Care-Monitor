@@ -41,7 +41,7 @@
     "R068 adapter-only usage-presence primitive FROZEN after independent UP01..12 review and separately owner-authorized R069 single offline whole-backend compile PASS; source bb0bdeb, original failures/budgets unchanged, consumers/full exits/live remain OPEN."
   ],
   "buildInProgress": [
-    "R071 first source86e6ff9 preserved; Luna same-scope NEW-test static repair round1, root independent approval before Go."
+    "R071 repaired sourceee6b1c0 statically accepted; bounded compile/pure tests and independent review pending."
   ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
@@ -257,7 +257,7 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-071 BUILD static repair round1: Luna fixes consolidated S1 overflow fixture, S2 known-prefix sensitivity and S3 full maximum-bound/counter evidence within NEW tests plus allowed gofmt. Preserve first source86e6ff9 and plan0402ade; commit repair acknowledgment then repaired source/plan, root independent static approval before any Go. Worker/root used0; max8each(2build+6tests), no automatic retry/reset. Root metadata only; no provider/network/DB/frontend/push/core. Full roadmap/live/governance OPEN; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-071 BUILD repaired sourceee6b1c0 statically approved: worker and root each run exactly1 offline wholebackend compile then4puretests positive20/M01/M02/restoredNEW10 with committed ownplans/sharedcapture and separate archives/backups. Stop on failure, no automatic retry; max8attempts each(2build+6tests), current0. Initialsource/plan/S1-S3 preserved, one test repair complete. Root independent review/metadata only, no product edit. No DB/provider/network/frontend/Git/core; full roadmap/live/governance OPEN; Facebook/Zalo OA parked.",
     "assessment": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
     "buildDispatched": true,
@@ -861,7 +861,7 @@
   "adapterUsagePresenceObservation": {
     "tranche": "CCMAI-RUNTIME-071",
     "status": "BUILD",
-    "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_TEST_REPAIR_REQUIRED",
+    "sourceImplementation": "COMMITTED_STATIC_APPROVED_RUNTIME_PENDING",
     "ownerScopeReview": "OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED",
     "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
@@ -870,8 +870,9 @@
     "currentPermittedGoInvocations": 16,
     "worker": "Codex /root/r071_worker",
     "qualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
-    "nextMove": "CCMAI-RUNTIME-071 BUILD static repair round1: Luna fixes consolidated S1 overflow fixture, S2 known-prefix sensitivity and S3 full maximum-bound/counter evidence within NEW tests plus allowed gofmt. Preserve first source86e6ff9 and plan0402ade; commit repair acknowledgment then repaired source/plan, root independent static approval before any Go. Worker/root used0; max8each(2build+6tests), no automatic retry/reset. Root metadata only; no provider/network/DB/frontend/push/core. Full roadmap/live/governance OPEN; Facebook/Zalo OA parked.",
-    "sourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a",
-    "staticReview": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md"
+    "nextMove": "CCMAI-RUNTIME-071 BUILD repaired sourceee6b1c0 statically approved: worker and root each run exactly1 offline wholebackend compile then4puretests positive20/M01/M02/restoredNEW10 with committed ownplans/sharedcapture and separate archives/backups. Stop on failure, no automatic retry; max8attempts each(2build+6tests), current0. Initialsource/plan/S1-S3 preserved, one test repair complete. Root independent review/metadata only, no product edit. No DB/provider/network/frontend/Git/core; full roadmap/live/governance OPEN; Facebook/Zalo OA parked.",
+    "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+    "staticReview": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+    "staticApproval": "docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md"
   }
 }
