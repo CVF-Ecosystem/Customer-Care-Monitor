@@ -458,7 +458,8 @@
       "measuredModelComputeTime": null,
       "modelTokenCost": null,
       "independentReviewCommit": "1d95a18e22d79c59ad47eb552688ffbfc2e96012",
-      "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md"
+      "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+      "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d"
     }
   ]
 }

@@ -401,7 +401,7 @@
     "publicationReceipt": null,
     "publishedClosureCommit": null,
     "publicationStatus": "NOT_AUTHORIZED_IN_R074",
-    "localClosureCommit": null,
+    "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d",
     "historicalR068ClosureProjection": {
       "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
       "localClosureEvidence": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
@@ -1230,7 +1230,8 @@
       "sourceAudit": "18relied-on blobs/physical stable;439protected snapshots stable;5implementation entries unchanged;seed first committed blob unchanged",
       "applicationNativeInvocations": 0,
       "publication": "NOT_AUTHORIZED_IN_R074",
-      "exactStaged": "Commit prerequisite, tool output retained"
-    }
+      "exactStaged": "PASS7/7 exact10-file closure staged set and diff-check before3994aef"
+    },
+    "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d"
   }
 }

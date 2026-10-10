@@ -116,6 +116,7 @@
     "sourceAudit": "18relied-on blobs/physical stable;439protected snapshots stable;5implementation entries unchanged;seed first committed blob unchanged",
     "applicationNativeInvocations": 0,
     "publication": "NOT_AUTHORIZED_IN_R074",
-    "exactStaged": "Commit prerequisite, tool output retained"
-  }
+    "exactStaged": "PASS7/7 exact10-file closure staged set and diff-check before3994aef"
+  },
+  "freezeCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d"
 }
