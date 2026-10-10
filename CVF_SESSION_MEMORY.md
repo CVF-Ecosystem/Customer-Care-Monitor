@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-071", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-071", "parked": true} -->
 
 ## Startup Order
 
@@ -57,9 +57,9 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R071 bounded consumer work order (2026-10-10)
 
-CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked.
 
-Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 code quality UNASSESSED; no product/runtime dispatch.
+Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 code quality UNASSESSED; bounded Luna BUILD dispatched, before-edit acknowledgment and root source/plan review precede execution.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

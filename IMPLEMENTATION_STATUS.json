@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -40,7 +40,9 @@
     "R067 local saved-run observation UI UIR01..12 independently accepted/frozen at bd62c7e: strict bound receipt projection, native details and EN/VI reader, existing APIs/actions preserved; fullS5workflow/live/governance not established.",
     "R068 adapter-only usage-presence primitive FROZEN after independent UP01..12 review and separately owner-authorized R069 single offline whole-backend compile PASS; source bb0bdeb, original failures/budgets unchanged, consumers/full exits/live remain OPEN."
   ],
-  "buildInProgress": [],
+  "buildInProgress": [
+    "R071 fresh Luna xhigh additive consumer aggregate under APO01..12; root independent review, no provider/DB."
+  ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
@@ -255,10 +257,10 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "assessment": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
-    "buildDispatched": false,
+    "buildDispatched": true,
     "currentExecutionBudget": {
       "workerMaxGoBuildInvocations": 2,
       "workerMaxGoTestInvocations": 6,
@@ -788,7 +790,7 @@
     "sourceImplementation": "SOURCE_REPAIRED_AI_CAMPAIGNS_AND_SUPPLEMENTAL_WHOLE_BACKEND_COMPILE_PASS",
     "r2IndependentAcceptance": "REVIEW_PASS_UP01_THROUGH_UP12_LOCAL_ADAPTER_ONLY",
     "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
-    "nextMove": "CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
     "governanceClaim": false,
     "liveProviderClaim": false,
     "currentConsumerBehaviorUnchanged": true,
@@ -858,16 +860,16 @@
   },
   "adapterUsagePresenceObservation": {
     "tranche": "CCMAI-RUNTIME-071",
-    "status": "WORK_ORDER",
-    "sourceImplementation": "NOT_STARTED",
-    "ownerScopeReview": "PENDING",
+    "status": "BUILD",
+    "sourceImplementation": "DISPATCHED_NOT_IMPLEMENTED",
+    "ownerScopeReview": "OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED",
     "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
-    "sourceOrRuntimeDispatched": false,
+    "sourceOrRuntimeDispatched": true,
     "newGoInvocations": 0,
-    "currentPermittedGoInvocations": 0,
+    "currentPermittedGoInvocations": 16,
     "worker": "Codex /root/r071_worker",
     "qualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
-    "nextMove": "CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked."
+    "nextMove": "CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked."
   }
 }

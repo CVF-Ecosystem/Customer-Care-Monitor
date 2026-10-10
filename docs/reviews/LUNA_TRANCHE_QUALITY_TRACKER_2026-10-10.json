@@ -77,7 +77,7 @@
       "id": "CCMAI-RUNTIME-071",
       "workload": "Go consumer-side bounded adapter usage-presence aggregate",
       "start": "FRESH_LUNA_IMPLEMENTATION_OF_SPEC_ON_EXISTING_ACCEPTED_CODE",
-      "status": "WORK_ORDER_PENDING_OWNER_SCOPE_REVIEW",
+      "status": "BUILD_DISPATCHED_SOURCE_NOT_STARTED",
       "firstSourceCommit": null,
       "firstLaunch": null,
       "firstCompile": null,
@@ -85,7 +85,8 @@
       "acceptedProductFindings": [],
       "workerEvidenceFindings": [],
       "rootFindings": [
-        "read-only PowerShell brace/glob path mistakes; corrected, zero runtime effect"
+        "read-only PowerShell brace/glob path mistakes; corrected, zero runtime effect",
+        "Unnecessary owner checkpoint after concrete order; owner corrected role routing, root continued unchanged scope."
       ],
       "productRepairRounds": 0,
       "parentSourceTestEdits": 0,

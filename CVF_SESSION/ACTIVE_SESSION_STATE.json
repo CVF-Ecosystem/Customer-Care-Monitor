@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-071",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; fresh Luna read-only worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -42,10 +42,10 @@
   },
   "candidatePlanning": {
     "id": "R071",
-    "status": "WORK_ORDER",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_071.md",
-    "sourceImplementation": "NOT_STARTED",
-    "sourceOrRuntimeDispatched": false,
+    "sourceImplementation": "DISPATCHED_NOT_IMPLEMENTED",
+    "sourceOrRuntimeDispatched": true,
     "newGoInvocations": 0
   },
   "historicalR067State": {
@@ -276,7 +276,7 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "R071_NEW_R2_ENGINE_RECEIPT_SCOPE_OWNER_REVIEW_BEFORE_FRESH_LUNA_BUILD_ROOT_INDEPENDENT_REVIEW",
+  "roleRoute": "OWNER_CONTINUING_NEXT_AUTHORITY_ROOT_SCOPE_REVIEW_ROUTING_FRESH_LUNA_BUILD_INDEPENDENT_ROOT_REVIEW",
   "pendingValidationProposal": {
     "status": "SETTLED_R069_FROZEN",
     "artifact": "docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md"
@@ -376,5 +376,6 @@
       }
     }
   },
-  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json"
+  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+  "currentPermittedGoInvocations": 16
 }

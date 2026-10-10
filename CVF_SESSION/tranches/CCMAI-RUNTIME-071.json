@@ -45,8 +45,8 @@
     "full_roadmap_live_governance_claim"
   ],
   "schemaVersion": "1.0",
-  "status": "WORK_ORDER",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
   "baseCommit": "da8d34a8d852c49f2c1a9c94020875d830db9b8b",
   "buildCommit": null,
@@ -54,7 +54,9 @@
   "disposition": "PENDING_OWNER_R2_ENGINE_RECEIPT_SCOPE_REVIEW",
   "freeze": "OPEN",
   "history": [
-    "WORK_ORDER"
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -62,7 +64,7 @@
     "SPEC",
     "WORK_ORDER"
   ],
-  "ownerScopeReview": "PENDING",
+  "ownerScopeReview": "OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED",
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "2026-10-10 manifest/policy/state/memory/activeR070handoff/status/index rehydrated; coreab714ed7 public-clean/matcheslocalorigin doctor25/1 warningpin26c686cc/stalebinding/bootstrapmigration. Root ORCHESTRATOR/SPEC_AUTHOR -> WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD. Owner next authorizes concrete preparation and cumulative tracking; engine/receipt R2 boundary sent for human scope review before BUILD, currentGo0. Seed/spec/ledger/fresh410protected baseline/readonlyLuna audit committed before order. No implementation draft or source/test run.",
   "executionBudget": {
@@ -78,7 +80,7 @@
     "reviewerUsedGoInvocations": 0
   },
   "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
-  "sourceImplementation": "NOT_STARTED",
+  "sourceImplementation": "DISPATCHED_NOT_IMPLEMENTED",
   "workerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
@@ -97,5 +99,12 @@
     "sourceEdits": 0,
     "goInvocations": 0,
     "lunaCodeQuality": "UNASSESSED_NO_IMPLEMENTATION"
-  }
+  },
+  "ownerDirection": "2026-10-10 after concrete R071 order presented: b\u1ea1n l\u00e0 orchestrator/reviewer, ko c\u1ea7n h\u1ecfi t\u00f4i nh\u01b0 v\u1eady",
+  "ownerDirectionDisposition": "Owner continues next/continue authority and expressly assigns scope review/routing to root. Root accepts unchanged concrete APO01..12 order; prior extra confirmation was root interpretation, not R3 requirement. No seed/cap/path/effect/risk widening.",
+  "currentPermittedGoInvocations": 16,
+  "roleTransitions": [
+    "Root ORCHESTRATOR/SPEC_AUTHOR -> WORK_ORDER_AUTHOR/SESSION_SYNC_STEWARD for scope acceptance and BUILD dispatch",
+    "Fresh Luna IMPLEMENTATION_WORKER/COMMIT_STEWARD after committed before-edit acknowledgment; root independent REVIEWER"
+  ]
 }

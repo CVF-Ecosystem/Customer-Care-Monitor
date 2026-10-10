@@ -1,8 +1,8 @@
 # CCMAI-RUNTIME-071 — bounded adapter usage-presence consumer
 
-Status: WORK_ORDER
+Status: BUILD
 
-Owner scope review: PENDING. Risk R2. Proposed APO01..12 contract in [SPEC](../reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md); immutable conditional dispatcher seed first introduced at da8d34a, before any BUILD. Existing R068 adapter-only authority cannot grant this new Analyzer/receipt path/acceptance contract. This concrete work order is for human review; current product/Go permission is0. Owner next authorized preparation and cumulative Luna tracking; approval of this order unlocks only the paths/budget below, not provider/DB/network/UI/pricing activity.
+Owner scope review: OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED. Risk R2. Owner has reviewed the concrete handover and clarified “bạn là orchestrator/reviewer, ko cần hỏi tôi như vậy” after standing next/continue instruction. Root accepts unchanged [APO01..12 SPEC](../reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md), paths/roles/budget and performs scope routing without another checkpoint. Conditional seed da8d34a remains immutable; current instruction satisfies the owner-direction condition, not a reset or widened contract. Earlier owner-confirmation block was a root interpretation now superseded. BUILD before worker source, root independent REVIEW remains mandatory.
 
 Fresh Luna xhigh `/root/r071_worker` implementation/repair/source COMMIT_STEWARD; root independent REVIEWER, conditional CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD. No Sol draft or parent product code handed off. Luna performed read-only feasibility only. Parent tracks first source/compile/positive and accepted findings per tranche; [quality ledger](../reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json) separates inherited, worker and parent defects.
 
@@ -12,7 +12,7 @@ Product writes exactly backend/engine/analyzer.go (two additive successful SINGL
 
 Add only optional usage_observation.adapter_usage_presence, omitted when new hook never called. Successful hook with nil metadata records unobserved, never legacy scalar fallback. Schema/source/status/value whitelists; independent statuses/known int64 including0, nullable totals only when all begun calls returned observed/known and no overflow, pair completeness derived not trusted. Fixed bounded aggregate <=1200bytes, owned input/freeze pointers, no raw source/diagnostic/provider/model/content. New aggregate survives >200 retained-call trimming at3000byte test cap; unchanged legacy600/1500 envelope tests remain. Existing UO1 values, CalculateCost, usage log/DB effects and result behavior unchanged. No effect chooses work/charges from new metadata.
 
-## Execution after owner review only
+## Authorized bounded execution
 
 1. Rehydrate all canonical continuity; record owner review/approval and root role routing in active handoff/record; transition WORK_ORDER -> DISPATCH_READY -> BUILD, committed before-edit acknowledgment before source. Gate all applicable phase moves; no universal runtime enforcement claim.
 2. Luna implements/tests fresh within five paths, commits first source before first compile. Root static independent source and committed exact-source archive/semantic plan review before test campaign. One absolute Go executable, owned TEMP archive, offline env GOPROXY=off/GOSUMDB=off/GOTOOLCHAIN=local/CGO_ENABLED=0.

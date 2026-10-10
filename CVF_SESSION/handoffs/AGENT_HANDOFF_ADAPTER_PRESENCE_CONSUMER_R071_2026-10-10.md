@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; fresh Luna read-only worker idle
-- Next allowed move: CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh IMPLEMENTATION_WORKER
+- Next allowed move: CCMAI-RUNTIME-071 BUILD under owner next/continue plus explicit root orchestrator/reviewer scope-routing clarification: root accepts unchanged concrete APO01..12 order; fresh Luna xhigh owns exactly five allowed engine/source/test paths, first source commit before compiler. Commit worker before-edit acknowledgment; root static exact-source/plan review before Go. Max8Go attempts per role(2build+6puretests), expected5each, accepted-repair reserve only; no automatic retry/reset. Root independent review/probes/metadata, no root product edit. Track original first outcomes and worker/inherited/root findings in Luna ledger. R068/R069/R070 closure and unverified publication unchanged/not retried. No DB/provider/network/credentials/frontend/pricing/workflow/core changes; full exits/live/governance/hosted OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche transition acknowledgment (2026-10-10)
@@ -24,3 +24,7 @@ Method docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md; ledger d
 ## Preparation checks
 
 Fresh46 downstream gate units PASS31.906s, seed preflight default/PR7/7 and exact changed set check PASS. Final continuity/catalog/docs checks required before preparation handback. No Go, provider, DB, application frontend, live or hosted test; docs-site validation is separate. No claim of runtime CVF AI governance.
+
+## Owner clarification and before-BUILD dispatch (2026-10-10)
+
+After concrete R071 contract/work order e7a0f0e, owner directs “bạn là orchestrator/reviewer, ko cần hỏi tôi như vậy”. Root rehydrates current manifest/policy/state/memory/activehandoff/status/index and doctor25/1; accepts scope under continuing next/continue authority and explicit review/routing delegation. Extra confirmation was root administrative interpretation, superseded; no R3/provider/security/external-effect approval inferred. Immutable seed/caps/paths/claim bounds remain unchanged. WORK_ORDER -> DISPATCH_READY -> BUILD trace recorded. Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD before dispatch. Fresh Luna before-edit acknowledgment must be committed before product edit; first source/plan committed and root static accepted before any Go. Parent never implements product/tests. Current Go used0; proposed cap now authorized, failures count/stop with accepted-repair reserve only. No same-scope checkpoint question.
