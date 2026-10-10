@@ -5484,6 +5484,13 @@
       "path": "docs/reviews/probes/r072_root_runtime_2026-10-10/vitest.stdout.bin",
       "status": "ACTIVE",
       "description": "Root independent raw21-test/forced-typecheck capture; exact source08bab78, no retries, source stable."
+    },
+    {
+      "id": "r072-review-c006",
+      "family": "continuity",
+      "path": "docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Root-owned auxiliary continuity projection drift and bounded known-value repair; source review unchanged."
     }
   ]
 }

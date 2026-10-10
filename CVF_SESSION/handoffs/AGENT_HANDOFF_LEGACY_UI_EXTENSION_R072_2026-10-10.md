@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle
-- Next allowed move: CCMAI-RUNTIME-072 REVIEW_PASS source08bab78: independent UC01..07 review accepted; worker/root each21/21 Vitest and forced vue-tsc PASS, one pre-runtime NEW-test repair retained, product unchanged, no further native/source/push. Root CLOSER next checks synchronized artifacts/catalog/default+PR preflight/docs-site, then compatibility-only local FREEZE. FullS2/S3/S5/globalF02/live/queue-realAnalyzer/UIpresencebillingpermission OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; independent source REVIEW already committed; Luna xhigh idle
+- Next allowed move: CCMAI-RUNTIME-072 REVIEW_PASS source08bab78; closure held at INTAKE audit for root-only R072-META-R01/BLOCKED_CONTINUITY_DRIFT: subsidiary R071 review/model/publication/ownerRouting pointers reconciled to committed R072 seed/order/review, canonical tranche tuple unchanged. Root verifies metadata/default+PR/catalog before CLOSER; no source/native rerun or new authority. Worker/root each21/21 and forcedtypecheck PASS; Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer/UIpresencebillingpermission OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche transition acknowledgment (2026-10-10)
@@ -38,3 +38,7 @@ Worker native Vitest21/21 and forced vue-tsc exit0; scoped source before/after s
 ## Independent formal review
 
 docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md records REVIEW_PASS UC01..07 at source08bab78 after own21/21/forcedtypecheck, no failure/timeout/retry. Root rawsource111stable, protected381 and seedunchanged. docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md retains initialT1/T2 NEW-test repair, minor metadata label and root coordination overhead. Role REVIEWER -> CLOSER is the next authorized move only after formal review commit; FREEZE still OPEN until checks/artifacts settle.
+
+## Root closure continuity hold / known-value projection repair
+
+R072-META-R01/BLOCKED_CONTINUITY_DRIFT reported before closure; intake audit compares canonical R072 state tuple/order/seed/tranche/handoff with stale subsidiary state.reviewEvidence/modelAssessment/publication and status.ownerRouting R071 projections. Root owns missed transition synchronization. Code authority/order/seed were committed for R072 before BUILD and source scope never widened; source REVIEW_PASS e805739 remains accepted. Historical R071 projections preserved, active pointers reconciled from committed R072 facts. Root ORCHESTRATOR / SESSION_SYNC_STEWARD metadata-only repair; no worker product finding, no source/native replay. docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md records consolidated fields; gates/catalog must pass before resuming CLOSER.

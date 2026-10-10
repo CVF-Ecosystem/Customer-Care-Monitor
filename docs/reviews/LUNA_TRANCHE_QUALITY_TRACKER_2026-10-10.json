@@ -159,7 +159,8 @@
       "rootFindings": [
         "Guessed read-only paths corrected",
         "Stale R071 index BUILD description corrected",
-        "Gate-unit inheritance clarification after worker launch; duplicate validation retained"
+        "Gate-unit inheritance clarification after worker launch; duplicate validation retained",
+        "R072-META-R01: missed subsidiary current state/status R071 projection sync discovered before closure; BLOCKED_CONTINUITY_DRIFT hold, root-only known-value reconciliation, no source/runtime replay."
       ],
       "parentAssistance": [
         "Root supplies acceptance contract and consolidated static findings; no source/test draft or edits",

@@ -577,6 +577,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent UC01..07 REVIEW_PASS; each role21/21 and forcedtypecheck, bounded local compatibility.: `docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md`
 - Per-tranche Luna assessment: product stable, one pre-runtime NEW-test repair; unmatched Sol comparison.: `docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
 - Independent raw/source/seed snapshot audit; worker native blob bytes and metadata newline basis explicit.: `docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json`
+- Root-owned auxiliary continuity projection drift and bounded known-value repair; source review unchanged.: `docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

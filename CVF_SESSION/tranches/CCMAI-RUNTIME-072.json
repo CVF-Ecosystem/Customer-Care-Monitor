@@ -63,7 +63,8 @@
     "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
     "docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json",
     "docs/reviews/R072_INDEPENDENT_LEGACY_UI_COMPATIBILITY_REVIEW_2026-10-10.md",
-    "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md"
+    "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+    "docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md"
   ],
   "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
@@ -95,5 +96,14 @@
   "workerEvidence": "docs/reviews/probes/r072_worker_capture_2026-10-10",
   "workerCaptureWorkspaceHead": "5550485af3601a149a71bf8d92734ec03f6af1c2",
   "rootEvidence": "docs/reviews/probes/r072_root_runtime_2026-10-10",
-  "independentRawAudit": "docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json"
+  "independentRawAudit": "docs/reviews/probes/r072_independent_raw_audit_2026-10-10.json",
+  "closureMetadataAudit": {
+    "finding": "R072-META-R01",
+    "owner": "Codex /root",
+    "reported": "BLOCKED_CONTINUITY_DRIFT; closure hold/intake audit only",
+    "repair": "docs/reviews/R072_CONTINUITY_PROJECTION_REPAIR_2026-10-10.md",
+    "sourceAuthorityChanged": false,
+    "sourceReviewCommit": "e80573944b40da0210c2631fb34754c30edb1beb",
+    "newSourceOrNativeInvocations": 0
+  }
 }
