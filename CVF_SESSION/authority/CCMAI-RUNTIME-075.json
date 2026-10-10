@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-075",
+  "authorityKind": "DISPATCHER_OWNED_ORDINARY_BRANCH_PUBLICATION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root",
+    "repairWorker": "Codex /root",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root/r074_auditor",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_075.md",
+    "docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md",
+    "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
+    "docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_edit",
+    "old_seed_receipt_tranche_edit",
+    "application_native",
+    "provider_channel_call",
+    "config_secret_read",
+    "db_use",
+    "core_edit",
+    "force_push",
+    "main_update",
+    "merge_deploy",
+    "hosted_or_live_governance_claim"
+  ],
+  "ownerAuthorization": "Owner 2026-10-10: update github, roi lam tiep. Ordinary publication of current reviewed branch and new governed metadata only; no main/force/merge/deployment/provider.",
+  "externalEffect": {
+    "repository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+    "branch": "codex/gov001-f08-actions-evidence",
+    "ordinaryPushOnly": true,
+    "remoteReadbackRequired": true
+  },
+  "networkBoundary": "Git fetch/ls-remote/push on existing origin only, existing Git authentication; no secret/config reads or provider/channel access.",
+  "claimScope": "Fresh remote SHA verification only; no hosted CI or runtime governance, historical R068 UNKNOWN preserved."
+}

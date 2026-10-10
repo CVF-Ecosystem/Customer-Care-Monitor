@@ -5862,6 +5862,20 @@
       "path": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
       "status": "ACTIVE",
       "description": "R074 scoped source-only dossier closure; independent review inherited, app native0, broader/live OPEN."
+    },
+    {
+      "id": "r075-a-001",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-075.json",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 explicit owner-authorized ordinary currentbranch publication seed/contract; R2, no app/runtime authority."
+    },
+    {
+      "id": "r075-a-002",
+      "path": "docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 explicit owner-authorized ordinary currentbranch publication seed/contract; R2, no app/runtime authority."
     }
   ]
 }
