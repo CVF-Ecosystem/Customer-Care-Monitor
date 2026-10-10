@@ -5365,6 +5365,13 @@
       "path": "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
       "status": "ACTIVE",
       "description": "First-source static T1/T2 NEW test findings before runtime; product line accepted, same-scope repair1."
+    },
+    {
+      "id": "r072-review-c002",
+      "family": "continuity",
+      "path": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "T1/T2 settled on repaired test; exact product preserved, bounded independent captures next."
     }
   ]
 }

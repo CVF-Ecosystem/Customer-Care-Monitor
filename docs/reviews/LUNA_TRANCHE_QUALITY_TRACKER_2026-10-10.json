@@ -141,7 +141,7 @@
       "id": "CCMAI-RUNTIME-072",
       "workload": "One-line optional opaque-field legacy UI compatibility and NEW projection tests",
       "start": "FRESH_LUNA_NO_SOL_DRAFT",
-      "status": "CHANGES_REQUIRED_PRE_RUNTIME_TEST_ONLY",
+      "status": "STATIC_APPROVED_REPAIRED_SOURCE_BEFORE_RUNTIME",
       "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
       "firstCompile": "NOT_RUN",
       "firstPositive": "NOT_RUN",
@@ -165,7 +165,11 @@
       ],
       "measuredModelComputeTime": null,
       "modelTokenCost": null,
-      "staticReview": "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md"
+      "staticReview": "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+      "finalSourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
+      "staticApproval": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
+      "acceptedRepairRounds": 1,
+      "repairCompleted": true
     }
   ]
 }

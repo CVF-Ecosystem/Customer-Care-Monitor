@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R072
 
-CCMAI-RUNTIME-072 REPAIR_BUILD_ROUND_1: Luna rehydrated and acknowledged REPAIR_WORKER; edit only NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts to correct the exact execution oracle and add extension-present legacy rejection cases. Parser, existing tests, backend, authority, seed, and first source5285d9f immutable. Commit NEW test only and return hash for root static approval before Vitest/vue-tsc. Original worker budget unchanged and unused; Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
+CCMAI-RUNTIME-072 STATIC_APPROVED source08bab78: worker captures one focused21-test Vitest and one forced vue-tsc with raw commands/source/exits, then commits REVIEW_PENDING handback; root independently captures same pinned source before scoped closure. First5285d9f/T1T2 retained, product unchanged/testrepair1. No source edits unless accepted same-scope finding; unchanged budget2Vitest/1typecheck per role, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 
 ## Startup Order
 

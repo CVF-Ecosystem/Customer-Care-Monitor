@@ -1,0 +1,11 @@
+# R072 repaired-source static approval
+
+Disposition: STATIC_APPROVED_FOR_BOUNDED_LOCAL_CAPTURE; no runtime result yet.
+
+Exact source 08bab78ad374638149b7689776cddcd84d6f5188; parser unchanged from first5285d9f; only NEW test changed in repair08bab78. Root independent REVIEWER rehydrated current BUILD state/memory/handoff/status/index and confirmed unchanged manifest/policy/core context from this tranche. Root source/test edits0. Seed1fb7f6c dispatcher-authored before BUILD53c10a5; repair acknowledgmentb1f8b27 precedes repair source. First source and T1/T2 findings preserved.
+
+T1 closed: oracle removes only three non-returned parsing counters, preserving the actual full legacy output including knownzero. T2 closed: all five invalid legacy cases execute in absent/present-extension modes, assert execution stays available and usage unavailable. Positive fixture requires explicit expected available sections, source-shaped aggregate matches R071 constants, private/future/malformed content not projected, bad binding hides execution/usage, incomplete legacy totals remain null despite complete extension zero. Product change is exactly the local optional key; no reads/new output fields and all old validators unchanged.
+
+Protected baseline: 381 files outside the one allowed existing parser unchanged; all existing tests/backend/old seeds unchanged. New test is the only added source path. R1 UI structure compatibility; no decision/governance/presence validation claim.
+
+Approved commands from frontend: installed node + node_modules/vitest/vitest.mjs run the three existing observation specs and NEW compatibility spec with native JSON reporter; installed node + node_modules/vue-tsc/bin/vue-tsc.js -b --force --pretty false. Worker and root each one expected Vitest/one forced typecheck, max2 Vitest/1 typecheck each unchanged; no Go/automatic retry. Expected inventory21 tests (existing17/new4); loop assertions are not counted as extra tests. Capture source identity/commands/raw stdout/stderr/exits/report counts/physical source before-after; failure stops. Worker first capture/packet handback then independent root capture; no concurrent source edits or native typechecks. No mutation campaign for this bounded one-line compatibility repair.

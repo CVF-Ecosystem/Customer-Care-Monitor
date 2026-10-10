@@ -50,9 +50,10 @@
   "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
   "baseCommit": "1fb7f6cd11a14d5c8ddd05942ac8bac75d904663",
-  "buildCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
+  "buildCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
   "reviewEvidence": [
-    "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md"
+    "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
+    "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -76,5 +77,7 @@
   "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
   "acceptedRepairRounds": 1,
   "sourceTestRepairRounds": 1,
-  "productSemanticRepairRounds": 0
+  "productSemanticRepairRounds": 0,
+  "finalSourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
+  "staticApproval": "docs/reviews/R072_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md"
 }
