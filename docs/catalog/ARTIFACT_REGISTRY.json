@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "R073 FROZEN / FREEZE, saved adapter presence UI only; source3a05b50, independent evidence, broader roadmap/live open."
+      "description": "Active R074 DISPATCH_READY readonly dispatch audit; native0, no product edits."
     },
     {
       "id": "r060-work-order",
@@ -5792,6 +5792,20 @@
       "path": "docs/reviews/probes/r074_protected_baseline_2026-10-10.json",
       "status": "ACTIVE",
       "description": "R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority."
+    },
+    {
+      "id": "r074-plan-b-003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-074.json",
+      "status": "ACTIVE",
+      "description": "R074 DISPATCH_READY source-only contract audit; independent review, no runtime/governance proof."
+    },
+    {
+      "id": "r074-plan-b-004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_074.md",
+      "status": "ACTIVE",
+      "description": "R074 DISPATCH_READY source-only contract audit; independent review, no runtime/governance proof."
     }
   ]
 }

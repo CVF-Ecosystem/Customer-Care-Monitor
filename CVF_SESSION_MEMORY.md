@@ -9,13 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-073", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-074", "parked": true} -->
 
-## Current R073
+## Current R074
 
-CCMAI-RUNTIME-073 FROZEN local presence-display UI only at source3a05b50, reviewe519b14; worker/root each49/49 and forcedtypecheck PASS, one NEW-test/presentation repair, semantic0. Five accepted Luna samples/task-fit evidence updated, routing unchanged. ORCHESTRATOR next audits remaining scoped tasks and records a separate bounded work order before source/native activity; current native permissions0. No provider/network/DB/browser/fullsuite/publication; full S2/S3/S5/global F02/real Analyzer/billing/live OPEN, accounts parked.
+CCMAI-RUNTIME-074 DISPATCH_READY / WORK_ORDER: fresh Luna xhigh reads current canonical authority and sends before-edit documentary BUILD acknowledgment; root records ACK and phase transition, then worker writes/commits exactly three NEW DA01..10 source-audit artifacts. Root independent source/evidence review and separate audit-quality tracking, app native0. No product/test/config/provider/network/DB/publication; broader roadmap/live OPEN, accounts parked.
 
-Task-fit ledger records primary/secondary classes before BUILD; five accepted implementation samples retained, including fresh R073 after independent review. Root independent reviewer; no product/test edits.
+Five accepted implementation samples preserved. R074 is a separate readonly audit sample, pending independent review; no sixth implementation sample. Root independent reviewer/source-test edits0.
 
 ## Startup Order
 

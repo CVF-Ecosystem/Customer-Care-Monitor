@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,32 +12,21 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-073",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-073 FROZEN local presence-display UI only at source3a05b50, reviewe519b14; worker/root each49/49 and forcedtypecheck PASS, one NEW-test/presentation repair, semantic0. Five accepted Luna samples/task-fit evidence updated, routing unchanged. ORCHESTRATOR next audits remaining scoped tasks and records a separate bounded work order before source/native activity; current native permissions0. No provider/network/DB/browser/fullsuite/publication; full S2/S3/S5/global F02/real Analyzer/billing/live OPEN, accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-074",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-074 DISPATCH_READY / WORK_ORDER: fresh Luna xhigh reads current canonical authority and sends before-edit documentary BUILD acknowledgment; root records ACK and phase transition, then worker writes/commits exactly three NEW DA01..10 source-audit artifacts. Root independent source/evidence review and separate audit-quality tracking, app native0. No product/test/config/provider/network/DB/publication; broader roadmap/live OPEN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh implementation worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / metadata COMMIT_STEWARD; Luna xhigh auditor awaiting ACK",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
-    "workerMaxVitest": 3,
-    "reviewerMaxVitest": 3,
-    "aggregateMaxVitest": 6,
-    "workerMaxTypecheck": 2,
-    "reviewerMaxTypecheck": 2,
-    "aggregateMaxTypecheck": 4,
-    "maxGo": 0,
+    "workerMaxNative": 0,
+    "reviewerMaxNative": 0,
+    "aggregateMaxNative": 0,
+    "workerUsedNative": 0,
+    "reviewerUsedNative": 0,
     "automaticRetries": 0,
-    "workerUsedVitest": 1,
-    "workerUsedTypecheck": 1,
-    "reviewerUsedVitest": 1,
-    "reviewerUsedTypecheck": 1,
-    "aggregateUsedVitest": 2,
-    "aggregateUsedTypecheck": 2,
-    "usedGo": 0,
-    "currentPermittedVitestInvocations": 0,
-    "currentPermittedTypecheckInvocations": 0,
-    "currentPermittedGoInvocations": 0
+    "currentPermittedNativeInvocations": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -49,13 +38,11 @@
     "source": "Owner instruction 2026-10-08; continues until changed by owner"
   },
   "candidatePlanning": {
-    "id": "R073",
-    "status": "FROZEN",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_073.md",
-    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
-    "sourceOrRuntimeDispatched": false,
-    "newGoInvocations": 0,
-    "sourceCommit": "3a05b5032f69f1d0bee8e7079c8008813129b928"
+    "id": "R074",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_074.md",
+    "sourceImplementation": "NOT_APPLICABLE_READONLY_AUDIT",
+    "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -287,11 +274,9 @@
   },
   "roleRoute": "OWNER_DELEGATED_ROOT_BOUNDED_R1_BUILD_WITH_INDEPENDENT_REVIEW",
   "pendingValidationProposal": {
-    "status": "SETTLED_NO_NATIVE_PERMISSION",
-    "workerPermittedVitest": 0,
-    "workerPermittedTypecheck": 0,
-    "reviewerPermittedVitest": 0,
-    "reviewerPermittedTypecheck": 0
+    "status": "NO_APPLICATION_NATIVE_AUTHORITY",
+    "workerPermittedNative": 0,
+    "reviewerPermittedNative": 0
   },
   "acceptedR068": {
     "status": "FROZEN",
@@ -390,8 +375,8 @@
   },
   "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
   "currentPermittedGoInvocations": 0,
-  "reviewEvidence": "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md",
-  "modelAssessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+  "reviewEvidence": null,
+  "modelAssessment": null,
   "historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
@@ -517,19 +502,51 @@
       "priorR068Retried": false
     }
   },
-  "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
-  "independentReviewCommit": "e519b14f70144e9ae028eab17974c607edd40ce7",
-  "closureStatus": "FROZEN_LOCAL_PRESENCE_DISPLAY_UI_ONLY",
-  "closureChecks": {
-    "preflight": "PASS7/7 after root closer-field repair; initial6/7 retained",
-    "prRange": "PASS7/7 after root closer-field repair; initial6/7 retained",
-    "catalogPS5": "PASS",
-    "catalogPS7": "PASS",
-    "docsSiteBuild": "PASS37.29s after root .py link repair; initialFAIL16.31s retained",
-    "gateUnits": "Inherited root46/46 in38.250s; tooling unchanged",
-    "sourceAudit": "113 frontend physical snapshots stable;381protected baseline stable; prior four ledger entries identical",
-    "exactStaged": "Commit prerequisite, captured tool output",
-    "publication": "NOT_AUTHORIZED_IN_R073"
-  },
-  "localClosureCommit": "d32c1c7cb1193fea0b0c7e3f9f3c2473c7074b10"
+  "closureEvidence": null,
+  "independentReviewCommit": null,
+  "closureStatus": null,
+  "closureChecks": null,
+  "localClosureCommit": null,
+  "historicalR073ClosureProjection": {
+    "activeTranche": "CCMAI-RUNTIME-073",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-073 FROZEN local presence-display UI only at source3a05b50, reviewe519b14; worker/root each49/49 and forcedtypecheck PASS, one NEW-test/presentation repair, semantic0. Five accepted Luna samples/task-fit evidence updated, routing unchanged. ORCHESTRATOR next audits remaining scoped tasks and records a separate bounded work order before source/native activity; current native permissions0. No provider/network/DB/browser/fullsuite/publication; full S2/S3/S5/global F02/real Analyzer/billing/live OPEN, accounts parked.",
+    "currentExecutionBudget": {
+      "workerMaxVitest": 3,
+      "reviewerMaxVitest": 3,
+      "aggregateMaxVitest": 6,
+      "workerMaxTypecheck": 2,
+      "reviewerMaxTypecheck": 2,
+      "aggregateMaxTypecheck": 4,
+      "maxGo": 0,
+      "automaticRetries": 0,
+      "workerUsedVitest": 1,
+      "workerUsedTypecheck": 1,
+      "reviewerUsedVitest": 1,
+      "reviewerUsedTypecheck": 1,
+      "aggregateUsedVitest": 2,
+      "aggregateUsedTypecheck": 2,
+      "usedGo": 0,
+      "currentPermittedVitestInvocations": 0,
+      "currentPermittedTypecheckInvocations": 0,
+      "currentPermittedGoInvocations": 0
+    },
+    "reviewEvidence": "docs/reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md",
+    "modelAssessment": "docs/reviews/R073_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+    "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
+    "localClosureCommit": "d32c1c7cb1193fea0b0c7e3f9f3c2473c7074b10",
+    "independentReviewCommit": "e519b14f70144e9ae028eab17974c607edd40ce7",
+    "closureStatus": "FROZEN_LOCAL_PRESENCE_DISPLAY_UI_ONLY",
+    "closureChecks": {
+      "preflight": "PASS7/7 after root closer-field repair; initial6/7 retained",
+      "prRange": "PASS7/7 after root closer-field repair; initial6/7 retained",
+      "catalogPS5": "PASS",
+      "catalogPS7": "PASS",
+      "docsSiteBuild": "PASS37.29s after root .py link repair; initialFAIL16.31s retained",
+      "gateUnits": "Inherited root46/46 in38.250s; tooling unchanged",
+      "sourceAudit": "113 frontend physical snapshots stable;381protected baseline stable; prior four ledger entries identical",
+      "exactStaged": "Commit prerequisite, captured tool output",
+      "publication": "NOT_AUTHORIZED_IN_R073"
+    }
+  }
 }
