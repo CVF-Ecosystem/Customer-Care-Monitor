@@ -39,7 +39,9 @@
       "facts": [
         "MCP routes are mounted; bearer-token auth places the user identity in request context; tools/call dispatches to the tool handler.",
         "The tool handler checks policy and authorization, and the trigger handler performs an own-tenant job lookup before dispatch.",
-        "The MCP trigger accepts tenant_id and job_id, rejects extra arguments, and passes mode since_last to jobdispatch.Default.Dispatch."
+        "The MCP trigger accepts tenant_id and job_id, rejects extra arguments, and passes mode since_last to jobdispatch.Default.Dispatch.",
+        "The since_last-only MCP choice, empty dates and cap zero were accepted by R044; this is the current contract, not an undecided default. Its event-time anchor is the newest non-NULL last_message_at among this job's evaluated conversations in current input channels; no anchor falls back to unanalyzed, otherwise only strictly newer timestamps qualify. Equal, older, backdated and NULL-timestamp conversations do not qualify.",
+        "Ordinary Analyzer.RunJob is a distinct R025 source-version scan: it compares each current full snapshot digest with the latest committed job evaluation snapshot; no evaluation or a legacy evaluation without a snapshot counts as changed."
       ],
       "citations": [
         { "path": "backend/api/router.go", "lines": "246-250", "symbol": "SetupMCPRoutes registration" },
@@ -48,7 +50,10 @@
         { "path": "backend/mcp/handlers.go", "lines": "32-99", "symbol": "handleToolsCall" },
         { "path": "backend/mcp/handlers.go", "lines": "111-158", "symbol": "tool policies and authorizeToolCall" },
         { "path": "backend/mcp/handlers.go", "lines": "330-360", "symbol": "triggerArgs and toolTriggerJob" },
-        { "path": "backend/mcp/tools.go", "lines": "159-168", "symbol": "cqa_trigger_job schema and description" }
+        { "path": "backend/mcp/tools.go", "lines": "159-168", "symbol": "cqa_trigger_job schema and description" },
+        { "path": "backend/engine/analyzer_modes.go", "lines": "19-32,84-89,122-131,207-265", "symbol": "mode definitions, ordinary RunJob, since_last anchor and candidate query" },
+        { "path": "backend/engine/analyzer_incremental.go", "lines": "61-143", "symbol": "ordinary source-version comparison" },
+        { "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md", "lines": "14,26", "symbol": "accepted MCP since_last-only and RunReserved parameters" }
       ]
     },
     {
@@ -98,7 +103,7 @@
       "facts": [
         "HTTP manual trigger adapts to the shared dispatch service and exposes modes/date/cap options that MCP does not expose.",
         "HTTP test-run reserves and starts a worker directly, bypassing jobdispatch.Service.",
-        "Cron/after-sync and agent analysis call Analyzer.RunJob directly and share the engine ownership seam without using jobdispatch.Service.",
+        "Cron/after-sync and agent analysis call Analyzer.RunJob directly and share the engine ownership seam without using jobdispatch.Service; their ordinary RunJob source-version scan differs from the since_last event-time cursor.",
         "Agent channel sync uses SyncEngine and a separate SyncReservation lifecycle."
       ],
       "citations": [
@@ -108,6 +113,8 @@
         { "path": "backend/engine/scheduler.go", "lines": "279-363", "symbol": "runScheduledJob and TriggerAfterSyncJobs" },
         { "path": "backend/api/handlers/agents.go", "lines": "124-176,235-310", "symbol": "AgentRun and analysis/sync handlers" },
         { "path": "backend/engine/analyzer.go", "lines": "39-53", "symbol": "ordinary Analyzer reservation" },
+        { "path": "backend/engine/analyzer_modes.go", "lines": "84-89,122-131,207-265", "symbol": "ordinary RunJob versus since_last" },
+        { "path": "backend/engine/analyzer_incremental.go", "lines": "61-143", "symbol": "ordinary source-version eligibility" },
         { "path": "backend/engine/sync.go", "lines": "248-324,337-366", "symbol": "SyncReservation and SyncChannel" }
       ]
     },
@@ -168,8 +175,14 @@
           "record": "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md",
           "disposition": "REVIEW_PASS / FREEZE_OPEN",
           "sourceCommit": "b4ec91ea03a9f247e209389c3792c86494eac8b3",
-          "reportedEvidence": "Grouped 393 outcomes passed (190 top-level / 203 subtests); targeted engine 54 passed",
-          "limitations": "Test-only repair; local environment and no provider/channel/network operations"
+          "reportedEvidence": "Grouped 393 outcomes passed (190 top-level / 203 subtests); targeted engine 54 passed. Local synthetic provider and one in-process synthetic Telegram send ran over an internal task network with disposable local MySQL containing synthetic data.",
+          "limitations": "Real provider/channel/Telegram/email calls, external network, real configuration/credentials, and persistent or customer database use were NOT_RUN.",
+          "retainedFailedLineage": "R044 R1 review preserves N04 BUILD_ERROR, N05 survivor distinct from the separate N05e detector, the first N05e harness defect, absence of per-mutant restored-baseline runs in the original campaign, and original failed-secret-preflight procedural nonconformance; later independent baseline/mutation/restoration evidence does not erase them.",
+          "lineCitations": [
+            { "path": "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md", "lines": "12,19,49", "supports": "synthetic local provider/Telegram/internal network/disposable DB and limits on real effects" },
+            { "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md", "lines": "29", "supports": "synthetic provider and real disposable MySQL test scope" },
+            { "path": "docs/reviews/CCMAI_RUNTIME_044_R1_INDEPENDENT_REREVIEW_2026-10-04.md", "lines": "13,15,43", "supports": "preserved failures, detector/harness distinctions and procedural nonconformance" }
+          ]
         },
         {
           "record": "docs/reviews/CCMAI_RUNTIME_045_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
@@ -183,8 +196,13 @@
           "disposition": "REVIEW_PASS for bounded lazy-provider observation",
           "productionSourceCommitPrefix": "727d322",
           "testSnapshotCommitPrefix": "145bd411",
-          "reportedEvidence": "Inherited 42 top-level / 98 passing outcomes",
-          "limitations": "No full backend, real provider/channel, runtime governance or hosted CI"
+          "reportedEvidence": "Successor's own evidence includes an intended semantic mutant failure and restored LP-06 controls; only RP-01/02/03 and 42 top-level / 98 passing outcomes on exact snapshot 145bd411 were inherited and not rerun.",
+          "limitations": "R052 and R053 failed preparation packets, the count-author error and earlier publication byte-domain failures remain historical; no retrospective pass. No full backend, real provider/channel, runtime governance or hosted CI.",
+          "retainedFailedLineage": "R052 and R053 failed preparations, count-author error and earlier publication byte-domain failures are retained; successor evidence does not retrospectively pass them.",
+          "lineCitations": [
+            { "path": "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md", "lines": "7,14", "supports": "failed preparations, inherited RP-01/02/03 and 42/98 distinction from successor mutant/restoration evidence" },
+            { "path": "docs/reviews/CCMAI_RUNTIME_053_SUCCESSOR_INDEPENDENT_REVIEW_2026-10-06.md", "lines": "17,23", "supports": "publication byte-domain failures, count-author error, cumulative failed lineage and no retrospective pass" }
+          ]
         },
         {
           "record": "docs/reviews/CCMAI_RUNTIME_057_INDEPENDENT_REVIEW_2026-10-06.md",
@@ -198,14 +216,20 @@
           "disposition": "FROZEN for accepted R055/R057 local observation",
           "sourceCommit": "05c59e9978e5cf108b0d9118f64c7454805ec64e",
           "reportedEvidence": "Inherited R057 review",
-          "limitations": "No broader runtime governance proof"
+          "limitations": "No broader runtime governance proof. The closure retains the worker mount failure (3 Go), first root aggregate timeout (2 Go; positive coverage UNKNOWN), R056 invalid zero-Go activation and rejected immutable seed; prior plus successful lineage totaled 11 Go, of which 6 were accepted, with no automatic retry/reset.",
+          "lineCitations": [
+            { "path": "docs/reviews/R058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md", "lines": "13", "supports": "failed worker/root/R056 activation lineage, UNKNOWN coverage, totals, immutable seed rejection and no retry/reset" }
+          ]
         },
         {
           "record": "docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md",
           "disposition": "REVIEW_PASS / FREEZE_OPEN",
           "sourceCommit": "d10e164249b5e7a87206d1d3bc5aec43a1a8ac2f",
           "reportedEvidence": "38 top-level / 70 passing; M01/M02 semantic mutations killed; restored 16 top-level / 48 passing",
-          "limitations": "Logical Analyzer interface observations, not HTTP, billing, or actual provider proof"
+          "limitations": "Logical Analyzer interface observations, not HTTP, billing, or actual provider proof. Failed worker/root campaigns remain; the inherited R060 run at 119 PASS / 1 FAIL top-level and 305 PASS / 3 FAIL total is not a suite pass.",
+          "lineCitations": [
+            { "path": "docs/reviews/R061_INDEPENDENT_EXECUTION_RECEIPT_REVIEW_2026-10-07.md", "lines": "11", "supports": "failed worker/root campaigns and retained R060 incomplete regression totals" }
+          ]
         },
         {
           "record": "docs/reviews/R062_LOCAL_EXECUTION_RECEIPT_CLOSURE_2026-10-08.md",
@@ -265,20 +289,23 @@
           "priority": 1,
           "name": "Dispatch durability and recovery semantics",
           "prerequisites": "Specify deployment topology, restart behavior, idempotency/duplicate policy, ownership of stranded running rows, and exact acceptance evidence.",
+          "riskClassification": "R1 for source-only design/spec; any later implementation touching runtime execution, persisted DB state, security, or external effects is minimum R2. The exact future ceiling and authority require separate classification.",
           "effectBoundary": "Separate work order and risk review required before source/runtime/data effects; R074 grants no such authority.",
           "acceptanceBoundary": "Locally controlled failure/restart and concurrency evidence can test defined behavior; deployed or external effects require distinct authority."
         },
         {
           "priority": 2,
           "name": "MCP and HTTP trigger-option parity",
-          "prerequisites": "Product decision on modes, date ranges, caps, default semantics and compatibility.",
-          "effectBoundary": "Separate testable spec and work order before source behavior changes.",
+          "prerequisites": "Preserve the R044 accepted MCP contract (since_last only, empty dates, cap zero, reject extra mode/date/cap arguments). Consider expansion only if separately requested and specified.",
+          "riskClassification": "R1 for source-only design/spec; separately classify and authorize any behavior implementation. If it touches production runtime/data, security, or external effects, it is minimum R2.",
+          "effectBoundary": "Do not reopen the accepted choice silently; any source behavior change requires a separate testable spec/work order and exact risk/authority classification.",
           "acceptanceBoundary": "Exact request validation and response mapping tested locally; no claim about deployed compatibility."
         },
         {
           "priority": 3,
           "name": "Notification reliability and failure handling",
           "prerequisites": "Define retry, duplicate suppression and visible failure semantics after terminal persistence.",
+          "riskClassification": "R1 for source-only design/spec; implementation touching runtime, persisted DB state, security, or real destinations is minimum R2. The exact future ceiling and authority require separate classification.",
           "effectBoundary": "Local notifier fixtures only within separate local authority; real destinations require separately authorized external-effect evidence.",
           "acceptanceBoundary": "Prove only the bounded local contract; Facebook/Zalo OA account and live work remain parked."
         }
