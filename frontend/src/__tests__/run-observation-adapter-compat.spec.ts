@@ -78,7 +78,6 @@ const expectedLegacyProjection: RunObservation = {
     item_count: 1, items_saved: 1, items_save_failed: 0, items_not_published: 0, items_pending: 0,
     omitted_calls: 0, omitted_members: 0,
     NOT_ATTEMPTED: 0, WRITE_SUCCEEDED: 1, WRITE_FAILED: 0, WRITE_OUTCOME_UNKNOWN: 0,
-    ACCEPTED: 0, REJECTED: 0, NOT_SEPARATELY_OBSERVABLE: 1,
     execution_complete: true, entries_complete: true, members_complete: true, stop_reason: 'NONE',
   } },
   rules: { available: true, values: { fingerprint: 'b'.repeat(64) } },
@@ -136,32 +135,26 @@ describe('saved-run adapter usage extension compatibility', () => {
   })
 
   it('still rejects unrelated keys and malformed, unsafe, or contradictory legacy usage', () => {
-    const unrelated = projectRunObservation(changeSummary(summary => {
-      summary.source_execution.usage_observation.unrelated_extension = { marker: 'must reject' }
-    }), context)
-    expect(unrelated.execution.available).toBe(true)
-    expect(unrelated.usage).toEqual({ available: false })
+    const invalidLegacyCases: Array<{ name: string; mutate: (usage: Record<string, unknown>) => void }> = [
+      { name: 'unrelated key', mutate: usage => { usage.unrelated_extension = { marker: 'must reject' } } },
+      { name: 'missing legacy field', mutate: usage => { delete usage.token_basis } },
+      { name: 'future legacy version', mutate: usage => { usage.version = 'ccmai.usage-observation.v2' } },
+      { name: 'unsafe legacy number', mutate: usage => { usage.input_tokens = Number.MAX_SAFE_INTEGER + 1 } },
+      { name: 'contradictory totals', mutate: usage => { usage.input_tokens = null } },
+    ]
 
-    const missingLegacyField = projectRunObservation(changeSummary(summary => {
-      delete summary.source_execution.usage_observation.token_basis
-    }), context)
-    expect(missingLegacyField.usage).toEqual({ available: false })
+    for (const withExtension of [false, true]) {
+      for (const invalidCase of invalidLegacyCases) {
+        const projected = projectRunObservation(changeSummary(summary => {
+          const usage = summary.source_execution.usage_observation
+          invalidCase.mutate(usage)
+          if (withExtension) usage.adapter_usage_presence = representativeR071Aggregate
+        }), context)
 
-    const futureLegacyVersion = projectRunObservation(changeSummary(summary => {
-      summary.source_execution.usage_observation.version = 'ccmai.usage-observation.v2'
-    }), context)
-    expect(futureLegacyVersion.usage).toEqual({ available: false })
-
-    const unsafeLegacyNumber = projectRunObservation(changeSummary(summary => {
-      summary.source_execution.usage_observation.input_tokens = Number.MAX_SAFE_INTEGER + 1
-    }), context)
-    expect(unsafeLegacyNumber.execution.available).toBe(true)
-    expect(unsafeLegacyNumber.usage).toEqual({ available: false })
-
-    const contradictoryTotals = projectRunObservation(changeSummary(summary => {
-      summary.source_execution.usage_observation.input_tokens = null
-    }), context)
-    expect(contradictoryTotals.usage).toEqual({ available: false })
+        expect(projected.execution.available, `${invalidCase.name}; extension ${withExtension ? 'present' : 'absent'}`).toBe(true)
+        expect(projected.usage, `${invalidCase.name}; extension ${withExtension ? 'present' : 'absent'}`).toEqual({ available: false })
+      }
+    }
   })
 
   it('preserves execution binding, known zero, and legacy null totals despite extension totals', () => {
