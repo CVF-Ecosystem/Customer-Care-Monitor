@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh IMPLEMENTATION_WORKER / bounded evidence capture
-- Next allowed move: CCMAI-RUNTIME-071 BUILD repaired sourceee6b1c0 statically approved: worker and root each run exactly1 offline wholebackend compile then4puretests positive20/M01/M02/restoredNEW10 with committed ownplans/sharedcapture and separate archives/backups. Stop on failure, no automatic retry; max8attempts each(2build+6tests), current0. Initialsource/plan/S1-S3 preserved, one test repair complete. Root independent review/metadata only, no product edit. No DB/provider/network/frontend/Git/core; full roadmap/live/governance OPEN; Facebook/Zalo OA parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh source author idle
+- Next allowed move: CCMAI-RUNTIME-071 independent REVIEW_PASS sourceee6b1c0: each role compilePASS/positive20top65/M01M02 healthy/restored10top38,5Go attempts/processes each, zero unexpected runtime failure/retry; original static S1-S3/one test repair retained. Root CLOSER next only synchronized aggregate-local closure metadata/checks/commit; no further Go/source/push. FullS2/S3/S5/globalF02/live/governance/queue-realAnalyzer OPEN, Facebook/Zalo OA parked; priorR068 publicationunverified/notretried.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche transition acknowledgment (2026-10-10)
@@ -17,11 +17,11 @@ Root rehydrated manifest/policy/currentR070state/memory/activehandoff/implementa
 
 R071 new engine/receipt paths and APO01..12 acceptance cross the old adapter-only authority; submit concrete R2 order for human review before source/Go. Current execution0; proposed maxima are conditional, not permission. Accepted R068 sourcebb0bdeb and R069/R070 local FREEZE unchanged; Git publication remains UNVERIFIED, not a prerequisite to this local planning and not retried. Separate legacy600/1500 bounds and NEW3000 trimming contract clarified before implementation. Root corrected read-only PowerShell/path/module invocation mistakes; no product finding or runtime.
 
-## Luna cumulative assessment
+## Historical preparation assessment
 
 Method docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md; ledger docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json. R067 inherited draft, R068 fresh after one product repair; no demonstrated efficiency advantage over unmatched Sol sample, no token/model-time/cost data. R071 feasibility only, code quality UNASSESSED. Track new events before repair and close report only after independent review, worker and parent attribution separate.
 
-## Preparation checks
+## Historical preparation checks
 
 Fresh46 downstream gate units PASS31.906s, seed preflight default/PR7/7 and exact changed set check PASS. Final continuity/catalog/docs checks required before preparation handback. No Go, provider, DB, application frontend, live or hosted test; docs-site validation is separate. No claim of runtime CVF AI governance.
 
@@ -51,3 +51,7 @@ The repair is limited to the NEW adapter usage-presence test file plus permitted
 ## Repaired-source approval before first Go
 
 Root independent static approval of sourceee6b1c0 and repairedworkerplan84defd4, own independently selected rootplan, all407protected unchanged/seedimmutable/archive220 verified. S1/S2/S3 settled in one NEW-test repair; implementation semantics unchanged by repair. Initial source/plan retained. Worker REPAIR_WORKER -> IMPLEMENTATION_WORKER / bounded evidence capture; root independent REVIEWER / metadata steward. [Static approval](../../docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md). Commit this route before any Go; expected5each, caps8each unchanged, used0. No runtime acceptance yet.
+
+## Formal independent REVIEW_PASS
+
+Root rehydrated current canonical tuple/source/plan and independently audited actual worker/root packets. Each role compilePASS, positive20top65outcomesPASS, M01/M02 intendedsemanticdetectorFAIL with healthyPASS, restored10top38PASS; attempts5/processes5 each, no unexpectedfailures/skips/timeouts/retries. Four separate raw backups and actual before/after220memberarchives verified;407protected unchanged/seedimmutable. [Formal review](../../docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md) and [Luna assessment](../../docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md). One NEW-test repair settled, implementation semantics unchanged; initial source/plan/pre-Go findings preserved. BUILD -> REVIEW_PENDING -> REVIEW_PASS; freeze remainsOPEN pending CLOSER metadata commit. No more Go or source authority used; reserved3each unused. PriorR068 publication remainsunverified, currentR071 publicationnone.

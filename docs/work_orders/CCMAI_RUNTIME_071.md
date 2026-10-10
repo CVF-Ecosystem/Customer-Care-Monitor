@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-071 — bounded adapter usage-presence consumer
 
-Status: BUILD
+Status: REVIEW_PASS
 
 Owner scope review: OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED. Risk R2. Owner has reviewed the concrete handover and clarified “bạn là orchestrator/reviewer, ko cần hỏi tôi như vậy” after standing next/continue instruction. Root accepts unchanged [APO01..12 SPEC](../reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md), paths/roles/budget and performs scope routing without another checkpoint. Conditional seed da8d34a remains immutable; current instruction satisfies the owner-direction condition, not a reset or widened contract. Earlier owner-confirmation block was a root interpretation now superseded. BUILD before worker source, root independent REVIEW remains mandatory.
 
@@ -38,3 +38,7 @@ First source86e6ff9/plan0402ade preserved. Root [static review](../reviews/R071_
 ## Static approval and bounded execution route
 
 Repaired sourceee6b1c0, repairedworkerplan84defd4 and root ownplan accepted by independent [static review](../reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md). S1/S2/S3 settled in one test repair, product semantics unchanged. Each role expected1compile+4puretests using committed plans/sharedcapture; stop on failure and preserve first results. Current Go0 each, caps8each unchanged; no runtime or final review acceptance yet.
+
+## Independent review result
+
+REVIEW_PASS at sourceee6b1c0, [formal review](../reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md). Both roles5attempts/5processes, compilePASS/positive20top65/M01M02 healthy/restored10top38; no unexpected failures or retries. One pre-Go NEW-test repair and originals retained. FreezeOPEN pending only synchronized local aggregate closure; no further Go/source/push. [Luna assessment](../reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md). NOTRUN boundaries unchanged: race/fullruntimeDB/appfrontend/live/provider/network/GitHubActions; no governance or whole-roadmap proof.

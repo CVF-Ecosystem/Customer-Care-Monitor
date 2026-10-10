@@ -476,14 +476,72 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 scoped adapter-only local closure, original failures/budgets retained.: `docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md`
 - R070 metadata integration acceptance/closure and explicit R1 role transitions.: `docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md`
 - Actual ordinary push waited in credential manager, owned tree terminated; publication unverified, local closure preserved.: `docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/compile-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/reservation-compile.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_compile_first/summary.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m01-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/m02-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/positive-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-m01.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-m02.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-positive.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/reservation-restored.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/restored-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_root_tests_first/summary.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/compile-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/reservation-compile.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_compile_first/summary.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m01-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-source-diff.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/m02-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/positive-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m01.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m02.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-positive.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/reservation-restored.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-after.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-before.json`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-stderr.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/restored-stdout.bin`
+- Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained.: `docs/reviews/probes/r071_runtime_worker_tests_first/summary.json`
 - Immutable R071 dispatcher seed; owner-delegated scope accepted, original condition/history preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-071.json`
 - Concrete APO01..12 additive consumer contract, no runtime yet.: `docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md`
 - Owner-requested cumulative per-tranche Luna quality methodology and attribution.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md`
-- Per-tranche Luna evidence ledger; R071 firstsource static test repair pending.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`
+- Cumulative Luna R067/R068/R071 measured evidence/repair/assistance ledger.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`
 - Fresh R071410protected physical baseline, no product draft/source.: `docs/reviews/probes/r071_fresh_source_baseline_2026-10-10.json`
 - Fresh Luna read-only consumer feasibility, zero source/test/runtime.: `docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json`
-- R071 bounded BUILD with consolidated pre-Go static test repair round1.: `docs/work_orders/CCMAI_RUNTIME_071.md`
-- R071 BUILD record; firstsource preserved, root static test repair pending, Go0.: `CVF_SESSION/tranches/CCMAI-RUNTIME-071.json`
+- R071 bounded aggregate REVIEW_PASS; scoped local closure pending.: `docs/work_orders/CCMAI_RUNTIME_071.md`
+- R071 REVIEW_PASS canonical record, aggregate10Go attempts, no retries.: `CVF_SESSION/tranches/CCMAI-RUNTIME-071.json`
 - Historical R070 local FROZEN handoff; prior publication remains unverified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md`
 - Independent first-source static S1/S2/S3 findings before any Go; unchanged-scope repair.: `docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
 - Parent supplied capture infrastructure; exact committed plans/approval required, no automatic retry.: `docs/reviews/probes/r071_shared_go_capture_2026-10-10.py`
@@ -491,6 +549,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Committed repaired worker exactsource plan, root static accepted before Go.: `docs/reviews/probes/r071_worker_repaired_source_plan_2026-10-10.json`
 - Reviewer independently selected exact20pure tests and distinct two semantic replacements.: `docs/reviews/probes/r071_root_source_plan_2026-10-10.json`
 - Independent repairedsource static approval, runtime acceptance pending.: `docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
+- Independent actualraw/mutation/220memberarchive/restoration/backup audit, bounded local proof.: `docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json`
+- Independent APO01..12 REVIEW_PASS, runtime and claim boundaries.: `docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md`
+- Empirical fresh Luna R071 assessment; one test repair, no matched Sol efficiency ranking.: `docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

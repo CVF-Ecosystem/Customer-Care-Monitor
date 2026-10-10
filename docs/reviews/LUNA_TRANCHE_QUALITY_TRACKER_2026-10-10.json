@@ -7,7 +7,7 @@
     "reasoningEffort": "xhigh"
   },
   "method": "Record original first source/launch/compile/positive, accepted product findings/repair rounds, test semantic sensitivity/final result, evidence-tool findings and parent assistance. Values unavailable remain null with reason. Compare fresh vs inherited and workload classes separately; runtime walltime is not inference/development time. Never reclassify historical failures after later PASS.",
-  "comparisonLimit": "Two prior Luna product tranches, one inherited draft and one fresh start; prior Sol R065 different engine/DB workload, not matched A/B. No token/cost/model compute-time data.",
+  "comparisonLimit": "R067 inherited, R068/R071 fresh but differing parser/consumer scopes and harness assistance; Sol R065 engine/DB differs. No matched A/B or token/cost/model-time telemetry.",
   "tranches": [
     {
       "id": "CCMAI-RUNTIME-067",
@@ -77,18 +77,19 @@
       "id": "CCMAI-RUNTIME-071",
       "workload": "Go consumer-side bounded adapter usage-presence aggregate",
       "start": "FRESH_LUNA_IMPLEMENTATION_OF_SPEC_ON_EXISTING_ACCEPTED_CODE",
-      "status": "REPAIRED_SOURCE_STATIC_APPROVED_RUNTIME_PENDING",
+      "status": "REVIEW_PASS_SCOPED_LOCAL_CLOSURE_PENDING",
       "firstSourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a",
-      "firstLaunch": null,
-      "firstCompile": "NOT_RUN_STATIC_APPROVED",
-      "firstPositive": "NOT_RUN_STATIC_APPROVED",
+      "firstLaunch": "PASS_BOTH_ROLES_ON_APPROVED_REPAIRED_SOURCE",
+      "firstCompile": "PASS_BOTH_ROLES_SOURCE_ee6b1c0_AFTER_ONE_PRE_GO_TEST_REPAIR",
+      "firstPositive": "PASS_BOTH_ROLES_20TOP_65OUTCOMES_AFTER_STATIC_TEST_REPAIR",
       "acceptedProductFindings": [
         "S1 P1 NEW overflow test expects overflow for MaxInt64+0; no runtime failure yet.",
         "S2 P2 known-prefix guard sensitivity missing because initial nil metadata masks totals.",
         "S3 P2 full maximum fixed aggregate bound and saturation evidence missing."
       ],
       "workerEvidenceFindings": [
-        "Initial parallel PR-preflight/gate-unit sessions not retained: INDETERMINATE; captured repeats PASS7/7 and46/46 in50.891s, separate from code quality."
+        "Initial parallel PR-preflight/gate-unit sessions not retained: INDETERMINATE; captured repeats PASS7/7 and46/46 in50.891s, separate from code quality.",
+        "Initially held capture for another role-ack commit despite transition already committed1116141; root clarified and capture continued without wasted Go."
       ],
       "rootFindings": [
         "read-only PowerShell brace/glob path mistakes; corrected, zero runtime effect",
@@ -103,7 +104,7 @@
       "workerAuditFindings": [
         "Suggested root-relative go test ./backend/engine command corrected to governed go -C owned/backend test ./engine; not executed."
       ],
-      "productQuality": "STATIC_ACCEPTED_AFTER_ONE_TEST_REPAIR_RUNTIME_PENDING",
+      "productQuality": "INDEPENDENT_REVIEW_PASS_BOUNDED_AGGREGATE",
       "parentAssistance": [
         "Root supplies shared capture infrastructure; worker source/test implementation remains independent.",
         "Root pre-source static capture validation adds exact inventory and mutation labels, restoration-error retention.",
@@ -118,7 +119,21 @@
       "staticReview": "docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md",
       "finalSourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
       "sourceTestRepairRounds": 1,
-      "productSemanticRepairRounds": 0
+      "productSemanticRepairRounds": 0,
+      "assessment": "docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "finalLocalEvidence": "each role compilePASS/positive20top65PASS/M01M02 semantic kills healthyPASS/restored10top38PASS",
+      "originalAttempts": 10,
+      "originalActualGoProcesses": 10,
+      "workerAttempts": 5,
+      "reviewerAttempts": 5,
+      "automaticRetries": 0,
+      "unexpectedNativeFailures": 0,
+      "finalDisposition": "REVIEW_PASS_CLOSURE_PENDING",
+      "independentRawAudit": "docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json",
+      "workerNativeCompileSeconds": 7.110281199915335,
+      "workerNativeTestSeconds": 36.80315179983154,
+      "rootNativeCompileSeconds": 12.016206699889153,
+      "rootNativeTestSeconds": 39.64087379979901
     }
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "role": "worker",
+  "mode": "compile",
+  "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+  "command": [
+    "C:\\Program Files\\Go\\bin\\go.EXE",
+    "-C",
+    "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-worker-compile-j6rr0fut\\backend",
+    "build",
+    "./..."
+  ],
+  "ordinal": 1
+}

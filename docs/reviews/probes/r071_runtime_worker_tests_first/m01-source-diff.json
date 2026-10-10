@@ -1,0 +1,7 @@
+{
+  "path": "backend/engine/adapter_usage_presence_observation.go",
+  "before": "0ff5d3be2390220893cee26711408fb2732e185a752bad23c017f36707b747ae",
+  "after": "c4e9c6639624b158721268cdf70d7356842e51aed19348d11fe98420a37c298d",
+  "replacementMatches": 1,
+  "diff": "--- \n+++ \n@@ -122,9 +122,10 @@\n \t\toutput: normalizedAdapterUsageCount{status: adapterUsageInvalid},\n \t}\n \tif presence == nil {\n+\t\tzero := int64(0)\n \t\treturn normalizedAdapterUsagePresence{\n-\t\t\tinput:  normalizedAdapterUsageCount{status: adapterUsageUnobserved},\n-\t\t\toutput: normalizedAdapterUsageCount{status: adapterUsageUnobserved},\n+\t\t\tinput:  normalizedAdapterUsageCount{status: adapterUsageKnown, value: zero},\n+\t\t\toutput: normalizedAdapterUsageCount{status: adapterUsageKnown, value: zero},\n \t\t}\n \t}\n \tif presence.SchemaVersion != adapterUsagePresenceSchemaVersion || !allowedAdapterUsagePresenceSource(presence.Source) {\n"
+}

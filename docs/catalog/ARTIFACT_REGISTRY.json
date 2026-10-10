@@ -4804,7 +4804,7 @@
       "family": "continuity",
       "path": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
       "status": "ACTIVE",
-      "description": "Per-tranche Luna evidence ledger; R071 firstsource static test repair pending."
+      "description": "Cumulative Luna R067/R068/R071 measured evidence/repair/assistance ledger."
     },
     {
       "id": "r071-planning-a005",
@@ -4825,14 +4825,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_071.md",
       "status": "ACTIVE",
-      "description": "R071 bounded BUILD with consolidated pre-Go static test repair round1."
+      "description": "R071 bounded aggregate REVIEW_PASS; scoped local closure pending."
     },
     {
       "id": "r071-planning-b002",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-071.json",
       "status": "ACTIVE",
-      "description": "R071 BUILD record; firstsource preserved, root static test repair pending, Go0."
+      "description": "R071 REVIEW_PASS canonical record, aggregate10Go attempts, no retries."
     },
     {
       "id": "r071-planning-b003",
@@ -4882,6 +4882,433 @@
       "path": "docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
       "status": "ACTIVE",
       "description": "Independent repairedsource static approval, runtime acceptance pending."
+    },
+    {
+      "id": "r071-review-c007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Independent actualraw/mutation/220memberarchive/restoration/backup audit, bounded local proof."
+    },
+    {
+      "id": "r071-review-c008",
+      "family": "continuity",
+      "path": "docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent APO01..12 REVIEW_PASS, runtime and claim boundaries."
+    },
+    {
+      "id": "r071-review-c009",
+      "family": "continuity",
+      "path": "docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Empirical fresh Luna R071 assessment; one test repair, no matched Sol efficiency ranking."
+    },
+    {
+      "id": "r071-evidence-d001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/compile-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/reservation-compile.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_compile_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m01-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/m02-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/positive-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-m01.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-m02.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-positive.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/reservation-restored.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/restored-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_root_tests_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/compile-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d034",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/reservation-compile.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d035",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_compile_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d036",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d038",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d039",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m01-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d043",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-source-diff.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d044",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d045",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/m02-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d047",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/positive-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d050",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m01.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-m02.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d052",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-positive.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d053",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/reservation-restored.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d054",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-after.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d055",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-manifest-before.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d056",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-stderr.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d057",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/restored-stdout.bin",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-evidence-d058",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_runtime_worker_tests_first/summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
     }
   ]
 }

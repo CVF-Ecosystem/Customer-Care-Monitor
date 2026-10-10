@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-10",
+  "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+  "role": "worker",
+  "mode": "compile",
+  "stage": "first",
+  "approvalCommit": "11161412250d986a8ac4da7706e86d96212ea158",
+  "archiveSha256": "a9c134179ffc8a96f98107474e155d7d28430c73a8320f2561d4e1e76e5dfd26",
+  "members": 220,
+  "scratch": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-worker-compile-j6rr0fut",
+  "plan": "docs/reviews/probes/r071_worker_repaired_source_plan_2026-10-10.json",
+  "planSha256Physical": "6f15c0fe295ce450b752f89dbe7dfb39076c79a35094f0361850a0e037841a93",
+  "fixedEnvironment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "commands": [
+    {
+      "label": "compile",
+      "command": [
+        "C:\\Program Files\\Go\\bin\\go.EXE",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-worker-compile-j6rr0fut\\backend",
+        "build",
+        "./..."
+      ],
+      "processStarted": true,
+      "timedOut": false,
+      "exitCode": 0,
+      "ownedPid": 26940,
+      "elapsedSeconds": 7.110281199915335
+    }
+  ],
+  "attempts": 1,
+  "actualGoProcesses": 1,
+  "automaticRetries": 0,
+  "governanceClaim": false,
+  "status": "PASS",
+  "restorationErrors": [],
+  "sourceRestored": true,
+  "secondArchiveIdentical": true,
+  "raw": {
+    "compile-manifest-after.json": {
+      "bytes": 32922,
+      "sha256": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe"
+    },
+    "compile-manifest-before.json": {
+      "bytes": 32922,
+      "sha256": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe"
+    },
+    "compile-stderr.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "compile-stdout.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reservation-compile.json": {
+      "bytes": 311,
+      "sha256": "664d4a6eabf94ab4b85067b157247e7874506cd90c005caab9762a5d8dc2008f"
+    }
+  },
+  "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-worker-raw-backup-t_tcki3k"
+}

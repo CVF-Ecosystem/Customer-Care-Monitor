@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-10",
+  "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
+  "role": "root",
+  "mode": "tests",
+  "stage": "first",
+  "approvalCommit": "11161412250d986a8ac4da7706e86d96212ea158",
+  "archiveSha256": "a9c134179ffc8a96f98107474e155d7d28430c73a8320f2561d4e1e76e5dfd26",
+  "members": 220,
+  "scratch": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-tests-e3252109",
+  "plan": "docs/reviews/probes/r071_root_source_plan_2026-10-10.json",
+  "planSha256Physical": "83def4841db9ecd0873979500fc76806661c9ef75480453b722ee32924d79953",
+  "fixedEnvironment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "commands": [
+    {
+      "label": "positive",
+      "command": [
+        "C:\\Program Files\\Go\\bin\\go.EXE",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-tests-e3252109\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./engine",
+        "-run",
+        "^(TestUOInitialUnknownAndZeroPresence|TestUOKnownPriceLiteralControl|TestUOUnknownPriceNeverFree|TestUOInvalidValuesAndOverflow|TestUOActiveReturnGuardAndIncompletePrefix|TestUOFreezePrivacyBoundsAndComposition|TestEXCollectorDimensionsAndFreeze|TestEXPanicUncertaintyAndReturnedBoundary|TestEXBoundsPrivacyAndIndependentPreparationBytes|TestEXInvalidMetadataNeverSerializesRawValues|TestAdapterUsagePresenceOmittedBeforeNewHook|TestAdapterUsagePresencePositiveAggregation|TestAdapterUsagePresenceM01NilUnobservedDetector|TestAdapterUsagePresenceM01KnownZeroHealthyControl|TestAdapterUsagePresenceM02MalformedKnownDetector|TestAdapterUsagePresenceM02ValidIntegerHealthyControl|TestAdapterUsagePresenceStrictNormalizationAndIndependentSides|TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage|TestAdapterUsagePresenceOverflowAndOwnedSnapshots|TestAdapterUsagePresenceTrimSurvivesCalls)$"
+      ],
+      "processStarted": true,
+      "timedOut": false,
+      "exitCode": 0,
+      "ownedPid": 436,
+      "elapsedSeconds": 12.981114499969408,
+      "passed": [
+        "TestAdapterUsagePresenceOmittedBeforeNewHook",
+        "TestAdapterUsagePresencePositiveAggregation",
+        "TestAdapterUsagePresenceM01NilUnobservedDetector",
+        "TestAdapterUsagePresenceM01KnownZeroHealthyControl",
+        "TestAdapterUsagePresenceM02MalformedKnownDetector",
+        "TestAdapterUsagePresenceM02ValidIntegerHealthyControl",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/bad_schema_invalidates_pair",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/raw_source_invalidates_pair",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/explicit_absent",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/absent_with_value_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/valid_null_status",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/null_with_value_invalid_but_sibling_survives",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/malformed_output_preserves_input_sibling",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/negative_known_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/invalid_status_with_value_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unavailable_with_value_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unknown_status_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unavailable_source_valid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unavailable_source_contradiction_invalidates_pair",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage/in_flight",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage/error_returned",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage/successful_without_hook",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/input_sum_overflow_with_output_total",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/output_sum_overflow_with_input_total",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/boundary_plus_zero_is_valid",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/all_fixed_fields_maximum_width_bound",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/responses",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/known",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/absent",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/null",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/invalid",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/unavailable",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/unobserved",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots",
+        "TestAdapterUsagePresenceTrimSurvivesCalls",
+        "TestEXCollectorDimensionsAndFreeze",
+        "TestEXPanicUncertaintyAndReturnedBoundary/provider",
+        "TestEXPanicUncertaintyAndReturnedBoundary/usage",
+        "TestEXPanicUncertaintyAndReturnedBoundary/publication",
+        "TestEXPanicUncertaintyAndReturnedBoundary",
+        "TestEXBoundsPrivacyAndIndependentPreparationBytes",
+        "TestEXInvalidMetadataNeverSerializesRawValues",
+        "TestUOInitialUnknownAndZeroPresence",
+        "TestUOKnownPriceLiteralControl",
+        "TestUOUnknownPriceNeverFree",
+        "TestUOInvalidValuesAndOverflow/input",
+        "TestUOInvalidValuesAndOverflow/output",
+        "TestUOInvalidValuesAndOverflow/negative_cost",
+        "TestUOInvalidValuesAndOverflow/nan",
+        "TestUOInvalidValuesAndOverflow/positive_inf",
+        "TestUOInvalidValuesAndOverflow/negative_inf",
+        "TestUOInvalidValuesAndOverflow/token_overflow",
+        "TestUOInvalidValuesAndOverflow/output_overflow",
+        "TestUOInvalidValuesAndOverflow/cost_overflow",
+        "TestUOInvalidValuesAndOverflow/counter_responses",
+        "TestUOInvalidValuesAndOverflow/counter_invalid_tokens",
+        "TestUOInvalidValuesAndOverflow/counter_priced",
+        "TestUOInvalidValuesAndOverflow/counter_unpriced",
+        "TestUOInvalidValuesAndOverflow/counter_invalid_costs",
+        "TestUOInvalidValuesAndOverflow",
+        "TestUOActiveReturnGuardAndIncompletePrefix",
+        "TestUOFreezePrivacyBoundsAndComposition"
+      ],
+      "failed": [],
+      "skipped": []
+    },
+    {
+      "label": "m01",
+      "command": [
+        "C:\\Program Files\\Go\\bin\\go.EXE",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-tests-e3252109\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./engine",
+        "-run",
+        "^(TestAdapterUsagePresenceM01NilUnobservedDetector|TestAdapterUsagePresenceM01KnownZeroHealthyControl)$"
+      ],
+      "processStarted": true,
+      "timedOut": false,
+      "exitCode": 1,
+      "ownedPid": 1264,
+      "elapsedSeconds": 8.979011900024489,
+      "passed": [
+        "TestAdapterUsagePresenceM01KnownZeroHealthyControl"
+      ],
+      "failed": [
+        "TestAdapterUsagePresenceM01NilUnobservedDetector"
+      ],
+      "skipped": []
+    },
+    {
+      "label": "m02",
+      "command": [
+        "C:\\Program Files\\Go\\bin\\go.EXE",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-tests-e3252109\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./engine",
+        "-run",
+        "^(TestAdapterUsagePresenceM02MalformedKnownDetector|TestAdapterUsagePresenceM02ValidIntegerHealthyControl)$"
+      ],
+      "processStarted": true,
+      "timedOut": false,
+      "exitCode": 1,
+      "ownedPid": 9324,
+      "elapsedSeconds": 9.305459799943492,
+      "passed": [
+        "TestAdapterUsagePresenceM02ValidIntegerHealthyControl"
+      ],
+      "failed": [
+        "TestAdapterUsagePresenceM02MalformedKnownDetector"
+      ],
+      "skipped": []
+    },
+    {
+      "label": "restored",
+      "command": [
+        "C:\\Program Files\\Go\\bin\\go.EXE",
+        "-C",
+        "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-tests-e3252109\\backend",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=120s",
+        "./engine",
+        "-run",
+        "^(TestAdapterUsagePresenceOmittedBeforeNewHook|TestAdapterUsagePresencePositiveAggregation|TestAdapterUsagePresenceM01NilUnobservedDetector|TestAdapterUsagePresenceM01KnownZeroHealthyControl|TestAdapterUsagePresenceM02MalformedKnownDetector|TestAdapterUsagePresenceM02ValidIntegerHealthyControl|TestAdapterUsagePresenceStrictNormalizationAndIndependentSides|TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage|TestAdapterUsagePresenceOverflowAndOwnedSnapshots|TestAdapterUsagePresenceTrimSurvivesCalls)$"
+      ],
+      "processStarted": true,
+      "timedOut": false,
+      "exitCode": 0,
+      "ownedPid": 7868,
+      "elapsedSeconds": 8.375287599861622,
+      "passed": [
+        "TestAdapterUsagePresenceOmittedBeforeNewHook",
+        "TestAdapterUsagePresencePositiveAggregation",
+        "TestAdapterUsagePresenceM01NilUnobservedDetector",
+        "TestAdapterUsagePresenceM01KnownZeroHealthyControl",
+        "TestAdapterUsagePresenceM02MalformedKnownDetector",
+        "TestAdapterUsagePresenceM02ValidIntegerHealthyControl",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/bad_schema_invalidates_pair",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/raw_source_invalidates_pair",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/explicit_absent",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/absent_with_value_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/valid_null_status",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/null_with_value_invalid_but_sibling_survives",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/malformed_output_preserves_input_sibling",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/negative_known_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/invalid_status_with_value_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unavailable_with_value_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unknown_status_invalid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unavailable_source_valid",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides/unavailable_source_contradiction_invalidates_pair",
+        "TestAdapterUsagePresenceStrictNormalizationAndIndependentSides",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage/in_flight",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage/error_returned",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage/successful_without_hook",
+        "TestAdapterUsagePresenceReturnedGuardAndIncompleteCoverage",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/input_sum_overflow_with_output_total",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/output_sum_overflow_with_input_total",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/boundary_plus_zero_is_valid",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/all_fixed_fields_maximum_width_bound",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/responses",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/known",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/absent",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/null",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/invalid",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/unavailable",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate/unobserved",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots/response_and_status_counters_saturate",
+        "TestAdapterUsagePresenceOverflowAndOwnedSnapshots",
+        "TestAdapterUsagePresenceTrimSurvivesCalls"
+      ],
+      "failed": [],
+      "skipped": []
+    }
+  ],
+  "attempts": 4,
+  "actualGoProcesses": 4,
+  "automaticRetries": 0,
+  "governanceClaim": false,
+  "status": "PASS",
+  "restorationErrors": [],
+  "sourceRestored": true,
+  "secondArchiveIdentical": true,
+  "raw": {
+    "m01-manifest-after.json": {
+      "bytes": 32922,
+      "sha256": "9943b441d47cee5db2d314f26c48490fadfea76c88f160bb851a3e14550d5967"
+    },
+    "m01-manifest-before.json": {
+      "bytes": 32922,
+      "sha256": "9943b441d47cee5db2d314f26c48490fadfea76c88f160bb851a3e14550d5967"
+    },
+    "m01-source-diff.json": {
+      "bytes": 834,
+      "sha256": "a94e238c8fa704ef70b5d246069a6c2406b482da09bab56aca5c3e39fd498b04"
+    },
+    "m01-stderr.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "m01-stdout.bin": {
+      "bytes": 3357,
+      "sha256": "62973cd29143f00e4c929db20803b56c03fed46327ca9c039caa6ff33c30949f"
+    },
+    "m02-manifest-after.json": {
+      "bytes": 32922,
+      "sha256": "83c380514a0a597937dbe639800b3c0ccac2fe5b43e5f53dcfc6dab23c093107"
+    },
+    "m02-manifest-before.json": {
+      "bytes": 32922,
+      "sha256": "83c380514a0a597937dbe639800b3c0ccac2fe5b43e5f53dcfc6dab23c093107"
+    },
+    "m02-source-diff.json": {
+      "bytes": 595,
+      "sha256": "7648c9d2c212fafe8af7752c61b2dca5d78a8a63c4c17c0f1b8d7e13ba4bb8d1"
+    },
+    "m02-stderr.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "m02-stdout.bin": {
+      "bytes": 3423,
+      "sha256": "8d1dc4a1665a1628019d1af26ca59cce8ac89203d2ce3990ccb1d7b0d8b9892d"
+    },
+    "positive-manifest-after.json": {
+      "bytes": 32922,
+      "sha256": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe"
+    },
+    "positive-manifest-before.json": {
+      "bytes": 32922,
+      "sha256": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe"
+    },
+    "positive-stderr.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "positive-stdout.bin": {
+      "bytes": 70601,
+      "sha256": "019b0df25d6bac668356938e1463690acc4f6de248ebce5b4ed7ac59e47ac24f"
+    },
+    "reservation-m01.json": {
+      "bytes": 478,
+      "sha256": "7554c6a2e73bef0d3eb5915157cdbe11f81ded505118609052032f8a53f79311"
+    },
+    "reservation-m02.json": {
+      "bytes": 482,
+      "sha256": "9470203967dd0c6f1b43f556645e11a3b289c72cc28bb2efb64ad301e2ddfa6b"
+    },
+    "reservation-positive.json": {
+      "bytes": 1267,
+      "sha256": "65f72410968dca794a6a1b7c807d2e783c6fe1a93885d3f1f200b3e8ea7ea59d"
+    },
+    "reservation-restored.json": {
+      "bytes": 885,
+      "sha256": "c1437aa7b857fefc01e2340793b498eeda772b8f7d1629bac2ab29b8cc94e078"
+    },
+    "restored-manifest-after.json": {
+      "bytes": 32922,
+      "sha256": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe"
+    },
+    "restored-manifest-before.json": {
+      "bytes": 32922,
+      "sha256": "5c3a8c8ab55787ea808d53f2be191ca2b28eb4bd12e3ced194f12ef345475fbe"
+    },
+    "restored-stderr.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "restored-stdout.bin": {
+      "bytes": 45050,
+      "sha256": "698411c906442775f17d2dad6a297c07e769ca822c8052069a923afd65c6fe7a"
+    }
+  },
+  "rawBackup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r071-root-raw-backup-3271ixve"
+}
