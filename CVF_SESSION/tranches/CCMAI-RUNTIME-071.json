@@ -45,8 +45,8 @@
     "full_roadmap_live_governance_claim"
   ],
   "schemaVersion": "1.0",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
   "baseCommit": "da8d34a8d852c49f2c1a9c94020875d830db9b8b",
   "buildCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
@@ -55,16 +55,18 @@
     "docs/reviews/R071_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md",
     "docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json",
     "docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md",
-    "docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md"
+    "docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+    "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -95,7 +97,7 @@
     "automaticRetries": 0
   },
   "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
-  "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS",
+  "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
   "workerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
@@ -123,7 +125,8 @@
     "Fresh Luna IMPLEMENTATION_WORKER/COMMIT_STEWARD after committed before-edit acknowledgment; root independent REVIEWER",
     "Root independent REVIEWER -> SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD records consolidated first-source findings before Luna REPAIR_WORKER; BUILD remains open",
     "Luna REPAIR_WORKER -> IMPLEMENTATION_WORKER / bounded evidence capture after root static approval; root independent REVIEWER / metadata COMMIT_STEWARD",
-    "Root independent REVIEWER evaluates exactsource/raw evidence -> REVIEW_PASS; SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD records before conditional CLOSER"
+    "Root independent REVIEWER evaluates exactsource/raw evidence -> REVIEW_PASS; SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD records before conditional CLOSER",
+    "Root independent REVIEWER -> CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD after committed REVIEW_PASS14686ba; aggregate-only local closure"
   ],
   "workerBeforeEditAcknowledgment": {
     "date": "2026-10-10",
@@ -253,5 +256,22 @@
     "gateUnits": "Previously captured46PASS unchanged gate/tooling; not rerun",
     "originalRawGitBlobsVerified": 58,
     "protectedUnchanged": 407
+  },
+  "closer": "Codex /root",
+  "closureEvidence": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
+  "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2",
+  "closureGoInvocations": 0,
+  "publicationStatus": "NOT_AUTHORIZED_IN_R071",
+  "freezePublicationChecks": {
+    "defaultPreflight": "PASS7/7",
+    "prPreflight": "PASS7/7 local origin/main range",
+    "catalogPS51": "PASS through preflight",
+    "catalogPS7": "PASS",
+    "docsBuild": "PASS8.85s final docs-site content",
+    "doctor": "PASS_WITH_NOTE25/1; manifest/core pin and migration notes retained",
+    "gateUnits": "Inherited captured46PASS, gate/tooling unchanged; no new unit invocation",
+    "protectedSourceSeal": "PASS407protected/source220/immutable seed/native58Gitblob+physical",
+    "newGoInvocations": 0,
+    "publication": "NOT_AUTHORIZED_IN_R071"
   }
 }

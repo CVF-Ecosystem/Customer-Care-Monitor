@@ -540,8 +540,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Cumulative Luna R067/R068/R071 measured evidence/repair/assistance ledger.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`
 - Fresh R071410protected physical baseline, no product draft/source.: `docs/reviews/probes/r071_fresh_source_baseline_2026-10-10.json`
 - Fresh Luna read-only consumer feasibility, zero source/test/runtime.: `docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json`
-- R071 bounded aggregate REVIEW_PASS; scoped local closure pending.: `docs/work_orders/CCMAI_RUNTIME_071.md`
-- R071 REVIEW_PASS canonical record, aggregate10Go attempts, no retries.: `CVF_SESSION/tranches/CCMAI-RUNTIME-071.json`
+- R071 bounded aggregate FROZEN work order, full/runtime/live boundaries retained.: `docs/work_orders/CCMAI_RUNTIME_071.md`
+- Canonical R071 FROZEN record, aggregate10Go attempts/processes, no retries.: `CVF_SESSION/tranches/CCMAI-RUNTIME-071.json`
 - Historical R070 local FROZEN handoff; prior publication remains unverified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md`
 - Independent first-source static S1/S2/S3 findings before any Go; unchanged-scope repair.: `docs/reviews/R071_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
 - Parent supplied capture infrastructure; exact committed plans/approval required, no automatic retry.: `docs/reviews/probes/r071_shared_go_capture_2026-10-10.py`
@@ -552,6 +552,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent actualraw/mutation/220memberarchive/restoration/backup audit, bounded local proof.: `docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json`
 - Independent APO01..12 REVIEW_PASS, runtime and claim boundaries.: `docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md`
 - Empirical fresh Luna R071 assessment; one test repair, no matched Sol efficiency ranking.: `docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
+- R071 aggregate-only local FROZEN after independent review; no newGo/publication/governance claim.: `docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

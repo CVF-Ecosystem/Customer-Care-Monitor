@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-071 — bounded adapter usage-presence consumer
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Owner scope review: OWNER_DELEGATED_ORCHESTRATOR_REVIEW_ACCEPTED. Risk R2. Owner has reviewed the concrete handover and clarified “bạn là orchestrator/reviewer, ko cần hỏi tôi như vậy” after standing next/continue instruction. Root accepts unchanged [APO01..12 SPEC](../reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md), paths/roles/budget and performs scope routing without another checkpoint. Conditional seed da8d34a remains immutable; current instruction satisfies the owner-direction condition, not a reset or widened contract. Earlier owner-confirmation block was a root interpretation now superseded. BUILD before worker source, root independent REVIEW remains mandatory.
 
@@ -42,3 +42,7 @@ Repaired sourceee6b1c0, repairedworkerplan84defd4 and root ownplan accepted by i
 ## Independent review result
 
 REVIEW_PASS at sourceee6b1c0, [formal review](../reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md). Both roles5attempts/5processes, compilePASS/positive20top65/M01M02 healthy/restored10top38; no unexpected failures or retries. One pre-Go NEW-test repair and originals retained. FreezeOPEN pending only synchronized local aggregate closure; no further Go/source/push. [Luna assessment](../reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md). NOTRUN boundaries unchanged: race/fullruntimeDB/appfrontend/live/provider/network/GitHubActions; no governance or whole-roadmap proof.
+
+## Scoped local closure
+
+Root CLOSER records FROZEN_LOCAL_AGGREGATE_ONLY after committed independent review14686ba; [closure](../reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md). Source/test/seed/oldraw unchanged, no newGo or publication. Both roles used5each, unused reserve not replayed. Fullroadmap/live/governance/persistence/UI/billing remainOPEN and accountsparked; R068 unverified publication not retried. This closes only APO01..12, not other tranches or project exits.

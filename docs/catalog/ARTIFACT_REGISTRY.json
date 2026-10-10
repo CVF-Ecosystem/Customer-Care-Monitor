@@ -4825,14 +4825,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_071.md",
       "status": "ACTIVE",
-      "description": "R071 bounded aggregate REVIEW_PASS; scoped local closure pending."
+      "description": "R071 bounded aggregate FROZEN work order, full/runtime/live boundaries retained."
     },
     {
       "id": "r071-planning-b002",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-071.json",
       "status": "ACTIVE",
-      "description": "R071 REVIEW_PASS canonical record, aggregate10Go attempts, no retries."
+      "description": "Canonical R071 FROZEN record, aggregate10Go attempts/processes, no retries."
     },
     {
       "id": "r071-planning-b003",
@@ -5309,6 +5309,13 @@
       "path": "docs/reviews/probes/r071_runtime_worker_tests_first/summary.json",
       "status": "ACTIVE",
       "description": "Actual R071 native raw/reservation/source manifest or semantic diff; original bytes retained."
+    },
+    {
+      "id": "r071-review-c010",
+      "family": "continuity",
+      "path": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R071 aggregate-only local FROZEN after independent review; no newGo/publication/governance claim."
     }
   ]
 }

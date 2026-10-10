@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-071", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-071", "parked": true} -->
 
 ## Startup Order
 
@@ -57,9 +57,9 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R071 bounded consumer work order (2026-10-10)
 
-CCMAI-RUNTIME-071 independent REVIEW_PASS sourceee6b1c0: each role compilePASS/positive20top65/M01M02 healthy/restored10top38,5Go attempts/processes each, zero unexpected runtime failure/retry; original static S1-S3/one test repair retained. Root CLOSER next only synchronized aggregate-local closure metadata/checks/commit; no further Go/source/push. FullS2/S3/S5/globalF02/live/governance/queue-realAnalyzer OPEN, Facebook/Zalo OA parked; priorR068 publicationunverified/notretried.
+CCMAI-RUNTIME-071 FROZEN aggregate-only at sourceee6b1c0/review14686ba; worker/root5Go each, compilePASS/positive20top65/M01M02 healthy/restored10top38, one pre-Go test repair retained, no further Go/source/push. Root ORCHESTRATOR next audits remaining acceptance/dependencies and prepares separate bounded work order before new source/runtime/provider scope. FullS2/S3/S5/globalF02/live/governance/queue-realAnalyzer/UIbillingpermission OPEN; Facebook/Zalo OA parked, priorR068 publicationunverified/notretried.
 
-Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 independently REVIEW_PASS sourceee6b1c0 after one NEW-test repair. Both roles5Go/compilePASS/positive20top65/M01M02/restored10top38, raw backups and restoration audited; original source/plan preserved. Scoped local closure metadata pending, no further source/Go/push.
+Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 FROZEN aggregate-only sourceee6b1c0/review14686ba after one NEW-test repair. Both roles5Go/compilePASS/positive20top65/M01M02/restored10top38, raw backups and restoration audited; original source/plan and parent/worker findings preserved. No further source/Go/push; whole roadmap/live/governance OPEN.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

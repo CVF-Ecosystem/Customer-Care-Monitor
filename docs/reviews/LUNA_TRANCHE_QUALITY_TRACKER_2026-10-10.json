@@ -77,7 +77,7 @@
       "id": "CCMAI-RUNTIME-071",
       "workload": "Go consumer-side bounded adapter usage-presence aggregate",
       "start": "FRESH_LUNA_IMPLEMENTATION_OF_SPEC_ON_EXISTING_ACCEPTED_CODE",
-      "status": "REVIEW_PASS_SCOPED_LOCAL_CLOSURE_PENDING",
+      "status": "FROZEN_LOCAL_AGGREGATE_ONLY",
       "firstSourceCommit": "86e6ff976c32cced25f10d7c8e17b470fdb5106a",
       "firstLaunch": "PASS_BOTH_ROLES_ON_APPROVED_REPAIRED_SOURCE",
       "firstCompile": "PASS_BOTH_ROLES_SOURCE_ee6b1c0_AFTER_ONE_PRE_GO_TEST_REPAIR",
@@ -128,12 +128,14 @@
       "reviewerAttempts": 5,
       "automaticRetries": 0,
       "unexpectedNativeFailures": 0,
-      "finalDisposition": "REVIEW_PASS_CLOSURE_PENDING",
+      "finalDisposition": "FROZEN_LOCAL_AGGREGATE_ONLY",
       "independentRawAudit": "docs/reviews/probes/r071_independent_raw_evidence_audit_2026-10-10.json",
       "workerNativeCompileSeconds": 7.110281199915335,
       "workerNativeTestSeconds": 36.80315179983154,
       "rootNativeCompileSeconds": 12.016206699889153,
-      "rootNativeTestSeconds": 39.64087379979901
+      "rootNativeTestSeconds": 39.64087379979901,
+      "closureEvidence": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
+      "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2"
     }
   ]
 }
