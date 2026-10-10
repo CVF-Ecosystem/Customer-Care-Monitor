@@ -618,6 +618,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root independent PU01..09 static/runtime review plan before first Luna source; no product/test draft.: `docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md`
 - R073 firstsource53abf11 CHANGES_REQUIRED F1/F2 NEW-test boundary/coverage, F3 locale precision; original native NOT_RUN.: `docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
 - R073 repairedsource3a05b50 F1..F3 closed static; worker own49expected/forcedtypecheck pending, no original native run.: `docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
+- Luna xhigh source-only dispatcher audit narrative/facts/source identities; pending independent review, app native0.: `docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md`
+- Luna xhigh source-only dispatcher audit narrative/facts/source identities; pending independent review, app native0.: `docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json`
+- Luna xhigh source-only dispatcher audit narrative/facts/source identities; pending independent review, app native0.: `docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json`
 - R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-074.json`
 - R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md`
 - R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/probes/r074_protected_baseline_2026-10-10.json`

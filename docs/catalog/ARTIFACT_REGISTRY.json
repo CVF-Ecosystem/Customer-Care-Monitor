@@ -5806,6 +5806,27 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_074.md",
       "status": "ACTIVE",
       "description": "R074 BUILD source-only contract audit; independent review, no runtime/governance proof."
+    },
+    {
+      "id": "r074-audit-c-001",
+      "family": "continuity",
+      "path": "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Luna xhigh source-only dispatcher audit narrative/facts/source identities; pending independent review, app native0."
+    },
+    {
+      "id": "r074-audit-c-002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r074_dispatch_audit_facts_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Luna xhigh source-only dispatcher audit narrative/facts/source identities; pending independent review, app native0."
+    },
+    {
+      "id": "r074-audit-c-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Luna xhigh source-only dispatcher audit narrative/facts/source identities; pending independent review, app native0."
     }
   ]
 }
