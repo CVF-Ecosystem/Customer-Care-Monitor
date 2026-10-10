@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root independent REVIEWER / metadata SESSION_SYNC_STEWARD; Luna xhigh documentary REPAIR_WORKER / audit COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-074 BUILD mechanical citation repair round2: Luna ACK recorded before edits; correct R058 exact target and R053 supporting line21 in two authorized content files, identity unchanged. Root independent re-review; app native0/product/test/provider/network/DB effects0. Broader/live OPEN, accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / metadata SESSION_SYNC_STEWARD
+- Next allowed move: CCMAI-RUNTIME-074 REVIEW_PASS for DA01..10 documentary source audit after F1..F4 substantive repair and mechanical citation correction; root CLOSER assesses local dossier-only FREEZE and synchronizes separate audit-quality sample. App native0, implementation samples5; no product/test/provider/network/DB/publication, broader/live OPEN and accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-dispatch acknowledgment

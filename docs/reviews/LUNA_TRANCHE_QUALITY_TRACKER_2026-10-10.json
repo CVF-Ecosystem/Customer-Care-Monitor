@@ -322,7 +322,7 @@
     "actualRoutingChanged": false,
     "provisional": true,
     "uniqueImplementationSamples": 5,
-    "sampleOverlap": "Five accepted implementation tranches; task classes overlap, do not sum sample counts. Retrospective read-only audit is support, not another implementation sample.",
+    "sampleOverlap": "Five accepted implementation tranches unchanged; one separate fresh R074 documentary audit. readonly_contract_audit combines mixed R067 contribution and fresh R074, not two independent comparable trials. Task classes overlap; do not sum counts.",
     "classes": [
       {
         "id": "bounded_product",
@@ -338,11 +338,14 @@
       {
         "id": "readonly_contract_audit",
         "tranches": [
-          "CCMAI-RUNTIME-067"
+          "CCMAI-RUNTIME-067",
+          "CCMAI-RUNTIME-074"
         ],
-        "sampleCount": 1,
-        "assignment": "TRY_BOUNDED_READONLY_AUDIT_FINDINGS_VERIFIED_BY_ROOT",
-        "confidence": "LOW_ONE_INHERITED_SAMPLE"
+        "sampleCount": 2,
+        "assignment": "BOUNDED_SOURCE_CALLGRAPH_DRAFT_WITH_MATERIAL_FACT_LINEAGE_AND_RISK_REVIEW",
+        "confidence": "LOW_TWO_HETEROGENEOUS_SAMPLES",
+        "implementationContributionSamples": 1,
+        "separateFreshAuditSamples": 1
       },
       {
         "id": "directed_repair",
@@ -416,6 +419,44 @@
       "final disposition after independent review"
     ],
     "telemetry": "Token/cost/model-time not measured; native walltime cannot rank efficiency.",
-    "legacyFieldWarning": "R071/R072 acceptedProductFindings are NEW-test findings. R071 historical productRepairRounds1 means source/test repair, not product semantics. Retained verbatim; use normalizedQuality."
-  }
+    "legacyFieldWarning": "R071/R072 acceptedProductFindings are NEW-test findings. R071 historical productRepairRounds1 means source/test repair, not product semantics. Retained verbatim; use normalizedQuality.",
+    "uniqueReadonlyAuditTranches": 1
+  },
+  "readonlyAuditSamples": [
+    {
+      "id": "CCMAI-RUNTIME-074",
+      "sampleType": "FRESH_SOURCE_ONLY_DOCUMENTARY_AUDIT",
+      "taskClassification": {
+        "primary": "readonly_contract_audit",
+        "secondary": [
+          "source_callgraph",
+          "evidence_lineage",
+          "integration_risk_inventory"
+        ],
+        "sampleType": "READONLY_AUDIT_NOT_IMPLEMENTATION"
+      },
+      "firstAuditCommit": "076d3319f2e84c681a1835e4ce4cde8541334d7b",
+      "finalAuditCommit": "565b1175bf83f3d4e89dabaf94615ee94625c6e4",
+      "firstDisposition": "CHANGES_REQUIRED_DOCUMENTARY",
+      "documentaryRepairRounds": 2,
+      "substantiveDocumentRepairRounds": 1,
+      "mechanicalCitationRepairRounds": 1,
+      "findings": [
+        "F1_HISTORICAL_EFFECT_QUALIFICATION",
+        "F2_FAILED_LINEAGE_LIMITS",
+        "F3_FUTURE_RISK_BOUNDARY",
+        "F4_DEFAULT_MODE_SEMANTICS",
+        "F5_MECHANICAL_CITATION_REFERENCES"
+      ],
+      "productOrCodeDefects": "NOT_APPLICABLE_NO_PRODUCT_CHANGES",
+      "applicationNativeInvocations": 0,
+      "parentArtifactEdits": 0,
+      "parentAssistance": "Spec/baseline/current-MCP clue/bootstrap fallback/citation/pacing/consolidated findings/F2 addendum; no draft",
+      "review": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
+      "assessment": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
+      "finalDisposition": "REVIEW_PASS_FREEZE_OPEN",
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null
+    }
+  ]
 }

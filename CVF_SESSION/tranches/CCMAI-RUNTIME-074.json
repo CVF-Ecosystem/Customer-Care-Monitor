@@ -55,15 +55,16 @@
     "automaticRetries": 0,
     "currentPermittedNativeInvocations": 0
   },
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_074.md",
   "baseCommit": "f1e875d8c97ab1337000ac6452444325235e21d5",
-  "buildCommit": "076d3319f2e84c681a1835e4ce4cde8541334d7b",
+  "buildCommit": "565b1175bf83f3d4e89dabaf94615ee94625c6e4",
   "reviewEvidence": [
-    "docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md"
+    "docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md",
+    "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md"
   ],
-  "disposition": "PENDING",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -71,7 +72,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -90,9 +93,12 @@
   ],
   "repairAcknowledgment": "2026-10-10 Luna xhigh fresh canonical rehydration/declaration REPAIR_WORKER ACK received before edits: F1..F4 same-scope documentary repair only, native0, source/test/effects0; root records ACK and BUILD release under existing seed. Root metadata stewardship, worker exact artifact ownership retained; one consolidated document-repair round, not code repair.",
   "documentaryRepairRounds": 2,
-  "repairCompleted": false,
+  "repairCompleted": true,
   "firstRepairCommit": "b0e977146a346a32aa7bee1661c448abd26c129b",
   "substantiveDocumentRepairRounds": 1,
   "mechanicalCitationRepairRounds": 1,
-  "citationRepairAcknowledgment": "2026-10-10 Luna fresh canonical BUILD rehydration/declaration citation-only REPAIR_WORKER ACK received before edits. Round2 mechanical correction: R058 exact path/line13 and R053 line21; unchanged two content paths, identity unchanged, app native0. Root records same-authority release; substantive repair1 plus mechanical citation1; no third round or extra scope."
+  "citationRepairAcknowledgment": "2026-10-10 Luna fresh canonical BUILD rehydration/declaration citation-only REPAIR_WORKER ACK received before edits. Round2 mechanical correction: R058 exact path/line13 and R053 line21; unchanged two content paths, identity unchanged, app native0. Root records same-authority release; substantive repair1 plus mechanical citation1; no third round or extra scope.",
+  "finalAuditCommit": "565b1175bf83f3d4e89dabaf94615ee94625c6e4",
+  "modelAssessment": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
+  "sourceScopeAudit": "docs/reviews/probes/r074_root_source_scope_audit_2026-10-10.json"
 }

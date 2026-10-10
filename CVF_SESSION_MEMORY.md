@@ -9,13 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-074", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-074", "parked": true} -->
 
 ## Current R074
 
-CCMAI-RUNTIME-074 BUILD mechanical citation repair round2: Luna ACK recorded before edits; correct R058 exact target and R053 supporting line21 in two authorized content files, identity unchanged. Root independent re-review; app native0/product/test/provider/network/DB effects0. Broader/live OPEN, accounts parked.
+CCMAI-RUNTIME-074 REVIEW_PASS for DA01..10 documentary source audit after F1..F4 substantive repair and mechanical citation correction; root CLOSER assesses local dossier-only FREEZE and synchronizes separate audit-quality sample. App native0, implementation samples5; no product/test/provider/network/DB/publication, broader/live OPEN and accounts parked.
 
-Five accepted implementation samples preserved. R074 is a separate readonly audit sample, pending independent review; no sixth implementation sample. Root independent reviewer/source-test edits0.
+Five accepted implementation samples preserved. R074 is a separate readonly audit sample, independently accepted; local dossier FREEZE pending; no sixth implementation sample. Root independent reviewer/source-test edits0.
 
 ## Startup Order
 
