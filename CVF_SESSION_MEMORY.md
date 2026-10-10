@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-070", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-070", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R070 scoped closure integration (2026-10-10)
 
-CCMAI-RUNTIME-070 BUILD metadata-only closure integration: committed independent R068 UP01..12 REVIEW_PASS and separate R069 one-compile PASS; synchronize R068 adapter-only FREEZE, R069 compiler-only FREEZE and final fresh Luna assessment under existing owner authority. Commit review/closure artifacts after gates/docs, then ordinary authorized current-branch publication/readback. Source bb0bdeb and original budgets/failures/seeds/raw unchanged; zero additional Go/test/provider/DB/credential/source effects. Full S2/S3/S5/consumer migration/live/governance/hosted remain OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-070 FROZEN metadata-only integration: R068 UP01..12 adapter usage-presence primitive FROZEN at bb0bdeb; R069 single offline compiler validation FROZEN, final fresh Luna assessment committed with closure. Ordinary authorized current-branch publication/readback is next; then source-based remaining consumer/acceptance INTAKE/DESIGN/SPEC and separate bounded work order before new implementation/runtime. Original R06810/10 attempts and R0691/1 unchanged/exhausted; R0700Go, no automatic new campaign. Full S2/S3/S5/consumer migration/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.
 
 Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md`. Source and original evidence immutable; no extra runtime commands.
 

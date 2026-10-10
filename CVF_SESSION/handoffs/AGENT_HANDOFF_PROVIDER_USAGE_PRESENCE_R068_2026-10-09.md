@@ -1,12 +1,12 @@
 # R068 fresh provider usage-presence handoff
 
-Status: ACTIVE
+Status: HISTORICAL_FROZEN
 
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active role: Codex /root ORCHESTRATOR / independent REVIEWER / conditional CLOSER / SESSION_SYNC_STEWARD
 - Next allowed move: CCMAI-RUNTIME-068 REVIEW_PASS UP01..12 on bb0bdeb5403070eb0aa2224b96ad8fd48febd843; separate R069 one offline whole-backend compile PASS and compiler-only FROZEN. Root CLOSER synchronizes scoped adapter-metadata closure and final fresh Luna assessment, commits artifacts, then ordinary authorized current-branch publication/readback. Original R068 budget10/10 and failures unchanged; supplemental1/1 consumed, no further Go/test/source edit. Full S2/S3/S5/consumer migration/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
@@ -48,3 +48,5 @@ Worker packet b345c7a is committed; root audited42raw files/all4actual archive c
 ## Final independent review acknowledgment (2026-10-10)
 
 Root rehydrates current R069/R068 state/handoff/status/index, returns REVIEWER responsibility and accepts UP01..12. Separate R069 compiler-only FROZEN with original raw committedf3e737a16586bc37b62f380e119d1a7f3867e699; original R068 budgets/failures unchanged. Root REVIEWER -> conditional CLOSER for scoped metadata closure only. Evidence docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md.
+
+Scoped adapter-only closure docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md; responsibility is now R070 integration/publication, original ten-attempt budget unchanged.

@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R070 metadata-only scoped closure integration; zero new Go."
+      "description": "Active R070 FROZEN integration; R068 adapter-only and R069 compiler-only closure, ordinary branch publication next."
     },
     {
       "id": "r060-work-order",
@@ -4685,7 +4685,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
       "status": "ACTIVE",
-      "description": "R068 pending handoff retained while R069 single compiler validation is active."
+      "description": "Historical R068 adapter-only FROZEN handoff; source-independent UP01..12 acceptance."
     },
     {
       "id": "r069-validation-c001",
@@ -4749,6 +4749,27 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
       "status": "ACTIVE",
       "description": "R069 historical compiler-only FROZEN handoff."
+    },
+    {
+      "id": "r070-integration-c001",
+      "family": "continuity",
+      "path": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Final fresh Luna xhigh assessment: accepted code after repair, no demonstrated efficiency advantage vs Sol medium."
+    },
+    {
+      "id": "r070-integration-c002",
+      "family": "continuity",
+      "path": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R068 scoped adapter-only local closure, original failures/budgets retained."
+    },
+    {
+      "id": "r070-integration-c003",
+      "family": "continuity",
+      "path": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R070 metadata integration acceptance/closure and explicit R1 role transitions."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-070",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-070 BUILD metadata-only closure integration: committed independent R068 UP01..12 REVIEW_PASS and separate R069 one-compile PASS; synchronize R068 adapter-only FREEZE, R069 compiler-only FREEZE and final fresh Luna assessment under existing owner authority. Commit review/closure artifacts after gates/docs, then ordinary authorized current-branch publication/readback. Source bb0bdeb and original budgets/failures/seeds/raw unchanged; zero additional Go/test/provider/DB/credential/source effects. Full S2/S3/S5/consumer migration/live/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-070 FROZEN metadata-only integration: R068 UP01..12 adapter usage-presence primitive FROZEN at bb0bdeb; R069 single offline compiler validation FROZEN, final fresh Luna assessment committed with closure. Ordinary authorized current-branch publication/readback is next; then source-based remaining consumer/acceptance INTAKE/DESIGN/SPEC and separate bounded work order before new implementation/runtime. Original R06810/10 attempts and R0691/1 unchanged/exhausted; R0700Go, no automatic new campaign. Full S2/S3/S5/consumer migration/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / R1 metadata IMPLEMENTATION_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Codex /root ORCHESTRATOR / CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -34,8 +34,8 @@
   },
   "candidatePlanning": {
     "id": "R070",
-    "status": "BUILD",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_070.md",
+    "status": "FROZEN",
+    "artifact": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md",
     "sourceImplementation": "UNCHANGED_ACCEPTED_R068_SOURCE",
     "newGoInvocations": 0
   },
@@ -271,5 +271,43 @@
   "pendingValidationProposal": {
     "status": "SETTLED_R069_FROZEN",
     "artifact": "docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md"
+  },
+  "acceptedR068": {
+    "status": "FROZEN",
+    "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+    "review": "docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md",
+    "closure": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
+    "modelAssessment": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md",
+    "originalBudget": {
+      "workerMaxCampaigns": 1,
+      "workerMaxGoBuildInvocations": 1,
+      "workerMaxGoTestInvocations": 4,
+      "workerMaxGoInvocations": 5,
+      "reviewerMaxCampaigns": 1,
+      "reviewerMaxGoBuildInvocations": 1,
+      "reviewerMaxGoTestInvocations": 4,
+      "reviewerMaxGoInvocations": 5,
+      "aggregateMaxGoInvocations": 10,
+      "maxVitestInvocations": 0,
+      "maxVisualInvocations": 0,
+      "workerUsedCampaigns": 1,
+      "workerUsedGoBuildInvocations": 1,
+      "workerUsedGoTestInvocations": 4,
+      "workerUsedGoInvocations": 5,
+      "reviewerUsedCampaigns": 1,
+      "reviewerUsedGoBuildInvocations": 1,
+      "reviewerUsedGoTestInvocations": 4,
+      "reviewerUsedGoInvocations": 5
+    },
+    "supplementalValidation": {
+      "trancheId": "CCMAI-RUNTIME-069",
+      "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+      "evidenceCommit": "f3e737a16586bc37b62f380e119d1a7f3867e699",
+      "attempts": 1,
+      "actualGoProcesses": 1,
+      "tests": 0,
+      "originalBudgetUnchanged": true,
+      "status": "FROZEN_COMPILER_ONLY"
+    }
   }
 }

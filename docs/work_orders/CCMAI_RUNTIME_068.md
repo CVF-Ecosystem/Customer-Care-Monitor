@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-068 — Fresh provider usage-presence adapter
 
-Status: REVIEW_PASS
+Status: FROZEN
 
 Risk R2. Immutable root dispatcher seed first committed at `59f8a4c`; baseline `9b951d50908c504dd7de44be516f88e86287f5de`. [SPEC UP01..12](../reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md) is the acceptance contract. Fresh Luna xhigh `/root/r068_worker` owns implementation/repair/source commits; root independent REVIEWER, then conditional CLOSER / metadata COMMIT_STEWARD / SESSION_SYNC_STEWARD. No Sol implementation draft handed off; requirements and existing application/SDK APIs are inputs.
 
@@ -39,3 +39,5 @@ Source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 statically accepted; root own fo
 Both exact-source local ai campaigns PASS and independently audited; original budget10/10 attempts exhausted (9Go processes plus1failed launch). Formal REVIEW_PENDING because UP09 repaired whole-backend compilation is not established. No new source/runtime/closure/publication authority. One-command supplemental proposal awaits owner authorization; original seed/counts/failures immutable. Worker whitespace findings in4byte-exact generated diff/patch artifacts retained, other38captures clean.
 
 2026-10-10 independent REVIEW_PASS UP01..12, evidence docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md; UP09 settled by separate R0691/1 offline compile, original budget unchanged. FREEZE_OPEN pending synchronized committed scoped closure. No new source/test command.
+
+2026-10-10 scoped adapter-only FROZEN after independent UP01..12 acceptance; closure docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md, final assessment docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md. Original budget immutable, no further Go.
