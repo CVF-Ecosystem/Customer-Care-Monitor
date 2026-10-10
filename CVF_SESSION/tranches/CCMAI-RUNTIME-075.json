@@ -29,8 +29,8 @@
     "merge_deploy",
     "hosted_or_live_governance_claim"
   ],
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
   "baseCommit": "2a052d21b9e72bfdaa5ed5d15da3d35c2049fc15",
   "buildCommit": "ba88c6e786cb0dc55ef61da3cfe7651fc2254036",
@@ -41,7 +41,9 @@
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -52,5 +54,6 @@
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "Fresh canonical rehydration/doctor25/1 before publication role; explicit owner instruction, independent Luna reviewer. Root metadata/build ACK recorded before network; seed2a052d21b9e72bfdaa5ed5d15da3d35c2049fc15 predates effects. No source/native/provider/DB/secret reads.",
   "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
-  "publicationStatus": "NOT_COMPLETED_AUTHENTICATION_REQUIRED"
+  "publicationStatus": "NOT_COMPLETED_AUTHENTICATION_REQUIRED",
+  "authResumeAcknowledgment": "Owner answered Da dang nhap lai GitHub; root fresh canonical REVIEW_PENDING rehydration before publication COMMIT_STEWARD resumes BUILD. Independent Luna original raw-event review GP04/06 unmet retained; authentication state changed, same target/risk/effect/owner, one owner-triggered resume, no automatic retry. Root records ACK before next Git push."
 }
