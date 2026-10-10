@@ -4637,6 +4637,34 @@
       "path": "docs/reviews/probes/r068_final_pending_protection_audit_2026-10-09.json",
       "status": "ACTIVE",
       "description": "R068 final REVIEW_PENDING protection/immutable seed/original failed launch/TEMP archive verification; no compiler PASS or extra Go."
+    },
+    {
+      "id": "r069-validation-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-069.json",
+      "status": "ACTIVE",
+      "description": "Separate single-compile dispatcher seed; owner approved 2026-10-10, original R068 budget immutable."
+    },
+    {
+      "id": "r069-validation-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R069_SINGLE_COMPILE_SPEC_AND_AUTHORIZATION_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R069 accepted compiler specification and exact owner authorization."
+    },
+    {
+      "id": "r069-validation-a003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_exact_source_plan_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "R069 exact-source single offline compile plan."
+    },
+    {
+      "id": "r069-validation-a004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_single_compile_capture_2026-10-10.py",
+      "status": "ACTIVE",
+      "description": "R069 single-use native compiler capture runner, no tests/retry."
     }
   ]
 }

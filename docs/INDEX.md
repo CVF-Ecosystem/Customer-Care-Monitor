@@ -456,6 +456,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 worker first-build native stderr bytes; empty because the process did not start; preserved raw stream.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/build.stderr.bin`
 - R068 full 1,565-entry source-tree manifest for the worker launch attempt; source archive retained in verified owned TEMP.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/source-tree-manifest.txt`
 - R068 derived relocation receipt; original worker build receipt stays unchanged, verified 500,899,840-byte archives remain in owned TEMP.: `docs/reviews/probes/r068_luna_worker_build_2026-10-09/first_build_archive_relocation.json`
+- Separate single-compile dispatcher seed; owner approved 2026-10-10, original R068 budget immutable.: `CVF_SESSION/authority/CCMAI-RUNTIME-069.json`
+- R069 accepted compiler specification and exact owner authorization.: `docs/reviews/R069_SINGLE_COMPILE_SPEC_AND_AUTHORIZATION_2026-10-10.md`
+- R069 exact-source single offline compile plan.: `docs/reviews/probes/r069_exact_source_plan_2026-10-10.json`
+- R069 single-use native compiler capture runner, no tests/retry.: `docs/reviews/probes/r069_single_compile_capture_2026-10-10.py`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
