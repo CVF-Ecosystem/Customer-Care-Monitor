@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-069", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-070", "parked": true} -->
 
 ## Startup Order
 
@@ -55,11 +55,11 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 - [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-## Current R069 supplemental compiler validation (2026-10-10)
+## Current R070 scoped closure integration (2026-10-10)
 
-CCMAI-RUNTIME-069 REVIEW_PENDING: one supplemental offline whole-backend compile PASS on bb0bdeb5403070eb0aa2224b96ad8fd48febd843, original raw retained. Root validates native output/physical manifests/archive/backup and original R068 protections; no further Go/test/retry. Accepted compiler evidence permits R069 compiler-only closure and independent R068 UP01..12 review under unchanged R068 authority. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.
+CCMAI-RUNTIME-070 BUILD metadata-only closure integration: committed independent R068 UP01..12 REVIEW_PASS and separate R069 one-compile PASS; synchronize R068 adapter-only FREEZE, R069 compiler-only FREEZE and final fresh Luna assessment under existing owner authority. Commit review/closure artifacts after gates/docs, then ordinary authorized current-branch publication/readback. Source bb0bdeb and original budgets/failures/seeds/raw unchanged; zero additional Go/test/provider/DB/credential/source effects. Full S2/S3/S5/consumer migration/live/governance/hosted remain OPEN; Facebook/Zalo OA parked.
 
-Active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md`. R068 remains pending until this separate single compiler result is evaluated.
+Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md`. Source and original evidence immutable; no extra runtime commands.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

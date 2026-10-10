@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,18 +12,16 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-069",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-069 REVIEW_PENDING: one supplemental offline whole-backend compile PASS on bb0bdeb5403070eb0aa2224b96ad8fd48febd843, original raw retained. Root validates native output/physical manifests/archive/backup and original R068 protections; no further Go/test/retry. Accepted compiler evidence permits R069 compiler-only closure and independent R068 UP01..12 review under unchanged R068 authority. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.",
+  "activeTranche": "CCMAI-RUNTIME-070",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-070 BUILD metadata-only closure integration: committed independent R068 UP01..12 REVIEW_PASS and separate R069 one-compile PASS; synchronize R068 adapter-only FREEZE, R069 compiler-only FREEZE and final fresh Luna assessment under existing owner authority. Commit review/closure artifacts after gates/docs, then ordinary authorized current-branch publication/readback. Source bb0bdeb and original budgets/failures/seeds/raw unchanged; zero additional Go/test/provider/DB/credential/source effects. Full S2/S3/S5/consumer migration/live/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / REVIEWER / SESSION_SYNC_STEWARD",
+  "activeRole": "Codex /root ORCHESTRATOR / R1 metadata IMPLEMENTATION_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
-    "maxGoBuildInvocations": 1,
-    "maxGoTestInvocations": 0,
-    "maxGoInvocations": 1,
-    "usedGoInvocations": 1
+    "maxGoInvocations": 0,
+    "usedGoInvocations": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -35,11 +33,11 @@
     "source": "Owner instruction 2026-10-08; continues until changed by owner"
   },
   "candidatePlanning": {
-    "id": "R069",
-    "status": "REVIEW_PENDING",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_069.md",
-    "sourceImplementation": "UNCHANGED_R068_SOURCE",
-    "newGoInvocations": 1
+    "id": "R070",
+    "status": "BUILD",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_070.md",
+    "sourceImplementation": "UNCHANGED_ACCEPTED_R068_SOURCE",
+    "newGoInvocations": 0
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -269,73 +267,9 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "OWNER_APPROVED_SINGLE_R1_COMPILER_VALIDATION_ROOT_EXECUTOR_THEN_REVIEW_RETURN_R068",
+  "roleRoute": "OWNER_AUTHORIZED_SCOPED_METADATA_CLOSURE_INTEGRATION_ROOT_THEN_REVIEW_CLOSE_PUBLISH",
   "pendingValidationProposal": {
-    "status": "AUTHORIZED_SEPARATE_R069",
-    "ownerApprovalDate": "2026-10-10",
-    "artifact": "docs/reviews/R069_SINGLE_COMPILE_SPEC_AND_AUTHORIZATION_2026-10-10.md"
-  },
-  "r068BeforeSupplementalValidation": {
-    "schemaVersion": "1.0",
-    "projectName": "Customer-Care-Monitor-AI",
-    "currentMode": "REVIEW",
-    "activePhase": "REVIEW",
-    "phaseModel": [
-      "INTAKE",
-      "DESIGN",
-      "SPEC",
-      "WORK_ORDER",
-      "BUILD",
-      "REVIEW",
-      "FREEZE"
-    ],
-    "activeTranche": "CCMAI-RUNTIME-068",
-    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
-    "nextAllowedMove": "CCMAI-RUNTIME-068 REVIEW_PENDING: source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 and both exact-source ai positive/M01/M02/restored campaigns are independently verified; no open local product behavior finding. UP09 whole-backend post-repair compilation remains unestablished. Original worker5/5 and root5/5 attempt budgets are exhausted and immutable; no further Go/build/test/retry, FREEZE or branch publication now. Await owner authorization of exactly one additional cached offline whole-backend build through docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; then commit separate bounded validation authority/work order before execution, retain original failures and reevaluate conditional R068 closure. No source/test/provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance/hosted claim.",
-    "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-    "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD",
-    "updatedAt": "2026-10-09",
-    "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
-    "currentExecutionBudget": {
-      "workerMaxCampaigns": 1,
-      "workerMaxGoBuildInvocations": 1,
-      "workerMaxGoTestInvocations": 4,
-      "workerMaxGoInvocations": 5,
-      "reviewerMaxCampaigns": 1,
-      "reviewerMaxGoBuildInvocations": 1,
-      "reviewerMaxGoTestInvocations": 4,
-      "reviewerMaxGoInvocations": 5,
-      "aggregateMaxGoInvocations": 10,
-      "maxVitestInvocations": 0,
-      "maxVisualInvocations": 0,
-      "workerUsedCampaigns": 1,
-      "workerUsedGoBuildInvocations": 1,
-      "workerUsedGoTestInvocations": 0,
-      "workerUsedGoInvocations": 1,
-      "reviewerUsedCampaigns": 1,
-      "reviewerUsedGoBuildInvocations": 1,
-      "reviewerUsedGoTestInvocations": 0,
-      "reviewerUsedGoInvocations": 1
-    },
-    "actualWorkerModel": {
-      "model": "gpt-6-luna",
-      "reasoningEffort": "xhigh"
-    },
-    "ownerSubagentPreference": {
-      "model": "gpt-6-luna",
-      "reasoningEffort": "xhigh",
-      "source": "Owner instruction 2026-10-08; continues until changed by owner"
-    },
-    "candidatePlanning": {
-      "id": "R068",
-      "status": "REVIEW_PENDING",
-      "artifact": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
-      "sourceOrRuntimeDispatched": true,
-      "sourceImplementation": "SOURCE_REPAIRED_ALL_AI_TESTS_PASS_WHOLE_BACKEND_COMPILE_PENDING",
-      "newGoInvocations": 10,
-      "actualGoProcesses": 9
-    },
-    "roleRoute": "OWNER_AUTHORIZED_FRESH_LUNA_XHIGH_ADAPTER_BUILD_ROOT_INDEPENDENT_REVIEW_CLOSURE_PUSH",
-    "pendingValidationProposal": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md"
+    "status": "SETTLED_R069_FROZEN",
+    "artifact": "docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md"
   }
 }

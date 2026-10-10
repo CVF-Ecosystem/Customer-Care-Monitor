@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R069 single supplemental offline compiler validation; R068 remains pending."
+      "description": "Active R070 metadata-only scoped closure integration; zero new Go."
     },
     {
       "id": "r060-work-order",
@@ -4728,6 +4728,27 @@
       "path": "docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md",
       "status": "ACTIVE",
       "description": "Independent final R068 UP01..12 review, closure integrated by R070."
+    },
+    {
+      "id": "r070-integration-b001",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_070.md",
+      "status": "ACTIVE",
+      "description": "R070 bounded metadata-only work order and committed acknowledgment."
+    },
+    {
+      "id": "r070-integration-b002",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-070.json",
+      "status": "ACTIVE",
+      "description": "R070 integration record; no source/Go authority."
+    },
+    {
+      "id": "r070-integration-b004",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R069 historical compiler-only FROZEN handoff."
     }
   ]
 }

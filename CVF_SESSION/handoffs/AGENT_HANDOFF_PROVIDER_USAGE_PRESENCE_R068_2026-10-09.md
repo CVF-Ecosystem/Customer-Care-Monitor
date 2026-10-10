@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD
-- Next allowed move: CCMAI-RUNTIME-068 REVIEW_PENDING: source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 and both exact-source ai positive/M01/M02/restored campaigns are independently verified; no open local product behavior finding. UP09 whole-backend post-repair compilation remains unestablished. Original worker5/5 and root5/5 attempt budgets are exhausted and immutable; no further Go/build/test/retry, FREEZE or branch publication now. Await owner authorization of exactly one additional cached offline whole-backend build through docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; then commit separate bounded validation authority/work order before execution, retain original failures and reevaluate conditional R068 closure. No source/test/provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance/hosted claim.
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / conditional CLOSER / SESSION_SYNC_STEWARD
+- Next allowed move: CCMAI-RUNTIME-068 REVIEW_PASS UP01..12 on bb0bdeb5403070eb0aa2224b96ad8fd48febd843; separate R069 one offline whole-backend compile PASS and compiler-only FROZEN. Root CLOSER synchronizes scoped adapter-metadata closure and final fresh Luna assessment, commits artifacts, then ordinary authorized current-branch publication/readback. Original R068 budget10/10 and failures unchanged; supplemental1/1 consumed, no further Go/test/source edit. Full S2/S3/S5/consumer migration/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Luna before-edit BUILD acknowledgment (2026-10-09)
@@ -44,3 +44,7 @@ Root REVIEWER -> SESSION_SYNC_STEWARD for R1 evidence pointer/labels and accurat
 ## Independent handback REVIEW_PENDING
 
 Worker packet b345c7a is committed; root audited42raw files/all4actual archive copies/218byte restoration/native assertions. Both campaigns18top35positive/M01/M02healthy/restored8top21 PASS. Original failed launcher and failed fullbackend compiler retained; worker5/root5 attempts exhausted,9actualGo processes. No postrepair fullbackend compiler PASS. Root transitioned REVIEWER -> ORCHESTRATOR/SESSION_SYNC_STEWARD for accurate REVIEW_PENDING/current projections and a proposed single supplemental compiler command; proposal is NOT_AUTHORIZED. Current nested r2IndependentAcceptance previously remained stale CHANGES_REQUIRED/noGo after root test-approval sync; root corrected it now before review publication, attributed as parent metadata omission. Worker raw diffcheck has preserved whitespace findings in4actual patches/rawdiff files; other38worker captures PASS. First-source and consumer boundaries unchanged; provisional Luna assessment is not final tranche acceptance. No FREEZE/push.
+
+## Final independent review acknowledgment (2026-10-10)
+
+Root rehydrates current R069/R068 state/handoff/status/index, returns REVIEWER responsibility and accepts UP01..12. Separate R069 compiler-only FROZEN with original raw committedf3e737a16586bc37b62f380e119d1a7f3867e699; original R068 budgets/failures unchanged. Root REVIEWER -> conditional CLOSER for scoped metadata closure only. Evidence docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md.

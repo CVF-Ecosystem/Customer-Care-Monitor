@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -39,7 +39,9 @@
     "R065 bounded nested interface usage/local cost observation UO01..12 independently accepted, locally FROZEN; usage presence/billing/pricing version/full S2/S3 unproved.",
     "R067 local saved-run observation UI UIR01..12 independently accepted/frozen at bd62c7e: strict bound receipt projection, native details and EN/VI reader, existing APIs/actions preserved; fullS5workflow/live/governance not established."
   ],
-  "buildInProgress": [],
+  "buildInProgress": [
+    "R070 metadata-only scoped closure integration, no source/test/Go."
+  ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
@@ -254,15 +256,13 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-069 REVIEW_PENDING: one supplemental offline whole-backend compile PASS on bb0bdeb5403070eb0aa2224b96ad8fd48febd843, original raw retained. Root validates native output/physical manifests/archive/backup and original R068 protections; no further Go/test/retry. Accepted compiler evidence permits R069 compiler-only closure and independent R068 UP01..12 review under unchanged R068 authority. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.",
-    "assessment": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_069.md",
-    "buildDispatched": false,
+    "nextObjective": "CCMAI-RUNTIME-070 BUILD metadata-only closure integration: committed independent R068 UP01..12 REVIEW_PASS and separate R069 one-compile PASS; synchronize R068 adapter-only FREEZE, R069 compiler-only FREEZE and final fresh Luna assessment under existing owner authority. Commit review/closure artifacts after gates/docs, then ordinary authorized current-branch publication/readback. Source bb0bdeb and original budgets/failures/seeds/raw unchanged; zero additional Go/test/provider/DB/credential/source effects. Full S2/S3/S5/consumer migration/live/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+    "assessment": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_SPEC_2026-10-10.md",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_070.md",
+    "buildDispatched": true,
     "currentExecutionBudget": {
-      "maxGoBuildInvocations": 1,
-      "maxGoTestInvocations": 0,
-      "maxGoInvocations": 1,
-      "usedGoInvocations": 1
+      "maxGoInvocations": 0,
+      "usedGoInvocations": 0
     },
     "actualWorkerModel": {
       "model": "gpt-6-luna",
@@ -770,9 +770,9 @@
   },
   "providerUsagePresence": {
     "tranche": "CCMAI-RUNTIME-068",
-    "status": "REVIEW_PENDING",
-    "sourceImplementation": "SOURCE_REPAIRED_ALL_AI_TESTS_PASS_WHOLE_BACKEND_COMPILE_PENDING",
-    "r2IndependentAcceptance": "REVIEW_PENDING_UP09_POST_REPAIR_WHOLE_BACKEND_COMPILE; source/local ai evidence accepted, no closure",
+    "status": "REVIEW_PASS",
+    "sourceImplementation": "SOURCE_REPAIRED_AI_CAMPAIGNS_AND_SUPPLEMENTAL_WHOLE_BACKEND_COMPILE_PASS",
+    "r2IndependentAcceptance": "REVIEW_PASS_UP01_THROUGH_UP12_LOCAL_ADAPTER_ONLY",
     "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
     "nextMove": "CCMAI-RUNTIME-068 REVIEW_PENDING: source bb0bdeb5403070eb0aa2224b96ad8fd48febd843 and both exact-source ai positive/M01/M02/restored campaigns are independently verified; no open local product behavior finding. UP09 whole-backend post-repair compilation remains unestablished. Original worker5/5 and root5/5 attempt budgets are exhausted and immutable; no further Go/build/test/retry, FREEZE or branch publication now. Await owner authorization of exactly one additional cached offline whole-backend build through docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md; then commit separate bounded validation authority/work order before execution, retain original failures and reevaluate conditional R068 closure. No source/test/provider/external network/config/credential/DB/customer/engine/receipt/pricing/storage/frontend/dependency/workflow/core changes; Facebook/Zalo OA parked; no live/billing/governance/hosted claim.",
     "governanceClaim": false,
@@ -788,16 +788,26 @@
     "independentReview": "docs/reviews/R068_INDEPENDENT_USAGE_PRESENCE_REVIEW_PENDING_2026-10-09.md",
     "workerEvidenceCommit": "b345c7a34c74019ff6b7d595c1c17a0c105dbb21",
     "pendingValidationProposal": "docs/reviews/R068_SUPPLEMENTAL_OFFLINE_COMPILE_PROPOSAL_2026-10-09.md",
-    "provisionalModelAssessment": "docs/reviews/R068_LUNA_XHIGH_FRESH_START_ASSESSMENT_2026-10-09.md"
+    "provisionalModelAssessment": "docs/reviews/R068_LUNA_XHIGH_FRESH_START_ASSESSMENT_2026-10-09.md",
+    "review": "docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md",
+    "supplementalValidation": {
+      "trancheId": "CCMAI-RUNTIME-069",
+      "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+      "evidenceCommit": "f3e737a16586bc37b62f380e119d1a7f3867e699",
+      "attempts": 1,
+      "actualGoProcesses": 1,
+      "tests": 0,
+      "originalBudgetUnchanged": true,
+      "status": "FROZEN_COMPILER_ONLY"
+    }
   },
   "r068BeforeRootTestApprovalBuildSnapshot": [
     "CCMAI-RUNTIME-068 DISPATCH_READY / WORK_ORDER: fresh Luna xhigh r068_worker rehydrates and commits before-edit BUILD acknowledgment, then writes6allowed adapter/helper/test paths from scratch. First implementation commit and first offline wholebackend build retained before repair; root source/plan staticapproval before worker4Go tests, own independent1build+4tests follows. Fresh max10Go/0Vitest/visual, priorR0678Vitest3build4visual exhausted unchanged. Conditional scopedlocalREVIEW/FREEZE and authorized ordinary branchpublication; no new provider/externalnetwork/config/credential/DB/engine/pricing/receipt/frontend/core effects or fullS2/S3/S5/live/governance/hosted claim. Facebook/ZaloOAparked.",
     "FullS2/S3/S5/governance/live remainOPEN, adapter metadata is only prerequisite; Facebook/ZaloOAparked."
   ],
   "r068PendingValidation": {
-    "status": "R069_COMPILE_PASS_REVIEW_PENDING",
-    "workOrder": "docs/work_orders/CCMAI_RUNTIME_069.md",
-    "originalBudgetUnchanged": true,
-    "evidence": "docs/reviews/probes/r069_compile_actual/summary.json"
+    "status": "SETTLED_R069_FROZEN",
+    "evidence": "docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md",
+    "originalBudgetUnchanged": true
   }
 }

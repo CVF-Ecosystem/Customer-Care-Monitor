@@ -1,0 +1,61 @@
+{
+  "trancheId": "CCMAI-RUNTIME-070",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root",
+    "repairWorker": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_068.md",
+    "docs/work_orders/CCMAI_RUNTIME_069.md",
+    "docs/work_orders/CCMAI_RUNTIME_070.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "source_test_edit",
+    "old_authority_seed_edit",
+    "old_packet_edit",
+    "go_invocation",
+    "provider_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment",
+    "other_tranche_freeze"
+  ],
+  "schemaVersion": "1.0",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_070.md",
+  "baseCommit": "83f92c2b88f6906c67d0fc8e2320d995b39a44a2",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING_METADATA_CLOSURE",
+  "freeze": "OPEN",
+  "history": [
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "executionBudget": {
+    "maxGoInvocations": 0,
+    "usedGoInvocations": 0
+  },
+  "dispatcher": "Codex /root",
+  "dispatcherAcknowledgment": "2026-10-10 root rehydrates current manifest/policy/continuity/handoffs/status/index. Seed83f92c2 precedes BUILD; existing approved objective, metadata scope only, original evidence/source/seed unchanged. Root WORK_ORDER_AUTHOR -> R1 metadata IMPLEMENTATION_WORKER / SESSION_SYNC_STEWARD before edits; independent reviewer of Luna product."
+}
