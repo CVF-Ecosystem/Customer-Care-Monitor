@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-075",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-075 REVIEW_PENDING publication NOT_COMPLETED after two Git credential failures128; remoteSHA9b951d5 freshly verified. Independent Luna receipt review; owner must complete Git Credential Manager login (website login insufficient). No third retry without review-cost disposition. Root proceeds separate source-only DESIGN/SPEC R076; app/provider/DB/main/force/merge/deploy0, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-075 BUILD one bounded third attempt after owner confirms exact Git Credential Manager browser login; review-cost disposition and ACK recorded before action, two128 failures preserved. Independent exactSHA review/gates then ordinary feature-branch push/readback; no automatic retry/app/provider/DB/main/force/merge/deploy, accounts parked. Separate source-only DESIGN/SPEC follows.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root publication COMMIT_STEWARD / SESSION_SYNC_STEWARD; Luna independent REVIEWER",
+  "activeRole": "Codex /root ORCHESTRATOR / publication COMMIT_STEWARD / metadata IMPLEMENTATION_WORKER; Luna independent REVIEWER",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -34,7 +34,7 @@
   },
   "candidatePlanning": {
     "id": "R075",
-    "status": "REVIEW_PENDING",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_075.md",
     "sourceImplementation": "NOT_APPLICABLE_PUBLICATION",
     "sourceOrRuntimeDispatched": false
@@ -566,6 +566,6 @@
       "exactStaged": "PASS7/7 exact10-file closure staged set and diff-check before3994aef"
     }
   },
-  "publicationStatus": "NOT_COMPLETED_GIT_AUTHENTICATION_REQUIRED",
+  "publicationStatus": "AUTHORIZED_SPECIFIC_GCM_RESUME_PENDING_VERIFICATION",
   "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json"
 }

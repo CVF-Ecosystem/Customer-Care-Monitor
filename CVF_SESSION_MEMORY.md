@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
 
 ## Current R075
 
-CCMAI-RUNTIME-075 REVIEW_PENDING publication NOT_COMPLETED after two Git credential failures128; remoteSHA9b951d5 freshly verified. Independent Luna receipt review; owner must complete Git Credential Manager login (website login insufficient). No third retry without review-cost disposition. Root proceeds separate source-only DESIGN/SPEC R076; app/provider/DB/main/force/merge/deploy0, accounts parked.
+CCMAI-RUNTIME-075 BUILD one bounded third attempt after owner confirms exact Git Credential Manager browser login; review-cost disposition and ACK recorded before action, two128 failures preserved. Independent exactSHA review/gates then ordinary feature-branch push/readback; no automatic retry/app/provider/DB/main/force/merge/deploy, accounts parked. Separate source-only DESIGN/SPEC follows.
 
 R074 local dossier FROZEN and five implementation plus one fresh audit preserved. New owner GitHub instruction authorizes R075 ordinary branch publication; no retroactive change to R068 unverified attempt or old prohibited effects.
 

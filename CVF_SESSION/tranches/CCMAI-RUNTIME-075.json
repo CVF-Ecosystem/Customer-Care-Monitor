@@ -29,8 +29,8 @@
     "merge_deploy",
     "hosted_or_live_governance_claim"
   ],
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
   "baseCommit": "2a052d21b9e72bfdaa5ed5d15da3d35c2049fc15",
   "buildCommit": "2e04e2c51edccb8362df0d7771048b615b8a6c63",
@@ -44,7 +44,9 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -56,6 +58,8 @@
   "dispatcherAcknowledgment": "Fresh canonical rehydration/doctor25/1 before publication role; explicit owner instruction, independent Luna reviewer. Root metadata/build ACK recorded before network; seed2a052d21b9e72bfdaa5ed5d15da3d35c2049fc15 predates effects. No source/native/provider/DB/secret reads.",
   "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
   "publicationStatus": "NOT_COMPLETED_GIT_AUTHENTICATION_REQUIRED",
-  "authResumeAcknowledgment": "Owner answered Da dang nhap lai GitHub; root fresh canonical REVIEW_PENDING rehydration before publication COMMIT_STEWARD resumes BUILD. Independent Luna original raw-event review GP04/06 unmet retained; authentication state changed, same target/risk/effect/owner, one owner-triggered resume, no automatic retry. Root records ACK before next Git push.",
-  "pushAttempts": 2
+  "authResumeAcknowledgment": "REVIEW_COST_ESCALATION_REQUIRED recorded before third same-class publication attempt. Root ORCHESTRATOR cost disposition: stop blind retries, preserve two128 credential failures; owner now explicitly confirms completion of git credential-manager github login --browser (stronger prerequisite than generic website login). Permit exactly one60s bounded ordinary existing-origin attempt after independent exactSHA prepublication review under unchanged R2 scope/target/commit owner; no automatic follow-on retry, secret/config read, provider or credential output. Separate source-only planning proceeds if auth still fails. This is owner-triggered external-state change; no repaired app source or model-quality defect.",
+  "pushAttempts": 2,
+  "reviewCostDisposition": "REVIEW_COST_ESCALATION_REQUIRED recorded before third same-class publication attempt. Root ORCHESTRATOR cost disposition: stop blind retries, preserve two128 credential failures; owner now explicitly confirms completion of git credential-manager github login --browser (stronger prerequisite than generic website login). Permit exactly one60s bounded ordinary existing-origin attempt after independent exactSHA prepublication review under unchanged R2 scope/target/commit owner; no automatic follow-on retry, secret/config read, provider or credential output. Separate source-only planning proceeds if auth still fails. This is owner-triggered external-state change; no repaired app source or model-quality defect.",
+  "remainingPermittedPushAttempts": 1
 }
