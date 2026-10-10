@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / metadata SESSION_SYNC_STEWARD; Luna documentary REPAIR_WORKER awaiting ACK
-- Next allowed move: CCMAI-RUNTIME-074 CHANGES_REQUIRED: root consolidated F1..F4 documentary qualification/completeness findings at first audit076d3319; Luna sends same-scope repair ACK before root BUILD release. App native0, product/test/provider/network/DB effects0; broader/live OPEN, accounts parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root independent REVIEWER / metadata SESSION_SYNC_STEWARD; Luna xhigh documentary REPAIR_WORKER / audit COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-074 BUILD same-scope documentary repair: Luna ACK recorded before edits, resolves F1..F4 in authorized audit artifacts and commits only changed worker paths. Root independent re-review; app native0/product/test/provider/network/DB effects0. Broader/live OPEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-dispatch acknowledgment
@@ -20,3 +20,7 @@ Root activation catalog finding: duplicate new handoff path after moving front-d
 ## Luna before-edit acknowledgment / root metadata release
 
 2026-10-10 fresh Luna xhigh canonical rehydration/doctor25/1 before-edit declaration received by root; source/artifact edits0 and application native0. Knowledge README ingest inherited root canonical-core TEMP/noPOST fallback; missing downstream wrapper known, no missing continuity authority. Root metadata steward records worker ACK before documentary BUILD; worker READONLY_ANALYST -> documentary IMPLEMENTATION_WORKER/audit COMMIT_STEWARD, root independent REVIEWER. DA01..10 exact three NEW paths; sourceBaseline9fc86fe distinct documentary HEAD; no source/test/runtime/config/network effects. Gateunits46/46 in32.346s inherited no duplicate. Root formatting reminder source code paths rather than dead VitePress links; no report draft.
+
+## Same-scope repair acknowledgment
+
+2026-10-10 Luna xhigh fresh canonical rehydration/declaration REPAIR_WORKER ACK received before edits: F1..F4 same-scope documentary repair only, native0, source/test/effects0; root records ACK and BUILD release under existing seed. Root metadata stewardship, worker exact artifact ownership retained; one consolidated document-repair round, not code repair.

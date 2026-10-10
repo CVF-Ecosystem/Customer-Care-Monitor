@@ -55,22 +55,23 @@
     "automaticRetries": 0,
     "currentPermittedNativeInvocations": 0
   },
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_074.md",
   "baseCommit": "f1e875d8c97ab1337000ac6452444325235e21d5",
   "buildCommit": "076d3319f2e84c681a1835e4ce4cde8541334d7b",
   "reviewEvidence": [
     "docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -86,5 +87,8 @@
     "F2",
     "F3",
     "F4"
-  ]
+  ],
+  "repairAcknowledgment": "2026-10-10 Luna xhigh fresh canonical rehydration/declaration REPAIR_WORKER ACK received before edits: F1..F4 same-scope documentary repair only, native0, source/test/effects0; root records ACK and BUILD release under existing seed. Root metadata stewardship, worker exact artifact ownership retained; one consolidated document-repair round, not code repair.",
+  "documentaryRepairRounds": 1,
+  "repairCompleted": false
 }
