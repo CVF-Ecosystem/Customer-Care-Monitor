@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER next
-- Next allowed move: CCMAI-RUNTIME-072 CHANGES_REQUIRED: consolidated static findings T1 wrong exact legacy projection and T2 extension-present rejection coverage; Luna rehydrates/records REPAIR_WORKER BUILD before NEW-test-only repair, parser/existing tests/backend/seed immutable. Return repaired source for root static approval before Vitest/typecheck; original budget unused/unchanged, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root/r072_worker REPAIR_WORKER / source COMMIT_STEWARD; Codex /root independent REVIEWER / metadata COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-072 REPAIR_BUILD_ROUND_1: Luna rehydrated and acknowledged REPAIR_WORKER; edit only NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts to correct the exact execution oracle and add extension-present legacy rejection cases. Parser, existing tests, backend, authority, seed, and first source5285d9f immutable. Commit NEW test only and return hash for root static approval before Vitest/vue-tsc. Original worker budget unchanged and unused; Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Tranche transition acknowledgment (2026-10-10)
@@ -22,3 +22,7 @@ Fresh Luna xhigh rehydrated manifest/policy/current R072 state, memory, active h
 ## Independent first-source review / same-scope repair route
 
 docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md records T1 P1/T2 P2 before any runtime. First source preserved; NEW test only repair1, product line accepted statically. Root transition acknowledged after current state/memory/handoff/status/index/manifest/policy rehydration. No owner wait and no budget reset.
+
+## Luna xhigh REPAIR_WORKER acknowledgment (2026-10-10)
+
+Fresh Luna xhigh rehydrated manifest/policy/current R072 state, memory, this handoff, implementation status, docs index, UC01..07, immutable seed/tranche, first source5285d9f and root findings7f8024c. BOOTSTRAP_MIGRATION_PENDING remains nonblocking. Role transition: R072 IMPLEMENTATION_WORKER -> R072 REPAIR_WORKER / source COMMIT_STEWARD; root remains independent REVIEWER and metadata COMMIT_STEWARD. Root's T1 exact-output oracle and T2 extension-present rejection coverage are accepted within the same bounded test-only repair. Scope is only NEW `frontend/src/__tests__/run-observation-adapter-compat.spec.ts`; remove parsing-count keys from the expected execution output and attach the optional extension to legacy rejection cases while preserving absent-extension controls. Parser5285d9f, existing tests, backend, seed, old packets and dependencies remain immutable. At acknowledgment repair edits are 0; Vitest/vue-tsc/Go invocations remain 0 and original budgets remain unchanged. Commit the new test repair and return it for root static approval before runtime. No new product defect, runtime result or human-review claim is recorded.

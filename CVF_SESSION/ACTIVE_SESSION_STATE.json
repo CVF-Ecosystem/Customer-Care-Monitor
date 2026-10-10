@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-072",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-072 CHANGES_REQUIRED: consolidated static findings T1 wrong exact legacy projection and T2 extension-present rejection coverage; Luna rehydrates/records REPAIR_WORKER BUILD before NEW-test-only repair, parser/existing tests/backend/seed immutable. Return repaired source for root static approval before Vitest/typecheck; original budget unused/unchanged, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
+  "nextAllowedMove": "CCMAI-RUNTIME-072 REPAIR_BUILD_ROUND_1: Luna rehydrated and acknowledged REPAIR_WORKER; edit only NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts to correct the exact execution oracle and add extension-present legacy rejection cases. Parser, existing tests, backend, authority, seed, and first source5285d9f immutable. Commit NEW test only and return hash for root static approval before Vitest/vue-tsc. Original worker budget unchanged and unused; Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER next",
+  "activeRole": "Codex /root/r072_worker REPAIR_WORKER / source COMMIT_STEWARD; Codex /root independent REVIEWER / metadata COMMIT_STEWARD",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -39,9 +39,9 @@
   },
   "candidatePlanning": {
     "id": "R072",
-    "status": "CHANGES_REQUIRED",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_072.md",
-    "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_TEST_REPAIR_REQUIRED",
+    "sourceImplementation": "REPAIR_ROUND_1_TEST_ONLY_ACKNOWLEDGED",
     "sourceOrRuntimeDispatched": true,
     "newGoInvocations": 0,
     "sourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033"

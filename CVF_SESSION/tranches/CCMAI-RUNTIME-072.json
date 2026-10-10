@@ -46,8 +46,8 @@
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
   },
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
   "baseCommit": "1fb7f6cd11a14d5c8ddd05942ac8bac75d904663",
   "buildCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
@@ -61,7 +61,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
