@@ -454,9 +454,11 @@
       "parentAssistance": "Spec/baseline/current-MCP clue/bootstrap fallback/citation/pacing/consolidated findings/F2 addendum; no draft",
       "review": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
       "assessment": "docs/reviews/R074_LUNA_XHIGH_AUDIT_TASK_ASSESSMENT_2026-10-10.md",
-      "finalDisposition": "REVIEW_PASS_FREEZE_OPEN",
+      "finalDisposition": "FROZEN_LOCAL_DOCUMENTARY_DOSSIER",
       "measuredModelComputeTime": null,
-      "modelTokenCost": null
+      "modelTokenCost": null,
+      "independentReviewCommit": "1d95a18e22d79c59ad47eb552688ffbfc2e96012",
+      "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md"
     }
   ]
 }

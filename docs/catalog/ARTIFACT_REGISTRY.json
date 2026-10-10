@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R074 REVIEW_PASS readonly dispatch audit; native0, no product edits."
+      "description": "Active R074 FROZEN readonly dispatch audit; native0, no product edits."
     },
     {
       "id": "r060-work-order",
@@ -5798,14 +5798,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-074.json",
       "status": "ACTIVE",
-      "description": "R074 REVIEW_PASS source-only contract audit; independent review, no runtime/governance proof."
+      "description": "R074 FROZEN source-only contract audit; independent review, no runtime/governance proof."
     },
     {
       "id": "r074-plan-b-004",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_074.md",
       "status": "ACTIVE",
-      "description": "R074 REVIEW_PASS source-only contract audit; independent review, no runtime/governance proof."
+      "description": "R074 FROZEN source-only contract audit; independent review, no runtime/governance proof."
     },
     {
       "id": "r074-audit-c-001",
@@ -5855,6 +5855,13 @@
       "path": "docs/reviews/probes/r074_root_source_scope_audit_2026-10-10.json",
       "status": "ACTIVE",
       "description": "R074 independent DA01..10 review, source/scope proof and separate fresh Luna audit assessment; no app runtime."
+    },
+    {
+      "id": "r074-root-f-001",
+      "family": "continuity",
+      "path": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R074 scoped source-only dossier closure; independent review inherited, app native0, broader/live OPEN."
     }
   ]
 }
