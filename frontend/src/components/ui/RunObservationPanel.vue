@@ -16,6 +16,7 @@
           <p v-if="section.key === 'preparation'">{{ t('run_obs_preparation_note') }}</p>
           <p v-if="section.key === 'rules'">{{ t('run_obs_rules_note') }}</p>
           <p v-if="section.key === 'usage'">{{ t('run_obs_usage_note') }}</p>
+          <p v-if="section.key === 'adapter_presence'">{{ t('run_obs_adapter_presence_note') }}</p>
         </template>
       </section>
     </div>
@@ -26,9 +27,15 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { projectRunObservation, type RunObservationContext } from '../../views/Jobs/job-detail/run-observation'
+import { projectAdapterUsagePresence } from '../../views/Jobs/job-detail/adapter-usage-presence'
 const props = defineProps<{ summary: string; context: RunObservationContext }>()
 const { t } = useI18n()
-const sections = computed(() => Object.entries(projectRunObservation(props.summary, props.context)).map(([key, observation]) => ({ key, observation })))
+const sections = computed(() => {
+  const sections = Object.entries(projectRunObservation(props.summary, props.context)).map(([key, observation]) => ({ key, observation }))
+  const adapterPresence = projectAdapterUsagePresence(props.summary, props.context)
+  if (adapterPresence !== null) sections.push({ key: 'adapter_presence', observation: adapterPresence })
+  return sections
+})
 function display(value: number | string | boolean | null, key: string | number): string {
   const field = String(key)
   // UNKNOWN_RENDER_GUARD: preserve unavailable totals, including unknown prices.
