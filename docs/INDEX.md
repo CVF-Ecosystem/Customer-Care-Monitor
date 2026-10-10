@@ -476,6 +476,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 scoped adapter-only local closure, original failures/budgets retained.: `docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md`
 - R070 metadata integration acceptance/closure and explicit R1 role transitions.: `docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md`
 - Actual ordinary push waited in credential manager, owned tree terminated; publication unverified, local closure preserved.: `docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json`
+- Conditional R071 R2 consumer aggregate seed; owner scope review required before BUILD, currentGo0.: `CVF_SESSION/authority/CCMAI-RUNTIME-071.json`
+- Concrete APO01..12 additive consumer contract, no runtime yet.: `docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md`
+- Owner-requested cumulative per-tranche Luna quality methodology and attribution.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md`
+- Luna R067 inherited/R068 fresh evidence ledger and unscored R071 planning.: `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`
+- Fresh R071410protected physical baseline, no product draft/source.: `docs/reviews/probes/r071_fresh_source_baseline_2026-10-10.json`
+- Fresh Luna read-only consumer feasibility, zero source/test/runtime.: `docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

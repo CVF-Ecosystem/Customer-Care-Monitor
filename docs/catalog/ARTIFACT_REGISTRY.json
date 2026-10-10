@@ -4777,6 +4777,48 @@
       "path": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
       "status": "ACTIVE",
       "description": "Actual ordinary push waited in credential manager, owned tree terminated; publication unverified, local closure preserved."
+    },
+    {
+      "id": "r071-planning-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-071.json",
+      "status": "ACTIVE",
+      "description": "Conditional R071 R2 consumer aggregate seed; owner scope review required before BUILD, currentGo0."
+    },
+    {
+      "id": "r071-planning-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Concrete APO01..12 additive consumer contract, no runtime yet."
+    },
+    {
+      "id": "r071-planning-a003",
+      "family": "continuity",
+      "path": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Owner-requested cumulative per-tranche Luna quality methodology and attribution."
+    },
+    {
+      "id": "r071-planning-a004",
+      "family": "continuity",
+      "path": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Luna R067 inherited/R068 fresh evidence ledger and unscored R071 planning."
+    },
+    {
+      "id": "r071-planning-a005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_fresh_source_baseline_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Fresh R071410protected physical baseline, no product draft/source."
+    },
+    {
+      "id": "r071-planning-a006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Fresh Luna read-only consumer feasibility, zero source/test/runtime."
     }
   ]
 }

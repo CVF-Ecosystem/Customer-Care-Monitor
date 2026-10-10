@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1",
+  "updatedAt": "2026-10-10",
+  "ownerInstruction": "Track Luna quality separately for every tranche; cumulative empirical report, reviewer/root defects separate, no unmatched cost/speed ranking.",
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "method": "Record original first source/launch/compile/positive, accepted product findings/repair rounds, test semantic sensitivity/final result, evidence-tool findings and parent assistance. Values unavailable remain null with reason. Compare fresh vs inherited and workload classes separately; runtime walltime is not inference/development time. Never reclassify historical failures after later PASS.",
+  "comparisonLimit": "Two prior Luna product tranches, one inherited draft and one fresh start; prior Sol R065 different engine/DB workload, not matched A/B. No token/cost/model compute-time data.",
+  "tranches": [
+    {
+      "id": "CCMAI-RUNTIME-067",
+      "workload": "frontend saved-run receipt reader",
+      "start": "INHERITED_SOL_DRAFT",
+      "assessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+      "finalDisposition": "FROZEN_LOCAL_UI",
+      "firstCompile": "FAIL; missing brace then root7diagnostics,6new/1inherited",
+      "firstPositive": "315PASS_1FAIL; fixture/assertion subsequently repaired",
+      "productRepairRounds": null,
+      "productRepairRoundsReason": "Historical repairs were not recorded with a standardized per-round metric; do not reconstruct a fictitious number.",
+      "workerFindings": [
+        "missing brace",
+        "helper/test typing",
+        "legacy EX incorrectly required UO",
+        "wrong sparse outcome assertion",
+        "visual fixture encodeURI module path"
+      ],
+      "rootFindings": [
+        "static/syntax review missed defects",
+        "keyboard/capture/evidence/metadata/catalog/doc repairs"
+      ],
+      "inheritedFindings": [
+        "mode full vs conditional",
+        "enum coercion",
+        "SP visited coherence",
+        "one panel key diagnostic"
+      ],
+      "finalLocalEvidence": "root316PASS; M01/M02 healthy controls/restored17PASS; actual4visual captures accepted",
+      "modelTokenCost": null
+    },
+    {
+      "id": "CCMAI-RUNTIME-068",
+      "workload": "Go adapter original-JSON usage-presence parser",
+      "start": "FRESH_NO_SOL_DRAFT",
+      "assessment": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md",
+      "firstSourceCommit": "c8e5ff6566447eafc5932cb973ef9c60c3f2ce7e",
+      "finalSourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+      "finalDisposition": "FROZEN_ADAPTER_ONLY",
+      "firstWorkerLaunch": "FAIL_BEFORE_GO; joined two executable paths, counted attempt",
+      "firstActualCompile": "FAIL_ROOT_CAPTURE; Claude SDK pointer/value signature",
+      "firstPositive": "PASS_AFTER_ONE_PRODUCT_REPAIR; no earlier positive command",
+      "acceptedProductFindings": [
+        "Claude pinned SDK pointer/value integration"
+      ],
+      "productRepairRounds": 1,
+      "workerEvidenceFindings": [
+        "launch executable resolution",
+        "two consolidated capture runner reviews"
+      ],
+      "rootFindings": [
+        "initial static compiler miss",
+        "roleRoute/helper/nested continuity mistakes",
+        "small evidence-label/pointer repairs",
+        "duplicate active-handoff catalog entries",
+        "new work-order scope return omission"
+      ],
+      "finalLocalEvidence": "each root/worker18top35outcomesPASS/M01/M02/restored8top21PASS; separate R069 compilerPASS18.093s",
+      "originalAttempts": 10,
+      "originalActualGoProcesses": 9,
+      "supplementalAttempts": 1,
+      "workerNativeTestSeconds": 52.265,
+      "rootNativeTestSeconds": 57.29,
+      "modelTokenCost": null
+    },
+    {
+      "id": "CCMAI-RUNTIME-071",
+      "workload": "Go consumer-side bounded adapter usage-presence aggregate",
+      "start": "FRESH_LUNA_IMPLEMENTATION_OF_SPEC_ON_EXISTING_ACCEPTED_CODE",
+      "status": "PLANNING_NO_SOURCE",
+      "firstSourceCommit": null,
+      "firstLaunch": null,
+      "firstCompile": null,
+      "firstPositive": null,
+      "acceptedProductFindings": [],
+      "workerEvidenceFindings": [],
+      "rootFindings": [
+        "read-only PowerShell brace/glob path mistakes; corrected, zero runtime effect"
+      ],
+      "productRepairRounds": 0,
+      "parentSourceTestEdits": 0,
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null
+    }
+  ]
+}

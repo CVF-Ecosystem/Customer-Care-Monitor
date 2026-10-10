@@ -1,0 +1,11 @@
+# Theo dõi chất lượng Luna theo từng tranche
+
+Owner instruction 2026-10-10: theo dõi từng tranche để đánh giá sát hơn. Root ORCHESTRATOR / independent REVIEWER maintains [ledger](LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json); actual implementation worker Luna xhigh, acceptance standard unchanged. Đây là báo cáo thực nghiệm của dự án, không phải benchmark hoặc claim CVF điều khiển AI.
+
+Mỗi tranche lưu scope/ngôn ngữ/độ mới đầu vào, first source commit, launch/compile/positive đầu tiên thực sự chạy, finding sản phẩm đã được reviewer chấp nhận, số vòng sửa, final evidence/closure và phần hỗ trợ của parent. Lỗi worker harness, source/test, nháp kế thừa và root orchestration/review ghi riêng. Mỗi finding có nguồn, severity và trạng thái; không thay FAIL đầu bằng PASS cuối. Khi chưa đo thì để null kèm lý do, không dùng số test lớn để xếp hạng.
+
+R067 kế thừa nháp Sol; R068 là fresh-start. Hai mẫu này cho thấy final code đạt yêu cầu sau sửa, chưa chứng minh Luna hiệu quả hơn Sol medium. R065 Sol medium có workload engine/DB khác, không phải đối chứng ngang điều kiện. Chỉ tổng hợp first-pass/product-repair trong cùng nhóm scope/đầu vào; không gộp các tranche metadata root-only R069/R070 thành sản phẩm Luna. Không suy luận chi phí/tốc độ model từ Go runtime hoặc khoảng giữa commit.
+
+Từ R071: ghi sự kiện khi xảy ra, không đợi closure để nhớ lại. Root lập acceptance contract trước BUILD; Luna tự viết source/test, parent chỉ review/probes/metadata. First source phải commit trước compile; native raw giữ nguyên trước sửa. Ghi riêng first-compile/first-positive chưa chạy, bị chặn hoặc fail launch. Theo dõi accepted findings và root assistance trong suốt review; closure mới thêm final disposition. Thời gian test/tool có thể đo; thời gian inference/token/cost không có usage thật giữ NOT_MEASURED. Báo cáo tích lũy được cập nhật sau mỗi tranche, luôn kèm giới hạn so sánh.
+
+Publication R068 vẫn UNVERIFIED do credential-manager wait; không thay acceptance local thành hosted CI/live proof. R071 planning độc lập không retry Git hoặc mở provider/network. Facebook/Zalo OA parked; mọi claim live governance cần real provider evidence ngoài scope này.
