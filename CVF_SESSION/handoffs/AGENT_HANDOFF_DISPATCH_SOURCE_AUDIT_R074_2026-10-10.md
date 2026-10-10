@@ -8,7 +8,7 @@ Status: ACTIVE
 - Current mode: BUILD
 - Active phase: BUILD
 - Active role: Codex /root independent REVIEWER / metadata SESSION_SYNC_STEWARD; Luna xhigh documentary REPAIR_WORKER / audit COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-074 BUILD same-scope documentary repair: Luna ACK recorded before edits, resolves F1..F4 in authorized audit artifacts and commits only changed worker paths. Root independent re-review; app native0/product/test/provider/network/DB effects0. Broader/live OPEN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-074 BUILD mechanical citation repair round2: Luna ACK recorded before edits; correct R058 exact target and R053 supporting line21 in two authorized content files, identity unchanged. Root independent re-review; app native0/product/test/provider/network/DB effects0. Broader/live OPEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-dispatch acknowledgment
@@ -24,3 +24,7 @@ Root activation catalog finding: duplicate new handoff path after moving front-d
 ## Same-scope repair acknowledgment
 
 2026-10-10 Luna xhigh fresh canonical rehydration/declaration REPAIR_WORKER ACK received before edits: F1..F4 same-scope documentary repair only, native0, source/test/effects0; root records ACK and BUILD release under existing seed. Root metadata stewardship, worker exact artifact ownership retained; one consolidated document-repair round, not code repair.
+
+## Mechanical citation repair ACK
+
+2026-10-10 Luna fresh canonical BUILD rehydration/declaration citation-only REPAIR_WORKER ACK received before edits. Round2 mechanical correction: R058 exact path/line13 and R053 line21; unchanged two content paths, identity unchanged, app native0. Root records same-authority release; substantive repair1 plus mechanical citation1; no third round or extra scope.

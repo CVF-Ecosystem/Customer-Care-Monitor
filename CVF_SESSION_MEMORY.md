@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R074
 
-CCMAI-RUNTIME-074 BUILD same-scope documentary repair: Luna ACK recorded before edits, resolves F1..F4 in authorized audit artifacts and commits only changed worker paths. Root independent re-review; app native0/product/test/provider/network/DB effects0. Broader/live OPEN, accounts parked.
+CCMAI-RUNTIME-074 BUILD mechanical citation repair round2: Luna ACK recorded before edits; correct R058 exact target and R053 supporting line21 in two authorized content files, identity unchanged. Root independent re-review; app native0/product/test/provider/network/DB effects0. Broader/live OPEN, accounts parked.
 
 Five accepted implementation samples preserved. R074 is a separate readonly audit sample, pending independent review; no sixth implementation sample. Root independent reviewer/source-test edits0.
 

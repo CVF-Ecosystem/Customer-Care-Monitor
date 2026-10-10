@@ -89,6 +89,10 @@
     "F4"
   ],
   "repairAcknowledgment": "2026-10-10 Luna xhigh fresh canonical rehydration/declaration REPAIR_WORKER ACK received before edits: F1..F4 same-scope documentary repair only, native0, source/test/effects0; root records ACK and BUILD release under existing seed. Root metadata stewardship, worker exact artifact ownership retained; one consolidated document-repair round, not code repair.",
-  "documentaryRepairRounds": 1,
-  "repairCompleted": false
+  "documentaryRepairRounds": 2,
+  "repairCompleted": false,
+  "firstRepairCommit": "b0e977146a346a32aa7bee1661c448abd26c129b",
+  "substantiveDocumentRepairRounds": 1,
+  "mechanicalCitationRepairRounds": 1,
+  "citationRepairAcknowledgment": "2026-10-10 Luna fresh canonical BUILD rehydration/declaration citation-only REPAIR_WORKER ACK received before edits. Round2 mechanical correction: R058 exact path/line13 and R053 line21; unchanged two content paths, identity unchanged, app native0. Root records same-authority release; substantive repair1 plus mechanical citation1; no third round or extra scope."
 }
