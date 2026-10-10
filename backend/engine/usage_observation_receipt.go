@@ -22,12 +22,14 @@ type usageObservationReceipt struct {
 	LocalEstimate   *float64 `json:"local_estimate_usd"`
 	TokensComplete  bool     `json:"tokens_complete"`
 	CostComplete    bool     `json:"cost_complete"`
+	AdapterUsagePresence *adapterUsagePresenceReceipt `json:"adapter_usage_presence,omitempty"`
 }
 
 type usageObservationCollector struct {
-	r             usageObservationReceipt
-	input, output int64
-	cost          float64
+	r               usageObservationReceipt
+	input, output    int64
+	cost             float64
+	adapterPresence  *adapterUsagePresenceCollector
 }
 
 func (u *usageObservationCollector) increment(n *int64) {
@@ -83,6 +85,9 @@ func (u *usageObservationCollector) freeze(calls int) usageObservationReceipt {
 	if r.CostComplete {
 		cost := u.cost
 		r.LocalEstimate = &cost
+	}
+	if u.adapterPresence != nil {
+		r.AdapterUsagePresence = u.adapterPresence.freeze(calls)
 	}
 	return r
 }

@@ -12,7 +12,8 @@ const executionMemberLimit = 200
 const executionByteLimit = 128 * 1024
 
 type executionCall struct {
-	usageObserved      bool
+	usageObserved         bool
+	usagePresenceObserved bool
 	Sequence           int      `json:"sequence"`
 	Method             string   `json:"method"`
 	ItemCount          int      `json:"item_count"`
