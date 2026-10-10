@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-10",
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "validationTranche": "CCMAI-RUNTIME-069",
+  "approvalCommit": "fe5ccb8f1341f7fca8778db115630f075e6ab041",
+  "executor": "Codex /root",
+  "command": [
+    "C:\\Program Files\\Go\\bin\\go.EXE",
+    "-C",
+    "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r069-compile-02hcchb5\\backend",
+    "build",
+    "./..."
+  ],
+  "fixedEnvironment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "scratch": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r069-compile-02hcchb5",
+  "archiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "members": 218,
+  "attempts": 1,
+  "actualGoProcesses": 0,
+  "automaticRetries": 0,
+  "tests": 0,
+  "processStarted": false,
+  "timedOut": false,
+  "exitCode": null,
+  "governanceClaim": false,
+  "projectSourceEdited": false
+}

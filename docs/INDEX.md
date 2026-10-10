@@ -463,6 +463,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R069 bounded one-compile work order; no source writes/tests/retry.: `docs/work_orders/CCMAI_RUNTIME_069.md`
 - R069 supplemental validation record, separate immutable budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-069.json`
 - R068 pending handoff retained while R069 single compiler validation is active.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
+- Original single offline compiler PASS evidence; attempts1/tests0/retries0.: `docs/reviews/probes/r069_compile_actual/summary.json`
+- Root independent compiler/raw/source/backup and protected R068 evidence audit.: `docs/reviews/probes/r069_independent_compile_audit_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

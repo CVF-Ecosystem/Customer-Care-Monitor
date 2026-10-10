@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,16 +14,16 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-069",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-069 BUILD: owner approved exactly one supplemental cached offline whole-backend compile on bb0bdeb5403070eb0aa2224b96ad8fd48febd843 using committed single-use runner/plan. Execute once; retain native streams/manifests/second archive/verified backup; no tests, retries or source writes. Original R068 budgets and failures immutable. PASS returns to independent R068 review and conditional scoped closure/publication under existing authority; failure stops. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.",
+  "nextAllowedMove": "CCMAI-RUNTIME-069 REVIEW_PENDING: one supplemental offline whole-backend compile PASS on bb0bdeb5403070eb0aa2224b96ad8fd48febd843, original raw retained. Root validates native output/physical manifests/archive/backup and original R068 protections; no further Go/test/retry. Accepted compiler evidence permits R069 compiler-only closure and independent R068 UP01..12 review under unchanged R068 authority. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / R1 validation IMPLEMENTATION_WORKER / COMMIT_STEWARD / SESSION_SYNC_STEWARD",
+  "activeRole": "Codex /root ORCHESTRATOR / REVIEWER / SESSION_SYNC_STEWARD",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
     "maxGoBuildInvocations": 1,
     "maxGoTestInvocations": 0,
     "maxGoInvocations": 1,
-    "usedGoInvocations": 0
+    "usedGoInvocations": 1
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -36,10 +36,10 @@
   },
   "candidatePlanning": {
     "id": "R069",
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_069.md",
     "sourceImplementation": "UNCHANGED_R068_SOURCE",
-    "newGoInvocations": 0
+    "newGoInvocations": 1
   },
   "historicalR067State": {
     "schemaVersion": "1.0",

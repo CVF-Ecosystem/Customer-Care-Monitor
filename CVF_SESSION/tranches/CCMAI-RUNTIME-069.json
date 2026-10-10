@@ -31,17 +31,18 @@
     "deployment"
   ],
   "schemaVersion": "1.0",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_069.md",
   "baseCommit": "d959986967473d246f8c5c43efa70e6eb71ae49e",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "PENDING_SINGLE_COMPILE",
+  "disposition": "PENDING_INDEPENDENT_COMPILER_AUDIT",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -53,8 +54,10 @@
     "maxGoBuildInvocations": 1,
     "maxGoTestInvocations": 0,
     "maxGoInvocations": 1,
-    "usedGoInvocations": 0
+    "usedGoInvocations": 1
   },
   "dispatcher": "Codex /root",
-  "dispatcherAcknowledgment": "Owner approved exact proposal 2026-10-10; committed separate seed/spec/plan/runner before BUILD; root records R1 executor role transition, remains independent of Luna source; no retries/tests/source writes."
+  "dispatcherAcknowledgment": "Owner approved exact proposal 2026-10-10; committed separate seed/spec/plan/runner before BUILD; root records R1 executor role transition, remains independent of Luna source; no retries/tests/source writes.",
+  "actualGoProcesses": 1,
+  "executionEvidence": "docs/reviews/probes/r069_compile_actual/summary.json"
 }

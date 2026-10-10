@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-069", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-069", "parked": true} -->
 
 ## Startup Order
 
@@ -57,7 +57,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 ## Current R069 supplemental compiler validation (2026-10-10)
 
-CCMAI-RUNTIME-069 BUILD: owner approved exactly one supplemental cached offline whole-backend compile on bb0bdeb5403070eb0aa2224b96ad8fd48febd843 using committed single-use runner/plan. Execute once; retain native streams/manifests/second archive/verified backup; no tests, retries or source writes. Original R068 budgets and failures immutable. PASS returns to independent R068 review and conditional scoped closure/publication under existing authority; failure stops. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.
+CCMAI-RUNTIME-069 REVIEW_PENDING: one supplemental offline whole-backend compile PASS on bb0bdeb5403070eb0aa2224b96ad8fd48febd843, original raw retained. Root validates native output/physical manifests/archive/backup and original R068 protections; no further Go/test/retry. Accepted compiler evidence permits R069 compiler-only closure and independent R068 UP01..12 review under unchanged R068 authority. Facebook/Zalo OA parked; no live/provider/governance/hosted claim.
 
 Active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_SINGLE_OFFLINE_COMPILE_R069_2026-10-10.md`. R068 remains pending until this separate single compiler result is evaluated.
 

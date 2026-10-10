@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-10",
+  "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
+  "validationTranche": "CCMAI-RUNTIME-069",
+  "approvalCommit": "fe5ccb8f1341f7fca8778db115630f075e6ab041",
+  "executor": "Codex /root",
+  "command": [
+    "C:\\Program Files\\Go\\bin\\go.EXE",
+    "-C",
+    "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r069-compile-02hcchb5\\backend",
+    "build",
+    "./..."
+  ],
+  "fixedEnvironment": {
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0"
+  },
+  "scratch": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r069-compile-02hcchb5",
+  "archiveSha256": "43d0cab36dacbcccda35317f8fc237d1ae913202350e943cb5d0cb069dadfa35",
+  "members": 218,
+  "attempts": 1,
+  "actualGoProcesses": 1,
+  "automaticRetries": 0,
+  "tests": 0,
+  "processStarted": true,
+  "timedOut": false,
+  "exitCode": 0,
+  "governanceClaim": false,
+  "projectSourceEdited": false,
+  "ownedPid": 22244,
+  "elapsedSeconds": 18.093037500046194,
+  "sourceRestored": true,
+  "secondArchiveMatches": true,
+  "raw": {
+    "launch-reservation.json": {
+      "bytes": 964,
+      "sha256": "7867833d30b3a32aabcbf79cf834b3433298f2d5cc4009c39236a445aa34fe5d"
+    },
+    "manifest-after.json": {
+      "bytes": 33460,
+      "sha256": "0f9365a13f36900a23728b354b3561a0713c433959685646a97abd0d30e98b9c"
+    },
+    "manifest-before.json": {
+      "bytes": 33460,
+      "sha256": "0f9365a13f36900a23728b354b3561a0713c433959685646a97abd0d30e98b9c"
+    },
+    "stderr.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "backup": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r069-raw-backup-tgllid_r",
+  "status": "PASS"
+}

@@ -4686,6 +4686,20 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md",
       "status": "ACTIVE",
       "description": "R068 pending handoff retained while R069 single compiler validation is active."
+    },
+    {
+      "id": "r069-validation-c001",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_compile_actual/summary.json",
+      "status": "ACTIVE",
+      "description": "Original single offline compiler PASS evidence; attempts1/tests0/retries0."
+    },
+    {
+      "id": "r069-validation-c002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r069_independent_compile_audit_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Root independent compiler/raw/source/backup and protected R068 evidence audit."
     }
   ]
 }
