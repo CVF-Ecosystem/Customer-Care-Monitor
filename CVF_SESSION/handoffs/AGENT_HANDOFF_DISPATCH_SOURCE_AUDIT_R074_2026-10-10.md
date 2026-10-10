@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root independent REVIEWER / metadata COMMIT_STEWARD; Luna xhigh READONLY_ANALYST / documentary IMPLEMENTATION_WORKER
-- Next allowed move: CCMAI-RUNTIME-074 BUILD documentary audit: Luna xhigh ACK recorded before edits, writes exactly three NEW DA01..10 audit artifacts from locked sourceBaseline9fc86fe; sends READY for root registration before exact three-file audit commit. Root independent REVIEWER owns metadata/source-evidence verification. App native0, no product/test/config/provider/network/DB/publication; broader roadmap/live OPEN, accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / metadata SESSION_SYNC_STEWARD; Luna documentary REPAIR_WORKER awaiting ACK
+- Next allowed move: CCMAI-RUNTIME-074 CHANGES_REQUIRED: root consolidated F1..F4 documentary qualification/completeness findings at first audit076d3319; Luna sends same-scope repair ACK before root BUILD release. App native0, product/test/provider/network/DB effects0; broader/live OPEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-dispatch acknowledgment

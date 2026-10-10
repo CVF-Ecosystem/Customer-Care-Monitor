@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R074 BUILD readonly dispatch audit; native0, no product edits.: `CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md`
+- Active R074 CHANGES_REQUIRED readonly dispatch audit; native0, no product edits.: `CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -624,8 +624,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-074.json`
 - R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md`
 - R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/probes/r074_protected_baseline_2026-10-10.json`
-- R074 BUILD source-only contract audit; independent review, no runtime/governance proof.: `CVF_SESSION/tranches/CCMAI-RUNTIME-074.json`
-- R074 BUILD source-only contract audit; independent review, no runtime/governance proof.: `docs/work_orders/CCMAI_RUNTIME_074.md`
+- R074 CHANGES_REQUIRED source-only contract audit; independent review, no runtime/governance proof.: `CVF_SESSION/tranches/CCMAI-RUNTIME-074.json`
+- R074 CHANGES_REQUIRED source-only contract audit; independent review, no runtime/governance proof.: `docs/work_orders/CCMAI_RUNTIME_074.md`
+- Root first-document consolidated independent findings; source/native0, no worker-artifact edits.: `docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-074 read-only dispatcher source audit
 
-Status: BUILD
+Status: CHANGES_REQUIRED
 
 R1; DA01..10 in docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md. Immutable dispatcher seed committed before documentary BUILD; record baseCommit resolves seed timing. Fresh Luna xhigh READONLY_ANALYST / documentary IMPLEMENTATION_WORKER / audit artifact COMMIT_STEWARD; root independent REVIEWER / CLOSER / metadata COMMIT_STEWARD. Task classes recorded before dispatch, separate audit sample, no sixth implementation sample.
 

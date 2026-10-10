@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-074",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-074 BUILD documentary audit: Luna xhigh ACK recorded before edits, writes exactly three NEW DA01..10 audit artifacts from locked sourceBaseline9fc86fe; sends READY for root registration before exact three-file audit commit. Root independent REVIEWER owns metadata/source-evidence verification. App native0, no product/test/config/provider/network/DB/publication; broader roadmap/live OPEN, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-074 CHANGES_REQUIRED: root consolidated F1..F4 documentary qualification/completeness findings at first audit076d3319; Luna sends same-scope repair ACK before root BUILD release. App native0, product/test/provider/network/DB effects0; broader/live OPEN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / metadata COMMIT_STEWARD; Luna xhigh READONLY_ANALYST / documentary IMPLEMENTATION_WORKER",
+  "activeRole": "Codex /root independent REVIEWER / metadata SESSION_SYNC_STEWARD; Luna documentary REPAIR_WORKER awaiting ACK",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -39,7 +39,7 @@
   },
   "candidatePlanning": {
     "id": "R074",
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_074.md",
     "sourceImplementation": "NOT_APPLICABLE_READONLY_AUDIT",
     "sourceOrRuntimeDispatched": false
@@ -375,7 +375,7 @@
   },
   "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
   "currentPermittedGoInvocations": 0,
-  "reviewEvidence": null,
+  "reviewEvidence": "docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md",
   "modelAssessment": null,
   "historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",

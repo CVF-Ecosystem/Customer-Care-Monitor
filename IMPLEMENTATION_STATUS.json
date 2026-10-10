@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -42,7 +42,7 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "buildInProgress": [
-    "R074 BUILD: source-only dispatcher/Analyzer audit; application native0, no product/test changes."
+    "R074 CHANGES_REQUIRED: source-only dispatcher/Analyzer audit; application native0, no product/test changes."
   ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
@@ -266,10 +266,10 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-074 BUILD documentary audit: Luna xhigh ACK recorded before edits, writes exactly three NEW DA01..10 audit artifacts from locked sourceBaseline9fc86fe; sends READY for root registration before exact three-file audit commit. Root independent REVIEWER owns metadata/source-evidence verification. App native0, no product/test/config/provider/network/DB/publication; broader roadmap/live OPEN, accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-074 CHANGES_REQUIRED: root consolidated F1..F4 documentary qualification/completeness findings at first audit076d3319; Luna sends same-scope repair ACK before root BUILD release. App native0, product/test/provider/network/DB effects0; broader/live OPEN, accounts parked.",
     "assessment": "docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_074.md",
-    "buildDispatched": true,
+    "buildDispatched": false,
     "currentExecutionBudget": {
       "workerMaxNative": 0,
       "reviewerMaxNative": 0,
@@ -1211,13 +1211,13 @@
     "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
   },
   "dispatchSourceAudit": {
-    "status": "BUILD",
-    "phase": "BUILD",
+    "status": "CHANGES_REQUIRED",
+    "phase": "REVIEW",
     "riskCeiling": "R1",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_074.md",
     "spec": "docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md",
     "sourceImplementation": "NOT_APPLICABLE_READONLY_AUDIT",
-    "reviewEvidence": null,
+    "reviewEvidence": "docs/reviews/R074_FIRST_DOCUMENT_INDEPENDENT_FINDINGS_2026-10-10.md",
     "modelAssessment": null,
     "closureEvidence": null,
     "freeze": "OPEN",
