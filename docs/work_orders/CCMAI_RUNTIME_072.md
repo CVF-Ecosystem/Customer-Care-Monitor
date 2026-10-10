@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-072 bounded work order
 
-Status: BUILD
+Status: CHANGES_REQUIRED
 
 Risk ceiling: R1. Implementation/repair/source commit steward: Codex /root/r072_worker (fresh gpt-6-luna xhigh). Independent reviewer/closer and metadata commit steward: Codex /root. Owner next/continue and explicit orchestrator/reviewer delegation authorize this local compatibility repair; root reviewed the concrete contract under existing direction. Immutable seed committed at 1fb7f6cd11a14d5c8ddd05942ac8bac75d904663.
 
@@ -13,3 +13,5 @@ Track first source quality, test reasoning and accepted repairs separately from 
 ## Worker BUILD acknowledgment (2026-10-10)
 
 Fresh Luna xhigh rehydrated manifest/policy/current R072 state, memory, active handoff, implementation status, docs index, UC01..07, immutable seed/tranche and protected baseline. BOOTSTRAP_MIGRATION_PENDING remains nonblocking. Role transition: delegated R072 read-only feasibility auditor -> R072 IMPLEMENTATION_WORKER / source COMMIT_STEWARD; root remains independent REVIEWER / CLOSER and metadata COMMIT_STEWARD. Scope is exactly `frontend/src/views/Jobs/job-detail/run-observation.ts` and NEW `frontend/src/__tests__/run-observation-adapter-compat.spec.ts`; only `adapter_usage_presence` is optional and its contents stay opaque. Existing tests, backend, seed, old packets, dependencies, UI display and external effects stay protected. At acknowledgment, source/test edits are 0 and Vitest/vue-tsc/Go invocations are 0. The first two-file source commit precedes runtime; root static approval is required before the worker's expected focused Vitest and forced vue-tsc. Worker ceiling: 2 Vitest calls (one expected, one only for an accepted same-scope repair), 1 forced vue-tsc, Go 0; no automatic retry. This metadata acknowledgment commit is separate from the first source commit and makes no human review or runtime claim.
+
+Consolidated root static review: T1/T2 NEW test repair only; firstsource5285d9f untested. Original budget unchanged; no product repair/new owner checkpoint.

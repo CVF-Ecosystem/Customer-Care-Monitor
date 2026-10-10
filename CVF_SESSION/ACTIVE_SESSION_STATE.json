@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-072",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-072 BUILD: BUILD acknowledgment recorded; edit only frontend/src/views/Jobs/job-detail/run-observation.ts and NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts; commit both before any Vitest/vue-tsc and return exact source hash plus test plan for root static approval. No runtime until approval; worker budget2Vitest (one expected focused, reserve for accepted same-scope repair only),1forcedvue-tsc,Go0; opaque extension ignored and not exposed; no backend/network/provider/DB/push. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
+  "nextAllowedMove": "CCMAI-RUNTIME-072 CHANGES_REQUIRED: consolidated static findings T1 wrong exact legacy projection and T2 extension-present rejection coverage; Luna rehydrates/records REPAIR_WORKER BUILD before NEW-test-only repair, parser/existing tests/backend/seed immutable. Return repaired source for root static approval before Vitest/typecheck; original budget unused/unchanged, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root/r072_worker IMPLEMENTATION_WORKER / source COMMIT_STEWARD; Codex /root REVIEWER / CLOSER / metadata COMMIT_STEWARD",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna xhigh REPAIR_WORKER next",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -39,11 +39,12 @@
   },
   "candidatePlanning": {
     "id": "R072",
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_072.md",
-    "sourceImplementation": "SOURCE_NOT_STARTED_BUILD_ACKNOWLEDGED",
+    "sourceImplementation": "FIRST_SOURCE_COMMITTED_STATIC_TEST_REPAIR_REQUIRED",
     "sourceOrRuntimeDispatched": true,
-    "newGoInvocations": 0
+    "newGoInvocations": 0,
+    "sourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033"
   },
   "historicalR067State": {
     "schemaVersion": "1.0",

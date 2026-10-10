@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
 
 ## Current R072
 
-CCMAI-RUNTIME-072 BUILD: BUILD acknowledgment recorded; edit only frontend/src/views/Jobs/job-detail/run-observation.ts and NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts; commit both before any Vitest/vue-tsc and return exact source hash plus test plan for root static approval. No runtime until approval; worker budget2Vitest (one expected focused, reserve for accepted same-scope repair only),1forcedvue-tsc,Go0; opaque extension ignored and not exposed; no backend/network/provider/DB/push. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
+CCMAI-RUNTIME-072 CHANGES_REQUIRED: consolidated static findings T1 wrong exact legacy projection and T2 extension-present rejection coverage; Luna rehydrates/records REPAIR_WORKER BUILD before NEW-test-only repair, parser/existing tests/backend/seed immutable. Return repaired source for root static approval before Vitest/typecheck; original budget unused/unchanged, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 
 ## Startup Order
 

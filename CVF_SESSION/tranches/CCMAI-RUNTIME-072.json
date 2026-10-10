@@ -46,18 +46,22 @@
     "model": "gpt-6-luna",
     "reasoningEffort": "xhigh"
   },
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
   "baseCommit": "1fb7f6cd11a14d5c8ddd05942ac8bac75d904663",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
+  "reviewEvidence": [
+    "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md"
+  ],
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -67,5 +71,9 @@
   ],
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "2026-10-10 canonical continuity rehydrated; doctor25/1/coreab714ed read-only. Owner next and standing orchestrator delegation accepted bounded R1 pure UI compatibility. Seed/spec/baseline1fb7f6c committed before BUILD. Fresh Luna read-only feasibility agrees; no implementation draft. Root independent reviewer; no repeated human checkpoint.",
-  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json"
+  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+  "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
+  "acceptedRepairRounds": 1,
+  "sourceTestRepairRounds": 1,
+  "productSemanticRepairRounds": 0
 }

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -906,10 +906,10 @@
   },
   "legacyUiExtensionCompatibility": {
     "tranche": "CCMAI-RUNTIME-072",
-    "status": "BUILD",
-    "source": "NOT_STARTED_BUILD_ACKNOWLEDGED",
+    "status": "CHANGES_REQUIRED",
+    "source": "5285d9ff995e52aa227b5870616ce60e4c024033",
     "scope": "Ignore optional presence extension; legacy projection only",
-    "nextAllowedMove": "CCMAI-RUNTIME-072 BUILD: BUILD acknowledgment recorded; edit only frontend/src/views/Jobs/job-detail/run-observation.ts and NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts; commit both before any Vitest/vue-tsc and return exact source hash plus test plan for root static approval. No runtime until approval; worker budget2Vitest (one expected focused, reserve for accepted same-scope repair only),1forcedvue-tsc,Go0; opaque extension ignored and not exposed; no backend/network/provider/DB/push. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
+    "nextAllowedMove": "CCMAI-RUNTIME-072 CHANGES_REQUIRED: consolidated static findings T1 wrong exact legacy projection and T2 extension-present rejection coverage; Luna rehydrates/records REPAIR_WORKER BUILD before NEW-test-only repair, parser/existing tests/backend/seed immutable. Return repaired source for root static approval before Vitest/typecheck; original budget unused/unchanged, Go/network/provider/DB/push0. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
     "worker": "Codex /root/r072_worker",
     "buildAcknowledgment": "Fresh R072 continuity rehydration and before-edit BUILD acknowledgment recorded in active handoff; source edits 0; runtime calls 0."
   }

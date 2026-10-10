@@ -136,6 +136,36 @@
       "rootNativeTestSeconds": 39.64087379979901,
       "closureEvidence": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
       "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2"
+    },
+    {
+      "id": "CCMAI-RUNTIME-072",
+      "workload": "One-line optional opaque-field legacy UI compatibility and NEW projection tests",
+      "start": "FRESH_LUNA_NO_SOL_DRAFT",
+      "status": "CHANGES_REQUIRED_PRE_RUNTIME_TEST_ONLY",
+      "firstSourceCommit": "5285d9ff995e52aa227b5870616ce60e4c024033",
+      "firstCompile": "NOT_RUN",
+      "firstPositive": "NOT_RUN",
+      "acceptedProductFindings": [
+        "T1 P1 exact legacy expected projection adds three non-returned parsing keys",
+        "T2 P2 negative legacy validation lacks extension-present cases"
+      ],
+      "sourceTestRepairRounds": 1,
+      "productSemanticRepairRounds": 0,
+      "parentSourceTestEdits": 0,
+      "productQuality": "PRODUCT_LINE_STATICALLY_CONFORMANT; TESTS_NEED_REPAIR",
+      "workerEvidenceFindings": [],
+      "rootFindings": [
+        "Guessed read-only paths corrected",
+        "Stale R071 index BUILD description corrected",
+        "Gate-unit inheritance clarification after worker launch; duplicate validation retained"
+      ],
+      "parentAssistance": [
+        "Root supplies acceptance contract and consolidated static findings; no source/test draft or edits",
+        "Independent root-only capture infrastructure"
+      ],
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null,
+      "staticReview": "docs/reviews/R072_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md"
     }
   ]
 }
