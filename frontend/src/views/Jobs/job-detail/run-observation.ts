@@ -258,7 +258,7 @@ function rules(value: unknown, context: RunObservationContext): ObservationSecti
 
 function usage(value: unknown, observedExecution: ObservationSection): ObservationSection {
   const required = ['version', 'scope', 'token_basis', 'billing', 'price_revision', 'responses', 'invalid_tokens', 'priced', 'unpriced', 'invalid_costs', 'token_overflow', 'cost_overflow', 'counter_overflow', 'input_tokens', 'output_tokens', 'local_estimate_usd', 'tokens_complete', 'cost_complete']
-  if (!observedExecution.available || !object(value) || !exactKeys(value, required) ||
+  if (!observedExecution.available || !object(value) || !exactKeys(value, required, ['adapter_usage_presence']) ||
       value.version !== 'ccmai.usage-observation.v1' || value.scope !== 'successful_interface_response_local_estimate' ||
       value.token_basis !== 'INTERFACE_VALUES_PRESENCE_UNAVAILABLE' || value.billing !== 'NOT_OBSERVED' || value.price_revision !== 'NOT_CAPTURED') return unavailable()
 
