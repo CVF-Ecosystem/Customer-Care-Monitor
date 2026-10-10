@@ -167,6 +167,13 @@ const invalidShapeMutations: Array<{ label: string; change: (aggregate: RecordVa
   { label: 'extra side key', change: aggregate => { (aggregate.output as RecordValue).future_field = true } },
 ]
 
+const invalidTotalMutations: Array<{ label: string; change: (aggregate: RecordValue) => void }> = [
+  { label: 'string total', change: aggregate => { (aggregate.input as RecordValue).total = '0' } },
+  { label: 'negative total', change: aggregate => { (aggregate.input as RecordValue).total = -1 } },
+  { label: 'fractional total', change: aggregate => { (aggregate.input as RecordValue).total = 0.5 } },
+  { label: 'unsafe total', change: aggregate => { (aggregate.input as RecordValue).total = Number.MAX_SAFE_INTEGER + 1 } },
+]
+
 const expectedKnownZero = {
   available: true,
   values: {
@@ -253,6 +260,42 @@ describe('saved adapter usage-presence projector and panel', () => {
     expect(legacy.usage.available && legacy.usage.values.input_tokens).toBeNull()
     const projected = projectAdapterUsagePresence(summary, context)
     expect(projected).toMatchObject({ available: true, values: { input_total: null, output_total: null, complete: false } })
+
+    // Start from the same healthy parent binding, then fabricate totals for a prefix.
+    const fabricated = savedSummaryWithPresence(knownZeroAggregate(), { callsBegun: 2, responseReturned: 1, inFlight: 1 })
+    const fabricatedLegacy = projectRunObservation(fabricated, context)
+    expect(fabricatedLegacy.execution.available).toBe(true)
+    expect(fabricatedLegacy.usage.available).toBe(true)
+    expect(fabricatedLegacy.usage.available && fabricatedLegacy.usage.values.input_tokens).toBeNull()
+    expect(projectAdapterUsagePresence(fabricated, context)).toEqual({ available: false })
+  })
+
+  it('rejects fabricated totals when adapter presence coverage trails complete legacy responses', () => {
+    const shape = { callsBegun: 2, responseReturned: 2, inFlight: 0 }
+    const partial = knownZeroAggregate()
+    partial.input.total = null
+    partial.output.total = null
+    partial.complete = false
+    const partialSummary = savedSummaryWithPresence(partial, shape)
+    const partialLegacy = projectRunObservation(partialSummary, context)
+    expect(partialLegacy.execution.available).toBe(true)
+    expect(partialLegacy.execution.available && partialLegacy.execution.values.calls_begun).toBe(2)
+    expect(partialLegacy.execution.available && partialLegacy.execution.values.response_returned).toBe(2)
+    expect(partialLegacy.usage.available).toBe(true)
+    expect(partialLegacy.usage.available && partialLegacy.usage.values.input_tokens).toBe(0)
+    expect(partialLegacy.usage.available && partialLegacy.usage.values.output_tokens).toBe(0)
+    expect(projectAdapterUsagePresence(partialSummary, context)).toMatchObject({
+      available: true, values: { adapter_responses: 1, input_total: null, output_total: null, complete: false },
+    })
+
+    const fabricated = savedSummaryWithPresence(knownZeroAggregate(), shape)
+    const fabricatedLegacy = projectRunObservation(fabricated, context)
+    expect(fabricatedLegacy.execution.available).toBe(true)
+    expect(fabricatedLegacy.usage.available).toBe(true)
+    expect(fabricatedLegacy.usage.available && fabricatedLegacy.usage.values.input_tokens).toBe(0)
+    expect(fabricatedLegacy.usage.available && fabricatedLegacy.usage.values.output_tokens).toBe(0)
+    // Both fabricated totals and the pair-complete flag agree; rejection must come from coverage.
+    expect(projectAdapterUsagePresence(fabricated, context)).toEqual({ available: false })
   })
 
   it('shows no-call and overflow states without inventing totals', () => {
@@ -288,7 +331,7 @@ describe('saved adapter usage-presence projector and panel', () => {
     })
   })
 
-  it('accepts the safe-integer boundary and rejects unsafe values or unsafe counter sums', () => {
+  it('accepts the safe-integer boundary and rejects unsafe boundary values and counter sums', () => {
     const maximum = Number.MAX_SAFE_INTEGER
     const boundary = knownZeroAggregate()
     boundary.responses = maximum
@@ -301,19 +344,41 @@ describe('saved adapter usage-presence projector and panel', () => {
       available: true, values: { adapter_responses: maximum, input_total: maximum, output_total: maximum, complete: true },
     })
 
-    const unsafeSummary = mutatePresence(aggregate => {
-      const input = aggregate.input as RecordValue
-      input.total = maximum + 1
-    }, { callsBegun: maximum, responseReturned: maximum })
+    const unsafeTotalReceipt = JSON.parse(boundarySummary) as RecordValue
+    const unsafeTotalExecution = unsafeTotalReceipt.source_execution as RecordValue
+    const unsafeTotalUsage = unsafeTotalExecution.usage_observation as RecordValue
+    const unsafeTotalAggregate = unsafeTotalUsage.adapter_usage_presence as RecordValue
+    ;(unsafeTotalAggregate.input as RecordValue).total = maximum + 1
+    const unsafeSummary = JSON.stringify(unsafeTotalReceipt)
+    expect(projectRunObservation(unsafeSummary, context).execution.available).toBe(true)
     expect(projectRunObservation(unsafeSummary, context).usage.available).toBe(true)
     expect(projectAdapterUsagePresence(unsafeSummary, context)).toEqual({ available: false })
 
-    const unsafeSumSummary = mutatePresence(aggregate => {
-      const input = aggregate.input as RecordValue
-      input.absent = 1
-    }, { callsBegun: maximum, responseReturned: maximum })
+    const unsafeSum = knownZeroAggregate()
+    unsafeSum.responses = maximum
+    unsafeSum.input = side({ known: maximum, absent: 1, total: null })
+    unsafeSum.output = side({ known: maximum, total: maximum })
+    unsafeSum.complete = false
+    expect([maximum, 1].every(Number.isSafeInteger)).toBe(true)
+    expect(Number.isSafeInteger(maximum + 1)).toBe(false)
+    const unsafeSumSummary = savedSummaryWithPresence(unsafeSum, { callsBegun: maximum, responseReturned: maximum })
+    expect(projectRunObservation(unsafeSumSummary, context).execution.available).toBe(true)
     expect(projectRunObservation(unsafeSumSummary, context).usage.available).toBe(true)
     expect(projectAdapterUsagePresence(unsafeSumSummary, context)).toEqual({ available: false })
+  })
+
+  it.each(invalidTotalMutations)('rejects a $label from a valid known-zero control', ({ change }) => {
+    const healthy = savedSummaryWithPresence(knownZeroAggregate())
+    const healthyLegacy = projectRunObservation(healthy, context)
+    expect(healthyLegacy.execution.available).toBe(true)
+    expect(healthyLegacy.usage.available).toBe(true)
+    expect(projectAdapterUsagePresence(healthy, context)).toEqual(expectedKnownZero)
+
+    const summary = mutatePresence(change)
+    const legacy = projectRunObservation(summary, context)
+    expect(legacy.execution.available).toBe(true)
+    expect(legacy.usage.available).toBe(true)
+    expect(projectAdapterUsagePresence(summary, context)).toEqual({ available: false })
   })
 
   it.each(invalidNumericMutations)('rejects $label while preserving valid legacy usage', ({ change }) => {
