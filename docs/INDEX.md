@@ -465,6 +465,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R068 pending handoff retained while R069 single compiler validation is active.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_USAGE_PRESENCE_R068_2026-10-09.md`
 - Original single offline compiler PASS evidence; attempts1/tests0/retries0.: `docs/reviews/probes/r069_compile_actual/summary.json`
 - Root independent compiler/raw/source/backup and protected R068 evidence audit.: `docs/reviews/probes/r069_independent_compile_audit_2026-10-10.json`
+- Separate R1 review/closure integration authority, zero source/Go effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-070.json`
+- R070 bounded closure spec and preserved root routing failure.: `docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_SPEC_2026-10-10.md`
+- R069 compiler-only review decision, closure committed by R070 integration.: `docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md`
+- Independent final R068 UP01..12 review, closure integrated by R070.: `docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

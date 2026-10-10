@@ -4700,6 +4700,34 @@
       "path": "docs/reviews/probes/r069_independent_compile_audit_2026-10-10.json",
       "status": "ACTIVE",
       "description": "Root independent compiler/raw/source/backup and protected R068 evidence audit."
+    },
+    {
+      "id": "r070-integration-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-070.json",
+      "status": "ACTIVE",
+      "description": "Separate R1 review/closure integration authority, zero source/Go effect."
+    },
+    {
+      "id": "r070-integration-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R070 bounded closure spec and preserved root routing failure."
+    },
+    {
+      "id": "r070-integration-a003",
+      "family": "continuity",
+      "path": "docs/reviews/R069_SINGLE_COMPILE_REVIEW_AND_CLOSURE_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R069 compiler-only review decision, closure committed by R070 integration."
+    },
+    {
+      "id": "r070-integration-a004",
+      "family": "continuity",
+      "path": "docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Independent final R068 UP01..12 review, closure integrated by R070."
     }
   ]
 }
