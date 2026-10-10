@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-070", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-071", "parked": true} -->
 
 ## Startup Order
 
@@ -55,11 +55,11 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 - [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-## Current R070 scoped closure integration (2026-10-10)
+## Current R071 bounded consumer work order (2026-10-10)
 
-CCMAI-RUNTIME-070 FROZEN local metadata integration and R068 adapter-only/R069 compiler-only closure committed4fb63a0. One ordinary authorized branch push waited in Git Credential Manager and its verified owned shell/tree was terminated without completion/readback; publication UNVERIFIED, remote effect UNKNOWN, no retry. Resolve Git authentication readiness, then resume existing ordinary branch-publication authority with exact remoteSHA readback. Original budgets/failures/source unchanged; no new Go/test/source authority. Remaining consumer/acceptance INTAKE/DESIGN/SPEC requires separate bounded work order before implementation/runtime. Full S2/S3/S5/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.
 
-Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md`. Source and original evidence immutable; no extra runtime commands.
+Active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`; cumulative quality ledger `docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json`. R071 code quality UNASSESSED; no product/runtime dispatch.
 
 ## Historical R067 saved-run observation UI (2026-10-08)
 

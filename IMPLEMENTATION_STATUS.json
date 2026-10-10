@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -255,13 +255,21 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-070 FROZEN local metadata integration and R068 adapter-only/R069 compiler-only closure committed4fb63a0. One ordinary authorized branch push waited in Git Credential Manager and its verified owned shell/tree was terminated without completion/readback; publication UNVERIFIED, remote effect UNKNOWN, no retry. Resolve Git authentication readiness, then resume existing ordinary branch-publication authority with exact remoteSHA readback. Original budgets/failures/source unchanged; no new Go/test/source authority. Remaining consumer/acceptance INTAKE/DESIGN/SPEC requires separate bounded work order before implementation/runtime. Full S2/S3/S5/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
-    "assessment": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_070.md",
+    "nextObjective": "CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+    "assessment": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
     "buildDispatched": false,
     "currentExecutionBudget": {
-      "maxGoInvocations": 0,
-      "usedGoInvocations": 0
+      "workerMaxGoBuildInvocations": 2,
+      "workerMaxGoTestInvocations": 6,
+      "workerMaxGoInvocations": 8,
+      "reviewerMaxGoBuildInvocations": 2,
+      "reviewerMaxGoTestInvocations": 6,
+      "reviewerMaxGoInvocations": 8,
+      "aggregateMaxGoInvocations": 16,
+      "currentPermittedGoInvocationsBeforeOwnerReview": 0,
+      "workerUsedGoInvocations": 0,
+      "reviewerUsedGoInvocations": 0
     },
     "actualWorkerModel": {
       "model": "gpt-6-luna",
@@ -383,7 +391,7 @@
     },
     "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
     "localClosureEvidence": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
-    "modelAssessment": "docs/reviews/R068_LUNA_XHIGH_FINAL_FRESH_START_ASSESSMENT_2026-10-10.md",
+    "modelAssessment": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKING_METHOD_2026-10-10.md",
     "publicationReceipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
     "publishedClosureCommit": null,
     "publicationStatus": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
@@ -780,7 +788,7 @@
     "sourceImplementation": "SOURCE_REPAIRED_AI_CAMPAIGNS_AND_SUPPLEMENTAL_WHOLE_BACKEND_COMPILE_PASS",
     "r2IndependentAcceptance": "REVIEW_PASS_UP01_THROUGH_UP12_LOCAL_ADAPTER_ONLY",
     "spec": "docs/reviews/R068_PROVIDER_USAGE_PRESENCE_SPEC_2026-10-09.md",
-    "nextMove": "CCMAI-RUNTIME-070 FROZEN local metadata integration and R068 adapter-only/R069 compiler-only closure committed4fb63a0. One ordinary authorized branch push waited in Git Credential Manager and its verified owned shell/tree was terminated without completion/readback; publication UNVERIFIED, remote effect UNKNOWN, no retry. Resolve Git authentication readiness, then resume existing ordinary branch-publication authority with exact remoteSHA readback. Original budgets/failures/source unchanged; no new Go/test/source authority. Remaining consumer/acceptance INTAKE/DESIGN/SPEC requires separate bounded work order before implementation/runtime. Full S2/S3/S5/live/provider/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
+    "nextMove": "CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked.",
     "governanceClaim": false,
     "liveProviderClaim": false,
     "currentConsumerBehaviorUnchanged": true,
@@ -847,5 +855,19 @@
     "status": "FROZEN",
     "evidence": "docs/reviews/R070_SCOPED_CLOSURE_INTEGRATION_REVIEW_2026-10-10.md",
     "newGoInvocations": 0
+  },
+  "adapterUsagePresenceObservation": {
+    "tranche": "CCMAI-RUNTIME-071",
+    "status": "WORK_ORDER",
+    "sourceImplementation": "NOT_STARTED",
+    "ownerScopeReview": "PENDING",
+    "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
+    "sourceOrRuntimeDispatched": false,
+    "newGoInvocations": 0,
+    "currentPermittedGoInvocations": 0,
+    "worker": "Codex /root/r071_worker",
+    "qualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+    "nextMove": "CCMAI-RUNTIME-071 WORK_ORDER prepared: owner human review of new R2 Analyzer/receipt APO01..12 scope and conditional bounded order docs/work_orders/CCMAI_RUNTIME_071.md before BUILD/Go. Fresh Luna xhigh implementation/repair, root independent review; proposed max8Go attempts per role(2build+6puretests), expected5each, repair reserve only after accepted finding. Current permittedGo0, source NOT_STARTED. Cumulative Luna quality ledger records each tranche and separates worker/inherited/root findings. R068/R069/R070 local closure unchanged; previous publication UNVERIFIED and not retried. Full S2/S3/S5/live/provider/DB/governance/hosted remain OPEN; Facebook/Zalo OA parked."
   }
 }

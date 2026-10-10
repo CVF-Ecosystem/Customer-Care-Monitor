@@ -1,0 +1,101 @@
+{
+  "trancheId": "CCMAI-RUNTIME-071",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r071_worker",
+    "repairWorker": "Codex /root/r071_worker",
+    "commitSteward": "Codex /root/r071_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/analyzer.go",
+    "backend/engine/source_execution_receipt.go",
+    "backend/engine/usage_observation_receipt.go",
+    "backend/engine/adapter_usage_presence_observation.go",
+    "backend/engine/adapter_usage_presence_observation_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_071.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/README.md"
+  ],
+  "prohibitedEffects": [
+    "build_before_owner_scope_review",
+    "existing_test_edit",
+    "old_authority_seed_edit",
+    "old_packet_edit",
+    "adapter_parser_edit",
+    "pricing_scalar_policy_change",
+    "schema_endpoint_permission_change",
+    "provider_or_external_network_call",
+    "credential_config_read",
+    "db_customer_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "root_source_test_edit",
+    "automatic_retry",
+    "budget_reset",
+    "force_push",
+    "main_update",
+    "merge",
+    "deployment",
+    "other_tranche_freeze",
+    "full_roadmap_live_governance_claim"
+  ],
+  "schemaVersion": "1.0",
+  "status": "WORK_ORDER",
+  "phase": "WORK_ORDER",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_071.md",
+  "baseCommit": "da8d34a8d852c49f2c1a9c94020875d830db9b8b",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING_OWNER_R2_ENGINE_RECEIPT_SCOPE_REVIEW",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "ownerScopeReview": "PENDING",
+  "dispatcher": "Codex /root",
+  "dispatcherAcknowledgment": "2026-10-10 manifest/policy/state/memory/activeR070handoff/status/index rehydrated; coreab714ed7 public-clean/matcheslocalorigin doctor25/1 warningpin26c686cc/stalebinding/bootstrapmigration. Root ORCHESTRATOR/SPEC_AUTHOR -> WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD. Owner next authorizes concrete preparation and cumulative tracking; engine/receipt R2 boundary sent for human scope review before BUILD, currentGo0. Seed/spec/ledger/fresh410protected baseline/readonlyLuna audit committed before order. No implementation draft or source/test run.",
+  "executionBudget": {
+    "workerMaxGoBuildInvocations": 2,
+    "workerMaxGoTestInvocations": 6,
+    "workerMaxGoInvocations": 8,
+    "reviewerMaxGoBuildInvocations": 2,
+    "reviewerMaxGoTestInvocations": 6,
+    "reviewerMaxGoInvocations": 8,
+    "aggregateMaxGoInvocations": 16,
+    "currentPermittedGoInvocationsBeforeOwnerReview": 0,
+    "workerUsedGoInvocations": 0,
+    "reviewerUsedGoInvocations": 0
+  },
+  "spec": "docs/reviews/R071_ADAPTER_PRESENCE_CONSUMER_SPEC_2026-10-10.md",
+  "sourceImplementation": "NOT_STARTED",
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+  "preparationVerification": {
+    "date": "2026-10-10",
+    "defaultPreflight": "PASS7/7",
+    "prPreflight": "PASS7/7",
+    "gateUnits": "PASS46/46 in31.906s",
+    "catalogWindowsPowerShell5": "PASS",
+    "catalogPowerShell7": "PASS",
+    "docsBuild": "PASS23.30s docs-site only",
+    "doctor": "PASS_WITH_NOTE25/1, manifest/core pin warning and GATE_PROFILE_NOT_INSTALLED retained",
+    "protectedBaseline": "410/410 physical files unchanged; two NEW product paths absent",
+    "sourceEdits": 0,
+    "goInvocations": 0,
+    "lunaCodeQuality": "UNASSESSED_NO_IMPLEMENTATION"
+  }
+}

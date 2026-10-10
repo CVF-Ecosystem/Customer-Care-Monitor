@@ -77,7 +77,7 @@
       "id": "CCMAI-RUNTIME-071",
       "workload": "Go consumer-side bounded adapter usage-presence aggregate",
       "start": "FRESH_LUNA_IMPLEMENTATION_OF_SPEC_ON_EXISTING_ACCEPTED_CODE",
-      "status": "PLANNING_NO_SOURCE",
+      "status": "WORK_ORDER_PENDING_OWNER_SCOPE_REVIEW",
       "firstSourceCommit": null,
       "firstLaunch": null,
       "firstCompile": null,
@@ -90,7 +90,12 @@
       "productRepairRounds": 0,
       "parentSourceTestEdits": 0,
       "measuredModelComputeTime": null,
-      "modelTokenCost": null
+      "modelTokenCost": null,
+      "feasibility": "docs/reviews/probes/r071_luna_readonly_feasibility_2026-10-10.json",
+      "workerAuditFindings": [
+        "Suggested root-relative go test ./backend/engine command corrected to governed go -C owned/backend test ./engine; not executed."
+      ],
+      "productQuality": "UNASSESSED_NO_IMPLEMENTATION"
     }
   ]
 }
