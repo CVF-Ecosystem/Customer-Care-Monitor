@@ -618,6 +618,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root independent PU01..09 static/runtime review plan before first Luna source; no product/test draft.: `docs/reviews/R073_INDEPENDENT_REVIEW_PLAN_2026-10-10.md`
 - R073 firstsource53abf11 CHANGES_REQUIRED F1/F2 NEW-test boundary/coverage, F3 locale precision; original native NOT_RUN.: `docs/reviews/R073_FIRST_SOURCE_STATIC_FINDINGS_2026-10-10.md`
 - R073 repairedsource3a05b50 F1..F3 closed static; worker own49expected/forcedtypecheck pending, no original native run.: `docs/reviews/R073_REPAIRED_SOURCE_STATIC_APPROVAL_2026-10-10.md`
+- R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-074.json`
+- R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md`
+- R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority.: `docs/reviews/probes/r074_protected_baseline_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

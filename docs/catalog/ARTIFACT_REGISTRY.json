@@ -5771,6 +5771,27 @@
       "path": "docs/reviews/probes/r073_committed_packet_seal_2026-10-10.json",
       "status": "ACTIVE",
       "description": "R073 committed raw packet seal and scoped local presence-display UI closure; source3a05b50, broader roadmap/live OPEN."
+    },
+    {
+      "id": "r074-plan-a-001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-074.json",
+      "status": "ACTIVE",
+      "description": "R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority."
+    },
+    {
+      "id": "r074-plan-a-002",
+      "family": "continuity",
+      "path": "docs/reviews/R074_MCP_DISPATCH_AUDIT_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority."
+    },
+    {
+      "id": "r074-plan-a-003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r074_protected_baseline_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "R074 immutable read-only audit authority, DA01..10 contract and protected baseline; no product/runtime authority."
     }
   ]
 }
