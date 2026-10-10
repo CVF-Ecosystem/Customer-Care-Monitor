@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R071 bounded fresh Luna BUILD; root accepts scope under owner clarification, independent review required."
+      "description": "Active R071 FROZEN aggregate-only; root audits remaining dependencies for a separately bounded next work order."
     },
     {
       "id": "r060-work-order",
@@ -5316,6 +5316,27 @@
       "path": "docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md",
       "status": "ACTIVE",
       "description": "R071 aggregate-only local FROZEN after independent review; no newGo/publication/governance claim."
+    },
+    {
+      "id": "r072-planning-a001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-072.json",
+      "status": "ACTIVE",
+      "description": "Immutable R1 legacy UI extension compatibility seed; fresh Luna xhigh worker, root independent reviewer."
+    },
+    {
+      "id": "r072-planning-a002",
+      "family": "continuity",
+      "path": "docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "R072 bounded optional ignored-field contract; preserves all legacy validation and numeric semantics."
+    },
+    {
+      "id": "r072-planning-a003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r072_protected_baseline_2026-10-10.json",
+      "status": "ACTIVE",
+      "description": "Before-source physical baseline for protected frontend/backend/authority files."
     }
   ]
 }

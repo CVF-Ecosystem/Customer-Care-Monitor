@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R071 bounded fresh Luna BUILD; root accepts scope under owner clarification, independent review required.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`
+- Active R071 FROZEN aggregate-only; root audits remaining dependencies for a separately bounded next work order.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -553,6 +553,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent APO01..12 REVIEW_PASS, runtime and claim boundaries.: `docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md`
 - Empirical fresh Luna R071 assessment; one test repair, no matched Sol efficiency ranking.: `docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md`
 - R071 aggregate-only local FROZEN after independent review; no newGo/publication/governance claim.: `docs/reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md`
+- Immutable R1 legacy UI extension compatibility seed; fresh Luna xhigh worker, root independent reviewer.: `CVF_SESSION/authority/CCMAI-RUNTIME-072.json`
+- R072 bounded optional ignored-field contract; preserves all legacy validation and numeric semantics.: `docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md`
+- Before-source physical baseline for protected frontend/backend/authority files.: `docs/reviews/probes/r072_protected_baseline_2026-10-10.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
