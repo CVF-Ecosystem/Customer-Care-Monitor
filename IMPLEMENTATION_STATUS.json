@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -906,9 +906,11 @@
   },
   "legacyUiExtensionCompatibility": {
     "tranche": "CCMAI-RUNTIME-072",
-    "status": "DISPATCH_READY",
-    "source": "NOT_STARTED",
+    "status": "BUILD",
+    "source": "NOT_STARTED_BUILD_ACKNOWLEDGED",
     "scope": "Ignore optional presence extension; legacy projection only",
-    "nextAllowedMove": "CCMAI-RUNTIME-072 DISPATCH_READY: fresh Luna xhigh rehydrates and records BUILD acknowledgment before parser/NEW test edits; commit first source and return for root static approval before bounded offline Vitest/typecheck. Legacy-only UI compatibility, no presence exposure, Go/network/provider/DB/push0; fullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN, Facebook/Zalo OA parked, priorR068 publicationunverified/notretried."
+    "nextAllowedMove": "CCMAI-RUNTIME-072 BUILD: BUILD acknowledgment recorded; edit only frontend/src/views/Jobs/job-detail/run-observation.ts and NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts; commit both before any Vitest/vue-tsc and return exact source hash plus test plan for root static approval. No runtime until approval; worker budget2Vitest (one expected focused, reserve for accepted same-scope repair only),1forcedvue-tsc,Go0; opaque extension ignored and not exposed; no backend/network/provider/DB/push. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
+    "worker": "Codex /root/r072_worker",
+    "buildAcknowledgment": "Fresh R072 continuity rehydration and before-edit BUILD acknowledgment recorded in active handoff; source edits 0; runtime calls 0."
   }
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-072",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-072 DISPATCH_READY: fresh Luna xhigh rehydrates and records BUILD acknowledgment before parser/NEW test edits; commit first source and return for root static approval before bounded offline Vitest/typecheck. Legacy-only UI compatibility, no presence exposure, Go/network/provider/DB/push0; fullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN, Facebook/Zalo OA parked, priorR068 publicationunverified/notretried.",
+  "nextAllowedMove": "CCMAI-RUNTIME-072 BUILD: BUILD acknowledgment recorded; edit only frontend/src/views/Jobs/job-detail/run-observation.ts and NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts; commit both before any Vitest/vue-tsc and return exact source hash plus test plan for root static approval. No runtime until approval; worker budget2Vitest (one expected focused, reserve for accepted same-scope repair only),1forcedvue-tsc,Go0; opaque extension ignored and not exposed; no backend/network/provider/DB/push. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; fresh Luna xhigh implementation worker next",
+  "activeRole": "Codex /root/r072_worker IMPLEMENTATION_WORKER / source COMMIT_STEWARD; Codex /root REVIEWER / CLOSER / metadata COMMIT_STEWARD",
   "updatedAt": "2026-10-10",
   "resolvedCoreCommit": "ab714ed7f20a224c6022cf133b26750347a2fc9e",
   "currentExecutionBudget": {
@@ -39,10 +39,10 @@
   },
   "candidatePlanning": {
     "id": "R072",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_072.md",
-    "sourceImplementation": "NOT_STARTED",
-    "sourceOrRuntimeDispatched": false,
+    "sourceImplementation": "SOURCE_NOT_STARTED_BUILD_ACKNOWLEDGED",
+    "sourceOrRuntimeDispatched": true,
     "newGoInvocations": 0
   },
   "historicalR067State": {

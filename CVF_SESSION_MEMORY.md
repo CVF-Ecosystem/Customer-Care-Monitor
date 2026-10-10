@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-072", "parked": true} -->
 
 ## Current R072
 
-CCMAI-RUNTIME-072 DISPATCH_READY: fresh Luna xhigh rehydrates and records BUILD acknowledgment before parser/NEW test edits; commit first source and return for root static approval before bounded offline Vitest/typecheck. Legacy-only UI compatibility, no presence exposure, Go/network/provider/DB/push0; fullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN, Facebook/Zalo OA parked, priorR068 publicationunverified/notretried.
+CCMAI-RUNTIME-072 BUILD: BUILD acknowledgment recorded; edit only frontend/src/views/Jobs/job-detail/run-observation.ts and NEW frontend/src/__tests__/run-observation-adapter-compat.spec.ts; commit both before any Vitest/vue-tsc and return exact source hash plus test plan for root static approval. No runtime until approval; worker budget2Vitest (one expected focused, reserve for accepted same-scope repair only),1forcedvue-tsc,Go0; opaque extension ignored and not exposed; no backend/network/provider/DB/push. FullS2/S3/S5/globalF02/live/queue-realAnalyzer OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.
 
 ## Startup Order
 
@@ -59,7 +59,7 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md`
 
 - [Review publication receipt integrity](docs/reviews/learnings/feedback_review_publication_receipt_integrity.md): explicit write targets, immutable raw packet, typed receipt checks and actual-evidence reconciliation with loss disclosed.
 
-## Current R071 bounded consumer work order (2026-10-10)
+## Historical R071 bounded consumer work order (2026-10-10)
 
 CCMAI-RUNTIME-071 FROZEN aggregate-only at sourceee6b1c0/review14686ba; worker/root5Go each, compilePASS/positive20top65/M01M02 healthy/restored10top38, one pre-Go test repair retained, no further Go/source/push. Root ORCHESTRATOR next audits remaining acceptance/dependencies and prepares separate bounded work order before new source/runtime/provider scope. FullS2/S3/S5/globalF02/live/governance/queue-realAnalyzer/UIbillingpermission OPEN; Facebook/Zalo OA parked, priorR068 publicationunverified/notretried.
 
