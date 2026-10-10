@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R072 FROZEN local legacy UI compatibility-only; root audits separately bounded next scope, Luna assessment retained."
+      "description": "Active R073 DISPATCH_READY bounded saved adapter presence UI, first-source static review before native; independent root/Luna roles."
     },
     {
       "id": "r060-work-order",
@@ -5533,6 +5533,27 @@
       "path": "docs/reviews/probes/r073_protected_baseline_2026-10-10.json",
       "status": "ACTIVE",
       "description": "Physical protected source/old authority baseline before R073; snapshot boundary, no full write-history claim."
+    },
+    {
+      "id": "r073-planning-b001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Historical R072 FROZEN legacy compatibility handoff; accepted evidence and retrospective classification retained."
+    },
+    {
+      "id": "r073-planning-b002",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_073.md",
+      "status": "ACTIVE",
+      "description": "R073 bounded saved adapter presence UI work order DISPATCH_READY; source/runtime not started."
+    },
+    {
+      "id": "r073-planning-b003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-073.json",
+      "status": "ACTIVE",
+      "description": "R073 DISPATCH_READY R1 record; immutable seed base before BUILD, scoped native budget."
     }
   ]
 }

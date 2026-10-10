@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R072 FROZEN local legacy UI compatibility-only; root audits separately bounded next scope, Luna assessment retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md`
+- Active R073 DISPATCH_READY bounded saved adapter presence UI, first-source static review before native; independent root/Luna roles.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -584,6 +584,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R1 saved presence UI dispatcher seed before BUILD; fresh Luna scope/task classes bounded.: `CVF_SESSION/authority/CCMAI-RUNTIME-073.json`
 - R073 PU01..09 bounded saved presence UI contract, independent validation, safe parsed integers and claim limits.: `docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md`
 - Physical protected source/old authority baseline before R073; snapshot boundary, no full write-history claim.: `docs/reviews/probes/r073_protected_baseline_2026-10-10.json`
+- Historical R072 FROZEN legacy compatibility handoff; accepted evidence and retrospective classification retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md`
+- R073 bounded saved adapter presence UI work order DISPATCH_READY; source/runtime not started.: `docs/work_orders/CCMAI_RUNTIME_073.md`
+- R073 DISPATCH_READY R1 record; immutable seed base before BUILD, scoped native budget.: `CVF_SESSION/tranches/CCMAI-RUNTIME-073.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

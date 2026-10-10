@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -41,7 +41,9 @@
     "R068 adapter-only usage-presence primitive FROZEN after independent UP01..12 review and separately owner-authorized R069 single offline whole-backend compile PASS; source bb0bdeb, original failures/budgets unchanged, consumers/full exits/live remain OPEN.",
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
-  "buildInProgress": [],
+  "buildInProgress": [
+    "R073 bounded saved presence UI; source NOT_STARTED, native0; first-source static review required."
+  ],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
@@ -260,25 +262,26 @@
       "zalo_oa"
     ],
     "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-072 FROZEN legacy UI compatibility-only at source08bab78/reviewe805739: worker/root each21/21 Vitest and forcedvue-tsc PASS, product unchanged after one pre-runtime NEW-test repair; root projection drift reconciled6400b06, raw/source/seed seals retained, no further native/source/push. Root ORCHESTRATOR next audits remaining acceptance/dependencies and prepares separate bounded work order before new source/runtime/provider scope. FullS2/S3/S5/globalF02/live/queue-realAnalyzer/UIpresencebillingpermission OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
-    "assessment": "docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
+    "nextObjective": "CCMAI-RUNTIME-073 DISPATCH_READY bounded saved adapter-presence UI PU01..09; Luna xhigh rehydrates and commits before-edit BUILD acknowledgment, then implements exactly five allowed source paths and commits first source before native. Root independently reviews source/test oracle before focused Vitest/forcedtypecheck. No old projector/tests/backend/provider/network/DB/publication changes; fullS2/S3/S5/globalF02/realAnalyzer/billing/live OPEN; Facebook/Zalo OA parked; R068 publication UNVERIFIED/not retried.",
+    "assessment": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
     "buildDispatched": true,
     "currentExecutionBudget": {
-      "workerMaxVitest": 2,
-      "reviewerMaxVitest": 2,
-      "aggregateMaxVitest": 4,
-      "workerMaxTypecheck": 1,
-      "reviewerMaxTypecheck": 1,
+      "workerMaxVitest": 3,
+      "reviewerMaxVitest": 3,
+      "aggregateMaxVitest": 6,
+      "workerMaxTypecheck": 2,
+      "reviewerMaxTypecheck": 2,
+      "aggregateMaxTypecheck": 4,
       "maxGo": 0,
       "automaticRetries": 0,
-      "workerUsedVitest": 1,
-      "workerUsedTypecheck": 1,
-      "reviewerUsedVitest": 1,
-      "reviewerUsedTypecheck": 1,
+      "workerUsedVitest": 0,
+      "workerUsedTypecheck": 0,
+      "reviewerUsedVitest": 0,
+      "reviewerUsedTypecheck": 0,
+      "aggregateUsedVitest": 0,
+      "aggregateUsedTypecheck": 0,
       "usedGo": 0,
-      "aggregateUsedVitest": 2,
-      "aggregateUsedTypecheck": 2,
       "currentPermittedVitestInvocations": 0,
       "currentPermittedTypecheckInvocations": 0,
       "currentPermittedGoInvocations": 0
@@ -401,12 +404,12 @@
       "publicationReceipt": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
       "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
     },
-    "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
-    "localClosureEvidence": "docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md",
-    "modelAssessment": "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+    "activeLocalClosureOrder": null,
+    "localClosureEvidence": null,
+    "modelAssessment": null,
     "publicationReceipt": null,
     "publishedClosureCommit": null,
-    "publicationStatus": "NOT_AUTHORIZED_IN_R072",
+    "publicationStatus": "NOT_AUTHORIZED_IN_R073",
     "localClosureCommit": null,
     "historicalR068ClosureProjection": {
       "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
@@ -964,5 +967,72 @@
     "publishedClosureCommit": null,
     "publicationStatus": "NOT_AUTHORIZED_IN_R071",
     "localClosureCommit": null
+  },
+  "historicalR072OwnerRoutingProjection": {
+    "date": "2026-10-10",
+    "parkedAccounts": [
+      "facebook",
+      "zalo_oa"
+    ],
+    "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+    "nextObjective": "CCMAI-RUNTIME-072 FROZEN legacy UI compatibility-only at source08bab78/reviewe805739: worker/root each21/21 Vitest and forcedvue-tsc PASS, product unchanged after one pre-runtime NEW-test repair; root projection drift reconciled6400b06, raw/source/seed seals retained, no further native/source/push. Root ORCHESTRATOR next audits remaining acceptance/dependencies and prepares separate bounded work order before new source/runtime/provider scope. FullS2/S3/S5/globalF02/live/queue-realAnalyzer/UIpresencebillingpermission OPEN; Facebook/Zalo OA parked; priorR068 publication UNVERIFIED/not retried.",
+    "assessment": "docs/reviews/R072_LEGACY_UI_EXTENSION_COMPATIBILITY_SPEC_2026-10-10.md",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
+    "buildDispatched": true,
+    "currentExecutionBudget": {
+      "workerMaxVitest": 2,
+      "reviewerMaxVitest": 2,
+      "aggregateMaxVitest": 4,
+      "workerMaxTypecheck": 1,
+      "reviewerMaxTypecheck": 1,
+      "maxGo": 0,
+      "automaticRetries": 0,
+      "workerUsedVitest": 1,
+      "workerUsedTypecheck": 1,
+      "reviewerUsedVitest": 1,
+      "reviewerUsedTypecheck": 1,
+      "usedGo": 0,
+      "aggregateUsedVitest": 2,
+      "aggregateUsedTypecheck": 2,
+      "currentPermittedVitestInvocations": 0,
+      "currentPermittedTypecheckInvocations": 0,
+      "currentPermittedGoInvocations": 0
+    },
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh"
+    },
+    "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_072.md",
+    "localClosureEvidence": "docs/reviews/R072_SCOPED_LOCAL_COMPATIBILITY_CLOSURE_2026-10-10.md",
+    "modelAssessment": "docs/reviews/R072_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
+    "publicationReceipt": null,
+    "publishedClosureCommit": null,
+    "publicationStatus": "NOT_AUTHORIZED_IN_R072",
+    "localClosureCommit": null,
+    "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
+  },
+  "savedAdapterPresenceUi": {
+    "status": "DISPATCH_READY",
+    "phase": "WORK_ORDER",
+    "riskCeiling": "R1",
+    "spec": "docs/reviews/R073_SAVED_ADAPTER_PRESENCE_UI_SPEC_2026-10-10.md",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
+    "sourceImplementation": "NOT_STARTED",
+    "independentAcceptance": "PENDING",
+    "freeze": "OPEN",
+    "firstSourceCommit": null,
+    "reviewEvidence": null,
+    "modelAssessment": null,
+    "closureEvidence": null,
+    "publication": "NOT_AUTHORIZED_IN_R073",
+    "taskClassification": {
+      "primary": "saved_receipt_ui_feature",
+      "secondary": [
+        "strict_schema_projection",
+        "test_oracle_sensitivity",
+        "component_i18n"
+      ],
+      "start": "FRESH_LUNA_NO_SOL_DRAFT"
+    }
   }
 }

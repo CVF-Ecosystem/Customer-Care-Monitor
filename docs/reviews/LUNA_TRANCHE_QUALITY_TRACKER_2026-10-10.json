@@ -227,6 +227,39 @@
         "rootFindingsExcludedFromWorkerProductQuality": true,
         "legacyAcceptedProductFindingsClass": "NEW_TEST_ORACLE_SENSITIVITY"
       }
+    },
+    {
+      "id": "CCMAI-RUNTIME-073",
+      "workload": "Saved adapter presence separate projector/panel/en-vi; five source paths",
+      "start": "FRESH_LUNA_NO_SOL_DRAFT",
+      "status": "DISPATCH_READY",
+      "taskClassification": {
+        "primary": "saved_receipt_ui_feature",
+        "secondary": [
+          "strict_schema_projection",
+          "test_oracle_sensitivity",
+          "component_i18n"
+        ],
+        "start": "FRESH_LUNA_NO_SOL_DRAFT"
+      },
+      "firstSourceCommit": null,
+      "firstCompile": "NOT_RUN",
+      "firstPositive": "NOT_RUN",
+      "sourceTestRepairRounds": 0,
+      "productSemanticRepairRounds": 0,
+      "parentSourceTestEdits": 0,
+      "workerFindings": [],
+      "rootFindings": [
+        "Read-only guessed panel/backend/config paths corrected before scope; zero source/runtime effect.",
+        "Pre-BUILD activation local/PRpreflight6/7 FAIL: currentMode DISPATCH_READY invalid phase; root corrected mode WORK_ORDER, tranche status unchanged."
+      ],
+      "parentAssistance": [
+        "Root contract/spec/inventory, consolidated independent static review, own capture and metadata; no implementation draft."
+      ],
+      "measuredModelComputeTime": null,
+      "modelTokenCost": null,
+      "finalDisposition": "PENDING",
+      "assessment": null
     }
   ],
   "taskFitClassification": {

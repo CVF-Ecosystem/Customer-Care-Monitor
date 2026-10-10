@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-073",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r073_worker",
+    "repairWorker": "Codex /root/r073_worker",
+    "commitSteward": "Codex /root/r073_worker",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Jobs/job-detail/adapter-usage-presence.ts",
+    "frontend/src/__tests__/adapter-usage-presence.spec.ts",
+    "frontend/src/components/ui/RunObservationPanel.vue",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/i18n/vi.ts",
+    "docs/work_orders/CCMAI_RUNTIME_073.md"
+  ],
+  "prohibitedEffects": [
+    "existing_test_edit",
+    "legacy_projector_edit",
+    "backend_edit",
+    "governance_permission_decision",
+    "unsafe_numeric_display",
+    "legacy_validation_relaxation",
+    "provider_network_call",
+    "credential_config_read",
+    "db_use",
+    "dependency_workflow_gate_edit",
+    "core_edit",
+    "secret_commit",
+    "root_source_test_edit",
+    "automatic_retry",
+    "push_merge_deploy",
+    "full_roadmap_live_governance_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "taskClassification": {
+    "primary": "saved_receipt_ui_feature",
+    "secondary": [
+      "strict_schema_projection",
+      "test_oracle_sensitivity",
+      "component_i18n"
+    ],
+    "start": "FRESH_LUNA_NO_SOL_DRAFT"
+  },
+  "executionBudget": {
+    "workerMaxVitest": 3,
+    "reviewerMaxVitest": 3,
+    "aggregateMaxVitest": 6,
+    "workerMaxTypecheck": 2,
+    "reviewerMaxTypecheck": 2,
+    "aggregateMaxTypecheck": 4,
+    "maxGo": 0,
+    "automaticRetries": 0,
+    "workerUsedVitest": 0,
+    "workerUsedTypecheck": 0,
+    "reviewerUsedVitest": 0,
+    "reviewerUsedTypecheck": 0,
+    "aggregateUsedVitest": 0,
+    "aggregateUsedTypecheck": 0,
+    "usedGo": 0,
+    "currentPermittedVitestInvocations": 0,
+    "currentPermittedTypecheckInvocations": 0,
+    "currentPermittedGoInvocations": 0
+  },
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_073.md",
+  "baseCommit": "bf8e151bfbf7e511136794cb078be6836489cf3b",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "dispatcherAcknowledgment": "Fresh continuity rehydrated; doctor25/1 and gateunits46/46 in38.250s inherited unchanged tooling. Root delegated scope acceptance; seed/spec/baseline committedbf8e151bfbf7e511136794cb078be6836489cf3b before BUILD. Luna feasibility read-only, no product draft. Independent review/source first/native budgets bounded; all auxiliary current projections synchronized before BUILD.",
+  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json"
+}
