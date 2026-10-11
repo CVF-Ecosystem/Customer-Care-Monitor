@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-085",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_DISPOSABLE_MYSQL_FIXTURE_CAMPAIGN",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r085_worker",
+    "repairWorker": "Codex /root/r085_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_085.md",
+    "docs/reviews/R085_LOCAL_FIXTURE_WORKER_EXECUTION_2026-10-11.md",
+    "docs/reviews/probes/r085_fixture/*",
+    "docs/reviews/probes/r083_fixture/worker/????????????????????????????????/manifest.json",
+    "docs/reviews/probes/r083_fixture/reviewer/????????????????????????????????/manifest.json"
+  ],
+  "prohibitedEffects": [
+    "any_source_test_tooling_workflow_dependency_change",
+    "old_seed_tranche_handoff_order_evidence_edit",
+    "existing_ccma_db_1_or_other_unowned_resource_change_or_SQL",
+    "production_persistent_db_customer_data_access",
+    "existing_env_credentials_or_container_env_read",
+    "provider_channel_external_network_call",
+    "image_module_pull_or_install",
+    "host_port_host_bind_or_persistent_volume",
+    "core_edit",
+    "secret_commit",
+    "push_merge_deploy",
+    "application_Go_GORM_fence_migration_restore_execution",
+    "runtime_CVF_governance_or_deployed_adoption_claim",
+    "source_repair_or_failed_campaign_replay"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerFixtureCampaigns": 1,
+    "reviewerFixtureCampaigns": 1,
+    "aggregateFixtureCampaigns": 2,
+    "workerHarnessUnitInvocations": 0,
+    "reviewerHarnessUnitInvocations": 0,
+    "maxDirectedSameScopeSourceRepairRounds": 0,
+    "goInvocations": 0,
+    "providerInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next and asks whether MySQL runs on Docker; root local metadata confirms existingccma-db-1 mysql8.0 Up2hours healthy, without SQL/credential/env access. Standing Luna max worker/root independent reviewer/all commits. R2 awareness local disposable synthetic MySQL fixture separate from existing DB; new bounded authority after R084 source-only closure8bbb894.",
+  "acceptedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+  "acceptedReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+  "entryDecision": "INTAKE bounds actual local fixture prerequisites; DESIGN preserves accepted isolated tool/resource plan; SPEC names actual image/server/settings/principal/DDL/denial/cleanup observations; WORK_ORDER grants one worker campaign, then independent root campaign only if worker succeeded with verified cleanup. No source edits, retries or application/fence acceptance.",
+  "fixtureAuthority": "Execute unchanged reviewed scripts/jobrun_fence_fixture.py with roleworker or rolereviewer, sequential one campaign each, fresh unique task network/container, internal network/no hostports/binds/persistentvolumes/tmpfs, task-generated memory-only root/principal credentials, pin cached local MySQL full imageId/repositoryDigest --pull=never, exact owned SQL/create/check/drop and exact ownership/ID cleanup on every exit. Selected Docker/source metadata only. No existing database/container access beyond owner-requested running-status metadata. Bounded readiness observations60/2s and timeouts allowed inside sole campaign, no restart/replay. Failed/unavailable worker ends dependent dispatch, root independent campaign stays reserved.",
+  "legacyToolNamespace": "Tool receipt/resource namespace intentionally CCMAI-RUNTIME-083/ccmai-r083 and fixed r083_fixture/{role}/{new32hexUUID}/manifest.json; execution authority is R085. Sidecar R085 binding maps each actual receipt to actor/approval/code/image/task/output. New UUID artifacts only; no old R083 evidence changed or historical NOT_RUN overwritten. Do not change source namespace to R085.",
+  "expectedCachedImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "expectedRepositoryDigest": "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "claimScope": "Actual local isolated MySQL fixture/image/server/settings/principal grants/DDL-DML/denial/cleanup prerequisites only. No AI/CVF runtime governance, GORM/application/fence integration, restore fleet, production/deployed adoption or hostedCI proof.",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "c804308403561f465135eb4154b7c39334ace562",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workerAcknowledgment": null,
+  "preEffectApproval": "NOT_GRANTED",
+  "workerFixtureCampaignsUsed": 0,
+  "reviewerFixtureCampaignsUsed": 0,
+  "workerSourceRepairRounds": 0
+}

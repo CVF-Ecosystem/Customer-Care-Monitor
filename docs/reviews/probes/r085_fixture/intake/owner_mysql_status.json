@@ -1,0 +1,33 @@
+{
+  "scope": "owner-requested read-only local Docker/MySQL running-status metadata; no SQL, existing env/container-env or credential inspection",
+  "commands": [
+    {
+      "label": "read local context name",
+      "exitCode": 0
+    },
+    {
+      "label": "read selected endpoint",
+      "exitCode": 0
+    },
+    {
+      "label": "read local Docker server version",
+      "exitCode": 0
+    },
+    {
+      "label": "read running container ID/name/image/status fields",
+      "exitCode": 0
+    }
+  ],
+  "localEndpointKind": "npipe-local",
+  "contextName": "desktop-linux",
+  "serverVersion": "29.8.1",
+  "runningMysqlCandidates": [
+    {
+      "ID": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+      "Names": "ccma-db-1",
+      "Image": "mysql:8.0",
+      "Status": "Up 2 hours (healthy)"
+    }
+  ],
+  "status": "OBSERVED"
+}

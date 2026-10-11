@@ -9,9 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-084", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-085", "parked": true} -->
 
-## Current R084
+## Current R085
+
+CCMAI-RUNTIME-085 WORK_ORDER unchanged reviewed source67e76de for isolated cached-image MySQL fixture; worker fresh ACK before committed BUILD/pre-effect approval. One worker campaign then independent root only after success/verified cleanup; no source repair/retry/Go/provider/pull/push, existing ccma-db-1 untouched/accounts parked/fence integration OPEN/deployed UNKNOWN.
+
+## Historical R084 (source-only FROZEN)
 
 CCMAI-RUNTIME-084 FROZEN source-only F1/F3 completion67e76de/reviewc399a70, worker/root23PASS/raw/protected1850paths/ninearrays. ORCHESTRATOR next bounds separate R2 cached-image local disposable fixture authority and verifies accepted source before pre-effect approval; no current Docker/SQL/Go/provider/network/pull/push authority. R083 historical returned preserved, accounts parked, actual fixture/fence integration readiness OPEN/deployed UNKNOWN.
 

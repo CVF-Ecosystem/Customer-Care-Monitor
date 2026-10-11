@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R084 source-only F1/F3 completion; R083 returned preserved, no effects."
+      "description": "Active R085 isolated local MySQL fixture campaigns; existing DB untouched, no app/fence claim."
     },
     {
       "id": "r060-work-order",
@@ -7066,6 +7066,48 @@
       "path": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R084 scoped source-only F1/F3 completion closure; actual fixture/runtime/readiness remain open, no effect authority."
+    },
+    {
+      "id": "runtime085-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-085.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-085.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_085.md",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/intake/owner_mysql_status.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
     }
   ]
 }
