@@ -9,8 +9,11 @@
     "r079OriginalComparisonHead": "b94a81d7bd5d182d79d5f5275d496cf4b743b14b",
     "r079RepairComparisonHead": "643ea0db4551534898e74067b46f12ffabc4aeca",
     "r080BuildComparisonHead": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
-    "workspaceCaptureHead": "6cd1ce925379e4e05dec9ac1fa332daf37ee9615",
-    "workspaceCaptureHeadUse": "Root continuity-only commit after the R080 BUILD release; recorded for context and not substituted for the preserved R080 source comparison."
+    "workspaceCaptureHead": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+    "workspaceCaptureHeadUse": "Repair1 release/capture context; original source comparison preserved.",
+    "r080RepairComparisonHead": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+    "r080FirstPacketCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+    "r080RootReviewAndMechanicalCommit": "c5f0a53aa8dbf6b1982cf8e69b095bcec9d8a833"
   },
   "sourceComparisons": [
     {
@@ -48,6 +51,24 @@
       "backendPathsChanged": [],
       "result": "UNCHANGED",
       "meaning": "repository source comparison only; not a deployed identity"
+    },
+    {
+      "label": "R080 separately named repair source comparison",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..d52cf32c846d785c40b8d5abec697c8f8c24f946 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "source-only; documentary artifact changes are not backend changes or deployed identity"
+    },
+    {
+      "label": "R080 first packet to repair release comparison",
+      "base": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+      "head": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+      "command": "git diff --name-only 315b48f0cc17475c984ead9667fb7df9cce76e0c..d52cf32c846d785c40b8d5abec697c8f8c24f946 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "source-only; documentary artifact changes are not backend changes or deployed identity"
     }
   ],
   "executionBoundary": {
@@ -139,14 +160,6 @@
       "citationRanges": [
         {
           "firstLine": 114,
-          "lastLine": 190
-        },
-        {
-          "firstLine": 193,
-          "lastLine": 344
-        },
-        {
-          "firstLine": 345,
           "lastLine": 397
         }
       ]
@@ -157,31 +170,7 @@
       "citationRanges": [
         {
           "firstLine": 53,
-          "lastLine": 100
-        },
-        {
-          "firstLine": 155,
-          "lastLine": 162
-        },
-        {
-          "firstLine": 249,
-          "lastLine": 329
-        },
-        {
-          "firstLine": 343,
-          "lastLine": 420
-        },
-        {
-          "firstLine": 479,
-          "lastLine": 739
-        },
-        {
-          "firstLine": 744,
-          "lastLine": 910
-        },
-        {
-          "firstLine": 931,
-          "lastLine": 951
+          "lastLine": 952
         }
       ]
     },
@@ -201,10 +190,6 @@
       "citationRanges": [
         {
           "firstLine": 58,
-          "lastLine": 99
-        },
-        {
-          "firstLine": 223,
           "lastLine": 334
         }
       ]
@@ -405,7 +390,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 94
+          "lastLine": 67
         }
       ]
     },
@@ -415,7 +400,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 158
+          "lastLine": 174
         }
       ]
     },
@@ -542,14 +527,6 @@
       "citationRanges": [
         {
           "firstLine": 114,
-          "lastLine": 190
-        },
-        {
-          "firstLine": 193,
-          "lastLine": 344
-        },
-        {
-          "firstLine": 345,
           "lastLine": 397
         }
       ],
@@ -566,31 +543,7 @@
       "citationRanges": [
         {
           "firstLine": 53,
-          "lastLine": 100
-        },
-        {
-          "firstLine": 155,
-          "lastLine": 162
-        },
-        {
-          "firstLine": 249,
-          "lastLine": 329
-        },
-        {
-          "firstLine": 343,
-          "lastLine": 420
-        },
-        {
-          "firstLine": 479,
-          "lastLine": 739
-        },
-        {
-          "firstLine": 744,
-          "lastLine": 910
-        },
-        {
-          "firstLine": 931,
-          "lastLine": 951
+          "lastLine": 952
         }
       ],
       "contentStatus": "versioned read-only source at preserved R080 comparison"
@@ -622,10 +575,6 @@
       "citationRanges": [
         {
           "firstLine": 58,
-          "lastLine": 99
-        },
-        {
-          "firstLine": 223,
           "lastLine": 334
         }
       ],
@@ -934,13 +883,13 @@
       "referenceIds": [
         "W02"
       ],
-      "gitBlobSha1": "cfdc92321e8d9e3352a88b47c715046657941950",
-      "physicalSha256": "75c16fa775c48b84b9c8b90b543d08390647ffbc31c36bec6ec831a314a825ba",
-      "lineCount": 94,
+      "gitBlobSha1": "ed6359c4ff23beded9e0dd4f34c7e99bc26476ff",
+      "physicalSha256": "e98f18f78f84a050fc9f0c71af1944b69f3dae78c85d54bd958648c15c6f633d",
+      "lineCount": 67,
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 94
+          "lastLine": 67
         }
       ],
       "contentStatus": "new R080 worker artifact; working-tree bytes captured before independent review"
@@ -950,13 +899,13 @@
       "referenceIds": [
         "SP01"
       ],
-      "gitBlobSha1": "849d54e07e3730e0602e459fbf02c40e4f9bc975",
-      "physicalSha256": "3c58dfb53347d2dae9c2ad6655936fa52f6e65a057bbcc841207b6331adad544",
-      "lineCount": 158,
+      "gitBlobSha1": "52e1c3b00a90c1758534e074a2efb46fcef13e37",
+      "physicalSha256": "7c015a2d8264a79326d0633ed595e0b7ccfa16f9d7fe0e66d3b8805bcee914ca",
+      "lineCount": 174,
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 158
+          "lastLine": 174
         }
       ],
       "contentStatus": "new R080 worker artifact; working-tree bytes captured before independent review"
@@ -1027,10 +976,10 @@
     "firstPassApprovalInferred": false
   },
   "workerReviewState": {
-    "workerFirstPass": "PENDING_INDEPENDENT_REVIEW",
+    "workerFirstPass": "CHANGES_REQUIRED",
     "independentReviewer": "Codex /root",
-    "workerRepairs": 0,
-    "firstFindingsOrDissent": "No independent findings have yet been issued; preserve the first-pass review and any later repair history.",
+    "workerRepairs": 1,
+    "firstFindingsOrDissent": "Root consolidated F1 commit ambiguity/F2 mutex protocol/F3 bounded follow-on proposal at c5f0a53; prose repair1 supplied by worker, root identity refresh after explicit transfer; final independent review pending.",
     "costAndTime": "Model time, token use, and cost were not measured or estimated."
   },
   "workerStaticValidationHistory": [
@@ -1043,6 +992,11 @@
       "attempt": 2,
       "result": "PASS",
       "checks": "JSON/input hashes and blobs, physical line counts/ranges, source comparison, local reference definitions/targets, reciprocal links, root-pointer coverage, and exact three-file worktree scope."
+    },
+    {
+      "attempt": "repair1 preparation",
+      "result": "JS_PARSE_ERROR_BEFORE_EXECUTION",
+      "reason": "Worker Python wrapper failed at JavaScript parse before execution; no file changes. Worker transferred identity refresh to root, handed back two prose docs after targeted stale-phrase check; no worker full identity validation claimed."
     }
   ],
   "artifactScope": [
@@ -1056,10 +1010,18 @@
     "originalPacketCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
     "origin": "Codex /root",
     "items": [
-      "M1 activity helper citation/shared RunReserved range",
+      "M1 activity helper citation; S07 broadening valid but original73..183 already covered RunReserved148..183 (root attribution correction)",
       "M2 worker-only repository-test qualifier/root46PASS38.818s metadata checks",
       "M3 pre-dispatch table consistency"
     ],
-    "substantiveDesignDraftedByRoot": false
+    "substantiveDesignDraftedByRoot": false,
+    "repair1Transfer": {
+      "acknowledged": true,
+      "owner": "Codex /root SESSION_SYNC_STEWARD",
+      "scope": "identity/ref-range/hash refresh, separate repair lineage and root46 test timing qualifier only",
+      "workerProseFiles": 2,
+      "workerFullRepairIdentityValidation": false,
+      "rootSubstantiveProseDraft": false
+    }
   }
 }

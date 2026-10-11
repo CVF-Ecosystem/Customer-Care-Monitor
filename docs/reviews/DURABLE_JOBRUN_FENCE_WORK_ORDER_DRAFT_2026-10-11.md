@@ -1,94 +1,67 @@
 # Nonbinding follow-on work-order draft: durable JobRun fence
 
-**Status:** proposal only. No next tranche is active and no source, schema, migration, test, database, runtime, recovery, provider, or deployment authority is granted. This draft is conditional on the selected R080 intended contract and its implementation-readiness limits [SP01]. Source and documentary identities are listed in [I01].
+**Status:** proposal only. No next tranche is active and no code, schema, test, database, runtime, recovery, provider, or deployment authority is granted. This draft follows the selected logical contract in R080 but separates architecture selection from implementation readiness. Source and documentary identities are listed in [I01].
 
-## Objective and proposed sequence
+## Immediate proposed move: bounded documentary design gate
 
-Prepare a separately reviewed R2+ database-fence implementation that persists the per-Job monotonic generation and active grant, binds every run-related DB writer to the exact tenant/Job UUID/run/generation tuple, preserves a terminal notification tail, and adopts every interacting mutation/deletion path. It must keep unresolved grants blocking and make no recovery, provider replay, remote exactly-once, mixed-binary, or present-fleet claim. [SP01]
+The selected direction is a DB-owned monotonic per-Job generation and active grant. R080 now specifies phase-specific outcomes for ambiguous admission, writer, terminal, and retirement transactions, plus the compatible local registry/publication/cancellation mutex protocol. The remaining concrete implementation-readiness blocker is binding those logical rules to the repository's MySQL/GORM transaction and lock behavior: row-lock and commit/readback semantics, implicit foreign-key and multirow edges, every Job create/recreate path, and the Tenant-wide versus per-Job mutation paths. The reviewed source comparison is not evidence of a deployed engine/version or runtime topology. [SP01]
 
-The lock graph is specified at the intended level in R080, but no migration or DB concurrency evidence exists. The first gate in any later tranche must therefore be a short DESIGN addendum that binds the target MySQL/GORM schema, FK/implicit lock behavior, multirow acquisition order, Tenant-wide coordination, and all Job ID creation/recreation paths to an isolated database acceptance plan. An independent reviewer must accept that addendum before a schema or source implementation begins. If the graph, ID non-reuse rule, or transaction outcome model cannot be specified without relying on unknown deployment facts, stop and return to DESIGN; do not represent implementation as ready. [SP01]
+The only immediate next proposal is one R2 documentary design gate before any schema/source BUILD. It would resolve the lock and identity inventory from versioned source and specify the exact isolated test plan, or leave an explicit unresolved item and stop. It may not inspect a live database, host, environment file, container, credential, provider, or deployment. If the source does not establish a required fact, the gate records it as unresolved; it does not infer a value from deployment. [SP01]
 
-Only after that gate passes may root create a distinct BUILD seed and work order. That later BUILD would implement and test the reviewed contract on an isolated synthetic database. A separate rollout/adoption decision and evidence would be required before any deployed reliance. Root chooses tranche ID, owner, base commit, paths, budgets, and authority in a new immutable seed; this draft does not preselect or create that authority. [SP01][H01]
+**Proposed gate roles and ceiling:** a worker named only by a future seed authors the addendum; an independent R2 reviewer accepts or returns it; root owns orchestration, the work order, review, closure, and any commit. The bounded gate would permit one documentary author pass and one independent review pass, at most the three artifacts below, and zero application-native, Go build/test, DB, host/container, provider, or network invocations. Only local source/document identity, citation, and static plan checks are proposed. This is a ceiling proposal, not current authority; the future immutable seed must repeat or narrow it before any work.
 
-## Candidate paths for the later documentary gate
+**Candidate gate artifacts, to be narrowed in a future seed:**
 
-These are proposals for root to narrow in a new seed. They authorize no edits in this R080 packet:
-
-- `docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md` — target DB assumptions, Job UUID creation/recreation inventory, Tenant/Job/JobRun/Conversation order, implicit FK lock review, failure/commit ambiguity, and exact isolated-test plan.
+- `docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md` — exact transaction phases, authoritative row observations, owner/registry mutex edges, target fixture assumptions, Job UUID create/recreate inventory, lock graph, and isolated acceptance plan.
 - `docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md` — independent acceptance or return of that addendum.
-- `docs/reviews/probes/r080_jobrun_fence_design_gate_2026-10-11.json` — exact source/database fixture identities and NOT_RUN boundary for the gate.
+- `docs/reviews/probes/r080_jobrun_fence_design_gate_2026-10-11.json` — source identities, per-writer coverage, proposed fixture and tests, and explicit `NOT_RUN` boundary.
 
-The gate may only read versioned source and create a disposable test plan. It must not inspect a production host/database, environment file, credential, container, provider, or deployment. If the repository does not contain enough schema/driver facts, state the missing fact and leave the gate open; do not collect it from a live system under this draft.
+The gate is accepted only if it consistently resolves: (1) an ambiguous admission can lead either to an observed active grant or an atomic rollback, with no dispatch before proof and no automatic retry; (2) ambiguous retirement can lead either to an observed active grant or a retired terminal row only after old synchronous DB writers are drained; (3) exact-tuple DB writers and retirement serialize on the same Job lock; (4) the registry mutex is never held across a DB wait, publication may retain the owner mutex through its DB transaction, cancel reads before taking that mutex, and no DB-held path takes the owner mutex; (5) cancellation and terminal winner behavior remains compatible with R076; (6) every listed source writer, destructive path, and Job ID create/recreate route appears in the graph. If any item remains technically unresolved, the gate stays open and source implementation does not begin. External requests still have no exactly-once, cancel, or replay guarantee. [SP01]
 
-## Candidate paths for a separately authorized implementation
+The gate's later acceptance plan must discriminate healthy and faulted outcomes for independent same-Job admission, unrelated Jobs, generation increase/non-reuse, each DB writer before and after terminalization, each mutation/deletion race, cancellation versus publication/terminalization, admission/writer/terminal/retirement commit loss and readback, restart, and old binaries. The plan names observable rows, grants, checkpoint, notifications, and no-op/busy results. Every test remains `NOT_RUN` at the documentary gate. [SP01]
 
-The following paths are a bounded initial candidate set; root may narrow or amend it only in the new seed before BUILD. A newly discovered writer is a stop-and-review condition, not permission to widen the set silently.
+## Conditional implementation outline (not executable authority)
 
-**Backend candidate paths:**
+Only after the documentary gate is independently accepted may root consider a separately seeded R2+ implementation order. The seed must name the worker, independent reviewer, base commit, exact paths, fixture, finite test/build ceilings, evidence, stop conditions, and restore process. It must include every writer below or narrow the slice without claiming all-writer safety. A separate rollout/adoption decision must identify and upgrade or quiesce old binaries and out-of-repository writers before any deployed reliance. [SP01][H01]
 
-- `backend/db/models/job.go` and `backend/db/mysql.go` — grant/generation model and migration path.
-- `backend/engine/job_run_ownership.go` and `backend/jobdispatch/dispatch.go` — admission, exact identity, cancellation boundary, terminal and retirement helpers.
-- `backend/engine/analyzer.go` and `backend/engine/analyzer_incremental.go` — provider/usage/result/progress/finalizer writes and post-terminal release.
-- `backend/api/handlers/jobs.go` — create/update/delete/clear paths, including ClearJobResults.
-- `backend/api/handlers/channels.go` and `backend/api/handlers/demo.go` — conversation/channel cascades and tenant reset.
-- `backend/notifications/dispatcher.go` and `backend/db/activity.go` — terminal tail writes, error/readback handling, and run-attributed activity.
-- `backend/cli/prune_results.go` — prune plan revalidation and batch mutation.
+**Candidate source paths for a future seed:**
 
-**Test candidate paths:**
+- `backend/db/models/job.go` and `backend/db/mysql.go` — logical grant fields and migration behavior.
+- `backend/engine/job_run_ownership.go` and `backend/jobdispatch/dispatch.go` — admission, exact tuple, registry/publication/cancellation, terminal, and retirement.
+- `backend/engine/analyzer.go` and `backend/engine/analyzer_incremental.go` — provider-adjacent DB effects, usage, results, summaries, checkpoints, and finalization.
+- `backend/api/handlers/jobs.go` — create/update/delete/clear, including `ClearJobResults`.
+- `backend/api/handlers/channels.go` and `backend/api/handlers/demo.go` — channel/purge cascades and tenant reset.
+- `backend/notifications/dispatcher.go` and `backend/db/activity.go` — terminal-tail sends, logs, markers, and activity errors.
+- `backend/cli/prune_results.go` — batch mutation revalidation after the current one-time running count.
 
-- New: `backend/engine/job_run_fence_db_test.go` for independent connections, admission, exact generations, stale writers, terminal tail, failure injection, and lock contention.
-- New: `backend/api/handlers/job_run_fence_mutations_test.go` for update/delete/clear/channel/purge/reset behavior.
-- New: `backend/db/job_run_fence_migration_test.go` for schema creation and repeated migration on a disposable database.
-- Existing: `backend/engine/job_run_ownership_test.go`, `backend/cli/prune_results_test.go`, and the notification tests discovered during the gated inventory, with any required new notification test path named in the seed before edits.
+**Exact candidate tests for that future seed:**
 
-**Document/evidence candidate paths:**
+- New `backend/engine/job_run_fence_db_test.go` — independent connections, admission, generation, stale writers, terminal tail, commit/readback faults, and lock contention.
+- New `backend/api/handlers/job_run_fence_mutations_test.go` — update/delete/clear/channel/purge/reset behavior.
+- New `backend/db/job_run_fence_migration_test.go` — schema creation and repeated migration on a disposable fixture.
+- New `backend/notifications/job_run_fence_dispatcher_test.go` — terminal notification outcome, log/marker failures, and no replay after unknown send result.
+- Existing `backend/engine/job_run_ownership_test.go`, `backend/notifications/dispatcher_test.go`, and `backend/cli/prune_results_test.go` — local cancellation, current notification behavior, and prune mutation coverage.
 
-- `docs/specs/DURABLE_JOBRUN_FENCE_IMPLEMENTATION_SPEC_2026-10-11.md` — accepted design addendum and reviewed implementation contract.
+**Candidate later implementation/evidence documents:**
+
+- `docs/specs/DURABLE_JOBRUN_FENCE_IMPLEMENTATION_SPEC_2026-10-11.md` — accepted implementation contract after the documentary gate.
 - `docs/reviews/DURABLE_JOBRUN_FENCE_IMPLEMENTATION_REVIEW_2026-10-11.md` — independent source/test/evidence review.
-- `docs/reviews/probes/r080_jobrun_fence_build_evidence_2026-10-11.json` — hashes, test invocations/results, migration fixture identity, fault outcomes, and explicit non-claims.
+- `docs/reviews/probes/r080_jobrun_fence_build_evidence_2026-10-11.json` — tested commit, fixture identity, commands/results, injected failures, and explicit non-claims.
 
-The later immutable seed and tranche record remain root-owned. A R2 reviewer must be independent of the worker. Root is the proposed ORCHESTRATOR, WORK_ORDER_AUTHOR, independent REVIEWER, CLOSER, and COMMIT_STEWARD; the implementation worker and any repair worker are named only by the new authority. Reviewer acceptance does not establish deployment adoption. [H01]
+These are candidate paths only. The future seed may narrow or amend them before BUILD; a newly found writer requires review and new authority. The implementation proposal covers atomic grant allocation; exact tuple checks in every participating DB transaction; checked notification/activity markers; lock-ordered mutation integration; preserving local cancellation/checkpoint semantics; and a drained terminal-tail retirement. It excludes owner-death recovery, TTL/age reclaim, cross-process cancel, startup sweeps, provider replay, remote exactly-once, mixed-binary guarantees, production DB access, and deployment. [SP01]
 
-## Proposed scope and exclusions
+## Conditional evidence, stop, and preservation rules
 
-If separately seeded, the implementation would:
+If a future implementation seed is created, it should require an isolated disposable synthetic DB with independent connections/processes and identify its engine/version/isolation, fixture, tested commit, command, and injected failure for every result. Admission ambiguity must distinguish committed-active from rollback/no-grant; the first caller never dispatches without proof, and a later independent request may proceed only through a fresh locked transaction. Writer/terminal ambiguity keeps the active grant and stops later effects. Retirement ambiguity may expose either an active grant or a retired terminal row only after the old DB writer path has drained. Tests must assert persisted state and effect counts, not just error strings. A remote response lost after send is never replayed and never treated as proof of no remote effect. [SP01]
 
-1. Apply the reviewed migration on a disposable MySQL fixture; keep the Job UUID as a non-reused incarnation and the per-Job generation monotonic. Reject counter overflow and any old Job UUID reuse.
-2. Make admission atomically allocate one grant and exact JobRun tuple, then bind every provider-adjacent DB effect, usage record, summary, result/snapshot, terminal/checkpoint, activity, notification log/marker, and grant retirement to that tuple.
-3. Implement the reviewed Tenant → Job → JobRun → Conversation → child-row partial order, including stable multirow sorting and the bounded tenant-wide exclusion behavior for channel/purge/reset operations. No transaction may acquire an earlier lock class after a later class.
-4. Make DeleteJob, ClearJobRuns, ClearJobResults, UpdateJob, DeleteChannel, PurgeChannelConversations, ResetDemoData, and prune reject or serialize against any active grant, including terminal-tail grants. Use checked transaction/readback outcomes; uncertain outcomes keep exclusion.
-5. Keep provider/notifier requests synchronous with the fenced worker lifecycle where source allows, record known outcomes, and never resend an ambiguous external request. Do not claim the DB fence cancels or exactly-once protects external services.
-6. Preserve local cancellation-vs-terminal semantics and checkpoint rules. Do not add cross-process cancel, automatic owner-death recovery, lease expiry, TTL, age-based reclaim, startup sweep, or grant-clearing fallback.
+Stop before schema/source work if the independent gate cannot resolve a lock/identity rule, if any writer misses the exact tuple, if a path can mutate around a guarded writer, if cancellation can invert owner/DB lock order, or if a transaction result would be converted into an assumed rollback/commit. Keep the active grant on inconsistency; do not add recovery under this proposal. A newly discovered path is a stop-and-review condition, not permission to widen a seed. [SP01]
 
-Excluded: production or user database access; deployed schema migration; host/container inspection; provider/network calls; OA account work; automatic recovery or row rewrite; external lock service; remote exactly-once/replay guarantees; mixed-binary rollout; deploy/release; public CVF governance claim. A governance claim, if separately in scope later, still requires the real provider evidence specified by project policy; synthetic provider output is not that evidence. [SP01]
+For any later DB BUILD, preserve a pre-migration synthetic fixture and logs. Never run a destructive down migration with an active grant. Cleanup stays inside the disposable fixture and follows evidence capture. Failed tests and the first finding stay in the review/evidence record. Review remains independent from implementation. If accepted, the documentary gate is only a prerequisite for root to consider a separate implementation seed; it does not close deployment readiness. [H01]
 
-## Proposed evidence and acceptance
-
-All evidence must identify the tested commit, migration/schema fixture, DB engine/version/isolation used, test command, result, and failure injection. Use an isolated disposable database with synthetic data and independent connections/processes. The candidate tests are not claimed executed here.
-
-- Gate review accepts the exact lock graph, source writer inventory, fresh Job UUID rule, and migration behavior before BUILD. Unknown production DB facts stay UNKNOWN.
-- A same-Job second admission is rejected while one grant is active; an unrelated Job remains admissible. Generation strictly increases; a recreated Job has a new UUID; wrong tenant/job/run/generation is a no-op.
-- Every mapped writer rejects stale identity in both running and terminal states, except the narrow allowed terminal tail. Results and metadata do not change on rejection.
-- Admission, writer, finalizer, tail marker, and retirement faults cover statement error, rollback, lost/ambiguous commit, missing row, and readback mismatch. Any uncertain state retains the grant and blocks another admission.
-- Cancellation, terminal winner, test-run, partial/error result, and clean ordinary checkpoint cases preserve their documented outputs.
-- DeleteJob, ClearJobRuns, ClearJobResults, UpdateJob, DeleteChannel, PurgeChannelConversations, ResetDemoData, and prune are raced against active and terminal-tail grants. Require no partial delete, no deadlock, no orphan, and the intended busy/no-op outcome. Probe actual multirow/FK locks in the selected fixture rather than inferring them from source order.
-- Lost provider/notifier response after dispatch produces no automatic replay and no claim that the remote service did nothing. Test doubles may exercise only application-path behavior; they do not constitute CVF governance proof.
-- Mixed or old binaries are not covered by repository tests. A later operational adoption packet must identify every writer/binary and show upgrade or quiescence before any deployed reliance. No fleet-wide guarantee may be inferred from a clean test run.
-
-## Stop conditions and preservation
-
-Stop before schema/source work if the independent DESIGN gate cannot resolve the DB lock graph, implicit FK interactions, Job UUID non-reuse, generation overflow, active-grant retirement, or ambiguous-commit behavior. Stop and return to DESIGN if any path bypasses the tuple, a lock inversion/deadlock appears, migration changes existing data unexpectedly, an ambiguous effect would be replayed, a failed readback clears exclusion, or a newly discovered writer lies outside the seed. Do not widen paths or environment effects during BUILD.
-
-Use only disposable synthetic DB state; no production data or credentials. Preserve a pre-migration fixture and test logs. Never run a destructive down migration against a database containing an active grant. Any cleanup is confined to the disposable fixture after evidence capture. Failed tests and first findings remain in the review/evidence record. No worker self-approval; root performs one consolidated independent review before any repair and records root assistance and worker repairs separately. Repair-round escalation follows the project work-order policy. [H01]
-
-## Budget proposal and failure disposition
-
-This proposal has no fixed model-time, token, or cost estimate. The future seed should set a bounded test/build budget after the target fixture is selected. It should prohibit production DB/host/container/network/provider use and runtime deployment; permit only the isolated DB fixture and specified local commands. If an evidence path requires a prohibited effect, stop and ask root to prepare a new authority rather than infer permission from this draft.
-
-Acceptance of this draft would mean only that root may consider a new design gate and later authority. It would not mean the database contract passed, code is ready, a migration ran, a grant is durable in any environment, or the project has fleet/runtime governance proof. [SP01][I01]
+No fixed model-time or cost estimate is proposed. This draft makes no claim that code is ready, a migration ran, a grant is durable in any environment, all writers are fenced, deployment adopted the design, or CVF governance behavior was proved. [I01][SP01]
 
 ### References
 
 [I01]: probes/r080_source_identity_2026-10-11.json
-[SP01]: ../specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md#L1-L158
+[SP01]: ../specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md#L1-L174
 [H01]: R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md#L1-L11
