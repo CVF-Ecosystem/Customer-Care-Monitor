@@ -848,7 +848,8 @@
       "matchedComparison": false,
       "confidence": "LOW_SINGLE_DIRECTED_SOURCE_COMPLETION_SAMPLE",
       "independentReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
-      "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md"
+      "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
+      "localClosureCommit": "5a681d7380773aa0e7b3064f61eeaf9c63787fdb"
     }
   ]
 }

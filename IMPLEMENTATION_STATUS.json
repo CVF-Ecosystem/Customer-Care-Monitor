@@ -290,7 +290,7 @@
     "localClosureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
     "sourceCheckpoint": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
     "publishedClosureCommit": null,
-    "localClosureCommit": null
+    "localClosureCommit": "5a681d7380773aa0e7b3064f61eeaf9c63787fdb"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -1828,6 +1828,7 @@
     "reviewerHarness": "23PASS0.331s_RAW_EXIT0",
     "residualFindings": [],
     "independentReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
-    "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md"
+    "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
+    "localClosureCommit": "5a681d7380773aa0e7b3064f61eeaf9c63787fdb"
   }
 }
