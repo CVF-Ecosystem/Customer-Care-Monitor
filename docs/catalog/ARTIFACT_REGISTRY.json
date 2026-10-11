@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R077 repository-only topology intake and startup hardening draft, no runtime dispatch."
+      "description": "Active R078 bounded R2 startup no-rewrite implementation and synthetic validation."
     },
     {
       "id": "r060-work-order",
@@ -6072,6 +6072,34 @@
       "path": "docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "Local R077 documentary FREEZE only; separate R2 startup hardening next, not dispatched."
+    },
+    {
+      "id": "runtime078-previous-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Historical R077 documentary intake/proposal FREEZE."
+    },
+    {
+      "id": "runtime078-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-078.json",
+      "status": "ACTIVE",
+      "description": "Immutable root R2 startup hardening/offline disposable DB seed."
+    },
+    {
+      "id": "runtime078-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-078.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded phases/roles/evidence record."
+    },
+    {
+      "id": "runtime078-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_078.md",
+      "status": "ACTIVE",
+      "description": "SH01..07 exact2 source/test scope and max8Go/no retry validation."
     }
   ]
 }

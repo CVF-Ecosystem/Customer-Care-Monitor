@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-078",
+  "authorityKind": "DISPATCHER_OWNED_STARTUP_NO_REWRITE_HARDENING",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r078_worker",
+    "repairWorker": "Codex /root/r078_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/engine/scheduler.go",
+    "backend/engine/scheduler_startup_hardening_test.go",
+    "docs/work_orders/CCMAI_RUNTIME_078.md",
+    "docs/reviews/probes/r078_*",
+    "docs/reviews/R078_*"
+  ],
+  "prohibitedEffects": [
+    "other_product_test_change",
+    "other_tooling_workflow_dependency_change",
+    "old_seed_tranche_evidence_edit",
+    "production_persistent_db_customer_data_access",
+    "runtime_env_credential_read",
+    "provider_channel_external_network_call",
+    "image_module_pull",
+    "core_edit",
+    "real_secret_commit",
+    "push_merge_deploy",
+    "operator_clear_retry_recovery_bypass",
+    "schema_fence_status_checkpoint_change",
+    "live_governance_deployed_fleet_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerMaxBuild": 1,
+    "workerMaxGoTest": 3,
+    "workerMaxGoInvocations": 4,
+    "reviewerMaxBuild": 1,
+    "reviewerMaxGoTest": 3,
+    "reviewerMaxGoInvocations": 4,
+    "aggregateMaxGoInvocations": 8,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 continues accepted R077 next governed move, Luna max worker/root independent reviewer. Root bounds R2 source + disposable synthetic MySQL runtime; no real credentials or external effects. Owner aware via declaration; no R3 action.",
+  "fixtureAuthority": "Inspect only cached golang:1.26-alpine/mysql:8.0 and Go module cache. One disposable internal Docker network/no host ports; named ccmai-r078-* MySQL and Go containers, synthetic credentials, read-only exact source/module cache binds, disposable Go cache/database volumes. No app Compose/backend server startup; actual Scheduler.Start inside focused tests only. Cleanup/verify only owned resources; no pull/network egress. Root and worker campaigns sequential, separate raw receipts.",
+  "claimScope": "Reviewed new-binary startup-recovery no JobRun rewrites on isolated synthetic DB. Not runtime CVF governance, remote topology, deployed safety, old binary parity or recovery implementation.",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_078.md",
+  "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "humanReview": "Owner next scope awareness2026-10-11; root independently reviews before scoped closure, R2 no R3 action"
+}
