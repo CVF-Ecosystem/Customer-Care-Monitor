@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-085", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-085", "parked": true} -->
 
 ## Current R085
 
-CCMAI-RUNTIME-085 WORK_ORDER unchanged reviewed source67e76de for isolated cached-image MySQL fixture; worker fresh ACK before committed BUILD/pre-effect approval. One worker campaign then independent root only after success/verified cleanup; no source repair/retry/Go/provider/pull/push, existing ccma-db-1 untouched/accounts parked/fence integration OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-085 BUILD worker authorized exactly one unchanged-source isolated cached-image fixture campaign after this committed pre-effect approval; actual receipt and exact-ID cleanup required. Root reviewer campaign reserved until worker SUCCEEDED/VERIFIED_CLEAN and result check; no source repair/retry/Go/provider/pull/push, existing ccma-db-1 untouched/accounts parked/fence integration OPEN/deployed UNKNOWN.
 
 ## Historical R084 (source-only FROZEN)
 

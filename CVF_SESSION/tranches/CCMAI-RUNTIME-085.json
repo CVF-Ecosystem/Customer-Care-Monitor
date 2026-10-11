@@ -59,8 +59,8 @@
   "expectedCachedImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
   "expectedRepositoryDigest": "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
   "claimScope": "Actual local isolated MySQL fixture/image/server/settings/principal grants/DDL-DML/denial/cleanup prerequisites only. No AI/CVF runtime governance, GORM/application/fence integration, restore fleet, production/deployed adoption or hostedCI proof.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "c804308403561f465135eb4154b7c39334ace562",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
   "buildCommit": null,
@@ -69,7 +69,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -78,8 +79,15 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": null,
-  "preEffectApproval": "NOT_GRANTED",
+  "workerAcknowledgment": "Fresh corrected worker ACK verifies canonical core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba and parkedOperatorCheckpoint; initial worker ACK omitted ac and queried wrong field, corrected before effects/no canonical drift. Root transitions ORCHESTRATOR to independent REVIEWER safety check then SESSION_SYNC/COMMIT_STEWARD for BUILD release. Source67e76de independently accepted c399a706; actual source/cache intake matches approved filtered/physical blobs and cached image/digest7dcddc01. Root pre-effect approval GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY, one fresh internal network/tmpfs container/newUUID task and exact-owned SQL/cleanup using approved tool, no existing DB/source changes. Reviewer campaign NOT_GRANTED pending worker success/cleanup. Root protection audit first compared Git normalized seed bytes to physical CRLF and falsely asserted mismatch; corrected to filtered blob comparison, physical protected1872 paths unchanged. This is root audit method overhead, no worker failure.",
+  "preEffectApproval": {
+    "status": "GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY",
+    "actor": "Codex /root independent REVIEWER",
+    "acceptedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+    "acceptedReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+    "evidence": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
+    "reviewerCampaignApproval": "NOT_GRANTED_UNTIL_WORKER_SUCCESS_VERIFIED_CLEAN"
+  },
   "workerFixtureCampaignsUsed": 0,
   "reviewerFixtureCampaignsUsed": 0,
   "workerSourceRepairRounds": 0

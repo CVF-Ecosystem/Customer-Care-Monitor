@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-085",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-085 WORK_ORDER unchanged reviewed source67e76de for isolated cached-image MySQL fixture; worker fresh ACK before committed BUILD/pre-effect approval. One worker campaign then independent root only after success/verified cleanup; no source repair/retry/Go/provider/pull/push, existing ccma-db-1 untouched/accounts parked/fence integration OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-085 BUILD worker authorized exactly one unchanged-source isolated cached-image fixture campaign after this committed pre-effect approval; actual receipt and exact-ID cleanup required. Root reviewer campaign reserved until worker SUCCEEDED/VERIFIED_CLEAN and result check; no source repair/retry/Go/provider/pull/push, existing ccma-db-1 untouched/accounts parked/fence integration OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r085_worker awaiting committed BUILD/effect approval",
+  "activeRole": "Codex /root ORCHESTRATOR / REVIEWER safety approval / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r085_worker IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -41,7 +41,7 @@
   },
   "candidatePlanning": {
     "id": "R085",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_085.md",
     "sourceImplementation": "UNCHANGED_ACCEPTED_SOURCE67E76DE",
     "sourceOrRuntimeDispatched": false
@@ -975,5 +975,13 @@
       "providerInvocations": 0,
       "automaticRetries": 0
     }
+  },
+  "preEffectApproval": {
+    "status": "GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY",
+    "actor": "Codex /root independent REVIEWER",
+    "acceptedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+    "acceptedReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+    "evidence": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
+    "reviewerCampaignApproval": "NOT_GRANTED_UNTIL_WORKER_SUCCESS_VERIFIED_CLEAN"
   }
 }
