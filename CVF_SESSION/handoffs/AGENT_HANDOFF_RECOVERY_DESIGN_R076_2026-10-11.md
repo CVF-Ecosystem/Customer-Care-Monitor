@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna max REPAIR_WORKER pending ACK
-- Next allowed move: CCMAI-RUNTIME-076 CHANGES_REQUIRED first documentary review F1/F2/M1. Luna max rehydrates and ACKs before same-scope document repair BUILD; no source/test/runtime/provider/DB/network effects; accounts parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD; Luna max documentary REPAIR_WORKER; root independent REVIEWER reserved
+- Next allowed move: CCMAI-RUNTIME-076 BUILD same-scope documentary repair F1/F2/M1 under unchanged seed. Luna max exact3 artifacts, root independently re-reviews; application/runtime/provider/DB/network0; accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake / before-build authority
@@ -24,3 +24,7 @@ Checks: seed staged preflight7/7; cached PR range7/7; gate units46PASS33.881s. T
 2026-10-11 Luna max /root/r076_worker fresh canonical rehydration and CVF declaration ACK received by root before edits. State/memory/handoff/status/index WORK_ORDER consistent; immutable R1 three-file documentary scope accepted, application native0. Root records ACK and documentary BUILD release; root owns metadata/all commits, child owns design/spec/identity. Root source assistance: finalizer fallback and scheduler startup cleanup identified, no worker draft. Core doctor inherited25/1, knowledge TEMP fallback/noPOST and bootstrap migration notes retained.
 
 Root SESSION_SYNC_STEWARD minor projection audit: archived predecessor R075 review/closure/publication pointers before R076 review, reset current acceptance OPEN; historical R075 publication remains verified, R076 push prohibited. Current documentary BUILD list and date synchronized. No source/worker artifact/seed edit.
+
+## Before-edit role acknowledgment
+
+2026-10-11 Luna max fresh canonical REVIEW/CHANGES_REQUIRED rehydration and REPAIR_WORKER declaration ACK received before edits. Root records acknowledgment before same-scope documentary BUILD release for F1/F2/M1. Exact3 artifacts and all roles/budget/effects remain unchanged. One consolidated documentary repair; no application code/test/runtime finding or campaign. Current tuple consistent, bootstrap/doctor/TEMP ingest notes retained.
