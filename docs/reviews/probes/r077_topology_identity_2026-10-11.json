@@ -1,0 +1,270 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-077",
+  "artifactType": "repository_topology_identity_snapshot",
+  "pairedArtifacts": {
+    "intake": "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+    "startupHardeningDraft": "docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md"
+  },
+  "capturedDate": "2026-10-11",
+  "authority": {
+    "seed": "CVF_SESSION/authority/CCMAI-RUNTIME-077.json",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_077.md",
+    "riskCeiling": "R1_DOCUMENTARY_ONLY",
+    "workerArtifacts": [
+      "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+      "docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md",
+      "docs/reviews/probes/r077_topology_identity_2026-10-11.json"
+    ]
+  },
+  "implementationSourceBaseline": {
+    "commit": "51d09cd4cb9282f22518ac32a4edbd3226d56e36",
+    "meaning": "Source baseline supplied for R077 static identity comparison."
+  },
+  "documentaryHeadAtCapture": {
+    "commit": "e867376931f015a0deb9cc6945f8ddad9c72ac51",
+    "meaning": "Canonical R077 BUILD head after root release and before worker artifacts."
+  },
+  "captureBoundary": {
+    "worktreeStatusAtBuildActivation": "clean",
+    "sourceAndInputHashesCapturedBeforeWorkerArtifacts": true,
+    "applicationOrRuntimeExecuted": false,
+    "applicationTestsOrBuildRun": false,
+    "databaseProviderChannelNetworkHostContainerOrCredentialAccess": false,
+    "deploymentObserved": false,
+    "claimBoundary": "Identifies versioned repository files and Git blobs only. It does not identify a deployed binary, database, process count, writer, lease, fence, or runtime behavior."
+  },
+  "deployedTopology": {
+    "appProcessOrInstanceCount": "UNKNOWN",
+    "sharedDatabaseRelationship": "UNKNOWN",
+    "runningBinaryIdentityAndParity": "UNKNOWN",
+    "startupAndShutdownHistory": "UNKNOWN",
+    "remoteJobRunOwnerOrDurableFence": "UNKNOWN",
+    "oldWriterQuiescence": "UNKNOWN"
+  },
+  "evidenceFiles": [
+    {
+      "path": "backend/main.go",
+      "kind": "application_entrypoint_source",
+      "lineRanges": ["69-85"],
+      "sha256": "84d4e7755a700af51a4c8ff7dd791cff9741be06654b98f16d1bc03a4da2b5e7",
+      "gitBlobAtSourceBaseline": "69ee35b19e3d93140b50f22650727c60ed75c304",
+      "gitBlobAtDocumentaryHead": "69ee35b19e3d93140b50f22650727c60ed75c304",
+      "blobEqual": true,
+      "relevance": "Creates and starts the scheduler before the HTTP router."
+    },
+    {
+      "path": "backend/engine/scheduler.go",
+      "kind": "scheduler_and_startup_source",
+      "lineRanges": ["58-135", "182-190", "252-299", "318-363"],
+      "sha256": "68f4dfbdb167acc190ae3de8532d1533f6fa2f54567f66d6e7ee4db5ea63393e",
+      "gitBlobAtSourceBaseline": "796e79fb14456668b8536856d616e55a133c00d5",
+      "gitBlobAtDocumentaryHead": "796e79fb14456668b8536856d616e55a133c00d5",
+      "blobEqual": true,
+      "relevance": "Scheduler.Start order, sync lease recovery call, cron loading, JobRun startup sweep, and shutdown."
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "kind": "job_run_ownership_source",
+      "lineRanges": ["61-90", "107-190", "193-204", "225-306", "356-398"],
+      "sha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "gitBlobAtSourceBaseline": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "gitBlobAtDocumentaryHead": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "blobEqual": true,
+      "relevance": "Process-local owner registry, database admission, local cancellation, and close/abort behavior."
+    },
+    {
+      "path": "backend/db/models/job.go",
+      "kind": "persisted_job_run_model",
+      "lineRanges": ["48-60"],
+      "sha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
+      "gitBlobAtSourceBaseline": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "gitBlobAtDocumentaryHead": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "blobEqual": true,
+      "relevance": "JobRun persisted fields; no owner, lease, heartbeat, or fencing field is present in this model."
+    },
+    {
+      "path": "backend/engine/analyzer.go",
+      "kind": "execution_lifecycle_source",
+      "lineRanges": ["39-90", "245-329", "411-424"],
+      "sha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
+      "gitBlobAtSourceBaseline": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "gitBlobAtDocumentaryHead": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "blobEqual": true,
+      "relevance": "Owner release follows execution effects, including notifications."
+    },
+    {
+      "path": "backend/engine/analyzer_incremental.go",
+      "kind": "terminal_finalizer_source",
+      "lineRanges": ["167-284"],
+      "sha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
+      "gitBlobAtSourceBaseline": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "gitBlobAtDocumentaryHead": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "blobEqual": true,
+      "relevance": "Checked finalization and best-effort exact-running error fallback; fallback result is not read back."
+    },
+    {
+      "path": "backend/engine/sync.go",
+      "kind": "separate_channel_lease_source",
+      "lineRanges": ["1166-1221"],
+      "sha256": "c841ea0865f1f4b83853409a0e8939c87f99d5009c42b6729cd01beefaaaced0",
+      "gitBlobAtSourceBaseline": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "gitBlobAtDocumentaryHead": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "blobEqual": true,
+      "relevance": "Conditional recovery for Channel sync leases, distinct from JobRun ownership."
+    },
+    {
+      "path": "backend/engine/scheduler_ownership_test.go",
+      "kind": "existing_scheduler_ownership_tests",
+      "lineRanges": ["13-18", "54-167"],
+      "sha256": "e4898ae2526b71b9bad49b4543c5abcfa22b8794ff4b173976f66b4bde0526b2",
+      "gitBlobAtSourceBaseline": "39b93edb5ca27eef28488713891d75ecdf194266",
+      "gitBlobAtDocumentaryHead": "39b93edb5ca27eef28488713891d75ecdf194266",
+      "blobEqual": true,
+      "relevance": "Existing cron/after-sync tests do not invoke Scheduler.Start."
+    },
+    {
+      "path": "backend/engine/sync_lease_recovery_test.go",
+      "kind": "existing_sync_lease_tests",
+      "lineRanges": ["174-257", "494-525"],
+      "sha256": "0524ff4e86c2bf061799ac22510992a1d5e6a59beb386bc5cae0bd89fa4a651d",
+      "gitBlobAtSourceBaseline": "bc591e96391ce9ba5e000ce031778821cd2e24dd",
+      "gitBlobAtDocumentaryHead": "bc591e96391ce9ba5e000ce031778821cd2e24dd",
+      "blobEqual": true,
+      "relevance": "Existing lease behavior and scheduler recovery regression coverage."
+    },
+    {
+      "path": "docker-compose.yml",
+      "kind": "versioned_deployment_example",
+      "lineRanges": ["19-39", "41-68"],
+      "sha256": "96551e353036d5ac6393cf97e9c55183aa7a8cdefef3a74be8426141a1fbb058",
+      "gitBlobAtSourceBaseline": "8c9ec96c51032a3263db30cad158a04905428532",
+      "gitBlobAtDocumentaryHead": "8c9ec96c51032a3263db30cad158a04905428532",
+      "blobEqual": true,
+      "relevance": "One app service and a separate MySQL service in this example; no replica count is declared."
+    },
+    {
+      "path": "Dockerfile",
+      "kind": "versioned_deployment_example",
+      "lineRanges": ["10-34"],
+      "sha256": "58c40ab5ac1148b6bfb2d9248cb8dbd90406516e7d3b619e42ec4f764ab32671",
+      "gitBlobAtSourceBaseline": "167eaaa2ba9703216049a9f9ceda5266d51b1cba",
+      "gitBlobAtDocumentaryHead": "167eaaa2ba9703216049a9f9ceda5266d51b1cba",
+      "blobEqual": true,
+      "relevance": "Builds one backend binary from the checked source into an application image."
+    },
+    {
+      "path": "README.md",
+      "kind": "installation_documentation",
+      "lineRanges": ["5-28"],
+      "sha256": "e04f74d92820a670971ef5793dee0b2e69a2c0095b0006f9f3a5553b5a02b215",
+      "gitBlobAtSourceBaseline": "ca037e8274501e9ca3ff15236d7dc1273355633e",
+      "gitBlobAtDocumentaryHead": "ca037e8274501e9ca3ff15236d7dc1273355633e",
+      "blobEqual": true,
+      "relevance": "One-workspace product description and source-built Compose startup instruction."
+    },
+    {
+      "path": "docs/guide/installation.md",
+      "kind": "installation_documentation",
+      "lineRanges": ["1-37"],
+      "sha256": "96ac9cf50def463e1843d85937ba07c384e936cbd665d9217742c4928c41cd13",
+      "gitBlobAtSourceBaseline": "89b508ef6691e0e7fbd8b79d64420cb66d2fe049",
+      "gitBlobAtDocumentaryHead": "89b508ef6691e0e7fbd8b79d64420cb66d2fe049",
+      "blobEqual": true,
+      "relevance": "Versioned source-build instructions, not an observed deployment."
+    },
+    {
+      "path": "docs/guide/updates.md",
+      "kind": "update_documentation",
+      "lineRanges": ["1-20"],
+      "sha256": "fcb01e1a84d731e056326bc8453bab9d9c0e0768595f0c5f966dacdce9e25841",
+      "gitBlobAtSourceBaseline": "43be4ab0f4f39a0907b0aaaa814247a2c0421497",
+      "gitBlobAtDocumentaryHead": "43be4ab0f4f39a0907b0aaaa814247a2c0421497",
+      "blobEqual": true,
+      "relevance": "Source update instructions; no release image or active binary identity."
+    }
+  ],
+  "documentaryInputs": [
+    {
+      "path": "docs/work_orders/CCMAI_RUNTIME_077.md",
+      "lineRanges": ["1-18"],
+      "sha256": "5980241e370871cd3aa1c4a7d825fe6a3935e06c7a3fe1d3012652dad417d3ae",
+      "gitBlobAtSourceBaseline": null,
+      "gitBlobAtDocumentaryHead": "55f95906e3b69f0086f1934707a728198f82ff9b",
+      "availableAtSourceBaseline": false,
+      "relevance": "Immutable R077 work-order acceptance TI01-TI08; created after the source baseline."
+    },
+    {
+      "path": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "lineRanges": ["23-101", "102-190", "191-219"],
+      "sha256": "2d8cdcffe0bc8f38fb136d20f25ac0cf1bf10648b51d6e523fdc720b12a84151",
+      "gitBlobAtSourceBaseline": "e412e832f1bf92ebf035e9ebfb695d95b2edd1f8",
+      "gitBlobAtDocumentaryHead": "e412e832f1bf92ebf035e9ebfb695d95b2edd1f8",
+      "blobEqual": true,
+      "relevance": "Accepted intended recovery constraints and source/deployment claim boundary."
+    },
+    {
+      "path": "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md",
+      "lineRanges": ["3-11"],
+      "sha256": "6b051662036f535e6a7b5450e56dd790e6dc20a0b46f639915865b88ef7c2523",
+      "gitBlobAtSourceBaseline": "8cbef29a4fa46ff76b165948fd21f62d6080e317",
+      "gitBlobAtDocumentaryHead": "8cbef29a4fa46ff76b165948fd21f62d6080e317",
+      "blobEqual": true,
+      "relevance": "R076 local design-only closure and open startup/recovery scope."
+    },
+    {
+      "path": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+      "lineRanges": ["3-11"],
+      "sha256": "a04bffee087efe6ff3bace352ccfeb2ea14635e35d4eeccb886e8ef2b5726059",
+      "gitBlobAtSourceBaseline": "30f485a1a87a5b084842c656099039efc95bc2e0",
+      "gitBlobAtDocumentaryHead": "30f485a1a87a5b084842c656099039efc95bc2e0",
+      "blobEqual": true,
+      "relevance": "R076 first-pass findings, worker repair, root minor line-map correction, and sample limits."
+    },
+    {
+      "path": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+      "lineRanges": ["3-13"],
+      "sha256": "f860817a5d0dbc29a61198d0c33b59991912e8704b6ef661cac897fdc73b8d41",
+      "gitBlobAtSourceBaseline": "a4ff4020f39f1873c43196e743e7df05ef7af1d6",
+      "gitBlobAtDocumentaryHead": "a4ff4020f39f1873c43196e743e7df05ef7af1d6",
+      "blobEqual": true,
+      "relevance": "Preserves R074's historical source-audit scope and deployment limitations."
+    },
+    {
+      "path": "docs/specs/RUNTIME_SYNC_LEASE_RECOVERY_READ_ONLY_S1_2026-09-29.md",
+      "lineRanges": ["7-24"],
+      "sha256": "f64fe927f5c389a17043e0e98e3e222382662c72d1872773aa3f33b273d86ca0",
+      "gitBlobAtSourceBaseline": "f8cf59256f7c98aeba82978e0f91b2a9b0aeed7b",
+      "gitBlobAtDocumentaryHead": "f8cf59256f7c98aeba82978e0f91b2a9b0aeed7b",
+      "blobEqual": true,
+      "relevance": "Existing channel sync-lease ownership and recovery contract."
+    }
+  ],
+  "sourceBlobComparison": {
+    "allEvidenceFilesPresentAtBothCommitsMatch": true,
+    "exception": "R077 work order was introduced after the source baseline; its source-baseline blob is null and its documented HEAD blob is recorded.",
+    "interpretation": "Listed code, deployment examples, and prior documentary inputs have equal Git blobs at the source baseline and R077 documentary HEAD. Physical SHA256 values were computed from the worker's pre-artifact worktree. This is not a full repository or deployed identity audit."
+  },
+  "parentAssistance": [
+    "Root supplied the bounded TI01-TI08 contract and the feasibility question about a fail-closed no-rewrite startup slice.",
+    "Root supplied pointers to Scheduler.Start ordering, separate channel lease recovery, the PK-only JobRun startup update, terminal-race and overlapping-writer scenarios, and the limitation of existing scheduler ownership tests. Worker independently inspected and hash-checked the cited files; those pointer-first facts are not autonomous-discovery claims."
+  ],
+  "authoringAndReview": {
+    "worker": "Codex /root/r077_worker, gpt-6-luna, max",
+    "independentReviewer": "Codex /root, reserved",
+    "workerArtifacts": [
+      "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+      "docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md",
+      "docs/reviews/probes/r077_topology_identity_2026-10-11.json"
+    ],
+    "testsOrBuildsRun": false,
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0,
+    "repairRounds": 0,
+    "reviewStatus": "PENDING_INDEPENDENT_DOCUMENTARY_REVIEW"
+  },
+  "governanceEvidence": {
+    "liveProviderCall": "NOT_RUN",
+    "claim": "No CVF AI-governance, runtime, deployment, production, exactly-once, or delivery claim is made."
+  }
+}
