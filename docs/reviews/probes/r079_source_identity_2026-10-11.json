@@ -1,0 +1,508 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-079",
+  "capturePurpose": "Repository source and documentary citation identity for the R079 prerequisite intake; does not identify deployed binaries or prove runtime behavior.",
+  "sourceBaseline": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+  "comparisonHead": "b94a81d7bd5d182d79d5f5275d496cf4b743b14b",
+  "sourceComparison": {
+    "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..b94a81d7bd5d182d79d5f5275d496cf4b743b14b -- backend",
+    "backendPathsChanged": [],
+    "result": "UNCHANGED",
+    "implementationTruth": "source baseline only; comparison HEAD is not a deployed identity"
+  },
+  "executionBoundary": {
+    "mode": "source-only documentary BUILD",
+    "runtimeEvidence": "NOT_RUN",
+    "inheritedRuntime": "R078 accepted synthetic MySQL application evidence for local startup no-rewrite only; R079 did not replay it",
+    "noGovernanceClaim": true,
+    "applicationNativeInvocations": 0,
+    "goBuildInvocations": 0,
+    "goTestInvocations": 0,
+    "providerNetworkInvocations": 0,
+    "dbHostContainerInspections": 0,
+    "credentialEnvReads": 0
+  },
+  "inputs": [
+    {
+      "referenceId": "S01",
+      "path": "backend/api/router.go",
+      "gitBlobSha1": "a4bc375fb3db3430ad2897dd85d9badd44cf780e",
+      "physicalSha256": "5adc7db5fb34b0d1eee159ce6ab1858b082ba6932987e9fbe5acdf28291d5acb",
+      "lineCount": 303,
+      "citationRanges": [
+        {
+          "firstLine": 174,
+          "lastLine": 184
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S02",
+      "path": "backend/api/handlers/jobs.go",
+      "gitBlobSha1": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "physicalSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "lineCount": 990,
+      "citationRanges": [
+        {
+          "firstLine": 368,
+          "lastLine": 399
+        },
+        {
+          "firstLine": 402,
+          "lastLine": 452
+        },
+        {
+          "firstLine": 459,
+          "lastLine": 493
+        },
+        {
+          "firstLine": 555,
+          "lastLine": 603
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S03",
+      "path": "backend/mcp/handlers.go",
+      "gitBlobSha1": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
+      "physicalSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "lineCount": 361,
+      "citationRanges": [
+        {
+          "firstLine": 330,
+          "lastLine": 360
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S04",
+      "path": "backend/jobdispatch/dispatch.go",
+      "gitBlobSha1": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
+      "physicalSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "lineCount": 148,
+      "citationRanges": [
+        {
+          "firstLine": 71,
+          "lastLine": 147
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S05",
+      "path": "backend/engine/analyzer_modes.go",
+      "gitBlobSha1": "7b0babac06f43353317d143d53bfce42c6597bb0",
+      "physicalSha256": "4e7a37acb06df23e324d0e472d6becbef2de8b783ca91ace53287b7acb5f5c72",
+      "lineCount": 309,
+      "citationRanges": [
+        {
+          "firstLine": 35,
+          "lastLine": 70
+        },
+        {
+          "firstLine": 73,
+          "lastLine": 183
+        },
+        {
+          "firstLine": 226,
+          "lastLine": 273
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S06",
+      "path": "backend/engine/job_run_ownership.go",
+      "gitBlobSha1": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "physicalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "lineCount": 398,
+      "citationRanges": [
+        {
+          "firstLine": 61,
+          "lastLine": 190
+        },
+        {
+          "firstLine": 193,
+          "lastLine": 306
+        },
+        {
+          "firstLine": 345,
+          "lastLine": 397
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S07",
+      "path": "backend/engine/analyzer.go",
+      "gitBlobSha1": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "physicalSha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
+      "lineCount": 962,
+      "citationRanges": [
+        {
+          "firstLine": 39,
+          "lastLine": 162
+        },
+        {
+          "firstLine": 245,
+          "lastLine": 329
+        },
+        {
+          "firstLine": 343,
+          "lastLine": 425
+        },
+        {
+          "firstLine": 479,
+          "lastLine": 730
+        },
+        {
+          "firstLine": 741,
+          "lastLine": 898
+        },
+        {
+          "firstLine": 913,
+          "lastLine": 952
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S08",
+      "path": "backend/engine/analyzer_incremental.go",
+      "gitBlobSha1": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "physicalSha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
+      "lineCount": 284,
+      "citationRanges": [
+        {
+          "firstLine": 167,
+          "lastLine": 284
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S09",
+      "path": "backend/engine/source_execution_receipt.go",
+      "gitBlobSha1": "d831dca922485c66edbf65e6ca36981c6431e135",
+      "physicalSha256": "d6e8287023fa504612bb15b25271116b87d7c720fd94e3b7079b4e9e711500bf",
+      "lineCount": 295,
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 202
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S10",
+      "path": "backend/engine/scheduler.go",
+      "gitBlobSha1": "e80cba5d592f538a3476bf76e814f42fa97d2ff0",
+      "physicalSha256": "335c5fccf1d64c0b8fdfece4c19b7f6d2e51f49494ca7fe203c587376724ffc5",
+      "lineCount": 339,
+      "citationRanges": [
+        {
+          "firstLine": 58,
+          "lastLine": 98
+        },
+        {
+          "firstLine": 224,
+          "lastLine": 334
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S11",
+      "path": "backend/engine/sync.go",
+      "gitBlobSha1": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "physicalSha256": "c841ea0865f1f4b83853409a0e8939c87f99d5009c42b6729cd01beefaaaced0",
+      "lineCount": 1221,
+      "citationRanges": [
+        {
+          "firstLine": 1166,
+          "lastLine": 1221
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S12",
+      "path": "backend/main.go",
+      "gitBlobSha1": "69ee35b19e3d93140b50f22650727c60ed75c304",
+      "physicalSha256": "84d4e7755a700af51a4c8ff7dd791cff9741be06654b98f16d1bc03a4da2b5e7",
+      "lineCount": 118,
+      "citationRanges": [
+        {
+          "firstLine": 69,
+          "lastLine": 85
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S13",
+      "path": "backend/api/handlers/agents.go",
+      "gitBlobSha1": "47ef487bcfe3161cbfc51d01c917cf9487224168",
+      "physicalSha256": "ec464cdf82d9362274f67c060eea87b6b4b725867541ad01374cc87253c945fe",
+      "lineCount": 351,
+      "citationRanges": [
+        {
+          "firstLine": 265,
+          "lastLine": 310
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S14",
+      "path": "backend/db/models/job.go",
+      "gitBlobSha1": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "physicalSha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
+      "lineCount": 132,
+      "citationRanges": [
+        {
+          "firstLine": 48,
+          "lastLine": 60
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S15",
+      "path": "backend/db/models/setting.go",
+      "gitBlobSha1": "becf2495ba519f43ef4459bab7191086d56c5f42",
+      "physicalSha256": "a9aa1e7a6d31f9a6f4d4f06f247adc9ad761a00951f293b12f2e0e153cd24122",
+      "lineCount": 81,
+      "citationRanges": [
+        {
+          "firstLine": 34,
+          "lastLine": 45
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S16",
+      "path": "backend/notifications/dispatcher.go",
+      "gitBlobSha1": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "physicalSha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008",
+      "lineCount": 266,
+      "citationRanges": [
+        {
+          "firstLine": 38,
+          "lastLine": 124
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S17",
+      "path": "backend/notifications/telegram.go",
+      "gitBlobSha1": "93b17db4b6d8b2c41c337430e9bc05408f488b58",
+      "physicalSha256": "35d77bb0535a9f96a4cb6fb09b53c9b1ac2ffea857f20119291caf9ee064ddfd",
+      "lineCount": 104,
+      "citationRanges": [
+        {
+          "firstLine": 13,
+          "lastLine": 79
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S18",
+      "path": "backend/notifications/email.go",
+      "gitBlobSha1": "c395dff981f9cc429dc92bbcabe1f5fef6d37506",
+      "physicalSha256": "021062e6a80a659d740e06729fb387b9788d3a6151bb659d8fa55f3a56d64260",
+      "lineCount": 49,
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 39
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S19",
+      "path": "backend/db/activity.go",
+      "gitBlobSha1": "c5c375768e80db795d8e2c41ec494f6f12a2a0cb",
+      "physicalSha256": "03616d47212158f12c21d635248661015d590e2a48632e12dee9893292c7a790",
+      "lineCount": 26,
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S20",
+      "path": "backend/engine/snapshot.go",
+      "gitBlobSha1": "6f9b287fd87159281a6400d0f099c80fe4da5a46",
+      "physicalSha256": "3b223eead06e1b42f05f1ea626cd5e441abd252a2d36e996b7e93b3ec45b8ee3",
+      "lineCount": 427,
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 92
+        },
+        {
+          "firstLine": 373,
+          "lastLine": 394
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "S21",
+      "path": "backend/db/models/analysis_snapshot.go",
+      "gitBlobSha1": "8a794aad79dbbb1193f6c1b8104cd14e84244417",
+      "physicalSha256": "38a26d477819341cbf0b18148108b68c18cee3eea9f6e07e4f845c62e92c60df",
+      "lineCount": 20,
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 20
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "D01",
+      "path": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "gitBlobSha1": "634173afb1d135b03e8499c9f3ce511bde55535b",
+      "physicalSha256": "89c081589725939776ab60674c37bfccbd31b8b329822b62839ebeb15a5a11cb",
+      "lineCount": 174,
+      "citationRanges": [
+        {
+          "firstLine": 7,
+          "lastLine": 30
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "D02",
+      "path": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "gitBlobSha1": "e412e832f1bf92ebf035e9ebfb695d95b2edd1f8",
+      "physicalSha256": "2d8cdcffe0bc8f38fb136d20f25ac0cf1bf10648b51d6e523fdc720b12a84151",
+      "lineCount": 243,
+      "citationRanges": [
+        {
+          "firstLine": 102,
+          "lastLine": 160
+        },
+        {
+          "firstLine": 193,
+          "lastLine": 218
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "D03",
+      "path": "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+      "gitBlobSha1": "07168c74e862e57ad5e441fa3b06c9cec5edc9d0",
+      "physicalSha256": "5bc6958b85cb4071a9679a7ff3b2c73e0a0ab988e11c73f2a5229a40345ab926",
+      "lineCount": 55,
+      "citationRanges": [
+        {
+          "firstLine": 3,
+          "lastLine": 5
+        },
+        {
+          "firstLine": 23,
+          "lastLine": 35
+        },
+        {
+          "firstLine": 43,
+          "lastLine": 45
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "D04",
+      "path": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
+      "gitBlobSha1": "b83b34e6c005131af6f24778400a39b8f86ea0f3",
+      "physicalSha256": "946f297d06a6c345966bc332cf5bce574d1f113ab95c4986fdbcafae09183a3a",
+      "lineCount": 87,
+      "citationRanges": [
+        {
+          "firstLine": 3,
+          "lastLine": 13
+        },
+        {
+          "firstLine": 15,
+          "lastLine": 27
+        },
+        {
+          "firstLine": 39,
+          "lastLine": 50
+        },
+        {
+          "firstLine": 76,
+          "lastLine": 79
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "D05",
+      "path": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
+      "gitBlobSha1": "716a28dc88484a4c6e92213a52d8907edc7dbb38",
+      "physicalSha256": "03b868cb5aebd27a0813abfd27574a076f218af2369cda43f347350f7bd7e1b4",
+      "lineCount": 45,
+      "citationRanges": [
+        {
+          "firstLine": 3,
+          "lastLine": 13
+        },
+        {
+          "firstLine": 15,
+          "lastLine": 30
+        },
+        {
+          "firstLine": 42,
+          "lastLine": 45
+        }
+      ],
+      "contentStatus": "versioned read-only input at comparison HEAD"
+    },
+    {
+      "referenceId": "W01",
+      "path": "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
+      "gitBlobSha1": "d1b2f6ba2d1d736a7bda8ef42f174a9843e2e625",
+      "physicalSha256": "3c34b70bab770e85f7da06a46333b45e30dd6abeb8b24cb5afd072887107549d",
+      "lineCount": 99,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 69
+        }
+      ],
+      "contentStatus": "new worker artifact; working-tree blob captured before root review"
+    },
+    {
+      "referenceId": "W02",
+      "path": "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+      "gitBlobSha1": "315f6d7e322f338f537120500eb67ec60825ba6c",
+      "physicalSha256": "4177e1a32d5faa6d8fa5db746b9ac3b35395d450676bc6b6a0e3057107ac7783",
+      "lineCount": 61,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 53
+        }
+      ],
+      "contentStatus": "new worker artifact; working-tree blob captured before root review"
+    }
+  ],
+  "identityLimit": "Git blob SHA-1 and physical SHA-256 bind repository file bytes; line ranges bind cited text. None proves a deployed artifact, owner liveness, fencing, recovery safety, provider outcome, or CVF governance."
+}
