@@ -1,0 +1,27 @@
+{
+  "automaticRetryCount": 0,
+  "command": [
+    "python",
+    "-B",
+    "scripts/jobrun_fence_fixture.py",
+    "--role",
+    "worker"
+  ],
+  "endUtc": "2026-10-11T16:57:07.757304+00:00",
+  "exitCode": 2,
+  "fixtureProcessCreatedCount": 1,
+  "fixtureProcessId": 14440,
+  "fixtureProcessStartAttemptCount": 1,
+  "fixtureProcessStarted": true,
+  "headAfter": "e03e39b05d4dc5ab14a21d7ca9e9366de53ec11d",
+  "headBefore": "e03e39b05d4dc5ab14a21d7ca9e9366de53ec11d",
+  "launchError": null,
+  "monotonicDurationSeconds": 3.922119,
+  "rawStderrBytes": 0,
+  "rawStderrPath": "D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stderr.raw.bin",
+  "rawStdoutBytes": 0,
+  "rawStdoutPath": "D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stdout.raw.bin",
+  "startUtc": "2026-10-11T16:57:03.835179+00:00",
+  "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "wrapperPath": "C:/Users/tiennm/AppData/Local/Temp/ccmai-r085-worker-de26d3b5dda944908754dc2afad2a5c3.py"
+}

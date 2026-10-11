@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-083",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_DISPOSABLE_FENCE_FIXTURE_PREREQUISITE",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r083_worker",
+    "repairWorker": "Codex /root/r083_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "scripts/jobrun_fence_fixture.py",
+    "scripts/tests/test_jobrun_fence_fixture.py",
+    "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md",
+    "docs/reviews/probes/r083_fixture/*",
+    "docs/work_orders/CCMAI_RUNTIME_083.md"
+  ],
+  "prohibitedEffects": [
+    "other_product_test_tooling_workflow_dependency_change",
+    "old_seed_tranche_handoff_order_evidence_edit",
+    "production_persistent_db_customer_data_access",
+    "existing_env_credentials_or_container_env_read",
+    "provider_channel_external_network_call",
+    "image_module_pull_or_install",
+    "host_port_host_bind_or_persistent_volume",
+    "core_edit",
+    "secret_commit",
+    "push_merge_deploy",
+    "application_Go_or_fence_recovery_migration_execution",
+    "runtime_CVF_governance_or_deployed_adoption_claim",
+    "root_substantive_worker_implementation_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerAuthorPasses": 1,
+    "independentReviewPasses": 1,
+    "maxDirectedSameScopeSourceRepairRounds": 1,
+    "workerFixtureCampaigns": 1,
+    "reviewerFixtureCampaigns": 1,
+    "aggregateFixtureCampaigns": 2,
+    "workerHarnessUnitInvocations": 2,
+    "reviewerHarnessUnitInvocations": 1,
+    "goInvocations": 0,
+    "providerInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 after R082 frozen1590481 continues separately bounded R2 fixture/schema prerequisite. Standing Luna max worker/root independent reviewer, root all commits. Root declares R2/local disposable synthetic DB awareness; no R3/production/provider/external-network effects. Source-author pass followed by root safety approval before first task-owned resource creation.",
+  "fixtureAuthority": "Inspect cached mysql:8.0 metadata only (image Id/RepoDigests/OS/architecture), Docker availability and exact ccmai-r083 task resources. Pin local content ID plus repository digest; no pull. One unique owner-labeled internal network and fresh MySQL container per role, no host ports/binds/persistent volumes; tmpfs data, task-generated ephemeral credential never persisted/printed. SQL confined to fresh task container, create/check/drop unique task-owned schema/probe tables, capture server version/isolation/sql mode/DDL/grants without secrets. Strict ownership/ID validation before exact cleanup and absence verification. Worker and reviewer run sequential separate evidence subdirs, max1 fixture campaign each; bounded readiness observations allowed, no failed-campaign replay.",
+  "claimScope": "Actual local isolated MySQL fixture prerequisites and cleanup, portable resource-harness checks only. No GORM/application/fence DDL migration, AI/CVF runtime governance, deployment, restore fleet/principal proof or product runtime acceptance.",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "baseCommit": "ea73a86e5ebb44d2c7ab6496d43c13d55b1610ca",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_083.md",
+  "buildCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
+  "reviewEvidence": [
+    "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md"
+  ],
+  "disposition": "CHANGES_REQUIRED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workerAcknowledgment": "Fresh BUILD canonical state/memory/handoff/implementation/index/source19f83a7 rehydrated; root independent REVIEWER evaluates original F1..F4, sole root suite18PASS0.438s/raw and exact before-after filtered/physical identities retained. Worker repair1 complete18PASS0.417s/raw; no fixture effects or approval. Root does not draft worker implementation.",
+  "workerSourceRepairRounds": 1,
+  "initialFindings": [
+    "F1",
+    "F2",
+    "F3",
+    "F4"
+  ],
+  "preEffectApproval": "NOT_GRANTED",
+  "workerHarnessUnitInvocationsUsed": 2,
+  "reviewerHarnessUnitInvocationsUsed": 1,
+  "workerFixtureCampaignsUsed": 0,
+  "reviewerFixtureCampaignsUsed": 0,
+  "repairSourceCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
+  "residualFindings": [
+    "F1_REGRESSION_CONTROL_GAPS",
+    "F3_OWNERSHIP_BEFORE_READINESS_SQL"
+  ],
+  "finalOriginalFindingRecheck": 1,
+  "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
+}

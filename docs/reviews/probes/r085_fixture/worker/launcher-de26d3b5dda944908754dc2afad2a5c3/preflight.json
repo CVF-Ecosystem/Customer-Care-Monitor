@@ -1,0 +1,126 @@
+{
+  "allApprovedSourceBlobsMatch": true,
+  "allIntakeIdentityMatches": true,
+  "approvedSourceChecks": {
+    "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md": {
+      "approvedBlob": "551c9745f728981b69b625a609d9486966593128",
+      "approvedBlobMatch": true,
+      "currentGitBlob": "551c9745f728981b69b625a609d9486966593128",
+      "filteredWorktreeBlob": "551c9745f728981b69b625a609d9486966593128",
+      "physicalSha256": "2c7b8b37eee6999ea03e85ac3b90fd5a731bf4ee8e214f23b22b2955ed639a1d"
+    },
+    "docs/work_orders/CCMAI_RUNTIME_083.md": {
+      "approvedBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+      "approvedBlobMatch": true,
+      "currentGitBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+      "filteredWorktreeBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+      "physicalSha256": "979c1f73e1d152492ece7a58e83f040b560933ee1bae50d7cd1c1a17eb4a9716"
+    },
+    "scripts/jobrun_fence_fixture.py": {
+      "approvedBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "approvedBlobMatch": true,
+      "currentGitBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "filteredWorktreeBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5"
+    },
+    "scripts/tests/test_jobrun_fence_fixture.py": {
+      "approvedBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "approvedBlobMatch": true,
+      "currentGitBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "filteredWorktreeBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c"
+    }
+  },
+  "approvedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+  "currentIdentity": {
+    "buildOrderSnapshot": {
+      "byteLength": 7372,
+      "commit": "c23d84e0048218e1d91d93e9b6557345e3ec2690",
+      "gitBlob": "ad2740fece5f9b0268edfd0b03adaea08a989128",
+      "path": "docs/work_orders/CCMAI_RUNTIME_083.md",
+      "physicalSha256": "e36bea497f44111dc0738e57f65deff79feea640299c8967f091f718a7d148c6"
+    },
+    "currentFiles": {
+      "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md": {
+        "byteLength": 4902,
+        "filteredWorktreeBlob": "551c9745f728981b69b625a609d9486966593128",
+        "gitBlob": "551c9745f728981b69b625a609d9486966593128",
+        "physicalSha256": "2c7b8b37eee6999ea03e85ac3b90fd5a731bf4ee8e214f23b22b2955ed639a1d"
+      },
+      "docs/work_orders/CCMAI_RUNTIME_083.md": {
+        "byteLength": 7412,
+        "filteredWorktreeBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+        "gitBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+        "physicalSha256": "979c1f73e1d152492ece7a58e83f040b560933ee1bae50d7cd1c1a17eb4a9716"
+      },
+      "scripts/jobrun_fence_fixture.py": {
+        "byteLength": 72611,
+        "filteredWorktreeBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+        "gitBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+        "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5"
+      },
+      "scripts/tests/test_jobrun_fence_fixture.py": {
+        "byteLength": 41950,
+        "filteredWorktreeBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+        "gitBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+        "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c"
+      }
+    },
+    "sourceCommit": "e03e39b05d4dc5ab14a21d7ca9e9366de53ec11d"
+  },
+  "expectedImage": {
+    "architecture": "amd64",
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "os": "linux",
+    "repositoryDigest": "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+  },
+  "fixtureCampaignProcessCountBeforeLaunch": 0,
+  "image": {
+    "architecture": "amd64",
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "inspectExitCode": 0,
+    "os": "linux",
+    "repoDigests": [
+      "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    ]
+  },
+  "imageMatches": true,
+  "intakeIdentityChecks": {
+    "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md": {
+      "filteredBlobMatch": true,
+      "gitBlobMatch": true,
+      "physicalSha256Match": true
+    },
+    "docs/work_orders/CCMAI_RUNTIME_083.md": {
+      "filteredBlobMatch": true,
+      "gitBlobMatch": true,
+      "physicalSha256Match": true
+    },
+    "scripts/jobrun_fence_fixture.py": {
+      "filteredBlobMatch": true,
+      "gitBlobMatch": true,
+      "physicalSha256Match": true
+    },
+    "scripts/tests/test_jobrun_fence_fixture.py": {
+      "filteredBlobMatch": true,
+      "gitBlobMatch": true,
+      "physicalSha256Match": true
+    }
+  },
+  "preflightPass": true,
+  "priorPreflightHelperErrors": [
+    {
+      "attempt": 1,
+      "campaignProcessCreated": false,
+      "detail": "Temporary importlib module was not registered in sys.modules; dataclass import raised AttributeError. No fixture CLI process or campaign.",
+      "kind": "preflight_helper_import_error"
+    },
+    {
+      "attempt": 2,
+      "campaignProcessCreated": false,
+      "detail": "collect_source_identity completed; wrapper used result key files instead of currentFiles and raised KeyError. No fixture CLI process or campaign.",
+      "kind": "preflight_helper_result_key_error"
+    }
+  ],
+  "scope": "R085 one worker fixture preflight; no fixture resource creation/SQL during preflight"
+}

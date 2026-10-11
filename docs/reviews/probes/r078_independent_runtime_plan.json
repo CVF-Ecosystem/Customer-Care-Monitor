@@ -1,0 +1,61 @@
+{
+  "sourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+      "backend"
+    ],
+    "bytes": 2529280,
+    "sha256": "3f135def15d46a5a3729a5718558af882715b69e103ffc6e4db5f536136abd84"
+  },
+  "manifestSha256": "08844248a2ee79690df308a3829f0fcac09cc06177fc381f0d7963e468250864",
+  "inventory": [
+    {
+      "label": "positive",
+      "pattern": "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+      "topLevel": [
+        "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls",
+        "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+        "TestSH06CronLoadQueryFaultStillStartsScheduler",
+        "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+        "TestCronAndAfterSyncSkipAnOccupiedJob",
+        "TestCronVersusAfterSyncAdmitExactlyOne",
+        "TestSchedulerOwnersAreCancellableByRun",
+        "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+        "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+      ]
+    },
+    {
+      "label": "M01",
+      "pattern": "^(TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH04StartPreservesSyncLeaseRecoveryControls)$",
+      "topLevel": [
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls"
+      ]
+    },
+    {
+      "label": "restored",
+      "pattern": "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+      "topLevel": [
+        "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls",
+        "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+        "TestSH06CronLoadQueryFaultStillStartsScheduler",
+        "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+        "TestCronAndAfterSyncSkipAnOccupiedJob",
+        "TestCronVersusAfterSyncAdmitExactlyOne",
+        "TestSchedulerOwnersAreCancellableByRun",
+        "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+        "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+      ]
+    }
+  ]
+}

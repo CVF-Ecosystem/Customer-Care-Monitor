@@ -1,0 +1,62 @@
+{
+  "role": "INDEPENDENT_REVIEWER",
+  "invocation": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_jobrun_fence_fixture.py",
+    "-v"
+  ],
+  "invocationCount": 1,
+  "head": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+  "sourceBefore": {
+    "scripts/jobrun_fence_fixture.py": {
+      "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+      "physicalLength": 72611,
+      "filteredGitBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "committedBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a"
+    },
+    "scripts/tests/test_jobrun_fence_fixture.py": {
+      "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+      "physicalLength": 41950,
+      "filteredGitBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "committedBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea"
+    },
+    "docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md": {
+      "physicalSha256": "8d2bbfb0340eaf0769f1cbddd5f6147c8ca8911d09c239ccbe019bc8e9541d92",
+      "physicalLength": 5120,
+      "filteredGitBlob": "f6c18caabd82e03b1350707cfa297db844a168fb",
+      "committedBlob": "f6c18caabd82e03b1350707cfa297db844a168fb"
+    }
+  },
+  "sourceAfter": {
+    "scripts/jobrun_fence_fixture.py": {
+      "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+      "physicalLength": 72611,
+      "filteredGitBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "committedBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a"
+    },
+    "scripts/tests/test_jobrun_fence_fixture.py": {
+      "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+      "physicalLength": 41950,
+      "filteredGitBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "committedBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea"
+    },
+    "docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md": {
+      "physicalSha256": "8d2bbfb0340eaf0769f1cbddd5f6147c8ca8911d09c239ccbe019bc8e9541d92",
+      "physicalLength": 5120,
+      "filteredGitBlob": "f6c18caabd82e03b1350707cfa297db844a168fb",
+      "committedBlob": "f6c18caabd82e03b1350707cfa297db844a168fb"
+    }
+  },
+  "durationSeconds": 1.087,
+  "exitCode": 0,
+  "rawStdout": "stdout.txt",
+  "rawStderr": "stderr.txt",
+  "claimScope": "pure portable resource harness, no Docker/SQL/provider/CVF-governance proof"
+}

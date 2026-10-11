@@ -9,11 +9,67 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-086", "parked": true} -->
 
-## Current R075
+## Standing owner directive: roadmap discipline (2026-10-12)
 
-CCMAI-RUNTIME-075 BUILD owner-authorized interactive Git authentication repair, one bounded ordinary exact-SHA feature push after independent prepublication review; verify remote SHA, preserve all failures. No force/main/merge/deploy/app/provider/DB/secret reads. Accounts parked.
+Owner explicitly requires: "Ghi rõ yêu cầu vào handoff/memory, không phải chờ tôi nhắc" after questioning the repeated repair tranches and roadmap drift. ORCHESTRATOR owns proactive application at every resume, next-scope selection and handback; do not wait for another owner reminder.
+
+Mandatory shared learning: [orchestrator roadmap control](docs/reviews/learnings/feedback_orchestrator_roadmap_control.md). Owner identifies lost orchestration control and noncoder inability to judge completion; root accepts responsibility. Read at these triggers; after two supporting scopes without product acceptance or any prerequisite failure, reassess the finite route before choosing another scope. Handback states usable capability, remaining milestone, blocker, planned remaining steps and completion condition in plain language; unknown ETA stays unknown. Recorded controls are not yet evidence of effective recovery.
+
+- Before dispatch, name the roadmap stage, one verifiable product outcome, its acceptance gap, and why each prerequisite blocks that outcome. Tranche/commit/test counts are supporting evidence, not product progress.
+- Bound prerequisites and repairs with a finite scope, execution budget and stop condition. Reassess the critical path when a prerequisite fails or another repair is proposed; do not automatically create another repair tranche. At repair round three without an independent new root cause, record REVIEW_COST_ESCALATION_REQUIRED and stop as required by AGENTS.md.
+- Continue authorized same-scope repairs under existing authority when objective, allowed paths, risk, effects and commit ownership remain unchanged. Open a successor only for an actual boundary or exhausted explicit authority; record the reason. Do not default future work orders to zero repair merely to fragment work. Historical immutable seeds and exhausted budgets are not retrospectively expanded.
+- Report the product capability advanced, remaining acceptance gap, prerequisite cost and next route. Explicitly separate source/unit acceptance from native integration, live governance and deployment proof. Monitoring Luna quality supports delivery; it must not become a separate roadmap objective. Root owns scope/priority and reviewer misses; attribute worker defects separately.
+- Current supporting task: bound the known 55 documentary deadlinks as a finite closure prerequisite, then reassess the shortest evidenced route to the product outcome. R086 remains source-only REVIEW_PASS/FREEZE OPEN; fixture native readiness and durable fence/recovery integration remain OPEN. This directive grants no source/runtime/provider/deployment/push authority and does not bypass failed checks or parked accounts.
+
+## Current R086
+
+CCMAI-RUNTIME-086 REVIEW_PASS_SOURCE_ONLY at511f8b4/worker-root27PASS, pending-started mount contract and sanitized observations accepted; FREEZE OPEN due inherited docs55deadlinks. ORCHESTRATOR next bounds separate documentary deadlink repair/validation before closure and fresh fixture authority; no current source repair/Docker/SQL/Go/provider/pull/push/accounts parked/native readiness OPEN/deployed UNKNOWN.
+
+## Historical R085 (returned, FREEZE OPEN)
+
+CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.
+
+## Historical R084 (source-only FROZEN)
+
+CCMAI-RUNTIME-084 FROZEN source-only F1/F3 completion67e76de/reviewc399a70, worker/root23PASS/raw/protected1850paths/ninearrays. ORCHESTRATOR next bounds separate R2 cached-image local disposable fixture authority and verifies accepted source before pre-effect approval; no current Docker/SQL/Go/provider/network/pull/push authority. R083 historical returned preserved, accounts parked, actual fixture/fence integration readiness OPEN/deployed UNKNOWN.
+
+## Historical R083 (returned, FREEZE OPEN)
+
+CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED after sole repair19f83a7/root18PASS; residual F3 validates post-start NetworkID/membership after readiness SQL, F1 missing campaign-level raised-create/remove-failure regression controls. Pre-effect approval NOT_GRANTED, FREEZE OPEN, no automatic repair/campaign. ORCHESTRATOR next bounds separate source-only completion authority before edits/effects; Docker/SQL/Go/provider/pull/push0, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
+
+## Historical R082 (scoped documentary FROZEN)
+
+CCMAI-RUNTIME-082 FROZEN scoped intended contract/census/nonbinding future plan at144f68f/reviewfebd451. ORCHESTRATOR next bounds separate R2 fixture/schema prerequisite authority before implementation/test dispatch; no generic design retry or implicit runtime activity. Fixture/DDL/restore/adoption UNKNOWN, fencing/recovery/readiness OPEN; source NOT_DISPATCHED/runtime NOT_RUN/no push, R081 returned/FREEZE_OPEN/accounts parked.
+
+## Historical R081 (returned, FREEZE OPEN)
+
+CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.
+
+## Historical R080
+
+CCMAI-RUNTIME-080 FROZEN local intended architecture/spec and nonbinding proposal only at402d6a6/review56b5328 after prose repair1/root identity transfer. ORCHESTRATOR next separately bounds documentary MySQL/GORM lock/outcome/incarnation/cutover gate with new seed; no code/schema/runtime/DB/provider/network/push, fencing/recovery OPEN/deployed UNKNOWN/accounts parked.
+
+## Historical R079
+
+CCMAI-RUNTIME-079 FROZEN local prerequisite intake/nonbinding proposal at packet907568c/review498fe42 after repair1. Root next separately bounds R1 source-only intended durable-fence DESIGN/SPEC; no implementation/runtime/DB/provider/network/push, deployed UNKNOWN/recovery OPEN, accounts parked.
+
+## Historical R078
+
+CCMAI-RUNTIME-078 FROZEN local synthetic startup no-rewrite at source b7c826a/review22ac133; each worker/root build and positive12top16PASS/M01 named detector/restored12top16PASS, aggregate8/8Go/retry0, cleanup complete. Root next read-only durable recovery/owner-fence prerequisite intake, separate bounded order before new source/runtime/provider effects; deployed UNKNOWN/live governance OPEN, accounts parked, no push.
+
+## Historical R077
+
+CCMAI-RUNTIME-077 FROZEN local topology intake/proposal only at worker3fe1ee8/reviewe343a0b; source hardening/recovery OPEN and deployed UNKNOWN. Root next prepares separate R2 no-rewrite startup order/seed with isolated synthetic-DB tests before BUILD; current native/provider/DB/host/network/push0, accounts parked.
+
+## Historical R076
+
+CCMAI-RUNTIME-076 FROZEN local recovery DESIGN/SPEC only after independent review4ec4599; implementation/startup cleanup hardening OPEN. Root next separately bounds read-only topology/owner-fence evidence intake, UNKNOWN explicit, before any R2+ source/runtime/DB scope. No app/provider/DB/network/push authority; Facebook/Zalo OA parked.
+
+## Historical R075
+
+CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.
 
 R074 local dossier FROZEN and five implementation plus one fresh audit preserved. New owner GitHub instruction authorizes R075 ordinary branch publication; no retroactive change to R068 unverified attempt or old prohibited effects.
 

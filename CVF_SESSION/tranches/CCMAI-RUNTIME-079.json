@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-079",
+  "authorityKind": "DISPATCHER_OWNED_READONLY_RECOVERY_FENCE_PREREQUISITE_INTAKE",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r079_worker",
+    "repairWorker": "Codex /root/r079_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
+    "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+    "docs/reviews/probes/r079_source_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_079.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 continues roadmap with Luna max worker/root orchestrator and independent reviewer. R078 next move bounds read-only durable recovery/owner-fence prerequisite intake, no application/native/provider/host effects.",
+  "claimScope": "Repository source-backed prerequisites and explicit unknown deployment facts; concrete nonbinding next DESIGN/SPEC draft only. No ownership/fencing/runtime/recovery/governance guarantee.",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_079.md",
+  "baseCommit": "185256658e1dcec54f09e180b2e2e9fd27ab4284",
+  "buildCommit": "907568c0e0cfba8aa246e75d8a878913576c9141",
+  "reviewEvidence": [
+    "docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md",
+    "docs/reviews/probes/r079_independent_final_audit.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "taskClassification": {
+    "primary": "recovery_fence_prerequisite_intake",
+    "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
+  },
+  "workerAcknowledgment": "Fresh REVIEW_PASS canonical rehydration before CLOSER/FREEZE decision; review498fe42 committed and no same-scope findings open. Freeze intake/proposal only, original evidence/quality preserved; next intended design requires separate order/seed. Final artifacts/gates then root closure commit before claim.",
+  "firstBuildCommit": "6df6f6ef21aee802573bd12305263f5c16581f8a",
+  "workerDocumentRepairRounds": 1,
+  "independentReviewCommit": "498fe42b09faf25c69a942c90da83e592815a246",
+  "closureEvidence": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
+  "closureScope": "INTAKE_AND_NONBINDING_PROPOSAL_ONLY",
+  "closer": "Codex /root"
+}

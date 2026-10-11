@@ -1,0 +1,33 @@
+{
+  "trancheId": "CCMAI-RUNTIME-076",
+  "reviewer": "Codex /root",
+  "firstDocumentCommit": "63c388df11874d63f9c899725555fc011d76556b",
+  "workerRepairCommit": "9c08499f9e9e755b6f65b1904f90a925d7ce72ed",
+  "reviewedDocumentCommit": "3eb64509cd958c7652b61c66f145476b07a8fa18",
+  "sourceIdentitiesVerified": 13,
+  "documentaryInputHashesVerified": 5,
+  "explicitSourceCitationsChecked": 44,
+  "identityLineRanges": "PASS bounded by file length after root erratum",
+  "protectedSourceTestToolingArtifacts": 367,
+  "protectedHistoricalAuthorityTrancheRecords": 110,
+  "seedFirstCommittedContentUnchanged": true,
+  "firstFindings": [
+    "F1",
+    "F2",
+    "M1"
+  ],
+  "workerDocumentRepairRounds": 1,
+  "rootMechanicalErratum": 1,
+  "applicationNativeInvocations": 0,
+  "runtimeProviderGovernanceProof": "NOT_RUN",
+  "r075PredecessorClosurePublication": {
+    "remoteSha": "9181f3826f6a90db0042b25b9c955b253ea0828c",
+    "branch": "codex/gov001-f08-actions-evidence",
+    "pushExit": 0,
+    "pushOutput": "Everything up-to-date",
+    "lsRemoteExit": 0,
+    "exactMatch": true,
+    "authority": "Existing R075 before R076 activation; no R076 network effect"
+  },
+  "limitations": "Static identities/citations/accepted intended contracts only, not deployed safety, runtime recovery, complete write history or CVF AI governance."
+}

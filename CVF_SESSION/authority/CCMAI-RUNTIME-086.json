@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-086",
+  "authorityKind": "DISPATCHER_OWNED_SOURCE_ONLY_MOUNT_LIFECYCLE_COMPLETION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r086_worker",
+    "repairWorker": "Codex /root/r086_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "scripts/jobrun_fence_fixture.py",
+    "scripts/tests/test_jobrun_fence_fixture.py",
+    "docs/reviews/R086_MOUNT_LIFECYCLE_SOURCE_COMPLETION_2026-10-12.md",
+    "docs/reviews/probes/r086_mount_source/*",
+    "docs/work_orders/CCMAI_RUNTIME_086.md"
+  ],
+  "prohibitedEffects": [
+    "other_product_test_tooling_workflow_dependency_change",
+    "old_seed_tranche_handoff_order_evidence_edit",
+    "Docker_context_image_resource_inspection_or_effect",
+    "SQL_application_Go_or_fixture_campaign",
+    "provider_channel_external_network_call",
+    "existing_env_credentials_or_container_env_read",
+    "production_persistent_db_customer_data_access",
+    "image_module_pull_or_install",
+    "host_port_host_bind_or_persistent_volume",
+    "core_edit",
+    "secret_commit",
+    "push_merge_deploy",
+    "runtime_CVF_governance_or_deployed_adoption_claim",
+    "root_substantive_worker_implementation_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerCompletionPasses": 1,
+    "workerHarnessUnitInvocations": 1,
+    "reviewerHarnessUnitInvocations": 1,
+    "maxDirectedSameScopeSourceRepairRounds": 0,
+    "workerFixtureCampaigns": 0,
+    "reviewerFixtureCampaigns": 0,
+    "goInvocations": 0,
+    "providerInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next after R085 returned native MOUNT_INVALID, standing Luna max worker/root independent reviewer/all commits. Separate new mount lifecycle root cause; no R085 replay or third same-rootcause F1/F3 repair.",
+  "entryDecision": "INTAKE bounds observed pre-start mount validator failure; DESIGN separates pending configured isolation from started resolved isolation; SPEC ML01..07; WORK_ORDER one source pass and one harness each, zero Docker/SQL effects. R085 source-repair budget remains zero and historical failure immutable.",
+  "claimScope": "Source/test mount-lifecycle acceptance only. Native MySQL prerequisite readiness remains FAILED/UNKNOWN; no governance/app/fence/deployment proof."
+}

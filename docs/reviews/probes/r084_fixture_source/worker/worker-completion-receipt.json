@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-084",
+  "worker": "Luna max /root/r084_worker",
+  "status": "WORKER_PASS_HANDBACK_PENDING_ROOT_REVIEW",
+  "authorityBaseCommit": "0fe93974de135ab4c83888d5f8f39e0b4128e73f",
+  "buildReleaseHead": "e0d50430baea35b61e01b77f104dbaee7131decc",
+  "changedSourcePaths": [
+    "scripts/jobrun_fence_fixture.py",
+    "scripts/tests/test_jobrun_fence_fixture.py"
+  ],
+  "readinessPath": "docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md",
+  "workerCompletionPassesUsed": 1,
+  "workerSourceRepairRounds": 0,
+  "suite": {
+    "command": "python -B -m unittest scripts.tests.test_jobrun_fence_fixture -v",
+    "executable": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+    "startedAtUtc": "2026-10-11T23:19:28.3578402+07:00",
+    "endedAtUtc": "2026-10-11T23:19:31.9767318+07:00",
+    "durationMilliseconds": 3606.206,
+    "timeoutSeconds": 120,
+    "timedOut": false,
+    "processCreated": true,
+    "invocationUsed": 1,
+    "exitCode": 0,
+    "testCount": 23,
+    "stdout": {
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stderr.txt",
+      "bytes": 4719,
+      "sha256": "d8296e9f76d45d9892c8341c20a37b00d072af0db57d54d2c26d609f78745564"
+    },
+    "rawOutputPathsAreAuthoritative": true
+  },
+  "preSuiteIdentitiesPath": "docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities-final.json",
+  "postSuiteIdentitiesPath": "docs/reviews/probes/r084_fixture_source/worker/source_unit/post-suite-identities.json",
+  "gitHeadAfterSuite": "e0d50430baea35b61e01b77f104dbaee7131decc",
+  "sourceTestsUnchangedPhysical": true,
+  "sourceTestsUnchangedFilteredBlob": true,
+  "preSuiteIdentities": [
+    {
+      "path": "scripts/jobrun_fence_fixture.py",
+      "bytes": 72611,
+      "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+      "gitFilteredBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "gitStatus": "M scripts/jobrun_fence_fixture.py",
+      "dirty": true
+    },
+    {
+      "path": "scripts/tests/test_jobrun_fence_fixture.py",
+      "bytes": 41950,
+      "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+      "gitFilteredBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "gitStatus": "M scripts/tests/test_jobrun_fence_fixture.py",
+      "dirty": true
+    }
+  ],
+  "postSuiteIdentities": [
+    {
+      "path": "scripts/jobrun_fence_fixture.py",
+      "bytes": 72611,
+      "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+      "gitFilteredBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "gitStatus": "M scripts/jobrun_fence_fixture.py",
+      "dirty": true,
+      "matchesPreSuitePhysical": true,
+      "matchesPreSuiteFilteredBlob": true
+    },
+    {
+      "path": "scripts/tests/test_jobrun_fence_fixture.py",
+      "bytes": 41950,
+      "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+      "gitFilteredBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "gitStatus": "M scripts/tests/test_jobrun_fence_fixture.py",
+      "dirty": true,
+      "matchesPreSuitePhysical": true,
+      "matchesPreSuiteFilteredBlob": true
+    }
+  ],
+  "launcherFailure": {
+    "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/launcher-error.json",
+    "suiteProcessCreated": false,
+    "harnessUnitInvocationsUsed": 0,
+    "countedAsSuiteResult": false
+  },
+  "effects": {
+    "dockerContextImageResource": "NOT_INSPECTED",
+    "dockerDaemonOrExecutable": "NOT_USED",
+    "sql": "NOT_RUN",
+    "go": "NOT_RUN",
+    "providerOrExternalNetwork": "NOT_USED",
+    "credentialOrContainerEnvRead": "NOT_READ",
+    "imagePullInstallDeployment": "NOT_DONE"
+  },
+  "commitOrStageByWorker": false,
+  "independentRootReview": "PENDING",
+  "reviewerSuite": "PENDING",
+  "closureOrRuntimeAcceptance": "NOT_CLAIMED"
+}

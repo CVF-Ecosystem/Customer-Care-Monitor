@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-081",
+  "authorityKind": "DISPATCHER_OWNED_FENCE_DATABASE_INTEGRATION_DOCUMENTARY_GATE",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r081_worker",
+    "repairWorker": "Codex /root/r081_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+    "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_081.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft",
+    "schema_migration_or_recovery_execution",
+    "deployed_adoption_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerAuthorPasses": 1,
+    "independentReviewPasses": 1,
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 continues R080 scoped closure99f987c next move: source-only documentary lock/outcome/incarnation/cutover gate with Luna max worker/root independent reviewer. R080 nonbinding R2 documentary suggestion narrowed to R1 because no code/schema/security/runtime/external effects; later implementation remains R2+ and separately authorized.",
+  "claimScope": "Source-backed intended SQL/lock/incarnation/cutover integration contract and future isolated acceptance plan, or precise unresolved blocker. No fixture/runtime/governance/adoption proof."
+}

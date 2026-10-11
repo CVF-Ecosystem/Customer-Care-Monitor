@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "command": "python -B -m unittest scripts.tests.test_jobrun_fence_fixture -v",
+  "executable": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "startedAtUtc": "2026-10-11T16:19:28.3578402+00:00",
+  "endedAtUtc": "2026-10-11T16:19:31.9767318+00:00",
+  "durationMilliseconds": 3606.206,
+  "timeoutSeconds": 120,
+  "suiteProcessCreated": true,
+  "timedOut": false,
+  "exitCode": 0,
+  "testCount": 23,
+  "testInvocationUsed": 1,
+  "stdoutPath": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stdout.txt",
+  "stderrPath": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stderr.txt",
+  "stdoutBytes": 0,
+  "stderrBytes": 4719
+}

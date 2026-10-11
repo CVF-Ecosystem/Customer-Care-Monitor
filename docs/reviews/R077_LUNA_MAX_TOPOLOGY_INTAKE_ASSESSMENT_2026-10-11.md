@@ -1,0 +1,9 @@
+# R077 Luna max topology intake assessment
+
+Separate fresh documentary topology/intended-work-order sample, worker gpt-6-luna max; root independent reviewer. Final REVIEW_PASS after one documentary repair; product/test repair0 and application native0. [Review](R077_INDEPENDENT_TOPOLOGY_INTAKE_REVIEW_2026-10-11.md), [original findings](R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md), [repaired proposal](R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md).
+
+First83b3b95 correctly separated repository recipes from deployment facts and selected a feasible no-rewrite slice. F1 missed discriminating distinct-live-owner and fault controls; F2 overbroad row equality needed startup attribution and legitimate-finalizer qualification. One repair3fe1ee8 addressed both and made mutation/restoration fit the proposed budget. Root M1 link repairab23883 was mechanical, not worker substantive authorship; worker checked existing targets but missed reciprocal navigation. Capture wording was clarified during the same round, original hashes retained.
+
+Quality conclusion: useful for bounded documentary intake with independent review; first-pass acceptance completeness remains a weakness. This is not a source implementation sample. Five implementation, one R074 audit and one R076 design sample remain identical; R077 is a new topologyIntakeSamples row. The two max documentary tasks differ and provide no matched max/xhigh/Sol ranking. Token cost and model inference time unavailable.
+
+Root supplied the TI contract, startup/lease/fallback pointers, conditional race and real-Start test clues, consolidated findings and minor navigation fix; no worker prose draft. Root initially guessed a nonexistent sync-recovery filename and corrected the lookup with rg; that lookup overhead is root-origin, not a worker defect. Runtime recovery, distributed fencing, deployed topology, provider/governance and broader acceptance stay OPEN; accounts parked.

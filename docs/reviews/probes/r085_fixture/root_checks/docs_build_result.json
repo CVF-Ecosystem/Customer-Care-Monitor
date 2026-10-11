@@ -1,0 +1,19 @@
+{
+  "actor": "Codex /root",
+  "command": "npm run docs:build",
+  "workingDirectory": "docs",
+  "invocations": 1,
+  "exitCode": 1,
+  "vitepressVersion": "1.6.4",
+  "buildReportedSeconds": 12.76,
+  "deadLinkCount": 55,
+  "affectedHistoricalFiles": [
+    "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+    "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+    "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md"
+  ],
+  "failureEvidence": "Actual tool result from session46233; raw full stdout/stderr not retained as files; this JSON records selected observed facts, not reconstructed raw output.",
+  "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
+  "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
+  "scope": "Static documentation check, no fixture/Go/provider/application campaign"
+}

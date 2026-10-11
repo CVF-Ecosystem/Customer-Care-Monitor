@@ -1,0 +1,13 @@
+{
+  "trancheId": "CCMAI-RUNTIME-086",
+  "phase": "BUILD_WORKER_RAW_SUMMARY",
+  "source": "worker_harness_stderr.raw.bin",
+  "sourceSha256": "abbe7b9481206521743fb831b6c0f795d9752b82fb1a54f63ca4c8afdb668b5e",
+  "summaryLine": "Ran 27 tests in 1.531s",
+  "testsRun": 27,
+  "unittestElapsedSeconds": 1.531,
+  "testEventLines": 27,
+  "nonPassingTestEventLines": [],
+  "resultLine": "OK",
+  "rawParserNote": "Initial wrapper summary regex did not account for carriage return before line endings; this read-only summary derives counts from retained raw stderr. No suite was rerun."
+}

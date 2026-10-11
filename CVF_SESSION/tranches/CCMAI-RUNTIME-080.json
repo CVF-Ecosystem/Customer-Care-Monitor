@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-080",
+  "authorityKind": "DISPATCHER_OWNED_DURABLE_JOBRUN_FENCE_DESIGN_SPEC",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r080_worker",
+    "repairWorker": "Codex /root/r080_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+    "docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md",
+    "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_080.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft",
+    "schema_migration_or_recovery_execution",
+    "deployed_adoption_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 continues accepted R079 next move: separate R1 intended durable JobRun fence DESIGN/SPEC with Luna max worker/root independent reviewer, no product/runtime/external effects.",
+  "claimScope": "Intended durable-fence architecture/spec and nonbinding later implementation order only; repository facts and unknown deployed adoption separated.",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_080.md",
+  "baseCommit": "cc9e31fc15686c523e1abaa503115f721f53447d",
+  "buildCommit": "402d6a6f64c67dc6af62a7e2a73064cc628e06b8",
+  "reviewEvidence": [
+    "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+    "docs/reviews/probes/r080_independent_final_audit_2026-10-11.json",
+    "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "taskClassification": {
+    "primary": "durable_jobrun_fence_design_spec",
+    "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
+  },
+  "workerAcknowledgment": "Fresh CLOSER canonical REVIEW tuple rehydrated at56b5328 after independent result; scoped local FREEZE only. Remaining actual integration/runtime/adoption blockers carried forward explicitly; no self-approval or new effect authority. Root closure records all errors/assistance, zero application-native and unchanged source/history.",
+  "firstReviewDisposition": "CHANGES_REQUIRED",
+  "workerProseRepairRounds": 1,
+  "rootRepairIdentityTransfer": true,
+  "closureEvidence": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "56b5328fb528a3139219740857bd5d2a8408a11b",
+  "closureScope": "INTENDED_ARCHITECTURE_SPEC_NONBINDING_PROPOSAL_ONLY",
+  "closer": "Codex /root"
+}

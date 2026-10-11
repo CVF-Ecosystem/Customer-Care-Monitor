@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R075 BUILD ordinary branch publication; no app/runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
+- Active R086 source-only mount lifecycle completion; R085 failed retained, no effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -191,6 +191,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred.: `docs/reviews/learnings/feedback_archive_byte_manifest.md`
 - Shared independently verified fixture-domain and stored-prefix learning; upstream deferred.: `docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md`
 - Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence.: `docs/reviews/learnings/feedback_minor_reviewer_repairs.md`
+- Root orchestration drift finding: finite product milestones, prerequisite stop conditions, proactive reassessment and plain-language noncoder handback; effectiveness not yet verified, upstream not sent.: `docs/reviews/learnings/feedback_orchestrator_roadmap_control.md`
 - Provisional empirical Luna task-fit matrix for four reviewed tranches; normalized product/test/root attribution, no model-config change or unmatched Sol ranking.: `docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof.: `docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json`
@@ -636,6 +637,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R075 bounded ordinary publication record/order; R074 historical FROZEN preserved.: `CVF_SESSION/tranches/CCMAI-RUNTIME-075.json`
 - R075 bounded ordinary publication record/order; R074 historical FROZEN preserved.: `docs/work_orders/CCMAI_RUNTIME_075.md`
 - Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim.: `docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json`
+- R075 independent source publication review; receipt follow-up conditional, no live or Actions claim.: `docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
@@ -826,6 +828,216 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R2 additive application preparation receipt authority; child BUILD/root independent reviewer, no schema/policy/provider effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-055.json`
 - SP01..12 intended application receipt contract, cap/privacy/persistence/earlyterminal compatibility and evidence requirements.: `docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md`
 - Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only.: `docs/reviews/probes/r060_worker_campaign.py`
+- Immutable root-seeded R1 source-only design authority; Luna max.: `CVF_SESSION/authority/CCMAI-RUNTIME-076.json`
+- Scoped local R076 documentary FREEZE only, recovery implementation/startup hardening OPEN.: `docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md`
+- Accepted intended recovery decision after independent document repair; implementation OPEN.: `docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md`
+- Independent documentary CHANGES_REQUIRED F1/F2/M1; no runtime/product defect reproduction.: `docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md`
+- Historical R075 FROZEN publication; closure remote SHA verified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
+- First document source13/input5 identity; no runtime or deployed proof.: `docs/reviews/probes/r076_source_identity_2026-10-11.json`
+- One separate max DESIGN/SPEC sample, first CHANGES_REQUIRED, one worker repair/root minor erratum; no matched ranking.: `docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md`
+- DR01..10 bounded recovery design/spec order, application native0.: `docs/work_orders/CCMAI_RUNTIME_076.md`
+- R076 documentary state and independent role contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-076.json`
+- DR01..10 intended documentary REVIEW_PASS; recovery implementation not dispatched.: `docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md`
+- Independent static source13/input5/protected367/history110/seed proof; runtime0.: `docs/reviews/probes/r076_root_scope_review_2026-10-11.json`
+- DR01..10 intended contract and future AR/NC matrix; implementation not dispatched.: `docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md`
+- Immutable R1 root seed for Luna max repository-only topology intake.: `CVF_SESSION/authority/CCMAI-RUNTIME-077.json`
+- Local R077 documentary FREEZE only; separate R2 startup hardening next, not dispatched.: `docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md`
+- Nonbinding separate R2 startup no-rewrite proposal; no implementation dispatch.: `docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md`
+- First packet CHANGES_REQUIRED F1/F2; root M1 navigation repair, history retained.: `docs/reviews/R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md`
+- Worker versioned source/input hashes and source-only limits.: `docs/reviews/probes/r077_topology_identity_2026-10-11.json`
+- Worker source-only topology facts and deployed UNKNOWN; no runtime proof.: `docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md`
+- Separate max topology sample with first findings/one repair/root assistance, no ranking.: `docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md`
+- TI01..08 bounded repository topology/intended hardening draft, application native0.: `docs/work_orders/CCMAI_RUNTIME_077.md`
+- Historical R076 intended recovery DESIGN/SPEC local FREEZE, implementation OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md`
+- R077 documentary phase/roles/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-077.json`
+- Independent TI01..08 documentary REVIEW_PASS; source hardening not dispatched.: `docs/reviews/R077_INDEPENDENT_TOPOLOGY_INTAKE_REVIEW_2026-10-11.md`
+- Independent static source14/input6/protected370/history112/seed identity proof, runtime0.: `docs/reviews/probes/r077_root_scope_review_2026-10-11.json`
+- Immutable root R2 startup hardening/offline disposable DB seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-078.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_FIRST_STATIC_FINDINGS_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_campaign.py`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_diff.patch`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_restored_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_runtime_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_root_evidence_audit.py`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_backend_binding_static.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_campaign.py`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_diff.patch`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_mutation_static.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_runtime_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_summary.json`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_restored.jsonl`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_restored_container_after.json`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_restored_stderr.log`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_summary.json`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_root_final_audit.json`
+- R078 scoped local startup closure after independent review22ac133; runtime8/8 synthetic only, recovery/live/deployed remain open.: `docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md`
+- Historical R078 synthetic startup closure; exact source/review and runtime limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md`
+- SH01..07 exact2 source/test scope and max8Go/no retry validation.: `docs/work_orders/CCMAI_RUNTIME_078.md`
+- Historical R077 documentary intake/proposal FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md`
+- R078 bounded phases/roles/evidence record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-078.json`
+- Immutable R079 R1 prerequisite-intake seed committed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-079.json`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/probes/r079_source_identity_2026-10-11.json`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/probes/r079_independent_first_audit.json`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md`
+- R079 independent documentary acceptance and separate Luna max quality assessment; no runtime claim.: `docs/reviews/R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md`
+- R079 independent documentary acceptance and separate Luna max quality assessment; no runtime claim.: `docs/reviews/probes/r079_independent_final_audit.json`
+- R079 scoped local intake/proposal closure after independent498fe42; durable fence/recovery and deployed facts unresolved.: `docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md`
+- R079 PF01..08 exact3 documents only; next design draft nonbinding.: `docs/work_orders/CCMAI_RUNTIME_079.md`
+- R079 bounded documentary phase/role/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-079.json`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-080.json`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-080.json`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `docs/work_orders/CCMAI_RUNTIME_080.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/probes/r080_source_identity_2026-10-11.json`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/probes/r080_first_root_static_audit_2026-10-11.json`
+- R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved.: `docs/reviews/probes/r080_independent_final_audit_2026-10-11.json`
+- R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved.: `docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md`
+- R080 scoped local intended design/proposal closure; implementation/recovery OPEN and deployed UNKNOWN.: `docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md`
+- R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md`
+- R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-081.json`
+- R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-081.json`
+- R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects.: `docs/work_orders/CCMAI_RUNTIME_081.md`
+- R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md`
+- R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json`
+- R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/probes/r081_independent_source_review_2026-10-11.json`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md`
+- R081 local returned-review publication identities/protections/checks; CHANGES_REQUIRED/FREEZE OPEN, no closure/runtime claim.: `docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json`
+- R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md`
+- R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-082.json`
+- R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-082.json`
+- R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects.: `docs/work_orders/CCMAI_RUNTIME_082.md`
+- R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance.: `docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md`
+- R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance.: `docs/reviews/probes/r082_fence_blocker_resolution_identity_2026-10-11.json`
+- R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance.: `docs/reviews/probes/r082_independent_initial_identity_audit_2026-10-11.json`
+- R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance.: `docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md`
+- R082 final original-finding recheck identity/protection receipt; worker failures retained, no runtime proof.: `docs/reviews/probes/r082_independent_final_audit_2026-10-11.json`
+- Separate Luna max R082 repair-assisted documentary quality sample; first/repair failures retained.: `docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md`
+- R082 scoped intended-contract documentary closure only; runtime/readiness and R081 remain open.: `docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md`
+- R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md`
+- R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure.: `CVF_SESSION/authority/CCMAI-RUNTIME-083.json`
+- R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-083.json`
+- R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure.: `docs/work_orders/CCMAI_RUNTIME_083.md`
+- R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval.: `scripts/jobrun_fence_fixture.py`
+- R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval.: `scripts/tests/test_jobrun_fence_fixture.py`
+- R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval.: `docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md`
+- R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval.: `docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/protected-audit.json`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/receipt.json`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/stderr.txt`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/stdout.txt`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit-metadata.json`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit.stderr.txt`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit.stdout.txt`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-084.json`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-084.json`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `docs/work_orders/CCMAI_RUNTIME_084.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/protected-audit.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/receipt.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stderr.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stdout.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/launcher-error.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/post-suite-identities.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities-final.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/stderr.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/stdout.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/suite-execution.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/worker-completion-receipt.json`
+- R084 scoped source-only F1/F3 completion closure; actual fixture/runtime/readiness remain open, no effect authority.: `docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md`
+- R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md`
+- R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-085.json`
+- R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-085.json`
+- R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `docs/work_orders/CCMAI_RUNTIME_085.md`
+- R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `docs/reviews/probes/r085_fixture/intake/owner_mysql_status.json`
+- R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `docs/reviews/probes/r085_fixture/intake/source_image_readiness.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R085_LOCAL_FIXTURE_WORKER_EXECUTION_2026-10-11.md`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r083_fixture/worker/39cd4dbacf3744bc8ea39f413b33e4d4/manifest.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/worker_result_check.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/authority-binding-39cd4dbacf3744bc8ea39f413b33e4d4.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher-errors.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/manifest-paths-before.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/preflight.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/process-started.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stderr.raw.bin`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stdout.raw.bin`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/final_file_audit.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/docs_build_result.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/returned_review_receipt.json`
+- R086 bounded source-only mount lifecycle authority/continuity; no runtime effect.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md`
+- R086 bounded source-only mount lifecycle authority/continuity; no runtime effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-086.json`
+- R086 bounded source-only mount lifecycle authority/continuity; no runtime effect.: `CVF_SESSION/tranches/CCMAI-RUNTIME-086.json`
+- R086 bounded source-only mount lifecycle authority/continuity; no runtime effect.: `docs/work_orders/CCMAI_RUNTIME_086.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R086_MOUNT_LIFECYCLE_SOURCE_COMPLETION_2026-10-12.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/protected_audit.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/capture_worker_suite.py`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_edit_baseline.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_suite_helper_failure_summary.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.py`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_raw_summary.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_receipt.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_stderr.raw.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_stdout.raw.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_launcher_errors.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/receipt.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stderr.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

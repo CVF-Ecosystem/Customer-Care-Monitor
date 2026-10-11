@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-080",
+  "authorityKind": "DISPATCHER_OWNED_DURABLE_JOBRUN_FENCE_DESIGN_SPEC",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r080_worker",
+    "repairWorker": "Codex /root/r080_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+    "docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md",
+    "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_080.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft",
+    "schema_migration_or_recovery_execution",
+    "deployed_adoption_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 continues accepted R079 next move: separate R1 intended durable JobRun fence DESIGN/SPEC with Luna max worker/root independent reviewer, no product/runtime/external effects.",
+  "claimScope": "Intended durable-fence architecture/spec and nonbinding later implementation order only; repository facts and unknown deployed adoption separated."
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-082",
+  "authorityKind": "DISPATCHER_OWNED_FENCE_BLOCKER_RESOLUTION_DOCUMENTARY_CONTRACT",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r082_worker",
+    "repairWorker": "Codex /root/r082_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md",
+    "docs/reviews/probes/r082_fence_blocker_resolution_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_082.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft",
+    "schema_migration_or_recovery_execution",
+    "deployed_adoption_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerAuthorPasses": 1,
+    "independentReviewPasses": 1,
+    "maxDirectedSameScopeDocumentRepairRounds": 1,
+    "workerStaticChecksPerPass": 1,
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 after R081 returned-review publicationb1d7f11 authorizes separately bounded source-only contract resolution F1..F4, Luna max worker/root independent reviewer. New authority, not automatic R081 repair; R081 CHANGES_REQUIRED/FREEZE_OPEN and old artifacts immutable. Documentary R1 no source/security/schema/runtime/external effects; later implementation remains R2+ separately bounded.",
+  "claimScope": "Selected intended incarnation/restore, durable notification-attempt, complete operation lock/retirement, source census and finite future fixture/test contract. Documentary review/closure only, no deployed/DB/runtime/CVF governance proof.",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "baseCommit": "05cef8c327c5899b38d3d4ff400d0ac27711b23a",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_082.md",
+  "buildCommit": "144f68f1c0584d68c7101692478e38a73705adb2",
+  "reviewEvidence": [
+    "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
+    "docs/reviews/probes/r082_independent_initial_identity_audit_2026-10-11.json",
+    "docs/reviews/probes/r082_independent_final_audit_2026-10-11.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workerAcknowledgment": "Fresh REVIEW febd451 canonical tuple/memory/handoff/implementation/index agree; root CLOSER acknowledges scoped independent REVIEW_PASS and transitions to FREEZE for R082 documentary artifacts only. Original/repair failures and R081 dissent retained. All source/old records/quality protections remain; no new execution effect or authority extension. Root session/commit steward synchronizes closure and next bounded R2 prerequisite move.",
+  "workerDocumentRepairRounds": 1,
+  "initialFindingGroups": [
+    "R1",
+    "R2"
+  ],
+  "repairDisposition": "EXPLICIT_ROOT_DIRECTED_R1_R2_ONE_ROUND_ONLY",
+  "finalFindingDisposition": {
+    "R1": "SETTLED_INTENDED_CONTRACT",
+    "R2": "SETTLED_INTENDED_CONTRACT"
+  },
+  "qualityAssessment": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
+  "closer": "Codex /root",
+  "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1",
+  "finalScope": "DOCUMENTARY_SELECTED_CONTRACT_CENSUS_NONBINDING_PLAN_ONLY",
+  "closureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3"
+}

@@ -1,0 +1,136 @@
+{
+  "trancheId": "CCMAI-RUNTIME-086",
+  "phase": "BUILD",
+  "baseCommit": "ca206917b337e02dedad30c2a6b8c2b50b7004c2",
+  "releaseCommit": "750d983a388e2ebee43434799f43b6de6d67a4fa",
+  "sourceFile": "scripts/jobrun_fence_fixture.py",
+  "testFile": "scripts/tests/test_jobrun_fence_fixture.py",
+  "sourcePhysicalSha256BeforeEdit": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+  "sourceGitBlobAtRelease": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+  "testPhysicalSha256BeforeEdit": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+  "testGitBlobAtRelease": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+  "originalTestMethodCount": 23,
+  "originalTestMethodBodies": [
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_task_names_and_labels_are_role_scoped_and_grant_safe",
+      "bodyAstSha256": "3ebe9f4fa03b9649e0c833b186f33b7fffbf0f1d803a311847d83fc59e60e1fb"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_remote_docker_endpoints_fail_closed",
+      "bodyAstSha256": "f00ed6e0ce56d15b069f21361f48b5de29901be6aa860676c4b54643177b91a1"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_cached_image_metadata_requires_a_full_canonical_digest",
+      "bodyAstSha256": "0d3d72df414cd0d6eb44b9c9b8b620d5f6784ec37cae85edcc6fbf9a1e818c48"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_grants_accept_only_global_usage_and_literal_task_schema",
+      "bodyAstSha256": "8e6c9bc1f067e47de1d18e601cdd5ec5078641784aaafd29f4000a52765c678f"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_expected_denial_accepts_only_exact_task_database_privilege_error",
+      "bodyAstSha256": "52ffeb5ade5fa7254da1677e229fac13c7bed0acc299adef1767534a024d8ed6"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_container_inspect_accepts_only_authorized_tmpfs_network_and_no_host_exposure",
+      "bodyAstSha256": "1d539c0fb51c275caba912db3f6b1f083be5750a652511418dff8700d1002f64"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_network_inspect_requires_internal_and_exact_owner_labels",
+      "bodyAstSha256": "c71d0d5eba23db590ca9fdf6e55df448c4133de0e68273a67714021ea4f823b5"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_uncertain_create_is_reconciled_only_to_exact_labelled_resource",
+      "bodyAstSha256": "ab6b2bc5924731fbe3b789d630b066c85c1c9a1b2191c2479c81520519c01668"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_not_found_requires_exact_daemon_resource_response",
+      "bodyAstSha256": "3d0bc518922f56dca02f6aaf5864e52b245e002439bb259cd0676b4924cffe3e"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_cleanup_removes_only_exact_owned_ids_and_verifies_absence",
+      "bodyAstSha256": "b408d3c09fb4e8da386d3eb129461d1cbdb1f88e93d60df6608eff45236d9b10"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_cleanup_continues_to_known_network_after_uncertain_container_inspection",
+      "bodyAstSha256": "a538ef3d8a1cd00a4369580aa6da2911d8f038d721cb75cccf7d384edcac893c"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_cleanup_refuses_to_claim_absence_when_container_remains",
+      "bodyAstSha256": "2fb72eece70cd7a9ee2669f507bcc245c195aee6781841f51a3948ca3a0dde69"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_uncertain_campaign_keeps_failure_even_after_cleaning_known_network",
+      "bodyAstSha256": "e33e5cc68698ff4a76cefe856dc16c21dafcf575ba8ecfed8851cd754dcc0a8e"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_unknown_network_only_attempt_is_not_reported_as_not_required",
+      "bodyAstSha256": "f6ddf1141c384b3063a12ad053a00f9d08338fb83dd8ac865e220864b0af489f"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_task_output_is_confined_and_never_reuses_a_task_directory",
+      "bodyAstSha256": "8f865e1902fb04284f65495032e6f43d8ae04e825d649ac860bce9a15dba5615"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_filtered_git_blob_hash_accepts_crlf_worktree_for_lf_blob",
+      "bodyAstSha256": "802548bc62a45bb35b623fc664afe83dd4dba95d6e349a21f507c2559997fb5d"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_command_receipt_omits_argv_and_redacts_secret_output",
+      "bodyAstSha256": "3e6ec6d603df548e08b139513cf94464ea101adffa5b27c16cff49eef594b3fa"
+    },
+    {
+      "class": "FixtureSafetyTests",
+      "name": "test_docker_timeout_is_returned_for_exact_create_reconciliation",
+      "bodyAstSha256": "242257e6b1e1711b04fd65bbdbfd5d517ff0f515c39db32d9655055319860357"
+    },
+    {
+      "class": "FixtureCompletionTests",
+      "name": "test_started_ownership_validation_precedes_every_mysql_call",
+      "bodyAstSha256": "28b188f1bb49273781f6ddabc5d28fe1dc67802ad87574a5577cff0fd8f2eebf"
+    },
+    {
+      "class": "FixtureCompletionTests",
+      "name": "test_native_network_timeout_is_reconciled_or_retained_without_false_absence",
+      "bodyAstSha256": "342c22b833503beda278950dac24e2917f1f0430851353c5aab7c00cc5986932"
+    },
+    {
+      "class": "FixtureCompletionTests",
+      "name": "test_native_container_timeout_reconciles_owned_resource_and_cleans_both_ids",
+      "bodyAstSha256": "f01e51c4dd1612f15e80f571d4854451e5c51146fe0e89288dadc3e7fc4eb69e"
+    },
+    {
+      "class": "FixtureCompletionTests",
+      "name": "test_unresolved_container_timeout_preserves_receipt_and_cleans_known_network",
+      "bodyAstSha256": "af111119546a5d52683f2ad0e3e83e1a282185dd98214129665bef866b3ae27a"
+    },
+    {
+      "class": "FixtureCompletionTests",
+      "name": "test_thrown_container_remove_failure_keeps_ids_and_never_claims_absence",
+      "bodyAstSha256": "c189c24f298d21c07641a3339eb1546ea85b714146b47c5c3a24968544513bcb"
+    }
+  ],
+  "workerCompletionPassesAuthorized": 1,
+  "workerHarnessUnitInvocationsAuthorized": 1,
+  "workerHarnessUnitInvocationsUsedBeforeBuild": 0,
+  "sourceRepairRoundsAuthorized": 0,
+  "fixtureCampaignsAuthorized": 0,
+  "note": "Static baseline identity capture only; no test or native fixture invocation."
+}

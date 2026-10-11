@@ -1,0 +1,25 @@
+{
+  "capturedAtUtc": "2026-10-11T16:18:41.7404864+00:00",
+  "gitHead": "e0d50430baea35b61e01b77f104dbaee7131decc",
+  "phase": "PRE_SUITE",
+  "sourceIdentities": [
+    {
+      "path": "scripts/jobrun_fence_fixture.py",
+      "bytes": 72611,
+      "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+      "gitFilteredBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "gitStatus": "M scripts/jobrun_fence_fixture.py",
+      "dirty": true
+    },
+    {
+      "path": "scripts/tests/test_jobrun_fence_fixture.py",
+      "bytes": 41950,
+      "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+      "gitFilteredBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "gitStatus": "M scripts/tests/test_jobrun_fence_fixture.py",
+      "dirty": true
+    }
+  ],
+  "suiteProcessCreated": false,
+  "suiteInvocationCountAtCapture": 0
+}

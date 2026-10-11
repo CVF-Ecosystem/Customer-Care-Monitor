@@ -1,0 +1,1027 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-080",
+  "captureDate": "2026-10-11",
+  "capturePurpose": "Source and documentary citation identity for the R080 intended durable JobRun fence DESIGN/SPEC packet; no deployed identity or runtime claim.",
+  "lineage": {
+    "projectArtifactBaseline": "25b3f409799fba616a745b962cff7ac81e05501c",
+    "sourceBaseline": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+    "r079OriginalComparisonHead": "b94a81d7bd5d182d79d5f5275d496cf4b743b14b",
+    "r079RepairComparisonHead": "643ea0db4551534898e74067b46f12ffabc4aeca",
+    "r080BuildComparisonHead": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+    "workspaceCaptureHead": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+    "workspaceCaptureHeadUse": "Repair1 release/capture context; original source comparison preserved.",
+    "r080RepairComparisonHead": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+    "r080FirstPacketCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+    "r080RootReviewAndMechanicalCommit": "c5f0a53aa8dbf6b1982cf8e69b095bcec9d8a833"
+  },
+  "sourceComparisons": [
+    {
+      "label": "R079 original source comparison",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "b94a81d7bd5d182d79d5f5275d496cf4b743b14b",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..b94a81d7bd5d182d79d5f5275d496cf4b743b14b -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "repository source comparison only; not a deployed identity"
+    },
+    {
+      "label": "R079 separately recorded repair comparison",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "643ea0db4551534898e74067b46f12ffabc4aeca",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..643ea0db4551534898e74067b46f12ffabc4aeca -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "repository source comparison only; not a deployed identity"
+    },
+    {
+      "label": "R080 current source comparison",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..efa21565f9a87aa509d7a088ff1ff2d3945baae7 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "repository source comparison only; not a deployed identity"
+    },
+    {
+      "label": "R080 project-artifact baseline comparison",
+      "base": "25b3f409799fba616a745b962cff7ac81e05501c",
+      "head": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+      "command": "git diff --name-only 25b3f409799fba616a745b962cff7ac81e05501c..efa21565f9a87aa509d7a088ff1ff2d3945baae7 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "repository source comparison only; not a deployed identity"
+    },
+    {
+      "label": "R080 separately named repair source comparison",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..d52cf32c846d785c40b8d5abec697c8f8c24f946 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "source-only; documentary artifact changes are not backend changes or deployed identity"
+    },
+    {
+      "label": "R080 first packet to repair release comparison",
+      "base": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+      "head": "d52cf32c846d785c40b8d5abec697c8f8c24f946",
+      "command": "git diff --name-only 315b48f0cc17475c984ead9667fb7df9cce76e0c..d52cf32c846d785c40b8d5abec697c8f8c24f946 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "source-only; documentary artifact changes are not backend changes or deployed identity"
+    }
+  ],
+  "executionBoundary": {
+    "mode": "source-only documentary BUILD",
+    "runtimeEvidence": "NOT_RUN",
+    "applicationNativeInvocations": 0,
+    "goBuildInvocations": 0,
+    "goTestInvocations": 0,
+    "providerNetworkInvocations": 0,
+    "databaseHostContainerInspections": 0,
+    "credentialEnvironmentReads": 0,
+    "repositoryTestsOrGatesRunByWorker": 0,
+    "noGovernanceClaim": true
+  },
+  "referenceDefinitions": [
+    {
+      "id": "S01",
+      "path": "backend/api/router.go",
+      "citationRanges": [
+        {
+          "firstLine": 174,
+          "lastLine": 184
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "path": "backend/api/handlers/jobs.go",
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 189
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "path": "backend/api/handlers/jobs.go",
+      "citationRanges": [
+        {
+          "firstLine": 191,
+          "lastLine": 366
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "path": "backend/api/handlers/jobs.go",
+      "citationRanges": [
+        {
+          "firstLine": 368,
+          "lastLine": 603
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "path": "backend/mcp/handlers.go",
+      "citationRanges": [
+        {
+          "firstLine": 330,
+          "lastLine": 360
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "path": "backend/jobdispatch/dispatch.go",
+      "citationRanges": [
+        {
+          "firstLine": 71,
+          "lastLine": 147
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "path": "backend/engine/analyzer_modes.go",
+      "citationRanges": [
+        {
+          "firstLine": 73,
+          "lastLine": 273
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "path": "backend/engine/job_run_ownership.go",
+      "citationRanges": [
+        {
+          "firstLine": 114,
+          "lastLine": 397
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "path": "backend/engine/analyzer.go",
+      "citationRanges": [
+        {
+          "firstLine": 53,
+          "lastLine": 952
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "path": "backend/engine/analyzer_incremental.go",
+      "citationRanges": [
+        {
+          "firstLine": 167,
+          "lastLine": 284
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "path": "backend/engine/scheduler.go",
+      "citationRanges": [
+        {
+          "firstLine": 58,
+          "lastLine": 334
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "path": "backend/engine/sync.go",
+      "citationRanges": [
+        {
+          "firstLine": 243,
+          "lastLine": 243
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "path": "backend/main.go",
+      "citationRanges": [
+        {
+          "firstLine": 69,
+          "lastLine": 85
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "path": "backend/api/handlers/agents.go",
+      "citationRanges": [
+        {
+          "firstLine": 265,
+          "lastLine": 310
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "path": "backend/db/models/job.go",
+      "citationRanges": [
+        {
+          "firstLine": 6,
+          "lastLine": 132
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "path": "backend/db/models/setting.go",
+      "citationRanges": [
+        {
+          "firstLine": 19,
+          "lastLine": 45
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "path": "backend/notifications/dispatcher.go",
+      "citationRanges": [
+        {
+          "firstLine": 38,
+          "lastLine": 125
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "path": "backend/engine/snapshot.go",
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 92
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "path": "backend/api/handlers/channels.go",
+      "citationRanges": [
+        {
+          "firstLine": 248,
+          "lastLine": 390
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "path": "backend/api/handlers/demo.go",
+      "citationRanges": [
+        {
+          "firstLine": 408,
+          "lastLine": 497
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "path": "backend/cli/prune_results.go",
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 153
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "path": "backend/cli/prune_results.go",
+      "citationRanges": [
+        {
+          "firstLine": 216,
+          "lastLine": 263
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "path": "backend/db/mysql.go",
+      "citationRanges": [
+        {
+          "firstLine": 13,
+          "lastLine": 59
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "path": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 7,
+          "lastLine": 30
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "path": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 102,
+          "lastLine": 160
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "path": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 3,
+          "lastLine": 27
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "path": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 3,
+          "lastLine": 30
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "path": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 11
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "path": "docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 31
+        }
+      ]
+    },
+    {
+      "id": "D07",
+      "path": "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 99
+        }
+      ]
+    },
+    {
+      "id": "W02",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 67
+        }
+      ]
+    },
+    {
+      "id": "SP01",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 174
+        }
+      ]
+    },
+    {
+      "id": "H01",
+      "path": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 11
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "path": "backend/db/activity.go",
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "backend/api/router.go",
+      "referenceIds": [
+        "S01"
+      ],
+      "gitBlobSha1": "a4bc375fb3db3430ad2897dd85d9badd44cf780e",
+      "physicalSha256": "5adc7db5fb34b0d1eee159ce6ab1858b082ba6932987e9fbe5acdf28291d5acb",
+      "lineCount": 303,
+      "citationRanges": [
+        {
+          "firstLine": 174,
+          "lastLine": 184
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/api/handlers/jobs.go",
+      "referenceIds": [
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "gitBlobSha1": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "physicalSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "lineCount": 990,
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 189
+        },
+        {
+          "firstLine": 191,
+          "lastLine": 366
+        },
+        {
+          "firstLine": 368,
+          "lastLine": 603
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/mcp/handlers.go",
+      "referenceIds": [
+        "S05"
+      ],
+      "gitBlobSha1": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
+      "physicalSha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "lineCount": 361,
+      "citationRanges": [
+        {
+          "firstLine": 330,
+          "lastLine": 360
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/jobdispatch/dispatch.go",
+      "referenceIds": [
+        "S06"
+      ],
+      "gitBlobSha1": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
+      "physicalSha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "lineCount": 148,
+      "citationRanges": [
+        {
+          "firstLine": 71,
+          "lastLine": 147
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/engine/analyzer_modes.go",
+      "referenceIds": [
+        "S07"
+      ],
+      "gitBlobSha1": "7b0babac06f43353317d143d53bfce42c6597bb0",
+      "physicalSha256": "4e7a37acb06df23e324d0e472d6becbef2de8b783ca91ace53287b7acb5f5c72",
+      "lineCount": 309,
+      "citationRanges": [
+        {
+          "firstLine": 73,
+          "lastLine": 273
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "referenceIds": [
+        "S08"
+      ],
+      "gitBlobSha1": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "physicalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "lineCount": 398,
+      "citationRanges": [
+        {
+          "firstLine": 114,
+          "lastLine": 397
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/engine/analyzer.go",
+      "referenceIds": [
+        "S09"
+      ],
+      "gitBlobSha1": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "physicalSha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
+      "lineCount": 962,
+      "citationRanges": [
+        {
+          "firstLine": 53,
+          "lastLine": 952
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/engine/analyzer_incremental.go",
+      "referenceIds": [
+        "S10"
+      ],
+      "gitBlobSha1": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "physicalSha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
+      "lineCount": 284,
+      "citationRanges": [
+        {
+          "firstLine": 167,
+          "lastLine": 284
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/engine/scheduler.go",
+      "referenceIds": [
+        "S11"
+      ],
+      "gitBlobSha1": "e80cba5d592f538a3476bf76e814f42fa97d2ff0",
+      "physicalSha256": "335c5fccf1d64c0b8fdfece4c19b7f6d2e51f49494ca7fe203c587376724ffc5",
+      "lineCount": 339,
+      "citationRanges": [
+        {
+          "firstLine": 58,
+          "lastLine": 334
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/engine/sync.go",
+      "referenceIds": [
+        "S12"
+      ],
+      "gitBlobSha1": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "physicalSha256": "c841ea0865f1f4b83853409a0e8939c87f99d5009c42b6729cd01beefaaaced0",
+      "lineCount": 1221,
+      "citationRanges": [
+        {
+          "firstLine": 243,
+          "lastLine": 243
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/main.go",
+      "referenceIds": [
+        "S13"
+      ],
+      "gitBlobSha1": "69ee35b19e3d93140b50f22650727c60ed75c304",
+      "physicalSha256": "84d4e7755a700af51a4c8ff7dd791cff9741be06654b98f16d1bc03a4da2b5e7",
+      "lineCount": 118,
+      "citationRanges": [
+        {
+          "firstLine": 69,
+          "lastLine": 85
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/api/handlers/agents.go",
+      "referenceIds": [
+        "S14"
+      ],
+      "gitBlobSha1": "47ef487bcfe3161cbfc51d01c917cf9487224168",
+      "physicalSha256": "ec464cdf82d9362274f67c060eea87b6b4b725867541ad01374cc87253c945fe",
+      "lineCount": 351,
+      "citationRanges": [
+        {
+          "firstLine": 265,
+          "lastLine": 310
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/db/models/job.go",
+      "referenceIds": [
+        "S15"
+      ],
+      "gitBlobSha1": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "physicalSha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
+      "lineCount": 132,
+      "citationRanges": [
+        {
+          "firstLine": 6,
+          "lastLine": 132
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/db/models/setting.go",
+      "referenceIds": [
+        "S16"
+      ],
+      "gitBlobSha1": "becf2495ba519f43ef4459bab7191086d56c5f42",
+      "physicalSha256": "a9aa1e7a6d31f9a6f4d4f06f247adc9ad761a00951f293b12f2e0e153cd24122",
+      "lineCount": 81,
+      "citationRanges": [
+        {
+          "firstLine": 19,
+          "lastLine": 45
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/notifications/dispatcher.go",
+      "referenceIds": [
+        "S17"
+      ],
+      "gitBlobSha1": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "physicalSha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008",
+      "lineCount": 266,
+      "citationRanges": [
+        {
+          "firstLine": 38,
+          "lastLine": 125
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/engine/snapshot.go",
+      "referenceIds": [
+        "S18"
+      ],
+      "gitBlobSha1": "6f9b287fd87159281a6400d0f099c80fe4da5a46",
+      "physicalSha256": "3b223eead06e1b42f05f1ea626cd5e441abd252a2d36e996b7e93b3ec45b8ee3",
+      "lineCount": 427,
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 92
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/api/handlers/channels.go",
+      "referenceIds": [
+        "S19"
+      ],
+      "gitBlobSha1": "cd3b29f251c4f149733acc3504dece9595cae2aa",
+      "physicalSha256": "31cddd956d91bb243b7acdfec31406db1ad4424d2a1c2b833f3b5f41fce95b9b",
+      "lineCount": 1110,
+      "citationRanges": [
+        {
+          "firstLine": 248,
+          "lastLine": 390
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/api/handlers/demo.go",
+      "referenceIds": [
+        "S20"
+      ],
+      "gitBlobSha1": "062baa619cae22ac8dc8f7a913d1364a83a588d9",
+      "physicalSha256": "52a822a81bcc9a686923364a3a7a8d881c9df4f8c556d4777e2849903f327e3c",
+      "lineCount": 773,
+      "citationRanges": [
+        {
+          "firstLine": 408,
+          "lastLine": 497
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/cli/prune_results.go",
+      "referenceIds": [
+        "S21",
+        "S23"
+      ],
+      "gitBlobSha1": "096e28a2714eb8b2ceec90392d9c45f5bb9ab5af",
+      "physicalSha256": "ebf9b93c2e9c2ef4472795b64347967993ff979edda655ac70437d85b0c4acd4",
+      "lineCount": 276,
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 153
+        },
+        {
+          "firstLine": 216,
+          "lastLine": 263
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "referenceIds": [
+        "S22"
+      ],
+      "gitBlobSha1": "e71aa8ee954117651399b954cbfbc94341c47d69",
+      "physicalSha256": "7c66d56ddb361266e9a030f7192086048fbf1d075a7905f9a4cbc110b519ab67",
+      "lineCount": 157,
+      "citationRanges": [
+        {
+          "firstLine": 13,
+          "lastLine": 59
+        }
+      ],
+      "contentStatus": "versioned read-only source at preserved R080 comparison"
+    },
+    {
+      "path": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "referenceIds": [
+        "D01"
+      ],
+      "gitBlobSha1": "634173afb1d135b03e8499c9f3ce511bde55535b",
+      "physicalSha256": "89c081589725939776ab60674c37bfccbd31b8b329822b62839ebeb15a5a11cb",
+      "lineCount": 174,
+      "citationRanges": [
+        {
+          "firstLine": 7,
+          "lastLine": 30
+        }
+      ],
+      "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
+    },
+    {
+      "path": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "referenceIds": [
+        "D02"
+      ],
+      "gitBlobSha1": "e412e832f1bf92ebf035e9ebfb695d95b2edd1f8",
+      "physicalSha256": "2d8cdcffe0bc8f38fb136d20f25ac0cf1bf10648b51d6e523fdc720b12a84151",
+      "lineCount": 243,
+      "citationRanges": [
+        {
+          "firstLine": 102,
+          "lastLine": 160
+        }
+      ],
+      "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
+    },
+    {
+      "path": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
+      "referenceIds": [
+        "D03"
+      ],
+      "gitBlobSha1": "b83b34e6c005131af6f24778400a39b8f86ea0f3",
+      "physicalSha256": "946f297d06a6c345966bc332cf5bce574d1f113ab95c4986fdbcafae09183a3a",
+      "lineCount": 87,
+      "citationRanges": [
+        {
+          "firstLine": 3,
+          "lastLine": 27
+        }
+      ],
+      "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
+    },
+    {
+      "path": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
+      "referenceIds": [
+        "D04"
+      ],
+      "gitBlobSha1": "716a28dc88484a4c6e92213a52d8907edc7dbb38",
+      "physicalSha256": "03b868cb5aebd27a0813abfd27574a076f218af2369cda43f347350f7bd7e1b4",
+      "lineCount": 45,
+      "citationRanges": [
+        {
+          "firstLine": 3,
+          "lastLine": 30
+        }
+      ],
+      "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
+    },
+    {
+      "path": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
+      "referenceIds": [
+        "D05",
+        "H01"
+      ],
+      "gitBlobSha1": "4973c2a8bd0eed5b906dd274081a9c682e22f161",
+      "physicalSha256": "b77bca5edc5864b1f6d8f130a3ae0ddb8665c600bfab2deb170159e0901b0da0",
+      "lineCount": 11,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 11
+        },
+        {
+          "firstLine": 1,
+          "lastLine": 11
+        }
+      ],
+      "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
+    },
+    {
+      "path": "docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md",
+      "referenceIds": [
+        "D06"
+      ],
+      "gitBlobSha1": "a2626c21ac45bf4b5cf349136e5a0264004b9609",
+      "physicalSha256": "9c2fb478c353c1871b48aa978bfdca7dc8315ed55050a336b57a2758894df04c",
+      "lineCount": 31,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 31
+        }
+      ],
+      "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
+    },
+    {
+      "path": "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
+      "referenceIds": [
+        "D07"
+      ],
+      "gitBlobSha1": "49c600c7717086f5c90db19bcafbaa454a30ef5b",
+      "physicalSha256": "a1720f7b48a110ed98a68952a84a3e6606532ba4776352e70001d53271757e6a",
+      "lineCount": 99,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 99
+        }
+      ],
+      "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
+    },
+    {
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md",
+      "referenceIds": [
+        "W02"
+      ],
+      "gitBlobSha1": "ed6359c4ff23beded9e0dd4f34c7e99bc26476ff",
+      "physicalSha256": "e98f18f78f84a050fc9f0c71af1944b69f3dae78c85d54bd958648c15c6f633d",
+      "lineCount": 67,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 67
+        }
+      ],
+      "contentStatus": "new R080 worker artifact; working-tree bytes captured before independent review"
+    },
+    {
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "referenceIds": [
+        "SP01"
+      ],
+      "gitBlobSha1": "52e1c3b00a90c1758534e074a2efb46fcef13e37",
+      "physicalSha256": "7c015a2d8264a79326d0633ed595e0b7ccfa16f9d7fe0e66d3b8805bcee914ca",
+      "lineCount": 174,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 174
+        }
+      ],
+      "contentStatus": "new R080 worker artifact; working-tree bytes captured before independent review"
+    },
+    {
+      "path": "backend/db/activity.go",
+      "referenceIds": [
+        "S24"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ],
+      "contentStatus": "versioned read-only source, root mechanical citation addition",
+      "gitBlobSha1": "c5c375768e80db795d8e2c41ec494f6f12a2a0cb",
+      "physicalSha256": "03616d47212158f12c21d635248661015d590e2a48632e12dee9893292c7a790",
+      "lineCount": 26
+    }
+  ],
+  "rootPrehandbackAssistance": {
+    "attribution": "Root supplied source-navigation pointers before worker first packet; the worker independently inspected and cited these locations. This assistance is not independent-review approval and does not alter worker first-pass status.",
+    "pointers": [
+      {
+        "path": "backend/api/handlers/jobs.go",
+        "referenceId": "S03",
+        "firstLine": 270,
+        "lastLine": 293,
+        "topic": "ClearJobResults lacks the same guarded transaction used by destructive run paths."
+      },
+      {
+        "path": "backend/api/handlers/channels.go",
+        "referenceId": "S19",
+        "firstLine": 248,
+        "lastLine": 390,
+        "topic": "DeleteChannel and PurgeChannelConversations lock conversations before child deletion."
+      },
+      {
+        "path": "backend/api/handlers/demo.go",
+        "referenceId": "S20",
+        "firstLine": 435,
+        "lastLine": 495,
+        "topic": "ResetDemoData locks conversations before JobRuns and deletes tenant data."
+      },
+      {
+        "path": "backend/engine/job_run_ownership.go",
+        "referenceId": "S08",
+        "firstLine": 317,
+        "lastLine": 344,
+        "topic": "GuardJobMutation current Job-to-JobRun/local-map checks."
+      },
+      {
+        "path": "backend/cli/prune_results.go",
+        "referenceId": "S21",
+        "firstLine": 87,
+        "lastLine": 153,
+        "topic": "Prune performs one running-row count before planning and later applying."
+      },
+      {
+        "path": "backend/cli/prune_results.go",
+        "referenceId": "S23",
+        "firstLine": 216,
+        "lastLine": 263,
+        "topic": "ApplyPrunePlan mutates JobResult and AnalysisSnapshot in later batch transactions."
+      }
+    ],
+    "firstPassApprovalInferred": false
+  },
+  "workerReviewState": {
+    "workerFirstPass": "CHANGES_REQUIRED",
+    "independentReviewer": "Codex /root",
+    "workerRepairs": 1,
+    "firstFindingsOrDissent": "Root consolidated F1 commit ambiguity/F2 mutex protocol/F3 bounded follow-on proposal at c5f0a53; prose repair1 supplied by worker, root identity refresh after explicit transfer; final independent review pending.",
+    "costAndTime": "Model time, token use, and cost were not measured or estimated."
+  },
+  "workerStaticValidationHistory": [
+    {
+      "attempt": 1,
+      "result": "CHECKER_ERROR",
+      "reason": "The first local checker invocation used pathlib relative_to with a relative input path and absolute workspace root on Windows. It stopped before validating the packet; no source or artifact content changed during that attempt."
+    },
+    {
+      "attempt": 2,
+      "result": "PASS",
+      "checks": "JSON/input hashes and blobs, physical line counts/ranges, source comparison, local reference definitions/targets, reciprocal links, root-pointer coverage, and exact three-file worktree scope."
+    },
+    {
+      "attempt": "repair1 preparation",
+      "result": "JS_PARSE_ERROR_BEFORE_EXECUTION",
+      "reason": "Worker Python wrapper failed at JavaScript parse before execution; no file changes. Worker transferred identity refresh to root, handed back two prose docs after targeted stale-phrase check; no worker full identity validation claimed."
+    }
+  ],
+  "artifactScope": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+    "docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md",
+    "docs/reviews/probes/r080_source_identity_2026-10-11.json"
+  ],
+  "identityLimit": "Git blob SHA-1, physical SHA-256, and ranges bind local file bytes. They do not identify deployed binaries or databases and do not prove fencing, recovery, remote effect outcomes, fleet adoption, or CVF governance.",
+  "selfIdentityExclusion": "This identity JSON is linked from both Markdown artifacts and is excluded from its own inputs to avoid a self-referential hash. Root can bind its final committed blob after the worker packet is reviewed and committed.",
+  "rootMechanicalCorrections": {
+    "originalPacketCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+    "origin": "Codex /root",
+    "items": [
+      "M1 activity helper citation; S07 broadening valid but original73..183 already covered RunReserved148..183 (root attribution correction)",
+      "M2 worker-only repository-test qualifier/root46PASS38.818s metadata checks",
+      "M3 pre-dispatch table consistency"
+    ],
+    "substantiveDesignDraftedByRoot": false,
+    "repair1Transfer": {
+      "acknowledged": true,
+      "owner": "Codex /root SESSION_SYNC_STEWARD",
+      "scope": "identity/ref-range/hash refresh, separate repair lineage and root46 test timing qualifier only",
+      "workerProseFiles": 2,
+      "workerFullRepairIdentityValidation": false,
+      "rootSubstantiveProseDraft": false
+    }
+  }
+}

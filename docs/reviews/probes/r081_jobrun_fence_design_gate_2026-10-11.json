@@ -1,0 +1,933 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-081",
+  "captureDate": "2026-10-11",
+  "capturePurpose": "Source-only documentary database integration gate; binds worker artifact and cited versioned sources, not deployed schema or runtime behavior.",
+  "lineage": {
+    "immutableWorkerSeed": "32bd62b11ccb53193a1952d478fcf1d6e01fc3ba",
+    "trancheActivationCommit": "736351ec10935ac38ae68a47b4aeabe2c1a1af6b",
+    "buildReleaseCommit": "17da38e5dc2e005bc45065a44daf887640c35649",
+    "workspaceHeadAtCapture": "17da38e5dc2e005bc45065a44daf887640c35649",
+    "sourceBaseline": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+    "r080AcceptedArchitectureCommit": "402d6a6",
+    "r080IndependentReviewCommit": "56b5328",
+    "r080ScopedClosureCommit": "99f987c",
+    "r080ComparisonPreservedAt": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+    "r081ComparisonHead": "17da38e5dc2e005bc45065a44daf887640c35649",
+    "meaning": "Git source comparisons identify repository source only; they do not establish deployed binaries, installed schema, writer adoption, or runtime behavior."
+  },
+  "sourceComparisons": [
+    {
+      "label": "R080 accepted source comparison preserved",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..efa21565f9a87aa509d7a088ff1ff2d3945baae7 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "preserved documentary/source comparison only; no deployed identity claim"
+    },
+    {
+      "label": "R081 BUILD source comparison",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "17da38e5dc2e005bc45065a44daf887640c35649",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..17da38e5dc2e005bc45065a44daf887640c35649 -- backend",
+      "backendPathsChanged": [],
+      "result": "UNCHANGED",
+      "meaning": "source-only comparison; documentary additions do not prove deployed adoption"
+    }
+  ],
+  "executionBoundary": {
+    "mode": "source-only documentary BUILD",
+    "runtimeEvidence": "NOT_RUN",
+    "applicationNativeInvocations": 0,
+    "goBuildInvocations": 0,
+    "goTestInvocations": 0,
+    "providerNetworkInvocations": 0,
+    "databaseInvocations": 0,
+    "hostOrContainerInspections": 0,
+    "credentialEnvironmentReads": 0,
+    "browserInvocations": 0,
+    "repositoryTestsOrGatesRunByWorker": 0,
+    "staticArtifactIdentityChecksByWorker": 1,
+    "noGovernanceClaim": true
+  },
+  "referenceDefinitions": [
+    {
+      "id": "S01",
+      "path": "backend/go.mod",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "path": "backend/db/mysql.go",
+      "citationRanges": [
+        {
+          "firstLine": 41,
+          "lastLine": 60
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "path": "backend/db/models/job.go",
+      "citationRanges": [
+        {
+          "firstLine": 6,
+          "lastLine": 132
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "path": "backend/db/models/conversation.go",
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "path": "backend/db/models/channel.go",
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 44
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "path": "backend/db/models/message.go",
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 19
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "path": "backend/db/models/setting.go",
+      "citationRanges": [
+        {
+          "firstLine": 19,
+          "lastLine": 81
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "path": "backend/db/models/analysis_snapshot.go",
+      "citationRanges": [
+        {
+          "firstLine": 8,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "path": "backend/engine/job_run_ownership.go",
+      "citationRanges": [
+        {
+          "firstLine": 110,
+          "lastLine": 181
+        },
+        {
+          "firstLine": 195,
+          "lastLine": 235
+        },
+        {
+          "firstLine": 317,
+          "lastLine": 344
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "path": "backend/engine/analyzer.go",
+      "citationRanges": [
+        {
+          "firstLine": 280,
+          "lastLine": 326
+        },
+        {
+          "firstLine": 553,
+          "lastLine": 730
+        },
+        {
+          "firstLine": 817,
+          "lastLine": 830
+        },
+        {
+          "firstLine": 880,
+          "lastLine": 900
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "path": "backend/engine/analyzer_incremental.go",
+      "citationRanges": [
+        {
+          "firstLine": 167,
+          "lastLine": 284
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "path": "backend/api/handlers/jobs.go",
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 103
+        },
+        {
+          "firstLine": 191,
+          "lastLine": 355
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "path": "backend/api/handlers/demo.go",
+      "citationRanges": [
+        {
+          "firstLine": 48,
+          "lastLine": 120
+        },
+        {
+          "firstLine": 350,
+          "lastLine": 392
+        },
+        {
+          "firstLine": 409,
+          "lastLine": 497
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "path": "backend/api/handlers/channels.go",
+      "citationRanges": [
+        {
+          "firstLine": 248,
+          "lastLine": 390
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "path": "backend/engine/sync.go",
+      "citationRanges": [
+        {
+          "firstLine": 168,
+          "lastLine": 200
+        },
+        {
+          "firstLine": 630,
+          "lastLine": 700
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "path": "backend/cli/prune_results.go",
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 153
+        },
+        {
+          "firstLine": 156,
+          "lastLine": 263
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "path": "backend/pkg/helpers.go",
+      "citationRanges": [
+        {
+          "firstLine": 26,
+          "lastLine": 35
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "path": "backend/db/activity.go",
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "path": "backend/engine/snapshot_db_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 90,
+          "lastLine": 130
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "path": "backend/db/sync_run_migration_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 20,
+          "lastLine": 55
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 174
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 54
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 13
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "path": "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 1027
+        }
+      ]
+    },
+    {
+      "id": "W01",
+      "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 31
+        }
+      ]
+    },
+    {
+      "id": "A01",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 110
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "backend/go.mod",
+      "referenceIds": [
+        "S01"
+      ],
+      "gitBlobSha1": "2147c98e2c1de836a0fe46615534ebd702ca9847",
+      "physicalSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "lineCount": 88,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 20
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline",
+      "physicalGitObjectSha1": "5cdbd2b20f3fc4c23d2f57f56b09d350f1baf752"
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "referenceIds": [
+        "S02"
+      ],
+      "gitBlobSha1": "e71aa8ee954117651399b954cbfbc94341c47d69",
+      "physicalSha256": "7c66d56ddb361266e9a030f7192086048fbf1d075a7905f9a4cbc110b519ab67",
+      "lineCount": 157,
+      "citationRanges": [
+        {
+          "firstLine": 41,
+          "lastLine": 60
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/models/job.go",
+      "referenceIds": [
+        "S03"
+      ],
+      "gitBlobSha1": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "physicalSha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
+      "lineCount": 132,
+      "citationRanges": [
+        {
+          "firstLine": 6,
+          "lastLine": 132
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/models/conversation.go",
+      "referenceIds": [
+        "S04"
+      ],
+      "gitBlobSha1": "8b6ec9ac2ac8dd4152b3a19cdb159c4e40c82279",
+      "physicalSha256": "8b1b27087bc9d6b09f445257b277781a323d0b99c80a8da1371df9df2bc86dbd",
+      "lineCount": 20,
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 20
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/models/channel.go",
+      "referenceIds": [
+        "S05"
+      ],
+      "gitBlobSha1": "7125930ee33986841e4f0f8122ec97f8d0f7ec98",
+      "physicalSha256": "42bc0912d940981b27bd8ab58cfe00b35dcfc5e5fd5565e3e6ef4d3cddb13534",
+      "lineCount": 44,
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 44
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/models/message.go",
+      "referenceIds": [
+        "S06"
+      ],
+      "gitBlobSha1": "dd025e6aadded0e28d36072438ec3dc03e302886",
+      "physicalSha256": "8369e3bdcbc515d2ffca640d63ca63fb0d0af8ab49e73d353cca09e81b3173ed",
+      "lineCount": 19,
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 19
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/models/setting.go",
+      "referenceIds": [
+        "S07"
+      ],
+      "gitBlobSha1": "becf2495ba519f43ef4459bab7191086d56c5f42",
+      "physicalSha256": "a9aa1e7a6d31f9a6f4d4f06f247adc9ad761a00951f293b12f2e0e153cd24122",
+      "lineCount": 81,
+      "citationRanges": [
+        {
+          "firstLine": 19,
+          "lastLine": 81
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/models/analysis_snapshot.go",
+      "referenceIds": [
+        "S08"
+      ],
+      "gitBlobSha1": "8a794aad79dbbb1193f6c1b8104cd14e84244417",
+      "physicalSha256": "38a26d477819341cbf0b18148108b68c18cee3eea9f6e07e4f845c62e92c60df",
+      "lineCount": 20,
+      "citationRanges": [
+        {
+          "firstLine": 8,
+          "lastLine": 20
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "referenceIds": [
+        "S09"
+      ],
+      "gitBlobSha1": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "physicalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "lineCount": 398,
+      "citationRanges": [
+        {
+          "firstLine": 110,
+          "lastLine": 181
+        },
+        {
+          "firstLine": 195,
+          "lastLine": 235
+        },
+        {
+          "firstLine": 317,
+          "lastLine": 344
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/engine/analyzer.go",
+      "referenceIds": [
+        "S10"
+      ],
+      "gitBlobSha1": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "physicalSha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
+      "lineCount": 962,
+      "citationRanges": [
+        {
+          "firstLine": 280,
+          "lastLine": 326
+        },
+        {
+          "firstLine": 553,
+          "lastLine": 730
+        },
+        {
+          "firstLine": 817,
+          "lastLine": 830
+        },
+        {
+          "firstLine": 880,
+          "lastLine": 900
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/engine/analyzer_incremental.go",
+      "referenceIds": [
+        "S11"
+      ],
+      "gitBlobSha1": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "physicalSha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
+      "lineCount": 284,
+      "citationRanges": [
+        {
+          "firstLine": 167,
+          "lastLine": 284
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/api/handlers/jobs.go",
+      "referenceIds": [
+        "S12"
+      ],
+      "gitBlobSha1": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "physicalSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "lineCount": 990,
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 103
+        },
+        {
+          "firstLine": 191,
+          "lastLine": 355
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/api/handlers/demo.go",
+      "referenceIds": [
+        "S13"
+      ],
+      "gitBlobSha1": "062baa619cae22ac8dc8f7a913d1364a83a588d9",
+      "physicalSha256": "52a822a81bcc9a686923364a3a7a8d881c9df4f8c556d4777e2849903f327e3c",
+      "lineCount": 773,
+      "citationRanges": [
+        {
+          "firstLine": 48,
+          "lastLine": 120
+        },
+        {
+          "firstLine": 350,
+          "lastLine": 392
+        },
+        {
+          "firstLine": 409,
+          "lastLine": 497
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/api/handlers/channels.go",
+      "referenceIds": [
+        "S14"
+      ],
+      "gitBlobSha1": "cd3b29f251c4f149733acc3504dece9595cae2aa",
+      "physicalSha256": "31cddd956d91bb243b7acdfec31406db1ad4424d2a1c2b833f3b5f41fce95b9b",
+      "lineCount": 1110,
+      "citationRanges": [
+        {
+          "firstLine": 248,
+          "lastLine": 390
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/engine/sync.go",
+      "referenceIds": [
+        "S15"
+      ],
+      "gitBlobSha1": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "physicalSha256": "c841ea0865f1f4b83853409a0e8939c87f99d5009c42b6729cd01beefaaaced0",
+      "lineCount": 1221,
+      "citationRanges": [
+        {
+          "firstLine": 168,
+          "lastLine": 200
+        },
+        {
+          "firstLine": 630,
+          "lastLine": 700
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/cli/prune_results.go",
+      "referenceIds": [
+        "S16"
+      ],
+      "gitBlobSha1": "096e28a2714eb8b2ceec90392d9c45f5bb9ab5af",
+      "physicalSha256": "ebf9b93c2e9c2ef4472795b64347967993ff979edda655ac70437d85b0c4acd4",
+      "lineCount": 276,
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 153
+        },
+        {
+          "firstLine": 156,
+          "lastLine": 263
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/pkg/helpers.go",
+      "referenceIds": [
+        "S17"
+      ],
+      "gitBlobSha1": "1ddabf8455e6c9c6f5a76b1e1b5c8b1505ade6b8",
+      "physicalSha256": "809fddae6bb05ed811ccc279b13406af8709bd1c08673ba7fd1916ef6091e9de",
+      "lineCount": 39,
+      "citationRanges": [
+        {
+          "firstLine": 26,
+          "lastLine": 35
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/activity.go",
+      "referenceIds": [
+        "S18"
+      ],
+      "gitBlobSha1": "c5c375768e80db795d8e2c41ec494f6f12a2a0cb",
+      "physicalSha256": "03616d47212158f12c21d635248661015d590e2a48632e12dee9893292c7a790",
+      "lineCount": 26,
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/engine/snapshot_db_test.go",
+      "referenceIds": [
+        "T01"
+      ],
+      "gitBlobSha1": "2e7b7db83fed860b7c75c02a9d48ce068900398f",
+      "physicalSha256": "99d774542f6a3e504e0fa91ad38e7bda338e55212d889a31a868b2983e4dcfab",
+      "lineCount": 505,
+      "citationRanges": [
+        {
+          "firstLine": 90,
+          "lastLine": 130
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "backend/db/sync_run_migration_test.go",
+      "referenceIds": [
+        "T02"
+      ],
+      "gitBlobSha1": "9744667dfc41e5c11aca6c2dfff38a89d75ec75a",
+      "physicalSha256": "7a3327135b10209b952a151cef3c3c24d3f060108a23b503e119b5de309b329e",
+      "lineCount": 133,
+      "citationRanges": [
+        {
+          "firstLine": 20,
+          "lastLine": 55
+        }
+      ],
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+    },
+    {
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "referenceIds": [
+        "D01"
+      ],
+      "gitBlobSha1": "52e1c3b00a90c1758534e074a2efb46fcef13e37",
+      "physicalSha256": "7c015a2d8264a79326d0633ed595e0b7ccfa16f9d7fe0e66d3b8805bcee914ca",
+      "lineCount": 174,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 174
+        }
+      ],
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "4164fa49e92ff4e62f2803fd313320aa90e83f5e"
+    },
+    {
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+      "referenceIds": [
+        "D02"
+      ],
+      "gitBlobSha1": "d32c2164f82e6ccce9f53af9c7b8d9bcaab1440a",
+      "physicalSha256": "26626e6ef4b5d3d6a5469cc039b6a425bd82cdd8d3beb17da36b5c4d27775ff3",
+      "lineCount": 54,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 54
+        }
+      ],
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "4e94b421bcdddecef65bc7bac8f314f5dd9611b3"
+    },
+    {
+      "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+      "referenceIds": [
+        "D03"
+      ],
+      "gitBlobSha1": "3fc91963415571914368550efdc2efa739b00e9f",
+      "physicalSha256": "20ea39b66a630ca6a9586c2a5c67c3d328c03a2eb3919cf644f4ca91b759898c",
+      "lineCount": 13,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 13
+        }
+      ],
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "27823584baba4508e825e94f2145d3969c9bd67a"
+    },
+    {
+      "path": "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+      "referenceIds": [
+        "D04"
+      ],
+      "gitBlobSha1": "e764a6519cdac886314367c98f8d9351f34a7a81",
+      "physicalSha256": "d54a0a5372069e2df555869df40e164bdb71947d5e937d82a2745d05f88f4465",
+      "lineCount": 1027,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 1027
+        }
+      ],
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "10b0cd80f9bd084dae42ba93764d1286523011c0"
+    },
+    {
+      "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
+      "referenceIds": [
+        "W01"
+      ],
+      "gitBlobSha1": "e62d776e111af51596cebe2c6a19ce769357ed25",
+      "physicalSha256": "45fd87aba92e687c907a7a066b89b2119dbee7a74b6202aa102bff9652991f24",
+      "lineCount": 31,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 31
+        }
+      ],
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "afe4cb055549b9428ac0b65c9fe1268b057ce334"
+    },
+    {
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+      "referenceIds": [
+        "A01"
+      ],
+      "gitBlobSha1": "8ca218523eacb058472f3ebbf8a1fdcdfb9c188a",
+      "physicalSha256": "5dc7c27a24b6378fa6e52202700979f6fbfd683797a8bbf8e72fbca73ca9bfba",
+      "lineCount": 110,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 110
+        }
+      ],
+      "contentStatus": "new R081 worker artifact; working-tree bytes captured before independent review"
+    }
+  ],
+  "artifactLinks": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+    "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json"
+  ],
+  "rootPrehandbackAssistance": {
+    "attribution": "Root supplied source-navigation pointers before worker authoring. Worker independently inspected and cited the sources. Root's initial uuid.go path guess was corrected to backend/pkg/helpers.go:27. This assistance is not independent-review approval and does not alter worker first-pass status.",
+    "pointers": [
+      {
+        "path": "backend/db/models/job.go",
+        "referenceId": "S03",
+        "firstLine": 45,
+        "lastLine": 59,
+        "topic": "Job-to-Tenant and JobRun-to-Job model associations; tags are not deployed-FK proof."
+      },
+      {
+        "path": "backend/db/models/conversation.go",
+        "referenceId": "S04",
+        "firstLine": 18,
+        "lastLine": 19,
+        "topic": "Conversation association fields."
+      },
+      {
+        "path": "backend/db/mysql.go",
+        "referenceId": "S02",
+        "firstLine": 41,
+        "lastLine": 60,
+        "topic": "AutoMigrate and raw SQL unique-index setup."
+      },
+      {
+        "path": "backend/pkg/helpers.go",
+        "referenceId": "S17",
+        "firstLine": 27,
+        "lastLine": 27,
+        "topic": "NewUUID helper; correct source path after initial root guess."
+      },
+      {
+        "path": "backend/api/handlers/demo.go",
+        "referenceId": "S13",
+        "firstLine": 361,
+        "lastLine": 368,
+        "topic": "Demo import creates Jobs and terminal JobRuns."
+      }
+    ],
+    "firstPassApprovalInferred": false
+  },
+  "workerNavigationNotes": [
+    "An initial attempted path backend/db/models/notification_log.go was absent; NotificationLog is defined in backend/db/models/setting.go and the final citation uses setting.go. This was a navigation miss corrected before the static check."
+  ],
+  "workerReviewState": {
+    "workerFirstPass": "SUBMITTED_PENDING_INDEPENDENT_REVIEW",
+    "independentReviewer": "Codex /root",
+    "workerRepairRounds": 0,
+    "selfReviewOrApproval": false,
+    "implementationReady": false,
+    "proposedDisposition": "DOCUMENTARY_GATE_ACCEPTED_FOR_PROPOSED_CONTRACT_WITH_RUNTIME_VALIDATION_OPEN",
+    "unresolvedBlockers": [
+      "Actual generated/installed foreign-key, isolation, and lock behavior is unknown.",
+      "Old-writer and terminal-tail quiescence/cutover evidence is unavailable.",
+      "Backup-restore or other reused-identity incarnation control is unresolved.",
+      "Durable notification attempt identity and outcome persistence are unresolved."
+    ],
+    "costAndTime": "Not measured."
+  },
+  "workerStaticValidationHistory": [
+    {
+      "attempt": 1,
+      "result": "PASS",
+      "checks": "Computed all cited input Git-blob SHA-1 and physical SHA-256 values and line counts; checked every citation range, Markdown citation/reference-set equality, versioned input presence, local Markdown links, build/seed/activation commit presence, and unchanged R080/R081 backend source comparisons. No tests, gates, app, provider, DB, host, container, credential, or browser invocation."
+    }
+  ],
+  "artifactScope": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+    "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json"
+  ],
+  "identityLimit": "Git blob SHA-1, physical SHA-256, and citation ranges bind these local bytes. They do not identify deployed binaries or databases and do not prove fencing, recovery, remote effect outcomes, fleet adoption, or CVF governance.",
+  "selfIdentityExclusion": "This JSON is linked from the addendum and excluded from its own inputs to avoid a self-referential hash. Root may bind its final committed blob after independent review.",
+  "rootMechanicalCorrection": {
+    "author": "Codex /root metadata REPAIR_WORKER",
+    "originalPacketCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+    "meaning": "Six original raw byte Git object hashes normalized to repository filtered blob identity. Physical SHA256 retained. Original packet and worker PASS retained; not semantic approval.",
+    "corrections": [
+      {
+        "path": "backend/go.mod",
+        "originalRawPhysicalGitObjectSha1": "5cdbd2b20f3fc4c23d2f57f56b09d350f1baf752",
+        "repositoryFilteredGitBlobSha1": "2147c98e2c1de836a0fe46615534ebd702ca9847"
+      },
+      {
+        "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+        "originalRawPhysicalGitObjectSha1": "4164fa49e92ff4e62f2803fd313320aa90e83f5e",
+        "repositoryFilteredGitBlobSha1": "52e1c3b00a90c1758534e074a2efb46fcef13e37"
+      },
+      {
+        "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+        "originalRawPhysicalGitObjectSha1": "4e94b421bcdddecef65bc7bac8f314f5dd9611b3",
+        "repositoryFilteredGitBlobSha1": "d32c2164f82e6ccce9f53af9c7b8d9bcaab1440a"
+      },
+      {
+        "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+        "originalRawPhysicalGitObjectSha1": "27823584baba4508e825e94f2145d3969c9bd67a",
+        "repositoryFilteredGitBlobSha1": "3fc91963415571914368550efdc2efa739b00e9f"
+      },
+      {
+        "path": "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+        "originalRawPhysicalGitObjectSha1": "10b0cd80f9bd084dae42ba93764d1286523011c0",
+        "repositoryFilteredGitBlobSha1": "e764a6519cdac886314367c98f8d9351f34a7a81"
+      },
+      {
+        "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
+        "originalRawPhysicalGitObjectSha1": "afe4cb055549b9428ac0b65c9fe1268b057ce334",
+        "repositoryFilteredGitBlobSha1": "e62d776e111af51596cebe2c6a19ce769357ed25"
+      }
+    ]
+  }
+}

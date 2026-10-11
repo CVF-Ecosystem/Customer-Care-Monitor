@@ -1,0 +1,28 @@
+{
+  "scope": "R085 worker evidence helper errors; separate from the single fixture campaign result",
+  "fixtureCampaignsStarted": 1,
+  "fixtureCampaignsRetried": 0,
+  "errors": [
+    {
+      "stage": "preflight-helper-attempt-1",
+      "kind": "python temporary import failure",
+      "detail": "The importlib-loaded module was not registered in sys.modules; the dataclass decorator raised AttributeError because the module lookup returned None.",
+      "fixtureCliProcessCreated": false,
+      "nativeResourcesCreated": false
+    },
+    {
+      "stage": "preflight-helper-attempt-2",
+      "kind": "preflight result-key error",
+      "detail": "collect_source_identity completed, then the wrapper comparator asked for result key files instead of currentFiles and raised KeyError.",
+      "fixtureCliProcessCreated": false,
+      "nativeResourcesCreated": false
+    },
+    {
+      "stage": "post-campaign-binding-write",
+      "kind": "PowerShell post-processing expression error",
+      "detail": "The binding hashtable used (if(...)) as a value; PowerShell treated if as a command and stopped before writing the sidecar. The campaign process had already exited; this did not trigger a replay or affect cleanup.",
+      "fixtureCliProcessCreated": false,
+      "nativeResourcesCreated": false
+    }
+  ]
+}

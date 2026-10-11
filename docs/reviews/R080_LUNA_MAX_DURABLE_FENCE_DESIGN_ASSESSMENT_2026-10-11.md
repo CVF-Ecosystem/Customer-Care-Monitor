@@ -1,0 +1,13 @@
+# R080 Luna max durable-fence design assessment
+
+Fresh R1 intended architecture/spec sample, gpt-6-luna max, independent root review. This sample is separate from prior implementation, audit, design, topology and prerequisite samples; their five arrays are preserved exactly. No matched comparison or measured inference time, tokens or model cost is available.
+
+First packet `315b48f0cc17475c984ead9667fb7df9cce76e0c`: CHANGES_REQUIRED. The worker selected a DB-owned generation/grant, mapped shared executor and effect/deletion paths, covered terminal-tail lifetime and external limits, and produced independently valid identities. Three substantive findings prevented acceptance: global exclusion/rollback inferred from uncertain commits, a mutex rule inconsistent with current publish/cancel serialization, and an incomplete finite later budget/test-path proposal. Static validity did not establish the design invariants.
+
+Root directly corrected activity helper citation, a worker-only repository-test qualifier, and pre-dispatch table consistency. Root did not draft substantive design repair prose. One same-scope worker prose repair was independently accepted at packet `402d6a6f64c67dc6af62a7e2a73064cc628e06b8`, for intended architecture/spec only. Worker transferred final identity refresh/static checks to root after a JS parse failure before execution; this assistance and failure are retained separately. Product/test repairs0, application/provider/DB/network effects0. Future tests are NOT_RUN; root46 gate units PASS38.818s check repository metadata only.
+
+Root assistance and errors remain separately attributed in the [review](DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md) and [ledger](LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json): supplied contract and source navigation, consolidated findings, mechanical changes; Windows rg errors, lineage-checker schema assumption, stale publication projection, and precommit catalog/history failures. Worker preparation checker normalization failure is retained separately; it was corrected before the first static pass.
+
+Task-fit observation is provisional: Luna max can produce a broad source-backed design packet, but ownership/transaction safety requires independent review. This sample does not establish superiority, speed or cost relative to another model. Intended design acceptance cannot prove installed fencing, owner-death recovery, deployed compatibility or CVF runtime governance. Facebook/Zalo OA remains parked.
+
+Root later verified the original S07 citation already covered RunReserved148–183. Its broader273 extension was valid but unnecessary; the mistaken missing-executor attribution is root overhead, not a worker citation defect.

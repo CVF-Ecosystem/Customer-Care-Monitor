@@ -1,9 +1,16 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-12",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {
+      "id": "learning-orchestrator-roadmap-control",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_orchestrator_roadmap_control.md",
+      "status": "ACTIVE",
+      "description": "Root orchestration drift finding: finite product milestones, prerequisite stop conditions, proactive reassessment and plain-language noncoder handback; effectiveness not yet verified, upstream not sent."
+    },
     {
       "id": "historical-mcp-job-execution-handoff",
       "family": "continuity",
@@ -2324,9 +2331,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Active R075 BUILD ordinary branch publication; no app/runtime effects."
+      "description": "Active R086 source-only mount lifecycle completion; R085 failed retained, no effects."
     },
     {
       "id": "r060-work-order",
@@ -5897,6 +5904,1483 @@
       "family": "continuity",
       "status": "ACTIVE",
       "description": "Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim."
+    },
+    {
+      "id": "r075-review-001",
+      "path": "docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 independent source publication review; receipt follow-up conditional, no live or Actions claim."
+    },
+    {
+      "id": "runtime076-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Historical R075 FROZEN publication; closure remote SHA verified."
+    },
+    {
+      "id": "runtime076-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-076.json",
+      "status": "ACTIVE",
+      "description": "Immutable root-seeded R1 source-only design authority; Luna max."
+    },
+    {
+      "id": "runtime076-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-076.json",
+      "status": "ACTIVE",
+      "description": "R076 documentary state and independent role contract."
+    },
+    {
+      "id": "runtime076-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_076.md",
+      "status": "ACTIVE",
+      "description": "DR01..10 bounded recovery design/spec order, application native0."
+    },
+    {
+      "id": "runtime076-decision",
+      "family": "continuity",
+      "path": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Accepted intended recovery decision after independent document repair; implementation OPEN."
+    },
+    {
+      "id": "runtime076-spec",
+      "family": "continuity",
+      "path": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "DR01..10 intended contract and future AR/NC matrix; implementation not dispatched."
+    },
+    {
+      "id": "runtime076-identity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r076_source_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "First document source13/input5 identity; no runtime or deployed proof."
+    },
+    {
+      "id": "runtime076-first-findings",
+      "family": "continuity",
+      "path": "docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Independent documentary CHANGES_REQUIRED F1/F2/M1; no runtime/product defect reproduction."
+    },
+    {
+      "id": "runtime076-scope-proof",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r076_root_scope_review_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "Independent static source13/input5/protected367/history110/seed proof; runtime0."
+    },
+    {
+      "id": "runtime076-review",
+      "family": "continuity",
+      "path": "docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "DR01..10 intended documentary REVIEW_PASS; recovery implementation not dispatched."
+    },
+    {
+      "id": "runtime076-max-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "One separate max DESIGN/SPEC sample, first CHANGES_REQUIRED, one worker repair/root minor erratum; no matched ranking."
+    },
+    {
+      "id": "runtime076-closure",
+      "family": "continuity",
+      "path": "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Scoped local R076 documentary FREEZE only, recovery implementation/startup hardening OPEN."
+    },
+    {
+      "id": "runtime077-previous-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Historical R076 intended recovery DESIGN/SPEC local FREEZE, implementation OPEN."
+    },
+    {
+      "id": "runtime077-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-077.json",
+      "status": "ACTIVE",
+      "description": "Immutable R1 root seed for Luna max repository-only topology intake."
+    },
+    {
+      "id": "runtime077-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-077.json",
+      "status": "ACTIVE",
+      "description": "R077 documentary phase/roles/scope record."
+    },
+    {
+      "id": "runtime077-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_077.md",
+      "status": "ACTIVE",
+      "description": "TI01..08 bounded repository topology/intended hardening draft, application native0."
+    },
+    {
+      "id": "runtime077-intake",
+      "family": "continuity",
+      "path": "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Worker source-only topology facts and deployed UNKNOWN; no runtime proof."
+    },
+    {
+      "id": "runtime077-draft",
+      "family": "continuity",
+      "path": "docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Nonbinding separate R2 startup no-rewrite proposal; no implementation dispatch."
+    },
+    {
+      "id": "runtime077-identity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r077_topology_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "Worker versioned source/input hashes and source-only limits."
+    },
+    {
+      "id": "runtime077-first-findings",
+      "family": "continuity",
+      "path": "docs/reviews/R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "First packet CHANGES_REQUIRED F1/F2; root M1 navigation repair, history retained."
+    },
+    {
+      "id": "runtime077-review",
+      "family": "continuity",
+      "path": "docs/reviews/R077_INDEPENDENT_TOPOLOGY_INTAKE_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Independent TI01..08 documentary REVIEW_PASS; source hardening not dispatched."
+    },
+    {
+      "id": "runtime077-max-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Separate max topology sample with first findings/one repair/root assistance, no ranking."
+    },
+    {
+      "id": "runtime077-scope-proof",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r077_root_scope_review_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "Independent static source14/input6/protected370/history112/seed identity proof, runtime0."
+    },
+    {
+      "id": "runtime077-closure",
+      "family": "continuity",
+      "path": "docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Local R077 documentary FREEZE only; separate R2 startup hardening next, not dispatched."
+    },
+    {
+      "id": "runtime078-previous-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Historical R077 documentary intake/proposal FREEZE."
+    },
+    {
+      "id": "runtime078-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-078.json",
+      "status": "ACTIVE",
+      "description": "Immutable root R2 startup hardening/offline disposable DB seed."
+    },
+    {
+      "id": "runtime078-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-078.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded phases/roles/evidence record."
+    },
+    {
+      "id": "runtime078-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_078.md",
+      "status": "ACTIVE",
+      "description": "SH01..07 exact2 source/test scope and max8Go/no retry validation."
+    },
+    {
+      "id": "runtime078-evidence-0001",
+      "family": "continuity",
+      "path": "docs/reviews/R078_FIRST_STATIC_FINDINGS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0002",
+      "family": "continuity",
+      "path": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0003",
+      "family": "continuity",
+      "path": "docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0004",
+      "family": "continuity",
+      "path": "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_diff.patch",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_runtime_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_root_evidence_audit.py",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_backend_binding_static.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0034",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_diff.patch",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0035",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0036",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0038",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_mutation_static.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0039",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0043",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0044",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0045",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0047",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_runtime_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0050",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0052",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0053",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0054",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_root_final_audit.json",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0055",
+      "family": "continuity",
+      "path": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 scoped local startup closure after independent review22ac133; runtime8/8 synthetic only, recovery/live/deployed remain open."
+    },
+    {
+      "id": "runtime078-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Historical R078 synthetic startup closure; exact source/review and runtime limits retained."
+    },
+    {
+      "id": "runtime079-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-079.json",
+      "status": "ACTIVE",
+      "description": "Immutable R079 R1 prerequisite-intake seed committed before BUILD."
+    },
+    {
+      "id": "runtime079-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-079.json",
+      "status": "ACTIVE",
+      "description": "R079 bounded documentary phase/role/scope record."
+    },
+    {
+      "id": "runtime079-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_079.md",
+      "status": "ACTIVE",
+      "description": "R079 PF01..08 exact3 documents only; next design draft nonbinding."
+    },
+    {
+      "id": "runtime079-evidence-0001",
+      "family": "continuity",
+      "path": "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0002",
+      "family": "continuity",
+      "path": "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r079_source_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r079_independent_first_audit.json",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0006",
+      "family": "continuity",
+      "path": "docs/reviews/R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 independent documentary acceptance and separate Luna max quality assessment; no runtime claim."
+    },
+    {
+      "id": "runtime079-evidence-0007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r079_independent_final_audit.json",
+      "status": "ACTIVE",
+      "description": "R079 independent documentary acceptance and separate Luna max quality assessment; no runtime claim."
+    },
+    {
+      "id": "runtime079-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 scoped local intake/proposal closure after independent498fe42; durable fence/recovery and deployed facts unresolved."
+    },
+    {
+      "id": "runtime080-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-080.json",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-080.json",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_080.md",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0010",
+      "family": "continuity",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r080_first_root_static_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r080_independent_final_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved."
+    },
+    {
+      "id": "runtime080-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved."
+    },
+    {
+      "id": "runtime080-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 scoped local intended design/proposal closure; implementation/recovery OPEN and deployed UNKNOWN."
+    },
+    {
+      "id": "runtime081-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-081.json",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-081.json",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0010",
+      "family": "continuity",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 first documentary packet and independent identity audit; implementation/runtime acceptance open."
+    },
+    {
+      "id": "runtime081-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 first documentary packet and independent identity audit; implementation/runtime acceptance open."
+    },
+    {
+      "id": "runtime081-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 first documentary packet and independent identity audit; implementation/runtime acceptance open."
+    },
+    {
+      "id": "runtime081-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_independent_source_review_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 local returned-review publication identities/protections/checks; CHANGES_REQUIRED/FREEZE OPEN, no closure/runtime claim."
+    },
+    {
+      "id": "runtime082-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-082.json",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_082.md",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0010",
+      "family": "continuity",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r082_fence_blocker_resolution_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r082_independent_initial_identity_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r082_independent_final_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R082 final original-finding recheck identity/protection receipt; worker failures retained, no runtime proof."
+    },
+    {
+      "id": "runtime082-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Separate Luna max R082 repair-assisted documentary quality sample; first/repair failures retained."
+    },
+    {
+      "id": "runtime082-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 scoped intended-contract documentary closure only; runtime/readiness and R081 remain open."
+    },
+    {
+      "id": "runtime083-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-083.json",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-083.json",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_083.md",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0010",
+      "family": "continuity",
+      "path": "scripts/jobrun_fence_fixture.py",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0011",
+      "family": "continuity",
+      "path": "scripts/tests/test_jobrun_fence_fixture.py",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/protected-audit.json",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/receipt.json",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/repair-unit-metadata.json",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/repair-unit.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/repair-unit.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime084-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-084.json",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-084.json",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_084.md",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/protected-audit.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/receipt.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/launcher-error.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/post-suite-identities.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities-final.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/suite-execution.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/worker-completion-receipt.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0040",
+      "family": "continuity",
+      "path": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 scoped source-only F1/F3 completion closure; actual fixture/runtime/readiness remain open, no effect authority."
+    },
+    {
+      "id": "runtime085-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-085.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-085.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_085.md",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/intake/owner_mysql_status.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
+      "status": "ACTIVE",
+      "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0007",
+      "family": "continuity",
+      "path": "docs/reviews/R085_LOCAL_FIXTURE_WORKER_EXECUTION_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/39cd4dbacf3744bc8ea39f413b33e4d4/manifest.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/root_checks/worker_result_check.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/authority-binding-39cd4dbacf3744bc8ea39f413b33e4d4.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher-errors.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/manifest-paths-before.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/preflight.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/process-started.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stderr.raw.bin",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stdout.raw.bin",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0018",
+      "family": "continuity",
+      "path": "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0019",
+      "family": "continuity",
+      "path": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/root_checks/final_file_audit.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/root_checks/docs_build_result.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/root_checks/returned_review_receipt.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-086.json",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-086.json",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_086.md",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/R086_MOUNT_LIFECYCLE_SOURCE_COMPLETION_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/protected_audit.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/capture_worker_suite.py",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_edit_baseline.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_suite_helper_failure_summary.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.py",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_raw_summary.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_receipt.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_stderr.raw.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_stdout.raw.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_launcher_errors.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0018",
+      "family": "continuity",
+      "path": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_unit/receipt.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_unit/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
     }
   ]
 }

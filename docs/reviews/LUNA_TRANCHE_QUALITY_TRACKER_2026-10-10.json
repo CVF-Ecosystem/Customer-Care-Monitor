@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-12",
   "ownerInstruction": "Track Luna quality separately for every tranche; cumulative empirical report, reviewer/root defects separate, no unmatched cost/speed ranking.",
   "workerModel": {
     "model": "gpt-6-luna",
-    "reasoningEffort": "xhigh"
+    "reasoningEffort": "max"
   },
   "method": "Record original first source/launch/compile/positive, accepted product findings/repair rounds, test semantic sensitivity/final result, evidence-tool findings and parent assistance. Values unavailable remain null with reason. Compare fresh vs inherited and workload classes separately; runtime walltime is not inference/development time. Never reclassify historical failures after later PASS.",
   "comparisonLimit": "R067 inherited, R068/R071 fresh but differing parser/consumer scopes and harness assistance; Sol R065 engine/DB differs. No matched A/B or token/cost/model-time telemetry.",
@@ -313,6 +313,67 @@
       "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
       "closureNativeInvocations": 0,
       "localClosureCommit": "d32c1c7cb1193fea0b0c7e3f9f3c2473c7074b10"
+    },
+    {
+      "id": "CCMAI-RUNTIME-078",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "workload": "Go scheduler startup no-rewrite with isolated synthetic DB controls",
+      "start": "FRESH_IMPLEMENTATION_INHERITED_ACCEPTED_SPEC_NO_SOURCE_DRAFT",
+      "firstSourceCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
+      "finalSourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+      "assessment": "docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md",
+      "finalDisposition": "FROZEN_LOCAL_SYNTHETIC_STARTUP_ONLY",
+      "firstStaticHandback": "CHANGES_REQUIRED_F1_TEST_CONTROLS_F2_RUNNER_GUARDS",
+      "originalFirstSourceCompile": "NOT_RUN_STATIC_REPAIR_PRECEDED_RUNTIME",
+      "originalFirstSourcePositive": "NOT_RUN_STATIC_REPAIR_PRECEDED_RUNTIME",
+      "firstActualCompile": "PASS_AFTER_STATIC_REPAIR",
+      "firstActualPositive": "PASS12TOP16EVENTS_AFTER_STATIC_REPAIR",
+      "productSemanticRepairRounds": 0,
+      "newTestRepairRounds": 1,
+      "evidenceRunnerRepairRounds": 1,
+      "consolidatedRepairRounds": 1,
+      "acceptedProductFindings": [],
+      "workerTestFindings": [
+        "F1 unrelated-job/different-tenant row snapshots",
+        "F1 direct cancellation-context discrimination"
+      ],
+      "workerEvidenceFindings": [
+        "F2 anchored legacy mutation counts",
+        "F2 cumulative source/tree binding",
+        "F2 guarded TEMP-owned cleanup",
+        "F2 typed/raw-hash summary and nonzero publication failure"
+      ],
+      "rootFindings": [
+        "continuity projection correction",
+        "guessed lookup paths",
+        "failed quoted Python metadata edit",
+        "copied reviewer actor label corrected before runtime",
+        "first final gate6/7: root used descriptive disposition instead of exact REVIEW_PASS enum; corrected metadata before commit, no runtime replay"
+      ],
+      "parentAssistance": "Root bounded order/acceptance, source/fixture pointers, consolidated findings, source/archive metadata binding, reviewed harness reuse and separate raw auditor; no source/test implementation draft.",
+      "finalLocalEvidence": "Each worker/root buildPASS; positive/restored12top16PASS no skips; M01 SH02 named attempted-updateFAIL with SH04PASS; full restoration and exact cleanup PASS.",
+      "actualGoInvocations": {
+        "worker": 4,
+        "reviewer": 4,
+        "aggregate": 8,
+        "retries": 0
+      },
+      "modelTokenCost": null,
+      "modelInferenceSeconds": null,
+      "measurementLimit": "No model usage telemetry or matched max/xhigh/Sol comparison; native runtime is not inference time.",
+      "normalizedQuality": {
+        "primaryTaskClass": "bounded_scheduler_startup_hardening",
+        "secondaryTaskClass": "discriminating_synthetic_database_tests_and_evidence_tooling",
+        "productSemanticRepairRounds": 0,
+        "newTestRepairRounds": 1,
+        "rootFindingsExcludedFromWorkerProductQuality": true,
+        "historicalFieldsRetained": true
+      },
+      "independentReviewCommit": "22ac133f53da588456c280b41cf68f4b1546f046",
+      "closureEvidence": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md"
     }
   ],
   "taskFitClassification": {
@@ -460,6 +521,434 @@
       "independentReviewCommit": "1d95a18e22d79c59ad47eb552688ffbfc2e96012",
       "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
       "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d"
+    }
+  ],
+  "taskFitClassificationScope": "Existing taskFitClassification is historical as-of2026-10-10 xhigh; max design sample below is separate, not an implementation sample or matched comparison.",
+  "currentRouting": {
+    "ownerInstructionDate": "2026-10-11",
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max",
+    "assessment": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
+    "comparison": "NO_MATCHED_COMPARISON"
+  },
+  "designSpecSamples": [
+    {
+      "id": "CCMAI-RUNTIME-076",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "recovery_design_spec",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "63c388df11874d63f9c899725555fc011d76556b",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "substantiveDocumentFindings": [
+        "F1_abort_persisted_state_overgeneralization",
+        "F2_release_and_continuous_exclusion_contract"
+      ],
+      "mechanicalFindings": [
+        "M1_paired_links"
+      ],
+      "workerDocumentRepairRounds": 1,
+      "workerRepairCommit": "9c08499f9e9e755b6f65b1904f90a925d7ce72ed",
+      "rootMechanicalErratumCommit": "3eb64509cd958c7652b61c66f145476b07a8fa18",
+      "rootOriginError": "Source range upper bound404 supplied; actual398.",
+      "workerValidationLimitation": "Propagated supplied range without checking source end.",
+      "sourceHashInputsFirstPass": "13PASS",
+      "documentInputHashesFirstPass": "5PASS",
+      "finalDisposition": "FROZEN_LOCAL_DESIGN_SPEC_ONLY",
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "assessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+      "parentAssistance": "Root DR contract, source pointers/startup/fallback, recommendation qualification, consolidated findings and minor erratum; no root prose draft.",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_N1_DOCUMENTARY_MAX",
+      "independentReviewCommit": "4ec4599ece2bfd15ae6f70311d3666332ade26f1"
+    }
+  ],
+  "topologyIntakeSamples": [
+    {
+      "id": "CCMAI-RUNTIME-077",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "repository_topology_intake_and_nonbinding_work_order_draft",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "83b3b9589c65987fc7d034ec046284e484a55a02",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "substantiveDocumentFindings": [
+        "F1_discriminating_live_owner_fault_controls",
+        "F2_startup_attribution_and_legitimate_finalization"
+      ],
+      "mechanicalFindings": [
+        "M1_reciprocal_navigation",
+        "capture_work_order_not_immutable_seed"
+      ],
+      "workerDocumentRepairRounds": 1,
+      "workerRepairCommit": "3fe1ee82dacde5faac2387baa3418b234f722f10",
+      "rootMechanicalRepairCommit": "ab23883a44986cbd7756a0f82db3c3266cdd7d80",
+      "finalDisposition": "FROZEN_LOCAL_INTAKE_PROPOSAL_ONLY",
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "assessment": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
+      "parentAssistance": "Root TI contract/source and realStart/conditional risk clues, consolidated findings/M1 fix; no worker prose draft.",
+      "rootOriginOverhead": "Nonexistent sync recovery filename lookup corrected by rg; no product effect.",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_TOPOLOGY_DOCUMENTARY_SAMPLE",
+      "independentReviewCommit": "e343a0b42a9cc69bc5f972d36303c1d0da40f9f0"
+    }
+  ],
+  "prerequisiteIntakeSamples": [
+    {
+      "id": "CCMAI-RUNTIME-079",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "recovery_fence_prerequisite_intake_and_nonbinding_design_order",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "6df6f6ef21aee802573bd12305263f5c16581f8a",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "substantiveDocumentFindings": [
+        "F1_unknown_mixed_binary_fallback_overclaim"
+      ],
+      "mechanicalFindings": [
+        "M1_missing18_source_definitions_and_S02_test_run_navigation"
+      ],
+      "workerDocumentRepairRounds": 1,
+      "workerRepairCommit": "907568c0e0cfba8aa246e75d8a878913576c9141",
+      "rootMechanicalRepairCommits": [
+        "3134ea47feba46c5fb8acb129e9a7ab1a06e8a60",
+        "643ea0db4551534898e74067b46f12ffabc4aeca"
+      ],
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "finalDisposition": "FROZEN_LOCAL_INTAKE_AND_NONBINDING_PROPOSAL_ONLY",
+      "assessment": "docs/reviews/R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md",
+      "parentAssistance": "PF contract, source pointers before handback, consolidated F1, direct M1 references/own identities; no worker prose draft",
+      "rootOriginOverhead": "Guessed filenames/Windows rg pattern corrected; initial abbreviated tranche next-move continuity FAIL corrected before commit",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_PREREQUISITE_DOCUMENTARY_SAMPLE",
+      "independentReviewCommit": "498fe42b09faf25c69a942c90da83e592815a246",
+      "closureEvidence": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md"
+    }
+  ],
+  "durableFenceDesignSamples": [
+    {
+      "id": "CCMAI-RUNTIME-080",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "durable_jobrun_fence_intended_design_spec",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "substantiveDocumentFindings": [
+        "F1_commit_ambiguity_exclusion_rollback_overclaim",
+        "F2_owner_mutex_publication_cancel_protocol",
+        "F3_bounded_budget_exact_candidate_tests"
+      ],
+      "mechanicalFindings": [
+        "M1_activity_helper_citation",
+        "M2_worker_only_test_nonexecution_qualifier",
+        "M3_pre_dispatch_table_consistency"
+      ],
+      "workerDocumentRepairRounds": 1,
+      "workerRepairCommit": "402d6a6f64c67dc6af62a7e2a73064cc628e06b8",
+      "rootMechanicalRepairCommits": [
+        "c5f0a53aa8dbf6b1982cf8e69b095bcec9d8a833",
+        "402d6a6f64c67dc6af62a7e2a73064cc628e06b8"
+      ],
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "finalDisposition": "FROZEN_LOCAL_INTENDED_DESIGN_ONLY",
+      "assessment": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
+      "parentAssistance": "DF01..10 contract, targeted current writer/deletion source navigation and whole-effect scope; consolidated F1/F2/F3, direct M1/M2/M3 mechanical changes; no substantive worker prose draft. During repair1 prehandback, root flagged remaining same-F1 reset/admission/checkpoint phrases; no new review round or worker prose draft.",
+      "workerPreparationOverhead": "Local static checker Windows path normalization error corrected before first validation pass; retained in identity JSON. Repair1 Python wrapper JS parse failure before execution, no changes; worker transferred final identity/static validation to root.",
+      "rootOriginOverhead": "Windows rg literalglob errors corrected by explicit paths; stale publication projection6cd1ce9; root lineage checker adapted before first receipt; review publication gate FAIL5/7 unsupported catalog family/omitted REVIEW_PENDING corrected before c5f0a53.; original S07 already included RunReserved148..183, root extension273 was valid but unnecessary and incorrect missing-citation attribution corrected.",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_DURABLE_FENCE_DOCUMENTARY_SAMPLE",
+      "workerFullRepairStaticValidation": false,
+      "rootRepairIdentityRefreshTransferred": true,
+      "independentReviewCommit": "56b5328fb528a3139219740857bd5d2a8408a11b",
+      "closureEvidence": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md"
+    }
+  ],
+  "databaseIntegrationSamples": [
+    {
+      "id": "CCMAI-RUNTIME-081",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "database_fence_lock_outcome_incarnation_cutover_documentary_gate",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "finalDisposition": "REVIEW_CHANGES_REQUIRED_RETURNED_UNRESOLVED_DESIGN_BLOCKERS_FREEZE_OPEN",
+      "semanticFindingGroups": [
+        "F1_unresolved_control_choices_premature_acceptance",
+        "F2_retirement_query_implicit_parent_demo_graph",
+        "F3_source_dependency_ranges_job_fixture_census",
+        "F4_exact_future_fixture_command_binding"
+      ],
+      "mechanicalFindings": [
+        "M1_six_raw_CRLF_object_hashes_vs_repository_blobs"
+      ],
+      "rootMechanicalRepairCommit": "ca0a430c91053fd57a4152c8f2490ed1d8dd9e99",
+      "workerAuthorPasses": 1,
+      "independentReviewPasses": 1,
+      "workerDocumentRepairRounds": 0,
+      "automaticRepairCampaignAuthorized": false,
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "workerStaticChecks": 1,
+      "workerStaticResultReported": "PASS",
+      "rootFirstIdentityAudit": "FAIL_six_blob_values_physical_SHA_correct",
+      "rootCorrectedIdentityAudit": "PASS26inputs_25IDs_protected371_120_87",
+      "parentAssistance": "DG01..08 bounded order and source navigation; no substantive worker prose draft; root supplemental independent source audit/M1 minor metadata correction/returned review/next scope.",
+      "workerPreparationOverhead": "Absent backend/db/models/notification_log.go navigation corrected to setting.go before single static check.",
+      "rootOriginOverhead": "Absent uuid.go and engine/notifications.go guesses corrected to actual paths; TEMP audit citation parser adapted to inline refs/JSON schema before validation.",
+      "assessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+      "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_DATABASE_INTEGRATION_DOCUMENTARY_SAMPLE",
+      "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
+      "publicationReceipt": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
+    }
+  ],
+  "fenceBlockerResolutionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-082",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "selected_fence_blocker_resolution_documentary_contract",
+      "sampleType": "REPAIR_ASSISTED_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "semanticFindingGroups": [
+        "R1_destructive_file_tail_exclusion",
+        "R2_writer_phase_predicate_sealed_tail"
+      ],
+      "workerRepairCommit": "4b9628977d32cd35bd6c47e129cc641e270e005a",
+      "acceptedDocumentCommit": "144f68f1c0584d68c7101692478e38a73705adb2",
+      "finalDisposition": "SCOPED_DOCUMENTARY_FROZEN_AFTER_REVIEW_PASS",
+      "workerAuthorPasses": 1,
+      "independentReviewPasses": 1,
+      "finalOriginalFindingRecheck": 1,
+      "workerDocumentRepairRounds": 1,
+      "workerStaticChecks": 2,
+      "workerStaticResults": [
+        "FAIL_seed_range",
+        "FAIL_prewrite_diff_and_hardcoded_reference_count"
+      ],
+      "independentFinalArtifactCheck": "PASS",
+      "applicationNativeInvocations": 0,
+      "parentAssistance": "FR01..08/order/source pointers/consolidated R1R2/root minor citations-ranges-cwd-source-factual presentation and identities/all commits; no substantive worker design draft",
+      "rootOriginOverhead": "TEMP regex/parser/PowerShell quoting errors and absent model guesses resolved by rg; retained in reviews",
+      "assessment": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_REPAIR_ASSISTED_DOCUMENTARY_SAMPLE",
+      "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1",
+      "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
+      "localClosureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3"
+    }
+  ],
+  "fixturePrerequisiteSamples": [
+    {
+      "id": "CCMAI-RUNTIME-083",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "disposable_mysql_fixture_prerequisite_resource_harness",
+      "sampleType": "REPAIR_ASSISTED_TOOLING_RETURNED_NOT_RUNTIME_ACCEPTED",
+      "firstSourceCommit": "005c73df48eec28c8a17d833d8efc385ef070c6f",
+      "firstPassDisposition": "CHANGES_REQUIRED_F1_F2_F3_F4",
+      "workerSourceRepairRounds": 1,
+      "repairSourceCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
+      "finalOriginalFindingRecheck": 1,
+      "finalDisposition": "CHANGES_REQUIRED_F1_F3_FREEZE_OPEN_PRE_EFFECT_NOT_GRANTED",
+      "workerUnitInvocations": 2,
+      "workerUnitResults": [
+        "10PASS0.048s_REPORTED_RAW_NOT_RETAINED",
+        "18PASS0.417s_EXIT0_RAW_RETAINED"
+      ],
+      "reviewerUnitInvocations": 1,
+      "reviewerUnitResult": "18PASS0.438s_EXIT0_RAW_RETAINED",
+      "workerFixtureCampaigns": 0,
+      "reviewerFixtureCampaigns": 0,
+      "goInvocations": 0,
+      "providerInvocations": 0,
+      "automaticRetries": 0,
+      "parentAssistance": "FT01..10/consolidated F1..F4/literal grants/local socket/pre-start membership historical receipt; all commits, no substantive worker implementation draft",
+      "workerPreparationOverhead": "Repair unit metadata parser initially null count/time corrected from captured raw stderr without rerun; bytecode deletion reportedly policy rejected, root archived safely",
+      "rootOriginOverhead": "Navigation guesses/PowerShell wildcard errors; raw CRLF seed comparison corrected to filtered Git identity; review read output truncation recovered by targeted slices and raw evidence filename typo corrected",
+      "assessment": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_REPAIR_ASSISTED_R2_TOOLING_SAMPLE",
+      "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
+    }
+  ],
+  "fixtureSourceCompletionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-084",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "directed_fixture_resource_safety_source_completion",
+      "sampleType": "DIRECTED_COMPLETION_INHERITED_R083_NOT_FRESH_DESIGN",
+      "firstSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+      "firstPassDisposition": "REVIEW_PASS_SOURCE_ONLY_COMPLETION",
+      "workerCompletionPasses": 1,
+      "workerSourceRepairRounds": 0,
+      "workerUnitInvocations": 1,
+      "workerRawUnitResult": "23PASS0.602s_EXIT0",
+      "workerProcessMilliseconds": 3606.206,
+      "workerPreProcessLauncherFailures": 1,
+      "reviewerUnitInvocations": 1,
+      "reviewerRawUnitResult": "23PASS0.331s_EXIT0",
+      "uniqueTests": 23,
+      "preservedOldTests": 18,
+      "addedTestMethods": 5,
+      "runtimeFixtureCampaigns": 0,
+      "goInvocations": 0,
+      "providerInvocations": 0,
+      "automaticRetries": 0,
+      "finalDisposition": "SCOPED_SOURCE_ONLY_FROZEN_AFTER_REVIEW_PASS",
+      "parentAssistance": "SC01..07 explicit call-order/raisedcreate/cleanup controls, all lifecycle/commits/independent review; no substantive worker implementation draft",
+      "workerPreparationOverhead": "multiplePython executable launcher rejection/nullwrapper before process; corrected executable, one suite only, post-compaction rehydration; failures preserved",
+      "rootOriginOverhead": "initial combined read truncated, targeted recovery; expected not-yet-created receipt path navigation",
+      "assessment": "docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_DIRECTED_SOURCE_COMPLETION_SAMPLE",
+      "independentReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+      "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
+      "localClosureCommit": "5a681d7380773aa0e7b3064f61eeaf9c63787fdb"
+    }
+  ],
+  "localFixtureExecutionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-085",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "primaryTaskClass": "bounded_native_fixture_execution",
+      "secondaryTaskClass": "evidence_capture",
+      "complexity": "R2 inherited reviewed tool; no source changes; one local Docker campaign",
+      "inputNovelty": "INHERITED_ACCEPTED_SOURCE67E76DE",
+      "firstCampaign": "FAILED_MOUNT_INVALID_EXIT2_BEFORE_START_SQL",
+      "workerCampaigns": 1,
+      "reviewerCampaigns": 0,
+      "automaticRetries": 0,
+      "sourceRepairRounds": 0,
+      "workerNativeWallSeconds": 3.922119,
+      "cleanup": "VERIFIED_CLEAN_ROOT_EXACT_ID_NAME_CONFIRMED",
+      "ownerDatabase": "SAME_ID_IMAGE_RUNNING_HEALTHY_SELECTED_METADATA",
+      "workerAcknowledgmentDefects": [
+        "core hash transcription",
+        "wrong parked field selector"
+      ],
+      "workerEvidenceHelperDefects": [
+        "temporary module import registration",
+        "source result-key typo",
+        "post-run PowerShell sidecar expression"
+      ],
+      "errorTraceEvidence": "WORKER_DESCRIBED_SUMMARIES_RAW_EXCEPTION_TRACES_NOT_RETAINED",
+      "inheritedSourceFinding": "pre-start resolved Mounts requirement; F1 distinct new lifecycle root cause; exact raw Mounts value not retained",
+      "rootAssistance": [
+        "acceptance contract/authority/safety release",
+        "standard import launcher guidance/minimal capture reminders",
+        "independent source/cleanup/existing-status/protection audit",
+        "all commits/catalog/continuity"
+      ],
+      "rootDefects": [
+        "initial baseline dependency/gates ordering corrected before effects",
+        "normalized-versus-physical seed comparison corrected",
+        "pre-effect review missed mount lifecycle compatibility"
+      ],
+      "assessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+      "review": "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md",
+      "executionEvidenceCommit": "147be5b6e5756077f97833194ca0f9fa1b5ea390",
+      "finalDisposition": "CHANGES_REQUIRED_FREEZE_OPEN",
+      "modelInferenceSeconds": null,
+      "modelTokens": null,
+      "modelCost": null,
+      "measurementLimit": "Only native process walltime measured; no matched model comparison or efficiency ranking."
+    }
+  ],
+  "mountLifecycleCompletionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-086",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "primaryTaskClass": "directed_resource_harness_source_completion",
+      "secondaryTaskClass": "phase_sensitive_negative_test_and_evidence_capture",
+      "complexity": "R2 resource safety; one source pass; explicit ML01..07; no native effects",
+      "inputNovelty": "INHERITED_SOURCE67E76DE_NEW_NATIVE_MOUNT_FAILURE_R085",
+      "firstSourceCommit": "511f8b4a660571feb016534d3c602360f2aa3f35",
+      "firstWorkerSuite": "27PASS1.531s_EXIT0_PROCESS1_NO_REPLAY",
+      "firstReviewerSuite": "27PASS0.879s_EXIT0_PROCESS1",
+      "sourceRepairRounds": 0,
+      "workerCampaigns": 0,
+      "reviewerCampaigns": 0,
+      "preBuildAcknowledgment": "FIRST_ACK_CANONICAL_FIELDS_CORRECT",
+      "rootAssistance": [
+        "explicit acceptance ML01..07",
+        "authority/lifecycle/commit ownership",
+        "planned independent source/receipt/protected/test-body review",
+        "interim pre-suite static oracle/fact-name review",
+        "pending-empty versus strict-started NetworkID coverage clarification",
+        "clarified existing static-prep authority versus failed-suite stop, author pass unchanged"
+      ],
+      "rootImplementationDraft": false,
+      "sourceImplementation": "INDEPENDENT_SOURCE_REVIEW_PASS",
+      "finalDisposition": "REVIEW_PASS_SOURCE_ONLY_FREEZE_OPEN_INHERITED_DOCS55",
+      "modelInferenceSeconds": null,
+      "modelTokens": null,
+      "modelCost": null,
+      "measurementLimit": "No model telemetry or matched comparison; source-only units cannot prove Docker mount compatibility or SQL readiness.",
+      "preSuiteRootStaticFindings": [
+        "positive lifecycle oracle events.index selects first equal inspect tuple",
+        "conditional task assertion admits dual receipt schemas",
+        "configured options authorization field actually checks string presence"
+      ],
+      "preSuiteCorrectionStatus": "CORRECTED_BEFORE_SOLE_SUITE_WITH_ROOT_ASSISTANCE",
+      "workerPreparationFindings": [
+        "static helper asserted26 when actual23+4=27, no suite launched",
+        "worker incorrectly treated static-helper failure as stop despite BUILD explicitly permitting pre-suite preparation correction"
+      ],
+      "workerHarnessProcessWallSeconds": 2.077573,
+      "workerEvidenceParserDefect": "CRLF regex missed count; original null receipt retained, separate raw-derived27summary",
+      "expectedConcurrentRootLedgerUpdateReportedByWorker": true,
+      "reviewerHarnessProcessWallSeconds": 1.803184,
+      "assessment": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
+      "review": "docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md",
+      "rootPublicationDefect": "First6/7 preflights: descriptive disposition incompatible with REVIEW_PASS literal gate; canonical field corrected, scope/freezeblocker retained, no source/test rerun"
     }
   ]
 }

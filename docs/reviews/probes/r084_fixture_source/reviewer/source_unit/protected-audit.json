@@ -1,0 +1,64 @@
+{
+  "baseCommit": "4b1a6d58e247a657317b93d3367d16a404693968",
+  "reviewedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+  "protectedCount": 1850,
+  "changedProtected": [],
+  "historicalArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true,
+    "durableFenceDesignSamples": true,
+    "databaseIntegrationSamples": true,
+    "fenceBlockerResolutionSamples": true,
+    "fixturePrerequisiteSamples": true
+  },
+  "immutableSeed": {
+    "firstCommit": "0fe93974de135ab4c83888d5f8f39e0b4128e73f",
+    "filteredUnchanged": true
+  },
+  "sourceFiles": {
+    "scripts/jobrun_fence_fixture.py": {
+      "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+      "physicalLength": 72611,
+      "filteredGitBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+      "committedBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a"
+    },
+    "scripts/tests/test_jobrun_fence_fixture.py": {
+      "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+      "physicalLength": 41950,
+      "filteredGitBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+      "committedBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea"
+    },
+    "docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md": {
+      "physicalSha256": "8d2bbfb0340eaf0769f1cbddd5f6147c8ca8911d09c239ccbe019bc8e9541d92",
+      "physicalLength": 5120,
+      "filteredGitBlob": "f6c18caabd82e03b1350707cfa297db844a168fb",
+      "committedBlob": "f6c18caabd82e03b1350707cfa297db844a168fb"
+    }
+  },
+  "testInventory": {
+    "oldNamesCount": 18,
+    "currentNamesCount": 23,
+    "removedNames": [],
+    "addedNames": [
+      "test_native_container_timeout_reconciles_owned_resource_and_cleans_both_ids",
+      "test_native_network_timeout_is_reconciled_or_retained_without_false_absence",
+      "test_started_ownership_validation_precedes_every_mysql_call",
+      "test_thrown_container_remove_failure_keeps_ids_and_never_claims_absence",
+      "test_unresolved_container_timeout_preserves_receipt_and_cleans_known_network"
+    ]
+  },
+  "pass": true,
+  "claimScope": "source identities/protection/test inventory only, no runtime fixture or CVF governance proof",
+  "reviewerBeforeAfterEqual": true,
+  "workerCapturedSourceMatchesCurrent": true,
+  "unitInvocations": {
+    "worker": 1,
+    "reviewer": 1
+  },
+  "workerLauncherFailuresBeforeProcess": 1,
+  "effects": 0,
+  "preEffectApproval": "NOT_GRANTED"
+}

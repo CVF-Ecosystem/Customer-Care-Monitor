@@ -1,0 +1,1030 @@
+{
+  "sourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+  "worker": "Codex /root/r078_worker",
+  "scope": "scheduler_startup_hardening_synthetic_local_only",
+  "campaigns": 1,
+  "goInvocations": {
+    "build": 1,
+    "tests": 3
+  },
+  "automaticRetries": 0,
+  "commands": [
+    {
+      "label": "build",
+      "container": "ccmai-r078-worker-build-d7a74fc438",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r078-worker-build-d7a74fc438",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r078-worker-build-cache-d7a74fc438,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "golang:1.26-alpine",
+        "go",
+        "build",
+        "-o",
+        "/tmp/r078-backend",
+        "."
+      ],
+      "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+      "network": "none",
+      "ports": {},
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend",
+          "Destination": "/src",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+          "Destination": "/go/pkg/mod",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "volume",
+          "Name": "ccmai-r078-worker-build-cache-d7a74fc438",
+          "Source": "/var/lib/docker/volumes/ccmai-r078-worker-build-cache-d7a74fc438/_data",
+          "Destination": "/root/.cache/go-build",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r078_worker_build_container_before.json",
+        "bytes": 6604,
+        "sha256": "bbe379cdf2fb684312652a571f6d06eb53fa518dd19833e20208bd121df9be9b"
+      },
+      "seconds": 63.851,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r078_worker_build.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r078_worker_build_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r078_worker_build_container_after.json",
+        "bytes": 7151,
+        "sha256": "981c051bec463af224bfab07aa7dd644b3bc3477abdbd05b479619c3e8b12358"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-11T06:08:58.628014321Z",
+        "FinishedAt": "2026-10-11T06:10:01.954569073Z"
+      },
+      "build": {
+        "command": [
+          "go",
+          "build",
+          "-o",
+          "/tmp/r078-backend",
+          "."
+        ],
+        "passed": true
+      }
+    },
+    {
+      "label": "positive",
+      "container": "ccmai-r078-worker-positive-d7a74fc438",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r078-worker-positive-d7a74fc438",
+        "--network",
+        "ccmai-r078-worker-net-d7a74fc438",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r078-worker-build-cache-d7a74fc438,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r078-worker-db-d7a74fc438:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=240s",
+        "-run",
+        "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+        "./engine"
+      ],
+      "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+      "network": "ccmai-r078-worker-net-d7a74fc438",
+      "ports": {},
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend",
+          "Destination": "/src",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+          "Destination": "/go/pkg/mod",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "volume",
+          "Name": "ccmai-r078-worker-build-cache-d7a74fc438",
+          "Source": "/var/lib/docker/volumes/ccmai-r078-worker-build-cache-d7a74fc438/_data",
+          "Destination": "/root/.cache/go-build",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r078_worker_positive_container_before.json",
+        "bytes": 8105,
+        "sha256": "f7e19d82eb9c1a47333975cc83536bc64eb4119097116d59a43c6032ae719121"
+      },
+      "expectedTopLevelTests": [
+        "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls",
+        "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+        "TestSH06CronLoadQueryFaultStillStartsScheduler",
+        "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+        "TestCronAndAfterSyncSkipAnOccupiedJob",
+        "TestCronVersusAfterSyncAdmitExactlyOne",
+        "TestSchedulerOwnersAreCancellableByRun",
+        "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+        "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+      ],
+      "seconds": 17.785,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r078_worker_positive.jsonl",
+        "bytes": 3939193,
+        "sha256": "bb2d78b51dde53ed95289a33cd38d5436b87209ffc771bec4c669f91ba283aa8"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r078_worker_positive_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r078_worker_positive_container_after.json",
+        "bytes": 8734,
+        "sha256": "43af5c2ae6b77441843dadaad4a179c886854b8fa43ceedf7786793b06c1f8ba"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-11T06:10:02.84198742Z",
+        "FinishedAt": "2026-10-11T06:10:20.306726618Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestCronAndAfterSyncSkipAnOccupiedJob",
+            "action": "pass"
+          },
+          {
+            "name": "TestCronVersusAfterSyncAdmitExactlyOne/cron_first",
+            "action": "pass"
+          },
+          {
+            "name": "TestCronVersusAfterSyncAdmitExactlyOne/after-sync_first",
+            "action": "pass"
+          },
+          {
+            "name": "TestCronVersusAfterSyncAdmitExactlyOne",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerOwnersAreCancellableByRun/cron",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerOwnersAreCancellableByRun/after-sync",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerOwnersAreCancellableByRun",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH04StartPreservesSyncLeaseRecoveryControls",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH06CronLoadQueryFaultStillStartsScheduler",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+            "action": "pass"
+          },
+          {
+            "name": "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 12,
+        "pass": 16,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": false
+      }
+    },
+    {
+      "label": "M01",
+      "container": "ccmai-r078-worker-M01-d7a74fc438",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r078-worker-M01-d7a74fc438",
+        "--network",
+        "ccmai-r078-worker-net-d7a74fc438",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r078-worker-build-cache-d7a74fc438,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r078-worker-db-d7a74fc438:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=240s",
+        "-run",
+        "^(TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH04StartPreservesSyncLeaseRecoveryControls)$",
+        "./engine"
+      ],
+      "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+      "network": "ccmai-r078-worker-net-d7a74fc438",
+      "ports": {},
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend",
+          "Destination": "/src",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+          "Destination": "/go/pkg/mod",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "volume",
+          "Name": "ccmai-r078-worker-build-cache-d7a74fc438",
+          "Source": "/var/lib/docker/volumes/ccmai-r078-worker-build-cache-d7a74fc438/_data",
+          "Destination": "/root/.cache/go-build",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r078_worker_M01_container_before.json",
+        "bytes": 7088,
+        "sha256": "0e8dff161a906c2d738f368009799a38e2e5a87445f9671e928dd1a015b9c68b"
+      },
+      "expectedTopLevelTests": [
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls"
+      ],
+      "seconds": 8.894,
+      "attachExit": 1,
+      "stdout": {
+        "path": "docs/reviews/probes/r078_worker_M01.jsonl",
+        "bytes": 558784,
+        "sha256": "6798b520b316cf2346815f1290c10066977ba5967ddd051fd3d4ff225fab24b8"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r078_worker_M01_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r078_worker_M01_container_after.json",
+        "bytes": 7712,
+        "sha256": "aa5996eb2418584ba28f84977777eab876c0f329908e4a5c44bbbe30d52d7589"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 1,
+        "Error": "",
+        "StartedAt": "2026-10-11T06:10:21.182534936Z",
+        "FinishedAt": "2026-10-11T06:10:29.80813184Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+            "action": "fail"
+          },
+          {
+            "name": "TestSH04StartPreservesSyncLeaseRecoveryControls",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 2,
+        "pass": 1,
+        "fail": 1,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": true
+      },
+      "mutationDisposition": "KILLED_BY_NAMED_SH02_ATTEMPTED_WRITE_ASSERTION",
+      "healthyControl": {
+        "name": "TestSH04StartPreservesSyncLeaseRecoveryControls",
+        "passed": true
+      }
+    },
+    {
+      "label": "restored",
+      "container": "ccmai-r078-worker-restored-d7a74fc438",
+      "command": [
+        "docker",
+        "create",
+        "--pull=never",
+        "--name",
+        "ccmai-r078-worker-restored-d7a74fc438",
+        "--network",
+        "ccmai-r078-worker-net-d7a74fc438",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend,target=/src,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\tiennm\\go\\pkg\\mod,target=/go/pkg/mod,readonly",
+        "--mount",
+        "type=volume,source=ccmai-r078-worker-build-cache-d7a74fc438,target=/root/.cache/go-build",
+        "-w",
+        "/src",
+        "-e",
+        "GOFLAGS=-mod=readonly",
+        "-e",
+        "GOPROXY=off",
+        "-e",
+        "GOSUMDB=off",
+        "-e",
+        "GOTOOLCHAIN=local",
+        "-e",
+        "CGO_ENABLED=0",
+        "-e",
+        "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r078-worker-db-d7a74fc438:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+        "golang:1.26-alpine",
+        "go",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=240s",
+        "-run",
+        "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+        "./engine"
+      ],
+      "imageId": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+      "network": "ccmai-r078-worker-net-d7a74fc438",
+      "ports": {},
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs\\backend",
+          "Destination": "/src",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+          "Destination": "/go/pkg/mod",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "volume",
+          "Name": "ccmai-r078-worker-build-cache-d7a74fc438",
+          "Source": "/var/lib/docker/volumes/ccmai-r078-worker-build-cache-d7a74fc438/_data",
+          "Destination": "/root/.cache/go-build",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "rawBeforeInspect": {
+        "path": "docs/reviews/probes/r078_worker_restored_container_before.json",
+        "bytes": 8105,
+        "sha256": "bccceff62654071d772171b32e0cfd6a87e3ed985fe141196012eba39825607f"
+      },
+      "expectedTopLevelTests": [
+        "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls",
+        "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+        "TestSH06CronLoadQueryFaultStillStartsScheduler",
+        "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+        "TestCronAndAfterSyncSkipAnOccupiedJob",
+        "TestCronVersusAfterSyncAdmitExactlyOne",
+        "TestSchedulerOwnersAreCancellableByRun",
+        "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+        "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+      ],
+      "seconds": 14.138,
+      "attachExit": 0,
+      "stdout": {
+        "path": "docs/reviews/probes/r078_worker_restored.jsonl",
+        "bytes": 4082746,
+        "sha256": "3cdccdc63fbfcc6fa7cb0852daf48e7d99c8d4d338587067809354b3917b0cee"
+      },
+      "stderr": {
+        "path": "docs/reviews/probes/r078_worker_restored_stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawAfterInspect": {
+        "path": "docs/reviews/probes/r078_worker_restored_container_after.json",
+        "bytes": 8735,
+        "sha256": "7376fc1d114840de09011965474ae5bb70e162db9a612472b90fdb4a0559707f"
+      },
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-11T06:10:30.505946094Z",
+        "FinishedAt": "2026-10-11T06:10:44.396282785Z"
+      },
+      "events": {
+        "completed": [
+          {
+            "name": "TestCronAndAfterSyncSkipAnOccupiedJob",
+            "action": "pass"
+          },
+          {
+            "name": "TestCronVersusAfterSyncAdmitExactlyOne/cron_first",
+            "action": "pass"
+          },
+          {
+            "name": "TestCronVersusAfterSyncAdmitExactlyOne/after-sync_first",
+            "action": "pass"
+          },
+          {
+            "name": "TestCronVersusAfterSyncAdmitExactlyOne",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerOwnersAreCancellableByRun/cron",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerOwnersAreCancellableByRun/after-sync",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerOwnersAreCancellableByRun",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH04StartPreservesSyncLeaseRecoveryControls",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH06CronLoadQueryFaultStillStartsScheduler",
+            "action": "pass"
+          },
+          {
+            "name": "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+            "action": "pass"
+          },
+          {
+            "name": "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs",
+            "action": "pass"
+          },
+          {
+            "name": "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+            "action": "pass"
+          }
+        ],
+        "topLevel": 12,
+        "pass": 16,
+        "fail": 0,
+        "skip": 0,
+        "buildOrTimeout": false,
+        "namedAssertion": false
+      }
+    }
+  ],
+  "errors": [],
+  "sourceDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-source-d7a74fc438-o6sqp0xs",
+  "cleanup": {
+    "containers": [
+      {
+        "name": "ccmai-r078-worker-restored-d7a74fc438",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r078-worker-M01-d7a74fc438",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r078-worker-positive-d7a74fc438",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r078-worker-build-d7a74fc438",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r078-worker-db-d7a74fc438",
+        "removeExit": 0,
+        "absent": true
+      }
+    ],
+    "volumes": [
+      {
+        "name": "ccmai-r078-worker-dbdata-d7a74fc438",
+        "removeExit": 0,
+        "absent": true
+      },
+      {
+        "name": "ccmai-r078-worker-build-cache-d7a74fc438",
+        "removeExit": 0,
+        "absent": true
+      }
+    ],
+    "network": {
+      "name": "ccmai-r078-worker-net-d7a74fc438",
+      "removeExit": 0,
+      "absent": true
+    },
+    "ownedResourcesOnly": true,
+    "verifiedByExactName": true,
+    "sourceSnapshot": {
+      "removed": true,
+      "alreadyAbsent": false,
+      "validatedParent": "C:\\Users\\tiennm\\AppData\\Local\\Temp",
+      "ownedPrefix": "ccmai-r078-worker-source-d7a74fc438-"
+    }
+  },
+  "infrastructureCommands": [
+    {
+      "label": "create-disposable-go-build-cache-volume",
+      "command": [
+        "docker",
+        "volume",
+        "create",
+        "ccmai-r078-worker-build-cache-d7a74fc438"
+      ],
+      "ownedResource": "ccmai-r078-worker-build-cache-d7a74fc438"
+    },
+    {
+      "label": "create-disposable-mysql-data-volume",
+      "command": [
+        "docker",
+        "volume",
+        "create",
+        "ccmai-r078-worker-dbdata-d7a74fc438"
+      ],
+      "ownedResource": "ccmai-r078-worker-dbdata-d7a74fc438"
+    },
+    {
+      "label": "create-internal-network",
+      "command": [
+        "docker",
+        "network",
+        "create",
+        "--internal",
+        "ccmai-r078-worker-net-d7a74fc438"
+      ],
+      "ownedResource": "ccmai-r078-worker-net-d7a74fc438"
+    },
+    {
+      "label": "start-synthetic-mysql",
+      "command": [
+        "docker",
+        "run",
+        "--pull=never",
+        "-d",
+        "--name",
+        "ccmai-r078-worker-db-d7a74fc438",
+        "--network",
+        "ccmai-r078-worker-net-d7a74fc438",
+        "--mount",
+        "type=volume,source=ccmai-r078-worker-dbdata-d7a74fc438,target=/var/lib/mysql",
+        "-e",
+        "MYSQL_ROOT_PASSWORD=<SYNTHETIC_FIXTURE>",
+        "-e",
+        "MYSQL_DATABASE=CCMA",
+        "-e",
+        "MYSQL_USER=ccma",
+        "-e",
+        "MYSQL_PASSWORD=<SYNTHETIC_FIXTURE>",
+        "mysql:8.0",
+        "--log-bin-trust-function-creators=1",
+        "--max-connections=1000"
+      ],
+      "ownedResource": "ccmai-r078-worker-db-d7a74fc438"
+    }
+  ],
+  "evidenceLimit": "No CVF governance, provider, deployment, or production claim.",
+  "sourceBinding": {
+    "firstSourcePacketCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
+    "boundSourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+    "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
+    "cumulativeBackendChangedPaths": [
+      "backend/engine/scheduler.go",
+      "backend/engine/scheduler_startup_hardening_test.go"
+    ],
+    "sourceBackendTree": "b7dd23b1ed9227fff1bac9e3eb26f155f3926ff5",
+    "headBackendTree": "b7dd23b1ed9227fff1bac9e3eb26f155f3926ff5",
+    "backendWorktreeClean": true
+  },
+  "images": [
+    {
+      "tag": "golang:1.26-alpine",
+      "id": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+    },
+    {
+      "tag": "mysql:8.0",
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    }
+  ],
+  "archive": {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+      "backend"
+    ],
+    "bytes": 2529280,
+    "sha256": "3f135def15d46a5a3729a5718558af882715b69e103ffc6e4db5f536136abd84"
+  },
+  "manifest": {
+    "path": "docs/reviews/probes/r078_worker_manifest.json",
+    "bytes": 35738,
+    "sha256": "b2c69f15034d7bba693731a07d69454195ac0d92934b38a493131b24550b0135"
+  },
+  "sourceChecks": [
+    {
+      "stage": "initial extraction",
+      "equal": true
+    },
+    {
+      "stage": "before build",
+      "equal": true
+    },
+    {
+      "stage": "before positive",
+      "equal": true
+    },
+    {
+      "stage": "M01 mutation applied",
+      "equal": true
+    },
+    {
+      "stage": "before M01",
+      "equal": true
+    },
+    {
+      "stage": "M01 exact restoration",
+      "equal": true
+    },
+    {
+      "stage": "before restored",
+      "equal": true
+    },
+    {
+      "stage": "final guaranteed restoration",
+      "equal": true
+    }
+  ],
+  "plannedInventory": [
+    {
+      "label": "positive",
+      "pattern": "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+      "topLevel": [
+        "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls",
+        "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+        "TestSH06CronLoadQueryFaultStillStartsScheduler",
+        "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+        "TestCronAndAfterSyncSkipAnOccupiedJob",
+        "TestCronVersusAfterSyncAdmitExactlyOne",
+        "TestSchedulerOwnersAreCancellableByRun",
+        "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+        "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+      ]
+    },
+    {
+      "label": "M01",
+      "pattern": "^(TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH04StartPreservesSyncLeaseRecoveryControls)$",
+      "topLevel": [
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls"
+      ]
+    },
+    {
+      "label": "restored",
+      "pattern": "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+      "topLevel": [
+        "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+        "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+        "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+        "TestSH04StartPreservesSyncLeaseRecoveryControls",
+        "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+        "TestSH06CronLoadQueryFaultStillStartsScheduler",
+        "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+        "TestCronAndAfterSyncSkipAnOccupiedJob",
+        "TestCronVersusAfterSyncAdmitExactlyOne",
+        "TestSchedulerOwnersAreCancellableByRun",
+        "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+        "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+      ]
+    }
+  ],
+  "preRuntimePlan": {
+    "path": "docs/reviews/probes/r078_worker_plan.json",
+    "sha256": "36bab74a619f8385676eb528386a0e44fef59d2e13f075cd5e002c27ab0bc63f",
+    "committedBeforeRuntime": true,
+    "archiveBinding": {
+      "sourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+      "archive": {
+        "command": [
+          "git",
+          "archive",
+          "--format=tar",
+          "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+          "backend"
+        ],
+        "bytes": 2529280,
+        "sha256": "3f135def15d46a5a3729a5718558af882715b69e103ffc6e4db5f536136abd84"
+      },
+      "manifestSha256": "08844248a2ee79690df308a3829f0fcac09cc06177fc381f0d7963e468250864",
+      "inventory": [
+        {
+          "label": "positive",
+          "pattern": "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+          "topLevel": [
+            "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+            "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+            "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+            "TestSH04StartPreservesSyncLeaseRecoveryControls",
+            "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+            "TestSH06CronLoadQueryFaultStillStartsScheduler",
+            "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+            "TestCronAndAfterSyncSkipAnOccupiedJob",
+            "TestCronVersusAfterSyncAdmitExactlyOne",
+            "TestSchedulerOwnersAreCancellableByRun",
+            "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+            "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+          ]
+        },
+        {
+          "label": "M01",
+          "pattern": "^(TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH04StartPreservesSyncLeaseRecoveryControls)$",
+          "topLevel": [
+            "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+            "TestSH04StartPreservesSyncLeaseRecoveryControls"
+          ]
+        },
+        {
+          "label": "restored",
+          "pattern": "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+          "topLevel": [
+            "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+            "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+            "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+            "TestSH04StartPreservesSyncLeaseRecoveryControls",
+            "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+            "TestSH06CronLoadQueryFaultStillStartsScheduler",
+            "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+            "TestCronAndAfterSyncSkipAnOccupiedJob",
+            "TestCronVersusAfterSyncAdmitExactlyOne",
+            "TestSchedulerOwnersAreCancellableByRun",
+            "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+            "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+          ]
+        }
+      ]
+    }
+  },
+  "runtimePlan": {
+    "path": "docs/reviews/probes/r078_worker_runtime_plan.json",
+    "bytes": 3629,
+    "sha256": "98116a99e0b90b58d205b062dfe0eadfa281efb0822b11fb2b7f6efe900157e0"
+  },
+  "M01Mutation": {
+    "legacyBaselineCommit": "51d09cd4cb9282f22518ac32a4edbd3226d56e36",
+    "baselineSchedulerSha256": "68f4dfbdb167acc190ae3de8532d1533f6fa2f54567f66d6e7ee4db5ea63393e",
+    "helperSourceSha256": "5918414e952cf9d90df3da30658f878408e3895b312a1114456ff28d5c5f9dc7",
+    "baselineCallExactMatchCount": 1,
+    "baselineDefinitionExactMatchCount": 1,
+    "mutantCallExactMatchCount": 1,
+    "mutantDefinitionExactMatchCount": 1,
+    "appliedInDisposableArchiveOnly": true,
+    "originalSha256": "335c5fccf1d64c0b8fdfece4c19b7f6d2e51f49494ca7fe203c587376724ffc5",
+    "mutantSha256": "99f7321189daddad61a9757301f37cfdcfad2842b991ea717f508171696510ae",
+    "diffSha256": "0c047c9c68cce6ae1e13f20427225c5138f664337a338c8f456d40b0911d66ed",
+    "diffBase64": "LS0tIGEvYmFja2VuZC9lbmdpbmUvc2NoZWR1bGVyLmdvCisrKyBiL2JhY2tlbmQvZW5naW5lL3NjaGVkdWxlci5nbwpAQCAtOTQsOCArOTQsMzYgQEAKIAkvLyBMb2FkIGFuZCBzY2hlZHVsZSBjcm9uLWJhc2VkIGFuYWx5c2lzIGpvYnMKIAlzLmxvYWRDcm9uSm9icygpCiAKKwkvLyBTYWZldHkgbmV0OiBtYXJrIGFueSBzdHVjayAicnVubmluZyIgam9icyBhcyBmYWlsZWQgb24gc3RhcnR1cAorCWNsZWFudXBTdHVja1J1bnMoKQogCXMuc2NoZWR1bGVyLlN0YXJ0KCkKIAlsb2cuUHJpbnRsbigiW3NjaGVkdWxlcl0gc3RhcnRlZCIpCit9CisKKy8vIGNsZWFudXBTdHVja1J1bnMgbWFya3MgYW55IGpvYl9ydW5zIHN0dWNrIGluICJydW5uaW5nIiBzdGF0dXMgYXMgZmFpbGVkLgorLy8gVGhpcyBoYXBwZW5zIHdoZW4gdGhlIGFwcCBjcmFzaGVzIG9yIHJlc3RhcnRzIHdoaWxlIGEgam9iIGlzIHByb2Nlc3NpbmcuCitmdW5jIGNsZWFudXBTdHVja1J1bnMoKSB7CisJLy8gT24gc3RhcnR1cCwgYW55ICJydW5uaW5nIiBqb2IgaXMgc3R1Y2sgYmVjYXVzZSB0aGUgZ29yb3V0aW5lIGRpZWQgd2l0aCB0aGUgcHJldmlvdXMgcHJvY2VzcworCXZhciBzdHVja1J1bnMgW11tb2RlbHMuSm9iUnVuCisJaWYgZXJyIDo9IGRiLkRCLldoZXJlKCJzdGF0dXMgPSA/IiwgInJ1bm5pbmciKS5GaW5kKCZzdHVja1J1bnMpLkVycm9yOyBlcnIgIT0gbmlsIHsKKwkJbG9nLlByaW50ZigiW3NjaGVkdWxlcl0gZXJyb3IgcXVlcnlpbmcgc3R1Y2sgcnVuczogJXYiLCBlcnIpCisJCXJldHVybgorCX0KKwlmb3IgXywgcnVuIDo9IHJhbmdlIHN0dWNrUnVucyB7CisJCW5vdyA6PSB0aW1lLk5vdygpCisJCWlmIGVyciA6PSBkYi5EQi5Nb2RlbCgmcnVuKS5VcGRhdGVzKG1hcFtzdHJpbmddaW50ZXJmYWNle317CisJCQkic3RhdHVzIjogICAgICAgICJmYWlsZWQiLAorCQkJImZpbmlzaGVkX2F0IjogICAmbm93LAorCQkJImVycm9yX21lc3NhZ2UiOiAiSm9iIGLhu4sgZ2nDoW4gxJFv4bqhbiBkbyBo4buHIHRo4buRbmcga2jhu59pIMSR4buZbmcgbOG6oWkuIFZ1aSBsw7JuZyBjaOG6oXkgbOG6oWkuIiwKKwkJfSkuRXJyb3I7IGVyciAhPSBuaWwgeworCQkJbG9nLlByaW50ZigiW3NjaGVkdWxlcl0gZXJyb3IgbWFya2luZyBzdHVjayBydW4gJXMgYXMgZmFpbGVkOiAldiIsIHJ1bi5JRCwgZXJyKQorCQl9IGVsc2UgeworCQkJbG9nLlByaW50ZigiW3NjaGVkdWxlcl0gbWFya2VkIHN0dWNrIHJ1biAlcyBhcyBmYWlsZWQgKHN0YXJ0ZWQ6ICV2KSIsIHJ1bi5JRCwgcnVuLlN0YXJ0ZWRBdCkKKwkJfQorCX0KKwlpZiBsZW4oc3R1Y2tSdW5zKSA+IDAgeworCQlsb2cuUHJpbnRmKCJbc2NoZWR1bGVyXSBjbGVhbmVkIHVwICVkIHN0dWNrIGpvYiBydW5zIiwgbGVuKHN0dWNrUnVucykpCisJfQogfQogCiAvLyBTdG9wIGdyYWNlZnVsbHkgc2h1dHMgZG93biB0aGUgc2NoZWR1bGVyLgo=",
+    "targetPath": "backend/engine/scheduler.go",
+    "diffFile": {
+      "path": "docs/reviews/probes/r078_worker_M01_diff.patch",
+      "bytes": 1451,
+      "sha256": "0c047c9c68cce6ae1e13f20427225c5138f664337a338c8f456d40b0911d66ed"
+    },
+    "appliedManifest": {
+      "path": "docs/reviews/probes/r078_worker_M01_manifest.json",
+      "bytes": 35738,
+      "sha256": "b3f0863e5a316c6a0a2bcca197a68300f00267deea49b763fb0eecb480ca0ff0"
+    },
+    "restoredExactBytes": true,
+    "finalRestoredSha256": "335c5fccf1d64c0b8fdfece4c19b7f6d2e51f49494ca7fe203c587376724ffc5"
+  },
+  "network": {
+    "name": "ccmai-r078-worker-net-d7a74fc438",
+    "internal": true,
+    "driver": "bridge"
+  },
+  "database": {
+    "container": "ccmai-r078-worker-db-d7a74fc438",
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "network": "ccmai-r078-worker-net-d7a74fc438",
+    "ports": {},
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "ccmai-r078-worker-dbdata-d7a74fc438",
+        "Source": "/var/lib/docker/volumes/ccmai-r078-worker-dbdata-d7a74fc438/_data",
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "environmentScrubbed": true
+  },
+  "databaseReadySeconds": 6.459,
+  "databaseReadyProbe": {
+    "command": [
+      "docker",
+      "exec",
+      "-e",
+      "MYSQL_PWD=<SYNTHETIC_FIXTURE>",
+      "ccmai-r078-worker-db-d7a74fc438",
+      "mysqladmin",
+      "ping",
+      "-uccma",
+      "--silent"
+    ],
+    "boundedSeconds": 90,
+    "result": "ready"
+  },
+  "result": "PASS",
+  "notRun": [],
+  "seconds": 120.448,
+  "rawBackupDirectory": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-worker-raw-backup-61olmipv"
+}

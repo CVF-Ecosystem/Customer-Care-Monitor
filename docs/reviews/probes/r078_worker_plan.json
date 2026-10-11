@@ -1,0 +1,143 @@
+{
+  "planVersion": 1,
+  "status": "ROOT_STATIC_APPROVED_BOUND_SOURCE_PENDING_RUNTIME_RELEASE",
+  "sourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+  "firstSourcePacketCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
+  "sourceCommitBinding": "Preserve the first source packet commit. Bind sourceCommit and archiveSha256 to the root-committed repair1 source; cumulative backend changes from baseCommit must remain exactly the two authorized paths, while sourceCommit:backend must equal HEAD:backend.",
+  "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
+  "legacyBaselineCommit": "51d09cd4cb9282f22518ac32a4edbd3226d56e36",
+  "expectedChangedPaths": [
+    "backend/engine/scheduler.go",
+    "backend/engine/scheduler_startup_hardening_test.go"
+  ],
+  "physicalSourceHashes": {
+    "backend/engine/scheduler.go": "335c5fccf1d64c0b8fdfece4c19b7f6d2e51f49494ca7fe203c587376724ffc5",
+    "backend/engine/scheduler_startup_hardening_test.go": "8e64201beecdb670660199450c53c65997bc917eaaa7457840a55ad9d93de9f7"
+  },
+  "archiveSha256": "3f135def15d46a5a3729a5718558af882715b69e103ffc6e4db5f536136abd84",
+  "sourceArchive": {
+    "commandTemplate": [
+      "git",
+      "archive",
+      "--format=tar",
+      "<sourceCommit>",
+      "backend"
+    ],
+    "backendWorktreeMustMatchCommit": true,
+    "cumulativeBackendDiffFromBaseMustEqualExpectedChangedPaths": true,
+    "sourceBackendGitTreeMustEqualCurrentHeadBackendTree": true,
+    "rejectSymlinkHardlinkAbsoluteAndParentTraversal": true,
+    "fullManifestRestoredAfterMutation": true
+  },
+  "staticBackendBindingPreflight": {
+    "path": "docs/reviews/probes/r078_worker_backend_binding_static.json",
+    "sha256": "95e802634139f9973aaa25f86d39b90059cd8d72dc16e630065353d5dc5afd3a",
+    "result": "PASS",
+    "cumulativePathsFromBase": [
+      "backend/engine/scheduler.go",
+      "backend/engine/scheduler_startup_hardening_test.go"
+    ],
+    "firstSourceBackendTreeEqualsHead": true,
+    "pendingRepairPath": "backend/engine/scheduler_startup_hardening_test.go",
+    "runnerReceiptContract": "validated summary and every raw reference by type, byte length and SHA256; summary publication failure returns nonzero"
+  },
+  "positiveRegex": "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+  "positiveTopLevelTests": [
+    "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
+    "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+    "TestSH03FreeJobAdmissionAndOwnerCancellationContrast",
+    "TestSH04StartPreservesSyncLeaseRecoveryControls",
+    "TestSH05UnknownOwnershipAndReservationFaultFailClosed",
+    "TestSH06CronLoadQueryFaultStillStartsScheduler",
+    "TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects",
+    "TestCronAndAfterSyncSkipAnOccupiedJob",
+    "TestCronVersusAfterSyncAdmitExactlyOne",
+    "TestSchedulerOwnersAreCancellableByRun",
+    "TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle",
+    "TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs"
+  ],
+  "M01Regex": "^(TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH04StartPreservesSyncLeaseRecoveryControls)$",
+  "M01NamedDetector": "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
+  "M01HealthyControl": "TestSH04StartPreservesSyncLeaseRecoveryControls",
+  "M01NamedAssertion": "SH02 startup attempted JobRun update target=",
+  "M01Mutation": {
+    "targetPath": "backend/engine/scheduler.go",
+    "legacySource": "git show 51d09cd4cb9282f22518ac32a4edbd3226d56e36:backend/engine/scheduler.go",
+    "restoreOnly": [
+      "the exact old Scheduler.Start call/comment",
+      "the exact cleanupStuckRuns helper"
+    ],
+    "baselineStandaloneCallMatchCount": 1,
+    "baselineStandaloneDefinitionMatchCount": 1,
+    "mutantStandaloneCallMatchCount": 1,
+    "mutantStandaloneDefinitionMatchCount": 1,
+    "applyLocation": "insert call before s.scheduler.Start(), helper before Stop",
+    "executionCopy": "disposable extracted git archive only",
+    "requiredResult": "M01 fails because the update trap records and blocks the attempted JobRun update; SH04 passes",
+    "pureStaticPreflight": {
+      "path": "docs/reviews/probes/r078_worker_mutation_static.json",
+      "sha256": "577efdbc87c3e6c16992a1c31d626b55ceb1ac4374cda6ce461ca108cd2e0500",
+      "result": "PASS",
+      "goInvocations": 0,
+      "dockerInvocations": 0,
+      "baselineStandaloneCallMatchCount": 1,
+      "baselineStandaloneDefinitionMatchCount": 1,
+      "mutantStandaloneCallMatchCount": 1,
+      "mutantStandaloneDefinitionMatchCount": 1
+    },
+    "restoration": "guaranteed byte equality for scheduler.go and full backend archive manifest equality before restored tests"
+  },
+  "workerGoCallBudget": {
+    "build": 1,
+    "tests": 3,
+    "retries": 0
+  },
+  "commands": [
+    {
+      "label": "build",
+      "command": "go build -o /tmp/r078-backend .",
+      "containerNetwork": "none",
+      "expected": "exit 0"
+    },
+    {
+      "label": "positive",
+      "command": "go test -json -count=1 -timeout=240s -run <positiveRegex> ./engine",
+      "containerNetwork": "owned Docker internal network",
+      "expected": "all 12 top-level tests pass, no skip/build error/timeout"
+    },
+    {
+      "label": "M01",
+      "command": "go test -json -count=1 -timeout=240s -run <M01Regex> ./engine",
+      "containerNetwork": "owned Docker internal network",
+      "expected": "SH02 fails at the named attempted-write assertion; SH04 passes; no build error/timeout"
+    },
+    {
+      "label": "restored",
+      "command": "go test -json -count=1 -timeout=240s -run <positiveRegex> ./engine",
+      "containerNetwork": "owned Docker internal network",
+      "expected": "same 12 top-level tests pass after exact restoration"
+    }
+  ],
+  "runtimeIsolation": {
+    "cachedImagesOnly": [
+      "golang:1.26-alpine",
+      "mysql:8.0"
+    ],
+    "pull": "never",
+    "moduleCache": "USERPROFILE/go/pkg/mod mounted read-only",
+    "source": "committed backend archive mounted read-only except a disposable local mutation copy",
+    "network": "new Docker internal network, no host ports, no external egress",
+    "database": "synthetic MySQL 8.0, named disposable volume, fixture-only user/password",
+    "providerOrChannelCalls": false,
+    "applicationComposeOrExternalProvider": false,
+    "cleanupVerification": "inspect only exact R078-named containers, volumes, and network owned by this runner"
+  },
+  "rawEvidence": {
+    "prefix": "docs/reviews/probes/r078_worker_",
+    "noOverwrite": true,
+    "stdoutStderrInspectAndMutationDiffRetained": true,
+    "preserveFailuresAndDoNotRetry": true
+  },
+  "claimBoundary": "Synthetic application behavior only; no governance, provider, production, deployment, or fleet-wide claim.",
+  "bindingSteward": "Codex /root mechanical source/archive binding after independent static review"
+}

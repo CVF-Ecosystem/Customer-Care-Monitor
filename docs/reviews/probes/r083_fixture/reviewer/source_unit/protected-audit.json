@@ -1,0 +1,44 @@
+{
+  "baseCommit": "15904811eb4994d985bae85bffb75054eb67e373",
+  "protected": {
+    "protectedImplementation": {
+      "count": 365,
+      "changed": []
+    },
+    "protectedHistory": {
+      "count": 280,
+      "changed": []
+    },
+    "protectedDocs": {
+      "count": 1191,
+      "changed": []
+    }
+  },
+  "historicalQualityArrays": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true,
+    "durableFenceDesignSamples": true,
+    "databaseIntegrationSamples": true,
+    "fenceBlockerResolutionSamples": true
+  },
+  "seed": {
+    "firstCommit": "ea73a86e5ebb44d2c7ab6496d43c13d55b1610ca",
+    "baseCommit": "ea73a86e5ebb44d2c7ab6496d43c13d55b1610ca",
+    "unchangedFirstHeadWorking": true
+  },
+  "pass": true,
+  "reviewedSourceCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
+  "rootUnitBeforeAfterEqual": true,
+  "workerUnitBeforeAfterEqual": true,
+  "workerTestedScriptAndTestMatchCommittedPhysical": true,
+  "workerUnitsUsed": 2,
+  "reviewerUnitsUsed": 1,
+  "fixtureCampaignsUsed": 0,
+  "preEffectApproval": "NOT_GRANTED",
+  "applicationGoInvocations": 0,
+  "providerInvocations": 0,
+  "claimScope": "source identities and repository protection, not runtime fixture/AI governance proof"
+}

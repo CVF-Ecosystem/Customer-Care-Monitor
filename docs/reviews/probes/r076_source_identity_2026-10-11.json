@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-076",
+  "artifactType": "source_identity_snapshot",
+  "pairedArtifacts": {
+    "decision": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+    "specification": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md"
+  },
+  "capturedDate": "2026-10-11",
+  "implementationSourceBaseline": {
+    "commit": "9fc86fe012d1cc8c1aeb7d9e7a55e79c1c032c2d",
+    "meaning": "Source baseline named by the accepted R074 audit."
+  },
+  "documentaryHeadAtCapture": {
+    "commit": "f92a80a78e7c87424792338fc8cec4634f42aff8",
+    "meaning": "R076 documentary BUILD head at the time of this identity capture."
+  },
+  "captureBoundary": {
+    "worktreeStatusBeforeWorkerArtifacts": "clean",
+    "applicationOrRuntimeExecuted": false,
+    "testsRun": false,
+    "databaseProviderChannelNetworkOrCredentialAccess": false,
+    "claimBoundary": "Identifies source blobs and local file bytes only; does not identify deployed code or prove runtime behavior."
+  },
+  "sourceFiles": [
+    {
+      "path": "backend/main.go",
+      "lineRanges": [
+        "69-76"
+      ],
+      "sha256": "84d4e7755a700af51a4c8ff7dd791cff9741be06654b98f16d1bc03a4da2b5e7",
+      "gitBlobAtSourceBaseline": "69ee35b19e3d93140b50f22650727c60ed75c304",
+      "gitBlobAtDocumentaryHead": "69ee35b19e3d93140b50f22650727c60ed75c304",
+      "blobEqual": true,
+      "relevance": "Application entrypoint starts the scheduler."
+    },
+    {
+      "path": "backend/engine/scheduler.go",
+      "lineRanges": [
+        "97-128",
+        "279-299",
+        "318-363"
+      ],
+      "sha256": "68f4dfbdb167acc190ae3de8532d1533f6fa2f54567f66d6e7ee4db5ea63393e",
+      "gitBlobAtSourceBaseline": "796e79fb14456668b8536856d616e55a133c00d5",
+      "gitBlobAtDocumentaryHead": "796e79fb14456668b8536856d616e55a133c00d5",
+      "blobEqual": true,
+      "relevance": "Startup cleanup of running rows and cron/after-sync entrypoints."
+    },
+    {
+      "path": "backend/jobdispatch/dispatch.go",
+      "lineRanges": [
+        "66-148"
+      ],
+      "sha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
+      "gitBlobAtSourceBaseline": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
+      "gitBlobAtDocumentaryHead": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
+      "blobEqual": true,
+      "relevance": "Configuration, reservation, worker handoff, abort, and run_id acknowledgment."
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "lineRanges": [
+        "61-105",
+        "107-190",
+        "193-204",
+        "225-306",
+        "317-340",
+        "356-398"
+      ],
+      "sha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "gitBlobAtSourceBaseline": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "gitBlobAtDocumentaryHead": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "blobEqual": true,
+      "relevance": "Process-local ownership, admission lock order, cancellation and destructive guards."
+    },
+    {
+      "path": "backend/db/models/job.go",
+      "lineRanges": [
+        "48-60"
+      ],
+      "sha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
+      "gitBlobAtSourceBaseline": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "gitBlobAtDocumentaryHead": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "blobEqual": true,
+      "relevance": "Persisted JobRun fields and current status comment."
+    },
+    {
+      "path": "backend/engine/analyzer_modes.go",
+      "lineRanges": [
+        "18-32",
+        "84-131",
+        "148-183"
+      ],
+      "sha256": "4e7a37acb06df23e324d0e472d6becbef2de8b783ca91ace53287b7acb5f5c72",
+      "gitBlobAtSourceBaseline": "7b0babac06f43353317d143d53bfce42c6597bb0",
+      "gitBlobAtDocumentaryHead": "7b0babac06f43353317d143d53bfce42c6597bb0",
+      "blobEqual": true,
+      "relevance": "Run mode, since_last, and reservation consumption semantics."
+    },
+    {
+      "path": "backend/engine/analyzer_incremental.go",
+      "lineRanges": [
+        "19-25",
+        "47-98",
+        "167-284"
+      ],
+      "sha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
+      "gitBlobAtSourceBaseline": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "gitBlobAtDocumentaryHead": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "blobEqual": true,
+      "relevance": "Ordinary source-version selection and checked terminal write/fallback behavior."
+    },
+    {
+      "path": "backend/engine/analyzer.go",
+      "lineRanges": [
+        "39-90",
+        "183-200",
+        "245-329",
+        "343-424"
+      ],
+      "sha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
+      "gitBlobAtSourceBaseline": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "gitBlobAtDocumentaryHead": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "blobEqual": true,
+      "relevance": "Owned execution, provider/result effects, terminal status/checkpoint, and post-terminal notification ordering."
+    },
+    {
+      "path": "backend/api/handlers/jobs.go",
+      "lineRanges": [
+        "368-400",
+        "402-452",
+        "504-544",
+        "571-603"
+      ],
+      "sha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "gitBlobAtSourceBaseline": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "gitBlobAtDocumentaryHead": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "blobEqual": true,
+      "relevance": "HTTP trigger/test-run/cancellation routes and validated mode/date/cap behavior."
+    },
+    {
+      "path": "backend/mcp/handlers.go",
+      "lineRanges": [
+        "330-360"
+      ],
+      "sha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
+      "gitBlobAtSourceBaseline": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
+      "gitBlobAtDocumentaryHead": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
+      "blobEqual": true,
+      "relevance": "MCP accepted arguments, since_last defaults, tenant lookup, and result mapping."
+    },
+    {
+      "path": "backend/mcp/tools.go",
+      "lineRanges": [
+        "159-168"
+      ],
+      "sha256": "a84c43502741769d61bb746872a97b4e532b534e7436dc2086d084b78e28f4e4",
+      "gitBlobAtSourceBaseline": "4600207fd7fd40e54b4cbc79361332db816447a2",
+      "gitBlobAtDocumentaryHead": "4600207fd7fd40e54b4cbc79361332db816447a2",
+      "blobEqual": true,
+      "relevance": "MCP tool schema and published description of default semantics."
+    },
+    {
+      "path": "backend/api/handlers/agents.go",
+      "lineRanges": [
+        "265-310"
+      ],
+      "sha256": "ec464cdf82d9362274f67c060eea87b6b4b725867541ad01374cc87253c945fe",
+      "gitBlobAtSourceBaseline": "47ef487bcfe3161cbfc51d01c917cf9487224168",
+      "gitBlobAtDocumentaryHead": "47ef487bcfe3161cbfc51d01c917cf9487224168",
+      "blobEqual": true,
+      "relevance": "Analysis-agent entrypoint uses Analyzer.RunJob."
+    },
+    {
+      "path": "backend/notifications/dispatcher.go",
+      "lineRanges": [
+        "38-124"
+      ],
+      "sha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008",
+      "gitBlobAtSourceBaseline": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "gitBlobAtDocumentaryHead": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "blobEqual": true,
+      "relevance": "Post-terminal notification selection, send, logging, and notified_at update."
+    }
+  ],
+  "sourceBlobComparison": {
+    "allListedFilesMatchSourceBaselineAndDocumentaryHead": true,
+    "interpretation": "The 13 listed source files have equal Git blobs at both commits and physical SHA256 values computed from the clean worktree before artifact creation. This is not a full repository or deployed identity audit."
+  },
+  "documentaryInputs": [
+    {
+      "path": "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md",
+      "sha256": "773f330c8e8de860b7b4bbd7bad3f8beb9a10b235795f0235ccb318ba50f1efe",
+      "lineRanges": [
+        "11-13",
+        "95-111"
+      ],
+      "relevance": "Prior source audit, historical implementation baseline, uncertainty boundary, and proposed recovery scope."
+    },
+    {
+      "path": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
+      "sha256": "6ba2c955423112be28729f041e320434abed04aa527141587f1fbfd0b5718028",
+      "lineRanges": [
+        "3-22"
+      ],
+      "relevance": "Accepted R074 source audit scope, source baseline, known limitations, and NOT_RUN boundary."
+    },
+    {
+      "path": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
+      "sha256": "f860817a5d0dbc29a61198d0c33b59991912e8704b6ef661cac897fdc73b8d41",
+      "lineRanges": [
+        "3-13"
+      ],
+      "relevance": "R074 scoped FROZEN disposition and next governed move."
+    },
+    {
+      "path": "docs/reviews/probes/r074_dispatch_audit_source_identity_2026-10-10.json",
+      "sha256": "5b391d41b42bf930e645a293374684653f070bf8bddd6821163a15af83764b95",
+      "relevance": "Historical 18-file source identity record; not reused as current/deployed proof."
+    },
+    {
+      "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
+      "sha256": "ff39ceb569eb480832673f49e7e5cb9f4d41dd6cb369474c11ff4dd10cec5cb7",
+      "lineRanges": [
+        "14",
+        "22-28"
+      ],
+      "relevance": "Accepted MCP defaults and HTTP, cancellation, ownership, and error compatibility."
+    }
+  ],
+  "authoringAndReview": {
+    "worker": "Codex /root/r076_worker, gpt-6-luna, max",
+    "independentReviewer": "Codex /root, reserved; review pending",
+    "workerArtifactSet": [
+      "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "docs/reviews/probes/r076_source_identity_2026-10-11.json"
+    ],
+    "firstPassStatus": "FIRST_PASS_REVIEW_PENDING_AT_CAPTURE",
+    "firstPassDisposition": "CHANGES_REQUIRED",
+    "currentSubmissionStatus": "DOCUMENTARY_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "repairRounds": 1,
+    "repairHistory": [
+      {
+        "round": 1,
+        "findingsAddressed": [
+          "F1",
+          "F2",
+          "M1"
+        ],
+        "artifactsRepaired": [
+          "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+          "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+          "docs/reviews/probes/r076_source_identity_2026-10-11.json"
+        ],
+        "sourceCaptureProvenancePreserved": true,
+        "sourceHashInputsChanged": false,
+        "sourceLineMapExpanded": {
+          "backend/engine/job_run_ownership.go": [
+            "193-204",
+            "356-398"
+          ]
+        },
+        "implementationOrRuntimeChanged": false,
+        "testsRun": false
+      }
+    ],
+    "rootAssistance": [
+      "Root supplied the backend/engine/scheduler.go startup-cleanup source pointer; worker independently inspected and hashed scheduler.go and backend/main.go.",
+      "Root supplied the backend/engine/analyzer_incremental.go terminal-fallback nuance; worker independently inspected and hashed the finalizer source."
+    ],
+    "sourceReviewLimit": "R074 is preserved as its accepted historical source-audit sample; this R076 snapshot adds the startup sweep path and does not re-run prior runtime evidence."
+  },
+  "governanceEvidence": {
+    "liveProviderCall": "NOT_RUN",
+    "claim": "No CVF AI-governance, live provider, deployment, production, exactly-once, or delivery claim is made."
+  },
+  "rootMechanicalErratum": {
+    "role": "Codex /root REVIEWER -> SESSION_SYNC_STEWARD / minor documentary repair",
+    "origin": "Root first findings supplied upper bound404; actual file ends398. Worker propagated it; root directly corrected known minor line map without new worker repair or scope change.",
+    "correctedRanges": [
+      "356-398"
+    ],
+    "workerRepairRoundsUnchanged": 1,
+    "sourceHashesUnchanged": true,
+    "workerValidationLimitation": "Supplied upper bound was not checked against source length."
+  }
+}

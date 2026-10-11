@@ -1,0 +1,40 @@
+{
+  "trancheId": "CCMAI-RUNTIME-086",
+  "phase": "BUILD_WORKER_HARNESS_RESULT",
+  "command": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_jobrun_fence_fixture.py",
+    "-v"
+  ],
+  "launchAttempts": 1,
+  "processCount": 1,
+  "returnCode": 0,
+  "timedOut": false,
+  "elapsedSeconds": 2.077573,
+  "testsRunFromRawSummary": null,
+  "unittestElapsedFromRawSummary": null,
+  "resultLineFromRawOutput": "OK",
+  "stdout": {
+    "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_stdout.raw.bin",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_stderr.raw.bin",
+    "bytes": 5187,
+    "sha256": "abbe7b9481206521743fb831b6c0f795d9752b82fb1a54f63ca4c8afdb668b5e"
+  },
+  "sourcePhysicalSha256Before": "952cbfa16b60da1ac2f0189ed3ec130adcb03f9e5a168751d3d7134085cd6e0e",
+  "sourcePhysicalSha256After": "952cbfa16b60da1ac2f0189ed3ec130adcb03f9e5a168751d3d7134085cd6e0e",
+  "testPhysicalSha256Before": "8d2dfd982fcf1b8c14f1387ee12508c2a51e0ecd77f85a7a1ac568661ec90f62",
+  "testPhysicalSha256After": "8d2dfd982fcf1b8c14f1387ee12508c2a51e0ecd77f85a7a1ac568661ec90f62",
+  "nativeResourceEffects": 0,
+  "fixtureCampaigns": 0,
+  "sqlCalls": "mocked in-process readiness boundary only"
+}

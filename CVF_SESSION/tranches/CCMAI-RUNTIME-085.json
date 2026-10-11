@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-085",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_DISPOSABLE_MYSQL_FIXTURE_CAMPAIGN",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r085_worker",
+    "repairWorker": "Codex /root/r085_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_085.md",
+    "docs/reviews/R085_LOCAL_FIXTURE_WORKER_EXECUTION_2026-10-11.md",
+    "docs/reviews/probes/r085_fixture/*",
+    "docs/reviews/probes/r083_fixture/worker/????????????????????????????????/manifest.json",
+    "docs/reviews/probes/r083_fixture/reviewer/????????????????????????????????/manifest.json"
+  ],
+  "prohibitedEffects": [
+    "any_source_test_tooling_workflow_dependency_change",
+    "old_seed_tranche_handoff_order_evidence_edit",
+    "existing_ccma_db_1_or_other_unowned_resource_change_or_SQL",
+    "production_persistent_db_customer_data_access",
+    "existing_env_credentials_or_container_env_read",
+    "provider_channel_external_network_call",
+    "image_module_pull_or_install",
+    "host_port_host_bind_or_persistent_volume",
+    "core_edit",
+    "secret_commit",
+    "push_merge_deploy",
+    "application_Go_GORM_fence_migration_restore_execution",
+    "runtime_CVF_governance_or_deployed_adoption_claim",
+    "source_repair_or_failed_campaign_replay"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerFixtureCampaigns": 1,
+    "reviewerFixtureCampaigns": 1,
+    "aggregateFixtureCampaigns": 2,
+    "workerHarnessUnitInvocations": 0,
+    "reviewerHarnessUnitInvocations": 0,
+    "maxDirectedSameScopeSourceRepairRounds": 0,
+    "goInvocations": 0,
+    "providerInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next and asks whether MySQL runs on Docker; root local metadata confirms existingccma-db-1 mysql8.0 Up2hours healthy, without SQL/credential/env access. Standing Luna max worker/root independent reviewer/all commits. R2 awareness local disposable synthetic MySQL fixture separate from existing DB; new bounded authority after R084 source-only closure8bbb894.",
+  "acceptedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+  "acceptedReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+  "entryDecision": "INTAKE bounds actual local fixture prerequisites; DESIGN preserves accepted isolated tool/resource plan; SPEC names actual image/server/settings/principal/DDL/denial/cleanup observations; WORK_ORDER grants one worker campaign, then independent root campaign only if worker succeeded with verified cleanup. No source edits, retries or application/fence acceptance.",
+  "fixtureAuthority": "Execute unchanged reviewed scripts/jobrun_fence_fixture.py with roleworker or rolereviewer, sequential one campaign each, fresh unique task network/container, internal network/no hostports/binds/persistentvolumes/tmpfs, task-generated memory-only root/principal credentials, pin cached local MySQL full imageId/repositoryDigest --pull=never, exact owned SQL/create/check/drop and exact ownership/ID cleanup on every exit. Selected Docker/source metadata only. No existing database/container access beyond owner-requested running-status metadata. Bounded readiness observations60/2s and timeouts allowed inside sole campaign, no restart/replay. Failed/unavailable worker ends dependent dispatch, root independent campaign stays reserved.",
+  "legacyToolNamespace": "Tool receipt/resource namespace intentionally CCMAI-RUNTIME-083/ccmai-r083 and fixed r083_fixture/{role}/{new32hexUUID}/manifest.json; execution authority is R085. Sidecar R085 binding maps each actual receipt to actor/approval/code/image/task/output. New UUID artifacts only; no old R083 evidence changed or historical NOT_RUN overwritten. Do not change source namespace to R085.",
+  "expectedCachedImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "expectedRepositoryDigest": "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "claimScope": "Actual local isolated MySQL fixture/image/server/settings/principal grants/DDL-DML/denial/cleanup prerequisites only. No AI/CVF runtime governance, GORM/application/fence integration, restore fleet, production/deployed adoption or hostedCI proof.",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "baseCommit": "c804308403561f465135eb4154b7c39334ace562",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
+  "buildCommit": "147be5b6e5756077f97833194ca0f9fa1b5ea390",
+  "reviewEvidence": [
+    "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md"
+  ],
+  "disposition": "RETURNED_RUNTIME_MOUNT_BLOCKER",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workerAcknowledgment": "Fresh canonical R085 REVIEW tuple rehydrated from current files; independent review of committed147be5b fails actual runtime acceptance F1 mount-lifecycle branch, exact raw Mounts value unavailable. Root transitions REVIEWER to ORCHESTRATOR for bounded next-source planning only; R085 returned CHANGES_REQUIRED/FREEZE OPEN, worker1/reviewer0/no repair or replay. Source67e unchanged, oldR083/R084 records preserved. New review and quality sample written2026-10-12 after local date rollover; original campaign/order/handoff10-11 filenames remain immutable.",
+  "preEffectApproval": {
+    "status": "GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY",
+    "actor": "Codex /root independent REVIEWER",
+    "acceptedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+    "acceptedReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+    "evidence": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
+    "reviewerCampaignApproval": "NOT_GRANTED_UNTIL_WORKER_SUCCESS_VERIFIED_CLEAN"
+  },
+  "workerFixtureCampaignsUsed": 1,
+  "reviewerFixtureCampaignsUsed": 0,
+  "workerSourceRepairRounds": 0,
+  "workerRuntime": "FAILED_MOUNT_INVALID",
+  "reviewerRuntime": "NOT_RUN",
+  "cleanup": "VERIFIED_CLEAN_ROOT_CONFIRMED",
+  "preEffectApprovalDisposition": "WORKER_ONCE_EXHAUSTED_REVIEWER_NOT_GRANTED",
+  "updatedAt": "2026-10-12",
+  "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+  "residualFindings": [
+    "F1_PRE_START_RESOLVED_MOUNT_VALIDATION_BLOCKS_NATIVE_CAMPAIGN"
+  ],
+  "additionalRepositoryCheck": {
+    "actor": "Codex /root",
+    "command": "npm run docs:build",
+    "workingDirectory": "docs",
+    "invocations": 1,
+    "exitCode": 1,
+    "vitepressVersion": "1.6.4",
+    "buildReportedSeconds": 12.76,
+    "deadLinkCount": 55,
+    "affectedHistoricalFiles": [
+      "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+      "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+      "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md"
+    ],
+    "failureEvidence": "Actual tool result from session46233; raw full stdout/stderr not retained as files; this JSON records selected observed facts, not reconstructed raw output.",
+    "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
+    "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
+    "scope": "Static documentation check, no fixture/Go/provider/application campaign"
+  },
+  "independentReviewCommit": "f0061ecfb09cf71a900d1d438163b003e59ea390",
+  "returnedReviewReceipt": "docs/reviews/probes/r085_fixture/root_checks/returned_review_receipt.json"
+}

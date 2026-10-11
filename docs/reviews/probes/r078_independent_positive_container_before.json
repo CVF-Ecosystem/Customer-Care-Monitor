@@ -1,0 +1,267 @@
+{
+  "Id": "8cd76e7ebd7d0921b5d59af6e0f35add938d19c1dc7da1cfe38896103f24b960",
+  "Created": "2026-10-11T06:12:49.068319471Z",
+  "Path": "go",
+  "Args": [
+    "test",
+    "-json",
+    "-count=1",
+    "-timeout=240s",
+    "-run",
+    "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+    "./engine"
+  ],
+  "State": {
+    "Status": "created",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "0001-01-01T00:00:00Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "Image": "sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c",
+  "ResolvConfPath": "",
+  "HostnamePath": "",
+  "HostsPath": "",
+  "LogPath": "",
+  "Name": "/ccmai-r078-independent-positive-541ec1ac3a",
+  "RestartCount": 0,
+  "Driver": "overlayfs",
+  "Platform": "linux",
+  "MountLabel": "",
+  "ProcessLabel": "",
+  "AppArmorProfile": "",
+  "ExecIDs": null,
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {}
+    },
+    "NetworkMode": "ccmai-r078-independent-net-541ec1ac3a",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": null,
+    "CgroupnsMode": "private",
+    "Dns": null,
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": false,
+    "SecurityOpt": null,
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 0,
+    "NanoCpus": 0,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 0,
+    "MemorySwappiness": null,
+    "OomKillDisable": false,
+    "PidsLimit": null,
+    "Ulimits": null,
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-independent-source-541ec1ac3a-_sngapqx\\backend",
+        "Target": "/src",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+        "Target": "/go/pkg/mod",
+        "ReadOnly": true
+      },
+      {
+        "Type": "volume",
+        "Source": "ccmai-r078-independent-build-cache-541ec1ac3a",
+        "Target": "/root/.cache/go-build"
+      }
+    ],
+    "MaskedPaths": [
+      "/proc/acpi",
+      "/proc/asound",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/sys/devices/virtual/powercap",
+      "/sys/firmware"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ]
+  },
+  "Storage": {
+    "RootFS": {
+      "Snapshot": {
+        "Name": "overlayfs"
+      }
+    }
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\ccmai-r078-independent-source-541ec1ac3a-_sngapqx\\backend",
+      "Destination": "/src",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\tiennm\\go\\pkg\\mod",
+      "Destination": "/go/pkg/mod",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "volume",
+      "Name": "ccmai-r078-independent-build-cache-541ec1ac3a",
+      "Source": "/var/lib/docker/volumes/ccmai-r078-independent-build-cache-541ec1ac3a/_data",
+      "Destination": "/root/.cache/go-build",
+      "Driver": "local",
+      "Mode": "z",
+      "RW": true,
+      "Propagation": ""
+    }
+  ],
+  "Config": {
+    "Hostname": "8cd76e7ebd7d",
+    "Domainname": "",
+    "User": "",
+    "AttachStdin": false,
+    "AttachStdout": true,
+    "AttachStderr": true,
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "GOFLAGS=-mod=readonly",
+      "GOPROXY=off",
+      "GOSUMDB=off",
+      "GOTOOLCHAIN=local",
+      "CGO_ENABLED=0",
+      "TEST_DB_DSN=ccma:<SYNTHETIC_FIXTURE>@tcp(ccmai-r078-independent-db-541ec1ac3a:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC",
+      "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "GOLANG_VERSION=1.26.8",
+      "GOPATH=/go"
+    ],
+    "Cmd": [
+      "go",
+      "test",
+      "-json",
+      "-count=1",
+      "-timeout=240s",
+      "-run",
+      "^(TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission|TestSH02StartupPreservesUnknownRunningAndTerminalRows|TestSH03FreeJobAdmissionAndOwnerCancellationContrast|TestSH04StartPreservesSyncLeaseRecoveryControls|TestSH05UnknownOwnershipAndReservationFaultFailClosed|TestSH06CronLoadQueryFaultStillStartsScheduler|TestSH07SchedulerLoadsControlledCronAndStopsWithoutExternalEffects|TestCronAndAfterSyncSkipAnOccupiedJob|TestCronVersusAfterSyncAdmitExactlyOne|TestSchedulerOwnersAreCancellableByRun|TestSchedulerRecoversExpiredLeaseAndReadmitsAfterThrottle|TestRecoveryReleasesOnlyExpiredAllowlistedR016Runs)$",
+      "./engine"
+    ],
+    "Image": "golang:1.26-alpine",
+    "Volumes": null,
+    "WorkingDir": "/src",
+    "Entrypoint": null,
+    "Labels": {}
+  },
+  "NetworkSettings": {
+    "SandboxID": "",
+    "SandboxKey": "",
+    "Ports": {},
+    "Networks": {
+      "ccmai-r078-independent-net-541ec1ac3a": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": null,
+        "DriverOpts": null,
+        "GwPriority": 0,
+        "NetworkID": "",
+        "EndpointID": "",
+        "Gateway": "",
+        "IPAddress": "",
+        "MacAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "DNSNames": null
+      }
+    }
+  },
+  "ImageManifestDescriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:66f9a494af2b76ecb3eab75ff47166df61caec6d200c59d556b77327493d83a8",
+    "size": 1921,
+    "annotations": {
+      "com.docker.official-images.bashbrew.arch": "amd64",
+      "org.opencontainers.image.base.digest": "sha256:d56c381f961d307a21b3ca004cf1e3910f106644aefb1f43e654c8a56c4fd395",
+      "org.opencontainers.image.base.name": "alpine:3.24",
+      "org.opencontainers.image.created": "2026-09-17T21:42:18Z",
+      "org.opencontainers.image.revision": "f47489bcbda87966b421340c536f39a34d00b45f",
+      "org.opencontainers.image.source": "https://github.com/docker-library/golang.git#f47489bcbda87966b421340c536f39a34d00b45f:1.26/alpine3.24",
+      "org.opencontainers.image.url": "https://hub.docker.com/_/golang",
+      "org.opencontainers.image.version": "1.26.8-alpine3.24"
+    },
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  }
+}
