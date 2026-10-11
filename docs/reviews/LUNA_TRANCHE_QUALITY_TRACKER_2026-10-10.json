@@ -771,5 +771,43 @@
       "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
       "localClosureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3"
     }
+  ],
+  "fixturePrerequisiteSamples": [
+    {
+      "id": "CCMAI-RUNTIME-083",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "disposable_mysql_fixture_prerequisite_resource_harness",
+      "sampleType": "REPAIR_ASSISTED_TOOLING_RETURNED_NOT_RUNTIME_ACCEPTED",
+      "firstSourceCommit": "005c73df48eec28c8a17d833d8efc385ef070c6f",
+      "firstPassDisposition": "CHANGES_REQUIRED_F1_F2_F3_F4",
+      "workerSourceRepairRounds": 1,
+      "repairSourceCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
+      "finalOriginalFindingRecheck": 1,
+      "finalDisposition": "CHANGES_REQUIRED_F1_F3_FREEZE_OPEN_PRE_EFFECT_NOT_GRANTED",
+      "workerUnitInvocations": 2,
+      "workerUnitResults": [
+        "10PASS0.048s_REPORTED_RAW_NOT_RETAINED",
+        "18PASS0.417s_EXIT0_RAW_RETAINED"
+      ],
+      "reviewerUnitInvocations": 1,
+      "reviewerUnitResult": "18PASS0.438s_EXIT0_RAW_RETAINED",
+      "workerFixtureCampaigns": 0,
+      "reviewerFixtureCampaigns": 0,
+      "goInvocations": 0,
+      "providerInvocations": 0,
+      "automaticRetries": 0,
+      "parentAssistance": "FT01..10/consolidated F1..F4/literal grants/local socket/pre-start membership historical receipt; all commits, no substantive worker implementation draft",
+      "workerPreparationOverhead": "Repair unit metadata parser initially null count/time corrected from captured raw stderr without rerun; bytecode deletion reportedly policy rejected, root archived safely",
+      "rootOriginOverhead": "Navigation guesses/PowerShell wildcard errors; raw CRLF seed comparison corrected to filtered Git identity; review read output truncation recovered by targeted slices and raw evidence filename typo corrected",
+      "assessment": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_REPAIR_ASSISTED_R2_TOOLING_SAMPLE"
+    }
   ]
 }

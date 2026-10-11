@@ -6870,6 +6870,62 @@
       "path": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/protected-audit.json",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/receipt.json",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/reviewer/source_unit/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/repair-unit-metadata.json",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/repair-unit.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime083-evidence-0027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/repair-unit.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-083",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-083 BUILD sole directed source repair1 F1..F4 exact3 and one remaining worker harness suite; handback for original-finding recheck. Pre-effect approval NOT_GRANTED; Docker/SQL fixture campaigns0/2/Go0/provider0/no pull/push, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED after sole repair19f83a7/root18PASS; residual F3 validates post-start NetworkID/membership after readiness SQL, F1 missing campaign-level raised-create/remove-failure regression controls. Pre-effect approval NOT_GRANTED, FREEZE OPEN, no automatic repair/campaign. ORCHESTRATOR next bounds separate source-only completion authority before edits/effects; Docker/SQL/Go/provider/pull/push0, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r083_worker REPAIR_WORKER source-only until pre-effect approval",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete, no further dispatch",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -39,10 +39,10 @@
   },
   "candidatePlanning": {
     "id": "R083",
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_083.md",
-    "sourceImplementation": "NOT_DISPATCHED",
-    "sourceOrRuntimeDispatched": false
+    "sourceImplementation": "FIXTURE_SOURCE_COMMITTED_CHANGES_REQUIRED",
+    "sourceOrRuntimeDispatched": true
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -599,13 +599,13 @@
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
   "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
-  "modelAssessment": null,
+  "modelAssessment": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
   "closureEvidence": null,
   "independentReviewCommit": null,
-  "closureStatus": null,
+  "closureStatus": "NOT_ELIGIBLE_FREEZE_OPEN",
   "closureChecks": null,
   "localClosureCommit": null,
-  "publicationStatus": "R082_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+  "publicationStatus": "R083_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
@@ -780,12 +780,18 @@
   "currentReview": {
     "result": "CHANGES_REQUIRED",
     "findings": [
-      "F1",
+      "F1_REGRESSION_CONTROL_GAPS",
+      "F3_OWNERSHIP_BEFORE_READINESS_SQL"
+    ],
+    "acceptedOriginalFindingGroups": [
       "F2",
-      "F3",
       "F4"
     ],
-    "freeze": "OPEN"
+    "freeze": "OPEN",
+    "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
+    "reviewedBuildCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
+    "reviewerHarnessResult": "18PASS0.438s_EXIT0_RAW_RETAINED",
+    "fixtureCampaigns": 0
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -866,7 +872,12 @@
     }
   },
   "currentRepair": {
-    "scope": "EXPLICITLY_RELEASED_F1_F4_SOLE_SOURCE_REPAIR",
-    "round": 1
+    "scope": "SOLE_SOURCE_REPAIR_COMPLETE_BUDGET_EXHAUSTED_NO_FURTHER_DISPATCH",
+    "round": 1,
+    "sourceCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a"
+  },
+  "currentClosure": {
+    "status": "NOT_ELIGIBLE_FREEZE_OPEN",
+    "reason": "residual F1/F3, no pre-effect approval or actual fixture prerequisites"
   }
 }

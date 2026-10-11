@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-083", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-083", "parked": true} -->
 
 ## Current R083
 
-CCMAI-RUNTIME-083 BUILD sole directed source repair1 F1..F4 exact3 and one remaining worker harness suite; handback for original-finding recheck. Pre-effect approval NOT_GRANTED; Docker/SQL fixture campaigns0/2/Go0/provider0/no pull/push, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED after sole repair19f83a7/root18PASS; residual F3 validates post-start NetworkID/membership after readiness SQL, F1 missing campaign-level raised-create/remove-failure regression controls. Pre-effect approval NOT_GRANTED, FREEZE OPEN, no automatic repair/campaign. ORCHESTRATOR next bounds separate source-only completion authority before edits/effects; Docker/SQL/Go/provider/pull/push0, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
 
 ## Historical R082 (scoped documentary FROZEN)
 

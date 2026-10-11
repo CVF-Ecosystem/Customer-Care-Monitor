@@ -1,0 +1,13 @@
+# R083 Luna max fixture-tool assessment
+
+Luna max /root/r083_worker is implementation/repair worker; root is independent reviewer and owns all commits. Initial packet005c73df48eec28c8a17d833d8efc385ef070c6f received CHANGES_REQUIRED for four substantive safety groups: uncertain-create cleanup, filtered versus physical source identity, actual local resource ownership, and authenticated readiness/permission/auditable output. The sole directed source repair is committed at19f83a7; pre-effect approval is not granted and no Docker/SQL campaign has run. This is not first-pass success.
+
+Initial worker harness report10PASS0.048s/exit0 has no retained raw terminal output and remains a reported result. Worker repair18PASS0.417s and independent root18PASS0.438s retain actual output and matching tested physical source identities. Harness doubles assert local resource-tool behavior only, not runtime AI/CVF governance.
+
+Root supplied FT01..10, consolidated F1..F4, literal-safe grant/local endpoint clarification and a historical receipt showing pre-start NetworkID can be empty while before-SQL membership must be bound. Root declined a new CVF approval-flow parser; approval remains a committed orchestration prerequisite. Root has not drafted substantive worker implementation. Source-only repair preparation has several status messages; no measured inference duration, tokens or model cost is available.
+
+Root-origin overhead is separate: absent local ingest/workflow navigation and PowerShell wildcard path guesses were corrected; protected-seed audit initially compared physical CRLF bytes with repository bytes and was corrected to filtered Git identity. Bytecode cleanup was reportedly rejected for the worker; root verified untracked caches and moved them reversibly into TEMP. Other gate bytecode is not attributed to the worker.
+
+Protected365implementation/280oldrecords/1191historicaldocs and eight historical quality arrays remain unchanged at the latest root audit. Root doctor after continuity rehydration PASS WITH NOTE25/1 retains stale manifest pin and GATE_PROFILE_NOT_INSTALLED; no hosted/runtime enforcement claim. Accounts remain parked, fence implementation/readiness OPEN and deployed facts UNKNOWN.
+
+Final original-finding recheck returns CHANGES_REQUIRED: F1 requested campaign/removal-failure controls incomplete and F3 ownership validation occurs after readiness SQL. F2/F4 source controls accepted; runtime prerequisites unobserved. Pre-effect approval NOT_GRANTED, FREEZE OPEN, no further repair/campaign in exhausted scope. This is one R2 tooling sample with low confidence, no matched model comparison or ranking.

@@ -965,6 +965,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval.: `scripts/tests/test_jobrun_fence_fixture.py`
 - R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval.: `docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md`
 - R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval.: `docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/protected-audit.json`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/receipt.json`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/stderr.txt`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/reviewer/source_unit/stdout.txt`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit-metadata.json`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit.stderr.txt`
+- R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit.stdout.txt`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
