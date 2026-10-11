@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-082",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-082 REVIEW_PASS selected intended contract/census/nonbinding future plan at144f68f; root CLOSER next scoped documentary FREEZE after gates/commit. Implementation/fixture/DDL/restore/adoption remain OPEN/UNKNOWN, no new campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN/accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-082 FROZEN scoped intended contract/census/nonbinding future plan at144f68f/reviewfebd451. ORCHESTRATOR next bounds separate R2 fixture/schema prerequisite authority before implementation/test dispatch; no generic design retry or implicit runtime activity. Fixture/DDL/restore/adoption UNKNOWN, fencing/recovery/readiness OPEN; source NOT_DISPATCHED/runtime NOT_RUN/no push, R081 returned/FREEZE_OPEN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,7 +34,7 @@
   },
   "candidatePlanning": {
     "id": "R082",
-    "status": "REVIEW_PASS",
+    "status": "FROZEN",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_082.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
@@ -595,8 +595,8 @@
   },
   "reviewEvidence": "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
   "modelAssessment": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": null,
-  "independentReviewCommit": null,
+  "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1",
   "closureStatus": null,
   "closureChecks": null,
   "localClosureCommit": null,
@@ -775,7 +775,7 @@
   "currentReview": {
     "result": "REVIEW_PASS",
     "findings": [],
-    "freeze": "OPEN",
+    "freeze": "FROZEN_DOCUMENTARY_ONLY",
     "buildCommit": "144f68f1c0584d68c7101692478e38a73705adb2",
     "initialFindings": [
       "R1",

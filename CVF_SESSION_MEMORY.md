@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
 
 ## Current R082
 
-CCMAI-RUNTIME-082 REVIEW_PASS selected intended contract/census/nonbinding future plan at144f68f; root CLOSER next scoped documentary FREEZE after gates/commit. Implementation/fixture/DDL/restore/adoption remain OPEN/UNKNOWN, no new campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN/accounts parked.
+CCMAI-RUNTIME-082 FROZEN scoped intended contract/census/nonbinding future plan at144f68f/reviewfebd451. ORCHESTRATOR next bounds separate R2 fixture/schema prerequisite authority before implementation/test dispatch; no generic design retry or implicit runtime activity. Fixture/DDL/restore/adoption UNKNOWN, fencing/recovery/readiness OPEN; source NOT_DISPATCHED/runtime NOT_RUN/no push, R081 returned/FREEZE_OPEN/accounts parked.
 
 ## Historical R081 (returned, FREEZE OPEN)
 

@@ -6807,6 +6807,13 @@
       "path": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
       "status": "ACTIVE",
       "description": "Separate Luna max R082 repair-assisted documentary quality sample; first/repair failures retained."
+    },
+    {
+      "id": "runtime082-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 scoped intended-contract documentary closure only; runtime/readiness and R081 remain open."
     }
   ]
 }
