@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -266,9 +266,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-084 WORK_ORDER source-only residual original R083 F1/F3 completion; worker fresh ACK before committed BUILD, exact script/test/new readiness plus one harness suite. No repair round or Docker/SQL/Go/provider/network/pull/push authority; R083 returned/FREEZE OPEN preserved, accounts parked, fixture/fence readiness OPEN/deployed UNKNOWN.",
+    "nextObjective": "CCMAI-RUNTIME-084 BUILD exact source-only residual F1/F3 completion SC01..07, one worker author pass and one bundled harness suite then handback. No repair/rerun or Docker/SQL/Go/provider/network/pull/push; R083 returned preserved, accounts parked, fixture/fence readiness OPEN/deployed UNKNOWN.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_084.md",
-    "buildDispatched": false,
+    "buildDispatched": true,
     "actualWorkerModel": {
       "model": "gpt-6-luna",
       "reasoningEffort": "max"
@@ -1812,7 +1812,7 @@
   },
   "fixtureSourceCompletion": {
     "trancheId": "CCMAI-RUNTIME-084",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "sourceImplementation": "NOT_DISPATCHED",
     "fixtureRuntime": "NOT_RUN",
     "applicationRuntime": "NOT_RUN",

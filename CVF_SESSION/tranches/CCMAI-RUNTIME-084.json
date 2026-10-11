@@ -53,8 +53,8 @@
   "ownerAuthorization": "Owner next after explicit R083 returned review, standing Luna max worker/root independent reviewer and all commits; separately bound source-only completion of residual original F1/F3, no revival of R083 exhausted repair/runtime authority. R2 resource-safety source surface, zero external effects. Accounts parked.",
   "entryDecision": "INTAKE bounds residual F1/F3; DESIGN preserves accepted F2/F4 and all runtime safeguards; SPEC adds ordering and actual create/cleanup failure controls; WORK_ORDER source-only second bounded completion attempt after R083 repair1. No third same-root-cause repair: unresolved result requires REVIEW_COST_ESCALATION_REQUIRED before any further repair.",
   "claimScope": "Portable resource-harness source/test acceptance only; no actual fixture/image/MySQL/settings/DDL/cleanup availability, CVF runtime governance, app/fence/integration or deployment proof.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "0fe93974de135ab4c83888d5f8f39e0b4128e73f",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_084.md",
   "buildCommit": null,
@@ -63,7 +63,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -72,7 +73,7 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": null,
+  "workerAcknowledgment": "Luna max fresh WORK_ORDER declaration/ACK at e07d035 before edits: manifest/policy/bootstrap fallback/current state-memory-handoff-implementation-index/seed0fe9397/base/order agree. Worker doctor independently25PASS1NOTE/public coreclean cachedorigin main, stale pin/gate profile retained. Exact3/SC01..07/one suite/no repair/no effects understood, no edits. Root grants separately committed source-only BUILD; R083 records/budget/evidence unchanged. Gate46PASS30.863s/local-cached7/7, protected1850paths/ninearrays PASS. Fresh BUILD declaration/ACK again before edits.",
   "preEffectApproval": "NOT_GRANTED",
   "workerHarnessUnitInvocationsUsed": 0,
   "reviewerHarnessUnitInvocationsUsed": 0,
