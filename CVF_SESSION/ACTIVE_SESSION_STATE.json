@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-079",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-079 FROZEN local prerequisite intake/nonbinding proposal at packet907568c/review498fe42 after repair1. Root next separately bounds R1 source-only intended durable-fence DESIGN/SPEC; no implementation/runtime/DB/provider/network/push, deployed UNKNOWN/recovery OPEN, accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-080",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-080 DISPATCH_READY intended durable-fence DESIGN/SPEC DF01..10; Luna max fresh declaration/ACK before documentary BUILD release. Exact3 documents, application/provider/DB/host/network/push0; deployed UNKNOWN/recovery OPEN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max documentary worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max SPEC_AUTHOR awaiting ACK",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -33,10 +33,10 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R079",
-    "status": "FROZEN",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_079.md",
-    "sourceImplementation": "NOT_DISPATCHED_FROZEN_INTAKE_PROPOSAL_ONLY",
+    "id": "R080",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_080.md",
+    "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -593,22 +593,12 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": "docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md",
-  "modelAssessment": "docs/reviews/R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
-  "independentReviewCommit": "498fe42b09faf25c69a942c90da83e592815a246",
-  "closureStatus": "FROZEN_LOCAL_INTAKE_AND_NONBINDING_PROPOSAL_ONLY",
-  "closureChecks": {
-    "preflight": "PASS7/7 final worktree prerequisite",
-    "prRange": "PASS7/7 cached origin/main..HEAD no network",
-    "catalogPS5": "PASS",
-    "catalogPS7": "PASS",
-    "gateUnits": "Preparation46PASS30.799s inherited; scripts/tests unchanged",
-    "staticScope": "28identities/52workerref definitions/protected368+116+74/immutable seed/originalquality arrays PASS",
-    "applicationNativeInvocations": 0,
-    "runtimeGovernanceProof": "NOT_RUN",
-    "publication": "R079_LOCAL_ONLY_NO_PUSH_AUTHORITY"
-  },
+  "reviewEvidence": null,
+  "modelAssessment": null,
+  "closureEvidence": null,
+  "independentReviewCommit": null,
+  "closureStatus": null,
+  "closureChecks": null,
   "localClosureCommit": null,
   "publicationStatus": "R079_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
@@ -714,5 +704,37 @@
     "independentReviewCommit": "22ac133f53da588456c280b41cf68f4b1546f046",
     "closureEvidence": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
     "publicationStatus": "R078_LOCAL_ONLY_NO_PUSH_AUTHORITY"
+  },
+  "historicalR079Continuity": {
+    "currentMode": "FREEZE",
+    "activePhase": "FREEZE",
+    "activeTranche": "CCMAI-RUNTIME-079",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-079 FROZEN local prerequisite intake/nonbinding proposal at packet907568c/review498fe42 after repair1. Root next separately bounds R1 source-only intended durable-fence DESIGN/SPEC; no implementation/runtime/DB/provider/network/push, deployed UNKNOWN/recovery OPEN, accounts parked.",
+    "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max documentary worker idle",
+    "candidatePlanning": {
+      "id": "R079",
+      "status": "FROZEN",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_079.md",
+      "sourceImplementation": "NOT_DISPATCHED_FROZEN_INTAKE_PROPOSAL_ONLY",
+      "sourceOrRuntimeDispatched": false
+    },
+    "reviewEvidence": "docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md",
+    "modelAssessment": "docs/reviews/R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md",
+    "closureEvidence": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
+    "closureStatus": "FROZEN_LOCAL_INTAKE_AND_NONBINDING_PROPOSAL_ONLY",
+    "closureChecks": {
+      "preflight": "PASS7/7 final worktree prerequisite",
+      "prRange": "PASS7/7 cached origin/main..HEAD no network",
+      "catalogPS5": "PASS",
+      "catalogPS7": "PASS",
+      "gateUnits": "Preparation46PASS30.799s inherited; scripts/tests unchanged",
+      "staticScope": "28identities/52workerref definitions/protected368+116+74/immutable seed/originalquality arrays PASS",
+      "applicationNativeInvocations": 0,
+      "runtimeGovernanceProof": "NOT_RUN",
+      "publication": "R079_LOCAL_ONLY_NO_PUSH_AUTHORITY"
+    },
+    "independentReviewCommit": "498fe42b09faf25c69a942c90da83e592815a246",
+    "localClosureCommit": "25b3f409799fba616a745b962cff7ac81e05501c"
   }
 }

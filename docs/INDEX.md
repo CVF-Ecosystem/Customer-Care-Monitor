@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R079 R1 repository-only recovery fence prerequisite intake; no application runtime authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md`
+- Active R080 R1 intended durable JobRun fence DESIGN/SPEC; no product or runtime authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -922,6 +922,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R079 scoped local intake/proposal closure after independent498fe42; durable fence/recovery and deployed facts unresolved.: `docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md`
 - R079 PF01..08 exact3 documents only; next design draft nonbinding.: `docs/work_orders/CCMAI_RUNTIME_079.md`
 - R079 bounded documentary phase/role/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-079.json`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-080.json`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-080.json`
+- R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `docs/work_orders/CCMAI_RUNTIME_080.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

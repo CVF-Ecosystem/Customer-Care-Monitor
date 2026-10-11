@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R079 R1 repository-only recovery fence prerequisite intake; no application runtime authority."
+      "description": "Active R080 R1 intended durable JobRun fence DESIGN/SPEC; no product or runtime authority."
     },
     {
       "id": "r060-work-order",
@@ -6569,6 +6569,34 @@
       "path": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R079 scoped local intake/proposal closure after independent498fe42; durable fence/recovery and deployed facts unresolved."
+    },
+    {
+      "id": "runtime080-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-080.json",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-080.json",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_080.md",
+      "status": "ACTIVE",
+      "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
     }
   ]
 }
