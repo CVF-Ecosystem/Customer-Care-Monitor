@@ -85,5 +85,7 @@
   "inheritedDocsBlocker": "55_DEAD_LINKS_R078_R079",
   "workerHarnessResult": "27PASS1.531s_EXIT0_RAW_RETAINED",
   "modelAssessment": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
-  "scopedDisposition": "SOURCE_REVIEW_PASS_FREEZE_OPEN_INHERITED_DOCS55"
+  "scopedDisposition": "SOURCE_REVIEW_PASS_FREEZE_OPEN_INHERITED_DOCS55",
+  "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c",
+  "reviewPublicationReceipt": "docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json"
 }

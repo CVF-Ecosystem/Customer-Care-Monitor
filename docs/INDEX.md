@@ -1036,6 +1036,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/receipt.json`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stderr.bin`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

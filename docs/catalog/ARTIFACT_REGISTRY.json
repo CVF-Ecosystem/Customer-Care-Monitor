@@ -7367,6 +7367,13 @@
       "path": "docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin",
       "status": "ACTIVE",
       "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
     }
   ]
 }
