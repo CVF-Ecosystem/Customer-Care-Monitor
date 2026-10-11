@@ -48,8 +48,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 after R081 returned-review publicationb1d7f11 authorizes separately bounded source-only contract resolution F1..F4, Luna max worker/root independent reviewer. New authority, not automatic R081 repair; R081 CHANGES_REQUIRED/FREEZE_OPEN and old artifacts immutable. Documentary R1 no source/security/schema/runtime/external effects; later implementation remains R2+ separately bounded.",
   "claimScope": "Selected intended incarnation/restore, durable notification-attempt, complete operation lock/retirement, source census and finite future fixture/test contract. Documentary review/closure only, no deployed/DB/runtime/CVF governance proof.",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "05cef8c327c5899b38d3d4ff400d0ac27711b23a",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_082.md",
   "buildCommit": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
@@ -64,7 +64,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -73,10 +74,11 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": "Root one consolidated initial review returns R1/R2 in R082 independent review; root M1/M2/M3 small citation/range/project-cwd corrections preserved original183c5cd and worker failure. Selected restore/notification controls and finite census/fixture fact retained; no substantive root repair prose. One explicitly directed same-scope documentary repair authorized by seed; worker must fresh ACK and wait committed BUILD release.",
-  "workerDocumentRepairRounds": 0,
+  "workerAcknowledgment": "Fresh REVIEW tuple386d910 rehydrated; Luna max REPAIR_WORKER accepts exact R1/R2 findings, retains root M1/M2/M3 and original failed worker check, no edits before release. Root releases the seed-authorized sole same-scope documentary repair1; objective/paths/risk/external-effect/commit-owner unchanged. One static check then handback/root independent finding recheck; no automatic retries or new research campaign.",
+  "workerDocumentRepairRounds": 1,
   "initialFindingGroups": [
     "R1",
     "R2"
-  ]
+  ],
+  "repairDisposition": "EXPLICIT_ROOT_DIRECTED_R1_R2_ONE_ROUND_ONLY"
 }

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker awaiting bounded repair ACK
-- Next allowed move: CCMAI-RUNTIME-082 REVIEW CHANGES_REQUIRED R1/R2 destructive-file graph and writer/phase predicates after consolidated review; max1 expressly directed same-scope repair awaits fresh ACK/committed BUILD release. Native/DB/provider/network/push0, R081 returned/FREEZE_OPEN, deployed UNKNOWN/accounts parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r082_worker documentary REPAIR_WORKER
+- Next allowed move: CCMAI-RUNTIME-082 BUILD directed documentary repair1 exact2 for consolidated R1/R2 destructive-file graph and writer-phase predicates; one repair static check then independent finding recheck, no additional campaign/native/DB/provider/network/push. R081 returned/FREEZE_OPEN, source not dispatched/deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -26,3 +26,7 @@ Fresh BUILD canonical tuple rehydrated at183c5cd after worker handback; root ind
 ## Before-edit role acknowledgment
 
 Root one consolidated initial review returns R1/R2 in R082 independent review; root M1/M2/M3 small citation/range/project-cwd corrections preserved original183c5cd and worker failure. Selected restore/notification controls and finite census/fixture fact retained; no substantive root repair prose. One explicitly directed same-scope documentary repair authorized by seed; worker must fresh ACK and wait committed BUILD release.
+
+## Before-edit role acknowledgment
+
+Fresh REVIEW tuple386d910 rehydrated; Luna max REPAIR_WORKER accepts exact R1/R2 findings, retains root M1/M2/M3 and original failed worker check, no edits before release. Root releases the seed-authorized sole same-scope documentary repair1; objective/paths/risk/external-effect/commit-owner unchanged. One static check then handback/root independent finding recheck; no automatic retries or new research campaign.
