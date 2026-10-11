@@ -1,0 +1,11 @@
+# R084 Luna max bounded source-completion assessment
+
+Luna max /root/r084_worker authored the source/test completion; root supplied SC01..07, orchestrated, independently reviewed and owns every commit. Source67e76de receives scoped REVIEW_PASS after one completion pass, no source repair. This is a directed completion of retained R083 F1/F3, not a fresh independent design sample or R083 first-pass success.
+
+Useful contribution: narrow started-ownership helper fixes SQL ordering while retaining post-readiness revalidation. Five new test methods drive Campaign call order, actual raised create timeouts with reconciled/unresolved daemon outcomes, known-resource cleanup and thrown removal failure. All18old tests retained. Worker/root each23PASS with actual raw output and unchanged source identities; these are23unique tests exercised twice, no Docker/SQL/runtime governance proof.
+
+Weakness retained: worker's first capture launcher selected multiple Python executables and failed before process creation, then the wrapper dereferenced null process/missing raw files. Corrected executable selection uses the sole unit budget; original launcher error and first identity snapshot preserved. This is capture overhead, not source repair or a failed unittest result. Worker preparation included static diff review, progress messages and fresh post-compaction rehydration; no measured inference duration/tokens/cost.
+
+Root assistance: original finding/order/scope, explicit event-order and actual Campaign failure-control requirements, lifecycle/commit ownership and independent receipt audit. Root did not draft substantive implementation/test or repair source. Root initial read-output truncation was resolved by targeted reads; a missing not-yet-created receipt directory check was navigation overhead, not worker defect. Historical1850paths/ninequalityarrays preserved.
+
+Result supports assigning Luna bounded finding completion with concrete acceptance contracts and independent test/evidence review. One directed R2 source sample, low confidence; no matched max/xhigh/Sol comparison or demonstrated efficiency advantage. R083 remains historically returned; actual fixture prerequisites NOT_RUN/UNKNOWN, fence integration OPEN/deployed UNKNOWN, no effects/accounts parked. Scoped closer disposition follows review; no runtime acceptance from unit PASS.

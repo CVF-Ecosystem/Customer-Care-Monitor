@@ -6954,6 +6954,111 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_084.md",
       "status": "ACTIVE",
       "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/protected-audit.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/receipt.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/launcher-error.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/post-suite-identities.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities-final.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/source_unit/suite-execution.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r084_fixture_source/worker/worker-completion-receipt.json",
+      "status": "ACTIVE",
+      "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-084",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-084 BUILD exact source-only residual F1/F3 completion SC01..07, one worker author pass and one bundled harness suite then handback. No repair/rerun or Docker/SQL/Go/provider/network/pull/push; R083 returned preserved, accounts parked, fixture/fence readiness OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-084 REVIEW_PASS source-only F1/F3 completion67e76de, worker/root23PASS/raw/protected1850paths/ninearrays; CLOSER next decides scoped source FREEZE with repository checks. No fixture effect approval/Docker/SQL/Go/provider/network/pull/push; R083 historical returned preserved, accounts parked, actual fixture/fence readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r084_worker IMPLEMENTATION_WORKER source-only",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max handback complete",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -41,10 +41,10 @@
   },
   "candidatePlanning": {
     "id": "R084",
-    "status": "BUILD",
+    "status": "REVIEW_PASS",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_084.md",
-    "sourceImplementation": "NOT_DISPATCHED",
-    "sourceOrRuntimeDispatched": false
+    "sourceImplementation": "SOURCE_COMMITTED_REVIEW_PASS",
+    "sourceOrRuntimeDispatched": true
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -600,8 +600,8 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": null,
-  "modelAssessment": null,
+  "reviewEvidence": "docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md",
+  "modelAssessment": "docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md",
   "closureEvidence": null,
   "independentReviewCommit": null,
   "closureStatus": null,
@@ -780,8 +780,13 @@
   },
   "nextScopeProposal": null,
   "currentReview": {
-    "result": "NOT_RUN",
-    "freeze": "OPEN"
+    "result": "REVIEW_PASS_SOURCE_ONLY",
+    "reviewedBuildCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+    "findings": [],
+    "freeze": "OPEN",
+    "workerHarness": "23PASS0.602s_RAW_EXIT0",
+    "reviewerHarness": "23PASS0.331s_RAW_EXIT0",
+    "runtimeEffects": 0
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -862,10 +867,13 @@
     }
   },
   "currentRepair": {
-    "scope": "NO_REPAIR_AUTHORIZED",
+    "scope": "NONE_USED_OR_AUTHORIZED",
     "round": 0
   },
-  "currentClosure": null,
+  "currentClosure": {
+    "status": "SOURCE_ONLY_ELIGIBLE_PENDING_CLOSER",
+    "runtimeEligible": false
+  },
   "historicalR083Continuity": {
     "currentMode": "REVIEW",
     "activePhase": "REVIEW",

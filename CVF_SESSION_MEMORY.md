@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-084", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-084", "parked": true} -->
 
 ## Current R084
 
-CCMAI-RUNTIME-084 BUILD exact source-only residual F1/F3 completion SC01..07, one worker author pass and one bundled harness suite then handback. No repair/rerun or Docker/SQL/Go/provider/network/pull/push; R083 returned preserved, accounts parked, fixture/fence readiness OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-084 REVIEW_PASS source-only F1/F3 completion67e76de, worker/root23PASS/raw/protected1850paths/ninearrays; CLOSER next decides scoped source FREEZE with repository checks. No fixture effect approval/Docker/SQL/Go/provider/network/pull/push; R083 historical returned preserved, accounts parked, actual fixture/fence readiness OPEN/deployed UNKNOWN.
 
 ## Historical R083 (returned, FREEZE OPEN)
 

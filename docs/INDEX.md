@@ -977,6 +977,21 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-084.json`
 - R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-084.json`
 - R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `docs/work_orders/CCMAI_RUNTIME_084.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/R084_FIXTURE_SOURCE_COMPLETION_2026-10-11.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/protected-audit.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/receipt.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stderr.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/reviewer/source_unit/stdout.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/launcher-error.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/post-suite-identities.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities-final.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/pre-suite-identities.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/stderr.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/stdout.txt`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/suite-execution.json`
+- R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/worker-completion-receipt.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

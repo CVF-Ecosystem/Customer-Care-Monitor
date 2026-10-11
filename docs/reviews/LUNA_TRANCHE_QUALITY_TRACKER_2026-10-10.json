@@ -810,5 +810,43 @@
       "confidence": "LOW_SINGLE_REPAIR_ASSISTED_R2_TOOLING_SAMPLE",
       "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
     }
+  ],
+  "fixtureSourceCompletionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-084",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "directed_fixture_resource_safety_source_completion",
+      "sampleType": "DIRECTED_COMPLETION_INHERITED_R083_NOT_FRESH_DESIGN",
+      "firstSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+      "firstPassDisposition": "REVIEW_PASS_SOURCE_ONLY_COMPLETION",
+      "workerCompletionPasses": 1,
+      "workerSourceRepairRounds": 0,
+      "workerUnitInvocations": 1,
+      "workerRawUnitResult": "23PASS0.602s_EXIT0",
+      "workerProcessMilliseconds": 3606.206,
+      "workerPreProcessLauncherFailures": 1,
+      "reviewerUnitInvocations": 1,
+      "reviewerRawUnitResult": "23PASS0.331s_EXIT0",
+      "uniqueTests": 23,
+      "preservedOldTests": 18,
+      "addedTestMethods": 5,
+      "runtimeFixtureCampaigns": 0,
+      "goInvocations": 0,
+      "providerInvocations": 0,
+      "automaticRetries": 0,
+      "finalDisposition": "REVIEW_PASS_SOURCE_ONLY_PENDING_CLOSER",
+      "parentAssistance": "SC01..07 explicit call-order/raisedcreate/cleanup controls, all lifecycle/commits/independent review; no substantive worker implementation draft",
+      "workerPreparationOverhead": "multiplePython executable launcher rejection/nullwrapper before process; corrected executable, one suite only, post-compaction rehydration; failures preserved",
+      "rootOriginOverhead": "initial combined read truncated, targeted recovery; expected not-yet-created receipt path navigation",
+      "assessment": "docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_DIRECTED_SOURCE_COMPLETION_SAMPLE"
+    }
   ]
 }
