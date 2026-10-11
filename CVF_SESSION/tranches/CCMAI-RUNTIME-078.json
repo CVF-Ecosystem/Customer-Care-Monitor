@@ -51,8 +51,8 @@
   "ownerAuthorization": "Owner next2026-10-11 continues accepted R077 next governed move, Luna max worker/root independent reviewer. Root bounds R2 source + disposable synthetic MySQL runtime; no real credentials or external effects. Owner aware via declaration; no R3 action.",
   "fixtureAuthority": "Inspect only cached golang:1.26-alpine/mysql:8.0 and Go module cache. One disposable internal Docker network/no host ports; named ccmai-r078-* MySQL and Go containers, synthetic credentials, read-only exact source/module cache binds, disposable Go cache/database volumes. No app Compose/backend server startup; actual Scheduler.Start inside focused tests only. Cleanup/verify only owned resources; no pull/network egress. Root and worker campaigns sequential, separate raw receipts.",
   "claimScope": "Reviewed new-binary startup-recovery no JobRun rewrites on isolated synthetic DB. Not runtime CVF governance, remote topology, deployed safety, old binary parity or recovery implementation.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_078.md",
   "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
   "buildCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
@@ -65,7 +65,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -75,5 +76,5 @@
   ],
   "dispatcher": "Codex /root",
   "humanReview": "Owner next scope awareness2026-10-11; root independently reviews before scoped closure, R2 no R3 action",
-  "workerAcknowledgment": "Root independent static rereview PASS F1/F2 after repair1; mutation replay, typed summary rejection, selectors and protected369/history114 PASS. Source repair b7c826aa9e412b9e463716d6449b99a78819bfa9 committed exact new test only; first source6219 preserved. Root mechanically binds source/archive plan; release worker single4Go campaign only after this ACK commit."
+  "workerAcknowledgment": "Fresh root REVIEWER rehydration canonical tuple PASS; worker raw event/hash/archive/restoration/ownedcleanup independently audited PASS. Worker4/4 exhausted; root independent1build3test released before action, source b7c826a unchanged. Shared reviewed harness reused with separate actor/fixtures/raw receipts; no independence claim for harness authorship."
 }

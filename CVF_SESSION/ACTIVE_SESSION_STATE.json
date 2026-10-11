@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-078",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-078 BUILD worker runtime released on b7c826a: one build plus three focused tests including M01/restoration; worker max4Go, reviewer4 reserved, aggregate8/retry0. Synthetic isolated DB only; no provider/external network/push, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-078 REVIEW_PENDING: worker4Go PASS and cleanup verified; root independent single4Go campaign on b7c826a released, aggregate8/retry0. Synthetic local application only; recovery/deployed/governance OPEN, no provider/network/push, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / COMMIT_STEWARD; Luna max IMPLEMENTATION_WORKER; root independent REVIEWER",
+  "activeRole": "Codex /root independent REVIEWER / COMMIT_STEWARD; Luna max worker handback complete",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -25,7 +25,7 @@
     "reviewerMaxBuild": 1,
     "reviewerMaxGoTest": 3,
     "aggregateMaxGoInvocations": 8,
-    "workerUsedGoInvocations": 0,
+    "workerUsedGoInvocations": 4,
     "reviewerUsedGoInvocations": 0,
     "automaticRetries": 0,
     "currentPermittedGoInvocations": 4
@@ -41,7 +41,7 @@
   },
   "candidatePlanning": {
     "id": "R078",
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_078.md",
     "sourceImplementation": "BUILD_STATIC_SOURCE_TEST_RUNNER_AUTHORIZED",
     "sourceOrRuntimeDispatched": true
@@ -682,5 +682,5 @@
     },
     "localClosureCommit": "4a63460e21d835331382cf8728bf9cbbaed19cfd"
   },
-  "runtimeRelease": "WORKER_CAMPAIGN_RELEASED"
+  "runtimeRelease": "INDEPENDENT_REVIEW_CAMPAIGN_RELEASED"
 }

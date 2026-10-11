@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / COMMIT_STEWARD; Luna max IMPLEMENTATION_WORKER; root independent REVIEWER
-- Next allowed move: CCMAI-RUNTIME-078 BUILD worker runtime released on b7c826a: one build plus three focused tests including M01/restoration; worker max4Go, reviewer4 reserved, aggregate8/retry0. Synthetic isolated DB only; no provider/external network/push, accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / COMMIT_STEWARD; Luna max worker handback complete
+- Next allowed move: CCMAI-RUNTIME-078 REVIEW_PENDING: worker4Go PASS and cleanup verified; root independent single4Go campaign on b7c826a released, aggregate8/retry0. Synthetic local application only; recovery/deployed/governance OPEN, no provider/network/push, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake/design/spec/work-order ACK
@@ -30,3 +30,7 @@ Root fresh BUILD current tuple/handback rehydrated; transition independent REVIE
 ## Before-edit role acknowledgment
 
 Root independent static rereview PASS F1/F2 after repair1; mutation replay, typed summary rejection, selectors and protected369/history114 PASS. Source repair b7c826aa9e412b9e463716d6449b99a78819bfa9 committed exact new test only; first source6219 preserved. Root mechanically binds source/archive plan; release worker single4Go campaign only after this ACK commit.
+
+## Before-edit role acknowledgment
+
+Fresh root REVIEWER rehydration canonical tuple PASS; worker raw event/hash/archive/restoration/ownedcleanup independently audited PASS. Worker4/4 exhausted; root independent1build3test released before action, source b7c826a unchanged. Shared reviewed harness reused with separate actor/fixtures/raw receipts; no independence claim for harness authorship.
