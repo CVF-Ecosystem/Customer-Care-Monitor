@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "scope": "immutable_first_source_packet_binding_during_repair1",
+  "goInvocations": 0,
+  "dockerInvocations": 0,
+  "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
+  "sourceCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
+  "headCommit": "HEAD",
+  "cumulativeBackendChangedPaths": [
+    "backend/engine/scheduler.go",
+    "backend/engine/scheduler_startup_hardening_test.go"
+  ],
+  "sourceBackendTree": "ea0bdb5887d3c047288cba70f756105cbfe67739",
+  "headBackendTree": "ea0bdb5887d3c047288cba70f756105cbfe67739",
+  "sourceBackendTreeEqualsHead": true,
+  "backendWorktreeClean": false,
+  "expectedPendingRepairPaths": [
+    "backend/engine/scheduler_startup_hardening_test.go"
+  ],
+  "finalRuntimeCleanWorktreeRequired": true,
+  "receiptContract": {
+    "validatedSummaryExitCode": 0,
+    "missingSummaryExitCode": 1,
+    "publicationFailureExitCode": 1,
+    "typedSummaryReadback": true,
+    "rawReferenceSha256Readback": true,
+    "wrongFieldTypeRejected": true,
+    "wrongRawReferenceSha256Rejected": true,
+    "goInvocations": 0,
+    "dockerInvocations": 0
+  }
+}

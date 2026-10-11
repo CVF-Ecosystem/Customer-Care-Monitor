@@ -55,7 +55,7 @@
   "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_078.md",
   "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
-  "buildCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
+  "buildCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
@@ -75,5 +75,5 @@
   ],
   "dispatcher": "Codex /root",
   "humanReview": "Owner next scope awareness2026-10-11; root independently reviews before scoped closure, R2 no R3 action",
-  "workerAcknowledgment": "2026-10-11 Luna max fresh CHANGES_REQUIRED continuity/CVF declaration REPAIR_WORKER ACK received before edits, including F2 cumulative-base source binding clarification1138829. Root records unchanged-authority repair1 BUILD release; only newtest/workerprobe repair, scheduler product already correct. Go0 runtime pending static rereview; no new owner checkpoint."
+  "workerAcknowledgment": "Root independent static rereview PASS F1/F2 after repair1; mutation replay, typed summary rejection, selectors and protected369/history114 PASS. Source repair b7c826aa9e412b9e463716d6449b99a78819bfa9 committed exact new test only; first source6219 preserved. Root mechanically binds source/archive plan; release worker single4Go campaign only after this ACK commit."
 }

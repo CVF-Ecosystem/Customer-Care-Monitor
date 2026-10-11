@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max REPAIR_WORKER; root independent REVIEWER reserved
-- Next allowed move: CCMAI-RUNTIME-078 BUILD repair1 F1 new-test controls/F2 worker-runner guards only; static handback before Go runtime release. Go0/8/retry0, R2 scope unchanged, no provider/external network/push, accounts parked.
+- Active role: Codex /root ORCHESTRATOR / COMMIT_STEWARD; Luna max IMPLEMENTATION_WORKER; root independent REVIEWER
+- Next allowed move: CCMAI-RUNTIME-078 BUILD worker runtime released on b7c826a: one build plus three focused tests including M01/restoration; worker max4Go, reviewer4 reserved, aggregate8/retry0. Synthetic isolated DB only; no provider/external network/push, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake/design/spec/work-order ACK
@@ -26,3 +26,7 @@ Root fresh BUILD current tuple/handback rehydrated; transition independent REVIE
 ## Before-edit role acknowledgment
 
 2026-10-11 Luna max fresh CHANGES_REQUIRED continuity/CVF declaration REPAIR_WORKER ACK received before edits, including F2 cumulative-base source binding clarification1138829. Root records unchanged-authority repair1 BUILD release; only newtest/workerprobe repair, scheduler product already correct. Go0 runtime pending static rereview; no new owner checkpoint.
+
+## Before-edit role acknowledgment
+
+Root independent static rereview PASS F1/F2 after repair1; mutation replay, typed summary rejection, selectors and protected369/history114 PASS. Source repair b7c826aa9e412b9e463716d6449b99a78819bfa9 committed exact new test only; first source6219 preserved. Root mechanically binds source/archive plan; release worker single4Go campaign only after this ACK commit.

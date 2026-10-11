@@ -13,6 +13,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import shutil
 import subprocess
 import tarfile
 import tempfile
@@ -25,6 +26,7 @@ EXPECTED_FILES = {
     "backend/engine/scheduler_startup_hardening_test.go",
 }
 LEGACY_BASELINE = "51d09cd4cb9282f22518ac32a4edbd3226d56e36"
+FIRST_SOURCE_PACKET_COMMIT = "6219da376c63d806ce412bfbae2a738a0af529bc"
 LEGACY_HELPER_START = "// cleanupStuckRuns marks any job_runs stuck in \"running\" status as failed."
 LEGACY_HELPER_END = "\n// Stop gracefully shuts down the scheduler."
 LEGACY_CALL = (
@@ -36,6 +38,8 @@ TEST_DSN = (
     "ccma:" + SYNTHETIC_DB_PASSWORD
     + "@tcp({database}:3306)/CCMA?charset=utf8mb4&parseTime=True&loc=UTC"
 )
+LEGACY_CALL_LINE = re.compile(r"(?m)^[\t ]*cleanupStuckRuns\(\)[\t ]*$")
+LEGACY_DEFINITION_LINE = re.compile(r"(?m)^func cleanupStuckRuns\(\)[\t ]*\{")
 TEST_NAMES = [
     "TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission",
     "TestSH02StartupPreservesUnknownRunningAndTerminalRows",
@@ -115,6 +119,101 @@ def inspect(kind, name):
     return decoded[0]
 
 
+def backend_git_binding(base_commit, source_commit, head_commit="HEAD"):
+    changed = run(["git", "diff", "--name-only", base_commit, source_commit, "--", "backend"]).stdout.decode().splitlines()
+    if set(changed) != EXPECTED_FILES or len(changed) != len(EXPECTED_FILES):
+        raise RuntimeError("cumulative backend diff from base must contain exactly the two authorized paths")
+    source_tree = run(["git", "rev-parse", source_commit + ":backend"]).stdout.decode().strip()
+    head_tree = run(["git", "rev-parse", head_commit + ":backend"]).stdout.decode().strip()
+    if source_tree != head_tree:
+        raise RuntimeError("bound source backend tree differs from current HEAD backend tree")
+    return {
+        "baseCommit": base_commit,
+        "sourceCommit": source_commit,
+        "headCommit": head_commit,
+        "cumulativeBackendChangedPaths": changed,
+        "sourceBackendTree": source_tree,
+        "headBackendTree": head_tree,
+        "sourceBackendTreeEqualsHead": True,
+    }
+
+
+def campaign_exit_code(errors, summary_published):
+    return 1 if errors or not summary_published else 0
+
+
+def static_receipt_contract_check():
+    """Exercise summary typing/hash rejection and the nonzero publication-failure exit."""
+    if campaign_exit_code([], True) != 0:
+        raise RuntimeError("validated summary must permit success")
+    if campaign_exit_code([], False) == 0:
+        raise RuntimeError("missing summary must return nonzero")
+    if campaign_exit_code([{"type": "summary publication/validation"}], False) == 0:
+        raise RuntimeError("summary publication failure must return nonzero")
+
+    raw_path = Path("docs/reviews/probes/r078_worker_mutation_static.json")
+    raw_bytes = raw_path.read_bytes()
+    raw_ref = {"path": raw_path.as_posix(), "bytes": len(raw_bytes), "sha256": sha(raw_bytes)}
+    summary = {
+        "sourceCommit": FIRST_SOURCE_PACKET_COMMIT,
+        "commands": [],
+        "cleanup": {},
+        "errors": [],
+        "goInvocations": {"build": 0, "tests": 0},
+        "result": "STATIC_ONLY",
+        "probe": raw_ref,
+    }
+    with tempfile.TemporaryDirectory(prefix="ccmai-r078-receipt-contract-") as temp_dir:
+        summary_path = Path(temp_dir) / "summary.json"
+        encoded = (json.dumps(summary, indent=2) + "\n").encode()
+        summary_path.write_bytes(encoded)
+        expected = {"path": str(summary_path), "bytes": len(encoded), "sha256": sha(encoded)}
+        accepted = validate_published_summary(summary_path, expected)
+        if accepted["probe"] != raw_ref:
+            raise RuntimeError("typed summary/raw reference was not preserved")
+
+        bad_type = dict(summary)
+        bad_type["commands"] = "invalid"
+        bad_bytes = (json.dumps(bad_type, indent=2) + "\n").encode()
+        summary_path.write_bytes(bad_bytes)
+        try:
+            validate_published_summary(
+                summary_path,
+                {"path": str(summary_path), "bytes": len(bad_bytes), "sha256": sha(bad_bytes)},
+            )
+        except RuntimeError as exc:
+            if "invalid type" not in str(exc):
+                raise
+        else:
+            raise RuntimeError("summary validator accepted a field with the wrong type")
+
+        bad_ref_summary = dict(summary)
+        bad_ref_summary["probe"] = dict(raw_ref, sha256="0" * 64)
+        bad_ref_bytes = (json.dumps(bad_ref_summary, indent=2) + "\n").encode()
+        summary_path.write_bytes(bad_ref_bytes)
+        try:
+            validate_published_summary(
+                summary_path,
+                {"path": str(summary_path), "bytes": len(bad_ref_bytes), "sha256": sha(bad_ref_bytes)},
+            )
+        except RuntimeError as exc:
+            if "raw reference length/hash mismatch" not in str(exc):
+                raise
+        else:
+            raise RuntimeError("summary validator accepted a raw reference with the wrong SHA256")
+    return {
+        "validatedSummaryExitCode": 0,
+        "missingSummaryExitCode": 1,
+        "publicationFailureExitCode": 1,
+        "typedSummaryReadback": True,
+        "rawReferenceSha256Readback": True,
+        "wrongFieldTypeRejected": True,
+        "wrongRawReferenceSha256Rejected": True,
+        "goInvocations": 0,
+        "dockerInvocations": 0,
+    }
+
+
 def exact_resource_exists(kind, name):
     result = run(["docker", kind, "inspect", name], check=False, timeout=30)
     if result.returncode == 0:
@@ -191,11 +290,204 @@ def safe_extract_backend(archive, root):
     return expected
 
 
+def restore_legacy_mutation(source_bytes, baseline_bytes):
+    """Return the exact old helper/call mutation and its one-file diff metadata."""
+    source = source_bytes.decode("utf-8")
+    baseline = baseline_bytes.decode("utf-8")
+    helper_start = baseline.find(LEGACY_HELPER_START)
+    helper_end = baseline.find(LEGACY_HELPER_END, helper_start)
+    if helper_start < 0 or helper_end < 0:
+        raise RuntimeError("legacy helper boundaries are missing from the fixed baseline")
+    helper = baseline[helper_start:helper_end] + "\n"
+    baseline_call_matches = LEGACY_CALL_LINE.findall(baseline)
+    baseline_definition_matches = LEGACY_DEFINITION_LINE.findall(baseline)
+    if len(baseline_call_matches) != 1 or len(baseline_definition_matches) != 1:
+        raise RuntimeError("baseline must contain exactly one standalone call and definition")
+    if baseline.count(LEGACY_CALL) != 1 or helper.count("func cleanupStuckRuns()") != 1:
+        raise RuntimeError("baseline exact call/helper block match count must both be one")
+    if LEGACY_CALL_LINE.findall(source) or LEGACY_DEFINITION_LINE.findall(source):
+        raise RuntimeError("hardened source unexpectedly contains a standalone legacy call/helper")
+    start_marker = "\ts.scheduler.Start()"
+    stop_marker = "// Stop gracefully shuts down the scheduler."
+    if source.count(start_marker) != 1 or source.count(stop_marker) != 1:
+        raise RuntimeError("legacy mutation insertion markers must each be unique")
+    mutant = source.replace(start_marker, LEGACY_CALL + start_marker, 1)
+    mutant = mutant.replace(stop_marker, helper + stop_marker, 1)
+    call_matches = LEGACY_CALL_LINE.findall(mutant)
+    definition_matches = LEGACY_DEFINITION_LINE.findall(mutant)
+    if len(call_matches) != 1 or len(definition_matches) != 1:
+        raise RuntimeError("mutant must contain exactly one standalone call and definition")
+    mutant_bytes = mutant.encode("utf-8")
+    diff = "".join(difflib.unified_diff(
+        source.splitlines(True), mutant.splitlines(True),
+        fromfile="a/backend/engine/scheduler.go", tofile="b/backend/engine/scheduler.go",
+    )).encode()
+    metadata = {
+        "legacyBaselineCommit": LEGACY_BASELINE,
+        "baselineSchedulerSha256": sha(baseline_bytes),
+        "helperSourceSha256": sha(helper.encode()),
+        "baselineCallExactMatchCount": len(baseline_call_matches),
+        "baselineDefinitionExactMatchCount": len(baseline_definition_matches),
+        "mutantCallExactMatchCount": len(call_matches),
+        "mutantDefinitionExactMatchCount": len(definition_matches),
+        "appliedInDisposableArchiveOnly": True,
+        "originalSha256": sha(source_bytes),
+        "mutantSha256": sha(mutant_bytes),
+        "diffSha256": sha(diff),
+        "diffBase64": base64.b64encode(diff).decode(),
+    }
+    return mutant_bytes, metadata
+
+
+def static_mutation_check():
+    """Pure Python/git preflight; it does not invoke Go, Docker, or edit source."""
+    source_path = Path("backend/engine/scheduler.go")
+    source_bytes = source_path.read_bytes()
+    baseline_bytes = run(["git", "show", LEGACY_BASELINE + ":backend/engine/scheduler.go"]).stdout
+    mutant, metadata = restore_legacy_mutation(source_bytes, baseline_bytes)
+    diff = base64.b64decode(metadata["diffBase64"])
+    receipt = {
+        "result": "PASS",
+        "scope": "pure_disposable_M01_mutation_construction_only",
+        "goInvocations": 0,
+        "dockerInvocations": 0,
+        "targetPath": "backend/engine/scheduler.go",
+        "candidateSourceSha256": sha(source_bytes),
+        "mutantSha256": sha(mutant),
+        "diffBytes": len(diff),
+        **metadata,
+    }
+    target = Path("docs/reviews/probes/r078_worker_mutation_static.json")
+    if target.exists():
+        raise RuntimeError("refusing to overwrite static mutation receipt: " + target.as_posix())
+    with target.open("xb") as stream:
+        stream.write((json.dumps(receipt, indent=2) + "\n").encode())
+    check = json.loads(target.read_text(encoding="utf-8"))
+    if not isinstance(check, dict) or check.get("result") != "PASS" or check.get("goInvocations") != 0 or check.get("dockerInvocations") != 0:
+        raise RuntimeError("static mutation receipt failed typed readback")
+    if sha(target.read_bytes()) != sha((json.dumps(receipt, indent=2) + "\n").encode()):
+        raise RuntimeError("static mutation receipt byte/hash readback mismatch")
+    return receipt
+
+
+def static_backend_binding_check():
+    """Check immutable first-source tree identity while repair1 is still uncommitted."""
+    base = "0579a792c473e53eb11c6efa007ab9d539370dec"
+    binding = backend_git_binding(base, FIRST_SOURCE_PACKET_COMMIT)
+    dirty = run(["git", "status", "--short", "--untracked-files=all", "--", "backend"]).stdout.decode().splitlines()
+    dirty_paths = [line[3:] for line in dirty if len(line) >= 4]
+    allowed_repair = {"backend/engine/scheduler_startup_hardening_test.go"}
+    if set(dirty_paths) - allowed_repair:
+        raise RuntimeError("unexpected backend worktree paths during repair1 static check")
+    receipt = {
+        "result": "PASS",
+        "scope": "immutable_first_source_packet_binding_during_repair1",
+        "goInvocations": 0,
+        "dockerInvocations": 0,
+        **binding,
+        "backendWorktreeClean": not dirty,
+        "expectedPendingRepairPaths": dirty_paths,
+        "finalRuntimeCleanWorktreeRequired": True,
+        "receiptContract": static_receipt_contract_check(),
+    }
+    target = Path("docs/reviews/probes/r078_worker_backend_binding_static.json")
+    if target.exists():
+        raise RuntimeError("refusing to overwrite backend binding receipt: " + target.as_posix())
+    encoded = (json.dumps(receipt, indent=2) + "\n").encode()
+    with target.open("xb") as stream:
+        stream.write(encoded)
+    readback = target.read_bytes()
+    check = json.loads(readback)
+    if (check.get("sourceBackendTree") != check.get("headBackendTree")
+            or check.get("result") != "PASS"
+            or check.get("goInvocations") != 0
+            or check.get("dockerInvocations") != 0
+            or sha(readback) != sha(encoded)):
+        raise RuntimeError("backend binding receipt failed typed readback")
+    return receipt
+
+
+def collect_raw_references(value):
+    refs = []
+    if isinstance(value, dict):
+        if {"path", "bytes", "sha256"}.issubset(value):
+            refs.append(value)
+        for nested in value.values():
+            refs.extend(collect_raw_references(nested))
+    elif isinstance(value, list):
+        for nested in value:
+            refs.extend(collect_raw_references(nested))
+    return refs
+
+
+def validate_published_summary(path, expected_ref):
+    data = path.read_bytes()
+    if len(data) != expected_ref["bytes"] or sha(data) != expected_ref["sha256"]:
+        raise RuntimeError("published summary length/hash mismatch")
+    parsed = json.loads(data)
+    if not isinstance(parsed, dict):
+        raise RuntimeError("published summary root is not a JSON object")
+    required = {"sourceCommit": str, "commands": list, "cleanup": dict, "errors": list,
+                "goInvocations": dict, "result": str}
+    for key, expected_type in required.items():
+        if not isinstance(parsed.get(key), expected_type):
+            raise RuntimeError("published summary field has invalid type: " + key)
+    for ref in collect_raw_references(parsed):
+        if not isinstance(ref.get("path"), str) or type(ref.get("bytes")) is not int:
+            raise RuntimeError("published raw reference has invalid path/bytes type")
+        if not re.fullmatch(r"[0-9a-f]{64}", str(ref.get("sha256", ""))):
+            raise RuntimeError("published raw reference has invalid SHA256")
+        raw_path = PurePosixPath(ref["path"])
+        if raw_path.is_absolute() or ".." in raw_path.parts or not ref["path"].startswith("docs/reviews/probes/r078_worker_"):
+            raise RuntimeError("published raw reference escapes the R078 worker artifact prefix")
+        raw = Path(*raw_path.parts).read_bytes()
+        if len(raw) != ref["bytes"] or sha(raw) != ref["sha256"]:
+            raise RuntimeError("published raw reference length/hash mismatch: " + ref["path"])
+    return parsed
+
+
+def remove_owned_source_snapshot(source_root, temp_parent, token):
+    """Remove only the exact runner-created child directly inside the resolved TEMP parent."""
+    expected_prefix = "ccmai-r078-worker-source-" + token + "-"
+    if not source_root.exists():
+        return {"removed": False, "alreadyAbsent": True, "validatedParent": str(temp_parent)}
+    if source_root.is_symlink():
+        raise RuntimeError("owned source snapshot path became a symlink")
+    resolved_parent = temp_parent.resolve(strict=True)
+    resolved = source_root.resolve(strict=True)
+    if resolved.parent != resolved_parent or resolved.name != source_root.name or not resolved.name.startswith(expected_prefix):
+        raise RuntimeError("refuse recursive removal outside the exact owned TEMP child")
+    shutil.rmtree(resolved)
+    if resolved.exists():
+        raise RuntimeError("owned source snapshot remains after recursive removal")
+    return {"removed": True, "alreadyAbsent": False, "validatedParent": str(resolved_parent),
+            "ownedPrefix": expected_prefix}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", required=True, help="immutable 40-hex source-packet commit")
+    parser.add_argument("--source", help="immutable 40-hex repaired source commit")
     parser.add_argument("--plan", default="docs/reviews/probes/r078_worker_plan.json")
+    parser.add_argument("--check-mutation", action="store_true",
+                        help="validate the exact old-helper mutation with Python/git only; no Go or Docker")
+    parser.add_argument("--check-binding", action="store_true",
+                        help="validate immutable source binding and receipt contracts with Python/git only")
     args = parser.parse_args()
+    if args.check_mutation:
+        result = static_mutation_check()
+        print(json.dumps({"result": result["result"], "goInvocations": 0, "dockerInvocations": 0,
+                          "candidateSourceSha256": result["candidateSourceSha256"],
+                          "mutantSha256": result["mutantSha256"], "diffSha256": result["diffSha256"]}), flush=True)
+        return 0
+    if args.check_binding:
+        result = static_backend_binding_check()
+        print(json.dumps({"result": result["result"], "goInvocations": 0, "dockerInvocations": 0,
+                          "sourceBackendTreeEqualsHead": result["sourceBackendTreeEqualsHead"],
+                          "cumulativeBackendChangedPaths": result["cumulativeBackendChangedPaths"],
+                          "receiptContract": result["receiptContract"]}), flush=True)
+        return 0
+    if not args.source:
+        parser.error("--source is required for the runtime campaign")
     if not re.fullmatch(r"[0-9a-f]{40}", args.source):
         raise RuntimeError("invalid source commit; bind plan only after root commits the source packet")
 
@@ -205,12 +497,18 @@ def main():
         raise RuntimeError("runtime source differs from the committed worker plan")
     if plan.get("legacyBaselineCommit") != LEGACY_BASELINE:
         raise RuntimeError("legacy mutation baseline differs from the reviewed plan")
+    if plan.get("firstSourcePacketCommit") != FIRST_SOURCE_PACKET_COMMIT:
+        raise RuntimeError("plan does not preserve the immutable first source packet identity")
+    if plan.get("baseCommit") != "0579a792c473e53eb11c6efa007ab9d539370dec":
+        raise RuntimeError("plan base differs from immutable R078 seed")
     if plan.get("workerGoCallBudget") != {"build": 1, "tests": 3, "retries": 0}:
         raise RuntimeError("worker Go invocation budget mismatch")
 
     token = uuid.uuid4().hex[:10]
     raw_backup = Path(tempfile.mkdtemp(prefix="ccmai-r078-worker-raw-backup-"))
-    source_root = Path(tempfile.mkdtemp(prefix="ccmai-r078-worker-source-"))
+    temp_parent = Path(tempfile.gettempdir()).resolve(strict=True)
+    source_prefix = "ccmai-r078-worker-source-" + token + "-"
+    source_root = Path(tempfile.mkdtemp(prefix=source_prefix, dir=temp_parent)).resolve(strict=True)
     net = "ccmai-r078-worker-net-" + token
     database = "ccmai-r078-worker-db-" + token
     build_cache = "ccmai-r078-worker-build-cache-" + token
@@ -238,6 +536,7 @@ def main():
     original_scheduler = None
     expected_manifest = None
     archive = None
+    summary_published = False
     began = time.monotonic()
 
     def save(label, data):
@@ -377,12 +676,27 @@ def main():
             raise RuntimeError("offline Go module cache is absent")
         if run(["git", "merge-base", "--is-ancestor", args.source, "HEAD"], check=False).returncode:
             raise RuntimeError("source commit is not an ancestor of current HEAD")
-        changed = run(["git", "diff-tree", "--no-commit-id", "--name-only", "-r", args.source]).stdout.decode().splitlines()
+        if run(["git", "merge-base", "--is-ancestor", FIRST_SOURCE_PACKET_COMMIT, args.source], check=False).returncode:
+            raise RuntimeError("repaired source does not descend from the preserved first source packet")
+        changed = run(["git", "diff", "--name-only", plan["baseCommit"], args.source, "--", "backend"]).stdout.decode().splitlines()
         if set(changed) != EXPECTED_FILES or len(changed) != len(EXPECTED_FILES):
-            raise RuntimeError("source packet commit must contain exactly the two authorized backend files")
-        dirty = run(["git", "status", "--short", "--", "backend"]).stdout.decode().strip()
+            raise RuntimeError("cumulative backend diff from base must contain exactly the two authorized paths")
+        source_tree = run(["git", "rev-parse", args.source + ":backend"]).stdout.decode().strip()
+        head_tree = run(["git", "rev-parse", "HEAD:backend"]).stdout.decode().strip()
+        if source_tree != head_tree:
+            raise RuntimeError("bound source backend tree differs from current HEAD backend tree")
+        dirty = run(["git", "status", "--short", "--untracked-files=all", "--", "backend"]).stdout.decode().strip()
         if dirty:
-            raise RuntimeError("backend worktree must match the committed source packet before runtime")
+            raise RuntimeError("backend worktree must be clean and match the bound source backend tree")
+        receipt["sourceBinding"] = {
+            "firstSourcePacketCommit": FIRST_SOURCE_PACKET_COMMIT,
+            "boundSourceCommit": args.source,
+            "baseCommit": plan["baseCommit"],
+            "cumulativeBackendChangedPaths": changed,
+            "sourceBackendTree": source_tree,
+            "headBackendTree": head_tree,
+            "backendWorktreeClean": True,
+        }
 
         root_image = inspect("image", "golang:1.26-alpine")
         mysql_image = inspect("image", "mysql:8.0")
@@ -425,43 +739,17 @@ def main():
             "archiveBinding": actual_binding,
         }
         receipt["runtimePlan"] = save("runtime_plan.json", (json.dumps(actual_binding, indent=2) + "\n").encode())
-        baseline = run(["git", "show", LEGACY_BASELINE + ":backend/engine/scheduler.go"]).stdout.decode("utf-8")
-        helper_start = baseline.find(LEGACY_HELPER_START)
-        helper_end = baseline.find(LEGACY_HELPER_END, helper_start)
-        if helper_start < 0 or helper_end < 0:
-            raise RuntimeError("legacy helper boundaries are missing from fixed baseline")
-        helper = baseline[helper_start:helper_end] + "\n"
+        baseline_bytes = run(["git", "show", LEGACY_BASELINE + ":backend/engine/scheduler.go"]).stdout
         scheduler_path = source_root / "backend/engine/scheduler.go"
         original_scheduler = scheduler_path.read_bytes()
-        original_text = original_scheduler.decode("utf-8")
-        if original_text.count("cleanupStuckRuns()") != 0 or original_text.count("func cleanupStuckRuns()") != 0:
-            raise RuntimeError("hardened source unexpectedly contains the legacy startup sweep")
-        if baseline.count(LEGACY_CALL) != 1 or helper.count("func cleanupStuckRuns()") != 1:
-            raise RuntimeError("baseline legacy helper/call match counts must both be one")
-        if original_text.count("\ts.scheduler.Start()") != 1:
-            raise RuntimeError("current Scheduler.Start insertion point is not unique")
-        mutant_text = original_text.replace("\ts.scheduler.Start()", LEGACY_CALL + "\ts.scheduler.Start()", 1)
-        mutant_text = mutant_text.replace("// Stop gracefully shuts down the scheduler.", helper + "// Stop gracefully shuts down the scheduler.", 1)
-        if mutant_text.count("cleanupStuckRuns()") != 1 or mutant_text.count("func cleanupStuckRuns()") != 1:
-            raise RuntimeError("M01 isolated source did not restore exactly one call and helper")
-        mutant_bytes = mutant_text.encode("utf-8")
-        diff = "".join(difflib.unified_diff(
-            original_text.splitlines(True), mutant_text.splitlines(True),
-            fromfile="a/backend/engine/scheduler.go", tofile="b/backend/engine/scheduler.go",
-        )).encode()
+        mutant_bytes, mutation_metadata = restore_legacy_mutation(original_scheduler, baseline_bytes)
+        diff = base64.b64decode(mutation_metadata["diffBase64"])
         mutation = {"original": original_scheduler, "mutant": mutant_bytes}
         receipt["M01Mutation"] = {
-            "baselineCommit": LEGACY_BASELINE,
-            "baselineSchedulerSha256": sha(baseline.encode()),
+            **mutation_metadata,
             "targetPath": "backend/engine/scheduler.go",
-            "helperSourceSha256": sha(helper.encode()),
-            "legacyCallExactMatchCount": 1,
-            "helperExactMatchCount": 1,
             "appliedInDisposableArchiveOnly": True,
-            "originalSha256": sha(original_scheduler),
-            "mutantSha256": sha(mutant_bytes),
-            "diffSha256": sha(diff),
-            "diffBase64": base64.b64encode(diff).decode(),
+            "diffFile": save("M01_diff.patch", diff),
         }
 
         run(["docker", "volume", "create", build_cache])
@@ -627,12 +915,7 @@ def main():
         except Exception as exc:
             receipt["errors"].append({"type": "cleanup verification", "message": str(exc)})
         try:
-            if source_root.exists():
-                import shutil
-                shutil.rmtree(source_root)
-            receipt["cleanup"]["sourceSnapshotRemoved"] = not source_root.exists()
-            if not receipt["cleanup"]["sourceSnapshotRemoved"]:
-                raise RuntimeError("owned temporary source snapshot remains")
+            receipt["cleanup"]["sourceSnapshot"] = remove_owned_source_snapshot(source_root, temp_parent, token)
         except Exception as exc:
             receipt["errors"].append({"type": "source snapshot cleanup", "message": str(exc)})
         receipt["seconds"] = round(time.monotonic() - began, 3)
@@ -641,13 +924,40 @@ def main():
         receipt["rawBackupDirectory"] = str(raw_backup)
         try:
             summary_ref = save("summary.json", (json.dumps(receipt, indent=2) + "\n").encode())
-            receipt["summaryReference"] = summary_ref
+            published_summary = validate_published_summary(Path(summary_ref["path"]), summary_ref)
+            if published_summary["sourceCommit"] != args.source:
+                raise RuntimeError("published summary source identity mismatch")
+            summary_published = True
             print(json.dumps({"result": receipt["result"], "goInvocations": receipt["goInvocations"],
-                              "seconds": receipt["seconds"], "errors": receipt["errors"]}), flush=True)
+                              "summaryValidated": True, "seconds": receipt["seconds"],
+                              "errors": receipt["errors"]}), flush=True)
         except Exception as exc:
+            receipt["errors"].append({"type": "summary publication/validation", "message": str(exc)})
+            receipt["result"] = "CHANGES_REQUIRED_NO_RETRY"
+            failure = {
+                "result": receipt["result"],
+                "summaryPublishedAndValidated": summary_published,
+                "summaryAttemptPath": str(prefix) + "summary.json",
+                "errorType": type(exc).__name__,
+                "error": str(exc),
+                "sourceCommit": args.source,
+                "rawBackupDirectory": str(raw_backup),
+            }
+            failure_path = Path(str(prefix) + "summary_failure.json")
+            try:
+                with failure_path.open("xb") as stream:
+                    failure_bytes = (json.dumps(failure, indent=2) + "\n").encode()
+                    stream.write(failure_bytes)
+                backup_path = raw_backup / failure_path.name
+                backup_path.write_bytes(failure_bytes)
+                if backup_path.read_bytes() != failure_bytes or failure_path.read_bytes() != failure_bytes:
+                    raise RuntimeError("summary failure record byte verification failed")
+            except Exception as backup_exc:
+                receipt["errors"].append({"type": "summary failure record", "message": str(backup_exc)})
             print(json.dumps({"result": "CHANGES_REQUIRED_NO_RETRY", "summaryWriteError": str(exc),
+                              "summaryPublishedAndValidated": summary_published,
                               "rawBackupDirectory": str(raw_backup)}), flush=True)
-    return 1 if receipt["errors"] else 0
+    return campaign_exit_code(receipt["errors"], summary_published)
 
 
 if __name__ == "__main__":

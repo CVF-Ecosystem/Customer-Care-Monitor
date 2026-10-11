@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R078
 
-CCMAI-RUNTIME-078 BUILD repair1 F1 new-test controls/F2 worker-runner guards only; static handback before Go runtime release. Go0/8/retry0, R2 scope unchanged, no provider/external network/push, accounts parked.
+CCMAI-RUNTIME-078 BUILD worker runtime released on b7c826a: one build plus three focused tests including M01/restoration; worker max4Go, reviewer4 reserved, aggregate8/retry0. Synthetic isolated DB only; no provider/external network/push, accounts parked.
 
 ## Historical R077
 
