@@ -1,9 +1,16 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-12",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {
+      "id": "learning-orchestrator-roadmap-control",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_orchestrator_roadmap_control.md",
+      "status": "ACTIVE",
+      "description": "Root orchestration drift finding: finite product milestones, prerequisite stop conditions, proactive reassessment and plain-language noncoder handback; effectiveness not yet verified, upstream not sent."
+    },
     {
       "id": "historical-mcp-job-execution-handoff",
       "family": "continuity",

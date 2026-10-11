@@ -36,6 +36,8 @@ Quy ước này hướng dẫn ghi và dùng learning; việc lưu record không
 
 ## Record hiện có
 
+- [Orchestrator mất kiểm soát tiến độ roadmap và handback cho owner không viết code](feedback_orchestrator_roadmap_control.md)
+
 - [Downstream gate learning intake cho CVF cha](CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md)
 - [Shell cleanup và chuyển đổi đường dẫn MSYS](feedback_shell_cleanup_and_paths.md)
 - [Repair workflow, continuity, mutation và evidence](feedback_cvf_repair_workflow.md)
