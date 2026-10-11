@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "FREEZE",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -41,9 +41,7 @@
     "R068 adapter-only usage-presence primitive FROZEN after independent UP01..12 review and separately owner-authorized R069 single offline whole-backend compile PASS; source bb0bdeb, original failures/budgets unchanged, consumers/full exits/live remain OPEN.",
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
-  "buildInProgress": [
-    "R077 repository-only topology intake and nonbinding hardening draft authoring; source/runtime not dispatched."
-  ],
+  "buildInProgress": [],
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
@@ -268,7 +266,7 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-077 REVIEW_PASS FREEZE_OPEN documentary intake/proposal only at3fe1ee8; root CLOSER separately syncs local packet freeze. Startup hardening/recovery implementation OPEN, deployed UNKNOWN, native/provider/DB/host/network/push0; accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-077 FROZEN local topology intake/proposal only at worker3fe1ee8/reviewe343a0b; source hardening/recovery OPEN and deployed UNKNOWN. Root next prepares separate R2 no-rewrite startup order/seed with isolated synthetic-DB tests before BUILD; current native/provider/DB/host/network/push0, accounts parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_077.md",
     "buildDispatched": false,
     "actualWorkerModel": {
@@ -1476,7 +1474,7 @@
   },
   "topologyIntake": {
     "trancheId": "CCMAI-RUNTIME-077",
-    "status": "REVIEW_PASS",
+    "status": "FROZEN",
     "sourceImplementation": "NOT_DISPATCHED",
     "deployedFacts": "UNKNOWN",
     "runtimeEvidence": "NOT_RUN",
@@ -1484,6 +1482,20 @@
     "modelAssessment": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
     "decision": "INTAKE_AND_NONBINDING_PROPOSAL_ACCEPTED",
     "startupCleanupHardening": "OPEN",
-    "freeze": "OPEN"
+    "freeze": "FROZEN_INTAKE_PROPOSAL_ONLY",
+    "closureEvidence": "docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md",
+    "independentReviewCommit": "e343a0b42a9cc69bc5f972d36303c1d0da40f9f0",
+    "closureChecks": {
+      "preflight": "PASS7/7 closure worktree prerequisite",
+      "prRange": "PASS7/7 cached origin/main..HEAD; no network",
+      "catalogPS5": "PASS regeneration/preflight",
+      "catalogPS7": "PASS",
+      "gateUnits": "Preparation46PASS31.176s inherited; scripts/tests unchanged, no duplicate campaign",
+      "staticScope": "source14/input6/cited23/protected370/history112/seed first-base-current PASS",
+      "historicalQuality": "5implementation/1audit/1max design arrays unchanged; new separate topology sample1",
+      "applicationNativeInvocations": 0,
+      "runtimeGovernanceProof": "NOT_RUN",
+      "publication": "NOT_AUTHORIZED_IN_R077"
+    }
   }
 }

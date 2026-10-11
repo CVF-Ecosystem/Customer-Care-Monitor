@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-077",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-077 REVIEW_PASS FREEZE_OPEN documentary intake/proposal only at3fe1ee8; root CLOSER separately syncs local packet freeze. Startup hardening/recovery implementation OPEN, deployed UNKNOWN, native/provider/DB/host/network/push0; accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-077 FROZEN local topology intake/proposal only at worker3fe1ee8/reviewe343a0b; source hardening/recovery OPEN and deployed UNKNOWN. Root next prepares separate R2 no-rewrite startup order/seed with isolated synthetic-DB tests before BUILD; current native/provider/DB/host/network/push0, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max documentary worker idle",
+  "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max documentary worker idle",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,9 +34,9 @@
   },
   "candidatePlanning": {
     "id": "R077",
-    "status": "REVIEW_PASS",
+    "status": "FROZEN",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_077.md",
-    "sourceImplementation": "NOT_DISPATCHED_DOCUMENTARY_ONLY",
+    "sourceImplementation": "NOT_DISPATCHED_INTAKE_AND_NONBINDING_PROPOSAL_ONLY",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -267,7 +267,7 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "OWNER_AUTHORIZED_LUNA_MAX_INTAKE_ROOT_INDEPENDENT_REVIEW",
+  "roleRoute": "OWNER_AUTHORIZED_LUNA_MAX_INTAKE_ROOT_INDEPENDENT_REVIEW_AND_LOCAL_CLOSURE_COMPLETE",
   "pendingValidationProposal": {
     "status": "NO_APPLICATION_NATIVE_AUTHORITY",
     "workerPermittedNative": 0,
@@ -595,10 +595,21 @@
   },
   "reviewEvidence": "docs/reviews/R077_INDEPENDENT_TOPOLOGY_INTAKE_REVIEW_2026-10-11.md",
   "modelAssessment": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": null,
-  "independentReviewCommit": null,
-  "closureStatus": "REVIEW_PASS_FREEZE_OPEN_DOCUMENTARY_ONLY",
-  "closureChecks": {},
+  "closureEvidence": "docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "e343a0b42a9cc69bc5f972d36303c1d0da40f9f0",
+  "closureStatus": "FROZEN_LOCAL_TOPOLOGY_INTAKE_PROPOSAL_ONLY",
+  "closureChecks": {
+    "preflight": "PASS7/7 closure worktree prerequisite",
+    "prRange": "PASS7/7 cached origin/main..HEAD; no network",
+    "catalogPS5": "PASS regeneration/preflight",
+    "catalogPS7": "PASS",
+    "gateUnits": "Preparation46PASS31.176s inherited; scripts/tests unchanged, no duplicate campaign",
+    "staticScope": "source14/input6/cited23/protected370/history112/seed first-base-current PASS",
+    "historicalQuality": "5implementation/1audit/1max design arrays unchanged; new separate topology sample1",
+    "applicationNativeInvocations": 0,
+    "runtimeGovernanceProof": "NOT_RUN",
+    "publication": "NOT_AUTHORIZED_IN_R077"
+  },
   "localClosureCommit": null,
   "publicationStatus": "NOT_AUTHORIZED_IN_R077",
   "publicationReceipt": null,

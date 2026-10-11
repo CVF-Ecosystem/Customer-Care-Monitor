@@ -43,8 +43,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 under continuing roadmap/Luna max worker/root orchestrator-reviewer assignment. R076 next governed move separately bounded readonly topology/owner-fence intake; source-only versioned deployment examples and contracts, not observed hosts/data.",
   "claimScope": "Repository-described topology/startup/ownership facts, explicit deployed UNKNOWN and concrete nonbinding next hardening draft; no runtime/durability/governance certification.",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_077.md",
   "baseCommit": "a64f6b22b815e9f535fc20b7c7394fa33ed2f9ac",
   "buildCommit": "3fe1ee82dacde5faac2387baa3418b234f722f10",
@@ -53,7 +53,7 @@
     "docs/reviews/probes/r077_root_scope_review_2026-10-11.json"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
@@ -62,7 +62,8 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -75,5 +76,8 @@
     "primary": "repository_topology_intake_and_bounded_work_order_draft",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
   },
-  "workerAcknowledgment": "Root fresh BUILD tuple rehydrated after repair1 handback; worker changed exact3 only, repair3fe1ee8 preserved. Transition to independent REVIEWER for complete contract/scope evaluation; no source or runtime acceptance implied."
+  "workerAcknowledgment": "Root fresh REVIEW_PASS canonical tuple/active handoff/status/index rehydrated; independent reviewe343a0b settles TI01..08 documentary contract. Transition CLOSER/SESSION_SYNC_STEWARD/COMMIT_STEWARD for scoped local FREEZE only; no product implementation or future source/DB authorization implied.",
+  "closureEvidence": "docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "e343a0b42a9cc69bc5f972d36303c1d0da40f9f0",
+  "closer": "Codex /root"
 }

@@ -529,7 +529,7 @@
       "workerDocumentRepairRounds": 1,
       "workerRepairCommit": "3fe1ee82dacde5faac2387baa3418b234f722f10",
       "rootMechanicalRepairCommit": "ab23883a44986cbd7756a0f82db3c3266cdd7d80",
-      "finalDisposition": "REVIEW_PASS_FREEZE_OPEN_DOCUMENTARY_ONLY",
+      "finalDisposition": "FROZEN_LOCAL_INTAKE_PROPOSAL_ONLY",
       "productOrTestRepairRounds": 0,
       "applicationNativeInvocations": 0,
       "assessment": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
@@ -538,7 +538,8 @@
       "modelTokenCost": null,
       "inferenceTime": null,
       "matchedComparison": false,
-      "confidence": "LOW_SINGLE_TOPOLOGY_DOCUMENTARY_SAMPLE"
+      "confidence": "LOW_SINGLE_TOPOLOGY_DOCUMENTARY_SAMPLE",
+      "independentReviewCommit": "e343a0b42a9cc69bc5f972d36303c1d0da40f9f0"
     }
   ]
 }

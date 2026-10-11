@@ -840,6 +840,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent static source13/input5/protected367/history110/seed proof; runtime0.: `docs/reviews/probes/r076_root_scope_review_2026-10-11.json`
 - DR01..10 intended contract and future AR/NC matrix; implementation not dispatched.: `docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md`
 - Immutable R1 root seed for Luna max repository-only topology intake.: `CVF_SESSION/authority/CCMAI-RUNTIME-077.json`
+- Local R077 documentary FREEZE only; separate R2 startup hardening next, not dispatched.: `docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md`
 - Nonbinding separate R2 startup no-rewrite proposal; no implementation dispatch.: `docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md`
 - First packet CHANGES_REQUIRED F1/F2; root M1 navigation repair, history retained.: `docs/reviews/R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md`
 - Worker versioned source/input hashes and source-only limits.: `docs/reviews/probes/r077_topology_identity_2026-10-11.json`

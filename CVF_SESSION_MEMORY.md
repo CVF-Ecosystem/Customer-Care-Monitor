@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-077", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-077", "parked": true} -->
 
 ## Current R077
 
-CCMAI-RUNTIME-077 REVIEW_PASS FREEZE_OPEN documentary intake/proposal only at3fe1ee8; root CLOSER separately syncs local packet freeze. Startup hardening/recovery implementation OPEN, deployed UNKNOWN, native/provider/DB/host/network/push0; accounts parked.
+CCMAI-RUNTIME-077 FROZEN local topology intake/proposal only at worker3fe1ee8/reviewe343a0b; source hardening/recovery OPEN and deployed UNKNOWN. Root next prepares separate R2 no-rewrite startup order/seed with isolated synthetic-DB tests before BUILD; current native/provider/DB/host/network/push0, accounts parked.
 
 ## Historical R076
 

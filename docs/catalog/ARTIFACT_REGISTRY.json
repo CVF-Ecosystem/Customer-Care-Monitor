@@ -6065,6 +6065,13 @@
       "path": "docs/reviews/probes/r077_root_scope_review_2026-10-11.json",
       "status": "ACTIVE",
       "description": "Independent static source14/input6/protected370/history112/seed identity proof, runtime0."
+    },
+    {
+      "id": "runtime077-closure",
+      "family": "continuity",
+      "path": "docs/reviews/R077_SCOPED_TOPOLOGY_INTAKE_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Local R077 documentary FREEZE only; separate R2 startup hardening next, not dispatched."
     }
   ]
 }
