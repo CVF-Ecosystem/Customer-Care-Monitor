@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-086", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-086", "parked": true} -->
 
 ## Current R086
 
-CCMAI-RUNTIME-086 WORK_ORDER source-only pending-versus-started mount lifecycle completion; worker fresh ACK before committed BUILD, exact script/test/new readiness plus one harness suite. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 returned and docs55deadlinks retained, FREEZE blocked/accounts parked/fixture readiness OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-086 BUILD one source-only mount lifecycle author pass and one captured worker harness suite; root commits source then independently reviews/runs one suite. No source repair/retry/Docker/SQL/Go/provider/pull/push; R085 failure and docs55deadlinks preserved/FREEZE blocked/accounts parked/readiness OPEN/deployed UNKNOWN.
 
 ## Historical R085 (returned, FREEZE OPEN)
 

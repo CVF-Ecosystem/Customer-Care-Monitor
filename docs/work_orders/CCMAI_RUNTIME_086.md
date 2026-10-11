@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-086 source-only mount lifecycle completion
 
-Status: DISPATCH_READY
+Status: BUILD
 
 R2 resource-safety source/tool contract; zero Docker/SQL effects. Owner next/standing Luna max worker/root independent reviewer/all commits. Root immutable seedca20691 precedes base/BUILD. INTAKE inherits actual R085 worker exit2 MOUNT_INVALID before start/SQL and verified clean failure; exact raw Mounts value unavailable. DESIGN separates pending configured isolation from started resolved isolation. SPEC ML01..07 below, WORK_ORDER one source pass, no directed repair/replay. New mount-lifecycle cause differs from original R083 F1/F3, not third same-rootcause repair. R085 historical failure/evidence/returned state remain immutable. Known55deadlinks in historical R078/R079 docs remain a separate blocker: no FREEZE while unresolved; source REVIEW_PASS may be recorded with FREEZE OPEN, no global closure claim.
 

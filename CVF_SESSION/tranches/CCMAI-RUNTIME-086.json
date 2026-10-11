@@ -53,8 +53,8 @@
   "ownerAuthorization": "Owner next after R085 returned native MOUNT_INVALID, standing Luna max worker/root independent reviewer/all commits. Separate new mount lifecycle root cause; no R085 replay or third same-rootcause F1/F3 repair.",
   "entryDecision": "INTAKE bounds observed pre-start mount validator failure; DESIGN separates pending configured isolation from started resolved isolation; SPEC ML01..07; WORK_ORDER one source pass and one harness each, zero Docker/SQL effects. R085 source-repair budget remains zero and historical failure immutable.",
   "claimScope": "Source/test mount-lifecycle acceptance only. Native MySQL prerequisite readiness remains FAILED/UNKNOWN; no governance/app/fence/deployment proof.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "ca206917b337e02dedad30c2a6b8c2b50b7004c2",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_086.md",
   "buildCommit": null,
@@ -63,7 +63,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -72,7 +73,7 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": null,
+  "workerAcknowledgment": "Fresh worker ACK directly verifies current canonical R086 tuple/core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba/parkedOperatorCheckpoint, exact ML01..07 and one-suite/no-effect budget; ACK before source edits. Root transitions ORCHESTRATOR to SESSION_SYNC/COMMIT_STEWARD for bounded BUILD release, independent REVIEWER reserved. Source-only correction of distinct new mount lifecycle root cause, no third R083 F1/F3 repair or R085 replay. Baseline1892paths/elevenarrays/23test bodies; known docs55 links block FREEZE.",
   "workerHarnessUnitInvocationsUsed": 0,
   "reviewerHarnessUnitInvocationsUsed": 0,
   "workerSourceRepairRounds": 0,
