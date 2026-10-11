@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R080 R1 intended durable JobRun fence DESIGN/SPEC; no product or runtime authority."
+      "description": "Active R081 R1 documentary database lock/outcome/incarnation/cutover gate; no runtime authority."
     },
     {
       "id": "r060-work-order",
@@ -6653,6 +6653,34 @@
       "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R080 scoped local intended design/proposal closure; implementation/recovery OPEN and deployed UNKNOWN."
+    },
+    {
+      "id": "runtime081-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-081.json",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-081.json",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
+      "status": "ACTIVE",
+      "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
     }
   ]
 }

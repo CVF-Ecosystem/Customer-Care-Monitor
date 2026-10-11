@@ -9,9 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-080", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-081", "parked": true} -->
 
-## Current R080
+## Current R081
+
+CCMAI-RUNTIME-081 DISPATCH_READY source-only database lock/outcome/incarnation/cutover gate DG01..08; Luna max fresh ACK before committed BUILD release, worker exact2 docs/one author pass and root independent review; code/runtime/DB/provider/network/push0, deployed UNKNOWN/accounts parked.
+
+## Historical R080
 
 CCMAI-RUNTIME-080 FROZEN local intended architecture/spec and nonbinding proposal only at402d6a6/review56b5328 after prose repair1/root identity transfer. ORCHESTRATOR next separately bounds documentary MySQL/GORM lock/outcome/incarnation/cutover gate with new seed; no code/schema/runtime/DB/provider/network/push, fencing/recovery OPEN/deployed UNKNOWN/accounts parked.
 

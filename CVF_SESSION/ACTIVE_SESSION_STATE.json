@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-080",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-080 FROZEN local intended architecture/spec and nonbinding proposal only at402d6a6/review56b5328 after prose repair1/root identity transfer. ORCHESTRATOR next separately bounds documentary MySQL/GORM lock/outcome/incarnation/cutover gate with new seed; no code/schema/runtime/DB/provider/network/push, fencing/recovery OPEN/deployed UNKNOWN/accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-081",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-081 DISPATCH_READY source-only database lock/outcome/incarnation/cutover gate DG01..08; Luna max fresh ACK before committed BUILD release, worker exact2 docs/one author pass and root independent review; code/runtime/DB/provider/network/push0, deployed UNKNOWN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker awaiting ACK",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -33,9 +33,9 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R080",
-    "status": "FROZEN",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_080.md",
+    "id": "R081",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_081.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
   },
@@ -312,7 +312,7 @@
     }
   },
   "publication": {
-    "status": "NOT_AUTHORIZED_IN_R077"
+    "status": "NOT_AUTHORIZED_IN_R081"
   },
   "historicalR070ClosureSummary": {
     "currentMode": "FREEZE",
@@ -593,22 +593,14 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
-  "modelAssessment": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
-  "independentReviewCommit": "56b5328fb528a3139219740857bd5d2a8408a11b",
-  "closureStatus": "FROZEN_LOCAL_INTENDED_DESIGN_ONLY",
-  "closureChecks": {
-    "localPreflight": "PASS7/7",
-    "cachedPrRange": "PASS7/7",
-    "catalogPS51": "PASS",
-    "catalogPS7": "PASS",
-    "gateUnits": "46PASS38.818s_INHERITED_UNCHANGED_SCRIPTS",
-    "applicationNativeInvocations": 0,
-    "runtimeEvidence": "NOT_RUN"
-  },
+  "reviewEvidence": null,
+  "modelAssessment": null,
+  "closureEvidence": null,
+  "independentReviewCommit": null,
+  "closureStatus": null,
+  "closureChecks": null,
   "localClosureCommit": null,
-  "publicationStatus": "R080_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+  "publicationStatus": "R081_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
@@ -744,5 +736,39 @@
     },
     "independentReviewCommit": "498fe42b09faf25c69a942c90da83e592815a246",
     "localClosureCommit": "25b3f409799fba616a745b962cff7ac81e05501c"
+  },
+  "historicalR080Continuity": {
+    "currentMode": "FREEZE",
+    "activePhase": "FREEZE",
+    "activeTranche": "CCMAI-RUNTIME-080",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-080 FROZEN local intended architecture/spec and nonbinding proposal only at402d6a6/review56b5328 after prose repair1/root identity transfer. ORCHESTRATOR next separately bounds documentary MySQL/GORM lock/outcome/incarnation/cutover gate with new seed; no code/schema/runtime/DB/provider/network/push, fencing/recovery OPEN/deployed UNKNOWN/accounts parked.",
+    "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+    "candidatePlanning": {
+      "id": "R080",
+      "status": "FROZEN",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_080.md",
+      "sourceImplementation": "NOT_DISPATCHED",
+      "sourceOrRuntimeDispatched": false
+    },
+    "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+    "modelAssessment": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
+    "closureEvidence": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+    "closureStatus": "FROZEN_LOCAL_INTENDED_DESIGN_ONLY",
+    "closureChecks": {
+      "localPreflight": "PASS7/7",
+      "cachedPrRange": "PASS7/7",
+      "catalogPS51": "PASS",
+      "catalogPS7": "PASS",
+      "gateUnits": "46PASS38.818s_INHERITED_UNCHANGED_SCRIPTS",
+      "applicationNativeInvocations": 0,
+      "runtimeEvidence": "NOT_RUN"
+    },
+    "independentReviewCommit": "56b5328fb528a3139219740857bd5d2a8408a11b",
+    "publicationStatus": "R080_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+    "localClosureCommit": "99f987ce927c14274f0a327bc43956c02ab71898"
+  },
+  "historicalPublicationProjection": {
+    "status": "NOT_AUTHORIZED_IN_R077"
   }
 }
