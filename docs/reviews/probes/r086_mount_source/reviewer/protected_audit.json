@@ -1,0 +1,32 @@
+{
+  "baselineCommit": "d487c73cea134b9e4eb482502a4e78c77b9346ad",
+  "protectedCount": 1892,
+  "changedProtected": [],
+  "historicalArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true,
+    "durableFenceDesignSamples": true,
+    "databaseIntegrationSamples": true,
+    "fenceBlockerResolutionSamples": true,
+    "fixturePrerequisiteSamples": true,
+    "fixtureSourceCompletionSamples": true,
+    "localFixtureExecutionSamples": true
+  },
+  "immutableSeed": {
+    "firstCommit": "ca206917b337e02dedad30c2a6b8c2b50b7004c2",
+    "baseCommit": "ca206917b337e02dedad30c2a6b8c2b50b7004c2",
+    "filteredUnchanged": true
+  },
+  "originalTestCount": 23,
+  "originalTestBodiesUnchanged": true,
+  "newTestNames": [
+    "test_campaign_empty_pending_mounts_start_and_validate_before_readiness",
+    "test_campaign_pending_mount_and_configuration_mismatches_fail_before_start",
+    "test_campaign_started_mount_mismatches_fail_before_any_readiness_sql",
+    "test_container_inspect_distinguishes_pending_and_started_mounts"
+  ],
+  "pass": true
+}

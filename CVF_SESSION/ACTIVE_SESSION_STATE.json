@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-086",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-086 BUILD one source-only mount lifecycle author pass and one captured worker harness suite; root commits source then independently reviews/runs one suite. No source repair/retry/Docker/SQL/Go/provider/pull/push; R085 failure and docs55deadlinks preserved/FREEZE blocked/accounts parked/readiness OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-086 REVIEW_PENDING source-only mount completion worker27PASS/raw/source unchanged; root commits source then one independent harness suite and consolidated source/evidence review. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 failure retained, docs55deadlinks block FREEZE/accounts parked/native readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r086_worker IMPLEMENTATION_WORKER; root independent REVIEWER reserved",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max implementation worker idle",
   "updatedAt": "2026-10-12",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -28,7 +28,8 @@
     "reviewerFixtureCampaigns": 0,
     "goInvocations": 0,
     "providerInvocations": 0,
-    "automaticRetries": 0
+    "automaticRetries": 0,
+    "workerHarnessUnitInvocationsUsed": 1
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -41,7 +42,7 @@
   },
   "candidatePlanning": {
     "id": "R086",
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_086.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false

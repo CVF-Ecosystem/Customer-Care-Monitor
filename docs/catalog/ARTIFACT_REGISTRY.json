@@ -7248,6 +7248,90 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_086.md",
       "status": "ACTIVE",
       "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/R086_MOUNT_LIFECYCLE_SOURCE_COMPLETION_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/protected_audit.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/capture_worker_suite.py",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_edit_baseline.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_suite_helper_failure_summary.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.py",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_raw_summary.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_receipt.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_stderr.raw.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_harness_stdout.raw.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/worker/worker_launcher_errors.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
     }
   ]
 }

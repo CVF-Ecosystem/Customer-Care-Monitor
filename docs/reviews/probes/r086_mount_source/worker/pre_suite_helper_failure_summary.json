@@ -1,0 +1,13 @@
+{
+  "trancheId": "CCMAI-RUNTIME-086",
+  "phase": "BUILD_PRE_SUITE_STATIC_ONLY",
+  "event": "STATIC_HELPER_ASSERTION_FAILED",
+  "classification": "COUNTER_TYPO_CAPTURE_PREPARATION_ERROR",
+  "assertedMethodCount": 26,
+  "observedMethodCount": 27,
+  "effect": "The static helper exited before any unittest invocation. No source or test file was edited in response to this counter error.",
+  "rawOutput": "NOT_RETAINED; no output is reconstructed here.",
+  "unitSuiteInvocationsUsed": 0,
+  "sourceRepairRoundsUsed": 0,
+  "nativeResourceEffects": 0
+}

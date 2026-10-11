@@ -1019,6 +1019,18 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R086 bounded source-only mount lifecycle authority/continuity; no runtime effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-086.json`
 - R086 bounded source-only mount lifecycle authority/continuity; no runtime effect.: `CVF_SESSION/tranches/CCMAI-RUNTIME-086.json`
 - R086 bounded source-only mount lifecycle authority/continuity; no runtime effect.: `docs/work_orders/CCMAI_RUNTIME_086.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R086_MOUNT_LIFECYCLE_SOURCE_COMPLETION_2026-10-12.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/protected_audit.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/capture_worker_suite.py`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_edit_baseline.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_suite_helper_failure_summary.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/pre_suite_static_review.py`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_raw_summary.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_receipt.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_stderr.raw.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_stdout.raw.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_launcher_errors.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

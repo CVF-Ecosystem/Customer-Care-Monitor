@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from copy import deepcopy
 from pathlib import Path
 from unittest import mock
 
@@ -51,7 +52,8 @@ def valid_container(role="worker", task_id=TASK_ID):
         "imageReference": "mysql:8.0",
         "labels": fixture.expected_labels(role, task_id),
         "networkMode": names["network"],
-        "networks": {names["network"]: {"NetworkID": ""}},
+        # Default helper state is a fully resolved started container; pending cases override this with an empty ID.
+        "networks": {names["network"]: {"NetworkID": NETWORK_ID}},
         "ports": None,
         "binds": None,
         "tmpfs": {"/var/lib/mysql": "rw,noexec,nosuid,size=512m"},
@@ -487,6 +489,66 @@ class FixtureSafetyTests(unittest.TestCase):
         self.assertIsNone(result.exit_code)
         self.assertEqual(docker.commands[0]["outputStatus"], "OMITTED_TIMEOUT_PARTIAL")
 
+    def test_container_inspect_distinguishes_pending_and_started_mounts(self):
+        names = fixture.names_for("worker", TASK_ID)
+        labels = fixture.expected_labels("worker", TASK_ID)
+        image_id = "sha256:" + "c" * 64
+
+        def validate(value, phase):
+            return fixture.validate_container_inspect(
+                value,
+                name=names["container"],
+                image_id=image_id,
+                network_name=names["network"],
+                labels=labels,
+                expected_id=CONTAINER_ID,
+                expected_network_id=NETWORK_ID,
+                mount_phase=phase,
+            )
+
+        pending_empty = valid_container()
+        pending_empty["mounts"] = []
+        pending_empty["networks"] = {names["network"]: {"NetworkID": ""}}
+        self.assertEqual(validate(pending_empty, "pending"), CONTAINER_ID)
+        resolved = valid_container()
+        resolved["networks"] = {names["network"]: {"NetworkID": NETWORK_ID}}
+        self.assertEqual(validate(resolved, "started"), CONTAINER_ID)
+        self.assertEqual(validate(resolved, "pending"), CONTAINER_ID)
+        started_without_network_id = valid_container()
+        started_without_network_id["networks"] = {names["network"]: {"NetworkID": ""}}
+        with self.assertRaises(fixture.FixtureError) as raised:
+            validate(started_without_network_id, "started")
+        self.assertEqual(raised.exception.code, "CONTAINER_NETWORK_ID_MISMATCH")
+
+        invalid_mount_shapes = (
+            ("missing", _MISSING_MOUNTS),
+            ("null", None),
+            ("not-list", "unknown"),
+            ("pending-extra", [resolved["mounts"][0], resolved["mounts"][0]]),
+            ("pending-bind", [{"Type": "bind", "Destination": "/var/lib/mysql", "RW": True}]),
+        )
+        for phase in ("pending", "started"):
+            for label, mounts in invalid_mount_shapes:
+                with self.subTest(phase=phase, shape=label):
+                    unsafe = valid_container()
+                    if mounts is _MISSING_MOUNTS:
+                        unsafe.pop("mounts")
+                    else:
+                        unsafe["mounts"] = mounts
+                    with self.assertRaises(fixture.FixtureError) as raised:
+                        validate(unsafe, phase)
+                    self.assertEqual(raised.exception.code, "MOUNT_INVALID")
+
+        bad_configuration = valid_container()
+        bad_configuration["mounts"] = []
+        bad_configuration["tmpfs"] = {"/var/lib/mysql": "rw,size=512m"}
+        with self.assertRaises(fixture.FixtureError) as raised:
+            validate(bad_configuration, "pending")
+        self.assertEqual(raised.exception.code, "TMPFS_INVALID")
+        with self.assertRaises(fixture.FixtureError) as raised:
+            validate(resolved, "unknown")
+        self.assertEqual(raised.exception.code, "MOUNT_PHASE_INVALID")
+
 
 class MemoryDockerSubprocess:
     """In-memory daemon boundary for Campaign create/reconcile/cleanup tests."""
@@ -604,6 +666,46 @@ class MemoryDockerSubprocess:
         raise AssertionError(f"unexpected simulated Docker command: {args!r}")
 
 
+_MISSING_MOUNTS = object()
+
+
+class MountLifecycleDockerSubprocess(MemoryDockerSubprocess):
+    """In-memory boundary to vary configured and resolved mounts by lifecycle phase."""
+
+    def __init__(self, *, pending_mounts, started_mounts, pending_mutation=None):
+        super().__init__()
+        self.events = []
+        self.pending_mounts = pending_mounts
+        self.started_mounts = started_mounts
+        self.pending_mutation = pending_mutation
+
+    @staticmethod
+    def _set_mounts(container, mounts):
+        if mounts is _MISSING_MOUNTS:
+            container.pop("mounts", None)
+        else:
+            container["mounts"] = deepcopy(mounts)
+
+    def __call__(self, command, **kwargs):
+        args = command[1:]
+        self.events.append(("docker", tuple(args)))
+        if args[:1] == ["create"]:
+            result = super().__call__(command, **kwargs)
+            container = self._container(args[args.index("--name") + 1])
+            self._set_mounts(container, self.pending_mounts)
+            if self.pending_mutation:
+                self.pending_mutation(container)
+            return result
+        if args[:2] == ["container", "start"]:
+            self.calls.append(list(command))
+            container = self._container(args[-1])
+            if container is None:
+                return self._completed(command, 1, stderr="Error: No such container")
+            self._set_mounts(container, self.started_mounts)
+            return self._completed(command)
+        return super().__call__(command, **kwargs)
+
+
 class FixtureCompletionTests(unittest.TestCase):
     def _campaign(self, root):
         task_dir = root / "task"
@@ -618,6 +720,133 @@ class FixtureCompletionTests(unittest.TestCase):
 
         campaign.prepare = prepare
         return campaign
+
+    def _run_mount_campaign(self, *, pending_mounts, started_mounts, pending_mutation=None):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            daemon = MountLifecycleDockerSubprocess(
+                pending_mounts=pending_mounts,
+                started_mounts=started_mounts,
+                pending_mutation=pending_mutation,
+            )
+            campaign = self._campaign(root)
+            events = daemon.events
+
+            def mysql(label, sql, **kwargs):
+                events.append(("mysql", label, sql))
+                return fixture.CommandResult(0, "1\n", "", 1)
+
+            def stop_before_schema_sql():
+                events.append(("schema-probe-not-run",))
+                raise fixture.FixtureError("TEST_STOP_AFTER_READINESS", "portable lifecycle test ends after readiness")
+
+            campaign._mysql = mysql
+            campaign._run_schema_probe = stop_before_schema_sql
+            with mock.patch.object(fixture.subprocess, "run", side_effect=daemon):
+                result = campaign.run()
+            persisted_receipt = json.loads(campaign.manifest_path.read_text(encoding="utf-8"))
+            return result, persisted_receipt, list(events)
+
+    def test_campaign_empty_pending_mounts_start_and_validate_before_readiness(self):
+        started_mounts = [{"Type": "tmpfs", "Destination": "/var/lib/mysql", "RW": True, "Source": "C:\\private\\secret-path"}]
+        result, receipt, events = self._run_mount_campaign(pending_mounts=[], started_mounts=started_mounts)
+        self.assertEqual(result, 2)
+        self.assertEqual(receipt["runtime"]["failure"]["code"], "TEST_STOP_AFTER_READINESS")
+        self.assertEqual(receipt["runtime"]["readinessObservations"], 1)
+        self.assertEqual([event for event in events if event[0] == "mysql"], [("mysql", "authenticated final-daemon readiness observation", "SELECT 1;\n")])
+
+        def position(predicate):
+            return next(index for index, event in enumerate(events) if predicate(event))
+
+        created = position(lambda event: event[0] == "docker" and event[1][:1] == ("create",))
+        pending_inspect = position(lambda event: event[0] == "docker" and event[1][:2] == ("container", "inspect"))
+        pending_validation_inspect = position(
+            lambda event: event[0] == "docker" and event[1][:2] == ("container", "inspect") and event[1][-1] == CONTAINER_ID
+        )
+        started = position(lambda event: event[0] == "docker" and event[1][:2] == ("container", "start"))
+        started_inspect = next(
+            index for index, event in enumerate(events)
+            if index > started and event[0] == "docker" and event[1][:2] == ("container", "inspect") and event[1][-1] == CONTAINER_ID
+        )
+        started_network_inspect = next(
+            index for index, event in enumerate(events)
+            if index > started and event[0] == "docker" and event[1][:2] == ("network", "inspect") and event[1][-1] == NETWORK_ID
+        )
+        readiness = position(lambda event: event[0] == "mysql" and event[1] == "authenticated final-daemon readiness observation")
+        self.assertLess(created, pending_inspect)
+        self.assertLess(created, pending_validation_inspect)
+        self.assertLess(pending_validation_inspect, started)
+        self.assertLess(started, started_inspect)
+        self.assertLess(started_inspect, started_network_inspect)
+        self.assertLess(started_network_inspect, readiness)
+
+        observations = receipt["runtime"]["mountLifecycleObservations"]
+        self.assertEqual([item["phase"] for item in observations], ["pending", "started", "started"])
+        self.assertEqual(observations[0]["mounts"]["shape"], "empty")
+        self.assertEqual(observations[0]["validation"], "ACCEPTED")
+        self.assertEqual(observations[1]["mounts"]["selected"], {"type": "tmpfs", "destination": "authorized", "rw": True})
+        self.assertEqual(observations[1]["taskId"], TASK_ID)
+        self.assertEqual(observations[1]["expectedIds"]["container"], CONTAINER_ID)
+        self.assertEqual(observations[1]["expectedIds"]["network"], NETWORK_ID)
+        self.assertEqual(observations[1]["expectedIds"]["image"], "sha256:" + "c" * 64)
+        serialized_observations = json.dumps(observations)
+        self.assertNotIn("C:\\private\\secret-path", serialized_observations)
+        self.assertNotIn("Source", serialized_observations)
+
+    def test_campaign_started_mount_mismatches_fail_before_any_readiness_sql(self):
+        valid_mount = {"Type": "tmpfs", "Destination": "/var/lib/mysql", "RW": True}
+        invalid_started = (
+            ("empty", []),
+            ("null", None),
+            ("missing", _MISSING_MOUNTS),
+            ("not-list", "unknown"),
+            ("entry-not-object", [None]),
+            ("unknown-type", [{"Type": "volume", "Destination": "/var/lib/mysql", "RW": True}]),
+            ("wrong-destination", [{"Type": "tmpfs", "Destination": "C:\\private\\secret-path", "RW": True}]),
+            ("read-only", [{"Type": "tmpfs", "Destination": "/var/lib/mysql", "RW": False}]),
+            ("extra-mount", [valid_mount, {"Type": "volume", "Destination": "/other", "RW": True}]),
+        )
+        for label, mounts in invalid_started:
+            with self.subTest(started_mounts=label):
+                _result, receipt, events = self._run_mount_campaign(pending_mounts=[], started_mounts=mounts)
+                self.assertEqual(receipt["runtime"]["failure"]["code"], "MOUNT_INVALID")
+                self.assertFalse(any(event[0] == "mysql" for event in events))
+                self.assertFalse(any(event[0] == "schema-probe-not-run" for event in events))
+                self.assertTrue(any(event[0] == "docker" and event[1][:2] == ("container", "start") for event in events))
+                observations = receipt["runtime"]["mountLifecycleObservations"]
+                self.assertEqual([item["phase"] for item in observations], ["pending", "started"])
+                self.assertEqual(observations[-1]["validation"], "REJECTED")
+                self.assertEqual(observations[-1]["failureCode"], "MOUNT_INVALID")
+                self.assertNotIn("C:\\private\\secret-path", json.dumps(receipt))
+
+    def test_campaign_pending_mount_and_configuration_mismatches_fail_before_start(self):
+        valid_mount = {"Type": "tmpfs", "Destination": "/var/lib/mysql", "RW": True}
+        invalid_pending = (
+            ("bind", [{"Type": "bind", "Destination": "/var/lib/mysql", "RW": True, "Source": "C:\\private\\secret-path"}], None, "MOUNT_INVALID"),
+            ("unknown-type", [{"Type": "volume", "Destination": "/var/lib/mysql", "RW": True}], None, "MOUNT_INVALID"),
+            ("extra-mount", [valid_mount, {"Type": "volume", "Destination": "/other", "RW": True}], None, "MOUNT_INVALID"),
+            ("missing", _MISSING_MOUNTS, None, "MOUNT_INVALID"),
+            ("null", None, None, "MOUNT_INVALID"),
+            ("tmpfs-options", [], lambda container: container.update(tmpfs={"/var/lib/mysql": "rw,size=512m"}), "TMPFS_INVALID"),
+            ("tmpfs-target", [], lambda container: container.update(tmpfs={"/var/lib/mysql": "rw,noexec,nosuid,size=512m", "/other": "rw"}), "TMPFS_INVALID"),
+            ("host-port", [], lambda container: container.update(ports={"3306/tcp": [{"HostPort": "3306"}]}), "HOST_PORT_FORBIDDEN"),
+        )
+        for label, mounts, mutation, expected_code in invalid_pending:
+            with self.subTest(pending_case=label):
+                _result, receipt, events = self._run_mount_campaign(
+                    pending_mounts=mounts,
+                    started_mounts=[valid_mount],
+                    pending_mutation=mutation,
+                )
+                self.assertEqual(receipt["runtime"]["failure"]["code"], expected_code)
+                self.assertFalse(any(event[0] == "docker" and event[1][:2] == ("container", "start") for event in events))
+                self.assertFalse(any(event[0] == "mysql" for event in events))
+                observations = receipt["runtime"]["mountLifecycleObservations"]
+                self.assertEqual([item["phase"] for item in observations], ["pending"])
+                self.assertEqual(observations[0]["validation"], "REJECTED")
+                if label == "tmpfs-options":
+                    self.assertFalse(observations[0]["configuredTmpfs"]["authorizedOptionsMatch"])
+                self.assertNotIn("C:\\private\\secret-path", json.dumps(receipt))
 
     def test_started_ownership_validation_precedes_every_mysql_call(self):
         names = fixture.names_for("worker", TASK_ID)

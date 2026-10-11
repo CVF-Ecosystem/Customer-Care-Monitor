@@ -900,5 +900,51 @@
       "modelCost": null,
       "measurementLimit": "Only native process walltime measured; no matched model comparison or efficiency ranking."
     }
+  ],
+  "mountLifecycleCompletionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-086",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "primaryTaskClass": "directed_resource_harness_source_completion",
+      "secondaryTaskClass": "phase_sensitive_negative_test_and_evidence_capture",
+      "complexity": "R2 resource safety; one source pass; explicit ML01..07; no native effects",
+      "inputNovelty": "INHERITED_SOURCE67E76DE_NEW_NATIVE_MOUNT_FAILURE_R085",
+      "firstSourceCommit": null,
+      "firstWorkerSuite": "27PASS1.531s_EXIT0_PROCESS1_NO_REPLAY",
+      "firstReviewerSuite": "NOT_RUN_YET",
+      "sourceRepairRounds": 0,
+      "workerCampaigns": 0,
+      "reviewerCampaigns": 0,
+      "preBuildAcknowledgment": "FIRST_ACK_CANONICAL_FIELDS_CORRECT",
+      "rootAssistance": [
+        "explicit acceptance ML01..07",
+        "authority/lifecycle/commit ownership",
+        "planned independent source/receipt/protected/test-body review",
+        "interim pre-suite static oracle/fact-name review",
+        "pending-empty versus strict-started NetworkID coverage clarification",
+        "clarified existing static-prep authority versus failed-suite stop, author pass unchanged"
+      ],
+      "rootImplementationDraft": false,
+      "sourceImplementation": "BUILD_IN_PROGRESS",
+      "finalDisposition": "PENDING_INDEPENDENT_REVIEW_FREEZE_BLOCKED_INHERITED_DOCS55",
+      "modelInferenceSeconds": null,
+      "modelTokens": null,
+      "modelCost": null,
+      "measurementLimit": "No model telemetry or matched comparison; source-only units cannot prove Docker mount compatibility or SQL readiness.",
+      "preSuiteRootStaticFindings": [
+        "positive lifecycle oracle events.index selects first equal inspect tuple",
+        "conditional task assertion admits dual receipt schemas",
+        "configured options authorization field actually checks string presence"
+      ],
+      "preSuiteCorrectionStatus": "STATIC_SOURCE_POINTS_CORRECTED_WORKER_REPORTED_NO_SUITE_YET",
+      "workerPreparationFindings": [
+        "static helper asserted26 when actual23+4=27, no suite launched",
+        "worker incorrectly treated static-helper failure as stop despite BUILD explicitly permitting pre-suite preparation correction"
+      ],
+      "workerHarnessProcessWallSeconds": 2.077573,
+      "workerEvidenceParserDefect": "CRLF regex missed count; original null receipt retained, separate raw-derived27summary",
+      "expectedConcurrentRootLedgerUpdateReportedByWorker": true
+    }
   ]
 }

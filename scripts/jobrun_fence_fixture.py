@@ -610,7 +610,10 @@ def validate_container_inspect(
     expected_id: str | None = None,
     expected_network_id: str | None = None,
     require_network_id: bool = False,
+    mount_phase: str = "started",
 ) -> str:
+    if mount_phase not in ("pending", "started"):
+        raise FixtureError("MOUNT_PHASE_INVALID", "container mount validation phase was invalid")
     container_id = value.get("id")
     if not isinstance(container_id, str) or not re.fullmatch(r"[0-9a-f]{64}", container_id):
         raise FixtureError("CONTAINER_ID_INVALID", "owned container id was not a full id")
@@ -637,7 +640,7 @@ def validate_container_inspect(
     if not isinstance(network, Mapping):
         raise FixtureError("CONTAINER_NETWORK_MISMATCH", "fixture container network metadata was invalid")
     observed_network_id = network.get("NetworkID", "")
-    if require_network_id:
+    if mount_phase == "started" or require_network_id:
         if not expected_network_id or observed_network_id != expected_network_id:
             raise FixtureError("CONTAINER_NETWORK_ID_MISMATCH", "started container network id did not match the owned network")
     elif observed_network_id not in (None, "", expected_network_id):
@@ -651,8 +654,12 @@ def validate_container_inspect(
     option_set = {part.strip().lower() for part in tmpfs_options.split(",") if part.strip()}
     if option_set != {"rw", "noexec", "nosuid", "size=512m"}:
         raise FixtureError("TMPFS_INVALID", "fixture MySQL tmpfs options did not match the authorized limits")
-    mounts = value.get("mounts")
-    if not isinstance(mounts, list) or len(mounts) != 1:
+    mounts = value.get("mounts", _MOUNT_FIELD_MISSING)
+    if mounts is _MOUNT_FIELD_MISSING or mounts is None or not isinstance(mounts, list):
+        raise FixtureError("MOUNT_INVALID", "fixture container must have exactly one tmpfs mount")
+    if mount_phase == "pending" and len(mounts) == 0:
+        return container_id
+    if len(mounts) != 1:
         raise FixtureError("MOUNT_INVALID", "fixture container must have exactly one tmpfs mount")
     mount = mounts[0]
     if not isinstance(mount, dict) or mount.get("Type") != "tmpfs" or mount.get("Destination") != "/var/lib/mysql":
@@ -660,6 +667,96 @@ def validate_container_inspect(
     if mount.get("RW") is not True:
         raise FixtureError("MOUNT_INVALID", "MySQL tmpfs is not writable")
     return container_id
+
+
+_MOUNT_FIELD_MISSING = object()
+
+
+def _mount_lifecycle_observation(
+    value: Mapping[str, Any],
+    *,
+    phase: str,
+    role: str,
+    task_id: str,
+    expected_container_id: str | None,
+    expected_network_id: str | None,
+    expected_image_id: str | None,
+) -> dict[str, Any]:
+    """Select only bounded, non-host-sensitive facts for one mount-phase receipt."""
+    mounts = value.get("mounts", _MOUNT_FIELD_MISSING) if isinstance(value, Mapping) else _MOUNT_FIELD_MISSING
+    if mounts is _MOUNT_FIELD_MISSING:
+        mount_shape = "missing"
+        mount_count: int | str | None = None
+        selected_mount = None
+    elif mounts is None:
+        mount_shape = "null"
+        mount_count = None
+        selected_mount = None
+    elif not isinstance(mounts, list):
+        mount_shape = "not_list"
+        mount_count = None
+        selected_mount = None
+    elif not mounts:
+        mount_shape = "empty"
+        mount_count = 0
+        selected_mount = None
+    elif len(mounts) > 1:
+        mount_shape = "multiple"
+        mount_count = len(mounts) if len(mounts) <= 8 else "8+"
+        selected_mount = None
+    elif not isinstance(mounts[0], dict):
+        mount_shape = "entry_not_object"
+        mount_count = 1
+        selected_mount = None
+    else:
+        mount_shape = "single_entry"
+        mount_count = 1
+        item = mounts[0]
+        raw_type = item.get("Type", _MOUNT_FIELD_MISSING)
+        raw_destination = item.get("Destination", _MOUNT_FIELD_MISSING)
+        raw_rw = item.get("RW", _MOUNT_FIELD_MISSING)
+        selected_mount = {
+            "type": "missing" if raw_type is _MOUNT_FIELD_MISSING else "invalid" if not isinstance(raw_type, str) else "tmpfs" if raw_type == "tmpfs" else "other",
+            "destination": "missing" if raw_destination is _MOUNT_FIELD_MISSING else "invalid" if not isinstance(raw_destination, str) else "authorized" if raw_destination == "/var/lib/mysql" else "other",
+            "rw": "missing" if raw_rw is _MOUNT_FIELD_MISSING else raw_rw if isinstance(raw_rw, bool) else "invalid",
+        }
+
+    configured_tmpfs = value.get("tmpfs", _MOUNT_FIELD_MISSING) if isinstance(value, Mapping) else _MOUNT_FIELD_MISSING
+    if configured_tmpfs is _MOUNT_FIELD_MISSING:
+        configured = {"shape": "missing", "targetCount": None, "authorizedTargetPresent": False, "optionsValueIsString": False, "authorizedOptionsMatch": False}
+    elif configured_tmpfs is None:
+        configured = {"shape": "null", "targetCount": None, "authorizedTargetPresent": False, "optionsValueIsString": False, "authorizedOptionsMatch": False}
+    elif not isinstance(configured_tmpfs, Mapping):
+        configured = {"shape": "not_mapping", "targetCount": None, "authorizedTargetPresent": False, "optionsValueIsString": False, "authorizedOptionsMatch": False}
+    else:
+        configured_options = configured_tmpfs.get("/var/lib/mysql", _MOUNT_FIELD_MISSING)
+        if isinstance(configured_options, str):
+            configured_option_set = {part.strip().lower() for part in configured_options.split(",") if part.strip()}
+        else:
+            configured_option_set = set()
+        configured = {
+            "shape": "mapping",
+            "targetCount": len(configured_tmpfs) if len(configured_tmpfs) <= 8 else "8+",
+            "authorizedTargetPresent": "/var/lib/mysql" in configured_tmpfs,
+            "optionsValueIsString": isinstance(configured_options, str),
+            "authorizedOptionsMatch": configured_option_set == {"rw", "noexec", "nosuid", "size=512m"},
+        }
+
+    def safe_id(raw: str | None, pattern: str) -> str | None:
+        return raw if isinstance(raw, str) and re.fullmatch(pattern, raw) else None
+
+    return {
+        "phase": phase,
+        "role": role if role in ROLES else "unknown",
+        "taskId": task_id if isinstance(task_id, str) and re.fullmatch(r"[0-9a-f]{32}", task_id) else None,
+        "expectedIds": {
+            "container": safe_id(expected_container_id, r"[0-9a-f]{64}"),
+            "network": safe_id(expected_network_id, r"[0-9a-f]{64}"),
+            "image": safe_id(expected_image_id, r"sha256:[0-9a-f]{64}"),
+        },
+        "mounts": {"shape": mount_shape, "count": mount_count, "selected": selected_mount},
+        "configuredTmpfs": configured,
+    }
 
 
 def _quoted_account(value: str) -> str:
@@ -948,7 +1045,7 @@ class Campaign:
                 "labels": self.labels,
                 "imageLookup": "cached mysql:8.0 only; no pull",
             },
-            "runtime": {"status": "NOT_RUN", "readinessObservations": 0, "facts": {}},
+            "runtime": {"status": "NOT_RUN", "readinessObservations": 0, "facts": {}, "mountLifecycleObservations": []},
             "cleanup": {"status": "NOT_REQUIRED", "containerRemoved": False, "networkRemoved": False},
             "commands": [],
         }
@@ -1180,15 +1277,48 @@ class Campaign:
         observed = self.ops.inspect_container(resource_id)
         if observed is None:
             raise FixtureError("CONTAINER_DISAPPEARED", "owned MySQL container disappeared after creation")
-        validate_container_inspect(
+        self._validate_container_mount_phase(observed, phase="pending", image_id=image["imageId"])
+
+    def _validate_container_mount_phase(
+        self,
+        observed: Mapping[str, Any],
+        *,
+        phase: str,
+        image_id: str,
+        require_network_id: bool = False,
+    ) -> str:
+        observation = _mount_lifecycle_observation(
             observed,
-            name=self.names["container"],
-            image_id=image["imageId"],
-            network_name=self.names["network"],
-            labels=self.labels,
-            expected_id=self.container_id,
+            phase=phase,
+            role=self.role,
+            task_id=self.task_id,
+            expected_container_id=self.container_id,
             expected_network_id=self.network_id,
+            expected_image_id=image_id,
         )
+        observation["validation"] = "PENDING"
+        self.receipt["runtime"].setdefault("mountLifecycleObservations", []).append(observation)
+        self.persist()
+        try:
+            container_id = validate_container_inspect(
+                observed,
+                name=self.names["container"],
+                image_id=image_id,
+                network_name=self.names["network"],
+                labels=self.labels,
+                expected_id=self.container_id,
+                expected_network_id=self.network_id,
+                require_network_id=require_network_id,
+                mount_phase=phase,
+            )
+        except FixtureError as exc:
+            observation["validation"] = "REJECTED"
+            observation["failureCode"] = exc.code
+            self.persist()
+            raise
+        observation["validation"] = "ACCEPTED"
+        self.persist()
+        return container_id
 
     def _validate_started_ownership(self) -> tuple[Mapping[str, Any], Mapping[str, Any]]:
         assert self.ops is not None and self.container_id is not None
@@ -1197,14 +1327,10 @@ class Campaign:
         observed = self.ops.inspect_container(self.container_id)
         if observed is None:
             raise FixtureError("CONTAINER_DISAPPEARED", "MySQL container disappeared after start")
-        validate_container_inspect(
+        self._validate_container_mount_phase(
             observed,
-            name=self.names["container"],
+            phase="started",
             image_id=self.receipt["plan"]["image"]["imageId"],
-            network_name=self.names["network"],
-            labels=self.labels,
-            expected_id=self.container_id,
-            expected_network_id=self.network_id,
             require_network_id=True,
         )
         network = self.ops.inspect_network(self.network_id)
