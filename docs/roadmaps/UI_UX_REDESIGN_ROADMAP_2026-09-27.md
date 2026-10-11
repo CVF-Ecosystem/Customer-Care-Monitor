@@ -2,7 +2,13 @@
 
 **Trạng thái:** ACTIVE. Owner ủy quyền toàn bộ phần thiết kế cho Claude (2026-09-27); Claude chốt thiết kế, còn triển khai vẫn qua review độc lập. **Ngày:** 2026-09-27. **Tác giả:** Claude (ORCHESTRATOR / SPEC_AUTHOR cho kế hoạch thiết kế, theo phân công của owner). **Mã kế hoạch:** `CCMAI-UXROADMAP-001`. **Rủi ro:** thiết kế trên canvas là R1; triển khai vào ứng dụng tối thiểu R2 vì giao diện hiển thị trạng thái nguồn, confidence và đồng bộ đã qua review.
 
-**Đầu vào:**
+## Điểm kiểm hiện hành — 2026-10-12
+
+Design system và các màn Job Detail, Results, Messages, Jobs, Settings/Users/Auth, Logs/Cost/Notifications/MCP, Dashboard và Channels đã có review cho phạm vi riêng (UX000/010–017 và repair tương ứng). Nhiều scope vẫn FREEZE OPEN; không suy screen review thành deploy hoặc toàn bộ baseline finding đã đóng. [Implementation truth](../../IMPLEMENTATION_STATUS.json) giữ disposition/giới hạn của từng scope. R067/R073 bổ sung UI đọc receipt/usage presence cục bộ, không thực hiện workflow người duyệt S5.
+
+Phần còn lại: nghiệm thu tổng thể qua route thật, contract API còn thiếu cho lọc/export/nguồn, và luồng review/correction/phân công/kết quả vụ việc thuộc S5. Ưu tiên UI phục vụ [mốc sản phẩm và route hiện hành](AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md); không tiếp tục polish ngoài dependency của mốc đó. Các bảng/checkpoint theo ngày bên dưới là lịch sử, phải đối chiếu review và implementation truth trước dispatch. Bản cập nhật R1 này không thay design acceptance hoặc cấp BUILD/deploy authority.
+
+**Đầu vào lịch sử:**
 - [Đánh giá UI/UX nền tảng](../reviews/UI_UX_REVIEW_BASELINE_2026-09-27.md): 20 phát hiện UX-01 đến UX-20 và 15 ảnh chụp.
 - Canvas nền tảng thiết kế (Giai đoạn 0) trên claude.ai: https://claude.ai/artifact/DsSy7rS8zkAr4Gk6DB6vxt (riêng tư, của owner).
 - Canvas thử nghiệm Job Detail trên claude.ai: https://claude.ai/artifact/KkF8P2m1iGRpTRa3mkf4ii (riêng tư, của owner).

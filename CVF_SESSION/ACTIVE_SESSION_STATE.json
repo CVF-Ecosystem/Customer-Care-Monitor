@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-086",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-086 REVIEW_PASS_SOURCE_ONLY at511f8b4/worker-root27PASS, pending-started mount contract and sanitized observations accepted; FREEZE OPEN due inherited docs55deadlinks. ORCHESTRATOR next bounds separate documentary deadlink repair/validation before closure and fresh fixture authority; no current source repair/Docker/SQL/Go/provider/pull/push/accounts parked/native readiness OPEN/deployed UNKNOWN.",
+  "activeTranche": "CCMAI-RUNTIME-087",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-087 REVIEW_PASS documentary roadmap tracking at9dbf26f; FREEZE OPEN due inherited docs55. ORCHESTRATOR next bounds P0 exact deadlink repair/validation, then P1 safety/dependency route decision before fixture/product execution authority; R086 source-only/native NOT_RUN/fence OPEN preserved, accounts parked/no provider/push.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after explicit R1 documentary REVIEW",
   "updatedAt": "2026-10-12",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "ownerRoadmapDiscipline": {
@@ -25,27 +25,42 @@
     "responsibleRole": "ORCHESTRATOR",
     "sharedLearning": "docs/reviews/learnings/feedback_orchestrator_roadmap_control.md",
     "driftTrigger": "Two supporting scopes without product acceptance or any prerequisite failure: reassess finite roadmap route before next scope selection",
-    "noncoderHandback": ["usable capability", "remaining milestone", "blocker", "planned remaining steps", "completion condition", "explicit uncertainty without invented ETA"],
+    "noncoderHandback": [
+      "usable capability",
+      "remaining milestone",
+      "blocker",
+      "planned remaining steps",
+      "completion condition",
+      "explicit uncertainty without invented ETA"
+    ],
     "effectiveness": "NOT_YET_VERIFIED",
     "mandatoryRead": "CVF_SESSION_MEMORY.md#standing-owner-directive-roadmap-discipline-2026-10-12",
-    "triggers": ["resume", "next-scope selection", "failure or follow-on repair", "handback"],
-    "requiredBeforeDispatch": ["roadmap stage", "verifiable product outcome", "acceptance gap", "necessary prerequisites", "finite budget", "stop condition"],
+    "triggers": [
+      "resume",
+      "next-scope selection",
+      "failure or follow-on repair",
+      "handback"
+    ],
+    "requiredBeforeDispatch": [
+      "roadmap stage",
+      "verifiable product outcome",
+      "acceptance gap",
+      "necessary prerequisites",
+      "finite budget",
+      "stop condition"
+    ],
     "sameScopeRepairs": "Continue within existing authority; successors require a real boundary or exhausted explicit authority, with reason recorded. Historical seeds and budgets unchanged.",
     "progressReporting": "Product outcome and remaining acceptance, prerequisite cost and next route; source/unit distinct from native/live/deployed proof. Luna assessment supports delivery; root orchestration/reviewer faults separately attributed.",
-    "executionAuthorityExpanded": false
+    "executionAuthorityExpanded": false,
+    "currentRoadmap": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
   },
   "currentExecutionBudget": {
-    "workerCompletionPasses": 1,
-    "workerHarnessUnitInvocations": 1,
-    "reviewerHarnessUnitInvocations": 1,
-    "maxDirectedSameScopeSourceRepairRounds": 0,
-    "workerFixtureCampaigns": 0,
-    "reviewerFixtureCampaigns": 0,
-    "goInvocations": 0,
-    "providerInvocations": 0,
-    "automaticRetries": 0,
-    "workerHarnessUnitInvocationsUsed": 1,
-    "reviewerHarnessUnitInvocationsUsed": 1
+    "documentaryPasses": 1,
+    "sameScopeDocumentaryRepairs": "Within unchanged authority; third-round rule applies",
+    "applicationRuntime": 0,
+    "provider": 0,
+    "push": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -57,10 +72,10 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R086",
+    "id": "R087",
     "status": "REVIEW_PASS",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_086.md",
-    "sourceImplementation": "NOT_DISPATCHED",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_087.md",
+    "sourceImplementation": "NOT_APPLICABLE_DOCUMENTARY_ONLY",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -1061,5 +1076,18 @@
       "status": "NOT_GRANTED_WORKER_FAILED",
       "used": 0
     }
+  },
+  "historicalR086ExecutionBudget": {
+    "workerCompletionPasses": 1,
+    "workerHarnessUnitInvocations": 1,
+    "reviewerHarnessUnitInvocations": 1,
+    "maxDirectedSameScopeSourceRepairRounds": 0,
+    "workerFixtureCampaigns": 0,
+    "reviewerFixtureCampaigns": 0,
+    "goInvocations": 0,
+    "providerInvocations": 0,
+    "automaticRetries": 0,
+    "workerHarnessUnitInvocationsUsed": 1,
+    "reviewerHarnessUnitInvocationsUsed": 1
   }
 }

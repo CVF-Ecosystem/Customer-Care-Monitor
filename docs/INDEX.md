@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R086 source-only mount lifecycle completion; R085 failed retained, no effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md`
+- Active R087 documentary roadmap refresh handoff; historical R086 source acceptance/FREEZE OPEN retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -185,6 +185,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R044 implementation/repair/independent acceptance and R045 seed planning acknowledgment; source/evidence limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MCP_JOB_EXECUTION_2026-10-03.md`
 - Historical R052 failed R3 evidence and independent manifest/cost review; no acceptance.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md`
 - Historical R051 repair/cost record; current R3 delegation in R052.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md`
+- Historical R086 source-only review acceptance; FREEZE OPEN and native readiness unverified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md`
 - Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
@@ -1038,6 +1039,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stderr.bin`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json`
+- Immutable R1 owner-requested roadmap refresh authority; no source/runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-087.json`
+- R1 documentary progress review accepted, root publication defects retained; FREEZE OPEN due inherited docs55, no stage exit or runtime proof.: `docs/reviews/R087_ROADMAP_PROGRESS_DOCUMENTARY_REVIEW_2026-10-12.md`
+- Bounded R1 current progress and finite planning route work order.: `docs/work_orders/CCMAI_RUNTIME_087.md`
+- R087 documentary roadmap progress refresh lifecycle; no product stage closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-087.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

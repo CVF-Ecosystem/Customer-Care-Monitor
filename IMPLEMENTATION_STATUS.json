@@ -1,5 +1,37 @@
 {
   "schemaVersion": "1.0",
+  "roadmapTracking": {
+    "updatedAt": "2026-10-12",
+    "status": "REVIEW_PASS_DOCUMENTARY_FREEZE_OPEN_NO_STAGE_CLOSURE",
+    "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "stages": {
+      "S0": "PARTIAL_LIVE_BASELINE_OPEN",
+      "S1": "IN_PROGRESS",
+      "S2": "PREPARATORY_SLICES_FULL_GATE_OPEN",
+      "S3": "OBSERVATION_SLICES_ADMISSION_OPEN",
+      "S4": "NOT_IMPLEMENTED_FOR_STAGE_EXIT",
+      "S5": "READ_ONLY_UI_WORKFLOW_OPEN",
+      "S6": "NOT_RUN_FOR_STAGE_EXIT",
+      "S7": "PRODUCT_RELEASE_EXIT_OPEN"
+    },
+    "nextProductMilestone": "One-job source/permission gate with explicit denied/wait/allowed outcomes and evidence-bound proposal; then authorized human review/assignment/action outcome",
+    "planningRoute": [
+      "P0 bounded documentary unblock",
+      "P1 safety/dependency route decision",
+      "P2 one-job S2/S3 slice",
+      "P3 minimal S5 workflow",
+      "P4 measured pilot/optimization/release"
+    ],
+    "currentBlockers": [
+      "Known55 documentary deadlinks",
+      "R086 native fixture NOT_RUN",
+      "Fence/recovery integration OPEN",
+      "GlobalF02/live OPEN and accounts parked",
+      "Full gate/admission/human workflow not implemented"
+    ],
+    "executionAuthorityExpanded": false,
+    "eta": "NOT_ESTABLISHED"
+  },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
   "currentPhase": "REVIEW",
@@ -260,7 +292,7 @@
     "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md"
   ],
   "updatedAt": "2026-10-12",
-  "ownerRouting": {
+  "historicalR086OwnerRouting": {
     "date": "2026-10-12",
     "parkedAccounts": [
       "facebook",
@@ -291,6 +323,28 @@
     "sourceCheckpoint": "511f8b4a660571feb016534d3c602360f2aa3f35",
     "publishedClosureCommit": null,
     "localClosureCommit": null
+  },
+  "ownerRouting": {
+    "date": "2026-10-12",
+    "parkedAccounts": [
+      "facebook",
+      "zalo_oa"
+    ],
+    "nextObjective": "CCMAI-RUNTIME-087 REVIEW_PASS documentary roadmap tracking at9dbf26f; FREEZE OPEN due inherited docs55. ORCHESTRATOR next bounds P0 exact deadlink repair/validation, then P1 safety/dependency route decision before fixture/product execution authority; R086 source-only/native NOT_RUN/fence OPEN preserved, accounts parked/no provider/push.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_087.md",
+    "buildDispatched": false,
+    "currentExecutionBudget": {
+      "documentaryPasses": 1,
+      "sameScopeDocumentaryRepairs": "Within unchanged authority; third-round rule applies",
+      "applicationRuntime": 0,
+      "provider": 0,
+      "push": 0
+    },
+    "publicationStatus": "R087_DOCUMENTARY_LOCAL_ONLY_NO_PUSH",
+    "sourceCheckpoint": "9dbf26fa88cc8995978961d98e6ffb9e3ba4da27",
+    "modelAssessment": "NOT_APPLICABLE_ROOT_R1_DOCUMENTARY_WORK_NO_LUNA_CAMPAIGN",
+    "activeLocalClosureOrder": null,
+    "localClosureEvidence": null
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
