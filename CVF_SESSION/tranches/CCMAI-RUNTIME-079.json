@@ -43,8 +43,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 continues roadmap with Luna max worker/root orchestrator and independent reviewer. R078 next move bounds read-only durable recovery/owner-fence prerequisite intake, no application/native/provider/host effects.",
   "claimScope": "Repository source-backed prerequisites and explicit unknown deployment facts; concrete nonbinding next DESIGN/SPEC draft only. No ownership/fencing/runtime/recovery/governance guarantee.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_079.md",
   "baseCommit": "185256658e1dcec54f09e180b2e2e9fd27ab4284",
   "buildCommit": null,
@@ -53,7 +53,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -65,5 +66,6 @@
   "taskClassification": {
     "primary": "recovery_fence_prerequisite_intake",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
-  }
+  },
+  "workerAcknowledgment": "Luna max fresh WORK_ORDER rehydration/CVF declaration ACK received before edits, immutable seed1852566 and activation11efa39 checked. Root fresh canonical tuple agrees, releases documentary BUILD exact3 new files only. PF02/PF03 reminder covers post-terminal local slot versus persisted running-row guard; root pointers/requirements, no worker prose draft. Doctor25/1 and gateunits46PASS30.799s retained; native0."
 }
