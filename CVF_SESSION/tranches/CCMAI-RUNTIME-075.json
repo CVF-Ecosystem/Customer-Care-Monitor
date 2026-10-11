@@ -29,13 +29,15 @@
     "merge_deploy",
     "hosted_or_live_governance_claim"
   ],
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
   "baseCommit": "2a052d21b9e72bfdaa5ed5d15da3d35c2049fc15",
-  "buildCommit": "2e04e2c51edccb8362df0d7771048b615b8a6c63",
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
+  "reviewEvidence": [
+    "docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md"
+  ],
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -46,7 +48,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -57,9 +61,9 @@
   "dispatcher": "Codex /root",
   "dispatcherAcknowledgment": "Fresh canonical rehydration/doctor25/1 before publication role; explicit owner instruction, independent Luna reviewer. Root metadata/build ACK recorded before network; seed2a052d21b9e72bfdaa5ed5d15da3d35c2049fc15 predates effects. No source/native/provider/DB/secret reads.",
   "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
-  "publicationStatus": "NOT_COMPLETED_GIT_AUTHENTICATION_REQUIRED",
+  "publicationStatus": "SOURCE_PUBLICATION_VERIFIED_RECEIPT_PUBLICATION_PENDING",
   "authResumeAcknowledgment": "Owner 2026-10-10 explicitly instructs xu ly di, push cho xong. Third noninteractive attempt at0040308 failed128, retained. REVIEW_COST_ESCALATION_REQUIRED: stop repeating noninteractive failures; one owner-authorized interactive existing-GCM authentication flow and one ordinary exact-SHA push after independent review. No credential/config values read or printed, no force/main/merge/deploy. Canonical core reconciliation prerequisite completed through prescribed backup/clone script; core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba clean, doctor25/1 PASS WITH NOTE, manifest unchanged. No downstream artifacts in core.",
-  "pushAttempts": 3,
+  "pushAttempts": 4,
   "reviewCostDisposition": "Owner 2026-10-10 explicitly instructs xu ly di, push cho xong. Third noninteractive attempt at0040308 failed128, retained. REVIEW_COST_ESCALATION_REQUIRED: stop repeating noninteractive failures; one owner-authorized interactive existing-GCM authentication flow and one ordinary exact-SHA push after independent review. No credential/config values read or printed, no force/main/merge/deploy. Canonical core reconciliation prerequisite completed through prescribed backup/clone script; core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba clean, doctor25/1 PASS WITH NOTE, manifest unchanged. No downstream artifacts in core.",
-  "remainingPermittedPushAttempts": 1
+  "remainingPermittedPushAttempts": 0
 }

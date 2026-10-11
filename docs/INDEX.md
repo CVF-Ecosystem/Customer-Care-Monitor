@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R075 BUILD ordinary branch publication; no app/runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
+- Active R075 REVIEW_PASS ordinary branch publication; no app/runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -636,6 +636,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R075 bounded ordinary publication record/order; R074 historical FROZEN preserved.: `CVF_SESSION/tranches/CCMAI-RUNTIME-075.json`
 - R075 bounded ordinary publication record/order; R074 historical FROZEN preserved.: `docs/work_orders/CCMAI_RUNTIME_075.md`
 - Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim.: `docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json`
+- R075 independent source publication review; receipt follow-up conditional, no live or Actions claim.: `docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

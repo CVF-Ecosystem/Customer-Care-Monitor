@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
       "status": "ACTIVE",
-      "description": "Active R075 BUILD ordinary branch publication; no app/runtime effects."
+      "description": "Active R075 REVIEW_PASS ordinary branch publication; no app/runtime effects."
     },
     {
       "id": "r060-work-order",
@@ -5897,6 +5897,13 @@
       "family": "continuity",
       "status": "ACTIVE",
       "description": "Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim."
+    },
+    {
+      "id": "r075-review-001",
+      "path": "docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md",
+      "family": "continuity",
+      "status": "ACTIVE",
+      "description": "R075 independent source publication review; receipt follow-up conditional, no live or Actions claim."
     }
   ]
 }

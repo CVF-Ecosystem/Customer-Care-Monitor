@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
 
 ## Current R075
 
-CCMAI-RUNTIME-075 BUILD owner-authorized interactive Git authentication repair, one bounded ordinary exact-SHA feature push after independent prepublication review; verify remote SHA, preserve all failures. No force/main/merge/deploy/app/provider/DB/secret reads. Accounts parked.
+CCMAI-RUNTIME-075 REVIEW_PASS source publication and receipt accepted independently; GP06 publish this reviewed receipt commit and verify exact SHA before local FREEZE. No app/provider/DB/main/force/merge/deploy; accounts parked.
 
 R074 local dossier FROZEN and five implementation plus one fresh audit preserved. New owner GitHub instruction authorizes R075 ordinary branch publication; no retroactive change to R068 unverified attempt or old prohibited effects.
 

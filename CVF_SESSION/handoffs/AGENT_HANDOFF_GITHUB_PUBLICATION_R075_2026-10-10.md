@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / publication COMMIT_STEWARD; Luna independent REVIEWER
-- Next allowed move: CCMAI-RUNTIME-075 BUILD owner-authorized interactive Git authentication repair, one bounded ordinary exact-SHA feature push after independent prepublication review; verify remote SHA, preserve all failures. No force/main/merge/deploy/app/provider/DB/secret reads. Accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root SESSION_SYNC_STEWARD / publication COMMIT_STEWARD; Luna independent REVIEWER
+- Next allowed move: CCMAI-RUNTIME-075 REVIEW_PASS source publication and receipt accepted independently; GP06 publish this reviewed receipt commit and verify exact SHA before local FREEZE. No app/provider/DB/main/force/merge/deploy; accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-effect acknowledgment
