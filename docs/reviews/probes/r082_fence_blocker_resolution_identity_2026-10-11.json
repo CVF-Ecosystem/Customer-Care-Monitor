@@ -1,0 +1,2334 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-082",
+  "captureDate": "2026-10-11",
+  "capturePurpose": "Source-only identity, selected documentary contract support, finite Job creation census, and nonbinding future test plan. JSON is not self-hashed; root records its committed blob in independent review.",
+  "workerReviewState": "PENDING_INDEPENDENT_REVIEW",
+  "workerStaticValidationHistory": [
+    {
+      "check": "single bundled worker static artifact identity check",
+      "attempt": 1,
+      "result": "FAIL",
+      "stage": "input citation-range preflight",
+      "finding": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json was assigned citation range 1-53, while the committed authority seed has 51 lines.",
+      "correction": "Final identity cites lines 1-51.",
+      "validationDisposition": "No validation PASS inferred; worker validation was not rerun. Root independent validation pending."
+    }
+  ],
+  "authoringStops": [
+    {
+      "stage": "identity input construction after worker check stop",
+      "finding": "The first JSON generation draft named backend/db/models/activity.go, which is absent.",
+      "resolution": "Removed that unused model reference; S10 binds the existing backend/db/activity.go activity writer source.",
+      "validation": "No worker validation rerun; root should independently verify all inputs."
+    }
+  ],
+  "lineage": {
+    "immutableWorkerSeedCommit": "05cef8c327c5899b38d3d4ff400d0ac27711b23a",
+    "activationCommit": "d125a8af1606977741011bd3c9a581fb2c30d576",
+    "buildReleaseCommit": "22d2fc0d082db17f3e407b7b674144c64728c386",
+    "workspaceHeadAtCapture": "22d2fc0d082db17f3e407b7b674144c64728c386",
+    "r081OriginalPacketCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+    "r081IndependentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
+    "r081ReturnedPublicationCommit": "b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5",
+    "r080AcceptedArchitectureCommit": "402d6a6",
+    "r080IndependentReviewCommit": "56b5328",
+    "sourceBaseline": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+    "r080ComparisonHead": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+    "r081ComparisonHead": "17da38e5dc2e005bc45065a44daf887640c35649",
+    "meaning": "R080/R081 histories remain immutable; repository comparisons do not prove installed schema, deployed binaries, writer membership, restore safety, runtime behavior, or adoption."
+  },
+  "sourceComparisons": [
+    {
+      "label": "R080 accepted source comparison preserved",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..efa21565f9a87aa509d7a088ff1ff2d3945baae7 -- backend",
+      "backendPathsChanged": [],
+      "result": "INHERITED_FROM_IMMUTABLE_R081_IDENTITY"
+    },
+    {
+      "label": "R081 BUILD source comparison preserved",
+      "base": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+      "head": "17da38e5dc2e005bc45065a44daf887640c35649",
+      "command": "git diff --name-only 62b079f91fffbf2ffcec2421876f3ea74267f912..17da38e5dc2e005bc45065a44daf887640c35649 -- backend",
+      "backendPathsChanged": [],
+      "result": "INHERITED_FROM_IMMUTABLE_R081_IDENTITY"
+    },
+    {
+      "label": "R082 returned-publication to BUILD comparison",
+      "base": "b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5",
+      "head": "22d2fc0d082db17f3e407b7b674144c64728c386",
+      "command": "git diff --name-only b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5..22d2fc0d082db17f3e407b7b674144c64728c386 -- backend",
+      "backendPathsChanged": null,
+      "result": "NOT_RUN_WORKER_CHECK_STOPPED; root must independently verify"
+    }
+  ],
+  "executionBoundary": {
+    "mode": "source-only documentary BUILD",
+    "runtimeEvidence": "NOT_RUN",
+    "applicationNativeInvocations": 0,
+    "goBuildInvocations": 0,
+    "goTestInvocations": 0,
+    "providerNetworkInvocations": 0,
+    "databaseInvocations": 0,
+    "hostOrContainerInspections": 0,
+    "credentialEnvironmentReads": 0,
+    "browserInvocations": 0,
+    "repositoryTestsOrGatesRunByWorker": 0,
+    "staticArtifactIdentityChecksByWorker": 1,
+    "staticArtifactIdentityCheckOutcome": "FAIL_AT_INPUT_RANGE_PREFLIGHT",
+    "noGovernanceClaim": true
+  },
+  "referenceDefinitions": [
+    {
+      "id": "C01",
+      "path": "backend/api/handlers/agent_analysis_admission_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 31,
+          "lastLine": 31
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "path": "backend/api/handlers/agent_run_config_admission_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 79,
+          "lastLine": 80
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "path": "backend/api/handlers/dashboard_qc_violation_count_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 83,
+          "lastLine": 84
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "path": "backend/api/handlers/demo_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 48,
+          "lastLine": 51
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "path": "backend/api/handlers/job_config_admission_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 57,
+          "lastLine": 58
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "path": "backend/api/handlers/job_dispatch_shared_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 315,
+          "lastLine": 316
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "path": "backend/api/handlers/job_f06_probe_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 29,
+          "lastLine": 32
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "path": "backend/api/handlers/job_result_source_integrity_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 99,
+          "lastLine": 102
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "path": "backend/api/handlers/job_results_confidence_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 49,
+          "lastLine": 50
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "path": "backend/api/handlers/jobs_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 41,
+          "lastLine": 44
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "path": "backend/api/handlers/results_business_day_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 58,
+          "lastLine": 59
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "path": "backend/api/handlers/results_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 130,
+          "lastLine": 131
+        },
+        {
+          "firstLine": 326,
+          "lastLine": 328
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "path": "backend/cli/prune_results_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 67,
+          "lastLine": 68
+        },
+        {
+          "firstLine": 242,
+          "lastLine": 243
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "path": "backend/engine/analyzer_finalizer_logging_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 164,
+          "lastLine": 165
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "path": "backend/engine/analyzer_incremental_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 172,
+          "lastLine": 173
+        },
+        {
+          "firstLine": 522,
+          "lastLine": 524
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "path": "backend/engine/analyzer_modes_acceptance_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 33,
+          "lastLine": 33
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "path": "backend/engine/analyzer_modes_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 153,
+          "lastLine": 153
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "path": "backend/engine/integration_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 139,
+          "lastLine": 140
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "path": "backend/engine/job_run_ownership_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 252,
+          "lastLine": 253
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "path": "backend/engine/reanalyze_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 91,
+          "lastLine": 92
+        }
+      ]
+    },
+    {
+      "id": "C21",
+      "path": "backend/engine/scheduler_startup_hardening_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 67,
+          "lastLine": 72
+        },
+        {
+          "firstLine": 140,
+          "lastLine": 145
+        }
+      ]
+    },
+    {
+      "id": "C22",
+      "path": "backend/engine/snapshot_db_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 137,
+          "lastLine": 138
+        }
+      ]
+    },
+    {
+      "id": "C23",
+      "path": "backend/engine/source_execution_receipt_db_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 98,
+          "lastLine": 101
+        }
+      ]
+    },
+    {
+      "id": "C24",
+      "path": "backend/jobdispatch/dispatch_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 54,
+          "lastLine": 54
+        }
+      ]
+    },
+    {
+      "id": "C25",
+      "path": "backend/mcp/permission_admission_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 282,
+          "lastLine": 282
+        }
+      ]
+    },
+    {
+      "id": "C26",
+      "path": "backend/mcp/trigger_execution_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 850,
+          "lastLine": 850
+        },
+        {
+          "firstLine": 934,
+          "lastLine": 935
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 21,
+          "lastLine": 68
+        },
+        {
+          "firstLine": 69,
+          "lastLine": 80
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 27,
+          "lastLine": 70
+        },
+        {
+          "firstLine": 72,
+          "lastLine": 101
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 7,
+          "lastLine": 32
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "path": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 22
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "path": "docs/work_orders/CCMAI_RUNTIME_082.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 29
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 51
+        }
+      ]
+    },
+    {
+      "id": "D07",
+      "path": "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 80
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "path": "backend/go.mod",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "path": "backend/go.sum",
+      "citationRanges": [
+        {
+          "firstLine": 53,
+          "lastLine": 54
+        },
+        {
+          "firstLine": 87,
+          "lastLine": 88
+        },
+        {
+          "firstLine": 283,
+          "lastLine": 286
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "path": "backend/db/models/tenant.go",
+      "citationRanges": [
+        {
+          "firstLine": 9,
+          "lastLine": 19
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "path": "backend/db/models/job.go",
+      "citationRanges": [
+        {
+          "firstLine": 9,
+          "lastLine": 93
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "path": "backend/db/models/channel.go",
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 36
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "path": "backend/db/models/conversation.go",
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "path": "backend/db/models/message.go",
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 19
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "path": "backend/db/models/setting.go",
+      "citationRanges": [
+        {
+          "firstLine": 19,
+          "lastLine": 45
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "path": "backend/db/models/analysis_snapshot.go",
+      "citationRanges": [
+        {
+          "firstLine": 8,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "path": "backend/db/activity.go",
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "path": "backend/db/mysql.go",
+      "citationRanges": [
+        {
+          "firstLine": 41,
+          "lastLine": 77
+        },
+        {
+          "firstLine": 79,
+          "lastLine": 104
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "path": "backend/pkg/helpers.go",
+      "citationRanges": [
+        {
+          "firstLine": 26,
+          "lastLine": 29
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "path": "backend/engine/job_run_ownership.go",
+      "citationRanges": [
+        {
+          "firstLine": 114,
+          "lastLine": 190
+        },
+        {
+          "firstLine": 213,
+          "lastLine": 306
+        },
+        {
+          "firstLine": 317,
+          "lastLine": 398
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "path": "backend/engine/analyzer.go",
+      "citationRanges": [
+        {
+          "firstLine": 380,
+          "lastLine": 424
+        },
+        {
+          "firstLine": 554,
+          "lastLine": 739
+        },
+        {
+          "firstLine": 805,
+          "lastLine": 826
+        },
+        {
+          "firstLine": 880,
+          "lastLine": 891
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "path": "backend/engine/analyzer_incremental.go",
+      "citationRanges": [
+        {
+          "firstLine": 206,
+          "lastLine": 284
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "path": "backend/notifications/dispatcher.go",
+      "citationRanges": [
+        {
+          "firstLine": 38,
+          "lastLine": 140
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "path": "backend/api/handlers/jobs.go",
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 104
+        },
+        {
+          "firstLine": 150,
+          "lastLine": 188
+        },
+        {
+          "firstLine": 191,
+          "lastLine": 366
+        },
+        {
+          "firstLine": 571,
+          "lastLine": 603
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "path": "backend/api/handlers/demo.go",
+      "citationRanges": [
+        {
+          "firstLine": 47,
+          "lastLine": 130
+        },
+        {
+          "firstLine": 325,
+          "lastLine": 396
+        },
+        {
+          "firstLine": 408,
+          "lastLine": 497
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "path": "backend/api/handlers/channels.go",
+      "citationRanges": [
+        {
+          "firstLine": 248,
+          "lastLine": 399
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "path": "backend/engine/sync.go",
+      "citationRanges": [
+        {
+          "firstLine": 256,
+          "lastLine": 318
+        },
+        {
+          "firstLine": 622,
+          "lastLine": 790
+        },
+        {
+          "firstLine": 906,
+          "lastLine": 950
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "path": "backend/cli/prune_results.go",
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 132
+        },
+        {
+          "firstLine": 216,
+          "lastLine": 263
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "path": "backend/db/sync_run_migration_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 21,
+          "lastLine": 33
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "path": "backend/engine/snapshot_db_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 95,
+          "lastLine": 107
+        },
+        {
+          "firstLine": 137,
+          "lastLine": 138
+        }
+      ]
+    },
+    {
+      "id": "S25",
+      "path": "backend/engine/analyzer_modes_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 29,
+          "lastLine": 42
+        },
+        {
+          "firstLine": 153,
+          "lastLine": 154
+        }
+      ]
+    },
+    {
+      "id": "S26",
+      "path": "backend/cli/prune_results_test.go",
+      "citationRanges": [
+        {
+          "firstLine": 31,
+          "lastLine": 44
+        },
+        {
+          "firstLine": 67,
+          "lastLine": 68
+        },
+        {
+          "firstLine": 242,
+          "lastLine": 243
+        }
+      ]
+    },
+    {
+      "id": "SPEC01",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md",
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 111
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json",
+      "referenceIds": [
+        "D06"
+      ],
+      "gitBlobSha1": "b5e8235364db57c7046423e28cb45d31b87fc774",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "ae21b6e3644944f002199728790e2c66974fbf686e379795e4148e4387de9153",
+      "lineCount": 51,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 51
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/agent_analysis_admission_test.go",
+      "referenceIds": [
+        "C01"
+      ],
+      "gitBlobSha1": "695f04f40afa14d9b9996ede0d7506745a3aae50",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "ae00c235eeefa273374e827b228e71514d8df9363cbb023573ac76838511c6dc",
+      "lineCount": 77,
+      "citationRanges": [
+        {
+          "firstLine": 31,
+          "lastLine": 31
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/agent_run_config_admission_test.go",
+      "referenceIds": [
+        "C02"
+      ],
+      "gitBlobSha1": "6175c1ca95eb3a653abf836be45f0d38b9f46a62",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "be3f1b7c2d46d0df01d15bbcac1d4d2e6a7fa702427a00f983e8fd0eafd036cd",
+      "lineCount": 342,
+      "citationRanges": [
+        {
+          "firstLine": 79,
+          "lastLine": 80
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/channels.go",
+      "referenceIds": [
+        "S20"
+      ],
+      "gitBlobSha1": "cd3b29f251c4f149733acc3504dece9595cae2aa",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "31cddd956d91bb243b7acdfec31406db1ad4424d2a1c2b833f3b5f41fce95b9b",
+      "lineCount": 1110,
+      "citationRanges": [
+        {
+          "firstLine": 248,
+          "lastLine": 399
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/dashboard_qc_violation_count_test.go",
+      "referenceIds": [
+        "C03"
+      ],
+      "gitBlobSha1": "59467ed677c2c30de5afa9fa955423f5a9d16f40",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "eaa9a145bf6908102cb39fc686c318ad770ef2fdbb92476f1e03de765507c83a",
+      "lineCount": 253,
+      "citationRanges": [
+        {
+          "firstLine": 83,
+          "lastLine": 84
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/demo.go",
+      "referenceIds": [
+        "S19"
+      ],
+      "gitBlobSha1": "062baa619cae22ac8dc8f7a913d1364a83a588d9",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "52a822a81bcc9a686923364a3a7a8d881c9df4f8c556d4777e2849903f327e3c",
+      "lineCount": 773,
+      "citationRanges": [
+        {
+          "firstLine": 47,
+          "lastLine": 130
+        },
+        {
+          "firstLine": 325,
+          "lastLine": 396
+        },
+        {
+          "firstLine": 408,
+          "lastLine": 497
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/demo_test.go",
+      "referenceIds": [
+        "C04"
+      ],
+      "gitBlobSha1": "0d2e46f8f8fad7a67ad9ceb8ada2b7a75c758a08",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "982c87ca562391ff5df0ff3175cda056ce3a7c120e13f5dcb997bc976ea18cb8",
+      "lineCount": 408,
+      "citationRanges": [
+        {
+          "firstLine": 48,
+          "lastLine": 51
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/job_config_admission_test.go",
+      "referenceIds": [
+        "C05"
+      ],
+      "gitBlobSha1": "ac577858656b272e68aa52da07bbfc976440c8ff",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "a2fb9bfb6a5602d7ab48dc321c6fce1a9a2c73dff066efdddc3ac6ee1eb81511",
+      "lineCount": 382,
+      "citationRanges": [
+        {
+          "firstLine": 57,
+          "lastLine": 58
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/job_dispatch_shared_test.go",
+      "referenceIds": [
+        "C06"
+      ],
+      "gitBlobSha1": "a6949857cd62c08c9a2d50e063ad8568bdcf2d54",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "e1f5e700ee9b0f96ed6fd60ad994acd0a6f76c13ff9abf0a2fa7d9e0091e7dd7",
+      "lineCount": 639,
+      "citationRanges": [
+        {
+          "firstLine": 315,
+          "lastLine": 316
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/job_f06_probe_test.go",
+      "referenceIds": [
+        "C07"
+      ],
+      "gitBlobSha1": "70400142c5af58cd10c81bd4b4b5a716904d5e8f",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "aae60ddb6f1a7040192d7aaa903a0590730df37726ad771ef96451462f43224a",
+      "lineCount": 54,
+      "citationRanges": [
+        {
+          "firstLine": 29,
+          "lastLine": 32
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/job_result_source_integrity_test.go",
+      "referenceIds": [
+        "C08"
+      ],
+      "gitBlobSha1": "ec5470391944975b04fb82af2fa4ca1a03e5b100",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "df63b9dbd658badaab1366f46c8f48c79ebcc22735f3a01a2d66e34acf86eea2",
+      "lineCount": 397,
+      "citationRanges": [
+        {
+          "firstLine": 99,
+          "lastLine": 102
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/job_results_confidence_test.go",
+      "referenceIds": [
+        "C09"
+      ],
+      "gitBlobSha1": "5830d9795d91c1bfa153e1aa2878bf3b134b9b91",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "89b79e38a78711a961b4ee7b09380be160f4aae4f0caf460e1765d233b2b0f32",
+      "lineCount": 110,
+      "citationRanges": [
+        {
+          "firstLine": 49,
+          "lastLine": 50
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/jobs.go",
+      "referenceIds": [
+        "S18"
+      ],
+      "gitBlobSha1": "071c8c3690523a4ef128d73186f3453d47165a30",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
+      "lineCount": 990,
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 104
+        },
+        {
+          "firstLine": 150,
+          "lastLine": 188
+        },
+        {
+          "firstLine": 191,
+          "lastLine": 366
+        },
+        {
+          "firstLine": 571,
+          "lastLine": 603
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/jobs_test.go",
+      "referenceIds": [
+        "C10"
+      ],
+      "gitBlobSha1": "3604b34243741ca15c914250764d59060bc88c72",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "20d24610e6f396ee4ae971c8a9fe2e6912577ce71987723a42d22fb0caa537b9",
+      "lineCount": 96,
+      "citationRanges": [
+        {
+          "firstLine": 41,
+          "lastLine": 44
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/results_business_day_test.go",
+      "referenceIds": [
+        "C11"
+      ],
+      "gitBlobSha1": "5d925aed4b2690ad537d2eeedde57c76f91d0de4",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "31c18b53f3fc33a7998a97246d736c62cf6efb84a20c785574fb63e7497e84eb",
+      "lineCount": 249,
+      "citationRanges": [
+        {
+          "firstLine": 58,
+          "lastLine": 59
+        }
+      ]
+    },
+    {
+      "path": "backend/api/handlers/results_test.go",
+      "referenceIds": [
+        "C12"
+      ],
+      "gitBlobSha1": "eb3eb6e6b30674b4551cbe298eed0af01c7df366",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "dd12de963439d1b24074def82e4a71c1943d45b525e79cf228137b9a6f0d0540",
+      "lineCount": 899,
+      "citationRanges": [
+        {
+          "firstLine": 130,
+          "lastLine": 131
+        },
+        {
+          "firstLine": 326,
+          "lastLine": 328
+        }
+      ]
+    },
+    {
+      "path": "backend/cli/prune_results.go",
+      "referenceIds": [
+        "S22"
+      ],
+      "gitBlobSha1": "096e28a2714eb8b2ceec90392d9c45f5bb9ab5af",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "ebf9b93c2e9c2ef4472795b64347967993ff979edda655ac70437d85b0c4acd4",
+      "lineCount": 276,
+      "citationRanges": [
+        {
+          "firstLine": 64,
+          "lastLine": 132
+        },
+        {
+          "firstLine": 216,
+          "lastLine": 263
+        }
+      ]
+    },
+    {
+      "path": "backend/cli/prune_results_test.go",
+      "referenceIds": [
+        "C13",
+        "S26"
+      ],
+      "gitBlobSha1": "bb911103ea89e5bb3457465836f23a285f5fffb9",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "c1af33e63d499c6b717c4d104e67d2920eab30b9a50c76c5f763ed10f69e5ef6",
+      "lineCount": 328,
+      "citationRanges": [
+        {
+          "firstLine": 31,
+          "lastLine": 44
+        },
+        {
+          "firstLine": 67,
+          "lastLine": 68
+        },
+        {
+          "firstLine": 67,
+          "lastLine": 68
+        },
+        {
+          "firstLine": 242,
+          "lastLine": 243
+        },
+        {
+          "firstLine": 242,
+          "lastLine": 243
+        }
+      ]
+    },
+    {
+      "path": "backend/db/activity.go",
+      "referenceIds": [
+        "S10"
+      ],
+      "gitBlobSha1": "c5c375768e80db795d8e2c41ec494f6f12a2a0cb",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "03616d47212158f12c21d635248661015d590e2a48632e12dee9893292c7a790",
+      "lineCount": 26,
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ]
+    },
+    {
+      "path": "backend/db/models/analysis_snapshot.go",
+      "referenceIds": [
+        "S09"
+      ],
+      "gitBlobSha1": "8a794aad79dbbb1193f6c1b8104cd14e84244417",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "38a26d477819341cbf0b18148108b68c18cee3eea9f6e07e4f845c62e92c60df",
+      "lineCount": 20,
+      "citationRanges": [
+        {
+          "firstLine": 8,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "path": "backend/db/models/channel.go",
+      "referenceIds": [
+        "S05"
+      ],
+      "gitBlobSha1": "7125930ee33986841e4f0f8122ec97f8d0f7ec98",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "42bc0912d940981b27bd8ab58cfe00b35dcfc5e5fd5565e3e6ef4d3cddb13534",
+      "lineCount": 44,
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 36
+        }
+      ]
+    },
+    {
+      "path": "backend/db/models/conversation.go",
+      "referenceIds": [
+        "S06"
+      ],
+      "gitBlobSha1": "8b6ec9ac2ac8dd4152b3a19cdb159c4e40c82279",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "8b1b27087bc9d6b09f445257b277781a323d0b99c80a8da1371df9df2bc86dbd",
+      "lineCount": 20,
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "path": "backend/db/models/job.go",
+      "referenceIds": [
+        "S04"
+      ],
+      "gitBlobSha1": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
+      "lineCount": 132,
+      "citationRanges": [
+        {
+          "firstLine": 9,
+          "lastLine": 93
+        }
+      ]
+    },
+    {
+      "path": "backend/db/models/message.go",
+      "referenceIds": [
+        "S07"
+      ],
+      "gitBlobSha1": "dd025e6aadded0e28d36072438ec3dc03e302886",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "8369e3bdcbc515d2ffca640d63ca63fb0d0af8ab49e73d353cca09e81b3173ed",
+      "lineCount": 19,
+      "citationRanges": [
+        {
+          "firstLine": 5,
+          "lastLine": 19
+        }
+      ]
+    },
+    {
+      "path": "backend/db/models/setting.go",
+      "referenceIds": [
+        "S08"
+      ],
+      "gitBlobSha1": "becf2495ba519f43ef4459bab7191086d56c5f42",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "a9aa1e7a6d31f9a6f4d4f06f247adc9ad761a00951f293b12f2e0e153cd24122",
+      "lineCount": 81,
+      "citationRanges": [
+        {
+          "firstLine": 19,
+          "lastLine": 45
+        }
+      ]
+    },
+    {
+      "path": "backend/db/models/tenant.go",
+      "referenceIds": [
+        "S03"
+      ],
+      "gitBlobSha1": "b500ebc5d641b5fd84216928a49d1a970c680a1a",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "bf10f6399b71671dfd38162a9b2b391a5fe74afa3cde94aa5f2b079995da46fe",
+      "lineCount": 19,
+      "citationRanges": [
+        {
+          "firstLine": 9,
+          "lastLine": 19
+        }
+      ]
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "referenceIds": [
+        "S11"
+      ],
+      "gitBlobSha1": "e71aa8ee954117651399b954cbfbc94341c47d69",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "7c66d56ddb361266e9a030f7192086048fbf1d075a7905f9a4cbc110b519ab67",
+      "lineCount": 157,
+      "citationRanges": [
+        {
+          "firstLine": 41,
+          "lastLine": 77
+        },
+        {
+          "firstLine": 79,
+          "lastLine": 104
+        }
+      ]
+    },
+    {
+      "path": "backend/db/sync_run_migration_test.go",
+      "referenceIds": [
+        "S23"
+      ],
+      "gitBlobSha1": "9744667dfc41e5c11aca6c2dfff38a89d75ec75a",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "7a3327135b10209b952a151cef3c3c24d3f060108a23b503e119b5de309b329e",
+      "lineCount": 133,
+      "citationRanges": [
+        {
+          "firstLine": 21,
+          "lastLine": 33
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/analyzer.go",
+      "referenceIds": [
+        "S14"
+      ],
+      "gitBlobSha1": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
+      "lineCount": 962,
+      "citationRanges": [
+        {
+          "firstLine": 380,
+          "lastLine": 424
+        },
+        {
+          "firstLine": 554,
+          "lastLine": 739
+        },
+        {
+          "firstLine": 805,
+          "lastLine": 826
+        },
+        {
+          "firstLine": 880,
+          "lastLine": 891
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/analyzer_finalizer_logging_test.go",
+      "referenceIds": [
+        "C14"
+      ],
+      "gitBlobSha1": "5c68e4a05cccc3e78d1f9668df2cc57a6a54529d",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "06ec2c8d15d6199a679f9daaf0835db1baa7a8a63a35b79df5e9465d90f7c449",
+      "lineCount": 1109,
+      "citationRanges": [
+        {
+          "firstLine": 164,
+          "lastLine": 165
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/analyzer_incremental.go",
+      "referenceIds": [
+        "S15"
+      ],
+      "gitBlobSha1": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
+      "lineCount": 284,
+      "citationRanges": [
+        {
+          "firstLine": 206,
+          "lastLine": 284
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/analyzer_incremental_test.go",
+      "referenceIds": [
+        "C15"
+      ],
+      "gitBlobSha1": "0bb97ff745cb7d886592a93ae2e976d8414d65f2",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "10f3bff51a150a250faa675f00091a9e5c67dd5cc79ab07595011548032164af",
+      "lineCount": 746,
+      "citationRanges": [
+        {
+          "firstLine": 172,
+          "lastLine": 173
+        },
+        {
+          "firstLine": 522,
+          "lastLine": 524
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/analyzer_modes_acceptance_test.go",
+      "referenceIds": [
+        "C16"
+      ],
+      "gitBlobSha1": "6feb9198a974a94b616a52d9c79ec8bf4528ba73",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "b04ec2adff5e1655cba6099e903c45c2a874d206a039632cb48122050a610428",
+      "lineCount": 419,
+      "citationRanges": [
+        {
+          "firstLine": 33,
+          "lastLine": 33
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/analyzer_modes_test.go",
+      "referenceIds": [
+        "C17",
+        "S25"
+      ],
+      "gitBlobSha1": "0a64c6e01b5894e8d42c2901e80f893f52614771",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "a242380b25069de57076ceebc9fba730a1bce7d7cbb6d850de39c17cc60f0d44",
+      "lineCount": 475,
+      "citationRanges": [
+        {
+          "firstLine": 29,
+          "lastLine": 42
+        },
+        {
+          "firstLine": 153,
+          "lastLine": 153
+        },
+        {
+          "firstLine": 153,
+          "lastLine": 154
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/integration_test.go",
+      "referenceIds": [
+        "C18"
+      ],
+      "gitBlobSha1": "0a64b577b757f6cd92daa5da54af428545c43c5c",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "ea33508131227884ee7f90c7cf3683fb2e255b35573a914f8ec5c1b473490cc3",
+      "lineCount": 225,
+      "citationRanges": [
+        {
+          "firstLine": 139,
+          "lastLine": 140
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "referenceIds": [
+        "S13"
+      ],
+      "gitBlobSha1": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "lineCount": 398,
+      "citationRanges": [
+        {
+          "firstLine": 114,
+          "lastLine": 190
+        },
+        {
+          "firstLine": 213,
+          "lastLine": 306
+        },
+        {
+          "firstLine": 317,
+          "lastLine": 398
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/job_run_ownership_test.go",
+      "referenceIds": [
+        "C19"
+      ],
+      "gitBlobSha1": "70be193d256560b45b2b324609d8f2afe197ba59",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "f8456b02d831b285626be1c8469075b2bbdcbf1d97ab9bb3395047278e168b8e",
+      "lineCount": 921,
+      "citationRanges": [
+        {
+          "firstLine": 252,
+          "lastLine": 253
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/reanalyze_test.go",
+      "referenceIds": [
+        "C20"
+      ],
+      "gitBlobSha1": "9c1e265a9240f29e8418cee82095566a697d7524",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "863efba697a2f2193476076aa2607f73d24732c8942a4a061fb35206ad92155c",
+      "lineCount": 269,
+      "citationRanges": [
+        {
+          "firstLine": 91,
+          "lastLine": 92
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/scheduler_startup_hardening_test.go",
+      "referenceIds": [
+        "C21"
+      ],
+      "gitBlobSha1": "f06ba0b27a279921f7b6344cfd958fa5865e8cc2",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "8e64201beecdb670660199450c53c65997bc917eaaa7457840a55ad9d93de9f7",
+      "lineCount": 585,
+      "citationRanges": [
+        {
+          "firstLine": 67,
+          "lastLine": 72
+        },
+        {
+          "firstLine": 140,
+          "lastLine": 145
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/snapshot_db_test.go",
+      "referenceIds": [
+        "C22",
+        "S24"
+      ],
+      "gitBlobSha1": "2e7b7db83fed860b7c75c02a9d48ce068900398f",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "99d774542f6a3e504e0fa91ad38e7bda338e55212d889a31a868b2983e4dcfab",
+      "lineCount": 505,
+      "citationRanges": [
+        {
+          "firstLine": 95,
+          "lastLine": 107
+        },
+        {
+          "firstLine": 137,
+          "lastLine": 138
+        },
+        {
+          "firstLine": 137,
+          "lastLine": 138
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/source_execution_receipt_db_test.go",
+      "referenceIds": [
+        "C23"
+      ],
+      "gitBlobSha1": "5b3bc640a70baa4a2165bb00af562997c2623172",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "049eb8b32dd7f78c6712c255d493e0c45037e55d9bca170dfe81a17eabfcc010",
+      "lineCount": 686,
+      "citationRanges": [
+        {
+          "firstLine": 98,
+          "lastLine": 101
+        }
+      ]
+    },
+    {
+      "path": "backend/engine/sync.go",
+      "referenceIds": [
+        "S21"
+      ],
+      "gitBlobSha1": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "c841ea0865f1f4b83853409a0e8939c87f99d5009c42b6729cd01beefaaaced0",
+      "lineCount": 1221,
+      "citationRanges": [
+        {
+          "firstLine": 256,
+          "lastLine": 318
+        },
+        {
+          "firstLine": 622,
+          "lastLine": 790
+        },
+        {
+          "firstLine": 906,
+          "lastLine": 950
+        }
+      ]
+    },
+    {
+      "path": "backend/go.mod",
+      "referenceIds": [
+        "S01"
+      ],
+      "gitBlobSha1": "2147c98e2c1de836a0fe46615534ebd702ca9847",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "lineCount": 88,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 20
+        }
+      ]
+    },
+    {
+      "path": "backend/go.sum",
+      "referenceIds": [
+        "S02"
+      ],
+      "gitBlobSha1": "6c1169fe7b31cc02c2f95cf77e681572498e3581",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "lineCount": 288,
+      "citationRanges": [
+        {
+          "firstLine": 53,
+          "lastLine": 54
+        },
+        {
+          "firstLine": 87,
+          "lastLine": 88
+        },
+        {
+          "firstLine": 283,
+          "lastLine": 286
+        }
+      ]
+    },
+    {
+      "path": "backend/jobdispatch/dispatch_test.go",
+      "referenceIds": [
+        "C24"
+      ],
+      "gitBlobSha1": "d2a5d6fedeab4bd6f20188b0b8c11b8126201ab6",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "4be1326d5070fb6b2c0f54dbe28259188216f0a6c1afea1d29b6122d8522f446",
+      "lineCount": 435,
+      "citationRanges": [
+        {
+          "firstLine": 54,
+          "lastLine": 54
+        }
+      ]
+    },
+    {
+      "path": "backend/mcp/permission_admission_test.go",
+      "referenceIds": [
+        "C25"
+      ],
+      "gitBlobSha1": "9ffd5166a308c37c37c938a768f6bbe92c0515dd",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "69e8b879f071148bb5ceafd7e1c76f75e7510f761285afa13a808adddf306992",
+      "lineCount": 857,
+      "citationRanges": [
+        {
+          "firstLine": 282,
+          "lastLine": 282
+        }
+      ]
+    },
+    {
+      "path": "backend/mcp/trigger_execution_test.go",
+      "referenceIds": [
+        "C26"
+      ],
+      "gitBlobSha1": "0d5dbf16a07ce4c7830784bd84fdd497780d258b",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "6773e3c22fe4eb0c4646b949f76e8d32cacbafe593881bcdc5f1ec701b1dddb6",
+      "lineCount": 1062,
+      "citationRanges": [
+        {
+          "firstLine": 850,
+          "lastLine": 850
+        },
+        {
+          "firstLine": 934,
+          "lastLine": 935
+        }
+      ]
+    },
+    {
+      "path": "backend/notifications/dispatcher.go",
+      "referenceIds": [
+        "S17"
+      ],
+      "gitBlobSha1": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008",
+      "lineCount": 266,
+      "citationRanges": [
+        {
+          "firstLine": 38,
+          "lastLine": 140
+        }
+      ]
+    },
+    {
+      "path": "backend/pkg/helpers.go",
+      "referenceIds": [
+        "S12"
+      ],
+      "gitBlobSha1": "1ddabf8455e6c9c6f5a76b1e1b5c8b1505ade6b8",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "809fddae6bb05ed811ccc279b13406af8709bd1c08673ba7fd1916ef6091e9de",
+      "lineCount": 39,
+      "citationRanges": [
+        {
+          "firstLine": 26,
+          "lastLine": 29
+        }
+      ]
+    },
+    {
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+      "referenceIds": [
+        "D03"
+      ],
+      "gitBlobSha1": "badffd67c6bad23556a1b0379175beb53081b8ae",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "b7526f30700b8c3290d03697301e3821b0fc3e3bc61aba65f599a85730e2d0b5",
+      "lineCount": 34,
+      "citationRanges": [
+        {
+          "firstLine": 7,
+          "lastLine": 32
+        }
+      ]
+    },
+    {
+      "path": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+      "referenceIds": [
+        "D04"
+      ],
+      "gitBlobSha1": "efa635add8ef79e7d1ab5ec2fe58cae723903e8f",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "295cac7d3e7dea44d5170c0101ea6a923cf2e981b40b074c3172470985f96653",
+      "lineCount": 14,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 22
+        }
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json",
+      "referenceIds": [
+        "D07"
+      ],
+      "gitBlobSha1": "010963e5b0d41ed541244672319dc74665a73592",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "9ec4d2262e9ba6cf3d5f65892b310b4f80a7e81eb4caf1460aa65cc5017817d4",
+      "lineCount": 933,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 80
+        }
+      ]
+    },
+    {
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md",
+      "referenceIds": [
+        "SPEC01"
+      ],
+      "gitBlobSha1": "c69593359cdec0d5fe2fe2e0f8cd3e4c37f1a729",
+      "gitBlobStatus": "EXPECTED_FILTERED_CONTENT_BLOB_NOT_YET_STORED",
+      "physicalSha256": "454e046d435f2add9746fefb05ae415147aca19995d69b7bb0fc5f2591f33bea",
+      "lineCount": 111,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 111
+        }
+      ]
+    },
+    {
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+      "referenceIds": [
+        "D02"
+      ],
+      "gitBlobSha1": "8ca218523eacb058472f3ebbf8a1fdcdfb9c188a",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "5dc7c27a24b6378fa6e52202700979f6fbfd683797a8bbf8e72fbca73ca9bfba",
+      "lineCount": 110,
+      "citationRanges": [
+        {
+          "firstLine": 27,
+          "lastLine": 70
+        },
+        {
+          "firstLine": 72,
+          "lastLine": 101
+        }
+      ]
+    },
+    {
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "referenceIds": [
+        "D01"
+      ],
+      "gitBlobSha1": "52e1c3b00a90c1758534e074a2efb46fcef13e37",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "7c015a2d8264a79326d0633ed595e0b7ccfa16f9d7fe0e66d3b8805bcee914ca",
+      "lineCount": 174,
+      "citationRanges": [
+        {
+          "firstLine": 21,
+          "lastLine": 68
+        },
+        {
+          "firstLine": 69,
+          "lastLine": 80
+        }
+      ]
+    },
+    {
+      "path": "docs/work_orders/CCMAI_RUNTIME_082.md",
+      "referenceIds": [
+        "D05"
+      ],
+      "gitBlobSha1": "5f9f7c1577c70ac0e673881df6f7f2426c59fe5d",
+      "gitBlobStatus": "STORED_HEAD_BLOB",
+      "physicalSha256": "2bbc9443d7463acf1c0369300876a1a2516a9689737f772e6778102295e6576f",
+      "lineCount": 25,
+      "citationRanges": [
+        {
+          "firstLine": 1,
+          "lastLine": 29
+        }
+      ]
+    }
+  ],
+  "creationCensus": [
+    {
+      "kind": "production_http_create",
+      "path": "backend/api/handlers/jobs.go",
+      "referenceIds": [
+        "S18"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 104
+        }
+      ],
+      "jobIdOrigin": "server-generated pkg.NewUUID UUIDv4; selected contract rejects caller ID",
+      "generationInitialization": "source has no fence fields; intended gen0 and null active pair"
+    },
+    {
+      "kind": "production_demo_import",
+      "path": "backend/api/handlers/demo.go",
+      "referenceIds": [
+        "S19"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 62,
+          "lastLine": 73
+        },
+        {
+          "firstLine": 101,
+          "lastLine": 130
+        },
+        {
+          "firstLine": 325,
+          "lastLine": 329
+        },
+        {
+          "firstLine": 360,
+          "lastLine": 373
+        }
+      ],
+      "jobIdOrigin": "server-generated pkg.NewUUID UUIDv4 for both Jobs",
+      "generationInitialization": "source has no fence fields; intended Jobs gen0/null pair and imported terminal JobRuns gen0"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/agent_analysis_admission_test.go",
+      "referenceIds": [
+        "C01"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 31,
+          "lastLine": 31
+        }
+      ],
+      "jobIdOrigin": "fixture-supplied helper value",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/agent_run_config_admission_test.go",
+      "referenceIds": [
+        "C02"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 79,
+          "lastLine": 80
+        }
+      ],
+      "jobIdOrigin": "fixture-supplied helper value",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/dashboard_qc_violation_count_test.go",
+      "referenceIds": [
+        "C03"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 83,
+          "lastLine": 84
+        }
+      ],
+      "jobIdOrigin": "fixture-supplied helper value",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/demo_test.go",
+      "referenceIds": [
+        "C04"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 48,
+          "lastLine": 51
+        }
+      ],
+      "jobIdOrigin": "fixture-provided identifiers",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/job_config_admission_test.go",
+      "referenceIds": [
+        "C05"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 57,
+          "lastLine": 58
+        }
+      ],
+      "jobIdOrigin": "fixture-supplied helper value",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/job_dispatch_shared_test.go",
+      "referenceIds": [
+        "C06"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 315,
+          "lastLine": 316
+        }
+      ],
+      "jobIdOrigin": "fixture-supplied helper value",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/job_f06_probe_test.go",
+      "referenceIds": [
+        "C07"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 29,
+          "lastLine": 32
+        }
+      ],
+      "jobIdOrigin": "test-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/job_result_source_integrity_test.go",
+      "referenceIds": [
+        "C08"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 99,
+          "lastLine": 102
+        }
+      ],
+      "jobIdOrigin": "fixture struct identifiers",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/job_results_confidence_test.go",
+      "referenceIds": [
+        "C09"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 49,
+          "lastLine": 50
+        }
+      ],
+      "jobIdOrigin": "test-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/jobs_test.go",
+      "referenceIds": [
+        "C10"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 41,
+          "lastLine": 44
+        }
+      ],
+      "jobIdOrigin": "test-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/results_business_day_test.go",
+      "referenceIds": [
+        "C11"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 58,
+          "lastLine": 59
+        }
+      ],
+      "jobIdOrigin": "fixture-generated identifiers",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/api/handlers/results_test.go",
+      "referenceIds": [
+        "C12"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 130,
+          "lastLine": 131
+        },
+        {
+          "firstLine": 326,
+          "lastLine": 328
+        }
+      ],
+      "jobIdOrigin": "fixture-generated identifiers",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/cli/prune_results_test.go",
+      "referenceIds": [
+        "C13"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 67,
+          "lastLine": 68
+        },
+        {
+          "firstLine": 242,
+          "lastLine": 243
+        }
+      ],
+      "jobIdOrigin": "fixture-generated or supplied identifiers",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/analyzer_finalizer_logging_test.go",
+      "referenceIds": [
+        "C14"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 164,
+          "lastLine": 165
+        }
+      ],
+      "jobIdOrigin": "fixture-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/analyzer_incremental_test.go",
+      "referenceIds": [
+        "C15"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 172,
+          "lastLine": 173
+        },
+        {
+          "firstLine": 522,
+          "lastLine": 524
+        }
+      ],
+      "jobIdOrigin": "fixture-generated identifiers",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/analyzer_modes_acceptance_test.go",
+      "referenceIds": [
+        "C16"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 33,
+          "lastLine": 33
+        }
+      ],
+      "jobIdOrigin": "new test-supplied ID; fields copied by INSERT-SELECT",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/analyzer_modes_test.go",
+      "referenceIds": [
+        "C17"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 153,
+          "lastLine": 153
+        }
+      ],
+      "jobIdOrigin": "new test-supplied ID; fields copied by INSERT-SELECT",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/integration_test.go",
+      "referenceIds": [
+        "C18"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 139,
+          "lastLine": 140
+        }
+      ],
+      "jobIdOrigin": "test-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/job_run_ownership_test.go",
+      "referenceIds": [
+        "C19"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 252,
+          "lastLine": 253
+        }
+      ],
+      "jobIdOrigin": "fixture-supplied helper value",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/reanalyze_test.go",
+      "referenceIds": [
+        "C20"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 91,
+          "lastLine": 92
+        }
+      ],
+      "jobIdOrigin": "fixture-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/scheduler_startup_hardening_test.go",
+      "referenceIds": [
+        "C21"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 67,
+          "lastLine": 72
+        },
+        {
+          "firstLine": 140,
+          "lastLine": 145
+        }
+      ],
+      "jobIdOrigin": "synthetic/helper-generated fixture identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/snapshot_db_test.go",
+      "referenceIds": [
+        "C22"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 137,
+          "lastLine": 138
+        }
+      ],
+      "jobIdOrigin": "fixture-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/engine/source_execution_receipt_db_test.go",
+      "referenceIds": [
+        "C23"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 98,
+          "lastLine": 101
+        }
+      ],
+      "jobIdOrigin": "fixture-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/jobdispatch/dispatch_test.go",
+      "referenceIds": [
+        "C24"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 54,
+          "lastLine": 54
+        }
+      ],
+      "jobIdOrigin": "test-generated identifier",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/mcp/permission_admission_test.go",
+      "referenceIds": [
+        "C25"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 282,
+          "lastLine": 282
+        }
+      ],
+      "jobIdOrigin": "deterministic synthetic ID job-<tenant>",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    },
+    {
+      "kind": "tracked_test_fixture",
+      "path": "backend/mcp/trigger_execution_test.go",
+      "referenceIds": [
+        "C26"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 850,
+          "lastLine": 850
+        },
+        {
+          "firstLine": 934,
+          "lastLine": 935
+        }
+      ],
+      "jobIdOrigin": "fixture helper and deterministic synthetic IDs",
+      "generationInitialization": "absent in pre-fence fixture; future idle/terminal rows use gen0/null grant and running fixtures seed matching positive generation/grant"
+    }
+  ],
+  "searchMethodAndLimitations": {
+    "scope": "tracked backend Go sources; bounded search for INSERT INTO jobs, INSERT-SELECT from jobs, and Job model create forms",
+    "positiveTestFiles": 26,
+    "limitations": "JobResult-only inserts excluded. Dynamic SQL, external/manual SQL, imports, restore tooling, untracked/deployed writers, and universal UUID non-reuse are not established."
+  },
+  "fixtureReadiness": {
+    "status": "UNAVAILABLE_IN_TRACKED_SOURCE",
+    "missingFact": "No versioned digest-pinned disposable MySQL fixture with owner-controlled isolated schema create/drop authority was identified in bounded source intake.",
+    "futureFactOwner": "separately authorized R2 environment/fixture owner",
+    "requiredReceipt": "Exact MySQL server version and image digest, isolated schema create/drop principal and unique ownership, credential/network scope, effective isolation/DDL capture, cleanup receipt.",
+    "interimRule": "No fixture-based readiness claim or test execution; tenant admission remains BLOCKED pending separate evidence."
+  },
+  "futureTestPlan": {
+    "status": "PROPOSED_NOT_EXECUTABLE",
+    "newFiles": [
+      {
+        "path": "backend/db/job_run_fence_migration_test.go",
+        "tests": [
+          "TestJobRunFenceMigrationDDL",
+          "TestJobRunFenceRestoreBarrier"
+        ]
+      },
+      {
+        "path": "backend/engine/job_run_fence_database_test.go",
+        "tests": [
+          "TestJobRunFenceAdmission",
+          "TestJobRunFenceWriterAndNotification",
+          "TestJobRunFenceRetirementOutcomes"
+        ]
+      },
+      {
+        "path": "backend/api/handlers/job_run_fence_destructive_test.go",
+        "tests": [
+          "TestJobRunFenceJobDestructive",
+          "TestJobRunFenceDemoImportReset",
+          "TestJobRunFenceChannelSyncDelete"
+        ]
+      },
+      {
+        "path": "backend/cli/job_run_fence_prune_test.go",
+        "tests": [
+          "TestJobRunFencePruneBatches"
+        ]
+      }
+    ],
+    "workingDirectory": "backend",
+    "buildCommand": "go build ./...",
+    "testCommand": "go test -json -count=1 -timeout=20m ./db ./engine ./api/handlers ./cli -run '^(TestJobRunFenceMigrationDDL|TestJobRunFenceRestoreBarrier|TestJobRunFenceAdmission|TestJobRunFenceWriterAndNotification|TestJobRunFenceRetirementOutcomes|TestJobRunFenceJobDestructive|TestJobRunFenceDemoImportReset|TestJobRunFenceChannelSyncDelete|TestJobRunFencePruneBatches)$'",
+    "perActorCeiling": "one build and one targeted test per worker and independent R2 reviewer; four Go invocations total, zero retries",
+    "stopRules": [
+      "FAIL",
+      "SKIP",
+      "timeout",
+      "empty/wrong package or test selection",
+      "uncertain schema ownership or cleanup"
+    ],
+    "requiredEvidence": [
+      "raw go test JSON",
+      "commands and exits",
+      "source/build identities",
+      "server/isolation/DDL receipt",
+      "schema owner and cleanup receipt"
+    ],
+    "matrix": [
+      "restore barrier and generation overflow",
+      "stale/multi-coordinator and independent Job",
+      "every run writer and notification path",
+      "owner/cancel/publication races",
+      "terminal/retirement outcome loss",
+      "duplicate/config/send/log/marker ambiguity",
+      "destructive/demo/sync/channel/prune paths",
+      "legacy rows and implicit FK",
+      "multirow/gap/phantom/deadlock behavior",
+      "delayed remote effect limits"
+    ]
+  }
+}
