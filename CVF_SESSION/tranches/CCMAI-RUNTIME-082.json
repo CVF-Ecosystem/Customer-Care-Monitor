@@ -48,14 +48,15 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 after R081 returned-review publicationb1d7f11 authorizes separately bounded source-only contract resolution F1..F4, Luna max worker/root independent reviewer. New authority, not automatic R081 repair; R081 CHANGES_REQUIRED/FREEZE_OPEN and old artifacts immutable. Documentary R1 no source/security/schema/runtime/external effects; later implementation remains R2+ separately bounded.",
   "claimScope": "Selected intended incarnation/restore, durable notification-attempt, complete operation lock/retirement, source census and finite future fixture/test contract. Documentary review/closure only, no deployed/DB/runtime/CVF governance proof.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "05cef8c327c5899b38d3d4ff400d0ac27711b23a",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_082.md",
-  "buildCommit": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
+  "buildCommit": "144f68f1c0584d68c7101692478e38a73705adb2",
   "reviewEvidence": [
     "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
-    "docs/reviews/probes/r082_independent_initial_identity_audit_2026-10-11.json"
+    "docs/reviews/probes/r082_independent_initial_identity_audit_2026-10-11.json",
+    "docs/reviews/probes/r082_independent_final_audit_2026-10-11.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -65,7 +66,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -74,7 +76,7 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": "Fresh REVIEW tuple386d910 rehydrated; Luna max REPAIR_WORKER accepts exact R1/R2 findings, retains root M1/M2/M3 and original failed worker check, no edits before release. Root releases the seed-authorized sole same-scope documentary repair1; objective/paths/risk/external-effect/commit-owner unchanged. One static check then handback/root independent finding recheck; no automatic retries or new research campaign.",
+  "workerAcknowledgment": "Fresh BUILD canonical tuple and repaired144f68f rehydrated; root transitions from minor documentary REPAIR_WORKER to independent REVIEWER for final original R1/R2 recheck only. Worker BUILD ACK preceded repair, exact2 packet4b96289 and both worker static FAIL retained; root source-factual presentation corrections separately attributed. No selected design/phase logic authored by root, no additional campaign.",
   "workerDocumentRepairRounds": 1,
   "initialFindingGroups": [
     "R1",

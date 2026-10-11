@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
 
 ## Current R082
 
-CCMAI-RUNTIME-082 BUILD directed documentary repair1 exact2 for consolidated R1/R2 destructive-file graph and writer-phase predicates; one repair static check then independent finding recheck, no additional campaign/native/DB/provider/network/push. R081 returned/FREEZE_OPEN, source not dispatched/deployed UNKNOWN/accounts parked.
+CCMAI-RUNTIME-082 REVIEW final R1/R2 finding recheck at repaired documentary144f68f; root records scoped disposition before FREEZE. One repair consumed, no further campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN, implementation OPEN/deployed UNKNOWN/accounts parked.
 
 ## Historical R081 (returned, FREEZE OPEN)
 

@@ -6793,6 +6793,13 @@
       "path": "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r082_independent_final_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R082 final original-finding recheck identity/protection receipt; worker failures retained, no runtime proof."
     }
   ]
 }

@@ -1,0 +1,118 @@
+{
+  "auditHead": "144f68f1c0584d68c7101692478e38a73705adb2",
+  "identityFailures": [],
+  "linkFailures": [],
+  "sourceScope": "source/documentary only; not runtime or governance proof",
+  "unresolvedReferences": [],
+  "referencePathBinding": true,
+  "unboundCitedPaths": [],
+  "identityInputCount": 56,
+  "referenceDefinitionCount": 60,
+  "identityRecordSha256": "3ee883df5dc2fcc5dda7d55ae167114e4af901ea8d436930768180aa13b38cb0",
+  "protectedprotectedSource": {
+    "count": 371,
+    "changed": []
+  },
+  "protectedprotectedHistory": {
+    "count": 276,
+    "changed": []
+  },
+  "protectedprotectedAcceptedInputs": {
+    "count": 1184,
+    "changed": []
+  },
+  "historicalQualityArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true,
+    "durableFenceDesignSamples": true,
+    "databaseIntegrationSamples": true
+  },
+  "seedImmutableAtFirstBaseHead": true,
+  "backendDiff": [],
+  "sourceComparisonChecks": [
+    {
+      "label": "R080 accepted source comparison preserved",
+      "reported": [],
+      "actual": [],
+      "match": true
+    },
+    {
+      "label": "R081 BUILD source comparison preserved",
+      "reported": [],
+      "actual": [],
+      "match": true
+    },
+    {
+      "label": "R082 returned-publication to BUILD comparison",
+      "reported": [],
+      "actual": [],
+      "match": true
+    }
+  ],
+  "workerDocLineCount": 136,
+  "newAppNativeInvocations": 0,
+  "acceptedDocumentCommit": "144f68f1c0584d68c7101692478e38a73705adb2",
+  "workerRepairPacket": "4b9628977d32cd35bd6c47e129cc641e270e005a",
+  "originalPacket": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
+  "workerValidationHistory": [
+    {
+      "check": "single bundled worker static artifact identity check",
+      "attempt": 1,
+      "result": "FAIL",
+      "stage": "input citation-range preflight",
+      "finding": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json was assigned citation range 1-53, while the committed authority seed has 51 lines.",
+      "correction": "Final identity cites lines 1-51.",
+      "validationDisposition": "No validation PASS inferred; worker validation was not rerun. Root independent validation pending."
+    },
+    {
+      "check": "single bundled R082 repair1 worker static identity check",
+      "attempt": 1,
+      "result": "FAIL",
+      "stage": "single post-repair exact2 identity, range, and source-comparison check",
+      "checks": {
+        "release_HEAD_matches": true,
+        "exact_two_changed_paths": false,
+        "no_staged_paths": true,
+        "no_untracked_paths": true,
+        "backend_diff_empty": true,
+        "input_count_56": true,
+        "reference_definitions_60": false,
+        "reference_and_range_reciprocity": true,
+        "spec_physical_identity": true,
+        "spec_filtered_git_identity": true,
+        "spec_under_240_lines": true,
+        "work_order_HEAD_blob_identity": true,
+        "work_order_physical_identity": true,
+        "seed_range_1_51": true,
+        "future_commands_project_root": true,
+        "runtime_stays_NOT_RUN": true,
+        "review_stays_pending": true
+      },
+      "changedPaths": [
+        "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md"
+      ],
+      "backendPathsChanged": [],
+      "runtimeEvidence": "NOT_RUN",
+      "validationDisposition": "Static identity result only; independent reviewer decides R1/R2 acceptance."
+    }
+  ],
+  "mutableWorkOrderCapture": "Committed BUILD e554d7552315f3dda1d12312b8f7bc367e4fc4a5; subsequent REVIEW/FREEZE metadata expected. Verify captured blob, not current phase-byte equality.",
+  "rootHarnessOverhead": [
+    "Initial whole-range equality rejected a valid SPEC01 subrange; adapted to numeric containment, independent PASS",
+    "PowerShell escaping of TEMP checker edit failed before execution; repaired with literal here-string; no artifact effect",
+    "Root guessed absent ai_usage_log.go/job_run.go/job_result.go; rg resolved setting.go/job.go; source facts independently confirmed"
+  ],
+  "goProviderDatabaseInvocations": 0,
+  "reviewScope": "Final original R1/R2 finding recheck only; documentary contract/census/nonbinding test plan, not runtime or CVF governance",
+  "artifactBlobs": {
+    "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md": "6df4d3ac1a3386da8e33df65f6cde0b36997c6ee",
+    "docs/reviews/probes/r082_fence_blocker_resolution_identity_2026-10-11.json": "677945402366cba5b00604d8caef5ac419835056"
+  },
+  "semanticFindingRecheck": {
+    "R1": "PASS intended tenant-wide grants/running/tails before channel children, affected-parent/Conversation prune, immutable gated file-intent lifecycle and no replay",
+    "R2": "PASS intended parent T vs supported child columns, chosen future activity/attempt fields, phases, sealed complete destinations, missing tails fail closed, retirement exact compare/cardinality/readback and ambiguity"
+  }
+}

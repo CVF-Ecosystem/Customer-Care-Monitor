@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r082_worker documentary REPAIR_WORKER
-- Next allowed move: CCMAI-RUNTIME-082 BUILD directed documentary repair1 exact2 for consolidated R1/R2 destructive-file graph and writer-phase predicates; one repair static check then independent finding recheck, no additional campaign/native/DB/provider/network/push. R081 returned/FREEZE_OPEN, source not dispatched/deployed UNKNOWN/accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete
+- Next allowed move: CCMAI-RUNTIME-082 REVIEW final R1/R2 finding recheck at repaired documentary144f68f; root records scoped disposition before FREEZE. One repair consumed, no further campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN, implementation OPEN/deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -34,3 +34,7 @@ Fresh REVIEW tuple386d910 rehydrated; Luna max REPAIR_WORKER accepts exact R1/R2
 ## Before-edit minor documentary role acknowledgment
 
 Fresh canonical BUILD tuple e554 release / repaired packet4b962897 rehydrated; root metadata REPAIR_WORKER records before-edit acknowledgment for source-factual presentation only: narrative comparison HEAD e554, distinguish existing AIUsageLog.JobID from absent generation, and SPEC01 full current range. Values fixed from committed source/identity, no selected control/phase/acceptance change or substantive worker design drafted. Worker fresh BUILD ACK preceded edits; first and repair static FAIL retained. Independent reviewer root resumes after these minor changes.
+
+## Before-edit role acknowledgment
+
+Fresh BUILD canonical tuple and repaired144f68f rehydrated; root transitions from minor documentary REPAIR_WORKER to independent REVIEWER for final original R1/R2 recheck only. Worker BUILD ACK preceded repair, exact2 packet4b96289 and both worker static FAIL retained; root source-factual presentation corrections separately attributed. No selected design/phase logic authored by root, no additional campaign.
