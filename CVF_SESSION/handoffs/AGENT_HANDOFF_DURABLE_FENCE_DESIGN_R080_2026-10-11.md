@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-080 CHANGES_REQUIRED first packet315b48f; consolidated F1 commit ambiguity/F2 mutex protocol/F3 bounded draft to Luna max repair1 after fresh ACK and committed BUILD release; documentary exact3 only, implementation/recovery OPEN, deployed UNKNOWN/accounts parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r080_worker SPEC_AUTHOR / documentary REPAIR_WORKER
+- Next allowed move: CCMAI-RUNTIME-080 BUILD documentary repair1 F1 commit outcome/F2 mutex cancellation/F3 bounded draft; exact3 same seed, no implementation/runtime/provider/DB/network/push, recovery OPEN/deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -28,3 +28,7 @@ SESSION_SYNC_STEWARD root audited current nested/top-level routing. Activation r
 Root fresh canonical REVIEW rehydration at315b48f; independent reviewer evaluates DF01..10, records consolidated F1/F2/F3 before first repair and directly attributes M1/M2/M3 mechanical corrections; same R1 seed/effect budget0.
 
 Root precommit metadata error retained: first review publication preflight FAIL5/7 because root used unsupported catalog family review and omitted REVIEW_PENDING in tranche history. Corrected to continuity and explicit BUILD → REVIEW_PENDING → CHANGES_REQUIRED before commit. Not a worker defect or runtime check.
+
+## Before-edit role acknowledgment
+
+Fresh worker REVIEW/CHANGES_REQUIRED rehydration ACK atc5f0a53 received before edits; root same-scope repair1 release after committed first consolidated review. Root fresh transition acknowledgment, unchanged R1/exact3/native0. Doctor renewed PASS WITH NOTE25/1, same core public/cachemain clean. Root second literalglob rg error corrected by explicit analyzer file paths; root overhead only.

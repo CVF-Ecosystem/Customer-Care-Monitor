@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-080",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-080 CHANGES_REQUIRED first packet315b48f; consolidated F1 commit ambiguity/F2 mutex protocol/F3 bounded draft to Luna max repair1 after fresh ACK and committed BUILD release; documentary exact3 only, implementation/recovery OPEN, deployed UNKNOWN/accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-080 BUILD documentary repair1 F1 commit outcome/F2 mutex cancellation/F3 bounded draft; exact3 same seed, no implementation/runtime/provider/DB/network/push, recovery OPEN/deployed UNKNOWN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r080_worker SPEC_AUTHOR / documentary REPAIR_WORKER",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,7 +34,7 @@
   },
   "candidatePlanning": {
     "id": "R080",
-    "status": "CHANGES_REQUIRED",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_080.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
