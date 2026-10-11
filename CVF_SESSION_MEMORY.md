@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-078", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-078", "parked": true} -->
 
 ## Current R078
 
-CCMAI-RUNTIME-078 REVIEW_PASS exact b7c826a synthetic startup contract; worker4/root4 Go exhausted, M01 named detector and restored positives accepted, cleanup complete. CLOSER next local scoped FREEZE after final repository checks. Recovery/deployed/governance remain OPEN; no source/runtime/provider/network/push, accounts parked.
+CCMAI-RUNTIME-078 FROZEN local synthetic startup no-rewrite at source b7c826a/review22ac133; each worker/root build and positive12top16PASS/M01 named detector/restored12top16PASS, aggregate8/8Go/retry0, cleanup complete. Root next read-only durable recovery/owner-fence prerequisite intake, separate bounded order before new source/runtime/provider effects; deployed UNKNOWN/live governance OPEN, accounts parked, no push.
 
 ## Historical R077
 

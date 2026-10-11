@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-078",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-078 REVIEW_PASS exact b7c826a synthetic startup contract; worker4/root4 Go exhausted, M01 named detector and restored positives accepted, cleanup complete. CLOSER next local scoped FREEZE after final repository checks. Recovery/deployed/governance remain OPEN; no source/runtime/provider/network/push, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-078 FROZEN local synthetic startup no-rewrite at source b7c826a/review22ac133; each worker/root build and positive12top16PASS/M01 named detector/restored12top16PASS, aggregate8/8Go/retry0, cleanup complete. Root next read-only durable recovery/owner-fence prerequisite intake, separate bounded order before new source/runtime/provider effects; deployed UNKNOWN/live governance OPEN, accounts parked, no push.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker complete",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -41,9 +41,9 @@
   },
   "candidatePlanning": {
     "id": "R078",
-    "status": "REVIEW_PASS",
+    "status": "FROZEN",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_078.md",
-    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS",
+    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS_FROZEN",
     "sourceOrRuntimeDispatched": true
   },
   "historicalR067State": {
@@ -602,12 +602,12 @@
   },
   "reviewEvidence": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
   "modelAssessment": null,
-  "closureEvidence": null,
-  "independentReviewCommit": null,
+  "closureEvidence": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "22ac133f53da588456c280b41cf68f4b1546f046",
   "closureStatus": "OPEN",
   "closureChecks": {},
   "localClosureCommit": null,
-  "publicationStatus": "NOT_AUTHORIZED_IN_R078",
+  "publicationStatus": "R078_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",

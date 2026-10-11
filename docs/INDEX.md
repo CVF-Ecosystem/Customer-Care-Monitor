@@ -906,6 +906,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_restored_stderr.log`
 - R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_summary.json`
 - R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_root_final_audit.json`
+- R078 scoped local startup closure after independent review22ac133; runtime8/8 synthetic only, recovery/live/deployed remain open.: `docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md`
 - SH01..07 exact2 source/test scope and max8Go/no retry validation.: `docs/work_orders/CCMAI_RUNTIME_078.md`
 - Historical R077 documentary intake/proposal FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md`
 - R078 bounded phases/roles/evidence record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-078.json`

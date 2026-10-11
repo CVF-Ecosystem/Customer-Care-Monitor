@@ -6478,6 +6478,13 @@
       "path": "docs/reviews/probes/r078_root_final_audit.json",
       "status": "ACTIVE",
       "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0055",
+      "family": "continuity",
+      "path": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 scoped local startup closure after independent review22ac133; runtime8/8 synthetic only, recovery/live/deployed remain open."
     }
   ]
 }

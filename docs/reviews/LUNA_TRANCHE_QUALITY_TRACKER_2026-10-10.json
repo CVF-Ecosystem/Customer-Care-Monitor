@@ -325,7 +325,7 @@
       "firstSourceCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
       "finalSourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
       "assessment": "docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md",
-      "finalDisposition": "REVIEW_PASS_SYNTHETIC_LOCAL_STARTUP",
+      "finalDisposition": "FROZEN_LOCAL_SYNTHETIC_STARTUP_ONLY",
       "firstStaticHandback": "CHANGES_REQUIRED_F1_TEST_CONTROLS_F2_RUNNER_GUARDS",
       "originalFirstSourceCompile": "NOT_RUN_STATIC_REPAIR_PRECEDED_RUNTIME",
       "originalFirstSourcePositive": "NOT_RUN_STATIC_REPAIR_PRECEDED_RUNTIME",
@@ -371,7 +371,9 @@
         "newTestRepairRounds": 1,
         "rootFindingsExcludedFromWorkerProductQuality": true,
         "historicalFieldsRetained": true
-      }
+      },
+      "independentReviewCommit": "22ac133f53da588456c280b41cf68f4b1546f046",
+      "closureEvidence": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md"
     }
   ],
   "taskFitClassification": {
