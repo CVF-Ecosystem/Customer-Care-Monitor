@@ -992,6 +992,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/stdout.txt`
 - R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/source_unit/suite-execution.json`
 - R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority.: `docs/reviews/probes/r084_fixture_source/worker/worker-completion-receipt.json`
+- R084 scoped source-only F1/F3 completion closure; actual fixture/runtime/readiness remain open, no effect authority.: `docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

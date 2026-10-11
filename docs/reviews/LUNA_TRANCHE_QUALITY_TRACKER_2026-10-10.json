@@ -837,7 +837,7 @@
       "goInvocations": 0,
       "providerInvocations": 0,
       "automaticRetries": 0,
-      "finalDisposition": "REVIEW_PASS_SOURCE_ONLY_PENDING_CLOSER",
+      "finalDisposition": "SCOPED_SOURCE_ONLY_FROZEN_AFTER_REVIEW_PASS",
       "parentAssistance": "SC01..07 explicit call-order/raisedcreate/cleanup controls, all lifecycle/commits/independent review; no substantive worker implementation draft",
       "workerPreparationOverhead": "multiplePython executable launcher rejection/nullwrapper before process; corrected executable, one suite only, post-compaction rehydration; failures preserved",
       "rootOriginOverhead": "initial combined read truncated, targeted recovery; expected not-yet-created receipt path navigation",
@@ -846,7 +846,9 @@
       "modelTokenCost": null,
       "inferenceTime": null,
       "matchedComparison": false,
-      "confidence": "LOW_SINGLE_DIRECTED_SOURCE_COMPLETION_SAMPLE"
+      "confidence": "LOW_SINGLE_DIRECTED_SOURCE_COMPLETION_SAMPLE",
+      "independentReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+      "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md"
     }
   ]
 }

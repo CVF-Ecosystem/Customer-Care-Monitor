@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-084",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-084 REVIEW_PASS source-only F1/F3 completion67e76de, worker/root23PASS/raw/protected1850paths/ninearrays; CLOSER next decides scoped source FREEZE with repository checks. No fixture effect approval/Docker/SQL/Go/provider/network/pull/push; R083 historical returned preserved, accounts parked, actual fixture/fence readiness OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-084 FROZEN source-only F1/F3 completion67e76de/reviewc399a70, worker/root23PASS/raw/protected1850paths/ninearrays. ORCHESTRATOR next bounds separate R2 cached-image local disposable fixture authority and verifies accepted source before pre-effect approval; no current Docker/SQL/Go/provider/network/pull/push authority. R083 historical returned preserved, accounts parked, actual fixture/fence integration readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max handback complete",
+  "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker complete",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -41,7 +41,7 @@
   },
   "candidatePlanning": {
     "id": "R084",
-    "status": "REVIEW_PASS",
+    "status": "FROZEN",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_084.md",
     "sourceImplementation": "SOURCE_COMMITTED_REVIEW_PASS",
     "sourceOrRuntimeDispatched": true
@@ -602,9 +602,9 @@
   },
   "reviewEvidence": "docs/reviews/R084_INDEPENDENT_SOURCE_COMPLETION_REVIEW_2026-10-11.md",
   "modelAssessment": "docs/reviews/R084_LUNA_MAX_SOURCE_COMPLETION_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": null,
-  "independentReviewCommit": null,
-  "closureStatus": null,
+  "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+  "closureStatus": "SCOPED_SOURCE_ONLY_FROZEN",
   "closureChecks": null,
   "localClosureCommit": null,
   "publicationStatus": "R084_LOCAL_ONLY_NO_PUSH_AUTHORITY",
@@ -783,10 +783,11 @@
     "result": "REVIEW_PASS_SOURCE_ONLY",
     "reviewedBuildCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
     "findings": [],
-    "freeze": "OPEN",
+    "freeze": "FROZEN_SOURCE_ONLY",
     "workerHarness": "23PASS0.602s_RAW_EXIT0",
     "reviewerHarness": "23PASS0.331s_RAW_EXIT0",
-    "runtimeEffects": 0
+    "runtimeEffects": 0,
+    "independentReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003"
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -871,8 +872,11 @@
     "round": 0
   },
   "currentClosure": {
-    "status": "SOURCE_ONLY_ELIGIBLE_PENDING_CLOSER",
-    "runtimeEligible": false
+    "status": "SCOPED_SOURCE_ONLY_FROZEN",
+    "sourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+    "reviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+    "runtimeEligible": false,
+    "openSourceFindings": 0
   },
   "historicalR083Continuity": {
     "currentMode": "REVIEW",

@@ -7059,6 +7059,13 @@
       "path": "docs/reviews/probes/r084_fixture_source/worker/worker-completion-receipt.json",
       "status": "ACTIVE",
       "description": "R084 independently accepted source-only F1/F3 completion, actual portable harness/raw identities and quality; no fixture/runtime authority."
+    },
+    {
+      "id": "runtime084-evidence-0040",
+      "family": "continuity",
+      "path": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 scoped source-only F1/F3 completion closure; actual fixture/runtime/readiness remain open, no effect authority."
     }
   ]
 }
