@@ -54,7 +54,8 @@
   "reviewEvidence": [
     "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
     "docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json",
-    "docs/reviews/probes/r081_independent_source_review_2026-10-11.json"
+    "docs/reviews/probes/r081_independent_source_review_2026-10-11.json",
+    "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -77,5 +78,6 @@
   "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
   "workerAuthorPassesUsed": 1,
   "independentReviewPassesUsed": 1,
-  "automaticRepairCampaignAuthorized": false
+  "automaticRepairCampaignAuthorized": false,
+  "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930"
 }

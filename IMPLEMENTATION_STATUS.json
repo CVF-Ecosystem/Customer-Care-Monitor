@@ -1675,6 +1675,8 @@
     "gateDisposition": "RETURNED_UNRESOLVED_DESIGN_BLOCKERS",
     "freeze": "OPEN",
     "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
-    "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md"
+    "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+    "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
+    "reviewPublicationReceipt": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
   }
 }

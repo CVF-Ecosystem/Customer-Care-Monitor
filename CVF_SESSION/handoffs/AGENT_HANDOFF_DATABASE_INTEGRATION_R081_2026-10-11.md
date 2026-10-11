@@ -34,3 +34,7 @@ Original0c36c9c preserved; root identity normalization/review entryca0a430. One 
 ## Review publication checks
 
 Returned-review worktree preflight PASS7/7; cached origin/main..ca0a430 PASS7/7; catalogs PS5.1 generation/preflight and PS7 Check PASS. Preparation46 gate units PASS31.958s retained with scripts/tests unchanged. Independent protected371source/120historical-record/87accepted-input physical identities and six original quality arrays unchanged. git diff --check and review local links PASS. No hosted CI/run, runtime or governance proof asserted.
+
+## Committed returned review
+
+Independent reviewfb139708af665310d6fc5f792bf7d209a480b930, post-review cached PR PASS7/7 and clean worktree/no backend/scripts/workflow delta. Publication receipt docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json binds reviewed artifacts, protections, quality arrays and repository checks. Current pointers name the committed returned review; no localClosureCommit, no FREEZE and no automatic repair.

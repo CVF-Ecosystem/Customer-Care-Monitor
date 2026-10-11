@@ -725,7 +725,9 @@
       "modelTokenCost": null,
       "inferenceTime": null,
       "matchedComparison": false,
-      "confidence": "LOW_SINGLE_DATABASE_INTEGRATION_DOCUMENTARY_SAMPLE"
+      "confidence": "LOW_SINGLE_DATABASE_INTEGRATION_DOCUMENTARY_SAMPLE",
+      "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
+      "publicationReceipt": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
     }
   ]
 }

@@ -945,6 +945,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/probes/r081_independent_source_review_2026-10-11.json`
 - R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md`
 - R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md`
+- R081 local returned-review publication identities/protections/checks; CHANGES_REQUIRED/FREEZE OPEN, no closure/runtime claim.: `docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

@@ -6730,6 +6730,13 @@
       "path": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 local returned-review publication identities/protections/checks; CHANGES_REQUIRED/FREEZE OPEN, no closure/runtime claim."
     }
   ]
 }

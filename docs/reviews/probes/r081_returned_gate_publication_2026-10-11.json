@@ -1,0 +1,67 @@
+{
+  "checkedAtHead": "ca0a430c91053fd57a4152c8f2490ed1d8dd9e99",
+  "protected": {
+    "protectedSource": {
+      "count": 371,
+      "changed": []
+    },
+    "protectedHistory": {
+      "count": 120,
+      "changed": []
+    },
+    "protectedAcceptedInputs": {
+      "count": 87,
+      "changed": []
+    }
+  },
+  "historicalQualityArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true,
+    "durableFenceDesignSamples": true
+  },
+  "runtimeGovernanceProof": "NOT_RUN",
+  "applicationNativeInvocations": 0,
+  "trancheId": "CCMAI-RUNTIME-081",
+  "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
+  "disposition": "CHANGES_REQUIRED",
+  "gateDisposition": "RETURNED_UNRESOLVED_DESIGN_BLOCKERS",
+  "freeze": "OPEN",
+  "checks": {
+    "preflight": "PASS7/7 returned-review worktree",
+    "cachedPrRange": "PASS7/7 origin/main..fb139708 no network",
+    "catalogPS5": "PASS preflight",
+    "catalogPS7": "PASS direct Check",
+    "gateUnits": "Preparation46PASS31.958s inherited; scripts/tests unchanged",
+    "diffCheck": "PASS",
+    "postReviewWorktree": "CLEAN",
+    "backendScriptsWorkflowChangesSinceR080Closure": []
+  },
+  "publication": "LOCAL_ONLY_NO_PUSH",
+  "closureClaim": false,
+  "automaticRepairCampaignAuthorized": false,
+  "reviewArtifactIdentities": [
+    {
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+      "gitBlobSha1": "8ca218523eacb058472f3ebbf8a1fdcdfb9c188a",
+      "physicalSha256": "5dc7c27a24b6378fa6e52202700979f6fbfd683797a8bbf8e72fbca73ca9bfba"
+    },
+    {
+      "path": "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json",
+      "gitBlobSha1": "010963e5b0d41ed541244672319dc74665a73592",
+      "physicalSha256": "9ec4d2262e9ba6cf3d5f65892b310b4f80a7e81eb4caf1460aa65cc5017817d4"
+    },
+    {
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+      "gitBlobSha1": "badffd67c6bad23556a1b0379175beb53081b8ae",
+      "physicalSha256": "b7526f30700b8c3290d03697301e3821b0fc3e3bc61aba65f599a85730e2d0b5"
+    },
+    {
+      "path": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+      "gitBlobSha1": "c2aa1bf15cc9ff641a591d119accaa0c6196140c",
+      "physicalSha256": "e73456081dbf605e1965942a0f8f10929a16343a2dac3b09970c0cd61b40f5a6"
+    }
+  ]
+}

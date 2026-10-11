@@ -597,7 +597,7 @@
   "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
   "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
   "closureEvidence": null,
-  "independentReviewCommit": null,
+  "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
   "closureStatus": null,
   "closureChecks": null,
   "localClosureCommit": null,
@@ -784,6 +784,7 @@
       "F3",
       "F4"
     ],
-    "automaticRepairCampaignAuthorized": false
+    "automaticRepairCampaignAuthorized": false,
+    "publicationReceipt": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
   }
 }
