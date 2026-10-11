@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary IMPLEMENTATION_WORKER; root independent REVIEWER reserved
-- Next allowed move: CCMAI-RUNTIME-076 BUILD documentary recovery DESIGN/SPEC only. Luna max authors exact three artifacts; root independently reviews DR01..10 and startup cleanup assumptions before scoped local disposition. Application/provider/DB/network authority0; recovery implementation OPEN; Facebook/Zalo OA parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna max REPAIR_WORKER pending ACK
+- Next allowed move: CCMAI-RUNTIME-076 CHANGES_REQUIRED first documentary review F1/F2/M1. Luna max rehydrates and ACKs before same-scope document repair BUILD; no source/test/runtime/provider/DB/network effects; accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake / before-build authority

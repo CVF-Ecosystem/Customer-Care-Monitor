@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-076 recovery DESIGN/SPEC
 
-Status: BUILD
+Status: CHANGES_REQUIRED
 
 Root ORCHESTRATOR / WORK_ORDER_AUTHOR; independent root REVIEWER; Luna max /root/r076_worker documentary IMPLEMENTATION_WORKER. Risk R1 source-only documents. Owner 2026-10-11 continues roadmap and explicitly changes worker effort to max. Prior xhigh evidence remains unchanged.
 

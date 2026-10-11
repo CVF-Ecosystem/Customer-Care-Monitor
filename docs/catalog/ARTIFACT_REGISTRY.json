@@ -5932,6 +5932,34 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_076.md",
       "status": "ACTIVE",
       "description": "DR01..10 bounded recovery design/spec order, application native0."
+    },
+    {
+      "id": "runtime076-decision",
+      "family": "continuity",
+      "path": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R076 intended recovery decision; first documentary findings require qualification."
+    },
+    {
+      "id": "runtime076-spec",
+      "family": "continuity",
+      "path": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "DR01..10 intended contract and future AR/NC matrix; implementation not dispatched."
+    },
+    {
+      "id": "runtime076-identity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r076_source_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "First document source13/input5 identity; no runtime or deployed proof."
+    },
+    {
+      "id": "runtime076-first-findings",
+      "family": "continuity",
+      "path": "docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Independent documentary CHANGES_REQUIRED F1/F2/M1; no runtime/product defect reproduction."
     }
   ]
 }

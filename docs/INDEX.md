@@ -828,9 +828,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - SP01..12 intended application receipt contract, cap/privacy/persistence/earlyterminal compatibility and evidence requirements.: `docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md`
 - Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only.: `docs/reviews/probes/r060_worker_campaign.py`
 - Immutable root-seeded R1 source-only design authority; Luna max.: `CVF_SESSION/authority/CCMAI-RUNTIME-076.json`
+- R076 intended recovery decision; first documentary findings require qualification.: `docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md`
+- Independent documentary CHANGES_REQUIRED F1/F2/M1; no runtime/product defect reproduction.: `docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md`
 - Historical R075 FROZEN publication; closure remote SHA verified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
+- First document source13/input5 identity; no runtime or deployed proof.: `docs/reviews/probes/r076_source_identity_2026-10-11.json`
 - DR01..10 bounded recovery design/spec order, application native0.: `docs/work_orders/CCMAI_RUNTIME_076.md`
 - R076 documentary state and independent role contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-076.json`
+- DR01..10 intended contract and future AR/NC matrix; implementation not dispatched.: `docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

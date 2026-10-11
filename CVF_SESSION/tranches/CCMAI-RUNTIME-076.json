@@ -43,18 +43,20 @@
   },
   "ownerAuthorization": "Owner 2026-10-11 continue roadmap, explicitly authorize Luna max worker and root orchestrator/reviewer. R074/R075 next move separately bounded source-only DESIGN/SPEC; no behavior/runtime/data dispatch.",
   "claimScope": "Reviewed intended recovery requirements and source-grounded design only; no implemented recovery or runtime AI governance proof.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_076.md",
   "baseCommit": "2f0b1380be8c27e1febc8e1d9f281e53a79719d5",
-  "buildCommit": null,
+  "buildCommit": "63c388df11874d63f9c899725555fc011d76556b",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -67,5 +69,8 @@
     "primary": "recovery_design_spec",
     "sampleType": "DOCUMENTARY_MAX_NOT_IMPLEMENTATION"
   },
-  "workerAcknowledgment": "2026-10-11 Luna max /root/r076_worker fresh canonical rehydration and CVF declaration ACK received by root before edits. State/memory/handoff/status/index WORK_ORDER consistent; immutable R1 three-file documentary scope accepted, application native0. Root records ACK and documentary BUILD release; root owns metadata/all commits, child owns design/spec/identity. Root source assistance: finalizer fallback and scheduler startup cleanup identified, no worker draft. Core doctor inherited25/1, knowledge TEMP fallback/noPOST and bootstrap migration notes retained."
+  "workerAcknowledgment": "2026-10-11 Luna max /root/r076_worker fresh canonical rehydration and CVF declaration ACK received by root before edits. State/memory/handoff/status/index WORK_ORDER consistent; immutable R1 three-file documentary scope accepted, application native0. Root records ACK and documentary BUILD release; root owns metadata/all commits, child owns design/spec/identity. Root source assistance: finalizer fallback and scheduler startup cleanup identified, no worker draft. Core doctor inherited25/1, knowledge TEMP fallback/noPOST and bootstrap migration notes retained.",
+  "firstDocumentCommit": "63c388df11874d63f9c899725555fc011d76556b",
+  "firstPassDisposition": "CHANGES_REQUIRED",
+  "documentaryRepairRounds": 0
 }
