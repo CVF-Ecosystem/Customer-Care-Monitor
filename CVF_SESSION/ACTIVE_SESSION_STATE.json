@@ -27,7 +27,8 @@
     "aggregateMaxGoInvocations": 8,
     "workerUsedGoInvocations": 0,
     "reviewerUsedGoInvocations": 0,
-    "automaticRetries": 0
+    "automaticRetries": 0,
+    "currentPermittedGoInvocations": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -42,8 +43,8 @@
     "id": "R078",
     "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_078.md",
-    "sourceImplementation": "NOT_DISPATCHED",
-    "sourceOrRuntimeDispatched": false
+    "sourceImplementation": "BUILD_STATIC_SOURCE_TEST_RUNNER_AUTHORIZED",
+    "sourceOrRuntimeDispatched": true
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -680,5 +681,6 @@
       "publication": "NOT_AUTHORIZED_IN_R077"
     },
     "localClosureCommit": "4a63460e21d835331382cf8728bf9cbbaed19cfd"
-  }
+  },
+  "runtimeRelease": "PENDING_STATIC_HAND_BACK_REVIEW"
 }
