@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-085 isolated local MySQL fixture campaigns
 
-Status: REVIEW_PENDING
+Status: CHANGES_REQUIRED
 
 R2 local disposable synthetic DB effect, owner next/standing Luna max worker/root independent reviewer/all commits. Immutable seedc804308 committed before base/BUILD. No source changes. INTAKE root owner-requested metadata observed local desktop-linux Docker29.8.1, existingccma-db-1/mysql:8.0 Up2hours healthy; no existing SQL/env/credentials. DESIGN inherits reviewed source67e76de/reviewc399a70/R084 scoped closure5a681d7. SPEC below bounds actual isolated fixture observations. WORK_ORDER releases effects only after fresh worker ACK and committed root safety approval/BUILD. REVIEW independent actual results; FREEZE only settled allowed campaign/cleanup/evidence, no inferred product acceptance.
 

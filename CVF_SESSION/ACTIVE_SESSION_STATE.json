@@ -14,10 +14,10 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-085",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-085 REVIEW_PENDING actual worker campaign exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup VERIFIED_CLEAN and root exact-ID/name absence confirmed, existing ccma-db-1 same ID/image running healthy. Reviewer campaign NOT_GRANTED/NOT_RUN; root reviews committed evidence then returns precise mount-validation finding, no source repair/retry/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r085_worker completing evidence only",
-  "updatedAt": "2026-10-11",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+  "updatedAt": "2026-10-12",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
     "workerFixtureCampaigns": 1,
@@ -43,7 +43,7 @@
   },
   "candidatePlanning": {
     "id": "R085",
-    "status": "REVIEW_PENDING",
+    "status": "CHANGES_REQUIRED",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_085.md",
     "sourceImplementation": "UNCHANGED_ACCEPTED_SOURCE67E76DE",
     "sourceOrRuntimeDispatched": false
@@ -602,8 +602,8 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": null,
-  "modelAssessment": null,
+  "reviewEvidence": "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md",
+  "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
   "closureEvidence": null,
   "independentReviewCommit": null,
   "closureStatus": null,
@@ -782,8 +782,29 @@
   },
   "nextScopeProposal": null,
   "currentReview": {
-    "result": "PENDING_EVIDENCE_REVIEW",
-    "freeze": "OPEN"
+    "result": "CHANGES_REQUIRED",
+    "disposition": "RETURNED_RUNTIME_MOUNT_BLOCKER",
+    "freeze": "OPEN",
+    "finding": "F1_PRE_START_RESOLVED_MOUNT_VALIDATION",
+    "additionalRepositoryCheck": {
+      "actor": "Codex /root",
+      "command": "npm run docs:build",
+      "workingDirectory": "docs",
+      "invocations": 1,
+      "exitCode": 1,
+      "vitepressVersion": "1.6.4",
+      "buildReportedSeconds": 12.76,
+      "deadLinkCount": 55,
+      "affectedHistoricalFiles": [
+        "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+        "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+        "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md"
+      ],
+      "failureEvidence": "Actual tool result from session46233; raw full stdout/stderr not retained as files; this JSON records selected observed facts, not reconstructed raw output.",
+      "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
+      "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
+      "scope": "Static documentation check, no fixture/Go/provider/application campaign"
+    }
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -865,7 +886,8 @@
   },
   "currentRepair": {
     "scope": "NO_SOURCE_REPAIR_AUTHORITY",
-    "round": 0
+    "round": 0,
+    "next": "Separate bounded source-only mount lifecycle authority; no third same-rootcause repair inferred"
   },
   "currentClosure": null,
   "historicalR083Continuity": {

@@ -1,0 +1,23 @@
+{
+  "actor": "Codex /root independent REVIEWER",
+  "scope": "Final file-only R085 protection/binding/runtime-claim audit; no native rerun",
+  "protectedPathCount": 1872,
+  "protectedFailures": [],
+  "historicalQualityArrays": 10,
+  "historicalQualityArraysUnchanged": true,
+  "seedFilteredFirstContentMatch": true,
+  "bindingPhysicalSeedHashMatch": true,
+  "manifestUnchangedSinceRootRuntimeCheck": true,
+  "fixtureProcessCount": 1,
+  "exitCode": 2,
+  "nativeRuntime": "FAILED",
+  "readinessObservations": 0,
+  "startCommandCount": 0,
+  "mysqlCommandCount": 0,
+  "factsEmpty": true,
+  "cleanup": "VERIFIED_CLEAN",
+  "rootExactAbsenceConfirmed": true,
+  "ownerSameContainerHealthy": true,
+  "reviewerCampaignCount": 0,
+  "status": "PASS_PROTECTION_AND_FAILED_CAMPAIGN_FACTS_ONLY"
+}

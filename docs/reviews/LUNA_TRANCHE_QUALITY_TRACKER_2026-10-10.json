@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1",
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-12",
   "ownerInstruction": "Track Luna quality separately for every tranche; cumulative empirical report, reviewer/root defects separate, no unmatched cost/speed ranking.",
   "workerModel": {
     "model": "gpt-6-luna",
@@ -850,6 +850,55 @@
       "independentReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
       "closureEvidence": "docs/reviews/R084_SCOPED_SOURCE_COMPLETION_CLOSURE_2026-10-11.md",
       "localClosureCommit": "5a681d7380773aa0e7b3064f61eeaf9c63787fdb"
+    }
+  ],
+  "localFixtureExecutionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-085",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "primaryTaskClass": "bounded_native_fixture_execution",
+      "secondaryTaskClass": "evidence_capture",
+      "complexity": "R2 inherited reviewed tool; no source changes; one local Docker campaign",
+      "inputNovelty": "INHERITED_ACCEPTED_SOURCE67E76DE",
+      "firstCampaign": "FAILED_MOUNT_INVALID_EXIT2_BEFORE_START_SQL",
+      "workerCampaigns": 1,
+      "reviewerCampaigns": 0,
+      "automaticRetries": 0,
+      "sourceRepairRounds": 0,
+      "workerNativeWallSeconds": 3.922119,
+      "cleanup": "VERIFIED_CLEAN_ROOT_EXACT_ID_NAME_CONFIRMED",
+      "ownerDatabase": "SAME_ID_IMAGE_RUNNING_HEALTHY_SELECTED_METADATA",
+      "workerAcknowledgmentDefects": [
+        "core hash transcription",
+        "wrong parked field selector"
+      ],
+      "workerEvidenceHelperDefects": [
+        "temporary module import registration",
+        "source result-key typo",
+        "post-run PowerShell sidecar expression"
+      ],
+      "errorTraceEvidence": "WORKER_DESCRIBED_SUMMARIES_RAW_EXCEPTION_TRACES_NOT_RETAINED",
+      "inheritedSourceFinding": "pre-start resolved Mounts requirement; F1 distinct new lifecycle root cause; exact raw Mounts value not retained",
+      "rootAssistance": [
+        "acceptance contract/authority/safety release",
+        "standard import launcher guidance/minimal capture reminders",
+        "independent source/cleanup/existing-status/protection audit",
+        "all commits/catalog/continuity"
+      ],
+      "rootDefects": [
+        "initial baseline dependency/gates ordering corrected before effects",
+        "normalized-versus-physical seed comparison corrected",
+        "pre-effect review missed mount lifecycle compatibility"
+      ],
+      "assessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+      "review": "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md",
+      "executionEvidenceCommit": "147be5b6e5756077f97833194ca0f9fa1b5ea390",
+      "finalDisposition": "CHANGES_REQUIRED_FREEZE_OPEN",
+      "modelInferenceSeconds": null,
+      "modelTokens": null,
+      "modelCost": null,
+      "measurementLimit": "Only native process walltime measured; no matched model comparison or efficiency ranking."
     }
   ]
 }

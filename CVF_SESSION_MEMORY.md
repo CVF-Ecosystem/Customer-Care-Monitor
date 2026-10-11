@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R085
 
-CCMAI-RUNTIME-085 REVIEW_PENDING actual worker campaign exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup VERIFIED_CLEAN and root exact-ID/name absence confirmed, existing ccma-db-1 same ID/image running healthy. Reviewer campaign NOT_GRANTED/NOT_RUN; root reviews committed evidence then returns precise mount-validation finding, no source repair/retry/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.
 
 ## Historical R084 (source-only FROZEN)
 

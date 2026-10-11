@@ -259,14 +259,14 @@
     "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
     "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md"
   ],
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-12",
   "ownerRouting": {
     "date": "2026-10-11",
     "parkedAccounts": [
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-085 REVIEW_PENDING actual worker campaign exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup VERIFIED_CLEAN and root exact-ID/name absence confirmed, existing ccma-db-1 same ID/image running healthy. Reviewer campaign NOT_GRANTED/NOT_RUN; root reviews committed evidence then returns precise mount-validation finding, no source repair/retry/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
+    "nextObjective": "CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
     "buildDispatched": false,
     "actualWorkerModel": {
@@ -285,7 +285,7 @@
       "automaticRetries": 0
     },
     "publicationStatus": "R085_LOCAL_ONLY_NO_PUSH_AUTHORITY",
-    "modelAssessment": null,
+    "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
     "activeLocalClosureOrder": null,
     "localClosureEvidence": null,
     "sourceCheckpoint": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
@@ -1865,7 +1865,7 @@
   },
   "localFixtureCampaign": {
     "trancheId": "CCMAI-RUNTIME-085",
-    "status": "REVIEW_PENDING",
+    "status": "CHANGES_REQUIRED",
     "sourceImplementation": "UNCHANGED_ACCEPTED_SOURCE67E76DE",
     "workerFixtureRuntime": "FAILED_MOUNT_INVALID",
     "reviewerFixtureRuntime": "NOT_RUN",
@@ -1886,6 +1886,30 @@
     "ownerRequestedMysqlStatus": "EXISTING_CCMA_DB_1_MYSQL8_RUNNING_HEALTHY_LOCAL_DOCKER_METADATA_ONLY",
     "cleanup": "VERIFIED_CLEAN_ROOT_CONFIRMED",
     "actualWorkerTask": "39cd4dbacf3744bc8ea39f413b33e4d4",
-    "serverAndSqlFacts": "NOT_OBSERVED"
+    "serverAndSqlFacts": "NOT_OBSERVED",
+    "reviewEvidence": "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md",
+    "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+    "disposition": "RETURNED_RUNTIME_MOUNT_BLOCKER",
+    "freeze": "OPEN",
+    "buildCommit": "147be5b6e5756077f97833194ca0f9fa1b5ea390",
+    "additionalRepositoryCheck": {
+      "actor": "Codex /root",
+      "command": "npm run docs:build",
+      "workingDirectory": "docs",
+      "invocations": 1,
+      "exitCode": 1,
+      "vitepressVersion": "1.6.4",
+      "buildReportedSeconds": 12.76,
+      "deadLinkCount": 55,
+      "affectedHistoricalFiles": [
+        "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+        "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+        "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md"
+      ],
+      "failureEvidence": "Actual tool result from session46233; raw full stdout/stderr not retained as files; this JSON records selected observed facts, not reconstructed raw output.",
+      "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
+      "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
+      "scope": "Static documentation check, no fixture/Go/provider/application campaign"
+    }
   }
 }

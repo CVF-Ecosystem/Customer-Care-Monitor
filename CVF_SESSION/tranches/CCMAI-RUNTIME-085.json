@@ -59,19 +59,22 @@
   "expectedCachedImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
   "expectedRepositoryDigest": "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
   "claimScope": "Actual local isolated MySQL fixture/image/server/settings/principal grants/DDL-DML/denial/cleanup prerequisites only. No AI/CVF runtime governance, GORM/application/fence integration, restore fleet, production/deployed adoption or hostedCI proof.",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "c804308403561f465135eb4154b7c39334ace562",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "147be5b6e5756077f97833194ca0f9fa1b5ea390",
+  "reviewEvidence": [
+    "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md"
+  ],
+  "disposition": "RETURNED_RUNTIME_MOUNT_BLOCKER",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -80,7 +83,7 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": "Root fresh BUILD-to-REVIEW role transition after actual worker task39cd4dbacf3744bc8ea39f413b33e4d4 exit2/FAILED/MOUNT_INVALID, readiness0/no start/no SQL. Tool exact cleanup VERIFIED_CLEAN; independent root result-check PASS confirms both full IDs and names absent, existing owner DB selected status unchanged and healthy, source/protected1872paths/tenqualityarrays/seed unchanged. Reviewer campaign never approved and remains NOT_RUN. Worker still writes evidence only; no repairs/replays.",
+  "workerAcknowledgment": "Fresh canonical R085 REVIEW tuple rehydrated from current files; independent review of committed147be5b fails actual runtime acceptance F1 mount-lifecycle branch, exact raw Mounts value unavailable. Root transitions REVIEWER to ORCHESTRATOR for bounded next-source planning only; R085 returned CHANGES_REQUIRED/FREEZE OPEN, worker1/reviewer0/no repair or replay. Source67e unchanged, oldR083/R084 records preserved. New review and quality sample written2026-10-12 after local date rollover; original campaign/order/handoff10-11 filenames remain immutable.",
   "preEffectApproval": {
     "status": "GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY",
     "actor": "Codex /root independent REVIEWER",
@@ -95,5 +98,29 @@
   "workerRuntime": "FAILED_MOUNT_INVALID",
   "reviewerRuntime": "NOT_RUN",
   "cleanup": "VERIFIED_CLEAN_ROOT_CONFIRMED",
-  "preEffectApprovalDisposition": "WORKER_ONCE_EXHAUSTED_REVIEWER_NOT_GRANTED"
+  "preEffectApprovalDisposition": "WORKER_ONCE_EXHAUSTED_REVIEWER_NOT_GRANTED",
+  "updatedAt": "2026-10-12",
+  "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+  "residualFindings": [
+    "F1_PRE_START_RESOLVED_MOUNT_VALIDATION_BLOCKS_NATIVE_CAMPAIGN"
+  ],
+  "additionalRepositoryCheck": {
+    "actor": "Codex /root",
+    "command": "npm run docs:build",
+    "workingDirectory": "docs",
+    "invocations": 1,
+    "exitCode": 1,
+    "vitepressVersion": "1.6.4",
+    "buildReportedSeconds": 12.76,
+    "deadLinkCount": 55,
+    "affectedHistoricalFiles": [
+      "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+      "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+      "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md"
+    ],
+    "failureEvidence": "Actual tool result from session46233; raw full stdout/stderr not retained as files; this JSON records selected observed facts, not reconstructed raw output.",
+    "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
+    "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
+    "scope": "Static documentation check, no fixture/Go/provider/application campaign"
+  }
 }
