@@ -5938,7 +5938,7 @@
       "family": "continuity",
       "path": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "R076 intended recovery decision; first documentary findings require qualification."
+      "description": "Accepted intended recovery decision after independent document repair; implementation OPEN."
     },
     {
       "id": "runtime076-spec",
@@ -5960,6 +5960,27 @@
       "path": "docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md",
       "status": "ACTIVE",
       "description": "Independent documentary CHANGES_REQUIRED F1/F2/M1; no runtime/product defect reproduction."
+    },
+    {
+      "id": "runtime076-scope-proof",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r076_root_scope_review_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "Independent static source13/input5/protected367/history110/seed proof; runtime0."
+    },
+    {
+      "id": "runtime076-review",
+      "family": "continuity",
+      "path": "docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "DR01..10 intended documentary REVIEW_PASS; recovery implementation not dispatched."
+    },
+    {
+      "id": "runtime076-max-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "One separate max DESIGN/SPEC sample, first CHANGES_REQUIRED, one worker repair/root minor erratum; no matched ranking."
     }
   ]
 }

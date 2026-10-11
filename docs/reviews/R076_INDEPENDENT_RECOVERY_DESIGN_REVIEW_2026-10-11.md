@@ -1,0 +1,22 @@
+# R076 independent recovery DESIGN/SPEC review
+
+Root REVIEWER, 2026-10-11. Disposition REVIEW_PASS / FREEZE_OPEN for DR01..10 intended-document contract only. First document63c388d; worker repair9c08499; reviewed snapshot3eb6450 includes explicit root minor line-map erratum. No implementation or runtime recovery accepted. [First findings](R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md) remain CHANGES_REQUIRED historically.
+
+| Requirement | Independent result |
+|---|---|
+| DR01 | PASS after F1/F2: current startup sweep, reservation/start, exact local cancellation, checked terminal/fallback and release-after-last-synchronous-effect described against actual source. Abort error is not persisted-state proof; stale comments distinguished from executable fallback. |
+| DR02 | PASS: age/local absence/manual bypass rejected; fail-closed default proposed; queue/lease/fencing architecture deferred; source-only diagnostic candidate explicitly does not remedy existing startup cleanup. |
+| DR03 | PASS: live/remote/restarted/new owners, partial effects, reservation/handoff, terminal and notification uncertainty distinguished; unknown deployment topology remains UNKNOWN. |
+| DR04 | PASS after F2: continuous exclusion required through inspection/transition/readback; exact tenant/job/run and conditional running state, Job->JobRun locks and checked writes; loss/ambiguity stops recovery/replacement admission pending safe reconciliation. Architecture and enforcement mechanism remain undecided prerequisites. |
+| DR05 | PASS: no automatic retry/provider/notification replay/checkpoint advancement; exact local cancellation and HTTP/MCP accepted defaults preserved; no exactly-once claim. |
+| DR06 | PASS: intended versus current source versus inference/UNKNOWN separated, no safely implemented recovery or deployment claim. Startup sweep hardening/status taxonomy remain OPEN. |
+| DR07 | PASS intended contract only: AR01..11 and NC01..06 include fault/concurrency/tenant/partial-effect and valid-versus-lost-exclusion controls; mutation/restoration/cleanup requirements and NOT_RUN labels explicit. No tests executed here. |
+| DR08 | PASS: diagnostics prerequisite, startup sweep priority, candidate path classes, independent roles/proposed bounded campaign and at-leastR2 runtime/data risk; no future seed/DB/provider/network dispatch granted. |
+| DR09 | PASS after M1 and root erratum: paired local links resolve, source13/input5 hashes and44 explicit source citation ranges verified; prior R074 accepted scope/limits preserved. |
+| DR10 | PASS: child owns substantive exact3 documents; root owns metadata/all commits and one mechanical line-map repair. One consolidated worker repair; first packet and findings preserved, assistance/root errors separately recorded. |
+
+Root independently checked startup mounting/sweep, admission/cancellation/release, finalizer readback/fallback, MCP defaults and result/notification ordering, plus complete repaired packet and relevant prior scope records. [Static scope receipt](probes/r076_root_scope_review_2026-10-11.json): 13 source physical hashes and baseline/capture/current Git blobs, 5 documentary input hashes, 44 explicit source citation ranges, 367 protected source/test/tooling artifacts, 110 historical seed/tranche identities; immutable root-written R076 seed first content/timing verified against baseCommit. Identity equality does not prove full write history. Seven paired Markdown links resolve. Root line-range404 error propagated by worker is corrected to398 with original commits and erratum retained; no second delegated repair.
+
+Repository preflight/cached PR range/catalog checks support only their local structure scope. Initial gate units46PASS33.881s inherited unchanged scripts/tests; no duplicate test campaign needed. Application Go/Vitest/typecheck/build/browser/DB/race/provider/channel/notifier/live/hosted checks NOT_RUN. R075 prior closure remote9181f3826f6a90db0042b25b9c955b253ea0828c verified before R076; no network effect under R076. Doctor25/1 PASS WITH NOTE, public coree9ddcb matching origin/main, manifest pin/migration/bootstrap notes retained. No CVF AI-governance claim. Facebook/Zalo OA parked, wider roadmap OPEN.
+
+REVIEW_PASS settles only the documentary contract. CLOSER must separately decide local packet FREEZE and sync continuity; it cannot close startup cleanup hardening, deploy a recovery protocol, or grant runtime authority.

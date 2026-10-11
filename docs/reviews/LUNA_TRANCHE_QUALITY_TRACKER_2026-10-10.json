@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "ownerInstruction": "Track Luna quality separately for every tranche; cumulative empirical report, reviewer/root defects separate, no unmatched cost/speed ranking.",
   "workerModel": {
     "model": "gpt-6-luna",
-    "reasoningEffort": "xhigh"
+    "reasoningEffort": "max"
   },
   "method": "Record original first source/launch/compile/positive, accepted product findings/repair rounds, test semantic sensitivity/final result, evidence-tool findings and parent assistance. Values unavailable remain null with reason. Compare fresh vs inherited and workload classes separately; runtime walltime is not inference/development time. Never reclassify historical failures after later PASS.",
   "comparisonLimit": "R067 inherited, R068/R071 fresh but differing parser/consumer scopes and harness assistance; Sol R065 engine/DB differs. No matched A/B or token/cost/model-time telemetry.",
@@ -460,6 +460,50 @@
       "independentReviewCommit": "1d95a18e22d79c59ad47eb552688ffbfc2e96012",
       "closureEvidence": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
       "localClosureCommit": "3994aefbacbfc17b8958c7879f4c0ded66922a7d"
+    }
+  ],
+  "taskFitClassificationScope": "Existing taskFitClassification is historical as-of2026-10-10 xhigh; max design sample below is separate, not an implementation sample or matched comparison.",
+  "currentRouting": {
+    "ownerInstructionDate": "2026-10-11",
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max",
+    "assessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+    "comparison": "NO_MATCHED_COMPARISON"
+  },
+  "designSpecSamples": [
+    {
+      "id": "CCMAI-RUNTIME-076",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "recovery_design_spec",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "63c388df11874d63f9c899725555fc011d76556b",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "substantiveDocumentFindings": [
+        "F1_abort_persisted_state_overgeneralization",
+        "F2_release_and_continuous_exclusion_contract"
+      ],
+      "mechanicalFindings": [
+        "M1_paired_links"
+      ],
+      "workerDocumentRepairRounds": 1,
+      "workerRepairCommit": "9c08499f9e9e755b6f65b1904f90a925d7ce72ed",
+      "rootMechanicalErratumCommit": "3eb64509cd958c7652b61c66f145476b07a8fa18",
+      "rootOriginError": "Source range upper bound404 supplied; actual398.",
+      "workerValidationLimitation": "Propagated supplied range without checking source end.",
+      "sourceHashInputsFirstPass": "13PASS",
+      "documentInputHashesFirstPass": "5PASS",
+      "finalDisposition": "REVIEW_PASS_FREEZE_OPEN_DESIGN_ONLY",
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "assessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+      "parentAssistance": "Root DR contract, source pointers/startup/fallback, recommendation qualification, consolidated findings and minor erratum; no root prose draft.",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_N1_DOCUMENTARY_MAX"
     }
   ]
 }

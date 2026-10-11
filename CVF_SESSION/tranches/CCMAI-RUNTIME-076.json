@@ -43,15 +43,16 @@
   },
   "ownerAuthorization": "Owner 2026-10-11 continue roadmap, explicitly authorize Luna max worker and root orchestrator/reviewer. R074/R075 next move separately bounded source-only DESIGN/SPEC; no behavior/runtime/data dispatch.",
   "claimScope": "Reviewed intended recovery requirements and source-grounded design only; no implemented recovery or runtime AI governance proof.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_076.md",
   "baseCommit": "2f0b1380be8c27e1febc8e1d9f281e53a79719d5",
-  "buildCommit": "63c388df11874d63f9c899725555fc011d76556b",
+  "buildCommit": "3eb64509cd958c7652b61c66f145476b07a8fa18",
   "reviewEvidence": [
-    "docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md"
+    "docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md",
+    "docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md"
   ],
-  "disposition": "PENDING",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -59,7 +60,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -75,5 +78,20 @@
   "workerAcknowledgment": "2026-10-11 Luna max fresh canonical REVIEW/CHANGES_REQUIRED rehydration and REPAIR_WORKER declaration ACK received before edits. Root records acknowledgment before same-scope documentary BUILD release for F1/F2/M1. Exact3 artifacts and all roles/budget/effects remain unchanged. One consolidated documentary repair; no application code/test/runtime finding or campaign. Current tuple consistent, bootstrap/doctor/TEMP ingest notes retained.",
   "firstDocumentCommit": "63c388df11874d63f9c899725555fc011d76556b",
   "firstPassDisposition": "CHANGES_REQUIRED",
-  "documentaryRepairRounds": 1
+  "documentaryRepairRounds": 1,
+  "workerRepairCommit": "9c08499f9e9e755b6f65b1904f90a925d7ce72ed",
+  "modelAssessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+  "rootMechanicalErratumCount": 1,
+  "sourceScopeReview": "docs/reviews/probes/r076_root_scope_review_2026-10-11.json",
+  "reviewChecks": {
+    "preflight": "PASS7/7",
+    "prRange": "PASS7/7 cached origin/main..HEAD",
+    "catalogPS5": "PASS via regeneration/preflight",
+    "catalogPS7": "PASS",
+    "gateUnits": "46PASS33.881s R076 preparation; inherited unchanged scripts/tests, no duplicate",
+    "sourceIdentity": "13source/5inputs/44citations/367protected/110historical/immutable seed PASS",
+    "markdownLocalLinks": "7 worker paired +5 root review/assessment PASS",
+    "applicationNativeInvocations": 0,
+    "runtimeEvidence": "NOT_RUN"
+  }
 }
