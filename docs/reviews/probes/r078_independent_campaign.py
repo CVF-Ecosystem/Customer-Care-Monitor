@@ -517,7 +517,7 @@ def main():
     cache = Path(os.environ["USERPROFILE"]) / "go/pkg/mod"
     receipt = {
         "sourceCommit": args.source,
-        "worker": "Codex /root/r078_worker",
+        "reviewer": "Codex /root",
         "scope": "scheduler_startup_hardening_synthetic_local_only",
         "campaigns": 0,
         "goInvocations": {"build": 0, "tests": 0},
