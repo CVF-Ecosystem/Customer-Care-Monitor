@@ -1,0 +1,66 @@
+{
+  "role": "INDEPENDENT_REVIEWER",
+  "invocation": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_jobrun_fence_fixture.py",
+    "-v"
+  ],
+  "invocationCount": 1,
+  "processStarted": true,
+  "head": "511f8b4a660571feb016534d3c602360f2aa3f35",
+  "sourceBefore": {
+    "scripts/jobrun_fence_fixture.py": {
+      "physicalSha256": "952cbfa16b60da1ac2f0189ed3ec130adcb03f9e5a168751d3d7134085cd6e0e",
+      "physicalLength": 78425,
+      "filteredGitBlob": "cfd76f6ad2ab5aea022547a64e706ce1fb13c690",
+      "committedBlob": "cfd76f6ad2ab5aea022547a64e706ce1fb13c690"
+    },
+    "scripts/tests/test_jobrun_fence_fixture.py": {
+      "physicalSha256": "8d2dfd982fcf1b8c14f1387ee12508c2a51e0ecd77f85a7a1ac568661ec90f62",
+      "physicalLength": 55011,
+      "filteredGitBlob": "8836b620ec88299db9a12e017ff61f796e6d730d",
+      "committedBlob": "8836b620ec88299db9a12e017ff61f796e6d730d"
+    },
+    "docs/reviews/R086_MOUNT_LIFECYCLE_SOURCE_COMPLETION_2026-10-12.md": {
+      "physicalSha256": "6ba7b2a7de8e32855580ced20562ce75e39d123d597d58912952d4b3a659918c",
+      "physicalLength": 6177,
+      "filteredGitBlob": "e0360e8afe19b812215b5c849a456a161ddf7670",
+      "committedBlob": "e0360e8afe19b812215b5c849a456a161ddf7670"
+    }
+  },
+  "startedAt": "2026-10-11T17:27:13.229571+00:00",
+  "rawStdout": "stdout.bin",
+  "rawStderr": "stderr.bin",
+  "claimScope": "Portable resource harness only; no Docker/SQL/provider/CVF runtime governance proof",
+  "pid": 22096,
+  "exitCode": 0,
+  "sourceAfter": {
+    "scripts/jobrun_fence_fixture.py": {
+      "physicalSha256": "952cbfa16b60da1ac2f0189ed3ec130adcb03f9e5a168751d3d7134085cd6e0e",
+      "physicalLength": 78425,
+      "filteredGitBlob": "cfd76f6ad2ab5aea022547a64e706ce1fb13c690",
+      "committedBlob": "cfd76f6ad2ab5aea022547a64e706ce1fb13c690"
+    },
+    "scripts/tests/test_jobrun_fence_fixture.py": {
+      "physicalSha256": "8d2dfd982fcf1b8c14f1387ee12508c2a51e0ecd77f85a7a1ac568661ec90f62",
+      "physicalLength": 55011,
+      "filteredGitBlob": "8836b620ec88299db9a12e017ff61f796e6d730d",
+      "committedBlob": "8836b620ec88299db9a12e017ff61f796e6d730d"
+    },
+    "docs/reviews/R086_MOUNT_LIFECYCLE_SOURCE_COMPLETION_2026-10-12.md": {
+      "physicalSha256": "6ba7b2a7de8e32855580ced20562ce75e39d123d597d58912952d4b3a659918c",
+      "physicalLength": 6177,
+      "filteredGitBlob": "e0360e8afe19b812215b5c849a456a161ddf7670",
+      "committedBlob": "e0360e8afe19b812215b5c849a456a161ddf7670"
+    }
+  },
+  "durationSeconds": 1.803184,
+  "completedAt": "2026-10-11T17:27:15.033690+00:00"
+}

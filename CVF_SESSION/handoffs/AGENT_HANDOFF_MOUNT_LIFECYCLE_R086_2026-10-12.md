@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max implementation worker idle
-- Next allowed move: CCMAI-RUNTIME-086 REVIEW_PENDING source-only mount completion worker27PASS/raw/source unchanged; root commits source then one independent harness suite and consolidated source/evidence review. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 failure retained, docs55deadlinks block FREEZE/accounts parked/native readiness OPEN/deployed UNKNOWN.
+- Active role: Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle
+- Next allowed move: CCMAI-RUNTIME-086 REVIEW_PASS_SOURCE_ONLY at511f8b4/worker-root27PASS, pending-started mount contract and sanitized observations accepted; FREEZE OPEN due inherited docs55deadlinks. ORCHESTRATOR next bounds separate documentary deadlink repair/validation before closure and fresh fixture authority; no current source repair/Docker/SQL/Go/provider/pull/push/accounts parked/native readiness OPEN/deployed UNKNOWN.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -22,3 +22,11 @@ Fresh worker ACK directly verifies current canonical R086 tuple/core e9ddcbcdcac
 ## Role/transition acknowledgment
 
 Fresh canonical BUILD state/memory/handoff/implementation/index rehydrated at750d983; worker final handback one suite27PASS1.531s/exit0/process2.077573s/raw sourceSHA unchanged. Worker static counter typo and raw-summary CRLF parser issue retained separately, no suite failure/replay. Root interim static oracle/field-name findings were corrected before sole suite in same author pass, with no substantive implementation draft. Root transitions ORCHESTRATOR to independent REVIEWER for formal source/result evaluation, source commit before sole independent suite. Protected1892paths/elevenqualityarrays/all23oldAST PASS; docs55fail retained/FREEZE OPEN, no native proof.
+
+## Role/transition acknowledgment
+
+Independent source/unit/receipt review passes ML01..07 at511f8b4; root27PASS0.879s/raw/physical-filtered-committed unchanged, protected1892paths/elevenarrays/23oldAST/seed PASS. Root transitions REVIEWER to ORCHESTRATOR for separate documentary docs55blocker scope, no CLOSER/FREEZE action. R085 failed native result stays immutable; strict started mount compatibility remains NOT_RUN/UNKNOWN until new authorized native evidence. No repairs/replays/source edit after units.
+
+## Root publication gate correction
+
+First review publication preflight/cachedrange6/7: root used descriptive scoped string as tranche.disposition; REVIEW_PASS gate requires literal REVIEW_PASS. Corrected only canonical disposition, retained description in scopedDisposition and FREEZE OPEN/docs55 blocker. Root metadata error, no source/test repair or extra suite; gate unchanged.

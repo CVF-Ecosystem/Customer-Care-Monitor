@@ -7332,6 +7332,41 @@
       "path": "docs/reviews/probes/r086_mount_source/worker/worker_launcher_errors.json",
       "status": "ACTIVE",
       "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0018",
+      "family": "continuity",
+      "path": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_unit/receipt.json",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_unit/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
     }
   ]
 }

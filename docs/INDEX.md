@@ -1031,6 +1031,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_stderr.raw.bin`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_harness_stdout.raw.bin`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/worker/worker_launcher_errors.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/receipt.json`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stderr.bin`
+- R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

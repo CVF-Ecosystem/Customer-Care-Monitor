@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R086
 
-CCMAI-RUNTIME-086 REVIEW_PENDING source-only mount completion worker27PASS/raw/source unchanged; root commits source then one independent harness suite and consolidated source/evidence review. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 failure retained, docs55deadlinks block FREEZE/accounts parked/native readiness OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-086 REVIEW_PASS_SOURCE_ONLY at511f8b4/worker-root27PASS, pending-started mount contract and sanitized observations accepted; FREEZE OPEN due inherited docs55deadlinks. ORCHESTRATOR next bounds separate documentary deadlink repair/validation before closure and fresh fixture authority; no current source repair/Docker/SQL/Go/provider/pull/push/accounts parked/native readiness OPEN/deployed UNKNOWN.
 
 ## Historical R085 (returned, FREEZE OPEN)
 

@@ -910,9 +910,9 @@
       "secondaryTaskClass": "phase_sensitive_negative_test_and_evidence_capture",
       "complexity": "R2 resource safety; one source pass; explicit ML01..07; no native effects",
       "inputNovelty": "INHERITED_SOURCE67E76DE_NEW_NATIVE_MOUNT_FAILURE_R085",
-      "firstSourceCommit": null,
+      "firstSourceCommit": "511f8b4a660571feb016534d3c602360f2aa3f35",
       "firstWorkerSuite": "27PASS1.531s_EXIT0_PROCESS1_NO_REPLAY",
-      "firstReviewerSuite": "NOT_RUN_YET",
+      "firstReviewerSuite": "27PASS0.879s_EXIT0_PROCESS1",
       "sourceRepairRounds": 0,
       "workerCampaigns": 0,
       "reviewerCampaigns": 0,
@@ -926,8 +926,8 @@
         "clarified existing static-prep authority versus failed-suite stop, author pass unchanged"
       ],
       "rootImplementationDraft": false,
-      "sourceImplementation": "BUILD_IN_PROGRESS",
-      "finalDisposition": "PENDING_INDEPENDENT_REVIEW_FREEZE_BLOCKED_INHERITED_DOCS55",
+      "sourceImplementation": "INDEPENDENT_SOURCE_REVIEW_PASS",
+      "finalDisposition": "REVIEW_PASS_SOURCE_ONLY_FREEZE_OPEN_INHERITED_DOCS55",
       "modelInferenceSeconds": null,
       "modelTokens": null,
       "modelCost": null,
@@ -937,14 +937,18 @@
         "conditional task assertion admits dual receipt schemas",
         "configured options authorization field actually checks string presence"
       ],
-      "preSuiteCorrectionStatus": "STATIC_SOURCE_POINTS_CORRECTED_WORKER_REPORTED_NO_SUITE_YET",
+      "preSuiteCorrectionStatus": "CORRECTED_BEFORE_SOLE_SUITE_WITH_ROOT_ASSISTANCE",
       "workerPreparationFindings": [
         "static helper asserted26 when actual23+4=27, no suite launched",
         "worker incorrectly treated static-helper failure as stop despite BUILD explicitly permitting pre-suite preparation correction"
       ],
       "workerHarnessProcessWallSeconds": 2.077573,
       "workerEvidenceParserDefect": "CRLF regex missed count; original null receipt retained, separate raw-derived27summary",
-      "expectedConcurrentRootLedgerUpdateReportedByWorker": true
+      "expectedConcurrentRootLedgerUpdateReportedByWorker": true,
+      "reviewerHarnessProcessWallSeconds": 1.803184,
+      "assessment": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
+      "review": "docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md",
+      "rootPublicationDefect": "First6/7 preflights: descriptive disposition incompatible with REVIEW_PASS literal gate; canonical field corrected, scope/freezeblocker retained, no source/test rerun"
     }
   ]
 }

@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-086",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-086 REVIEW_PENDING source-only mount completion worker27PASS/raw/source unchanged; root commits source then one independent harness suite and consolidated source/evidence review. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 failure retained, docs55deadlinks block FREEZE/accounts parked/native readiness OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-086 REVIEW_PASS_SOURCE_ONLY at511f8b4/worker-root27PASS, pending-started mount contract and sanitized observations accepted; FREEZE OPEN due inherited docs55deadlinks. ORCHESTRATOR next bounds separate documentary deadlink repair/validation before closure and fresh fixture authority; no current source repair/Docker/SQL/Go/provider/pull/push/accounts parked/native readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max implementation worker idle",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
   "updatedAt": "2026-10-12",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -29,7 +29,8 @@
     "goInvocations": 0,
     "providerInvocations": 0,
     "automaticRetries": 0,
-    "workerHarnessUnitInvocationsUsed": 1
+    "workerHarnessUnitInvocationsUsed": 1,
+    "reviewerHarnessUnitInvocationsUsed": 1
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -42,7 +43,7 @@
   },
   "candidatePlanning": {
     "id": "R086",
-    "status": "REVIEW_PENDING",
+    "status": "REVIEW_PASS",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_086.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
@@ -601,8 +602,8 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": null,
-  "modelAssessment": null,
+  "reviewEvidence": "docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md",
+  "modelAssessment": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
   "closureEvidence": null,
   "independentReviewCommit": null,
   "closureStatus": null,
@@ -781,9 +782,9 @@
   },
   "nextScopeProposal": null,
   "currentReview": {
-    "result": "NOT_RUN",
+    "result": "REVIEW_PASS_SOURCE_ONLY",
     "freeze": "OPEN",
-    "inheritedDocsBlocker": "55_DEAD_LINKS_R078_R079"
+    "inheritedDocsBlocker": "55_DEAD_LINKS_R078_R079_NOT_RERUN"
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",
