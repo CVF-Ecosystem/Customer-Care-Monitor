@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-077",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-077 DISPATCH_READY repository-only topology/owner-fence intake and concrete nonbinding startup hardening draft. Luna max ACK before documentary BUILD; root independent reviewer. Deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-077 BUILD repository-only topology/owner-fence intake and nonbinding startup hardening draft, exact3 Luna max artifacts. Root independently reviews TI01..08; deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max documentary worker pending",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary IMPLEMENTATION_WORKER; root independent REVIEWER reserved",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,7 +34,7 @@
   },
   "candidatePlanning": {
     "id": "R077",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_077.md",
     "sourceImplementation": "NOT_DISPATCHED_DOCUMENTARY_ONLY",
     "sourceOrRuntimeDispatched": false

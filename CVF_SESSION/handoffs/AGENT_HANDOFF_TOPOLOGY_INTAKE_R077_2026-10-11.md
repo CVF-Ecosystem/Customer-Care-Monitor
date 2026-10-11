@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max documentary worker pending
-- Next allowed move: CCMAI-RUNTIME-077 DISPATCH_READY repository-only topology/owner-fence intake and concrete nonbinding startup hardening draft. Luna max ACK before documentary BUILD; root independent reviewer. Deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; Facebook/Zalo OA parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary IMPLEMENTATION_WORKER; root independent REVIEWER reserved
+- Next allowed move: CCMAI-RUNTIME-077 BUILD repository-only topology/owner-fence intake and nonbinding startup hardening draft, exact3 Luna max artifacts. Root independently reviews TI01..08; deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake and authority ACK
@@ -18,3 +18,7 @@ Owner next2026-10-11 continues Luna max worker/root orchestrator-reviewer. Fresh
 Root ORCHESTRATOR -> WORK_ORDER_AUTHOR records bounded R1 INTAKE/DESIGN/SPEC/WORK_ORDER before documentary BUILD. Immutable R077 seeda64f6b22b815e9f535fc20b7c7394fa33ed2f9ac committed before activation; worker exact3 NEW documents only, root all metadata/commits. Repository examples may identify process startup paths but cannot certify deployed writer count, shared DB, quiescence or lease/fence. Worker ACK pending before edits. Proposed startup hardening needs separate R2+ order/seed; R077 cannot implement it.
 
 Checks: preflight7/7 cached PR7/7, gateunits46PASS31.176s preparation. Source/test/tooling/deployment370 and old authority/tranche112 snapshot protected. Five prior implementation/R074 audit/R076 max design records preserved; new sample separate. Root gives bounded contract and feasibility question, no worker prose draft.
+
+## Before-edit role acknowledgment
+
+2026-10-11 Luna max /root/r077_worker fresh WORK_ORDER canonical rehydration/CVF declaration ACK received before edits. State/memory/handoff/order/status/index consistent; R1 exact3 document scope/no source/test/runtime/host/DB/network effects accepted. Root records documentary BUILD release under committed R077 seed, root all metadata/commits and independent review. Bootstrap/doctor/TEMP ingest notes retained; repository units46PASS31.176s inherited unchanged tooling.
