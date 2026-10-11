@@ -2,6 +2,10 @@
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-076",
   "artifactType": "source_identity_snapshot",
+  "pairedArtifacts": {
+    "decision": "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+    "specification": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md"
+  },
   "capturedDate": "2026-10-11",
   "implementationSourceBaseline": {
     "commit": "9fc86fe012d1cc8c1aeb7d9e7a55e79c1c032c2d",
@@ -48,7 +52,7 @@
     },
     {
       "path": "backend/engine/job_run_ownership.go",
-      "lineRanges": ["61-105", "107-190", "225-306", "317-340"],
+      "lineRanges": ["61-105", "107-190", "193-204", "225-306", "317-340", "356-404"],
       "sha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
       "gitBlobAtSourceBaseline": "513febc593268ccb09fd95395c3da7a6df40a35e",
       "gitBlobAtDocumentaryHead": "513febc593268ccb09fd95395c3da7a6df40a35e",
@@ -180,8 +184,28 @@
       "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
       "docs/reviews/probes/r076_source_identity_2026-10-11.json"
     ],
-    "firstPassStatus": "FIRST_PASS_REVIEW_PENDING",
-    "repairRounds": 0,
+    "firstPassStatus": "FIRST_PASS_REVIEW_PENDING_AT_CAPTURE",
+    "firstPassDisposition": "CHANGES_REQUIRED",
+    "currentSubmissionStatus": "DOCUMENTARY_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "repairRounds": 1,
+    "repairHistory": [
+      {
+        "round": 1,
+        "findingsAddressed": ["F1", "F2", "M1"],
+        "artifactsRepaired": [
+          "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+          "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+          "docs/reviews/probes/r076_source_identity_2026-10-11.json"
+        ],
+        "sourceCaptureProvenancePreserved": true,
+        "sourceHashInputsChanged": false,
+        "sourceLineMapExpanded": {
+          "backend/engine/job_run_ownership.go": ["193-204", "356-404"]
+        },
+        "implementationOrRuntimeChanged": false,
+        "testsRun": false
+      }
+    ],
     "rootAssistance": [
       "Root supplied the backend/engine/scheduler.go startup-cleanup source pointer; worker independently inspected and hashed scheduler.go and backend/main.go.",
       "Root supplied the backend/engine/analyzer_incremental.go terminal-fallback nuance; worker independently inspected and hashed the finalizer source."

@@ -1,15 +1,18 @@
 # Dispatch recovery design decision — R076
 
-Status: worker first pass; independent review pending. Date: 2026-10-11.
+Status: documentary repair submitted; independent review pending. Date: 2026-10-11.
 Authority: CCMAI-RUNTIME-076, R1 source-only DESIGN/SPEC. This record does not
 authorize application changes or recovery operations.
 
 ## Decision
 
-1. A running JobRun is not eligible for recovery based on its age or because
-   the current process has no local owner. Until all possible old writers are
-   demonstrably fenced or quiescent, leave the run unresolved and keep normal
-   admission fail-closed.
+1. Proposed future recovery rule: do not make a running JobRun eligible based
+   on its age or because the current process has no local owner. Recovery may
+   proceed only after every possible old writer is demonstrably fenced or
+   quiescent and the exclusion remains continuously valid from inspection
+   through conditional transition and verified readback. If proof is stale,
+   lost, or uncertain at any point, stop; keep the case unresolved and prevent
+   recovery or replacement admission until safe exclusion is re-established.
 2. The repository already has a startup status sweep. Treat it as an existing
    safety and compatibility concern, not as proof that recovery is safe. R076
    does not change or endorse that sweep.
@@ -46,11 +49,29 @@ authorize application changes or recovery operations.
   backend/engine/job_run_ownership.go:76-98). This does not establish
   cross-process fencing.
 - The shared dispatcher validates configuration, reserves the persisted row,
-  then starts a goroutine. A synchronous start failure attempts an abort; a
-  failed abort leaves the row running and blocking admission
-  (backend/jobdispatch/dispatch.go:66-148). Reservation precedes worker
-  handoff, so a crash in that interval cannot be classified from the current
-  JobRun row alone.
+  then starts a goroutine. A synchronous start failure attempts an abort
+  (backend/jobdispatch/dispatch.go:91-114). The dispatcher and abort comments
+  state that a failed abort leaves a running row blocking admission
+  (backend/jobdispatch/dispatch.go:67-70, 117-122;
+  backend/engine/job_run_ownership.go:356-361, 386-390). The called path is
+  more nuanced: Abort calls the shared terminal path; after checked
+  transaction failures, the finalizer attempts an exact
+  still-running-row fallback to `error` without checkpoint advancement, then
+  returns an error (backend/engine/job_run_ownership.go:356-397;
+  backend/engine/analyzer_incremental.go:263-284). The fallback does not
+  verify affected-row count or read back the row. Therefore, an abort error
+  alone does not prove the stored row remains running: the fallback may have
+  persisted `error`, may have matched no row, or may itself have failed. Read
+  and classify the exact persisted identity before relying on its state.
+  Reservation precedes worker handoff, so a crash in that interval cannot be
+  classified from the current JobRun row alone.
+- For ordinary execution, `executeReserved` defers `owner.release()` and
+  documents that it runs last after the worker's effects; notification work
+  occurs before the function returns (backend/engine/analyzer.go:53-72,
+  411-420). `release` removes only that owner from the in-process registry
+  and cancels its context (backend/engine/job_run_ownership.go:193-204).
+  This describes the local worker's release point; it does not establish
+  quiescence of another process, a restarted process, or any deployed writer.
 - Cancellation signals only the locally registered owner after a checked
   exact-row read. When no local owner exists but a stored running row does,
   CancelJobRun returns ErrRunNotOwned and writes nothing
@@ -75,6 +96,9 @@ records identical blobs at documentary HEAD f92a80a78e7c87424792338fc8cec4634f42
 The file-by-file SHA256 and line map are in
 docs/reviews/probes/r076_source_identity_2026-10-11.json.
 
+Paired artifacts: [intended requirements](../specs/DISPATCH_RECOVERY_R076_2026-10-11.md)
+and [source identity record](../reviews/probes/r076_source_identity_2026-10-11.json).
+
 ## Source fact, inference, proposal, and unknown
 
 - Source fact: the application entrypoint starts a scheduler whose startup
@@ -85,9 +109,12 @@ docs/reviews/probes/r076_source_identity_2026-10-11.json.
   instance; after the row changes state, a new admission may be possible.
   This is a code-level risk under that topology, not a reproduced incident or
   a claim about any deployment.
-- Proposed requirement: no new recovery write may occur until old-writer
-  exclusion is demonstrated for every process that can write the run, and the
-  exact row identity and terminal outcome are checked.
+- Proposed requirement: no recovery write may occur until old-writer
+  exclusion is demonstrated for every process that can write the run, and
+  the same exclusion remains valid continuously while inspecting the exact
+  identity, attempting any checked transition, and verifying/classifying the
+  persisted outcome. A stale lease, lost fence, restart, new writer, or other
+  uncertainty stops recovery; a momentary no-owner observation is not enough.
 - Unknown: deployed instance count and startup behavior; database sharing,
   dialect and isolation; whether any durable lease/fence exists outside this
   source; whether a writer is alive remotely; whether a provider, result, or
@@ -141,5 +168,7 @@ proof are NOT RUN. This packet makes no production, delivery, exactly-once, or
 CVF AI-governance claim. Facebook and Zalo OA account work remains parked.
 
 Root supplied source pointers for the startup sweep and finalizer fallback
-nuance; the worker independently read and hashed those sources. This is
-first-pass assistance attribution, not an independent review finding.
+nuance; the worker independently read and hashed those sources. First-pass
+review returned F1/F2/M1 CHANGES_REQUIRED. This repair qualifies abort/fallback
+outcomes, specifies continuous exclusion, and adds resolving paired-artifact
+links; root assistance remains attribution, not an independent worker finding.
