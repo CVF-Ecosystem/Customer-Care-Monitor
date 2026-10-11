@@ -919,6 +919,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md`
 - R079 independent documentary acceptance and separate Luna max quality assessment; no runtime claim.: `docs/reviews/R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md`
 - R079 independent documentary acceptance and separate Luna max quality assessment; no runtime claim.: `docs/reviews/probes/r079_independent_final_audit.json`
+- R079 scoped local intake/proposal closure after independent498fe42; durable fence/recovery and deployed facts unresolved.: `docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md`
 - R079 PF01..08 exact3 documents only; next design draft nonbinding.: `docs/work_orders/CCMAI_RUNTIME_079.md`
 - R079 bounded documentary phase/role/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-079.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`

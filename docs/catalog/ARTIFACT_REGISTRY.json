@@ -6562,6 +6562,13 @@
       "path": "docs/reviews/probes/r079_independent_final_audit.json",
       "status": "ACTIVE",
       "description": "R079 independent documentary acceptance and separate Luna max quality assessment; no runtime claim."
+    },
+    {
+      "id": "runtime079-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 scoped local intake/proposal closure after independent498fe42; durable fence/recovery and deployed facts unresolved."
     }
   ]
 }
