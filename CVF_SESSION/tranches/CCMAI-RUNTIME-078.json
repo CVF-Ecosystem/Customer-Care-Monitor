@@ -51,8 +51,8 @@
   "ownerAuthorization": "Owner next2026-10-11 continues accepted R077 next governed move, Luna max worker/root independent reviewer. Root bounds R2 source + disposable synthetic MySQL runtime; no real credentials or external effects. Owner aware via declaration; no R3 action.",
   "fixtureAuthority": "Inspect only cached golang:1.26-alpine/mysql:8.0 and Go module cache. One disposable internal Docker network/no host ports; named ccmai-r078-* MySQL and Go containers, synthetic credentials, read-only exact source/module cache binds, disposable Go cache/database volumes. No app Compose/backend server startup; actual Scheduler.Start inside focused tests only. Cleanup/verify only owned resources; no pull/network egress. Root and worker campaigns sequential, separate raw receipts.",
   "claimScope": "Reviewed new-binary startup-recovery no JobRun rewrites on isolated synthetic DB. Not runtime CVF governance, remote topology, deployed safety, old binary parity or recovery implementation.",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_078.md",
   "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
   "buildCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
@@ -64,7 +64,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -74,5 +75,5 @@
   ],
   "dispatcher": "Codex /root",
   "humanReview": "Owner next scope awareness2026-10-11; root independently reviews before scoped closure, R2 no R3 action",
-  "workerAcknowledgment": "Root fresh BUILD current tuple/handback rehydrated; transition independent REVIEWER for source6219da3 and first packet52837bf. No Go runtime release, source exact2 preserved before findings."
+  "workerAcknowledgment": "2026-10-11 Luna max fresh CHANGES_REQUIRED continuity/CVF declaration REPAIR_WORKER ACK received before edits, including F2 cumulative-base source binding clarification1138829. Root records unchanged-authority repair1 BUILD release; only newtest/workerprobe repair, scheduler product already correct. Go0 runtime pending static rereview; no new owner checkpoint."
 }

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max REPAIR_WORKER ACK pending
-- Next allowed move: CCMAI-RUNTIME-078 CHANGES_REQUIRED pre-Go F1 test controls/F2 runner guards; Luna max ACKs current continuity before same-scope repair BUILD, Go0/8, no provider/external network/push, accounts parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max REPAIR_WORKER; root independent REVIEWER reserved
+- Next allowed move: CCMAI-RUNTIME-078 BUILD repair1 F1 new-test controls/F2 worker-runner guards only; static handback before Go runtime release. Go0/8/retry0, R2 scope unchanged, no provider/external network/push, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake/design/spec/work-order ACK
@@ -22,3 +22,7 @@ Owner next continues accepted R077 proposal after local closure4a63460. Root fre
 ## Before-edit role acknowledgment
 
 Root fresh BUILD current tuple/handback rehydrated; transition independent REVIEWER for source6219da3 and first packet52837bf. No Go runtime release, source exact2 preserved before findings.
+
+## Before-edit role acknowledgment
+
+2026-10-11 Luna max fresh CHANGES_REQUIRED continuity/CVF declaration REPAIR_WORKER ACK received before edits, including F2 cumulative-base source binding clarification1138829. Root records unchanged-authority repair1 BUILD release; only newtest/workerprobe repair, scheduler product already correct. Go0 runtime pending static rereview; no new owner checkpoint.
