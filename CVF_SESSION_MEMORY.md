@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-083", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-083", "parked": true} -->
 
 ## Current R083
 
-CCMAI-RUNTIME-083 WORK_ORDER DISPATCH_READY for bounded R2 disposable MySQL fixture tool/prerequisite; worker fresh ACK before committed BUILD source release. Root safety review before first owned Docker/SQL effect; max1 fixture campaign per role/Go0/provider0/no pull/push. R082 frozen documentary/R081 returned, fence implementation/readiness OPEN/deployed UNKNOWN/accounts parked.
+CCMAI-RUNTIME-083 BUILD exact3 fixture tool/tests/readiness source; worker max1 initial harness unit suite then handback. Root safety review/committed approval BEFORE any Docker/SQL effect; fixture max1 per role/Go0/provider0/no pull/push. Prior evidence immutable, fence implementation/readiness OPEN/deployed UNKNOWN/accounts parked.
 
 ## Historical R082 (scoped documentary FROZEN)
 

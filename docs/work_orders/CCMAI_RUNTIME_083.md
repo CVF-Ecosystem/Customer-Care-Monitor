@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-083 local disposable MySQL fixture prerequisite
 
-Status: DISPATCH_READY
+Status: BUILD
 
 R2 local disposable DB/tooling only. Owner next after R0821590481 continues fixture/schema prerequisite; root awareness declaration and independent review, no R3 action. Immutable seed ea73a86 committed before base/BUILD. Root ORCHESTRATOR/WORK_ORDER_AUTHOR/independent REVIEWER/CLOSER/all COMMIT_STEWARD; Luna max /root/r083_worker IMPLEMENTATION_WORKER. Worker no stage/commit/self-approval. Fresh canonical rehydration/declaration/ACK before edits; wait committed BUILD. Core read-only/project cwd. Root never drafts substantive worker implementation.
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-083",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-083 WORK_ORDER DISPATCH_READY for bounded R2 disposable MySQL fixture tool/prerequisite; worker fresh ACK before committed BUILD source release. Root safety review before first owned Docker/SQL effect; max1 fixture campaign per role/Go0/provider0/no pull/push. R082 frozen documentary/R081 returned, fence implementation/readiness OPEN/deployed UNKNOWN/accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-083 BUILD exact3 fixture tool/tests/readiness source; worker max1 initial harness unit suite then handback. Root safety review/committed approval BEFORE any Docker/SQL effect; fixture max1 per role/Go0/provider0/no pull/push. Prior evidence immutable, fence implementation/readiness OPEN/deployed UNKNOWN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r083_worker awaiting fresh WORK_ORDER ACK",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r083_worker IMPLEMENTATION_WORKER source-only until pre-effect approval",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -39,7 +39,7 @@
   },
   "candidatePlanning": {
     "id": "R083",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_083.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
