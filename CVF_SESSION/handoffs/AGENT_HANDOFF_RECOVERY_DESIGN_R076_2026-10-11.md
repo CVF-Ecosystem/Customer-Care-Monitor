@@ -28,3 +28,7 @@ Root SESSION_SYNC_STEWARD minor projection audit: archived predecessor R075 revi
 ## Before-edit role acknowledgment
 
 2026-10-11 Luna max fresh canonical REVIEW/CHANGES_REQUIRED rehydration and REPAIR_WORKER declaration ACK received before edits. Root records acknowledgment before same-scope documentary BUILD release for F1/F2/M1. Exact3 artifacts and all roles/budget/effects remain unchanged. One consolidated documentary repair; no application code/test/runtime finding or campaign. Current tuple consistent, bootstrap/doctor/TEMP ingest notes retained.
+
+## Root minor documentary correction ACK
+
+Fresh canonical BUILD repair rehydration before root REVIEWER -> SESSION_SYNC_STEWARD minor repair: corrected known ownership.go line upper bound404 to actual398 in identity and own findings. Root supplied erroneous pointer; worker unchecked propagation recorded separately. Original first/repair commits preserved; worker substantive authorship remains independent, no source/test/acceptance/seed/effect change or second worker loop. Next root independent re-review evaluates corrected packet.

@@ -25,7 +25,9 @@
   "sourceFiles": [
     {
       "path": "backend/main.go",
-      "lineRanges": ["69-76"],
+      "lineRanges": [
+        "69-76"
+      ],
       "sha256": "84d4e7755a700af51a4c8ff7dd791cff9741be06654b98f16d1bc03a4da2b5e7",
       "gitBlobAtSourceBaseline": "69ee35b19e3d93140b50f22650727c60ed75c304",
       "gitBlobAtDocumentaryHead": "69ee35b19e3d93140b50f22650727c60ed75c304",
@@ -34,7 +36,11 @@
     },
     {
       "path": "backend/engine/scheduler.go",
-      "lineRanges": ["97-128", "279-299", "318-363"],
+      "lineRanges": [
+        "97-128",
+        "279-299",
+        "318-363"
+      ],
       "sha256": "68f4dfbdb167acc190ae3de8532d1533f6fa2f54567f66d6e7ee4db5ea63393e",
       "gitBlobAtSourceBaseline": "796e79fb14456668b8536856d616e55a133c00d5",
       "gitBlobAtDocumentaryHead": "796e79fb14456668b8536856d616e55a133c00d5",
@@ -43,7 +49,9 @@
     },
     {
       "path": "backend/jobdispatch/dispatch.go",
-      "lineRanges": ["66-148"],
+      "lineRanges": [
+        "66-148"
+      ],
       "sha256": "9e7a7ec41ba958550a66aeb6a3a919458ce97a379505b418b4108a462aa266d2",
       "gitBlobAtSourceBaseline": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
       "gitBlobAtDocumentaryHead": "4fa353ef3eda81b159ecc7aa0a0e581be1662a1d",
@@ -52,7 +60,14 @@
     },
     {
       "path": "backend/engine/job_run_ownership.go",
-      "lineRanges": ["61-105", "107-190", "193-204", "225-306", "317-340", "356-404"],
+      "lineRanges": [
+        "61-105",
+        "107-190",
+        "193-204",
+        "225-306",
+        "317-340",
+        "356-398"
+      ],
       "sha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
       "gitBlobAtSourceBaseline": "513febc593268ccb09fd95395c3da7a6df40a35e",
       "gitBlobAtDocumentaryHead": "513febc593268ccb09fd95395c3da7a6df40a35e",
@@ -61,7 +76,9 @@
     },
     {
       "path": "backend/db/models/job.go",
-      "lineRanges": ["48-60"],
+      "lineRanges": [
+        "48-60"
+      ],
       "sha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
       "gitBlobAtSourceBaseline": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
       "gitBlobAtDocumentaryHead": "f24bd8de79bec5f9ba22bda285f4b288de2b92a8",
@@ -70,7 +87,11 @@
     },
     {
       "path": "backend/engine/analyzer_modes.go",
-      "lineRanges": ["18-32", "84-131", "148-183"],
+      "lineRanges": [
+        "18-32",
+        "84-131",
+        "148-183"
+      ],
       "sha256": "4e7a37acb06df23e324d0e472d6becbef2de8b783ca91ace53287b7acb5f5c72",
       "gitBlobAtSourceBaseline": "7b0babac06f43353317d143d53bfce42c6597bb0",
       "gitBlobAtDocumentaryHead": "7b0babac06f43353317d143d53bfce42c6597bb0",
@@ -79,7 +100,11 @@
     },
     {
       "path": "backend/engine/analyzer_incremental.go",
-      "lineRanges": ["19-25", "47-98", "167-284"],
+      "lineRanges": [
+        "19-25",
+        "47-98",
+        "167-284"
+      ],
       "sha256": "3a58cb686d1b8c61d073f62b180a4be4ee2ee1b049fff096c068840df3944430",
       "gitBlobAtSourceBaseline": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
       "gitBlobAtDocumentaryHead": "80adca4b7dcb03cd28ab3a38f9fe07f93d8f2527",
@@ -88,7 +113,12 @@
     },
     {
       "path": "backend/engine/analyzer.go",
-      "lineRanges": ["39-90", "183-200", "245-329", "343-424"],
+      "lineRanges": [
+        "39-90",
+        "183-200",
+        "245-329",
+        "343-424"
+      ],
       "sha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086",
       "gitBlobAtSourceBaseline": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
       "gitBlobAtDocumentaryHead": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
@@ -97,7 +127,12 @@
     },
     {
       "path": "backend/api/handlers/jobs.go",
-      "lineRanges": ["368-400", "402-452", "504-544", "571-603"],
+      "lineRanges": [
+        "368-400",
+        "402-452",
+        "504-544",
+        "571-603"
+      ],
       "sha256": "2e850ebad1e335d19575dd03088cd8a7c1878a13aed4a84793656784905ba227",
       "gitBlobAtSourceBaseline": "071c8c3690523a4ef128d73186f3453d47165a30",
       "gitBlobAtDocumentaryHead": "071c8c3690523a4ef128d73186f3453d47165a30",
@@ -106,7 +141,9 @@
     },
     {
       "path": "backend/mcp/handlers.go",
-      "lineRanges": ["330-360"],
+      "lineRanges": [
+        "330-360"
+      ],
       "sha256": "502400023232a569c958070f9c91466f3a9480459a4c39b16e9296e0b7c268ef",
       "gitBlobAtSourceBaseline": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
       "gitBlobAtDocumentaryHead": "f32d2b7a9efdc2a0e381a94263860baa59207e8e",
@@ -115,7 +152,9 @@
     },
     {
       "path": "backend/mcp/tools.go",
-      "lineRanges": ["159-168"],
+      "lineRanges": [
+        "159-168"
+      ],
       "sha256": "a84c43502741769d61bb746872a97b4e532b534e7436dc2086d084b78e28f4e4",
       "gitBlobAtSourceBaseline": "4600207fd7fd40e54b4cbc79361332db816447a2",
       "gitBlobAtDocumentaryHead": "4600207fd7fd40e54b4cbc79361332db816447a2",
@@ -124,7 +163,9 @@
     },
     {
       "path": "backend/api/handlers/agents.go",
-      "lineRanges": ["265-310"],
+      "lineRanges": [
+        "265-310"
+      ],
       "sha256": "ec464cdf82d9362274f67c060eea87b6b4b725867541ad01374cc87253c945fe",
       "gitBlobAtSourceBaseline": "47ef487bcfe3161cbfc51d01c917cf9487224168",
       "gitBlobAtDocumentaryHead": "47ef487bcfe3161cbfc51d01c917cf9487224168",
@@ -133,7 +174,9 @@
     },
     {
       "path": "backend/notifications/dispatcher.go",
-      "lineRanges": ["38-124"],
+      "lineRanges": [
+        "38-124"
+      ],
       "sha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008",
       "gitBlobAtSourceBaseline": "4fd26b28115f0940038303b82c3544dd7d2e464b",
       "gitBlobAtDocumentaryHead": "4fd26b28115f0940038303b82c3544dd7d2e464b",
@@ -149,19 +192,26 @@
     {
       "path": "docs/reviews/R074_MCP_DISPATCH_SOURCE_AUDIT_2026-10-10.md",
       "sha256": "773f330c8e8de860b7b4bbd7bad3f8beb9a10b235795f0235ccb318ba50f1efe",
-      "lineRanges": ["11-13", "95-111"],
+      "lineRanges": [
+        "11-13",
+        "95-111"
+      ],
       "relevance": "Prior source audit, historical implementation baseline, uncertainty boundary, and proposed recovery scope."
     },
     {
       "path": "docs/reviews/R074_INDEPENDENT_DISPATCH_SOURCE_AUDIT_REVIEW_2026-10-10.md",
       "sha256": "6ba2c955423112be28729f041e320434abed04aa527141587f1fbfd0b5718028",
-      "lineRanges": ["3-22"],
+      "lineRanges": [
+        "3-22"
+      ],
       "relevance": "Accepted R074 source audit scope, source baseline, known limitations, and NOT_RUN boundary."
     },
     {
       "path": "docs/reviews/R074_SCOPED_SOURCE_AUDIT_CLOSURE_2026-10-10.md",
       "sha256": "f860817a5d0dbc29a61198d0c33b59991912e8704b6ef661cac897fdc73b8d41",
-      "lineRanges": ["3-13"],
+      "lineRanges": [
+        "3-13"
+      ],
       "relevance": "R074 scoped FROZEN disposition and next governed move."
     },
     {
@@ -172,7 +222,10 @@
     {
       "path": "docs/specs/MCP_JOB_EXECUTION_R044_2026-10-03.md",
       "sha256": "ff39ceb569eb480832673f49e7e5cb9f4d41dd6cb369474c11ff4dd10cec5cb7",
-      "lineRanges": ["14", "22-28"],
+      "lineRanges": [
+        "14",
+        "22-28"
+      ],
       "relevance": "Accepted MCP defaults and HTTP, cancellation, ownership, and error compatibility."
     }
   ],
@@ -191,7 +244,11 @@
     "repairHistory": [
       {
         "round": 1,
-        "findingsAddressed": ["F1", "F2", "M1"],
+        "findingsAddressed": [
+          "F1",
+          "F2",
+          "M1"
+        ],
         "artifactsRepaired": [
           "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
           "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
@@ -200,7 +257,10 @@
         "sourceCaptureProvenancePreserved": true,
         "sourceHashInputsChanged": false,
         "sourceLineMapExpanded": {
-          "backend/engine/job_run_ownership.go": ["193-204", "356-404"]
+          "backend/engine/job_run_ownership.go": [
+            "193-204",
+            "356-398"
+          ]
         },
         "implementationOrRuntimeChanged": false,
         "testsRun": false
@@ -215,5 +275,15 @@
   "governanceEvidence": {
     "liveProviderCall": "NOT_RUN",
     "claim": "No CVF AI-governance, live provider, deployment, production, exactly-once, or delivery claim is made."
+  },
+  "rootMechanicalErratum": {
+    "role": "Codex /root REVIEWER -> SESSION_SYNC_STEWARD / minor documentary repair",
+    "origin": "Root first findings supplied upper bound404; actual file ends398. Worker propagated it; root directly corrected known minor line map without new worker repair or scope change.",
+    "correctedRanges": [
+      "356-398"
+    ],
+    "workerRepairRoundsUnchanged": 1,
+    "sourceHashesUnchanged": true,
+    "workerValidationLimitation": "Supplied upper bound was not checked against source length."
   }
 }
