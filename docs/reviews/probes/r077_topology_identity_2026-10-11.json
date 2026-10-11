@@ -192,7 +192,7 @@
       "gitBlobAtSourceBaseline": null,
       "gitBlobAtDocumentaryHead": "55f95906e3b69f0086f1934707a728198f82ff9b",
       "availableAtSourceBaseline": false,
-      "relevance": "Immutable R077 work-order acceptance TI01-TI08; created after the source baseline."
+      "relevance": "R077 work-order acceptance contract TI01-TI08 as captured at pre-artifact documentary HEAD e867376; Status: BUILD was lifecycle state and later advances with the tranche. The dispatcher-owned seed is the immutable authority. The SHA/blob and line range above intentionally retain this historical capture, not current work-order content."
     },
     {
       "path": "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
@@ -260,9 +260,32 @@
     "testsOrBuildsRun": false,
     "applicationNativeInvocations": 0,
     "automaticRetries": 0,
-    "repairRounds": 0,
-    "reviewStatus": "PENDING_INDEPENDENT_DOCUMENTARY_REVIEW"
+    "repairRounds": 1,
+    "reviewStatus": "PENDING_INDEPENDENT_REVIEW_ROUND_1"
   },
+  "repairHistory": [
+    {
+      "round": 1,
+      "findings": ["F1", "F2", "capture wording"],
+      "repairBuildReleaseHead": "fdcb7bac912c04a8d665389fe1f270971f90996a",
+      "firstSubmissionCommit": "83b3b9589c65987fc7d034ec046284e484a55a02",
+      "rootNavigationRepairCommitPreserved": "ab23883a44986cbd7756a0f82db3c3266cdd7d80",
+      "paths": [
+        "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+        "docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md",
+        "docs/reviews/probes/r077_topology_identity_2026-10-11.json"
+      ],
+      "originalCaptureIdentityPreserved": {
+        "sourceBaseline": "51d09cd4cb9282f22518ac32a4edbd3226d56e36",
+        "preArtifactDocumentaryHead": "e867376931f015a0deb9cc6945f8ddad9c72ac51",
+        "sourceHashesAndBlobsRefreshed": false,
+        "documentaryInputHashesAndBlobsRefreshed": false
+      },
+      "testsOrBuildsRun": false,
+      "applicationNativeInvocations": 0,
+      "disposition": "WORKER_REPAIR_COMPLETE_PENDING_INDEPENDENT_REVIEW"
+    }
+  ],
   "governanceEvidence": {
     "liveProviderCall": "NOT_RUN",
     "claim": "No CVF AI-governance, runtime, deployment, production, exactly-once, or delivery claim is made."
