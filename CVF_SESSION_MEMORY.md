@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-079", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-079", "parked": true} -->
 
 ## Current R079
 
-CCMAI-RUNTIME-079 BUILD repair1 F1 source-contract versus unknown mixed-binary fleet qualification in exact3 documents; root M1 pointers preserved. No application/provider/host/DB/network/push effects, accounts parked.
+CCMAI-RUNTIME-079 REVIEW_PASS exact907568c after repair1; root may decide scoped intake/proposal FREEZE only then separately bound source-only durable-fence DESIGN/SPEC. Runtime/provider/DB/network/push0, deployed UNKNOWN/recovery OPEN, accounts parked.
 
 ## Historical R078
 

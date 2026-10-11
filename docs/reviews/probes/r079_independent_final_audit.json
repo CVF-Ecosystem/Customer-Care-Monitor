@@ -1,0 +1,34 @@
+{
+  "packet": "907568c0e0cfba8aa246e75d8a878913576c9141",
+  "identityFailures": [],
+  "unresolvedReferences": {
+    "R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md": [],
+    "R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md": [],
+    "R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md": [],
+    "R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md": []
+  },
+  "rangeFailures": [],
+  "protected": {
+    "protectedSource": {
+      "count": 368,
+      "changed": []
+    },
+    "protectedHistory": {
+      "count": 116,
+      "changed": []
+    },
+    "protectedAcceptedInputs": {
+      "count": 74,
+      "changed": []
+    }
+  },
+  "lineagePreserved": true,
+  "backendDiff": [],
+  "qualityUnchanged": false,
+  "historicalQualityArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true
+  }
+}

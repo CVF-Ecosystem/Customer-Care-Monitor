@@ -1,6 +1,6 @@
 # R079 independent prerequisite review
 
-Status: CHANGES_REQUIRED (first pass)
+Status: REVIEW_PASS; FREEZE remains OPEN. Historical first pass: CHANGES_REQUIRED.
 
 Reviewer: Codex /root; documentary worker: Luna max /root/r079_worker.
 First packet: `6df6f6ef21aee802573bd12305263f5c16581f8a`.
@@ -21,3 +21,11 @@ Root assistance before handback: PF contract plus source pointers for post-termi
 Same authority: exact three worker paths, existing immutable seed1852566; application/native/provider/DB/host/network/push0. Review units46PASS inherited this tranche; repository gates do not establish runtime CVF behavior.
 
 M1 completion before worker release: S02 navigation range in both documents extended through603 to expose cited TestRunJob555..603; source identity already captured that range. Root continuity first-check failure used abbreviated R079 instead of full ID, corrected before3134ea4; this metadata error belongs to root, not Luna.
+
+## Independent final review
+
+Accepted exact repair packet `907568c0e0cfba8aa246e75d8a878913576c9141` after documentary repair1. F1 now consistently restricts keep-blocking to inspected R078+ source/compatible writers and keeps old-writer rollout/quiescence necessary before deployed reliance. No fleet guarantee or new recovery authority remains. M1 references and S02 range are valid. During repair1 root detected comparisonHead was being replaced by the repair release head; worker restored original b94 lineage and separately recorded643 repair comparison before handback. This is metadata assistance within repair1, not a second semantic repair or erased first finding.
+
+PF01..08 PASS for intake/proposal only: exact source map and effect inventory, continuous exclusion/dependency matrix, at least two architectural classes and concrete source-only next design, nonbinding exact documentary proposal, discriminating future evidence NOT_RUN, independently verified identities/citations/protection, separate quality record. [Final audit](probes/r079_independent_final_audit.json) binds all28 inputs and checks original quality arrays remain unchanged. Original6df6 first packet and first audit are retained. Immutable seed was root-authored/committed1852566 before activation11efa39/BUILD b94; worker never edited seed or committed artifacts. Root owns all commits.
+
+Gate evidence: repository preflight7/7 and cached origin/main..HEAD7/7 before each sensitive commit; catalog Windows PS5 and PS7 PASS; preparation46 gate units PASS30.799s inherited unchanged (scripts/tests untouched). First root next-move continuity6/7 failure retained above and corrected; no hosted CI claim. Current doctor25/1 PASS WITH NOTE, manifest snapshot/gate-profile migration/read-model notes remain. No application/provider/runtime/governance/DB/host/network/push proof was run. R078 inherited synthetic application acceptance remains limited and unchanged.
