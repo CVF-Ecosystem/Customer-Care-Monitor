@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-076",
+  "authorityKind": "DISPATCHER_OWNED_SOURCE_ONLY_RECOVERY_DESIGN_SPEC",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r076_worker",
+    "repairWorker": "Codex /root/r076_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md",
+    "docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md",
+    "docs/reviews/probes/r076_source_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_076.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_use",
+    "config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner 2026-10-11 continue roadmap, explicitly authorize Luna max worker and root orchestrator/reviewer. R074/R075 next move separately bounded source-only DESIGN/SPEC; no behavior/runtime/data dispatch.",
+  "claimScope": "Reviewed intended recovery requirements and source-grounded design only; no implemented recovery or runtime AI governance proof."
+}
