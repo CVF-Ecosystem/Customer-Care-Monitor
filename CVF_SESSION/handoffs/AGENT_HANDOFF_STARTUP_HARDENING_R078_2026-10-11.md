@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max IMPLEMENTATION_WORKER; root independent REVIEWER reserved
-- Next allowed move: CCMAI-RUNTIME-078 BUILD exact2 startup hardening and worker probes; Luna max authors static source/test/runner/plan before Go runtime release. R2 isolated synthetic validation ceiling8Go/retry0, current0; root independent review, no provider/external network/push, accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max REPAIR_WORKER ACK pending
+- Next allowed move: CCMAI-RUNTIME-078 CHANGES_REQUIRED pre-Go F1 test controls/F2 runner guards; Luna max ACKs current continuity before same-scope repair BUILD, Go0/8, no provider/external network/push, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake/design/spec/work-order ACK
@@ -18,3 +18,7 @@ Owner next continues accepted R077 proposal after local closure4a63460. Root fre
 ## Before-edit role acknowledgment
 
 2026-10-11 Luna max fresh canonical WORK_ORDER rehydration/CVF declaration ACK received before edits. Exact2 source/test plus worker probes accepted under immutable0579a79 before baseCommit. Root records BUILD static release; Go runtime release separately requires static fixture/runner review. Doctor25/1 and gateunits46PASS11.867s retained; root source reviewer independent.
+
+## Before-edit role acknowledgment
+
+Root fresh BUILD current tuple/handback rehydrated; transition independent REVIEWER for source6219da3 and first packet52837bf. No Go runtime release, source exact2 preserved before findings.
