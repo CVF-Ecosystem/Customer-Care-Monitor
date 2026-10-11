@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-081", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-081", "parked": true} -->
 
 ## Current R081
 
-CCMAI-RUNTIME-081 DISPATCH_READY source-only database lock/outcome/incarnation/cutover gate DG01..08; Luna max fresh ACK before committed BUILD release, worker exact2 docs/one author pass and root independent review; code/runtime/DB/provider/network/push0, deployed UNKNOWN/accounts parked.
+CCMAI-RUNTIME-081 BUILD source-only database integration addendum/identity DG01..08; worker exact2/one author pass, root independent review, no automatic repair; code/runtime/DB/provider/network/push0, deployed UNKNOWN/accounts parked.
 
 ## Historical R080
 
