@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-077",
+  "authorityKind": "DISPATCHER_OWNED_READONLY_REPOSITORY_TOPOLOGY_INTAKE",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r077_worker",
+    "repairWorker": "Codex /root/r077_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+    "docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md",
+    "docs/reviews/probes/r077_topology_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_077.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 under continuing roadmap/Luna max worker/root orchestrator-reviewer assignment. R076 next governed move separately bounded readonly topology/owner-fence intake; source-only versioned deployment examples and contracts, not observed hosts/data.",
+  "claimScope": "Repository-described topology/startup/ownership facts, explicit deployed UNKNOWN and concrete nonbinding next hardening draft; no runtime/durability/governance certification."
+}
