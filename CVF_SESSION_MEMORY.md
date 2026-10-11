@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-083", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-083", "parked": true} -->
 
 ## Current R083
 
-CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED F1..F4 at005c73d; root next explicit sole same-scope source repair release after worker fresh ACK. Pre-effect approval NOT_GRANTED, fixture campaigns0/2/Go0/provider0/no pull/push; previous records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-083 BUILD sole directed source repair1 F1..F4 exact3 and one remaining worker harness suite; handback for original-finding recheck. Pre-effect approval NOT_GRANTED; Docker/SQL fixture campaigns0/2/Go0/provider0/no pull/push, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
 
 ## Historical R082 (scoped documentary FROZEN)
 

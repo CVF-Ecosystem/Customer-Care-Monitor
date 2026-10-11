@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED F1..F4 at005c73d; root next explicit sole same-scope source repair release after worker fresh ACK. Pre-effect approval NOT_GRANTED, fixture campaigns0/2/Go0/provider0/no pull/push; previous records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r083_worker REPAIR_WORKER source-only until pre-effect approval
+- Next allowed move: CCMAI-RUNTIME-083 BUILD sole directed source repair1 F1..F4 exact3 and one remaining worker harness suite; handback for original-finding recheck. Pre-effect approval NOT_GRANTED; Docker/SQL fixture campaigns0/2/Go0/provider0/no pull/push, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -30,3 +30,7 @@ Fresh BUILD source005c73d and canonical state/memory/handoff/implementation/inde
 ## Before-edit role acknowledgment
 
 Root consolidated F1..F4 safety review returns first source; one explicitly directed same-scope worker source repair within seed, no safety approval or runtime dispatch. Root does not author worker implementation.
+
+## Before-edit role acknowledgment
+
+Fresh REVIEW f76be0c canonical tuple rehydrated; Luna max REPAIR_WORKER accepts exact F1..F4 before edits and waits release. Root records sole source repair1 inside unchanged objective/paths/R2/local-effect/commit-owner authority, including consistent task-owner labels versus harmless image annotations. One remaining worker python -B suite/raw sanitized capture, no Docker/SQL until separate committed safety approval. First005c73d/10PASS reported-no-raw and dissent retained, no root substantive implementation.

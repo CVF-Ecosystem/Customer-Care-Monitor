@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-083",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED F1..F4 at005c73d; root next explicit sole same-scope source repair release after worker fresh ACK. Pre-effect approval NOT_GRANTED, fixture campaigns0/2/Go0/provider0/no pull/push; previous records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.",
+  "nextAllowedMove": "CCMAI-RUNTIME-083 BUILD sole directed source repair1 F1..F4 exact3 and one remaining worker harness suite; handback for original-finding recheck. Pre-effect approval NOT_GRANTED; Docker/SQL fixture campaigns0/2/Go0/provider0/no pull/push, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r083_worker REPAIR_WORKER source-only until pre-effect approval",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -39,7 +39,7 @@
   },
   "candidatePlanning": {
     "id": "R083",
-    "status": "CHANGES_REQUIRED",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_083.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
@@ -866,7 +866,7 @@
     }
   },
   "currentRepair": {
-    "scope": "SOLE_DIRECTED_SOURCE_REPAIR_PENDING_ACK",
+    "scope": "EXPLICITLY_RELEASED_F1_F4_SOLE_SOURCE_REPAIR",
     "round": 1
   }
 }
