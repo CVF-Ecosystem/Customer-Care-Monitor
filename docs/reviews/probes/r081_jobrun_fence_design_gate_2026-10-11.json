@@ -359,7 +359,7 @@
       "referenceIds": [
         "S01"
       ],
-      "gitBlobSha1": "5cdbd2b20f3fc4c23d2f57f56b09d350f1baf752",
+      "gitBlobSha1": "2147c98e2c1de836a0fe46615534ebd702ca9847",
       "physicalSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
       "lineCount": 88,
       "citationRanges": [
@@ -368,7 +368,8 @@
           "lastLine": 20
         }
       ],
-      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline"
+      "contentStatus": "versioned source or existing test fixture; compared to R081 BUILD source baseline",
+      "physicalGitObjectSha1": "5cdbd2b20f3fc4c23d2f57f56b09d350f1baf752"
     },
     {
       "path": "backend/db/mysql.go",
@@ -719,7 +720,7 @@
       "referenceIds": [
         "D01"
       ],
-      "gitBlobSha1": "4164fa49e92ff4e62f2803fd313320aa90e83f5e",
+      "gitBlobSha1": "52e1c3b00a90c1758534e074a2efb46fcef13e37",
       "physicalSha256": "7c015a2d8264a79326d0633ed595e0b7ccfa16f9d7fe0e66d3b8805bcee914ca",
       "lineCount": 174,
       "citationRanges": [
@@ -728,14 +729,15 @@
           "lastLine": 174
         }
       ],
-      "contentStatus": "versioned documentary authority/reference at R081 BUILD"
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "4164fa49e92ff4e62f2803fd313320aa90e83f5e"
     },
     {
       "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
       "referenceIds": [
         "D02"
       ],
-      "gitBlobSha1": "4e94b421bcdddecef65bc7bac8f314f5dd9611b3",
+      "gitBlobSha1": "d32c2164f82e6ccce9f53af9c7b8d9bcaab1440a",
       "physicalSha256": "26626e6ef4b5d3d6a5469cc039b6a425bd82cdd8d3beb17da36b5c4d27775ff3",
       "lineCount": 54,
       "citationRanges": [
@@ -744,14 +746,15 @@
           "lastLine": 54
         }
       ],
-      "contentStatus": "versioned documentary authority/reference at R081 BUILD"
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "4e94b421bcdddecef65bc7bac8f314f5dd9611b3"
     },
     {
       "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
       "referenceIds": [
         "D03"
       ],
-      "gitBlobSha1": "27823584baba4508e825e94f2145d3969c9bd67a",
+      "gitBlobSha1": "3fc91963415571914368550efdc2efa739b00e9f",
       "physicalSha256": "20ea39b66a630ca6a9586c2a5c67c3d328c03a2eb3919cf644f4ca91b759898c",
       "lineCount": 13,
       "citationRanges": [
@@ -760,14 +763,15 @@
           "lastLine": 13
         }
       ],
-      "contentStatus": "versioned documentary authority/reference at R081 BUILD"
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "27823584baba4508e825e94f2145d3969c9bd67a"
     },
     {
       "path": "docs/reviews/probes/r080_source_identity_2026-10-11.json",
       "referenceIds": [
         "D04"
       ],
-      "gitBlobSha1": "10b0cd80f9bd084dae42ba93764d1286523011c0",
+      "gitBlobSha1": "e764a6519cdac886314367c98f8d9351f34a7a81",
       "physicalSha256": "d54a0a5372069e2df555869df40e164bdb71947d5e937d82a2745d05f88f4465",
       "lineCount": 1027,
       "citationRanges": [
@@ -776,14 +780,15 @@
           "lastLine": 1027
         }
       ],
-      "contentStatus": "versioned documentary authority/reference at R081 BUILD"
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "10b0cd80f9bd084dae42ba93764d1286523011c0"
     },
     {
       "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
       "referenceIds": [
         "W01"
       ],
-      "gitBlobSha1": "afe4cb055549b9428ac0b65c9fe1268b057ce334",
+      "gitBlobSha1": "e62d776e111af51596cebe2c6a19ce769357ed25",
       "physicalSha256": "45fd87aba92e687c907a7a066b89b2119dbee7a74b6202aa102bff9652991f24",
       "lineCount": 31,
       "citationRanges": [
@@ -792,7 +797,8 @@
           "lastLine": 31
         }
       ],
-      "contentStatus": "versioned documentary authority/reference at R081 BUILD"
+      "contentStatus": "versioned documentary authority/reference at R081 BUILD",
+      "physicalGitObjectSha1": "afe4cb055549b9428ac0b65c9fe1268b057ce334"
     },
     {
       "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
@@ -886,5 +892,42 @@
     "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json"
   ],
   "identityLimit": "Git blob SHA-1, physical SHA-256, and citation ranges bind these local bytes. They do not identify deployed binaries or databases and do not prove fencing, recovery, remote effect outcomes, fleet adoption, or CVF governance.",
-  "selfIdentityExclusion": "This JSON is linked from the addendum and excluded from its own inputs to avoid a self-referential hash. Root may bind its final committed blob after independent review."
+  "selfIdentityExclusion": "This JSON is linked from the addendum and excluded from its own inputs to avoid a self-referential hash. Root may bind its final committed blob after independent review.",
+  "rootMechanicalCorrection": {
+    "author": "Codex /root metadata REPAIR_WORKER",
+    "originalPacketCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+    "meaning": "Six original raw byte Git object hashes normalized to repository filtered blob identity. Physical SHA256 retained. Original packet and worker PASS retained; not semantic approval.",
+    "corrections": [
+      {
+        "path": "backend/go.mod",
+        "originalRawPhysicalGitObjectSha1": "5cdbd2b20f3fc4c23d2f57f56b09d350f1baf752",
+        "repositoryFilteredGitBlobSha1": "2147c98e2c1de836a0fe46615534ebd702ca9847"
+      },
+      {
+        "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+        "originalRawPhysicalGitObjectSha1": "4164fa49e92ff4e62f2803fd313320aa90e83f5e",
+        "repositoryFilteredGitBlobSha1": "52e1c3b00a90c1758534e074a2efb46fcef13e37"
+      },
+      {
+        "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+        "originalRawPhysicalGitObjectSha1": "4e94b421bcdddecef65bc7bac8f314f5dd9611b3",
+        "repositoryFilteredGitBlobSha1": "d32c2164f82e6ccce9f53af9c7b8d9bcaab1440a"
+      },
+      {
+        "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+        "originalRawPhysicalGitObjectSha1": "27823584baba4508e825e94f2145d3969c9bd67a",
+        "repositoryFilteredGitBlobSha1": "3fc91963415571914368550efdc2efa739b00e9f"
+      },
+      {
+        "path": "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+        "originalRawPhysicalGitObjectSha1": "10b0cd80f9bd084dae42ba93764d1286523011c0",
+        "repositoryFilteredGitBlobSha1": "e764a6519cdac886314367c98f8d9351f34a7a81"
+      },
+      {
+        "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
+        "originalRawPhysicalGitObjectSha1": "afe4cb055549b9428ac0b65c9fe1268b057ce334",
+        "repositoryFilteredGitBlobSha1": "e62d776e111af51596cebe2c6a19ce769357ed25"
+      }
+    ]
+  }
 }

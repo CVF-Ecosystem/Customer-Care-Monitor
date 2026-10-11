@@ -6681,6 +6681,27 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_081.md",
       "status": "ACTIVE",
       "description": "R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime081-evidence-0010",
+      "family": "continuity",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 first documentary packet and independent identity audit; implementation/runtime acceptance open."
+    },
+    {
+      "id": "runtime081-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 first documentary packet and independent identity audit; implementation/runtime acceptance open."
+    },
+    {
+      "id": "runtime081-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 first documentary packet and independent identity audit; implementation/runtime acceptance open."
     }
   ]
 }

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r081_worker SPEC_AUTHOR / documentary IMPLEMENTATION_WORKER
-- Next allowed move: CCMAI-RUNTIME-081 BUILD source-only database integration addendum/identity DG01..08; worker exact2/one author pass, root independent review, no automatic repair; code/runtime/DB/provider/network/push0, deployed UNKNOWN/accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / metadata REPAIR_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete
+- Next allowed move: CCMAI-RUNTIME-081 REVIEW_PENDING original packet0c36c9c and root mechanical identity normalization; root one consolidated DG01..08 review, no automatic repair. Code/runtime/DB/provider/network/push0, implementation readiness OPEN/deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -18,3 +18,7 @@ Owner next continues accepted R080 closure99f987c/review56b5328/packet402d6a6. R
 ## Before-edit role acknowledgment
 
 Fresh WORK_ORDER canonical tuple rehydrated at736351e; worker declaration/ACK received with no edits before BUILD. Root releases one bounded exact2 author pass after immutable32bd62b authority; source-only proposed contract or explicit blockers, no automatic repair. Root guessed nonexistent backend/pkg/uuid.go during source navigation, corrected with rg --files to helpers.go27; root overhead, not worker defect.
+
+## Before-edit role acknowledgment
+
+Fresh BUILD tuple rehydrated after context compaction. Worker one author pass/check reports PASS26inputs/25IDs/110lines at17da38e, handed back exact2; root preserves original0c36c9c. Root role transitions metadata REPAIR_WORKER for six raw CRLF object hashes to repository-filtered Git blobs, physicalSHA preserved; independent REVIEWER begins consolidated scope/source/contract review. No substantive worker prose edited.

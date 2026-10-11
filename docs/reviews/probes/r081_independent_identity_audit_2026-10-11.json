@@ -1,0 +1,105 @@
+{
+  "auditHead": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+  "identityFailures": [],
+  "linkFailures": [],
+  "unresolvedReferences": [],
+  "protected": {
+    "protectedSource": {
+      "count": 371,
+      "changed": []
+    },
+    "protectedHistory": {
+      "count": 120,
+      "changed": []
+    },
+    "protectedAcceptedInputs": {
+      "count": 87,
+      "changed": []
+    }
+  },
+  "sourceScope": "repository only, not runtime/governance proof",
+  "referencePathBinding": true,
+  "sourceComparisonChecks": [
+    {
+      "label": "R080 accepted source comparison preserved",
+      "match": true
+    },
+    {
+      "label": "R081 BUILD source comparison",
+      "match": true
+    }
+  ],
+  "unboundCitedPaths": [],
+  "identityInputCount": 26,
+  "referenceDefinitionCount": 25,
+  "identityRecordSha256": "9ec4d2262e9ba6cf3d5f65892b310b4f80a7e81eb4caf1460aa65cc5017817d4",
+  "historicalQualityArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true,
+    "durableFenceDesignSamples": true
+  },
+  "seedImmutableAtFirstBaseHead": true,
+  "backendDiff": [],
+  "workerDocLineCount": 110,
+  "newAppNativeInvocations": 0,
+  "originalPacketCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+  "originalIdentityAudit": {
+    "auditHead": "17da38e5dc2e005bc45065a44daf887640c35649",
+    "identityFailures": [
+      "backend/go.mod",
+      "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+      "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+      "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+      "docs/work_orders/CCMAI_RUNTIME_081.md"
+    ],
+    "linkFailures": [],
+    "unresolvedReferences": [],
+    "protected": {
+      "protectedSource": {
+        "count": 371,
+        "changed": []
+      },
+      "protectedHistory": {
+        "count": 120,
+        "changed": []
+      },
+      "protectedAcceptedInputs": {
+        "count": 87,
+        "changed": []
+      }
+    },
+    "sourceScope": "repository only, not runtime/governance proof",
+    "referencePathBinding": true,
+    "sourceComparisonChecks": [
+      {
+        "label": "R080 accepted source comparison preserved",
+        "match": true
+      },
+      {
+        "label": "R081 BUILD source comparison",
+        "match": true
+      }
+    ],
+    "unboundCitedPaths": [],
+    "identityInputCount": 26,
+    "referenceDefinitionCount": 25,
+    "identityRecordSha256": "e945ab1ad27b077f489de0cf3882114ac23a91a7ba36883cc8ed26a5b1f74cda",
+    "historicalQualityArraysUnchanged": {
+      "tranches": true,
+      "readonlyAuditSamples": true,
+      "designSpecSamples": true,
+      "topologyIntakeSamples": true,
+      "prerequisiteIntakeSamples": true,
+      "durableFenceDesignSamples": true
+    },
+    "seedImmutableAtFirstBaseHead": true,
+    "backendDiff": [],
+    "workerDocLineCount": 110,
+    "newAppNativeInvocations": 0
+  },
+  "mutableInputSnapshotRule": "W01 binds BUILD work order at17da38e; later canonical phase/status edits are expected and do not rewrite that capture. Review binds original committed identity and root mechanical correction."
+}

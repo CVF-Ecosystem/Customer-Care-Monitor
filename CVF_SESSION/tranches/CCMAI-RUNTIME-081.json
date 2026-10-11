@@ -46,18 +46,19 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 continues R080 scoped closure99f987c next move: source-only documentary lock/outcome/incarnation/cutover gate with Luna max worker/root independent reviewer. R080 nonbinding R2 documentary suggestion narrowed to R1 because no code/schema/security/runtime/external effects; later implementation remains R2+ and separately authorized.",
   "claimScope": "Source-backed intended SQL/lock/incarnation/cutover integration contract and future isolated acceptance plan, or precise unresolved blocker. No fixture/runtime/governance/adoption proof.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "32bd62b11ccb53193a1952d478fcf1d6e01fc3ba",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_081.md",
-  "buildCommit": null,
+  "buildCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -66,5 +67,5 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": "Fresh WORK_ORDER canonical tuple rehydrated at736351e; worker declaration/ACK received with no edits before BUILD. Root releases one bounded exact2 author pass after immutable32bd62b authority; source-only proposed contract or explicit blockers, no automatic repair. Root guessed nonexistent backend/pkg/uuid.go during source navigation, corrected with rg --files to helpers.go27; root overhead, not worker defect."
+  "workerAcknowledgment": "Fresh BUILD tuple rehydrated after context compaction. Worker one author pass/check reports PASS26inputs/25IDs/110lines at17da38e, handed back exact2; root preserves original0c36c9c. Root role transitions metadata REPAIR_WORKER for six raw CRLF object hashes to repository-filtered Git blobs, physicalSHA preserved; independent REVIEWER begins consolidated scope/source/contract review. No substantive worker prose edited."
 }

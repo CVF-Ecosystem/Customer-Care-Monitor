@@ -938,6 +938,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-081.json`
 - R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-081.json`
 - R081 bounded documentary authority/continuity/order or preserved R080 handoff; no runtime effects.: `docs/work_orders/CCMAI_RUNTIME_081.md`
+- R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md`
+- R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json`
+- R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
