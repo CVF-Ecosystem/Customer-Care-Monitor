@@ -46,19 +46,24 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 continues R080 scoped closure99f987c next move: source-only documentary lock/outcome/incarnation/cutover gate with Luna max worker/root independent reviewer. R080 nonbinding R2 documentary suggestion narrowed to R1 because no code/schema/security/runtime/external effects; later implementation remains R2+ and separately authorized.",
   "claimScope": "Source-backed intended SQL/lock/incarnation/cutover integration contract and future isolated acceptance plan, or precise unresolved blocker. No fixture/runtime/governance/adoption proof.",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "baseCommit": "32bd62b11ccb53193a1952d478fcf1d6e01fc3ba",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_081.md",
   "buildCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "reviewEvidence": [
+    "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+    "docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json",
+    "docs/reviews/probes/r081_independent_source_review_2026-10-11.json"
+  ],
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -67,5 +72,10 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": "Fresh BUILD tuple rehydrated after context compaction. Worker one author pass/check reports PASS26inputs/25IDs/110lines at17da38e, handed back exact2; root preserves original0c36c9c. Root role transitions metadata REPAIR_WORKER for six raw CRLF object hashes to repository-filtered Git blobs, physicalSHA preserved; independent REVIEWER begins consolidated scope/source/contract review. No substantive worker prose edited."
+  "workerAcknowledgment": "Fresh REVIEW tuple atca0a430 agrees memory/state/handoff/implementation/index. Independent root consolidated DG01..08 review returns F1 premature acceptance with unresolved control choices, F2 retirement/query/implicit-parent/demo graph, F3 dependency/range/fixture census traceability, F4 exact future test/fixture binding. Root does not author worker repair prose; R081 author/review budget consumed, no automatic repair campaign or FREEZE. Root ORCHESTRATOR records separate nonbinding next scope and quality.",
+  "integrationDisposition": "RETURNED_UNRESOLVED_DESIGN_BLOCKERS",
+  "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+  "workerAuthorPassesUsed": 1,
+  "independentReviewPassesUsed": 1,
+  "automaticRepairCampaignAuthorized": false
 }

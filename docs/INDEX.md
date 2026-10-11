@@ -941,6 +941,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/specs/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_ADDENDUM_2026-10-11.md`
 - R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/reviews/probes/r081_jobrun_fence_design_gate_2026-10-11.json`
 - R081 first documentary packet and independent identity audit; implementation/runtime acceptance open.: `docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/probes/r081_independent_source_review_2026-10-11.json`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md`
+- R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority.: `docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

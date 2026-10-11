@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / metadata REPAIR_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete
-- Next allowed move: CCMAI-RUNTIME-081 REVIEW_PENDING original packet0c36c9c and root mechanical identity normalization; root one consolidated DG01..08 review, no automatic repair. Code/runtime/DB/provider/network/push0, implementation readiness OPEN/deployed UNKNOWN/accounts parked.
+- Active role: Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle
+- Next allowed move: CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -22,3 +22,15 @@ Fresh WORK_ORDER canonical tuple rehydrated at736351e; worker declaration/ACK re
 ## Before-edit role acknowledgment
 
 Fresh BUILD tuple rehydrated after context compaction. Worker one author pass/check reports PASS26inputs/25IDs/110lines at17da38e, handed back exact2; root preserves original0c36c9c. Root role transitions metadata REPAIR_WORKER for six raw CRLF object hashes to repository-filtered Git blobs, physicalSHA preserved; independent REVIEWER begins consolidated scope/source/contract review. No substantive worker prose edited.
+
+## Before-edit role acknowledgment
+
+Fresh REVIEW tuple atca0a430 agrees memory/state/handoff/implementation/index. Independent root consolidated DG01..08 review returns F1 premature acceptance with unresolved control choices, F2 retirement/query/implicit-parent/demo graph, F3 dependency/range/fixture census traceability, F4 exact future test/fixture binding. Root does not author worker repair prose; R081 author/review budget consumed, no automatic repair campaign or FREEZE. Root ORCHESTRATOR records separate nonbinding next scope and quality.
+
+## Independent review disposition
+
+Original0c36c9c preserved; root identity normalization/review entryca0a430. One root review returns F1..F4 at docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md. CHANGES_REQUIRED/RETURNED_UNRESOLVED_DESIGN_BLOCKERS/FREEZE_OPEN. No worker prose repair, no closure and no automatic successor BUILD. Next scope docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md is nonbinding. Quality docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md and separate databaseIntegrationSamples preserve six historical arrays. Source/test/schema/runtime0; deployedUNKNOWN/fence/recoveryOPEN/accounts parked.
+
+## Review publication checks
+
+Returned-review worktree preflight PASS7/7; cached origin/main..ca0a430 PASS7/7; catalogs PS5.1 generation/preflight and PS7 Check PASS. Preparation46 gate units PASS31.958s retained with scripts/tests unchanged. Independent protected371source/120historical-record/87accepted-input physical identities and six original quality arrays unchanged. git diff --check and review local links PASS. No hosted CI/run, runtime or governance proof asserted.

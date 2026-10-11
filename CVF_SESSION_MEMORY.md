@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R081
 
-CCMAI-RUNTIME-081 REVIEW_PENDING original packet0c36c9c and root mechanical identity normalization; root one consolidated DG01..08 review, no automatic repair. Code/runtime/DB/provider/network/push0, implementation readiness OPEN/deployed UNKNOWN/accounts parked.
+CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.
 
 ## Historical R080
 

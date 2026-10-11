@@ -528,7 +528,7 @@
     "ownerInstructionDate": "2026-10-11",
     "model": "gpt-6-luna",
     "reasoningEffort": "max",
-    "assessment": "docs/reviews/R079_LUNA_MAX_PREREQUISITE_INTAKE_ASSESSMENT_2026-10-11.md",
+    "assessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
     "comparison": "NO_MATCHED_COMPARISON"
   },
   "designSpecSamples": [
@@ -682,6 +682,50 @@
       "rootRepairIdentityRefreshTransferred": true,
       "independentReviewCommit": "56b5328fb528a3139219740857bd5d2a8408a11b",
       "closureEvidence": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md"
+    }
+  ],
+  "databaseIntegrationSamples": [
+    {
+      "id": "CCMAI-RUNTIME-081",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "database_fence_lock_outcome_incarnation_cutover_documentary_gate",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "finalDisposition": "REVIEW_CHANGES_REQUIRED_RETURNED_UNRESOLVED_DESIGN_BLOCKERS_FREEZE_OPEN",
+      "semanticFindingGroups": [
+        "F1_unresolved_control_choices_premature_acceptance",
+        "F2_retirement_query_implicit_parent_demo_graph",
+        "F3_source_dependency_ranges_job_fixture_census",
+        "F4_exact_future_fixture_command_binding"
+      ],
+      "mechanicalFindings": [
+        "M1_six_raw_CRLF_object_hashes_vs_repository_blobs"
+      ],
+      "rootMechanicalRepairCommit": "ca0a430c91053fd57a4152c8f2490ed1d8dd9e99",
+      "workerAuthorPasses": 1,
+      "independentReviewPasses": 1,
+      "workerDocumentRepairRounds": 0,
+      "automaticRepairCampaignAuthorized": false,
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "workerStaticChecks": 1,
+      "workerStaticResultReported": "PASS",
+      "rootFirstIdentityAudit": "FAIL_six_blob_values_physical_SHA_correct",
+      "rootCorrectedIdentityAudit": "PASS26inputs_25IDs_protected371_120_87",
+      "parentAssistance": "DG01..08 bounded order and source navigation; no substantive worker prose draft; root supplemental independent source audit/M1 minor metadata correction/returned review/next scope.",
+      "workerPreparationOverhead": "Absent backend/db/models/notification_log.go navigation corrected to setting.go before single static check.",
+      "rootOriginOverhead": "Absent uuid.go and engine/notifications.go guesses corrected to actual paths; TEMP audit citation parser adapted to inline refs/JSON schema before validation.",
+      "assessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+      "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_DATABASE_INTEGRATION_DOCUMENTARY_SAMPLE"
     }
   ]
 }

@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex /root",
+  "reviewHead": "ca0a430c91053fd57a4152c8f2490ed1d8dd9e99",
+  "scope": "Source-only supplemental review inputs; no installed DB/FK/isolation claim",
+  "inputs": [
+    {
+      "path": "backend/go.sum",
+      "gitBlobSha1": "6c1169fe7b31cc02c2f95cf77e681572498e3581",
+      "physicalSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "lineCount": 288
+    },
+    {
+      "path": "backend/db/models/tenant.go",
+      "gitBlobSha1": "b500ebc5d641b5fd84216928a49d1a970c680a1a",
+      "physicalSha256": "bf10f6399b71671dfd38162a9b2b391a5fe74afa3cde94aa5f2b079995da46fe",
+      "lineCount": 19
+    },
+    {
+      "path": "backend/notifications/dispatcher.go",
+      "gitBlobSha1": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "physicalSha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008",
+      "lineCount": 266
+    },
+    {
+      "path": "backend/api/handlers/demo.go",
+      "gitBlobSha1": "062baa619cae22ac8dc8f7a913d1364a83a588d9",
+      "physicalSha256": "52a822a81bcc9a686923364a3a7a8d881c9df4f8c556d4777e2849903f327e3c",
+      "lineCount": 773
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "gitBlobSha1": "e71aa8ee954117651399b954cbfbc94341c47d69",
+      "physicalSha256": "7c66d56ddb361266e9a030f7192086048fbf1d075a7905f9a4cbc110b519ab67",
+      "lineCount": 157
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "gitBlobSha1": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "physicalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "lineCount": 398
+    },
+    {
+      "path": "backend/engine/snapshot_db_test.go",
+      "gitBlobSha1": "2e7b7db83fed860b7c75c02a9d48ce068900398f",
+      "physicalSha256": "99d774542f6a3e504e0fa91ad38e7bda338e55212d889a31a868b2983e4dcfab",
+      "lineCount": 505
+    },
+    {
+      "path": "backend/engine/analyzer_modes_test.go",
+      "gitBlobSha1": "0a64c6e01b5894e8d42c2901e80f893f52614771",
+      "physicalSha256": "a242380b25069de57076ceebc9fba730a1bce7d7cbb6d850de39c17cc60f0d44",
+      "lineCount": 475
+    },
+    {
+      "path": "backend/engine/scheduler_startup_hardening_test.go",
+      "gitBlobSha1": "f06ba0b27a279921f7b6344cfd958fa5865e8cc2",
+      "physicalSha256": "8e64201beecdb670660199450c53c65997bc917eaaa7457840a55ad9d93de9f7",
+      "lineCount": 585
+    }
+  ],
+  "fixtureCensusQuery": {
+    "command": "rg -n -i insert into.*jobs|replace into.*jobs backend --glob *test.go",
+    "exitCode": 0,
+    "matches": [
+      "backend\\cli\\prune_results_test.go:67:\t\tf.gdb.Exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Job prune', 'qc_analysis', '[]', '', '[]', 'cron', true, '[]', NOW(), NOW())`,",
+      "backend\\cli\\prune_results_test.go:242:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Job', 'qc_analysis', '[]', '', '[]', 'cron', true, '[]', NOW(), NOW())`,",
+      "backend\\engine\\analyzer_finalizer_logging_test.go:164:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'FL', 'qc_analysis', ?, 'r', '[{\"name\":\"x\"}]', 'manual', '', true, '[]', 'none', NOW(), NOW())`,",
+      "backend\\engine\\analyzer_incremental_test.go:172:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'Inc', ?, ?, 'Phan hoi dung han.', '[{\"name\":\"Hoi don\"}]', 'manual', '', true, '[]', 'none', NOW(), NOW())`,",
+      "backend\\engine\\analyzer_incremental_test.go:522:\t\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'Other', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', 'none', NOW(), NOW())`, otherJob, f.tenantID)",
+      "backend\\engine\\analyzer_modes_acceptance_test.go:33:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) SELECT ?, tenant_id, 'Other', job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, NOW(), NOW() FROM jobs WHERE id = ?`, id, f.jobID)",
+      "backend\\jobdispatch\\dispatch_test.go:54:\t\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Dispatch Test', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, id, f.tenantID)",
+      "backend\\mcp\\trigger_execution_test.go:850:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, ?, 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, f.jobID(), f.tenantA, f.jobName(f.tenantA))",
+      "backend\\mcp\\trigger_execution_test.go:934:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'second', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, \"job2-\"+f.tenantA, f.tenantA)",
+      "backend\\mcp\\trigger_execution_test.go:935:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'third', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, \"job-\"+f.tenantC, f.tenantC)",
+      "backend\\mcp\\permission_admission_test.go:282:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, ?, 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, \"job-\"+tn, tn, \"JOB-\"+forbiddenMarker+\"-\"+tn)",
+      "backend\\api\\handlers\\job_dispatch_shared_test.go:48:\texec(`INSERT INTO user_tenants (user_id, tenant_id, role, permissions) VALUES (?, ?, 'member', ?)`, m.userID, tenantID, `{\"jobs\":\"w\",\"messages\":\"r\"}`)",
+      "backend\\api\\handlers\\job_dispatch_shared_test.go:315:\tif err := db.DB.Exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'second', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, job2, fx.tenantID).Error; err != nil {",
+      "backend\\api\\handlers\\agent_run_config_admission_test.go:79:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Agent Run', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`,",
+      "backend\\api\\handlers\\job_config_admission_test.go:57:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Dispatch Test', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`,",
+      "backend\\api\\handlers\\job_result_source_integrity_test.go:99:\t\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Job', ?, ?, '', '[]', 'manual', true, '[]', NOW(), NOW())`,",
+      "backend\\api\\handlers\\job_results_confidence_test.go:49:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Job', 'classification', ?, '', '[]', 'manual', true, '[]', NOW(), NOW())`, jobID, tenantID, `[\"`+channelID+`\"]`)",
+      "backend\\api\\handlers\\dashboard_qc_violation_count_test.go:83:\t\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Job', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, job, tenant)",
+      "backend\\api\\handlers\\demo_test.go:48:\texec(`INSERT INTO jobs (id, tenant_id, name, description, job_type, input_channel_ids, outputs, is_active, created_at, updated_at) VALUES (?, ?, 'QC demo', '', 'qc_analysis', ?, '[]', true, NOW(), NOW())`,",
+      "backend\\api\\handlers\\job_f06_probe_test.go:29:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Probe', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, jobID, tenant)",
+      "backend\\api\\handlers\\jobs_test.go:41:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Job xoa', 'qc_analysis', ?, '', '[]', 'manual', true, '[]', NOW(), NOW())`,",
+      "backend\\engine\\analyzer_modes_test.go:153:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) SELECT ?, tenant_id, 'Other', job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, NOW(), NOW() FROM jobs WHERE id = ?`, otherJob, f.jobID)",
+      "backend\\engine\\reanalyze_test.go:91:\tdb.DB.Exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'QC Reanalyze', 'qc_analysis', ?, 'Nhan vien phai bao lai ket qua.', '[]', 'cron', '0 7 * * *', true, '[]', 'none', NOW(), NOW())`,",
+      "backend\\engine\\integration_test.go:139:\tdb.DB.Exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'QC Test Job', 'qc_analysis', ?, 'Nhan vien phai chao hoi lich su, tra loi day du.', '[]', 'manual', true, '[]', NOW(), NOW())`,",
+      "backend\\engine\\source_execution_receipt_db_test.go:98:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'EX', ?, ?, 'Phan hoi dung han.', '[{\"name\":\"Hoi don\"}]', 'manual', '', true, '[]', 'none', NOW(), NOW())`, f.jobID, f.tenantID, jobType, string(channels))",
+      "backend\\api\\handlers\\results_business_day_test.go:58:\t\tbizExec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'QC', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', 'none', NOW(), NOW())`, job, tn)",
+      "backend\\engine\\scheduler_startup_hardening_test.go:67:\tf.base.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content,",
+      "backend\\engine\\scheduler_startup_hardening_test.go:140:\tf.base.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content,",
+      "backend\\engine\\snapshot_db_test.go:137:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'QC Snapshot', 'qc_analysis', ?, 'Phan hoi dung han.', '[]', 'manual', '', true, '[]', 'none', NOW(), NOW())`,",
+      "backend\\engine\\job_run_ownership_test.go:252:\tf.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'T', 'qc_analysis', ?, 'r', '[{\"name\":\"x\"}]', 'manual', '', true, '[]', 'none', NOW(), NOW())`,",
+      "backend\\api\\handlers\\agent_analysis_admission_test.go:31:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, is_active, outputs, created_at, updated_at) VALUES (?, ?, 'Second', 'qc_analysis', '[]', '', '[]', 'manual', true, '[]', NOW(), NOW())`, second, fx.tenantID)",
+      "backend\\api\\handlers\\results_test.go:130:\tdb.DB.Exec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'QC Ket qua', 'qc_analysis', ?, 'Quy tac', '[]', 'cron', '0 7 * * *', true, '[]', 'none', NOW(), NOW())`,",
+      "backend\\api\\handlers\\results_test.go:326:\texec(`INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content, rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at) VALUES (?, ?, 'QC srcint', 'qc_analysis', ?, 'Quy tac', '[]', 'manual', '', true, '[]', 'none', NOW(), NOW())`,"
+    ],
+    "limit": "Positive counterexamples only; regex census not proof of all imports or external writers"
+  }
+}

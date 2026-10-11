@@ -266,7 +266,7 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-081 REVIEW_PENDING original packet0c36c9c and root mechanical identity normalization; root one consolidated DG01..08 review, no automatic repair. Code/runtime/DB/provider/network/push0, implementation readiness OPEN/deployed UNKNOWN/accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_081.md",
     "buildDispatched": false,
     "actualWorkerModel": {
@@ -278,7 +278,7 @@
       "automaticRetries": 0
     },
     "publicationStatus": "R081_LOCAL_ONLY_NO_PUSH_AUTHORITY",
-    "modelAssessment": null,
+    "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
     "activeLocalClosureOrder": null,
     "localClosureEvidence": null,
     "sourceCheckpoint": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
@@ -1662,12 +1662,19 @@
   },
   "databaseIntegrationGate": {
     "trancheId": "CCMAI-RUNTIME-081",
-    "status": "REVIEW_PENDING",
+    "status": "CHANGES_REQUIRED",
     "sourceImplementation": "NOT_DISPATCHED",
     "runtimeEvidence": "NOT_RUN",
     "deployedFacts": "UNKNOWN",
-    "integrationReadiness": "OPEN",
+    "integrationReadiness": "OPEN_UNRESOLVED_DESIGN_BLOCKERS",
     "durableFenceImplementation": "OPEN",
-    "recoveryImplementation": "OPEN"
+    "recoveryImplementation": "OPEN",
+    "implementationReady": false,
+    "buildCommit": "0c36c9c4d2a57c81a43ac3ffc7eeb8045e068fc4",
+    "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+    "gateDisposition": "RETURNED_UNRESOLVED_DESIGN_BLOCKERS",
+    "freeze": "OPEN",
+    "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+    "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md"
   }
 }

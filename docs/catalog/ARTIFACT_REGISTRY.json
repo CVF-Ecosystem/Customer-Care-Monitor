@@ -6702,6 +6702,34 @@
       "path": "docs/reviews/probes/r081_independent_identity_audit_2026-10-11.json",
       "status": "ACTIVE",
       "description": "R081 first documentary packet and independent identity audit; implementation/runtime acceptance open."
+    },
+    {
+      "id": "runtime081-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r081_independent_source_review_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
+    },
+    {
+      "id": "runtime081-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R081 independent returned integration gate, separate Luna quality and nonbinding next scope; FREEZE OPEN/no runtime authority."
     }
   ]
 }

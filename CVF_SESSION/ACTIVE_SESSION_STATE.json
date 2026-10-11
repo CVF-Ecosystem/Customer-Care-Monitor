@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-081",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-081 REVIEW_PENDING original packet0c36c9c and root mechanical identity normalization; root one consolidated DG01..08 review, no automatic repair. Code/runtime/DB/provider/network/push0, implementation readiness OPEN/deployed UNKNOWN/accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / metadata REPAIR_WORKER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,10 +34,11 @@
   },
   "candidatePlanning": {
     "id": "R081",
-    "status": "REVIEW_PENDING",
+    "status": "CHANGES_REQUIRED",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_081.md",
     "sourceImplementation": "NOT_DISPATCHED",
-    "sourceOrRuntimeDispatched": false
+    "sourceOrRuntimeDispatched": false,
+    "implementationReady": false
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -593,8 +594,8 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": null,
-  "modelAssessment": null,
+  "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+  "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
   "closureEvidence": null,
   "independentReviewCommit": null,
   "closureStatus": null,
@@ -770,5 +771,19 @@
   },
   "historicalPublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R077"
+  },
+  "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+  "currentReview": {
+    "tranche": "CCMAI-RUNTIME-081",
+    "result": "CHANGES_REQUIRED",
+    "gateDisposition": "RETURNED_UNRESOLVED_DESIGN_BLOCKERS",
+    "freeze": "OPEN",
+    "findingGroups": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ],
+    "automaticRepairCampaignAuthorized": false
   }
 }
