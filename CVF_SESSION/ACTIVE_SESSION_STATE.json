@@ -600,7 +600,7 @@
   "closureStatus": null,
   "closureChecks": null,
   "localClosureCommit": null,
-  "publicationStatus": "R079_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+  "publicationStatus": "R080_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",

@@ -18,3 +18,7 @@ Owner next continues R079 scoped closure25b3f40/review498fe42. Root fresh canoni
 ## Before-edit role acknowledgment
 
 Fresh WORK_ORDER tuple rehydrated before BUILD, Luna max declaration/ACK at41060ba received with no edits. Immutable seedcc9e31f precedesbase/activation. Root releases exact3 documentary files only, records mutation/deletion/prune source pointers as assistance not prose. Intended design requires independent REVIEW; 46gateunitsPASS38.818s retained, native0.
+
+## Root metadata projection repair during BUILD
+
+SESSION_SYNC_STEWARD root audited current nested/top-level routing. Activation retained stale publicationStatus R079_LOCAL_ONLY_NO_PUSH_AUTHORITY; corrected to R080_LOCAL_ONLY_NO_PUSH_AUTHORITY with unchanged no-push effect boundary. Root origin only, not worker finding. Historical R079 continuity/publication remains preserved; source/seed/runtime and acceptance unchanged.
