@@ -6800,6 +6800,13 @@
       "path": "docs/reviews/probes/r082_independent_final_audit_2026-10-11.json",
       "status": "ACTIVE",
       "description": "R082 final original-finding recheck identity/protection receipt; worker failures retained, no runtime proof."
+    },
+    {
+      "id": "runtime082-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Separate Luna max R082 repair-assisted documentary quality sample; first/repair failures retained."
     }
   ]
 }

@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R082
 
-CCMAI-RUNTIME-082 REVIEW final R1/R2 finding recheck at repaired documentary144f68f; root records scoped disposition before FREEZE. One repair consumed, no further campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN, implementation OPEN/deployed UNKNOWN/accounts parked.
+CCMAI-RUNTIME-082 REVIEW_PASS selected intended contract/census/nonbinding future plan at144f68f; root CLOSER next scoped documentary FREEZE after gates/commit. Implementation/fixture/DDL/restore/adoption remain OPEN/UNKNOWN, no new campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN/accounts parked.
 
 ## Historical R081 (returned, FREEZE OPEN)
 

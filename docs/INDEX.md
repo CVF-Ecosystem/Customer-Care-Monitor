@@ -955,6 +955,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance.: `docs/reviews/probes/r082_independent_initial_identity_audit_2026-10-11.json`
 - R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance.: `docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md`
 - R082 final original-finding recheck identity/protection receipt; worker failures retained, no runtime proof.: `docs/reviews/probes/r082_independent_final_audit_2026-10-11.json`
+- Separate Luna max R082 repair-assisted documentary quality sample; first/repair failures retained.: `docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

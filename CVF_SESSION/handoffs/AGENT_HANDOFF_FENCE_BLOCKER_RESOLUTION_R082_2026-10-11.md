@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete
-- Next allowed move: CCMAI-RUNTIME-082 REVIEW final R1/R2 finding recheck at repaired documentary144f68f; root records scoped disposition before FREEZE. One repair consumed, no further campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN, implementation OPEN/deployed UNKNOWN/accounts parked.
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-082 REVIEW_PASS selected intended contract/census/nonbinding future plan at144f68f; root CLOSER next scoped documentary FREEZE after gates/commit. Implementation/fixture/DDL/restore/adoption remain OPEN/UNKNOWN, no new campaign/source/runtime/DB/provider/network/push; R081 returned/FREEZE_OPEN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -38,3 +38,7 @@ Fresh canonical BUILD tuple e554 release / repaired packet4b962897 rehydrated; r
 ## Before-edit role acknowledgment
 
 Fresh BUILD canonical tuple and repaired144f68f rehydrated; root transitions from minor documentary REPAIR_WORKER to independent REVIEWER for final original R1/R2 recheck only. Worker BUILD ACK preceded repair, exact2 packet4b96289 and both worker static FAIL retained; root source-factual presentation corrections separately attributed. No selected design/phase logic authored by root, no additional campaign.
+
+## Before-edit role acknowledgment
+
+Fresh REVIEW tuple3fe8d75 acknowledged; root final original R1/R2 recheck passes only selected intended contract/census/nonbinding plan. Source/runtime readiness remains OPEN; preserve both worker FAIL and initial CHANGES_REQUIRED. Root records independent disposition before CLOSER/FREEZE.

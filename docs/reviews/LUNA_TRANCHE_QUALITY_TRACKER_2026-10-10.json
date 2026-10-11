@@ -528,7 +528,7 @@
     "ownerInstructionDate": "2026-10-11",
     "model": "gpt-6-luna",
     "reasoningEffort": "max",
-    "assessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+    "assessment": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
     "comparison": "NO_MATCHED_COMPARISON"
   },
   "designSpecSamples": [
@@ -728,6 +728,45 @@
       "confidence": "LOW_SINGLE_DATABASE_INTEGRATION_DOCUMENTARY_SAMPLE",
       "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
       "publicationReceipt": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
+    }
+  ],
+  "fenceBlockerResolutionSamples": [
+    {
+      "id": "CCMAI-RUNTIME-082",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "selected_fence_blocker_resolution_documentary_contract",
+      "sampleType": "REPAIR_ASSISTED_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "semanticFindingGroups": [
+        "R1_destructive_file_tail_exclusion",
+        "R2_writer_phase_predicate_sealed_tail"
+      ],
+      "workerRepairCommit": "4b9628977d32cd35bd6c47e129cc641e270e005a",
+      "acceptedDocumentCommit": "144f68f1c0584d68c7101692478e38a73705adb2",
+      "finalDisposition": "SCOPED_DOCUMENTARY_REVIEW_PASS",
+      "workerAuthorPasses": 1,
+      "independentReviewPasses": 1,
+      "finalOriginalFindingRecheck": 1,
+      "workerDocumentRepairRounds": 1,
+      "workerStaticChecks": 2,
+      "workerStaticResults": [
+        "FAIL_seed_range",
+        "FAIL_prewrite_diff_and_hardcoded_reference_count"
+      ],
+      "independentFinalArtifactCheck": "PASS",
+      "applicationNativeInvocations": 0,
+      "parentAssistance": "FR01..08/order/source pointers/consolidated R1R2/root minor citations-ranges-cwd-source-factual presentation and identities/all commits; no substantive worker design draft",
+      "rootOriginOverhead": "TEMP regex/parser/PowerShell quoting errors and absent model guesses resolved by rg; retained in reviews",
+      "assessment": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
+      "reviewEvidence": "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_REPAIR_ASSISTED_DOCUMENTARY_SAMPLE"
     }
   ]
 }
