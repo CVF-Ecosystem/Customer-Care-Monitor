@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R076 FROZEN local recovery design/spec; next read-only topology intake, runtime/source recovery OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md`
+- Active R077 repository-only topology intake and startup hardening draft, no runtime dispatch.: `CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -839,6 +839,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - DR01..10 intended documentary REVIEW_PASS; recovery implementation not dispatched.: `docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md`
 - Independent static source13/input5/protected367/history110/seed proof; runtime0.: `docs/reviews/probes/r076_root_scope_review_2026-10-11.json`
 - DR01..10 intended contract and future AR/NC matrix; implementation not dispatched.: `docs/specs/DISPATCH_RECOVERY_R076_2026-10-11.md`
+- Immutable R1 root seed for Luna max repository-only topology intake.: `CVF_SESSION/authority/CCMAI-RUNTIME-077.json`
+- TI01..08 bounded repository topology/intended hardening draft, application native0.: `docs/work_orders/CCMAI_RUNTIME_077.md`
+- Historical R076 intended recovery DESIGN/SPEC local FREEZE, implementation OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md`
+- R077 documentary phase/roles/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-077.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

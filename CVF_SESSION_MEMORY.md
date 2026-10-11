@@ -9,9 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-076", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-077", "parked": true} -->
 
-## Current R076
+## Current R077
+
+CCMAI-RUNTIME-077 DISPATCH_READY repository-only topology/owner-fence intake and concrete nonbinding startup hardening draft. Luna max ACK before documentary BUILD; root independent reviewer. Deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; Facebook/Zalo OA parked.
+
+## Historical R076
 
 CCMAI-RUNTIME-076 FROZEN local recovery DESIGN/SPEC only after independent review4ec4599; implementation/startup cleanup hardening OPEN. Root next separately bounds read-only topology/owner-fence evidence intake, UNKNOWN explicit, before any R2+ source/runtime/DB scope. No app/provider/DB/network/push authority; Facebook/Zalo OA parked.
 

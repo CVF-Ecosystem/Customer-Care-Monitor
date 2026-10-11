@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R076 FROZEN local recovery design/spec; next read-only topology intake, runtime/source recovery OPEN."
+      "description": "Active R077 repository-only topology intake and startup hardening draft, no runtime dispatch."
     },
     {
       "id": "r060-work-order",
@@ -5988,6 +5988,34 @@
       "path": "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "Scoped local R076 documentary FREEZE only, recovery implementation/startup hardening OPEN."
+    },
+    {
+      "id": "runtime077-previous-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Historical R076 intended recovery DESIGN/SPEC local FREEZE, implementation OPEN."
+    },
+    {
+      "id": "runtime077-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-077.json",
+      "status": "ACTIVE",
+      "description": "Immutable R1 root seed for Luna max repository-only topology intake."
+    },
+    {
+      "id": "runtime077-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-077.json",
+      "status": "ACTIVE",
+      "description": "R077 documentary phase/roles/scope record."
+    },
+    {
+      "id": "runtime077-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_077.md",
+      "status": "ACTIVE",
+      "description": "TI01..08 bounded repository topology/intended hardening draft, application native0."
     }
   ]
 }

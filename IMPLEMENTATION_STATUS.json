@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -266,20 +266,18 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-076 FROZEN local recovery DESIGN/SPEC only after independent review4ec4599; implementation/startup cleanup hardening OPEN. Root next separately bounds read-only topology/owner-fence evidence intake, UNKNOWN explicit, before any R2+ source/runtime/DB scope. No app/provider/DB/network/push authority; Facebook/Zalo OA parked.",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_076.md",
+    "nextObjective": "CCMAI-RUNTIME-077 DISPATCH_READY repository-only topology/owner-fence intake and concrete nonbinding startup hardening draft. Luna max ACK before documentary BUILD; root independent reviewer. Deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; Facebook/Zalo OA parked.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_077.md",
     "buildDispatched": false,
-    "currentExecutionBudget": {
-      "applicationNativeInvocations": 0,
-      "automaticRetries": 0
-    },
     "actualWorkerModel": {
       "model": "gpt-6-luna",
       "reasoningEffort": "max"
     },
-    "publicationStatus": "R076_LOCAL_ONLY_NO_PUSH_AUTHORITY",
-    "publishedClosureCommit": null,
-    "modelAssessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md"
+    "currentExecutionBudget": {
+      "applicationNativeInvocations": 0,
+      "automaticRetries": 0
+    },
+    "publicationStatus": "R077_LOCAL_ONLY_NO_PUSH_AUTHORITY"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -1452,5 +1450,33 @@
       "runtimeProof": "NOT_RUN",
       "publication": "R076_LOCAL_ONLY_NOT_PUSHED"
     }
+  },
+  "historicalR076OwnerRoutingProjection": {
+    "date": "2026-10-11",
+    "parkedAccounts": [
+      "facebook",
+      "zalo_oa"
+    ],
+    "nextObjective": "CCMAI-RUNTIME-076 FROZEN local recovery DESIGN/SPEC only after independent review4ec4599; implementation/startup cleanup hardening OPEN. Root next separately bounds read-only topology/owner-fence evidence intake, UNKNOWN explicit, before any R2+ source/runtime/DB scope. No app/provider/DB/network/push authority; Facebook/Zalo OA parked.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_076.md",
+    "buildDispatched": false,
+    "currentExecutionBudget": {
+      "applicationNativeInvocations": 0,
+      "automaticRetries": 0
+    },
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max"
+    },
+    "publicationStatus": "R076_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+    "publishedClosureCommit": null,
+    "modelAssessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md"
+  },
+  "topologyIntake": {
+    "trancheId": "CCMAI-RUNTIME-077",
+    "status": "DISPATCH_READY",
+    "sourceImplementation": "NOT_DISPATCHED",
+    "deployedFacts": "UNKNOWN",
+    "runtimeEvidence": "NOT_RUN"
   }
 }

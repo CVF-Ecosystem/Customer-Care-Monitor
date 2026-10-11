@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-076",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-076 FROZEN local recovery DESIGN/SPEC only after independent review4ec4599; implementation/startup cleanup hardening OPEN. Root next separately bounds read-only topology/owner-fence evidence intake, UNKNOWN explicit, before any R2+ source/runtime/DB scope. No app/provider/DB/network/push authority; Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-077",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-077 DISPATCH_READY repository-only topology/owner-fence intake and concrete nonbinding startup hardening draft. Luna max ACK before documentary BUILD; root independent reviewer. Deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max documentary worker pending",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -33,10 +33,10 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R076",
-    "status": "FROZEN",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_076.md",
-    "sourceImplementation": "NOT_DISPATCHED_FROZEN_DESIGN_ONLY",
+    "id": "R077",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_077.md",
+    "sourceImplementation": "NOT_DISPATCHED_DOCUMENTARY_ONLY",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -267,7 +267,7 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "OWNER_AUTHORIZED_LUNA_MAX_DOCUMENTARY_WORKER_ROOT_INDEPENDENT_REVIEW",
+  "roleRoute": "OWNER_AUTHORIZED_LUNA_MAX_INTAKE_ROOT_INDEPENDENT_REVIEW",
   "pendingValidationProposal": {
     "status": "NO_APPLICATION_NATIVE_AUTHORITY",
     "workerPermittedNative": 0,
@@ -312,9 +312,7 @@
     }
   },
   "publication": {
-    "status": "NOT_AUTHORIZED_IN_R076",
-    "priorR075ClosureRemoteSha": "9181f3826f6a90db0042b25b9c955b253ea0828c",
-    "priorR068AttemptUnchanged": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED"
+    "status": "NOT_AUTHORIZED_IN_R077"
   },
   "historicalR070ClosureSummary": {
     "currentMode": "FREEZE",
@@ -444,7 +442,7 @@
     "typecheckInvocations": 2,
     "goInvocations": 0
   },
-  "modelRoutingEvidence": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+  "modelRoutingEvidence": null,
   "historicalR072CurrentProjection": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
@@ -595,30 +593,53 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": "docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md",
-  "modelAssessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md",
-  "independentReviewCommit": "4ec4599ece2bfd15ae6f70311d3666332ade26f1",
-  "closureStatus": "FROZEN_LOCAL_DESIGN_ONLY",
-  "closureChecks": {
-    "preflight": "PASS7/7 final closure worktree",
-    "prRange": "PASS7/7 cached origin/main..HEAD",
-    "catalogPS5": "PASS via regeneration/preflight",
-    "catalogPS7": "PASS",
-    "gateUnits": "Final46PASS30.438s; preparation46PASS33.881s retained, repository tooling tests only",
-    "markdownLinks": "7paired/5review-assessment/2closure links PASS",
-    "identityAndScope": "source13/input5/citations44/protected367/history110/immutable seed/original5implementation+R074 audit entries unchanged PASS",
-    "applicationNativeInvocations": 0,
-    "runtimeProof": "NOT_RUN",
-    "publication": "R076_LOCAL_ONLY_NOT_PUSHED"
-  },
+  "reviewEvidence": null,
+  "modelAssessment": null,
+  "closureEvidence": null,
+  "independentReviewCommit": null,
+  "closureStatus": "OPEN_DOCUMENTARY_ONLY",
+  "closureChecks": {},
   "localClosureCommit": null,
-  "publicationStatus": "NOT_AUTHORIZED_IN_R076",
+  "publicationStatus": "NOT_AUTHORIZED_IN_R077",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
     "priorR068Status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "priorR068Receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
     "priorR068Retried": false
+  },
+  "historicalR076ContinuationProjection": {
+    "currentMode": "FREEZE",
+    "activePhase": "FREEZE",
+    "activeTranche": "CCMAI-RUNTIME-076",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-076 FROZEN local recovery DESIGN/SPEC only after independent review4ec4599; implementation/startup cleanup hardening OPEN. Root next separately bounds read-only topology/owner-fence evidence intake, UNKNOWN explicit, before any R2+ source/runtime/DB scope. No app/provider/DB/network/push authority; Facebook/Zalo OA parked.",
+    "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary worker idle",
+    "candidatePlanning": {
+      "id": "R076",
+      "status": "FROZEN",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_076.md",
+      "sourceImplementation": "NOT_DISPATCHED_FROZEN_DESIGN_ONLY",
+      "sourceOrRuntimeDispatched": false
+    },
+    "reviewEvidence": "docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md",
+    "modelAssessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+    "closureEvidence": "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md",
+    "closureStatus": "FROZEN_LOCAL_DESIGN_ONLY",
+    "closureChecks": {
+      "preflight": "PASS7/7 final closure worktree",
+      "prRange": "PASS7/7 cached origin/main..HEAD",
+      "catalogPS5": "PASS via regeneration/preflight",
+      "catalogPS7": "PASS",
+      "gateUnits": "Final46PASS30.438s; preparation46PASS33.881s retained, repository tooling tests only",
+      "markdownLinks": "7paired/5review-assessment/2closure links PASS",
+      "identityAndScope": "source13/input5/citations44/protected367/history110/immutable seed/original5implementation+R074 audit entries unchanged PASS",
+      "applicationNativeInvocations": 0,
+      "runtimeProof": "NOT_RUN",
+      "publication": "R076_LOCAL_ONLY_NOT_PUSHED"
+    },
+    "independentReviewCommit": "4ec4599ece2bfd15ae6f70311d3666332ade26f1",
+    "localClosureCommit": null,
+    "modelRoutingEvidence": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md"
   }
 }
