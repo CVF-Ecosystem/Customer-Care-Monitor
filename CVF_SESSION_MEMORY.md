@@ -9,9 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-083", "parked": true} -->
 
-## Current R082
+## Current R083
+
+CCMAI-RUNTIME-083 WORK_ORDER DISPATCH_READY for bounded R2 disposable MySQL fixture tool/prerequisite; worker fresh ACK before committed BUILD source release. Root safety review before first owned Docker/SQL effect; max1 fixture campaign per role/Go0/provider0/no pull/push. R082 frozen documentary/R081 returned, fence implementation/readiness OPEN/deployed UNKNOWN/accounts parked.
+
+## Historical R082 (scoped documentary FROZEN)
 
 CCMAI-RUNTIME-082 FROZEN scoped intended contract/census/nonbinding future plan at144f68f/reviewfebd451. ORCHESTRATOR next bounds separate R2 fixture/schema prerequisite authority before implementation/test dispatch; no generic design retry or implicit runtime activity. Fixture/DDL/restore/adoption UNKNOWN, fencing/recovery/readiness OPEN; source NOT_DISPATCHED/runtime NOT_RUN/no push, R081 returned/FREEZE_OPEN/accounts parked.
 

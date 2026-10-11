@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R082 R1 fence blocker-resolution intended contract/census; no source/runtime authority."
+      "description": "Active R083 R2 local disposable fixture prerequisite/tool; fence implementation remains open."
     },
     {
       "id": "r060-work-order",
@@ -6814,6 +6814,34 @@
       "path": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R082 scoped intended-contract documentary closure only; runtime/readiness and R081 remain open."
+    },
+    {
+      "id": "runtime083-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-083.json",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-083.json",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_083.md",
+      "status": "ACTIVE",
+      "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
     }
   ]
 }
