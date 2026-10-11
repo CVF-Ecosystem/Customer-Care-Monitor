@@ -405,7 +405,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 22
+          "lastLine": 14
         }
       ]
     },
@@ -415,7 +415,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 29
+          "lastLine": 25
         }
       ]
     },
@@ -775,7 +775,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 111
+          "lastLine": 113
         }
       ]
     }
@@ -1708,7 +1708,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 22
+          "lastLine": 14
         }
       ]
     },
@@ -1733,14 +1733,14 @@
       "referenceIds": [
         "SPEC01"
       ],
-      "gitBlobSha1": "c69593359cdec0d5fe2fe2e0f8cd3e4c37f1a729",
+      "gitBlobSha1": "4061a7d490385eee6eda5ffccfcdfa5d3a29c40c",
       "gitBlobStatus": "EXPECTED_FILTERED_CONTENT_BLOB_NOT_YET_STORED",
-      "physicalSha256": "454e046d435f2add9746fefb05ae415147aca19995d69b7bb0fc5f2591f33bea",
-      "lineCount": 111,
+      "physicalSha256": "e582367a8fd14ab729d5b221fcd2009a3a84a5bbfb9b81002c79fae19fbb4264",
+      "lineCount": 113,
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 111
+          "lastLine": 113
         }
       ]
     },
@@ -1796,7 +1796,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 29
+          "lastLine": 25
         }
       ]
     }
@@ -2300,9 +2300,9 @@
         ]
       }
     ],
-    "workingDirectory": "backend",
-    "buildCommand": "go build ./...",
-    "testCommand": "go test -json -count=1 -timeout=20m ./db ./engine ./api/handlers ./cli -run '^(TestJobRunFenceMigrationDDL|TestJobRunFenceRestoreBarrier|TestJobRunFenceAdmission|TestJobRunFenceWriterAndNotification|TestJobRunFenceRetirementOutcomes|TestJobRunFenceJobDestructive|TestJobRunFenceDemoImportReset|TestJobRunFenceChannelSyncDelete|TestJobRunFencePruneBatches)$'",
+    "workingDirectory": "projectRoot",
+    "buildCommand": "go -C backend build ./...",
+    "testCommand": "go -C backend test -json -count=1 -timeout=20m ./db ./engine ./api/handlers ./cli -run '^(TestJobRunFenceMigrationDDL|TestJobRunFenceRestoreBarrier|TestJobRunFenceAdmission|TestJobRunFenceWriterAndNotification|TestJobRunFenceRetirementOutcomes|TestJobRunFenceJobDestructive|TestJobRunFenceDemoImportReset|TestJobRunFenceChannelSyncDelete|TestJobRunFencePruneBatches)$'",
     "perActorCeiling": "one build and one targeted test per worker and independent R2 reviewer; four Go invocations total, zero retries",
     "stopRules": [
       "FAIL",
@@ -2330,5 +2330,16 @@
       "multirow/gap/phantom/deadlock behavior",
       "delayed remote effect limits"
     ]
+  },
+  "rootMechanicalCorrection": {
+    "author": "Codex /root metadata REPAIR_WORKER",
+    "originalPacketCommit": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
+    "changes": [
+      "D04 range1..14/D05 range1..25",
+      "S16 dangling citations changed to actual dispatcher S17; I01 local link definition",
+      "future commands use go -C backend from project root; no command executed",
+      "spec physical/blob identity refreshed; original failed worker check preserved"
+    ],
+    "noSubstantiveWorkerProseDraft": true
   }
 }

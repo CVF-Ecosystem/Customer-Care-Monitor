@@ -6765,6 +6765,34 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_082.md",
       "status": "ACTIVE",
       "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0010",
+      "family": "continuity",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r082_fence_blocker_resolution_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r082_independent_initial_identity_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
+    },
+    {
+      "id": "runtime082-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/R082_INDEPENDENT_FENCE_BLOCKER_RESOLUTION_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 original selected-contract packet/independent checks/consolidated first review; no runtime acceptance."
     }
   ]
 }

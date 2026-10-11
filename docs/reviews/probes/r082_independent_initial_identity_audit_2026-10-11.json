@@ -1,0 +1,273 @@
+{
+  "auditHead": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
+  "identityFailures": [],
+  "linkFailures": [],
+  "sourceScope": "source/documentary only; not runtime or governance proof",
+  "unresolvedReferences": [],
+  "referencePathBinding": true,
+  "unboundCitedPaths": [],
+  "identityInputCount": 56,
+  "referenceDefinitionCount": 60,
+  "identityRecordSha256": "6ae38f21149f73b4f7ce07f0d8d8553ad63d16f7d129529cac0899abc7d8d6fe",
+  "protectedprotectedSource": {
+    "count": 371,
+    "changed": []
+  },
+  "protectedprotectedHistory": {
+    "count": 276,
+    "changed": []
+  },
+  "protectedprotectedAcceptedInputs": {
+    "count": 1184,
+    "changed": []
+  },
+  "historicalQualityArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true,
+    "durableFenceDesignSamples": true,
+    "databaseIntegrationSamples": true
+  },
+  "seedImmutableAtFirstBaseHead": true,
+  "backendDiff": [],
+  "sourceComparisonChecks": [
+    {
+      "label": "R080 accepted source comparison preserved",
+      "reported": [],
+      "actual": [],
+      "match": true
+    },
+    {
+      "label": "R081 BUILD source comparison preserved",
+      "reported": [],
+      "actual": [],
+      "match": true
+    },
+    {
+      "label": "R082 returned-publication to BUILD comparison",
+      "reported": null,
+      "actual": [],
+      "match": true
+    }
+  ],
+  "workerDocLineCount": 113,
+  "newAppNativeInvocations": 0,
+  "originalPacketCommit": "183c5cd7dfcac96cf45e691e15c761dcb48501aa",
+  "initialAuditBeforeRootMetadataCorrections": {
+    "auditHead": "22d2fc0d082db17f3e407b7b674144c64728c386",
+    "identityFailures": [
+      [
+        "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+        "range"
+      ],
+      [
+        "docs/work_orders/CCMAI_RUNTIME_082.md",
+        "range"
+      ]
+    ],
+    "linkFailures": [],
+    "sourceScope": "source/documentary only; not runtime or governance proof",
+    "unresolvedReferences": [
+      "I01",
+      "S16"
+    ],
+    "referencePathBinding": false,
+    "unboundCitedPaths": [],
+    "identityInputCount": 56,
+    "referenceDefinitionCount": 59,
+    "identityRecordSha256": "341ec92d990c728e7157b895dc11b0591f05458b04e42aa770fd75a5c6c9a831",
+    "protectedprotectedSource": {
+      "count": 371,
+      "changed": []
+    },
+    "protectedprotectedHistory": {
+      "count": 276,
+      "changed": []
+    },
+    "protectedprotectedAcceptedInputs": {
+      "count": 1184,
+      "changed": []
+    },
+    "historicalQualityArraysUnchanged": {
+      "tranches": true,
+      "readonlyAuditSamples": true,
+      "designSpecSamples": true,
+      "topologyIntakeSamples": true,
+      "prerequisiteIntakeSamples": true,
+      "durableFenceDesignSamples": true,
+      "databaseIntegrationSamples": true
+    },
+    "seedImmutableAtFirstBaseHead": true,
+    "backendDiff": [],
+    "sourceComparisonChecks": [
+      {
+        "label": "R080 accepted source comparison preserved",
+        "match": true
+      },
+      {
+        "label": "R081 BUILD source comparison preserved",
+        "match": true
+      },
+      {
+        "label": "R082 returned-publication to BUILD comparison",
+        "match": false
+      }
+    ],
+    "workerDocLineCount": 111,
+    "newAppNativeInvocations": 0
+  },
+  "independentCreationCensusOracle": {
+    "command": "rg -n -i (insert|replace)\\s+into\\s+`?jobs\\b backend --glob *.go",
+    "exitCode": 0,
+    "rawSqlJobCreationMatches": [
+      {
+        "path": "backend/cli/prune_results_test.go",
+        "line": 67
+      },
+      {
+        "path": "backend/cli/prune_results_test.go",
+        "line": 242
+      },
+      {
+        "path": "backend/engine/analyzer_incremental_test.go",
+        "line": 172
+      },
+      {
+        "path": "backend/engine/analyzer_incremental_test.go",
+        "line": 522
+      },
+      {
+        "path": "backend/engine/analyzer_modes_acceptance_test.go",
+        "line": 33
+      },
+      {
+        "path": "backend/api/handlers/job_f06_probe_test.go",
+        "line": 29
+      },
+      {
+        "path": "backend/api/handlers/agent_run_config_admission_test.go",
+        "line": 79
+      },
+      {
+        "path": "backend/api/handlers/job_dispatch_shared_test.go",
+        "line": 315
+      },
+      {
+        "path": "backend/api/handlers/agent_analysis_admission_test.go",
+        "line": 31
+      },
+      {
+        "path": "backend/api/handlers/job_config_admission_test.go",
+        "line": 57
+      },
+      {
+        "path": "backend/api/handlers/jobs_test.go",
+        "line": 41
+      },
+      {
+        "path": "backend/api/handlers/dashboard_qc_violation_count_test.go",
+        "line": 83
+      },
+      {
+        "path": "backend/api/handlers/demo_test.go",
+        "line": 48
+      },
+      {
+        "path": "backend/api/handlers/results_test.go",
+        "line": 130
+      },
+      {
+        "path": "backend/api/handlers/results_test.go",
+        "line": 326
+      },
+      {
+        "path": "backend/api/handlers/results_business_day_test.go",
+        "line": 58
+      },
+      {
+        "path": "backend/api/handlers/job_result_source_integrity_test.go",
+        "line": 99
+      },
+      {
+        "path": "backend/engine/analyzer_modes_test.go",
+        "line": 153
+      },
+      {
+        "path": "backend/api/handlers/job_results_confidence_test.go",
+        "line": 49
+      },
+      {
+        "path": "backend/mcp/trigger_execution_test.go",
+        "line": 850
+      },
+      {
+        "path": "backend/mcp/trigger_execution_test.go",
+        "line": 934
+      },
+      {
+        "path": "backend/mcp/trigger_execution_test.go",
+        "line": 935
+      },
+      {
+        "path": "backend/engine/analyzer_finalizer_logging_test.go",
+        "line": 164
+      },
+      {
+        "path": "backend/jobdispatch/dispatch_test.go",
+        "line": 54
+      },
+      {
+        "path": "backend/engine/integration_test.go",
+        "line": 139
+      },
+      {
+        "path": "backend/engine/reanalyze_test.go",
+        "line": 91
+      },
+      {
+        "path": "backend/engine/job_run_ownership_test.go",
+        "line": 252
+      },
+      {
+        "path": "backend/mcp/permission_admission_test.go",
+        "line": 282
+      },
+      {
+        "path": "backend/engine/scheduler_startup_hardening_test.go",
+        "line": 67
+      },
+      {
+        "path": "backend/engine/scheduler_startup_hardening_test.go",
+        "line": 140
+      },
+      {
+        "path": "backend/engine/snapshot_db_test.go",
+        "line": 137
+      },
+      {
+        "path": "backend/engine/source_execution_receipt_db_test.go",
+        "line": 98
+      }
+    ],
+    "counts": {
+      "sites": 32,
+      "files": 26
+    },
+    "limit": "Positive SQL counterexample/census oracle only, no universal ORM/manual/restore census claim."
+  },
+  "uncoveredPositiveSqlCreationSites": [],
+  "workerFailurePreserved": [
+    {
+      "check": "single bundled worker static artifact identity check",
+      "attempt": 1,
+      "result": "FAIL",
+      "stage": "input citation-range preflight",
+      "finding": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json was assigned citation range 1-53, while the committed authority seed has 51 lines.",
+      "correction": "Final identity cites lines 1-51.",
+      "validationDisposition": "No validation PASS inferred; worker validation was not rerun. Root independent validation pending."
+    }
+  ],
+  "rootHarnessAdaptation": "Merged per-file input ranges are checked for containment of individual reference ranges, not equality; expanded inline range references. Original NOT_RUN comparison is a null report, independently observed empty, not a worker false claim. Root TEMP checker expansion initially had leading semicolon syntax error before execution; corrected, no artifact changes from failure."
+}

@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r082_worker SPEC_AUTHOR / documentary IMPLEMENTATION_WORKER
-- Next allowed move: CCMAI-RUNTIME-082 BUILD R1 source-only selected control/lock/retirement/census/fixture contract FR01..08; worker exact2/one author-static check, root independent consolidated review; max1 expressly directed same-scope documentary repair, native/provider/DB/network/push0. R081 returned/FREEZE_OPEN, implementation/deployed UNKNOWN/accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker awaiting bounded repair ACK
+- Next allowed move: CCMAI-RUNTIME-082 REVIEW CHANGES_REQUIRED R1/R2 destructive-file graph and writer/phase predicates after consolidated review; max1 expressly directed same-scope repair awaits fresh ACK/committed BUILD release. Native/DB/provider/network/push0, R081 returned/FREEZE_OPEN, deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -18,3 +18,11 @@ Owner next follows R081 returned-review publicationb1d7f11/reviewfb139708/origin
 ## Before-edit role acknowledgment
 
 Fresh R082 WORK_ORDER ACK atd125a8a from Luna max: targeted canonical state/front marker/CurrentR082/handoff/implementation/index/order/seed/record agree, exact2 scope FR01..08/budget and native0 acknowledged; no prior edits, worktree clean. Root records ACK before releasing BUILD; seed05cef8c precedes base/activation. Root role ORCHESTRATOR records phase transition, worker owns substantive selected-contract prose. Root TEMP sync first validation failed unescaped historical-header parentheses before any writes; corrected literal pattern then revalidated, no worker defect or late acknowledgment.
+
+## Before-edit role acknowledgment
+
+Fresh BUILD canonical tuple rehydrated at183c5cd after worker handback; root independent REVIEWER/metadata REPAIR_WORKER acknowledges original packet and failed worker range check preserved. Root fixes D04/D05 ranges, S16 dispatcher dangling citation/I01 link and project-root future go -C commands; no substantive worker prose drafted. Identity/census/protected/seed independent checks pass after root parser adaptations; root records its TEMP checker syntax failure separately. One consolidated review begins before any directed substantive repair.
+
+## Before-edit role acknowledgment
+
+Root one consolidated initial review returns R1/R2 in R082 independent review; root M1/M2/M3 small citation/range/project-cwd corrections preserved original183c5cd and worker failure. Selected restore/notification controls and finite census/fixture fact retained; no substantive root repair prose. One explicitly directed same-scope documentary repair authorized by seed; worker must fresh ACK and wait committed BUILD release.
