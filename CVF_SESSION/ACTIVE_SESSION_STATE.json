@@ -51,7 +51,9 @@
     ],
     "sameScopeRepairs": "Continue within existing authority; successors require a real boundary or exhausted explicit authority, with reason recorded. Historical seeds and budgets unchanged.",
     "progressReporting": "Product outcome and remaining acceptance, prerequisite cost and next route; source/unit distinct from native/live/deployed proof. Luna assessment supports delivery; root orchestration/reviewer faults separately attributed.",
-    "executionAuthorityExpanded": false
+    "executionAuthorityExpanded": false,
+    "currentRoadmap": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
   },
   "currentExecutionBudget": {
     "documentaryPasses": 1,

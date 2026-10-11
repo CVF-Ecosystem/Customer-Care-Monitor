@@ -4,7 +4,47 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
-## Mục tiêu
+## Điểm kiểm tiến độ hiện hành — 2026-10-12
+
+Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệch hướng. Maintainer: ORCHESTRATOR; nguồn đối chiếu: [implementation truth](../../IMPLEMENTATION_STATUS.json), [active state](../../CVF_SESSION/ACTIVE_SESSION_STATE.json), [handoff R086](../../CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md), repository tại `b2cbdce`. Đây là bản theo dõi tiến độ/planning R1; không thay acceptance lịch sử, contract S0–S7 hoặc cấp quyền BUILD/runtime/release. Phần thiết kế gốc vẫn giữ trạng thái DRAFT / REVIEW_PENDING; bản theo dõi này không tự chấp nhận toàn roadmap.
+
+**Vị trí hiện tại:** nền S1 đã có nhiều phạm vi được review; có phần chuẩn bị/quan sát cho S2/S3 và UI đọc dữ liệu cho S5. Chưa nghiệm thu luồng đầy đủ từ hội thoại đến người xử lý và kết quả vụ việc. Không tính số tranche, commit hoặc test PASS thành tỷ lệ hoàn thành sản phẩm.
+
+| Mốc | Hiện trạng tổng thể | Phần đã có bằng chứng cục bộ | Acceptance còn thiếu |
+|---|---|---|---|
+| S0 — Baseline | PARTIAL / LIVE BASELINE OPEN | Corpus synthetic tiếng Việt, baseline DB phát triển và review R001 | Corpus/pilot được phép dùng, số liệu chất lượng/chi phí/thời gian thật và tiêu chí pilot được chốt |
+| S1 — Dữ liệu đáng tin | IN_PROGRESS / STAGE EXIT OPEN | Partial/checkpoint, replay, snapshot/dẫn chứng, nguồn thay đổi, confidence trung thực; config/OAuth và concurrency/run identity có các review riêng | Global F02/real-channel coverage, phục hồi/vận hành còn mở; không suy local review thành nguồn kênh hoàn chỉnh |
+| S2 — Gate trước AI | PREPARATORY SLICES ACCEPTED / FULL GATE OPEN | Khởi tạo provider sau chuẩn bị nguồn R050–R054; receipt chuẩn bị R055–R058, thực thi R059–R062, fingerprint rule R063–R064 | Entry point chung; kiểm quyền/PII/độ đủ nguồn; eligibility/execution/disposition, WAIT_DATA có owner/deadline; shadow/negative sampling và bằng chứng nhánh provider được phép |
+| S3 — Admission/ngân sách/audit | OBSERVATION SLICES ACCEPTED / ADMISSION OPEN | Quan sát usage/cost R065, adapter usage presence R068/R071 | Allowlist/budget admission, reserve/settle/reconcile, giá có provenance và audit quyền/route đầy đủ; real-provider evidence theo exit S3 |
+| S4 — Tối ưu local gate | NOT_IMPLEMENTED_FOR_STAGE_EXIT | Định hướng thiết kế giữ trong roadmap | So sánh baseline/biến thể trên holdout tiếng Việt, audit nhánh bỏ qua và chất lượng đạt ngưỡng trước tối ưu |
+| S5 — Người duyệt/xử lý | READ-ONLY UI SLICES ACCEPTED / WORKFLOW OPEN | UI đọc saved receipt R067 và adapter presence R073; các màn kết quả/job đã có review | Xác nhận/từ chối/correction, actor/time/reason, phân công/deadline, ghi kết quả vụ việc và stale/permission tests |
+| S6 — Pilot | NOT_RUN_FOR_STAGE_EXIT | Chưa có pilot được nghiệm thu | Shadow/pilot với người dùng, before/after, rollback và quyết định GO/REVISE/STOP |
+| S7 — Vận hành/phát hành | PRODUCT RELEASE EXIT OPEN | Có nền Docker, hướng dẫn và các check repository trong phạm vi riêng | Backup/restore, retention/security/load/rollback và release acceptance của sản phẩm; deployed facts chưa được xác nhận |
+
+Nguồn cho các acceptance nhỏ: [R054 scope kế tiếp](../reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md), [tổng hợp local receipt/UI milestones](README.md), [review R073](../reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md), [review R078](../reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md). Bảng này tổng hợp bản ghi đã có, không chạy lại runtime hoặc chứng minh live governance.
+
+### Mốc sản phẩm ưu tiên và thứ tự còn lại
+
+**Mốc sản phẩm kế tiếp cần SPEC/work order:** một job qua gate nguồn/quyền có outcome và lý do rõ; đường từ chối/chờ không dispatch AI, đường cho phép tạo proposal có dẫn chứng. **Mốc luồng đầu tiên cần đạt:** thêm người duyệt, giao xử lý và ghi kết quả vụ việc. Đây là acceptance dự kiến cho lát cắt S2/S3/S5 tối thiểu, không tuyên bố stage exit hoặc tự cấp quyền provider/dữ liệu khách hàng.
+
+| Thứ tự ưu tiên | Deliverable/điều kiện kết thúc | Phạm vi và giới hạn |
+|---|---|---|
+| P0 — Gỡ blocker tài liệu | Xử lý đúng 55 deadlinks đã biết ở R078/R079 và kiểm tra docs build trước closure | Một tác vụ hỗ trợ hữu hạn; không viết lại lịch sử/evidence, không nới gate. Không tính thành milestone sản phẩm |
+| P1 — Chốt route an toàn | Đánh giá lại dependency từ fixture/fence tới job-gate tối thiểu; ghi rõ cái bắt buộc và cái hoãn được | R086 chỉ source/unit accepted; fresh native fixture cần scope riêng. Fence/recovery chưa triển khai. Không mặc định toàn bộ recovery/cutover là prerequisite cho gate; nếu chọn hoãn phải chứng minh fallback an toàn trong source/contract, không suy deployed parity |
+| P2 — Lát cắt S2/S3 | SPEC/work order hữu hạn cho một entry path và receipt quyết định; BUILD/review rồi chứng minh từ chối/chờ/cho phép theo contract | Nêu rõ entry paths chưa phủ; real-provider/secret/network evidence chỉ dưới authority thích hợp. Full S2/S3 vẫn mở cho đến exit tương ứng |
+| P3 — Lát cắt S5 | Người được phân quyền review/correct/assign và ghi kết quả trên proposal có nguồn; kiểm quyền và nguồn stale | Hoàn tất luồng CSKH đầu tiên có bằng chứng. Chưa tự cho phép gửi trả lời khách hàng hoặc pilot/production |
+| P4 — Pilot rồi tối ưu/phát hành | Chốt dữ liệu/tiêu chí S0; shadow/pilot S6, đánh giá S4 và release S7 theo exit riêng | Accounts Facebook/Zalo OA owner-deferred; không mở lại account/live tests âm thầm. Nhân rộng/CVF uplift sau nghiệm thu CSKH |
+
+Đây là thứ tự planning, không phải số tranche hay ETA đã cam kết. P1 phải giải quyết route/bất định trước dispatch P2; không tự suy fixture PASS hoặc thiết kế fence được chấp nhận thành product readiness. Nếu phát hiện blocker mới, cập nhật route và giới hạn trong cùng lượt, không tự nối thêm chuỗi hỗ trợ vô hạn.
+
+### Blocker hiện hành và trách nhiệm cập nhật
+
+- R085 native campaign thất bại trước start/SQL; cleanup được xác nhận. R086 source/unit review PASS nhưng native NOT_RUN, FREEZE OPEN do55 deadlinks; fence/recovery/integration OPEN và deployed UNKNOWN. [Review R085](../reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md), [review R086](../reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md).
+- Global F02/live-channel vẫn OPEN; Facebook/Zalo OA accounts parked. Receipt quan sát và UI reader không phải gate, billing hoặc human disposition đã hoàn thành.
+- ORCHESTRATOR đọc điểm kiểm này khi resume/chọn scope; sau mỗi handback có thay đổi acceptance, blocker hoặc route phải cập nhật bảng cùng implementation truth/memory/handoff. Mỗi scope ghi mốc sản phẩm, dependency bắt buộc, budget/stop condition và acceptance còn thiếu. Sau hai scope hỗ trợ chưa đạt product acceptance hoặc một prerequisite thất bại, rà lại route trước scope kế tiếp theo [learning điều phối](../reviews/learnings/feedback_orchestrator_roadmap_control.md).
+- Báo cho owner bằng khả năng đã dùng được, phần còn thiếu và bước tiếp theo; không bịa phần trăm/ETA. Gate tài liệu PASS không chứng minh learning hiệu quả hoặc roadmap đã hoàn tất.
+
+## Mục tiêu sản phẩm gốc
 
 Giúp người phụ trách trả lời: **hội thoại nào cần can thiệp, vì sao, ai xử lý và đã giải quyết đến đâu?** Hoàn thiện một luồng CSKH từ nguồn tới hành động có bằng chứng là ưu tiên đầu. Khi dự án vận hành và được chấp nhận, kết quả mới trở thành use case để nhân rộng sang dự án khác, rồi cân nhắc đóng góp nâng nền CVF theo work order riêng.
 
@@ -64,7 +104,9 @@ Nguồn hiện trạng: `docs/PRODUCT_DIRECTION.md`, `IMPLEMENTATION_STATUS.json
 
 ## Trình tự tranche đề xuất
 
-### Tiến độ triển khai
+### Checkpoint lịch sử đầu roadmap — không phải bảng hiện trạng
+
+Bảng dưới giữ checkpoint ban đầu; các trạng thái cũ, đặc biệt S2–S7 NOT_STARTED và residual đã có repair sau đó, không dùng để chọn scope hiện hành. Dùng điểm kiểm 2026-10-12 ở đầu tài liệu và implementation truth; các đoạn bổ sung theo ngày bên dưới giữ lineage riêng.
 
 | Stage | Trạng thái | Bằng chứng |
 |---|---|---|

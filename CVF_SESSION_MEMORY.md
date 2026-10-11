@@ -13,6 +13,8 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 
+Owner requires roadmap progress to stay current: read [current S0–S7 checkpoint and route](docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md) at resume/next-scope selection. Update after acceptance, blocker or route changes. P0 documentary unblock, P1 safety/dependency decision, P2 one-job gate/proposal, P3 human review/assignment/outcome, P4 measured pilot/optimization/release; planning only, not execution authority.
+
 Owner explicitly requires: "Ghi rõ yêu cầu vào handoff/memory, không phải chờ tôi nhắc" after questioning the repeated repair tranches and roadmap drift. ORCHESTRATOR owns proactive application at every resume, next-scope selection and handback; do not wait for another owner reminder.
 
 Mandatory shared learning: [orchestrator roadmap control](docs/reviews/learnings/feedback_orchestrator_roadmap_control.md). Owner identifies lost orchestration control and noncoder inability to judge completion; root accepts responsibility. Read at these triggers; after two supporting scopes without product acceptance or any prerequisite failure, reassess the finite route before choosing another scope. Handback states usable capability, remaining milestone, blocker, planned remaining steps and completion condition in plain language; unknown ETA stays unknown. Recorded controls are not yet evidence of effective recovery.

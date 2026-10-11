@@ -1,5 +1,37 @@
 {
   "schemaVersion": "1.0",
+  "roadmapTracking": {
+    "updatedAt": "2026-10-12",
+    "status": "DOCUMENTARY_PROGRESS_REFRESH_NO_STAGE_CLOSURE",
+    "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "stages": {
+      "S0": "PARTIAL_LIVE_BASELINE_OPEN",
+      "S1": "IN_PROGRESS",
+      "S2": "PREPARATORY_SLICES_FULL_GATE_OPEN",
+      "S3": "OBSERVATION_SLICES_ADMISSION_OPEN",
+      "S4": "NOT_IMPLEMENTED_FOR_STAGE_EXIT",
+      "S5": "READ_ONLY_UI_WORKFLOW_OPEN",
+      "S6": "NOT_RUN_FOR_STAGE_EXIT",
+      "S7": "PRODUCT_RELEASE_EXIT_OPEN"
+    },
+    "nextProductMilestone": "One-job source/permission gate with explicit denied/wait/allowed outcomes and evidence-bound proposal; then authorized human review/assignment/action outcome",
+    "planningRoute": [
+      "P0 bounded documentary unblock",
+      "P1 safety/dependency route decision",
+      "P2 one-job S2/S3 slice",
+      "P3 minimal S5 workflow",
+      "P4 measured pilot/optimization/release"
+    ],
+    "currentBlockers": [
+      "Known55 documentary deadlinks",
+      "R086 native fixture NOT_RUN",
+      "Fence/recovery integration OPEN",
+      "GlobalF02/live OPEN and accounts parked",
+      "Full gate/admission/human workflow not implemented"
+    ],
+    "executionAuthorityExpanded": false,
+    "eta": "NOT_ESTABLISHED"
+  },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
   "currentPhase": "BUILD",
