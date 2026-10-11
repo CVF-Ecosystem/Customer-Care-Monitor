@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-082",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-082 DISPATCH_READY R1 source-only F1..F4 intended contract resolution FR01..08; Luna max fresh WORK_ORDER ACK before committed BUILD release, exact2 worker docs/root independent review. Source/runtime/DB/provider/network/push0, R081 returned/FREEZE_OPEN, deployed UNKNOWN/fence/recovery OPEN/accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-082 BUILD R1 source-only selected control/lock/retirement/census/fixture contract FR01..08; worker exact2/one author-static check, root independent consolidated review; max1 expressly directed same-scope documentary repair, native/provider/DB/network/push0. R081 returned/FREEZE_OPEN, implementation/deployed UNKNOWN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker awaiting ACK",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r082_worker SPEC_AUTHOR / documentary IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,7 +34,7 @@
   },
   "candidatePlanning": {
     "id": "R082",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_082.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false

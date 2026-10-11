@@ -48,8 +48,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 after R081 returned-review publicationb1d7f11 authorizes separately bounded source-only contract resolution F1..F4, Luna max worker/root independent reviewer. New authority, not automatic R081 repair; R081 CHANGES_REQUIRED/FREEZE_OPEN and old artifacts immutable. Documentary R1 no source/security/schema/runtime/external effects; later implementation remains R2+ separately bounded.",
   "claimScope": "Selected intended incarnation/restore, durable notification-attempt, complete operation lock/retirement, source census and finite future fixture/test contract. Documentary review/closure only, no deployed/DB/runtime/CVF governance proof.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "05cef8c327c5899b38d3d4ff400d0ac27711b23a",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_082.md",
   "buildCommit": null,
@@ -58,7 +58,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -66,5 +67,6 @@
     "SPEC",
     "WORK_ORDER"
   ],
-  "dispatcher": "Codex /root"
+  "dispatcher": "Codex /root",
+  "workerAcknowledgment": "Fresh R082 WORK_ORDER ACK atd125a8a from Luna max: targeted canonical state/front marker/CurrentR082/handoff/implementation/index/order/seed/record agree, exact2 scope FR01..08/budget and native0 acknowledged; no prior edits, worktree clean. Root records ACK before releasing BUILD; seed05cef8c precedes base/activation. Root role ORCHESTRATOR records phase transition, worker owns substantive selected-contract prose. Root TEMP sync first validation failed unescaped historical-header parentheses before any writes; corrected literal pattern then revalidated, no worker defect or late acknowledgment."
 }

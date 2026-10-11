@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
 
 ## Current R082
 
-CCMAI-RUNTIME-082 DISPATCH_READY R1 source-only F1..F4 intended contract resolution FR01..08; Luna max fresh WORK_ORDER ACK before committed BUILD release, exact2 worker docs/root independent review. Source/runtime/DB/provider/network/push0, R081 returned/FREEZE_OPEN, deployed UNKNOWN/fence/recovery OPEN/accounts parked.
+CCMAI-RUNTIME-082 BUILD R1 source-only selected control/lock/retirement/census/fixture contract FR01..08; worker exact2/one author-static check, root independent consolidated review; max1 expressly directed same-scope documentary repair, native/provider/DB/network/push0. R081 returned/FREEZE_OPEN, implementation/deployed UNKNOWN/accounts parked.
 
 ## Historical R081 (returned, FREEZE OPEN)
 
