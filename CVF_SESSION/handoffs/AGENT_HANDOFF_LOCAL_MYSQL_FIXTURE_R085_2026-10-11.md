@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / REVIEWER safety approval / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r085_worker IMPLEMENTATION_WORKER
-- Next allowed move: CCMAI-RUNTIME-085 BUILD worker authorized exactly one unchanged-source isolated cached-image fixture campaign after this committed pre-effect approval; actual receipt and exact-ID cleanup required. Root reviewer campaign reserved until worker SUCCEEDED/VERIFIED_CLEAN and result check; no source repair/retry/Go/provider/pull/push, existing ccma-db-1 untouched/accounts parked/fence integration OPEN/deployed UNKNOWN.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r085_worker completing evidence only
+- Next allowed move: CCMAI-RUNTIME-085 REVIEW_PENDING actual worker campaign exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup VERIFIED_CLEAN and root exact-ID/name absence confirmed, existing ccma-db-1 same ID/image running healthy. Reviewer campaign NOT_GRANTED/NOT_RUN; root reviews committed evidence then returns precise mount-validation finding, no source repair/retry/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -18,3 +18,7 @@ Fresh R084 canonical tuple agrees at8bbb894; compact bootstrap missing/nonblocki
 ## Role/transition acknowledgment
 
 Fresh corrected worker ACK verifies canonical core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba and parkedOperatorCheckpoint; initial worker ACK omitted ac and queried wrong field, corrected before effects/no canonical drift. Root transitions ORCHESTRATOR to independent REVIEWER safety check then SESSION_SYNC/COMMIT_STEWARD for BUILD release. Source67e76de independently accepted c399a706; actual source/cache intake matches approved filtered/physical blobs and cached image/digest7dcddc01. Root pre-effect approval GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY, one fresh internal network/tmpfs container/newUUID task and exact-owned SQL/cleanup using approved tool, no existing DB/source changes. Reviewer campaign NOT_GRANTED pending worker success/cleanup. Root protection audit first compared Git normalized seed bytes to physical CRLF and falsely asserted mismatch; corrected to filtered blob comparison, physical protected1872 paths unchanged. This is root audit method overhead, no worker failure.
+
+## Role/transition acknowledgment
+
+Root fresh BUILD-to-REVIEW role transition after actual worker task39cd4dbacf3744bc8ea39f413b33e4d4 exit2/FAILED/MOUNT_INVALID, readiness0/no start/no SQL. Tool exact cleanup VERIFIED_CLEAN; independent root result-check PASS confirms both full IDs and names absent, existing owner DB selected status unchanged and healthy, source/protected1872paths/tenqualityarrays/seed unchanged. Reviewer campaign never approved and remains NOT_RUN. Worker still writes evidence only; no repairs/replays.

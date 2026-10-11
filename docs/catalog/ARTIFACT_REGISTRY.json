@@ -7108,6 +7108,83 @@
       "path": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
       "status": "ACTIVE",
       "description": "R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet."
+    },
+    {
+      "id": "runtime085-evidence-0007",
+      "family": "continuity",
+      "path": "docs/reviews/R085_LOCAL_FIXTURE_WORKER_EXECUTION_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r083_fixture/worker/39cd4dbacf3744bc8ea39f413b33e4d4/manifest.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/root_checks/worker_result_check.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/authority-binding-39cd4dbacf3744bc8ea39f413b33e4d4.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher-errors.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/manifest-paths-before.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/preflight.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/process-started.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stderr.raw.bin",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stdout.raw.bin",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
     }
   ]
 }

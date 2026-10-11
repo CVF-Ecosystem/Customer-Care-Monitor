@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-085", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-085", "parked": true} -->
 
 ## Current R085
 
-CCMAI-RUNTIME-085 BUILD worker authorized exactly one unchanged-source isolated cached-image fixture campaign after this committed pre-effect approval; actual receipt and exact-ID cleanup required. Root reviewer campaign reserved until worker SUCCEEDED/VERIFIED_CLEAN and result check; no source repair/retry/Go/provider/pull/push, existing ccma-db-1 untouched/accounts parked/fence integration OPEN/deployed UNKNOWN.
+CCMAI-RUNTIME-085 REVIEW_PENDING actual worker campaign exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup VERIFIED_CLEAN and root exact-ID/name absence confirmed, existing ccma-db-1 same ID/image running healthy. Reviewer campaign NOT_GRANTED/NOT_RUN; root reviews committed evidence then returns precise mount-validation finding, no source repair/retry/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.
 
 ## Historical R084 (source-only FROZEN)
 

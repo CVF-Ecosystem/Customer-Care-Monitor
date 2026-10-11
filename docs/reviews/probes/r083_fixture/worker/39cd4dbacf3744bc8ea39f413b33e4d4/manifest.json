@@ -1,0 +1,233 @@
+{
+  "cleanup": {
+    "absenceVerified": true,
+    "containerRemoved": true,
+    "containerStatus": "ABSENT_VERIFIED",
+    "networkRemoved": true,
+    "networkStatus": "ABSENT_VERIFIED",
+    "status": "VERIFIED_CLEAN"
+  },
+  "commands": [
+    {
+      "elapsedMs": 103,
+      "exitCode": 0,
+      "label": "read current Docker context name",
+      "safeOutputSha256": "9024c56281578047cee2d32f8107406ed70e26ac234c35f3c0404234c22c92ad",
+      "timedOut": false,
+      "timeoutSeconds": 10
+    },
+    {
+      "elapsedMs": 107,
+      "exitCode": 0,
+      "label": "read safe current Docker endpoint metadata",
+      "safeOutputSha256": "acf1047ec58329e0aa1044ae36bdac083fd4ec70082baf427bf899fcf57971d0",
+      "timedOut": false,
+      "timeoutSeconds": 10
+    },
+    {
+      "elapsedMs": 136,
+      "exitCode": 0,
+      "label": "check local Docker availability",
+      "safeOutputSha256": "595a643019b075a7f28eb368de0180ca8d931f64f0c04999f2277f5df83e5682",
+      "timedOut": false,
+      "timeoutSeconds": 15
+    },
+    {
+      "elapsedMs": 210,
+      "exitCode": 0,
+      "label": "inspect cached mysql:8.0 metadata",
+      "safeOutputSha256": "667bee098cbf03aa17f8bd5d6fce0399c19a645c4bc13f5b4f0ca126cd0eb56e",
+      "timedOut": false,
+      "timeoutSeconds": 20
+    },
+    {
+      "elapsedMs": 125,
+      "exitCode": 1,
+      "label": "check exact fixture network name is unused",
+      "safeOutputSha256": "045dce5b866b75c22beefa80fdb14ab37b710d43b733edabd5959e89b7da77c7",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 125,
+      "exitCode": 1,
+      "label": "check exact fixture container name is unused",
+      "safeOutputSha256": "4d60b6bf870c86945646bdafc3f2ec4004e0ecefd3ea5b5a50eabf2c1d56a6e2",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 183,
+      "exitCode": 0,
+      "label": "create owned internal network",
+      "safeOutputSha256": "91a816d70e37052567404e970123c122218ca2b0bc4875a09883629a59038527",
+      "timedOut": false,
+      "timeoutSeconds": 20
+    },
+    {
+      "elapsedMs": 124,
+      "exitCode": 0,
+      "label": "reconcile exact fixture network name",
+      "safeOutputSha256": "945ed6c2eab65c6467375a8ea56d4ad7ab90b0d96b3e19c2382495c7d09ca9b5",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 334,
+      "exitCode": 0,
+      "label": "create owned tmpfs MySQL container",
+      "safeOutputSha256": "9082f649f31003710bb455904bcc7fcc4ea5f274a20d576c648cce6be3dd0881",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 128,
+      "exitCode": 0,
+      "label": "inspect exact fixture container",
+      "safeOutputSha256": "2ec08e774f777c7bdcd563a75c70873f197527d13eea0128946fcc5021a6281d",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 129,
+      "exitCode": 0,
+      "label": "inspect exact fixture container",
+      "safeOutputSha256": "2ec08e774f777c7bdcd563a75c70873f197527d13eea0128946fcc5021a6281d",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 224,
+      "exitCode": 0,
+      "label": "remove exact fixture container",
+      "safeOutputSha256": "9082f649f31003710bb455904bcc7fcc4ea5f274a20d576c648cce6be3dd0881",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 162,
+      "exitCode": 1,
+      "label": "inspect exact fixture container",
+      "safeOutputSha256": "bef903574a076cc481278fa75fb130fb783b8fdb15f19d34648394b20ad41558",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 118,
+      "exitCode": 0,
+      "label": "inspect exact fixture network",
+      "safeOutputSha256": "945ed6c2eab65c6467375a8ea56d4ad7ab90b0d96b3e19c2382495c7d09ca9b5",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 315,
+      "exitCode": 0,
+      "label": "remove exact fixture network",
+      "safeOutputSha256": "91a816d70e37052567404e970123c122218ca2b0bc4875a09883629a59038527",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    },
+    {
+      "elapsedMs": 146,
+      "exitCode": 1,
+      "label": "inspect exact fixture network",
+      "safeOutputSha256": "38757025feb0137d4d179ec3c738d08fe55c49f8552c2e11087520d2e3165346",
+      "timedOut": false,
+      "timeoutSeconds": 30
+    }
+  ],
+  "disposition": "PENDING_INDEPENDENT_REVIEW",
+  "invocation": {
+    "commandLabel": "python scripts/jobrun_fence_fixture.py --role worker"
+  },
+  "overallStatus": "NOT_READY",
+  "plan": {
+    "dockerContext": {
+      "endpointKind": "npipe-local",
+      "localOnly": "true",
+      "name": "desktop-linux"
+    },
+    "dockerEngineVersion": "29.8.1",
+    "externalEffects": "none; local Docker context only",
+    "image": {
+      "architecture": "amd64",
+      "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+      "os": "linux",
+      "repositoryDigest": "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    },
+    "imageLookup": "cached mysql:8.0 only; no pull",
+    "intendedResources": {
+      "container": "ccmai-r083-w-39cd4dbacf3744bc8ea39f413b33e4d4",
+      "denySchema": "d83w39cd4dbacf3744bc8ea39f413b33",
+      "network": "ccmai-r083-w-39cd4dbacf3744bc8ea39f413b33e4d4",
+      "principal": "u83w39cd4dbacf3744bc8ea39f413b33",
+      "probeTable": "probe39cd4dbacf37",
+      "schema": "c83w39cd4dbacf3744bc8ea39f413b33e4d4"
+    },
+    "labels": {
+      "ccmai.cvf.purpose": "fixture-prerequisite",
+      "ccmai.cvf.role": "worker",
+      "ccmai.cvf.task-id": "39cd4dbacf3744bc8ea39f413b33e4d4",
+      "ccmai.cvf.tranche": "CCMAI-RUNTIME-083"
+    },
+    "status": "READY_FOR_ROOT_EFFECT_APPROVAL"
+  },
+  "role": "worker",
+  "runtime": {
+    "containerCreate": "CONFIRMED",
+    "containerId": "703fa2c51713ebcf58028f31487a44bd0602c50dd2433f44125de877a8b4da47",
+    "facts": {},
+    "failure": {
+      "code": "MOUNT_INVALID",
+      "commandLabel": null,
+      "exitCode": null,
+      "safeMessage": "fixture container must have exactly one tmpfs mount",
+      "safeOutputSha256": null,
+      "timedOut": false
+    },
+    "networkCreate": "CONFIRMED",
+    "networkId": "a30e5b7d4d0d8902a738d6f77bff614836b421e9002f8c17f785d1e8550887e7",
+    "readinessObservations": 0,
+    "status": "FAILED"
+  },
+  "schemaVersion": "1.0",
+  "sourceIdentity": {
+    "buildOrderSnapshot": {
+      "byteLength": 7372,
+      "commit": "c23d84e0048218e1d91d93e9b6557345e3ec2690",
+      "gitBlob": "ad2740fece5f9b0268edfd0b03adaea08a989128",
+      "path": "docs/work_orders/CCMAI_RUNTIME_083.md",
+      "physicalSha256": "e36bea497f44111dc0738e57f65deff79feea640299c8967f091f718a7d148c6"
+    },
+    "currentFiles": {
+      "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md": {
+        "byteLength": 4902,
+        "filteredWorktreeBlob": "551c9745f728981b69b625a609d9486966593128",
+        "gitBlob": "551c9745f728981b69b625a609d9486966593128",
+        "physicalSha256": "2c7b8b37eee6999ea03e85ac3b90fd5a731bf4ee8e214f23b22b2955ed639a1d"
+      },
+      "docs/work_orders/CCMAI_RUNTIME_083.md": {
+        "byteLength": 7412,
+        "filteredWorktreeBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+        "gitBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+        "physicalSha256": "979c1f73e1d152492ece7a58e83f040b560933ee1bae50d7cd1c1a17eb4a9716"
+      },
+      "scripts/jobrun_fence_fixture.py": {
+        "byteLength": 72611,
+        "filteredWorktreeBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+        "gitBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+        "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5"
+      },
+      "scripts/tests/test_jobrun_fence_fixture.py": {
+        "byteLength": 41950,
+        "filteredWorktreeBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+        "gitBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+        "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c"
+      }
+    },
+    "sourceCommit": "e03e39b05d4dc5ab14a21d7ca9e9366de53ec11d"
+  },
+  "taskId": "39cd4dbacf3744bc8ea39f413b33e4d4",
+  "trancheId": "CCMAI-RUNTIME-083"
+}

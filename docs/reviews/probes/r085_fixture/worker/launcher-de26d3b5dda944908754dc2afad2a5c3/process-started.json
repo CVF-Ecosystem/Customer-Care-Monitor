@@ -1,0 +1,14 @@
+{
+  "fixtureProcessStarted": true,
+  "fixtureProcessId": 14440,
+  "fixtureProcessStartAttemptCount": 1,
+  "startUtc": "2026-10-11T16:57:03.835179+00:00",
+  "headBefore": "e03e39b05d4dc5ab14a21d7ca9e9366de53ec11d",
+  "command": [
+    "python",
+    "-B",
+    "scripts/jobrun_fence_fixture.py",
+    "--role",
+    "worker"
+  ]
+}

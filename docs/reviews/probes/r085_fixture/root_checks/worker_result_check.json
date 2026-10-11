@@ -1,0 +1,94 @@
+{
+  "actor": "Codex /root independent REVIEWER",
+  "scope": "R085 exact fixture absence/source/protected/seed and owner container selected-status checks; no SQL/change/environment inspection",
+  "manifestPath": "docs/reviews/probes/r083_fixture/worker/39cd4dbacf3744bc8ea39f413b33e4d4/manifest.json",
+  "manifestSha256": "38aeaa5ebf7b4e924ac0a3a7cea1a0220ea09efdd167cbde301470001c177893",
+  "runtimeStatus": "FAILED",
+  "cleanup": {
+    "absenceVerified": true,
+    "containerRemoved": true,
+    "containerStatus": "ABSENT_VERIFIED",
+    "networkRemoved": true,
+    "networkStatus": "ABSENT_VERIFIED",
+    "status": "VERIFIED_CLEAN"
+  },
+  "sourceIdentity": {
+    "sourceCommit": "e03e39b05d4dc5ab14a21d7ca9e9366de53ec11d",
+    "buildOrderSnapshot": {
+      "commit": "c23d84e0048218e1d91d93e9b6557345e3ec2690",
+      "path": "docs/work_orders/CCMAI_RUNTIME_083.md",
+      "gitBlob": "ad2740fece5f9b0268edfd0b03adaea08a989128",
+      "physicalSha256": "e36bea497f44111dc0738e57f65deff79feea640299c8967f091f718a7d148c6",
+      "byteLength": 7372
+    },
+    "currentFiles": {
+      "scripts/jobrun_fence_fixture.py": {
+        "gitBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+        "filteredWorktreeBlob": "a50401c790c13e15feba27bd1bcb1c7bfac4622a",
+        "physicalSha256": "be520b58742dc7b30f603d4bb5ff86f1986a2c30b48be3a3201256c82664b9c5",
+        "byteLength": 72611
+      },
+      "scripts/tests/test_jobrun_fence_fixture.py": {
+        "gitBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+        "filteredWorktreeBlob": "c913102d26a8a76d668cb9a9f02e86bd1f9800ea",
+        "physicalSha256": "2e566d49f218be2e0e288a2a36a5eb5d6805e089e404ff25fc789e7781f3d01c",
+        "byteLength": 41950
+      },
+      "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md": {
+        "gitBlob": "551c9745f728981b69b625a609d9486966593128",
+        "filteredWorktreeBlob": "551c9745f728981b69b625a609d9486966593128",
+        "physicalSha256": "2c7b8b37eee6999ea03e85ac3b90fd5a731bf4ee8e214f23b22b2955ed639a1d",
+        "byteLength": 4902
+      },
+      "docs/work_orders/CCMAI_RUNTIME_083.md": {
+        "gitBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+        "filteredWorktreeBlob": "7f0aa06e23a85f959563b04e4ae630076ad2d363",
+        "physicalSha256": "979c1f73e1d152492ece7a58e83f040b560933ee1bae50d7cd1c1a17eb4a9716",
+        "byteLength": 7412
+      }
+    }
+  },
+  "protectedPathCount": 1872,
+  "protectedFailures": [],
+  "historicalQualityArraysUnchanged": true,
+  "historicalQualityArrayCount": 10,
+  "seedFilteredBlobMatch": true,
+  "acceptedSourceMatch": true,
+  "resourceAbsenceChecks": [
+    {
+      "resource": "container",
+      "identifier": "703fa2c51713ebcf58028f31487a44bd0602c50dd2433f44125de877a8b4da47",
+      "exitCode": 1,
+      "exactTypedAbsence": true,
+      "safeOutputSha256": "bef903574a076cc481278fa75fb130fb783b8fdb15f19d34648394b20ad41558"
+    },
+    {
+      "resource": "container",
+      "identifier": "ccmai-r083-w-39cd4dbacf3744bc8ea39f413b33e4d4",
+      "exitCode": 1,
+      "exactTypedAbsence": true,
+      "safeOutputSha256": "4d60b6bf870c86945646bdafc3f2ec4004e0ecefd3ea5b5a50eabf2c1d56a6e2"
+    },
+    {
+      "resource": "network",
+      "identifier": "a30e5b7d4d0d8902a738d6f77bff614836b421e9002f8c17f785d1e8550887e7",
+      "exitCode": 1,
+      "exactTypedAbsence": true,
+      "safeOutputSha256": "38757025feb0137d4d179ec3c738d08fe55c49f8552c2e11087520d2e3165346"
+    },
+    {
+      "resource": "network",
+      "identifier": "ccmai-r083-w-39cd4dbacf3744bc8ea39f413b33e4d4",
+      "exitCode": 1,
+      "exactTypedAbsence": true,
+      "safeOutputSha256": "045dce5b866b75c22beefa80fdb14ab37b710d43b733edabd5959e89b7da77c7"
+    }
+  ],
+  "existingOwnerContainerStatus": {
+    "exitCode": 0,
+    "selectedOutput": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314|/ccma-db-1|mysql:8.0|running|healthy"
+  },
+  "existingOwnerContainerSameIdImageRunningHealthy": true,
+  "resourceAbsenceVerified": true,
+  "status": "PASS"
+}

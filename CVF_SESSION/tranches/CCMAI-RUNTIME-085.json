@@ -59,8 +59,8 @@
   "expectedCachedImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
   "expectedRepositoryDigest": "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
   "claimScope": "Actual local isolated MySQL fixture/image/server/settings/principal grants/DDL-DML/denial/cleanup prerequisites only. No AI/CVF runtime governance, GORM/application/fence integration, restore fleet, production/deployed adoption or hostedCI proof.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "c804308403561f465135eb4154b7c39334ace562",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
   "buildCommit": null,
@@ -70,7 +70,8 @@
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -79,7 +80,7 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "workerAcknowledgment": "Fresh corrected worker ACK verifies canonical core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba and parkedOperatorCheckpoint; initial worker ACK omitted ac and queried wrong field, corrected before effects/no canonical drift. Root transitions ORCHESTRATOR to independent REVIEWER safety check then SESSION_SYNC/COMMIT_STEWARD for BUILD release. Source67e76de independently accepted c399a706; actual source/cache intake matches approved filtered/physical blobs and cached image/digest7dcddc01. Root pre-effect approval GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY, one fresh internal network/tmpfs container/newUUID task and exact-owned SQL/cleanup using approved tool, no existing DB/source changes. Reviewer campaign NOT_GRANTED pending worker success/cleanup. Root protection audit first compared Git normalized seed bytes to physical CRLF and falsely asserted mismatch; corrected to filtered blob comparison, physical protected1872 paths unchanged. This is root audit method overhead, no worker failure.",
+  "workerAcknowledgment": "Root fresh BUILD-to-REVIEW role transition after actual worker task39cd4dbacf3744bc8ea39f413b33e4d4 exit2/FAILED/MOUNT_INVALID, readiness0/no start/no SQL. Tool exact cleanup VERIFIED_CLEAN; independent root result-check PASS confirms both full IDs and names absent, existing owner DB selected status unchanged and healthy, source/protected1872paths/tenqualityarrays/seed unchanged. Reviewer campaign never approved and remains NOT_RUN. Worker still writes evidence only; no repairs/replays.",
   "preEffectApproval": {
     "status": "GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY",
     "actor": "Codex /root independent REVIEWER",
@@ -88,7 +89,11 @@
     "evidence": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
     "reviewerCampaignApproval": "NOT_GRANTED_UNTIL_WORKER_SUCCESS_VERIFIED_CLEAN"
   },
-  "workerFixtureCampaignsUsed": 0,
+  "workerFixtureCampaignsUsed": 1,
   "reviewerFixtureCampaignsUsed": 0,
-  "workerSourceRepairRounds": 0
+  "workerSourceRepairRounds": 0,
+  "workerRuntime": "FAILED_MOUNT_INVALID",
+  "reviewerRuntime": "NOT_RUN",
+  "cleanup": "VERIFIED_CLEAN_ROOT_CONFIRMED",
+  "preEffectApprovalDisposition": "WORKER_ONCE_EXHAUSTED_REVIEWER_NOT_GRANTED"
 }

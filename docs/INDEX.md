@@ -999,6 +999,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `docs/work_orders/CCMAI_RUNTIME_085.md`
 - R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `docs/reviews/probes/r085_fixture/intake/owner_mysql_status.json`
 - R085 bounded local fixture authority and actual secret-free pre-effect Docker/source/cache intake; no campaign yet.: `docs/reviews/probes/r085_fixture/intake/source_image_readiness.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R085_LOCAL_FIXTURE_WORKER_EXECUTION_2026-10-11.md`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r083_fixture/worker/39cd4dbacf3744bc8ea39f413b33e4d4/manifest.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/worker_result_check.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/authority-binding-39cd4dbacf3744bc8ea39f413b33e4d4.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher-errors.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/launcher.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/manifest-paths-before.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/preflight.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/process-started.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stderr.raw.bin`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/worker/launcher-de26d3b5dda944908754dc2afad2a5c3/stdout.raw.bin`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
