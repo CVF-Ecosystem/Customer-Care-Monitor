@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-077",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-077 BUILD repository-only topology/owner-fence intake and nonbinding startup hardening draft, exact3 Luna max artifacts. Root independently reviews TI01..08; deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-077 CHANGES_REQUIRED F1/F2 contract controls; root M1 navigation repaired. Luna max acknowledges current handoff before exact3 same-scope documentary repair BUILD; source/runtime/provider/DB/host/network/push0, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary IMPLEMENTATION_WORKER; root independent REVIEWER reserved",
+  "activeRole": "Codex /root independent REVIEWER / documentary navigation REPAIR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max repair ACK pending",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,7 +34,7 @@
   },
   "candidatePlanning": {
     "id": "R077",
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_077.md",
     "sourceImplementation": "NOT_DISPATCHED_DOCUMENTARY_ONLY",
     "sourceOrRuntimeDispatched": false

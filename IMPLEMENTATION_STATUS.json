@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -268,9 +268,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-077 BUILD repository-only topology/owner-fence intake and nonbinding startup hardening draft, exact3 Luna max artifacts. Root independently reviews TI01..08; deployed facts UNKNOWN, source/runtime/provider/DB/host/network/push0; accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-077 CHANGES_REQUIRED F1/F2 contract controls; root M1 navigation repaired. Luna max acknowledges current handoff before exact3 same-scope documentary repair BUILD; source/runtime/provider/DB/host/network/push0, accounts parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_077.md",
-    "buildDispatched": true,
+    "buildDispatched": false,
     "actualWorkerModel": {
       "model": "gpt-6-luna",
       "reasoningEffort": "max"
@@ -1476,7 +1476,7 @@
   },
   "topologyIntake": {
     "trancheId": "CCMAI-RUNTIME-077",
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "sourceImplementation": "NOT_DISPATCHED",
     "deployedFacts": "UNKNOWN",
     "runtimeEvidence": "NOT_RUN"

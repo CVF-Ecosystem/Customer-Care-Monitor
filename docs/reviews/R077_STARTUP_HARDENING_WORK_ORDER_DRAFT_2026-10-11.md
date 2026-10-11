@@ -57,3 +57,5 @@ Focused tests should include the new real-startup acceptance plus existing `Test
 ## Failure and authority boundaries
 
 Fail the future tranche if any JobRun startup update remains, an age/local-owner/manual bypass is introduced, a running row stops blocking admission, the existing channel lease lifecycle changes without a new contract, the actual `Scheduler.Start` path is not covered, the side-effect trap cannot detect attempted writes, cleanup is unbounded, or evidence is presented as deployed proof. A need for owner-death detection, durable fencing, recovery status, schema work, or mixed-version deployment support requires a separate design and scope decision. No action in R077 implements or dispatches this draft.
+
+Paired evidence: [repository topology intake](R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md) and [source identity](probes/r077_topology_identity_2026-10-11.json). Root added these navigation links after first review (M1); substantive proposal remains worker-authored.

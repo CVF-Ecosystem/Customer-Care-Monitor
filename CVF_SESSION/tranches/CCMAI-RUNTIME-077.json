@@ -43,18 +43,20 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 under continuing roadmap/Luna max worker/root orchestrator-reviewer assignment. R076 next governed move separately bounded readonly topology/owner-fence intake; source-only versioned deployment examples and contracts, not observed hosts/data.",
   "claimScope": "Repository-described topology/startup/ownership facts, explicit deployed UNKNOWN and concrete nonbinding next hardening draft; no runtime/durability/governance certification.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_077.md",
   "baseCommit": "a64f6b22b815e9f535fc20b7c7394fa33ed2f9ac",
-  "buildCommit": null,
+  "buildCommit": "83b3b9589c65987fc7d034ec046284e484a55a02",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -67,5 +69,5 @@
     "primary": "repository_topology_intake_and_bounded_work_order_draft",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
   },
-  "workerAcknowledgment": "2026-10-11 Luna max /root/r077_worker fresh WORK_ORDER canonical rehydration/CVF declaration ACK received before edits. State/memory/handoff/order/status/index consistent; R1 exact3 document scope/no source/test/runtime/host/DB/network effects accepted. Root records documentary BUILD release under committed R077 seed, root all metadata/commits and independent review. Bootstrap/doctor/TEMP ingest notes retained; repository units46PASS31.176s inherited unchanged tooling."
+  "workerAcknowledgment": "Root classified M1 as known minor authorized documentary navigation repair before edits; added reciprocal local links only. F1/F2 remain worker-owned and require same-scope repair ACK/BUILD; no source/test/seed or acceptance expansion."
 }

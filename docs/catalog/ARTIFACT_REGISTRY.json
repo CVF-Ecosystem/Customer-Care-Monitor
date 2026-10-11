@@ -6016,6 +6016,34 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_077.md",
       "status": "ACTIVE",
       "description": "TI01..08 bounded repository topology/intended hardening draft, application native0."
+    },
+    {
+      "id": "runtime077-intake",
+      "family": "continuity",
+      "path": "docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Worker source-only topology facts and deployed UNKNOWN; no runtime proof."
+    },
+    {
+      "id": "runtime077-draft",
+      "family": "continuity",
+      "path": "docs/reviews/R077_STARTUP_HARDENING_WORK_ORDER_DRAFT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Nonbinding separate R2 startup no-rewrite proposal; no implementation dispatch."
+    },
+    {
+      "id": "runtime077-identity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r077_topology_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "Worker versioned source/input hashes and source-only limits."
+    },
+    {
+      "id": "runtime077-first-findings",
+      "family": "continuity",
+      "path": "docs/reviews/R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "First packet CHANGES_REQUIRED F1/F2; root M1 navigation repair, history retained."
     }
   ]
 }
