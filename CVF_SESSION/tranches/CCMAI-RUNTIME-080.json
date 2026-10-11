@@ -45,8 +45,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 continues accepted R079 next move: separate R1 intended durable JobRun fence DESIGN/SPEC with Luna max worker/root independent reviewer, no product/runtime/external effects.",
   "claimScope": "Intended durable-fence architecture/spec and nonbinding later implementation order only; repository facts and unknown deployed adoption separated.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_080.md",
   "baseCommit": "cc9e31fc15686c523e1abaa503115f721f53447d",
   "buildCommit": null,
@@ -55,7 +55,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -67,5 +68,6 @@
   "taskClassification": {
     "primary": "durable_jobrun_fence_design_spec",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
-  }
+  },
+  "workerAcknowledgment": "Fresh WORK_ORDER tuple rehydrated before BUILD, Luna max declaration/ACK at41060ba received with no edits. Immutable seedcc9e31f precedesbase/activation. Root releases exact3 documentary files only, records mutation/deletion/prune source pointers as assistance not prose. Intended design requires independent REVIEW; 46gateunitsPASS38.818s retained, native0."
 }

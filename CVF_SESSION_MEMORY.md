@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-080", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-080", "parked": true} -->
 
 ## Current R080
 
-CCMAI-RUNTIME-080 DISPATCH_READY intended durable-fence DESIGN/SPEC DF01..10; Luna max fresh declaration/ACK before documentary BUILD release. Exact3 documents, application/provider/DB/host/network/push0; deployed UNKNOWN/recovery OPEN, accounts parked.
+CCMAI-RUNTIME-080 BUILD intended durable-fence DESIGN/SPEC DF01..10 exact3 documents; source-backed selected contract or concrete blockers, no code/schema/recovery/runtime/provider/DB/network/push, deployed UNKNOWN; accounts parked.
 
 ## Historical R079
 
