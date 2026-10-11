@@ -912,6 +912,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R077 documentary intake/proposal FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md`
 - R078 bounded phases/roles/evidence record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-078.json`
 - Immutable R079 R1 prerequisite-intake seed committed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-079.json`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/probes/r079_source_identity_2026-10-11.json`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/probes/r079_independent_first_audit.json`
+- R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance.: `docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md`
 - R079 PF01..08 exact3 documents only; next design draft nonbinding.: `docs/work_orders/CCMAI_RUNTIME_079.md`
 - R079 bounded documentary phase/role/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-079.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`

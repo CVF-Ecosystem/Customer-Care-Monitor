@@ -492,9 +492,9 @@
     {
       "referenceId": "W02",
       "path": "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
-      "gitBlobSha1": "315f6d7e322f338f537120500eb67ec60825ba6c",
-      "physicalSha256": "4177e1a32d5faa6d8fa5db746b9ac3b35395d450676bc6b6a0e3057107ac7783",
-      "lineCount": 61,
+      "gitBlobSha1": "2e3918f07f98408032be66edc6007b24479c2e03",
+      "physicalSha256": "a640c84fc4619b6fc3fbf150f4af969d90247997ab59aedc092a2c39d72ef3a6",
+      "lineCount": 80,
       "citationRanges": [
         {
           "firstLine": 1,

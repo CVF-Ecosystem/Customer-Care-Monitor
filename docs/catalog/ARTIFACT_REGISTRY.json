@@ -6513,6 +6513,41 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_079.md",
       "status": "ACTIVE",
       "description": "R079 PF01..08 exact3 documents only; next design draft nonbinding."
+    },
+    {
+      "id": "runtime079-evidence-0001",
+      "family": "continuity",
+      "path": "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0002",
+      "family": "continuity",
+      "path": "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0003",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r079_source_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0004",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r079_independent_first_audit.json",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
+    },
+    {
+      "id": "runtime079-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/R079_INDEPENDENT_PREREQUISITE_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R079 source-only prerequisite packet/independent review; no runtime or recovery acceptance."
     }
   ]
 }

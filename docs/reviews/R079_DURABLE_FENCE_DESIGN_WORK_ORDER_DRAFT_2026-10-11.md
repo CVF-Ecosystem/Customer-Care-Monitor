@@ -59,3 +59,22 @@ If accepted, root may prepare a fresh bounded work order and immutable seed for 
 [D04]: R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md#L3-L27
 [D05]: R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md#L3-L30
 
+
+[S02]: ../../backend/api/handlers/jobs.go#L368-L493
+[S03]: ../../backend/mcp/handlers.go#L330-L360
+[S04]: ../../backend/jobdispatch/dispatch.go#L71-L147
+[S05]: ../../backend/engine/analyzer_modes.go#L35-L273
+[S06]: ../../backend/engine/job_run_ownership.go#L61-L397
+[S07]: ../../backend/engine/analyzer.go#L39-L952
+[S08]: ../../backend/engine/analyzer_incremental.go#L167-L284
+[S09]: ../../backend/engine/source_execution_receipt.go#L64-L202
+[S10]: ../../backend/engine/scheduler.go#L58-L334
+[S11]: ../../backend/engine/sync.go#L1166-L1221
+[S12]: ../../backend/main.go#L69-L85
+[S13]: ../../backend/api/handlers/agents.go#L265-L310
+[S14]: ../../backend/db/models/job.go#L48-L60
+[S15]: ../../backend/db/models/setting.go#L34-L45
+[S16]: ../../backend/notifications/dispatcher.go#L38-L124
+[S17]: ../../backend/notifications/telegram.go#L13-L79
+[S18]: ../../backend/notifications/email.go#L10-L39
+[S19]: ../../backend/db/activity.go#L10-L26

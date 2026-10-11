@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-079", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-079", "parked": true} -->
 
 ## Current R079
 
-CCMAI-RUNTIME-079 BUILD PF01..08 documentary intake/design draft/identity only; Luna max exact3 new artifacts, root independent review before closure. App/native/provider/host/DB/network/push0, deployed UNKNOWN/recovery OPEN; accounts parked.
+CCMAI-RUNTIME-079 CHANGES_REQUIRED F1 mixed-binary fallback qualification; root M1 citation repair complete. Same exact3 documentary scope; worker fresh ACK then BUILD release before repair1, native/provider/DB/network/push0; accounts parked.
 
 ## Historical R078
 

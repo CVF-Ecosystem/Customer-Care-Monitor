@@ -1,0 +1,44 @@
+{
+  "packet": "6df6f6ef21aee802573bd12305263f5c16581f8a",
+  "identityFailures": [],
+  "unresolvedReferences": {
+    "R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19"
+    ],
+    "R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md": []
+  },
+  "rangeFailures": [],
+  "protected": {
+    "protectedSource": {
+      "count": 368,
+      "changed": []
+    },
+    "protectedHistory": {
+      "count": 116,
+      "changed": []
+    },
+    "protectedAcceptedInputs": {
+      "count": 74,
+      "changed": []
+    }
+  },
+  "backendDiff": [],
+  "qualityUnchanged": true
+}
