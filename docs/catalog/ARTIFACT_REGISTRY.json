@@ -7381,6 +7381,34 @@
       "path": "docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json",
       "status": "ACTIVE",
       "description": "R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime087-roadmap-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-087.json",
+      "status": "ACTIVE",
+      "description": "Immutable R1 owner-requested roadmap refresh authority; no source/runtime effects."
+    },
+    {
+      "id": "runtime087-roadmap-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-087.json",
+      "status": "ACTIVE",
+      "description": "R087 documentary roadmap progress refresh lifecycle; no product stage closure."
+    },
+    {
+      "id": "runtime087-roadmap-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_087.md",
+      "status": "ACTIVE",
+      "description": "Bounded R1 current progress and finite planning route work order."
+    },
+    {
+      "id": "runtime087-roadmap-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "Active R087 roadmap refresh continuity; R086 source-only acceptance/FREEZE OPEN preserved."
     }
   ]
 }
