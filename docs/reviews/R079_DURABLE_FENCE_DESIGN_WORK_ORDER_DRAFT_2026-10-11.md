@@ -4,7 +4,7 @@
 
 ## Objective
 
-Produce a source-backed design decision for whether and how a future durable JobRun owner fence could exclude stale, restarted, and newly admitted writers continuously across all run-related DB effects, without relying on row age or a process-local owner map. Compare a DB-owned monotonic generation with an external fencing-token service; retain unresolved-row blocking as the safe fallback. Define how terminal status, cancellation, ordinary checkpoint behavior, notification delivery, ambiguous outcomes, and old-binary compatibility constrain any later recovery operation [D01][D02][W01].
+Produce a source-backed design decision for whether and how a future durable JobRun owner fence could exclude stale, restarted, and newly admitted writers continuously across all run-related DB effects, without relying on row age or a process-local owner map. Compare a DB-owned monotonic generation with an external fencing-token service; retain unresolved-row blocking as the repository/new-compatible-writer fallback, not a guarantee about an unknown fleet. Define how terminal status, cancellation, ordinary checkpoint behavior, notification delivery, ambiguous outcomes, and old-binary compatibility constrain any later recovery operation [D01][D02][W01].
 
 The design may proceed while deployment topology remains UNKNOWN. It must label that unknown as an operational rollout prerequisite and must not invent a deployed fact or treat R077's older source snapshot as current truth [D03].
 
@@ -50,7 +50,7 @@ The spec must compare at least the two proposed fence classes against the keep-b
 
 Return for revision if any source citation is invalid, an effect surface or entry point is omitted, a local lock/existence check is mislabeled as a global fence, a stale binary can bypass the proposed condition without a rollout barrier, lock-order risk is ignored, ambiguous outcomes are retried or called successful, external effects are promised exactly once, deployed facts are inferred, or the doc expands into an implementation plan without a separate seed.
 
-If accepted, root may prepare a fresh bounded work order and immutable seed for a later phase. Any schema, production DB/host inspection, provider/network, recovery operation, or runtime budget is a boundary change requiring separate risk/authority review. Until then, current `running` rows stay fail-closed under existing admission; owner-death/recovery/deployment remain OPEN/UNKNOWN [D01][D02][D03][D04][D05][W01].
+If accepted, root may prepare a fresh bounded work order and immutable seed for a later phase. Any schema, production DB/host inspection, provider/network, recovery operation, or runtime budget is a boundary change requiring separate risk/authority review. In the inspected R078+ source and for compatible writers, matching `running` rows stay fail-closed under existing admission. Pre-R078 startup code or an unknown writer could change that state, so this is not a present-fleet guarantee; owner-death/recovery/deployment remain OPEN/UNKNOWN until old-writer compatibility or quiescence is established [D01][D02][D03][D04][D05][W01].
 
 [W01]: R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md
 [D01]: ../decisions/DISPATCH_RECOVERY_R076_2026-10-11.md#L7-L30
