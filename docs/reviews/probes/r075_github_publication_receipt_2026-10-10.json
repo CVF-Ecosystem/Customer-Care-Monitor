@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-075",
   "date": "2026-10-10",
-  "status": "SOURCE_PUBLICATION_VERIFIED_RECEIPT_PUBLICATION_PENDING",
+  "status": "SOURCE_AND_RECEIPT_PUBLICATION_VERIFIED",
   "observer": "Codex /root publication steward",
   "independentReviewer": "Codex /root/r074_auditor",
   "repository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
@@ -156,6 +156,37 @@
       "stderr": "",
       "elapsedSeconds": 1.067,
       "observedAtUtc": "2026-10-10T11:55:06.129588+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "credential.interactive=never",
+        "push",
+        "origin",
+        "fda259bee84a83b6718d34bca787e88f99282ae9:refs/heads/codex/gov001-f08-actions-evidence"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "To https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git\n   eeb164d..fda259b  fda259bee84a83b6718d34bca787e88f99282ae9 -> codex/gov001-f08-actions-evidence\n",
+      "elapsedSeconds": 3.885,
+      "observedAtUtc": "2026-10-11T04:20:02.784869+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "credential.interactive=never",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "refs/heads/codex/gov001-f08-actions-evidence"
+      ],
+      "exitCode": 0,
+      "stdout": "fda259bee84a83b6718d34bca787e88f99282ae9\trefs/heads/codex/gov001-f08-actions-evidence\n",
+      "stderr": "",
+      "elapsedSeconds": 0.87,
+      "observedAtUtc": "2026-10-11T04:20:06.672189+00:00"
     }
   ],
   "prepublicationReview": "Independent Luna PREPUBLICATION_PASS exact eeb164d05775322e3c21970151d4d4b84c605fea; unchanged seed, 8 metadata paths, clean/ancestry PASS; root default and PR7/7, inherited46units.",
@@ -166,7 +197,7 @@
   "credentialValuesRead": false,
   "ghCli": "NOT_INSTALLED; read-only command discovery",
   "historicalR068": "Original UNVERIFIED/remoteEffectUNKNOWN receipt unchanged; no retrospective publication success.",
-  "nextMove": "Independent final receipt review, then publish separate receipt/continuity commit under GP06 and verify its SHA; no self-referential receipt.",
+  "nextMove": "R075 local publication closed; closure packet ordinary publication/readback reported externally to avoid self-reference. Next separate source-only DESIGN/SPEC; no runtime dispatch.",
   "ownerTriggeredResumes": 3,
   "attemptedHeads": [
     "ba88c6e786cb0dc55ef61da3cfe7651fc2254036",
@@ -178,7 +209,13 @@
   "interactiveResumeAcknowledgment": "Owner 2026-10-10 explicitly instructs xu ly di, push cho xong. Third noninteractive attempt at0040308 failed128, retained. REVIEW_COST_ESCALATION_REQUIRED: stop repeating noninteractive failures; one owner-authorized interactive existing-GCM authentication flow and one ordinary exact-SHA push after independent review. No credential/config values read or printed, no force/main/merge/deploy. Canonical core reconciliation prerequisite completed through prescribed backup/clone script; core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba clean, doctor25/1 PASS WITH NOTE, manifest unchanged. No downstream artifacts in core.",
   "publishedSourceSha": "eeb164d05775322e3c21970151d4d4b84c605fea",
   "verifiedRemoteHead": "eeb164d05775322e3c21970151d4d4b84c605fea",
-  "receiptPublication": "PENDING",
+  "receiptPublication": {
+    "status": "VERIFIED",
+    "commit": "fda259bee84a83b6718d34bca787e88f99282ae9",
+    "pushExitCode": 0,
+    "readbackExitCode": 0,
+    "verifiedRemoteSha": "fda259bee84a83b6718d34bca787e88f99282ae9"
+  },
   "historicalMainIntegrationAtFirstRead20261010": "Current main not ancestor of feature;4main-only commits/common base083e0bae. No merge-readiness claim or main change.",
   "currentRemoteObservation20261011": {
     "feature": "eeb164d05775322e3c21970151d4d4b84c605fea",
@@ -192,5 +229,8 @@
     "gateUnits": "46 PASS34.847s",
     "freshPrRange": "7/7 against origin/main01e7916",
     "applicationNativeInvocations": 0
-  }
+  },
+  "sourcePublicationAttempts": 4,
+  "receiptPublicationAttempts": 1,
+  "aggregatePushAttemptsAtReceiptVerification": 5
 }

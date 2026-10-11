@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
 
 ## Current R075
 
-CCMAI-RUNTIME-075 REVIEW_PASS source publication and receipt accepted independently; GP06 publish this reviewed receipt commit and verify exact SHA before local FREEZE. No app/provider/DB/main/force/merge/deploy; accounts parked.
+CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.
 
 R074 local dossier FROZEN and five implementation plus one fresh audit preserved. New owner GitHub instruction authorizes R075 ordinary branch publication; no retroactive change to R068 unverified attempt or old prohibited effects.
 

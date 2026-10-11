@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root SESSION_SYNC_STEWARD / publication COMMIT_STEWARD; Luna independent REVIEWER
-- Next allowed move: CCMAI-RUNTIME-075 REVIEW_PASS source publication and receipt accepted independently; GP06 publish this reviewed receipt commit and verify exact SHA before local FREEZE. No app/provider/DB/main/force/merge/deploy; accounts parked.
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active role: Codex /root CLOSER / SESSION_SYNC_STEWARD / publication COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Before-effect acknowledgment
@@ -26,3 +26,7 @@ REVIEW_COST_ESCALATION_REQUIRED recorded before third same-class publication att
 ## Owner-directed interactive authentication ACK
 
 Owner 2026-10-10 explicitly instructs xu ly di, push cho xong. Third noninteractive attempt at0040308 failed128, retained. REVIEW_COST_ESCALATION_REQUIRED: stop repeating noninteractive failures; one owner-authorized interactive existing-GCM authentication flow and one ordinary exact-SHA push after independent review. No credential/config values read or printed, no force/main/merge/deploy. Canonical core reconciliation prerequisite completed through prescribed backup/clone script; core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba clean, doctor25/1 PASS WITH NOTE, manifest unchanged. No downstream artifacts in core.
+
+## Scoped publication closure
+
+Independent review accepted source publication and corrected receipt. GP06 receipt commit fda259bee84a83b6718d34bca787e88f99282ae9 ordinary push/readback both exit0, exactmatch before local FREEZE. Closure packet own SHA is verified externally after commit; no self-reference. Source/tests/old seeds and sample counts unchanged. No Actions/provider/live governance claims.
