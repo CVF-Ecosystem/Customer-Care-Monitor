@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / documentary mechanical REPAIR / SESSION_SYNC_STEWARD / COMMIT_STEWARD
-- Next allowed move: CCMAI-RUNTIME-079 CHANGES_REQUIRED F1 mixed-binary fallback qualification; root M1 citation repair complete. Same exact3 documentary scope; worker fresh ACK then BUILD release before repair1, native/provider/DB/network/push0; accounts parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r079_worker documentary REPAIR_WORKER
+- Next allowed move: CCMAI-RUNTIME-079 BUILD repair1 F1 source-contract versus unknown mixed-binary fleet qualification in exact3 documents; root M1 pointers preserved. No application/provider/host/DB/network/push effects, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake/design/spec/work-order ACK
@@ -30,3 +30,7 @@ Fresh resumed workspace rehydration at REVIEW; doctor25/1 PASS WITH NOTE coree9d
 ## Before-edit role acknowledgment
 
 Root first local continuity check rejected abbreviated R079 next-move label; corrected to full active tranche ID. Root metadata error retained, no worker/runtime attribution.
+
+## Before-edit role acknowledgment
+
+Fresh REVIEW canonical files agree before role transition. Luna max repair ACK received with no edits and coree9ddcb/currentseed/order checked. Root releases same-scope documentary BUILD repair1 only after committed release; root M1/S02 links and hashes retained, no source/runtime or authority change.

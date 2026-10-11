@@ -60,7 +60,7 @@ If accepted, root may prepare a fresh bounded work order and immutable seed for 
 [D05]: R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md#L3-L30
 
 
-[S02]: ../../backend/api/handlers/jobs.go#L368-L493
+[S02]: ../../backend/api/handlers/jobs.go#L368-L603
 [S03]: ../../backend/mcp/handlers.go#L330-L360
 [S04]: ../../backend/jobdispatch/dispatch.go#L71-L147
 [S05]: ../../backend/engine/analyzer_modes.go#L35-L273

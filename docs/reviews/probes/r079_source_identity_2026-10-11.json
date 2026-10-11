@@ -478,8 +478,8 @@
     {
       "referenceId": "W01",
       "path": "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
-      "gitBlobSha1": "d1b2f6ba2d1d736a7bda8ef42f174a9843e2e625",
-      "physicalSha256": "3c34b70bab770e85f7da06a46333b45e30dd6abeb8b24cb5afd072887107549d",
+      "gitBlobSha1": "fa36fcdd5bd57c392383f7f5c4f3b02dfa52c86f",
+      "physicalSha256": "9b315d575110c8e0ab58b4e187a8e4d4147b91351d464047e040a67a53be1c6d",
       "lineCount": 99,
       "citationRanges": [
         {
@@ -492,8 +492,8 @@
     {
       "referenceId": "W02",
       "path": "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
-      "gitBlobSha1": "2e3918f07f98408032be66edc6007b24479c2e03",
-      "physicalSha256": "a640c84fc4619b6fc3fbf150f4af969d90247997ab59aedc092a2c39d72ef3a6",
+      "gitBlobSha1": "a7af1ac8ba4fd1500a48a644321717d2a2185351",
+      "physicalSha256": "5fe255df81a37234e37c5f8c7f7639237fde123885ff473e3c6de98e4967c627",
       "lineCount": 80,
       "citationRanges": [
         {

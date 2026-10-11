@@ -70,7 +70,7 @@ The paired nonbinding draft gives candidate paths, bounded role/scope, acceptanc
 
 [I01]: probes/r079_source_identity_2026-10-11.json
 [S01]: ../../backend/api/router.go#L174-L184
-[S02]: ../../backend/api/handlers/jobs.go#L368-L493
+[S02]: ../../backend/api/handlers/jobs.go#L368-L603
 [S03]: ../../backend/mcp/handlers.go#L330-L360
 [S04]: ../../backend/jobdispatch/dispatch.go#L71-L147
 [S05]: ../../backend/engine/analyzer_modes.go#L35-L273

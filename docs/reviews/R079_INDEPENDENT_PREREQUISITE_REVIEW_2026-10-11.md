@@ -19,3 +19,5 @@ Independent first audit: [JSON](probes/r079_independent_first_audit.json). All28
 Root assistance before handback: PF contract plus source pointers for post-terminal release, shared test-run/usage persistence and lock/error distinctions. Root lookup overhead: incorrect guessed filenames and Windows rg wildcard corrected; no native/runtime retry. Root did not draft worker narrative. Full consolidated review precedes repair1. No additional finding is being held back.
 
 Same authority: exact three worker paths, existing immutable seed1852566; application/native/provider/DB/host/network/push0. Review units46PASS inherited this tranche; repository gates do not establish runtime CVF behavior.
+
+M1 completion before worker release: S02 navigation range in both documents extended through603 to expose cited TestRunJob555..603; source identity already captured that range. Root continuity first-check failure used abbreviated R079 instead of full ID, corrected before3134ea4; this metadata error belongs to root, not Luna.

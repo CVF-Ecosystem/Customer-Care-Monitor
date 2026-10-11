@@ -43,8 +43,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 continues roadmap with Luna max worker/root orchestrator and independent reviewer. R078 next move bounds read-only durable recovery/owner-fence prerequisite intake, no application/native/provider/host effects.",
   "claimScope": "Repository source-backed prerequisites and explicit unknown deployment facts; concrete nonbinding next DESIGN/SPEC draft only. No ownership/fencing/runtime/recovery/governance guarantee.",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_079.md",
   "baseCommit": "185256658e1dcec54f09e180b2e2e9fd27ab4284",
   "buildCommit": "6df6f6ef21aee802573bd12305263f5c16581f8a",
@@ -56,7 +56,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -69,5 +70,5 @@
     "primary": "recovery_fence_prerequisite_intake",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
   },
-  "workerAcknowledgment": "Root first local continuity check rejected abbreviated R079 next-move label; corrected to full active tranche ID. Root metadata error retained, no worker/runtime attribution."
+  "workerAcknowledgment": "Fresh REVIEW canonical files agree before role transition. Luna max repair ACK received with no edits and coree9ddcb/currentseed/order checked. Root releases same-scope documentary BUILD repair1 only after committed release; root M1/S02 links and hashes retained, no source/runtime or authority change."
 }
