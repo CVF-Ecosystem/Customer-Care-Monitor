@@ -19,9 +19,10 @@ import (
 )
 
 type startupHardeningFixture struct {
-	base      *incFixture
-	tenantID  string
-	channelID string
+	base         *incFixture
+	tenantID     string
+	channelID    string
+	otherTenants []string
 }
 
 func setupStartupHardeningFixture(t *testing.T) *startupHardeningFixture {
@@ -40,13 +41,16 @@ func setupStartupHardeningFixture(t *testing.T) *startupHardeningFixture {
 	base.exec(t, `INSERT INTO app_settings (id, tenant_id, setting_key, value_plain, created_at, updated_at)
 		VALUES (?, ?, 'ai_batch_size', '30', ?, ?)`, pkg.NewUUID(), f.tenantID, now, now)
 	t.Cleanup(func() {
-		for _, table := range []string{"job_results", "analysis_snapshots", "job_runs", "ai_usage_logs", "messages", "conversations", "app_settings", "activity_logs", "jobs", "channels"} {
-			if err := db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", f.tenantID).Error; err != nil {
-				t.Errorf("R078 fixture cleanup %s: %v", table, err)
+		tenantIDs := append([]string{f.tenantID}, f.otherTenants...)
+		for _, tenantID := range tenantIDs {
+			for _, table := range []string{"job_results", "analysis_snapshots", "job_runs", "ai_usage_logs", "messages", "conversations", "app_settings", "activity_logs", "jobs", "channels"} {
+				if err := db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", tenantID).Error; err != nil {
+					t.Errorf("R078 fixture cleanup %s tenant=%s: %v", table, tenantID, err)
+				}
 			}
-		}
-		if err := db.DB.Exec("DELETE FROM tenants WHERE id = ?", f.tenantID).Error; err != nil {
-			t.Errorf("R078 fixture cleanup tenant: %v", err)
+			if err := db.DB.Exec("DELETE FROM tenants WHERE id = ?", tenantID).Error; err != nil {
+				t.Errorf("R078 fixture cleanup tenant=%s: %v", tenantID, err)
+			}
 		}
 	})
 	return f
@@ -93,10 +97,14 @@ func (f *startupHardeningFixture) job(t *testing.T, id string) models.Job {
 }
 
 func (f *startupHardeningFixture) addRun(t *testing.T, jobID, status string) models.JobRun {
+	return f.addRunFor(t, f.tenantID, jobID, status)
+}
+
+func (f *startupHardeningFixture) addRunFor(t *testing.T, tenantID, jobID, status string) models.JobRun {
 	t.Helper()
 	now := time.Now().UTC().Truncate(time.Millisecond)
 	run := models.JobRun{
-		ID: pkg.NewUUID(), JobID: jobID, TenantID: f.tenantID,
+		ID: pkg.NewUUID(), JobID: jobID, TenantID: tenantID,
 		StartedAt: now.Add(-time.Hour), Status: status, Summary: `{"fixture":"r078"}`, CreatedAt: now.Add(-time.Hour),
 	}
 	if status != "running" {
@@ -110,12 +118,31 @@ func (f *startupHardeningFixture) addRun(t *testing.T, jobID, status string) mod
 }
 
 func (f *startupHardeningFixture) run(t *testing.T, id string) models.JobRun {
+	return f.runFor(t, f.tenantID, id)
+}
+
+func (f *startupHardeningFixture) runFor(t *testing.T, tenantID, id string) models.JobRun {
 	t.Helper()
 	var run models.JobRun
-	if err := db.DB.First(&run, "id = ? AND tenant_id = ?", id, f.tenantID).Error; err != nil {
+	if err := db.DB.First(&run, "id = ? AND tenant_id = ?", id, tenantID).Error; err != nil {
 		t.Fatal(err)
 	}
 	return run
+}
+
+func (f *startupHardeningFixture) addOtherTenantJob(t *testing.T) (string, string) {
+	t.Helper()
+	tenantID, jobID := pkg.NewUUID(), pkg.NewUUID()
+	now := time.Now().UTC()
+	f.base.exec(t, `INSERT INTO tenants (id, name, slug, settings, created_at, updated_at)
+		VALUES (?, 'R078 synthetic other tenant', ?, '{}', ?, ?)`, tenantID, tenantID, now, now)
+	f.otherTenants = append(f.otherTenants, tenantID)
+	f.base.exec(t, `INSERT INTO jobs (id, tenant_id, name, job_type, input_channel_ids, rules_content,
+		rules_config, schedule_type, schedule_cron, is_active, outputs, output_schedule, created_at, updated_at)
+		VALUES (?, ?, ?, 'qc_analysis', '[]', 'Synthetic other-tenant rule', '[{"name":"Synthetic rule"}]',
+		'manual', '', true, '[]', 'none', ?, ?)`,
+		jobID, tenantID, "R078 other-tenant job "+jobID[:8], now, now)
+	return tenantID, jobID
 }
 
 func (f *startupHardeningFixture) runCount(t *testing.T, jobID string) int64 {
@@ -189,6 +216,24 @@ func assertNoStartupRunWrites(t *testing.T, trap *startupRunWriteTrap, contract 
 	attempts := trap.stopObserving()
 	if len(attempts) != 0 {
 		t.Fatalf("%s startup attempted JobRun update target=%s", contract, attempts[0].TargetID)
+	}
+}
+
+func assertStartupOwnerContextNotCanceled(t *testing.T, ctx context.Context, reason string) {
+	t.Helper()
+	select {
+	case <-ctx.Done():
+		t.Fatalf("%s signalled the held owner's context", reason)
+	default:
+	}
+}
+
+func assertStartupOwnerContextCanceled(t *testing.T, ctx context.Context, reason string) {
+	t.Helper()
+	select {
+	case <-ctx.Done():
+	default:
+		t.Fatalf("%s did not signal the held owner's context", reason)
 	}
 }
 
@@ -309,19 +354,29 @@ func TestSH01LiveOwnerStartPreservesRowAndPersistedBusyAdmission(t *testing.T) {
 func TestSH02StartupPreservesUnknownRunningAndTerminalRows(t *testing.T) {
 	f := setupStartupHardeningFixture(t)
 	job := f.addJob(t, "manual", "")
-	running := f.addRun(t, job.ID, "running")
-	terminal := f.addRun(t, job.ID, "success")
-	beforeRunning, beforeTerminal := f.run(t, running.ID), f.run(t, terminal.ID)
+	unrelatedJob := f.addJob(t, "manual", "")
+	otherTenantID, otherTenantJobID := f.addOtherTenantJob(t)
+	snapshots := []models.JobRun{
+		f.addRun(t, job.ID, "running"),
+		f.addRun(t, job.ID, "success"),
+		f.addRun(t, unrelatedJob.ID, "running"),
+		f.addRunFor(t, otherTenantID, otherTenantJobID, "running"),
+	}
+	before := make([]models.JobRun, len(snapshots))
+	for index, row := range snapshots {
+		before[index] = f.runFor(t, row.TenantID, row.ID)
+	}
 	trap := installStartupRunWriteTrap(t)
 	scheduler := newStartupTestScheduler(t, &config.Config{})
 	scheduler.start()
 	scheduler.stop(t)
 	assertNoStartupRunWrites(t, trap, "SH02")
-	if after := f.run(t, running.ID); !reflect.DeepEqual(beforeRunning, after) {
-		t.Fatalf("SH02 unknown running row changed during Start: before=%+v after=%+v", beforeRunning, after)
-	}
-	if after := f.run(t, terminal.ID); !reflect.DeepEqual(beforeTerminal, after) {
-		t.Fatalf("SH02 terminal row changed during Start: before=%+v after=%+v", beforeTerminal, after)
+	for index, row := range snapshots {
+		after := f.runFor(t, row.TenantID, row.ID)
+		if !reflect.DeepEqual(before[index], after) {
+			t.Fatalf("SH02 row changed during Start tenant=%s job=%s run=%s: before=%+v after=%+v",
+				row.TenantID, row.JobID, row.ID, before[index], after)
+		}
 	}
 }
 
@@ -345,6 +400,7 @@ func TestSH03FreeJobAdmissionAndOwnerCancellationContrast(t *testing.T) {
 		worker.wait(t)
 	})
 	provider.waitEntered(t)
+	ownerContext := reservation.Context()
 	free, err := freshB.reserve(context.Background(), freeJob, 0)
 	if err != nil {
 		t.Fatalf("SH03 unrelated free job admission: %v", err)
@@ -355,15 +411,18 @@ func TestSH03FreeJobAdmissionAndOwnerCancellationContrast(t *testing.T) {
 	if _, err := freshB.cancelRun(ownedJob.TenantID, ownedJob.ID, reservation.RunID()); !errors.Is(err, ErrRunNotOwned) {
 		t.Fatalf("SH03 non-owner cancellation = %v, want ErrRunNotOwned", err)
 	}
+	assertStartupOwnerContextNotCanceled(t, ownerContext, "SH03 non-owner cancellation")
 	if _, err := ownerA.cancelRun(ownedJob.TenantID, ownedJob.ID, pkg.NewUUID()); !errors.Is(err, ErrRunNotRunning) {
 		t.Fatalf("SH03 mismatched owner cancellation = %v, want ErrRunNotRunning", err)
 	}
+	assertStartupOwnerContextNotCanceled(t, ownerContext, "SH03 mismatched cancellation")
 	if row := f.run(t, reservation.RunID()); row.Status != "running" {
 		t.Fatalf("SH03 a refused cancellation changed the row: %+v", row)
 	}
 	if got, err := ownerA.cancelRun(ownedJob.TenantID, ownedJob.ID, reservation.RunID()); err != nil || got != reservation.RunID() {
 		t.Fatalf("SH03 exact owner cancellation = %q, %v", got, err)
 	}
+	assertStartupOwnerContextCanceled(t, ownerContext, "SH03 exact owner cancellation")
 	if row := f.run(t, reservation.RunID()); row.Status != "running" {
 		t.Fatalf("SH03 accepted request finalized before the worker exited: %+v", row)
 	}
