@@ -18,3 +18,7 @@ Fresh manifest/policy/targeted state/memory/R082 handoff/implementation/index ag
 ## Before-edit role acknowledgment
 
 Fresh WORK_ORDER ACK at eba77516 from Luna max before edits: canonical phase/status/next/state-marker/handoff/implementation/index/order agree; immutable seedea73a86 precedes activation/base. R2 exact3 FT01..10 acknowledged, including local-only Docker context and literal-safe restricted schema grants. Root records source BUILD release; worker owns implementation and one initial unit suite, no Docker/SQL before separate committed safety approval. Root independent reviewer/all commits; no effects or prior edits.
+
+## Fresh BUILD worker acknowledgment
+
+Luna max fresh BUILD ACK received at c23d84e before reported source edits; canonical tuple/seed/base/order/index agree, exact3 plus one initial harness suite only. Worker explicitly confirms Docker/image/context/resource/SQL inspections and effects wait for root committed safety approval. Root records acknowledgment without expanding effect authority; this Git record does not itself prove intra-worktree edit timing.
