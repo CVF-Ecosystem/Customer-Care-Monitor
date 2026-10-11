@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max documentary worker pending
-- Next allowed move: CCMAI-RUNTIME-076 DISPATCH_READY source-only recovery DESIGN/SPEC. Luna max worker rehydrates and acknowledges before documentary BUILD release; root independent reviewer. Application/provider/DB/network authority0; topology/recovery implementation OPEN; Facebook/Zalo OA parked.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary IMPLEMENTATION_WORKER; root independent REVIEWER reserved
+- Next allowed move: CCMAI-RUNTIME-076 BUILD documentary recovery DESIGN/SPEC only. Luna max authors exact three artifacts; root independently reviews DR01..10 and startup cleanup assumptions before scoped local disposition. Application/provider/DB/network authority0; recovery implementation OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake / before-build authority
@@ -18,3 +18,7 @@ Owner 2026-10-11 continues roadmap, explicitly Luna max worker/root orchestrator
 New seed 2f0b1380be8c27e1febc8e1d9f281e53a79719d5 committed before document BUILD. Root ORCHESTRATOR -> WORK_ORDER_AUTHOR: DR01..10 documentary authoring contract; no app/source/test/runtime/data/security/external effect. Worker ACK pending before any edits; root owns metadata and commits. Future runtime recovery at leastR2 needs separate work order and independent review; no topology inference or stale-age reclaim. Full roadmap/live/governance OPEN.
 
 Checks: seed staged preflight7/7; cached PR range7/7; gate units46PASS33.881s. These are repository checks only. Root read lookup errors/Windows rg wildcard failure are root overhead, not Luna findings.
+
+## Before-edit role acknowledgment
+
+2026-10-11 Luna max /root/r076_worker fresh canonical rehydration and CVF declaration ACK received by root before edits. State/memory/handoff/status/index WORK_ORDER consistent; immutable R1 three-file documentary scope accepted, application native0. Root records ACK and documentary BUILD release; root owns metadata/all commits, child owns design/spec/identity. Root source assistance: finalizer fallback and scheduler startup cleanup identified, no worker draft. Core doctor inherited25/1, knowledge TEMP fallback/noPOST and bootstrap migration notes retained.
