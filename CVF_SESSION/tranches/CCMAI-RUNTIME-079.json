@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-079",
+  "authorityKind": "DISPATCHER_OWNED_READONLY_RECOVERY_FENCE_PREREQUISITE_INTAKE",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r079_worker",
+    "repairWorker": "Codex /root/r079_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md",
+    "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+    "docs/reviews/probes/r079_source_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_079.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 continues roadmap with Luna max worker/root orchestrator and independent reviewer. R078 next move bounds read-only durable recovery/owner-fence prerequisite intake, no application/native/provider/host effects.",
+  "claimScope": "Repository source-backed prerequisites and explicit unknown deployment facts; concrete nonbinding next DESIGN/SPEC draft only. No ownership/fencing/runtime/recovery/governance guarantee.",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_079.md",
+  "baseCommit": "185256658e1dcec54f09e180b2e2e9fd27ab4284",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "taskClassification": {
+    "primary": "recovery_fence_prerequisite_intake",
+    "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
+  }
+}

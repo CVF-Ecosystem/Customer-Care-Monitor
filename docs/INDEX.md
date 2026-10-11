@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R078 bounded R2 startup no-rewrite implementation and synthetic validation.: `CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md`
+- Active R079 R1 repository-only recovery fence prerequisite intake; no application runtime authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -907,9 +907,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_summary.json`
 - R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_root_final_audit.json`
 - R078 scoped local startup closure after independent review22ac133; runtime8/8 synthetic only, recovery/live/deployed remain open.: `docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md`
+- Historical R078 synthetic startup closure; exact source/review and runtime limits retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md`
 - SH01..07 exact2 source/test scope and max8Go/no retry validation.: `docs/work_orders/CCMAI_RUNTIME_078.md`
 - Historical R077 documentary intake/proposal FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md`
 - R078 bounded phases/roles/evidence record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-078.json`
+- Immutable R079 R1 prerequisite-intake seed committed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-079.json`
+- R079 PF01..08 exact3 documents only; next design draft nonbinding.: `docs/work_orders/CCMAI_RUNTIME_079.md`
+- R079 bounded documentary phase/role/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-079.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

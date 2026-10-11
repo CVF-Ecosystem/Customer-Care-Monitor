@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R078 bounded R2 startup no-rewrite implementation and synthetic validation."
+      "description": "Active R079 R1 repository-only recovery fence prerequisite intake; no application runtime authority."
     },
     {
       "id": "r060-work-order",
@@ -6485,6 +6485,34 @@
       "path": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R078 scoped local startup closure after independent review22ac133; runtime8/8 synthetic only, recovery/live/deployed remain open."
+    },
+    {
+      "id": "runtime078-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Historical R078 synthetic startup closure; exact source/review and runtime limits retained."
+    },
+    {
+      "id": "runtime079-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-079.json",
+      "status": "ACTIVE",
+      "description": "Immutable R079 R1 prerequisite-intake seed committed before BUILD."
+    },
+    {
+      "id": "runtime079-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-079.json",
+      "status": "ACTIVE",
+      "description": "R079 bounded documentary phase/role/scope record."
+    },
+    {
+      "id": "runtime079-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_079.md",
+      "status": "ACTIVE",
+      "description": "R079 PF01..08 exact3 documents only; next design draft nonbinding."
     }
   ]
 }
