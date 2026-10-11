@@ -9,7 +9,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-087", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-087", "parked": true} -->
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 
@@ -27,7 +27,7 @@ Mandatory shared learning: [orchestrator roadmap control](docs/reviews/learnings
 
 ## Current R087
 
-CCMAI-RUNTIME-087 bounded R1 roadmap progress refresh BUILD; root updates current S0-S7/UI progress and finite product route, then documentary REVIEW. R086 source-only acceptance/FREEZE OPEN/docs55 retained; no source/runtime/provider/push authority, accounts parked.
+CCMAI-RUNTIME-087 REVIEW_PASS documentary roadmap tracking at9dbf26f; FREEZE OPEN due inherited docs55. ORCHESTRATOR next bounds P0 exact deadlink repair/validation, then P1 safety/dependency route decision before fixture/product execution authority; R086 source-only/native NOT_RUN/fence OPEN preserved, accounts parked/no provider/push.
 
 ## Historical R086 (source-only REVIEW_PASS, FREEZE OPEN)
 

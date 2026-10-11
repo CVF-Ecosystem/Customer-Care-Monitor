@@ -7409,6 +7409,13 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
       "status": "ACTIVE",
       "description": "Historical R086 source-only review acceptance; FREEZE OPEN and native readiness unverified."
+    },
+    {
+      "id": "runtime087-roadmap-documentary-review",
+      "family": "continuity",
+      "path": "docs/reviews/R087_ROADMAP_PROGRESS_DOCUMENTARY_REVIEW_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R1 documentary progress review accepted, root publication defects retained; FREEZE OPEN due inherited docs55, no stage exit or runtime proof."
     }
   ]
 }

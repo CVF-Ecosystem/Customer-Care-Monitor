@@ -35,18 +35,22 @@
     "push": 0
   },
   "claimScope": "Documentary status projection only; no new acceptance, runtime proof or closure of R086",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
   "baseCommit": "fea7763b146bdd26f5968e84daccbe1ba208578d",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_087.md",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "9dbf26fa88cc8995978961d98e6ffb9e3ba4da27",
+  "reviewEvidence": [
+    "docs/reviews/R087_ROADMAP_PROGRESS_DOCUMENTARY_REVIEW_2026-10-12.md"
+  ],
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -54,5 +58,6 @@
     "SPEC",
     "WORK_ORDER"
   ],
-  "dispatcher": "Codex /root"
+  "dispatcher": "Codex /root",
+  "scopedDisposition": "DOCUMENTARY_PROGRESS_ACCEPTED_INHERITED_DOCS55_FREEZE_OPEN"
 }

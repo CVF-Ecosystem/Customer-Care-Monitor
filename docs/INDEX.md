@@ -1040,6 +1040,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_unit/stdout.bin`
 - R086 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r086_mount_source/reviewer/source_review_publication.json`
 - Immutable R1 owner-requested roadmap refresh authority; no source/runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-087.json`
+- R1 documentary progress review accepted, root publication defects retained; FREEZE OPEN due inherited docs55, no stage exit or runtime proof.: `docs/reviews/R087_ROADMAP_PROGRESS_DOCUMENTARY_REVIEW_2026-10-12.md`
 - Bounded R1 current progress and finite planning route work order.: `docs/work_orders/CCMAI_RUNTIME_087.md`
 - R087 documentary roadmap progress refresh lifecycle; no product stage closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-087.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
