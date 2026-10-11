@@ -283,7 +283,7 @@
     "localClosureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
     "sourceCheckpoint": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
     "publishedClosureCommit": null,
-    "localClosureCommit": null
+    "localClosureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -1722,6 +1722,7 @@
     "qualityAssessment": "docs/reviews/R082_LUNA_MAX_BLOCKER_RESOLUTION_ASSESSMENT_2026-10-11.md",
     "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
     "freeze": "FROZEN_DOCUMENTARY_ONLY",
-    "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1"
+    "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1",
+    "localClosureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3"
   }
 }

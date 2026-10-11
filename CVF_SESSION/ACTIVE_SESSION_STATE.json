@@ -598,8 +598,15 @@
   "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
   "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1",
   "closureStatus": null,
-  "closureChecks": null,
-  "localClosureCommit": null,
+  "closureChecks": {
+    "localPreflight": "PASS7/7",
+    "cachedPrRange": "PASS7/7_at_356b78b",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "gateUnits": "46PASS30.790s_reused_unchanged_scripts_tests",
+    "hostedCiObserved": false
+  },
+  "localClosureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3",
   "publicationStatus": "R082_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {

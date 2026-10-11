@@ -93,5 +93,6 @@
   "closer": "Codex /root",
   "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
   "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1",
-  "finalScope": "DOCUMENTARY_SELECTED_CONTRACT_CENSUS_NONBINDING_PLAN_ONLY"
+  "finalScope": "DOCUMENTARY_SELECTED_CONTRACT_CENSUS_NONBINDING_PLAN_ONLY",
+  "closureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3"
 }

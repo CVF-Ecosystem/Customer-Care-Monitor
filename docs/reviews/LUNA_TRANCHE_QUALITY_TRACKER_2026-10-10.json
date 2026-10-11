@@ -768,7 +768,8 @@
       "matchedComparison": false,
       "confidence": "LOW_SINGLE_REPAIR_ASSISTED_DOCUMENTARY_SAMPLE",
       "independentReviewCommit": "febd451a3cd9ca9f1e2f780813ee5658406589f1",
-      "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md"
+      "closureEvidence": "docs/reviews/R082_SCOPED_SELECTED_CONTRACT_CLOSURE_2026-10-11.md",
+      "localClosureCommit": "356b78bdc871485a362ba8e9d1dba70fba6507f3"
     }
   ]
 }
