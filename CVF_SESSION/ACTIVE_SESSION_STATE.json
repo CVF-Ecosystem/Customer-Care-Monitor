@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,31 +12,31 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-075",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-076",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-076 DISPATCH_READY source-only recovery DESIGN/SPEC. Luna max worker rehydrates and acknowledges before documentary BUILD release; root independent reviewer. Application/provider/DB/network authority0; topology/recovery implementation OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / publication COMMIT_STEWARD",
+  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max documentary worker pending",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
     "applicationNativeInvocations": 0,
-    "perCommandNetworkTimeoutSeconds": 60
+    "automaticRetries": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
-    "reasoningEffort": "xhigh"
+    "reasoningEffort": "max"
   },
   "ownerSubagentPreference": {
     "model": "gpt-6-luna",
-    "reasoningEffort": "xhigh",
-    "source": "Owner instruction 2026-10-08; continues until changed by owner"
+    "reasoningEffort": "max",
+    "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R075",
-    "status": "FROZEN",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_075.md",
-    "sourceImplementation": "NOT_APPLICABLE_PUBLICATION",
+    "id": "R076",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_076.md",
+    "sourceImplementation": "NOT_DISPATCHED_DESIGN_ONLY",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -267,7 +267,7 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "OWNER_DELEGATED_ROOT_BOUNDED_R1_BUILD_WITH_INDEPENDENT_REVIEW",
+  "roleRoute": "OWNER_AUTHORIZED_LUNA_MAX_DOCUMENTARY_WORKER_ROOT_INDEPENDENT_REVIEW",
   "pendingValidationProposal": {
     "status": "NO_APPLICATION_NATIVE_AUTHORITY",
     "workerPermittedNative": 0,
@@ -569,5 +569,29 @@
   "publicationStatus": "SOURCE_AND_RECEIPT_PUBLICATION_VERIFIED",
   "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
   "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
-  "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
+  "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9",
+  "historicalR075Continuation": {
+    "currentMode": "FREEZE",
+    "activePhase": "FREEZE",
+    "activeTranche": "CCMAI-RUNTIME-075",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.",
+    "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / publication COMMIT_STEWARD",
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh"
+    },
+    "ownerSubagentPreference": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh",
+      "source": "Owner instruction 2026-10-08; continues until changed by owner"
+    },
+    "candidatePlanning": {
+      "id": "R075",
+      "status": "FROZEN",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_075.md",
+      "sourceImplementation": "NOT_APPLICABLE_PUBLICATION",
+      "sourceOrRuntimeDispatched": false
+    }
+  }
 }

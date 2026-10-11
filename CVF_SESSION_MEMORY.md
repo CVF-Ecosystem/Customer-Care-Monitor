@@ -9,9 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md", "activeTranche": "CCMAI-RUNTIME-075", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-076", "parked": true} -->
 
-## Current R075
+## Current R076
+
+CCMAI-RUNTIME-076 DISPATCH_READY source-only recovery DESIGN/SPEC. Luna max worker rehydrates and acknowledges before documentary BUILD release; root independent reviewer. Application/provider/DB/network authority0; topology/recovery implementation OPEN; Facebook/Zalo OA parked.
+
+## Historical R075
 
 CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.
 

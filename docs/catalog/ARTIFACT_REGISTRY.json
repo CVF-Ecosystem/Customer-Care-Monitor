@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R075 FROZEN ordinary branch publication; no app/runtime effects."
+      "description": "Active R076 source-only recovery design/spec; Luna max worker/root independent review; runtime0."
     },
     {
       "id": "r060-work-order",
@@ -5904,6 +5904,34 @@
       "family": "continuity",
       "status": "ACTIVE",
       "description": "R075 independent source publication review; receipt follow-up conditional, no live or Actions claim."
+    },
+    {
+      "id": "runtime076-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+      "status": "ACTIVE",
+      "description": "Historical R075 FROZEN publication; closure remote SHA verified."
+    },
+    {
+      "id": "runtime076-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-076.json",
+      "status": "ACTIVE",
+      "description": "Immutable root-seeded R1 source-only design authority; Luna max."
+    },
+    {
+      "id": "runtime076-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-076.json",
+      "status": "ACTIVE",
+      "description": "R076 documentary state and independent role contract."
+    },
+    {
+      "id": "runtime076-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_076.md",
+      "status": "ACTIVE",
+      "description": "DR01..10 bounded recovery design/spec order, application native0."
     }
   ]
 }

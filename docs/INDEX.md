@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R075 FROZEN ordinary branch publication; no app/runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
+- Active R076 source-only recovery design/spec; Luna max worker/root independent review; runtime0.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -827,6 +827,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R2 additive application preparation receipt authority; child BUILD/root independent reviewer, no schema/policy/provider effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-055.json`
 - SP01..12 intended application receipt contract, cap/privacy/persistence/earlyterminal compatibility and evidence requirements.: `docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md`
 - Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only.: `docs/reviews/probes/r060_worker_campaign.py`
+- Immutable root-seeded R1 source-only design authority; Luna max.: `CVF_SESSION/authority/CCMAI-RUNTIME-076.json`
+- Historical R075 FROZEN publication; closure remote SHA verified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`
+- DR01..10 bounded recovery design/spec order, application native0.: `docs/work_orders/CCMAI_RUNTIME_076.md`
+- R076 documentary state and independent role contract.: `CVF_SESSION/tranches/CCMAI-RUNTIME-076.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

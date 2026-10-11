@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -258,154 +258,24 @@
   ],
   "updatedAt": "2026-10-10",
   "ownerRouting": {
-    "date": "2026-10-10",
+    "date": "2026-10-11",
     "parkedAccounts": [
       "facebook",
       "zalo_oa"
     ],
-    "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-    "nextObjective": "CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.",
-    "assessment": "docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
+    "nextObjective": "CCMAI-RUNTIME-076 DISPATCH_READY source-only recovery DESIGN/SPEC. Luna max worker rehydrates and acknowledges before documentary BUILD release; root independent reviewer. Application/provider/DB/network authority0; topology/recovery implementation OPEN; Facebook/Zalo OA parked.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_076.md",
     "buildDispatched": false,
     "currentExecutionBudget": {
       "applicationNativeInvocations": 0,
-      "perCommandNetworkTimeoutSeconds": 60
+      "automaticRetries": 0
     },
     "actualWorkerModel": {
       "model": "gpt-6-luna",
-      "reasoningEffort": "xhigh"
+      "reasoningEffort": "max"
     },
-    "historicalR067RoutingSnapshot": {
-      "date": "2026-10-09",
-      "parkedAccounts": [
-        "facebook",
-        "zalo_oa"
-      ],
-      "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-      "nextObjective": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
-      "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
-      "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
-      "buildDispatched": true,
-      "currentExecutionBudget": {
-        "workerMaxCampaigns": 1,
-        "workerMaxVitestInvocations": 4,
-        "reviewerMaxCampaigns": 1,
-        "reviewerMaxVitestInvocations": 4,
-        "aggregateMaxVitestInvocations": 8,
-        "workerMaxForcedTypecheckBuilds": 1,
-        "reviewerMaxForcedTypecheckBuilds": 1,
-        "maxGoInvocations": 0,
-        "workerUsedCampaigns": 1,
-        "workerUsedVitestInvocations": 4,
-        "reviewerUsedCampaigns": 1,
-        "reviewerUsedVitestInvocations": 4,
-        "workerUsedForcedTypecheckBuilds": 1,
-        "reviewerUsedForcedTypecheckBuilds": 1,
-        "usedGoInvocations": 0,
-        "supplementalReviewerMaxForcedTypecheckBuilds": 1,
-        "supplementalReviewerUsedForcedTypecheckBuilds": 1,
-        "aggregateForcedBuildCeilingIncludingHistory": 3,
-        "workerMaxVisualInvocations": 1,
-        "reviewerMaxVisualInvocations": 1,
-        "workerUsedVisualInvocations": 1,
-        "reviewerUsedVisualInvocations": 1,
-        "supplementalReviewerMaxVisualInvocations": 1,
-        "supplementalReviewerUsedVisualInvocations": 1,
-        "aggregateVisualCeilingIncludingHistory": 4,
-        "correctedKeyboardReviewerMaxVisualInvocations": 1,
-        "correctedKeyboardReviewerUsedVisualInvocations": 1
-      },
-      "historicalR065RoutingSnapshot": {
-        "date": "2026-10-08",
-        "parkedAccounts": [
-          "facebook",
-          "zalo_oa"
-        ],
-        "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-        "nextObjective": "CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
-        "assessment": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
-        "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
-        "buildDispatched": true,
-        "sourceCheckpoint": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
-        "currentExecutionBudget": {
-          "workerMaxCampaigns": 1,
-          "workerMaxGoInvocations": 4,
-          "reviewerMaxCampaigns": 1,
-          "reviewerMaxGoInvocations": 4,
-          "aggregateMaxCampaigns": 2,
-          "aggregateMaxGoInvocations": 8,
-          "workerUsedCampaigns": 1,
-          "workerUsedGoInvocations": 4,
-          "reviewerUsedCampaigns": 1,
-          "reviewerUsedGoInvocations": 4
-        },
-        "historicalPreR065RoutingSnapshot": {
-          "date": "2026-10-07",
-          "parkedAccounts": [
-            "facebook",
-            "zalo_oa"
-          ],
-          "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
-          "nextObjective": "CCMAI-RUNTIME-060 DISPATCH_READY / WORK_ORDER under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: existing Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source/exact4-line SP compatibility amendment, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. R059 parked before source/Go0, aggregate max8Go without reset; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
-          "assessment": "docs/work_orders/CCMAI_RUNTIME_060.md",
-          "buildDispatched": false,
-          "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_050_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-06.md",
-          "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_058.md",
-          "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
-          "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
-          "currentExecutionBudget": {
-            "workerMaxCampaigns": 1,
-            "workerMaxGoInvocations": 4,
-            "workerUsedCampaigns": 0,
-            "workerUsedGoInvocations": 0,
-            "reviewerMaxCampaigns": 1,
-            "reviewerMaxGoInvocations": 4,
-            "reviewerUsedCampaigns": 0,
-            "reviewerUsedGoInvocations": 0,
-            "aggregateMaxCampaigns": 2,
-            "aggregateMaxGoInvocations": 8,
-            "priorR059UsedCampaigns": 0,
-            "priorR059UsedGoInvocations": 0
-          },
-          "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
-          "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
-          "previousLocalClosureContext": {
-            "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_046_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-05.md",
-            "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
-            "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md"
-          },
-          "priorAssessmentBeforeR059": "docs/reviews/R055_DESIGN_INTAKE_2026-10-06.md"
-        },
-        "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
-        "localClosureEvidence": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md"
-      },
-      "actualWorkerModel": {
-        "model": "gpt-6-luna",
-        "reasoningEffort": "xhigh"
-      },
-      "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
-      "localClosureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
-      "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
-      "publicationReceipt": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
-      "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
-    },
-    "activeLocalClosureOrder": null,
-    "localClosureEvidence": null,
-    "modelAssessment": null,
-    "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
-    "publishedClosureCommit": "fda259bee84a83b6718d34bca787e88f99282ae9",
-    "publicationStatus": "SOURCE_AND_RECEIPT_PUBLICATION_VERIFIED",
-    "localClosureCommit": null,
-    "historicalR068ClosureProjection": {
-      "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
-      "localClosureEvidence": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
-      "publicationReceipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
-      "publicationStatus": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
-      "publishedClosureCommit": null,
-      "localClosureCommit": "4fb63a0040282ac145dd2f693626d66e1082dca8"
-    },
-    "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
+    "publicationStatus": "R075_CLOSURE_REMOTE_SHA_VERIFIED",
+    "publishedClosureCommit": "9181f3826f6a90db0042b25b9c955b253ea0828c"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -1398,5 +1268,162 @@
     "pushAttempts": 4,
     "publishedSourceSha": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
+  },
+  "historicalR075OwnerRoutingProjection": {
+    "date": "2026-10-10",
+    "parkedAccounts": [
+      "facebook",
+      "zalo_oa"
+    ],
+    "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+    "nextObjective": "CCMAI-RUNTIME-075 FROZEN local ordinary feature publication: source eeb164d and separate reviewed receipt commit verified. Publish this closure metadata packet once and report exact remote SHA externally; then separate source-only DESIGN/SPEC. No app/provider/DB/main/force/merge/deploy; accounts parked.",
+    "assessment": "docs/reviews/R075_GITHUB_PUBLICATION_CONTRACT_2026-10-10.md",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_075.md",
+    "buildDispatched": false,
+    "currentExecutionBudget": {
+      "applicationNativeInvocations": 0,
+      "perCommandNetworkTimeoutSeconds": 60
+    },
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "xhigh"
+    },
+    "historicalR067RoutingSnapshot": {
+      "date": "2026-10-09",
+      "parkedAccounts": [
+        "facebook",
+        "zalo_oa"
+      ],
+      "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+      "nextObjective": "CCMAI-RUNTIME-067 FROZEN localUI UIR01..12; closure20d6a666 and final Luna/Sol assessment published to authorized branch with exact remoteSHA verified. Independentreviewf82dcf7/sourcebd62c7e,316tests/M01/M02/restored17/actual4nativekeyboard images accepted, inherited4d921 compile explicit; failures retained,8Vitest/3build/4visual/0Go exhausted. ORCHESTRATOR next audits remaining S2/S3/S5 acceptance and authority, then separate bounded workorder before any new source/runtime/provider activity. No new campaign authority. FullS2/S3/S5workflow/globalF02/live/governance/hosted OPEN; Facebook/ZaloOAparked.",
+      "assessment": "docs/reviews/R067_SAVED_RUN_OBSERVATION_UI_SPEC_2026-10-08.md",
+      "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
+      "buildDispatched": true,
+      "currentExecutionBudget": {
+        "workerMaxCampaigns": 1,
+        "workerMaxVitestInvocations": 4,
+        "reviewerMaxCampaigns": 1,
+        "reviewerMaxVitestInvocations": 4,
+        "aggregateMaxVitestInvocations": 8,
+        "workerMaxForcedTypecheckBuilds": 1,
+        "reviewerMaxForcedTypecheckBuilds": 1,
+        "maxGoInvocations": 0,
+        "workerUsedCampaigns": 1,
+        "workerUsedVitestInvocations": 4,
+        "reviewerUsedCampaigns": 1,
+        "reviewerUsedVitestInvocations": 4,
+        "workerUsedForcedTypecheckBuilds": 1,
+        "reviewerUsedForcedTypecheckBuilds": 1,
+        "usedGoInvocations": 0,
+        "supplementalReviewerMaxForcedTypecheckBuilds": 1,
+        "supplementalReviewerUsedForcedTypecheckBuilds": 1,
+        "aggregateForcedBuildCeilingIncludingHistory": 3,
+        "workerMaxVisualInvocations": 1,
+        "reviewerMaxVisualInvocations": 1,
+        "workerUsedVisualInvocations": 1,
+        "reviewerUsedVisualInvocations": 1,
+        "supplementalReviewerMaxVisualInvocations": 1,
+        "supplementalReviewerUsedVisualInvocations": 1,
+        "aggregateVisualCeilingIncludingHistory": 4,
+        "correctedKeyboardReviewerMaxVisualInvocations": 1,
+        "correctedKeyboardReviewerUsedVisualInvocations": 1
+      },
+      "historicalR065RoutingSnapshot": {
+        "date": "2026-10-08",
+        "parkedAccounts": [
+          "facebook",
+          "zalo_oa"
+        ],
+        "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+        "nextObjective": "CCMAI-RUNTIME-065 bounded local usage/cost observation UO01..12 FROZEN after independent root REVIEW_PASS at child source72e4c367707d262e45ed9f36164d3e471a4d04b4: root69top225PASS, two named mutation kills with healthy contrasts, restored16top73PASS; worker81top269PASS separately attributed. Original raw receipts/216member restoration/secondarchive/fullcleanup/protected621 verified, fresh2campaign8/8Go exhausted, closure0Go. ORCHESTRATOR next audits remaining permission/policy-version/WAIT_DATA and cost reservation/settlement requirements before any new separately governed work order; no source/runtime dispatch now. Full S2/S3/global F02/provider usage presence/billing/pricing revision/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. R063/R064 historical failures/original receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
+        "assessment": "docs/reviews/R065_USAGE_COST_OBSERVATION_SPEC_2026-10-08.md",
+        "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
+        "buildDispatched": true,
+        "sourceCheckpoint": "72e4c367707d262e45ed9f36164d3e471a4d04b4",
+        "currentExecutionBudget": {
+          "workerMaxCampaigns": 1,
+          "workerMaxGoInvocations": 4,
+          "reviewerMaxCampaigns": 1,
+          "reviewerMaxGoInvocations": 4,
+          "aggregateMaxCampaigns": 2,
+          "aggregateMaxGoInvocations": 8,
+          "workerUsedCampaigns": 1,
+          "workerUsedGoInvocations": 4,
+          "reviewerUsedCampaigns": 1,
+          "reviewerUsedGoInvocations": 4
+        },
+        "historicalPreR065RoutingSnapshot": {
+          "date": "2026-10-07",
+          "parkedAccounts": [
+            "facebook",
+            "zalo_oa"
+          ],
+          "parkedScope": "Account setup, credentials, connectivity and live account/channel tests; owner deferred until resumed.",
+          "nextObjective": "CCMAI-RUNTIME-060 DISPATCH_READY / WORK_ORDER under seed2f39532ef196e69fd919e93aaf34f82aee5dde20: existing Codex /root/r059_worker gpt-6.1-sol medium rehydrates and commits BUILD acknowledgment before allowed source/exact4-line SP compatibility amendment, then one4Go campaign/source-evidence REVIEW_PENDING handback; root independent reviewer one4Go. R059 parked before source/Go0, aggregate max8Go without reset; R058 local FREEZE preserved. No root source edit/extra agents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/FREEZE/full S2/governance/hosted claim; Facebook/Zalo OA parked.",
+          "assessment": "docs/work_orders/CCMAI_RUNTIME_060.md",
+          "buildDispatched": false,
+          "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_050_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-06.md",
+          "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_058.md",
+          "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_058_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
+          "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_060.md",
+          "currentExecutionBudget": {
+            "workerMaxCampaigns": 1,
+            "workerMaxGoInvocations": 4,
+            "workerUsedCampaigns": 0,
+            "workerUsedGoInvocations": 0,
+            "reviewerMaxCampaigns": 1,
+            "reviewerMaxGoInvocations": 4,
+            "reviewerUsedCampaigns": 0,
+            "reviewerUsedGoInvocations": 0,
+            "aggregateMaxCampaigns": 2,
+            "aggregateMaxGoInvocations": 8,
+            "priorR059UsedCampaigns": 0,
+            "priorR059UsedGoInvocations": 0
+          },
+          "publicationEvidenceCommit": "b5bf0f01df126a6ed8f9e5a809b3e37ded45ba1e",
+          "runtimeEvidenceCommit": "baeb4c920a68cadb121344aaed8408a3f23aa0df",
+          "previousLocalClosureContext": {
+            "localClosureAssessment": "docs/reviews/CCMAI_RUNTIME_046_LOCAL_CLOSURE_AUTHORITY_ASSESSMENT_2026-10-05.md",
+            "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_049.md",
+            "localClosureEvidence": "docs/reviews/CCMAI_RUNTIME_049_LOCAL_FINALIZER_CLOSURE_2026-10-05.md"
+          },
+          "priorAssessmentBeforeR059": "docs/reviews/R055_DESIGN_INTAKE_2026-10-06.md"
+        },
+        "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_065.md",
+        "localClosureEvidence": "docs/reviews/R065_INDEPENDENT_USAGE_OBSERVATION_REVIEW_AND_CLOSURE_2026-10-08.md"
+      },
+      "actualWorkerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "xhigh"
+      },
+      "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_067.md",
+      "localClosureEvidence": "docs/reviews/R067_SCOPED_LOCAL_UI_CLOSURE_2026-10-09.md",
+      "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
+      "publicationReceipt": "docs/reviews/probes/r067_github_push_receipt_2026-10-09.json",
+      "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
+    },
+    "activeLocalClosureOrder": null,
+    "localClosureEvidence": null,
+    "modelAssessment": null,
+    "publicationReceipt": "docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json",
+    "publishedClosureCommit": "fda259bee84a83b6718d34bca787e88f99282ae9",
+    "publicationStatus": "SOURCE_AND_RECEIPT_PUBLICATION_VERIFIED",
+    "localClosureCommit": null,
+    "historicalR068ClosureProjection": {
+      "activeLocalClosureOrder": "docs/work_orders/CCMAI_RUNTIME_068.md",
+      "localClosureEvidence": "docs/reviews/R068_SCOPED_ADAPTER_USAGE_PRESENCE_CLOSURE_2026-10-10.md",
+      "publicationReceipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
+      "publicationStatus": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
+      "publishedClosureCommit": null,
+      "localClosureCommit": "4fb63a0040282ac145dd2f693626d66e1082dca8"
+    },
+    "modelRoutingEvidence": "docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md"
+  },
+  "recoveryDesign": {
+    "trancheId": "CCMAI-RUNTIME-076",
+    "status": "DISPATCH_READY",
+    "implementation": "NOT_DISPATCHED",
+    "decision": "PENDING",
+    "liveGovernance": "NOT_ESTABLISHED"
   }
 }
