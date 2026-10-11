@@ -7213,6 +7213,13 @@
       "path": "docs/reviews/probes/r085_fixture/root_checks/docs_build_result.json",
       "status": "ACTIVE",
       "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime085-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r085_fixture/root_checks/returned_review_receipt.json",
+      "status": "ACTIVE",
+      "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
     }
   ]
 }

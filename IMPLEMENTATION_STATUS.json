@@ -1910,6 +1910,7 @@
       "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
       "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
       "scope": "Static documentation check, no fixture/Go/provider/application campaign"
-    }
+    },
+    "independentReviewCommit": "f0061ecfb09cf71a900d1d438163b003e59ea390"
   }
 }

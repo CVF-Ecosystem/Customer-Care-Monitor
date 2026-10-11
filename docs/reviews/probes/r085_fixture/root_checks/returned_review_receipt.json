@@ -1,0 +1,26 @@
+{
+  "trancheId": "CCMAI-RUNTIME-085",
+  "disposition": "CHANGES_REQUIRED_RETURNED_RUNTIME_MOUNT_BLOCKER_FREEZE_OPEN",
+  "executionEvidenceCommit": "147be5b6e5756077f97833194ca0f9fa1b5ea390",
+  "independentReviewCommit": "f0061ecfb09cf71a900d1d438163b003e59ea390",
+  "workerCampaigns": 1,
+  "reviewerCampaigns": 0,
+  "sourceChanges": 0,
+  "sourceRepairRounds": 0,
+  "automaticRetries": 0,
+  "goProviderPullPush": 0,
+  "workerResult": "EXIT2_FAILED_MOUNT_INVALID_BEFORE_START_SQL",
+  "cleanup": "VERIFIED_CLEAN_ROOT_EXACT_IDS_NAMES_CONFIRMED",
+  "ownerDatabase": "SAME_ID_IMAGE_RUNNING_HEALTHY_SELECTED_LOCAL_DOCKER_METADATA",
+  "repositoryChecks": {
+    "localPreflight": "PASS7/7",
+    "cachedOriginMainRange": "PASS7/7_NOT_HOSTED_CI",
+    "gateUnits": "46PASS51.292s_CURRENT_TURN_UNCHANGED_GATE",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "docsBuild": "FAIL_EXIT1_55_DEAD_LINKS_UNCHANGED_R078_R079_NO_RETRY",
+    "protectedPaths": 1872,
+    "historicalQualityArrays": 10
+  },
+  "next": "Separate bounded source-only mount lifecycle completion authority before any source edit; actual fixture effects only after independent source acceptance/new authority. Historical docs deadlinks separate scope. No current replay/repair/freezing."
+}

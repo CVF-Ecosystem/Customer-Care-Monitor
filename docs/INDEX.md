@@ -1014,6 +1014,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md`
 - R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/final_file_audit.json`
 - R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/docs_build_result.json`
+- R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance.: `docs/reviews/probes/r085_fixture/root_checks/returned_review_receipt.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
