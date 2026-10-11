@@ -488,5 +488,379 @@ class FixtureSafetyTests(unittest.TestCase):
         self.assertEqual(docker.commands[0]["outputStatus"], "OMITTED_TIMEOUT_PARTIAL")
 
 
+class MemoryDockerSubprocess:
+    """In-memory daemon boundary for Campaign create/reconcile/cleanup tests."""
+
+    def __init__(
+        self,
+        *,
+        timeout_network_create=False,
+        network_create_effect=True,
+        timeout_container_create=False,
+        container_create_effect=True,
+    ):
+        self.timeout_network_create = timeout_network_create
+        self.network_create_effect = network_create_effect
+        self.timeout_container_create = timeout_container_create
+        self.container_create_effect = container_create_effect
+        self.networks = {}
+        self.containers = {}
+        self.calls = []
+
+    @staticmethod
+    def _labels(args):
+        labels = {}
+        for index, item in enumerate(args[:-1]):
+            if item == "--label":
+                key, value = args[index + 1].split("=", 1)
+                labels[key] = value
+        return labels
+
+    @staticmethod
+    def _completed(command, returncode=0, stdout="", stderr=""):
+        return subprocess.CompletedProcess(command, returncode, stdout, stderr)
+
+    def _network(self, identifier):
+        return next(
+            (item for item in self.networks.values() if identifier in (item["id"], item["name"])),
+            None,
+        )
+
+    def _container(self, identifier):
+        return next(
+            (item for item in self.containers.values() if identifier in (item["id"], item["name"], item["name"].lstrip("/"))),
+            None,
+        )
+
+    def __call__(self, command, **kwargs):
+        self.calls.append(list(command))
+        args = command[1:]
+        if args[:2] == ["network", "create"]:
+            name = args[-1]
+            labels = self._labels(args)
+            if self.network_create_effect:
+                self.networks[name] = {
+                    "id": NETWORK_ID,
+                    "name": name,
+                    "internal": True,
+                    "labels": labels,
+                    "containers": {},
+                }
+            if self.timeout_network_create:
+                raise subprocess.TimeoutExpired(command, kwargs.get("timeout", 1))
+            return self._completed(command, stdout=f"{NETWORK_ID}\n")
+        if args[:2] == ["container", "create"] or args[:1] == ["create"]:
+            name = args[args.index("--name") + 1]
+            network_name = args[args.index("--network") + 1]
+            labels = self._labels(args)
+            image_id = args[-1]
+            if self.container_create_effect:
+                role = labels["ccmai.cvf.role"]
+                task_id = labels["ccmai.cvf.task-id"]
+                container = valid_container(role, task_id)
+                container.update(
+                    {
+                        "id": CONTAINER_ID,
+                        "name": f"/{name}",
+                        "imageId": image_id,
+                        "networkMode": network_name,
+                        "networks": {network_name: {"NetworkID": NETWORK_ID}},
+                        "labels": labels,
+                    }
+                )
+                self.containers[name] = container
+                network = self._network(network_name)
+                if network is not None:
+                    network["containers"][CONTAINER_ID] = {"Name": name}
+            if self.timeout_container_create:
+                raise subprocess.TimeoutExpired(command, kwargs.get("timeout", 1))
+            return self._completed(command, stdout=f"{CONTAINER_ID}\n")
+        if args[:2] == ["network", "inspect"]:
+            identifier = args[-1]
+            observed = self._network(identifier)
+            if observed is None:
+                return self._completed(command, 1, stderr=f"Error response from daemon: network {identifier} not found")
+            return self._completed(command, stdout=json.dumps(observed))
+        if args[:2] == ["container", "inspect"]:
+            identifier = args[-1]
+            observed = self._container(identifier)
+            if observed is None:
+                return self._completed(command, 1, stderr=f"Error response from daemon: container {identifier} not found")
+            return self._completed(command, stdout=json.dumps(observed))
+        if args[:2] == ["container", "rm"]:
+            identifier = args[-1]
+            observed = self._container(identifier)
+            if observed is not None:
+                self.containers.pop(observed["name"].lstrip("/"), None)
+                network = self._network(observed["networkMode"])
+                if network is not None:
+                    network["containers"].pop(observed["id"], None)
+            return self._completed(command)
+        if args[:2] == ["network", "rm"]:
+            observed = self._network(args[-1])
+            if observed is not None:
+                self.networks.pop(observed["name"], None)
+            return self._completed(command)
+        raise AssertionError(f"unexpected simulated Docker command: {args!r}")
+
+
+class FixtureCompletionTests(unittest.TestCase):
+    def _campaign(self, root):
+        task_dir = root / "task"
+        task_dir.mkdir()
+        campaign = fixture.Campaign(root, "worker", TASK_ID, task_dir)
+        image = {"imageId": "sha256:" + "c" * 64, "repoDigest": "mysql@sha256:" + "d" * 64}
+
+        def prepare():
+            campaign.docker = fixture.DockerCli(root, env={})
+            campaign.receipt["plan"]["image"] = image
+            return image, "test-engine"
+
+        campaign.prepare = prepare
+        return campaign
+
+    def test_started_ownership_validation_precedes_every_mysql_call(self):
+        names = fixture.names_for("worker", TASK_ID)
+        labels = fixture.expected_labels("worker", TASK_ID)
+
+        class OrderedDocker:
+            def __init__(self, events):
+                self.events = events
+                self.commands = []
+
+            def call(self, label, args, **kwargs):
+                self.events.append(("docker", label, tuple(args)))
+                return fixture.CommandResult(0, "", "", 1)
+
+        class OrderedOps(fixture.FixtureResourceOps):
+            def __init__(self, events, container, network):
+                self.events = events
+                self.container = container
+                self.network = network
+
+            def inspect_container(self, identifier):
+                self.events.append(("container-inspect", identifier))
+                return self.container
+
+            def remove_container(self, identifier):
+                raise AssertionError("cleanup is outside this start-order check")
+
+            def inspect_network(self, identifier):
+                self.events.append(("network-inspect", identifier))
+                return self.network
+
+            def remove_network(self, identifier):
+                raise AssertionError("cleanup is outside this start-order check")
+
+        def run_case(container_change=None, network_change=None, expect_sql=True):
+            with tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                events = []
+                container = valid_container()
+                container["networks"] = {names["network"]: {"NetworkID": NETWORK_ID}}
+                network = {
+                    "id": NETWORK_ID,
+                    "name": names["network"],
+                    "internal": True,
+                    "labels": dict(labels),
+                    "containers": {CONTAINER_ID: {"Name": names["container"]}},
+                }
+                if container_change:
+                    container_change(container)
+                if network_change:
+                    network_change(network)
+                task_dir = root / "task"
+                task_dir.mkdir()
+                campaign = fixture.Campaign(root, "worker", TASK_ID, task_dir)
+                campaign.docker = OrderedDocker(events)
+                campaign.ops = OrderedOps(events, container, network)
+                campaign.container_id = CONTAINER_ID
+                campaign.network_id = NETWORK_ID
+                campaign.receipt["plan"]["image"] = {"imageId": "sha256:" + "c" * 64}
+
+                def mysql(label, sql, **kwargs):
+                    events.append(("mysql", label, sql))
+                    return fixture.CommandResult(0, "1\n", "", 1)
+
+                campaign._mysql = mysql
+                if expect_sql:
+                    campaign._start_and_wait()
+                    first_sql = next(index for index, event in enumerate(events) if event[0] == "mysql")
+                    self.assertEqual(events[0][0:2], ("docker", "start exact fixture container"))
+                    self.assertEqual(events[1], ("container-inspect", CONTAINER_ID))
+                    self.assertEqual(events[2], ("network-inspect", NETWORK_ID))
+                    self.assertGreater(first_sql, 2)
+                    self.assertEqual(sum(event[0] == "container-inspect" for event in events), 2)
+                    self.assertEqual(sum(event[0] == "network-inspect" for event in events), 2)
+                else:
+                    with self.assertRaises(fixture.FixtureError):
+                        campaign._start_and_wait()
+                    self.assertFalse(any(event[0] == "mysql" for event in events))
+
+        run_case()
+        run_case(container_change=lambda item: item.update(imageId="sha256:" + "e" * 64), expect_sql=False)
+        run_case(container_change=lambda item: item.update(id="f" * 64), expect_sql=False)
+        run_case(
+            container_change=lambda item: item["networks"][names["network"]].update(NetworkID="e" * 64),
+            expect_sql=False,
+        )
+        run_case(network_change=lambda item: item.update(id="e" * 64), expect_sql=False)
+        run_case(network_change=lambda item: item.update(containers={}), expect_sql=False)
+        run_case(network_change=lambda item: item.update(internal=False), expect_sql=False)
+        run_case(container_change=lambda item: item["labels"].update({"ccmai.cvf.role": "reviewer"}), expect_sql=False)
+        run_case(network_change=lambda item: item["labels"].update({"ccmai.cvf.role": "reviewer"}), expect_sql=False)
+
+    def test_native_network_timeout_is_reconciled_or_retained_without_false_absence(self):
+        names = fixture.names_for("worker", TASK_ID)
+        for effect, expected_cleanup in ((True, "VERIFIED_CLEAN"), (False, "FAILED_CLEANUP")):
+            with self.subTest(network_create_effect=effect), tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                daemon = MemoryDockerSubprocess(
+                    timeout_network_create=True,
+                    network_create_effect=effect,
+                )
+                campaign = self._campaign(root)
+
+                def stop_before_container(_image):
+                    raise fixture.FixtureError("TEST_STOP", "network-only create control")
+
+                campaign._create_container = stop_before_container
+                with mock.patch.object(fixture.subprocess, "run", side_effect=daemon):
+                    result = campaign.run()
+                self.assertNotEqual(result, 0)
+                self.assertEqual(
+                    campaign.receipt["runtime"]["networkCreate"],
+                    "RECONCILED_OWN_CREATE_RESPONSE_UNKNOWN" if effect else "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME",
+                )
+                self.assertEqual(campaign.receipt["cleanup"]["status"], expected_cleanup)
+                self.assertFalse(any(call[1:2] == ["create"] for call in daemon.calls))
+                self.assertTrue(
+                    any(
+                        record["label"] == "create owned internal network" and record["timedOut"]
+                        for record in campaign.receipt["commands"]
+                    )
+                )
+                create_index = next(
+                    index for index, call in enumerate(daemon.calls) if call[1:3] == ["network", "create"]
+                )
+                reconcile_index = next(
+                    index
+                    for index, call in enumerate(daemon.calls)
+                    if call[1:3] == ["network", "inspect"] and call[-1] == names["network"]
+                )
+                self.assertLess(create_index, reconcile_index)
+                if effect:
+                    self.assertTrue(campaign.receipt["cleanup"]["absenceVerified"])
+                    remove_index = next(
+                        index for index, call in enumerate(daemon.calls) if call[1:3] == ["network", "rm"]
+                    )
+                    self.assertGreater(remove_index, reconcile_index)
+                else:
+                    self.assertFalse(campaign.receipt["cleanup"]["absenceVerified"])
+                    self.assertEqual(
+                        campaign.receipt["cleanup"]["unresolvedResources"],
+                        [{"resource": "network", "name": names["network"], "id": None}],
+                    )
+
+    def test_native_container_timeout_reconciles_owned_resource_and_cleans_both_ids(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            daemon = MemoryDockerSubprocess(timeout_container_create=True, container_create_effect=True)
+            campaign = self._campaign(root)
+
+            def stop_before_start():
+                raise fixture.FixtureError("TEST_STOP", "create reconciliation control")
+
+            campaign._start_and_wait = stop_before_start
+            with mock.patch.object(fixture.subprocess, "run", side_effect=daemon):
+                result = campaign.run()
+            self.assertNotEqual(result, 0)
+            self.assertEqual(campaign.receipt["runtime"]["containerCreate"], "RECONCILED_OWN_CREATE_RESPONSE_UNKNOWN")
+            self.assertEqual(campaign.receipt["runtime"]["status"], "FAILED")
+            self.assertEqual(campaign.receipt["cleanup"]["status"], "VERIFIED_CLEAN")
+            self.assertTrue(campaign.receipt["cleanup"]["containerRemoved"])
+            self.assertTrue(campaign.receipt["cleanup"]["networkRemoved"])
+            self.assertTrue(campaign.receipt["cleanup"]["absenceVerified"])
+            self.assertTrue(
+                any(
+                    record["label"] == "create owned tmpfs MySQL container" and record["timedOut"]
+                    for record in campaign.receipt["commands"]
+                )
+            )
+            container_create_index = next(index for index, call in enumerate(daemon.calls) if call[1:2] == ["create"])
+            container_name = fixture.names_for("worker", TASK_ID)["container"]
+            container_reconcile_index = next(
+                index
+                for index, call in enumerate(daemon.calls)
+                if index > container_create_index
+                and call[1:3] == ["container", "inspect"]
+                and call[-1] == container_name
+            )
+            container_remove_index = next(index for index, call in enumerate(daemon.calls) if call[1:3] == ["container", "rm"])
+            network_remove_index = next(index for index, call in enumerate(daemon.calls) if call[1:3] == ["network", "rm"])
+            self.assertLess(container_create_index, container_reconcile_index)
+            self.assertLess(container_reconcile_index, container_remove_index)
+            self.assertLess(container_remove_index, network_remove_index)
+
+    def test_unresolved_container_timeout_preserves_receipt_and_cleans_known_network(self):
+        names = fixture.names_for("worker", TASK_ID)
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            daemon = MemoryDockerSubprocess(timeout_container_create=True, container_create_effect=False)
+            campaign = self._campaign(root)
+            with mock.patch.object(fixture.subprocess, "run", side_effect=daemon):
+                result = campaign.run()
+            self.assertNotEqual(result, 0)
+            self.assertEqual(campaign.receipt["runtime"]["status"], "FAILED")
+            self.assertEqual(campaign.receipt["runtime"]["failure"]["code"], "CONTAINER_CREATE_UNCERTAIN")
+            self.assertEqual(campaign.receipt["cleanup"]["status"], "FAILED_CLEANUP")
+            self.assertFalse(campaign.receipt["cleanup"]["absenceVerified"])
+            self.assertTrue(campaign.receipt["cleanup"]["networkRemoved"])
+            self.assertEqual(
+                campaign.receipt["cleanup"]["unresolvedResources"],
+                [{"resource": "container", "name": names["container"], "id": None}],
+            )
+            self.assertEqual(len(daemon.networks), 0)
+            self.assertFalse(any(call[1:3] == ["container", "rm"] for call in daemon.calls))
+
+    def test_thrown_container_remove_failure_keeps_ids_and_never_claims_absence(self):
+        names = fixture.names_for("worker", TASK_ID)
+        labels = fixture.expected_labels("worker", TASK_ID)
+
+        class ThrowingRemoveOps(FakeResourceOps):
+            def remove_container(self, identifier):
+                self.removed.append(("container", identifier))
+                raise RuntimeError("simulated remove failure")
+
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            task_dir = root / "task"
+            task_dir.mkdir()
+            campaign = fixture.Campaign(root, "worker", TASK_ID, task_dir)
+            network = {
+                "id": NETWORK_ID,
+                "name": names["network"],
+                "labels": labels,
+                "containers": {CONTAINER_ID: {"Name": names["container"]}},
+            }
+            ops = ThrowingRemoveOps(container=valid_container(), network=network)
+            campaign.ops = ops
+            campaign.container_id = CONTAINER_ID
+            campaign.network_id = NETWORK_ID
+            campaign.receipt["runtime"].update(
+                {"status": "FAILED", "containerId": CONTAINER_ID, "networkId": NETWORK_ID}
+            )
+            campaign._cleanup()
+            cleanup = campaign.receipt["cleanup"]
+            self.assertEqual(cleanup["status"], "FAILED_CLEANUP")
+            self.assertFalse(cleanup["absenceVerified"])
+            self.assertEqual(cleanup["containerStatus"], "FAILED")
+            self.assertEqual(cleanup["failureCode"], "CLEANUP_UNCERTAIN")
+            self.assertEqual(campaign.receipt["plan"]["intendedResources"]["container"], names["container"])
+            self.assertEqual(campaign.receipt["runtime"]["containerId"], CONTAINER_ID)
+            self.assertEqual(campaign.receipt["runtime"]["networkId"], NETWORK_ID)
+            self.assertEqual(ops.removed, [("container", CONTAINER_ID)])
+
+
 if __name__ == "__main__":
     unittest.main()

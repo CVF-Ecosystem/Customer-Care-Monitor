@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "event": "PRE_SUITE_LAUNCHER_FAILURE",
+  "capturedAtUtc": "2026-10-11T16:16:36.0201383Z",
+  "suiteProcessCreated": false,
+  "harnessUnitInvocationsUsed": 0,
+  "command": "Start-Process for python -B -m unittest scripts.tests.test_jobrun_fence_fixture -v",
+  "observedError": "Start-Process rejected -FilePath because Get-Command returned a System.Object[]: Cannot convert 'System.Object[]' to the type 'System.String' required by parameter 'FilePath'. Specified method is not supported.",
+  "followOnWrapperErrors": "The wrapper then dereferenced a null process and attempted to read stdout/stderr files that were never created; no unittest process ran.",
+  "stdoutCreated": false,
+  "stderrCreated": false,
+  "executableSelectionResolvedTo": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "sourceTestEditedAfterPreSuiteIdentityCapture": false
+}

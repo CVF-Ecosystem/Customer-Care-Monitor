@@ -1190,9 +1190,41 @@ class Campaign:
             expected_network_id=self.network_id,
         )
 
+    def _validate_started_ownership(self) -> tuple[Mapping[str, Any], Mapping[str, Any]]:
+        assert self.ops is not None and self.container_id is not None
+        if not self.network_id:
+            raise FixtureError("NETWORK_ID_INVALID", "owned network id was unavailable before MySQL readiness")
+        observed = self.ops.inspect_container(self.container_id)
+        if observed is None:
+            raise FixtureError("CONTAINER_DISAPPEARED", "MySQL container disappeared after start")
+        validate_container_inspect(
+            observed,
+            name=self.names["container"],
+            image_id=self.receipt["plan"]["image"]["imageId"],
+            network_name=self.names["network"],
+            labels=self.labels,
+            expected_id=self.container_id,
+            expected_network_id=self.network_id,
+            require_network_id=True,
+        )
+        network = self.ops.inspect_network(self.network_id)
+        if network is None:
+            raise FixtureError("NETWORK_DISAPPEARED", "internal network disappeared after start")
+        validate_network_inspect(
+            network,
+            name=self.names["network"],
+            labels=self.labels,
+            expected_id=self.network_id,
+            expected_container_id=self.container_id,
+            expected_container_name=self.names["container"],
+        )
+        return observed, network
+
     def _start_and_wait(self) -> None:
         assert self.docker is not None and self.container_id is not None
         self.docker.call("start exact fixture container", ["container", "start", self.container_id], timeout=30)
+        # Bind the running container and network before the readiness query itself.
+        self._validate_started_ownership()
         ready = False
         for attempt in range(READINESS_ATTEMPTS):
             self.receipt["runtime"]["readinessObservations"] = attempt + 1
@@ -1210,31 +1242,8 @@ class Campaign:
                 time.sleep(READINESS_INTERVAL_SECONDS)
         if not ready:
             raise FixtureError("MYSQL_NOT_READY", "MySQL did not become ready within the bounded observations")
-        assert self.ops is not None
-        observed = self.ops.inspect_container(self.container_id)
-        if observed is None:
-            raise FixtureError("CONTAINER_DISAPPEARED", "MySQL container disappeared after readiness")
-        validate_container_inspect(
-            observed,
-            name=self.names["container"],
-            image_id=self.receipt["plan"]["image"]["imageId"],
-            network_name=self.names["network"],
-            labels=self.labels,
-            expected_id=self.container_id,
-            expected_network_id=self.network_id,
-            require_network_id=True,
-        )
-        network = self.ops.inspect_network(self.network_id or "")
-        if network is None:
-            raise FixtureError("NETWORK_DISAPPEARED", "internal network disappeared before SQL")
-        validate_network_inspect(
-            network,
-            name=self.names["network"],
-            labels=self.labels,
-            expected_id=self.network_id,
-            expected_container_id=self.container_id,
-            expected_container_name=self.names["container"],
-        )
+        # Revalidate after readiness and before the schema probe.
+        observed, network = self._validate_started_ownership()
         self.receipt["runtime"]["facts"].update(
             {
                 "actualImageId": observed.get("imageId"),
