@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r080_worker SPEC_AUTHOR / documentary REPAIR_WORKER
-- Next allowed move: CCMAI-RUNTIME-080 BUILD documentary repair1 F1 commit outcome/F2 mutex cancellation/F3 bounded draft; exact3 same seed, no implementation/runtime/provider/DB/network/push, recovery OPEN/deployed UNKNOWN/accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-080 REVIEW_PASS intended design/proposal only at402d6a6 after prose repair1/root identity transfer; CLOSER next scoped local FREEZE after gates, MySQL/GORM/FK/cutover integration OPEN; no code/runtime/DB/provider/network/push, deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -32,3 +32,11 @@ Root precommit metadata error retained: first review publication preflight FAIL5
 ## Before-edit role acknowledgment
 
 Fresh worker REVIEW/CHANGES_REQUIRED rehydration ACK atc5f0a53 received before edits; root same-scope repair1 release after committed first consolidated review. Root fresh transition acknowledgment, unchanged R1/exact3/native0. Doctor renewed PASS WITH NOTE25/1, same core public/cachemain clean. Root second literalglob rg error corrected by explicit analyzer file paths; root overhead only.
+
+## Before-edit role acknowledgment
+
+Fresh canonical BUILD tuple rehydrated after prose handback; root accepts mechanical identity transfer, no substantive design drafting. Repair packet402d6a6 committed before independent result. Worker repair1 JS parse preparation error retained; same seed and native0.
+
+## Before-edit role acknowledgment
+
+Fresh REVIEW_PENDING tuple and committed402d6a6 independently evaluated; DF01..10 PASS for limited intended design, not actual integration/runtime. First CHANGES_REQUIRED and all root/worker failures retained. Root independent review decision precedes CLOSER/FREEZE.

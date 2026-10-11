@@ -6632,6 +6632,20 @@
       "path": "docs/reviews/probes/r080_first_root_static_audit_2026-10-11.json",
       "status": "ACTIVE",
       "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r080_independent_final_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved."
+    },
+    {
+      "id": "runtime080-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved."
     }
   ]
 }

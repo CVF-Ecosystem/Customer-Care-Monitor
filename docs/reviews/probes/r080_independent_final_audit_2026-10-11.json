@@ -1,0 +1,69 @@
+{
+  "auditHead": "402d6a6f64c67dc6af62a7e2a73064cc628e06b8",
+  "identityFailures": [],
+  "unresolvedReferences": {
+    "DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md": [],
+    "DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md": []
+  },
+  "linkFailures": [],
+  "protected": {
+    "protectedSource": {
+      "count": 371,
+      "changed": []
+    },
+    "protectedHistory": {
+      "count": 118,
+      "changed": []
+    },
+    "protectedAcceptedInputs": {
+      "count": 75,
+      "changed": []
+    }
+  },
+  "identityInputCount": 30,
+  "identityRecordSha256": "d54a0a5372069e2df555869df40e164bdb71947d5e937d82a2745d05f88f4465",
+  "referenceDefinitionCounts": {
+    "DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md": 33,
+    "DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md": 3
+  },
+  "unboundCitedPaths": [],
+  "baseline": "62b079f91fffbf2ffcec2421876f3ea74267f912",
+  "projectArtifactBaseline": "25b3f409799fba616a745b962cff7ac81e05501c",
+  "comparisonHead": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
+  "lineagePreserved": true,
+  "comparisonCommandsVerified": [
+    {
+      "label": "R079 original source comparison",
+      "unchanged": true
+    },
+    {
+      "label": "R079 separately recorded repair comparison",
+      "unchanged": true
+    },
+    {
+      "label": "R080 current source comparison",
+      "unchanged": true
+    },
+    {
+      "label": "R080 project-artifact baseline comparison",
+      "unchanged": true
+    },
+    {
+      "label": "R080 separately named repair source comparison",
+      "unchanged": true
+    },
+    {
+      "label": "R080 first packet to repair release comparison",
+      "unchanged": true
+    }
+  ],
+  "backendDiff": [],
+  "historicalQualityArraysUnchanged": {
+    "tranches": true,
+    "readonlyAuditSamples": true,
+    "designSpecSamples": true,
+    "topologyIntakeSamples": true,
+    "prerequisiteIntakeSamples": true
+  },
+  "seedImmutableAtFirstBaseHead": true
+}

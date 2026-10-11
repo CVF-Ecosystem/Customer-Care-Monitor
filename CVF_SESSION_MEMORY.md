@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-080", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-080", "parked": true} -->
 
 ## Current R080
 
-CCMAI-RUNTIME-080 BUILD documentary repair1 F1 commit outcome/F2 mutex cancellation/F3 bounded draft; exact3 same seed, no implementation/runtime/provider/DB/network/push, recovery OPEN/deployed UNKNOWN/accounts parked.
+CCMAI-RUNTIME-080 REVIEW_PASS intended design/proposal only at402d6a6 after prose repair1/root identity transfer; CLOSER next scoped local FREEZE after gates, MySQL/GORM/FK/cutover integration OPEN; no code/runtime/DB/provider/network/push, deployed UNKNOWN/accounts parked.
 
 ## Historical R079
 

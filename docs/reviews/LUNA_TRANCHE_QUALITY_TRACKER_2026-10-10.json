@@ -639,5 +639,47 @@
       "independentReviewCommit": "498fe42b09faf25c69a942c90da83e592815a246",
       "closureEvidence": "docs/reviews/R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md"
     }
+  ],
+  "durableFenceDesignSamples": [
+    {
+      "id": "CCMAI-RUNTIME-080",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "durable_jobrun_fence_intended_design_spec",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "substantiveDocumentFindings": [
+        "F1_commit_ambiguity_exclusion_rollback_overclaim",
+        "F2_owner_mutex_publication_cancel_protocol",
+        "F3_bounded_budget_exact_candidate_tests"
+      ],
+      "mechanicalFindings": [
+        "M1_activity_helper_citation",
+        "M2_worker_only_test_nonexecution_qualifier",
+        "M3_pre_dispatch_table_consistency"
+      ],
+      "workerDocumentRepairRounds": 1,
+      "workerRepairCommit": "402d6a6f64c67dc6af62a7e2a73064cc628e06b8",
+      "rootMechanicalRepairCommits": [
+        "c5f0a53aa8dbf6b1982cf8e69b095bcec9d8a833",
+        "402d6a6f64c67dc6af62a7e2a73064cc628e06b8"
+      ],
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "finalDisposition": "REVIEW_PASS_INTENDED_DESIGN_ONLY",
+      "assessment": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
+      "parentAssistance": "DF01..10 contract, targeted current writer/deletion source navigation and whole-effect scope; consolidated F1/F2/F3, direct M1/M2/M3 mechanical changes; no substantive worker prose draft. During repair1 prehandback, root flagged remaining same-F1 reset/admission/checkpoint phrases; no new review round or worker prose draft.",
+      "workerPreparationOverhead": "Local static checker Windows path normalization error corrected before first validation pass; retained in identity JSON. Repair1 Python wrapper JS parse failure before execution, no changes; worker transferred final identity/static validation to root.",
+      "rootOriginOverhead": "Windows rg literalglob errors corrected by explicit paths; stale publication projection6cd1ce9; root lineage checker adapted before first receipt; review publication gate FAIL5/7 unsupported catalog family/omitted REVIEW_PENDING corrected before c5f0a53.; original S07 already included RunReserved148..183, root extension273 was valid but unnecessary and incorrect missing-citation attribution corrected.",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_DURABLE_FENCE_DOCUMENTARY_SAMPLE",
+      "workerFullRepairStaticValidation": false,
+      "rootRepairIdentityRefreshTransferred": true
+    }
   ]
 }
