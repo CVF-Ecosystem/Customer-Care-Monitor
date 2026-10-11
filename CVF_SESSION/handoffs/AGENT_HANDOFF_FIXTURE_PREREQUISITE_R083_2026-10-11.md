@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r083_worker IMPLEMENTATION_WORKER source-only until pre-effect approval
-- Next allowed move: CCMAI-RUNTIME-083 BUILD exact3 fixture tool/tests/readiness source; worker max1 initial harness unit suite then handback. Root safety review/committed approval BEFORE any Docker/SQL effect; fixture max1 per role/Go0/provider0/no pull/push. Prior evidence immutable, fence implementation/readiness OPEN/deployed UNKNOWN/accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED F1..F4 at005c73d; root next explicit sole same-scope source repair release after worker fresh ACK. Pre-effect approval NOT_GRANTED, fixture campaigns0/2/Go0/provider0/no pull/push; previous records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -22,3 +22,11 @@ Fresh WORK_ORDER ACK at eba77516 from Luna max before edits: canonical phase/sta
 ## Fresh BUILD worker acknowledgment
 
 Luna max fresh BUILD ACK received at c23d84e before reported source edits; canonical tuple/seed/base/order/index agree, exact3 plus one initial harness suite only. Worker explicitly confirms Docker/image/context/resource/SQL inspections and effects wait for root committed safety approval. Root records acknowledgment without expanding effect authority; this Git record does not itself prove intra-worktree edit timing.
+
+## Before-edit role acknowledgment
+
+Fresh BUILD source005c73d and canonical state/memory/handoff/implementation/index rehydrated; root transitions ORCHESTRATOR to independent REVIEWER for one consolidated source safety evaluation before any fixture effect. Original unit report and source preserved, bytecode archived reversibly; no root unit/runtime invocation.
+
+## Before-edit role acknowledgment
+
+Root consolidated F1..F4 safety review returns first source; one explicitly directed same-scope worker source repair within seed, no safety approval or runtime dispatch. Root does not author worker implementation.

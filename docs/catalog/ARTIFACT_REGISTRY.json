@@ -6842,6 +6842,34 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_083.md",
       "status": "ACTIVE",
       "description": "R083 bounded fixture prerequisite authority/order/continuity, preserved R082 documentary closure."
+    },
+    {
+      "id": "runtime083-evidence-0010",
+      "family": "continuity",
+      "path": "scripts/jobrun_fence_fixture.py",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0011",
+      "family": "continuity",
+      "path": "scripts/tests/test_jobrun_fence_fixture.py",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/R083_FIXTURE_PREREQUISITE_READINESS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
+    },
+    {
+      "id": "runtime083-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R083 initial fixture source/portable tests/readiness and consolidated safety review; no effect approval."
     }
   ]
 }
