@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,18 +12,20 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-083",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED after sole repair19f83a7/root18PASS; residual F3 validates post-start NetworkID/membership after readiness SQL, F1 missing campaign-level raised-create/remove-failure regression controls. Pre-effect approval NOT_GRANTED, FREEZE OPEN, no automatic repair/campaign. ORCHESTRATOR next bounds separate source-only completion authority before edits/effects; Docker/SQL/Go/provider/pull/push0, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.",
+  "activeTranche": "CCMAI-RUNTIME-084",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-084 WORK_ORDER source-only residual original R083 F1/F3 completion; worker fresh ACK before committed BUILD, exact script/test/new readiness plus one harness suite. No repair round or Docker/SQL/Go/provider/network/pull/push authority; R083 returned/FREEZE OPEN preserved, accounts parked, fixture/fence readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete, no further dispatch",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r084_worker awaiting committed BUILD release",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
-    "workerFixtureCampaigns": 1,
-    "reviewerFixtureCampaigns": 1,
-    "usedWorkerFixtureCampaigns": 0,
-    "usedReviewerFixtureCampaigns": 0,
+    "workerCompletionPasses": 1,
+    "workerHarnessUnitInvocations": 1,
+    "reviewerHarnessUnitInvocations": 1,
+    "maxDirectedSameScopeSourceRepairRounds": 0,
+    "workerFixtureCampaigns": 0,
+    "reviewerFixtureCampaigns": 0,
     "goInvocations": 0,
     "providerInvocations": 0,
     "automaticRetries": 0
@@ -38,11 +40,11 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R083",
-    "status": "CHANGES_REQUIRED",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_083.md",
-    "sourceImplementation": "FIXTURE_SOURCE_COMMITTED_CHANGES_REQUIRED",
-    "sourceOrRuntimeDispatched": true
+    "id": "R084",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_084.md",
+    "sourceImplementation": "NOT_DISPATCHED",
+    "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -598,14 +600,14 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
-  "modelAssessment": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
+  "reviewEvidence": null,
+  "modelAssessment": null,
   "closureEvidence": null,
-  "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3",
-  "closureStatus": "NOT_ELIGIBLE_FREEZE_OPEN",
+  "independentReviewCommit": null,
+  "closureStatus": null,
   "closureChecks": null,
   "localClosureCommit": null,
-  "publicationStatus": "R083_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+  "publicationStatus": "R084_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
@@ -778,21 +780,8 @@
   },
   "nextScopeProposal": null,
   "currentReview": {
-    "result": "CHANGES_REQUIRED",
-    "findings": [
-      "F1_REGRESSION_CONTROL_GAPS",
-      "F3_OWNERSHIP_BEFORE_READINESS_SQL"
-    ],
-    "acceptedOriginalFindingGroups": [
-      "F2",
-      "F4"
-    ],
-    "freeze": "OPEN",
-    "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
-    "reviewedBuildCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
-    "reviewerHarnessResult": "18PASS0.438s_EXIT0_RAW_RETAINED",
-    "fixtureCampaigns": 0,
-    "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
+    "result": "NOT_RUN",
+    "freeze": "OPEN"
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -873,12 +862,63 @@
     }
   },
   "currentRepair": {
-    "scope": "SOLE_SOURCE_REPAIR_COMPLETE_BUDGET_EXHAUSTED_NO_FURTHER_DISPATCH",
-    "round": 1,
-    "sourceCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a"
+    "scope": "NO_REPAIR_AUTHORIZED",
+    "round": 0
   },
-  "currentClosure": {
-    "status": "NOT_ELIGIBLE_FREEZE_OPEN",
-    "reason": "residual F1/F3, no pre-effect approval or actual fixture prerequisites"
+  "currentClosure": null,
+  "historicalR083Continuity": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-083",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
+    "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker handback complete, no further dispatch",
+    "nextAllowedMove": "CCMAI-RUNTIME-083 REVIEW CHANGES_REQUIRED after sole repair19f83a7/root18PASS; residual F3 validates post-start NetworkID/membership after readiness SQL, F1 missing campaign-level raised-create/remove-failure regression controls. Pre-effect approval NOT_GRANTED, FREEZE OPEN, no automatic repair/campaign. ORCHESTRATOR next bounds separate source-only completion authority before edits/effects; Docker/SQL/Go/provider/pull/push0, prior records/accounts preserved, fence implementation/readiness OPEN/deployed UNKNOWN.",
+    "candidatePlanning": {
+      "id": "R083",
+      "status": "CHANGES_REQUIRED",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_083.md",
+      "sourceImplementation": "FIXTURE_SOURCE_COMMITTED_CHANGES_REQUIRED",
+      "sourceOrRuntimeDispatched": true
+    },
+    "currentReview": {
+      "result": "CHANGES_REQUIRED",
+      "findings": [
+        "F1_REGRESSION_CONTROL_GAPS",
+        "F3_OWNERSHIP_BEFORE_READINESS_SQL"
+      ],
+      "acceptedOriginalFindingGroups": [
+        "F2",
+        "F4"
+      ],
+      "freeze": "OPEN",
+      "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
+      "reviewedBuildCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
+      "reviewerHarnessResult": "18PASS0.438s_EXIT0_RAW_RETAINED",
+      "fixtureCampaigns": 0,
+      "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
+    },
+    "currentRepair": {
+      "scope": "SOLE_SOURCE_REPAIR_COMPLETE_BUDGET_EXHAUSTED_NO_FURTHER_DISPATCH",
+      "round": 1,
+      "sourceCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a"
+    },
+    "currentClosure": {
+      "status": "NOT_ELIGIBLE_FREEZE_OPEN",
+      "reason": "residual F1/F3, no pre-effect approval or actual fixture prerequisites"
+    },
+    "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
+    "modelAssessment": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
+    "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3",
+    "closureStatus": "NOT_ELIGIBLE_FREEZE_OPEN",
+    "publicationStatus": "R083_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+    "currentExecutionBudget": {
+      "workerFixtureCampaigns": 1,
+      "reviewerFixtureCampaigns": 1,
+      "usedWorkerFixtureCampaigns": 0,
+      "usedReviewerFixtureCampaigns": 0,
+      "goInvocations": 0,
+      "providerInvocations": 0,
+      "automaticRetries": 0
+    }
   }
 }

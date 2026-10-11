@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R083 R2 local disposable fixture prerequisite/tool; fence implementation remains open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md`
+- Active R084 source-only F1/F3 completion; R083 returned preserved, no effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -973,6 +973,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit-metadata.json`
 - R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit.stderr.txt`
 - R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance.: `docs/reviews/probes/r083_fixture/worker/repair-unit.stdout.txt`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-084.json`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-084.json`
+- R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects.: `docs/work_orders/CCMAI_RUNTIME_084.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

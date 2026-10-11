@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R083 R2 local disposable fixture prerequisite/tool; fence implementation remains open."
+      "description": "Active R084 source-only F1/F3 completion; R083 returned preserved, no effects."
     },
     {
       "id": "r060-work-order",
@@ -6926,6 +6926,34 @@
       "path": "docs/reviews/probes/r083_fixture/worker/repair-unit.stdout.txt",
       "status": "ACTIVE",
       "description": "R083 repaired source/root original-finding recheck and actual harness evidence; CHANGES_REQUIRED, no fixture effect approval or runtime acceptance."
+    },
+    {
+      "id": "runtime084-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-084.json",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-084.json",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
+    },
+    {
+      "id": "runtime084-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_084.md",
+      "status": "ACTIVE",
+      "description": "R084 bounded source-only F1/F3 completion authority/continuity; zero fixture/runtime effects."
     }
   ]
 }
