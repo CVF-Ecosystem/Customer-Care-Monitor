@@ -1,0 +1,37 @@
+{
+  "tranche": "CCMAI-RUNTIME-083",
+  "scope": "single directed F1-F4 worker harness unit invocation; source-only",
+  "command": "python -B -m unittest scripts.tests.test_jobrun_fence_fixture",
+  "sourceCommitAtRun": "5b8e0bb3a6dab526476bde2b579113c300fe4832",
+  "buildOrderSnapshotCommit": "c23d84e0048218e1d91d93e9b6557345e3ec2690",
+  "testCount": 18,
+  "elapsedSeconds": "0.417",
+  "exitCode": 0,
+  "before": [
+    {
+      "path": "scripts/jobrun_fence_fixture.py",
+      "physicalSha256": "e97f37849dcb710495b79bed0e3da7fe0e76464417f2e719b92b9ad06cc309c7",
+      "byteLength": 72062
+    },
+    {
+      "path": "scripts/tests/test_jobrun_fence_fixture.py",
+      "physicalSha256": "720a318b312d1992911d7650e8daa1b357f2dae2fd50d8109a7cc17262c184bf",
+      "byteLength": 23401
+    }
+  ],
+  "after": [
+    {
+      "path": "scripts/jobrun_fence_fixture.py",
+      "physicalSha256": "e97f37849dcb710495b79bed0e3da7fe0e76464417f2e719b92b9ad06cc309c7",
+      "byteLength": 72062
+    },
+    {
+      "path": "scripts/tests/test_jobrun_fence_fixture.py",
+      "physicalSha256": "720a318b312d1992911d7650e8daa1b357f2dae2fd50d8109a7cc17262c184bf",
+      "byteLength": 23401
+    }
+  ],
+  "stdoutPath": "docs/reviews/probes/r083_fixture/worker/repair-unit.stdout.txt",
+  "stderrPath": "docs/reviews/probes/r083_fixture/worker/repair-unit.stderr.txt",
+  "note": "Captured test output contains no credentials; physical hashes bind the dirty script/test bytes exercised separately from Git HEAD."
+}

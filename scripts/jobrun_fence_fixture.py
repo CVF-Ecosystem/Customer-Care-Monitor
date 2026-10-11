@@ -21,6 +21,7 @@ import uuid
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
+from urllib.parse import urlsplit
 
 
 TRANCHE_ID = "CCMAI-RUNTIME-083"
@@ -37,12 +38,13 @@ MAX_COMMAND_SECONDS = 30
 READINESS_ATTEMPTS = 60
 READINESS_INTERVAL_SECONDS = 2
 MAX_CAPTURE_BYTES = 1_000_000
+MAX_RECEIPT_FACT_BYTES = 32_000
 
 CONTAINER_INSPECT_TEMPLATE = (
-    '{{printf "{\\"id\\":%q,\\"name\\":%q,\\"image\\":%q,'
+    '{{printf "{\\"id\\":%q,\\"name\\":%q,\\"imageId\\":%q,\\"imageReference\\":%q,'
     '\\"labels\\":%s,\\"networkMode\\":%q,\\"networks\\":%s,'
     '\\"ports\\":%s,\\"binds\\":%s,\\"tmpfs\\":%s,\\"mounts\\":%s}" '
-    '.Id .Name .Config.Image (json .Config.Labels) .HostConfig.NetworkMode '
+    '.Id .Name .Image .Config.Image (json .Config.Labels) .HostConfig.NetworkMode '
     '(json .NetworkSettings.Networks) (json .HostConfig.PortBindings) '
     '(json .HostConfig.Binds) (json .HostConfig.Tmpfs) (json .Mounts)}}'
 )
@@ -82,6 +84,7 @@ class CommandResult:
     stderr: str
     elapsed_ms: int
     timed_out: bool = False
+    failure_code: str | None = None
 
 
 def validate_role(role: str) -> str:
@@ -101,12 +104,13 @@ def names_for(role: str, task_id: str) -> dict[str, str]:
     validate_task_id(task_id)
     role_code = "w" if role == "worker" else "r"
     return {
-        "network": f"ccmair083{role_code}{task_id}",
-        "container": f"ccmair083{role_code}{task_id}",
+        "network": f"ccmai-r083-{role_code}-{task_id}",
+        "container": f"ccmai-r083-{role_code}-{task_id}",
         # Alphanumeric only: MySQL treats '_' and '%' as wildcard characters
         # in database-level grant scopes on some supported versions.
         "schema": f"c83{role_code}{task_id}",
         "principal": f"u83{role_code}{task_id[:28]}",
+        "denySchema": f"d83{role_code}{task_id[:28]}",
         "probeTable": f"probe{task_id[:12]}",
     }
 
@@ -187,10 +191,23 @@ def output_digest(stdout: str, stderr: str, secrets_to_redact: Iterable[str] = (
 def validate_local_endpoint(endpoint: str) -> str:
     """Return a safe endpoint kind; all TCP/SSH contexts fail closed."""
     if endpoint.startswith("npipe://"):
-        return "npipe-local"
+        # Only Docker Desktop's explicit local named pipe is supported.
+        if re.fullmatch(r"(?i)npipe:////\./pipe/[A-Za-z0-9_.-]+", endpoint):
+            return "npipe-local"
+        raise FixtureError("REMOTE_DOCKER_CONTEXT", "named-pipe Docker endpoint is remote or ambiguous")
     if endpoint.startswith("unix://"):
-        return "unix-local"
-    if endpoint.startswith("tcp://") or endpoint.startswith("ssh://"):
+        parsed = urlsplit(endpoint)
+        if (
+            parsed.scheme == "unix"
+            and not parsed.netloc
+            and parsed.path.startswith("/")
+            and not parsed.path.startswith("//")
+            and not parsed.query
+            and not parsed.fragment
+        ):
+            return "unix-local"
+        raise FixtureError("REMOTE_DOCKER_CONTEXT", "Unix Docker endpoint is not an absolute local socket")
+    if endpoint.startswith(("tcp://", "ssh://", "http://", "https://")):
         raise FixtureError("REMOTE_DOCKER_CONTEXT", "TCP and SSH Docker contexts are not allowed")
     raise FixtureError("UNSUPPORTED_DOCKER_CONTEXT", "Docker endpoint is not a supported local socket")
 
@@ -276,6 +293,7 @@ class DockerCli:
         check: bool = True,
         redactions: Iterable[str] = (),
         extra_env: Mapping[str, str] | None = None,
+        record_output: bool = False,
     ) -> CommandResult:
         for value in redactions:
             self.add_redaction(value)
@@ -299,24 +317,56 @@ class DockerCli:
             stdout = completed.stdout or ""
             stderr = completed.stderr or ""
             if len(stdout.encode("utf-8", "replace")) + len(stderr.encode("utf-8", "replace")) > MAX_CAPTURE_BYTES:
-                raise FixtureError(
-                    "COMMAND_OUTPUT_TOO_LARGE",
-                    "Docker command output exceeded the bounded capture limit",
-                    command_label=label,
-                    exit_code=completed.returncode,
-                    output_sha256=output_digest(stdout, stderr, self._redactions),
+                result = CommandResult(
+                    completed.returncode, "", "", elapsed, False, "COMMAND_OUTPUT_TOO_LARGE"
                 )
-            result = CommandResult(completed.returncode, stdout, stderr, elapsed)
-            self.commands.append(
-                {
+                self.commands.append({
                     "label": label,
                     "timeoutSeconds": timeout,
                     "exitCode": completed.returncode,
                     "timedOut": False,
                     "elapsedMs": elapsed,
                     "safeOutputSha256": output_digest(stdout, stderr, self._redactions),
-                }
-            )
+                    "outputStatus": "OMITTED_LIMIT_EXCEEDED",
+                })
+                if check:
+                    raise FixtureError(
+                        "COMMAND_OUTPUT_TOO_LARGE",
+                        "Docker command output exceeded the bounded capture limit",
+                        command_label=label,
+                        exit_code=completed.returncode,
+                        output_sha256=output_digest(stdout, stderr, self._redactions),
+                    )
+                return result
+            command_record: dict[str, Any] = {
+                "label": label,
+                "timeoutSeconds": timeout,
+                "exitCode": completed.returncode,
+                "timedOut": False,
+                "elapsedMs": elapsed,
+                "safeOutputSha256": output_digest(stdout, stderr, self._redactions),
+            }
+            if record_output:
+                safe_stdout = redact_text(stdout, self._redactions)
+                safe_stderr = redact_text(stderr, self._redactions)
+                safe_bytes = len(safe_stdout.encode("utf-8", "replace")) + len(safe_stderr.encode("utf-8", "replace"))
+                if safe_bytes > MAX_RECEIPT_FACT_BYTES:
+                    command_record["outputStatus"] = "OMITTED_FACT_LIMIT_EXCEEDED"
+                    self.commands.append(command_record)
+                    result = CommandResult(completed.returncode, "", "", elapsed, False, "FACT_OUTPUT_TOO_LARGE")
+                    if check:
+                        raise FixtureError(
+                            "FACT_OUTPUT_TOO_LARGE",
+                            "sanitized MySQL facts exceeded the receipt limit",
+                            command_label=label,
+                            exit_code=completed.returncode,
+                            output_sha256=command_record["safeOutputSha256"],
+                        )
+                    return result
+                command_record["safeStdout"] = safe_stdout
+                command_record["safeStderr"] = safe_stderr
+            self.commands.append(command_record)
+            result = CommandResult(completed.returncode, stdout, stderr, elapsed)
             if check and completed.returncode != 0:
                 raise FixtureError(
                     "DOCKER_COMMAND_FAILED",
@@ -331,36 +381,41 @@ class DockerCli:
             stdout = _as_text(exc.stdout)
             stderr = _as_text(exc.stderr)
             digest = output_digest(stdout, stderr, self._redactions)
-            self.commands.append(
-                {
-                    "label": label,
-                    "timeoutSeconds": timeout,
-                    "exitCode": None,
-                    "timedOut": True,
-                    "elapsedMs": elapsed,
-                    "safeOutputSha256": digest,
-                }
-            )
-            raise FixtureError(
-                "DOCKER_COMMAND_TIMEOUT",
-                f"{label} exceeded its {timeout}s timeout",
-                command_label=label,
-                output_sha256=digest,
-                timed_out=True,
-            ) from None
+            self.commands.append({
+                "label": label,
+                "timeoutSeconds": timeout,
+                "exitCode": None,
+                "timedOut": True,
+                "elapsedMs": elapsed,
+                "safeOutputSha256": digest,
+                "outputStatus": "OMITTED_TIMEOUT_PARTIAL",
+            })
+            result = CommandResult(None, "", "", elapsed, True, "DOCKER_COMMAND_TIMEOUT")
+            if check:
+                raise FixtureError(
+                    "DOCKER_COMMAND_TIMEOUT",
+                    f"{label} exceeded its {timeout}s timeout",
+                    command_label=label,
+                    output_sha256=digest,
+                    timed_out=True,
+                ) from None
+            return result
         except OSError:
             elapsed = int((time.monotonic() - started) * 1000)
-            self.commands.append(
-                {
-                    "label": label,
-                    "timeoutSeconds": timeout,
-                    "exitCode": None,
-                    "timedOut": False,
-                    "elapsedMs": elapsed,
-                    "safeOutputSha256": output_digest("", "docker executable unavailable", self._redactions),
-                }
-            )
-            raise FixtureError("DOCKER_UNAVAILABLE", "Docker CLI is unavailable") from None
+            digest = output_digest("", "docker executable unavailable", self._redactions)
+            self.commands.append({
+                "label": label,
+                "timeoutSeconds": timeout,
+                "exitCode": None,
+                "timedOut": False,
+                "elapsedMs": elapsed,
+                "safeOutputSha256": digest,
+                "outputStatus": "OMITTED_EXECUTABLE_UNAVAILABLE",
+            })
+            result = CommandResult(None, "", "", elapsed, False, "DOCKER_UNAVAILABLE")
+            if check:
+                raise FixtureError("DOCKER_UNAVAILABLE", "Docker CLI is unavailable") from None
+            return result
 
 
 def _as_text(value: str | bytes | None) -> str:
@@ -394,6 +449,29 @@ def _blob_sha1(data: bytes) -> str:
     return hashlib.sha1(header + data).hexdigest()
 
 
+def _filtered_worktree_blob_sha1(root: Path, relative: str, data: bytes) -> str:
+    """Hash worktree bytes after applying the path's configured Git clean filters."""
+    try:
+        result = subprocess.run(
+            ["git", "hash-object", f"--path={relative}", "--stdin"],
+            cwd=str(root),
+            input=data,
+            capture_output=True,
+            check=False,
+            shell=False,
+            timeout=10,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        raise FixtureError("GIT_IDENTITY_UNAVAILABLE", "Git filtered source identity could not be read") from None
+    try:
+        value = result.stdout.decode("ascii", "strict").strip() if result.returncode == 0 else ""
+    except UnicodeDecodeError:
+        value = ""
+    if not re.fullmatch(r"[0-9a-f]{40}", value):
+        raise FixtureError("GIT_IDENTITY_UNAVAILABLE", "Git filtered source identity command failed")
+    return value
+
+
 def collect_source_identity(root: Path) -> dict[str, Any]:
     root = root.resolve(strict=True)
     current_commit = str(_git(root, "rev-parse", "HEAD")).strip()
@@ -425,10 +503,12 @@ def collect_source_identity(root: Path) -> dict[str, Any]:
             raise FixtureError("SOURCE_FILE_INVALID", f"required source file is missing or unsafe: {relative}")
         data = path.read_bytes()
         commit_blob = str(_git(root, "rev-parse", f"{current_commit}:{relative}")).strip()
-        if _blob_sha1(data) != commit_blob:
-            raise FixtureError("SOURCE_BLOB_MISMATCH", f"working bytes do not match the committed file: {relative}")
+        filtered_blob = _filtered_worktree_blob_sha1(root, relative, data)
+        if filtered_blob != commit_blob:
+            raise FixtureError("SOURCE_BLOB_MISMATCH", f"working file does not match the committed Git blob: {relative}")
         files[relative] = {
             "gitBlob": commit_blob,
+            "filteredWorktreeBlob": filtered_blob,
             "physicalSha256": hashlib.sha256(data).hexdigest(),
             "byteLength": len(data),
         }
@@ -475,15 +555,48 @@ def expected_labels(role: str, task_id: str) -> dict[str, str]:
     }
 
 
-def validate_network_inspect(value: Mapping[str, Any], *, name: str, labels: Mapping[str, str]) -> str:
+def labels_match(value: Mapping[str, Any], expected: Mapping[str, str]) -> bool:
+    """Require every task-owner label while permitting inherited image labels."""
+    observed = value.get("labels")
+    return isinstance(observed, Mapping) and all(observed.get(key) == item for key, item in expected.items())
+
+
+def selected_owner_labels(value: Mapping[str, Any], expected: Mapping[str, str]) -> dict[str, Any]:
+    observed = value.get("labels")
+    if not isinstance(observed, Mapping) or not labels_match(value, expected):
+        raise FixtureError("RESOURCE_OWNERSHIP_MISMATCH", "required task-owner labels did not match")
+    return {key: observed[key] for key in expected}
+
+
+def validate_network_inspect(
+    value: Mapping[str, Any],
+    *,
+    name: str,
+    labels: Mapping[str, str],
+    expected_id: str | None = None,
+    expected_container_id: str | None = None,
+    expected_container_name: str | None = None,
+) -> str:
     network_id = value.get("id")
     if not isinstance(network_id, str) or not re.fullmatch(r"[0-9a-f]{64}", network_id):
         raise FixtureError("NETWORK_ID_INVALID", "owned network id was not a full id")
-    if value.get("name") != name or value.get("internal") is not True or value.get("labels") != dict(labels):
+    if (
+        value.get("name") != name
+        or value.get("internal") is not True
+        or not labels_match(value, labels)
+        or (expected_id is not None and network_id != expected_id)
+    ):
         raise FixtureError("NETWORK_OWNERSHIP_MISMATCH", "network ownership or internal status did not match")
     containers = value.get("containers")
     if containers is not None and not isinstance(containers, dict):
         raise FixtureError("NETWORK_MEMBERSHIP_INVALID", "network membership metadata was invalid")
+    if expected_container_id is not None:
+        if not isinstance(containers, dict) or set(containers) != {expected_container_id}:
+            raise FixtureError("NETWORK_MEMBERSHIP_MISMATCH", "network did not contain only the exact fixture container")
+        member = containers[expected_container_id]
+        member_name = member.get("Name") if isinstance(member, Mapping) else None
+        if not isinstance(member_name, str) or member_name.lstrip("/") != expected_container_name:
+            raise FixtureError("NETWORK_MEMBERSHIP_INVALID", "network membership did not identify a selected container")
     return network_id
 
 
@@ -494,6 +607,9 @@ def validate_container_inspect(
     image_id: str,
     network_name: str,
     labels: Mapping[str, str],
+    expected_id: str | None = None,
+    expected_network_id: str | None = None,
+    require_network_id: bool = False,
 ) -> str:
     container_id = value.get("id")
     if not isinstance(container_id, str) or not re.fullmatch(r"[0-9a-f]{64}", container_id):
@@ -502,9 +618,10 @@ def validate_container_inspect(
     if (
         not isinstance(observed_name, str)
         or observed_name.lstrip("/") != name
-        or value.get("image") != image_id
-        or value.get("labels") != dict(labels)
+        or value.get("imageId") != image_id
+        or not labels_match(value, labels)
         or value.get("networkMode") != network_name
+        or (expected_id is not None and container_id != expected_id)
     ):
         raise FixtureError("CONTAINER_OWNERSHIP_MISMATCH", "container identity or ownership did not match")
     ports = value.get("ports")
@@ -516,6 +633,15 @@ def validate_container_inspect(
     networks = value.get("networks")
     if not isinstance(networks, dict) or set(networks) != {network_name}:
         raise FixtureError("CONTAINER_NETWORK_MISMATCH", "fixture container is attached to an unexpected network")
+    network = networks[network_name]
+    if not isinstance(network, Mapping):
+        raise FixtureError("CONTAINER_NETWORK_MISMATCH", "fixture container network metadata was invalid")
+    observed_network_id = network.get("NetworkID", "")
+    if require_network_id:
+        if not expected_network_id or observed_network_id != expected_network_id:
+            raise FixtureError("CONTAINER_NETWORK_ID_MISMATCH", "started container network id did not match the owned network")
+    elif observed_network_id not in (None, "", expected_network_id):
+        raise FixtureError("CONTAINER_NETWORK_ID_MISMATCH", "pending container network id did not match the owned network")
     tmpfs = value.get("tmpfs")
     if not isinstance(tmpfs, dict) or set(tmpfs) != {"/var/lib/mysql"}:
         raise FixtureError("TMPFS_INVALID", "fixture container must use only the authorized MySQL tmpfs")
@@ -581,8 +707,16 @@ def parse_grant_scope_lines(lines: Sequence[str], *, schema: str, principal: str
     return {"grants": normalized, "noGlobalOrUnownedSchemaPrivileges": True}
 
 
-def labels_match(value: Mapping[str, Any], expected: Mapping[str, str]) -> bool:
-    return value.get("labels") == dict(expected)
+def expected_privilege_denial(stderr: str, *, principal: str, schema: str) -> bool:
+    """Accept only MySQL's exact database-privilege denial for the task account/schema."""
+    if not re.fullmatch(r"[a-z0-9]{1,32}", principal) or not re.fullmatch(r"[a-z0-9]{1,64}", schema):
+        return False
+    account = rf"Access denied for user '{re.escape(principal)}'@'127\.0\.0\.1' to database '{re.escape(schema)}'"
+    patterns = (
+        rf"ERROR 1044 \(42000\): {account}(?: at line 1)?",
+        rf"ERROR 1044 \(42000\) at line 1: {account}",
+    )
+    return any(re.fullmatch(pattern, stderr.strip()) is not None for pattern in patterns)
 
 
 def reconcile_unknown_creation(
@@ -591,20 +725,23 @@ def reconcile_unknown_creation(
     intended_name: str,
     expected_labels_value: Mapping[str, str],
     inspect_exact_name: Any,
-) -> tuple[str | None, str]:
+) -> tuple[str | None, str, str | None]:
     """Reconcile only the exact random name after our own create call is uncertain."""
     if result.exit_code == 0 and not result.timed_out:
         value = result.stdout.strip()
         if re.fullmatch(r"[0-9a-f]{64}", value):
-            return value, "CONFIRMED"
+            return value, "CONFIRMED", value
     exact = inspect_exact_name(intended_name)
     if exact is not None and labels_match(exact, expected_labels_value):
         resource_id = exact.get("id")
         if isinstance(resource_id, str) and re.fullmatch(r"[0-9a-f]{64}", resource_id):
-            return resource_id, "RECONCILED_OWN_CREATE_RESPONSE_UNKNOWN"
+            return resource_id, "RECONCILED_OWN_CREATE_RESPONSE_UNKNOWN", resource_id
     if exact is None and result.exit_code not in (None, 0) and not result.timed_out:
-        return None, "CREATE_FAILED_AND_ABSENT"
-    return None, "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME"
+        return None, "CREATE_FAILED_AND_ABSENT", None
+    observed_id = exact.get("id") if isinstance(exact, Mapping) else None
+    if not isinstance(observed_id, str) or not re.fullmatch(r"[0-9a-f]{64}", observed_id):
+        observed_id = None
+    return None, "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME", observed_id
 
 
 class FixtureResourceOps:
@@ -631,10 +768,17 @@ def cleanup_owned_resources(
     container_expected: Mapping[str, Any],
     network_expected: Mapping[str, Any],
 ) -> dict[str, Any]:
-    """Remove only verified IDs; any uncertain resource stops a clean result."""
-    result: dict[str, Any] = {"status": "VERIFIED_CLEAN", "containerRemoved": False, "networkRemoved": False}
-    try:
-        if container_id:
+    """Clean each known resource independently; never let one error hide another cleanup."""
+    result: dict[str, Any] = {
+        "status": "VERIFIED_CLEAN",
+        "containerRemoved": False,
+        "networkRemoved": False,
+        "containerStatus": "NOT_REQUIRED",
+        "networkStatus": "NOT_REQUIRED",
+    }
+    failures: list[dict[str, str]] = []
+    if container_id:
+        try:
             observed = ops.inspect_container(container_id)
             if observed is not None:
                 if not labels_match(observed, container_expected["labels"]):
@@ -644,6 +788,10 @@ def cleanup_owned_resources(
                     observed.get("id") != container_id
                     or not isinstance(observed_name, str)
                     or observed_name.lstrip("/") != container_expected["name"]
+                    or (
+                        container_expected.get("imageId") is not None
+                        and observed.get("imageId") != container_expected["imageId"]
+                    )
                 ):
                     raise FixtureError("CLEANUP_ID_MISMATCH", "container id or name changed before cleanup")
                 networks = observed.get("networks")
@@ -656,7 +804,15 @@ def cleanup_owned_resources(
                 if ops.inspect_container(container_id) is not None:
                     raise FixtureError("CLEANUP_CONTAINER_REMAINS", "owned container still exists after removal")
                 result["containerRemoved"] = True
-        if network_id:
+            result["containerStatus"] = "ABSENT_VERIFIED"
+        except FixtureError as exc:
+            failures.append({"resource": "container", "code": exc.code, "safeMessage": exc.message})
+            result["containerStatus"] = "FAILED"
+        except Exception:
+            failures.append({"resource": "container", "code": "CLEANUP_UNCERTAIN", "safeMessage": "container cleanup outcome is uncertain"})
+            result["containerStatus"] = "FAILED"
+    if network_id:
+        try:
             observed_network = ops.inspect_network(network_id)
             if observed_network is not None:
                 if not labels_match(observed_network, network_expected["labels"]):
@@ -670,10 +826,17 @@ def cleanup_owned_resources(
                 if ops.inspect_network(network_id) is not None:
                     raise FixtureError("CLEANUP_NETWORK_REMAINS", "owned network still exists after removal")
                 result["networkRemoved"] = True
-    except FixtureError as exc:
-        result.update({"status": "FAILED_CLEANUP", "failureCode": exc.code, "safeMessage": exc.message})
-    except Exception:
-        result.update({"status": "FAILED_CLEANUP", "failureCode": "CLEANUP_UNCERTAIN", "safeMessage": "cleanup outcome is uncertain"})
+            result["networkStatus"] = "ABSENT_VERIFIED"
+        except FixtureError as exc:
+            failures.append({"resource": "network", "code": exc.code, "safeMessage": exc.message})
+            result["networkStatus"] = "FAILED"
+        except Exception:
+            failures.append({"resource": "network", "code": "CLEANUP_UNCERTAIN", "safeMessage": "network cleanup outcome is uncertain"})
+            result["networkStatus"] = "FAILED"
+    if failures:
+        result.update({"status": "FAILED_CLEANUP", "failures": failures})
+        result["failureCode"] = failures[0]["code"]
+        result["safeMessage"] = failures[0]["safeMessage"]
     return result
 
 
@@ -701,8 +864,10 @@ class DockerResourceOps(FixtureResourceOps):
             ["container", "inspect", "--format", CONTAINER_INSPECT_TEMPLATE, identifier],
             check=False,
         )
+        if result.failure_code:
+            raise FixtureError("CONTAINER_INSPECT_UNCERTAIN", "exact container inspection was uncertain")
         if result.exit_code != 0:
-            if _known_not_found(result.stderr):
+            if _known_not_found(result.stderr, resource="container", identifier=identifier):
                 return None
             raise FixtureError("CONTAINER_INSPECT_UNCERTAIN", "exact container inspection was uncertain")
         value = _parse_template_json(result.stdout, "container inspect")
@@ -718,8 +883,10 @@ class DockerResourceOps(FixtureResourceOps):
             ["network", "inspect", "--format", NETWORK_INSPECT_TEMPLATE, identifier],
             check=False,
         )
+        if result.failure_code:
+            raise FixtureError("NETWORK_INSPECT_UNCERTAIN", "exact network inspection was uncertain")
         if result.exit_code != 0:
-            if _known_not_found(result.stderr):
+            if _known_not_found(result.stderr, resource="network", identifier=identifier):
                 return None
             raise FixtureError("NETWORK_INSPECT_UNCERTAIN", "exact network inspection was uncertain")
         return _parse_template_json(result.stdout, "network inspect")
@@ -728,9 +895,25 @@ class DockerResourceOps(FixtureResourceOps):
         self.docker.call("remove exact fixture network", ["network", "rm", identifier])
 
 
-def _known_not_found(stderr: str) -> bool:
-    text = stderr.lower()
-    return "no such container" in text or "no such network" in text or "not found" in text
+def _known_not_found(stderr: str, *, resource: str, identifier: str) -> bool:
+    """Accept only an exact resource-specific daemon absence response."""
+    escaped = re.escape(identifier)
+    if resource == "network":
+        patterns = (
+            rf"Error response from daemon: network {escaped} not found\.?",
+            rf"Error response from daemon: No such network: {escaped}\.?",
+            rf"Error: No such network: {escaped}\.?",
+        )
+    elif resource == "container":
+        patterns = (
+            rf"Error response from daemon: container {escaped} not found\.?",
+            rf"Error response from daemon: No such container: {escaped}\.?",
+            rf"Error: No such container: {escaped}\.?",
+        )
+    else:
+        return False
+    text = stderr.strip()
+    return any(re.fullmatch(pattern, text, re.IGNORECASE) for pattern in patterns)
 
 
 class Campaign:
@@ -749,6 +932,8 @@ class Campaign:
         self.network_create_attempted = False
         self.container_create_attempted = False
         self.uncertain_create_outcome = False
+        self.unresolved_create_resources: list[dict[str, Any]] = []
+        self.root_password: str | None = None
         self.password: str | None = None
         self.receipt: dict[str, Any] = {
             "schemaVersion": "1.0",
@@ -794,18 +979,22 @@ class Campaign:
             ["network", "inspect", "--format", "{{.Id}}", self.names["network"]],
             check=False,
         )
+        if network_existing.failure_code:
+            raise FixtureError("NETWORK_NAME_CHECK_UNCERTAIN", "could not prove random task network name is unused")
         if network_existing.exit_code == 0:
             raise FixtureError("NETWORK_NAME_EXISTS", "random task network name already exists; refusing adoption")
-        if not _known_not_found(network_existing.stderr):
+        if not _known_not_found(network_existing.stderr, resource="network", identifier=self.names["network"]):
             raise FixtureError("NETWORK_NAME_CHECK_UNCERTAIN", "could not prove random task network name is unused")
         container_existing = docker.call(
             "check exact fixture container name is unused",
             ["container", "inspect", "--format", "{{.Id}}", self.names["container"]],
             check=False,
         )
+        if container_existing.failure_code:
+            raise FixtureError("CONTAINER_NAME_CHECK_UNCERTAIN", "could not prove random task container name is unused")
         if container_existing.exit_code == 0:
             raise FixtureError("CONTAINER_NAME_EXISTS", "random task container name already exists; refusing adoption")
-        if not _known_not_found(container_existing.stderr):
+        if not _known_not_found(container_existing.stderr, resource="container", identifier=self.names["container"]):
             raise FixtureError("CONTAINER_NAME_CHECK_UNCERTAIN", "could not prove random task container name is unused")
         self.receipt["sourceIdentity"] = identity
         self.receipt["plan"].update(
@@ -849,8 +1038,10 @@ class Campaign:
             ["network", "inspect", "--format", NETWORK_INSPECT_TEMPLATE, name],
             check=False,
         )
+        if result.failure_code:
+            raise FixtureError("NETWORK_RECONCILE_UNCERTAIN", "exact network create response could not be reconciled")
         if result.exit_code != 0:
-            if _known_not_found(result.stderr):
+            if _known_not_found(result.stderr, resource="network", identifier=name):
                 return None
             raise FixtureError("NETWORK_RECONCILE_UNCERTAIN", "exact network create response could not be reconciled")
         return _parse_template_json(result.stdout, "network reconcile")
@@ -862,8 +1053,10 @@ class Campaign:
             ["container", "inspect", "--format", CONTAINER_INSPECT_TEMPLATE, name],
             check=False,
         )
+        if result.failure_code:
+            raise FixtureError("CONTAINER_RECONCILE_UNCERTAIN", "exact container create response could not be reconciled")
         if result.exit_code != 0:
-            if _known_not_found(result.stderr):
+            if _known_not_found(result.stderr, resource="container", identifier=name):
                 return None
             raise FixtureError("CONTAINER_RECONCILE_UNCERTAIN", "exact container create response could not be reconciled")
         return _parse_template_json(result.stdout, "container reconcile")
@@ -875,30 +1068,52 @@ class Campaign:
             args.extend(["--label", f"{key}={value}"])
         args.append(self.names["network"])
         self.receipt["runtime"]["networkCreate"] = "PENDING"
+        self.unresolved_create_resources.append({"resource": "network", "name": self.names["network"], "id": None})
+        self.uncertain_create_outcome = True
         self.persist()
         self.network_create_attempted = True
         result = self.docker.call("create owned internal network", args, timeout=20, check=False)
-        resource_id, disposition = reconcile_unknown_creation(
-            result=result,
-            intended_name=self.names["network"],
-            expected_labels_value=self.labels,
-            inspect_exact_name=self._inspect_network_name,
-        )
+        try:
+            resource_id, disposition, observed_id = reconcile_unknown_creation(
+                result=result,
+                intended_name=self.names["network"],
+                expected_labels_value=self.labels,
+                inspect_exact_name=self._inspect_network_name,
+            )
+        except FixtureError:
+            disposition, resource_id, observed_id = "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME", None, None
         if resource_id is None:
             self.receipt["runtime"]["networkCreate"] = disposition
-            self.uncertain_create_outcome = disposition == "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME"
+            if disposition == "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME":
+                self.unresolved_create_resources[-1]["id"] = observed_id
+            else:
+                self.unresolved_create_resources.pop()
+            self.uncertain_create_outcome = bool(self.unresolved_create_resources)
+            self.receipt["runtime"]["unresolvedCreateResources"] = list(self.unresolved_create_resources)
+            self.persist()
+            if disposition == "CREATE_FAILED_AND_ABSENT":
+                raise FixtureError("NETWORK_CREATE_FAILED", "owned internal network creation failed and exact-name absence was verified")
             raise FixtureError("NETWORK_CREATE_UNCERTAIN", "owned internal network creation outcome is uncertain")
         self.network_id = resource_id
+        self.unresolved_create_resources.pop()
+        self.uncertain_create_outcome = bool(self.unresolved_create_resources)
         self.receipt["runtime"]["networkCreate"] = disposition
         self.receipt["runtime"]["networkId"] = resource_id
         self.persist()
         observed = self._inspect_network_name(self.names["network"])
         if observed is None:
             raise FixtureError("NETWORK_DISAPPEARED", "owned internal network disappeared after creation")
-        validate_network_inspect(observed, name=self.names["network"], labels=self.labels)
+        validate_network_inspect(
+            observed,
+            name=self.names["network"],
+            labels=self.labels,
+            expected_id=self.network_id,
+        )
 
     def _create_container(self, image: Mapping[str, str]) -> None:
         assert self.docker is not None
+        self.root_password = uuid.uuid4().hex + uuid.uuid4().hex
+        self.docker.add_redaction(self.root_password)
         args = [
             "create",
             "--pull=never",
@@ -909,26 +1124,48 @@ class Campaign:
             "--tmpfs",
             "/var/lib/mysql:rw,noexec,nosuid,size=512m",
             "--env",
-            "MYSQL_ALLOW_EMPTY_PASSWORD=yes",
+            "MYSQL_ROOT_PASSWORD",
         ]
         for key, value in self.labels.items():
             args.extend(["--label", f"{key}={value}"])
         args.append(image["imageId"])
         self.receipt["runtime"]["containerCreate"] = "PENDING"
+        self.unresolved_create_resources.append({"resource": "container", "name": self.names["container"], "id": None})
+        self.uncertain_create_outcome = True
         self.persist()
         self.container_create_attempted = True
-        result = self.docker.call("create owned tmpfs MySQL container", args, timeout=30, check=False)
-        resource_id, disposition = reconcile_unknown_creation(
-            result=result,
-            intended_name=self.names["container"],
-            expected_labels_value=self.labels,
-            inspect_exact_name=self._inspect_container_name,
+        result = self.docker.call(
+            "create owned tmpfs MySQL container",
+            args,
+            timeout=30,
+            check=False,
+            redactions=(self.root_password,),
+            extra_env={"MYSQL_ROOT_PASSWORD": self.root_password},
         )
+        try:
+            resource_id, disposition, observed_id = reconcile_unknown_creation(
+                result=result,
+                intended_name=self.names["container"],
+                expected_labels_value=self.labels,
+                inspect_exact_name=self._inspect_container_name,
+            )
+        except FixtureError:
+            disposition, resource_id, observed_id = "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME", None, None
         if resource_id is None:
             self.receipt["runtime"]["containerCreate"] = disposition
-            self.uncertain_create_outcome = disposition == "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME"
+            if disposition == "UNKNOWN_OWNERSHIP_OR_CREATE_OUTCOME":
+                self.unresolved_create_resources[-1]["id"] = observed_id
+            else:
+                self.unresolved_create_resources.pop()
+            self.uncertain_create_outcome = bool(self.unresolved_create_resources)
+            self.receipt["runtime"]["unresolvedCreateResources"] = list(self.unresolved_create_resources)
+            self.persist()
+            if disposition == "CREATE_FAILED_AND_ABSENT":
+                raise FixtureError("CONTAINER_CREATE_FAILED", "owned MySQL container creation failed and exact-name absence was verified")
             raise FixtureError("CONTAINER_CREATE_UNCERTAIN", "owned MySQL container creation outcome is uncertain")
         self.container_id = resource_id
+        self.unresolved_create_resources.pop()
+        self.uncertain_create_outcome = bool(self.unresolved_create_resources)
         self.receipt["runtime"]["containerCreate"] = disposition
         self.receipt["runtime"]["containerId"] = resource_id
         self.persist()
@@ -949,6 +1186,8 @@ class Campaign:
             image_id=image["imageId"],
             network_name=self.names["network"],
             labels=self.labels,
+            expected_id=self.container_id,
+            expected_network_id=self.network_id,
         )
 
     def _start_and_wait(self) -> None:
@@ -958,13 +1197,13 @@ class Campaign:
         for attempt in range(READINESS_ATTEMPTS):
             self.receipt["runtime"]["readinessObservations"] = attempt + 1
             self.persist()
-            result = self.docker.call(
-                "bounded MySQL readiness observation",
-                ["exec", self.container_id, "mysqladmin", "--protocol=socket", "--user=root", "ping"],
-                timeout=5,
+            result = self._mysql(
+                "authenticated final-daemon readiness observation",
+                "SELECT 1;\n",
                 check=False,
+                timeout=5,
             )
-            if result.exit_code == 0 and "alive" in result.stdout.lower():
+            if result.exit_code == 0 and result.stdout.strip() == "1":
                 ready = True
                 break
             if attempt + 1 < READINESS_ATTEMPTS:
@@ -981,36 +1220,64 @@ class Campaign:
             image_id=self.receipt["plan"]["image"]["imageId"],
             network_name=self.names["network"],
             labels=self.labels,
+            expected_id=self.container_id,
+            expected_network_id=self.network_id,
+            require_network_id=True,
         )
         network = self.ops.inspect_network(self.network_id or "")
         if network is None:
             raise FixtureError("NETWORK_DISAPPEARED", "internal network disappeared before SQL")
-        validate_network_inspect(network, name=self.names["network"], labels=self.labels)
-        members = network.get("containers") or {}
-        if set(members) != {self.container_id}:
-            raise FixtureError("NETWORK_MEMBERSHIP_MISMATCH", "owned internal network has unexpected members")
+        validate_network_inspect(
+            network,
+            name=self.names["network"],
+            labels=self.labels,
+            expected_id=self.network_id,
+            expected_container_id=self.container_id,
+            expected_container_name=self.names["container"],
+        )
+        self.receipt["runtime"]["facts"].update(
+            {
+                "actualImageId": observed.get("imageId"),
+                "containerId": self.container_id,
+                "containerOwnerLabels": selected_owner_labels(observed, self.labels),
+                "networkId": self.network_id,
+                "networkOwnerLabels": selected_owner_labels(network, self.labels),
+                "networkInternal": network.get("internal"),
+                "finalDaemonAuthenticated": True,
+            }
+        )
+        self.persist()
 
-    def _mysql(self, label: str, sql: str, *, principal: bool = False) -> str:
+    def _mysql(
+        self,
+        label: str,
+        sql: str,
+        *,
+        principal: bool = False,
+        check: bool = True,
+        timeout: int = 20,
+    ) -> CommandResult:
         assert self.docker is not None and self.container_id is not None
-        args = ["exec"]
-        if principal:
-            if not self.password:
-                raise FixtureError("FIXTURE_CREDENTIAL_MISSING", "task principal credential is unavailable")
-            args.extend(["--env", "MYSQL_PWD"])
+        password = self.password if principal else self.root_password
+        if not password:
+            raise FixtureError("FIXTURE_CREDENTIAL_MISSING", "task fixture credential is unavailable")
+        args = ["exec", "--env", "MYSQL_PWD"]
         args.extend(["-i", self.container_id, "mysql", "--batch", "--skip-column-names"])
         if principal:
             args.extend(["--protocol=tcp", "--host=127.0.0.1", f"--user={self.names['principal']}", f"--database={self.names['schema']}"])
         else:
-            args.extend(["--protocol=socket", "--user=root"])
+            args.extend(["--protocol=tcp", "--host=127.0.0.1", "--user=root"])
         result = self.docker.call(
             label,
             args,
-            timeout=20,
+            timeout=timeout,
             input_text=sql,
-            redactions=(self.password or "",),
-            extra_env={"MYSQL_PWD": self.password} if principal and self.password else None,
+            check=check,
+            redactions=(self.root_password or "", self.password or ""),
+            extra_env={"MYSQL_PWD": password},
+            record_output=True,
         )
-        return result.stdout.strip()
+        return result
 
     def _run_schema_probe(self) -> None:
         schema = self.names["schema"]
@@ -1036,7 +1303,7 @@ class Campaign:
             "SELECT @@log_bin_trust_function_creators;\n"
         )
         root_facts = self._mysql("create task schema and inspect MySQL settings", create_sql)
-        fact_lines = root_facts.splitlines()
+        fact_lines = root_facts.stdout.strip().splitlines()
         if len(fact_lines) < 5:
             raise FixtureError("MYSQL_FACTS_INVALID", "MySQL version/settings output was incomplete")
         settings = {
@@ -1052,8 +1319,28 @@ class Campaign:
             "inspect exact fixture principal grants",
             f"SHOW GRANTS FOR '{principal}'@'127.0.0.1';\n",
         )
-        grant_check = parse_grant_scope_lines(grant_output.splitlines(), schema=schema, principal=principal)
+        grant_check = parse_grant_scope_lines(grant_output.stdout.strip().splitlines(), schema=schema, principal=principal)
         self.receipt["runtime"]["facts"]["grants"] = grant_check
+
+        deny_schema = self.names["denySchema"]
+        denied = self._mysql(
+            "verify task principal cannot create an unowned schema",
+            f"CREATE DATABASE `{deny_schema}`;\n",
+            principal=True,
+            check=False,
+        )
+        if denied.exit_code == 0:
+            self._mysql("remove unexpectedly created denial-probe schema", f"DROP DATABASE `{deny_schema}`;\n")
+            raise FixtureError("UNEXPECTED_RESTRICTED_PRIVILEGE", "task principal created a schema outside its grant")
+        if denied.failure_code or denied.exit_code is None or not expected_privilege_denial(
+            denied.stderr, principal=principal, schema=deny_schema
+        ):
+            raise FixtureError("RESTRICTED_DENIAL_UNVERIFIED", "task principal denial probe did not return the exact expected privilege error")
+        self.receipt["runtime"]["facts"]["restrictedCreateDenial"] = {
+            "outcome": "ACCESS_DENIED",
+            "mysqlErrorCode": 1044,
+            "targetSchema": deny_schema,
+        }
 
         current_identity = self._mysql(
             "verify task principal identity",
@@ -1061,15 +1348,15 @@ class Campaign:
             principal=True,
         )
         expected_identity = f"{principal}@127.0.0.1\t{schema}"
-        if current_identity.strip("'`") != expected_identity:
+        if current_identity.stdout.strip().strip("'`") != expected_identity:
             raise FixtureError("PRINCIPAL_IDENTITY_MISMATCH", "fixture principal connected with an unexpected identity/schema")
         own_grants = self._mysql("verify task principal effective grants", "SHOW GRANTS;\n", principal=True)
-        parse_grant_scope_lines(own_grants.splitlines(), schema=schema, principal=principal)
+        parse_grant_scope_lines(own_grants.stdout.strip().splitlines(), schema=schema, principal=principal)
 
         ddl = f"CREATE TABLE `{table}` (id INT NOT NULL PRIMARY KEY, payload VARCHAR(32) NOT NULL) ENGINE=InnoDB;\n"
         self._mysql("create fixture probe table", ddl, principal=True)
         ddl_out = self._mysql("capture fixture probe DDL", f"SHOW CREATE TABLE `{table}`;\n", principal=True)
-        ddl_parts = ddl_out.split("\t", 1)
+        ddl_parts = ddl_out.stdout.strip().split("\t", 1)
         if len(ddl_parts) != 2 or ddl_parts[0] != table:
             raise FixtureError("PROBE_DDL_INVALID", "probe table DDL response was invalid")
         ddl_text = ddl_parts[1]
@@ -1090,9 +1377,9 @@ class Campaign:
             f"DELETE FROM `{table}` WHERE id=1; SELECT ROW_COUNT();\n",
             principal=True,
         )
-        if insert_out.splitlines()[-1:] != ["1"] or update_out.splitlines()[-1:] != ["1"] or delete_out.splitlines()[-1:] != ["1"]:
+        if insert_out.stdout.strip().splitlines()[-1:] != ["1"] or update_out.stdout.strip().splitlines()[-1:] != ["1"] or delete_out.stdout.strip().splitlines()[-1:] != ["1"]:
             raise FixtureError("PROBE_ROW_COUNT_INVALID", "fixture probe DML did not affect exactly one row")
-        if select_out.strip() != "1\tafter":
+        if select_out.stdout.strip() != "1\tafter":
             raise FixtureError("PROBE_ROW_INVALID", "fixture probe row readback did not match")
         self._mysql("drop fixture probe table", f"DROP TABLE `{table}`;\n", principal=True)
         self._mysql("drop task fixture schema", f"DROP DATABASE `{schema}`;\n")
@@ -1100,7 +1387,7 @@ class Campaign:
             "verify task schema absence",
             f"SELECT COUNT(*) FROM information_schema.SCHEMATA WHERE SCHEMA_NAME='{schema}';\n",
         )
-        if schema_count.strip() != "0":
+        if schema_count.stdout.strip() != "0":
             raise FixtureError("SCHEMA_DROP_UNVERIFIED", "task schema remained after drop")
         self.receipt["runtime"]["facts"].update(
             {
@@ -1117,17 +1404,8 @@ class Campaign:
         self.persist()
 
     def _cleanup(self) -> None:
-        if self.uncertain_create_outcome:
-            self.receipt["cleanup"] = {
-                "status": "FAILED_CLEANUP",
-                "containerRemoved": False,
-                "networkRemoved": False,
-                "absenceVerified": False,
-                "failureCode": "RESOURCE_CREATE_OUTCOME_UNCERTAIN",
-                "safeMessage": "a create response could not be reconciled to a verified owned resource",
-            }
-            return
-        if not self.network_id and not self.container_id:
+        unresolved = list(self.unresolved_create_resources)
+        if not self.network_id and not self.container_id and not unresolved:
             self.receipt["cleanup"] = {
                 "status": "NOT_REQUIRED",
                 "containerRemoved": False,
@@ -1135,10 +1413,21 @@ class Campaign:
                 "absenceVerified": True,
             }
             return
-        if self.docker is None:
-            self.receipt["cleanup"] = {"status": "FAILED_CLEANUP", "failureCode": "DOCKER_CLIENT_MISSING"}
+        if (self.network_id or self.container_id) and self.docker is None and self.ops is None:
+            self.receipt["cleanup"] = {
+                "status": "FAILED_CLEANUP",
+                "containerRemoved": False,
+                "networkRemoved": False,
+                "absenceVerified": False,
+                "failureCode": "DOCKER_CLIENT_MISSING",
+                "unresolvedResources": [
+                    *unresolved,
+                    *([{"resource": "container", "name": self.names["container"], "id": self.container_id}] if self.container_id else []),
+                    *([{"resource": "network", "name": self.names["network"], "id": self.network_id}] if self.network_id else []),
+                ],
+            }
             return
-        if self.ops is None:
+        if self.ops is None and self.docker is not None:
             # A network may exist while container creation never succeeded.
             self.ops = DockerResourceOps(
                 self.docker,
@@ -1148,13 +1437,35 @@ class Campaign:
                 image_id=self.receipt.get("plan", {}).get("image", {}).get("imageId", ""),
                 container_labels=self.labels,
             )
-        cleanup = cleanup_owned_resources(
-            self.ops,
-            container_id=self.container_id,
-            network_id=self.network_id,
-            container_expected={"name": self.names["container"], "labels": self.labels},
-            network_expected={"name": self.names["network"], "labels": self.labels},
-        )
+        if self.ops is None:
+            cleanup = {
+                "status": "VERIFIED_CLEAN",
+                "containerRemoved": False,
+                "networkRemoved": False,
+                "containerStatus": "NOT_REQUIRED",
+                "networkStatus": "NOT_REQUIRED",
+            }
+        else:
+            cleanup = cleanup_owned_resources(
+                self.ops,
+                container_id=self.container_id,
+                network_id=self.network_id,
+                container_expected={
+                    "name": self.names["container"],
+                    "labels": self.labels,
+                    "imageId": self.receipt.get("plan", {}).get("image", {}).get("imageId"),
+                },
+                network_expected={"name": self.names["network"], "labels": self.labels},
+            )
+        if unresolved:
+            cleanup.update(
+                {
+                    "status": "FAILED_CLEANUP",
+                    "failureCode": "RESOURCE_CREATE_OUTCOME_UNCERTAIN",
+                    "safeMessage": "one or more create outcomes could not be reconciled to a verified owned resource",
+                    "unresolvedResources": unresolved,
+                }
+            )
         cleanup["absenceVerified"] = cleanup["status"] == "VERIFIED_CLEAN"
         self.receipt["cleanup"] = cleanup
 
