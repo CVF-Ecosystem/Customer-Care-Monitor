@@ -28,12 +28,16 @@ def audit(role):
     assert len(archive) == packet['archive']['bytes']
     assert packet['sourceBinding']['backendWorktreeClean']
     assert packet['sourceBinding']['sourceBackendTree'] == packet['sourceBinding']['headBackendTree']
+    assert packet['network']['internal'] and not packet['database']['ports']
+    assert packet['database']['imageId'] == 'sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b'
     assert all(check['equal'] for check in packet['sourceChecks'])
     assert packet['M01Mutation']['restoredExactBytes']
     assert packet['M01Mutation']['originalSha256'] == packet['M01Mutation']['finalRestoredSha256']
     counts = {}
     for command in packet['commands']:
         assert command['imageId'] == 'sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c'
+        assert not command['ports']
+        assert all(not mount['RW'] for mount in command['mounts'] if mount['Type'] == 'bind')
         state = command['state']
         assert not state['Running'] and not state['OOMKilled'] and not state['Error']
         assert state['ExitCode'] == command['attachExit']

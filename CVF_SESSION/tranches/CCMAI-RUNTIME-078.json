@@ -51,13 +51,16 @@
   "ownerAuthorization": "Owner next2026-10-11 continues accepted R077 next governed move, Luna max worker/root independent reviewer. Root bounds R2 source + disposable synthetic MySQL runtime; no real credentials or external effects. Owner aware via declaration; no R3 action.",
   "fixtureAuthority": "Inspect only cached golang:1.26-alpine/mysql:8.0 and Go module cache. One disposable internal Docker network/no host ports; named ccmai-r078-* MySQL and Go containers, synthetic credentials, read-only exact source/module cache binds, disposable Go cache/database volumes. No app Compose/backend server startup; actual Scheduler.Start inside focused tests only. Cleanup/verify only owned resources; no pull/network egress. Root and worker campaigns sequential, separate raw receipts.",
   "claimScope": "Reviewed new-binary startup-recovery no JobRun rewrites on isolated synthetic DB. Not runtime CVF governance, remote topology, deployed safety, old binary parity or recovery implementation.",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_078.md",
   "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
   "buildCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "reviewEvidence": [
+    "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
+    "docs/reviews/probes/r078_root_final_audit.json"
+  ],
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -66,7 +69,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -76,5 +80,12 @@
   ],
   "dispatcher": "Codex /root",
   "humanReview": "Owner next scope awareness2026-10-11; root independently reviews before scoped closure, R2 no R3 action",
-  "workerAcknowledgment": "Fresh root REVIEWER rehydration canonical tuple PASS; worker raw event/hash/archive/restoration/ownedcleanup independently audited PASS. Worker4/4 exhausted; root independent1build3test released before action, source b7c826a unchanged. Shared reviewed harness reused with separate actor/fixtures/raw receipts; no independence claim for harness authorship."
+  "workerAcknowledgment": "Root independent REVIEWER final source/raw/control/restoration evaluation PASS; separate campaign4/4, aggregate8/8/retry0. SH01..07 and existing5selected accepted; source369/history114/seed timing/hash and16owned-resource absence verified. No open same-scope finding; first static F1/F2 and repair1 retained, no hidden worker self-approval.",
+  "executionUsed": {
+    "workerGo": 4,
+    "reviewerGo": 4,
+    "aggregateGo": 8,
+    "retries": 0
+  },
+  "reviewClaimScope": "SYNTHETIC_STARTUP_ONLY"
 }

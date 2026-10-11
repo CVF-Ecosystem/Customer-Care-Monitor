@@ -1,0 +1,39 @@
+--- a/backend/engine/scheduler.go
++++ b/backend/engine/scheduler.go
+@@ -94,8 +94,36 @@
+ 	// Load and schedule cron-based analysis jobs
+ 	s.loadCronJobs()
+ 
++	// Safety net: mark any stuck "running" jobs as failed on startup
++	cleanupStuckRuns()
+ 	s.scheduler.Start()
+ 	log.Println("[scheduler] started")
++}
++
++// cleanupStuckRuns marks any job_runs stuck in "running" status as failed.
++// This happens when the app crashes or restarts while a job is processing.
++func cleanupStuckRuns() {
++	// On startup, any "running" job is stuck because the goroutine died with the previous process
++	var stuckRuns []models.JobRun
++	if err := db.DB.Where("status = ?", "running").Find(&stuckRuns).Error; err != nil {
++		log.Printf("[scheduler] error querying stuck runs: %v", err)
++		return
++	}
++	for _, run := range stuckRuns {
++		now := time.Now()
++		if err := db.DB.Model(&run).Updates(map[string]interface{}{
++			"status":        "failed",
++			"finished_at":   &now,
++			"error_message": "Job bị gián đoạn do hệ thống khởi động lại. Vui lòng chạy lại.",
++		}).Error; err != nil {
++			log.Printf("[scheduler] error marking stuck run %s as failed: %v", run.ID, err)
++		} else {
++			log.Printf("[scheduler] marked stuck run %s as failed (started: %v)", run.ID, run.StartedAt)
++		}
++	}
++	if len(stuckRuns) > 0 {
++		log.Printf("[scheduler] cleaned up %d stuck job runs", len(stuckRuns))
++	}
+ }
+ 
+ // Stop gracefully shuts down the scheduler.

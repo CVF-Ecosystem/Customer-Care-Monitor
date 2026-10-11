@@ -13,7 +13,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current R078
 
-CCMAI-RUNTIME-078 REVIEW_PENDING: worker4Go PASS and cleanup verified; root independent single4Go campaign on b7c826a released, aggregate8/retry0. Synthetic local application only; recovery/deployed/governance OPEN, no provider/network/push, accounts parked.
+CCMAI-RUNTIME-078 REVIEW_PASS exact b7c826a synthetic startup contract; worker4/root4 Go exhausted, M01 named detector and restored positives accepted, cleanup complete. CLOSER next local scoped FREEZE after final repository checks. Recovery/deployed/governance remain OPEN; no source/runtime/provider/network/push, accounts parked.
 
 ## Historical R077
 

@@ -7,8 +7,8 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Codex /root independent REVIEWER / COMMIT_STEWARD; Luna max worker handback complete
-- Next allowed move: CCMAI-RUNTIME-078 REVIEW_PENDING: worker4Go PASS and cleanup verified; root independent single4Go campaign on b7c826a released, aggregate8/retry0. Synthetic local application only; recovery/deployed/governance OPEN, no provider/network/push, accounts parked.
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-078 REVIEW_PASS exact b7c826a synthetic startup contract; worker4/root4 Go exhausted, M01 named detector and restored positives accepted, cleanup complete. CLOSER next local scoped FREEZE after final repository checks. Recovery/deployed/governance remain OPEN; no source/runtime/provider/network/push, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake/design/spec/work-order ACK
@@ -34,3 +34,7 @@ Root independent static rereview PASS F1/F2 after repair1; mutation replay, type
 ## Before-edit role acknowledgment
 
 Fresh root REVIEWER rehydration canonical tuple PASS; worker raw event/hash/archive/restoration/ownedcleanup independently audited PASS. Worker4/4 exhausted; root independent1build3test released before action, source b7c826a unchanged. Shared reviewed harness reused with separate actor/fixtures/raw receipts; no independence claim for harness authorship.
+
+## Before-edit role acknowledgment
+
+Root independent REVIEWER final source/raw/control/restoration evaluation PASS; separate campaign4/4, aggregate8/8/retry0. SH01..07 and existing5selected accepted; source369/history114/seed timing/hash and16owned-resource absence verified. No open same-scope finding; first static F1/F2 and repair1 retained, no hidden worker self-approval.

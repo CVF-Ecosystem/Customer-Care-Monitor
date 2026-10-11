@@ -852,6 +852,60 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent TI01..08 documentary REVIEW_PASS; source hardening not dispatched.: `docs/reviews/R077_INDEPENDENT_TOPOLOGY_INTAKE_REVIEW_2026-10-11.md`
 - Independent static source14/input6/protected370/history112/seed identity proof, runtime0.: `docs/reviews/probes/r077_root_scope_review_2026-10-11.json`
 - Immutable root R2 startup hardening/offline disposable DB seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-078.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_FIRST_STATIC_FINDINGS_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_build_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_campaign.py`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_diff.patch`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_M01_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_positive_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_restored_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_independent_runtime_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_root_evidence_audit.py`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_backend_binding_static.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_build_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_campaign.py`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_diff.patch`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_M01_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_manifest.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_mutation_static.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_positive_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored.jsonl`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored_container_after.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored_container_before.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_restored_stderr.log`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_runtime_plan.json`
+- R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained.: `docs/reviews/probes/r078_worker_summary.json`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_restored.jsonl`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_restored_container_after.json`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_restored_stderr.log`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_independent_summary.json`
+- R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained.: `docs/reviews/probes/r078_root_final_audit.json`
 - SH01..07 exact2 source/test scope and max8Go/no retry validation.: `docs/work_orders/CCMAI_RUNTIME_078.md`
 - Historical R077 documentary intake/proposal FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md`
 - R078 bounded phases/roles/evidence record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-078.json`

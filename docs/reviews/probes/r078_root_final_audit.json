@@ -1,0 +1,151 @@
+{
+  "result": "PASS",
+  "campaigns": [
+    {
+      "role": "worker",
+      "sourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+      "summarySha256": "76780cc26b7e0b052ab2d5f523f9ebb96b8cda29a4684096aeb8124b0a5cd32a",
+      "rawReferencesVerified": 20,
+      "counts": {
+        "positive": {
+          "topLevel": 12,
+          "pass": 16,
+          "fail": 0,
+          "skip": 0
+        },
+        "M01": {
+          "topLevel": 2,
+          "pass": 1,
+          "fail": 1,
+          "skip": 0
+        },
+        "restored": {
+          "topLevel": 12,
+          "pass": 16,
+          "fail": 0,
+          "skip": 0
+        }
+      },
+      "sourceRestoration": "PASS",
+      "ownedCleanup": "PASS",
+      "archiveSha256": "3f135def15d46a5a3729a5718558af882715b69e103ffc6e4db5f536136abd84",
+      "result": "PASS"
+    },
+    {
+      "role": "independent",
+      "sourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+      "summarySha256": "7f95eb33fb803bc57cb10a3f4d6ab0ab2b804b7e31447a000e586f4db0dd37d4",
+      "rawReferencesVerified": 20,
+      "counts": {
+        "positive": {
+          "topLevel": 12,
+          "pass": 16,
+          "fail": 0,
+          "skip": 0
+        },
+        "M01": {
+          "topLevel": 2,
+          "pass": 1,
+          "fail": 1,
+          "skip": 0
+        },
+        "restored": {
+          "topLevel": 12,
+          "pass": 16,
+          "fail": 0,
+          "skip": 0
+        }
+      },
+      "sourceRestoration": "PASS",
+      "ownedCleanup": "PASS",
+      "archiveSha256": "3f135def15d46a5a3729a5718558af882715b69e103ffc6e4db5f536136abd84",
+      "result": "PASS"
+    }
+  ],
+  "protectedSource": 369,
+  "protectedHistory": 114,
+  "rootExactResourceAbsenceReadback": [
+    {
+      "kind": "container",
+      "name": "ccmai-r078-worker-restored-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-worker-M01-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-worker-positive-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-worker-build-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-worker-db-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "volume",
+      "name": "ccmai-r078-worker-dbdata-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "volume",
+      "name": "ccmai-r078-worker-build-cache-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "network",
+      "name": "ccmai-r078-worker-net-d7a74fc438",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-independent-restored-541ec1ac3a",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-independent-M01-541ec1ac3a",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-independent-positive-541ec1ac3a",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-independent-build-541ec1ac3a",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "ccmai-r078-independent-db-541ec1ac3a",
+      "absent": true
+    },
+    {
+      "kind": "volume",
+      "name": "ccmai-r078-independent-dbdata-541ec1ac3a",
+      "absent": true
+    },
+    {
+      "kind": "volume",
+      "name": "ccmai-r078-independent-build-cache-541ec1ac3a",
+      "absent": true
+    },
+    {
+      "kind": "network",
+      "name": "ccmai-r078-independent-net-541ec1ac3a",
+      "absent": true
+    }
+  ],
+  "immutableSeed": "PASS original committed0579a79 before BUILD",
+  "claimBoundary": "Synthetic application contract only; no CVF governance/provider/deployment/hosted CI claim."
+}

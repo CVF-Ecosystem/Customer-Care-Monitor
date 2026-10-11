@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-078",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-078 REVIEW_PENDING: worker4Go PASS and cleanup verified; root independent single4Go campaign on b7c826a released, aggregate8/retry0. Synthetic local application only; recovery/deployed/governance OPEN, no provider/network/push, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-078 REVIEW_PASS exact b7c826a synthetic startup contract; worker4/root4 Go exhausted, M01 named detector and restored positives accepted, cleanup complete. CLOSER next local scoped FREEZE after final repository checks. Recovery/deployed/governance remain OPEN; no source/runtime/provider/network/push, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / COMMIT_STEWARD; Luna max worker handback complete",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -26,9 +26,9 @@
     "reviewerMaxGoTest": 3,
     "aggregateMaxGoInvocations": 8,
     "workerUsedGoInvocations": 4,
-    "reviewerUsedGoInvocations": 0,
+    "reviewerUsedGoInvocations": 4,
     "automaticRetries": 0,
-    "currentPermittedGoInvocations": 4
+    "currentPermittedGoInvocations": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -41,9 +41,9 @@
   },
   "candidatePlanning": {
     "id": "R078",
-    "status": "REVIEW_PENDING",
+    "status": "REVIEW_PASS",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_078.md",
-    "sourceImplementation": "BUILD_STATIC_SOURCE_TEST_RUNNER_AUTHORIZED",
+    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS",
     "sourceOrRuntimeDispatched": true
   },
   "historicalR067State": {
@@ -600,7 +600,7 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": null,
+  "reviewEvidence": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
   "modelAssessment": null,
   "closureEvidence": null,
   "independentReviewCommit": null,
@@ -682,5 +682,5 @@
     },
     "localClosureCommit": "4a63460e21d835331382cf8728bf9cbbaed19cfd"
   },
-  "runtimeRelease": "INDEPENDENT_REVIEW_CAMPAIGN_RELEASED"
+  "runtimeRelease": "COMPLETE_BUDGET_EXHAUSTED"
 }

@@ -313,6 +313,65 @@
       "closureEvidence": "docs/reviews/R073_SCOPED_LOCAL_PRESENCE_UI_CLOSURE_2026-10-10.md",
       "closureNativeInvocations": 0,
       "localClosureCommit": "d32c1c7cb1193fea0b0c7e3f9f3c2473c7074b10"
+    },
+    {
+      "id": "CCMAI-RUNTIME-078",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "workload": "Go scheduler startup no-rewrite with isolated synthetic DB controls",
+      "start": "FRESH_IMPLEMENTATION_INHERITED_ACCEPTED_SPEC_NO_SOURCE_DRAFT",
+      "firstSourceCommit": "6219da376c63d806ce412bfbae2a738a0af529bc",
+      "finalSourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+      "assessment": "docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md",
+      "finalDisposition": "REVIEW_PASS_SYNTHETIC_LOCAL_STARTUP",
+      "firstStaticHandback": "CHANGES_REQUIRED_F1_TEST_CONTROLS_F2_RUNNER_GUARDS",
+      "originalFirstSourceCompile": "NOT_RUN_STATIC_REPAIR_PRECEDED_RUNTIME",
+      "originalFirstSourcePositive": "NOT_RUN_STATIC_REPAIR_PRECEDED_RUNTIME",
+      "firstActualCompile": "PASS_AFTER_STATIC_REPAIR",
+      "firstActualPositive": "PASS12TOP16EVENTS_AFTER_STATIC_REPAIR",
+      "productSemanticRepairRounds": 0,
+      "newTestRepairRounds": 1,
+      "evidenceRunnerRepairRounds": 1,
+      "consolidatedRepairRounds": 1,
+      "acceptedProductFindings": [],
+      "workerTestFindings": [
+        "F1 unrelated-job/different-tenant row snapshots",
+        "F1 direct cancellation-context discrimination"
+      ],
+      "workerEvidenceFindings": [
+        "F2 anchored legacy mutation counts",
+        "F2 cumulative source/tree binding",
+        "F2 guarded TEMP-owned cleanup",
+        "F2 typed/raw-hash summary and nonzero publication failure"
+      ],
+      "rootFindings": [
+        "continuity projection correction",
+        "guessed lookup paths",
+        "failed quoted Python metadata edit",
+        "copied reviewer actor label corrected before runtime",
+        "first final gate6/7: root used descriptive disposition instead of exact REVIEW_PASS enum; corrected metadata before commit, no runtime replay"
+      ],
+      "parentAssistance": "Root bounded order/acceptance, source/fixture pointers, consolidated findings, source/archive metadata binding, reviewed harness reuse and separate raw auditor; no source/test implementation draft.",
+      "finalLocalEvidence": "Each worker/root buildPASS; positive/restored12top16PASS no skips; M01 SH02 named attempted-updateFAIL with SH04PASS; full restoration and exact cleanup PASS.",
+      "actualGoInvocations": {
+        "worker": 4,
+        "reviewer": 4,
+        "aggregate": 8,
+        "retries": 0
+      },
+      "modelTokenCost": null,
+      "modelInferenceSeconds": null,
+      "measurementLimit": "No model usage telemetry or matched max/xhigh/Sol comparison; native runtime is not inference time.",
+      "normalizedQuality": {
+        "primaryTaskClass": "bounded_scheduler_startup_hardening",
+        "secondaryTaskClass": "discriminating_synthetic_database_tests_and_evidence_tooling",
+        "productSemanticRepairRounds": 0,
+        "newTestRepairRounds": 1,
+        "rootFindingsExcludedFromWorkerProductQuality": true,
+        "historicalFieldsRetained": true
+      }
     }
   ],
   "taskFitClassification": {

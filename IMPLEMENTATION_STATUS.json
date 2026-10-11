@@ -268,7 +268,7 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-078 REVIEW_PENDING: worker4Go PASS and cleanup verified; root independent single4Go campaign on b7c826a released, aggregate8/retry0. Synthetic local application only; recovery/deployed/governance OPEN, no provider/network/push, accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-078 REVIEW_PASS exact b7c826a synthetic startup contract; worker4/root4 Go exhausted, M01 named detector and restored positives accepted, cleanup complete. CLOSER next local scoped FREEZE after final repository checks. Recovery/deployed/governance remain OPEN; no source/runtime/provider/network/push, accounts parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_078.md",
     "buildDispatched": false,
     "actualWorkerModel": {
@@ -281,11 +281,13 @@
       "reviewerMaxBuild": 1,
       "reviewerMaxGoTest": 3,
       "aggregateMaxGoInvocations": 8,
-      "workerUsedGoInvocations": 0,
-      "reviewerUsedGoInvocations": 0,
-      "automaticRetries": 0
+      "workerUsedGoInvocations": 4,
+      "reviewerUsedGoInvocations": 4,
+      "automaticRetries": 0,
+      "currentPermittedGoInvocations": 0
     },
-    "publicationStatus": "R078_LOCAL_ONLY_NO_PUSH_AUTHORITY"
+    "publicationStatus": "R078_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+    "modelAssessment": "docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md"
   },
   "sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -1527,11 +1529,14 @@
   },
   "startupHardening": {
     "trancheId": "CCMAI-RUNTIME-078",
-    "status": "REVIEW_PENDING",
-    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PENDING",
-    "runtimeEvidence": "WORKER_PASS_ROOT_RUNTIME_PENDING",
+    "status": "REVIEW_PASS",
+    "sourceImplementation": "COMMITTED_INDEPENDENT_REVIEW_PASS",
+    "runtimeEvidence": "WORKER_AND_INDEPENDENT_SYNTHETIC_PASS",
     "deployedTopology": "UNKNOWN",
     "recoveryImplementation": "OPEN",
-    "runtimeRelease": "INDEPENDENT_REVIEW_CAMPAIGN_RELEASED"
+    "runtimeRelease": "COMPLETE_BUDGET_EXHAUSTED",
+    "sourceCommit": "b7c826aa9e412b9e463716d6449b99a78819bfa9",
+    "reviewEvidence": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
+    "modelAssessment": "docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md"
   }
 }

@@ -6100,6 +6100,384 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_078.md",
       "status": "ACTIVE",
       "description": "SH01..07 exact2 source/test scope and max8Go/no retry validation."
+    },
+    {
+      "id": "runtime078-evidence-0001",
+      "family": "continuity",
+      "path": "docs/reviews/R078_FIRST_STATIC_FINDINGS_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0002",
+      "family": "continuity",
+      "path": "docs/reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0003",
+      "family": "continuity",
+      "path": "docs/reviews/R078_LUNA_MAX_STARTUP_IMPLEMENTATION_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0004",
+      "family": "continuity",
+      "path": "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0005",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0006",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_build_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_campaign.py",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_diff.patch",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_runtime_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_root_evidence_audit.py",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_backend_binding_static.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_build_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_campaign.py",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0034",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_diff.patch",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0035",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0036",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_M01_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_manifest.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0038",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_mutation_static.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0039",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0043",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_positive_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0044",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0045",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored_container_before.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0047",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_runtime_plan.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_worker_summary.json",
+      "status": "ACTIVE",
+      "description": "R078 bounded startup no-rewrite source/review evidence; synthetic local scope, original failures and runtime limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0050",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored.jsonl",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored_container_after.json",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0052",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_restored_stderr.log",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0053",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_independent_summary.json",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
+    },
+    {
+      "id": "runtime078-evidence-0054",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r078_root_final_audit.json",
+      "status": "ACTIVE",
+      "description": "R078 startup no-rewrite exact-source synthetic review/raw evidence; original findings and scoped claim limits retained."
     }
   ]
 }
