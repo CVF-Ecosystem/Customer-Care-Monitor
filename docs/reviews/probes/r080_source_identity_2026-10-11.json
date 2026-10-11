@@ -129,7 +129,7 @@
       "citationRanges": [
         {
           "firstLine": 73,
-          "lastLine": 183
+          "lastLine": 273
         }
       ]
     },
@@ -415,7 +415,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 157
+          "lastLine": 158
         }
       ]
     },
@@ -426,6 +426,16 @@
         {
           "firstLine": 1,
           "lastLine": 11
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "path": "backend/db/activity.go",
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
         }
       ]
     }
@@ -516,7 +526,7 @@
       "citationRanges": [
         {
           "firstLine": 73,
-          "lastLine": 183
+          "lastLine": 273
         }
       ],
       "contentStatus": "versioned read-only source at preserved R080 comparison"
@@ -879,6 +889,10 @@
         {
           "firstLine": 1,
           "lastLine": 11
+        },
+        {
+          "firstLine": 1,
+          "lastLine": 11
         }
       ],
       "contentStatus": "versioned historical authority/evidence at preserved R080 comparison"
@@ -920,8 +934,8 @@
       "referenceIds": [
         "W02"
       ],
-      "gitBlobSha1": "5870290e676278a4f1d9b23f9c8867c9fa16ae71",
-      "physicalSha256": "f439162e25a04b08a3fc7b9b010377e114474b430a219f7967f22b7057a55cc0",
+      "gitBlobSha1": "cfdc92321e8d9e3352a88b47c715046657941950",
+      "physicalSha256": "75c16fa775c48b84b9c8b90b543d08390647ffbc31c36bec6ec831a314a825ba",
       "lineCount": 94,
       "citationRanges": [
         {
@@ -936,16 +950,32 @@
       "referenceIds": [
         "SP01"
       ],
-      "gitBlobSha1": "102009129a7f2aab09b05d51271955bfd38ff5c8",
-      "physicalSha256": "01b7ce9332662d04846101aba5d19ee010bf7ea345d7e93ba5156b64eb798849",
-      "lineCount": 157,
+      "gitBlobSha1": "849d54e07e3730e0602e459fbf02c40e4f9bc975",
+      "physicalSha256": "3c58dfb53347d2dae9c2ad6655936fa52f6e65a057bbcc841207b6331adad544",
+      "lineCount": 158,
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 157
+          "lastLine": 158
         }
       ],
       "contentStatus": "new R080 worker artifact; working-tree bytes captured before independent review"
+    },
+    {
+      "path": "backend/db/activity.go",
+      "referenceIds": [
+        "S24"
+      ],
+      "citationRanges": [
+        {
+          "firstLine": 10,
+          "lastLine": 26
+        }
+      ],
+      "contentStatus": "versioned read-only source, root mechanical citation addition",
+      "gitBlobSha1": "c5c375768e80db795d8e2c41ec494f6f12a2a0cb",
+      "physicalSha256": "03616d47212158f12c21d635248661015d590e2a48632e12dee9893292c7a790",
+      "lineCount": 26
     }
   ],
   "rootPrehandbackAssistance": {
@@ -1021,5 +1051,15 @@
     "docs/reviews/probes/r080_source_identity_2026-10-11.json"
   ],
   "identityLimit": "Git blob SHA-1, physical SHA-256, and ranges bind local file bytes. They do not identify deployed binaries or databases and do not prove fencing, recovery, remote effect outcomes, fleet adoption, or CVF governance.",
-  "selfIdentityExclusion": "This identity JSON is linked from both Markdown artifacts and is excluded from its own inputs to avoid a self-referential hash. Root can bind its final committed blob after the worker packet is reviewed and committed."
+  "selfIdentityExclusion": "This identity JSON is linked from both Markdown artifacts and is excluded from its own inputs to avoid a self-referential hash. Root can bind its final committed blob after the worker packet is reviewed and committed.",
+  "rootMechanicalCorrections": {
+    "originalPacketCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+    "origin": "Codex /root",
+    "items": [
+      "M1 activity helper citation/shared RunReserved range",
+      "M2 worker-only repository-test qualifier/root46PASS38.818s metadata checks",
+      "M3 pre-dispatch table consistency"
+    ],
+    "substantiveDesignDraftedByRoot": false
+  }
 }

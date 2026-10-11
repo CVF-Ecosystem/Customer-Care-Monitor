@@ -45,18 +45,23 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 continues accepted R079 next move: separate R1 intended durable JobRun fence DESIGN/SPEC with Luna max worker/root independent reviewer, no product/runtime/external effects.",
   "claimScope": "Intended durable-fence architecture/spec and nonbinding later implementation order only; repository facts and unknown deployed adoption separated.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_080.md",
   "baseCommit": "cc9e31fc15686c523e1abaa503115f721f53447d",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "315b48f0cc17475c984ead9667fb7df9cce76e0c",
+  "reviewEvidence": [
+    "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+    "docs/reviews/probes/r080_first_root_static_audit_2026-10-11.json"
+  ],
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -69,5 +74,5 @@
     "primary": "durable_jobrun_fence_design_spec",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
   },
-  "workerAcknowledgment": "Fresh WORK_ORDER tuple rehydrated before BUILD, Luna max declaration/ACK at41060ba received with no edits. Immutable seedcc9e31f precedesbase/activation. Root releases exact3 documentary files only, records mutation/deletion/prune source pointers as assistance not prose. Intended design requires independent REVIEW; 46gateunitsPASS38.818s retained, native0."
+  "workerAcknowledgment": "Root fresh canonical REVIEW rehydration at315b48f; independent reviewer evaluates DF01..10, records consolidated F1/F2/F3 before first repair and directly attributes M1/M2/M3 mechanical corrections; same R1 seed/effect budget0."
 }

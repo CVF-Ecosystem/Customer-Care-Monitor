@@ -90,5 +90,5 @@ Acceptance of this draft would mean only that root may consider a new design gat
 ### References
 
 [I01]: probes/r080_source_identity_2026-10-11.json
-[SP01]: ../specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md#L1-L157
+[SP01]: ../specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md#L1-L158
 [H01]: R079_SCOPED_PREREQUISITE_INTAKE_CLOSURE_2026-10-11.md#L1-L11

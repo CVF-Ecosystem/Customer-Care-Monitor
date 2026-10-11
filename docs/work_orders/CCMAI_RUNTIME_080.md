@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-080 intended durable JobRun fence DESIGN/SPEC
 
-Status: BUILD
+Status: CHANGES_REQUIRED
 
 Owner next continues accepted R079 closure25b3f40 and its nonbinding next proposal. R1 source/documentary only. Root ORCHESTRATOR/WORK_ORDER_AUTHOR/independent REVIEWER/CLOSER/all COMMIT_STEWARD; Luna max /root/r080_worker SPEC_AUTHOR/documentary IMPLEMENTATION_WORKER/REPAIR_WORKER. Seed committed before activation/base/BUILD. INTAKE bounds intended design only; DESIGN chooses option comparison/decision; SPEC below defines DF01..10; WORK_ORDER permits documentary BUILD only. Accepted R079 inventory and R076 intended recovery constraints are inputs; R078 synthetic startup acceptance is inherited without replay. Deployed UNKNOWN.
 

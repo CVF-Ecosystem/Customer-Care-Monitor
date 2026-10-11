@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r080_worker SPEC_AUTHOR / documentary IMPLEMENTATION_WORKER
-- Next allowed move: CCMAI-RUNTIME-080 BUILD intended durable-fence DESIGN/SPEC DF01..10 exact3 documents; source-backed selected contract or concrete blockers, no code/schema/recovery/runtime/provider/DB/network/push, deployed UNKNOWN; accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+- Next allowed move: CCMAI-RUNTIME-080 CHANGES_REQUIRED first packet315b48f; consolidated F1 commit ambiguity/F2 mutex protocol/F3 bounded draft to Luna max repair1 after fresh ACK and committed BUILD release; documentary exact3 only, implementation/recovery OPEN, deployed UNKNOWN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## INTAKE/DESIGN/SPEC/WORK_ORDER acknowledgment
@@ -22,3 +22,9 @@ Fresh WORK_ORDER tuple rehydrated before BUILD, Luna max declaration/ACK at41060
 ## Root metadata projection repair during BUILD
 
 SESSION_SYNC_STEWARD root audited current nested/top-level routing. Activation retained stale publicationStatus R079_LOCAL_ONLY_NO_PUSH_AUTHORITY; corrected to R080_LOCAL_ONLY_NO_PUSH_AUTHORITY with unchanged no-push effect boundary. Root origin only, not worker finding. Historical R079 continuity/publication remains preserved; source/seed/runtime and acceptance unchanged.
+
+## Before-edit role acknowledgment
+
+Root fresh canonical REVIEW rehydration at315b48f; independent reviewer evaluates DF01..10, records consolidated F1/F2/F3 before first repair and directly attributes M1/M2/M3 mechanical corrections; same R1 seed/effect budget0.
+
+Root precommit metadata error retained: first review publication preflight FAIL5/7 because root used unsupported catalog family review and omitted REVIEW_PENDING in tranche history. Corrected to continuity and explicit BUILD → REVIEW_PENDING → CHANGES_REQUIRED before commit. Not a worker defect or runtime check.

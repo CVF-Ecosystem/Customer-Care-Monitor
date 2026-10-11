@@ -926,6 +926,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-080.json`
 - R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-080.json`
 - R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects.: `docs/work_orders/CCMAI_RUNTIME_080.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/probes/r080_source_identity_2026-10-11.json`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md`
+- R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/probes/r080_first_root_static_audit_2026-10-11.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

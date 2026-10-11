@@ -6597,6 +6597,41 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_080.md",
       "status": "ACTIVE",
       "description": "R080 immutable authority/bounded documentary order or preserved R079 continuity; no runtime effects."
+    },
+    {
+      "id": "runtime080-evidence-0010",
+      "family": "continuity",
+      "path": "docs/specs/DURABLE_JOBRUN_FENCE_DESIGN_SPEC_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0011",
+      "family": "continuity",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_WORK_ORDER_DRAFT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r080_source_identity_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0013",
+      "family": "continuity",
+      "path": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
+    },
+    {
+      "id": "runtime080-evidence-0014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r080_first_root_static_audit_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "R080 intended design packet or independent first-review evidence; no implementation/runtime proof."
     }
   ]
 }

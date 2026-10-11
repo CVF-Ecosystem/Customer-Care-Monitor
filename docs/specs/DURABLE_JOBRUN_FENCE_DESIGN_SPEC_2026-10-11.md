@@ -71,12 +71,12 @@ The DB fence applies only to DB writers that participate in it. Provider and not
 | Effect/path | Current source behavior | Intended fence rule |
 |---|---|---|
 | HTTP, MCP, cron, after-sync, agent, direct Analyzer, including test-run | These paths converge on ReserveJobRun/RunReserved/executeReserved; test-run uses the shared executor. [S01][S04][S05][S06][S07][S08][S11][S12][S13][S14] | All admissions allocate the same DB grant. No route/mode may construct an unfenced JobRun or bypass reservation. |
-| Provider invocation | Analyzer checks local cancellation before calls; single and batch calls execute outside a DB transaction. A DB generation cannot revoke an in-flight call. [S09] | Exact-tuple admission-time check; keep grant active while synchronous call is in flight. A returned error is not evidence of no remote effect. No automatic replay. |
+| Provider invocation | Analyzer checks local cancellation before calls; single and batch calls execute outside a DB transaction. A DB generation cannot revoke an in-flight call. [S09] | Exact-tuple pre-dispatch check; keep grant active while synchronous call is in flight. A returned error is not evidence of no remote effect. No automatic replay. |
 | Usage writes | AIUsageLog writes occur after provider responses and are distinct DB writes. [S09][S16] | Guard every usage insert by T in its transaction. On write/commit uncertainty, stop and retain grant; do not proceed as if recorded or absent. |
 | Snapshot, evaluation, violation, classification, result | saveResults currently has a transaction and insert checks, but locks Conversation before JobRun and lacks the grant. [S09][S18] | Reorder to Job → JobRun → sorted Conversation → child rows; exact T predicate held through commit. If Conversation is absent or deletion won, write nothing. |
 | Initial, error, and progress summaries | Updates inspect DB errors but have no durable generation predicate. [S09] | Guard each update by T; current-running state only. A failure or uncertain outcome stops subsequent analysis effects and retains the grant. |
 | Normal/test-run terminal and checkpoint | Finalizer checks Job/JobRun and verifies terminal state; its failure fallback is weaker. [S10][S15] | Require T in the same finalizer transaction. Preserve current checkpoint rules; keep active grant after terminal and do not use the fallback to release it. |
-| Start/completion/notification-error activity | Activity writes ignore Create errors and are not run-token guarded. [S07][S19] | Route run-attributed activity writes through guarded transactions or fail retirement if the required durable record is uncertain. They are not ownership proof. |
+| Start/completion/notification-error activity | Activity writes ignore Create errors and are not run-token guarded. [S07][S24] | Route run-attributed activity writes through guarded transactions or fail retirement if the required durable record is uncertain. They are not ownership proof. |
 | Notification send, NotificationLog, notified_at | Send follows terminalization; log and marker errors are ignored, and dispatcher returns nil. [S07][S17] | Narrow terminal-tail allowlist under T. Check send outcome as far as the client reports it, check durable log/marker writes, never replay ambiguous sends, and retain grant on uncertainty. |
 | Start abort, panic, early failure, cancellation | These close through the common finalizer; failed close can leave a running row. Local cancel races with publish/terminal under a mutex. [S06][S07][S08] | Use the exact grant for every close. Accepted cancel before terminal closes cancelled, suppresses later provider/notification work, and never advances the ordinary checkpoint. Terminal winner refuses later cancel. Unknown close keeps grant. No cross-process cancel/reclaim is added. |
 | Worker release | The local owner is released after synchronous worker effects, including notification work, but that local release is process-local. [S06][S07] | Clear durable active grant only through verified retirement after the complete tail; local-map absence never releases it. |
@@ -119,7 +119,7 @@ The contract selects an architecture and specifies the named repository integrat
 
 The paired later work-order draft is proposal only and names a separately authorized R2+ implementation slice, exact candidate paths, independent reviewer, evidence classes, stop conditions, and barriers. No source/schema/test/runtime/recovery/provider/deployment path is authorized by this spec. Root remains independent reviewer, CLOSER, and COMMIT_STEWARD; worker first-pass review is pending. Root's prehandback source pointers are identified in [I01] as navigation assistance and were independently checked against source; they are not findings acceptance or worker approval. First-pass dissent, any later root assistance, repairs, and measured versus unmeasured costs must remain separately recorded by the independent review. No model-time or cost estimate is asserted. [D06][W02][I01]
 
-There is no CVF governance claim, deployed claim, runtime proof, or test result in this document. Runtime, provider/network, DB/host/container, application, Go, and repository test execution were not performed for R080. [I01]
+There is no CVF governance claim, deployed claim, runtime proof, or test result in this document. The worker performed no runtime, provider/network, DB/host/container, application, Go, repository-test or gate execution. Root separately ran 46 repository governance-gate unit tests (PASS, 38.818s); these check repository metadata and do not prove runtime governance. [I01]
 
 ### References
 
@@ -130,7 +130,7 @@ There is no CVF governance claim, deployed claim, runtime proof, or test result 
 [S04]: ../../backend/api/handlers/jobs.go#L368-L603
 [S05]: ../../backend/mcp/handlers.go#L330-L360
 [S06]: ../../backend/jobdispatch/dispatch.go#L71-L147
-[S07]: ../../backend/engine/analyzer_modes.go#L73-L183
+[S07]: ../../backend/engine/analyzer_modes.go#L73-L273
 [S08]: ../../backend/engine/job_run_ownership.go#L114-L397
 [S09]: ../../backend/engine/analyzer.go#L53-L952
 [S10]: ../../backend/engine/analyzer_incremental.go#L167-L284
@@ -147,6 +147,7 @@ There is no CVF governance claim, deployed claim, runtime proof, or test result 
 [S21]: ../../backend/cli/prune_results.go#L64-L153
 [S22]: ../../backend/db/mysql.go#L13-L59
 [S23]: ../../backend/cli/prune_results.go#L216-L263
+[S24]: ../../backend/db/activity.go#L10-L26
 [D01]: ../decisions/DISPATCH_RECOVERY_R076_2026-10-11.md#L7-L30
 [D02]: ../specs/DISPATCH_RECOVERY_R076_2026-10-11.md#L102-L160
 [D03]: ../reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md#L3-L27
