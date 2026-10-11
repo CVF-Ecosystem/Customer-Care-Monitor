@@ -45,8 +45,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 continues accepted R079 next move: separate R1 intended durable JobRun fence DESIGN/SPEC with Luna max worker/root independent reviewer, no product/runtime/external effects.",
   "claimScope": "Intended durable-fence architecture/spec and nonbinding later implementation order only; repository facts and unknown deployed adoption separated.",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_080.md",
   "baseCommit": "cc9e31fc15686c523e1abaa503115f721f53447d",
   "buildCommit": "402d6a6f64c67dc6af62a7e2a73064cc628e06b8",
@@ -56,7 +56,7 @@
     "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md"
   ],
   "disposition": "REVIEW_PASS",
-  "freeze": "OPEN",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
@@ -65,7 +65,8 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -78,8 +79,12 @@
     "primary": "durable_jobrun_fence_design_spec",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
   },
-  "workerAcknowledgment": "Fresh REVIEW_PENDING tuple and committed402d6a6 independently evaluated; DF01..10 PASS for limited intended design, not actual integration/runtime. First CHANGES_REQUIRED and all root/worker failures retained. Root independent review decision precedes CLOSER/FREEZE.",
+  "workerAcknowledgment": "Fresh CLOSER canonical REVIEW tuple rehydrated at56b5328 after independent result; scoped local FREEZE only. Remaining actual integration/runtime/adoption blockers carried forward explicitly; no self-approval or new effect authority. Root closure records all errors/assistance, zero application-native and unchanged source/history.",
   "firstReviewDisposition": "CHANGES_REQUIRED",
   "workerProseRepairRounds": 1,
-  "rootRepairIdentityTransfer": true
+  "rootRepairIdentityTransfer": true,
+  "closureEvidence": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "56b5328fb528a3139219740857bd5d2a8408a11b",
+  "closureScope": "INTENDED_ARCHITECTURE_SPEC_NONBINDING_PROPOSAL_ONLY",
+  "closer": "Codex /root"
 }

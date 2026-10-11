@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-080",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-080 REVIEW_PASS intended design/proposal only at402d6a6 after prose repair1/root identity transfer; CLOSER next scoped local FREEZE after gates, MySQL/GORM/FK/cutover integration OPEN; no code/runtime/DB/provider/network/push, deployed UNKNOWN/accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-080 FROZEN local intended architecture/spec and nonbinding proposal only at402d6a6/review56b5328 after prose repair1/root identity transfer. ORCHESTRATOR next separately bounds documentary MySQL/GORM lock/outcome/incarnation/cutover gate with new seed; no code/schema/runtime/DB/provider/network/push, fencing/recovery OPEN/deployed UNKNOWN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,7 +34,7 @@
   },
   "candidatePlanning": {
     "id": "R080",
-    "status": "REVIEW_PASS",
+    "status": "FROZEN",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_080.md",
     "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
@@ -595,10 +595,18 @@
   },
   "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DESIGN_REVIEW_2026-10-11.md",
   "modelAssessment": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": null,
-  "independentReviewCommit": null,
-  "closureStatus": null,
-  "closureChecks": null,
+  "closureEvidence": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "56b5328fb528a3139219740857bd5d2a8408a11b",
+  "closureStatus": "FROZEN_LOCAL_INTENDED_DESIGN_ONLY",
+  "closureChecks": {
+    "localPreflight": "PASS7/7",
+    "cachedPrRange": "PASS7/7",
+    "catalogPS51": "PASS",
+    "catalogPS7": "PASS",
+    "gateUnits": "46PASS38.818s_INHERITED_UNCHANGED_SCRIPTS",
+    "applicationNativeInvocations": 0,
+    "runtimeEvidence": "NOT_RUN"
+  },
   "localClosureCommit": null,
   "publicationStatus": "R080_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,

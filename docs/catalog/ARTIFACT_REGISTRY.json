@@ -6646,6 +6646,13 @@
       "path": "docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md",
       "status": "ACTIVE",
       "description": "R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved."
+    },
+    {
+      "id": "runtime080-evidence-0017",
+      "family": "continuity",
+      "path": "docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R080 scoped local intended design/proposal closure; implementation/recovery OPEN and deployed UNKNOWN."
     }
   ]
 }

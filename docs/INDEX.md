@@ -933,6 +933,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R080 intended design packet or independent first-review evidence; no implementation/runtime proof.: `docs/reviews/probes/r080_first_root_static_audit_2026-10-11.json`
 - R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved.: `docs/reviews/probes/r080_independent_final_audit_2026-10-11.json`
 - R080 independent intended-design acceptance and documentary quality evidence; runtime/governance not proved.: `docs/reviews/R080_LUNA_MAX_DURABLE_FENCE_DESIGN_ASSESSMENT_2026-10-11.md`
+- R080 scoped local intended design/proposal closure; implementation/recovery OPEN and deployed UNKNOWN.: `docs/reviews/R080_SCOPED_INTENDED_DESIGN_CLOSURE_2026-10-11.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
