@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-077", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-077", "parked": true} -->
 
 ## Current R077
 
-CCMAI-RUNTIME-077 CHANGES_REQUIRED F1/F2 contract controls; root M1 navigation repaired. Luna max acknowledges current handoff before exact3 same-scope documentary repair BUILD; source/runtime/provider/DB/host/network/push0, accounts parked.
+CCMAI-RUNTIME-077 BUILD same-scope documentary repair1 F1/F2 and capture wording, exact3; M1 root links preserved. Root reviews complete packet afterward; source/runtime/provider/DB/host/network/push0, accounts parked.
 
 ## Historical R076
 

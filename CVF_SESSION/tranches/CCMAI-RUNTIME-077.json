@@ -43,8 +43,8 @@
   },
   "ownerAuthorization": "Owner next2026-10-11 under continuing roadmap/Luna max worker/root orchestrator-reviewer assignment. R076 next governed move separately bounded readonly topology/owner-fence intake; source-only versioned deployment examples and contracts, not observed hosts/data.",
   "claimScope": "Repository-described topology/startup/ownership facts, explicit deployed UNKNOWN and concrete nonbinding next hardening draft; no runtime/durability/governance certification.",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_077.md",
   "baseCommit": "a64f6b22b815e9f535fc20b7c7394fa33ed2f9ac",
   "buildCommit": "83b3b9589c65987fc7d034ec046284e484a55a02",
@@ -56,7 +56,8 @@
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -69,5 +70,5 @@
     "primary": "repository_topology_intake_and_bounded_work_order_draft",
     "sampleType": "FRESH_MAX_DOCUMENTARY_NOT_IMPLEMENTATION"
   },
-  "workerAcknowledgment": "Root classified M1 as known minor authorized documentary navigation repair before edits; added reciprocal local links only. F1/F2 remain worker-owned and require same-scope repair ACK/BUILD; no source/test/seed or acceptance expansion."
+  "workerAcknowledgment": "2026-10-11 Luna max fresh CHANGES_REQUIRED canonical rehydration/CVF declaration REPAIR_WORKER ACK received before edits. Exact3 F1/F2 acceptance and minor capture wording repair under unchanged seeda64f6b2; preserve first83b3b95/findingsab23883/root M1. Root records BUILD repair1 release, independent review reserved; no new scope or runtime budget."
 }
