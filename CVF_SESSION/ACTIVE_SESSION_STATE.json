@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,25 +12,23 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-085",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
+  "activeTranche": "CCMAI-RUNTIME-086",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-086 WORK_ORDER source-only pending-versus-started mount lifecycle completion; worker fresh ACK before committed BUILD, exact script/test/new readiness plus one harness suite. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 returned and docs55deadlinks retained, FREEZE blocked/accounts parked/fixture readiness OPEN/deployed UNKNOWN.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max /root/r086_worker awaiting BUILD release",
   "updatedAt": "2026-10-12",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
-    "workerFixtureCampaigns": 1,
-    "reviewerFixtureCampaigns": 1,
-    "aggregateFixtureCampaigns": 2,
-    "workerHarnessUnitInvocations": 0,
-    "reviewerHarnessUnitInvocations": 0,
+    "workerCompletionPasses": 1,
+    "workerHarnessUnitInvocations": 1,
+    "reviewerHarnessUnitInvocations": 1,
     "maxDirectedSameScopeSourceRepairRounds": 0,
+    "workerFixtureCampaigns": 0,
+    "reviewerFixtureCampaigns": 0,
     "goInvocations": 0,
     "providerInvocations": 0,
-    "automaticRetries": 0,
-    "workerFixtureCampaignsUsed": 1,
-    "reviewerFixtureCampaignsUsed": 0
+    "automaticRetries": 0
   },
   "actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -42,10 +40,10 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R085",
-    "status": "CHANGES_REQUIRED",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_085.md",
-    "sourceImplementation": "UNCHANGED_ACCEPTED_SOURCE67E76DE",
+    "id": "R086",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_086.md",
+    "sourceImplementation": "NOT_DISPATCHED",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -602,14 +600,14 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md",
-  "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+  "reviewEvidence": null,
+  "modelAssessment": null,
   "closureEvidence": null,
-  "independentReviewCommit": "f0061ecfb09cf71a900d1d438163b003e59ea390",
+  "independentReviewCommit": null,
   "closureStatus": null,
   "closureChecks": null,
   "localClosureCommit": null,
-  "publicationStatus": "R085_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+  "publicationStatus": "R086_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
@@ -782,29 +780,9 @@
   },
   "nextScopeProposal": null,
   "currentReview": {
-    "result": "CHANGES_REQUIRED",
-    "disposition": "RETURNED_RUNTIME_MOUNT_BLOCKER",
+    "result": "NOT_RUN",
     "freeze": "OPEN",
-    "finding": "F1_PRE_START_RESOLVED_MOUNT_VALIDATION",
-    "additionalRepositoryCheck": {
-      "actor": "Codex /root",
-      "command": "npm run docs:build",
-      "workingDirectory": "docs",
-      "invocations": 1,
-      "exitCode": 1,
-      "vitepressVersion": "1.6.4",
-      "buildReportedSeconds": 12.76,
-      "deadLinkCount": 55,
-      "affectedHistoricalFiles": [
-        "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
-        "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
-        "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md"
-      ],
-      "failureEvidence": "Actual tool result from session46233; raw full stdout/stderr not retained as files; this JSON records selected observed facts, not reconstructed raw output.",
-      "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
-      "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
-      "scope": "Static documentation check, no fixture/Go/provider/application campaign"
-    }
+    "inheritedDocsBlocker": "55_DEAD_LINKS_R078_R079"
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -885,9 +863,8 @@
     }
   },
   "currentRepair": {
-    "scope": "NO_SOURCE_REPAIR_AUTHORITY",
-    "round": 0,
-    "next": "Separate bounded source-only mount lifecycle authority; no third same-rootcause repair inferred"
+    "scope": "NO_REPAIR_AUTHORIZED",
+    "round": 0
   },
   "currentClosure": null,
   "historicalR083Continuity": {
@@ -1000,16 +977,72 @@
       "automaticRetries": 0
     }
   },
-  "preEffectApproval": {
-    "status": "GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY",
-    "actor": "Codex /root independent REVIEWER",
-    "acceptedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
-    "acceptedReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
-    "evidence": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
-    "reviewerCampaignApproval": "NOT_GRANTED_UNTIL_WORKER_SUCCESS_VERIFIED_CLEAN"
-  },
-  "reviewerCampaignApproval": {
-    "status": "NOT_GRANTED_WORKER_FAILED",
-    "used": 0
+  "preEffectApproval": "NOT_GRANTED_SOURCE_ONLY",
+  "reviewerCampaignApproval": "NOT_GRANTED_SOURCE_ONLY",
+  "historicalR085Continuity": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-085",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
+    "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+    "currentReview": {
+      "result": "CHANGES_REQUIRED",
+      "disposition": "RETURNED_RUNTIME_MOUNT_BLOCKER",
+      "freeze": "OPEN",
+      "finding": "F1_PRE_START_RESOLVED_MOUNT_VALIDATION",
+      "additionalRepositoryCheck": {
+        "actor": "Codex /root",
+        "command": "npm run docs:build",
+        "workingDirectory": "docs",
+        "invocations": 1,
+        "exitCode": 1,
+        "vitepressVersion": "1.6.4",
+        "buildReportedSeconds": 12.76,
+        "deadLinkCount": 55,
+        "affectedHistoricalFiles": [
+          "docs/reviews/R078_WORKER_STATIC_HANDOFF_2026-10-11.md",
+          "docs/reviews/R079_DURABLE_FENCE_DESIGN_WORK_ORDER_DRAFT_2026-10-11.md",
+          "docs/reviews/R079_RECOVERY_FENCE_PREREQUISITE_INTAKE_2026-10-11.md"
+        ],
+        "failureEvidence": "Actual tool result from session46233; raw full stdout/stderr not retained as files; this JSON records selected observed facts, not reconstructed raw output.",
+        "attribution": "Reported links belong to unchanged protected R078/R079 documents; no assertion that a separate baseline build ran.",
+        "disposition": "FAIL_RETAINED_NO_RETRY_NO_HISTORICAL_DOC_REPAIR_IN_R085",
+        "scope": "Static documentation check, no fixture/Go/provider/application campaign"
+      }
+    },
+    "currentRepair": {
+      "scope": "NO_SOURCE_REPAIR_AUTHORITY",
+      "round": 0,
+      "next": "Separate bounded source-only mount lifecycle authority; no third same-rootcause repair inferred"
+    },
+    "reviewEvidence": "docs/reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md",
+    "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+    "independentReviewCommit": "f0061ecfb09cf71a900d1d438163b003e59ea390",
+    "currentExecutionBudget": {
+      "workerFixtureCampaigns": 1,
+      "reviewerFixtureCampaigns": 1,
+      "aggregateFixtureCampaigns": 2,
+      "workerHarnessUnitInvocations": 0,
+      "reviewerHarnessUnitInvocations": 0,
+      "maxDirectedSameScopeSourceRepairRounds": 0,
+      "goInvocations": 0,
+      "providerInvocations": 0,
+      "automaticRetries": 0,
+      "workerFixtureCampaignsUsed": 1,
+      "reviewerFixtureCampaignsUsed": 0
+    },
+    "preEffectApproval": {
+      "status": "GRANTED_WORKER_ONE_UNCHANGED_SOURCE_CAMPAIGN_ONLY",
+      "actor": "Codex /root independent REVIEWER",
+      "acceptedSourceCommit": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+      "acceptedReviewCommit": "c399a70698734c1da0474c40c981a57dc1954003",
+      "evidence": "docs/reviews/probes/r085_fixture/intake/source_image_readiness.json",
+      "reviewerCampaignApproval": "NOT_GRANTED_UNTIL_WORKER_SUCCESS_VERIFIED_CLEAN"
+    },
+    "reviewerCampaignApproval": {
+      "status": "NOT_GRANTED_WORKER_FAILED",
+      "used": 0
+    }
   }
 }

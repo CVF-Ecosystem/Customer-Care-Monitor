@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Active R085 isolated local MySQL fixture campaigns; existing DB untouched, no app/fence claim."
+      "description": "Active R086 source-only mount lifecycle completion; R085 failed retained, no effects."
     },
     {
       "id": "r060-work-order",
@@ -7220,6 +7220,34 @@
       "path": "docs/reviews/probes/r085_fixture/root_checks/returned_review_receipt.json",
       "status": "ACTIVE",
       "description": "R085 actual bounded fixture execution/review evidence; no application or AI governance acceptance."
+    },
+    {
+      "id": "runtime086-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-086.json",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-086.json",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
+    },
+    {
+      "id": "runtime086-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_086.md",
+      "status": "ACTIVE",
+      "description": "R086 bounded source-only mount lifecycle authority/continuity; no runtime effect."
     }
   ]
 }

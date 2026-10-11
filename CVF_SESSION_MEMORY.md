@@ -9,9 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-085", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-086", "parked": true} -->
 
-## Current R085
+## Current R086
+
+CCMAI-RUNTIME-086 WORK_ORDER source-only pending-versus-started mount lifecycle completion; worker fresh ACK before committed BUILD, exact script/test/new readiness plus one harness suite. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 returned and docs55deadlinks retained, FREEZE blocked/accounts parked/fixture readiness OPEN/deployed UNKNOWN.
+
+## Historical R085 (returned, FREEZE OPEN)
 
 CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.
 

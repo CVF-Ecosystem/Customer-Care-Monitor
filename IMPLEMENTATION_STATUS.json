@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -261,31 +261,31 @@
   ],
   "updatedAt": "2026-10-12",
   "ownerRouting": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "parkedAccounts": [
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
+    "nextObjective": "CCMAI-RUNTIME-086 WORK_ORDER source-only pending-versus-started mount lifecycle completion; worker fresh ACK before committed BUILD, exact script/test/new readiness plus one harness suite. No Docker/SQL/source repair/retry/Go/provider/pull/push; R085 returned and docs55deadlinks retained, FREEZE blocked/accounts parked/fixture readiness OPEN/deployed UNKNOWN.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_086.md",
     "buildDispatched": false,
     "actualWorkerModel": {
       "model": "gpt-6-luna",
       "reasoningEffort": "max"
     },
     "currentExecutionBudget": {
-      "workerFixtureCampaigns": 1,
-      "reviewerFixtureCampaigns": 1,
-      "aggregateFixtureCampaigns": 2,
-      "workerHarnessUnitInvocations": 0,
-      "reviewerHarnessUnitInvocations": 0,
+      "workerCompletionPasses": 1,
+      "workerHarnessUnitInvocations": 1,
+      "reviewerHarnessUnitInvocations": 1,
       "maxDirectedSameScopeSourceRepairRounds": 0,
+      "workerFixtureCampaigns": 0,
+      "reviewerFixtureCampaigns": 0,
       "goInvocations": 0,
       "providerInvocations": 0,
       "automaticRetries": 0
     },
-    "publicationStatus": "R085_LOCAL_ONLY_NO_PUSH_AUTHORITY",
-    "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+    "publicationStatus": "R086_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+    "modelAssessment": null,
     "activeLocalClosureOrder": null,
     "localClosureEvidence": null,
     "sourceCheckpoint": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
@@ -1912,5 +1912,51 @@
       "scope": "Static documentation check, no fixture/Go/provider/application campaign"
     },
     "independentReviewCommit": "f0061ecfb09cf71a900d1d438163b003e59ea390"
+  },
+  "historicalR085OwnerRouting": {
+    "date": "2026-10-11",
+    "parkedAccounts": [
+      "facebook",
+      "zalo_oa"
+    ],
+    "nextObjective": "CCMAI-RUNTIME-085 REVIEW CHANGES_REQUIRED / RETURNED_RUNTIME_MOUNT_BLOCKER after one worker exit2 FAILED/MOUNT_INVALID before start/SQL; cleanup root-confirmed VERIFIED_CLEAN, existing ccma-db-1 healthy, reviewer campaign NOT_RUN/no replay. ORCHESTRATOR next bounds separate source-only pending-versus-started mount lifecycle completion with independent review before fresh fixture effects; no current source repair/Go/provider/pull/push/accounts parked/fence integration OPEN/deployed UNKNOWN.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_085.md",
+    "buildDispatched": false,
+    "actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max"
+    },
+    "currentExecutionBudget": {
+      "workerFixtureCampaigns": 1,
+      "reviewerFixtureCampaigns": 1,
+      "aggregateFixtureCampaigns": 2,
+      "workerHarnessUnitInvocations": 0,
+      "reviewerHarnessUnitInvocations": 0,
+      "maxDirectedSameScopeSourceRepairRounds": 0,
+      "goInvocations": 0,
+      "providerInvocations": 0,
+      "automaticRetries": 0
+    },
+    "publicationStatus": "R085_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+    "modelAssessment": "docs/reviews/R085_LUNA_MAX_FIXTURE_EXECUTION_ASSESSMENT_2026-10-12.md",
+    "activeLocalClosureOrder": null,
+    "localClosureEvidence": null,
+    "sourceCheckpoint": "67e76de80ffd1b091ea48b5a5bd4c1b1929fa634",
+    "publishedClosureCommit": null,
+    "localClosureCommit": null
+  },
+  "mountLifecycleCompletion": {
+    "trancheId": "CCMAI-RUNTIME-086",
+    "status": "DISPATCH_READY",
+    "sourceImplementation": "NOT_DISPATCHED",
+    "fixtureRuntime": "NOT_RUN",
+    "applicationRuntime": "NOT_RUN",
+    "deployedFacts": "UNKNOWN",
+    "fenceImplementation": "OPEN",
+    "integrationReadiness": "OPEN",
+    "worker": "Codex /root/r086_worker",
+    "reviewer": "Codex /root",
+    "preEffectApproval": "NOT_GRANTED_SOURCE_ONLY",
+    "inheritedDocsBlocker": "55_DEAD_LINKS_R078_R079"
   }
 }
