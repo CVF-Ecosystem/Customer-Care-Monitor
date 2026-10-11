@@ -9,11 +9,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-078", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-078", "parked": true} -->
 
 ## Current R078
 
-CCMAI-RUNTIME-078 DISPATCH_READY R2 startup no-rewrite hardening; Luna max rehydrates and ACKs exact2 code/test plus r078 worker probes before BUILD. Root independent review; isolated synthetic Docker only after release, current Go0/8, no provider/external network/push; accounts parked.
+CCMAI-RUNTIME-078 BUILD exact2 startup hardening and worker probes; Luna max authors static source/test/runner/plan before Go runtime release. R2 isolated synthetic validation ceiling8Go/retry0, current0; root independent review, no provider/external network/push, accounts parked.
 
 ## Historical R077
 

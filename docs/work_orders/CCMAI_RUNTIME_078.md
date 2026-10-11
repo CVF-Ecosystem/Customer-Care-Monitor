@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-078 startup no-rewrite hardening
 
-Status: DISPATCH_READY
+Status: BUILD
 
 R2. Owner next2026-10-11; seed0579a79 before base/BUILD. Inherit accepted R077 draft/independent reviewe343a0b (intended only), seven phase trace INTAKE -> DESIGN -> SPEC -> WORK_ORDER recorded. Luna max /root/r078_worker IMPLEMENTATION_WORKER/REPAIR_WORKER; root ORCHESTRATOR/WORK_ORDER_AUTHOR/independent REVIEWER/CLOSER/all COMMIT_STEWARD. No R3 effect. Worker rehydrates canonical continuity/seed/order/spec/repair learnings, declares/ACKs BEFORE edits and waits root BUILD release.
 

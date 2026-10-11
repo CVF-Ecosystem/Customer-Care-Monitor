@@ -51,8 +51,8 @@
   "ownerAuthorization": "Owner next2026-10-11 continues accepted R077 next governed move, Luna max worker/root independent reviewer. Root bounds R2 source + disposable synthetic MySQL runtime; no real credentials or external effects. Owner aware via declaration; no R3 action.",
   "fixtureAuthority": "Inspect only cached golang:1.26-alpine/mysql:8.0 and Go module cache. One disposable internal Docker network/no host ports; named ccmai-r078-* MySQL and Go containers, synthetic credentials, read-only exact source/module cache binds, disposable Go cache/database volumes. No app Compose/backend server startup; actual Scheduler.Start inside focused tests only. Cleanup/verify only owned resources; no pull/network egress. Root and worker campaigns sequential, separate raw receipts.",
   "claimScope": "Reviewed new-binary startup-recovery no JobRun rewrites on isolated synthetic DB. Not runtime CVF governance, remote topology, deployed safety, old binary parity or recovery implementation.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_078.md",
   "baseCommit": "0579a792c473e53eb11c6efa007ab9d539370dec",
   "buildCommit": null,
@@ -61,7 +61,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -70,5 +71,6 @@
     "WORK_ORDER"
   ],
   "dispatcher": "Codex /root",
-  "humanReview": "Owner next scope awareness2026-10-11; root independently reviews before scoped closure, R2 no R3 action"
+  "humanReview": "Owner next scope awareness2026-10-11; root independently reviews before scoped closure, R2 no R3 action",
+  "workerAcknowledgment": "2026-10-11 Luna max fresh canonical WORK_ORDER rehydration/CVF declaration ACK received before edits. Exact2 source/test plus worker probes accepted under immutable0579a79 before baseCommit. Root records BUILD static release; Go runtime release separately requires static fixture/runner review. Doctor25/1 and gateunits46PASS11.867s retained; root source reviewer independent."
 }
