@@ -601,7 +601,7 @@
   "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
   "modelAssessment": "docs/reviews/R083_LUNA_MAX_FIXTURE_PREREQUISITE_ASSESSMENT_2026-10-11.md",
   "closureEvidence": null,
-  "independentReviewCommit": null,
+  "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3",
   "closureStatus": "NOT_ELIGIBLE_FREEZE_OPEN",
   "closureChecks": null,
   "localClosureCommit": null,
@@ -791,7 +791,8 @@
     "reviewEvidence": "docs/reviews/R083_INDEPENDENT_FIXTURE_SAFETY_REVIEW_2026-10-11.md",
     "reviewedBuildCommit": "19f83a7c3a1a14d88cd7d87915869dcc97374d0a",
     "reviewerHarnessResult": "18PASS0.438s_EXIT0_RAW_RETAINED",
-    "fixtureCampaigns": 0
+    "fixtureCampaigns": 0,
+    "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
   },
   "historicalR081Continuity": {
     "currentMode": "REVIEW",

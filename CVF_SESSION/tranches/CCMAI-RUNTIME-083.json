@@ -99,5 +99,6 @@
     "F1_REGRESSION_CONTROL_GAPS",
     "F3_OWNERSHIP_BEFORE_READINESS_SQL"
   ],
-  "finalOriginalFindingRecheck": 1
+  "finalOriginalFindingRecheck": 1,
+  "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
 }

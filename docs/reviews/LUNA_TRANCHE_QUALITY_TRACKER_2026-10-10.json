@@ -807,7 +807,8 @@
       "modelTokenCost": null,
       "inferenceTime": null,
       "matchedComparison": false,
-      "confidence": "LOW_SINGLE_REPAIR_ASSISTED_R2_TOOLING_SAMPLE"
+      "confidence": "LOW_SINGLE_REPAIR_ASSISTED_R2_TOOLING_SAMPLE",
+      "independentReviewCommit": "1cf0e625c7eab3f928874b4a8a77d174edabd4c3"
     }
   ]
 }
