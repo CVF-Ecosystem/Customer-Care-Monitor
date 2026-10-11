@@ -807,7 +807,7 @@
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 113
+          "lastLine": 136
         }
       ]
     }
@@ -1765,9 +1765,9 @@
       "referenceIds": [
         "SPEC01"
       ],
-      "gitBlobSha1": "c3f3a1f29d57239f037c3ef65fa714f23ebeef98",
+      "gitBlobSha1": "6df4d3ac1a3386da8e33df65f6cde0b36997c6ee",
       "gitBlobStatus": "EXPECTED_FILTERED_CONTENT_BLOB_NOT_YET_STORED",
-      "physicalSha256": "5caab3619b0c63ee10293acc95341af6af832dfc846b8142ee5d129abf3a768e",
+      "physicalSha256": "64c76f8abc72ddcfdfecc7af0e159715ab4be199f61bb06f9981a82f9b958625",
       "lineCount": 136,
       "citationRanges": [
         {
@@ -2387,5 +2387,15 @@
     "reviewDisposition": "PENDING_INDEPENDENT_REVIEW",
     "runtimeEvidence": "NOT_RUN",
     "nativeProviderDatabaseNetworkCredentialTestsBuilds": "NOT_INVOKED"
+  },
+  "rootFinalMinorCorrection": {
+    "author": "Codex /root metadata documentary REPAIR_WORKER",
+    "preservedWorkerRepairPacket": "4b9628977d32cd35bd6c47e129cc641e270e005a",
+    "changes": [
+      "narrative comparison head aligns with recorded repair BUILD e554",
+      "source-factual AIUsageLog.JobID present/generation absent clarification; writer phase and logic unchanged",
+      "SPEC01 full current136line range; refreshed identities"
+    ],
+    "noSubstantiveWorkerDesignDraft": true
   }
 }

@@ -30,3 +30,7 @@ Root one consolidated initial review returns R1/R2 in R082 independent review; r
 ## Before-edit role acknowledgment
 
 Fresh REVIEW tuple386d910 rehydrated; Luna max REPAIR_WORKER accepts exact R1/R2 findings, retains root M1/M2/M3 and original failed worker check, no edits before release. Root releases the seed-authorized sole same-scope documentary repair1; objective/paths/risk/external-effect/commit-owner unchanged. One static check then handback/root independent finding recheck; no automatic retries or new research campaign.
+
+## Before-edit minor documentary role acknowledgment
+
+Fresh canonical BUILD tuple e554 release / repaired packet4b962897 rehydrated; root metadata REPAIR_WORKER records before-edit acknowledgment for source-factual presentation only: narrative comparison HEAD e554, distinguish existing AIUsageLog.JobID from absent generation, and SPEC01 full current range. Values fixed from committed source/identity, no selected control/phase/acceptance change or substantive worker design drafted. Worker fresh BUILD ACK preceded edits; first and repair static FAIL retained. Independent reviewer root resumes after these minor changes.
