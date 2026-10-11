@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-081",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-082",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-082 DISPATCH_READY R1 source-only F1..F4 intended contract resolution FR01..08; Luna max fresh WORK_ORDER ACK before committed BUILD release, exact2 worker docs/root independent review. Source/runtime/DB/provider/network/push0, R081 returned/FREEZE_OPEN, deployed UNKNOWN/fence/recovery OPEN/accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker awaiting ACK",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -33,12 +33,11 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "candidatePlanning": {
-    "id": "R081",
-    "status": "CHANGES_REQUIRED",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_081.md",
+    "id": "R082",
+    "status": "DISPATCH_READY",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_082.md",
     "sourceImplementation": "NOT_DISPATCHED",
-    "sourceOrRuntimeDispatched": false,
-    "implementationReady": false
+    "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
     "schemaVersion": "1.0",
@@ -313,7 +312,7 @@
     }
   },
   "publication": {
-    "status": "NOT_AUTHORIZED_IN_R081"
+    "status": "NOT_AUTHORIZED_IN_R082"
   },
   "historicalR070ClosureSummary": {
     "currentMode": "FREEZE",
@@ -594,14 +593,14 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
-  "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+  "reviewEvidence": null,
+  "modelAssessment": null,
   "closureEvidence": null,
-  "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
+  "independentReviewCommit": null,
   "closureStatus": null,
   "closureChecks": null,
   "localClosureCommit": null,
-  "publicationStatus": "R081_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+  "publicationStatus": "R082_LOCAL_ONLY_NO_PUSH_AUTHORITY",
   "publicationReceipt": null,
   "historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
@@ -772,19 +771,42 @@
   "historicalPublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R077"
   },
-  "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
-  "currentReview": {
-    "tranche": "CCMAI-RUNTIME-081",
-    "result": "CHANGES_REQUIRED",
-    "gateDisposition": "RETURNED_UNRESOLVED_DESIGN_BLOCKERS",
-    "freeze": "OPEN",
-    "findingGroups": [
-      "F1",
-      "F2",
-      "F3",
-      "F4"
-    ],
-    "automaticRepairCampaignAuthorized": false,
-    "publicationReceipt": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
+  "nextScopeProposal": null,
+  "currentReview": null,
+  "historicalR081Continuity": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-081",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
+    "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
+    "nextAllowedMove": "CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.",
+    "candidatePlanning": {
+      "id": "R081",
+      "status": "CHANGES_REQUIRED",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_081.md",
+      "sourceImplementation": "NOT_DISPATCHED",
+      "sourceOrRuntimeDispatched": false,
+      "implementationReady": false
+    },
+    "currentReview": {
+      "tranche": "CCMAI-RUNTIME-081",
+      "result": "CHANGES_REQUIRED",
+      "gateDisposition": "RETURNED_UNRESOLVED_DESIGN_BLOCKERS",
+      "freeze": "OPEN",
+      "findingGroups": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ],
+      "automaticRepairCampaignAuthorized": false,
+      "publicationReceipt": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json"
+    },
+    "reviewEvidence": "docs/reviews/DURABLE_JOBRUN_FENCE_DATABASE_LOCK_ORDER_REVIEW_2026-10-11.md",
+    "modelAssessment": "docs/reviews/R081_LUNA_MAX_DATABASE_INTEGRATION_ASSESSMENT_2026-10-11.md",
+    "independentReviewCommit": "fb139708af665310d6fc5f792bf7d209a480b930",
+    "publicationStatus": "R081_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+    "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
+    "returnedReviewPublicationCommit": "b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5"
   }
 }

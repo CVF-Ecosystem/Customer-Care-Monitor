@@ -2324,9 +2324,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R081 R1 documentary database lock/outcome/incarnation/cutover gate; no runtime authority."
+      "description": "Active R082 R1 fence blocker-resolution intended contract/census; no source/runtime authority."
     },
     {
       "id": "r060-work-order",
@@ -6737,6 +6737,34 @@
       "path": "docs/reviews/probes/r081_returned_gate_publication_2026-10-11.json",
       "status": "ACTIVE",
       "description": "R081 local returned-review publication identities/protections/checks; CHANGES_REQUIRED/FREEZE OPEN, no closure/runtime claim."
+    },
+    {
+      "id": "runtime082-evidence-0001",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0003",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-082.json",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
+    },
+    {
+      "id": "runtime082-evidence-0004",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_082.md",
+      "status": "ACTIVE",
+      "description": "R082 documentary authority/order/continuity or preserved returned R081 handoff; no runtime effects."
     }
   ]
 }

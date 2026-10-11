@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-082",
+  "authorityKind": "DISPATCHER_OWNED_FENCE_BLOCKER_RESOLUTION_DOCUMENTARY_CONTRACT",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root/r082_worker",
+    "repairWorker": "Codex /root/r082_worker",
+    "commitSteward": "Codex /root",
+    "reviewer": "Codex /root",
+    "closer": "Codex /root",
+    "metadataCommitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md",
+    "docs/reviews/probes/r082_fence_blocker_resolution_identity_2026-10-11.json",
+    "docs/work_orders/CCMAI_RUNTIME_082.md"
+  ],
+  "prohibitedEffects": [
+    "product_test_change",
+    "tooling_dependency_workflow_change",
+    "old_evidence_seed_tranche_edit",
+    "provider_channel_network_call",
+    "db_host_runtime_inspection",
+    "runtime_config_credential_read",
+    "core_edit",
+    "secret_commit",
+    "application_runtime_execution",
+    "push_merge_deploy",
+    "live_governance_hosted_claim",
+    "other_tranche_closure",
+    "root_worker_artifact_draft",
+    "schema_migration_or_recovery_execution",
+    "deployed_adoption_claim"
+  ],
+  "workerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "executionBudget": {
+    "workerAuthorPasses": 1,
+    "independentReviewPasses": 1,
+    "maxDirectedSameScopeDocumentRepairRounds": 1,
+    "workerStaticChecksPerPass": 1,
+    "applicationNativeInvocations": 0,
+    "automaticRetries": 0
+  },
+  "ownerAuthorization": "Owner next2026-10-11 after R081 returned-review publicationb1d7f11 authorizes separately bounded source-only contract resolution F1..F4, Luna max worker/root independent reviewer. New authority, not automatic R081 repair; R081 CHANGES_REQUIRED/FREEZE_OPEN and old artifacts immutable. Documentary R1 no source/security/schema/runtime/external effects; later implementation remains R2+ separately bounded.",
+  "claimScope": "Selected intended incarnation/restore, durable notification-attempt, complete operation lock/retirement, source census and finite future fixture/test contract. Documentary review/closure only, no deployed/DB/runtime/CVF governance proof.",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "05cef8c327c5899b38d3d4ff400d0ac27711b23a",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_082.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root"
+}

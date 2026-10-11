@@ -9,9 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-081", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md", "activeTranche": "CCMAI-RUNTIME-082", "parked": true} -->
 
-## Current R081
+## Current R082
+
+CCMAI-RUNTIME-082 DISPATCH_READY R1 source-only F1..F4 intended contract resolution FR01..08; Luna max fresh WORK_ORDER ACK before committed BUILD release, exact2 worker docs/root independent review. Source/runtime/DB/provider/network/push0, R081 returned/FREEZE_OPEN, deployed UNKNOWN/fence/recovery OPEN/accounts parked.
+
+## Historical R081 (returned, FREEZE OPEN)
 
 CCMAI-RUNTIME-081 REVIEW CHANGES_REQUIRED / RETURNED_UNRESOLVED_DESIGN_BLOCKERS after one author/review pass; FREEZE_OPEN, no automatic repair. Root next bounds new source-only F1..F4 contract-resolution order/seed before worker BUILD; code/runtime/DB/provider/network/push0, implementation/fence/recovery OPEN/deployed UNKNOWN/accounts parked.
 
