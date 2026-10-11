@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R076 source-only recovery design/spec; Luna max worker/root independent review; runtime0.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md`
+- Active R076 FROZEN local recovery design/spec; next read-only topology intake, runtime/source recovery OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -828,6 +828,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - SP01..12 intended application receipt contract, cap/privacy/persistence/earlyterminal compatibility and evidence requirements.: `docs/specs/SOURCE_PREPARATION_RECEIPT_R055_2026-10-06.md`
 - Bounded worker exact archive4Go campaign runner, internal synthetic MySQL/offline cache, semantic mutations/restoration/raw timeout capture and named cleanup; application only.: `docs/reviews/probes/r060_worker_campaign.py`
 - Immutable root-seeded R1 source-only design authority; Luna max.: `CVF_SESSION/authority/CCMAI-RUNTIME-076.json`
+- Scoped local R076 documentary FREEZE only, recovery implementation/startup hardening OPEN.: `docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md`
 - Accepted intended recovery decision after independent document repair; implementation OPEN.: `docs/decisions/DISPATCH_RECOVERY_R076_2026-10-11.md`
 - Independent documentary CHANGES_REQUIRED F1/F2/M1; no runtime/product defect reproduction.: `docs/reviews/R076_FIRST_DESIGN_INDEPENDENT_FINDINGS_2026-10-11.md`
 - Historical R075 FROZEN publication; closure remote SHA verified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md`

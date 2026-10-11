@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-076",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-076 REVIEW_PASS intended recovery DESIGN/SPEC only, implementation OPEN. Root CLOSER next assesses scoped local document FREEZE and records max quality; no app/runtime/provider/DB/network/push effects; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-076 FROZEN local recovery DESIGN/SPEC only after independent review4ec4599; implementation/startup cleanup hardening OPEN. Root next separately bounds read-only topology/owner-fence evidence intake, UNKNOWN explicit, before any R2+ source/runtime/DB scope. No app/provider/DB/network/push authority; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD; Luna max documentary worker idle",
+  "activeRole": "Codex /root CLOSER / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; Luna max documentary worker idle",
   "updatedAt": "2026-10-11",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "currentExecutionBudget": {
@@ -34,9 +34,9 @@
   },
   "candidatePlanning": {
     "id": "R076",
-    "status": "REVIEW_PASS",
+    "status": "FROZEN",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_076.md",
-    "sourceImplementation": "NOT_DISPATCHED_DESIGN_ONLY",
+    "sourceImplementation": "NOT_DISPATCHED_FROZEN_DESIGN_ONLY",
     "sourceOrRuntimeDispatched": false
   },
   "historicalR067State": {
@@ -312,10 +312,9 @@
     }
   },
   "publication": {
-    "status": "NOT_AUTHORIZED_IN_R073",
-    "priorR068Status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
-    "priorR068Receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
-    "priorR068Retried": false
+    "status": "NOT_AUTHORIZED_IN_R076",
+    "priorR075ClosureRemoteSha": "9181f3826f6a90db0042b25b9c955b253ea0828c",
+    "priorR068AttemptUnchanged": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED"
   },
   "historicalR070ClosureSummary": {
     "currentMode": "FREEZE",
@@ -598,11 +597,28 @@
   },
   "reviewEvidence": "docs/reviews/R076_INDEPENDENT_RECOVERY_DESIGN_REVIEW_2026-10-11.md",
   "modelAssessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
-  "closureEvidence": null,
-  "independentReviewCommit": null,
-  "closureStatus": "OPEN_DESIGN_ONLY",
-  "closureChecks": {},
+  "closureEvidence": "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md",
+  "independentReviewCommit": "4ec4599ece2bfd15ae6f70311d3666332ade26f1",
+  "closureStatus": "FROZEN_LOCAL_DESIGN_ONLY",
+  "closureChecks": {
+    "preflight": "PASS7/7 final closure worktree",
+    "prRange": "PASS7/7 cached origin/main..HEAD",
+    "catalogPS5": "PASS via regeneration/preflight",
+    "catalogPS7": "PASS",
+    "gateUnits": "Final46PASS30.438s; preparation46PASS33.881s retained, repository tooling tests only",
+    "markdownLinks": "7paired/5review-assessment/2closure links PASS",
+    "identityAndScope": "source13/input5/citations44/protected367/history110/immutable seed/original5implementation+R074 audit entries unchanged PASS",
+    "applicationNativeInvocations": 0,
+    "runtimeProof": "NOT_RUN",
+    "publication": "R076_LOCAL_ONLY_NOT_PUSHED"
+  },
   "localClosureCommit": null,
   "publicationStatus": "NOT_AUTHORIZED_IN_R076",
-  "publicationReceipt": null
+  "publicationReceipt": null,
+  "historicalR073PublicationProjection": {
+    "status": "NOT_AUTHORIZED_IN_R073",
+    "priorR068Status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
+    "priorR068Receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
+    "priorR068Retried": false
+  }
 }

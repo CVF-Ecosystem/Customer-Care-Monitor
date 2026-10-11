@@ -2326,7 +2326,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
       "status": "ACTIVE",
-      "description": "Active R076 source-only recovery design/spec; Luna max worker/root independent review; runtime0."
+      "description": "Active R076 FROZEN local recovery design/spec; next read-only topology intake, runtime/source recovery OPEN."
     },
     {
       "id": "r060-work-order",
@@ -5981,6 +5981,13 @@
       "path": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
       "status": "ACTIVE",
       "description": "One separate max DESIGN/SPEC sample, first CHANGES_REQUIRED, one worker repair/root minor erratum; no matched ranking."
+    },
+    {
+      "id": "runtime076-closure",
+      "family": "continuity",
+      "path": "docs/reviews/R076_SCOPED_RECOVERY_DESIGN_CLOSURE_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Scoped local R076 documentary FREEZE only, recovery implementation/startup hardening OPEN."
     }
   ]
 }

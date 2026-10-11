@@ -495,7 +495,7 @@
       "workerValidationLimitation": "Propagated supplied range without checking source end.",
       "sourceHashInputsFirstPass": "13PASS",
       "documentInputHashesFirstPass": "5PASS",
-      "finalDisposition": "REVIEW_PASS_FREEZE_OPEN_DESIGN_ONLY",
+      "finalDisposition": "FROZEN_LOCAL_DESIGN_SPEC_ONLY",
       "productOrTestRepairRounds": 0,
       "applicationNativeInvocations": 0,
       "assessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
@@ -503,7 +503,8 @@
       "modelTokenCost": null,
       "inferenceTime": null,
       "matchedComparison": false,
-      "confidence": "LOW_N1_DOCUMENTARY_MAX"
+      "confidence": "LOW_N1_DOCUMENTARY_MAX",
+      "independentReviewCommit": "4ec4599ece2bfd15ae6f70311d3666332ade26f1"
     }
   ]
 }
