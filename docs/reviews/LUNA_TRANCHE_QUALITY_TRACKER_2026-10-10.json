@@ -467,7 +467,7 @@
     "ownerInstructionDate": "2026-10-11",
     "model": "gpt-6-luna",
     "reasoningEffort": "max",
-    "assessment": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md",
+    "assessment": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
     "comparison": "NO_MATCHED_COMPARISON"
   },
   "designSpecSamples": [
@@ -505,6 +505,40 @@
       "matchedComparison": false,
       "confidence": "LOW_N1_DOCUMENTARY_MAX",
       "independentReviewCommit": "4ec4599ece2bfd15ae6f70311d3666332ade26f1"
+    }
+  ],
+  "topologyIntakeSamples": [
+    {
+      "id": "CCMAI-RUNTIME-077",
+      "workerModel": {
+        "model": "gpt-6-luna",
+        "reasoningEffort": "max"
+      },
+      "taskClass": "repository_topology_intake_and_nonbinding_work_order_draft",
+      "sampleType": "FRESH_DOCUMENTARY_NOT_IMPLEMENTATION",
+      "firstDocumentCommit": "83b3b9589c65987fc7d034ec046284e484a55a02",
+      "firstPassDisposition": "CHANGES_REQUIRED",
+      "substantiveDocumentFindings": [
+        "F1_discriminating_live_owner_fault_controls",
+        "F2_startup_attribution_and_legitimate_finalization"
+      ],
+      "mechanicalFindings": [
+        "M1_reciprocal_navigation",
+        "capture_work_order_not_immutable_seed"
+      ],
+      "workerDocumentRepairRounds": 1,
+      "workerRepairCommit": "3fe1ee82dacde5faac2387baa3418b234f722f10",
+      "rootMechanicalRepairCommit": "ab23883a44986cbd7756a0f82db3c3266cdd7d80",
+      "finalDisposition": "REVIEW_PASS_FREEZE_OPEN_DOCUMENTARY_ONLY",
+      "productOrTestRepairRounds": 0,
+      "applicationNativeInvocations": 0,
+      "assessment": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
+      "parentAssistance": "Root TI contract/source and realStart/conditional risk clues, consolidated findings/M1 fix; no worker prose draft.",
+      "rootOriginOverhead": "Nonexistent sync recovery filename lookup corrected by rg; no product effect.",
+      "modelTokenCost": null,
+      "inferenceTime": null,
+      "matchedComparison": false,
+      "confidence": "LOW_SINGLE_TOPOLOGY_DOCUMENTARY_SAMPLE"
     }
   ]
 }

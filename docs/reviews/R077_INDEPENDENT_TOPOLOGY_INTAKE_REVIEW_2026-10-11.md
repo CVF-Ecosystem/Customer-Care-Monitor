@@ -1,0 +1,18 @@
+# R077 independent topology intake review
+
+Root independent REVIEWER, 2026-10-11. REVIEW_PASS / FREEZE_OPEN for TI01..08 repository intake and nonbinding proposal only, reviewed packet `3fe1ee82dacde5faac2387baa3418b234f722f10`. First submission `83b3b95` and [CHANGES_REQUIRED findings](R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md) remain preserved; one worker documentary repair, root M1 navigation fix at `ab23883`.
+
+| Contract | Independent evaluation |
+|---|---|
+| TI01 | PASS: source-built Compose/Dockerfile/install/update and main/Start path distinguished from deployment observation. One workspace is not one process. |
+| TI02 | PASS: deployed instance count, shared DB, artifact parity, lifecycle, remote owners and fencing explicitly UNKNOWN, with sanitized later evidence classes. No host discovery executed. |
+| TI03 | PASS: unconditional running scan/PK update lacks exact conditional ownership/readback protection; process-local versus persisted admission, exact/non-owner cancellation, finalizer fallback and last-effect release preserved. Separate sync lease writes distinguished. Terminal overwrite/overlap are conditional source inferences, not reproduced incidents. |
+| TI04 | PASS: concrete minimal removal of startup sweep/helper; unresolved running rows remain admission blockers. No owner-death guess, age/local absence bypass or durable-recovery claim; old binary risk retained. |
+| TI05 | PASS after F2: candidate scheduler.go/new startup test only; startup-recovery-attributed mutation contract permits legitimate owner/cron finalization. Compatibility/non-goals, separate R2 authority and independent roles explicit. |
+| TI06 | PASS after F1: actual Start/Stop path, live coordinator A versus fresh B, stored busy/no-owner/free-job/cancel contrasts, read/admission faults and current cron-load error continuation, Channel controls, attempted-write trap, bounded cleanup and applied legacy-sweep detector with exact restoration. Proposal six focused tests/two builds aggregate; all NOT_RUN. Commands/fixture approval belong in future order. |
+| TI07 | PASS: source14/input6 hashes/blobs, 23 cited ranges, four reciprocal Markdown links and identity paths verified. Original capture retained despite mutable order Status. Historical R076 failure/repair/root erratum and broader limits preserved. |
+| TI08 | PASS: worker exact3 first/repair changes; root all metadata/commits and independent review, known M1 navigation handled directly. Separate max topology/draft sample; root assistance disclosed, no matched model ranking. |
+
+[Independent static scope receipt](probes/r077_root_scope_review_2026-10-11.json) checks protected source/test/tooling/deployment370 and historical seed/tranche112, original five implementation/one audit/one max design arrays unchanged, and root seed first/base/current blob identical at a64f6b2 before BUILD. Physical identity cannot establish a complete write history. Root independently read startup, ownership admission/cancel, finalizer, lease and relevant test contracts; no application tests executed.
+
+Repository preflight/cached PR range/catalog validate repository structure only. Preparation gate units46 PASS31.176s are inherited because scripts/tests unchanged; no duplicate campaign. Core doctor25/1 PASS WITH NOTE, public coree9ddcb matching cached origin/main; manifest pin and bootstrap/profile migration notes retained. No runtime/provider/DB/host/network/publication or CVF AI-governance proof. Accounts parked, wider roadmap/live/hosted OPEN. CLOSER may freeze only this documentary packet; startup hardening remains unimplemented and requires a separate governed tranche.

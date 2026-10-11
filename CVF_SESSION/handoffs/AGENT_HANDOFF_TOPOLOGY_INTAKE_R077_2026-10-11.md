@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max documentary REPAIR_WORKER; root independent REVIEWER reserved
-- Next allowed move: CCMAI-RUNTIME-077 BUILD same-scope documentary repair1 F1/F2 and capture wording, exact3; M1 root links preserved. Root reviews complete packet afterward; source/runtime/provider/DB/host/network/push0, accounts parked.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max documentary worker idle
+- Next allowed move: CCMAI-RUNTIME-077 REVIEW_PASS FREEZE_OPEN documentary intake/proposal only at3fe1ee8; root CLOSER separately syncs local packet freeze. Startup hardening/recovery implementation OPEN, deployed UNKNOWN, native/provider/DB/host/network/push0; accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Intake and authority ACK
@@ -34,3 +34,7 @@ Root classified M1 as known minor authorized documentary navigation repair befor
 ## Before-edit role acknowledgment
 
 2026-10-11 Luna max fresh CHANGES_REQUIRED canonical rehydration/CVF declaration REPAIR_WORKER ACK received before edits. Exact3 F1/F2 acceptance and minor capture wording repair under unchanged seeda64f6b2; preserve first83b3b95/findingsab23883/root M1. Root records BUILD repair1 release, independent review reserved; no new scope or runtime budget.
+
+## Before-edit role acknowledgment
+
+Root fresh BUILD tuple rehydrated after repair1 handback; worker changed exact3 only, repair3fe1ee8 preserved. Transition to independent REVIEWER for complete contract/scope evaluation; no source or runtime acceptance implied.

@@ -1,0 +1,32 @@
+{
+  "trancheId": "CCMAI-RUNTIME-077",
+  "reviewer": "Codex /root",
+  "firstDocumentCommit": "83b3b9589c65987fc7d034ec046284e484a55a02",
+  "workerRepairCommit": "3fe1ee82dacde5faac2387baa3418b234f722f10",
+  "rootMechanicalNavigationCommit": "ab23883a44986cbd7756a0f82db3c3266cdd7d80",
+  "sourceIdentitiesVerified": 14,
+  "documentaryInputHashesVerified": 6,
+  "explicitSourceCitationsChecked": 23,
+  "identityLineRanges": "PASS",
+  "reciprocalMarkdownLinks": 4,
+  "protectedSourceTestToolingDeploymentArtifacts": 370,
+  "protectedHistoricalAuthorityTrancheRecords": 112,
+  "seedFirstCommittedContentUnchanged": true,
+  "seedFirstCommitAndBase": "a64f6b22b815e9f535fc20b7c7394fa33ed2f9ac",
+  "seedBlob": "055ad7aa10858640c26dba9147d3bce6635be6f1",
+  "priorQualityArraysUnchanged": {
+    "tranches": 5,
+    "readonlyAuditSamples": 1,
+    "designSpecSamples": 1
+  },
+  "firstFindings": [
+    "F1",
+    "F2",
+    "M1"
+  ],
+  "workerDocumentRepairRounds": 1,
+  "applicationNativeInvocations": 0,
+  "runtimeProviderGovernanceProof": "NOT_RUN",
+  "publication": "NOT_AUTHORIZED_IN_R077",
+  "limitations": "Static repository identities and documentary acceptance only; not complete write history, runtime/deployed safety or CVF AI governance."
+}

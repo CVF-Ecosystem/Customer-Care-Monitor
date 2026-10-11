@@ -6044,6 +6044,27 @@
       "path": "docs/reviews/R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md",
       "status": "ACTIVE",
       "description": "First packet CHANGES_REQUIRED F1/F2; root M1 navigation repair, history retained."
+    },
+    {
+      "id": "runtime077-review",
+      "family": "continuity",
+      "path": "docs/reviews/R077_INDEPENDENT_TOPOLOGY_INTAKE_REVIEW_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Independent TI01..08 documentary REVIEW_PASS; source hardening not dispatched."
+    },
+    {
+      "id": "runtime077-max-assessment",
+      "family": "continuity",
+      "path": "docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md",
+      "status": "ACTIVE",
+      "description": "Separate max topology sample with first findings/one repair/root assistance, no ranking."
+    },
+    {
+      "id": "runtime077-scope-proof",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r077_root_scope_review_2026-10-11.json",
+      "status": "ACTIVE",
+      "description": "Independent static source14/input6/protected370/history112/seed identity proof, runtime0."
     }
   ]
 }

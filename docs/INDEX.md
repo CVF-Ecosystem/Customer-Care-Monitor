@@ -844,9 +844,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - First packet CHANGES_REQUIRED F1/F2; root M1 navigation repair, history retained.: `docs/reviews/R077_FIRST_INDEPENDENT_FINDINGS_2026-10-11.md`
 - Worker versioned source/input hashes and source-only limits.: `docs/reviews/probes/r077_topology_identity_2026-10-11.json`
 - Worker source-only topology facts and deployed UNKNOWN; no runtime proof.: `docs/reviews/R077_REPOSITORY_TOPOLOGY_INTAKE_2026-10-11.md`
+- Separate max topology sample with first findings/one repair/root assistance, no ranking.: `docs/reviews/R077_LUNA_MAX_TOPOLOGY_INTAKE_ASSESSMENT_2026-10-11.md`
 - TI01..08 bounded repository topology/intended hardening draft, application native0.: `docs/work_orders/CCMAI_RUNTIME_077.md`
 - Historical R076 intended recovery DESIGN/SPEC local FREEZE, implementation OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md`
 - R077 documentary phase/roles/scope record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-077.json`
+- Independent TI01..08 documentary REVIEW_PASS; source hardening not dispatched.: `docs/reviews/R077_INDEPENDENT_TOPOLOGY_INTAKE_REVIEW_2026-10-11.md`
+- Independent static source14/input6/protected370/history112/seed identity proof, runtime0.: `docs/reviews/probes/r077_root_scope_review_2026-10-11.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
