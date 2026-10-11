@@ -13,6 +13,37 @@
       "finding": "CVF_SESSION/authority/CCMAI-RUNTIME-082.json was assigned citation range 1-53, while the committed authority seed has 51 lines.",
       "correction": "Final identity cites lines 1-51.",
       "validationDisposition": "No validation PASS inferred; worker validation was not rerun. Root independent validation pending."
+    },
+    {
+      "check": "single bundled R082 repair1 worker static identity check",
+      "attempt": 1,
+      "result": "FAIL",
+      "stage": "single post-repair exact2 identity, range, and source-comparison check",
+      "checks": {
+        "release_HEAD_matches": true,
+        "exact_two_changed_paths": false,
+        "no_staged_paths": true,
+        "no_untracked_paths": true,
+        "backend_diff_empty": true,
+        "input_count_56": true,
+        "reference_definitions_60": false,
+        "reference_and_range_reciprocity": true,
+        "spec_physical_identity": true,
+        "spec_filtered_git_identity": true,
+        "spec_under_240_lines": true,
+        "work_order_HEAD_blob_identity": true,
+        "work_order_physical_identity": true,
+        "seed_range_1_51": true,
+        "future_commands_project_root": true,
+        "runtime_stays_NOT_RUN": true,
+        "review_stays_pending": true
+      },
+      "changedPaths": [
+        "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md"
+      ],
+      "backendPathsChanged": [],
+      "runtimeEvidence": "NOT_RUN",
+      "validationDisposition": "Static identity result only; independent reviewer decides R1/R2 acceptance."
     }
   ],
   "authoringStops": [
@@ -36,7 +67,8 @@
     "sourceBaseline": "62b079f91fffbf2ffcec2421876f3ea74267f912",
     "r080ComparisonHead": "efa21565f9a87aa509d7a088ff1ff2d3945baae7",
     "r081ComparisonHead": "17da38e5dc2e005bc45065a44daf887640c35649",
-    "meaning": "R080/R081 histories remain immutable; repository comparisons do not prove installed schema, deployed binaries, writer membership, restore safety, runtime behavior, or adoption."
+    "meaning": "R080/R081 histories remain immutable; repository comparisons do not prove installed schema, deployed binaries, writer membership, restore safety, runtime behavior, or adoption.",
+    "repair1BuildReleaseCommit": "e554d7552315f3dda1d12312b8f7bc367e4fc4a5"
   },
   "sourceComparisons": [
     {
@@ -58,10 +90,10 @@
     {
       "label": "R082 returned-publication to BUILD comparison",
       "base": "b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5",
-      "head": "22d2fc0d082db17f3e407b7b674144c64728c386",
-      "command": "git diff --name-only b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5..22d2fc0d082db17f3e407b7b674144c64728c386 -- backend",
-      "backendPathsChanged": null,
-      "result": "NOT_RUN_WORKER_CHECK_STOPPED; root must independently verify"
+      "head": "e554d7552315f3dda1d12312b8f7bc367e4fc4a5",
+      "command": "git diff --name-only b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5..e554d7552315f3dda1d12312b8f7bc367e4fc4a5 -- backend",
+      "backendPathsChanged": [],
+      "result": "WORKER_STATIC_CHECKED_EMPTY_BACKEND_DIFF"
     }
   ],
   "executionBoundary": {
@@ -76,8 +108,8 @@
     "credentialEnvironmentReads": 0,
     "browserInvocations": 0,
     "repositoryTestsOrGatesRunByWorker": 0,
-    "staticArtifactIdentityChecksByWorker": 1,
-    "staticArtifactIdentityCheckOutcome": "FAIL_AT_INPUT_RANGE_PREFLIGHT",
+    "staticArtifactIdentityChecksByWorker": 2,
+    "staticArtifactIdentityCheckOutcome": "INITIAL_FAIL_AT_INPUT_RANGE_PREFLIGHT; REPAIR1_SINGLE_CHECK_FAIL",
     "noGovernanceClaim": true
   },
   "referenceDefinitions": [
@@ -1733,14 +1765,14 @@
       "referenceIds": [
         "SPEC01"
       ],
-      "gitBlobSha1": "4061a7d490385eee6eda5ffccfcdfa5d3a29c40c",
+      "gitBlobSha1": "c3f3a1f29d57239f037c3ef65fa714f23ebeef98",
       "gitBlobStatus": "EXPECTED_FILTERED_CONTENT_BLOB_NOT_YET_STORED",
-      "physicalSha256": "e582367a8fd14ab729d5b221fcd2009a3a84a5bbfb9b81002c79fae19fbb4264",
-      "lineCount": 113,
+      "physicalSha256": "5caab3619b0c63ee10293acc95341af6af832dfc846b8142ee5d129abf3a768e",
+      "lineCount": 136,
       "citationRanges": [
         {
           "firstLine": 1,
-          "lastLine": 113
+          "lastLine": 136
         }
       ]
     },
@@ -2341,5 +2373,19 @@
       "spec physical/blob identity refreshed; original failed worker check preserved"
     ],
     "noSubstantiveWorkerProseDraft": true
+  },
+  "repair1Record": {
+    "authorizedReleaseCommit": "e554d7552315f3dda1d12312b8f7bc367e4fc4a5",
+    "scope": [
+      "docs/specs/DURABLE_JOBRUN_FENCE_BLOCKER_RESOLUTION_SPEC_2026-10-11.md",
+      "docs/reviews/probes/r082_fence_blocker_resolution_identity_2026-10-11.json"
+    ],
+    "reviewFindingsAddressed": [
+      "R1 destructive/file-intent closure",
+      "R2 writer phases/predicates, sealed tails, retirement"
+    ],
+    "reviewDisposition": "PENDING_INDEPENDENT_REVIEW",
+    "runtimeEvidence": "NOT_RUN",
+    "nativeProviderDatabaseNetworkCredentialTestsBuilds": "NOT_INVOKED"
   }
 }
