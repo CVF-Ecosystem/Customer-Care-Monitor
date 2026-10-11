@@ -19,6 +19,17 @@
   "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max worker idle",
   "updatedAt": "2026-10-12",
   "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "ownerRoadmapDiscipline": {
+    "date": "2026-10-12",
+    "source": "Explicit owner instruction to record roadmap correction in handoff/memory and apply without reminders",
+    "responsibleRole": "ORCHESTRATOR",
+    "mandatoryRead": "CVF_SESSION_MEMORY.md#standing-owner-directive-roadmap-discipline-2026-10-12",
+    "triggers": ["resume", "next-scope selection", "failure or follow-on repair", "handback"],
+    "requiredBeforeDispatch": ["roadmap stage", "verifiable product outcome", "acceptance gap", "necessary prerequisites", "finite budget", "stop condition"],
+    "sameScopeRepairs": "Continue within existing authority; successors require a real boundary or exhausted explicit authority, with reason recorded. Historical seeds and budgets unchanged.",
+    "progressReporting": "Product outcome and remaining acceptance, prerequisite cost and next route; source/unit distinct from native/live/deployed proof. Luna assessment supports delivery; root orchestration/reviewer faults separately attributed.",
+    "executionAuthorityExpanded": false
+  },
   "currentExecutionBudget": {
     "workerCompletionPasses": 1,
     "workerHarnessUnitInvocations": 1,

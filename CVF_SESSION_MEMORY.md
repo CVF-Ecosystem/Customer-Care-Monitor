@@ -11,6 +11,16 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 <!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-086", "parked": true} -->
 
+## Standing owner directive: roadmap discipline (2026-10-12)
+
+Owner explicitly requires: "Ghi rõ yêu cầu vào handoff/memory, không phải chờ tôi nhắc" after questioning the repeated repair tranches and roadmap drift. ORCHESTRATOR owns proactive application at every resume, next-scope selection and handback; do not wait for another owner reminder.
+
+- Before dispatch, name the roadmap stage, one verifiable product outcome, its acceptance gap, and why each prerequisite blocks that outcome. Tranche/commit/test counts are supporting evidence, not product progress.
+- Bound prerequisites and repairs with a finite scope, execution budget and stop condition. Reassess the critical path when a prerequisite fails or another repair is proposed; do not automatically create another repair tranche. At repair round three without an independent new root cause, record REVIEW_COST_ESCALATION_REQUIRED and stop as required by AGENTS.md.
+- Continue authorized same-scope repairs under existing authority when objective, allowed paths, risk, effects and commit ownership remain unchanged. Open a successor only for an actual boundary or exhausted explicit authority; record the reason. Do not default future work orders to zero repair merely to fragment work. Historical immutable seeds and exhausted budgets are not retrospectively expanded.
+- Report the product capability advanced, remaining acceptance gap, prerequisite cost and next route. Explicitly separate source/unit acceptance from native integration, live governance and deployment proof. Monitoring Luna quality supports delivery; it must not become a separate roadmap objective. Root owns scope/priority and reviewer misses; attribute worker defects separately.
+- Current supporting task: bound the known 55 documentary deadlinks as a finite closure prerequisite, then reassess the shortest evidenced route to the product outcome. R086 remains source-only REVIEW_PASS/FREEZE OPEN; fixture native readiness and durable fence/recovery integration remain OPEN. This directive grants no source/runtime/provider/deployment/push authority and does not bypass failed checks or parked accounts.
+
 ## Current R086
 
 CCMAI-RUNTIME-086 REVIEW_PASS_SOURCE_ONLY at511f8b4/worker-root27PASS, pending-started mount contract and sanitized observations accepted; FREEZE OPEN due inherited docs55deadlinks. ORCHESTRATOR next bounds separate documentary deadlink repair/validation before closure and fresh fixture authority; no current source repair/Docker/SQL/Go/provider/pull/push/accounts parked/native readiness OPEN/deployed UNKNOWN.
