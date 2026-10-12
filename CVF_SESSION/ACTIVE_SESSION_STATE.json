@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-090",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-090 WORK_ORDER/DISPATCH_READY: Luna max /root/auth_intake implements SPEC A01-A04 F01/F02/F03 after BUILD acknowledgment and actual active-packet admission; Local independent review and commit owner. R088 F06 accepted/published at materiala8865d1 / continuity14bbf1d. C read-only intake complete, no second BUILD active. Fresh synthetic MySQL/Go setup admitted, customer/provider/accounts/deploy remain excluded; shared product/native/docs/dependency/global-channel debts open or parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-090 REVIEW/CHANGES_REQUIRED: retain independently reviewed A candidate, commit its source/evidence under Root ownership, then activate already-planned R091 C for outbound truth/deadline/backoff plus exact notification-route, legacy UI fixture and per-case backend evidence dependencies. No A successor or Claude return; no real provider/customer/accounts/deploy effects.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root INTERNAL_AGENT ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/auth_intake Luna max IMPLEMENTATION_WORKER assigned, not started",
+  "activeRole": "Codex /root Local INTERNAL_AGENT independent reviewer, orchestrator, session-sync and commit owner; returned worker /root/auth_intake gpt-6-luna effort max.",
   "updatedAt": "2026-10-13",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {
@@ -56,30 +56,27 @@
     "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
   },
   "x-currentExecutionBudget": {
-    "documentaryPasses": 1,
-    "sameScopeDocumentaryRepairs": "Within unchanged authority; third-round rule applies",
-    "applicationRuntime": 0,
+    "scope": "R090 synthetic handler/router MySQL and mounted UI",
     "provider": 0,
-    "push": 0
+    "realOutbound": 0,
+    "customerData": 0,
+    "fixture": "CLEANED_OWNED_RESOURCES",
+    "rootPublication": "Existing reviewed project branch only, no main/merge/deploy"
   },
   "x-actualWorkerModel": {
-    "model": "claude-sonnet-5-5",
-    "source": "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md",
-    "verification": "WORKER_REPORTED_SESSION_IDENTITY_NOT_INDEPENDENT_PROVIDER_VERIFICATION",
-    "reasoningEffort": {
-      "sessionParameter": 10,
-      "scale": null,
-      "reason": "Scale not documented to worker"
-    },
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max",
+    "source": "docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md",
+    "verification": "SESSION_REPORTED_NOT_PROVIDER_VERIFIED",
     "tokens": null,
     "bill": null,
-    "usageReason": "Not exposed to worker"
+    "usageReason": "Numeric usage/billing not exposed to worker"
   },
   "x-ownerSubagentPreference": {
-    "model": "Sonnet",
-    "workflow": "Manual worker dispatched by operator; Local independent review",
-    "source": "Owner explicitly retains Sonnet worker / Local review",
-    "reasoningEffort": null
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max",
+    "workflow": "Authorized internal worker; Root independent reviewer",
+    "source": "2026-10-13 current operator instruction"
   },
   "x-candidatePlanning": {
     "id": "R087",
@@ -316,7 +313,7 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "MANUAL_WORKER_LOCAL_INDEPENDENT_REVIEW",
+  "roleRoute": "INTERNAL_LUNA_WORKER_LOCAL_INDEPENDENT_REVIEW",
   "x-pendingValidationProposal": {
     "status": "NO_APPLICATION_NATIVE_AUTHORITY",
     "workerPermittedNative": 0,
@@ -642,7 +639,7 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "x-reviewEvidence": "docs/reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+  "x-reviewEvidence": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
   "x-modelAssessment": "WORKER_REPORTED_IDENTITY_NO_MATCHED_MODEL_EFFICIENCY_COMPARISON",
   "x-closureEvidence": null,
   "x-independentReviewCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
@@ -822,9 +819,14 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "REVIEW_PASS_SOURCE_ONLY",
+    "result": "CHANGES_REQUIRED_C_DEPENDENCIES",
+    "evidence": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
     "freeze": "OPEN",
-    "inheritedDocsBlocker": "55_DEAD_LINKS_R078_R079_NOT_RERUN"
+    "dependencies": [
+      "notification route metadata",
+      "legacy UI fixture setup",
+      "backend per-case/SKIP receipts"
+    ]
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -905,7 +907,7 @@
     }
   },
   "x-currentRepair": {
-    "scope": "NO_REPAIR_AUTHORIZED",
+    "scope": "EXISTING_PLANNED_C_BOUNDARY_NOT_A_SUCCESSOR",
     "round": 0
   },
   "x-currentClosure": null,
@@ -1282,5 +1284,25 @@
     "reasoningEffort": "max",
     "role": "Internal worker/Local independent review",
     "scope": "Seven-finding inheritance roadmap; A then C; account/live/deploy checkpoints retained"
-  }
+  },
+  "x-historicalR088WorkerModel": {
+    "model": "claude-sonnet-5-5",
+    "source": "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md",
+    "verification": "WORKER_REPORTED_SESSION_IDENTITY_NOT_INDEPENDENT_PROVIDER_VERIFICATION",
+    "reasoningEffort": {
+      "sessionParameter": 10,
+      "scale": null,
+      "reason": "Scale not documented to worker"
+    },
+    "tokens": null,
+    "bill": null,
+    "usageReason": "Not exposed to worker"
+  },
+  "x-historicalManualOwnerPreference": {
+    "model": "Sonnet",
+    "workflow": "Manual worker dispatched by operator; Local independent review",
+    "source": "Owner explicitly retains Sonnet worker / Local review",
+    "reasoningEffort": null
+  },
+  "x-r090CandidateMaterialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02"
 }

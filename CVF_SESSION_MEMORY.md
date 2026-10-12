@@ -9,20 +9,20 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-090", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-090", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md
 
-## Current package A dispatch
+## Current package A review
 
-CCMAI-RUNTIME-090 WORK_ORDER/DISPATCH_READY: Luna max /root/auth_intake implements SPEC A01-A04 F01/F02/F03 after BUILD acknowledgment and actual active-packet admission; Local independent review and commit owner. R088 F06 accepted/published at materiala8865d1 / continuity14bbf1d. C read-only intake complete, no second BUILD active. Fresh synthetic MySQL/Go setup admitted, customer/provider/accounts/deploy remain excluded; shared product/native/docs/dependency/global-channel debts open or parked.
+R090 REVIEW/CHANGES_REQUIRED: retain independently reviewed A candidate, commit its source/evidence under Root ownership, then activate already-planned R091 C for outbound truth/deadline/backoff plus exact notification-route, legacy UI fixture and per-case backend evidence dependencies. No A successor or Claude return; no real provider/customer/accounts/deploy effects.
 
-Canonical order docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md; SPEC docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md; seedfac8932ebd7dcecd2ad38dd23e192619cdccd6fd. Worker BUILD acknowledgment still required; readonly intake is not implementation. Current role route supersedes manual-only historical wording. Read both shared learning owners before work.
+Review docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md; returned Luna max source candidate retained. UI8PASS/type/build PASS; package-level backend PASS, per-case/SKIP receipt unestablished. Root lifecycle/commit ownership, C design accepted but no BUILD before seed/order. Accounts parked. Read existing shared learning owners before continuation.
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 

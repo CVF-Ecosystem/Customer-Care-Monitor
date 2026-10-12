@@ -70,3 +70,7 @@ DEFERRED_PRIVATE_ONLY. Actual A material commit and final C-dependent acceptance
 ## Root evidence-determined metadata correction
 
 Initial gates rejected missing true role/risk declarations in returned notes and two Root-owned specs, abbreviated active-tranche next move and PowerShell5-versus7 generated index drift. Root preserved original return/notes as mapped .txt bytes, added true R2 independent role declarations, fixed full tranche literal, and regenerated index with the same pwsh engine the installed catalog checker uses. Facts/tests/source/gates unchanged; proof local_role_metadata_correction.json and local_gate_metadata_failure.json retain exact first failures. Earlier25 worker bindings matched at intake; three note current-byte changes are explicitly mapped to originals, not hidden as unchanged hashes.
+
+## Actual candidate material
+
+Reviewed A candidate source/evidence committed at 44bb345d0d0efb5e6a01b2f23e975e17a65f5d02 (56exactpaths, Rootproductionedits0). It remains CHANGES_REQUIRED for three C dependencies. One continuity commit records current facts; no A publication/acceptance claim yet.

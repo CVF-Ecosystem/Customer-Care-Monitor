@@ -34,7 +34,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -330,19 +330,20 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-090 WORK_ORDER/DISPATCH_READY: Luna max /root/auth_intake implements SPEC A01-A04 F01/F02/F03 after BUILD acknowledgment and actual active-packet admission; Local independent review and commit owner. R088 F06 accepted/published at materiala8865d1 / continuity14bbf1d. C read-only intake complete, no second BUILD active. Fresh synthetic MySQL/Go setup admitted, customer/provider/accounts/deploy remain excluded; shared product/native/docs/dependency/global-channel debts open or parked.",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
+    "nextObjective": "R090 REVIEW/CHANGES_REQUIRED: retain independently reviewed A candidate, commit its source/evidence under Root ownership, then activate already-planned R091 C for outbound truth/deadline/backoff plus exact notification-route, legacy UI fixture and per-case backend evidence dependencies. No A successor or Claude return; no real provider/customer/accounts/deploy effects.",
+    "activeWorkOrder": null,
     "buildDispatched": false,
     "currentExecutionBudget": {
-      "documentaryPasses": 1,
-      "sameScopeDocumentaryRepairs": "Within unchanged authority; third-round rule applies",
-      "applicationRuntime": 0,
+      "scope": "R090 synthetic handler/router MySQL and mounted UI",
       "provider": 0,
-      "push": 0
+      "realOutbound": 0,
+      "customerData": 0,
+      "fixture": "CLEANED_OWNED_RESOURCES",
+      "rootPublication": "Existing reviewed project branch only, no main/merge/deploy"
     },
-    "publicationStatus": "R088_UNACCEPTED_UNCOMMITTED_NO_PUSH",
+    "publicationStatus": "R088_MATERIAL_EXPORTED_VERIFIED_14BBF1D",
     "sourceCheckpoint": "9dbf26fa88cc8995978961d98e6ffb9e3ba4da27",
-    "modelAssessment": "NOT_APPLICABLE_ROOT_R1_DOCUMENTARY_WORK_NO_LUNA_CAMPAIGN",
+    "modelAssessment": "R0908_UI_PASS_TYPE_BUILD_PASS_BACKEND_PACKAGE_SUMMARY_ONLY",
     "activeLocalClosureOrder": null,
     "localClosureEvidence": null
   },
@@ -2036,9 +2037,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2084,7 +2083,7 @@
     "materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0"
   },
   "x-r090AuthPermissions": {
-    "status": "DISPATCH_READY",
+    "status": "CHANGES_REQUIRED_C_DEPENDENCIES",
     "findings": [
       "F01",
       "F02",
@@ -2094,7 +2093,12 @@
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
     "worker": "/root/auth_intake",
     "reviewer": "Codex /root",
-    "sourceAcceptance": false
+    "sourceAcceptance": false,
+    "buildHead": "0813ec79bcc6687f13b72260094d2b669af697e4",
+    "workerAcknowledgment": "RECORDED_BEFORE_SOURCE_EDIT; PREFLIGHT_PASS_7_OF_7; TRUSTED_PREDISPATCH_APPL_CHECKED",
+    "sourceCandidateReviewed": true,
+    "review": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "buildCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02"
   },
   "x-r089InvalidPreparation": {
     "status": "PARKED_INVALID_SEED",
