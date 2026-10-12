@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "ccmai.r088.dispatchSourceAudit@1",
+  "actor": "Codex /root ORCHESTRATOR/SPEC_AUTHOR",
+  "sourceHead": "db4eb5cf20de43320ac435e7ec4d9389cb41f303",
+  "recordedAtUtc": "2026-10-12T13:22:07+00:00",
+  "sourceReadScope": "Named decision-relevant functions and template/consumer edges, not complete source/corpus scan",
+  "sources": {
+    "frontend/src/views/Messages.vue": {
+      "lfNormalizedSha256": "3f8ad239d8b5e6a24ef063dfee528887162ce6b5450ed23c33fc6141eb3480ea",
+      "lines": 1209
+    },
+    "frontend/src/stores/conversations.ts": {
+      "lfNormalizedSha256": "71160acfe8b90df1aea0695cd58c7a0d78769963c496a2a8cbca6e16490ecf21",
+      "lines": 45
+    },
+    "frontend/src/__tests__/messages-screen.spec.ts": {
+      "lfNormalizedSha256": "236de4524d62e5f062af01bcf8a10ad5f35bb42b3938e2b4fe48747f943b8e64",
+      "lines": 232
+    },
+    "frontend/src/__tests__/messages-business-day.spec.ts": {
+      "lfNormalizedSha256": "ae2f207138d4f029b564ef8311865b59077da7138aab3281241c4a0927063cf8",
+      "lines": 117
+    },
+    "frontend/package.json": {
+      "lfNormalizedSha256": "e5cec0dc55ecfd1855d17e109b738351ee638897bb7080e47a4b9dfd9e073894",
+      "lines": 37
+    },
+    "frontend/package-lock.json": {
+      "lfNormalizedSha256": "97729b7331a38c99dd21450c0c85ce498875dc28e5b872200f3edf23bdd4a16d",
+      "lines": 3814
+    },
+    "frontend/vite.config.ts": {
+      "lfNormalizedSha256": "a0e691a009f312a526b3927d41ca02c5becb459e461a5f2c5ea77d490cd9c4be",
+      "lines": 33
+    }
+  },
+  "finding": "F06 selected conversation changes immediately, store messages/currentConversation and component evaluation/errors/finally write without request generation/lifetime fences",
+  "prerequisites": {
+    "node": "v22.17.0",
+    "npm": "10.9.2",
+    "frontendDependencies": "NOT_INSTALLED",
+    "doctor": "PASS27/27",
+    "corePublicPin": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "npmResolvedHosts": [
+      "registry.npmjs.org"
+    ]
+  },
+  "priorGovernanceMaterial": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+  "priorGovernanceContinuity": "db4eb5cf20de43320ac435e7ec4d9389cb41f303",
+  "sourceMutationCount": 0,
+  "testsRun": 0,
+  "providerCalls": 0,
+  "route": "One UI package, then reassess A/C prerequisites; do not create an automatic helper-tranche chain"
+}

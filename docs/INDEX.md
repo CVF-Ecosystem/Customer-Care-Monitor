@@ -696,6 +696,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R075 bounded ordinary publication record/order; R074 historical FROZEN preserved.: `docs/work_orders/CCMAI_RUNTIME_075.md`
 - Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim.: `docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json`
 - R075 independent source publication review; receipt follow-up conditional, no live or Actions claim.: `docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md`
+- Bounded source hashes, read scope and Node/npm dependency prerequisites; zero source mutations/tests/provider calls.: `docs/reviews/probes/r088_dispatch_source_audit_2026-10-12.json`
+- New dispatcher-owned UI F06 seed, not activated before first commit; bounded synthetic UI only.: `CVF_SESSION/authority/CCMAI-RUNTIME-088.json`
+- F06 UI tenant/selection/request lifetime contract; package B selected before fixture-dependent A/C, no implementation yet.: `docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

@@ -7815,6 +7815,27 @@
       "path": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
       "status": "ACTIVE",
       "description": "Actual reviewed material project-branch push with independent remote SHA and exact-range gates; no hosted/native/live/deploy claim."
+    },
+    {
+      "id": "r088-messages-lifetime-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-088.json",
+      "status": "ACTIVE",
+      "description": "New dispatcher-owned UI F06 seed, not activated before first commit; bounded synthetic UI only."
+    },
+    {
+      "id": "r088-messages-lifetime-spec",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "F06 UI tenant/selection/request lifetime contract; package B selected before fixture-dependent A/C, no implementation yet."
+    },
+    {
+      "id": "r088-dispatch-source-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_dispatch_source_audit_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Bounded source hashes, read scope and Node/npm dependency prerequisites; zero source mutations/tests/provider calls."
     }
   ]
 }
