@@ -5,11 +5,18 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "gov002-c1-portable-inheritance-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-GOV-002-C1.json",
+      "status": "ACTIVE",
+      "description": "R2 public profile adoption scope amendment after predispatch legacy-status contradiction: additive fail-closed compatibility, independent worker/reviewer, portable continuation."
+    },
+    {
       "id": "gov002-portable-inheritance-authority",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-GOV-002.json",
       "status": "ACTIVE",
-      "description": "Immutable R2 owner-authorized public profile adoption and portable project continuation; distinct worker/reviewer, bounded handoff-status migration, no runtime effects."
+      "description": "Unactivated first adoption seed; no BUILD occurred. Source audit required additive status compatibility, so successor CCMAI-GOV-002-C1 governs the initial worker packet; original seed immutable."
     },
     {
       "id": "learning-orchestrator-roadmap-control",
