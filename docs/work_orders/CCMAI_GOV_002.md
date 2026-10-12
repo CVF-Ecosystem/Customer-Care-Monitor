@@ -2,7 +2,7 @@
 
 Memory class: FULL_RECORD
 docType: work_order
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Owner: Local orchestrator / independent reviewer
 Risk: R2
 providerExecutionAuthority: FORBIDDEN
@@ -192,3 +192,7 @@ Local independent review: `docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_
 - R1-F4: Acknowledge repair BUILD before changes; preserve initial missed acknowledgment, correct actual execution identity/HEAD/time/unavailable telemetry, opt in on current tranche and return synchronized REVIEW_PENDING/COMPLETE_PENDING_REVIEW with closeability and candidate manifest. Do not backdate or erase original receipts.
 
 Local owns current session/catalog correction, not source/test repair. On return provide a new round1 receipt and update canonical worker return while preserving original snapshots. Same-scope repairs remain under C1; third-round stop rule unchanged. Fresh-clone source test may use a local candidate snapshot commit in a disposable repo, never a commit in this worktree. Actual worker model is recorded honestly; do not re-label Gemini evidence as Sonnet.
+
+## Local Independent Acceptance (terminal packet disposition)
+
+Accepted bounded in docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md; actual material d0ebc890d043b5f94b647c1b228e8f1660f83292 published to the authorized project branch, evidence docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Earlier repair admission and convergence fields describe the completed round1 dispatch and do not grant another execution. No redispatch or active implementation order. Product FREEZE, native/fence/live/accounts/deployment gaps unchanged; next runtime work requires its own SPEC/work order/seed.

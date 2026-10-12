@@ -81,8 +81,14 @@ Commit counts above are at review disposition before publication. Final actual S
 
 ## Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY. At review disposition the accepted package is local and the remote branch only contains prior dispatch preparation. This permits the already authorized ordinary project-branch publication after commit gates, but is not an EXPORTED claim. Private CVF parent remains unexported. Publication receipt must carry actual remote/commit/artifact evidence after delivery.
+EXPORTED. Project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git, branch codex/cvf-portable-inheritance, material commit d0ebc890d043b5f94b647c1b228e8f1660f83292, artifact docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md. Actual push and independent remote-SHA match: docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Private CVF Core remains unexported; no main, merge or deployment. This dedicated continuity update follows the exported material.
 
 ## Pre-Material Verification
 
 Independent doctor PASS27/27. Local trusted-Core reviewer-fast PASS7 controls (APPL explicitly N/A for waiting-review state). Legacy preflight PASS7/7, both catalog shell views match and git diff --check passes. An initial Local nextAllowedMove abbreviation failed the exact active-tranche-name check; corrected on all continuity surfaces, no worker defect and no check bypass. Source/test/worker-return/proof/seed hashes unchanged since intake; Local metadata changes are listed separately. No active git hook is installed.
+
+## Committed Material Verification And Final Route
+
+The exact ca1c3aa..d0ebc890d043b5f94b647c1b228e8f1660f83292 range passed all seven profile controls (APPL explicitly N/A in waiting-review state) with workflow-derived profile/runner/bundle pins, plus legacy preflight7/7. Actual materialCommitCount=1; the following single continuity commit binds REVIEW_PASS/buildCommit/export. Source/test/return/proof unchanged. No new worker repair; DRAFT runtime roadmap awaits separate SPEC/work order.
+
+Local continuity check initially used a descriptive tranche disposition rather than the required exact REVIEW_PASS token; corrected to the canonical enum, scope remains in review/receipt/state. This is a Local metadata-format correction, not a worker repair. Published evidence LF hashes are in the receipt to distinguish Git line-ending normalization from original receiving raw hashes.

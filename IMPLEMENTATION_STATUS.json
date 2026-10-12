@@ -2022,7 +2022,7 @@
   },
   "activeTranche": "CCMAI-GOV-002-C1",
   "x-portableCvfAdoption": {
-    "status": "REVIEWER_ACCEPTED_BOUNDED_STATIC_PACKAGE_PENDING_COMMIT",
+    "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
     "worker": "ccmai-gov002-worker",
     "reviewer": "Codex /root",
@@ -2031,7 +2031,10 @@
     "review": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
     "repairRound": 1,
     "workerEvidence": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
-    "publication": "PENDING"
+    "publication": "MATERIAL_EXPORTED",
+    "buildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+    "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
+    "freeze": "OPEN"
   },
   "activeWorkOrders": []
 }

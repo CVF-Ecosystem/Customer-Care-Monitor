@@ -6,7 +6,7 @@ Status: DRAFT
 Risk: R1
 Author: Codex /root
 Date: 2026-10-12
-Execution disposition: HOLD_GOV002_INDEPENDENT_REVIEW
+Execution disposition: HOLD_SEPARATE_RUNTIME_SPEC_AND_WORK_ORDER
 
 ## Mục tiêu và authority
 
@@ -18,9 +18,9 @@ Nguồn chương trình: [điểm kiểm S0–S7 và P0–P4](../../roadmaps/AI_
 
 ## Current disposition và điều kiện chuyển bước
 
-Tại lúc soạn, bootstrap/memory/handoff cùng ghi REVIEW, tranche CCMAI-GOV-002-C1; Claude đã trả round1 COMPLETE_PENDING_REVIEW trong file. Local chưa chấp nhận return. Việc file return xuất hiện không tự mở quyền runtime. Doctor nhận bàn giao PASS27/27, chỉ là kiểm tra workspace.
+GOV002-C1 đã được Local chấp nhận ở phạm vi static portable package, material d0ebc890d043b5f94b647c1b228e8f1660f83292 đã được xuất bản trên nhánh project. Trạng thái REVIEW / REVIEW_PASS, FREEZE sản phẩm OPEN. Roadmap này vẫn DRAFT, chưa có work order runtime; bước tiếp theo là SPEC/work order riêng. Doctor PASS27/27 chỉ chứng minh workspace.
 
-1. Local hoàn tất independent review GOV002 theo evidence đã trả; sửa cùng scope nếu cần, không tái tạo implementation hoặc chạy lại toàn campaign mặc định.
+1. DONE: Local đã hoàn tất independent review GOV002 từ evidence đã trả, giữ nguyên implementation/proof của worker và sửa metadata có căn cứ. Không tái tạo implementation hoặc chạy lại toàn campaign mặc định.
 2. Chỉ khi disposition GOV002 được giải quyết và có baseline candidate được xác định rõ mới lựa chọn package runtime đầu tiên. Publication GOV002 thuộc authority sẵn có và Local; roadmap này không thay publication contract.
 3. Local chuẩn bị SPEC/work order và immutable seed đúng phạm vi trước runtime BUILD; xác nhận fixture và effect budget trước bất kỳ DB/native/provider effect. Không dispatch chỉ dựa vào roadmap DRAFT này.
 
@@ -82,4 +82,8 @@ Local đọc legacy gate ALWAYS_ALLOWED và active-seed path/effect checks; prof
 
 ## Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY. Roadmap chưa commit/push; chuẩn bị public-safe trong project, không chứa private Core code/evidence hoặc secrets. Publication sau review thực hiện theo scope/remote/commit thực tế; không claim EXPORTED ở lượt lập kế hoạch.
+EXPORTED. Project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git; branch codex/cvf-portable-inheritance; actual material d0ebc890d043b5f94b647c1b228e8f1660f83292; artifact docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md. Receipt ../probes/gov002_reviewed_publication_2026-10-12.json. Public-safe planning only; no private Core source/evidence export, runtime dispatch or product-completion claim.
+
+## GOV002 prerequisite disposition
+
+Local independently accepted GOV002-C1 bounded static portable material d0ebc890d043b5f94b647c1b228e8f1660f83292; project branch publication verified in ../probes/gov002_reviewed_publication_2026-10-12.json. The original prerequisite HOLD is satisfied. This roadmap remains DRAFT: no executable order or runtime effect, seven findings unchanged, next step is a separate SPEC/work order/seed before manual worker dispatch.

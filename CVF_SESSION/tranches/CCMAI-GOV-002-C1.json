@@ -97,22 +97,24 @@
     "projectBranchPublication": "Commit steward may publish bounded preparation and reviewed delivery to codex/cvf-portable-inheritance on the already verified project origin. No main push, merge, force push or deployment."
   },
   "claimScope": "Portable static repository checks and agent continuation only; installed, invoked, hermetic and hosted evidence are separate. Old product and docs55 blockers remain OPEN.",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d",
   "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
-  "buildCommit": null,
+  "buildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
   "reviewEvidence": [
-    "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md"
+    "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
+    "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json"
   ],
-  "disposition": "ROUND1_RETURNED_PENDING_INDEPENDENT_REVIEW",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -122,6 +124,6 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "receiptProcessing": "Local records receipt and review now; initial worker BUILD transition/acknowledgment was not recorded, no backdated BUILD history manufactured; round1 repair BUILD acknowledged by ccmai-gov002-worker at 2026-10-12T19:16:07+07:00 on HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c; round1 repair returned by ccmai-gov002-worker at 2026-10-12T19:34:22+07:00 on HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c; no commit, no push"
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "receiptProcessing": "Local records receipt and review now; initial worker BUILD transition/acknowledgment was not recorded, no backdated BUILD history manufactured; round1 repair BUILD acknowledged by ccmai-gov002-worker at 2026-10-12T19:16:07+07:00 on HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c; round1 repair returned by ccmai-gov002-worker at 2026-10-12T19:34:22+07:00 on HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c; no commit, no push; Local independent round1 review accepted; material d0ebc890d043b5f94b647c1b228e8f1660f83292 published with verified remote SHA; product/native/live/FREEZE gaps preserved"
 }

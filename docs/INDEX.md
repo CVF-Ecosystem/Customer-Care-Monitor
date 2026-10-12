@@ -9,11 +9,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
-- Owner-requested DRAFT/HOLD roadmap for seven runtime findings and CVF pattern inheritance; three proposed packages, awaits GOV002 independent review and separate source authority.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
+- DRAFT roadmap for seven runtime findings / three proposed packages; GOV002 accepted, separate SPEC/work order required before execution.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active GOV002-C1 static portable package independently accepted; Local commit/publication pending, existing product blockers retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md`
+- Active scoped GOV002 REVIEW_PASS, reviewed material published; runtime roadmap awaits separate SPEC/work order, product gaps retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -211,8 +211,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Unactivated first adoption seed; no BUILD occurred. Source audit required additive status compatibility, so successor CCMAI-GOV-002-C1 governs the initial worker packet; original seed immutable.: `CVF_SESSION/authority/CCMAI-GOV-002.json`
 - Source-audited public-source adoption choice, legacy grammar conflict and finite portable outcome; no installed/hosted/runtime claim.: `docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md`
 - Same-authority R2 consolidated repair round1 for strict status parsing, candidate-bound clone/range proof, portable guide and truthful return; worker must not commit.: `docs/work_orders/CCMAI_GOV_002.md`
+- Actual reviewed material project-branch push with independent remote SHA and exact-range gates; no hosted/native/live/deploy claim.: `docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json`
 - Independent intake binding of 108 file hashes and seven stages; worker artifacts preserved, zero application/provider campaign.: `docs/reviews/probes/gov002_round1_local_review_2026-10-12.json`
-- Independent round1 acceptance of bounded static portable package; metadata attribution corrected; runtime/native/product/hosted claims excluded.: `docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md`
+- Independent round1 bounded static acceptance and actual material publication; original proof retained, product/live gaps open.: `docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md`
 - GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/check_gate_to_role_closeability.py`
 - GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_applicability.py`
 - GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_common.py`

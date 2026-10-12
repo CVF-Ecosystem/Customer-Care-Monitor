@@ -2382,7 +2382,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Active GOV002-C1 static portable package independently accepted; Local commit/publication pending, existing product blockers retained."
+      "description": "Active scoped GOV002 REVIEW_PASS, reviewed material published; runtime roadmap awaits separate SPEC/work order, product gaps retained."
     },
     {
       "id": "r060-work-order",
@@ -7716,7 +7716,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Owner-requested DRAFT/HOLD roadmap for seven runtime findings and CVF pattern inheritance; three proposed packages, awaits GOV002 independent review and separate source authority."
+      "description": "DRAFT roadmap for seven runtime findings / three proposed packages; GOV002 accepted, separate SPEC/work order required before execution."
     },
     {
       "id": "gov002-docs-reviews-probes-gov002-review-round1-original-returned-cvf-downstream-gate-py-txt",
@@ -7800,7 +7800,7 @@
       "family": "continuity",
       "path": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Independent round1 acceptance of bounded static portable package; metadata attribution corrected; runtime/native/product/hosted claims excluded."
+      "description": "Independent round1 bounded static acceptance and actual material publication; original proof retained, product/live gaps open."
     },
     {
       "id": "gov002-round1-local-audit",
@@ -7808,6 +7808,13 @@
       "path": "docs/reviews/probes/gov002_round1_local_review_2026-10-12.json",
       "status": "ACTIVE",
       "description": "Independent intake binding of 108 file hashes and seven stages; worker artifacts preserved, zero application/provider campaign."
+    },
+    {
+      "id": "gov002-reviewed-publication",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Actual reviewed material project-branch push with independent remote SHA and exact-range gates; no hosted/native/live/deploy claim."
     }
   ]
 }

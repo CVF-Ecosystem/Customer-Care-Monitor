@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-GOV-002-C1",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-GOV-002-C1 independently accepted as a bounded static portable package. Local commit steward records one reviewed material commit, validates the exact committed range and publishes only codex/cvf-portable-inheritance, then synchronizes scoped REVIEW_PASS continuity. Runtime inheritance roadmap stays DRAFT; separate SPEC/work order/seed required before manual worker dispatch. docs55/R086 native-fence/accounts/deployment remain open or parked; no provider/runtime/main push/deploy.",
+  "nextAllowedMove": "CCMAI-GOV-002-C1 REVIEW_PASS_BOUNDED_STATIC_PACKAGE at d0ebc890d043b5f94b647c1b228e8f1660f83292; reviewed material published to codex/cvf-portable-inheritance, receipt docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Local ORCHESTRATOR next prepares a bounded runtime inheritance SPEC/work order from the DRAFT roadmap for manual worker plus independent Local review; no executable runtime order exists. docs55/R086 native-fence/Facebook-Zalo OA/deployment remain open or parked; no provider/runtime/main push/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root COMMIT_STEWARD / SESSION_SYNC_STEWARD; independent REVIEW completed, manual worker returned and has no execution authority",
+  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent review accepted, no active implementation worker",
   "updatedAt": "2026-10-12",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {
@@ -1157,12 +1157,14 @@
   },
   "x-queuedRuntimeInheritancePlanning": {
     "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
-    "status": "DRAFT_HOLD_GOV002_INDEPENDENT_REVIEW",
-    "operatorDirective": "Prepare roadmap now; wait for Claude return and resolved independent GOV002 review before any runtime dispatch. Keep manual Claude/Sonnet worker and Local review.",
+    "status": "DRAFT_HOLD_SEPARATE_RUNTIME_SPEC_AND_WORK_ORDER",
+    "operatorDirective": "GOV002 review is accepted. Prepare separate runtime SPEC/work order before any manual Sonnet worker dispatch; no runtime effect granted by this planning pointer.",
     "findingCount": 7,
     "proposedPackageCount": 3,
     "executionAuthorized": false,
-    "activeTrancheUnchanged": "CCMAI-GOV-002-C1"
+    "activeTrancheUnchanged": "CCMAI-GOV-002-C1",
+    "prerequisiteReview": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
+    "prerequisiteBuildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292"
   },
   "x-historicalR086ActualWorkerModel": {
     "model": "gpt-6-luna",
@@ -1174,10 +1176,12 @@
     "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
   },
   "x-portableCvfReview": {
-    "status": "REVIEWER_ACCEPTED_BOUNDED_STATIC_PACKAGE",
+    "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "review": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
     "receipt": "docs/reviews/probes/gov002_round1_local_review_2026-10-12.json",
     "productFreeze": "OPEN",
-    "publication": "PENDING"
+    "publication": "MATERIAL_EXPORTED_CONTINUITY_SYNC",
+    "buildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+    "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json"
   }
 }
