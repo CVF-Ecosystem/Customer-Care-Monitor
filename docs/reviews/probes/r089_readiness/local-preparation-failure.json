@@ -1,0 +1,11 @@
+{
+  "attributedTo": "Codex /root",
+  "workerStarted": false,
+  "sourceEdits": 0,
+  "failures": [
+    "R089 seed authorityKind missing required DISPATCHER_OWNED prefix",
+    "Retired R088 handoff still had ACTIVE header"
+  ],
+  "disposition": "Original seed preserved, R089 PARKED, valid replacement R090 before any BUILD; old handoffs retired",
+  "replacementSeedCommit": "fac8932ebd7dcecd2ad38dd23e192619cdccd6fd"
+}

@@ -1,0 +1,18 @@
+{
+  "sourceHead": "14bbf1dbb079c4512eb2fed5dc94aeae391f236f",
+  "boundedSourceLfSha256": {
+    "backend/api/handlers/users.go": "5b6fc697d35c516e6d7fc72b618edd7264de2c3fb2a789cbca420ea81e1c3c4f",
+    "backend/api/handlers/auth.go": "9fe9cc4d81bf6faec22d0a9d5fd26364d195ce801010689b1bc75c0ceab1e4e0",
+    "backend/api/handlers/dashboard.go": "e0cd86e43659bc78f11e4e58fac552ae4691f160a8840d2f7b7c19d70b09cf2b",
+    "backend/api/router.go": "5adc7db5fb34b0d1eee159ce6ab1858b082ba6932987e9fbe5acdf28291d5acb",
+    "frontend/src/views/Dashboard.vue": "728b5483aa9314f9a20db3afe3ff4310dda197f0827989d66e3fc0208d72bfe6",
+    "frontend/src/layouts/DefaultLayout.vue": "e31c1b28edb9351daef247c5ae18498374ac07679fb44e75f59021f4dd77e279"
+  },
+  "findings": [
+    "F01",
+    "F02",
+    "F03"
+  ],
+  "intakeWorker": "/root/auth_intake",
+  "providerCalls": 0
+}

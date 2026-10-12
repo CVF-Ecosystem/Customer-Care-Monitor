@@ -13,7 +13,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R088 REVIEW/REVIEW_PENDING handoff; round1 repair returned, independent Local review next, product gaps retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md`
+- Canonical active R090 WORK_ORDER handoff; Luna worker not started; R089 invalid seed never executed.: `CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -730,6 +730,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R088 round1 forced vue-tsc from the frontend directory.: `docs/reviews/probes/r088_messages_lifetime/round1/typecheck-run1.json`
 - R088 worker return COMPLETE_PENDING_REVIEW for F06 UI01-UI08; synthetic UI evidence only, independent review pending.: `docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md`
 - R088 round1 worker return COMPLETE_PENDING_REVIEW for R088-R1-F01; synthetic UI evidence only, independent review pending.: `docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_ROUND1_2026-10-13.md`
+- R088 accepted historical handoff; current authority is R089, preserve original evidence.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md`
 - Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md`
 - Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/consolidated-findings.json`
 - Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/deep-link-user-intent-result.json`
@@ -743,6 +744,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R088 REVIEW_PENDING record after the round1 repair return under the committed seed; not accepted.: `CVF_SESSION/tranches/CCMAI-RUNTIME-088.json`
 - F06 UI tenant/selection/request lifetime contract; implemented by the R088 return, acceptance pending independent review.: `docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md`
 - R088 work order displaying COMPLETE_PENDING_REVIEW after the round1 same-scope repair return; manual worker, Local independent review, no accepted source.: `docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md`
+- Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-089.json`
+- Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-089.json`
+- Unexecuted R089 invalid-seed preparation preserved, superseded by valid R090.: `docs/work_orders/CCMAI_RUNTIME_089_AUTH_PERMISSIONS.md`
+- Unexecuted R089 invalid-seed preparation preserved, superseded by valid R090.: `docs/reviews/planning/R089_AUTH_PERMISSIONS_SPEC_2026-10-13.md`
+- Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `docs/reviews/probes/r089_readiness/go-toolchain.json`
+- Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `docs/reviews/probes/r089_readiness/source-audit.json`
+- Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-090.json`
+- Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-090.json`
+- Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md`
+- Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md`
+- Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/probes/r089_readiness/local-preparation-failure.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

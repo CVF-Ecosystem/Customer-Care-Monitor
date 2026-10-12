@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-088",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-088 REVIEW_PASS F06 bounded synthetic UI at a8865d15296ce1a82ae368363d8f7de29392cdd0; Local original3/3 probesPASS, worker88/88/type/build accepted. Operator authorizes autonomous Local closure and Luna max internal workers for remaining inheritance A(F01/F02/F03) then C(F04/F05/F07), bounded seeds/orders before BUILD; current intake read-only. Other product debts/global channels/dependency17/docs55/R086 native-fence/accounts/deployment remain open or parked; no real customer/provider effects.",
+  "activeTranche": "CCMAI-RUNTIME-090",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-090 WORK_ORDER/DISPATCH_READY: Luna max /root/auth_intake implements SPEC A01-A04 F01/F02/F03 after BUILD acknowledgment and actual active-packet admission; Local independent review and commit owner. R088 F06 accepted/published at materiala8865d1 / continuity14bbf1d. C read-only intake complete, no second BUILD active. Fresh synthetic MySQL/Go setup admitted, customer/provider/accounts/deploy remain excluded; shared product/native/docs/dependency/global-channel debts open or parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root INTERNAL_AGENT ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Luna max intake workers for remaining A/C, no additional active BUILD",
+  "activeRole": "Codex /root INTERNAL_AGENT ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/auth_intake Luna max IMPLEMENTATION_WORKER assigned, not started",
   "updatedAt": "2026-10-13",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {

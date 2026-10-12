@@ -1,6 +1,6 @@
 # Messages request lifetime — R088
 
-Status: ACTIVE
+Status: RETIRED
 
 ## Current State
 
@@ -79,3 +79,7 @@ Returned by ccmai-r088-worker (actual model claude-sonnet-5-5; effort not indepe
 CCMAI-RUNTIME-088 REVIEW_PASS F06 bounded synthetic UI at a8865d15296ce1a82ae368363d8f7de29392cdd0; Local original3/3 probesPASS, worker88/88/type/build accepted. Operator authorizes autonomous Local closure and Luna max internal workers for remaining inheritance A(F01/F02/F03) then C(F04/F05/F07), bounded seeds/orders before BUILD; current intake read-only. Other product debts/global channels/dependency17/docs55/R086 native-fence/accounts/deployment remain open or parked; no real customer/provider effects.
 
 Material-SHA: a8865d15296ce1a82ae368363d8f7de29392cdd0. Independent review docs/reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. Local source edits0; original two failures nowPASS with healthy control, no worker redispatch. Actual worker identity remains Sonnet; next workers Luna max by current operator grant. Manual query/page/filter is distinct from selection intent, accepted as current behavior. Product FREEZE staysOPEN.
+
+## Current authority pointer
+
+This handoff is retired; current authority is CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md. Historical truth retained.

@@ -2380,9 +2380,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Active R088 REVIEW/REVIEW_PENDING handoff; round1 repair returned, independent Local review next, product gaps retained."
+      "description": "Canonical active R090 WORK_ORDER handoff; Luna worker not started; R089 invalid seed never executed."
     },
     {
       "id": "r060-work-order",
@@ -8144,6 +8144,90 @@
       "path": "docs/reviews/probes/r088_messages_lifetime/round1/gates-run1.json",
       "status": "ACTIVE",
       "description": "R088 round1 governance gate runs at return (preflight, worker-return phases, catalog, doctor, diff check)."
+    },
+    {
+      "id": "r089-preparation-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-089.json",
+      "status": "ACTIVE",
+      "description": "Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet."
+    },
+    {
+      "id": "r089-preparation-2",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-089.json",
+      "status": "ACTIVE",
+      "description": "Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet."
+    },
+    {
+      "id": "r089-preparation-3",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_089_AUTH_PERMISSIONS.md",
+      "status": "DEPRECATED",
+      "description": "Unexecuted R089 invalid-seed preparation preserved, superseded by valid R090."
+    },
+    {
+      "id": "r089-preparation-4",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R089_AUTH_PERMISSIONS_SPEC_2026-10-13.md",
+      "status": "DEPRECATED",
+      "description": "Unexecuted R089 invalid-seed preparation preserved, superseded by valid R090."
+    },
+    {
+      "id": "r089-preparation-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r089_readiness/go-toolchain.json",
+      "status": "ACTIVE",
+      "description": "Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet."
+    },
+    {
+      "id": "r089-preparation-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r089_readiness/source-audit.json",
+      "status": "ACTIVE",
+      "description": "Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet."
+    },
+    {
+      "id": "r088-handoff-accepted-history",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
+      "status": "RETIRED",
+      "description": "R088 accepted historical handoff; current authority is R089, preserve original evidence."
+    },
+    {
+      "id": "r090-preparation-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-090.json",
+      "status": "ACTIVE",
+      "description": "Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance."
+    },
+    {
+      "id": "r090-preparation-2",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-090.json",
+      "status": "ACTIVE",
+      "description": "Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance."
+    },
+    {
+      "id": "r090-preparation-3",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
+      "status": "ACTIVE",
+      "description": "Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance."
+    },
+    {
+      "id": "r090-preparation-4",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance."
+    },
+    {
+      "id": "r090-preparation-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r089_readiness/local-preparation-failure.json",
+      "status": "ACTIVE",
+      "description": "Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance."
     }
   ]
 }

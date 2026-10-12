@@ -34,7 +34,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -330,8 +330,8 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-088 REVIEW_PASS F06 bounded synthetic UI at a8865d15296ce1a82ae368363d8f7de29392cdd0; Local original3/3 probesPASS, worker88/88/type/build accepted. Operator authorizes autonomous Local closure and Luna max internal workers for remaining inheritance A(F01/F02/F03) then C(F04/F05/F07), bounded seeds/orders before BUILD; current intake read-only. Other product debts/global channels/dependency17/docs55/R086 native-fence/accounts/deployment remain open or parked; no real customer/provider effects.",
-    "activeWorkOrder": null,
+    "nextObjective": "CCMAI-RUNTIME-090 WORK_ORDER/DISPATCH_READY: Luna max /root/auth_intake implements SPEC A01-A04 F01/F02/F03 after BUILD acknowledgment and actual active-packet admission; Local independent review and commit owner. R088 F06 accepted/published at materiala8865d1 / continuity14bbf1d. C read-only intake complete, no second BUILD active. Fresh synthetic MySQL/Go setup admitted, customer/provider/accounts/deploy remain excluded; shared product/native/docs/dependency/global-channel debts open or parked.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
     "buildDispatched": false,
     "currentExecutionBudget": {
       "documentaryPasses": 1,
@@ -2020,7 +2020,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-088",
+  "activeTranche": "CCMAI-RUNTIME-090",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2036,7 +2036,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2080,5 +2082,23 @@
     "sourceAcceptance": true,
     "workerReturnRound1": "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_ROUND1_2026-10-13.md",
     "materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0"
+  },
+  "x-r090AuthPermissions": {
+    "status": "DISPATCH_READY",
+    "findings": [
+      "F01",
+      "F02",
+      "F03"
+    ],
+    "spec": "docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
+    "worker": "/root/auth_intake",
+    "reviewer": "Codex /root",
+    "sourceAcceptance": false
+  },
+  "x-r089InvalidPreparation": {
+    "status": "PARKED_INVALID_SEED",
+    "reason": "Local missed required DISPATCHER_OWNED prefix; seed immutable, no worker BUILD/effects",
+    "replacement": "CCMAI-RUNTIME-090"
   }
 }
