@@ -5,6 +5,13 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "gov002-dispatch-publication-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Actual project branch preparation push and remote-SHA verification at5338ec9; no worker implementation, installed profile, hosted CI, private-parent/main push or runtime claim."
+    },
+    {
       "id": "gov002-portable-inheritance-decision",
       "family": "continuity",
       "path": "docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md",

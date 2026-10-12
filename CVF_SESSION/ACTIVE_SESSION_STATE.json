@@ -1102,6 +1102,12 @@
     "seedCommit": "f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d",
     "coreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
     "roleDecision": "Owner retains manual worker, Local independent review; no automatic sub-agent invocation",
-    "publicationBranch": "codex/cvf-portable-inheritance"
+    "publicationBranch": "codex/cvf-portable-inheritance",
+    "publication": {
+      "status": "EXPORTED_PREPARATION_ONLY",
+      "commit": "5338ec928b0aca46b6388e68164faa74d201200e",
+      "branch": "codex/cvf-portable-inheritance",
+      "receipt": "docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json"
+    }
   }
 }

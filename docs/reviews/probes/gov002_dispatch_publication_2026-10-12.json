@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "actor": "Codex /root COMMIT_STEWARD / SESSION_SYNC_STEWARD",
+  "scope": "DISPATCH_PREPARATION_ONLY",
+  "publicExportDisposition": "EXPORTED",
+  "repository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "branch": "codex/cvf-portable-inheritance",
+  "publishedCommit": "5338ec928b0aca46b6388e68164faa74d201200e",
+  "verifiedRemoteRef": "refs/heads/codex/cvf-portable-inheritance",
+  "remoteVerification": "git ls-remote origin refs/heads/codex/cvf-portable-inheritance matched local HEAD after successful ordinary push",
+  "verifiedAtUtc": "2026-10-12T11:09:45+00:00",
+  "artifactPaths": [
+    "docs/work_orders/CCMAI_GOV_002.md",
+    "CVF_SESSION/authority/CCMAI-GOV-002-C1.json",
+    "CVF_SESSION/tranches/CCMAI-GOV-002-C1.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
+    "docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md"
+  ],
+  "evidence": {
+    "localPreflight": "PASS7/7",
+    "committedFullPreparationRange": "b72c0f4ec92c0fc02daf3f6cfaad1a303a27824c..5338ec928b0aca46b6388e68164faa74d201200e",
+    "rangePreflight": "PASS7/7",
+    "publicCloseabilityGraph": "PASS",
+    "gitDiffCheck": "PASS",
+    "historicalHandoffGitBlobs": "49 unchanged",
+    "workerImplementation": "NOT_STARTED",
+    "profile": "NOT_INSTALLED",
+    "hostedCiObserved": false,
+    "runtimeProviderCalls": 0,
+    "privateParentPush": false,
+    "mainPush": false,
+    "merge": false,
+    "deployment": false
+  },
+  "verificationNote": "An initial raw-file seed-byte comparison differed only by normal Git LF/CRLF conversion; canonical git hash-object --path matches the immutable committed blobs for both seeds. No seed content edit occurred."
+}

@@ -175,6 +175,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate owner-authorized existing-branch fast-forward publication after R058 closure; no merge/deploy or CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-06.json`
 - R2 public profile adoption scope amendment after predispatch legacy-status contradiction: additive fail-closed compatibility, independent worker/reviewer, portable continuation.: `CVF_SESSION/authority/CCMAI-GOV-002-C1.json`
 - Canonical DISPATCH_READY/WORK_ORDER record bound to pre-BUILD committed immutable C1 authority.: `CVF_SESSION/tranches/CCMAI-GOV-002-C1.json`
+- Actual project branch preparation push and remote-SHA verification at5338ec9; no worker implementation, installed profile, hosted CI, private-parent/main push or runtime claim.: `docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json`
 - Unactivated first adoption seed; no BUILD occurred. Source audit required additive status compatibility, so successor CCMAI-GOV-002-C1 governs the initial worker packet; original seed immutable.: `CVF_SESSION/authority/CCMAI-GOV-002.json`
 - Source-audited public-source adoption choice, legacy grammar conflict and finite portable outcome; no installed/hosted/runtime claim.: `docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md`
 - Single R2 initial worker assignment for public profile adoption, additive strict status compatibility and fresh-clone continuation; no worker commit/push or runtime.: `docs/work_orders/CCMAI_GOV_002.md`

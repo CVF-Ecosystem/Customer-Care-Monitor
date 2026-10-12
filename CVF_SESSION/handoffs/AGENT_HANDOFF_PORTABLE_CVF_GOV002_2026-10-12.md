@@ -33,3 +33,7 @@ Known55 docs deadlinks, R086 source-only/native NOT_RUN, fence integration OPEN,
 ## Dispatch Continuity Material-SHA Marker
 
 Pre-BUILD authority material-SHA: f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d. Actual dispatch commit is discoverable through this tracked handoff's Git history; worker records execution HEAD before edits. No implementation material commit exists yet.
+
+## Published Dispatch Receipt
+
+Dispatch material-SHA: 5338ec928b0aca46b6388e68164faa74d201200e. Ordinary project-branch push succeeded and git ls-remote independently matched this SHA. Receipt: docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json. Preparation only; worker not started/profile not installed. This dedicated continuity update records the actual dispatch SHA; Local will push it to the same authorized branch after gates. No main push, merge, provider or deployment.

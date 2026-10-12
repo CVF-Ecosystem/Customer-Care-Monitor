@@ -17,6 +17,8 @@ CCMAI-GOV-002-C1 DISPATCH_READY: bounded public profile1.1 installation, fail-cl
 
 Read [canonical work order](docs/work_orders/CCMAI_GOV_002.md). Owner retains manual worker and Local independent review. Profile is not installed at dispatch; no inherited coverage claim. Historical R087 remains documentary REVIEW_PASS/FREEZE OPEN. Product roadmap and shared-learning directives below remain applicable.
 
+Preparation published to `codex/cvf-portable-inheritance` at `5338ec928b0aca46b6388e68164faa74d201200e`; [verified dispatch publication receipt](docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json). Sonnet worker still awaits manual dispatch; profile not installed.
+
 ## Standing owner directive: roadmap discipline (2026-10-12)
 
 Owner requires roadmap progress to stay current: read [current S0–S7 checkpoint and route](docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md) at resume/next-scope selection. Update after acceptance, blocker or route changes. P0 documentary unblock, P1 safety/dependency decision, P2 one-job gate/proposal, P3 human review/assignment/outcome, P4 measured pilot/optimization/release; planning only, not execution authority.
