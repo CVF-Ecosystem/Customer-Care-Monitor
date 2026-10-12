@@ -66,8 +66,8 @@
     </v-row>
 
     <!-- Stat cards -->
-    <v-row class="mb-6">
-      <v-col v-for="stat in stats" :key="stat.label" cols="6" sm="4" md="3">
+    <v-row v-if="visibleStats.length" class="mb-6">
+      <v-col v-for="stat in visibleStats" :key="stat.label" cols="6" sm="4" md="3">
         <v-card class="pa-4">
           <div class="d-flex justify-space-between align-center">
             <div>
@@ -80,9 +80,9 @@
       </v-col>
     </v-row>
 
-    <!-- Channel counts + extra stats -->
-    <v-row class="mb-4">
-      <v-col v-for="ch in channelCounts" :key="ch.channel_type" cols="6" sm="3">
+    <!-- Message projection -->
+    <v-row v-if="canViewDashboard('messages')" class="mb-4" data-testid="dashboard-messages-section">
+      <v-col v-for="ch in channelCounts" :key="ch.channel_type" cols="6" sm="3" data-testid="dashboard-messages-channel-breakdown">
         <v-card class="pa-4">
           <div class="d-flex justify-space-between align-center">
             <div>
@@ -106,6 +106,10 @@
           </div>
         </v-card>
       </v-col>
+    </v-row>
+
+    <!-- Settings projection -->
+    <v-row v-if="canViewDashboard('settings')" class="mb-4" data-testid="dashboard-settings-section">
       <v-col cols="6" sm="3">
         <v-card class="pa-4">
           <div class="d-flex justify-space-between align-center">
@@ -121,7 +125,7 @@
 
     <v-row>
       <!-- Recent Activity (QC + Classification mixed) -->
-      <v-col cols="12" md="7">
+      <v-col v-if="canViewDashboard('jobs')" cols="12" md="7" data-testid="dashboard-jobs-section">
         <v-card class="pa-4">
           <div class="text-subtitle-1 font-weight-bold mb-3">
             <v-icon start size="small" color="primary">mdi-bell-ring</v-icon>
@@ -165,7 +169,7 @@
       <!-- AI Cost + Service Status -->
       <v-col cols="12" md="5">
         <!-- AI Cost Summary -->
-        <v-card class="pa-4 mb-4">
+        <v-card v-if="canViewDashboard('settings')" class="pa-4 mb-4" data-testid="dashboard-settings-cost-summary">
           <div class="text-subtitle-1 font-weight-bold mb-3">
             <v-icon start size="small" color="warning">mdi-currency-usd</v-icon>
             {{ $t('ai_cost') }}
@@ -225,8 +229,8 @@
     </v-row>
 
     <!-- Charts Row -->
-    <v-row class="mt-4">
-      <v-col cols="12" md="6">
+    <v-row v-if="canViewDashboard('messages') || canViewDashboard('settings')" class="mt-4">
+      <v-col v-if="canViewDashboard('messages')" cols="12" md="6" data-testid="dashboard-messages-chart-section">
         <v-card class="pa-4">
           <div class="text-subtitle-1 font-weight-bold mb-3">
             <v-icon start size="small" color="primary">mdi-message-text-clock</v-icon>
@@ -236,7 +240,7 @@
           <div v-else class="text-center text-grey pa-4">{{ $t('no_data') }}</div>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6">
+      <v-col v-if="canViewDashboard('settings')" cols="12" md="6" data-testid="dashboard-settings-chart-section">
         <v-card class="pa-4">
           <div class="text-subtitle-1 font-weight-bold mb-3">
             <v-icon start size="small" color="warning">mdi-chart-line</v-icon>
@@ -252,7 +256,7 @@
 
 <script setup lang="ts">
 import { channelTypeInfo } from '../composables/channelTypes'
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Line } from 'vue-chartjs'
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend } from 'chart.js'
@@ -268,11 +272,25 @@ const router = useRouter()
 const tenantId = computed(() => route.params.tenantId as string)
 
 const stats = ref([
-  { label: 'total_conversations', value: 0, icon: 'mdi-message-text', color: 'primary' },
-  { label: 'dash_qc_violations', hint: 'dash_qc_violations_hint', value: '—', icon: 'mdi-clipboard-check-outline', color: 'error' },
-  { label: 'active_jobs', value: 0, icon: 'mdi-briefcase-check', color: 'success' },
-  { label: 'active_channels', value: 0, icon: 'mdi-connection', color: 'info' },
+  { label: 'total_conversations', resource: 'messages', value: 0, icon: 'mdi-message-text', color: 'primary' },
+  { label: 'dash_qc_violations', hint: 'dash_qc_violations_hint', resource: 'jobs', value: '—' as string | number, icon: 'mdi-clipboard-check-outline', color: 'error' },
+  { label: 'active_jobs', resource: 'jobs', value: 0, icon: 'mdi-briefcase-check', color: 'success' },
+  { label: 'active_channels', resource: 'channels', value: 0, icon: 'mdi-connection', color: 'info' },
 ])
+
+const dashboardRole = ref('')
+const dashboardPermissions = ref<Record<string, string>>({})
+const dashboardPermissionsReady = ref(false)
+function canViewDashboard(resource: string): boolean {
+  if (dashboardRole.value === 'owner' || dashboardRole.value === 'admin') return true
+  if (dashboardRole.value !== 'member') return false
+  const permission = dashboardPermissions.value[resource]
+  return typeof permission === 'string' && permission.includes('r')
+}
+const visibleStats = computed(() => stats.value.filter(stat => canViewDashboard(stat.resource)))
+function hasDashboardReadAccess(): boolean {
+  return ['channels', 'messages', 'jobs', 'settings'].some(canViewDashboard)
+}
 
 const qcAlerts = ref<any[]>([])
 const classRecent = ref<any[]>([])
@@ -390,34 +408,60 @@ const chartOptionsNoLegend = {
 }
 
 let dashboardRequestId = 0
+let permissionRequestId = 0
+let demoStatusRequestId = 0
+function clearDashboardData() {
+  stats.value[0].value = 0
+  stats.value[1].value = '—'
+  stats.value[2].value = 0
+  stats.value[3].value = 0
+  qcAlerts.value = []
+  classRecent.value = []
+  costPeriod.value = 0
+  costToday.value = 0
+  costMonth.value = 0
+  costByDay.value = []
+  exchangeRate.value = 26000
+  messagesByDay.value = []
+  channelCounts.value = []
+}
+
 async function loadDashboard() {
   const requestId = ++dashboardRequestId
+  const requestTenantId = tenantId.value
+  if (!requestTenantId || !dashboardPermissionsReady.value || !hasDashboardReadAccess()) return
   stats.value[1].value = '—'
   try {
     const params: Record<string, string> = {}
     if (dateFrom.value) params.from = dateFrom.value
     if (dateTo.value) params.to = dateTo.value
 
-    const { data } = await api.get(`/tenants/${tenantId.value}/dashboard`, { params })
-    if (requestId !== dashboardRequestId) return
-    stats.value[0].value = data.total_conversations
-    const qcCount = data.qc_violation_count
-    stats.value[1].value = Number.isSafeInteger(qcCount) && qcCount >= 0 ? qcCount : '—'
-    stats.value[2].value = data.active_jobs
-    stats.value[3].value = data.active_channels
-
-    costPeriod.value = data.cost_period || 0
-    costToday.value = data.cost_today || 0
-    costMonth.value = data.cost_this_month || 0
-    costByDay.value = data.cost_by_day || []
-    exchangeRate.value = data.exchange_rate || 26000
-
-    qcAlerts.value = data.qc_alerts || []
-    classRecent.value = data.classification_recent || []
-    messagesByDay.value = data.messages_by_day || []
-    channelCounts.value = data.conversations_by_channel || []
+    const { data } = await api.get(`/tenants/${requestTenantId}/dashboard`, { params })
+    if (requestId !== dashboardRequestId || requestTenantId !== tenantId.value) return
+    if (canViewDashboard('messages')) {
+      stats.value[0].value = data.total_conversations ?? 0
+      messagesByDay.value = data.messages_by_day || []
+      channelCounts.value = data.conversations_by_channel || []
+    }
+    if (canViewDashboard('jobs')) {
+      const qcCount = data.qc_violation_count
+      stats.value[1].value = Number.isSafeInteger(qcCount) && qcCount >= 0 ? qcCount : '—'
+      stats.value[2].value = data.active_jobs ?? 0
+      qcAlerts.value = data.qc_alerts || []
+      classRecent.value = data.classification_recent || []
+    }
+    if (canViewDashboard('channels')) {
+      stats.value[3].value = data.active_channels ?? 0
+    }
+    if (canViewDashboard('settings')) {
+      costPeriod.value = data.cost_period || 0
+      costToday.value = data.cost_today || 0
+      costMonth.value = data.cost_this_month || 0
+      costByDay.value = data.cost_by_day || []
+      exchangeRate.value = data.exchange_rate || 26000
+    }
   } catch {
-    if (requestId === dashboardRequestId) stats.value[1].value = '—'
+    if (requestId === dashboardRequestId && requestTenantId === tenantId.value) stats.value[1].value = '—'
   }
 }
 
@@ -427,9 +471,11 @@ const importingDemo = ref(false)
 const resettingDemo = ref(false)
 const resetDialog = ref(false)
 
-async function loadDemoStatus() {
+async function loadDemoStatus(requestTenantId = tenantId.value) {
+  const requestId = ++demoStatusRequestId
   try {
-    const { data } = await api.get(`/tenants/${tenantId.value}/demo/status`)
+    const { data } = await api.get(`/tenants/${requestTenantId}/demo/status`)
+    if (requestId !== demoStatusRequestId || requestTenantId !== tenantId.value) return
     demoStatus.value = data
   } catch { /* ignore */ }
 }
@@ -461,10 +507,46 @@ async function resetDemo() {
   }
 }
 
-onMounted(() => {
-  loadDemoStatus()
-  loadDashboard()
-})
+watch(tenantId, async (requestTenantId, _oldTenantId, onCleanup) => {
+  const requestId = ++permissionRequestId
+  dashboardRequestId++
+  onCleanup(() => {
+    if (permissionRequestId === requestId) permissionRequestId++
+    dashboardRequestId++
+  })
+  dashboardPermissionsReady.value = false
+  dashboardRole.value = ''
+  dashboardPermissions.value = {}
+  clearDashboardData()
+  demoStatus.value = null
+  if (!requestTenantId) return
+  loadDemoStatus(requestTenantId)
+
+  try {
+    const { data } = await api.get(`/tenants/${requestTenantId}/me`)
+    if (requestId !== permissionRequestId || requestTenantId !== tenantId.value) return
+    dashboardRole.value = ['owner', 'admin', 'member'].includes(data.role) ? data.role : ''
+    let permissions: Record<string, string> = {}
+    if (dashboardRole.value && typeof data.permissions === 'string') {
+      try {
+        const parsed = JSON.parse(data.permissions)
+        if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+          for (const [key, value] of Object.entries(parsed)) {
+            if (typeof value === 'string') permissions[key] = value
+          }
+        }
+      } catch { /* malformed permission data fails closed */ }
+    }
+    dashboardPermissions.value = permissions
+    dashboardPermissionsReady.value = true
+    if (hasDashboardReadAccess()) loadDashboard()
+  } catch {
+    if (requestId !== permissionRequestId || requestTenantId !== tenantId.value) return
+    dashboardRole.value = ''
+    dashboardPermissions.value = {}
+    dashboardPermissionsReady.value = true
+  }
+}, { immediate: true })
 
 // CCMAI-UX-001a (UX-01): never negative; minutes, then hours, then days.
 const { locale } = useI18n()

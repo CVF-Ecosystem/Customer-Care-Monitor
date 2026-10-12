@@ -305,3 +305,7 @@ This supersedes only the historical consumer-source OPEN checkpoint above: local
 ## R088 Messages correctness checkpoint (2026-10-13)
 
 [Independent Local round1 review](../reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md): F06 source implemented, CHANGES_REQUIRED for one pending deep-link continuation overriding user selection/back. Same-scope repair then independent review is the finite remaining route for package B. Worker76PASS/type/build is supporting synthetic UI evidence, not S1/S5 stage exit or live deployment. Other six runtime findings, P1 auth concerns, docs55, native fence, accounts and full product milestones remain open/parked; no successor automatically dispatched.
+
+## Runtime inheritance checkpoint 2026-10-13 — R090 candidate
+
+Seven-finding scope follows ../reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md. R088 F06 published bounded; R090 A independently reviewed candidate retained but CHANGES_REQUIRED for three finite C route/fixture/per-case proof dependencies. Planned R091 C design accepted, no BUILD without new immutable seed/order. This source/application safety work supports S1/S3/S5/S7 without closing any full product stage; docs55, native/fence, dependency17, global channels, live/accounts/deployment stay open or parked.

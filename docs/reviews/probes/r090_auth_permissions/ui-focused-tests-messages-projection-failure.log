@@ -1,0 +1,44 @@
+
+> frontend@0.0.0 test
+> vitest run src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/frontend
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+Failed to create chart: can't acquire context from the given item
+Failed to create chart: can't acquire context from the given item
+
+ ❯ src/__tests__/dashboard-permissions.spec.ts (3 tests | 1 failed) 438ms
+     × clears old content and ignores a late old-tenant owner response after the current member resolves 165ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+AssertionError: expected 'Trang chủHôm nay7 ngày28 ngàyTháng nà…' to contain 'Pancake'
+
+Expected: "Pancake"
+Received: "Trang chủHôm nay7 ngày28 ngàyTháng nàyQuý nàyNăm nàyNgày theo giờ Việt Nam (UTC+7)Kênh hoạt động2 Trạng thái dịch vụChưa có phép kiểm tra sức khỏe cho các dịch vụ này.API ServerChưa có dữ liệu kiểm traDatabaseChưa có dữ liệu kiểm traSchedulerChưa có dữ liệu kiểm tra"
+
+ ❯ src/__tests__/dashboard-permissions.spec.ts:148:28
+    146|     await flushPromises()
+    147|     await flushPromises()
+    148|     expect(wrapper.text()).toContain('Pancake')
+       |                            ^
+    149|     expect(wrapper.text()).not.toContain('R090-JOB-FORBIDDEN-EVIDENCE')
+    150|     expect(wrapper.find('[data-testid="dashboard-settings-section"]').…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 6 passed (7)
+   Start at  04:49:07
+   Duration  13.37s (transform 6.98s, setup 0ms, import 24.75s, tests 857ms, environment 728ms)
+

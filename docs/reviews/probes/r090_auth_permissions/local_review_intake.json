@@ -1,0 +1,10 @@
+{
+  "entries": 25,
+  "mismatches": [],
+  "normalization": "CRLF=>LF; lone CR unchanged",
+  "rootSourceEdits": 0,
+  "priorReviewerHashDiscrepancy": "Earlier retained reviewer four backend hashes differ; Root re-read final candidate source/diffs under this named contradiction, observed intended transaction/CAS/query/role logic, and independently verified all25 current returned hashes. Earlier snapshot method not established; no false unchanged-hash claim.",
+  "ownedR090ContainersNow": [],
+  "dockerReadExit": 0,
+  "providerCalls": 0
+}

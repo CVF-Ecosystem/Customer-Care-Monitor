@@ -1,0 +1,81 @@
+{
+  "run_id": "7f6768044a24451e8a08b1fd371a73e7",
+  "container": "ccma-r090-db-7f6768044a24",
+  "network": "ccma-r090-net-7f6768044a24",
+  "db_name": "ccma_r090",
+  "db_user": "ccma_r090",
+  "image": "mysql:8.0",
+  "image_id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "image_repo_digests": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "host_port": 63309,
+  "started_utc": "2026-10-12T21:37:54+00:00",
+  "commands": [
+    {
+      "proof": "docs/reviews/probes/r090_auth_permissions/go-source-negative.log",
+      "command": [
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "./api",
+        "-run",
+        "^TestR090",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-12T21:39:23+00:00",
+      "finished_utc": "2026-10-12T21:40:19+00:00",
+      "exit_code": 1
+    },
+    {
+      "proof": "docs/reviews/probes/r090_auth_permissions/go-final-server.log",
+      "command": [
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "./api",
+        "./api/handlers",
+        "-run",
+        "^(TestR090|TestDashboardQCViolationCount|TestDashboardFilterUsesVietnamDayBounds|TestDashboardCalendarAggregatesAndSeries|TestDashboardDefaultAndOneSidedRanges|TestDashboardInvalidDatesAreBadRequests)",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-12T21:44:26+00:00",
+      "finished_utc": "2026-10-12T21:44:47+00:00",
+      "exit_code": 0
+    }
+  ],
+  "cleanup": {
+    "at_utc": "2026-10-12T21:46:11+00:00",
+    "container_removed": true,
+    "container_mounts_captured_before_removal": [
+      {
+        "Type": "volume",
+        "Name": "f3fd6fc1800b955a2c7451f8be95cf6d0ae588178b906ec372fe086fd24bf64f",
+        "Destination": "/var/lib/mysql",
+        "RW": true,
+        "Propagation": "",
+        "Driver": "local",
+        "Mode": ""
+      }
+    ],
+    "volume_names_checked_after_removal": [
+      "f3fd6fc1800b955a2c7451f8be95cf6d0ae588178b906ec372fe086fd24bf64f"
+    ],
+    "remaining_owned_container_volumes": [],
+    "all_recorded_container_volumes_absent": true,
+    "network_removed": true,
+    "ownership_labels_verified": true
+  },
+  "mounts": [
+    {
+      "Type": "volume",
+      "Name": "f3fd6fc1800b955a2c7451f8be95cf6d0ae588178b906ec372fe086fd24bf64f",
+      "Destination": "/var/lib/mysql",
+      "RW": true,
+      "Propagation": "",
+      "Driver": "local",
+      "Mode": ""
+    }
+  ],
+  "network_internal": false,
+  "ready_utc": "2026-10-12T21:38:07+00:00",
+  "readiness_method": "host 127.0.0.1 TCP handshake plus in-container app-user SELECT 1 over TCP"
+}

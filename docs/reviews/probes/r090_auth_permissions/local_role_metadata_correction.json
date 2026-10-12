@@ -1,0 +1,35 @@
+{
+  "owner": "Codex /root",
+  "sourceEdits": 0,
+  "changes": [
+    {
+      "path": "docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md",
+      "original": "docs/reviews/probes/r090_auth_permissions/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13-before-root-role-metadata.txt",
+      "sha256_before": "e3846e71174a3c664d40cdcbd3bed5464964f52607098da3f9d0a9c8710a8f0b",
+      "sha256_after": "953462ddd90b622aef70d23f159fb5da9c9151475226e4966f044778408e41bb",
+      "change": "Add true risk/independent reviewer declarations only; factual body retained"
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure.md",
+      "original": "docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure-before-root-role-metadata.txt",
+      "sha256_before": "d60cb6bde6cf8eeed820e8d9d766622cb4be9c044733bff257330442154e6421",
+      "sha256_after": "3cfd6ad9fb3976f96800e628da69a29fabdc3af160a81aca7d05df44f3f7cb02",
+      "change": "Add true risk/independent reviewer declarations only; factual body retained"
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure.md",
+      "original": "docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure-before-root-role-metadata.txt",
+      "sha256_before": "84b219674149ab12ac6e3d05fa921386b5cd95f040bf46de2bc795b2d229ccf2",
+      "sha256_after": "7232b0f660c7a26fb11ed57b974f8d034219792cd12ec2ede881f763ccbafa5c",
+      "change": "Add true risk/independent reviewer declarations only; factual body retained"
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure.md",
+      "original": "docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure-before-root-role-metadata.txt",
+      "sha256_before": "e21947372281cd437b30a8bde5cf2e1181535d8ee4f6863f7afc4476b05ec839",
+      "sha256_after": "908a00a806c7fc124e1fa25814c605f3ee5d94ad290b41c5ffcf6770c39e0877",
+      "change": "Add true risk/independent reviewer declarations only; factual body retained"
+    }
+  ],
+  "earlierWorkerBindings": "Intake25matchedbeforemetadata; originalbytespreservedatmappedtxtpaths. Do not relabel worker manifest as current allhashmatch afterthese Root declarations."
+}

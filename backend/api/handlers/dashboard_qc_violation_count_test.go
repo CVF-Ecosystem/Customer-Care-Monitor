@@ -116,6 +116,7 @@ func callDashboard(tenantID string) *httptest.ResponseRecorder {
 	rec := httptest.NewRecorder()
 	c, _ := gin.CreateTestContext(rec)
 	c.Set("tenant_id", tenantID)
+	c.Set("tenant_role", "owner") // This direct-handler regression fixture represents an authorized owner.
 	c.Request = httptest.NewRequest("GET", "/api/v1/dashboard?from="+dashQCWindowDay+"&to="+dashQCWindowDay, nil)
 	GetDashboard(c)
 	return rec

@@ -69,7 +69,7 @@ Counts at decision before commits. Final actual SHA and publication are recorded
 
 ## Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY. Reviewed source/evidence material is uncommitted at this disposition. Local owns existing project branch publication after committed checks. No main merge/private-parent push/deployment or hosted CI claim.
+EXPORTED. Actual project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git; branch codex/cvf-portable-inheritance; material a8865d15296ce1a82ae368363d8f7de29392cdd0, continuity14bbf1dbb079c4512eb2fed5dc94aeae391f236f; artifact docs/reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. Remote-SHA receipt docs/reviews/probes/r088_local_final/publication.json. This covers the reviewed F06 version; later package A/C preparation is not source acceptance. No private parent/main/merge/deploy or hosted CI claim.
 
 ## Local Return Metadata Correction
 

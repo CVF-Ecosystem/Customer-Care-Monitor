@@ -8,12 +8,12 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/gin-gonic/gin"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg/password"
+	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )
@@ -392,9 +392,22 @@ func RefreshTokenHandler(c *gin.Context) {
 		return
 	}
 
-	// Increment token version to revoke the current refresh token
-	newVersion := user.TokenVersion + 1
-	db.DB.Model(&user).Update("token_version", newVersion)
+	// Compare-and-swap the observed version. Concurrent refreshes and password
+	// resets can only advance the persisted version; a stale request cannot write
+	// its successor over a newer revocation.
+	result := db.DB.Model(&models.User{}).
+		Where("id = ? AND token_version = ?", user.ID, tokenVersion).
+		Update("token_version", gorm.Expr("token_version + 1"))
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "token_rotation_failed"})
+		return
+	}
+	if result.RowsAffected != 1 {
+		clearRefreshCookie(c)
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid_refresh_token"})
+		return
+	}
+	newVersion := tokenVersion + 1
 
 	accessToken, err := middleware.GenerateAccessToken(user.ID, user.Email, user.IsAdmin)
 	if err != nil {

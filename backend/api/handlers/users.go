@@ -1,15 +1,18 @@
 package handlers
 
 import (
+	"errors"
 	"log"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
-	"github.com/google/uuid"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 )
 
 type TenantUserResponse struct {
@@ -151,6 +154,7 @@ func UpdateUserRole(c *gin.Context) {
 func ResetUserPassword(c *gin.Context) {
 	tenantID := middleware.GetTenantID(c)
 	userID := c.Param("userId")
+	actorRole := middleware.GetTenantRole(c)
 
 	var req struct {
 		Password string `json:"password" binding:"required"`
@@ -160,31 +164,60 @@ func ResetUserPassword(c *gin.Context) {
 		return
 	}
 
-	// Verify user belongs to this tenant
-	var ut models.UserTenant
-	if err := db.DB.Where("user_id = ? AND tenant_id = ?", userID, tenantID).First(&ut).Error; err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "user_not_in_tenant"})
-		return
-	}
+	errResetForbidden := errors.New("reset_forbidden")
+	errWeakPassword := errors.New("weak_password")
+	errPasswordHashFailed := errors.New("password_hash_failed")
+	weakPasswordMessage := ""
+	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		// Serialize the hierarchy decision with concurrent role changes. The lock
+		// remains held until the password hash and token-version increment commit.
+		var ut models.UserTenant
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
+			Where("user_id = ? AND tenant_id = ?", userID, tenantID).First(&ut).Error; err != nil {
+			return err
+		}
+		if actorRole != "owner" && actorRole != "admin" {
+			return errResetForbidden
+		}
+		if actorRole == "admin" && ut.Role != "member" {
+			return errResetForbidden
+		}
 
-	// Validate password complexity (same rules as registration)
-	if err := validatePasswordComplexity(req.Password); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "weak_password", "message": err.Error()})
-		return
-	}
+		// Validate password complexity (same rules as registration).
+		if err := validatePasswordComplexity(req.Password); err != nil {
+			weakPasswordMessage = err.Error()
+			return errWeakPassword
+		}
+		hash, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)
+		if err != nil {
+			return errPasswordHashFailed
+		}
 
-	hash, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "password_hash_failed"})
-		return
-	}
-
-	result := db.DB.Model(&models.User{}).Where("id = ?", userID).Updates(map[string]interface{}{
-		"password_hash": string(hash),
-		"token_version": db.DB.Raw("token_version + 1"), // invalidate existing sessions
+		result := tx.Model(&models.User{}).Where("id = ?", userID).Updates(map[string]interface{}{
+			"password_hash": string(hash),
+			"token_version": gorm.Expr("token_version + 1"), // invalidate existing sessions atomically
+		})
+		if result.Error != nil {
+			return result.Error
+		}
+		if result.RowsAffected != 1 {
+			return gorm.ErrRecordNotFound
+		}
+		return nil
 	})
-	if result.Error != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "password_reset_failed"})
+	if err != nil {
+		switch {
+		case errors.Is(err, gorm.ErrRecordNotFound):
+			c.JSON(http.StatusNotFound, gin.H{"error": "user_not_in_tenant"})
+		case errors.Is(err, errResetForbidden):
+			c.JSON(http.StatusForbidden, gin.H{"error": "admin_cannot_manage_owner_or_admin"})
+		case errors.Is(err, errWeakPassword):
+			c.JSON(http.StatusBadRequest, gin.H{"error": "weak_password", "message": weakPasswordMessage})
+		case errors.Is(err, errPasswordHashFailed):
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "password_hash_failed"})
+		default:
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "password_reset_failed"})
+		}
 		return
 	}
 

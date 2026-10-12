@@ -1,0 +1,11 @@
+# First synthetic fixture setup attempt
+
+Worker: `/root/auth_intake`; tranche: `CCMAI-RUNTIME-090`.
+
+The first `python -B scripts/r089_auth_fixture.py start` attempt exited 1 on 2026-10-12T21:28:18Z after Docker created the uniquely labeled container and internal network. It failed while asking `docker port ccma-r090-db-11c387db9f79 3306/tcp` for the loopback host port. The initial helper surfaced only the subprocess exception, not Docker's combined output; the captured failure is therefore incomplete and is retained as such rather than inferred. The original manifest is copied to `fixture_manifest_first_setup_failure.json`.
+
+The helper's exact-owned cleanup recorded both `container_removed=true` and `network_removed=true`, with ownership labels verified. A subsequent inventory showed no containers and only Docker's built-in `bridge`, `host`, and `none` networks. The Go module download completed separately with no changes to `backend/go.mod` or `backend/go.sum`.
+
+Correction (2026-10-13): the original note's statement that no volume was mounted or created was incorrect. The helper used `docker rm --force` without `--volumes` and did not capture mounts. The `mysql:8.0` image declares `/var/lib/mysql`; Root subsequently observed two anonymous volumes and is recovering Docker event bindings to the two failed container incarnations. I cannot claim those volume objects were either absent or removed based on the worker's original inventory. The corrected helper now captures ownership-relevant mount fields before cleanup and will use label-verified `docker rm --force --volumes` with an after-removal volume check. No production source or customer database was involved.
+
+Final cleanup correction: Root matched this attempt's anonymous volume `3fd418d6c057f8cfef578a7c1226780e1e5b5766f8fd1f46b5af0b596279b9c9` to container `324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971` / `ccma-r090-db-11c387db9f79` using Docker create/mount/unmount/destroy events, removed it, and verified absence. See `local_anonymous_volume_cleanup.json`; no unrelated volume was removed.

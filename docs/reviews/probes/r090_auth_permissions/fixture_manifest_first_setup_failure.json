@@ -1,0 +1,19 @@
+{
+  "run_id": "11c387db9f7949cca7fbfaa4094107d3",
+  "container": "ccma-r090-db-11c387db9f79",
+  "network": "ccma-r090-net-11c387db9f79",
+  "db_name": "ccma_r090",
+  "db_user": "ccma_r090",
+  "image": "mysql:8.0",
+  "image_id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "image_repo_digests": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "host_port": null,
+  "started_utc": "2026-10-12T21:28:11+00:00",
+  "commands": [],
+  "cleanup": {
+    "at_utc": "2026-10-12T21:28:18+00:00",
+    "container_removed": true,
+    "network_removed": true,
+    "ownership_labels_verified": true
+  }
+}

@@ -1,0 +1,181 @@
+
+> frontend@0.0.0 test
+> vitest run src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/frontend
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > hides notification logs from a default jobs:r member
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > hides notification logs from a default jobs:r member
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t1/channels"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t1/channels"
+[Vue Router warn]: No match found for location with path "/t2/channels"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t2/channels"
+[Vue Router warn]: No match found for location with path "/t3/channels"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t3/messages"
+[Vue Router warn]: No match found for location with path "/t3/jobs"
+[Vue Router warn]: No match found for location with path "/t3/results"
+[Vue Router warn]: No match found for location with path "/t3/activity-logs"
+[Vue Router warn]: No match found for location with path "/t3/cost-logs"
+[Vue Router warn]: No match found for location with path "/t3/notifications"
+[Vue Router warn]: No match found for location with path "/t3/mcp"
+[Vue Router warn]: No match found for location with path "/t3/users"
+[Vue Router warn]: No match found for location with path "/t3/settings"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t3/channels"
+[Vue Router warn]: No match found for location with path "/t3/messages"
+[Vue Router warn]: No match found for location with path "/t3/jobs"
+[Vue Router warn]: No match found for location with path "/t3/results"
+[Vue Router warn]: No match found for location with path "/t3/activity-logs"
+[Vue Router warn]: No match found for location with path "/t3/cost-logs"
+[Vue Router warn]: No match found for location with path "/t3/notifications"
+[Vue Router warn]: No match found for location with path "/t3/mcp"
+[Vue Router warn]: No match found for location with path "/t3/users"
+[Vue Router warn]: No match found for location with path "/t3/settings"
+
+ ❯ src/__tests__/layout-permissions.spec.ts (3 tests | 3 failed) 299ms
+     × hides notification logs from a default jobs:r member 121ms
+     × shows notification logs to settings:r members and owner/admin 61ms
+     × ignores a late old-tenant owner permission response after the current channels:r member resolves 114ms
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > renders only the channel section for channels:r even when the API returns a full payload
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > renders only the channel section for channels:r even when the API returns a full payload
+Failed to create chart: can't acquire context from the given item
+Failed to create chart: can't acquire context from the given item
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+Failed to create chart: can't acquire context from the given item
+Failed to create chart: can't acquire context from the given item
+
+ ❯ src/__tests__/dashboard-permissions.spec.ts (2 tests | 2 failed) 370ms
+     × renders only the channel section for channels:r even when the API returns a full payload 238ms
+     × clears old content and ignores a late old-tenant owner response after the current member resolves 131ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > renders only the channel section for channels:r even when the API returns a full payload
+AssertionError: expected 'Trang chủHôm nay7 ngày28 ngàyTháng nà…' not to contain 'R090-JOB-FORBIDDEN'
+
+Expected: "R090-JOB-FORBIDDEN"
+Received: "Trang chủHôm nay7 ngày28 ngàyTháng nàyQuý nàyNăm nàyNgày theo giờ Việt Nam (UTC+7)Tổng hội thoại5Vi phạm QC7Công việc đang chạy1Kênh hoạt động2Pancake5Tổng tin nhắn99Chi phí AI2.753.525đ Hoạt động gần đây Nghiêm trọngR090-JOB-FORBIDDEN-EVIDENCEvừa xongPrivatePhân loại:R090-CLASSIFICATION-PRIVATEvừa xong Chi phí AIChi phí hôm nay387.661đChi phí tháng này1.783.744đNgàyTokensChi phí (VNĐ)13/10/2026162.753.525đ Trạng thái dịch vụChưa có phép kiểm tra sức khỏe cho các dịch vụ này.API ServerChưa có dữ liệu kiểm traDatabaseChưa có dữ liệu kiểm traSchedulerChưa có dữ liệu kiểm tra Tin nhắn theo ngày Chi phí AI theo ngày"
+
+ ❯ src/__tests__/dashboard-permissions.spec.ts:114:31
+    112|     const { wrapper: member } = await mountDashboard()
+    113|     expect(member.text()).toContain('2')
+    114|     expect(member.text()).not.toContain('R090-JOB-FORBIDDEN')
+       |                               ^
+    115|     expect(member.text()).not.toContain('R090-CLASSIFICATION-PRIVATE')
+    116|     expect(member.text()).not.toContain('99')
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+AssertionError: expected 'Trang chủHôm nay7 ngày28 ngàyTháng nà…' not to contain 'R090-JOB-FORBIDDEN-EVIDENCE'
+
+Expected: "R090-JOB-FORBIDDEN-EVIDENCE"
+Received: "Trang chủHôm nay7 ngày28 ngàyTháng nàyQuý nàyNăm nàyNgày theo giờ Việt Nam (UTC+7)Tổng hội thoại5Vi phạm QC7Công việc đang chạy1Kênh hoạt động2Pancake5Tổng tin nhắn99Chi phí AI2.753.525đ Hoạt động gần đây Nghiêm trọngR090-JOB-FORBIDDEN-EVIDENCEvừa xongPrivatePhân loại:R090-CLASSIFICATION-PRIVATEvừa xong Chi phí AIChi phí hôm nay387.661đChi phí tháng này1.783.744đNgàyTokensChi phí (VNĐ)13/10/2026162.753.525đ Trạng thái dịch vụChưa có phép kiểm tra sức khỏe cho các dịch vụ này.API ServerChưa có dữ liệu kiểm traDatabaseChưa có dữ liệu kiểm traSchedulerChưa có dữ liệu kiểm tra Tin nhắn theo ngày Chi phí AI theo ngày"
+
+ ❯ src/__tests__/dashboard-permissions.spec.ts:129:32
+    127|     await router.push('/t2/dashboard')
+    128|     await flushPromises()
+    129|     expect(wrapper.text()).not.toContain('R090-JOB-FORBIDDEN-EVIDENCE')
+       |                                ^
+    130|     expect(wrapper.text()).not.toContain('R090-CLASSIFICATION-PRIVATE')
+    131|     expect(wrapper.text()).not.toContain('31415')
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > hides notification logs from a default jobs:r member
+AssertionError: expected 'Customer Care Monitor AI SyntheticTra…' not to contain 'Lịch sử thông báo'
+
+Expected: "Lịch sử thông báo"
+Received: "Customer Care Monitor AI SyntheticTrang chủTác vụ AIKết quảLịch sử thông báoRR090"
+
+ ❯ src/__tests__/layout-permissions.spec.ts:91:32
+     89|     const { wrapper } = await mountLayout('member')
+     90|     expect(wrapper.text()).toContain(viMessages.nav_jobs)
+     91|     expect(wrapper.text()).not.toContain(viMessages.nav_notification_l…
+       |                                ^
+     92|   })
+     93|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+AssertionError: expected 'Customer Care Monitor AI SyntheticTra…' to contain 'Lịch sử thông báo'
+
+Expected: "Lịch sử thông báo"
+Received: "Customer Care Monitor AI SyntheticTrang chủNhật ký hệ thốngNhật ký chi phíKết nối MCPNgười dùngCài đặtRR090"
+
+ ❯ src/__tests__/layout-permissions.spec.ts:97:29
+     95|     permissions = '{"settings":"r"}'
+     96|     const { wrapper: settings } = await mountLayout('member')
+     97|     expect(settings.text()).toContain(viMessages.nav_notification_logs)
+       |                             ^
+     98|     settings.unmount(); mounted.pop()
+     99|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+AssertionError: expected 'Customer Care Monitor AI SyntheticTra…' not to contain 'Lịch sử thông báo'
+
+Expected: "Lịch sử thông báo"
+Received: "Customer Care Monitor AI SyntheticTrang chủKênh chatTin nhắnTác vụ AIKết quảNhật ký hệ thốngNhật ký chi phíLịch sử thông báoKết nối MCPNgười dùngCài đặtRR090"
+
+ ❯ src/__tests__/layout-permissions.spec.ts:125:32
+    123|     await flushPromises()
+    124|     expect(wrapper.text()).toContain(viMessages.nav_channels)
+    125|     expect(wrapper.text()).not.toContain(viMessages.nav_notification_l…
+       |                                ^
+    126|   })
+    127| })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  5 failed (5)
+   Start at  04:37:31
+   Duration  13.11s (transform 6.94s, setup 0ms, import 24.35s, tests 669ms, environment 828ms)
+

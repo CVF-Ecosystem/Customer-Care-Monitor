@@ -7716,7 +7716,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Seven-finding runtime inheritance roadmap; F06 implemented but CHANGES_REQUIRED after independent review; other six OPEN."
+      "description": "Finite seven-finding inheritance roadmap: F06 accepted/published, R090 auth/quyền BUILD, R091 outbound design only; full product/live/native-fence/dependency/accounts remain open."
     },
     {
       "id": "gov002-docs-reviews-probes-gov002-review-round1-original-returned-cvf-downstream-gate-py-txt",
@@ -8228,6 +8228,265 @@
       "path": "docs/reviews/probes/r089_readiness/local-preparation-failure.json",
       "status": "ACTIVE",
       "description": "Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance."
+    },
+    {
+      "id": "r088-reviewed-publication",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_final/publication.json",
+      "status": "ACTIVE",
+      "description": "Actual reviewed F06 branch push/remote SHA verification, local pinned pr-ci PASS, hosted CI unobserved."
+    },
+    {
+      "id": "runtime091-outbound-delivery-spec",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Root-reviewed package C design: frozen delivery manifest, conservative receipt outcomes, cancellable SMTP and common batch backoff; no C BUILD or runtime evidence."
+    },
+    {
+      "id": "runtime090-local-review",
+      "family": "continuity",
+      "path": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Independent A candidate review, three named planned-C dependencies pending; no fullA/live closure."
+    },
+    {
+      "id": "runtime090-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Luna max source/evidence return, UI8PASS/type/build and backend package-summary PASS; per-case/SKIP missing, lifecycle Root-owned."
+    },
+    {
+      "id": "runtime090-proof-fixture-first-setup-failure-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure.md",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-fixture-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_manifest.json",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-fixture-manifest-first-setup-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_manifest_first_setup_failure.json",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-fixture-manifest-second-setup-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_manifest_second_setup_failure.json",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-fixture-second-setup-failure-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure.md",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-go-final-server-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/go-final-server.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-go-source-negative-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/go-source-negative.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-go-source-negative-spawn-failure-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure.md",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-legacy-ui-identity-fixture-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/legacy_ui_identity_fixture.diff",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-legacy-ui-identity-fixture-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/legacy_ui_identity_fixture.md",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-local-anonymous-volume-cleanup-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/local_anonymous_volume_cleanup.json",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-local-fixture-retry-disposition-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/local_fixture_retry_disposition.md",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-local-review-intake-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/local_review_intake.json",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-source-evidence-hashes-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/source_evidence_hashes.json",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-build-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-build.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-focused-tests-final-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-focused-tests-final.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-focused-tests-messages-projection-failure-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-focused-tests-messages-projection-failure.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-focused-tests-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-focused-tests.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-focused-tests-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-focused-tests.txt",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-forced-build-final-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-forced-build-final.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-permissions-and-forced-build-final-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-permissions-and-forced-build-final2-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final2.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-permissions-and-forced-build-retry-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-retry.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-source-negative-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-source-negative.log",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-ui-messages-projection-scaffold-failure-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/ui_messages_projection_scaffold_failure.md",
+      "status": "ACTIVE",
+      "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
+    },
+    {
+      "id": "runtime090-proof-fixture-first-setup-failure-before-root-role-metadata-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure-before-root-role-metadata.txt",
+      "status": "ACTIVE",
+      "description": "Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change."
+    },
+    {
+      "id": "runtime090-proof-fixture-second-setup-failure-before-root-role-metadata-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure-before-root-role-metadata.txt",
+      "status": "ACTIVE",
+      "description": "Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change."
+    },
+    {
+      "id": "runtime090-proof-go-source-negative-spawn-failure-before-root-role-metadata-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure-before-root-role-metadata.txt",
+      "status": "ACTIVE",
+      "description": "Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change."
+    },
+    {
+      "id": "runtime090-proof-local-gate-metadata-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/local_gate_metadata_failure.json",
+      "status": "ACTIVE",
+      "description": "Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change."
+    },
+    {
+      "id": "runtime090-proof-local-role-metadata-correction-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/local_role_metadata_correction.json",
+      "status": "ACTIVE",
+      "description": "Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change."
+    },
+    {
+      "id": "runtime090-proof-r090-auth-permissions-worker-return-2026-10-13-before-root-role-metadata-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13-before-root-role-metadata.txt",
+      "status": "ACTIVE",
+      "description": "Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change."
+    },
+    {
+      "id": "runtime090-root-local-gate-final",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/local_gate_final.json",
+      "status": "ACTIVE",
+      "description": "Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen."
+    },
+    {
+      "id": "runtime090-root-material-paths",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r090_auth_permissions/material_paths.json",
+      "status": "ACTIVE",
+      "description": "Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen."
     }
   ]
 }

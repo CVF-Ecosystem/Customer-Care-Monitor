@@ -6,7 +6,7 @@ Status: IN_PROGRESS
 Risk: R1
 Author: Codex /root
 Date: 2026-10-12
-Execution disposition: F06_REVIEWER_ACCEPTED_A_AND_C_AUTHORIZED_PENDING_BOUNDED_DISPATCH
+Execution disposition: F06_PUBLISHED_A_CANDIDATE_REVIEWED_C_DEPENDENCIES_PENDING_C_DESIGN_ACCEPTED
 
 ## Mục tiêu và authority
 
@@ -18,11 +18,11 @@ Nguồn chương trình: [điểm kiểm S0–S7 và P0–P4](../../roadmaps/AI_
 
 ## Current disposition và điều kiện chuyển bước
 
-GOV002-C1 đã được Local chấp nhận ở phạm vi static portable package, material d0ebc890d043b5f94b647c1b228e8f1660f83292 đã được xuất bản trên nhánh project. Trạng thái REVIEW / REVIEW_PASS, FREEZE sản phẩm OPEN. Roadmap này vẫn DRAFT, chưa có work order runtime; bước tiếp theo là SPEC/work order riêng. Doctor PASS27/27 chỉ chứng minh workspace.
+GOV002-C1 đã được Local chấp nhận ở phạm vi static portable package, material d0ebc890d043b5f94b647c1b228e8f1660f83292 đã được xuất bản trên nhánh project. R088 F06 đã được chấp nhận và publication được xác minh tại 14bbf1dbb079c4512eb2fed5dc94aeae391f236f. Package A CCMAI-RUNTIME-090 đang BUILD/ACTIVE từ dispatch HEAD 0813ec79bcc6687f13b72260094d2b669af697e4; chỉ chứng minh hợp đồng ứng dụng auth/quyền trong SPEC. Roadmap vẫn IN_PROGRESS, FREEZE sản phẩm OPEN; Package C còn ở mức planning. Doctor PASS27/27 chỉ chứng minh workspace.
 
 1. DONE: Local đã hoàn tất independent review GOV002 từ evidence đã trả, giữ nguyên implementation/proof của worker và sửa metadata có căn cứ. Không tái tạo implementation hoặc chạy lại toàn campaign mặc định.
-2. Chỉ khi disposition GOV002 được giải quyết và có baseline candidate được xác định rõ mới lựa chọn package runtime đầu tiên. Publication GOV002 thuộc authority sẵn có và Local; roadmap này không thay publication contract.
-3. Local chuẩn bị SPEC/work order và immutable seed đúng phạm vi trước runtime BUILD; xác nhận fixture và effect budget trước bất kỳ DB/native/provider effect. Không dispatch chỉ dựa vào roadmap DRAFT này.
+2. DONE: sau khi GOV002 được giải quyết và baseline candidate được xác định, Local đã chấp nhận/xuất bản R088 F06 và mở R090 Package A dưới authority riêng. Roadmap không thay publication contract.
+3. CURRENT: R090 Package A đang thực hiện bounded source-negative proof và auth/permission implementation. Sau Local review acceptance, Package C cần SPEC/work order/seed và fixture/effect boundary riêng trước bất kỳ DB/native/provider effect nào; hiện chưa active.
 
 Runtime reviewed source anchor: project HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c; backend/frontend sạch khi review. Nhận bàn giao runtime phải tái xác nhận hash/path và finding còn tồn tại. GOV002 đã được review/publish; không coi static governance acceptance là runtime acceptance.
 
@@ -47,17 +47,17 @@ P1/P2 là mức ưu tiên sửa lỗi, không phải CVF risk class. Mọi imple
 
 | ID | Finding / source project | Mức bằng chứng hiện tại | Kế thừa | Acceptance phải chứng minh | Trạng thái |
 | --- | --- | --- | --- | --- | --- |
-| F01 P1 | backend/api/router.go reset-password route; backend/api/handlers/users.go ResetUserPassword không chặn admin nhắm owner | Static path review; chưa thử exploit/DB trong lượt này | CVF-PERM | Admin không reset owner hoặc target bị policy cấm; authorized controls vẫn thành công; denial không đổi password/version; ràng buộc target kiểm trong transaction hoặc cách tránh race tương đương | OPEN_NOT_DISPATCHED |
-| F02 P1 | backend/api/router.go dashboard không RequirePermission; dashboard.go trả QC evidence/classification/cost | Static path/payload review, không claim live data leak | CVF-PERM | Member thiếu jobs/settings permission không nhận payload tương ứng qua dashboard hoặc đường thay thế notification logs; authorized users vẫn nhận đúng dữ liệu. Policy payload/route được chốt trước BUILD, không chỉ ẩn UI | OPEN_NOT_DISPATCHED |
-| F03 P2 | backend/api/handlers/auth.go RefreshTokenHandler đọc version rồi update không condition/error check | Static race/error-path review; DB reproduction pending | CVF-CAS | Hai refresh cùng token chỉ một request thắng; failure/zero-row không mint successful successor; version không bị refresh cũ ghi lùi qua password-reset revocation. Không sửa login/session semantics khác ngoài contract đã chốt | OPEN_NOT_DISPATCHED |
-| F04 P2 | backend/notifications/dispatcher.go ghi notified_at sau sends bất kể kết quả | Static control-flow review; transport/DB proof pending | DELIVERY-TRUTH / outcome separation | All-failed không đánh dấu delivered; mixed success có outcome/retry theo output, retry không gửi lại output đã xác nhận thành công; query/log/persistence failure không bị báo thành công. Chốt semantics notified_at và crash ambiguity trước BUILD | OPEN_NOT_DISPATCHED |
-| F05 P2 | backend/notifications/email.go Send/HealthCheck bỏ context; analyzer giữ owner đến notification return | Static caller/callee review; chưa chạy SMTP | CVF-DEADLINE | Server synthetic giữ kết nối hoặc không trả reply vẫn kết thúc theo deadline; cancellation được tôn trọng, tài nguyên được đóng và job owner được release. Không gọi SMTP/customer thật | OPEN_NOT_DISPATCHED |
+| F01 P1 | backend/api/router.go reset-password route; backend/api/handlers/users.go ResetUserPassword không chặn admin nhắm owner | Static path review; chưa thử exploit/DB trong lượt này | CVF-PERM | Admin không reset owner hoặc target bị policy cấm; authorized controls vẫn thành công; denial không đổi password/version; ràng buộc target kiểm trong transaction hoặc cách tránh race tương đương | A_CANDIDATE_REVIEWED_FINAL_C_DEPENDENCIES_PENDING |
+| F02 P1 | backend/api/router.go dashboard không RequirePermission; dashboard.go trả QC evidence/classification/cost | Static path/payload review, không claim live data leak | CVF-PERM | Member thiếu jobs/settings permission không nhận payload tương ứng qua dashboard hoặc đường thay thế notification logs; authorized users vẫn nhận đúng dữ liệu. Policy payload/route được chốt trước BUILD, không chỉ ẩn UI | A_CANDIDATE_REVIEWED_FINAL_C_DEPENDENCIES_PENDING |
+| F03 P2 | backend/api/handlers/auth.go RefreshTokenHandler đọc version rồi update không condition/error check | Static race/error-path review; DB reproduction pending | CVF-CAS | Hai refresh cùng token chỉ một request thắng; failure/zero-row không mint successful successor; version không bị refresh cũ ghi lùi qua password-reset revocation. Không sửa login/session semantics khác ngoài contract đã chốt | A_CANDIDATE_REVIEWED_FINAL_C_DEPENDENCIES_PENDING |
+| F04 P2 | backend/notifications/dispatcher.go ghi notified_at sau sends bất kể kết quả | Static control-flow review; transport/DB proof pending | DELIVERY-TRUTH / outcome separation | All-failed không đánh dấu delivered; mixed success có outcome/retry theo output, retry không gửi lại output đã xác nhận thành công; query/log/persistence failure không bị báo thành công. Chốt semantics notified_at và crash ambiguity trước BUILD | SPEC_ACCEPTED_R091_NOT_DISPATCHED |
+| F05 P2 | backend/notifications/email.go Send/HealthCheck bỏ context; analyzer giữ owner đến notification return | Static caller/callee review; chưa chạy SMTP | CVF-DEADLINE | Server synthetic giữ kết nối hoặc không trả reply vẫn kết thúc theo deadline; cancellation được tôn trọng, tài nguyên được đóng và job owner được release. Không gọi SMTP/customer thật | SPEC_ACCEPTED_R091_NOT_DISPATCHED |
 | F06 P2 | frontend/src/views/Messages.vue selectConversation; frontend/src/stores/conversations.ts fetchMessages dùng shared state | Đã tái hiện bằng hai hàm extracted thật và UI synthetic responses: selected B nhưng displayed messages/evaluation A khi A về sau. Không phải browser/full integration proof | UI-LIFETIME | A→B đảo response, A→B→A, late error/finally, reset/unmount và list/filter race không ghi nhầm message/evaluation/loading/error/selection. Chặn ở component và store; current healthy selection vẫn hiển thị đầy đủ | CLOSED_PASS_BOUNDED_SYNTHETIC_UI |
-| F07 P2 | backend/engine/analyzer.go runBatchMode provider-error continue trước progress/backoff | Static loop review; adapter có retry riêng và vẫn giữ nguyên | CVF-ATTEMPT / bounded retry | Provider-error batch vẫn qua bookkeeping/backoff chung; streak/delay/reset/progress đúng, cancel ngắt chờ và không phát thêm call. Test invalid-response/save-error và healthy batches để tránh regression. Không tuyên bố CVF đã gate AI | OPEN_NOT_DISPATCHED |
+| F07 P2 | backend/engine/analyzer.go runBatchMode provider-error continue trước progress/backoff | Static loop review; adapter có retry riêng và vẫn giữ nguyên | CVF-ATTEMPT / bounded retry | Provider-error batch vẫn qua bookkeeping/backoff chung; streak/delay/reset/progress đúng, cancel ngắt chờ và không phát thêm call. Test invalid-response/save-error và healthy batches để tránh regression. Không tuyên bố CVF đã gate AI | SPEC_ACCEPTED_R091_NOT_DISPATCHED |
 
 Mỗi finding phải có named failing assertion trên source trước sửa, healthy control và pass sau sửa khi phù hợp. Source-derived static findings chưa có runtime reproduction được ghi đúng mức; không đổi thành VERIFIED chỉ vì viết roadmap. Không coi malformed fixture, skip hoặc lỗi setup là detector credit.
 
-## Ba package đề xuất, chưa là work orders
+## Historical initial package proposal (before R088/R090)
 
 | Thứ tự | Package / outcome | Findings | Điều kiện vào và kết thúc |
 | --- | --- | --- | --- |
@@ -82,9 +82,9 @@ Local đọc legacy gate ALWAYS_ALLOWED và active-seed path/effect checks; prof
 
 ## Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY. Round1 review/status update is uncommitted and unpublished. Earlier planning was published to project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git, branch codex/cvf-portable-inheritance, material d0ebc890d043b5f94b647c1b228e8f1660f83292; receipt ../probes/gov002_reviewed_publication_2026-10-12.json. That receipt covers the previous planning version only. No private Core export or runtime/product closure claim.
+EXPORTED. Actual project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git; branch codex/cvf-portable-inheritance; material a8865d15296ce1a82ae368363d8f7de29392cdd0, continuity14bbf1dbb079c4512eb2fed5dc94aeae391f236f; artifact docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md. Remote-SHA receipt docs/reviews/probes/r088_local_final/publication.json. This covers the reviewed F06 version; later package A/C preparation is not source acceptance. No private parent/main/merge/deploy or hosted CI claim.
 
-## GOV002 prerequisite disposition
+## Historical GOV002 prerequisite disposition (before R088 activation)
 
 Local independently accepted GOV002-C1 bounded static portable material d0ebc890d043b5f94b647c1b228e8f1660f83292; project branch publication verified in ../probes/gov002_reviewed_publication_2026-10-12.json. The original prerequisite HOLD is satisfied. This roadmap remains DRAFT: no executable order or runtime effect, seven findings unchanged, next step is a separate SPEC/work order/seed before manual worker dispatch.
 
@@ -98,8 +98,12 @@ Package B/F06 is implemented but not accepted. [Local review](../R088_INDEPENDEN
 
 ## Current finite completion route (2026-10-13)
 
-F06 [final Local review](../R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md) accepted after original Local probes3/3PASS and candidate-bound worker88/88PASS/type/build. Close and publish the reviewed R088 material, then A(F01/F02/F03), then C(F04/F05/F07): two remaining implementation packages, each with source-negative/healthy/final evidence and independent Local review. Luna max read-only intake for both is authorized; only one package BUILD active at a time. No successor repair tranches for routine same-scope fixes. Completion means all seven acceptance rows are independently settled with actual source/test/persistence/transport proof at their stated maturity. No ETA or full product percentage asserted.
+F06 [final Local review](../R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md) accepted after original Local probes3/3PASS and candidate-bound worker88/88PASS/type/build. R088 accepted publication is complete. A(F01/F02/F03) is BUILD-active under R090, then C(F04/F05/F07) follows its Root-reviewed R091 SPEC: two remaining implementation packages, each with source-negative/healthy/final evidence and independent Local review. Luna max INTERNAL_AGENT worker route is authorized by owner; /root/auth_intake implements A, /root/outbound_intake authored C design and awaits dispatch. Only one package BUILD active at a time. No successor repair tranches for routine same-scope fixes. Completion means all seven acceptance rows are independently settled with actual source/test/persistence/transport proof at their stated maturity. No ETA or full product percentage asserted.
 
 Manual page/filter/search retains pending deep-link behavior by operator clarification. Global channels, dependency17, docs55, R086 native/fence and product-stage/account/deployment gaps stay separate; not converted to roadmap completion claims. Old DRAFT/no-runtime/not-started paragraphs above describe preparation history.
 
-F06 actual accepted material a8865d15296ce1a82ae368363d8f7de29392cdd0; historical round1 CHANGES_REQUIRED resolved by final independent review. Remaining source BUILD packages A and C pending bounded admission.
+F06 actual accepted material a8865d15296ce1a82ae368363d8f7de29392cdd0; historical round1 CHANGES_REQUIRED resolved by final independent review. R090 A source-negative/proof BUILD remains active; R091 C SPEC is accepted with frozen per-run delivery identity, conservative ambiguity, SMTP deadline and common batch bookkeeping, but has no BUILD authority before its seed/order. No acceptance yet for those six findings.
+
+## R090 independent disposition and finite C entry
+
+Local review ../R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md retains A source candidate; UI8PASS/type/build PASS and backend package summaries PASS, no per-case/SKIP claim. R090 is REVIEW/CHANGES_REQUIRED for exact three C dependencies: actual notification route settings alignment, two legacy mounted dashboard identity fixtures, and Go JSON case receipts. F01/F02/F03 are not finally closed. Local commits the reviewed candidate before activating already-planned R091 transport/persistence boundary, not an A repair successor. C must settle these dependencies plus F04/F05/F07 before all-seven closure. Runtime source/tooling proof remains synthetic; browser/live/hosted/deployment/accounts and separate debts unchanged.

@@ -9,7 +9,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
-- Seven-finding runtime inheritance roadmap; F06 implemented but CHANGES_REQUIRED after independent review; other six OPEN.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
+- Finite seven-finding inheritance roadmap: F06 accepted/published, R090 auth/quyền BUILD, R091 outbound design only; full product/live/native-fence/dependency/accounts remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
@@ -744,6 +744,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R088 REVIEW_PENDING record after the round1 repair return under the committed seed; not accepted.: `CVF_SESSION/tranches/CCMAI-RUNTIME-088.json`
 - F06 UI tenant/selection/request lifetime contract; implemented by the R088 return, acceptance pending independent review.: `docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md`
 - R088 work order displaying COMPLETE_PENDING_REVIEW after the round1 same-scope repair return; manual worker, Local independent review, no accepted source.: `docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md`
+- Actual reviewed F06 branch push/remote SHA verification, local pinned pr-ci PASS, hosted CI unobserved.: `docs/reviews/probes/r088_local_final/publication.json`
 - Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-089.json`
 - Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-089.json`
 - Unexecuted R089 invalid-seed preparation preserved, superseded by valid R090.: `docs/work_orders/CCMAI_RUNTIME_089_AUTH_PERMISSIONS.md`
@@ -1159,6 +1160,42 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R1 documentary progress review accepted, root publication defects retained; FREEZE OPEN due inherited docs55, no stage exit or runtime proof.: `docs/reviews/R087_ROADMAP_PROGRESS_DOCUMENTARY_REVIEW_2026-10-12.md`
 - Bounded R1 current progress and finite planning route work order.: `docs/work_orders/CCMAI_RUNTIME_087.md`
 - R087 documentary roadmap progress refresh lifecycle; no product stage closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-087.json`
+- Independent A candidate review, three named planned-C dependencies pending; no fullA/live closure.: `docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md`
+- Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change.: `docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure-before-root-role-metadata.txt`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure.md`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/fixture_manifest_first_setup_failure.json`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/fixture_manifest.json`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/fixture_manifest_second_setup_failure.json`
+- Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change.: `docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure-before-root-role-metadata.txt`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure.md`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/go-final-server.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/go-source-negative.log`
+- Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change.: `docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure-before-root-role-metadata.txt`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure.md`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/legacy_ui_identity_fixture.diff`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/legacy_ui_identity_fixture.md`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/local_anonymous_volume_cleanup.json`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/local_fixture_retry_disposition.md`
+- Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change.: `docs/reviews/probes/r090_auth_permissions/local_gate_metadata_failure.json`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/local_review_intake.json`
+- Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change.: `docs/reviews/probes/r090_auth_permissions/local_role_metadata_correction.json`
+- Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change.: `docs/reviews/probes/r090_auth_permissions/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13-before-root-role-metadata.txt`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/source_evidence_hashes.json`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-build.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-focused-tests-final.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-focused-tests.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-focused-tests-messages-projection-failure.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-focused-tests.txt`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-forced-build-final.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui_messages_projection_scaffold_failure.md`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final2.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-retry.log`
+- R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-source-negative.log`
+- Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen.: `docs/reviews/probes/r090_auth_permissions/local_gate_final.json`
+- Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen.: `docs/reviews/probes/r090_auth_permissions/material_paths.json`
+- Luna max source/evidence return, UI8PASS/type/build and backend package-summary PASS; per-case/SKIP missing, lifecycle Root-owned.: `docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md`
+- Root-reviewed package C design: frozen delivery manifest, conservative receipt outcomes, cancellable SMTP and common batch backoff; no C BUILD or runtime evidence.: `docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

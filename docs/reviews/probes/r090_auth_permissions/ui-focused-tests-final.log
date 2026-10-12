@@ -1,0 +1,13 @@
+
+> frontend@0.0.0 test
+> vitest run src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/frontend
+
+
+ Test Files  2 passed (2)
+      Tests  7 passed (7)
+   Start at  04:49:49
+   Duration  42.99s (transform 37.95s, setup 0ms, import 81.70s, tests 3.20s, environment 693ms)
+

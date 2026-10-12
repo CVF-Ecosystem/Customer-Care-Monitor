@@ -1,0 +1,80 @@
+diff --git a/frontend/src/__tests__/dashboard-qc-card.spec.ts b/frontend/src/__tests__/dashboard-qc-card.spec.ts
+--- a/frontend/src/__tests__/dashboard-qc-card.spec.ts
++++ b/frontend/src/__tests__/dashboard-qc-card.spec.ts
+@@ -7,6 +7,8 @@
+ import * as directives from 'vuetify/directives'
+ import { createI18n } from 'vue-i18n'
+ import { createRouter, createMemoryHistory } from 'vue-router'
++import { createPinia, setActivePinia } from 'pinia'
++import { useAuthStore } from '../stores/auth'
+ import viMessages from '../i18n/vi'
+ import enMessages from '../i18n/en'
+ import { lightColors } from '../styles/tokens'
+@@ -27,6 +29,9 @@
+ }
+ 
+ async function mountDashboard() {
++  const pinia = createPinia()
++  setActivePinia(pinia)
++  useAuthStore(pinia).tenantPerms = { role: 'owner', permissions: {} }
+   const router = createRouter({ history: createMemoryHistory(), routes: [{ path: '/:tenantId/dashboard', component: Dashboard }] })
+   await router.push('/t1/dashboard')
+   await router.isReady()
+@@ -35,6 +40,7 @@
+     global: { plugins: [
+       createVuetify({ components, directives, theme: { themes: { light: { colors: lightColors } } } }),
+       createI18n({ legacy: false, locale: 'vi', fallbackLocale: 'en', messages: { vi: viMessages, en: enMessages } }),
++      pinia,
+       router,
+     ] },
+   })
+@@ -53,7 +59,7 @@
+   beforeEach(() => {
+     apiGet.mockReset()
+     dashboardResponse = () => Promise.resolve(response(4))
+-    apiGet.mockImplementation((url: string) => url.endsWith('/dashboard') ? dashboardResponse() : Promise.resolve({ data: { has_data: true, is_demo: false } }))
++    apiGet.mockImplementation((url: string) => url.endsWith('/dashboard') ? dashboardResponse() : url.endsWith('/me') ? Promise.resolve({ data: { role: 'owner', permissions: '{}' } }) : Promise.resolve({ data: { has_data: true, is_demo: false } }))
+   })
+   afterEach(() => {
+     mounted.forEach(w => w.unmount())
+diff --git a/frontend/src/__tests__/dashboard-business-day.spec.ts b/frontend/src/__tests__/dashboard-business-day.spec.ts
+--- a/frontend/src/__tests__/dashboard-business-day.spec.ts
++++ b/frontend/src/__tests__/dashboard-business-day.spec.ts
+@@ -9,6 +9,8 @@
+ import * as directives from 'vuetify/directives'
+ import { createI18n } from 'vue-i18n'
+ import { createRouter, createMemoryHistory } from 'vue-router'
++import { createPinia, setActivePinia } from 'pinia'
++import { useAuthStore } from '../stores/auth'
+ import viMessages from '../i18n/vi'
+ import enMessages from '../i18n/en'
+ import { lightColors } from '../styles/tokens'
+@@ -30,6 +32,10 @@
+ const mounted: VueWrapper[] = []
+ 
+ async function mountDashboard(locale: 'vi' | 'en' = 'vi') {
++  const pinia = createPinia()
++  setActivePinia(pinia)
++  const auth = useAuthStore(pinia)
++  auth.user = { id: 'synthetic-owner', email: 'owner@example.invalid', name: 'Owner', is_admin: false, language: locale }
+   const router = createRouter({ history: createMemoryHistory(), routes: [{ path: '/:tenantId/dashboard', component: Dashboard }] })
+   await router.push('/t1/dashboard')
+   await router.isReady()
+@@ -38,6 +44,7 @@
+     global: { plugins: [
+       createVuetify({ components, directives, theme: { themes: { light: { colors: lightColors } } } }),
+       createI18n({ legacy: false, locale, fallbackLocale: 'en', messages: { vi: viMessages, en: enMessages } }),
++      pinia,
+       router,
+     ] },
+@@ -64,7 +71,9 @@
+     apiGet.mockReset()
+     apiGet.mockImplementation((url: string) => url.endsWith('/dashboard')
+       ? Promise.resolve({ data: { total_conversations: 0, active_channels: 0, active_jobs: 0, issues: 0, qc_violation_count: 0, qc_alerts: [], classification_recent: [], cost_by_day: [], messages_by_day: [], conversations_by_channel: [] } })
+-      : Promise.resolve({ data: { has_data: true, is_demo: false } }))
++      : url.endsWith('/me')
++        ? Promise.resolve({ data: { role: 'owner', permissions: '{}' } })
++        : Promise.resolve({ data: { has_data: true, is_demo: false } }))
+   })
+   afterEach(() => {
+     mounted.forEach((w) => w.unmount())

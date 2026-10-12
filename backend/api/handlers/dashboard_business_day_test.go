@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"net/http/httptest"
 	"sort"
 	"strings"
 	"testing"
@@ -11,6 +12,7 @@ import (
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
+	"github.com/gin-gonic/gin"
 )
 
 // CCMAI-RUNTIME-026 (F04): the Dashboard on Vietnam business days. The real GetDashboard runs on
@@ -123,7 +125,7 @@ func (f *dashBiz) get(t *testing.T, clock time.Time, query string) (map[string]i
 	orig := businessClock
 	businessClock = func() time.Time { return clock }
 	t.Cleanup(func() { businessClock = orig })
-	rec := bizGet(GetDashboard, f.tenant, "/api/v1/dashboard", query)
+	rec := dashboardBizGet(f.tenant, "/api/v1/dashboard", query)
 	var body map[string]interface{}
 	if rec.Code == http.StatusOK {
 		if err := json.Unmarshal(rec.Body.Bytes(), &body); err != nil {
@@ -131,6 +133,22 @@ func (f *dashBiz) get(t *testing.T, clock time.Time, query string) (map[string]i
 		}
 	}
 	return body, rec.Code
+}
+
+// dashboardBizGet models TenantContext's role for these direct-handler date regressions.
+func dashboardBizGet(tenantID, path, rawQuery string) *httptest.ResponseRecorder {
+	gin.SetMode(gin.TestMode)
+	rec := httptest.NewRecorder()
+	c, _ := gin.CreateTestContext(rec)
+	c.Set("tenant_id", tenantID)
+	c.Set("tenant_role", "owner")
+	target := path
+	if rawQuery != "" {
+		target += "?" + rawQuery
+	}
+	c.Request = httptest.NewRequest(http.MethodGet, target, nil)
+	GetDashboard(c)
+	return rec
 }
 
 func num(body map[string]interface{}, key string) float64 {
@@ -307,7 +325,7 @@ func TestDashboardInvalidDatesAreBadRequests(t *testing.T) {
 		f := setupDashBiz(t)
 		for _, q := range []string{"from=2026-02-30", "to=2026-13-01", "from=2026-10-03&to=2026-10-02", "from=0999-12-31", "to=9999-12-31", "from=abc"} {
 			orig := businessClock
-			rec := bizGet(GetDashboard, f.tenant, "/api/v1/dashboard", q)
+			rec := dashboardBizGet(f.tenant, "/api/v1/dashboard", q)
 			businessClock = orig
 			if rec.Code != http.StatusBadRequest || strings.TrimSpace(rec.Body.String()) != `{"error":"invalid_date_range"}` {
 				t.Errorf("%q: %d %s", q, rec.Code, rec.Body.String())

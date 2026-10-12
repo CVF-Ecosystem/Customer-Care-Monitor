@@ -1,0 +1,13 @@
+Command: npm test -- --reporter=dot src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+Working directory: frontend
+Result: exit 0
+
+> frontend@0.0.0 test
+> vitest run src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/frontend
+
+ Test Files  2 passed (2)
+      Tests  5 passed (5)
+   Start at  04:44:58
+   Duration  13.74s (transform 7.27s, setup 0ms, import 25.59s, tests 781ms, environment 715ms)
