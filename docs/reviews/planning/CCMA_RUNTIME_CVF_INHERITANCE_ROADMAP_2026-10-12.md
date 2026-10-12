@@ -6,7 +6,7 @@ Status: DRAFT
 Risk: R1
 Author: Codex /root
 Date: 2026-10-12
-Execution disposition: HOLD_SEPARATE_RUNTIME_SPEC_AND_WORK_ORDER
+Execution disposition: R088_F06_DISPATCH_READY_OTHER_FINDINGS_OPEN
 
 ## Mục tiêu và authority
 
@@ -24,7 +24,7 @@ GOV002-C1 đã được Local chấp nhận ở phạm vi static portable packag
 2. Chỉ khi disposition GOV002 được giải quyết và có baseline candidate được xác định rõ mới lựa chọn package runtime đầu tiên. Publication GOV002 thuộc authority sẵn có và Local; roadmap này không thay publication contract.
 3. Local chuẩn bị SPEC/work order và immutable seed đúng phạm vi trước runtime BUILD; xác nhận fixture và effect budget trước bất kỳ DB/native/provider effect. Không dispatch chỉ dựa vào roadmap DRAFT này.
 
-Runtime reviewed source anchor: project HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c; backend/frontend sạch khi review. Nhận bàn giao runtime phải tái xác nhận hash/path và finding còn tồn tại. GOV002 có thay đổi governance chưa commit; không coi chúng là runtime acceptance.
+Runtime reviewed source anchor: project HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c; backend/frontend sạch khi review. Nhận bàn giao runtime phải tái xác nhận hash/path và finding còn tồn tại. GOV002 đã được review/publish; không coi static governance acceptance là runtime acceptance.
 
 ## Source authority và mức kế thừa
 
@@ -52,7 +52,7 @@ P1/P2 là mức ưu tiên sửa lỗi, không phải CVF risk class. Mọi imple
 | F03 P2 | backend/api/handlers/auth.go RefreshTokenHandler đọc version rồi update không condition/error check | Static race/error-path review; DB reproduction pending | CVF-CAS | Hai refresh cùng token chỉ một request thắng; failure/zero-row không mint successful successor; version không bị refresh cũ ghi lùi qua password-reset revocation. Không sửa login/session semantics khác ngoài contract đã chốt | OPEN_NOT_DISPATCHED |
 | F04 P2 | backend/notifications/dispatcher.go ghi notified_at sau sends bất kể kết quả | Static control-flow review; transport/DB proof pending | DELIVERY-TRUTH / outcome separation | All-failed không đánh dấu delivered; mixed success có outcome/retry theo output, retry không gửi lại output đã xác nhận thành công; query/log/persistence failure không bị báo thành công. Chốt semantics notified_at và crash ambiguity trước BUILD | OPEN_NOT_DISPATCHED |
 | F05 P2 | backend/notifications/email.go Send/HealthCheck bỏ context; analyzer giữ owner đến notification return | Static caller/callee review; chưa chạy SMTP | CVF-DEADLINE | Server synthetic giữ kết nối hoặc không trả reply vẫn kết thúc theo deadline; cancellation được tôn trọng, tài nguyên được đóng và job owner được release. Không gọi SMTP/customer thật | OPEN_NOT_DISPATCHED |
-| F06 P2 | frontend/src/views/Messages.vue selectConversation; frontend/src/stores/conversations.ts fetchMessages dùng shared state | Đã tái hiện bằng hai hàm extracted thật và UI synthetic responses: selected B nhưng displayed messages/evaluation A khi A về sau. Không phải browser/full integration proof | UI-LIFETIME | A→B đảo response, A→B→A, late error/finally, reset/unmount và list/filter race không ghi nhầm message/evaluation/loading/error/selection. Chặn ở component và store; current healthy selection vẫn hiển thị đầy đủ | OPEN_NOT_DISPATCHED |
+| F06 P2 | frontend/src/views/Messages.vue selectConversation; frontend/src/stores/conversations.ts fetchMessages dùng shared state | Đã tái hiện bằng hai hàm extracted thật và UI synthetic responses: selected B nhưng displayed messages/evaluation A khi A về sau. Không phải browser/full integration proof | UI-LIFETIME | A→B đảo response, A→B→A, late error/finally, reset/unmount và list/filter race không ghi nhầm message/evaluation/loading/error/selection. Chặn ở component và store; current healthy selection vẫn hiển thị đầy đủ | DISPATCH_READY_NOT_IMPLEMENTED |
 | F07 P2 | backend/engine/analyzer.go runBatchMode provider-error continue trước progress/backoff | Static loop review; adapter có retry riêng và vẫn giữ nguyên | CVF-ATTEMPT / bounded retry | Provider-error batch vẫn qua bookkeeping/backoff chung; streak/delay/reset/progress đúng, cancel ngắt chờ và không phát thêm call. Test invalid-response/save-error và healthy batches để tránh regression. Không tuyên bố CVF đã gate AI | OPEN_NOT_DISPATCHED |
 
 Mỗi finding phải có named failing assertion trên source trước sửa, healthy control và pass sau sửa khi phù hợp. Source-derived static findings chưa có runtime reproduction được ghi đúng mức; không đổi thành VERIFIED chỉ vì viết roadmap. Không coi malformed fixture, skip hoặc lỗi setup là detector credit.
@@ -87,3 +87,7 @@ EXPORTED. Project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.
 ## GOV002 prerequisite disposition
 
 Local independently accepted GOV002-C1 bounded static portable material d0ebc890d043b5f94b647c1b228e8f1660f83292; project branch publication verified in ../probes/gov002_reviewed_publication_2026-10-12.json. The original prerequisite HOLD is satisfied. This roadmap remains DRAFT: no executable order or runtime effect, seven findings unchanged, next step is a separate SPEC/work order/seed before manual worker dispatch.
+
+## Active bounded package — R088
+
+Owner says continue after GOV002 publication. Local selects B/F06 before A/C: synthetic UI proof is independent of native fixture/accounts; P1 findings F01/F02 remain OPEN. Separate SPEC R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md, work order ../../work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md and immutable R088 seed at 45ac7a91a60f9f64239492e0db838c809ca51fca admit one manual worker package only. No implementation acceptance yet; other six findings not dispatched. Next finite boundary is worker return plus independent Local review, then reassess A/C prerequisites. Historical HOLD statements describe pre-R088 planning.

@@ -1,6 +1,6 @@
 # Portable CVF adoption - GOV002
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

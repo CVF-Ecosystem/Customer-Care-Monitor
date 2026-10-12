@@ -34,7 +34,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -2020,7 +2020,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-GOV-002-C1",
+  "activeTranche": "CCMAI-RUNTIME-088",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2036,5 +2036,43 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": []
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md"
+  ],
+  "x-historicalPreR088ActiveFields": {
+    "currentPhase": "REVIEW",
+    "activeTranche": "CCMAI-GOV-002-C1",
+    "activeWorkOrders": [],
+    "x-ownerRouting": {
+      "date": "2026-10-12",
+      "parkedAccounts": [
+        "facebook",
+        "zalo_oa"
+      ],
+      "nextObjective": "CCMAI-RUNTIME-087 REVIEW_PASS documentary roadmap tracking at9dbf26f; FREEZE OPEN due inherited docs55. ORCHESTRATOR next bounds P0 exact deadlink repair/validation, then P1 safety/dependency route decision before fixture/product execution authority; R086 source-only/native NOT_RUN/fence OPEN preserved, accounts parked/no provider/push.",
+      "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_087.md",
+      "buildDispatched": false,
+      "currentExecutionBudget": {
+        "documentaryPasses": 1,
+        "sameScopeDocumentaryRepairs": "Within unchanged authority; third-round rule applies",
+        "applicationRuntime": 0,
+        "provider": 0,
+        "push": 0
+      },
+      "publicationStatus": "R087_DOCUMENTARY_LOCAL_ONLY_NO_PUSH",
+      "sourceCheckpoint": "9dbf26fa88cc8995978961d98e6ffb9e3ba4da27",
+      "modelAssessment": "NOT_APPLICABLE_ROOT_R1_DOCUMENTARY_WORK_NO_LUNA_CAMPAIGN",
+      "activeLocalClosureOrder": null,
+      "localClosureEvidence": null
+    }
+  },
+  "x-r088MessagesLifetime": {
+    "status": "DISPATCH_READY_NOT_IMPLEMENTED",
+    "finding": "F06",
+    "spec": "docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
+    "worker": "ccmai-r088-worker",
+    "reviewer": "Codex /root",
+    "productStage": "S1/S5 correctness support; stage exit OPEN"
+  }
 }

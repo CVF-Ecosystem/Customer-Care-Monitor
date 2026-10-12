@@ -13,7 +13,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active scoped GOV002 REVIEW_PASS, reviewed material published; runtime roadmap awaits separate SPEC/work order, product gaps retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md`
+- Canonical active R088 WORK_ORDER handoff; manual UI worker not started, existing product gaps retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -208,6 +208,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/probes/gov002_runner_phases_receipt_2026-10-12.json`
 - GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/probes/gov002_unit_tests_receipt_2026-10-12.json`
 - GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `.github/workflows/cvf-downstream-gates.yml`
+- Historical GOV002 bounded static acceptance/publication; superseded by active R088 handoff, body retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md`
 - Unactivated first adoption seed; no BUILD occurred. Source audit required additive status compatibility, so successor CCMAI-GOV-002-C1 governs the initial worker packet; original seed immutable.: `CVF_SESSION/authority/CCMAI-GOV-002.json`
 - Source-audited public-source adoption choice, legacy grammar conflict and finite portable outcome; no installed/hosted/runtime claim.: `docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md`
 - Same-authority R2 consolidated repair round1 for strict status parsing, candidate-bound clone/range proof, portable guide and truthful return; worker must not commit.: `docs/work_orders/CCMAI_GOV_002.md`
@@ -697,8 +698,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim.: `docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json`
 - R075 independent source publication review; receipt follow-up conditional, no live or Actions claim.: `docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md`
 - Bounded source hashes, read scope and Node/npm dependency prerequisites; zero source mutations/tests/provider calls.: `docs/reviews/probes/r088_dispatch_source_audit_2026-10-12.json`
-- New dispatcher-owned UI F06 seed, not activated before first commit; bounded synthetic UI only.: `CVF_SESSION/authority/CCMAI-RUNTIME-088.json`
+- Immutable committed R088 seed at45ac7a9; active bounded F06 UI dispatch, no other runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-088.json`
+- R088 DISPATCH_READY record under committed seed; build/review not performed.: `CVF_SESSION/tranches/CCMAI-RUNTIME-088.json`
 - F06 UI tenant/selection/request lifetime contract; package B selected before fixture-dependent A/C, no implementation yet.: `docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md`
+- Active R088 DISPATCH_READY; F06 UI lifetime only, manual worker/independent Local review, no implementation yet.: `docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

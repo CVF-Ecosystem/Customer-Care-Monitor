@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-GOV-002-C1 REVIEW_PASS_BOUNDED_STATIC_PACKAGE at d0ebc890d043b5f94b647c1b228e8f1660f83292; reviewed material published to codex/cvf-portable-inheritance, receipt docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Local ORCHESTRATOR next prepares a bounded runtime inheritance SPEC/work order from the DRAFT roadmap for manual worker plus independent Local review; no executable runtime order exists. docs55/R086 native-fence/Facebook-Zalo OA/deployment remain open or parked; no provider/runtime/main push/deploy.",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-088 DISPATCH_READY: operator manually gives the canonical Messages lifetime work order to the implementation worker. Worker verifies the committed R088 seed/spec/source hashes, rehydrates and acknowledges actual HEAD/BUILD before source or dependency setup, then performs only F06 UI01-UI08 and returns COMPLETE_PENDING_REVIEW to independent Local review. No worker commit/push; docs55/R086 native-fence/accounts/product FREEZE/deployment remain open or parked; zero provider/backend/DB/Docker/Go/SMTP/customer effects.",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeTranche": "CCMAI-GOV-002-C1",
-  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent review accepted, no active implementation worker"
+  "activeTranche": "CCMAI-RUNTIME-088",
+  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; ccmai-r088-worker is assigned for manual implementation and has not started; Local independent REVIEWER"
 }

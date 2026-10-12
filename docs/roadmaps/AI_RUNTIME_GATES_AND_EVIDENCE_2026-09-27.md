@@ -23,6 +23,10 @@ Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệc
 
 Nguồn cho các acceptance nhỏ: [R054 scope kế tiếp](../reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md), [tổng hợp local receipt/UI milestones](README.md), [review R073](../reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md), [review R078](../reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md). Bảng này tổng hợp bản ghi đã có, không chạy lại runtime hoặc chứng minh live governance.
 
+### Current supporting repair — R088 Messages lifetime
+
+GOV002 static portable controls are independently accepted/published at d0ebc890/db4eb5c. R088 is now DISPATCH_READY, not implemented: [work order](../work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md), [SPEC](../reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md). One manual worker package fixes seven-finding-roadmap F06 only, so currently selected tenant/conversation cannot display another request's messages/evaluation. Package B runs before fixture-dependent A/C; two P1 security findings and all stage exits remain OPEN. Synthetic Vue/Pinia tests need no Docker/provider/accounts; docs55 still blocks product FREEZE. After the finite return/review, Local reassesses remaining safety/fixture route before new runtime authority; no automatic helper-tranche chain.
+
 ### Mốc sản phẩm ưu tiên và thứ tự còn lại
 
 **Mốc sản phẩm kế tiếp cần SPEC/work order:** một job qua gate nguồn/quyền có outcome và lý do rõ; đường từ chối/chờ không dispatch AI, đường cho phép tạo proposal có dẫn chứng. **Mốc luồng đầu tiên cần đạt:** thêm người duyệt, giao xử lý và ghi kết quả vụ việc. Đây là acceptance dự kiến cho lát cắt S2/S3/S5 tối thiểu, không tuyên bố stage exit hoặc tự cấp quyền provider/dữ liệu khách hàng.

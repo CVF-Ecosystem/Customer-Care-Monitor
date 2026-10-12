@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-088",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_REQUESTED_MESSAGES_UI_LIFETIME_REPAIR",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "ccmai-r088-worker",
+    "repairWorker": "ccmai-r088-worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Messages.vue",
+    "frontend/src/stores/conversations.ts",
+    "frontend/src/utils/conversationRequestScope*.ts",
+    "frontend/src/__tests__/messages-lifetime*.spec.ts",
+    "frontend/src/__tests__/conversations-lifetime*.spec.ts",
+    "frontend/src/__tests__/fixtures/conversation-lifetime/*",
+    "frontend/src/__tests__/messages-screen.spec.ts",
+    "frontend/src/__tests__/messages-business-day.spec.ts",
+    "docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md",
+    "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md"
+  ],
+  "prohibitedEffects": [
+    "backend_API_auth_persistence_outbound_changes",
+    "Core_or_installed_gates_policy_workflows_dependency_manifests_changes",
+    "historical_authority_seed_tranche_review_or_evidence_rewrite",
+    "private_Core_code_or_evidence_export",
+    "provider_real_API_customer_data_credentials_Docker_SQL_Go_SMTP_or_deployment_effect",
+    "network_except_one_locked_public_npm_dependency_setup",
+    "worker_commit_push_merge_force_push_or_self_review",
+    "runtime_AI_governance_full_product_stage_FREEZE_or_hosted_CI_claim_without_evidence"
+  ],
+  "ownerAuthorization": "Owner requests inheritance of useful CVF controls into CCMA, retains manual Sonnet worker / Local review, and says tiep tuc after GOV002 independent acceptance. This seed bounds the first independent UI-only finding F06; no authority inferred for the other six findings.",
+  "entryDecision": "Existing source review and unchanged source hashes reused; package B/F06 selected before A/C because its synthetic UI proof has no blocked DB/native/account prerequisite. Product S1/S5 correctness support, not stage exit.",
+  "executionBudget": {
+    "implementationPackages": 1,
+    "dependencySetupAttempts": 1,
+    "dependencySetup": "npm --prefix frontend ci --ignore-scripts, existing lock, only registry.npmjs.org; at most 10 minutes; no lock/package edits or secret inspection",
+    "focusedUiCampaigns": 1,
+    "mandatoryRegression": "Affected mounted UI/store tests and existing Messages suites plus forced vue-tsc/build once after final candidate; repeat only on named source/test changes or failures",
+    "mutationProof": "Old-source sensitivity mandatory in isolated copies; optional focused mutations inside exact disposable source scope, no live-tree mutation",
+    "sameScopeRepairs": "Consolidate inside unchanged authority; third repair round requires root-cause escalation, no automatic successor",
+    "providerCalls": 0,
+    "backendRuns": 0,
+    "databaseRuns": 0,
+    "browserLiveApiRuns": 0,
+    "applicationServerRuns": 0,
+    "projectBranchPublication": "Local commit steward may publish preparation and reviewed delivery only to existing codex/cvf-portable-inheritance branch; no main/merge/deploy"
+  },
+  "claimScope": "Pure UI state/lifetime behavior with synthetic API responses and static source/build evidence only; no CVF runtime governance or live application/customer/channel proof",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "45ac7a91a60f9f64239492e0db838c809ca51fca",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "DISPATCH_READY_SOURCE_NOT_IMPLEMENTED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "DISPATCH_READY"
+}

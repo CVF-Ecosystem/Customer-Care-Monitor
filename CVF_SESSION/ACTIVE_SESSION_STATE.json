@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-GOV-002-C1",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-GOV-002-C1 REVIEW_PASS_BOUNDED_STATIC_PACKAGE at d0ebc890d043b5f94b647c1b228e8f1660f83292; reviewed material published to codex/cvf-portable-inheritance, receipt docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Local ORCHESTRATOR next prepares a bounded runtime inheritance SPEC/work order from the DRAFT roadmap for manual worker plus independent Local review; no executable runtime order exists. docs55/R086 native-fence/Facebook-Zalo OA/deployment remain open or parked; no provider/runtime/main push/deploy.",
+  "activeTranche": "CCMAI-RUNTIME-088",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-088 DISPATCH_READY: operator manually gives the canonical Messages lifetime work order to the implementation worker. Worker verifies the committed R088 seed/spec/source hashes, rehydrates and acknowledges actual HEAD/BUILD before source or dependency setup, then performs only F06 UI01-UI08 and returns COMPLETE_PENDING_REVIEW to independent Local review. No worker commit/push; docs55/R086 native-fence/accounts/product FREEZE/deployment remain open or parked; zero provider/backend/DB/Docker/Go/SMTP/customer effects.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent review accepted, no active implementation worker",
+  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; ccmai-r088-worker is assigned for manual implementation and has not started; Local independent REVIEWER",
   "updatedAt": "2026-10-12",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {
@@ -63,17 +63,8 @@
     "push": 0
   },
   "x-actualWorkerModel": {
-    "model": "claude-sonnet-5-5",
-    "source": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
-    "verification": "WORKER_REPORTED_SESSION_IDENTITY_NOT_INDEPENDENT_PROVIDER_VERIFICATION",
-    "reasoningEffort": {
-      "sessionParameter": 10,
-      "scale": null,
-      "reason": "Scale not documented to worker"
-    },
-    "tokenUsage": null,
-    "bill": null,
-    "unavailableReason": "Worker telemetry not exposed"
+    "model": null,
+    "reason": "R088 worker assigned but not started; actual session telemetry must be recorded by worker at acknowledgment/return"
   },
   "x-ownerSubagentPreference": {
     "model": "Sonnet",
@@ -1157,14 +1148,16 @@
   },
   "x-queuedRuntimeInheritancePlanning": {
     "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
-    "status": "DRAFT_HOLD_SEPARATE_RUNTIME_SPEC_AND_WORK_ORDER",
+    "status": "F06_DISPATCH_READY_SEPARATE_SPEC_ORDER_SEED",
     "operatorDirective": "GOV002 review is accepted. Prepare separate runtime SPEC/work order before any manual Sonnet worker dispatch; no runtime effect granted by this planning pointer.",
     "findingCount": 7,
     "proposedPackageCount": 3,
-    "executionAuthorized": false,
+    "executionAuthorized": true,
     "activeTrancheUnchanged": "CCMAI-GOV-002-C1",
     "prerequisiteReview": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
-    "prerequisiteBuildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292"
+    "prerequisiteBuildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+    "activePackage": "B/F06/R088",
+    "executionBoundary": "Only manually dispatched R088 UI scope; other six findings not admitted"
   },
   "x-historicalR086ActualWorkerModel": {
     "model": "gpt-6-luna",
@@ -1183,5 +1176,44 @@
     "publication": "MATERIAL_EXPORTED_CONTINUITY_SYNC",
     "buildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json"
+  },
+  "x-historicalPreR088CurrentFacts": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-GOV-002-C1",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
+    "activeRole": "Codex /root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent review accepted, no active implementation worker",
+    "nextAllowedMove": "CCMAI-GOV-002-C1 REVIEW_PASS_BOUNDED_STATIC_PACKAGE at d0ebc890d043b5f94b647c1b228e8f1660f83292; reviewed material published to codex/cvf-portable-inheritance, receipt docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Local ORCHESTRATOR next prepares a bounded runtime inheritance SPEC/work order from the DRAFT roadmap for manual worker plus independent Local review; no executable runtime order exists. docs55/R086 native-fence/Facebook-Zalo OA/deployment remain open or parked; no provider/runtime/main push/deploy.",
+    "x-actualWorkerModel": {
+      "model": "claude-sonnet-5-5",
+      "source": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
+      "verification": "WORKER_REPORTED_SESSION_IDENTITY_NOT_INDEPENDENT_PROVIDER_VERIFICATION",
+      "reasoningEffort": {
+        "sessionParameter": 10,
+        "scale": null,
+        "reason": "Scale not documented to worker"
+      },
+      "tokenUsage": null,
+      "bill": null,
+      "unavailableReason": "Worker telemetry not exposed"
+    }
+  },
+  "x-r088Dispatch": {
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
+    "spec": "docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md",
+    "authoritySeed": "CVF_SESSION/authority/CCMAI-RUNTIME-088.json",
+    "authorityCommit": "45ac7a91a60f9f64239492e0db838c809ca51fca",
+    "finding": "F06",
+    "packageSelection": "B_FIRST_NO_DB_NATIVE_ACCOUNT_PREREQUISITE",
+    "workerStarted": false,
+    "sourceAcceptance": "NOT_IMPLEMENTED",
+    "roles": {
+      "workOrderAuthor": "Codex /root",
+      "implementationWorker": "ccmai-r088-worker",
+      "repairWorker": "ccmai-r088-worker",
+      "reviewer": "Codex /root",
+      "commitSteward": "Codex /root",
+      "closer": "Codex /root"
+    }
   }
 }

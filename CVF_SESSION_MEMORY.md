@@ -9,24 +9,20 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md", "activeTranche": "CCMAI-GOV-002-C1", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-088", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md
 
-## Current portable-adoption review
+## Current R088 dispatch
 
-CCMAI-GOV-002-C1 REVIEW_PASS_BOUNDED_STATIC_PACKAGE at d0ebc890d043b5f94b647c1b228e8f1660f83292; reviewed material published to codex/cvf-portable-inheritance, receipt docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Local ORCHESTRATOR next prepares a bounded runtime inheritance SPEC/work order from the DRAFT roadmap for manual worker plus independent Local review; no executable runtime order exists. docs55/R086 native-fence/Facebook-Zalo OA/deployment remain open or parked; no provider/runtime/main push/deploy.
+CCMAI-RUNTIME-088 DISPATCH_READY: operator manually gives the canonical Messages lifetime work order to the implementation worker. Worker verifies the committed R088 seed/spec/source hashes, rehydrates and acknowledges actual HEAD/BUILD before source or dependency setup, then performs only F06 UI01-UI08 and returns COMPLETE_PENDING_REVIEW to independent Local review. No worker commit/push; docs55/R086 native-fence/accounts/product FREEZE/deployment remain open or parked; zero provider/backend/DB/Docker/Go/SMTP/customer effects.
 
-Installed public profile identity verified; round1 independently accepted bounded in GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md. The older CHANGES_REQUIRED review below is historical. [Independent review](docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md) consolidates one repair in [same canonical work order](docs/work_orders/CCMAI_GOV_002.md). Original return/receipts retained in gov002_review_round0; missed initial BUILD acknowledgment remains a procedural deviation. Historical preparation was atca1c3aa; reviewed material d0ebc890d043b5f94b647c1b228e8f1660f83292 is published; this continuity update records scoped REVIEW_PASS.
-
-## Queued runtime inheritance roadmap — owner directive 2026-10-12
-
-Owner requests planning now and waits for Claude return before runtime inheritance. [Draft roadmap](docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md) records seven findings and three proposed packages (auth/permissions, UI lifetime, outbound failures). GOV002 independent review is accepted; status DRAFT/HOLD until separate SPEC/work order/seed before runtime BUILD. Manual Claude/Sonnet worker; Local orchestrates/reviews. No source/runtime/fixture/provider/commit/push effect is authorized by the draft; current REVIEW/GOV002 tuple and parked accounts unchanged. No automatic successor or whole-stage acceptance.
+Canonical work order: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md; SPEC: docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md. Seed committed at45ac7a91a60f9f64239492e0db838c809ca51fca. Worker has not started. Package B/F06 runs first for independent synthetic UI proof; other six findings remain OPEN. Read shared roadmap-control and repair evidence learning before worker/review. GOV002 static portable material accepted/published; original return/proof preserved. No implementation or full product acceptance.
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 
