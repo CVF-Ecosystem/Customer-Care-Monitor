@@ -9,11 +9,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
-- DRAFT roadmap for seven runtime findings / three proposed packages; GOV002 accepted, separate SPEC/work order required before execution.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
+- Seven-finding runtime inheritance roadmap; F06 implemented but CHANGES_REQUIRED after independent review; other six OPEN.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Canonical active R088 WORK_ORDER handoff; manual UI worker not started, existing product gaps retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md`
+- Active R088 REVIEW/REVIEW_PENDING handoff; round1 repair returned, independent Local review next, product gaps retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -698,10 +698,51 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual failed Git push/authentication receipt and postfailure remoteSHA; publication NOT_COMPLETED, no Actions/live claim.: `docs/reviews/probes/r075_github_publication_receipt_2026-10-10.json`
 - R075 independent source publication review; receipt follow-up conditional, no live or Actions claim.: `docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md`
 - Bounded source hashes, read scope and Node/npm dependency prerequisites; zero source mutations/tests/provider calls.: `docs/reviews/probes/r088_dispatch_source_audit_2026-10-12.json`
+- R088 detector-credit classification of the unchanged-source failures; credit only for named behavioral assertions.: `docs/reviews/probes/r088_messages_lifetime/baseline-classification.json`
+- R088 final test set on the unchanged production source in an isolated overlay (42 of 76 fail).: `docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source.json`
+- Earlier R088 baseline run of an earlier test version, preserved.: `docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run1.json`
+- Earlier R088 baseline run of an earlier test version, preserved.: `docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run2.json`
+- Earlier R088 baseline run of an earlier test version, preserved.: `docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run3.json`
+- R088 development candidate run 1 in an isolated copy, preserved.: `docs/reviews/probes/r088_messages_lifetime/candidate-iter1.json`
+- R088 development candidate run 2 in an isolated copy, preserved.: `docs/reviews/probes/r088_messages_lifetime/candidate-iter2.json`
+- R088 development candidate run 3 in an isolated copy, preserved.: `docs/reviews/probes/r088_messages_lifetime/candidate-iter3.json`
+- R088 candidate path and hash manifest of all changed or new files.: `docs/reviews/probes/r088_messages_lifetime/candidate-manifest.json`
+- R088 final live build result.: `docs/reviews/probes/r088_messages_lifetime/final-build.json`
+- R088 final governance gate runs (trusted worker-return, installed phases, closeability, catalog, doctor).: `docs/reviews/probes/r088_messages_lifetime/final-gates.json`
+- R088 final source and test hashes against the audited baseline.: `docs/reviews/probes/r088_messages_lifetime/final-hashes.json`
+- R088 protected-path and seed status at return.: `docs/reviews/probes/r088_messages_lifetime/final-protected.json`
+- R088 final live focused UI campaign: 76 passed, 0 skipped.: `docs/reviews/probes/r088_messages_lifetime/final-tests.json`
+- R088 final forced vue-tsc from the frontend directory.: `docs/reviews/probes/r088_messages_lifetime/final-typecheck.json`
+- R088 final disposable-overlay mutation proof: 21 killed, 3 classified equivalent survivors.: `docs/reviews/probes/r088_messages_lifetime/mutation-results.json`
+- Earlier R088 mutation run (20 mutations), preserved.: `docs/reviews/probes/r088_messages_lifetime/mutation-results-run1-20.json`
+- Earlier R088 mutation run (24 mutations), preserved.: `docs/reviews/probes/r088_messages_lifetime/mutation-results-run2-24.json`
+- R088 live final verification script (tests, type-check, build, hashes, manifest, gates).: `docs/reviews/probes/r088_messages_lifetime/r088_final_run.py`
+- R088 mutation driver; mutations run only in disposable overlays.: `docs/reviews/probes/r088_messages_lifetime/r088_mutation_driver.py`
+- R088 isolated overlay runner for baseline and mutation runs; never writes the live worktree.: `docs/reviews/probes/r088_messages_lifetime/r088_overlay_runner.py`
+- R088 round1 production build result.: `docs/reviews/probes/r088_messages_lifetime/round1/build-run1.json`
+- R088 round1 governance gate runs at return (preflight, worker-return phases, catalog, doctor, diff check).: `docs/reviews/probes/r088_messages_lifetime/round1/gates-run1.json`
+- R088 round1 source, test, package and lock LF hashes at return.: `docs/reviews/probes/r088_messages_lifetime/round1/hashes-run1.json`
+- R088 round1 baseline on the unchanged source; first invocation with a worker harness setup defect in one reload test, preserved.: `docs/reviews/probes/r088_messages_lifetime/round1/oldsource-run1.json`
+- R088 round1 baseline on the unchanged source after the harness correction: 9 behavioral failures, 3 healthy controls pass.: `docs/reviews/probes/r088_messages_lifetime/round1/oldsource-run2.json`
+- R088 round1 protected-path status, seed equality and round0 byte-preservation check.: `docs/reviews/probes/r088_messages_lifetime/round1/protected-and-preserved.json`
+- R088 round1 evidence runner (tests, type-check, build, hashes); synthetic UI only.: `docs/reviews/probes/r088_messages_lifetime/round1/r088_round1_run.py`
+- R088 round1 final live focused UI campaign: 88 passed, 0 skipped.: `docs/reviews/probes/r088_messages_lifetime/round1/tests-run1.json`
+- R088 round1 forced vue-tsc from the frontend directory.: `docs/reviews/probes/r088_messages_lifetime/round1/typecheck-run1.json`
+- R088 worker return COMPLETE_PENDING_REVIEW for F06 UI01-UI08; synthetic UI evidence only, independent review pending.: `docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md`
+- R088 round1 worker return COMPLETE_PENDING_REVIEW for R088-R1-F01; synthetic UI evidence only, independent review pending.: `docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_ROUND1_2026-10-13.md`
+- Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md`
+- Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/consolidated-findings.json`
+- Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/deep-link-user-intent-result.json`
+- Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/deep-link-user-intent.spec.ts`
+- Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/intake.json`
+- Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/local-setup-failure.json`
+- Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained.: `docs/reviews/probes/r088_local_review_round1/run_local_intent_probe.py`
+- Local preparation failure or final static review verification, not worker production evidence or acceptance.: `docs/reviews/probes/r088_local_review_round1/local-metadata-gate-failure.json`
+- Local preparation failure or final static review verification, not worker production evidence or acceptance.: `docs/reviews/probes/r088_local_review_round1/final-review-verification.json`
 - Immutable committed R088 seed at45ac7a9; active bounded F06 UI dispatch, no other runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-088.json`
-- R088 DISPATCH_READY record under committed seed; build/review not performed.: `CVF_SESSION/tranches/CCMAI-RUNTIME-088.json`
-- F06 UI tenant/selection/request lifetime contract; package B selected before fixture-dependent A/C, no implementation yet.: `docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md`
-- Active R088 DISPATCH_READY; F06 UI lifetime only, manual worker/independent Local review, no implementation yet.: `docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md`
+- R088 REVIEW_PENDING record after the round1 repair return under the committed seed; not accepted.: `CVF_SESSION/tranches/CCMAI-RUNTIME-088.json`
+- F06 UI tenant/selection/request lifetime contract; implemented by the R088 return, acceptance pending independent review.: `docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md`
+- R088 work order displaying COMPLETE_PENDING_REVIEW after the round1 same-scope repair return; manual worker, Local independent review, no accepted source.: `docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

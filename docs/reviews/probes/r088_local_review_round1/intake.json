@@ -1,0 +1,236 @@
+{
+  "recordedAtUtc": "2026-10-12T18:20:05.179695+00:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "workerManifestCount": 37,
+  "manifestChecks": [
+    {
+      "path": "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-088.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "CVF_SESSION_MEMORY.md",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "IMPLEMENTATION_STATUS.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/INDEX.md",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/catalog/ARTIFACT_REGISTRY.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-classification.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run1.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run2.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run3.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/candidate-iter1.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/candidate-iter2.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/candidate-iter3.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-build.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-gates.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-hashes.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-protected.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-tests.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-typecheck.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/mutation-results-run1-20.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/mutation-results-run2-24.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/mutation-results.json",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/r088_final_run.py",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/r088_mutation_driver.py",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/reviews/probes/r088_messages_lifetime/r088_overlay_runner.py",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "frontend/src/__tests__/conversations-lifetime.spec.ts",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "frontend/src/__tests__/messages-lifetime-resources.spec.ts",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "frontend/src/__tests__/messages-lifetime-startup.spec.ts",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "frontend/src/__tests__/messages-lifetime.spec.ts",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "frontend/src/stores/conversations.ts",
+      "rawMatch": true,
+      "lfMatch": true
+    },
+    {
+      "path": "frontend/src/views/Messages.vue",
+      "rawMatch": true,
+      "lfMatch": true
+    }
+  ],
+  "unexpectedChangedPaths": [],
+  "sourceHashBindings": "PASS",
+  "immutableSeed": "PASS",
+  "changedPathsAtIntake": [
+    "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md",
+    "docs/reviews/probes/r088_messages_lifetime/baseline-classification.json",
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run1.json",
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run2.json",
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run3.json",
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source.json",
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter1.json",
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter2.json",
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter3.json",
+    "docs/reviews/probes/r088_messages_lifetime/candidate-manifest.json",
+    "docs/reviews/probes/r088_messages_lifetime/final-build.json",
+    "docs/reviews/probes/r088_messages_lifetime/final-gates.json",
+    "docs/reviews/probes/r088_messages_lifetime/final-hashes.json",
+    "docs/reviews/probes/r088_messages_lifetime/final-protected.json",
+    "docs/reviews/probes/r088_messages_lifetime/final-tests.json",
+    "docs/reviews/probes/r088_messages_lifetime/final-typecheck.json",
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results-run1-20.json",
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results-run2-24.json",
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results.json",
+    "docs/reviews/probes/r088_messages_lifetime/r088_final_run.py",
+    "docs/reviews/probes/r088_messages_lifetime/r088_mutation_driver.py",
+    "docs/reviews/probes/r088_messages_lifetime/r088_overlay_runner.py",
+    "frontend/src/__tests__/conversations-lifetime.spec.ts",
+    "frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts",
+    "frontend/src/__tests__/messages-lifetime-resources.spec.ts",
+    "frontend/src/__tests__/messages-lifetime-startup.spec.ts",
+    "frontend/src/__tests__/messages-lifetime.spec.ts",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-088.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
+    "frontend/src/stores/conversations.ts",
+    "frontend/src/views/Messages.vue"
+  ],
+  "reviewerSourceEdits": 0
+}

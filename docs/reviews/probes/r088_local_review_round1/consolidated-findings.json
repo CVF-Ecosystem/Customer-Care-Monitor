@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "r088.localFindingSet@1",
+  "packet": "CCMAI-RUNTIME-088",
+  "reviewRound": 1,
+  "rootCauseClusterId": "CCMAI-MESSAGES-REQUEST-LIFETIME",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "candidateMessagesLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+  "findings": [
+    {
+      "id": "R088-R1-F01",
+      "priority": "P2",
+      "contract": [
+        "UI01",
+        "UI03",
+        "UI05",
+        "UI07"
+      ],
+      "source": "frontend/src/views/Messages.vue:initialize/selectConversation/deselectConversation",
+      "cause": "initialize checks tenant/mount lifetime only; explicit selection and deselection advance selectionGen but leave the older deep-link continuation eligible to select again.",
+      "observations": [
+        "Pending ?conv=cA page lookup; select B; late page result automatically selects A and starts A detail.",
+        "Pending ?conv=cA page lookup; select B then mobile back; late page result reopens A after explicit deselection."
+      ],
+      "evidence": "docs/reviews/probes/r088_local_review_round1/deep-link-user-intent-result.json",
+      "requiredOutcome": "Pending automatic deep-link work yields to newer explicit selection/deselect; no obsolete detail/evaluation chain or page mutation overriding newer user intent. Active untouched deep links on current/other pages and healthy list/map initialization still work.",
+      "repairScope": "Existing Messages.vue and seed-admitted lifetime tests/fixtures only; keep channels.ts protected.",
+      "regressionPlan": "Both named behavioral cases on pre-repair candidate must fail with healthy deep-link control passing. Cover page success/rejection and another-page reload boundary; add assertion of no obsolete detail/evaluation request. Preserve original regressions and demonstrate healthy current/other-page deep links."
+    }
+  ],
+  "deferred": [
+    {
+      "id": "CHANNELS-OLD-TENANT",
+      "disposition": "OUTSIDE_R088_GLOBAL_CHANNEL_COVERAGE_OPEN",
+      "reason": "SPEC explicitly leaves global channel coverage open and protects channels.ts; direct channelOptions consumer remains susceptible to late channel-store data. No complete tenant isolation claim."
+    },
+    {
+      "id": "DEPENDENCY-AUDIT17",
+      "disposition": "DISCLOSED_NOT_REPAIRED",
+      "reason": "Worker reports 17 dependency vulnerabilities; no dependency/security campaign admitted."
+    }
+  ],
+  "reviewerProductionEdits": 0,
+  "providerCalls": 0
+}

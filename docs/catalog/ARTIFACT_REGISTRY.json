@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-13",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -2382,7 +2382,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Canonical active R088 WORK_ORDER handoff; manual UI worker not started, existing product gaps retained."
+      "description": "Active R088 REVIEW/REVIEW_PENDING handoff; round1 repair returned, independent Local review next, product gaps retained."
     },
     {
       "id": "r060-work-order",
@@ -7716,7 +7716,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "DRAFT roadmap for seven runtime findings / three proposed packages; GOV002 accepted, separate SPEC/work order required before execution."
+      "description": "Seven-finding runtime inheritance roadmap; F06 implemented but CHANGES_REQUIRED after independent review; other six OPEN."
     },
     {
       "id": "gov002-docs-reviews-probes-gov002-review-round1-original-returned-cvf-downstream-gate-py-txt",
@@ -7828,7 +7828,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "F06 UI tenant/selection/request lifetime contract; package B selected before fixture-dependent A/C, no implementation yet."
+      "description": "F06 UI tenant/selection/request lifetime contract; implemented by the R088 return, acceptance pending independent review."
     },
     {
       "id": "r088-dispatch-source-audit",
@@ -7842,14 +7842,14 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
       "status": "ACTIVE",
-      "description": "Active R088 DISPATCH_READY; F06 UI lifetime only, manual worker/independent Local review, no implementation yet."
+      "description": "R088 work order displaying COMPLETE_PENDING_REVIEW after the round1 same-scope repair return; manual worker, Local independent review, no accepted source."
     },
     {
       "id": "r088-messages-lifetime-record",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-088.json",
       "status": "ACTIVE",
-      "description": "R088 DISPATCH_READY record under committed seed; build/review not performed."
+      "description": "R088 REVIEW_PENDING record after the round1 repair return under the committed seed; not accepted."
     },
     {
       "id": "gov002-handoff-accepted-history",
@@ -7857,6 +7857,293 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
       "status": "RETIRED",
       "description": "Historical GOV002 bounded static acceptance/publication; superseded by active R088 handoff, body retained."
+    },
+    {
+      "id": "r088-docs-reviews-r088-messages-lifetime-worker-return-2026-10-12-md",
+      "family": "continuity",
+      "path": "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "R088 worker return COMPLETE_PENDING_REVIEW for F06 UI01-UI08; synthetic UI evidence only, independent review pending."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-baseline-classification-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-classification.json",
+      "status": "ACTIVE",
+      "description": "R088 detector-credit classification of the unchanged-source failures; credit only for named behavioral assertions."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-baseline-unchanged-source-run1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run1.json",
+      "status": "ACTIVE",
+      "description": "Earlier R088 baseline run of an earlier test version, preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-baseline-unchanged-source-run2-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run2.json",
+      "status": "ACTIVE",
+      "description": "Earlier R088 baseline run of an earlier test version, preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-baseline-unchanged-source-run3-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run3.json",
+      "status": "ACTIVE",
+      "description": "Earlier R088 baseline run of an earlier test version, preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-baseline-unchanged-source-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source.json",
+      "status": "ACTIVE",
+      "description": "R088 final test set on the unchanged production source in an isolated overlay (42 of 76 fail)."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-candidate-iter1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/candidate-iter1.json",
+      "status": "ACTIVE",
+      "description": "R088 development candidate run 1 in an isolated copy, preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-candidate-iter2-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/candidate-iter2.json",
+      "status": "ACTIVE",
+      "description": "R088 development candidate run 2 in an isolated copy, preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-candidate-iter3-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/candidate-iter3.json",
+      "status": "ACTIVE",
+      "description": "R088 development candidate run 3 in an isolated copy, preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-candidate-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/candidate-manifest.json",
+      "status": "ACTIVE",
+      "description": "R088 candidate path and hash manifest of all changed or new files."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-final-build-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-build.json",
+      "status": "ACTIVE",
+      "description": "R088 final live build result."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-final-gates-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-gates.json",
+      "status": "ACTIVE",
+      "description": "R088 final governance gate runs (trusted worker-return, installed phases, closeability, catalog, doctor)."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-final-hashes-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-hashes.json",
+      "status": "ACTIVE",
+      "description": "R088 final source and test hashes against the audited baseline."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-final-protected-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-protected.json",
+      "status": "ACTIVE",
+      "description": "R088 protected-path and seed status at return."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-final-tests-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-tests.json",
+      "status": "ACTIVE",
+      "description": "R088 final live focused UI campaign: 76 passed, 0 skipped."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-final-typecheck-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/final-typecheck.json",
+      "status": "ACTIVE",
+      "description": "R088 final forced vue-tsc from the frontend directory."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-mutation-results-run1-20-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/mutation-results-run1-20.json",
+      "status": "ACTIVE",
+      "description": "Earlier R088 mutation run (20 mutations), preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-mutation-results-run2-24-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/mutation-results-run2-24.json",
+      "status": "ACTIVE",
+      "description": "Earlier R088 mutation run (24 mutations), preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-mutation-results-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/mutation-results.json",
+      "status": "ACTIVE",
+      "description": "R088 final disposable-overlay mutation proof: 21 killed, 3 classified equivalent survivors."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-r088-final-run-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/r088_final_run.py",
+      "status": "ACTIVE",
+      "description": "R088 live final verification script (tests, type-check, build, hashes, manifest, gates)."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-r088-mutation-driver-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/r088_mutation_driver.py",
+      "status": "ACTIVE",
+      "description": "R088 mutation driver; mutations run only in disposable overlays."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-r088-overlay-runner-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/r088_overlay_runner.py",
+      "status": "ACTIVE",
+      "description": "R088 isolated overlay runner for baseline and mutation runs; never writes the live worktree."
+    },
+    {
+      "id": "r088-local-round1-artifact-1",
+      "family": "continuity",
+      "path": "docs/reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained."
+    },
+    {
+      "id": "r088-local-round1-artifact-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/consolidated-findings.json",
+      "status": "ACTIVE",
+      "description": "Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained."
+    },
+    {
+      "id": "r088-local-round1-artifact-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/deep-link-user-intent-result.json",
+      "status": "ACTIVE",
+      "description": "Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained."
+    },
+    {
+      "id": "r088-local-round1-artifact-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/deep-link-user-intent.spec.ts",
+      "status": "ACTIVE",
+      "description": "Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained."
+    },
+    {
+      "id": "r088-local-round1-artifact-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/intake.json",
+      "status": "ACTIVE",
+      "description": "Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained."
+    },
+    {
+      "id": "r088-local-round1-artifact-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/local-setup-failure.json",
+      "status": "ACTIVE",
+      "description": "Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained."
+    },
+    {
+      "id": "r088-local-round1-artifact-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/run_local_intent_probe.py",
+      "status": "ACTIVE",
+      "description": "Independent Local R088 round1 source-bound review, finding or synthetic probe; unaccepted candidate and original worker evidence retained."
+    },
+    {
+      "id": "r088-local-round1-verification-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/local-metadata-gate-failure.json",
+      "status": "ACTIVE",
+      "description": "Local preparation failure or final static review verification, not worker production evidence or acceptance."
+    },
+    {
+      "id": "r088-local-round1-verification-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_local_review_round1/final-review-verification.json",
+      "status": "ACTIVE",
+      "description": "Local preparation failure or final static review verification, not worker production evidence or acceptance."
+    },
+    {
+      "id": "r088-docs-reviews-r088-messages-lifetime-worker-return-round1-2026-10-13-md",
+      "family": "continuity",
+      "path": "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_ROUND1_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "R088 round1 worker return COMPLETE_PENDING_REVIEW for R088-R1-F01; synthetic UI evidence only, independent review pending."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-oldsource-run1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/oldsource-run1.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 baseline on the unchanged source; first invocation with a worker harness setup defect in one reload test, preserved."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-oldsource-run2-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/oldsource-run2.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 baseline on the unchanged source after the harness correction: 9 behavioral failures, 3 healthy controls pass."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-tests-run1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/tests-run1.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 final live focused UI campaign: 88 passed, 0 skipped."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-typecheck-run1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/typecheck-run1.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 forced vue-tsc from the frontend directory."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-build-run1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/build-run1.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 production build result."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-hashes-run1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/hashes-run1.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 source, test, package and lock LF hashes at return."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-protected-and-preserved-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/protected-and-preserved.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 protected-path status, seed equality and round0 byte-preservation check."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-r088-round1-run-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/r088_round1_run.py",
+      "status": "ACTIVE",
+      "description": "R088 round1 evidence runner (tests, type-check, build, hashes); synthetic UI only."
+    },
+    {
+      "id": "r088-docs-reviews-probes-r088-messages-lifetime-round1-gates-run1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r088_messages_lifetime/round1/gates-run1.json",
+      "status": "ACTIVE",
+      "description": "R088 round1 governance gate runs at return (preflight, worker-return phases, catalog, doctor, diff check)."
     }
   ]
 }

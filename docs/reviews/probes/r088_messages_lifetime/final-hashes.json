@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "r088.finalRun@1",
+  "stage": "hashes",
+  "recordedAtUtc": "2026-10-12T14:19:04+00:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none",
+  "frontendChangedOrNew": {
+    "frontend/src/__tests__/conversations-lifetime.spec.ts": "caf6cef6ef25927a7b1f73f2670df907693bd784cf26fdb77c863980dc8b8c82",
+    "frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts": "0d1cf061bfdd0dcb2489f56e05291a1e1fc778486f26cbc3c5cd05638d1c8eb9",
+    "frontend/src/__tests__/messages-lifetime-resources.spec.ts": "bc979f3905c962144631e196edbe9c69100221102bec1cdc18ffa9a3086c1fce",
+    "frontend/src/__tests__/messages-lifetime-startup.spec.ts": "498820178a6183be22e82d6b37ebf62d93470eeaba19e5eb742f823ade7c83a7",
+    "frontend/src/__tests__/messages-lifetime.spec.ts": "db5f1a74f23f9980deaed57b05cc7261f5ace71e8ce7080612c25850d39dc5bc",
+    "frontend/src/stores/conversations.ts": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+    "frontend/src/views/Messages.vue": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888"
+  },
+  "baselineProductionLfSha256": {
+    "frontend/src/views/Messages.vue": "3f8ad239d8b5e6a24ef063dfee528887162ce6b5450ed23c33fc6141eb3480ea",
+    "frontend/src/stores/conversations.ts": "71160acfe8b90df1aea0695cd58c7a0d78769963c496a2a8cbca6e16490ecf21"
+  }
+}

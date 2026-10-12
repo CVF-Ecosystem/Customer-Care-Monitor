@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "r088.round1Run@1",
+  "stage": "typecheck",
+  "recordedAt": "2026-10-13T03:43:04+07:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none",
+  "command": "npx --no-install vue-tsc -b --force (cwd frontend)",
+  "cwd": "frontend",
+  "exitCode": 0,
+  "seconds": 20.62,
+  "timedOut": false,
+  "stdoutTail": "",
+  "stderrTail": ""
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "r088.round1Gates@1",
+  "recordedAt": "2026-10-13T03:46:44+07:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "note": "APPL N/A on the COMPLETE_PENDING_REVIEW order means the closeability contract was not checked at return; the active-packet admission was CHECKED before the first edit (pre-dispatch 5 controls PASS, APPL and ROUTE checked).",
+  "preEditGates": {
+    "preflight": "7/7 PASS",
+    "preDispatchActivePacket": "RESULT PASS mandatoryControls=5 failed=0; APPL and ROUTE checked the ACTIVE order"
+  },
+  "returnGates": [
+    {
+      "name": "legacy preflight (7 gates)",
+      "command": "python -B scripts/cvf_downstream_gate.py preflight",
+      "exitCode": 0,
+      "keyLines": [
+        "CVF downstream preflight: PASS (7/7 executed gates passed)"
+      ]
+    },
+    {
+      "name": "installed worker-return phase",
+      "command": "python -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --packet docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md --packet docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_ROUND1_2026-10-13.md",
+      "exitCode": 0,
+      "keyLines": [
+        "[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked",
+        "RESULT: PASS phase=worker-return mandatoryControls=6 failed=0"
+      ]
+    },
+    {
+      "name": "trusted worker-return phase (work order command)",
+      "command": "python -B ../.Controlled-Vibe-Framework-CVF/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --trusted --packet docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md --packet docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_ROUND1_2026-10-13.md --no-receipt",
+      "exitCode": 0,
+      "keyLines": [
+        "[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked",
+        "RESULT: PASS phase=worker-return mandatoryControls=6 failed=0"
+      ]
+    },
+    {
+      "name": "catalog check PowerShell 7",
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/manage_cvf_downstream_catalog.ps1 -Check",
+      "exitCode": 0,
+      "keyLines": [
+        "[PASS] Governed downstream catalog is valid and generated views match source truth."
+      ]
+    },
+    {
+      "name": "catalog check Windows PowerShell 5.1",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/manage_cvf_downstream_catalog.ps1 -Check",
+      "exitCode": 0,
+      "keyLines": [
+        "[PASS] Governed downstream catalog is valid and generated views match source truth."
+      ]
+    },
+    {
+      "name": "independent Core doctor",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .",
+      "exitCode": 0,
+      "keyLines": [
+        "  GATE_COVERAGE: INSTALLED=7 INVOKED=26 NOT_APPLICABLE_WITH_REASON=9 hostedCiObserved=false",
+        "  RESULT: PASS (27/27 checks passed)"
+      ]
+    },
+    {
+      "name": "git diff --check",
+      "command": "git diff --check",
+      "exitCode": 0,
+      "keyLines": []
+    }
+  ],
+  "providerCalls": 0,
+  "backendRuns": 0
+}

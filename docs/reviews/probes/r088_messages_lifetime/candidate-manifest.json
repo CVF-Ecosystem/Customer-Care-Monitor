@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "r088.finalRun@1",
+  "stage": "manifest",
+  "recordedAtUtc": "2026-10-12T14:23:36+00:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none",
+  "pathCount": 37,
+  "note": "every non-ignored changed or untracked path at generation time, except this manifest",
+  "authoritySeedCommit": "45ac7a91a60f9f64239492e0db838c809ca51fca",
+  "dispatchMaterialCommit": "5d11fd4ffd5a912dad633213defd8c1e0d3333b5",
+  "files": {
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json": {
+      "rawSha256": "a2abcb0055b822aada2a1ce4a5f49d922ff4be406177694542c4688e25ad1107",
+      "lfNormalizedSha256": "f852a5522fac89e28e2e4a068af404884e265b193e7897a1ebc672c319fb6fbe",
+      "bytes": 1262
+    },
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json": {
+      "rawSha256": "7c1fc429a7ff5e60bd584129f52ba80dcfc95572ff3d2e373cb0ed52cb14a16d",
+      "lfNormalizedSha256": "6d4d662997fd71608ed4693e762886d8c4a0d1027796ff66eb54ce08c6b257a7",
+      "bytes": 67032
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md": {
+      "rawSha256": "b0f7ab3193c167119b5a1ac767b6383cff0b5eacfb57a574ec851b5868e354c9",
+      "lfNormalizedSha256": "b8df7c4cc795d79185ec23f6df266ff62db6c33fa6bae981251502b9c52682d7",
+      "bytes": 8441
+    },
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-088.json": {
+      "rawSha256": "014ad133937eecfd882af2c535328e519e10180a92b56d5bd662061f24043c6b",
+      "lfNormalizedSha256": "9fe335ea06af407de63a87ceecc068da6adc312ad2db2345625662b84199f81a",
+      "bytes": 4711
+    },
+    "CVF_SESSION_MEMORY.md": {
+      "rawSha256": "d6cf66689edec7b0876bbb0b0e5b61c311ab55e18b99a8c478ab39baf2cf9127",
+      "lfNormalizedSha256": "a07a2a2051895c2a98b9ee80c73588514d444c5d10891048e18c2bce32be5aba",
+      "bytes": 219941
+    },
+    "IMPLEMENTATION_STATUS.json": {
+      "rawSha256": "c86678d0e025dfc0dbbe2b4cf83810fc23d6c95883b89392a7c7d78767bbd325",
+      "lfNormalizedSha256": "d6158b15c2bc0c43f87e09d29ca8ff9f164ecde301730d11281a1a00c5247257",
+      "bytes": 169609
+    },
+    "docs/INDEX.md": {
+      "rawSha256": "156e64fbf0d43c2ccc66fd494fc69227c162b7f41d9b310aeb2c1256ec153130",
+      "lfNormalizedSha256": "02a2648f2bb61de0acd80a1638b88a2f3d4ecf6b61b218b35fa9f5132935f9d6",
+      "bytes": 209896
+    },
+    "docs/catalog/ARTIFACT_REGISTRY.json": {
+      "rawSha256": "91e6ef8d11a82af1c422b2809e12e469976ad4e0ff4459071332853f26a41c84",
+      "lfNormalizedSha256": "8c58f0164968bc88109604657327104db017656f251cf601dd038075d960fcb2",
+      "bytes": 388062
+    },
+    "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md": {
+      "rawSha256": "7d537248ab49891ebbe00bc495f8bebb649e84c7de90248dd4266ffe082b7686",
+      "lfNormalizedSha256": "95145a7762f2e808407223b84e63e27b82e6e89819dc430962900946113f36f2",
+      "bytes": 14257
+    },
+    "docs/reviews/probes/r088_messages_lifetime/baseline-classification.json": {
+      "rawSha256": "5c08ddb8fea995dd7e679089ef9cdaee1f7f6bb3b6fe09ecb03ee382caf39e32",
+      "lfNormalizedSha256": "68c24707343696b29a6b42763a2cd68f5eb94574702542b2e16731d56e4264ae",
+      "bytes": 21604
+    },
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run1.json": {
+      "rawSha256": "751915d781b10744375f507ebf505751a065d41ed76ffb43541c6e87d5a753fe",
+      "lfNormalizedSha256": "b02d0ce692f3e51590059540288b6579a167c319e8986aa6bb655a93aa977be0",
+      "bytes": 36496
+    },
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run2.json": {
+      "rawSha256": "bcce54b66521ef5b53a2d46fe18e30b3906317eddde734eba48219e7f8c71b36",
+      "lfNormalizedSha256": "e3aa048c3f30766c20609c58ab27b92cca917cdbfadf45eac1b375c6f94fbc5e",
+      "bytes": 37973
+    },
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run3.json": {
+      "rawSha256": "0e82b2e795afb511ed1290df719303660679fd8cc7830a351e49637a385e1c8b",
+      "lfNormalizedSha256": "7a2436b195823ab39d4cd5bcb752f2e9c9f17faf801f26a33fc065fd2affb1a7",
+      "bytes": 40088
+    },
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source.json": {
+      "rawSha256": "71f9db28e85fb69e9e3d5fb8bb7c845b607c439f834eb00ca6af2684700b1eb4",
+      "lfNormalizedSha256": "ece3d73b45548f3c2be5fb958ef85e3668034979c449d6687be5250b8cd701a4",
+      "bytes": 41310
+    },
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter1.json": {
+      "rawSha256": "6b1bfb64cbbe03bcefda5afcc3d376bb1a45fbb2c78547f5e4bdf326d89a4659",
+      "lfNormalizedSha256": "25e957594a27ea65fb540572019edde2abc23a0456e9d290236811143e727c4a",
+      "bytes": 20056
+    },
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter2.json": {
+      "rawSha256": "dd3581ec21a4ddf68b957388ed61ccdd32d18042d7cb93363e952ede05bc2eb1",
+      "lfNormalizedSha256": "83dda6592a893ebf9fc009b8c3034c422c903a875b76dfcaf3b73667fe216ef2",
+      "bytes": 21270
+    },
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter3.json": {
+      "rawSha256": "c831e217c17d869e2e8c3e5e1f82c90cb3fda4c72ad3edbe652d534f4c27d45c",
+      "lfNormalizedSha256": "8e24bfcd98286d9c914691ff4de3163b0e93ed93f6e2b4aa551012fb6e077d51",
+      "bytes": 21872
+    },
+    "docs/reviews/probes/r088_messages_lifetime/final-build.json": {
+      "rawSha256": "19357c4fba1bee60bb6316c42d84afe92c003f647c4de465883b58a69223526a",
+      "lfNormalizedSha256": "09bce5273b79b84cfa7907f3f0a233975d122a578e9caa1ea95ceba0f048793e",
+      "bytes": 1932
+    },
+    "docs/reviews/probes/r088_messages_lifetime/final-gates.json": {
+      "rawSha256": "c5c81589b2233854c6e8570c99ea0b7f11e5f67810f7029d4a658a43ffdfecae",
+      "lfNormalizedSha256": "7b937ab759c7f027c3ffe0a8050e32d4d2b61d44a39abec42a0fc9ef8451cd7d",
+      "bytes": 12335
+    },
+    "docs/reviews/probes/r088_messages_lifetime/final-hashes.json": {
+      "rawSha256": "77344aea29f45b44413497532a97e69ff9bc97af325ed0b214664936916bd14a",
+      "lfNormalizedSha256": "14d24e1ce4ab77e0882c853bdf8d3a09be479ccbdd8b1c2dfedc1c92dfbf58f8",
+      "bytes": 1426
+    },
+    "docs/reviews/probes/r088_messages_lifetime/final-protected.json": {
+      "rawSha256": "79122fb4d06f6ee9e2f9b9aa2c9a9c8b32302700fc3606149319c75ec7c5e71f",
+      "lfNormalizedSha256": "35c1804274a282522743abe9c97e8a7c7b4d9872227491bf291510cd9b3947db",
+      "bytes": 455
+    },
+    "docs/reviews/probes/r088_messages_lifetime/final-tests.json": {
+      "rawSha256": "ac75ee059e7173e77aa5adb933b5583fbe45c76fcb200c05415f83c529e2c221",
+      "lfNormalizedSha256": "0033e7d10c30e378d5d5c555dbde8a132d1565fb6fe1f923d492a63f3e7a6368",
+      "bytes": 20387
+    },
+    "docs/reviews/probes/r088_messages_lifetime/final-typecheck.json": {
+      "rawSha256": "0b5d6b3098b1d617b6f22c35e9652c1fbb7104cec95dd42dfa01400b581c86f4",
+      "lfNormalizedSha256": "e315a7b87aa014fe1533201111b5d2d413655e642f78863a7d157930bb77ae2b",
+      "bytes": 422
+    },
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results-run1-20.json": {
+      "rawSha256": "51a2c883858db6e17a30e740ef4f7d9a2424858b1b7f609edc8098a6d42c215e",
+      "lfNormalizedSha256": "f44d4faf7d00206660103882e67d42694dfcd192270fa71e652dc93967aab3f0",
+      "bytes": 27005
+    },
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results-run2-24.json": {
+      "rawSha256": "f5e2b5235f5bd013c78903444a987374d1a22a00b293ef21a8e54038e5385ea1",
+      "lfNormalizedSha256": "7353d7a5dbcf9e9c8b69c3c5a0b1091b7b1c7d7c16c42360088d450ef1cba408",
+      "bytes": 31408
+    },
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results.json": {
+      "rawSha256": "7e3493bf3c485bd901eb3227c07c0a7cd50baef3745f82d2319513e8623254c7",
+      "lfNormalizedSha256": "d726b26c59d319a35967749291359fa25369970f7eb575230c9b48001b8a8b76",
+      "bytes": 33385
+    },
+    "docs/reviews/probes/r088_messages_lifetime/r088_final_run.py": {
+      "rawSha256": "6efe976c595cfe94a097cd0a385838086df84c65d60af16b3b02ae2e48e89b56",
+      "lfNormalizedSha256": "d9ab5f76d3f08369e5bdfc6f3fdddbaac97f536975ab7e52551078a513268158",
+      "bytes": 11465
+    },
+    "docs/reviews/probes/r088_messages_lifetime/r088_mutation_driver.py": {
+      "rawSha256": "932bbfb1e8a40d34291ef6715775a14db4ae95884ea9fdffcd79598a52943141",
+      "lfNormalizedSha256": "b13361711467f68b33db54ee56431a1605116214dc9fbca3bbab78bfd8e56962",
+      "bytes": 7381
+    },
+    "docs/reviews/probes/r088_messages_lifetime/r088_overlay_runner.py": {
+      "rawSha256": "7b5d7f3664e7869d6710fab1505f2d2135b5969c7eedd47e9380882e2f1e8e5e",
+      "lfNormalizedSha256": "842d9a8b00e1c61892700eadbc3a0d0376c42db7d36d0d1f11761954325cf33e",
+      "bytes": 7093
+    },
+    "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md": {
+      "rawSha256": "b9c27840e5dffcb61317aa42807b9b1a3d3b6d2d1e39d0d71507e6a249181c1a",
+      "lfNormalizedSha256": "4466010cb0c24eb172b5ab13bdc26a3caff00786935c08071b519621f0fece7b",
+      "bytes": 19010
+    },
+    "frontend/src/__tests__/conversations-lifetime.spec.ts": {
+      "rawSha256": "9ac40c5840f5ca79a3953cb78caa1e8e7c9a5d3138bee6af0d6d22a639a4d3ba",
+      "lfNormalizedSha256": "caf6cef6ef25927a7b1f73f2670df907693bd784cf26fdb77c863980dc8b8c82",
+      "bytes": 11078
+    },
+    "frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts": {
+      "rawSha256": "1b5261c28b6654866615fbd0d387889b063205758a7ce602b4d880adc8c494f6",
+      "lfNormalizedSha256": "0d1cf061bfdd0dcb2489f56e05291a1e1fc778486f26cbc3c5cd05638d1c8eb9",
+      "bytes": 13272
+    },
+    "frontend/src/__tests__/messages-lifetime-resources.spec.ts": {
+      "rawSha256": "4c28e5d3dcd6a0f7300c42996d527d22205943c15db59c8d2283f1eb89f07d82",
+      "lfNormalizedSha256": "bc979f3905c962144631e196edbe9c69100221102bec1cdc18ffa9a3086c1fce",
+      "bytes": 7347
+    },
+    "frontend/src/__tests__/messages-lifetime-startup.spec.ts": {
+      "rawSha256": "4ea0496c56a8c755e0614e923349c0e49ee37dc199c0f7aa739430317f312318",
+      "lfNormalizedSha256": "498820178a6183be22e82d6b37ebf62d93470eeaba19e5eb742f823ade7c83a7",
+      "bytes": 12358
+    },
+    "frontend/src/__tests__/messages-lifetime.spec.ts": {
+      "rawSha256": "5619f7189b4fde25e042e4ace7dbd67629ae6d999c9968fd65ea8a407ddd0d1c",
+      "lfNormalizedSha256": "db5f1a74f23f9980deaed57b05cc7261f5ace71e8ce7080612c25850d39dc5bc",
+      "bytes": 19701
+    },
+    "frontend/src/stores/conversations.ts": {
+      "rawSha256": "aa967ccbacec8d4355b1077fc3c391de273d55eec68803f193424e1e1e9f8855",
+      "lfNormalizedSha256": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+      "bytes": 3687
+    },
+    "frontend/src/views/Messages.vue": {
+      "rawSha256": "2f6df04fda074488925ea7b8c2f2662824c350fd4102b001b77adc0ca2e6eafa",
+      "lfNormalizedSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "bytes": 49336
+    }
+  }
+}

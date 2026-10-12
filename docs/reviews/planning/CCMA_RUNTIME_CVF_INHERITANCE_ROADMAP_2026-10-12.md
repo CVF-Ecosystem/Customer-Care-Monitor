@@ -2,15 +2,15 @@
 
 Memory class: PLANNING_RECORD
 docType: roadmap
-Status: DRAFT
+Status: IN_PROGRESS
 Risk: R1
 Author: Codex /root
 Date: 2026-10-12
-Execution disposition: R088_F06_DISPATCH_READY_OTHER_FINDINGS_OPEN
+Execution disposition: F06_REVIEWER_ACCEPTED_A_AND_C_AUTHORIZED_PENDING_BOUNDED_DISPATCH
 
 ## Mục tiêu và authority
 
-Owner yêu cầu chuẩn bị roadmap trước, chờ Claude phản hồi rồi tiến hành phần kế thừa. Lượt này chỉ cho phép lập kế hoạch/tài liệu; không cấp quyền BUILD runtime, fixture DB, Go campaign, SMTP/channel/provider/network, secret/customer data, commit/push hoặc deploy. Worker vẫn là Claude/Sonnet do owner copy giao; Local là orchestrator/reviewer và quyết định kỹ thuật cuối cùng. Không tự spawn worker.
+Owner on2026-10-13 authorizes Local to finish review/repairs without returning work to Claude and create Luna max internal workers for the remaining seven-finding inheritance roadmap. Local owns SPEC/work order/immutable seeds, independent review, commits and existing project branch publication. Each package receives bounded source/test/fixture authority before BUILD. Historical manual-worker dispatch statements below remain provenance; current role route supersedes them. Core stays read-only; accounts remain parked; this does not admit real customer/provider/deployment effects.
 
 Kết quả hữu hạn dự kiến: đóng bảy finding đã xác định trên các đường auth, dữ liệu dashboard, hiển thị hội thoại và outbound; người dùng không xem nhầm hội thoại, người thiếu quyền không lấy dữ liệu, thất bại gửi không biến thành thành công và job không bị giữ vô hạn bởi SMTP. Đây là hỗ trợ an toàn cho S1/S3/S5/S7, không phải nghiệm thu toàn bộ các stage hoặc luồng CSKH human review/assignment/outcome.
 
@@ -52,7 +52,7 @@ P1/P2 là mức ưu tiên sửa lỗi, không phải CVF risk class. Mọi imple
 | F03 P2 | backend/api/handlers/auth.go RefreshTokenHandler đọc version rồi update không condition/error check | Static race/error-path review; DB reproduction pending | CVF-CAS | Hai refresh cùng token chỉ một request thắng; failure/zero-row không mint successful successor; version không bị refresh cũ ghi lùi qua password-reset revocation. Không sửa login/session semantics khác ngoài contract đã chốt | OPEN_NOT_DISPATCHED |
 | F04 P2 | backend/notifications/dispatcher.go ghi notified_at sau sends bất kể kết quả | Static control-flow review; transport/DB proof pending | DELIVERY-TRUTH / outcome separation | All-failed không đánh dấu delivered; mixed success có outcome/retry theo output, retry không gửi lại output đã xác nhận thành công; query/log/persistence failure không bị báo thành công. Chốt semantics notified_at và crash ambiguity trước BUILD | OPEN_NOT_DISPATCHED |
 | F05 P2 | backend/notifications/email.go Send/HealthCheck bỏ context; analyzer giữ owner đến notification return | Static caller/callee review; chưa chạy SMTP | CVF-DEADLINE | Server synthetic giữ kết nối hoặc không trả reply vẫn kết thúc theo deadline; cancellation được tôn trọng, tài nguyên được đóng và job owner được release. Không gọi SMTP/customer thật | OPEN_NOT_DISPATCHED |
-| F06 P2 | frontend/src/views/Messages.vue selectConversation; frontend/src/stores/conversations.ts fetchMessages dùng shared state | Đã tái hiện bằng hai hàm extracted thật và UI synthetic responses: selected B nhưng displayed messages/evaluation A khi A về sau. Không phải browser/full integration proof | UI-LIFETIME | A→B đảo response, A→B→A, late error/finally, reset/unmount và list/filter race không ghi nhầm message/evaluation/loading/error/selection. Chặn ở component và store; current healthy selection vẫn hiển thị đầy đủ | DISPATCH_READY_NOT_IMPLEMENTED |
+| F06 P2 | frontend/src/views/Messages.vue selectConversation; frontend/src/stores/conversations.ts fetchMessages dùng shared state | Đã tái hiện bằng hai hàm extracted thật và UI synthetic responses: selected B nhưng displayed messages/evaluation A khi A về sau. Không phải browser/full integration proof | UI-LIFETIME | A→B đảo response, A→B→A, late error/finally, reset/unmount và list/filter race không ghi nhầm message/evaluation/loading/error/selection. Chặn ở component và store; current healthy selection vẫn hiển thị đầy đủ | REVIEWER_ACCEPTED_SYNTHETIC_UI_PENDING_COMMIT |
 | F07 P2 | backend/engine/analyzer.go runBatchMode provider-error continue trước progress/backoff | Static loop review; adapter có retry riêng và vẫn giữ nguyên | CVF-ATTEMPT / bounded retry | Provider-error batch vẫn qua bookkeeping/backoff chung; streak/delay/reset/progress đúng, cancel ngắt chờ và không phát thêm call. Test invalid-response/save-error và healthy batches để tránh regression. Không tuyên bố CVF đã gate AI | OPEN_NOT_DISPATCHED |
 
 Mỗi finding phải có named failing assertion trên source trước sửa, healthy control và pass sau sửa khi phù hợp. Source-derived static findings chưa có runtime reproduction được ghi đúng mức; không đổi thành VERIFIED chỉ vì viết roadmap. Không coi malformed fixture, skip hoặc lỗi setup là detector credit.
@@ -82,7 +82,7 @@ Local đọc legacy gate ALWAYS_ALLOWED và active-seed path/effect checks; prof
 
 ## Public Export Disposition
 
-EXPORTED. Project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git; branch codex/cvf-portable-inheritance; actual material d0ebc890d043b5f94b647c1b228e8f1660f83292; artifact docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md. Receipt ../probes/gov002_reviewed_publication_2026-10-12.json. Public-safe planning only; no private Core source/evidence export, runtime dispatch or product-completion claim.
+DEFERRED_PRIVATE_ONLY. Round1 review/status update is uncommitted and unpublished. Earlier planning was published to project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git, branch codex/cvf-portable-inheritance, material d0ebc890d043b5f94b647c1b228e8f1660f83292; receipt ../probes/gov002_reviewed_publication_2026-10-12.json. That receipt covers the previous planning version only. No private Core export or runtime/product closure claim.
 
 ## GOV002 prerequisite disposition
 
@@ -91,3 +91,13 @@ Local independently accepted GOV002-C1 bounded static portable material d0ebc890
 ## Active bounded package — R088
 
 Owner says continue after GOV002 publication. Local selects B/F06 before A/C: synthetic UI proof is independent of native fixture/accounts; P1 findings F01/F02 remain OPEN. Separate SPEC R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md, work order ../../work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md and immutable R088 seed at 45ac7a91a60f9f64239492e0db838c809ca51fca admit one manual worker package only. No implementation acceptance yet; other six findings not dispatched. Next finite boundary is worker return plus independent Local review, then reassess A/C prerequisites. Historical HOLD statements describe pre-R088 planning.
+
+## R088 round1 disposition (2026-10-13)
+
+Package B/F06 is implemented but not accepted. [Local review](../R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md) consumes candidate-bound76PASS/type/build and identifies one dependent deep-link continuation defect: late page result overrides explicit selection/back. Two named behavioral failures and a healthy control are retained. One same-scope repair under the existing seed, then independent review; no new tranche or global channel-store scope. F06 and other six findings remain OPEN. Product stage exits, docs55/native-fence/accounts/release/deployment are unchanged. Prior export above covers previous planning only; this update is DEFERRED_PRIVATE_ONLY until reviewed publication.
+
+## Current finite completion route (2026-10-13)
+
+F06 [final Local review](../R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md) accepted after original Local probes3/3PASS and candidate-bound worker88/88PASS/type/build. Close and publish the reviewed R088 material, then A(F01/F02/F03), then C(F04/F05/F07): two remaining implementation packages, each with source-negative/healthy/final evidence and independent Local review. Luna max read-only intake for both is authorized; only one package BUILD active at a time. No successor repair tranches for routine same-scope fixes. Completion means all seven acceptance rows are independently settled with actual source/test/persistence/transport proof at their stated maturity. No ETA or full product percentage asserted.
+
+Manual page/filter/search retains pending deep-link behavior by operator clarification. Global channels, dependency17, docs55, R086 native/fence and product-stage/account/deployment gaps stay separate; not converted to roadmap completion claims. Old DRAFT/no-runtime/not-started paragraphs above describe preparation history.

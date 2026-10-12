@@ -1,0 +1,692 @@
+{
+  "schemaVersion": "r088.mutationRun@1",
+  "liveWorktreeMutated": false,
+  "results": [
+    {
+      "id": "M01",
+      "mutation": "store: detail generation check removed",
+      "path": "frontend/src/stores/conversations.ts",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+      "afterLfSha256": "761ccaa8fa0eaa878254e73af549867b383e34b383379ca60a1bcf34c0d35ea3",
+      "exitCode": 1,
+      "counts": {
+        "failed": 8,
+        "passed": 54
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: detail publication boundary (UI04) overlapping detail calls: the later call wins whatever order the replies arrive in",
+          "assertion": "AssertionError: B-first: expected 'A' to be 'B' // Object.is equality"
+        },
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: detail publication boundary (UI04) A -> B -> A: an old A reply cannot win because the id matches",
+          "assertion": "AssertionError: old A must not publish while new A is pending: expected [ { id: 'A-Khách A-0', …(6) } ] to deeply equal []"
+        },
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by the current owner clears data and drops its pending replies",
+          "assertion": "AssertionError: expected [ { id: 'A-Khách A-0', …(6) } ] to deeply equal []"
+        },
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) fetch calls report whether they published",
+          "assertion": "AssertionError: expected true to be false // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (new A first)",
+          "assertion": "AssertionError: expected 'Người gửi · CN 27/09 16:00A-CŨ' to contain 'A-MỚI'"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) mobile back before completion clears the detail and late replies cannot bring it back",
+          "assertion": "AssertionError: old detail data must stay cleared: expected [ { id: 'cA-Khách A-0', …(6) } ] to deeply equal []"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2 with the same conversation id: the old tenant's reply cannot appear in the new tenant",
+          "assertion": "AssertionError: expected [ { id: 'c1-Khách của T1-0', …(6) } ] to deeply equal []"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (success-after-new) cannot touch the new one",
+          "assertion": "AssertionError: expected 'Người gửi · CN 27/09 16:00TIN-CỦA-LẦN…' to contain 'TIN-CỦA-LẦN-MỚI'"
+        }
+      ],
+      "failingTestCount": 8
+    },
+    {
+      "id": "M02",
+      "mutation": "store: list generation check removed",
+      "path": "frontend/src/stores/conversations.ts",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+      "afterLfSha256": "17e27e43f26e0f19bdc61e448f891d2403aed8c53523b1b0d35d1f41f7a2ac58",
+      "exitCode": 1,
+      "counts": {
+        "passed": 58,
+        "failed": 4
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: list publication boundary (UI04/UI06) overlapping list calls: the latest request wins list and total in either reply order",
+          "assertion": "AssertionError: new-first: expected [ 'trang-1' ] to deeply equal [ 'trang-2' ]"
+        },
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by the current owner clears data and drops its pending replies",
+          "assertion": "AssertionError: expected [ { id: 'l-muộn-0', …(7) } ] to deeply equal []"
+        },
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages list: the latest list request wins (UI06) reversed success: an older (initial) list reply cannot restore the previous query's rows",
+          "assertion": "AssertionError: late older list must not publish: expected 'FBDanh sách đầu15 ngày trướcChưa phân…' to contain 'Kết quả tìm'"
+        },
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages list: the latest list request wins (UI06) an older request settling while a newer one is pending neither publishes nor ends the busy state",
+          "assertion": "AssertionError: stale list must not replace rows: expected 'FBKết quả a15 ngày trướcChưa phân tíc…' not to contain 'Kết quả a'"
+        }
+      ],
+      "failingTestCount": 4
+    },
+    {
+      "id": "M03",
+      "mutation": "store: superseded detail failure is rethrown",
+      "path": "frontend/src/stores/conversations.ts",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+      "afterLfSha256": "c8665533f8158c5b67c580fcd5df90223b83fd093e5a6c20c89107140fafa5bc",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: detail publication boundary (UI04) a late rejection of a superseded detail call neither throws to its caller nor touches current data",
+          "assertion": "AssertionError: a superseded call must not surface its failure: expected Error: mạng lỗi muộn to not be an instance of Error"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M04",
+      "mutation": "store: detail data is not cleared when a new detail call starts",
+      "path": "frontend/src/stores/conversations.ts",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+      "afterLfSha256": "f58a044d199ebe6972c1d07ef6b84acdde268657959bdc8cc4ba42543964433d",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: detail publication boundary (UI04) a new detail call hides the previous conversation immediately",
+          "assertion": "AssertionError: A data must not stay visible while B is pending: expected [ { id: 'A-Khách A-0', …(6) } ] to deeply equal []"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M05",
+      "mutation": "store: owner gating removed from resetDetail",
+      "path": "frontend/src/stores/conversations.ts",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+      "afterLfSha256": "1705edfececdce792f0626ca439a7e6d0a23c2e26b76a6d0f79378f437acab28",
+      "exitCode": 1,
+      "counts": {
+        "passed": 60,
+        "failed": 2
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate or clear a newer owner's detail work",
+          "assertion": "AssertionError: expected [] to deeply equal [ 'của chủ mới' ]"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) an old owner unmounting AFTER the new one started must not cancel the new owner's request",
+          "assertion": "AssertionError: cleanup by the old owner must not invalidate the new owner: expected '' to contain 'TIN-CỦA-CHỦ-MỚI'"
+        }
+      ],
+      "failingTestCount": 2
+    },
+    {
+      "id": "M06",
+      "mutation": "store: owner gating removed from the list part of reset",
+      "path": "frontend/src/stores/conversations.ts",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec",
+      "afterLfSha256": "de0de2076024fb211bf5276e6808f5edc2cdb489af9910134a9dd3af5a33cf1e",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "conversations-lifetime.spec.ts",
+          "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate a newer owner's list work",
+          "assertion": "AssertionError: expected [] to deeply equal [ 'của chủ mới' ]"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M07",
+      "mutation": "component: continuation guard after fetchMessages removed",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "a07249ae264964fa5482404ca53af961f2219e820c5687451aac932534077f2c",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale messages success leaves the current evaluation loading state alone",
+          "assertion": "AssertionError: B is still loading: A's late reply must not end the evaluation spinner: expected false to be true // Object.is equality"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M08",
+      "mutation": "component: stale finally clears the current messages spinner",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "07151dd72fdea8c0be4936f7c1526da5f789aa65f44cf0877b54f4474b69995a",
+      "exitCode": 1,
+      "counts": {
+        "passed": 57,
+        "failed": 5
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (old A first)",
+          "assertion": "AssertionError: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale success does not publish, does not clear the current spinner and starts no evaluation",
+          "assertion": "AssertionError: B is still pending: its spinner must stay: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale rejection shows no error and leaves the current spinner and result alone",
+          "assertion": "AssertionError: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) mobile back then a late rejection and a new selection: no stale error and the new selection is intact",
+          "assertion": "AssertionError: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2: t2 selected first, then the old t1 reply arrives late and loses",
+          "assertion": "AssertionError: t2 is still pending: expected false to be true // Object.is equality"
+        }
+      ],
+      "failingTestCount": 5
+    },
+    {
+      "id": "M09",
+      "mutation": "component: stale evaluation success publishes",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "0478b74f93155d80e335e12f8bd80104abdaa7aec3d8683fcee82c89786a2688",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: A -> B -> A is a new lifetime (UI02) reversed evaluation replies for the same id: the newer lifetime keeps its evaluation",
+          "assertion": "AssertionError: expected 'Màn này chưa đối chiếu nguồn của các …' to contain 'QC-MỚI'"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M10",
+      "mutation": "component: selection generation not advanced on re-selection (A -> B -> A by id only)",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "6d5b117570f64fcebf00352a5e252edc4f1638b0803e4e1de62f22eed38dc264",
+      "exitCode": 1,
+      "counts": {
+        "passed": 56,
+        "failed": 6
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (old A first)",
+          "assertion": "AssertionError: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: A -> B -> A is a new lifetime (UI02) reversed evaluation replies for the same id: the newer lifetime keeps its evaluation",
+          "assertion": "AssertionError: expected 'Màn này chưa đối chiếu nguồn của các …' to contain 'QC-MỚI'"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale success does not publish, does not clear the current spinner and starts no evaluation",
+          "assertion": "AssertionError: B is still pending: its spinner must stay: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale messages success leaves the current evaluation loading state alone",
+          "assertion": "AssertionError: B is still loading: A's late reply must not end the evaluation spinner: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale rejection shows no error and leaves the current spinner and result alone",
+          "assertion": "AssertionError: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale evaluation success or failure cannot change the current evaluation spinner, data or error",
+          "assertion": "AssertionError: stale evaluation must not appear for B: expected 'Màn này chưa đối chiếu nguồn của các …' not to contain 'QC-CỦA-A-MUỘN'"
+        }
+      ],
+      "failingTestCount": 6
+    },
+    {
+      "id": "M11",
+      "mutation": "component: tenant watcher disabled",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "65a33422eb057ec2504e77a3e1759e474b037914fcbe91e261c3be332305fe30",
+      "exitCode": 1,
+      "counts": {
+        "passed": 53,
+        "failed": 9
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change releases the previous tenant's object URLs",
+          "assertion": "AssertionError: the old tenant's resource must be released: expected [ 'blob:synthetic-1' ] to deeply equal []"
+        },
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change with a pending image fetch: the old result allocates nothing",
+          "assertion": "AssertionError: expected [ 'blob:synthetic-1' ] to deeply equal []"
+        },
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map reply cannot overwrite the t2 map",
+          "assertion": "AssertionError: the new tenant must load its own status map: expected undefined to be defined"
+        },
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map failure cannot turn the t2 chips into \"unknown\"",
+          "assertion": "TypeError: Cannot read properties of undefined (reading 'resolve')"
+        },
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages initialization and deep link stop when their lifetime ended (UI07) t1 -> t2 -> t1: the first t1 lifetime does not continue although the tenant string matches again",
+          "assertion": "AssertionError: expected [ '/tenants/t1/channels' ] to deeply equal [ '/tenants/t1/channels', …(2) ]"
+        },
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages initialization and deep link stop when their lifetime ended (UI07) tenant change at the deep-link page lookup: the old tenant's continuation does not select",
+          "assertion": "AssertionError: the new tenant must be loaded: expected false to be true // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2 with the same conversation id: the old tenant's reply cannot appear in the new tenant",
+          "assertion": "AssertionError: tenant change must clear the selection: expected true to be false // Object.is equality"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2: t2 selected first, then the old t1 reply arrives late and loses",
+          "assertion": "Error: no conversation row containing Khách của T2"
+        },
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) healthy control: switching tenants and selecting again works end to end",
+          "assertion": "Error: no conversation row containing Khách của T2"
+        }
+      ],
+      "failingTestCount": 9
+    },
+    {
+      "id": "M12",
+      "mutation": "component: initialization continues after the channel step",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "6cfd152589094ea90212658a80e81b910ac122fc8187d14ebbbec60a6bce0807",
+      "exitCode": 1,
+      "counts": {
+        "passed": 60,
+        "failed": 2
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the channel list is pending: no list request follows",
+          "assertion": "AssertionError: a dead lifetime must not continue its initialization: expected [ { …(2) } ] to have a length of +0 but got 1"
+        },
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages initialization and deep link stop when their lifetime ended (UI07) t1 -> t2 -> t1: the first t1 lifetime does not continue although the tenant string matches again",
+          "assertion": "AssertionError: a finished lifetime must not continue: expected [ { …(2) } ] to have a length of +0 but got 1"
+        }
+      ],
+      "failingTestCount": 2
+    },
+    {
+      "id": "M13",
+      "mutation": "component: deep-link continuation after the page lookup",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "31e38b64f50c7cd81af28903094c614a1210a525b0bb74292f88cda5b2200690",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at a deep-link lookup that points to another page: that page is never loaded",
+          "assertion": "AssertionError: a dead lifetime must not reload a list page: expected 2 to be 1 // Object.is equality"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M14",
+      "mutation": "component: object URL allocated for a finished lifetime",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "a1d72adafc0d36fa54039d341c021af69f93d6689306b5a09dd9e494211b50b7",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) unmount while the response body is still downloading: finishing it leaves no live object URL",
+          "assertion": "AssertionError: expected [ 'blob:synthetic-1' ] to deeply equal []"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M15",
+      "mutation": "component: invalidation keeps 'loading' markers",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "8a30d9917a2826a4ea0edf81ff09545a696c66a6e6246e0a39c47a095eedbc88",
+      "exitCode": 1,
+      "counts": {
+        "passed": 60,
+        "failed": 2
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) a later lifetime that needs the same URL loads it itself and the old fetch cannot own it",
+          "assertion": "AssertionError: the new lifetime must issue its own fetch for the shared URL: expected [ { …(6) } ] to have a length of 2 but got 1"
+        },
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) a stale failed fetch cannot delete the cache entry a newer lifetime already filled",
+          "assertion": "TypeError: Cannot read properties of undefined (reading 'resolveOk')"
+        }
+      ],
+      "failingTestCount": 2
+    },
+    {
+      "id": "M16",
+      "mutation": "component: stale list catch sets the list error",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "SURVIVED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "2d05be953bf44f4031109a5636fa0409d373db9d54fbdb9d50b02568e0845841",
+      "exitCode": 0,
+      "counts": {
+        "passed": 62
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [],
+      "failingTestCount": 0
+    },
+    {
+      "id": "M17",
+      "mutation": "component: deselect does not reset the store detail",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "ea1bbff1a7508e6e0837f824f0f912d1fac224b549801165b46824569273d330",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: reset, tenant change and remount (UI05) mobile back before completion clears the detail and late replies cannot bring it back",
+          "assertion": "AssertionError: old detail data must stay cleared: expected [ { id: 'cA-Khách A-0', …(6) } ] to deeply equal []"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M18",
+      "mutation": "component: releaseImages does not revoke",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "6687369456e7fbdfca24dda6ba7ff67d04f6ae0cda73c62afd0a2d1250dd1ae0",
+      "exitCode": 1,
+      "counts": {
+        "passed": 60,
+        "failed": 2
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change releases the previous tenant's object URLs",
+          "assertion": "AssertionError: the old tenant's resource must be released: expected [ 'blob:synthetic-1' ] to deeply equal []"
+        },
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) unmount revokes every object URL the lifetime still owns",
+          "assertion": "AssertionError: expected [ 'blob:synthetic-1' ] to deeply equal []"
+        }
+      ],
+      "failingTestCount": 2
+    },
+    {
+      "id": "M19",
+      "mutation": "component: status map applies without lifetime check",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "2418de561beade4339ad3ace0bf6bf0a97e8d103f1141456612efbf581962d71",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map reply cannot overwrite the t2 map",
+          "assertion": "AssertionError: late t1 map must not relabel t2: expected [ 'Không đạt' ] to deeply equal [ 'Đạt / đã phân loại' ]"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M20",
+      "mutation": "component: header may show the store's non-matching conversation (defense in depth)",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "22e0d4ea189146477583956f347c3595bf963f0ccbcb3ff2a1251cee8a72ba18",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime.spec.ts",
+          "title": "Messages detail: pending selection must not expose the previous conversation (UI01) a reply whose conversation id is not the selected one is never shown as the selection's header or count",
+          "assertion": "AssertionError: expected 'Người khác hẳn' to contain 'Khách A'"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M21",
+      "mutation": "component: stale messages failure sets the current error",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "SURVIVED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "8f8761f7b025e230eba9d16decedda517b56196357bbefc1e48f3b59ebb7b29c",
+      "exitCode": 0,
+      "counts": {
+        "passed": 62
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [],
+      "failingTestCount": 0
+    },
+    {
+      "id": "M22",
+      "mutation": "component: deselect does not advance the selection generation",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "SURVIVED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "c4fb6bdd06e6fde383bde8605431ddfc8477ffff986708a8f565b8a326d66b60",
+      "exitCode": 0,
+      "counts": {
+        "passed": 62
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [],
+      "failingTestCount": 0
+    },
+    {
+      "id": "M23",
+      "mutation": "component: ending a lifetime does not advance the lifetime generation",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "8db561d5c73306bf2125b0e9b149b4990cd0e58f4adce0b21036b3f2f6ee627d",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-startup.spec.ts",
+          "title": "Messages initialization and deep link stop when their lifetime ended (UI07) t1 -> t2 -> t1: the first t1 lifetime does not continue although the tenant string matches again",
+          "assertion": "AssertionError: a finished lifetime must not continue: expected [ { …(2) } ] to have a length of +0 but got 1"
+        }
+      ],
+      "failingTestCount": 1
+    },
+    {
+      "id": "M24",
+      "mutation": "component: image fetch result accepted after its epoch ended (first guard)",
+      "path": "frontend/src/views/Messages.vue",
+      "disposition": "KILLED",
+      "matchCount": 1,
+      "beforeLfSha256": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+      "afterLfSha256": "fc260206eb51a2d319c43c1d0e4bca390de171169354aca79e5faee6858b8018",
+      "exitCode": 1,
+      "counts": {
+        "passed": 61,
+        "failed": 1
+      },
+      "suiteLevelFailures": [],
+      "failingTests": [
+        {
+          "file": "messages-lifetime-resources.spec.ts",
+          "title": "Messages image resources follow the lifetime that requested them (UI08) a stale failed fetch cannot delete the cache entry a newer lifetime already filled",
+          "assertion": "Error: Cannot call attributes on an empty DOMWrapper."
+        }
+      ],
+      "failingTestCount": 1
+    }
+  ]
+}

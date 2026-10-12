@@ -1,0 +1,407 @@
+{
+  "schemaVersion": "r088.finalRun@1",
+  "stage": "tests",
+  "recordedAtUtc": "2026-10-12T14:17:27+00:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none",
+  "command": "npm --prefix frontend test -- src/__tests__/conversations-lifetime.spec.ts src/__tests__/messages-lifetime.spec.ts src/__tests__/messages-lifetime-startup.spec.ts src/__tests__/messages-lifetime-resources.spec.ts src/__tests__/messages-screen.spec.ts src/__tests__/messages-business-day.spec.ts --reporter=json --outputFile=<tmp>",
+  "exitCode": 0,
+  "elapsedSeconds": 25.2,
+  "counts": {
+    "passed": 76
+  },
+  "skippedOrTodo": [],
+  "perFileCounts": {
+    "conversations-lifetime.spec.ts": 14,
+    "messages-business-day.spec.ts": 4,
+    "messages-lifetime-resources.spec.ts": 11,
+    "messages-lifetime-startup.spec.ts": 16,
+    "messages-lifetime.spec.ts": 21,
+    "messages-screen.spec.ts": 10
+  },
+  "tests": [
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) overlapping detail calls: the later call wins whatever order the replies arrive in",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) A -> B -> A: an old A reply cannot win because the id matches",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a new detail call hides the previous conversation immediately",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a late rejection of a superseded detail call neither throws to its caller nor touches current data",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a failure of the current detail call still reaches its caller (healthy control)",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a single uncontested detail call publishes normally (healthy control)",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) overlapping list calls: the latest request wins list and total in either reply order",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) a late rejection of an older list call is swallowed and leaves the newer result alone",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) a failure of the current list call still reaches its caller (healthy control)",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) list and detail generations are independent: a list call does not invalidate a pending detail call",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate or clear a newer owner's detail work",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by the current owner clears data and drops its pending replies",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate a newer owner's list work",
+      "status": "passed"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) fetch calls report whether they published",
+      "status": "passed"
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone UTC)",
+      "status": "passed"
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone Asia/Ho_Chi_Minh)",
+      "status": "passed"
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone America/New_York)",
+      "status": "passed"
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) a user-chosen date pair is submitted unchanged",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) healthy control: an image loaded for the current selection becomes one live object URL shown in the transcript",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount with a pending image fetch: the late result leaves no live object URL",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount while the response body is still downloading: finishing it leaves no live object URL",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) reset (mobile back) with a pending image fetch: the late result leaves no live object URL",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) a later lifetime that needs the same URL loads it itself and the old fetch cannot own it",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) a stale failed fetch cannot delete the cache entry a newer lifetime already filled",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change releases the previous tenant's object URLs",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change with a pending image fetch: the old result allocates nothing",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) an active resource survives cleanup of an earlier selection (cleanup is not global)",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) failed image fetch of the current lifetime stays retryable",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount revokes every object URL the lifetime still owns",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) reversed success: an older (initial) list reply cannot restore the previous query's rows",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) a late rejection of an older list request shows no list error over the newer success",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) an older request settling while a newer one is pending neither publishes nor ends the busy state",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) healthy control: a current list failure shows the alert and retry recovers",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) a valid selection survives a filter change of the same tenant",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map reply cannot overwrite the t2 map",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map failure cannot turn the t2 chips into \"unknown\"",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the channel list is pending: no list request follows",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) t1 -> t2 -> t1: the first t1 lifetime does not continue although the tenant string matches again",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the first list is pending: no status-map request follows",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at the deep-link page lookup: the old conversation is never selected",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at a deep-link lookup that points to another page: that page is never loaded",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) tenant change at the deep-link page lookup: the old tenant's continuation does not select",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: an active deep link selects the conversation on the requested tab",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: a deep link on another page reloads that page then selects",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) debounced search cannot publish after teardown",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) settled A, then pending B: header, count, messages, evaluation and download source are not A's",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) a reply whose conversation id is not the selected one is never shown as the selection's header or count",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) healthy control: a single selection loads messages then evaluation and tabs keep their data",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (old A first)",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (new A first)",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) reversed evaluation replies for the same id: the newer lifetime keeps its evaluation",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale success does not publish, does not clear the current spinner and starts no evaluation",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale messages success leaves the current evaluation loading state alone",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale rejection shows no error and leaves the current spinner and result alone",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) healthy control: a current failure shows the error and retry recovers",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale evaluation success or failure cannot change the current evaluation spinner, data or error",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) healthy control: a current evaluation failure leaves messages intact and shows the honest empty state",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) mobile back before completion clears the detail and late replies cannot bring it back",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) mobile back then a late rejection and a new selection: no stale error and the new selection is intact",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2 with the same conversation id: the old tenant's reply cannot appear in the new tenant",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2: t2 selected first, then the old t1 reply arrives late and loses",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (success-before-new) cannot touch the new one",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (success-after-new) cannot touch the new one",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (error) cannot touch the new one",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) an old owner unmounting AFTER the new one started must not cancel the new owner's request",
+      "status": "passed"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) healthy control: switching tenants and selecting again works end to end",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) counts conversations, not messages (UX-16)",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) names the latest analysis honestly: PASS may be classification",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) R1: a failed status request never claims \"Chưa phân tích\"",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) R1: while the status request is pending no status is claimed",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) R1: after a successful response an absent entry is \"Chưa phân tích\"",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) keeps list request parameters and debounced search",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) list load error shows an alert with retry",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) empty tenant vs no match are different states",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) conversation tabs: QC shows issues, classification shows tags and never \"Vấn đề\"; both carry the source note",
+      "status": "passed"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) export: a 200 JSON {error} body is shown, not downloaded; real content is downloaded",
+      "status": "passed"
+    }
+  ],
+  "stdoutTail": "\n> frontend@0.0.0 test\n> vitest run src/__tests__/conversations-lifetime.spec.ts src/__tests__/messages-lifetime.spec.ts src/__tests__/messages-lifetime-startup.spec.ts src/__tests__/messages-lifetime-resources.spec.ts src/__tests__/messages-screen.spec.ts src/__tests__/messages-business-day.spec.ts --reporter=json --outputFile=C:\\Users\\DELL\\AppData\\Local\\Temp\\r088-final-vitest.json\n\nJSON report written to C:/Users/DELL/AppData/Local/Temp/r088-final-vitest.json\n"
+}

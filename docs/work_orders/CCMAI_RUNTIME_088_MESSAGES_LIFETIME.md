@@ -2,7 +2,7 @@
 
 Memory class: FULL_RECORD
 docType: work_order
-Status: DISPATCH_READY
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: ccmai-r088-worker
 Reviewer: Codex /root
@@ -13,11 +13,11 @@ providerExecutionAuthority: FORBIDDEN
 
 - Role: IMPLEMENTATION_WORKER, actor ccmai-r088-worker, shared-workspace INTERNAL_AGENT. Operator prefers manual Sonnet; record exposed model/effort honestly, unavailable telemetry null with reason. Local owns independent review, commits and publication.
 - Canonical packet: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md. Commit mode: WORKER_MUST_NOT_COMMIT. No worker push, merge, deploy or self-review.
-- executionBaseHead: WORKER_MUST_CAPTURE_AT_START. Immutable authority/baseCommit: 45ac7a91a60f9f64239492e0db838c809ca51fca. Verify seed equals its first committed content; capture actual current HEAD before edits, which is later than this seed commit.
-- Current-time notes: F06 only; Node/npm available, frontend/node_modules absent. One locked public dependency setup is admitted; Docker/API keys/provider/backend/DB/Go/SMTP/customer data are not. Current status is WORK_ORDER/DISPATCH_READY, worker not started.
+- executionBaseHead: WORKER_MUST_CAPTURE_AT_REPAIR_START; HEAD remains 086330e1860df291ea58a56726914bb0b4d53087 with uncommitted prior candidate. Preserve it. Immutable authority/baseCommit: 45ac7a91a60f9f64239492e0db838c809ca51fca. Verify seed equals its first committed content; capture actual current HEAD before edits, which is later than this seed commit.
+- Current-time notes: F06 only; Node/npm available, locked frontend/node_modules already installed; no second dependency setup. One locked public dependency setup is admitted; Docker/API keys/provider/backend/DB/Go/SMTP/customer data are not. Current status is REVIEW/CHANGES_REQUIRED after round1; one same-scope repair is admitted, worker must acknowledge BUILD/ACTIVE before edits.
 - Do-not-misread notes: independent UI implementation from a behavior contract, no private CVF source copy. GOV002 repository controls are accepted; product/native/live/FREEZE gaps are still open. An id comparison alone does not protect A→B→A.
 - First actions: rehydrate AGENTS/manifest/policy/bootstrap/memory/active handoff/implementation/index and the two shared learning owners; run independent Core doctor, verify source hashes and seed, read SPEC and named source/test scopes. Before source edits or dependency setup, acknowledge actual actor/HEAD in the active handoff, switch state/memory/handoff/bootstrap/implementation/record/order consistently to BUILD/ACTIVE and run preflight plus the explicit-packet pre-dispatch gate. Stop dependent work if either fails.
-- Return: COMPLETE_PENDING_REVIEW only with all mandatory evidence and a CLOSEABLE recheck; otherwise one consolidated BLOCKED_WITH_REASON with exact prerequisite/owner. Leave all source/evidence uncommitted for Local. On return switch every surface to REVIEW/REVIEW_PENDING, display COMPLETE_PENDING_REVIEW and clear activeWorkOrders.
+- Return: preserve round0 evidence and author a separate round1 return; COMPLETE_PENDING_REVIEW only with all mandatory evidence and a CLOSEABLE recheck; otherwise one consolidated BLOCKED_WITH_REASON with exact prerequisite/owner. Leave all source/evidence uncommitted for Local. On return switch every surface to REVIEW/REVIEW_PENDING, display COMPLETE_PENDING_REVIEW and clear activeWorkOrders.
 
 ## Purpose, Authority And Finite Route
 
@@ -87,23 +87,23 @@ Repeat only when a named failure or actual source/test change requires it. Prese
 
 Review-Dispatch Convergence Control: REQUIRED
 
-dispatchKind: INITIAL
+dispatchKind: REWORK
 dispatchSurface: INTERNAL_AGENT
 parentAssignmentId: CCMAI-RUNTIME-088
-reviewRoundCount: 0
-priorFindingSetDigest: NONE
-dependencyAuditDisposition: COMPLETE_INITIAL_ACCEPTANCE_MATRIX
-reworkFindingDisposition: NOT_APPLICABLE_INITIAL
+reviewRoundCount: 1
+priorFindingSetDigest: 3129726740a0c7a9d0569207a4646e90812ee02c8d7d24fb7588213231e2dbe1
+dependencyAuditDisposition: COMPLETE_BEFORE_FIRST_REPAIR
+reworkFindingDisposition: CONSOLIDATED_ALL_DEPENDENT_FINDINGS
 newIndependentCriticalEvidence: NONE
-regressionGuardDisposition: BASELINE_NEGATIVE_TESTS_PLANNED
+regressionGuardDisposition: REQUIRED_AND_PLANNED_FOR_EACH_TARGETED_DEFECT
 cumulativeExternalInvocationCount: 0
 externalInvocationCeiling: 0
 usageAvailability: NOT_APPLICABLE_INTERNAL_AGENT
 quotaAdmissionDisposition: NOT_APPLICABLE_INTERNAL_AGENT
-nextDispatchDisposition: INITIAL_DISPATCH
+nextDispatchDisposition: ONE_CONSOLIDATED_REWORK
 rootCauseClusterId: CCMAI-MESSAGES-REQUEST-LIFETIME
-reworkGeneration: 0
-consolidatedDefectClassSweep: COMPLETE_INITIAL_ACCEPTANCE_MATRIX
+reworkGeneration: 1
+consolidatedDefectClassSweep: COMPLETE_BEFORE_REWORK_DISPATCH
 successorTrancheOpened: NO
 implementationAutonomyDisposition: CONTRACT_AUTHORITY_EVIDENCE_OUTCOME_ONLY
 preExecutionReviewAdmission: NOT_REQUIRED_BEFORE_EXECUTION
@@ -149,8 +149,8 @@ The new return must include rootCauseClusterId and reworkGeneration from this pa
 closeabilityContractVersion: cvf.gate-role-closeability@1.0.0
 closeabilityDisposition: CLOSEABLE
 outsideAuthorityBlockers: NONE
-nextRepairRoute: INDEPENDENT_LOCAL_REVIEW_OF_RETURNED_EVIDENCE
-workerRedispatchAllowed: NO
+nextRepairRoute: ONE_CONSOLIDATED_SAME_SCOPE_R088_REPAIR
+workerRedispatchAllowed: YES
 
 At dispatch this states the admitted path is technically closeable; it is not evidence that UI tests/dependencies already pass. Worker repeats the recheck at return; external blockers must be named instead of fabricating NONE.
 
@@ -161,3 +161,24 @@ Dispatcher read the pinned classifier, graph constants/columns/dependencies, con
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY. Preparation before actual publication; no predicted export. Local may publish only the authorized project branch after final committed gates; record real remote/SHA/artifact evidence. No private Core export, main push, merge, hosted CI or deploy claim.
+
+## Consolidated Round1 Repair Admission (2026-10-13)
+
+Finding R088-R1-F01 and exact digest above are defined in docs/reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md and docs/reviews/probes/r088_local_review_round1/consolidated-findings.json. Preserve original return/proof and Local evidence. Repair pending automatic deep-link versus explicit selection/deselect intent across awaited page success/rejection/other-page reload boundaries, using existing Messages.vue/lifetime tests only. The two Local behavioral failures are mandatory regressions; retain healthy current/other-page deep links and all original regressions. No new dependency install or optional mutation campaign required.
+
+reviewerLocalRepairBoundary: WORK_ORDER_FORBIDS_REVIEWER_REPAIR
+reviewerLocalRepairBasis: Owner retains manual worker and independent Local review; R088-R1-F01 requires production source changes and fresh mounted regression evidence. Local authored proof/findings and continuity only, leaving implementation to the same worker.
+
+One same-scope repair, no successor/seed expansion. Use a new round1 evidence subfolder and return artifact so round0 remains immutable. BUILD acknowledgment before edits; transition CHANGES_REQUIRED -> BUILD/ACTIVE consistently, run preflight and explicit active-packet pre-dispatch gate actually CHECKED, then repair. Return REVIEW_PENDING/COMPLETE_PENDING_REVIEW with activeWorkOrders empty. Local decides final acceptance/commit/publication. Third-round escalation rule retained. Global channels and audit vulnerabilities remain separate disclosed debt.
+
+## Reviewer-Local Repair Assessment
+
+unchangedObjective: YES
+unchangedDesign: YES
+unchangedPaths: YES
+unchangedAuthority: YES
+unchangedEffects: YES
+unchangedCommitOwner: YES
+evidenceDetermined: NO
+
+The defect evidence is determined; evidence for a correct repaired implementation is not yet available. New mounted regressions and repaired candidate type/build proof are required, and owner retains manual worker implementation with independent Local review. This is not evidence-determined metadata repair.

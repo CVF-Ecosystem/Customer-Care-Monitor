@@ -105,22 +105,22 @@
       <!-- Nội dung hội thoại -->
       <section v-if="selectedConvId" class="mg-conv" :aria-label="currentName">
         <header class="mg-conv__head">
-          <v-btn v-if="!mdAndUp" icon variant="text" size="44" :aria-label="$t('msgs_back')" @click="selectedConvId = null">
+          <v-btn v-if="!mdAndUp" icon variant="text" size="44" :aria-label="$t('msgs_back')" @click="deselectConversation">
             <v-icon>mdi-arrow-left</v-icon>
           </v-btn>
           <div class="mg-conv__titles">
             <h2 class="mg-conv__title">{{ currentName }}</h2>
             <p class="mg-muted mg-small mg-m0">
-              {{ selectedConvChannelName }}<template v-if="conversationStore.currentConversation"> · {{ $t('msgs_message_count', { n: conversationStore.currentConversation.message_count }) }}</template>
+              {{ selectedConvChannelName }}<template v-if="currentDetail"> · {{ $t('msgs_message_count', { n: currentDetail.message_count }) }}</template>
             </p>
           </div>
           <template v-if="mdAndUp">
             <v-btn variant="outlined" prepend-icon="mdi-link-variant" class="mg-btn" @click="shareConversation">{{ $t('msgs_copy_link') }}</v-btn>
-            <v-btn variant="outlined" prepend-icon="mdi-download" class="mg-btn" :disabled="!conversationStore.messages.length" @click="downloadConversation">{{ $t('msgs_download_txt') }}</v-btn>
+            <v-btn variant="outlined" prepend-icon="mdi-download" class="mg-btn" :disabled="!canDownload" @click="downloadConversation">{{ $t('msgs_download_txt') }}</v-btn>
           </template>
           <template v-else>
             <v-btn icon variant="text" size="44" color="primary" :aria-label="$t('msgs_copy_link')" @click="shareConversation"><v-icon>mdi-link-variant</v-icon></v-btn>
-            <v-btn icon variant="text" size="44" color="primary" :aria-label="$t('msgs_download_txt')" :disabled="!conversationStore.messages.length" @click="downloadConversation"><v-icon>mdi-download</v-icon></v-btn>
+            <v-btn icon variant="text" size="44" color="primary" :aria-label="$t('msgs_download_txt')" :disabled="!canDownload" @click="downloadConversation"><v-icon>mdi-download</v-icon></v-btn>
           </template>
         </header>
 
@@ -321,6 +321,23 @@ const authStore = useAuthStore()
 
 const tenantId = computed(() => route.params.tenantId as string)
 
+// CCMAI-RUNTIME-088 (F06): request lifetimes. A reply may only publish while the lifetime that issued it
+// is still the current one. `lifetimeGen` ends with a tenant change or unmount (it covers initialization,
+// deep links, list, status map and detail); `selectionGen` changes on every explicit selection (so
+// A -> B -> A is a new A), on deselect, tenant change and unmount; `listGen`/`mapGen` order list and
+// status-map requests; `imageEpoch` ends pending authenticated image fetches. Comparing ids alone is
+// not enough: an old A reply has the same id as the new A.
+const owner = {}
+let disposed = false
+let lifetimeGen = 0
+let selectionGen = 0
+let listGen = 0
+let mapGen = 0
+let imageEpoch = 0
+interface Lifetime { gen: number; tenant: string }
+const lifeStamp = (): Lifetime => ({ gen: lifetimeGen, tenant: tenantId.value })
+const lifeAlive = (life: Lifetime) => !disposed && life.gen === lifetimeGen && life.tenant === tenantId.value
+
 const loading = ref(false)
 const listError = ref(false)
 const loadingMessages = ref(false)
@@ -343,12 +360,17 @@ const evaluationMap = ref<Record<string, string>>({})
 const mapState = ref<'pending' | 'ok' | 'error'>('pending')
 
 async function loadEvaluationMap() {
+  const life = lifeStamp()
+  const gen = ++mapGen
+  const isCurrent = () => gen === mapGen && lifeAlive(life)
   mapState.value = 'pending'
   try {
-    const { data } = await api.get(`/tenants/${tenantId.value}/conversations/evaluated`)
+    const { data } = await api.get(`/tenants/${life.tenant}/conversations/evaluated`)
+    if (!isCurrent()) return
     evaluationMap.value = data || {}
     mapState.value = 'ok'
   } catch {
+    if (!isCurrent()) return
     evaluationMap.value = {}
     mapState.value = 'error'
   }
@@ -366,7 +388,18 @@ function chipLabel(severity: string | undefined) {
   return t(`msgs_chip_${chipKind(severity)}`)
 }
 
-const currentName = computed(() => conversationStore.currentConversation?.customer_name || t('msg_unknown_customer'))
+// The store's detail only counts while it belongs to the selected conversation; while the selection is
+// still loading the header falls back to the list row's own name, never to the previous conversation.
+const currentDetail = computed(() => {
+  const c = conversationStore.currentConversation
+  return c && c.id === selectedConvId.value ? c : null
+})
+const currentName = computed(() => {
+  if (currentDetail.value) return currentDetail.value.customer_name || t('msg_unknown_customer')
+  const row = conversationStore.conversations.find(c => c.id === selectedConvId.value)
+  return row?.customer_name || t('msg_unknown_customer')
+})
+const canDownload = computed(() => !!currentDetail.value && conversationStore.messages.length > 0)
 
 function relative(s: string | null) {
   return formatRelative(s, locale.value as UiLocale)
@@ -426,7 +459,7 @@ async function doExport() {
 }
 
 function downloadConversation() {
-  const conv = conversationStore.currentConversation
+  const conv = currentDetail.value
   const msgs = conversationStore.messages
   if (!conv || !msgs.length) return
 
@@ -567,13 +600,19 @@ function xoaLoc() {
 let searchTimeout: ReturnType<typeof setTimeout> | null = null
 function debouncedSearch() {
   if (searchTimeout) clearTimeout(searchTimeout)
+  const life = lifeStamp()
   searchTimeout = setTimeout(() => {
+    searchTimeout = null
+    if (!lifeAlive(life)) return
     currentPage.value = 1
     loadConversations()
   }, 300)
 }
 
 async function loadConversations() {
+  const life = lifeStamp()
+  const gen = ++listGen
+  const isCurrent = () => gen === listGen && lifeAlive(life)
   loading.value = true
   listError.value = false
   try {
@@ -586,46 +625,91 @@ async function loadConversations() {
     if (searchQuery.value) params.search = searchQuery.value
     if (filterEvaluation.value) params.evaluation = filterEvaluation.value
 
-    await conversationStore.fetchConversations(tenantId.value, params)
+    await conversationStore.fetchConversations(life.tenant, params, owner)
   } catch {
-    listError.value = true
+    if (isCurrent()) listError.value = true
   } finally {
-    loading.value = false
+    if (isCurrent()) loading.value = false
   }
 }
 
 async function selectConversation(convId: string, tab?: string) {
+  const life = lifeStamp()
+  const gen = ++selectionGen // every explicit selection is a fresh lifetime, even for the same id
+  const isCurrent = () => gen === selectionGen && lifeAlive(life)
+  invalidatePendingImages()
   selectedConvId.value = convId
   convError.value = false
   detailTab.value = tab === 'evaluation' || tab === 'qc' ? 'qc' : tab === 'classification' ? 'classification' : 'messages'
   const conv = conversationStore.conversations.find(c => c.id === convId)
-  if (conv) {
-    selectedConvChannelType.value = conv.channel_type
-    selectedConvChannelName.value = conv.channel_name || channelTypeInfo(conv.channel_type).label
-  }
-
+  selectedConvChannelType.value = conv ? conv.channel_type : ''
+  selectedConvChannelName.value = conv ? (conv.channel_name || channelTypeInfo(conv.channel_type).label) : ''
+  // the previous selection's evaluation must not be shown, and the new one is loading until it settles
+  evaluation.value = null
   loadingMessages.value = true
+  loadingEvaluation.value = true
+  let published = false
   try {
-    await conversationStore.fetchMessages(tenantId.value, convId)
-    await nextTick()
-    scrollToBottom()
+    published = await conversationStore.fetchMessages(life.tenant, convId, owner)
+    if (!isCurrent()) return
+    if (published) {
+      await nextTick()
+      if (!isCurrent()) return
+      scrollToBottom()
+    }
   } catch {
+    if (!isCurrent()) return
     convError.value = true
   } finally {
-    loadingMessages.value = false
+    if (isCurrent()) loadingMessages.value = false
+  }
+  if (!published && !convError.value) {
+    // the store gave this request up to newer work it does not know about: nothing to load for it
+    loadingEvaluation.value = false
+    return
   }
 
   // Load evaluation in background
-  loadingEvaluation.value = true
-  evaluation.value = null
   try {
-    const { data } = await api.get(`/tenants/${tenantId.value}/conversations/${convId}/evaluations`)
+    const { data } = await api.get(`/tenants/${life.tenant}/conversations/${convId}/evaluations`)
+    if (!isCurrent()) return
     evaluation.value = data
   } catch {
+    if (!isCurrent()) return
     evaluation.value = null
   } finally {
-    loadingEvaluation.value = false
+    if (isCurrent()) loadingEvaluation.value = false
   }
+}
+
+// Explicit deselect (mobile back): invalidate pending detail work and clear the old identity and data.
+function deselectConversation() {
+  selectionGen++
+  invalidatePendingImages()
+  selectedConvId.value = null
+  selectedConvChannelType.value = ''
+  selectedConvChannelName.value = ''
+  convError.value = false
+  loadingMessages.value = false
+  loadingEvaluation.value = false
+  evaluation.value = null
+  conversationStore.resetDetail(owner)
+}
+
+// Tenant change and unmount end the whole lifetime: nothing issued before may publish afterwards.
+function endLifetime() {
+  lifetimeGen++
+  listGen++
+  mapGen++
+  deselectConversation()
+  releaseImages()
+  conversationStore.reset(owner)
+  if (searchTimeout) {
+    clearTimeout(searchTimeout)
+    searchTimeout = null
+  }
+  loading.value = false
+  listError.value = false
 }
 
 function scrollToBottom() {
@@ -676,6 +760,25 @@ function getAttachmentUrl(att: any): string {
 // Auth image loading: fetch with JWT header, create blob URL
 const authImageCache = ref<Record<string, string>>({})
 
+// Pending fetches belong to the epoch that started them. Invalidating drops their "loading" markers so a
+// later lifetime can load the same URL itself; completed object URLs stay valid for the current mount.
+function invalidatePendingImages() {
+  imageEpoch++
+  for (const [key, value] of Object.entries(authImageCache.value)) {
+    if (value === 'loading') delete authImageCache.value[key]
+  }
+}
+
+// Release every object URL this mount owns (tenant change, unmount) and end all pending fetches.
+function releaseImages() {
+  imageEpoch++
+  for (const blobUrl of Object.values(authImageCache.value)) {
+    if (blobUrl && blobUrl.startsWith('blob:')) URL.revokeObjectURL(blobUrl)
+  }
+  authImageCache.value = {}
+  lightboxSrc.value = ''
+}
+
 async function loadAuthImage(url: string) {
   if (!url || authImageCache.value[url]) return
   // For external URLs (not /api/), load directly
@@ -683,20 +786,23 @@ async function loadAuthImage(url: string) {
     authImageCache.value[url] = url
     return
   }
+  const epoch = imageEpoch
   authImageCache.value[url] = 'loading'
   try {
     const token = localStorage.getItem('cqa_access_token')
     const resp = await fetch(url, {
       headers: token ? { 'Authorization': `Bearer ${token}` } : {},
     })
+    if (epoch !== imageEpoch) return // ended while pending: allocate nothing, touch no cache entry
     if (resp.ok) {
       const blob = await resp.blob()
+      if (epoch !== imageEpoch) return
       authImageCache.value[url] = URL.createObjectURL(blob)
     } else {
       delete authImageCache.value[url] // allow retry
     }
   } catch {
-    delete authImageCache.value[url] // allow retry
+    if (epoch === imageEpoch) delete authImageCache.value[url] // allow retry
   }
 }
 
@@ -721,11 +827,8 @@ watch(() => conversationStore.messages, () => {
 }, { immediate: true })
 
 onUnmounted(() => {
-  if (searchTimeout) clearTimeout(searchTimeout)
-  // Cleanup blob URLs to prevent memory leaks
-  for (const blobUrl of Object.values(authImageCache.value)) {
-    if (blobUrl && blobUrl.startsWith('blob:')) URL.revokeObjectURL(blobUrl)
-  }
+  disposed = true
+  endLifetime() // clears the debounce, revokes blob URLs to prevent leaks, ends pending requests
 })
 
 function isImageAttachment(att: any): boolean {
@@ -764,7 +867,16 @@ watch(filterEvaluation, () => {
   loadConversations()
 })
 
-onMounted(async () => {
+// Initialization and the deep link are one lifetime: each awaited step re-checks it, so a screen that
+// was unmounted or moved to another tenant never continues into the old conversation. The automatic deep
+// link is also not a user action: any explicit selection or deselect (mobile back) made after this
+// initialization began advances `selectionGen`, and the pending link must yield to it before it changes
+// the page, selects or fetches anything (R088-R1-F01).
+async function initialize() {
+  const life = lifeStamp()
+  const intent = selectionGen
+  const alive = () => lifeAlive(life)
+  const linkCurrent = () => alive() && intent === selectionGen
   // Reset pagination state
   currentPage.value = 1
   conversationStore.total = 0
@@ -775,24 +887,45 @@ onMounted(async () => {
   }
 
   try {
-    await channelStore.fetchChannels(tenantId.value)
+    await channelStore.fetchChannels(life.tenant)
   } catch { /* danh sách kênh chỉ để lọc; thiếu thì vẫn xem được hội thoại */ }
+  if (!alive()) return
   await loadConversations()
+  if (!alive()) return
   await loadEvaluationMap()
+  if (!alive()) return
 
   // Auto-select conversation from query param (deep link)
-  if (route.query.conv) {
+  if (route.query.conv && linkCurrent()) {
     const convId = route.query.conv as string
     try {
       // Find which page this conversation is on
-      const { data } = await api.get(`/tenants/${tenantId.value}/conversations/${convId}/page`, { params: { per_page: perPage } })
+      const { data } = await api.get(`/tenants/${life.tenant}/conversations/${convId}/page`, { params: { per_page: perPage } })
+      if (!linkCurrent()) return
       if (data?.page && data.page !== currentPage.value) {
         currentPage.value = data.page
         await loadConversations()
+        if (!linkCurrent()) return
       }
     } catch { /* fallback: stay on page 1 */ }
+    if (!linkCurrent()) return
     selectConversation(convId, route.query.tab as string)
   }
+}
+
+onMounted(initialize)
+
+// The route component is reused when only the tenant changes: end the old tenant's lifetime, drop what
+// belonged to it and start the new tenant from a clean screen.
+watch(tenantId, (next, previous) => {
+  if (next === previous) return
+  endLifetime()
+  evaluationMap.value = {}
+  mapState.value = 'pending'
+  detailTab.value = 'messages'
+  currentPage.value = 1
+  filterChannelId.value = null // channel ids belong to the previous tenant
+  initialize()
 })
 </script>
 

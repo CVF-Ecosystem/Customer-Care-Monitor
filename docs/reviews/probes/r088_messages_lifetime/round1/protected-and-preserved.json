@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "r088.round1Protected@1",
+  "recordedAt": "2026-10-13T03:44:12+07:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "round0PreservedChecked": 21,
+  "round0PreservedMismatch": [],
+  "protectedPathsGitStatusPorcelain": "",
+  "protectedPathsClean": true,
+  "protectedPaths": [
+    "frontend/package.json",
+    "frontend/package-lock.json",
+    "frontend/src/stores/channels.ts",
+    "frontend/vite.config.ts",
+    "frontend/src/__tests__/messages-screen.spec.ts",
+    "frontend/src/__tests__/messages-business-day.spec.ts",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-088.json"
+  ],
+  "seedFirstCommit": "45ac7a91a60f9f64239492e0db838c809ca51fca",
+  "seedEqualsFirstCommittedContent": true,
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none"
+}
