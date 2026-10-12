@@ -2380,9 +2380,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Canonical active R090 WORK_ORDER handoff; Luna worker not started; R089 invalid seed never executed."
+      "description": "Current R091 dispatch-ready handoff; worker BUILD acknowledgment and gates pending."
     },
     {
       "id": "r060-work-order",
@@ -8487,6 +8487,41 @@
       "path": "docs/reviews/probes/r090_auth_permissions/material_paths.json",
       "status": "ACTIVE",
       "description": "Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen."
+    },
+    {
+      "id": "runtime091-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-091.json",
+      "status": "ACTIVE",
+      "description": "Immutable first-commit C authority, source/effects bounded."
+    },
+    {
+      "id": "runtime091-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-091.json",
+      "status": "ACTIVE",
+      "description": "DISPATCH_READY record; no C source acceptance."
+    },
+    {
+      "id": "runtime091-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
+      "status": "ACTIVE",
+      "description": "Bounded C delivery/deadline/backoff plus finite A dependency order."
+    },
+    {
+      "id": "runtime090-retired-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Retired active handoff; A candidate dependencies pending, historical source/fixture evidence retained."
+    },
+    {
+      "id": "runtime091-root-dispatch-readiness",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/root_dispatch_readiness.json",
+      "status": "ACTIVE",
+      "description": "Root pre-dispatch legacy7PASS and explicit activeC APPL CHECKED/PASS, not worker BUILD or source/test proof."
     }
   ]
 }

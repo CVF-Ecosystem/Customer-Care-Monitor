@@ -13,7 +13,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Canonical active R090 WORK_ORDER handoff; Luna worker not started; R089 invalid seed never executed.: `CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md`
+- Current R091 dispatch-ready handoff; worker BUILD acknowledgment and gates pending.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -1192,10 +1192,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final2.log`
 - R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-retry.log`
 - R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/ui-source-negative.log`
+- Retired active handoff; A candidate dependencies pending, historical source/fixture evidence retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md`
 - Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen.: `docs/reviews/probes/r090_auth_permissions/local_gate_final.json`
 - Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen.: `docs/reviews/probes/r090_auth_permissions/material_paths.json`
 - Luna max source/evidence return, UI8PASS/type/build and backend package-summary PASS; per-case/SKIP missing, lifecycle Root-owned.: `docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md`
+- Immutable first-commit C authority, source/effects bounded.: `CVF_SESSION/authority/CCMAI-RUNTIME-091.json`
+- Bounded C delivery/deadline/backoff plus finite A dependency order.: `docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md`
 - Root-reviewed package C design: frozen delivery manifest, conservative receipt outcomes, cancellable SMTP and common batch backoff; no C BUILD or runtime evidence.: `docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md`
+- DISPATCH_READY record; no C source acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-091.json`
+- Root pre-dispatch legacy7PASS and explicit activeC APPL CHECKED/PASS, not worker BUILD or source/test proof.: `docs/reviews/probes/r091_outbound_delivery/root_dispatch_readiness.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`

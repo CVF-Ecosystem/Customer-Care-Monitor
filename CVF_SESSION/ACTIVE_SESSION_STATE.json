@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-090",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-090 REVIEW/CHANGES_REQUIRED: retain independently reviewed A candidate, commit its source/evidence under Root ownership, then activate already-planned R091 C for outbound truth/deadline/backoff plus exact notification-route, legacy UI fixture and per-case backend evidence dependencies. No A successor or Claude return; no real provider/customer/accounts/deploy effects.",
+  "activeTranche": "CCMAI-RUNTIME-091",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-091 DISPATCH_READY: Luna max /root/outbound_intake must acknowledge BUILD, verify seed/currentHEAD and isolated prerequisites, synchronize BUILD/ACTIVE, pass legacy and trusted explicit active-packet pre-dispatch APPL CHECKED before source-negative tests or effects; implement only accepted C contract and three named A dependencies. Root independent review/commit/publication; accounts/provider/customer/deploy parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root Local INTERNAL_AGENT independent reviewer, orchestrator, session-sync and commit owner; returned worker /root/auth_intake gpt-6-luna effort max.",
+  "activeRole": "Codex /root Local INTERNAL_AGENT orchestrator, dispatcher and independent reviewer; admitted worker /root/outbound_intake gpt-6-luna effort max, BUILD acknowledgment pending.",
   "updatedAt": "2026-10-13",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {
@@ -56,12 +56,16 @@
     "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
   },
   "x-currentExecutionBudget": {
-    "scope": "R090 synthetic handler/router MySQL and mounted UI",
-    "provider": 0,
-    "realOutbound": 0,
-    "customerData": 0,
-    "fixture": "CLEANED_OWNED_RESOURCES",
-    "rootPublication": "Existing reviewed project branch only, no main/merge/deploy"
+    "implementationPackages": 1,
+    "toolingSetup": "Reuse SHA256-verified Go1.26.0 and existing public module cache/go.mod/go.sum; no dependencies or global installs. Reuse already cached mysql:8.0 digest sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b; no new pull unless named missing-cache diagnostic.",
+    "dockerSetup": "One fresh uniquely labeled fixture container/network at a time, ordinary user-defined bridge, dynamic 127.0.0.1 port, generated synthetic root/app user credentials, no host volumes or existing DB. Record actual mounts and exact ownership; cleanup container with owned anonymous volumes/network and verify absence. Setup failures preserved, same-scope corrections permitted after safe diagnostic; no unrelated resource cleanup.",
+    "goEvidence": "One baseline pre-source negative campaign, one final focused notifications/db/engine integration campaign using Go JSON with exact mandatory tests and no DB-unavailable skips; max15min each. Combined R090 existing selector rerun once for named missing per-case/SKIP evidence. Source/test changes or named inconclusive baseline faults only justify focused repeats. Compile touched packages. Frontend exact new/old dependency fixtures plus forced type/build.",
+    "sameScopeRepairs": "Consolidate unchanged scope; third formal repair round requires Root cause escalation, no routine successor.",
+    "providerCalls": 0,
+    "realOutboundCalls": 0,
+    "customerDataRuns": 0,
+    "syntheticTransport": "Owned loopback HTTP/SMTP and fake notifier/provider only; clean/join all listeners/connections/goroutines. No app server or real account.",
+    "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
   },
   "x-actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -819,14 +823,9 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "CHANGES_REQUIRED_C_DEPENDENCIES",
-    "evidence": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
-    "freeze": "OPEN",
-    "dependencies": [
-      "notification route metadata",
-      "legacy UI fixture setup",
-      "backend per-case/SKIP receipts"
-    ]
+    "result": "NOT_YET_RETURNED_R091",
+    "A_dependenciesReview": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "freeze": "OPEN"
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -907,7 +906,7 @@
     }
   },
   "x-currentRepair": {
-    "scope": "EXISTING_PLANNED_C_BOUNDARY_NOT_A_SUCCESSOR",
+    "scope": "PLANNED_C_BOUNDARY",
     "round": 0
   },
   "x-currentClosure": null,
@@ -1304,5 +1303,22 @@
     "source": "Owner explicitly retains Sonnet worker / Local review",
     "reasoningEffort": null
   },
-  "x-r090CandidateMaterialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02"
+  "x-r090CandidateMaterialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
+  "x-historicalR090Review": {
+    "result": "CHANGES_REQUIRED_C_DEPENDENCIES",
+    "evidence": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "freeze": "OPEN",
+    "dependencies": [
+      "notification route metadata",
+      "legacy UI fixture setup",
+      "backend per-case/SKIP receipts"
+    ]
+  },
+  "x-currentWorkerDispatch": {
+    "worker": "/root/outbound_intake",
+    "model": "gpt-6-luna",
+    "effort": "max",
+    "status": "DISPATCH_READY_NOT_EXECUTED",
+    "seed": "5441a18116e4b897549750cd7317ffdb8ae9e74b"
+  }
 }

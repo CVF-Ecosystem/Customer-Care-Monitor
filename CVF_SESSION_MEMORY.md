@@ -9,20 +9,20 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-090", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-091", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md
 
-## Current package A review
+## Current finite package C dispatch
 
-R090 REVIEW/CHANGES_REQUIRED: retain independently reviewed A candidate, commit its source/evidence under Root ownership, then activate already-planned R091 C for outbound truth/deadline/backoff plus exact notification-route, legacy UI fixture and per-case backend evidence dependencies. No A successor or Claude return; no real provider/customer/accounts/deploy effects.
+CCMAI-RUNTIME-091 DISPATCH_READY: Luna max /root/outbound_intake must acknowledge BUILD, verify seed/currentHEAD and isolated prerequisites, synchronize BUILD/ACTIVE, pass legacy and trusted explicit active-packet pre-dispatch APPL CHECKED before source-negative tests or effects; implement only accepted C contract and three named A dependencies. Root independent review/commit/publication; accounts/provider/customer/deploy parked.
 
-Review docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md; returned Luna max source candidate retained. UI8PASS/type/build PASS; package-level backend PASS, per-case/SKIP receipt unestablished. Root lifecycle/commit ownership, C design accepted but no BUILD before seed/order. Accounts parked. Read existing shared learning owners before continuation.
+docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md; seed 5441a18116e4b897549750cd7317ffdb8ae9e74b; accepted C SPEC. A candidate44bb345 retained with docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md and three dependencies; not closed. Root owns final combined seven-row decision. Numeric worker usage unknown; no provider/customer/account/deploy authority. Read shared learning owners before continuation.
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 

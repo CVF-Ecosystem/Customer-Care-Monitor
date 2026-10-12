@@ -1,6 +1,6 @@
 # Package A auth/permission/refresh - R090
 
-Status: ACTIVE
+Status: RETIRED
 
 ## Current State
 
@@ -29,3 +29,5 @@ Dispatch HEAD verified: 0813ec79bcc6687f13b72260094d2b669af697e4. Immutable seed
 R090 CHANGES_REQUIRED only for three named C dependencies; source candidate retained, UI8PASS/forced type/build PASS, backend package PASS with per-case/SKIP unavailable. Review docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. No worker redispatch; planned C receives its own seed and actual active-packet admission. Root owns lifecycle synchronization left by worker, source/evidence commits and final decision. Earlier reviewer backend digests unreconciled; final25 hash bindings verified and four current sources independently re-read. Actual A material SHA not yet recorded.
 
 Actual reviewed A candidate material commit: 44bb345d0d0efb5e6a01b2f23e975e17a65f5d02. Source/evidence56exactpaths, no fullAacceptance/publication claim; three C dependencies pending.
+
+Retired active pointer after independent A disposition; R090 remains CHANGES_REQUIRED for named C dependencies. Active continuation CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md.

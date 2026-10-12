@@ -102,3 +102,7 @@ Root independently accepts the 30-second default and bounded contract above, wit
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Actual C authority entry
+
+Root independent A disposition is CHANGES_REQUIRED for three finite C dependencies; candidate material44bb345 and continuity4954304 preserved. C immutable seed 5441a18116e4b897549750cd7317ffdb8ae9e74b and docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md admit future worker BUILD after acknowledgment/actual gates. Earlier BUILD-active-A/design-only wording describes design authoring, not current dispatch phase. No C implementation/effect yet.
