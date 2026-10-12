@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "gov002-portable-inheritance-decision",
+      "family": "continuity",
+      "path": "docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "Source-audited public-source adoption choice, legacy grammar conflict and finite portable outcome; no installed/hosted/runtime claim."
+    },
+    {
+      "id": "gov002-c1-portable-inheritance-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-GOV-002-C1.json",
+      "status": "ACTIVE",
+      "description": "Canonical DISPATCH_READY/WORK_ORDER record bound to pre-BUILD committed immutable C1 authority."
+    },
+    {
+      "id": "gov002-portable-inheritance-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_GOV_002.md",
+      "status": "ACTIVE",
+      "description": "Single R2 initial worker assignment for public profile adoption, additive strict status compatibility and fresh-clone continuation; no worker commit/push or runtime."
+    },
+    {
+      "id": "historical-r087-roadmap-refresh-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "Historical R087 documentary roadmap refresh; accepted slice and docs55/FREEZE OPEN preserved, no new product acceptance."
+    },
+    {
       "id": "gov002-c1-portable-inheritance-authority",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-GOV-002-C1.json",
@@ -2345,9 +2373,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Active R087 documentary roadmap refresh handoff; historical R086 source acceptance/FREEZE OPEN retained."
+      "description": "Active GOV002-C1 bounded portable profile adoption dispatch; manual independent worker/reviewer, not installed, old product blockers retained."
     },
     {
       "id": "r060-work-order",

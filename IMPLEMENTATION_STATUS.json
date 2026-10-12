@@ -34,7 +34,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -2019,5 +2019,13 @@
     "buildCommit": "511f8b4a660571feb016534d3c602360f2aa3f35",
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
+  },
+  "activeTranche": "CCMAI-GOV-002-C1",
+  "portableCvfAdoption": {
+    "status": "DISPATCH_READY_NOT_INSTALLED",
+    "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
+    "worker": "ccmai-gov002-worker",
+    "reviewer": "Codex /root",
+    "claimScope": "Repository portability preparation only; no new runtime capability or product-stage closure"
   }
 }

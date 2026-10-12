@@ -9,7 +9,13 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-087", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md", "activeTranche": "CCMAI-GOV-002-C1", "parked": true} -->
+
+## Current portable-adoption dispatch
+
+CCMAI-GOV-002-C1 DISPATCH_READY: bounded public profile1.1 installation, fail-closed legacy status compatibility and portable clone continuation by independent worker; Local reviews then publishes accepted project branch. R087 docs55 and R086 source-only/native NOT_RUN/fence OPEN preserved; accounts parked, no provider/runtime/main push/deploy.
+
+Read [canonical work order](docs/work_orders/CCMAI_GOV_002.md). Owner retains manual worker and Local independent review. Profile is not installed at dispatch; no inherited coverage claim. Historical R087 remains documentary REVIEW_PASS/FREEZE OPEN. Product roadmap and shared-learning directives below remain applicable.
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 

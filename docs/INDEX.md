@@ -12,7 +12,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R087 documentary roadmap refresh handoff; historical R086 source acceptance/FREEZE OPEN retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md`
+- Active GOV002-C1 bounded portable profile adoption dispatch; manual independent worker/reviewer, not installed, old product blockers retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -174,7 +174,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Separate owner-authorized existing-branch fast-forward publication after R058 closure; no merge/deploy or CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-06.json`
 - R2 public profile adoption scope amendment after predispatch legacy-status contradiction: additive fail-closed compatibility, independent worker/reviewer, portable continuation.: `CVF_SESSION/authority/CCMAI-GOV-002-C1.json`
+- Canonical DISPATCH_READY/WORK_ORDER record bound to pre-BUILD committed immutable C1 authority.: `CVF_SESSION/tranches/CCMAI-GOV-002-C1.json`
 - Unactivated first adoption seed; no BUILD occurred. Source audit required additive status compatibility, so successor CCMAI-GOV-002-C1 governs the initial worker packet; original seed immutable.: `CVF_SESSION/authority/CCMAI-GOV-002.json`
+- Source-audited public-source adoption choice, legacy grammar conflict and finite portable outcome; no installed/hosted/runtime claim.: `docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md`
+- Single R2 initial worker assignment for public profile adoption, additive strict status compatibility and fresh-clone continuation; no worker commit/push or runtime.: `docs/work_orders/CCMAI_GOV_002.md`
 - Historical R053 accepted successor handoff before separate R054 closure; acceptance and history retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md`
 - Historical bounded local R054 closure handoff before separately seeded R055 application receipt work.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md`
 - Historical interrupted R055 source review before R057; source and failures retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md`
@@ -188,6 +191,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R052 failed R3 evidence and independent manifest/cost review; no acceptance.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md`
 - Historical R051 repair/cost record; current R3 delegation in R052.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md`
 - Historical R086 source-only review acceptance; FREEZE OPEN and native readiness unverified.: `CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md`
+- Historical R087 documentary roadmap refresh; accepted slice and docs55/FREEZE OPEN preserved, no new product acceptance.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md`
 - Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
