@@ -2,7 +2,7 @@
 
 Memory class: FULL_RECORD
 docType: work_order
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: ccmai-r088-worker
 Reviewer: Codex /root
@@ -182,3 +182,7 @@ unchangedCommitOwner: YES
 evidenceDetermined: NO
 
 The defect evidence is determined; evidence for a correct repaired implementation is not yet available. New mounted regressions and repaired candidate type/build proof are required, and owner retains manual worker implementation with independent Local review. This is not evidence-determined metadata repair.
+
+## Final independent acceptance
+
+Local final review docs/reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md accepts F06 bounded synthetic UI at actual material a8865d15296ce1a82ae368363d8f7de29392cdd0. No further worker repair; operator changed future role route to autonomous Local + Luna max for new separately bounded A/C packages. Historical dispatch/rework instructions above are not an active order. Product/native/live/accounts/deploy remain open or parked.

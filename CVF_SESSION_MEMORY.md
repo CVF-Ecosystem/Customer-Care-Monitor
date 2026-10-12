@@ -9,20 +9,20 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-088", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md", "activeTranche": "CCMAI-RUNTIME-088", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_MESSAGES_LIFETIME_R088_2026-10-12.md
 
-## Current R088 dispatch
+## Current R088 acceptance and autonomous roadmap completion
 
-CCMAI-RUNTIME-088 DISPATCH_READY: operator manually gives the canonical Messages lifetime work order to the implementation worker. Worker verifies the committed R088 seed/spec/source hashes, rehydrates and acknowledges actual HEAD/BUILD before source or dependency setup, then performs only F06 UI01-UI08 and returns COMPLETE_PENDING_REVIEW to independent Local review. No worker commit/push; docs55/R086 native-fence/accounts/product FREEZE/deployment remain open or parked; zero provider/backend/DB/Docker/Go/SMTP/customer effects.
+CCMAI-RUNTIME-088 REVIEW_PASS F06 bounded synthetic UI at a8865d15296ce1a82ae368363d8f7de29392cdd0; Local original3/3 probesPASS, worker88/88/type/build accepted. Operator authorizes autonomous Local closure and Luna max internal workers for remaining inheritance A(F01/F02/F03) then C(F04/F05/F07), bounded seeds/orders before BUILD; current intake read-only. Other product debts/global channels/dependency17/docs55/R086 native-fence/accounts/deployment remain open or parked; no real customer/provider effects.
 
-Canonical work order: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md; SPEC: docs/reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md. Seed committed at45ac7a91a60f9f64239492e0db838c809ca51fca. Worker has not started. Package B/F06 runs first for independent synthetic UI proof; other six findings remain OPEN. Read shared roadmap-control and repair evidence learning before worker/review. GOV002 static portable material accepted/published; original return/proof preserved. No implementation or full product acceptance.
+Active authority: R088 immutable seed preserved; new A/C seeds before BUILD. Original manual Sonnet role/proof stays historical, operator now authorizes Luna max workers and Local independent review. Current finite route: close/publish F06, then two implementation packages A and C. Read both shared learning owners; no automatic full product release or parked account activation.
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 
