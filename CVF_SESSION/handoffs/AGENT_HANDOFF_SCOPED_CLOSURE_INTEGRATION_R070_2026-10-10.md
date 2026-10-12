@@ -1,6 +1,6 @@
 # R070 scoped closure integration handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

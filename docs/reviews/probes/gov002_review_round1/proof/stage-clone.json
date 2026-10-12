@@ -1,0 +1,290 @@
+{
+  "schemaVersion": "gov002.round1.proofStage@1",
+  "stage": "clone",
+  "recordedAtUtc": "2026-10-12T12:49:46+00:00",
+  "pythonVersion": "3.11.9",
+  "gitVersion": "git version 2.55.0.windows.3",
+  "powershellVersion": "7.5.4",
+  "pathPlaceholders": {
+    "<PROJECT>": "live worktree",
+    "<WORK>": "disposable proof work directory",
+    "<WORKSPACE>": "container directory that holds the project and the sibling Core"
+  },
+  "claimBoundary": "static repository checks in the stated trees only; no provider, runtime, hosted CI or deployment evidence",
+  "unexpectedCount": 0,
+  "recordCount": 20,
+  "records": [
+    {
+      "id": "CL-clone",
+      "purpose": "git clone of the candidate snapshot into a different absolute container directory",
+      "command": "git clone -c core.longpaths=true --quiet --no-hardlinks <WORK>\\cand_src <WORK>\\container\\Customer-Care-Monitor",
+      "cwd": "<WORK>\\container",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 3.14,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "outputTruncated": false,
+      "output": ""
+    },
+    {
+      "id": "CL-identity",
+      "purpose": "clone HEAD/tree equal the recorded candidate snapshot",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "cloneHead": "933de8465e8c5995637ff53c805ae47eedf0418f",
+        "cloneTree": "4772043ee0c50e5ea254ab617ab279207df66894",
+        "originalProjectPathAbsentFromCloneRoot": true
+      }
+    },
+    {
+      "id": "CL-init",
+      "purpose": "scripts/initialize_cvf_clone.ps1 in the clone (clones/pins public Core, writes ignored binding, runs doctor)",
+      "command": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE -NoProfile -ExecutionPolicy Bypass -File scripts/initialize_cvf_clone.ps1",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "FRESH_CLONE_CONTINUITY_PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 9.54,
+      "outputSha256": "8cb5679d3fb2e04434e4a1c1210646ce468bbb126324722795fb3d036fa96170",
+      "outputTruncated": false,
+      "output": "Cloning into '<WORK>\\container\\.Controlled-Vibe-Framework-CVF'...\nUpdating files:  68% (4974/7277)\rUpdating files:  69% (5022/7277)\rUpdating files:  70% (5094/7277)\rUpdating files:  71% (5167/7277)\rUpdating files:  72% (5240/7277)\rUpdating files:  73% (5313/7277)\rUpdating files:  74% (5385/7277)\rUpdating files:  75% (5458/7277)\rUpdating files:  76% (5531/7277)\rUpdating files:  77% (5604/7277)\rUpdating files:  78% (5677/7277)\rUpdating files:  79% (5749/7277)\rUpdating files:  80% (5822/7277)\rUpdating files:  81% (5895/7277)\rUpdating files:  82% (5968/7277)\rUpdating files:  83% (6040/7277)\rUpdating files:  84% (6113/7277)\rUpdating files:  85% (6186/7277)\rUpdating files:  86% (6259/7277)\rUpdating files:  87% (6331/7277)\rUpdating files:  88% (6404/7277)\rUpdating files:  89% (6477/7277)\rUpdating files:  90% (6550/7277)\rUpdating files:  91% (6623/7277)\rUpdating files:  92% (6695/7277)\rUpdating files:  93% (6768/7277)\rUpdating files:  94% (6841/7277)\rUpdating files:  95% (6914/7277)\rUpdating files:  96% (6986/7277)\rUpdating files:  97% (7059/7277)\rUpdating files:  98% (7132/7277)\rUpdating files:  99% (7205/7277)\rUpdating files: 100% (7277/7277)\rUpdating files: 100% (7277/7277), done.\n\nCVF Workspace Agent Enforcement Doctor\n=======================================\nProject: <WORK>\\container\\Customer-Care-Monitor\n\n\n  Check                                              Status\n  -------------------------------------------------- ------\n  Project folder exists                              [PASS]\n  Project isolated from CVF core                     [PASS]\n  .cvf/manifest.json exists                          [PASS]\n  .cvf/manifest.json is valid                        [PASS]\n  .cvf/policy.json exists                            [PASS]\n  Live governance evidence mandatory                 [PASS]\n  AGENTS.md exists                                   [PASS]\n  Bootstrap log exists                               [PASS]\n  CVF core path reachable                            [PASS]\n  Workspace rules file exists                        [PASS]\n  CVF core origin is public remote                   [PASS]\n  Public workspace kit is complete                   [PASS]\n  CVF public core matches origin/main                [PASS]\n  CVF public core worktree clean                     [PASS]\n  CVF core commit matches manifest                   [PASS]\n  Required docs referenced by manifest exist         [PASS]\n  knowledge/ folder present (optional)               [PASS]\n  Seven-step phase model is canonical                [PASS]\n  Project continuity and catalog front doors exist   [PASS]\n  Active session state resolves its handoff          [PASS]\n  Implementation status and module registry are valid JSON [PASS]\n  AGENTS contract defines roles and seven steps      [PASS]\n  Pinned CVF core commit is public-remote reachable  [PASS]\n  Session and tranche continuity rehydration required [PASS]\n  Governed downstream catalog validates (--check)    [PASS]\n  Gate CVF-DG-INST-01                                [PASS]\n  Gate CVF-DG-CONT-01                                [PASS]\n\n  GATE_COVERAGE: INSTALLED=31 INVOKED=2 NOT_APPLICABLE_WITH_REASON=9 hostedCiObserved=false\n  RESULT: PASS (27/27 checks passed)\n  Scope: the listed doctor checks only. Not a claim of hosted CI, real adoption or runtime AI enforcement.\nFRESH_CLONE_CONTINUITY_PASS\nProject: <WORK>\\container\\Customer-Care-Monitor\nCore:    <WORK>\\container\\.Controlled-Vibe-Framework-CVF @ e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba\nRead AGENTS.md, then resolve the canonical session state and active handoff.\n"
+    },
+    {
+      "id": "CL-core-identity",
+      "purpose": "sibling Core in the container is the pinned public commit and clean",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "coreHead": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+        "coreRemote": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git"
+      }
+    },
+    {
+      "id": "CL-binding-ignored",
+      "purpose": "local binding exists but is ignored; the clone tree stays clean",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "porcelainIgnored": "!! .cvf/local-binding.json\n!! .cvf/runtime/"
+      }
+    },
+    {
+      "id": "CL-binding-paths",
+      "purpose": "binding records the clone's own paths (not the original machine)",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "projectPath": "<WORK>\\container\\Customer-Care-Monitor"
+      }
+    },
+    {
+      "id": "CL-no-origin-paths",
+      "purpose": "tracked instruction carriers contain no original-machine absolute path",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "matches": {}
+      }
+    },
+    {
+      "id": "CL-preflight",
+      "purpose": "legacy seven-gate preflight in the clone",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "PASS (7/7 executed gates passed)"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.82,
+      "outputSha256": "851c7cd96bb0ff1752e52db5309cec193f64f92a88a7b73843c061cac303c313",
+      "outputTruncated": false,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "id": "CL-unittest-all",
+      "purpose": "all gate self-tests once in the clone (46 legacy + new compatibility)",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B -m unittest discover -s scripts/tests -p test_cvf_downstream_gate*.py",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "OK"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 10.95,
+      "outputSha256": "8d449b9d2769c80f0bd420d1adb9732736a3276bf7d1458f1fbe043268e9b65e",
+      "outputTruncated": false,
+      "output": ".........................................................................................\n----------------------------------------------------------------------\nRan 89 tests in 10.837s\n\nOK\n"
+    },
+    {
+      "id": "CL-pre-dispatch",
+      "purpose": "installed pre-dispatch in the clone with explicit work-order packet (status is not ACTIVE: APPL N/A expected)",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.25,
+      "outputSha256": "2cbea1b37e74a96fe7b2dfac6ac7d76486635681668680ab9fbbb2fe4b2351cf",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\n"
+    },
+    {
+      "id": "CL-worker-return",
+      "purpose": "installed worker-return in the clone with explicit work-order packet (status is not ACTIVE: APPL N/A expected)",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.25,
+      "outputSha256": "e02d5aaeadee3428251e264bf2a0d6954c74ec2078e128bebaef7af17587af4d",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 1 document(s) scanned\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\n"
+    },
+    {
+      "id": "CL-reviewer-fast",
+      "purpose": "installed reviewer-fast in the clone with explicit work-order packet (status is not ACTIVE: APPL N/A expected)",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase reviewer-fast --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.26,
+      "outputSha256": "10f9f0dd6b8347c34026993542ad06873972f354879b31804f7c0b58c08703b1",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 1 document(s) scanned\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\n"
+    },
+    {
+      "id": "CL-pre-commit",
+      "purpose": "installed pre-commit in the clone with explicit work-order packet (status is not ACTIVE: APPL N/A expected)",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-commit --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.28,
+      "outputSha256": "518f3317e7a74492004d6b937b7ee22b428614305b04dd2b220d515eae70c24d",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 1 document(s) scanned\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\n"
+    },
+    {
+      "id": "CL-install-rerun",
+      "purpose": "installer rerun from the pinned Core in the clone",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B <WORK>\\container\\.Controlled-Vibe-Framework-CVF\\scripts/lib/downstream_governance/cvf_downstream_gate_runner.py install --project-root . --core-root <WORK>\\container\\.Controlled-Vibe-Framework-CVF --core-commit e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "ALREADY_INSTALLED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.1,
+      "outputSha256": "6e1be3a060af77b205f61a20b7fbe08e104aeeb4fce3d652f97e125735e41848",
+      "outputTruncated": false,
+      "output": "GATE_PROFILE_STATUS: ALREADY_INSTALLED lock present and identity verified\n"
+    },
+    {
+      "id": "CL-install-idempotent",
+      "purpose": "installer rerun changed no tracked/untracked bytes and left git clean",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "beforeTreeSha256": "c717ca077cd8be5fdcf99c31c79b7fb8a3b4dd0dd75f70727bd5becee5529228",
+        "afterTreeSha256": "c717ca077cd8be5fdcf99c31c79b7fb8a3b4dd0dd75f70727bd5becee5529228",
+        "files": 2101
+      }
+    },
+    {
+      "id": "CL-trusted",
+      "purpose": "Core runner in --trusted mode compares every installed byte to Core sources",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B <WORK>\\container\\.Controlled-Vibe-Framework-CVF\\scripts/lib/downstream_governance/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root <WORK>\\container\\Customer-Care-Monitor --trusted --no-receipt",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.26,
+      "outputSha256": "0e41008b69195add03c90d1fb4f5bcacdfed0fea886274fb078b7654dccbbddc",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\n"
+    },
+    {
+      "id": "CL-refuse-dirty-core",
+      "purpose": "initializer refuses a dirty Core and does not reset it",
+      "command": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE -NoProfile -ExecutionPolicy Bypass -File scripts/initialize_cvf_clone.ps1",
+      "cwd": "<WORK>\\container\\Customer-Care-Monitor",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": [
+        "dirty"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.4,
+      "outputSha256": "9bd8f9316cb30a2952657e7e4ca11005a4073a5518ef8fb060b132e6c74f8bce",
+      "outputTruncated": false,
+      "output": "Hidden CVF core is dirty; reconcile it before initialization: <WORK>\\container\\.Controlled-Vibe-Framework-CVF\nAt <WORK>\\container\\Customer-Care-Monitor\\scripts\\initialize_cvf_clone.ps1:32 char:52\n+ ... pending)) { throw \"Hidden CVF core is dirty; reconcile it before init ...\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Hidden CVF core...e-Framework-CVF:String) [], RuntimeException\n    + FullyQualifiedErrorId : Hidden CVF core is dirty; reconcile it before initialization: <WORK>\\container\\.Controll \n   ed-Vibe-Framework-CVF\n \n"
+    },
+    {
+      "id": "CL-dirty-core-preserved",
+      "purpose": "dirty file and Core HEAD survived the refusal",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "sentinel": true
+      }
+    },
+    {
+      "id": "CL-refuse-unrelated-core",
+      "purpose": "initializer refuses an unrelated Core (no origin/main history) and does not rewrite it",
+      "command": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE -NoProfile -ExecutionPolicy Bypass -File scripts/initialize_cvf_clone.ps1",
+      "cwd": "<WORK>\\container_unrelated\\Customer-Care-Monitor",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.46,
+      "outputSha256": "c7716482ca9e48b2d2640ddda031a1a36b7fc3d9d77269d3390a4e078e54932a",
+      "outputTruncated": false,
+      "output": "fatal: 'origin' does not appear to be a git repository\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nUnable to fetch public CVF origin/main\nAt <WORK>\\container_unrelated\\Customer-Care-Monitor\\scripts\\initialize_cvf_clone.ps1:34 char:28\n+ ... ASTEXITCODE -ne 0) { throw \"Unable to fetch public CVF origin/main\" }\n+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (Unable to fetch public CVF origin/main:String) [], RuntimeException\n    + FullyQualifiedErrorId : Unable to fetch public CVF origin/main\n \n"
+    },
+    {
+      "id": "CL-unrelated-core-preserved",
+      "purpose": "unrelated Core HEAD unchanged after the refusal",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "head": "6a6a244b755f59b4c1abfd4dc7097b0ef287220a"
+      }
+    }
+  ],
+  "cloneHead": "933de8465e8c5995637ff53c805ae47eedf0418f",
+  "cloneTree": "4772043ee0c50e5ea254ab617ab279207df66894",
+  "candidateCommit": "933de8465e8c5995637ff53c805ae47eedf0418f"
+}

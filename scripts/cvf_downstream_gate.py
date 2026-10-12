@@ -19,12 +19,14 @@ Exit code 0 only when every selected gate passes; diagnostics never print creden
 """
 import argparse
 import fnmatch
+import hashlib
 import json
 import os
 import re
 import shutil
 import subprocess
 import sys
+import types
 
 PHASES = ["INTAKE", "DESIGN", "SPEC", "WORK_ORDER", "BUILD", "REVIEW", "FREEZE"]
 STATUS_PHASE = {
@@ -69,6 +71,140 @@ SECRET_PATTERNS = [
     ("quoted-credential-literal", re.compile(r"(?i)\b(?:api[_-]?key|secret|passw(?:or)?d|token)\b[\"']?\s*[:=]\s*[\"'][A-Za-z0-9/+_\-]{24,}[\"']")),
 ]
 ALLOW_MARKER = "cvf-allow-secret-fixture"
+
+# ----------------------------------------------------------------------------- profile compatibility (PI03)
+# workOrderStatusGrammar@1.0.0 opt-in: a new record may carry
+#   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0"
+#   "workOrderStatus": <mapped display value>
+# Both must be present together; partial/unknown/unpinned/fenced/duplicate opt-in fails.
+# Only active when a valid cvf.downstreamGateProfile@1.1.0 lock is installed. The work-order
+# Status declaration is classified by the lock-pinned Core classifier (classify_status), loaded only
+# after its bytes match the lock, so fences (backtick and tilde), duplicate/contradictory/malformed
+# declarations and backtick-wrapped values are judged by the same grammar as CVF-DG-APPL-01.
+_WORK_ORDER_GRAMMAR_ID = "cvf.workOrderStatusGrammar@1.0.0"
+_REQUIRED_PROFILE_LOCK_ID = "cvf.downstreamGateProfile@1.1.0"
+_PINNED_CLASSIFIER_FILE = "check_gate_to_role_closeability.py"
+_PINNED_CLASSIFIER_CACHE = {}
+# Canonical mapping: tranche status -> allowed workOrderStatus value
+_GRAMMAR_STATUS_MAP = {
+    "WORK_ORDER":       "DRAFT",
+    "DISPATCH_READY":   "DISPATCH_READY",
+    "BUILD":            "ACTIVE",
+    "BUILD_BLOCKED":    "BLOCKED_WITH_REASON",
+    "REVIEW_PENDING":   "COMPLETE_PENDING_REVIEW",
+    "CHANGES_REQUIRED": "BLOCKED_WITH_REASON",
+    "REVIEW_PASS":      "REVIEWER_ACCEPTED",
+    "PARKED":           "PARKED",
+    "FROZEN":           "CLOSED",
+}
+
+
+def _profile_lock(root):
+    """Return the parsed installed profile lock (dict) or None when absent/unreadable."""
+    lock_path = os.path.join(root, ".cvf", "gate-profile.lock.json")
+    if not os.path.isfile(lock_path):
+        return None
+    try:
+        with open(lock_path, encoding="utf-8-sig") as fh:
+            data = json.load(fh)
+    except (OSError, ValueError):
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def _profile_lock_version(root):
+    """Return installed profileId string if lock exists and is readable, else None."""
+    lock = _profile_lock(root)
+    pid = lock.get("profileId") if lock else None
+    return pid if isinstance(pid, str) else None
+
+
+def _load_pinned_classifier(root, lock):
+    """Return (classify_status, None) or (None, reason).
+
+    The checker bytes are hashed (LF-normalized sha256, as in the lock) and must equal the lock entry
+    BEFORE they are executed; the very bytes that were hashed are the ones compiled, so there is no
+    verify/use gap and no bytecode is written.
+    """
+    gates_dir = lock.get("gatesDir")
+    files = lock.get("files")
+    if not isinstance(gates_dir, str) or not isinstance(files, dict) or not isinstance(files.get(_PINNED_CLASSIFIER_FILE), str):
+        return None, f"lock does not pin {_PINNED_CLASSIFIER_FILE}"
+    if not inside(root, gates_dir):
+        return None, "lock gatesDir is outside the project"
+    path = os.path.join(root, gates_dir, _PINNED_CLASSIFIER_FILE)
+    try:
+        with open(path, "rb") as fh:
+            data = fh.read()
+    except OSError as exc:
+        return None, f"pinned classifier unreadable: {exc.__class__.__name__}"
+    digest = hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
+    if digest != files[_PINNED_CLASSIFIER_FILE]:
+        return None, f"{_PINNED_CLASSIFIER_FILE} does not match the lock pin (drift or tamper)"
+    cached = _PINNED_CLASSIFIER_CACHE.get(digest)
+    if cached is not None:
+        return cached, None
+    name = "cvf_gate_pinned_status_classifier"
+    module = types.ModuleType(name)
+    module.__file__ = path
+    sys.modules[name] = module  # dataclass annotation resolution needs the module registered while executing
+    try:
+        exec(compile(data, path, "exec"), module.__dict__)
+    except Exception as exc:  # fail closed: a broken classifier never admits an opt-in
+        return None, f"pinned classifier failed to load: {exc.__class__.__name__}"
+    finally:
+        sys.modules.pop(name, None)
+    classify = getattr(module, "classify_status", None)
+    if not callable(classify):
+        return None, "pinned classifier lacks classify_status"
+    _PINNED_CLASSIFIER_CACHE[digest] = classify
+    return classify, None
+
+
+def check_work_order_status_opt_in(root, tid, rec, wo_text, r):
+    """Validate workOrderStatusGrammar opt-in for a new-grammar record.
+
+    Both fields must be present together; if only one is present that is an error.
+    If neither is present the record is a legacy record and this function does nothing.
+    The check requires a valid 1.1.0 lock and the lock-pinned status classifier.
+    """
+    has_grammar = "workOrderStatusGrammar" in rec
+    has_status = "workOrderStatus" in rec
+    if not has_grammar and not has_status:
+        return  # legacy record - unchanged semantics
+    if has_grammar != has_status:
+        r.fail(f"{tid}: workOrderStatusGrammar and workOrderStatus must both be present or both absent")
+        return
+    grammar = rec.get("workOrderStatusGrammar")
+    wo_status = rec.get("workOrderStatus")
+    if grammar != _WORK_ORDER_GRAMMAR_ID:
+        r.fail(f"{tid}: unknown or unsupported workOrderStatusGrammar {grammar!r}; only {_WORK_ORDER_GRAMMAR_ID!r} is permitted")
+        return
+    # Require installed lock matching the profile id that defines this grammar
+    lock = _profile_lock(root)
+    lock_id = lock.get("profileId") if lock else None
+    if lock_id != _REQUIRED_PROFILE_LOCK_ID:
+        r.fail(f"{tid}: workOrderStatusGrammar opt-in requires {_REQUIRED_PROFILE_LOCK_ID!r} lock; got {lock_id!r}")
+        return
+    tranche_status = rec.get("status")
+    expected_wo = _GRAMMAR_STATUS_MAP.get(tranche_status) if isinstance(tranche_status, str) else None
+    if expected_wo is None:
+        r.fail(f"{tid}: no workOrderStatus mapping for tranche status {tranche_status!r}")
+        return
+    if wo_status != expected_wo:
+        r.fail(f"{tid}: workOrderStatus {wo_status!r} does not match canonical mapping {expected_wo!r} for status {tranche_status!r}")
+        return
+    classify, reason = _load_pinned_classifier(root, lock)
+    if classify is None:
+        r.fail(f"{tid}: cannot verify work-order Status declaration: {reason}")
+        return
+    # The work-order document must carry exactly one unfenced, well-formed Status declaration equal to the mapped value.
+    decision = classify(rec.get("workOrder") or "work_order.md", wo_text.replace("\r\n", "\n"))
+    if decision.outcome == "INVALID":
+        r.fail(f"{tid}: work order Status declaration rejected by the pinned grammar ({decision.code}): {decision.reason}")
+        return
+    if decision.code == "not_work_order" or decision.token != wo_status:
+        r.fail(f"{tid}: work order Status {decision.token!r} does not match record workOrderStatus {wo_status!r}")
 
 
 class Result:
@@ -491,7 +627,12 @@ def check_order_status(root, rec, r):
     tid, wo = rec.get("trancheId", "?"), rec.get("workOrder")
     if not wo or not inside(root, wo) or not os.path.isfile(os.path.join(root, wo)):
         return  # validate_record already reports a missing work order
-    head = "\n".join(read_text(os.path.join(root, wo)).splitlines()[:20])
+    wo_text = read_text(os.path.join(root, wo))
+    # opt-in grammar check (PI03): must run before legacy check because opt-in uses a different Status vocabulary
+    if "workOrderStatusGrammar" in rec or "workOrderStatus" in rec:
+        check_work_order_status_opt_in(root, tid, rec, wo_text, r)
+        return  # opt-in records are not subject to the legacy STATUS_PHASE comparison
+    head = "\n".join(wo_text.splitlines()[:20])
     m = ORDER_STATUS.search(head)
     if not m:
         r.fail(f"{tid}: work order has no 'Status: <STATE>' line in its first 20 lines")

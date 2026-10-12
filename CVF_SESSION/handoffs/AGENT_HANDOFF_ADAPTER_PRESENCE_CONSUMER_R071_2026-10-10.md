@@ -1,6 +1,6 @@
 # R071 adapter presence consumer handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

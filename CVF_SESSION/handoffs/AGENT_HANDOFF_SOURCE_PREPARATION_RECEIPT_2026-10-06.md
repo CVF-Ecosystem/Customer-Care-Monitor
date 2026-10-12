@@ -1,6 +1,6 @@
 # Source-preparation receipt handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

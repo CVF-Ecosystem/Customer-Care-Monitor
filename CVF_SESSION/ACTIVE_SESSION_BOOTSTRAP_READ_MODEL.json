@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
+  "nextAllowedMove": "CCMAI-GOV-002-C1 independently accepted as a bounded static portable package. Local commit steward records one reviewed material commit, validates the exact committed range and publishes only codex/cvf-portable-inheritance, then synchronizes scoped REVIEW_PASS continuity. Runtime inheritance roadmap stays DRAFT; separate SPEC/work order/seed required before manual worker dispatch. docs55/R086 native-fence/accounts/deployment remain open or parked; no provider/runtime/main push/deploy.",
+  "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
+  "activeTranche": "CCMAI-GOV-002-C1",
+  "activeRole": "Codex /root COMMIT_STEWARD / SESSION_SYNC_STEWARD; independent REVIEW completed, manual worker returned and has no execution authority"
+}

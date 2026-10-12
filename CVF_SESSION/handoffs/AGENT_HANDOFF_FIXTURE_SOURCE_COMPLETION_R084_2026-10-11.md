@@ -1,6 +1,6 @@
 # R084 source-only fixture completion handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

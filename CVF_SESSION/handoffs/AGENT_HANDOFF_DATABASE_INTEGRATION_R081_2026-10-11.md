@@ -1,6 +1,6 @@
 # R081 database integration documentary gate handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

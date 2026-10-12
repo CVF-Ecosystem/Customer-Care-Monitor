@@ -1,0 +1,349 @@
+{
+  "schemaVersion": "1.0",
+  "operation": "Only change Status: ACTIVE to Status: SUPERSEDED at the same path; preserve every other byte/line and record original Git blob plus before/after digests",
+  "entries": [
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
+      "beforeBlob": "3ed0b5c2e945ef2a0907e9b51156e31369af5457",
+      "beforeSha256": "aa1a7b541d232f8f209ac4c6004587666107b52154410aec143df30251bd0226",
+      "afterBlob": "ff9c296196ad072c6d8dae45f0de5570b226a5df",
+      "afterSha256": "53b6d98c45d7b111e3fa6c72986310bc16e0c585bcb6b6607cf3a56dddccad61"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+      "beforeBlob": "13af20bf64868f8a5853479e04a51cb21ddc242a",
+      "beforeSha256": "4f56a32f0b71bee55f58a7203d9e310f31291cef86cf8a7fc1a1b5df6b4a9165",
+      "afterBlob": "8c76e2adb3406b1188e14520d3f10b1a87d4a124",
+      "afterSha256": "e73817190d1c6acdcbd99075a8efcb5d57554eb8a6db79277e71c3d549a1bef4"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
+      "beforeBlob": "ad6b71ef1f4955cd3ba3e230da66b284110a988b",
+      "beforeSha256": "9f8aeb725061a19d447a12ade0a1fb0bda1d22cbb585bb6aff2e096490281919",
+      "afterBlob": "1dd6bb1462b7dd90bff82ae7387228cd7f6c8cdb",
+      "afterSha256": "86ac84fe364e4319bdedcaecfc3b448a1beff7ec8c94f38980e01aae8535c513"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
+      "beforeBlob": "0d2bef166a8324ef512c3b364c86cd6bfe287ffc",
+      "beforeSha256": "dd41db73de5e967ed89148d962d24982c33aba9f71077391bd07b2421aed84c3",
+      "afterBlob": "8585aada4e1fa13feb193e88956088717fae80cb",
+      "afterSha256": "cecf6259c63a948ecba30e4bc921a59a3926c01122909e9dbd270a6d4a10c7f3"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
+      "beforeBlob": "0d9d9739aa5b806ee684ade231179c98baf3e4b9",
+      "beforeSha256": "8475e0860be78c20deba47eae4e58f986297eef14234a194ff9e2ee7a1cca985",
+      "afterBlob": "1dd1ca02c33f3877db0b83cb5f2bf4c29fa2546b",
+      "afterSha256": "81d18d8fc3f48860425c96f0081fca6190b0e420e11deffc1d5674eed50e30da"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
+      "beforeBlob": "dc58d2b479a01861a84ae3c9f870b9084fa6a73a",
+      "beforeSha256": "f5f3c067d26b9de0d66cb856a8a597fa696947b9d6496c8181698fbaad5a6f10",
+      "afterBlob": "cc411139e9fb01dea35add92311ccf2c48cf01b5",
+      "afterSha256": "c0cc1912a9891db364e33d058d164d579b5e3120a9bd4021647aa7b85615f26a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md",
+      "beforeBlob": "6d8e56bb0200a9ac2f55f29d4a3bb636b1e07153",
+      "beforeSha256": "58e76e210df7d49e70c280b8f0c8b5914740ee09b845e7f4388e1d269f596b88",
+      "afterBlob": "95027ad1b648d47eb0ea955c077a9b407391977d",
+      "afterSha256": "ede7259f254f427edc699017f126fd96a7ec7a4925bc8d5d3dd5e63aae28ffa2"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
+      "beforeBlob": "2a59ee87d665340fa640aea216eb0fcfb445d630",
+      "beforeSha256": "fa5f2d94838969321cf0a358cf1510d500212d31e56d2300ae6f3ceacb1ec02e",
+      "afterBlob": "040b77b8adb5e85f2ea4f3c91006da610fcbb9cb",
+      "afterSha256": "a24cdccbc1cf2c38e1fa604a8c30fedd8546b88dba335473666a0c48da158204"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md",
+      "beforeBlob": "b4f4c89d14be529b3d01289f744c8c4a008f920a",
+      "beforeSha256": "69b74d3f6898219ac66ee13e267fd5b4a9eda292554bd6088849e05c5e3f06aa",
+      "afterBlob": "4f1bafe607a951c4fe50cbd6129037c19d915907",
+      "afterSha256": "aee7245a9f4b3f6a002332bb708481783f7bfd9b5b34612912a41469b4e66b36"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
+      "beforeBlob": "23b73a128c50519212f9b6fca35f06375dcda40a",
+      "beforeSha256": "288c30389f3d6d4182107646ef8558274ae377f115671aa3bbe358de88e81bab",
+      "afterBlob": "7117300440d2041030d12c70df66488458234714",
+      "afterSha256": "b20711a3a4958cbbad887d4196e6dd03848e7fa4b8223fa6b7d1a6e859a193d7"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
+      "beforeBlob": "33d6479c3038342e435dc3cd0d1a0bb440f28a83",
+      "beforeSha256": "cd322fd5a294afa0965c41f2b1fa8b44fc8b6231f6ec6d72d3b15f01d5bae74d",
+      "afterBlob": "833583467e6e0efcc4c5c54f1a295ec821715539",
+      "afterSha256": "f7e49ddb572ce92c078b45a60421a65a4e4c34c2dbaabbd12f0cafcb45efec0d"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
+      "beforeBlob": "c16eff05b4b4dde57784a807f7d517d7d0ade0b1",
+      "beforeSha256": "ab26b021e33f7bd1ca0143d9e2fffc01bb3d971bf445825710624cd2efb0d4c9",
+      "afterBlob": "b70b446da1682d6986a5f5b2e5a91aff6a78a06c",
+      "afterSha256": "136f762652fd8cc3d0fc8e0fbb9f26917f708d9af6a7a8918209f4229a00898a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
+      "beforeBlob": "0cb8d4be288e946b088992570b0e8450a7328c71",
+      "beforeSha256": "9d1ecfe60664baa128a58bbc521c19e573a43f02cda11ada0ab281c42c7a7e87",
+      "afterBlob": "3c94fbffae8705d56fe52a14bac6602ff5b1109b",
+      "afterSha256": "5a5693cf1e1cf3ba6db3dafd739b2ce23f9073425710a61649f12a10a74803f3"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
+      "beforeBlob": "a26d0e43a8cbb820d4af9187d4a87206175a03d1",
+      "beforeSha256": "6163f82da1f3cf8f606d8d4425ddd2ebe9836b607580470345e47707bec3878e",
+      "afterBlob": "a963713edeb369525ee1fec9a8c72e8a6e50203b",
+      "afterSha256": "401e3c44240b6aa97f0e51e66511f00af52dd4dc13bc79ec40325db99b374cb2"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+      "beforeBlob": "f2cb983825ff4bda8e299816ba88160e1fac7679",
+      "beforeSha256": "3d34b1f4e3b3046934cc6e0ee661359517b0ca812d445ec080fcb57a38af2bd7",
+      "afterBlob": "2c60a6fe6e52a45c2a9764755735704e1f3824d5",
+      "afterSha256": "f481bc16674b6e1579099300a4d5712715d33b35284f2fba41b14262d548fb5f"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md",
+      "beforeBlob": "e0b147a592a29ea35ab82d7acda7ca07faafbdef",
+      "beforeSha256": "acf70118adcb6e8c7b3c93d0d5600f6fed5a61b168fe6c9ec086a94c03a2e56c",
+      "afterBlob": "28b5746023b277dbb1e5e5ea5e59e5ac180efba9",
+      "afterSha256": "70e9931cec1210d8364c35ecbf6c0272edc32fdba60bd9d363a1f6271fcc1669"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
+      "beforeBlob": "a9162903bd93056dd7ac8073c3efb620ff1919e2",
+      "beforeSha256": "7921813335174549193353d89ff1e79a8bcae5f19811c40aeafc785f1165d95a",
+      "afterBlob": "3f9906a2babbd7aa54832038954020b8740a5a84",
+      "afterSha256": "7b2617b79bbc00aef3e752f6a272b5a8d1ab01abc344011a204b39e9259cd876"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md",
+      "beforeBlob": "6d9b9f040c583e54be1d0fa685789910296d06a5",
+      "beforeSha256": "d0e93379c765261a81cb42ae952cfeaea619d885e37002a7cc25e2edf8ed554b",
+      "afterBlob": "27cbf2ae5b79e804f026a2e3bce7db0b23adbff7",
+      "afterSha256": "8bc70526948dadae96bc2507889522472fa20e03636d2df5d94b14dc823097de"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md",
+      "beforeBlob": "c8f9d45c878c59773c158c53713a2f998e5fb0ee",
+      "beforeSha256": "a032f8286920540604e017d95871e536bfbfb5163ec127312f092fc5f1d7f39b",
+      "afterBlob": "a3fdbb3ce0343754b4158dba28d835d8e51229a1",
+      "afterSha256": "288535742007dee633e1beaacc754e8b98e9411ec2cecdfa04cddf91af867f4d"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+      "beforeBlob": "2733db137e084f50fbc2cab8d3a1321d442f8946",
+      "beforeSha256": "877cfda7f21106c628396f5bd2e4dca5a5674cb2aefa18bcdb48408f38cde578",
+      "afterBlob": "19a8bc3300c69d239735dc560360987ce01b52ce",
+      "afterSha256": "553d4067881e395abc0f6d0fe5abc4514bd7a1539af3a9b598c836a366495fcd"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md",
+      "beforeBlob": "22a31a2c80d33108609798a35d2a4fe6053b6d11",
+      "beforeSha256": "22b16f007ce34a98f395e181812d391f6ac84e28987a636c9ae0e5a84eda3192",
+      "afterBlob": "5de65bd48007edbf81e660ba28da702f461e128f",
+      "afterSha256": "8580e300a781b36c510c2c804db9dffe55040faf6cf2d6c1fcdb1a94e99862e7"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+      "beforeBlob": "419551f4f05a4ec77f956861463f81da6dc78781",
+      "beforeSha256": "d15f9470a05edaeaa70ddbe9d4458e69168ad00221999f1ca5b3ffdf490aee29",
+      "afterBlob": "65ca45850b8b4b13b52969224306afdb70f60522",
+      "afterSha256": "39b30c3d6af33fc3a9994225f36202d9792c3584cd27e93964d51542d9b63491"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md",
+      "beforeBlob": "f1cf9629bc3cc14cb88e56a1b0f1035f94be01f3",
+      "beforeSha256": "5479fd2bb9800552bb5896e92e9af9c7bdf8c0b1481a77f061380879b44f0e58",
+      "afterBlob": "289ba4ad2be6a302875fd07d35a2c4246d8e9fab",
+      "afterSha256": "fd24c5f99819f97f69efa0abb3320664a44a4732a7b2caed1c1ca7a74e177d97"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
+      "beforeBlob": "ef5f625ff4dfd5772f60a7346347a9a4b0e43afd",
+      "beforeSha256": "72d0e5677bc00e529b3e53b839bdd1ae56d56fa48a812fe0e1cba94050fbe689",
+      "afterBlob": "f859e4d76453301aba0b59f6eef023697ad9bdcc",
+      "afterSha256": "b4509ad2c235248eb06f76f64747d9e1c8bb682bd406dc50ae414bda88611984"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md",
+      "beforeBlob": "334ddc2060317330d2e286371438f61fd0681532",
+      "beforeSha256": "6886250e9af1482c6a0d870aca153382a2a0bbc21134f53f15f9dc83c28ec8da",
+      "afterBlob": "f00ab74655802a6fa411d5fb875a69742dd4c7ba",
+      "afterSha256": "f7f24787400c09620d82c7ae62ff70a055d37692d56aae94af865f2f72f54d6a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
+      "beforeBlob": "026df28f4364cf7ce1031a9f982a15726a9a3d05",
+      "beforeSha256": "21300cfea51b26c5c7c2a08d270898427b76a3d819120173c960138e90c91cc0",
+      "afterBlob": "8d7cf36088d6c5a9f53d2013df57fbf76fb7053c",
+      "afterSha256": "af80cc6be025cbe982f98b8e304a5a16371712ef39714d1a949f621d6f22eb2b"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md",
+      "beforeBlob": "c53355593480596d4986f4752610d70ac59bc3eb",
+      "beforeSha256": "309d012ccf880ea7792b4403ca8420b1f03173f55c18ee742851ddaa8bc2e4cf",
+      "afterBlob": "4f287546ef382733afc1465acc7196183c7c1e3c",
+      "afterSha256": "f4256a29b63f8efc3ae66991ec91e085da1f51a9890107f04e26f800707e4627"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md",
+      "beforeBlob": "03f15b89d9b90595f6f8f1af0fff71aa559ce155",
+      "beforeSha256": "35262139f356555ab5c085b59d0277e954cd9c46f5d43f4cfa18eba8acc41d7c",
+      "afterBlob": "8a2f74bd7aa07d030a2c2b446b524df3d98524d4",
+      "afterSha256": "1b33f5f84c67f9c4e6096fb2f714fc9466d4282d241b6564a3f91fd512f81249"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
+      "beforeBlob": "6cd772cbd023a39cb8cfb2864f9dfa22edab2f1d",
+      "beforeSha256": "9843040b625e73da537dc9460f620bcd38f57639ab5b59c844ffba54afa5dc54",
+      "afterBlob": "28ffea4385d9e4db561b4b526db2bf455402577d",
+      "afterSha256": "07e1a675dc9b253ac68511d1aa213987808501f833073642a017ba1866246b3c"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
+      "beforeBlob": "3c566761e0c9ceace4561873d944755bcd652ebc",
+      "beforeSha256": "11c6caac56626e6c0ed9e571f1ec1168aa79bf200d289555b46b2007a57d51e7",
+      "afterBlob": "89f8287d1e638a11b95be23c1f3b88bd523db3f8",
+      "afterSha256": "092e1d46fb00e582d65e097f2e0bb5d94497c21659e4713df4262f7b7dfaa6bc"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
+      "beforeBlob": "a741dc35aa34baf5912e49ca2bf9bec7e26377b0",
+      "beforeSha256": "5e60a596966afe3f68a2d2f7f74b8bf60d0e5e6c581ec95083c72c3b432a373b",
+      "afterBlob": "56f8980cf4e36061f73fcfc2cf729237b27a1987",
+      "afterSha256": "41af4ec5d5489f7cbe234ec4a6cd48e62e2260e5c6f5eb45de4e39414f1651b9"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
+      "beforeBlob": "567d921391e75a01aa75a1de22dc08eb140a9103",
+      "beforeSha256": "13d94a64e2a29dcc54c50718bb5ce553656734bcf4e2d297b2ea9ba8e23fc5ee",
+      "afterBlob": "97c2f0f741017f923287b9cfda25cb7f2eb6f575",
+      "afterSha256": "5297a07b2c2a853d7d7073b870ee0b30ebadea794313eede07460ed6c153513e"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
+      "beforeBlob": "8c55bb5d5ae582c36c8f86d16cd927f6f4f15113",
+      "beforeSha256": "c302e4b85fcc0587af3b3c932e6699efb7f4d34e5345e94a1bb74d1519bfa083",
+      "afterBlob": "7e128b8485c8bc547ee896fbe8a4108e891eaf05",
+      "afterSha256": "c95146ff722ee5fdac8537098f9a861acd01a2334536befb378ac8031b7c046b"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
+      "beforeBlob": "ed1834bd5f78dbc6997316d2d270065229dced18",
+      "beforeSha256": "b216fd44fb3c227d88a53b76adda36d337c0f42e6bde9e260ca2fabf4061f359",
+      "afterBlob": "f0b2479971f057f645ba9eb4324aebe5b2a84adc",
+      "afterSha256": "0fe79d5e547322051ea092dce341d58cfdc15cd1b1441d6cefc99854dc6d9f83"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
+      "beforeBlob": "4d4bacd468e576251c33a65c17d742e5f39eee79",
+      "beforeSha256": "5bf953d445dde8390e3e3b763c839e9fd66f73e83826ee79e5a9a07df2ec0e3d",
+      "afterBlob": "28bb905dec88f4730c6455b214cd19a16d2c5a23",
+      "afterSha256": "411e2a2de1157c658a08e32cde2b92600bf94f09a1fe2918ccd1d1236f3c17a2"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+      "beforeBlob": "14321d50567b17a940f2b7e953528ac0196990d5",
+      "beforeSha256": "9ab5388f64293857b3d03a0e08af02361e202a8fd5331ac1ce40376f51fad3ca",
+      "afterBlob": "b7d6e65fc2b55eb90528614434c094d3d9c49383",
+      "afterSha256": "84315a0ba4e52cbad06338ff371e214156243d255faea276a3401490dede02c7"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
+      "beforeBlob": "108298eb76cc62ec28941a9464510a9c4340bb89",
+      "beforeSha256": "e07ddae01b7f663fcb1ba88795e0ec03802b4ff1e5366a4ffd68fbc951305b58",
+      "afterBlob": "cd90b1b6f5394497236afac78463b6f99ca3780e",
+      "afterSha256": "5aec5d532f5333bcf61749f1ce3395fc2d86e65e9531972b94fec2d93cd23ec0"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
+      "beforeBlob": "bb2cf490a68c9fab0f32ae8da448d4ef22f2053b",
+      "beforeSha256": "d310f6dd868a73d436213e01fa0fc88124f45c4350bb25d2bf9e624447a73ca2",
+      "afterBlob": "ce02c0cb3da6b17e52ae4111d20a412d3fe40c0b",
+      "afterSha256": "a21f2e8f336a3f3f149b4960a8b3159551ae99fdd2796769ab1ee76acab5c4e8"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md",
+      "beforeBlob": "1d6a5a934a504f5cc85a6a9fea8d8d44446114c8",
+      "beforeSha256": "9515db73b77bb2ce2b86df6d8333b16744c31b3dd86344beda1beeb418977fa8",
+      "afterBlob": "e09e658abc98e95bf5981ed9b1d028adc6bca3d2",
+      "afterSha256": "d3b241d067e2bb21f5e2910b37dfcd77c2244c8c02f64b96ca26b1b6af8de7a4"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
+      "beforeBlob": "840da27a2e2e885b6bff78f298b378ca06984c49",
+      "beforeSha256": "1a010282056f851b46b4a09b74f33085565651aab5b714398d1318fa3939dd92",
+      "afterBlob": "2ecfe704626c9d70e38072d1b8e08c00a2fefca8",
+      "afterSha256": "3a4988dd022995ea5b81493123c33a4115537beff2997b5890445021f6d4a633"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+      "beforeBlob": "ebeb5d494fc9f002ea0a3936a1f88a48dd743b8a",
+      "beforeSha256": "c02ab1ce6032ef1b6d87a91e1bec1268313fce61c69a12224c2d0d18a614ace5",
+      "afterBlob": "9aff820f6430a8966aaa93734e9cb044c85bd61a",
+      "afterSha256": "3f1a4abd9a3d631067f2335423410ccb602bf28e53dc0f928a1adaca1beeb01b"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
+      "beforeBlob": "dea89eb78d98e011ad695a67cf8431bb6f8dffb4",
+      "beforeSha256": "72c00e5d8a37cd41eb6e7e3e16dad05555fb520ad518205d293842282e516e54",
+      "afterBlob": "5d8aeca92718c119cd933cc948c0b3ca41587329",
+      "afterSha256": "e38522465cac462d217a94e7582b2e69f57d231f024cdd0ec18c20c5ea39a84f"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+      "beforeBlob": "39bb1d201ee12fd57d1a541a20f0c8c492daf5ed",
+      "beforeSha256": "42e53d7abf61baf6c5028c0cd4f896ce67a72e42c161f52416a0d6be2617f571",
+      "afterBlob": "d3ef2b00f7df7f8b65d4723209abf0ba3b0733c2",
+      "afterSha256": "a2b7eb952f59db446fc6ef07a4a365c0c4d937630a94396e704ebfe340ed88fd"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
+      "beforeBlob": "e0f9f8021494cb31b77db79f8e773aff7d1035a7",
+      "beforeSha256": "cebcc3ec2e02b651c79617a1cbd2c43eec86fd6807fef8f8b438a9a1e912af6b",
+      "afterBlob": "10d93518182eaca6a92c1c421bd383280216e143",
+      "afterSha256": "5842c9a0a28cef1a91a63e85b378e7a7d45f24ebfb97509beb79aa752db66979"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
+      "beforeBlob": "52bfbbf2adbfbc4a6f4cb25a77bc79eba619f611",
+      "beforeSha256": "5a140af03317f8126c170ca7735d2c7366b0a9581794c70387efd795b7b95223",
+      "afterBlob": "b4388220caa9cb974943c21575d6782108382765",
+      "afterSha256": "cd54af889383ae3a780f615189236ac9a5a052b091bed22c501437b434a0724a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
+      "beforeBlob": "8382c083b0dd2edc756541e19293b96f6cff901d",
+      "beforeSha256": "94f8a60dd4ab7dd3646fe1170b0c93df18b613ebf26eb6b5c51c87a0feaee58f",
+      "afterBlob": "0118f250a8635abe4997708d63203852e0e67b75",
+      "afterSha256": "13a72f5e92632f809ce6e8405faf790b1632bf443f68170e8a59384aa3d5c0a3"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
+      "beforeBlob": "992088521caf6652326bbf68373ba1fa2d4395ea",
+      "beforeSha256": "2c8c90ad051769a5f1607456b9e776d2ecb54b25c04196143f47ddcdbce4c526",
+      "afterBlob": "3a1e1eea7eb873db67d9194e29a07e5d25b86e26",
+      "afterSha256": "c270de454c19c324ffb1141cd13e90720ae965746d1572610e45710d58e30220"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
+      "beforeBlob": "f5b369046b9ffb9761d45dd33773b61fe5d1b204",
+      "beforeSha256": "e0a7acd51e1c2a2a95f04f9a9610441657c9553be31098c92a8accf73ef9ddb9",
+      "afterBlob": "41ed22dd60fe8db5d7c02bb8515a437c17ad2f35",
+      "afterSha256": "fd4496cfe300d1b864f09bca130baf8ef3b40ed55e90f3ed390ac16db0b972d1"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
+      "beforeBlob": "119e02c3d4e3494cb44059428d939d6f0ae724b2",
+      "beforeSha256": "467fa98bdda16039149b94776b88e8ce10af3a3b8d7946b919426ea42dd4ee81",
+      "afterBlob": "ff033c514731272b86f429fbe6b234ddea6b1f5a",
+      "afterSha256": "4a6b52fc6e2fb4e99b0efb56d219442951a85ee495728ef4f2d2e442a138e65b"
+    }
+  ]
+}

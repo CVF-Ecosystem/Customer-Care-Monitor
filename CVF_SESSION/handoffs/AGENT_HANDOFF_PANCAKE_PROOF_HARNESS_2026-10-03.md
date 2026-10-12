@@ -1,6 +1,6 @@
 # Pancake proof harness dispatch handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

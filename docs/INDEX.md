@@ -1,4 +1,4 @@
-﻿# Project Documentation Index
+# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -9,10 +9,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
+- Owner-requested DRAFT/HOLD roadmap for seven runtime findings and CVF pattern inheritance; three proposed packages, awaits GOV002 independent review and separate source authority.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active GOV002-C1 bounded portable profile adoption dispatch; manual independent worker/reviewer, not installed, old product blockers retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md`
+- Active GOV002-C1 static portable package independently accepted; Local commit/publication pending, existing product blockers retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -174,11 +175,59 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent R032 exact-R1 re-review: REVIEW_PASS for local contract; finite semantic M13 detector and current prose settled; FREEZE_OPEN.: `docs/reviews/CCMAI_RUNTIME_032_R1_INDEPENDENT_REREVIEW_2026-10-03.md`
 - Separate owner-authorized existing-branch fast-forward publication after R058 closure; no merge/deploy or CI success claim.: `CVF_SESSION/publication/GITHUB_BRANCH_UPDATE_2026-10-06.json`
 - R2 public profile adoption scope amendment after predispatch legacy-status contradiction: additive fail-closed compatibility, independent worker/reviewer, portable continuation.: `CVF_SESSION/authority/CCMAI-GOV-002-C1.json`
-- Canonical DISPATCH_READY/WORK_ORDER record bound to pre-BUILD committed immutable C1 authority.: `CVF_SESSION/tranches/CCMAI-GOV-002-C1.json`
+- Canonical REVIEW/CHANGES_REQUIRED round1 record; installed candidate not accepted, unchanged immutable C1 authority, historical missing BUILD acknowledgment retained.: `CVF_SESSION/tranches/CCMAI-GOV-002-C1.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `.cvf/gate-profile.lock.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json`
 - Actual project branch preparation push and remote-SHA verification at5338ec9; no worker implementation, installed profile, hosted CI, private-parent/main push or runtime claim.: `docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md`
+- Independent CHANGES_REQUIRED decision with four consolidated findings and same-authority round1 repair admission; no candidate publication.: `docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/probes/gov002_doctor_receipt_2026-10-12.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/probes/gov002_historical_handoff_migration_ledger_2026-10-12.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/probes/gov002_preflight_gate_receipt_2026-10-12.json`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/consolidated-findings.json`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/local-review-audit.json`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/original-gov002_doctor_receipt_2026-10-12.json`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/original-gov002_historical_handoff_migration_ledger_2026-10-12.json`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/original-gov002_preflight_gate_receipt_2026-10-12.json`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/original-gov002_runner_phases_receipt_2026-10-12.json`
+- Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1.: `docs/reviews/probes/gov002_review_round0/original-gov002_unit_tests_receipt_2026-10-12.json`
+- Round1 candidate-bound proof driver (stdlib, disposable clones, no provider or application effect).: `docs/reviews/probes/gov002_review_round1/gov002_round1_proof.py`
+- Immutable copy of the round0 returned status adapter (raw sha256 2f3be11a...), kept only as discrimination evidence; not executable project source.: `docs/reviews/probes/gov002_review_round1/original-returned-cvf_downstream_gate.py.txt`
+- Round1 BUILD-time evidence: explicit-packet phases while the order was ACTIVE and live installer rerun.: `docs/reviews/probes/gov002_review_round1/proof/stage-buildtime.json`
+- Round1 evidence: separate-root clone, initializer, doctor, preflight, self-tests and installer idempotence.: `docs/reviews/probes/gov002_review_round1/proof/stage-clone.json`
+- Round1 evidence: new compatibility tests fail on the returned adapter and pass on the repaired gate in isolated copies.: `docs/reviews/probes/gov002_review_round1/proof/stage-discrimination.json`
+- Round1 evidence: final-state gates on the live tree after the return document existed.: `docs/reviews/probes/gov002_review_round1/proof/stage-final.json`
+- Round1 evidence: tamper, drift, role, applicability and status negatives in disposable clones.: `docs/reviews/probes/gov002_review_round1/proof/stage-negatives.json`
+- Round1 evidence: explicit-range pr-ci with three pins plus range and pin refusals.: `docs/reviews/probes/gov002_review_round1/proof/stage-prci.json`
+- Round1 evidence: faithful disposable candidate snapshot identity and omission check.: `docs/reviews/probes/gov002_review_round1/proof/stage-snapshot.json`
+- Round1 candidate manifest: path hashes, round0 delta and faithful snapshot identity.: `docs/reviews/probes/gov002_round1_candidate_manifest_2026-10-12.json`
+- Round1 worker receipt indexing the stage files, actual model identity and unavailable telemetry reasons; not an acceptance claim.: `docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/probes/gov002_runner_phases_receipt_2026-10-12.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `docs/reviews/probes/gov002_unit_tests_receipt_2026-10-12.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `.github/workflows/cvf-downstream-gates.yml`
 - Unactivated first adoption seed; no BUILD occurred. Source audit required additive status compatibility, so successor CCMAI-GOV-002-C1 governs the initial worker packet; original seed immutable.: `CVF_SESSION/authority/CCMAI-GOV-002.json`
 - Source-audited public-source adoption choice, legacy grammar conflict and finite portable outcome; no installed/hosted/runtime claim.: `docs/decisions/CVF_PORTABLE_INHERITANCE_GOV002_2026-10-12.md`
-- Single R2 initial worker assignment for public profile adoption, additive strict status compatibility and fresh-clone continuation; no worker commit/push or runtime.: `docs/work_orders/CCMAI_GOV_002.md`
+- Same-authority R2 consolidated repair round1 for strict status parsing, candidate-bound clone/range proof, portable guide and truthful return; worker must not commit.: `docs/work_orders/CCMAI_GOV_002.md`
+- Independent intake binding of 108 file hashes and seven stages; worker artifacts preserved, zero application/provider campaign.: `docs/reviews/probes/gov002_round1_local_review_2026-10-12.json`
+- Independent round1 acceptance of bounded static portable package; metadata attribution corrected; runtime/native/product/hosted claims excluded.: `docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/check_gate_to_role_closeability.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_applicability.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_common.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_continuity.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_coverage.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_install.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_intake.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_review.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_dg_routing.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_downstream_gate_profile.json`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/cvf_downstream_gate_runner.py`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/git-pre-commit.template`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/project_learning_home.template.md`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/cvf_gates/project_learning_record.template.md`
+- GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim.: `scripts/tests/test_cvf_downstream_gate_profile_compatibility.py`
 - Historical R053 accepted successor handoff before separate R054 closure; acceptance and history retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md`
 - Historical bounded local R054 closure handoff before separately seeded R055 application receipt work.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md`
 - Historical interrupted R055 source review before R057; source and failures retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md`

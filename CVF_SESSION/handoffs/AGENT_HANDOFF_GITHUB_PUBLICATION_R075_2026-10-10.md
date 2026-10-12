@@ -1,6 +1,6 @@
 # R075 GitHub publication handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

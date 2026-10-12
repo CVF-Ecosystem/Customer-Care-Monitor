@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "gov002.round1.proofStage@1",
+  "stage": "prci",
+  "recordedAtUtc": "2026-10-12T12:51:25+00:00",
+  "pythonVersion": "3.11.9",
+  "gitVersion": "git version 2.55.0.windows.3",
+  "powershellVersion": "7.5.4",
+  "pathPlaceholders": {
+    "<PROJECT>": "live worktree",
+    "<WORK>": "disposable proof work directory",
+    "<WORKSPACE>": "container directory that holds the project and the sibling Core"
+  },
+  "claimBoundary": "static repository checks in the stated trees only; no provider, runtime, hosted CI or deployment evidence",
+  "unexpectedCount": 0,
+  "recordCount": 8,
+  "records": [
+    {
+      "id": "PRCI-pins",
+      "purpose": "three pins read from the generated workflow equal the lock",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "profile": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+        "runner": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+        "bundle": "c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2"
+      }
+    },
+    {
+      "id": "PRCI-positive",
+      "purpose": "pr-ci with explicit legitimate base/head and all three pins in the candidate repo",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci --project-root . --base ca1c3aa29a6088916bbd5d31bef37e67277f8b9c --head HEAD --no-receipt --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\cand_src",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS",
+        "mode=RANGE"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.38,
+      "outputSha256": "72f5a16e4b45e86c4fc56d3fde8063643a349e71a9fbf0f951145c08ab80da1e",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: RANGE_RESOLVED mode=RANGE base=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=99 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 5 document(s) scanned\nRESULT: PASS phase=pr-ci mandatoryControls=7 failed=0\n"
+    },
+    {
+      "id": "PRCI-json",
+      "purpose": "same range with --json so each mandatory control outcome is machine-readable",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci --project-root . --base ca1c3aa29a6088916bbd5d31bef37e67277f8b9c --head HEAD --no-receipt --json --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\cand_src",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "CVF-DG-APPL-01",
+        "CVF-DG-ROUTE-01",
+        "CVF-DG-ROLE-01",
+        "CVF-DG-CLAIM-01",
+        "CVF-DG-RANGE-01"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.33,
+      "outputSha256": "abf67fd5e69938821473791fc5db3f1d7817ba9caeae7ebefbaade0ef85030fc",
+      "outputTruncated": false,
+      "output": "{\n  \"exitCode\": 0,\n  \"phase\": \"pr-ci\",\n  \"range\": \"RANGE_RESOLVED mode=RANGE base=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=99 deleted=0\",\n  \"results\": [\n    {\n      \"checkedControlIds\": [],\n      \"controlId\": \"CVF-DG-INST-01\",\n      \"findings\": [],\n      \"notes\": [],\n      \"ok\": true,\n      \"outcome\": \"PASS\",\n      \"reason\": \"\"\n    },\n    {\n      \"checkedControlIds\": [],\n      \"controlId\": \"CVF-DG-CONT-01\",\n      \"findings\": [],\n      \"notes\": [],\n      \"ok\": true,\n      \"outcome\": \"PASS\",\n      \"reason\": \"\"\n    },\n    {\n      \"checkedControlIds\": [],\n      \"controlId\": \"CVF-DG-RANGE-01\",\n      \"findings\": [],\n      \"notes\": [\n        \"RANGE_RESOLVED mode=RANGE base=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=99 deleted=0\"\n      ],\n      \"ok\": true,\n      \"outcome\": \"PASS\",\n      \"reason\": \"\"\n    },\n    {\n      \"checkedControlIds\": [\n        \"work_order_status_grammar\"\n      ],\n      \"controlId\": \"CVF-DG-APPL-01\",\n      \"findings\": [],\n      \"notes\": [\n        \"docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\"\n      ],\n      \"ok\": true,\n      \"outcome\": \"NOT_APPLICABLE_WITH_REASON\",\n      \"reason\": \"every candidate is explicitly not active; closeability contract was not checked\"\n    },\n    {\n      \"checkedControlIds\": [\n        \"CVF-DG-ROUTE-01\"\n      ],\n      \"controlId\": \"CVF-DG-ROUTE-01\",\n      \"findings\": [],\n      \"notes\": [\n        \"checked: docs/work_orders/CCMAI_GOV_002.md\"\n      ],\n      \"ok\": true,\n      \"outcome\": \"PASS\",\n      \"reason\": \"\"\n    },\n    {\n      \"checkedControlIds\": [\n        \"CVF-DG-ROLE-01\"\n      ],\n      \"controlId\": \"CVF-DG-ROLE-01\",\n      \"findings\": [],\n      \"notes\": [\n        \"checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\",\n        \"docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\"\n      ],\n      \"ok\": true,\n      \"outcome\": \"PASS\",\n      \"reason\": \"\"\n    },\n    {\n      \"checkedControlIds\": [\n        \"CVF-DG-CLAIM-01\"\n      ],\n      \"controlId\": \"CVF-DG-CLAIM-01\",\n      \"findings\": [],\n      \"notes\": [\n        \"0 explicit claim line(s) and 5 document(s) scanned\"\n      ],\n      \"ok\": true,\n      \"outcome\": \"PASS\",\n      \"reason\": \"\"\n    }\n  ]\n}\n"
+    },
+    {
+      "id": "PRCI-unknown-base",
+      "purpose": "unknown base commit is refused, not treated as an empty range",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci --project-root . --base 0123456789abcdef0123456789abcdef01234567 --head HEAD --no-receipt --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\cand_src",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "RANGE_BASE_UNRESOLVED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.2,
+      "outputSha256": "ea4994d7c31fd9e0ce1505c24cf5bc748f0420bbad699976f03608aed1f31bc6",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[FAIL] CVF-DG-RANGE-01 FAIL\n       RANGE_BASE_UNRESOLVED @ 0123456789abcdef0123456789abcdef01234567: base commit is not available in this checkout (shallow clone or wrong revision)\n       note: RANGE_REFUSED mode=UNRESOLVED base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\n[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 0 document(s) scanned\nRESULT: FAIL phase=pr-ci mandatoryControls=7 failed=1\n"
+    },
+    {
+      "id": "PRCI-no-base",
+      "purpose": "pr-ci without a base is refused",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci --project-root . --head HEAD --no-receipt --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\cand_src",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "RANGE_BASE_MISSING"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.16,
+      "outputSha256": "89efb387d6997ed6b410c23966d55b524c77a6cf7eee666de9b59aeb631629ac",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[FAIL] CVF-DG-RANGE-01 FAIL\n       RANGE_BASE_MISSING @ --base: this phase needs the PR/push base commit; no range means no candidate discovery\n       note: RANGE_REFUSED mode=UNRESOLVED base=None head=None candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\n[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 0 document(s) scanned\nRESULT: FAIL phase=pr-ci mandatoryControls=7 failed=1\n"
+    },
+    {
+      "id": "PRCI-env-unset",
+      "purpose": "--base-from-env with an unset variable is refused",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci --project-root . --base-from-env CVF_DG_BASE_UNSET_FOR_PROOF --head HEAD --no-receipt --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\cand_src",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "RANGE_BASE_MISSING"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.19,
+      "outputSha256": "4ee89b8b0501647cd9e2668805da716616796541457f70d6cab5b82d4f3f0e5d",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[FAIL] CVF-DG-RANGE-01 FAIL\n       RANGE_BASE_MISSING @ --base: this phase needs the PR/push base commit; no range means no candidate discovery\n       RANGE_BASE_MISSING @ env:CVF_DG_BASE_UNSET_FOR_PROOF: the named base environment variable is unset or empty\n       note: RANGE_REFUSED mode=UNRESOLVED base=None head=None candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\n[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 0 document(s) scanned\nRESULT: FAIL phase=pr-ci mandatoryControls=7 failed=1\n"
+    },
+    {
+      "id": "PRCI-head-not-checked-out",
+      "purpose": "head that is not the checked-out commit is refused",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci --project-root . --base ca1c3aa29a6088916bbd5d31bef37e67277f8b9c --head ca1c3aa29a6088916bbd5d31bef37e67277f8b9c --no-receipt --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\cand_src",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "RANGE_HEAD_NOT_CHECKED_OUT"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.24,
+      "outputSha256": "494f2f5d97139471b2dc45511d8dba4cdd275d4a3d5498f301d5d2e6e5bc7f53",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[FAIL] CVF-DG-RANGE-01 FAIL\n       RANGE_HEAD_NOT_CHECKED_OUT @ ca1c3aa29a6088916bbd5d31bef37e67277f8b9c: candidate files are read from the checkout, so head must be the checked-out HEAD\n       note: RANGE_REFUSED mode=UNRESOLVED base=None head=None candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\n[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 0 document(s) scanned\nRESULT: FAIL phase=pr-ci mandatoryControls=7 failed=1\n"
+    },
+    {
+      "id": "PRCI-wrong-pin",
+      "purpose": "pr-ci with a wrong profile pin is refused",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci --project-root . --base ca1c3aa29a6088916bbd5d31bef37e67277f8b9c --head HEAD --no-receipt --expect-profile-sha256 2222222222222222222222222222222222222222222222222222222222222222 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\cand_src",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "REFUSED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.08,
+      "outputSha256": "bb6a267e1e87532c7dcdd38f999ceae7c66de8cff42498085e0094ac60b0ab57",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 stage-0 pin verification\n       PROFILE_PIN_MISMATCH @ cvf_gates: actual bytes differ from the expected pin (checked before importing project modules)\nRESULT: FAIL phase=pr-ci stage0=REFUSED\n"
+    }
+  ],
+  "candidateCommit": "933de8465e8c5995637ff53c805ae47eedf0418f",
+  "baseCommit": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c"
+}

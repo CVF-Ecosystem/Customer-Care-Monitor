@@ -1,6 +1,6 @@
 # Offline proof CLI operator documentation handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

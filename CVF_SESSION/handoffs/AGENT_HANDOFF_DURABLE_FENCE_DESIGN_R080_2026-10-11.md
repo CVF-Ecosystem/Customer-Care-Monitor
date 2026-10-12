@@ -1,6 +1,6 @@
 # R080 intended durable JobRun fence design handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

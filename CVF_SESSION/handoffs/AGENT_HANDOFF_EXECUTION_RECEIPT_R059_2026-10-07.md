@@ -1,6 +1,6 @@
 # Analyzer execution receipt R059 handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

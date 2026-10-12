@@ -2,14 +2,14 @@
 
 Memory class: FULL_RECORD
 docType: work_order
-Status: DISPATCH_READY
+Status: COMPLETE_PENDING_REVIEW
 Owner: Local orchestrator / independent reviewer
 Risk: R2
 providerExecutionAuthority: FORBIDDEN
 
 ## Dispatch Prompt Envelope
 
-- Role: IMPLEMENTATION_WORKER, actor identity `ccmai-gov002-worker`; shared-workspace INTERNAL_AGENT. Operator prefers Sonnet; record actual model/effort if exposed, otherwise null with reason. Local owns independent review and final disposition.
+- Role: REPAIR_WORKER (round1), actor identity `ccmai-gov002-worker`; shared-workspace INTERNAL_AGENT. Operator prefers Sonnet; record actual model/effort if exposed, otherwise null with reason. Local owns independent review and final disposition.
 - Canonical packet: `docs/work_orders/CCMAI_GOV_002.md`.
 - Commit mode: WORKER_MUST_NOT_COMMIT. Root is commit steward; no worker push, merge or deploy.
 - executionBaseHead: read actual HEAD and verify the committed authority seed before BUILD; dispatch authority base is f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d.
@@ -96,29 +96,38 @@ A hook template existing in scripts/cvf_gates is INSTALLED only; do not claim lo
 
 Review-Dispatch Convergence Control: REQUIRED
 
-dispatchKind: INITIAL
+dispatchKind: REWORK
 dispatchSurface: INTERNAL_AGENT
 parentAssignmentId: CCMAI-GOV-002-C1
-reviewRoundCount: 0
-priorFindingSetDigest: NOT_APPLICABLE_INITIAL_DISPATCH
-dependencyAuditDisposition: COMPLETE_INITIAL_ACCEPTANCE_MATRIX
-reworkFindingDisposition: NOT_APPLICABLE_INITIAL_DISPATCH
+reviewRoundCount: 1
+priorFindingSetDigest: 4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb
+dependencyAuditDisposition: COMPLETE_BEFORE_FIRST_REPAIR
+reworkFindingDisposition: CONSOLIDATED_ALL_DEPENDENT_FINDINGS
 newIndependentCriticalEvidence: NONE
-regressionGuardDisposition: BASELINE_NEGATIVE_TESTS_PLANNED
+regressionGuardDisposition: REQUIRED_AND_PLANNED_FOR_EACH_TARGETED_DEFECT
 cumulativeExternalInvocationCount: 0
 externalInvocationCeiling: 0
 usageAvailability: NOT_APPLICABLE_INTERNAL_AGENT
 quotaAdmissionDisposition: NOT_APPLICABLE_INTERNAL_AGENT
-nextDispatchDisposition: INITIAL_DISPATCH
-rootCauseClusterId: NOT_APPLICABLE_INITIAL_DISPATCH
-reworkGeneration: 0
-consolidatedDefectClassSweep: COMPLETE_INITIAL_ACCEPTANCE_MATRIX
+nextDispatchDisposition: ONE_CONSOLIDATED_REWORK
+rootCauseClusterId: CCMAI-GOV-002-PORTABLE-ADOPTION
+reworkGeneration: 1
+consolidatedDefectClassSweep: COMPLETE_BEFORE_REWORK_DISPATCH
 successorTrancheOpened: NO
 implementationAutonomyDisposition: CONTRACT_AUTHORITY_EVIDENCE_OUTCOME_ONLY
 preExecutionReviewAdmission: NOT_REQUIRED_BEFORE_EXECUTION
 preExecutionReviewTrigger: NONE
 nextRoutineReviewBoundary: WORKER_RETURN
 reviewerWorkBoundary: EVALUATE_RETURNED_EVIDENCE_NOT_RECREATE_IMPLEMENTATION
+reviewerLocalRepairBoundary: NEW_EVIDENCE_REQUIRED
+reviewerLocalRepairBasis: F2 requires candidate-bound fresh-clone, range and negative proof absent from the returned evidence; source F1 remains independent worker ownership. Reviewer corrects session/catalog metadata only.
+unchangedObjective: YES
+unchangedDesign: YES
+unchangedPaths: YES
+unchangedAuthority: YES
+unchangedEffects: YES
+unchangedCommitOwner: YES
+evidenceDetermined: NO
 
 One initial worker package; same-authority bounded repairs stay in this packet. One consolidated Local review, no per-row implementation recreation. Third repair round without an independent new root cause stops. Record actual worker model/effort/tokens/cost when available; null with a specific unavailable reason otherwise. Never invent provider telemetry or require a provider call for these static repository checks.
 
@@ -159,10 +168,27 @@ Local dispatcher read public profile schema/constants, installer, continuity con
 
 ## Return-Time Closeability Recheck
 
-Worker return must declare version cvf.gate-role-closeability@1.0.0, closeabilityDisposition CLOSEABLE or an honest blocked disposition, outsideAuthorityBlockers NONE only if true, no redispatch, and the exact Local repair/escalation route for a real packet contradiction. Local consumes returned evidence, checks safety and the consolidated acceptance matrix, and performs material + continuity commits only after relevant gates pass. Publication belongs to the Local steward on the authorized project branch.
+closeabilityContractVersion: cvf.gate-role-closeability@1.0.0
+closeabilityDisposition: CLOSEABLE
+outsideAuthorityBlockers: NONE
+nextRepairRoute: CONSOLIDATED_WORKER_REPAIR_WITHIN_EXISTING_AUTHORITY
+workerRedispatchAllowed: YES
+
+Existing authority can reach acceptance after the authorized round1 repair; current implementation is CHANGES_REQUIRED, so display Status is BLOCKED_WITH_REASON. Worker is explicitly admitted to rehydrate, acknowledge actual repair BUILD, synchronize record/work-order mapping and start this bounded repair; no new seed or successor. Original procedural failures remain disclosed.
 
 ## Claim Boundary And Public Export Disposition
 
 Prepared dispatch is not installed/adopted control coverage. Static/hermetic profile proof does not assert CVF governance over AI behavior; live proof would require separately admitted real provider evidence. Hosted CI success requires actual run URL/SHA/conclusion and is not established here. Product R086 source-only acceptance, docs55, native/fence integration, accounts and deployment gaps remain unchanged.
 
 Public Export Disposition: DEFERRED_PRIVATE_ONLY for the private CVF parent; no private parent export is authorized. This project packet may be published to the owner's already specified project remote/branch. The Local receipt records the real branch commit after publication; it must not label planned delivery as EXPORTED.
+
+## Consolidated Repair Admission - Round1
+
+Local independent review: `docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md`. Binding findings: `docs/reviews/probes/gov002_review_round0/consolidated-findings.json`, SHA256 4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb. Original worker evidence under `gov002_review_round0/original-*` is immutable for this repair. Existing C1 seed unchanged; no new source paths/effects or runtime authority. No commit.
+
+- R1-F1: Repair the three captured parser false accepts and add actual fenced/tilde, malformed/contradictory/duplicate/backtick regressions; healthy mappings and old controls retained. New tests must discriminate the returned adapter from repaired behavior in isolated copies.
+- R1-F2: Complete PI01/02/04/05 actual idempotence, tamper/drift/wrong-pin/range and faithful separate-root clone/init/doctor/preflight proof. Bind logs to candidate tree/manifest; local pr-ci uses an explicit legitimate base/head and three pins. For active work-order applicability, add explicit --packet docs/work_orders/CCMAI_GOV_002.md while it has ACTIVE status, so a no-candidate N/A is not misreported as contract coverage. Worker-return routing must distinguish N/A from checks. No live/provider/app effects.
+- R1-F3: Make guide directly usable with actual repo/branch, Python/PyYAML prerequisites, correct relative links and progressive reads; put installed phase command routing in AGENTS. Preserve the known docs55/runtime gaps.
+- R1-F4: Acknowledge repair BUILD before changes; preserve initial missed acknowledgment, correct actual execution identity/HEAD/time/unavailable telemetry, opt in on current tranche and return synchronized REVIEW_PENDING/COMPLETE_PENDING_REVIEW with closeability and candidate manifest. Do not backdate or erase original receipts.
+
+Local owns current session/catalog correction, not source/test repair. On return provide a new round1 receipt and update canonical worker return while preserving original snapshots. Same-scope repairs remain under C1; third-round stop rule unchanged. Fresh-clone source test may use a local candidate snapshot commit in a disposable repo, never a commit in this worktree. Actual worker model is recorded honestly; do not re-label Gemini evidence as Sonnet.

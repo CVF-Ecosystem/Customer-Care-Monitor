@@ -1,6 +1,6 @@
 # Local preparation-receipt closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,6 +1,6 @@
 # Agent Handoff V1
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,12 +14,12 @@
   ],
   "activeTranche": "CCMAI-GOV-002-C1",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
-  "nextAllowedMove": "CCMAI-GOV-002-C1 DISPATCH_READY: bounded public profile1.1 installation, fail-closed legacy status compatibility and portable clone continuation by independent worker; Local reviews then publishes accepted project branch. R087 docs55 and R086 source-only/native NOT_RUN/fence OPEN preserved; accounts parked, no provider/runtime/main push/deploy.",
+  "nextAllowedMove": "CCMAI-GOV-002-C1 independently accepted as a bounded static portable package. Local commit steward records one reviewed material commit, validates the exact committed range and publishes only codex/cvf-portable-inheritance, then synchronizes scoped REVIEW_PASS continuity. Runtime inheritance roadmap stays DRAFT; separate SPEC/work order/seed required before manual worker dispatch. docs55/R086 native-fence/accounts/deployment remain open or parked; no provider/runtime/main push/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent worker ccmai-gov002-worker awaits dispatch",
+  "activeRole": "Codex /root COMMIT_STEWARD / SESSION_SYNC_STEWARD; independent REVIEW completed, manual worker returned and has no execution authority",
   "updatedAt": "2026-10-12",
-  "resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
-  "ownerRoadmapDiscipline": {
+  "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "x-ownerRoadmapDiscipline": {
     "date": "2026-10-12",
     "source": "Explicit owner instruction to record roadmap correction in handoff/memory and apply without reminders",
     "responsibleRole": "ORCHESTRATOR",
@@ -55,30 +55,40 @@
     "currentRoadmap": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
   },
-  "currentExecutionBudget": {
+  "x-currentExecutionBudget": {
     "documentaryPasses": 1,
     "sameScopeDocumentaryRepairs": "Within unchanged authority; third-round rule applies",
     "applicationRuntime": 0,
     "provider": 0,
     "push": 0
   },
-  "actualWorkerModel": {
-    "model": "gpt-6-luna",
-    "reasoningEffort": "max"
+  "x-actualWorkerModel": {
+    "model": "claude-sonnet-5-5",
+    "source": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
+    "verification": "WORKER_REPORTED_SESSION_IDENTITY_NOT_INDEPENDENT_PROVIDER_VERIFICATION",
+    "reasoningEffort": {
+      "sessionParameter": 10,
+      "scale": null,
+      "reason": "Scale not documented to worker"
+    },
+    "tokenUsage": null,
+    "bill": null,
+    "unavailableReason": "Worker telemetry not exposed"
   },
-  "ownerSubagentPreference": {
-    "model": "gpt-6-luna",
-    "reasoningEffort": "max",
-    "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
+  "x-ownerSubagentPreference": {
+    "model": "Sonnet",
+    "workflow": "Manual worker dispatched by operator; Local independent review",
+    "source": "Owner explicitly retains Sonnet worker / Local review",
+    "reasoningEffort": null
   },
-  "candidatePlanning": {
+  "x-candidatePlanning": {
     "id": "R087",
     "status": "REVIEW_PASS",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_087.md",
     "sourceImplementation": "NOT_APPLICABLE_DOCUMENTARY_ONLY",
     "sourceOrRuntimeDispatched": false
   },
-  "historicalR067State": {
+  "x-historicalR067State": {
     "schemaVersion": "1.0",
     "projectName": "Customer-Care-Monitor-AI",
     "currentMode": "FREEZE",
@@ -307,12 +317,12 @@
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
   "roleRoute": "OWNER_AUTHORIZED_LUNA_MAX_IMPLEMENTATION_ROOT_INDEPENDENT_REVIEW",
-  "pendingValidationProposal": {
+  "x-pendingValidationProposal": {
     "status": "NO_APPLICATION_NATIVE_AUTHORITY",
     "workerPermittedNative": 0,
     "reviewerPermittedNative": 0
   },
-  "acceptedR068": {
+  "x-acceptedR068": {
     "status": "FROZEN",
     "sourceCommit": "bb0bdeb5403070eb0aa2224b96ad8fd48febd843",
     "review": "docs/reviews/R068_FINAL_INDEPENDENT_USAGE_PRESENCE_REVIEW_2026-10-10.md",
@@ -350,10 +360,10 @@
       "status": "FROZEN_COMPILER_ONLY"
     }
   },
-  "publication": {
+  "x-publication": {
     "status": "NOT_AUTHORIZED_IN_R083"
   },
-  "historicalR070ClosureSummary": {
+  "x-historicalR070ClosureSummary": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-070",
@@ -404,15 +414,15 @@
       }
     }
   },
-  "lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
-  "currentPermittedGoInvocations": 0,
-  "historicalR068Publication": {
+  "x-lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
+  "x-currentPermittedGoInvocations": 0,
+  "x-historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
     "closureCommit": "4fb63a0040282ac145dd2f693626d66e1082dca8",
     "remoteShaVerified": false
   },
-  "acceptedR071": {
+  "x-acceptedR071": {
     "status": "FROZEN",
     "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071",
     "independentReviewCommit": "14686ba00bdea074fd76a555a1fb2429c4034fd2",
@@ -423,7 +433,7 @@
     "goAttempts": 10,
     "actualGoProcesses": 10
   },
-  "historicalR071State": {
+  "x-historicalR071State": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-071",
@@ -459,7 +469,7 @@
       "sourceCommit": "ee6b1c0b465c025c5d536c5cd4261336e26a5071"
     }
   },
-  "historicalR071CurrentProjection": {
+  "x-historicalR071CurrentProjection": {
     "reviewEvidence": "docs/reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md",
     "modelAssessment": "docs/reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md",
     "publication": {
@@ -469,7 +479,7 @@
       "priorR068Retried": false
     }
   },
-  "acceptedR072": {
+  "x-acceptedR072": {
     "status": "FROZEN_LOCAL_LEGACY_COMPATIBILITY_ONLY",
     "sourceCommit": "08bab78ad374638149b7689776cddcd84d6f5188",
     "independentReviewCommit": "e80573944b40da0210c2631fb34754c30edb1beb",
@@ -481,8 +491,8 @@
     "typecheckInvocations": 2,
     "goInvocations": 0
   },
-  "modelRoutingEvidence": null,
-  "historicalR072CurrentProjection": {
+  "x-modelRoutingEvidence": null,
+  "x-historicalR072CurrentProjection": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-072",
@@ -531,7 +541,7 @@
       "priorR068Retried": false
     }
   },
-  "historicalR073ClosureProjection": {
+  "x-historicalR073ClosureProjection": {
     "activeTranche": "CCMAI-RUNTIME-073",
     "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
     "nextAllowedMove": "CCMAI-RUNTIME-073 FROZEN local presence-display UI only at source3a05b50, reviewe519b14; worker/root each49/49 and forcedtypecheck PASS, one NEW-test/presentation repair, semantic0. Five accepted Luna samples/task-fit evidence updated, routing unchanged. ORCHESTRATOR next audits remaining scoped tasks and records a separate bounded work order before source/native activity; current native permissions0. No provider/network/DB/browser/fullsuite/publication; full S2/S3/S5/global F02/real Analyzer/billing/live OPEN, accounts parked.",
@@ -573,7 +583,7 @@
       "publication": "NOT_AUTHORIZED_IN_R073"
     }
   },
-  "historicalR074ClosureProjection": {
+  "x-historicalR074ClosureProjection": {
     "activeTranche": "CCMAI-RUNTIME-074",
     "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
     "nextAllowedMove": "CCMAI-RUNTIME-074 FROZEN local DA01..10 source-audit dossier only; root ORCHESTRATOR next prepares separate bounded DESIGN/SPEC for dispatch durability/recovery with UNKNOWN topology/idempotency/stranded-row prerequisites. No new implementation/native/provider/network/DB authority; implementation samples5 plus fresh audit1, broader/live OPEN and accounts parked.",
@@ -595,7 +605,7 @@
       "exactStaged": "PASS7/7 exact10-file closure staged set and diff-check before3994aef"
     }
   },
-  "historicalR075Continuation": {
+  "x-historicalR075Continuation": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-075",
@@ -619,7 +629,7 @@
       "sourceOrRuntimeDispatched": false
     }
   },
-  "historicalR075ClosureAndPublicationProjection": {
+  "x-historicalR075ClosureAndPublicationProjection": {
     "reviewEvidence": "docs/reviews/R075_INDEPENDENT_PUBLICATION_REVIEW_2026-10-10.md",
     "modelAssessment": null,
     "closureEvidence": null,
@@ -632,22 +642,22 @@
     "publishedSourceCommit": "eeb164d05775322e3c21970151d4d4b84c605fea",
     "receiptPublicationCommit": "fda259bee84a83b6718d34bca787e88f99282ae9"
   },
-  "reviewEvidence": "docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md",
-  "modelAssessment": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
-  "closureEvidence": null,
-  "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c",
-  "closureStatus": null,
-  "closureChecks": null,
-  "localClosureCommit": null,
-  "publicationStatus": "R086_LOCAL_ONLY_NO_PUSH_AUTHORITY",
-  "publicationReceipt": null,
-  "historicalR073PublicationProjection": {
+  "x-reviewEvidence": "docs/reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md",
+  "x-modelAssessment": "docs/reviews/R086_LUNA_MAX_MOUNT_COMPLETION_ASSESSMENT_2026-10-12.md",
+  "x-closureEvidence": null,
+  "x-independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c",
+  "x-closureStatus": null,
+  "x-closureChecks": null,
+  "x-localClosureCommit": null,
+  "x-publicationStatus": "R086_LOCAL_ONLY_NO_PUSH_AUTHORITY",
+  "x-publicationReceipt": null,
+  "x-historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
     "priorR068Status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "priorR068Receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
     "priorR068Retried": false
   },
-  "historicalR076ContinuationProjection": {
+  "x-historicalR076ContinuationProjection": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-076",
@@ -681,7 +691,7 @@
     "localClosureCommit": null,
     "modelRoutingEvidence": "docs/reviews/R076_LUNA_MAX_DESIGN_SPEC_ASSESSMENT_2026-10-11.md"
   },
-  "historicalR077ClosureProjection": {
+  "x-historicalR077ClosureProjection": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-077",
@@ -714,8 +724,8 @@
     },
     "localClosureCommit": "4a63460e21d835331382cf8728bf9cbbaed19cfd"
   },
-  "runtimeRelease": "NOT_AUTHORIZED",
-  "historicalR078Continuity": {
+  "x-runtimeRelease": "NOT_AUTHORIZED",
+  "x-historicalR078Continuity": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-078",
@@ -744,7 +754,7 @@
     "closureEvidence": "docs/reviews/R078_SCOPED_LOCAL_STARTUP_CLOSURE_2026-10-11.md",
     "publicationStatus": "R078_LOCAL_ONLY_NO_PUSH_AUTHORITY"
   },
-  "historicalR079Continuity": {
+  "x-historicalR079Continuity": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-079",
@@ -776,7 +786,7 @@
     "independentReviewCommit": "498fe42b09faf25c69a942c90da83e592815a246",
     "localClosureCommit": "25b3f409799fba616a745b962cff7ac81e05501c"
   },
-  "historicalR080Continuity": {
+  "x-historicalR080Continuity": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-080",
@@ -807,16 +817,16 @@
     "publicationStatus": "R080_LOCAL_ONLY_NO_PUSH_AUTHORITY",
     "localClosureCommit": "99f987ce927c14274f0a327bc43956c02ab71898"
   },
-  "historicalPublicationProjection": {
+  "x-historicalPublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R077"
   },
-  "nextScopeProposal": null,
-  "currentReview": {
+  "x-nextScopeProposal": null,
+  "x-currentReview": {
     "result": "REVIEW_PASS_SOURCE_ONLY",
     "freeze": "OPEN",
     "inheritedDocsBlocker": "55_DEAD_LINKS_R078_R079_NOT_RERUN"
   },
-  "historicalR081Continuity": {
+  "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
     "activePhase": "REVIEW",
     "activeTranche": "CCMAI-RUNTIME-081",
@@ -852,7 +862,7 @@
     "nextScopeProposal": "docs/reviews/R081_BOUNDED_BLOCKER_RESOLUTION_NEXT_SCOPE_2026-10-11.md",
     "returnedReviewPublicationCommit": "b1d7f112fb6e775d0774cbe4e01cafa79cf5eed5"
   },
-  "historicalR082Continuity": {
+  "x-historicalR082Continuity": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-082",
@@ -894,12 +904,12 @@
       "hostedCiObserved": false
     }
   },
-  "currentRepair": {
+  "x-currentRepair": {
     "scope": "NO_REPAIR_AUTHORIZED",
     "round": 0
   },
-  "currentClosure": null,
-  "historicalR083Continuity": {
+  "x-currentClosure": null,
+  "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
     "activePhase": "REVIEW",
     "activeTranche": "CCMAI-RUNTIME-083",
@@ -954,7 +964,7 @@
       "automaticRetries": 0
     }
   },
-  "historicalR084Continuity": {
+  "x-historicalR084Continuity": {
     "currentMode": "FREEZE",
     "activePhase": "FREEZE",
     "activeTranche": "CCMAI-RUNTIME-084",
@@ -1009,9 +1019,9 @@
       "automaticRetries": 0
     }
   },
-  "preEffectApproval": "NOT_GRANTED_SOURCE_ONLY",
-  "reviewerCampaignApproval": "NOT_GRANTED_SOURCE_ONLY",
-  "historicalR085Continuity": {
+  "x-preEffectApproval": "NOT_GRANTED_SOURCE_ONLY",
+  "x-reviewerCampaignApproval": "NOT_GRANTED_SOURCE_ONLY",
+  "x-historicalR085Continuity": {
     "currentMode": "REVIEW",
     "activePhase": "REVIEW",
     "activeTranche": "CCMAI-RUNTIME-085",
@@ -1077,7 +1087,7 @@
       "used": 0
     }
   },
-  "historicalR086ExecutionBudget": {
+  "x-historicalR086ExecutionBudget": {
     "workerCompletionPasses": 1,
     "workerHarnessUnitInvocations": 1,
     "reviewerHarnessUnitInvocations": 1,
@@ -1090,14 +1100,14 @@
     "workerHarnessUnitInvocationsUsed": 1,
     "reviewerHarnessUnitInvocationsUsed": 1
   },
-  "historicalR087Continuation": {
+  "x-historicalR087Continuation": {
     "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md",
     "nextAllowedMove": "CCMAI-RUNTIME-087 REVIEW_PASS documentary roadmap tracking at9dbf26f; FREEZE OPEN due inherited docs55. ORCHESTRATOR next bounds P0 exact deadlink repair/validation, then P1 safety/dependency route decision before fixture/product execution authority; R086 source-only/native NOT_RUN/fence OPEN preserved, accounts parked/no provider/push.",
     "status": "REVIEW_PASS_DOCUMENTARY_FREEZE_OPEN",
     "sourceHeadBeforeAdoption": "b72c0f4ec92c0fc02daf3f6cfaad1a303a27824c"
   },
-  "currentAdoption": {
-    "status": "DISPATCH_READY_NOT_INSTALLED",
+  "x-currentAdoption": {
+    "status": "ROUND1_RETURNED_PENDING_INDEPENDENT_REVIEW",
     "authoritySeed": "CVF_SESSION/authority/CCMAI-GOV-002-C1.json",
     "seedCommit": "f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d",
     "coreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
@@ -1108,6 +1118,66 @@
       "commit": "5338ec928b0aca46b6388e68164faa74d201200e",
       "branch": "codex/cvf-portable-inheritance",
       "receipt": "docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json"
+    },
+    "profileStatus": "INSTALLED_TRUSTED_MATCH",
+    "review": "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md",
+    "findingsDigest": "4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb",
+    "repairRound": 1,
+    "repairBuildAcknowledgment": {
+      "actor": "ccmai-gov002-worker",
+      "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+      "recordedAt": "2026-10-12T19:16:07+07:00",
+      "handoffSection": "Round1 Repair BUILD Acknowledgment",
+      "initialBuildAcknowledgment": "NOT_RECORDED_AT_ORIGINAL_RETURN - preserved procedural deviation, not backdated"
+    },
+    "repairReturn": {
+      "returnDocument": "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "round1Receipt": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
+      "proofDirectory": "docs/reviews/probes/gov002_review_round1/proof",
+      "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+      "returnedAt": "2026-10-12T19:34:22+07:00",
+      "worker": {
+        "actor": "ccmai-gov002-worker",
+        "model": "claude-sonnet-5-5",
+        "reasoningEffort": "session parameter 10 (scale not documented to the worker)",
+        "tokenUsage": "NOT_AVAILABLE_WITH_REASON: not exposed to the worker",
+        "bill": "NOT_AVAILABLE_WITH_REASON: not exposed to the worker"
+      },
+      "committed": false,
+      "pushed": false
     }
+  },
+  "continuityContract": "cvf.downstreamContinuityContract@1.0.0",
+  "x-reviewReceipt": {
+    "initialWorkerBuildAcknowledgment": "NOT_RECORDED_AT_RETURN - preserved procedural deviation",
+    "reportedModel": "Gemini 3.8 Flash (High)",
+    "verifiedModel": null,
+    "reason": "Provider execution metadata not available; do not attribute this return to Sonnet",
+    "reviewVerdict": "CHANGES_REQUIRED"
+  },
+  "x-queuedRuntimeInheritancePlanning": {
+    "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "status": "DRAFT_HOLD_GOV002_INDEPENDENT_REVIEW",
+    "operatorDirective": "Prepare roadmap now; wait for Claude return and resolved independent GOV002 review before any runtime dispatch. Keep manual Claude/Sonnet worker and Local review.",
+    "findingCount": 7,
+    "proposedPackageCount": 3,
+    "executionAuthorized": false,
+    "activeTrancheUnchanged": "CCMAI-GOV-002-C1"
+  },
+  "x-historicalR086ActualWorkerModel": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max"
+  },
+  "x-historicalR086OwnerSubagentPreference": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max",
+    "source": "Explicit owner instruction 2026-10-11 supersedes xhigh for new work; historical samples unchanged"
+  },
+  "x-portableCvfReview": {
+    "status": "REVIEWER_ACCEPTED_BOUNDED_STATIC_PACKAGE",
+    "review": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
+    "receipt": "docs/reviews/probes/gov002_round1_local_review_2026-10-12.json",
+    "productFreeze": "OPEN",
+    "publication": "PENDING"
   }
 }

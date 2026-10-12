@@ -1,6 +1,6 @@
 # R083 disposable fixture prerequisite handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,6 +1,6 @@
 # R072 legacy UI extension compatibility handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

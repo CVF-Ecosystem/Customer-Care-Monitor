@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "gov002.round1.proofStage@1",
+  "stage": "buildtime",
+  "recordedAtUtc": "2026-10-12T12:33:30+00:00",
+  "pythonVersion": "3.11.9",
+  "gitVersion": "git version 2.55.0.windows.3",
+  "powershellVersion": "7.5.4",
+  "pathPlaceholders": {
+    "<PROJECT>": "live worktree",
+    "<WORK>": "disposable proof work directory",
+    "<WORKSPACE>": "container directory that holds the project and the sibling Core"
+  },
+  "claimBoundary": "static repository checks in the stated trees only; no provider, runtime, hosted CI or deployment evidence",
+  "unexpectedCount": 0,
+  "recordCount": 11,
+  "records": [
+    {
+      "id": "BT-0",
+      "purpose": "work order status when the BUILD-time phases run (must be ACTIVE for contract coverage)",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "workOrderStatus": "ACTIVE"
+      }
+    },
+    {
+      "id": "BT-pre-dispatch",
+      "purpose": "live pre-dispatch with explicit --packet while Status is ACTIVE",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.28,
+      "outputSha256": "3a06a3979eea77747179fd731bacd92ca965cb592f41c7464c1c0a9b5fcc684c",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=100 deleted=0\n[PASS] CVF-DG-APPL-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\n"
+    },
+    {
+      "id": "BT-pre-dispatch-coverage",
+      "purpose": "APPL-01 must be a CHECK that names the work order, not a no-candidate N/A",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "phase": "pre-dispatch"
+      }
+    },
+    {
+      "id": "BT-worker-return",
+      "purpose": "live worker-return with explicit --packet while Status is ACTIVE",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.28,
+      "outputSha256": "d2757a602d0b6b9fda1709ccab3695344bf4c6fe967f9951b239ae9139945d0f",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=100 deleted=0\n[PASS] CVF-DG-APPL-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 5 document(s) scanned\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\n"
+    },
+    {
+      "id": "BT-worker-return-coverage",
+      "purpose": "APPL-01 must be a CHECK that names the work order, not a no-candidate N/A",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "phase": "worker-return"
+      }
+    },
+    {
+      "id": "BT-reviewer-fast",
+      "purpose": "live reviewer-fast with explicit --packet while Status is ACTIVE",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase reviewer-fast --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.28,
+      "outputSha256": "f44cf4213f9668a87249c4a78036447c5fee818bb4c741e208f5fb6faa80d92d",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=100 deleted=0\n[PASS] CVF-DG-APPL-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 5 document(s) scanned\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\n"
+    },
+    {
+      "id": "BT-reviewer-fast-coverage",
+      "purpose": "APPL-01 must be a CHECK that names the work order, not a no-candidate N/A",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "phase": "reviewer-fast"
+      }
+    },
+    {
+      "id": "BT-pre-commit",
+      "purpose": "live pre-commit with explicit --packet while Status is ACTIVE",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-commit --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.28,
+      "outputSha256": "d919025549c653d904cc9a5f6808f4c0016a1cd9b7aaa2dd547620a23d8da7d7",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=100 deleted=0\n[PASS] CVF-DG-APPL-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 5 document(s) scanned\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\n"
+    },
+    {
+      "id": "BT-pre-commit-coverage",
+      "purpose": "APPL-01 must be a CHECK that names the work order, not a no-candidate N/A",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "phase": "pre-commit"
+      }
+    },
+    {
+      "id": "BT-install-rerun",
+      "purpose": "explicit installer rerun in the live worktree (expected command)",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B <WORKSPACE>\\.Controlled-Vibe-Framework-CVF\\scripts/lib/downstream_governance/cvf_downstream_gate_runner.py install --project-root . --core-root <WORKSPACE>\\.Controlled-Vibe-Framework-CVF --core-commit e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "ALREADY_INSTALLED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.09,
+      "outputSha256": "6e1be3a060af77b205f61a20b7fbe08e104aeeb4fce3d652f97e125735e41848",
+      "outputTruncated": false,
+      "output": "GATE_PROFILE_STATUS: ALREADY_INSTALLED lock present and identity verified\n"
+    },
+    {
+      "id": "BT-install-rerun-bytes",
+      "purpose": "installer rerun changed no non-ignored file bytes (live worktree)",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "beforeTreeSha256": "bec7cf87c81646ffdcdbcae012673e3a9d6912f8eed1cc4ec3e84db3b1bd89e5",
+        "afterTreeSha256": "bec7cf87c81646ffdcdbcae012673e3a9d6912f8eed1cc4ec3e84db3b1bd89e5",
+        "files": 2101
+      }
+    }
+  ]
+}

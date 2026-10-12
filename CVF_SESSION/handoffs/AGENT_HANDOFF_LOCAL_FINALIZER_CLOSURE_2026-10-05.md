@@ -1,6 +1,6 @@
 # Local finalizer closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

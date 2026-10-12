@@ -9,15 +9,24 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md", "activeTranche": "CCMAI-GOV-002-C1", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md", "activeTranche": "CCMAI-GOV-002-C1", "parked": true} -->
 
-## Current portable-adoption dispatch
+## Current Truth
 
-CCMAI-GOV-002-C1 DISPATCH_READY: bounded public profile1.1 installation, fail-closed legacy status compatibility and portable clone continuation by independent worker; Local reviews then publishes accepted project branch. R087 docs55 and R086 source-only/native NOT_RUN/fence OPEN preserved; accounts parked, no provider/runtime/main push/deploy.
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md
 
-Read [canonical work order](docs/work_orders/CCMAI_GOV_002.md). Owner retains manual worker and Local independent review. Profile is not installed at dispatch; no inherited coverage claim. Historical R087 remains documentary REVIEW_PASS/FREEZE OPEN. Product roadmap and shared-learning directives below remain applicable.
+## Current portable-adoption review
 
-Preparation published to `codex/cvf-portable-inheritance` at `5338ec928b0aca46b6388e68164faa74d201200e`; [verified dispatch publication receipt](docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json). Sonnet worker still awaits manual dispatch; profile not installed.
+CCMAI-GOV-002-C1 independently accepted as a bounded static portable package. Local commit steward records one reviewed material commit, validates the exact committed range and publishes only codex/cvf-portable-inheritance, then synchronizes scoped REVIEW_PASS continuity. Runtime inheritance roadmap stays DRAFT; separate SPEC/work order/seed required before manual worker dispatch. docs55/R086 native-fence/accounts/deployment remain open or parked; no provider/runtime/main push/deploy.
+
+Installed public profile identity verified; round1 independently accepted bounded in GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md. The older CHANGES_REQUIRED review below is historical. [Independent review](docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md) consolidates one repair in [same canonical work order](docs/work_orders/CCMAI_GOV_002.md). Original return/receipts retained in gov002_review_round0; missed initial BUILD acknowledgment remains a procedural deviation. Only prior preparation atca1c3aa is on GitHub; reviewed candidate awaits Local material commit and authorized branch publication.
+
+## Queued runtime inheritance roadmap — owner directive 2026-10-12
+
+Owner requests planning now and waits for Claude return before runtime inheritance. [Draft roadmap](docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md) records seven findings and three proposed packages (auth/permissions, UI lifetime, outbound failures). Status DRAFT/HOLD until independent GOV002 review is resolved; separate SPEC/work order/seed before runtime BUILD. Manual Claude/Sonnet worker; Local orchestrates/reviews. No source/runtime/fixture/provider/commit/push effect is authorized by the draft; current REVIEW/GOV002 tuple and parked accounts unchanged. No automatic successor or whole-stage acceptance.
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 
@@ -33,7 +42,7 @@ Mandatory shared learning: [orchestrator roadmap control](docs/reviews/learnings
 - Report the product capability advanced, remaining acceptance gap, prerequisite cost and next route. Explicitly separate source/unit acceptance from native integration, live governance and deployment proof. Monitoring Luna quality supports delivery; it must not become a separate roadmap objective. Root owns scope/priority and reviewer misses; attribute worker defects separately.
 - Current supporting task: bound the known 55 documentary deadlinks as a finite closure prerequisite, then reassess the shortest evidenced route to the product outcome. R086 remains source-only REVIEW_PASS/FREEZE OPEN; fixture native readiness and durable fence/recovery integration remain OPEN. This directive grants no source/runtime/provider/deployment/push authority and does not bypass failed checks or parked accounts.
 
-## Current R087
+## Historical R087
 
 CCMAI-RUNTIME-087 REVIEW_PASS documentary roadmap tracking at9dbf26f; FREEZE OPEN due inherited docs55. ORCHESTRATOR next bounds P0 exact deadlink repair/validation, then P1 safety/dependency route decision before fixture/product execution authority; R086 source-only/native NOT_RUN/fence OPEN preserved, accounts parked/no provider/push.
 

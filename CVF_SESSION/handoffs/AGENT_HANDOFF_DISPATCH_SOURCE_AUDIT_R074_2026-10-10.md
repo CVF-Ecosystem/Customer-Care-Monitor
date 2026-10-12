@@ -1,6 +1,6 @@
 # R074 read-only dispatcher source audit handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

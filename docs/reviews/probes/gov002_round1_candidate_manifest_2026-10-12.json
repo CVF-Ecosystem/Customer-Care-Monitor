@@ -1,0 +1,621 @@
+{
+  "schemaVersion": "gov002.round1.candidateManifest@1",
+  "generatedAtUtc": "2026-10-12T12:52:03+00:00",
+  "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+  "authoritySeedCommit": "f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d",
+  "note": "executionHead is the actual checked-out dispatch commit; the authority seed commit is an earlier, different commit",
+  "pathCount": 108,
+  "workerCandidatePathCount": 107,
+  "concurrentOtherActorPaths": {
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md": "Codex /root planning draft (Status DRAFT, HOLD) that appeared at 2026-10-12T19:43+07:00 after the candidate snapshot; not authored, edited or staged by the worker and not part of the GOV002 candidate"
+  },
+  "deletedPaths": [],
+  "round0Comparison": {
+    "basis": "docs/reviews/probes/gov002_review_round0/local-review-audit.json#/candidateChangedManifest (raw sha256)",
+    "round0PathCount": 83,
+    "changedSinceRound0": [
+      "AGENTS.md",
+      "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+      "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "CVF_SESSION_MEMORY.md",
+      "IMPLEMENTATION_STATUS.json",
+      "docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md",
+      "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "scripts/cvf_downstream_gate.py",
+      "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py"
+    ],
+    "addedSinceRound0": [
+      "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
+      "CVF_SESSION/tranches/CCMAI-GOV-002-C1.json",
+      "docs/INDEX.md",
+      "docs/catalog/ARTIFACT_REGISTRY.json",
+      "docs/catalog/MODULE_CATALOG.md",
+      "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md",
+      "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+      "docs/reviews/probes/gov002_review_round0/consolidated-findings.json",
+      "docs/reviews/probes/gov002_review_round0/local-review-audit.json",
+      "docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "docs/reviews/probes/gov002_review_round0/original-gov002_doctor_receipt_2026-10-12.json",
+      "docs/reviews/probes/gov002_review_round0/original-gov002_historical_handoff_migration_ledger_2026-10-12.json",
+      "docs/reviews/probes/gov002_review_round0/original-gov002_preflight_gate_receipt_2026-10-12.json",
+      "docs/reviews/probes/gov002_review_round0/original-gov002_runner_phases_receipt_2026-10-12.json",
+      "docs/reviews/probes/gov002_review_round0/original-gov002_unit_tests_receipt_2026-10-12.json",
+      "docs/reviews/probes/gov002_review_round1/gov002_round1_proof.py",
+      "docs/reviews/probes/gov002_review_round1/original-returned-cvf_downstream_gate.py.txt",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-buildtime.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-clone.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-discrimination.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-final.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-negatives.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-prci.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-snapshot.json",
+      "docs/work_orders/CCMAI_GOV_002.md"
+    ],
+    "removedSinceRound0": [],
+    "unchangedSinceRound0Count": 74
+  },
+  "faithfulSnapshot": {
+    "candidateCommit": "933de8465e8c5995637ff53c805ae47eedf0418f",
+    "candidateTree": "4772043ee0c50e5ea254ab617ab279207df66894",
+    "baseCommit": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+    "snapshotCoveredPaths": 99,
+    "declaredNotInSnapshot": [
+      "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "docs/reviews/probes/gov002_review_round1/gov002_round1_proof.py",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-buildtime.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-clone.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-discrimination.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-final.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-negatives.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-prci.json",
+      "docs/reviews/probes/gov002_review_round1/proof/stage-snapshot.json",
+      "docs/reviews/probes/gov002_round1_candidate_manifest_2026-10-12.json",
+      "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json"
+    ],
+    "liveDriftSinceSnapshot": [],
+    "snapshotCatalogDelta": "snapshot registry omits entries for declared evidence outputs; docs/INDEX.md, docs/catalog/MODULE_CATALOG.md and ARTIFACT_REGISTRY.json differ from the live tree only by those entries"
+  },
+  "files": {
+    ".cvf/gate-profile.lock.json": {
+      "rawSha256": "32407588ef7cdf75263da4a10fd341f4718105c775dc3ce1e6a198485cd9430f",
+      "lfNormalizedSha256": "32407588ef7cdf75263da4a10fd341f4718105c775dc3ce1e6a198485cd9430f",
+      "bytes": 2140
+    },
+    ".cvf/manifest.json": {
+      "rawSha256": "fed796c5397328c1dea20721a1a10fe52be10c826644cf189a1a53584c775d67",
+      "lfNormalizedSha256": "6ac1d283bac087228371b3b58b4d639ef45f27b3972f14a7460f7c94fdf419da",
+      "bytes": 1716
+    },
+    ".github/workflows/cvf-downstream-gates.yml": {
+      "rawSha256": "0fabcd624ad87affb370b67191cfa9dc6c544d33abff8d80f88415a3277208d5",
+      "lfNormalizedSha256": "0fabcd624ad87affb370b67191cfa9dc6c544d33abff8d80f88415a3277208d5",
+      "bytes": 1477
+    },
+    ".gitignore": {
+      "rawSha256": "b73bdf2ff57afbfb4f8f254a335259d3a906d8bedc692c3f1b8249ea2ed9e6a3",
+      "lfNormalizedSha256": "82630e827d538feee888302c308f7d4bfc35b38ad5fff5e60717df09ccc0593b",
+      "bytes": 773
+    },
+    "AGENTS.md": {
+      "rawSha256": "6a85ff66261d2f520966ca633a7aa34e56c98f93ee2158a9b1c4e4c0854281d3",
+      "lfNormalizedSha256": "5edf85ada92ff071fda13821097de3df40ef615d9070d45e57d925ca5e234ff8",
+      "bytes": 17932
+    },
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json": {
+      "rawSha256": "26fe03fc52377fcece418f9a66d21b9c95012c34a8292c5da695ca44323f4469",
+      "lfNormalizedSha256": "d8a8d33202883a5268f42c6a08d027cd83503eeb4c31345d935c94ebbbdf3cdb",
+      "bytes": 1189
+    },
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json": {
+      "rawSha256": "485ba89de197f8986fa9565f38b4e49cb31cf6d2082866bc3332ad83571e2dd4",
+      "lfNormalizedSha256": "827c6e2ed9913613394771966fb8889e8d72db50e8c7a93e10961bfb8392c12e",
+      "bytes": 62446
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md": {
+      "rawSha256": "53b6d98c45d7b111e3fa6c72986310bc16e0c585bcb6b6607cf3a56dddccad61",
+      "lfNormalizedSha256": "22952b64e03a251033bc3b0c92e71311a077b55e02fd1029c1f77b18488ed4d2",
+      "bytes": 11846
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md": {
+      "rawSha256": "e73817190d1c6acdcbd99075a8efcb5d57554eb8a6db79277e71c3d549a1bef4",
+      "lfNormalizedSha256": "7a32ea5083575a61b5bdfa767ca2df7639caad60c2e673a04bc942c96e0c1d06",
+      "bytes": 13061
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md": {
+      "rawSha256": "86ac84fe364e4319bdedcaecfc3b448a1beff7ec8c94f38980e01aae8535c513",
+      "lfNormalizedSha256": "1915e9f45244a268c668d992268ae9b1dbe8eff07b8399d5778191bf8f81199b",
+      "bytes": 5337
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md": {
+      "rawSha256": "cecf6259c63a948ecba30e4bc921a59a3926c01122909e9dbd270a6d4a10c7f3",
+      "lfNormalizedSha256": "f380db7b5147e80be4bde3d62306f989c9897c08f007e0927ca8653c8710bb37",
+      "bytes": 4519
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md": {
+      "rawSha256": "81d18d8fc3f48860425c96f0081fca6190b0e420e11deffc1d5674eed50e30da",
+      "lfNormalizedSha256": "88362c1d62c30d377abb9fed216a1e5b2ea6e5cd356a4eff7801d8cc468834b9",
+      "bytes": 4849
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md": {
+      "rawSha256": "c0cc1912a9891db364e33d058d164d579b5e3120a9bd4021647aa7b85615f26a",
+      "lfNormalizedSha256": "78a6e2a56f10f7232cb8abccc8162a1d228db16b849263f5bbf73ffb4c186bca",
+      "bytes": 32311
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md": {
+      "rawSha256": "ede7259f254f427edc699017f126fd96a7ec7a4925bc8d5d3dd5e63aae28ffa2",
+      "lfNormalizedSha256": "6703fe28f75dc35b8bb87613d1c31fc95081ebe1701384c911b72627d252cee7",
+      "bytes": 3303
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md": {
+      "rawSha256": "a24cdccbc1cf2c38e1fa604a8c30fedd8546b88dba335473666a0c48da158204",
+      "lfNormalizedSha256": "4b651e4a6e6233ca11fed8a762929597691975d353c609a543905a8ba2d47595",
+      "bytes": 10397
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md": {
+      "rawSha256": "aee7245a9f4b3f6a002332bb708481783f7bfd9b5b34612912a41469b4e66b36",
+      "lfNormalizedSha256": "b6919be4fa3e4b519d9f5ded60afaa34a5a7b80fbd7412a96f5f983bee023379",
+      "bytes": 6563
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md": {
+      "rawSha256": "b20711a3a4958cbbad887d4196e6dd03848e7fa4b8223fa6b7d1a6e859a193d7",
+      "lfNormalizedSha256": "8a709ec5eec8b137dd41ea42337fa57cb9de9e9d45ecf1cd04837f105bea65e2",
+      "bytes": 11225
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md": {
+      "rawSha256": "f7e49ddb572ce92c078b45a60421a65a4e4c34c2dbaabbd12f0cafcb45efec0d",
+      "lfNormalizedSha256": "08eceab82ce11ae34ed04c966918a0933ce05bdd414e4d483630eee920c409be",
+      "bytes": 13609
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md": {
+      "rawSha256": "136f762652fd8cc3d0fc8e0fbb9f26917f708d9af6a7a8918209f4229a00898a",
+      "lfNormalizedSha256": "5a1db6dcdca5a1a342fcf59bc87dba28ef3b87561b1913af29951db1592a01e5",
+      "bytes": 7474
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md": {
+      "rawSha256": "5a5693cf1e1cf3ba6db3dafd739b2ce23f9073425710a61649f12a10a74803f3",
+      "lfNormalizedSha256": "f755362daf2db59cb8bf4997a9ea4a33e7b05d7082c7854e992ae91274854e21",
+      "bytes": 6451
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md": {
+      "rawSha256": "401e3c44240b6aa97f0e51e66511f00af52dd4dc13bc79ec40325db99b374cb2",
+      "lfNormalizedSha256": "4cf5a74bf899f93a594b24a31c6f9131920b7a407e389ec25489c1fed40fd5ea",
+      "bytes": 4326
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md": {
+      "rawSha256": "f481bc16674b6e1579099300a4d5712715d33b35284f2fba41b14262d548fb5f",
+      "lfNormalizedSha256": "166bbeeb7d547b7e343740f84ae27254c8a16f3570d27db1b6eba7b49608f5dc",
+      "bytes": 3501
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md": {
+      "rawSha256": "70e9931cec1210d8364c35ecbf6c0272edc32fdba60bd9d363a1f6271fcc1669",
+      "lfNormalizedSha256": "766a2dec0417b03369a81a827416cb5dc2724486ee68e83b4fe2b00b79fcf6b6",
+      "bytes": 3707
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md": {
+      "rawSha256": "7b2617b79bbc00aef3e752f6a272b5a8d1ab01abc344011a204b39e9259cd876",
+      "lfNormalizedSha256": "1abde7b808a1dbbac8b89326a4327799daec4d0e41dac40296d2e2fb9a9665d9",
+      "bytes": 10244
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md": {
+      "rawSha256": "8bc70526948dadae96bc2507889522472fa20e03636d2df5d94b14dc823097de",
+      "lfNormalizedSha256": "d01302e6fb5460debf0b7d6102a8322afe2306626b1ee7657e0f44f0c4cf646e",
+      "bytes": 4249
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md": {
+      "rawSha256": "288535742007dee633e1beaacc754e8b98e9411ec2cecdfa04cddf91af867f4d",
+      "lfNormalizedSha256": "bc30569f10afb75fc770aadd019c7f183d93eb93b3071c826065cbeb461fc111",
+      "bytes": 4902
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md": {
+      "rawSha256": "553d4067881e395abc0f6d0fe5abc4514bd7a1539af3a9b598c836a366495fcd",
+      "lfNormalizedSha256": "afca1e9af98cdd9f7e4adf5dd61dc0acc979a3dcefa21f87d2492e68d836518f",
+      "bytes": 4464
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md": {
+      "rawSha256": "8580e300a781b36c510c2c804db9dffe55040faf6cf2d6c1fcdb1a94e99862e7",
+      "lfNormalizedSha256": "e841128baf7abe57d77c6136df23f36ab795e85037665eb00491efbdfa978abe",
+      "bytes": 7763
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md": {
+      "rawSha256": "39b30c3d6af33fc3a9994225f36202d9792c3584cd27e93964d51542d9b63491",
+      "lfNormalizedSha256": "397682a70d2212b20e1835d6efbee4a6db1201b07fd476814ec916d91191eb22",
+      "bytes": 7648
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md": {
+      "rawSha256": "fd24c5f99819f97f69efa0abb3320664a44a4732a7b2caed1c1ca7a74e177d97",
+      "lfNormalizedSha256": "2af7aa182e3137eac2290110a0135433d6aeddd09d5330c60dfb711ca654018a",
+      "bytes": 9380
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md": {
+      "rawSha256": "b4509ad2c235248eb06f76f64747d9e1c8bb682bd406dc50ae414bda88611984",
+      "lfNormalizedSha256": "a70390a88523131fb4ae69aca2a5dd258cc04cfebaea1d7740260d7064524df5",
+      "bytes": 5136
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md": {
+      "rawSha256": "f7f24787400c09620d82c7ae62ff70a055d37692d56aae94af865f2f72f54d6a",
+      "lfNormalizedSha256": "4d70b0e6085ce395ffaec9eb3c1821802dc5725d7f90a74d292359d7c68f32b7",
+      "bytes": 10119
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md": {
+      "rawSha256": "af80cc6be025cbe982f98b8e304a5a16371712ef39714d1a949f621d6f22eb2b",
+      "lfNormalizedSha256": "6dd5a144ea215d014149102ba8413d32030acd36702697ea37d4a49aa0782548",
+      "bytes": 5909
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md": {
+      "rawSha256": "f4256a29b63f8efc3ae66991ec91e085da1f51a9890107f04e26f800707e4627",
+      "lfNormalizedSha256": "83e83c01d680f58a51310bd0a5ea6f10b9a37b7ff15aee4ca5a5b16a1323be2a",
+      "bytes": 3924
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md": {
+      "rawSha256": "1b33f5f84c67f9c4e6096fb2f714fc9466d4282d241b6564a3f91fd512f81249",
+      "lfNormalizedSha256": "bc21ce233c9d654f24740174262f1308cf7bbe1aeb8dd6afe422245d1472999b",
+      "bytes": 3437
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md": {
+      "rawSha256": "07e1a675dc9b253ac68511d1aa213987808501f833073642a017ba1866246b3c",
+      "lfNormalizedSha256": "7cfc88d638b62b3eb72b3105aa0159b24d345f9cea6fb4cfe80cce0523c0435d",
+      "bytes": 7816
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md": {
+      "rawSha256": "092e1d46fb00e582d65e097f2e0bb5d94497c21659e4713df4262f7b7dfaa6bc",
+      "lfNormalizedSha256": "722f4520230fd9dbc13fffdc45986d7ea836c3d94fca82e4f1f76d0fa2d66eeb",
+      "bytes": 18679
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md": {
+      "rawSha256": "41af4ec5d5489f7cbe234ec4a6cd48e62e2260e5c6f5eb45de4e39414f1651b9",
+      "lfNormalizedSha256": "20253b78c6613574d6088248ff98ea190f9d8ddbca7d129fbee21cfdd3f17f98",
+      "bytes": 13641
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md": {
+      "rawSha256": "5297a07b2c2a853d7d7073b870ee0b30ebadea794313eede07460ed6c153513e",
+      "lfNormalizedSha256": "4084c260b5072adb6c1e366e4d8fb917301e23ae813b994460f695cd5ba055a7",
+      "bytes": 13905
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md": {
+      "rawSha256": "c95146ff722ee5fdac8537098f9a861acd01a2334536befb378ac8031b7c046b",
+      "lfNormalizedSha256": "6c5c84b55287e85ac3f76efa95531fc11a6761dbb45174671f807058aceb90c3",
+      "bytes": 22044
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md": {
+      "rawSha256": "f20655309a0cb58e63ee35d361ec66a40a35d854dd28fd678161ded2b089c800",
+      "lfNormalizedSha256": "ef9c0a4ffbbd518957acc5a4b44a3c0113e36f7a5dfaf96e9b936ff981091ab0",
+      "bytes": 8661
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md": {
+      "rawSha256": "0fe79d5e547322051ea092dce341d58cfdc15cd1b1441d6cefc99854dc6d9f83",
+      "lfNormalizedSha256": "f89281ed1626292037b42db62c7e1ce410abf958e8a7bbb5efa3e0c97f0f07db",
+      "bytes": 5238
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md": {
+      "rawSha256": "411e2a2de1157c658a08e32cde2b92600bf94f09a1fe2918ccd1d1236f3c17a2",
+      "lfNormalizedSha256": "0248e64cf06fe7fd967ccfb5c4a05b662c6698bbb5f730074b9fd107361be9f5",
+      "bytes": 13451
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md": {
+      "rawSha256": "84315a0ba4e52cbad06338ff371e214156243d255faea276a3401490dede02c7",
+      "lfNormalizedSha256": "e6ccea1d0c1bc91c8fb8950efd6d9976d0733e90cc000bbc9712450b9cffb78c",
+      "bytes": 8854
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md": {
+      "rawSha256": "5aec5d532f5333bcf61749f1ce3395fc2d86e65e9531972b94fec2d93cd23ec0",
+      "lfNormalizedSha256": "6ed130e33442c3d5d76528d94e561d9668ebf6c333ae8b4e946a83e5618bb985",
+      "bytes": 4966
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md": {
+      "rawSha256": "a21f2e8f336a3f3f149b4960a8b3159551ae99fdd2796769ab1ee76acab5c4e8",
+      "lfNormalizedSha256": "67e269cac41a4774115638d5cb4fa30467b3d8746ecb84efbbbb022160af8843",
+      "bytes": 4388
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md": {
+      "rawSha256": "d3b241d067e2bb21f5e2910b37dfcd77c2244c8c02f64b96ca26b1b6af8de7a4",
+      "lfNormalizedSha256": "82b3a3dc827c923884a25e133dfa4d576030f285ad3a700a01f92ad6fcf3a52f",
+      "bytes": 4277
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md": {
+      "rawSha256": "3a4988dd022995ea5b81493123c33a4115537beff2997b5890445021f6d4a633",
+      "lfNormalizedSha256": "dda6667d68c1c36ab52fab50c8fc32ea33f4cfc49d9467c58d09685428159f06",
+      "bytes": 7810
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md": {
+      "rawSha256": "3f1a4abd9a3d631067f2335423410ccb602bf28e53dc0f928a1adaca1beeb01b",
+      "lfNormalizedSha256": "c4d2b3d597e02f63889420e077554ca1b2214a0df659d873e3d1aefe7da27ecf",
+      "bytes": 21561
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md": {
+      "rawSha256": "e38522465cac462d217a94e7582b2e69f57d231f024cdd0ec18c20c5ea39a84f",
+      "lfNormalizedSha256": "a2cf4da52342816b2a8ae76a475f6fda9a22b328ac529d4acd2c75c7d236bd6b",
+      "bytes": 3784
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md": {
+      "rawSha256": "a2b7eb952f59db446fc6ef07a4a365c0c4d937630a94396e704ebfe340ed88fd",
+      "lfNormalizedSha256": "0bc23192a7953f20167f3d69097e7a6593107c4b3276967b4e3f37f0c3b4e6ef",
+      "bytes": 8158
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md": {
+      "rawSha256": "5842c9a0a28cef1a91a63e85b378e7a7d45f24ebfb97509beb79aa752db66979",
+      "lfNormalizedSha256": "caacdfac17b1b6b5c1359fdf1cfd17b4ceca682910fe6ba3f2dddb794695d2d3",
+      "bytes": 5378
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md": {
+      "rawSha256": "cd54af889383ae3a780f615189236ac9a5a052b091bed22c501437b434a0724a",
+      "lfNormalizedSha256": "164b277a8a8a0e17e0a849f5bbf073807a98409b001147396967e11f0af1d083",
+      "bytes": 4368
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md": {
+      "rawSha256": "13a72f5e92632f809ce6e8405faf790b1632bf443f68170e8a59384aa3d5c0a3",
+      "lfNormalizedSha256": "bb5faea948a030daeceaa26fcbf41d3bcc1a88d40b1c076d9695fdad34c00e01",
+      "bytes": 4264
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md": {
+      "rawSha256": "c270de454c19c324ffb1141cd13e90720ae965746d1572610e45710d58e30220",
+      "lfNormalizedSha256": "5654c556b63d36f86723d0d2b68c612271125d0aa59b4535f9a9904a02fde0b0",
+      "bytes": 14478
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md": {
+      "rawSha256": "fd4496cfe300d1b864f09bca130baf8ef3b40ed55e90f3ed390ac16db0b972d1",
+      "lfNormalizedSha256": "5a4cda9cf9de75f7606c7a0c7706af166c2da4fa94e706274d07e7c1dd3d4511",
+      "bytes": 7876
+    },
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md": {
+      "rawSha256": "4a6b52fc6e2fb4e99b0efb56d219442951a85ee495728ef4f2d2e442a138e65b",
+      "lfNormalizedSha256": "aa480bf3cc33ff74627d03e618ef9452517aa05a9a8c33f3155ff97ce6a21762",
+      "bytes": 341577
+    },
+    "CVF_SESSION/tranches/CCMAI-GOV-002-C1.json": {
+      "rawSha256": "22d9552e968789b916e4c4c8f26433fcf919ce17c0cc0dea411d805ef13a6834",
+      "lfNormalizedSha256": "e93af4f0d07be7d5ccd5a226f622411749d01f0f2fc1f9f6817d2af2392f72d3",
+      "bytes": 8187
+    },
+    "CVF_SESSION_MEMORY.md": {
+      "rawSha256": "99f5a4314389c86a99a70c5d22e4d4fb461c8bfa92520f47b52cd3d5ea6feee8",
+      "lfNormalizedSha256": "f6b2ed5911358104dbae0d7d71a7f7c6c9e3790dba7a8c7546aad8a69ed02fb3",
+      "bytes": 220116
+    },
+    "IMPLEMENTATION_STATUS.json": {
+      "rawSha256": "19e9b31661b117aacf5a38948ed5a18c06bbbccca2a5e66238be7b411105cfa7",
+      "lfNormalizedSha256": "a42c4a40f547f1b17447cc0d2e778ab796d78624137897d783d28c33c549b93c",
+      "bytes": 167557
+    },
+    "README.md": {
+      "rawSha256": "5afe1d24c51b48e57297023ee889dbc2dc853e9a529e25a7802c94e007f092c9",
+      "lfNormalizedSha256": "bbde831998ae30169d3de23a4f9611bed4fc99ad0cb0a2e83b5c420639f02a8e",
+      "bytes": 3077
+    },
+    "docs/INDEX.md": {
+      "rawSha256": "73dfaf2dee015a5c16e00baca3df6db8c40b645ba8a8a2f539083944b9ac3cdc",
+      "lfNormalizedSha256": "33c4df3c123e2947467f2a0de3efa419b481ba46ab06a891c5c12fac68b12852",
+      "bytes": 205120
+    },
+    "docs/catalog/ARTIFACT_REGISTRY.json": {
+      "rawSha256": "257c22a9a5904ed86ffd2c77a5c6978a26c198b3638a3b86b4e618d1aec30228",
+      "lfNormalizedSha256": "c69a02ceb7d78bb4c90e01641a1dcc7d0bad3c52fc261bec3bb1d4e37edc069c",
+      "bytes": 377555
+    },
+    "docs/catalog/MODULE_CATALOG.md": {
+      "rawSha256": "ced8576c34b3919fb582087081e3c92297d1513e3ffcdfd38edb918aee971019",
+      "lfNormalizedSha256": "932a591f5844d98b7e17ad32c6c17e4436e034c2b2e98a88e0262a23b4b340f1",
+      "bytes": 377
+    },
+    "docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md": {
+      "rawSha256": "5aeb156f40c4b978101c982c06577f1dba817453f52c912b58ab4a682023c623",
+      "lfNormalizedSha256": "95ed0cb4e9c08e27222627b196556d249794879c01d1a7f60d5c0b7646dd98d5",
+      "bytes": 8886
+    },
+    "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md": {
+      "rawSha256": "f05de215bf61c057fb8eff57486f099c4e0b0d53b4a3a3c9d24ca2c6025845b4",
+      "lfNormalizedSha256": "f2c769c9626de76738514dce70abed00beab2704ae3138b08cc2c96eaf0d2eb7",
+      "bytes": 11365
+    },
+    "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md": {
+      "rawSha256": "291551c9eaa98c45e5899677323c3b5ad7ac0f4e63a1056754b923937e54e20e",
+      "lfNormalizedSha256": "c892c5f148c4781cc52db3384c6cc397a6bfddc04b65900f1d07d53f78ac8687",
+      "bytes": 15303
+    },
+    "docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md": {
+      "rawSha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+      "lfNormalizedSha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+      "bytes": 2055
+    },
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md": {
+      "rawSha256": "03b529b950a2814d69bd8e7ff81a0a1669ff4672e792da8946369f3d62b3a5df",
+      "lfNormalizedSha256": "282e775b3bc9064533df012298b9c79a089accb011706b695f739d6bfbd13705",
+      "bytes": 13747,
+      "notWorkerAuthored": "Codex /root planning draft (Status DRAFT, HOLD) that appeared at 2026-10-12T19:43+07:00 after the candidate snapshot; not authored, edited or staged by the worker and not part of the GOV002 candidate"
+    },
+    "docs/reviews/probes/gov002_doctor_receipt_2026-10-12.json": {
+      "rawSha256": "97867ebde4d74597e913ea8d24f77c1dee7bc7295169bcd54ef0b6f287caaf83",
+      "lfNormalizedSha256": "b726112d52dadec1f95cf9ed2820c9c614c5f369c435e52e4562fee798b9d7b4",
+      "bytes": 2473
+    },
+    "docs/reviews/probes/gov002_historical_handoff_migration_ledger_2026-10-12.json": {
+      "rawSha256": "e4d4e6f76f6dbd4b0db4e6c1644672e44663f80187934104c74d17f4d12c1d7d",
+      "lfNormalizedSha256": "7594976512c57348ff3896c8acbdc988ef6759552894bfe3e38c72446ae5fecc",
+      "bytes": 20563
+    },
+    "docs/reviews/probes/gov002_preflight_gate_receipt_2026-10-12.json": {
+      "rawSha256": "a2fd340a830393c212f1fbe10fbfecac6252177a8828901a7fe3f1812d380f5c",
+      "lfNormalizedSha256": "6af06937af04b55b22e41a2228140723a91a360197562424eacabf8b58572a76",
+      "bytes": 698
+    },
+    "docs/reviews/probes/gov002_review_round0/consolidated-findings.json": {
+      "rawSha256": "4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb",
+      "lfNormalizedSha256": "e24f606dfe87dfc1e5d66128956167525cff4d89b00afe480685c0e53793696b",
+      "bytes": 2121
+    },
+    "docs/reviews/probes/gov002_review_round0/local-review-audit.json": {
+      "rawSha256": "9269883f910ec63452f4d23f600520a09188db93f08919cd30851ca66ae22509",
+      "lfNormalizedSha256": "3ddc656ccae1618fc3255da26c8bbf396d311568e5b5d3c42ddbb57b1868f559",
+      "bytes": 19528
+    },
+    "docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md": {
+      "rawSha256": "02016d390e255b3d20b141c7abef669ebecc952e295332f1b07744603e8efc79",
+      "lfNormalizedSha256": "4409620e4d932d24f555aae7d85c3f29a320b1c6478d83eb0ea112f7194f08d5",
+      "bytes": 8331
+    },
+    "docs/reviews/probes/gov002_review_round0/original-gov002_doctor_receipt_2026-10-12.json": {
+      "rawSha256": "97867ebde4d74597e913ea8d24f77c1dee7bc7295169bcd54ef0b6f287caaf83",
+      "lfNormalizedSha256": "b726112d52dadec1f95cf9ed2820c9c614c5f369c435e52e4562fee798b9d7b4",
+      "bytes": 2473
+    },
+    "docs/reviews/probes/gov002_review_round0/original-gov002_historical_handoff_migration_ledger_2026-10-12.json": {
+      "rawSha256": "e4d4e6f76f6dbd4b0db4e6c1644672e44663f80187934104c74d17f4d12c1d7d",
+      "lfNormalizedSha256": "7594976512c57348ff3896c8acbdc988ef6759552894bfe3e38c72446ae5fecc",
+      "bytes": 20563
+    },
+    "docs/reviews/probes/gov002_review_round0/original-gov002_preflight_gate_receipt_2026-10-12.json": {
+      "rawSha256": "a2fd340a830393c212f1fbe10fbfecac6252177a8828901a7fe3f1812d380f5c",
+      "lfNormalizedSha256": "6af06937af04b55b22e41a2228140723a91a360197562424eacabf8b58572a76",
+      "bytes": 698
+    },
+    "docs/reviews/probes/gov002_review_round0/original-gov002_runner_phases_receipt_2026-10-12.json": {
+      "rawSha256": "e1c36a1d47febea17f6095bf785a2b188871c63dcffa76aa74caf62b49054658",
+      "lfNormalizedSha256": "f727308a7708d69cb2cd0f07785ecbfc57e44c227c8eef6a50cd6b006aaff872",
+      "bytes": 3197
+    },
+    "docs/reviews/probes/gov002_review_round0/original-gov002_unit_tests_receipt_2026-10-12.json": {
+      "rawSha256": "2aecf9dfb045c13761515f1612d349aa2e7b61f48b8a2af80db6ba464d832617",
+      "lfNormalizedSha256": "a4c171a8a859c387487e7f00e37fca94191a7717929e97bc3c9135ec0c604bdf",
+      "bytes": 394
+    },
+    "docs/reviews/probes/gov002_review_round1/gov002_round1_proof.py": {
+      "rawSha256": "4852cdf57a5ba0ccd4a4c4f2a7797d22146d13841ace58f5eff5c906bd61d4d5",
+      "lfNormalizedSha256": "2874b790a12a19b788a791662128c5952d874ef5cbd9882774c2b2bb5ce74059",
+      "bytes": 50361
+    },
+    "docs/reviews/probes/gov002_review_round1/original-returned-cvf_downstream_gate.py.txt": {
+      "rawSha256": "2f3be11a55c1bbc9039aaac79ff96c0d10708d25deacf11d5787e738fdf35865",
+      "lfNormalizedSha256": "ca1ca80364f683106378356651a87d24ea98f7424ead90b0dd4167e0f5aaf95f",
+      "bytes": 43898
+    },
+    "docs/reviews/probes/gov002_review_round1/proof/stage-buildtime.json": {
+      "rawSha256": "ea8970a0ee533684db65a6307d5e22c57b8381bb699bfc044ac1ef621febbdf4",
+      "lfNormalizedSha256": "ea8970a0ee533684db65a6307d5e22c57b8381bb699bfc044ac1ef621febbdf4",
+      "bytes": 9883
+    },
+    "docs/reviews/probes/gov002_review_round1/proof/stage-clone.json": {
+      "rawSha256": "d409f22979e70223151a6ab36de89cba87ac7f1fed539f1f0ecdda77e63e175e",
+      "lfNormalizedSha256": "d409f22979e70223151a6ab36de89cba87ac7f1fed539f1f0ecdda77e63e175e",
+      "bytes": 21383
+    },
+    "docs/reviews/probes/gov002_review_round1/proof/stage-discrimination.json": {
+      "rawSha256": "c86c27208d08a95dc96ad8a5662169df79396c78d529f6fd196dfbb9487cdee4",
+      "lfNormalizedSha256": "c86c27208d08a95dc96ad8a5662169df79396c78d529f6fd196dfbb9487cdee4",
+      "bytes": 19573
+    },
+    "docs/reviews/probes/gov002_review_round1/proof/stage-final.json": {
+      "rawSha256": "3e3b0e3be0ac2701d72c231689da63ea2a09dc608eb8dd65d9997f53ff4fe532",
+      "lfNormalizedSha256": "3e3b0e3be0ac2701d72c231689da63ea2a09dc608eb8dd65d9997f53ff4fe532",
+      "bytes": 15776
+    },
+    "docs/reviews/probes/gov002_review_round1/proof/stage-negatives.json": {
+      "rawSha256": "d595e7f7ec3638771aa271cd3029b776285952cd4a14d6e6484230f93dbb5315",
+      "lfNormalizedSha256": "d595e7f7ec3638771aa271cd3029b776285952cd4a14d6e6484230f93dbb5315",
+      "bytes": 30587
+    },
+    "docs/reviews/probes/gov002_review_round1/proof/stage-prci.json": {
+      "rawSha256": "a3acf7087f456b6576387cbbb5508d9c8f2b66b6ae1ce340cc470472230805fc",
+      "lfNormalizedSha256": "a3acf7087f456b6576387cbbb5508d9c8f2b66b6ae1ce340cc470472230805fc",
+      "bytes": 15876
+    },
+    "docs/reviews/probes/gov002_review_round1/proof/stage-snapshot.json": {
+      "rawSha256": "34cefae2d3529415a40ffee67225a5ec50af983680b560d993b01de71c80f7df",
+      "lfNormalizedSha256": "34cefae2d3529415a40ffee67225a5ec50af983680b560d993b01de71c80f7df",
+      "bytes": 17940
+    },
+    "docs/reviews/probes/gov002_runner_phases_receipt_2026-10-12.json": {
+      "rawSha256": "e1c36a1d47febea17f6095bf785a2b188871c63dcffa76aa74caf62b49054658",
+      "lfNormalizedSha256": "f727308a7708d69cb2cd0f07785ecbfc57e44c227c8eef6a50cd6b006aaff872",
+      "bytes": 3197
+    },
+    "docs/reviews/probes/gov002_unit_tests_receipt_2026-10-12.json": {
+      "rawSha256": "2aecf9dfb045c13761515f1612d349aa2e7b61f48b8a2af80db6ba464d832617",
+      "lfNormalizedSha256": "a4c171a8a859c387487e7f00e37fca94191a7717929e97bc3c9135ec0c604bdf",
+      "bytes": 394
+    },
+    "docs/work_orders/CCMAI_GOV_002.md": {
+      "rawSha256": "e517d510e728293b5476bd011390f15cb2817aaae249704211bf51d23135a727",
+      "lfNormalizedSha256": "08650ea7ff640fdff295633a9c3416615fb11215a868feeea465be6e8e3ff9ce",
+      "bytes": 26732
+    },
+    "scripts/cvf_downstream_gate.py": {
+      "rawSha256": "3454e55a6f5fa5c5dcbf259cf60f95872d9a15b99296b60f34eb9fa16b5d7449",
+      "lfNormalizedSha256": "134b995cf328775d31dba402364290a9fe8d5e2b3b26d4ac77be082d8f575da3",
+      "bytes": 46875
+    },
+    "scripts/cvf_gates/check_gate_to_role_closeability.py": {
+      "rawSha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+      "lfNormalizedSha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+      "bytes": 22072
+    },
+    "scripts/cvf_gates/cvf_dg_applicability.py": {
+      "rawSha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+      "lfNormalizedSha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+      "bytes": 3271
+    },
+    "scripts/cvf_gates/cvf_dg_common.py": {
+      "rawSha256": "3fb173f0be42a85ba5e239535b41ce7cb9f8781a20a99c88cf46e8cb1701e9be",
+      "lfNormalizedSha256": "3fb173f0be42a85ba5e239535b41ce7cb9f8781a20a99c88cf46e8cb1701e9be",
+      "bytes": 11973
+    },
+    "scripts/cvf_gates/cvf_dg_continuity.py": {
+      "rawSha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+      "lfNormalizedSha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+      "bytes": 12567
+    },
+    "scripts/cvf_gates/cvf_dg_coverage.py": {
+      "rawSha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+      "lfNormalizedSha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+      "bytes": 6710
+    },
+    "scripts/cvf_gates/cvf_dg_install.py": {
+      "rawSha256": "59758a59ebd7e16cda459f2eaa09e014bed38b415c681744cbabe2c62edb39f5",
+      "lfNormalizedSha256": "59758a59ebd7e16cda459f2eaa09e014bed38b415c681744cbabe2c62edb39f5",
+      "bytes": 13896
+    },
+    "scripts/cvf_gates/cvf_dg_intake.py": {
+      "rawSha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+      "lfNormalizedSha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+      "bytes": 8835
+    },
+    "scripts/cvf_gates/cvf_dg_review.py": {
+      "rawSha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+      "lfNormalizedSha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+      "bytes": 7332
+    },
+    "scripts/cvf_gates/cvf_dg_routing.py": {
+      "rawSha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+      "lfNormalizedSha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+      "bytes": 4508
+    },
+    "scripts/cvf_gates/cvf_downstream_gate_profile.json": {
+      "rawSha256": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+      "lfNormalizedSha256": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+      "bytes": 9517
+    },
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py": {
+      "rawSha256": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+      "lfNormalizedSha256": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+      "bytes": 14098
+    },
+    "scripts/cvf_gates/git-pre-commit.template": {
+      "rawSha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+      "lfNormalizedSha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+      "bytes": 398
+    },
+    "scripts/cvf_gates/project_learning_home.template.md": {
+      "rawSha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+      "lfNormalizedSha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+      "bytes": 3545
+    },
+    "scripts/cvf_gates/project_learning_record.template.md": {
+      "rawSha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+      "lfNormalizedSha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+      "bytes": 2055
+    },
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py": {
+      "rawSha256": "57eda2ba393a012e4b87a2f4373d8b2280fe1624342c9c5dbcbe1b08aac4b6b4",
+      "lfNormalizedSha256": "c7c8ba0c685f1542c9365d7e4d63e5934dae2b060b6d8640a0c6220ab9561c05",
+      "bytes": 26174
+    }
+  }
+}

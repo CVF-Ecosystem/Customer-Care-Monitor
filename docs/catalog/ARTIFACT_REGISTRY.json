@@ -23,14 +23,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-GOV-002-C1.json",
       "status": "ACTIVE",
-      "description": "Canonical DISPATCH_READY/WORK_ORDER record bound to pre-BUILD committed immutable C1 authority."
+      "description": "Canonical REVIEW/CHANGES_REQUIRED round1 record; installed candidate not accepted, unchanged immutable C1 authority, historical missing BUILD acknowledgment retained."
     },
     {
       "id": "gov002-portable-inheritance-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_GOV_002.md",
       "status": "ACTIVE",
-      "description": "Single R2 initial worker assignment for public profile adoption, additive strict status compatibility and fresh-clone continuation; no worker commit/push or runtime."
+      "description": "Same-authority R2 consolidated repair round1 for strict status parsing, candidate-bound clone/range proof, portable guide and truthful return; worker must not commit."
     },
     {
       "id": "historical-r087-roadmap-refresh-handoff",
@@ -2382,7 +2382,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Active GOV002-C1 bounded portable profile adoption dispatch; manual independent worker/reviewer, not installed, old product blockers retained."
+      "description": "Active GOV002-C1 static portable package independently accepted; Local commit/publication pending, existing product blockers retained."
     },
     {
       "id": "r060-work-order",
@@ -7465,6 +7465,349 @@
       "path": "docs/reviews/R087_ROADMAP_PROGRESS_DOCUMENTARY_REVIEW_2026-10-12.md",
       "status": "ACTIVE",
       "description": "R1 documentary progress review accepted, root publication defects retained; FREEZE OPEN due inherited docs55, no stage exit or runtime proof."
+    },
+    {
+      "id": "gov002-cvf-gate-profile-lock-json",
+      "family": "manifest",
+      "path": ".cvf/gate-profile.lock.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-github-workflows-cvf-downstream-gates-yml",
+      "family": "tool",
+      "path": ".github/workflows/cvf-downstream-gates.yml",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-cvf-session-active-session-bootstrap-read-model-json",
+      "family": "continuity",
+      "path": "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reference-cvf-project-portable-continuation-md",
+      "family": "continuity",
+      "path": "docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reviews-gov002-portable-inheritance-independent-review-2026-10-12-md",
+      "family": "continuity",
+      "path": "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "Independent CHANGES_REQUIRED decision with four consolidated findings and same-authority round1 repair admission; no candidate publication."
+    },
+    {
+      "id": "gov002-docs-reviews-gov002-portable-inheritance-worker-return-2026-10-12-md",
+      "family": "continuity",
+      "path": "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reviews-learnings-learning-record-template-md",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-doctor-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_doctor_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-historical-handoff-migration-ledger-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_historical_handoff_migration_ledger_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-preflight-gate-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_preflight_gate_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-consolidated-findings-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/consolidated-findings.json",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-local-review-audit-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/local-review-audit.json",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-original-gov002-portable-inheritance-worker-return-2026-10-12-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-original-gov002-doctor-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/original-gov002_doctor_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-original-gov002-historical-handoff-migration-ledger-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/original-gov002_historical_handoff_migration_ledger_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-original-gov002-preflight-gate-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/original-gov002_preflight_gate_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-original-gov002-runner-phases-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/original-gov002_runner_phases_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round0-original-gov002-unit-tests-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round0/original-gov002_unit_tests_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Immutable original return/evidence snapshot or bounded independent round0 audit; retained for consolidated repair round1."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-runner-phases-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_runner_phases_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-unit-tests-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_unit_tests_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-check-gate-to-role-closeability-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/check_gate_to_role_closeability.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-applicability-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_applicability.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-common-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_common.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-continuity-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_continuity.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-coverage-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_coverage.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-install-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_install.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-intake-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_intake.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-review-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_review.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-dg-routing-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_dg_routing.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-downstream-gate-profile-json",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_downstream_gate_profile.json",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-cvf-downstream-gate-runner-py",
+      "family": "tool",
+      "path": "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-git-pre-commit-template",
+      "family": "tool",
+      "path": "scripts/cvf_gates/git-pre-commit.template",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-project-learning-home-template-md",
+      "family": "tool",
+      "path": "scripts/cvf_gates/project_learning_home.template.md",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-cvf-gates-project-learning-record-template-md",
+      "family": "tool",
+      "path": "scripts/cvf_gates/project_learning_record.template.md",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "gov002-scripts-tests-test-cvf-downstream-gate-profile-compatibility-py",
+      "family": "tool",
+      "path": "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py",
+      "status": "ACTIVE",
+      "description": "GOV002 bounded installed candidate or returned evidence; independent review CHANGES_REQUIRED, no acceptance/runtime/publication claim."
+    },
+    {
+      "id": "ccmaruntimeinheritance-roadmap-draft",
+      "family": "continuity",
+      "path": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "Owner-requested DRAFT/HOLD roadmap for seven runtime findings and CVF pattern inheritance; three proposed packages, awaits GOV002 independent review and separate source authority."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-original-returned-cvf-downstream-gate-py-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/original-returned-cvf_downstream_gate.py.txt",
+      "status": "ACTIVE",
+      "description": "Immutable copy of the round0 returned status adapter (raw sha256 2f3be11a...), kept only as discrimination evidence; not executable project source."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-gov002-round1-proof-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/gov002_round1_proof.py",
+      "status": "ACTIVE",
+      "description": "Round1 candidate-bound proof driver (stdlib, disposable clones, no provider or application effect)."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-proof-stage-buildtime-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-buildtime.json",
+      "status": "ACTIVE",
+      "description": "Round1 BUILD-time evidence: explicit-packet phases while the order was ACTIVE and live installer rerun."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-proof-stage-discrimination-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-discrimination.json",
+      "status": "ACTIVE",
+      "description": "Round1 evidence: new compatibility tests fail on the returned adapter and pass on the repaired gate in isolated copies."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-proof-stage-snapshot-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-snapshot.json",
+      "status": "ACTIVE",
+      "description": "Round1 evidence: faithful disposable candidate snapshot identity and omission check."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-proof-stage-clone-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-clone.json",
+      "status": "ACTIVE",
+      "description": "Round1 evidence: separate-root clone, initializer, doctor, preflight, self-tests and installer idempotence."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-proof-stage-negatives-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-negatives.json",
+      "status": "ACTIVE",
+      "description": "Round1 evidence: tamper, drift, role, applicability and status negatives in disposable clones."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-proof-stage-prci-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-prci.json",
+      "status": "ACTIVE",
+      "description": "Round1 evidence: explicit-range pr-ci with three pins plus range and pin refusals."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-review-round1-proof-stage-final-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-final.json",
+      "status": "ACTIVE",
+      "description": "Round1 evidence: final-state gates on the live tree after the return document existed."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-round1-worker-receipt-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Round1 worker receipt indexing the stage files, actual model identity and unavailable telemetry reasons; not an acceptance claim."
+    },
+    {
+      "id": "gov002-docs-reviews-probes-gov002-round1-candidate-manifest-2026-10-12-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_round1_candidate_manifest_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Round1 candidate manifest: path hashes, round0 delta and faithful snapshot identity."
+    },
+    {
+      "id": "gov002-round1-local-review",
+      "family": "continuity",
+      "path": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
+      "status": "ACTIVE",
+      "description": "Independent round1 acceptance of bounded static portable package; metadata attribution corrected; runtime/native/product/hosted claims excluded."
+    },
+    {
+      "id": "gov002-round1-local-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/gov002_round1_local_review_2026-10-12.json",
+      "status": "ACTIVE",
+      "description": "Independent intake binding of 108 file hashes and seven stages; worker artifacts preserved, zero application/provider campaign."
     }
   ]
 }

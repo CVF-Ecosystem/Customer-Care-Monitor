@@ -5,11 +5,11 @@ Status: ACTIVE
 ## Current State
 
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent worker ccmai-gov002-worker awaits dispatch
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root COMMIT_STEWARD / SESSION_SYNC_STEWARD; independent REVIEW completed, manual worker returned and has no execution authority
 - Active tranche: CCMAI-GOV-002-C1
-- Next allowed move: CCMAI-GOV-002-C1 DISPATCH_READY: bounded public profile1.1 installation, fail-closed legacy status compatibility and portable clone continuation by independent worker; Local reviews then publishes accepted project branch. R087 docs55 and R086 source-only/native NOT_RUN/fence OPEN preserved; accounts parked, no provider/runtime/main push/deploy.
+- Next allowed move: CCMAI-GOV-002-C1 independently accepted as a bounded static portable package. Local commit steward records one reviewed material commit, validates the exact committed range and publishes only codex/cvf-portable-inheritance, then synchronizes scoped REVIEW_PASS continuity. Runtime inheritance roadmap stays DRAFT; separate SPEC/work order/seed required before manual worker dispatch. docs55/R086 native-fence/accounts/deployment remain open or parked; no provider/runtime/main push/deploy.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Startup And Role Acknowledgment
@@ -37,3 +37,27 @@ Pre-BUILD authority material-SHA: f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d. Actu
 ## Published Dispatch Receipt
 
 Dispatch material-SHA: 5338ec928b0aca46b6388e68164faa74d201200e. Ordinary project-branch push succeeded and git ls-remote independently matched this SHA. Receipt: docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json. Preparation only; worker not started/profile not installed. This dedicated continuity update records the actual dispatch SHA; Local will push it to the same authorized branch after gates. No main push, merge, provider or deployment.
+
+## Independent Receiving Review And Round1 Repair
+
+Local rehydrated actual WORK_ORDER tuple, trusted doctor27/27, current implementation/status/index and original worker return before independent review. Returned files remain uncommitted. Original worker BUILD acknowledgment/phase/opt-in were absent; this is retained as a procedural deviation, never backdated. Local now records REVIEW/CHANGES_REQUIRED and no active executable orders until worker acknowledges admitted repair BUILD. Installed profile identity verified, implementation not accepted.
+
+Review: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md. Consolidated findings F1 strict-parser false accepts, F2 missing candidate clone/range/negative evidence, F3 unusable guide, F4 stale continuity/return attribution. One same-scope repair, same C1 seed, manual worker and independent Local reviewer; no source/test edit by Local. Source evidence snapshots and audit under docs/reviews/probes/gov002_review_round0. New round1 return must preserve original snapshots. No commit/push of failed implementation. Initial return model self-declares Gemini; actual provider/model unverified, no Sonnet quality claim.
+
+## Round1 Repair BUILD Acknowledgment
+
+Recorded before any round1 repair edit. Actor ccmai-gov002-worker, role REPAIR_WORKER (shared-workspace INTERNAL_AGENT), phase BUILD, decision owner Local orchestrator / independent reviewer. Actual model claude-sonnet-5-5 (Claude Code, VS Code extension); reasoning effort exposed to the session as parameter 10 (scale not documented to the worker); token and bill telemetry NOT_AVAILABLE_WITH_REASON: not exposed to the worker. Execution HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c (authority seed f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d is a different, earlier commit). Acknowledged at 2026-10-12T19:16:07+07:00. Rehydrated: work order consolidated repair admission, independent review, findings digest 4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb, AGENTS, manifest, bootstrap model, state, tranche, handoff and implementation status. Public Core e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba is the sibling checkout at the same commit. The initial worker pass recorded no BUILD acknowledgment; that procedural deviation is preserved and is not backdated by this entry. Scope: F1-F4 only, unchanged C1 seed, no commit, no push, no provider or application effect.
+
+## Round1 Repair Return
+
+Returned by ccmai-gov002-worker (actual model claude-sonnet-5-5; reasoning effort not independently measurable; token and bill unavailable to the worker) on execution HEAD ca1c3aa29a6088916bbd5d31bef37e67277f8b9c at 2026-10-12T19:34:22+07:00. The worker made no commit and no push; the working tree stays uncommitted for Local. F1 strict parser now delegates to the lock-pinned Core classifier after hash verification, with real fence, duplicate, contradiction, malformed and backtick regressions that fail on the preserved returned adapter; F2 candidate-bound clone, idempotence, tamper, drift, role and explicit-range proof is under docs/reviews/probes/gov002_review_round1/proof; F3 guide and AGENTS phase routing corrected; F4 state, record, work order, memory, handoff and implementation status are synchronized to REVIEW_PENDING / COMPLETE_PENDING_REVIEW with no executable work order. Canonical return: docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md (original snapshots preserved under gov002_review_round0). The missed initial BUILD acknowledgment remains a preserved procedural deviation. The proof is static repository evidence only: no hosted CI, runtime governance, provider, docs55, R086 native or deployment claim.
+
+## Queued owner-requested runtime inheritance planning
+
+2026-10-12 Local ORCHESTRATOR, R1 documentation only: owner requests roadmap preparation and waits for Claude return before runtime work. Draft: docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, seven source findings, three proposed packages, public-safe pattern transfer; no private code/evidence export. Round1 return is present but not accepted. HOLD until independent GOV002 disposition and separate runtime SPEC/order/seed; no dispatch, source/test/runtime/fixture/provider/commit/push/deploy now. Keep this handoff's current REVIEW/GOV002 tuple and original return/proof unchanged. No new active work order or rewritten C1 authority.
+
+## Independent Round1 Acceptance And Commit Steward Transition
+
+Local Codex /root independently accepted the bounded static portable package from returned evidence; review: docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md, intake audit: docs/reviews/probes/gov002_round1_local_review_2026-10-12.json. All 108 manifest hashes and seven stage hashes match at intake; original worker return/proof untouched. No broad repeat campaign. Local corrections archive R086 model/preference and repair stale implementation adoption status; new identity is worker-reported, effort scale/token/bill unavailable. Current REVIEW_PENDING record is the pre-material-commit state only; Local will bind REVIEW_PASS to the actual material SHA. Existing publication authority only to project branch; no Core/source/runtime/main/deploy effects.
+
+CVF Agent Declaration: project=Customer-Care-Monitor-AI; Core=../.Controlled-Vibe-Framework-CVF at e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba (public read-only); phase=REVIEW; risk ceiling=R2; live evidence required=YES for runtime AI governance claims; role=Local INTERNAL_AGENT independent reviewer transitioning COMMIT_STEWARD/SESSION_SYNC_STEWARD; active handoff=this file; next=reviewed material commit and authorized project-branch publication; parked=docs55/R086 native-fence/Facebook-Zalo OA/deployment. No live governance claim or provider invocation.

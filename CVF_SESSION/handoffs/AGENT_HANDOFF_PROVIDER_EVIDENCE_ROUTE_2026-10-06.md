@@ -1,6 +1,6 @@
 # Delegated provider evidence R3 handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

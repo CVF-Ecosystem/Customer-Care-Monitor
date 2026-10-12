@@ -45,6 +45,7 @@ THAM-KHAO-MCP/
 # State nội bộ của phiên làm việc, không đưa lên repo công khai
 HANDOFF.md
 .cvf/local-binding.json
+.cvf/runtime/
 
 # Local provider secrets — KHÔNG commit; đặt ở đây để agent đọc khi cần
 CVF_SESSION/LOCAL_PROVIDER_SECRETS.json

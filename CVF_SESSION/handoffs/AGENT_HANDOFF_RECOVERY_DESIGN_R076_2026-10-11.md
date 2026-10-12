@@ -1,6 +1,6 @@
 # R076 recovery DESIGN/SPEC handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

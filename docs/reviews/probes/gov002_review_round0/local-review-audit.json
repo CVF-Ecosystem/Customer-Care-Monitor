@@ -1,0 +1,425 @@
+{
+  "schemaVersion": "1.0",
+  "actor": "Codex /root REVIEWER",
+  "head": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+  "recordedAtUtc": "2026-10-12T12:01:20+00:00",
+  "candidateCodeSha256": "2f3be11a55c1bbc9039aaac79ff96c0d10708d25deacf11d5787e738fdf35865",
+  "statusProbes": [
+    {
+      "case": "healthy",
+      "input": "# Work Order\ndocType: work_order\nStatus: ACTIVE\n",
+      "expectedOptInAccepted": true,
+      "actualOptInAccepted": true,
+      "pinnedGrammarOutcome": "CHECK",
+      "pinnedGrammarCode": "active",
+      "findings": []
+    },
+    {
+      "case": "fenced_only",
+      "input": "# Work Order\ndocType: work_order\n```text\nStatus: ACTIVE\n```\n",
+      "expectedOptInAccepted": false,
+      "actualOptInAccepted": true,
+      "pinnedGrammarOutcome": "INVALID",
+      "pinnedGrammarCode": "status_missing",
+      "findings": []
+    },
+    {
+      "case": "malformed_second",
+      "input": "# Work Order\ndocType: work_order\nStatus: ACTIVE\nStatus: DRAFT extra\n",
+      "expectedOptInAccepted": false,
+      "actualOptInAccepted": true,
+      "pinnedGrammarOutcome": "INVALID",
+      "pinnedGrammarCode": "status_contradictory",
+      "findings": []
+    },
+    {
+      "case": "backtick_value",
+      "input": "# Work Order\ndocType: work_order\nStatus: `ACTIVE`\n",
+      "expectedOptInAccepted": false,
+      "actualOptInAccepted": true,
+      "pinnedGrammarOutcome": "INVALID",
+      "pinnedGrammarCode": "status_malformed",
+      "findings": []
+    }
+  ],
+  "trustedDoctor": "Local observed27/27 PASS",
+  "targetedTests": "Local observed20PASS in0.054s;66 worker tests consumed without broad replay",
+  "stateExtensionValueReconciliation": "All original JSON field values preserved at original or x-prefixed key",
+  "historicalHandoffBodyReconciliation": "49 original Git texts match current after allowed status substitution and CRLF normalization; raw/filtered Git object identities are separate",
+  "ledgerClarification": "beforeBlob uses committed Git LF blob; beforeSha256/afterSha256 use raw working-tree bytes; afterBlob uses raw-byte Git object hash, not git-filtered LF tree hash. Initial reviewer comparison assumed LF digests, then verified the raw-byte interpretation; not a proof-body mutation finding. Canonical committed join remains required at delivery.",
+  "outsideAuthorityPaths": [],
+  "guideLink": "docs/reference/AGENTS.md absent",
+  "originalReturnAndReceipts": [
+    {
+      "source": "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "snapshot": "docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "sha256": "02016d390e255b3d20b141c7abef669ebecc952e295332f1b07744603e8efc79"
+    },
+    {
+      "source": "docs/reviews/probes/gov002_doctor_receipt_2026-10-12.json",
+      "snapshot": "docs/reviews/probes/gov002_review_round0/original-gov002_doctor_receipt_2026-10-12.json",
+      "sha256": "97867ebde4d74597e913ea8d24f77c1dee7bc7295169bcd54ef0b6f287caaf83"
+    },
+    {
+      "source": "docs/reviews/probes/gov002_historical_handoff_migration_ledger_2026-10-12.json",
+      "snapshot": "docs/reviews/probes/gov002_review_round0/original-gov002_historical_handoff_migration_ledger_2026-10-12.json",
+      "sha256": "e4d4e6f76f6dbd4b0db4e6c1644672e44663f80187934104c74d17f4d12c1d7d"
+    },
+    {
+      "source": "docs/reviews/probes/gov002_preflight_gate_receipt_2026-10-12.json",
+      "snapshot": "docs/reviews/probes/gov002_review_round0/original-gov002_preflight_gate_receipt_2026-10-12.json",
+      "sha256": "a2fd340a830393c212f1fbe10fbfecac6252177a8828901a7fe3f1812d380f5c"
+    },
+    {
+      "source": "docs/reviews/probes/gov002_runner_phases_receipt_2026-10-12.json",
+      "snapshot": "docs/reviews/probes/gov002_review_round0/original-gov002_runner_phases_receipt_2026-10-12.json",
+      "sha256": "e1c36a1d47febea17f6095bf785a2b188871c63dcffa76aa74caf62b49054658"
+    },
+    {
+      "source": "docs/reviews/probes/gov002_unit_tests_receipt_2026-10-12.json",
+      "snapshot": "docs/reviews/probes/gov002_review_round0/original-gov002_unit_tests_receipt_2026-10-12.json",
+      "sha256": "2aecf9dfb045c13761515f1612d349aa2e7b61f48b8a2af80db6ba464d832617"
+    }
+  ],
+  "candidateChangedManifest": [
+    {
+      "path": ".cvf/gate-profile.lock.json",
+      "sha256": "32407588ef7cdf75263da4a10fd341f4718105c775dc3ce1e6a198485cd9430f"
+    },
+    {
+      "path": ".cvf/manifest.json",
+      "sha256": "fed796c5397328c1dea20721a1a10fe52be10c826644cf189a1a53584c775d67"
+    },
+    {
+      "path": ".github/workflows/cvf-downstream-gates.yml",
+      "sha256": "0fabcd624ad87affb370b67191cfa9dc6c544d33abff8d80f88415a3277208d5"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b73bdf2ff57afbfb4f8f254a335259d3a906d8bedc692c3f1b8249ea2ed9e6a3"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "76ea21cbcd9113e8aab017a83ef38d0ba928e5a781dd7c81f7268f690c901896"
+    },
+    {
+      "path": "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+      "sha256": "e65c4320062a18adafa615bfafc4ab71576c0a8a4e8ebde2a33d8ee6c010b740"
+    },
+    {
+      "path": "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "sha256": "f03e8842ee135d2e36955d2a3695ab0ff9796d9d124593d0847d6bac15eb4d15"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ADAPTER_PRESENCE_CONSUMER_R071_2026-10-10.md",
+      "sha256": "53b6d98c45d7b111e3fa6c72986310bc16e0c585bcb6b6607cf3a56dddccad61"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ARCHIVE_MANIFEST_REPAIR_2026-10-06.md",
+      "sha256": "e73817190d1c6acdcbd99075a8efcb5d57554eb8a6db79277e71c3d549a1bef4"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DATABASE_INTEGRATION_R081_2026-10-11.md",
+      "sha256": "86ac84fe364e4319bdedcaecfc3b448a1beff7ec8c94f38980e01aae8535c513"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DISPATCH_SOURCE_AUDIT_R074_2026-10-10.md",
+      "sha256": "cecf6259c63a948ecba30e4bc921a59a3926c01122909e9dbd270a6d4a10c7f3"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_DURABLE_FENCE_DESIGN_R080_2026-10-11.md",
+      "sha256": "81d18d8fc3f48860425c96f0081fca6190b0e420e11deffc1d5674eed50e30da"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ENGINE_FINALIZER_LOGGING_2026-10-04.md",
+      "sha256": "c0cc1912a9891db364e33d058d164d579b5e3120a9bd4021647aa7b85615f26a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R059_2026-10-07.md",
+      "sha256": "ede7259f254f427edc699017f126fd96a7ec7a4925bc8d5d3dd5e63aae28ffa2"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R060_2026-10-07.md",
+      "sha256": "a24cdccbc1cf2c38e1fa604a8c30fedd8546b88dba335473666a0c48da158204"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_EXECUTION_RECEIPT_R061_2026-10-07.md",
+      "sha256": "aee7245a9f4b3f6a002332bb708481783f7bfd9b5b34612912a41469b4e66b36"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02D_2026-10-02.md",
+      "sha256": "b20711a3a4958cbbad887d4196e6dd03848e7fa4b8223fa6b7d1a6e859a193d7"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_F02E_2026-10-02.md",
+      "sha256": "f7e49ddb572ce92c078b45a60421a65a4e4c34c2dbaabbd12f0cafcb45efec0d"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FENCE_BLOCKER_RESOLUTION_R082_2026-10-11.md",
+      "sha256": "136f762652fd8cc3d0fc8e0fbb9f26917f708d9af6a7a8918209f4229a00898a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_PREREQUISITE_R083_2026-10-11.md",
+      "sha256": "5a5693cf1e1cf3ba6db3dafd739b2ce23f9073425710a61649f12a10a74803f3"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_FIXTURE_SOURCE_COMPLETION_R084_2026-10-11.md",
+      "sha256": "401e3c44240b6aa97f0e51e66511f00af52dd4dc13bc79ec40325db99b374cb2"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GITHUB_PUBLICATION_R075_2026-10-10.md",
+      "sha256": "f481bc16674b6e1579099300a4d5712715d33b35284f2fba41b14262d548fb5f"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_GROUPED_SOURCE_RECEIPT_REVIEW_R057_2026-10-06.md",
+      "sha256": "70e9931cec1210d8364c35ecbf6c0272edc32fdba60bd9d363a1f6271fcc1669"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LEGACY_UI_EXTENSION_R072_2026-10-10.md",
+      "sha256": "7b2617b79bbc00aef3e752f6a272b5a8d1ab01abc344011a204b39e9259cd876"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_EXECUTION_RECEIPT_CLOSURE_R062_2026-10-08.md",
+      "sha256": "8bc70526948dadae96bc2507889522472fa20e03636d2df5d94b14dc823097de"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_ACCEPTANCE_2026-10-05.md",
+      "sha256": "288535742007dee633e1beaacc754e8b98e9411ec2cecdfa04cddf91af867f4d"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_FINALIZER_CLOSURE_2026-10-05.md",
+      "sha256": "553d4067881e395abc0f6d0fe5abc4514bd7a1539af3a9b598c836a366495fcd"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MAINTENANCE_FREEZE_2026-10-03.md",
+      "sha256": "8580e300a781b36c510c2c804db9dffe55040faf6cf2d6c1fcdb1a94e99862e7"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MCP_EXECUTION_CLOSURE_2026-10-04.md",
+      "sha256": "39b30c3d6af33fc3a9994225f36202d9792c3584cd27e93964d51542d9b63491"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md",
+      "sha256": "fd24c5f99819f97f69efa0abb3320664a44a4732a7b2caed1c1ca7a74e177d97"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MYSQL_FIXTURE_R085_2026-10-11.md",
+      "sha256": "b4509ad2c235248eb06f76f64747d9e1c8bb682bd406dc50ae414bda88611984"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md",
+      "sha256": "f7f24787400c09620d82c7ae62ff70a055d37692d56aae94af865f2f72f54d6a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PREPARATION_RECEIPT_CLOSURE_2026-10-06.md",
+      "sha256": "af80cc6be025cbe982f98b8e304a5a16371712ef39714d1a949f621d6f22eb2b"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_PROVIDER_CLOSURE_2026-10-06.md",
+      "sha256": "f4256a29b63f8efc3ae66991ec91e085da1f51a9890107f04e26f800707e4627"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_RULE_OBSERVATION_CLOSURE_R064_2026-10-08.md",
+      "sha256": "1b33f5f84c67f9c4e6096fb2f714fc9466d4282d241b6564a3f91fd512f81249"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md",
+      "sha256": "07e1a675dc9b253ac68511d1aa213987808501f833073642a017ba1866246b3c"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_INVENTORY_INPUT_2026-10-03.md",
+      "sha256": "092e1d46fb00e582d65e097f2e0bb5d94497c21659e4713df4262f7b7dfaa6bc"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md",
+      "sha256": "41af4ec5d5489f7cbe234ec4a6cd48e62e2260e5c6f5eb45de4e39414f1651b9"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_CLI_SCOPE_TEST_2026-10-03.md",
+      "sha256": "5297a07b2c2a853d7d7073b870ee0b30ebadea794313eede07460ed6c153513e"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md",
+      "sha256": "c95146ff722ee5fdac8537098f9a861acd01a2334536befb378ac8031b7c046b"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_EVIDENCE_ROUTE_2026-10-06.md",
+      "sha256": "0fe79d5e547322051ea092dce341d58cfdc15cd1b1441d6cefc99854dc6d9f83"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_PROVIDER_TEST_REPAIR_2026-10-05.md",
+      "sha256": "411e2a2de1157c658a08e32cde2b92600bf94f09a1fe2918ccd1d1236f3c17a2"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R046_R4_DELEGATED_CORRECTION_2026-10-05.md",
+      "sha256": "84315a0ba4e52cbad06338ff371e214156243d255faea276a3401490dede02c7"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_DESIGN_R076_2026-10-11.md",
+      "sha256": "5aec5d532f5333bcf61749f1ce3395fc2d86e65e9531972b94fec2d93cd23ec0"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RECOVERY_FENCE_INTAKE_R079_2026-10-11.md",
+      "sha256": "a21f2e8f336a3f3f149b4960a8b3159551ae99fdd2796769ab1ee76acab5c4e8"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ROADMAP_PROGRESS_R087_2026-10-12.md",
+      "sha256": "d3b241d067e2bb21f5e2910b37dfcd77c2244c8c02f64b96ca26b1b6af8de7a4"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_PRESENCE_UI_R073_2026-10-10.md",
+      "sha256": "3a4988dd022995ea5b81493123c33a4115537beff2997b5890445021f6d4a633"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SAVED_RUN_UI_R067_2026-10-08.md",
+      "sha256": "3f1a4abd9a3d631067f2335423410ccb602bf28e53dc0f928a1adaca1beeb01b"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SCOPED_CLOSURE_INTEGRATION_R070_2026-10-10.md",
+      "sha256": "e38522465cac462d217a94e7582b2e69f57d231f024cdd0ec18c20c5ea39a84f"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md",
+      "sha256": "a2b7eb952f59db446fc6ef07a4a365c0c4d937630a94396e704ebfe340ed88fd"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_PREPARATION_RECEIPT_2026-10-06.md",
+      "sha256": "5842c9a0a28cef1a91a63e85b378e7a7d45f24ebfb97509beb79aa752db66979"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_STARTUP_HARDENING_R078_2026-10-11.md",
+      "sha256": "cd54af889383ae3a780f615189236ac9a5a052b091bed22c501437b434a0724a"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_TOPOLOGY_INTAKE_R077_2026-10-11.md",
+      "sha256": "13a72f5e92632f809ce6e8405faf790b1632bf443f68170e8a59384aa3d5c0a3"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_UNUSED_INCREMENTAL_HELPER_2026-10-03.md",
+      "sha256": "c270de454c19c324ffb1141cd13e90720ae965746d1572610e45710d58e30220"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_USAGE_COST_R065_2026-10-08.md",
+      "sha256": "fd4496cfe300d1b864f09bca130baf8ef3b40ed55e90f3ed390ac16db0b972d1"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-09-26.md",
+      "sha256": "4a6b52fc6e2fb4e99b0efb56d219442951a85ee495728ef4f2d2e442a138e65b"
+    },
+    {
+      "path": "CVF_SESSION_MEMORY.md",
+      "sha256": "9a078f795fff153f55b4f40d26953fb2c61272f755e8e43d01fb4d2716ffe8ef"
+    },
+    {
+      "path": "IMPLEMENTATION_STATUS.json",
+      "sha256": "f23230dd89023127a1ae1e4a9dc4646c046aa98705fd412da9e89ae99d0164d3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5afe1d24c51b48e57297023ee889dbc2dc853e9a529e25a7802c94e007f092c9"
+    },
+    {
+      "path": "docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md",
+      "sha256": "227f4d6f115f37e45a9e18d1980674f2d2a10cf4e5dc7769ee42b3c6b1a161d9"
+    },
+    {
+      "path": "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "sha256": "02016d390e255b3d20b141c7abef669ebecc952e295332f1b07744603e8efc79"
+    },
+    {
+      "path": "docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md",
+      "sha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+    },
+    {
+      "path": "docs/reviews/probes/gov002_doctor_receipt_2026-10-12.json",
+      "sha256": "97867ebde4d74597e913ea8d24f77c1dee7bc7295169bcd54ef0b6f287caaf83"
+    },
+    {
+      "path": "docs/reviews/probes/gov002_historical_handoff_migration_ledger_2026-10-12.json",
+      "sha256": "e4d4e6f76f6dbd4b0db4e6c1644672e44663f80187934104c74d17f4d12c1d7d"
+    },
+    {
+      "path": "docs/reviews/probes/gov002_preflight_gate_receipt_2026-10-12.json",
+      "sha256": "a2fd340a830393c212f1fbe10fbfecac6252177a8828901a7fe3f1812d380f5c"
+    },
+    {
+      "path": "docs/reviews/probes/gov002_runner_phases_receipt_2026-10-12.json",
+      "sha256": "e1c36a1d47febea17f6095bf785a2b188871c63dcffa76aa74caf62b49054658"
+    },
+    {
+      "path": "docs/reviews/probes/gov002_unit_tests_receipt_2026-10-12.json",
+      "sha256": "2aecf9dfb045c13761515f1612d349aa2e7b61f48b8a2af80db6ba464d832617"
+    },
+    {
+      "path": "scripts/cvf_downstream_gate.py",
+      "sha256": "2f3be11a55c1bbc9039aaac79ff96c0d10708d25deacf11d5787e738fdf35865"
+    },
+    {
+      "path": "scripts/cvf_gates/check_gate_to_role_closeability.py",
+      "sha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_applicability.py",
+      "sha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_common.py",
+      "sha256": "3fb173f0be42a85ba5e239535b41ce7cb9f8781a20a99c88cf46e8cb1701e9be"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_continuity.py",
+      "sha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_coverage.py",
+      "sha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_install.py",
+      "sha256": "59758a59ebd7e16cda459f2eaa09e014bed38b415c681744cbabe2c62edb39f5"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_intake.py",
+      "sha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_review.py",
+      "sha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_dg_routing.py",
+      "sha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_downstream_gate_profile.json",
+      "sha256": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0"
+    },
+    {
+      "path": "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+      "sha256": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8"
+    },
+    {
+      "path": "scripts/cvf_gates/git-pre-commit.template",
+      "sha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b"
+    },
+    {
+      "path": "scripts/cvf_gates/project_learning_home.template.md",
+      "sha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f"
+    },
+    {
+      "path": "scripts/cvf_gates/project_learning_record.template.md",
+      "sha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+    },
+    {
+      "path": "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py",
+      "sha256": "69ff25ee9c34fba76ce31a692d80d1799271b900b9ee0b78e53315b243a2e5b2"
+    }
+  ],
+  "findingsPath": "docs/reviews/probes/gov002_review_round0/consolidated-findings.json",
+  "findingsSha256": "4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb",
+  "applicationProviderCalls": 0,
+  "productionSourceMutations": 0,
+  "freshClone": "NOT_RUN_LOCAL - missing worker deliverable, return once for worker proof rather than recreate it",
+  "hostedCiObserved": false,
+  "reviewVerdict": "CHANGES_REQUIRED"
+}

@@ -1,6 +1,6 @@
 # Local offline proof-contract closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,6 +1,6 @@
 # R085 local disposable MySQL fixture handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

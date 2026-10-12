@@ -1,6 +1,6 @@
 # Offline synthetic inventory input handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

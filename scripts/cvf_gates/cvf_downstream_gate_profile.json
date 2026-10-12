@@ -1,0 +1,366 @@
+{
+  "profileId": "cvf.downstreamGateProfile@1.1.0",
+  "profileVersion": "1.1.0",
+  "ownerResponsibility": "CVF parent Core owns this single control source; project copies are identity-pinned and never an independent definition.",
+  "phases": [
+    "bootstrap",
+    "pre-dispatch",
+    "worker-return",
+    "reviewer-fast",
+    "pre-commit",
+    "pr-ci"
+  ],
+  "outcomes": [
+    "PASS",
+    "FAIL",
+    "NOT_APPLICABLE_WITH_REASON",
+    "BLOCKED_MIGRATION_REQUIRED",
+    "BLOCKED_INVALID_INPUT"
+  ],
+  "claimStates": [
+    "INSTALLED",
+    "INVOKED",
+    "PROVEN_HERMETIC",
+    "NOT_APPLICABLE_WITH_REASON",
+    "BLOCKED"
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "title": "Pinned profile/runner identity, lock integrity and override refusal",
+      "mandatory": true,
+      "module": "cvf_dg_install",
+      "phases": [
+        "bootstrap",
+        "pre-dispatch",
+        "worker-return",
+        "reviewer-fast",
+        "pre-commit",
+        "pr-ci"
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "title": "Cross-surface continuity consistency (state, handoff, memory, implementation status)",
+      "mandatory": true,
+      "module": "cvf_dg_continuity",
+      "phases": [
+        "bootstrap",
+        "pre-dispatch",
+        "worker-return",
+        "reviewer-fast",
+        "pre-commit",
+        "pr-ci"
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "title": "Candidate range resolution: PR/push range or worktree scope is resolved or refused, never silently empty",
+      "mandatory": true,
+      "module": "cvf_dg_common",
+      "phases": [
+        "pre-dispatch",
+        "worker-return",
+        "reviewer-fast",
+        "pre-commit",
+        "pr-ci"
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "title": "Strict work-order status applicability and closeability",
+      "mandatory": true,
+      "module": "cvf_dg_applicability",
+      "phases": [
+        "pre-dispatch",
+        "worker-return",
+        "reviewer-fast",
+        "pre-commit",
+        "pr-ci"
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "title": "Reviewer-local repair decision envelope before REWORK",
+      "mandatory": true,
+      "module": "cvf_dg_routing",
+      "phases": [
+        "pre-dispatch",
+        "reviewer-fast",
+        "pr-ci"
+      ]
+    },
+    {
+      "id": "CVF-DG-ROLE-01",
+      "title": "Reviewer independence for R2 and R3 review artifacts",
+      "mandatory": true,
+      "module": "cvf_dg_review",
+      "phases": [
+        "worker-return",
+        "reviewer-fast",
+        "pre-commit",
+        "pr-ci"
+      ]
+    },
+    {
+      "id": "CVF-DG-CLAIM-01",
+      "title": "Gate claims limited to evidenced installed/invoked/proven states",
+      "mandatory": true,
+      "module": "cvf_dg_review",
+      "phases": [
+        "worker-return",
+        "reviewer-fast",
+        "pre-commit",
+        "pr-ci"
+      ]
+    }
+  ],
+  "installedFiles": [
+    "cvf_downstream_gate_profile.json",
+    "cvf_downstream_gate_runner.py",
+    "cvf_dg_common.py",
+    "cvf_dg_install.py",
+    "cvf_dg_continuity.py",
+    "cvf_dg_applicability.py",
+    "cvf_dg_routing.py",
+    "cvf_dg_review.py",
+    "cvf_dg_intake.py",
+    "cvf_dg_coverage.py",
+    "check_gate_to_role_closeability.py",
+    "git-pre-commit.template",
+    "project_learning_home.template.md",
+    "project_learning_record.template.md"
+  ],
+  "coreSources": {
+    "check_gate_to_role_closeability.py": "governance/compat/check_gate_to_role_closeability.py"
+  },
+  "projectPaths": {
+    "gatesDir": "scripts/cvf_gates",
+    "lock": ".cvf/gate-profile.lock.json",
+    "localOverride": ".cvf/gate-profile.local.json",
+    "receiptDir": ".cvf/runtime/gate-receipts",
+    "ciWorkflow": ".github/workflows/cvf-downstream-gates.yml",
+    "intakeDir": "docs/learning_intake"
+  },
+  "continuityContract": {
+    "id": "cvf.downstreamContinuityContract@1.0.0",
+    "statePath": "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "memoryPath": "CVF_SESSION_MEMORY.md",
+    "implementationPath": "IMPLEMENTATION_STATUS.json",
+    "handoffDir": "CVF_SESSION/handoffs",
+    "stateSchemaVersions": [
+      "1.0"
+    ],
+    "implementationSchemaVersions": [
+      "1.0"
+    ],
+    "phaseModel": [
+      "INTAKE",
+      "DESIGN",
+      "SPEC",
+      "WORK_ORDER",
+      "BUILD",
+      "REVIEW",
+      "FREEZE"
+    ],
+    "modePhaseMap": {
+      "INTAKE": "INTAKE",
+      "DESIGN": "DESIGN",
+      "SPEC": "SPEC",
+      "WORK_ORDER": "WORK_ORDER",
+      "BUILD": "BUILD",
+      "REVIEW": "REVIEW",
+      "FREEZE": "FREEZE",
+      "REVIEW_PENDING": "REVIEW"
+    },
+    "stateRequired": [
+      "schemaVersion",
+      "continuityContract",
+      "projectName",
+      "currentMode",
+      "activePhase",
+      "phaseModel",
+      "activeHandoff",
+      "nextAllowedMove",
+      "parkedOperatorCheckpoint",
+      "activeRole",
+      "roleRoute",
+      "updatedAt"
+    ],
+    "stateOptional": [
+      "activeTranche"
+    ],
+    "implementationRequired": [
+      "schemaVersion",
+      "projectName",
+      "overallStatus",
+      "currentPhase",
+      "completedCapabilities",
+      "activeWorkOrders",
+      "knownLimitations",
+      "evidence",
+      "updatedAt"
+    ],
+    "implementationOptional": [
+      "activeTranche"
+    ],
+    "memorySection": "Current Truth",
+    "memoryLabels": [
+      "Contract",
+      "Current mode",
+      "Active phase",
+      "Active handoff"
+    ],
+    "handoffSection": "Current State",
+    "handoffRequiredLabels": [
+      "Current mode",
+      "Active phase",
+      "Active role",
+      "Next allowed move"
+    ],
+    "handoffOptionalLabels": [
+      "Project",
+      "Parked operator checkpoint",
+      "Active tranche"
+    ],
+    "extensionPrefixes": [
+      "x-",
+      "x_"
+    ]
+  },
+  "reviewerRouting": {
+    "allowedBoundaries": [
+      "MATERIAL_DESIGN_CHANGE",
+      "SCOPE_OR_AUTHORITY_EXPANSION",
+      "NEW_EVIDENCE_REQUIRED",
+      "BROAD_DELIVERABLE_RECREATION",
+      "WORK_ORDER_FORBIDS_REVIEWER_REPAIR"
+    ],
+    "basisMinLength": 24,
+    "basisPlaceholderPattern": "(?i)(?:TODO|TO_FILL|FILL_ME|N/A)",
+    "assessmentFields": [
+      "unchangedObjective",
+      "unchangedDesign",
+      "unchangedPaths",
+      "unchangedAuthority",
+      "unchangedEffects",
+      "unchangedCommitOwner",
+      "evidenceDetermined"
+    ],
+    "boundaryRequiresNo": {
+      "MATERIAL_DESIGN_CHANGE": [
+        "unchangedObjective",
+        "unchangedDesign"
+      ],
+      "SCOPE_OR_AUTHORITY_EXPANSION": [
+        "unchangedPaths",
+        "unchangedAuthority",
+        "unchangedEffects",
+        "unchangedCommitOwner"
+      ],
+      "NEW_EVIDENCE_REQUIRED": [
+        "evidenceDetermined"
+      ],
+      "BROAD_DELIVERABLE_RECREATION": [
+        "unchangedObjective",
+        "unchangedDesign",
+        "unchangedPaths",
+        "unchangedAuthority",
+        "unchangedEffects",
+        "unchangedCommitOwner",
+        "evidenceDetermined"
+      ],
+      "WORK_ORDER_FORBIDS_REVIEWER_REPAIR": [
+        "unchangedObjective",
+        "unchangedDesign",
+        "unchangedPaths",
+        "unchangedAuthority",
+        "unchangedEffects",
+        "unchangedCommitOwner",
+        "evidenceDetermined"
+      ]
+    }
+  },
+  "reviewRoles": {
+    "independentRiskLevels": [
+      "R2",
+      "R3"
+    ],
+    "validRiskLevels": [
+      "R0",
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "broadClaimPhrases": [
+    "agent-enforcement-ready",
+    "fully enforced",
+    "all gates inherited",
+    "workspace is enforced",
+    "ci verified"
+  ],
+  "intake": {
+    "schemaVersion": "cvf.downstreamFindingIntake@1.0.0",
+    "defectClasses": [
+      "WORKER_EXECUTION_ERROR",
+      "ORCHESTRATOR_PACKET_GAP",
+      "RULE_GAP",
+      "MACHINE_GATE_GAP",
+      "PHASE_GATE_PLACEMENT_GAP",
+      "OPERATOR_SCOPE_CLARITY_GAP",
+      "RUNTIME_SIGNAL_GAP"
+    ],
+    "learningLanes": [
+      "GOVERNANCE_CONTROL_PLANE",
+      "RUNTIME_BEHAVIOR_LEARNING",
+      "PROVIDER_OUTPUT_LEARNING",
+      "COST_ECONOMICS_LEARNING",
+      "DOCUMENTATION_ONLY_LEARNING"
+    ],
+    "proposedDispositions": [
+      "MACHINE_CHECK_CANDIDATE",
+      "DESIGN_REVIEW_REQUIRED",
+      "RULE_EXISTS",
+      "RUNTIME_LEARNING_CANDIDATE",
+      "N/A_WITH_REASON"
+    ],
+    "parentOwner": "docs/reference/CVF_FINDING_TO_GOVERNANCE_LEARNING_TRIGGER_STANDARD.md",
+    "acceptanceStates": [
+      "NOT_ACCEPTED_GENERATION_ONLY",
+      "ACCEPTED_BY_PARENT",
+      "DECLINED_BY_PARENT"
+    ],
+    "parentDispositions": [
+      "PENDING_PARENT_ADMISSION",
+      "ACCEPTED_BY_PARENT",
+      "DECLINED_BY_PARENT"
+    ],
+    "sourceClaimStatus": "UNVERIFIED_UNTIL_PROJECT_EVIDENCE_IS_SEPARATELY_ADMITTED",
+    "parentLinkKeys": [
+      "admissionRecord",
+      "workOrder",
+      "checker",
+      "goldenProof"
+    ]
+  },
+  "candidateRange": {
+    "requiredPhases": [
+      "pr-ci"
+    ],
+    "emptyTree": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "baseEnvVar": "CVF_DG_BASE",
+    "dispositions": [
+      "RANGE_RESOLVED",
+      "RANGE_EMPTY_CHECKED",
+      "RANGE_INITIAL_ALL_FILES",
+      "WORKTREE_SCOPE",
+      "NO_GIT_NO_CANDIDATES"
+    ]
+  },
+  "trustAnchors": {
+    "INDEPENDENT_CORE": "Core checkout of the workspace operator; the doctor runs its runner with --trusted and compares every installed byte to Core sources before any project module is imported",
+    "CI_BUNDLE_PIN": "profile, runner and bundle digests in the project workflow; project-controlled and reviewed through the PR, detects inconsistent module-plus-lock edits, not an independent trust root"
+  },
+  "activeWorkOrderPrefix": "docs/work_orders/"
+}

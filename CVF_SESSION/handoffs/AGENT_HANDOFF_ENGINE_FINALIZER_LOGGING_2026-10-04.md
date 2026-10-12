@@ -1,6 +1,6 @@
 # Engine finalizer driver-error logging handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
