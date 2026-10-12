@@ -39,3 +39,11 @@ docs55 still blocks product FREEZE; R086 native readiness NOT_RUN and fence inte
 ## Local Preparation Diagnostics
 
 Initial Local metadata transition had a truncated front marker due to stale string offsets and an obsolete mandatory handoff catalog alias / invalid catalog lifecycle token. Corrected from the committed front door and canonical catalog constants before dispatch. These are Local preparation defects, not worker source defects; gates were never bypassed. Legacy preflight7/7 and explicit-packet pre-dispatch5controls PASS; APPL actually CHECKS the DISPATCH_READY packet. UI tests/dependency setup not run.
+
+## Actual Dispatch Material-SHA Marker And Publication
+
+Dispatch material-SHA: 5d11fd4ffd5a912dad633213defd8c1e0d3333b5. This is the actual committed packet/state release, distinct from authority seed45ac7a9 and future worker execution HEAD. Exact db4eb5c..5d11fd4ffd5a912dad633213defd8c1e0d3333b5 range passed all seven installed profile controls with three workflow pins (APPL CHECKED this ready order), plus legacy7/7. Ordinary branch push succeeded; independent git ls-remote matches 5d11fd4ffd5a912dad633213defd8c1e0d3333b5. Worker not started; source/tests/dependencies unchanged.
+
+## Public Export Disposition
+
+EXPORTED. Remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git, branch codex/cvf-portable-inheritance, commit 5d11fd4ffd5a912dad633213defd8c1e0d3333b5, artifact docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md (SPEC and seed included). This handoff-only sync records actual publication; no private Core source export, implementation/full product acceptance, hosted CI or deployment claim. Workflow is pull_request/main only, so this feature-branch push does not itself produce a hosted run.
