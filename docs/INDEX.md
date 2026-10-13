@@ -253,6 +253,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Shared independently verified fixture-domain and stored-prefix learning; upstream deferred.: `docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md`
 - Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence.: `docs/reviews/learnings/feedback_minor_reviewer_repairs.md`
 - Root orchestration drift finding: finite product milestones, prerequisite stop conditions, proactive reassessment and plain-language noncoder handback; effectiveness not yet verified, upstream not sent.: `docs/reviews/learnings/feedback_orchestrator_roadmap_control.md`
+- Portable project adoption of Core per-output delivery evidence guidance for future outbound reviews; R091 remains historical bounded proof.: `docs/reviews/learnings/CCMAI_TO_CVF_PER_OUTPUT_DELIVERY_APPLICATION_2026-10-13.md`
 - Provisional empirical Luna task-fit matrix for four reviewed tranches; normalized product/test/root attribution, no model-config change or unmatched Sol ranking.: `docs/reviews/LUNA_TASK_FIT_CLASSIFICATION_2026-10-10.md`
 - CVF enforcement manifest.: `.cvf/manifest.json`
 - Documentation-only publication checks for shared minor-repair guidance; no runtime governance or universal agent-compliance proof.: `docs/reviews/probes/minor_reviewer_repairs_publication_2026-10-06.json`
