@@ -43,18 +43,24 @@
     "sameScopeRepairs": "Repair tooling/source before request, or after failure without another provider request; cap never reset. Stop at third formal repair round without independent root cause."
   },
   "claimScope": "At most two actual Alibaba HTTP requests over synthetic inputs with sanitized request/response receipts and bounded local output checks. No Go adapter/analyzer integration, live channel, AI-quality benchmark, budget admission or full CVF-governance proof claim.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "3ce76f355bca43093402e40bc99a6b7c684406a4",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "reviewEvidence": [
+    "docs/reviews/R093_INDEPENDENT_PRE_EFFECT_SOURCE_REVIEW_2026-10-13.md",
+    "docs/reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md",
+    "docs/reviews/probes/r093_alibaba_live/independent_live_inspection.json"
+  ],
+  "disposition": "RETURNED_POSITIVE_OUTPUT_CONTRACT_FAILED_REQUEST_CAP_EXHAUSTED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -64,5 +70,15 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE"
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "x-actualProviderOutcome": {
+    "physicalRequests": 2,
+    "remainingRequests": 0,
+    "worker": "OUTPUT_CHECKS_FAIL",
+    "reviewer": "OUTPUT_CHECKS_PASS",
+    "wire": "HTTP200_BOTH_MODEL_MATCH",
+    "application": "NOT_RUN",
+    "governance": "NOT_CLAIMED",
+    "billing": "UNKNOWN"
+  }
 }

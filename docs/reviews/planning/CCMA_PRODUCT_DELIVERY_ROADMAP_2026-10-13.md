@@ -45,11 +45,15 @@ Review nguồn: [R088](../R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [R
 
 Drift M1 đã đối chiếu với source hiện tại: spec database từng nói provider trước candidate; PRODUCT_DIRECTION từng dùng câu blanket “chưa triển khai” và nói chưa cấu hình provider thật. R092 sửa hai câu hiện hành theo source/owner/config readiness. `IMPLEMENTATION_STATUS.knownLimitations` hiện ghi R065 dispatch text là lịch sử/superseded; không coi đó là lệnh hiện hành. Các “next” trong ảnh chụp lịch sử UI được giữ nguyên như lịch sử. Không chạy lại full docs55/link inventory trong R092; số 55 không được khẳng định là count hiện tại. Audit 8 mục `--omit=dev` và 17 mục full audit có scope khác nhau; không gọi chênh số là regression nếu chưa so sánh lock/command/date.
 
+## R093 provider checkpoint và route hữu hạn
+
+[Independent live review](../R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md): Alibaba qwen3.7-flash HTTP compatibility observed twice with synthetic data; positive output rejected for invalid ID/missing complaint anchor, neutral PASS. Budget2/2 exhausted; no further R093 retry. R092/R093 are two support scopes, not usable end-user workflow. Next is one coherent M2 application packet including verified local toolchain/isolated DB setup, WAIT_DATA/DENY before disclosure, durable physical-call reservation and strict proposal evidence validation. M3 then completes human review/assignment/outcome in browser. No Go/Docker/MySQL found in checked paths; setup is an explicit prerequisite of that packet, not a new endless support campaign. Full M1/M4/M5 business/pilot decisions remain open.
+
 ## 4. Thứ tự delivery và trạng thái
 
 | Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái lúc tạo |
 |---|---|---|---|---|
-| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 worker contract candidate; independent review pending; local synthetic route scoped, business/pilot exit OPEN |
+| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 independently reviewed LOCAL_SYNTHETIC_CONTRACT_READY at1e46390; R093 two real HTTP200/model-match observations; positive evidence-reference FAIL, neutral PASS, cap exhausted/returned; app governance and business/pilot exit OPEN |
 | M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | PLANNED — chưa dispatch |
 | M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
 | M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |

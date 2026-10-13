@@ -1,0 +1,67 @@
+{
+  "scope": "Independent exact provider-wire observation; not Go/Analyzer/CVF governance proof",
+  "sourceSha256": "41c6eb00b31a86294508954eeeb7e01ce61fb7f2c0535380580dac57ec5415fa",
+  "physicalProviderResponsesObserved": 2,
+  "dispatchMarkers": 2,
+  "automaticRetries": 0,
+  "remainingRequestBudget": 0,
+  "campaignElapsedSeconds": 53.228,
+  "actors": [
+    {
+      "actor": "worker",
+      "httpStatus": 200,
+      "result": "OUTPUT_CHECKS_FAIL",
+      "receiptSha256": "f01029155a1bd61e638d9516ae3ce9c0dc5c74cd2b7148794ecd14a9d4af549b",
+      "returnedModel": "qwen3.7-flash",
+      "returnedProvider": "UNKNOWN",
+      "usage": {
+        "completion_tokens": 311,
+        "prompt_tokens": 320,
+        "status": "KNOWN_REPORTED",
+        "total_tokens": 631
+      },
+      "elapsedSeconds": 5.141,
+      "modelEvidenceRefs": [
+        {
+          "message_id": "msg:r093-syn-agent-002",
+          "quote": "Tôi sẽ kiểm tra giúp bạn."
+        }
+      ],
+      "expectedMessageIds": [
+        "r093-syn-complaint-001",
+        "r093-syn-agent-002"
+      ],
+      "issues": [
+        "complaint_evidence_reference_invalid_or_missing"
+      ]
+    },
+    {
+      "actor": "reviewer",
+      "httpStatus": 200,
+      "result": "OUTPUT_CHECKS_PASS",
+      "receiptSha256": "d5b48649295af098fa99bbd05f46057c9e682b774e9c40b326a01555cf35738f",
+      "returnedModel": "qwen3.7-flash",
+      "returnedProvider": "UNKNOWN",
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 334,
+        "status": "KNOWN_REPORTED",
+        "total_tokens": 430
+      },
+      "elapsedSeconds": 2.422,
+      "modelEvidenceRefs": [],
+      "expectedMessageIds": [
+        "r093-syn-reviewer-customer-001",
+        "r093-syn-reviewer-agent-002"
+      ],
+      "issues": []
+    }
+  ],
+  "secretScan": "PASS_KNOWN_KEY_ABSENT_AND_RESPONSE_LOGICAL_JSON_SAFE",
+  "billing": "UNKNOWN",
+  "rootInspectionCorrections": [
+    "Explicit UTF-8 fixes local cp1252 read failure before secret read",
+    "Applied bounded response scanner to response body; whole receipt exceeds its conservative parser-work bound. Independent recursive known-key scan covers receipt metadata."
+  ],
+  "disposition": "HTTP_COMPATIBILITY_OBSERVED_POSITIVE_OUTPUT_CONTRACT_FAILED_NO_RETRY"
+}

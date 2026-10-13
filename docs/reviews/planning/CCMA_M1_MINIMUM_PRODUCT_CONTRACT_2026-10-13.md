@@ -1,13 +1,17 @@
 # Hợp đồng sản phẩm tối thiểu M1 — Customer Care Monitor AI
 
 **Tranche:** `CCMAI-RUNTIME-092` · **Ngày:** 2026-10-13 · **Rủi ro:** R1 tài liệu
-**Trạng thái:** `LOCAL_SYNTHETIC_CONTRACT_READY` (worker proposal; independent review pending) · **M1/pilot tổng thể:** `OPEN` vì các quyết định nghiệp vụ và pilot acceptance còn thiếu
+**Trạng thái:** `LOCAL_SYNTHETIC_CONTRACT_READY` (Root independent documentary REVIEW_PASS at1e46390) · **M1/pilot tổng thể:** `OPEN` vì các quyết định nghiệp vụ và pilot acceptance còn thiếu
 **Source baseline:** `a91433b81a69decce33eaa2e134b8926ea9d2372`
-**Authority:** R092 seed `1c14bd1abea5040bcb217695d5d78d4ca8e119d5`; HEAD hiện có thêm R093 authority seed `7639e463bb18cb27ff561e01ccf3768fad33da89`. R093 là nhánh R2 riêng, chưa có work order/BUILD; nội dung seed không mở rộng quyền R092.
+**Authority at R092 review:** R092 seed `1c14bd1abea5040bcb217695d5d78d4ca8e119d5`; HEAD hiện có thêm R093 authority seed `7639e463bb18cb27ff561e01ccf3768fad33da89`. R093 là nhánh R2 riêng, chưa có work order/BUILD; nội dung seed không mở rộng quyền R092.
+
+## Current execution checkpoint after R092 acceptance
+
+R092 intended contract accepted at `1e4639085a7b1c63ed1eb5c3edf4e28c2073bad6`. Its authority/provider-status statements below are the R092 review snapshot. Current R093 has a separately committed [live characterization work order](../../work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md), active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md`, and returned R093 review; exact model/endpoint are pinned there. Two real synthetic requests returned HTTP200/model match; complaint output failed evidence references and neutral output passed. Request budget exhausted; see [independent outcome](../R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md). Application integration/governance and billing remain unverified. These changes do not implement M2/M3 or close M1/pilot.
 
 ## 1. Kết quả và ranh giới
 
-Owner đã khóa phạm vi thử nghiệm: **Pancake chưa có dữ liệu thật; mọi dữ liệu hội thoại/khách hàng dùng để phát triển và kiểm thử là mock hoặc synthetic. Owner cho phép dùng Alibaba API key để thử AI thật.** Không có dữ liệu kênh/khách hàng thật trong M1–M3. Live AI với input synthetic vẫn cần packet R2 riêng. R092 worker chỉ tạo tài liệu: không sửa source/runtime, không đọc secret file, không gọi provider và không chạy project runtime tests. Root trong prospective R093 intake đã đọc tài liệu Alibaba công khai và xem metadata cấu hình theo cách secret-safe; không thực hiện credential-bearing request hoặc provider API call. R092 không bổ sung source/runtime/product evidence. Owner/authority references: [R092 work order](../../work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md); active handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md`.
+Owner đã khóa phạm vi thử nghiệm: **Pancake chưa có dữ liệu thật; mọi dữ liệu hội thoại/khách hàng dùng để phát triển và kiểm thử là mock hoặc synthetic. Owner cho phép dùng Alibaba API key để thử AI thật.** Không có dữ liệu kênh/khách hàng thật trong M1–M3. Live AI với input synthetic vẫn cần packet R2 riêng. R092 worker chỉ tạo tài liệu: không sửa source/runtime, không đọc secret file, không gọi provider và không chạy project runtime tests. Root trong prospective R093 intake đã đọc tài liệu Alibaba công khai và xem metadata cấu hình theo cách secret-safe; không thực hiện credential-bearing request hoặc provider API call. R092 không bổ sung source/runtime/product evidence. Owner/authority references: [R092 work order](../../work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md); R092 review handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md`.
 
 M1 có thể bàn giao một đường kỹ thuật hữu hạn cho **local synthetic** mà không bịa người phụ trách, SLA, ngưỡng chất lượng hay hạn mức tiền. Vì các quyết định nghiệp vụ/pilot còn thiếu, disposition là `LOCAL_SYNTHETIC_CONTRACT_READY`, **không phải M1_EXIT**. Các câu hỏi đó chỉ chặn pilot/live/data scope tương ứng, không chặn việc xây và thử queue với fixture người dùng tổng hợp.
 

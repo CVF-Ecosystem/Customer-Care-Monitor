@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -79,9 +79,9 @@
   ],
   "x-buildInProgress": {
     "trancheId": "CCMAI-RUNTIME-093",
-    "status": "BUILD",
+    "status": "RETURNED_NO_REDISPATCH",
     "newRuntimeEffectsAuthorized": false,
-    "providerEffects": "SOURCE_REVIEW_REQUIRED_MAX2_SYNTHETIC"
+    "providerEffects": "REQUEST_CAP_EXHAUSTED_NO_MORE_EFFECT"
   },
   "knownLimitations": [
     "Historical R065 dispatch text superseded: UO01..12 source/local usage observation independently accepted and locally FROZEN; usage-presence/billing/pricing version and full S2/S3 remain unproved. Historical R065 test budgets confer no R092/source/provider authority.",
@@ -339,9 +339,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
-    "buildDispatched": true,
+    "nextObjective": "CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.",
+    "activeWorkOrder": null,
+    "buildDispatched": false,
     "currentExecutionBudget": {
       "physicalProviderRequestsTotal": 2,
       "workerRequests": 1,
@@ -353,7 +353,10 @@
       "maxResponseBytes": 1048576,
       "maxElapsedCampaignMinutes": 5,
       "financialLimit": "Owner test authorization is limited by hard request/token/input/time caps; actual quota and dollar charge UNKNOWN until provider/account evidence. No replenishment, billing settings or quota-overrun continuation.",
-      "sameScopeRepairs": "Repair tooling/source before request, or after failure without another provider request; cap never reset. Stop at third formal repair round without independent root cause."
+      "sameScopeRepairs": "Repair tooling/source before request, or after failure without another provider request; cap never reset. Stop at third formal repair round without independent root cause.",
+      "actualRequests": 2,
+      "remainingRequests": 0,
+      "campaignDisposition": "EXHAUSTED_NO_RETRY_NO_RESET"
     }
   },
   "x-sourcePreparationReceipt": {
@@ -2046,9 +2049,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2157,23 +2158,24 @@
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "M1_BUILD",
+    "status": "M1_PROVIDER_WIRE_OBSERVED_OUTPUT_GAP_RETURNED",
     "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
     "currentMilestone": "M1",
     "milestoneStatus": "LOCAL_SYNTHETIC_CONTRACT_REVIEWED_FULL_BUSINESS_PILOT_OPEN",
-    "nextAction": "CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.",
+    "nextAction": "CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.",
     "authority": "Owner 2026-10-13 roadmap and Alibaba key authorization; current R093 R2 finite synthetic HTTP characterization only, M2 source requires next bounded packet.",
     "executionAuthorityExpanded": true,
     "publication": "NOT_EXPORTED_CURRENT_LOCAL_M1",
     "updatedAt": "2026-10-13",
     "materialCommit": "1e4639085a7b1c63ed1eb5c3edf4e28c2073bad6",
-    "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json",
+    "publicationReceipt": null,
     "previousRoadmapPublication": {
       "status": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
       "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
       "receipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
     },
-    "contract": "docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md"
+    "contract": "docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md",
+    "currentContractSourceBaseline": "a91433b81a69decce33eaa2e134b8926ea9d2372"
   },
   "x-historicalPreR092OwnerRouting": {
     "date": "2026-10-13",
@@ -2230,12 +2232,22 @@
     }
   },
   "x-r093AlibabaLive": {
-    "status": "BUILD_SOURCE_ONLY_PRE_EFFECT_REVIEW_PENDING",
+    "status": "RETURNED_POSITIVE_OUTPUT_CONTRACT_FAILED",
     "provider": "alibaba",
     "model": "qwen3.7-flash",
     "physicalRequestCap": 2,
-    "actualRequests": 0,
+    "actualRequests": 2,
     "appIntegration": "NOT_RUN",
-    "governanceProof": "NOT_CLAIMED"
+    "governanceProof": "NOT_CLAIMED",
+    "workerReceipt": "docs/reviews/probes/r093_alibaba_live/worker.json",
+    "workerResult": "OUTPUT_CHECKS_FAIL",
+    "sourceSha256": "41c6eb00b31a86294508954eeeb7e01ce61fb7f2c0535380580dac57ec5415fa",
+    "remainingRequests": 0,
+    "reviewerReceipt": "docs/reviews/probes/r093_alibaba_live/reviewer.json",
+    "reviewerResult": "OUTPUT_CHECKS_PASS",
+    "wireCompatibility": "OBSERVED_TWO_HTTP200_MODEL_MATCH",
+    "reportedTotalTokens": 1061,
+    "billing": "UNKNOWN",
+    "review": "docs/reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md"
   }
 }

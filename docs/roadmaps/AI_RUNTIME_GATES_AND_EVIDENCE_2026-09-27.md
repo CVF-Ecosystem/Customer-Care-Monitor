@@ -8,7 +8,11 @@
 
 [Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) là cửa vào để chọn việc tiếp theo: M1 khóa bản đầu tiên và dependency; M2 đường phân tích có kiểm soát; M3 người duyệt/giao việc/kết quả; M4 shadow/pilot có đo lường; M5 release và tiếp quản. Kế hoạch đưa quyết định S0 lên trước implementation và an toàn dữ liệu tối thiểu lên trước pilot. Nó cụ thể hóa thứ tự P0–P4 bên dưới, giữ toàn bộ hợp đồng exit S0–S7; không đóng stage hoặc cấp runtime authority. Hiện tại M1 còn mở, M2–M5 chưa dispatch.
 
-## Điểm kiểm tiến độ hiện hành — 2026-10-13
+## Current M1 checkpoint — R092/R093
+
+R092 local synthetic intended contract independently reviewed at1e46390; full M1 exit remains OPEN. R093 [independent live review](../reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md) observes two real Alibaba HTTP200/model-match responses, positive evidence-reference FAIL and neutral PASS, physical cap2/2 exhausted/returned. No Go/Analyzer/CVF-runtime proof. Active [R093 handoff](../../CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md) controls next: one integrated M2 synthetic manual application route with bounded verified toolchain/isolated DB setup, admission and strict snapshot/ID/quote validation, then M3 human browser workflow. Native setup, M2/M3 product outcome and M4/M5/pilot remain OPEN; accounts parked. Two supporting scopes require this finite product-route reassessment; no generic R093 retry/helper successor.
+
+## Historical R091 progress checkpoint — 2026-10-13
 
 Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệch hướng. Maintainer: ORCHESTRATOR; nguồn đối chiếu: [implementation truth](../../IMPLEMENTATION_STATUS.json), [active state](../../CVF_SESSION/ACTIVE_SESSION_STATE.json), [handoff R091](../../CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md), actual accepted A material `44bb345` and F06 `a8865d1`; final C accepted/published material `d121c9ecf24a869aea92264db1e01cd853dec0ec`. Đây là bản theo dõi tiến độ/planning R1; không thay acceptance lịch sử, contract S0–S7 hoặc cấp quyền BUILD/runtime/release. Phần thiết kế gốc vẫn giữ trạng thái DRAFT / REVIEW_PENDING; bản theo dõi này không tự chấp nhận toàn roadmap.
 

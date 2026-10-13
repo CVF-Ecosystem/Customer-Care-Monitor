@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-093 — Alibaba synthetic live characterization
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: /root/m1_worker
 Reviewer: Codex /root

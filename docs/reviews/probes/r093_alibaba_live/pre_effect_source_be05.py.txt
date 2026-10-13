@@ -1,0 +1,1154 @@
+#!/usr/bin/env python3
+"""Bounded, direct Alibaba OpenAI-compatible wire probe for R093.
+
+Provider access requires the explicit ``--live`` flag, a pinned R093 actor, and
+the source-bound Root approval file. ``--self-check`` is offline. This probe is
+not the Go adapter, Analyzer, or CVF AI-governance path.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import http.client
+import json
+import os
+import re
+import socket
+import ssl
+import subprocess
+import sys
+import tempfile
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+from urllib.parse import urlsplit
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+TRANCHE_ID = "CCMAI-RUNTIME-093"
+BASE_COMMIT = "3ce76f355bca43093402e40bc99a6b7c684406a4"
+SEED_COMMIT = "7639e463bb18cb27ff561e01ccf3768fad33da89"
+DISPATCH_COMMIT = "03e95ce3a09abd98d8605f40a5e0c4ad0eecf4d6"
+SEED_RELATIVE = Path("CVF_SESSION/authority/CCMAI-RUNTIME-093.json")
+STATE_RELATIVE = Path("CVF_SESSION/ACTIVE_SESSION_STATE.json")
+TRANCHE_RELATIVE = Path("CVF_SESSION/tranches/CCMAI-RUNTIME-093.json")
+WORK_ORDER_RELATIVE = Path("docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md")
+HANDOFF_RELATIVE = Path(
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md"
+)
+SECRET_RELATIVE = Path("CVF_SESSION/LOCAL_PROVIDER_SECRETS.json")
+RUNTIME_RELATIVE = Path(".cvf/runtime/r093_alibaba_live")
+APPROVAL_RELATIVE = RUNTIME_RELATIVE / "root_approval.json"
+LEDGER_RELATIVE = RUNTIME_RELATIVE / "ledger"
+MODEL_ID = "qwen3.7-flash"
+REGION = "ap-southeast-1"
+ENDPOINT_SHA256 = "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f"
+ENDPOINT_PATH = "/compatible-mode/v1"
+COMPLETIONS_PATH = ENDPOINT_PATH + "/chat/completions"
+MAX_TOTAL_REQUESTS = 2
+MAX_REQUESTS_PER_ACTOR = 1
+MAX_RETRIES = 0
+REQUEST_TIMEOUT_SECONDS = 60
+MAX_COMPLETION_TOKENS = 768
+MAX_REQUEST_BODY_BYTES = 6000
+MAX_RESPONSE_BYTES = 1024 * 1024
+MAX_CAMPAIGN_SECONDS = 5 * 60
+
+ACTORS = ("worker", "reviewer")
+RECEIPT_RELATIVE = {
+    "worker": Path("docs/reviews/probes/r093_alibaba_live/worker.json"),
+    "reviewer": Path("docs/reviews/probes/r093_alibaba_live/reviewer.json"),
+}
+
+_CREDENTIAL_PATTERNS = (
+    re.compile(r"(?i)\bsk-[A-Za-z0-9_-]{16,}\b"),
+    re.compile(r"(?i)\bBearer\s+[A-Za-z0-9._~+/-]{16,}"),
+    re.compile(
+        r"(?i)\b(?:api[_-]?key|access[_-]?token|authorization)\s*[:=]\s*"
+        r"['\"]?[^\s,}\"']{8,}"
+    ),
+)
+
+
+class ProbeError(Exception):
+    """A deliberately non-sensitive local or wire failure code."""
+
+    def __init__(self, code: str):
+        super().__init__(code)
+        self.code = code
+
+
+def _utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def _sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def _json_bytes(value: Any) -> bytes:
+    return json.dumps(
+        value,
+        ensure_ascii=False,
+        separators=(",", ":"),
+        sort_keys=True,
+    ).encode("utf-8")
+
+
+def _unique_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("duplicate JSON key")
+        result[key] = value
+    return result
+
+
+def _strict_json_loads(raw: bytes | str) -> Any:
+    return json.loads(
+        raw,
+        object_pairs_hook=_unique_object,
+        parse_constant=lambda _value: (_ for _ in ()).throw(ValueError("invalid JSON number")),
+    )
+
+
+def _read_json_object(path: Path, error_code: str) -> dict[str, Any]:
+    try:
+        value = _strict_json_loads(path.read_bytes())
+    except (OSError, UnicodeError, ValueError, json.JSONDecodeError):
+        raise ProbeError(error_code) from None
+    if not isinstance(value, dict):
+        raise ProbeError(error_code)
+    return value
+
+
+def _git_bytes(*args: str) -> subprocess.CompletedProcess[bytes]:
+    try:
+        return subprocess.run(
+            ["git", *args],
+            cwd=PROJECT_ROOT,
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+        )
+    except OSError:
+        raise ProbeError("GIT_CHECK_UNAVAILABLE") from None
+
+
+def _git_text(*args: str) -> str:
+    result = _git_bytes(*args)
+    if result.returncode != 0:
+        raise ProbeError("GIT_CHECK_FAILED")
+    try:
+        return result.stdout.decode("ascii").strip()
+    except UnicodeError:
+        raise ProbeError("GIT_CHECK_FAILED") from None
+
+
+def _require_project_root() -> None:
+    try:
+        if Path.cwd().resolve() != PROJECT_ROOT.resolve():
+            raise ProbeError("RUN_FROM_PROJECT_ROOT")
+    except OSError:
+        raise ProbeError("PROJECT_ROOT_UNAVAILABLE") from None
+
+
+def _assert_ignored_and_untracked(relative_path: Path) -> None:
+    path_text = relative_path.as_posix()
+    ignored = _git_bytes("check-ignore", "--quiet", "--no-index", "--", path_text)
+    if ignored.returncode != 0:
+        raise ProbeError("REQUIRED_LOCAL_FILE_NOT_IGNORED")
+    tracked = _git_bytes("ls-files", "--error-unmatch", "--", path_text)
+    if tracked.returncode == 0:
+        raise ProbeError("REQUIRED_LOCAL_FILE_IS_TRACKED")
+    if tracked.returncode != 1:
+        raise ProbeError("GIT_TRACKED_CHECK_FAILED")
+
+
+def _assert_seed_and_dispatch() -> dict[str, Any]:
+    head = _git_text("rev-parse", "HEAD")
+    for commit in (BASE_COMMIT, SEED_COMMIT, DISPATCH_COMMIT):
+        exists = _git_bytes("cat-file", "-e", f"{commit}^{{commit}}")
+        if exists.returncode != 0:
+            raise ProbeError("PINNED_AUTHORITY_COMMIT_MISSING")
+        ancestor = _git_bytes("merge-base", "--is-ancestor", commit, head)
+        if ancestor.returncode != 0:
+            raise ProbeError("PINNED_AUTHORITY_NOT_IN_CURRENT_HISTORY")
+
+    try:
+        local_seed = (PROJECT_ROOT / SEED_RELATIVE).read_bytes()
+    except OSError:
+        raise ProbeError("AUTHORITY_SEED_UNAVAILABLE") from None
+    for revision in (SEED_COMMIT, head):
+        committed_seed = _git_bytes("show", f"{revision}:{SEED_RELATIVE.as_posix()}")
+        if committed_seed.returncode != 0 or committed_seed.stdout != local_seed:
+            raise ProbeError("AUTHORITY_SEED_CHANGED")
+
+    try:
+        seed = _strict_json_loads(local_seed)
+    except (UnicodeError, ValueError, json.JSONDecodeError):
+        raise ProbeError("AUTHORITY_SEED_INVALID") from None
+    if not isinstance(seed, dict) or seed.get("trancheId") != TRANCHE_ID:
+        raise ProbeError("AUTHORITY_SEED_INVALID")
+    if "scripts/ccma_alibaba_live_probe.py" not in seed.get("allowedPaths", []):
+        raise ProbeError("PROBE_PATH_NOT_AUTHORIZED")
+
+    budget = seed.get("executionBudget")
+    expected_budget = {
+        "physicalProviderRequestsTotal": MAX_TOTAL_REQUESTS,
+        "workerRequests": 1,
+        "reviewerRequests": 1,
+        "automaticRetries": MAX_RETRIES,
+        "timeoutSecondsPerRequest": REQUEST_TIMEOUT_SECONDS,
+        "maxCompletionTokensPerRequest": MAX_COMPLETION_TOKENS,
+        "maxRequestBodyBytes": MAX_REQUEST_BODY_BYTES,
+        "maxResponseBytes": MAX_RESPONSE_BYTES,
+        "maxElapsedCampaignMinutes": 5,
+    }
+    if not isinstance(budget, dict) or any(budget.get(k) != v for k, v in expected_budget.items()):
+        raise ProbeError("AUTHORITY_BUDGET_MISMATCH")
+    return seed
+
+
+def _active_authority(actor: str) -> tuple[dict[str, Any], dict[str, Any], str]:
+    if actor not in ACTORS:
+        raise ProbeError("INVALID_ACTOR")
+    state = _read_json_object(PROJECT_ROOT / STATE_RELATIVE, "ACTIVE_STATE_UNAVAILABLE")
+    tranche = _read_json_object(PROJECT_ROOT / TRANCHE_RELATIVE, "TRANCHE_RECORD_UNAVAILABLE")
+    status = _read_json_object(PROJECT_ROOT / "IMPLEMENTATION_STATUS.json", "IMPLEMENTATION_STATUS_UNAVAILABLE")
+    if state.get("activeTranche") != TRANCHE_ID or tranche.get("trancheId") != TRANCHE_ID:
+        raise ProbeError("R093_NOT_ACTIVE")
+    if state.get("activeHandoff") != HANDOFF_RELATIVE.as_posix():
+        raise ProbeError("R093_HANDOFF_MISMATCH")
+    handoff_path = PROJECT_ROOT / HANDOFF_RELATIVE
+    if not handoff_path.is_file():
+        raise ProbeError("R093_HANDOFF_MISSING")
+
+    role_map = tranche.get("roles")
+    if not isinstance(role_map, dict):
+        raise ProbeError("R093_ROLE_RECORD_INVALID")
+    if actor == "worker":
+        expected_phase = "BUILD"
+        expected_role = "/root/m1_worker"
+        valid_tranche_statuses = {"BUILD"}
+        valid_order_statuses = {"ACTIVE"}
+        if role_map.get("implementationWorker") != expected_role:
+            raise ProbeError("WORKER_ROLE_NOT_AUTHORIZED")
+        active_role_tag = "IMPLEMENTATION_WORKER"
+    else:
+        expected_phase = "REVIEW"
+        expected_role = "Codex /root"
+        valid_tranche_statuses = {"REVIEW_PENDING", "REVIEW"}
+        valid_order_statuses = {"COMPLETE_PENDING_REVIEW"}
+        if role_map.get("reviewer") != expected_role:
+            raise ProbeError("REVIEWER_ROLE_NOT_AUTHORIZED")
+        active_role_tag = "REVIEWER"
+
+    if state.get("currentMode") != expected_phase or state.get("activePhase") != expected_phase:
+        raise ProbeError("ACTOR_PHASE_NOT_ACTIVE")
+    if tranche.get("phase") != expected_phase:
+        raise ProbeError("TRANCHE_PHASE_MISMATCH")
+    if status.get("currentPhase") != expected_phase:
+        raise ProbeError("IMPLEMENTATION_PHASE_MISMATCH")
+    if tranche.get("status") not in valid_tranche_statuses:
+        raise ProbeError("TRANCHE_STATUS_MISMATCH")
+    active_role = state.get("activeRole", "")
+    if not isinstance(active_role, str) or active_role_tag not in active_role:
+        raise ProbeError("ACTOR_ROLE_NOT_ACTIVE")
+
+    try:
+        order_text = (PROJECT_ROOT / WORK_ORDER_RELATIVE).read_text(encoding="utf-8")
+    except (OSError, UnicodeError):
+        raise ProbeError("WORK_ORDER_UNAVAILABLE") from None
+    status_lines = re.findall(r"(?m)^Status:\s*(.*?)\s*$", order_text)
+    if len(status_lines) != 1 or status_lines[0] not in valid_order_statuses:
+        raise ProbeError("WORK_ORDER_STATUS_MISMATCH")
+    return state, tranche, status_lines[0]
+
+
+def _approval(source_sha256: str) -> dict[str, Any]:
+    _assert_ignored_and_untracked(APPROVAL_RELATIVE)
+    approval_path = PROJECT_ROOT / APPROVAL_RELATIVE
+    approval = _read_json_object(approval_path, "ROOT_APPROVAL_UNAVAILABLE_OR_INVALID")
+    expected = {
+        "schemaVersion": 1,
+        "approvedBy": "Codex /root",
+        "approvedSourceSha256": source_sha256,
+        "endpointSha256": ENDPOINT_SHA256,
+        "model": MODEL_ID,
+        "physicalRequestsTotal": MAX_TOTAL_REQUESTS,
+        "workerRequests": 1,
+        "reviewerRequests": 1,
+        "automaticRetries": MAX_RETRIES,
+    }
+    if any(approval.get(key) != value for key, value in expected.items()):
+        raise ProbeError("ROOT_APPROVAL_BINDING_MISMATCH")
+    return approval
+
+
+def _conversation(actor: str) -> tuple[list[dict[str, str]], dict[str, str], dict[str, Any]]:
+    if actor == "worker":
+        complaint_id = "r093-syn-complaint-001"
+        complaint_text = "Tôi đã khiếu nại về lỗi giả lập SYN-204 nhưng vẫn chưa nhận được phản hồi."
+        agent_id = "r093-syn-agent-002"
+        agent_text = "Tôi sẽ kiểm tra giúp bạn."
+        rule = (
+            "Quy tắc giả lập R093-SYN-COMPLAINT: nếu khách đã nêu khiếu nại nhưng nhân viên "
+            "chưa giải quyết và chỉ hứa kiểm tra mà không nêu thời hạn cập nhật, hãy ghi nhận FAIL. "
+            "Chỉ dùng bằng chứng có trong hai dòng chat dưới đây."
+        )
+        conversation = (
+            f"msg:{complaint_id} role=customer: {complaint_text}\n"
+            f"msg:{agent_id} role=agent: {agent_text}"
+        )
+        expected = {
+            "verdict": "FAIL",
+            "anchor_message_id": complaint_id,
+            "anchor_quote_source": complaint_text,
+        }
+        message_texts = {complaint_id: complaint_text, agent_id: agent_text}
+    else:
+        customer_id = "r093-syn-reviewer-customer-001"
+        customer_text = "Xin chào, tôi muốn hỏi giờ làm việc của cửa hàng giả lập."
+        agent_id = "r093-syn-reviewer-agent-002"
+        agent_text = "Cửa hàng giả lập mở cửa từ 9 giờ đến 17 giờ mỗi ngày."
+        rule = (
+            "Quy tắc giả lập R093-SYN-COMPLAINT: chỉ đánh FAIL khi khách đã nêu khiếu nại "
+            "nhưng nhân viên chưa giải quyết và chỉ hứa kiểm tra mà không nêu thời hạn cập nhật. "
+            "Cuộc trò chuyện xã giao dưới đây không chứa tình huống này. Chỉ dùng hai dòng chat."
+        )
+        conversation = (
+            f"msg:{customer_id} role=customer: {customer_text}\n"
+            f"msg:{agent_id} role=agent: {agent_text}"
+        )
+        expected = {"verdict": "PASS"}
+        message_texts = {customer_id: customer_text, agent_id: agent_text}
+
+    system_message = (
+        "Bạn là bộ đánh giá chất lượng chăm sóc khách hàng. Dữ liệu và mã trong yêu cầu đều là "
+        "synthetic; không thêm tên, số điện thoại, đơn hàng hoặc sự kiện không xuất hiện.\n"
+        f"{rule}\n"
+        "Chỉ trả về một JSON object, không markdown, đúng cấu trúc: "
+        '{"verdict":"PASS|FAIL|SKIP","score":0,"review":"...",'
+        '"violations":[{"severity":"NGHIEM_TRONG|CAN_CAI_THIEN","rule":"...",'
+        '"evidence":"...","evidence_refs":[{"message_id":"ID sau msg:",'
+        '"quote":"chuỗi con chính xác trong dòng chat"}],"explanation":"...",'
+        '"suggestion":"..."}],"summary":"..."}. '
+        "score là số nguyên từ 0 đến 100. Mỗi violation phải có evidence_refs đã kiểm chứng; "
+        "không có violation thì dùng mảng rỗng."
+    )
+    user_message = "Đánh giá theo quy tắc synthetic sau.\n" + conversation
+    return [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": user_message},
+    ], message_texts, expected
+
+
+def _request_body(actor: str) -> tuple[dict[str, Any], dict[str, str], dict[str, Any], bytes]:
+    messages, message_texts, expected = _conversation(actor)
+    request = {
+        "model": MODEL_ID,
+        "messages": messages,
+        "max_completion_tokens": MAX_COMPLETION_TOKENS,
+        "enable_thinking": False,
+        "stream": False,
+    }
+    body = _json_bytes(request)
+    if len(body) > MAX_REQUEST_BODY_BYTES:
+        raise ProbeError("REQUEST_BODY_LIMIT_EXCEEDED")
+    if len(messages) != 2 or any(m["role"] not in {"system", "user"} for m in messages):
+        raise ProbeError("REQUEST_SHAPE_INVALID")
+    if request["model"] != MODEL_ID or request["max_completion_tokens"] != MAX_COMPLETION_TOKENS:
+        raise ProbeError("REQUEST_PIN_MISMATCH")
+    if request["enable_thinking"] is not False or request["stream"] is not False:
+        raise ProbeError("REQUEST_OPTION_MISMATCH")
+    return request, message_texts, expected, body
+
+
+def _validate_endpoint(endpoint: Any, expected_sha256: str = ENDPOINT_SHA256) -> str:
+    if not isinstance(endpoint, str) or not endpoint or endpoint != endpoint.strip():
+        raise ProbeError("ENDPOINT_METADATA_INVALID")
+    normalized = endpoint[:-1] if endpoint.endswith("/") else endpoint
+    if _sha256_bytes(normalized.encode("utf-8")) != expected_sha256:
+        raise ProbeError("ENDPOINT_PIN_MISMATCH")
+    try:
+        parsed = urlsplit(normalized)
+        port = parsed.port
+    except ValueError:
+        raise ProbeError("ENDPOINT_METADATA_INVALID") from None
+    host = parsed.hostname
+    if (
+        parsed.scheme != "https"
+        or not host
+        or not host.endswith("." + REGION + ".maas.aliyuncs.com")
+        or parsed.username is not None
+        or parsed.password is not None
+        or parsed.query
+        or parsed.fragment
+        or parsed.path != ENDPOINT_PATH
+        or port not in (None, 443)
+    ):
+        raise ProbeError("ENDPOINT_HOST_OR_PATH_REJECTED")
+    return host
+
+
+def _load_local_config() -> tuple[str, str]:
+    secret_path = PROJECT_ROOT / SECRET_RELATIVE
+    try:
+        config = _strict_json_loads(secret_path.read_bytes())
+    except FileNotFoundError:
+        raise ProbeError("LOCAL_KEY_FILE_MISSING") from None
+    except (OSError, UnicodeError, ValueError, json.JSONDecodeError):
+        raise ProbeError("LOCAL_KEY_FILE_INVALID") from None
+    if not isinstance(config, dict):
+        raise ProbeError("LOCAL_KEY_FILE_INVALID")
+    auth = config.get("auth")
+    endpoints = config.get("endpoints")
+    defaults = config.get("recommendedDefaults")
+    if not isinstance(auth, dict) or not isinstance(endpoints, dict) or not isinstance(defaults, dict):
+        raise ProbeError("LOCAL_CONFIG_METADATA_MISSING")
+    api_key = auth.get("apiKey")
+    endpoint = endpoints.get("openAiCompatible")
+    model = defaults.get("fastTesting")
+    if (
+        not isinstance(api_key, str)
+        or api_key != api_key.strip()
+        or len(api_key) < 16
+        or any(ord(ch) < 33 or ord(ch) > 126 for ch in api_key)
+    ):
+        raise ProbeError("LOCAL_API_KEY_UNAVAILABLE_OR_INVALID")
+    if model != MODEL_ID:
+        raise ProbeError("LOCAL_MODEL_PIN_MISMATCH")
+    host = _validate_endpoint(endpoint)
+    return api_key, host
+
+
+def _create_exclusive_json(path: Path, value: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
+    if hasattr(os, "O_BINARY"):
+        flags |= os.O_BINARY
+    try:
+        descriptor = os.open(path, flags, 0o600)
+    except FileExistsError:
+        raise ProbeError("LEDGER_SLOT_ALREADY_CONSUMED") from None
+    except OSError:
+        raise ProbeError("LEDGER_CREATE_FAILED") from None
+    try:
+        with os.fdopen(descriptor, "wb") as handle:
+            handle.write(_json_bytes(value))
+            handle.flush()
+            os.fsync(handle.fileno())
+    except OSError:
+        # The exclusive path remains present and consumes the slot on failure.
+        raise ProbeError("LEDGER_WRITE_FAILED_SLOT_CONSUMED") from None
+
+
+def _campaign_start(ledger_dir: Path, now: float | None = None) -> float:
+    now_value = time.time() if now is None else now
+    campaign_path = ledger_dir / "campaign.json"
+    if not campaign_path.exists():
+        try:
+            _create_exclusive_json(
+                campaign_path,
+                {"schemaVersion": 1, "startedAtEpochSeconds": now_value, "startedAtUtc": _utc_now()},
+            )
+        except ProbeError as error:
+            if error.code != "LEDGER_SLOT_ALREADY_CONSUMED":
+                raise
+    campaign = _read_json_object(campaign_path, "CAMPAIGN_LEDGER_INVALID")
+    start = campaign.get("startedAtEpochSeconds")
+    if isinstance(start, bool) or not isinstance(start, (int, float)):
+        raise ProbeError("CAMPAIGN_LEDGER_INVALID")
+    elapsed = now_value - float(start)
+    if elapsed < 0 or elapsed > MAX_CAMPAIGN_SECONDS:
+        raise ProbeError("CAMPAIGN_WINDOW_EXPIRED_OR_CLOCK_INVALID")
+    return float(start)
+
+
+def _claim_actor_slot(actor: str, ledger_dir: Path, source_sha256: str) -> dict[str, Any]:
+    if actor not in ACTORS:
+        raise ProbeError("INVALID_ACTOR")
+    ledger_dir.mkdir(parents=True, exist_ok=True)
+    allowed_names = {"campaign.json", "worker.claim", "reviewer.claim"}
+    try:
+        existing_names = {entry.name for entry in ledger_dir.iterdir()}
+    except OSError:
+        raise ProbeError("LEDGER_READ_FAILED") from None
+    if existing_names - allowed_names:
+        raise ProbeError("LEDGER_HAS_UNEXPECTED_ENTRIES")
+    if any(name.endswith(".claim") for name in existing_names) and "campaign.json" not in existing_names:
+        raise ProbeError("LEDGER_CAMPAIGN_MISSING")
+    started = _campaign_start(ledger_dir)
+    claims = {name for name in existing_names if name.endswith(".claim")}
+    if len(claims) >= MAX_TOTAL_REQUESTS:
+        raise ProbeError("GLOBAL_REQUEST_CAP_CONSUMED")
+    claim_path = ledger_dir / f"{actor}.claim"
+    claim = {
+        "schemaVersion": 1,
+        "actor": actor,
+        "state": "CLAIMED_BEFORE_NETWORK_DISPATCH",
+        "sourceSha256": source_sha256,
+        "claimedAtUtc": _utc_now(),
+        "campaignStartedAtEpochSeconds": started,
+    }
+    _create_exclusive_json(claim_path, claim)
+    return claim
+
+
+def _sanitize_response(raw: bytes, api_key: str) -> tuple[str | None, bool, bool]:
+    if len(raw) > MAX_RESPONSE_BYTES:
+        return None, False, True
+    decoded = raw.decode("utf-8", errors="replace")
+    redacted = decoded.replace(api_key, "[REDACTED]") if api_key else decoded
+    credential_like = any(pattern.search(redacted) for pattern in _CREDENTIAL_PATTERNS)
+    if credential_like:
+        return None, True, False
+    return redacted, False, False
+
+
+def _usage_record(envelope: dict[str, Any]) -> dict[str, Any]:
+    usage = envelope.get("usage")
+    if not isinstance(usage, dict):
+        return {"status": "UNKNOWN", "reason": "usage_absent_or_not_an_object"}
+    fields = ("prompt_tokens", "completion_tokens", "total_tokens")
+    values = [usage.get(field) for field in fields]
+    if any(isinstance(value, bool) or not isinstance(value, int) or value < 0 for value in values):
+        return {"status": "UNKNOWN", "reason": "usage_fields_missing_or_invalid"}
+    return {
+        "status": "KNOWN_REPORTED",
+        "prompt_tokens": values[0],
+        "completion_tokens": values[1],
+        "total_tokens": values[2],
+    }
+
+
+def _output_checks(
+    envelope: dict[str, Any], actor: str, message_texts: dict[str, str], expected: dict[str, Any]
+) -> dict[str, Any]:
+    checks: dict[str, Any] = {
+        "response_model": "FAIL",
+        "completion_shape": "FAIL",
+        "output_schema": "FAIL",
+        "synthetic_rule": "FAIL",
+        "message_anchored_evidence": "NOT_APPLICABLE",
+        "issues": [],
+    }
+    returned_model = envelope.get("model")
+    if isinstance(returned_model, str) and returned_model == MODEL_ID:
+        checks["response_model"] = "PASS"
+    else:
+        checks["issues"].append("returned_model_missing_or_mismatched")
+
+    choices = envelope.get("choices")
+    if not isinstance(choices, list) or not choices or not isinstance(choices[0], dict):
+        checks["issues"].append("choices_missing_or_invalid")
+        return checks
+    choice = choices[0]
+    finish_reason = choice.get("finish_reason")
+    if finish_reason != "stop":
+        checks["issues"].append(
+            "completion_truncated_by_token_limit" if finish_reason == "length" else "completion_not_stopped_normally"
+        )
+        return checks
+    message = choice.get("message")
+    if (
+        not isinstance(message, dict)
+        or message.get("role") != "assistant"
+        or not isinstance(message.get("content"), str)
+    ):
+        checks["issues"].append("message_content_missing_or_invalid")
+        return checks
+    content = message["content"]
+    if len(content) > 12000:
+        checks["issues"].append("model_content_length_exceeded")
+        return checks
+    checks["completion_shape"] = "PASS"
+    try:
+        output = _strict_json_loads(content)
+    except (ValueError, json.JSONDecodeError):
+        checks["issues"].append("model_content_not_single_strict_json")
+        return checks
+    if not isinstance(output, dict):
+        checks["issues"].append("model_output_not_object")
+        return checks
+    required_string_fields = ("review", "summary")
+    if any(
+        not isinstance(output.get(field), str)
+        or not output.get(field).strip()
+        or len(output[field]) > 4000
+        for field in required_string_fields
+    ):
+        checks["issues"].append("review_or_summary_invalid")
+        return checks
+    score = output.get("score")
+    violations = output.get("violations")
+    if (
+        isinstance(score, bool)
+        or not isinstance(score, int)
+        or score < 0
+        or score > 100
+        or not isinstance(violations, list)
+        or len(violations) > 20
+    ):
+        checks["issues"].append("score_or_violations_invalid")
+        return checks
+    checks["output_schema"] = "PASS"
+
+    verdict = output.get("verdict")
+    if verdict != expected["verdict"]:
+        checks["issues"].append("verdict_did_not_match_synthetic_case")
+    elif actor == "reviewer" and violations:
+        checks["issues"].append("reviewer_pass_must_have_no_violations")
+    elif actor == "worker" and not violations:
+        checks["issues"].append("worker_fail_requires_violation")
+    else:
+        checks["synthetic_rule"] = "PASS"
+
+    if actor == "worker":
+        refs_valid = True
+        complaint_anchor = False
+        for violation in violations:
+            if not isinstance(violation, dict):
+                refs_valid = False
+                continue
+            if violation.get("severity") not in {"NGHIEM_TRONG", "CAN_CAI_THIEN"}:
+                refs_valid = False
+            if any(
+                not isinstance(violation.get(field), str) or not violation.get(field).strip()
+                for field in ("severity", "rule", "evidence", "explanation", "suggestion")
+            ):
+                refs_valid = False
+            refs = violation.get("evidence_refs")
+            if not isinstance(refs, list) or not refs:
+                refs_valid = False
+                continue
+            for ref in refs:
+                if not isinstance(ref, dict):
+                    refs_valid = False
+                    continue
+                message_id = ref.get("message_id")
+                quote = ref.get("quote")
+                if (
+                    not isinstance(message_id, str)
+                    or message_id not in message_texts
+                    or not isinstance(quote, str)
+                    or not quote
+                    or quote not in message_texts.get(message_id, "")
+                ):
+                    refs_valid = False
+                    continue
+                if (
+                    message_id == expected["anchor_message_id"]
+                    and quote in expected["anchor_quote_source"]
+                ):
+                    complaint_anchor = True
+        if refs_valid and complaint_anchor:
+            checks["message_anchored_evidence"] = "PASS"
+        else:
+            checks["message_anchored_evidence"] = "FAIL"
+            checks["issues"].append("complaint_evidence_reference_invalid_or_missing")
+    return checks
+
+
+class _DeadlineHTTPSConnection(http.client.HTTPSConnection):
+    """HTTPS connection with a single absolute per-request deadline."""
+
+    def __init__(self, host: str, deadline: float, context: ssl.SSLContext):
+        self._deadline = deadline
+        super().__init__(host, port=443, timeout=REQUEST_TIMEOUT_SECONDS, context=context)
+
+    def _apply_deadline(self) -> None:
+        remaining = self._deadline - time.monotonic()
+        if remaining <= 0:
+            raise socket.timeout()
+        self.timeout = remaining
+        if self.sock is not None:
+            self.sock.settimeout(remaining)
+
+    def connect(self) -> None:
+        self._apply_deadline()
+        super().connect()
+        self._apply_deadline()
+
+    def send(self, data: bytes) -> None:
+        self._apply_deadline()
+        super().send(data)
+
+
+def _bounded_https_post(host: str, api_key: str, body: bytes) -> tuple[int | None, bytes, bool, float, str | None]:
+    started = time.monotonic()
+    deadline = started + REQUEST_TIMEOUT_SECONDS
+    connection: http.client.HTTPSConnection | None = None
+    try:
+        context = ssl.create_default_context()
+        connection = _DeadlineHTTPSConnection(host, deadline, context)
+        connection.request(
+            "POST",
+            COMPLETIONS_PATH,
+            body=body,
+            headers={
+                "Authorization": "Bearer " + api_key,
+                "Content-Type": "application/json; charset=utf-8",
+                "Accept": "application/json",
+                "Accept-Encoding": "identity",
+                "Connection": "close",
+            },
+        )
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            raise socket.timeout()
+        if connection.sock is not None:
+            connection.sock.settimeout(remaining)
+        response = connection.getresponse()
+        chunks: list[bytes] = []
+        size = 0
+        too_large = False
+        while True:
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise socket.timeout()
+            if connection.sock is not None:
+                connection.sock.settimeout(remaining)
+            chunk = response.read1(min(65536, MAX_RESPONSE_BYTES + 1 - size))
+            if not chunk:
+                break
+            chunks.append(chunk)
+            size += len(chunk)
+            if size > MAX_RESPONSE_BYTES:
+                too_large = True
+                break
+        return response.status, b"".join(chunks), too_large, time.monotonic() - started, None
+    except socket.timeout:
+        return None, b"", False, time.monotonic() - started, "TIMEOUT"
+    except ssl.SSLError:
+        return None, b"", False, time.monotonic() - started, "TLS_ERROR"
+    except (OSError, http.client.HTTPException):
+        return None, b"", False, time.monotonic() - started, "TRANSPORT_ERROR"
+    finally:
+        if connection is not None:
+            try:
+                connection.close()
+            except OSError:
+                pass
+
+
+def _safe_receipt_body(raw: bytes, api_key: str) -> tuple[str | None, bool, bool]:
+    return _sanitize_response(raw, api_key)
+
+
+def _write_receipt(actor: str, receipt: dict[str, Any], api_key: str = "") -> Path:
+    path = PROJECT_ROOT / RECEIPT_RELATIVE[actor]
+    try:
+        serialized = _json_bytes(receipt)
+    except (TypeError, ValueError):
+        raise ProbeError("RECEIPT_SERIALIZATION_FAILED") from None
+    if api_key and api_key.encode("utf-8") in serialized:
+        raise ProbeError("RECEIPT_SECRET_GUARD_BLOCKED_WRITE")
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
+        if hasattr(os, "O_BINARY"):
+            flags |= os.O_BINARY
+        descriptor = os.open(path, flags, 0o600)
+    except FileExistsError:
+        raise ProbeError("RECEIPT_ALREADY_EXISTS_NO_OVERWRITE") from None
+    except OSError:
+        raise ProbeError("RECEIPT_CREATE_FAILED") from None
+    try:
+        with os.fdopen(descriptor, "wb") as handle:
+            handle.write(serialized)
+            handle.flush()
+            os.fsync(handle.fileno())
+    except OSError:
+        # Never replace a partial/failed receipt; the claim remains consumed.
+        raise ProbeError("RECEIPT_WRITE_FAILED_SLOT_CONSUMED") from None
+    return path
+
+
+def _base_receipt(
+    actor: str,
+    source_sha256: str,
+    approval: dict[str, Any],
+    claim: dict[str, Any],
+    request: dict[str, Any],
+    body: bytes,
+) -> dict[str, Any]:
+    return {
+        "schemaVersion": 1,
+        "trancheId": TRANCHE_ID,
+        "scope": "exact Alibaba-compatible HTTP wire characterization; synthetic inputs only",
+        "claimBoundary": "not Go adapter, Analyzer, CVF governance, live-channel, or quality-benchmark proof",
+        "actor": actor,
+        "createdAtUtc": _utc_now(),
+        "sourceSha256": source_sha256,
+        "approval": {
+            "approvedBy": approval.get("approvedBy"),
+            "approvedSourceSha256": approval.get("approvedSourceSha256"),
+            "endpointSha256": ENDPOINT_SHA256,
+            "model": MODEL_ID,
+            "physicalRequestsTotal": MAX_TOTAL_REQUESTS,
+            "workerRequests": 1,
+            "reviewerRequests": 1,
+            "automaticRetries": 0,
+        },
+        "ledgerClaim": claim,
+        "request": {
+            "networkMethod": "POST",
+            "path": COMPLETIONS_PATH,
+            "endpointSha256": ENDPOINT_SHA256,
+            "requestedProvider": "alibaba",
+            "requestedModel": MODEL_ID,
+            "bodyBytes": len(body),
+            "bodySha256": _sha256_bytes(body),
+            "body": request,
+            "authorizationHeaderRecorded": False,
+        },
+        "response": {
+            "httpStatus": None,
+            "elapsedSeconds": None,
+            "transportOutcome": None,
+            "returnedProvider": "UNKNOWN",
+            "returnedModel": "UNKNOWN",
+            "usage": {"status": "UNKNOWN", "reason": "no_response_yet"},
+            "bodyBytes": None,
+            "body": None,
+            "bodyOmitted": True,
+            "credentialLikeContentDetected": False,
+            "outputChecks": {"status": "NOT_RUN", "issues": []},
+        },
+        "billing": {"amount": "UNKNOWN", "reason": "no authoritative billing evidence in this probe"},
+        "physicalRequestLimit": {
+            "perActor": 1,
+            "global": 2,
+            "automaticRetries": 0,
+            "redirectsFollowed": 0,
+        },
+    }
+
+
+def _live(actor: str) -> int:
+    _require_project_root()
+    _active_authority(actor)
+    _assert_seed_and_dispatch()
+    source_bytes = Path(__file__).read_bytes()
+    source_sha256 = _sha256_bytes(source_bytes)
+    approval = _approval(source_sha256)
+    secret_path = PROJECT_ROOT / SECRET_RELATIVE
+    _assert_ignored_and_untracked(SECRET_RELATIVE)
+    receipt_path = PROJECT_ROOT / RECEIPT_RELATIVE[actor]
+    if receipt_path.exists():
+        raise ProbeError("RECEIPT_ALREADY_EXISTS_NO_OVERWRITE")
+
+    request, message_texts, expected, body = _request_body(actor)
+    ledger_dir = PROJECT_ROOT / LEDGER_RELATIVE
+    _assert_ignored_and_untracked(LEDGER_RELATIVE / "campaign.json")
+    claim = _claim_actor_slot(actor, ledger_dir, source_sha256)
+    receipt = _base_receipt(actor, source_sha256, approval, claim, request, body)
+    api_key = ""
+    status_code: int | None = None
+    response_raw = b""
+    response_too_large = False
+    elapsed: float | None = None
+    transport_error: str | None = None
+
+    try:
+        api_key, host = _load_local_config()
+        status_code, response_raw, response_too_large, elapsed, transport_error = _bounded_https_post(
+            host, api_key, body
+        )
+        response_info = receipt["response"]
+        response_info["httpStatus"] = status_code
+        response_info["elapsedSeconds"] = round(elapsed, 3) if elapsed is not None else None
+        response_info["bodyBytes"] = len(response_raw) if status_code is not None else 0
+        if transport_error:
+            response_info["transportOutcome"] = transport_error
+            response_info["outputChecks"] = {
+                "status": "NOT_RUN",
+                "issues": [transport_error.lower()],
+            }
+            receipt["result"] = "REQUEST_FAILED"
+        elif response_too_large:
+            response_info["transportOutcome"] = "RESPONSE_TOO_LARGE"
+            response_info["bodyOmitted"] = True
+            response_info["outputChecks"] = {
+                "status": "FAIL",
+                "issues": ["response_body_exceeded_limit"],
+            }
+            receipt["result"] = "RESPONSE_TOO_LARGE"
+        else:
+            sanitized_body, credential_detected, too_large = _safe_receipt_body(response_raw, api_key)
+            response_info["credentialLikeContentDetected"] = credential_detected
+            response_info["bodyOmitted"] = too_large or credential_detected
+            response_info["body"] = sanitized_body
+            if credential_detected:
+                response_info["transportOutcome"] = "CREDENTIAL_LIKE_RESPONSE_BLOCKED"
+                response_info["outputChecks"] = {
+                    "status": "FAIL",
+                    "issues": ["credential_like_response_content_not_recorded"],
+                }
+                receipt["result"] = "RESPONSE_REDACTION_BLOCKED"
+            elif status_code is not None and 300 <= status_code < 400:
+                response_info["transportOutcome"] = "REDIRECT_REFUSED"
+                response_info["outputChecks"] = {
+                    "status": "NOT_RUN",
+                    "issues": ["redirect_response_not_followed"],
+                }
+                receipt["result"] = "REDIRECT_REFUSED"
+            elif status_code is None or status_code < 200 or status_code >= 300:
+                response_info["transportOutcome"] = "HTTP_ERROR"
+                response_info["outputChecks"] = {
+                    "status": "NOT_RUN",
+                    "issues": ["non_success_http_status"],
+                }
+                receipt["result"] = "HTTP_ERROR"
+            else:
+                response_info["transportOutcome"] = "HTTP_RESPONSE_RECEIVED"
+                try:
+                    envelope = _strict_json_loads(sanitized_body or "")
+                except (ValueError, json.JSONDecodeError):
+                    envelope = None
+                if not isinstance(envelope, dict):
+                    response_info["outputChecks"] = {
+                        "status": "FAIL",
+                        "issues": ["response_envelope_invalid_json_object"],
+                    }
+                    receipt["result"] = "HTTP_RESPONSE_INVALID"
+                else:
+                    response_info["returnedProvider"] = (
+                        envelope.get("provider")
+                        if isinstance(envelope.get("provider"), str)
+                        else "UNKNOWN"
+                    )
+                    response_info["returnedModel"] = (
+                        envelope.get("model")
+                        if isinstance(envelope.get("model"), str)
+                        else "UNKNOWN"
+                    )
+                    response_info["usage"] = _usage_record(envelope)
+                    checks = _output_checks(envelope, actor, message_texts, expected)
+                    passed = all(
+                        checks.get(name) == "PASS"
+                        for name in (
+                            "response_model",
+                            "completion_shape",
+                            "output_schema",
+                            "synthetic_rule",
+                            *( ("message_anchored_evidence",) if actor == "worker" else () ),
+                        )
+                    )
+                    response_info["outputChecks"] = {
+                        "status": "PASS" if passed else "FAIL",
+                        **checks,
+                    }
+                    receipt["result"] = "OUTPUT_CHECKS_PASS" if passed else "OUTPUT_CHECKS_FAIL"
+    except ProbeError as error:
+        receipt["result"] = error.code
+        receipt["response"]["transportOutcome"] = "NOT_SENT_LOCAL_FAILURE"
+        receipt["response"]["outputChecks"] = {
+            "status": "NOT_RUN",
+            "issues": [error.code.lower()],
+        }
+    except Exception as error:  # fail closed without exposing exception text
+        receipt["result"] = "LOCAL_FAILURE_AFTER_SLOT_CLAIM"
+        receipt["response"]["transportOutcome"] = "NOT_CONFIRMED"
+        receipt["response"]["outputChecks"] = {
+            "status": "NOT_RUN",
+            "issues": ["unexpected_" + type(error).__name__.lower()],
+        }
+    receipt["completedAtUtc"] = _utc_now()
+    try:
+        saved = _write_receipt(actor, receipt, api_key=api_key)
+    except ProbeError as error:
+        print(f"R093 probe stopped after slot claim; receipt write outcome: {error.code}", file=sys.stderr)
+        return 3
+    finally:
+        api_key = ""
+    print(
+        "R093 probe complete: "
+        f"actor={actor} result={receipt['result']} source_sha256={source_sha256} "
+        f"receipt={saved.relative_to(PROJECT_ROOT).as_posix()}"
+    )
+    return 0 if receipt["result"] == "OUTPUT_CHECKS_PASS" else 2
+
+
+def _expect_error(function: Any, expected_code: str, *args: Any, **kwargs: Any) -> None:
+    try:
+        function(*args, **kwargs)
+    except ProbeError as error:
+        if error.code != expected_code:
+            raise AssertionError("unexpected guard result") from None
+        return
+    raise AssertionError("expected safety guard to refuse")
+
+
+def _self_check() -> int:
+    """Exercise pure/offline guards using temporary files only."""
+    checks = 0
+    request, message_texts, expected, body = _request_body("worker")
+    assert request["model"] == MODEL_ID
+    assert request["max_completion_tokens"] == MAX_COMPLETION_TOKENS
+    assert request["enable_thinking"] is False and len(request["messages"]) == 2
+    assert len(body) <= MAX_REQUEST_BODY_BYTES
+    checks += 1
+
+    reviewer_request, _, _, reviewer_body = _request_body("reviewer")
+    assert reviewer_request["messages"][1]["content"].find("giả lập") >= 0
+    assert len(reviewer_body) <= MAX_REQUEST_BODY_BYTES
+    checks += 1
+
+    synthetic_endpoint = "https://tenant.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1"
+    synthetic_hash = _sha256_bytes(synthetic_endpoint.encode("utf-8"))
+    assert _validate_endpoint(synthetic_endpoint, synthetic_hash) == "tenant.ap-southeast-1.maas.aliyuncs.com"
+    assert _validate_endpoint(synthetic_endpoint + "/", synthetic_hash) == "tenant.ap-southeast-1.maas.aliyuncs.com"
+    for rejected in (
+        "http://tenant.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
+        "https://tenant.ap-southeast-1.maas.aliyuncs.com/other/v1",
+        "https://user:pass@tenant.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
+        "https://tenant.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1?x=1",
+        "https://attacker.example/compatible-mode/v1",
+    ):
+        rejected_hash = _sha256_bytes(rejected.rstrip("/").encode("utf-8"))
+        _expect_error(_validate_endpoint, "ENDPOINT_HOST_OR_PATH_REJECTED", rejected, rejected_hash)
+    _expect_error(_validate_endpoint, "ENDPOINT_PIN_MISMATCH", synthetic_endpoint, "0" * 64)
+    checks += 1
+
+    exact_secret = "sk-" + "A" * 32
+    safe, detected, too_large = _sanitize_response(
+        ("{\"message\":\"" + exact_secret + "\"}").encode("utf-8"), exact_secret
+    )
+    assert safe is not None and "[REDACTED]" in safe and exact_secret not in safe
+    assert not detected and not too_large
+    unsafe, detected, _ = _sanitize_response(
+        b'{"message":"Bearer abcdefghijklmnopqrstuvwxyz123456"}', exact_secret
+    )
+    assert unsafe is None and detected
+    oversized, _, too_large = _sanitize_response(b"x" * (MAX_RESPONSE_BYTES + 1), exact_secret)
+    assert oversized is None and too_large
+    checks += 1
+
+    fake_content = {
+        "verdict": "FAIL",
+        "score": 30,
+        "review": "Synthetic complaint not resolved.",
+        "violations": [
+            {
+                "severity": "CAN_CAI_THIEN",
+                "rule": "R093-SYN-COMPLAINT",
+                "evidence": message_texts[expected["anchor_message_id"]],
+                "evidence_refs": [
+                    {
+                        "message_id": expected["anchor_message_id"],
+                        "quote": expected["anchor_quote_source"],
+                    }
+                ],
+                "explanation": "Synthetic rule matched.",
+                "suggestion": "Give a clear update time.",
+            }
+        ],
+        "summary": "Synthetic complaint received no clear update time.",
+    }
+    fake_envelope = {
+        "model": MODEL_ID,
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "message": {"role": "assistant", "content": _json_bytes(fake_content).decode("utf-8")},
+            }
+        ],
+        "usage": {"prompt_tokens": 1, "completion_tokens": 1, "total_tokens": 2},
+    }
+    positive_checks = _output_checks(fake_envelope, "worker", message_texts, expected)
+    assert all(
+        positive_checks.get(name) == "PASS"
+        for name in (
+            "response_model",
+            "completion_shape",
+            "output_schema",
+            "synthetic_rule",
+            "message_anchored_evidence",
+        )
+    )
+    fake_content["violations"][0]["evidence_refs"][0]["quote"] = "not in the message"
+    fake_envelope["choices"][0]["message"]["content"] = _json_bytes(fake_content).decode("utf-8")
+    negative_checks = _output_checks(fake_envelope, "worker", message_texts, expected)
+    assert negative_checks["message_anchored_evidence"] == "FAIL"
+    checks += 1
+
+    reviewer_texts = _conversation("reviewer")[1]
+    reviewer_expected = _conversation("reviewer")[2]
+    reviewer_content = {
+        "verdict": "PASS",
+        "score": 95,
+        "review": "Synthetic greeting handled clearly.",
+        "violations": [],
+        "summary": "A simple synthetic question received a clear answer.",
+    }
+    reviewer_envelope = {
+        "model": MODEL_ID,
+        "choices": [
+            {
+                "finish_reason": "stop",
+                "message": {"role": "assistant", "content": _json_bytes(reviewer_content).decode("utf-8")},
+            }
+        ],
+    }
+    reviewer_checks = _output_checks(reviewer_envelope, "reviewer", reviewer_texts, reviewer_expected)
+    assert all(
+        reviewer_checks.get(name) == "PASS"
+        for name in ("response_model", "completion_shape", "output_schema", "synthetic_rule")
+    )
+    checks += 1
+
+    with tempfile.TemporaryDirectory(prefix="ccma-r093-offline-") as temp_root:
+        ledger = Path(temp_root) / "ledger"
+        first = _claim_actor_slot("worker", ledger, "a" * 64)
+        assert first["actor"] == "worker"
+        _expect_error(_claim_actor_slot, "LEDGER_SLOT_ALREADY_CONSUMED", "worker", ledger, "c" * 64)
+        second = _claim_actor_slot("reviewer", ledger, "b" * 64)
+        assert second["actor"] == "reviewer"
+        assert {p.name for p in ledger.iterdir()} == {"campaign.json", "worker.claim", "reviewer.claim"}
+        checks += 1
+
+    with tempfile.TemporaryDirectory(prefix="ccma-r093-offline-expired-") as temp_root:
+        ledger = Path(temp_root) / "ledger"
+        ledger.mkdir()
+        _create_exclusive_json(
+            ledger / "campaign.json",
+            {"schemaVersion": 1, "startedAtEpochSeconds": time.time() - MAX_CAMPAIGN_SECONDS - 1},
+        )
+        _expect_error(_campaign_start, "CAMPAIGN_WINDOW_EXPIRED_OR_CLOCK_INVALID", ledger)
+        checks += 1
+
+    assert MAX_TOTAL_REQUESTS == 2 and MAX_RETRIES == 0
+    assert REQUEST_TIMEOUT_SECONDS == 60 and MAX_COMPLETION_TOKENS == 768
+    assert MAX_REQUEST_BODY_BYTES == 6000 and MAX_RESPONSE_BYTES == 1048576
+    assert MAX_CAMPAIGN_SECONDS == 300
+    assert hasattr(http.client.HTTPResponse, "read1")
+    checks += 1
+
+    print(f"R093 zero-call self-check: PASS ({checks} offline groups)")
+    print("No secret file, approval file, Git authority check, provider network, or project receipt was accessed.")
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--actor", choices=ACTORS, required=True)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument("--self-check", action="store_true", help="run offline checks only; never read secrets or call a provider")
+    mode.add_argument("--live", action="store_true", help="request one R093 actor slot after source-bound Root approval")
+    args = parser.parse_args(argv)
+    if args.self_check:
+        return _self_check()
+    try:
+        return _live(args.actor)
+    except ProbeError as error:
+        print(f"R093 probe refused before dispatch: {error.code}", file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
