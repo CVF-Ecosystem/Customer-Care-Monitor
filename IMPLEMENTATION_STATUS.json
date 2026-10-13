@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -79,7 +79,7 @@
   ],
   "x-buildInProgress": {
     "trancheId": "CCMAI-RUNTIME-092",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "documentaryOnly": true,
     "newRuntimeEffectsAuthorized": false
   },
@@ -339,9 +339,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-092: dispatch Luna max documentary M1 contract under committed R092 seed after explicit packet pre-dispatch PASS. Resolve source/document drift and finite synthetic M2/M3 contract route; owner SLA, assignee, budget and real-data decisions remain OPEN until supplied. No runtime/source/provider/deploy dispatch; Facebook/Zalo OA accounts remain parked.",
+    "nextObjective": "CCMAI-RUNTIME-092: Luna max may BUILD one M1 documentary contract under committed seed/order, repair only same scope, then return for Root independent review. Owner synthetic-only channel data and Alibaba live AI authorization recorded; actual provider/source/runtime effects require separate R2 order. Facebook/Zalo OA accounts parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md",
-    "buildDispatched": false,
+    "buildDispatched": true,
     "currentExecutionBudget": {
       "workerPackages": 1,
       "sameScopeRepairs": "Consolidated repairs under same seed; stop at third formal repair round without independent root cause.",
@@ -2152,11 +2152,11 @@
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "M1_CONTRACT_DISPATCH_READY",
+    "status": "M1_BUILD",
     "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
     "currentMilestone": "M1",
     "milestoneStatus": "NOT_ACCEPTED_CONTRACT_DECISIONS_OPEN",
-    "nextAction": "CCMAI-RUNTIME-092: dispatch Luna max documentary M1 contract under committed R092 seed after explicit packet pre-dispatch PASS. Resolve source/document drift and finite synthetic M2/M3 contract route; owner SLA, assignee, budget and real-data decisions remain OPEN until supplied. No runtime/source/provider/deploy dispatch; Facebook/Zalo OA accounts remain parked.",
+    "nextAction": "CCMAI-RUNTIME-092: Luna max may BUILD one M1 documentary contract under committed seed/order, repair only same scope, then return for Root independent review. Owner synthetic-only channel data and Alibaba live AI authorization recorded; actual provider/source/runtime effects require separate R2 order. Facebook/Zalo OA accounts parked.",
     "authority": "Owner 2026-10-13 proceed roadmap; committed R092 R1 documentary worker scope.",
     "executionAuthorityExpanded": true,
     "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",

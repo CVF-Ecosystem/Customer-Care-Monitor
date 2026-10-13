@@ -3,16 +3,16 @@
 Status: ACTIVE
 
 <!-- CVF-GC020-MATERIAL-SHA:START -->
-Current continuity parent/dispatcher authority seed: `1c14bd1abea5040bcb217695d5d78d4ca8e119d5`. This is preparation; no accepted M1 material yet.
+Current dispatch material: `ff26b4d3613514231a5fde3f4a8fbcf589cda7fe`. Authority seed remains 1c14bd1; no accepted M1 contract material yet.
 <!-- CVF-GC020-MATERIAL-SHA:END -->
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max /root/m1_worker awaiting documentary BUILD; risk R1.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: /root/m1_worker Luna max IMPLEMENTATION_WORKER; Codex /root ORCHESTRATOR and independent REVIEWER; documentary R1.
 - Active tranche: CCMAI-RUNTIME-092
-- Next allowed move: CCMAI-RUNTIME-092: dispatch Luna max documentary M1 contract under committed R092 seed after explicit packet pre-dispatch PASS. Resolve source/document drift and finite synthetic M2/M3 contract route; owner SLA, assignee, budget and real-data decisions remain OPEN until supplied. No runtime/source/provider/deploy dispatch; Facebook/Zalo OA accounts remain parked.
+- Next allowed move: CCMAI-RUNTIME-092: Luna max may BUILD one M1 documentary contract under committed seed/order, repair only same scope, then return for Root independent review. Owner synthetic-only channel data and Alibaba live AI authorization recorded; actual provider/source/runtime effects require separate R2 order. Facebook/Zalo OA accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Authority and intake acknowledgment
@@ -29,3 +29,6 @@ One documentary package -> independently reviewed M1 contract -> bounded M2 sour
 
 ## Ownership
 Root: dispatcher, independent reviewer, commit steward, closer, session synchronization. Luna max: documentary implementation/repair only. One consolidated same-scope repair when findings require it; third formal round without new root cause stops. Missing owner decisions block only dependent live/business acceptance. No public branch publication authorized by this new packet.
+
+## Root BUILD transition acknowledgment
+Root re-read current bootstrap/memory/state/handoff/implementation/index before this new role handoff. Owner synthetic-only data and Alibaba API live-test permission recorded; provider execution remains prohibited in R092. BUILD admitted after explicit APPL/PASS and legacy7/7. Worker must rehydrate and acknowledge independently before authoring.
