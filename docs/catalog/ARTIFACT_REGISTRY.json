@@ -9,7 +9,14 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current M1-M5 product delivery plan: bounded acceptance, source-to-human workflow, prerequisite decisions, evidence layers, pilot/release and portable agent continuation; planning only, no new stage/runtime acceptance."
+      "description": "Current M1-M5 product delivery plan and 37 acceptance IDs; material published at d72de76 on project branch, product exits and live proof open."
+    },
+    {
+      "id": "ccma-product-delivery-publication-20261013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json",
+      "status": "ACTIVE",
+      "description": "GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance."
     },
     {
       "id": "gov002-dispatch-publication-receipt",

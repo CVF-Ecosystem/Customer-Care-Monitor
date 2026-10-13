@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-13",
+  "repository": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "branch": "codex/cvf-portable-inheritance",
+  "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
+  "observedRemoteRef": "refs/heads/codex/cvf-portable-inheritance",
+  "observedRemoteCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
+  "verificationCommand": "git ls-remote origin refs/heads/codex/cvf-portable-inheritance",
+  "publicArtifacts": [
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "claimBoundary": "Project roadmap publication only; no S0-S7 stage, live provider, hosted CI or deployment acceptance."
+}

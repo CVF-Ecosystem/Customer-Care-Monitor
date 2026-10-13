@@ -239,9 +239,14 @@ Downstream applicability: đọc `scripts/cvf_downstream_gate.py` (ALWAYS_ALLOWE
 
 ## 18. Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY
+Disposition: `EXPORTED`
 
-Roadmap mới được tạo local; chưa có commit/remote artifact evidence cho bản này. Publication của R091 không bao gồm roadmap mới. Đồng bộ GitHub nếu thực hiện sau phải ghi đúng remote, revision và artifact path; không đổi disposition chỉ vì repo có remote public.
+Public-sync remote: `https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git`
+Public-sync branch: `codex/cvf-portable-inheritance`
+Public-sync commit: `d72de76984e4aad9c208cc82e6093578797b5340`
+Public artifact paths: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`; `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`
+Public catalog paths: `docs/catalog/ARTIFACT_REGISTRY.json`; `docs/INDEX.md`
+Verification: `git ls-remote origin refs/heads/codex/cvf-portable-inheritance` returned `d72de76984e4aad9c208cc82e6093578797b5340` after the material push; receipt `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`. This is a CCMA project publication, not a CVF Core public-sync export. Product stage exits and live readiness remain OPEN.
 
 ## 19. Lịch sử cập nhật
 
