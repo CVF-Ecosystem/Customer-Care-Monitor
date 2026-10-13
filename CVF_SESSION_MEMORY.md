@@ -20,9 +20,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current M1 execution — 2026-10-13
 
-CCMAI-RUNTIME-092: Root independently reviews returned M1 intended contract and records local synthetic contract disposition; full M1 business/pilot remains OPEN. Next provider boundary is separately seeded R093 exact Alibaba synthetic characterization; no effects until packet and source review. Facebook/Zalo OA parked.
+CCMAI-RUNTIME-092 REVIEW_PASS: local synthetic M1 intended contract accepted at 1e4639085a7b1c63ed1eb5c3edf4e28c2073bad6; full M1 business/pilot and M2/M3 implementation OPEN. Next governed move: activate separately seeded R093 exact Alibaba synthetic provider characterization, max2 real requests and independent source review before effects. Facebook/Zalo OA parked.
 
-Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max returned documentary worker; R1.
+Codex /root REVIEWER / CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max accepted documentary worker idle; R1.
 
 Prior R091/planning sections below are historical accepted context; current R092 order controls documentary execution. Owner requires synthetic channel data and authorizes Alibaba real AI tests through separately bounded R2 authority.
 

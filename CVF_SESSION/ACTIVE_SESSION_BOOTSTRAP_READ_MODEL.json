@@ -3,10 +3,10 @@
   "currentMode": "REVIEW",
   "activePhase": "REVIEW",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-092: Root independently reviews returned M1 intended contract and records local synthetic contract disposition; full M1 business/pilot remains OPEN. Next provider boundary is separately seeded R093 exact Alibaba synthetic characterization; no effects until packet and source review. Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-092 REVIEW_PASS: local synthetic M1 intended contract accepted at 1e4639085a7b1c63ed1eb5c3edf4e28c2073bad6; full M1 business/pilot and M2/M3 implementation OPEN. Next governed move: activate separately seeded R093 exact Alibaba synthetic provider characterization, max2 real requests and independent source review before effects. Facebook/Zalo OA parked.",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeTranche": "CCMAI-RUNTIME-092",
-  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max returned documentary worker; R1.",
+  "activeRole": "Codex /root REVIEWER / CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max accepted documentary worker idle; R1.",
   "updatedAt": "2026-10-13",
   "productDeliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
 }
