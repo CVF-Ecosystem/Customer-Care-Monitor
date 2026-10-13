@@ -5,6 +5,13 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "ccma-product-delivery-roadmap-20261013",
+      "family": "continuity",
+      "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Current M1-M5 product delivery plan: bounded acceptance, source-to-human workflow, prerequisite decisions, evidence layers, pilot/release and portable agent continuation; planning only, no new stage/runtime acceptance."
+    },
+    {
       "id": "gov002-dispatch-publication-receipt",
       "family": "continuity",
       "path": "docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json",

@@ -4,6 +4,10 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
+## Roadmap delivery hiện hành — M1–M5 (2026-10-13)
+
+[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) là cửa vào để chọn việc tiếp theo: M1 khóa bản đầu tiên và dependency; M2 đường phân tích có kiểm soát; M3 người duyệt/giao việc/kết quả; M4 shadow/pilot có đo lường; M5 release và tiếp quản. Kế hoạch đưa quyết định S0 lên trước implementation và an toàn dữ liệu tối thiểu lên trước pilot. Nó cụ thể hóa thứ tự P0–P4 bên dưới, giữ toàn bộ hợp đồng exit S0–S7; không đóng stage hoặc cấp runtime authority. Hiện tại M1 còn mở, M2–M5 chưa dispatch.
+
 ## Điểm kiểm tiến độ hiện hành — 2026-10-13
 
 Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệch hướng. Maintainer: ORCHESTRATOR; nguồn đối chiếu: [implementation truth](../../IMPLEMENTATION_STATUS.json), [active state](../../CVF_SESSION/ACTIVE_SESSION_STATE.json), [handoff R091](../../CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md), actual accepted A material `44bb345` and F06 `a8865d1`; final C accepted/published material `d121c9ecf24a869aea92264db1e01cd853dec0ec`. Đây là bản theo dõi tiến độ/planning R1; không thay acceptance lịch sử, contract S0–S7 hoặc cấp quyền BUILD/runtime/release. Phần thiết kế gốc vẫn giữ trạng thái DRAFT / REVIEW_PENDING; bản theo dõi này không tự chấp nhận toàn roadmap.

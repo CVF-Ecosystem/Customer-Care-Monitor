@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
-    "updatedAt": "2026-10-12",
+    "updatedAt": "2026-10-13",
     "status": "REVIEW_PASS_DOCUMENTARY_FREEZE_OPEN_NO_STAGE_CLOSURE",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
@@ -14,13 +14,13 @@
       "S6": "NOT_RUN_FOR_STAGE_EXIT",
       "S7": "PRODUCT_RELEASE_EXIT_OPEN"
     },
-    "nextProductMilestone": "One-job source/permission gate with explicit denied/wait/allowed outcomes and evidence-bound proposal; then authorized human review/assignment/action outcome",
+    "nextProductMilestone": "M1 minimum-product contract and finite dependency decision, then M2 controlled proposal plus M3 human workflow",
     "planningRoute": [
-      "P0 bounded documentary unblock",
-      "P1 safety/dependency route decision",
-      "P2 one-job S2/S3 slice",
-      "P3 minimal S5 workflow",
-      "P4 measured pilot/optimization/release"
+      "M1 minimum-product contract and dependency decisions",
+      "M2 controlled source/admission/AI/proposal path",
+      "M3 human review/assignment/outcome through browser and backend",
+      "M4 measured shadow/pilot and conditional optimization",
+      "M5 release/portable operations"
     ],
     "currentBlockers": [
       "Known55 documentary deadlinks",
@@ -30,7 +30,10 @@
       "Full gate/admission/human workflow not implemented"
     ],
     "executionAuthorityExpanded": false,
-    "eta": "NOT_ESTABLISHED"
+    "eta": "NOT_ESTABLISHED",
+    "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "currentMilestone": "M1",
+    "milestoneAcceptance": "NOT_ACCEPTED"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
@@ -330,12 +333,12 @@
     "localClosureCommit": null
   },
   "x-ownerRouting": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "parkedAccounts": [
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-091 REVIEW_PASS. All seven selected CCMA runtime inheritance findings CLOSED_PASS_BOUNDED and accepted material published atd121c9ecf24a869aea92264db1e01cd853dec0ec on codex/cvf-portable-inheritance. Root records/verifies this continuity tip publication, then owner may clone/continue the project. No automatic worker/source/test successor; separate bounded scope required for future product work. FullS0-S7/FREEZE/browser/real-provider/API/hosted/deploy remain open; channels/dependency17/docs55/R086 native-fence separate; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner requested a detailed product delivery roadmap: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. Roadmap authoring is R1 documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked. Preserve accepted evidence and historical R091 publication separately from this unpublished plan.",
     "activeWorkOrder": null,
     "buildDispatched": false,
     "currentExecutionBudget": {
@@ -354,7 +357,8 @@
     "sourceCheckpoint": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
     "modelAssessment": "LUNA_MAX_ONE_CONSOLIDATED_REPAIR_INDEPENDENTLY_ACCEPTED",
     "activeLocalClosureOrder": null,
-    "localClosureEvidence": null
+    "localClosureEvidence": null,
+    "currentPlanning": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
   },
   "x-sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -2151,5 +2155,18 @@
     "F06_materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
     "productFreeze": "OPEN",
     "publicationReceipt": "docs/reviews/probes/r091_local_review/publication.json"
+  },
+  "x-productDeliveryPlanning": {
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+    "status": "ACTIVE_PLANNING",
+    "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
+    "currentMilestone": "M1",
+    "milestoneStatus": "NOT_ACCEPTED_CONTRACT_DECISIONS_OPEN",
+    "nextAction": "Prepare M1 contract/decision register and finite prerequisite route; no M2 dispatch from roadmap alone.",
+    "authority": "Owner requested detailed roadmap authoring; R1 documents and continuity only.",
+    "executionAuthorityExpanded": false,
+    "publication": "LOCAL_UNPUBLISHED",
+    "updatedAt": "2026-10-13"
   }
 }

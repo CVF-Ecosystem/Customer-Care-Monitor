@@ -14,7 +14,7 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-091",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-091 REVIEW_PASS. All seven selected CCMA runtime inheritance findings CLOSED_PASS_BOUNDED and accepted material published atd121c9ecf24a869aea92264db1e01cd853dec0ec on codex/cvf-portable-inheritance. Root records/verifies this continuity tip publication, then owner may clone/continue the project. No automatic worker/source/test successor; separate bounded scope required for future product work. FullS0-S7/FREEZE/browser/real-provider/API/hosted/deploy remain open; channels/dependency17/docs55/R086 native-fence separate; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner requested a detailed product delivery roadmap: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. Roadmap authoring is R1 documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked. Preserve accepted evidence and historical R091 publication separately from this unpublished plan.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Codex /root Local independent reviewer, closer and commit steward; accepted Luna max internal worker idle; phase REVIEW; risk R2.",
   "updatedAt": "2026-10-13",
@@ -1400,5 +1400,18 @@
     },
     "x-publicationStatus": "R088_UNACCEPTED_UNCOMMITTED_NO_PUSH",
     "x-publicationReceipt": null
+  },
+  "x-productDeliveryPlanning": {
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+    "status": "ACTIVE_PLANNING",
+    "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
+    "currentMilestone": "M1",
+    "milestoneStatus": "NOT_ACCEPTED_CONTRACT_DECISIONS_OPEN",
+    "nextAction": "Prepare M1 contract/decision register and finite prerequisite route; no M2 dispatch from roadmap alone.",
+    "authority": "Owner requested detailed roadmap authoring; R1 documents and continuity only.",
+    "executionAuthorityExpanded": false,
+    "publication": "LOCAL_UNPUBLISHED",
+    "updatedAt": "2026-10-13"
   }
 }

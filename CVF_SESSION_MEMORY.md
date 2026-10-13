@@ -20,9 +20,15 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current seven-finding closure
 
-CCMAI-RUNTIME-091 REVIEW_PASS. All seven selected CCMA runtime inheritance findings CLOSED_PASS_BOUNDED and accepted material published atd121c9ecf24a869aea92264db1e01cd853dec0ec on codex/cvf-portable-inheritance. Root records/verifies this continuity tip publication, then owner may clone/continue the project. No automatic worker/source/test successor; separate bounded scope required for future product work. FullS0-S7/FREEZE/browser/real-provider/API/hosted/deploy remain open; channels/dependency17/docs55/R086 native-fence separate; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner requested a detailed product delivery roadmap: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. Roadmap authoring is R1 documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked. Preserve accepted evidence and historical R091 publication separately from this unpublished plan.
 
 Final independent review: docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md; actual C material `d121c9ecf24a869aea92264db1e01cd853dec0ec`; remote material SHA verified in docs/reviews/probes/r091_local_review/publication.json. A material44bb345, F06a8865d1. Mode REVIEW with accepted records and FREEZE product OPEN. No active work order or source campaign.
+
+## Current product delivery planning — 2026-10-13
+
+Owner requested the independent assessment become a detailed agent-continuation roadmap. Canonical delivery plan: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`. M1 locks use case/data/metrics/budget/dependency decisions; M2 controlled analysis/proposal; M3 human review/assignment/outcome; M4 measured shadow/pilot; M5 release/portable operation. Planning authority R1 only; each future runtime packet needs bounded authority and independent R2 review. No new milestone accepted, worker dispatch or live effect. Read the roadmap before selecting the next scope; do not resume historical next-move text. R091 acceptance and all parked checkpoints remain.
+
+Role transition for this documentary task: Local ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD; project execution mode stays REVIEW with no active source work order. The existing R091 worker and its runtime budgets are historical and cannot authorize a new product campaign.
 
 ## Historical initial C worker return (before Root round1 review)
 

@@ -9,6 +9,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
+- Current M1-M5 product delivery plan: bounded acceptance, source-to-human workflow, prerequisite decisions, evidence layers, pilot/release and portable agent continuation; planning only, no new stage/runtime acceptance.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
