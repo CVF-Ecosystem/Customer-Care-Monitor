@@ -43,13 +43,13 @@ Ranh giới giữ cố định:
 
 Review nguồn: [R088](../R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [R090](../R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [R091](../R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md). Các proof synthetic/local đã chấp nhận được tái sử dụng đúng phạm vi; không diễn giải chúng thành live governance proof.
 
-Sai lệch tài liệu cần xử lý trong M1: spec database còn mô tả provider trước candidate; `knownLimitations` chứa lệnh dispatch R065 cũ; PRODUCT_DIRECTION có câu blanket “chưa triển khai” và readiness/provider chưa gắn ngày; các phần lịch sử UI có “next” cũ. Đối chiếu source rồi sửa mô tả hiện hành, đánh dấu lịch sử; không sửa bằng chứng gốc. Audit 8 mục `--omit=dev` và 17 mục full audit có scope khác nhau, không gọi chênh số là regression nếu chưa so sánh lock/command/date.
+Drift M1 đã đối chiếu với source hiện tại: spec database từng nói provider trước candidate; PRODUCT_DIRECTION từng dùng câu blanket “chưa triển khai” và nói chưa cấu hình provider thật. R092 sửa hai câu hiện hành theo source/owner/config readiness. `IMPLEMENTATION_STATUS.knownLimitations` hiện ghi R065 dispatch text là lịch sử/superseded; không coi đó là lệnh hiện hành. Các “next” trong ảnh chụp lịch sử UI được giữ nguyên như lịch sử. Không chạy lại full docs55/link inventory trong R092; số 55 không được khẳng định là count hiện tại. Audit 8 mục `--omit=dev` và 17 mục full audit có scope khác nhau; không gọi chênh số là regression nếu chưa so sánh lock/command/date.
 
 ## 4. Thứ tự delivery và trạng thái
 
 | Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái lúc tạo |
 |---|---|---|---|---|
-| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | NEXT — chưa khóa quyết định/acceptance |
+| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 worker contract candidate; independent review pending; local synthetic route scoped, business/pilot exit OPEN |
 | M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | PLANNED — chưa dispatch |
 | M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
 | M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |
@@ -213,18 +213,18 @@ Mẫu báo owner: “Dùng được X trong môi trường Y. Mốc M còn thi�
 | D02 người review/assignee, SLA giờ làm việc | OPEN | Local ánh xạ roles; owner chỉ định người/quy tắc nghiệp vụ còn thiếu | Workflow/pilot acceptance |
 | D03 corpus/PII/holdout | Synthetic baseline có; real-data scope OPEN | Local lập corpus contract; owner cho quyền dữ liệu cần thiết | Disclosure và M4 |
 | D04 ngưỡng chất lượng và budget | Chưa khóa trong roadmap này | Local đề xuất phép đo/căn cứ; owner chốt trade-off; không bịa số | M1 exit/pilot GO |
-| D05 provider/model/key readiness | Chưa kiểm tra ở lượt planning này | Tái sử dụng authorization trước nếu còn đúng scope; kiểm readiness secret-safe, không yêu cầu gửi key vào chat | Live branch của M2/M4 |
-| D06 topology/recovery/fence | Source/native/production boundaries còn mở | Local quyết định dependency từ source/contract, ghi safe route hoặc blocker cụ thể | Packet M2 có liên quan |
-| D07 Facebook/Zalo OA | OWNER_DEFERRED | Chỉ owner mở lại; không đưa vào prerequisite của Pancake synthetic | Live riêng hai kênh |
+| D05 provider/model/key readiness | Owner cho phép Alibaba AI test với synthetic input; secret-safe metadata ghi config present (`ap-southeast-1`, `qwen3.7-flash`), `CONFIG_PRESENT_NOT_LIVE_VERIFIED`; chưa có API request/response, adapter compatibility hay billing proof | R093 có authority seed riêng, chưa active tại R092 handback; tối đa 2 direct HTTP requests/zero retry theo seed. App integration/governance call cần packet R2 và cap Go retry riêng | Chỉ live branch; local synthetic source/UI không bị chặn |
+| D06 topology/recovery/fence | In-process coordinator + DB parent-lock admission; orphan running fail-closed; distributed cancellation, crash recovery, reclaim và mixed-binary rollout không có | Chỉ đề xuất một process/one selected manual synthetic job; giữ fail-closed, không auto-reclaim; không mở lại accepted inheritance review | Multi-process/restart/live-data readiness; không chặn route local synthetic |
+| D07 Facebook/Zalo OA | OWNER_DEFERRED | Chỉ owner mở lại; không đưa vào prerequisite của Pancake synthetic; giữ nguyên evidence đã chấp nhận | Live riêng hai kênh |
 | D08 release target và vận hành | OPEN | Chốt môi trường/người vận hành trước M5; không tự deploy | M5 release |
 
-**Next allowed planning action:** chuẩn bị M1 contract và dependency decision trong phạm vi owner đã cho phép; chưa dispatch M2. Không yêu cầu owner trả lời lại các quyền đã có. Nếu quyền hoặc quyết định mới thật sự cần, hỏi đúng phần còn thiếu và tiếp tục công việc độc lập.
+**Next allowed planning action:** Root independent-review R092 contract và drift fix. Sau khi chấp nhận, dispatcher mới chọn một packet M2 hữu hạn; R093 live HTTP authority vẫn là packet R2 riêng và chưa active. Không yêu cầu owner trả lời lại các quyền đã có. Thiếu tên nhân viên/SLA/ngưỡng pilot chỉ giữ acceptance tương ứng OPEN, không dừng synthetic build.
 
 ## 15. Source Authority và Evidence Comparison
 
 Nguồn được đọc có chọn lọc tại baseline, không phải full-corpus audit: AGENTS.md, manifest/policy, bootstrap/memory/handoff R091, implementation current projections, roadmap S0–S7, PRODUCT_DIRECTION, UI roadmap current checkpoint, baseline S0, database filter spec, shared learning điều phối; source job model, result routes/handlers, analyzer provider boundary và workflow backend. Review R088/R090/R091 cung cấp acceptance kế thừa, không thay live proof.
 
-Evidence Comparison: định hướng và current stage table khớp việc chưa có full gate/admission/human workflow. Analyzer đã có lazy provider initialization, trái câu hiện trạng cũ trong database spec. R065 đã có closure trong tracker nhưng còn lệnh dispatch cũ trong knownLimitations. Contradiction or Gap Disposition: dùng source/review gắn revision để lập M1 documentary reconciliation; giữ gaps trong mục 3/14, không coi phần chưa thấy là toàn repo không tồn tại. Claim Update: có roadmap delivery và route agent rõ hơn; chưa có capability runtime mới, product exit, live, hosted CI hay deploy mới.
+Evidence Comparison: source có lazy provider initialization sau khi chuẩn bị snapshot; database spec đã được sửa để phản ánh đúng ordering nhưng vẫn ghi rõ các gate chưa có. R065 là historical/superseded trong current knownLimitations. Provider config có secret-safe metadata nhưng chưa live-verified; authorization không tạo provider proof. M1 contract là candidate local-synthetic route, không phải source/product exit. Giữ các gap có gắn revision; không suy từ tìm kiếm chọn lọc thành “không tồn tại toàn repo”.
 
 ## 16. Checker Source Read-Ahead Block
 

@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-092 — M1 minimum product contract
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R1
 Worker: /root/m1_worker
 Reviewer: Codex /root

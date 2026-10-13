@@ -8,11 +8,11 @@ Current dispatch material: `ff26b4d3613514231a5fde3f4a8fbcf589cda7fe`. Authority
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: /root/m1_worker Luna max IMPLEMENTATION_WORKER; Codex /root ORCHESTRATOR and independent REVIEWER; documentary R1.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max returned documentary worker; R1.
 - Active tranche: CCMAI-RUNTIME-092
-- Next allowed move: CCMAI-RUNTIME-092: Luna max may BUILD one M1 documentary contract under committed seed/order, repair only same scope, then return for Root independent review. Owner synthetic-only channel data and Alibaba live AI authorization recorded; actual provider/source/runtime effects require separate R2 order. Facebook/Zalo OA accounts parked.
+- Next allowed move: CCMAI-RUNTIME-092: Root independently reviews returned M1 intended contract and records local synthetic contract disposition; full M1 business/pilot remains OPEN. Next provider boundary is separately seeded R093 exact Alibaba synthetic characterization; no effects until packet and source review. Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Authority and intake acknowledgment
@@ -32,3 +32,6 @@ Root: dispatcher, independent reviewer, commit steward, closer, session synchron
 
 ## Root BUILD transition acknowledgment
 Root re-read current bootstrap/memory/state/handoff/implementation/index before this new role handoff. Owner synthetic-only data and Alibaba API live-test permission recorded; provider execution remains prohibited in R092. BUILD admitted after explicit APPL/PASS and legacy7/7. Worker must rehydrate and acknowledge independently before authoring.
+
+## Luna BUILD acknowledgment
+Startup acknowledged before M1 authoring: current mode=BUILD; active handoff=CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md; next allowed move=author one M1 documentary contract under CCMAI-RUNTIME-092, make only same-scope repairs under the committed seed, then return for Root independent review; parked checkpoint=OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS; role=/root/m1_worker Luna max IMPLEMENTATION_WORKER; phase=BUILD; risk=R1. Rehydrated current bootstrap, state, memory, handoff, work order, implementation truth and docs index at HEAD edb4a0d0b9f0471561a176630dd02db520507294; dispatch ff26b4d3613514231a5fde3f4a8fbcf589cda7fe; immutable seed/base 1c14bd1abea5040bcb217695d5d78d4ca8e119d5. Owner-authorized test data is synthetic only; Alibaba live AI calls require a separate R2 order. No M1 edits or external effects had occurred at acknowledgment.

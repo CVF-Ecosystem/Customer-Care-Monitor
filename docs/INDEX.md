@@ -759,7 +759,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/probes/r089_readiness/local-preparation-failure.json`
+- Independent Root M1 source/document review and failure/repair disclosure.: `docs/reviews/R092_INDEPENDENT_M1_CONTRACT_REVIEW_2026-10-13.md`
+- Reviewed local synthetic M1 intended contract; full business/pilot acceptance open.: `docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md`
 - Bounded R1 M1 product contract order; no runtime/provider/customer/deploy effects.: `docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md`
+- Exact source baseline equality and documentary acceptance-map/link check hashes.: `docs/reviews/probes/r092_m1_review/static_source_document_review.json`
+- Luna max documentary return, Root metadata repairs disclosed; no runtime/provider effects.: `docs/reviews/R092_M1_PRODUCT_CONTRACT_WORKER_RETURN_2026-10-13.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

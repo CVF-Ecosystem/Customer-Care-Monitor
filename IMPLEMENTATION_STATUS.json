@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -79,12 +79,12 @@
   ],
   "x-buildInProgress": {
     "trancheId": "CCMAI-RUNTIME-092",
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "documentaryOnly": true,
     "newRuntimeEffectsAuthorized": false
   },
   "knownLimitations": [
-    "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
+    "Historical R065 dispatch text superseded: UO01..12 source/local usage observation independently accepted and locally FROZEN; usage-presence/billing/pricing version and full S2/S3 remain unproved. Historical R065 test budgets confer no R092/source/provider authority.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
     "Historical R062 closure/planning checkpoint: CCMAI-RUNTIME-062 and accepted R061 bounded local source_execution observation are FROZEN at sourced10e164249b5e7a87206d1d3bc5aec43a1a8ac2f / independentreview99052ab. R063 candidate DESIGN/SPEC records effective rule-input fingerprint and actual permission/version/WAIT_DATA authority gaps. R063 bounded work-order draft settles digest exposure, exact SP/EX four-line amendments, medium child/root independent roles and proposed total8Go. ORCHESTRATOR next audits seed/schema/prebuild and records formal WORK_ORDER activation before source BUILD. R060 failed packets remain historical CHANGES_REQUIRED/superseded with findings settled by R061; lineage3campaign6Go of8 and original failures unchanged, closure0Go. Full S2/global F02/live/provider/billing/governance/hosted remain OPEN; Facebook/Zalo OA parked. No implicit source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
     "Pancake live-proof packet remains PREPARED_NOT_DISPATCHED / EXTERNAL_INPUT_REQUIRED: tenant/page, independent inventory, quiescence, capture handling and credential/network authority outstanding. R034 offline harness REVIEW_PASS for exact repair 9e52d2840281e227a78e533aea0fd2f208ffcf6e; synthetic CLI/receipt are not a live executor. No live execution dispatched.",
@@ -339,9 +339,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-092: Luna max may BUILD one M1 documentary contract under committed seed/order, repair only same scope, then return for Root independent review. Owner synthetic-only channel data and Alibaba live AI authorization recorded; actual provider/source/runtime effects require separate R2 order. Facebook/Zalo OA accounts parked.",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md",
-    "buildDispatched": true,
+    "nextObjective": "CCMAI-RUNTIME-092: Root independently reviews returned M1 intended contract and records local synthetic contract disposition; full M1 business/pilot remains OPEN. Next provider boundary is separately seeded R093 exact Alibaba synthetic characterization; no effects until packet and source review. Facebook/Zalo OA parked.",
+    "activeWorkOrder": null,
+    "buildDispatched": false,
     "currentExecutionBudget": {
       "workerPackages": 1,
       "sameScopeRepairs": "Consolidated repairs under same seed; stop at third formal repair round without independent root cause.",
@@ -2041,9 +2041,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2152,17 +2150,22 @@
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "M1_BUILD",
+    "status": "M1_REVIEW_PENDING",
     "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
     "currentMilestone": "M1",
     "milestoneStatus": "NOT_ACCEPTED_CONTRACT_DECISIONS_OPEN",
-    "nextAction": "CCMAI-RUNTIME-092: Luna max may BUILD one M1 documentary contract under committed seed/order, repair only same scope, then return for Root independent review. Owner synthetic-only channel data and Alibaba live AI authorization recorded; actual provider/source/runtime effects require separate R2 order. Facebook/Zalo OA accounts parked.",
+    "nextAction": "CCMAI-RUNTIME-092: Root independently reviews returned M1 intended contract and records local synthetic contract disposition; full M1 business/pilot remains OPEN. Next provider boundary is separately seeded R093 exact Alibaba synthetic characterization; no effects until packet and source review. Facebook/Zalo OA parked.",
     "authority": "Owner 2026-10-13 proceed roadmap; committed R092 R1 documentary worker scope.",
     "executionAuthorityExpanded": true,
-    "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
+    "publication": "NOT_EXPORTED_CURRENT_M1_WORKTREE",
     "updatedAt": "2026-10-13",
     "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
-    "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
+    "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json",
+    "previousRoadmapPublication": {
+      "status": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
+      "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
+      "receipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
+    }
   },
   "x-historicalPreR092OwnerRouting": {
     "date": "2026-10-13",

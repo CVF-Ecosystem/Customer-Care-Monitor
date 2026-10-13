@@ -41,7 +41,7 @@ channel adapters
 
 Database làm các phép lọc cấu trúc rẻ và nhất quán. Go application giữ policy, rule version, decision trace, privacy/budget admission và provider dispatch. Phân tích ngữ nghĩa tiếng Việt thuộc AI/LLM hoặc người theo policy; không nhét lời gọi mạng vào MySQL.
 
-Điểm chèn runtime dự kiến là `Analyzer.runJobInternalExt`: sau khi tạo `JobRun`, đọc job/channel scope và chọn candidate/snapshot, trước `getProvider`. Hiện source gọi `getProvider` trước truy vấn candidate; tranche machine gate phải đảo dependency này cho mọi đường single/batch/manual/scheduled/re-run.
+Điểm chèn runtime hiện có trong `Analyzer.executeReserved`: tạo `JobRun`, chọn candidate và chuẩn bị/kiểm tra snapshot trước khi khởi tạo provider. Nếu không có conversation cần inference, source hoàn tất no-work path mà không resolve provider; provider chỉ khởi tạo lazy khi còn prepared work (`backend/engine/analyzer.go`, source baseline `a91433b81a69decce33eaa2e134b8926ea9d2372`, lines 114–200). Đây là source-first ordering cho đường Analyzer đã kiểm, không chứng minh policy/PII/budget admission đã triển khai, cũng không chứng minh mọi entry path đi qua cùng intervention gate. Tranche riêng phải xác minh phạm vi entry path trước claim rộng hơn.
 
 ## Học từ pg-jev
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-092",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-092: Luna max may BUILD one M1 documentary contract under committed seed/order, repair only same scope, then return for Root independent review. Owner synthetic-only channel data and Alibaba live AI authorization recorded; actual provider/source/runtime effects require separate R2 order. Facebook/Zalo OA accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-092: Root independently reviews returned M1 intended contract and records local synthetic contract disposition; full M1 business/pilot remains OPEN. Next provider boundary is separately seeded R093 exact Alibaba synthetic characterization; no effects until packet and source review. Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "/root/m1_worker Luna max IMPLEMENTATION_WORKER; Codex /root ORCHESTRATOR and independent REVIEWER; documentary R1.",
+  "activeRole": "Codex /root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max returned documentary worker; R1.",
   "updatedAt": "2026-10-13",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {

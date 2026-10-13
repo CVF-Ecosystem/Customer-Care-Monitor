@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r092-static-proof",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r092_m1_review/static_source_document_review.json",
+      "status": "ACTIVE",
+      "description": "Exact source baseline equality and documentary acceptance-map/link check hashes."
+    },
+    {
+      "id": "r092-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R092_INDEPENDENT_M1_CONTRACT_REVIEW_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Independent Root M1 source/document review and failure/repair disclosure."
+    },
+    {
+      "id": "r092-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R092_M1_PRODUCT_CONTRACT_WORKER_RETURN_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Luna max documentary return, Root metadata repairs disclosed; no runtime/provider effects."
+    },
+    {
+      "id": "r092-m1-contract",
+      "family": "continuity",
+      "path": "docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Reviewed local synthetic M1 intended contract; full business/pilot acceptance open."
+    },
+    {
       "id": "r092-m1-work-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md",

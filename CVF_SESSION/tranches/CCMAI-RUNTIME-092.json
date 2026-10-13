@@ -38,8 +38,8 @@
     "verification": "Targeted source/accepted evidence read, document links/diff, catalog, legacy gate unit tests, seven-gate preflight and installed explicit-packet checks; root independent source contract review."
   },
   "claimScope": "Documentary minimum-product contract and finite local synthetic delivery route; full M1 acceptance remains open if owner business/live decisions lack evidence. No runtime AI governance claim.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "1c14bd1abea5040bcb217695d5d78d4ca8e119d5",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md",
   "buildCommit": null,
@@ -49,7 +49,8 @@
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -59,5 +60,5 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE"
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW"
 }
