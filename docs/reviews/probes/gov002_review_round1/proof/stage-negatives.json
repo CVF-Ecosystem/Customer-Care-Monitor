@@ -1,0 +1,427 @@
+{
+  "schemaVersion": "gov002.round1.proofStage@1",
+  "stage": "negatives",
+  "recordedAtUtc": "2026-10-12T12:51:23+00:00",
+  "pythonVersion": "3.11.9",
+  "gitVersion": "git version 2.55.0.windows.3",
+  "powershellVersion": "7.5.4",
+  "pathPlaceholders": {
+    "<PROJECT>": "live worktree",
+    "<WORK>": "disposable proof work directory",
+    "<WORKSPACE>": "container directory that holds the project and the sibling Core"
+  },
+  "claimBoundary": "static repository checks in the stated trees only; no provider, runtime, hosted CI or deployment evidence",
+  "unexpectedCount": 0,
+  "recordCount": 26,
+  "records": [
+    {
+      "id": "NEG-pins-agree",
+      "purpose": "workflow pins equal the lock pins in the candidate",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "profile": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+        "runner": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+        "bundle": "c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2"
+      }
+    },
+    {
+      "id": "N00",
+      "purpose": "control: unmutated copy passes pre-dispatch with the three pins",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\neg\\n00_control",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.27,
+      "outputSha256": "2cbea1b37e74a96fe7b2dfac6ac7d76486635681668680ab9fbbb2fe4b2351cf",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=0 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\n"
+    },
+    {
+      "id": "N01",
+      "purpose": "copied inherited module tampered: the pinned (CI-style) run is refused at stage 0 before any module import",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\neg\\n01_module_tamper",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "stage-0",
+        "REFUSED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.07,
+      "outputSha256": "909d08c1da366ca21aa2614d0a5a461feabccaa93a751628da1fb1505fdb391b",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 stage-0 pin verification\n       BUNDLE_PIN_MISMATCH @ cvf_gates: actual bytes differ from the expected pin (checked before importing project modules)\nRESULT: FAIL phase=pre-dispatch stage0=REFUSED\n"
+    },
+    {
+      "id": "N01-not-executed",
+      "purpose": "tampered module code never ran in the pinned run",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "flagPresent": false
+      }
+    },
+    {
+      "id": "N01b",
+      "purpose": "same tamper without pins (plain local invocation): detected by INST-01 FILE_TAMPERED",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\neg\\n01_module_tamper",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "FILE_TAMPERED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.35,
+      "outputSha256": "82af53b755278562a280e1ba426d0e37f35348643deacd619d2920026cc66e80",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 FAIL\n       BUNDLE_MISMATCH @ .cvf/gate-profile.lock.json#/bundleSha256: actual bytes of the inherited directory differ from the locked bundle digest\n       FILE_TAMPERED @ scripts/cvf_gates/cvf_dg_continuity.py: content identity differs from the lock pin\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=2 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N01b-unpinned-disclosure",
+      "purpose": "DISCLOSED LIMIT of the Core design: an unpinned local run imports project modules before verify_install, so tampered code can execute once before the failure is reported; the pinned CI run and the Core --trusted doctor refuse first",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "tamperedCodeExecutedInUnpinnedRun": true
+      }
+    },
+    {
+      "id": "N02",
+      "purpose": "runner tampered: the CI pin on the runner digest refuses it",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\neg\\n02_runner_tamper",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "REFUSED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.06,
+      "outputSha256": "47fec2eee5c33fe163b45ae5c26446d5df47d04e04a4e6d33a3f71ed011ba5c5",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 stage-0 pin verification\n       RUNNER_PIN_MISMATCH @ cvf_gates: actual bytes differ from the expected pin (checked before importing project modules)\n       BUNDLE_PIN_MISMATCH @ cvf_gates: actual bytes differ from the expected pin (checked before importing project modules)\nRESULT: FAIL phase=pre-dispatch stage0=REFUSED\n"
+    },
+    {
+      "id": "N03",
+      "purpose": "lock hash for a module altered",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\neg\\n03_lock_tamper",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.35,
+      "outputSha256": "3a5c5adfcbd2c2e9b3def7d465f014e2562758c3937670edd4113e13cc6eab17",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 FAIL\n       FILE_TAMPERED @ scripts/cvf_gates/cvf_dg_review.py: content identity differs from the lock pin\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N04",
+      "purpose": "workflow bundle pin altered so it disagrees with the lock",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\neg\\n04_workflow_pin",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.99,
+      "outputSha256": "137e5481644b44b38f3c9bd55c91ee4f5adf931ee4b451e0f385169d03a9ba3f",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 FAIL\n       CI_WORKFLOW_DRIFT @ .github/workflows/cvf-downstream-gates.yml: generated PR workflow is missing or edited from its pinned rendering\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N05a",
+      "purpose": "module AND lock edited consistently, workflow pins untouched: CI-pinned run is refused",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+      "cwd": "<WORK>\\neg\\n05_consistent_tamper",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.06,
+      "outputSha256": "909d08c1da366ca21aa2614d0a5a461feabccaa93a751628da1fb1505fdb391b",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 stage-0 pin verification\n       BUNDLE_PIN_MISMATCH @ cvf_gates: actual bytes differ from the expected pin (checked before importing project modules)\nRESULT: FAIL phase=pre-dispatch stage0=REFUSED\n"
+    },
+    {
+      "id": "N05b",
+      "purpose": "same consistent tamper: the Core --trusted run (independent anchor) refuses it",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B <WORK>\\container\\.Controlled-Vibe-Framework-CVF\\scripts/lib/downstream_governance/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root <WORK>\\neg\\n05_consistent_tamper --trusted --no-receipt",
+      "cwd": "<WORK>\\neg\\n05_consistent_tamper",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.25,
+      "outputSha256": "567196818bd7b2474823704803316f2030259af06cba343bf6a6bfe38b8b7eb8",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 FAIL\n       TRUSTED_MISMATCH @ scripts/cvf_gates/cvf_dg_review.py: project copy differs from the trusted Core source\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=2 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N06",
+      "purpose": "wrong --expect-bundle-sha256",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --expect-profile-sha256 dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0 --expect-runner-sha256 0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8 --expect-bundle-sha256 1111111111111111111111111111111111111111111111111111111111111111",
+      "cwd": "<WORK>\\neg\\n06_wrong_pin_arg",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "REFUSED"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.08,
+      "outputSha256": "909d08c1da366ca21aa2614d0a5a461feabccaa93a751628da1fb1505fdb391b",
+      "outputTruncated": false,
+      "output": "[FAIL] CVF-DG-INST-01 stage-0 pin verification\n       BUNDLE_PIN_MISMATCH @ cvf_gates: actual bytes differ from the expected pin (checked before importing project modules)\nRESULT: FAIL phase=pre-dispatch stage0=REFUSED\n"
+    },
+    {
+      "id": "N07",
+      "purpose": "one surface drift: handoff Current mode differs from state",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt",
+      "cwd": "<WORK>\\neg\\n07_mode_drift",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "SURFACE_MISMATCH"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.41,
+      "outputSha256": "0c6cebb35696f5518363894cefae57644fa19c120feefb1aa78175d301601f14",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[FAIL] CVF-DG-CONT-01 FAIL\n       SURFACE_MISMATCH @ CVF_SESSION/ACTIVE_SESSION_STATE.json#/currentMode: currentMode differs across surfaces: CVF_SESSION/ACTIVE_SESSION_STATE.json#/currentMode='REVIEW'; CVF_SESSION/handoffs/AGENT_HANDOFF_PORTABLE_CVF_GOV002_2026-10-12.md#Current mode='BUILD'; CVF_SESSION_MEMORY.md#Current mode='REVIEW'\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N08",
+      "purpose": "unknown standard state field rejected (extensions need x- prefix)",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt",
+      "cwd": "<WORK>\\neg\\n08_unknown_field",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "UNKNOWN_FIELD"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.6,
+      "outputSha256": "a7f90f58aec67a9285698ffd7470207d2744eb021bccb37be9f3c330dc96e18a",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[FAIL] CVF-DG-CONT-01 FAIL\n       UNKNOWN_FIELD @ CVF_SESSION/ACTIVE_SESSION_STATE.json#/unknownStandardField: field unknownStandardField is not in the pinned contract (extensions use x-/x_ prefixes)\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N09",
+      "purpose": "implementation status without required activeWorkOrders",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt",
+      "cwd": "<WORK>\\neg\\n09_missing_active_wo",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "MISSING_FIELD"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.41,
+      "outputSha256": "1d33c2e3281bb4ed67c62a2efe9aa3bd6de8b111ebd3b00f6617392f3668fe7d",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[FAIL] CVF-DG-CONT-01 FAIL\n       MISSING_FIELD @ IMPLEMENTATION_STATUS.json#/activeWorkOrders: required field activeWorkOrders is missing\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N10",
+      "purpose": "a waiting-review order listed as executable is rejected",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt",
+      "cwd": "<WORK>\\neg\\n10_waiting_review_executable",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "ACTIVE_WORK_ORDER_NOT_ACTIVE"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.28,
+      "outputSha256": "27daece464a28ca6fc19e81f508183289d632421df379f17f56dc1f9e70bb5be",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[FAIL] CVF-DG-CONT-01 FAIL\n       ACTIVE_WORK_ORDER_NOT_ACTIVE @ IMPLEMENTATION_STATUS.json#/activeWorkOrders/0: docs/work_orders/CCMAI_GOV_002.md is not an admitted active work order (NOT_APPLICABLE status_not_applicable: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked)\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N11",
+      "purpose": "R2 self-review rejected by ROLE-01",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_NEG_SELF_REVIEW.md",
+      "cwd": "<WORK>\\neg\\n11_self_review",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "SELF_REVIEW"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.47,
+      "outputSha256": "9cef4e94f5f90cf231bd61a1722991ca09606afb738e520ec28d04a84ddce866",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[FAIL] CVF-DG-ROLE-01 FAIL\n       SELF_REVIEW @ docs/reviews/GOV002_NEG_SELF_REVIEW.md#Reviewer: R2 review names the same agent as worker and reviewer; an independent reviewer is required\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 2 document(s) scanned\nRESULT: FAIL phase=worker-return mandatoryControls=6 failed=1\n"
+    },
+    {
+      "id": "N12",
+      "purpose": "an ACTIVE-class order without its closeability contract fails APPL-01",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\neg\\n12_active_without_contract",
+      "exitCode": 2,
+      "expected": "nonzero",
+      "expectedText": [
+        "contract_missing"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.29,
+      "outputSha256": "049bf7a9968a36691b63c585ffe6ebf1609829e4a1f910bde1a7276265e387e2",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[FAIL] CVF-DG-APPL-01 FAIL\n       contract_missing @ docs/work_orders/CCMAI_GOV_002.md: missing `## Gate-To-Role Closeability Contract`\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1\n"
+    },
+    {
+      "id": "N13",
+      "purpose": "positive control: DISPATCH_READY with the intact contract is a CHECK/PASS",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md",
+      "cwd": "<WORK>\\neg\\n13_active_with_contract",
+      "exitCode": 0,
+      "expected": "any",
+      "expectedText": [
+        "CVF-DG-APPL-01 PASS",
+        "checked: docs/work_orders/CCMAI_GOV_002.md"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.55,
+      "outputSha256": "e3aceeadaf678ee3249ec64d624b80377bfafe25acfe5c1a090f46d7b73f735f",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=933de8465e8c5995637ff53c805ae47eedf0418f candidates=1 deleted=0\n[PASS] CVF-DG-APPL-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\n"
+    },
+    {
+      "id": "N14-control",
+      "purpose": "control: legacy tranche gate on the unmutated copy",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight --only tranche",
+      "cwd": "<WORK>\\neg\\n14_legacy_tranche",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.64,
+      "outputSha256": "52358551deffcb2cee9cb242938e700cc61221377c199ddaca1d3e1476e3a778",
+      "outputTruncated": false,
+      "output": "[PASS] tranche\nCVF downstream preflight: PASS (1/1 executed gates passed)\n"
+    },
+    {
+      "id": "N15",
+      "purpose": "real gate + real lock: work-order Status moved into a backtick fence",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight --only tranche",
+      "cwd": "<WORK>\\neg\\n15_fenced_status",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": [
+        "work order"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.25,
+      "outputSha256": "e49b2a770e8c89edb459b50147cc566d09092b3d48192194a2e1c3a16816e7ec",
+      "outputTruncated": false,
+      "output": "[FAIL] tranche\n       - CCMAI-GOV-002-C1: work order Status declaration rejected by the pinned grammar (status_missing): work-order candidate declares no `Status: TOKEN` line (grammar cvf.workOrderStatusGrammar@1.0.0)\nCVF downstream preflight: FAIL (0/1 executed gates passed)\n"
+    },
+    {
+      "id": "N16",
+      "purpose": "real gate + real lock: work-order Status moved into a tilde fence",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight --only tranche",
+      "cwd": "<WORK>\\neg\\n16_tilde_fenced_status",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": [
+        "work order"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.24,
+      "outputSha256": "e49b2a770e8c89edb459b50147cc566d09092b3d48192194a2e1c3a16816e7ec",
+      "outputTruncated": false,
+      "output": "[FAIL] tranche\n       - CCMAI-GOV-002-C1: work order Status declaration rejected by the pinned grammar (status_missing): work-order candidate declares no `Status: TOKEN` line (grammar cvf.workOrderStatusGrammar@1.0.0)\nCVF downstream preflight: FAIL (0/1 executed gates passed)\n"
+    },
+    {
+      "id": "N17",
+      "purpose": "real gate + real lock: work-order Status value wrapped in backticks",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight --only tranche",
+      "cwd": "<WORK>\\neg\\n17_backtick_value",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": [
+        "work order"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.66,
+      "outputSha256": "d5b7857d73c36341ae0e9f0bc2b0c6785d8f1be6a1a8295b17363708c07ffd45",
+      "outputTruncated": false,
+      "output": "[FAIL] tranche\n       - CCMAI-GOV-002-C1: work order Status declaration rejected by the pinned grammar (status_malformed): Status value '`COMPLETE_PENDING_REVIEW`' is not `TOKEN` or `TOKEN (annotation)` (grammar cvf.workOrderStatusGrammar@1.0.0)\nCVF downstream preflight: FAIL (0/1 executed gates passed)\n"
+    },
+    {
+      "id": "N18",
+      "purpose": "real gate + real lock: malformed second Status declaration appended",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight --only tranche",
+      "cwd": "<WORK>\\neg\\n18_malformed_second",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": [
+        "work order"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.2,
+      "outputSha256": "f42ab340fbbb3f863dd02d95ff555e4e6bd8813e2fab708f770b063ba7157860",
+      "outputTruncated": false,
+      "output": "[FAIL] tranche\n       - CCMAI-GOV-002-C1: work order Status declaration rejected by the pinned grammar (status_contradictory): conflicting Status declarations: COMPLETE_PENDING_REVIEW / soon, pending (grammar cvf.workOrderStatusGrammar@1.0.0)\nCVF downstream preflight: FAIL (0/1 executed gates passed)\n"
+    },
+    {
+      "id": "N19",
+      "purpose": "real gate + real lock: duplicate identical Status declaration",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight --only tranche",
+      "cwd": "<WORK>\\neg\\n19_duplicate_status",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": [
+        "work order"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.92,
+      "outputSha256": "8c39f34f55c70074d15477808e31cbffc9b40faa11729f1db6b1870a09a7c2c4",
+      "outputTruncated": false,
+      "output": "[FAIL] tranche\n       - CCMAI-GOV-002-C1: work order Status declaration rejected by the pinned grammar (status_duplicate): Status declared 2 times (grammar cvf.workOrderStatusGrammar@1.0.0)\nCVF downstream preflight: FAIL (0/1 executed gates passed)\n"
+    },
+    {
+      "id": "N20",
+      "purpose": "legacy tranche gate refuses a drifted pinned classifier before using it",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight --only tranche",
+      "cwd": "<WORK>\\neg\\n20_classifier_tamper",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "expectedText": [
+        "lock pin"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 1.22,
+      "outputSha256": "486d6e60a9b6235d5ca5e6ece3fb236fa6a2d0f89642ac31173fb3e1b54b4839",
+      "outputTruncated": false,
+      "output": "[FAIL] tranche\n       - CCMAI-GOV-002-C1: cannot verify work-order Status declaration: check_gate_to_role_closeability.py does not match the lock pin (drift or tamper)\nCVF downstream preflight: FAIL (0/1 executed gates passed)\n"
+    }
+  ]
+}

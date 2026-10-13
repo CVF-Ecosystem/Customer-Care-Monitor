@@ -1,0 +1,313 @@
+{
+  "actor": "Codex /root SESSION_SYNC_STEWARD fixture cleanup",
+  "attribution": "R090 worker helper omitted anonymous-volume removal; first clean-container/network claim did not prove volume cleanup",
+  "readOnlyEventEvidence": [
+    {
+      "Type": "volume",
+      "Action": "create",
+      "Actor": {
+        "ID": "3fd418d6c057f8cfef578a7c1226780e1e5b5766f8fd1f46b5af0b596279b9c9",
+        "Attributes": {
+          "driver": "local"
+        }
+      },
+      "scope": "local",
+      "time": 1791840491,
+      "timeNano": 1791840491667817909
+    },
+    {
+      "Type": "container",
+      "Action": "create",
+      "Actor": {
+        "ID": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-11c387db9f79",
+          "org.cvf.run": "11c387db9f7949cca7fbfaa4094107d3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840491,
+      "timeNano": 1791840491681582700
+    },
+    {
+      "Type": "volume",
+      "Action": "mount",
+      "Actor": {
+        "ID": "3fd418d6c057f8cfef578a7c1226780e1e5b5766f8fd1f46b5af0b596279b9c9",
+        "Attributes": {
+          "container": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+          "destination": "/var/lib/mysql",
+          "driver": "local",
+          "propagation": "",
+          "read/write": "true"
+        }
+      },
+      "scope": "local",
+      "time": 1791840491,
+      "timeNano": 1791840491724657410
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-11c387db9f79",
+          "org.cvf.run": "11c387db9f7949cca7fbfaa4094107d3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840492,
+      "timeNano": 1791840492090582068
+    },
+    {
+      "Type": "container",
+      "Action": "kill",
+      "Actor": {
+        "ID": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-11c387db9f79",
+          "org.cvf.run": "11c387db9f7949cca7fbfaa4094107d3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake",
+          "signal": "9"
+        }
+      },
+      "scope": "local",
+      "time": 1791840498,
+      "timeNano": 1791840498432757144
+    },
+    {
+      "Type": "volume",
+      "Action": "unmount",
+      "Actor": {
+        "ID": "3fd418d6c057f8cfef578a7c1226780e1e5b5766f8fd1f46b5af0b596279b9c9",
+        "Attributes": {
+          "container": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+          "driver": "local"
+        }
+      },
+      "scope": "local",
+      "time": 1791840498,
+      "timeNano": 1791840498706461716
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "execDuration": "6",
+          "exitCode": "137",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-11c387db9f79",
+          "org.cvf.run": "11c387db9f7949cca7fbfaa4094107d3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840498,
+      "timeNano": 1791840498714460434
+    },
+    {
+      "Type": "container",
+      "Action": "destroy",
+      "Actor": {
+        "ID": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-11c387db9f79",
+          "org.cvf.run": "11c387db9f7949cca7fbfaa4094107d3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840498,
+      "timeNano": 1791840498743595197
+    },
+    {
+      "Type": "volume",
+      "Action": "create",
+      "Actor": {
+        "ID": "6539043069f00a5096e9148a34d452a2c55ef1c7bc85deb0e84159825136417c",
+        "Attributes": {
+          "driver": "local"
+        }
+      },
+      "scope": "local",
+      "time": 1791840536,
+      "timeNano": 1791840536445439382
+    },
+    {
+      "Type": "container",
+      "Action": "create",
+      "Actor": {
+        "ID": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-7c4b599d31f7",
+          "org.cvf.run": "7c4b599d31f747f09ac7bed9656d6dd3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840536,
+      "timeNano": 1791840536457908166
+    },
+    {
+      "Type": "volume",
+      "Action": "mount",
+      "Actor": {
+        "ID": "6539043069f00a5096e9148a34d452a2c55ef1c7bc85deb0e84159825136417c",
+        "Attributes": {
+          "container": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+          "destination": "/var/lib/mysql",
+          "driver": "local",
+          "propagation": "",
+          "read/write": "true"
+        }
+      },
+      "scope": "local",
+      "time": 1791840536,
+      "timeNano": 1791840536483086687
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-7c4b599d31f7",
+          "org.cvf.run": "7c4b599d31f747f09ac7bed9656d6dd3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840536,
+      "timeNano": 1791840536687361958
+    },
+    {
+      "Type": "container",
+      "Action": "kill",
+      "Actor": {
+        "ID": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-7c4b599d31f7",
+          "org.cvf.run": "7c4b599d31f747f09ac7bed9656d6dd3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake",
+          "signal": "9"
+        }
+      },
+      "scope": "local",
+      "time": 1791840543,
+      "timeNano": 1791840543035699018
+    },
+    {
+      "Type": "volume",
+      "Action": "unmount",
+      "Actor": {
+        "ID": "6539043069f00a5096e9148a34d452a2c55ef1c7bc85deb0e84159825136417c",
+        "Attributes": {
+          "container": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+          "driver": "local"
+        }
+      },
+      "scope": "local",
+      "time": 1791840543,
+      "timeNano": 1791840543283013241
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "execDuration": "6",
+          "exitCode": "137",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-7c4b599d31f7",
+          "org.cvf.run": "7c4b599d31f747f09ac7bed9656d6dd3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840543,
+      "timeNano": 1791840543288005571
+    },
+    {
+      "Type": "container",
+      "Action": "destroy",
+      "Actor": {
+        "ID": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+        "Attributes": {
+          "desktop.docker.io/ports.scheme": "v2",
+          "desktop.docker.io/ports/3306/tcp": "127.0.0.1:",
+          "image": "mysql:8.0",
+          "name": "ccma-r090-db-7c4b599d31f7",
+          "org.cvf.run": "7c4b599d31f747f09ac7bed9656d6dd3",
+          "org.cvf.tranche": "CCMAI-RUNTIME-090",
+          "org.cvf.worker": "/root/auth_intake"
+        }
+      },
+      "scope": "local",
+      "time": 1791840543,
+      "timeNano": 1791840543310180497
+    }
+  ],
+  "exactOwnedVolumes": [
+    {
+      "volume": "3fd418d6c057f8cfef578a7c1226780e1e5b5766f8fd1f46b5af0b596279b9c9",
+      "ownedContainerID": "324ba1eac6962f4f1b9fc6799695c3741e4f0984441dbd11b4b535e47da26971",
+      "ownedContainerName": "ccma-r090-db-11c387db9f79",
+      "destination": "/var/lib/mysql",
+      "mountedThenUnmountedAndContainerDestroyed": true,
+      "currentlyReferenced": false,
+      "removed": true,
+      "absenceVerified": true
+    },
+    {
+      "volume": "6539043069f00a5096e9148a34d452a2c55ef1c7bc85deb0e84159825136417c",
+      "ownedContainerID": "2f3f79e86f783ebb8b3bc32d4e06d58c678830fe86f9980eb8750d0a4a76f020",
+      "ownedContainerName": "ccma-r090-db-7c4b599d31f7",
+      "destination": "/var/lib/mysql",
+      "mountedThenUnmountedAndContainerDestroyed": true,
+      "currentlyReferenced": false,
+      "removed": true,
+      "absenceVerified": true
+    }
+  ],
+  "disposition": "VERIFIED_REMOVED_EXACT_EVENT_BOUND_VOLUMES"
+}

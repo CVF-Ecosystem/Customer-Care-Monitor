@@ -1,6 +1,6 @@
 # Agent Handoff — F02-E Facebook message coverage
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Owner resume and F02-F planning acknowledgment (2026-10-03, Asia/Saigon)
 

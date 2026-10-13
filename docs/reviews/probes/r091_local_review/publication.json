@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "ccmai.accepted-branch-publication@1.0.0",
+  "verifiedAtUtc": "2026-10-13T00:39:29.411980+00:00",
+  "publisher": "Codex /root",
+  "remote": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "branch": "codex/cvf-portable-inheritance",
+  "pushCommand": [
+    "git",
+    "push",
+    "origin",
+    "codex/cvf-portable-inheritance"
+  ],
+  "pushExitCode": 0,
+  "actualMaterialCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
+  "remoteBranchShaReadback": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
+  "rawReadback": "d121c9ecf24a869aea92264db1e01cd853dec0ec\trefs/heads/codex/cvf-portable-inheritance",
+  "priorRemoteSha": "14bbf1dbb079c4512eb2fed5dc94aeae391f236f",
+  "A_materialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
+  "F06_materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
+  "artifactPaths": [
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md"
+  ],
+  "materialChangedPathCount": 139,
+  "localCommittedRange": "03e68e1..d121c9e pinned pr-ci7controls PASS; local only",
+  "hostedCI": "NOT_PROVEN: no hosted CI result accepted; existing workflows main/PR, branch push alone is not CI proof",
+  "continuityDisposition": "One actual-SHA/status/publication continuity commit follows; final tip must be separately verified after push",
+  "mainMergeDeploy": false,
+  "privateCoreChanges": false
+}

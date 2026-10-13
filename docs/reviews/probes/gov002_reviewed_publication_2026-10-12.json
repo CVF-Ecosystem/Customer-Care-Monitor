@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "ccmai.gov002.publication@1",
+  "actor": "Codex /root COMMIT_STEWARD",
+  "observedAtUtc": "2026-10-12T13:10:18+00:00",
+  "publicExportDisposition": "EXPORTED",
+  "remote": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "branch": "codex/cvf-portable-inheritance",
+  "materialCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+  "verifiedRemoteSha": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+  "remoteShaMatches": true,
+  "artifactPaths": [
+    "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
+    "docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md",
+    ".cvf/gate-profile.lock.json",
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md"
+  ],
+  "committedRangeProof": {
+    "base": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+    "head": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+    "checks": [
+      {
+        "argv": [
+          "python",
+          "-B",
+          "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+          "run",
+          "--phase",
+          "pr-ci",
+          "--project-root",
+          ".",
+          "--base",
+          "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+          "--head",
+          "HEAD",
+          "--no-receipt",
+          "--expect-profile-sha256",
+          "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+          "--expect-runner-sha256",
+          "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+          "--expect-bundle-sha256",
+          "c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2"
+        ],
+        "exitCode": 0,
+        "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: RANGE_RESOLVED mode=RANGE base=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c head=d0ebc890d043b5f94b647c1b228e8f1660f83292 candidates=112 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 7 document(s) scanned\nRESULT: PASS phase=pr-ci mandatoryControls=7 failed=0\n"
+      },
+      {
+        "argv": [
+          "python",
+          "-B",
+          "scripts/cvf_downstream_gate.py",
+          "preflight",
+          "--base",
+          "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+          "--head",
+          "HEAD"
+        ],
+        "exitCode": 0,
+        "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+      }
+    ]
+  },
+  "publicationMethod": "ordinary git push origin HEAD:refs/heads/codex/cvf-portable-inheritance",
+  "continuityCommit": "FOLLOWING_COMMIT_DISCOVERABLE_FROM_TRACKED_RECEIPT_HISTORY",
+  "hostedCiObserved": false,
+  "claimBoundary": "Public project-branch material delivery and static repository checks only; no main/merge/force push, private Core export, AI governance/live/native/product FREEZE/deploy claim",
+  "committedEvidenceLfSha256": {
+    "docs/reviews/probes/gov002_review_round1/proof/stage-buildtime.json": "ea8970a0ee533684db65a6307d5e22c57b8381bb699bfc044ac1ef621febbdf4",
+    "docs/reviews/probes/gov002_review_round1/proof/stage-discrimination.json": "c86c27208d08a95dc96ad8a5662169df79396c78d529f6fd196dfbb9487cdee4",
+    "docs/reviews/probes/gov002_review_round1/proof/stage-snapshot.json": "34cefae2d3529415a40ffee67225a5ec50af983680b560d993b01de71c80f7df",
+    "docs/reviews/probes/gov002_review_round1/proof/stage-clone.json": "d409f22979e70223151a6ab36de89cba87ac7f1fed539f1f0ecdda77e63e175e",
+    "docs/reviews/probes/gov002_review_round1/proof/stage-negatives.json": "d595e7f7ec3638771aa271cd3029b776285952cd4a14d6e6484230f93dbb5315",
+    "docs/reviews/probes/gov002_review_round1/proof/stage-prci.json": "a3acf7087f456b6576387cbbb5508d9c8f2b66b6ae1ce340cc470472230805fc",
+    "docs/reviews/probes/gov002_review_round1/proof/stage-final.json": "3e3b0e3be0ac2701d72c231689da63ea2a09dc608eb8dd65d9997f53ff4fe532",
+    "docs/reviews/probes/gov002_round1_candidate_manifest_2026-10-12.json": "7ad3952224dc8b33ce50036a0f51b269784514c61a69d0213b0f8a87356b0310",
+    "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json": "7d7651cf2782260c355476d2b0b51f5496e1a75fbe49f3deadc78b65cb742694",
+    "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md": "c892c5f148c4781cc52db3384c6cc397a6bfddc04b65900f1d07d53f78ac8687"
+  },
+  "evidenceEncodingNote": "Worker raw hashes describe receiving-machine intake bytes. Git may normalize text line endings; these committed LF-normalized hashes bind publication without rewriting original receipts."
+}

@@ -1,0 +1,306 @@
+{
+  "schemaVersion": "r088.baselineClassification@1",
+  "source": "baseline-unchanged-source.json",
+  "totalTests": 76,
+  "baselinePassed": 34,
+  "baselineFailed": 42,
+  "classCounts": {
+    "BEHAVIORAL": 34,
+    "NO_CREDIT_MISSING_API": 3,
+    "NO_CREDIT_RETURN_VALUE_CONTRACT": 1,
+    "NO_CREDIT_INDIRECT_TYPEERROR_ON_MISSING_REQUEST": 2,
+    "INDIRECT_TENANT_LIST_NOT_RELOADED_NO_CREDIT": 2
+  },
+  "failures": [
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) overlapping detail calls: the later call wins whatever order the replies arrive in",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: B-first: expected 'A' to be 'B' // Object.is equality"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) A -> B -> A: an old A reply cannot win because the id matches",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: old A must not publish while new A is pending: expected [ { id: 'A-Khách A-0', …(6) } ] to deeply equal []"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a new detail call hides the previous conversation immediately",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: A data must not stay visible while B is pending: expected [ { id: 'A-Khách A-0', …(6) } ] to deeply equal []"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a late rejection of a superseded detail call neither throws to its caller nor touches current data",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: a superseded call must not surface its failure: expected Error: mạng lỗi muộn to not be an instance of Error"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) overlapping list calls: the latest request wins list and total in either reply order",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: new-first: expected [ 'trang-1' ] to deeply equal [ 'trang-2' ]"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) a late rejection of an older list call is swallowed and leaves the newer result alone",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected Error: lỗi muộn to not be an instance of Error"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate or clear a newer owner's detail work",
+      "class": "NO_CREDIT_MISSING_API",
+      "assertion": "TypeError: store.resetDetail is not a function"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by the current owner clears data and drops its pending replies",
+      "class": "NO_CREDIT_MISSING_API",
+      "assertion": "TypeError: store.reset is not a function"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate a newer owner's list work",
+      "class": "NO_CREDIT_MISSING_API",
+      "assertion": "TypeError: store.reset is not a function"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) fetch calls report whether they published",
+      "class": "NO_CREDIT_RETURN_VALUE_CONTRACT",
+      "assertion": "AssertionError: expected undefined to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount with a pending image fetch: the late result leaves no live object URL",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: an allocation after teardown would leak: expected [ 'blob:synthetic-1' ] to deeply equal []"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount while the response body is still downloading: finishing it leaves no live object URL",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected [ 'blob:synthetic-1' ] to deeply equal []"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) reset (mobile back) with a pending image fetch: the late result leaves no live object URL",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: a result for a reset lifetime must not stay allocated: expected [ 'blob:synthetic-1' ] to deeply equal []"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) a later lifetime that needs the same URL loads it itself and the old fetch cannot own it",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: the new lifetime must issue its own fetch for the shared URL: expected [ { …(6) } ] to have a length of 2 but got 1"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) a stale failed fetch cannot delete the cache entry a newer lifetime already filled",
+      "class": "NO_CREDIT_INDIRECT_TYPEERROR_ON_MISSING_REQUEST",
+      "assertion": "TypeError: Cannot read properties of undefined (reading 'resolveOk')"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change releases the previous tenant's object URLs",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: the old tenant's resource must be released: expected [ 'blob:synthetic-1' ] to deeply equal []"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change with a pending image fetch: the old result allocates nothing",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected [ 'blob:synthetic-1' ] to deeply equal []"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) reversed success: an older (initial) list reply cannot restore the previous query's rows",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: late older list must not publish: expected 'FBDanh sách đầu15 ngày trướcChưa phân…' to contain 'Kết quả tìm'"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) a late rejection of an older list request shows no list error over the newer success",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: stale catch must not become the list error: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) an older request settling while a newer one is pending neither publishes nor ends the busy state",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: stale list must not replace rows: expected 'FBKết quả a15 ngày trướcChưa phân tíc…' not to contain 'Kết quả a'"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map reply cannot overwrite the t2 map",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: the new tenant must load its own status map: expected undefined to be defined"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map failure cannot turn the t2 chips into \"unknown\"",
+      "class": "NO_CREDIT_INDIRECT_TYPEERROR_ON_MISSING_REQUEST",
+      "assertion": "TypeError: Cannot read properties of undefined (reading 'resolve')"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the channel list is pending: no list request follows",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: a dead lifetime must not continue its initialization: expected [ { …(2) } ] to have a length of +0 but got 1"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) t1 -> t2 -> t1: the first t1 lifetime does not continue although the tenant string matches again",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected [ '/tenants/t1/channels' ] to deeply equal [ '/tenants/t1/channels', …(2) ]"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the first list is pending: no status-map request follows",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: initialization must stop after unmount: expected [ { …(2) } ] to have a length of +0 but got 1"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at the deep-link page lookup: the old conversation is never selected",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: no stale detail chain may start for any tenant: expected [ { …(5) } ] to have a length of +0 but got 1"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at a deep-link lookup that points to another page: that page is never loaded",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: a dead lifetime must not reload a list page: expected 2 to be 1 // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) tenant change at the deep-link page lookup: the old tenant's continuation does not select",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: the new tenant must be loaded: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) settled A, then pending B: header, count, messages, evaluation and download source are not A's",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: header must not show A while B is pending: expected 'Khách A' not to contain 'Khách A'"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) a reply whose conversation id is not the selected one is never shown as the selection's header or count",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected 'Người khác hẳn' to contain 'Khách A'"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (old A first)",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: old A must not publish while new A is pending: expected 'Người gửi · CN 27/09 16:00A-CŨ' not to contain 'A-CŨ'"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (new A first)",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected 'Người gửi · CN 27/09 16:00A-CŨ' to contain 'A-MỚI'"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) reversed evaluation replies for the same id: the newer lifetime keeps its evaluation",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected 'Màn này chưa đối chiếu nguồn của các …' to contain 'QC-MỚI'"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale success does not publish, does not clear the current spinner and starts no evaluation",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: B is still pending: its spinner must stay: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale rejection shows no error and leaves the current spinner and result alone",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: a superseded failure must not become the current error: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale evaluation success or failure cannot change the current evaluation spinner, data or error",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: stale evaluation must not appear for B: expected 'Màn này chưa đối chiếu nguồn của các …' not to contain 'QC-CỦA-A-MUỘN'"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) mobile back before completion clears the detail and late replies cannot bring it back",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: old detail data must stay cleared: expected [ { id: 'cA-Khách A-0', …(6) } ] to deeply equal []"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) mobile back then a late rejection and a new selection: no stale error and the new selection is intact",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2 with the same conversation id: the old tenant's reply cannot appear in the new tenant",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: tenant change must clear the selection: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2: t2 selected first, then the old t1 reply arrives late and loses",
+      "class": "INDIRECT_TENANT_LIST_NOT_RELOADED_NO_CREDIT",
+      "assertion": "Error: no conversation row containing Khách của T2"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (success-after-new) cannot touch the new one",
+      "class": "BEHAVIORAL",
+      "assertion": "AssertionError: expected 'Người gửi · CN 27/09 16:00TIN-CỦA-LẦN…' to contain 'TIN-CỦA-LẦN-MỚI'"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) healthy control: switching tenants and selecting again works end to end",
+      "class": "INDIRECT_TENANT_LIST_NOT_RELOADED_NO_CREDIT",
+      "assertion": "Error: no conversation row containing Khách của T2"
+    }
+  ],
+  "healthyControlsPassedOnBaseline": [
+    "conversations store: detail publication boundary (UI04) a failure of the current detail call still reaches its caller (healthy control)",
+    "conversations store: detail publication boundary (UI04) a single uncontested detail call publishes normally (healthy control)",
+    "conversations store: list publication boundary (UI04/UI06) a failure of the current list call still reaches its caller (healthy control)",
+    "conversations store: list publication boundary (UI04/UI06) list and detail generations are independent: a list call does not invalidate a pending detail call",
+    "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone UTC)",
+    "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone Asia/Ho_Chi_Minh)",
+    "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone America/New_York)",
+    "Message export dates on the Vietnam calendar (F04) a user-chosen date pair is submitted unchanged",
+    "Messages image resources follow the lifetime that requested them (UI08) healthy control: an image loaded for the current selection becomes one live object URL shown in the transcript",
+    "Messages image resources follow the lifetime that requested them (UI08) an active resource survives cleanup of an earlier selection (cleanup is not global)",
+    "Messages image resources follow the lifetime that requested them (UI08) failed image fetch of the current lifetime stays retryable",
+    "Messages image resources follow the lifetime that requested them (UI08) unmount revokes every object URL the lifetime still owns",
+    "Messages list: the latest list request wins (UI06) healthy control: a current list failure shows the alert and retry recovers",
+    "Messages list: the latest list request wins (UI06) a valid selection survives a filter change of the same tenant",
+    "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: an active deep link selects the conversation on the requested tab",
+    "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: a deep link on another page reloads that page then selects",
+    "Messages initialization and deep link stop when their lifetime ended (UI07) debounced search cannot publish after teardown",
+    "Messages detail: pending selection must not expose the previous conversation (UI01) healthy control: a single selection loads messages then evaluation and tabs keep their data",
+    "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale messages success leaves the current evaluation loading state alone",
+    "Messages detail: superseded success, failure and finally cannot change the current view (UI03) healthy control: a current failure shows the error and retry recovers",
+    "Messages detail: superseded success, failure and finally cannot change the current view (UI03) healthy control: a current evaluation failure leaves messages intact and shows the honest empty state",
+    "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (success-before-new) cannot touch the new one",
+    "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (error) cannot touch the new one",
+    "Messages detail: reset, tenant change and remount (UI05) an old owner unmounting AFTER the new one started must not cancel the new owner's request",
+    "Messages screen (UX-012) counts conversations, not messages (UX-16)",
+    "Messages screen (UX-012) names the latest analysis honestly: PASS may be classification",
+    "Messages screen (UX-012) R1: a failed status request never claims \"Chưa phân tích\"",
+    "Messages screen (UX-012) R1: while the status request is pending no status is claimed",
+    "Messages screen (UX-012) R1: after a successful response an absent entry is \"Chưa phân tích\"",
+    "Messages screen (UX-012) keeps list request parameters and debounced search",
+    "Messages screen (UX-012) list load error shows an alert with retry",
+    "Messages screen (UX-012) empty tenant vs no match are different states",
+    "Messages screen (UX-012) conversation tabs: QC shows issues, classification shows tags and never \"Vấn đề\"; both carry the source note",
+    "Messages screen (UX-012) export: a 200 JSON {error} body is shown, not downloaded; real content is downloaded"
+  ],
+  "creditRule": "only AssertionError failures tied to the named behavior earn detector credit; missing functions, return-value contract checks and harness lookup errors earn none",
+  "creditedBehavioralFailures": 34
+}

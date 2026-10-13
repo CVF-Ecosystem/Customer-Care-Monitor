@@ -1,6 +1,6 @@
 # Delegated R046 R4 evidence correction handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

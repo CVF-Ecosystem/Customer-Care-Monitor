@@ -1,0 +1,150 @@
+R090 focused frontend and forced build retry
+Command: npm test -- --reporter=dot src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+
+> frontend@0.0.0 test
+> vitest run --reporter=dot src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/frontend
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > hides notification logs from a default jobs:r member
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > hides notification logs from a default jobs:r member
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > renders only the channel section for channels:r even when the API returns a full payload
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/channels"
+[Vue Router warn]: No match found for location with path "/t1/messages"
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/channels"
+[Vue Router warn]: No match found for location with path "/t1/messages"
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > shows conversation channel counts to messages:r without exposing channels-only totals
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > shows conversation channel counts to messages:r without exposing channels-only totals
+Failed to create chart: can't acquire context from the given item
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/channels"
+[Vue Router warn]: No match found for location with path "/t1/messages"
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > shows notification logs to settings:r members and owner/admin
+[Vue Router warn]: No match found for location with path "/t1/channels"
+[Vue Router warn]: No match found for location with path "/t1/messages"
+[Vue Router warn]: No match found for location with path "/t1/jobs"
+[Vue Router warn]: No match found for location with path "/t1/results"
+[Vue Router warn]: No match found for location with path "/t1/activity-logs"
+[Vue Router warn]: No match found for location with path "/t1/cost-logs"
+[Vue Router warn]: No match found for location with path "/t1/notifications"
+[Vue Router warn]: No match found for location with path "/t1/mcp"
+[Vue Router warn]: No match found for location with path "/t1/users"
+[Vue Router warn]: No match found for location with path "/t1/settings"
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-permissions.spec.ts > Dashboard permission projection (R090) > clears old content and ignores a late old-tenant owner response after the current member resolves
+Failed to create chart: can't acquire context from the given item
+Failed to create chart: can't acquire context from the given item
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t1/channels"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t1/channels"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t3/channels"
+
+stderr | src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > ignores a late old-tenant owner permission response after the current channels:r member resolves
+[Vue Router warn]: No match found for location with path "/t3/channels"
+
+····x··
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/layout-permissions.spec.ts > DefaultLayout notification-log navigation permission (R090) > fails closed for unknown roles and malformed permission values
+AssertionError: expected { settings: 'r' } to deeply equal {}
+
+- Expected
++ Received
+
+- {}
++ {
++   "settings": "r",
++ }
+
+ ❯ src/__tests__/layout-permissions.spec.ts:118:49
+    116|     expect(unknown.text()).not.toContain(viMessages.nav_notification_l…
+    117|     expect(unknownAuth.tenantPerms.role).toBe('')
+    118|     expect(unknownAuth.tenantPerms.permissions).toEqual({})
+       |                                                 ^
+    119|   })
+    120|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 6 passed (7)
+   Start at  04:52:42
+   Duration  27.55s (transform 13.06s, setup 0ms, import 46.31s, tests 3.89s, environment 3.03s)
+
+focused_tests exit_code=1

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "r088.finalRun@1",
+  "stage": "typecheck",
+  "recordedAtUtc": "2026-10-12T14:17:53+00:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none",
+  "command": "Push-Location frontend; npx --no-install vue-tsc -b --force",
+  "cwd": "<ROOT>\\frontend",
+  "exitCode": 0,
+  "elapsedSeconds": 15.9,
+  "stdoutTail": ""
+}

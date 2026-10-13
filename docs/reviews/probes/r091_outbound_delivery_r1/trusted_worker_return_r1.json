@@ -1,0 +1,76 @@
+{
+  "exitCode": 0,
+  "phase": "worker-return",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=123 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=123 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract",
+        "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract"
+      ],
+      "ok": true,
+      "outcome": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "every candidate is explicitly not active; closeability contract was not checked"
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md, docs/reviews/R091_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md, docs/reviews/R091_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md, docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "findings": [],
+      "notes": [
+        "0 explicit claim line(s) and 7 document(s) scanned"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

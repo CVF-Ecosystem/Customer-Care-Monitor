@@ -1,0 +1,64 @@
+{
+  "exitCode": 0,
+  "phase": "pre-dispatch",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=98 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=98 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
+        "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROUTE-01"
+      ],
+      "controlId": "CVF-DG-ROUTE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md, docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

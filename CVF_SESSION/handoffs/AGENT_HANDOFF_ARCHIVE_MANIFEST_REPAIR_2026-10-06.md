@@ -1,6 +1,6 @@
 # Archive manifest successor repair handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,0 +1,26 @@
+{
+  "observedBeforeMaterialCommit": true,
+  "source": "Actual final staged material legacy and PowerShell5 catalog tool outputs",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "c46c4a",
+        "wall_time_seconds": 2.7823407,
+        "exit_code": 0,
+        "original_token_count": 131,
+        "output": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "f24b27",
+        "wall_time_seconds": 2.0298897,
+        "exit_code": 0,
+        "original_token_count": 21,
+        "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "recordedAtUtc": "2026-10-12T21:05:57.093985+00:00",
+  "source": "https://go.dev/dl/go1.26.0.windows-amd64.zip",
+  "checksumSource": "https://go.dev/dl/",
+  "version": "go version go1.26.0 windows/amd64",
+  "archiveSha256": "9bbe0fc64236b2b51f6255c05c4232532b8ecc0e6d2e00950bd3021d8a4d07d4",
+  "expectedSha256": "9bbe0fc64236b2b51f6255c05c4232532b8ecc0e6d2e00950bd3021d8a4d07d4",
+  "localPath": ".cvf/runtime/toolchain/go/bin/go.exe",
+  "systemInstallation": false,
+  "productionSourceEdits": 0
+}

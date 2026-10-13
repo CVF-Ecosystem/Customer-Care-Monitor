@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0",
+  "command": "python -B -m unittest discover -s scripts/tests -p test_cvf_downstream_gate*.py",
+  "returnCode": 0,
+  "stdout": "",
+  "stderr": "..................................................................\n----------------------------------------------------------------------\nRan 66 tests in 18.324s\n\nOK\n",
+  "testCount": 66,
+  "outcome": "PASS"
+}

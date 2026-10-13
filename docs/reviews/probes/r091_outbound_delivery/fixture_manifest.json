@@ -1,0 +1,67 @@
+{
+  "run_id": "8f4167ee0ea849a494fbca4ffa02a777",
+  "container": "ccma-r091-db-8f4167ee0ea8",
+  "network": "ccma-r091-net-8f4167ee0ea8",
+  "db_name": "ccma_r091",
+  "db_user": "ccma_r091",
+  "image": "mysql:8.0",
+  "image_id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "image_repo_digests": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "host_port": 64328,
+  "started_utc": "2026-10-12T22:59:43+00:00",
+  "commands": [
+    {
+      "proof": "docs/reviews/probes/r091_outbound_delivery/r091_f07_parse_save_common_tail.log",
+      "command": [
+        ".\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./engine",
+        "-run",
+        "^TestR091ParseAndSaveBatchFailuresPersistProgressAndUseCommonBackoffTail$",
+        "-count=1",
+        "-p=1"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-12T23:00:25+00:00",
+      "finished_utc": "2026-10-12T23:00:38+00:00",
+      "exit_code": 0
+    }
+  ],
+  "cleanup": {
+    "at_utc": "2026-10-12T23:00:43+00:00",
+    "container_removed": true,
+    "container_mounts_captured_before_removal": [
+      {
+        "Type": "volume",
+        "Name": "02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798",
+        "Destination": "/var/lib/mysql",
+        "RW": true,
+        "Propagation": "",
+        "Driver": "local",
+        "Mode": ""
+      }
+    ],
+    "volume_names_checked_after_removal": [
+      "02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798"
+    ],
+    "remaining_owned_container_volumes": [],
+    "all_recorded_container_volumes_absent": true,
+    "network_removed": true,
+    "ownership_labels_verified": true
+  },
+  "mounts": [
+    {
+      "Type": "volume",
+      "Name": "02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798",
+      "Destination": "/var/lib/mysql",
+      "RW": true,
+      "Propagation": "",
+      "Driver": "local",
+      "Mode": ""
+    }
+  ],
+  "network_internal": false,
+  "ready_utc": "2026-10-12T22:59:59+00:00",
+  "readiness_method": "host 127.0.0.1 TCP handshake plus in-container app-user SELECT 1 over TCP"
+}

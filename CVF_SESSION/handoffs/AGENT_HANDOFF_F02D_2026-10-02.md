@@ -1,6 +1,6 @@
 # Agent Handoff — F02-D Pancake message coverage
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

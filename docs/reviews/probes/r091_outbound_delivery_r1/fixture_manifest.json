@@ -1,0 +1,179 @@
+{
+  "run_id": "5b005e32bafc491287e1633995591743",
+  "container": "ccma-r091-db-5b005e32bafc",
+  "network": "ccma-r091-net-5b005e32bafc",
+  "db_name": "ccma_r091",
+  "db_user": "ccma_r091",
+  "image": "mysql:8.0",
+  "image_id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "image_repo_digests": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "host_port": 63747,
+  "proof_directory": "docs/reviews/probes/r091_outbound_delivery_r1",
+  "state_file": ".cvf/runtime/r091_outbound_fixture_r1_state.json",
+  "started_utc": "2026-10-13T06:29:27+07:00",
+  "commands": [
+    {
+      "proof": "docs/reviews/probes/r091_outbound_delivery_r1/r1_host_sql_readiness.log",
+      "command": [
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "run",
+        "../docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_probe.go"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-13T06:29:52+07:00",
+      "finished_utc": "2026-10-13T06:29:53+07:00",
+      "exit_code": 0
+    },
+    {
+      "proof": "docs/reviews/probes/r091_outbound_delivery_r1/r1_old_source_negative.log",
+      "command": [
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./notifications",
+        "./engine",
+        "-run",
+        "^(TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown|TestR091R1SMTPHELOFallbackPreservesLegacyDelivery|TestR091R1SMTPESMTPWithoutAUTHStillRejects|TestR091R1MarkerRejectsCapturedResultDeletedAfterUnlockedSnapshot|TestR091R1ClaimPersistenceFailureMakesNoOutboundCall|TestR091R1OutcomeReceiptAndLogFailuresRemainSendingWithoutResend|TestR091R1SMTPContextCancellationClosesStalledGreetingAndFinalDATA|TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait)$",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-13T06:30:11+07:00",
+      "finished_utc": "2026-10-13T06:30:25+07:00",
+      "exit_code": 1
+    },
+    {
+      "proof": "docs/reviews/probes/r091_outbound_delivery_r1/r1_analyzer_cancel_assertion_correction.log",
+      "command": [
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./engine",
+        "-run",
+        "^TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait$",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-13T06:30:48+07:00",
+      "finished_utc": "2026-10-13T06:31:02+07:00",
+      "exit_code": 0
+    },
+    {
+      "proof": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_host_sql_readiness_after_restart.log",
+      "command": [
+        ".\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "run",
+        "../docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_probe.go"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-13T00:18:46+00:00",
+      "finished_utc": "2026-10-13T00:18:47+00:00",
+      "exit_code": 0
+    },
+    {
+      "proof": "docs/reviews/probes/r091_outbound_delivery_r1/final_r1_notifications_engine.log",
+      "command": [
+        ".\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./notifications",
+        "./engine",
+        "-run",
+        "^TestR091",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-13T00:19:33+00:00",
+      "finished_utc": "2026-10-13T00:19:58+00:00",
+      "exit_code": 0
+    },
+    {
+      "proof": "docs/reviews/probes/r091_outbound_delivery_r1/final_r1_analyzer_owner_release.log",
+      "command": [
+        ".\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./engine",
+        "-run",
+        "^TestRunOwnerRemainsHeldUntilContextBoundSMTPReturns$",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "started_utc": "2026-10-13T00:20:37+00:00",
+      "finished_utc": "2026-10-13T00:20:48+00:00",
+      "exit_code": 0
+    }
+  ],
+  "cleanup": {
+    "at_utc": "2026-10-13T00:20:58+00:00",
+    "container_removed": true,
+    "container_mounts_captured_before_removal": [
+      {
+        "Type": "volume",
+        "Name": "fe3fa80f7931be6c3b8ce78eb954d4c056f096f42980d55fdeb64ebb1c1d11b8",
+        "Destination": "/var/lib/mysql",
+        "RW": true,
+        "Propagation": "",
+        "Driver": "local",
+        "Mode": ""
+      }
+    ],
+    "volume_names_checked_after_removal": [
+      "fe3fa80f7931be6c3b8ce78eb954d4c056f096f42980d55fdeb64ebb1c1d11b8"
+    ],
+    "remaining_owned_container_volumes": [],
+    "all_recorded_container_volumes_absent": true,
+    "network_removed": true,
+    "ownership_labels_verified": true
+  },
+  "mounts": [
+    {
+      "Type": "volume",
+      "Name": "fe3fa80f7931be6c3b8ce78eb954d4c056f096f42980d55fdeb64ebb1c1d11b8",
+      "Destination": "/var/lib/mysql",
+      "RW": true,
+      "Propagation": "",
+      "Driver": "local",
+      "Mode": ""
+    }
+  ],
+  "network_internal": false,
+  "ready_utc": "2026-10-13T06:29:42+07:00",
+  "readiness_method": "host 127.0.0.1 TCP handshake plus in-container app-user SELECT 1 over TCP",
+  "host_sql_readiness": {
+    "schemaVersion": "1.0",
+    "round": 1,
+    "fixtureRunId": "5b005e32bafc491287e1633995591743",
+    "container": "ccma-r091-db-5b005e32bafc",
+    "network": "ccma-r091-net-5b005e32bafc",
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "imageRepoDigests": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+    "loopbackBind": "127.0.0.1:64579",
+    "applicationUser": "ccma_r091",
+    "database": "ccma_r091",
+    "command": [
+      "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+      "run",
+      "../docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_probe.go"
+    ],
+    "workingDirectory": "backend",
+    "startedAtUtc": "2026-10-13T06:29:52+07:00",
+    "finishedAtUtc": "2026-10-13T06:29:53+07:00",
+    "exitCode": 0,
+    "method": "Host process used cached Go database/sql and mysql driver; app-user PingContext then SELECT 1 with a bounded five-second context; read-only synthetic SQL readiness.",
+    "environment": {
+      "TEST_DB_DSN": "redacted generated synthetic app-user DSN",
+      "GOPROXY": "off",
+      "GOSUMDB": "off"
+    },
+    "logPath": "docs/reviews/probes/r091_outbound_delivery_r1/r1_host_sql_readiness.log",
+    "result": "PASS",
+    "realProviderCalls": 0,
+    "realOutboundCalls": 0,
+    "customerDataRuns": 0
+  },
+  "prior_host_port": 64579,
+  "prior_ready_utc": "2026-10-13T06:29:42+07:00",
+  "resumed_utc": "2026-10-13T00:18:33Z",
+  "host_sql_ready_after_resume_utc": "2026-10-13T00:19:10+00:00",
+  "readiness_method_after_resume": "host loopback app-user PingContext plus SELECT 1 via pinned Go MySQL driver"
+}

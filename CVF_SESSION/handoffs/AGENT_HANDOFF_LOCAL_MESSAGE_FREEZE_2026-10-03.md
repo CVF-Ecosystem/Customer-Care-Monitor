@@ -1,6 +1,6 @@
 # Local message-contract closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

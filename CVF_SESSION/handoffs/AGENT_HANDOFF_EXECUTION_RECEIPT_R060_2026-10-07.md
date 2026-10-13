@@ -1,6 +1,6 @@
 # R060 execution receipt compatibility successor handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

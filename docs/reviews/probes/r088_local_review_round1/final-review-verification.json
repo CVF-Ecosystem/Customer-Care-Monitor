@@ -1,0 +1,111 @@
+{
+  "recordedAtUtc": "2026-10-12T18:27:23.750261+00:00",
+  "reviewDisposition": "CHANGES_REQUIRED",
+  "findingSetSha256": "3129726740a0c7a9d0569207a4646e90812ee02c8d7d24fb7588213231e2dbe1",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "exitCode": 0,
+      "output": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "../.Controlled-Vibe-Framework-CVF/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py",
+        "run",
+        "--phase",
+        "reviewer-fast",
+        "--project-root",
+        ".",
+        "--trusted",
+        "--packet",
+        "docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md",
+        "--packet",
+        "docs/reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md",
+        "--no-receipt"
+      ],
+      "exitCode": 0,
+      "output": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=086330e1860df291ea58a56726914bb0b4d53087 candidates=49 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md, docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 4 document(s) scanned\r\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\r\n"
+    },
+    {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/manage_cvf_downstream_catalog.ps1",
+        "-Check"
+      ],
+      "exitCode": 0,
+      "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "currentFrontendMatchesWorkerFinal": {
+    "frontend/src/__tests__/conversations-lifetime.spec.ts": true,
+    "frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts": true,
+    "frontend/src/__tests__/messages-lifetime-resources.spec.ts": true,
+    "frontend/src/__tests__/messages-lifetime-startup.spec.ts": true,
+    "frontend/src/__tests__/messages-lifetime.spec.ts": true,
+    "frontend/src/stores/conversations.ts": true,
+    "frontend/src/views/Messages.vue": true
+  },
+  "originalWorkerReturnAndEvidencePreserved": {
+    "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md": true,
+    "docs/reviews/probes/r088_messages_lifetime/baseline-classification.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run1.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run2.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source-run3.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/baseline-unchanged-source.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter1.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter2.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/candidate-iter3.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/final-build.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/final-gates.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/final-hashes.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/final-protected.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/final-tests.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/final-typecheck.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results-run1-20.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results-run2-24.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/mutation-results.json": true,
+    "docs/reviews/probes/r088_messages_lifetime/r088_final_run.py": true,
+    "docs/reviews/probes/r088_messages_lifetime/r088_mutation_driver.py": true,
+    "docs/reviews/probes/r088_messages_lifetime/r088_overlay_runner.py": true
+  },
+  "reviewerProductionEdits": 0,
+  "reviewerRuntimeTests": {
+    "passed": 1,
+    "failed": 2,
+    "skipped": 0,
+    "scope": "Only three new explicit-intent/deep-link tests; setup-only failure recorded separately"
+  },
+  "hostedCiObserved": false,
+  "materialCommitCount": 0,
+  "continuityCommitCount": 0,
+  "providerCalls": 0,
+  "overlayCleanup": {
+    "disposition": "BLOCKED_AUTOMATIC_APPROVAL_REVIEW",
+    "reason": "Tool returned blocked by policy before command execution; no cleanup action ran.",
+    "retainedDirectories": [
+      "D:/r088-local-review-20261013",
+      "D:/r088-local-review-20261013-run2"
+    ],
+    "liveNodeModulesRetained": true
+  }
+}

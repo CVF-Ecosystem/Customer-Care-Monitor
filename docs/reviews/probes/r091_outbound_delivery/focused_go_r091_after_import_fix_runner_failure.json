@@ -1,0 +1,11 @@
+{
+  "observed_at_utc": "2026-10-12T22:48:09+00:00",
+  "kind": "runner_output_capture_failure",
+  "proof": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091_after_import_fix.log",
+  "started_utc": null,
+  "finished_utc": null,
+  "child_exit_code": null,
+  "test_credit": "NONE_OUTCOME_UNKNOWN",
+  "cause": "scripts/r091_outbound_fixture.py used subprocess text decoding with the Windows default cp1252; its reader raised UnicodeDecodeError on Go JSON output and helper serialization failed before writing the requested log.",
+  "correction": "Use explicit UTF-8 decoding with replacement in the owned fixture helper; rerun only the blocked notifications and engine packages and preserve this attempt as unresolved."
+}

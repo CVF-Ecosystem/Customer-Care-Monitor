@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-089",
+  "authorityKind": "OWNER_AUTHORIZED_AUTH_PERMISSION_REFRESH_REPAIR",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/auth_intake",
+    "repairWorker": "/root/auth_intake",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/users.go",
+    "backend/api/handlers/auth.go",
+    "backend/api/handlers/dashboard.go",
+    "backend/api/router.go",
+    "frontend/src/views/Dashboard.vue",
+    "frontend/src/layouts/DefaultLayout.vue",
+    "backend/api/handlers/auth_permissions*.go",
+    "backend/api/handlers/auth_token_version*.go",
+    "backend/api/handlers/users_password_reset*.go",
+    "backend/api/handlers/dashboard_permission*.go",
+    "backend/api/handlers/dashboard*_test.go",
+    "backend/api/handlers/users_role_reset*_test.go",
+    "backend/api/handlers/refresh_token*_test.go",
+    "backend/api/handlers/auth_permissions*_test.go",
+    "backend/api/router_permissions*_test.go",
+    "frontend/src/__tests__/dashboard-permissions*.spec.ts",
+    "frontend/src/__tests__/layout-permissions*.spec.ts",
+    "frontend/src/__tests__/fixtures/auth-permissions/*",
+    "scripts/r089_auth_fixture.py",
+    "docs/work_orders/CCMAI_RUNTIME_089_AUTH_PERMISSIONS.md",
+    "docs/reviews/planning/R089_AUTH_PERMISSIONS_SPEC_2026-10-13.md",
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "Core_gate_workflow_policy_dependency_manifest_or_historical_seed_rewrite",
+    "production_or_existing_container_database_customer_credentials_or_account_access",
+    "real_provider_channel_API_outbound_notification_or_application_deploy_effects",
+    "worker_commit_push_merge_force_push_or_self_review",
+    "full_product_stage_FREEZE_or_live_AI_governance_claim_without_evidence"
+  ],
+  "status": "PARKED",
+  "phase": "REVIEW",
+  "baseCommit": "7d7b6e483973faf79ead2240728b16f4f0597376",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_089_AUTH_PERMISSIONS.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "INVALID_UNEXECUTED_AUTHORITY_SEED_PRESERVED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "PARKED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "PARKED"
+}

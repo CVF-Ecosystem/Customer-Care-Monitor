@@ -1,6 +1,6 @@
 # Local MCP job-execution contract closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

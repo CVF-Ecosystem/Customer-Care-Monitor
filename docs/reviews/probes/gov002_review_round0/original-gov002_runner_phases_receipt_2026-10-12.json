@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "phases": {
+    "pre-dispatch": {
+      "returnCode": 0,
+      "stdout": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=83 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0",
+      "outcome": "PASS"
+    },
+    "worker-return": {
+      "returnCode": 0,
+      "stdout": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=83 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 2 document(s) scanned\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0",
+      "outcome": "PASS"
+    },
+    "reviewer-fast": {
+      "returnCode": 0,
+      "stdout": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=83 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 2 document(s) scanned\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0",
+      "outcome": "PASS"
+    },
+    "pre-commit": {
+      "returnCode": 0,
+      "stdout": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=83 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 2 document(s) scanned\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0",
+      "outcome": "PASS"
+    }
+  },
+  "overallOutcome": "PASS"
+}

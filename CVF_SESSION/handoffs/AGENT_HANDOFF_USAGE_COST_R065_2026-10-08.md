@@ -1,6 +1,6 @@
 # R065 complete bounded usage/cost delivery handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

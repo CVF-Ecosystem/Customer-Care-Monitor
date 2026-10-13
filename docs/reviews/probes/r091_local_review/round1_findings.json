@@ -1,0 +1,34 @@
+{
+  "rootCauseClusterId": "CCMAI-OUTBOUND-DELIVERY-BACKOFF",
+  "reviewRound": 1,
+  "findings": [
+    {
+      "id": "R091-R1-F01",
+      "priority": "P1",
+      "source": "backend/notifications/telegram.go Send decoded OK bool",
+      "basis": "Missing or null ok becomes false and incorrectly proves nonacceptance. Only explicit Boolean false is retryable failed; absent/null/wrong-type/not-object is unknown.",
+      "acceptance": "New missing/null/nonobject/wrong-type cases fail before fix and pass after; explicit true/false, decode/read/network errors remain correct and secret-safe; ambiguous receipt reentry does not resend."
+    },
+    {
+      "id": "R091-R1-F02",
+      "priority": "P2",
+      "source": "backend/notifications/email.go AUTH unavailable branch; pinned Go1.26 src/net/smtp/smtp.go SendMail",
+      "basis": "Existing SendMail skips auth when EHLO fails and HELO succeeds (c.ext nil); new implementation rejects that previously supported path. Do not weaken ESMTP AUTH-missing behavior.",
+      "acceptance": "Actual synthetic HELO-only relay healthy control supported before and after; ESMTP missing AUTH still fails without DATA; AUTH and STARTTLS semantics preserved. New candidate detector fails before repair."
+    },
+    {
+      "id": "R091-R1-F03",
+      "priority": "P2",
+      "source": "backend/notifications/delivery_manifest.go updateRunNotifiedAt",
+      "basis": "Count is an unlocked snapshot; captured row can disappear after it, Update RowsAffected is unchecked, nil can report successful marker with no captured row. Missing captured rows must fail safely.",
+      "acceptance": "Deterministic real MySQL concurrent delete/missing-row or zero-row write detector before/after, checked update affected set under transaction/row locking as appropriate; healthy/idempotent and marker-only retry no resend controls."
+    },
+    {
+      "id": "R091-R1-F04",
+      "priority": "P2",
+      "source": "R091 acceptance matrix and dispatcher_delivery_test.go/email_delivery_test.go/analyzer_batch_bookkeeping_contract_test.go",
+      "basis": "Final receipts do not exercise receipt-claim update failure, outcome receipt/log persistence failure after possible acceptance, intermediate/final DATA cancellation with server-observed closure, actual Analyzer three-error streak reset or cancellation during wait preventing next provider call. Existing log-insert failure/greeting/helper schedule tests cannot establish those distinct mandatory paths.",
+      "acceptance": "Targeted actual DB/SMTP/Analyzer controls: claim update failure zero calls/pending; outcome receipt or log update failure rolls both back to conservative sending and reentry zero extra calls/unmarked; stalled command/final DATA contexts return promptly and server observes close before test cleanup; real batch sequence selects10/10/30/2 and persisted member errors, cancellation during common wait makes no next provider call. Reuse valid A/UI/build proof; no duplicate broad campaigns."
+    }
+  ]
+}

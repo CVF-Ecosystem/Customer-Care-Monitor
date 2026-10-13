@@ -205,6 +205,15 @@ const isDark = computed(() => theme.global.current.value.dark)
 const isRail = computed(() => mdAndUp.value && rail.value)
 
 const tenantId = computed(() => route.params.tenantId as string)
+const tenantRole = ref('')
+const tenantPermissions = ref<Record<string, string>>({})
+let tenantPermissionRequestId = 0
+function canViewTenantNavigation(resource: string): boolean {
+  if (tenantRole.value === 'owner' || tenantRole.value === 'admin') return true
+  if (tenantRole.value !== 'member') return false
+  const permission = tenantPermissions.value[resource]
+  return typeof permission === 'string' && permission.includes('r')
+}
 
 interface TenantItem { id: string; name: string; slug: string }
 const tenants = ref<TenantItem[]>([])
@@ -219,9 +228,40 @@ watch(() => route.path, () => {
   }
 })
 
-watch(tenantId, async (id) => {
+watch(tenantId, async (id, _oldId, onCleanup) => {
+  const requestId = ++tenantPermissionRequestId
+  onCleanup(() => {
+    if (tenantPermissionRequestId === requestId) tenantPermissionRequestId++
+  })
+  tenantRole.value = ''
+  tenantPermissions.value = {}
+  authStore.tenantPerms = { role: '', permissions: {} }
   if (id) {
-    authStore.fetchTenantPermissions(id)
+    try {
+      const { data } = await api.get(`/tenants/${id}/me`)
+      if (requestId === tenantPermissionRequestId && id === tenantId.value) {
+        const role = ['owner', 'admin', 'member'].includes(data.role) ? data.role : ''
+        let permissions: Record<string, string> = {}
+        if (role && typeof data.permissions === 'string') {
+          try {
+            const parsed = JSON.parse(data.permissions)
+            if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+              for (const [key, value] of Object.entries(parsed)) {
+                if (typeof value === 'string') permissions[key] = value
+              }
+            }
+          } catch { /* malformed permission data fails closed */ }
+        }
+        tenantRole.value = role
+        tenantPermissions.value = permissions
+        authStore.tenantPerms = { role, permissions }
+      }
+    } catch {
+      if (requestId === tenantPermissionRequestId && id === tenantId.value) {
+        tenantRole.value = ''
+        tenantPermissions.value = {}
+      }
+    }
     if (!tenants.value.length) {
       try {
         const { data } = await api.get('/tenants')
@@ -229,7 +269,7 @@ watch(tenantId, async (id) => {
       } catch { /* ignore */ }
     }
   }
-}, { immediate: true })
+}, { immediate: true, flush: 'sync' })
 
 // Profile dialog
 const profileDialog = ref(false)
@@ -261,12 +301,12 @@ const navItems = computed(() => {
     { icon: 'mdi-clipboard-list', label: 'nav_results', route: `${base}/results`, exact: false, perm: 'jobs' },
     { icon: 'mdi-text-box-search', label: 'activity_logs', route: `${base}/activity-logs`, exact: false, perm: 'settings' },
     { icon: 'mdi-currency-usd', label: 'cost_logs', route: `${base}/cost-logs`, exact: false, perm: 'settings' },
-    { icon: 'mdi-bell-ring', label: 'nav_notification_logs', route: `${base}/notifications`, exact: false, perm: 'jobs' },
+    { icon: 'mdi-bell-ring', label: 'nav_notification_logs', route: `${base}/notifications`, exact: false, perm: 'settings' },
     { icon: 'mdi-api', label: 'nav_mcp', route: `${base}/mcp`, exact: false, perm: 'settings' },
     { icon: 'mdi-account-group', label: 'nav_users', route: `${base}/users`, exact: false, perm: 'settings' },
     { icon: 'mdi-cog', label: 'nav_settings', route: `${base}/settings`, exact: false, perm: 'settings' },
   ]
-  return all.filter(item => !item.perm || authStore.canView(item.perm))
+  return all.filter(item => !item.perm || canViewTenantNavigation(item.perm))
 })
 
 const userInitials = computed(() => {

@@ -1,0 +1,32 @@
+
+> frontend@0.0.0 test
+> vitest run src/__tests__/notification-route-permissions.spec.ts src/__tests__/notification-delivery-status.spec.ts src/__tests__/dashboard-qc-card.spec.ts src/__tests__/dashboard-business-day.spec.ts src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/frontend
+
+ ❯ src/__tests__/notification-route-permissions.spec.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/notification-route-permissions.spec.ts [ src/__tests__/notification-route-permissions.spec.ts ]
+ReferenceError: window is not defined
+ ❯ useHistoryStateNavigation ../../../../../UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/vue-router/dist/vue-router.mjs:102:55
+ ❯ createWebHistory ../../../../../UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/vue-router/dist/vue-router.mjs:162:28
+ ❯ src/router/index.ts:14:12
+     12|
+     13| const router = createRouter({
+     14|   history: createWebHistory(),
+       |            ^
+     15|   routes: [
+     16|     // Wireframe: trang tĩnh để duyệt bố cục trước khi code thật. Khôn…
+ ❯ src/__tests__/notification-route-permissions.spec.ts:8:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 5 passed (6)
+      Tests  18 passed (18)
+   Start at  05:50:09
+   Duration  16.48s (transform 18.31s, setup 0ms, import 71.78s, tests 4.27s, environment 2.94s)
+

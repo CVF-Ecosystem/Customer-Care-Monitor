@@ -1,0 +1,9 @@
+R090 forced frontend validation
+Command: vue-tsc -b --force
+src/layouts/DefaultLayout.vue(245,15): error TS2322: Type '{ [k: string]: unknown; }' is not assignable to type 'Record<string, string>'.
+  'string' index signatures are incompatible.
+    Type 'unknown' is not assignable to type 'string'.
+src/views/Dashboard.vue(529,11): error TS2322: Type '{ [k: string]: unknown; }' is not assignable to type 'Record<string, string>'.
+  'string' index signatures are incompatible.
+    Type 'unknown' is not assignable to type 'string'.
+vue-tsc exit_code=2

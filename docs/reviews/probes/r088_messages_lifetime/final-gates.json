@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "r088.finalRun@1",
+  "stage": "gates",
+  "recordedAtUtc": "2026-10-12T14:23:02+00:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none",
+  "runs": [
+    {
+      "name": "preflight",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight",
+      "exitCode": 0,
+      "expected": "PASS (7/7 executed gates passed)",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [],
+      "outputTail": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n"
+    },
+    {
+      "name": "worker-return-trusted",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\scripts/lib/downstream_governance/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --trusted --packet docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md --packet docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md --no-receipt",
+      "exitCode": 0,
+      "expected": "RESULT: PASS",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [
+        "[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked"
+      ],
+      "outputTail": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=086330e1860df291ea58a56726914bb0b4d53087 candidates=38 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 2 document(s) scanned\r\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\r\n"
+    },
+    {
+      "name": "pre-dispatch",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --packet docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md --no-receipt",
+      "exitCode": 0,
+      "expected": "RESULT: PASS",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [
+        "[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked",
+        "[PASS] CVF-DG-ROUTE-01 PASS"
+      ],
+      "outputTail": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=086330e1860df291ea58a56726914bb0b4d53087 candidates=38 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md\r\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\r\n"
+    },
+    {
+      "name": "worker-return",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --packet docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md --packet docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md --no-receipt",
+      "exitCode": 0,
+      "expected": "RESULT: PASS",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [
+        "[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked"
+      ],
+      "outputTail": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=086330e1860df291ea58a56726914bb0b4d53087 candidates=38 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 2 document(s) scanned\r\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\r\n"
+    },
+    {
+      "name": "reviewer-fast",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase reviewer-fast --project-root . --packet docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md --packet docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md --no-receipt",
+      "exitCode": 0,
+      "expected": "RESULT: PASS",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [
+        "[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked",
+        "[PASS] CVF-DG-ROUTE-01 PASS"
+      ],
+      "outputTail": "ONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=086330e1860df291ea58a56726914bb0b4d53087 candidates=38 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 2 document(s) scanned\r\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\r\n"
+    },
+    {
+      "name": "pre-commit",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-commit --project-root . --packet docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md --packet docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md --no-receipt",
+      "exitCode": 0,
+      "expected": "RESULT: PASS",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [
+        "[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked"
+      ],
+      "outputTail": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=086330e1860df291ea58a56726914bb0b4d53087 candidates=38 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_2026-10-12.md\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 2 document(s) scanned\r\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\r\n"
+    },
+    {
+      "name": "closeability",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/check_gate_to_role_closeability.py --repo-root . --base 086330e1860df291ea58a56726914bb0b4d53087 --head 086330e1860df291ea58a56726914bb0b4d53087 --enforce",
+      "exitCode": 0,
+      "expected": "Violations: 0",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [],
+      "outputTail": "=== CVF Gate-To-Role Closeability Guard ===\r\nViolations: 0\r\nNOT_APPLICABLE_WITH_REASON docs/work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; checkedControlIds=work_order_status_grammar; uncheckedControlIds=closeability_contract\r\nCOMPLIANT\r\n"
+    },
+    {
+      "name": "catalog-pwsh",
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/manage_cvf_downstream_catalog.ps1 -Check",
+      "exitCode": 0,
+      "expected": "[PASS]",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [],
+      "outputTail": "[PASS] Governed downstream catalog is valid and generated views match source truth.\r\n"
+    },
+    {
+      "name": "catalog-windows-powershell",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/manage_cvf_downstream_catalog.ps1 -Check",
+      "exitCode": 0,
+      "expected": "[PASS]",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [],
+      "outputTail": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+    },
+    {
+      "name": "doctor",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\scripts/check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .",
+      "exitCode": 0,
+      "expected": "RESULT: PASS",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [],
+      "outputTail": "owledge/ folder present (optional)               [PASS]\n  Seven-step phase model is canonical                [PASS]\n  Project continuity and catalog front doors exist   [PASS]\n  Active session state resolves its handoff          [PASS]\n  Implementation status and module registry are valid JSON [PASS]\n  AGENTS contract defines roles and seven steps      [PASS]\n  Pinned CVF core commit is public-remote reachable  [PASS]\n  Session and tranche continuity rehydration required [PASS]\n  Governed downstream catalog validates (--check)    [PASS]\n  Gate CVF-DG-INST-01                                [PASS]\n  Gate CVF-DG-CONT-01                                [PASS]\n\n  GATE_COVERAGE: INSTALLED=7 INVOKED=26 NOT_APPLICABLE_WITH_REASON=9 hostedCiObserved=false\n  RESULT: PASS (27/27 checks passed)\n  Scope: the listed doctor checks only. Not a claim of hosted CI, real adoption or runtime AI enforcement.\n"
+    },
+    {
+      "name": "diff-check",
+      "command": "git diff --check",
+      "exitCode": 0,
+      "expected": "exit 0",
+      "outcome": "AS_EXPECTED",
+      "applicabilityAndRouting": [],
+      "outputTail": ""
+    }
+  ],
+  "unexpected": [],
+  "note": "NOT_APPLICABLE_WITH_REASON rows mean that contract was not checked for that packet; the order is COMPLETE_PENDING_REVIEW, not an active dispatch state"
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "overlay-setup",
+  "disposition": "FAILED_BEFORE_TEST_EXECUTION",
+  "reason": "Local runner passed PowerShell -Command paths as positional arguments; $args[0] was null. Fixed literal-quoted named paths in run2.",
+  "attributedTo": "Codex /root",
+  "workerDetectorCredit": false,
+  "productionWrites": 0
+}

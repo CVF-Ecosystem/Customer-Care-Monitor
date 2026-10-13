@@ -1,0 +1,32 @@
+{
+  "bundleSha256": "c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+  "ciWorkflow": {
+    "disposition": "CREATED",
+    "path": ".github/workflows/cvf-downstream-gates.yml",
+    "renderedSha256": "0fabcd624ad87affb370b67191cfa9dc6c544d33abff8d80f88415a3277208d5"
+  },
+  "coreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "files": {
+    "check_gate_to_role_closeability.py": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+    "cvf_dg_applicability.py": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+    "cvf_dg_common.py": "3fb173f0be42a85ba5e239535b41ce7cb9f8781a20a99c88cf46e8cb1701e9be",
+    "cvf_dg_continuity.py": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+    "cvf_dg_coverage.py": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+    "cvf_dg_install.py": "59758a59ebd7e16cda459f2eaa09e014bed38b415c681744cbabe2c62edb39f5",
+    "cvf_dg_intake.py": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+    "cvf_dg_review.py": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+    "cvf_dg_routing.py": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+    "cvf_downstream_gate_profile.json": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+    "cvf_downstream_gate_runner.py": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+    "git-pre-commit.template": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+    "project_learning_home.template.md": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+    "project_learning_record.template.md": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+  },
+  "gatesDir": "scripts/cvf_gates",
+  "hashAlgorithm": "sha256-lf-normalized",
+  "profileId": "cvf.downstreamGateProfile@1.1.0",
+  "profileSha256": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+  "profileVersion": "1.1.0",
+  "runnerSha256": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+  "schemaVersion": "cvf.downstreamGateLock@1.0.0"
+}

@@ -1,0 +1,28 @@
+{
+  "owner": "Codex /root",
+  "sourceTestsRecreated": 0,
+  "phases": [
+    {
+      "chunk_id": "7f1dd3",
+      "wall_time_seconds": 2.5437241,
+      "exit_code": 0,
+      "original_token_count": 131,
+      "output": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n"
+    },
+    {
+      "chunk_id": "b090cd",
+      "wall_time_seconds": 0.7592831,
+      "exit_code": 0,
+      "original_token_count": 467,
+      "output": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=0813ec79bcc6687f13b72260094d2b669af697e4 candidates=60 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md, docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md, docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md, docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md, docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure.md, docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure.md, docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure.md\r\n       note: docs/reviews/probes/r090_auth_permissions/legacy_ui_identity_fixture.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n       note: docs/reviews/probes/r090_auth_permissions/local_fixture_retry_disposition.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n       note: docs/reviews/probes/r090_auth_permissions/ui_messages_projection_scaffold_failure.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 13 document(s) scanned\r\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\r\n"
+    },
+    {
+      "chunk_id": "12e48d",
+      "wall_time_seconds": 0.734102,
+      "exit_code": 0,
+      "original_token_count": 494,
+      "output": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=0813ec79bcc6687f13b72260094d2b669af697e4 candidates=60 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md, docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md, docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md, docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md, docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure.md, docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure.md, docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure.md\r\n       note: docs/reviews/probes/r090_auth_permissions/legacy_ui_identity_fixture.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n       note: docs/reviews/probes/r090_auth_permissions/local_fixture_retry_disposition.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n       note: docs/reviews/probes/r090_auth_permissions/ui_messages_projection_scaffold_failure.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 13 document(s) scanned\r\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\r\n"
+    }
+  ],
+  "applicability": "R090 BLOCKED_WITH_REASON explicitly inactive, APPL NOT_APPLICABLE; no false contract CHECKED claim"
+}

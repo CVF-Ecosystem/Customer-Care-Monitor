@@ -1,0 +1,23 @@
+{
+  "owner": "Codex /root",
+  "seedCommit": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
+  "activeOrder": "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
+  "workerBuildAcknowledgment": "PENDING_NOT_IMPLIED_BY_ROOT_PREPARATION",
+  "sourceTestFixtureEffects": 0,
+  "gateRuns": [
+    {
+      "chunk_id": "bfab93",
+      "wall_time_seconds": 2.2351238,
+      "exit_code": 0,
+      "original_token_count": 131,
+      "output": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n"
+    },
+    {
+      "chunk_id": "fb3d0f",
+      "wall_time_seconds": 0.6242959,
+      "exit_code": 0,
+      "original_token_count": 123,
+      "output": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=5441a18116e4b897549750cd7317ffdb8ae9e74b candidates=12 deleted=0\r\n[PASS] CVF-DG-APPL-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md\r\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\r\n"
+    }
+  ]
+}

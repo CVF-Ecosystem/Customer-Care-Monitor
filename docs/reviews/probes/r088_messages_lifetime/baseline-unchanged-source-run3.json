@@ -1,0 +1,473 @@
+{
+  "schemaVersion": "r088.overlayRun@1",
+  "label": "baseline",
+  "recordedAtUtc": "2026-10-12T14:00:36+00:00",
+  "source": "head",
+  "swappedProduction": [
+    {
+      "path": "frontend/src/views/Messages.vue",
+      "lfSha256": "3f8ad239d8b5e6a24ef063dfee528887162ce6b5450ed23c33fc6141eb3480ea"
+    },
+    {
+      "path": "frontend/src/stores/conversations.ts",
+      "lfSha256": "71160acfe8b90df1aea0695cd58c7a0d78769963c496a2a8cbca6e16490ecf21"
+    }
+  ],
+  "mutations": [],
+  "command": "npm --prefix <ROOT>\\frontend test -- src/__tests__/conversations-lifetime.spec.ts src/__tests__/messages-lifetime.spec.ts src/__tests__/messages-lifetime-startup.spec.ts src/__tests__/messages-lifetime-resources.spec.ts src/__tests__/messages-screen.spec.ts src/__tests__/messages-business-day.spec.ts --reporter=json --outputFile=<ROOT>\\vitest-result.json",
+  "exitCode": 1,
+  "elapsedSeconds": 17.5,
+  "counts": {
+    "failed": 40,
+    "passed": 34
+  },
+  "suiteLevelFailures": [],
+  "tests": [
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) overlapping detail calls: the later call wins whatever order the replies arrive in",
+      "status": "failed",
+      "failure": "AssertionError: B-first: expected 'A' to be 'B' // Object.is equality\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:54:52\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) A -> B -> A: an old A reply cannot win because the id matches",
+      "status": "failed",
+      "failure": "AssertionError: old A must not publish while new A is pending: expected [ { id: 'A-Khách A-0', …(6) } ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:68:77\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a new detail call hides the previous conversation immediately",
+      "status": "failed",
+      "failure": "AssertionError: A data must not stay visible while B is pending: expected [ { id: 'A-Khách A-0', …(6) } ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:93:79\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a late rejection of a superseded detail call neither throws to its caller nor touches current data",
+      "status": "failed",
+      "failure": "AssertionError: a superseded call must not surface its failure: expected Error: mạng lỗi muộn to not be an instance of Error\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1381:15)\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1151:15)\n    at Proxy.methodWrapper (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/chai/index.js:1700:25)\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:105:75\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:12"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a failure of the current detail call still reaches its caller (healthy control)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: detail publication boundary (UI04) a single uncontested detail call publishes normally (healthy control)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) overlapping list calls: the latest request wins list and total in either reply order",
+      "status": "failed",
+      "failure": "AssertionError: new-first: expected [ 'trang-1' ] to deeply equal [ 'trang-2' ]\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:145:70\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) a late rejection of an older list call is swallowed and leaves the newer result alone",
+      "status": "failed",
+      "failure": "AssertionError: expected Error: lỗi muộn to not be an instance of Error\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1381:15)\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1151:15)\n    at Proxy.methodWrapper (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/chai/index.js:1700:25)\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:158:29\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) a failure of the current list call still reaches its caller (healthy control)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: list publication boundary (UI04/UI06) list and detail generations are independent: a list call does not invalidate a pending detail call",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate or clear a newer owner's detail work",
+      "status": "failed",
+      "failure": "TypeError: store.resetDetail is not a function\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:194:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:296:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:26\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1681:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1678:10)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1660:20\n"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by the current owner clears data and drops its pending replies",
+      "status": "failed",
+      "failure": "TypeError: store.reset is not a function\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:207:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:296:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:26\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1681:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1678:10)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1660:20\n    at"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) cleanup by an old owner cannot invalidate a newer owner's list work",
+      "status": "failed",
+      "failure": "TypeError: store.reset is not a function\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:223:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:296:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:26\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1681:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1678:10)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1660:20\n    at"
+    },
+    {
+      "file": "conversations-lifetime.spec.ts",
+      "title": "conversations store: owner-scoped cleanup (UI04/UI05 contract) fetch calls report whether they published",
+      "status": "failed",
+      "failure": "AssertionError: expected undefined to be false // Object.is equality\n    at <ROOT>/frontend/src/__tests__/conversations-lifetime.spec.ts:236:25\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone UTC)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone Asia/Ho_Chi_Minh)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) default range is exactly seven Vietnam dates ending today and is submitted as date-only strings (browser zone America/New_York)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-business-day.spec.ts",
+      "title": "Message export dates on the Vietnam calendar (F04) a user-chosen date pair is submitted unchanged",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) healthy control: an image loaded for the current selection becomes one live object URL shown in the transcript",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount with a pending image fetch: the late result leaves no live object URL",
+      "status": "failed",
+      "failure": "AssertionError: an allocation after teardown would leak: expected [ 'blob:synthetic-1' ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-resources.spec.ts:58:68\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount while the response body is still downloading: finishing it leaves no live object URL",
+      "status": "failed",
+      "failure": "AssertionError: expected [ 'blob:synthetic-1' ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-resources.spec.ts:69:25\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) reset (mobile back) with a pending image fetch: the late result leaves no live object URL",
+      "status": "failed",
+      "failure": "AssertionError: a result for a reset lifetime must not stay allocated: expected [ 'blob:synthetic-1' ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-resources.spec.ts:80:82\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) a later lifetime that needs the same URL loads it itself and the old fetch cannot own it",
+      "status": "failed",
+      "failure": "AssertionError: the new lifetime must issue its own fetch for the shared URL: expected [ { …(6) } ] to have a length of 2 but got 1\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1384:20)\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1151:15)\n    at Proxy.methodWrapper (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/chai/index.js:1700:25)\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-resources.spec.ts:90:87\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change releases the previous tenant's object URLs",
+      "status": "failed",
+      "failure": "AssertionError: the old tenant's resource must be released: expected [ 'blob:synthetic-1' ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-resources.spec.ts:108:72\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) tenant change with a pending image fetch: the old result allocates nothing",
+      "status": "failed",
+      "failure": "AssertionError: expected [ 'blob:synthetic-1' ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-resources.spec.ts:118:25\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) an active resource survives cleanup of an earlier selection (cleanup is not global)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) failed image fetch of the current lifetime stays retryable",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-resources.spec.ts",
+      "title": "Messages image resources follow the lifetime that requested them (UI08) unmount revokes every object URL the lifetime still owns",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) reversed success: an older (initial) list reply cannot restore the previous query's rows",
+      "status": "failed",
+      "failure": "AssertionError: late older list must not publish: expected 'FBDanh sách đầu15 ngày trướcChưa phân…' to contain 'Kết quả tìm'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:46:61\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) a late rejection of an older list request shows no list error over the newer success",
+      "status": "failed",
+      "failure": "AssertionError: stale catch must not become the list error: expected true to be false // Object.is equality\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:60:77\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) an older request settling while a newer one is pending neither publishes nor ends the busy state",
+      "status": "failed",
+      "failure": "AssertionError: stale list must not replace rows: expected 'FBKết quả a15 ngày trướcChưa phân tíc…' not to contain 'Kết quả a'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:77:65\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) healthy control: a current list failure shows the alert and retry recovers",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) a valid selection survives a filter change of the same tenant",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map reply cannot overwrite the t2 map",
+      "status": "failed",
+      "failure": "AssertionError: the new tenant must load its own status map: expected undefined to be defined\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:123:66\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map failure cannot turn the t2 chips into \"unknown\"",
+      "status": "failed",
+      "failure": "TypeError: Cannot read properties of undefined (reading 'resolve')\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:138:74\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the channel list is pending: no list request follows",
+      "status": "failed",
+      "failure": "AssertionError: a dead lifetime must not continue its initialization: expected [ { …(2) } ] to have a length of +0 but got 1\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1384:20)\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1151:15)\n    at Proxy.methodWrapper (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/chai/index.js:1700:25)\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:156:90\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the first list is pending: no status-map request follows",
+      "status": "failed",
+      "failure": "AssertionError: initialization must stop after unmount: expected [ { …(2) } ] to have a length of +0 but got 1\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1384:20)\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1151:15)\n    at Proxy.methodWrapper (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/chai/index.js:1700:25)\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:165:81\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at the deep-link page lookup: the old conversation is never selected",
+      "status": "failed",
+      "failure": "AssertionError: no stale detail chain may start for any tenant: expected [ { …(5) } ] to have a length of +0 but got 1\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1384:20)\n    at Proxy.<anonymous> (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/expect/dist/index.js:1151:15)\n    at Proxy.methodWrapper (file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/chai/index.js:1700:25)\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:176:85\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at a deep-link lookup that points to another page: that page is never loaded",
+      "status": "failed",
+      "failure": "AssertionError: a dead lifetime must not reload a list page: expected 2 to be 1 // Object.is equality\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:187:88\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) tenant change at the deep-link page lookup: the old tenant's continuation does not select",
+      "status": "failed",
+      "failure": "AssertionError: the new tenant must be loaded: expected false to be true // Object.is equality\n    at <ROOT>/frontend/src/__tests__/messages-lifetime-startup.spec.ts:197:118\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: an active deep link selects the conversation on the requested tab",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: a deep link on another page reloads that page then selects",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) debounced search cannot publish after teardown",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) settled A, then pending B: header, count, messages, evaluation and download source are not A's",
+      "status": "failed",
+      "failure": "AssertionError: header must not show A while B is pending: expected 'Khách A' not to contain 'Khách A'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:47:77\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) a reply whose conversation id is not the selected one is never shown as the selection's header or count",
+      "status": "failed",
+      "failure": "AssertionError: expected 'Người khác hẳn' to contain 'Khách A'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:76:28\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: pending selection must not expose the previous conversation (UI01) healthy control: a single selection loads messages then evaluation and tabs keep their data",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (old A first)",
+      "status": "failed",
+      "failure": "AssertionError: old A must not publish while new A is pending: expected 'Người gửi · CN 27/09 16:00A-CŨ' not to contain 'A-CŨ'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:110:88\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) an old A reply cannot win because the ids match (new A first)",
+      "status": "failed",
+      "failure": "AssertionError: expected 'Người gửi · CN 27/09 16:00A-CŨ' to contain 'A-MỚI'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:119:33\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: A -> B -> A is a new lifetime (UI02) reversed evaluation replies for the same id: the newer lifetime keeps its evaluation",
+      "status": "failed",
+      "failure": "AssertionError: expected 'Màn này chưa đối chiếu nguồn của các …' to contain 'QC-MỚI'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:152:23\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale success does not publish, does not clear the current spinner and starts no evaluation",
+      "status": "failed",
+      "failure": "AssertionError: B is still pending: its spinner must stay: expected false to be true // Object.is equality\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:167:79\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale messages success leaves the current evaluation loading state alone",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale rejection shows no error and leaves the current spinner and result alone",
+      "status": "failed",
+      "failure": "AssertionError: a superseded failure must not become the current error: expected true to be false // Object.is equality\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:194:89\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) healthy control: a current failure shows the error and retry recovers",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) a stale evaluation success or failure cannot change the current evaluation spinner, data or error",
+      "status": "failed",
+      "failure": "AssertionError: stale evaluation must not appear for B: expected 'Màn này chưa đối chiếu nguồn của các …' not to contain 'QC-CỦA-A-MUỘN'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:227:69\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: superseded success, failure and finally cannot change the current view (UI03) healthy control: a current evaluation failure leaves messages intact and shows the honest empty state",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) mobile back before completion clears the detail and late replies cannot bring it back",
+      "status": "failed",
+      "failure": "AssertionError: old detail data must stay cleared: expected [ { id: 'cA-Khách A-0', …(6) } ] to deeply equal []\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:279:65\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) mobile back then a late rejection and a new selection: no stale error and the new selection is intact",
+      "status": "failed",
+      "failure": "AssertionError: expected true to be false // Object.is equality\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:293:31\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2 with the same conversation id: the old tenant's reply cannot appear in the new tenant",
+      "status": "failed",
+      "failure": "AssertionError: tenant change must clear the selection: expected true to be false // Object.is equality\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:311:68\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) tenant t1 -> t2: t2 selected first, then the old t1 reply arrives late and loses",
+      "status": "failed",
+      "failure": "Error: no conversation row containing Khách của T2\n    at rowByName (<ROOT>/frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts:191:19)\n    at Module.clickRow (<ROOT>/frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts:218:9)\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:335:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (success-before-new) cannot touch the new one",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (success-after-new) cannot touch the new one",
+      "status": "failed",
+      "failure": "AssertionError: expected 'Người gửi · CN 27/09 16:00TIN-CỦA-LẦN…' to contain 'TIN-CỦA-LẦN-MỚI'\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:371:40\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) unmount then remount on one Pinia: the old lifetime's reply (error) cannot touch the new one",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) an old owner unmounting AFTER the new one started must not cancel the new owner's request",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-lifetime.spec.ts",
+      "title": "Messages detail: reset, tenant change and remount (UI05) healthy control: switching tenants and selecting again works end to end",
+      "status": "failed",
+      "failure": "Error: no conversation row containing Khách của T2\n    at rowByName (<ROOT>/frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts:191:19)\n    at Module.clickRow (<ROOT>/frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts:218:9)\n    at <ROOT>/frontend/src/__tests__/messages-lifetime.spec.ts:400:11\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) counts conversations, not messages (UX-16)",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) names the latest analysis honestly: PASS may be classification",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) R1: a failed status request never claims \"Chưa phân tích\"",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) R1: while the status request is pending no status is claimed",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) R1: after a successful response an absent entry is \"Chưa phân tích\"",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) keeps list request parameters and debounced search",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) list load error shows an alert with retry",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) empty tenant vs no match are different states",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) conversation tabs: QC shows issues, classification shows tags and never \"Vấn đề\"; both carry the source note",
+      "status": "passed",
+      "failure": null
+    },
+    {
+      "file": "messages-screen.spec.ts",
+      "title": "Messages screen (UX-012) export: a 200 JSON {error} body is shown, not downloaded; real content is downloaded",
+      "status": "passed",
+      "failure": null
+    }
+  ],
+  "stdoutTail": "\n> frontend@0.0.0 test\n> vitest run src/__tests__/conversations-lifetime.spec.ts src/__tests__/messages-lifetime.spec.ts src/__tests__/messages-lifetime-startup.spec.ts src/__tests__/messages-lifetime-resources.spec.ts src/__tests__/messages-screen.spec.ts src/__tests__/messages-business-day.spec.ts --reporter=json --outputFile=<ROOT>\\vitest-result.json\n\nJSON report written to <ROOT>/vitest-result.json\n",
+  "liveWorktreeMutated": false
+}

@@ -1,0 +1,11 @@
+{
+  "attributedTo": "Codex /root",
+  "phase": "reviewer-fast",
+  "disposition": "FAIL_RETAINED",
+  "controls": {
+    "CVF-DG-CONT-01": "Local added non-contract state.activeWorkOrders; removed, canonical implementation.activeWorkOrders stays empty.",
+    "CVF-DG-ROUTE-01": "Local REWORK authoring omitted seven assessment fields; added unchanged scope YES and evidenceDetermined NO for fresh repair evidence."
+  },
+  "workerDefect": false,
+  "productionEdits": 0
+}

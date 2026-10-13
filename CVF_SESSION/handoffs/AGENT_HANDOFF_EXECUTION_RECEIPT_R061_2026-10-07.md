@@ -1,6 +1,6 @@
 # R061 terminal fallback test successor handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

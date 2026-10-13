@@ -1,6 +1,6 @@
 # R064 bounded local rule-input observation closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

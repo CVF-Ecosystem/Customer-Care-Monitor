@@ -1,0 +1,13 @@
+
+> frontend@0.0.0 test
+> vitest run src/__tests__/notification-route-permissions.spec.ts
+
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/frontend
+
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  05:51:07
+   Duration  5.41s (transform 1.47s, setup 0ms, import 277ms, tests 4.70s, environment 291ms)
+

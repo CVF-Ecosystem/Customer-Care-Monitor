@@ -1,0 +1,77 @@
+{
+  "verified_at_utc": "2026-10-12T22:54:51+00:00",
+  "fixtureRunId": "fe67adefe1fd47d7a4d72cf07b190b18",
+  "container": "ccma-r091-db-fe67adefe1fd",
+  "network": "ccma-r091-net-fe67adefe1fd",
+  "anonymousVolume": "e9f8ec6d5ac8d3b3a9c7cf9819261511ac3f619b572146028b0b86abc2cc7a99",
+  "checks": [
+    {
+      "check": "owned_container_by_exact_name",
+      "command": [
+        "docker",
+        "container",
+        "inspect",
+        "ccma-r091-db-fe67adefe1fd"
+      ],
+      "exit_code": 1,
+      "absent": true,
+      "output": "[]\nError response from daemon: No such container: ccma-r091-db-fe67adefe1fd"
+    },
+    {
+      "check": "owned_network_by_exact_name",
+      "command": [
+        "docker",
+        "network",
+        "inspect",
+        "ccma-r091-net-fe67adefe1fd"
+      ],
+      "exit_code": 1,
+      "absent": false,
+      "output": "[]\nError response from daemon: network ccma-r091-net-fe67adefe1fd not found"
+    },
+    {
+      "check": "recorded_anonymous_volume_exact_name",
+      "command": [
+        "docker",
+        "volume",
+        "inspect",
+        "e9f8ec6d5ac8d3b3a9c7cf9819261511ac3f619b572146028b0b86abc2cc7a99"
+      ],
+      "exit_code": 1,
+      "absent": true,
+      "output": "[]\nError response from daemon: get e9f8ec6d5ac8d3b3a9c7cf9819261511ac3f619b572146028b0b86abc2cc7a99: no such volume"
+    },
+    {
+      "check": "owned_labeled_containers",
+      "command": [
+        "docker",
+        "ps",
+        "-a",
+        "--filter",
+        "label=org.cvf.run=fe67adefe1fd47d7a4d72cf07b190b18",
+        "--format",
+        "{{.Names}}"
+      ],
+      "exit_code": 0,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "check": "owned_labeled_networks",
+      "command": [
+        "docker",
+        "network",
+        "ls",
+        "--filter",
+        "label=org.cvf.run=fe67adefe1fd47d7a4d72cf07b190b18",
+        "--format",
+        "{{.Name}}"
+      ],
+      "exit_code": 0,
+      "absent": true,
+      "output": ""
+    }
+  ],
+  "allAbsent": false,
+  "scope": "exact R091-owned resources only; read-only post-cleanup verification"
+}

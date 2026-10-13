@@ -3,14 +3,13 @@ package notifications
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"os"
-	"time"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
-	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
 // OutputConfig represents a single output destination from job.outputs JSON.
@@ -36,92 +35,58 @@ func NewDispatcher() *Dispatcher {
 }
 
 // SendJobResults sends notifications for a job run based on the job's output config.
-func (d *Dispatcher) SendJobResults(ctx context.Context, job models.Job, run models.JobRun) error {
-	var outputs []OutputConfig
-	if err := json.Unmarshal([]byte(job.Outputs), &outputs); err != nil {
-		// Fallback: outputs might be double-encoded (string wrapping JSON array)
-		var raw string
-		if err2 := json.Unmarshal([]byte(job.Outputs), &raw); err2 == nil {
-			if err3 := json.Unmarshal([]byte(raw), &outputs); err3 != nil {
-				return fmt.Errorf("invalid outputs config: %w", err)
-			}
-		} else {
-			return fmt.Errorf("invalid outputs config: %w", err)
-		}
+func (d *Dispatcher) SendJobResults(ctx context.Context, requestedJob models.Job, requestedRun models.JobRun) error {
+	set, err := freezeDeliverySet(ctx, requestedJob, requestedRun)
+	if err != nil || set == nil {
+		return err
 	}
 
-	// Get unnotified results for this run
-	var results []models.JobResult
-	db.DB.Where("job_run_id = ? AND notified_at IS NULL", run.ID).Find(&results)
-
-	if len(results) == 0 {
-		return nil
-	}
-
-	// Count pass/fail from run summary
 	var summary map[string]interface{}
-	json.Unmarshal([]byte(run.Summary), &summary)
+	_ = json.Unmarshal([]byte(set.run.Summary), &summary)
 	total := int(getFloat(summary, "conversations_analyzed"))
 	passed := int(getFloat(summary, "conversations_passed"))
 	failed := total - passed
 	issues := int(getFloat(summary, "issues_found"))
+	subject := fmt.Sprintf("[Customer Care Monitor AI] %s - %d issues found", set.job.Name, issues)
+	link := fmt.Sprintf("%s/%s/jobs/%s", d.getBaseURL(set.job.TenantID), set.job.TenantID, set.job.ID)
 
-	subject := fmt.Sprintf("[Customer Care Monitor AI] %s - %d issues found", job.Name, issues)
-
-	for _, output := range outputs {
-		notifier, err := d.createNotifier(output)
+	for _, output := range set.outputs {
+		if err := ctx.Err(); err != nil {
+			return errors.New("notification delivery canceled before all outputs were attempted")
+		}
+		defaultBody := d.buildNotificationBody(set.job, set.results, output.Identity.Type)
+		body := defaultBody
+		if output.Config.Template == "custom" && output.Config.CustomTemplate != "" {
+			body = d.renderCustomTemplate(output.Config.CustomTemplate, set.job.Name, total, passed, failed, issues, defaultBody, link)
+		}
+		claim, err := claimDeliveryOutput(set, output, subject, body)
 		if err != nil {
-			log.Printf("[dispatcher] create notifier failed for %s: %v", output.Type, err)
+			return err
+		}
+		if !claim.claimed {
 			continue
 		}
 
-		// Build default body per output type (telegram uses plain link, email uses HTML <a>)
-		defaultBody := d.buildNotificationBody(job, results, output.Type)
-
-		// Use custom template if configured
-		body := defaultBody
-		link := fmt.Sprintf("%s/%s/jobs/%s", d.getBaseURL(job.TenantID), job.TenantID, job.ID)
-		if output.Template == "custom" && output.CustomTemplate != "" {
-			body = d.renderCustomTemplate(output.CustomTemplate, job.Name, total, passed, failed, issues, defaultBody, link)
+		notifier, createErr := d.createNotifier(output.Config)
+		var sendErr error
+		if createErr != nil {
+			sendErr = failedDelivery("configuration")
+		} else {
+			sendErr = notifier.Send(ctx, subject, body)
 		}
-
-		sendErr := notifier.Send(ctx, subject, body)
-		status := "sent"
-		errMsg := ""
-		if sendErr != nil {
-			status = "failed"
-			errMsg = sendErr.Error()
-			log.Printf("[dispatcher] send failed for %s: %v", output.Type, sendErr)
+		status, safeError := deliveryOutcome(sendErr)
+		if err := finishDeliveryAttempt(set, output, claim.logID, status, safeError); err != nil {
+			return err
 		}
-
-		// Log notification
-		recipient := output.ChatID
-		if output.Type == "email" {
-			recipient = output.To
+		if status != deliverySent {
+			log.Printf("[dispatcher] output delivery ended as %s for channel %s", status, output.Identity.Type)
 		}
-		logEntry := models.NotificationLog{
-			ID:           pkg.NewUUID(),
-			TenantID:     job.TenantID,
-			JobID:        job.ID,
-			JobRunID:     run.ID,
-			ChannelType:  output.Type,
-			Recipient:    recipient,
-			Subject:      subject,
-			Body:         body,
-			Status:       status,
-			ErrorMessage: errMsg,
-			SentAt:       time.Now(),
-			CreatedAt:    time.Now(),
-		}
-		db.DB.Create(&logEntry)
 	}
 
-	// Mark results as notified
-	now := time.Now()
-	db.DB.Model(&models.JobResult{}).Where("job_run_id = ? AND notified_at IS NULL", run.ID).
-		Update("notified_at", &now)
-
-	return nil
+	if err := requireAllOutputsSent(set); err != nil {
+		return err
+	}
+	return updateRunNotifiedAt(set)
 }
 
 func (d *Dispatcher) createNotifier(cfg OutputConfig) (Notifier, error) {

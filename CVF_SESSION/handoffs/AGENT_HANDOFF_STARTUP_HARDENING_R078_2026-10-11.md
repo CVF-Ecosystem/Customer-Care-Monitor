@@ -1,6 +1,6 @@
 # R078 startup no-rewrite hardening handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

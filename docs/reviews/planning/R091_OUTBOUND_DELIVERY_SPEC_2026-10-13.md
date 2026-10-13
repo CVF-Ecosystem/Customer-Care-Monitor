@@ -1,0 +1,108 @@
+# Package C — outbound delivery truth, SMTP deadlines, and batch backoff
+
+Memory class: PLANNING_RECORD
+docType: specification
+Status: SPEC_ACCEPTED
+Risk: R2
+Worker: /root/outbound_intake
+Reviewer: Codex /root
+Author: INTERNAL_AGENT / SPEC_AUTHOR
+Decision owner: Local
+Date: 2026-10-13
+
+## CVF Agent Declaration
+
+CVF Agent Declaration: project=Customer-Care-Monitor-AI; Core=../.Controlled-Vibe-Framework-CVF at e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba, public read-only; project mode=BUILD for CCMAI-RUNTIME-090 package A, this package C task phase=DESIGN; risk ceiling=R2; live evidence required=YES for AI-governance claims, none asserted here; active role=INTERNAL_AGENT SPEC_AUTHOR; active handoff=CVF_SESSION/handoffs/AGENT_HANDOFF_AUTH_PERMISSIONS_R090_2026-10-13.md; next allowed move=Root review this draft, then issue a bounded C work order/seed after package A independent disposition; parked checkpoint=OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS; decision owner=Local.
+
+This Root-reviewed specification is design-only until separate immutable seed and work-order admission. It does not activate package C, grant source/test/fixture authority, change project continuity, or claim runtime, provider, governance, or production readiness. The operator authorizes Luna max INTERNAL_AGENT work on the remaining roadmap; only package A is currently BUILD-active under R090.
+
+## Goal and source-grounded current behavior
+
+Package C covers inheritance findings F04, F05, and F07 plus the finite R090 verification/route dependencies recorded below: notification outcomes must remain truthful and retry-safe; SMTP operations must honor cancellation and a finite deadline; batch provider errors must use the same progress and backoff path as other batch errors. Do not expand this into a scheduler or general durable-fence/recovery project.
+
+The source read found:
+
+- `backend/notifications/dispatcher.go` (`SendJobResults`) ignores the `JobResult` query error, logs send errors but continues, ignores notification-log writes, then marks every currently unnotified result in the run as notified and returns nil. `JobResult.NotifiedAt` is in `backend/db/models/job.go`; `NotificationLog` is in `backend/db/models/setting.go`; both are registered by `backend/db/mysql.go`.
+- The REST and MCP notification-log handlers already return `NotificationLog` status (`backend/api/handlers/dashboard.go`, `backend/mcp/handlers.go`). `frontend/src/views/NotificationLogs.vue` maps sent/failed and otherwise displays the raw status with a neutral class; it does not presently mislabel unknown status as success.
+- `Notifier.Send` and `HealthCheck` accept context (`backend/notifications/notifier.go`). `backend/notifications/email.go` discards it in both paths and uses blocking `smtp.SendMail` / `smtp.Dial`. Analyzer notification dispatch uses the reserved owner context before releasing the run owner, so a stuck SMTP call holds that owner.
+- In `backend/engine/analyzer.go` (`runBatchMode`), a provider error increments errors and sets the batch error flag, then `continue`s before the shared progress write and adaptive delay. The common delay is 10 seconds for error streaks one and two, 30 seconds from streak three, and 2 seconds after a healthy batch; it uses `sleepCtx`. `backend/ai/retry.go` owns provider-adapter retries (up to three retries with 5/15/45 second backoff); leave that behavior unchanged and add no Analyzer-level provider retry.
+
+These are application source observations, not live-provider or CVF-governance evidence.
+
+Root verified protocol references on2026-10-13: [Telegram Bot API response contract](https://core.telegram.org/bots/api#making-requests) defines explicit Boolean ok success/rejection; [Go net/smtp Client API](https://pkg.go.dev/net/smtp#Client.Data) and the checksum-verified Go1.26.0 src/net/smtp/smtp.go dataCloser.Close bind DATA completion to its250 response. The conservative UNKNOWN/retry policy is a project design decision, not a claim these sources offer exactly-once delivery.
+
+## F04 contract — one durable receipt per captured result set and output
+
+Root design disposition: **SPEC_ACCEPTED** for later bounded dispatch; only R090 A remains BUILD-active. The 30-second SMTP default is accepted. Root corrects the draft's re-entry identity rule below: a newly queried result set or changed output must never erase the deduplication boundary or bypass an ambiguous receipt.
+
+At first `SendJobResults` admission, validate tenant/job/run binding against persisted rows and capture sorted unnotified result IDs plus the configured non-secret output descriptors in one transaction that locks the owning run row. Persist a small immutable per-run delivery manifest (unique run binding) containing the exact captured IDs, required output keys and a safe canonical configuration fingerprint. Receipt initialization and the manifest commit together before any transport call. Never store credentials or rendered content in the manifest. A concurrent first entrant must reuse that manifest rather than create a different result-set identity.
+
+Later entry reuses that frozen captured set and required output set. Query the captured rows by tenant/run/IDs with checked errors. Added rows are excluded from every body/marker; never recompute a new set that could resend earlier confirmed delivery. A changed endpoint, recipient, template, or output list returns a safe configuration-conflict error before any new send; it cannot delete a required unknown output or create another identity to bypass it. Credentials-only rotation retains the manifest identity. Missing captured rows or a mismatched tenant/job/run is a conflict, not a successful empty response. This scope admits one notification delivery set per terminal run; additional result rows after that capture remain unnotified and require a future explicit delivery scope. After all captured rows are marked, an unchanged re-entry is idempotent and sends nothing.
+
+Create a small `NotificationDeliveryReceipt` table with one receipt for each `(job_run_id, output_key)`, carrying tenant/job/run and manifest binding, safe output identity, state, attempt count and timestamps. Register the manifest and receipt in existing `db.AutoMigrate`. Use bounded 64-character hashes for output/configuration identity; assert real MySQL unique keys and repeat/idempotent migration. Existing `NotificationLog` remains attempt history; add only safe receipt/output correlation (omit it from JSON if internal). New receipt/manifest models may live in a bounded new `backend/db/models/notification_delivery.go` file rather than grow setting.go.
+
+Derive output identity from canonical non-secret descriptor: type, destination endpoint/target and template identity. Telegram uses chat ID; email uses SMTP host/port, sender and normalized sorted recipients. Hash these descriptors; raw credentials, recipient lists and rendered bodies must not be exposed in identity keys or diagnostic errors. Deterministic duplicate occurrence ordinals preserve intentionally repeated identical configured destinations; canonical sorting makes array reordering identity-neutral. Credentials are excluded. Configuration identity is frozen after first admission; no automatic policy for edited deliveries is in scope.
+
+Receipts begin `pending` (no transport started). Conditionally claim pending or proven-failed receipts as `sending`, atomically creating the attempt log before any notifier call. Require exactly one affected row; a concurrent loser makes no call. Skip `sent`. A durable `sending` state left by a crash/concurrent claimant/outcome-write failure remains ambiguous and cannot be retried automatically. Explicit ambiguous transport errors become `unknown`, also without automatic retry. A remote acceptance followed by crash before persistence cannot yield exactly-once delivery without provider idempotency; preserve that uncertainty visibly. Return an incomplete/error outcome while any required receipt is pending/failed/sending/unknown, and continue independent outputs where safe.
+
+Keep `Notifier.Send`'s current error-returning shape if feasible and add a typed, secret-safe delivery error disposition. `nil` means confirmed accepted. `failed` is reserved for proof that the provider did not accept the message; an untyped or ambiguous error defaults to `unknown`:
+
+- Telegram is `sent` only when the decoded response has `ok=true`; a decoded explicit `ok=false` is `failed`. Transport, cancellation, body-read, malformed-response, and other outcomes without an explicit rejection are `unknown`. Never put request URLs, bot tokens, response bodies, or raw transport errors in returned/logged notification errors.
+- SMTP is `sent` once the server returns final `250` for completed DATA. A later QUIT failure does not undo acceptance. A definite SMTP rejection before acceptance, including an explicit non-250 final DATA reply, is `failed`. Connection loss/cancellation after the DATA terminator may have reached the server but before its acceptance reply is `unknown`; remaining pre-acceptance errors are `failed`. Error text must use a bounded safe stage/code, not credentials or message content.
+
+Attempt-log/receipt claim failures prevent the provider call. Outcome persistence updates the receipt and attempt log together; if that write fails after a possible send, return the persistence error, keep the durable state conservative (`sending`/ambiguous), do not resend, and do not mark results notified. Check and return result-query, receipt/log, and marker-update errors. Set `notified_at` only for the captured result IDs after every manifest-required output for that captured set has a `sent` receipt. Do not interpret a log-only failure or a provider error as success. For an empty output list, return without creating a manifest, send nothing and leave `notified_at` NULL; no destination has been confirmed, and a later explicit re-entry after configuration can still deliver.
+
+No user retry endpoint, UI action, scheduled retry, or background worker is in scope. The existing `SendJobResults` re-entry is the only retry seam: it retries explicit `failed` outputs, skips `sent`, and returns an error while any output remains failed/unknown/in-progress. Mixed success may continue to later independent outputs in the same invocation, but the run marker remains unset until all required outputs are confirmed.
+
+## F05 contract — bounded, cancellable SMTP
+
+Implement context-aware SMTP transport for both `EmailNotifier.Send` and `HealthCheck`; preserve existing `Notifier` context behavior for other callers. Use a 30-second default operation deadline when the caller supplies none, and the earlier of the caller deadline and that default otherwise. Dial with `net.Dialer.DialContext`, apply socket deadlines, close the active connection when cancellation fires, and close SMTP resources on every return. The explicit SMTP dialogue must preserve existing message/auth behavior while exposing the final DATA acceptance point needed by F04. Cancellation must return promptly and release the analyzer owner; SMTP QUIT errors after final 250 remain sent.
+
+Tests use only loopback synthetic SMTP servers that can withhold the greeting, an intermediate reply, or the final DATA reply. Assert bounded cancellation/deadline return and server-observed connection closure. For the old-source detector, if old `smtp.SendMail`/`smtp.Dial` has not returned inside the short assertion window, record the behavioral failure, then close the exact listener and accepted socket and join the blocked goroutine during test cleanup. A test/tool campaign timeout is never detector credit. Exercise a caller cancellation window and verify the 30-second default by an injectable short test duration seam or a bounded constant/deadline assertion; do not wait 30 seconds in a test. Add the owner-release assertion to the existing `backend/engine/job_run_ownership_test.go` notification-tail fixture.
+
+## F07 contract — common batch bookkeeping and cancellable backoff
+
+Remove the provider-error early `continue` so each completed batch reaches the common progress-write and delay tail. Provider errors continue to count every batch member as an error. Parse/invalid-response and save errors retain current accounting and use the same tail. Keep the current 10s/30s/2s schedule and reset semantics, with a small package-private context-aware delay seam for deterministic tests; production delegates to the existing `sleepCtx`. Cancellation interrupts the wait and the next loop must make no additional provider call. Preserve `backend/ai/retry.go` exactly; batch bookkeeping is not another provider retry layer.
+
+## Exact future BUILD path proposal
+
+This section is proposed scope for Root's later immutable C seed; it grants no current write authority.
+
+- Notification production: `backend/notifications/dispatcher.go`, `backend/notifications/notifier.go`, `backend/notifications/telegram.go`, `backend/notifications/email.go`; bounded private helper families `backend/notifications/delivery_*.go` and `backend/notifications/smtp_*.go` may split the receipt and SMTP implementation without changing the contract.
+- Receipt persistence: `backend/db/models/setting.go`, new `backend/db/models/notification_delivery.go`, `backend/db/mysql.go`.
+- Batch production: `backend/engine/analyzer.go`, with bounded private helper family `backend/engine/analyzer_batch_backoff*.go`.
+- Minimal log presentation: `frontend/src/views/NotificationLogs.vue`, `frontend/src/i18n/vi.ts` and `frontend/src/i18n/en.ts` only for clear localized `sending`/`unknown` status text/class; new `frontend/src/__tests__/notification-delivery-status.spec.ts` covers both existing and neutral status display. Existing REST/MCP response paths are inspection-only; do not widen payloads or redesign notification logs.
+- Focused tests: new `backend/notifications/dispatcher_delivery_test.go`; new `backend/notifications/email_test.go`; focused additions to `backend/notifications/telegram_test.go`; new `backend/db/mysql_notification_receipt_test.go`; new `backend/engine/analyzer_batch_bookkeeping_test.go`; narrow addition to `backend/engine/job_run_ownership_test.go`. The later seed may narrow this set after a path check but must not widen into scheduler, Core, historical seed, dependency, or public-export work.
+- Final roadmap UI fixture compatibility: `frontend/src/__tests__/dashboard-qc-card.spec.ts` and `frontend/src/__tests__/dashboard-business-day.spec.ts`, only explicit synthetic owner/Pinia and `/me` fixture admission for R090 dashboard enforcement; existing assertions unchanged. Root omitted these paths from the immutable A seed; worker's premature fixture edits must be retained as incident evidence and byte-restored, never retrospectively authorized. The already-planned C seed may admit this finite prerequisite and run these old mounted tests before overall closure. This changes test setup, not auth behavior or the F04/F05/F07 contract; no new repair tranche or seed rewrite.
+- R090 route dependency: `frontend/src/router/index.ts`, only notifications route metadata `jobs` to `settings`; new `frontend/src/__tests__/notification-route-permissions.spec.ts` must exercise the real registered guard with known settings-only, jobs-only, owner/admin and missing permission controls. The R090 immutable seed omitted this actual route consumer, so A cannot claim full frontend F02 closure. No general router/auth-store redesign is admitted.
+- Isolated fixture helper: new `scripts/r091_outbound_fixture.py`; reuse verified local toolchain/cache and mysql image, fresh uniquely labeled loopback-only owned container/network, capture actual anonymous mounts and remove only event/label-bound owned resources including anonymous volumes. Record per-case Go JSON events and assert mandatory tests executed, no DB-unavailable SKIP.
+- Read-only consumer map: `backend/api/handlers/dashboard.go`, `backend/mcp/handlers.go`, `frontend/src/views/NotificationLogs.vue`. Do not change REST/MCP behavior unless independent source evidence shows the existing status field cannot represent the new neutral states.
+- Explicitly protected: `backend/ai/retry.go`; no provider adapter changes or extra retry layer.
+
+## Required evidence and prerequisites for a later C work order
+
+Before source edits, run source-negative tests on the seed's pinned pre-edit code and record the exact assertions. F04 baseline must fail all-failed/mixed-output marker and per-output re-entry assertions. Final regressions additionally cover concurrent claim, inserted result rows, output/config changes, credentials-only rotation, crash-left sending, untyped ambiguous errors and claim/log/marker persistence errors, with actual transport-call counts. F05 baseline must fail prompt synthetic cancellation/deadline return before test cleanup; cleanup must close and join the old blocked operation. F07 baseline must fail assertions that provider-error progress is persisted before the next batch and that the common wait/streak path runs. Healthy controls pass. Missing helper/export, fixture/setup error, DB-unavailable skip, or outer timeout is inconclusive, never detector credit.
+
+F04/F07 persistence tests require a verified, fresh, uniquely owned synthetic MySQL fixture, zero DB-unavailable skips, model AutoMigrate registration and repeat/idempotence proof, and cleanup limited to the exact owned fixture. Never point tests at an existing or production database. F05 transport tests use loopback only; the analyzer owner-release integration shares the same fresh DB fixture. The official Go archive and public module cache prepared for R090 may be reused after A cleanup; a new C seed must verify availability and authorize any fixture lifecycle itself. No setup, container, database, test, or provider action occurs under this design-only specification.
+
+R090 final backend evidence currently contains only package summaries, so individual case execution/SKIP counts cannot be established. C must close this named evidence gap using its fresh verified fixture: rerun only the existing R090 handler/router and dashboard date/QC selectors with Go JSON events, checking exact required case names and no SKIP. This is a bounded evidence repair with information gain, not a duplicate broad backend campaign. Preserve the earlier summary PASS and its limitation. Run the two old dashboard UI fixtures after their fixture-only correction; preserve their assertions.
+
+Use synthetic notifier/provider implementations and isolated DB/loopback fixtures only. No real Telegram, email, SMTP, AI provider, customer, application server, credential, or external network effects. Do not claim CVF governance behavior or run the Core release gate for this application bug contract. Root performs the independent design review and issues any later C work order and immutable seed.
+
+## Source, claim, and checker read-ahead
+
+Source map: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md` F04/F05/F07 and package C; `backend/notifications/dispatcher.go`; `backend/notifications/notifier.go`; `backend/notifications/email.go`; `backend/notifications/telegram.go`; `backend/db/models/job.go`; `backend/db/models/setting.go`; `backend/db/mysql.go`; `backend/engine/analyzer.go`; `backend/ai/retry.go`; notification-log readers listed above. These paths were read for this design. Claim boundary: source-derived application contract only; no run/test/transport/database/provider evidence is claimed.
+
+Checker Source Read-Ahead Block: read target `AGENTS.md`, `.cvf/manifest.json`, `.cvf/policy.json`, active R090 handoff/order and R090 specification, and the target downstream gate's changed-path authority and legacy `Status` parser in `scripts/cvf_downstream_gate.py`. Read the accepted R090 spec's checker-read-ahead and export sections as the local specification precedent. This is a Root-accepted design-only specification, not a work order, worker return, closure, or continuity update; no gate or test command was run. Root owns C authority, seed, work order, active-state/catalog synchronization, and any BUILD admission.
+
+## Root review decisions
+
+Root independently accepts the 30-second default and bounded contract above, with a frozen per-run manifest correcting the original re-query/output-change deduplication gap. No C BUILD authority is granted by this acceptance. Root may issue the already-planned C transport/persistence package after A independent disposition, even while its three named C dependencies remain open; A must not be marked REVIEW_PASS until C obtains the missing evidence and route/fixture alignment. This is an existing package boundary, not a new A repair successor. Root owns seed/work order after A independent disposition. The existing notification-log UI renders unrecognized states neutrally; this draft allows a narrow status-text/class update in `NotificationLogs.vue`. Root chooses localized Vietnamese/English labels via existing frontend/src/i18n/vi.ts and en.ts; the future seed admits only these two labels and narrow display tests; do not widen the API or UI redesign.
+
+## Public Export Disposition
+
+DEFERRED_PRIVATE_ONLY
+
+## Actual C authority entry
+
+Root independent A disposition is CHANGES_REQUIRED for three finite C dependencies; candidate material44bb345 and continuity4954304 preserved. C immutable seed 5441a18116e4b897549750cd7317ffdb8ae9e74b and docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md admit future worker BUILD after acknowledgment/actual gates. Earlier BUILD-active-A/design-only wording describes design authoring, not current dispatch phase. No C implementation/effect yet.

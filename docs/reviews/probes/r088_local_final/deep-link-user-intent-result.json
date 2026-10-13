@@ -1,0 +1,43 @@
+{
+  "recordedAtUtc": "2026-10-12T20:58:54.531769+00:00",
+  "purpose": "Resolve UI01/UI03/UI05/UI07 explicit selection/deselect versus pending initialization contradiction; three tests only, verify closure of previously demonstrated finding while consuming worker 88-test evidence without broad rerun",
+  "command": [
+    "cmd",
+    "/d",
+    "/c",
+    "npm",
+    "test",
+    "--",
+    "src/__tests__/messages-lifetime-local-intent.spec.ts",
+    "--reporter=json",
+    "--outputFile=D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\r088-local-final\\result.json"
+  ],
+  "cwd": "<OVERLAY>/frontend",
+  "exitCode": 0,
+  "elapsedSeconds": 17.7,
+  "tests": [
+    {
+      "title": "healthy deep link still selects A when no newer user action occurred",
+      "status": "passed",
+      "failure": ""
+    },
+    {
+      "title": "pending initial deep link cannot override the newer explicit selection B",
+      "status": "passed",
+      "failure": ""
+    },
+    {
+      "title": "mobile back cancels pending deep-link selection instead of reopening A",
+      "status": "passed",
+      "failure": ""
+    }
+  ],
+  "sourceLfSha256": {
+    "frontend/src/views/Messages.vue": "ec4222235730892e001f238b4883407b6e3e46ee8fbe7440c78e03eba5316b6c",
+    "frontend/src/stores/conversations.ts": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec"
+  },
+  "liveFrontendWritten": false,
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "stdoutTail": "\n> frontend@0.0.0 test\n> vitest run src/__tests__/messages-lifetime-local-intent.spec.ts --reporter=json --outputFile=<OVERLAY>\\result.json\n\nJSON report written to D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/.cvf/runtime/r088-local-final/result.json\n"
+}

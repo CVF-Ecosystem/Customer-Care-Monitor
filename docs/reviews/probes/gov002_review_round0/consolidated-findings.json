@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "packet": "CCMAI-GOV-002-C1",
+  "reviewRound": 1,
+  "disposition": "CHANGES_REQUIRED",
+  "findings": [
+    {
+      "id": "F1",
+      "class": "IMPLEMENTATION_DEFECT",
+      "severity": "BLOCKING",
+      "acceptance": "PI03",
+      "summary": "Prospective status parser accepts fenced-only status, ignores malformed duplicate declaration and accepts backtick value rejected by pinned grammar. New tests confuse inline code with fenced blocks. Add behavioral regressions and correct parsing without changing legacy semantics."
+    },
+    {
+      "id": "F2",
+      "class": "MANDATORY_EVIDENCE_MISSING",
+      "severity": "BLOCKING",
+      "acceptance": "PI01/PI02/PI04/PI05",
+      "summary": "No separate-directory candidate clone/init/doctor/preflight proof, pr-ci explicit-range/three-pin receipt, installer idempotence or isolated tamper/drift/wrong-range/pin evidence. Existing phase receipts explicitly skip work-order applicability/routing; they are not coverage of those contracts."
+    },
+    {
+      "id": "F3",
+      "class": "CONTINUATION_GUIDE_DEFECT",
+      "severity": "BLOCKING",
+      "acceptance": "PI05/PI06",
+      "summary": "Clone URL is a placeholder, no delivery branch specified, AGENTS.md link resolves to absent docs/reference/AGENTS.md, PyYAML6.0.2 dependency omitted, phase commands absent from AGENTS, guide asks default full-state read contrary to progressive continuity."
+    },
+    {
+      "id": "F4",
+      "class": "CONTINUITY_AND_RETURN_EVIDENCE_GAP",
+      "severity": "BLOCKING",
+      "acceptance": "PI02/PI08",
+      "summary": "Worker returned COMPLETE while state/record/memory/handoff still say dispatch awaiting worker/profile not installed; no BUILD acknowledgment, no profile opt-in record, no Return-Time Closeability Recheck or fulfillment manifest with file hashes. Report executionBaseHead uses authority seed f7bf57d instead of evidence HEADca1c3aa; unit timing22.544 differs from receipt18.324; declared modelGemini is not verified Sonnet evidence. Preserve deviations, do not backdate them."
+    }
+  ]
+}

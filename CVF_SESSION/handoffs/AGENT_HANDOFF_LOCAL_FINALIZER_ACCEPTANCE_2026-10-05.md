@@ -1,6 +1,6 @@
 # Local finalizer acceptance handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

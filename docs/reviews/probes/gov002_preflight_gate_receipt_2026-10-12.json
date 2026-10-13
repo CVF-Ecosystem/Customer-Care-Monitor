@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0",
+  "command": "python -B scripts/cvf_downstream_gate.py preflight",
+  "returnCode": 0,
+  "stdout": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n",
+  "stderr": "",
+  "outcome": "PASS"
+}

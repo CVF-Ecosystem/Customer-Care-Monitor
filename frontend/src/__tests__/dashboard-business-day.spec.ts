@@ -9,8 +9,10 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { createI18n } from 'vue-i18n'
 import { createRouter, createMemoryHistory } from 'vue-router'
+import { createPinia, setActivePinia } from 'pinia'
 import viMessages from '../i18n/vi'
 import enMessages from '../i18n/en'
+import { useAuthStore } from '../stores/auth'
 import { lightColors } from '../styles/tokens'
 
 const apiGet = vi.fn()
@@ -30,6 +32,9 @@ const originalTz = env.TZ
 const mounted: VueWrapper[] = []
 
 async function mountDashboard(locale: 'vi' | 'en' = 'vi') {
+  const pinia = createPinia()
+  setActivePinia(pinia)
+  useAuthStore(pinia).tenantPerms = { role: 'owner', permissions: {} } as never
   const router = createRouter({ history: createMemoryHistory(), routes: [{ path: '/:tenantId/dashboard', component: Dashboard }] })
   await router.push('/t1/dashboard')
   await router.isReady()
@@ -38,6 +43,7 @@ async function mountDashboard(locale: 'vi' | 'en' = 'vi') {
     global: { plugins: [
       createVuetify({ components, directives, theme: { themes: { light: { colors: lightColors } } } }),
       createI18n({ legacy: false, locale, fallbackLocale: 'en', messages: { vi: viMessages, en: enMessages } }),
+      pinia,
       router,
     ] },
   })
@@ -62,9 +68,11 @@ async function clickPreset(w: VueWrapper, label: string) {
 describe('Dashboard date controls on the Vietnam calendar (F04)', () => {
   beforeEach(() => {
     apiGet.mockReset()
-    apiGet.mockImplementation((url: string) => url.endsWith('/dashboard')
-      ? Promise.resolve({ data: { total_conversations: 0, active_channels: 0, active_jobs: 0, issues: 0, qc_violation_count: 0, qc_alerts: [], classification_recent: [], cost_by_day: [], messages_by_day: [], conversations_by_channel: [] } })
-      : Promise.resolve({ data: { has_data: true, is_demo: false } }))
+    apiGet.mockImplementation((url: string) => {
+      if (url.endsWith('/dashboard')) return Promise.resolve({ data: { total_conversations: 0, active_channels: 0, active_jobs: 0, issues: 0, qc_violation_count: 0, qc_alerts: [], classification_recent: [], cost_by_day: [], messages_by_day: [], conversations_by_channel: [] } })
+      if (url.endsWith('/me')) return Promise.resolve({ data: { role: 'owner', permissions: '{}' } })
+      return Promise.resolve({ data: { has_data: true, is_demo: false } })
+    })
   })
   afterEach(() => {
     mounted.forEach((w) => w.unmount())

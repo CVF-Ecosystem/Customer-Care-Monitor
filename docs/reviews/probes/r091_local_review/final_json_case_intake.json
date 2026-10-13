@@ -1,0 +1,127 @@
+{
+  "r1_old_source_negative.log": {
+    "sha256Raw": "8dc39a135ccba02d9ae60ca7f59077efcedf52d4b4d1bb7751f3d380d8a646f9",
+    "testPass": 13,
+    "testFail": 8,
+    "testSkip": 0,
+    "topLevelStarts": [
+      "TestR091R1MarkerRejectsCapturedResultDeletedAfterUnlockedSnapshot",
+      "TestR091R1ClaimPersistenceFailureMakesNoOutboundCall",
+      "TestR091R1OutcomeReceiptAndLogFailuresRemainSendingWithoutResend",
+      "TestR091R1SMTPHELOFallbackPreservesLegacyDelivery",
+      "TestR091R1SMTPESMTPWithoutAUTHStillRejects",
+      "TestR091R1SMTPContextCancellationClosesStalledGreetingAndFinalDATA",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown",
+      "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait"
+    ],
+    "packageTerminal": [
+      {
+        "Package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/notifications",
+        "Action": "fail",
+        "Elapsed": 7.388
+      },
+      {
+        "Package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+        "Action": "fail",
+        "Elapsed": 6.798
+      }
+    ],
+    "invalidJsonLines": [],
+    "failedTests": [
+      "TestR091R1MarkerRejectsCapturedResultDeletedAfterUnlockedSnapshot",
+      "TestR091R1SMTPHELOFallbackPreservesLegacyDelivery",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown/missing_ok",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown/null_ok",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown/null_envelope",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown",
+      "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait/cancellation_during_common_wait_blocks_next_provider_call",
+      "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait"
+    ]
+  },
+  "r1_analyzer_cancel_assertion_correction.log": {
+    "sha256Raw": "a813230278570cd64fb97eabab226d485c94617bf631afc17336d494384dca06",
+    "testPass": 3,
+    "testFail": 0,
+    "testSkip": 0,
+    "topLevelStarts": [
+      "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait"
+    ],
+    "packageTerminal": [
+      {
+        "Package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+        "Action": "pass",
+        "Elapsed": 7.29
+      }
+    ],
+    "invalidJsonLines": [],
+    "failedTests": []
+  },
+  "final_r1_notifications_engine.log": {
+    "sha256Raw": "2705684b03f6302e09d33bcb98b8501aa8d8c24bd71c3bf96523327c813dbdb5",
+    "testPass": 53,
+    "testFail": 0,
+    "testSkip": 0,
+    "topLevelStarts": [
+      "TestR091OldDispatcherDoesNotMarkAllFailedOutputDelivered",
+      "TestR091OldDispatcherDoesNotMarkMixedDeliverySetComplete",
+      "TestR091OldTelegramErrorDoesNotExposeToken",
+      "TestR091DeliveryMixedRetrySkipsSentAndPreservesFrozenResultSet",
+      "TestR091DeliveryRejectsConfigChangeAndLeavesAllFailedUnnotified",
+      "TestR091DeliveryUnknownAndCrashLeftSendingAreNotRetried",
+      "TestR091DeliveryClaimsOutputOnceUnderConcurrentNotify",
+      "TestR091DeliveryPersistenceErrorsRemainTruthful",
+      "TestR091DeliveryQueryAndMarkerFailuresAreNotReportedAsSuccess",
+      "TestR091BatchBackoffDelayScheduleAndCanceledContext",
+      "TestR091ParseAndSaveBatchFailuresPersistProgressAndUseCommonBackoffTail",
+      "TestR091OutputIdentityIsStableAcrossReorderingAndCredentialRotation",
+      "TestR091ZeroOutputsDoNotCreateCompletionOrManifest",
+      "TestR091DeliveryErrorContractUsesOnlySafeTypedOutcomes",
+      "TestR091R1MarkerRejectsCapturedResultDeletedAfterUnlockedSnapshot",
+      "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait",
+      "TestR091R1ClaimPersistenceFailureMakesNoOutboundCall",
+      "TestR091R1OutcomeReceiptAndLogFailuresRemainSendingWithoutResend",
+      "TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch",
+      "TestR091OldSMTPContextCancelsStalledGreeting",
+      "TestR091SMTPFinalDataReplyDeterminesAcceptance",
+      "TestR091SMTPDefaultDeadlineBoundsBackgroundContext",
+      "TestR091R1SMTPHELOFallbackPreservesLegacyDelivery",
+      "TestR091R1SMTPESMTPWithoutAUTHStillRejects",
+      "TestR091R1SMTPContextCancellationClosesStalledGreetingAndFinalDATA",
+      "TestR091TelegramAcceptedRejectedAndAmbiguousOutcomesAreTypedAndSecretSafe",
+      "TestR091TelegramHealthCheckErrorsDoNotExposeToken",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown"
+    ],
+    "packageTerminal": [
+      {
+        "Package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/notifications",
+        "Action": "pass",
+        "Elapsed": 11.305
+      },
+      {
+        "Package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+        "Action": "pass",
+        "Elapsed": 17.951
+      }
+    ],
+    "invalidJsonLines": [],
+    "failedTests": []
+  },
+  "final_r1_analyzer_owner_release.log": {
+    "sha256Raw": "fdf3d4dc8fa197520b6d937a91e21d43d5f4b79b309f128b09b6f3d735f1eb6c",
+    "testPass": 1,
+    "testFail": 0,
+    "testSkip": 0,
+    "topLevelStarts": [
+      "TestRunOwnerRemainsHeldUntilContextBoundSMTPReturns"
+    ],
+    "packageTerminal": [
+      {
+        "Package": "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+        "Action": "pass",
+        "Elapsed": 6.381
+      }
+    ],
+    "invalidJsonLines": [],
+    "failedTests": []
+  }
+}

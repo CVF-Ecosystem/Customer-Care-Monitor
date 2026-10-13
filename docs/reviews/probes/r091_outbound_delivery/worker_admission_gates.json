@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "tranche": "CCMAI-RUNTIME-091",
+  "worker": "/root/outbound_intake",
+  "model": "gpt-6-luna",
+  "reasoningEffort": "max",
+  "role": "INTERNAL_AGENT",
+  "phase": "BUILD",
+  "risk": "R2",
+  "seedCommit": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
+  "dispatchHead": "03e68e1ad91f74bb153e7fa5c8b646001b9f78cc",
+  "results": [
+    {
+      "name": "public_core_doctor",
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ..\\.Controlled-Vibe-Framework-CVF\\scripts\\check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .",
+      "startedAtUtc": "2026-10-12T22:23:59.5108212+00:00",
+      "exitCode": 0,
+      "output": "\r\nCVF Workspace Agent Enforcement Doctor\r\n=======================================\r\nProject: D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\r\n\r\n\r\n  Check                                              Status\r\n  -------------------------------------------------- ------\r\n  Project folder exists                              [PASS]\r\n  Project isolated from CVF core                     [PASS]\r\n  .cvf/manifest.json exists                          [PASS]\r\n  .cvf/manifest.json is valid                        [PASS]\r\n  .cvf/policy.json exists                            [PASS]\r\n  Live governance evidence mandatory                 [PASS]\r\n  AGENTS.md exists                                   [PASS]\r\n  Bootstrap log exists                               [PASS]\r\n  CVF core path reachable                            [PASS]\r\n  Workspace rules file exists                        [PASS]\r\n  CVF core origin is public remote                   [PASS]\r\n  Public workspace kit is complete                   [PASS]\r\n  CVF public core matches origin/main                [PASS]\r\n  CVF public core worktree clean                     [PASS]\r\n  CVF core commit matches manifest                   [PASS]\r\n  Required docs referenced by manifest exist         [PASS]\r\n  knowledge/ folder present (optional)               [PASS]\r\n  Seven-step phase model is canonical                [PASS]\r\n  Project continuity and catalog front doors exist   [PASS]\r\n  Active session state resolves its handoff          [PASS]\r\n  Implementation status and module registry are valid JSON [PASS]\r\n  AGENTS contract defines roles and seven steps      [PASS]\r\n  Pinned CVF core commit is public-remote reachable  [PASS]\r\n  Session and tranche continuity rehydration required [PASS]\r\n  Governed downstream catalog validates (--check)    [PASS]\r\n  Gate CVF-DG-INST-01                                [PASS]\r\n  Gate CVF-DG-CONT-01                                [PASS]\r\n\r\n  GATE_COVERAGE: INSTALLED=7 INVOKED=26 NOT_APPLICABLE_WITH_REASON=9 hostedCiObserved=false\r\n  RESULT: PASS (27/27 checks passed)\r\n  Scope: the listed doctor checks only. Not a claim of hosted CI, real adoption or runtime AI enforcement."
+    },
+    {
+      "name": "legacy_preflight",
+      "command": "python -B scripts/cvf_downstream_gate.py preflight --root .",
+      "startedAtUtc": "2026-10-12T22:24:03.0036736+00:00",
+      "exitCode": 0,
+      "output": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)"
+    },
+    {
+      "name": "trusted_explicit_pre_dispatch",
+      "command": "python -B ..\\.Controlled-Vibe-Framework-CVF\\scripts\\lib\\downstream_governance\\cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --packet docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md --trusted --json --receipt-dir docs/reviews/probes/r091_outbound_delivery",
+      "startedAtUtc": "2026-10-12T22:24:05.2542465+00:00",
+      "exitCode": 0,
+      "output": "{\r\n  \"exitCode\": 0,\r\n  \"phase\": \"pre-dispatch\",\r\n  \"range\": \"WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=12 deleted=0\",\r\n  \"results\": [\r\n    {\r\n      \"checkedControlIds\": [],\r\n      \"controlId\": \"CVF-DG-INST-01\",\r\n      \"findings\": [],\r\n      \"notes\": [],\r\n      \"ok\": true,\r\n      \"outcome\": \"PASS\",\r\n      \"reason\": \"\"\r\n    },\r\n    {\r\n      \"checkedControlIds\": [],\r\n      \"controlId\": \"CVF-DG-CONT-01\",\r\n      \"findings\": [],\r\n      \"notes\": [],\r\n      \"ok\": true,\r\n      \"outcome\": \"PASS\",\r\n      \"reason\": \"\"\r\n    },\r\n    {\r\n      \"checkedControlIds\": [],\r\n      \"controlId\": \"CVF-DG-RANGE-01\",\r\n      \"findings\": [],\r\n      \"notes\": [\r\n        \"WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=12 deleted=0\"\r\n      ],\r\n      \"ok\": true,\r\n      \"outcome\": \"PASS\",\r\n      \"reason\": \"\"\r\n    },\r\n    {\r\n      \"checkedControlIds\": [\r\n        \"work_order_status_grammar\",\r\n        \"closeability_contract\"\r\n      ],\r\n      \"controlId\": \"CVF-DG-APPL-01\",\r\n      \"findings\": [],\r\n      \"notes\": [\r\n        \"checked: docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md\"\r\n      ],\r\n      \"ok\": true,\r\n      \"outcome\": \"PASS\",\r\n      \"reason\": \"\"\r\n    },\r\n    {\r\n      \"checkedControlIds\": [\r\n        \"CVF-DG-ROUTE-01\"\r\n      ],\r\n      \"controlId\": \"CVF-DG-ROUTE-01\",\r\n      \"findings\": [],\r\n      \"notes\": [\r\n        \"checked: docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md\"\r\n      ],\r\n      \"ok\": true,\r\n      \"outcome\": \"PASS\",\r\n      \"reason\": \"\"\r\n    }\r\n  ]\r\n}"
+    }
+  ],
+  "summary": "PASS: Core doctor 27/27, legacy preflight 7/7, trusted explicit pre-dispatch 5/5; APPL status grammar and closeability contract actually CHECKED."
+}

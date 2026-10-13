@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "gov002.round1.workerReceipt@1",
+  "generatedAtUtc": "2026-10-12T12:52:03+00:00",
+  "packet": "CCMAI-GOV-002-C1",
+  "reviewRound": 1,
+  "actor": "ccmai-gov002-worker",
+  "role": "REPAIR_WORKER",
+  "returnStatus": "COMPLETE_PENDING_REVIEW",
+  "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+  "committed": false,
+  "pushed": false,
+  "workerModel": {
+    "model": "claude-sonnet-5-5",
+    "host": "Claude Code (VS Code extension)",
+    "reasoningEffort": "session parameter 10 (scale not documented to the worker)",
+    "tokenUsage": null,
+    "bill": null,
+    "unavailableReason": "token and bill telemetry is not exposed to the worker; effort scale is not documented to it"
+  },
+  "priorFindingSetDigest": "4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb",
+  "candidateManifest": "docs/reviews/probes/gov002_round1_candidate_manifest_2026-10-12.json",
+  "stages": {
+    "buildtime": {
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-buildtime.json",
+      "recordCount": 11,
+      "unexpectedCount": 0,
+      "recordedAtUtc": "2026-10-12T12:33:30+00:00",
+      "sha256": "ea8970a0ee533684db65a6307d5e22c57b8381bb699bfc044ac1ef621febbdf4"
+    },
+    "discrimination": {
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-discrimination.json",
+      "recordCount": 2,
+      "unexpectedCount": 0,
+      "recordedAtUtc": "2026-10-12T12:33:31+00:00",
+      "sha256": "c86c27208d08a95dc96ad8a5662169df79396c78d529f6fd196dfbb9487cdee4"
+    },
+    "snapshot": {
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-snapshot.json",
+      "recordCount": 3,
+      "unexpectedCount": 0,
+      "recordedAtUtc": "2026-10-12T12:49:11+00:00",
+      "sha256": "34cefae2d3529415a40ffee67225a5ec50af983680b560d993b01de71c80f7df"
+    },
+    "clone": {
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-clone.json",
+      "recordCount": 20,
+      "unexpectedCount": 0,
+      "recordedAtUtc": "2026-10-12T12:49:46+00:00",
+      "sha256": "d409f22979e70223151a6ab36de89cba87ac7f1fed539f1f0ecdda77e63e175e"
+    },
+    "negatives": {
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-negatives.json",
+      "recordCount": 26,
+      "unexpectedCount": 0,
+      "recordedAtUtc": "2026-10-12T12:51:23+00:00",
+      "sha256": "d595e7f7ec3638771aa271cd3029b776285952cd4a14d6e6484230f93dbb5315"
+    },
+    "prci": {
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-prci.json",
+      "recordCount": 8,
+      "unexpectedCount": 0,
+      "recordedAtUtc": "2026-10-12T12:51:25+00:00",
+      "sha256": "a3acf7087f456b6576387cbbb5508d9c8f2b66b6ae1ce340cc470472230805fc"
+    },
+    "final": {
+      "path": "docs/reviews/probes/gov002_review_round1/proof/stage-final.json",
+      "recordCount": 12,
+      "unexpectedCount": 0,
+      "recordedAtUtc": "2026-10-12T12:52:03+00:00",
+      "sha256": "3e3b0e3be0ac2701d72c231689da63ea2a09dc608eb8dd65d9997f53ff4fe532"
+    }
+  },
+  "unexpectedTotal": 0,
+  "externalInvocationCount": 0,
+  "providerCalls": 0,
+  "applicationRuns": 0,
+  "networkUse": "git clone/fetch of the declared public project candidate (local) and the public CVF Core by scripts/initialize_cvf_clone.ps1 only",
+  "claimBoundary": "static repository evidence in the stated trees; no hosted CI, runtime governance, provider, docs55, R086 native or deployment claim"
+}

@@ -43,7 +43,7 @@ npm ci
 npm run build
 ```
 
-Blackbird081 định hướng và phát triển sản phẩm, với Claude và Codex là hai agent hỗ trợ. Các thay đổi trong repo được quản lý theo [quy trình CVF](AGENTS.md). CVF hiện kiểm soát **quy trình thay đổi mã và tài liệu**; các cơ chế CVF cho luồng AI khi ứng dụng chạy vẫn là phần [đang được thiết kế](docs/PRODUCT_DIRECTION.md).
+Blackbird081 định hướng và phát triển sản phẩm, với Claude và Codex là hai agent hỗ trợ. Các thay đổi trong repo được quản lý theo [quy trình CVF](AGENTS.md). CVF hiện kiểm soát **quy trình thay đổi mã và tài liệu**; các cơ chế CVF cho luồng AI khi ứng dụng chạy vẫn là phần [đang được thiết kế](docs/PRODUCT_DIRECTION.md). Để tiếp tục phát triển hoặc cài đặt trên máy khác, xem [Hướng dẫn tiếp tục dự án khả chuyển](docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md).
 
 ## Giấy phép
 

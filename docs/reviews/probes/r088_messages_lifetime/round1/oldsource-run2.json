@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "r088.round1Run@1",
+  "stage": "oldsource",
+  "recordedAt": "2026-10-13T03:42:08+07:00",
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "networkUse": "none",
+  "sourceMessagesVueLf": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+  "command": "npm --prefix frontend test -- src/__tests__/messages-lifetime-startup.spec.ts --reporter=json --outputFile=<tmp>",
+  "exitCode": 1,
+  "seconds": 17.31,
+  "timedOut": false,
+  "jsonProduced": true,
+  "total": 28,
+  "passed": 19,
+  "failed": 9,
+  "skippedOrPending": 0,
+  "todo": 0,
+  "cases": [
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) reversed success: an older (initial) list reply cannot restore the previous query's rows",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) a late rejection of an older list request shows no list error over the newer success",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) an older request settling while a newer one is pending neither publishes nor ends the busy state",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) healthy control: a current list failure shows the alert and retry recovers",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages list: the latest list request wins (UI06) a valid selection survives a filter change of the same tenant",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map reply cannot overwrite the t2 map",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages status map is tenant-bound (UI06) t1 -> t2: a late t1 map failure cannot turn the t2 chips into \"unknown\"",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the channel list is pending: no list request follows",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) t1 -> t2 -> t1: the first t1 lifetime does not continue although the tenant string matches again",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount while the first list is pending: no status-map request follows",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at the deep-link page lookup: the old conversation is never selected",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) unmount at a deep-link lookup that points to another page: that page is never loaded",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) tenant change at the deep-link page lookup: the old tenant's continuation does not select",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: an active deep link selects the conversation on the requested tab",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) healthy control: a deep link on another page reloads that page then selects",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "Messages initialization and deep link stop when their lifetime ended (UI07) debounced search cannot publish after teardown",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) healthy control: an untouched pending deep link still selects A on the requested tab",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) healthy control: a page lookup failure with no user action falls back to the current page and still selects",
+      "status": "passed",
+      "firstFailure": null
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) page success: selecting B while the lookup is pending keeps B and never fetches the old link",
+      "status": "failed",
+      "firstFailure": "AssertionError: header must stay on the explicit B selection: expected 'Khách A' to contain 'Khách B'"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) page success: explicitly selecting the deep-linked conversation itself is not selected a second time",
+      "status": "failed",
+      "firstFailure": "AssertionError: the pending link must not start a second lifetime for A: expected [ { …(5) }, { …(5) } ] to have a length of 1 but got 2"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) page success: mobile back while the lookup is pending leaves the list view and does not reopen A",
+      "status": "failed",
+      "firstFailure": "AssertionError: back must end the pending automatic selection: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) page rejection: selecting B keeps B instead of falling back to the old link",
+      "status": "failed",
+      "firstFailure": "AssertionError: expected 'Khách A' to contain 'Khách B'"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) page rejection: mobile back stays deselected",
+      "status": "failed",
+      "firstFailure": "AssertionError: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) other-page lookup: selecting B first means the old link neither reloads another page nor selects",
+      "status": "failed",
+      "firstFailure": "AssertionError: the stale link must not reload the list: expected 3 to be 1 // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) other-page reload pending: selecting B during the reload keeps B after the reload settles",
+      "status": "failed",
+      "firstFailure": "AssertionError: expected 'Khách A' to contain 'Khách B'"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) other-page reload pending: mobile back during the reload stays deselected after it settles",
+      "status": "failed",
+      "firstFailure": "AssertionError: expected true to be false // Object.is equality"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) selection made before the lookup is even issued: the link issues no stale detail",
+      "status": "failed",
+      "firstFailure": "AssertionError: expected 'Khách A' to contain 'Khách B'"
+    },
+    {
+      "file": "messages-lifetime-startup.spec.ts",
+      "title": "A pending deep link yields to a newer explicit selection or back (R088-R1-F01) a tenant change still starts the new tenant's deep link after an explicit selection in the old one",
+      "status": "passed",
+      "firstFailure": null
+    }
+  ],
+  "stdoutTail": "\n> frontend@0.0.0 test\n> vitest run src/__tests__/messages-lifetime-startup.spec.ts --reporter=json --outputFile=C:\\Users\\DELL\\AppData\\Local\\Temp\\r088-round1-vitest.json\n\nJSON report written to C:/Users/DELL/AppData/Local/Temp/r088-round1-vitest.json",
+  "stderrTail": ""
+}

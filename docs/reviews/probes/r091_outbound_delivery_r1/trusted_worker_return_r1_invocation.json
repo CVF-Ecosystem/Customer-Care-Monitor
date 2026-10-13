@@ -1,0 +1,82 @@
+{
+  "applicability": "Inactive COMPLETE_PENDING_REVIEW packet; status grammar checked, closeability contract not applicable and not checked.",
+  "command": [
+    "python",
+    "-B",
+    "../.Controlled-Vibe-Framework-CVF/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "worker-return",
+    "--project-root",
+    ".",
+    "--trusted",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
+    "--packet",
+    "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+    "--no-receipt",
+    "--json"
+  ],
+  "controls": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "ok": true,
+      "outcome": "PASS"
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "ok": true,
+      "outcome": "PASS"
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "ok": true,
+      "outcome": "PASS"
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "ok": true,
+      "outcome": "NOT_APPLICABLE_WITH_REASON"
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "ok": true,
+      "outcome": "PASS"
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "ok": true,
+      "outcome": "PASS"
+    }
+  ],
+  "exitCode": 0,
+  "phase": "worker-return",
+  "receiptPath": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_worker_return_r1.json",
+  "recordedAtUtc": "2026-10-13T00:29:25+00:00",
+  "resultCounts": {
+    "controls": 6,
+    "failed": 0,
+    "findings": 0,
+    "notApplicableWithReason": 1,
+    "pass": 5
+  },
+  "risk": "R2",
+  "role": "INTERNAL_AGENT",
+  "runnerSha256Raw": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+  "schemaVersion": "r091.trusted-worker-return-invocation@1.0.0",
+  "stdoutCapturedBy": "PowerShell pipeline; UTF-8 JSON output, no secret material",
+  "trustedCoreRunner": "../.Controlled-Vibe-Framework-CVF/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py",
+  "worker": "/root/outbound_intake"
+}

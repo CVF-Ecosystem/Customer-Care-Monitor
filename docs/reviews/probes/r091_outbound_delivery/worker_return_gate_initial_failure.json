@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "r091.worker-return-gate-failure@1.0.0",
+  "recordedAtUtc": "2026-10-12T23:09:04Z",
+  "invokedAtUtc": null,
+  "invocationTimeCaptured": false,
+  "command": "python -B ..\\.Controlled-Vibe-Framework-CVF\\scripts\\lib\\downstream_governance\\cvf_downstream_gate_runner.py run --phase worker-return --project-root . --packet docs/reviews/R091_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md --trusted --json --receipt-dir docs/reviews/probes/r091_outbound_delivery",
+  "shellExitCode": 1,
+  "runnerOutput": {
+    "results": [
+      {
+        "findings": [],
+        "controlId": "CVF-DG-INST-01",
+        "ok": true,
+        "outcome": "PASS"
+      },
+      {
+        "findings": [
+          {
+            "locator": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
+            "message": "active handoff status must be exactly Status: ACTIVE, found Status: REVIEW_PENDING",
+            "code": "HANDOFF_NOT_ACTIVE"
+          }
+        ],
+        "controlId": "CVF-DG-CONT-01",
+        "ok": false,
+        "outcome": "FAIL"
+      },
+      {
+        "findings": [],
+        "controlId": "CVF-DG-RANGE-01",
+        "ok": true,
+        "outcome": "PASS"
+      },
+      {
+        "notes": [
+          "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract"
+        ],
+        "controlId": "CVF-DG-APPL-01",
+        "reason": "every candidate is explicitly not active; closeability contract was not checked",
+        "ok": true,
+        "outcome": "NOT_APPLICABLE_WITH_REASON"
+      },
+      {
+        "findings": [],
+        "controlId": "CVF-DG-ROLE-01",
+        "ok": true,
+        "outcome": "PASS"
+      },
+      {
+        "findings": [],
+        "controlId": "CVF-DG-CLAIM-01",
+        "ok": true,
+        "outcome": "PASS"
+      }
+    ],
+    "phase": "worker-return",
+    "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=81 deleted=0",
+    "exitCode": 2
+  },
+  "correction": "The current active handoff now has Status: ACTIVE; tranche/order remain REVIEW_PENDING. No application behavior changed.",
+  "timestampNote": "Reconstructed from the captured command output because the gate runner receipt path was overwritten by the later successful rerun; no execution timestamp is claimed."
+}

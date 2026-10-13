@@ -1,0 +1,9 @@
+{
+  "attributedTo": "Codex /root",
+  "source": "docs/reviews/R088_MESSAGES_LIFETIME_WORKER_RETURN_ROUND1_2026-10-13.md",
+  "originalSnapshot": "docs/reviews/probes/r088_local_final/worker-return-round1-original.txt",
+  "originalRawSha256": "1525334119ba4b3589463ee853a77db05a2a32f3825c9d343ac8a1a865b5ebd7",
+  "change": "Rename echo dispatchKind to returnedDispatchKind: a worker return is not a REWORK dispatch packet. Governing work order retains full REWORK envelope. No implementation/proof result changed.",
+  "trigger": "reviewer-fast routing found missing dispatch assessment fields on worker return due to bare dispatchKind echo",
+  "sourceRepair": false
+}

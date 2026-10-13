@@ -1,0 +1,8 @@
+usage: r091_outbound_fixture.py start [-h]
+                                      [--proof-dir {docs/reviews/probes/r091_outbound_delivery,docs/reviews/probes/r091_outbound_delivery_r1}]
+                                      [--state-file {.cvf/runtime/r091_outbound_fixture_r1_state.json,.cvf/runtime/r091_outbound_fixture_state.json}]
+
+options:
+  -h, --help            show this help message and exit
+  --proof-dir {docs/reviews/probes/r091_outbound_delivery,docs/reviews/probes/r091_outbound_delivery_r1}
+  --state-file {.cvf/runtime/r091_outbound_fixture_r1_state.json,.cvf/runtime/r091_outbound_fixture_state.json}

@@ -1,6 +1,6 @@
 # R067 saved-run observation UI handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

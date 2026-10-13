@@ -1,0 +1,8 @@
+{
+  "recordedAtUtc": "2026-10-13T00:35:16.068453+00:00",
+  "faultAttribution": "ROOT_CLOSURE_SCRIPT_STALE_FRONT_DOOR_HEADING",
+  "observedFailure": "ValueError substring not found after review/state/handoff writes; worker renamed current return heading before terminal",
+  "effects": "Root metadata only; no source/tests/provider effect",
+  "resolution": "Read actual current front block, resume remaining bounded writes; no duplicate history or prior output overwrite",
+  "gateDisposition": "Required current preflight/reviewer gates follow after sync"
+}

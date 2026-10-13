@@ -1,0 +1,8 @@
+{
+  "recordedAtUtc": "2026-10-13T00:37:25.731989+00:00",
+  "faultAttribution": "ROOT_CLOSED_ROADMAP_R2_ROLE_DECLARATIONS_OMITTED",
+  "firstResult": "reviewer-fast6/7 mandatory PASS; ROLE missing Worker/Reviewer on R2 roadmap",
+  "failureReceipt": "root_final_reviewer_fast_attempt1_failed.json",
+  "correction": "Add exact single Worker and Reviewer role lines from actual packages; no source/test/gate edit",
+  "next": "Rerun named reviewer-fast on corrected metadata, then staged precommit"
+}

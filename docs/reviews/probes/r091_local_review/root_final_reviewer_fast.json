@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "../.Controlled-Vibe-Framework-CVF/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "reviewer-fast",
+    "--project-root",
+    ".",
+    "--trusted",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
+    "--packet",
+    "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "--packet",
+    "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+    "--no-receipt"
+  ],
+  "startedAtUtc": "2026-10-13T00:37:33.408971+00:00",
+  "finishedAtUtc": "2026-10-13T00:37:33.747649+00:00",
+  "exitCode": 0,
+  "stdout": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=139 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n       note: docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md, docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md, docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md, docs/reviews/R091_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md, docs/reviews/R091_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md, docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 8 document(s) scanned\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\n",
+  "stderr": ""
+}

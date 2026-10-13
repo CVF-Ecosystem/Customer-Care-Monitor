@@ -7,7 +7,6 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/gin-gonic/gin"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
@@ -15,7 +14,25 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storage"
+	"github.com/gin-gonic/gin"
 )
+
+// requireKnownTenantPermission keeps this route closed to persisted roles that
+// are not part of the tenant contract before applying the shared permission rule.
+func requireKnownTenantPermission(resource, action string) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		role := middleware.GetTenantRole(c)
+		if role != "owner" && role != "admin" && role != "member" {
+			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "permission_denied"})
+			return
+		}
+		if deny := middleware.PermissionDenial(role, c.GetString("tenant_permissions"), resource, action); deny != "" {
+			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": deny})
+			return
+		}
+		c.Next()
+	}
+}
 
 func SetupRouter(cfg *config.Config) *gin.Engine {
 	if cfg.IsProduction() {
@@ -224,7 +241,7 @@ func SetupRouter(cfg *config.Config) *gin.Engine {
 			tenant.PUT("/settings/password", handlers.ChangePassword)
 
 			// Notification logs
-			tenant.GET("/notification-logs", handlers.ListNotificationLogs)
+			tenant.GET("/notification-logs", requireKnownTenantPermission("settings", "r"), handlers.ListNotificationLogs)
 
 			// Demo data
 			tenant.GET("/demo/status", handlers.GetDemoStatus)

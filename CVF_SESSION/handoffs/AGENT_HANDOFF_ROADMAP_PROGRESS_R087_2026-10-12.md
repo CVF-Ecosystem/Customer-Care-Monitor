@@ -1,6 +1,6 @@
 # R087 owner-requested roadmap progress refresh
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

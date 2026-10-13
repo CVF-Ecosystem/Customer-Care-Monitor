@@ -1,6 +1,6 @@
 # Local provider initialization closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,0 +1,19 @@
+{
+  "owner": "Codex /root",
+  "actualCause": "Observed PowerShell5 versus PowerShell7 Sort-Object collation differs on final2-log versus final-log; exact2adjacententries among1217IDs compared. Underlying NLS/ICU mechanism was not independently measured.",
+  "oldId": "runtime090-proof-ui-permissions-and-forced-build-final2-log",
+  "newId": "runtime090-proof-ui-permissions-and-forced-build-final-two-log",
+  "artifactPathUnchanged": "docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final2.log",
+  "sourceChanges": 0,
+  "CoreOrGateChanges": 0,
+  "doctorFailure": "26/27, generatedINDEXdrift",
+  "resolution": "Rename only Root-owned artifact identifier final2 to final-two, regenerate existingview, requirebothenginechecksanddoctorPASS",
+  "verification": {
+    "powershell5CatalogCheck": "PASS",
+    "pwsh7CatalogCheck": "PASS",
+    "independentCoreDoctor": "PASS_27_OF_27",
+    "hostedCiObserved": false,
+    "sourceEdits": 0,
+    "CoreGateEdits": 0
+  }
+}

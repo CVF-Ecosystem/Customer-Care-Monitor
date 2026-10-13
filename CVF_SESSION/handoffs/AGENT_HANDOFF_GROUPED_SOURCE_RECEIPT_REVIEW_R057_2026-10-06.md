@@ -1,6 +1,6 @@
 # R057 grouped source-receipt independent review
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

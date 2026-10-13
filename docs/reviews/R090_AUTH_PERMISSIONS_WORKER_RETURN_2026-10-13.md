@@ -1,0 +1,88 @@
+# R090 Auth and Permissions Worker Return
+
+Risk: R2
+Reviewer: Codex /root
+
+Return date: 2026-10-13  
+Tranche: `CCMAI-RUNTIME-090`  
+Worker: `/root/auth_intake`, `INTERNAL_AGENT` implementation worker  
+Decision owner: Codex `/root`, Local orchestrator and independent reviewer  
+Seed: `CVF_SESSION/authority/CCMAI-RUNTIME-090.json`, immutable seed commit `fac8932ebd7dcecd2ad38dd23e192619cdccd6fd`  
+Build base: `0813ec79bcc6687f13b72260094d2b669af697e4`; worker made no commit.  
+Model/effort: `gpt-6-luna`, max; numeric token and bill usage are unavailable to this worker.  
+Counts: one internal worker, one Local reviewer, zero external research agents; provider/customer calls zero.
+
+## Return disposition
+
+Worker source work and the bounded final checks are submitted for independent Local review. This is not an A closure, release claim, or acceptance decision. The implementation addresses the admitted source paths and the final mounted UI/type/build checks pass. Root has identified three exact remaining evidence/dependency items for its planned Package C disposition: the existing frontend router notification route metadata still says `jobs`; the two legacy mounted UI fixtures are restored because their paths were outside this immutable seed; and the backend package-summary log does not provide per-case JSON/verbose execution or skip receipts. The A final server run is therefore recorded as package-summary PASS only; no zero-skip or complete F02 claim is made. Root owns current-state/order status synchronization, review disposition, Package C activation, and commit.
+
+Root Cause Cluster: `CCMAI-AUTH-PERMISSION-CAS`; rework generation `0`; one bounded package, no successor opened by this worker. No worker commit, push, merge, self-review, live provider operation, or customer effect occurred. Public export disposition: `DEFERRED_PRIVATE_ONLY`.
+
+## Implemented behavior and bounded paths
+
+- `backend/api/handlers/users.go` now checks the target membership role while holding that row `FOR UPDATE` in the password-reset transaction. Admin may reset members; owner may reset any target. The password hash and token-version increment commit together, preventing a promotion race from crossing the role check.
+- `backend/api/handlers/auth.go` rotates refresh-token versions with a conditional update against the presented version. It returns no new access token or cookie on SQL error or a zero-row stale CAS; cookie/token creation follows exactly one successful row update.
+- `backend/api/handlers/dashboard.go` rejects unknown roles and projects only categories granted to the caller. `channels:r` returns active channels; `messages:r` returns conversation totals, counts by channel, and daily messages; `jobs:r` and `settings:r` retain their respective spec projections. A member with no usable rights is denied. The router-local known-role guard avoids broadening shared middleware.
+- `backend/api/router.go` protects the registered notification-log route with known-role `settings:r` authorization.
+- `frontend/src/views/Dashboard.vue` clears tenant data on change, ignores late tenant responses, and renders/loads each permission category independently. Conversation-by-channel counts now follow `messages:r`.
+- `frontend/src/layouts/DefaultLayout.vue` synchronously clears tenant permission state, publishes only a current validated `/me` response to the shared auth store, clears rights for unknown roles or malformed values, and invalidates pending responses on watcher cleanup/unmount. This prevents stale same-tenant responses from restoring owner rights after remount.
+- `backend/api/router_permissions_test.go` adds registered-router/MySQL tests for dashboard keys and query callbacks, notification settings permissions, reset target policy, target-role promotion, single refresh winner, reset-versus-stale-refresh ordering, and database-error token/cookie behavior. Existing dashboard test assertions were retained; only explicit owner identity was added to the two backend direct-handler fixtures listed in the hash manifest.
+- New mounted tests are `frontend/src/__tests__/dashboard-permissions.spec.ts` and `frontend/src/__tests__/layout-permissions.spec.ts`. They include channels-only versus messages-only projection, tenant changes, settings navigation, malformed values, unknown roles, and stale responses including unmount/remount against one shared Pinia store.
+
+The root-reviewed fixes after the initial focused UI pass are included in the final source: moving conversation counts under messages rights; preserving validated permissions in the shared store; type-filtering permissions into string-only maps; clearing unknown-role permissions; and watcher cleanup for unmount invalidation. The final UI suite was rerun after these changes.
+
+## Behavioral detector evidence
+
+The old-source backend campaign used the named R090 route tests before production-source edits:
+
+```text
+python -B scripts/r089_auth_fixture.py run --proof-name go-source-negative --cwd backend -- ..\.cvf\runtime\toolchain\go\bin\go.exe test ./api -run '^TestR090' -count=1
+```
+
+It exited 1; the package test duration was 12.572s. `go-source-negative.log` records unrestricted dashboard data/query access, incorrect reset target hierarchy, a reset/promotion race, multiple concurrent refresh winners, a stale refresh winning after resets, and refresh minting credentials after a synthetic SQL error. The harness campaign's early failed executable spawn is separately preserved and receives no detector credit. The initial source campaign is retained unchanged.
+
+The old-source mounted UI detector was:
+
+```text
+npm.cmd test -- --reporter=dot src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+```
+
+It exited 1 in 13.11s with five failing behavior assertions, including dashboard leakage/tenant retention, wrong notification navigation permission, and stale owner navigation. This is recorded in `ui-source-negative.log`. The known scaffold assertion correction for the messages:r projection and each setup/type failure remain preserved as separate evidence; no failure log was overwritten.
+
+The final backend command on the one admitted disposable fixture was:
+
+```text
+python -B scripts/r089_auth_fixture.py run --proof-name go-final-server --cwd backend -- ..\.cvf\runtime\toolchain\go\bin\go.exe test ./api ./api/handlers -run '^(TestR090|TestDashboardQCViolationCount|TestDashboardFilterUsesVietnamDayBounds|TestDashboardCalendarAggregatesAndSeries|TestDashboardDefaultAndOneSidedRanges|TestDashboardInvalidDatesAreBadRequests)' -count=1
+```
+
+It exited 0; the log reports `backend/api` PASS (`11.182s`) and `backend/api/handlers` PASS (`14.765s`). That log has only package summaries, not per-case JSON/verbose events. Individual test execution and skip count are unavailable in the retained receipt; the worker does not claim 0 skips or full A02/F02 closure. Root plans an exact combined selector/JSON receipt under Package C, without restarting this database campaign.
+
+The final focused frontend sequence, from `frontend/`, was:
+
+```text
+npm.cmd test -- --reporter=dot src/__tests__/dashboard-permissions.spec.ts src/__tests__/layout-permissions.spec.ts
+node_modules/.bin/vue-tsc.cmd -b --force
+node_modules/.bin/vite.cmd build
+```
+
+The focused suite exited 0: two files, eight tests passed, 37.56s. Forced `vue-tsc` exited 0 and Vite production build exited 0 (5.86s). The final combined console record is `ui-permissions-and-forced-build-final2.log`. An earlier forced check exposed TS2322 in permission-map narrowing, and a follow-up test exposed missing unknown-role shared-store closure; both failing records are retained separately from the passing final run.
+
+## Synthetic database and side effects
+
+The only successful server fixture was uniquely labeled R090 MySQL 8.0, image digest `sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b`, container `ccma-r090-db-7f6768044a24`, bridge `ccma-r090-net-7f6768044a24`, and dynamic `127.0.0.1:63309` publish. Readiness was verified using a host TCP handshake and an in-container application-user `SELECT 1`. It was stopped and exact-owned cleanup is recorded in `fixture_manifest.json`; the container, network, and attached anonymous volume are absent. Root separately bound and removed anonymous volumes from the two failed setup incarnations in `local_anonymous_volume_cleanup.json`. Failed setup and spawn attempts are retained as failures, never counted as source detector passes.
+
+No existing `ccma-db-1` or customer database was touched. No other container/volume/network was cleaned. No provider, notification channel, credentials, real account, application server, or outbound service was exercised. The fixture helper is `scripts/r089_auth_fixture.py`; no dependency manifest or module lockfile changed.
+
+## Explicit remaining disposition items and attribution
+
+1. The actual frontend router route metadata remains `jobs` for notification logs. It is outside R090's `allowedPaths`; Root plans one exact alignment and route test under Package C. The R090 layout test proves navigation visibility, not that stale router metadata is aligned.
+2. `frontend/src/__tests__/dashboard-qc-card.spec.ts` and `frontend/src/__tests__/dashboard-business-day.spec.ts` briefly received owner/Pinia identity fixture adaptations during implementation, with assertions unchanged. Root identified both as outside the immutable R090 path list. Their exact original bytes were restored; the proposed raw fixture diff and attribution are preserved in `legacy_ui_identity_fixture.diff` and its note. Root plans to admit these exact fixture-only paths under C.
+3. The final Go log does not contain per-case JSON/verbose receipts or a skip count. Only package-level success is supported. Root plans a combined receipt through C; this limitation is not a worker claim of no skips.
+
+R088 publication metadata and R091's planning-only spec were concurrent Root-owned changes. They were left intact and were not produced by this worker. The parent/private Core was not edited. Current lifecycle metadata is intentionally left for Root to synchronize after this handoff.
+
+## LF-normalized evidence binding
+
+`docs/reviews/probes/r090_auth_permissions/source_evidence_hashes.json` contains raw-byte and LF-normalized SHA-256 bindings for source/test files, helper, detector logs, final receipts, cleanup manifests, and preserved failures. Hash normalization replaces CRLF with LF; lone CR is unchanged. For the four backend production files, raw and normalized values are equal because they contain no CR characters. Their observed last-write timestamp was `2026-10-12T21:44:19Z`; the final backend command started at `2026-10-12T21:44:26Z`. This worker made no backend edits after that command. Root supplied different prior reviewed digests for those same paths. The discrepancy is unreconciled and is not explained by line-ending normalization; the manifest binds the current bytes from the tested backend snapshot. No backend rerun was performed.
+
+Terminal readiness: source candidate and scoped frontend checks are ready for Root's independent disposition; bounded evidence remains open for the exact three dependencies above. No worker commit or public export is claimed.

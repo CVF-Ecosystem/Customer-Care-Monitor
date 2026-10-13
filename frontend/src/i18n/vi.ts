@@ -826,6 +826,8 @@ export default {
   lg_col_content: 'Nội dung',
   lg_sent: 'Đã gửi',
   lg_failed: 'Gửi lỗi',
+  lg_sending: 'Đang gửi',
+  lg_unknown: 'Chưa rõ kết quả',
   lg_recipient_line: 'Tới: {r}',
   lg_show_body: 'Xem nội dung',
   lg_hide_body: 'Ẩn nội dung',

@@ -1,6 +1,6 @@
 # R077 repository topology intake handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,6 +1,6 @@
 # R062 local execution observation closure handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

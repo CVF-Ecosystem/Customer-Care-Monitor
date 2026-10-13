@@ -4,9 +4,13 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
-## Điểm kiểm tiến độ hiện hành — 2026-10-12
+## Roadmap delivery hiện hành — M1–M5 (2026-10-13)
 
-Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệch hướng. Maintainer: ORCHESTRATOR; nguồn đối chiếu: [implementation truth](../../IMPLEMENTATION_STATUS.json), [active state](../../CVF_SESSION/ACTIVE_SESSION_STATE.json), [handoff R086](../../CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md), repository tại `b2cbdce`. Đây là bản theo dõi tiến độ/planning R1; không thay acceptance lịch sử, contract S0–S7 hoặc cấp quyền BUILD/runtime/release. Phần thiết kế gốc vẫn giữ trạng thái DRAFT / REVIEW_PENDING; bản theo dõi này không tự chấp nhận toàn roadmap.
+[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) là cửa vào để chọn việc tiếp theo: M1 khóa bản đầu tiên và dependency; M2 đường phân tích có kiểm soát; M3 người duyệt/giao việc/kết quả; M4 shadow/pilot có đo lường; M5 release và tiếp quản. Kế hoạch đưa quyết định S0 lên trước implementation và an toàn dữ liệu tối thiểu lên trước pilot. Nó cụ thể hóa thứ tự P0–P4 bên dưới, giữ toàn bộ hợp đồng exit S0–S7; không đóng stage hoặc cấp runtime authority. Hiện tại M1 còn mở, M2–M5 chưa dispatch.
+
+## Điểm kiểm tiến độ hiện hành — 2026-10-13
+
+Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệch hướng. Maintainer: ORCHESTRATOR; nguồn đối chiếu: [implementation truth](../../IMPLEMENTATION_STATUS.json), [active state](../../CVF_SESSION/ACTIVE_SESSION_STATE.json), [handoff R091](../../CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md), actual accepted A material `44bb345` and F06 `a8865d1`; final C accepted/published material `d121c9ecf24a869aea92264db1e01cd853dec0ec`. Đây là bản theo dõi tiến độ/planning R1; không thay acceptance lịch sử, contract S0–S7 hoặc cấp quyền BUILD/runtime/release. Phần thiết kế gốc vẫn giữ trạng thái DRAFT / REVIEW_PENDING; bản theo dõi này không tự chấp nhận toàn roadmap.
 
 **Vị trí hiện tại:** nền S1 đã có nhiều phạm vi được review; có phần chuẩn bị/quan sát cho S2/S3 và UI đọc dữ liệu cho S5. Chưa nghiệm thu luồng đầy đủ từ hội thoại đến người xử lý và kết quả vụ việc. Không tính số tranche, commit hoặc test PASS thành tỷ lệ hoàn thành sản phẩm.
 
@@ -22,6 +26,12 @@ Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệc
 | S7 — Vận hành/phát hành | PRODUCT RELEASE EXIT OPEN | Có nền Docker, hướng dẫn và các check repository trong phạm vi riêng | Backup/restore, retention/security/load/rollback và release acceptance của sản phẩm; deployed facts chưa được xác nhận |
 
 Nguồn cho các acceptance nhỏ: [R054 scope kế tiếp](../reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md), [tổng hợp local receipt/UI milestones](README.md), [review R073](../reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md), [review R078](../reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md). Bảng này tổng hợp bản ghi đã có, không chạy lại runtime hoặc chứng minh live governance.
+
+### Current supporting outcome — seven-finding inheritance accepted
+
+[Roadmap kế thừa](../reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md) đã đóng bảy finding hữu hạn sau independent Local review: auth target/permission/refresh CAS, conversation UI lifetime, per-output delivery truth, bounded SMTP và common batch progress/backoff. [A final review](../reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [C final review](../reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [F06 final review](../reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md). Proof là local MySQL/synthetic UI/loopback/fake-provider, chưa live hay whole-stage acceptance. Root đã xuất bản material `d121c9ecf24a869aea92264db1e01cd853dec0ec` lên nhánh codex/cvf-portable-inheritance và verify remote SHA tại ../reviews/probes/r091_local_review/publication.json; continuity cập nhật hiện trạng đi kèm. Không tự mở worker/scope kế tiếp.
+
+Các ID F01-F07 trong ledger kế thừa không thay các finding sản phẩm cùng tên. Global channels/live coverage, dependency17, docs55, R086 native/fence/accounts/browser/hosted/deploy và stage exits vẫn mở. Fresh owned MySQL proof cho các defect độc lập không tự biến R086 native/fence thành PASS. Route sản phẩm dưới đây giữ nguyên và cần SPEC/work order riêng trước BUILD.
 
 ### Mốc sản phẩm ưu tiên và thứ tự còn lại
 
@@ -297,3 +307,11 @@ Only optional adapter metadata/parsing completed. Analyzer/UO/receipt/storage/UI
 [Independent review](../reviews/R071_INDEPENDENT_ADAPTER_PRESENCE_AGGREGATE_REVIEW_2026-10-10.md) and [aggregate-only closure](../reviews/R071_SCOPED_LOCAL_AGGREGATE_CLOSURE_2026-10-10.md) accept/freeze APO01..12 at Luna sourceee6b1c0 after one pre-Go NEW-test repair. Each role compilePASS/positive20top65/M01M02 named kills healthyPASS/restored10top38,5attempts/processes each;220member restoration/secondarchive/fourrawbackups/407protected/seedimmutable verified. Optional usage_observation.adapter_usage_presence and exactlytwo successful Analyzer hooks preserve old accounting/effects. [Per-tranche Luna assessment](../reviews/R071_LUNA_XHIGH_TRANCHE_ASSESSMENT_2026-10-10.md): final code accepted, initial test reasoning/sensitivity needed one repair; no matched Sol efficiency advantage established.
 
 This supersedes only the historical consumer-source OPEN checkpoint above: local Analyzer/UO/receipt observation wiring completed. Real Analyzer persistence, consumer UI/storage exposure, billing/invoices/pricing revision, fullS2/S3/S5/globalF02/permission/policy-version/WAIT_DATA/reservation/settlement/queue-realAnalyzer/live governance remain OPEN. Race/full backend runtime-DB/applicationfrontend/live/provider/network/GitHubActions NOTRUN. No currentR071 publication authorization; earlierR068 publicationunverified/notretried. Facebook/Zalo OA parked; next separate bounded workorder before new source/runtime.
+
+## Historical R088 Messages correctness checkpoint (2026-10-13)
+
+[Independent Local round1 review](../reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md): F06 source implemented, CHANGES_REQUIRED for one pending deep-link continuation overriding user selection/back. Same-scope repair then independent review is the finite remaining route for package B. Worker76PASS/type/build is supporting synthetic UI evidence, not S1/S5 stage exit or live deployment. Other six runtime findings, P1 auth concerns, docs55, native fence, accounts and full product milestones remain open/parked; no successor automatically dispatched.
+
+## Historical runtime inheritance checkpoint 2026-10-13 — R090 candidate
+
+Seven-finding scope follows ../reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md. R088 F06 published bounded; R090 A independently reviewed candidate retained but CHANGES_REQUIRED for three finite C route/fixture/per-case proof dependencies. Planned R091 C design accepted, no BUILD without new immutable seed/order. This source/application safety work supports S1/S3/S5/S7 without closing any full product stage; docs55, native/fence, dependency17, global channels, live/accounts/deployment stay open or parked.

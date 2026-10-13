@@ -7,8 +7,10 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { createI18n } from 'vue-i18n'
 import { createRouter, createMemoryHistory } from 'vue-router'
+import { createPinia, setActivePinia } from 'pinia'
 import viMessages from '../i18n/vi'
 import enMessages from '../i18n/en'
+import { useAuthStore } from '../stores/auth'
 import { lightColors } from '../styles/tokens'
 
 const apiGet = vi.fn()
@@ -27,6 +29,9 @@ function response(qc: unknown, issues = 91) {
 }
 
 async function mountDashboard() {
+  const pinia = createPinia()
+  setActivePinia(pinia)
+  useAuthStore(pinia).tenantPerms = { role: 'owner', permissions: {} } as never
   const router = createRouter({ history: createMemoryHistory(), routes: [{ path: '/:tenantId/dashboard', component: Dashboard }] })
   await router.push('/t1/dashboard')
   await router.isReady()
@@ -35,6 +40,7 @@ async function mountDashboard() {
     global: { plugins: [
       createVuetify({ components, directives, theme: { themes: { light: { colors: lightColors } } } }),
       createI18n({ legacy: false, locale: 'vi', fallbackLocale: 'en', messages: { vi: viMessages, en: enMessages } }),
+      pinia,
       router,
     ] },
   })
@@ -53,7 +59,11 @@ describe('Dashboard QC card (UX-016)', () => {
   beforeEach(() => {
     apiGet.mockReset()
     dashboardResponse = () => Promise.resolve(response(4))
-    apiGet.mockImplementation((url: string) => url.endsWith('/dashboard') ? dashboardResponse() : Promise.resolve({ data: { has_data: true, is_demo: false } }))
+    apiGet.mockImplementation((url: string) => {
+      if (url.endsWith('/dashboard')) return dashboardResponse()
+      if (url.endsWith('/me')) return Promise.resolve({ data: { role: 'owner', permissions: '{}' } })
+      return Promise.resolve({ data: { has_data: true, is_demo: false } })
+    })
   })
   afterEach(() => {
     mounted.forEach(w => w.unmount())

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "ccmai.root.r1-return-envelope@1.0.0",
+  "recordedAtUtc": "2026-10-13T00:32:38.084745+00:00",
+  "author": "Codex /root",
+  "faultAttribution": "WORKER_REQUIRED_SCALAR_SELF_PROOF_OMITTED_IMPORTED_GATE_DID_NOT_ENFORCE",
+  "sourceEdits": 0,
+  "testReruns": 0,
+  "originalReturn": "docs/reviews/probes/r091_local_review/r1_worker_return_original.txt",
+  "originalRawSha256": "e1a77740e1f3aa375d7d27fb6c5500e1f4800bfb0bf1318f2d809590447b915e",
+  "originalLfSha256": "e1a77740e1f3aa375d7d27fb6c5500e1f4800bfb0bf1318f2d809590447b915e",
+  "currentReturn": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+  "currentRawSha256": "f816e2a3ddb8b0681c730fc3d2d23041e15e1c12147f5f674a63c63e91baa20e",
+  "manifestDisposition": "69 original bindings valid; original return path maps to preserved byte copy, other68 unchanged",
+  "basis": [
+    "R091 work order self-proof requirements",
+    "verified69-entry manifest",
+    "parsed53 focused tests and owner1",
+    "worker return/model receipts"
+  ],
+  "backdated": false
+}

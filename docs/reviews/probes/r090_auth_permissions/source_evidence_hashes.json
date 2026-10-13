@@ -1,0 +1,241 @@
+{
+  "schema": "r090-lf-sha256-manifest@1",
+  "normalization": "CRLF=>LF; lone CR unchanged",
+  "entries": [
+    {
+      "path": "backend/api/handlers/users.go",
+      "sha256_lf": "26740d180b0c8ac2c0071fcaa7e713c2848f7566eb9d75ad7c75370a0971c005",
+      "bytes_lf": 7659,
+      "sha256_raw": "26740d180b0c8ac2c0071fcaa7e713c2848f7566eb9d75ad7c75370a0971c005",
+      "bytes_raw": 7659,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "backend/api/handlers/auth.go",
+      "sha256_lf": "5af3b266110e8db24a4bd18951c3223d2ea89057089ef56d0fbf5bdc0f51e574",
+      "bytes_lf": 15788,
+      "sha256_raw": "5af3b266110e8db24a4bd18951c3223d2ea89057089ef56d0fbf5bdc0f51e574",
+      "bytes_raw": 15788,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "backend/api/handlers/dashboard.go",
+      "sha256_lf": "1d0566bcfb0cec42e7e2936ffdbfa3e0c635af23ae77e65b3946e0c4428b11df",
+      "bytes_lf": 8001,
+      "sha256_raw": "1d0566bcfb0cec42e7e2936ffdbfa3e0c635af23ae77e65b3946e0c4428b11df",
+      "bytes_raw": 8001,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "backend/api/router.go",
+      "sha256_lf": "0b8fe2c4a98369aa42277a91f5474477b13442b70ea4a59e50d3b4eb6f65c13e",
+      "bytes_lf": 14725,
+      "sha256_raw": "0b8fe2c4a98369aa42277a91f5474477b13442b70ea4a59e50d3b4eb6f65c13e",
+      "bytes_raw": 14725,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "backend/api/handlers/dashboard_business_day_test.go",
+      "sha256_lf": "1ab28aee1ac5627af491a8a67c9386f23cdcb89c7d76262710660de1de5e1131",
+      "bytes_lf": 14569,
+      "sha256_raw": "1ab28aee1ac5627af491a8a67c9386f23cdcb89c7d76262710660de1de5e1131",
+      "bytes_raw": 14569,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "backend/api/handlers/dashboard_qc_violation_count_test.go",
+      "sha256_lf": "d5f307a86572f0f67b8929d132ce95ad0f2f7f80a97bd797926f0ba772bd3388",
+      "bytes_lf": 11274,
+      "sha256_raw": "d5f307a86572f0f67b8929d132ce95ad0f2f7f80a97bd797926f0ba772bd3388",
+      "bytes_raw": 11274,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "backend/api/router_permissions_test.go",
+      "sha256_lf": "ca2ac6647fafe5f9c61f87fa6e7029aa2db4162e6bd0ce8be1c03b2c818885af",
+      "bytes_lf": 26509,
+      "sha256_raw": "ca2ac6647fafe5f9c61f87fa6e7029aa2db4162e6bd0ce8be1c03b2c818885af",
+      "bytes_raw": 26509,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "frontend/src/views/Dashboard.vue",
+      "sha256_lf": "faf7a2ecaef087bed491005d86de2aab03818763a79266133cde2b8a12b42e16",
+      "bytes_lf": 23882,
+      "sha256_raw": "553f6dea0addef960e0948580ac3e83a11bc1b1bd2b27aa7399b7561b0430f34",
+      "bytes_raw": 24446,
+      "crlf_count": 564,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "frontend/src/layouts/DefaultLayout.vue",
+      "sha256_lf": "48e5f7a52ff3dc7f54b33af27038ff2632c6304c8334c18b2d675661bfa9511a",
+      "bytes_lf": 13396,
+      "sha256_raw": "0a84a61545581d4b6dbdc57aa8ed6c35a510bc856826c5c768b06de1fb9bcd3b",
+      "bytes_raw": 13781,
+      "crlf_count": 385,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "frontend/src/__tests__/dashboard-permissions.spec.ts",
+      "sha256_lf": "a39ee146fe5e74e9a65c0b78f7188c7318d54676a7922b591530c7cf4f89cdeb",
+      "bytes_lf": 7898,
+      "sha256_raw": "a39ee146fe5e74e9a65c0b78f7188c7318d54676a7922b591530c7cf4f89cdeb",
+      "bytes_raw": 7898,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "frontend/src/__tests__/layout-permissions.spec.ts",
+      "sha256_lf": "4ff15fecfb5e49b6439c9f121fd6c30d9dc5ae81ac9a4ab998b1a3589da405ff",
+      "bytes_lf": 7438,
+      "sha256_raw": "4ff15fecfb5e49b6439c9f121fd6c30d9dc5ae81ac9a4ab998b1a3589da405ff",
+      "bytes_raw": 7438,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "scripts/r089_auth_fixture.py",
+      "sha256_lf": "3bea3b1e3fcbfd55abecbad3f88e3f02ee025b068244a8be688f687d00161b8f",
+      "bytes_lf": 15152,
+      "sha256_raw": "3bea3b1e3fcbfd55abecbad3f88e3f02ee025b068244a8be688f687d00161b8f",
+      "bytes_raw": 15152,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/go-source-negative.log",
+      "sha256_lf": "feccef86ad1956931b79f78eaf3365e59aeb6d51d0286ffebbec5a31be35518c",
+      "bytes_lf": 39149,
+      "sha256_raw": "949c659a920d156918390da0de639060ae37edaee2f940ec4a3fe0776a1d56c3",
+      "bytes_raw": 39315,
+      "crlf_count": 166,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-source-negative.log",
+      "sha256_lf": "970a0af0c7578da9a6d3634bfe1920528af5f87ab19f5a4e23b3652e5dbf5ec5",
+      "bytes_lf": 12950,
+      "sha256_raw": "581062f5296f7893332b32e3d92f4e63b9980e956df75855ddf2ec14b2fc8e76",
+      "bytes_raw": 13131,
+      "crlf_count": 181,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/go-final-server.log",
+      "sha256_lf": "dbf4b3537dc0b6360541f42704d85d58674394a8a22f14ab6069ad6800e9296a",
+      "bytes_lf": 153,
+      "sha256_raw": "45f79cad73ae505fb7455304608edcb52e550631677694a08fa8d174007cb835",
+      "bytes_raw": 155,
+      "crlf_count": 2,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final2.log",
+      "sha256_lf": "2d86fe8a890751007cde355c5c7770cfb87cf9cbd8e07d6c947e395bf46f9411",
+      "bytes_lf": 22634,
+      "sha256_raw": "80802ed92d73e00bcd738387dad664dc8456ec6c515ac72ba1c8c9fe31a33d33",
+      "bytes_raw": 22922,
+      "crlf_count": 288,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_manifest.json",
+      "sha256_lf": "6d097e344b50ab0bf51c0533deef61d958858f0e5bb55df46b9ded81fb30aeca",
+      "bytes_lf": 2809,
+      "sha256_raw": "a9de9520b747a94e47f84bd96e8c45bf79787c13fbc7caefcfd247d9e55edf8e",
+      "bytes_raw": 2890,
+      "crlf_count": 81,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/local_anonymous_volume_cleanup.json",
+      "sha256_lf": "3b8c7b2afe98b3fcb7952d507a09877ddd4742432885fb53cd592505ee5d8523",
+      "bytes_lf": 10293,
+      "sha256_raw": "634796c5281acc4438cbf2a7d4b6c865ca64012e1bdbf0b2542d8258b000aa64",
+      "bytes_raw": 10606,
+      "crlf_count": 313,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/legacy_ui_identity_fixture.diff",
+      "sha256_lf": "514f8e1749935b48bec0dad6d24c1cd5c1dc4f6e629ceef8fbf81ab1b7091ff6",
+      "bytes_lf": 4055,
+      "sha256_raw": "514f8e1749935b48bec0dad6d24c1cd5c1dc4f6e629ceef8fbf81ab1b7091ff6",
+      "bytes_raw": 4055,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure.md",
+      "sha256_lf": "d60cb6bde6cf8eeed820e8d9d766622cb4be9c044733bff257330442154e6421",
+      "bytes_lf": 2098,
+      "sha256_raw": "d60cb6bde6cf8eeed820e8d9d766622cb4be9c044733bff257330442154e6421",
+      "bytes_raw": 2098,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/fixture_second_setup_failure.md",
+      "sha256_lf": "84b219674149ab12ac6e3d05fa921386b5cd95f040bf46de2bc795b2d229ccf2",
+      "bytes_lf": 1995,
+      "sha256_raw": "84b219674149ab12ac6e3d05fa921386b5cd95f040bf46de2bc795b2d229ccf2",
+      "bytes_raw": 1995,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/go_source_negative_spawn_failure.md",
+      "sha256_lf": "e21947372281cd437b30a8bde5cf2e1181535d8ee4f6863f7afc4476b05ec839",
+      "bytes_lf": 939,
+      "sha256_raw": "e21947372281cd437b30a8bde5cf2e1181535d8ee4f6863f7afc4476b05ec839",
+      "bytes_raw": 939,
+      "crlf_count": 0,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-focused-tests-messages-projection-failure.log",
+      "sha256_lf": "cf7cbacc284c0cc48cc140df1d30165e43f16f3eb20a175b3f5d70edf60e5c4c",
+      "bytes_lf": 2491,
+      "sha256_raw": "83d4c1c1653c81e5b913c164ad5261fcee49c2795465a46c2a56cd352e283f09",
+      "bytes_raw": 2535,
+      "crlf_count": 44,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-forced-build-final.log",
+      "sha256_lf": "bcea47d3bd561d216aeae18c6b36079d6be56b6919dc36f73becf841819be77a",
+      "bytes_lf": 552,
+      "sha256_raw": "b747fdd6e8c2df45259f8003243e55cb089792412cbdb1f44d5558a408dc84d4",
+      "bytes_raw": 561,
+      "crlf_count": 9,
+      "lone_cr_count": 0
+    },
+    {
+      "path": "docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-retry.log",
+      "sha256_lf": "c9c840e6abc3f213dc365dd07fffdaef04c5e9f30ac4b7d6d1a44aba8b51a9af",
+      "bytes_lf": 9679,
+      "sha256_raw": "21d4560c03f5306de304902a6554f14d3897e8098f527b161aa08327c34816a4",
+      "bytes_raw": 9829,
+      "crlf_count": 150,
+      "lone_cr_count": 0
+    }
+  ],
+  "timingBindings": {
+    "backendSourceLastWriteTimeUtcObserved": "2026-10-12T21:44:19Z",
+    "finalBackendCommandStartedUtc": "2026-10-12T21:44:26Z",
+    "backendSourceEditsAfterFinalCommand": "none by worker; subsequent worker edits were frontend, return, and evidence only"
+  },
+  "hashDiscrepancy": {
+    "priorReviewerDigests": "unreconciled",
+    "normalizationExplainsDifference": false,
+    "reason": "The current backend files contain LF only; raw and LF-normalized SHA-256 values are identical. No backend source edit by this worker occurred after the final backend test. The current manifest binds the exact current tested source snapshot; prior differing digest values were not independently reproduced."
+  }
+}

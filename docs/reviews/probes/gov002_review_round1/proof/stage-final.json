@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "gov002.round1.proofStage@1",
+  "stage": "final",
+  "recordedAtUtc": "2026-10-12T12:52:03+00:00",
+  "pythonVersion": "3.11.9",
+  "gitVersion": "git version 2.55.0.windows.3",
+  "powershellVersion": "7.5.4",
+  "pathPlaceholders": {
+    "<PROJECT>": "live worktree",
+    "<WORK>": "disposable proof work directory",
+    "<WORKSPACE>": "container directory that holds the project and the sibling Core"
+  },
+  "claimBoundary": "static repository checks in the stated trees only; no provider, runtime, hosted CI or deployment evidence",
+  "unexpectedCount": 0,
+  "recordCount": 12,
+  "records": [
+    {
+      "id": "FIN-doc-digests",
+      "purpose": "digests of the packets judged by the final-state gates",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "docs/work_orders/CCMAI_GOV_002.md": "08650ea7ff640fdff295633a9c3416615fb11215a868feeea465be6e8e3ff9ce",
+        "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md": "f2c769c9626de76738514dce70abed00beab2704ae3138b08cc2c96eaf0d2eb7",
+        "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md": "c892c5f148c4781cc52db3384c6cc397a6bfddc04b65900f1d07d53f78ac8687"
+      }
+    },
+    {
+      "id": "FIN-status",
+      "purpose": "work order is in its return display state",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "workOrderStatus": "COMPLETE_PENDING_REVIEW"
+      }
+    },
+    {
+      "id": "FIN-pre-dispatch",
+      "purpose": "live final-state pre-dispatch with explicit packets",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.31,
+      "outputSha256": "1de9eef5bdd63b9d3684143e52d7406d3f68ac07816b44535dff5faf9ed9f8d9",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=110 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\nRESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0\n"
+    },
+    {
+      "id": "FIN-worker-return",
+      "purpose": "live final-state worker-return with explicit packets",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.27,
+      "outputSha256": "2a90ca829bbf8f6dd10790f3dc35631d2848208a7a72f5892207bf33ee1112f3",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=110 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 6 document(s) scanned\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\n"
+    },
+    {
+      "id": "FIN-reviewer-fast",
+      "purpose": "live final-state reviewer-fast with explicit packets",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase reviewer-fast --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.28,
+      "outputSha256": "d39217e01e0f37e1b948d196e8b1a7304305af305af8c766891d465ffbb75c0a",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=110 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 PASS\n       note: checked: docs/work_orders/CCMAI_GOV_002.md\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 6 document(s) scanned\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\n"
+    },
+    {
+      "id": "FIN-pre-commit",
+      "purpose": "live final-state pre-commit with explicit packets",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-commit --project-root . --no-receipt --packet docs/work_orders/CCMAI_GOV_002.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md --packet docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.3,
+      "outputSha256": "e6adea1fdb838916bb24804d948f44b5f806c0cee9023ec974cd740d50c81b68",
+      "outputTruncated": false,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=ca1c3aa29a6088916bbd5d31bef37e67277f8b9c candidates=110 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md, docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md, docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md, docs/reviews/probes/gov002_review_round0/original-GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md\n       note: docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 6 document(s) scanned\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\n"
+    },
+    {
+      "id": "FIN-preflight",
+      "purpose": "legacy seven-gate preflight on the final tree",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_downstream_gate.py preflight",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "PASS (7/7 executed gates passed)"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 2.33,
+      "outputSha256": "851c7cd96bb0ff1752e52db5309cec193f64f92a88a7b73843c061cac303c313",
+      "outputTruncated": false,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    {
+      "id": "FIN-closeability",
+      "purpose": "pinned gate-to-role closeability checker (order + return recheck) over the change set",
+      "command": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -B scripts/cvf_gates/check_gate_to_role_closeability.py --repo-root . --base ca1c3aa29a6088916bbd5d31bef37e67277f8b9c --head ca1c3aa29a6088916bbd5d31bef37e67277f8b9c --enforce",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "Violations: 0",
+        "COMPLIANT"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.18,
+      "outputSha256": "0cf98bb13b1b88f877a235371d3c1bb4211e4081ba2b6308734504b5941d0179",
+      "outputTruncated": false,
+      "output": "=== CVF Gate-To-Role Closeability Guard ===\nViolations: 0\nNOT_APPLICABLE_WITH_REASON docs/work_orders/CCMAI_GOV_002.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; checkedControlIds=work_order_status_grammar; uncheckedControlIds=closeability_contract\nCOMPLIANT\n"
+    },
+    {
+      "id": "FIN-doctor",
+      "purpose": "Core workspace enforcement doctor on the live worktree",
+      "command": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE -NoProfile -ExecutionPolicy Bypass -File <WORKSPACE>\\.Controlled-Vibe-Framework-CVF\\scripts/check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": [
+        "RESULT: PASS"
+      ],
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 3.4,
+      "outputSha256": "24b14c492a12c2448f319f5fda61f43b978c1d0b056defe9b9a8aeefe367d112",
+      "outputTruncated": false,
+      "output": "\nCVF Workspace Agent Enforcement Doctor\n=======================================\nProject: <PROJECT>\n\n\n  Check                                              Status\n  -------------------------------------------------- ------\n  Project folder exists                              [PASS]\n  Project isolated from CVF core                     [PASS]\n  .cvf/manifest.json exists                          [PASS]\n  .cvf/manifest.json is valid                        [PASS]\n  .cvf/policy.json exists                            [PASS]\n  Live governance evidence mandatory                 [PASS]\n  AGENTS.md exists                                   [PASS]\n  Bootstrap log exists                               [PASS]\n  CVF core path reachable                            [PASS]\n  Workspace rules file exists                        [PASS]\n  CVF core origin is public remote                   [PASS]\n  Public workspace kit is complete                   [PASS]\n  CVF public core matches origin/main                [PASS]\n  CVF public core worktree clean                     [PASS]\n  CVF core commit matches manifest                   [PASS]\n  Required docs referenced by manifest exist         [PASS]\n  knowledge/ folder present (optional)               [PASS]\n  Seven-step phase model is canonical                [PASS]\n  Project continuity and catalog front doors exist   [PASS]\n  Active session state resolves its handoff          [PASS]\n  Implementation status and module registry are valid JSON [PASS]\n  AGENTS contract defines roles and seven steps      [PASS]\n  Pinned CVF core commit is public-remote reachable  [PASS]\n  Session and tranche continuity rehydration required [PASS]\n  Governed downstream catalog validates (--check)    [PASS]\n  Gate CVF-DG-INST-01                                [PASS]\n  Gate CVF-DG-CONT-01                                [PASS]\n\n  GATE_COVERAGE: INSTALLED=7 INVOKED=26 NOT_APPLICABLE_WITH_REASON=9 hostedCiObserved=false\n  RESULT: PASS (27/27 checks passed)\n  Scope: the listed doctor checks only. Not a claim of hosted CI, real adoption or runtime AI enforcement.\n"
+    },
+    {
+      "id": "FIN-diff-check",
+      "purpose": "git diff --check over tracked changes",
+      "command": "git diff --check",
+      "cwd": "<PROJECT>",
+      "exitCode": 0,
+      "expected": 0,
+      "expectedText": null,
+      "forbiddenText": null,
+      "outcome": "AS_EXPECTED",
+      "durationSeconds": 0.06,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "outputTruncated": false,
+      "output": ""
+    },
+    {
+      "id": "FIN-local-links",
+      "purpose": "local markdown links in the files this repair authored all resolve (no new dead link)",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "broken": {}
+      }
+    },
+    {
+      "id": "FIN-protected",
+      "purpose": "no product code, policy, seed, existing workflow or existing legacy test changed",
+      "outcome": "AS_EXPECTED",
+      "detail": {
+        "checkedPaths": [
+          ".cvf/policy.json",
+          "scripts/tests/test_cvf_downstream_gate.py",
+          "CVF_SESSION/authority",
+          "backend",
+          "frontend",
+          ".github/workflows/backend.yml",
+          ".github/workflows/docs.yml",
+          ".github/workflows/frontend.yml",
+          ".github/workflows/governance.yml"
+        ],
+        "porcelain": ""
+      }
+    }
+  ],
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW"
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/c",
+    "npm.cmd",
+    "run",
+    "test",
+    "--",
+    "src/__tests__/notification-route-permissions.spec.ts"
+  ],
+  "cwd": "frontend",
+  "started_utc": "2026-10-12T22:51:06+00:00",
+  "finished_utc": "2026-10-12T22:51:12+00:00",
+  "exit_code": 0,
+  "log": "docs/reviews/probes/r091_outbound_delivery/frontend_route_guard_repeat.log",
+  "output_bytes_utf8": 348,
+  "summary": {
+    "test_files": "1 passed (1)",
+    "tests": "5 passed (5)"
+  }
+}

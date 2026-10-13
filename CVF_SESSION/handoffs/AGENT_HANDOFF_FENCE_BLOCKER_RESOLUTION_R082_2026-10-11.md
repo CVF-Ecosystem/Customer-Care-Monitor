@@ -1,6 +1,6 @@
 # R082 fence blocker-resolution documentary handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

@@ -1,6 +1,6 @@
 # Source-first provider initialization handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

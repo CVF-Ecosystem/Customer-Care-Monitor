@@ -1,0 +1,1 @@
+host loopback authenticated app-user PingContext=PASS; SELECT 1=PASS

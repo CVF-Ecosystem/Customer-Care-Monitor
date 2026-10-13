@@ -1,6 +1,6 @@
 # R086 source-only mount lifecycle handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

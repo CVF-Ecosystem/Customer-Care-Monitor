@@ -1,0 +1,43 @@
+{
+  "recordedAtUtc": "2026-10-12T18:21:26.818160+00:00",
+  "purpose": "Resolve UI01/UI03/UI05/UI07 explicit selection/deselect versus pending initialization contradiction; three tests only, consume worker 76-test evidence without rerun",
+  "command": [
+    "cmd",
+    "/d",
+    "/c",
+    "npm",
+    "test",
+    "--",
+    "src/__tests__/messages-lifetime-local-intent.spec.ts",
+    "--reporter=json",
+    "--outputFile=D:\\r088-local-review-20261013-run2\\result.json"
+  ],
+  "cwd": "<OVERLAY>/frontend",
+  "exitCode": 1,
+  "elapsedSeconds": 17.0,
+  "tests": [
+    {
+      "title": "healthy deep link still selects A when no newer user action occurred",
+      "status": "passed",
+      "failure": ""
+    },
+    {
+      "title": "pending initial deep link cannot override the newer explicit selection B",
+      "status": "failed",
+      "failure": "AssertionError: older initialization must preserve the explicit B selection: expected 'Khách A' to contain 'Khách B'\n    at D:/r088-local-review-20261013-run2/frontend/src/__tests__/messages-lifetime-local-intent.spec.ts:21:89\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    },
+    {
+      "title": "mobile back cancels pending deep-link selection instead of reopening A",
+      "status": "failed",
+      "failure": "AssertionError: back must invalidate pending initialization selection: expected true to be false // Object.is equality\n    at D:/r088-local-review-20261013-run2/frontend/src/__tests__/messages-lifetime-local-intent.spec.ts:31:81\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/frontend/node_modules/@vitest/runner/dist/index.js:1258:20"
+    }
+  ],
+  "sourceLfSha256": {
+    "frontend/src/views/Messages.vue": "aa874e48b44c437f50e73f19872a15c2121aed1b2e32dff03785b881676c3888",
+    "frontend/src/stores/conversations.ts": "a972c98506c124b9e68aecc8cfd72c9ecc3cc29ec7d2aea3150fd2f65d72c2ec"
+  },
+  "liveFrontendWritten": false,
+  "providerCalls": 0,
+  "backendRuns": 0,
+  "stdoutTail": "\n> frontend@0.0.0 test\n> vitest run src/__tests__/messages-lifetime-local-intent.spec.ts --reporter=json --outputFile=<OVERLAY>\\result.json\n\nJSON report written to D:/r088-local-review-20261013-run2/result.json\n"
+}

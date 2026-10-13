@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-090",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_AUTHORIZED_AUTH_PERMISSION_REFRESH_REPAIR",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/auth_intake",
+    "repairWorker": "/root/auth_intake",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/users.go",
+    "backend/api/handlers/auth.go",
+    "backend/api/handlers/dashboard.go",
+    "backend/api/router.go",
+    "frontend/src/views/Dashboard.vue",
+    "frontend/src/layouts/DefaultLayout.vue",
+    "backend/api/handlers/auth_permissions*.go",
+    "backend/api/handlers/auth_token_version*.go",
+    "backend/api/handlers/users_password_reset*.go",
+    "backend/api/handlers/dashboard_permission*.go",
+    "backend/api/handlers/dashboard*_test.go",
+    "backend/api/handlers/users_role_reset*_test.go",
+    "backend/api/handlers/refresh_token*_test.go",
+    "backend/api/handlers/auth_permissions*_test.go",
+    "backend/api/router_permissions*_test.go",
+    "frontend/src/__tests__/dashboard-permissions*.spec.ts",
+    "frontend/src/__tests__/layout-permissions*.spec.ts",
+    "frontend/src/__tests__/fixtures/auth-permissions/*",
+    "scripts/r089_auth_fixture.py",
+    "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
+    "docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md",
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/work_orders/CCMAI_RUNTIME_089_AUTH_PERMISSIONS.md"
+  ],
+  "prohibitedEffects": [
+    "Core_gate_workflow_policy_dependency_manifest_or_historical_seed_rewrite",
+    "production_or_existing_container_database_customer_credentials_or_account_access",
+    "real_provider_channel_API_outbound_notification_or_application_deploy_effects",
+    "worker_commit_push_merge_force_push_or_self_review",
+    "full_product_stage_FREEZE_or_live_AI_governance_claim_without_evidence"
+  ],
+  "ownerAuthorization": "Current2026-10-13 operator instructs Local review/finish without Claude and authorizes Luna max internal workers to complete remaining inheritance roadmap. This seed admits only package A F01/F02/F03 under independent Local review.",
+  "entryDecision": "R088 F06 accepted at a8865d15296ce1a82ae368363d8f7de29392cdd0 / continuity14bbf1dbb079c4512eb2fed5dc94aeae391f236f. Source-grounded Luna read-only intake derives existing member/admin/owner permissions and MySQL testing; no source acceptance yet.",
+  "executionBudget": {
+    "implementationPackages": 1,
+    "toolingSetup": "Official SHA256-verified Go1.26.0 archive in ignored .cvf/runtime; one go mod download using existing go.mod/go.sum and public GOPROXY, no credential inspection or manifest edits; max10min. Root already verified archive.",
+    "dockerSetup": "Pull official mysql:8.0 once, record actual image digest. One uniquely labeled throwaway fixture container/network, loopback-only dynamic port, synthetic empty-password root fixture, no host volumes or persistent database. Reuse fixture for pre-repair/final tests then cleanup exact owned resources. No other container lifecycle operation.",
+    "goEvidence": "One pre-production negative campaign and one final focused handler/router campaign plus relevant existing dashboard/auth regressions; repeat only for named failures/source changes, mandatory cases no SKIP. Max15min per campaign. Compile touched packages; frontend focused tests/forced type/build once.",
+    "databaseRuns": "Only bounded synthetic fixture for source-negative/final F01/F02/F03 persistence/route/locking/CAS evidence",
+    "sameScopeRepairs": "Consolidate under unchanged scope; third round requires root-cause escalation, no successor for routine repair.",
+    "providerCalls": 0,
+    "realOutboundCalls": 0,
+    "customerDataRuns": 0,
+    "projectBranchPublication": "Root may commit/publish accepted project branch codex/cvf-portable-inheritance only, no main/merge/deploy"
+  },
+  "claimScope": "Application permission/transaction/CAS semantics with synthetic hermetic MySQL/HTTP tests and UI mock boundaries; not CVF AI governance, real customers or full native fence readiness."
+}

@@ -1,6 +1,6 @@
 # Offline Pancake CLI scope-test maintenance handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

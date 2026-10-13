@@ -1,6 +1,6 @@
 # R073 saved adapter-presence UI handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

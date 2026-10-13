@@ -1,0 +1,18 @@
+{
+  "executionHead": "086330e1860df291ea58a56726914bb0b4d53087",
+  "workerHashBindings": {
+    "frontend/src/views/Messages.vue": true,
+    "frontend/src/stores/conversations.ts": true,
+    "frontend/src/__tests__/messages-lifetime-startup.spec.ts": true,
+    "frontend/src/__tests__/messages-lifetime.spec.ts": true,
+    "frontend/src/__tests__/messages-lifetime-resources.spec.ts": true,
+    "frontend/src/__tests__/conversations-lifetime.spec.ts": true,
+    "frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts": true,
+    "frontend/src/__tests__/messages-screen.spec.ts": true,
+    "frontend/src/__tests__/messages-business-day.spec.ts": true,
+    "frontend/package.json": true,
+    "frontend/package-lock.json": true
+  },
+  "scopeDecision": "Accept manual page/filter/search as distinct from selection intent per current operator clarification; R088-R1-F01 concerns explicit selection/back only",
+  "providerCalls": 0
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "tranche": "CCMAI-RUNTIME-091",
+  "round": 1,
+  "worker": "/root/outbound_intake",
+  "role": "INTERNAL_AGENT",
+  "model": "gpt-6-luna",
+  "reasoningEffort": "max",
+  "risk": "R2",
+  "capturedAtUtc": "2026-10-12T23:28:54.287654+00:00",
+  "dispatchHead": "03e68e1ad91f74bb153e7fa5c8b646001b9f78cc",
+  "immutableSeed": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
+  "admission": {
+    "legacyPreflight": "PASS7/7",
+    "trustedPreDispatch": "PASS5/5",
+    "applActuallyChecked": [
+      "work_order_status_grammar",
+      "closeability_contract"
+    ],
+    "legacyLog": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_preflight.log",
+    "trustedReceipt": "docs/reviews/probes/r091_outbound_delivery_r1/pre-dispatch.json",
+    "trustedExitCode": 0
+  },
+  "sourceBindingMoment": "Current R091 candidate before R1 production changes; hashes bind the implementation under detector. Only R1 test/helper edits had occurred at capture.",
+  "productionSourceSha256": {
+    "backend/notifications/telegram.go": "20861b44bee3a012a6b5d5ed6ac02f9f65d28d0ddcaa6a708f74f5b1e1f54f68",
+    "backend/notifications/email.go": "bb07963568b2405eabd649c98f366903bebb65e51f23d17306b548d87a9a3d6b",
+    "backend/notifications/delivery_manifest.go": "f509bbc047047e5d8969e47d076a999345c68a9ad74a98d160891dd2e63d6c81",
+    "backend/notifications/delivery_attempt.go": "224c8304f5c3bec3e1f0d481815d986dea67d073cc38a5d5e0809499da1d5611",
+    "backend/notifications/dispatcher.go": "3eb03ad33c5669e98ca520f47e82f6613890eb965275878cbb836149b8045fb9",
+    "backend/notifications/smtp_session.go": "9b35d51f0bf3d98c270c7c756a7d52a39b92d5ee6be9ba11cf5e8e77d7893ced",
+    "backend/engine/analyzer.go": "be1aeedced66ad751f16bc48ec94cb222ab665c88fb82bf650ffbe83675b8e38",
+    "backend/engine/analyzer_batch_backoff.go": "ff283596fdd8083ebae7303aede2dd3d7048733d9765fc2e4f172a30683c7787"
+  },
+  "detectorAndFixtureHelperSha256": {
+    "backend/notifications/telegram_delivery_test.go": "42097276468b7bae688ce4e7c08ec46dae976f16b8232fa30b3fec4fa507e330",
+    "backend/notifications/dispatcher_delivery_test.go": "0fcfc67be21cc33413f3ae88aa196b45c7e7793424e8bf3e36a6fb01bc404c50",
+    "backend/notifications/email_delivery_test.go": "10ab4c0af67e6ce25494823f5d450d51362ade92c6d689fe49393c6c62e1a121",
+    "backend/engine/analyzer_batch_bookkeeping_contract_test.go": "91a3309761e5f9701b53a52246750003fa24639419a420622ac3c7d46d715683",
+    "scripts/r091_outbound_fixture.py": "9352a8eeac4910896e4856610b73eaaf7f4b6da8b8ca368e71180131e9af62d5"
+  },
+  "baselineDetectors": [
+    "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown",
+    "TestR091R1SMTPHELOFallbackPreservesLegacyDelivery",
+    "TestR091R1SMTPESMTPWithoutAUTHStillRejects",
+    "TestR091R1MarkerRejectsCapturedResultDeletedAfterUnlockedSnapshot",
+    "TestR091R1ClaimPersistenceFailureMakesNoOutboundCall",
+    "TestR091R1OutcomeReceiptAndLogFailuresRemainSendingWithoutResend",
+    "TestR091R1SMTPContextCancellationClosesStalledGreetingAndFinalDATA",
+    "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait"
+  ],
+  "testExecution": "NOT_RUN_AT_BINDING_CAPTURE",
+  "usage": {
+    "tokenCount": null,
+    "billing": null,
+    "reason": "Internal agent model/effort are session-reported; numeric token/billing counters are not exposed."
+  }
+}

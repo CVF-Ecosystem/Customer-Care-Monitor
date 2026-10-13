@@ -1,0 +1,14 @@
+{
+  "recordedAtUtc": "2026-10-12T21:11:57.371470+00:00",
+  "remote": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "branch": "codex/cvf-portable-inheritance",
+  "materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
+  "continuityCommit": "14bbf1dbb079c4512eb2fed5dc94aeae391f236f",
+  "observedRemoteTip": "14bbf1dbb079c4512eb2fed5dc94aeae391f236f",
+  "pushExitCode": 0,
+  "verification": "git ls-remote exact branch SHA match",
+  "localPrCi": "PASS7 controls,0failed over086330e..14bbf1d with actual profile/runner/bundle pins",
+  "hostedCiObserved": false,
+  "providerCalls": 0,
+  "claim": "F06 bounded synthetic UI only; no private parent/main/merge/deploy export"
+}

@@ -164,6 +164,8 @@ function channelLabel(type: string) {
 function statusLabel(status: string) {
   if (status === 'sent') return t('lg_sent')
   if (status === 'failed') return t('lg_failed')
+  if (status === 'sending') return t('lg_sending')
+  if (status === 'unknown') return t('lg_unknown')
   return status || '—'
 }
 

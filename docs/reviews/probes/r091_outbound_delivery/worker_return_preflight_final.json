@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "r091.worker-return-preflight@1.0.0",
+  "recordedAtUtc": "2026-10-12T23:09:04Z",
+  "executionTimestampCaptured": false,
+  "command": "python -B scripts/cvf_downstream_gate.py preflight --root .",
+  "exitCode": 0,
+  "result": "PASS",
+  "gates": [
+    {
+      "result": "PASS",
+      "name": "provenance"
+    },
+    {
+      "result": "PASS",
+      "name": "continuity"
+    },
+    {
+      "result": "PASS",
+      "name": "tranche"
+    },
+    {
+      "result": "PASS",
+      "name": "claims"
+    },
+    {
+      "result": "PASS",
+      "name": "secrets"
+    },
+    {
+      "result": "PASS",
+      "name": "workflows"
+    },
+    {
+      "result": "PASS",
+      "name": "catalog"
+    }
+  ],
+  "output": [
+    "[PASS] provenance",
+    "       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md",
+    "       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core",
+    "[PASS] continuity",
+    "[PASS] tranche",
+    "[PASS] claims",
+    "[PASS] secrets",
+    "       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read",
+    "[PASS] workflows",
+    "[PASS] catalog",
+    "CVF downstream preflight: PASS (7/7 executed gates passed)"
+  ],
+  "note": "Receipt records the observed tool result; invocation time was not captured by the wrapper."
+}

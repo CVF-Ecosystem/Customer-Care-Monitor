@@ -1,0 +1,24 @@
+{
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/c",
+    "npm.cmd",
+    "run",
+    "test",
+    "--",
+    "src/__tests__/notification-route-permissions.spec.ts",
+    "src/__tests__/notification-delivery-status.spec.ts",
+    "src/__tests__/dashboard-qc-card.spec.ts",
+    "src/__tests__/dashboard-business-day.spec.ts",
+    "src/__tests__/dashboard-permissions.spec.ts",
+    "src/__tests__/layout-permissions.spec.ts"
+  ],
+  "cwd": "frontend",
+  "started_utc": "2026-10-12T22:50:08+00:00",
+  "finished_utc": "2026-10-12T22:50:25+00:00",
+  "exit_code": 1,
+  "log": "docs/reviews/probes/r091_outbound_delivery/frontend_focused_tests.log",
+  "output_bytes_utf8": 1613,
+  "console_echo_outcome": "The capture script persisted the complete log and npm exit code before its attempt to print the log tail raised a Windows cp1252 UnicodeEncodeError on U+276F. The test command outcome remains the recorded exit_code 1; the failure is preserved in the log."
+}

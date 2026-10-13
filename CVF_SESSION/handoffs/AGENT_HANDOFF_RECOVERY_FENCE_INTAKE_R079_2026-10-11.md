@@ -1,6 +1,6 @@
 # R079 recovery fence prerequisite intake handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
