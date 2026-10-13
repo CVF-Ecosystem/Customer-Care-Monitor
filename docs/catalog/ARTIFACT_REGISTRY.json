@@ -852,6 +852,13 @@
       "description": "Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition."
     },
     {
+      "id": "learning-parent-per-output-delivery",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/CCMAI_TO_CVF_PER_OUTPUT_DELIVERY_APPLICATION_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Portable project adoption of Core per-output delivery evidence guidance for future outbound reviews; R091 remains historical bounded proof."
+    },
+    {
       "id": "continuity-learning-folder-convention",
       "family": "continuity",
       "path": "docs/reviews/learnings/README.md",

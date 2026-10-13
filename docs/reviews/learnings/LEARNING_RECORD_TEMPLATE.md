@@ -1,9 +1,9 @@
-# Project Learning Record - <finding id>
+# Project Learning Record - `<finding id>`
 
 Status: CANDIDATE
-Source project: <name>
-Source revision: <commit SHA>
-Updated: <date>
+Source project: `<name>`
+Source revision: `<commit SHA>`
+Updated: `<date>`
 
 ## Trigger / Observation
 

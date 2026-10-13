@@ -20,6 +20,8 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current seven-finding closure
 
+Parent Core per-output delivery guidance is adopted as prospective project review criteria: docs/reviews/learnings/CCMAI_TO_CVF_PER_OUTPUT_DELIVERY_APPLICATION_2026-10-13.md (source b4d44307c22f68340746eccd2089d121430905d3; checklist SHA-256 13126809f82d4e05384fb3c293db84c8ce6925540ef55766a815a772d445bda3). R091 acceptance predates this guidance and remains bounded; no product or live claim changes.
+
 CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner-requested product delivery roadmap docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md was published on codex/cvf-portable-inheritance at material d72de76984e4aad9c208cc82e6093578797b5340 with remote readback. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. This publication is documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked.
 
 Final independent review: docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md; actual C material `d121c9ecf24a869aea92264db1e01cd853dec0ec`; remote material SHA verified in docs/reviews/probes/r091_local_review/publication.json. A material44bb345, F06a8865d1. Mode REVIEW with accepted records and FREEZE product OPEN. No active work order or source campaign.
