@@ -2,7 +2,7 @@
 
 Memory class: FULL_RECORD
 docType: work_order
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: /root/outbound_intake
 Reviewer: Codex /root
@@ -121,8 +121,8 @@ Record rootCauseClusterId CCMAI-OUTBOUND-DELIVERY-BACKOFF, reworkGeneration1, co
 closeabilityContractVersion: cvf.gate-role-closeability@1.0.0
 closeabilityDisposition: CLOSEABLE
 outsideAuthorityBlockers: NONE
-nextRepairRoute: SAME_SEED_R091_CONSOLIDATED_LUNA_REPAIR
-workerRedispatchAllowed: YES
+nextRepairRoute: ROOT_ACCEPTED_CLOSURE_NO_WORKER_REDISPATCH
+workerRedispatchAllowed: NO
 
 Source and synthetic setup are admitted; readiness/setup failures must be reported, not hidden as skips. Unknown real/live/provider results remain unknown.
 
@@ -132,8 +132,7 @@ Read legacy seed/role/path/risk/base/history/opt-in status literals, pinned publ
 
 ## Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY. Preparation before actual publication; Root owns reviewed project branch commits/push, no private Core export/main/merge/deploy.
-
+EXPORTED. Project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git; branch codex/cvf-portable-inheritance; actual accepted C/final closure material `d121c9ecf24a869aea92264db1e01cd853dec0ec` and A material `44bb345d0d0efb5e6a01b2f23e975e17a65f5d02`. Remote-SHA verification receipt docs/reviews/probes/r091_local_review/publication.json. Artifact path docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md. Public branch only; fullproduct/browser/live/hosted/deploy remain unproved. No main/merge/private Core/deploy.
 
 ## Consolidated R091 round1 repair admission
 
@@ -159,3 +158,7 @@ unchangedCommitOwner: YES
 evidenceDetermined: NO
 
 The existing contract is unchanged, but missing behavioral proof and source repairs require fresh evidence. NEW_EVIDENCE_REQUIRED routes one consolidated worker repair; Root retains independent source review.
+
+## Final independent acceptance and actual commit
+
+Root final review docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md accepts bounded F04/F05/F07 and all consolidated R1 clusters. Actual material `d121c9ecf24a869aea92264db1e01cd853dec0ec`, closurebase03e68e1, pinned local pr-ci7PASS; actual publication docs/reviews/probes/r091_local_review/publication.json. Original initial/R1 returns, seed and proof preserved; source/test/effect execution closed, no next dispatch. Product FREEZE OPEN.

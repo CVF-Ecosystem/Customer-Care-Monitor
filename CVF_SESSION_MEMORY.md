@@ -20,9 +20,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 ## Current seven-finding closure
 
-CCMAI-RUNTIME-091 independent REVIEWER_ACCEPTED: all seven inheritance findings CLOSED_PASS_BOUNDED application proof. Codex /root commits exact accepted material from03e68e1, records actual C build SHA in one continuity batch, and publishes existing codex/cvf-portable-inheritance project branch with remote SHA verification. No further worker/source/test campaign or automatic successor; product FREEZE/S0-S7/live/browser/hosted/deploy open, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-091 REVIEW_PASS. All seven selected CCMA runtime inheritance findings CLOSED_PASS_BOUNDED and accepted material published atd121c9ecf24a869aea92264db1e01cd853dec0ec on codex/cvf-portable-inheritance. Root records/verifies this continuity tip publication, then owner may clone/continue the project. No automatic worker/source/test successor; separate bounded scope required for future product work. FullS0-S7/FREEZE/browser/real-provider/API/hosted/deploy remain open; channels/dependency17/docs55/R086 native-fence separate; Facebook/Zalo OA parked.
 
-Final independent review: docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. Source accepted; actual C commit/publication pending. F01-F07 refer only to inheritance ledger, not global product findings.
+Final independent review: docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md; actual C material `d121c9ecf24a869aea92264db1e01cd853dec0ec`; remote material SHA verified in docs/reviews/probes/r091_local_review/publication.json. A material44bb345, F06a8865d1. Mode REVIEW with accepted records and FREEZE product OPEN. No active work order or source campaign.
 
 ## Historical initial C worker return (before Root round1 review)
 

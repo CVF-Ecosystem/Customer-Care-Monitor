@@ -9,7 +9,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
-- All seven selected inheritance findings independently accepted bounded; final project publication pending, full product exits open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
+- All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
@@ -1198,10 +1198,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen.: `docs/reviews/probes/r090_auth_permissions/material_paths.json`
 - Luna max source/evidence return, UI8PASS/type/build and backend package-summary PASS; per-case/SKIP missing, lifecycle Root-owned.: `docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md`
 - Immutable first-commit C authority, source/effects bounded.: `CVF_SESSION/authority/CCMAI-RUNTIME-091.json`
+- Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim.: `docs/reviews/probes/r091_local_review/continuity_paths.json`
+- Root continuity next-action literal omission; first6/7 retained, actual tranche prefix corrected, no source edit.: `docs/reviews/probes/r091_local_review/continuity_preflight_attempt1_failed.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/final_intake.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/final_json_case_intake.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/interrupted_round1_resume.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/material_paths.json`
+- Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim.: `docs/reviews/probes/r091_local_review/publication.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/r1_exact_resource_absence_readback.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/r1_return_envelope_reconciliation.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/r1_worker_return_original.txt`
@@ -1210,6 +1213,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts.: `docs/reviews/probes/r091_local_review/root_final_reviewer_fast_attempt1_failed.json`
 - Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts.: `docs/reviews/probes/r091_local_review/root_final_reviewer_fast.json`
 - Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts.: `docs/reviews/probes/r091_local_review/root_final_role_reconciliation.json`
+- Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim.: `docs/reviews/probes/r091_local_review/root_material_committed_range.json`
+- Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim.: `docs/reviews/probes/r091_local_review/root_material_legacy_catalog.json`
+- Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim.: `docs/reviews/probes/r091_local_review/root_material_precommit.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/f07_parse_save_supplement_reason.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure_first.json`
 - R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure.json`

@@ -1,0 +1,27 @@
+{
+  "actualMaterialSha": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
+  "authorizationReview": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+  "pathCount": 19,
+  "paths": [
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-091.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "docs/reviews/probes/r091_local_review/continuity_paths.json",
+    "docs/reviews/probes/r091_local_review/continuity_preflight_attempt1_failed.json",
+    "docs/reviews/probes/r091_local_review/publication.json",
+    "docs/reviews/probes/r091_local_review/root_material_committed_range.json",
+    "docs/reviews/probes/r091_local_review/root_material_legacy_catalog.json",
+    "docs/reviews/probes/r091_local_review/root_material_precommit.json",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md"
+  ],
+  "scope": "Actual SHA/status/publication/current pointers and corresponding catalog; source/tests/old proof unchanged"
+}

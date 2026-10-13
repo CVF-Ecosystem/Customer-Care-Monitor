@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-091",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-091 independent REVIEWER_ACCEPTED: all seven inheritance findings CLOSED_PASS_BOUNDED application proof. Codex /root commits exact accepted material from03e68e1, records actual C build SHA in one continuity batch, and publishes existing codex/cvf-portable-inheritance project branch with remote SHA verification. No further worker/source/test campaign or automatic successor; product FREEZE/S0-S7/live/browser/hosted/deploy open, Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-091 REVIEW_PASS. All seven selected CCMA runtime inheritance findings CLOSED_PASS_BOUNDED and accepted material published atd121c9ecf24a869aea92264db1e01cd853dec0ec on codex/cvf-portable-inheritance. Root records/verifies this continuity tip publication, then owner may clone/continue the project. No automatic worker/source/test successor; separate bounded scope required for future product work. FullS0-S7/FREEZE/browser/real-provider/API/hosted/deploy remain open; channels/dependency17/docs55/R086 native-fence separate; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root Local independent reviewer, closer and commit steward; Luna max internal worker returned and idle; phase REVIEW; risk R2.",
+  "activeRole": "Codex /root Local independent reviewer, closer and commit steward; accepted Luna max internal worker idle; phase REVIEW; risk R2.",
   "updatedAt": "2026-10-13",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {
@@ -362,7 +362,11 @@
     }
   },
   "x-publication": {
-    "status": "NOT_AUTHORIZED_IN_R083"
+    "status": "EXPORTED_VERIFIED_MATERIAL",
+    "remote": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+    "branch": "codex/cvf-portable-inheritance",
+    "commit": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
+    "receipt": "docs/reviews/probes/r091_local_review/publication.json"
   },
   "x-historicalR070ClosureSummary": {
     "currentMode": "FREEZE",
@@ -647,11 +651,11 @@
   "x-modelAssessment": "WORKER_REPORTED_IDENTITY_NO_MATCHED_MODEL_EFFICIENCY_COMPARISON",
   "x-closureEvidence": null,
   "x-independentReviewCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
-  "x-closureStatus": null,
+  "x-closureStatus": "ALL_SEVEN_CLOSED_PASS_BOUNDED",
   "x-closureChecks": null,
   "x-localClosureCommit": null,
-  "x-publicationStatus": "ACCEPTED_A_C_CLOSURE_PENDING_PUSH",
-  "x-publicationReceipt": null,
+  "x-publicationStatus": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED_CONTINUITY_SYNC",
+  "x-publicationReceipt": "docs/reviews/probes/r091_local_review/publication.json",
   "x-historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
     "priorR068Status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
@@ -826,7 +830,8 @@
     "result": "REVIEWER_ACCEPTED_CLOSED_PASS_BOUNDED",
     "review": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
     "A_review": "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
-    "freeze": "OPEN"
+    "freeze": "OPEN",
+    "actualCBuildCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec"
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -914,13 +919,14 @@
     "redispatchAllowed": false
   },
   "x-currentClosure": {
-    "status": "SOURCE_ACCEPTED_PENDING_ACTUAL_MATERIAL_SHA_AND_PUBLICATION",
+    "status": "ALL_SEVEN_CLOSED_PASS_BOUNDED_EXPORTED",
     "acceptedFindingCount": 7,
     "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
-    "C_materialCommit": null,
+    "C_materialCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
     "A_materialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
     "F06_materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
-    "productFreeze": "OPEN"
+    "productFreeze": "OPEN",
+    "publicationReceipt": "docs/reviews/probes/r091_local_review/publication.json"
   },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
@@ -1136,12 +1142,12 @@
   },
   "x-queuedRuntimeInheritancePlanning": {
     "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
-    "status": "ALL_SEVEN_CLOSED_PASS_BOUNDED",
+    "status": "ALL_SEVEN_CLOSED_PASS_BOUNDED_EXPORTED",
     "findingCount": 7,
     "acceptedFindingCount": 7,
     "executionAuthorized": false,
     "activePackage": null,
-    "next": "Root exact commit/publication; no automatic source successor"
+    "next": "Owner project continuation; future source/live scope separately bounded"
   },
   "x-historicalR086ActualWorkerModel": {
     "model": "gpt-6-luna",

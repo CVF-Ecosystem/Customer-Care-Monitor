@@ -7716,7 +7716,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "All seven selected inheritance findings independently accepted bounded; final project publication pending, full product exits open."
+      "description": "All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open."
     },
     {
       "id": "gov002-docs-reviews-probes-gov002-review-round1-original-returned-cvf-downstream-gate-py-txt",
@@ -9194,6 +9194,48 @@
       "path": "docs/reviews/probes/r091_local_review/root_final_role_reconciliation.json",
       "status": "ACTIVE",
       "description": "Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-publication-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/publication.json",
+      "status": "ACTIVE",
+      "description": "Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-material-precommit-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_material_precommit.json",
+      "status": "ACTIVE",
+      "description": "Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-material-committed-range-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_material_committed_range.json",
+      "status": "ACTIVE",
+      "description": "Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-material-legacy-catalog-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_material_legacy_catalog.json",
+      "status": "ACTIVE",
+      "description": "Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-continuity-paths-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/continuity_paths.json",
+      "status": "ACTIVE",
+      "description": "Actual accepted material gate/publication/continuity evidence; local proof maturity and remote SHA recorded, no hosted/deploy claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-continuity-preflight-attempt1-failed-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/continuity_preflight_attempt1_failed.json",
+      "status": "ACTIVE",
+      "description": "Root continuity next-action literal omission; first6/7 retained, actual tranche prefix corrected, no source edit."
     }
   ]
 }

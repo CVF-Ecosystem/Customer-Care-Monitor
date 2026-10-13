@@ -67,16 +67,16 @@
     "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
   },
   "claimScope": "Source-derived application delivery, cancellation, batch bookkeeping and permission semantics using hermetic MySQL/loopback/UI tests; no live CVF AI governance, real providers/customers or whole-product readiness.",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
-  "buildCommit": null,
+  "buildCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
   "reviewEvidence": [
     "docs/reviews/R091_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md",
     "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md"
   ],
-  "disposition": "REVIEWER_ACCEPTED_PENDING_ACTUAL_MATERIAL_SHA",
+  "disposition": "REVIEW_PASS",
   "workerReturn": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
   "proofDirectory": "docs/reviews/probes/r091_outbound_delivery_r1/",
   "freeze": "OPEN",
@@ -87,7 +87,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -99,7 +100,7 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "workOrderStatus": "REVIEWER_ACCEPTED",
   "workerReturnReceipt": {
     "status": "COMPLETE_PENDING_REVIEW",
     "returnDocument": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
@@ -109,5 +110,12 @@
     "returnedAtUtc": "2026-10-13T00:25:41Z",
     "commit": false,
     "push": false
+  },
+  "publication": {
+    "status": "EXPORTED_VERIFIED_MATERIAL",
+    "remote": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+    "branch": "codex/cvf-portable-inheritance",
+    "materialCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
+    "receipt": "docs/reviews/probes/r091_local_review/publication.json"
   }
 }

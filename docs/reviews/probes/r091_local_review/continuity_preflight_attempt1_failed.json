@@ -1,0 +1,27 @@
+{
+  "observedAtUtc": "2026-10-13T00:41:37.335Z",
+  "faultAttribution": "ROOT_CONTINUITY_NEXT_ACTION_MISSING_ACTIVE_TRANCHE_LITERAL",
+  "result": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "90b2d7",
+        "wall_time_seconds": 2.6612514000000003,
+        "exit_code": 1,
+        "original_token_count": 153,
+        "output": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[FAIL] continuity\r\n       - state.nextAllowedMove does not mention the active tranche CCMAI-RUNTIME-091\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: FAIL (6/7 executed gates passed)\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "aac216",
+        "wall_time_seconds": 1.5864544,
+        "exit_code": 0,
+        "original_token_count": 21,
+        "output": "[PASS] Governed downstream catalog is valid and generated views match source truth.\n"
+      }
+    }
+  ],
+  "correction": "Prefix active CCMAI-RUNTIME-091 REVIEW_PASS to same next move across four synchronized surfaces; source/tests/effects unchanged"
+}

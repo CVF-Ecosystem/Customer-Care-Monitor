@@ -12,7 +12,7 @@ Review-Cost Telemetry: REQUIRED
 
 REVIEWER_ACCEPTED for inheritance F04/F05/F07 after one consolidated same-seed repair. Together with final R090 F01/F02/F03 and published R088 F06, all seven selected inheritance findings are CLOSED_PASS_BOUNDED. This is application-contract acceptance using owned local MySQL, synthetic loopback/fake transports/providers and mounted UI, not whole-product S0-S7/FREEZE, real-browser, real-provider/API, hosted CI or deployed acceptance. Product FREEZE remains OPEN. No successor or return to Claude.
 
-Actual closure base03e68e1ad91f74bb153e7fa5c8b646001b9f78cc; immutable C seed5441a18116e4b897549750cd7317ffdb8ae9e74b. C material SHA is not yet known at this precommit review; the continuity batch will record the actual SHA, never the dispatch base as buildCommit. A actual material44bb345d0d0efb5e6a01b2f23e975e17a65f5d02, F06 actual materiala8865d15296ce1a82ae368363d8f7de29392cdd0. Root production edits0 and application test reruns0; valid worker evidence consumed without reimplementation.
+Actual closure base03e68e1ad91f74bb153e7fa5c8b646001b9f78cc; immutable C seed5441a18116e4b897549750cd7317ffdb8ae9e74b. C actual accepted material d121c9ecf24a869aea92264db1e01cd853dec0ec; original precommit review had no material SHA, this continuity records the measured commit rather than the dispatch base. A actual material44bb345d0d0efb5e6a01b2f23e975e17a65f5d02, F06 actual materiala8865d15296ce1a82ae368363d8f7de29392cdd0. Root production edits0 and application test reruns0; valid worker evidence consumed without reimplementation.
 
 ## Independent Consolidated Acceptance
 
@@ -35,9 +35,9 @@ R1 negative21test/subtest terminals13PASS/8FAIL/0SKIP contain three source-defec
 
 C used three fresh labeled fixture sets sequentially over initial two lifecycles plus R1, at most one live. R1 restarted the same verified container/network/volume once after interruption; not a fourth fixture. All three sets have exact absence receipts. Root independently read owner labels/mount/bind and cleanup records; no existing production DB/container touched. No real provider, customer, SMTP/API/account, app server or deploy effects.
 
-Worker omitted R1 scalar self-proof despite imported gate PASS. Root's metadata-only addendum is explicit, not backdated; original return bytes remain in probes/r091_local_review/r1_worker_return_original.txt. Manifest's original return entry maps to that preserved copy; other68 remain current. Reconciliation receipt records both hashes and attribution. Current rolling order/continuity fields may change for closure, and remain mapped to the original intake in final_intake.json; no original manifest or source/proof result rewrite. Root preparation/catalog/encoding/sync faults are separately retained from worker code defects.
+Worker omitted R1 scalar self-proof despite imported gate PASS. Root's metadata-only addendum is explicit, not backdated; original return bytes remain in probes/r091_local_review/r1_worker_return_original.txt. Manifest's original return entry maps to that preserved copy; other68 matched at the precommit intake. Continuity later changes the order status/closure metadata only; its original LF binding is verified against git show d121c9ecf24a869aea92264db1e01cd853dec0ec:docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md. All source/tests/proof bytes are unchanged. Reconciliation receipt records both hashes and attribution. Current rolling order/continuity fields change for closure, and remain mapped to the original intake in final_intake.json; no original manifest or source/proof result rewrite. Root preparation/catalog/encoding/sync faults are separately retained from worker code defects.
 
-Root closure preparation faults are recorded separately in root_closure_heading_diagnostic.json and root_final_role_reconciliation.json: a stale current-front heading interrupted metadata writes, then the closed R2 roadmap lacked the required single Worker/Reviewer lines. Root corrected only bounded metadata from actual facts; the first reviewer gate failure is preserved. Neither issue is a worker/source defect or an acceptance waiver.
+Root closure preparation faults are recorded separately in root_closure_heading_diagnostic.json and root_final_role_reconciliation.json: a stale current-front heading interrupted metadata writes, then the closed R2 roadmap lacked the required single Worker/Reviewer lines. Root corrected only bounded metadata from actual facts; the first reviewer gate failure is preserved. Neither issue is a worker/source defect or an acceptance waiver. Continuity first preflight6/7 also caught Root omitting the required active-tranche literal in nextAllowedMove; synchronized prefix corrected, receipt continuity_preflight_attempt1_failed.json preserved.
 
 ## Checker Source Read-Ahead Block
 
@@ -67,7 +67,7 @@ materialCommitCount: 1
 continuityCommitCount: 1
 commitPlanDisposition: DEFAULT_ONE_MATERIAL_ONE_CONTINUITY
 latencyDisposition: NOT_MEASURED_WITH_REASON: no complete end-to-end timer;3minutes records independent source/evidence intake and bounded metadata reconciliation, not worker waiting or later commit/push
-avoidableDelayClass: NONE
+avoidableDelayClass: GATE_DISCOVERY_LOOP
 
 ## Same-Commit Large-Scope And Continuity Authorization
 
@@ -75,4 +75,4 @@ Owner explicitly authorized Root to finish selected roadmap with internal Luna w
 
 ## Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY. Accepted C and final A/roadmap closure await authorized project branch publication. Historical F06 export remains a8865d1/14bbf1d; this final update is not yet exported. Real-browser/provider/API/hosted CI/deploy remain unproved; channels/dependency17/docs55/R086 native-fence/accounts and all stage exits remain open or parked.
+EXPORTED. Project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git; branch codex/cvf-portable-inheritance; actual accepted C/final closure material `d121c9ecf24a869aea92264db1e01cd853dec0ec` and A material `44bb345d0d0efb5e6a01b2f23e975e17a65f5d02`. Remote-SHA verification receipt docs/reviews/probes/r091_local_review/publication.json. Artifact path docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. Public branch only; fullproduct/browser/live/hosted/deploy remain unproved. No main/merge/private Core/deploy.

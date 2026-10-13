@@ -59,4 +59,4 @@ avoidableDelayClass: NONE
 
 ## Public Export Disposition
 
-DEFERRED_PRIVATE_ONLY. Actual A material44bb345 and final review await authorized existing project branch publication with accepted C. No main/merge/private Core/deploy action or hosted CI claim.
+EXPORTED. Project remote https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git; branch codex/cvf-portable-inheritance; actual accepted C/final closure material `d121c9ecf24a869aea92264db1e01cd853dec0ec` and A material `44bb345d0d0efb5e6a01b2f23e975e17a65f5d02`. Remote-SHA verification receipt docs/reviews/probes/r091_local_review/publication.json. Artifact path docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. Public branch only; fullproduct/browser/live/hosted/deploy remain unproved. No main/merge/private Core/deploy.
