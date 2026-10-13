@@ -5,6 +5,13 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r093-alibaba-live-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
+      "status": "ACTIVE",
+      "description": "R2 Alibaba exact provider characterization with synthetic inputs, physical request caps and independent source review."
+    },
+    {
       "id": "r092-static-proof",
       "family": "continuity",
       "path": "docs/reviews/probes/r092_m1_review/static_source_document_review.json",
@@ -2436,9 +2443,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Active M1 documentary handoff; Luna max worker and Root independent reviewer; runtime/live decisions separately bounded."
+      "description": "Current R093 Alibaba synthetic live handoff; max2 actual requests and no app governance claim."
     },
     {
       "id": "r060-work-order",

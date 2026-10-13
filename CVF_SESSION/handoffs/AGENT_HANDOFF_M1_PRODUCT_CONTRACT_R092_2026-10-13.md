@@ -1,6 +1,6 @@
 # M1 minimum-product contract — R092
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 <!-- CVF-GC020-MATERIAL-SHA:START -->
 Accepted R092 documentary material: `1e4639085a7b1c63ed1eb5c3edf4e28c2073bad6`; full M1/product FREEZE stays OPEN.

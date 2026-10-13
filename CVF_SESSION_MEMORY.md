@@ -9,22 +9,22 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-092", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-093", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md
 
 ## Current M1 execution — 2026-10-13
 
-CCMAI-RUNTIME-092 REVIEW_PASS: local synthetic M1 intended contract accepted at 1e4639085a7b1c63ed1eb5c3edf4e28c2073bad6; full M1 business/pilot and M2/M3 implementation OPEN. Next governed move: activate separately seeded R093 exact Alibaba synthetic provider characterization, max2 real requests and independent source review before effects. Facebook/Zalo OA parked.
+CCMAI-RUNTIME-093: dispatch exact Alibaba synthetic HTTP characterization after packet gates; Luna authors probe, Root independently approves source before effects. Max2 physical requests total worker1/reviewer1, no retry, secret-safe receipts. M2 application admission/proposal remains next product implementation; full M1/M2/M3/pilot release open; Facebook/Zalo OA parked.
 
-Codex /root REVIEWER / CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna max accepted documentary worker idle; R1.
+Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max /root/m1_worker waiting for R2 probe BUILD; independent reviewer Codex /root.
 
-Prior R091/planning sections below are historical accepted context; current R092 order controls documentary execution. Owner requires synthetic channel data and authorizes Alibaba real AI tests through separately bounded R2 authority.
+M1 local synthetic contract documentary acceptance is scoped; actual application/source behavior, real channels, full product and release stay OPEN. Credentials remain in ignored LOCAL_PROVIDER_SECRETS.json, never tracked.
 
 ## Accepted R091 seven-finding closure (historical checkpoint)
 
