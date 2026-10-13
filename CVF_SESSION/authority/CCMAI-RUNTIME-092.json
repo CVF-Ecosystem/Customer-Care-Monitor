@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-092",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_AUTHORIZED_M1_PRODUCT_CONTRACT",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/m1_worker",
+    "repairWorker": "/root/m1_worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md",
+    "docs/PRODUCT_DIRECTION.md",
+    "docs/specs/DATABASE_FILTER_PIPELINE_2026-09-27.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/roadmaps/UI_INTEGRATION_ROADMAP_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "runtime_source_tests_database_schema_or_dependency_changes",
+    "core_gate_profile_policy_manifest_workflow_or_historical_seed_changes",
+    "provider_network_credentials_customer_data_account_deploy_or_publication_effects",
+    "worker_commit_push_self_review_or_dispatch_future_work_orders",
+    "invented_owner_decisions_metrics_budgets_or_runtime_governance_claims"
+  ],
+  "ownerAuthorization": "2026-10-13 owner: tien hanh roadmap, cho phep ban tao subagent Luna max lam worker. Root advances M1 contract and finite M2/M3 planning, independently reviews and owns local commits. Runtime/provider/live actions require separately bounded authority.",
+  "entryDecision": "New M1 documentary boundary after accepted R091 and published M1-M5 plan. INTAKE/DESIGN/SPEC/WORK_ORDER recorded in dispatch packet before BUILD. This seed does not reuse historical R091 budgets.",
+  "executionBudget": {
+    "workerPackages": 1,
+    "sameScopeRepairs": "Consolidated repairs under same seed; stop at third formal repair round without independent root cause.",
+    "sourceRuntimeTestInvocations": 0,
+    "providerCalls": 0,
+    "realDataRuns": 0,
+    "verification": "Targeted source/accepted evidence read, document links/diff, catalog, legacy gate unit tests, seven-gate preflight and installed explicit-packet checks; root independent source contract review."
+  },
+  "claimScope": "Documentary minimum-product contract and finite local synthetic delivery route; full M1 acceptance remains open if owner business/live decisions lack evidence. No runtime AI governance claim."
+}

@@ -1,0 +1,15 @@
+{
+  "sourceSha256": "be05bab1c5847f1e3f0453707d5eb7b09c2a09a4e9c78249e332e36e17004d6e",
+  "scope": "Independent zero-network local safety/parser review; synthetic fixture only; no runtime AI-governance claim.",
+  "encodedKnownSecretRetained": true,
+  "inconsistentUsageStatus": "KNOWN_REPORTED",
+  "currentSeedCheck": "PASS",
+  "providerCalls": 0,
+  "realSecretReads": 0,
+  "disposition": "CHANGES_REQUIRED_PRE_EFFECT",
+  "sourceSnapshot": "docs/reviews/probes/r093_alibaba_live/pre_effect_source_be05.py.txt",
+  "otherReviewFindings": [
+    "Hard wall-clock timeout not proven by socket-only deadline; DNS/header reads need supervision.",
+    "Region pin and LF-normalized seed equality required."
+  ]
+}

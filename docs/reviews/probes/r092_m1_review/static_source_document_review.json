@@ -1,0 +1,77 @@
+{
+  "sourceBaseline": "a91433b81a69decce33eaa2e134b8926ea9d2372",
+  "sourceChecks": [
+    {
+      "path": "backend/engine/analyzer.go",
+      "lfSha256": "be1aeedced66ad751f16bc48ec94cb222ab665c88fb82bf650ffbe83675b8e38",
+      "sameAsSourceBaseline": true
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "lfSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "sameAsSourceBaseline": true
+    },
+    {
+      "path": "backend/ai/openai_compatible.go",
+      "lfSha256": "3a06ba1cb194944587db40056d304687cb25b294883162a7b258c416374a4795",
+      "sameAsSourceBaseline": true
+    },
+    {
+      "path": "backend/ai/retry.go",
+      "lfSha256": "72bedb6b5ef4e3158c2dcc8963132606c316a2d00b94185c239ad9ff3d0addfe",
+      "sameAsSourceBaseline": true
+    },
+    {
+      "path": "backend/api/router.go",
+      "lfSha256": "0b8fe2c4a98369aa42277a91f5474477b13442b70ea4a59e50d3b4eb6f65c13e",
+      "sameAsSourceBaseline": true
+    },
+    {
+      "path": "backend/api/middleware/tenant.go",
+      "lfSha256": "29e1a15d647ba48254665bc5cafd8f48a334e8244244d3ce4443aeaabaeedd4e",
+      "sameAsSourceBaseline": true
+    },
+    {
+      "path": "backend/db/models/job.go",
+      "lfSha256": "c77571bca0a3c6cc6bea30bbc7a1bb0e26d238f6ef4946bce1de4d0e4d7dede3",
+      "sameAsSourceBaseline": true
+    },
+    {
+      "path": "backend/db/models/analysis_snapshot.go",
+      "lfSha256": "38a26d477819341cbf0b18148108b68c18cee3eea9f6e07e4f845c62e92c60df",
+      "sameAsSourceBaseline": true
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md",
+      "sha256": "851e5c21a4fe7b50ebdd91b982d77aa83e7aed1ab469dc92e5d04e4dc87fb6a3",
+      "missingRelativeTargets": [],
+      "invalidLocalLineFragments": []
+    },
+    {
+      "path": "docs/PRODUCT_DIRECTION.md",
+      "sha256": "b731cdd0247c2e872914532cf439a66344868527748fc3f669e87bd1236f19bd",
+      "missingRelativeTargets": [],
+      "invalidLocalLineFragments": []
+    },
+    {
+      "path": "docs/specs/DATABASE_FILTER_PIPELINE_2026-09-27.md",
+      "sha256": "cd9e9232b610f310b434188ffe4d96ea9f04887ca24c595ee8a6f21263775bd3",
+      "missingRelativeTargets": [],
+      "invalidLocalLineFragments": []
+    },
+    {
+      "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+      "sha256": "210c6f3ac945d3419275663653239e1ed097364bbc4436465a1abc597848c92e",
+      "missingRelativeTargets": [],
+      "invalidLocalLineFragments": []
+    }
+  ],
+  "providerCalls": 0,
+  "scope": "R092 static intended contract/source comparison only; root prospective R093 metadata and anonymous docs read separately.",
+  "canonicalM2AcceptanceRows": 9,
+  "canonicalM3AcceptanceRows": 8,
+  "intendedApiTenantPrefixCorrect": true,
+  "rootMetadataCorrections": "Explicit row-local claim prohibition and accepted intended-contract disposition; no implementation/evidence change."
+}

@@ -1,4 +1,4 @@
-# Project Documentation Index
+﻿# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -10,12 +10,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current M1-M5 product delivery plan and 37 acceptance IDs; material published at d72de76 on project branch, product exits and live proof open.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- Current local M1-M5 plan; R092 contract reviewed, R093 wire observed with positive output finding; next integrated M2 route, product/pilot exits open.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active Root closure/commit/publication handoff; worker returned accepted and idle, no next source authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md`
+- Current R093 Alibaba synthetic live handoff; max2 actual requests and no app governance claim.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -759,6 +759,25 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/probes/r089_readiness/local-preparation-failure.json`
+- Independent Root M1 source/document review and failure/repair disclosure.: `docs/reviews/R092_INDEPENDENT_M1_CONTRACT_REVIEW_2026-10-13.md`
+- Reviewed local synthetic M1 intended contract; full business/pilot acceptance open.: `docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md`
+- Bounded R1 M1 product contract order; no runtime/provider/customer/deploy effects.: `docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md`
+- Exact source baseline equality and documentary acceptance-map/link check hashes.: `docs/reviews/probes/r092_m1_review/static_source_document_review.json`
+- Luna max documentary return, Root metadata repairs disclosed; no runtime/provider effects.: `docs/reviews/R092_M1_PRODUCT_CONTRACT_WORKER_RETURN_2026-10-13.md`
+- Independent exact-source safety review before bounded provider effects; no app governance acceptance.: `docs/reviews/R093_INDEPENDENT_PRE_EFFECT_SOURCE_REVIEW_2026-10-13.md`
+- Root independent zero-network safety/parser/supervision checks.: `docs/reviews/probes/r093_alibaba_live/independent_pre_effect_checks.json`
+- Reproducible Root offline check source; constructed fixtures only.: `docs/reviews/probes/r093_alibaba_live/independent_checks_source.py.txt`
+- Independent initial zero-network findings; no secret read or provider call.: `docs/reviews/probes/r093_alibaba_live/pre_effect_initial_findings.json`
+- Exact initial failing probe source snapshot retained for review reproducibility; not executable/live evidence.: `docs/reviews/probes/r093_alibaba_live/pre_effect_source_be05.py.txt`
+- Real synthetic Alibaba worker request/response; anchored evidence FAIL, no secret or app governance claim.: `docs/reviews/probes/r093_alibaba_live/worker.json`
+- Real synthetic independent reviewer request/response; neutral PASS, no app governance claim.: `docs/reviews/probes/r093_alibaba_live/reviewer.json`
+- Independent bounded live receipt/hash/budget/secret inspection; positive contract failure preserved.: `docs/reviews/probes/r093_alibaba_live/independent_live_inspection.json`
+- Independent R093 returned outcome and finite M2 product-route reassessment; cap exhausted.: `docs/reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md`
+- Worker return with positive anchor failure, actual receipt hashes and exhausted cap.: `docs/reviews/R093_ALIBABA_SYNTHETIC_LIVE_WORKER_RETURN_2026-10-13.md`
+- Actual local static gate outcomes and failures retained; no hosted CI/runtime governance claim.: `docs/reviews/probes/r093_alibaba_live/repository_gates.json`
+- Actual material/source byte bindings; only Git newline normalization differs, original executed SHA retained.: `docs/reviews/probes/r093_alibaba_live/committed_source_bindings.json`
+- Owner-authorized ordinary branch export with actual remote material SHA readback; no CI/deploy or acceptance claim.: `docs/reviews/probes/r093_alibaba_live/publication.json`
+- R2 Alibaba exact provider characterization with synthetic inputs, physical request caps and independent source review.: `docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

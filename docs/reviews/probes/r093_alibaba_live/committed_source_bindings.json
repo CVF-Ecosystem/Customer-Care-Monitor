@@ -1,0 +1,20 @@
+{
+  "materialCommit": "bf229b5e8d8a44dafe0f17afa09e69b088859d36",
+  "bindings": [
+    {
+      "path": "scripts/ccma_alibaba_live_probe.py",
+      "observedWorktreeSha256": "41c6eb00b31a86294508954eeeb7e01ce61fb7f2c0535380580dac57ec5415fa",
+      "committedBlobSha256": "41c6eb00b31a86294508954eeeb7e01ce61fb7f2c0535380580dac57ec5415fa",
+      "canonicalLfSha256": "41c6eb00b31a86294508954eeeb7e01ce61fb7f2c0535380580dac57ec5415fa",
+      "differences": "CRLF_LF_ONLY_OR_IDENTICAL"
+    },
+    {
+      "path": "docs/reviews/probes/r093_alibaba_live/pre_effect_source_be05.py.txt",
+      "observedWorktreeSha256": "be05bab1c5847f1e3f0453707d5eb7b09c2a09a4e9c78249e332e36e17004d6e",
+      "committedBlobSha256": "be05bab1c5847f1e3f0453707d5eb7b09c2a09a4e9c78249e332e36e17004d6e",
+      "canonicalLfSha256": "be05bab1c5847f1e3f0453707d5eb7b09c2a09a4e9c78249e332e36e17004d6e",
+      "differences": "CRLF_LF_ONLY_OR_IDENTICAL"
+    }
+  ],
+  "scope": "Git text newline portability; original live receipts bind exact executed worktree bytes; no new provider call"
+}

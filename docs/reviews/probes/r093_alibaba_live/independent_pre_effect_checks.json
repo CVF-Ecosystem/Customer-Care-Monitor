@@ -1,0 +1,79 @@
+{
+  "sourceSha256": "41c6eb00b31a86294508954eeeb7e01ce61fb7f2c0535380580dac57ec5415fa",
+  "scope": "Root independent local safety/parser/supervision checks; constructed synthetic fixtures only; no runtime AI governance claim",
+  "providerCalls": 0,
+  "realSecretReads": 0,
+  "tests": [
+    {
+      "name": "unicode_known_key_body_omitted",
+      "result": "PASS"
+    },
+    {
+      "name": "nested_escaped_content_omitted",
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate_member_escaped_key_omitted",
+      "result": "PASS"
+    },
+    {
+      "name": "plain_known_key_replaced",
+      "result": "PASS"
+    },
+    {
+      "name": "inconsistent_usage_unknown",
+      "result": "PASS"
+    },
+    {
+      "name": "boolean_usage_unknown",
+      "result": "PASS"
+    },
+    {
+      "name": "zero_usage_known",
+      "result": "PASS"
+    },
+    {
+      "name": "wrong_region_refused",
+      "result": "PASS"
+    },
+    {
+      "name": "wrong_model_refused",
+      "result": "PASS"
+    },
+    {
+      "name": "newline_only_normalization",
+      "result": "PASS"
+    },
+    {
+      "name": "committed_seed_currently_verified",
+      "result": "PASS"
+    },
+    {
+      "name": "reviewer_not_admitted_in_BUILD",
+      "result": "PASS"
+    },
+    {
+      "name": "authority_requires_root_approval",
+      "result": "PASS"
+    },
+    {
+      "name": "owned_child_timeout_elapsed_observed",
+      "result": "PASS",
+      "seconds": 0.344,
+      "returncode": 1
+    },
+    {
+      "name": "blocked_child_killed_and_reaped",
+      "result": "PASS"
+    },
+    {
+      "name": "large_pipe_drained_without_join_deadlock",
+      "result": "PASS"
+    },
+    {
+      "name": "actor_cap_consumed_no_replay",
+      "result": "PASS"
+    }
+  ],
+  "disposition": "PASS_PRE_EFFECT_SOURCE_CHECKS"
+}

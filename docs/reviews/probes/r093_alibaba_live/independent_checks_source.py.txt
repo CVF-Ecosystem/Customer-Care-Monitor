@@ -1,0 +1,59 @@
+import importlib.util,json,hashlib,pathlib,time,sys,tempfile,subprocess
+from unittest.mock import patch
+
+root=pathlib.Path.cwd()
+source=root/'scripts/ccma_alibaba_live_probe.py'
+spec=importlib.util.spec_from_file_location('r093_independent',source)
+m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+results=[]
+def check(name,fn):
+    fn();results.append({'name':name,'result':'PASS'})
+def require(v):
+    assert v
+def error(fn):
+    try:fn()
+    except m.ProbeError:return
+    raise AssertionError('expected refusal')
+
+# cvf-allow-secret-fixture: constructed synthetic value, never a real credential.
+fake='fixture-'+'X'*32
+escaped=''.join('\\u%04x'%ord(c) for c in fake)
+check('unicode_known_key_body_omitted',lambda:require(m._sanitize_response(('{"message":"'+escaped+'"}').encode(),fake)==(None,True,False)))
+check('nested_escaped_content_omitted',lambda:require(m._sanitize_response(json.dumps({'choices':[{'message':{'content':json.dumps({'note':escaped})}}]}).encode(),fake)==(None,True,False)))
+check('duplicate_member_escaped_key_omitted',lambda:require(m._sanitize_response(('{"x":"ok","x":"'+escaped+'"}').encode(),fake)==(None,True,False)))
+check('plain_known_key_replaced',lambda:require(fake not in m._sanitize_response(json.dumps({'x':fake}).encode(),fake)[0]))
+check('inconsistent_usage_unknown',lambda:require(m._usage_record({'usage':{'prompt_tokens':1,'completion_tokens':1,'total_tokens':99}})['status']=='UNKNOWN'))
+check('boolean_usage_unknown',lambda:require(m._usage_record({'usage':{'prompt_tokens':True,'completion_tokens':1,'total_tokens':2}})['status']=='UNKNOWN'))
+check('zero_usage_known',lambda:require(m._usage_record({'usage':{'prompt_tokens':0,'completion_tokens':0,'total_tokens':0}})['status']=='KNOWN_REPORTED'))
+check('wrong_region_refused',lambda:error(lambda:m._validate_local_metadata('us-east-1',m.MODEL_ID,'unused')))
+check('wrong_model_refused',lambda:error(lambda:m._validate_local_metadata(m.REGION,'different','unused')))
+check('newline_only_normalization',lambda:require(m._normalize_checkout_bytes(b'a\r\nb\r\n')==b'a\nb\n' and m._normalize_checkout_bytes(b'a\rb')==b'a\rb'))
+check('committed_seed_currently_verified',lambda:require(m._assert_seed_and_dispatch()['trancheId']==m.TRANCHE_ID))
+check('reviewer_not_admitted_in_BUILD',lambda:error(lambda:m._active_authority('reviewer')))
+check('authority_requires_root_approval',lambda:error(lambda:m._approval(hashlib.sha256(source.read_bytes()).hexdigest())))
+
+def owned_timeout():
+    start=time.monotonic()
+    out,rc,timeout,elapsed=m._run_owned_child([sys.executable,'-B','-c','import time;time.sleep(20)'],b'',start+.35)
+    require(timeout and rc is not None and .3<=elapsed<3 and out==b'')
+    results.append({'name':'owned_child_timeout_elapsed_observed','result':'PASS','seconds':round(elapsed,3),'returncode':rc})
+check('blocked_child_killed_and_reaped',owned_timeout)
+def pipe_drain():
+    out,rc,timeout,elapsed=m._run_owned_child([sys.executable,'-B','-c','import sys;sys.stdin.buffer.read();sys.stdout.buffer.write(b"X"*1400000)'],b'A'*10000,time.monotonic()+5)
+    require(len(out)==1400000 and rc==0 and not timeout)
+check('large_pipe_drained_without_join_deadlock',pipe_drain)
+
+def ledger_replay():
+    with tempfile.TemporaryDirectory() as t:
+        p=pathlib.Path(t)
+        c=m._claim_actor_slot('worker',p,'a'*64)
+        error(lambda:m._claim_actor_slot('worker',p,'a'*64))
+        m._claim_actor_slot('reviewer',p,'a'*64)
+        error(lambda:m._claim_actor_slot('reviewer',p,'a'*64))
+        require(sorted(x.name for x in p.iterdir())==['campaign.json','reviewer.claim','worker.claim'])
+check('actor_cap_consumed_no_replay',ledger_replay)
+
+proof={'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'scope':'Root independent local safety/parser/supervision checks; constructed synthetic fixtures only; no runtime AI governance claim','providerCalls':0,'realSecretReads':0,'tests':results,'disposition':'PASS_PRE_EFFECT_SOURCE_CHECKS'}
+p=root/'docs/reviews/probes/r093_alibaba_live/independent_pre_effect_checks.json'
+with p.open('x',encoding='utf-8') as f:json.dump(proof,f,indent=2);f.write('\n')
+print(json.dumps({'result':proof['disposition'],'sourceSha256':proof['sourceSha256'],'checks':len(results),'providerCalls':0,'realSecretReads':0}))

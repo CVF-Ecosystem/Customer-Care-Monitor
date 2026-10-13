@@ -9,16 +9,28 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-091", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-093", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md
 
-## Current seven-finding closure
+## Current M1 execution — 2026-10-13
+
+CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.
+
+Codex /root independent REVIEWER, ORCHESTRATOR and SESSION_SYNC_STEWARD; Luna max worker returned; risk R2.
+
+Prior tranche/planning sections below are historical accepted context; current CCMAI-RUNTIME-093 order controls execution within its seed. Owner requires synthetic channel data and authorizes Alibaba real AI tests only within bounded R2 authority.
+
+## Current branch publication
+
+Owner-authorized branch codex/ccma-product-m1 published at `7b14533bcfb54d10f192145b455b9babad79af2a`; remote SHA verified in docs/reviews/probes/r093_alibaba_live/publication.json. R093 returned finding/FREEZE OPEN and exhausted provider budget remain unchanged; no main merge or deployment.
+
+## Accepted R091 seven-finding closure (historical checkpoint)
 
 Parent Core per-output delivery guidance is adopted as prospective project review criteria: docs/reviews/learnings/CCMAI_TO_CVF_PER_OUTPUT_DELIVERY_APPLICATION_2026-10-13.md (source b4d44307c22f68340746eccd2089d121430905d3; checklist SHA-256 13126809f82d4e05384fb3c293db84c8ce6925540ef55766a815a772d445bda3). R091 acceptance predates this guidance and remains bounded; no product or live claim changes.
 
@@ -26,7 +38,7 @@ CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance f
 
 Final independent review: docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md; actual C material `d121c9ecf24a869aea92264db1e01cd853dec0ec`; remote material SHA verified in docs/reviews/probes/r091_local_review/publication.json. A material44bb345, F06a8865d1. Mode REVIEW with accepted records and FREEZE product OPEN. No active work order or source campaign.
 
-## Current product delivery planning — 2026-10-13
+## Historical roadmap publication planning — 2026-10-13
 
 Owner requested the independent assessment become a detailed agent-continuation roadmap. Canonical delivery plan: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`. M1 locks use case/data/metrics/budget/dependency decisions; M2 controlled analysis/proposal; M3 human review/assignment/outcome; M4 measured shadow/pilot; M5 release/portable operation. Planning authority R1 only; each future runtime packet needs bounded authority and independent R2 review. No new milestone accepted, worker dispatch or live effect. Read the roadmap before selecting the next scope; do not resume historical next-move text. R091 acceptance and all parked checkpoints remain.
 

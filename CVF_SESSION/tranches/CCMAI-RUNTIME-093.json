@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-093",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_AUTHORIZED_ALIBABA_SYNTHETIC_LIVE_CHARACTERIZATION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/m1_worker",
+    "repairWorker": "/root/m1_worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "scripts/ccma_alibaba_live_probe.py",
+    "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
+    "docs/reviews/planning/CCMA_M1_MINIMUM_PRODUCT_CONTRACT_2026-10-13.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "application_backend_frontend_database_schema_runtime_or_dependency_changes",
+    "core_gate_profile_workflow_policy_manifest_or_historical_seed_changes",
+    "real_customer_channel_account_outbound_notification_deploy_or_publication_effects",
+    "secret_value_print_commit_copy_to_receipts_or_environment_persistence",
+    "requests_outside_pinned_alibaba_endpoint_model_or_global_two_request_cap",
+    "automatic_retry_follow_redirect_or_unbounded_model_cost_usage",
+    "worker_commit_push_self_review_or_full_M2_governance_application_claim"
+  ],
+  "ownerAuthorization": "2026-10-13 owner proceeds roadmap, allows Luna max worker, requires all Pancake/channel test data mock/synthetic, authorizes Alibaba API keys for real AI live tests, identifies git-ignored CVF_SESSION/LOCAL_PROVIDER_SECRETS.json as project credential source.",
+  "entryDecision": "Separate credential/provider/network R2 boundary after R092 contract authoring. Exact selected model and endpoint must be pinned from secret-free local metadata in the work order before BUILD. This live HTTP characterization is a finite M1-05 provider prerequisite, not runtime application or CVF governance acceptance.",
+  "executionBudget": {
+    "physicalProviderRequestsTotal": 2,
+    "workerRequests": 1,
+    "reviewerRequests": 1,
+    "automaticRetries": 0,
+    "timeoutSecondsPerRequest": 60,
+    "maxCompletionTokensPerRequest": 768,
+    "maxRequestBodyBytes": 6000,
+    "maxResponseBytes": 1048576,
+    "maxElapsedCampaignMinutes": 5,
+    "financialLimit": "Owner test authorization is limited by hard request/token/input/time caps; actual quota and dollar charge UNKNOWN until provider/account evidence. No replenishment, billing settings or quota-overrun continuation.",
+    "sameScopeRepairs": "Repair tooling/source before request, or after failure without another provider request; cap never reset. Stop at third formal repair round without independent root cause."
+  },
+  "claimScope": "At most two actual Alibaba HTTP requests over synthetic inputs with sanitized request/response receipts and bounded local output checks. No Go adapter/analyzer integration, live channel, AI-quality benchmark, budget admission or full CVF-governance proof claim.",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "baseCommit": "3ce76f355bca43093402e40bc99a6b7c684406a4",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
+  "buildCommit": "bf229b5e8d8a44dafe0f17afa09e69b088859d36",
+  "reviewEvidence": [
+    "docs/reviews/R093_INDEPENDENT_PRE_EFFECT_SOURCE_REVIEW_2026-10-13.md",
+    "docs/reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md",
+    "docs/reviews/probes/r093_alibaba_live/independent_live_inspection.json"
+  ],
+  "disposition": "RETURNED_POSITIVE_OUTPUT_CONTRACT_FAILED_REQUEST_CAP_EXHAUSTED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "x-actualProviderOutcome": {
+    "physicalRequests": 2,
+    "remainingRequests": 0,
+    "worker": "OUTPUT_CHECKS_FAIL",
+    "reviewer": "OUTPUT_CHECKS_PASS",
+    "wire": "HTTP200_BOTH_MODEL_MATCH",
+    "application": "NOT_RUN",
+    "governance": "NOT_CLAIMED",
+    "billing": "UNKNOWN"
+  }
+}

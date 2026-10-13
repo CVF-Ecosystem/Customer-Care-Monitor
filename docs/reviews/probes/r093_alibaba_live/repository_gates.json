@@ -1,0 +1,16 @@
+{
+  "scope": "Static repository checks only; no hosted CI, deployment or AI runtime governance claim",
+  "legacyPreflight": "PASS_7_OF_7",
+  "gateUnitTests": "PASS_89",
+  "profileWorkerReturn": "PASS",
+  "profileReviewerFast": "PASS",
+  "profilePreCommit": "PASS",
+  "activeCloseability": "CHECKED_PASS_AT_BUILD_PRE_EFFECT",
+  "terminalApplicability": "NOT_APPLICABLE_WITH_REASON_FOR_BLOCKED_ORDER_NOT_A_PASS_OF_CLOSEABILITY",
+  "failedChecksRetained": [
+    "Initial source refusal be05",
+    "Catalog cross-engine index sort drift corrected by metadata IDs",
+    "Outcome next-move shorthand lacked full tranche ID; active-handoff lifecycle status was confused with order status; Root corrected metadata"
+  ],
+  "providerBudgetExhausted": true
+}
