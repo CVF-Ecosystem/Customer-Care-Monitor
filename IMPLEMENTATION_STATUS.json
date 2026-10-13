@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -79,7 +79,7 @@
   ],
   "x-buildInProgress": {
     "trancheId": "CCMAI-RUNTIME-093",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "newRuntimeEffectsAuthorized": false,
     "providerEffects": "SOURCE_REVIEW_REQUIRED_MAX2_SYNTHETIC"
   },
@@ -339,9 +339,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-093: dispatch exact Alibaba synthetic HTTP characterization after packet gates; Luna authors probe, Root independently approves source before effects. Max2 physical requests total worker1/reviewer1, no retry, secret-safe receipts. M2 application admission/proposal remains next product implementation; full M1/M2/M3/pilot release open; Facebook/Zalo OA parked.",
+    "nextObjective": "CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
-    "buildDispatched": false,
+    "buildDispatched": true,
     "currentExecutionBudget": {
       "physicalProviderRequestsTotal": 2,
       "workerRequests": 1,
@@ -2157,11 +2157,11 @@
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "M1_PROVIDER_CHARACTERIZATION_DISPATCH_READY",
+    "status": "M1_BUILD",
     "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
     "currentMilestone": "M1",
     "milestoneStatus": "LOCAL_SYNTHETIC_CONTRACT_REVIEWED_FULL_BUSINESS_PILOT_OPEN",
-    "nextAction": "CCMAI-RUNTIME-093: dispatch exact Alibaba synthetic HTTP characterization after packet gates; Luna authors probe, Root independently approves source before effects. Max2 physical requests total worker1/reviewer1, no retry, secret-safe receipts. M2 application admission/proposal remains next product implementation; full M1/M2/M3/pilot release open; Facebook/Zalo OA parked.",
+    "nextAction": "CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.",
     "authority": "Owner 2026-10-13 proceed roadmap; committed R092 R1 documentary worker scope.",
     "executionAuthorityExpanded": true,
     "publication": "NOT_EXPORTED_CURRENT_LOCAL_M1",
@@ -2230,7 +2230,7 @@
     }
   },
   "x-r093AlibabaLive": {
-    "status": "DISPATCH_READY",
+    "status": "BUILD_SOURCE_ONLY_PRE_EFFECT_REVIEW_PENDING",
     "provider": "alibaba",
     "model": "qwen3.7-flash",
     "physicalRequestCap": 2,

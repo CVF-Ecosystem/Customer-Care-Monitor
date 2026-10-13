@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-093: dispatch exact Alibaba synthetic HTTP characterization after packet gates; Luna authors probe, Root independently approves source before effects. Max2 physical requests total worker1/reviewer1, no retry, secret-safe receipts. M2 application admission/proposal remains next product implementation; full M1/M2/M3/pilot release open; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeTranche": "CCMAI-RUNTIME-093",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max /root/m1_worker waiting for R2 probe BUILD; independent reviewer Codex /root.",
+  "activeRole": "/root/m1_worker Luna max IMPLEMENTATION_WORKER; Codex /root ORCHESTRATOR and independent pre-effect REVIEWER; risk R2.",
   "updatedAt": "2026-10-13",
   "productDeliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
 }

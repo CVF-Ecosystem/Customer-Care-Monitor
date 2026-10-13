@@ -9,22 +9,22 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-093", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-093", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md
 
 ## Current M1 execution — 2026-10-13
 
-CCMAI-RUNTIME-093: dispatch exact Alibaba synthetic HTTP characterization after packet gates; Luna authors probe, Root independently approves source before effects. Max2 physical requests total worker1/reviewer1, no retry, secret-safe receipts. M2 application admission/proposal remains next product implementation; full M1/M2/M3/pilot release open; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.
 
-Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max /root/m1_worker waiting for R2 probe BUILD; independent reviewer Codex /root.
+/root/m1_worker Luna max IMPLEMENTATION_WORKER; Codex /root ORCHESTRATOR and independent pre-effect REVIEWER; risk R2.
 
-M1 local synthetic contract documentary acceptance is scoped; actual application/source behavior, real channels, full product and release stay OPEN. Credentials remain in ignored LOCAL_PROVIDER_SECRETS.json, never tracked.
+Prior R091/planning sections below are historical accepted context; current R092 order controls documentary execution. Owner requires synthetic channel data and authorizes Alibaba real AI tests through separately bounded R2 authority.
 
 ## Accepted R091 seven-finding closure (historical checkpoint)
 

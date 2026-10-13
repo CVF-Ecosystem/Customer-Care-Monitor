@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-093 — Alibaba synthetic live characterization
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 Worker: /root/m1_worker
 Reviewer: Codex /root

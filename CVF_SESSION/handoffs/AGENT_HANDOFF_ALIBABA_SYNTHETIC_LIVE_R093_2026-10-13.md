@@ -3,16 +3,16 @@
 Status: ACTIVE
 
 <!-- CVF-GC020-MATERIAL-SHA:START -->
-Current continuity parent: `3ce76f355bca43093402e40bc99a6b7c684406a4`; R093 dispatcher seed7639e46 precedes BUILD. Live not run.
+R093 dispatch material: `03e95ce3a09abd98d8605f40a5e0c4ad0eecf4d6`; immutable dispatcher seed7639e46, no provider request yet.
 <!-- CVF-GC020-MATERIAL-SHA:END -->
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max /root/m1_worker waiting for R2 probe BUILD; independent reviewer Codex /root.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: /root/m1_worker Luna max IMPLEMENTATION_WORKER; Codex /root ORCHESTRATOR and independent pre-effect REVIEWER; risk R2.
 - Active tranche: CCMAI-RUNTIME-093
-- Next allowed move: CCMAI-RUNTIME-093: dispatch exact Alibaba synthetic HTTP characterization after packet gates; Luna authors probe, Root independently approves source before effects. Max2 physical requests total worker1/reviewer1, no retry, secret-safe receipts. M2 application admission/proposal remains next product implementation; full M1/M2/M3/pilot release open; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Fresh transition acknowledgment and phase gates
@@ -20,3 +20,6 @@ Root rehydrates manifest/policy/bootstrap/memory/state/current handoff/implement
 
 ## Finite dependency route and stop
 M1 local synthetic intended contract -> this exact provider compatibility prerequisite -> M2 integrated admission/proposal -> M3 browser review/assignment/outcome. Two supporting scopes require route reassessment at handback; no automatic generic repair successor. Missing actual Go/frontend tooling is a named setup dependency of next source packet, not current live probe. M4 real channels and M5 release remain open. Request budget2 consumed permanently on attempted effects; no retry, resets, third call, real customer/accounts or notification.
+
+## Root BUILD admission acknowledgment
+Fresh canonical tuple re-read at03e95ce; worker source authoring/zero-call checks only admitted after explicit APPL/ROUTE PASS, legacy7/7 and independent Core doctor. Source review and exact approval file required before credential-bearing effect; no worker commit or third request. Risk R2, Root independent reviewer and commit owner.

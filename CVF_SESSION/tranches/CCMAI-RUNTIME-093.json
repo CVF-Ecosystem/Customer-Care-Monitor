@@ -43,8 +43,8 @@
     "sameScopeRepairs": "Repair tooling/source before request, or after failure without another provider request; cap never reset. Stop at third formal repair round without independent root cause."
   },
   "claimScope": "At most two actual Alibaba HTTP requests over synthetic inputs with sanitized request/response receipts and bounded local output checks. No Go adapter/analyzer integration, live channel, AI-quality benchmark, budget admission or full CVF-governance proof claim.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "3ce76f355bca43093402e40bc99a6b7c684406a4",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
   "buildCommit": null,
@@ -53,7 +53,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -63,5 +64,5 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY"
+  "workOrderStatus": "ACTIVE"
 }
