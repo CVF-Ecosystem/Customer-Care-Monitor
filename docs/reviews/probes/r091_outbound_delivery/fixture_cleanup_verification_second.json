@@ -1,0 +1,99 @@
+{
+  "verifiedAtUtc": "2026-10-12T23:00:54.745+00:00",
+  "fixtureRunId": "8f4167ee0ea849a494fbca4ffa02a777",
+  "container": "ccma-r091-db-8f4167ee0ea8",
+  "network": "ccma-r091-net-8f4167ee0ea8",
+  "anonymousVolume": "02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798",
+  "stopReceipt": {
+    "at_utc": "2026-10-12T23:00:43+00:00",
+    "container_removed": true,
+    "container_mounts_captured_before_removal": [
+      {
+        "Type": "volume",
+        "Name": "02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798",
+        "Destination": "/var/lib/mysql",
+        "RW": true,
+        "Propagation": "",
+        "Driver": "local",
+        "Mode": ""
+      }
+    ],
+    "volume_names_checked_after_removal": [
+      "02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798"
+    ],
+    "remaining_owned_container_volumes": [],
+    "all_recorded_container_volumes_absent": true,
+    "network_removed": true,
+    "ownership_labels_verified": true
+  },
+  "checks": [
+    {
+      "check": "owned_container_by_exact_name",
+      "command": [
+        "docker",
+        "container",
+        "inspect",
+        "ccma-r091-db-8f4167ee0ea8"
+      ],
+      "exit_code": 1,
+      "absent": true,
+      "output": "[]\nError response from daemon: No such container: ccma-r091-db-8f4167ee0ea8\n"
+    },
+    {
+      "check": "owned_network_by_exact_name",
+      "command": [
+        "docker",
+        "network",
+        "inspect",
+        "ccma-r091-net-8f4167ee0ea8"
+      ],
+      "exit_code": 1,
+      "absent": true,
+      "output": "[]\nError response from daemon: network ccma-r091-net-8f4167ee0ea8 not found\n"
+    },
+    {
+      "check": "recorded_anonymous_volume_exact_name",
+      "command": [
+        "docker",
+        "volume",
+        "inspect",
+        "02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798"
+      ],
+      "exit_code": 1,
+      "absent": true,
+      "output": "[]\nError response from daemon: get 02d96b18a065239003e0e40e6698e3f505aab3f2a7426d3690f437fd07d2b798: no such volume\n"
+    },
+    {
+      "check": "owned_labeled_containers",
+      "command": [
+        "docker",
+        "ps",
+        "-a",
+        "--filter",
+        "label=org.cvf.run=8f4167ee0ea849a494fbca4ffa02a777",
+        "--format",
+        "{{.Names}}"
+      ],
+      "exit_code": 0,
+      "absent": true,
+      "output": ""
+    },
+    {
+      "check": "owned_labeled_networks",
+      "command": [
+        "docker",
+        "network",
+        "ls",
+        "--filter",
+        "label=org.cvf.run=8f4167ee0ea849a494fbca4ffa02a777",
+        "--format",
+        "{{.Name}}"
+      ],
+      "exit_code": 0,
+      "absent": true,
+      "output": ""
+    }
+  ],
+  "allAbsent": true,
+  "scope": "exact R091-owned second-fixture resources only; post-cleanup read-only verification"
+}

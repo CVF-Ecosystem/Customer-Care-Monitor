@@ -127,7 +127,7 @@ const router = createRouter({
           path: 'notifications',
           name: 'notifications',
           component: () => import('../views/NotificationLogs.vue'),
-          meta: { perm: 'jobs' },
+          meta: { perm: 'settings' },
         },
         {
           path: 'mcp',

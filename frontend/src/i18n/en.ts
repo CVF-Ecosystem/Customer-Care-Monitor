@@ -826,6 +826,8 @@ export default {
   lg_col_content: 'Content',
   lg_sent: 'Sent',
   lg_failed: 'Failed',
+  lg_sending: 'Sending',
+  lg_unknown: 'Unknown outcome',
   lg_recipient_line: 'To: {r}',
   lg_show_body: 'Show content',
   lg_hide_body: 'Hide content',

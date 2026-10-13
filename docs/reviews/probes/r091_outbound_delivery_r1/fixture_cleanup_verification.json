@@ -1,0 +1,12 @@
+{
+  "checkedAtUtc": "2026-10-13T00:21:05Z",
+  "runId": "5b005e32bafc491287e1633995591743",
+  "container": "ccma-r091-db-5b005e32bafc",
+  "containerAbsent": true,
+  "network": "ccma-r091-net-5b005e32bafc",
+  "networkAbsent": true,
+  "anonymousVolume": "fe3fa80f7931be6c3b8ce78eb954d4c056f096f42980d55fdeb64ebb1c1d11b8",
+  "anonymousVolumeAbsent": true,
+  "helperCleanup": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_manifest.json",
+  "allExactOwnedResourcesAbsent": true
+}

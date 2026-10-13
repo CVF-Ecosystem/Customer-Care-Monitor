@@ -52,6 +52,8 @@ func AutoMigrate() error {
 		&models.AnalysisSnapshot{},
 		&models.AppSetting{},
 		&models.NotificationLog{},
+		&models.NotificationDeliveryManifest{},
+		&models.NotificationDeliveryReceipt{},
 		&models.AIUsageLog{},
 		&models.OAuthClient{},
 		&models.OAuthAuthorizationCode{},

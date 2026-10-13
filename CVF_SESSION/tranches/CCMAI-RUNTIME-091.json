@@ -67,25 +67,47 @@
     "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
   },
   "claimScope": "Source-derived application delivery, cancellation, batch bookkeeping and permission semantics using hermetic MySQL/loopback/UI tests; no live CVF AI governance, real providers/customers or whole-product readiness.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "C_DESIGN_ACCEPTED_DISPATCH_READY",
+  "reviewEvidence": [
+    "docs/reviews/R091_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md",
+    "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md"
+  ],
+  "disposition": "REVIEWER_ACCEPTED_PENDING_ACTUAL_MATERIAL_SHA",
+  "workerReturn": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+  "proofDirectory": "docs/reviews/probes/r091_outbound_delivery_r1/",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
     "DESIGN",
     "SPEC",
-    "WORK_ORDER"
+    "WORK_ORDER",
+    "BUILD",
+    "REVIEW"
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY"
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "workerReturnReceipt": {
+    "status": "COMPLETE_PENDING_REVIEW",
+    "returnDocument": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+    "proofDirectory": "docs/reviews/probes/r091_outbound_delivery_r1/",
+    "worker": "/root/outbound_intake",
+    "reviewer": "Codex /root",
+    "returnedAtUtc": "2026-10-13T00:25:41Z",
+    "commit": false,
+    "push": false
+  }
 }

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-091 DISPATCH_READY: Luna max /root/outbound_intake must acknowledge BUILD, verify seed/currentHEAD and isolated prerequisites, synchronize BUILD/ACTIVE, pass legacy and trusted explicit active-packet pre-dispatch APPL CHECKED before source-negative tests or effects; implement only accepted C contract and three named A dependencies. Root independent review/commit/publication; accounts/provider/customer/deploy parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-091 independent REVIEWER_ACCEPTED: all seven inheritance findings CLOSED_PASS_BOUNDED application proof. Codex /root commits exact accepted material from03e68e1, records actual C build SHA in one continuity batch, and publishes existing codex/cvf-portable-inheritance project branch with remote SHA verification. No further worker/source/test campaign or automatic successor; product FREEZE/S0-S7/live/browser/hosted/deploy open, Facebook/Zalo OA parked.",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeTranche": "CCMAI-RUNTIME-091",
-  "activeRole": "Codex /root Local INTERNAL_AGENT orchestrator, dispatcher and independent reviewer; admitted worker /root/outbound_intake gpt-6-luna effort max, BUILD acknowledgment pending.",
+  "activeRole": "Codex /root Local independent reviewer, closer and commit steward; Luna max internal worker returned and idle; phase REVIEW; risk R2.",
   "updatedAt": "2026-10-13"
 }

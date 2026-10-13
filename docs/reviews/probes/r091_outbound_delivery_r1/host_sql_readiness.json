@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "round": 1,
+  "fixtureRunId": "5b005e32bafc491287e1633995591743",
+  "container": "ccma-r091-db-5b005e32bafc",
+  "network": "ccma-r091-net-5b005e32bafc",
+  "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "imageRepoDigests": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "loopbackBind": "127.0.0.1:64579",
+  "applicationUser": "ccma_r091",
+  "database": "ccma_r091",
+  "command": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+    "run",
+    "../docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_probe.go"
+  ],
+  "workingDirectory": "backend",
+  "startedAtUtc": "2026-10-12T23:29:52+00:00",
+  "finishedAtUtc": "2026-10-12T23:29:53+00:00",
+  "exitCode": 0,
+  "method": "Host process used cached Go database/sql and mysql driver; app-user PingContext then SELECT 1 with a bounded five-second context; read-only synthetic SQL readiness.",
+  "environment": {
+    "TEST_DB_DSN": "redacted generated synthetic app-user DSN",
+    "GOPROXY": "off",
+    "GOSUMDB": "off"
+  },
+  "logPath": "docs/reviews/probes/r091_outbound_delivery_r1/r1_host_sql_readiness.log",
+  "result": "PASS",
+  "realProviderCalls": 0,
+  "realOutboundCalls": 0,
+  "customerDataRuns": 0
+}

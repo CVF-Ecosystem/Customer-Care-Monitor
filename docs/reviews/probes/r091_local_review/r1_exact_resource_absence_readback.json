@@ -1,0 +1,36 @@
+{
+  "observedAtUtc": "2026-10-13T00:35:47.231Z",
+  "source": "Root read-only Docker inspect; exact R1 resource names only",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "5ab909",
+        "wall_time_seconds": 0.4296498,
+        "exit_code": 1,
+        "original_token_count": 19,
+        "output": "[]\nError response from daemon: No such container: ccma-r091-db-5b005e32bafc\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "4da7c9",
+        "wall_time_seconds": 0.3544173,
+        "exit_code": 1,
+        "original_token_count": 19,
+        "output": "[]\nError response from daemon: network ccma-r091-net-5b005e32bafc not found\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "0682f6",
+        "wall_time_seconds": 0.3385283,
+        "exit_code": 1,
+        "original_token_count": 29,
+        "output": "[]\nError response from daemon: get fe3fa80f7931be6c3b8ce78eb954d4c056f096f42980d55fdeb64ebb1c1d11b8: no such volume\n"
+      }
+    }
+  ]
+}

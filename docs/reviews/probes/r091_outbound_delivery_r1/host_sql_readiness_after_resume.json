@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "run_id": "5b005e32bafc491287e1633995591743",
+  "container": "ccma-r091-db-5b005e32bafc",
+  "host_bind": "127.0.0.1:63747",
+  "method": "host loopback app-user PingContext plus SELECT 1 via pinned Go MySQL driver",
+  "started_utc": "2026-10-13T00:18:46+00:00",
+  "finished_utc": "2026-10-13T00:18:47+00:00",
+  "proof_log": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_host_sql_readiness_after_restart.log",
+  "exit_code": 0,
+  "password_or_dsn_recorded": false,
+  "proof_finished_utc": "2026-10-13T00:18:47+00:00",
+  "receipt_recorded_utc": "2026-10-13T00:19:10+00:00"
+}

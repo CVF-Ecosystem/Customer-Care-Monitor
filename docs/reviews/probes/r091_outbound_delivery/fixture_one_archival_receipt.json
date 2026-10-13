@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "reason": "Root directed a narrowly required second synthetic fixture for missing F07 parse/save common-tail integration; preserve the completed first fixture lifecycle before helper initialization because its default manifest filename is reused.",
+  "firstFixtureRunId": "fe67adefe1fd47d7a4d72cf07b190b18",
+  "preservedFiles": [
+    {
+      "original": "docs/reviews/probes/r091_outbound_delivery/fixture_manifest.json",
+      "preservedAs": "docs/reviews/probes/r091_outbound_delivery/fixture_manifest_first.json",
+      "byteLength": 6369,
+      "sha256": "6c1bfc31434c0acce2bbcda06226f7db2b8560fbf72e055a5732f72fc153fec2",
+      "byteIdentical": true
+    },
+    {
+      "original": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification.json",
+      "preservedAs": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_first.json",
+      "byteLength": 2370,
+      "sha256": "3d95f240b395feec50e5979e9de328e3189dcb8828077614cf8ae491114db73a",
+      "byteIdentical": true
+    },
+    {
+      "original": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure.json",
+      "preservedAs": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure_first.json",
+      "byteLength": 2164,
+      "sha256": "10219f7cac28281ef2219dd00caafff6f7236343d5ddf6bafa1a35f6876a8384",
+      "byteIdentical": true
+    },
+    {
+      "original": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness.json",
+      "preservedAs": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_first.json",
+      "byteLength": 1588,
+      "sha256": "f9ad8edfe9a32de19a3f9ecc273a6e118f7c50c90278adfcab4fedf22b6ee74d",
+      "byteIdentical": true
+    },
+    {
+      "original": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness.log",
+      "preservedAs": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_first.log",
+      "byteLength": 69,
+      "sha256": "7fc4231cf7383b5b47ff1328a0092b32c87b2786f1b890b275296e88db66640f",
+      "byteIdentical": true
+    }
+  ],
+  "secondFixtureStarted": true,
+  "secondFixtureRunId": "8f4167ee0ea849a494fbca4ffa02a777",
+  "secondManifestArchive": "docs/reviews/probes/r091_outbound_delivery/fixture_manifest_second.json",
+  "secondManifestSha256": "30c4930e1ad179600ad42015eb136308440833dbca94d465318f8e03405db769",
+  "secondCleanupVerification": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_second.json"
+}

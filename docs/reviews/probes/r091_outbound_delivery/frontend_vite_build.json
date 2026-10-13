@@ -1,0 +1,16 @@
+{
+  "name": "frontend_vite_build",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/c",
+    "node_modules\\.bin\\vite.cmd",
+    "build"
+  ],
+  "cwd": "frontend",
+  "started_utc": "2026-10-12T22:51:32+00:00",
+  "finished_utc": "2026-10-12T22:51:34+00:00",
+  "exit_code": 0,
+  "log": "docs/reviews/probes/r091_outbound_delivery/frontend_vite_build.log",
+  "output_bytes_utf8": 12886
+}

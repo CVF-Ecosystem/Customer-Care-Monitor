@@ -1,0 +1,177 @@
+{
+  "analyzerOwnerRelease": {
+    "command": {
+      "command": [
+        ".\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./engine",
+        "-run",
+        "^TestRunOwnerRemainsHeldUntilContextBoundSMTPReturns$",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "exit_code": 0,
+      "finished_utc": "2026-10-13T00:20:48+00:00",
+      "started_utc": "2026-10-13T00:20:37+00:00"
+    },
+    "effects": "synthetic owned MySQL + loopback SMTP; no real provider/customer/account",
+    "proof": "docs/reviews/probes/r091_outbound_delivery_r1/final_r1_analyzer_owner_release.log",
+    "test": "TestRunOwnerRemainsHeldUntilContextBoundSMTPReturns",
+    "testFailEvents": 0,
+    "testPassEvents": 1,
+    "testSkipEvents": 0,
+    "testStarts": 1
+  },
+  "dispatchHead": "03e68e1ad91f74bb153e7fa5c8b646001b9f78cc",
+  "externalEffects": {
+    "accountAccess": 0,
+    "commit": false,
+    "customerRuns": 0,
+    "deployment": 0,
+    "offHostNetwork": 0,
+    "push": false,
+    "realProviders": 0,
+    "realSMTP": 0
+  },
+  "finalFocusedGo": {
+    "command": {
+      "command": [
+        ".\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./notifications",
+        "./engine",
+        "-run",
+        "^TestR091",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "exit_code": 0,
+      "finished_utc": "2026-10-13T00:19:58+00:00",
+      "started_utc": "2026-10-13T00:19:33+00:00"
+    },
+    "packages": {
+      "engine": {
+        "testFail": 0,
+        "testPass": 8,
+        "testSkip": 0
+      },
+      "notifications": {
+        "testFail": 0,
+        "testPass": 45,
+        "testSkip": 0
+      }
+    },
+    "proof": "docs/reviews/probes/r091_outbound_delivery_r1/final_r1_notifications_engine.log",
+    "testFailEvents": 0,
+    "testPassEvents": 53,
+    "testSkipEvents": 0,
+    "testStarts": 53
+  },
+  "finalHashManifest": "docs/reviews/probes/r091_outbound_delivery_r1/r1_hash_manifest.json",
+  "fixture": {
+    "cleanup": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_cleanup_verification.json",
+    "container": "ccma-r091-db-5b005e32bafc",
+    "exactContainerNetworkVolumeAbsent": true,
+    "finalHostSqlReadiness": "docs/reviews/probes/r091_outbound_delivery_r1/host_sql_readiness_after_resume.json",
+    "initialExit": "EXITED exit255, OOM=false; cause unknown; no inference",
+    "network": "ccma-r091-net-5b005e32bafc",
+    "restart": "same container/network/anonymous volume, verified labels and exact mount/bind before start; no new fixture created",
+    "run_id": "5b005e32bafc491287e1633995591743",
+    "sameOwnedFixtureReused": true,
+    "volume": "fe3fa80f7931be6c3b8ce78eb954d4c056f096f42980d55fdeb64ebb1c1d11b8"
+  },
+  "immutableSeed": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
+  "model": "gpt-6-luna",
+  "oldSourceDetectorCorrection": {
+    "command": {
+      "command": [
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+        "test",
+        "-json",
+        "./engine",
+        "-run",
+        "^TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait$",
+        "-count=1"
+      ],
+      "cwd": "backend",
+      "exit_code": 0,
+      "finished_utc": "2026-10-13T06:31:02+07:00",
+      "started_utc": "2026-10-13T06:30:48+07:00"
+    },
+    "proof": "docs/reviews/probes/r091_outbound_delivery_r1/r1_analyzer_cancel_assertion_correction.log",
+    "testFailEvents": 0,
+    "testPassEvents": 3,
+    "testSkipEvents": 0,
+    "testStarts": 3
+  },
+  "reasoningEffort": "max",
+  "reusedUnchangedEvidence": [
+    "docs/reviews/probes/r091_outbound_delivery/source_evidence_hashes.json (original 82-entry manifest preserved unchanged)",
+    "docs/reviews/probes/r091_outbound_delivery/worker-return.json (prior trusted C return gate evidence)",
+    "docs/reviews/probes/r091_outbound_delivery/r090_dashboard_exact_selector.log and R090 JSON receipt (15 mandatory top-level, 0 skip)",
+    "docs/reviews/probes/r091_outbound_delivery/frontend_focused_tests.json, frontend_route_guard_repeat.json, frontend_vue_tsc_forced.json, frontend_vite_build.json",
+    "previous actual migration and F07 parse/save receipts; source unchanged, and parse/save also included in current focused TestR091 run"
+  ],
+  "risk": "R2",
+  "role": "INTERNAL_AGENT",
+  "schemaVersion": "ccmai.r091.r1-worker-results@1.0.0",
+  "sourceNegative": {
+    "behavioralDefectFamilies": [
+      "Telegram non-Boolean/absent ok incorrectly classified failed",
+      "SMTP HELO fallback rejected",
+      "marker unlocked Count allowed deletion/zero-row update to report success"
+    ],
+    "candidateProductionBinding": "docs/reviews/probes/r091_outbound_delivery_r1/r1_candidate_baseline_bindings.json",
+    "failedTestEvents": [
+      "TestR091R1MarkerRejectsCapturedResultDeletedAfterUnlockedSnapshot",
+      "TestR091R1SMTPHELOFallbackPreservesLegacyDelivery",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown/missing_ok",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown/null_ok",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown/null_envelope",
+      "TestR091R1TelegramUnverifiableAcceptanceEnvelopeIsUnknown",
+      "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait/cancellation_during_common_wait_blocks_next_provider_call",
+      "TestR091R1AnalyzerUsesThreeErrorEscalationHealthyResetAndCanceledWait"
+    ],
+    "harnessCorrection": "Analyzer cancel detector originally asserted terminal run status; candidate held no-next-provider-call contract but run status was error. Assertion narrowed to wait completion, one provider call, nonnil run. Named old-source repeat is recorded separately and passed.",
+    "preProduction": true,
+    "proof": "docs/reviews/probes/r091_outbound_delivery_r1/r1_old_source_negative.log",
+    "testFailEvents": 8,
+    "testPassEvents": 13,
+    "testSkipEvents": 0,
+    "testStarts": 21
+  },
+  "trustedWorkerReturn": {
+    "controls": {
+      "controls": 6,
+      "failed": 0,
+      "findings": 0,
+      "notApplicableWithReason": 1,
+      "pass": 5
+    },
+    "executionContext": "trusted-core",
+    "exitCode": 0,
+    "invocation": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_worker_return_r1_invocation.json",
+    "note": "The returned packet is inactive; APPL is NOT_APPLICABLE_WITH_REASON. This is worker evidence, not Root independent review or closure.",
+    "outcomes": {
+      "CVF-DG-APPL-01": "NOT_APPLICABLE_WITH_REASON",
+      "CVF-DG-CLAIM-01": "PASS",
+      "CVF-DG-CONT-01": "PASS",
+      "CVF-DG-INST-01": "PASS",
+      "CVF-DG-RANGE-01": "PASS",
+      "CVF-DG-ROLE-01": "PASS"
+    },
+    "phase": "worker-return",
+    "receipt": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_worker_return_r1.json"
+  },
+  "usage": {
+    "billing": null,
+    "model": "gpt-6-luna",
+    "reason": "numeric usage/billing counters not exposed to worker",
+    "reasoningEffort": "max",
+    "tokens": null,
+    "verification": "session-reported not provider-verified"
+  },
+  "worker": "/root/outbound_intake"
+}

@@ -9,20 +9,26 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-091", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-091", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md
 
-## Current finite package C dispatch
+## Current seven-finding closure
 
-CCMAI-RUNTIME-091 DISPATCH_READY: Luna max /root/outbound_intake must acknowledge BUILD, verify seed/currentHEAD and isolated prerequisites, synchronize BUILD/ACTIVE, pass legacy and trusted explicit active-packet pre-dispatch APPL CHECKED before source-negative tests or effects; implement only accepted C contract and three named A dependencies. Root independent review/commit/publication; accounts/provider/customer/deploy parked.
+CCMAI-RUNTIME-091 independent REVIEWER_ACCEPTED: all seven inheritance findings CLOSED_PASS_BOUNDED application proof. Codex /root commits exact accepted material from03e68e1, records actual C build SHA in one continuity batch, and publishes existing codex/cvf-portable-inheritance project branch with remote SHA verification. No further worker/source/test campaign or automatic successor; product FREEZE/S0-S7/live/browser/hosted/deploy open, Facebook/Zalo OA parked.
 
-docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md; seed 5441a18116e4b897549750cd7317ffdb8ae9e74b; accepted C SPEC. A candidate44bb345 retained with docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md and three dependencies; not closed. Root owns final combined seven-row decision. Numeric worker usage unknown; no provider/customer/account/deploy authority. Read shared learning owners before continuation.
+Final independent review: docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. Source accepted; actual C commit/publication pending. F01-F07 refer only to inheritance ledger, not global product findings.
+
+## Historical initial C worker return (before Root round1 review)
+
+CCMAI-RUNTIME-091 worker return is COMPLETE_PENDING_REVIEW. Root is next for independent Local review of the R091 return, source hashes, behavioral detectors, two synthetic fixture lifecycles, exact R090 JSON selector, and UI/type/build receipts. The worker made no commit. No real provider/customer/account/deploy effects occurred; Facebook/Zalo setup remains parked.
+
+docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md; seed 5441a18116e4b897549750cd7317ffdb8ae9e74b; accepted C SPEC. F04/F05/F07 targeted source candidate and named R090 route, legacy fixture, and per-case evidence dependencies are returned for review. R090's final combined decision remains Root-owned. Numeric worker usage unknown; no provider/customer/account/deploy authority. Read shared learning owners before continuation.
 
 ## Standing owner directive: roadmap discipline (2026-10-12)
 

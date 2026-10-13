@@ -1,0 +1,96 @@
+{
+  "observedAtUtc": "2026-10-12T23:13:51.022493+00:00",
+  "reviewer": "Codex /root",
+  "worker": "/root/outbound_intake",
+  "closureBaseHead": "03e68e1ad91f74bb153e7fa5c8b646001b9f78cc",
+  "manifestSha256": "f9e1c31434324ee69aa7ba08bf395552272ff284ecd0efbb9db38dbfc317f41b",
+  "bindings": 82,
+  "mismatches": [],
+  "sourceEditsByRoot": 0,
+  "campaigns": [
+    {
+      "path": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091.log",
+      "sha256": "5ad20dc9beed986d18931317e3dde8dd68cd2baf1649a415f0b26605f481c2db",
+      "pass": 1,
+      "fail": 0,
+      "skip": 0,
+      "nonJsonLines": 0,
+      "topLevelTests": [
+        "TestR091NotificationDeliveryMigrationIsIdempotentAndReceiptKeyFitsMySQL"
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091_notifications_engine.log",
+      "sha256": "ca5be8d8d9ed1b152e616dde933835019a6e076591d9b1937aa5cca592078f8e",
+      "pass": 30,
+      "fail": 0,
+      "skip": 0,
+      "nonJsonLines": 0,
+      "topLevelTests": [
+        "TestR091OldDispatcherDoesNotMarkAllFailedOutputDelivered",
+        "TestR091OldDispatcherDoesNotMarkMixedDeliverySetComplete",
+        "TestR091OldTelegramErrorDoesNotExposeToken",
+        "TestR091DeliveryMixedRetrySkipsSentAndPreservesFrozenResultSet",
+        "TestR091DeliveryRejectsConfigChangeAndLeavesAllFailedUnnotified",
+        "TestR091DeliveryUnknownAndCrashLeftSendingAreNotRetried",
+        "TestR091DeliveryClaimsOutputOnceUnderConcurrentNotify",
+        "TestR091DeliveryPersistenceErrorsRemainTruthful",
+        "TestR091DeliveryQueryAndMarkerFailuresAreNotReportedAsSuccess",
+        "TestR091OutputIdentityIsStableAcrossReorderingAndCredentialRotation",
+        "TestR091ZeroOutputsDoNotCreateCompletionOrManifest",
+        "TestR091DeliveryErrorContractUsesOnlySafeTypedOutcomes",
+        "TestR091OldSMTPContextCancelsStalledGreeting",
+        "TestR091SMTPFinalDataReplyDeterminesAcceptance",
+        "TestR091SMTPDefaultDeadlineBoundsBackgroundContext",
+        "TestR091TelegramAcceptedRejectedAndAmbiguousOutcomesAreTypedAndSecretSafe",
+        "TestR091TelegramHealthCheckErrorsDoNotExposeToken",
+        "TestR091BatchBackoffDelayScheduleAndCanceledContext",
+        "TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch",
+        "TestRunOwnerRemainsHeldUntilContextBoundSMTPReturns"
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r091_outbound_delivery/r090_dashboard_exact_selector.log",
+      "sha256": "89128c490a10359d96ba6acbb87a0752066ed25918ab31bb09a15f6698b06c8c",
+      "pass": 30,
+      "fail": 0,
+      "skip": 0,
+      "nonJsonLines": 0,
+      "topLevelTests": [
+        "TestR090DashboardProjectsOnlyAuthorizedResourcesAndQueries",
+        "TestR090NotificationLogsRequireSettingsReadAtRegisteredRoute",
+        "TestDashboardFilterUsesVietnamDayBounds",
+        "TestR090AdminResetTargetHierarchyAndOwnerControls",
+        "TestR090ResetLocksTargetRoleAgainstConcurrentPromotion",
+        "TestDashboardCalendarAggregatesAndSeries",
+        "TestR090RefreshCookieHasExactlyOneConcurrentWinner",
+        "TestR090ResetWinsAgainstRefreshAlreadyReadAtOldVersion",
+        "TestR090RefreshDatabaseErrorCannotMintTokensOrCookie",
+        "TestDashboardDefaultAndOneSidedRanges",
+        "TestDashboardInvalidDatesAreBadRequests",
+        "TestDashboardQCViolationCountIsScopedByTypeTenantAndInterval",
+        "TestDashboardQCViolationCountIsNumericZeroWhenNothingMatches",
+        "TestDashboardQCViolationCountChangesWhenAQualifyingRowIsAdded",
+        "TestDashboardQCViolationCountQueryFailureReturnsGeneric500"
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r091_outbound_delivery/r091_f07_parse_save_common_tail.log",
+      "sha256": "ae0d80a8810dcbac399af420312beafd1dea1b823be8bfe8316dbabfcfc5d5e5",
+      "pass": 3,
+      "fail": 0,
+      "skip": 0,
+      "nonJsonLines": 0,
+      "topLevelTests": [
+        "TestR091ParseAndSaveBatchFailuresPersistProgressAndUseCommonBackoffTail"
+      ]
+    }
+  ],
+  "protectedComparison": "git diff 44bb345 -- backend/api frontend/src/views/Dashboard.vue frontend/src/layouts/DefaultLayout.vue backend/ai/retry.go backend/go.mod backend/go.sum frontend/package.json frontend/package-lock.json EMPTY",
+  "formalReviewTimer": {
+    "startedAtUtc": "2026-10-12T23:10:38.468Z",
+    "lastPreparatoryWorkRecordedAtUtc": "2026-10-12T23:19:06.009Z",
+    "elapsedMinutesIncludingArtifactAndGatePreparation": 8.459,
+    "meaning": "Recorded through Root round1 review/repair envelope packaging; worker repair is separate. No provider billing inference."
+  }
+}

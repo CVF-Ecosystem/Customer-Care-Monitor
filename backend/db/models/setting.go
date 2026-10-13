@@ -17,18 +17,20 @@ func (AppSetting) TableName() string {
 }
 
 type NotificationLog struct {
-	ID           string    `gorm:"type:char(36);primaryKey" json:"id"`
-	TenantID     string    `gorm:"type:char(36);not null;index:idx_notiflog_tenant_sent" json:"tenant_id"`
-	JobID        string    `gorm:"type:char(36)" json:"job_id"`
-	JobRunID     string    `gorm:"type:char(36)" json:"job_run_id"`
-	ChannelType  string    `gorm:"type:varchar(20);not null" json:"channel_type"` // telegram | email
-	Recipient    string    `gorm:"type:varchar(500);not null" json:"recipient"`
-	Subject      string    `gorm:"type:varchar(500)" json:"subject"`
-	Body         string    `gorm:"type:text;not null" json:"body"`
-	Status       string    `gorm:"type:varchar(20);not null" json:"status"` // sent | failed
-	ErrorMessage string    `gorm:"type:text" json:"error_message,omitempty"`
-	SentAt       time.Time `gorm:"not null;index:idx_notiflog_tenant_sent" json:"sent_at"`
-	CreatedAt    time.Time `gorm:"not null" json:"created_at"`
+	ID                string    `gorm:"type:char(36);primaryKey" json:"id"`
+	TenantID          string    `gorm:"type:char(36);not null;index:idx_notiflog_tenant_sent" json:"tenant_id"`
+	JobID             string    `gorm:"type:char(36)" json:"job_id"`
+	JobRunID          string    `gorm:"type:char(36)" json:"job_run_id"`
+	ChannelType       string    `gorm:"type:varchar(20);not null" json:"channel_type"` // telegram | email
+	Recipient         string    `gorm:"type:varchar(500);not null" json:"recipient"`
+	Subject           string    `gorm:"type:varchar(500)" json:"subject"`
+	Body              string    `gorm:"type:text;not null" json:"body"`
+	Status            string    `gorm:"type:varchar(20);not null" json:"status"` // sent | failed
+	ErrorMessage      string    `gorm:"type:text" json:"error_message,omitempty"`
+	DeliveryOutputKey string    `gorm:"type:char(64);index:idx_notiflog_delivery_output" json:"-"`
+	DeliveryAttempt   int       `gorm:"not null;default:0" json:"-"`
+	SentAt            time.Time `gorm:"not null;index:idx_notiflog_tenant_sent" json:"sent_at"`
+	CreatedAt         time.Time `gorm:"not null" json:"created_at"`
 }
 
 type AIUsageLog struct {

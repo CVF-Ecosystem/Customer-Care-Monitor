@@ -2,7 +2,7 @@
 
 Memory class: FULL_RECORD
 docType: work_order
-Status: BLOCKED_WITH_REASON
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: /root/auth_intake
 Reviewer: Codex /root
@@ -113,3 +113,7 @@ DEFERRED_PRIVATE_ONLY. Preparation before actual publication; Root owns reviewed
 ## Independent Local disposition
 
 CHANGES_REQUIRED at docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md for exact planned-C route/fixture/per-case receipt dependencies. Candidate is reviewed, not final A acceptance. Worker returned source/evidence and explicitly delegated final lifecycle to Root; Root synchronizes REVIEW and owns gates/commit, no worker redispatch.
+
+## Final independent acceptance
+
+Root accepts F01/F02/F03 at actual A material44bb345d0d0efb5e6a01b2f23e975e17a65f5d02; all3planned C dependencies settled in docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md. Original CHANGES_REQUIRED is historical; no A source/evidence rewrite. Product FREEZE OPEN, no A worker redispatch. Branch publication receipt pending accepted C.

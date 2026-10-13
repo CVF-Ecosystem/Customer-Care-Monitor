@@ -1,0 +1,13 @@
+{
+  "observed_at_utc": "2026-10-12T22:49:07+00:00",
+  "command_proof": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091_notifications_engine.log",
+  "child_exit_code": 0,
+  "captured_json_log": true,
+  "test_action_counts": {
+    "pass": 30,
+    "fail": 0,
+    "skip": 0
+  },
+  "outer_helper_console_outcome": "After saving the complete child log and recording exit_code 0, the helper could not echo Vietnamese log text to the default Windows console code page (UnicodeEncodeError for U+1EBF). This did not affect child result or saved evidence.",
+  "correction": "The owned helper now reconfigures stdout to UTF-8 with replacement before echoing the already-saved output."
+}

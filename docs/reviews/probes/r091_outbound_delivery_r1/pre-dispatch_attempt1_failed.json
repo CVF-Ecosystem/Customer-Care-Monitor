@@ -1,0 +1,45 @@
+{
+  "bundleSha256": "c454b4ea84d85c637b9e9c60aa820aaf42004213694c6de1305d3e3e3cb8f1c2",
+  "executionContext": "trusted-core",
+  "exitCode": 2,
+  "head": "03e68e1ad91f74bb153e7fa5c8b646001b9f78cc",
+  "invokedAtUtc": "2026-10-12T23:23:00+00:00",
+  "phase": "pre-dispatch",
+  "profileId": "cvf.downstreamGateProfile@1.1.0",
+  "profileSha256": "dd8d8f358fffd68ea71680f96c1f46f68a485c213933c3db631817776fc015f0",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=03e68e1ad91f74bb153e7fa5c8b646001b9f78cc candidates=94 deleted=0",
+  "results": [
+    {
+      "controlId": "CVF-DG-INST-01",
+      "findingCount": 0,
+      "ok": true,
+      "outcome": "PASS"
+    },
+    {
+      "controlId": "CVF-DG-CONT-01",
+      "findingCount": 5,
+      "ok": false,
+      "outcome": "FAIL"
+    },
+    {
+      "controlId": "CVF-DG-RANGE-01",
+      "findingCount": 0,
+      "ok": true,
+      "outcome": "PASS"
+    },
+    {
+      "controlId": "CVF-DG-APPL-01",
+      "findingCount": 0,
+      "ok": true,
+      "outcome": "PASS"
+    },
+    {
+      "controlId": "CVF-DG-ROUTE-01",
+      "findingCount": 0,
+      "ok": true,
+      "outcome": "PASS"
+    }
+  ],
+  "runnerSha256": "0746fa51561383717ea6861658b820319a8613e4e9d02380b2e99b1bc7c02ba8",
+  "schemaVersion": "cvf.downstreamGateReceipt@1.0.0"
+}

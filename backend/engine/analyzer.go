@@ -799,82 +799,82 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 			log.Printf("[analyzer-batch] AI error for batch starting at %d: %v", i, err)
 			errorCount += len(batch)
 			batchHadError = true
-			continue
-		}
-
-		// Log AI usage
-		cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
-		execution.observeUsage(aiResp.InputTokens, aiResp.OutputTokens, cost, priceKnown)
-		execution.observeUsagePresence(aiResp.UsagePresence)
-		if !priceKnown {
-			log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
-		}
-		usageLog := models.AIUsageLog{
-			ID:           pkg.NewUUID(),
-			TenantID:     job.TenantID,
-			JobID:        job.ID,
-			JobRunID:     run.ID,
-			Provider:     aiResp.Provider,
-			Model:        aiResp.Model,
-			InputTokens:  aiResp.InputTokens,
-			OutputTokens: aiResp.OutputTokens,
-			CostUSD:      cost,
-			CreatedAt:    time.Now(),
-		}
-		execution.usageBegin()
-		execution.usageReturned(db.DB.Create(&usageLog).Error)
-
-		// Parse batch response — expect JSON array
-		content := strings.TrimSpace(aiResp.Content)
-		if strings.HasPrefix(content, "```") {
-			if idx := strings.Index(content, "\n"); idx != -1 {
-				content = content[idx+1:]
-			}
-			if idx := strings.LastIndex(content, "```"); idx != -1 {
-				content = content[:idx]
-			}
-			content = strings.TrimSpace(content)
-		}
-
-		expectedIDs := make([]string, len(batch))
-		for j, b := range batch {
-			expectedIDs[j] = b.Conv.ID
-		}
-		batchResults, parseErr := parseBatchResults(expectedIDs, []byte(content))
-		execution.parsed(parseErr)
-		if parseErr != nil {
-			log.Printf("[analyzer-batch] rejected batch starting at %d: %v", i, parseErr)
-			errorCount += len(batch)
-			batchHadError = true
 		} else {
-			// Process each result
-			for j, rawResult := range batchResults {
-				convID := batch[j].Conv.ID
-				var count int
-				var passed bool
-				published, saveErr := owner.publish(func() error {
-					var e error
-					count, passed, e = a.saveResults(run.ID, batch[j].Snap, job.JobType, string(rawResult))
-					return e
-				})
-				execution.publication(published, saveErr)
-				if !published {
-					// cancellation accepted while the provider ran: nothing further is published
-					cancelled = true
-					return
+			// Log AI usage
+			cost, priceKnown := ai.CalculateCost(aiResp.Model, aiResp.InputTokens, aiResp.OutputTokens)
+			execution.observeUsage(aiResp.InputTokens, aiResp.OutputTokens, cost, priceKnown)
+			execution.observeUsagePresence(aiResp.UsagePresence)
+			if !priceKnown {
+				log.Printf("[ai] chưa có đơn giá cho model %s (provider=%s), chi phí lượt gọi này không được tính", aiResp.Model, aiResp.Provider)
+			}
+			usageLog := models.AIUsageLog{
+				ID:           pkg.NewUUID(),
+				TenantID:     job.TenantID,
+				JobID:        job.ID,
+				JobRunID:     run.ID,
+				Provider:     aiResp.Provider,
+				Model:        aiResp.Model,
+				InputTokens:  aiResp.InputTokens,
+				OutputTokens: aiResp.OutputTokens,
+				CostUSD:      cost,
+				CreatedAt:    time.Now(),
+			}
+			execution.usageBegin()
+			execution.usageReturned(db.DB.Create(&usageLog).Error)
+
+			// Parse batch response — expect JSON array
+			content := strings.TrimSpace(aiResp.Content)
+			if strings.HasPrefix(content, "```") {
+				if idx := strings.Index(content, "\n"); idx != -1 {
+					content = content[idx+1:]
 				}
-				if saveErr != nil {
-					log.Printf("[analyzer-batch] save error for %s: %v", convID, saveErr)
-					errorCount++
-					batchHadError = true
-				} else {
-					analyzedCount++
-					issuesFound += count
-					if passed {
-						passCount++
+				if idx := strings.LastIndex(content, "```"); idx != -1 {
+					content = content[:idx]
+				}
+				content = strings.TrimSpace(content)
+			}
+
+			expectedIDs := make([]string, len(batch))
+			for j, b := range batch {
+				expectedIDs[j] = b.Conv.ID
+			}
+			batchResults, parseErr := parseBatchResults(expectedIDs, []byte(content))
+			execution.parsed(parseErr)
+			if parseErr != nil {
+				log.Printf("[analyzer-batch] rejected batch starting at %d: %v", i, parseErr)
+				errorCount += len(batch)
+				batchHadError = true
+			} else {
+				// Process each result
+				for j, rawResult := range batchResults {
+					convID := batch[j].Conv.ID
+					var count int
+					var passed bool
+					published, saveErr := owner.publish(func() error {
+						var e error
+						count, passed, e = a.saveResults(run.ID, batch[j].Snap, job.JobType, string(rawResult))
+						return e
+					})
+					execution.publication(published, saveErr)
+					if !published {
+						// cancellation accepted while the provider ran: nothing further is published
+						cancelled = true
+						return
+					}
+					if saveErr != nil {
+						log.Printf("[analyzer-batch] save error for %s: %v", convID, saveErr)
+						errorCount++
+						batchHadError = true
+					} else {
+						analyzedCount++
+						issuesFound += count
+						if passed {
+							passCount++
+						}
 					}
 				}
 			}
+
 		}
 
 		// Update progress
@@ -890,19 +890,14 @@ func (a *Analyzer) runBatchMode(owner *JobRunOwner, provider ai.AIProvider, job 
 			log.Printf("[analyzer-batch] DB update error (progress): %v", err)
 		}
 
-		// Adaptive rate limit between batches
+		// Adaptive rate limit between batches. Both success and error outcomes use this tail.
 		if end < len(prepared) {
 			if batchHadError {
 				consecutiveErrors++
-				if consecutiveErrors >= 3 {
-					sleepCtx(ctx, 30*time.Second)
-				} else {
-					sleepCtx(ctx, 10*time.Second)
-				}
 			} else {
 				consecutiveErrors = 0
-				sleepCtx(ctx, 2*time.Second)
 			}
+			waitBatchBackoff(ctx, batchHadError, consecutiveErrors)
 		}
 	}
 

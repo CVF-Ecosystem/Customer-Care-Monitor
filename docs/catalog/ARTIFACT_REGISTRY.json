@@ -2382,7 +2382,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current R091 dispatch-ready handoff; worker BUILD acknowledgment and gates pending."
+      "description": "Active Root closure/commit/publication handoff; worker returned accepted and idle, no next source authority."
     },
     {
       "id": "r060-work-order",
@@ -7716,7 +7716,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
       "status": "ACTIVE",
-      "description": "Finite seven-finding inheritance roadmap: F06 accepted/published, R090 auth/quyền BUILD, R091 outbound design only; full product/live/native-fence/dependency/accounts remain open."
+      "description": "All seven selected inheritance findings independently accepted bounded; final project publication pending, full product exits open."
     },
     {
       "id": "gov002-docs-reviews-probes-gov002-review-round1-original-returned-cvf-downstream-gate-py-txt",
@@ -8206,7 +8206,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-090.json",
       "status": "ACTIVE",
-      "description": "Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance."
+      "description": "Accepted A/F01-F03 at44bb345 after route/fixture/exact-case proof dependencies closed; product FREEZE OPEN."
     },
     {
       "id": "r090-preparation-3",
@@ -8241,7 +8241,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Root-reviewed package C design: frozen delivery manifest, conservative receipt outcomes, cancellable SMTP and common batch backoff; no C BUILD or runtime evidence."
+      "description": "Executed and independently accepted C frozen per-run delivery, conservative receipt outcomes, bounded SMTP and common batch backoff contract; synthetic proof only."
     },
     {
       "id": "runtime090-local-review",
@@ -8405,7 +8405,7 @@
       "description": "R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS."
     },
     {
-      "id": "runtime090-proof-ui-permissions-and-forced-build-final2-log",
+      "id": "runtime090-proof-ui-permissions-and-forced-build-final-two-log",
       "family": "continuity",
       "path": "docs/reviews/probes/r090_auth_permissions/ui-permissions-and-forced-build-final2.log",
       "status": "ACTIVE",
@@ -8522,6 +8522,678 @@
       "path": "docs/reviews/probes/r091_outbound_delivery/root_dispatch_readiness.json",
       "status": "ACTIVE",
       "description": "Root pre-dispatch legacy7PASS and explicit activeC APPL CHECKED/PASS, not worker BUILD or source/test proof."
+    },
+    {
+      "id": "runtime091-root-catalog-engine-diagnostic",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/root_catalog_engine_diagnostic.json",
+      "status": "ACTIVE",
+      "description": "Root-owned adjacent artifact ID collation repair; both PowerShell engines must agree, no Core/gate/source edit."
+    },
+    {
+      "id": "runtime091-local-r091-independent-local-review-round1-2026-10-13",
+      "family": "continuity",
+      "path": "docs/reviews/R091_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Independent C first review: one same-seed consolidated source/evidence repair, no final acceptance."
+    },
+    {
+      "id": "runtime091-local-round1-intake",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/round1_intake.json",
+      "status": "ACTIVE",
+      "description": "Root verifies82bindings, per-case Go JSON and protected source unchanged."
+    },
+    {
+      "id": "runtime091-local-round1-findings",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/round1_findings.json",
+      "status": "ACTIVE",
+      "description": "Consolidated C round1 source defects and mandatory evidence gaps."
+    },
+    {
+      "id": "runtime091-local-catalog-family-correction",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_catalog_family_correction.json",
+      "status": "ACTIVE",
+      "description": "Root catalog/encoding/rework metadata preparation faults and correction."
+    },
+    {
+      "id": "runtime090-final-independent-local-review",
+      "family": "continuity",
+      "path": "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Final A independent acceptance after3Cdependencies closed with exact15caseJSON/route/fixture proof; product open."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-r091-final-independent-local-review-2026-10-13-md",
+      "family": "continuity",
+      "path": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-r091-outbound-delivery-worker-return-2026-10-13-md",
+      "family": "continuity",
+      "path": "docs/reviews/R091_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-r091-r1-outbound-delivery-worker-return-2026-10-13-md",
+      "family": "continuity",
+      "path": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-final-intake-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/final_intake.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-final-json-case-intake-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/final_json_case_intake.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-interrupted-round1-resume-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/interrupted_round1_resume.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-r1-exact-resource-absence-readback-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/r1_exact_resource_absence_readback.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-r1-return-envelope-reconciliation-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/r1_return_envelope_reconciliation.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-r1-worker-return-original-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/r1_worker_return_original.txt",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-closure-heading-diagnostic-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_closure_heading_diagnostic.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-f07-parse-save-supplement-reason-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/f07_parse_save_supplement_reason.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-cleanup-verification-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-cleanup-verification-classifier-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-cleanup-verification-classifier-failure-first-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure_first.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-cleanup-verification-first-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_first.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-cleanup-verification-second-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_second.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-host-sql-probe-go",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_probe.go",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-host-sql-readiness-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-host-sql-readiness-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-host-sql-readiness-first-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_first.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-host-sql-readiness-first-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_first.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-host-sql-readiness-second-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_second.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-host-sql-readiness-second-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_second.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_manifest.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-manifest-first-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_manifest_first.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-manifest-second-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_manifest_second.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-fixture-one-archival-receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/fixture_one_archival_receipt.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-focused-go-r091-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-focused-go-r091-after-import-fix-runner-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091_after_import_fix_runner_failure.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-focused-go-r091-notifications-engine-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091_notifications_engine.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-focused-go-r091-notifications-engine-console-encoding-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091_notifications_engine_console_encoding.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-focused-tests-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_focused_tests.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-focused-tests-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_focused_tests.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-route-guard-repeat-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_route_guard_repeat.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-route-guard-repeat-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_route_guard_repeat.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-vite-build-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_vite_build.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-vite-build-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_vite_build.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-vue-tsc-forced-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_vue_tsc_forced.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-frontend-vue-tsc-forced-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/frontend_vue_tsc_forced.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-old-source-mixed-corrected-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/old_source_mixed_corrected.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-old-source-negative-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/old_source_negative.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-old-source-supplemental-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/old_source_supplemental.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-pre-dispatch-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/pre-dispatch.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r090-dashboard-exact-selector-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/r090_dashboard_exact_selector.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r091-f07-parse-save-common-tail-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/r091_f07_parse_save_common_tail.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-source-evidence-hashes-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/source_evidence_hashes.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-source-negative-supplemental-bindings-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/source_negative_supplemental_bindings.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-telegram-secret-fixture-repeat-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/telegram_secret_fixture_repeat.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-worker-return-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/worker-return.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-worker-admission-gates-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/worker_admission_gates.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-worker-bootstrap-sync-diagnostic-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/worker_bootstrap_sync_diagnostic.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-worker-return-gate-initial-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/worker_return_gate_initial_failure.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-worker-return-preflight-final-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/worker_return_preflight_final.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-worker-return-preflight-initial-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery/worker_return_preflight_initial_failure.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-final-r1-analyzer-owner-release-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/final_r1_analyzer_owner_release.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-final-r1-notifications-engine-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/final_r1_notifications_engine.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-fixture-cleanup-verification-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_cleanup_verification.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-fixture-host-sql-readiness-after-restart-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_host_sql_readiness_after_restart.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-fixture-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_manifest.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-fixture-start-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_start.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-fixture-start-attempt1-setup-failure-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_start_attempt1_setup_failure.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-fixture-start-corrected-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_start_corrected.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-helper-start-help-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/helper_start_help.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-host-sql-readiness-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/host_sql_readiness.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-host-sql-readiness-after-resume-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/host_sql_readiness_after_resume.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-legacy-preflight-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_preflight.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-legacy-return-preflight-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-legacy-return-preflight-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-legacy-return-preflight-final-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_final.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-legacy-return-preflight-final-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_final.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-legacy-return-preflight-repeat-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_repeat.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-legacy-return-preflight-repeat-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_repeat.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-pre-dispatch-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/pre-dispatch.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-pre-dispatch-attempt1-failed-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/pre-dispatch_attempt1_failed.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-r1-analyzer-cancel-assertion-correction-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/r1_analyzer_cancel_assertion_correction.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-r1-candidate-baseline-bindings-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/r1_candidate_baseline_bindings.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-r1-final-results-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/r1_final_results_summary.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-r1-hash-manifest-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/r1_hash_manifest.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-r1-host-sql-readiness-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/r1_host_sql_readiness.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-r1-old-source-negative-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/r1_old_source_negative.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-trusted-pre-dispatch-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_pre_dispatch.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-trusted-pre-dispatch-attempt1-failed-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_pre_dispatch_attempt1_failed.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-trusted-pre-dispatch-corrected-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_pre_dispatch_corrected.log",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-trusted-worker-return-r1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_worker_return_r1.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-outbound-delivery-r1-trusted-worker-return-r1-invocation-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_outbound_delivery_r1/trusted_worker_return_r1_invocation.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-material-paths-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/material_paths.json",
+      "status": "ACTIVE",
+      "description": "R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-final-legacy-preflight-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_final_legacy_preflight.json",
+      "status": "ACTIVE",
+      "description": "Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-final-reviewer-fast-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_final_reviewer_fast.json",
+      "status": "ACTIVE",
+      "description": "Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-final-reviewer-fast-attempt1-failed-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_final_reviewer_fast_attempt1_failed.json",
+      "status": "ACTIVE",
+      "description": "Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts."
+    },
+    {
+      "id": "runtime091-final-docs-reviews-probes-r091-local-review-root-final-role-reconciliation-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r091_local_review/root_final_role_reconciliation.json",
+      "status": "ACTIVE",
+      "description": "Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts."
     }
   ]
 }

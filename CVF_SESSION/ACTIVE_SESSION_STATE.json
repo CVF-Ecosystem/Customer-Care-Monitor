@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-091",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-091 DISPATCH_READY: Luna max /root/outbound_intake must acknowledge BUILD, verify seed/currentHEAD and isolated prerequisites, synchronize BUILD/ACTIVE, pass legacy and trusted explicit active-packet pre-dispatch APPL CHECKED before source-negative tests or effects; implement only accepted C contract and three named A dependencies. Root independent review/commit/publication; accounts/provider/customer/deploy parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-091 independent REVIEWER_ACCEPTED: all seven inheritance findings CLOSED_PASS_BOUNDED application proof. Codex /root commits exact accepted material from03e68e1, records actual C build SHA in one continuity batch, and publishes existing codex/cvf-portable-inheritance project branch with remote SHA verification. No further worker/source/test campaign or automatic successor; product FREEZE/S0-S7/live/browser/hosted/deploy open, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root Local INTERNAL_AGENT orchestrator, dispatcher and independent reviewer; admitted worker /root/outbound_intake gpt-6-luna effort max, BUILD acknowledgment pending.",
+  "activeRole": "Codex /root Local independent reviewer, closer and commit steward; Luna max internal worker returned and idle; phase REVIEW; risk R2.",
   "updatedAt": "2026-10-13",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {
@@ -70,11 +70,11 @@
   "x-actualWorkerModel": {
     "model": "gpt-6-luna",
     "reasoningEffort": "max",
-    "source": "docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md",
+    "source": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
     "verification": "SESSION_REPORTED_NOT_PROVIDER_VERIFIED",
     "tokens": null,
     "bill": null,
-    "usageReason": "Numeric usage/billing not exposed to worker"
+    "usageReason": "Numeric usage/billing not exposed to the worker"
   },
   "x-ownerSubagentPreference": {
     "model": "gpt-6-luna",
@@ -650,7 +650,7 @@
   "x-closureStatus": null,
   "x-closureChecks": null,
   "x-localClosureCommit": null,
-  "x-publicationStatus": "R088_UNACCEPTED_UNCOMMITTED_NO_PUSH",
+  "x-publicationStatus": "ACCEPTED_A_C_CLOSURE_PENDING_PUSH",
   "x-publicationReceipt": null,
   "x-historicalR073PublicationProjection": {
     "status": "NOT_AUTHORIZED_IN_R073",
@@ -823,8 +823,9 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "NOT_YET_RETURNED_R091",
-    "A_dependenciesReview": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "result": "REVIEWER_ACCEPTED_CLOSED_PASS_BOUNDED",
+    "review": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "A_review": "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
     "freeze": "OPEN"
   },
   "x-historicalR081Continuity": {
@@ -906,10 +907,21 @@
     }
   },
   "x-currentRepair": {
-    "scope": "PLANNED_C_BOUNDARY",
-    "round": 0
+    "trancheId": "CCMAI-RUNTIME-091",
+    "reviewRound": 2,
+    "repairRounds": 1,
+    "status": "REVIEWER_ACCEPTED",
+    "redispatchAllowed": false
   },
-  "x-currentClosure": null,
+  "x-currentClosure": {
+    "status": "SOURCE_ACCEPTED_PENDING_ACTUAL_MATERIAL_SHA_AND_PUBLICATION",
+    "acceptedFindingCount": 7,
+    "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "C_materialCommit": null,
+    "A_materialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
+    "F06_materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
+    "productFreeze": "OPEN"
+  },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
     "activePhase": "REVIEW",
@@ -1108,66 +1120,28 @@
     "sourceHeadBeforeAdoption": "b72c0f4ec92c0fc02daf3f6cfaad1a303a27824c"
   },
   "x-currentAdoption": {
-    "status": "ROUND1_RETURNED_PENDING_INDEPENDENT_REVIEW",
-    "authoritySeed": "CVF_SESSION/authority/CCMAI-GOV-002-C1.json",
-    "seedCommit": "f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d",
-    "coreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
-    "roleDecision": "Owner retains manual worker, Local independent review; no automatic sub-agent invocation",
-    "publicationBranch": "codex/cvf-portable-inheritance",
-    "publication": {
-      "status": "EXPORTED_PREPARATION_ONLY",
-      "commit": "5338ec928b0aca46b6388e68164faa74d201200e",
-      "branch": "codex/cvf-portable-inheritance",
-      "receipt": "docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json"
-    },
-    "profileStatus": "INSTALLED_TRUSTED_MATCH",
-    "review": "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md",
-    "findingsDigest": "4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb",
-    "repairRound": 1,
-    "repairBuildAcknowledgment": {
-      "actor": "ccmai-gov002-worker",
-      "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
-      "recordedAt": "2026-10-12T19:16:07+07:00",
-      "handoffSection": "Round1 Repair BUILD Acknowledgment",
-      "initialBuildAcknowledgment": "NOT_RECORDED_AT_ORIGINAL_RETURN - preserved procedural deviation, not backdated"
-    },
-    "repairReturn": {
-      "returnDocument": "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
-      "round1Receipt": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
-      "proofDirectory": "docs/reviews/probes/gov002_review_round1/proof",
-      "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
-      "returnedAt": "2026-10-12T19:34:22+07:00",
-      "worker": {
-        "actor": "ccmai-gov002-worker",
-        "model": "claude-sonnet-5-5",
-        "reasoningEffort": "session parameter 10 (scale not documented to the worker)",
-        "tokenUsage": "NOT_AVAILABLE_WITH_REASON: not exposed to the worker",
-        "bill": "NOT_AVAILABLE_WITH_REASON: not exposed to the worker"
-      },
-      "committed": false,
-      "pushed": false
-    }
+    "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
+    "review": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
+    "receipt": "docs/reviews/probes/gov002_round1_local_review_2026-10-12.json",
+    "productFreeze": "OPEN",
+    "publication": "MATERIAL_EXPORTED_CONTINUITY_SYNC",
+    "buildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+    "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json"
   },
   "continuityContract": "cvf.downstreamContinuityContract@1.0.0",
   "x-reviewReceipt": {
-    "initialWorkerBuildAcknowledgment": "NOT_RECORDED_AT_RETURN - preserved procedural deviation",
-    "reportedModel": "Gemini 3.8 Flash (High)",
-    "verifiedModel": null,
-    "reason": "Provider execution metadata not available; do not attribute this return to Sonnet",
-    "reviewVerdict": "CHANGES_REQUIRED"
+    "reviewVerdict": "REVIEWER_ACCEPTED",
+    "review": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "intake": "docs/reviews/probes/r091_local_review/final_intake.json"
   },
   "x-queuedRuntimeInheritancePlanning": {
     "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
-    "status": "F06_DISPATCH_READY_SEPARATE_SPEC_ORDER_SEED",
-    "operatorDirective": "GOV002 review is accepted. Prepare separate runtime SPEC/work order before any manual Sonnet worker dispatch; no runtime effect granted by this planning pointer.",
+    "status": "ALL_SEVEN_CLOSED_PASS_BOUNDED",
     "findingCount": 7,
-    "proposedPackageCount": 3,
-    "executionAuthorized": true,
-    "activeTrancheUnchanged": "CCMAI-GOV-002-C1",
-    "prerequisiteReview": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
-    "prerequisiteBuildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
-    "activePackage": "B/F06/R088",
-    "executionBoundary": "Only manually dispatched R088 UI scope; other six findings not admitted"
+    "acceptedFindingCount": 7,
+    "executionAuthorized": false,
+    "activePackage": null,
+    "next": "Root exact commit/publication; no automatic source successor"
   },
   "x-historicalR086ActualWorkerModel": {
     "model": "gpt-6-luna",
@@ -1318,7 +1292,107 @@
     "worker": "/root/outbound_intake",
     "model": "gpt-6-luna",
     "effort": "max",
-    "status": "DISPATCH_READY_NOT_EXECUTED",
+    "status": "RETURNED_ACCEPTED_IDLE",
     "seed": "5441a18116e4b897549750cd7317ffdb8ae9e74b"
+  },
+  "x-historicalPreR091FinalClosureProjections": {
+    "x-currentReview": {
+      "result": "R091_R1_WORKER_RETURN_PENDING_INDEPENDENT_REVIEW",
+      "A_dependenciesReview": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+      "freeze": "OPEN",
+      "workerReturn": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+      "workerReturnStatus": "COMPLETE_PENDING_REVIEW",
+      "reviewRound": 1,
+      "reviewer": "Codex /root",
+      "reviewPending": true
+    },
+    "x-currentRepair": {
+      "trancheId": "CCMAI-RUNTIME-091",
+      "reviewRound": 1,
+      "findingSet": "docs/reviews/probes/r091_local_review/round1_findings.json",
+      "sourceEffectsAdmission": "WORKER_RETURNED_COMPLETE_PENDING_REVIEW",
+      "seedUnchanged": true,
+      "preparedBy": "Codex /root SESSION_SYNC_STEWARD",
+      "preparedAtUtc": "2026-10-12T23:22:20.054956+00:00",
+      "returnDocument": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+      "proofDirectory": "docs/reviews/probes/r091_outbound_delivery_r1/",
+      "returnedAtUtc": "2026-10-13T00:25:41Z"
+    },
+    "x-currentClosure": null,
+    "x-currentAdoption": {
+      "status": "ROUND1_RETURNED_PENDING_INDEPENDENT_REVIEW",
+      "authoritySeed": "CVF_SESSION/authority/CCMAI-GOV-002-C1.json",
+      "seedCommit": "f7bf57d0f4fe0e1920efdcc3609b6a8ea84cb68d",
+      "coreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+      "roleDecision": "Owner retains manual worker, Local independent review; no automatic sub-agent invocation",
+      "publicationBranch": "codex/cvf-portable-inheritance",
+      "publication": {
+        "status": "EXPORTED_PREPARATION_ONLY",
+        "commit": "5338ec928b0aca46b6388e68164faa74d201200e",
+        "branch": "codex/cvf-portable-inheritance",
+        "receipt": "docs/reviews/probes/gov002_dispatch_publication_2026-10-12.json"
+      },
+      "profileStatus": "INSTALLED_TRUSTED_MATCH",
+      "review": "docs/reviews/GOV002_PORTABLE_INHERITANCE_INDEPENDENT_REVIEW_2026-10-12.md",
+      "findingsDigest": "4c062e7c74efefa2d2e9e6cd5811cbfb48b152ee7cd9c99905e6e8826f4c5bdb",
+      "repairRound": 1,
+      "repairBuildAcknowledgment": {
+        "actor": "ccmai-gov002-worker",
+        "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+        "recordedAt": "2026-10-12T19:16:07+07:00",
+        "handoffSection": "Round1 Repair BUILD Acknowledgment",
+        "initialBuildAcknowledgment": "NOT_RECORDED_AT_ORIGINAL_RETURN - preserved procedural deviation, not backdated"
+      },
+      "repairReturn": {
+        "returnDocument": "docs/reviews/GOV002_PORTABLE_INHERITANCE_WORKER_RETURN_2026-10-12.md",
+        "round1Receipt": "docs/reviews/probes/gov002_round1_worker_receipt_2026-10-12.json",
+        "proofDirectory": "docs/reviews/probes/gov002_review_round1/proof",
+        "executionHead": "ca1c3aa29a6088916bbd5d31bef37e67277f8b9c",
+        "returnedAt": "2026-10-12T19:34:22+07:00",
+        "worker": {
+          "actor": "ccmai-gov002-worker",
+          "model": "claude-sonnet-5-5",
+          "reasoningEffort": "session parameter 10 (scale not documented to the worker)",
+          "tokenUsage": "NOT_AVAILABLE_WITH_REASON: not exposed to the worker",
+          "bill": "NOT_AVAILABLE_WITH_REASON: not exposed to the worker"
+        },
+        "committed": false,
+        "pushed": false
+      }
+    },
+    "x-reviewReceipt": {
+      "initialWorkerBuildAcknowledgment": "NOT_RECORDED_AT_RETURN - preserved procedural deviation",
+      "reportedModel": "Gemini 3.8 Flash (High)",
+      "verifiedModel": null,
+      "reason": "Provider execution metadata not available; do not attribute this return to Sonnet",
+      "reviewVerdict": "CHANGES_REQUIRED"
+    },
+    "x-queuedRuntimeInheritancePlanning": {
+      "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+      "status": "F06_DISPATCH_READY_SEPARATE_SPEC_ORDER_SEED",
+      "operatorDirective": "GOV002 review is accepted. Prepare separate runtime SPEC/work order before any manual Sonnet worker dispatch; no runtime effect granted by this planning pointer.",
+      "findingCount": 7,
+      "proposedPackageCount": 3,
+      "executionAuthorized": true,
+      "activeTrancheUnchanged": "CCMAI-GOV-002-C1",
+      "prerequisiteReview": "docs/reviews/GOV002_PORTABLE_INHERITANCE_ROUND1_LOCAL_REVIEW_2026-10-12.md",
+      "prerequisiteBuildCommit": "d0ebc890d043b5f94b647c1b228e8f1660f83292",
+      "activePackage": "B/F06/R088",
+      "executionBoundary": "Only manually dispatched R088 UI scope; other six findings not admitted"
+    },
+    "x-currentWorkerDispatch": {
+      "worker": "/root/outbound_intake",
+      "model": "gpt-6-luna",
+      "effort": "max",
+      "status": "RETURNED_COMPLETE_PENDING_REVIEW",
+      "seed": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
+      "returnDocument": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+      "proofDirectory": "docs/reviews/probes/r091_outbound_delivery_r1/",
+      "returnedAtUtc": "2026-10-13T00:25:41Z",
+      "commit": false,
+      "push": false
+    },
+    "x-publicationStatus": "R088_UNACCEPTED_UNCOMMITTED_NO_PUSH",
+    "x-publicationReceipt": null
   }
 }

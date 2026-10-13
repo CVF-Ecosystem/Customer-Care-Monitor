@@ -1,0 +1,12 @@
+{
+  "status": "READY",
+  "run_id": "5b005e32bafc491287e1633995591743",
+  "container": "ccma-r091-db-5b005e32bafc",
+  "network": "ccma-r091-net-5b005e32bafc",
+  "mysql_image": "mysql:8.0",
+  "image_id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "image_repo_digests": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "bind": "127.0.0.1:64579 -> internal 3306",
+  "network_internal": false,
+  "password": "redacted"
+}

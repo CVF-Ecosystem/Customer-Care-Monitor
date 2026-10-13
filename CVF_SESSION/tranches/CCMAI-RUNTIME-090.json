@@ -44,22 +44,24 @@
     "worker_commit_push_merge_force_push_or_self_review",
     "full_product_stage_FREEZE_or_live_AI_governance_claim_without_evidence"
   ],
-  "status": "CHANGES_REQUIRED",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "baseCommit": "fac8932ebd7dcecd2ad38dd23e192619cdccd6fd",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
   "buildCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
   "reviewEvidence": [
-    "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md"
+    "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md"
   ],
-  "disposition": "A_CANDIDATE_REVIEWED_THREE_C_DEPENDENCIES_PENDING",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -69,5 +71,5 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON"
+  "workOrderStatus": "REVIEWER_ACCEPTED"
 }

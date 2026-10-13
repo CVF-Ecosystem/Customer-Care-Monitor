@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "phase": "BUILD",
+  "risk": "R2",
+  "worker": "/root/outbound_intake",
+  "role": "INTERNAL_AGENT",
+  "command": "python -B scripts/r091_outbound_fixture.py start --proof-dir docs/reviews/probes/r091_outbound_delivery_r1 --state-file .cvf/runtime/r091_outbound_fixture_r1_state.json",
+  "startedAtUtc": null,
+  "recordedAtUtc": "2026-10-12T23:28:57.928556+00:00",
+  "exitCode": 1,
+  "failure": "NameError: name args is not defined in start_fixture after the bounded helper path selector was added",
+  "evidenceLog": "docs/reviews/probes/r091_outbound_delivery_r1/fixture_start.log",
+  "beforeRetryReadOnlyChecks": {
+    "r1StateExists": false,
+    "matchingOwnedContainers": [],
+    "matchingOwnedNetworks": []
+  },
+  "resourceCreation": "NOT_REACHED; failure occurred before state persistence or Docker network/container creation",
+  "realEffects": 0
+}

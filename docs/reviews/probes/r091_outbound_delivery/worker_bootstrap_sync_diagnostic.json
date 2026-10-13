@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "R091-ADMISSION-BOOTSTRAP-MISMATCH-01",
+  "tranche": "CCMAI-RUNTIME-091",
+  "worker": "/root/outbound_intake",
+  "role": "INTERNAL_AGENT",
+  "phase": "BUILD",
+  "risk": "R2",
+  "failure": {
+    "command": "python -B scripts/cvf_downstream_gate.py preflight --root .",
+    "exactFinding": "bootstrap read model currentMode differs from canonical state",
+    "otherGates": "provenance, tranche, claims, secrets, workflows, catalog passed",
+    "timestampNote": "The initial command output did not carry a timestamp and the invocation timestamp was not separately persisted; this record is created after the observed failure.",
+    "exitCode": 1,
+    "observedAtUtc": null,
+    "summary": "6/7 executed gates passed; continuity failed.",
+    "gate": "legacy CVF downstream preflight"
+  },
+  "preCorrectionProjection": {
+    "bootstrapMode": "WORK_ORDER",
+    "failureSource": "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "canonicalState": "BUILD"
+  },
+  "correction": {
+    "synchronizedTo": "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "changedFields": [
+      "currentMode",
+      "activePhase",
+      "nextAllowedMove",
+      "activeRole"
+    ],
+    "recordedAtUtc": "2026-10-12T22:57:15Z",
+    "correctedAtUtc": null,
+    "correctionTimestampNote": "The passing gate run timestamps precede the previously recorded correction time. The actual correction time was not separately captured; the earlier timestamp was not a correction timestamp and is withdrawn.",
+    "path": "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json"
+  },
+  "effectsBeforeFailure": {
+    "providerCalls": 0,
+    "customerDataRuns": 0,
+    "transportCalls": 0,
+    "databaseFixture": 0,
+    "tests": 0,
+    "sourceEdits": 0
+  },
+  "resolution": {
+    "legacyPreflight": "PASS 7/7",
+    "trustedPreDispatch": "PASS 5/5",
+    "receipt": "docs/reviews/probes/r091_outbound_delivery/worker_admission_gates.json",
+    "applChecked": [
+      "work_order_status_grammar",
+      "closeability_contract"
+    ],
+    "coreDoctor": "PASS 27/27"
+  },
+  "disposition": "METADATA_ONLY_ADMISSION_MISMATCH_CORRECTED; first failed gate retained; no test/effect credit from failure"
+}

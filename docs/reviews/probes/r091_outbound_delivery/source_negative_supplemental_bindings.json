@@ -1,0 +1,60 @@
+{
+  "campaign": "R091 supplementary old-source behavioral overlay",
+  "sequencing": "Executed after implementation edits; not represented as pre-edit baseline evidence.",
+  "dispatchHead": "03e68e1ad91f74bb153e7fa5c8b646001b9f78cc",
+  "oldSourceCommit": "03e68e1ad91f74bb153e7fa5c8b646001b9f78cc",
+  "oldSourceBindings": {
+    "backend/notifications/dispatcher.go": {
+      "gitBlob": "4fd26b28115f0940038303b82c3544dd7d2e464b",
+      "sha256": "a8fd21d5c1a80c89244931aed9fef5f60b3bf5a10903d42e4bb710df66ffd008"
+    },
+    "backend/notifications/email.go": {
+      "gitBlob": "c395dff981f9cc429dc92bbcabe1f5fef6d37506",
+      "sha256": "021062e6a80a659d740e06729fb387b9788d3a6151bb659d8fa55f3a56d64260"
+    },
+    "backend/notifications/telegram.go": {
+      "gitBlob": "93b17db4b6d8b2c41c337430e9bc05408f488b58",
+      "sha256": "35d77bb0535a9f96a4cb6fb09b53c9b1ac2ffea857f20119291caf9ee064ddfd"
+    },
+    "backend/engine/analyzer.go": {
+      "gitBlob": "c7eb8c8231d46eacfc8313bc8d180a0518136ca8",
+      "sha256": "65167ffd34b4e0962bade5c50e56af9fac7b8373b3b068e1dd006c5c0265c086"
+    }
+  },
+  "restoredBuildBindings": {
+    "backend/notifications/dispatcher.go": {
+      "sha256": "9aa4ba4d8941b31b7e6caace0c127d44c587cd040f4e52060e7c4d5bf2e4d787",
+      "restoredAndVerified": true
+    },
+    "backend/notifications/email.go": {
+      "sha256": "3520e44655eca6945b17bbfcb99d1e073ffc565d8b5d984e40a6302b36911f8c",
+      "restoredAndVerified": true
+    },
+    "backend/notifications/telegram.go": {
+      "sha256": "20861b44bee3a012a6b5d5ed6ac02f9f65d28d0ddcaa6a708f74f5b1e1f54f68",
+      "restoredAndVerified": true
+    },
+    "backend/engine/analyzer.go": {
+      "sha256": "be1aeedced66ad751f16bc48ec94cb222ab665c88fb82bf650ffbe83675b8e38",
+      "restoredAndVerified": true
+    }
+  },
+  "detectorBindings": {
+    "backend/notifications/dispatcher_delivery_baseline_test.go": {
+      "sha256": "40e1d51249d2af151b3e220bc5ac7e32ce8aa2c9354233a71348c04960d26be2"
+    },
+    "backend/engine/analyzer_batch_bookkeeping_test.go": {
+      "sha256": "b810713b93f10c6103e47be2743013a99d32aa33e4105d9d2caa3d681d569ead"
+    }
+  },
+  "command": "go test -json ./notifications ./engine -run ^(TestR091OldDispatcherDoesNotMarkMixedDeliverySetComplete|TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch)$ -count=1, via scripts/r091_outbound_fixture.py run --proof-name old_source_supplemental",
+  "fixture": "existing uniquely labeled synthetic R091 MySQL fixture; local loopback only",
+  "externalEffects": "none; no provider, customer, account, real SMTP, app server, deployment, or other network effects",
+  "startedAtUtc": "2026-10-12T22:37:26.772036+00:00",
+  "finishedAtUtc": "2026-10-12T22:37:38.956572+00:00",
+  "exitCode": 1,
+  "logPath": "docs\\reviews\\probes\\r091_outbound_delivery\\old_source_supplemental.log",
+  "logSha256": "35405fce34e73afca9edf95d6d038969d371ab76ece1b498087f5e7248521017",
+  "sourceRestorationVerified": true,
+  "testOutputTail": "01b[34;1m[rows:0]\\u001b[0m DELETE FROM activity_logs WHERE tenant_id = 'inc-o-568e8be0'\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8647087+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"\\r\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8647087+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"2026/10/13 05:37:38 \\u001b[32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/backend/engine/analyzer_incremental_test.go:194\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8647087+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"\\u001b[0m\\u001b[33m[1.045ms] \\u001b[34;1m[rows:0]\\u001b[0m DELETE FROM jobs WHERE tenant_id = 'inc-o-568e8be0'\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.868907+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"\\r\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.868907+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"2026/10/13 05:37:38 \\u001b[32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/backend/engine/analyzer_incremental_test.go:194\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.868907+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"\\u001b[0m\\u001b[33m[4.198ms] \\u001b[34;1m[rows:1]\\u001b[0m DELETE FROM channels WHERE tenant_id = 'inc-o-568e8be0'\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8720725+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"\\r\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8720725+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"2026/10/13 05:37:38 \\u001b[32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor/backend/engine/analyzer_incremental_test.go:196\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8720725+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"\\u001b[0m\\u001b[33m[3.166ms] \\u001b[34;1m[rows:1]\\u001b[0m DELETE FROM tenants WHERE id = 'inc-o-568e8be0'\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8720725+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Output\":\"--- FAIL: TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch (0.66s)\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8720725+07:00\",\"Action\":\"fail\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Test\":\"TestR091OldBatchProviderErrorPersistsProgressBeforeNextBatch\",\"Elapsed\":0.66}\n{\"Time\":\"2026-10-13T05:37:38.8720725+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Output\":\"FAIL\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8761879+07:00\",\"Action\":\"output\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Output\":\"FAIL\\tgithub.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\\t5.900s\\n\"}\n{\"Time\":\"2026-10-13T05:37:38.8761879+07:00\",\"Action\":\"fail\",\"Package\":\"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine\",\"Elapsed\":5.9}\nR091 fixture test result: exit_code=1; log=docs/reviews/probes/r091_outbound_delivery/old_source_supplemental.log\n"
+}

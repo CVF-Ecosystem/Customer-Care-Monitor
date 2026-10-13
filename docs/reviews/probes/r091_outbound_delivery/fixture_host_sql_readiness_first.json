@@ -1,0 +1,20 @@
+{
+  "fixtureRunId": "fe67adefe1fd47d7a4d72cf07b190b18",
+  "container": "ccma-r091-db-fe67adefe1fd",
+  "imageRepoDigest": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "hostBind": "127.0.0.1:64596",
+  "dbUser": "ccma_r091",
+  "database": "ccma_r091",
+  "initialFixtureReadinessUtc": "2026-10-12T22:29:30+00:00",
+  "initialReadinessMethod": "host 127.0.0.1 TCP handshake plus in-container app-user SELECT 1 over TCP",
+  "initialGoCampaignStartedUtc": "2026-10-12T22:29:40+00:00",
+  "hostSqlReadinessStartedUtc": "2026-10-12T22:38:15.973494+00:00",
+  "hostSqlReadinessFinishedUtc": "2026-10-12T22:38:19.364734+00:00",
+  "hostSqlReadinessMethod": "Go database/sql with existing cached github.com/go-sql-driver/mysql; exact helper TEST_DB_DSN format from owned synthetic state; PingContext then SELECT 1; 5-second context; GOPROXY=off; no writes",
+  "exitCode": 0,
+  "result": "PASS",
+  "logPath": "docs\\reviews\\probes\\r091_outbound_delivery\\fixture_host_sql_readiness.log",
+  "logSha256": "7fc4231cf7383b5b47ff1328a0092b32c87b2786f1b890b275296e88db66640f",
+  "sequencingLimitation": "Authenticated host-loopback SQL readiness was not captured before the initial baseline campaign; this bounded read-only proof was recorded later while the same owned fixture was live. Do not relabel the earlier TCP handshake plus in-container SELECT 1 as host SQL readiness.",
+  "externalEffects": "none; synthetic local fixture only; no provider, customer, account, real SMTP, application server, deployment, or network beyond 127.0.0.1"
+}

@@ -9,11 +9,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate valid R057 grouped independent-review seed; failed R056 seed immutable, no runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-057.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
-- Finite seven-finding inheritance roadmap: F06 accepted/published, R090 auth/quyền BUILD, R091 outbound design only; full product/live/native-fence/dependency/accounts remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
+- All seven selected inheritance findings independently accepted bounded; final project publication pending, full product exits open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R091 dispatch-ready handoff; worker BUILD acknowledgment and gates pending.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md`
+- Active Root closure/commit/publication handoff; worker returned accepted and idle, no next source authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -752,7 +752,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `docs/reviews/probes/r089_readiness/go-toolchain.json`
 - Bounded Luna package A source/authority/readiness preparation, no accepted runtime behavior yet.: `docs/reviews/probes/r089_readiness/source-audit.json`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-090.json`
-- Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-090.json`
+- Accepted A/F01-F03 at44bb345 after route/fixture/exact-case proof dependencies closed; product FREEZE OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-090.json`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/planning/R090_AUTH_PERMISSIONS_SPEC_2026-10-13.md`
 - Valid bounded package A preparation or preserved Local unexecuted seed failure; no source acceptance.: `docs/reviews/probes/r089_readiness/local-preparation-failure.json`
@@ -1160,6 +1160,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R1 documentary progress review accepted, root publication defects retained; FREEZE OPEN due inherited docs55, no stage exit or runtime proof.: `docs/reviews/R087_ROADMAP_PROGRESS_DOCUMENTARY_REVIEW_2026-10-12.md`
 - Bounded R1 current progress and finite planning route work order.: `docs/work_orders/CCMAI_RUNTIME_087.md`
 - R087 documentary roadmap progress refresh lifecycle; no product stage closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-087.json`
+- Final A independent acceptance after3Cdependencies closed with exact15caseJSON/route/fixture proof; product open.: `docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md`
 - Independent A candidate review, three named planned-C dependencies pending; no fullA/live closure.: `docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md`
 - Root-attributed metadata repair or original bytes, preserves actual failed gates/evidence and no source change.: `docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure-before-root-role-metadata.txt`
 - R090 scoped source/fixture/evidence including preserved setup/scaffold/type failures; read individual disposition, no blanket PASS.: `docs/reviews/probes/r090_auth_permissions/fixture_first_setup_failure.md`
@@ -1197,9 +1198,104 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root gates or exact material manifest for reviewed A candidate; finalCdependencies remainopen.: `docs/reviews/probes/r090_auth_permissions/material_paths.json`
 - Luna max source/evidence return, UI8PASS/type/build and backend package-summary PASS; per-case/SKIP missing, lifecycle Root-owned.: `docs/reviews/R090_AUTH_PERMISSIONS_WORKER_RETURN_2026-10-13.md`
 - Immutable first-commit C authority, source/effects bounded.: `CVF_SESSION/authority/CCMAI-RUNTIME-091.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/final_intake.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/final_json_case_intake.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/interrupted_round1_resume.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/material_paths.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/r1_exact_resource_absence_readback.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/r1_return_envelope_reconciliation.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/r1_worker_return_original.txt`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_local_review/root_closure_heading_diagnostic.json`
+- Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts.: `docs/reviews/probes/r091_local_review/root_final_legacy_preflight.json`
+- Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts.: `docs/reviews/probes/r091_local_review/root_final_reviewer_fast_attempt1_failed.json`
+- Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts.: `docs/reviews/probes/r091_local_review/root_final_reviewer_fast.json`
+- Root R091 final evidence/metadata reconciliation; retained original faults and bounded closure facts.: `docs/reviews/probes/r091_local_review/root_final_role_reconciliation.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/f07_parse_save_supplement_reason.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure_first.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_classifier_failure.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_first.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_second.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_probe.go`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_first.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_first.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_second.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_second.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_manifest_first.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_manifest.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_manifest_second.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/fixture_one_archival_receipt.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/focused_go_r091_after_import_fix_runner_failure.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/focused_go_r091.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/focused_go_r091_notifications_engine_console_encoding.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/focused_go_r091_notifications_engine.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_focused_tests.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_focused_tests.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_route_guard_repeat.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_route_guard_repeat.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_vite_build.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_vite_build.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_vue_tsc_forced.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/frontend_vue_tsc_forced.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/old_source_mixed_corrected.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/old_source_negative.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/old_source_supplemental.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/pre-dispatch.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/r090_dashboard_exact_selector.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/r091_f07_parse_save_common_tail.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/final_r1_analyzer_owner_release.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/final_r1_notifications_engine.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/fixture_cleanup_verification.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/fixture_host_sql_readiness_after_restart.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/fixture_manifest.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/fixture_start_attempt1_setup_failure.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/fixture_start_corrected.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/fixture_start.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/helper_start_help.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/host_sql_readiness_after_resume.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/host_sql_readiness.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/legacy_preflight.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_final.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_final.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_repeat.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/legacy_return_preflight_repeat.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/pre-dispatch_attempt1_failed.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/pre-dispatch.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/r1_analyzer_cancel_assertion_correction.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/r1_candidate_baseline_bindings.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/r1_final_results_summary.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/r1_hash_manifest.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/r1_host_sql_readiness.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/r1_old_source_negative.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/trusted_pre_dispatch_attempt1_failed.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/trusted_pre_dispatch_corrected.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/trusted_pre_dispatch.log`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/trusted_worker_return_r1_invocation.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery_r1/trusted_worker_return_r1.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/source_evidence_hashes.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/source_negative_supplemental_bindings.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/telegram_secret_fixture_repeat.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/worker_admission_gates.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/worker_bootstrap_sync_diagnostic.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/worker_return_gate_initial_failure.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/worker-return.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/worker_return_preflight_final.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/probes/r091_outbound_delivery/worker_return_preflight_initial_failure.json`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/R091_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md`
+- R091 bounded source/worker evidence or independent Root closure; exact artifact facts control, no full product/live claim.: `docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md`
+- Root catalog/encoding/rework metadata preparation faults and correction.: `docs/reviews/probes/r091_local_review/root_catalog_family_correction.json`
+- Independent C first review: one same-seed consolidated source/evidence repair, no final acceptance.: `docs/reviews/R091_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md`
+- Consolidated C round1 source defects and mandatory evidence gaps.: `docs/reviews/probes/r091_local_review/round1_findings.json`
+- Root verifies82bindings, per-case Go JSON and protected source unchanged.: `docs/reviews/probes/r091_local_review/round1_intake.json`
 - Bounded C delivery/deadline/backoff plus finite A dependency order.: `docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md`
-- Root-reviewed package C design: frozen delivery manifest, conservative receipt outcomes, cancellable SMTP and common batch backoff; no C BUILD or runtime evidence.: `docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md`
+- Executed and independently accepted C frozen per-run delivery, conservative receipt outcomes, bounded SMTP and common batch backoff contract; synthetic proof only.: `docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md`
 - DISPATCH_READY record; no C source acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-091.json`
+- Root-owned adjacent artifact ID collation repair; both PowerShell engines must agree, no Core/gate/source edit.: `docs/reviews/probes/r091_outbound_delivery/root_catalog_engine_diagnostic.json`
 - Root pre-dispatch legacy7PASS and explicit activeC APPL CHECKED/PASS, not worker BUILD or source/test proof.: `docs/reviews/probes/r091_outbound_delivery/root_dispatch_readiness.json`
 - Closed schema reference for the Artifact Registry.: `docs/catalog/schemas/ARTIFACT_REGISTRY.schema.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`

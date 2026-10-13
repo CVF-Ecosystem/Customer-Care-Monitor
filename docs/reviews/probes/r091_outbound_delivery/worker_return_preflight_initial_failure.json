@@ -1,0 +1,22 @@
+{
+  "recordedAtUtc": "2026-10-12T23:06:05Z",
+  "command": "python -B scripts/cvf_downstream_gate.py preflight --root .",
+  "exitCode": 1,
+  "result": "FAIL",
+  "output": [
+    "[PASS] provenance",
+    "[FAIL] continuity",
+    "- handoff Active role differs from state.activeRole",
+    "- next-move tranche IDs differ: state [CCMAI-RUNTIME-091] vs handoff []",
+    "- handoff Next allowed move differs from state.nextAllowedMove (normalized text)",
+    "[PASS] tranche",
+    "[PASS] claims",
+    "[FAIL] secrets",
+    "- backend/notifications/telegram_delivery_test.go:24: credential-like literal (quoted-credential-literal); value not shown",
+    "- backend/notifications/telegram_delivery_test.go:68: credential-like literal (quoted-credential-literal); value not shown",
+    "[PASS] workflows",
+    "[PASS] catalog",
+    "CVF downstream preflight: FAIL (5/7 executed gates passed)"
+  ],
+  "noEffectsBeforePreflightCorrection": true
+}

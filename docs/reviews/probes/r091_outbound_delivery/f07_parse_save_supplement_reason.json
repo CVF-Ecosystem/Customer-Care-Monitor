@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "R091-F07-PARSE-SAVE-COMMON-TAIL-SUPPLEMENT-01",
+  "tranche": "CCMAI-RUNTIME-091",
+  "worker": "/root/outbound_intake",
+  "role": "INTERNAL_AGENT",
+  "phase": "BUILD",
+  "risk": "R2",
+  "recordedAtUtc": "2026-10-12T22:59:33Z",
+  "reason": "Root identified that the accepted provider-error integration plus source convergence did not independently demonstrate parse/save failure progress before the next provider invocation and healthy reset after each error class. Root directed a narrow test-only integration addition under the existing analyzer batch bookkeeping test path.",
+  "priorCampaign": "docs/reviews/probes/r091_outbound_delivery/focused_go_r091_notifications_engine.log",
+  "priorCampaignDisposition": "Preserved valid 30 terminal PASS/0 SKIP; no prior test outcome is reclassified or overwritten.",
+  "newEvidenceQuestion": "For one synthetic parse failure and one synthetic save failure, does the analyzer persist the error summary before the next batch, use the shared 10-second streak delay, then reset to the healthy 2-second delay after a success before another provider call?",
+  "boundedChange": "backend/engine/analyzer_batch_bookkeeping_contract_test.go only; no production behavior or adapter retry changes.",
+  "plannedRun": "One fresh labeled MySQL fixture, pre-test host-loopback app-user SQL PingContext plus SELECT 1; run only ^TestR091ParseAndSaveBatchFailuresPersistProgressAndUseCommonBackoffTail$ using the admitted helper; injected delay seam records durations without wall-clock backoff; exact-owned teardown and absence proof.",
+  "effectBoundary": "Synthetic database and fake AI provider only; no provider API, customer, account, real SMTP, application server, deployment, or off-host network effects.",
+  "fixtureRunId": "8f4167ee0ea849a494fbca4ffa02a777",
+  "outcome": "PASS",
+  "completedAtUtc": "2026-10-12T23:00:38+00:00",
+  "actualCommand": [
+    ".\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+    "test",
+    "-json",
+    "./engine",
+    "-run",
+    "^TestR091ParseAndSaveBatchFailuresPersistProgressAndUseCommonBackoffTail$",
+    "-count=1",
+    "-p=1"
+  ],
+  "startedAtUtc": "2026-10-12T23:00:25+00:00",
+  "finishedAtUtc": "2026-10-12T23:00:38+00:00",
+  "exitCode": 0,
+  "testEvents": {
+    "run": 3,
+    "pass": 4,
+    "fail": 0,
+    "skip": 0,
+    "testPass": 3,
+    "testFail": 0,
+    "testSkip": 0,
+    "packagePass": 1,
+    "packageFail": 0
+  },
+  "expectedDelaySequence": [
+    "10s",
+    "2s"
+  ],
+  "observedDelaySequence": [
+    "10s",
+    "2s"
+  ],
+  "readinessReceipt": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_second.json",
+  "readinessPrecededTest": true,
+  "cleanupReceipt": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_second.json",
+  "cleanupComplete": "docs/reviews/probes/r091_outbound_delivery/fixture_cleanup_verification_second.json",
+  "note": "The parsed log records the parent test and both parse/save subtests as terminal PASS; no test skips or failures. The only repeated campaign was this specifically named evidence addition."
+}

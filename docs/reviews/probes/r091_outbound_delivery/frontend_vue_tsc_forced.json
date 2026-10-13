@@ -1,0 +1,17 @@
+{
+  "name": "frontend_vue_tsc_forced",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/c",
+    "node_modules\\.bin\\vue-tsc.cmd",
+    "-b",
+    "--force"
+  ],
+  "cwd": "frontend",
+  "started_utc": "2026-10-12T22:51:21+00:00",
+  "finished_utc": "2026-10-12T22:51:32+00:00",
+  "exit_code": 0,
+  "log": "docs/reviews/probes/r091_outbound_delivery/frontend_vue_tsc_forced.log",
+  "output_bytes_utf8": 0
+}

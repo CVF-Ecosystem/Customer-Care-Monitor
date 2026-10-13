@@ -1,12 +1,14 @@
 package engine
 
 import (
+	"bufio"
 	"bytes"
 	"context"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"log"
+	"net"
 	"strings"
 	"sync"
 	"testing"
@@ -18,6 +20,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
+	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/notifications"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg"
 )
 
@@ -917,5 +920,110 @@ func TestCancelAfterPartialProgressDoesNotNotify(t *testing.T) {
 	}
 	if cp := f.checkpoint(t); cp == nil || !cp.Equal(sentinel) {
 		t.Fatalf("checkpoint moved: %v", cp)
+	}
+}
+
+type r091EngineStalledSMTP struct {
+	listener  net.Listener
+	connected chan struct{}
+	done      chan struct{}
+	mu        sync.Mutex
+	conn      net.Conn
+}
+
+func r091StartEngineStalledSMTP(t *testing.T) *r091EngineStalledSMTP {
+	t.Helper()
+	listener, err := net.Listen("tcp", "127.0.0.1:0")
+	if err != nil {
+		t.Fatalf("listen on synthetic owner-release SMTP: %v", err)
+	}
+	s := &r091EngineStalledSMTP{listener: listener, connected: make(chan struct{}), done: make(chan struct{})}
+	go func() {
+		defer close(s.done)
+		conn, acceptErr := listener.Accept()
+		if acceptErr != nil {
+			return
+		}
+		s.mu.Lock()
+		s.conn = conn
+		s.mu.Unlock()
+		close(s.connected)
+		reader := bufio.NewReader(conn)
+		_, _ = reader.ReadByte() // no SMTP greeting; the bounded client deadline must close this exact socket
+		_ = conn.Close()
+	}()
+	t.Cleanup(func() { s.closeAndJoin(t) })
+	return s
+}
+
+func (s *r091EngineStalledSMTP) closeAndJoin(t *testing.T) {
+	t.Helper()
+	_ = s.listener.Close()
+	s.mu.Lock()
+	conn := s.conn
+	s.mu.Unlock()
+	if conn != nil {
+		_ = conn.Close()
+	}
+	select {
+	case <-s.done:
+	case <-time.After(2 * time.Second):
+		t.Errorf("synthetic owner-release SMTP server did not join")
+	}
+}
+
+func TestRunOwnerRemainsHeldUntilContextBoundSMTPReturns(t *testing.T) {
+	f := setupIncFixture(t, false, "qc_analysis")
+	t.Cleanup(func() {
+		if db.DB == nil {
+			return
+		}
+		for _, table := range []string{"notification_logs", "notification_delivery_receipts", "notification_delivery_manifests"} {
+			db.DB.Exec("DELETE FROM "+table+" WHERE tenant_id = ?", f.tenantID)
+		}
+	})
+	server := r091StartEngineStalledSMTP(t)
+	f.exec(t, "UPDATE jobs SET output_schedule = 'instant', outputs = ? WHERE id = ?",
+		fmt.Sprintf(`[{"type":"email","smtp_host":"127.0.0.1","smtp_port":%d,"from":"sender@example.invalid","to":"owner@example.invalid"}]`, server.listener.Addr().(*net.TCPAddr).Port), f.jobID)
+	f.addConv(t, f.tenantID, f.channelID, "smtp-owner", []time.Time{f.clock.Add(-time.Hour)})
+	original := sendJobNotifications
+	sendJobNotifications = func(ctx context.Context, job models.Job, run models.JobRun) error {
+		bounded, cancel := context.WithTimeout(ctx, time.Second)
+		defer cancel()
+		return notifications.NewDispatcher().SendJobResults(bounded, job, run)
+	}
+	t.Cleanup(func() { sendJobNotifications = original })
+	bg := goRun(func() (*models.JobRun, error) {
+		return f.analyzerWith(&incProvider{}).RunJob(context.Background(), f.job(t))
+	})
+	select {
+	case <-server.connected:
+	case <-time.After(3 * time.Second):
+		t.Fatal("analyzer did not reach the synthetic SMTP greeting")
+	}
+	if !JobRunActive(f.tenantID, f.jobID) {
+		t.Fatal("run owner was released while context-bound SMTP still held the notification call")
+	}
+	if _, err := f.analyzerWith(&incProvider{}).RunJob(context.Background(), f.job(t)); !errors.Is(err, ErrJobBusy) {
+		t.Fatalf("a second run was admitted during the SMTP notification tail: %v", err)
+	}
+	select {
+	case <-bg.done:
+	case <-time.After(3 * time.Second):
+		server.closeAndJoin(t)
+		t.Fatal("analyzer owner did not return after the bounded SMTP context expired")
+	}
+	if bg.err != nil || bg.run == nil || bg.run.Status != "success" {
+		t.Fatalf("post-terminal SMTP timeout changed the committed run result: %v %+v", bg.err, bg.run)
+	}
+	if JobRunActive(f.tenantID, f.jobID) {
+		t.Fatal("run owner was not released after the SMTP operation returned")
+	}
+	var receipt models.NotificationDeliveryReceipt
+	if err := db.DB.Where("job_run_id = ?", bg.run.ID).First(&receipt).Error; err != nil || receipt.Status != "failed" {
+		t.Fatalf("bounded SMTP nonacceptance was not persisted: %+v %v", receipt, err)
+	}
+	if strings.Contains(receipt.SafeError, "owner@example.invalid") || strings.Contains(receipt.SafeError, "sender@example.invalid") {
+		t.Fatalf("SMTP failure receipt contains message identity: %q", receipt.SafeError)
 	}
 }

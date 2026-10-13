@@ -2,7 +2,7 @@
 
 Memory class: FULL_RECORD
 docType: work_order
-Status: DISPATCH_READY
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: /root/outbound_intake
 Reviewer: Codex /root
@@ -14,7 +14,11 @@ Commit mode: WORKER_MUST_NOT_COMMIT
 
 Implement Root-accepted docs/reviews/planning/R091_OUTBOUND_DELIVERY_SPEC_2026-10-13.md under immutable seed5441a18116e4b897549750cd7317ffdb8ae9e74b. Operator authorizes gpt-6-luna effort max INTERNAL_AGENT worker; Root independently reviews, commits and publishes accepted existing project branch. This is the already-planned C transport/persistence boundary for F04/F05/F07 plus three named A route/fixture/evidence dependencies. A candidate material44bb345d0d0efb5e6a01b2f23e975e17a65f5d02, continuity4954304804e821899b8f20cb7d4005d611906bb1 passed pinned local committed-range controls; A remains CHANGES_REQUIRED, not full acceptance. This is not an A repair successor.
 
-Verifiable outcome: failed or ambiguous notification delivery cannot be marked delivered or automatically duplicated; SMTP cannot hold the analyzer owner indefinitely; provider-error batches persist progress and use the same cancellable delay tail. Completion additionally settles the actual notification route permission, two legacy dashboard UI fixtures and exact A per-case/SKIP evidence. Supports product S1/S3/S5/S7 without full stage closure. No ETA/full-product percentage.
+Verifiable outcome: failed or ambiguous notification delivery cannot be marked delivered or automatically duplicated; SMTP cannot hold the analyzer owner indefinitely; provider, parse, and persistence batch errors persist progress and use the same cancellable delay tail. Completion additionally settles the actual notification route permission, two legacy dashboard UI fixtures and exact A per-case/SKIP evidence. Supports product S1/S3/S5/S7 without full stage closure. No ETA/full-product percentage.
+
+Worker return: `docs/reviews/R091_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md` (`COMPLETE_PENDING_REVIEW`). Evidence and raw/LF source hashes: `docs/reviews/probes/r091_outbound_delivery/`. Root owns independent review, final disposition, commit, and publication.
+
+Round1 same-seed worker return: `docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md` (`COMPLETE_PENDING_REVIEW`); additive evidence and current source bindings: `docs/reviews/probes/r091_outbound_delivery_r1/`. The original C return and its proof remain immutable; Root owns independent R1 review, final disposition, commit, and authorized publication.
 
 ## Mandatory BUILD Admission
 
@@ -56,23 +60,23 @@ Worker owns final REVIEW/REVIEW_PENDING/COMPLETE_PENDING_REVIEW synchronization 
 
 Review-Dispatch Convergence Control: REQUIRED
 
-dispatchKind: INITIAL
+dispatchKind: REWORK
 dispatchSurface: INTERNAL_AGENT
 parentAssignmentId: CCMAI-RUNTIME-091
-reviewRoundCount: 0
-priorFindingSetDigest: NONE
-dependencyAuditDisposition: COMPLETE_INITIAL_ACCEPTANCE_MATRIX
-reworkFindingDisposition: NOT_APPLICABLE_INITIAL
+reviewRoundCount: 1
+priorFindingSetDigest: 49a7541024273e110cad53ebf46ae8bbcb5b0ab2441c4270b9ad948f1e231915
+dependencyAuditDisposition: COMPLETE_BEFORE_FIRST_REPAIR
+reworkFindingDisposition: CONSOLIDATED_ALL_DEPENDENT_FINDINGS
 newIndependentCriticalEvidence: NONE
-regressionGuardDisposition: BASELINE_NEGATIVE_TESTS_PLANNED
+regressionGuardDisposition: REQUIRED_AND_PLANNED_FOR_EACH_TARGETED_DEFECT
 cumulativeExternalInvocationCount: 0
 externalInvocationCeiling: 0
 usageAvailability: NOT_APPLICABLE_INTERNAL_AGENT
 quotaAdmissionDisposition: NOT_APPLICABLE_INTERNAL_AGENT
-nextDispatchDisposition: INITIAL_DISPATCH
+nextDispatchDisposition: ONE_CONSOLIDATED_REWORK
 rootCauseClusterId: CCMAI-OUTBOUND-DELIVERY-BACKOFF
-reworkGeneration: 0
-consolidatedDefectClassSweep: COMPLETE_INITIAL_ACCEPTANCE_MATRIX
+reworkGeneration: 1
+consolidatedDefectClassSweep: COMPLETE_BEFORE_REWORK_DISPATCH
 successorTrancheOpened: NO
 implementationAutonomyDisposition: CONTRACT_AUTHORITY_EVIDENCE_OUTCOME_ONLY
 preExecutionReviewAdmission: NOT_REQUIRED_BEFORE_EXECUTION
@@ -110,15 +114,15 @@ Preparation choreography: new immutable seed is committed before activation, fol
 
 ## Worker Return Self-Proof
 
-Record rootCauseClusterId CCMAI-OUTBOUND-DELIVERY-BACKOFF, reworkGeneration0, consolidatedDefectClassSweep COMPLETE_ALL_KNOWN_DEPENDENCIES, productionBindingEvidence naming actual source/test hashes and exact commands, adversarialRegressionDisposition PASS_TARGETED_DEFECT_CLASS only from behavioral detectors, successorTrancheOpened NO, implementationAutonomyDisposition CONTRACT_AUTHORITY_EVIDENCE_OUTCOME_ONLY, actual agent/provider counts and numeric token/bill or unavailable reason, terminalReadinessVerdict READY_FOR_REVIEW or reason-bearing block. Do not echo bare dispatchKind in the return: it is not a dispatch envelope (use returnedDispatchKind if needed).
+Record rootCauseClusterId CCMAI-OUTBOUND-DELIVERY-BACKOFF, reworkGeneration1, consolidatedDefectClassSweep COMPLETE_ALL_KNOWN_DEPENDENCIES, productionBindingEvidence naming actual source/test hashes and exact commands, adversarialRegressionDisposition PASS_TARGETED_DEFECT_CLASS only from behavioral detectors, successorTrancheOpened NO, implementationAutonomyDisposition CONTRACT_AUTHORITY_EVIDENCE_OUTCOME_ONLY, actual agent/provider counts and numeric token/bill or unavailable reason, terminalReadinessVerdict READY_FOR_REVIEW or reason-bearing block. Do not echo bare dispatchKind in the return: it is not a dispatch envelope (use returnedDispatchKind if needed).
 
 ## Return-Time Closeability Recheck
 
 closeabilityContractVersion: cvf.gate-role-closeability@1.0.0
 closeabilityDisposition: CLOSEABLE
 outsideAuthorityBlockers: NONE
-nextRepairRoute: INDEPENDENT_LOCAL_REVIEW_OF_RETURNED_EVIDENCE
-workerRedispatchAllowed: NO
+nextRepairRoute: SAME_SEED_R091_CONSOLIDATED_LUNA_REPAIR
+workerRedispatchAllowed: YES
 
 Source and synthetic setup are admitted; readiness/setup failures must be reported, not hidden as skips. Unknown real/live/provider results remain unknown.
 
@@ -130,3 +134,28 @@ Read legacy seed/role/path/risk/base/history/opt-in status literals, pinned publ
 
 DEFERRED_PRIVATE_ONLY. Preparation before actual publication; Root owns reviewed project branch commits/push, no private Core export/main/merge/deploy.
 
+
+## Consolidated R091 round1 repair admission
+
+reviewerLocalRepairBoundary: NEW_EVIDENCE_REQUIRED
+reviewerLocalRepairBasis: R091-R1-F01 through F04 require new source-negative and actual transport/MySQL/Analyzer assertions unavailable in the return; Root remains independent reviewer with production edits0. Same R2 paths/effects/commit owner, no seed rewrite or successor.
+
+Authoritative finding set: docs/reviews/probes/r091_local_review/round1_findings.json (SHA-256 49a7541024273e110cad53ebf46ae8bbcb5b0ab2441c4270b9ad948f1e231915); independent review docs/reviews/R091_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md. Repair all four clusters as one same-seed package. No new policy/design objective; preserve known valid source/evidence and exact A route/fixture dependencies.
+
+Preserve original R091 return and82-entry manifest/evidence unchanged. New return docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md; new proof folder docs/reviews/probes/r091_outbound_delivery_r1/. Fixture helper may add bounded proof-directory selection within these existing review probe families so old lifecycle receipts cannot be overwritten. One fresh labeled cached-image fixture at a time, actual host app-user SQL readiness before tests, exact container/network/anonymous-volume cleanup and absence proof. No new image/tool/dependencies or real providers/outbound/customers/accounts.
+
+Only affected notification test groups and new batch integration controls run; A selector/UI/type/build unchanged and consumed. Compile touched backend packages with the focused runs. Record failing behavioral assertions on current pre-repair candidate before changing each production cluster; setup/timeout is no credit. Healthy controls plus final named regressions; deterministic barriers/socket cleanup, no abandoned goroutines. Candidate-negative tests may use same existing fixture for repair final. Keep logs/hash manifests distinct and record final current source bindings.
+
+Before edits/tests/effects, rehydrate and acknowledge BUILD, order/record ACTIVE under existing seed, actual legacy and trusted explicit active-packet pre-dispatch APPL CHECKED. The pending reviewer metadata below is not a pre-effect admission receipt. At return synchronize REVIEW/REVIEW_PENDING/COMPLETE_PENDING_REVIEW and clear implementation.activeWorkOrders; Root next independent review.
+
+## Reviewer-local repair routing assessment
+
+unchangedObjective: YES
+unchangedDesign: YES
+unchangedAuthority: YES
+unchangedEffects: YES
+unchangedPaths: YES
+unchangedCommitOwner: YES
+evidenceDetermined: NO
+
+The existing contract is unchanged, but missing behavioral proof and source repairs require fresh evidence. NEW_EVIDENCE_REQUIRED routes one consolidated worker repair; Root retains independent source review.

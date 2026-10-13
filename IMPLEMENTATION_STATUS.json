@@ -34,7 +34,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -73,7 +73,12 @@
     "R068 adapter-only usage-presence primitive FROZEN after independent UP01..12 review and separately owner-authorized R069 single offline whole-backend compile PASS; source bb0bdeb, original failures/budgets unchanged, consumers/full exits/live remain OPEN.",
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
-  "x-buildInProgress": null,
+  "x-buildInProgress": {
+    "trancheId": "CCMAI-RUNTIME-091",
+    "status": "RETURNED_ACCEPTED_IDLE",
+    "round": 1,
+    "newEffectsAuthorized": false
+  },
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
     "CCMAI-RUNTIME-064 and accepted R063 bounded local rule-input observation RO01..12 are FROZEN at source55e836a1b980b3e5d4075ceb33466786c860f963 / archive661113d888c5886331c9b4eb99783a215cf8c58f / independentreview3f0764b. ORCHESTRATOR next prepares source-based usage/cost provenance DESIGN/SPEC and separates remaining permission/policy-version/WAIT_DATA requirements before any new work order. Original summary/inspect loss and accepted actual-evidence reconciliation limits retained; total2campaign8/8Go exhausted, closure0Go. Full S2/global F02/provider/billing/live/CVF governance/hosted remain OPEN; Facebook/Zalo OA parked. No source/runtime/subagents/provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy authority.",
@@ -330,8 +335,8 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-091 DISPATCH_READY: Luna max /root/outbound_intake must acknowledge BUILD, verify seed/currentHEAD and isolated prerequisites, synchronize BUILD/ACTIVE, pass legacy and trusted explicit active-packet pre-dispatch APPL CHECKED before source-negative tests or effects; implement only accepted C contract and three named A dependencies. Root independent review/commit/publication; accounts/provider/customer/deploy parked.",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
+    "nextObjective": "CCMAI-RUNTIME-091 independent REVIEWER_ACCEPTED: all seven inheritance findings CLOSED_PASS_BOUNDED application proof. Codex /root commits exact accepted material from03e68e1, records actual C build SHA in one continuity batch, and publishes existing codex/cvf-portable-inheritance project branch with remote SHA verification. No further worker/source/test campaign or automatic successor; product FREEZE/S0-S7/live/browser/hosted/deploy open, Facebook/Zalo OA parked.",
+    "activeWorkOrder": null,
     "buildDispatched": false,
     "currentExecutionBudget": {
       "implementationPackages": 1,
@@ -345,9 +350,9 @@
       "syntheticTransport": "Owned loopback HTTP/SMTP and fake notifier/provider only; clean/join all listeners/connections/goroutines. No app server or real account.",
       "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
     },
-    "publicationStatus": "R088_MATERIAL_EXPORTED_VERIFIED_14BBF1D",
+    "publicationStatus": "ACCEPTED_A_C_CLOSURE_PENDING_PUSH",
     "sourceCheckpoint": "9dbf26fa88cc8995978961d98e6ffb9e3ba4da27",
-    "modelAssessment": "LUNA_MAX_R091_PENDING_BUILD_ACKNOWLEDGMENT",
+    "modelAssessment": "LUNA_MAX_ONE_CONSOLIDATED_REPAIR_INDEPENDENTLY_ACCEPTED",
     "activeLocalClosureOrder": null,
     "localClosureEvidence": null
   },
@@ -2041,9 +2046,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2089,7 +2092,7 @@
     "materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0"
   },
   "x-r090AuthPermissions": {
-    "status": "CHANGES_REQUIRED_C_DEPENDENCIES",
+    "status": "REVIEW_PASS",
     "findings": [
       "F01",
       "F02",
@@ -2099,11 +2102,11 @@
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_090_AUTH_PERMISSIONS.md",
     "worker": "/root/auth_intake",
     "reviewer": "Codex /root",
-    "sourceAcceptance": false,
+    "sourceAcceptance": true,
     "buildHead": "0813ec79bcc6687f13b72260094d2b669af697e4",
     "workerAcknowledgment": "RECORDED_BEFORE_SOURCE_EDIT; PREFLIGHT_PASS_7_OF_7; TRUSTED_PREDISPATCH_APPL_CHECKED",
     "sourceCandidateReviewed": true,
-    "review": "docs/reviews/R090_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+    "review": "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
     "buildCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02"
   },
   "x-r089InvalidPreparation": {
@@ -2112,7 +2115,7 @@
     "replacement": "CCMAI-RUNTIME-090"
   },
   "x-r091OutboundDelivery": {
-    "status": "DISPATCH_READY",
+    "status": "REVIEWER_ACCEPTED_PENDING_MATERIAL_COMMIT",
     "findings": [
       "F04",
       "F05",
@@ -2127,7 +2130,23 @@
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_091_OUTBOUND_DELIVERY.md",
     "worker": "/root/outbound_intake",
     "reviewer": "Codex /root",
-    "sourceAcceptance": false,
-    "seed": "5441a18116e4b897549750cd7317ffdb8ae9e74b"
+    "sourceAcceptance": true,
+    "workerReturn": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+    "proofDirectory": "docs/reviews/probes/r091_outbound_delivery_r1/",
+    "seed": "5441a18116e4b897549750cd7317ffdb8ae9e74b",
+    "priorCWorkerReturn": "docs/reviews/R091_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+    "reviewRound": 1,
+    "workerReturnStatus": "COMPLETE_PENDING_REVIEW",
+    "returnedAtUtc": "2026-10-13T00:25:41Z",
+    "review": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md"
+  },
+  "x-inheritanceClosure": {
+    "status": "SOURCE_ACCEPTED_PENDING_ACTUAL_MATERIAL_SHA_AND_PUBLICATION",
+    "acceptedFindingCount": 7,
+    "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+    "C_materialCommit": null,
+    "A_materialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
+    "F06_materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
+    "productFreeze": "OPEN"
   }
 }

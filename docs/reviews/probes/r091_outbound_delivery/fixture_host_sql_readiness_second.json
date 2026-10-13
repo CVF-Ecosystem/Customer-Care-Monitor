@@ -1,0 +1,28 @@
+{
+  "fixtureRunId": "8f4167ee0ea849a494fbca4ffa02a777",
+  "container": "ccma-r091-db-8f4167ee0ea8",
+  "network": "ccma-r091-net-8f4167ee0ea8",
+  "imageRepoDigest": "[\"mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b\"]",
+  "hostBind": "127.0.0.1:64328",
+  "dbUser": "ccma_r091",
+  "database": "ccma_r091",
+  "startedAtUtc": "2026-10-12T23:00:15.089+00:00",
+  "finishedAtUtc": "2026-10-12T23:00:18.468+00:00",
+  "command": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\.cvf\\runtime\\toolchain\\go\\bin\\go.exe",
+    "run",
+    "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_probe.go"
+  ],
+  "workingDirectory": "backend",
+  "environment": {
+    "TEST_DB_DSN": "redacted synthetic app-user DSN",
+    "GOPROXY": "off",
+    "GOSUMDB": "off"
+  },
+  "method": "Go database/sql via cached github.com/go-sql-driver/mysql from the host process; app-user PingContext then SELECT 1; 5-second context; read-only",
+  "exitCode": 0,
+  "result": "PASS",
+  "logPath": "docs/reviews/probes/r091_outbound_delivery/fixture_host_sql_readiness_second.log",
+  "sequencing": "completed before the focused supplemental test command",
+  "effects": "none beyond loopback SQL to this labeled synthetic fixture; no provider/customer/account/SMTP/app server/deployment/off-host network"
+}

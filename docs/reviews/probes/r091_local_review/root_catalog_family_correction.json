@@ -1,0 +1,9 @@
+{
+  "actor": "Codex /root",
+  "firstGate": "legacy preflight",
+  "result": "FAIL 6/7",
+  "reason": "Root registered3 new artifacts with unsupported family review/probe",
+  "secondAttempt": "Python default cp1252 catalog read failed before edits; same catalog failure repeated; reviewer-fast ROUTE also found seven missing rework assessment fields",
+  "repair": "ExplicitUTF8, continuity leaf family, exact7 rework assessment fields; no source/proof-result changes",
+  "thirdAttempt": "governed_artifact_family is directory-only, causing leaf-path false absence diagnostics; semantic checker consulted and corrected4entries to existing continuity leaf family"
+}

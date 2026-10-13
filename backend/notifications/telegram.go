@@ -49,54 +49,58 @@ func (t *TelegramNotifier) Send(ctx context.Context, subject string, body string
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, bytes.NewReader(payloadBytes))
 	if err != nil {
-		return fmt.Errorf("create telegram request: %w", err)
+		return failedDelivery("request")
 	}
 	req.Header.Set("Content-Type", "application/json")
 
 	resp, err := t.client.Do(req)
 	if err != nil {
-		return fmt.Errorf("telegram send failed: %w", err)
+		return unknownDelivery("telegram_transport")
 	}
 	defer resp.Body.Close()
 
 	respBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return fmt.Errorf("read telegram response: %w", err)
+		return unknownDelivery("telegram_response_body")
 	}
 
-	var result struct {
-		OK          bool   `json:"ok"`
-		Description string `json:"description"`
+	var result map[string]json.RawMessage
+	if err := json.Unmarshal(respBody, &result); err != nil || result == nil {
+		return unknownDelivery("telegram_response_decode")
 	}
-	if err := json.Unmarshal(respBody, &result); err != nil {
-		return fmt.Errorf("parse telegram response: %w", err)
+	accepted, present := result["ok"]
+	if !present {
+		return unknownDelivery("telegram_acceptance_missing")
 	}
-
-	if !result.OK {
-		return fmt.Errorf("telegram api error: %s", result.Description)
+	switch string(bytes.TrimSpace(accepted)) {
+	case "true":
+		return nil
+	case "false":
+		return failedDelivery("telegram_rejected")
+	default:
+		return unknownDelivery("telegram_acceptance_unverifiable")
 	}
-
-	return nil
 }
 
 func (t *TelegramNotifier) HealthCheck(ctx context.Context) error {
 	url := fmt.Sprintf(telegramAPIBase, t.botToken, "getMe")
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
-		return fmt.Errorf("create telegram health check request: %w", err)
+		return fmt.Errorf("telegram health check request failed")
 	}
 
 	resp, err := t.client.Do(req)
 	if err != nil {
-		return fmt.Errorf("telegram health check failed: %w", err)
+		return fmt.Errorf("telegram health check transport failed")
 	}
 	defer resp.Body.Close()
 
 	var result struct {
 		OK bool `json:"ok"`
 	}
-	json.NewDecoder(resp.Body).Decode(&result)
-
+	if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
+		return fmt.Errorf("telegram health check response invalid")
+	}
 	if !result.OK {
 		return fmt.Errorf("telegram bot not accessible")
 	}

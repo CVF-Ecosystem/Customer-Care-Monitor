@@ -4,9 +4,9 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
-## Điểm kiểm tiến độ hiện hành — 2026-10-12
+## Điểm kiểm tiến độ hiện hành — 2026-10-13
 
-Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệch hướng. Maintainer: ORCHESTRATOR; nguồn đối chiếu: [implementation truth](../../IMPLEMENTATION_STATUS.json), [active state](../../CVF_SESSION/ACTIVE_SESSION_STATE.json), [handoff R086](../../CVF_SESSION/handoffs/AGENT_HANDOFF_MOUNT_LIFECYCLE_R086_2026-10-12.md), repository tại `b2cbdce`. Đây là bản theo dõi tiến độ/planning R1; không thay acceptance lịch sử, contract S0–S7 hoặc cấp quyền BUILD/runtime/release. Phần thiết kế gốc vẫn giữ trạng thái DRAFT / REVIEW_PENDING; bản theo dõi này không tự chấp nhận toàn roadmap.
+Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệch hướng. Maintainer: ORCHESTRATOR; nguồn đối chiếu: [implementation truth](../../IMPLEMENTATION_STATUS.json), [active state](../../CVF_SESSION/ACTIVE_SESSION_STATE.json), [handoff R091](../../CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md), actual accepted A material `44bb345` and F06 `a8865d1`; final C material pending commit. Đây là bản theo dõi tiến độ/planning R1; không thay acceptance lịch sử, contract S0–S7 hoặc cấp quyền BUILD/runtime/release. Phần thiết kế gốc vẫn giữ trạng thái DRAFT / REVIEW_PENDING; bản theo dõi này không tự chấp nhận toàn roadmap.
 
 **Vị trí hiện tại:** nền S1 đã có nhiều phạm vi được review; có phần chuẩn bị/quan sát cho S2/S3 và UI đọc dữ liệu cho S5. Chưa nghiệm thu luồng đầy đủ từ hội thoại đến người xử lý và kết quả vụ việc. Không tính số tranche, commit hoặc test PASS thành tỷ lệ hoàn thành sản phẩm.
 
@@ -23,9 +23,11 @@ Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệc
 
 Nguồn cho các acceptance nhỏ: [R054 scope kế tiếp](../reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md), [tổng hợp local receipt/UI milestones](README.md), [review R073](../reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md), [review R078](../reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md). Bảng này tổng hợp bản ghi đã có, không chạy lại runtime hoặc chứng minh live governance.
 
-### Current supporting repair — R088 Messages lifetime
+### Current supporting outcome — seven-finding inheritance accepted
 
-GOV002 static portable controls are independently accepted/published at d0ebc890/db4eb5c. R088 is now DISPATCH_READY, not implemented: [work order](../work_orders/CCMAI_RUNTIME_088_MESSAGES_LIFETIME.md), [SPEC](../reviews/planning/R088_MESSAGES_LIFETIME_SPEC_2026-10-12.md). One manual worker package fixes seven-finding-roadmap F06 only, so currently selected tenant/conversation cannot display another request's messages/evaluation. Package B runs before fixture-dependent A/C; two P1 security findings and all stage exits remain OPEN. Synthetic Vue/Pinia tests need no Docker/provider/accounts; docs55 still blocks product FREEZE. After the finite return/review, Local reassesses remaining safety/fixture route before new runtime authority; no automatic helper-tranche chain.
+[Roadmap kế thừa](../reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md) đã đóng bảy finding hữu hạn sau independent Local review: auth target/permission/refresh CAS, conversation UI lifetime, per-output delivery truth, bounded SMTP và common batch progress/backoff. [A final review](../reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [C final review](../reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [F06 final review](../reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md). Proof là local MySQL/synthetic UI/loopback/fake-provider, chưa live hay whole-stage acceptance. Root chốt commit/publish nhánh hiện có; không tự mở worker/scope kế tiếp.
+
+Các ID F01-F07 trong ledger kế thừa không thay các finding sản phẩm cùng tên. Global channels/live coverage, dependency17, docs55, R086 native/fence/accounts/browser/hosted/deploy và stage exits vẫn mở. Fresh owned MySQL proof cho các defect độc lập không tự biến R086 native/fence thành PASS. Route sản phẩm dưới đây giữ nguyên và cần SPEC/work order riêng trước BUILD.
 
 ### Mốc sản phẩm ưu tiên và thứ tự còn lại
 
@@ -302,10 +304,10 @@ Only optional adapter metadata/parsing completed. Analyzer/UO/receipt/storage/UI
 
 This supersedes only the historical consumer-source OPEN checkpoint above: local Analyzer/UO/receipt observation wiring completed. Real Analyzer persistence, consumer UI/storage exposure, billing/invoices/pricing revision, fullS2/S3/S5/globalF02/permission/policy-version/WAIT_DATA/reservation/settlement/queue-realAnalyzer/live governance remain OPEN. Race/full backend runtime-DB/applicationfrontend/live/provider/network/GitHubActions NOTRUN. No currentR071 publication authorization; earlierR068 publicationunverified/notretried. Facebook/Zalo OA parked; next separate bounded workorder before new source/runtime.
 
-## R088 Messages correctness checkpoint (2026-10-13)
+## Historical R088 Messages correctness checkpoint (2026-10-13)
 
 [Independent Local round1 review](../reviews/R088_INDEPENDENT_LOCAL_REVIEW_ROUND1_2026-10-13.md): F06 source implemented, CHANGES_REQUIRED for one pending deep-link continuation overriding user selection/back. Same-scope repair then independent review is the finite remaining route for package B. Worker76PASS/type/build is supporting synthetic UI evidence, not S1/S5 stage exit or live deployment. Other six runtime findings, P1 auth concerns, docs55, native fence, accounts and full product milestones remain open/parked; no successor automatically dispatched.
 
-## Runtime inheritance checkpoint 2026-10-13 — R090 candidate
+## Historical runtime inheritance checkpoint 2026-10-13 — R090 candidate
 
 Seven-finding scope follows ../reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md. R088 F06 published bounded; R090 A independently reviewed candidate retained but CHANGES_REQUIRED for three finite C route/fixture/per-case proof dependencies. Planned R091 C design accepted, no BUILD without new immutable seed/order. This source/application safety work supports S1/S3/S5/S7 without closing any full product stage; docs55, native/fence, dependency17, global channels, live/accounts/deployment stay open or parked.
