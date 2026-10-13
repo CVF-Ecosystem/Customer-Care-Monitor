@@ -9,14 +9,22 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-091", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-092", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md
+
+## Current M1 execution — 2026-10-13
+
+CCMAI-RUNTIME-092: dispatch Luna max documentary M1 contract under committed R092 seed after explicit packet pre-dispatch PASS. Resolve source/document drift and finite synthetic M2/M3 contract route; owner SLA, assignee, budget and real-data decisions remain OPEN until supplied. No runtime/source/provider/deploy dispatch; Facebook/Zalo OA accounts remain parked.
+
+Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max /root/m1_worker awaiting documentary BUILD; risk R1.
+
+Prior roadmap publication/R091 notes below are historical accepted context; their no-new-dispatch language predates the current owner instruction and R092 documentary scope. Runtime budgets remain historical.
 
 ## Current seven-finding closure
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-091",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner-requested product delivery roadmap docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md was published on codex/cvf-portable-inheritance at material d72de76984e4aad9c208cc82e6093578797b5340 with remote readback. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. This publication is documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-092",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-092: dispatch Luna max documentary M1 contract under committed R092 seed after explicit packet pre-dispatch PASS. Resolve source/document drift and finite synthetic M2/M3 contract route; owner SLA, assignee, budget and real-data decisions remain OPEN until supplied. No runtime/source/provider/deploy dispatch; Facebook/Zalo OA accounts remain parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root Local independent reviewer, closer and commit steward; accepted Luna max internal worker idle; phase REVIEW; risk R2.",
+  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Luna max /root/m1_worker awaiting documentary BUILD; risk R1.",
   "updatedAt": "2026-10-13",
   "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-ownerRoadmapDiscipline": {
@@ -56,16 +56,12 @@
     "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
   },
   "x-currentExecutionBudget": {
-    "implementationPackages": 1,
-    "toolingSetup": "Reuse SHA256-verified Go1.26.0 and existing public module cache/go.mod/go.sum; no dependencies or global installs. Reuse already cached mysql:8.0 digest sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b; no new pull unless named missing-cache diagnostic.",
-    "dockerSetup": "One fresh uniquely labeled fixture container/network at a time, ordinary user-defined bridge, dynamic 127.0.0.1 port, generated synthetic root/app user credentials, no host volumes or existing DB. Record actual mounts and exact ownership; cleanup container with owned anonymous volumes/network and verify absence. Setup failures preserved, same-scope corrections permitted after safe diagnostic; no unrelated resource cleanup.",
-    "goEvidence": "One baseline pre-source negative campaign, one final focused notifications/db/engine integration campaign using Go JSON with exact mandatory tests and no DB-unavailable skips; max15min each. Combined R090 existing selector rerun once for named missing per-case/SKIP evidence. Source/test changes or named inconclusive baseline faults only justify focused repeats. Compile touched packages. Frontend exact new/old dependency fixtures plus forced type/build.",
-    "sameScopeRepairs": "Consolidate unchanged scope; third formal repair round requires Root cause escalation, no routine successor.",
+    "workerPackages": 1,
+    "sameScopeRepairs": "Consolidated repairs under same seed; stop at third formal repair round without independent root cause.",
+    "sourceRuntimeTestInvocations": 0,
     "providerCalls": 0,
-    "realOutboundCalls": 0,
-    "customerDataRuns": 0,
-    "syntheticTransport": "Owned loopback HTTP/SMTP and fake notifier/provider only; clean/join all listeners/connections/goroutines. No app server or real account.",
-    "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
+    "realDataRuns": 0,
+    "verification": "Targeted source/accepted evidence read, document links/diff, catalog, legacy gate unit tests, seven-gate preflight and installed explicit-packet checks; root independent source contract review."
   },
   "x-actualWorkerModel": {
     "model": "gpt-6-luna",
@@ -1415,5 +1411,23 @@
     "updatedAt": "2026-10-13",
     "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
     "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
+  },
+  "x-historicalPreR092CurrentAuthority": {
+    "activeTranche": "CCMAI-RUNTIME-091",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner-requested product delivery roadmap docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md was published on codex/cvf-portable-inheritance at material d72de76984e4aad9c208cc82e6093578797b5340 with remote readback. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. This publication is documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked.",
+    "activeRole": "Codex /root Local independent reviewer, closer and commit steward; accepted Luna max internal worker idle; phase REVIEW; risk R2.",
+    "x-currentExecutionBudget": {
+      "implementationPackages": 1,
+      "toolingSetup": "Reuse SHA256-verified Go1.26.0 and existing public module cache/go.mod/go.sum; no dependencies or global installs. Reuse already cached mysql:8.0 digest sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b; no new pull unless named missing-cache diagnostic.",
+      "dockerSetup": "One fresh uniquely labeled fixture container/network at a time, ordinary user-defined bridge, dynamic 127.0.0.1 port, generated synthetic root/app user credentials, no host volumes or existing DB. Record actual mounts and exact ownership; cleanup container with owned anonymous volumes/network and verify absence. Setup failures preserved, same-scope corrections permitted after safe diagnostic; no unrelated resource cleanup.",
+      "goEvidence": "One baseline pre-source negative campaign, one final focused notifications/db/engine integration campaign using Go JSON with exact mandatory tests and no DB-unavailable skips; max15min each. Combined R090 existing selector rerun once for named missing per-case/SKIP evidence. Source/test changes or named inconclusive baseline faults only justify focused repeats. Compile touched packages. Frontend exact new/old dependency fixtures plus forced type/build.",
+      "sameScopeRepairs": "Consolidate unchanged scope; third formal repair round requires Root cause escalation, no routine successor.",
+      "providerCalls": 0,
+      "realOutboundCalls": 0,
+      "customerDataRuns": 0,
+      "syntheticTransport": "Owned loopback HTTP/SMTP and fake notifier/provider only; clean/join all listeners/connections/goroutines. No app server or real account.",
+      "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
+    }
   }
 }

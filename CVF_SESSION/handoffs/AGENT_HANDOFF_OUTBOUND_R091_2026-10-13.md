@@ -1,6 +1,8 @@
 # Package C outbound delivery and backoff — R091
 
-Status: ACTIVE
+Status: SUPERSEDED
+
+Current continuation moved to `CVF_SESSION/handoffs/AGENT_HANDOFF_M1_PRODUCT_CONTRACT_R092_2026-10-13.md` by owner roadmap execution instruction. R091 accepted evidence and historical header below are preserved.
 
 <!-- CVF-GC020-MATERIAL-SHA:START -->
 Accepted material SHA/current continuity parent: `d121c9ecf24a869aea92264db1e01cd853dec0ec`. Branch codex/cvf-portable-inheritance; remote material SHA verified; final continuity tip readback follows after commit/push.

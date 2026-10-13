@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
     "R061 bounded local source_execution observation EX01..12 FROZEN under separate R062 authority99052ab at sourced10e164. Independent38top70PASS, M01/M02 semantic kills, restored16top48PASS, full210file restoration/cleanup; source_preparation/scalars and product behavior preserved. Root independent review, child medium implementation. Original failed packets immutable; total6/8Go, closure0Go. Full S2/live/provider/billing/governance/hosted remain unestablished.",
@@ -78,10 +78,10 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "x-buildInProgress": {
-    "trancheId": "CCMAI-RUNTIME-091",
-    "status": "RETURNED_ACCEPTED_IDLE",
-    "round": 1,
-    "newEffectsAuthorized": false
+    "trancheId": "CCMAI-RUNTIME-092",
+    "status": "DISPATCH_READY",
+    "documentaryOnly": true,
+    "newRuntimeEffectsAuthorized": false
   },
   "knownLimitations": [
     "CCMAI-RUNTIME-065 DISPATCH_READY / WORK_ORDER: medium child /root/r065_worker acknowledges BUILD before editing exact five backend paths, commits additive nested usage_observation source/tests and final campaign plan. Root independently audits source/old-test compatibility and runner before worker Go; then worker1campaign4Go and root1campaign4Go max8 new Go, no retry. Root formal independent REVIEW then scoped local FREEZE under this end-to-end seed when UO01..12/checks settle. R063/R064 FROZEN and exhausted8Go/receipt loss limits preserved. No provider/channel/config/credential/customer/persistent DB/core/push/merge/deploy/full S2/S3/live/governance/hosted authority; Facebook/Zalo OA parked.",
@@ -339,27 +339,17 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner-requested product delivery roadmap docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md was published on codex/cvf-portable-inheritance at material d72de76984e4aad9c208cc82e6093578797b5340 with remote readback. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. This publication is documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked.",
-    "activeWorkOrder": null,
+    "nextObjective": "CCMAI-RUNTIME-092: dispatch Luna max documentary M1 contract under committed R092 seed after explicit packet pre-dispatch PASS. Resolve source/document drift and finite synthetic M2/M3 contract route; owner SLA, assignee, budget and real-data decisions remain OPEN until supplied. No runtime/source/provider/deploy dispatch; Facebook/Zalo OA accounts remain parked.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md",
     "buildDispatched": false,
     "currentExecutionBudget": {
-      "implementationPackages": 1,
-      "toolingSetup": "Reuse SHA256-verified Go1.26.0 and existing public module cache/go.mod/go.sum; no dependencies or global installs. Reuse already cached mysql:8.0 digest sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b; no new pull unless named missing-cache diagnostic.",
-      "dockerSetup": "One fresh uniquely labeled fixture container/network at a time, ordinary user-defined bridge, dynamic 127.0.0.1 port, generated synthetic root/app user credentials, no host volumes or existing DB. Record actual mounts and exact ownership; cleanup container with owned anonymous volumes/network and verify absence. Setup failures preserved, same-scope corrections permitted after safe diagnostic; no unrelated resource cleanup.",
-      "goEvidence": "One baseline pre-source negative campaign, one final focused notifications/db/engine integration campaign using Go JSON with exact mandatory tests and no DB-unavailable skips; max15min each. Combined R090 existing selector rerun once for named missing per-case/SKIP evidence. Source/test changes or named inconclusive baseline faults only justify focused repeats. Compile touched packages. Frontend exact new/old dependency fixtures plus forced type/build.",
-      "sameScopeRepairs": "Consolidate unchanged scope; third formal repair round requires Root cause escalation, no routine successor.",
+      "workerPackages": 1,
+      "sameScopeRepairs": "Consolidated repairs under same seed; stop at third formal repair round without independent root cause.",
+      "sourceRuntimeTestInvocations": 0,
       "providerCalls": 0,
-      "realOutboundCalls": 0,
-      "customerDataRuns": 0,
-      "syntheticTransport": "Owned loopback HTTP/SMTP and fake notifier/provider only; clean/join all listeners/connections/goroutines. No app server or real account.",
-      "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
-    },
-    "publicationStatus": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED_CONTINUITY_SYNC",
-    "sourceCheckpoint": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
-    "modelAssessment": "LUNA_MAX_ONE_CONSOLIDATED_REPAIR_INDEPENDENTLY_ACCEPTED",
-    "activeLocalClosureOrder": null,
-    "localClosureEvidence": null,
-    "currentPlanning": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
+      "realDataRuns": 0,
+      "verification": "Targeted source/accepted evidence read, document links/diff, catalog, legacy gate unit tests, seven-gate preflight and installed explicit-packet checks; root independent source contract review."
+    }
   },
   "x-sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -2035,7 +2025,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-091",
+  "activeTranche": "CCMAI-RUNTIME-092",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2051,7 +2041,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_092_M1_PRODUCT_CONTRACT.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2160,16 +2152,44 @@
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "ACTIVE_PLANNING",
+    "status": "M1_CONTRACT_DISPATCH_READY",
     "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
     "currentMilestone": "M1",
     "milestoneStatus": "NOT_ACCEPTED_CONTRACT_DECISIONS_OPEN",
-    "nextAction": "Prepare M1 contract/decision register and finite prerequisite route; no M2 dispatch from roadmap alone.",
-    "authority": "Owner requested detailed roadmap authoring; R1 documents and continuity only.",
-    "executionAuthorityExpanded": false,
+    "nextAction": "CCMAI-RUNTIME-092: dispatch Luna max documentary M1 contract under committed R092 seed after explicit packet pre-dispatch PASS. Resolve source/document drift and finite synthetic M2/M3 contract route; owner SLA, assignee, budget and real-data decisions remain OPEN until supplied. No runtime/source/provider/deploy dispatch; Facebook/Zalo OA accounts remain parked.",
+    "authority": "Owner 2026-10-13 proceed roadmap; committed R092 R1 documentary worker scope.",
+    "executionAuthorityExpanded": true,
     "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
     "updatedAt": "2026-10-13",
     "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
     "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
+  },
+  "x-historicalPreR092OwnerRouting": {
+    "date": "2026-10-13",
+    "parkedAccounts": [
+      "facebook",
+      "zalo_oa"
+    ],
+    "nextObjective": "CCMAI-RUNTIME-091 REVIEW_PASS remains accepted; all seven selected inheritance findings CLOSED_PASS_BOUNDED. Owner-requested product delivery roadmap docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md was published on codex/cvf-portable-inheritance at material d72de76984e4aad9c208cc82e6093578797b5340 with remote readback. Next planning move: prepare M1 minimum-product contract, acceptance thresholds and finite safety/dependency decisions, then bound M2/M3 work orders. This publication is documentation only; no new worker/source/test/live/deploy dispatch. Full S0-S7/FREEZE remain open; Facebook/Zalo OA accounts parked.",
+    "activeWorkOrder": null,
+    "buildDispatched": false,
+    "currentExecutionBudget": {
+      "implementationPackages": 1,
+      "toolingSetup": "Reuse SHA256-verified Go1.26.0 and existing public module cache/go.mod/go.sum; no dependencies or global installs. Reuse already cached mysql:8.0 digest sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b; no new pull unless named missing-cache diagnostic.",
+      "dockerSetup": "One fresh uniquely labeled fixture container/network at a time, ordinary user-defined bridge, dynamic 127.0.0.1 port, generated synthetic root/app user credentials, no host volumes or existing DB. Record actual mounts and exact ownership; cleanup container with owned anonymous volumes/network and verify absence. Setup failures preserved, same-scope corrections permitted after safe diagnostic; no unrelated resource cleanup.",
+      "goEvidence": "One baseline pre-source negative campaign, one final focused notifications/db/engine integration campaign using Go JSON with exact mandatory tests and no DB-unavailable skips; max15min each. Combined R090 existing selector rerun once for named missing per-case/SKIP evidence. Source/test changes or named inconclusive baseline faults only justify focused repeats. Compile touched packages. Frontend exact new/old dependency fixtures plus forced type/build.",
+      "sameScopeRepairs": "Consolidate unchanged scope; third formal repair round requires Root cause escalation, no routine successor.",
+      "providerCalls": 0,
+      "realOutboundCalls": 0,
+      "customerDataRuns": 0,
+      "syntheticTransport": "Owned loopback HTTP/SMTP and fake notifier/provider only; clean/join all listeners/connections/goroutines. No app server or real account.",
+      "projectBranchPublication": "Root may publish accepted existing codex/cvf-portable-inheritance project branch; no main/merge/deploy/private Core."
+    },
+    "publicationStatus": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED_CONTINUITY_SYNC",
+    "sourceCheckpoint": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
+    "modelAssessment": "LUNA_MAX_ONE_CONSOLIDATED_REPAIR_INDEPENDENTLY_ACCEPTED",
+    "activeLocalClosureOrder": null,
+    "localClosureEvidence": null,
+    "currentPlanning": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
   }
 }
