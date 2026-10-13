@@ -47,7 +47,7 @@
   "phase": "REVIEW",
   "baseCommit": "3ce76f355bca43093402e40bc99a6b7c684406a4",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md",
-  "buildCommit": null,
+  "buildCommit": "bf229b5e8d8a44dafe0f17afa09e69b088859d36",
   "reviewEvidence": [
     "docs/reviews/R093_INDEPENDENT_PRE_EFFECT_SOURCE_REVIEW_2026-10-13.md",
     "docs/reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md",

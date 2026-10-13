@@ -78,3 +78,5 @@ workerRedispatchAllowed: NO_PROVIDER_BUDGET_EXHAUSTED
 Root returns R093 with the positive-output finding, preserves FREEZE OPEN and
 records actual material SHA only after the steward commit. Repository gate results
 are static checks only; hosted CI and deployment were not run.
+
+Actual steward material commit: `bf229b5e8d8a44dafe0f17afa09e69b088859d36`. Returned disposition and FREEZE OPEN are preserved; this reference does not accept the positive output.

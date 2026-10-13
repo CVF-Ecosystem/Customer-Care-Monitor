@@ -9376,6 +9376,13 @@
       "path": "docs/reviews/probes/r093_alibaba_live/repository_gates.json",
       "status": "ACTIVE",
       "description": "Actual local static gate outcomes and failures retained; no hosted CI/runtime governance claim."
+    },
+    {
+      "id": "r093-a12-materialbindings",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r093_alibaba_live/committed_source_bindings.json",
+      "status": "ACTIVE",
+      "description": "Actual material/source byte bindings; only Git newline normalization differs, original executed SHA retained."
     }
   ]
 }

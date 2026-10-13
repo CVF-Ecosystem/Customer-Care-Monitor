@@ -3,7 +3,7 @@
 Status: ACTIVE
 
 <!-- CVF-GC020-MATERIAL-SHA:START -->
-R093 dispatch material: `03e95ce3a09abd98d8605f40a5e0c4ad0eecf4d6`; immutable dispatcher seed7639e46. At dispatch requests0; now actual2/2 exhausted, reviewed outcome awaiting material commit.
+R093 actual reviewed material: `bf229b5e8d8a44dafe0f17afa09e69b088859d36`; returned positive evidence-reference failure, request cap2/2 exhausted, FREEZE OPEN. Seed7639e46/dispatch03e95ce preserved; no app-governance/CI/deploy claim.
 <!-- CVF-GC020-MATERIAL-SHA:END -->
 
 ## Current State

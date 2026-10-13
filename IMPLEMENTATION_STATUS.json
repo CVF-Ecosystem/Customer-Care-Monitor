@@ -81,7 +81,8 @@
     "trancheId": "CCMAI-RUNTIME-093",
     "status": "RETURNED_NO_REDISPATCH",
     "newRuntimeEffectsAuthorized": false,
-    "providerEffects": "REQUEST_CAP_EXHAUSTED_NO_MORE_EFFECT"
+    "providerEffects": "REQUEST_CAP_EXHAUSTED_NO_MORE_EFFECT",
+    "materialCommit": "bf229b5e8d8a44dafe0f17afa09e69b088859d36"
   },
   "knownLimitations": [
     "Historical R065 dispatch text superseded: UO01..12 source/local usage observation independently accepted and locally FROZEN; usage-presence/billing/pricing version and full S2/S3 remain unproved. Historical R065 test budgets confer no R092/source/provider authority.",
@@ -2248,6 +2249,7 @@
     "wireCompatibility": "OBSERVED_TWO_HTTP200_MODEL_MATCH",
     "reportedTotalTokens": 1061,
     "billing": "UNKNOWN",
-    "review": "docs/reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md"
+    "review": "docs/reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md",
+    "materialCommit": "bf229b5e8d8a44dafe0f17afa09e69b088859d36"
   }
 }
