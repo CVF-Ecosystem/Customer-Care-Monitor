@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "scope": "Owner-authorized ordinary branch publication; no new provider call, milestone closure, main merge or deployment",
+  "ownerInstruction": "push len github",
+  "recordedAtUtc": "2026-10-13T06:13:31.906713+00:00",
+  "remote": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor.git",
+  "branch": "codex/ccma-product-m1",
+  "publishedMaterialHead": "7b14533bcfb54d10f192145b455b9babad79af2a",
+  "remoteReadbackHead": "7b14533bcfb54d10f192145b455b9babad79af2a",
+  "readback": "VERIFIED",
+  "forcePush": false,
+  "mainChanged": false,
+  "hostedCi": "NOT_OBSERVED",
+  "secretFileTracked": false,
+  "localPreflight": "PASS_7_OF_7",
+  "pinnedRangeGate": "PASS_WITH_TERMINAL_APPL_NOT_APPLICABLE",
+  "coreDoctor": "PASS_27_WITH_HISTORICAL_PIN_WARN",
+  "r093Disposition": "RETURNED_POSITIVE_OUTPUT_CONTRACT_FAILED",
+  "providerRequestBudget": "2/2_EXHAUSTED",
+  "freeze": "OPEN"
+}

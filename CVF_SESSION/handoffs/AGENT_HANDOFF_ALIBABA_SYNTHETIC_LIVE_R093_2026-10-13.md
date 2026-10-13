@@ -44,3 +44,6 @@ Root verified two real sanitized receipts: HTTP200/model match both; worker requ
 
 ## Root outcome metadata corrections
 Initial outcome synchronization failed legacy continuity because next move used shorthand R093 rather than the full tranche ID, and pinned continuity because active-handoff lifecycle Status was incorrectly set to the work-order BLOCKED_WITH_REASON. Root directly fixed both metadata fields under SESSION_SYNC_STEWARD; active handoff stays ACTIVE, order/record retain returned CHANGES_REQUIRED/BLOCKED_WITH_REASON. No source/receipt/result/authority/provider change.
+
+## Owner-authorized branch publication
+Owner explicitly requested GitHub push after the local return. Root declared temporary COMMIT_STEWARD for publication, rehydrated continuity and verified doctor27/27, legacy7/7 and pinned exact-range gates. Ordinary branch codex/ccma-product-m1 published at `7b14533bcfb54d10f192145b455b9babad79af2a`; remote readback verified. Receipt: docs/reviews/probes/r093_alibaba_live/publication.json. This fresh owner authorization covers Root branch export only; historical immutable worker seeds and prohibited effects are unchanged. No force/main/merge/deploy/new provider effect or acceptance change. Root returns to existing REVIEW/ORCHESTRATOR/SESSION_SYNC responsibilities; next M2 move and parked accounts unchanged.

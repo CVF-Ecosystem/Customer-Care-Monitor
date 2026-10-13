@@ -52,7 +52,7 @@ Read current immutable seed/order, legacy scope/role/continuity/claims, installe
 
 ## Public Export Disposition
 
-NOT_EXPORTED_LOCAL_ONLY on codex/ccma-product-m1. Root owns commits. No push/main/merge/deploy, Core changes or secret export.
+Owner separately authorized Root ordinary branch export after the returned outcome. Material published at `7b14533bcfb54d10f192145b455b9babad79af2a` on codex/ccma-product-m1; remote readback verified in ../reviews/probes/r093_alibaba_live/publication.json. Worker publication remains prohibited. No main merge/deploy, Core changes or secret export.
 
 ## Gate-To-Role Closeability Contract
 

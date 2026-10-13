@@ -9383,6 +9383,13 @@
       "path": "docs/reviews/probes/r093_alibaba_live/committed_source_bindings.json",
       "status": "ACTIVE",
       "description": "Actual material/source byte bindings; only Git newline normalization differs, original executed SHA retained."
+    },
+    {
+      "id": "r093-a13-publication",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r093_alibaba_live/publication.json",
+      "status": "ACTIVE",
+      "description": "Owner-authorized ordinary branch export with actual remote material SHA readback; no CI/deploy or acceptance claim."
     }
   ]
 }

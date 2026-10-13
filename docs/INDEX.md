@@ -776,6 +776,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Worker return with positive anchor failure, actual receipt hashes and exhausted cap.: `docs/reviews/R093_ALIBABA_SYNTHETIC_LIVE_WORKER_RETURN_2026-10-13.md`
 - Actual local static gate outcomes and failures retained; no hosted CI/runtime governance claim.: `docs/reviews/probes/r093_alibaba_live/repository_gates.json`
 - Actual material/source byte bindings; only Git newline normalization differs, original executed SHA retained.: `docs/reviews/probes/r093_alibaba_live/committed_source_bindings.json`
+- Owner-authorized ordinary branch export with actual remote material SHA readback; no CI/deploy or acceptance claim.: `docs/reviews/probes/r093_alibaba_live/publication.json`
 - R2 Alibaba exact provider characterization with synthetic inputs, physical request caps and independent source review.: `docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
