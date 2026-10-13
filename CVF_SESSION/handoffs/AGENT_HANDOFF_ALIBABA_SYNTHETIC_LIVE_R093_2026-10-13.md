@@ -23,3 +23,6 @@ M1 local synthetic intended contract -> this exact provider compatibility prereq
 
 ## Root BUILD admission acknowledgment
 Fresh canonical tuple re-read at03e95ce; worker source authoring/zero-call checks only admitted after explicit APPL/ROUTE PASS, legacy7/7 and independent Core doctor. Source review and exact approval file required before credential-bearing effect; no worker commit or third request. Risk R2, Root independent reviewer and commit owner.
+
+## Root continuity correction before worker admission
+Worker detected stale current-memory sentence naming R092 while canonical tuple was R093 BUILD; no worker edit/effect occurred. Root SESSION_SYNC_STEWARD corrected the generic sync template and current prose, reviewed current ownerRouting/activeWorkOrders/build and planning authority projections, then reran gates. Historical acceptance and seeds unchanged; this is metadata repair under existing authority, not worker redispatch or scope change.

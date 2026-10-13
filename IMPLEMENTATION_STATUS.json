@@ -2162,7 +2162,7 @@
     "currentMilestone": "M1",
     "milestoneStatus": "LOCAL_SYNTHETIC_CONTRACT_REVIEWED_FULL_BUSINESS_PILOT_OPEN",
     "nextAction": "CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks first. Root independently approves exact source SHA before either credential-bearing request; total max2 physical calls worker1/reviewer1, no retry, synthetic inputs only. M2 application source/live governance remains OPEN; Facebook/Zalo OA parked.",
-    "authority": "Owner 2026-10-13 proceed roadmap; committed R092 R1 documentary worker scope.",
+    "authority": "Owner 2026-10-13 roadmap and Alibaba key authorization; current R093 R2 finite synthetic HTTP characterization only, M2 source requires next bounded packet.",
     "executionAuthorityExpanded": true,
     "publication": "NOT_EXPORTED_CURRENT_LOCAL_M1",
     "updatedAt": "2026-10-13",

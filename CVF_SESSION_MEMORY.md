@@ -24,7 +24,7 @@ CCMAI-RUNTIME-093: Luna may BUILD only stdlib probe and zero-call self-checks fi
 
 /root/m1_worker Luna max IMPLEMENTATION_WORKER; Codex /root ORCHESTRATOR and independent pre-effect REVIEWER; risk R2.
 
-Prior R091/planning sections below are historical accepted context; current R092 order controls documentary execution. Owner requires synthetic channel data and authorizes Alibaba real AI tests through separately bounded R2 authority.
+Prior tranche/planning sections below are historical accepted context; current CCMAI-RUNTIME-093 order controls execution within its seed. Owner requires synthetic channel data and authorizes Alibaba real AI tests only within bounded R2 authority.
 
 ## Accepted R091 seven-finding closure (historical checkpoint)
 
