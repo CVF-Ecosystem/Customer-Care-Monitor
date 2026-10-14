@@ -1,12 +1,12 @@
-# R099 source-ready worker return
+# R099 source-only worker return
 
-Status: SOURCE_READY_PENDING_INDEPENDENT_REVIEW
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: /root/m2_worker (Sol Medium, IMPLEMENTATION_WORKER)
 Reviewer: Codex /root (independent REVIEWER)
 Tranche: CCMAI-RUNTIME-099
 
-The candidate changes only `backend/ai/openai_compatible.go`, new `backend/ai/chat_once_response.go`, and `backend/engine/intervention.go`. No Go build or test, provider call, credential read, database, fixture, runtime launch, or old R098 evidence change occurred. The R098 two actual calls and four Go invocations remain exhausted. Existing installed application and database were untouched. `git diff --check` passed; compilation and runtime behavior remain **NOT_RUN** pending independent source review and the one admitted build.
+The candidate changes only `backend/ai/openai_compatible.go`, new `backend/ai/chat_once_response.go`, and `backend/engine/intervention.go`. Following Root's independent source admission and commit `0640431`, the one authorized offline Go build of `./ai ./engine ./api/handlers` passed with exit 0. It ran from the project root with `go -C backend`, `GOPROXY=off`, and `GOSUMDB=off`; stdout and stderr were empty. The raw command, cwd, streams, exit, and exact source hashes are in `docs/reviews/probes/r099_source/`. Worker Go budget is 1/1 exhausted. No test, provider call, credential read, database, fixture, runtime launch, or old R098 evidence change occurred. The R098 two actual calls and four Go invocations remain exhausted. Existing installed application and database were untouched. `git diff --check` passed; changed-source runtime behavior remains **NOT_RUN**.
 
 ## Source identity
 
@@ -26,4 +26,4 @@ The explicit `WithAlibabaQwen37OnceThinkingDisabled` option returns a cloned pro
 
 Root's first consolidated precompile source-admission feedback identified incoherent flat counters on malformed choices and an overly permissive endpoint prefix. Both were corrected in this same BUILD draft; no Go invocation or effect followed that feedback.
 
-These are source claims only. R098's HTTP 200, empty-answer receipts explain the repair but do not prove the changed source. No current runtime AI governance, valid proposal, or full M2 outcome is claimed. Root must review the exact source/hashes before the sole authorized offline Go build.
+These are source and compile claims only. R098's HTTP 200, empty-answer receipts explain the repair but do not prove the changed source. No current runtime AI governance, valid proposal, or full M2 outcome is claimed. Root retains independent final review and commit ownership; no further worker Go invocation or external effect is authorized.

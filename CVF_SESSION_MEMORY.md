@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-099", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-099", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md
 
-CCMAI-RUNTIME-099 exact source candidate independently reviewed after one consolidated precompile correction; Root commits then admits exactly one offline Go build of ai/engine/handlers. Source-only, zero runtime/provider/key/DB/fixture; old2/2 andGo4/4 unchanged. Changed-source live settlement/proposal/option proof NOT_RUN; full M2/M3/pilot OPEN, accounts parked.
+CCMAI-RUNTIME-099 source-only repair build PASS at0640431, Go1/1 exhausted; Root independently reviews exact candidate/compile receipt and completes concrete R100 fresh thinkingfalse approval packet. No provider/key/DB/fixture/runtime proof under changed source; R0982/2 andGo4/4 unchanged, full M2/M3/pilot OPEN, accounts parked.
 
-Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER source accepted awaiting one build.
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium source worker returned idle, no replay.
 
 ## Historical R094 bounded closure
 

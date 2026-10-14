@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER source accepted awaiting one build.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium source worker returned idle, no replay.
 - Active tranche: CCMAI-RUNTIME-099
-- Next allowed move: CCMAI-RUNTIME-099 exact source candidate independently reviewed after one consolidated precompile correction; Root commits then admits exactly one offline Go build of ai/engine/handlers. Source-only, zero runtime/provider/key/DB/fixture; old2/2 andGo4/4 unchanged. Changed-source live settlement/proposal/option proof NOT_RUN; full M2/M3/pilot OPEN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-099 source-only repair build PASS at0640431, Go1/1 exhausted; Root independently reviews exact candidate/compile receipt and completes concrete R100 fresh thinkingfalse approval packet. No provider/key/DB/fixture/runtime proof under changed source; R0982/2 andGo4/4 unchanged, full M2/M3/pilot OPEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root rehydration and bounded phase acknowledgment
@@ -24,3 +24,7 @@ I re-read the current R099 bootstrap/state/memory/active handoff/implementation/
 ## Root source-admission acknowledgment
 
 Root independently rehydrated and reviewed exact final source; initial F1flatmetadata/F2cloneeligibility consolidated in same BUILD draft by IMPLEMENTATION_WORKER, no formalreviewtransition/effects. Source-only admission docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md. Candidate hashes pinned, no currentliveproof fromold98 afterchangeddeps. Root transitions COMMIT_STEWARD then admits oneofflinebuild; zeroGo/provider/runtimeyet. No oldauthority/budget reset.
+
+## Worker compile return and current projection repair
+
+One source-only build PASS at0640431, workerGo1/1/root0/API0/runtime0. Root independently compared command/cwd/exit/emptylogs/source3 hashes. Mode advancesREVIEW_PENDING, not FREEZE. Canonical active tuple agreed; stale auxiliary x-currentClosure/localTLS and x-currentRepair/assertion fromR097/R096 plus implementation noBuild annotations are preserved under historical auxiliary projection and superseded with current R099 source-only truth. These were not current authority or source proof; no choose-between-front-surfaces, effects or oldbudget reset. Root finalreview/packet next.

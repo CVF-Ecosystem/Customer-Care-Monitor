@@ -921,6 +921,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `docs/work_orders/CCMAI_RUNTIME_099_OBSERVED_RESPONSE_REPAIR.md`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `docs/specs/R099_OBSERVED_RESPONSE_REPAIR_SPEC_2026-10-14.md`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/stderr.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/exit.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/command.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/source_sha256.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/cwd.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/stdout.txt`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `CVF_SESSION/tranches/CCMAI-RUNTIME-099.json`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `backend/ai/chat_once_response.go`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/probes/r099_source/pre_build_identity.json`

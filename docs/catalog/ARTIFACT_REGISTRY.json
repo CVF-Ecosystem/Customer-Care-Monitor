@@ -5,6 +5,55 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r099-compile-4ed0e3634551",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority."
+    },
+    {
+      "id": "r099-compile-e8641e610e62",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r099_source/stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority."
+    },
+    {
+      "id": "r099-compile-86ede9cc1071",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r099_source/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority."
+    },
+    {
+      "id": "r099-compile-a5b87a2b28b4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r099_source/source_sha256.txt",
+      "status": "ACTIVE",
+      "description": "Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority."
+    },
+    {
+      "id": "r099-compile-8862e3697647",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r099_source/exit.txt",
+      "status": "ACTIVE",
+      "description": "Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority."
+    },
+    {
+      "id": "r099-compile-c8582fc65b18",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r099_source/cwd.txt",
+      "status": "ACTIVE",
+      "description": "Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority."
+    },
+    {
+      "id": "r099-compile-9f61eb98df34",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r099_source/command.txt",
+      "status": "ACTIVE",
+      "description": "Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority."
+    },
+    {
       "id": "r099-source-6e6985281f00",
       "family": "continuity",
       "path": "docs/reviews/probes/r099_source/pre_build_identity.json",

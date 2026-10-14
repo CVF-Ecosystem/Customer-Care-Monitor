@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-099 — source-only observed response repair
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: /root/m2_worker
 Reviewer: Codex /root
