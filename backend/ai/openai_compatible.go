@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"strings"
+	"time"
 )
 
 // OpenAICompatibleProvider nói chuyện với bất kỳ dịch vụ nào theo chuẩn
@@ -73,6 +74,7 @@ type chatMessage struct {
 }
 
 type chatCompletionResponse struct {
+	Model   string `json:"model"`
 	Choices []struct {
 		Message struct {
 			Content string `json:"content"`
@@ -182,4 +184,50 @@ func (p *OpenAICompatibleProvider) AnalyzeChatBatch(ctx context.Context, systemP
 	batchPrompt := WrapBatchPrompt(systemPrompt, len(items))
 	batchTranscript := FormatBatchTranscript(items)
 	return p.AnalyzeChat(ctx, batchPrompt, batchTranscript)
+}
+
+// AnalyzeChatOnce is reserved for a caller that has durably consumed one
+// physical-call slot. It never redirects, retries, or returns provider text in errors.
+func (p *OpenAICompatibleProvider) AnalyzeChatOnce(ctx context.Context, systemPrompt, transcript string, maxRequestBytes int64) (AIResponse, error) {
+	if p.maxTokens < 1 || p.maxTokens > 768 {
+		return AIResponse{}, fmt.Errorf("completion_limit_invalid")
+	}
+	if maxRequestBytes <= 0 || maxRequestBytes > 6000 {
+		return AIResponse{}, fmt.Errorf("request_limit_invalid")
+	}
+	body := map[string]any{"model": p.model, "messages": []chatMessage{{Role: "system", Content: systemPrompt}, {Role: "user", Content: transcript}}, "max_completion_tokens": p.maxTokens}
+	payload, err := json.Marshal(body)
+	if err != nil || int64(len(payload)) > maxRequestBytes {
+		return AIResponse{}, fmt.Errorf("request_too_large")
+	}
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, p.baseURL+"/chat/completions", bytes.NewReader(payload))
+	if err != nil {
+		return AIResponse{}, fmt.Errorf("request_invalid")
+	}
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "Bearer "+p.apiKey)
+	client := &http.Client{Timeout: 60 * time.Second, CheckRedirect: func(*http.Request, []*http.Request) error { return http.ErrUseLastResponse }}
+	resp, err := client.Do(req)
+	if err != nil {
+		return AIResponse{}, fmt.Errorf("transport_unknown")
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return AIResponse{}, fmt.Errorf("provider_status_%d", resp.StatusCode)
+	}
+	raw, err := io.ReadAll(io.LimitReader(resp.Body, (1<<20)+1))
+	if err != nil || len(raw) > 1<<20 {
+		return AIResponse{}, fmt.Errorf("response_invalid")
+	}
+	var parsed chatCompletionResponse
+	if json.Unmarshal(raw, &parsed) != nil || len(parsed.Choices) != 1 || parsed.Choices[0].Message.Refusal != "" || strings.TrimSpace(parsed.Choices[0].Message.Content) == "" {
+		return AIResponse{}, fmt.Errorf("response_invalid")
+	}
+	if parsed.Model == "" {
+		return AIResponse{}, fmt.Errorf("response_model_unknown")
+	}
+	if parsed.Model != p.model {
+		return AIResponse{}, fmt.Errorf("response_model_mismatch")
+	}
+	return AIResponse{Content: parsed.Choices[0].Message.Content, Model: parsed.Model, Provider: p.providerName, InputTokens: parsed.Usage.PromptTokens, OutputTokens: parsed.Usage.CompletionTokens, UsagePresence: openAICompatibleUsagePresence(raw)}, nil
 }

@@ -139,6 +139,15 @@ var allowedJobUpdateFields = map[string]bool{
 func UpdateJob(c *gin.Context) {
 	tenantID := middleware.GetTenantID(c)
 	jobID := c.Param("jobId")
+	var selected models.Job
+	if err := db.DB.Where("id = ? AND tenant_id = ?", jobID, tenantID).First(&selected).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
+		return
+	}
+	if selected.JobType == "intervention" {
+		c.JSON(http.StatusForbidden, gin.H{"error": "intervention_fixture_locked"})
+		return
+	}
 
 	var raw map[string]interface{}
 	if err := c.ShouldBindJSON(&raw); err != nil {
@@ -374,6 +383,10 @@ func TestRunJob(c *gin.Context) {
 		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
 		return
 	}
+	if job.JobType == "intervention" {
+		c.JSON(http.StatusForbidden, gin.H{"error": "intervention_manual_only"})
+		return
+	}
 
 	// A job dispatch that cannot get a valid configuration must not be
 	// acknowledged: validate before launching any worker. The error is not
@@ -406,6 +419,10 @@ func TriggerJob(c *gin.Context) {
 	var job models.Job
 	if err := db.DB.Where("id = ? AND tenant_id = ?", jobID, tenantID).First(&job).Error; err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
+		return
+	}
+	if job.JobType == "intervention" {
+		c.JSON(http.StatusForbidden, gin.H{"error": "intervention_manual_only"})
 		return
 	}
 

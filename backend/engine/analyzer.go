@@ -37,6 +37,9 @@ func NewAnalyzer(cfg *config.Config) *Analyzer {
 // execute reserves the tenant/job (CCMAI-RUNTIME-028: one shared admission for every entry path,
 // including the public Analyzer methods) and runs the planned analysis under that ownership.
 func (a *Analyzer) execute(ctx context.Context, job models.Job, plan runPlan, injectedProvider ai.AIProvider) (*models.JobRun, error) {
+	if job.JobType == "intervention" {
+		return nil, ErrInterventionManualOnly
+	}
 	res, err := ReserveJobRun(ctx, job, 0)
 	if err != nil {
 		return nil, err

@@ -5,6 +5,209 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r094-final-gate-units",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/gate_units_final.log",
+      "status": "ACTIVE",
+      "description": "Actual final portable gate unittest output; repository checks only, no runtime AI proof."
+    },
+    {
+      "id": "r094-artifact-c690b4b3222e",
+      "family": "continuity",
+      "path": "backend/api/handlers/intervention_route_test.go",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-5738ac95c4e5",
+      "family": "continuity",
+      "path": "backend/api/handlers/intervention.go",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-6d3f95d453a4",
+      "family": "continuity",
+      "path": "backend/db/models/intervention.go",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-3e83f918edff",
+      "family": "continuity",
+      "path": "backend/engine/intervention_usage_test.go",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-34d14ceabec3",
+      "family": "continuity",
+      "path": "backend/engine/intervention.go",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-af9c39ae48e8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_worker/source_hashes_repair1.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-5f7f5db07b3a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_worker/source_hashes.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-9e782d343cb0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_worker/native_second_fail.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-daf5aed60d56",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_worker/native_initial_pass.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-16b11b56df9d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_worker/native_first_fail.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-991235a3bbe9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_worker/native_final_pass.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-f312c0064d50",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/restored.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-18ffd626efc1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/restored.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-c79b079be22f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/mutation_restoration.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-d290211ffb8b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/mutation.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-4fb4353f1a24",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/mutation.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-94bede0ba164",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/fixture_created.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-5f1a84763a9e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/final_source_identity.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-c722a1a44e18",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/cleanup.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-53e591739334",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/cap_mutation_restoration.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-0633b95a4933",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/cap_mutation.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-bb47efd602d4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/cap_mutation.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-62777cf575da",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/baseline.log",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-aa9ffcbbe202",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/baseline.json",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-5cab5f27f456",
+      "family": "continuity",
+      "path": "docs/reviews/R094_R1_M2_INTERVENTION_REPAIR_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-artifact-66f3c03698b0",
+      "family": "continuity",
+      "path": "docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim."
+    },
+    {
+      "id": "r094-initial-review",
+      "family": "continuity",
+      "path": "docs/reviews/R094_INITIAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Root consolidated F1..F4 independent source/evidence findings; one same-scope repair."
+    },
+    {
+      "id": "r094-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R094_M2_INTERVENTION_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Sol Medium returned local M2 source/tests; initial coverage gaps explicit."
+    },
+    {
       "id": "r093-historical-handoff",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",

@@ -1,9 +1,16 @@
-﻿{
-    "schemaVersion":  "1.0",
-    "projectName":  "Customer-Care-Monitor-AI",
-    "updatedAt":  "2026-09-26",
-    "claimBoundary":  "Empty initial registry; add only source-verified modules with evidence. No status may represent plan-only intent.",
-    "modules":  [
-
-                ]
+{
+  "schemaVersion": "1.0",
+  "projectName": "Customer-Care-Monitor-AI",
+  "updatedAt": "2026-10-14",
+  "claimBoundary": "Only named source/local module evidence is assessed; installed startup, real provider, full milestone and deployment remain unproved.",
+  "modules": [
+    {
+      "id": "m2-manual-synthetic-intervention",
+      "name": "Manual synthetic intervention prototype",
+      "path": "backend/engine/intervention.go",
+      "status": "PARTIAL",
+      "description": "Configured authenticated manual synthetic source/local route; installed service disabled, full M2 live and M3 OPEN.",
+      "evidence": "docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md; docs/reviews/probes/r094_root/restored.json; actual MySQL/loopback tests, exact mutation restoration; no real provider proof."
+    }
+  ]
 }

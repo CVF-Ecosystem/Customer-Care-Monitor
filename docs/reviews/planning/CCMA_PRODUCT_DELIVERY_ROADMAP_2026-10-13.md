@@ -53,12 +53,16 @@ Drift M1 đã đối chiếu với source hiện tại: spec database từng nó
 
 Owner resumes synchronized main and appoints Root orchestrator/reviewer; Luna Max primary, Sol Medium fallback when hard. Luna source intake and Sol design identify durable concurrent physical-call admission, exact evidence and legacy bypass; Root selects Sol Medium. R094 accepted intended SPEC and committed seed activate one coherent M2 source/local synthetic packet, not another provider characterization. Current machine has Go1.27, Node24.19/npm11.17, Docker29.8 and cached mysql:8.0; previous missing-toolchain statements are historical, no install campaign needed. Existing app/DB protected. Full M2/live/M3/pilot remain OPEN; zero new provider/secret/push/deploy effects. R093 positive evidence failure and cap2/2 retained. Next concrete capability: evidence-bound proposal plus readable case queue/detail on one manual synthetic job, with deny/wait zero disclosure. See ../../work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md.
 
+## R094 independent local result — 2026-10-14
+
+Sol Medium source plus one consolidated repair reviewed independently by Root. Actual authenticated app route/MySQL/loopback delivers validated proposal and readable case, with deny/wait, tenant permissions, stable cap, malformed/stale/cancel/transaction failure assertions. Two named mutations killed and exact source restored; final9top-level/four nested adapter cases PASS. Worker6/root4Go consumed10/10; owned fixtures removed and existing containers unchanged. See ../R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md. This prototype is default disabled/unconfigured in installed app and has zero real provider calls; full M2 and M3/pilot stay OPEN. Next is new bounded live M2 cap/source activation approval, then M3 human workflow; no generic supporting successor or old-budget replay.
+
 ## 4. Thứ tự delivery và trạng thái
 
-| Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái lúc tạo |
+| Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái hiện hành |
 |---|---|---|---|---|
 | M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 independently reviewed LOCAL_SYNTHETIC_CONTRACT_READY at1e46390; R093 two real HTTP200/model-match observations; positive evidence-reference FAIL, neutral PASS, cap exhausted/returned; app governance and business/pilot exit OPEN |
-| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | PLANNED — chưa dispatch |
+| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | R094 bounded source/local independently accepted; actual MySQL/authenticated route and evidence/cap detectors PASS, real provider0 and installed service disabled; full M2 live OPEN |
 | M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
 | M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |
 | M5 | Bản phát hành có thể cài, vận hành và tiếp quản | S7 | M4 GO và proof release | PLANNED — chưa dispatch |

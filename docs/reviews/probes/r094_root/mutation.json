@@ -1,0 +1,49 @@
+{
+  "name": "mutation",
+  "goInvocation": 2,
+  "command": [
+    "go",
+    "test",
+    "-count=1",
+    "-p=1",
+    "-run",
+    "^(TestR094.*|TestOpenAICompatible.*|TestXAIDungTenThamSoCu)$",
+    "./ai",
+    "./engine",
+    "./api/handlers"
+  ],
+  "exit": 1,
+  "elapsedSeconds": 30.091,
+  "fixtureId": "99f703cbbb661ec03f037ab2c05560d791b98d55c00626a681bfd8988404e880",
+  "realProviderRequests": 0,
+  "sourceBefore": {
+    "backend/engine/intervention.go": "4876aa1e7d9e087f65f681d401a3d6d00394a2c69c9006df3ca0df8bdb108806",
+    "backend/engine/intervention_usage_test.go": "a5e5c33d6f3fd7f1373cac51eebd0299a923362609d296120b225f4a13036346",
+    "backend/db/models/intervention.go": "25f5fd35ba1ee47382966dcbbc8e571910598e044586acb8234e7d889d4a5830",
+    "backend/api/handlers/intervention.go": "f8ae2624521db3755f510754f09578392060818e4f9a7243d8e856df3a2e8496",
+    "backend/api/handlers/intervention_route_test.go": "af0625db24ac6847134372fe6deb01fba1a60ccb186f99a175b55b95359b7dbc",
+    "backend/ai/openai_compatible.go": "99e7b34750ad7991497b23bca415da17a3977d60f7d6074685d947f4989e8d00",
+    "backend/ai/openai_compatible_test.go": "d9899c5073b7fc9d26d5eee44e6e8cdb79cce0103b80b2fd437472a6be44149f",
+    "backend/api/router.go": "94d91d60204bd07cca09d00c45068e8cbf5a355f83e289ac7026ceac3fece4dd",
+    "backend/api/handlers/jobs.go": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e",
+    "backend/db/mysql.go": "c694812f913d6121622857c46b8d7878ef7b4fefff92ec1b3b1f8489e084076b",
+    "backend/engine/analyzer.go": "d1c9ba5153cbd79e891899f78d42fa0caacbaf7ef2ae570c1dc7084382971bc2",
+    "backend/engine/analyzer_modes.go": "02b979fc9166c2ebc4371b1b78dfec08afbc526174423238244e57a3caab9824"
+  },
+  "sourceAfter": {
+    "backend/engine/intervention.go": "4876aa1e7d9e087f65f681d401a3d6d00394a2c69c9006df3ca0df8bdb108806",
+    "backend/engine/intervention_usage_test.go": "a5e5c33d6f3fd7f1373cac51eebd0299a923362609d296120b225f4a13036346",
+    "backend/db/models/intervention.go": "25f5fd35ba1ee47382966dcbbc8e571910598e044586acb8234e7d889d4a5830",
+    "backend/api/handlers/intervention.go": "f8ae2624521db3755f510754f09578392060818e4f9a7243d8e856df3a2e8496",
+    "backend/api/handlers/intervention_route_test.go": "af0625db24ac6847134372fe6deb01fba1a60ccb186f99a175b55b95359b7dbc",
+    "backend/ai/openai_compatible.go": "99e7b34750ad7991497b23bca415da17a3977d60f7d6074685d947f4989e8d00",
+    "backend/ai/openai_compatible_test.go": "d9899c5073b7fc9d26d5eee44e6e8cdb79cce0103b80b2fd437472a6be44149f",
+    "backend/api/router.go": "94d91d60204bd07cca09d00c45068e8cbf5a355f83e289ac7026ceac3fece4dd",
+    "backend/api/handlers/jobs.go": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e",
+    "backend/db/mysql.go": "c694812f913d6121622857c46b8d7878ef7b4fefff92ec1b3b1f8489e084076b",
+    "backend/engine/analyzer.go": "d1c9ba5153cbd79e891899f78d42fa0caacbaf7ef2ae570c1dc7084382971bc2",
+    "backend/engine/analyzer_modes.go": "02b979fc9166c2ebc4371b1b78dfec08afbc526174423238244e57a3caab9824"
+  },
+  "redactionApplied": false,
+  "limitations": "Actual MySQL plus synthetic loopback software behavior, not AI governance/provider quality."
+}

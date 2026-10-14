@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-094 — M2 manual synthetic intervention application
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: /root/m2_worker
 Reviewer: Codex /root

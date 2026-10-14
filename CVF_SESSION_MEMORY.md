@@ -9,20 +9,20 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-094", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-094", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md
 
 ## Current M2 execution — 2026-10-14
 
-CCMAI-RUNTIME-094 bounded M2 source/local synthetic BUILD: Sol Medium implements manual intervention admission, snapshot evidence validation and case queue/detail under committed seed; Root independently reviews. Zero real provider/secret effects; R093 budget2/2 exhausted unchanged, M2 live/M3/pilot OPEN, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-094 revised source returned for Root independent source/native local REVIEW under remaining reviewer budget; no worker Go/provider/secret effects. M2 live/M3/pilot OPEN, R0932/2 exhausted, accounts parked.
 
-Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR and SESSION_SYNC_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Root independent REVIEWER and COMMIT_STEWARD.
+Codex /root independent REVIEWER and SESSION_SYNC_STEWARD; /root/m2_worker Sol Medium returned idle; Root COMMIT_STEWARD.
 
 Owner resumes from synchronized main and permits Luna Max, Sol Medium when hard; Root orchestrator/reviewer. Luna source intake complete; durable concurrency/evidence/bypass complexity selects Sol Medium. Accepted intended SPEC and immutable R094 seed precede BUILD. Actual source/local acceptance and full M2 are not yet delivered. Go/Node/Docker available on this machine; no setup/install campaign. Existing application/DB stays untouched. No real provider request or secret access is admitted here.
 

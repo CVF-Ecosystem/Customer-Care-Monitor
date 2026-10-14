@@ -779,10 +779,39 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Owner-authorized ordinary branch export with actual remote material SHA readback; no CI/deploy or acceptance claim.: `docs/reviews/probes/r093_alibaba_live/publication.json`
 - R2 Alibaba exact provider characterization with synthetic inputs, physical request caps and independent source review.: `docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md`
 - Historical returned R093 handoff; provider cap exhausted unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cap_mutation.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_first_fail.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/restored.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/engine/intervention.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/engine/intervention_usage_test.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/mutation.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cap_mutation_restoration.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/api/handlers/intervention.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/R094_R1_M2_INTERVENTION_REPAIR_RETURN_2026-10-14.md`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/final_source_identity.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/source_hashes.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/baseline.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/db/models/intervention.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/fixture_created.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_final_pass.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_second_fail.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/baseline.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/source_hashes_repair1.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cap_mutation.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/api/handlers/intervention_route_test.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cleanup.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/mutation_restoration.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/mutation.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_initial_pass.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/restored.log`
+- Actual final portable gate unittest output; repository checks only, no runtime AI proof.: `docs/reviews/probes/r094_root/gate_units_final.log`
+- Root consolidated F1..F4 independent source/evidence findings; one same-scope repair.: `docs/reviews/R094_INITIAL_INDEPENDENT_M2_REVIEW_2026-10-14.md`
 - M2 manual synthetic application source/local work order.: `docs/work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md`
 - R094 bounded source/local lifecycle, full M2 live OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-094.json`
 - Immutable R2 M2 source/local authority; real provider requests zero.: `CVF_SESSION/authority/CCMAI-RUNTIME-094.json`
 - Accepted intended M2 state/API/admission/evidence contract; no implementation acceptance.: `docs/specs/M2_INTERVENTION_APPLICATION_SPEC_2026-10-14.md`
+- Sol Medium returned local M2 source/tests; initial coverage gaps explicit.: `docs/reviews/R094_M2_INTERVENTION_WORKER_RETURN_2026-10-14.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
