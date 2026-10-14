@@ -5,6 +5,83 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r095-source-57b5d116da76",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r095_worker/worker_source_hashes.json",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-f2c30e57f042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r095_worker/worker_offline9.log",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-7e13cb48c751",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r095_root/pre_effect_identity.json",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-0a578c215544",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r095_root/no_approval_binary_stdout.log",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-2623738b994d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r095_root/no_approval_binary_stderr.log",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-61935e836b24",
+      "family": "continuity",
+      "path": "docs/reviews/R095_R1_PRE_EFFECT_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-6bc15037b047",
+      "family": "continuity",
+      "path": "docs/reviews/R095_INITIAL_PRE_EFFECT_SOURCE_REVIEW_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-1c81a205ba54",
+      "family": "continuity",
+      "path": "docs/reviews/R095_FINAL_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-077714f7a272",
+      "family": "continuity",
+      "path": "scripts/tests/test_r095_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-338ea2fd8a79",
+      "family": "continuity",
+      "path": "scripts/r095_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
+      "id": "r095-source-48c835918ae3",
+      "family": "continuity",
+      "path": "backend/api/handlers/intervention_live_r095_test.go",
+      "status": "ACTIVE",
+      "description": "R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet."
+    },
+    {
       "id": "r095-agent_handoff_m2_intervention_r094_2026-10-14",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",

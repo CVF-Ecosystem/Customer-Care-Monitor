@@ -819,6 +819,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-095.json`
 - Concrete new max2 Alibaba application effect proposal; NOT_AUTHORIZED, old budgets unchanged.: `docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/specs/M2_INTERVENTION_LIVE_R095_SPEC_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `scripts/tests/test_r095_intervention_live_fixture.py`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_root/no_approval_binary_stdout.log`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/R095_FINAL_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_root/no_approval_binary_stderr.log`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `scripts/r095_intervention_live_fixture.py`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `backend/api/handlers/intervention_live_r095_test.go`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_worker/worker_source_hashes.json`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/R095_R1_PRE_EFFECT_WORKER_RETURN_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/R095_INITIAL_PRE_EFFECT_SOURCE_REVIEW_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_root/pre_effect_identity.json`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_worker/worker_offline9.log`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

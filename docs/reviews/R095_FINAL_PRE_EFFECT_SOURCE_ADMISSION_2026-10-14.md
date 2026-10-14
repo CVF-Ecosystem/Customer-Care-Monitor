@@ -1,0 +1,14 @@
+# R095 final pre-effect source admission
+
+Status: SOURCE_ADMISSION_ACCEPTED_LIVE_PENDING
+Risk: R2
+Worker: /root/m2_worker
+Reviewer: Codex /root
+
+Root independently accepts revised narrow Go/Python harness for source-bound activation after one consolidated repair; source and binary identities are docs/reviews/probes/r095_root/pre_effect_identity.json. Final binary477fcf25f57bca2a5e98bec2736b574bc3b7819b37d68123f0cec2c3bb4f39dd. Frozen R09412 source hashes exact. Dispatcher Root authored seed5f8170d before activationc8bcae7/BUILD; same-seed actor/paths/effects unchanged. This is tooling/source admission, no AI runtime governance, live acceptance or full M2 proof.
+
+F1 reviewed: binary self-hash before stdin, exact endpoint/fixture/loopback DSN/campaign/role+dispatch markers and exclusive seed/role.go-start before DB/provider. Persistent MySQL cap2 is checked before physical disclosure and recorder limits physical transport to1/role; no redirects/retry/fallback or thinking injection. Final transport disables keep-alives. F2 reviewed: strict child environment allowlist, credential stdin only. F3 reviewed: bounded logical escaped/nested/duplicate keys and dictionary-key sanitation; actual fixture/case/attempt/snapshot/messages, error responses and rawusage retained; usage>768 prevents reviewer dispatch. Fixture ownership pins original image/network/volume/loopbackport/protected IDs, setup intent precedes Docker and authenticated schema readiness; no recreation/reset. Current state87KiB uses specific256KiB read, preventing pre-effect false rejection; immutable seed CRLF normalization changes no otherbytes.
+
+Independent evidence: Root Python9/9 actual PASS, exact committedseed/frozen identity comparisons, direct finalbinary withoutapproval returns ROOT_APPROVAL_MISSING and wireattempt0; logs under docs/reviews/probes/r095_root/. Root1/3 Go used, worker3/5 compile used; previous compile1 originalhash notcaptured, compile2 supersededhash disclosed rather than invented. Worker raw9test/tooling receipts under docs/reviews/probes/r095_worker/. No fixture/key/provider effect yet. Review checks source safety and tool behavior only; actual application output must be independently evaluated from real provider receipts.
+
+Root may now commit this exact harness, sign ignored approval with source+frozen+binary hashes, and admit one shared fixture(seed workerGo4). Worker then has exactly one live process(workerGo5); Root owns independent reviewer1 and final actual-result review. No future source edits/tuning/extra compile admitted under exhausted worker budget. Failed positives remain failures; output validity, usage and durable ledger decide bounded result, API200 alone cannot pass. No push/merge/deploy/public export. Full M2/M3/pilot and billing remain OPEN/UNKNOWN respectively.

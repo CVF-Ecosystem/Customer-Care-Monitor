@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-095",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-095 revised harness source independently accepted for bounded admission; Root commits exact source and signs finalbinary477fcf25 before Sol creates one shared synthetic fixture(seed workerGo4), then worker1 realcall(workerGo5). Root reviewer1 follows in REVIEW; max2 NEW calls,758requested tokens,60sec,no retry. Existing app/DB untouched,R094 frozen,R0932/2 exhausted,M2/M3/pilot OPEN,accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.",
+  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted fixture/live BUILD.",
   "updatedAt": "2026-10-14",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -838,9 +838,10 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "NOT_RUN",
-    "sourceAdmission": "NOT_SIGNED",
-    "liveCalls": 0
+    "result": "PRE_EFFECT_SOURCE_ADMISSION_PASS",
+    "artifact": "docs/reviews/R095_FINAL_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
+    "sourceAdmission": "REVIEWED_SIGNATURE_PENDING",
+    "providerCalls": 0
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -921,8 +922,13 @@
     }
   },
   "x-currentRepair": {
-    "round": 0,
-    "status": "NONE"
+    "round": 1,
+    "status": "SOURCE_ACCEPTED",
+    "findings": [
+      "F1",
+      "F2",
+      "F3"
+    ]
   },
   "x-currentClosure": {
     "status": "OPEN",
@@ -1298,7 +1304,7 @@
     "worker": "/root/m2_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
-    "status": "DISPATCH_READY",
+    "status": "SOURCE_ACCEPTED_FIXTURE_PENDING",
     "seed": "5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62"
   },
   "x-historicalPreR091FinalClosureProjections": {

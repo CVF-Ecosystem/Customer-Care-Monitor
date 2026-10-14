@@ -1,0 +1,4 @@
+=== RUN   TestR095Application
+R095_RESULT={"schema_version":1,"role":"","fixture":{"tenant":"","user":"","job":"","channel":"","worker_conversation":"","reviewer_conversation":"","wait_conversation":"","deny_job":"","deny_conversation":""},"wait_status":0,"deny_status":0,"positive_status":0,"positive_body":"","detail_status":0,"detail_body":"","budget_cap":0,"budget_consumed":0,"attempt":null,"case":null,"snapshot":null,"messages":null,"proposals":null,"receipts":null,"wire":{"attempts":0,"status":0,"request":"","response":"","transport_code":"","response_too_large":false},"error_code":"ROOT_APPROVAL_MISSING"}
+--- PASS: TestR095Application (0.00s)
+PASS

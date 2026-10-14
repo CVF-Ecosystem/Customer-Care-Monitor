@@ -18,11 +18,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md
 
-CCMAI-RUNTIME-095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.
+CCMAI-RUNTIME-095 revised harness source independently accepted for bounded admission; Root commits exact source and signs finalbinary477fcf25 before Sol creates one shared synthetic fixture(seed workerGo4), then worker1 realcall(workerGo5). Root reviewer1 follows in REVIEW; max2 NEW calls,758requested tokens,60sec,no retry. Existing app/DB untouched,R094 frozen,R0932/2 exhausted,M2/M3/pilot OPEN,accounts parked.
 
-Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted fixture/live BUILD.
 
-Owner reply: "Cho phép tối đa 2 call mới". Source-reviewed admission is still pending; no credential or live effect yet. R094 source/local accepted unchanged, complete M2 and M3 remain open.
+Owner max2 new calls approved. Root source review passed; final signature pending before any fixture/key/provider effect. Source repair1 accepted, workerGo3/rootGo1 used.
 
 ## Historical R094 bounded closure
 

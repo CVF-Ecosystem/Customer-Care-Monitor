@@ -3,10 +3,10 @@
   "currentMode": "BUILD",
   "activePhase": "BUILD",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-095 revised harness source independently accepted for bounded admission; Root commits exact source and signs finalbinary477fcf25 before Sol creates one shared synthetic fixture(seed workerGo4), then worker1 realcall(workerGo5). Root reviewer1 follows in REVIEW; max2 NEW calls,758requested tokens,60sec,no retry. Existing app/DB untouched,R094 frozen,R0932/2 exhausted,M2/M3/pilot OPEN,accounts parked.",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeTranche": "CCMAI-RUNTIME-095",
-  "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.",
+  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted fixture/live BUILD.",
   "updatedAt": "2026-10-14",
   "productDeliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
 }

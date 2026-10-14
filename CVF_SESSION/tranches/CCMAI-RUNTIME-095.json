@@ -82,5 +82,23 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE"
+  "workOrderStatus": "ACTIVE",
+  "x-actualExecution": {
+    "workerGo": 3,
+    "reviewerGo": 1,
+    "providerCalls": 0,
+    "fixtures": 0,
+    "repairRound": 1
+  },
+  "x-preEffectBuildReviewNotes": [
+    "PRE_EFFECT_SOURCE_REVIEW",
+    "CHANGES_REQUIRED",
+    "BUILD_REPAIR1",
+    "BUILD"
+  ],
+  "x-preEffectSourceAdmission": {
+    "result": "PASS_SOURCE_ONLY",
+    "artifact": "docs/reviews/R095_FINAL_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
+    "binarySha256": "477fcf25f57bca2a5e98bec2736b574bc3b7819b37d68123f0cec2c3bb4f39dd"
+  }
 }
