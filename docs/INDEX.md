@@ -10,7 +10,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current local M1-M5 plan; R092 contract reviewed, R093 wire observed with positive output finding; next integrated M2 route, product/pilot exits open.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- Current audited M1-M5 route: active M2/R099 source-compile only, R100 fresh conditional live approval pending; M3/business/pilot open.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
@@ -926,9 +926,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/exit.txt`
 - Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/command.txt`
 - Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/source_sha256.txt`
+- Root raw compile receipt and exact source hash audit; no new Go/runtime/provider effect.: `docs/reviews/probes/r099_source/compile_audit_receipt_2026-10-15.json`
 - Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/cwd.txt`
 - Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/stdout.txt`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `CVF_SESSION/tranches/CCMAI-RUNTIME-099.json`
+- Current R099 source/compile REVIEW_PASS only; FREEZE/currentlive proof OPEN, R100 permission pending.: `docs/reviews/R099_FINAL_INDEPENDENT_SOURCE_COMPILE_REVIEW_2026-10-14.md`
+- Consolidated current M2 roadmap/projection audit; source-compile only, live R100 approval pending.: `docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `backend/ai/chat_once_response.go`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/probes/r099_source/pre_build_identity.json`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md`

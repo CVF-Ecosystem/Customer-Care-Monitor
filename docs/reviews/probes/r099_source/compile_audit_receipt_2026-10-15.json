@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-15",
+  "scope": "SOURCE_COMPILE_ONLY_NO_RUNTIME",
+  "sourceCommit": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+  "command": "go -C backend build ./ai ./engine ./api/handlers",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "exitCode": 0,
+  "environment": "GOPROXY=off/GOSUMDB=off reported by worker; not independently captured in command receipt",
+  "reviewerNewGoInvocations": 0,
+  "sourceHashes": {
+    "backend/ai/openai_compatible.go": "a1ac47fcba0e813d139b2ab4dcd47d872ac5614b9d5528c805cd007df34e99fd",
+    "backend/ai/chat_once_response.go": "7a809aea477017ee6205a47803f4caac68064fa610e7b7dc7679cf236734246a",
+    "backend/engine/intervention.go": "59bf11d0e74e6f0cb39ab52a006a32c5dd9de26be320680b9a2d87b577b5ecf3"
+  },
+  "rawReceiptHashes": {
+    "docs/reviews/probes/r099_source/command.txt": {
+      "sha256": "b5ba667d44897107c364d98cb5f25be77599ae8ec8b61a170d9e75778d2c9480",
+      "bytes": 50
+    },
+    "docs/reviews/probes/r099_source/cwd.txt": {
+      "sha256": "09b3c296ea42c5df24247cce460661d360117ada0c0869cfabfdef4e7365f1dd",
+      "bytes": 68
+    },
+    "docs/reviews/probes/r099_source/exit.txt": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "docs/reviews/probes/r099_source/stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "docs/reviews/probes/r099_source/stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "docs/reviews/probes/r099_source/source_sha256.txt": {
+      "sha256": "0b1eafb7aa0b5272f12f0f56354a7fac0b731e40c0f0bf28db84551c2d4a2ace",
+      "bytes": 294
+    }
+  }
+}

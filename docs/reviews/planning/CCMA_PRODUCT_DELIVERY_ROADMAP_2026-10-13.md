@@ -4,13 +4,31 @@ Status: ACTIVE_PLANNING
 
 Ngày: 2026-10-13. Plan ID: `CCMAI-PRODUCT-DELIVERY-20261013`. Tác giả: Local ORCHESTRATOR / SPEC_AUTHOR. Phạm vi đợt này: tài liệu R1 theo yêu cầu trực tiếp của owner; implementation tương lai tối thiểu R2 theo AGENTS.md. Baseline source: `49160128df5109ed46054babb6942457a3ed85a9`; worktree sạch trước authoring. Các mốc M1–M5 dưới đây đều chưa được nghiệm thu theo hợp đồng roadmap này.
 
-## Current M2 live outcome and finite product repair — R098
+## Current audited delivery route — 2026-10-15
+
+| Route | Acceptance still missing | Required next move / owner | Stop condition |
+|---|---|---|---|
+| M2 current | Real valid proposal on R099 source and faithfully persisted observed usage | Root completes source/compile review commit; owner decides proposed R100 fresh max2 budget; dispatcher pins new seed and source/binary before worker | No grant: no provider/key/fixture. Call1 failure or missing proposal/usage: stop before call2; no retry/tuning |
+| M3 next | Human confirm/reject/correct, assignment/deadline/outcome through browser and backend | Root prepares bounded SPEC/work order after valid source-bound proposal evidence | No automatic dispatch or customer send; reject stale/unauthorized writes |
+| M1 business / M4 pilot | Named reviewer, SLA, permitted real corpus/holdout and locked quality/budget thresholds | Owner business decisions and Root proposals can proceed alongside synthetic M2 | No real-data/pilot disclosure before scoped authority and acceptance |
+| M5 release | Revision-specific CI, recovery/security/operations and release acceptance | Separate release scope after product capability | No push, merge, deployment or production activation under this audit |
+| Parked / inherited gaps | Facebook/Zalo OA accounts; docs55 and R086 native/fence remain open | Account route needs owner resumption; other gaps need demonstrated dependency before becoming prerequisites | No silent account activation or generic prerequisite successor; historical55 count is not reverified |
+
+This route is planning only. R094 exact-old-source local proof and R098 real-provider failure receipts remain historical; changed R099 dependencies have no current runtime proof. Full M1–M5 and S0–S7 exits remain open. [Consolidated audit](../R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md).
+
+## Current source candidate and next real milestone — R099
+
+R099 source/compile REVIEW_PASS bounded, source0640431/proof302e873, onebuild PASS/0API/runtime. Candidate preserves knownmetadata through safe observed-error andsettlement, adds explicit immutable thinkingfalse once-only option. Actual changed-source proof NOT_RUN, FREEZE/fullM2 OPEN. HistoricalR094 acceptance preserved exactoldrevision; changeddependencies never inherititsruntimeacceptance. R098 real2HTTP200 at758each wereempty/no proposals, DBmetadata lost; budgets2/2/Go4/4 andcleanupverified unchanged. Root owns provider mode/cap/metadata miss.
+
+Concrete R100 packet requests freshmax2 syntheticcalls with explicitthinkingfalse/literalcanonicalJSONfields; call2 onlyifcall1 validproposal+faithfulusage, otherwise stop unusedslot/no tune/retry. No newseed/key/provider/fixture effects beforefreshownergrant and source-boundsignature. Product acceptance stillneeds realproposal withcanonicalevidence/knownobservedusage; then M3 humanreview/assignment/outcome. No generic prerequisite successor, no ETA/percentage, M3/pilot/realchannel OPEN, accountsparked.
+
+## Historical M2 live outcome and finite product repair — R098
 
 R098 actual2HTTP200/qwen3.7,758completioneach, finishlength/answerempty, proposals0. Both rawprovider usages known but adapter/engine losesmetadata into DBUNKNOWN; R098 CHANGES_REQUIRED/FREEZE OPEN. Fixture verifiedclean, app/DB unchanged, physical2/2 andGo4/4 neverreset. Root owns requestmode/cap and metadata review gaps. R096 oldunknowncause unproved, R097 localTLS remains bounded accepted.
 
 Independent new rootcauses justify one coherent R099 source-only product repair: preserve observed model/usage then explicit invalid-output settlement, add explicit immutable thinkingfalse future option supported by Alibaba docs. Zero API/key/DB/fixture/runtime, one compile/static independentreview; no mockgovproof. Fresh changed-request/liveapproval only after concrete candidate; no generic support successor/automatic rerun. Full M2/M3/pilot OPEN, Facebook/Zalo OA parked.
 
-## Current M2 checkpoint — R096/R097, 2026-10-14
+## Historical M2 checkpoint — R096/R097, 2026-10-14
 
 M2 source/local backend prototype accepted at R094; actual live R096 attempts2/2 returned no provider HTTP response, usage/model/billing UNKNOWN, proposals0. R096 remains CHANGES_REQUIRED/FREEZE OPEN. Two consumed slots never reset; old R0932/2 and R095 pre-provider failure retained. Root owns the HTTP1 transport source admission miss; local reproduction identifies copied ALPN mismatch, remote cause remains unproved. Corrected source83c29ce is read-only; exactly one R097 local TLS regression PASS/exit0/noSKIP, proof only protocol tooling. Owned fixture cleaned, existing app/DB unchanged.
 
@@ -57,15 +75,15 @@ Review nguồn: [R088](../R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [R
 
 Drift M1 đã đối chiếu với source hiện tại: spec database từng nói provider trước candidate; PRODUCT_DIRECTION từng dùng câu blanket “chưa triển khai” và nói chưa cấu hình provider thật. R092 sửa hai câu hiện hành theo source/owner/config readiness. `IMPLEMENTATION_STATUS.knownLimitations` hiện ghi R065 dispatch text là lịch sử/superseded; không coi đó là lệnh hiện hành. Các “next” trong ảnh chụp lịch sử UI được giữ nguyên như lịch sử. Không chạy lại full docs55/link inventory trong R092; số 55 không được khẳng định là count hiện tại. Audit 8 mục `--omit=dev` và 17 mục full audit có scope khác nhau; không gọi chênh số là regression nếu chưa so sánh lock/command/date.
 
-## R093 provider checkpoint và route hữu hạn
+## Historical R093 provider checkpoint và route hữu hạn
 
 [Independent live review](../R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md): Alibaba qwen3.7-flash HTTP compatibility observed twice with synthetic data; positive output rejected for invalid ID/missing complaint anchor, neutral PASS. Budget2/2 exhausted; no further R093 retry. R092/R093 are two support scopes, not usable end-user workflow. Next is one coherent M2 application packet including verified local toolchain/isolated DB setup, WAIT_DATA/DENY before disclosure, durable physical-call reservation and strict proposal evidence validation. M3 then completes human review/assignment/outcome in browser. No Go/Docker/MySQL found in checked paths; setup is an explicit prerequisite of that packet, not a new endless support campaign. Full M1/M4/M5 business/pilot decisions remain open.
 
-## R094 current machine and bounded M2 route — 2026-10-14
+## Historical R094 machine and bounded M2 route — 2026-10-14
 
 Owner resumes synchronized main and appoints Root orchestrator/reviewer; Luna Max primary, Sol Medium fallback when hard. Luna source intake and Sol design identify durable concurrent physical-call admission, exact evidence and legacy bypass; Root selects Sol Medium. R094 accepted intended SPEC and committed seed activate one coherent M2 source/local synthetic packet, not another provider characterization. Current machine has Go1.27, Node24.19/npm11.17, Docker29.8 and cached mysql:8.0; previous missing-toolchain statements are historical, no install campaign needed. Existing app/DB protected. Full M2/live/M3/pilot remain OPEN; zero new provider/secret/push/deploy effects. R093 positive evidence failure and cap2/2 retained. Next concrete capability: evidence-bound proposal plus readable case queue/detail on one manual synthetic job, with deny/wait zero disclosure. See ../../work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md.
 
-## R094 independent local result — 2026-10-14
+## Historical R094 independent local result — 2026-10-14
 
 Sol Medium source plus one consolidated repair reviewed independently by Root. Actual authenticated app route/MySQL/loopback delivers validated proposal and readable case, with deny/wait, tenant permissions, stable cap, malformed/stale/cancel/transaction failure assertions. Two named mutations killed and exact source restored; final9top-level/four nested adapter cases PASS. Worker6/root4Go consumed10/10; owned fixtures removed and existing containers unchanged. See ../R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md. This prototype is default disabled/unconfigured in installed app and has zero real provider calls; full M2 and M3/pilot stay OPEN. Next is new bounded live M2 cap/source activation approval, then M3 human workflow; no generic supporting successor or old-budget replay.
 
@@ -73,8 +91,8 @@ Sol Medium source plus one consolidated repair reviewed independently by Root. A
 
 | Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái hiện hành |
 |---|---|---|---|---|
-| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 independently reviewed LOCAL_SYNTHETIC_CONTRACT_READY at1e46390; R093 two real HTTP200/model-match observations; positive evidence-reference FAIL, neutral PASS, cap exhausted/returned; app governance and business/pilot exit OPEN |
-| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | R094 bounded source/local independently accepted; actual MySQL/authenticated route and evidence/cap detectors PASS, real provider0 and installed service disabled; full M2 live OPEN |
+| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 local synthetic intended contract accepted historically; current M1 business/pilot acceptance OPEN. Does not block bounded synthetic M2 |
+| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | ACTIVE MILESTONE: R099 source/compile REVIEW_PASS at0640431, changed-source runtime NOT_RUN; R098 real2HTTP200 empty/no proposals and metadata loss, cap spent; R100 proposed fresh conditional budget pending. Full M2 OPEN |
 | M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
 | M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |
 | M5 | Bản phát hành có thể cài, vận hành và tiếp quản | S7 | M4 GO và proof release | PLANNED — chưa dispatch |
@@ -237,12 +255,12 @@ Mẫu báo owner: “Dùng được X trong môi trường Y. Mốc M còn thi�
 | D02 người review/assignee, SLA giờ làm việc | OPEN | Local ánh xạ roles; owner chỉ định người/quy tắc nghiệp vụ còn thiếu | Workflow/pilot acceptance |
 | D03 corpus/PII/holdout | Synthetic baseline có; real-data scope OPEN | Local lập corpus contract; owner cho quyền dữ liệu cần thiết | Disclosure và M4 |
 | D04 ngưỡng chất lượng và budget | Chưa khóa trong roadmap này | Local đề xuất phép đo/căn cứ; owner chốt trade-off; không bịa số | M1 exit/pilot GO |
-| D05 provider/model/key readiness | Owner cho phép Alibaba AI test với synthetic input; secret-safe metadata ghi config present (`ap-southeast-1`, `qwen3.7-flash`), `CONFIG_PRESENT_NOT_LIVE_VERIFIED`; chưa có API request/response, adapter compatibility hay billing proof | R093 có authority seed riêng, chưa active tại R092 handback; tối đa 2 direct HTTP requests/zero retry theo seed. App integration/governance call cần packet R2 và cap Go retry riêng | Chỉ live branch; local synthetic source/UI không bị chặn |
+| D05 provider/model/key readiness | R098 real2HTTP200/modelqwen3.7-flash at old source, empty answers and metadata loss; dollar billing UNKNOWN. Current R099 runtime NOT_RUN | R098 cap2/2 exhausted; R100 conditional max2 fresh calls proposed, NOT_APPROVED. No key/provider/fixture effect before owner grant and new seed/source signature | Current live branch; local source/compile accepted only |
 | D06 topology/recovery/fence | In-process coordinator + DB parent-lock admission; orphan running fail-closed; distributed cancellation, crash recovery, reclaim và mixed-binary rollout không có | Chỉ đề xuất một process/one selected manual synthetic job; giữ fail-closed, không auto-reclaim; không mở lại accepted inheritance review | Multi-process/restart/live-data readiness; không chặn route local synthetic |
 | D07 Facebook/Zalo OA | OWNER_DEFERRED | Chỉ owner mở lại; không đưa vào prerequisite của Pancake synthetic; giữ nguyên evidence đã chấp nhận | Live riêng hai kênh |
 | D08 release target và vận hành | OPEN | Chốt môi trường/người vận hành trước M5; không tự deploy | M5 release |
 
-**Next allowed planning action:** Root independent-review R092 contract và drift fix. Sau khi chấp nhận, dispatcher mới chọn một packet M2 hữu hạn; R093 live HTTP authority vẫn là packet R2 riêng và chưa active. Không yêu cầu owner trả lời lại các quyền đã có. Thiếu tên nhân viên/SLA/ngưỡng pilot chỉ giữ acceptance tương ứng OPEN, không dừng synthetic build.
+**Next allowed planning action:** Root commits the consolidated R099 source/compile review and current roadmap audit, then presents R100 for fresh conditional max2 provider approval. No new call/secret/fixture before grant and bounded seed/signature. M1 named people/SLA/corpus/pilot thresholds remain OPEN and can be settled alongside synthetic M2; no old budget replay or generic supporting successor.
 
 ## 15. Source Authority và Evidence Comparison
 

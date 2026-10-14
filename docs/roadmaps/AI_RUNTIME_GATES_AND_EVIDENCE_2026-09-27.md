@@ -4,13 +4,31 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
-## Current M2 live outcome and finite product repair — R098
+## Current audited delivery route — 2026-10-15
+
+| Route | Acceptance still missing | Required next move / owner | Stop condition |
+|---|---|---|---|
+| M2 current | Real valid proposal on R099 source and faithfully persisted observed usage | Root completes source/compile review commit; owner decides proposed R100 fresh max2 budget; dispatcher pins new seed and source/binary before worker | No grant: no provider/key/fixture. Call1 failure or missing proposal/usage: stop before call2; no retry/tuning |
+| M3 next | Human confirm/reject/correct, assignment/deadline/outcome through browser and backend | Root prepares bounded SPEC/work order after valid source-bound proposal evidence | No automatic dispatch or customer send; reject stale/unauthorized writes |
+| M1 business / M4 pilot | Named reviewer, SLA, permitted real corpus/holdout and locked quality/budget thresholds | Owner business decisions and Root proposals can proceed alongside synthetic M2 | No real-data/pilot disclosure before scoped authority and acceptance |
+| M5 release | Revision-specific CI, recovery/security/operations and release acceptance | Separate release scope after product capability | No push, merge, deployment or production activation under this audit |
+| Parked / inherited gaps | Facebook/Zalo OA accounts; docs55 and R086 native/fence remain open | Account route needs owner resumption; other gaps need demonstrated dependency before becoming prerequisites | No silent account activation or generic prerequisite successor; historical55 count is not reverified |
+
+This route is planning only. R094 exact-old-source local proof and R098 real-provider failure receipts remain historical; changed R099 dependencies have no current runtime proof. Full M1–M5 and S0–S7 exits remain open. [Consolidated audit](../reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md).
+
+## Current source candidate and next real milestone — R099
+
+R099 source/compile REVIEW_PASS bounded, source0640431/proof302e873, onebuild PASS/0API/runtime. Candidate preserves knownmetadata through safe observed-error andsettlement, adds explicit immutable thinkingfalse once-only option. Actual changed-source proof NOT_RUN, FREEZE/fullM2 OPEN. HistoricalR094 acceptance preserved exactoldrevision; changeddependencies never inherititsruntimeacceptance. R098 real2HTTP200 at758each wereempty/no proposals, DBmetadata lost; budgets2/2/Go4/4 andcleanupverified unchanged. Root owns provider mode/cap/metadata miss.
+
+Concrete R100 packet requests freshmax2 syntheticcalls with explicitthinkingfalse/literalcanonicalJSONfields; call2 onlyifcall1 validproposal+faithfulusage, otherwise stop unusedslot/no tune/retry. No newseed/key/provider/fixture effects beforefreshownergrant and source-boundsignature. Product acceptance stillneeds realproposal withcanonicalevidence/knownobservedusage; then M3 humanreview/assignment/outcome. No generic prerequisite successor, no ETA/percentage, M3/pilot/realchannel OPEN, accountsparked.
+
+## Historical M2 live outcome and finite product repair — R098
 
 R098 actual2HTTP200/qwen3.7,758completioneach, finishlength/answerempty, proposals0. Both rawprovider usages known but adapter/engine losesmetadata into DBUNKNOWN; R098 CHANGES_REQUIRED/FREEZE OPEN. Fixture verifiedclean, app/DB unchanged, physical2/2 andGo4/4 neverreset. Root owns requestmode/cap and metadata review gaps. R096 oldunknowncause unproved, R097 localTLS remains bounded accepted.
 
 Independent new rootcauses justify one coherent R099 source-only product repair: preserve observed model/usage then explicit invalid-output settlement, add explicit immutable thinkingfalse future option supported by Alibaba docs. Zero API/key/DB/fixture/runtime, one compile/static independentreview; no mockgovproof. Fresh changed-request/liveapproval only after concrete candidate; no generic support successor/automatic rerun. Full M2/M3/pilot OPEN, Facebook/Zalo OA parked.
 
-## Current M2 checkpoint — R096/R097, 2026-10-14
+## Historical M2 checkpoint — R096/R097, 2026-10-14
 
 M2 source/local backend prototype accepted at R094; actual live R096 attempts2/2 returned no provider HTTP response, usage/model/billing UNKNOWN, proposals0. R096 remains CHANGES_REQUIRED/FREEZE OPEN. Two consumed slots never reset; old R0932/2 and R095 pre-provider failure retained. Root owns the HTTP1 transport source admission miss; local reproduction identifies copied ALPN mismatch, remote cause remains unproved. Corrected source83c29ce is read-only; exactly one R097 local TLS regression PASS/exit0/noSKIP, proof only protocol tooling. Owned fixture cleaned, existing app/DB unchanged.
 
@@ -22,7 +40,7 @@ R097 independent review accepted bounded local TLS proof; FREEZE local tooling o
 
 ## Historical M1 checkpoint — R092/R093
 
-R092 local synthetic intended contract independently reviewed at1e46390; full M1 exit remains OPEN. R093 [independent live review](../reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md) observes two real Alibaba HTTP200/model-match responses, positive evidence-reference FAIL and neutral PASS, physical cap2/2 exhausted/returned. No Go/Analyzer/CVF-runtime proof. Active [R093 handoff](../../CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md) controls next: one integrated M2 synthetic manual application route with bounded verified toolchain/isolated DB setup, admission and strict snapshot/ID/quote validation, then M3 human browser workflow. Native setup, M2/M3 product outcome and M4/M5/pilot remain OPEN; accounts parked. Two supporting scopes require this finite product-route reassessment; no generic R093 retry/helper successor.
+R092 local synthetic intended contract independently reviewed at1e46390; full M1 exit remains OPEN. R093 [independent live review](../reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md) observes two real Alibaba HTTP200/model-match responses, positive evidence-reference FAIL and neutral PASS, physical cap2/2 exhausted/returned. No Go/Analyzer/CVF-runtime proof. Historical [R093 handoff](../../CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md) controls next: one integrated M2 synthetic manual application route with bounded verified toolchain/isolated DB setup, admission and strict snapshot/ID/quote validation, then M3 human browser workflow. Native setup, M2/M3 product outcome and M4/M5/pilot remain OPEN; accounts parked. Two supporting scopes require this finite product-route reassessment; no generic R093 retry/helper successor.
 
 ## Historical R091 progress checkpoint — 2026-10-13
 
@@ -43,13 +61,13 @@ Owner yêu cầu cập nhật để nhớ đã làm tới đâu và tránh lệc
 
 Nguồn cho các acceptance nhỏ: [R054 scope kế tiếp](../reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md), [tổng hợp local receipt/UI milestones](README.md), [review R073](../reviews/R073_INDEPENDENT_SAVED_PRESENCE_UI_REVIEW_2026-10-10.md), [review R078](../reviews/R078_INDEPENDENT_STARTUP_HARDENING_REVIEW_2026-10-11.md). Bảng này tổng hợp bản ghi đã có, không chạy lại runtime hoặc chứng minh live governance.
 
-### Current supporting outcome — seven-finding inheritance accepted
+### Historical supporting outcome — seven-finding inheritance accepted
 
 [Roadmap kế thừa](../reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md) đã đóng bảy finding hữu hạn sau independent Local review: auth target/permission/refresh CAS, conversation UI lifetime, per-output delivery truth, bounded SMTP và common batch progress/backoff. [A final review](../reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [C final review](../reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [F06 final review](../reviews/R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md). Proof là local MySQL/synthetic UI/loopback/fake-provider, chưa live hay whole-stage acceptance. Root đã xuất bản material `d121c9ecf24a869aea92264db1e01cd853dec0ec` lên nhánh codex/cvf-portable-inheritance và verify remote SHA tại ../reviews/probes/r091_local_review/publication.json; continuity cập nhật hiện trạng đi kèm. Không tự mở worker/scope kế tiếp.
 
 Các ID F01-F07 trong ledger kế thừa không thay các finding sản phẩm cùng tên. Global channels/live coverage, dependency17, docs55, R086 native/fence/accounts/browser/hosted/deploy và stage exits vẫn mở. Fresh owned MySQL proof cho các defect độc lập không tự biến R086 native/fence thành PASS. Route sản phẩm dưới đây giữ nguyên và cần SPEC/work order riêng trước BUILD.
 
-### Mốc sản phẩm ưu tiên và thứ tự còn lại
+### Historical R091 priority selection — superseded by current M2 route
 
 **Mốc sản phẩm kế tiếp cần SPEC/work order:** một job qua gate nguồn/quyền có outcome và lý do rõ; đường từ chối/chờ không dispatch AI, đường cho phép tạo proposal có dẫn chứng. **Mốc luồng đầu tiên cần đạt:** thêm người duyệt, giao xử lý và ghi kết quả vụ việc. Đây là acceptance dự kiến cho lát cắt S2/S3/S5 tối thiểu, không tuyên bố stage exit hoặc tự cấp quyền provider/dữ liệu khách hàng.
 
@@ -63,7 +81,7 @@ Các ID F01-F07 trong ledger kế thừa không thay các finding sản phẩm c
 
 Đây là thứ tự planning, không phải số tranche hay ETA đã cam kết. P1 phải giải quyết route/bất định trước dispatch P2; không tự suy fixture PASS hoặc thiết kế fence được chấp nhận thành product readiness. Nếu phát hiện blocker mới, cập nhật route và giới hạn trong cùng lượt, không tự nối thêm chuỗi hỗ trợ vô hạn.
 
-### Blocker hiện hành và trách nhiệm cập nhật
+### Historical R091 blockers and standing update responsibility
 
 - R085 native campaign thất bại trước start/SQL; cleanup được xác nhận. R086 source/unit review PASS nhưng native NOT_RUN, FREEZE OPEN do55 deadlinks; fence/recovery/integration OPEN và deployed UNKNOWN. [Review R085](../reviews/R085_INDEPENDENT_LOCAL_FIXTURE_REVIEW_2026-10-12.md), [review R086](../reviews/R086_INDEPENDENT_MOUNT_LIFECYCLE_REVIEW_2026-10-12.md).
 - Global F02/live-channel vẫn OPEN; Facebook/Zalo OA accounts parked. Receipt quan sát và UI reader không phải gate, billing hoặc human disposition đã hoàn thành.
