@@ -1,0 +1,18 @@
+{
+  "sourceSha256": {
+    "backend/ai/openai_compatible.go": "a1ac47fcba0e813d139b2ab4dcd47d872ac5614b9d5528c805cd007df34e99fd",
+    "backend/ai/chat_once_response.go": "7a809aea477017ee6205a47803f4caac68064fa610e7b7dc7679cf236734246a",
+    "backend/engine/intervention.go": "59bf11d0e74e6f0cb39ab52a006a32c5dd9de26be320680b9a2d87b577b5ecf3"
+  },
+  "oldR095R096R098HarnessDelta": "NONE",
+  "unchangedR094DependencyCount": 10,
+  "changedR094DependenciesHistoricalOnly": [
+    "backend/ai/openai_compatible.go",
+    "backend/engine/intervention.go"
+  ],
+  "oldProviderMarkersUnchanged": true,
+  "workerGoUsed": 0,
+  "rootGoUsed": 0,
+  "providerCalls": 0,
+  "runtimeTests": 0
+}

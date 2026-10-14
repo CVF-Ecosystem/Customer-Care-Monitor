@@ -922,6 +922,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `docs/specs/R099_OBSERVED_RESPONSE_REPAIR_SPEC_2026-10-14.md`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md`
 - Finite R099 source-only candidate; no runtime/live governance proof.: `CVF_SESSION/tranches/CCMAI-RUNTIME-099.json`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `backend/ai/chat_once_response.go`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/probes/r099_source/pre_build_identity.json`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_SOURCE_READY_WORKER_RETURN_2026-10-14.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

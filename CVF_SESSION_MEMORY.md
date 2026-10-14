@@ -18,9 +18,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md
 
-CCMAI-RUNTIME-099 BUILD SOURCE_ONLY: Sol repairs parsed response metadata preservation and explicit empty/refused/truncated output classification, adds immutable opt-in thinking-disabled once-only option for future qwen3.7 admission. Root audits consolidated source before exactly one offline Go build; zero provider/key/DB/fixture/runtime tests. Old2/2 andGo4/4 unchanged; futurelivebudget required, M2/M3/pilot OPEN, accounts parked.
+CCMAI-RUNTIME-099 exact source candidate independently reviewed after one consolidated precompile correction; Root commits then admits exactly one offline Go build of ai/engine/handlers. Source-only, zero runtime/provider/key/DB/fixture; old2/2 andGo4/4 unchanged. Changed-source live settlement/proposal/option proof NOT_RUN; full M2/M3/pilot OPEN, accounts parked.
 
-Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Root independent REVIEWER.
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER source accepted awaiting one build.
 
 ## Historical R094 bounded closure
 

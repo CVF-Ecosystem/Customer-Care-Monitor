@@ -216,6 +216,19 @@ func (s *InterventionService) RunManual(ctx context.Context, tenantID, actorID, 
 	prompt := s.Prompt + "\nReturn one JSON object with schema ccma.intervention.v1, conversation_id " + conversationID + ", snapshot_digest " + snap.Digest + ", kind complaint or waiting, explanation, next_action, and evidence_refs with canonical message_id and exact quote."
 	response, callErr := s.Transport.AnalyzeChatOnce(callCtx, prompt, snap.Transcript, s.MaxRequestBytes)
 	if callErr != nil {
+		if ai.IsObservedChatOnceResponse(callErr) && response.Model != "" && response.Provider != "" && response.UsagePresence != nil {
+			usage := settledUsage(response)
+			if err := settleInterventionResponse(attempt.ID, response, usage); err != nil {
+				if endErr := s.finish(res, &caseRow, "SETTLEMENT_FAILED", "UNKNOWN"); endErr != nil {
+					return nil, endErr
+				}
+				return &caseRow, nil
+			}
+			if err := s.finish(res, &caseRow, "OUTPUT_INVALID", usage); err != nil {
+				return nil, err
+			}
+			return &caseRow, nil
+		}
 		if err := s.finish(res, &caseRow, "PROVIDER_UNKNOWN", "UNKNOWN"); err != nil {
 			return nil, err
 		}

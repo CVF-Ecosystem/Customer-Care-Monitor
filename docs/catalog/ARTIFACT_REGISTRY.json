@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r099-source-6e6985281f00",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r099_source/pre_build_identity.json",
+      "status": "ACTIVE",
+      "description": "R099 exact source candidate and independent review; current runtime proof NOT_RUN."
+    },
+    {
+      "id": "r099-source-9b3bae774ecd",
+      "family": "continuity",
+      "path": "docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R099 exact source candidate and independent review; current runtime proof NOT_RUN."
+    },
+    {
+      "id": "r099-source-f0aeb26b320d",
+      "family": "continuity",
+      "path": "docs/reviews/R099_SOURCE_READY_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R099 exact source candidate and independent review; current runtime proof NOT_RUN."
+    },
+    {
+      "id": "r099-source-4a453ea4cd8a",
+      "family": "continuity",
+      "path": "backend/ai/chat_once_response.go",
+      "status": "ACTIVE",
+      "description": "R099 exact source candidate and independent review; current runtime proof NOT_RUN."
+    },
+    {
       "id": "r099-ea5508d98b0e",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-099.json",

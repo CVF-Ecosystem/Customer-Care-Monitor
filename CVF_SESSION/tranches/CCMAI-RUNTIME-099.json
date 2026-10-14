@@ -50,7 +50,9 @@
   "baseCommit": "e9b4cefc9ca09cc4c72210ac39d436349e0cccab",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_099_OBSERVED_RESPONSE_REPAIR.md",
   "buildCommit": null,
-  "reviewEvidence": [],
+  "reviewEvidence": [
+    "docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md"
+  ],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
@@ -66,5 +68,12 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE"
+  "workOrderStatus": "ACTIVE",
+  "x-actualExecution": {
+    "workerGo": 0,
+    "reviewerGo": 0,
+    "providerCalls": 0,
+    "runtimeTests": 0,
+    "DBFixtureOperations": 0
+  }
 }
