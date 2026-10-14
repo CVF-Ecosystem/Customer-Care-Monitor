@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-098", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-099", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md
 
-CCMAI-RUNTIME-098 CHANGES_REQUIRED: actual2HTTP200/modelqwen3.7/758each but answerempty/proposals0 and DB metadata lost; fresh2/2 plus Go4/4 exhausted, ownedfixture verifiedclean. Root bounds one R099 SOURCE-ONLY product repair for observed metadata settlement and explicit thinking-disabled future option, zero API/key/DB/fixture effects, one compile then independentreview. Old budgets unchanged, M2/M3/pilot OPEN, accounts parked.
+CCMAI-RUNTIME-099 BUILD SOURCE_ONLY: Sol repairs parsed response metadata preservation and explicit empty/refused/truncated output classification, adds immutable opt-in thinking-disabled once-only option for future qwen3.7 admission. Root audits consolidated source before exactly one offline Go build; zero provider/key/DB/fixture/runtime tests. Old2/2 andGo4/4 unchanged; futurelivebudget required, M2/M3/pilot OPEN, accounts parked.
 
-Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium R098 returned, no replay.
+Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Root independent REVIEWER.
 
 ## Historical R094 bounded closure
 

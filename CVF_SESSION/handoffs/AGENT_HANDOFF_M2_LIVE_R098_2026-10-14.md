@@ -1,6 +1,6 @@
 # R098 corrected TLS live M2
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -40,3 +40,5 @@ Root re-read canonical surfaces and worker actual sanitized receipt; wireHTTP200
 ## Root final disposition and finite product repair route
 
 Actual twoHTTP200 responses retained; emptycontent/length at758each, no proposal. Known rawwire model/tokens lost in DB through adapterearlyerror/engineUNKNOWN; R098 CHANGES_REQUIRED/FREEZE OPEN. Root owns provider mode/cap planning and metadata miss. Owned fixture verifiedclean, alloldsource/markers and protected IDs unchanged; new2/2 and Go4/4 exhausted. Finite R099 source-only repair required before next concrete liveapproval; no mockedgovproof, no newprovider/key/DB effect, one compile, independent Root review. Review docs/reviews/R098_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-14.md.
+
+R099 source-only successor; R098 remains CHANGES_REQUIRED/FREEZE OPEN and all exhausted effects/counters/receipts unchanged.
