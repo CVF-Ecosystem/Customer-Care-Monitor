@@ -18,11 +18,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md
 
-CCMAI-RUNTIME-096 same-owner aggregate max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.
+CCMAI-RUNTIME-096 exactsource/binarydec0ba5c andparentcap2 independently reviewed; Root commits then signs admission and metadata-only currentconfig precheck before one sharedfixture/seed. Solworker1 thenRootreviewer1,max2combinedR095+R096physicalcalls,758tokens/60sec/no retry. ExistingappDB untouched,R094 frozen,R095blockedphysical0,R0932/2unchanged,M2/M3/pilot OPEN,accounts parked.
 
-Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted R096 fixture/live BUILD.
 
-Owner permission unchanged: max2 NEW PHYSICALcalls across R095+R096; R095actual0, itsconsumedrole/campaign preserved. Newparentledger cap2 must be source-reviewed; no R096 effects yet. R094source unchanged, M2/M3 OPEN.
+Same owner physicalcap2; actual0. Source reviewed, signature/configprecheck pending. R095 markers/receipt neverreset.
 
 ## Historical R094 bounded closure
 

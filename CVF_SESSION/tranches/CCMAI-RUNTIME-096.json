@@ -90,5 +90,17 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE"
+  "workOrderStatus": "ACTIVE",
+  "x-actualExecution": {
+    "workerGo": 1,
+    "reviewerGo": 1,
+    "providerCalls": 0,
+    "fixtures": 0,
+    "repairRound": 0
+  },
+  "x-preEffectSourceAdmission": {
+    "result": "PASS_SOURCE_ONLY",
+    "artifact": "docs/reviews/R096_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
+    "binarySha256": "dec0ba5c83474b23e0748a03b142616eabb34112af36968581ba16e24f063b5e"
+  }
 }

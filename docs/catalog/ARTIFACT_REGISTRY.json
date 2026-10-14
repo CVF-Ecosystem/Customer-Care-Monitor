@@ -5,6 +5,83 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r096-source-3b38a316ddd6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_worker/worker_offline_transcript.txt",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-31d8341ae02f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/pre_effect_identity.json",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-3bda526e9661",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/offline14_stdout.log",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-485e34607278",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/offline14_stderr.log",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-18a3c94b12f3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/no_approval_binary_stdout.log",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-d60232e66fd6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/no_approval_binary_stderr.log",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-4dc84ec03259",
+      "family": "continuity",
+      "path": "docs/reviews/R096_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-af7083f8789a",
+      "family": "continuity",
+      "path": "docs/reviews/R096_PRE_EFFECT_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-b837916a96de",
+      "family": "continuity",
+      "path": "scripts/tests/test_r096_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-10e48611815e",
+      "family": "continuity",
+      "path": "scripts/r096_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
+      "id": "r096-source-19ca89c06577",
+      "family": "continuity",
+      "path": "backend/api/handlers/intervention_live_r096_test.go",
+      "status": "ACTIVE",
+      "description": "R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending."
+    },
+    {
       "id": "r096-agent_handoff_m2_live_r095_2026-10-14",
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",

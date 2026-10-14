@@ -80,9 +80,9 @@
   ],
   "x-buildInProgress": {
     "trancheId": "CCMAI-RUNTIME-096",
-    "status": "BUILD",
+    "status": "SOURCE_ADMITTED_PRECHECK_PENDING",
     "worker": "/root/m2_worker",
-    "sourceAdmission": "NOT_SIGNED",
+    "sourceAdmission": "SIGNATURE_PENDING",
     "providerEffects": "OWNER_APPROVED_BUT_SOURCE_REVIEW_PENDING"
   },
   "knownLimitations": [
@@ -342,7 +342,7 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "R096 same-owner aggregate max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-096 exactsource/binarydec0ba5c andparentcap2 independently reviewed; Root commits then signs admission and metadata-only currentconfig precheck before one sharedfixture/seed. Solworker1 thenRootreviewer1,max2combinedR095+R096physicalcalls,758tokens/60sec/no retry. ExistingappDB untouched,R094 frozen,R095blockedphysical0,R0932/2unchanged,M2/M3/pilot OPEN,accounts parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md",
     "buildDispatched": true,
     "currentExecutionBudget": {
@@ -2458,7 +2458,7 @@
     }
   },
   "x-r096LiveM2": {
-    "status": "BUILD",
+    "status": "SOURCE_ADMITTED_LIVE_PENDING",
     "spec": "docs/specs/M2_INTERVENTION_LIVE_R096_SPEC_2026-10-14.md",
     "liveCalls": 0,
     "fullM2": "OPEN"

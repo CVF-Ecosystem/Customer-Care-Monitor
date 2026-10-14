@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-096",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-096 same-owner aggregate max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-096 exactsource/binarydec0ba5c andparentcap2 independently reviewed; Root commits then signs admission and metadata-only currentconfig precheck before one sharedfixture/seed. Solworker1 thenRootreviewer1,max2combinedR095+R096physicalcalls,758tokens/60sec/no retry. ExistingappDB untouched,R094 frozen,R095blockedphysical0,R0932/2unchanged,M2/M3/pilot OPEN,accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.",
+  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted R096 fixture/live BUILD.",
   "updatedAt": "2026-10-14",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -844,9 +844,10 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "NOT_RUN",
-    "sourceAdmission": "NOT_SIGNED",
-    "liveCalls": 0
+    "result": "PRE_EFFECT_SOURCE_ADMISSION_PASS",
+    "sourceAdmission": "SIGNATURE_PENDING",
+    "providerCalls": 0,
+    "artifact": "docs/reviews/R096_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md"
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -927,8 +928,8 @@
     }
   },
   "x-currentRepair": {
-    "round": 0,
-    "status": "NONE"
+    "status": "NONE",
+    "round": 0
   },
   "x-currentClosure": {
     "status": "OPEN",
@@ -1304,7 +1305,7 @@
     "worker": "/root/m2_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
-    "status": "DISPATCH_READY",
+    "status": "SOURCE_ACCEPTED",
     "seed": "4503afbbe28e23a7612d41af473b1c52f96a5c8d"
   },
   "x-historicalPreR091FinalClosureProjections": {

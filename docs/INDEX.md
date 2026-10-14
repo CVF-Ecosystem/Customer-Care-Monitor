@@ -846,6 +846,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-096.json`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/specs/M2_INTERVENTION_LIVE_R096_SPEC_2026-10-14.md`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `scripts/r096_intervention_live_fixture.py`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/no_approval_binary_stdout.log`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `backend/api/handlers/intervention_live_r096_test.go`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/pre_effect_identity.json`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_worker/worker_offline_transcript.txt`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/offline14_stdout.log`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/offline14_stderr.log`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/R096_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/R096_PRE_EFFECT_WORKER_RETURN_2026-10-14.md`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `scripts/tests/test_r096_intervention_live_fixture.py`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/no_approval_binary_stderr.log`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
