@@ -6,9 +6,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted source awaiting compile.
+- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted one fixture seed, live pending Root ownership review.
 - Active tranche: CCMAI-RUNTIME-098
-- Next allowed move: CCMAI-RUNTIME-098 exact source independently admitted before compile; Root commits source then admits one worker offline compile. Hash/sign compiled binary and fresh manifest before key precheck/one fixture seed/liveworker1; reviewer1 only after real HTTP response and independent review. New cap2, worker3/root1 Go, old budgets unchanged; full M2/M3/pilot OPEN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-098 source/binary/fresh grant independently signed; config metadata precheck PASS. Sol may create/seed exactly one owned cached loopback fixture (workerGo2), then stop for Root ownership review before worker1 live. No existing app/DB changes; fresh cap2 role1 each, worker3/root1 Go; old budgets/markers unchanged; full M2/M3/pilot OPEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root rehydration and BUILD entry acknowledgment
@@ -24,3 +24,7 @@ I re-read current R098 bootstrap/state/memory/handoff/implementation/index, mani
 ## Root independent source acknowledgment
 
 Canonical BUILD facts re-read; Root REVIEWER accepted only source/tooling per docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md. No Go/secret/fixture/provider yet. Exact hashes pinned, inherited TLS dependency unchanged. Root transitions COMMIT_STEWARD for source commit then admits one compile; signature required before further effects. Fresh grant separate, old budgets/markers unchanged.
+
+## Root exact binary signature and fixture dispatch
+
+Exact compiled binary df02ce7a independently hashed; source and unchanged TLS/helper/product hashes match source admission. Root signature and metadata-only currentconfig precheck PASS; fixture/provider0, workerGo1/root0. Root admits one labelled cached fixture/seed only, worker must stop before live for ownership review. Existing app/DB IDs unchanged; old ledgers retained.

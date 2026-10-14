@@ -4,8 +4,8 @@
   "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-098",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-098 exact source independently admitted before compile; Root commits source then admits one worker offline compile. Hash/sign compiled binary and fresh manifest before key precheck/one fixture seed/liveworker1; reviewer1 only after real HTTP response and independent review. New cap2, worker3/root1 Go, old budgets unchanged; full M2/M3/pilot OPEN, accounts parked.",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted source awaiting compile.",
+  "nextAllowedMove": "CCMAI-RUNTIME-098 source/binary/fresh grant independently signed; config metadata precheck PASS. Sol may create/seed exactly one owned cached loopback fixture (workerGo2), then stop for Root ownership review before worker1 live. No existing app/DB changes; fresh cap2 role1 each, worker3/root1 Go; old budgets/markers unchanged; full M2/M3/pilot OPEN, accounts parked.",
+  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted one fixture seed, live pending Root ownership review.",
   "updatedAt": "2026-10-14",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved."
 }

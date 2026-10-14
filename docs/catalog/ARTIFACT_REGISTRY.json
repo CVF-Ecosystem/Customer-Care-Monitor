@@ -5,6 +5,41 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r098-admission-5ff357d5408e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/worker_compile_stdout.log",
+      "status": "ACTIVE",
+      "description": "Actual reviewed source/binary signature or secret-free config metadata proof; provider pending."
+    },
+    {
+      "id": "r098-admission-4c3535007a04",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/worker_compile_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual reviewed source/binary signature or secret-free config metadata proof; provider pending."
+    },
+    {
+      "id": "r098-admission-17f5379c70b7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/source_binary_admission.json",
+      "status": "ACTIVE",
+      "description": "Actual reviewed source/binary signature or secret-free config metadata proof; provider pending."
+    },
+    {
+      "id": "r098-admission-c0c19d47366e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/config_precheck.log",
+      "status": "ACTIVE",
+      "description": "Actual reviewed source/binary signature or secret-free config metadata proof; provider pending."
+    },
+    {
+      "id": "r098-admission-3cda0a1a8eb6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/compile_identity.json",
+      "status": "ACTIVE",
+      "description": "Actual reviewed source/binary signature or secret-free config metadata proof; provider pending."
+    },
+    {
       "id": "r098-source-13ee8809c334",
       "family": "continuity",
       "path": "docs/reviews/probes/r098_root/root_offline_tests.log",

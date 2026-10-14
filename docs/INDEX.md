@@ -887,6 +887,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `docs/specs/M2_INTERVENTION_LIVE_R098_SPEC_2026-10-14.md`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/source_binary_admission.json`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/compile_identity.json`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/worker_compile_stderr.log`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/worker_compile_stdout.log`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/config_precheck.log`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-098.json`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md`
 - Fresh explicit owner max2 grant, old budgets unchanged, seed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-098.json`

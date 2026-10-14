@@ -85,7 +85,7 @@
   "phase": "BUILD",
   "baseCommit": "7e6d3026649a0afa75467d8eb7f4744d824711fe",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md",
-  "buildCommit": null,
+  "buildCommit": "3d1ce43b1739d6edbba6296a2231a487268473d7",
   "reviewEvidence": [
     "docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md"
   ],
@@ -106,7 +106,7 @@
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "ACTIVE",
   "x-actualExecution": {
-    "workerGo": 0,
+    "workerGo": 1,
     "reviewerGo": 0,
     "providerCalls": 0,
     "fixtures": 0
