@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-098",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-098 BUILD: Sol authors only new source-bound harness using unchanged R097-proved r096IsolatedTransport(), fresh owner max2 manifest/slots and safe typed diagnostics. Stop for Root source review before compile/secret/fixture/live. Worker3/root1 Go total4, new Alibaba2 role1 each; all old budgets/markers unchanged. Full M2/M3/pilot OPEN; accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-098 exact source independently admitted before compile; Root commits source then admits one worker offline compile. Hash/sign compiled binary and fresh manifest before key precheck/one fixture seed/liveworker1; reviewer1 only after real HTTP response and independent review. New cap2, worker3/root1 Go, old budgets unchanged; full M2/M3/pilot OPEN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Root independent REVIEWER before effects.",
+  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted source awaiting compile.",
   "updatedAt": "2026-10-14",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -96,6 +96,12 @@
       "path": "backend/api/handlers/intervention_live_r096_test.go",
       "sha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
       "constructor": "r096IsolatedTransport() reused directly; R097 proof inherited unchanged"
+    },
+    "actualUsed": {
+      "workerGo": 0,
+      "reviewerGo": 0,
+      "providerCalls": 0,
+      "fixtures": 0
     }
   },
   "x-actualWorkerModel": {
@@ -853,9 +859,9 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "FROZEN",
-    "artifact": "docs/reviews/R097_FINAL_INDEPENDENT_LOCAL_TLS_REVIEW_2026-10-14.md",
-    "liveM2": "BLOCKED_OWNER_BUDGET_EXHAUSTED"
+    "result": "BUILD",
+    "artifact": "docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
+    "liveM2": "PENDING_ACTUAL_DISPOSITION"
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -1316,7 +1322,7 @@
     "worker": "/root/m2_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "seed": "7e6d3026649a0afa75467d8eb7f4744d824711fe"
   },
   "x-historicalPreR091FinalClosureProjections": {

@@ -5,6 +5,69 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r098-source-13ee8809c334",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/root_offline_tests.log",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-c14cc2e64d5f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/protected_baseline.json",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-98916c668d34",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/pre_compile_identity.json",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-7ce4e420dcbc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/fresh_owner_manifest.json",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-c5d8b18b7327",
+      "family": "continuity",
+      "path": "docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-3592f324da61",
+      "family": "continuity",
+      "path": "docs/reviews/R098_PRE_EFFECT_SOURCE_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-153df5ad1404",
+      "family": "continuity",
+      "path": "scripts/tests/test_r098_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-93796a52df46",
+      "family": "continuity",
+      "path": "scripts/r098_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
+      "id": "r098-source-863668db9b44",
+      "family": "continuity",
+      "path": "backend/api/handlers/intervention_live_r098_test.go",
+      "status": "ACTIVE",
+      "description": "Exact reviewed R098 source/tooling admission or protected dependency proof, live pending."
+    },
+    {
       "id": "r098-b0fc694a793a",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-098.json",

@@ -890,6 +890,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-098.json`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md`
 - Fresh explicit owner max2 grant, old budgets unchanged, seed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-098.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/root_offline_tests.log`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `scripts/tests/test_r098_intervention_live_fixture.py`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/R098_PRE_EFFECT_SOURCE_WORKER_RETURN_2026-10-14.md`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/fresh_owner_manifest.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `backend/api/handlers/intervention_live_r098_test.go`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `scripts/r098_intervention_live_fixture.py`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/pre_compile_identity.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/protected_baseline.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

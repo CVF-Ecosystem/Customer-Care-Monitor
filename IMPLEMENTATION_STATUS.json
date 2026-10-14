@@ -337,7 +337,7 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-098 BUILD: Sol authors only new source-bound harness using unchanged R097-proved r096IsolatedTransport(), fresh owner max2 manifest/slots and safe typed diagnostics. Stop for Root source review before compile/secret/fixture/live. Worker3/root1 Go total4, new Alibaba2 role1 each; all old budgets/markers unchanged. Full M2/M3/pilot OPEN; accounts parked.",
+    "nextObjective": "CCMAI-RUNTIME-098 exact source independently admitted before compile; Root commits source then admits one worker offline compile. Hash/sign compiled binary and fresh manifest before key precheck/one fixture seed/liveworker1; reviewer1 only after real HTTP response and independent review. New cap2, worker3/root1 Go, old budgets unchanged; full M2/M3/pilot OPEN, accounts parked.",
     "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md",
     "buildDispatched": true,
     "currentExecutionBudget": {
@@ -2466,8 +2466,14 @@
     "sourceCommit": "83c29ce0ad6679f82c90d9f00538f5873b5df69f"
   },
   "x-r098LiveM2": {
-    "status": "BUILD_SOURCE_ADMISSION_PENDING",
+    "status": "BUILD",
     "providerCalls": 0,
-    "freshMax2OwnerGrant": true
+    "freshMax2OwnerGrant": true,
+    "actualUsed": {
+      "workerGo": 0,
+      "reviewerGo": 0,
+      "providerCalls": 0,
+      "fixtures": 0
+    }
   }
 }

@@ -1,0 +1,15 @@
+{
+  "sourceSha256": {
+    "backend/api/handlers/intervention_live_r098_test.go": "0fbd2590dc2425ec254196b04b839cf476020189d0869ef70e8cd54602aa0536",
+    "scripts/r098_intervention_live_fixture.py": "1944353ba5586b01e4e6a2c680f626e482b358e63675df7f7a800fe4c0d886e8",
+    "scripts/tests/test_r098_intervention_live_fixture.py": "49466312c3fdd9a5f12e2fea90151fc9747a4f0607a9765977097d54e34b871f"
+  },
+  "tlsDependencySha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+  "parentManifestSha256": "875a7bb93a9ab4330806d1df6f0b3a62343d52fa20b34aa96a09913671766106",
+  "frozenAndOldProtectedHashesMatch": true,
+  "rootGoUsed": 0,
+  "workerGoUsed": 0,
+  "providerCalls": 0,
+  "secretReads": 0,
+  "rootOfflineTests": 16
+}
