@@ -10573,6 +10573,90 @@
       "path": "scripts/tests/test_r100_intervention_live_fixture.py",
       "status": "ACTIVE",
       "description": "PurePython toolingidentity/parserchecks; no mockprovider governanceproof."
+    },
+    {
+      "id": "r100-compile-binary-admission",
+      "family": "continuity",
+      "path": "docs/reviews/R100_COMPILE_BINARY_ADMISSION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Rootcompile/sourcebinary digest admission, API0/4 liveNOTRUN."
+    },
+    {
+      "id": "r100-compile-binary_bytes",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/binary_bytes.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-binary_sha256",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/binary_sha256.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-command",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/command.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-cwd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/cwd.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-env",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/env.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-exit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/exit.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-source_sha256",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/source_sha256.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-stderr",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-compile-stdout",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_compile/stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual oneofflinecompile safe raw receipt; no runtime/provider effect."
+    },
+    {
+      "id": "r100-fresh-owner-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/fresh_owner_manifest.json",
+      "status": "ACTIVE",
+      "description": "Rootnew4 grantledger digest copy; oldspentcaps unchanged."
+    },
+    {
+      "id": "r100-source-binary-signature",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/source_binary_admission.json",
+      "status": "ACTIVE",
+      "description": "Rootreviewedsource/binary/dependencies/manifest digest-bound admission beforecredential/fixture."
     }
   ]
 }

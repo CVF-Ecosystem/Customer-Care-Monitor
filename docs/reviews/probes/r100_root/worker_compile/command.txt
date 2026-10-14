@@ -1,0 +1,1 @@
+go -C backend test -c -o ../.cvf/runtime/r100_live/intervention_r100.test.exe ./api/handlers

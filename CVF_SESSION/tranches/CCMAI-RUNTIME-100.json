@@ -85,7 +85,7 @@
   "phase": "BUILD",
   "baseCommit": "b33d1fe83be35aa0e20d18590a5462e7f0ecd6fd",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md",
-  "buildCommit": null,
+  "buildCommit": "a5eb32d8ae5ce8abe3413cafcba3fc620543689d",
   "reviewEvidence": [],
   "disposition": "OPEN",
   "freeze": "OPEN",
@@ -103,6 +103,7 @@
   "workOrderStatus": "ACTIVE",
   "x-actualExecution": {
     "providerCalls": 0,
-    "goInvocations": 0
-  }
+    "goInvocations": 1
+  },
+  "x-sourceBinaryAdmission": "docs/reviews/probes/r100_root/source_binary_admission.json"
 }

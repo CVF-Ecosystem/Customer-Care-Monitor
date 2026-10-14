@@ -936,7 +936,18 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/probes/r099_source/pre_build_identity.json`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_SOURCE_READY_WORKER_RETURN_2026-10-14.md`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_bytes.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_sha256.txt`
+- Rootcompile/sourcebinary digest admission, API0/4 liveNOTRUN.: `docs/reviews/R100_COMPILE_BINARY_ADMISSION_2026-10-15.md`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/command.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/cwd.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/env.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/exit.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/source_sha256.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/stderr.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/stdout.txt`
 - Immutable Root dispatcher seed for ownerfreshmax4 syntheticuntilvalid; beforeBUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-100.json`
+- Rootnew4 grantledger digest copy; oldspentcaps unchanged.: `docs/reviews/probes/r100_root/fresh_owner_manifest.json`
 - Explicit isolatedR100harness, max4untilvalid, defaultnotactivated.: `backend/api/handlers/intervention_live_r100_test.go`
 - R2newharness andsourceboundeffects; workerSolMedium, independentRoot, no oldbudgetreset.: `docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md`
 - Accepted intendedR100 current-source realproposal+faithfulusage contract; max4freshcalls.: `docs/specs/M2_INTERVENTION_LIVE_R100_SPEC_2026-10-15.md`
@@ -945,6 +956,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exactnew3/current13/TLSsource hashes beforecompile; no provider effect.: `docs/reviews/probes/r100_root/pre_compile_identity.json`
 - IndependentRoot repairedsource audit acceptssoleofflinecompile only.: `docs/reviews/R100_PRECOMPILE_INDEPENDENT_SOURCE_ADMISSION_2026-10-15.md`
 - Rootpre-effect current13/oldsource/seed/marker/containeridentity protection.: `docs/reviews/probes/r100_root/protected_baseline.json`
+- Rootreviewedsource/binary/dependencies/manifest digest-bound admission beforecredential/fixture.: `docs/reviews/probes/r100_root/source_binary_admission.json`
 - PurePython toolingidentity/parserchecks; no mockprovider governanceproof.: `scripts/tests/test_r100_intervention_live_fixture.py`
 - Source-only worker return; oneprecompile repair, puretooling7PASS, no liveclaim.: `docs/reviews/R100_SOURCE_READY_WORKER_RETURN_2026-10-15.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
