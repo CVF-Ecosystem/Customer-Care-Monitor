@@ -878,6 +878,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded R097 local protocol proof; no live governance or product closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-097.json`
 - Bounded R097 local protocol proof; no live governance or product closure.: `docs/specs/R097_LOCAL_TLS_PROOF_SPEC_2026-10-14.md`
 - Bounded R097 local protocol proof; no live governance or product closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md`
+- Independent bounded local TLS tooling review PASS; actual live M2 remains blocked.: `docs/reviews/R097_FINAL_INDEPENDENT_LOCAL_TLS_REVIEW_2026-10-14.md`
 - Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/R097_LOCAL_TLS_WORKER_RETURN_2026-10-14.md`
 - Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/worker_go_stdout.log`
 - Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/root_dependency_audit.json`

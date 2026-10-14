@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-097", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-097", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md
 
-CCMAI-RUNTIME-097 REVIEW_PENDING: Root independently reviews one actual PASS local TLS test, source/binary pins and zero-effect receipt, then records bounded disposition. R096 physical2/2 and Go7/7 exhausted; no live call authority, M2/M3/pilot OPEN and accounts parked.
+CCMAI-RUNTIME-097 FROZEN bounded local TLS proof at 510856d05108f47dad3eca944ccd52bb277d0f27; Root presents docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh owner max2 synthetic Alibaba calls. No new provider/key/fixture effect before fresh owner approval, committed seed and source/binary admission. R0962/2 unknown transport and7/7Go remain exhausted; no proposal, full M2/M3/pilot OPEN; Facebook/Zalo OA parked.
 
-Codex /root independent REVIEWER and SESSION_SYNC_STEWARD; Sol Medium proof worker returned idle, no replay.
+Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R097 R1 REVIEW; Sol Medium returned accepted idle, no replay.
 
 ## Historical R094 bounded closure
 

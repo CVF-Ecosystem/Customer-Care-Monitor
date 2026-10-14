@@ -5,6 +5,13 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r097-final-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R097_FINAL_INDEPENDENT_LOCAL_TLS_REVIEW_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Independent bounded local TLS tooling review PASS; actual live M2 remains blocked."
+    },
+    {
       "id": "r097-proof-42222292738f",
       "family": "continuity",
       "path": "docs/reviews/probes/r097_local_tls/worker_proof.json",

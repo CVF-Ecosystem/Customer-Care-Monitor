@@ -38,3 +38,5 @@ Public Export Disposition: DEFERRED_PRIVATE_ONLY.
 ## Exact corrected candidate proof
 
 R097 executed TestR096TransportTLSOffline once: PASS, exit0, no SKIP. Retained exact compiled binary SHA256 `f8feff858ce71ddc5c97b75ae7b15b4db8c25320543627ae8047ab646fefd99a`, 40,401,408 bytes; no launch or live admission for that binary. [Worker receipt](../probes/r097_local_tls/worker_proof.json), [independent dependency audit](../probes/r097_local_tls/root_dependency_audit.json). This candidate is the concrete corrected source basis; R098 must have separately reviewed new ledger-bound harness/admission after owner grant.
+
+Independent R097 review: [accepted bounded local proof](../R097_FINAL_INDEPENDENT_LOCAL_TLS_REVIEW_2026-10-14.md), exact proof material `510856d05108f47dad3eca944ccd52bb277d0f27`. R097 closure never grants live calls; R096 remains blocked.

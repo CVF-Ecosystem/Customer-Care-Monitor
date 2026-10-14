@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-097 — one local TLS proof
 
-Status: COMPLETE_PENDING_REVIEW
+Status: CLOSED
 Risk: R1
 Worker: /root/m2_worker
 Reviewer: Codex /root
