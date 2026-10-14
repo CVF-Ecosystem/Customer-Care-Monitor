@@ -39,18 +39,19 @@
     "sameScopeRepairs": "NoadditionalGo; source is read-only underthisproofscope; stoponfailure, preserveevidence."
   },
   "claimScope": "PurelocalTLSHTTP1tooling regression only. No realAI/output/governance/M2/M3/pilot/CI/deployment acceptance; old2unknownproviderattempts andGo failures preserved.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "baseCommit": "83c29ce0ad6679f82c90d9f00538f5873b5df69f",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_097_LOCAL_TLS_PROOF.md",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "OPEN_LOCAL_PROOF",
+  "disposition": "LOCAL_TLS_REVIEW_PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -60,5 +61,12 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE"
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "x-actualExecution": {
+    "workerGo": 1,
+    "reviewerGo": 0,
+    "providerCalls": 0,
+    "credentialReads": 0,
+    "DBFixtureOperations": 0
+  }
 }

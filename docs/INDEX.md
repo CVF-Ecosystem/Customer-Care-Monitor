@@ -878,6 +878,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded R097 local protocol proof; no live governance or product closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-097.json`
 - Bounded R097 local protocol proof; no live governance or product closure.: `docs/specs/R097_LOCAL_TLS_PROOF_SPEC_2026-10-14.md`
 - Bounded R097 local protocol proof; no live governance or product closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/R097_LOCAL_TLS_WORKER_RETURN_2026-10-14.md`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/worker_go_stdout.log`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/root_dependency_audit.json`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/worker_proof.json`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/worker_go_stderr.log`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

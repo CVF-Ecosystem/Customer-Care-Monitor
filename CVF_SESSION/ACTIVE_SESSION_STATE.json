@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-097",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-097 BUILD: Sol runs exactly one offline Go invocation for ^TestR096TransportTLSOffline$ on pinned corrected source, retains actual logs and binary, then stops for Root independent review. Zero provider, credential, DB or fixture effects. Old R096 provider2/2 and Go7/7 exhausted; M2/M3/pilot OPEN, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-097 REVIEW_PENDING: Root independently reviews one actual PASS local TLS test, source/binary pins and zero-effect receipt, then records bounded disposition. R096 physical2/2 and Go7/7 exhausted; no live call authority, M2/M3/pilot OPEN and accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium local proof worker; Root independent REVIEWER after return.",
+  "activeRole": "Codex /root independent REVIEWER and SESSION_SYNC_STEWARD; Sol Medium proof worker returned idle, no replay.",
   "updatedAt": "2026-10-14",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -65,7 +65,9 @@
     "loopbackTLSOnly": true,
     "selector": "^TestR096TransportTLSOffline$",
     "sourceGoSha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
-    "sameScopeRepairs": "NoadditionalGo; source is read-only underthisproofscope; stoponfailure, preserveevidence."
+    "sameScopeRepairs": "NoadditionalGo; source is read-only underthisproofscope; stoponfailure, preserveevidence.",
+    "goUsed": 1,
+    "remainingGo": 0
   },
   "x-actualWorkerModel": {
     "model": "gpt-6-sol",
@@ -81,7 +83,7 @@
   },
   "x-candidatePlanning": {
     "id": "CCMAI-RUNTIME-097",
-    "status": "BUILD",
+    "status": "REVIEW_PENDING",
     "artifact": "docs/work_orders/CCMAI_RUNTIME_097_LOCAL_TLS_PROOF.md"
   },
   "x-historicalR067State": {
@@ -822,9 +824,9 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "LIVE_BLOCKED_SOURCE_ASSERTION_PROOF_PENDING",
-    "providerCalls": 2,
-    "artifact": "docs/reviews/R096_TRANSPORT_FAILURE_AND_TLS_REPAIR_REVIEW_2026-10-14.md"
+    "result": "REVIEW_PENDING",
+    "artifact": null,
+    "liveM2": "BLOCKED_OWNER_BUDGET_EXHAUSTED"
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -909,8 +911,11 @@
     "round": 1
   },
   "x-currentClosure": {
-    "status": "OPEN",
-    "fullM2": "OPEN"
+    "status": "REVIEW_PENDING",
+    "scope": "LOCAL_TLS_TOOLING_ONLY",
+    "fullM2": "OPEN",
+    "nextApprovalPacket": "docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md",
+    "providerApproval": "NOT_GRANTED"
   },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
@@ -1282,7 +1287,7 @@
     "worker": "/root/m2_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
-    "status": "DISPATCH_READY",
+    "status": "RETURNED_IDLE_NO_REPLAY",
     "seed": "83c29ce0ad6679f82c90d9f00538f5873b5df69f"
   },
   "x-historicalPreR091FinalClosureProjections": {

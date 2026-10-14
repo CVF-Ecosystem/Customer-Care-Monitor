@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-097", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-097", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md
 
-CCMAI-RUNTIME-097 BUILD: Sol runs exactly one offline Go invocation for ^TestR096TransportTLSOffline$ on pinned corrected source, retains actual logs and binary, then stops for Root independent review. Zero provider, credential, DB or fixture effects. Old R096 provider2/2 and Go7/7 exhausted; M2/M3/pilot OPEN, accounts parked.
+CCMAI-RUNTIME-097 REVIEW_PENDING: Root independently reviews one actual PASS local TLS test, source/binary pins and zero-effect receipt, then records bounded disposition. R096 physical2/2 and Go7/7 exhausted; no live call authority, M2/M3/pilot OPEN and accounts parked.
 
-Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium local proof worker; Root independent REVIEWER after return.
+Codex /root independent REVIEWER and SESSION_SYNC_STEWARD; Sol Medium proof worker returned idle, no replay.
 
 ## Historical R094 bounded closure
 

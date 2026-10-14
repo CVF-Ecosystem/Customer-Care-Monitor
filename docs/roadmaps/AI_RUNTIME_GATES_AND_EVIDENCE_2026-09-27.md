@@ -4,11 +4,17 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
+## Current M2 checkpoint — R096/R097, 2026-10-14
+
+M2 source/local backend prototype accepted at R094; actual live R096 attempts2/2 returned no provider HTTP response, usage/model/billing UNKNOWN, proposals0. R096 remains CHANGES_REQUIRED/FREEZE OPEN. Two consumed slots never reset; old R0932/2 and R095 pre-provider failure retained. Root owns the HTTP1 transport source admission miss; local reproduction identifies copied ALPN mismatch, remote cause remains unproved. Corrected source83c29ce is read-only; exactly one R097 local TLS regression PASS/exit0/noSKIP, proof only protocol tooling. Owned fixture cleaned, existing app/DB unchanged.
+
+Finite next route: independent R097 local review and committed continuity; present concrete corrected TLS live approval packet R098 for fresh max2 synthetic calls. No call before fresh owner grant and new immutable seed/source admission. No generic prerequisite successor: failed local proof or first unknown live result requires stop/reassess. Product outcome still pending is evidence-valid real AI proposal or explicit real-output rejection, then M3 human review/assignment/outcome; full M2/M3/pilot not accepted. Facebook/Zalo OA parked.
+
 ## Roadmap delivery hiện hành — M1–M5 (2026-10-13)
 
-[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) là cửa vào để chọn việc tiếp theo: M1 khóa bản đầu tiên và dependency; M2 đường phân tích có kiểm soát; M3 người duyệt/giao việc/kết quả; M4 shadow/pilot có đo lường; M5 release và tiếp quản. Kế hoạch đưa quyết định S0 lên trước implementation và an toàn dữ liệu tối thiểu lên trước pilot. Nó cụ thể hóa thứ tự P0–P4 bên dưới, giữ toàn bộ hợp đồng exit S0–S7; không đóng stage hoặc cấp runtime authority. Hiện tại M1 còn mở, M2–M5 chưa dispatch.
+[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) là cửa vào để chọn việc tiếp theo: M1 khóa bản đầu tiên và dependency; M2 đường phân tích có kiểm soát; M3 người duyệt/giao việc/kết quả; M4 shadow/pilot có đo lường; M5 release và tiếp quản. Kế hoạch đưa quyết định S0 lên trước implementation và an toàn dữ liệu tối thiểu lên trước pilot. Nó cụ thể hóa thứ tự P0–P4 bên dưới, giữ toàn bộ hợp đồng exit S0–S7; không đóng stage hoặc cấp runtime authority. M1 business/pilot còn mở; M2 source/local đã dispatch và accepted bounded, live outcome chưa đạt; M3–M5 chưa dispatch.
 
-## Current M1 checkpoint — R092/R093
+## Historical M1 checkpoint — R092/R093
 
 R092 local synthetic intended contract independently reviewed at1e46390; full M1 exit remains OPEN. R093 [independent live review](../reviews/R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md) observes two real Alibaba HTTP200/model-match responses, positive evidence-reference FAIL and neutral PASS, physical cap2/2 exhausted/returned. No Go/Analyzer/CVF-runtime proof. Active [R093 handoff](../../CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md) controls next: one integrated M2 synthetic manual application route with bounded verified toolchain/isolated DB setup, admission and strict snapshot/ID/quote validation, then M3 human browser workflow. Native setup, M2/M3 product outcome and M4/M5/pilot remain OPEN; accounts parked. Two supporting scopes require this finite product-route reassessment; no generic R093 retry/helper successor.
 

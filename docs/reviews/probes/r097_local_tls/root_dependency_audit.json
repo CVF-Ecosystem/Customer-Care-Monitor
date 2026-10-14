@@ -1,0 +1,25 @@
+{
+  "reviewer": "Codex /root",
+  "sourceCommit": "83c29ce0ad6679f82c90d9f00538f5873b5df69f",
+  "r096GoSha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+  "frozenR094Source": {
+    "backend/engine/intervention.go": "1349833280b4ee6170729c921a7e37ee0f4302fd6a5638e114f2cd425f280cb2",
+    "backend/engine/intervention_usage_test.go": "a5e5c33d6f3fd7f1373cac51eebd0299a923362609d296120b225f4a13036346",
+    "backend/db/models/intervention.go": "25f5fd35ba1ee47382966dcbbc8e571910598e044586acb8234e7d889d4a5830",
+    "backend/api/handlers/intervention.go": "f8ae2624521db3755f510754f09578392060818e4f9a7243d8e856df3a2e8496",
+    "backend/api/handlers/intervention_route_test.go": "3b6dd20878fc9712c7e2e054aea2187c4917d4e1176036c56506af59dcc5841b",
+    "backend/ai/openai_compatible.go": "99e7b34750ad7991497b23bca415da17a3977d60f7d6074685d947f4989e8d00",
+    "backend/ai/openai_compatible_test.go": "d9899c5073b7fc9d26d5eee44e6e8cdb79cce0103b80b2fd437472a6be44149f",
+    "backend/api/router.go": "94d91d60204bd07cca09d00c45068e8cbf5a355f83e289ac7026ceac3fece4dd",
+    "backend/api/handlers/jobs.go": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e",
+    "backend/db/mysql.go": "c694812f913d6121622857c46b8d7878ef7b4fefff92ec1b3b1f8489e084076b",
+    "backend/engine/analyzer.go": "d1c9ba5153cbd79e891899f78d42fa0caacbaf7ef2ae570c1dc7084382971bc2",
+    "backend/engine/analyzer_modes.go": "02b979fc9166c2ebc4371b1b78dfec08afbc526174423238244e57a3caab9824"
+  },
+  "oldR095GitDelta": "NONE",
+  "rootGoInvocations": 0,
+  "providerCalls": 0,
+  "secretReads": 0,
+  "staticReview": "TLS NextProtos http/1.1, certificate verification preserved; regression dual-protocol local TLS verifies HTTP/1.1 status200 and rejects h2. Existing before/after Root probe retained; real remote cause UNKNOWN.",
+  "originalFailedWorkerTest": "R096 repair1 observed HTTP1.1/200 but failed ALPN empty assertion, corrected after budget exhausted; failure preserved"
+}

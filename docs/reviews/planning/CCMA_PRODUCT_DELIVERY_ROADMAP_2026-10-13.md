@@ -4,6 +4,12 @@ Status: ACTIVE_PLANNING
 
 Ngày: 2026-10-13. Plan ID: `CCMAI-PRODUCT-DELIVERY-20261013`. Tác giả: Local ORCHESTRATOR / SPEC_AUTHOR. Phạm vi đợt này: tài liệu R1 theo yêu cầu trực tiếp của owner; implementation tương lai tối thiểu R2 theo AGENTS.md. Baseline source: `49160128df5109ed46054babb6942457a3ed85a9`; worktree sạch trước authoring. Các mốc M1–M5 dưới đây đều chưa được nghiệm thu theo hợp đồng roadmap này.
 
+## Current M2 checkpoint — R096/R097, 2026-10-14
+
+M2 source/local backend prototype accepted at R094; actual live R096 attempts2/2 returned no provider HTTP response, usage/model/billing UNKNOWN, proposals0. R096 remains CHANGES_REQUIRED/FREEZE OPEN. Two consumed slots never reset; old R0932/2 and R095 pre-provider failure retained. Root owns the HTTP1 transport source admission miss; local reproduction identifies copied ALPN mismatch, remote cause remains unproved. Corrected source83c29ce is read-only; exactly one R097 local TLS regression PASS/exit0/noSKIP, proof only protocol tooling. Owned fixture cleaned, existing app/DB unchanged.
+
+Finite next route: independent R097 local review and committed continuity; present concrete corrected TLS live approval packet R098 for fresh max2 synthetic calls. No call before fresh owner grant and new immutable seed/source admission. No generic prerequisite successor: failed local proof or first unknown live result requires stop/reassess. Product outcome still pending is evidence-valid real AI proposal or explicit real-output rejection, then M3 human review/assignment/outcome; full M2/M3/pilot not accepted. Facebook/Zalo OA parked.
+
 ## 1. Đọc và áp dụng roadmap này
 
 Đây là kế hoạch thực thi sản phẩm hiện hành, chuyển đánh giá độc lập ngày 2026-10-13 thành mốc hữu hạn và điều kiện bàn giao. Agent mới đọc bootstrap → memory → active handoff → tài liệu này → SPEC/work order của mốc được giao. Không đọc toàn bộ lịch sử mặc định. Roadmap cho phép chuẩn bị kế hoạch trong phạm vi owner đã giao; không phải work order cấp BUILD, provider, dữ liệu khách hàng, account, push hoặc deploy.

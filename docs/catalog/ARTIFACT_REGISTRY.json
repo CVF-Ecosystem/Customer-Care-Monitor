@@ -5,6 +5,48 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r097-proof-42222292738f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r097_local_tls/worker_proof.json",
+      "status": "ACTIVE",
+      "description": "Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance."
+    },
+    {
+      "id": "r097-proof-167d8d1d3e33",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r097_local_tls/worker_go_stdout.log",
+      "status": "ACTIVE",
+      "description": "Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance."
+    },
+    {
+      "id": "r097-proof-92e8834f627b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r097_local_tls/worker_go_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance."
+    },
+    {
+      "id": "r097-proof-24891d343ee1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r097_local_tls/root_dependency_audit.json",
+      "status": "ACTIVE",
+      "description": "Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance."
+    },
+    {
+      "id": "r097-proof-f009ab80c067",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance."
+    },
+    {
+      "id": "r097-proof-04c4a42e8e83",
+      "family": "continuity",
+      "path": "docs/reviews/R097_LOCAL_TLS_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance."
+    },
+    {
       "id": "r097-8635bb77a834",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-097.json",
