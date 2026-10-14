@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -342,9 +342,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-096 liveBLOCKED: owner2/2unknowntransport/noresponse/no proposals; correctedTLSsource is reviewed but testassertionrevisionNOT_RUN after originalGo4FAIL. Root bounds exactlyoneR097 localTLSproof invocation under existing localwork authority, no provider/key/DB effects; oldbudgets/markers preserved. FreshAPIbudgetrequiredonlyaftercorrectedproof/cleanup. M2/M3/pilotOPEN,accountsparked.",
-    "activeWorkOrder": null,
-    "buildDispatched": false,
+    "nextObjective": "CCMAI-RUNTIME-097 BUILD: Sol runs exactly one offline Go invocation for ^TestR096TransportTLSOffline$ on pinned corrected source, retains actual logs and binary, then stops for Root independent review. Zero provider, credential, DB or fixture effects. Old R096 provider2/2 and Go7/7 exhausted; M2/M3/pilot OPEN, accounts parked.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_097_LOCAL_TLS_PROOF.md",
+    "buildDispatched": true,
     "currentExecutionBudget": {
       "physicalProviderRequestsTotal": 2,
       "workerProviderRequests": 1,
@@ -2054,7 +2054,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-096",
+  "activeTranche": "CCMAI-RUNTIME-097",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2070,7 +2070,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_097_LOCAL_TLS_PROOF.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2461,5 +2463,11 @@
     "liveCalls": 2,
     "fullM2": "OPEN",
     "proposalsCreated": 0
+  },
+  "x-r097LocalTLS": {
+    "status": "BUILD_ONE_LOCAL_PROOF",
+    "providerCalls": 0,
+    "goUsed": 0,
+    "sourceCommit": "83c29ce0ad6679f82c90d9f00538f5873b5df69f"
   }
 }

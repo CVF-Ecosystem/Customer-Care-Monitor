@@ -1,6 +1,6 @@
 # M2 real synthetic application evidence — R096
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -68,3 +68,5 @@ WorkerGo4 selectedtest observedactualHTTP1.1/200 butFAILED overstrict ALPNassert
 ## Root cleanup verification
 
 Fixture had stopped; reviewed cleanup helper refused missing active port binding before removal. Root verified exact pinned IDs/labels/image/mount/configured loopback binding and empty network, removed only owned container/volume/network. All three absent; protected existing container IDs and exhausted parent markers unchanged. Receipt: docs/reviews/probes/r096_root/cleanup_receipt.json. No secret, provider, restart or app/DB operation.
+
+R097 local proof successor only; R096 live CHANGES_REQUIRED/FREEZE OPEN and historical consumed markers/counters unchanged.

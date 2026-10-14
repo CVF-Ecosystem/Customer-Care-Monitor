@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-097",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_AUTHORIZED_LOCAL_TLS_TOOLING_PROOF",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/m2_worker",
+    "repairWorker": "/root/m2_worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/specs/R097_LOCAL_TLS_PROOF_SPEC_2026-10-14.md",
+    "docs/work_orders/CCMAI_RUNTIME_097_LOCAL_TLS_PROOF.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "provider_or_external_network_or_secret_reads_or_DB_fixture_operations",
+    "R094_R095_R096_source_seed_marker_budget_or_existing_app_DB_changes",
+    "more_than_one_Go_invocation_or_any_replay",
+    "core_policy_gate_workflow_manifest_changes_or_download_install_pull",
+    "push_merge_deploy_release_or_worker_commit_selfreview"
+  ],
+  "ownerAuthorization": "OriginalcontinueCCMAlocalwork and Rootorchestrator/reviewer permitboundedlocaltooling tests; no newAPIpermissionneededforonepureloopbackTLSprotocolproof. OwnerAlibaba2/2exhausted remainsunchanged andcannotbeusedhere.",
+  "entryDecision": "R096correctedTLSsource/testassertion isavailable butfinalassertionNOT_RUN underexhaustedoldGocounters. Exactlyone Go localTLSselector with-work verifiescurrentcorrectedsource beforeconcretefresh-APIapproval packet; no genericprerequisitecampaign or sourceedits. Root independentbefore/afterrepro inheritedwithinunchangedTLSdependency.",
+  "executionBudget": {
+    "physicalProviderRequestsTotal": 0,
+    "providerSecretReads": 0,
+    "goInvocationsTotal": 1,
+    "workerGoInvocations": 1,
+    "reviewerGoInvocations": 0,
+    "ownedDisposableMySQLFixturesTotal": 0,
+    "loopbackTLSOnly": true,
+    "selector": "^TestR096TransportTLSOffline$",
+    "sourceGoSha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+    "sameScopeRepairs": "NoadditionalGo; source is read-only underthisproofscope; stoponfailure, preserveevidence."
+  },
+  "claimScope": "PurelocalTLSHTTP1tooling regression only. No realAI/output/governance/M2/M3/pilot/CI/deployment acceptance; old2unknownproviderattempts andGo failures preserved.",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "baseCommit": "83c29ce0ad6679f82c90d9f00538f5873b5df69f",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_097_LOCAL_TLS_PROOF.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "OPEN_LOCAL_PROOF",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE"
+}
