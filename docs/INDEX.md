@@ -897,6 +897,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/worker_setup_stdout.log`
 - Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/fixture_pre_live.json`
 - Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/worker_setup_stderr.log`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/fresh_slot-2.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/fresh_owner_cap.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/worker_receipt.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-099.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/live_outcome_summary.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/reviewer_receipt.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/fresh_slot-1.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/R098_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-14.md`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/real_provider_receipt.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/R098_LIVE_WORKER_RETURN_2026-10-14.md`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/cleanup_receipt.json`
 - Fresh explicit owner max2 grant, old budgets unchanged, seed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-098.json`
 - Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/root_offline_tests.log`
 - Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `scripts/tests/test_r098_intervention_live_fixture.py`

@@ -1,0 +1,18 @@
+# R098 bounded live M2 worker return
+
+Status: COMPLETE_PENDING_REVIEW
+Risk: R2
+Worker: /root/m2_worker
+Reviewer: Codex /root
+Role: /root/m2_worker IMPLEMENTATION_WORKER
+Date: 2026-10-14
+
+The admitted R098 worker application call reached the actual Alibaba endpoint once and received HTTP 200. The captured response reported model `qwen3.7-flash`, `finish_reason=length`, prompt tokens 272, completion tokens 758, total tokens 1030, and empty `message.content` with reasoning content present. No reasoning or provider answer text is reproduced here. The authenticated application route persisted a case with execution `USAGE_UNKNOWN`, disposition `NOT_CREATED`, reason `PROVIDER_UNKNOWN`, attempt `UNKNOWN`, database budget consumed 1/2 and zero proposals. The actual sanitized request/response and application rows are retained in ignored `.cvf/runtime/r098_live/worker_receipt.json`; app HTTP 200 is not proposal success.
+
+Root independently invoked the reviewer role once on the same signed binary and fresh owned fixture. Root reported HTTP 200, model `qwen3.7-flash`, `finish_reason=length`, empty answer, prompt tokens 266 and completion tokens 758; zero proposals and database budget consumed 2/2. Fresh parent physical slots are 2/2 permanently consumed; old R095/R096/R093 ledgers remain unchanged. Worker Go/test-binary use is 3/3 (compile, fixture seed, worker live), Root reviewer use is 1/1, total 4/4. There is no retry, fallback, tuning, third call or budget refund. The recorded monetary charge remains UNKNOWN.
+
+Exact source identities remained unchanged through live execution: R098 Go `0fbd2590dc2425ec254196b04b839cf476020189d0869ef70e8cd54602aa0536`, Python supervisor `1944353ba5586b01e4e6a2c680f626e482b358e63675df7f7a800fe4c0d886e8`, Python offline tests `49466312c3fdd9a5f12e2fea90151fc9747a4f0607a9765977097d54e34b871f`, inherited R096 TLS constructor source `3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad`, and signed compiled binary `df02ce7a587831a05282effb8e7276651aded6aaac3d9b06e0d07e910a1619d4`. The new grant manifest distinguished fresh R098 cap2 from exhausted historical R0962/2. The fixture used one cached image on loopback; the existing app/DB/nginx identities matched their protected pins at setup. Root owns post-live cleanup and its independent receipt; cleanup is pending at this worker return.
+
+Read-only source trace: `AnalyzeChatOnce` in `backend/ai/openai_compatible.go` rejects empty content alongside parse/choice checks and returns a zero `AIResponse` before setting the parsed model and usage. `RunManual` in `backend/engine/intervention.go` takes any adapter error directly to `PROVIDER_UNKNOWN`/`UNKNOWN`, so it does not call `settleInterventionResponse`. That explains why the database attempt has unknown model/usage even though the sanitized wire response reports a known model and tokens. The observed output exhaustion is a real response property; whether any different request would produce a usable answer is untested, and no parameters were changed after it.
+
+Finite next source-local repair, requiring a separate governed path: preserve parsed model and usage on a valid HTTP 200 with empty content through a safe typed response error, then settle that physical response before recording an explicit invalid/empty-output case with no proposal. Transport/non-200/unparsed responses must retain UNKNOWN. A loopback software test should verify known model/usage settlement and no proposal; it cannot establish governance behavior. No product source edit or additional provider effect was performed in R098. Actual evidence-valid proposal and full M2/M3/pilot acceptance remain OPEN pending independent review and separate authorization for any new external call.

@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED_CLEAN",
+  "ownedRemoved": {
+    "containerId": "4da32df43c1be669426589669ebe089fafb5c334315f94b16cd39cdb9044ada9",
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "networkId": "aee8f98d38f74c5f11bf5169bcbf5476fa68e545f0d4c7338f06e6f991f89f3a",
+    "volumeIds": [
+      "e5b8e1d71c5ef0c30f821d386fca74af4108e9bde86fc340815b2e8ebb491dc8"
+    ]
+  },
+  "protectedContainerIdsUnchanged": {
+    "ccma-app-1": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+    "ccma-nginx-1": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+    "ccma-db-1": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314"
+  },
+  "oldSourcesAndConsumedMarkersUnchanged": true,
+  "freshProviderSlotsRetained": 2,
+  "freshGoUsed": {
+    "worker": 3,
+    "reviewer": 1
+  },
+  "cleanupProviderCalls": 0,
+  "cleanupSecretReads": 0
+}

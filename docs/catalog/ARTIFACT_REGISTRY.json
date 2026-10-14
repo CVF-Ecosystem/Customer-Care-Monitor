@@ -5,6 +5,83 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r098-live-65d55065b255",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/worker_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-8ddde27551d1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/reviewer_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-d983b772fc9c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/real_provider_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-8db3344b7862",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/live_outcome_summary.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-1e9e975a5524",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/fresh_slot-2.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-93136855169d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/fresh_slot-1.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-259d5e70d002",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/fresh_owner_cap.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-fee0547b78bc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-72d874d4c85b",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-099.json",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-f3090db78880",
+      "family": "continuity",
+      "path": "docs/reviews/R098_LIVE_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
+      "id": "r098-live-cc3e489546d9",
+      "family": "continuity",
+      "path": "docs/reviews/R098_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance."
+    },
+    {
       "id": "r098-fixture-7d343e6d70bb",
       "family": "continuity",
       "path": "docs/reviews/probes/r098_root/worker_setup_stdout.log",

@@ -81,20 +81,22 @@
     }
   },
   "claimScope": "Actual bounded R098 real provider request/response and application output validity/rejection on synthetic fixture only. Old R096 remote cause remains unproved; localTLS not AI governance. Full M2/M3/pilot/CI/deployment OPEN.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "7e6d3026649a0afa75467d8eb7f4744d824711fe",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md",
   "buildCommit": "3d1ce43b1739d6edbba6296a2231a487268473d7",
   "reviewEvidence": [
-    "docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md"
+    "docs/reviews/R098_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-14.md"
   ],
-  "disposition": "OPEN",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -104,11 +106,28 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "x-actualExecution": {
-    "workerGo": 2,
-    "reviewerGo": 0,
-    "providerCalls": 0,
+    "workerGo": 3,
+    "reviewerGo": 1,
+    "providerCalls": 2,
     "fixtures": 1
+  },
+  "governanceReceipt": "docs/reviews/probes/r098_root/real_provider_receipt.json",
+  "x-liveOutcome": {
+    "wireHTTP": [
+      200,
+      200
+    ],
+    "model": "qwen3.7-flash",
+    "reportedCompletionTokens": [
+      758,
+      758
+    ],
+    "answersEmpty": true,
+    "proposals": 0,
+    "dbUsage": "UNKNOWN_METADATA_LOSS",
+    "cleanup": "VERIFIED_CLEAN",
+    "fullM2": "OPEN"
   }
 }
