@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-097", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-098", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md
 
-CCMAI-RUNTIME-097 FROZEN bounded local TLS proof at 510856d05108f47dad3eca944ccd52bb277d0f27; Root presents docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh owner max2 synthetic Alibaba calls. No new provider/key/fixture effect before fresh owner approval, committed seed and source/binary admission. R0962/2 unknown transport and7/7Go remain exhausted; no proposal, full M2/M3/pilot OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-098 BUILD: Sol authors only new source-bound harness using unchanged R097-proved r096IsolatedTransport(), fresh owner max2 manifest/slots and safe typed diagnostics. Stop for Root source review before compile/secret/fixture/live. Worker3/root1 Go total4, new Alibaba2 role1 each; all old budgets/markers unchanged. Full M2/M3/pilot OPEN; accounts parked.
 
-Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R097 R1 REVIEW; Sol Medium returned accepted idle, no replay.
+Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Root independent REVIEWER before effects.
 
 ## Historical R094 bounded closure
 

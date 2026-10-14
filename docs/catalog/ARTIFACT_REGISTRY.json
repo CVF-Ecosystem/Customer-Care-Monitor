@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r098-b0fc694a793a",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-098.json",
+      "status": "ACTIVE",
+      "description": "Fresh R098 max2 synthetic live envelope; historical budgets unchanged."
+    },
+    {
+      "id": "r098-e14d8086ebe6",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md",
+      "status": "ACTIVE",
+      "description": "Fresh R098 max2 synthetic live envelope; historical budgets unchanged."
+    },
+    {
+      "id": "r098-252e72686e3d",
+      "family": "continuity",
+      "path": "docs/specs/M2_INTERVENTION_LIVE_R098_SPEC_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Fresh R098 max2 synthetic live envelope; historical budgets unchanged."
+    },
+    {
+      "id": "r098-82784dfb9c77",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Fresh R098 max2 synthetic live envelope; historical budgets unchanged."
+    },
+    {
       "id": "r098-owner-new2-seed",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-098.json",
@@ -3199,9 +3227,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md",
       "status": "ACTIVE",
-      "description": "Active R097 one local TLS proof; exhausted live M2 remains open."
+      "description": "Active R098 fresh owner-approved corrected TLS M2; source admission before effects."
     },
     {
       "id": "r060-work-order",
