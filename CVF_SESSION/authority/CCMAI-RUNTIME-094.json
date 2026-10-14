@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-094",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_AUTHORIZED_M2_SYNTHETIC_APPLICATION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/m2_worker",
+    "repairWorker": "/root/m2_worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/db/models/intervention*.go",
+    "backend/engine/intervention*.go",
+    "backend/engine/analyzer.go",
+    "backend/engine/analyzer_modes.go",
+    "backend/api/handlers/intervention*.go",
+    "backend/api/handlers/jobs.go",
+    "backend/ai/openai_compatible.go",
+    "backend/ai/openai_compatible_test.go",
+    "backend/db/mysql.go",
+    "backend/api/router.go",
+    "scripts/r094_intervention_fixture.py",
+    "scripts/tests/test_r094_intervention_fixture.py",
+    "docs/specs/M2_INTERVENTION_APPLICATION_SPEC_2026-10-14.md",
+    "docs/work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "provider_requests_secret_reads_or_R093_budget_reset",
+    "existing_application_containers_customer_database_accounts_or_real_channel_effects",
+    "core_policy_gate_profile_workflow_manifest_or_historical_authority_changes",
+    "dependency_download_install_docker_pull_or_unbounded_fixture_creation",
+    "outbound_notifications_customer_auto_send_production_deploy_push_merge_force_or_release",
+    "worker_commit_seed_edit_self_review_or_mock_AI_governance_claim"
+  ],
+  "ownerAuthorization": "2026-10-14 owner resumes CCMA from synchronized main, permits Luna Max and Sol Medium when hard, appoints root orchestrator/reviewer. Existing synthetic-only data and parked accounts persist. Root selects Sol Medium for transaction/concurrency/evidence complexity after Luna read-only intake. New provider effects are not admitted under the exhausted R093 budget.",
+  "entryDecision": "One coherent M2 source and local synthetic application packet, separate from exhausted R093 wire characterization. INTAKE and DESIGN/SPEC must settle before BUILD. Reuse accepted R092 contract and existing job/snapshot/auth primitives; local native toolchain is present. Root independent R2 review precedes any future source-bound live authority. No standalone support campaign or M3 implementation.",
+  "executionBudget": {
+    "physicalProviderRequestsTotal": 0,
+    "automaticRetries": 0,
+    "goInvocationsTotal": 10,
+    "workerGoInvocations": 6,
+    "reviewerGoInvocations": 4,
+    "ownedDisposableMySQLFixturesTotal": 2,
+    "fixturesPerRole": 1,
+    "fixtureImage": "mysql:8.0 cached only; --pull never; no existing services or volumes",
+    "loopbackOnly": true,
+    "maxWorkerMinutes": 60,
+    "sameScopeRepairs": "Up to two consolidated source repair rounds inside unchanged scope/counters; third round without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. No replacement live authority or budget reset.",
+    "cost": "Zero external provider calls. Local request ledger implementation is a physical-call cap, not dollar or vendor billing proof."
+  },
+  "claimScope": "Bounded source plus actual disposable MySQL and loopback transport software behavior. No real provider, runtime AI governance, browser human workflow, pilot, business quality, hosted CI, billing, release or deployment acceptance. M2 live branch and full milestone stay open pending separately bounded approval and actual evidence."
+}
