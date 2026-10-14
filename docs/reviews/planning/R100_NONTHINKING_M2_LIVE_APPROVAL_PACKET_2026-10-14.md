@@ -1,9 +1,33 @@
-# R100 — đề nghị live M2 với thinking tắt rõ ràng
+# R100 — owner-approved bounded M2 until valid result
 
-Status: PROPOSED_OWNER_APPROVAL_REQUIRED
+Status: OWNER_APPROVED_WORK_ORDER_PENDING
 Risk: R2
-Worker: /root/m2_worker (Sol Medium)
+Worker: /root/r100_worker (Sol Medium)
 Reviewer: Codex /root
+Updated: 2026-10-15
+providerExecutionAuthority: OWNER_APPROVED_NEW4_SOURCE_SIGNATURE_REQUIRED
+
+Owner reply: **4 call dùng cho đến khi đạt kết quả**. This supersedes the prior proposed max2 budget and semantic-failure stop. Fresh cap4; stop at first actual valid proposal with faithfully stored known usage. Historical R0982/2 and R099Go1/1 remain spent. R099 current source0640431 is source/compile accepted only; live proof NOT_RUN until this bounded campaign produces evidence.
+
+## Revised execution contract
+
+Up to4 new physical Alibaba requests, synthetic only, qwen3.7-flash, explicit enable_thinking:false;758 requested/768 output ceiling, request<=6000B/response<=1MiB/60sec each/300sec campaign. Four distinct fabricated cases and fixed literal canonical-key prompt are declared before any call. No automatic HTTP retry, same-case replay, redirect, fallback, model/token/mode/prompt tuning or relaxing validation. Each invalid semantic output with known faithful usage may lead to next predeclared case ONLY after independent Root review and an exclusive receipt-hash/source/binary/manifest/slot/case-bound continuation. Transport/noresponse/non200/model mismatch, unknown/partial/lost metadata, source/security/ledger/DB/protected-state anomaly stops with unused slots retained. Valid proposal stops immediately. Completion of this route is not proof of statistical Vietnamese quality or allM2 acceptance.
+
+One fresh owned cachedMySQL loopbackfixture; existingapp/DB/nginx untouched. Compile1/seed1/live1 in a single bounded worker-liveprocess, aggregate<=4 Go/binarylaunches; fourthreserve unspent, no automatic recompile/recreation/relaunch. Root reviews actual workerproviderreceipt/source/DB independently with0newAPI; no duplicate confirmationcall required. Secrets onlymemory/stdin after reviewed source/binary admission, never argv/env/log/filecopy. No realchannel/customer/account/outbound/core/push/merge/deploy effect. Alibaba dollarbillingUNKNOWN.
+
+Root commits immutable R100 seed BEFORE BUILD, then canonical SPEC/order/record/handoff activation. Root reviews new harness BEFORE the one compile and signs exact source/binary/dependencies/freshledger BEFORE credential/fixture/live. OldR095/096/098 harnesses/seeds/markers/budgets unchanged. CurrentR0993hashes plus10otherR094dependencyhashes and directunchangedr096IsolatedTransport are current exactidentity; historical proofs are not promoted across changed dependencies.
+
+Roadmap outcome: evidence-valid current-source realAI proposal and faithful usage; then bounded M3 humanconfirm/correct/assignment/outcome SPEC. M1 business/corpus/pilot decisions can proceed alongside syntheticM2, stage/pilot/release gaps remainOPEN, Facebook/ZaloOA parked. No generic prerequisite successor.
+
+## Prior proposal preserved as history — not current authority
+
+````markdown
+### Original max2 proposal, superseded by explicit owner max4 grant
+
+Historical Status: PROPOSED_OWNER_APPROVAL_REQUIRED
+Historical Risk: R2
+Historical Worker: /root/m2_worker (Sol Medium)
+Historical Reviewer: Codex /root
 Date: 2026-10-14
 providerExecutionAuthority: NONE_PENDING_NEW_OWNER_GRANT
 Source candidate: 0640431dc3c31b3b8403d775ae50a6bc6dfdf601
@@ -35,3 +59,5 @@ Finite Go budget proposed worker3 (compile/seed/live1) and reviewer1(live1), agg
 Public Export Disposition: DEFERRED_PRIVATE_ONLY.
 
 Independent R099 review accepted bounded source/compile only: [final review](../R099_FINAL_INDEPENDENT_SOURCE_COMPILE_REVIEW_2026-10-14.md), source0640431/proof302e873. All changed-source live behavior remains NOT_RUN; this proposed R100 envelope is still NOT_APPROVED.
+
+````
