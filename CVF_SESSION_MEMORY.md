@@ -9,20 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-096", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-096", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md
 
-CCMAI-RUNTIME-096 exactsource/binarydec0ba5c andparentcap2 independently reviewed; Root commits then signs admission and metadata-only currentconfig precheck before one sharedfixture/seed. Solworker1 thenRootreviewer1,max2combinedR095+R096physicalcalls,758tokens/60sec/no retry. ExistingappDB untouched,R094 frozen,R095blockedphysical0,R0932/2unchanged,M2/M3/pilot OPEN,accounts parked.
+CCMAI-RUNTIME-096 liveBLOCKED: owner2/2unknowntransport/noresponse/no proposals; correctedTLSsource is reviewed but testassertionrevisionNOT_RUN after originalGo4FAIL. Root bounds exactlyoneR097 localTLSproof invocation under existing localwork authority, no provider/key/DB effects; oldbudgets/markers preserved. FreshAPIbudgetrequiredonlyaftercorrectedproof/cleanup. M2/M3/pilotOPEN,accountsparked.
 
-Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted R096 fixture/live BUILD.
-
-Same owner physicalcap2; actual0. Source reviewed, signature/configprecheck pending. R095 markers/receipt neverreset.
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium stoppedR096Go4/4, read-onlypendingR097localproof.
 
 ## Historical R094 bounded closure
 

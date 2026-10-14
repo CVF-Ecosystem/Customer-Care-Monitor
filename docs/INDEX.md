@@ -845,7 +845,24 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-096.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/reviewer_receipt.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/repair1_go_stdout.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/config_precheck_stdout.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/source_admission.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/tls_protocol_probe.go`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/worker_receipt.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/R096_REPAIR1_WORKER_RETURN_2026-10-14.md`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-097.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/tls_repro_stdout.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/config_precheck_stderr.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/fixture_pre_live.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/tls_repro_stderr.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/parent_owner_cap.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/R096_TRANSPORT_FAILURE_AND_TLS_REPAIR_REVIEW_2026-10-14.md`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/parent_slot-2.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/parent_slot-1.json`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/specs/M2_INTERVENTION_LIVE_R096_SPEC_2026-10-14.md`
+- Verified removal of stopped R096 owned fixture; protected containers and consumed markers unchanged.: `docs/reviews/probes/r096_root/cleanup_receipt.json`
 - R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `scripts/r096_intervention_live_fixture.py`
 - R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/no_approval_binary_stdout.log`
 - R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `backend/api/handlers/intervention_live_r096_test.go`

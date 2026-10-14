@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-096 — real synthetic M2 application evidence
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: /root/m2_worker
 Reviewer: Codex /root
@@ -68,3 +68,9 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 R095 remains BLOCKED before provider with actualHTTP0; consumed workerclaim/campaign/fixture cleanup neverreset. Same original owner max2 NEW PHYSICALcalls remain, enforced across R095+R096 by `.cvf/runtime/owner_alibaba_new2_20261014/owner_cap.json` and two O_EXCL physical slots inside recorder before RoundTrip. Any unknown/mismatched predecessorreceipt blocks. Immutable R096 seed4503afbbe28e23a7612d41af473b1c52f96a5c8d pins actual R095receipt hash; no extraownerbudget, nooldR093reset.
 
 Accept ONLY currentproviders.alibaba_maas: boundedASCII api_key and pinnedbase_url hash/region/path; requestmodel fromimmutableownerpin qwen3.7-flash, localrecommended_model/models presets recorded asnon-authoritative metadata, availability UNKNOWN until actualresponse. Ignoreauth_header/workspace/curl/instructions fields, neverexecute orprint. Rootsource-signs hashes/binary/parentmanifest then runs metadata-only configprecheck BEFORE fixture/campaign claim, preventing same schema failure. Go/Python R096 source family copies reviewedR095controls plusparentphysicalledger; R094/R095 source unchanged. Worker4/root3Go total7 includingcompile/seed/live, max2same-scope repairs, no repeated broadcampaign. One NEW labelledfixture cachedmysql only; oldfixture not recreated. Actual M2 output or honest rejection still decides live acceptance, not wire200.
+
+## Source-only repair1 after exhausted live campaign
+
+Parent2/2permanent,no moreprovider. RootlocalTLS reproidentifiedALPN defect. SolmaycorrectonlyTLSNextProtos andaddpureloopbackprotocol regression, selectedGo-work testonce(worker4) andretaincandidatebinary; no moreAPI/secret/networkeffects. Root3/3Goexhausted; independentlocalrepro alreadyprovidesbeforefail/afterpass, Source/static/Python review remains. ActualremotecauseUNKNOWN, allfailure receipts preserved, live/fullM2/FREEZE OPEN.
+
+ActualrepairGo4 FAIL(assertion), revisedtestNOT_RUN; R0967/7Go andparent2/2exhausted, no moreeffects. FreshR097oneofflineproof only, oldcounts unchanged.

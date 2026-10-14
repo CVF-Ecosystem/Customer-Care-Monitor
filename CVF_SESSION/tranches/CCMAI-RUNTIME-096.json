@@ -69,18 +69,26 @@
     "sourceReviewBeforeCompile": true
   },
   "claimScope": "Actual bounded real Alibaba application request/response, output validity or explicit rejection and durable ledger on synthetic fixture. No universal CVF governance, full M2/M3, browser, production,pilot,billing or hosted CI claim.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "4503afbbe28e23a7612d41af473b1c52f96a5c8d",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "42efc6d076072158680c401287a319a9b1382612",
+  "reviewEvidence": [
+    "docs/reviews/R096_TRANSPORT_FAILURE_AND_TLS_REPAIR_REVIEW_2026-10-14.md",
+    "docs/reviews/R096_REPAIR1_WORKER_RETURN_2026-10-14.md"
+  ],
+  "disposition": "LIVE_BLOCKED_TRANSPORT_SOURCE_TEST_PROOF_PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -90,17 +98,18 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "x-actualExecution": {
-    "workerGo": 1,
-    "reviewerGo": 1,
-    "providerCalls": 0,
-    "fixtures": 0,
-    "repairRound": 0
+    "workerGo": 4,
+    "reviewerGo": 3,
+    "providerCalls": 2,
+    "fixtures": 1,
+    "repairRound": 1
   },
   "x-preEffectSourceAdmission": {
     "result": "PASS_SOURCE_ONLY",
     "artifact": "docs/reviews/R096_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
     "binarySha256": "dec0ba5c83474b23e0748a03b142616eabb34112af36968581ba16e24f063b5e"
-  }
+  },
+  "x-liveAcceptance": "BLOCKED_TRANSPORT_NO_RESPONSE"
 }

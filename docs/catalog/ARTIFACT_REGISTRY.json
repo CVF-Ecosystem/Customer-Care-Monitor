@@ -5,6 +5,125 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r096-owned-cleanup",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "Verified removal of stopped R096 owned fixture; protected containers and consumed markers unchanged."
+    },
+    {
+      "id": "r096-failure-49d0be434362",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/worker_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-856a72c9dcf3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/tls_repro_stdout.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-b64c1c48bb53",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/tls_repro_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-4259a5cd2a05",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/tls_protocol_probe.go",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-1b7333253cc7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/source_admission.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-01639746bc26",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/reviewer_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-0d5d4728e10f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/repair1_go_stdout.log",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-d27227a20e12",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/parent_slot-2.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-e6474f7c8ef1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/parent_slot-1.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-cc8fc490d59f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/parent_owner_cap.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-ab498a2af7a1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/fixture_pre_live.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-1275c0004874",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/config_precheck_stdout.log",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-9c86eab2a775",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r096_root/config_precheck_stderr.log",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-55e7ac93b40e",
+      "family": "continuity",
+      "path": "docs/reviews/R096_REPAIR1_WORKER_RETURN_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-d2393d00508c",
+      "family": "continuity",
+      "path": "docs/reviews/R096_TRANSPORT_FAILURE_AND_TLS_REPAIR_REVIEW_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
+      "id": "r096-failure-7c193bd941b7",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-097.json",
+      "status": "ACTIVE",
+      "description": "Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance."
+    },
+    {
       "id": "r096-source-3b38a316ddd6",
       "family": "continuity",
       "path": "docs/reviews/probes/r096_worker/worker_offline_transcript.txt",

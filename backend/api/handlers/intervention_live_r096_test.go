@@ -8,6 +8,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"crypto/tls"
+	"crypto/x509"
 	"encoding/hex"
 	"encoding/json"
 	"errors"
@@ -427,6 +428,26 @@ func r096Redact(value, key string) string {
 	return value
 }
 
+func r096IsolatedTransport() (*http.Transport, error) {
+	baseTransport, ok := http.DefaultTransport.(*http.Transport)
+	if !ok {
+		return nil, errors.New("R096_DEFAULT_TRANSPORT_UNAVAILABLE")
+	}
+	isolatedTransport := baseTransport.Clone()
+	isolatedTransport.DisableKeepAlives = true
+	isolatedTransport.ForceAttemptHTTP2 = false
+	isolatedTransport.TLSNextProto = map[string]func(string, *tls.Conn) http.RoundTripper{}
+	isolatedTransport.MaxIdleConnsPerHost = 0
+	if isolatedTransport.TLSClientConfig == nil {
+		isolatedTransport.TLSClientConfig = &tls.Config{}
+	} else {
+		isolatedTransport.TLSClientConfig = isolatedTransport.TLSClientConfig.Clone()
+	}
+	// Match ALPN to the only protocol this scoped transport can parse.
+	isolatedTransport.TLSClientConfig.NextProtos = []string{"http/1.1"}
+	return isolatedTransport, nil
+}
+
 func (r *r096Recorder) RoundTrip(req *http.Request) (*http.Response, error) {
 	r.mu.Lock()
 	defer r.mu.Unlock()
@@ -581,16 +602,11 @@ func TestR096Application(t *testing.T) {
 		return
 	}
 	result.BudgetCap = budget.Cap
-	baseTransport, ok := http.DefaultTransport.(*http.Transport)
-	if !ok {
+	isolatedTransport, err := r096IsolatedTransport()
+	if err != nil {
 		result.ErrorCode = "TRANSPORT_UNSUPPORTED"
 		return
 	}
-	isolatedTransport := baseTransport.Clone()
-	isolatedTransport.DisableKeepAlives = true
-	isolatedTransport.ForceAttemptHTTP2 = false
-	isolatedTransport.TLSNextProto = map[string]func(string, *tls.Conn) http.RoundTripper{}
-	isolatedTransport.MaxIdleConnsPerHost = 0
 	defer isolatedTransport.CloseIdleConnections()
 	recorder := &r096Recorder{next: isolatedTransport, key: in.Key, endpoint: in.Endpoint, role: in.Role}
 	previousTransport := http.DefaultTransport
@@ -657,5 +673,42 @@ func TestR096RecorderOffline(t *testing.T) {
 	key := "sk-R096-synthetic-offline-key"                                                 // cvf-allow-secret-fixture
 	if strings.Contains(r096Redact(`{"key":"sk-R096-synthetic-offline-key"}`, key), key) { // cvf-allow-secret-fixture
 		t.Fatal("redaction failed")
+	}
+}
+
+func TestR096TransportTLSOffline(t *testing.T) {
+	server := httptest.NewUnstartedServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		_, _ = io.WriteString(w, "local protocol only")
+	}))
+	server.EnableHTTP2 = true
+	server.StartTLS()
+	defer server.Close()
+	if !strings.Contains(strings.Join(server.TLS.NextProtos, ","), "h2") {
+		t.Fatal("local server did not offer HTTP/2")
+	}
+
+	transport, err := r096IsolatedTransport()
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer transport.CloseIdleConnections()
+	roots := x509.NewCertPool()
+	roots.AddCert(server.Certificate())
+	transport.TLSClientConfig.RootCAs = roots
+	if transport.TLSClientConfig.InsecureSkipVerify {
+		t.Fatal("certificate verification was disabled")
+	}
+	client := &http.Client{Transport: transport, Timeout: 5 * time.Second}
+	response, err := client.Get(server.URL)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer response.Body.Close()
+	if response.TLS == nil {
+		t.Fatal("local TLS handshake missing")
+	}
+	if response.StatusCode != http.StatusOK || response.Proto != "HTTP/1.1" || response.TLS.NegotiatedProtocol == "h2" {
+		t.Fatalf("unexpected local TLS protocol/status: %s %d %q", response.Proto, response.StatusCode, response.TLS.NegotiatedProtocol)
 	}
 }

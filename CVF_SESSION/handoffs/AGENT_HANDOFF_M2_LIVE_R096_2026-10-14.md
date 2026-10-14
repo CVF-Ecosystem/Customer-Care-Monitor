@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted R096 fixture/live BUILD.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium stoppedR096Go4/4, read-onlypendingR097localproof.
 - Active tranche: CCMAI-RUNTIME-096
-- Next allowed move: CCMAI-RUNTIME-096 exactsource/binarydec0ba5c andparentcap2 independently reviewed; Root commits then signs admission and metadata-only currentconfig precheck before one sharedfixture/seed. Solworker1 thenRootreviewer1,max2combinedR095+R096physicalcalls,758tokens/60sec/no retry. ExistingappDB untouched,R094 frozen,R095blockedphysical0,R0932/2unchanged,M2/M3/pilot OPEN,accounts parked.
+- Next allowed move: CCMAI-RUNTIME-096 liveBLOCKED: owner2/2unknowntransport/noresponse/no proposals; correctedTLSsource is reviewed but testassertionrevisionNOT_RUN after originalGo4FAIL. Root bounds exactlyoneR097 localTLSproof invocation under existing localwork authority, no provider/key/DB effects; oldbudgets/markers preserved. FreshAPIbudgetrequiredonlyaftercorrectedproof/cleanup. M2/M3/pilotOPEN,accountsparked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Canonical rehydration and phase acknowledgment
@@ -40,3 +40,31 @@ Root additionally corrected copied abbreviated tranche next-move and missing mem
 ## Root independent source admission
 
 Root re-read canonical R096 facts, inspected all newparent/schema/transport seams beforecompile, independently ran14PythonPASS and exactbinarywithoutapproval(ROOT_APPROVAL_MISSING/physical0) afterworkercompile1. FrozenR09412 andoldR0953sourcebytes exact; parentRootmanifestknown0/R095receiptSHA pinned. New transportHTTP1-only/fresh/noSDKretry,partialresponse bounded; sourcepreset observation handlesdictIDs withoutclaiming availability. Root REVIEWER accepts source/tooling only, transitionsCOMMIT_STEWARD thenORCHESTRATOR/sourceapprover. Workercompilecwdbackend violatedproject-rootterminal rule; workerdisclosedbeforeeffect andwill usego-Cbackend, nofake rerun. No fixture/key/provider effectyet; signature+realconfigprecheck requiredbeforecampaign.
+
+## Worker signed-setup acknowledgment — 2026-10-14
+
+I re-read the current BUILD bootstrap/state/memory/active handoff/implementation/index and manifest/policy before the setup effect. Root's independent source admission, committed source `42efc6d076072158680c401287a319a9b1382612`, ignored exclusive approval pinning binary `dec0ba5c` and parent manifest, and Root's metadata-only current-schema precheck PASS are recorded. I remain R096 IMPLEMENTATION_WORKER. Root expressly dispatched one owned cached-MySQL fixture setup and one seed binary launch; no live request is dispatched yet. The parent physical-call ledger remains known 0/2, R095 old claim/campaign stays spent, and no source or key file will be printed or copied.
+
+## Root paired live readiness acknowledgment
+
+Root re-read compactcurrent BUILD facts andsource42efc6d/dec0ba5c signature; actualconfiguration schema/keyshape/endpointpin precheck PASS,presetfalse/availabilityUNKNOWN. Root independently verifiesownedcachedimage/container/network/volume/loopbackport/protectedIDs throughreviewed ownership checker. Seedonce,workerGo2/rootGo1,parentphysical0,campaignabsent. Root ORCHESTRATOR dispatchesworker1 thenindependentREVIEWER after canonicalphase sync; sameowneraggregate2,same model/endpoint/keysource,old95markers retained. No newtuning/retry/deploy.
+
+## Root live REVIEW transition
+
+Worker1 real application call returned; Root re-read canonical facts and actual worker receipt, independently checks pinned source/admission/usage ceiling before reviewer1. REVIEW does not mean accepted or FROZEN. Root current roles as header; same cap/model/endpoint/fixture and source. No retry/tune/reset.
+
+## Root consolidated actual review and source repair1
+
+Worker1/reviewer1 eachdelegateattempt1; bothtransportUNKNOWN/status0/bodyempty. Parent2physicalslots andDB2/2 consumedpermanently; proposals0,usage/model/billingUNKNOWN. Root spentremainingGo3 onpureloopbackTLS repro: DefaultTransport.Clone advertisesh2 whileHTTP1parser selected, failsmalformedHTTPresponse; explicitTLS.NextProtos[http/1.1] succeeds. Sourceharnessdefectreproduced; actualremoteerrorcauseUNKNOWN becauseoldcodecapturedonlysafecode. Root owns priorHTTP1 directive/reviewmiss, doesnotblameprovider orrefundcalls. FormalREVIEW CHANGES_REQUIRED tosame-seedsource-onlyBUILDrepair1, no more API/secret/provider/network effects. WorkerGo3/4remainingoneoffline selectedtest with-work toretaincompiledcandidate; RootGo3/3exhausted, Python/static/source review permitted. No furthernativeGo beyondbudget. No output/prompt/modeltuning ordeployment.
+
+## Sol Medium REPAIR_WORKER acknowledgment — 2026-10-14
+
+I re-read the synchronized R096 BUILD bootstrap/state/memory/handoff/implementation/index and Root's formal transport review before editing. I transition from IMPLEMENTATION_WORKER to REPAIR_WORKER for same-seed repair1. I will change only the isolated R096 TLS ALPN harness seam, add a pure local protocol regression, and spend at most the one remaining worker Go invocation; the approved binary, two live receipts, parent physical slots, credential source, fixture and R094/R095 product/source are held unchanged. No provider effect or live M2 success is inferred from an offline protocol test.
+
+## R096 repaired source return and exact remaining gap
+
+WorkerGo4 selectedtest observedactualHTTP1.1/200 butFAILED overstrict ALPNassertion(empty isvalidfallback). Assertioncorrectedsource-only, NOT_RUN underexhaustedR096Go4/root3; originalfailure/source/binary/logs preserved. Root source-inspectsTLS.NextProtos correction andtestacceptempty/http1.1/rejecth2; independentRootbefore/afterTLSrepro supportsconfiguration only. R096LIVE/FREEZEblocked, notclosed. Root criticalpath reassessment: one finiteR1puretooling Go proof isneeded toverifycorrectedtestbeforeaskingfreshAPIbudget; itgrants0provider/secret/DB/fixturecalls,no scope reset/infrastructureloop. NewR097seed precedesdispatch, acceptance onlyselectedTLSlocaltest. ExistingoneR096fixture remainsowned untilRootcleanup; no productioneffect.
+
+## Root cleanup verification
+
+Fixture had stopped; reviewed cleanup helper refused missing active port binding before removal. Root verified exact pinned IDs/labels/image/mount/configured loopback binding and empty network, removed only owned container/volume/network. All three absent; protected existing container IDs and exhausted parent markers unchanged. Receipt: docs/reviews/probes/r096_root/cleanup_receipt.json. No secret, provider, restart or app/DB operation.

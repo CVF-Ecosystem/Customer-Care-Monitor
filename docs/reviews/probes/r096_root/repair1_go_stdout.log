@@ -1,0 +1,7 @@
+WORK=C:\Users\tiennm\AppData\Local\Temp\go-build964426295
+=== RUN   TestR096TransportTLSOffline
+    intervention_live_r096_test.go:712: unexpected local TLS protocol/status: HTTP/1.1 200 ""
+--- FAIL: TestR096TransportTLSOffline (0.01s)
+FAIL
+FAIL	github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers	5.184s
+FAIL
