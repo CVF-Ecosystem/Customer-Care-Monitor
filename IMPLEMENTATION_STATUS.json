@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -79,10 +79,11 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "x-buildInProgress": {
-    "trancheId": "CCMAI-RUNTIME-094",
-    "status": "NONE_BOUNDED_LOCAL_FROZEN",
-    "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
-    "newRuntimeEffectsAuthorized": false
+    "trancheId": "CCMAI-RUNTIME-095",
+    "status": "BUILD",
+    "worker": "/root/m2_worker",
+    "sourceAdmission": "NOT_SIGNED",
+    "providerEffects": "OWNER_APPROVED_BUT_SOURCE_REVIEW_PENDING"
   },
   "knownLimitations": [
     "R094 bounded source/local prototype FROZEN at564ed59; installed intervention service disabled, provider0 and no provider credentials read. Full M2 live/M3/pilot remain OPEN; R095 new max2-cap application approval pending, no R093 budget reset.",
@@ -341,26 +342,36 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.",
-    "activeWorkOrder": null,
-    "buildDispatched": false,
+    "nextObjective": "R095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md",
+    "buildDispatched": true,
     "currentExecutionBudget": {
-      "physicalProviderRequestsTotal": 0,
+      "physicalProviderRequestsTotal": 2,
+      "workerProviderRequests": 1,
+      "reviewerProviderRequests": 1,
       "automaticRetries": 0,
-      "goInvocationsTotal": 10,
-      "workerGoInvocations": 6,
-      "reviewerGoInvocations": 4,
-      "ownedDisposableMySQLFixturesTotal": 2,
-      "fixturesPerRole": 1,
-      "fixtureImage": "mysql:8.0 cached only; --pull never; no existing services or volumes",
+      "redirects": 0,
+      "fallbacks": 0,
+      "model": "qwen3.7-flash",
+      "region": "ap-southeast-1",
+      "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+      "requestedCompletionTokens": 758,
+      "ownerOutputCeiling": 768,
+      "requestBytesMax": 6000,
+      "responseBytesMax": 1048576,
+      "requestTimeoutSeconds": 60,
+      "campaignSecondsMax": 300,
+      "goInvocationsTotal": 8,
+      "workerGoInvocations": 5,
+      "reviewerGoInvocations": 3,
+      "includesCompiledTestBinaryLaunches": true,
+      "ownedDisposableMySQLFixturesTotal": 1,
+      "fixtureImage": "cached mysql:8.0 --pull never",
+      "sharedFixture": true,
       "loopbackOnly": true,
-      "maxWorkerMinutes": 60,
-      "sameScopeRepairs": "Up to two consolidated source repair rounds inside unchanged scope/counters; third round without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. No replacement live authority or budget reset.",
-      "cost": "Zero external provider calls. Local request ledger implementation is a physical-call cap, not dollar or vendor billing proof.",
-      "workerGoUsed": 6,
-      "reviewerGoUsed": 4,
-      "remainingGo": 0,
-      "actualProviderRequests": 0
+      "sameScopeRepairs": "max2 consolidated repairs within unchanged counters; third without independent cause stops REVIEW_COST_ESCALATION_REQUIRED",
+      "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json gitignored untracked; reviewed metadata only; credential stdin to hash-pinned binary, never argv/env/persistent copies",
+      "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect."
     }
   },
   "x-sourcePreparationReceipt": {
@@ -2037,7 +2048,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-094",
+  "activeTranche": "CCMAI-RUNTIME-095",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2053,7 +2064,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2341,5 +2354,50 @@
     "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
     "liveApproval": "NOT_GRANTED",
     "approvalPacket": "docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md"
+  },
+  "x-historicalPreR095CurrentProjection": {
+    "currentPhase": "FREEZE",
+    "activeTranche": "CCMAI-RUNTIME-094",
+    "activeWorkOrders": [],
+    "x-ownerRouting": {
+      "date": "2026-10-14",
+      "parkedAccounts": [
+        "facebook",
+        "zalo_oa"
+      ],
+      "nextObjective": "CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.",
+      "activeWorkOrder": null,
+      "buildDispatched": false,
+      "currentExecutionBudget": {
+        "physicalProviderRequestsTotal": 0,
+        "automaticRetries": 0,
+        "goInvocationsTotal": 10,
+        "workerGoInvocations": 6,
+        "reviewerGoInvocations": 4,
+        "ownedDisposableMySQLFixturesTotal": 2,
+        "fixturesPerRole": 1,
+        "fixtureImage": "mysql:8.0 cached only; --pull never; no existing services or volumes",
+        "loopbackOnly": true,
+        "maxWorkerMinutes": 60,
+        "sameScopeRepairs": "Up to two consolidated source repair rounds inside unchanged scope/counters; third round without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. No replacement live authority or budget reset.",
+        "cost": "Zero external provider calls. Local request ledger implementation is a physical-call cap, not dollar or vendor billing proof.",
+        "workerGoUsed": 6,
+        "reviewerGoUsed": 4,
+        "remainingGo": 0,
+        "actualProviderRequests": 0
+      }
+    },
+    "x-buildInProgress": {
+      "trancheId": "CCMAI-RUNTIME-094",
+      "status": "NONE_BOUNDED_LOCAL_FROZEN",
+      "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
+      "newRuntimeEffectsAuthorized": false
+    }
+  },
+  "x-r095LiveM2": {
+    "status": "BUILD",
+    "spec": "docs/specs/M2_INTERVENTION_LIVE_R095_SPEC_2026-10-14.md",
+    "liveCalls": 0,
+    "fullM2": "OPEN"
   }
 }

@@ -5,6 +5,41 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r095-agent_handoff_m2_intervention_r094_2026-10-14",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
+      "id": "r095-m2_intervention_live_r095_spec_2026-10-14",
+      "family": "continuity",
+      "path": "docs/specs/M2_INTERVENTION_LIVE_R095_SPEC_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
+      "id": "r095-ccmai_runtime_095_m2_intervention_live",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md",
+      "status": "ACTIVE",
+      "description": "R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
+      "id": "r095-ccmai-runtime-095-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-095.json",
+      "status": "ACTIVE",
+      "description": "R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
+      "id": "r095-ccmai-runtime-095-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-095.json",
+      "status": "ACTIVE",
+      "description": "R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
       "id": "r094-continuity-gate-units",
       "family": "continuity",
       "path": "docs/reviews/probes/r094_root/gate_units_continuity.log",
@@ -2695,9 +2730,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
       "status": "ACTIVE",
-      "description": "Active R094 manual synthetic M2 application handoff."
+      "description": "Active R095 owner-approved live M2 handoff; source admission pending."
     },
     {
       "id": "r060-work-order",

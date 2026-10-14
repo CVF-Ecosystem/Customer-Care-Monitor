@@ -9,16 +9,31 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-094", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-095", "parked": true} -->
 
 ## Current Truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md
+
+CCMAI-RUNTIME-095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.
+
+Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.
+
+Owner reply: "Cho phép tối đa 2 call mới". Source-reviewed admission is still pending; no credential or live effect yet. R094 source/local accepted unchanged, complete M2 and M3 remain open.
+
+## Historical R094 bounded closure
+
+### Historical truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: FREEZE
 - Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md
 
-## Current M2 execution — 2026-10-14
+### Historical M2 execution — 2026-10-14
 
 CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.
 

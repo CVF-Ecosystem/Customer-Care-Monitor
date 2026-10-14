@@ -1,6 +1,6 @@
 # M2 manual synthetic intervention — R094
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -56,3 +56,7 @@ F1..F4 accepted after one Sol Medium repair. Root baseline/native PASS, two name
 ## Bounded FREEZE acknowledgment
 
 Root re-read current continuity/implementation/index and independent evidence, verified committed source anchor 564ed593bfdc67d3daa9339ea05781e49bbf84ba, R093 protected Git range and exact restoration/cleanup. Root transitions independent REVIEWER to CLOSER for this settled source/local scope only, then ORCHESTRATOR/SESSION_SYNC/COMMIT_STEWARD. Local/range preflight7/7, profile review/precommit PASS and final89gate units PASS; final native9top/four nested PASS. No other-tranche closure or M2/live/browser/governance/pilot claim. Next concrete R095 approval packet is docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md; no automatic live admission. One review prose Worker label duplicated ROLE declaration; Root corrected it directly before material commit and profile recheck PASS.
+
+## Successor
+
+Owner approved max2 new calls; active authority continues at CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md. R094 source acceptance/counters unchanged. Root corrected one copied non-existent handoff pointer in the closed R094 work-order table; documentary correction only.

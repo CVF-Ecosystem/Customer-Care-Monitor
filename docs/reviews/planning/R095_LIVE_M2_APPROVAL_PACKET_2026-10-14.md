@@ -1,11 +1,11 @@
 # R095 proposed live M2 application approval packet
 
-Status: PROPOSED_LIVE_SCOPE_NOT_AUTHORIZED
+Status: OWNER_APPROVED_BOUND_SOURCE_REVIEW_PENDING
 Risk: R2
 Worker: /root/m2_worker (Sol Medium continuation proposed)
 Reviewer: Codex /root
 Date: 2026-10-14
-providerExecutionAuthority: NOT_GRANTED
+providerExecutionAuthority: OWNER_APPROVED_MAX2_SOURCE_SIGNATURE_REQUIRED
 Source material: 564ed593bfdc67d3daa9339ea05781e49bbf84ba
 
 ## Concrete capability and prior result
@@ -31,3 +31,7 @@ Acceptance: an actual application path produces a proposal with validated canoni
 AGENTS.md requires escalation at a real boundary change including "secret/credential use, provider/network use". R093 authority and actual receipt cap are exhausted2/2; R094 expressly prohibits provider requests and provider secret access. The existing continuation authorized source/local work and worker selection, not a reset of these immutable caps. Owner approval here grants only the proposed new R095 envelope; it does not alter old records or authorize deployment/publication.
 
 Public Export Disposition: DEFERRED_PRIVATE_ONLY. No push/merge/deploy in this packet.
+
+## Owner admission update — 2026-10-14
+
+Explicit reply: "Cho phép tối đa 2 call mới". New immutable R095 seed5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62 and docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md record authority. Requested cap narrowed to758 within owner768; source/binary review required before secret/effect. This supersedes proposal-only admission sentences above; old budgets unchanged.

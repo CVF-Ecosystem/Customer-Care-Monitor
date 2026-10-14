@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-094",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-095",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R2 REVIEW; Sol Medium implementation/repair returned accepted, Luna Max intake complete.",
+  "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.",
   "updatedAt": "2026-10-14",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -56,22 +56,32 @@
     "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
   },
   "x-currentExecutionBudget": {
-    "physicalProviderRequestsTotal": 0,
+    "physicalProviderRequestsTotal": 2,
+    "workerProviderRequests": 1,
+    "reviewerProviderRequests": 1,
     "automaticRetries": 0,
-    "goInvocationsTotal": 10,
-    "workerGoInvocations": 6,
-    "reviewerGoInvocations": 4,
-    "ownedDisposableMySQLFixturesTotal": 2,
-    "fixturesPerRole": 1,
-    "fixtureImage": "mysql:8.0 cached only; --pull never; no existing services or volumes",
+    "redirects": 0,
+    "fallbacks": 0,
+    "model": "qwen3.7-flash",
+    "region": "ap-southeast-1",
+    "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+    "requestedCompletionTokens": 758,
+    "ownerOutputCeiling": 768,
+    "requestBytesMax": 6000,
+    "responseBytesMax": 1048576,
+    "requestTimeoutSeconds": 60,
+    "campaignSecondsMax": 300,
+    "goInvocationsTotal": 8,
+    "workerGoInvocations": 5,
+    "reviewerGoInvocations": 3,
+    "includesCompiledTestBinaryLaunches": true,
+    "ownedDisposableMySQLFixturesTotal": 1,
+    "fixtureImage": "cached mysql:8.0 --pull never",
+    "sharedFixture": true,
     "loopbackOnly": true,
-    "maxWorkerMinutes": 60,
-    "sameScopeRepairs": "Up to two consolidated source repair rounds inside unchanged scope/counters; third round without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. No replacement live authority or budget reset.",
-    "cost": "Zero external provider calls. Local request ledger implementation is a physical-call cap, not dollar or vendor billing proof.",
-    "workerGoUsed": 6,
-    "reviewerGoUsed": 4,
-    "remainingGo": 0,
-    "actualProviderRequests": 0
+    "sameScopeRepairs": "max2 consolidated repairs within unchanged counters; third without independent cause stops REVIEW_COST_ESCALATION_REQUIRED",
+    "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json gitignored untracked; reviewed metadata only; credential stdin to hash-pinned binary, never argv/env/persistent copies",
+    "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect."
   },
   "x-actualWorkerModel": {
     "model": "gpt-6-sol",
@@ -86,11 +96,9 @@
     "actualSelection": "Sol Medium for M2 difficulty"
   },
   "x-candidatePlanning": {
-    "id": "CCMAI-RUNTIME-094",
-    "status": "FROZEN",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md",
-    "sourceImplementation": "IMPLEMENTED_BOUNDED_SOURCE_LOCAL",
-    "sourceOrRuntimeDispatched": false
+    "id": "CCMAI-RUNTIME-095",
+    "status": "BUILD",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md"
   },
   "x-historicalR067State": {
     "schemaVersion": "1.0",
@@ -423,7 +431,7 @@
     }
   },
   "x-lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
-  "x-currentPermittedGoInvocations": 0,
+  "x-currentPermittedGoInvocations": 8,
   "x-historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
@@ -830,10 +838,9 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "REVIEW_PASS_BOUNDED_SOURCE_LOCAL",
-    "review": "docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
-    "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
-    "fullM2": "OPEN"
+    "result": "NOT_RUN",
+    "sourceAdmission": "NOT_SIGNED",
+    "liveCalls": 0
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -914,18 +921,12 @@
     }
   },
   "x-currentRepair": {
-    "status": "REPAIR1_REVIEWED_PASS",
-    "round": 1,
-    "workerGoRemaining": 0,
-    "rootGoRemaining": 0
+    "round": 0,
+    "status": "NONE"
   },
   "x-currentClosure": {
-    "status": "FROZEN_BOUNDED_SOURCE_LOCAL",
-    "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
-    "fullM2": "OPEN",
-    "live": "NOT_RUN",
-    "approvalPacket": "docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md",
-    "providerApproval": "NOT_GRANTED"
+    "status": "OPEN",
+    "fullM2": "OPEN"
   },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
@@ -1297,8 +1298,8 @@
     "worker": "/root/m2_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
-    "status": "RETURNED_ACCEPTED_IDLE",
-    "seed": "0e0663559c38279531f070afe231756f79b79422"
+    "status": "DISPATCH_READY",
+    "seed": "5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62"
   },
   "x-historicalPreR091FinalClosureProjections": {
     "x-currentReview": {
@@ -1406,9 +1407,9 @@
     "status": "M2_SOURCE_LOCAL_ACCEPTED_FULL_M2_OPEN",
     "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
     "currentMilestone": "M2",
-    "milestoneStatus": "SOURCE_LOCAL_ONLY_ACCEPTED",
-    "nextAction": "CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.",
-    "authority": "R094 committed dispatcher seed and accepted intended contract; real-provider requests0, no secret/push/deploy authority.",
+    "milestoneStatus": "BOUNDED_LIVE_HARNESS_BUILD",
+    "nextAction": "R095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+    "authority": "R095 new committed seed; owner explicit max2 new calls; source signature required before credentials/effect",
     "executionAuthorityExpanded": false,
     "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
     "updatedAt": "2026-10-14",
@@ -1535,6 +1536,59 @@
       "reasoningEffort": "max",
       "workflow": "Authorized internal worker; Root independent reviewer",
       "source": "2026-10-13 current operator instruction"
+    }
+  },
+  "x-historicalPreR095CurrentProjection": {
+    "currentMode": "FREEZE",
+    "activePhase": "FREEZE",
+    "activeTranche": "CCMAI-RUNTIME-094",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.",
+    "activeRole": "Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R2 REVIEW; Sol Medium implementation/repair returned accepted, Luna Max intake complete.",
+    "x-currentWorkerDispatch": {
+      "worker": "/root/m2_worker",
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "status": "RETURNED_ACCEPTED_IDLE",
+      "seed": "0e0663559c38279531f070afe231756f79b79422"
+    },
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 0,
+      "automaticRetries": 0,
+      "goInvocationsTotal": 10,
+      "workerGoInvocations": 6,
+      "reviewerGoInvocations": 4,
+      "ownedDisposableMySQLFixturesTotal": 2,
+      "fixturesPerRole": 1,
+      "fixtureImage": "mysql:8.0 cached only; --pull never; no existing services or volumes",
+      "loopbackOnly": true,
+      "maxWorkerMinutes": 60,
+      "sameScopeRepairs": "Up to two consolidated source repair rounds inside unchanged scope/counters; third round without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. No replacement live authority or budget reset.",
+      "cost": "Zero external provider calls. Local request ledger implementation is a physical-call cap, not dollar or vendor billing proof.",
+      "workerGoUsed": 6,
+      "reviewerGoUsed": 4,
+      "remainingGo": 0,
+      "actualProviderRequests": 0
+    },
+    "x-currentReview": {
+      "result": "REVIEW_PASS_BOUNDED_SOURCE_LOCAL",
+      "review": "docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
+      "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
+      "fullM2": "OPEN"
+    },
+    "x-currentRepair": {
+      "status": "REPAIR1_REVIEWED_PASS",
+      "round": 1,
+      "workerGoRemaining": 0,
+      "rootGoRemaining": 0
+    },
+    "x-currentClosure": {
+      "status": "FROZEN_BOUNDED_SOURCE_LOCAL",
+      "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
+      "fullM2": "OPEN",
+      "live": "NOT_RUN",
+      "approvalPacket": "docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md",
+      "providerApproval": "NOT_GRANTED"
     }
   }
 }
