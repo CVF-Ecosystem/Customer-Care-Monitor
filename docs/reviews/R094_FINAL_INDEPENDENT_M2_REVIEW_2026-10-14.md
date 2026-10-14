@@ -5,6 +5,7 @@ Risk: R2
 Worker: /root/m2_worker
 Reviewer: Codex /root
 Date: 2026-10-14
+Material commit: 564ed593bfdc67d3daa9339ea05781e49bbf84ba
 
 ## Result and delivered capability
 
@@ -35,3 +36,5 @@ Accepted: this source/local prototype and the named actual software assertions o
 The next concrete move is a separately bounded R095 live M2 application campaign after owner approval of a new cap and source-bound activation on another owned synthetic fixture. R093 budget remains exhausted; R094 authorizes zero real calls and cannot be used for live testing. Then M3 completes human review→assignment→outcome in browser. No generic support successor, production activation, provider replay, push or deployment is authorized by this review.
 
 Public Export Disposition: DEFERRED_PRIVATE_ONLY. Local development branch only.
+
+Post-material disposition: Root verified exact committed source and closes R094 bounded source/local only. Record FROZEN does not close full M2; proposed R095 live approval remains NOT_GRANTED. Final gate89unit output retained in probes/r094_root/gate_units_final.log.

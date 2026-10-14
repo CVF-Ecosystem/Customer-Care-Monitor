@@ -9,22 +9,25 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-094", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-094", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md
 
 ## Current M2 execution — 2026-10-14
 
-CCMAI-RUNTIME-094 revised source returned for Root independent source/native local REVIEW under remaining reviewer budget; no worker Go/provider/secret effects. M2 live/M3/pilot OPEN, R0932/2 exhausted, accounts parked.
+CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.
 
-Codex /root independent REVIEWER and SESSION_SYNC_STEWARD; /root/m2_worker Sol Medium returned idle; Root COMMIT_STEWARD.
+Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R2 REVIEW; Sol Medium implementation/repair returned accepted, Luna Max intake complete.
 
-Owner resumes from synchronized main and permits Luna Max, Sol Medium when hard; Root orchestrator/reviewer. Luna source intake complete; durable concurrency/evidence/bypass complexity selects Sol Medium. Accepted intended SPEC and immutable R094 seed precede BUILD. Actual source/local acceptance and full M2 are not yet delivered. Go/Node/Docker available on this machine; no setup/install campaign. Existing application/DB stays untouched. No real provider request or secret access is admitted here.
+Owner resumes from synchronized main and permits Luna Max, Sol Medium when hard; Root orchestrator/reviewer. Luna source intake complete; durable concurrency/evidence/bypass complexity selects Sol Medium. Accepted intended SPEC and immutable R094 seed precede BUILD. Bounded source/local independently accepted and FROZEN at564ed59; full M2/live/M3/pilot remain OPEN. Go/Node/Docker available on this machine; no setup/install campaign. Existing application/DB stays untouched. No real provider request or secret access is admitted here.
+
+
+Independent final review: docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md. Proposed live approval packet: docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md. Worktree source/native acceptance is development-only; no installed activation, real provider, browser, hosted CI or deployment proof. No further R094 Go or R093 calls.
 
 ## Historical R093 handback and branch publication
 

@@ -805,6 +805,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/mutation.log`
 - R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_initial_pass.log`
 - R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/restored.log`
+- Actual pre-closure89 portable gate units; static repository behavior only.: `docs/reviews/probes/r094_root/gate_units_continuity.log`
 - Actual final portable gate unittest output; repository checks only, no runtime AI proof.: `docs/reviews/probes/r094_root/gate_units_final.log`
 - Root consolidated F1..F4 independent source/evidence findings; one same-scope repair.: `docs/reviews/R094_INITIAL_INDEPENDENT_M2_REVIEW_2026-10-14.md`
 - M2 manual synthetic application source/local work order.: `docs/work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md`
@@ -812,6 +813,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R2 M2 source/local authority; real provider requests zero.: `CVF_SESSION/authority/CCMAI-RUNTIME-094.json`
 - Accepted intended M2 state/API/admission/evidence contract; no implementation acceptance.: `docs/specs/M2_INTERVENTION_APPLICATION_SPEC_2026-10-14.md`
 - Sol Medium returned local M2 source/tests; initial coverage gaps explicit.: `docs/reviews/R094_M2_INTERVENTION_WORKER_RETURN_2026-10-14.md`
+- Concrete new max2 Alibaba application effect proposal; NOT_AUTHORIZED, old budgets unchanged.: `docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

@@ -5,6 +5,20 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r094-continuity-gate-units",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r094_root/gate_units_continuity.log",
+      "status": "ACTIVE",
+      "description": "Actual pre-closure89 portable gate units; static repository behavior only."
+    },
+    {
+      "id": "r095-live-approval-proposal",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Concrete new max2 Alibaba application effect proposal; NOT_AUTHORIZED, old budgets unchanged."
+    },
+    {
       "id": "r094-final-gate-units",
       "family": "continuity",
       "path": "docs/reviews/probes/r094_root/gate_units_final.log",

@@ -54,16 +54,18 @@
     "cost": "Zero external provider calls. Local request ledger implementation is a physical-call cap, not dollar or vendor billing proof."
   },
   "claimScope": "Bounded source plus actual disposable MySQL and loopback transport software behavior. No real provider, runtime AI governance, browser human workflow, pilot, business quality, hosted CI, billing, release or deployment acceptance. M2 live branch and full milestone stay open pending separately bounded approval and actual evidence.",
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "0e0663559c38279531f070afe231756f79b79422",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md",
-  "buildCommit": null,
+  "buildCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
   "reviewEvidence": [
-    "docs/reviews/R094_INITIAL_INDEPENDENT_M2_REVIEW_2026-10-14.md"
+    "docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
+    "docs/reviews/probes/r094_root/restored.json",
+    "docs/reviews/probes/r094_root/cleanup.json"
   ],
-  "disposition": "PENDING_INDEPENDENT_REVIEW",
-  "freeze": "OPEN",
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
@@ -71,7 +73,9 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -81,5 +85,15 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW"
+  "workOrderStatus": "CLOSED",
+  "closer": "Codex /root",
+  "x-actualExecution": {
+    "workerGo": 6,
+    "reviewerGo": 4,
+    "remainingGo": 0,
+    "realProviderRequests": 0,
+    "fixturesOwnedTotal": 2,
+    "fixturesCleaned": true,
+    "fullM2": "OPEN"
+  }
 }
