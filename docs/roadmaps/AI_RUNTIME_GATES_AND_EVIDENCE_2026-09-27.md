@@ -4,7 +4,11 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
-## Current audited delivery route — 2026-10-15
+## Current R100 owner-granted route — 2026-10-15
+
+Owner grants **max4 freshcalls untilvalidresult**, superseding max2 proposal/semanticfailurestop only. CurrentmilestoneM2, R099source0640431 compiled/sourceaccepted; changed-source runtimeNOTRUN beforeR100. NewR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd precedes BUILD. Fourpredeclaredsyntheticcases/fixedthinkingfalseprompt, oneownedloopbackfixture; Rootaudit eachsemanticinvalid/faithfulusage thenexclusivecontinuation. Stop firstvalidproposal+faithfulknownusage ortransport/metadata/security/ledger/DBfailure, max4/300sec. Onecompile/oneseed/onelive <=4Go, no oldbudgetreset/sourcechange. Rootindependentactualreceipt review needsno duplicatecall. NextM3 humanworkflow afteractualproposal; M1businessparallel, pilotreleaseOPEN/accountsparked. Earlier max2 pendingapproval sections below are superseded planning history, not authority.
+
+## Historical audited delivery route before owner max4 grant — 2026-10-15
 
 | Route | Acceptance still missing | Required next move / owner | Stop condition |
 |---|---|---|---|
@@ -16,7 +20,7 @@
 
 This route is planning only. R094 exact-old-source local proof and R098 real-provider failure receipts remain historical; changed R099 dependencies have no current runtime proof. Full M1–M5 and S0–S7 exits remain open. [Consolidated audit](../reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md).
 
-## Current source candidate and next real milestone — R099
+## Historical source candidate and proposed next milestone — R099
 
 R099 source/compile REVIEW_PASS bounded, source0640431/proof302e873, onebuild PASS/0API/runtime. Candidate preserves knownmetadata through safe observed-error andsettlement, adds explicit immutable thinkingfalse once-only option. Actual changed-source proof NOT_RUN, FREEZE/fullM2 OPEN. HistoricalR094 acceptance preserved exactoldrevision; changeddependencies never inherititsruntimeacceptance. R098 real2HTTP200 at758each wereempty/no proposals, DBmetadata lost; budgets2/2/Go4/4 andcleanupverified unchanged. Root owns provider mode/cap/metadata miss.
 

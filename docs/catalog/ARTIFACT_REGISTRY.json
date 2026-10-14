@@ -3535,9 +3535,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md",
       "status": "ACTIVE",
-      "description": "Active R099 product source-only response repair, zero provider effects, live proof pending."
+      "description": "Current R100 ownerfreshmax4 bounded M2 live handoff; sourcebinaryadmission mandatory beforeeffects."
     },
     {
       "id": "r060-work-order",
@@ -10496,6 +10496,27 @@
       "path": "docs/reviews/probes/r099_source/compile_audit_receipt_2026-10-15.json",
       "status": "ACTIVE",
       "description": "Root raw compile receipt and exact source hash audit; no new Go/runtime/provider effect."
+    },
+    {
+      "id": "r100-dispatcher-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-100.json",
+      "status": "ACTIVE",
+      "description": "Immutable Root dispatcher seed for ownerfreshmax4 syntheticuntilvalid; beforeBUILD."
+    },
+    {
+      "id": "r100-live-spec",
+      "family": "continuity",
+      "path": "docs/specs/M2_INTERVENTION_LIVE_R100_SPEC_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Accepted intendedR100 current-source realproposal+faithfulusage contract; max4freshcalls."
+    },
+    {
+      "id": "r100-live-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md",
+      "status": "ACTIVE",
+      "description": "R2newharness andsourceboundeffects; workerSolMedium, independentRoot, no oldbudgetreset."
     }
   ]
 }

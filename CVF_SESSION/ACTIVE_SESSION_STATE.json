@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-099",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
+  "activeTranche": "CCMAI-RUNTIME-100",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-100 owner fresh max4 untilfirstvalidproposal+faithfulknownusage; newharness sourceaudit beforeonecompile, Rootsourcebinarysignature beforekey/ownedfixture/live. Fourpredeclaredsyntheticcases/fixedprompt, nextsemanticinvalid onlyafterRootreceipt-boundcontinuation, transport/metadata/security/ledger anomaly stops. Go4max compile1/seed1/live1; APIused0/4, Goused0/4, no oldbudgetreset. Firstvalid stops forindependentRootreview, fullM2/M3/pilotOPEN, Facebook/ZaloOAparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium source worker returned accepted idle, no replay.",
+  "activeRole": "Codex /root ORCHESTRATOR and independent REVIEWER/COMMIT_STEWARD; /root/r100_worker Sol Medium IMPLEMENTATION_WORKER, no worker commit or seed edits.",
   "updatedAt": "2026-10-15",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -57,23 +57,53 @@
     "renewedOwnerDirectiveDate": "2026-10-15"
   },
   "x-currentExecutionBudget": {
-    "physicalProviderRequestsTotal": 0,
-    "providerSecretReads": 0,
-    "DBFixtureOperations": 0,
-    "goInvocationsTotal": 1,
-    "workerGoInvocations": 1,
+    "physicalProviderRequestsTotal": 4,
+    "workerProviderRequestsMax": 4,
+    "reviewerProviderRequests": 0,
+    "stopOnFirstValidProposalWithFaithfulKnownUsage": true,
+    "automaticRetries": 0,
+    "redirects": 0,
+    "fallbacks": 0,
+    "model": "qwen3.7-flash",
+    "region": "ap-southeast-1",
+    "enableThinking": false,
+    "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+    "requestedCompletionTokens": 758,
+    "ownerOutputCeiling": 768,
+    "requestBytesMax": 6000,
+    "responseBytesMax": 1048576,
+    "requestTimeoutSeconds": 60,
+    "campaignSecondsMax": 300,
+    "goInvocationsTotal": 4,
+    "workerGoInvocations": 3,
     "reviewerGoInvocations": 0,
-    "buildCommand": "go -C backend build ./ai ./engine ./api/handlers",
-    "goproxy": "off",
-    "gosumdb": "off",
-    "runtimeTests": 0,
-    "sameScopeRepairs": "max2 consolidated SOURCE precompile repairs withinunchangedbudget, source review before one compile; no newcompile/replay on failure; third withoutindependentcause stops cost escalation",
+    "unspentReserveGoInvocations": 1,
+    "includesCompiledTestBinaryLaunches": true,
+    "plannedGoRoute": [
+      "oneofflinecompile",
+      "oneseedbinary",
+      "oneworker_livebinary_untilresult"
+    ],
+    "ownedDisposableMySQLFixturesTotal": 1,
+    "fixtureImage": "cached mysql:8.0 --pull never",
+    "loopbackOnly": true,
+    "sameScopeRepairs": "max2 consolidatedprecompile source repairs; onecompile no recompile/runtime replay afterfailure; thirdwithoutnewcause cost escalation",
+    "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json ignored/untracked; onlyafterRootsignature memory/stdin; neverargv/env/log/copy",
+    "freshOwnerGrantId": "CCMAI-RUNTIME-100-OWNER-NEW4-20261015",
+    "parentPhysicalLedger": ".cvf/runtime/owner_alibaba_r100_new4_20261015",
+    "freshGrantCap": 4,
+    "historicalR098Calls": 2,
+    "cost": "Actual dollarbillingUNKNOWN; everyfailure/timeout/unknown consumedpermanently; no refund",
+    "compiledTLSDependency": {
+      "path": "backend/api/handlers/intervention_live_r096_test.go",
+      "sha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+      "constructor": "r096IsolatedTransport() directunchanged reuse"
+    },
+    "currentProductSourceCommit": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+    "perAttemptContinuation": "Only semantic OUTPUT_INVALID with exactknownmatching wire/DBmetadata maycontinue, afterRootexclusive token boundpriorreceiptSHA,nextslot/case,sourcebinarymanifest anddeadline; worker cannot approve; no outputtuning",
     "actualUsed": {
-      "workerGo": 1,
-      "reviewerGo": 0,
       "providerCalls": 0,
-      "runtimeTests": 0,
-      "DBFixtureOperations": 0
+      "goInvocations": 0
     }
   },
   "x-actualWorkerModel": {
@@ -89,9 +119,9 @@
     "actualSelection": "Sol Medium for M2 difficulty"
   },
   "x-candidatePlanning": {
-    "id": "CCMAI-RUNTIME-099",
-    "status": "REVIEW_PASS",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_099_OBSERVED_RESPONSE_REPAIR.md"
+    "id": "CCMAI-RUNTIME-100",
+    "status": "BUILD",
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md"
   },
   "x-historicalR067State": {
     "schemaVersion": "1.0",
@@ -915,17 +945,14 @@
     }
   },
   "x-currentRepair": {
-    "round": 1,
-    "status": "SOURCE_DRAFT_CORRECTIONS_ACCEPTED",
-    "scope": "R099_F1_F2_PRECOMPILE_ONLY",
-    "runtime": "NOT_RUN"
+    "status": "NONE_BEFORE_SOURCE_AUDIT",
+    "scope": "R100_HARNESS_ONLY_PRECOMPILE",
+    "oldSourcesAndBudgets": "UNCHANGED"
   },
   "x-currentClosure": {
-    "status": "SOURCE_CANDIDATE_ACCEPTED_FREEZE_OPEN",
-    "scope": "R099_SOURCE_COMPILE_ONLY",
-    "fullM2": "OPEN",
-    "nextApprovalPacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
-    "providerApproval": "NOT_GRANTED"
+    "status": "OPEN",
+    "scope": "R100_REAL_SYNTHETIC_CURRENT_SOURCE_M2",
+    "currentRuntime": "NOT_RUN"
   },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
@@ -1403,21 +1430,21 @@
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "M2_SOURCE_COMPILE_ACCEPTED_CURRENT_RUNTIME_NOT_RUN",
+    "status": "M2_R100_OWNER_APPROVED_BOUNDED_LIVE_BUILD",
     "sourceBaseline": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
     "currentMilestone": "M2",
     "milestoneStatus": "FULL_M2_NOT_ACCEPTED",
-    "nextAction": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
-    "authority": "R099 source-only seed unchanged; one compile spent. R100 proposed only, fresh owner provider/credential/fixture authority not granted.",
-    "executionAuthorityExpanded": false,
-    "publication": "CURRENT_ROADMAP_AUDIT_LOCAL_ONLY_NOT_PUSHED",
+    "nextAction": "CCMAI-RUNTIME-100 owner fresh max4 untilfirstvalidproposal+faithfulknownusage; newharness sourceaudit beforeonecompile, Rootsourcebinarysignature beforekey/ownedfixture/live. Fourpredeclaredsyntheticcases/fixedprompt, nextsemanticinvalid onlyafterRootreceipt-boundcontinuation, transport/metadata/security/ledger anomaly stops. Go4max compile1/seed1/live1; APIused0/4, Goused0/4, no oldbudgetreset. Firstvalid stops forindependentRootreview, fullM2/M3/pilotOPEN, Facebook/ZaloOAparked.",
+    "authority": "Owner2026-10-15 max4 untilvalidresult; immutableR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd; source/binarysignature stillmandatory beforeeffects",
+    "executionAuthorityExpanded": true,
+    "publication": "LOCAL_ONLY_NOT_PUSHED",
     "updatedAt": "2026-10-15",
     "reviewEvidence": "docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md",
     "currentRuntimeEvidence": "NOT_RUN",
     "m1BusinessPilotAcceptance": "OPEN",
     "m3HumanWorkflowAcceptance": "OPEN",
     "futureLivePacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
-    "providerBudget": "R098 2/2 spent; R100 NONE_PENDING_NEW_OWNER_GRANT"
+    "providerBudget": "R100 fresh0/4 used; historicalR0982/2 unchanged"
   },
   "x-historicalPreR092CurrentAuthority": {
     "activeTranche": "CCMAI-RUNTIME-091",
@@ -1699,5 +1726,65 @@
     "currentMilestone": "M2",
     "currentRuntime": "NOT_RUN",
     "executionAuthorityExpanded": false
+  },
+  "x-historicalR099CurrentBeforeR100": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-099",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
+    "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium source worker returned accepted idle, no replay.",
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 0,
+      "providerSecretReads": 0,
+      "DBFixtureOperations": 0,
+      "goInvocationsTotal": 1,
+      "workerGoInvocations": 1,
+      "reviewerGoInvocations": 0,
+      "buildCommand": "go -C backend build ./ai ./engine ./api/handlers",
+      "goproxy": "off",
+      "gosumdb": "off",
+      "runtimeTests": 0,
+      "sameScopeRepairs": "max2 consolidated SOURCE precompile repairs withinunchangedbudget, source review before one compile; no newcompile/replay on failure; third withoutindependentcause stops cost escalation",
+      "actualUsed": {
+        "workerGo": 1,
+        "reviewerGo": 0,
+        "providerCalls": 0,
+        "runtimeTests": 0,
+        "DBFixtureOperations": 0
+      }
+    },
+    "x-productDeliveryPlanning": {
+      "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+      "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+      "status": "M2_SOURCE_COMPILE_ACCEPTED_CURRENT_RUNTIME_NOT_RUN",
+      "sourceBaseline": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+      "currentMilestone": "M2",
+      "milestoneStatus": "FULL_M2_NOT_ACCEPTED",
+      "nextAction": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
+      "authority": "R099 source-only seed unchanged; one compile spent. R100 proposed only, fresh owner provider/credential/fixture authority not granted.",
+      "executionAuthorityExpanded": false,
+      "publication": "CURRENT_ROADMAP_AUDIT_LOCAL_ONLY_NOT_PUSHED",
+      "updatedAt": "2026-10-15",
+      "reviewEvidence": "docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md",
+      "currentRuntimeEvidence": "NOT_RUN",
+      "m1BusinessPilotAcceptance": "OPEN",
+      "m3HumanWorkflowAcceptance": "OPEN",
+      "futureLivePacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "providerBudget": "R098 2/2 spent; R100 NONE_PENDING_NEW_OWNER_GRANT"
+    },
+    "x-currentClosure": {
+      "status": "SOURCE_CANDIDATE_ACCEPTED_FREEZE_OPEN",
+      "scope": "R099_SOURCE_COMPILE_ONLY",
+      "fullM2": "OPEN",
+      "nextApprovalPacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "providerApproval": "NOT_GRANTED"
+    },
+    "x-currentRepair": {
+      "round": 1,
+      "status": "SOURCE_DRAFT_CORRECTIONS_ACCEPTED",
+      "scope": "R099_F1_F2_PRECOMPILE_ONLY",
+      "runtime": "NOT_RUN"
+    }
   }
 }

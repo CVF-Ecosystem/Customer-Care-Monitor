@@ -9,9 +9,22 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-099", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-100", "parked": true} -->
 
 ## Current Truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md
+
+CCMAI-RUNTIME-100 owner fresh max4 untilfirstvalidproposal+faithfulknownusage; newharness sourceaudit beforeonecompile, Rootsourcebinarysignature beforekey/ownedfixture/live. Fourpredeclaredsyntheticcases/fixedprompt, nextsemanticinvalid onlyafterRootreceipt-boundcontinuation, transport/metadata/security/ledger anomaly stops. Go4max compile1/seed1/live1; APIused0/4, Goused0/4, no oldbudgetreset. Firstvalid stops forindependentRootreview, fullM2/M3/pilotOPEN, Facebook/ZaloOAparked.
+
+Codex /root ORCHESTRATOR and independent REVIEWER/COMMIT_STEWARD; /root/r100_worker Sol Medium IMPLEMENTATION_WORKER, no worker commit or seed edits.
+
+## Historical R099 prior to owner max4 grant
+
+### Prior truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW

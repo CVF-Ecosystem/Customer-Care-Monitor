@@ -1,6 +1,6 @@
 # R099 source-only response product repair
 
-Status: ACTIVE
+Status: HISTORICAL_SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -36,3 +36,5 @@ Independent source/compile REVIEW_PASS per docs/reviews/R099_FINAL_INDEPENDENT_S
 ## Owner roadmap audit renewal — 2026-10-15
 
 Owner: continue, audit carefully and update roadmap to avoid drift. Root consolidated auxiliary projection and historical-route repairs per docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md. Current milestone M2; R099 source/compile accepted only, current runtime/FREEZE OPEN; R100 fresh budget proposed, no current call authority. M1 business and M3/pilot gaps stay explicit, no supporting-scope chain or budget reset. Metadata gates/commit precede owner handback.
+
+R100 ownermax4 grant accepted2026-10-15; current pointer moved to AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md. R099 exactsource/compile REVIEW_PASS preserved, FREEZE OPEN; no oldbudgetreset.
