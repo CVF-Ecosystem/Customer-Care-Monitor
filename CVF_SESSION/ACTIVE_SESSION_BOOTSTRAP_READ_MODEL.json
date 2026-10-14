@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-096 same-owner aggregate max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeTranche": "CCMAI-RUNTIME-095",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker stopped after R095 pre-provider failure, read-only R096 design.",
+  "activeTranche": "CCMAI-RUNTIME-096",
+  "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.",
   "updatedAt": "2026-10-14",
   "productDeliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
 }

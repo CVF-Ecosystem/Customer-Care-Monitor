@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r096-agent_handoff_m2_live_r095_2026-10-14",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
+      "id": "r096-m2_intervention_live_r096_spec_2026-10-14",
+      "family": "continuity",
+      "path": "docs/specs/M2_INTERVENTION_LIVE_R096_SPEC_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
+      "id": "r096-ccmai_runtime_096_m2_intervention_live",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md",
+      "status": "ACTIVE",
+      "description": "R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
+      "id": "r096-ccmai-runtime-096",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-096.json",
+      "status": "ACTIVE",
+      "description": "R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet."
+    },
+    {
       "id": "r095-failure-f4ee3031638f",
       "family": "continuity",
       "path": "docs/reviews/probes/r095_root/source_admission.json",
@@ -2891,9 +2919,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md",
       "status": "ACTIVE",
-      "description": "Active R095 owner-approved live M2 handoff; source admission pending."
+      "description": "Active R096 owner-approved live M2 handoff; source admission pending."
     },
     {
       "id": "r060-work-order",

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-095",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-096",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-096 same-owner aggregate max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker stopped after R095 pre-provider failure, read-only R096 design.",
+  "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Codex /root independent REVIEWER.",
   "updatedAt": "2026-10-14",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -71,8 +71,8 @@
     "responseBytesMax": 1048576,
     "requestTimeoutSeconds": 60,
     "campaignSecondsMax": 300,
-    "goInvocationsTotal": 8,
-    "workerGoInvocations": 5,
+    "goInvocationsTotal": 7,
+    "workerGoInvocations": 4,
     "reviewerGoInvocations": 3,
     "includesCompiledTestBinaryLaunches": true,
     "ownedDisposableMySQLFixturesTotal": 1,
@@ -81,7 +81,13 @@
     "loopbackOnly": true,
     "sameScopeRepairs": "max2 consolidated repairs within unchanged counters; third without independent cause stops REVIEW_COST_ESCALATION_REQUIRED",
     "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json gitignored untracked; reviewed metadata only; credential stdin to hash-pinned binary, never argv/env/persistent copies",
-    "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect."
+    "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect.",
+    "parentPhysicalLedger": ".cvf/runtime/owner_alibaba_new2_20261014",
+    "parentPhysicalRequestsTotal": 2,
+    "predecessorPhysicalRequestsKnown": 0,
+    "predecessorReceipt": "docs/reviews/probes/r095_root/r095_worker_receipt.json",
+    "predecessorReceiptSha256": "11992afae3a097520d040662cfe427713f803bc98b4dfc819f93da6679874421",
+    "sourceReviewBeforeCompile": true
   },
   "x-actualWorkerModel": {
     "model": "gpt-6-sol",
@@ -96,9 +102,9 @@
     "actualSelection": "Sol Medium for M2 difficulty"
   },
   "x-candidatePlanning": {
-    "id": "CCMAI-RUNTIME-095",
+    "id": "CCMAI-RUNTIME-096",
     "status": "BUILD",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md"
+    "artifact": "docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md"
   },
   "x-historicalR067State": {
     "schemaVersion": "1.0",
@@ -431,7 +437,7 @@
     }
   },
   "x-lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
-  "x-currentPermittedGoInvocations": 8,
+  "x-currentPermittedGoInvocations": 7,
   "x-historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
@@ -838,10 +844,9 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "BLOCKED_PRE_PROVIDER_CONFIG_SCHEMA",
-    "sourceAdmission": "OLD_SOURCE_SIGNED",
-    "providerCalls": 0,
-    "artifact": "docs/reviews/R095_PRE_PROVIDER_FAILURE_DISPOSITION_2026-10-14.md"
+    "result": "NOT_RUN",
+    "sourceAdmission": "NOT_SIGNED",
+    "liveCalls": 0
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -922,17 +927,12 @@
     }
   },
   "x-currentRepair": {
-    "round": 1,
-    "status": "SOURCE_ACCEPTED",
-    "findings": [
-      "F1",
-      "F2",
-      "F3"
-    ]
+    "round": 0,
+    "status": "NONE"
   },
   "x-currentClosure": {
-    "status": "NOT_CLOSED",
-    "reason": "live acceptance notexecuted"
+    "status": "OPEN",
+    "fullM2": "OPEN"
   },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
@@ -1304,8 +1304,8 @@
     "worker": "/root/m2_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
-    "status": "SIGNED_FIXTURE_READY",
-    "seed": "5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62"
+    "status": "DISPATCH_READY",
+    "seed": "4503afbbe28e23a7612d41af473b1c52f96a5c8d"
   },
   "x-historicalPreR091FinalClosureProjections": {
     "x-currentReview": {
@@ -1414,8 +1414,8 @@
     "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
     "currentMilestone": "M2",
     "milestoneStatus": "BOUNDED_LIVE_HARNESS_BUILD",
-    "nextAction": "R095 owner-approved max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
-    "authority": "R095 new committed seed; owner explicit max2 new calls; source signature required before credentials/effect",
+    "nextAction": "R096 same-owner aggregate max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+    "authority": "R096 new committed seed; owner explicit max2 new calls; source signature required before credentials/effect",
     "executionAuthorityExpanded": false,
     "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
     "updatedAt": "2026-10-14",
@@ -1596,5 +1596,74 @@
       "approvalPacket": "docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md",
       "providerApproval": "NOT_GRANTED"
     }
+  },
+  "x-historicalPreR096CurrentProjection": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-095",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.",
+    "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker stopped after R095 pre-provider failure, read-only R096 design.",
+    "x-currentWorkerDispatch": {
+      "worker": "/root/m2_worker",
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "status": "SIGNED_FIXTURE_READY",
+      "seed": "5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62"
+    },
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 2,
+      "workerProviderRequests": 1,
+      "reviewerProviderRequests": 1,
+      "automaticRetries": 0,
+      "redirects": 0,
+      "fallbacks": 0,
+      "model": "qwen3.7-flash",
+      "region": "ap-southeast-1",
+      "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+      "requestedCompletionTokens": 758,
+      "ownerOutputCeiling": 768,
+      "requestBytesMax": 6000,
+      "responseBytesMax": 1048576,
+      "requestTimeoutSeconds": 60,
+      "campaignSecondsMax": 300,
+      "goInvocationsTotal": 8,
+      "workerGoInvocations": 5,
+      "reviewerGoInvocations": 3,
+      "includesCompiledTestBinaryLaunches": true,
+      "ownedDisposableMySQLFixturesTotal": 1,
+      "fixtureImage": "cached mysql:8.0 --pull never",
+      "sharedFixture": true,
+      "loopbackOnly": true,
+      "sameScopeRepairs": "max2 consolidated repairs within unchanged counters; third without independent cause stops REVIEW_COST_ESCALATION_REQUIRED",
+      "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json gitignored untracked; reviewed metadata only; credential stdin to hash-pinned binary, never argv/env/persistent copies",
+      "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect."
+    },
+    "x-currentReview": {
+      "result": "BLOCKED_PRE_PROVIDER_CONFIG_SCHEMA",
+      "sourceAdmission": "OLD_SOURCE_SIGNED",
+      "providerCalls": 0,
+      "artifact": "docs/reviews/R095_PRE_PROVIDER_FAILURE_DISPOSITION_2026-10-14.md"
+    },
+    "x-currentRepair": {
+      "round": 1,
+      "status": "SOURCE_ACCEPTED",
+      "findings": [
+        "F1",
+        "F2",
+        "F3"
+      ]
+    },
+    "x-currentClosure": {
+      "status": "NOT_CLOSED",
+      "reason": "live acceptance notexecuted"
+    }
+  },
+  "x-ownerPhysicalProviderAllowance": {
+    "total": 2,
+    "usedKnown": 0,
+    "predecessor": "CCMAI-RUNTIME-095",
+    "parentLedger": ".cvf/runtime/owner_alibaba_new2_20261014",
+    "oldR093": "2/2exhausted unchanged"
   }
 }

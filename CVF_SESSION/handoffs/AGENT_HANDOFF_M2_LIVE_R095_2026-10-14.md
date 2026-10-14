@@ -1,6 +1,6 @@
 # M2 real synthetic application evidence — R095
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -54,3 +54,7 @@ Root re-read current BUILD bootstrap/state/memory/handoff/implementation/index a
 ## Root actual failure disposition
 
 Root re-read actual worker receipt and canonical continuity; formal REVIEW returns BLOCKED/CHANGES_REQUIRED, not FROZEN. RealHTTP0,workerGo4/rootGo1,fixture1 cleaned independently with protectedIDs unchanged. Worker claim/campaign preserved permanently; no worker retry/reviewer effect. Local config schema providers.alibaba_maas differs from inferred old R093 schema; endpoint/region/key shape verified in memory, no key exported; presetmodel differs and is not provideravailability evidence. Root original metadata-check command had syntax error before secret read; corrected check emitted booleans only. New R096 scope uses SAME explicit owner max2 new PHYSICALcalls, actualremaining2, with shared parenteffect ledger; does not reset R095 attempt or oldR0932/2. Owner question specified2realcalls,qwen3.7,768/60sec,no retry,noexistingDB; per-tranche300sec/roleclaim were Root execution bounds, now preserved as failed rather than widened. No additional owner effect authorization invented. Root designsnewseed beforeBUILD.
+
+## Successor
+
+Owner approved max2 new calls; active authority continues at CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md. R094 source acceptance/counters unchanged. Root corrected one copied non-existent handoff pointer in the closed R094 work-order table; documentary correction only.
