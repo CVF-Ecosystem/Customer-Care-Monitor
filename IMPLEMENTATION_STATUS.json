@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -80,9 +80,9 @@
   ],
   "x-buildInProgress": {
     "trancheId": "CCMAI-RUNTIME-095",
-    "status": "SOURCE_ADMITTED_FIXTURE_PENDING",
+    "status": "BLOCKED_PRE_PROVIDER_CONFIG_SCHEMA",
     "worker": "/root/m2_worker",
-    "sourceAdmission": "REVIEWED_SIGNATURE_PENDING",
+    "sourceAdmission": "SIGNED",
     "providerEffects": "OWNER_APPROVED_BUT_SOURCE_REVIEW_PENDING"
   },
   "knownLimitations": [
@@ -342,9 +342,9 @@
       "facebook",
       "zalo_oa"
     ],
-    "nextObjective": "CCMAI-RUNTIME-095 revised harness source independently accepted for bounded admission; Root commits exact source and signs finalbinary477fcf25 before Sol creates one shared synthetic fixture(seed workerGo4), then worker1 realcall(workerGo5). Root reviewer1 follows in REVIEW; max2 NEW calls,758requested tokens,60sec,no retry. Existing app/DB untouched,R094 frozen,R0932/2 exhausted,M2/M3/pilot OPEN,accounts parked.",
-    "activeWorkOrder": "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md",
-    "buildDispatched": true,
+    "nextObjective": "CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.",
+    "activeWorkOrder": null,
+    "buildDispatched": false,
     "currentExecutionBudget": {
       "physicalProviderRequestsTotal": 2,
       "workerProviderRequests": 1,
@@ -2064,9 +2064,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2395,9 +2393,10 @@
     }
   },
   "x-r095LiveM2": {
-    "status": "SOURCE_ADMITTED_LIVE_PENDING",
+    "status": "BLOCKED_PRE_PROVIDER",
     "spec": "docs/specs/M2_INTERVENTION_LIVE_R095_SPEC_2026-10-14.md",
     "liveCalls": 0,
-    "fullM2": "OPEN"
+    "fullM2": "OPEN",
+    "fixtureCleaned": true
   }
 }

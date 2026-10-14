@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-095",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-095 revised harness source independently accepted for bounded admission; Root commits exact source and signs finalbinary477fcf25 before Sol creates one shared synthetic fixture(seed workerGo4), then worker1 realcall(workerGo5). Root reviewer1 follows in REVIEW; max2 NEW calls,758requested tokens,60sec,no retry. Existing app/DB untouched,R094 frozen,R0932/2 exhausted,M2/M3/pilot OPEN,accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted fixture/live BUILD.",
+  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker stopped after R095 pre-provider failure, read-only R096 design.",
   "updatedAt": "2026-10-14",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -838,10 +838,10 @@
   },
   "x-nextScopeProposal": null,
   "x-currentReview": {
-    "result": "PRE_EFFECT_SOURCE_ADMISSION_PASS",
-    "artifact": "docs/reviews/R095_FINAL_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md",
-    "sourceAdmission": "REVIEWED_SIGNATURE_PENDING",
-    "providerCalls": 0
+    "result": "BLOCKED_PRE_PROVIDER_CONFIG_SCHEMA",
+    "sourceAdmission": "OLD_SOURCE_SIGNED",
+    "providerCalls": 0,
+    "artifact": "docs/reviews/R095_PRE_PROVIDER_FAILURE_DISPOSITION_2026-10-14.md"
   },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
@@ -931,8 +931,8 @@
     ]
   },
   "x-currentClosure": {
-    "status": "OPEN",
-    "fullM2": "OPEN"
+    "status": "NOT_CLOSED",
+    "reason": "live acceptance notexecuted"
   },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
@@ -1304,7 +1304,7 @@
     "worker": "/root/m2_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
-    "status": "SOURCE_ACCEPTED_FIXTURE_PENDING",
+    "status": "SIGNED_FIXTURE_READY",
     "seed": "5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62"
   },
   "x-historicalPreR091FinalClosureProjections": {

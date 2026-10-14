@@ -817,6 +817,18 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-095.json`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-095.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_fixture.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/fixture_pre_live.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/cleanup.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/R095_PRE_PROVIDER_FAILURE_DISPOSITION_2026-10-14.md`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-096.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_container_pin.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_campaign.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_schema_shape.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_ownership.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_schema_metadata_validation.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_worker_receipt.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/source_admission.json`
 - Concrete new max2 Alibaba application effect proposal; NOT_AUTHORIZED, old budgets unchanged.: `docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/specs/M2_INTERVENTION_LIVE_R095_SPEC_2026-10-14.md`
 - R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `scripts/tests/test_r095_intervention_live_fixture.py`

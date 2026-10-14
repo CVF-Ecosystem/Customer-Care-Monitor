@@ -61,18 +61,22 @@
     "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect."
   },
   "claimScope": "Actual bounded real Alibaba application request/response, output validity or explicit rejection and durable ledger on synthetic fixture. No universal CVF governance, full M2/M3, browser, production,pilot,billing or hosted CI claim.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "buildCommit": "6b7c9b1e7f782789668a8890b72c644e83d069fd",
+  "reviewEvidence": [
+    "docs/reviews/R095_PRE_PROVIDER_FAILURE_DISPOSITION_2026-10-14.md"
+  ],
+  "disposition": "BLOCKED_PRE_PROVIDER_CONFIG_SCHEMA",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -82,13 +86,16 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "x-actualExecution": {
-    "workerGo": 3,
+    "workerGo": 4,
     "reviewerGo": 1,
     "providerCalls": 0,
-    "fixtures": 0,
-    "repairRound": 1
+    "fixtures": 1,
+    "repairRound": 1,
+    "fixtureCleaned": true,
+    "workerClaimConsumed": true,
+    "workerBinaryLiveLaunched": false
   },
   "x-preEffectBuildReviewNotes": [
     "PRE_EFFECT_SOURCE_REVIEW",

@@ -9,20 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-095", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-095", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md
 
-CCMAI-RUNTIME-095 revised harness source independently accepted for bounded admission; Root commits exact source and signs finalbinary477fcf25 before Sol creates one shared synthetic fixture(seed workerGo4), then worker1 realcall(workerGo5). Root reviewer1 follows in REVIEW; max2 NEW calls,758requested tokens,60sec,no retry. Existing app/DB untouched,R094 frozen,R0932/2 exhausted,M2/M3/pilot OPEN,accounts parked.
+CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.
 
-Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER for admitted fixture/live BUILD.
-
-Owner max2 new calls approved. Root source review passed; final signature pending before any fixture/key/provider effect. Source repair1 accepted, workerGo3/rootGo1 used.
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker stopped after R095 pre-provider failure, read-only R096 design.
 
 ## Historical R094 bounded closure
 

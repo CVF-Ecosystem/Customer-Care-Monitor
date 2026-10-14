@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-095 — real synthetic M2 application evidence
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: /root/m2_worker
 Reviewer: Codex /root
@@ -62,3 +62,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | exact committed range with pins | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
 
 
+
+## Actual pre-provider blocker
+
+SECRET_SCHEMA_MISMATCH before binary/provider; actualHTTP0,workerclaim/campaign retained,Go4/root1,onefixture cleaned. Formal REVIEW CHANGES_REQUIRED; no live/M2/CVF runtime claim or FREEZE. Owner max2 new PHYSICALcalls unused; R096 continuation may bind same aggregate2 via parentledger without resettingthisorder.
