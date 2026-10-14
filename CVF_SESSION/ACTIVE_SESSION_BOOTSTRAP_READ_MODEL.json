@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-094 bounded M2 source/local synthetic BUILD: Sol Medium implements manual intervention admission, snapshot evidence validation and case queue/detail under committed seed; Root independently reviews. Zero real provider/secret effects; R093 budget2/2 exhausted unchanged, M2 live/M3/pilot OPEN, Facebook/Zalo OA parked.",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeTranche": "CCMAI-RUNTIME-093",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR and SESSION_SYNC_STEWARD; Luna max worker returned; risk R2.",
-  "updatedAt": "2026-10-13",
+  "activeTranche": "CCMAI-RUNTIME-094",
+  "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR and SESSION_SYNC_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Root independent REVIEWER and COMMIT_STEWARD.",
+  "updatedAt": "2026-10-14",
   "productDeliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
 }

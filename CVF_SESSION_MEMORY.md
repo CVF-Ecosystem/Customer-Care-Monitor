@@ -9,16 +9,33 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-093", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md", "activeTranche": "CCMAI-RUNTIME-094", "parked": true} -->
 
 ## Current Truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md
+
+## Current M2 execution — 2026-10-14
+
+CCMAI-RUNTIME-094 bounded M2 source/local synthetic BUILD: Sol Medium implements manual intervention admission, snapshot evidence validation and case queue/detail under committed seed; Root independently reviews. Zero real provider/secret effects; R093 budget2/2 exhausted unchanged, M2 live/M3/pilot OPEN, Facebook/Zalo OA parked.
+
+Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR and SESSION_SYNC_STEWARD; /root/m2_worker Sol Medium IMPLEMENTATION_WORKER; Root independent REVIEWER and COMMIT_STEWARD.
+
+Owner resumes from synchronized main and permits Luna Max, Sol Medium when hard; Root orchestrator/reviewer. Luna source intake complete; durable concurrency/evidence/bypass complexity selects Sol Medium. Accepted intended SPEC and immutable R094 seed precede BUILD. Actual source/local acceptance and full M2 are not yet delivered. Go/Node/Docker available on this machine; no setup/install campaign. Existing application/DB stays untouched. No real provider request or secret access is admitted here.
+
+## Historical R093 handback and branch publication
+
+### R093 truth at handback
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md
 
-## Current M1 execution — 2026-10-13
+### Historical M1 execution — 2026-10-13
 
 CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.
 
@@ -26,7 +43,7 @@ Codex /root independent REVIEWER, ORCHESTRATOR and SESSION_SYNC_STEWARD; Luna ma
 
 Prior tranche/planning sections below are historical accepted context; current CCMAI-RUNTIME-093 order controls execution within its seed. Owner requires synthetic channel data and authorizes Alibaba real AI tests only within bounded R2 authority.
 
-## Current branch publication
+### Historical branch publication
 
 Owner-authorized branch codex/ccma-product-m1 published at `7b14533bcfb54d10f192145b455b9babad79af2a`; remote SHA verified in docs/reviews/probes/r093_alibaba_live/publication.json. R093 returned finding/FREEZE OPEN and exhausted provider budget remain unchanged; no main merge or deployment.
 

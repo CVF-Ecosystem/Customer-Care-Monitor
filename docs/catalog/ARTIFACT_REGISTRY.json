@@ -1,9 +1,44 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {
+      "id": "r093-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",
+      "status": "ACTIVE",
+      "description": "Historical returned R093 handoff; provider cap exhausted unchanged."
+    },
+    {
+      "id": "r094-m2-spec",
+      "family": "continuity",
+      "path": "docs/specs/M2_INTERVENTION_APPLICATION_SPEC_2026-10-14.md",
+      "status": "ACTIVE",
+      "description": "Accepted intended M2 state/API/admission/evidence contract; no implementation acceptance."
+    },
+    {
+      "id": "r094-m2-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md",
+      "status": "ACTIVE",
+      "description": "M2 manual synthetic application source/local work order."
+    },
+    {
+      "id": "r094-m2-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-094.json",
+      "status": "ACTIVE",
+      "description": "R094 bounded source/local lifecycle, full M2 live OPEN."
+    },
+    {
+      "id": "r094-m2-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-094.json",
+      "status": "ACTIVE",
+      "description": "Immutable R2 M2 source/local authority; real provider requests zero."
+    },
     {
       "id": "r093-alibaba-live-order",
       "family": "continuity",
@@ -2443,9 +2478,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",
       "status": "ACTIVE",
-      "description": "Current R093 Alibaba synthetic live handoff; max2 actual requests and no app governance claim."
+      "description": "Active R094 manual synthetic M2 application handoff."
     },
     {
       "id": "r060-work-order",

@@ -49,6 +49,10 @@ Drift M1 đã đối chiếu với source hiện tại: spec database từng nó
 
 [Independent live review](../R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md): Alibaba qwen3.7-flash HTTP compatibility observed twice with synthetic data; positive output rejected for invalid ID/missing complaint anchor, neutral PASS. Budget2/2 exhausted; no further R093 retry. R092/R093 are two support scopes, not usable end-user workflow. Next is one coherent M2 application packet including verified local toolchain/isolated DB setup, WAIT_DATA/DENY before disclosure, durable physical-call reservation and strict proposal evidence validation. M3 then completes human review/assignment/outcome in browser. No Go/Docker/MySQL found in checked paths; setup is an explicit prerequisite of that packet, not a new endless support campaign. Full M1/M4/M5 business/pilot decisions remain open.
 
+## R094 current machine and bounded M2 route — 2026-10-14
+
+Owner resumes synchronized main and appoints Root orchestrator/reviewer; Luna Max primary, Sol Medium fallback when hard. Luna source intake and Sol design identify durable concurrent physical-call admission, exact evidence and legacy bypass; Root selects Sol Medium. R094 accepted intended SPEC and committed seed activate one coherent M2 source/local synthetic packet, not another provider characterization. Current machine has Go1.27, Node24.19/npm11.17, Docker29.8 and cached mysql:8.0; previous missing-toolchain statements are historical, no install campaign needed. Existing app/DB protected. Full M2/live/M3/pilot remain OPEN; zero new provider/secret/push/deploy effects. R093 positive evidence failure and cap2/2 retained. Next concrete capability: evidence-bound proposal plus readable case queue/detail on one manual synthetic job, with deny/wait zero disclosure. See ../../work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md.
+
 ## 4. Thứ tự delivery và trạng thái
 
 | Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái lúc tạo |
