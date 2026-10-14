@@ -56,7 +56,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | authorization_review | PRE_DISPATCH | orchestrator | PRE_DISPATCH | R094 committed seed and order | EXACT_PATHS | commit-steward | DISPATCH_COMMIT | NONE |
 | pre_dispatch_gate | PRE_DISPATCH | orchestrator | PRE_DISPATCH | order continuity catalog | BOUNDED_PATH_FAMILIES | commit-steward | DISPATCH_COMMIT | authorization_review |
-| dispatch_continuity | IMPLEMENTATION | session-sync-steward | IMPLEMENTATION | CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R094_2026-10-13.md material-SHA marker | EXACT_PATHS | session-sync-steward | DISPATCH_CONTINUITY_COMMIT | pre_dispatch_gate |
+| dispatch_continuity | IMPLEMENTATION | session-sync-steward | IMPLEMENTATION | CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md material-SHA marker | EXACT_PATHS | session-sync-steward | DISPATCH_CONTINUITY_COMMIT | pre_dispatch_gate |
 | focused_checker_tests | WORKER_RETURN | implementation-worker | WORKER_RETURN | source safety checks and local software receipts | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | dispatch_continuity |
 | adif_integrity | WORKER_RETURN | implementation-worker | WORKER_RETURN | return defect and evidence disclosure | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | focused_checker_tests |
 | pre_implementation_autorun | IMPLEMENTATION | implementation-worker | IMPLEMENTATION | acknowledgment and admitted metadata | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | dispatch_continuity |
