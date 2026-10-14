@@ -1143,7 +1143,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current audited M1-M5 route: active M2/R099 source-compile only, R100 fresh conditional live approval pending; M3/business/pilot open."
+      "description": "Current activeM2/R100 ownerfreshmax4 granted; sourceadmission/compilepending, firstvalidstops; M3/business/pilot OPEN."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -10517,6 +10517,62 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md",
       "status": "ACTIVE",
       "description": "R2newharness andsourceboundeffects; workerSolMedium, independentRoot, no oldbudgetreset."
+    },
+    {
+      "id": "r100-worker-source-return",
+      "family": "continuity",
+      "path": "docs/reviews/R100_SOURCE_READY_WORKER_RETURN_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Source-only worker return; oneprecompile repair, puretooling7PASS, no liveclaim."
+    },
+    {
+      "id": "r100-precompile-findings",
+      "family": "continuity",
+      "path": "docs/reviews/R100_PRECOMPILE_CONSOLIDATED_FINDINGS_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Rootconsolidated6source-only findings beforecompile/effects, repairedonepass."
+    },
+    {
+      "id": "r100-precompile-source-admission",
+      "family": "continuity",
+      "path": "docs/reviews/R100_PRECOMPILE_INDEPENDENT_SOURCE_ADMISSION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "IndependentRoot repairedsource audit acceptssoleofflinecompile only."
+    },
+    {
+      "id": "r100-protected-baseline",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/protected_baseline.json",
+      "status": "ACTIVE",
+      "description": "Rootpre-effect current13/oldsource/seed/marker/containeridentity protection."
+    },
+    {
+      "id": "r100-precompile-identity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/pre_compile_identity.json",
+      "status": "ACTIVE",
+      "description": "Exactnew3/current13/TLSsource hashes beforecompile; no provider effect."
+    },
+    {
+      "id": "r100-live-go-harness",
+      "family": "continuity",
+      "path": "backend/api/handlers/intervention_live_r100_test.go",
+      "status": "ACTIVE",
+      "description": "Explicit isolatedR100harness, max4untilvalid, defaultnotactivated."
+    },
+    {
+      "id": "r100-live-supervisor",
+      "family": "continuity",
+      "path": "scripts/r100_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "SourcebinaryboundR100fixture/livesupervisor, Rootcontinuation eachsemanticinvalid."
+    },
+    {
+      "id": "r100-tooling-unit-file",
+      "family": "continuity",
+      "path": "scripts/tests/test_r100_intervention_live_fixture.py",
+      "status": "ACTIVE",
+      "description": "PurePython toolingidentity/parserchecks; no mockprovider governanceproof."
     }
   ]
 }

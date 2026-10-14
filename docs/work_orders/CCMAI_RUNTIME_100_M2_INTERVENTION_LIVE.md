@@ -60,6 +60,3 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | terminal_completion_review | POST_MATERIAL | reviewer | POST_MATERIAL | actual M2 bounded live material SHA and bounded disposition | EXACT_PATHS | commit-steward | CONTINUITY_COMMIT | pre_commit |
 | continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | state memory handoff implementation catalog roadmap | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | exact committed range with pins | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
-
-
-

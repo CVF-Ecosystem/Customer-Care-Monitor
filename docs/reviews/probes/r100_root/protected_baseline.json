@@ -1,0 +1,50 @@
+{
+  "recordedBy": "Codex /root",
+  "date": "2026-10-15",
+  "beforeR100Effects": true,
+  "head": "72af95d99d31ad8af4f2daac775841f7ba964841",
+  "protectedFiles": {
+    "CVF_SESSION/authority/CCMAI-RUNTIME-093.json": "9b78667812db2700531a49f566ec016b8e300f7f63448466c6027dee3e7b9d18",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-094.json": "d0487796119633a7a0a780aab04723fa4bd6170226ff8b804bad10768b825b35",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-095.json": "6194c49f049521ef953da46c5366ba022bfd39b0d2c781d6a057065b9c7ae7c7",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-096.json": "b412fb86df6af8eb62daec7e7bc2af3a5334833ba6f0d39f366482e9751782d6",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-097.json": "cf97cbc9cda1ca779f8c46474173e7ed580bbaed3274f5b6a848b786137b9dbb",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-098.json": "1fb3a80fce33118da951c76d3b1d515c77d8fb6f7203e40f92f22d3cf978b98b",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-099.json": "2e05fb2e5585fb15fb861ba894548089624fdaeaad44821221118818b057a615",
+    "backend/ai/chat_once_response.go": "7a809aea477017ee6205a47803f4caac68064fa610e7b7dc7679cf236734246a",
+    "backend/ai/openai_compatible.go": "a1ac47fcba0e813d139b2ab4dcd47d872ac5614b9d5528c805cd007df34e99fd",
+    "backend/ai/openai_compatible_test.go": "d9899c5073b7fc9d26d5eee44e6e8cdb79cce0103b80b2fd437472a6be44149f",
+    "backend/api/handlers/intervention.go": "f8ae2624521db3755f510754f09578392060818e4f9a7243d8e856df3a2e8496",
+    "backend/api/handlers/intervention_live_r095_test.go": "1a93affc66e8bb51fa5d7d20c84a1f9f0c3141a86260b5d5848f5e43cb821512",
+    "backend/api/handlers/intervention_live_r096_test.go": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+    "backend/api/handlers/intervention_live_r098_test.go": "0fbd2590dc2425ec254196b04b839cf476020189d0869ef70e8cd54602aa0536",
+    "backend/api/handlers/intervention_route_test.go": "3b6dd20878fc9712c7e2e054aea2187c4917d4e1176036c56506af59dcc5841b",
+    "backend/api/handlers/jobs.go": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e",
+    "backend/api/router.go": "94d91d60204bd07cca09d00c45068e8cbf5a355f83e289ac7026ceac3fece4dd",
+    "backend/db/models/intervention.go": "25f5fd35ba1ee47382966dcbbc8e571910598e044586acb8234e7d889d4a5830",
+    "backend/db/mysql.go": "c694812f913d6121622857c46b8d7878ef7b4fefff92ec1b3b1f8489e084076b",
+    "backend/engine/analyzer.go": "d1c9ba5153cbd79e891899f78d42fa0caacbaf7ef2ae570c1dc7084382971bc2",
+    "backend/engine/analyzer_modes.go": "02b979fc9166c2ebc4371b1b78dfec08afbc526174423238244e57a3caab9824",
+    "backend/engine/intervention.go": "59bf11d0e74e6f0cb39ab52a006a32c5dd9de26be320680b9a2d87b577b5ecf3",
+    "backend/engine/intervention_usage_test.go": "a5e5c33d6f3fd7f1373cac51eebd0299a923362609d296120b225f4a13036346",
+    "scripts/r095_intervention_live_fixture.py": "3408db72c8d76714d9ccdfb86970f1a4f33ab0d50e543eef53187a68538f449b",
+    "scripts/r096_intervention_live_fixture.py": "5b1dec9ff3ade01cb9ca22e88e557e8b59876488ba76e98fc77c698be4c5969d",
+    "scripts/r098_intervention_live_fixture.py": "1944353ba5586b01e4e6a2c680f626e482b358e63675df7f7a800fe4c0d886e8",
+    "scripts/tests/test_r095_intervention_live_fixture.py": "9d287506b9505c5d75de6a7b565f73df293a77274bf87eaae23d447a26c67f27",
+    "scripts/tests/test_r096_intervention_live_fixture.py": "1fd61db390928044e69157e6f96e34d2e4f8b267266f659e3670050618cd6b23",
+    "scripts/tests/test_r098_intervention_live_fixture.py": "49466312c3fdd9a5f12e2fea90151fc9747a4f0607a9765977097d54e34b871f"
+  },
+  "oldConsumedMarkers": {
+    ".cvf/runtime/owner_alibaba_new2_20261014/owner_cap.json": "67f06eff78bcf1d56d9b878c6719ed134760c5cca5df17680452f455c3e9084c",
+    ".cvf/runtime/owner_alibaba_new2_20261014/slot-1.effect": "f9d8fdc444259f8b256e44c02431cd5db671ba7a23cc80f662c89fff52dfee71",
+    ".cvf/runtime/owner_alibaba_new2_20261014/slot-2.effect": "072392b6091f32d61f73cf2d06d5fbc1024449f0d61720e6a22231ae5dee00a5",
+    ".cvf/runtime/owner_alibaba_r098_new2_20261014/owner_cap.json": "875a7bb93a9ab4330806d1df6f0b3a62343d52fa20b34aa96a09913671766106",
+    ".cvf/runtime/owner_alibaba_r098_new2_20261014/slot-1.effect": "4188ee6e33da66b670588ff0b9d175704c9fea09d06abd360cb1c39434f8fb35",
+    ".cvf/runtime/owner_alibaba_r098_new2_20261014/slot-2.effect": "b31ef78efbfc83d983fa644562a40bdca42ac1b8f02319cbfa83e1ef2a467a35"
+  },
+  "protectedContainerIds": {
+    "ccma-app-1": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+    "ccma-nginx-1": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+    "ccma-db-1": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314"
+  }
+}

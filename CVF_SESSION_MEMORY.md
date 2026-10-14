@@ -20,7 +20,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 
 CCMAI-RUNTIME-100 owner fresh max4 untilfirstvalidproposal+faithfulknownusage; newharness sourceaudit beforeonecompile, Rootsourcebinarysignature beforekey/ownedfixture/live. Fourpredeclaredsyntheticcases/fixedprompt, nextsemanticinvalid onlyafterRootreceipt-boundcontinuation, transport/metadata/security/ledger anomaly stops. Go4max compile1/seed1/live1; APIused0/4, Goused0/4, no oldbudgetreset. Firstvalid stops forindependentRootreview, fullM2/M3/pilotOPEN, Facebook/ZaloOAparked.
 
-Codex /root ORCHESTRATOR and independent REVIEWER/COMMIT_STEWARD; /root/r100_worker Sol Medium IMPLEMENTATION_WORKER, no worker commit or seed edits.
+Codex /root ORCHESTRATOR and independent REVIEWER/COMMIT_STEWARD; /root/r100_worker Sol Medium IMPLEMENTATION_WORKER/REPAIR_WORKER, no worker commit or seed edits.
 
 ## Historical R099 prior to owner max4 grant
 

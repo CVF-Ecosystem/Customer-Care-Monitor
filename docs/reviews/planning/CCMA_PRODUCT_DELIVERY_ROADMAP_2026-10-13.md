@@ -96,7 +96,7 @@ Sol Medium source plus one consolidated repair reviewed independently by Root. A
 | Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái hiện hành |
 |---|---|---|---|---|
 | M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 local synthetic intended contract accepted historically; current M1 business/pilot acceptance OPEN. Does not block bounded synthetic M2 |
-| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | ACTIVE MILESTONE: R099 source/compile REVIEW_PASS at0640431, changed-source runtime NOT_RUN; R098 real2HTTP200 empty/no proposals and metadata loss, cap spent; R100 proposed fresh conditional budget pending. Full M2 OPEN |
+| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | ACTIVE MILESTONE: R100 ownerfreshmax4 granted, newharness BUILD/sourcebinaryadmission pending; currentR099source0640431 acceptedcompile only/currentruntimeNOT_RUN. R098 historicalrealempty/no proposals/capspent; fullM2 OPEN |
 | M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
 | M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |
 | M5 | Bản phát hành có thể cài, vận hành và tiếp quản | S7 | M4 GO và proof release | PLANNED — chưa dispatch |
@@ -259,12 +259,12 @@ Mẫu báo owner: “Dùng được X trong môi trường Y. Mốc M còn thi�
 | D02 người review/assignee, SLA giờ làm việc | OPEN | Local ánh xạ roles; owner chỉ định người/quy tắc nghiệp vụ còn thiếu | Workflow/pilot acceptance |
 | D03 corpus/PII/holdout | Synthetic baseline có; real-data scope OPEN | Local lập corpus contract; owner cho quyền dữ liệu cần thiết | Disclosure và M4 |
 | D04 ngưỡng chất lượng và budget | Chưa khóa trong roadmap này | Local đề xuất phép đo/căn cứ; owner chốt trade-off; không bịa số | M1 exit/pilot GO |
-| D05 provider/model/key readiness | R098 real2HTTP200/modelqwen3.7-flash at old source, empty answers and metadata loss; dollar billing UNKNOWN. Current R099 runtime NOT_RUN | R098 cap2/2 exhausted; R100 conditional max2 fresh calls proposed, NOT_APPROVED. No key/provider/fixture effect before owner grant and new seed/source signature | Current live branch; local source/compile accepted only |
+| D05 provider/model/key readiness | R098 oldsource realHTTP200/modelknown but emptyanswers/metadata loss, dollarbillingUNKNOWN; currentR099 liveNOTRUN | Owner2026-10-15 grants R100 max4 newcalls untilfirstvalidproposal+faithfulusage, explicitthinkingfalse; source/binarysignature required beforekey/fixture; no oldbudgetreset | Current boundedsyntheticM2; fullM2/pilot OPEN |
 | D06 topology/recovery/fence | In-process coordinator + DB parent-lock admission; orphan running fail-closed; distributed cancellation, crash recovery, reclaim và mixed-binary rollout không có | Chỉ đề xuất một process/one selected manual synthetic job; giữ fail-closed, không auto-reclaim; không mở lại accepted inheritance review | Multi-process/restart/live-data readiness; không chặn route local synthetic |
 | D07 Facebook/Zalo OA | OWNER_DEFERRED | Chỉ owner mở lại; không đưa vào prerequisite của Pancake synthetic; giữ nguyên evidence đã chấp nhận | Live riêng hai kênh |
 | D08 release target và vận hành | OPEN | Chốt môi trường/người vận hành trước M5; không tự deploy | M5 release |
 
-**Next allowed planning action:** Root commits the consolidated R099 source/compile review and current roadmap audit, then presents R100 for fresh conditional max2 provider approval. No new call/secret/fixture before grant and bounded seed/signature. M1 named people/SLA/corpus/pilot thresholds remain OPEN and can be settled alongside synthetic M2; no old budget replay or generic supporting successor.
+**Next allowed planning action:** Execute the committed bounded R100 order under ownerfreshmax4: Rootaudits newharness beforeonecompile, signs exactsource/binary/ledger beforekey/fixture, reviews eachsemanticinvalid beforecontinuation. Firstvalidproposal+faithfulusage orhardfailure stops. Rootindependentreview actualreceipt, cleanup/protectedchecks thenupdateM2 acceptance andM3planning. M1business/pilotcriteria stayOPEN; no generic supporting successor.
 
 ## 15. Source Authority và Evidence Comparison
 

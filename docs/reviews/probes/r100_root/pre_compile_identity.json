@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-15",
+  "sourceSha256": {
+    "backend/api/handlers/intervention_live_r100_test.go": "5350e33d7085e1e2f56a4f44e6e54b088dfe246110ee6f6e2eb81600d301062e",
+    "scripts/r100_intervention_live_fixture.py": "922624412d79762eec9dde1ae81e04065e711ae1f959d6c968492ec75e56c16a",
+    "scripts/tests/test_r100_intervention_live_fixture.py": "87a226f453ddb66ac01291057f5429e68ab836995cefb3a2ebcd65ed2cd54219"
+  },
+  "frozenSourceSha256": {
+    "backend/engine/intervention_usage_test.go": "a5e5c33d6f3fd7f1373cac51eebd0299a923362609d296120b225f4a13036346",
+    "backend/api/router.go": "94d91d60204bd07cca09d00c45068e8cbf5a355f83e289ac7026ceac3fece4dd",
+    "backend/api/handlers/intervention.go": "f8ae2624521db3755f510754f09578392060818e4f9a7243d8e856df3a2e8496",
+    "backend/engine/analyzer_modes.go": "02b979fc9166c2ebc4371b1b78dfec08afbc526174423238244e57a3caab9824",
+    "backend/ai/openai_compatible.go": "a1ac47fcba0e813d139b2ab4dcd47d872ac5614b9d5528c805cd007df34e99fd",
+    "backend/engine/analyzer.go": "d1c9ba5153cbd79e891899f78d42fa0caacbaf7ef2ae570c1dc7084382971bc2",
+    "backend/db/mysql.go": "c694812f913d6121622857c46b8d7878ef7b4fefff92ec1b3b1f8489e084076b",
+    "backend/ai/chat_once_response.go": "7a809aea477017ee6205a47803f4caac68064fa610e7b7dc7679cf236734246a",
+    "backend/api/handlers/jobs.go": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e",
+    "backend/ai/openai_compatible_test.go": "d9899c5073b7fc9d26d5eee44e6e8cdb79cce0103b80b2fd437472a6be44149f",
+    "backend/db/models/intervention.go": "25f5fd35ba1ee47382966dcbbc8e571910598e044586acb8234e7d889d4a5830",
+    "backend/engine/intervention.go": "59bf11d0e74e6f0cb39ab52a006a32c5dd9de26be320680b9a2d87b577b5ecf3",
+    "backend/api/handlers/intervention_route_test.go": "3b6dd20878fc9712c7e2e054aea2187c4917d4e1176036c56506af59dcc5841b"
+  },
+  "tlsDependencySha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+  "compileYet": false,
+  "providerCallsUsed": 0,
+  "goUsed": 0,
+  "reviewer": "Codex /root"
+}
