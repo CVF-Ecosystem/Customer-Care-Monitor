@@ -894,6 +894,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/config_precheck.log`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-098.json`
 - Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md`
+- Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/worker_setup_stdout.log`
+- Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/fixture_pre_live.json`
+- Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/worker_setup_stderr.log`
 - Fresh explicit owner max2 grant, old budgets unchanged, seed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-098.json`
 - Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/root_offline_tests.log`
 - Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `scripts/tests/test_r098_intervention_live_fixture.py`

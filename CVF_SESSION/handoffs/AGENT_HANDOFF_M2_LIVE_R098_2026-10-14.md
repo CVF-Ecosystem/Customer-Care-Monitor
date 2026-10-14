@@ -6,9 +6,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted one fixture seed, live pending Root ownership review.
+- Active role: Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted exactly workerlive1 on reviewed owned fixture.
 - Active tranche: CCMAI-RUNTIME-098
-- Next allowed move: CCMAI-RUNTIME-098 source/binary/fresh grant independently signed; config metadata precheck PASS. Sol may create/seed exactly one owned cached loopback fixture (workerGo2), then stop for Root ownership review before worker1 live. No existing app/DB changes; fresh cap2 role1 each, worker3/root1 Go; old budgets/markers unchanged; full M2/M3/pilot OPEN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-098 signed exact source/binary, config and single owned fixture independently verified. Sol may execute exactly worker1 synthetic Alibaba app call (last workerGo3); no automatic reviewer call. Root reviews actual request/response/usage and live disposition before reviewer1 within300sec, only if real HTTP response and<=768 observed output. Fresh cap2, no retries/resets, old budgets unchanged; full M2/M3/pilot OPEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root rehydration and BUILD entry acknowledgment
@@ -28,3 +28,7 @@ Canonical BUILD facts re-read; Root REVIEWER accepted only source/tooling per do
 ## Root exact binary signature and fixture dispatch
 
 Exact compiled binary df02ce7a independently hashed; source and unchanged TLS/helper/product hashes match source admission. Root signature and metadata-only currentconfig precheck PASS; fixture/provider0, workerGo1/root0. Root admits one labelled cached fixture/seed only, worker must stop before live for ownership review. Existing app/DB IDs unchanged; old ledgers retained.
+
+## Root pre-live ownership acknowledgment
+
+Root independently verified exact owned container/image/network/singlevolume/loopback port53225, signed source/binary/fixture IDs, and protected existing3 container IDs. Oldsource/consumed markers unchanged. WorkerGo2/root0/provider0; newparent only manifest and campaignnotstarted. Receipt docs/reviews/probes/r098_root/fixture_pre_live.json. Root admits exactly workerlive1; worker stops and messages Root immediately with realreceipt summary. Reviewer hard-stop0 response; no automaticsecond or outputtuning.

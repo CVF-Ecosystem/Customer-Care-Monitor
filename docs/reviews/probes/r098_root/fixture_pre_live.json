@@ -1,0 +1,40 @@
+{
+  "rootIndependentOwnership": "PASS",
+  "owned": {
+    "createdAt": "2026-10-14T11:09:56Z",
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "name": "ccmai-r098-live-20261014",
+    "network": "ccmai-r098-isolated-20261014",
+    "port": 53225,
+    "protectedIds": {
+      "ccma-app-1": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+      "ccma-db-1": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+      "ccma-nginx-1": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e"
+    },
+    "containerId": "4da32df43c1be669426589669ebe089fafb5c334315f94b16cd39cdb9044ada9",
+    "networkId": "aee8f98d38f74c5f11bf5169bcbf5476fa68e545f0d4c7338f06e6f991f89f3a",
+    "volumeIds": [
+      "e5b8e1d71c5ef0c30f821d386fca74af4108e9bde86fc340815b2e8ebb491dc8"
+    ]
+  },
+  "fixture": {
+    "channel": "c405c2ba-7d89-467e-af7c-0a8907c6fe11",
+    "deny_conversation": "dafb35d4-b9c9-4a0c-bfff-0f6cde9a7fe9",
+    "deny_job": "fffc3931-2fdc-406c-97bd-afa5534221f2",
+    "job": "7b59918e-a4ed-4e7f-b6ef-a11705163082",
+    "reviewer_conversation": "652caab1-524a-4c49-9b80-7480cd4dfaab",
+    "tenant": "955947e7-896b-4737-ac26-e2110573ad37",
+    "user": "3c6c4392-3acf-4dad-b3b1-2ac820841b6b",
+    "wait_conversation": "4c0f9656-5a2e-4392-b177-3d810ccb677f",
+    "worker_conversation": "a5d0fa85-db1b-43f9-a4a0-1963b907605b"
+  },
+  "workerGoUsed": 2,
+  "rootGoUsed": 0,
+  "providerCalls": 0,
+  "parentFiles": [
+    "owner_cap.json"
+  ],
+  "campaignStarted": false,
+  "protectedIdsUnchanged": true,
+  "oldSourceAndMarkersUnchanged": true
+}

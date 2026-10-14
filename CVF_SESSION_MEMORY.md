@@ -18,9 +18,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md
 
-CCMAI-RUNTIME-098 source/binary/fresh grant independently signed; config metadata precheck PASS. Sol may create/seed exactly one owned cached loopback fixture (workerGo2), then stop for Root ownership review before worker1 live. No existing app/DB changes; fresh cap2 role1 each, worker3/root1 Go; old budgets/markers unchanged; full M2/M3/pilot OPEN, accounts parked.
+CCMAI-RUNTIME-098 signed exact source/binary, config and single owned fixture independently verified. Sol may execute exactly worker1 synthetic Alibaba app call (last workerGo3); no automatic reviewer call. Root reviews actual request/response/usage and live disposition before reviewer1 within300sec, only if real HTTP response and<=768 observed output. Fresh cap2, no retries/resets, old budgets unchanged; full M2/M3/pilot OPEN, accounts parked.
 
-Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted one fixture seed, live pending Root ownership review.
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER admitted exactly workerlive1 on reviewed owned fixture.
 
 ## Historical R094 bounded closure
 

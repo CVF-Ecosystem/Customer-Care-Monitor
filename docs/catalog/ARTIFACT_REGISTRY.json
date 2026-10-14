@@ -5,6 +5,27 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r098-fixture-7d343e6d70bb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/worker_setup_stdout.log",
+      "status": "ACTIVE",
+      "description": "Independent exact owned fixture pre-live proof; no provider result yet."
+    },
+    {
+      "id": "r098-fixture-a269dad64725",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/worker_setup_stderr.log",
+      "status": "ACTIVE",
+      "description": "Independent exact owned fixture pre-live proof; no provider result yet."
+    },
+    {
+      "id": "r098-fixture-862c611f173a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r098_root/fixture_pre_live.json",
+      "status": "ACTIVE",
+      "description": "Independent exact owned fixture pre-live proof; no provider result yet."
+    },
+    {
       "id": "r098-admission-5ff357d5408e",
       "family": "continuity",
       "path": "docs/reviews/probes/r098_root/worker_compile_stdout.log",
