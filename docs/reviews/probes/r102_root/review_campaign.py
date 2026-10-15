@@ -22,6 +22,14 @@ def source():
     for f in a['files']:assert hashlib.sha256((R/f['path']).read_bytes()).hexdigest()==f['sha256'],f['path']
     return a
 
+def continuation():
+    p=R/'CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json'
+    a=json.loads(p.read_text(encoding='utf-8-sig'))
+    assert a['kind']=='OWNER_APPROVED_REPAIR_COST_ESCALATION_CONTINUATION'
+    assert a['trancheId']=='CCMAI-RUNTIME-102' and a['originalSeedUnchanged'] is True
+    assert a['ownerInstruction']=='cho phép, ko giới hạn'
+    return a
+
 def safe_inventory():
     ids=run(['docker','ps','-aq']).stdout.split(); result=[]
     fmt='{"id":{{json .Id}},"name":{{json .Name}},"image":{{json .Image}},"status":{{json .State.Status}},"mounts":{{json .Mounts}}}'
@@ -74,11 +82,29 @@ if mode=='setup':
     assert safe_inventory()==before,'protected snapshot changed'
     write('fixture_ready.json',dict(o,ready=True,probe='TCP schema',protectedSafeFieldsEqual=True))
     print('Same single R102 fixture ready on 127.0.0.1:'+o['port'])
+elif mode=='resume':
+    source();continuation();o,c=owned()
+    assert c['status']=='exited','resume only preserved stopped fixture'
+    assert safe_inventory()==read('protected_baseline.json'),'protected snapshot changed before resume'
+    previous=dict(o)
+    run(['docker','start',o['containerId']])
+    p=json.loads(run(['docker','inspect',o['containerId'],'--format','{{json .NetworkSettings.Ports}}']).stdout)
+    assert p.get('3306/tcp') and p['3306/tcp'][0]['HostIp']=='127.0.0.1'
+    o['port']=p['3306/tcp'][0]['HostPort'];write('fixture_owner.json',o);owned()
+    for _ in range(100):
+        p=mysql(o,"SELECT SCHEMA_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME='r102_fixture'")
+        if p.returncode==0 and p.stdout.strip()==DB:break
+        time.sleep(1)
+    else:raise RuntimeError('same preserved fixture not ready; no recreation')
+    assert safe_inventory()==read('protected_baseline.json')
+    tag='resume_'+str(read('counters.json')['aggregateGo'])
+    assert not (E/(tag+'.json')).exists(),'resume receipt exists; inspect before another effect'
+    write(tag+'.json',{'previous':previous,'current':o,'sameContainerNetworkVolume':True,'protectedSafeFieldsEqual':True})
+    print('Same preserved fixture resumed on loopback:'+o['port'])
 elif mode=='test':
     a=source();o,c=owned();assert c['status']=='running'
     role=sys.argv[2];assert role in ('worker','reviewer')
-    counters=read('counters.json');limit=4 if role=='worker' else 3
-    assert counters[role+'Go']<limit and counters['aggregateGo']<8
+    counters=read('counters.json');continuation()  # owner removed numerical caps; retain cumulative ledger
     binary=R/sys.argv[3]; pattern=sys.argv[4]
     expected=json.loads((R/'.cvf/runtime/r102_binary_manifest.json').read_text())[str(binary.relative_to(R)).replace('\\','/')]
     assert hashlib.sha256(binary.read_bytes()).hexdigest()==expected
@@ -100,6 +126,7 @@ elif mode=='stop':
     if c['status']=='running':run(['docker','stop','-t','15',o['containerId']])
     o,c=owned();assert c['status']=='exited'
     equal=safe_inventory()==read('protected_baseline.json')
-    write('cleanup_checkpoint.json',{'containerId':o['containerId'],'state':c['status'],'networkId':o['networkId'],'volumeName':o['volumeName'],'preserved':True,'protectedSafeFieldsEqual':equal})
+    cleanup_tag='cleanup_after_go'+str(read('counters.json')['aggregateGo'])+'.json'
+    write(cleanup_tag,{'containerId':o['containerId'],'state':c['status'],'networkId':o['networkId'],'volumeName':o['volumeName'],'preserved':True,'protectedSafeFieldsEqual':equal})
     print(json.dumps({'ownedFixtureStopped':True,'preserved':True,'protectedSafeFieldsEqual':equal}))
 else:raise ValueError('unknown finite campaign action')

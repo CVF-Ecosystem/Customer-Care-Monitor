@@ -6,9 +6,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root independent REVIEWER and ORCHESTRATOR at REVIEW_COST_ESCALATION_REQUIRED; no worker repair/runtime authorized.
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol repair worker source-only pending authority commit.
 - Active tranche: CCMAI-RUNTIME-102
-- Next allowed move: CCMAI-RUNTIME-102 BUILD_BLOCKED REVIEW_COST_ESCALATION_REQUIRED: source950d0d6 compilePASS/engine2PASS, native firstgroupFAIL at compound oldevent JSON comparison; remaining19 NOT_RUN. Likely same JSON-normalization fixture cause as repair2; Root late-review miss, no independent new cause. Proposed narrow unapplied repair3 in docs/reviews/R102_REVIEW_COST_ESCALATION_REQUIRED_2026-10-15.md requires owner/dispatcher exception before any edit/recompile/replay. Go worker3/reviewer2/aggregate5of8 fixture1of1 verified stopped/preserved, provider0/mock0; protected safe fields equal. Source frozen, no automatic retry/newfixture. R101 UI/Dashboard3baselinefailures/FREEZE and actualAIrerun/fullmilestones OPEN, accountsparked; no download/server/originalDB/push/deploy.
+- Next allowed move: CCMAI-RUNTIME-102 owner approved same-scope repair continuation without fixed Go/repair caps in CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json; historical seed/counters unchanged (Go5, repairs2, fixture1). Worker source-only stored JSON baseline repair3; Root independent source review/pin before compile and native rerun on SAME preserved fixture. Stop each failure for diagnosis, no blind replay. Provider/mock/UI0, R101/actual AI/fullmilestones OPEN, Facebook/ZaloOA parked; no download/originalDB/push/deploy.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root dispatch acknowledgment — 2026-10-15
@@ -42,3 +42,7 @@ I re-read canonical BUILD continuity, memory, active handoff, implementation sta
 ## Root runtime failure and cost escalation checkpoint — 2026-10-15
 
 Root independent native campaign: three offline compilesPASS (including preserved first), engine2topPASS/noSKIP, first handler native groupFAIL at compound historical-event JSON comparison, remaining19groups NOT_RUN under failfast. Root identifies likely same fixture JSON-normalization root as repair2, not a new independently established cause; source unchanged, no repair3 authorized. Root records REVIEW_COST_ESCALATION_REQUIRED at docs/reviews/R102_REVIEW_COST_ESCALATION_REQUIRED_2026-10-15.md with concrete unapplied narrow fix and required ownerdecision. Sourceadmission disabled. Exact own R102 fixture stopped/preserved and protected safe fields equal baseline; no original app/DB/R101 resource action, provider/mock0. Actual worker3/reviewer2/aggregate5of8, onefixtureof1. Backend W01..08/fullM3 unaccepted, R101UI/fullsuite/FREEZEOPEN. No retry or helper successor.
+
+## Root owner-continuation acknowledgment — 2026-10-15
+
+Fresh canonical rehydration and doctor27PASS. Owner explicitly grants "cho phép, ko giới hạn" after concrete repair3 escalation proposal. Root records supplemental decision CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json before source repair. Historical seed and failed campaign unchanged; same scope/risk/effects/roles, no fixed Go/repair cap, cumulative counters and failure diagnosis retained. Root transitions to ORCHESTRATOR and independent REVIEWER; Sol worker gets source-only repair after this authority commit. Runtime remains unadmitted until independent source review.

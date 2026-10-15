@@ -1042,6 +1042,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_stderr.txt`
 - R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_stdout.txt`
 - Pinned actual offline binary hashes for failed native/accepted2engine checks; not full backend acceptance.: `docs/reviews/probes/r102_root/binary_manifest.json`
+- Explicit owner cost-escalation continuation without fixed same-scope Go/repair caps; historical seed/counters and all other boundaries preserved.: `CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json`
 - R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved.: `docs/reviews/R102_REPAIRED_SOURCE_ADMISSION_2026-10-15.md`
 - R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved.: `docs/reviews/probes/r102_root/source_admission.json`
 - R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/R102_CONSOLIDATED_SOURCE_REVIEW_2026-10-15.md`

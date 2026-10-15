@@ -11301,6 +11301,13 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md",
       "status": "ACTIVE",
       "description": "Retained R101 REVIEW/FREEZE OPEN checkpoint; session routing superseded by R102 without product closure."
+    },
+    {
+      "id": "r102-owner-repair-continuation",
+      "family": "continuity",
+      "path": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
+      "status": "ACTIVE",
+      "description": "Explicit owner cost-escalation continuation without fixed same-scope Go/repair caps; historical seed/counters and all other boundaries preserved."
     }
   ]
 }

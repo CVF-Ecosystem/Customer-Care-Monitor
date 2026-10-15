@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-102 — WAIT_DATA local source revision and nonexecuting intent
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: /root/r102_worker (Sol Medium)
 Reviewer: Codex /root
@@ -54,3 +54,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | memory state handoff implementation roadmap catalog | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | exact local committed range with profile pins | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
 
+
+## Owner-approved cost escalation continuation — 2026-10-15
+
+Owner: "cho phép, ko giới hạn". Supplemental dispatcher decision: `CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json`. This supersedes only the original numerical Go/repair stopping limits for same-scope R102 repair and verification. Original seed and failed receipts remain immutable; all actual counters continue cumulatively. No fixed launch/repair cap; no blind retries. Start with source-only stored JSON baseline repair3, Root source admission before each changed-source runtime campaign; use the same preserved owned fixture only. All other effect and claim boundaries remain. Original budget paragraphs above are historical and are read with this explicit current supplement.
