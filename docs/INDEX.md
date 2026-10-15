@@ -1050,6 +1050,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/probes/r102_worker/source_manifest.json`
 - R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/probes/r102_root/review_campaign.py`
 - R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/probes/r102_root/counters.json`
+- Independent exact source review for stored-JSON fixture repair3; planned compile/native only, not runtime acceptance.: `docs/reviews/R102_REPAIR3_INDEPENDENT_ADMISSION_2026-10-15.md`
 - Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_SPEC_2026-10-15.md`
 - Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_WORK_ORDER_2026-10-15.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`

@@ -271,6 +271,8 @@ func TestR102NativeRevisionIntent(t *testing.T) {
 	}
 	legacy := models.InterventionHumanEvent{ID: pkg.NewUUID(), TenantID: f.tenant, CaseID: f.caseID, CaseVersion: 1, ActorID: f.owner, Action: "ASSIGN_DATA", Reason: "earlier owner assignment", SnapshotID: f.snap, SnapshotDigest: f.originalDigest, SourceStatus: "INCOMPLETE", Before: `{"data_owner_id":null}`, After: `{"data_owner_id":"synthetic"}`, CreatedAt: time.Now().UTC()}
 	r102Must(t, &legacy)
+	var storedLegacy models.InterventionHumanEvent
+	r102DB(t, db.DB.Where("id = ?", legacy.ID).Take(&storedLegacy).Error)
 	if unchanged := f.send("POST", f.tenant, f.writer, "/data-revisions", f.revisionBody(1)); unchanged.Code != 409 || !bytes.Contains(unchanged.Body.Bytes(), []byte("source_unchanged")) {
 		t.Fatalf("empty source should be unchanged %d %s", unchanged.Code, unchanged.Body.String())
 	}
@@ -312,8 +314,44 @@ func TestR102NativeRevisionIntent(t *testing.T) {
 		t.Fatal("original case projection changed")
 	}
 	var events []models.InterventionHumanEvent
-	if db.DB.Where("case_id = ?", f.caseID).Order("case_version").Find(&events).Error != nil || len(events) != 3 || events[0].ID != legacy.ID || events[0].Before != legacy.Before || events[0].After != legacy.After || events[0].DataRevisionID != nil || events[0].RerunRequestID != nil || events[1].DataRevisionID == nil || events[2].RerunRequestID == nil {
-		t.Fatal("append-only events")
+	r102DB(t, db.DB.Where("case_id = ?", f.caseID).Order("case_version").Find(&events).Error)
+	if len(events) != 3 {
+		t.Fatalf("append-only event count: got %d, want 3", len(events))
+	}
+	old := events[0]
+	for _, field := range []struct {
+		name string
+		same bool
+	}{
+		{"id", old.ID == storedLegacy.ID},
+		{"tenant_id", old.TenantID == storedLegacy.TenantID},
+		{"case_id", old.CaseID == storedLegacy.CaseID},
+		{"case_version", old.CaseVersion == storedLegacy.CaseVersion},
+		{"actor_id", old.ActorID == storedLegacy.ActorID},
+		{"action", old.Action == storedLegacy.Action},
+		{"reason", old.Reason == storedLegacy.Reason},
+		{"proposal_id", old.ProposalID == nil},
+		{"snapshot_id", old.SnapshotID == storedLegacy.SnapshotID},
+		{"snapshot_digest", old.SnapshotDigest == storedLegacy.SnapshotDigest},
+		{"source_status", old.SourceStatus == storedLegacy.SourceStatus},
+		{"before", old.Before == storedLegacy.Before},
+		{"after", old.After == storedLegacy.After},
+		{"created_at", old.CreatedAt.Equal(storedLegacy.CreatedAt)},
+	} {
+		if !field.same {
+			t.Fatalf("legacy event field %s changed", field.name)
+		}
+	}
+	if old.DataRevisionID != nil || old.RerunRequestID != nil {
+		t.Fatal("legacy event acquired new reference")
+	}
+	if events[1].CaseVersion != 2 || events[1].DataRevisionID == nil || *events[1].DataRevisionID != r.ID || events[1].RerunRequestID != nil {
+		t.Fatal("revision event version or reference missing")
+	}
+	var persistedRequest models.InterventionRerunRequest
+	r102DB(t, db.DB.Where("tenant_id = ? AND case_id = ?", f.tenant, f.caseID).Take(&persistedRequest).Error)
+	if events[2].CaseVersion != 3 || events[2].DataRevisionID == nil || *events[2].DataRevisionID != r.ID || events[2].RerunRequestID == nil || *events[2].RerunRequestID != persistedRequest.ID {
+		t.Fatal("request event version or reference missing")
 	}
 	if rec := f.send("GET", f.tenant, f.reader, "/rerun-requests?limit=1", nil); rec.Code != 200 || !bytes.Contains(rec.Body.Bytes(), []byte("NOT_RUN")) {
 		t.Fatalf("list requests %d", rec.Code)

@@ -18,9 +18,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md
 
-CCMAI-RUNTIME-102 owner approved same-scope repair continuation without fixed Go/repair caps in CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json; historical seed/counters unchanged (Go5, repairs2, fixture1). Worker source-only stored JSON baseline repair3; Root independent source review/pin before compile and native rerun on SAME preserved fixture. Stop each failure for diagnosis, no blind replay. Provider/mock/UI0, R101/actual AI/fullmilestones OPEN, Facebook/ZaloOA parked; no download/originalDB/push/deploy.
+CCMAI-RUNTIME-102 repair3 source independently reviewed: stored JSON baseline, stronger payload-free history/ref assertions; only handler test changed, other7 unchanged. Owner supplement7cbcd52 removes fixed same-scope Go/repair caps; actualGo5/fixture1 retained. After candidate commit worker offline handlers_r3 compile, then Root verifies hash and resumes SAME owned fixture for all20 native groups with failfast; stop/preserve/protected check. No engine rerun/provider/mock/UI/download/originalDB/push/deploy. R101/actualAI/fullmilestones OPEN, Facebook/ZaloOA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol repair worker source-only pending authority commit.
+Codex /root independent REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; Sol worker admitted offline compile only after candidate commit.
 
 ## Historical R100 bounded real result before M3 dispatch
 

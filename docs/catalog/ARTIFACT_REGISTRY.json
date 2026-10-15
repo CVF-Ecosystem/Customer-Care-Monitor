@@ -11308,6 +11308,13 @@
       "path": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
       "status": "ACTIVE",
       "description": "Explicit owner cost-escalation continuation without fixed same-scope Go/repair caps; historical seed/counters and all other boundaries preserved."
+    },
+    {
+      "id": "r102-third-repair-source-admission",
+      "family": "continuity",
+      "path": "docs/reviews/R102_REPAIR3_INDEPENDENT_ADMISSION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Independent exact source review for stored-JSON fixture repair3; planned compile/native only, not runtime acceptance."
     }
   ]
 }

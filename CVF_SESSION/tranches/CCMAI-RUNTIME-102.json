@@ -90,8 +90,9 @@
     "providerCalls": 0,
     "mockProviderCalls": 0
   },
-  "x-sourceRepairRounds": 2,
+  "x-sourceRepairRounds": 3,
   "x-consolidatedSourceFindings": "docs/reviews/R102_CONSOLIDATED_SOURCE_REVIEW_2026-10-15.md",
   "x-reviewCostEscalation": "docs/reviews/R102_REVIEW_COST_ESCALATION_REQUIRED_2026-10-15.md",
-  "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json"
+  "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
+  "x-currentSourceAdmission": "docs/reviews/R102_REPAIR3_INDEPENDENT_ADMISSION_2026-10-15.md"
 }

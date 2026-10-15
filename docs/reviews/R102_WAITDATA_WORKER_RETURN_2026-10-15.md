@@ -1,14 +1,14 @@
 # R102 WAIT_DATA backend — implementation worker source return
 
 Status: BLOCKED_WITH_REASON
-Blocking reason: Source implementation is ready for Root's independent admission; W01–W08 native evidence cannot run under the current source-only boundary.
+Blocking reason: Repair round 3 source is pending Root's independent review and repin before another compile or native launch.
 Date: 2026-10-15
 Risk: R2
-Worker: /root/r102_worker, IMPLEMENTATION_WORKER
+Worker: /root/r102_worker, REPAIR_WORKER
 Reviewer: Codex /root
 Seed: c199f13d01bdae7c4ad2b12e8528e0f4bce412e3
 Dispatch: 11a60c007e202c9c44f484bcce3c4c6c5426e9c4
-Phase: BUILD; R102 scoped runtime acceptance NOT_RUN
+Phase: BUILD; engine 2 PASS, native first group FAIL, remaining 19 native groups NOT_RUN; W01–W08 acceptance OPEN
 
 Root added the explicit Risk/Reviewer header fields for the pinned role checker after source return; these fields name ownership and do not assert runtime approval by the worker.
 
@@ -48,3 +48,9 @@ Root's [four-group independent source review](R102_CONSOLIDATED_SOURCE_REVIEW_20
 Root independently admitted and committed the round 1 source at 223c052. The first offline handlers test-binary compile passed with exit 0; its command, cwd, offline environment, stdout, stderr and exit receipt are retained under `docs/reviews/probes/r102_worker/`. Shared counters are workerGo1/4, aggregateGo1/8, fixture0/1, provider0, mock0. Engine compile and all native binary launches remain NOT_RUN. The first binary predates this repair and does not validate the repaired test.
 
 Under Root's [fixture JSON repair disposition](R102_FIXTURE_JSON_REPAIR_DISPOSITION_2026-10-15.md), `TestR102NativeLegacyEventSurvivesMigration` now reads the legacy row back from MySQL before dropping the two R102 nullable columns. After two migrations, it checks the same stored identity, original event fields, JSON `Before`/`After`, timestamp and null references; both reads check database errors. This compares MySQL's persisted JSON bytes to its own baseline. Only the authorized handler test changed; application source did not. Standalone gofmt and `git diff --check` passed. The refreshed [eight-file source manifest](probes/r102_worker/source_manifest.json) records the new handler-test SHA-256 and actual Go count; the other seven hashes are unchanged. No compile retry, DB, native test, provider, mock, server, browser or network action occurred in this repair. Root must independently re-pin/review and commit before further runtime admission.
+
+## Owner-authorized source-only repair round 3 return
+
+The committed supplemental authority at 7cbcd52 permits same-scope repair continuation without resetting historical counters. Root's selected engine launch passed both `TestR102` groups. The first handler native group, `TestR102NativeRevisionIntent`, failed at the combined `append-only events` assertion (exit 1); failfast left 19 handler groups NOT_RUN. The pre-insert JSON comparison could differ from MySQL's stored JSON representation. That is the identified fixture defect; this repair has not been compiled or tested. Cumulative counters remain workerGo3, reviewerGo2, aggregateGo5, fixture reservations1, provider0 and mock0.
+
+In the authorized handler test only, I now read the legacy event from the owned database immediately after insertion and compare its stored original fields and JSON to the later event. The final assertion checks the query error and event count separately, then identifies each changed legacy field by name without printing payloads. It verifies the old nullable references remain null, revision event version/reference points to the created revision, and the request event version/revision/request references point to persisted rows. I corrected an in-progress assertion after Root's read-ahead: the request event intentionally carries both references. Standalone gofmt and scoped `git diff --check` pass. The refreshed eight-file manifest records handler test SHA-256 `d306bad96c327c61b46a11897a96fea92d0549c9c4b7820494baf2c58bbdc291`; the other seven implementation hashes are unchanged. Root must independently review, repin, commit and admit any further offline compile/native use on the same preserved fixture. No Go launch, database action, provider, mock, server, browser or network action occurred in round 3.
