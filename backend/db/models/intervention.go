@@ -102,6 +102,8 @@ type InterventionHumanEvent struct {
 	Action         string    `gorm:"type:varchar(32);not null" json:"action"`
 	Reason         string    `gorm:"type:varchar(500);not null" json:"reason"`
 	ProposalID     *string   `gorm:"type:char(36)" json:"proposal_id"`
+	DataRevisionID *string   `gorm:"type:char(36)" json:"data_revision_id,omitempty"`
+	RerunRequestID *string   `gorm:"type:char(36)" json:"rerun_request_id,omitempty"`
 	SnapshotID     string    `gorm:"type:char(36);not null" json:"snapshot_id"`
 	SnapshotDigest string    `gorm:"type:char(64);not null" json:"snapshot_digest"`
 	SourceStatus   string    `gorm:"type:varchar(40);not null" json:"source_status"`

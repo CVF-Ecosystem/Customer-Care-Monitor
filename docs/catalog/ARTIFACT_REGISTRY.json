@@ -5,6 +5,55 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r102-runtime-admission-0",
+      "family": "continuity",
+      "path": "docs/reviews/R102_REPAIRED_SOURCE_ADMISSION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved."
+    },
+    {
+      "id": "r102-runtime-admission-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/source_admission.json",
+      "status": "ACTIVE",
+      "description": "R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved."
+    },
+    {
+      "id": "r102-source-review-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/counters.json",
+      "status": "ACTIVE",
+      "description": "R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN."
+    },
+    {
+      "id": "r102-source-review-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/review_campaign.py",
+      "status": "ACTIVE",
+      "description": "R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN."
+    },
+    {
+      "id": "r102-source-review-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/source_manifest.json",
+      "status": "ACTIVE",
+      "description": "R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN."
+    },
+    {
+      "id": "r102-source-review-1",
+      "family": "continuity",
+      "path": "docs/reviews/R102_WAITDATA_WORKER_RETURN_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN."
+    },
+    {
+      "id": "r102-source-review-0",
+      "family": "continuity",
+      "path": "docs/reviews/R102_CONSOLIDATED_SOURCE_REVIEW_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN."
+    },
+    {
       "id": "r102-dispatch-4",
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-102.json",

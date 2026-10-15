@@ -1,0 +1,51 @@
+{
+  "admitted": true,
+  "reviewer": "Codex /root",
+  "scope": "Exact source offline compile and one owned synthetic MySQL software campaign only",
+  "review": "docs/reviews/R102_REPAIRED_SOURCE_ADMISSION_2026-10-15.md",
+  "repairRounds": 1,
+  "files": [
+    {
+      "path": "backend/db/models/intervention_waitdata.go",
+      "bytes": 3736,
+      "sha256": "e3ff5755c019ace0018295528261c685e5d81b9d1c105e0cd98474d9a417bd17"
+    },
+    {
+      "path": "backend/db/models/intervention.go",
+      "bytes": 7634,
+      "sha256": "2d4a44f7026061f303cc2c2ab7805d7a045d18294935be9af22736d20e691c3b"
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "bytes": 4810,
+      "sha256": "1dbf1b6fa89cfc8c5b4a33fc77986fed67a9d96edf3bb95aa43f36ce7502e731"
+    },
+    {
+      "path": "backend/engine/intervention_waitdata.go",
+      "bytes": 18261,
+      "sha256": "994a943700ea2a12614d6ed2391097498f9cce02378cf95a356eeedd4cb56835"
+    },
+    {
+      "path": "backend/engine/intervention_waitdata_test.go",
+      "bytes": 1947,
+      "sha256": "9470f1db5afccac05a714de28dc960cc73f58297131452f3c12bc883e9e42ba4"
+    },
+    {
+      "path": "backend/api/handlers/intervention_waitdata.go",
+      "bytes": 8421,
+      "sha256": "47decbe5f68826ba9e42f34b919c6d61f7ff42a820160c3a469cdaeb5cb5c8c4"
+    },
+    {
+      "path": "backend/api/handlers/intervention_waitdata_test.go",
+      "bytes": 48139,
+      "sha256": "b4ef794c7759003695b6d5b144c3b602a62ae81451dd006654ff8d7c33db579f"
+    },
+    {
+      "path": "backend/api/router.go",
+      "bytes": 16392,
+      "sha256": "930748786626e1aa3d1926bbd18f29cdb7ae771266c68374d63b7118973c0f58"
+    }
+  ],
+  "providerCalls": 0,
+  "mockProviderCalls": 0
+}

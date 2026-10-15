@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-102", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-102", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md
 
-CCMAI-RUNTIME-102 source-only dispatch under seedc199f13: /root/r102_worker implements accepted W01..08 SPEC within exact paths, acknowledges handoff before BUILD; Root independently reviews before Go/DB/Docker runtime. No provider/mock/UI/RunManual/ownership bypass. NewR102 counters0of8Go/0of1fixture. R101 REVIEW/FREEZE/UIB01-B10/Dashboard3failures and actualAIrerun/fullM2/M3/M1business/pilot/release remain OPEN; oldR101Go3/16 fixture2/2 preserved, Facebook/ZaloOA parked. No download/server/push/deploy.
+CCMAI-RUNTIME-102 exact repaired8source admitted by Root for offline compile and one owned synthetic MySQL campaign; Root commits candidate before effects, then worker verifies hashes and compiles cached handlers/engine binaries with counters. Go0of8 fixture0of1 provider0/mock0. No source changes or automatic retry after hash pin; failures stop. R101 browser/Dashboard3baselinefailures/FREEZE and actualAIrerun/fullmilestones OPEN, accountsparked. No Node/browser/devserver/download/originalDB/push/deploy.
 
-Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, COMMIT_STEWARD and SESSION_SYNC_STEWARD; /root/r102_worker Sol Medium source worker after committed dispatch; Root independent REVIEWER.
+Codex /root independent REVIEWER and COMMIT_STEWARD; /root/r102_worker Sol Medium source repair1 returned, runtime worker only after candidate commit.
 
 ## Historical R100 bounded real result before M3 dispatch
 

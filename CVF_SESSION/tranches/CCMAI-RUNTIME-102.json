@@ -58,8 +58,8 @@
     "repairRounds": "At most two consolidated same-scope repairs; third without independent new root cause stops with REVIEW_COST_ESCALATION_REQUIRED. No automatic budget or scope widening."
   },
   "claimScope": "Local synthetic source observations and durable AWAITING_EXECUTION_AUTHORITY/NOT_RUN request persistence only. Actual rerun execution/publication and browser acceptance remain OPEN; live AI governance requires separately authorized real provider evidence, not mock output.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "c199f13d01bdae7c4ad2b12e8528e0f4bce412e3",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md",
   "buildCommit": null,
@@ -68,7 +68,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -78,7 +79,7 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY",
+  "workOrderStatus": "ACTIVE",
   "x-actualExecution": {
     "goInvocations": 0,
     "workerGo": 0,
@@ -86,5 +87,7 @@
     "fixtures": 0,
     "providerCalls": 0,
     "mockProviderCalls": 0
-  }
+  },
+  "x-sourceRepairRounds": 1,
+  "x-consolidatedSourceFindings": "docs/reviews/R102_CONSOLIDATED_SOURCE_REVIEW_2026-10-15.md"
 }
