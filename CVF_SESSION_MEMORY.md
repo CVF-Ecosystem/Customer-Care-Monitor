@@ -9,9 +9,22 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-100", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-101", "parked": true} -->
 
 ## Current Truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md
+
+CCMAI-RUNTIME-101 M3 DISPATCH_READY: committed seed43c65ad and accepted intended SPEC bound human review/correction/assignment/deadline/outcome. Root commits dispatch after gates; Sol Medium rehydrates and acknowledges before source-only BUILD. Root source audit must precede any Go/fixture/browser/server effect. API0/mock0; R100 unused slots unavailable. M1 business/fullM2/M3/pilot/release OPEN, Facebook/Zalo OA parked; no installed activation/push/merge/deploy.
+
+Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; independent REVIEWER reserved. Sol Medium /root/m3_design selected implementation worker after Luna Max intake.
+
+## Historical R100 bounded real result before M3 dispatch
+
+### Prior truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: FREEZE

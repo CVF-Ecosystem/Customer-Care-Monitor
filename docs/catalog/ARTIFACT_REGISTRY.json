@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r101-m3-spec",
+      "family": "continuity",
+      "path": "docs/specs/M3_HUMAN_WORKFLOW_R101_SPEC_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects."
+    },
+    {
+      "id": "r101-m3-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md",
+      "status": "ACTIVE",
+      "description": "R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects."
+    },
+    {
+      "id": "r101-m3-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-101.json",
+      "status": "ACTIVE",
+      "description": "R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects."
+    },
+    {
+      "id": "r101-m3-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-101.json",
+      "status": "ACTIVE",
+      "description": "R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects."
+    },
+    {
       "id": "r099-final-independent-review",
       "family": "continuity",
       "path": "docs/reviews/R099_FINAL_INDEPENDENT_SOURCE_COMPILE_REVIEW_2026-10-14.md",
@@ -3535,7 +3563,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md",
       "status": "ACTIVE",
       "description": "Current R100 ownerfreshmax4 bounded M2 live handoff; sourcebinaryadmission mandatory beforeeffects."
     },

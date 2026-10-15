@@ -1,6 +1,6 @@
 # R100 current-source real synthetic M2 until valid result
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI

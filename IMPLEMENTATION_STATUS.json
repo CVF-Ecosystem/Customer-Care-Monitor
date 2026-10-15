@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-15",
-    "status": "BOUNDED_REAL_M2_SLICE_ACCEPTED_FULL_STAGE_OPEN",
+    "status": "M3_SPEC_ACCEPTED_DISPATCH_READY",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -14,7 +14,7 @@
       "S6": "NOT_RUN_FOR_STAGE_EXIT",
       "S7": "PRODUCT_RELEASE_EXIT_OPEN"
     },
-    "nextProductMilestone": "M3 humanreview/correction/assignment/deadline/outcome, browser+backend; boundedSPEC/workorder first",
+    "nextProductMilestone": "M3 human review through outcome, bounded local synthetic source/backend/browser",
     "planningRoute": [
       "M1 minimum-product contract and dependency decisions",
       "M2 controlled source/admission/AI/proposal path",
@@ -23,21 +23,21 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "FullM2 entry/PII/recovery/coverage notaccepted; one realcomplaint slice only",
-      "M3humanworkflow unimplemented; M1people/SLA/corpus/threshold andpilot/releaseOPEN"
+      "M3 H01..H08 implementation and real backend/browser evidence pending",
+      "FullM2 and M1 business people/SLA/corpus/threshold; pilot/release OPEN"
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
-    "currentMilestone": "M2",
-    "milestoneAcceptance": "BOUNDED_REAL_PATH_ACCEPTED_FULL_M2_NOT_ACCEPTED",
+    "currentMilestone": "M3",
+    "milestoneAcceptance": "M3_NOT_IMPLEMENTED_R100_BOUNDED_M2_HISTORICAL",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "LOCAL_ONLY_NOT_PUSHED"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -78,10 +78,11 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "x-buildInProgress": {
-    "status": "NONE_SOURCE_CANDIDATE_REVIEWED",
-    "trancheId": "CCMAI-RUNTIME-099",
-    "sourceCommit": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
-    "runtimeProof": "NOT_RUN"
+    "tranche": "CCMAI-RUNTIME-101",
+    "status": "DISPATCH_READY_NOT_IMPLEMENTED",
+    "providerCalls": 0,
+    "goInvocations": 0,
+    "browser": "NOT_RUN"
   },
   "knownLimitations": [
     "R100 FROZEN boundedreal syntheticcomplaint proposal atsourcea5eb32d, firstcallVALID/API1of4, faithfulKNOWN360input/261output, Rootreceipt+independentDBreadback andownedcleanup verified; slots2–4unused/no furtherR100call. FullM2/S2/S3, M3humanreview/assignment/outcome, Vietnamesequality/pilot/releaseOPEN. Installedinterventiondisabled; accountsparked; no oldbudgetreset.",
@@ -335,48 +336,11 @@
     "localClosureCommit": null
   },
   "x-ownerRouting": {
-    "date": "2026-10-14",
-    "parkedAccounts": [
-      "facebook",
-      "zalo_oa"
-    ],
-    "nextObjective": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
-    "activeWorkOrder": null,
-    "buildDispatched": false,
-    "currentExecutionBudget": {
-      "physicalProviderRequestsTotal": 2,
-      "workerProviderRequests": 1,
-      "reviewerProviderRequests": 1,
-      "automaticRetries": 0,
-      "redirects": 0,
-      "fallbacks": 0,
-      "model": "qwen3.7-flash",
-      "region": "ap-southeast-1",
-      "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
-      "requestedCompletionTokens": 758,
-      "ownerOutputCeiling": 768,
-      "requestBytesMax": 6000,
-      "responseBytesMax": 1048576,
-      "requestTimeoutSeconds": 60,
-      "campaignSecondsMax": 300,
-      "goInvocationsTotal": 7,
-      "workerGoInvocations": 4,
-      "reviewerGoInvocations": 3,
-      "includesCompiledTestBinaryLaunches": true,
-      "ownedDisposableMySQLFixturesTotal": 1,
-      "fixtureImage": "cached mysql:8.0 --pull never",
-      "sharedFixture": true,
-      "loopbackOnly": true,
-      "sameScopeRepairs": "max2 consolidated repairs within unchanged counters; third without independent cause stops REVIEW_COST_ESCALATION_REQUIRED",
-      "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json gitignored untracked; reviewed metadata only; credential stdin to hash-pinned binary, never argv/env/persistent copies",
-      "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect.",
-      "parentPhysicalLedger": ".cvf/runtime/owner_alibaba_new2_20261014",
-      "parentPhysicalRequestsTotal": 2,
-      "predecessorPhysicalRequestsKnown": 0,
-      "predecessorReceipt": "docs/reviews/probes/r095_root/r095_worker_receipt.json",
-      "predecessorReceiptSha256": "11992afae3a097520d040662cfe427713f803bc98b4dfc819f93da6679874421",
-      "sourceReviewBeforeCompile": true
-    }
+    "date": "2026-10-15",
+    "primary": "gpt-6-luna/max",
+    "fallback": "gpt-6-sol/medium",
+    "root": "orchestrator/reviewer",
+    "actualSelection": "Sol Medium for M3 transactional difficulty; Luna Max read-only inventory"
   },
   "x-sourcePreparationReceipt": {
     "status": "FROZEN_LOCAL_OBSERVATION_ONLY",
@@ -2052,7 +2016,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-100",
+  "activeTranche": "CCMAI-RUNTIME-101",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2068,7 +2032,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2176,22 +2142,12 @@
   },
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
-    "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "M2_BOUNDED_REAL_PROPOSAL_ACCEPTED_M3_PLANNING_NEXT",
-    "sourceBaseline": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
-    "currentMilestone": "M2",
-    "milestoneStatus": "BOUNDED_REAL_PATH_ACCEPTED_FULL_M2_OPEN",
-    "nextAction": "CCMAI-RUNTIME-100 FROZEN boundedreal syntheticM2 atsourcea5eb32d: firstcallvalidproposal+faithfulusage360/261, API1/4 Go3/4, ownedfixtureclean/protectedunchanged. No moreR100calls; unusedslots2-4 stayunused, oldbudgetsunchanged. ORCHESTRATOR next prepares finite M3 humanreview/correction/assignment/deadline/outcome SPEC/workorder andbrowser/backend evidence; M1businessparallel, fullM2/M3/pilot/releaseOPEN, Facebook/ZaloOAparked. No installedactivation/push/merge/deploy.",
-    "authority": "Owner2026-10-15 max4 untilvalidresult; immutableR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd; source/binarysignature stillmandatory beforeeffects",
-    "executionAuthorityExpanded": false,
-    "publication": "LOCAL_ONLY_NOT_PUSHED",
-    "updatedAt": "2026-10-15",
-    "reviewEvidence": "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md",
-    "currentRuntimeEvidence": "ONE_REAL_COMPLAINT_PROPOSAL_AND_FAITHFUL_USAGE_ACCEPTED",
+    "currentMilestone": "M3",
+    "milestoneStatus": "DISPATCH_READY_NOT_IMPLEMENTED",
+    "nextAction": "CCMAI-RUNTIME-101 M3 DISPATCH_READY: committed seed43c65ad and accepted intended SPEC bound human review/correction/assignment/deadline/outcome. Root commits dispatch after gates; Sol Medium rehydrates and acknowledges before source-only BUILD. Root source audit must precede any Go/fixture/browser/server effect. API0/mock0; R100 unused slots unavailable. M1 business/fullM2/M3/pilot/release OPEN, Facebook/Zalo OA parked; no installed activation/push/merge/deploy.",
+    "providerBudget": "R101 zero; R100 stopped/no further effects",
     "m1BusinessPilotAcceptance": "OPEN",
-    "m3HumanWorkflowAcceptance": "OPEN",
-    "futureLivePacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
-    "providerBudget": "R1001/4 used; stoppedfirstvalid; 3unused/no furtherR100effect; oldcaps unchanged"
+    "publication": "LOCAL_ONLY_NOT_PUSHED"
   },
   "x-historicalPreR092OwnerRouting": {
     "date": "2026-10-13",
@@ -2531,5 +2487,86 @@
     "review": "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md",
     "cleanup": "docs/reviews/probes/r100_root/cleanup_receipt.json",
     "nextProductStep": "M3_HUMAN_WORKFLOW_SPEC_NOT_DISPATCHED"
+  },
+  "x-historicalPreR101CurrentProjection": {
+    "activeTranche": "CCMAI-RUNTIME-100",
+    "activeWorkOrders": [],
+    "x-buildInProgress": {
+      "status": "NONE_SOURCE_CANDIDATE_REVIEWED",
+      "trancheId": "CCMAI-RUNTIME-099",
+      "sourceCommit": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+      "runtimeProof": "NOT_RUN"
+    },
+    "x-ownerRouting": {
+      "date": "2026-10-14",
+      "parkedAccounts": [
+        "facebook",
+        "zalo_oa"
+      ],
+      "nextObjective": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
+      "activeWorkOrder": null,
+      "buildDispatched": false,
+      "currentExecutionBudget": {
+        "physicalProviderRequestsTotal": 2,
+        "workerProviderRequests": 1,
+        "reviewerProviderRequests": 1,
+        "automaticRetries": 0,
+        "redirects": 0,
+        "fallbacks": 0,
+        "model": "qwen3.7-flash",
+        "region": "ap-southeast-1",
+        "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+        "requestedCompletionTokens": 758,
+        "ownerOutputCeiling": 768,
+        "requestBytesMax": 6000,
+        "responseBytesMax": 1048576,
+        "requestTimeoutSeconds": 60,
+        "campaignSecondsMax": 300,
+        "goInvocationsTotal": 7,
+        "workerGoInvocations": 4,
+        "reviewerGoInvocations": 3,
+        "includesCompiledTestBinaryLaunches": true,
+        "ownedDisposableMySQLFixturesTotal": 1,
+        "fixtureImage": "cached mysql:8.0 --pull never",
+        "sharedFixture": true,
+        "loopbackOnly": true,
+        "sameScopeRepairs": "max2 consolidated repairs within unchanged counters; third without independent cause stops REVIEW_COST_ESCALATION_REQUIRED",
+        "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json gitignored untracked; reviewed metadata only; credential stdin to hash-pinned binary, never argv/env/persistent copies",
+        "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect.",
+        "parentPhysicalLedger": ".cvf/runtime/owner_alibaba_new2_20261014",
+        "parentPhysicalRequestsTotal": 2,
+        "predecessorPhysicalRequestsKnown": 0,
+        "predecessorReceipt": "docs/reviews/probes/r095_root/r095_worker_receipt.json",
+        "predecessorReceiptSha256": "11992afae3a097520d040662cfe427713f803bc98b4dfc819f93da6679874421",
+        "sourceReviewBeforeCompile": true
+      }
+    },
+    "x-productDeliveryPlanning": {
+      "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+      "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+      "status": "M2_BOUNDED_REAL_PROPOSAL_ACCEPTED_M3_PLANNING_NEXT",
+      "sourceBaseline": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+      "currentMilestone": "M2",
+      "milestoneStatus": "BOUNDED_REAL_PATH_ACCEPTED_FULL_M2_OPEN",
+      "nextAction": "CCMAI-RUNTIME-100 FROZEN boundedreal syntheticM2 atsourcea5eb32d: firstcallvalidproposal+faithfulusage360/261, API1/4 Go3/4, ownedfixtureclean/protectedunchanged. No moreR100calls; unusedslots2-4 stayunused, oldbudgetsunchanged. ORCHESTRATOR next prepares finite M3 humanreview/correction/assignment/deadline/outcome SPEC/workorder andbrowser/backend evidence; M1businessparallel, fullM2/M3/pilot/releaseOPEN, Facebook/ZaloOAparked. No installedactivation/push/merge/deploy.",
+      "authority": "Owner2026-10-15 max4 untilvalidresult; immutableR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd; source/binarysignature stillmandatory beforeeffects",
+      "executionAuthorityExpanded": false,
+      "publication": "LOCAL_ONLY_NOT_PUSHED",
+      "updatedAt": "2026-10-15",
+      "reviewEvidence": "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md",
+      "currentRuntimeEvidence": "ONE_REAL_COMPLAINT_PROPOSAL_AND_FAITHFUL_USAGE_ACCEPTED",
+      "m1BusinessPilotAcceptance": "OPEN",
+      "m3HumanWorkflowAcceptance": "OPEN",
+      "futureLivePacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "providerBudget": "R1001/4 used; stoppedfirstvalid; 3unused/no furtherR100effect; oldcaps unchanged"
+    }
+  },
+  "x-r101M3": {
+    "status": "ACCEPTED_INTENDED_SPEC_DISPATCH_READY",
+    "spec": "docs/specs/M3_HUMAN_WORKFLOW_R101_SPEC_2026-10-15.md",
+    "source": "NOT_IMPLEMENTED",
+    "native": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "fullM3": "OPEN"
   }
 }

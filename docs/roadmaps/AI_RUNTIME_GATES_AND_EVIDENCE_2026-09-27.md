@@ -4,6 +4,10 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
+## Current M3 dispatch route — R101, 2026-10-15
+
+R100 bounded real synthetic proposal/faithful usage remains accepted at its exact recorded source; stopped after1/4 physical calls, unused slots unavailable. Current execution focus M3: accepted intended H01..H08 SPEC and immutable seed43c65ad bound review/correction/assignment/deadline/outcome, source/version/tenant guards and human history. Sol Medium implementation selected for transactional/source-lock/UI-lifetime difficulty after Luna Max inventory; Root independent review/commit. Source-only first, Root source admission before finite local MySQL/backend/browser proof (max16Go/two owned cached fixtures, zero provider/mock/secret). No installed activation or existing app/DB changes. Source/native/browser NOT_RUN before dispatch; fullM3 including WAIT_DATA rerun acceptance OPEN. M1 real people/SLA/corpus/threshold and fullM2/pilot/release OPEN, Facebook/Zalo OA parked. Route has three remaining steps: implement coherent human workflow -> actual isolated backend/browser proof -> independent acceptance/conditional local closure. No generic prerequisite successor; same-scope repairs bounded2, third without new cause cost escalation. Earlier current/next sections below are historical as of this R101 dispatch.
+
 ## Current product result and finite next move — R100, 2026-10-15
 
 | Milestone | Current truth | Remaining acceptance / next move |
