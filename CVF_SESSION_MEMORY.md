@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-103", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-103", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md
 
-CCMAI-RUNTIME-103 repaired script c0fb1ee1 SOURCE_REVIEW_PASS: after candidate commit Luna runs install-driver ONCE (official npm1.57 metadata/tarball SRI, safe extract, empty157cache publish, Node/CLI version and chromium dry-run). Browser install/page/UI/fixture/server remain NOT admitted until Root inspects actual package plan. Prior source/metadata mistakes retained; driver/browser actual0 before execution. R101/R102 old counters/status preserved; no provider/mock/secret/appsource/globalconfig/user-app restart/newfixture/push/deploy. Facebook/ZaloOA parked.
+CCMAI-RUNTIME-103 FROZEN tooling recovery only at7efc308: official driver1.57 + Chromium/headless1200 installed; Root335package/610oldcache hashes and real local launch/click/PNG PASS. Install campaigns driver1/browser1, reported bodies292458123bytes, browser redirect/wire counts unknown, no retries observed. Codex managed IAB unavailable/nativepipe unavailable; Antigravity integrated tool NOT_OBSERVED; R101UI B01-B10 NOT_RUN, server/fixture0. Next external Claude/Antigravity session checks blank capture using restored cache, then separately bounded source-bound R101 UI; independent M3-05 executor SPEC remains available. R101/R102 old acceptance/baselines unchanged; no more install/runtime authority from closure, provider/mock0/no appsource/secret/userapprestart/newfixture/globalconfig/push/deploy. Facebook/ZaloOA parked.
 
-Codex /root independent REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; Luna worker admitted install-driver only after candidate commit.
+Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent tooling review accepted, UI bridge unresolved.
 
 ## Historical R100 bounded real result before M3 dispatch
 

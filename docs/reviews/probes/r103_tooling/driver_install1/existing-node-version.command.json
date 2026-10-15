@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--version"
+  ],
+  "environmentOverrides": {},
+  "exitCode": 0,
+  "stderr": "existing-node-version.stderr.txt",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "existing-node-version.stdout.txt",
+  "stdoutSha256": "bc697de995dc791df53d688ef69c08994cdffc8ce30c906b1ffc65b131ccd0eb",
+  "timedOut": false
+}

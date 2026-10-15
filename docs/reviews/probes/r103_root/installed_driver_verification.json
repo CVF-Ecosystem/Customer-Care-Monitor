@@ -1,0 +1,68 @@
+{
+  "reviewer": "Codex /root",
+  "driverVersion": "Version 1.57.0",
+  "installed335FilesVerified": 335,
+  "tarballSRIRecomputed": "sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "browserCacheTopLevelEqual": true,
+  "browserPlan": {
+    "browserEntries": [
+      {
+        "browserVersion": "143.0.7499.4",
+        "installByDefault": true,
+        "name": "chromium",
+        "revision": "1200"
+      },
+      {
+        "browserVersion": "143.0.7499.4",
+        "installByDefault": true,
+        "name": "chromium-headless-shell",
+        "revision": "1200"
+      },
+      {
+        "browserVersion": "143.0.7488.0",
+        "installByDefault": false,
+        "name": "chromium-tip-of-tree",
+        "revision": "1380"
+      },
+      {
+        "browserVersion": "143.0.7488.0",
+        "installByDefault": false,
+        "name": "chromium-tip-of-tree-headless-shell",
+        "revision": "1380"
+      },
+      {
+        "installByDefault": true,
+        "name": "ffmpeg",
+        "revision": "1011",
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      }
+    ],
+    "downloadHostEnforcement": "URLs emitted by dry-run only; actual browser CLI redirects are not intercepted",
+    "environment": {
+      "DEBUG": "pw:install,pw:download",
+      "PLAYWRIGHT_BROWSERS_PATH": "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright",
+      "PLAYWRIGHT_SKIP_BROWSER_GC": "1",
+      "clearedDownloadHostOverrides": []
+    },
+    "unexpectedHosts": [],
+    "urls": [
+      "https://cdn.playwright.dev/builds/chromium/1200/chromium-headless-shell-win64.zip",
+      "https://cdn.playwright.dev/builds/chromium/1200/chromium-win64.zip",
+      "https://cdn.playwright.dev/builds/ffmpeg/1011/ffmpeg-win64.zip",
+      "https://cdn.playwright.dev/builds/winldd/1007/winldd-win64.zip",
+      "https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1200/chromium-headless-shell-win64.zip",
+      "https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1200/chromium-win64.zip",
+      "https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-win64.zip",
+      "https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip",
+      "https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/chromium/1200/chromium-headless-shell-win64.zip",
+      "https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/chromium/1200/chromium-win64.zip",
+      "https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-win64.zip",
+      "https://playwright.download.prss.microsoft.com/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip"
+    ]
+  },
+  "scope": "Independent local checks; no browser installation/UI/provider execution"
+}

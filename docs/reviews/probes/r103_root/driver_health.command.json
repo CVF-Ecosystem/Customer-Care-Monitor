@@ -1,0 +1,10 @@
+{
+  "command": [
+    "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright-go\\1.57.0\\node.exe",
+    "docs/reviews/probes/r103_root/driver_health.cjs"
+  ],
+  "exit": 0,
+  "timeoutSeconds": 60,
+  "clientDate": "2026-10-16",
+  "target": "local about:blank/self-authored health fixture only"
+}

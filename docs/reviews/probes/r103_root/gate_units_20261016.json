@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py"
+  ],
+  "exit": 0,
+  "clientDate": "2026-10-16",
+  "observedUtc": "2026-10-15T22:14:15.589955+00:00"
+}

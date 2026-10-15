@@ -4,7 +4,11 @@ Status: ACTIVE_PLANNING
 
 Ngày: 2026-10-13. Plan ID: `CCMAI-PRODUCT-DELIVERY-20261013`. Tác giả: Local ORCHESTRATOR / SPEC_AUTHOR. Phạm vi đợt này: tài liệu R1 theo yêu cầu trực tiếp của owner; implementation tương lai tối thiểu R2 theo AGENTS.md. Baseline source: `49160128df5109ed46054babb6942457a3ed85a9`; worktree sạch trước authoring. Các mốc M1–M5 dưới đây đều chưa được nghiệm thu theo hợp đồng roadmap này.
 
-## Current route after R101 browser retry2 — 2026-10-15
+## Current browser tooling recovery — 2026-10-16
+
+R103 recovered official exact driver1.57.0 plus Chromium/headless1200 from npm/official browser CDN. Root335package hashes and610preexisting cachefile hashes verified; actual local browser143 launch/control/PNG capture PASS. [Independent tooling review](../R103_INDEPENDENT_TOOLING_REVIEW_2026-10-16.md) accepts cache/component health only. Codex browser API currently exposes no IAB provider, native pipe is unavailable, and external Antigravity browser_subagent was not observed; conditional R101 UI/server/fixture branch did not run. Driver ZIP404 bootstrap dependency was addressed without source/project dependency changes or version faking. Next: external Claude/Antigravity client blank-page capture using restored cache, then source-bound R101B01..B10 only when capable. No repeated reinstall/old-CDN attempt. Independent M3-05 executor SPEC remains available while bridge is absent. R101 Dashboard3baseline/FREEZE and full milestones remain OPEN; R102 local backend FROZEN, accounts parked.
+
+## Historical route after R101 browser retry2 — 2026-10-15
 
 [Independent retry2 review](../R101_RETRY2_INDEPENDENT_REVIEW_2026-10-15.md) records BLOCKED with qualifications: all16 manifest entries verified, no screenshots, B01..B10 NOT_RUN, R101 counters unchanged. The reported stop avoided app-infrastructure launch; a repeated automatic Playwright/CDN fetch remains an attempted external effect, so strict no-download wording and universal browser incapability are not accepted. Operator/tool chronology is not independently authenticated. Original report/log retained; R101 REVIEW/FREEZE and Dashboard3baselinefailures stay OPEN. Do not repeat unchanged-tool UI attempts.
 

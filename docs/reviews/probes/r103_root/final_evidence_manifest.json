@@ -1,0 +1,519 @@
+{
+  "clientDate": "2026-10-16",
+  "scope": "Actual R103 tooling receipts; health PNG is self-authored blank-page test, not R101 product UI",
+  "files": [
+    {
+      "path": "docs/reviews/probes/r103_root/browser_cache_before_install.json",
+      "bytes": 123579,
+      "sha256": "1fd5289855450c5175aec3e2a1a757b634acc83f728206d310158fcec2e141a3",
+      "gitBlobBytes": 120523,
+      "gitBlobSha256": "dd0c14cf438d39e30fbadf4fe3a59255c8cbb093ee5a8f557cc5bbbabc20ab15",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          3055
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/browser_install_independent_verification.json",
+      "bytes": 492,
+      "sha256": "7b846f42983c1766c546884b9b1099a32f4ef0f053b495d6e5d2cfda2f132165",
+      "gitBlobBytes": 470,
+      "gitBlobSha256": "d49eb2c50a27b5f8c85cda6bb6547aabfbf53f437f3fdfe2ae7af56d5a07d7ad",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          21
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/driver_health.cjs",
+      "bytes": 2371,
+      "sha256": "980990a3279f2b8e64b3f7f076965d911377626510ffb0d2d55f2787049a0608",
+      "gitBlobBytes": 2335,
+      "gitBlobSha256": "df09b6258a051085ba57aebfc46fbdb08b4fd552b07a90e18bac1dbc3d258c81",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          35
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/driver_health.command.json",
+      "bytes": 298,
+      "sha256": "fe662dc83ed7cc3969e70f58d6f0356bf1569e071fb0a89c5d4487c5ede3cac5",
+      "gitBlobBytes": 288,
+      "gitBlobSha256": "e2344f61ff8c7c3b5fab50838eebee74f55b831afd9c149d0f6be84dbddcfeda",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          9
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/driver_health.png",
+      "bytes": 8478,
+      "sha256": "a9a515c98bbdb1d79504b28fe414c0d42d363bd0e3180d57be70330315a50281",
+      "gitBlobBytes": 8478,
+      "gitBlobSha256": "a9a515c98bbdb1d79504b28fe414c0d42d363bd0e3180d57be70330315a50281",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/driver_health.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/driver_health.stdout.log",
+      "bytes": 98,
+      "sha256": "959d2fcbc731e9c304b896c7385e9bcc15eb70465824282c40a533ea3a96f77b",
+      "gitBlobBytes": 97,
+      "gitBlobSha256": "e116b1ccfa2ea1aab12e2ffe57e3e284fb9e35f0ee58cccc6af13a07d0a6bbc7",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/driver_health_result.json",
+      "bytes": 569,
+      "sha256": "36411be85eec983541e89288320a90c3604ec513e23eadfe19636f7153e6edc8",
+      "gitBlobBytes": 569,
+      "gitBlobSha256": "36411be85eec983541e89288320a90c3604ec513e23eadfe19636f7153e6edc8",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/gate_units_20261016.json",
+      "bytes": 277,
+      "sha256": "6b3d049a143890bd98147c8bd88caf89b8c9b3a73ad8dfaf28da6c093f6d3ba4",
+      "gitBlobBytes": 261,
+      "gitBlobSha256": "01c3afce4b823c655313b466260079f30e96e6d42fca928d4fc9c1199290203d",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          15
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/gate_units_20261016.stderr.log",
+      "bytes": 194,
+      "sha256": "34185cdeeea87e170ccb4b3859f6f596d84804e9a0805a0a0cf2bdd78270862a",
+      "gitBlobBytes": 189,
+      "gitBlobSha256": "a650535490edfba2ae1038bd8ba43977f38c61f6bb7205c7128698907f36e2c4",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/gate_units_20261016.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/installed_driver_verification.json",
+      "bytes": 3045,
+      "sha256": "7e8626460efcafcffd667f01ac3c37fae5fcef1359ef01497693c653ba79c97d",
+      "gitBlobBytes": 2977,
+      "gitBlobSha256": "ac65ae8fed811c17e352c51e7d16b14875e425376a83be51fa844081929d5809",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          67
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/managed_browser_capability_20261016.json",
+      "bytes": 595,
+      "sha256": "6566d07a864403bfc3515abb50f806d2884585ec9b7ed132b9dbf5b6dedb10ad",
+      "gitBlobBytes": 577,
+      "gitBlobSha256": "33b870027f437e3e461718a0baa424c02c2f7bc7331379b18102aed4bbd5966e",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          17
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_root/native_pipe_capability.json",
+      "bytes": 646,
+      "sha256": "ce27291670bd0eb171ed7caaea43134fa456b9b0470258df48d53241a406dc37",
+      "gitBlobBytes": 633,
+      "gitBlobSha256": "52afa58fc9a8e3c2cf0a066024af69e119f4f6ed051ce516d4a13e4cdb6936cd",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          12
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/browser-cache-after.json",
+      "bytes": 204,
+      "sha256": "f82e603bcf3fae73b72be9a30e67d82d1586541e95d9820e679e21ce4df4bd16",
+      "gitBlobBytes": 204,
+      "gitBlobSha256": "f82e603bcf3fae73b72be9a30e67d82d1586541e95d9820e679e21ce4df4bd16",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/browser-cache-before.json",
+      "bytes": 137,
+      "sha256": "9d40c6807196f9a5d453d53f3d5c4c5e5e485948c63ec4b27bfa8aabd8f2e970",
+      "gitBlobBytes": 137,
+      "gitBlobSha256": "9d40c6807196f9a5d453d53f3d5c4c5e5e485948c63ec4b27bfa8aabd8f2e970",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/campaign-reservation.json",
+      "bytes": 2319,
+      "sha256": "908083c181e078872e12c22aab8a253ef98598ccf5fffba0dc0519cf19461cb4",
+      "gitBlobBytes": 2264,
+      "gitBlobSha256": "61655052f692b5b93ca1ff0f412276f0b40723ed5927bb7728b7ab9f47289a95",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          54
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.command.json",
+      "bytes": 718,
+      "sha256": "b09ae5941b7d6483f011d60c610f9ba7784683ac43d5568f76b6098e23dec8b6",
+      "gitBlobBytes": 718,
+      "gitBlobSha256": "b09ae5941b7d6483f011d60c610f9ba7784683ac43d5568f76b6098e23dec8b6",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.stdout.txt",
+      "bytes": 2299,
+      "sha256": "2e7a66240e546935a6232d17fe6ae06a60a9deca7b83f7e194b6240ea680b7c2",
+      "gitBlobBytes": 2299,
+      "gitBlobSha256": "2e7a66240e546935a6232d17fe6ae06a60a9deca7b83f7e194b6240ea680b7c2",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install-result.json",
+      "bytes": 60392,
+      "sha256": "ac081e3642643f7813e730d7274a948e6708cc8cb83fabe75fdd4439a73d1baa",
+      "gitBlobBytes": 60392,
+      "gitBlobSha256": "ac081e3642643f7813e730d7274a948e6708cc8cb83fabe75fdd4439a73d1baa",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install.command.json",
+      "bytes": 701,
+      "sha256": "cb29c64d163a51c46dd26df02f21f93995390398f3f443f107339af67895c02e",
+      "gitBlobBytes": 701,
+      "gitBlobSha256": "cb29c64d163a51c46dd26df02f21f93995390398f3f443f107339af67895c02e",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install.stderr.txt",
+      "bytes": 3754,
+      "sha256": "736904bcd5cb694ce65b6c7c032d7fe9e8728c6dd06e0fae577704641073b94f",
+      "gitBlobBytes": 3754,
+      "gitBlobSha256": "736904bcd5cb694ce65b6c7c032d7fe9e8728c6dd06e0fae577704641073b94f",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install.stdout.txt",
+      "bytes": 4616,
+      "sha256": "ee1c31c3cf36ea1acd83d7072568399033c333f3ac26acf51782ceade69cc343",
+      "gitBlobBytes": 4616,
+      "gitBlobSha256": "ee1c31c3cf36ea1acd83d7072568399033c333f3ac26acf51782ceade69cc343",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-plan.json",
+      "bytes": 2406,
+      "sha256": "2a91f5f051ec253405b137deff134fc7aafc01d9963a8590339ea58577678adf",
+      "gitBlobBytes": 2406,
+      "gitBlobSha256": "2a91f5f051ec253405b137deff134fc7aafc01d9963a8590339ea58577678adf",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.command.json",
+      "bytes": 703,
+      "sha256": "20d2e6e672ee7f5950b4fa96cc447935efd9bbfa0a1d4db9859a325d1bf18c74",
+      "gitBlobBytes": 703,
+      "gitBlobSha256": "20d2e6e672ee7f5950b4fa96cc447935efd9bbfa0a1d4db9859a325d1bf18c74",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.stdout.txt",
+      "bytes": 15,
+      "sha256": "77ebd41d77d4bd472f0e6c2ebe55184cadf50d3b8626e3c9971c39cf7bf8e2bb",
+      "gitBlobBytes": 15,
+      "gitBlobSha256": "77ebd41d77d4bd472f0e6c2ebe55184cadf50d3b8626e3c9971c39cf7bf8e2bb",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.command.json",
+      "bytes": 451,
+      "sha256": "faba1632874775fe9298ce90be7b575ed5cf3ef436d91209f6121dc1f7bdfe8f",
+      "gitBlobBytes": 451,
+      "gitBlobSha256": "faba1632874775fe9298ce90be7b575ed5cf3ef436d91209f6121dc1f7bdfe8f",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.stdout.txt",
+      "bytes": 10,
+      "sha256": "bc697de995dc791df53d688ef69c08994cdffc8ce30c906b1ffc65b131ccd0eb",
+      "gitBlobBytes": 9,
+      "gitBlobSha256": "b7677d3ec37ee1897ba07dc2cfe8292fe421c9ac93396cca5bbece486d1a2a41",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/result.json",
+      "bytes": 43,
+      "sha256": "2baa56634758d4429326d07705652c46eaed46d399a1e988e28d7ff81ea523ef",
+      "gitBlobBytes": 43,
+      "gitBlobSha256": "2baa56634758d4429326d07705652c46eaed46d399a1e988e28d7ff81ea523ef",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/worker-install-return.md",
+      "bytes": 3993,
+      "sha256": "a99d2d2b63c3e75db4b902e6cc38d9760a6d7b95e537d7d8f8dd4d143fe5e89b",
+      "gitBlobBytes": 3950,
+      "gitBlobSha256": "c7e18953e182293585b0f540f0080f58dc643817dc64d58360acbc9be4b6b1d0",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          42
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/browser-cache-after-driver",
+      "bytes": 137,
+      "sha256": "9d40c6807196f9a5d453d53f3d5c4c5e5e485948c63ec4b27bfa8aabd8f2e970",
+      "gitBlobBytes": 137,
+      "gitBlobSha256": "9d40c6807196f9a5d453d53f3d5c4c5e5e485948c63ec4b27bfa8aabd8f2e970",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/browser-cache-before.json",
+      "bytes": 137,
+      "sha256": "9d40c6807196f9a5d453d53f3d5c4c5e5e485948c63ec4b27bfa8aabd8f2e970",
+      "gitBlobBytes": 137,
+      "gitBlobSha256": "9d40c6807196f9a5d453d53f3d5c4c5e5e485948c63ec4b27bfa8aabd8f2e970",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/campaign-reservation.json",
+      "bytes": 1583,
+      "sha256": "5eb2ad98fefb526a01acca33c8ffe1fc0b4927aee0739ee8d7e19066fdf38f43",
+      "gitBlobBytes": 1547,
+      "gitBlobSha256": "5a69c30fc01c51ff5f1079801ddae3c840398f70613345ec26092870a3f1afc0",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          35
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.command.json",
+      "bytes": 718,
+      "sha256": "b09ae5941b7d6483f011d60c610f9ba7784683ac43d5568f76b6098e23dec8b6",
+      "gitBlobBytes": 718,
+      "gitBlobSha256": "b09ae5941b7d6483f011d60c610f9ba7784683ac43d5568f76b6098e23dec8b6",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.stdout.txt",
+      "bytes": 2299,
+      "sha256": "2e7a66240e546935a6232d17fe6ae06a60a9deca7b83f7e194b6240ea680b7c2",
+      "gitBlobBytes": 2299,
+      "gitBlobSha256": "2e7a66240e546935a6232d17fe6ae06a60a9deca7b83f7e194b6240ea680b7c2",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-plan.json",
+      "bytes": 2406,
+      "sha256": "2a91f5f051ec253405b137deff134fc7aafc01d9963a8590339ea58577678adf",
+      "gitBlobBytes": 2406,
+      "gitBlobSha256": "2a91f5f051ec253405b137deff134fc7aafc01d9963a8590339ea58577678adf",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/driver-version.command.json",
+      "bytes": 683,
+      "sha256": "1e0f7df57e17bce3825e2bc51f35c103be57e4e845c0598c86d71e2318796d81",
+      "gitBlobBytes": 683,
+      "gitBlobSha256": "1e0f7df57e17bce3825e2bc51f35c103be57e4e845c0598c86d71e2318796d81",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/driver-version.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/driver-version.stdout.txt",
+      "bytes": 15,
+      "sha256": "77ebd41d77d4bd472f0e6c2ebe55184cadf50d3b8626e3c9971c39cf7bf8e2bb",
+      "gitBlobBytes": 15,
+      "gitBlobSha256": "77ebd41d77d4bd472f0e6c2ebe55184cadf50d3b8626e3c9971c39cf7bf8e2bb",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.command.json",
+      "bytes": 415,
+      "sha256": "2c377e7a89021012619da57d6dc79c8e0040f5243eea4b57230901a2d1662fe1",
+      "gitBlobBytes": 415,
+      "gitBlobSha256": "2c377e7a89021012619da57d6dc79c8e0040f5243eea4b57230901a2d1662fe1",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobBytes": 0,
+      "gitBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.stdout.txt",
+      "bytes": 10,
+      "sha256": "bc697de995dc791df53d688ef69c08994cdffc8ce30c906b1ffc65b131ccd0eb",
+      "gitBlobBytes": 9,
+      "gitBlobSha256": "b7677d3ec37ee1897ba07dc2cfe8292fe421c9ac93396cca5bbece486d1a2a41",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/network.json",
+      "bytes": 820,
+      "sha256": "a4076a554d20fb608e50541832379c288ce3c3bc34e738b3f1d4fa5022e6c13f",
+      "gitBlobBytes": 820,
+      "gitBlobSha256": "a4076a554d20fb608e50541832379c288ce3c3bc34e738b3f1d4fa5022e6c13f",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/npm-requests.jsonl",
+      "bytes": 1215,
+      "sha256": "78f9d6086ad42d298bcefc3a0001522020aba35eec74fa32caa08d8f5b681d0f",
+      "gitBlobBytes": 1215,
+      "gitBlobSha256": "78f9d6086ad42d298bcefc3a0001522020aba35eec74fa32caa08d8f5b681d0f",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/published-files.json",
+      "bytes": 56147,
+      "sha256": "fc1c62b7b13ab388373a3e57b420fbfff0acac6068609954c392be90ea8f02d7",
+      "gitBlobBytes": 56147,
+      "gitBlobSha256": "fc1c62b7b13ab388373a3e57b420fbfff0acac6068609954c392be90ea8f02d7",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/result.json",
+      "bytes": 43,
+      "sha256": "1ff531aad1482efe6ad31ec513c6c930918f28e05089aca6defc02777cbbf5fa",
+      "gitBlobBytes": 43,
+      "gitBlobSha256": "1ff531aad1482efe6ad31ec513c6c930918f28e05089aca6defc02777cbbf5fa",
+      "capturedByteReconstruction": "IDENTITY"
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/worker-install-return.md",
+      "bytes": 4601,
+      "sha256": "959f5b723fb7a0f68e430ec3d1c80a90230e6b3868f3ae4b560e813efe58e9b3",
+      "gitBlobBytes": 4550,
+      "gitBlobSha256": "54d664a3e3d8483030e5b1ac4cd917eaea6605cbb95fceb2990102b1f12e72c2",
+      "capturedByteReconstruction": "RESTORE_CRLF_AT_NEWLINE_ORDINAL_RANGES",
+      "crlfNewlineOrdinalRanges": [
+        [
+          0,
+          50
+        ]
+      ]
+    },
+    {
+      "path": "docs/reviews/probes/r103_tooling/repair_driver.py",
+      "bytes": 21776,
+      "sha256": "c0fb1ee114db689e8cd71eb310534569de1514378c8f6fbf272a78ec40b2e15a",
+      "gitBlobBytes": 21776,
+      "gitBlobSha256": "c0fb1ee114db689e8cd71eb310534569de1514378c8f6fbf272a78ec40b2e15a",
+      "capturedByteReconstruction": "IDENTITY"
+    }
+  ],
+  "byteContract": "bytes/sha256 describe captured working-file bytes; gitBlobBytes/gitBlobSha256 describe Git blob bytes. For non-identity entries split the blob on LF and restore CR before the zero-based newline ordinals in the inclusive crlfNewlineOrdinalRanges. This reverses Git core.autocrlf normalization, including mixed endings. Verify the reconstructed bytes against the captured hash. No original raw log content, Git configuration or attributes changed."
+}

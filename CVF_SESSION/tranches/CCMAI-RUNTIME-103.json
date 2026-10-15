@@ -62,18 +62,23 @@
   },
   "conditionalUiRoute": "Only after independent Root tooling review and supported browser control/capture PASS. R101 pinned binary hash4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31 + exact frontend manifest; existing R101 final container/network/volume only, no recreate; record current backend source drift instead of pretending old17hashes match; Root admits evidence runner/fixture/server before effects, B01-B10 real UI only.",
   "claimScope": "Tool driver/version/cache/browser blank-page capture health plus separately attributed conditional R101 synthetic human-software UI observations only; all unrun checks stay NOT_RUN.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "7ef0593ab757f8a1e75cb0674e70627f9a9fcd7b",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
-  "freeze": "OPEN",
+  "buildCommit": "7efc308f19a845918f0ca2901746781e9b4bfaf7",
+  "reviewEvidence": [
+    "docs/reviews/R103_INDEPENDENT_TOOLING_REVIEW_2026-10-16.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -83,16 +88,27 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "CLOSED",
   "x-actualExecution": {
+    "driverInstalls": 1,
+    "browserInstalls": 1,
+    "rootHealthCampaigns": 1,
+    "npmRequests": 2,
+    "npmBytes": 1989716,
+    "browserArtifactAttemptsObserved": 2,
+    "browserArchiveBytesReported": 290468407,
+    "browserRedirects": "NOT_OBSERVED",
+    "browserWireTotalBytes": "NOT_OBSERVED",
     "providerCalls": 0,
     "mockCalls": 0,
-    "driverInstalls": 0,
-    "browserInstalls": 0,
+    "goCompiles": 0,
     "newFixtures": 0,
     "backendLaunches": 0,
     "viteLaunches": 0
   },
   "x-sourceRepairRounds": 1,
-  "x-driverSourceAdmission": "docs/reviews/R103_DRIVER_SOURCE_ADMISSION_2026-10-15.md"
+  "x-driverSourceAdmission": "docs/reviews/R103_DRIVER_SOURCE_ADMISSION_2026-10-15.md",
+  "x-browserInstallAdmission": "docs/reviews/R103_BROWSER_INSTALL_ADMISSION_2026-10-15.md",
+  "x-integratedUiBridge": "BLOCKED_IAB_PROVIDER_UNAVAILABLE_ANTIGRAVITY_NOT_OBSERVED",
+  "closer": "Codex /root"
 }

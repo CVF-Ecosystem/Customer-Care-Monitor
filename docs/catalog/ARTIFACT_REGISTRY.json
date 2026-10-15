@@ -11574,6 +11574,370 @@
       "path": "docs/reviews/probes/r103_root/native_pipe_capability.json",
       "status": "ACTIVE",
       "description": "R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed."
+    },
+    {
+      "id": "r103-runtime-b7972b4d274c84",
+      "family": "continuity",
+      "path": "docs/reviews/R103_INDEPENDENT_TOOLING_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-d33b6a9086d907",
+      "family": "continuity",
+      "path": "docs/reviews/R103_BROWSER_INSTALL_ADMISSION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-943c492a896c51",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/browser_cache_before_install.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-385b265edde813",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/browser_install_independent_verification.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-c0f06373702f20",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/driver_health.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-58a193bc22abc0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/driver_health.png",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-5c5a36404e1e87",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/driver_health.stderr.log",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-8db506b178c307",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/driver_health.stdout.log",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-f9a71064dda14c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/driver_health_result.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-7f65f7c47eb091",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/gate_units_20261016.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-8dbbf4585ddd9d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/gate_units_20261016.stderr.log",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-1d483ccbff20f9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/gate_units_20261016.stdout.log",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-d45dc758fa8ce5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/installed_driver_verification.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-1873c37d661f88",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/managed_browser_capability_20261016.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-6caee859850ce4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/browser-cache-after.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-38813ba2ae97cc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/browser-cache-before.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-15d4fab030e78c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/campaign-reservation.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-257e8be10e1a50",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-eb247999c04d84",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-21ef12159b5b7f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-30940c49f44c0b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install-result.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-baa68feaf5b53a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-37b9db497d82ea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-64e6cfed67ce1e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-install.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-d880253d907def",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/chromium-plan.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-93863b83d97233",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-8beacd489ec90c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-9c74c3c3a998e8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-07cb133f54f1ab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-cb883e8f3cd91a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-7bf474da87e0a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-1682c8d03b587c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/result.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-1185443f696f41",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/browser_install1/worker-install-return.md",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-5721ec251783d8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/browser-cache-after-driver",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-b8f4e5fa08a1ea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/browser-cache-before.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-ac8915347707b3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/campaign-reservation.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-04118dca5ce04a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-273df886241b1b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-a1c87008e9bcc4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-e1bddefb430eea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/chromium-plan.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-ec4b9d5e597925",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/driver-version.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-683f9d7d058049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/driver-version.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-373ee4a45149e6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/driver-version.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-fe7a869e1af336",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.command.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-19c1d07dd968b8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-61a7aabb637280",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-489d0cd4c35cb7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/network.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-5777382cd7b6a5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/npm-requests.jsonl",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-ff845a03b433a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/published-files.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-74f156b3c48c85",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/result.json",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-runtime-45be3b1a20f8eb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/driver_install1/worker-install-return.md",
+      "status": "ACTIVE",
+      "description": "R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted."
+    },
+    {
+      "id": "r103-final-integrity-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/final_evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Hash/size integrity of actual R103 install/cache/control/capture evidence; integrated bridge/R101 UI remains unobserved."
     }
   ]
 }
