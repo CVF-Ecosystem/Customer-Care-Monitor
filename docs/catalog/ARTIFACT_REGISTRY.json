@@ -5,6 +5,41 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r102-fixture-repair2-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_compile_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance."
+    },
+    {
+      "id": "r102-fixture-repair2-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_compile_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance."
+    },
+    {
+      "id": "r102-fixture-repair2-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_compile_exit.json",
+      "status": "ACTIVE",
+      "description": "R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance."
+    },
+    {
+      "id": "r102-fixture-repair2-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_compile_command.json",
+      "status": "ACTIVE",
+      "description": "R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance."
+    },
+    {
+      "id": "r102-fixture-repair2-0",
+      "family": "continuity",
+      "path": "docs/reviews/R102_FIXTURE_JSON_REPAIR_DISPOSITION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance."
+    },
+    {
       "id": "r102-runtime-admission-0",
       "family": "continuity",
       "path": "docs/reviews/R102_REPAIRED_SOURCE_ADMISSION_2026-10-15.md",

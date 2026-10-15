@@ -1,9 +1,9 @@
 {
   "tranche": "CCMAI-RUNTIME-102",
-  "phase": "BUILD_SOURCE_ONLY_REPAIR_ROUND1",
+  "phase": "BUILD_FIXTURE_REPAIR_ROUND2",
   "seed": "c199f13d01bdae7c4ad2b12e8528e0f4bce412e3",
   "dispatch": "11a60c007e202c9c44f484bcce3c4c6c5426e9c4",
-  "goInvocations": 0,
+  "goInvocations": 1,
   "mysqlFixtures": 0,
   "providerCalls": 0,
   "mockCalls": 0,
@@ -40,8 +40,8 @@
     },
     {
       "path": "backend/api/handlers/intervention_waitdata_test.go",
-      "bytes": 48139,
-      "sha256": "b4ef794c7759003695b6d5b144c3b602a62ae81451dd006654ff8d7c33db579f"
+      "bytes": 48930,
+      "sha256": "24318756d17ab3985c21b08c29dcc42bcec69e538d8b504843d5cb20391939a1"
     },
     {
       "path": "backend/api/router.go",

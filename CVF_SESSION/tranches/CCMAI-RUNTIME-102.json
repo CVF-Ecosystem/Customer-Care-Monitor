@@ -62,7 +62,7 @@
   "phase": "BUILD",
   "baseCommit": "c199f13d01bdae7c4ad2b12e8528e0f4bce412e3",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md",
-  "buildCommit": null,
+  "buildCommit": "223c052ec4de3a59ae5a8e26b826e7b9686e62d8",
   "reviewEvidence": [],
   "disposition": "PENDING",
   "freeze": "OPEN",
@@ -81,13 +81,13 @@
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "ACTIVE",
   "x-actualExecution": {
-    "goInvocations": 0,
-    "workerGo": 0,
+    "goInvocations": 1,
+    "workerGo": 1,
     "reviewerGo": 0,
     "fixtures": 0,
     "providerCalls": 0,
     "mockProviderCalls": 0
   },
-  "x-sourceRepairRounds": 1,
+  "x-sourceRepairRounds": 2,
   "x-consolidatedSourceFindings": "docs/reviews/R102_CONSOLIDATED_SOURCE_REVIEW_2026-10-15.md"
 }

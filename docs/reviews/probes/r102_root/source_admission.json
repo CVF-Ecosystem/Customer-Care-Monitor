@@ -3,7 +3,7 @@
   "reviewer": "Codex /root",
   "scope": "Exact source offline compile and one owned synthetic MySQL software campaign only",
   "review": "docs/reviews/R102_REPAIRED_SOURCE_ADMISSION_2026-10-15.md",
-  "repairRounds": 1,
+  "repairRounds": 2,
   "files": [
     {
       "path": "backend/db/models/intervention_waitdata.go",
@@ -37,8 +37,8 @@
     },
     {
       "path": "backend/api/handlers/intervention_waitdata_test.go",
-      "bytes": 48139,
-      "sha256": "b4ef794c7759003695b6d5b144c3b602a62ae81451dd006654ff8d7c33db579f"
+      "bytes": 48930,
+      "sha256": "24318756d17ab3985c21b08c29dcc42bcec69e538d8b504843d5cb20391939a1"
     },
     {
       "path": "backend/api/router.go",
@@ -47,5 +47,6 @@
     }
   ],
   "providerCalls": 0,
-  "mockProviderCalls": 0
+  "mockProviderCalls": 0,
+  "fixtureRepairDisposition": "docs/reviews/R102_FIXTURE_JSON_REPAIR_DISPOSITION_2026-10-15.md"
 }

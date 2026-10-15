@@ -57,6 +57,8 @@ if mode=='setup':
     assert run(['docker','image','inspect',IMAGE,'--format','{{.Id}}']).stdout.strip()==IMAGE
     before=safe_inventory();write('protected_baseline.json',before)
     o={'name':NAME,'imageId':IMAGE,'database':DB,'label':LABEL,'fixtureReservations':1}
+    counters=read('counters.json');assert counters['fixtureReservations']==0
+    counters['fixtureReservations']=1;write('counters.json',counters)
     write('fixture_reservation.json',o)
     o['networkId']=run(['docker','network','create','--driver','bridge','--opt','com.docker.network.bridge.host_binding_ipv4=127.0.0.1','--label',LABEL,NAME]).stdout.strip();write('fixture_reservation.json',o)
     o['volumeName']=run(['docker','volume','create','--label',LABEL,NAME]).stdout.strip();write('fixture_reservation.json',o)

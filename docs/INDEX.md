@@ -1015,6 +1015,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN.: `docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md`
 - R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN.: `CVF_SESSION/authority/CCMAI-RUNTIME-102.json`
 - R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-102.json`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/R102_FIXTURE_JSON_REPAIR_DISPOSITION_2026-10-15.md`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_command.json`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_exit.json`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_stderr.txt`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_stdout.txt`
 - R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved.: `docs/reviews/R102_REPAIRED_SOURCE_ADMISSION_2026-10-15.md`
 - R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved.: `docs/reviews/probes/r102_root/source_admission.json`
 - R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/R102_CONSOLIDATED_SOURCE_REVIEW_2026-10-15.md`

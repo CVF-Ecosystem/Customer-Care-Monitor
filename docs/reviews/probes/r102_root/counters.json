@@ -1,9 +1,18 @@
 {
-  "workerGo": 0,
+  "workerGo": 1,
   "reviewerGo": 0,
-  "aggregateGo": 0,
+  "aggregateGo": 1,
   "fixtureReservations": 0,
   "providerCalls": 0,
   "mockProviderCalls": 0,
-  "launches": []
+  "launches": [
+    {
+      "role": "worker",
+      "kind": "offline_handlers_compile",
+      "commandReceipt": "docs/reviews/probes/r102_worker/handlers_compile_command.json",
+      "exit": 0,
+      "counterAlreadyConsumed": true,
+      "reconciledAfterExecutionByRoot": true
+    }
+  ]
 }

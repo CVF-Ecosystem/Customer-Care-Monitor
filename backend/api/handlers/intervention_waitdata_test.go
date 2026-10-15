@@ -904,6 +904,8 @@ func TestR102NativeLegacyEventSurvivesMigration(t *testing.T) {
 	f := r102Start(t)
 	legacy := models.InterventionHumanEvent{ID: pkg.NewUUID(), TenantID: f.tenant, CaseID: f.caseID, CaseVersion: 1, ActorID: f.owner, Action: "ASSIGN_DATA", Reason: "legacy synthetic event", SnapshotID: f.snap, SnapshotDigest: f.originalDigest, SourceStatus: "INCOMPLETE", Before: `{}`, After: `{"owner":"set"}`, CreatedAt: time.Now().UTC()}
 	r102Must(t, &legacy)
+	var storedBeforeMigration models.InterventionHumanEvent
+	r102DB(t, db.DB.Where("id = ?", legacy.ID).Take(&storedBeforeMigration).Error)
 	// Simulate the pre-R102 table shape only inside the exclusively owned DB.
 	if err := db.DB.Migrator().DropColumn(&models.InterventionHumanEvent{}, "DataRevisionID"); err != nil {
 		t.Fatal("drop synthetic new column: ", err)
@@ -920,7 +922,8 @@ func TestR102NativeLegacyEventSurvivesMigration(t *testing.T) {
 		}
 	}
 	var actual models.InterventionHumanEvent
-	if db.DB.Where("id = ?", legacy.ID).Take(&actual).Error != nil || actual.Before != legacy.Before || actual.After != legacy.After || actual.DataRevisionID != nil || actual.RerunRequestID != nil {
+	r102DB(t, db.DB.Where("id = ?", legacy.ID).Take(&actual).Error)
+	if actual.ID != storedBeforeMigration.ID || actual.TenantID != storedBeforeMigration.TenantID || actual.CaseID != storedBeforeMigration.CaseID || actual.CaseVersion != storedBeforeMigration.CaseVersion || actual.ActorID != storedBeforeMigration.ActorID || actual.Action != storedBeforeMigration.Action || actual.Reason != storedBeforeMigration.Reason || actual.ProposalID != nil || actual.SnapshotID != storedBeforeMigration.SnapshotID || actual.SnapshotDigest != storedBeforeMigration.SnapshotDigest || actual.SourceStatus != storedBeforeMigration.SourceStatus || actual.Before != storedBeforeMigration.Before || actual.After != storedBeforeMigration.After || !actual.CreatedAt.Equal(storedBeforeMigration.CreatedAt) || actual.DataRevisionID != nil || actual.RerunRequestID != nil {
 		t.Fatal("legacy event changed by migration")
 	}
 }
