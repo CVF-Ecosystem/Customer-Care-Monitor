@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-103 — official browser tooling recovery
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 Worker: /root/r103_tooling_worker (Luna Max)
 Reviewer: Codex /root

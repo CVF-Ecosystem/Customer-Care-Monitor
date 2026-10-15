@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-103", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-103", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md
 
-CCMAI-RUNTIME-103 DISPATCH_READY under seed7ef0593: Luna Max worker prepares source-only inert official npm1.57 driver recovery script, Root independent review before download/cache mutation. Exact driver157/browser cache only, preserve originals, no version faking; Node24.19 existing. Then install/verify and Root supported blank-page capture check before conditional R101 UI. R102 FROZEN Go7 and R101 Go3/fixture2/UIB01-B10NOT_RUN/Dashboard3baseline/FREEZE retained; native pipe currently unavailable. Provider/mock0, no app source/secret/newfixture/globalconfig/user-app restart/push/deploy. Facebook/ZaloOA parked.
+CCMAI-RUNTIME-103 repaired script c0fb1ee1 SOURCE_REVIEW_PASS: after candidate commit Luna runs install-driver ONCE (official npm1.57 metadata/tarball SRI, safe extract, empty157cache publish, Node/CLI version and chromium dry-run). Browser install/page/UI/fixture/server remain NOT admitted until Root inspects actual package plan. Prior source/metadata mistakes retained; driver/browser actual0 before execution. R101/R102 old counters/status preserved; no provider/mock/secret/appsource/globalconfig/user-app restart/newfixture/push/deploy. Facebook/ZaloOA parked.
 
-Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / COMMIT_STEWARD; Luna Max worker source-only after dispatch commit.
+Codex /root independent REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; Luna worker admitted install-driver only after candidate commit.
 
 ## Historical R100 bounded real result before M3 dispatch
 

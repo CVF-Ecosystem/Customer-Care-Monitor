@@ -1084,6 +1084,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R102 bounded local FREEZE handoff; session routing superseded by R103, acceptance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md`
 - Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-103.json`
 - Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/probes/r103_root/native_pipe_capability.json`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_BROWSER_TOOLING_WORKER_RETURN_2026-10-15.md`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/probes/r103_root/driver_health.cjs`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/probes/r103_tooling/repair_driver.py`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_CONSOLIDATED_SCRIPT_REVIEW_2026-10-15.md`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_DRIVER_SOURCE_ADMISSION_2026-10-15.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

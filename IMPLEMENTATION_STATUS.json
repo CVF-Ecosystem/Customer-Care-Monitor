@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2143,7 +2143,7 @@
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
     "milestoneStatus": "R103_TOOLING_RECOVERY_TO_UNBLOCK_R101_UI",
-    "nextAction": "CCMAI-RUNTIME-103 DISPATCH_READY under seed7ef0593: Luna Max worker prepares source-only inert official npm1.57 driver recovery script, Root independent review before download/cache mutation. Exact driver157/browser cache only, preserve originals, no version faking; Node24.19 existing. Then install/verify and Root supported blank-page capture check before conditional R101 UI. R102 FROZEN Go7 and R101 Go3/fixture2/UIB01-B10NOT_RUN/Dashboard3baseline/FREEZE retained; native pipe currently unavailable. Provider/mock0, no app source/secret/newfixture/globalconfig/user-app restart/push/deploy. Facebook/ZaloOA parked.",
+    "nextAction": "CCMAI-RUNTIME-103 repaired script c0fb1ee1 SOURCE_REVIEW_PASS: after candidate commit Luna runs install-driver ONCE (official npm1.57 metadata/tarball SRI, safe extract, empty157cache publish, Node/CLI version and chromium dry-run). Browser install/page/UI/fixture/server remain NOT admitted until Root inspects actual package plan. Prior source/metadata mistakes retained; driver/browser actual0 before execution. R101/R102 old counters/status preserved; no provider/mock/secret/appsource/globalconfig/user-app restart/newfixture/push/deploy. Facebook/ZaloOA parked.",
     "providerBudget": "R101 zero; R100 stopped/no further effects",
     "m1BusinessPilotAcceptance": "OPEN",
     "publication": "LOCAL_ONLY_NOT_PUSHED"

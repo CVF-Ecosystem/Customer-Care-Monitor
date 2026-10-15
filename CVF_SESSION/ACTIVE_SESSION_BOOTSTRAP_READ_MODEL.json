@@ -1,10 +1,10 @@
 {
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-103",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-103 DISPATCH_READY under seed7ef0593: Luna Max worker prepares source-only inert official npm1.57 driver recovery script, Root independent review before download/cache mutation. Exact driver157/browser cache only, preserve originals, no version faking; Node24.19 existing. Then install/verify and Root supported blank-page capture check before conditional R101 UI. R102 FROZEN Go7 and R101 Go3/fixture2/UIB01-B10NOT_RUN/Dashboard3baseline/FREEZE retained; native pipe currently unavailable. Provider/mock0, no app source/secret/newfixture/globalconfig/user-app restart/push/deploy. Facebook/ZaloOA parked.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / COMMIT_STEWARD; Luna Max worker source-only after dispatch commit.",
+  "nextAllowedMove": "CCMAI-RUNTIME-103 repaired script c0fb1ee1 SOURCE_REVIEW_PASS: after candidate commit Luna runs install-driver ONCE (official npm1.57 metadata/tarball SRI, safe extract, empty157cache publish, Node/CLI version and chromium dry-run). Browser install/page/UI/fixture/server remain NOT admitted until Root inspects actual package plan. Prior source/metadata mistakes retained; driver/browser actual0 before execution. R101/R102 old counters/status preserved; no provider/mock/secret/appsource/globalconfig/user-app restart/newfixture/push/deploy. Facebook/ZaloOA parked.",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; Luna worker admitted install-driver only after candidate commit.",
   "updatedAt": "2026-10-15",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved."

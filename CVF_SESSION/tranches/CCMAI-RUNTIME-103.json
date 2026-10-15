@@ -62,8 +62,8 @@
   },
   "conditionalUiRoute": "Only after independent Root tooling review and supported browser control/capture PASS. R101 pinned binary hash4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31 + exact frontend manifest; existing R101 final container/network/volume only, no recreate; record current backend source drift instead of pretending old17hashes match; Root admits evidence runner/fixture/server before effects, B01-B10 real UI only.",
   "claimScope": "Tool driver/version/cache/browser blank-page capture health plus separately attributed conditional R101 synthetic human-software UI observations only; all unrun checks stay NOT_RUN.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "7ef0593ab757f8a1e75cb0674e70627f9a9fcd7b",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md",
   "buildCommit": null,
@@ -72,7 +72,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -82,7 +83,7 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY",
+  "workOrderStatus": "ACTIVE",
   "x-actualExecution": {
     "providerCalls": 0,
     "mockCalls": 0,
@@ -91,5 +92,7 @@
     "newFixtures": 0,
     "backendLaunches": 0,
     "viteLaunches": 0
-  }
+  },
+  "x-sourceRepairRounds": 1,
+  "x-driverSourceAdmission": "docs/reviews/R103_DRIVER_SOURCE_ADMISSION_2026-10-15.md"
 }

@@ -11532,6 +11532,48 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md",
       "status": "ACTIVE",
       "description": "Historical R102 bounded local FREEZE handoff; session routing superseded by R103, acceptance unchanged."
+    },
+    {
+      "id": "r103-source-b8300b7f58b096",
+      "family": "continuity",
+      "path": "docs/reviews/R103_DRIVER_SOURCE_ADMISSION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed."
+    },
+    {
+      "id": "r103-source-9493edcd20756b",
+      "family": "continuity",
+      "path": "docs/reviews/R103_CONSOLIDATED_SCRIPT_REVIEW_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed."
+    },
+    {
+      "id": "r103-source-455c96665b1bc5",
+      "family": "continuity",
+      "path": "docs/reviews/R103_BROWSER_TOOLING_WORKER_RETURN_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed."
+    },
+    {
+      "id": "r103-source-6872b1ec74b9f6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_tooling/repair_driver.py",
+      "status": "ACTIVE",
+      "description": "R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed."
+    },
+    {
+      "id": "r103-source-4da5e17456cf0e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/driver_health.cjs",
+      "status": "ACTIVE",
+      "description": "R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed."
+    },
+    {
+      "id": "r103-source-2d33a8d19f20a1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r103_root/native_pipe_capability.json",
+      "status": "ACTIVE",
+      "description": "R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed."
     }
   ]
 }
