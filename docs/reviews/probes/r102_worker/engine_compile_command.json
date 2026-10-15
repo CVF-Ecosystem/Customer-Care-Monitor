@@ -1,0 +1,15 @@
+{
+  "GOPROXY": "off",
+  "counterAfter": {
+    "workerGo": 3,
+    "aggregateGo": 3
+  },
+  "command": "go -C backend test -c -o ../.cvf/runtime/r102_worker/r102_engine.test.exe ./engine",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "GOSUMDB": "off",
+  "counterBefore": {
+    "workerGo": 2,
+    "aggregateGo": 2
+  },
+  "GOTOOLCHAIN": "local"
+}

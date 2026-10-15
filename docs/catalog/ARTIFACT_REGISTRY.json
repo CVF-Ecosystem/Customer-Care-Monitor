@@ -5,6 +5,160 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r102-native-binary-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/binary_manifest.json",
+      "status": "ACTIVE",
+      "description": "Pinned actual offline binary hashes for failed native/accepted2engine checks; not full backend acceptance."
+    },
+    {
+      "id": "r102-execution-659c668cfd9489",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_r2_compile_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-a868d5859fd0ec",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_r2_compile_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-40b579787b1420",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_r2_compile_exit.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-3d3320df72c0dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/handlers_r2_compile_command.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-d0f8c7dd6eafb0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/engine_compile_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-6e0b1ba8447a79",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/engine_compile_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-39cc03acd17182",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/engine_compile_exit.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-80d02b829f0be3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_worker/engine_compile_command.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-43db5503d58406",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/reviewer_launch_2_stdout.log",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-27f32bcfc5c96b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/reviewer_launch_2_stderr.log",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-b13b8b97b9c1df",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/reviewer_launch_2_result.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-ec1d2b95f4ae99",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/reviewer_launch_1_stdout.log",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-a4768e3e15e2da",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/reviewer_launch_1_stderr.log",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-f8d4dcab34eae8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/reviewer_launch_1_result.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-f1decb368ef36b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/protected_baseline.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-1773d63827ab55",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/proposed_fixture_repair3.patch",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-16d05663a75970",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/fixture_reservation.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-f6f4348d4dd4ad",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/fixture_ready.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-1c73b47d93f9e6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/fixture_owner.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-fad5cc28d21fdb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r102_root/cleanup_checkpoint.json",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
+      "id": "r102-execution-f5642478da79b9",
+      "family": "continuity",
+      "path": "docs/reviews/R102_REVIEW_COST_ESCALATION_REQUIRED_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved."
+    },
+    {
       "id": "r102-fixture-repair2-4",
       "family": "continuity",
       "path": "docs/reviews/probes/r102_worker/handlers_compile_stdout.txt",

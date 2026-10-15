@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-102 — WAIT_DATA local source revision and nonexecuting intent
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: /root/r102_worker (Sol Medium)
 Reviewer: Codex /root
